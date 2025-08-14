@@ -1,7 +1,9 @@
 import React, {useCallback, useMemo, useRef} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
+import {setShowFlaggedImageModal} from '@cdo/apps/codebridge/redux/workspaceRedux';
 import HttpClient from '@cdo/apps/util/HttpClient';
+import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {createUuid} from '@cdo/apps/utils';
 
 export const enum analyticsEvents {
@@ -99,6 +101,7 @@ export const useFileUploader = ({
 }: FileUploaderProps) => {
   const inputRef = useRef<HTMLInputElement>(null);
   const callbackArgs = useRef<unknown>();
+  const dispatch = useAppDispatch();
 
   const changeHandler = useCallback(() => {
     const handleError = (error: Error) => {
@@ -165,6 +168,26 @@ export const useFileUploader = ({
           }
 
           const fileType = file.name.split('.')[1];
+          console.log('fileType', fileType);
+          if (['png', 'jpg', 'jpeg'].includes(fileType)) {
+            const response = await HttpClient.post(
+              `/v3/images/moderate`,
+              file,
+              true,
+              {
+                'Content-Type': file.type,
+              }
+            );
+            if (response.ok) {
+              const json = await response.json();
+              console.log('response.rating', json.rating);
+              if (json.rating !== 'everyone' && json.rating !== 'unknown') {
+                dispatch(setShowFlaggedImageModal(true));
+              }
+            } else {
+              throw new Error('Error with image moderation.');
+            }
+          }
           const url = `/v3/assets/${channelId}/${createUuid()}.${fileType}`;
           await HttpClient.put(url, file);
           sendAnalyticsEvent(analyticsEvents.UPLOAD_SUCCEEDED, {
@@ -180,12 +203,13 @@ export const useFileUploader = ({
       }
     });
   }, [
-    validMimeTypes,
-    validateFileName,
     sendAnalyticsEvent,
     errorCallback,
+    validateFileName,
+    validMimeTypes,
     callback,
     channelId,
+    dispatch,
   ]);
 
   return useMemo(

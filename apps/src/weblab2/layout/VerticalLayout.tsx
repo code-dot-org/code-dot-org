@@ -5,9 +5,11 @@ import classNames from 'classnames';
 import React, {useEffect} from 'react';
 
 import {HTMLPreview} from '@cdo/apps/codebridge/FilePreview/HTMLPreview';
+import {setShowFlaggedImageModal} from '@cdo/apps/codebridge/redux/workspaceRedux';
 import {useVerticalLayout} from '@cdo/apps/lab2/hooks/useVerticalLayout';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import FlaggedImageModal from '@cdo/apps/p5lab/AnimationPicker/FlaggedImageModal';
+import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import moduleStyles from '@cdo/apps/lab2/views/components/layout/layout.module.scss';
 
@@ -26,6 +28,11 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
   const widgetViewShowCode = useAppSelector(
     state => state.codebridgeWorkspace.widgetViewShowCode
   );
+  const showFlaggedImageModal = useAppSelector(
+    state => state.codebridgeWorkspace.showFlaggedImageModal
+  );
+  const dispatch = useAppDispatch();
+  console.log('showFlaggedImageModal', showFlaggedImageModal);
   const shouldHideEditor = isWidgetView && !widgetViewShowCode;
   const infoPanelInitialWidth = isProjectLevel
     ? 0
@@ -94,6 +101,17 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
       }
     >
       <div className={moduleStyles.layoutContainer}>
+        {showFlaggedImageModal && (
+          <FlaggedImageModal
+            isOpen
+            onAccept={() => {
+              dispatch(setShowFlaggedImageModal(false));
+            }}
+            onCancel={() => {
+              dispatch(setShowFlaggedImageModal(false));
+            }}
+          />
+        )}
         {!isProjectLevel && (
           <>
             <InfoPanel
