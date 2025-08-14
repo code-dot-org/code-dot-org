@@ -87,6 +87,9 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     pl_lesson_group = create(:lesson_group, script: pl_script)
     pl_lesson = create(:lesson, script: pl_script, lesson_group: pl_lesson_group)
     @pl_script_level = create(:script_level, script: pl_script, lesson: pl_lesson)
+
+    unit = create(:unit, :with_levels)
+    @single_unit_course = create(:single_unit_course, :stable, unit: unit)
   end
 
   setup do
@@ -1278,20 +1281,25 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "should 404 for invalid chapter for flappy" do
-    assert_raises(ActiveRecord::RecordNotFound) do # renders a 404 in prod
+    assert_raises(ActiveRecord::RecordNotFound) do
       get :show, params: {script_id: 'flappy', chapter: 40000}
     end
   end
 
-  test "should 404 for invalid lesson for course1" do
-    assert_raises(ActiveRecord::RecordNotFound) do # renders a 404 in prod
-      get :show, params: {course_course_name: 'course1', unit_position: 1, lesson_position: 4000, id: 1}
+  test 'should render valid lesson and level' do
+    get :show, params: {course_course_name: @single_unit_course.name, unit_position: 1, lesson_position: 1, id: 1}
+    assert_response :success
+  end
+
+  test "should 404 for invalid lesson" do
+    assert_raises(ActiveRecord::RecordNotFound) do
+      get :show, params: {course_course_name: @single_unit_course.name, unit_position: 1, lesson_position: 4000, id: 1}
     end
   end
 
-  test "should 404 for invalid puzzle for course1" do
-    assert_raises(ActiveRecord::RecordNotFound) do # renders a 404 in prod
-      get :show, params: {course_course_name: 'course1', unit_position: 1, lesson_position: 1, id: 4000}
+  test "should 404 for invalid puzzle" do
+    assert_raises(ActiveRecord::RecordNotFound) do
+      get :show, params: {course_course_name: @single_unit_course.name, unit_position: 1, lesson_position: 1, id: 4000}
     end
   end
 

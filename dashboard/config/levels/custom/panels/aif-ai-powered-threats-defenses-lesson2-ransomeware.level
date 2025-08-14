@@ -1,0 +1,42 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-08-13T18:51:37.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "#### Haley is hopeful!\n\nShe found a website that claims it will help restore her overwritten files.",
+        "imageUrl": "https://images.code.org/db2a73395548132a39b73f96e189a66e-Cyber attacks panel levels.png",
+        "key": "aif-ai-powered-threats-defenses-lesson2-ransomeware-7a30d9b1-7545-4a2a-95f2-07b6a1c85389"
+      },
+      {
+        "text": "### Click to download! \n\n<br>\n\nOur custom `remove_worm.zip` file will restore any files corrupted by a worm.\n<br>\n\n<br>\nJust download our zip file to your computer and you'll be all set!",
+        "imageUrl": "https://images.code.org/5456da2c96fcdac0c5e10f7d50830281-Cyber attacks panel levels.jpg",
+        "key": "aif-ai-powered-threats-defenses-lesson2-ransomeware-ce9e2196-e316-4751-9c89-15a6cc312ede",
+        "layout": "text-top-center"
+      },
+      {
+        "text": "#### Oh no! This is worse than before.\n\nHaley is totally locked out of her computer. \n\nAnd what's that timer ticking down?!\n\nShe sees she has 1 hour to pay the ransom to unlock her computer or risk losing all her files.",
+        "imageUrl": "https://images.code.org/11b77d45266de3f85e18aea54a84c6f1-Cyber attacks panel levels (3).png",
+        "key": "aif-ai-powered-threats-defenses-lesson2-ransomeware-389a48d6-c8a5-4e6d-af82-e4de146a7265"
+      },
+      {
+        "text": "#### What should she do? \n\nThey're asking for a lot of money, but she needs access to her computer ASAP.",
+        "imageUrl": "https://images.code.org/ff3cc15853b85f24bc5f739b060f5d46-Cyber attacks panel levels (4).png",
+        "key": "aif-ai-powered-threats-defenses-lesson2-ransomeware-50777fe6-24db-433c-92c6-0766d67687a8"
+      },
+      {
+        "text": "### What Is Ransomware?\n\n**Ransomware** is a type of malware that locks or encrypts files on a computer, then demands payment (often in money or cryptocurrency) to restore access.\n\nIt is designed to create fear and urgency. Some ransomware uses countdown timers, threatening language, or personal details to pressure users into acting quickly before they think clearly.\n\n",
+        "imageUrl": "https://images.code.org/e7dc75ae05c67fe4bc0da8db95e6ac04-Cyber attacks panel levels (5).png",
+        "key": "aif-ai-powered-threats-defenses-lesson2-ransomeware-d4d45456-989e-4ee5-8531-8007fc629f8f"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2025-08-13T18:51:37.238+00:00\",\"changed\":[\"cloned from \\\"aif-ai-powered-threats-defenses-lesson2-ddos-panels\\\"\"],\"cloned_from\":\"aif-ai-powered-threats-defenses-lesson2-ddos-panels\"},{\"changed_at\":\"2025-08-13 22:47:43 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-13 22:54:43 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

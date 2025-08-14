@@ -809,7 +809,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
   end
 
   test 'end of lesson' do
-    script = Unit.find_by_name('course1')
+    script = create(:unit, :with_levels, lessons_count: 4, levels_count: 3)
 
     assert script.lessons[0].script_levels.last.end_of_lesson?
     assert script.lessons[1].script_levels.last.end_of_lesson?
@@ -823,8 +823,9 @@ class ScriptLevelTest < ActiveSupport::TestCase
     script_level = ScriptLevel.cache_find(Unit.twenty_hour_unit.script_levels[0].id)
     assert_equal(Unit.twenty_hour_unit.script_levels[0], script_level)
 
-    script_level2 = ScriptLevel.cache_find(Unit.course1_unit.script_levels.last.id)
-    assert_equal(Unit.course1_unit.script_levels.last, script_level2)
+    multi_lesson_unit = create(:unit, :with_levels, lessons_count: 3, levels_count: 3)
+    script_level2 = ScriptLevel.cache_find(multi_lesson_unit.script_levels.last.id)
+    assert_equal(multi_lesson_unit.script_levels.last, script_level2)
 
     # Make sure that we can also locate a newly created level.
     script_level3 = create(:script_level)

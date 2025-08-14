@@ -1,6 +1,7 @@
 $left-card-arrow-center-left-value: 17.5%;
 $center-card-arrow-center-left-value: 51.5%;
 $right-card-arrow-center-left-value: 85.5%;
+$expanded-card-z-index: 2;
 
 
 div > div:nth-child(3n + 1) {
@@ -69,6 +70,8 @@ div > div:nth-child(3n + 3) {
   border: 1px solid var(--borders-neutral-primary);
   background: var(--background-neutral-primary);
   box-sizing: border-box;
+  // Added to ensure the expanded card is above the arrow and other elements
+  z-index: $expanded-card-z-index;
 
   .curriculumDetails {
     display: flex;

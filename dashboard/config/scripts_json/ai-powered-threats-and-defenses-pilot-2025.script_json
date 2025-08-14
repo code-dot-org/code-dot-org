@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-08-13 01:01:10 UTC",
+    "serialized_at": "2025-08-13 16:32:37 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -85,7 +85,7 @@
       "name": "Pre-Assessment",
       "absolute_position": 1,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
       },
@@ -151,6 +151,9 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
+        "overview": "**How can AI make social engineering feel more personal or real?**\n\nThis lesson guides students to understand how AI is making social engineering attacks more scalable, convincing, and targeted. Through analyzing case studies and creating their own AI-generated scripts, students learn to identify different types of phishing and compare basic prevention strategies.",
+        "preparation": "- Print copies of the Phishing Prevention Strategies Activity Guide (one for each student)",
+        "student_overview": "**How can AI make social engineering feel more personal or real?**\n\nIn this lesson, you investigate how attackers use social engineering and artificial intelligence to create convincing scams like deepfakes and phishing attempts. You explore how these attacks work and learn strategies to identify and protect yourself from them."
       },
       "seeding_key": {
         "lesson.key": "lesson-7",
@@ -202,6 +205,9 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
+        "overview": "**How do systems decide who you are and what you're allowed to do?**\n\nThis lesson introduces students to the AAA security framework—authentication, access control, and auditing—by focusing on the first two components through interactive stations. Students categorize authentication methods, explore how AI can exploit them, and design access control rules for real-world scenarios. The activities deepen students’ understanding of how systems verify identity and manage access while connecting those concepts to personal experiences.",
+        "preparation": "- Print and cut out one full set of Access Control Scenario Cards for the entire class\n- Print and cut out a set of Authentication Method Cards (one copy per station)\n- Print out the Station Instruction Pages (pages 3-6 in the Station Setup and Instructions teacher resource)\n- Provide multiple sticky notes for each station",
+        "student_overview": "**How do systems decide who you are and what you're allowed to do?**\n\nThis lesson introduces the AAA security model by exploring how systems check who you are and decide what you can access. Through hands-on activities, you sort authentication methods, spot potential weaknesses, and create access rules for real-world situations."
       },
       "seeding_key": {
         "lesson.key": "lesson-10",
@@ -217,6 +223,9 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
+        "overview": "**What role can AI play in enhancing AAA?**\n\nStudents investigate the \"Accounting\" component of AAA by analyzing user audit logs and comparing their findings to an AI chatbot’s results. They reflect on how context and identity influence human and machine judgments. The lesson then shifts to how AI is trained and used in adaptive authentication systems based on real-time risk.",
+        "preparation": "- Print copies of the Fraud Detection Investigation Activity Guide (one copy per group)\n- Print copies of the four different user profiles",
+        "student_overview": "**What role can AI play in enhancing AAA?**\n\nAnalyze suspicious activity in a user’s digital history and compare your thinking to an AI’s decisions. Explore how AI models learn and how authentication can change based on risk."
       },
       "seeding_key": {
         "lesson.key": "lesson-11",
@@ -307,7 +316,7 @@
       "name": "End of Unit Assessment",
       "absolute_position": 15,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 15,
       "properties": {
       },
@@ -322,7 +331,7 @@
       "name": "End of Unit Survey",
       "absolute_position": 16,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 16,
       "properties": {
       },
@@ -334,6 +343,18 @@
     }
   ],
   "lesson_activities": [
+    {
+      "key": "50818419-a034-4195-a82c-f2be8cd4963a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "50818419-a034-4195-a82c-f2be8cd4963a",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "ai-powered-threats-and-defenses-pilot-2025"
+      }
+    },
     {
       "key": "9854d5b3-0ffe-4554-adb3-007bf5abc13c",
       "position": 1,
@@ -372,6 +393,48 @@
       "seeding_key": {
         "lesson_activity.key": "f5ca98f3-c4be-45d0-a43e-850a40ba2b60",
         "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-powered-threats-and-defenses-pilot-2025"
+      }
+    },
+    {
+      "key": "88683747-5f33-4faf-94ac-b0c8aef98ccc",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "88683747-5f33-4faf-94ac-b0c8aef98ccc",
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-powered-threats-and-defenses-pilot-2025"
+      }
+    },
+    {
+      "key": "c2c740d9-3334-44c1-820f-2691bbf28f21",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c2c740d9-3334-44c1-820f-2691bbf28f21",
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-powered-threats-and-defenses-pilot-2025"
+      }
+    },
+    {
+      "key": "c051bf52-994d-4a17-a0ef-9d28364582a6",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c051bf52-994d-4a17-a0ef-9d28364582a6",
+        "lesson.key": "lesson-7",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-powered-threats-and-defenses-pilot-2025"
       }
@@ -461,6 +524,90 @@
       }
     },
     {
+      "key": "e782a540-634d-4292-8893-28c19e73c2ab",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e782a540-634d-4292-8893-28c19e73c2ab",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-powered-threats-and-defenses-pilot-2025"
+      }
+    },
+    {
+      "key": "4b739aac-b478-4e0a-88c8-642b9860b09a",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4b739aac-b478-4e0a-88c8-642b9860b09a",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-powered-threats-and-defenses-pilot-2025"
+      }
+    },
+    {
+      "key": "8ececb35-8213-4931-8d19-73f2243d998b",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8ececb35-8213-4931-8d19-73f2243d998b",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-powered-threats-and-defenses-pilot-2025"
+      }
+    },
+    {
+      "key": "09fa8e1b-81ee-4f3f-811e-3e7c58abc92a",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "09fa8e1b-81ee-4f3f-811e-3e7c58abc92a",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-powered-threats-and-defenses-pilot-2025"
+      }
+    },
+    {
+      "key": "22c43c40-a6af-4d1c-971d-bb97101dc412",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "22c43c40-a6af-4d1c-971d-bb97101dc412",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-powered-threats-and-defenses-pilot-2025"
+      }
+    },
+    {
+      "key": "3f080b8e-ad7b-4f45-a386-831f8055d94f",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3f080b8e-ad7b-4f45-a386-831f8055d94f",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-powered-threats-and-defenses-pilot-2025"
+      }
+    },
+    {
       "key": "f21ec793-4c0f-4d65-b8fa-242d2dec30a8",
       "position": 1,
       "properties": {
@@ -501,9 +648,43 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-powered-threats-and-defenses-pilot-2025"
       }
+    },
+    {
+      "key": "a3e28acc-33d2-44a8-97b2-0503f0ccc868",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a3e28acc-33d2-44a8-97b2-0503f0ccc868",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "ai-powered-threats-and-defenses-pilot-2025"
+      }
+    },
+    {
+      "key": "487f907a-f711-47a5-bccd-74c99207c6cc",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "487f907a-f711-47a5-bccd-74c99207c6cc",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "ai-powered-threats-and-defenses-pilot-2025"
+      }
     }
   ],
   "activity_sections": [
+    {
+      "key": "48bb29b5-5f7b-497b-a3e1-d271641f3087",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "48bb29b5-5f7b-497b-a3e1-d271641f3087",
+        "lesson_activity.key": "50818419-a034-4195-a82c-f2be8cd4963a"
+      }
+    },
     {
       "key": "0d3ef70c-ccf7-4b45-9a7b-f3035f1ef76a",
       "position": 1,
@@ -769,6 +950,144 @@
       "seeding_key": {
         "activity_section.key": "c1f1511f-5d27-4fea-86b4-feb97215af19",
         "lesson_activity.key": "f5ca98f3-c4be-45d0-a43e-850a40ba2b60"
+      }
+    },
+    {
+      "key": "57409bf8-0288-4462-b40a-7d15b501cd16",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the \"Social Engineering Hacker\" video.\n**Questions to consider with the video:** \n- How did the woman calling the phone company get the information that she wanted?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should identify and highlight the various social engineering tactics the woman used to manipulate the phone company into giving her access to the account. Examples may include claiming it was her husband's account, using a fake crying baby in the background to create urgency and sympathy, and sounding distressed or emotional to lower the guard of the customer service rep. The goal is for students to recognize how simple manipulative techniques can trick people into giving up sensitive information or taking unintended actions, which is a major concern in cybersecurity.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review three common social engineering tactics. Use the corresponding clips from the Social Engineering Hacker video to illustrate each tactic in the earlier phone call example."
+      },
+      "seeding_key": {
+        "activity_section.key": "57409bf8-0288-4462-b40a-7d15b501cd16",
+        "lesson_activity.key": "88683747-5f33-4faf-94ac-b0c8aef98ccc"
+      }
+    },
+    {
+      "key": "41e78b9c-4205-4ccb-b95f-61caadccacd1",
+      "position": 2,
+      "properties": {
+        "description": "As we just saw, social engineering relies on tricking people rather than hacking machines. In today's lesson, we'll look more closely at how attackers use deception, especially with the help of AI, to make these scams more convincing, and what we can do to protect ourselves.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "41e78b9c-4205-4ccb-b95f-61caadccacd1",
+        "lesson_activity.key": "88683747-5f33-4faf-94ac-b0c8aef98ccc"
+      }
+    },
+    {
+      "key": "3499a96a-fcfb-44fe-a1af-224ab7f4208d",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+      },
+      "seeding_key": {
+        "activity_section.key": "3499a96a-fcfb-44fe-a1af-224ab7f4208d",
+        "lesson_activity.key": "88683747-5f33-4faf-94ac-b0c8aef98ccc"
+      }
+    },
+    {
+      "key": "31c20600-2f2a-4d68-b666-267a060fbc7b",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students take out their AI Powered Threat and Defenses Unit Guide.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 4, Level 1 to complete Levels 1 through 3.\n- **Level 1:** Students learn about smishing and answer questions about a real-world example they found in their unit guide.\n- **Level 2:** Students learn about vishing and answer questions about a real-world example they found in their unit guide.\n- **Level 3:** Students learn about deepfake video impersonations and answer questions about a real-world example they found in their unit guide.",
+        "duration": "15",
+        "name": "Investigation of AI-Powered Phishing Scams",
+        "progression_name": "Phishing Scams",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students encounter paywalls or blocked content, encourage them to search for the specific topic they’re exploring. For example, if they find a story about a smishing incident but can’t access the first few links, have them search for that specific case using keywords like: “White House Chief of Staff smishing incident”. This can help them find more accessible articles or videos on the same topic."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "31c20600-2f2a-4d68-b666-267a060fbc7b",
+        "lesson_activity.key": "c2c740d9-3334-44c1-820f-2691bbf28f21"
+      }
+    },
+    {
+      "key": "b5941b0d-95de-4b2e-a351-e915988f1c44",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b5941b0d-95de-4b2e-a351-e915988f1c44",
+        "lesson_activity.key": "c2c740d9-3334-44c1-820f-2691bbf28f21"
+      }
+    },
+    {
+      "key": "f3519338-c379-4390-961f-a091b751f0a5",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** For each phishing scam, have one student share-out a real-world examples they found with the whole class.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *social engineering*.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What do you think smishing and vishing are based on what you've learned so far?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students will infer the meanings of smishing and vishing by connecting them to phishing. They may recall from earlier warm-up examples that phishing can happen in different formats, and from the previous activity, they may remember that smishing occurs over text messages (SMS) and vishing happens through voice calls.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *smishing*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *vishing*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define deepfake."
+      },
+      "seeding_key": {
+        "activity_section.key": "f3519338-c379-4390-961f-a091b751f0a5",
+        "lesson_activity.key": "c2c740d9-3334-44c1-820f-2691bbf28f21"
+      }
+    },
+    {
+      "key": "f1fd6984-fce6-4e95-a2aa-96c9f5d9356f",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Lesson 4, Level 4. Students will use AI Chat to create a phishing phone call or video script using the voice of a chosen persona, such as a celebrity, family member, or school staff member. They should provide a quote or writing sample to help AI match the voice, then guide the AI to craft a message convincing someone to send money, click a link, or download a file. Encourage them to include persuasive tactics like emotion, urgency, or authority, and to refine their script through at least three AI interactions.",
+        "duration": "15",
+        "name": "Create a Deep Fake Script",
+        "progression_name": "Create a Deep Fake Script",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "AI Chat will not generate a phishing text, email, or script if the word \"phishing\" is used. Instead, have students describe what it is they want AI to help them generate, for example:\n- Create a 1 minute video script in the voice of this musical artist encouraging fans to click on a link\n- Create a 30 second voicemail in the style of a teacher urging a parent to call a specific phone number and follow the prompts"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "f1fd6984-fce6-4e95-a2aa-96c9f5d9356f",
+        "lesson_activity.key": "c2c740d9-3334-44c1-820f-2691bbf28f21"
+      }
+    },
+    {
+      "key": "2b7ee9a6-3f31-415c-aecd-32ae3dc41477",
+      "position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "2b7ee9a6-3f31-415c-aecd-32ae3dc41477",
+        "lesson_activity.key": "c2c740d9-3334-44c1-820f-2691bbf28f21"
+      }
+    },
+    {
+      "key": "03f3568b-7cf4-4805-8d3b-9e7f6f540213",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Give each student a copy of the Phishing Prevention Strategies activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students swap scripts with their partner. In their activity guide,  provide an action someone could take to determine if the video/call is legitimate or a phishing attempt for questions that apply.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Lesson 4, Level 5 to respond to the free-response questions.",
+        "progression_name": "Check for Understanding",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If time permits, use the View Student Responses to run a brief discussion asking students to compare the strategies they came up with on Level 5."
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Use both the free-response level and the class discussion to formatively assess the lesson objectives. Look for evidence that students:\n- Recognize manipulation strategies in the scripts\n- Connect red flags to appropriate prevention actions\n- Thoughtfully evaluate which defenses are most effective and why\n\nIf students struggle:\n- Model one example as a class, highlighting which strategies apply and why they matter\n- Have students revisit the phishing red flag checklist and choose one strategy to focus on improving\n- Use the extension prompt to deepen analysis, such as categorizing strategies as technical or behavioral"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "03f3568b-7cf4-4805-8d3b-9e7f6f540213",
+        "lesson_activity.key": "c2c740d9-3334-44c1-820f-2691bbf28f21"
+      }
+    },
+    {
+      "key": "4e9c011c-7352-4dd0-8e77-a3de8eb1867f",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 4, Level 6 to complete the End of Lesson Survey."
+      },
+      "seeding_key": {
+        "activity_section.key": "4e9c011c-7352-4dd0-8e77-a3de8eb1867f",
+        "lesson_activity.key": "c051bf52-994d-4a17-a0ef-9d28364582a6"
       }
     },
     {
@@ -1319,6 +1638,629 @@
       }
     },
     {
+      "key": "89798f4b-11f6-4d1a-a417-68b2b424722c",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How would you prove you are YOU if you can't show your face?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should identify common ways to prove identity, like something you know (a password), have (a phone), or are (a fingerprint). Listen for examples in each category and prompt students to distinguish identity from access. If a student says \"my voice\" or \"my face\" follow up with: \"AI can deepfake that now…so now what?\" The key takeaway is that authentication methods can be fooled, especially by AI, which makes understanding them even more important.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Encourage students to build on others' ideas and remind them that it's okay to pass if they need more time to think."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "89798f4b-11f6-4d1a-a417-68b2b424722c",
+        "lesson_activity.key": "e782a540-634d-4292-8893-28c19e73c2ab"
+      }
+    },
+    {
+      "key": "87e54cf5-cc80-44de-84b2-6ddb5acefda2",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "87e54cf5-cc80-44de-84b2-6ddb5acefda2",
+        "lesson_activity.key": "e782a540-634d-4292-8893-28c19e73c2ab"
+      }
+    },
+    {
+      "key": "12aaed9d-5f6a-46de-be07-891d2197897c",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+      },
+      "seeding_key": {
+        "activity_section.key": "12aaed9d-5f6a-46de-be07-891d2197897c",
+        "lesson_activity.key": "e782a540-634d-4292-8893-28c19e73c2ab"
+      }
+    },
+    {
+      "key": "a4253089-7649-4dec-9fe9-c4b27df38704",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> Goal of this activity: Introduce the three terms: Authentication, Access Control, Accounting and ensure students understand the differences and nuances between the different tools.",
+        "duration": "10",
+        "name": "AAA Vocab"
+      },
+      "seeding_key": {
+        "activity_section.key": "a4253089-7649-4dec-9fe9-c4b27df38704",
+        "lesson_activity.key": "4b739aac-b478-4e0a-88c8-642b9860b09a"
+      }
+    },
+    {
+      "key": "7111376c-dee6-4660-9b2e-d1af8943c43c",
+      "position": 2,
+      "properties": {
+        "description": "Today we're diving into three important tools that help protect the CIA Triad. These are the foundation of how companies and apps decide who you are and what you’re allowed to do.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "7111376c-dee6-4660-9b2e-d1af8943c43c",
+        "lesson_activity.key": "4b739aac-b478-4e0a-88c8-642b9860b09a"
+      }
+    },
+    {
+      "key": "e7780448-26ad-4952-8954-d52d07586737",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students take out their AI Powered Threat and Defenses Unit Guide and turn to the section for this lesson."
+      },
+      "seeding_key": {
+        "activity_section.key": "e7780448-26ad-4952-8954-d52d07586737",
+        "lesson_activity.key": "4b739aac-b478-4e0a-88c8-642b9860b09a"
+      }
+    },
+    {
+      "key": "30d8b0a6-ac6a-488d-909f-2dfa83bd39b4",
+      "position": 4,
+      "properties": {
+        "description": "AAA stands for Authentication, Access Control, and Accounting. These are the tools systems use to figure out who you are, what you're allowed to do, and what you actually did. Whether you're logging into a game, checking your grades, or using a shared playlist, AAA tools help manage and protect that experience. Today's activities are going to dive into Authentication and Access Control. We will get a deeper look into Accounting in the next lesson.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "30d8b0a6-ac6a-488d-909f-2dfa83bd39b4",
+        "lesson_activity.key": "4b739aac-b478-4e0a-88c8-642b9860b09a"
+      }
+    },
+    {
+      "key": "6df08634-9b55-4892-b53c-7b216f288ab1",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *AAA Tools*. Explain that these are three core tools used in cybersecurity to protect data and manage user access.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Write \"Authentication\", \"Access Control\", and \"Accounting\" on the board as visible anchors for the rest of the lesson."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "6df08634-9b55-4892-b53c-7b216f288ab1",
+        "lesson_activity.key": "4b739aac-b478-4e0a-88c8-642b9860b09a"
+      }
+    },
+    {
+      "key": "2d75f4e4-f872-4cf0-9325-86f77332103f",
+      "position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "2d75f4e4-f872-4cf0-9325-86f77332103f",
+        "lesson_activity.key": "4b739aac-b478-4e0a-88c8-642b9860b09a"
+      }
+    },
+    {
+      "key": "c24d35ea-61e6-446e-a775-6cf26c8f62f8",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *Authentication*.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "As you explain, point out each category — 'know', 'have', 'are' — and connect to everyday tools: passwords, phones, and biometrics like fingerprints or Face ID."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c24d35ea-61e6-446e-a775-6cf26c8f62f8",
+        "lesson_activity.key": "4b739aac-b478-4e0a-88c8-642b9860b09a"
+      }
+    },
+    {
+      "key": "bc0e8b95-a3cf-4ec8-aa04-8eccdf1c616b",
+      "position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "bc0e8b95-a3cf-4ec8-aa04-8eccdf1c616b",
+        "lesson_activity.key": "4b739aac-b478-4e0a-88c8-642b9860b09a"
+      }
+    },
+    {
+      "key": "47d406e4-21a5-4f5b-a8c7-8f5d09f7d62f",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *Access Control*. Clarify that access control only matters once a system knows who you are; it's the next step after authentication.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the three most common access control types listed for students in their Unit Guide (RBAC, DAC, ABAC). Provide additional examples if needed.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use examples students will recognize, like how students can view their grades, but only teachers can change them. These real-world connections make access control more tangible."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "47d406e4-21a5-4f5b-a8c7-8f5d09f7d62f",
+        "lesson_activity.key": "4b739aac-b478-4e0a-88c8-642b9860b09a"
+      }
+    },
+    {
+      "key": "c2828b33-1a60-4edc-9d47-92e961ce7264",
+      "position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "c2828b33-1a60-4edc-9d47-92e961ce7264",
+        "lesson_activity.key": "4b739aac-b478-4e0a-88c8-642b9860b09a"
+      }
+    },
+    {
+      "key": "64650998-d8f1-4f92-a43c-52546309c3b2",
+      "position": 11,
+      "properties": {
+        "description": "Think back to last class when you were dealing with the different scenarios. Some of the issues that you identified are things that will connect with what you will be doing at today’s stations.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "64650998-d8f1-4f92-a43c-52546309c3b2",
+        "lesson_activity.key": "4b739aac-b478-4e0a-88c8-642b9860b09a"
+      }
+    },
+    {
+      "key": "468baffb-e774-47cd-9a93-a1c99e875cab",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students apply their understanding of access control types by choosing a real-world scenario, designing a rule for managing access, and connecting it to something they’ve experienced in their own lives\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain what students will do at Station A: sort authentication cards into three categories: What You Know, What You Have, and What You Are, identify one method per category that could be vulnerable to AI and explain how, and brainstorm one new example per category and add it to the class poster.",
+        "duration": "25",
+        "name": "AAA Stations",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Make sure students know to compare how they sorted the cards with the answer sheet on the Station A poster. Let students know that if they get anything incorrect on the card sort, they should mix up the cards and try again."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "468baffb-e774-47cd-9a93-a1c99e875cab",
+        "lesson_activity.key": "4b739aac-b478-4e0a-88c8-642b9860b09a"
+      }
+    },
+    {
+      "key": "67e0851c-51d9-4dc3-ba41-dd7640e88d21",
+      "position": 13,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "67e0851c-51d9-4dc3-ba41-dd7640e88d21",
+        "lesson_activity.key": "4b739aac-b478-4e0a-88c8-642b9860b09a"
+      }
+    },
+    {
+      "key": "a2424da2-5ac6-45c6-8ca5-c63ec4f74848",
+      "position": 14,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain what students will do at Station B: choose a scenario card and write an access rule using the sentence frame: \"If [conditions], then [grant/deny] access,\" label the rule with one of the three access models (RBAC, DAC, or ABAC), add a short explanation of why that model fits, post the card on the appropriate column of the Station B poster, and add a sticky note describing a real-life example they've seen.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Let students know that if they are finished with one scenario card before it is time to rotate, that they should pick a second scenario card from the pile."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "a2424da2-5ac6-45c6-8ca5-c63ec4f74848",
+        "lesson_activity.key": "4b739aac-b478-4e0a-88c8-642b9860b09a"
+      }
+    },
+    {
+      "key": "b4536055-d54f-4c42-a437-0422ee50dece",
+      "position": 15,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b4536055-d54f-4c42-a437-0422ee50dece",
+        "lesson_activity.key": "4b739aac-b478-4e0a-88c8-642b9860b09a"
+      }
+    },
+    {
+      "key": "221209b4-85aa-467c-8b78-88eed6df0f8b",
+      "position": 16,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Display the station reminders as students work at the stations. Emphasize that students will visit both stations in any order.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students mislabeling cards or struggling to explain why a method fits a category (at Station A), or mixing up the access control models (at Station B). Listen for vague sticky notes and encourage students to be specific. Offer prompts like:\n- \"Can AI really trick that, or is it harder than it seems?\"\n- \"What makes this access rule discretionary vs role-based?\"\n- \"How does your example connect to your rule?\"\n\nEncourage stronger examples or clearer access conditions when students seem unsure.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Keep a timer visible or use a chime/bell to keep transitions smooth.\n\nTo support different learners, at the Access Control station, students who finish early can pick a second scenario card or compare two access control models for the same situation. If students need support, offer example cards or model thinking aloud by asking, \"Which part of the situation matters most for deciding access?\"\n\nAt the Authentication station, students who finish early can try creating a second new example per category, or explain which method they think is most secure and why. For students who need support, guide them in thinking about how AI could mimic something you know, have, or are."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "221209b4-85aa-467c-8b78-88eed6df0f8b",
+        "lesson_activity.key": "4b739aac-b478-4e0a-88c8-642b9860b09a"
+      }
+    },
+    {
+      "key": "85f7c46f-35e7-4e4c-81a1-48a86587430e",
+      "position": 17,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "85f7c46f-35e7-4e4c-81a1-48a86587430e",
+        "lesson_activity.key": "4b739aac-b478-4e0a-88c8-642b9860b09a"
+      }
+    },
+    {
+      "key": "8280cb69-ac0e-4b32-8a7d-4c3635de981f",
+      "position": 18,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students reset their stations in anticipation of switching by following the directions listed here.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Make sure that students have reset their stations properly and have shared their work (sticky notes & cards) in the appropriate place.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Close the station work with a quick \"Top Takeaways\" or \"Mic Drop Moment\". Invite 2–3 students to share a sticky, scenario, or aha moment they found interesting at the stations. This reinforces learning and helps surface strong examples before the QOTD reflection.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 1 to complete the formative assessment.",
+        "progression_name": "Check for Understanding",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Use these two questions to formatively assess both lesson objectives: understanding how systems verify identity (authentication) and manage access (access control). Look for common misconceptions, such as:\n- Confusing authentication with access control\n- Missing or vague explanations (e.g., “logging in” without saying how or why)\n- Not connecting access control to user roles or models like RBAC\n\nIf needed, pause for a quick class discussion, model a strong sample answer, or invite peer feedback before moving on."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "8280cb69-ac0e-4b32-8a7d-4c3635de981f",
+        "lesson_activity.key": "4b739aac-b478-4e0a-88c8-642b9860b09a"
+      }
+    },
+    {
+      "key": "81e62a9d-e8c5-4514-be29-139fdcf643b3",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Summarize what authentication and access control mean and how they help protect digital systems.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to turn to the Question of the Day in their Unit Guide. Have them discuss both prompts in their Unit Guide with a partner, then write down their individual responses. Let them know they’ll be sharing these ideas with classmates in the next activity.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use Unit Guide responses and partner discussions to check for understanding. Listen for common misconceptions, such as:\n- Confusing authentication with access control\n- Vague responses (e.g., “Authentication is logging in”)\n- Incorrectly matching examples to AAA terms\n\nIf needed:\n- Ask students to explain their answers in their own words\n- Pair students to revise and clarify thinking\n- Reread the AAA definitions as a class or do a quick thumbs-up/thumbs-down check"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "81e62a9d-e8c5-4514-be29-139fdcf643b3",
+        "lesson_activity.key": "8ececb35-8213-4931-8d19-73f2243d998b"
+      }
+    },
+    {
+      "key": "3875ad25-c513-4b1d-9249-660139e4ffb3",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "3875ad25-c513-4b1d-9249-660139e4ffb3",
+        "lesson_activity.key": "8ececb35-8213-4931-8d19-73f2243d998b"
+      }
+    },
+    {
+      "key": "a06e8406-3b69-4fd1-a881-0822ed114a0e",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 1 to complete the End of Lesson Survey."
+      },
+      "seeding_key": {
+        "activity_section.key": "a06e8406-3b69-4fd1-a881-0822ed114a0e",
+        "lesson_activity.key": "8ececb35-8213-4931-8d19-73f2243d998b"
+      }
+    },
+    {
+      "key": "5144a0b5-3daa-48be-af9b-e38f13060143",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Activate student understanding of what \"anomaly\" means and how humans detect them."
+      },
+      "seeding_key": {
+        "activity_section.key": "5144a0b5-3daa-48be-af9b-e38f13060143",
+        "lesson_activity.key": "09fa8e1b-81ee-4f3f-811e-3e7c58abc92a"
+      }
+    },
+    {
+      "key": "2478aa75-09ea-4813-bba8-77edbb82dd83",
+      "position": 2,
+      "properties": {
+        "description": "Look at the data shown here. Most data points follow a pattern, but one clearly stands out as unusual or unexpected. We call that an anomaly.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "2478aa75-09ea-4813-bba8-77edbb82dd83",
+        "lesson_activity.key": "09fa8e1b-81ee-4f3f-811e-3e7c58abc92a"
+      }
+    },
+    {
+      "key": "97dcda9d-1a4e-4e4f-ac03-815835656927",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students' attention to the highlighted data point.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *How do we (as humans) decide something is an anomaly?*\n- *What types of behavior make us suspicious?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Encourage students to reflect on how humans decide something is an anomaly or suspicious. Invite them to share specific examples—like noticing strange purchases on a credit card, unusual login activity, or odd behavior in a friend—and to consider patterns like late-night activity, unexpected locations, or sudden changes in communication. Help students recognize that what seems suspicious can vary depending on personal experience, cultural background, or individual bias.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+      },
+      "seeding_key": {
+        "activity_section.key": "97dcda9d-1a4e-4e4f-ac03-815835656927",
+        "lesson_activity.key": "09fa8e1b-81ee-4f3f-811e-3e7c58abc92a"
+      }
+    },
+    {
+      "key": "a9c1a809-d739-4667-aaa2-d74196ff25c0",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Analyze and detect anomalies in user data and compare human findings to AI outputs.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students take out their AI Powered Threat and Defenses Unit Guide and turn to the section for this lesson.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Remind students what they learned about Authentication and Access Control in the last lesson. Emphasize that both of those tools only work when the system can keep a record of user activity—which is what Accounting (also called Auditing) is for.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define Accounting. Let students know that this \"A\" of the AAA framework is sometimes called \"Auditing,\" and that in many contexts, Accounting and Auditing mean the same thing: tracking what users do. Viewing the Version History of a document is a form of accounting because it helps track who accessed what and when.",
+        "duration": "15",
+        "name": "Fraud Detection Investigation"
+      },
+      "seeding_key": {
+        "activity_section.key": "a9c1a809-d739-4667-aaa2-d74196ff25c0",
+        "lesson_activity.key": "22c43c40-a6af-4d1c-971d-bb97101dc412"
+      }
+    },
+    {
+      "key": "25b940be-b1b0-4eb4-8e3f-0b2e5e721864",
+      "position": 2,
+      "properties": {
+        "description": "Today, you are going to review different logs that were gathered as part of the Accounting step of the AAA framework. With your partner, you will be examining these logs and looking for anomalies that seem suspicious.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "25b940be-b1b0-4eb4-8e3f-0b2e5e721864",
+        "lesson_activity.key": "22c43c40-a6af-4d1c-971d-bb97101dc412"
+      }
+    },
+    {
+      "key": "b7c56253-2881-49d2-8120-1886b2ff5808",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Put students into groups of two.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each group of students a copy of the Fraud Detection Investigation activity guide and one of the User Persona Audit Logs.",
+        "progression_name": "Fraud Detection Investigation",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The Fraud Detection activity guide and User Persona Audit Logs are also provided in Lesson 8, Level 1 for classes that would prefer to view them online."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b7c56253-2881-49d2-8120-1886b2ff5808",
+        "lesson_activity.key": "22c43c40-a6af-4d1c-971d-bb97101dc412"
+      }
+    },
+    {
+      "key": "9d86aa19-bcaa-4fcb-bc73-e6f64d944339",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "9d86aa19-bcaa-4fcb-bc73-e6f64d944339",
+        "lesson_activity.key": "22c43c40-a6af-4d1c-971d-bb97101dc412"
+      }
+    },
+    {
+      "key": "5721527f-b5af-4f6f-9c5b-e1b5e18edea2",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to examine the audit logs for their user and look for suspicious activity or anomalies. Remind them to use the user profile as context—what's suspicious for this person—and to record their reasoning in the activity guide.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Prompt students to refer back to the User Profile. Ask: \"Would this activity be suspicious for your user?\" Encourage students to explain their thinking, not just flag unusual entries.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Watch for students who flag something just because it looks strange (\"Toronto at 3 AM\") without checking if it actually conflicts with the user profile. If students finish early, ask them to compare with a group that has a different user: \"Would this be suspicious for your user too?\" This keeps early finishers engaged and pushes deeper reasoning."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "5721527f-b5af-4f6f-9c5b-e1b5e18edea2",
+        "lesson_activity.key": "22c43c40-a6af-4d1c-971d-bb97101dc412"
+      }
+    },
+    {
+      "key": "ec886f68-afd9-44d2-b341-8d1b7c4dadbe",
+      "position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "ec886f68-afd9-44d2-b341-8d1b7c4dadbe",
+        "lesson_activity.key": "22c43c40-a6af-4d1c-971d-bb97101dc412"
+      }
+    },
+    {
+      "key": "d7b75e09-0d8f-49a0-ae8b-12112ee86fad",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How might AI assist with fraud detection?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** The goal here is to guide students to identify specific advantages of AI, such as quickly scanning large datasets, recognizing subtle or repetitive patterns, or catching events humans might miss due to oversight or fatigue. Prompt students to consider real-world examples, such as how banks or online platforms use AI to identify suspicious transactions or logins."
+      },
+      "seeding_key": {
+        "activity_section.key": "d7b75e09-0d8f-49a0-ae8b-12112ee86fad",
+        "lesson_activity.key": "22c43c40-a6af-4d1c-971d-bb97101dc412"
+      }
+    },
+    {
+      "key": "314ef846-1692-4edc-bba9-add400840166",
+      "position": 8,
+      "properties": {
+        "description": "You just thought about how AI might help with fraud detection—now let's see what it actually does. Let's compare your findings to the AI's analysis.",
+        "duration": "10",
+        "name": "AI Model Training",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "314ef846-1692-4edc-bba9-add400840166",
+        "lesson_activity.key": "22c43c40-a6af-4d1c-971d-bb97101dc412"
+      }
+    },
+    {
+      "key": "bbc6afac-b7ec-49d1-85ab-39cfe8a8ca63",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 8, Level 2 to attach their user's logs that they analyzed and ask the AI to flag suspicious activity. Students should then compare their analysis to the AI's, checking if the AI flagged the same suspicious events, looking for anomalies the AI might have missed, and noting if the AI found something humans overlooked.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, make sure they record what the AI flagged and answer the reflection questions in Part 1 of their activity guide. Ask students:\n- Why do you think the AI flagged that one?\n- Would that seem suspicious for your user?\n- Why might the AI miss something a person noticed—or vice versa?",
+        "progression_name": "Human vs AI Detection"
+      },
+      "seeding_key": {
+        "activity_section.key": "bbc6afac-b7ec-49d1-85ab-39cfe8a8ca63",
+        "lesson_activity.key": "22c43c40-a6af-4d1c-971d-bb97101dc412"
+      }
+    },
+    {
+      "key": "7c4399a0-9e1a-411b-8f3a-f2c1a48aa92a",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Part 2 of their activity guide. In this section, they read four login scenarios based on their user persona and predict the A'’s risk score and required authentication method for each one. They record their predictions and reasoning, focusing on what an AI system might flag based on patterns—not just what seems risky to them personally.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As you move around the room, check that students are using the user profile context to inform their predictions.  Prompt deeper reasoning by asking:\n- Why do you think the AI would treat this as high risk?\n- What part of this behavior feels normal for your user?\n- What combination of factors are you noticing?",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Some students may struggle with middle-ground cases. Encourage them to justify their predictions, even if they aren't sure.\n If time allows, invite early finishers to compare predictions with another group who had a different persona and ask: \"Would your AI react the same way to this scenario?\""
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "7c4399a0-9e1a-411b-8f3a-f2c1a48aa92a",
+        "lesson_activity.key": "22c43c40-a6af-4d1c-971d-bb97101dc412"
+      }
+    },
+    {
+      "key": "ff424e22-b8f7-4940-8185-afc8f7c1db9e",
+      "position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "ff424e22-b8f7-4940-8185-afc8f7c1db9e",
+        "lesson_activity.key": "22c43c40-a6af-4d1c-971d-bb97101dc412"
+      }
+    },
+    {
+      "key": "e5732a21-e8dd-4d92-8f07-f1767a037c68",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 8, Level 3 and 4.\n- Level 3: Students attach their user’s scenarios and compare their predictions and authentication methods to the AI’s results.\n- Level 4: Students complete a check for understanding\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students compare their predictions to the AI's decisions, ask: \"Why do you think the AI flagged this as high risk?\" and \"What factors do you think mattered most in the AI's decision?\" These questions support the goal of helping students understand how AI systems make real-time, pattern-based security decisions.",
+        "progression_name": "Adaptive Security",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Student responses on Level 4 can be used to formatively assess their understanding of the lesson objectives. This question checks whether students can recognize the kinds of behavioral patterns AI uses to assign risk and adjust authentication requirements.\nIf students answer incorrectly:\n- Revisit one of the risk scenarios from earlier and walk through how each factor contributes to the score.\n- Reinforce that AI systems often rely on combinations of unusual factors (new device + odd time + unfamiliar location), not isolated behaviors.\n- Consider asking students to create an alternative high-risk scenario as a quick extension.\n\nIf most students get it right:\n- Use it as a launchpad to ask: \"Could there be someone for whom that pattern isn't suspicious? What might the AI miss?\""
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e5732a21-e8dd-4d92-8f07-f1767a037c68",
+        "lesson_activity.key": "22c43c40-a6af-4d1c-971d-bb97101dc412"
+      }
+    },
+    {
+      "key": "963dc3dc-0412-4d8b-b02d-d9c66fe5806c",
+      "position": 13,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "963dc3dc-0412-4d8b-b02d-d9c66fe5806c",
+        "lesson_activity.key": "22c43c40-a6af-4d1c-971d-bb97101dc412"
+      }
+    },
+    {
+      "key": "648e9b46-ccad-4fbb-9e5f-41585fc67763",
+      "position": 14,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the prompts.\n- *How does an AI model learn to recognize patterns?*\n- *Where do those patterns come from?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** The goal is to help students to recall that AI doesn't \"think\" or \"guess\"—it learns by finding patterns in labeled examples. The goal is to reinforce that AI models are trained using many examples tagged with what they mean (e.g., \"suspicious\" vs. \"normal\"), and the AI uses repetition to recognize what those categories look like. This primes students to write their own \"if-then\" rules by thinking like a machine learning model, not a person."
+      },
+      "seeding_key": {
+        "activity_section.key": "648e9b46-ccad-4fbb-9e5f-41585fc67763",
+        "lesson_activity.key": "22c43c40-a6af-4d1c-971d-bb97101dc412"
+      }
+    },
+    {
+      "key": "91b0ca76-f050-407f-a3c3-99beec5bcc93",
+      "position": 15,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to look for any patterns in their user's four scenarios and create a general \"fraud rule\" in their activity guide that an AI could be trained to follow. This can be a simple if-then statement the AI could follow if it were trained on the user persona and data artifacts that the students examined in Part One\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students write their fraud rules, check whether their patterns include more than one factor (e.g., time + location + device). Ask students: \"What behavior is the AI supposed to watch for?\" and  \"Would this rule work for anyone, or is it specific to your user?\" Encourage students to revise their rule if it's too general or only tied to one isolated event.",
+        "duration": "10",
+        "name": "Adaptive Access Controls",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students are stuck, invite them to revisit one of their four scenarios and ask, \"What would I want the AI to do if this happened again?\" That can help them build a fraud rule based on a specific example instead of abstracting from scratch."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "91b0ca76-f050-407f-a3c3-99beec5bcc93",
+        "lesson_activity.key": "22c43c40-a6af-4d1c-971d-bb97101dc412"
+      }
+    },
+    {
+      "key": "a1010524-3947-4b18-b4b7-4fe8194f81d4",
+      "position": 16,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "a1010524-3947-4b18-b4b7-4fe8194f81d4",
+        "lesson_activity.key": "22c43c40-a6af-4d1c-971d-bb97101dc412"
+      }
+    },
+    {
+      "key": "9392d738-0d9a-445b-85cc-3d848447d557",
+      "position": 17,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Invite a few students to share their fraud rules and how their user's background or behavior influenced their decisions. Highlight that different users lead to different ideas of what' \"normal\" or \"suspicious.\" Emphasize that AI trained on limited data may misjudge people from different communities, lifestyles, or tech habits.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the prompts.\n- *What patterns did the AI seem to follow when assigning risk?*\n- *How were those patterns similar to or different from the fraud rule you wrote?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** The goal is to help students synthesize what they've learned about how AI detects threats by recognizing patterns in behavior, and how that leads to adaptive authentication decisions. This discussion also gives students a chance to reflect on the relationship between the fraud rule they created and the kinds of reasoning AI systems use. The goal is to deepen understanding of how AI supports security features like fraud detection, anomaly detection, and adaptive access control.\n",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Student responses can be used to formatively assess understanding of the lesson objectives, particularly whether students can:\n- Accurately describe how AI identifies suspicious patterns in data\n- Analyze how AI's pattern detection influences security actions like authentication requirements\n\nIf student responses show confusion about:\n- How the AI calculated risk, revisit a sample scenario and model the AI's logic aloud.\n- How AI connects to security features, refer back to the \"AI in AAA\" slide or the Risk Calculator demo and reframe the model as an automated decision-maker, not a human reasoner.\n- How their fraud rule connects to AI training, ask students to underline what part of their rule the AI seemed to follow or ignore.\n\nIf most students respond with vague or surface-level ideas, consider:\n- Having them return to one of their risk scenarios and revise their fraud rule\n- Asking partners to swap and critique each other's rules using the AI's logic as a benchmark"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "9392d738-0d9a-445b-85cc-3d848447d557",
+        "lesson_activity.key": "22c43c40-a6af-4d1c-971d-bb97101dc412"
+      }
+    },
+    {
+      "key": "c7404189-32f7-4d26-8ba1-95933e48f9b1",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to turn to the Question of the Day in their Unit Guide. Invite each student to share their \"mic drop\" insight. This should be a concise, bold statement about AI and digital security they now believe to be true. Frame it as \"One thing I’ll remember about AI in cybersecurity is...\"",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Consider playing upbeat music quietly in the background as students take turns delivering their lines around the room. It might also be interesting to create a class \"Mic Drop Wall\" on chart paper where students write their closing thought for others to read."
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Use the Unit Guide responses and partner conversations to gauge students’ understanding of the lesson objectives. As students write and discuss their answers, listen for common misconceptions:\n- Students who confuse authentication with access control (e.g., thinking passwords control what you're allowed to do).\n- Vague or overly general answers (e.g., \"Authentication is logging in\" without explanation).\n- Incorrect matching of examples to the AAA terms.\n\nIf you notice confusion:\n- Prompt students to explain their answers out loud and clarify in their own words.\n- Pair students with stronger responses with those who need support, and have them talk through their thinking before revising their answers.\n- Consider rereading the AAA definitions as a class or doing a quick thumbs-up/thumbs-down check on example scenarios.\n- Ask the class: “Which part of this was easiest to explain? Which was hardest?” and use that to spark a mini reteach or group discussion before moving to “Give One, Get One.”"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c7404189-32f7-4d26-8ba1-95933e48f9b1",
+        "lesson_activity.key": "3f080b8e-ad7b-4f45-a386-831f8055d94f"
+      }
+    },
+    {
+      "key": "12517cfe-bee6-4a43-954a-95b2a874d315",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "12517cfe-bee6-4a43-954a-95b2a874d315",
+        "lesson_activity.key": "3f080b8e-ad7b-4f45-a386-831f8055d94f"
+      }
+    },
+    {
+      "key": "184263a1-1e13-4f2e-ac41-5d08dab38697",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 8, Level 6 to complete the End of Lesson Survey."
+      },
+      "seeding_key": {
+        "activity_section.key": "184263a1-1e13-4f2e-ac41-5d08dab38697",
+        "lesson_activity.key": "3f080b8e-ad7b-4f45-a386-831f8055d94f"
+      }
+    },
+    {
       "key": "036b7b5f-e079-44e9-8845-baa7f1c7d999",
       "position": 1,
       "properties": {
@@ -1731,6 +2673,26 @@
         "activity_section.key": "a4b76056-e525-44e1-b9cc-877590132ecd",
         "lesson_activity.key": "673e8be0-0ea4-40f9-a7a4-d8235a898768"
       }
+    },
+    {
+      "key": "bb1734b6-4947-4de6-8ca4-1167f7f61aac",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "bb1734b6-4947-4de6-8ca4-1167f7f61aac",
+        "lesson_activity.key": "a3e28acc-33d2-44a8-97b2-0503f0ccc868"
+      }
+    },
+    {
+      "key": "3d44dc92-bb44-4494-ae6b-54872319cf81",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "3d44dc92-bb44-4494-ae6b-54872319cf81",
+        "lesson_activity.key": "487f907a-f711-47a5-bccd-74c99207c6cc"
+      }
     }
   ],
   "script_levels": [
@@ -1740,6 +2702,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-powered-threats-defenses-lesson1-level1_2025-pilot"
+        ],
         "progression": "The Day Everything Broke Activity Guide"
       },
       "bonus": false,
@@ -1762,6 +2727,119 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Phishing Scams"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-powered-threats-defenses-lesson4-level1_2025-pilot"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-powered-threats-and-defenses-pilot-2025",
+        "activity_section.key": "31c20600-2f2a-4d68-b666-267a060fbc7b"
+      },
+      "level_keys": [
+        "ai-powered-threats-defenses-lesson4-level1_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Phishing Scams"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-powered-threats-defenses-lesson4-level2_2025-pilot"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-powered-threats-and-defenses-pilot-2025",
+        "activity_section.key": "31c20600-2f2a-4d68-b666-267a060fbc7b"
+      },
+      "level_keys": [
+        "ai-powered-threats-defenses-lesson4-level2_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Phishing Scams"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-powered-threats-defenses-lesson4-level3_2025-pilot"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-powered-threats-and-defenses-pilot-2025",
+        "activity_section.key": "31c20600-2f2a-4d68-b666-267a060fbc7b"
+      },
+      "level_keys": [
+        "ai-powered-threats-defenses-lesson4-level3_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Create a Deep Fake Script"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-powered-threats-defenses-lesson4-level4_2025-pilot"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-powered-threats-and-defenses-pilot-2025",
+        "activity_section.key": "f1fd6984-fce6-4e95-a2aa-96c9f5d9356f"
+      },
+      "level_keys": [
+        "ai-powered-threats-defenses-lesson4-level4_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-powered-threats-defenses-lesson4-level5_2025-pilot"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-powered-threats-and-defenses-pilot-2025",
+        "activity_section.key": "03f3568b-7cf4-4805-8d3b-9e7f6f540213"
+      },
+      "level_keys": [
+        "ai-powered-threats-defenses-lesson4-level5_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ai-powered-threats-defenses-lesson5-level1_2025-pilot"
+        ],
         "progression": "Defense in Action Activity Guide"
       },
       "bonus": false,
@@ -1779,11 +2857,14 @@
       ]
     },
     {
-      "chapter": 3,
+      "chapter": 8,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "ai-powered-threats-defenses-lesson5-level2_2025-pilot"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -1801,11 +2882,14 @@
       ]
     },
     {
-      "chapter": 4,
+      "chapter": 9,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-powered-threats-defenses-lesson6-level1_2025-pilot"
+        ],
         "progression": "Attack/Defender Activity Guide"
       },
       "bonus": false,
@@ -1823,11 +2907,14 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 10,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-powered-threats-defenses-lesson6-level2_2025-pilot"
+        ],
         "progression": "AI Chat: Investigate a CIA Scenario"
       },
       "bonus": false,
@@ -1845,11 +2932,14 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 11,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-powered-threats-defenses-lesson6-level3_2025-pilot"
+        ],
         "progression": "CIA Careers"
       },
       "bonus": false,
@@ -1867,11 +2957,14 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 12,
       "position": 4,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "ai-powered-threats-defenses-lesson6-level4_2025-pilot"
+        ],
         "progression": "CIA Careers"
       },
       "bonus": false,
@@ -1889,11 +2982,124 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 13,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-powered-threats-defenses-lesson7-level1_2025-pilot"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-powered-threats-and-defenses-pilot-2025",
+        "activity_section.key": "8280cb69-ac0e-4b32-8a7d-4c3635de981f"
+      },
+      "level_keys": [
+        "ai-powered-threats-defenses-lesson7-level1_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Fraud Detection Investigation"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-powered-threats-defenses-lesson-level1_2025-pilot"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-powered-threats-and-defenses-pilot-2025",
+        "activity_section.key": "b7c56253-2881-49d2-8120-1886b2ff5808"
+      },
+      "level_keys": [
+        "ai-powered-threats-defenses-lesson-level1_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Human vs AI Detection"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-powered-threats-defenses-lesson8-level2_2025-pilot"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-powered-threats-and-defenses-pilot-2025",
+        "activity_section.key": "bbc6afac-b7ec-49d1-85ab-39cfe8a8ca63"
+      },
+      "level_keys": [
+        "ai-powered-threats-defenses-lesson8-level2_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Adaptive Security"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-powered-threats-defenses-lesson8-level3-2_2025-pilot"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-powered-threats-and-defenses-pilot-2025",
+        "activity_section.key": "e5732a21-e8dd-4d92-8f07-f1767a037c68"
+      },
+      "level_keys": [
+        "ai-powered-threats-defenses-lesson8-level3-2_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "Adaptive Security"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-powered-threats-defenses-lesson8-level4_2025-pilot"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-powered-threats-and-defenses-pilot-2025",
+        "activity_section.key": "e5732a21-e8dd-4d92-8f07-f1767a037c68"
+      },
+      "level_keys": [
+        "ai-powered-threats-defenses-lesson8-level4_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "ai-powered-threats-defenses-lesson9-level1_2025-pilot"
+        ],
         "progression": "My Encryption"
       },
       "bonus": false,
@@ -1922,6 +3128,66 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-powered-threats-and-defenses-pilot-2025",
         "activity_section.key": "39195cf7-d6b2-4e94-888d-71f1409e3fb9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-powered-threats-defenses-lesson4-level1_2025-pilot",
+        "script_level.level_keys": [
+          "ai-powered-threats-defenses-lesson4-level1_2025-pilot"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-powered-threats-and-defenses-pilot-2025",
+        "activity_section.key": "31c20600-2f2a-4d68-b666-267a060fbc7b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-powered-threats-defenses-lesson4-level2_2025-pilot",
+        "script_level.level_keys": [
+          "ai-powered-threats-defenses-lesson4-level2_2025-pilot"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-powered-threats-and-defenses-pilot-2025",
+        "activity_section.key": "31c20600-2f2a-4d68-b666-267a060fbc7b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-powered-threats-defenses-lesson4-level3_2025-pilot",
+        "script_level.level_keys": [
+          "ai-powered-threats-defenses-lesson4-level3_2025-pilot"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-powered-threats-and-defenses-pilot-2025",
+        "activity_section.key": "31c20600-2f2a-4d68-b666-267a060fbc7b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-powered-threats-defenses-lesson4-level4_2025-pilot",
+        "script_level.level_keys": [
+          "ai-powered-threats-defenses-lesson4-level4_2025-pilot"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-powered-threats-and-defenses-pilot-2025",
+        "activity_section.key": "f1fd6984-fce6-4e95-a2aa-96c9f5d9356f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-powered-threats-defenses-lesson4-level5_2025-pilot",
+        "script_level.level_keys": [
+          "ai-powered-threats-defenses-lesson4-level5_2025-pilot"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-powered-threats-and-defenses-pilot-2025",
+        "activity_section.key": "03f3568b-7cf4-4805-8d3b-9e7f6f540213"
       }
     },
     {
@@ -1998,6 +3264,66 @@
     },
     {
       "seeding_key": {
+        "level.key": "ai-powered-threats-defenses-lesson7-level1_2025-pilot",
+        "script_level.level_keys": [
+          "ai-powered-threats-defenses-lesson7-level1_2025-pilot"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-powered-threats-and-defenses-pilot-2025",
+        "activity_section.key": "8280cb69-ac0e-4b32-8a7d-4c3635de981f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-powered-threats-defenses-lesson-level1_2025-pilot",
+        "script_level.level_keys": [
+          "ai-powered-threats-defenses-lesson-level1_2025-pilot"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-powered-threats-and-defenses-pilot-2025",
+        "activity_section.key": "b7c56253-2881-49d2-8120-1886b2ff5808"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-powered-threats-defenses-lesson8-level2_2025-pilot",
+        "script_level.level_keys": [
+          "ai-powered-threats-defenses-lesson8-level2_2025-pilot"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-powered-threats-and-defenses-pilot-2025",
+        "activity_section.key": "bbc6afac-b7ec-49d1-85ab-39cfe8a8ca63"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-powered-threats-defenses-lesson8-level3-2_2025-pilot",
+        "script_level.level_keys": [
+          "ai-powered-threats-defenses-lesson8-level3-2_2025-pilot"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-powered-threats-and-defenses-pilot-2025",
+        "activity_section.key": "e5732a21-e8dd-4d92-8f07-f1767a037c68"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-powered-threats-defenses-lesson8-level4_2025-pilot",
+        "script_level.level_keys": [
+          "ai-powered-threats-defenses-lesson8-level4_2025-pilot"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-powered-threats-and-defenses-pilot-2025",
+        "activity_section.key": "e5732a21-e8dd-4d92-8f07-f1767a037c68"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "ai-powered-threats-defenses-lesson9-level1_2025-pilot",
         "script_level.level_keys": [
           "ai-powered-threats-defenses-lesson9-level1_2025-pilot"
@@ -2035,6 +3361,18 @@
       }
     },
     {
+      "name": "[KEY] Phishing Prevention Strategies",
+      "url": "https://docs.google.com/document/d/1CxKq0ZJ361r67B-wYiLTYXBEectIy5ZlgMvQuYPJvgE/edit?usp=sharing",
+      "key": "_key_phishing_prevention_strategies",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_phishing_prevention_strategies"
+      }
+    },
+    {
       "name": "[KEY] The Day Everything Broke",
       "url": "https://docs.google.com/document/d/1_dOWTjj9yjI87rPmUYKNr977voWTQErhhA9FdWaA7b0/edit?usp=sharing",
       "key": "_key_the_day_everything_broke",
@@ -2044,6 +3382,120 @@
       },
       "seeding_key": {
         "resource.key": "_key_the_day_everything_broke"
+      }
+    },
+    {
+      "name": "[KEY] User Profiles' Audit Log Suspicious Activity",
+      "url": "https://docs.google.com/document/d/1UjbILX-9ROJQTIQZ6nUjaE7qVxCYGkGR1CVXdiIuvIw/edit?usp=sharing",
+      "key": "_key_user_profiles_audit_log_suspicious_activity",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_user_profiles_audit_log_suspicious_activity"
+      }
+    },
+    {
+      "name": "AAA and AI",
+      "url": "https://docs.google.com/presentation/d/1MXb_DuDodfBb6qXi_pKPF205rG5496TxXxFiEPRdXyg/edit?usp=sharing",
+      "key": "aaa_and_ai",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "aaa_and_ai"
+      }
+    },
+    {
+      "name": "Access Control Scenario Cards",
+      "url": "https://docs.google.com/presentation/d/15LGd19V5t8D7AqQbaumUrqOcAa4IJOZr1n6Q0Wwi0tg/edit?usp=sharing",
+      "key": "access_control_scenario_cards",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "access_control_scenario_cards"
+      }
+    },
+    {
+      "name": "Audit Logs Profile 1: Jordan P.",
+      "url": "https://docs.google.com/document/d/1GRBeFTM2ZnkZnTbZs6TPJsKO7Yu0ZBIbYnFX1nMiwwQ/edit?usp=sharing",
+      "key": "audit_logs_profile_1_jordan_p_",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "audit_logs_profile_1_jordan_p_"
+      }
+    },
+    {
+      "name": "Audit Logs Profile 2: Sana R.",
+      "url": "https://docs.google.com/document/d/1PWv-Ml0uWkXhHpiXJpRBscK_lFK4iOvAYeDboSVcG-M/edit?usp=sharing",
+      "key": "audit_logs_profile_2_sana_r_",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "audit_logs_profile_2_sana_r_"
+      }
+    },
+    {
+      "name": "Audit Logs Profile 3: Amara T.",
+      "url": "https://docs.google.com/document/d/1Wsw61alnuJW1EPdb93Z1s5qo5wNE4xWS-A6mqi4m2fU/edit?usp=sharing",
+      "key": "audit_logs_profile_3_amara_t_",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "audit_logs_profile_3_amara_t_"
+      }
+    },
+    {
+      "name": "Audit Logs Profile 4: Omar M.",
+      "url": "https://docs.google.com/document/d/1yGNSBj9MVcrx32Ifl1BJFc8YlnxsGOkw2E20aPWRAMY/edit?usp=sharing",
+      "key": "audit_logs_profile_4_omar_m_",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "audit_logs_profile_4_omar_m_"
+      }
+    },
+    {
+      "name": "Authentication, Authorization, and Accounting",
+      "url": "https://docs.google.com/presentation/d/1ePy6FMF73Bs_c0JYlA069AyzVOkvygFRVkw_UNM4h-k/edit?slide=id.gca418c6afa_0_1070#slide=id.gca418c6afa_0_1070",
+      "key": "authentication_authorization_and_accounting",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "authentication_authorization_and_accounting"
+      }
+    },
+    {
+      "name": "Authentication Method Cards",
+      "url": "https://docs.google.com/presentation/d/1r7gmPcIga3Cq5wKAqkGFUuB9jZlu3strvpSSWvIX3e4/edit?usp=sharing",
+      "key": "authentication_method_cards",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "authentication_method_cards"
       }
     },
     {
@@ -2136,6 +3588,19 @@
       }
     },
     {
+      "name": "Fraud Detection Investigation",
+      "url": "https://docs.google.com/document/d/1idByIUpqHOTgApWUPuuS4z4w3LHHP9zGh-Uo_VXbKGM/edit?usp=sharing",
+      "key": "fraud_detection_investigation",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "fraud_detection_investigation"
+      }
+    },
+    {
       "name": "Introduction to Cybersecurity",
       "url": "https://docs.google.com/presentation/d/1-Q9ABq6Bjl2T7ePja26FwhsZa0MIydksxhDxcqgKaRw/edit?usp=sharing",
       "key": "introduction_to_cybersecurity",
@@ -2171,6 +3636,55 @@
       },
       "seeding_key": {
         "resource.key": "investigate_a_cia_scenario_attacker_defender"
+      }
+    },
+    {
+      "name": "Phishing Prevention Strategies",
+      "url": "https://docs.google.com/document/d/1pfye3_eLKoTmBSKerGG5euxtCXoJgJ98ENPkIsLHf2o/edit?usp=sharing",
+      "key": "phishing_prevention_strategies",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "phishing_prevention_strategies"
+      }
+    },
+    {
+      "name": "Phishing with AI",
+      "url": "https://docs.google.com/presentation/d/1dCrlRiKRnSNj8O-7t6OIylNMWngTD2Q8888srY2TRx8/edit?usp=sharing",
+      "key": "phishing_with_ai",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "phishing_with_ai"
+      }
+    },
+    {
+      "name": "Social Engineering",
+      "url": "https://drive.google.com/file/d/1HGYmE9GX2vIeM4dcEvgSipr0LooZ849m/view?usp=drive_link",
+      "key": "social_engineering",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "social_engineering"
+      }
+    },
+    {
+      "name": "Station Setup and Instructions",
+      "url": "https://docs.google.com/document/d/1wcfldDo6kLWuNsg6Xc1Adci7kAkHxRTfxJwZDeolPyg/edit?usp=sharing",
+      "key": "station_setup_and_instructions",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "station_setup_and_instructions"
       }
     },
     {
@@ -2213,6 +3727,72 @@
     }
   ],
   "lessons_resources": [
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "access_control_scenario_cards"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "authentication_authorization_and_accounting"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "authentication_method_cards"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "station_setup_and_instructions"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "_key_user_profiles_audit_log_suspicious_activity"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "aaa_and_ai"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "audit_logs_profile_1_jordan_p_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "audit_logs_profile_2_sana_r_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "audit_logs_profile_3_amara_t_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "audit_logs_profile_4_omar_m_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "fraud_detection_investigation"
+      }
+    },
     {
       "seeding_key": {
         "lesson.key": "lesson-12",
@@ -2269,6 +3849,30 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "_key_phishing_prevention_strategies"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "phishing_prevention_strategies"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "phishing_with_ai"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "social_engineering"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-8",
         "resource.key": "case_studies"
       }
@@ -2318,6 +3922,36 @@
   ],
   "vocabularies": [
     {
+      "key": "aaa_tools",
+      "word": "AAA tools",
+      "definition": "a set of tools used in cybersecurity to help systems protect information and manage what users can do",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "aaa_tools"
+      }
+    },
+    {
+      "key": "access_control",
+      "word": "access control",
+      "definition": "rules a system uses to decide what you’re allowed to do once you’re logged in",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "access_control"
+      }
+    },
+    {
+      "key": "accounting",
+      "word": "accounting",
+      "definition": "when a system keeps track of what users do so suspicious activity can be detected and reviewed",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "accounting"
+      }
+    },
+    {
       "key": "asymmetric_encryption",
       "word": "asymmetric encryption",
       "definition": "encryption that uses two different keys: a public key to lock the message and a private key to unlock it",
@@ -2325,6 +3959,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "asymmetric_encryption"
+      }
+    },
+    {
+      "key": "authentication",
+      "word": "authentication",
+      "definition": "the process a system uses to check that you are who you say you are",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "authentication"
       }
     },
     {
@@ -2378,6 +4022,16 @@
       }
     },
     {
+      "key": "deepfake",
+      "word": "deepfake",
+      "definition": "a video or audio that has been manipulated using AI to look or sound like a real person",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "deepfake"
+      }
+    },
+    {
       "key": "encryption",
       "word": "encryption",
       "definition": "a way to make data unreadable to anyone without the right key",
@@ -2398,6 +4052,26 @@
       }
     },
     {
+      "key": "smishing",
+      "word": "smishing",
+      "definition": "a type of phishing that happens over text message (SMS)",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "smishing"
+      }
+    },
+    {
+      "key": "social_engineering",
+      "word": "social engineering",
+      "definition": "manipulating people into giving up private information or doing something risky",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "social_engineering"
+      }
+    },
+    {
       "key": "symmetric_encryption",
       "word": "symmetric encryption",
       "definition": "encryption where the same key is used to lock and unlock the message",
@@ -2406,9 +4080,49 @@
       "seeding_key": {
         "vocabulary.key": "symmetric_encryption"
       }
+    },
+    {
+      "key": "vishing",
+      "word": "vishing",
+      "definition": "a type of phishing that happens over phone call or voicemail",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "vishing"
+      }
     }
   ],
   "lessons_vocabularies": [
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "vocabulary.key": "aaa_tools"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "vocabulary.key": "access_control"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "vocabulary.key": "accounting"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "vocabulary.key": "authentication"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "vocabulary.key": "accounting"
+      }
+    },
     {
       "seeding_key": {
         "lesson.key": "lesson-12",
@@ -2437,6 +4151,30 @@
       "seeding_key": {
         "lesson.key": "lesson-4",
         "vocabulary.key": "cybersecurity"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "vocabulary.key": "deepfake"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "vocabulary.key": "smishing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "vocabulary.key": "social_engineering"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "vocabulary.key": "vishing"
       }
     },
     {
@@ -2499,6 +4237,16 @@
       }
     },
     {
+      "key": "3fcbf5ca-9b76-46d9-bb3d-474b14f624e7",
+      "properties": {
+        "description": "Compare basic strategies for prevention"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "objective.key": "3fcbf5ca-9b76-46d9-bb3d-474b14f624e7"
+      }
+    },
+    {
       "key": "532730f2-98bb-4a08-b357-ad464553c060",
       "properties": {
         "description": "Identify ways digital systems can fail and impact users’ daily lives"
@@ -2529,6 +4277,36 @@
       }
     },
     {
+      "key": "664c7141-bbef-4a37-8683-4bee4ab27b16",
+      "properties": {
+        "description": "Analyze how AI supports security features like fraud detection, anomaly detection, and adaptive authentication"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "objective.key": "664c7141-bbef-4a37-8683-4bee4ab27b16"
+      }
+    },
+    {
+      "key": "6ca2d8d5-ea30-4e9d-9732-7c72e5918183",
+      "properties": {
+        "description": "Apply authentication and access control models to real-world scenarios"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "objective.key": "6ca2d8d5-ea30-4e9d-9732-7c72e5918183"
+      }
+    },
+    {
+      "key": "6cc391e2-7254-4c1f-96cf-0a9f870accbd",
+      "properties": {
+        "description": "Examine how attackers use deception to manipulate people into revealing sensitive information or taking risky actions"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "objective.key": "6cc391e2-7254-4c1f-96cf-0a9f870accbd"
+      }
+    },
+    {
       "key": "7be282eb-6693-449f-a0dc-f0a80357145f",
       "properties": {
         "description": "Apply encryption concepts to different data states (at rest, in transit, in use)"
@@ -2539,6 +4317,16 @@
       }
     },
     {
+      "key": "94ec8b43-d000-4280-addb-329ab3966586",
+      "properties": {
+        "description": "Explain how systems verify identity and manage access to information"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "objective.key": "94ec8b43-d000-4280-addb-329ab3966586"
+      }
+    },
+    {
       "key": "a8340712-b11b-43be-941a-a49faf736b98",
       "properties": {
         "description": "Explain how system design, human behavior, and AI can work together to prevent a cyber threat"
@@ -2546,6 +4334,16 @@
       "seeding_key": {
         "lesson.key": "lesson-8",
         "objective.key": "a8340712-b11b-43be-941a-a49faf736b98"
+      }
+    },
+    {
+      "key": "b86fb7c3-1c3c-4d43-b487-6134b2a314df",
+      "properties": {
+        "description": "Explain how AI is used in threat detection to identify suspicious patterns"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "objective.key": "b86fb7c3-1c3c-4d43-b487-6134b2a314df"
       }
     },
     {
@@ -2566,6 +4364,16 @@
       "seeding_key": {
         "lesson.key": "lesson-8",
         "objective.key": "c13a6012-a8bc-4e02-a2d8-6864a1a44475"
+      }
+    },
+    {
+      "key": "e8449b77-ce5f-4126-bf77-0a1f1b00bab1",
+      "properties": {
+        "description": "Explain how AI tools (e.g., generative text, deepfake video, voice cloning, chatbot mimicry) increase the realism, reach, and personalization of social engineering attacks"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "objective.key": "e8449b77-ce5f-4126-bf77-0a1f1b00bab1"
       }
     }
   ],

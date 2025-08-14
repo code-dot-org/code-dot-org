@@ -1,0 +1,60 @@
+name 'test-ai-powered-threats-defenses-lesson3-level4c'
+title 'Sofia H. - User Profile'
+
+display_name 'Sofia Hernandez'
+bubble_choice_description 'DESCRIPTION'
+thumbnail_url 'https://images.code.org/35daf4616746412a061782ab3771c1c6-image-1753987189397.png'
+
+markdown <<MARKDOWN
+#Sofia
+
+#### Look through Sofia's breach report to try to determine what happened and what type of password attack your user was vulnerable to.
+
+<div style="font-family: sans-serif; font-size: 16px; line-height: 1.6;">
+
+
+  <h3 style="color: #00838f;">Breach Report</h3>
+  <p><strong>Service Breached:</strong> School Email Portal<br>
+     <strong>Login Location:</strong> IP masked via VPN (region unknown)<br>
+     <strong>Time of Access:</strong> 6:58 a.m.</p>
+
+  <p>Automated login activity was detected across dozens of student accounts within a short time frame.<br>
+     Sofia’s account was accessed using the password: <strong>BTS123</strong></p>
+
+  <p>No prior login history was associated with this device or region.<br>
+     <em>The password used was one of several simple combinations attempted across multiple accounts.</em></p>
+
+  <br>
+
+  <h3 style="color: #00838f;">Password Attacks</h3>
+
+  <table style="width:100%; border-collapse:collapse; border:1px solid #ccc; font-size: 15px;">
+    <tr>
+      <td style="font-weight:bold; padding:10px; border:1px solid #ccc;">Credential stuffing attack</td>
+      <td style="padding:10px; border:1px solid #ccc;">
+        When attackers use real usernames and passwords (often from past breaches) to break into other accounts.
+      </td>
+    </tr>
+    <tr>
+      <td style="font-weight:bold; padding:10px; border:1px solid #ccc;">Password guessing attack</td>
+      <td style="padding:10px; border:1px solid #ccc;">
+        When attackers try different passwords for one account, hoping to guess the right one.
+      </td>
+    </tr>
+    <tr>
+      <td style="font-weight:bold; padding:10px; border:1px solid #ccc;">Password spraying attack</td>
+      <td style="padding:10px; border:1px solid #ccc;">
+        When an attacker tries one common password on many different accounts to avoid detection.
+      </td>
+    </tr>
+    <tr>
+      <td style="font-weight:bold; padding:10px; border:1px solid #ccc;">Brute force attack</td>
+      <td style="padding:10px; border:1px solid #ccc;">
+        When an attacker rapidly tries a large number of possible passwords on one account, using automated tools to find the correct one.
+      </td>
+    </tr>
+  </table>
+
+</div>
+
+MARKDOWN

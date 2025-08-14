@@ -94,10 +94,8 @@ module RakeUtils
   # Changes the Bundler environment to the specified directory for the specified block.
   # Runs bundle_install ensuring dependencies are up to date.
   def self.with_bundle_dir(dir)
-    # Using `with_clean_env` is recommended when shelling out to a different bundle (ref:
-    # http://bundler.io/man/bundle-exec.1.html#Shelling-out), but `with_clean_env` is
-    # deprecated in favor of `with_unbundled_env` (ref:
-    # https://bundler.io/v2.1/whats_new.html#helper-deprecations) so use that instead.
+    # Using `with_unbundled_env` is recommended when shelling out to a different bundle.
+    # Ref: https://bundler.io/man/bundle-exec.1.html#Shelling-out
     Bundler.with_unbundled_env do
       ENV['AWS_DEFAULT_REGION'] ||= CDO.aws_region
       Dir.chdir(dir) do
@@ -121,13 +119,14 @@ module RakeUtils
   def self.bundle_install(*args)
     without = CDO.rack_envs - [CDO.rack_env]
     run_bundle_command('config set --local without', *without)
+    run_bundle_command('config set --local deployment \'true\'') if CDO.chef_managed
     run_bundle_command('install --quiet --jobs', nproc, *args)
   end
 
   def self.run_bundle_command(*args)
-    if CDO.bundler_use_sudo
-      sudo('bundle', *args)
-    else
+    # Using `with_unbundled_env` is recommended when shelling out to a different bundle.
+    # Ref: https://bundler.io/man/bundle-exec.1.html#Shelling-out
+    Bundler.with_unbundled_env do
       system('bundle', *args)
     end
   end

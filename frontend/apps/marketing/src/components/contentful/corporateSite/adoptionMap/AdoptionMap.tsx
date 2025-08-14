@@ -44,7 +44,7 @@ const DEFAULT_LAT = 39;
 const DEFAULT_ZOOM = 3;
 const MAP_POINT_ZOOM = 14;
 
-interface AdoptionMapMapProps {
+export interface AdoptionMapMapProps {
   school?: School | null;
   onTakeSurveyClick?: (school: School) => void;
 }
@@ -54,7 +54,9 @@ const AdoptionMap: React.FC<AdoptionMapMapProps> = ({
   onTakeSurveyClick,
 }) => {
   const mapRef = useRef<MapRef>(null);
-  const tilesetUrlParam = useSearchParams()?.get('tileset');
+  const searchParams = useSearchParams();
+
+  const tilesetUrlParam = searchParams?.get('tileset');
   const mapTileset = tilesetUrlParam ?? MAP_TILESET_ID;
 
   const [mapLoaded, setMapLoaded] = useState(false);
