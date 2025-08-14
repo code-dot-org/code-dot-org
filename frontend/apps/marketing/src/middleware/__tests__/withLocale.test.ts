@@ -222,12 +222,6 @@ describe('withLocale middleware', () => {
 
     SUPPORTED_LOCALES_SET.add('zh-TW' as SupportedLocale);
     await withLocale(next)(request, mockEvent);
-
-    expect(cookieMock.set).not.toHaveBeenCalledWith(
-      'language_',
-      expect.anything(),
-      expect.anything(),
-    );
   });
 
   it('should not infinitely redirect for non-corporate brands when locale is unsupported', async () => {
@@ -247,11 +241,5 @@ describe('withLocale middleware', () => {
     const response = await withLocale(next)(request, mockEvent);
 
     expect(response?.headers).toBeUndefined();
-    // Should not set language_ cookie for non-code.org brands
-    expect(cookieMock.set).not.toHaveBeenCalledWith(
-      'language_',
-      expect.anything(),
-      expect.anything(),
-    );
   });
 });

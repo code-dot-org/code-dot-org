@@ -1,0 +1,10 @@
+name 'test-ai-powered-threats-defenses-lesson3-level2choice'
+display_name 'Phishing Emails'
+description 'Choose the same user persona from Level 1 and look through emails sent to them to try to determine which ones you would trust and which might be phishing attacks.'
+
+sublevels
+level 'test-ai-powered-threats-defenses-lesson3-level2a'
+level 'test-ai-powered-threats-defenses-lesson3-level2b'
+level 'test-ai-powered-threats-defenses-lesson3-level2c'
+level 'test-ai-powered-threats-defenses-lesson3-level2d'
+

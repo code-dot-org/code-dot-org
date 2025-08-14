@@ -1,0 +1,81 @@
+name 'test-ai-powered-threats-defenses-lesson3-level1a'
+title 'Ava R. - User Profile'
+
+display_name 'Ava Rivera'
+bubble_choice_description 'DESCRIPTION'
+thumbnail_url 'https://images.code.org/35daf4616746412a061782ab3771c1c6-image-1753987189397.png'
+
+markdown <<MARKDOWN
+#Ava Rivera
+
+#### Look through Ava's social media posts and record important information in your activity guide.
+
+<table style="width:100%; border-collapse:collapse; border:none;">
+  <!-- Row 1: Top image row -->
+  <tr>
+    <td style="width:48%; vertical-align:top;">
+      <img src="https://images.code.org/225641dacdf653cde5ba586626e3affd-image-1755114937707.gif" alt="Social media image 1" style="width:100%; height:auto;">
+    </td>
+    <td style="width:4%;"></td> <!-- blank spacer column -->
+    <td style="width:48%; vertical-align:top;">
+      <img src="https://images.code.org/bd9f81082a3a096c1abade4028432995-image-1755114944862.gif" alt="Social media image 2" style="width:100%; height:auto;">
+    </td>
+  </tr>
+
+  <!-- Row 2: Captions for first set -->
+  <tr>
+    <td style="background-color:black; color:white; padding:8px; font-family:sans-serif; width: 220px; height: 100px; vertical-align: top;">
+    <h3>@MochiAndMe_17</h3>
+    POV: You just got your first debit card #adulting #catsoftiktok
+    <br>
+    </td>
+    <td></td> <!-- spacer -->
+    <td style="background-color:black; color:white; padding:8px; font-family:sans-serif; width: 220px; height: 100px; vertical-align: top;">
+    <h3>@AvaRiv_</h3>
+    Scorpio time is NOW... holla if you can sting and be sweet! #Oct28isthebest #ScorpioLady #birthdaygirl
+    <br>
+    </td>
+  </tr>
+
+  <!-- Row 3: Vertical spacer row -->
+  <tr>
+    <td style="height:24px;"></td>
+    <td></td>
+    <td></td>
+  </tr>
+
+  <!-- Row 4: Second image row -->
+  <tr>
+    <td style="vertical-align:top;">
+      <img src="https://images.code.org/fef7938c226678a3e32b294ae20fb034-image-1755114952590.gif" alt="Social media image 3" style="width:100%; height:auto;">
+    </td>
+    <td></td> <!-- spacer -->
+    <td style="vertical-align:top;">
+      <img src="https://images.code.org/ab016f11136a3bc7a8fb96d02d44c99b-image-1755114957246.gif" alt="Social media image 4" style="width:100%; height:auto;">
+    </td>
+  </tr>
+
+  <!-- Row 5: Captions for second set -->
+  <tr>
+    <td style="background-color:black; color:white; padding:8px; font-family:sans-serif; width: 220px; height: 100px; vertical-align: top;">
+     <h3>@AvaVibesTS</h3> 
+     <br>
+     Making bracelets for December!! Taylor! We love you!
+    </td>
+    <td></td> <!-- spacer -->
+    <td style="background-color:black; color:white; padding:8px; font-family:sans-serif; width: 220px; height: 100px; vertical-align: top;">
+    <h3>@AvaRiv_</h3>
+    Taco Thursday should be a national holiday
+    <br>
+    </td>
+  </tr>
+</table>
+
+![]()
+
+![]()
+
+![]()
+
+![]()
+MARKDOWN

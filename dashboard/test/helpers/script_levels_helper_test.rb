@@ -12,6 +12,7 @@ class ScriptLevelsHelperTest < ActionView::TestCase
     create(:section, user: @teacher, script: script)
     @section = create(:section, user: @teacher, script: script)
     create(:follower, section: @section, student_user: @student)
+    create(:unit, name: Unit::COURSE4_NAME)
   end
 
   test 'tracking_pixel_url' do

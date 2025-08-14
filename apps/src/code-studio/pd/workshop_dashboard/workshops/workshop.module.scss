@@ -49,8 +49,9 @@
   }
 }
 
-.card {
+div.card {
   border: 1px solid var(--borders-neutral-primary);
+  box-shadow: 0 2px 3px 0 rgba(0 0 0 / 5%);
 
   .cardHeader {
     border-bottom: 1px solid var(--borders-neutral-primary);
@@ -62,15 +63,15 @@
       align-items: center;
       justify-content: space-between;
 
+      .cardHeaderRow {
+        display: flex;
+        gap: 0.5rem;
+      }
     }
   }
 
-  .cardContent {
-    padding: 0.75rem 1rem;
-
-    &:global(.MuiCardContent-root:last-child) {
-      padding-bottom: 1rem;
-    }
+  div.cardContent {
+    padding: 0.75rem 1rem 1rem;
   }
 
   .divider {
@@ -157,4 +158,16 @@
     margin-top: 0.375rem;
   }
 
+  .attendanceTable {
+    width: unset;
+    margin-top: 0.5rem;
+
+    td,
+    th {
+      background-color: var(--background-neutral-primary);
+      border: none;
+      padding: 0.5rem 0;
+      padding-right: 1.5rem;
+    }
+  }
 }

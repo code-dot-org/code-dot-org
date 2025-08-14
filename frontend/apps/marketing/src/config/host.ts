@@ -1,6 +1,13 @@
 import {Brand} from '@/config/brand';
 import {Stage} from '@/config/stage';
 
+const ALLOWED_PRODUCTION_CANONICAL_HOSTNAMES: {[brand in Brand]: Set<string>} =
+  {
+    [Brand.CODE_DOT_ORG]: new Set(['code.org', 'aiday.org']),
+    [Brand.CS_FOR_ALL]: new Set(['csforall.org']),
+    [Brand.HOUR_OF_CODE]: new Set(['hourofcode.com']),
+  };
+
 /**
  * Returns the localhost domain
  */
@@ -51,4 +58,15 @@ export function getCanonicalHostname(brand: Brand, stage: Stage) {
     case 'production':
       return getProductionCanonicalRootDomain(brand);
   }
+}
+
+export function isAllowedProductionCanonicalHostname(
+  brand: Brand,
+  hostname: string | null,
+): boolean {
+  if (hostname == null) {
+    return false;
+  }
+
+  return ALLOWED_PRODUCTION_CANONICAL_HOSTNAMES[brand].has(hostname);
 }

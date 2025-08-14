@@ -4,7 +4,6 @@ import {NextFetchEvent, NextRequest} from 'next/server';
 import {Brand, getBrandFromHostname} from '@/config/brand';
 import {
   getLocalizeJsLocaleFromDashboardLocale,
-  getDashboardLocale,
   SUPPORTED_LOCALE_CODES,
   SUPPORTED_LOCALES_SET,
   SupportedLocale,
@@ -13,6 +12,7 @@ import {getStage} from '@/config/stage';
 import {getStudioBaseUrl} from '@/config/studio';
 import {getContentfulSlug} from '@/contentful/slug/getContentfulSlug';
 import {getCookieNameByStage} from '@/cookies/getCookie';
+import {setLanguageCookie} from '@/middleware/i18n/setLanguageCookie';
 import {getCachedRedirectResponse} from '@/middleware/utils/getCachedRedirectResponse';
 
 import {MiddlewareFactory} from './types';
@@ -64,12 +64,7 @@ export const withLocale: MiddlewareFactory = next => {
       // If the first part of the path is a supported locale or there are no subpaths, we don't need to redirect
       const response = await next(request, event);
 
-      if (brand === Brand.CODE_DOT_ORG) {
-        response.cookies.set('language_', getDashboardLocale(maybeLocale), {
-          path: '/',
-          domain: stage === 'production' ? '.code.org' : undefined,
-        });
-      }
+      setLanguageCookie({response, maybeLocale, stage, brand, hostname});
 
       return response;
     }
@@ -104,13 +99,14 @@ export const withLocale: MiddlewareFactory = next => {
     const redirectUrl = new URL(localizedPath, request.url);
     const response = getCachedRedirectResponse(redirectUrl);
 
-    if (brand === Brand.CODE_DOT_ORG) {
-      // Set the language cookie if discovered via Accept-Language header
-      response.cookies.set('language_', getDashboardLocale(locale), {
-        path: '/',
-        domain: getStage() === 'production' ? '.code.org' : undefined,
-      });
-    }
+    // Set the language cookie if discovered via Accept-Language header
+    setLanguageCookie({
+      response,
+      maybeLocale: locale as SupportedLocale,
+      stage,
+      brand,
+      hostname,
+    });
 
     return response;
   };

@@ -1,16 +1,22 @@
 import Alert from '@code-dot-org/component-library/alert';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Box, Stack} from '@mui/material';
 import React from 'react';
 import {useSelector} from 'react-redux';
+import {useOutletContext} from 'react-router-dom';
+
+import {UseFetchResult} from '@cdo/apps/util/useFetch';
 
 import {WorkshopAdmin} from '../../permission';
-import {useWorkshopContext} from '../context/WorkshopContext';
+import {Workshop} from '../../WorkshopFormTemplate/types';
+import {WorkshopData} from '../types';
 
+import {TakeAttendanceSection} from './sections/TakeAttendanceSection';
 import {WorkshopInformationSection} from './sections/WorkshopInformationSection';
 import {WorkshopLinksSection} from './sections/WorkshopLinksSection';
+import {WorkshopStatusSection} from './sections/WorkshopStatusSection';
 
 export const WorkshopOverview: React.FC = () => {
-  const {workshop} = useWorkshopContext();
   const permission = useSelector(
     (state: {
       workshopDashboard: {permission: {has: (permission: string) => boolean}};
@@ -18,8 +24,22 @@ export const WorkshopOverview: React.FC = () => {
   );
   const isWorkshopAdmin = permission.has(WorkshopAdmin);
 
-  if (!workshop) {
+  const {workshop, loading, error, refetch} = useOutletContext<
+    Omit<UseFetchResult<Workshop>, 'data'> & {
+      workshop: WorkshopData;
+    }
+  >();
+
+  if (!workshop && loading) {
+    return <FontAwesomeV6Icon iconName="spinner" animationType="spin" />;
+  }
+
+  if (error) {
     return <Alert size="m" text="Workshop not found" type="warning" />;
+  }
+
+  if (!workshop) {
+    return null;
   }
 
   return (
@@ -30,6 +50,12 @@ export const WorkshopOverview: React.FC = () => {
           isWorkshopAdmin={isWorkshopAdmin}
         />
         <WorkshopLinksSection workshop={workshop} />
+        <WorkshopStatusSection
+          workshop={workshop}
+          isWorkshopAdmin={isWorkshopAdmin}
+          onWorkshopUpdate={refetch}
+        />
+        <TakeAttendanceSection workshop={workshop} />
       </Stack>
     </Box>
   );
