@@ -3,3 +3,7 @@ export {default as Loading} from './loading';
 export * from './extraLinksModal';
 export {default as ExtraLinksModal} from './extraLinksModal';
 export {default as MetricsAdapter} from './MetricsAdapter';
+export * from './projectBlockedUI';
+export {default as ProjectBlockedUI} from './projectBlockedUI';
+export * from './errorFallbackPage';
+export {default as ErrorFallbackPage} from './errorFallbackPage';

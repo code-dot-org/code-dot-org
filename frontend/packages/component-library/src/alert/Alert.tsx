@@ -1,5 +1,5 @@
 import classnames from 'classnames';
-import {HTMLAttributes, useMemo} from 'react';
+import {HTMLAttributes, useMemo, ReactNode} from 'react';
 
 import CloseButton from '@/closeButton';
 import {ComponentSizeXSToL} from '@/common/types';
@@ -21,7 +21,7 @@ export const alertTypes: {[key in AlertType]: AlertType} = {
 
 export interface AlertProps extends HTMLAttributes<HTMLDivElement> {
   /** Alert text */
-  text: string;
+  text: string | ReactNode;
   /** Alert link */
   link?: LinkProps;
   /** Alert icon */

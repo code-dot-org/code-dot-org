@@ -8,10 +8,11 @@ import {progressSlice} from '@code-dot-org/progress/reducers';
 import {injectSlices} from '@code-dot-org/redux';
 import {currentUserSlice} from '@code-dot-org/user/reducers';
 
-import {labSystemSlice, labProjectSlice, predictLevelSlice} from './reducers';
+import {labSlice, labSystemSlice, labProjectSlice, predictLevelSlice} from './reducers';
 
 const store = injectSlices([
   currentUserSlice,
+  labSlice,
   labSystemSlice,
   labProjectSlice,
   predictLevelSlice,

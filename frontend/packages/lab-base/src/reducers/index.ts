@@ -1,3 +1,6 @@
+export * as labActions from './lab';
+export {default as labSlice} from './lab';
+
 export * as labSystemActions from './labSystem';
 export {default as labSystemSlice} from './labSystem';
 
