@@ -589,6 +589,8 @@ class ScriptLevel < ApplicationRecord
     if user_level
       teacher_panel_summary[:userLevelId] = user_level.id
       teacher_panel_summary[:updatedAt] = user_level.updated_at
+      teacher_panel_summary[:attempts] = user_level.attempts
+      teacher_panel_summary[:timeSpent] = user_level.time_spent
     end
 
     teacher_panel_summary
@@ -791,6 +793,7 @@ class ScriptLevel < ApplicationRecord
     level&.deprecated?
   end
 
+  # TODO-AITUTOR: Remove this & clean up progressionType lab2 property.
   # WARNING: Do NOT reuse this trashy little method. It is fragile English-only string comparison
   # written for a very specific use case - logging analytics for the CSA '24-'25 AI Tutor pilot,
   # in which the level progression naming conventions follow a very specific pattern aligned

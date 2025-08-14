@@ -4,8 +4,8 @@ import image3 from '@public/images/action-block-03.png';
 import image4 from '@public/images/action-block-04.png';
 import image5 from '@public/images/action-block-05.png';
 import image6 from '@public/images/action-block-06.png';
-import type {Meta, StoryFn} from '@storybook/react';
-import {within, expect, userEvent} from '@storybook/test';
+import type {Meta, StoryFn} from '@storybook/react-webpack5';
+import {within, expect, userEvent} from 'storybook/test';
 
 import ActionBlock from '@/actionBlock';
 import {Heading2} from '@/typography';

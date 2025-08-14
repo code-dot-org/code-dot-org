@@ -75,6 +75,29 @@
           ]
         },
         {
+          "type": "radiogroup",
+          "name": "cdo_pd_experience",
+          "title": "What is your previous experience with Code.org professional learning?",
+          "choices": [
+            {
+              "value": "first",
+              "text": "This is my first Code.org workshop"
+            },
+            {
+              "value": "experienced_most_recent_this_sy",
+              "text": "I've attended Code.org workshops before, the most recent one was this school year"
+            },
+            {
+              "value": "experienced_most_recent_prior_sys",
+              "text": "I've attended Code.org workshops before, the most recent one was in a previous school year"
+            },
+            {
+              "value": "not_sure",
+              "text": "I’m not sure"
+            }
+          ]
+        },
+        {
           "type": "matrix",
           "name": "codedotorg_teaching_strategies_csd",
           "title": "Right now, I have concrete teaching strategies to...",
@@ -1820,6 +1843,11 @@
               "html": "<p>Below are pairs of statements from computer science teachers describing various philosophies or approaches to teaching, presented as <strong>Statement A</strong> and <strong>Statement B </strong>like so:  </p>  <div class='foorm-survey-rating-question-sample'><img src='/shared/images/foorm/foorm_rating_question_sample.png'/></div> Please <b>select the value 1-5</b> that best shows how closely your own beliefs are to one of the statements in a given pair.\n\nPlease respond freely based on your <b>personal beliefs</b> and philosophy - there is no right or wrong way to respond."
             }
           ]
+        },
+        {
+          "type": "html",
+          "name": "pd_byow_pre_survey_preamble",
+          "html": "<h1><strong>Code.org Professional Learning Program</h1>\n<p><h2>Pre-Workshop Survey</strong></h2>\n<p><strong>Welcome to the program!</strong></p>\n<p>Code.org relies on surveys as a crucial tool through which we remain connected to teachers, and to give you the opportunity to provide feedback about our curriculum and your teaching experience, as well as to improve our programs.</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul>\n<li>Your individual responses here are completely <strong>confidential.</strong></li>\n<li>Your identity will <strong>never</strong> be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share <strong>anonymous,</strong> aggregate data (representing all responses) publicly.</li>\n<li>Your <strong>anonymized</strong> responses will be used by Code.org, our Regional Partners, and our facilitators for program improvement.</li>\n</ul>\n<p><strong>Your honesty and candor are appreciated.</strong></p>"
         },
         {
           "type": "html",

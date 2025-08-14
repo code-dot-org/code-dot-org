@@ -1,0 +1,24 @@
+{
+  "name": "ai-powered-threats-and-defenses-2025",
+  "script_names": [
+    "ai-powered-threats-and-defenses-pilot-2025"
+  ],
+  "original_script_names": [
+    "ai-powered-threats-and-defenses-pilot-2025"
+  ],
+  "published_state": "in_development",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "ai-powered-threats-and-defenses",
+    "has_verified_resources": true,
+    "version_year": "2025"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

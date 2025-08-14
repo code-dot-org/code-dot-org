@@ -6,12 +6,7 @@ import {Provider} from 'react-redux';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
-import {
-  PublishedState,
-  InstructionType,
-  InstructorAudience,
-  ParticipantAudience,
-} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import createResourcesReducer, {
   initResources,
 } from '@cdo/apps/levelbuilder/lesson-editor/resourcesEditorRedux';
@@ -74,17 +69,11 @@ describe('UnitEditor', () => {
       locales: [],
       name: 'test-unit',
       unitFamilies: [],
-      versionYearOptions: [],
-      initialFamilyName: '',
-      initialVersionYear: '',
       initialProjectSharing: false,
       initialLocales: [],
       isMigrated: false,
       initialPublishedState: PublishedState.in_development,
       initialHideWithinCourse: false,
-      initialInstructionType: InstructionType.teacher_led,
-      initialInstructorAudience: InstructorAudience.teacher,
-      initialParticipantAudience: ParticipantAudience.student,
       initialSupportedLocales: [],
       initialTopicTags: [],
       hasCourse: false,
@@ -542,7 +531,7 @@ describe('UnitEditor', () => {
     });
 
     it('saves successfully if unit is not a course and only version year is set', () => {
-      const wrapper = createWrapper({initialIsCourse: false});
+      const wrapper = createWrapper();
 
       const unitEditor = wrapper.find('UnitEditor');
       unitEditor.setState({
@@ -584,121 +573,6 @@ describe('UnitEditor', () => {
       //check that last saved message is showing
       expect(wrapper.find('.lastSavedMessage').length).to.equal(1);
       server.restore();
-    });
-
-    it('shows error when version year is set but family name is not', () => {
-      sinon.stub($, 'ajax');
-      const wrapper = createWrapper({initialIsCourse: true});
-
-      const unitEditor = wrapper.find('UnitEditor');
-      unitEditor.setState({
-        versionYear: '1991',
-        familyName: '',
-      });
-
-      const saveBar = wrapper.find('SaveBar');
-
-      const saveAndKeepEditingButton = saveBar.find('button').at(1);
-      expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
-        .true;
-      saveAndKeepEditingButton.simulate('click');
-
-      expect($.ajax).to.not.have.been.called;
-
-      expect(unitEditor.state().isSaving).to.equal(false);
-      expect(unitEditor.state().error).to.equal(
-        'Please set both version year and family name.'
-      );
-
-      expect(
-        wrapper
-          .find('.saveBar')
-          .contains(
-            'Error Saving: Please set both version year and family name.'
-          )
-      ).to.be.true;
-
-      $.ajax.restore();
-    });
-
-    it('saves successfully when moving standalone unit out of in development if professional learning course', () => {
-      sinon.stub(window, 'confirm').callsFake(() => true);
-      const wrapper = createWrapper({initialIsCourse: false, hasCourse: false});
-
-      const unitEditor = wrapper.find('UnitEditor');
-      unitEditor.setState({
-        publishedState: 'beta',
-        deeperLearningCourse: 'new-pl-course',
-      });
-
-      let returnData = {scriptPath: '/s/test-unit'};
-      let server = sinon.fakeServer.create();
-      server.respondWith('PUT', `/s/1`, [
-        200,
-        {'Content-Type': 'application/json'},
-        JSON.stringify(returnData),
-      ]);
-
-      const saveBar = wrapper.find('SaveBar');
-
-      const saveAndKeepEditingButton = saveBar.find('button').at(1);
-      expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
-        .true;
-      saveAndKeepEditingButton.simulate('click');
-
-      // check that the spinner is showing
-      expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
-      expect(unitEditor.state().isSaving).to.equal(true);
-
-      clock = sinon.useFakeTimers(new Date('2020-12-01'));
-      const expectedLastSaved = Date.now();
-      server.respond();
-      clock.tick(50);
-
-      unitEditor.update();
-      expect(utils.navigateToHref).to.not.have.been.called;
-      expect(unitEditor.state().isSaving).to.equal(false);
-      expect(unitEditor.state().lastSaved).to.equal(expectedLastSaved);
-      expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(0);
-      //check that last saved message is showing
-      expect(wrapper.find('.lastSavedMessage').length).to.equal(1);
-      server.restore();
-      window.confirm.restore();
-    });
-
-    it('shows error when family name is set but version year is not', () => {
-      sinon.stub($, 'ajax');
-      const wrapper = createWrapper({initialIsCourse: true});
-
-      const unitEditor = wrapper.find('UnitEditor');
-      unitEditor.setState({
-        versionYear: '',
-        familyName: 'new-family-name',
-      });
-
-      const saveBar = wrapper.find('SaveBar');
-
-      const saveAndKeepEditingButton = saveBar.find('button').at(1);
-      expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
-        .true;
-      saveAndKeepEditingButton.simulate('click');
-
-      expect($.ajax).to.not.have.been.called;
-
-      expect(unitEditor.state().isSaving).to.equal(false);
-      expect(unitEditor.state().error).to.equal(
-        'Please set both version year and family name.'
-      );
-
-      expect(
-        wrapper
-          .find('.saveBar')
-          .contains(
-            'Error Saving: Please set both version year and family name.'
-          )
-      ).to.be.true;
-
-      $.ajax.restore();
     });
 
     it('can save and close', () => {

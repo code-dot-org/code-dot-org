@@ -38,7 +38,8 @@ module Pd
     TEST_PARTICIPANT_SURVEY_CONFIG_PATHS = [
       'surveys/pd/workshop_csf_intro_post_test',
       'surveys/pd/summer_workshop_pre_survey_test',
-      'surveys/pd/summer_workshop_post_survey_test'
+      'surveys/pd/summer_workshop_post_survey_test',
+      'surveys/pd/build_your_own_workshop_teachers_post_survey_test'
     ]
 
     ALL_PARTICIPANT_SURVEY_CONFIG_PATHS = [

@@ -59,6 +59,14 @@ module AiDiffBedrockHelper
     prompt
   end
 
+  def self.populate_new_session_messages(messages, input)
+    new_input_text = "This is a continuation of a previous conversation. The previous messages are:"
+    messages.each do |msg|
+      new_input_text << "\n\n#{msg.user? ? "User" : "Assistant"}: #{msg.raw_content}"
+    end
+    new_input_text << "\n\n\n**The current message that you should respond to is:**\nUser: #{input}"
+  end
+
   def self.get_prompt_for_context(context, course_name, unit_name, lesson_name, is_preset, section_contexts, level_instructions, student_code)
     case context
     when SharedConstants::AI_DIFF_CONTEXT[:LEVEL]

@@ -315,6 +315,7 @@ class Lesson < ApplicationRecord
         lessonStartUrl: start_url(unit_group_unit: unit_group_unit),
         duration: total_lesson_duration,
         background: background,
+        rubric: rubric,
       }
       # Use to_a here so that we get access to the cached script_levels.
       # Without it, script_levels.last goes back to the database.

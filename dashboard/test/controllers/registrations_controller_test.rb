@@ -84,7 +84,7 @@ class RegistrationsControllerTest < ActionController::TestCase
   end
 
   test "update: does not update user with a new password without current_password param" do
-    user = create :user, email: 'example@email.com', password: 'mypassword'
+    user = create(:user, email: 'example@email.com', password: 'mypassword')
     sign_in user
 
     put :update, params: {user: {password: 'newpassword', password_confirmation: 'newpassword'}}
@@ -105,7 +105,7 @@ class RegistrationsControllerTest < ActionController::TestCase
   end
 
   test "update: teacher without a password can add a password" do
-    teacher = create :teacher, :with_google_authentication_option, encrypted_password: nil
+    teacher = create(:teacher, :with_google_authentication_option, encrypted_password: nil)
     teacher.update_attribute(:password, nil)
     sign_in teacher
 
@@ -116,7 +116,7 @@ class RegistrationsControllerTest < ActionController::TestCase
   end
 
   test "update: student without a password can add a password" do
-    student = create :student, :with_google_authentication_option, encrypted_password: nil
+    student = create(:student, :with_google_authentication_option, encrypted_password: nil)
     student.update_attribute(:password, nil)
     sign_in student
 
@@ -508,7 +508,7 @@ class RegistrationsControllerTest < ActionController::TestCase
   end
 
   test "the us_state and country_code attributes can be set and updated" do
-    user = create :student, us_state: "CO", country_code: "US"
+    user = create(:student, us_state: "CO", country_code: "US")
     assert_equal "CO", user.us_state
     assert_equal "US", user.country_code
     sign_in user
@@ -521,7 +521,7 @@ class RegistrationsControllerTest < ActionController::TestCase
   end
 
   test "student-entered gender is saved and properly sets the normalized gender value" do
-    student = create :student, gender_student_input: "female"
+    student = create(:student, gender_student_input: "female")
     assert_equal "female", student.gender_student_input
     assert_equal "f", student.gender
     sign_in student

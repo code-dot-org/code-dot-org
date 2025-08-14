@@ -2,7 +2,7 @@ require "test_helper"
 
 class AidiffMessageFeedbackTest < ActiveSupport::TestCase
   setup_all do
-    @user = create :user
+    @user = create(:user)
   end
 
   test 'thread, message, feedback create' do

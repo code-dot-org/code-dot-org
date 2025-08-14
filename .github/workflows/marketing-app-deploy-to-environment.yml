@@ -108,7 +108,9 @@ jobs:
             --container_image_hash ${{ inputs.CONTAINER_IMAGE_DIGEST }} \
             --role_arn ${{ secrets.CLOUDFORMATION_DEPLOYER_ROLE_ARN }} \
             --web_application_server_secrets_arn ${{ secrets.APPLICATION_SERVER_SECRETS_ARN }} \
-            --cloudformation_role_boundary ${{ secrets.CLOUDFORMATION_ROLE_BOUNDARY_ARN }}
+            --cloudformation_role_boundary ${{ secrets.CLOUDFORMATION_ROLE_BOUNDARY_ARN }} \
+            --production_domain_name "${{ vars.PRODUCTION_DOMAIN_NAME }}" \
+            --production_hosted_zone_id "${{ secrets.PRODUCTION_HOSTED_ZONE_ID }}"
 
       - name: "[${{ env.GITHUB_ENVIRONMENT_NAME }}] Invalidate CloudFront Cache"
         env:
@@ -127,7 +129,6 @@ jobs:
   ui-tests:
     runs-on: ubuntu-24.04
     environment: marketing-sites-${{ inputs.ENVIRONMENT_TYPE }}-${{ inputs.SITE_TYPE }}
-    if: ${{ inputs.SITE_TYPE == 'corporate' }}
     needs:
       - deploy
 
@@ -162,6 +163,7 @@ jobs:
           APPLICATION_BASE_ADDRESS: "${{ vars.APPLICATION_SUBDOMAIN_NAME }}.${{ vars.APPLICATION_BASE_DOMAIN }}"
           DRAFT_MODE_TOKEN: ${{ secrets.DRAFT_MODE_TOKEN }}
           GITHUB_ENVIRONMENT_NAME: ${{ env.GITHUB_ENVIRONMENT_NAME }}
+          SITE_TYPE: ${{ inputs.SITE_TYPE }}
           SHARD_INDEX: ${{ matrix.shardIndex }}
           SHARD_TOTAL: ${{ matrix.shardTotal }}
 

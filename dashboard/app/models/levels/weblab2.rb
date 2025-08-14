@@ -32,6 +32,9 @@ class Weblab2 < Level
     encrypted_exemplar_sources
     submittable
     validation_enabled
+    widget_view
+    widget_view_allow_show_code
+    disable_edit_run_for_submission
   )
 
   def self.create_from_level_builder(params, level_params)

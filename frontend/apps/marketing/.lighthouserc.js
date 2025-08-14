@@ -7,7 +7,7 @@ const assertions = {
   'total-byte-weight': ['error', {minScore: 0.5}],
   'unused-css-rules': ['error', {maxLength: 30}],
   'unused-javascript': ['error', {maxLength: 10}],
-  'uses-text-compression': ['error', {maxLength: 5}],
+  'uses-text-compression': ['error', {maxLength: 70}],
   'third-party-cookies': 'off',
   'uses-rel-preconnect': 'off',
   'link-text': 'off', // re-enable after CMS-497

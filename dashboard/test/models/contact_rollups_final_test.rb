@@ -5,7 +5,7 @@ class ContactRollupsFinalTest < ActiveSupport::TestCase
     assert 0, ContactRollupsProcessed.count
     assert 0, ContactRollupsFinal.count
 
-    processed = create_list :contact_rollups_processed, 5
+    processed = create_list(:contact_rollups_processed, 5)
 
     ContactRollupsFinal.insert_from_processed_table
 

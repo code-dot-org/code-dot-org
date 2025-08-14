@@ -277,11 +277,13 @@ end
 And(/^I am viewing a workshop with fake survey results$/) do
   require_rails_env
 
-  workshop = FactoryBot.create :summer_workshop,
+  workshop = FactoryBot.create(
+    :summer_workshop,
     :ended,
     num_sessions: 5,
     enrolled_and_attending_users: 10,
     num_facilitators: 2
+  )
 
   create_fake_survey_questions workshop
   create_fake_daily_survey_results workshop
@@ -306,7 +308,7 @@ Given(/^I am a "([^"]*)" user enrolling in workshop with "([^"]*)" status$/) do 
              And I sign in as "#{random_name}"
            GHERKIN
 
-           school_info = FactoryBot.create :school_info
+           school_info = FactoryBot.create(:school_info)
            teacher = find_test_user_by_name(random_name)
            teacher.update!(school_info: school_info)
            teacher
@@ -316,13 +318,13 @@ Given(/^I am a "([^"]*)" user enrolling in workshop with "([^"]*)" status$/) do 
 
   workshop = case status
              when "closed"
-               FactoryBot.create :workshop, :ended
+               FactoryBot.create(:workshop, :ended)
              when "full"
-               FactoryBot.create :workshop, capacity: 1, num_enrollments: 1
+               FactoryBot.create(:workshop, capacity: 1, num_enrollments: 1)
              when "own"
-               FactoryBot.create :workshop, organizer: user
+               FactoryBot.create(:workshop, organizer: user)
              else
-               FactoryBot.create :workshop
+               FactoryBot.create(:workshop)
              end
   if status == "duplicate"
     FactoryBot.create :pd_enrollment, workshop: workshop, user: user
@@ -574,7 +576,7 @@ def create_enrollment(workshop, name = nil)
   first_name = name.nil? ? "First - #{SecureRandom.hex}" : name
   last_name = name.nil? ? "Last - #{SecureRandom.hex}" : "Last"
   user = Retryable.retryable(on: [ActiveRecord::RecordInvalid], tries: 5) do
-    FactoryBot.create :teacher
+    FactoryBot.create(:teacher)
   end
   Pd::Enrollment.create!(
     first_name: first_name,
@@ -614,7 +616,9 @@ And(/^I create a workshop for course "([^"]*)" ([a-z]+) by "([^"]*)" with (\d+) 
     end
 
   workshop = Retryable.retryable(on: [ActiveRecord::RecordNotUnique, ActiveRecord::RecordInvalid], tries: 5) do
-    FactoryBot.create(:workshop, :funded,
+    FactoryBot.create(
+      :workshop,
+      :funded,
       on_map: true,
       course: course,
       organizer_id: organizer.id,

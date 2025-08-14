@@ -5,9 +5,9 @@ description 'description here'
 markdown <<MARKDOWN
 # Voices from the Classroom
 
-#### Cybersecurity is a key component of digital literacy. In Code.org's **Cybersecurity and Global Impacts** students explore how data can pose a threat to our privacy and security and the ways that encryption and other techniques are used to protect it. In this Unit, students learn how computing innovations have impacted the world in beneficial and harmful ways.
+#### Cybersecurity is a key component of digital literacy. In Code.org's **AI-Powered Threats and Defenses** students explore how data can pose a threat to our privacy and security and the ways that encryption and other techniques are used to protect it. In this Unit, students learn how computing innovations have impacted the world in beneficial and harmful ways.
 
-#### See what educators are saying about teaching the **Cybersecurity and Global Impacts** unit. 
+#### See what educators are saying about teaching the **AI-Powered Threats and Defenses** unit. 
 
 <!-- Flexbox Section 1 -->
 <div style="display: flex; align-items: center; gap: 5px; width: 80%; margin: 20px auto;">
@@ -71,7 +71,7 @@ You've finished the first lesson in this professional learning module!
 
 <table width="100%" cellspacing="0" cellpadding="15">
     <tr>
-        <td style="background-color: #b2dee3; text-align: center;"><b>Lesson One</b><br>Teaching Cybersecurity <br> and Global Impact</td>
+        <td style="background-color: #b2dee3; text-align: center;"><b>Lesson One</b><br>Teaching AI-Powered <br>Threats and Defenses</td>
         <td style="background-color: #f7f8fa; text-align: center;"><b>Lesson Two</b><br>Lesson Exploration</td>
 </table>
 MARKDOWN

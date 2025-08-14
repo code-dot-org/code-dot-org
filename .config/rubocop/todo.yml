@@ -453,3 +453,32 @@ Style/TernaryParentheses:
 # Configuration parameters: AllowNamedUnderscoreVariables.
 Style/TrailingUnderscoreVariable:
   Enabled: false
+
+# Offense count: 38
+# This cop supports safe autocorrection (--autocorrect).
+# Configuration parameters: EnforcedStyle, ExplicitOnly.
+# SupportedStyles: create_list, n_times
+FactoryBot/CreateList:
+  Enabled: false
+
+# Offense count: 55
+# This cop supports safe autocorrection (--autocorrect).
+FactoryBot/FactoryClassName:
+  Enabled: false
+
+# Offense count: 65
+FactoryBot/FactoryAssociationWithStrategy: # new in 2.23
+  Enabled: false
+
+# Offense count: 111
+FactoryBot/AssociationStyle: # new in 2.23
+  Enabled: false
+
+# Offense count: 6
+FactoryBot/RedundantFactoryOption: # new in 2.23
+  Enabled: false
+
+# Offense count: 44
+# This cop does not support safe autocorrection
+FactoryBot/SyntaxMethods: # new in 2.7
+  Enabled: false

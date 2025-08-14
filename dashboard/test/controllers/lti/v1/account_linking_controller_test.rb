@@ -3,13 +3,13 @@ require 'test_helper'
 class Lti::V1::AccountLinkingControllerTest < ActionController::TestCase
   setup do
     @user = create(:teacher, email: 'test@lti.com')
-    @admin = create :admin
-    @lti_integration = create :lti_integration
+    @admin = create(:admin)
+    @lti_integration = create(:lti_integration)
     DCDO.stubs(:get)
   end
 
   test 'links an LTI login to an existing account' do
-    partial_lti_teacher = create :teacher
+    partial_lti_teacher = create(:teacher)
     fake_id_token = {iss: @lti_integration.issuer, aud: @lti_integration.client_id, sub: 'foo'}
     auth_id = Services::Lti::AuthIdGenerator.new(fake_id_token).call
     ao = AuthenticationOption.new(
@@ -43,7 +43,7 @@ class Lti::V1::AccountLinkingControllerTest < ActionController::TestCase
   end
 
   test 'links a roster-synced LTI account to an existing account' do
-    roster_synced_teacher = create :teacher
+    roster_synced_teacher = create(:teacher)
     fake_id_token = {iss: @lti_integration.issuer, aud: @lti_integration.client_id, sub: 'foo'}
     auth_id = Services::Lti::AuthIdGenerator.new(fake_id_token).call
     ao = AuthenticationOption.new(
@@ -78,7 +78,7 @@ class Lti::V1::AccountLinkingControllerTest < ActionController::TestCase
   end
 
   test 'disallow account linking for admin users' do
-    partial_lti_teacher = create :teacher
+    partial_lti_teacher = create(:teacher)
     fake_id_token = {iss: @lti_integration.issuer, aud: @lti_integration.client_id, sub: 'bar'}
     auth_id = Services::Lti::AuthIdGenerator.new(fake_id_token).call
     ao = AuthenticationOption.new(
@@ -108,7 +108,7 @@ class Lti::V1::AccountLinkingControllerTest < ActionController::TestCase
   end
 
   test 'opts out of lms landing for a signed in user' do
-    lti_user = create :student
+    lti_user = create(:student)
     sign_in lti_user
 
     post :new_account
@@ -119,7 +119,7 @@ class Lti::V1::AccountLinkingControllerTest < ActionController::TestCase
   end
 
   test 'opts out of lms landing for a partial registration user' do
-    lti_user = create :student
+    lti_user = create(:student)
     PartialRegistration.persist_attributes(session, lti_user)
 
     post :new_account
@@ -130,7 +130,7 @@ class Lti::V1::AccountLinkingControllerTest < ActionController::TestCase
   end
 
   test 'verifies roster-synced teacher if they are not already verified' do
-    lti_user = create :teacher
+    lti_user = create(:teacher)
     sign_in lti_user
 
     post :new_account
@@ -141,7 +141,7 @@ class Lti::V1::AccountLinkingControllerTest < ActionController::TestCase
   end
 
   test 'do not verify roster-synced student' do
-    lti_user = create :student
+    lti_user = create(:student)
     sign_in lti_user
 
     post :new_account
@@ -152,8 +152,8 @@ class Lti::V1::AccountLinkingControllerTest < ActionController::TestCase
   end
 
   describe '#unlink' do
-    let(:user) {create :teacher}
-    let(:auth_option) {create :lti_authentication_option, user: user}
+    let(:user) {create(:teacher)}
+    let(:auth_option) {create(:lti_authentication_option, user: user)}
 
     context 'valid request' do
       it 'calls the AccountUnlinker service and returns 200' do
@@ -180,7 +180,7 @@ class Lti::V1::AccountLinkingControllerTest < ActionController::TestCase
     end
 
     context 'when caller does not own the auth option' do
-      let(:non_owned_auth_option) {create :lti_authentication_option}
+      let(:non_owned_auth_option) {create(:lti_authentication_option)}
 
       it 'returns 404' do
         sign_in user

@@ -3,7 +3,7 @@ require 'test_helper'
 module Pd::Foorm
   class FormAnalyticsParserTest < ActiveSupport::TestCase
     setup_all do
-      @form = create :foorm_form_csf_intro_post_survey
+      @form = create(:foorm_form_csf_intro_post_survey)
       @reshaped_form = FormAnalyticsParser.reshape_form(@form)
     end
 
@@ -68,7 +68,7 @@ module Pd::Foorm
     end
 
     test 'reshape_form formats multi select question as expected' do
-      form_with_multi_select_question = create :foorm_form, :with_multi_select_question
+      form_with_multi_select_question = create(:foorm_form, :with_multi_select_question)
       reshaped_form_with_multi_select_question = FormAnalyticsParser.reshape_form(form_with_multi_select_question)
 
       assert_includes reshaped_form_with_multi_select_question, {

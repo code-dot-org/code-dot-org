@@ -1,7 +1,10 @@
 import {Button, buttonColors} from '@code-dot-org/component-library/button';
 import Checkbox from '@code-dot-org/component-library/checkbox';
 import CloseButton from '@code-dot-org/component-library/closeButton';
-import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
+import {
+  SimpleDropdown,
+  CheckboxDropdown,
+} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import TextField from '@code-dot-org/component-library/textField';
 import {
@@ -31,6 +34,8 @@ import locale from './locale';
 import {
   ACCOUNT_TYPE_SESSION_KEY,
   EMAIL_SESSION_KEY,
+  GIVEN_NAME_SESSION_KEY,
+  FAMILY_NAME_SESSION_KEY,
   OAUTH_LOGIN_TYPE_SESSION_KEY,
   USER_RETURN_TO_SESSION_KEY,
   clearSignUpSessionStorage,
@@ -62,6 +67,23 @@ export const roleItemGroups = [
   ).map(([label, groupItems]) => ({label, groupItems})),
 ];
 
+const SIGNUP_SOURCE_OPTIONS = {
+  search: locale.found_on_search(),
+  social_media: locale.found_on_social_media(),
+  recommended_by_friend_family: locale.recommended_by_friend_or_family(),
+  recommended_by_colleague_school: locale.recommended_by_colleague_or_school(),
+  recommended_by_professional_network:
+    locale.recommended_by_professional_network(),
+  school_or_district_adopted: locale.school_or_district_adopted(),
+  conference: locale.heard_at_conference(),
+  email: locale.heard_from_email(),
+  via_lms_or_tool: locale.heard_via_lms_or_tool(),
+  via_state_district_curriculum: locale.learned_via_state_district_curriculum(),
+  attended_pl: locale.attended_pl(),
+  dont_remember: locale.dont_remember(),
+  other: locale.other(),
+};
+
 const FinishTeacherAccount: React.FunctionComponent<{
   usIp: boolean;
   countryCode: string;
@@ -75,6 +97,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
   const [familyNameErrorMessage, setFamilyNameErrorMessage] = useState('');
   const [displayNameErrorMessage, setDisplayNameErrorMessage] = useState('');
   const [educatorRole, setEducatorRole] = useState('');
+  const [signupSources, setSignupSources] = useState<string[]>([]);
   const [emailOptInChecked, setEmailOptInChecked] = useState(false);
   const [gdprChecked, setGdprChecked] = useState(false);
   const [showGDPR, setShowGDPR] = useState(false);
@@ -101,6 +124,16 @@ const FinishTeacherAccount: React.FunctionComponent<{
         `/users/sign_up/login_type?user_type=${UserTypes.TEACHER}`
       );
     }
+
+    // If their first and last names are known from their 3rd-party provider login choice, prepopulate their values.
+    const prepopulatedGivenName = sessionStorage.getItem(
+      GIVEN_NAME_SESSION_KEY
+    );
+    const prepopulatedFamilyName = sessionStorage.getItem(
+      FAMILY_NAME_SESSION_KEY
+    );
+    if (prepopulatedGivenName) setGivenName(prepopulatedGivenName);
+    if (prepopulatedFamilyName) setFamilyName(prepopulatedFamilyName);
 
     analyticsReporter.sendEvent(
       EVENTS.FINISH_ACCOUNT_PAGE_LOADED,
@@ -152,8 +185,17 @@ const FinishTeacherAccount: React.FunctionComponent<{
       displayName.length > MAX_DISPLAY_NAME_LENGTH ||
       !gdprValid ||
       schoolInfoInvalid(schoolInfo) ||
-      !educatorRole,
-    [gdprValid, givenName, familyName, displayName, schoolInfo, educatorRole]
+      !educatorRole ||
+      signupSources.length < 1,
+    [
+      gdprValid,
+      givenName,
+      familyName,
+      displayName,
+      schoolInfo,
+      educatorRole,
+      signupSources,
+    ]
   );
 
   const setName = (nameType: string, newName: string) => {
@@ -209,6 +251,23 @@ const FinishTeacherAccount: React.FunctionComponent<{
     }
   };
 
+  const handleSelectSignupSource = (
+    sourceOption: string,
+    isChecked: boolean
+  ): void => {
+    const newSourceOptions = [...signupSources];
+    if (isChecked) {
+      // Add checked item into list of sources selected
+      newSourceOptions.push(sourceOption);
+      setSignupSources(newSourceOptions.sort());
+    } else {
+      // Remove unchecked item from list of sources selected
+      setSignupSources(
+        newSourceOptions.filter(source => source !== sourceOption)
+      );
+    }
+  };
+
   const submitTeacherAccount = async () => {
     if (isSubmitting) {
       return;
@@ -233,6 +292,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
         }),
         country_code: countryCode,
         educator_role: educatorRole || null,
+        signup_sources_tracking: signupSources,
       },
     };
     const authToken = await getAuthenticityToken();
@@ -356,6 +416,27 @@ const FinishTeacherAccount: React.FunctionComponent<{
             <BodyThreeText className={style.displayNameSubtext}>
               {locale.this_is_what_your_students_will_see()}
             </BodyThreeText>
+          </div>
+          <div className={style.signupSourcesContainer}>
+            <BodyThreeText>{locale.how_did_you_hear_about_us()}</BodyThreeText>
+            <CheckboxDropdown
+              name="signupSources"
+              labelText={locale.select_all_that_apply()}
+              labelType="thin"
+              allOptions={Object.entries(SIGNUP_SOURCE_OPTIONS).map(
+                ([key, value]) => ({
+                  value: key,
+                  label: value,
+                })
+              )}
+              checkedOptions={signupSources}
+              hideControls
+              className={style.sourcesDropdown}
+              onChange={e =>
+                handleSelectSignupSource(e.target.value, e.target.checked)
+              }
+              size="m"
+            />
           </div>
           <SimpleDropdown
             id="uitest-educator-role"
