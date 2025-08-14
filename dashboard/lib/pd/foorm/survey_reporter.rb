@@ -42,7 +42,7 @@ module Pd::Foorm
           facilitators
         )
 
-        surveys[survey_key] = {
+        surveys[survey_key.downcase.tr(' ', '_')] = {
           total_responses: survey_participant_count,
           categories: categorized_report
         }
