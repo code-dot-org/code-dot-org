@@ -630,7 +630,7 @@ class Pd::Workshop < ApplicationRecord
   end
 
   # Called at the very end of the async close-workshop workflow, to actually send exit
-  # surveys to attended teachers.  Note that logic here is more-or-less independent
+  # surveys to attended teachers. Note that logic here is more-or-less independent
   # from other logic deciding whether a workshop should have exit surveys.
   def send_exit_surveys
     # FiT workshops should not send exit surveys
@@ -640,13 +640,29 @@ class Pd::Workshop < ApplicationRecord
 
     # Send the emails
     enrollments.each do |enrollment|
-      if account_required_for_attendance?
-        next unless enrollment.user
+      user = enrollment.user
 
-        next unless attending_teachers.include?(enrollment.user)
+      if enrollment.survey_sent_at
+        CDO.log.warn "Skipping attempt to send a duplicate workshop survey email. Enrollment: #{id}"
+        next
       end
 
-      enrollment.send_exit_survey
+      if account_required_for_attendance?
+        next unless user
+
+        next unless attending_teachers.include?(user)
+      end
+
+      send_teacher_post_workshop_survey_email(enrollment, user, false)
+
+      # Also send to the user's alternate summer email if they entered it in their application and it's for a summer workshop.
+      if enrollment.workshop.subject == SUBJECT_SUMMER_WORKSHOP && user.alternate_email.present?
+        send_teacher_post_workshop_survey_email(enrollment, user, true)
+      end
+
+      enrollment.update!(survey_sent_at: Time.zone.now)
+    rescue => exception
+      errors << "teacher enrollment #{enrollment.id} - #{exception.message}"
     end
   end
 
@@ -979,5 +995,76 @@ class Pd::Workshop < ApplicationRecord
       organizer: organizer&.slice(:name, :email),
       facilitators: facilitators_info
     }
+  end
+
+  def self.send_teacher_workshop_reminder_email(enrollment, user, use_alternate_email, days)
+    workshop = enrollment.workshop
+    organizer = workshop.organizer
+    regional_partner = workshop.regional_partner
+    email = use_alternate_email ? user.alternate_email : user.email
+
+    Retryable.retryable(
+      on: RestClient::TooManyRequests,
+      tries: MAILJET_RETRY_LIMIT,
+      sleep: ->(n) {2 ** n}
+    ) do
+      MailJet.send_email(
+        :teacher_workshop_reminder,
+        email,
+        user.friendly_name,
+        vars: {
+          email_to: email,
+          name: user.given_name || user.name,
+          cancel_registration_link: CDO.studio_url("pd/workshop_enrollment/#{enrollment.code}/cancel"),
+          pre_survey_link: enrollment.pre_workshop_survey_url,
+          facilitator_name: workshop.facilitators&.map(&:name)&.join(', '),
+          rp_email: regional_partner&.contact_email_with_backup,
+          rp_name: regional_partner&.name,
+          organizer_email: organizer&.email,
+          organizer_name: organizer&.name,
+          workshop_notes: workshop.notes,
+          sessions: workshop.sessions.map do |session|
+            {
+              datetime: session.start_date_with_start_and_end_times_us_format,
+              format: session.session_format,
+              meeting_link: session.meeting_link,
+              location: session.formatted_location_details
+            }
+          end,
+          workshop_subjects: workshop.course_offerings.present? ? workshop.course_offerings.map(&:display_name)&.join(', ') : workshop.subject,
+          workshop_name: workshop.name.presence || "#{workshop.course} #{workshop.subject}",
+          num_days: days
+        }
+      )
+    end
+  end
+
+  def self.send_teacher_post_workshop_survey_email(enrollment, user, use_alternate_email)
+    workshop = enrollment.workshop
+    organizer = workshop.organizer
+    regional_partner = workshop.regional_partner
+    email = use_alternate_email ? user.alternate_email : user.email
+
+    Retryable.retryable(
+      on: RestClient::TooManyRequests,
+      tries: MAILJET_RETRY_LIMIT,
+      sleep: ->(n) {2 ** n}
+    ) do
+      MailJet.send_email(
+        :teacher_post_workshop_survey,
+        email,
+        user.friendly_name,
+        vars: {
+          email_to: email,
+          name: user.given_name || user.name,
+          exit_survey_url: enrollment.exit_survey_url,
+          download_certificate_url: CDO.studio_url("/pd/generate_workshop_certificate/#{enrollment.code}"),
+          rp_email: regional_partner&.contact_email_with_backup,
+          rp_name: regional_partner&.name,
+          organizer_email: organizer&.email,
+          organizer_name: organizer&.name
+        }
+      )
+    end
   end
 end
