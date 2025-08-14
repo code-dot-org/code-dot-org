@@ -20,6 +20,7 @@ import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import FlaggedImageModal from '@cdo/apps/p5lab/AnimationPicker/FlaggedImageModal';
 import {BackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
+import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import moduleStyles from './styles/codebridgeContainer.module.scss';
@@ -56,6 +57,7 @@ export const Codebridge = React.memo(
     aiTutor2Context,
   }: CodebridgeProps) => {
     const isShareView = useAppSelector(state => state.lab.isShareView);
+    const channelId = useAppSelector(state => state.lab.channel?.id);
     const isWidgetView = !!levelProperties.widgetView;
     const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
 
@@ -167,6 +169,19 @@ export const Codebridge = React.memo(
       try {
         await flaggedImageData.uploadFunction();
         setFlaggedImageData(null);
+        const body = JSON.stringify({type: 'flag'});
+        if (channelId) {
+          try {
+            await HttpClient.post(
+              `/v3/channels/${channelId}/abuse/image`,
+              body,
+              true,
+              {'Content-Type': 'application/json; charset=UTF-8'}
+            );
+          } catch (error) {
+            console.error('Error flagging channel', error);
+          }
+        }
       } catch (error) {
         console.error('Error uploading flagged image:', error);
         setFlaggedImageData(null);
@@ -197,7 +212,7 @@ export const Codebridge = React.memo(
           <div className={classNames(moduleStyles.codebridgeContainer)}>
             {flaggedImageData && (
               <FlaggedImageModal
-                isOpen
+                isOpen={flaggedImageData !== null}
                 onAccept={handleAcceptFlaggedImage}
                 onCancel={handleCancelFlaggedImage}
               />
