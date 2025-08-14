@@ -62,6 +62,8 @@ yarn build
 - `yarn build` builds a 'debug' version with more readable javascript
 - `yarn build --app=maze` builds a 'debug' version of only the maze app
 - `yarn build:dist` builds a minified version suitable for production
+- `yarn build:all` builds both main apps and preview assets
+- `yarn build:preview` builds only the preview page assets
 - `yarn clean` will clean the build/ directory
 
 See also: [Full build with blockly changes](#full-build-with-blockly-changes)
@@ -223,3 +225,4 @@ For notes on our pull process, where to find tasks to work on, etc., see the [Co
 ## Other Docs
 
 - [Apps Build System](./docs/build.md)
+- [Preview Webpack Build](./docs/preview-webpack-build.md)
