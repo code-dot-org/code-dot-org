@@ -3,7 +3,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
-import {displayDifferentiationChat} from '@cdo/apps/aiDifferentiation/aiDiffUtils';
 import announcementReducer from '@cdo/apps/code-studio/announcementsRedux';
 import hiddenLesson from '@cdo/apps/code-studio/hiddenLessonRedux';
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
@@ -38,7 +37,7 @@ const {
   sections,
   localeCode,
   hasSeenStandardsReportInfo,
-  canViewStudentAIChatMessages,
+  canEnableAITutor,
   sectionOrder,
   providers,
 } = scriptData;
@@ -71,8 +70,6 @@ $(document).ready(function () {
   store.dispatch(setLocaleCode(localeCode));
   store.dispatch(setAuthProviders(providers));
 
-  const showAITutorTab = canViewStudentAIChatMessages;
-
   if (sections.length > 0) {
     const selectedSectionFromList = window.location.pathname.includes(
       '/teacher_dashboard/home'
@@ -95,11 +92,10 @@ $(document).ready(function () {
       ) : (
         <TeacherNavigationRouter
           studioUrlPrefix={scriptData.studioUrlPrefix}
-          showAITutorTab={showAITutorTab}
+          canEnableAITutor={canEnableAITutor}
         />
       )}
     </Provider>,
     document.getElementById('teacher-dashboard')
   );
-  displayDifferentiationChat();
 });

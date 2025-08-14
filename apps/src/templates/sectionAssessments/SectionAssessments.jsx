@@ -82,14 +82,15 @@ class SectionAssessments extends Component {
     matchDetailDialogOpen: false,
   };
 
-  UNSAFE_componentWillMount() {
-    const {scriptId, asyncLoadAssessments, sectionId} = this.props;
-    asyncLoadAssessments(sectionId, scriptId);
+  componentDidMount() {
+    const {scriptId, asyncLoadAssessments, sectionId, courseVersionId} =
+      this.props;
+    asyncLoadAssessments(sectionId, scriptId, courseVersionId);
   }
 
   onSelectScript = (newScriptId, newCourseVersionId) => {
     const {setUnit, asyncLoadAssessments, scriptId, sectionId} = this.props;
-    asyncLoadAssessments(sectionId, newScriptId);
+    asyncLoadAssessments(sectionId, newScriptId, newCourseVersionId);
     setUnit(newScriptId, newCourseVersionId);
 
     this.logEvent('select_script', {
@@ -385,8 +386,10 @@ export default connect(
     setUnit(scriptId, courseVersionId) {
       dispatch(setUnit(scriptId, courseVersionId));
     },
-    asyncLoadAssessments(sectionId, scriptId) {
-      return dispatch(asyncLoadAssessments(sectionId, scriptId));
+    asyncLoadAssessments(sectionId, scriptId, courseVersionId) {
+      return dispatch(
+        asyncLoadAssessments(sectionId, scriptId, courseVersionId)
+      );
     },
     setAssessmentId(assessmentId) {
       dispatch(setAssessmentId(assessmentId));

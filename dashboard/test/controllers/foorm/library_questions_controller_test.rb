@@ -3,7 +3,7 @@ require 'test_helper'
 module Foorm
   class LibraryQuestionsControllerTest < ActionController::TestCase
     generate_library_question = proc do
-      library = create :foorm_library, :with_questions
+      library = create(:foorm_library, :with_questions)
       library_question = library.library_questions.first
 
       # Question required as parameter to pass before_action on :update and :create actions
@@ -32,11 +32,11 @@ module Foorm
       response: :forbidden
 
     test 'update succeeds on existing library' do
-      library = create :foorm_library, :with_questions
+      library = create(:foorm_library, :with_questions)
       library_question = library.library_questions.first
       library_question_id = library_question.id
 
-      levelbuilder = create :levelbuilder
+      levelbuilder = create(:levelbuilder)
       sign_in levelbuilder
 
       put :update, params: {
@@ -48,10 +48,10 @@ module Foorm
     end
 
     test 'create succeeds for new library question in existing library' do
-      levelbuilder = create :levelbuilder
+      levelbuilder = create(:levelbuilder)
       sign_in levelbuilder
 
-      library = create :foorm_library
+      library = create(:foorm_library)
 
       post :create, params: {
         library_id: library.id,
@@ -67,7 +67,7 @@ module Foorm
     end
 
     test 'create succeeds for new library question in new library' do
-      levelbuilder = create :levelbuilder
+      levelbuilder = create(:levelbuilder)
       sign_in levelbuilder
 
       post :create, params: {
@@ -83,7 +83,7 @@ module Foorm
     end
 
     test 'create fails if no library name and no library ID provided' do
-      levelbuilder = create :levelbuilder
+      levelbuilder = create(:levelbuilder)
       sign_in levelbuilder
 
       post :create, params: {
@@ -95,10 +95,10 @@ module Foorm
     end
 
     test 'create fails if no library question name provided' do
-      levelbuilder = create :levelbuilder
+      levelbuilder = create(:levelbuilder)
       sign_in levelbuilder
 
-      library = create :foorm_library
+      library = create(:foorm_library)
 
       post :create, params: {
         library_id: library.id,

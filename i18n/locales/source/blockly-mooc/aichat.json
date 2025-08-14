@@ -95,7 +95,7 @@
   "teacherOnboardingModal_aiChatBullet": "**AI Chat**: The area where students can interact directly with the chatbot they've created.",
   "teacherOnboardingModal_userViewBullet": "**User View** *(optional)*: Allows students to use the chatbot as a user, without the instructions or customization visible.",
   "teacherOnboardingModal_warning": "While Code.org's content moderation policy reviews both student customizations and chat messages, violations will be flagged accordingly. However, because this is a generative AI tool, we cannot fully predict or guarantee that the chatbot's output will always be free from disruption.",
-  "teacherOnboardingModal_chatHistoryAccess": "As a teacher, you have access to all of your students' chat history and customizations. ",
+  "teacherOnboardingModal_chatHistoryAccess": "As a teacher, you have access to all of your students' chat customizations and history (retained for 90 days). ",
   "technicalInfoHeader": "Technical Info",
   "technicalInfoHeader_tooltipText": "Behind-the-scenes technical information for the underlying language model.",
   "technicalInfoHeader_modelName": "Model Name",

@@ -8,7 +8,7 @@
   position: relative;
 
   .panelContainerHeader {
-    height: 30px;
+    height: 2rem;
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     position: relative;
@@ -16,17 +16,8 @@
     padding-left: 4px;
     padding-right: 4px;
     flex-shrink: 0;
-
-    &Dark {
-      background-color: $light_gray_900;
-      color: $light_white;
-    }
-
-    &Light {
-      background-color: $neutral_gray10;
-      color: $light_black;
-      border-bottom: 1px $light_gray_200 solid;
-    }
+    background-color: var(--background-neutral-secondary);
+    color: var(--text-neutral-primary);
 
     &Item {
       display: flex;
@@ -39,14 +30,6 @@
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-
-        &Dark {
-          color: $light_white;
-        }
-
-        &Light {
-          color: $light_black;
-        }
       }
 
       &Center {

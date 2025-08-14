@@ -32,7 +32,22 @@ const StudentCodeDatasetMaker: React.FC = () => {
   >([]);
 
   const downloadCSV = () => {
-    const csv = Papa.unparse(evaluatedSamples);
+    const processedSamples = evaluatedSamples.map(sample => {
+      let studentWorkString = sample.studentWork;
+      if (
+        typeof sample.studentWork === 'object' &&
+        sample.studentWork !== null
+      ) {
+        studentWorkString = Object.entries(sample.studentWork)
+          .map(([filename, contents]) => `${filename}:\n${contents}`)
+          .join('\n\n');
+      }
+      return {
+        ...sample,
+        studentWork: studentWorkString,
+      };
+    });
+    const csv = Papa.unparse(processedSamples);
     const csvData = new Blob([csv], {type: 'text/csv;charset=utf-8;'});
     const csvURL = window.URL.createObjectURL(csvData);
     const tempLink = document.createElement('a');

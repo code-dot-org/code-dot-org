@@ -2992,6 +2992,9 @@
   "https://studio.code.org/s/allthethings/lessons/46/levels/10": {
     "long_instructions": "### Assessment\n\nCreate a song using multiple sounds! Each part of your song should include a different type of sound.\n\nExperiment and have fun!\n\n_Tips_:\n\n-   Try using blocks from different packs.\n-   Try using the Play Together and repeat blocks.\n-   Try factoring your song using functions."
   },
+  "https://studio.code.org/s/allthethings/lessons/46/levels/11": {
+    "long_instructions": "### Assessment 2\n\n> This level does **not** require you to edit and run your code before submitting. Good luck!\n\nCreate a song using multiple sounds! Each part of your song should include a different type of sound.\n\nExperiment and have fun!\n\n_Tips_:\n\n-   Try using blocks from different packs.\n-   Try using the Play Together and repeat blocks.\n-   Try factoring your song using functions."
+  },
   "https://studio.code.org/s/allthethings/lessons/47/levels/1": {
     "long_instructions": "## Sample Instructions\n\nThis is a chat bot which allows you to talk to historical figures.\n\n### Do This\n\nType in a question and press the <code style=\"color:white; background-color:#7435b2\">Continue</code> button. What can you learn about Ada Lovelace?"
   },
@@ -3075,6 +3078,12 @@
   },
   "https://studio.code.org/s/allthethings/lessons/51/levels/2": {
     "long_instructions": "## Web Lab 2 Basics\n\nCreate your own web page!"
+  },
+  "https://studio.code.org/s/allthethings/lessons/51/levels/3": {
+    "long_instructions": "This level shares a template level with Level 4 in this script."
+  },
+  "https://studio.code.org/s/allthethings/lessons/51/levels/4": {
+    "long_instructions": "This level shares a template level with Level 3 in this script."
   },
   "https://studio.code.org/s/allthethings/lessons/52/levels/1": {
     "long_instructions": "Try everything!"

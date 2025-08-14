@@ -1,0 +1,9 @@
+name 'test-ai-powered-threats-defenses-lesson13-level1'
+display_name 'Explore an App'
+description 'Check out one of these four real-world apps! Then get to know the users who rely on them.'
+
+sublevels
+level 'test-ai-powered-threats-defenses-lesson10-level1a'
+level 'test-ai-powered-threats-defenses-lesson10-level1b'
+level 'test-ai-powered-threats-defenses-lesson10-level1c'
+level 'test-ai-powered-threats-defenses-lesson10-level1d'

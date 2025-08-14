@@ -1,5 +1,6 @@
 import {CodebridgeContextProvider} from '@codebridge/codebridgeContext';
 import {useZoomTracker} from '@codebridge/hooks';
+import {setWidgetViewShowCode} from '@codebridge/redux/workspaceRedux';
 import {
   ConfigType,
   SetConfigFunction,
@@ -12,11 +13,13 @@ import classNames from 'classnames';
 import React, {useEffect, useMemo} from 'react';
 
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
+import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {ProjectSources} from '@cdo/apps/lab2/types';
+import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import {BackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import moduleStyles from './styles/codebridgeContainer.module.scss';
 import './styles/codebridge.scss';
@@ -136,6 +139,13 @@ export const Codebridge = React.memo(
 
     // Send analytics when user zooms in/out (will be compared to user updating font size via settings).
     useZoomTracker(appName);
+
+    const dispatch = useAppDispatch();
+
+    // Set view code to false if level is switched for any levels in widget view.
+    useLifecycleNotifier(LifecycleEvent.LevelLoadStarted, () => {
+      dispatch(setWidgetViewShowCode(false));
+    });
 
     return (
       <CodebridgeContextProvider
