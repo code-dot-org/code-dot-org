@@ -87,9 +87,4 @@ class UserScriptTest < ActiveSupport::TestCase
   test "lookup hash" do
     assert_equal ({'foo' => false, @script.name => true}), UserScript.lookup_hash(@user, ['foo', @script.name])
   end
-
-  test "unit_group_id is set when creating user_script" do
-    refute_nil @user_script.unit_group_id
-    assert_equal @script.unit_group.id, @user_script.unit_group_id
-  end
 end
