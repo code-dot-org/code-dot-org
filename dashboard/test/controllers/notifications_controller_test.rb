@@ -4,8 +4,6 @@ require 'contentful'
 class NotificationsControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
 
-  NOTIFICATION_CONTENTFUL_CONTENT_TYPE = 'dashboard-notification'
-  LOCALE = 'en-US'
   ENTRY_ID_1 = SecureRandom.hex(10)
   ENTRY_ID_2 = SecureRandom.hex(10)
 
@@ -21,7 +19,7 @@ class NotificationsControllerTest < ActionController::TestCase
 
   def entry_1
     @entry_1 ||= TestEntry.new(
-      content_type: NOTIFICATION_CONTENTFUL_CONTENT_TYPE,
+      content_type: 'dashboard-notification',
       id: ENTRY_ID_1,
       fields: {
         title: 'Notification 1',
@@ -37,7 +35,7 @@ class NotificationsControllerTest < ActionController::TestCase
 
   def entry_2
     @entry_2 ||= TestEntry.new(
-      content_type: NOTIFICATION_CONTENTFUL_CONTENT_TYPE,
+      content_type: 'dashboard-notification',
       id: ENTRY_ID_2,
       fields: {
         title: 'Notification 2',
@@ -73,8 +71,7 @@ class NotificationsControllerTest < ActionController::TestCase
 
   describe 'contentful tests' do
     before do
-      Marketing::ContentfulClient.instance_variable_set(:@singleton__instance__, nil)
-      Marketing::ContentfulClient.any_instance.expects(:entries).with(LOCALE, NOTIFICATION_CONTENTFUL_CONTENT_TYPE).returns([entry_1, entry_2])
+      Marketing::ContentfulClient.any_instance.expects(:entries).with('en-US', 'dashboard-notification').returns([entry_1, entry_2])
     end
 
     test "index returns user external notifications in descending order by created_at" do
