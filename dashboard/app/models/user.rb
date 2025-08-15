@@ -305,6 +305,7 @@ class User < ApplicationRecord
   has_many :misc_surveys, class_name: 'Pd::MiscSurvey'
   has_many :simple_survey_submissions, class_name: 'Foorm::SimpleSurveySubmission'
   has_many :pd_enrollments, class_name: 'Pd::Enrollment'
+  has_many :pd_applications, class_name: 'Pd::Application::ApplicationBase'
 
   has_many :authentication_options, dependent: :destroy
   accepts_nested_attributes_for :authentication_options

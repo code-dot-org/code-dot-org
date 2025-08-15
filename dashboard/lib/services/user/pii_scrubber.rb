@@ -94,8 +94,8 @@ module Services
         @delete_accounts_helper ||= DeleteAccountsHelper.new(bypass_safety_constraints: true)
       end
 
-      private def pd_application_ids
-        @pd_application_ids ||= Pd::Application::ApplicationBase.with_deleted.where(user_id: user.id).pluck(:id)
+      private def pd_applications
+        @pd_applications ||= user.pd_applications.with_deleted
       end
 
       private def pd_enrollments
@@ -110,7 +110,7 @@ module Services
       private def scrub_legacy_data
         if email.present?
           delete_accounts_helper.anonymize_regional_partner_contacts(user.id)
-          delete_accounts_helper.anonymize_legacy_pd_tables(user.id, pd_application_ids)
+          delete_accounts_helper.anonymize_legacy_pd_tables(user.id, pd_applications.pluck(:id))
           delete_accounts_helper.anonymize_peer_reviews(user.id)
           delete_accounts_helper.anonymize_pd_applications(user.id, email)
           delete_accounts_helper.anonymize_workshop_surveys(pd_enrollments.pluck(:id))
