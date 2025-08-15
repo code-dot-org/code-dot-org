@@ -12,7 +12,7 @@ module.exports = {
     filename:
       process.env.NODE_ENV === 'production'
         ? 'previewwp[contenthash].js'
-        : 'preview.js',
+        : 'main.js',
     clean: true,
     publicPath: '/assets/',
   },

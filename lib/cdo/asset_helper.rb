@@ -8,7 +8,7 @@ class AssetHelper
   end
 
   def preview_manifest_path
-    "#{CDO.root_dir}/dashboard/public/blockly/preview/manifest.json"
+    "#{CDO.root_dir}/dashboard/public/blockly/js/preview/manifest.json"
   end
 
   def webpack_manifest
@@ -46,7 +46,7 @@ class AssetHelper
 
     # Handle preview assets
     if asset.start_with?('preview/')
-      return "/assets/#{asset}" unless use_manifest
+      # Always use manifest for preview assets since they're not served through Rails asset pipeline
       path = preview_manifest[asset]
       raise "Invalid preview webpack asset name: '#{asset}'" unless path
       return path

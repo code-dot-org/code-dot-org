@@ -561,6 +561,7 @@ module.exports = function (grunt) {
     'ejs',
     'detect-production-webpack-chunks',
     'exec:buildFrontendDependencies',
+    'exec:buildPreviewWebpack',
   ]);
 
   grunt.registerTask('buildPreview', [
