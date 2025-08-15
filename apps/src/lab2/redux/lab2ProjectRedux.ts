@@ -237,11 +237,11 @@ const projectSlice = createSlice({
         }
         state.projectSources = {
           ...state.projectSources,
-          source: deleteFileHelper(
+          source: deleteFileHelper({
             source,
-            action.payload.fileId,
-            action.payload.isBlockedAbuse
-          ),
+            fileId: action.payload.fileId,
+            isBlockedAbuse: action.payload.isBlockedAbuse,
+          }),
         };
         state.hasEdited = true;
       }

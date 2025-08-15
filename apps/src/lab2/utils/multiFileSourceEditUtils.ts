@@ -19,7 +19,7 @@ import {
 
 // Helper functions for editing multi-file sources in lab2.
 
-interface CreateNewFileArgs {
+interface CreateNewFileHelperArgs {
   source: MultiFileSource;
   fileName: string;
   folderId?: FolderId;
@@ -38,7 +38,7 @@ export const createNewFileHelper = ({
   contents = '',
   url,
   flagged,
-}: CreateNewFileArgs): MultiFileSource => {
+}: CreateNewFileHelperArgs): MultiFileSource => {
   const fileId = getNextFileId(Object.values(source.files));
   const newSource = {...source, files: {...source.files}};
   const [, extension] = fileName.split('.');
@@ -132,14 +132,20 @@ export const closeFileHelper = (
   return newSource;
 };
 
+interface DeleteFileHelperArgs {
+  source: MultiFileSource;
+  fileId: FileId;
+  isBlockedAbuse?: boolean;
+}
+
 /**
  * Delete a file.
  */
-export const deleteFileHelper = (
-  source: MultiFileSource,
-  fileId: FileId,
-  isBlockedAbuse?: boolean
-): MultiFileSource => {
+export const deleteFileHelper = ({
+  source,
+  fileId,
+  isBlockedAbuse,
+}: DeleteFileHelperArgs): MultiFileSource => {
   const openFileIds = getOpenFileIds(source);
   const newOpenFileIds = openFileIds.find(openFileId => openFileId === fileId)
     ? openFileIds.filter(openFileId => openFileId !== fileId)
