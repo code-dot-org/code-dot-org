@@ -225,16 +225,23 @@ const projectSlice = createSlice({
         };
       }
     },
-    deleteFile(state, action: PayloadAction<FileId>) {
+    deleteFile(
+      state,
+      action: PayloadAction<{fileId: FileId; isBlockedAbuse?: boolean}>
+    ) {
       if (state.projectSources?.source) {
         const source = state.projectSources.source as MultiFileSource;
-        if (!source.files[action.payload]) {
+        if (!source.files[action.payload.fileId]) {
           // No-op if the file does not exist.
           return;
         }
         state.projectSources = {
           ...state.projectSources,
-          source: deleteFileHelper(source, action.payload),
+          source: deleteFileHelper(
+            source,
+            action.payload.fileId,
+            action.payload.isBlockedAbuse
+          ),
         };
         state.hasEdited = true;
       }

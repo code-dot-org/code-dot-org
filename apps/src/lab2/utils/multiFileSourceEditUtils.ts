@@ -137,7 +137,8 @@ export const closeFileHelper = (
  */
 export const deleteFileHelper = (
   source: MultiFileSource,
-  fileId: FileId
+  fileId: FileId,
+  isBlockedAbuse?: boolean
 ): MultiFileSource => {
   const openFileIds = getOpenFileIds(source);
   const newOpenFileIds = openFileIds.find(openFileId => openFileId === fileId)
@@ -156,6 +157,27 @@ export const deleteFileHelper = (
 
   if (fileToBeDeleted.url) {
     try {
+      if (fileToBeDeleted.flagged) {
+        // Check if project is flagged for abusive content due to flagged image.
+        // if so, unblock project.
+        if (isBlockedAbuse) {
+          // Unblock project since offending image is being deleted.
+          // Extract channelId from asset url.
+          const match = fileToBeDeleted.url.match(/\/assets\/([^/]+)/);
+          const channelId = match ? match[1] : null;
+          if (channelId) {
+            const body = JSON.stringify({
+              type: 'unflag',
+            });
+            HttpClient.post(
+              `/v3/channels/${channelId}/abuse/image`,
+              body,
+              true,
+              {'Content-Type': 'application/json; charset=UTF-8'}
+            );
+          }
+        }
+      }
       // We don't wait for the deletion to complete because a user's project doesn't depend on the completion of the operation.
       // In the case of a failure, we just end up with an orphaned file in S3.
       HttpClient.delete(fileToBeDeleted.url);

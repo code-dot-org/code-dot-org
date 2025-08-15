@@ -8,6 +8,7 @@ import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 
 type OpenConfirmDeleteFileArgsType = {
   file: ProjectFile;
+  isBlockedAbuse?: boolean;
   dialogControl: Pick<DialogControlInterface, 'showDialog'>;
   deleteFile: DeleteFileFunction;
   sendCodebridgeAnalyticsEvent: (eventName: string) => unknown;
@@ -18,6 +19,7 @@ type OpenConfirmDeleteFileArgsType = {
 // but this was still the most logical place to put it.
 export const openConfirmDeleteFile = async ({
   file,
+  isBlockedAbuse,
   dialogControl,
   deleteFile,
   sendCodebridgeAnalyticsEvent,
@@ -37,7 +39,7 @@ export const openConfirmDeleteFile = async ({
     if (file.type === ProjectFileType.VALIDATION) {
       cleanupValidationFile();
     }
-    deleteFile(file.id);
+    deleteFile({fileId: file.id, isBlockedAbuse}); // TODO: add isBlockedAbuse
     sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_DELETE_FILE);
   }
 };
