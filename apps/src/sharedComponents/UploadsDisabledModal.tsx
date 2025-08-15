@@ -15,18 +15,11 @@ const FlaggedImageModal: React.FunctionComponent<UploadsDisabledModalProps> = ({
     <Modal
       id="uploads-disabled-modal"
       onClose={onClose}
-      title={'Uploads Disabled'}
+      title={i18n.uploadsDisabledModal_title()}
       customContent={
         <div id="dsco-dialog-description">
-          <BodyTwoText>
-            This project has been flagged for abusive content so uploading new
-            files is disabled.
-          </BodyTwoText>
-          <BodyTwoText>
-            If this project was flagged as abusive because of an uploaded image,
-            you can unblock the project by removing the flagged image from your
-            project.
-          </BodyTwoText>
+          <BodyTwoText>{i18n.uploadsDisabledModal_content()}</BodyTwoText>
+          <BodyTwoText>{i18n.uploadsDiabledModal_howToUnblock()}</BodyTwoText>
         </div>
       }
       primaryButtonProps={{
