@@ -124,8 +124,11 @@ module Services
           ms.update!(answers: nil)
         end
 
-        user.simple_survey_foorm_submissions.each do |fs|
-          fs.update!(answers: fs.answers.gsub(EMAIL_REGEX, REDACTED_EMAIL_STRING))
+        user.simple_survey_submissions.each do |sss|
+          foorm_submission = sss.foorm_submission
+          if foorm_submission.present?
+            foorm_submission.update!(answers: foorm_submission.answers.gsub(EMAIL_REGEX, REDACTED_EMAIL_STRING))
+          end
         end
       end
 

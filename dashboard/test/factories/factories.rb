@@ -2318,14 +2318,19 @@ FactoryBot.define do
     answers {''}
   end
 
-  factory :simply_survey_submission, class: 'Foorm::SimpleSurveySubmission' do
-    association :foorm_submission
+  factory :simple_survey_form, class: 'Foorm::SimpleSurveyForm' do
+    form_name {''}
+    form_version {1}
+    path {'path'}
+  end
+
+  factory :simple_survey_submission, class: 'Foorm::SimpleSurveySubmission' do
     association :user
+    association :simple_survey_form
   end
 
   factory :misc_survey, class: 'Pd::MiscSurvey' do
     association :user
-    association :submission, factory: :foorm_submission
     form_id {1}
   end
 end

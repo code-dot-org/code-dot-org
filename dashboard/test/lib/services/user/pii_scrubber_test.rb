@@ -56,18 +56,19 @@ class Services::User::PiiScrubberTest < ActiveSupport::TestCase
 
     context 'when user has PD data with PII' do
       before do
-        let(:foorm_submission) {create(:foorm_submission, user: user, answers: {foo: email}.to_json)}
-        let(:misc_survey) {create(:misc_survey, user: user, answers: {foo: email}.to_json)}
+        Pd::MiscSurvey.any_instance.stubs(:map_answers_to_attributes) # Avoids JotForm API calls
+        user.simple_survey_submissions << create(:simple_survey_submission, simple_survey_form: create(:simple_survey_form), foorm_submission: create(:foorm_submission, answers: {foo: email}.to_json))
+        user.misc_surveys << create(:misc_survey, submission_id: create(:foorm_submission).id, answers: {foo: email}.to_json)
       end
 
       it 'removes email from foorm submissions' do
         scrub_pii
-        _(foorm_submission.reload.answers).wont_match(/#{email}/)
+        _(user.simple_survey_submissions.first.foorm_submission.reload.answers).wont_match(/#{email}/)
       end
 
       it 'removes answers from misc surveys' do
         scrub_pii
-        _(misc_survey.reload.answers).must_be_nil
+        _(user.misc_surveys.first.reload.answers).must_be_nil
       end
     end
 

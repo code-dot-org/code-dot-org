@@ -304,7 +304,6 @@ class User < ApplicationRecord
   has_and_belongs_to_many :pd_workshops_facilitated, class_name: 'Pd::Workshop', join_table: 'pd_workshops_facilitators', association_foreign_key: 'pd_workshop_id'
   has_many :misc_surveys, class_name: 'Pd::MiscSurvey'
   has_many :simple_survey_submissions, class_name: 'Foorm::SimpleSurveySubmission'
-  has_many :simple_survey_foorm_submissions, class_name: 'Foorm::Submission', through: :simple_survey_submissions
 
   has_many :authentication_options, dependent: :destroy
   accepts_nested_attributes_for :authentication_options
