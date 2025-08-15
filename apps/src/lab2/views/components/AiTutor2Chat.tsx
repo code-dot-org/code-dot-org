@@ -6,7 +6,7 @@ import ChatWorkspace from '@cdo/apps/aichat/views/ChatWorkspace';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
-import {aiTutorModelId} from '../../ai/AiTutorModelId';
+import {aiTutorModelId} from '../../ai/ai-tutor-model-id';
 
 import moduleStyles from './AiTutor2Chat.module.scss';
 
