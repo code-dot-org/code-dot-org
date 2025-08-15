@@ -115,12 +115,14 @@ const FooterMui: React.FC<FooterProps> = ({
                   href={href}
                   variant="body4"
                   target={
-                    !onClick && isExternalLink(href, brand, 'production')
+                    typeof onClick !== 'function' &&
+                    isExternalLink(href, brand, 'production')
                       ? '_blank'
                       : undefined
                   }
                   rel={
-                    !onClick && isExternalLink(href, brand, 'production')
+                    typeof onClick !== 'function' &&
+                    isExternalLink(href, brand, 'production')
                       ? 'noopener noreferrer'
                       : undefined
                   }

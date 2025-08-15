@@ -21,7 +21,7 @@ export const SITE_LINKS = [
     key: 'manage-cookies',
     label: 'Manage Cookies',
     href: '/cookies',
-    onClick: (e: {preventDefault: () => void}) => {
+    onClick: (e: React.MouseEvent<HTMLAnchorElement>) => {
       if (window?.OneTrust) {
         e.preventDefault();
         // Displays the OneTrust cookie dialog
