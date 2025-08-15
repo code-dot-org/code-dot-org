@@ -425,7 +425,17 @@ namespace :test do
 
     desc 'Runs lib tests if lib might have changed from staging.'
     timed_task_with_logging :bin do
-      run_tests_if_changed('bin', ['Gemfile', 'Gemfile.lock', 'deployment.rb', 'bin/**/*']) do
+      run_tests_if_changed(
+        'bin',
+        [
+          'Gemfile',
+          'Gemfile.lock',
+          'deployment.rb',
+          'bin/**/*',
+          # i18n tests depend on curriculum models
+          'dashboard/app/models/**/*'
+        ]
+      ) do
         TestRunUtils.run_bin_tests
       end
     end
