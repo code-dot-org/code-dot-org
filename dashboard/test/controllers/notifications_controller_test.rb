@@ -73,8 +73,7 @@ class NotificationsControllerTest < ActionController::TestCase
 
   describe 'contentful tests' do
     before do
-      mock_client = mock
-      Marketing::ContentfulClient.any_instance.stubs(:client).returns(mock_client)
+      Marketing::ContentfulClient.instance_variable_set(:@singleton__instance__, nil)
       Marketing::ContentfulClient.any_instance.expects(:entries).with(LOCALE, NOTIFICATION_CONTENTFUL_CONTENT_TYPE).returns([entry_1, entry_2])
     end
 
