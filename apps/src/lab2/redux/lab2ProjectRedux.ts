@@ -79,12 +79,12 @@ const projectSlice = createSlice({
       if (state.projectSources?.source) {
         state.projectSources = {
           ...state.projectSources,
-          source: createNewFileHelper(
-            state.projectSources?.source as MultiFileSource,
-            action.payload.fileName,
-            action.payload.folderId,
-            action.payload.contents
-          ),
+          source: createNewFileHelper({
+            source: state.projectSources?.source as MultiFileSource,
+            fileName: action.payload.fileName,
+            folderId: action.payload.folderId,
+            contents: action.payload.contents,
+          }),
         };
         state.hasEdited = true;
       }
@@ -95,17 +95,18 @@ const projectSlice = createSlice({
         fileName: string;
         url: string;
         folderId?: FolderId;
+        flagged?: boolean;
       }>
     ) {
       if (state.projectSources?.source) {
         const source = state.projectSources.source as MultiFileSource;
-        const newFileId = createNewFileHelper(
+        const newFileId = createNewFileHelper({
           source,
-          action.payload.fileName,
-          action.payload.folderId,
-          undefined,
-          action.payload.url
-        );
+          fileName: action.payload.fileName,
+          folderId: action.payload.folderId,
+          url: action.payload.url,
+          flagged: action.payload.flagged,
+        });
         state.projectSources = {
           ...state.projectSources,
           source: newFileId,

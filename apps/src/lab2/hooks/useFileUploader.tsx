@@ -17,7 +17,8 @@ export type FileUploaderProps = {
     filename: string,
     contents: string,
     uploadUrl?: string,
-    callbackArgs?: unknown
+    callbackArgs?: unknown,
+    flagged?: boolean
   ) => void;
   errorCallback: (error: string, callbackArgs?: unknown) => void;
   channelId: string;
@@ -202,7 +203,7 @@ export const useFileUploader = ({
                       name: file.name,
                       type: file.type,
                     });
-                    callback(file.name, '', url, callbackArgs.current);
+                    callback(file.name, '', url, callbackArgs.current, true);
                   };
                   onImageFlagged(file, fileType, uploadFunction);
                   return; // Don't continue with upload, wait for callback handling

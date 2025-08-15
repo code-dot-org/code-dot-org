@@ -19,16 +19,26 @@ import {
 
 // Helper functions for editing multi-file sources in lab2.
 
+interface CreateNewFileArgs {
+  source: MultiFileSource;
+  fileName: string;
+  folderId?: FolderId;
+  contents?: string;
+  url?: string;
+  flagged?: boolean;
+}
 /**
  * Create a new file.
  */
-export const createNewFileHelper = (
-  source: MultiFileSource,
-  fileName: string,
-  folderId: FolderId = DEFAULT_FOLDER_ID,
-  contents: string = '',
-  url?: string
-): MultiFileSource => {
+
+export const createNewFileHelper = ({
+  source,
+  fileName,
+  folderId = DEFAULT_FOLDER_ID,
+  contents = '',
+  url,
+  flagged,
+}: CreateNewFileArgs): MultiFileSource => {
   const fileId = getNextFileId(Object.values(source.files));
   const newSource = {...source, files: {...source.files}};
   const [, extension] = fileName.split('.');
@@ -46,7 +56,12 @@ export const createNewFileHelper = (
     file.url = url;
   }
 
+  if (flagged) {
+    file.flagged = flagged;
+  }
+
   newSource.files[fileId] = file;
+  console.log('newSource', newSource);
 
   return activateFileHelper(newSource, fileId);
 };
