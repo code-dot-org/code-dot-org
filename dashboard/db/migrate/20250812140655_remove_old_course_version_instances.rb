@@ -1,7 +1,8 @@
 class RemoveOldCourseVersionInstances < ActiveRecord::Migration[6.1]
   def up
     if Rails.env.development?
-      execute "DELETE FROM course_versions WHERE content_root_type != 'UnitGroup'"
+      deleted_count = CourseVersion.where.not(content_root_type: 'UnitGroup').delete_all
+      puts "Deleted #{deleted_count} CourseVersion records."
     end
   end
 

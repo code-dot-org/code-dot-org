@@ -50,6 +50,9 @@ class CertificatesControllerTest < ActionController::TestCase
   end
 
   test 'shows custom image for unpersonalized csf course' do
+    unit = create(:unit, name: 'course1')
+    unit_group = create(:single_unit_course, :stable, unit: unit, name: 'course1')
+    CourseOffering.add_course_offering(unit_group)
     data = {course: 'course1'}
     encoded_params = Base64.urlsafe_encode64(data.to_json)
     get :show, params: {encoded_params: encoded_params}

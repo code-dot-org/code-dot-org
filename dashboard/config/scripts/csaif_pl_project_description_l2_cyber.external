@@ -1,0 +1,90 @@
+name 'csaif_pl_project-description-L2-cyber'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Pixels of Me Project Overview
+
+<img src="https://images.code.org/66f86ca5d8e42abfe1a34e51af2ea606-image-1741790839525.png" alt="Mario made out of pixels" width="170px" style="border-radius:10px; float:left; margin: 0px 50px 0px 50px;">
+
+#### In this project, students will create a digital pixel artifact that represents an aspect of their identity — such as a hobby, interest, future career, or favorite book/movie.
+
+#### They will apply computational thinking, Python programming, and AI tools to develop their designs while engaging in peer feedback and reflection.
+
+<div style="clear:both;"></div>
+
+## Project Requirements:
+
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🧠 Computational Thinking
+</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+
+
+- #### Break down their design into smaller components (decomposition).
+- #### Identify patterns and simplify code using abstraction.
+
+
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🧩 Algorithms & Python</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+
+
+- #### Use sequencing, loops, and selection statements to structure their code.
+- #### Implement functions with descriptive names for clarity.
+
+
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">✏️ Code Documentation</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+
+
+- #### Add comments to explain the purpose of key functions and code segments.
+
+
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">💭 Feedback & Reflection</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+
+
+- #### Participate in a TAG Method peer review to refine their work.
+- #### Reflect on their computational thinking process and problem-solving strategies.
+
+
+
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🤖 AI Integration</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+
+
+- #### Use AI tools for brainstorming, debugging, or refining their code.
+- #### Reflect on AI’s role in their project and discuss its ethical implications.
+
+
+</p></div>
+</details>
+
+---
+
+#### This project allows students to apply their coding skills creatively while practicing structured problem-solving, peer collaboration, and responsible AI use.
+
+![]()
+MARKDOWN

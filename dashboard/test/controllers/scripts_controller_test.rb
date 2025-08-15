@@ -414,14 +414,14 @@ class ScriptsControllerTest < ActionController::TestCase
     CDO.stubs(:rack_env).returns(:production)
     Rails.application.config.stubs(:levelbuilder_mode).returns false
     sign_in create(:levelbuilder)
-    get :edit, params: {id: 'course1'}
+    get :edit, params: {id: @single_unit_2023.name}
     assert_response :forbidden
   end
 
   test "should get edit on levelbuilder" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in create(:levelbuilder)
-    get :edit, params: {id: 'course1'}
+    get :edit, params: {id: @single_unit_2023.name}
     assert_response :ok
   end
 
@@ -429,7 +429,7 @@ class ScriptsControllerTest < ActionController::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in create(:levelbuilder)
     with_default_locale(:de) do
-      get :edit, params: {id: 'course1'}
+      get :edit, params: {id: @single_unit_2023.name}
     end
     assert_redirected_to "/"
   end
@@ -438,7 +438,7 @@ class ScriptsControllerTest < ActionController::TestCase
     CDO.stubs(:rack_env).returns(:test)
     Rails.application.config.stubs(:levelbuilder_mode).returns false
     sign_in create(:levelbuilder)
-    get :edit, params: {id: 'course1'}
+    get :edit, params: {id: @single_unit_2023.name}
     assert_response :ok
   end
 
@@ -446,13 +446,13 @@ class ScriptsControllerTest < ActionController::TestCase
     CDO.stubs(:rack_env).returns(:staging)
     Rails.application.config.stubs(:levelbuilder_mode).returns false
     sign_in create(:levelbuilder)
-    get :edit, params: {id: 'course1'}
+    get :edit, params: {id: @single_unit_2023.name}
     assert_response :forbidden
   end
 
   test "should not get edit if not signed in" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    get :edit, params: {id: 'course1'}
+    get :edit, params: {id: @single_unit_2023.name}
 
     assert_redirected_to_sign_in
   end
@@ -463,7 +463,7 @@ class ScriptsControllerTest < ActionController::TestCase
     not_admin = create(:user)
     [not_admin, admin].each do |user|
       sign_in user
-      get :edit, params: {id: 'course1'}
+      get :edit, params: {id: @single_unit_2023.name}
 
       assert_response :forbidden
     end
@@ -473,7 +473,7 @@ class ScriptsControllerTest < ActionController::TestCase
   test "edit" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in create(:levelbuilder)
-    unit = Unit.find_by_name('course1')
+    unit = @single_unit_2023
     get :edit, params: {id: unit.name}
 
     assert_equal unit, assigns(:script)
@@ -873,10 +873,10 @@ class ScriptsControllerTest < ActionController::TestCase
     sign_in create(:levelbuilder)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    unit = create(:single_unit_course, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta).first_unit
+    unit = create(:script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta, is_migrated: true)
     stub_file_writes(unit.name)
 
-    course_version = create(:course_version, content_root: unit.original_unit_group)
+    course_version = create(:course_version, content_root: unit)
     teacher_resources = [
       create(:resource, course_version: course_version),
       create(:resource, course_version: course_version),
@@ -899,10 +899,10 @@ class ScriptsControllerTest < ActionController::TestCase
     sign_in create(:levelbuilder)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    unit = create(:single_unit_course, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta).first_unit
+    unit = create(:script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta, is_migrated: true)
     stub_file_writes(unit.name)
 
-    course_version = create(:course_version, content_root: unit.original_unit_group)
+    course_version = create(:course_version, content_root: unit)
     student_resources = [
       create(:resource, course_version: course_version),
       create(:resource, course_version: course_version)
@@ -1001,6 +1001,7 @@ class ScriptsControllerTest < ActionController::TestCase
       instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher,
       tts: 'on',
       project_sharing: 'on',
+      is_course: 'on',
       peer_reviews_to_complete: 1,
       curriculum_path: 'fake_curriculum_path',
       family_name: 'fake-family-z',

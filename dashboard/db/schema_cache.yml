@@ -2402,6 +2402,35 @@ columns:
     collation: 
     comment: 
   - *17
+  external_notifications:
+  - *9
+  - *11
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: external_id
+    sql_type_metadata: *3
+    'null': false
+    default: 
+    default_function: 
+    collation: utf8mb4_unicode_ci
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: read_at
+    sql_type_metadata: *4
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: is_dismissed
+    sql_type_metadata: *13
+    'null': false
+    default: '0'
+    default_function: 
+    collation: 
+    comment: 
+  - *14
+  - *15
   featured_projects:
   - *5
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
@@ -8295,6 +8324,7 @@ primary_keys:
   donors: id
   email_preferences: id
   experiments: id
+  external_notifications: id
   featured_projects: id
   followers: id
   foorm_forms: id
@@ -8507,6 +8537,7 @@ data_sources:
   donors: true
   email_preferences: true
   experiments: true
+  external_notifications: true
   featured_projects: true
   followers: true
   foorm_forms: true
@@ -9876,6 +9907,35 @@ indexes:
     unique: false
     columns:
     - start_at
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: :btree
+    comment: 
+  external_notifications:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: external_notifications
+    name: index_external_notifications_on_user_id_and_read_at
+    unique: false
+    columns:
+    - user_id
+    - read_at
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: :btree
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: external_notifications
+    name: index_external_notifications_on_user_id_and_created_at
+    unique: false
+    columns:
+    - user_id
+    - created_at
     lengths: {}
     orders: {}
     opclasses: {}
@@ -14518,7 +14578,7 @@ indexes:
     type: :fulltext
     using: 
     comment: 
-version: 20250812140655
+version: 20250813180707
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 8

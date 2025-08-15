@@ -232,14 +232,21 @@ export default function CurriculumQuickAssign({
 
       const courseVersionId = sectionCourse.versionId;
       const courseVersion = courseVersions[courseVersionId];
+      const isStandaloneUnit = courseVersion.type === 'Unit';
 
-      let targetUnit = courseVersion.units[sectionCourse.unitId];
+      let targetUnit;
+
+      if (isStandaloneUnit) {
+        targetUnit = Object.values(courseVersion.units)[0];
+      } else if (sectionCourse.unitId) {
+        targetUnit = courseVersion.units[sectionCourse.unitId];
+      }
 
       const updateSectionData = {
         displayName: course.display_name,
         courseOfferingId: course.id,
         versionId: courseVersionId,
-        unitId: sectionCourse.unitId,
+        unitId: isStandaloneUnit ? null : sectionCourse.unitId,
         lessonExtrasAvailable: targetUnit?.lesson_extras_available,
         textToSpeechEnabled: targetUnit?.text_to_speech_enabled,
       };

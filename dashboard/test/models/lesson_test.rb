@@ -663,7 +663,7 @@ class LessonTest < ActiveSupport::TestCase
     # of related_lessons, so that the count is not artificially reduced by
     # anything being cached from the call to related_lessons.
     summaries = nil
-    assert_queries(9) do
+    assert_queries(10) do
       summaries = lesson1.summarize_related_lessons
     end
 
@@ -689,7 +689,7 @@ class LessonTest < ActiveSupport::TestCase
     create(:lesson, script: script2, key: 'foo')
 
     lesson1.reload
-    assert_queries(3) do
+    assert_queries(4) do
       assert_equal [], lesson1.related_lessons
     end
   end

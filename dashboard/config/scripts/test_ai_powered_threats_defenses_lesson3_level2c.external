@@ -1,0 +1,52 @@
+name 'test-ai-powered-threats-defenses-lesson3-level2c'
+title 'Jordan P. - User Profile'
+
+display_name 'Sofia Hernandez'
+bubble_choice_description 'Sofia is a 14 year old student from Miami, FL'
+thumbnail_url 'https://images.code.org/feb6217203ec38832b5976b7e43173c1-image-1755184977472.png'
+
+markdown <<MARKDOWN
+#Sofia
+
+#### Look through Sofia's emails below and see which ones might be legit and which might be phishing attacks.
+
+<div style="font-family: sans-serif; font-size: 16px; line-height: 1.6;">
+
+
+  <hr>
+
+  <p><strong>Message A – Text</strong></p>
+  <p>
+    Hey Sofia — it’s Jada from dance club!<br><br>
+    We’re putting together a BTS medley for the showcase and need everyone’s shirt sizes.<br><br>
+    Can you send yours so we can order matching tops?
+  </p>
+
+  <hr>
+
+  <p><strong>Message B – Email</strong></p>
+  <p><em>Subject:</em> <strong>BTS Fan Box Shipping Confirmation</strong></p>
+  <p>
+    Hi Sofia,<br><br>
+    You’re receiving this email because you signed up for BTS fan rewards through one of our partners.<br>
+    Your VIP Fan Box includes exclusive merch and early livestream access.<br><br>
+    To confirm shipping, please verify your name, birthdate, and mailing address:<br>
+    <a href="#">fanportal.bts-box.com</a><br><br>
+    If we don’t hear from you in 24 hours, your spot may be reassigned.<br><br>
+    Thanks,<br>
+    <em>The Fan Box Team</em>
+  </p>
+
+  <hr>
+
+  <p><strong>Message C – Instagram DM</strong></p>
+  <p>
+    <strong>From: @miamijuiceguide</strong><br><br>
+    Hey Sofia! We saw your post about your family’s juice bar!<br>
+    We’re featuring small Miami businesses on our food blog this month.<br><br>
+    If you’re the owner or a family member, reply with your contact number, email, and home address so we can arrange an interview & feature you!
+  </p>
+
+</div>
+
+MARKDOWN

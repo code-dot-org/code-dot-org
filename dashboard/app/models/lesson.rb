@@ -787,6 +787,7 @@ class Lesson < ApplicationRecord
     # that may be used in the sort block below.
     load_params = {
       script: [
+        :course_version,
         {
           unit_group_units: {
             unit_group: :course_version
@@ -813,7 +814,7 @@ class Lesson < ApplicationRecord
     # and course offering. In the future, when curriulum_umbrella moves to
     # CourseOffering, this implementation will need to change to be more like
     # related_lessons.
-    lessons = Lesson.eager_load(:script).
+    lessons = Lesson.eager_load(script: :course_version).
       where("scripts.properties -> '$.curriculum_umbrella' = ?", script.curriculum_umbrella).
       where(key: key).
       # This SQL string is not at risk for injection vulnerabilites because

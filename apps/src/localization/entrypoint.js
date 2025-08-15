@@ -46,6 +46,7 @@ const prefixes = {
 const live = [
   '/courses/foundations-gen-ai-2024',
   '/courses/foundations-gen-ai-2025',
+  '/courses/k5-ai-data-2024',
 ];
 
 const experiments = JSON.parse(window.localStorage.experimentsList || '[]');
