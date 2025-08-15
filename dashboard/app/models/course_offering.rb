@@ -90,8 +90,6 @@ class CourseOffering < ApplicationRecord
     end
 
     if content_root.is_course?
-      raise "family_name must be set, since is_course is true, for: #{content_root.name}" if content_root.family_name.nil_or_empty?
-
       offering = CourseOffering.find_or_create_by!(key: content_root.family_name) do |co|
         co.display_name = content_root.family_name if co.display_name.nil_or_empty?
       end
