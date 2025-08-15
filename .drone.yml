@@ -321,10 +321,6 @@ trigger:
   branch:
     - "staging"
     - "staging-next"
-    exclude:
-      - "production"
-      - "test"
-      - "levelbuilder"
   event:
     - push
 ---
