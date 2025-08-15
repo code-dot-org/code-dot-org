@@ -105,7 +105,15 @@ export default class Match {
   //   * answers are only droppable on slots within the same container
   //   * answers cannot be dragged outside of the container.
   initMatch() {
-    $(this.container).find('.mainblock .match_answers li.answer').draggable({
+    const answers = $(this.container).find(
+      '.mainblock .match_answers li.answer'
+    );
+
+    // Make answers focusable and draggable via keyboard
+    answers
+      .attr('tabindex', '0') // Make focusable
+      .on('keydown', event => this.handleAnswerKeydown(event));
+    answers.draggable({
       revert: 'invalid',
       stack: '.answer',
       containment: this.container,
@@ -120,6 +128,118 @@ export default class Match {
     }
 
     this.enableSounds = this.standalone;
+  }
+
+  handleAnswerKeydown(event) {
+    const answer = $(event.currentTarget);
+    const slots = $(this.container).find('.mainblock .match_slots li');
+
+    switch (event.key) {
+      case 'Enter':
+      case ' ': // Select the answer
+        event.preventDefault();
+
+        if (answer.hasClass('selected')) {
+          // Deselect the answer
+          answer.removeClass('selected'); // Remove visual feedback
+          this.selectedAnswer = null; // Clear the selected answer
+          slots.attr('tabindex', '-1'); // Make slots not focusable
+          answer.focus(); // Keep focus on the answer
+        } else {
+          // Select the answer
+          answer.addClass('selected'); // Add visual feedback
+          this.selectedAnswer = answer; // Store the selected answer
+          slots.each((index, slot) => {
+            const $slot = $(slot);
+            const existingAnswer = $slot.data('currentAnswer');
+
+            if (existingAnswer) {
+              // If the slot contains an answer, remove it from the tab order
+              $slot.attr('tabindex', '-1');
+            } else {
+              // If the slot is empty, make it focusable
+              $slot.attr('tabindex', '0');
+            }
+          });
+          slots.first().focus(); // Move focus to the first slot
+          this.enableFocusTrap(slots); // Enable focus trap for slots
+        }
+        break;
+
+      case 'ArrowDown': // Move focus to the next answer
+        event.preventDefault();
+        answer.next().focus();
+        break;
+
+      case 'ArrowUp': // Move focus to the previous answer
+        event.preventDefault();
+        answer.prev().focus();
+        break;
+
+      case 'Escape': // Deselect the answer or remove it from the slot
+        event.preventDefault();
+
+        if (this.selectedAnswer) {
+          // Deselect the currently selected answer
+          this.selectedAnswer.removeClass('selected'); // Remove visual feedback
+          this.selectedAnswer = null; // Clear the selected answer
+        }
+        break;
+
+      default:
+        break;
+    }
+  }
+
+  enableFocusTrap(slots) {
+    const firstSlot = slots.first();
+    const lastSlot = slots.last();
+
+    const handleKeydown = event => {
+      if (event.key === 'ArrowUp' || (event.key === 'Tab' && event.shiftKey)) {
+        event.preventDefault();
+        // Move focus to the previous slot or loop to the last slot
+        if ($(event.currentTarget).is(firstSlot)) {
+          lastSlot.focus();
+        } else {
+          $(event.currentTarget).prev().focus();
+        }
+      } else if (event.key === 'ArrowDown' || event.key === 'Tab') {
+        event.preventDefault();
+        // Move focus to the next slot or loop to the first slot
+        if ($(event.currentTarget).is(lastSlot)) {
+          firstSlot.focus();
+        } else {
+          $(event.currentTarget).next().focus();
+        }
+      } else if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        // Drop the selected answer into the slot
+        const slot = $(event.currentTarget);
+        if (this.selectedAnswer) {
+          this.moveAnswerToSlot(slot, this.selectedAnswer);
+          this.selectedAnswer.removeClass('selected'); // Remove visual feedback
+          this.selectedAnswer = null; // Clear the selection
+          slots.attr('tabindex', '-1'); // Disable focusability for slots
+
+          // Disable the focus trap
+          slots.off('keydown', handleKeydown);
+          $('body').focus();
+        }
+      } else if (event.key === 'Escape') {
+        event.preventDefault();
+        // Deselect the answer and move focus to the top of the page
+        if (this.selectedAnswer) {
+          this.selectedAnswer.removeClass('selected'); // Remove visual feedback
+          this.selectedAnswer = null; // Clear the selected answer
+        }
+        slots.attr('tabindex', '-1'); // Disable focusability for slots
+        // Disable the focus trap
+        slots.off('keydown', handleKeydown);
+        $('body').focus(); // Move focus to the top of the page
+      }
+    };
+    slots.on('keydown', handleKeydown);
   }
 
   // set up the central list of empty slots.
