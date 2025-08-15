@@ -95,7 +95,6 @@ class CourseVersion < ApplicationRecord
         key: content_root.version_year,
         display_name: content_root.version_year,
         content_root: content_root,
-        content_root_type: content_root.class.name
       )
       course_version.published_state = content_root.published_state
     else
