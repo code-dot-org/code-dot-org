@@ -1,0 +1,17 @@
+<ExternalLink>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 55,
+  "created_at": "2025-08-15T02:07:10.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "link_title": "End-of-Lesson Survey ",
+    "url": "https://docs.google.com/forms/d/e/1FAIpQLSdfl1uJtoNnhy_K8_G3un02eXZx2m-TMJRIXlJsN6Gc0Iup4Q/viewform",
+    "teacher_markdown": "We appreciate your time letting us know how this lesson went for you and your students. While your students complete the End of Lesson Survey, please complete the [Teacher End-of-Lesson Survey](https://docs.google.com/forms/d/e/1FAIpQLSdfl1uJtoNnhy_K8_G3un02eXZx2m-TMJRIXlJsN6Gc0Iup4Q/viewform).",
+    "long_instructions": "#### Please take a moment to respond to this short survey. \r\n\r\nCode.org takes your privacy seriously. Your responses will be kept **anonymous**.\r\n"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-08-15T02:07:10.069+00:00\",\"changed\":[\"cloned from \\\"ai-powered-threats-defenses-lesson11-survey-pilot_2025\\\"\"],\"cloned_from\":\"ai-powered-threats-defenses-lesson11-survey-pilot_2025\"},{\"changed_at\":\"2025-08-15 02:07:13 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
+}]]></config>
+</ExternalLink>

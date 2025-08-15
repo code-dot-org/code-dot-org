@@ -9,10 +9,13 @@ import {
   setHasValidated,
 } from '@cdo/apps/lab2/redux/systemRedux';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
+import ForTeachersOnly from '@cdo/apps/lab2/views/components/Instructions/ForTeachersOnly';
 import InstructionsV2 from '@cdo/apps/lab2/views/components/Instructions/InstructionsV2';
+import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {logUserLevelInteraction} from '@cdo/apps/userLevelInteractionsLogger/userLevelInteractionsApi';
+import experiments from '@cdo/apps/util/experiments';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {UserLevelInteractions} from '@cdo/generated-scripts/sharedConstants';
 
@@ -20,8 +23,6 @@ import {useCodebridgeContext} from '../codebridgeContext';
 import CodebridgeRegistry from '../CodebridgeRegistry';
 import {getSystemMessage} from '../Console/MessageHelpers';
 import {sendCodebridgeAnalyticsEvent} from '../utils/analyticsReporterHelper';
-
-import ForTeachersOnly from './ForTeachersOnly';
 
 import moduleStyles from './styles/info-panel.module.scss';
 
@@ -49,8 +50,13 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
   style,
   className,
 }) => {
-  const {levelProperties, onRun, onStop, AiTutor2ResponseView} =
-    useCodebridgeContext();
+  const {
+    levelProperties,
+    onRun,
+    onStop,
+    AiTutor2ResponseView,
+    aiTutor2Context,
+  } = useCodebridgeContext();
   const {
     mapReference,
     referenceLinks,
@@ -82,6 +88,10 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
   const hasLoadedEnvironment = useAppSelector(
     state => state.lab2System.loadedCodeEnvironment
   );
+  // Web Lab 2 uses the resource panel by default, otherwise we defer to the experiment flag.
+  const useResourcePanel =
+    appName === 'weblab2' ||
+    experiments.isEnabledAllowingQueryString(experiments.LAB2_RESOURCE_PANEL);
 
   useEffect(() => {
     // For now, always include Instructions panel.
@@ -177,6 +187,30 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
     }
   };
 
+  if (useResourcePanel) {
+    return (
+      <div style={style} className={className}>
+        <ResourcePanel
+          isRunning={isRunning}
+          hasRun={hasRun}
+          hasEdited={hasEdited}
+          validationSettings={{
+            onValidate: handleValidate,
+            onStopValidation: handleStopValidation,
+            isValidating,
+            isValidateDisabled: !hasLoadedEnvironment || isRunning,
+          }}
+          AiTutor2ResponseView={AiTutor2ResponseView}
+          className={moduleStyles.instructionsContainer}
+          headerClassName={moduleStyles.infoPanelHeader}
+          levelProperties={levelProperties}
+          requireRun={true}
+          aiTutor2Context={aiTutor2Context}
+        />
+      </div>
+    );
+  }
+
   return (
     <div style={style} className={className}>
       <PanelContainer
@@ -221,7 +255,7 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
             requireRun={true}
           />
         ) : (
-          <ForTeachersOnly />
+          <ForTeachersOnly levelProperties={levelProperties} />
         )}
       </PanelContainer>
     </div>

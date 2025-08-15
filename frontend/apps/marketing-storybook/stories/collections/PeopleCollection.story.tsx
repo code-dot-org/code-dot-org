@@ -1,8 +1,9 @@
 import PeopleCollection, {
   PeopleCollectionProps,
 } from '@/components/contentful/collections/peopleCollection';
+import {useInMemoryEntities} from '@contentful/experiences-sdk-react';
 import {Meta, StoryObj} from '@storybook/react';
-import {expect} from 'storybook/test';
+import {expect, within} from 'storybook/test';
 
 import PeopleCollectionAlphabeticalMock from './__mocks__/PeopleCollectionAlphabetical.json';
 import PeopleCollectionHiddenMock from './__mocks__/PeopleCollectionHidden.json';
@@ -17,6 +18,54 @@ export default meta;
 
 type Story = StoryObj<PeopleCollectionProps>;
 
+const inMemoryEntities = useInMemoryEntities();
+
+inMemoryEntities.addEntities([
+  {
+    metadata: {
+      tags: [],
+      concepts: [],
+    },
+    sys: {
+      space: {
+        sys: {
+          type: 'Link',
+          linkType: 'Space',
+          id: '90t6bu6vlf76',
+        },
+      },
+      id: '5CznPyR4ZsbIkhpwSaUxoe',
+      type: 'Entry',
+      createdAt: '2025-04-28T17:15:38.051Z',
+      updatedAt: '2025-07-02T20:13:06.538Z',
+      environment: {
+        sys: {
+          id: 'development',
+          type: 'Link',
+          linkType: 'Environment',
+        },
+      },
+      publishedVersion: 42,
+      revision: 4,
+      contentType: {
+        sys: {
+          type: 'Link',
+          linkType: 'ContentType',
+          id: 'link',
+        },
+      },
+      locale: 'en-US',
+    },
+    fields: {
+      linkName: '❌ [ENG] External link button test',
+      label: 'External link button test',
+      primaryTarget: 'about:blank',
+      isThisAnExternalLink: true,
+      ariaLabel: 'External link button test',
+    },
+  },
+]);
+
 export const SortedAlphabetically: Story = {
   args: PeopleCollectionAlphabeticalMock,
   play: async ({canvas}) => {
@@ -29,6 +78,13 @@ export const SortedAlphabetically: Story = {
       }
       if (person.fields.bio) {
         expect(canvas.getByText(person.fields.bio)).toBeInTheDocument();
+      }
+      if (person.fields.personalLink) {
+        const heading = canvas.getByRole('heading', {name: person.fields.name});
+        const parentDiv = heading.closest('div');
+        expect(
+          within(parentDiv!).getByRole('link', {name: 'Visit personal page'}),
+        ).toBeInTheDocument();
       }
     }
   },
@@ -47,6 +103,13 @@ export const SortedManually: Story = {
       if (person.fields.bio) {
         expect(canvas.getByText(person.fields.bio)).toBeInTheDocument();
       }
+      if (person.fields.personalLink) {
+        const heading = canvas.getByRole('heading', {name: person.fields.name});
+        const parentDiv = heading.closest('div');
+        expect(
+          within(parentDiv!).getByRole('link', {name: 'Visit personal page'}),
+        ).toBeInTheDocument();
+      }
     }
   },
 };
@@ -63,6 +126,13 @@ export const HiddenImages: Story = {
       }
       if (person.fields.bio) {
         expect(canvas.getByText(person.fields.bio)).toBeInTheDocument();
+      }
+      if (person.fields.personalLink) {
+        const heading = canvas.getByRole('heading', {name: person.fields.name});
+        const parentDiv = heading.closest('div');
+        expect(
+          within(parentDiv!).getByRole('link', {name: 'Visit personal page'}),
+        ).toBeInTheDocument();
       }
     }
   },

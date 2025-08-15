@@ -3,24 +3,25 @@ require 'test_helper'
 # Prevent regressions in the number of database queries on high-traffic routes.
 class DBQueryTest < ActionDispatch::IntegrationTest
   def setup
-    @unit = create :unit, :with_levels
-    create :single_unit_course, unit: @unit
+    @unit = create(:unit, :with_levels)
+    create(:single_unit_course, unit: @unit)
     setup_script_cache
   end
 
   test "script level show" do
-    student = create :student
+    student = create(:student)
     sign_in student
 
     script = @unit
     lesson = script.lessons.first
     level = lesson.script_levels.first.levels.first
 
-    create :user_level,
+    create(:user_level,
       user: student,
       script: script,
       level: level,
       level_source: create(:level_source, level: level)
+)
 
     assert_cached_queries(17) do
       get course_unit_lesson_script_level_path(
@@ -34,18 +35,19 @@ class DBQueryTest < ActionDispatch::IntegrationTest
   end
 
   test "user progress" do
-    student = create :student
+    student = create(:student)
     sign_in student
 
     script = @unit
     lesson = script.lessons.first
     level = lesson.script_levels.first.levels.first
 
-    create :user_level,
+    create(:user_level,
       user: student,
       script: script,
       level: level,
       level_source: create(:level_source, level: level)
+)
 
     user_app_options_path = user_app_options_path(
       script: script.name,
@@ -62,7 +64,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
   end
 
   test "post milestone passing last level of progression" do
-    student = create :student
+    student = create(:student)
     sign_in student
 
     script = create(:script, :with_levels, levels_count: 3)
@@ -82,7 +84,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
   end
 
   test "post milestone passing middle level of progression" do
-    student = create :student
+    student = create(:student)
     sign_in student
 
     script = create(:script, :with_levels, levels_count: 3)
@@ -102,7 +104,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
   end
 
   test "post milestone not passing" do
-    student = create :student
+    student = create(:student)
     sign_in student
 
     script = create(:script, :with_levels, levels_count: 3)
@@ -129,9 +131,9 @@ class DBQueryTest < ActionDispatch::IntegrationTest
     course = create(:single_unit_course, unit: script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, version_year: 'unversioned', family_name: 'hoc-family')
     CourseOffering.add_course_offering(course)
 
-    teacher = create :teacher
-    section = create :section, user: teacher
-    student = create :student
+    teacher = create(:teacher)
+    section = create(:section, user: teacher)
+    student = create(:student)
     section.students = [student]
     student.assign_script(script)
     sign_in student
@@ -169,9 +171,9 @@ class DBQueryTest < ActionDispatch::IntegrationTest
 
     level = unit.levels.first
 
-    teacher = create :teacher
-    section = create :section, user: teacher, script: unit
-    student = create :student
+    teacher = create(:teacher)
+    section = create(:section, user: teacher, script: unit)
+    student = create(:student)
     section.students = [student]
     student.assign_script(unit)
     sign_in student

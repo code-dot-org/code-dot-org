@@ -1,6 +1,7 @@
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
+import RightButtons from '@codebridge/RightButtons/RightButtons';
 import {sendCodebridgeAnalyticsEvent} from '@codebridge/utils';
 import {FitAddon} from '@xterm/addon-fit';
 import {ImageAddon} from '@xterm/addon-image';
@@ -21,7 +22,6 @@ import '@xterm/xterm/css/xterm.css';
 import ConsoleManager from './ConsoleManager';
 import {darkTheme, lightTheme} from './consoleThemes';
 import ControlButtons from './ControlButtons';
-import RightButtons from './RightButtons';
 
 import moduleStyles from './console.module.scss';
 

@@ -34,6 +34,10 @@ export const SortedAlphabetically: Story = {
       .getAllByRole('img')
       .map(img => img.getAttribute('alt'));
     expect(imgAlts).toEqual(titles);
+
+    // Check that "amazon logo" image is clickable using RTL syntax
+    const amazonLogoLink = canvas.getByRole('link', {name: /amazon logo/i});
+    expect(amazonLogoLink).toBeInTheDocument();
   },
 };
 
@@ -56,5 +60,9 @@ export const SortedManually: Story = {
     titles.forEach(title => {
       expect(imgAlts).toContain(title);
     });
+
+    // Check that "amazon logo" image is clickable using RTL syntax
+    const amazonLogoLink = canvas.getByRole('link', {name: /amazon logo/i});
+    expect(amazonLogoLink).toBeInTheDocument();
   },
 };

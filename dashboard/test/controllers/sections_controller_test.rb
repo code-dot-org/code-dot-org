@@ -158,7 +158,7 @@ class SectionsControllerTest < ActionController::TestCase
       secret_words: @flappy_user_1.secret_words
     }
 
-    assert_redirected_to '/s/flappy'
+    assert_redirected_to '/courses/flappy/units/1'
   end
 
   test "login to section with a course redirects to course" do
@@ -171,6 +171,20 @@ class SectionsControllerTest < ActionController::TestCase
     assert_redirected_to "/courses/#{@section_with_course.unit_group.name}"
   end
 
+  test "login to section with a modular script redirects to modular course" do
+    modular_course = create(:single_unit_course, unit: @script_in_course)
+    section_with_modular_script = create(:section, user: @teacher, login_type: 'word', course_id: modular_course.id, script_id: @script_in_course.id)
+    section_with_modular_script_user_1 = create(:follower, section: section_with_modular_script).student_user
+
+    post :log_in, params: {
+      id: section_with_modular_script.code,
+      user_id: section_with_modular_script_user_1.id,
+      secret_words: section_with_modular_script_user_1.secret_words
+    }
+
+    assert_redirected_to "/courses/#{modular_course.name}/units/1"
+  end
+
   test "login with show_pairing_dialog shows pairing dialog" do
     post :log_in, params: {
       id: @flappy_section.code,
@@ -179,7 +193,7 @@ class SectionsControllerTest < ActionController::TestCase
       show_pairing_dialog: '1'
     }
 
-    assert_redirected_to '/s/flappy'
+    assert_redirected_to '/courses/flappy/units/1'
 
     assert session[:show_pairing_dialog]
   end
@@ -191,7 +205,7 @@ class SectionsControllerTest < ActionController::TestCase
       secret_words: @flappy_user_1.secret_words
     }
 
-    assert_redirected_to '/s/flappy'
+    assert_redirected_to '/courses/flappy/units/1'
 
     refute session[:show_pairing_dialog]
   end
@@ -214,7 +228,7 @@ class SectionsControllerTest < ActionController::TestCase
   test_user_gets_response_for :new, params: {loginType: 'picture', participantType: 'student'}, user: :admin, response: :success
 
   test "new redirects to home if loginType and participantType are not present" do
-    user = create :admin
+    user = create(:admin)
     sign_in user
 
     get :new
@@ -239,7 +253,7 @@ class SectionsControllerTest < ActionController::TestCase
 
   test 'returns forbidden if requested edit section does not belong to teacher' do
     sign_in @teacher
-    other_teacher_section = create :section
+    other_teacher_section = create(:section)
     get :edit, params: {id: other_teacher_section.id}
     assert_response :forbidden
   end
@@ -262,7 +276,7 @@ class SectionsControllerTest < ActionController::TestCase
     section_owner = create(:teacher)
 
     coteacher_section = create(:section, user: section_owner, login_type: 'picture')
-    create :section_instructor, section: coteacher_section, instructor: @teacher, status: :active
+    create(:section_instructor, section: coteacher_section, instructor: @teacher, status: :active)
 
     post :archive_all
 
@@ -287,13 +301,13 @@ class SectionsControllerTest < ActionController::TestCase
   end
 
   describe '#retrieve_lessons_for_dropdown' do
-    let(:teacher) {create :teacher}
-    let(:unit_group) {create :unit_group, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable}
-    let(:unit) {create :unit, :with_levels}
+    let(:teacher) {create(:teacher)}
+    let(:unit_group) {create(:unit_group, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)}
+    let(:unit) {create(:unit, :with_levels)}
     let(:unit_position) {1}
-    let!(:unit_group_unit) {create :unit_group_unit, unit_group: unit_group, script: unit, position: unit_position}
+    let!(:unit_group_unit) {create(:unit_group_unit, unit_group: unit_group, script: unit, position: unit_position)}
     let(:lesson) {unit.lessons.first}
-    let(:section) {create :section, user: teacher, script: unit, unit_group: unit_group, login_type: 'email'}
+    let(:section) {create(:section, user: teacher, script: unit, unit_group: unit_group, login_type: 'email')}
     let(:response) {JSON.parse(@response.body, symbolize_names: true)}
     let(:response_unit) {response.first}
     let(:response_lesson) {response.second}

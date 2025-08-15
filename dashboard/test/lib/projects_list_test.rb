@@ -2,11 +2,11 @@ require 'test_helper'
 
 class ProjectsListTest < ActionController::TestCase
   setup do
-    @student = create :student
+    @student = create(:student)
     @storage_id = fake_storage_id_for_user_id(@student.id)
     stub_storage_id_for_user_id(@student.id)
 
-    @teacher = create :teacher
+    @teacher = create(:teacher)
     stub_storage_id_for_user_id(@teacher.id)
 
     student_project_value = {

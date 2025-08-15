@@ -1,4 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
@@ -120,7 +121,7 @@ describe('SafeMarkdown', () => {
     );
   });
 
-  it('implements visualCodeBlocks', () => {
+  it('renders code normally by default', () => {
     const regularCodeBlock = shallow(
       <SafeMarkdown markdown="some markdown with a `regular` code block" />
     );
@@ -135,7 +136,9 @@ describe('SafeMarkdown', () => {
         </div>
       ).html()
     );
+  });
 
+  it('implements visualCodeBlocks', () => {
     const visualCodeBlock = shallow(
       <SafeMarkdown markdown="some markdown with a `visual`(#c0ffee) code block" />
     );
@@ -152,6 +155,42 @@ describe('SafeMarkdown', () => {
               visual
             </code>{' '}
             code block
+          </p>
+        </div>
+      ).html()
+    );
+  });
+
+  it('wraps code blocks with react components based on `rehypeMap`', () => {
+    // A wrapper for `code` elements - replace code with wrapper then wrap code and contents.
+    const CodeWrapper = ({children}) => (
+      <div className="code-wrapper">
+        <code>{children}</code>
+      </div>
+    );
+    CodeWrapper.propTypes = {
+      children: PropTypes.node,
+    };
+
+    const rehypeMap = {code: CodeWrapper};
+
+    const wrappedCodeBlock = shallow(
+      <SafeMarkdown
+        rehypeMap={rehypeMap}
+        markdown="some markdown with a `code` block"
+      />
+    );
+
+    // Code blocks are wrapped in react components based on `rehypeMap`.
+    expect(wrappedCodeBlock.html()).toBe(
+      shallow(
+        <div>
+          <p data-isolate="true">
+            some markdown with a{' '}
+            <div className="code-wrapper">
+              <code>code</code>
+            </div>{' '}
+            block
           </p>
         </div>
       ).html()
@@ -264,6 +303,53 @@ describe('SafeMarkdown', () => {
               data-lz-url="true"
               data-localize="markdown-url"
             >
+              internal link
+            </a>
+          </p>
+        </div>
+      ).html()
+    );
+  });
+
+  it('replaces links with buttons based on `rehypeMap`', () => {
+    // A button component to replace anchor tags.
+    const Button = ({children}) => (
+      <button type="button" className="replacement">
+        {children}
+      </button>
+    );
+    Button.propTypes = {
+      children: PropTypes.node,
+    };
+
+    const rehypeMap = {a: Button};
+
+    const linkToReplace = shallow(
+      <SafeMarkdown
+        rehypeMap={rehypeMap}
+        markdown="[link to replace](example.com)"
+      />
+    );
+    expect(linkToReplace.html()).toBe(
+      shallow(
+        <div>
+          <p data-isolate="true">
+            <button type="button" className="replacement">
+              link to replace
+            </button>
+          </p>
+        </div>
+      ).html()
+    );
+
+    const internalLink = shallow(
+      <SafeMarkdown markdown="[internal link](code.org)" />
+    );
+    expect(internalLink.html()).toBe(
+      shallow(
+        <div>
+          <p data-isolate="true">
+            <a href="code.org" data-lz-url="true" data-localize="markdown-url">
               internal link
             </a>
           </p>

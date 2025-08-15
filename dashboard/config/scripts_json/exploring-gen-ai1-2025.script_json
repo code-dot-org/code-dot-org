@@ -11,15 +11,17 @@
       "include_student_lesson_plans": true,
       "is_migrated": true,
       "show_calendar": true,
+      "supported_locales": [
+        "de-DE"
+      ],
       "topic_tags": [
         "ai"
       ],
-      "version_year": "2025",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-07-21 21:24:49 UTC",
+    "serialized_at": "2025-08-12 22:06:50 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,

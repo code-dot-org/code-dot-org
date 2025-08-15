@@ -8,14 +8,14 @@
   "grade_levels": "9,10,11,12",
   "header": "self_paced",
   "image": "https://images.code.org/11c1a2c8c69615c8144ca4acd6f1f414-fabric-of-the-internet.jpg",
-  "cs_topic": "artificial_intelligence",
+  "cs_topic": "artificial_intelligence,internet",
   "school_subject": null,
   "device_compatibility": null,
   "description": "This professional learning module is designed to help you prepare to teach Code.org's Fabric of the Internet and AI unit. This is a part of the AI Foundations curriculum.",
   "professional_learning_program": null,
   "video": null,
   "published_date": "2025-05-30 05:00:00 UTC",
-  "self_paced_pl_course_offering_key": null,
+  "self_paced_pl_course_offering_key": "teaching-fabric-of-internet",
   "ai_teaching_assistant_available": false,
   "facilitator_course_permissions": [
 

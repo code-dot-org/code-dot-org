@@ -1,5 +1,6 @@
 import {DEFAULT_FOLDER_ID} from '@cdo/apps/codebridge/constants';
 import {getOpenFileIds} from '@cdo/apps/codebridge/utils';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {getActiveFileForSource} from '@cdo/apps/lab2/projects/utils';
 import {
   FileId,
@@ -7,6 +8,7 @@ import {
   MultiFileSource,
   ProjectFile,
 } from '@cdo/apps/lab2/types';
+import HttpClient from '@cdo/apps/util/HttpClient';
 
 import {
   getNextFileId,
@@ -24,20 +26,27 @@ export const createNewFileHelper = (
   source: MultiFileSource,
   fileName: string,
   folderId: FolderId = DEFAULT_FOLDER_ID,
-  contents: string = ''
+  contents: string = '',
+  url?: string
 ): MultiFileSource => {
   const fileId = getNextFileId(Object.values(source.files));
   const newSource = {...source, files: {...source.files}};
   const [, extension] = fileName.split('.');
   const defaultContents = `Add your changes to ${fileName}`;
 
-  newSource.files[fileId] = {
+  const file: ProjectFile = {
     id: fileId,
     name: fileName,
     language: extension || 'html',
-    contents: contents || defaultContents,
+    contents: url ? '' : contents || defaultContents,
     folderId,
   };
+
+  if (url) {
+    file.url = url;
+  }
+
+  newSource.files[fileId] = file;
 
   return activateFileHelper(newSource, fileId);
 };
@@ -130,6 +139,18 @@ export const deleteFileHelper = (
   const fileToBeDeleted = newSource.files[fileId];
   delete newSource.files[fileId];
 
+  if (fileToBeDeleted.url) {
+    try {
+      // We don't wait for the deletion to complete because a user's project doesn't depend on the completion of the operation.
+      // In the case of a failure, we just end up with an orphaned file in S3.
+      HttpClient.delete(fileToBeDeleted.url);
+    } catch (error) {
+      Lab2Registry.getInstance()
+        .getMetricsReporter()
+        .logError('Error deleting project asset from S3', error as Error);
+    }
+  }
+
   const newActiveFileId = getNewActiveFileId(source, fileToBeDeleted);
   if (newActiveFileId) {
     newSource.files[newActiveFileId] = {
@@ -199,7 +220,23 @@ export const deleteFolderHelper = (
     newSource.files = {...newSource.files};
     Object.values(newSource.files)
       .filter(f => files.has(f.id))
-      .forEach(f => delete newSource.files[f.id]);
+      .forEach(f => {
+        delete newSource.files[f.id];
+        if (f.url) {
+          try {
+            // We don't wait for the deletion to complete because a user's project doesn't depend on the completion of the operation.
+            // In the case of a failure, we just end up with an orphaned file in S3.
+            HttpClient.delete(f.url);
+          } catch (error) {
+            Lab2Registry.getInstance()
+              .getMetricsReporter()
+              .logError(
+                'Error deleting project asset (as part of folder deletion) from S3',
+                error as Error
+              );
+          }
+        }
+      });
     if (newSource.openFiles) {
       // Delete files from the list of open files.
       newSource.openFiles = newSource.openFiles.filter(

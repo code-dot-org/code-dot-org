@@ -2,8 +2,9 @@
 import ActionBlockCollection, {
   ActionBlockCollectionProps,
 } from '@/components/contentful/collections/actionBlockCollection/ActionBlockCollection';
+import {useInMemoryEntities} from '@contentful/experiences-sdk-react';
 import {Meta, StoryObj} from '@storybook/react';
-import {expect} from 'storybook/test';
+import {expect, within} from 'storybook/test';
 
 import ActionBlockCollectionAlphabeticalMock from './__mocks__/ActionBlockCollectionAlphabetical.json';
 import ActionBlockCollectionHiddenMock from './__mocks__/ActionBlockCollectionHidden.json';
@@ -17,6 +18,53 @@ const meta: Meta<ActionBlockCollectionProps> = {
 export default meta;
 
 type Story = StoryObj<ActionBlockCollectionProps>;
+const inMemoryEntities = useInMemoryEntities();
+
+inMemoryEntities.addEntities([
+  {
+    metadata: {
+      tags: [],
+      concepts: [],
+    },
+    sys: {
+      space: {
+        sys: {
+          type: 'Link',
+          linkType: 'Space',
+          id: '90t6bu6vlf76',
+        },
+      },
+      id: '49SifjEqSHArcx1iEiSw4o',
+      type: 'Entry',
+      createdAt: '2025-04-28T17:15:38.150Z',
+      updatedAt: '2025-07-02T20:12:46.258Z',
+      environment: {
+        sys: {
+          id: 'development',
+          type: 'Link',
+          linkType: 'Environment',
+        },
+      },
+      publishedVersion: 197,
+      revision: 2,
+      contentType: {
+        sys: {
+          type: 'Link',
+          linkType: 'ContentType',
+          id: 'link',
+        },
+      },
+      locale: 'en-US',
+    },
+    fields: {
+      linkName: '❌ [ENG] Secondary button test',
+      label: 'Secondary button test',
+      primaryTarget: '/ping',
+      isThisAnExternalLink: false,
+      ariaLabel: 'Secondary button test',
+    },
+  },
+]);
 
 export const SortedAlphabetically: Story = {
   args: ActionBlockCollectionAlphabeticalMock as any,
@@ -32,6 +80,18 @@ export const SortedAlphabetically: Story = {
     ];
     titles.forEach(title => {
       expect(canvas.getByText(title)).toBeInTheDocument();
+
+      // Self-Paced has secondary buttons
+      if (title.includes('Self-Paced')) {
+        const titleElement = canvas.getByText(title);
+        const parentDiv = titleElement.closest('div')?.parentElement;
+        expect(
+          parentDiv &&
+            within(parentDiv).getByRole('link', {
+              name: 'Secondary button test',
+            }),
+        ).toBeInTheDocument();
+      }
     });
     // Check that anchor links (buttons) are present
     const links = canvas.getAllByRole('link');

@@ -13,7 +13,7 @@
   teacher_dashboard_data[:hasSeenStandardsReportInfo] = @current_user.has_seen_standards_report_info_dialog || false
   teacher_dashboard_data[:userName] = @current_user.short_name
   teacher_dashboard_data[:localeCode] = request.locale
-  teacher_dashboard_data[:canViewStudentAIChatMessages] = @current_user.can_view_student_ai_chat_messages?
+  teacher_dashboard_data[:canEnableAITutor] = @current_user.can_enable_ai_tutor?
   teacher_dashboard_data[:providers] = @current_user.providers
 
 = render partial: 'shared/emulate_print_media'

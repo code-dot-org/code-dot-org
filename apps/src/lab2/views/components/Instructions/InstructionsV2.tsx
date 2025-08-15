@@ -46,6 +46,8 @@ export interface InstructionsProps {
   /** If the lab requires the user to click run in order to continue.
    * Only applies to non-validated levels. */
   requireRun?: boolean;
+  /** If the navigation area should be hidden. */
+  hideNavigation?: boolean;
 }
 
 interface ValidationSettings {
@@ -73,6 +75,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
   fixedDarkBackground,
   AiTutor2ResponseView,
   overrideTheme,
+  hideNavigation = false,
   ...feedbackProps
 }) => {
   const validationResults = useAppSelector(
@@ -168,11 +171,13 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
             <PredictQuestionRunPrompt />
           </>
         )}
-        <NavigationArea
-          {...feedbackProps}
-          levelProperties={levelProperties}
-          handleInstructionsTextClick={handleInstructionsTextClick}
-        />
+        {!hideNavigation && (
+          <NavigationArea
+            {...feedbackProps}
+            levelProperties={levelProperties}
+            handleInstructionsTextClick={handleInstructionsTextClick}
+          />
+        )}
       </div>
     </div>
   );
