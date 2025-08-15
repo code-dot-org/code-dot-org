@@ -45,6 +45,7 @@ export const ProjectBlockedUI: React.FunctionComponent<{
               )}`,
             }),
             edit_project: i18n.editProject(),
+            view_project: i18n.viewProject(),
             go_to_code_studio: i18n.goToCodeStudio(),
           }
         : {
@@ -55,6 +56,7 @@ export const ProjectBlockedUI: React.FunctionComponent<{
               url: 'https://support.code.org/hc/en-us/requests/new',
             }),
             edit_project: i18n.editProject(),
+            view_project: i18n.viewProject(),
             go_to_code_studio: i18n.goToCodeStudio(),
           },
   };
