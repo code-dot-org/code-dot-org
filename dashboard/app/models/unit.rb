@@ -36,7 +36,7 @@ require 'cdo/shared_constants'
 require 'cdo/shared_constants/curriculum/shared_course_constants'
 require 'ruby-progressbar'
 
-# A sequence of Levels
+# A sequence of Lessons
 class Unit < ApplicationRecord
   self.table_name = 'scripts'
 
