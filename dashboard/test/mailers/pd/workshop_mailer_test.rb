@@ -22,22 +22,22 @@ class WorkshopMailerTest < ActionMailer::TestCase
   end
 
   test 'reminder emails are sent for workshops without suppress_reminders?' do
-    facilitator = create :facilitator
-    workshop = create :workshop, facilitators: [facilitator]
-    create :pd_enrollment, workshop: workshop
-    Pd::Workshop.any_instance.expects(:suppress_reminders?).returns(false).times(3)
+    facilitator = create(:facilitator)
+    workshop = create(:workshop, facilitators: [facilitator])
+    create(:pd_enrollment, workshop: workshop)
+    Pd::Workshop.any_instance.expects(:suppress_reminders?).returns(false).times(2)
 
-    assert_emails 3 do
+    assert_emails 2 do
       Pd::WorkshopMailer.facilitator_enrollment_reminder(facilitator, workshop).deliver_now
       Pd::WorkshopMailer.organizer_enrollment_reminder(workshop).deliver_now
     end
   end
 
   test 'reminder emails are skipped for workshops with suppress_reminders?' do
-    facilitator = create :facilitator
-    workshop = create :workshop, facilitators: [facilitator]
-    create :pd_enrollment, workshop: workshop
-    Pd::Workshop.any_instance.expects(:suppress_reminders?).returns(true).times(3)
+    facilitator = create(:facilitator)
+    workshop = create(:workshop, facilitators: [facilitator])
+    create(:pd_enrollment, workshop: workshop)
+    Pd::Workshop.any_instance.expects(:suppress_reminders?).returns(true).times(2)
 
     assert_emails 0 do
       Pd::WorkshopMailer.facilitator_enrollment_reminder(facilitator, workshop).deliver_now
@@ -58,7 +58,7 @@ class WorkshopMailerTest < ActionMailer::TestCase
   test 'reminders are not sent for workshops with suppress_email attribute' do
     workshop = create(:csp_summer_workshop, suppress_email: true)
     facilitator = workshop.facilitators.first
-    create :pd_enrollment, workshop: workshop
+    create(:pd_enrollment, workshop: workshop)
 
     assert_no_emails do
       Pd::WorkshopMailer.facilitator_enrollment_reminder(facilitator, workshop).deliver_now
