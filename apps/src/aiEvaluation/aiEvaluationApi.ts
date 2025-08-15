@@ -133,9 +133,6 @@ export async function summarizeEvaluations(
 }
 
 const EVALUATE_URL = '/openai/evaluate';
-// TODO: We'll need to write code to handle this end point
-// which will return a skill-based evaluation.
-const EVALUATE_SKILL_URL = '/openai/evaluate_skill';
 
 type ValueOf<T> = T[keyof T];
 type EvaluationType = ValueOf<typeof AiEvaluationTypes>;
@@ -144,7 +141,7 @@ export async function evaluationFromOpenAI(
   studentWork?: string | Record<string, string>,
   levelId?: number,
   evaluationType?: EvaluationType,
-  evaluateSkill?: boolean
+  shouldEvaluateSkills?: boolean
 ): Promise<OpenaiChatCompletionMessage | null> {
   const payload = {
     studentWork:
@@ -155,13 +152,17 @@ export async function evaluationFromOpenAI(
             .join('\n\n'),
     levelId: levelId,
     evaluationType: evaluationType,
+    shouldEvaluateSkills: shouldEvaluateSkills,
   };
 
-  const url = evaluateSkill ? EVALUATE_SKILL_URL : EVALUATE_URL;
-
-  const response = await HttpClient.post(url, JSON.stringify(payload), true, {
-    'Content-Type': 'application/json; charset=UTF-8',
-  });
+  const response = await HttpClient.post(
+    EVALUATE_URL,
+    JSON.stringify(payload),
+    true,
+    {
+      'Content-Type': 'application/json; charset=UTF-8',
+    }
+  );
   if (response.ok) {
     return await response.json();
   } else {
