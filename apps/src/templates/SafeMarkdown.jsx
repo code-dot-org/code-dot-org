@@ -15,6 +15,8 @@ import rehypeSanitize from 'rehype-sanitize';
 import remarkRehype from 'remark-rehype';
 import unified from 'unified';
 
+import {WeakMapPlus} from '../util/dataStructures/WeakMapPlus';
+
 import externalLinks from './plugins/externalLinks';
 
 /**
@@ -34,10 +36,8 @@ class SafeMarkdown extends React.Component {
      * swap for elements with that tagName.
      * see: https://github.com/marekweb/rehype-components/blob/main/readme.md#rehype-components
      *
-     * Note: Our implementation can cache the processor for each rehypeMap for better performance
-     * but it is the consumer's responsibility to create the rehypeMap outside of the component
-     * function (or render method in class based components) or to define the mapping in an ES
-     * module and import it, if used in multiple components. See `markdownProcessorCache` below.
+     * Note: It is the consumer's responsibility to define a reusable rehypeMap whenever the
+     * component will be rendered multiple times. See `markdownProcessorCache` below.
      *
      * Note: If we upgrade to prop-types >= 15.7.0 we should use `PropTypes.elementType`
      * which looks for a react component function or class rather than any function/class.
@@ -147,37 +147,23 @@ const localizationComponentWrappers = {
 };
 
 /*
- * WeakMap compatiple key to swap for `undefined`.  Currently uses an object
- * but could use a symbol if our minimum supported browsers implement the spec
- * or if our transpilers (babel/tsc) can add a polyfill implementation .
- * See: https://github.com/tc39/ecma262/pull/2777
+ * Map to cache markdown processors based on the rehypeMap as key. Use `WeakMapPlus` as normal
+ * WeakMap does not support `undefined` as a key.
  **/
-const undefinedRehypeMap = {};
-
-/*
- * Get a cache key that works with cache's WeakMap implementation.  I.e. if
- * key (rehypeMap) is undefined, we'll use `undefinedRehypeMap` as the key
- * which is an object (non-primative) and thus allowed as WeakMap key.
- **/
-const getCacheKey = rehypeMap => (rehypeMap ? rehypeMap : undefinedRehypeMap);
-
-/* Map to cache markdown processors based on the rehypeMap as key. */
-const markdownProcessorCache = new WeakMap();
+const markdownProcessorCache = new WeakMapPlus();
 
 /*
  * Create a markdown to react processor cached based on the value of rehypeMap. This ensures
  * multiple `SafeMarkdown` components and instances will reuse the same processor when the
  * rehypeMap is the same. Caching is based on the identity of the `rehypeMap` object not the
- * contents within it (e.g. two different rehypeMap objects with the same tagName/reacComponent
+ * contents within it (e.g. two different rehypeMap objects with the same tagName/reactComponent
  * mapping will result in two different processors). It is the consumer's responsibility to
  * create the rehypeMap outside of the component function (or render method in class based
  * components) or to define the mapping in an ES module and import it if used in multiple
  * components.
- *
  */
 const markdownToReact = rehypeMap => {
-  const rehypeMapCacheKey = getCacheKey(rehypeMap);
-  if (!markdownProcessorCache.has(rehypeMapCacheKey)) {
+  if (!markdownProcessorCache.has(rehypeMap)) {
     const processor = unified()
       .use(Processor.getParser())
       // include custom plugins
@@ -208,30 +194,29 @@ const markdownToReact = rehypeMap => {
           ...rehypeMap,
         },
       });
-    markdownProcessorCache.set(rehypeMapCacheKey, processor);
+    markdownProcessorCache.set(rehypeMap, processor);
   }
-  return markdownProcessorCache.get(rehypeMapCacheKey);
+  return markdownProcessorCache.get(rehypeMap);
 };
 
 /* Map to cache markdown to react processors w/ externalLinks plugin. */
-const markdownProcessorExternalLinksCache = new WeakMap();
+const markdownProcessorExternalLinksCache = new WeakMapPlus();
 
 /*
  * Create a markdown to react processor that adds the externalLinks plugin
  * and that is cached based on the value of rehypeMap.
  */
 const markdownToReactExternalLinks = rehypeMap => {
-  const rehypeMapCacheKey = getCacheKey(rehypeMap);
-  if (!markdownProcessorExternalLinksCache.has(rehypeMapCacheKey)) {
+  if (!markdownProcessorExternalLinksCache.has(rehypeMap)) {
     // We use `()` to get a new unfrozen "copy" of the processor created
-    // (or returned from cache) by `markdownToReact(rehypeMapCacheKey)`.
+    // (or returned from cache) by `markdownToReact(rehypeMap)`.
     // See: https://github.com/unifiedjs/unified?tab=readme-ov-file#processor
-    const processor = markdownToReact(rehypeMapCacheKey)().use(externalLinks, {
+    const processor = markdownToReact(rehypeMap)().use(externalLinks, {
       links: 'all',
     });
-    markdownProcessorExternalLinksCache.set(rehypeMapCacheKey, processor);
+    markdownProcessorExternalLinksCache.set(rehypeMap, processor);
   }
-  return markdownProcessorExternalLinksCache.get(rehypeMapCacheKey);
+  return markdownProcessorExternalLinksCache.get(rehypeMap);
 };
 
 export default SafeMarkdown;
