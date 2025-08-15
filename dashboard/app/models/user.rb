@@ -1705,7 +1705,7 @@ class User < ApplicationRecord
         user_level.locale_supported = script.supported_locale?(locale)
       end
 
-      if unit_group
+      if unit_group && user_level.new_record?
         user_level.unit_group_id = unit_group.id
       end
 

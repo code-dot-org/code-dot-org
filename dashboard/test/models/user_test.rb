@@ -931,6 +931,7 @@ class UserTest < ActiveSupport::TestCase
     user = create(:user)
     partner = create(:user)
     script = create(:single_unit_course).first_unit
+    unit_group = UnitGroupUnit.where(script_id: script.id).last.unit_group
     sub_level_name = 'sublevel1'
 
     sub_level1 = create(:text_match, name: sub_level_name)
@@ -946,7 +947,8 @@ class UserTest < ActiveSupport::TestCase
       script: script,
       attempts: 1,
       best_result: Activity::MINIMUM_PASS_RESULT,
-      updated_at: Time.now - 1
+      updated_at: Time.now - 1,
+      unit_group_id: unit_group.id,
     )
 
     UserLevel.create(
@@ -955,10 +957,11 @@ class UserTest < ActiveSupport::TestCase
       script: script,
       attempts: 1,
       best_result: Activity::MINIMUM_PASS_RESULT,
-      updated_at: Time.now
+      updated_at: Time.now,
+      unit_group_id: unit_group.id,
     )
 
-    track_progress(user.id, script_level, 100, pairings: [partner.id])
+    track_progress(user.id, script_level, 100, unit_group, pairings: [partner.id])
 
     user_level = UserLevel.find_by(user: user, script: script_level.script, level: script_level.level)
     assert_equal 100, user_level.best_result
@@ -972,8 +975,9 @@ class UserTest < ActiveSupport::TestCase
     level = create(:level, :with_script)
     script_level = level.script_levels.first
     script = script_level.script
+    unit_group = create(:unit_group, :with_unit, unit: script_level.script)
 
-    track_progress(user.id, script_level, 100, pairings: [partner.id])
+    track_progress(user.id, script_level, 100, unit_group, pairings: [partner.id])
 
     user_level = UserLevel.find_by(user: user, script: script, level: level)
     assert_equal 100, user_level.best_result
@@ -1277,7 +1281,7 @@ class UserTest < ActiveSupport::TestCase
     assert student.reload.encrypted_password != old_password
   end
 
-  def complete_script_for_user(user, script, completed_date = Time.now)
+  def complete_script_for_user(user, script, unit_group, completed_date = Time.now)
     # complete all except last level a day earlier
     script.script_levels[0..-2].each do |sl|
       UserLevel.create!(
@@ -1286,7 +1290,8 @@ class UserTest < ActiveSupport::TestCase
         script: script,
         best_result: 100,
         created_at: completed_date - 1.day,
-        updated_at: completed_date - 1.day
+        updated_at: completed_date - 1.day,
+        unit_group_id: unit_group.id
       )
     end
 
@@ -1298,7 +1303,8 @@ class UserTest < ActiveSupport::TestCase
       script: script,
       best_result: 100,
       created_at: completed_date,
-      updated_at: completed_date
+      updated_at: completed_date,
+      unit_group_id: unit_group.id
     )
   end
 
@@ -2051,11 +2057,7 @@ class UserTest < ActiveSupport::TestCase
     assert user_proficiency.basic_proficiency_at.nil?
   end
 
-  def track_progress(user_id, script_level, result, pairings: nil, unit_group: nil)
-    unless unit_group
-      unit_group = create(:unit_group)
-      create(:unit_group_unit, unit_group: unit_group, script: script_level.script, position: 1)
-    end
+  def track_progress(user_id, script_level, result, unit_group, pairings: nil)
     User.track_level_progress(
       user_id: user_id,
       level_id: script_level.level_id,
@@ -2070,39 +2072,48 @@ class UserTest < ActiveSupport::TestCase
 
   test 'track_level_progress calls track_proficiency if new perfect csf score' do
     user = create(:user)
+    unit_group = create(:unit_group, :with_unit, unit: @csf_script_level.script)
     User.expects(:track_proficiency).once
-    track_progress(user.id, @csf_script_level, 100)
+    track_progress(user.id, @csf_script_level, 100, unit_group)
   end
 
   test 'track_level_progress does not call track_proficiency if new perfect non-csf score' do
     user = create(:user)
     non_csf_script_level = create(:script_level)
+    unit_group = create(:unit_group, :with_unit, unit: non_csf_script_level.script)
 
     User.expects(:track_proficiency).never
-    track_progress(user.id, non_csf_script_level, 100)
+    track_progress(user.id, non_csf_script_level, 100, unit_group)
   end
 
   test 'track_level_progress does not call track_proficiency if old perfect score' do
     user = create(:user)
+    unit_group = create(:unit_group, :with_unit, unit: @csf_script_level.script)
+
     create(:user_level,
       user_id: user.id,
       script_id: @csf_script_level.script_id,
       level_id: @csf_script_level.level_id,
-      best_result: 100
+      best_result: 100,
+      unit_group_id: unit_group.id
 )
 
     User.expects(:track_proficiency).never
-    track_progress(user.id, @csf_script_level, 100)
+    track_progress(user.id, @csf_script_level, 100, unit_group)
   end
 
   test 'track_level_progress does not call track_proficiency if new passing csf score' do
     user = create(:user)
+    unit_group = create(:unit_group, :with_unit, unit: @csf_script_level.script)
+
     User.expects(:track_proficiency).never
-    track_progress(user.id, @csf_script_level, 25)
+    track_progress(user.id, @csf_script_level, 25, unit_group)
   end
 
   test 'track_level_progress does not call track_proficiency if hint used' do
     user = create(:user)
+    unit_group = create(:unit_group, :with_unit, unit: @csf_script_level.script)
+
     create(
       :hint_view_request,
       user_id: user.id,
@@ -2111,11 +2122,13 @@ class UserTest < ActiveSupport::TestCase
     )
 
     User.expects(:track_proficiency).never
-    track_progress(user.id, @csf_script_level, 100)
+    track_progress(user.id, @csf_script_level, 100, unit_group)
   end
 
   test 'track_level_progress does not call track_proficiency if authored hint used' do
     user = create(:user)
+    unit_group = create(:unit_group, :with_unit, unit: @csf_script_level.script)
+
     AuthoredHintViewRequest.create(
       user_id: user.id,
       level_id: @csf_script_level.level_id,
@@ -2123,55 +2136,61 @@ class UserTest < ActiveSupport::TestCase
     )
 
     User.expects(:track_proficiency).never
-    track_progress(user.id, @csf_script_level, 100)
+    track_progress(user.id, @csf_script_level, 100, unit_group)
   end
 
   test 'track_level_progress does not call track_proficiency when pairing' do
     user = create(:user)
+    unit_group = create(:unit_group, :with_unit, unit: @csf_script_level.script)
 
     User.expects(:track_proficiency).never
-    track_progress(user.id, @csf_script_level, 100, pairings: [create(:user).id])
+    track_progress(user.id, @csf_script_level, 100, unit_group, pairings: [create(:user).id])
   end
 
   test 'track_level_progress does call track_profiency when manual_pass to perfect' do
     user = create(:user)
+    unit_group = create(:unit_group, :with_unit, unit: @csf_script_level.script)
 
     UserLevel.create!(
       user: user,
       level: @csf_script_level.level,
       script: @csf_script_level.script,
-      best_result: ActivityConstants::MANUAL_PASS_RESULT
+      best_result: ActivityConstants::MANUAL_PASS_RESULT,
+      unit_group_id: unit_group.id
     )
 
     User.expects(:track_proficiency).once
-    track_progress(user.id, @csf_script_level, 100)
+    track_progress(user.id, @csf_script_level, 100, unit_group)
   end
 
   test 'track_level_progress stops incrementing attempts for perfect results' do
     user = create(:user)
     level = create(:level, :with_script)
     script_level = level.script_levels.first
+    unit_group = create(:unit_group, :with_unit, unit: script_level.script)
+
     ul = UserLevel.create!(
       user: user,
       level: level,
       script: script_level.script,
-      best_result: ActivityConstants::MINIMUM_FINISHED_RESULT
+      best_result: ActivityConstants::MINIMUM_FINISHED_RESULT,
+      unit_group_id: unit_group.id
     )
 
-    track_progress(user.id, script_level, 10)
-    track_progress(user.id, script_level, 20)
-    track_progress(user.id, script_level, 30)
+    track_progress(user.id, script_level, 10, unit_group)
+    track_progress(user.id, script_level, 20, unit_group)
+    track_progress(user.id, script_level, 30, unit_group)
 
     assert_equal 3, ul.reload.attempts
 
-    track_progress(user.id, script_level, 31)
+    track_progress(user.id, script_level, 31, unit_group)
 
     assert_equal 4, ul.reload.attempts
 
-    track_progress(user.id, script_level, 31)
-    track_progress(user.id, script_level, 31)
-    track_progress(user.id, script_level, 100)
-    track_progress(user.id, script_level, 101)
+    track_progress(user.id, script_level, 31, unit_group)
+    track_progress(user.id, script_level, 31, unit_group)
+    track_progress(user.id, script_level, 100, unit_group)
+    track_progress(user.id, script_level, 101, unit_group)
 
     assert_equal 4, ul.reload.attempts
   end
@@ -2181,8 +2200,7 @@ class UserTest < ActiveSupport::TestCase
     student = create(:student)
     level_source = create(:level_source, data: 'sample answer')
 
-    unit_group = create(:unit_group)
-    create(:unit_group_unit, unit_group: unit_group, script: script_level.script, position: 1)
+    unit_group = create(:unit_group, :with_unit, unit: script_level.script)
     User.track_level_progress(
       user_id: student.id,
       level_id: script_level.level_id,
@@ -2226,8 +2244,7 @@ class UserTest < ActiveSupport::TestCase
       level_source_id: level_source.id
     )
 
-    unit_group = create(:unit_group)
-    create(:unit_group_unit, unit_group: unit_group, script: script_level.script, position: 1)
+    unit_group = create(:unit_group, :with_unit, unit: script_level.script)
     User.track_level_progress(
       user_id: user.id,
       script_id: script_level.script_id,
@@ -2259,8 +2276,7 @@ class UserTest < ActiveSupport::TestCase
       submitted: false,
     }
 
-    unit_group = create(:unit_group)
-    create(:unit_group_unit, unit_group: unit_group, script: @csf_script_level.script, position: 1)
+    unit_group = create(:unit_group, :with_unit, unit: @csf_script_level.script)
     User.track_level_progress(**level_progress_params, unit_group: unit_group)
     refute_nil user_level = UserLevel.find_by(user_level_params)
     assert_nil user_level.locale
@@ -2279,9 +2295,8 @@ class UserTest < ActiveSupport::TestCase
 
   test 'track_level_progress stores unit_group_id when unit_group is provided' do
     user = create(:user)
-    unit_group = create(:unit_group)
     script_level = create(:script_level)
-    create(:unit_group_unit, unit_group: unit_group, script: script_level.script, position: 1)
+    unit_group = create(:unit_group, :with_unit, unit: script_level.script)
 
     User.track_level_progress(
       user_id: user.id,
@@ -2300,6 +2315,55 @@ class UserTest < ActiveSupport::TestCase
     )
 
     assert_equal unit_group.id, user_level.unit_group_id
+  end
+
+  test 'track_level_progress sets unit_group_id only on new records and does not change it on subsequent progress' do
+    user = create(:user)
+    script_level = create(:script_level)
+
+    # Create first unit_group and track initial progress
+    unit_group1 = create(:unit_group)
+    create(:unit_group_unit, unit_group: unit_group1, script: script_level.script, position: 1)
+
+    User.track_level_progress(
+      user_id: user.id,
+      level_id: script_level.level_id,
+      script_id: script_level.script_id,
+      new_result: 50,
+      submitted: false,
+      level_source_id: nil,
+      unit_group: unit_group1
+    )
+
+    user_level = UserLevel.find_by(
+      user_id: user.id,
+      level_id: script_level.level_id,
+      script_id: script_level.script_id
+    )
+
+    # Verify unit_group_id is set on initial progress
+    assert_equal unit_group1.id, user_level.unit_group_id
+
+    # Create second unit_group and track progress again for same script/level
+    unit_group2 = create(:unit_group)
+    create(:unit_group_unit, unit_group: unit_group2, script: script_level.script, position: 1)
+
+    User.track_level_progress(
+      user_id: user.id,
+      level_id: script_level.level_id,
+      script_id: script_level.script_id,
+      new_result: 100,
+      submitted: false,
+      level_source_id: nil,
+      unit_group: unit_group2
+    )
+
+    user_level.reload
+
+    # Verify unit_group_id did NOT change even though different unit_group was provided
+    assert_equal unit_group1.id, user_level.unit_group_id
+    # Verify progress was still tracked (result updated)
+    assert_equal 100, user_level.best_result
   end
 
   test 'student and teacher relationships' do
@@ -2718,7 +2782,6 @@ class UserTest < ActiveSupport::TestCase
       user_script = @student.assign_script(@csf_script)
       assert_equal @csf_script.id, user_script.script_id
       refute_nil user_script.assigned_at
-      assert_equal Unit.first.unit_group&.id, user_script.unit_group_id
     end
   end
 
@@ -2730,7 +2793,6 @@ class UserTest < ActiveSupport::TestCase
       user_script = @student.assign_script(@csf_script)
       assert_equal @csf_script.id, user_script.script_id
       refute_nil user_script.assigned_at
-      assert_equal Unit.first.unit_group&.id, user_script.unit_group_id
     end
   end
 
@@ -2744,7 +2806,6 @@ class UserTest < ActiveSupport::TestCase
         user_script = @student.assign_script(@csf_script)
         assert_equal @csf_script.id, user_script.script_id
         assert_equal '2018-03-04 12:00:00 UTC', user_script.assigned_at.to_s
-        assert_equal Unit.first.unit_group&.id, user_script.unit_group_id
       end
     end
   end
@@ -3148,6 +3209,7 @@ class UserTest < ActiveSupport::TestCase
       student = create(:student)
       teacher = create(:teacher)
       script = create(:script, :in_single_unit_course, :with_levels, lessons_count: 3, levels_count: 1)
+      unit_group = create(:unit_group, :with_unit, unit: script)
 
       # User completed the first lesson
       script.lessons[0].script_levels.each do |sl|
@@ -3156,7 +3218,8 @@ class UserTest < ActiveSupport::TestCase
           level: sl.level,
           script: script,
           attempts: 1,
-          best_result: Activity::MINIMUM_PASS_RESULT
+          best_result: Activity::MINIMUM_PASS_RESULT,
+          unit_group_id: unit_group.id
         )
       end
 
@@ -3174,6 +3237,7 @@ class UserTest < ActiveSupport::TestCase
       student = create(:student)
       teacher = create(:teacher)
       script = create(:script, :in_single_unit_course, :with_levels, lessons_count: 3, levels_count: 1)
+      unit_group = create(:unit_group, :with_unit, unit: script)
 
       refute_empty student.visible_script_levels(script)
 
@@ -3182,7 +3246,8 @@ class UserTest < ActiveSupport::TestCase
         level: script.script_levels.last.level,
         script: script,
         attempts: 1,
-        best_result: Activity::MINIMUM_PASS_RESULT
+        best_result: Activity::MINIMUM_PASS_RESULT,
+        unit_group_id: unit_group.id
       )
 
       # Hide the first lesson
