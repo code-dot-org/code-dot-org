@@ -2,7 +2,6 @@ require 'test_helper'
 require 'contentful'
 
 class NotificationsControllerTest < ActionController::TestCase
-  include Minitest::RSpecMocks
   include Devise::Test::ControllerHelpers
 
   NOTIFICATION_CONTENTFUL_CONTENT_TYPE = 'dashboard-notification'
