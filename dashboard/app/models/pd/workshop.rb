@@ -1001,7 +1001,7 @@ class Pd::Workshop < ApplicationRecord
         vars: {
           email_to: email,
           name: user.given_name || user.name,
-          cancel_registration_link: CDO.studio_url("pd/workshop_enrollment/#{enrollment.code}/cancel"),
+          cancel_registration_link: CDO.studio_url("pd/workshop_enrollment/#{enrollment.code}/cancel", CDO.default_scheme),
           pre_survey_link: enrollment.pre_workshop_survey_url,
           facilitator_name: workshop.facilitators&.map(&:name)&.join(', '),
           rp_email: regional_partner&.contact_email_with_backup,
