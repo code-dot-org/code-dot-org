@@ -25,6 +25,7 @@ export const FileBrowserHeaderPopUpButton = () => {
     levelProperties,
   } = useCodebridgeContext();
   const {appName, validationFile} = levelProperties;
+  const isBlockedAbuse = useAppSelector(state => state.lab.isBlockedAbuse);
   const openNewFilePromptArgs = {
     folderId: DEFAULT_FOLDER_ID,
     ...(appName === 'pythonlab' && {
@@ -47,6 +48,7 @@ export const FileBrowserHeaderPopUpButton = () => {
       ...(appName === 'pythonlab' && {
         validFileTypes: PYTHONLAB_VALID_FILE_TYPES,
       }),
+      isBlockedAbuse,
     },
     DEFAULT_FOLDER_ID
   );

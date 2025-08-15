@@ -1,6 +1,7 @@
-import React, {useCallback, useMemo, useRef} from 'react';
+import React, {useCallback, useMemo, useRef, useState} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
+import UploadsDisabledModal from '@cdo/apps/sharedComponents/UploadsDisabledModal';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {createUuid} from '@cdo/apps/utils';
 
@@ -28,6 +29,7 @@ export type FileUploaderProps = {
     payload: Record<string, string>
   ) => void;
   appName?: string;
+  isBlockedAbuse?: boolean;
   onImageFlagged?: (
     file: File,
     fileType: string,
@@ -104,9 +106,11 @@ export const useFileUploader = ({
   multiple = true,
   appName,
   onImageFlagged,
+  isBlockedAbuse,
 }: FileUploaderProps) => {
   const inputRef = useRef<HTMLInputElement>(null);
   const callbackArgs = useRef<unknown>();
+  const [showBlockedModal, setShowBlockedModal] = useState(false);
 
   const changeHandler = useCallback(() => {
     const handleError = (error: Error) => {
@@ -234,23 +238,37 @@ export const useFileUploader = ({
     onImageFlagged,
   ]);
 
+  const BlockedModal = useCallback(() => {
+    return showBlockedModal ? (
+      <UploadsDisabledModal onClose={() => setShowBlockedModal(false)} />
+    ) : null;
+  }, [showBlockedModal]);
+
   return useMemo(
     () => ({
       startFileUpload: (newCallbackArgs?: unknown) => {
         callbackArgs.current = newCallbackArgs;
 
+        if (isBlockedAbuse) {
+          setShowBlockedModal(true);
+          return;
+        }
+
         inputRef.current?.click();
       },
       FileUploaderComponent: () => (
-        <input
-          type="file"
-          style={{display: 'none'}}
-          onChange={changeHandler}
-          ref={inputRef}
-          multiple={multiple}
-        />
+        <>
+          <input
+            type="file"
+            style={{display: 'none'}}
+            onChange={changeHandler}
+            ref={inputRef}
+            multiple={multiple}
+          />
+          <BlockedModal />
+        </>
       ),
     }),
-    [changeHandler, inputRef, multiple]
+    [changeHandler, inputRef, multiple, isBlockedAbuse, BlockedModal]
   );
 };
