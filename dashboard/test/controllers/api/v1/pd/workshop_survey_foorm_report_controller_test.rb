@@ -378,53 +378,54 @@ module Api::V1::Pd
       refute_empty categories[:engagement][:questions], "Engagement category should have questions"
 
       # Verify response structure for likert questions
-      likert_question = categories[:engagement][:questions].find {|q| q[:question_type] == 'likert'}
+      likert_question = categories[:engagement][:questions][:motivated_learn_cs_in_education]
       assert likert_question.key?(:question_name)
       assert likert_question.key?(:question_text)
       assert likert_question.key?(:question_type)
-      assert likert_question.key?(:responses)
-      assert likert_question[:responses][:weighted_score].is_a?(Integer)
-      assert likert_question[:responses][:agreement_percentage].is_a?(Integer)
-      assert likert_question[:responses][:total_responses].is_a?(Integer)
-      assert likert_question[:responses].key?(:breakdown)
+      assert likert_question.key?(:results)
+      assert likert_question[:results][:weighted_score].is_a?(Integer)
+      assert likert_question[:results][:agreement_count].is_a?(Integer)
+      assert likert_question[:results][:agreement_percentage].is_a?(Integer)
+      assert likert_question[:results][:total_responses].is_a?(Integer)
+      assert likert_question[:results].key?(:breakdown)
 
       # Verify response structure for promoter questions
-      promoter_question = categories[:engagement][:questions].find {|q| q[:question_type] == 'promoter'}
+      promoter_question = categories[:engagement][:questions][:nps_self_paced_pd_byow]
       assert promoter_question.key?(:question_name)
       assert promoter_question.key?(:question_text)
       assert promoter_question.key?(:question_type)
-      assert promoter_question.key?(:responses)
-      assert promoter_question[:responses][:promoter_percentage].is_a?(Integer)
-      assert promoter_question[:responses][:total_responses].is_a?(Integer)
-      assert promoter_question[:responses].key?(:breakdown)
+      assert promoter_question.key?(:results)
+      assert promoter_question[:results][:promoter_percentage].is_a?(Integer)
+      assert promoter_question[:results][:total_responses].is_a?(Integer)
+      assert promoter_question[:results].key?(:breakdown)
 
       # Verify response structure for multi select questions
-      multi_select_question = categories[:implementation][:questions].find {|q| q[:question_type] == 'multiSelect'}
+      multi_select_question = categories[:implementation][:questions][:barriers_implementation_curriculum]
       assert multi_select_question.key?(:question_name)
       assert multi_select_question.key?(:question_text)
       assert multi_select_question.key?(:question_type)
-      assert multi_select_question.key?(:responses)
-      assert multi_select_question[:responses][:total_respondents].is_a?(Integer)
-      assert multi_select_question[:responses].key?(:breakdown)
+      assert multi_select_question.key?(:results)
+      assert multi_select_question[:results][:total_respondents].is_a?(Integer)
+      assert multi_select_question[:results].key?(:breakdown)
 
-      # Verify response structure for single select questions that are not likert
-      single_select_question = categories[:implementation][:questions].find {|q| q[:question_type] == 'singleSelect' && !q[:responses].key?(:weighted_score)}
+      # Verify response structure for single select questions
+      single_select_question = categories[:implementation][:questions][:cdo_teaching_experience]
       assert single_select_question.key?(:question_name)
       assert single_select_question.key?(:question_text)
       assert single_select_question.key?(:question_type)
-      assert single_select_question.key?(:responses)
-      assert single_select_question[:responses][:total_responses].is_a?(Integer)
-      assert single_select_question[:responses].key?(:breakdown)
+      assert single_select_question.key?(:results)
+      assert single_select_question[:results][:total_responses].is_a?(Integer)
+      assert single_select_question[:results].key?(:breakdown)
 
       # Verify response structure for text questions
-      text_question = categories[:other][:questions].find {|q| q[:question_type] == 'text'}
+      text_question = categories[:other][:questions][:uncategorized_feedback]
       assert text_question.key?(:question_name)
       assert text_question.key?(:question_text)
       assert text_question.key?(:question_type)
-      assert text_question.key?(:responses)
-      assert text_question[:responses][:total_responses].is_a?(Integer)
-      assert text_question[:responses][:responses].is_a?(Array)
-      assert text_question[:responses][:responses].all?(String)
+      assert text_question.key?(:results)
+      assert text_question[:results][:total_responses].is_a?(Integer)
+      assert text_question[:results][:responses].is_a?(Array)
+      assert text_question[:results][:responses].all?(String)
     end
 
     test 'workshop survey summary returns unauthorized for unauthorized users' do
@@ -515,13 +516,15 @@ module Api::V1::Pd
       refute_empty engagement_questions, "Should have engagement questions from matrix rows"
 
       # Verify matrix row questions have proper structure
-      implementation_matrix_question = implementation_questions.find {|q| q[:responses].key?(:weighted_score)}
-      assert implementation_matrix_question[:responses].key?(:weighted_score), "Matrix questions should have weighted scores"
-      assert implementation_matrix_question[:responses].key?(:agreement_percentage), "Matrix questions should have agreement percentages"
+      implementation_matrix_question = implementation_questions[:more_prepared]
+      assert implementation_matrix_question[:results].key?(:weighted_score), "Matrix questions should have weighted scores"
+      assert implementation_matrix_question[:results].key?(:agreement_count), "Matrix questions should have agreement count"
+      assert implementation_matrix_question[:results].key?(:agreement_percentage), "Matrix questions should have agreement percentages"
 
-      engagement_matrix_question = engagement_questions.find {|q| q[:responses].key?(:weighted_score)}
-      assert engagement_matrix_question[:responses].key?(:weighted_score), "Matrix questions should have weighted scores"
-      assert engagement_matrix_question[:responses].key?(:agreement_percentage), "Matrix questions should have agreement percentages"
+      engagement_matrix_question = engagement_questions[:motivated_learn_cs_in_education]
+      assert engagement_matrix_question[:results].key?(:weighted_score), "Matrix questions should have weighted scores"
+      assert engagement_matrix_question[:results].key?(:agreement_count), "Matrix questions should have agreement count"
+      assert engagement_matrix_question[:results].key?(:agreement_percentage), "Matrix questions should have agreement percentages"
     end
 
     test 'workshop survey summary handles workshop without survey responses' do

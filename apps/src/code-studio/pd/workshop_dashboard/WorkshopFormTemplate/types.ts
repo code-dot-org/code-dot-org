@@ -340,43 +340,70 @@ export interface SurveyTypeSummary {
 }
 
 export interface SurveyCategories {
-  [key: string]:
-    | SurveyCategory
-    | Record<string, FacilitatorCategory>
-    | undefined;
+  implementation?: SurveyCategory;
+  engagement?: SurveyCategory;
+  logistics?: SurveyCategory;
+  other?: SurveyCategory;
+  facilitator?: Record<string, FacilitatorCategory>;
 }
 
 export interface SurveyCategory {
-  questions: SurveyQuestion[];
+  questions: SurveyQuestions;
 }
+
+export type SurveyQuestions = Record<string, SurveyQuestion>;
 
 export interface FacilitatorCategory {
   name: string;
-  questions: SurveyQuestion[];
+  questions: SurveyQuestions;
 }
 
-export interface SurveyQuestion {
+type SurveyQuestionBase = {
   question_name: string;
   question_text: string;
   question_short_text: string | null;
   question_sub_text: string | null;
-  question_type: string;
   category: string | null;
-  responses: SurveyQuestionResponses;
-}
+};
 
-export type SurveyQuestionResponses =
-  | LikertResponses
-  | PromoterResponses
-  | TextResponses
-  | SingleSelectResponses
-  | MultiSelectResponses;
+type ResultsBase = {
+  total_responses?: number;
+};
 
-export interface LikertResponses {
-  total_responses: number;
-  weighted_score: number;
-  agreement_percentage: number;
-  breakdown: Record<string, LikertBreakdown>;
+export type SurveyQuestion =
+  | (SurveyQuestionBase & {
+      question_type: 'likert';
+      results: ResultsBase & LikertResults;
+    })
+  | (SurveyQuestionBase & {
+      question_type: 'promoter';
+      results: ResultsBase & PromoterResults;
+    })
+  | (SurveyQuestionBase & {
+      question_type: 'text';
+      results: ResultsBase & TextResults;
+    })
+  | (SurveyQuestionBase & {
+      question_type: 'single_select';
+      results: ResultsBase & SingleSelectResults;
+    })
+  | (SurveyQuestionBase & {
+      question_type: 'multi_select';
+      results: ResultsBase & MultiSelectResults;
+    });
+
+export const isQuestionType = <T extends SurveyQuestion['question_type']>(
+  question: SurveyQuestion | undefined,
+  type: T
+): question is Extract<SurveyQuestion, {question_type: T}> => {
+  return !!question && question.question_type === type;
+};
+
+export interface LikertResults {
+  weighted_score?: number;
+  agreement_count?: number;
+  agreement_percentage?: number;
+  breakdown?: Record<string, LikertBreakdown>;
 }
 
 export interface LikertBreakdown {
@@ -386,10 +413,9 @@ export interface LikertBreakdown {
   weighted_value: number;
 }
 
-export interface PromoterResponses {
-  total_responses: number;
-  promoter_percentage: number;
-  breakdown: Record<string, PromoterBreakdown>;
+export interface PromoterResults {
+  promoter_percentage?: number;
+  breakdown?: Record<string, PromoterBreakdown>;
 }
 
 export interface PromoterBreakdown {
@@ -398,14 +424,12 @@ export interface PromoterBreakdown {
   label: string;
 }
 
-export interface TextResponses {
-  total_responses: number;
-  responses: string[];
+export interface TextResults {
+  responses?: string[];
 }
 
-export interface SingleSelectResponses {
-  total_responses: number;
-  breakdown: Record<string, SingleSelectBreakdown>;
+export interface SingleSelectResults {
+  breakdown?: Record<string, SingleSelectBreakdown>;
   other_answers?: string[];
 }
 
@@ -415,9 +439,8 @@ export interface SingleSelectBreakdown {
   label: string;
 }
 
-export interface MultiSelectResponses {
-  total_respondents: number;
-  breakdown: Record<string, MultiSelectBreakdown>;
+export interface MultiSelectResults {
+  breakdown?: Record<string, MultiSelectBreakdown>;
 }
 
 export interface MultiSelectBreakdown {
