@@ -2809,7 +2809,11 @@ class UserTest < ActiveSupport::TestCase
 
   test 'assign_script reuses UserScript if available' do
     Timecop.travel(2017, 1, 2, 12, 0, 0) do
-      UserScript.create!(user: @student, script: @csf_script)
+      UserScript.create!(
+        user: @student,
+        script: @csf_script,
+        unit_group: @csf_script.original_unit_group
+      )
     end
     assert_does_not_create(UserScript) do
       user_script = @student.assign_script(@csf_script)
@@ -2820,7 +2824,12 @@ class UserTest < ActiveSupport::TestCase
 
   test 'assign_script does overwrite assigned_at if pre-existing' do
     Timecop.travel(2017, 1, 2, 12, 0, 0) do
-      UserScript.create!(user: @student, script: @csf_script, assigned_at: DateTime.now)
+      UserScript.create!(
+        user: @student,
+        script: @csf_script,
+        unit_group: @csf_script.original_unit_group,
+        assigned_at: DateTime.now
+      )
     end
 
     Timecop.travel(2018, 3, 4, 12, 0, 0) do
