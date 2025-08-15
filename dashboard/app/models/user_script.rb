@@ -28,6 +28,7 @@ class UserScript < ApplicationRecord
 
   belongs_to :user
   belongs_to :script, class_name: 'Unit'
+  belongs_to :unit_group, optional: true
 
   serialized_attrs %w(
     version_warning_dismissed
