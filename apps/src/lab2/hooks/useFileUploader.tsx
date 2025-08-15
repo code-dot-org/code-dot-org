@@ -72,6 +72,26 @@ const isValidMimeType = (
   );
 };
 
+const moderateImage = async (
+  file: File,
+  ext: string,
+  appName?: string
+): Promise<'ok' | 'flagged' | 'skipped'> => {
+  if (appName !== 'weblab2' || !['png', 'jpg', 'jpeg'].includes(ext)) {
+    return 'skipped';
+  }
+  const response = await HttpClient.post(`/v3/images/moderate`, file, true, {
+    'Content-Type': file.type || 'application/octet-stream',
+  });
+  if (!response.ok) {
+    throw new Error('Error with image moderation.');
+  }
+  const json = await response.json();
+  if (json?.rating !== 'everyone' && json?.rating !== 'unknown') {
+    return 'flagged';
+  }
+  return 'ok';
+};
 /**
  * A custom hook that provides functionality for file uploads,
  * including validation, reading, uploading to S3 for non-text files, and handling callbacks.
@@ -177,44 +197,24 @@ export const useFileUploader = ({
             throw new Error('channelId required for file upload.');
           }
 
-          const fileType = file.name.split('.')[1];
-          if (
-            ['png', 'jpg', 'jpeg'].includes(fileType) &&
-            appName === 'weblab2'
-          ) {
-            const response = await HttpClient.post(
-              `/v3/images/moderate`,
-              file,
-              true,
-              {
-                'Content-Type': file.type,
-              }
-            );
-            if (response.ok) {
-              const json = await response.json();
-              console.log('response.rating', json.rating);
-              if (json.rating !== 'everyone' && json.rating !== 'unknown') {
-                // Image is flagged, call callback if provided
-                if (onImageFlagged) {
-                  const uploadFunction = async () => {
-                    const url = `/v3/assets/${channelId}/${createUuid()}.${fileType}`;
-                    await HttpClient.put(url, file);
-                    sendAnalyticsEvent(analyticsEvents.UPLOAD_SUCCEEDED, {
-                      name: file.name,
-                      type: file.type,
-                    });
-                    callback(file.name, '', url, callbackArgs.current, true);
-                  };
-                  onImageFlagged(file, fileType, uploadFunction);
-                  return; // Don't continue with upload, wait for callback handling
-                }
-              }
-            } else {
-              throw new Error('Error with image moderation.');
-            }
+          const ext = file.name.split('.').pop()?.toLowerCase() || '';
+          const moderationStatus = await moderateImage(file, ext, appName);
+          if (moderationStatus === 'flagged' && onImageFlagged) {
+            const uploadFunction = async () => {
+              const url = `/v3/assets/${channelId}/${createUuid()}.${ext}`;
+              await HttpClient.put(url, file);
+              sendAnalyticsEvent(analyticsEvents.UPLOAD_SUCCEEDED, {
+                name: file.name,
+                type: file.type,
+              });
+              callback(file.name, '', url, callbackArgs.current, true);
+            };
+            // FlagedImageModal will be shown to the user and user can choose to upload the image or not.
+            onImageFlagged(file, ext, uploadFunction);
+            return;
           }
-          // For non-image files and image files that are safe, upload directly
-          const url = `/v3/assets/${channelId}/${createUuid()}.${fileType}`;
+          // For non-text files that are not moderated and images that are deemed safe, upload directly to assets.
+          const url = `/v3/assets/${channelId}/${createUuid()}.${ext}`;
           await HttpClient.put(url, file);
           sendAnalyticsEvent(analyticsEvents.UPLOAD_SUCCEEDED, {
             name: file.name,
