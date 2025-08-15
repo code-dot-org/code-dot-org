@@ -19,6 +19,10 @@ describe('WeakMapPlus', function () {
     assert(emptyMap instanceof WeakMapPlus);
   });
 
+  it('is derived from WeakMap', function () {
+    assert(emptyMap instanceof WeakMap);
+  });
+
   it('does not contain value for object key if never added', function () {
     assert(!emptyMap.has({}));
     assert(!populatedMap.has({}));
