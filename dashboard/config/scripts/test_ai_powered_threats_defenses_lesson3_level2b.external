@@ -1,9 +1,9 @@
 name 'test-ai-powered-threats-defenses-lesson3-level2b'
 title 'Jordan P. - User Profile'
 
-display_name 'Marcus'
-bubble_choice_description 'DESCRIPTION'
-thumbnail_url 'https://images.code.org/35daf4616746412a061782ab3771c1c6-image-1753987189397.png'
+display_name 'Marcus Lee'
+bubble_choice_description 'Marcus is a 15 year old student from Terre Haute, IN'
+thumbnail_url 'https://images.code.org/e7e1fa149304e0c03c767c590c334fb4-image-1755184710786.png'
 
 markdown <<MARKDOWN
 #Marcus

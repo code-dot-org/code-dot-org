@@ -2,26 +2,36 @@ name 'test-ai-powered-threats-defenses-lesson3-level4a'
 title 'Ava R. - User Profile'
 
 display_name 'Ava Rivera'
-bubble_choice_description 'DESCRIPTION'
-thumbnail_url 'https://images.code.org/35daf4616746412a061782ab3771c1c6-image-1753987189397.png'
+bubble_choice_description 'Ava is a 16 year old student from Austin, TX.'
+thumbnail_url 'https://images.code.org/eb20ea4d27756f0b348bf0d2789077e9-image-1755184382554.png'
 
 markdown <<MARKDOWN
 #Ava
+
+#### A data breach is a security incident where sensitive, confidential, or private information is accessed, disclosed, or stolen by unauthorized individuals.
+
 #### Look through Ava's breach report to try to determine what happened and what type of password attack your user was vulnerable to.
+
 
 <div style="font-family: sans-serif; font-size: 16px; line-height: 1.6;">
 
-
   <h3 style="color: #00838f;">Breach Report</h3>
   <p><strong>Service Breached:</strong> Systagram<br>
-     <strong>Login Location:</strong> Oregon (residential IP)<br>
-     <strong>Time of Access:</strong> 2:07 a.m.</p>
+     <strong>Login Location:</strong> Austin (residential IP)<br>
+     <strong>Time of Access:</strong> 2:07 a.m.<br>
+     <strong>AI Analysis:</strong> Typical access time is between 3:00–8:00 p.m. from a school-issued Chromebook.
+  </p>
 
-  <p>Multiple failed login attempts were observed prior to a successful login on the fifth attempt.<br>
-     The password used was: <strong>MochiOct28</strong></p>
+  <p>This account is usually accessed from a school device during after-school hours.<br>
+     The device used was a personal laptop not previously linked to the account.<br>
+     Five failed login attempts were recorded over a 7-minute period before a successful login.<br>
+     The password used was: <strong>MochiOct28</strong>
+  </p>
 
-  <p>No indication of external password reuse was found.<br>
-     <em>Password pattern suggests a combination of personal identifiers.</em></p>
+  <p>No evidence of password reuse across other services.<br>
+     <strong>AI Analysis:</strong> Password matches common personal identifier pattern — name + birth date or favorite term.<br>
+     <strong>AI Analysis:</strong> IP address used for this login is associated with another student account at the same school.
+  </p>
 
   <br>
 

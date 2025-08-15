@@ -1,0 +1,75 @@
+name 'csaif_pl_3-day-project-L3-cyber'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Final Project: 3-Day Process Overview  
+
+<img src="https://images.code.org/2f240c0830b7787ebb5a3391d2bc3b19-image-1741792735598.png" alt="pixel art house" style="border-radius:10px; float: right; ; height: 120px; margin: 0px 20px 0px 10px; ">
+
+#### In this project, students will use coding to create a picture that represents them using programming concepts they’ve learned. 
+
+#### Over three days, they will plan, develop, review, and refine their work, with structured support through a <a href = "https://docs.google.com/document/d/1CNal1TCRTr9jHg_aFT53MCiJEJNLBtzGeNYLrCRg8ng/edit?usp=sharing" target="blank" rel="noopener noreferrer">Project Planning Guide</a> and peer feedback using the TAG Method.
+
+
+
+## Daily Overview
+
+<div style="clear:both;"></div>
+
+<div style="display: flex; align-items: center; gap: 15px;">
+        <img src="https://images.code.org/51d8d9887e70f4231a245da5e7796e8b-image-1741706991947.png" alt="icon showing a sequence" style="width: 20%; max-width: 100px; height: auto;">
+        <div style="flex: 1; background: #f7f8fa; padding: 10px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); ">
+            <h3> <b>Day 1: Brainstorm, Plan, and Decompose</b></h3>
+          <ul>
+    <li style="font-size: 14pt;">Students brainstorm ideas for their coded picture—what elements represent their identity, interests, or personality?</li><br>
+    <li style="font-size: 14pt;">Using the <a href = "https://docs.google.com/document/d/1CNal1TCRTr9jHg_aFT53MCiJEJNLBtzGeNYLrCRg8ng/edit?usp=sharing" target="blank" rel="noopener noreferrer">Project Planning Guide</a>, they break down their idea into smaller coding tasks (decomposing the problem).</li><br>
+    <li style="font-size: 14pt;">They sketch a flowchart or pseudocode to outline their approach.</li><br>
+    <li style="font-size: 14pt;">By the end of Day 1, students should have a clear plan for how they will structure their code.</li>
+</ul>
+           </div>
+    </div>
+<br>
+
+<div style="display: flex; align-items: center; gap: 15px;">
+        <img src="https://images.code.org/df003ffe6a552ea91152205a6180485b-image-1741792827404.png" alt="feedback icon" style="width: 20%; max-width: 100px; height: auto;">
+        <div style="flex: 1; background: #f7f8fa; padding: 10px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            <h3><b>Day 2: Develop & Peer Review (TAG Feedback)</b></h3>
+            <ul>
+    <li style="font-size: 14pt;">Students begin coding their picture based on their plan.</li><br>
+    <li style="font-size: 14pt;">Midway through, they pause for peer review using the TAG Method:</li>
+    <ul>
+        <li style="font-size: 14pt;">Tell something they like</li>
+        <li style="font-size: 14pt;">Ask a question</li>
+        <li style="font-size: 14pt;">Give a suggestion</li>
+    </ul><br>
+    <li style="font-size: 14pt;">After receiving feedback, they revise and continue developing their project.</li>
+</ul>
+        </div>
+    </div>
+<br>
+   
+<div style="display: flex; align-items: center; gap: 15px;">
+        <img src="https://images.code.org/3716fb3f3a7de43bba135a454ce46fff-image-1741792948624.png" alt="iteration icon" style="width: 20%; max-width: 100px; height: auto;">
+        <div style="flex: 1; background: #f7f8fa; padding: 10px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            <h3><b>Day 3: Finalize, Showcase & Reflect </b></h3>
+            <ul>
+    <li style="font-size: 14pt;">Students finalize their coded picture, making last improvements.</li><br>
+    <li style="font-size: 14pt;">They showcase their work in a gallery walk or short presentations.</li><br>
+    <li style="font-size: 14pt;">A reflection activity helps them think about their process:</li>
+    <ul>
+        <li style="font-size: 14pt;">What went well?</li>
+        <li style="font-size: 14pt;">What challenges did they overcome?</li>
+        <li style="font-size: 14pt;">How did feedback shape their final product?</li>
+    </ul>
+</ul>
+        </div>
+    </div>
+
+---
+
+
+#### This structured approach ensures students think critically, iterate on their work, and develop independence in coding while also learning how to give and apply feedback effectively.
+
+
+MARKDOWN

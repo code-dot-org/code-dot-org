@@ -2,8 +2,8 @@ name 'test-ai-powered-threats-defenses-lesson3-level1a'
 title 'Ava R. - User Profile'
 
 display_name 'Ava Rivera'
-bubble_choice_description 'DESCRIPTION'
-thumbnail_url 'https://images.code.org/35daf4616746412a061782ab3771c1c6-image-1753987189397.png'
+bubble_choice_description 'Ava is a 16 year old student from Austin, TX.'
+thumbnail_url 'https://images.code.org/eb20ea4d27756f0b348bf0d2789077e9-image-1755184382554.png'
 
 markdown <<MARKDOWN
 #Ava Rivera
@@ -71,11 +71,5 @@ markdown <<MARKDOWN
   </tr>
 </table>
 
-![]()
 
-![]()
-
-![]()
-
-![]()
 MARKDOWN

@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-08-13 16:32:37 UTC",
+    "serialized_at": "2025-08-15 02:24:09 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -130,7 +130,7 @@
     },
     {
       "key": "lesson-6",
-      "name": "Lesson 3: Phishing and Password Cracking",
+      "name": "Lesson 3: Phishing and Password Attacks",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
@@ -398,6 +398,30 @@
       }
     },
     {
+      "key": "28326928-8272-44f6-a7fe-66b9d4b7cbc3",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "28326928-8272-44f6-a7fe-66b9d4b7cbc3",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-powered-threats-and-defenses-pilot-2025"
+      }
+    },
+    {
+      "key": "741d0b58-4f49-4413-a174-c8634bba94f5",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "741d0b58-4f49-4413-a174-c8634bba94f5",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-powered-threats-and-defenses-pilot-2025"
+      }
+    },
+    {
       "key": "88683747-5f33-4faf-94ac-b0c8aef98ccc",
       "position": 1,
       "properties": {
@@ -645,6 +669,42 @@
       "seeding_key": {
         "lesson_activity.key": "673e8be0-0ea4-40f9-a7a4-d8235a898768",
         "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-powered-threats-and-defenses-pilot-2025"
+      }
+    },
+    {
+      "key": "7439fb75-2c6d-4c75-8f45-4047dca14070",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7439fb75-2c6d-4c75-8f45-4047dca14070",
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-powered-threats-and-defenses-pilot-2025"
+      }
+    },
+    {
+      "key": "cbf935e0-cf42-47fa-8498-c9fb94f5d46c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "cbf935e0-cf42-47fa-8498-c9fb94f5d46c",
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-powered-threats-and-defenses-pilot-2025"
+      }
+    },
+    {
+      "key": "78ed615e-f8ad-49f8-bb47-c51af0bbf808",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "78ed615e-f8ad-49f8-bb47-c51af0bbf808",
+        "lesson.key": "lesson-15",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-powered-threats-and-defenses-pilot-2025"
       }
@@ -945,11 +1005,34 @@
       "key": "c1f1511f-5d27-4fea-86b4-feb97215af19",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 2 to complete the End of Lesson Survey."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 2 to complete the End of Lesson Survey.",
+        "progression_name": "Student Survey"
       },
       "seeding_key": {
         "activity_section.key": "c1f1511f-5d27-4fea-86b4-feb97215af19",
         "lesson_activity.key": "f5ca98f3-c4be-45d0-a43e-850a40ba2b60"
+      }
+    },
+    {
+      "key": "4c1dc580-01b8-44d7-8a80-45d27831e2f7",
+      "position": 1,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "4c1dc580-01b8-44d7-8a80-45d27831e2f7",
+        "lesson_activity.key": "28326928-8272-44f6-a7fe-66b9d4b7cbc3"
+      }
+    },
+    {
+      "key": "0f615e94-12a0-42a0-9cd7-6455dfdfba51",
+      "position": 1,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "0f615e94-12a0-42a0-9cd7-6455dfdfba51",
+        "lesson_activity.key": "741d0b58-4f49-4413-a174-c8634bba94f5"
       }
     },
     {
@@ -1083,7 +1166,8 @@
       "key": "4e9c011c-7352-4dd0-8e77-a3de8eb1867f",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 4, Level 6 to complete the End of Lesson Survey."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 4, Level 6 to complete the End of Lesson Survey.",
+        "progression_name": "Student Survey"
       },
       "seeding_key": {
         "activity_section.key": "4e9c011c-7352-4dd0-8e77-a3de8eb1867f",
@@ -1247,6 +1331,17 @@
       },
       "seeding_key": {
         "activity_section.key": "85adaf74-fd44-4974-8703-d395bf54344f",
+        "lesson_activity.key": "a5bc1f3b-08d8-4915-bf0f-bb2d5c939489"
+      }
+    },
+    {
+      "key": "0d2f7030-3f78-4de3-a060-85345d66cebd",
+      "position": 2,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "0d2f7030-3f78-4de3-a060-85345d66cebd",
         "lesson_activity.key": "a5bc1f3b-08d8-4915-bf0f-bb2d5c939489"
       }
     },
@@ -1638,6 +1733,17 @@
       }
     },
     {
+      "key": "67e6d2fb-88e4-4f5e-9685-d2a0344a8b5e",
+      "position": 4,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "67e6d2fb-88e4-4f5e-9685-d2a0344a8b5e",
+        "lesson_activity.key": "c889e6f8-ef12-404c-aa42-7b3db66d414f"
+      }
+    },
+    {
       "key": "89798f4b-11f6-4d1a-a417-68b2b424722c",
       "position": 1,
       "properties": {
@@ -1948,7 +2054,8 @@
       "key": "a06e8406-3b69-4fd1-a881-0822ed114a0e",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 1 to complete the End of Lesson Survey."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 1 to complete the End of Lesson Survey.",
+        "progression_name": "Student Survey"
       },
       "seeding_key": {
         "activity_section.key": "a06e8406-3b69-4fd1-a881-0822ed114a0e",
@@ -2667,11 +2774,45 @@
       "key": "a4b76056-e525-44e1-b9cc-877590132ecd",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 9, Level 2 to complete the End of Lesson Survey."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 9, Level 2 to complete the End of Lesson Survey.",
+        "progression_name": "Student Survey"
       },
       "seeding_key": {
         "activity_section.key": "a4b76056-e525-44e1-b9cc-877590132ecd",
         "lesson_activity.key": "673e8be0-0ea4-40f9-a7a4-d8235a898768"
+      }
+    },
+    {
+      "key": "1c992866-3066-4b85-9d91-b96ea1da879b",
+      "position": 1,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "1c992866-3066-4b85-9d91-b96ea1da879b",
+        "lesson_activity.key": "7439fb75-2c6d-4c75-8f45-4047dca14070"
+      }
+    },
+    {
+      "key": "f5dc8f94-2929-4ec9-b035-99586e1b2490",
+      "position": 1,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "f5dc8f94-2929-4ec9-b035-99586e1b2490",
+        "lesson_activity.key": "cbf935e0-cf42-47fa-8498-c9fb94f5d46c"
+      }
+    },
+    {
+      "key": "b94a6d94-4ce5-4382-84e7-524a4172d033",
+      "position": 1,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "b94a6d94-4ce5-4382-84e7-524a4172d033",
+        "lesson_activity.key": "78ed615e-f8ad-49f8-bb47-c51af0bbf808"
       }
     },
     {
@@ -2723,10 +2864,79 @@
     },
     {
       "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-powered-threats-defenses-lesson1-survey-pilot_2025"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-powered-threats-and-defenses-pilot-2025",
+        "activity_section.key": "c1f1511f-5d27-4fea-86b4-feb97215af19"
+      },
+      "level_keys": [
+        "ai-powered-threats-defenses-lesson1-survey-pilot_2025"
+      ]
+    },
+    {
+      "chapter": 3,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-powered-threats-defenses-lesson2-survey-pilot_2025"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-powered-threats-and-defenses-pilot-2025",
+        "activity_section.key": "4c1dc580-01b8-44d7-8a80-45d27831e2f7"
+      },
+      "level_keys": [
+        "ai-powered-threats-defenses-lesson2-survey-pilot_2025"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-powered-threats-defenses-lesson3-survey-pilot_2025"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-powered-threats-and-defenses-pilot-2025",
+        "activity_section.key": "0f615e94-12a0-42a0-9cd7-6455dfdfba51"
+      },
+      "level_keys": [
+        "ai-powered-threats-defenses-lesson3-survey-pilot_2025"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ai-powered-threats-defenses-lesson4-level1_2025-pilot"
+        ],
         "progression": "Phishing Scams"
       },
       "bonus": false,
@@ -2744,11 +2954,14 @@
       ]
     },
     {
-      "chapter": 3,
+      "chapter": 6,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-powered-threats-defenses-lesson4-level2_2025-pilot"
+        ],
         "progression": "Phishing Scams"
       },
       "bonus": false,
@@ -2766,11 +2979,14 @@
       ]
     },
     {
-      "chapter": 4,
+      "chapter": 7,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-powered-threats-defenses-lesson4-level3_2025-pilot"
+        ],
         "progression": "Phishing Scams"
       },
       "bonus": false,
@@ -2788,11 +3004,14 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 8,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-powered-threats-defenses-lesson4-level4_2025-pilot"
+        ],
         "progression": "Create a Deep Fake Script"
       },
       "bonus": false,
@@ -2810,11 +3029,14 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 9,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "ai-powered-threats-defenses-lesson4-level5_2025-pilot"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -2832,7 +3054,29 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 10,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-powered-threats-defenses-lesson4-survey-pilot_2025"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-powered-threats-and-defenses-pilot-2025",
+        "activity_section.key": "4e9c011c-7352-4dd0-8e77-a3de8eb1867f"
+      },
+      "level_keys": [
+        "ai-powered-threats-defenses-lesson4-survey-pilot_2025"
+      ]
+    },
+    {
+      "chapter": 11,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2857,7 +3101,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 12,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -2882,7 +3126,29 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 13,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-powered-threats-defenses-lesson5-survey-pilot_2025"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-powered-threats-and-defenses-pilot-2025",
+        "activity_section.key": "0d2f7030-3f78-4de3-a060-85345d66cebd"
+      },
+      "level_keys": [
+        "ai-powered-threats-defenses-lesson5-survey-pilot_2025"
+      ]
+    },
+    {
+      "chapter": 14,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2907,7 +3173,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 15,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -2932,7 +3198,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 16,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -2957,7 +3223,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 17,
       "position": 4,
       "activity_section_position": 2,
       "assessment": true,
@@ -2982,11 +3248,36 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 18,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-powered-threats-defenses-lesson6-survey-pilot_2025"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-powered-threats-and-defenses-pilot-2025",
+        "activity_section.key": "67e6d2fb-88e4-4f5e-9685-d2a0344a8b5e"
+      },
+      "level_keys": [
+        "ai-powered-threats-defenses-lesson6-survey-pilot_2025"
+      ]
+    },
+    {
+      "chapter": 19,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "ai-powered-threats-defenses-lesson7-level1_2025-pilot"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3004,11 +3295,36 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 20,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-powered-threats-defenses-lesson7-survey-pilot_2025"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-powered-threats-and-defenses-pilot-2025",
+        "activity_section.key": "a06e8406-3b69-4fd1-a881-0822ed114a0e"
+      },
+      "level_keys": [
+        "ai-powered-threats-defenses-lesson7-survey-pilot_2025"
+      ]
+    },
+    {
+      "chapter": 21,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-powered-threats-defenses-lesson-level1_2025-pilot"
+        ],
         "progression": "Fraud Detection Investigation"
       },
       "bonus": false,
@@ -3026,11 +3342,14 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 22,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-powered-threats-defenses-lesson8-level2_2025-pilot"
+        ],
         "progression": "Human vs AI Detection"
       },
       "bonus": false,
@@ -3048,11 +3367,14 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 23,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-powered-threats-defenses-lesson8-level3-2_2025-pilot"
+        ],
         "progression": "Adaptive Security"
       },
       "bonus": false,
@@ -3070,11 +3392,14 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 24,
       "position": 4,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "ai-powered-threats-defenses-lesson8-level4_2025-pilot"
+        ],
         "progression": "Adaptive Security"
       },
       "bonus": false,
@@ -3092,7 +3417,28 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 25,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-powered-threats-defenses-lesson8-survey-pilot_2025"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-powered-threats-and-defenses-pilot-2025",
+        "activity_section.key": "184263a1-1e13-4f2e-ac41-5d08dab38697"
+      },
+      "level_keys": [
+        "ai-powered-threats-defenses-lesson8-survey-pilot_2025"
+      ]
+    },
+    {
+      "chapter": 26,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -3115,6 +3461,94 @@
       "level_keys": [
         "ai-powered-threats-defenses-lesson9-level1_2025-pilot"
       ]
+    },
+    {
+      "chapter": 27,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-powered-threats-defenses-lesson9-survey-pilot_2025"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-powered-threats-and-defenses-pilot-2025",
+        "activity_section.key": "a4b76056-e525-44e1-b9cc-877590132ecd"
+      },
+      "level_keys": [
+        "ai-powered-threats-defenses-lesson9-survey-pilot_2025"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-powered-threats-defenses-lesson10-survey-pilot_2025"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-powered-threats-and-defenses-pilot-2025",
+        "activity_section.key": "1c992866-3066-4b85-9d91-b96ea1da879b"
+      },
+      "level_keys": [
+        "ai-powered-threats-defenses-lesson10-survey-pilot_2025"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-powered-threats-defenses-lesson11-survey-pilot_2025"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-powered-threats-and-defenses-pilot-2025",
+        "activity_section.key": "f5dc8f94-2929-4ec9-b035-99586e1b2490"
+      },
+      "level_keys": [
+        "ai-powered-threats-defenses-lesson11-survey-pilot_2025"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-powered-threats-defenses-lesson12-survey-pilot_2025"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-powered-threats-and-defenses-pilot-2025",
+        "activity_section.key": "b94a6d94-4ce5-4382-84e7-524a4172d033"
+      },
+      "level_keys": [
+        "ai-powered-threats-defenses-lesson12-survey-pilot_2025"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -3128,6 +3562,42 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-powered-threats-and-defenses-pilot-2025",
         "activity_section.key": "39195cf7-d6b2-4e94-888d-71f1409e3fb9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-powered-threats-defenses-lesson1-survey-pilot_2025",
+        "script_level.level_keys": [
+          "ai-powered-threats-defenses-lesson1-survey-pilot_2025"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-powered-threats-and-defenses-pilot-2025",
+        "activity_section.key": "c1f1511f-5d27-4fea-86b4-feb97215af19"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-powered-threats-defenses-lesson2-survey-pilot_2025",
+        "script_level.level_keys": [
+          "ai-powered-threats-defenses-lesson2-survey-pilot_2025"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-powered-threats-and-defenses-pilot-2025",
+        "activity_section.key": "4c1dc580-01b8-44d7-8a80-45d27831e2f7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-powered-threats-defenses-lesson3-survey-pilot_2025",
+        "script_level.level_keys": [
+          "ai-powered-threats-defenses-lesson3-survey-pilot_2025"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-powered-threats-and-defenses-pilot-2025",
+        "activity_section.key": "0f615e94-12a0-42a0-9cd7-6455dfdfba51"
       }
     },
     {
@@ -3192,6 +3662,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "ai-powered-threats-defenses-lesson4-survey-pilot_2025",
+        "script_level.level_keys": [
+          "ai-powered-threats-defenses-lesson4-survey-pilot_2025"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-powered-threats-and-defenses-pilot-2025",
+        "activity_section.key": "4e9c011c-7352-4dd0-8e77-a3de8eb1867f"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "ai-powered-threats-defenses-lesson5-level1_2025-pilot",
         "script_level.level_keys": [
           "ai-powered-threats-defenses-lesson5-level1_2025-pilot"
@@ -3212,6 +3694,18 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-powered-threats-and-defenses-pilot-2025",
         "activity_section.key": "00d16041-80e5-4e82-8af0-84ba6a20acfa"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-powered-threats-defenses-lesson5-survey-pilot_2025",
+        "script_level.level_keys": [
+          "ai-powered-threats-defenses-lesson5-survey-pilot_2025"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-powered-threats-and-defenses-pilot-2025",
+        "activity_section.key": "0d2f7030-3f78-4de3-a060-85345d66cebd"
       }
     },
     {
@@ -3264,6 +3758,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "ai-powered-threats-defenses-lesson6-survey-pilot_2025",
+        "script_level.level_keys": [
+          "ai-powered-threats-defenses-lesson6-survey-pilot_2025"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-powered-threats-and-defenses-pilot-2025",
+        "activity_section.key": "67e6d2fb-88e4-4f5e-9685-d2a0344a8b5e"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "ai-powered-threats-defenses-lesson7-level1_2025-pilot",
         "script_level.level_keys": [
           "ai-powered-threats-defenses-lesson7-level1_2025-pilot"
@@ -3272,6 +3778,18 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-powered-threats-and-defenses-pilot-2025",
         "activity_section.key": "8280cb69-ac0e-4b32-8a7d-4c3635de981f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-powered-threats-defenses-lesson7-survey-pilot_2025",
+        "script_level.level_keys": [
+          "ai-powered-threats-defenses-lesson7-survey-pilot_2025"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-powered-threats-and-defenses-pilot-2025",
+        "activity_section.key": "a06e8406-3b69-4fd1-a881-0822ed114a0e"
       }
     },
     {
@@ -3324,6 +3842,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "ai-powered-threats-defenses-lesson8-survey-pilot_2025",
+        "script_level.level_keys": [
+          "ai-powered-threats-defenses-lesson8-survey-pilot_2025"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-powered-threats-and-defenses-pilot-2025",
+        "activity_section.key": "184263a1-1e13-4f2e-ac41-5d08dab38697"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "ai-powered-threats-defenses-lesson9-level1_2025-pilot",
         "script_level.level_keys": [
           "ai-powered-threats-defenses-lesson9-level1_2025-pilot"
@@ -3332,6 +3862,54 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-powered-threats-and-defenses-pilot-2025",
         "activity_section.key": "a5160a5a-e8e8-4fcb-9775-214f6938d226"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-powered-threats-defenses-lesson9-survey-pilot_2025",
+        "script_level.level_keys": [
+          "ai-powered-threats-defenses-lesson9-survey-pilot_2025"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-powered-threats-and-defenses-pilot-2025",
+        "activity_section.key": "a4b76056-e525-44e1-b9cc-877590132ecd"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-powered-threats-defenses-lesson10-survey-pilot_2025",
+        "script_level.level_keys": [
+          "ai-powered-threats-defenses-lesson10-survey-pilot_2025"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-powered-threats-and-defenses-pilot-2025",
+        "activity_section.key": "1c992866-3066-4b85-9d91-b96ea1da879b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-powered-threats-defenses-lesson11-survey-pilot_2025",
+        "script_level.level_keys": [
+          "ai-powered-threats-defenses-lesson11-survey-pilot_2025"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-powered-threats-and-defenses-pilot-2025",
+        "activity_section.key": "f5dc8f94-2929-4ec9-b035-99586e1b2490"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-powered-threats-defenses-lesson12-survey-pilot_2025",
+        "script_level.level_keys": [
+          "ai-powered-threats-defenses-lesson12-survey-pilot_2025"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-powered-threats-and-defenses-pilot-2025",
+        "activity_section.key": "b94a6d94-4ce5-4382-84e7-524a4172d033"
       }
     }
   ],

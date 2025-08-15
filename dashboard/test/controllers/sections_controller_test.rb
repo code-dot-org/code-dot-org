@@ -158,7 +158,7 @@ class SectionsControllerTest < ActionController::TestCase
       secret_words: @flappy_user_1.secret_words
     }
 
-    assert_redirected_to '/s/flappy'
+    assert_redirected_to '/courses/flappy/units/1'
   end
 
   test "login to section with a course redirects to course" do
@@ -171,6 +171,20 @@ class SectionsControllerTest < ActionController::TestCase
     assert_redirected_to "/courses/#{@section_with_course.unit_group.name}"
   end
 
+  test "login to section with a modular script redirects to modular course" do
+    modular_course = create(:single_unit_course, unit: @script_in_course)
+    section_with_modular_script = create(:section, user: @teacher, login_type: 'word', course_id: modular_course.id, script_id: @script_in_course.id)
+    section_with_modular_script_user_1 = create(:follower, section: section_with_modular_script).student_user
+
+    post :log_in, params: {
+      id: section_with_modular_script.code,
+      user_id: section_with_modular_script_user_1.id,
+      secret_words: section_with_modular_script_user_1.secret_words
+    }
+
+    assert_redirected_to "/courses/#{modular_course.name}/units/1"
+  end
+
   test "login with show_pairing_dialog shows pairing dialog" do
     post :log_in, params: {
       id: @flappy_section.code,
@@ -179,7 +193,7 @@ class SectionsControllerTest < ActionController::TestCase
       show_pairing_dialog: '1'
     }
 
-    assert_redirected_to '/s/flappy'
+    assert_redirected_to '/courses/flappy/units/1'
 
     assert session[:show_pairing_dialog]
   end
@@ -191,7 +205,7 @@ class SectionsControllerTest < ActionController::TestCase
       secret_words: @flappy_user_1.secret_words
     }
 
-    assert_redirected_to '/s/flappy'
+    assert_redirected_to '/courses/flappy/units/1'
 
     refute session[:show_pairing_dialog]
   end
