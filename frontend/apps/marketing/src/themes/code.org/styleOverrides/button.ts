@@ -91,7 +91,7 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
             color: 'var(--brand-purple-50)',
           },
           '&:hover': {
-            backgroundColor: 'var(--background-neutral-tertiary)',
+            opacity: 0.9,
           },
         },
         '&.video-download-button.MuiButtonBase-root': {

@@ -151,6 +151,7 @@ const Video: React.FC<VideoProps> = ({
               className="button--color-emphasized"
               variant="contained"
               size="small"
+              sx={{marginTop: '1rem'}}
               onClick={() => {
                 // eslint-disable-next-line @typescript-eslint/no-explicit-any
                 (window as any).OneTrust.ToggleInfoDisplay();
