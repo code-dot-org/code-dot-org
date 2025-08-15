@@ -36,6 +36,10 @@ const LabViewsRenderer: React.FunctionComponent = () => {
   const projectSharingDisabled = useAppSelector(
     state => state.lab.projectSharingDisabled
   );
+  const isTeacherOfProjectOwner = useAppSelector(
+    state => state.lab.isTeacherOfProjectOwner
+  );
+  console.log('isTeacherOfProjectOwner', isTeacherOfProjectOwner);
   const isOwner = useAppSelector(state => state.lab.channel?.isOwner || false);
   const isProjectValidator = useAppSelector(state =>
     state.lab.permissions?.includes(PERMISSIONS.PROJECT_VALIDATOR)
@@ -62,7 +66,7 @@ const LabViewsRenderer: React.FunctionComponent = () => {
       return true;
     }
     if (['view', 'edit'].includes(pageAction)) {
-      return !isProjectValidator && !isOwner;
+      return !isProjectValidator && !isOwner && !isTeacherOfProjectOwner;
     }
     return false;
   };

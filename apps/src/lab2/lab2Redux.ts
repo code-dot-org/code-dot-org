@@ -104,6 +104,8 @@ export interface LabState {
   projectSharingDisabled: boolean | undefined;
   overrideValidations: Validation[] | undefined;
   permissions: string[];
+  // If current user is a teacher of the project owner.
+  isTeacherOfProjectOwner: boolean | undefined;
 }
 
 const initialState: LabState = {
@@ -121,6 +123,7 @@ const initialState: LabState = {
   projectSharingDisabled: undefined,
   overrideValidations: undefined,
   permissions: [],
+  isTeacherOfProjectOwner: undefined,
 };
 
 // Thunks
@@ -269,8 +272,13 @@ export const setUpWithLevel = createAsyncThunk<
 
     Lab2Registry.getInstance().setProjectManager(projectManager);
     // Load channel and source.
-    const {sources, channel, abuseScore, sharingDisabled} =
-      await setUpAndLoadProject(projectManager, thunkAPI.dispatch);
+    const {
+      sources,
+      channel,
+      abuseScore,
+      sharingDisabled,
+      isTeacherOfProjectOwner,
+    } = await setUpAndLoadProject(projectManager, thunkAPI.dispatch);
     setProjectAndLevelData(
       {
         initialSources: sources,
@@ -278,6 +286,7 @@ export const setUpWithLevel = createAsyncThunk<
         levelProperties,
         abuseScore,
         sharingDisabled,
+        isTeacherOfProjectOwner,
       },
       thunkAPI.signal.aborted,
       thunkAPI.dispatch,
@@ -332,6 +341,7 @@ const labSlice = createSlice({
         initialSources?: ProjectSources;
         abuseScore?: number;
         sharingDisabled?: boolean;
+        isTeacherOfProjectOwner?: boolean;
       }>
     ) {
       const levelProperties = action.payload.levelProperties;
@@ -344,6 +354,7 @@ const labSlice = createSlice({
       state.projectSharingDisabled =
         action.payload.sharingDisabled &&
         OPEN_ENDED_LAB2_PROJECT_TYPES.includes(levelProperties.appName);
+      state.isTeacherOfProjectOwner = action.payload.isTeacherOfProjectOwner;
     },
     setIsShareView(state, action: PayloadAction<boolean>) {
       state.isShareView = action.payload;
@@ -356,6 +367,9 @@ const labSlice = createSlice({
     },
     setPermissions(state, action: PayloadAction<string[]>) {
       state.permissions = action.payload;
+    },
+    setIsTeacherOfProjectOwner(state, action: PayloadAction<boolean>) {
+      state.isTeacherOfProjectOwner = action.payload;
     },
   },
   extraReducers: builder => {
@@ -476,6 +490,7 @@ function setProjectAndLevelData(
     initialSources?: ProjectSources;
     abuseScore?: number;
     sharingDisabled?: boolean;
+    isTeacherOfProjectOwner?: boolean;
   },
   aborted: boolean,
   dispatch: ThunkDispatch<unknown, unknown, AnyAction>,
@@ -497,7 +512,8 @@ function setProjectAndLevelData(
       data.initialSources,
       data.abuseScore,
       isReadOnlyWorkspace(getState()),
-      data.sharingDisabled
+      data.sharingDisabled,
+      data.isTeacherOfProjectOwner
     );
 }
 
@@ -547,6 +563,7 @@ export const {
   onLevelChange,
   setPermissions,
   setChannel,
+  setIsTeacherOfProjectOwner,
 } = labSlice.actions;
 
 export default labSlice.reducer;
