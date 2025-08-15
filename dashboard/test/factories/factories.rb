@@ -38,7 +38,6 @@ FactoryBot.define do
     sequence(:key) {|n| "202#{n - 1}"}
     sequence(:display_name) {|n| "2#{n - 1}-2#{n}"}
     association :course_offering
-    content_root_type {'UnitGroup'}
     with_unit_group
 
     trait :with_unit_group do
