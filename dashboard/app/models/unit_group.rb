@@ -137,11 +137,13 @@ class UnitGroup < ApplicationRecord
   end
 
   def self.seed_from_hash(hash)
-    unit_group = UnitGroup.find_or_create_by!(name: hash['name'])
+    unit_group = UnitGroup.find_or_initialize_by(name: hash['name'])
+    # set required family_name and version_year fields before running validations
+    unit_group.properties = hash['properties']
+    unit_group.save!
     unit_group.update_original_scripts(hash['original_script_names'])
     unit_group.update_scripts(hash['script_names'])
     unit_group.update_unit_prefixes(hash['unit_prefixes']) if hash['unit_prefixes']
-    unit_group.properties = hash['properties']
     unit_group.published_state = hash['published_state'] || Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development
     unit_group.instruction_type = hash['instruction_type'] || Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
     unit_group.instructor_audience = hash['instructor_audience'] || Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher
