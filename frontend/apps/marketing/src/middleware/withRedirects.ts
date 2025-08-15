@@ -4,6 +4,7 @@ import {STALE_WHILE_REVALIDATE_ONE_HOUR} from '@/cache/constants';
 import {RedirectEntryResponse} from '@/cache/redirects/types';
 import {getBrandFromHostname} from '@/config/brand';
 import {getLocalhostAddress} from '@/config/host';
+import {getBrandRedirects} from '@/middleware/redirects';
 
 import {MiddlewareFactory} from './types';
 
@@ -31,6 +32,12 @@ export const withRedirects: MiddlewareFactory = next => {
       await redirectCacheByBrandResponse.json();
 
     if (!redirectEntryResponse.redirectEntry) {
+      const brandRedirects = getBrandRedirects(brand, request);
+
+      if (brandRedirects) {
+        return brandRedirects;
+      }
+
       return next(request, event);
     }
 

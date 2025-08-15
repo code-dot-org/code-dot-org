@@ -715,6 +715,7 @@ function createWebpackConfig({
             'localhost-studio.code.org',
             'localhost.code.org',
             'localhost.hourofcode.com',
+            'preview.localhost.codeprojects.org',
           ],
           client: {overlay: false},
           port: WEBPACK_DEV_SERVER_PORT,

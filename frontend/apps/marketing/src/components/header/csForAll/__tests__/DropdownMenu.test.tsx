@@ -6,6 +6,7 @@ const linkList = [
   {label: 'Home', href: '/home'},
   {label: 'About', href: '/about'},
   {label: 'Contact', href: '/contact'},
+  {label: 'External', href: 'https://example.com', external: true},
 ];
 
 const defaultProps: MenuListProps = {
@@ -43,6 +44,15 @@ describe('DropdownMenu', () => {
     linkList.forEach(link => {
       expect(screen.getByText(link.label)).toBeInTheDocument();
     });
+  });
+
+  it('renders external link with correct target and rel', () => {
+    render(<DropdownMenu {...defaultProps} />);
+    fireEvent.click(screen.getByRole('button', {name: /menu/i}));
+    const externalLink = screen.getByRole('menuitem', {name: /external/i});
+    expect(externalLink).toHaveAttribute('href', 'https://example.com');
+    expect(externalLink).toHaveAttribute('target', '_blank');
+    expect(externalLink).toHaveAttribute('rel', 'noopener noreferrer');
   });
 
   it('does not render menu items if linkList is empty', () => {
