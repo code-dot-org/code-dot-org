@@ -63,10 +63,9 @@ module Services
         # If there is a live user with the same email, these data points will not be scrubbed.
         if email.present? && ::User.find_by_email(email).blank?
           EmailPreference.where(email: email).destroy_all
-          census_submissions = Census::CensusSubmission.where(submitter_email_address: email)
-          csfms = Census::CensusSubmissionFormMap.where(census_submission_id: census_submissions.pluck(:id))
-          csfms.destroy_all
-          census_submissions.destroy_all
+          Census::CensusSubmission.where(submitter_email_address: email).find_each do |cs|
+            cs.update!(submitter_email_address: nil, submitter_name: nil)
+          end
         end
 
         # Names
@@ -86,6 +85,7 @@ module Services
 
         # PD data
         scrub_pd_surveys
+        scrub_pd_enrollments
       end
 
       # Legacy delete acccounts helper client for purging data from deprecated tables
@@ -98,8 +98,8 @@ module Services
         @pd_application_ids ||= Pd::Application::ApplicationBase.with_deleted.where(user_id: user.id).pluck(:id)
       end
 
-      private def pd_enrollment_ids
-        @pd_enrollment_ids ||= Pd::Enrollment.with_deleted.where(user_id: user.id).pluck(:id)
+      private def pd_enrollments
+        @pd_enrollments ||= user.pd_enrollments.with_deleted
       end
 
       # Deletes PII from deprecated tables that no longer have a corresponding ActiveRecord model.
@@ -113,7 +113,7 @@ module Services
           delete_accounts_helper.anonymize_legacy_pd_tables(user.id, pd_application_ids)
           delete_accounts_helper.anonymize_peer_reviews(user.id)
           delete_accounts_helper.anonymize_pd_applications(user.id, email)
-          delete_accounts_helper.anonymize_workshop_surveys(pd_enrollment_ids)
+          delete_accounts_helper.anonymize_workshop_surveys(pd_enrollments.pluck(:id))
           delete_accounts_helper.remove_poste_data(email)
           delete_accounts_helper.purge_contact_rollups(email)
         end
@@ -129,6 +129,13 @@ module Services
           if foorm_submission.present?
             foorm_submission.update!(answers: foorm_submission.answers.gsub(EMAIL_REGEX, REDACTED_EMAIL_STRING))
           end
+        end
+      end
+
+      private def scrub_pd_enrollments
+        pd_enrollments.find_each do |e|
+          e.destroy!
+          e.update!(first_name: nil, last_name: nil, email: '')
         end
       end
 

@@ -59,6 +59,7 @@ class Services::User::PiiScrubberTest < ActiveSupport::TestCase
         Pd::MiscSurvey.any_instance.stubs(:map_answers_to_attributes) # Avoids JotForm API calls
         user.simple_survey_submissions << create(:simple_survey_submission, simple_survey_form: create(:simple_survey_form), foorm_submission: create(:foorm_submission, answers: {foo: email}.to_json))
         user.misc_surveys << create(:misc_survey, submission_id: create(:foorm_submission).id, answers: {foo: email}.to_json)
+        user.pd_enrollments << create(:pd_enrollment, email: email, first_name: 'John', last_name: 'Doe')
       end
 
       it 'removes email from foorm submissions' do
@@ -69,6 +70,13 @@ class Services::User::PiiScrubberTest < ActiveSupport::TestCase
       it 'removes answers from misc surveys' do
         scrub_pii
         _(user.misc_surveys.first.reload.answers).must_be_nil
+      end
+
+      it 'removes PII from PD enrollments' do
+        scrub_pii
+        _(user.pd_enrollments.with_deleted.first.email).must_be_empty
+        _(user.pd_enrollments.with_deleted.first.first_name).must_be_nil
+        _(user.pd_enrollments.with_deleted.first.last_name).must_be_nil
       end
     end
 
