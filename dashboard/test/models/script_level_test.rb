@@ -315,8 +315,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
     sl = create_script_level_with_ancestors({assessment: false})
     sl_other = create_script_level_with_ancestors({levels: sl.levels})
 
-    unit_group = create(:unit_group)
-    create(:unit_group_unit, unit_group: unit_group, script: sl_other.script, position: 1)
+    unit_group = create(:unit_group, :with_unit, unit: sl_other.script)
     User.track_level_progress(
       user_id: student.id,
       level_id: sl_other.levels[0].id,

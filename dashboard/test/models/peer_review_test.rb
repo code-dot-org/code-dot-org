@@ -24,6 +24,7 @@ class PeerReviewTest < ActiveSupport::TestCase
 
     @script_level = create(:script_level, levels: [@level], script: @learning_module.plc_course_unit.script, lesson: @learning_module.lesson)
     @script = @script_level.script
+    @unit_group = create(:unit_group, :with_unit, unit: @script)
 
     @user = create(:user)
 
@@ -526,8 +527,6 @@ class PeerReviewTest < ActiveSupport::TestCase
 
   private def track_progress(level_source_id, user = @user, script_level = @script_level)
     # this is what creates the peer review objects
-    unit_group = create(:unit_group)
-    create(:unit_group_unit, unit_group: unit_group, script: script_level.script, position: 1)
     User.track_level_progress(
       user_id: user.id,
       level_id: script_level.level_id,
@@ -536,7 +535,7 @@ class PeerReviewTest < ActiveSupport::TestCase
       submitted: true,
       level_source_id: level_source_id,
       pairing_user_ids: nil,
-      unit_group: unit_group
+      unit_group: @unit_group
     )
   end
 
