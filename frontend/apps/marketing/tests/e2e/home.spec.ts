@@ -21,25 +21,10 @@ test.describe('Home Page', () => {
   });
 
   test(
-    'should redirect / to dashboard if the _user_type cookie is set',
+    'should have a button to go to code studio (dashboard)',
     {tag: '@corporate'},
-    async ({page, browserName, context}) => {
+    async ({page, context}) => {
       test.skip(getSiteType() !== 'corporate', 'Only runs on corporate site');
-      test.skip(browserName !== 'chromium', 'Only runs in Chromium');
-      const redirects: string[] = [];
-
-      // Capture all requests to track redirects
-      page.on('request', request => {
-        redirects.push(request.url());
-      });
-
-      await page.route('**://**studio.code.org**/', route => {
-        route.fulfill({
-          status: 200,
-          contentType: 'text/html',
-          body: '<html><body>Mocked Code Studio</body></html>',
-        });
-      });
 
       const marketingPage = new MarketingPage(page);
 
@@ -52,44 +37,15 @@ test.describe('Home Page', () => {
         },
       ]);
 
-      try {
-        await marketingPage.goto('/');
-      } catch {
-        // It's ok if an error occurs as dashboard may not be running
-      }
-
-      await expect.poll(() => redirects[1]).toContain('studio.code.org');
-    },
-  );
-
-  test(
-    'should redirect / to dashboard if the user is signed in (no cookies set)',
-    {tag: '@corporate'},
-    async ({page, browserName}) => {
-      test.skip(getSiteType() !== 'corporate', 'Only runs on corporate site');
-      test.skip(browserName !== 'chromium', 'Only runs in Chromium');
-
-      const marketingPage = new MarketingPage(page);
-
-      await page.route('**/api/v1/users/signed_in', route =>
-        route.fulfill({
-          status: 200,
-          contentType: 'application/json',
-          body: JSON.stringify({is_signed_in: true}),
-        }),
-      );
-
-      await page.route('**://**studio.code.org**/', route => {
-        route.fulfill({
-          status: 200,
-          contentType: 'text/html',
-          body: '<html><body>Mocked Code Studio</body></html>',
-        });
-      });
-
       await marketingPage.goto('/');
 
-      await expect(page.getByText('Mocked Code Studio')).toBeVisible();
+      const studioButton = page.getByText('Go to Dashboard');
+
+      await expect(studioButton).toBeVisible();
+
+      await studioButton.click();
+
+      await expect(page).not.toHaveURL('/');
     },
   );
 });

@@ -1,17 +1,19 @@
 import {NextResponse} from 'next/server';
 
 import {STALE_WHILE_REVALIDATE_ONE_HOUR} from '@/cache/constants';
-import {getBrandFromHostname} from '@/config/brand';
+import {Brand, getBrandFromHostname} from '@/config/brand';
 
 import {withRedirects} from '../withRedirects';
 
 jest.mock('@/config/brand', () => ({
   ...jest.requireActual('@/config/brand'),
-  getBrandFromHostname: jest.fn(() => 'Code.org'),
+  getBrandFromHostname: jest.fn(),
 }));
 jest.mock('@/config/host', () => ({
   getLocalhostAddress: jest.fn(() => 'http://localhost:3000'),
 }));
+
+const mockGetBrandFromHostname = getBrandFromHostname as jest.Mock;
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const MOCK_RESPONSE_HEADERS: any = {
@@ -34,6 +36,7 @@ describe('withRedirects middleware', () => {
 
   beforeEach(() => {
     jest.clearAllMocks();
+    mockGetBrandFromHostname.mockReturnValue(Brand.CODE_DOT_ORG);
   });
 
   it('calls next if redirect config API returns 404', async () => {
@@ -178,6 +181,61 @@ describe('withRedirects middleware', () => {
     );
     expect(response).toEqual(
       NextResponse.redirect('http://localhost:3000/hoc', {
+        status: 307,
+        headers: {
+          'Cache-Control': STALE_WHILE_REVALIDATE_ONE_HOUR,
+          ETag: 'mocked-etag',
+        },
+      }),
+    );
+  });
+
+  it('calls brand redirect only if cache returns no redirect entry (404)', async () => {
+    (fetch as jest.Mock).mockResolvedValue({
+      status: 404,
+      json: async () => ({}),
+    });
+    // CODE_DOT_ORG brand triggers a brand redirect for /es/engineering/all-the-things
+    const req = makeRequest('/es/engineering/all-the-things');
+    const response = await withRedirects(next)(req, event);
+    // Should return a redirect response (not call next) for this brand/path
+    expect(response?.status).toBe(308);
+    expect(response?.headers.get('Location')).toBe(
+      'http://localhost:3000/es-LA/engineering/all-the-things',
+    );
+  });
+
+  it('calls brand redirect only if cache returns no redirect entry (null)', async () => {
+    (fetch as jest.Mock).mockResolvedValue({
+      status: 200,
+      json: async () => ({redirectEntry: null}),
+    });
+    const req = makeRequest('/es/engineering/all-the-things');
+    const response = await withRedirects(next)(req, event);
+    expect(response?.status).toBe(308);
+    expect(response?.headers.get('Location')).toBe(
+      'http://localhost:3000/es-LA/engineering/all-the-things',
+    );
+  });
+
+  it('does not call brand redirect if cache returns a redirect entry', async () => {
+    (fetch as jest.Mock).mockResolvedValue({
+      status: 200,
+      headers: {
+        get: (header: string) => MOCK_RESPONSE_HEADERS[header],
+      },
+      json: async () => ({
+        redirectEntry: {
+          destination: '/bar',
+          permanent: false,
+        },
+      }),
+    });
+    // This path would normally trigger a brand redirect, but cache wins
+    const req = makeRequest('/es/engineering/all-the-things');
+    const response = await withRedirects(next)(req, event);
+    expect(response).toEqual(
+      NextResponse.redirect('http://localhost:3000/bar', {
         status: 307,
         headers: {
           'Cache-Control': STALE_WHILE_REVALIDATE_ONE_HOUR,

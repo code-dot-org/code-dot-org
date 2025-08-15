@@ -1,10 +1,8 @@
 import CloseButton from '@code-dot-org/component-library/closeButton';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Image from '@code-dot-org/component-library/image';
-import Link from '@code-dot-org/component-library/link';
 import {
   Heading3,
-  BodyTwoText,
   BodyThreeText,
   StrongText,
 } from '@code-dot-org/component-library/typography';
@@ -36,8 +34,8 @@ const CourseOfferingExpandedCard: React.FunctionComponent<
   courseDurationLabel,
   translatedGradeRange,
   translatedSubjectsAndTopicsTitlesArray,
-  relatedProposalsContent,
-  relatedProposalsHeader,
+  // relatedProposalsContent,
+  // relatedProposalsHeader,
 }) => {
   return (
     <div className={moduleStyles.courseOfferingExpandedCardContainer}>
@@ -90,27 +88,29 @@ const CourseOfferingExpandedCard: React.FunctionComponent<
           {courseOffering.available_resources &&
             !!Object.keys(courseOffering.available_resources).length && (
               <div className={moduleStyles.additionalDetails}>
-                <div>
-                  <FontAwesomeV6Icon
-                    iconName="book-open-cover"
-                    iconStyle="solid"
-                  />
-                  <BodyThreeText noMargin>
-                    <StrongText>Associated Curriculum:</StrongText>
-                  </BodyThreeText>
-                  {Object.keys(courseOffering.available_resources).length &&
-                    Object.keys(courseOffering.available_resources).map(key => (
-                      <Link
-                        key={key}
-                        href={
-                          courseOffering.available_resources
-                            ? courseOffering.available_resources[key]
-                            : '#'
-                        }
-                        text={key}
-                      />
-                    ))}
-                </div>
+                {/*TODO: Bring and refactor this functionality back in scope of
+                 https://codedotorg.atlassian.net/browse/ACQ-3467*/}
+                {/*<div>*/}
+                {/*  <FontAwesomeV6Icon*/}
+                {/*    iconName="book-open-cover"*/}
+                {/*    iconStyle="solid"*/}
+                {/*  />*/}
+                {/*  <BodyThreeText noMargin>*/}
+                {/*    <StrongText>Associated Curriculum:</StrongText>*/}
+                {/*  </BodyThreeText>*/}
+                {/*  {Object.keys(courseOffering.available_resources).length &&*/}
+                {/*    Object.keys(courseOffering.available_resources).map(key => (*/}
+                {/*      <Link*/}
+                {/*        key={key}*/}
+                {/*        href={*/}
+                {/*          courseOffering.available_resources*/}
+                {/*            ? courseOffering.available_resources[key]*/}
+                {/*            : '#'*/}
+                {/*        }*/}
+                {/*        text={key}*/}
+                {/*      />*/}
+                {/*    ))}*/}
+                {/*</div>*/}
               </div>
             )}
 
@@ -121,20 +121,20 @@ const CourseOfferingExpandedCard: React.FunctionComponent<
           )}
         </div>
         <div className={moduleStyles.right}>
-          {relatedProposalsContent && (
-            <>
-              <div className={moduleStyles.top}>
-                {relatedProposalsHeader && (
-                  <BodyTwoText>
-                    <StrongText>{relatedProposalsHeader}</StrongText>
-                  </BodyTwoText>
-                )}
-              </div>
-              <div className={moduleStyles.related}>
-                {relatedProposalsContent}
-              </div>
-            </>
-          )}
+          {/*{relatedProposalsContent && (*/}
+          {/*  <>*/}
+          {/*    <div className={moduleStyles.top}>*/}
+          {/*      {relatedProposalsHeader && (*/}
+          {/*        <BodyTwoText>*/}
+          {/*          <StrongText>{relatedProposalsHeader}</StrongText>*/}
+          {/*        </BodyTwoText>*/}
+          {/*      )}*/}
+          {/*    </div>*/}
+          {/*    <div className={moduleStyles.related}>*/}
+          {/*      {relatedProposalsContent}*/}
+          {/*    </div>*/}
+          {/*  </>*/}
+          {/*)}*/}
 
           <CloseButton
             aria-label="Close expanded card"
