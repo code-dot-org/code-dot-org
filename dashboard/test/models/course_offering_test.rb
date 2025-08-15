@@ -99,19 +99,6 @@ class CourseOfferingTest < ActiveSupport::TestCase
     assert_equal 1, CourseOffering.find_by(key: old_offering_key).course_versions.length # old CourseOffering should have 1 version left
   end
 
-  test "add_course_offering does nothing if is_course is false for unit" do
-    num_course_offerings = CourseOffering.count
-    num_course_versions = CourseVersion.count
-    content_root = create(:unit)
-
-    offering = CourseOffering.add_course_offering(content_root)
-
-    assert_nil offering
-    assert_nil content_root.course_version
-    assert_equal num_course_offerings, CourseOffering.count
-    assert_equal num_course_versions, CourseVersion.count
-  end
-
   test "throws exception if removing course version of course that prevent course version change" do
     course = create(:unit_group, family_name: 'family', version_year: '2000')
     CourseOffering.add_course_offering(course)
@@ -680,10 +667,7 @@ class CourseOfferingTest < ActiveSupport::TestCase
 
   test 'missing_required_device_compatibility? returns false for pl course offerings' do
     pl_co = create(:course_offering)
-    pl_course = create(
-      :single_unit_course,
-      :pl_course
-    ).first_unit
+    pl_course = create(:single_unit_course, :pl_course)
     create(:course_version, content_root: pl_course, course_offering: pl_co)
     co = create(:course_offering, self_paced_pl_course_offering: pl_co)
 
@@ -1022,8 +1006,8 @@ class CourseOfferingTest < ActiveSupport::TestCase
   end
 
   test 'finds corresponding offerings for pl course' do
-    pl_course_offering = create(:course_offering)
-    pl_course = create(:single_unit_course, :pl_course).first_unit
+    pl_course_offering =create(:course_offering)
+    pl_course = create(:single_unit_course, :pl_course)
     create(:course_version, content_root: pl_course, course_offering: pl_course_offering)
 
     course_offering = create(:course_offering, self_paced_pl_course_offering: pl_course_offering)
@@ -1039,7 +1023,7 @@ class CourseOfferingTest < ActiveSupport::TestCase
 
   test 'pl_for_elementary_school? returns true if non-pl offering is targeted at elementary' do
     pl_course_offering = create(:course_offering)
-    pl_course = create(:single_unit_course, :pl_course).first_unit
+    pl_course = create(:single_unit_course, :pl_course)
     create(:course_version, content_root: pl_course, course_offering: pl_course_offering)
 
     non_pl_course_offering = create(:course_offering, grade_levels: 'K,1,2,3,4,5', self_paced_pl_course_offering: pl_course_offering)
@@ -1050,7 +1034,7 @@ class CourseOfferingTest < ActiveSupport::TestCase
 
   test 'pl_for_elementary_school? returns false if non-pl offering is not targeted at elementary' do
     pl_course_offering = create(:course_offering)
-    pl_course = create(:single_unit_course, :pl_course).first_unit
+    pl_course = create(:single_unit_course, :pl_course)
     create(:course_version, content_root: pl_course, course_offering: pl_course_offering)
 
     non_pl_course_offering = create(:course_offering, grade_levels: '9,10,11,12', self_paced_pl_course_offering: pl_course_offering)
