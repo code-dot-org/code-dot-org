@@ -1021,7 +1021,7 @@ export const loadSectionStudentData = sectionId => {
           const convertedStudentData = convertStudentServerData(
             studentData,
             state.loginType,
-            sectionId
+            parseInt(sectionId)
           );
           dispatch(setStudents(convertedStudentData));
         })

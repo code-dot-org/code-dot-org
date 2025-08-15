@@ -46,9 +46,7 @@ export const asyncLoadSelectedSection = async (
 
   return response
     .then(r => r.json())
-    .then(sectionData =>
-      setSelectedSectionData(sectionData, parseInt(sectionId))
-    )
+    .then(sectionData => setSelectedSectionData(sectionData, sectionId))
     .then(() => getStore().dispatch(finishLoadingSectionData()))
     .catch(error => {
       analyticsReporter.sendEvent(EVENTS.SECTION_LOAD_FAILURE, {
@@ -61,7 +59,7 @@ export const asyncLoadSelectedSection = async (
 export const setSelectedSectionData = (
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   sectionData: any,
-  sectionId?: number
+  sectionId?: string
 ) => {
   getStore().dispatch(
     setStudentsForCurrentSection(sectionData.id, sectionData.students)
