@@ -1015,7 +1015,7 @@ class Pd::Workshop < ApplicationRecord
         vars: {
           email_to: email,
           name: user.given_name || user.name,
-          cancel_registration_link: CDO.studio_url("pd/workshop_enrollment/#{enrollment.code}/cancel"),
+          cancel_registration_link: CDO.studio_url("pd/workshop_enrollment/#{enrollment.code}/cancel", CDO.default_scheme),
           pre_survey_link: enrollment.pre_workshop_survey_url,
           facilitator_name: workshop.facilitators&.map(&:name)&.join(', '),
           rp_email: regional_partner&.contact_email_with_backup,
@@ -1047,7 +1047,7 @@ class Pd::Workshop < ApplicationRecord
 
     Retryable.retryable(
       on: RestClient::TooManyRequests,
-      tries: MAILJET_RETRY_LIMIT,
+      tries: MailJet::MAILJET_RETRY_LIMIT,
       sleep: ->(n) {2 ** n}
     ) do
       MailJet.send_email(
@@ -1058,7 +1058,7 @@ class Pd::Workshop < ApplicationRecord
           email_to: email,
           name: user.given_name || user.name,
           exit_survey_url: enrollment.exit_survey_url,
-          download_certificate_url: CDO.studio_url("/pd/generate_workshop_certificate/#{enrollment.code}"),
+          download_certificate_url: CDO.studio_url("/pd/generate_workshop_certificate/#{enrollment.code}", CDO.default_scheme),
           rp_email: regional_partner&.contact_email_with_backup,
           rp_name: regional_partner&.name,
           organizer_email: organizer&.email,
