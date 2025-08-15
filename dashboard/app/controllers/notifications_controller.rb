@@ -10,6 +10,7 @@ class NotificationsController < ApplicationController
   def index
     locale = params[:locale] || I18n.default_locale
 
+    puts 'lfm:locale', locale, NOTIFICATION_CONTENTFUL_CONTENT_TYPE
     contentful_entries = Marketing::ContentfulClient.entries(locale.to_s, NOTIFICATION_CONTENTFUL_CONTENT_TYPE)
     contentful_result = contentful_entries.filter_map do |notification|
       format_contentful_notification(notification)

@@ -95,8 +95,9 @@ class NotificationsControllerTest < ActionController::TestCase
 
     test "index only returns active external notifications" do
       create_external_notification(@user, external_id: ENTRY_ID_2, is_dismissed: true)
+      Marketing::ContentfulClient.any_instance.expects(:entries).with('other-locale', 'dashboard-notification').returns([entry_1, entry_2])
 
-      get :index
+      get :index, params: {locale: 'other-locale'}
       assert_response :success
 
       response_data = JSON.parse(@response.body)
