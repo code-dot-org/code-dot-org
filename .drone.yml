@@ -260,8 +260,7 @@ steps:
     image: bitnami/git
     commands:
       - git lfs install
-      # - git clone --branch $DRONE_BRANCH $DRONE_GIT_HTTP_URL . 
-      - git clone --branch $DRONE_SOURCE_BRANCH $DRONE_GIT_HTTP_URL . 
+      - git clone --branch $DRONE_BRANCH $DRONE_GIT_HTTP_URL . 
 
   # Do all the work necessary to run UI tests so we can capture a complete
   # snapshot of rbenv and the database, but don't actually run the tests.
@@ -320,15 +319,14 @@ volumes:
 
 trigger:
   branch:
-#     - "staging"
-#     - "staging-next"
+    - "staging"
+    - "staging-next"
     exclude:
       - "production"
       - "test"
       - "levelbuilder"
   event:
-#     - push
-    - pull_request
+    - push
 ---
 kind: signature
 hmac: d706a958430c49a672f3c7c5a42209f54dd4cc1aada7d68e2489307e2d98b275
