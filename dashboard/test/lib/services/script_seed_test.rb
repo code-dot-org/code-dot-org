@@ -16,8 +16,8 @@ module Services
     setup do
       Game.game_cache = nil
       PDF.stubs(:generate_from_url)
-      @programming_environment = create :programming_environment, name: 'new-lab'
-      @framework = create :framework, shortcode: 'test_framework'
+      @programming_environment = create(:programming_environment, name: 'new-lab')
+      @framework = create(:framework, shortcode: 'test_framework')
     end
 
     # Tests serialization of a "full Unit tree" - a Unit with all of the associated models under it populated.
@@ -64,7 +64,6 @@ module Services
 
     test 'seed script in unit group' do
       script = create_script_tree
-      refute script.course_version
       assert script.original_unit_group.course_version
       assert script.original_unit_group.id, script.original_unit_group_id
       script.freeze
@@ -93,7 +92,6 @@ module Services
     # a particular machine.
     test 'seed script not yet in unit group' do
       script = create_script_tree
-      refute script.course_version
       assert script.unit_group.course_version
 
       # Capture the json while resources are still present. This test checks
@@ -168,7 +166,7 @@ module Services
 
       script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
         script.lesson_groups.first.update!(big_questions: 'updated big questions')
-        create :lesson_group, script: script, description: 'my description'
+        create(:lesson_group, script: script, description: 'my description')
       end
 
       ScriptSeed.seed_from_json(json)
@@ -183,7 +181,7 @@ module Services
 
       script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
         script.lessons.first.update!(overview: 'updated overview')
-        create :lesson, lesson_group: script.lesson_groups.last, script: script, overview: 'my overview', relative_position: 5, absolute_position: 5
+        create(:lesson, lesson_group: script.lesson_groups.last, script: script, overview: 'my overview', relative_position: 5, absolute_position: 5)
       end
 
       ScriptSeed.seed_from_json(json)
@@ -243,13 +241,13 @@ module Services
 
     test 'seed updates script_levels' do
       script = create_script_tree
-      new_level = create :level
+      new_level = create(:level)
 
       script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
         updated_script_level = script.script_levels.first
         updated_script_level.update!(challenge: 'foo')
         updated_script_level.levels += [new_level]
-        create :script_level, lesson: script.lessons.last, script: script, levels: [new_level], assessment: false, bonus: false
+        create(:script_level, lesson: script.lessons.last, script: script, levels: [new_level], assessment: false, bonus: false)
       end
 
       ScriptSeed.seed_from_json(json)
@@ -263,7 +261,7 @@ module Services
       script = create_script_tree
       # give the new level a level key that will appear after the existing
       # level keys in the sort order.
-      new_level = create :level, name: 'xyz'
+      new_level = create(:level, name: 'xyz')
 
       script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
         updated_script_level = script.script_levels.first
@@ -284,7 +282,7 @@ module Services
       script = create_script_tree
       # give the new level a level key that will appear before the existing
       # level keys in the sort order.
-      new_level = create :level, name: 'abc'
+      new_level = create(:level, name: 'abc')
 
       script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
         updated_script_level = script.script_levels.first
@@ -443,7 +441,7 @@ module Services
       # create the programming expression outside of the rollback block, because unlike vocab
       # or resources, the seed process will not re-create the programming expression for us.
       # choose a key later in the sort order than existing keys.
-      new_programming_expression = create :programming_expression, key: 'xyz'
+      new_programming_expression = create(:programming_expression, key: 'xyz')
       old_programming_expression = script.lessons.first.programming_expressions.last
 
       expected_keys = [
@@ -472,7 +470,7 @@ module Services
       # create the programming expression outside of the rollback block, because unlike vocab
       # or resources, the seed process will not re-create the programming expression for us.
       # choose a key earlier in the sort order than existing keys.
-      new_programming_expression = create :programming_expression, key: 'abc'
+      new_programming_expression = create(:programming_expression, key: 'abc')
       old_programming_expression = script.lessons.first.programming_expressions.last
 
       expected_keys = [
@@ -504,7 +502,7 @@ module Services
       # lesson standards are sorted by seeding_key. give the new standard a
       # framework shortcode and shortcode that will make it appear after the
       # existing standards in the sort order.
-      new_standard = create :standard, framework: @framework, shortcode: 'xyz', description: 'New Standard'
+      new_standard = create(:standard, framework: @framework, shortcode: 'xyz', description: 'New Standard')
 
       expected_descriptions = [
         script.lessons.first.standards.last.description,
@@ -532,7 +530,7 @@ module Services
 
       # give the new standard a shortcode that will make it appear before the
       # existing standards in the sort order.
-      new_standard = create :standard, framework: @framework, shortcode: 'abc', description: 'New Standard'
+      new_standard = create(:standard, framework: @framework, shortcode: 'abc', description: 'New Standard')
 
       expected_shortcodes = [
         new_standard.shortcode,
@@ -569,7 +567,7 @@ module Services
       # opportunity standards are sorted by seeding_key. give the new standard
       # a framework shortcode and shortcode that will make it appear after the
       # existing standards in the sort order.
-      new_standard = create :standard, framework: @framework, shortcode: 'xyz', description: 'New Standard'
+      new_standard = create(:standard, framework: @framework, shortcode: 'xyz', description: 'New Standard')
 
       expected_descriptions = [
         script.lessons.first.opportunity_standards.last.description,
@@ -597,7 +595,7 @@ module Services
 
       # give the new standard a shortcode that will make it appear before the
       # existing standards in the sort order.
-      new_standard = create :standard, framework: @framework, shortcode: 'abc', description: 'New Standard'
+      new_standard = create(:standard, framework: @framework, shortcode: 'abc', description: 'New Standard')
 
       # when the order of the serialized lessons_opportunity_standards changes,
       # the sort order of opportunity standards in the database is preserved.
@@ -826,7 +824,7 @@ module Services
     test 'seed deletes levels_script_levels' do
       script = create_script_tree
       old_level = script.script_levels.first.levels.first
-      new_level = create :level
+      new_level = create(:level)
       script.script_levels.first.add_variant(new_level)
       original_counts = get_counts
 
@@ -1144,7 +1142,7 @@ module Services
     end
 
     test 'seed rejects bad plc module name' do
-      unit = create :script, :with_levels
+      unit = create(:script, :with_levels)
       unit.lesson_groups.first.update!(key: 'bad_module_type',  display_name: "Bad Module Type")
 
       # must skip callbacks, or generate_plc_objects will fail.
@@ -1160,7 +1158,7 @@ module Services
     end
 
     test 'published state set to pilot when pilot_experiment is present' do
-      unit = create :script
+      unit = create(:script)
       assert_nil unit.pilot_experiment
       assert_equal Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development, unit.get_published_state
 
@@ -1380,7 +1378,7 @@ module Services
       family_name = "#{name_prefix.gsub(/[^a-z\-]/i, '')}-family"
       version_year = "1999"
 
-      unit_group = create :single_unit_course, unit: script, family_name: family_name, version_year: version_year
+      unit_group = create(:single_unit_course, unit: script, family_name: family_name, version_year: version_year)
       CourseOffering.add_course_offering(unit_group)
 
       script.reload
@@ -1388,25 +1386,25 @@ module Services
       assert course_version
 
       num_lesson_groups.times do |i|
-        create :lesson_group, script: script, key: "#{name_prefix}-lesson-group-#{i + 1}", description: "description #{i + 1}"
+        create(:lesson_group, script: script, key: "#{name_prefix}-lesson-group-#{i + 1}", description: "description #{i + 1}")
       end
 
       script.lesson_groups.each_with_index do |lg, m|
         num_lessons_per_group.times do |n|
           name = "#{name_prefix}-lg-#{m + 1}-l-#{n + 1}"
-          create :lesson, lesson_group: lg, script: script, name: name, key: name, overview: "overview #{m + 1} #{n + 1}", has_lesson_plan: true
+          create(:lesson, lesson_group: lg, script: script, name: name, key: name, overview: "overview #{m + 1} #{n + 1}", has_lesson_plan: true)
         end
       end
       script.reload
 
       if course_version
         (1..num_resources_per_script).each do |r|
-          resource = create :resource, key: "#{script.name}-resource-#{r}", course_version: course_version
+          resource = create(:resource, key: "#{script.name}-resource-#{r}", course_version: course_version)
           ScriptsResource.find_or_create_by!(resource: resource, script: script)
         end
 
         (1..num_resources_per_script).each do |r|
-          resource = create :resource, key: "#{script.name}-student-resource-#{r}", course_version: course_version
+          resource = create(:resource, key: "#{script.name}-student-resource-#{r}", course_version: course_version)
           ScriptsStudentResource.find_or_create_by!(resource: resource, script: script)
         end
       end
@@ -1426,11 +1424,12 @@ module Services
               key: "#{activity.key}-s-#{section_pos}"
             )
             (1..num_script_levels_per_section).each do |sl_pos|
-              game = create :game, name: "#{name_prefix}_game#{sl_num}"
-              level = create :level, name: "#{name_prefix}_blockly_#{sl_num}", level_num: "custom", game: game
-              create :script_level, activity_section: section, activity_section_position: sl_pos,
+              game = create(:game, name: "#{name_prefix}_game#{sl_num}")
+              level = create(:level, name: "#{name_prefix}_blockly_#{sl_num}", level_num: "custom", game: game)
+              create(:script_level, activity_section: section, activity_section_position: sl_pos,
                      lesson: lesson, script: script, levels: [level], challenge: sl_num.even?,
                      assessment: false, bonus: false
+)
               sl_num += 1
             end
           end
@@ -1439,7 +1438,7 @@ module Services
         next unless course_version
 
         (1..num_resources_per_lesson).each do |r|
-          resource = create :resource, key: "#{lesson.name}-resource-#{r}", course_version: course_version
+          resource = create(:resource, key: "#{lesson.name}-resource-#{r}", course_version: course_version)
           LessonsResource.find_or_create_by!(resource: resource, lesson: lesson)
         end
 
@@ -1447,36 +1446,36 @@ module Services
           key = "#{lesson.name}-vocab-#{v}"
           key = Vocabulary.sanitize_key(key)
           key = Vocabulary.uniquify_key(key, course_version.id)
-          vocab = create :vocabulary, key: key, course_version: course_version
+          vocab = create(:vocabulary, key: key, course_version: course_version)
           LessonsVocabulary.find_or_create_by!(vocabulary: vocab, lesson: lesson)
         end
 
         (1..num_programming_expressions_per_lesson).each do |pe|
-          programming_expression = create :programming_expression, programming_environment: @programming_environment, key: "#{lesson.name}-programming-expression-#{pe}", name: "#{lesson.name}-programming-expression-#{pe}"
+          programming_expression = create(:programming_expression, programming_environment: @programming_environment, key: "#{lesson.name}-programming-expression-#{pe}", name: "#{lesson.name}-programming-expression-#{pe}")
           LessonsProgrammingExpression.find_or_create_by!(programming_expression: programming_expression, lesson: lesson)
         end
 
         (1..num_objectives_per_lesson).each do |o|
-          create :objective, key: "#{lesson.name}-objective-#{o}", lesson: lesson
+          create(:objective, key: "#{lesson.name}-objective-#{o}", lesson: lesson)
         end
 
         (1..num_standards_per_lesson).each do |s|
-          standard = create :standard, framework: @framework, shortcode: "#{lesson.name}-standard-#{s}"
+          standard = create(:standard, framework: @framework, shortcode: "#{lesson.name}-standard-#{s}")
           LessonsStandard.find_or_create_by!(standard: standard, lesson: lesson)
         end
 
         (1..num_standards_per_lesson).each do |s|
-          standard = create :standard, framework: @framework, shortcode: "#{lesson.name}-opportunity-standard-#{s}"
+          standard = create(:standard, framework: @framework, shortcode: "#{lesson.name}-opportunity-standard-#{s}")
           LessonsOpportunityStandard.find_or_create_by!(standard: standard, lesson: lesson)
         end
 
         next if lesson.levels.empty?
         (1..num_rubrics_per_lesson).each do |_r|
-          rubric = create :rubric, lesson: lesson, level: lesson.levels.last
+          rubric = create(:rubric, lesson: lesson, level: lesson.levels.last)
           (1..num_learning_goals_per_rubric).each do |lg|
-            learning_goal = create :learning_goal, rubric: rubric, key: "#{lesson.name}-learning-goal-#{lg}"
+            learning_goal = create(:learning_goal, rubric: rubric, key: "#{lesson.name}-learning-goal-#{lg}")
             (0...num_learning_goal_evidence_levels_per_learning_goal).each do |lge|
-              create :learning_goal_evidence_level, learning_goal: learning_goal, understanding: lge
+              create(:learning_goal_evidence_level, learning_goal: learning_goal, understanding: lge)
             end
           end
         end

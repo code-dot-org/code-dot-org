@@ -34,6 +34,11 @@ class Pd::ProfessionalLearningController < ApplicationController
   def courses
     @self_paced_pl_course_offerings = CourseOffering.self_paced_course_offerings_for_catalog
     view_options(full_width: true, no_padding_container: true)
+
+    @page_title = "Computer Science and AI Self Paced Professional Development Courses"
+    @page_description = "Access free, self-paced professional development courses from Code.org for K–12 educators. Learn to teach computer science and AI anytime, anywhere—at your own pace."
+    @canonical_url = CDO.studio_url("/professional-learning/courses")
+
     render :self_paced_pl_catalog
   end
 

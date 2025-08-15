@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 
 import {clearChatMessages} from '@cdo/apps/aichat/redux';
 import {ModelParameters} from '@cdo/apps/aichat/types';
@@ -43,6 +43,16 @@ const AiTutor2Chat: React.FunctionComponent<AiTutor2ChatProps> = ({
   hiddenContext,
 }) => {
   const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    // We currently use query params to allow AI model selection but otherwise do not provide any user
+    // interface to select or see the selected model. This console log was added to give users (testers)
+    // feedback as to which model was actually selected (e.g. if the query param is entered incorrectly or
+    // an unavailable model is selected, it will use the default model). It's in a useEffect (on first
+    // render) rather than in `ai/AiTutorModelId.ts` as that module is apparently imported even if AI Tutor
+    // isn't enabled, leading to a confusing console log message.
+    console.log('🤖: aiTutorModelId:', aiTutorModelId);
+  }, []);
 
   return (
     <div className={moduleStyles.container}>

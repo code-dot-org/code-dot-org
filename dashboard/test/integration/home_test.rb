@@ -4,13 +4,13 @@ class HomeTest < ActionDispatch::IntegrationTest
   self.use_transactional_test_case = true
 
   setup_all do
-    @student = create :student
-    @teacher = create :teacher
-    @section = create :section, user_id: @teacher.id
+    @student = create(:student)
+    @teacher = create(:teacher)
+    @section = create(:section, user_id: @teacher.id)
     Follower.create!(section_id: @section.id, student_user_id: @student.id, user: @teacher)
 
-    @teacher_of_teachers = create :teacher
-    @section_of_teachers = create :section, user_id: @teacher_of_teachers.id
+    @teacher_of_teachers = create(:teacher)
+    @section_of_teachers = create(:section, user_id: @teacher_of_teachers.id)
     Follower.create!(section_id: @section_of_teachers.id, student_user_id: @teacher.id, user: @teacher_of_teachers)
   end
 

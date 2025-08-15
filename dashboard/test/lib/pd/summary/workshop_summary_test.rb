@@ -3,7 +3,7 @@ require 'test_helper'
 module Pd::Summary
   class WorkshopSummaryTest < ActiveSupport::TestCase
     setup do
-      @ended_workshop = create :workshop, :ended, enrolled_and_attending_users: 2, enrolled_absent_users: 2, num_sessions: 2
+      @ended_workshop = create(:workshop, :ended, enrolled_and_attending_users: 2, enrolled_absent_users: 2, num_sessions: 2)
       @workshop_summary = WorkshopSummary.new(workshop: @ended_workshop)
     end
 
@@ -48,7 +48,7 @@ module Pd::Summary
     end
 
     test 'workshop summary reports nil for attendance count for all sessions attendance for admin workshop' do
-      @ended_admin_workshop = build :admin_workshop, :ended, enrolled_and_attending_users: 2, enrolled_absent_users: 2, num_sessions: 2
+      @ended_admin_workshop = build(:admin_workshop, :ended, enrolled_and_attending_users: 2, enrolled_absent_users: 2, num_sessions: 2)
       @ended_admin_workshop.save(validate: false)
       @workshop_summary = WorkshopSummary.new(workshop: @ended_admin_workshop)
       report = @workshop_summary.generate_workshop_summary_line_item
@@ -57,7 +57,7 @@ module Pd::Summary
     end
 
     test 'workshop summary reports nil for attendance count for all sessions attendance for admin/counselor workshop' do
-      @ended_admin_counselor_workshop = create :admin_counselor_workshop, :ended, enrolled_and_attending_users: 2, enrolled_absent_users: 2, num_sessions: 2
+      @ended_admin_counselor_workshop = create(:admin_counselor_workshop, :ended, enrolled_and_attending_users: 2, enrolled_absent_users: 2, num_sessions: 2)
       @workshop_summary = WorkshopSummary.new(workshop: @ended_admin_counselor_workshop)
       report = @workshop_summary.generate_workshop_summary_line_item
       assert_nil report[:num_teachers_attending_all_sessions]

@@ -60,16 +60,16 @@ export const HorizontalWithImage: Story = {
   play: async ({canvasElement}) => {
     const canvas = within(canvasElement);
     const headings = canvas.getAllByRole('heading');
-    expect(headings.length).toBe(4);
-    headings.forEach((h: HTMLElement) =>
-      expect(h.textContent).toMatch(/Editorial Card/),
-    );
+    await expect(headings.length).toBe(4);
+    for (const h of headings) {
+      await expect(h.textContent).toMatch(/Editorial Card/);
+    }
     const links = canvas.getAllByRole('link', {name: 'Editorial Card Link'});
-    expect(links.length).toBe(4);
-    links.forEach((link: HTMLElement) => {
-      expect(link).toHaveAttribute('href', '/editorial-card-test');
-      expect(link.textContent).toBe('Editorial Card Link');
-    });
+    await expect(links.length).toBe(4);
+    for (const link of links) {
+      await expect(link).toHaveAttribute('href', '/editorial-card-test');
+      await expect(link.textContent).toBe('Editorial Card Link');
+    }
   },
 };
 
@@ -91,16 +91,16 @@ export const VerticalWithImage: Story = {
   play: async ({canvasElement}) => {
     const canvas = within(canvasElement);
     const headings = canvas.getAllByRole('heading');
-    expect(headings.length).toBe(3);
-    headings.forEach((h: HTMLElement) =>
-      expect(h.textContent).toMatch(/Editorial Card/),
-    );
+    await expect(headings.length).toBe(3);
+    for (const h of headings) {
+      await expect(h.textContent).toMatch(/Editorial Card/);
+    }
     const links = canvas.getAllByRole('link', {name: 'Editorial Card Link'});
-    expect(links.length).toBe(3);
-    links.forEach((link: HTMLElement) => {
-      expect(link).toHaveAttribute('href', '/editorial-card-test');
-      expect(link.textContent).toBe('Editorial Card Link');
-    });
+    await expect(links.length).toBe(3);
+    for (const link of links) {
+      await expect(link).toHaveAttribute('href', '/editorial-card-test');
+      await expect(link.textContent).toBe('Editorial Card Link');
+    }
   },
 };
 
@@ -122,18 +122,17 @@ export const VerticalWithIcon: Story = {
   play: async ({canvasElement}) => {
     const canvas = within(canvasElement);
     const headings = canvas.getAllByRole('heading');
-    expect(headings.length).toBe(3);
-    headings.forEach((h: HTMLElement) =>
-      expect(h.textContent).toMatch(/Editorial Card/),
-    );
+    await expect(headings.length).toBe(3);
+    for (const h of headings) {
+      await expect(h.textContent).toMatch(/Editorial Card/);
+    }
     const links = canvas.getAllByRole('link', {name: 'Editorial Card Link'});
-    expect(links.length).toBe(3);
-    links.forEach((link: HTMLElement) => {
-      expect(link).toHaveAttribute('href', '/editorial-card-test');
-      expect(link.textContent).toBe('Editorial Card Link');
-    });
-    // Icon test: check for svg or i tag
+    await expect(links.length).toBe(3);
+    for (const link of links) {
+      await expect(link).toHaveAttribute('href', '/editorial-card-test');
+      await expect(link.textContent).toBe('Editorial Card Link');
+    }
     const icons = canvasElement.querySelectorAll('svg, i');
-    expect(icons.length).toBeGreaterThanOrEqual(3);
+    await expect(icons.length).toBeGreaterThanOrEqual(3);
   },
 };

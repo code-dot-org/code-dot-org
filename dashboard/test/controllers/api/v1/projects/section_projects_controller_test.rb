@@ -4,10 +4,10 @@ class Api::V1::Projects::SectionProjectsControllerTest < ActionController::TestC
   STUDENT_STORAGE_ID = 11
 
   setup do
-    @teacher = create :teacher
-    @section = create :section, user: @teacher
-    @student = create :user
-    create :follower, section: @section, student_user: @student
+    @teacher = create(:teacher)
+    @section = create(:section, user: @teacher)
+    @student = create(:user)
+    create(:follower, section: @section, student_user: @student)
 
     student_project_value = {
       name: 'Bobs App',

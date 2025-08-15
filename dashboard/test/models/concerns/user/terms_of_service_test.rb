@@ -2,7 +2,7 @@ require 'test_helper'
 
 class TermsOfServiceTest < ActiveSupport::TestCase
   let(:teacher_tos_version) {User.latest_terms_version}
-  let(:teacher) {build :teacher, terms_of_service_version: teacher_tos_version}
+  let(:teacher) {build(:teacher, terms_of_service_version: teacher_tos_version)}
   let(:latest_tos_version) {User::TermsOfService::TERMS_OF_SERVICE_VERSIONS.last}
 
   describe '#accepted_latest_terms?' do

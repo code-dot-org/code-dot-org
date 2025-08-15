@@ -68,19 +68,19 @@ class ActivitiesControllerTest < ActionController::TestCase
     }
 
     # set up params for testing rubric evaluation
-    @teacher = create :authorized_teacher
-    @section = create :section, teacher: @teacher
-    @student = create :student
-    create :follower, section: @section, student_user: @student
+    @teacher = create(:authorized_teacher)
+    @section = create(:section, teacher: @teacher)
+    @student = create(:student)
+    create(:follower, section: @section, student_user: @student)
     @milestone_rubric_params = @milestone_params.merge(
       user_id: @student.id,
       submitted: 'true'
     )
 
-    @unauthorized_teacher = create :teacher
-    @unauth_teacher_section = create :section, teacher: @unauthorized_teacher
-    @unauth_teacher_student = create :student
-    create :follower, section: @unauth_teacher_section, student_user: @unauth_teacher_student
+    @unauthorized_teacher = create(:teacher)
+    @unauth_teacher_section = create(:section, teacher: @unauthorized_teacher)
+    @unauth_teacher_student = create(:student)
+    create(:follower, section: @unauth_teacher_section, student_user: @unauth_teacher_student)
     @unauth_milestone_rubric_params = @milestone_params.merge(
       user_id: @unauth_teacher_student.id,
       submitted: 'true'
@@ -229,9 +229,9 @@ class ActivitiesControllerTest < ActionController::TestCase
 
   test "milestone creates userlevel with specified level when scriptlevel has multiple levels" do
     params = @milestone_params
-    level1 = create :maze, name: 'level 1'
-    level2 = create :maze, name: 'level 2'
-    script_level = create :script_level, levels: [level1, level2]
+    level1 = create(:maze, name: 'level 1')
+    level2 = create(:maze, name: 'level 2')
+    script_level = create(:script_level, levels: [level1, level2])
     params[:script_level_id] = script_level.id
     params[:level_id] = level1.id
     params[:result] = 'true'
@@ -243,9 +243,9 @@ class ActivitiesControllerTest < ActionController::TestCase
 
   test "milestone creates userlevel with specified level when scriptlevel has multiple levels for second level" do
     params = @milestone_params
-    level1 = create :maze, name: 'level 1'
-    level2 = create :maze, name: 'level 2'
-    script_level = create :script_level, levels: [level1, level2]
+    level1 = create(:maze, name: 'level 1')
+    level2 = create(:maze, name: 'level 2')
+    script_level = create(:script_level, levels: [level1, level2])
     params[:script_level_id] = script_level.id
     params[:level_id] = level2.id
     params[:result] = 'true'
@@ -887,7 +887,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
   test 'milestone changes to next lesson in custom script' do
     ScriptLevel.class_variable_set(:@@script_level_map, nil)
-    script = create :script, :in_single_unit_course, :with_levels, lessons_count: 2, name: 'Milestone Unit', skip_name_format_validation: true
+    script = create(:script, :in_single_unit_course, :with_levels, lessons_count: 2, name: 'Milestone Unit', skip_name_format_validation: true)
     script.lessons.first.update!(key: 'Milestone Lesson 1', name: 'Milestone Lesson 1')
     script.reload
 
@@ -905,11 +905,11 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   test 'milestone post respects level_id for active level' do
-    script = create :script, :in_single_unit_course
-    lesson = create :lesson, script: script
-    level1a = create :maze, name: 'maze 1'
-    level1b = create :maze, name: 'maze 1 new'
-    script_level = create :script_level, script: script, lesson: lesson, levels: [level1a, level1b], properties: {'maze 1': {active: false}}
+    script = create(:script, :in_single_unit_course)
+    lesson = create(:lesson, script: script)
+    level1a = create(:maze, name: 'maze 1')
+    level1b = create(:maze, name: 'maze 1 new')
+    script_level = create(:script_level, script: script, lesson: lesson, levels: [level1a, level1b], properties: {'maze 1': {active: false}})
 
     post :milestone,
       params: @milestone_params.merge(
@@ -979,7 +979,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     session[:pairings] = [pairing.id]
     session[:pairing_section_id] = section.id
 
-    existing_navigator_user_level = create :user_level, user: pairing, script: @script, level: @level, best_result: 10
+    existing_navigator_user_level = create(:user_level, user: pairing, script: @script, level: @level, best_result: 10)
 
     assert_difference('UserLevel.count', 1) do # one gets a new user level
       assert_creates(PairedUserLevel) do # there is one PairedUserLevel to link them
@@ -1001,7 +1001,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     session[:pairings] = [pairing.id]
     session[:pairing_section_id] = section.id
 
-    existing_driver_user_level = create :user_level, user: @user, script: @script, level: @level, best_result: 10
+    existing_driver_user_level = create(:user_level, user: @user, script: @script, level: @level, best_result: 10)
 
     assert_difference('UserLevel.count', 1) do # one gets a new user level
       assert_creates(PairedUserLevel) do # there is one PairedUserLevel to link them
@@ -1024,7 +1024,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     session[:pairing_section_id] = section.id
     section.update!(pairing_allowed: false)
 
-    existing_driver_user_level = create :user_level, user: @user, script: @script, level: @level, best_result: 10
+    existing_driver_user_level = create(:user_level, user: @user, script: @script, level: @level, best_result: 10)
 
     assert_no_difference('UserLevel.count') do # no new UserLevel is created
       assert_no_difference('PairedUserLevel.count') do # no PairedUserLevel is created
@@ -1046,18 +1046,18 @@ class ActivitiesControllerTest < ActionController::TestCase
     student_1 = create(:follower, section: section).student_user
     sign_in student_1
 
-    script = create :script, :in_single_unit_course
+    script = create(:script, :in_single_unit_course)
 
     # Create a LevelGroup level.
-    level = create :level_group, :with_sublevels, name: 'LevelGroupLevel1'
+    level = create(:level_group, :with_sublevels, name: 'LevelGroupLevel1')
     level.properties['title'] =  'Long assessment 1'
     level.properties['submittable'] = true
     level.save!
 
-    lesson = create :lesson, name: 'Lesson1', script: script, lockable: true
+    lesson = create(:lesson, name: 'Lesson1', script: script, lockable: true)
 
     # Create a ScriptLevel joining this level to the script.
-    script_level = create :script_level, script: script, levels: [level], assessment: true, lesson: lesson
+    script_level = create(:script_level, script: script, levels: [level], assessment: true, lesson: lesson)
 
     milestone_params = {
       user_id: student_1,
@@ -1077,7 +1077,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_response 403
 
     # explicity create a user_level that is unlocked
-    user_level = create :user_level, user: student_1, script: script, level: level, submitted: false, locked: false
+    user_level = create(:user_level, user: student_1, script: script, level: level, submitted: false, locked: false)
 
     # should now succeed
     post :milestone, params: milestone_params
@@ -1093,7 +1093,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     user_level.really_destroy!
     # explicity create a user_level that is readonly_answers
-    create :user_level, user: student_1, script: script, level: level, submitted: true, locked: true, readonly_answers: true
+    create(:user_level, user: student_1, script: script, level: level, submitted: true, locked: true, readonly_answers: true)
     post :milestone, params: milestone_params
     assert_response 403
   end
@@ -1113,17 +1113,17 @@ class ActivitiesControllerTest < ActionController::TestCase
     post :milestone, params: @milestone_params
     assert_nil AssessmentActivity.find_by(user_id: @user, level_id: @script_level.id, script_id: @script_level.script.id)
 
-    assessment_script_level = create :script_level, assessment: true
+    assessment_script_level = create(:script_level, assessment: true)
     post :milestone, params: @milestone_params.merge(script_level_id: assessment_script_level.id)
     assert_nil AssessmentActivity.find_by(user_id: @user, level_id: assessment_script_level.level.id, script_id: assessment_script_level.script.id)
 
-    multi_level = create :multi
+    multi_level = create(:multi)
 
-    multi_sl = create :script_level, levels: [multi_level]
+    multi_sl = create(:script_level, levels: [multi_level])
     post :milestone, params: @milestone_params.merge(script_level_id: multi_sl.id)
     assert_nil AssessmentActivity.find_by(user_id: @user, level_id: multi_sl.level.id, script_id: multi_sl.script.id)
 
-    assessment_multi_sl = create :script_level, levels: [multi_level], assessment: true
+    assessment_multi_sl = create(:script_level, levels: [multi_level], assessment: true)
     milestone_params = @milestone_params.merge(
       script_level_id: assessment_multi_sl.id, program: '0'
     )
@@ -1153,9 +1153,9 @@ class ActivitiesControllerTest < ActionController::TestCase
     # make sure that we don't create an AssessmentActivity when the multi level
     # is updated within an assessment level group.
 
-    multi_sublevel = create :multi
-    level_group = create :level_group, name: 'assessment-level-group'
-    script_level = create :script_level, levels: [level_group], assessment: true
+    multi_sublevel = create(:multi)
+    level_group = create(:level_group, name: 'assessment-level-group')
+    script_level = create(:script_level, levels: [level_group], assessment: true)
     post :milestone, params: @milestone_params.merge(
       script_level_id: script_level.id,
       level_id: multi_sublevel.id
@@ -1164,10 +1164,10 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   test "milestone_for_bubble_choice_sublevel_also_stores_progress_for_parent_level" do
-    sublevel1 = create :applab, name: 'choice_1'
-    sublevel2 = create :gamelab, name: 'choice_2'
-    bubble_choice = create :bubble_choice_level, sublevels: [sublevel1, sublevel2]
-    script_level = create :script_level, levels: [bubble_choice]
+    sublevel1 = create(:applab, name: 'choice_1')
+    sublevel2 = create(:gamelab, name: 'choice_2')
+    bubble_choice = create(:bubble_choice_level, sublevels: [sublevel1, sublevel2])
+    script_level = create(:script_level, levels: [bubble_choice])
     script = script_level.script
 
     assert_nil UserLevel.find_by(user: @user, level: sublevel1, script: script)
@@ -1205,8 +1205,8 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   test 'milestone triggers AI rubric eval job' do
-    section = create :section, teacher: @teacher, script: @script
-    create :follower, section: section, student_user: @student
+    section = create(:section, teacher: @teacher, script: @script)
+    create(:follower, section: section, student_user: @student)
 
     Metrics::Events.stubs(:log_event).once
     AiRubricConfig.stubs(:ai_enabled?).with(@script_level).returns(true)
@@ -1220,8 +1220,8 @@ class ActivitiesControllerTest < ActionController::TestCase
   test 'milestone where teacher disables AI does not triggers rubric eval job' do
     @teacher.ai_rubrics_disabled = true
     @teacher.save!
-    section = create :section, teacher: @teacher, script: @script
-    create :follower, section: section, student_user: @student
+    section = create(:section, teacher: @teacher, script: @script)
+    create(:follower, section: section, student_user: @student)
     Metrics::Events.stubs(:log_event).never
     AiRubricConfig.stubs(:ai_enabled?).with(@script_level).returns(true)
     EvaluateRubricJob.expects(:perform_later).never
@@ -1232,8 +1232,8 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   test 'milestone with student on non ai level does not trigger rubric eval job' do
-    section = create :section, teacher: @teacher, script: @script
-    create :follower, section: section, student_user: @student
+    section = create(:section, teacher: @teacher, script: @script)
+    create(:follower, section: section, student_user: @student)
     Metrics::Events.stubs(:log_event).never
     AiRubricConfig.stubs(:ai_enabled?).with(@script_level).returns(false)
     EvaluateRubricJob.expects(:perform_later).never

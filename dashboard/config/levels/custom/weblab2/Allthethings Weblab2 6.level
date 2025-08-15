@@ -1,0 +1,16 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2025-07-31T21:46:31.000Z",
+  "level_num": "custom",
+  "user_id": 6959,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Web Lab 2 Lab Widget View\r\n\r\nThis is an example of widget view WITH toggle to view/hide code.",
+    "widget_view": "true",
+    "widget_view_allow_show_code": "true"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-07-31T21:46:31.103+00:00\",\"changed\":[\"cloned from \\\"Allthethings Weblab2 5\\\"\"],\"cloned_from\":\"Allthethings Weblab2 5\"},{\"changed_at\":\"2025-07-31 21:46:44 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-01 16:37:50 +0000\",\"changed\":[\"long_instructions\",\"widget_view\",\"widget_view_allow_show_code\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

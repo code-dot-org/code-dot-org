@@ -17,6 +17,7 @@ class Api::V1::Pd::WorkshopEnrollmentSerializer < ActiveModel::Serializer
       given_name: user&.given_name,
       family_name: user&.family_name,
       email: user&.email,
+      role: user&.educator_role,
       school_name: school_info.present? ? (school_info.effective_school_name || "Does not teach in a school setting") : nil,
       district_name: school_info&.try(:school_district).try(:name)
     }

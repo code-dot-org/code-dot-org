@@ -3,7 +3,7 @@ require 'base64'
 
 class CertificatesControllerTest < ActionController::TestCase
   setup_all do
-    @teacher = create :teacher
+    @teacher = create(:teacher)
     @teacher.freeze
   end
 
@@ -50,6 +50,9 @@ class CertificatesControllerTest < ActionController::TestCase
   end
 
   test 'shows custom image for unpersonalized csf course' do
+    unit = create(:unit, name: 'course1')
+    unit_group = create(:single_unit_course, :stable, unit: unit, name: 'course1')
+    CourseOffering.add_course_offering(unit_group)
     data = {course: 'course1'}
     encoded_params = Base64.urlsafe_encode64(data.to_json)
     get :show, params: {encoded_params: encoded_params}
@@ -87,9 +90,9 @@ class CertificatesControllerTest < ActionController::TestCase
   end
 
   test 'batch page loads custom image for oceans course' do
-    oceans = create :script, name: 'oceans'
-    oceans_course = create :single_unit_course, unit: oceans, name: 'oceans'
-    create :course_version, content_root: oceans_course
+    oceans = create(:script, name: 'oceans')
+    oceans_course = create(:single_unit_course, unit: oceans, name: 'oceans')
+    create(:course_version, content_root: oceans_course)
 
     sign_in @teacher
     encoded_course_name = Base64.urlsafe_encode64('oceans')
