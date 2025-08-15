@@ -20,12 +20,6 @@ export const withRedirects: MiddlewareFactory = next => {
     const hostname = request.headers.get('host');
     const brand = getBrandFromHostname(hostname);
 
-    const brandRedirects = getBrandRedirects(brand, request);
-
-    if (brandRedirects) {
-      return brandRedirects;
-    }
-
     const redirectConfigUrl = new URL(
       `${getLocalhostAddress()}/api/private/redirects/${encodeURIComponent(brand)}/${encodeURIComponent(pathname)}`,
     );
@@ -38,6 +32,12 @@ export const withRedirects: MiddlewareFactory = next => {
       await redirectCacheByBrandResponse.json();
 
     if (!redirectEntryResponse.redirectEntry) {
+      const brandRedirects = getBrandRedirects(brand, request);
+
+      if (brandRedirects) {
+        return brandRedirects;
+      }
+
       return next(request, event);
     }
 
