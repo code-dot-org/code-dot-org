@@ -803,7 +803,7 @@ en:
           description_short: ''
           description_student: ''
           description_teacher: ''
-          version_title: ''
+          version_title: "'23-'24"
         vpl-csp-2024:
           title: CS Principles Virtual PL Workshop Course
           description_short: ''
@@ -5277,7 +5277,7 @@ en:
           version_title: ''
         self-paced-pl-csd-2025:
           title: Teaching CS Discoveries
-          description_short: ''
+          description_short: After completing this online professional leanring module, you'll be ready to get started teaching Code.org's Computer Science Discoveries curriculum with your students.
           description_student: |-
             ## Welcome
             Welcome to Code.org's free self-paced online course for educators to get started teaching CS Discoveries! After completing this online course, **you'll be ready to get started teaching Code.org’s Computer Science Discoveries course** with your students.

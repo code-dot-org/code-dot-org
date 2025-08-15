@@ -13,6 +13,7 @@ import {useSource} from '../codebridge/hooks/useSource';
 import {useAppSelector, useAppDispatch} from '../util/reduxHooks';
 
 import HorizontalLayout from './layout/HorizontalLayout';
+import ShareView from './layout/ShareView';
 import VerticalLayout from './layout/VerticalLayout';
 
 import moduleStyles from './styles/weblab2-view.module.scss';
@@ -31,6 +32,7 @@ const defaultConfig: ConfigType = {
     vertical: VerticalLayout,
     horizontal: HorizontalLayout,
     widget: VerticalLayout,
+    share: ShareView,
   },
 };
 

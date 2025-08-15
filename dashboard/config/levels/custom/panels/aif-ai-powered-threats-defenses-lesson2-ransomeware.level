@@ -26,7 +26,7 @@
         "key": "aif-ai-powered-threats-defenses-lesson2-ransomeware-389a48d6-c8a5-4e6d-af82-e4de146a7265"
       },
       {
-        "text": "#### What should she do? \n\nThey're asking for a lot of money, but she needs access to her computer ASAP.",
+        "text": "#### What should she do? \n\nThey're asking for a lot of money, but she needs access to her computer as soon as possible.",
         "imageUrl": "https://images.code.org/ff3cc15853b85f24bc5f739b060f5d46-Cyber attacks panel levels (4).png",
         "key": "aif-ai-powered-threats-defenses-lesson2-ransomeware-50777fe6-24db-433c-92c6-0766d67687a8"
       },
@@ -37,6 +37,6 @@
       }
     ]
   },
-  "audit_log": "[{\"changed_at\":\"2025-08-13T18:51:37.238+00:00\",\"changed\":[\"cloned from \\\"aif-ai-powered-threats-defenses-lesson2-ddos-panels\\\"\"],\"cloned_from\":\"aif-ai-powered-threats-defenses-lesson2-ddos-panels\"},{\"changed_at\":\"2025-08-13 22:47:43 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-13 22:54:43 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-08-13T18:51:37.238+00:00\",\"changed\":[\"cloned from \\\"aif-ai-powered-threats-defenses-lesson2-ddos-panels\\\"\"],\"cloned_from\":\"aif-ai-powered-threats-defenses-lesson2-ddos-panels\"},{\"changed_at\":\"2025-08-13 22:47:43 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-13 22:54:43 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-14 16:27:02 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
 </Panels>

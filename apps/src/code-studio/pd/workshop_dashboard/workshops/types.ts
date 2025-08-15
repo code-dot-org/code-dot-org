@@ -1,6 +1,13 @@
 import {SegmentedButtonsProps} from '@code-dot-org/component-library/segmentedButtons';
 
-import {SessionFormat, WorkshopState} from '../WorkshopFormTemplate/types';
+import {UseFetchResult} from '@cdo/apps/util/useFetch';
+
+import {
+  EnrollmentData,
+  SessionFormat,
+  Workshop,
+  WorkshopState,
+} from '../WorkshopFormTemplate/types';
 
 export interface WorkshopSession {
   id: number;
@@ -42,9 +49,13 @@ export interface WorkshopData {
 
 export interface WorkshopContextValue {
   workshop: WorkshopData | null;
-  loading: boolean;
-  error: Error | string | null;
-  loadWorkshop: () => void;
+  workshopLoading: UseFetchResult<Workshop>['loading'];
+  workshopError: UseFetchResult<Workshop>['error'];
+  refetchWorkshop: UseFetchResult<Workshop>['refetch'];
+  enrollments: EnrollmentData[];
+  enrollmentsLoading: UseFetchResult<EnrollmentData[]>['loading'];
+  enrollmentsError: UseFetchResult<EnrollmentData[]>['error'];
+  refetchEnrollments: UseFetchResult<EnrollmentData[]>['refetch'];
 }
 
 export interface TabConfig {
