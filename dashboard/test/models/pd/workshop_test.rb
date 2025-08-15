@@ -372,7 +372,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     workshop = create(:workshop, :ended)
 
     create(:pd_workshop_participant, workshop: workshop, enrolled: true)
-    Pd::Enrollment.any_instance.expects(:send_exit_survey).never
+    Pd::Workshop.any_instance.expects(:send_teacher_post_workshop_survey_email).never
 
     workshop.send_exit_surveys
   end
@@ -381,32 +381,24 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     workshop = create(:workshop, :ended)
     workshop.update_columns(course: Pd::Workshop::COURSE_COUNSELOR, subject: nil)
 
-    enrollment = create(:pd_enrollment, workshop: workshop)
-    create(:pd_attendance_no_account, session: workshop.sessions.first, enrollment: enrollment)
-    refute workshop.account_required_for_attendance?
-    Pd::Enrollment.any_instance.expects(:send_exit_survey)
-    workshop.send_exit_surveys
-  end
-
-  test 'send_exit_surveys with attendance but no account gets email for admin/counselor' do
-    workshop = create(:admin_counselor_workshop, :ended)
-
-    enrollment = create(:pd_enrollment, workshop: workshop)
+    user = create(:teacher)
+    enrollment = create(:pd_enrollment, workshop: workshop, user: user)
     create(:pd_attendance_no_account, session: workshop.sessions.first, enrollment: enrollment)
 
     refute workshop.account_required_for_attendance?
-    Pd::Enrollment.any_instance.expects(:send_exit_survey).never
+    Pd::Workshop.expects(:send_teacher_post_workshop_survey_email)
 
     workshop.send_exit_surveys
   end
 
   test 'send_exit_surveys teachers with attendance get emails' do
     workshop = create(:workshop, :ended)
+
     create(:pd_workshop_participant, workshop: workshop, enrolled: true)
     create(:pd_workshop_participant, workshop: workshop, enrolled: true, attended: true)
 
     assert workshop.account_required_for_attendance?
-    Pd::Enrollment.any_instance.expects(:send_exit_survey).times(1)
+    Pd::Workshop.expects(:send_teacher_post_workshop_survey_email).times(1)
 
     workshop.send_exit_surveys
   end
@@ -420,7 +412,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     create(:pd_workshop_participant, workshop: workshop, enrolled: true, attended: true)
 
     # Ensure no exit surveys are sent
-    Pd::Enrollment.any_instance.expects(:send_exit_survey).never
+    Pd::Workshop.expects(:send_teacher_post_workshop_survey_email).never
     workshop.send_exit_surveys
   end
 
@@ -431,7 +423,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     create(:pd_workshop_participant, workshop: workshop, enrolled: true, attended: true)
 
     # Ensure no exit surveys are sent
-    Pd::Enrollment.any_instance.expects(:send_exit_survey).never
+    Pd::Workshop.expects(:send_teacher_post_workshop_survey_email).never
     workshop.send_exit_surveys
   end
 
@@ -442,7 +434,17 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     create(:pd_workshop_participant, workshop: workshop, enrolled: true, attended: true)
 
     # Ensure no exit surveys are sent
-    Pd::Enrollment.any_instance.expects(:send_exit_survey).never
+    Pd::Workshop.expects(:send_teacher_post_workshop_survey_email).never
+    workshop.send_exit_surveys
+  end
+
+  test 'send_exit_surveys sends no survey if already sent' do
+    workshop = create(:workshop, :ended)
+    create(:pd_workshop_participant, workshop: workshop, enrolled: true, attended: true)
+    workshop.enrollments.first.update!(survey_sent_at: Time.zone.today)
+
+    Pd::Workshop.expects(:send_teacher_post_workshop_survey_email).never
+
     workshop.send_exit_surveys
   end
 
