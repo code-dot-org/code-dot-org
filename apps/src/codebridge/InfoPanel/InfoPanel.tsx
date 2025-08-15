@@ -88,6 +88,10 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
   const hasLoadedEnvironment = useAppSelector(
     state => state.lab2System.loadedCodeEnvironment
   );
+  // Web Lab 2 uses the resource panel by default, otherwise we defer to the experiment flag.
+  const useResourcePanel =
+    appName === 'weblab2' ||
+    experiments.isEnabledAllowingQueryString(experiments.LAB2_RESOURCE_PANEL);
 
   useEffect(() => {
     // For now, always include Instructions panel.
@@ -183,9 +187,7 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
     }
   };
 
-  if (
-    experiments.isEnabledAllowingQueryString(experiments.LAB2_RESOURCE_PANEL)
-  ) {
+  if (useResourcePanel) {
     return (
       <div style={style} className={className}>
         <ResourcePanel

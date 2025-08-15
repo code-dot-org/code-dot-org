@@ -1,9 +1,9 @@
 name 'test-ai-powered-threats-defenses-lesson3-level1d'
 title 'Jordan P. - User Profile'
 
-display_name 'PROFILE 4'
-bubble_choice_description 'DESCRIPTION'
-thumbnail_url 'https://images.code.org/35daf4616746412a061782ab3771c1c6-image-1753987189397.png'
+display_name 'Ethan Carter'
+bubble_choice_description 'Ethan is a 17 year old student from Seattle, WA'
+thumbnail_url 'https://images.code.org/5ab7f854ed8fb8162a1441be09c13766-image-1755184934057.png'
 
 markdown <<MARKDOWN
 #Ethan Carter
@@ -74,5 +74,6 @@ markdown <<MARKDOWN
     </td>
   </tr>
 </table>
+
 
 MARKDOWN

@@ -8,14 +8,14 @@
   "grade_levels": "9,10,11,12",
   "header": "self_paced",
   "image": "https://images.code.org/1d0e4201899cf59d6eaf995f5d71428d-csaif-cover-new.avif",
-  "cs_topic": "artificial_intelligence",
+  "cs_topic": "artificial_intelligence,cybersecurity,data,hardware,internet,programming",
   "school_subject": null,
   "device_compatibility": null,
   "description": "This self-paced professional learning module provides educators with a comprehensive understanding of the curriculum, enabling them to effectively guide students through essential CS concepts & understand the transformative role of AI.",
   "professional_learning_program": null,
   "video": null,
   "published_date": "2025-05-30 05:00:00 UTC",
-  "self_paced_pl_course_offering_key": null,
+  "self_paced_pl_course_offering_key": "teaching-ai-foundations",
   "ai_teaching_assistant_available": false,
   "facilitator_course_permissions": [
     "AI Foundations"

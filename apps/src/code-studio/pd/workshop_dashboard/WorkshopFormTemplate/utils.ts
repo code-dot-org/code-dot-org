@@ -12,6 +12,8 @@ import {
   DestroyedSession,
   SessionRequest,
   WorkshopRequest,
+  Enrollment,
+  EnrollmentData,
 } from './types';
 
 export const workshopLabel = (label: string): string =>
@@ -184,9 +186,7 @@ export const emptyValue = (
   }
 };
 
-export const workshopDataToOverviewProps = (
-  apiData: Workshop
-): WorkshopData => ({
+export const workshopDataToProps = (apiData: Workshop): WorkshopData => ({
   id: apiData.id,
   state: apiData.state,
   timeZone: apiData.time_zone,
@@ -220,3 +220,20 @@ export const workshopDataToOverviewProps = (
   enrolledTeacherCount: apiData.enrolled_teacher_count,
   hidden: apiData.hidden,
 });
+
+export const enrollmentDataToProps = (
+  apiResults: Enrollment[]
+): EnrollmentData[] =>
+  apiResults.map(apiData => ({
+    id: apiData.id,
+    givenName: apiData.user_info.given_name ?? apiData.first_name ?? '',
+    familyName: apiData.user_info.family_name ?? apiData.last_name ?? '',
+    email: apiData.user_info.email ?? apiData.email ?? '',
+    schoolName: apiData.user_info.school_name ?? apiData.school ?? '',
+    districtName:
+      apiData.user_info.district_name ?? apiData.district_name ?? '',
+    role: apiData.user_info.role ?? apiData.role ?? '',
+    userId: apiData.user_id,
+    attendances: apiData.attendances,
+    enrolledDate: apiData.enrolled_date,
+  }));

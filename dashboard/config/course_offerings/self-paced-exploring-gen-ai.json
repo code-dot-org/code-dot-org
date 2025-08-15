@@ -3,10 +3,10 @@
   "display_name": "Teaching Exploring Generative AI",
   "is_featured": false,
   "assignable": true,
-  "curriculum_type": "Professional Learning",
+  "curriculum_type": null,
   "marketing_initiative": null,
   "grade_levels": "8,9,10,11,12",
-  "header": "self_paced",
+  "header": null,
   "image": "https://images.code.org/d37c12e8da5e5418097c258885cd60c8-exgenai.png",
   "cs_topic": "artificial_intelligence",
   "school_subject": null,
@@ -15,7 +15,7 @@
   "professional_learning_program": null,
   "video": null,
   "published_date": "2024-10-28 04:00:00 UTC",
-  "self_paced_pl_course_offering_key": "self-paced-exploring-gen-ai",
+  "self_paced_pl_course_offering_key": null,
   "ai_teaching_assistant_available": false,
   "facilitator_course_permissions": [
 
