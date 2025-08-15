@@ -36,9 +36,17 @@ const LabViewsRenderer: React.FunctionComponent = () => {
   const projectSharingDisabled = useAppSelector(
     state => state.lab.projectSharingDisabled
   );
+  const isOwner = useAppSelector(state => state.lab.channel?.isOwner || false);
   const isProjectValidator = useAppSelector(state =>
     state.lab.permissions?.includes(PERMISSIONS.PROJECT_VALIDATOR)
   );
+
+  const pathname = window.location.pathname;
+  const tokens = pathname.split('/');
+  let pageAction = 'share';
+  if (tokens[1] === 'projects') {
+    pageAction = tokens[4];
+  }
 
   const isViewingExemplar = getAppOptionsViewingExemplar();
 
@@ -47,21 +55,29 @@ const LabViewsRenderer: React.FunctionComponent = () => {
     levelProperties,
   });
 
-  // Do not render lab view if project is blocked and user is not a project validator.
-  if (
-    !currentAppName ||
-    ((isBlockedAbuse || projectSharingDisabled) && !isProjectValidator)
-  ) {
+  const isBlocked = isBlockedAbuse || projectSharingDisabled;
+
+  const blockLabView = () => {
+    if (!currentAppName || (pageAction === 'share' && isBlocked)) {
+      return true;
+    }
+    if (['view', 'edit'].includes(pageAction)) {
+      return !isProjectValidator && !isOwner;
+    }
+    return false;
+  };
+
+  // Do not render lab view if project is blocked, and user is not a project validator nor owner, and in share view..
+  if (blockLabView()) {
     return null;
   }
-
   // Show a fallback no exemplar page if we are trying to view
   // exemplar but there is not exemplar for this level.
   if (isViewingExemplar && !exemplarSources) {
     return <NoExemplarPage />;
   }
 
-  const properties = lab2EntryPoints[currentAppName];
+  const properties = currentAppName && lab2EntryPoints[currentAppName];
   if (!properties) {
     console.warn("Don't know how to render app: " + currentAppName);
     return null;

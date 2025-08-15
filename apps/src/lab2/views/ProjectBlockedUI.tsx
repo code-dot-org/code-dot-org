@@ -19,7 +19,16 @@ export const ProjectBlockedUI: React.FunctionComponent<{
   const projectManager = Lab2Registry.getInstance().getProjectManager();
   const shareUrl = projectManager ? projectManager.getShareUrl() : null;
   const isOwner = useAppSelector(state => state.lab.channel?.isOwner || false);
+  const pathname = window.location.pathname;
+
+  const tokens = pathname.split('/');
+  let pageAction = 'share';
+  if (tokens[1] === 'projects') {
+    pageAction = tokens[4];
+  }
+
   const abuseExclamationProps = {
+    canViewFlaggedProject: pageAction === 'view',
     isOwner,
     i18n:
       blockedType === 'projectAbuse'
@@ -45,7 +54,10 @@ export const ProjectBlockedUI: React.FunctionComponent<{
           },
   };
 
-  if (isProjectValidator) {
+  if (
+    ['view', 'edit'].includes(pageAction) &&
+    (isProjectValidator || isOwner)
+  ) {
     return (
       <div
         id="blocked-project-ui-container-project-validator"
