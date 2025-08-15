@@ -3,10 +3,10 @@ require 'test_helper'
 class AssignedCoursesAndScripts < ActiveSupport::TestCase
   include Minitest::RSpecMocks
 
-  let(:student) {create :student}
-  let(:teacher) {create :teacher}
-  let(:section) {create :section, user_id: teacher.id, unit_group: unit_group}
-  let(:unit_group) {create :unit_group, name: 'course'}
+  let(:student) {create(:student)}
+  let(:teacher) {create(:teacher)}
+  let(:section) {create(:section, user_id: teacher.id, unit_group: unit_group)}
+  let(:unit_group) {create(:unit_group, name: 'course')}
 
   before do
     Follower.create!(section_id: section.id, student_user_id: student.id, user: teacher)
@@ -30,7 +30,7 @@ class AssignedCoursesAndScripts < ActiveSupport::TestCase
     end
 
     context 'when the student is not assigned to the course' do
-      let(:another_course) {create :unit_group, name: 'another-course'}
+      let(:another_course) {create(:unit_group, name: 'another-course')}
       it 'returns false' do
         _(student.assigned_course?(another_course)).must_equal false
       end
@@ -50,8 +50,8 @@ class AssignedCoursesAndScripts < ActiveSupport::TestCase
 
   describe '#visible_scripts' do
     subject(:visible_scripts) {student.visible_scripts}
-    let(:visible_script) {create :script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable}
-    let(:hidden_script) {create :script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta}
+    let(:visible_script) {create(:script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)}
+    let(:hidden_script) {create(:script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta)}
 
     context 'when the student is assigned scripts' do
       before do
@@ -68,8 +68,8 @@ class AssignedCoursesAndScripts < ActiveSupport::TestCase
 
   describe '#any_visible_assigned_scripts?' do
     subject(:any_visible_assigned_scripts?) {student.any_visible_assigned_scripts?}
-    let(:visible_script) {create :script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable}
-    let(:hidden_script) {create :script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta}
+    let(:visible_script) {create(:script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)}
+    let(:hidden_script) {create(:script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta)}
 
     context 'when the student has no assigned scripts' do
       it 'returns false' do
@@ -97,13 +97,13 @@ class AssignedCoursesAndScripts < ActiveSupport::TestCase
   end
 
   describe 'assigned and section scripts' do
-    let(:user) {create :student}
-    let(:single_script) {create :script}
-    let(:section_1) {create :section, script: single_script}
-    let(:section_2) {create :section, unit_group: unit_group}
-    let(:unit_group_unit) {create :script}
+    let(:user) {create(:student)}
+    let(:single_script) {create(:script)}
+    let(:section_1) {create(:section, script: single_script)}
+    let(:section_2) {create(:section, unit_group: unit_group)}
+    let(:unit_group_unit) {create(:script)}
     before do
-      create :unit_group_unit, unit_group: unit_group, script: unit_group_unit, position: 1
+      create(:unit_group_unit, unit_group: unit_group, script: unit_group_unit, position: 1)
       section_1.students << user
       section_2.students << user
     end
@@ -119,7 +119,7 @@ class AssignedCoursesAndScripts < ActiveSupport::TestCase
       end
 
       context 'when the user is not assigned a script' do
-        let(:another_script) {create :script}
+        let(:another_script) {create(:script)}
         subject(:assigned_script?) {user.assigned_script?(another_script)}
 
         it 'returns false' do
@@ -142,13 +142,13 @@ class AssignedCoursesAndScripts < ActiveSupport::TestCase
   end
 
   describe '#most_recently_assigned_unit_group_unit' do
-    let(:user) {create :student}
-    let(:section_1) {create :section, unit_group: unit_group}
-    let(:unit_group_unit) {create :script}
+    let(:user) {create(:student)}
+    let(:section_1) {create(:section, unit_group: unit_group)}
+    let(:unit_group_unit) {create(:script)}
     subject(:most_recently_assigned_unit_group_unit) {user.most_recently_assigned_unit_group_unit}
 
     before do
-      create :unit_group_unit, unit_group: unit_group, script: unit_group_unit, position: 1
+      create(:unit_group_unit, unit_group: unit_group, script: unit_group_unit, position: 1)
       user.assign_script(unit_group_unit)
     end
 
@@ -167,11 +167,11 @@ class AssignedCoursesAndScripts < ActiveSupport::TestCase
   end
 
   describe 'visible assigned scripts' do
-    let(:hidden_script) {create :script, name: 'hidden-script', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta}
-    let(:visible_script) {create :script, name: 'visible-script', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable}
+    let(:hidden_script) {create(:script, name: 'hidden-script', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta)}
+    let(:visible_script) {create(:script, name: 'visible-script', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)}
 
     describe '#visible_assigned_scripts' do
-      let(:user) {create :student}
+      let(:user) {create(:student)}
       subject(:visible_assigned_scripts) {user.visible_assigned_scripts}
       context 'when a user has no assigned scripts' do
         it 'returns an empty array' do
@@ -192,7 +192,7 @@ class AssignedCoursesAndScripts < ActiveSupport::TestCase
     end
 
     describe '#any_visible_assigned_scripts?' do
-      let(:user) {create :student}
+      let(:user) {create(:student)}
       subject(:any_visible_assigned_scripts?) {user.any_visible_assigned_scripts?}
 
       context 'when a user has no assigned scripts' do
@@ -217,9 +217,9 @@ class AssignedCoursesAndScripts < ActiveSupport::TestCase
   end
 
   describe 'recently assigned script' do
-    let(:user) {create :student}
-    let(:script1) {create :script, name: 'script1', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable}
-    let(:script2) {create :script, name: 'script2', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable}
+    let(:user) {create(:student)}
+    let(:script1) {create(:script, name: 'script1', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)}
+    let(:script2) {create(:script, name: 'script2', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)}
 
     before do
       Timecop.freeze(Time.now) do
@@ -245,8 +245,8 @@ class AssignedCoursesAndScripts < ActiveSupport::TestCase
   end
 
   describe '#can_access_most_recently_assigned_script?' do
-    let(:user) {create :student}
-    let(:script) {create :script, name: 'recent-script', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable}
+    let(:user) {create(:student)}
+    let(:script) {create(:script, name: 'recent-script', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)}
     subject(:can_access_most_recently_assigned_script?) {user.can_access_most_recently_assigned_script?}
 
     context 'when the user has no assigned scripts' do
@@ -263,8 +263,8 @@ class AssignedCoursesAndScripts < ActiveSupport::TestCase
     end
 
     describe '#can_access_most_recently_assigned_script?' do
-      let(:user) {create :student}
-      let(:script) {create :script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable}
+      let(:user) {create(:student)}
+      let(:script) {create(:script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)}
       subject(:can_access?) {user.can_access_most_recently_assigned_script?}
 
       context 'when the user has no assigned scripts' do
@@ -281,9 +281,9 @@ class AssignedCoursesAndScripts < ActiveSupport::TestCase
       end
 
       context 'when the script is a pilot and the user has access' do
-        let(:pilot_teacher) {create :teacher, pilot_experiment: 'my-experiment'}
-        let(:pilot_script) {create :script, name: 'pilot-script', pilot_experiment: 'my-experiment'}
-        let(:pilot_section) {create :section, user: pilot_teacher, script: pilot_script}
+        let(:pilot_teacher) {create(:teacher, pilot_experiment: 'my-experiment')}
+        let(:pilot_script) {create(:script, name: 'pilot-script', pilot_experiment: 'my-experiment')}
+        let(:pilot_section) {create(:section, user: pilot_teacher, script: pilot_script)}
         let(:pilot_student) {create(:follower, section: pilot_section).student_user}
         subject(:can_access_pilot?) {pilot_student.can_access_most_recently_assigned_script?}
 
@@ -293,7 +293,7 @@ class AssignedCoursesAndScripts < ActiveSupport::TestCase
       end
 
       context 'when the script is a pilot and the user does NOT have access' do
-        let(:pilot_script) {create :script, pilot_experiment: 'test_experiment', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable}
+        let(:pilot_script) {create(:script, pilot_experiment: 'test_experiment', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)}
         before {user.assign_script(pilot_script)}
         it 'returns false' do
           _(can_access?).must_equal false
@@ -303,9 +303,9 @@ class AssignedCoursesAndScripts < ActiveSupport::TestCase
   end
 
   describe 'recent progress in scripts' do
-    let(:user) {create :student}
-    let(:script_1) {create :script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable}
-    let(:script_2) {create :script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable}
+    let(:user) {create(:student)}
+    let(:script_1) {create(:script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)}
+    let(:script_2) {create(:script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)}
     subject(:user_script_with_most_recent_progress) {user.user_script_with_most_recent_progress}
 
     before do
@@ -432,32 +432,32 @@ class AssignedCoursesAndScripts < ActiveSupport::TestCase
       }
     end
 
-    let(:student) {create :student}
-    let(:teacher) {create :teacher}
-    let(:facilitator) {create :facilitator}
+    let(:student) {create(:student)}
+    let(:teacher) {create(:teacher)}
+    let(:facilitator) {create(:facilitator)}
 
-    let(:unit_group) {create :unit_group, name: 'csd'}
+    let(:unit_group) {create(:unit_group, name: 'csd')}
     let(:other_script) {create(:single_unit_course, unit: create(:script, name: 'other')).first_unit}
-    let(:section) {create :section, user_id: teacher.id, unit_group: unit_group}
+    let(:section) {create(:section, user_id: teacher.id, unit_group: unit_group)}
 
-    let(:pl_unit_group) {create :unit_group, :pl_course, name: 'pl-csd'}
+    let(:pl_unit_group) {create(:unit_group, :pl_course, name: 'pl-csd')}
     let(:other_pl_script) {create(:single_unit_course, :pl_course, unit: create(:script, name: 'pl-other')).first_unit}
 
-    let(:pl_section) {create :section, :teacher_participants, user_id: facilitator.id, unit_group: pl_unit_group}
+    let(:pl_section) {create(:section, :teacher_participants, user_id: facilitator.id, unit_group: pl_unit_group)}
 
     before do
       I18n.locale = locale
       I18n.backend.store_translations(locale, custom_i18n)
 
-      create :unit_group_unit, unit_group: unit_group, script: (create :script, name: 'csd1'), position: 1
-      create :unit_group_unit, unit_group: unit_group, script: (create :script, name: 'csd2'), position: 2
+      create(:unit_group_unit, unit_group: unit_group, script: (create(:script, name: 'csd1')), position: 1)
+      create(:unit_group_unit, unit_group: unit_group, script: (create(:script, name: 'csd2')), position: 2)
 
       student.assign_script(other_script)
 
       Follower.create!(section_id: section.id, student_user_id: student.id, user: teacher)
 
-      create :unit_group_unit, unit_group: pl_unit_group, script: (create :script, name: 'pl-csd1', instructor_audience: nil, participant_audience: nil), position: 1
-      create :unit_group_unit, unit_group: pl_unit_group, script: (create :script, name: 'pl-csd2', instructor_audience: nil, participant_audience: nil), position: 2
+      create(:unit_group_unit, unit_group: pl_unit_group, script: (create(:script, name: 'pl-csd1', instructor_audience: nil, participant_audience: nil)), position: 1)
+      create(:unit_group_unit, unit_group: pl_unit_group, script: (create(:script, name: 'pl-csd2', instructor_audience: nil, participant_audience: nil)), position: 2)
 
       teacher.assign_script(other_pl_script)
 
@@ -527,18 +527,18 @@ class AssignedCoursesAndScripts < ActiveSupport::TestCase
       end
 
       context 'when primary course should not be included in returned student courses' do
-        let(:student) {create :student}
-        let(:teacher) {create :teacher}
+        let(:student) {create(:student)}
+        let(:teacher) {create(:teacher)}
 
-        let(:unit_group) {create :unit_group, name: 'testcourse', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable}
-        let(:unit_group_unit1) {create :unit_group_unit, unit_group: unit_group, script: (create :script, name: 'testscript1', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable), position: 1}
-        let(:other_script) {create :script, name: 'otherscript', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable}
-        let(:section) {create :section, user_id: teacher.id, unit_group: unit_group}
+        let(:unit_group) {create(:unit_group, name: 'testcourse', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)}
+        let(:unit_group_unit1) {create(:unit_group_unit, unit_group: unit_group, script: (create(:script, name: 'testscript1', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)), position: 1)}
+        let(:other_script) {create(:script, name: 'otherscript', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)}
+        let(:section) {create(:section, user_id: teacher.id, unit_group: unit_group)}
 
         before do
-          create :unit_group_unit, unit_group: unit_group, script: (create :script, name: 'testscript2', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable), position: 2
-          create :user_script, user: student, script: unit_group_unit1.script, started_at: (Time.now - 1.day)
-          create :user_script, user: student, script: other_script, started_at: (Time.now - 1.hour)
+          create(:unit_group_unit, unit_group: unit_group, script: (create(:script, name: 'testscript2', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)), position: 2)
+          create(:user_script, user: student, script: unit_group_unit1.script, started_at: (Time.now - 1.day))
+          create(:user_script, user: student, script: other_script, started_at: (Time.now - 1.hour))
           Follower.create!(section_id: section.id, student_user_id: student.id, user: teacher)
         end
 
@@ -554,11 +554,11 @@ class AssignedCoursesAndScripts < ActiveSupport::TestCase
   describe '#pl_units_started' do
     context 'when testing basic functionality' do
       subject(:pl_units_started) {user.pl_units_started}
-      let(:user) {create :teacher}
-      let(:unit) {create :unit, :with_levels}
-      let(:unit_group) {create :unit_group, participant_audience: 'teacher', instructor_audience: 'facilitator'}
-      let!(:unit_group_unit) {create :unit_group_unit, course_id: unit_group.id, script_id: unit.id, position: 1}
-      let!(:user_script) {create :user_script, user: user, script: unit}
+      let(:user) {create(:teacher)}
+      let(:unit) {create(:unit, :with_levels)}
+      let(:unit_group) {create(:unit_group, participant_audience: 'teacher', instructor_audience: 'facilitator')}
+      let!(:unit_group_unit) {create(:unit_group_unit, course_id: unit_group.id, script_id: unit.id, position: 1)}
+      let!(:user_script) {create(:user_script, user: user, script: unit)}
       let(:modularity_enabled) {true}
 
       before do
@@ -611,28 +611,28 @@ class AssignedCoursesAndScripts < ActiveSupport::TestCase
 
     context 'with BubbleChoice level' do
       subject(:pl_units_started) {user.pl_units_started}
-      let(:user) {create :teacher}
+      let(:user) {create(:teacher)}
       let(:pl_unit) {create(:single_unit_course, :pl_course).first_unit}
       let(:sublevels) {[]}
       let(:bubble_choice_level) {create(:bubble_choice_level, sublevels: sublevels)}
-      let(:lesson_group) {create :lesson_group, script: pl_unit}
-      let(:lesson) {create :lesson, script: pl_unit, lesson_group: lesson_group}
+      let(:lesson_group) {create(:lesson_group, script: pl_unit)}
+      let(:lesson) {create(:lesson, script: pl_unit, lesson_group: lesson_group)}
 
       before do
-        create :course_version, content_root: pl_unit
+        create(:course_version, content_root: pl_unit.original_unit_group)
 
         3.times do
           sublevels << create(:level)
         end
 
-        create :script_level, script: pl_unit, levels: [bubble_choice_level], position: 0, lesson: lesson
+        create(:script_level, script: pl_unit, levels: [bubble_choice_level], position: 0, lesson: lesson)
         pl_unit.reload
 
-        create :user_script, user: user, script: pl_unit
+        create(:user_script, user: user, script: pl_unit)
 
-        sublevels.each {|sl| create :user_level, user: user, script: pl_unit, level: sl, best_result: ActivityConstants::MINIMUM_PASS_RESULT}
+        sublevels.each {|sl| create(:user_level, user: user, script: pl_unit, level: sl, best_result: ActivityConstants::MINIMUM_PASS_RESULT)}
 
-        create :user_level, user: user, script: pl_unit, level: bubble_choice_level, best_result: ActivityConstants::MINIMUM_PASS_RESULT
+        create(:user_level, user: user, script: pl_unit, level: bubble_choice_level, best_result: ActivityConstants::MINIMUM_PASS_RESULT)
       end
 
       it 'only counts parent level' do
@@ -642,27 +642,27 @@ class AssignedCoursesAndScripts < ActiveSupport::TestCase
 
     context 'with Predict level' do
       subject(:pl_units_started) {user.pl_units_started}
-      let(:user) {create :teacher}
+      let(:user) {create(:teacher)}
       let(:pl_unit) {create(:single_unit_course, :pl_course).first_unit}
 
-      let(:free_response_level) {create :free_response, name: 'free response level'}
-      let(:game_level) {create :level}
+      let(:free_response_level) {create(:free_response, name: 'free response level')}
+      let(:game_level) {create(:level)}
 
-      let(:lesson_group) {create :lesson_group, script: pl_unit}
-      let(:lesson) {create :lesson, script: pl_unit, lesson_group: lesson_group}
+      let(:lesson_group) {create(:lesson_group, script: pl_unit)}
+      let(:lesson) {create(:lesson, script: pl_unit, lesson_group: lesson_group)}
 
       before do
-        create :course_version, content_root: pl_unit
+        create(:course_version, content_root: pl_unit.original_unit_group)
 
         game_level.contained_level_names = ['free response level']
         game_level.save!
 
-        create :script_level, script: pl_unit, levels: [game_level], position: 0, lesson: lesson
+        create(:script_level, script: pl_unit, levels: [game_level], position: 0, lesson: lesson)
         pl_unit.reload
 
-        create :user_script, user: user, script: pl_unit
+        create(:user_script, user: user, script: pl_unit)
 
-        create :user_level, user: user, script: pl_unit, level: free_response_level, best_result: ActivityConstants::MINIMUM_PASS_RESULT
+        create(:user_level, user: user, script: pl_unit, level: free_response_level, best_result: ActivityConstants::MINIMUM_PASS_RESULT)
       end
 
       it 'only counts predict level' do

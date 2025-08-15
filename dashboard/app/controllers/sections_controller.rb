@@ -93,7 +93,8 @@ class SectionsController < ApplicationController
 
   private def redirect_to_section_script_or_course
     if @section.script
-      redirect_to script_path(@section.script)
+      unit_group_unit = Queries::Courses.unit_group_unit(@section.script, @section.unit_group)
+      redirect_to course_unit_path(@section.unit_group, unit_group_unit.position)
     elsif @section.unit_group
       redirect_to course_path(@section.unit_group)
     else

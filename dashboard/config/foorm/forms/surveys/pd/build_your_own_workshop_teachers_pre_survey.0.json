@@ -45,7 +45,7 @@
           "type": "matrix",
           "name": "baseline_readiness_teaching_cs",
           "title": "How much do you agree or disagree with the following statements?",
-          "description": "Skip any row that is not relevant to the workshop you are participating in",
+          "description": "Some rows may feel more relevant depending on the session topic. Please respond where you can, based on how the session connects to your role as a CS educator.",
           "columns": [
             {
               "value": "1",

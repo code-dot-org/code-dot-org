@@ -2,7 +2,7 @@ require 'test_helper'
 
 class SkillTest < ActiveSupport::TestCase
   test "can serialize and seed course offerings" do
-    skill = create :skill, key: 'skill-1', description: 'description-1', concept: 'concept-1', evaluation_criteria: 'criteria-1'
+    skill = create(:skill, key: 'skill-1', description: 'description-1', concept: 'concept-1', evaluation_criteria: 'criteria-1')
     serialization = skill.serialize
     previous_skill = skill.freeze
     skill.destroy!

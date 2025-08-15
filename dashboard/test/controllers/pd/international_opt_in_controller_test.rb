@@ -4,7 +4,7 @@ class Pd::InternationalOptInControllerTest < ActionController::TestCase
   self.use_transactional_test_case = true
 
   test 'signed in teacher' do
-    teacher = create :teacher
+    teacher = create(:teacher)
     sign_in teacher
     get :new
     assert_response :success
@@ -22,7 +22,7 @@ class Pd::InternationalOptInControllerTest < ActionController::TestCase
   end
 
   test 'signed in teacher with no email' do
-    teacher = create :teacher
+    teacher = create(:teacher)
     teacher.primary_contact_info.email = ""
     teacher.primary_contact_info.save(validate: false)
     sign_in teacher

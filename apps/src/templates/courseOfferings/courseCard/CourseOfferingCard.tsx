@@ -100,7 +100,11 @@ const CourseOfferingCard: React.FC<CourseOfferingCardProps> = ({
   }, [display_name, translatedSubjectsAndTopicsTitlesArray]);
 
   const translatedGradeRange: [string, string] = useMemo(() => {
-    const gradesArray = grade_levels?.split(',') || [];
+    const gradesArray = grade_levels?.split(',') || null;
+
+    if (!gradesArray || gradesArray.length === 0) {
+      return ['', ''];
+    }
 
     const translatedGradesString = i18n.gradeRange({
       numGrades: gradesArray.length,
@@ -137,14 +141,16 @@ const CourseOfferingCard: React.FC<CourseOfferingCardProps> = ({
               </Heading4>
             </div>
             <div className={moduleStyles.details}>
-              <div>
-                <FontAwesomeV6Icon iconName="user" iconStyle="solid" />
-                <BodyThreeText noMargin>
-                  <StrongText noMargin>{translatedGradeRange[0]}</StrongText>{' '}
-                  {translatedGradeRange[1]}
-                  {isThisCourseForTeachers && '  Teachers'}
-                </BodyThreeText>
-              </div>
+              {translatedGradeRange[0] && (
+                <div>
+                  <FontAwesomeV6Icon iconName="user" iconStyle="solid" />
+                  <BodyThreeText noMargin>
+                    <StrongText noMargin>{translatedGradeRange[0]}</StrongText>{' '}
+                    {translatedGradeRange[1]}
+                    {isThisCourseForTeachers && '  Teachers'}
+                  </BodyThreeText>
+                </div>
+              )}
               <div>
                 <FontAwesomeV6Icon iconName="clock" iconStyle="solid" />
                 <BodyThreeText noMargin>

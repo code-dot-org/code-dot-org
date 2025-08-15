@@ -7,15 +7,15 @@ class ProgrammingMethodsControllerTest < ActionController::TestCase
     File.stubs(:write)
     FileUtils.stubs(:mkdir_p)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    @levelbuilder = create :levelbuilder
-    @programming_class = create :programming_class
+    @levelbuilder = create(:levelbuilder)
+    @programming_class = create(:programming_class)
   end
 
   test 'can update programming method from params' do
     sign_in @levelbuilder
     File.expects(:write).once
 
-    programming_method = create :programming_method, programming_class: @programming_class
+    programming_method = create(:programming_method, programming_class: @programming_class)
 
     post :update, params: {
       id: programming_method.id,
@@ -37,7 +37,7 @@ class ProgrammingMethodsControllerTest < ActionController::TestCase
   test 'data is passed down to edit page' do
     sign_in @levelbuilder
 
-    programming_method = create :programming_method, programming_class: @programming_class
+    programming_method = create(:programming_method, programming_class: @programming_class)
 
     get :edit, params: {id: programming_method.id}
     assert_response :ok
@@ -50,8 +50,8 @@ class ProgrammingMethodsControllerTest < ActionController::TestCase
   class ProgrammingMethodsControllerAccessTests < ActionController::TestCase
     setup do
       File.stubs(:write)
-      programming_class = create :programming_class
-      @programming_method = create :programming_method, programming_class: programming_class
+      programming_class = create(:programming_class)
+      @programming_method = create(:programming_method, programming_class: programming_class)
 
       @update_params = {id: @programming_method.id, name: 'new name'}
     end

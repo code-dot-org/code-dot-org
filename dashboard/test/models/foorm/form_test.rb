@@ -2,8 +2,8 @@ require 'test_helper'
 
 class Foorm::FormTest < ActiveSupport::TestCase
   test 'get latest form and version gets correct form' do
-    form1 = create :foorm_form
-    form2 = create :foorm_form, name: form1.name, version: form1.version + 1
+    form1 = create(:foorm_form)
+    form2 = create(:foorm_form, name: form1.name, version: form1.version + 1)
 
     questions, version = Foorm::Form.get_questions_and_latest_version_for_name(form1.name)
     assert_equal JSON.parse(form2.questions), questions
@@ -11,8 +11,8 @@ class Foorm::FormTest < ActiveSupport::TestCase
   end
 
   test 'get latest form and version gets correct form with latest version unpublished' do
-    form1 = create :foorm_form
-    create :foorm_form, name: form1.name, version: form1.version + 1, published: false
+    form1 = create(:foorm_form)
+    create(:foorm_form, name: form1.name, version: form1.version + 1, published: false)
 
     questions, version = Foorm::Form.get_questions_and_latest_version_for_name(form1.name)
     assert_equal JSON.parse(form1.questions), questions
@@ -20,7 +20,7 @@ class Foorm::FormTest < ActiveSupport::TestCase
   end
 
   test 'readable_questions formats matrix questions for general workshop question' do
-    form = build :foorm_form_csf_intro_post_survey
+    form = build(:foorm_form_csf_intro_post_survey)
     readable_questions = form.readable_questions
 
     assert_equal 'How much do you agree or disagree with the following statements about the workshop overall? >> I feel more prepared to teach the material covered in this workshop than before I came.',
@@ -28,7 +28,7 @@ class Foorm::FormTest < ActiveSupport::TestCase
   end
 
   test 'readable_questions formats matrix questions for facilitator-specific workshop question' do
-    form = build :foorm_form_csf_intro_post_survey
+    form = build(:foorm_form_csf_intro_post_survey)
     readable_questions = form.readable_questions
 
     assert_equal 'During my workshop, my facilitator did the following: >> Demonstrated knowledge of the curriculum.',
@@ -36,7 +36,7 @@ class Foorm::FormTest < ActiveSupport::TestCase
   end
 
   test 'readable_questions formats comment questions for general workshop question' do
-    form = build :foorm_form_csf_intro_post_survey
+    form = build(:foorm_form_csf_intro_post_survey)
     readable_questions = form.readable_questions
 
     assert_equal 'What supported your learning the most today and why?',
@@ -44,7 +44,7 @@ class Foorm::FormTest < ActiveSupport::TestCase
   end
 
   test 'readable_questions formats comment questions for facilitator workshop question' do
-    form = build :foorm_form_csf_intro_post_survey
+    form = build(:foorm_form_csf_intro_post_survey)
     readable_questions = form.readable_questions
 
     assert_equal 'What were two things my facilitator did well?',
@@ -52,7 +52,7 @@ class Foorm::FormTest < ActiveSupport::TestCase
   end
 
   test 'readable_questions formats single select questions for general workshop question' do
-    form = build :foorm_form_csf_intro_post_survey
+    form = build(:foorm_form_csf_intro_post_survey)
     readable_questions = form.readable_questions
 
     assert_equal 'I give the workshop organizer permission to quote my written feedback from today for use on social media, promotional materials, and other communications.',
@@ -62,8 +62,8 @@ class Foorm::FormTest < ActiveSupport::TestCase
   test 'submissions_to_csv formats single general submission' do
     workshop = build(:csf_101_workshop)
     workshop.save(validate: false)
-    form = create :foorm_form_csf_intro_post_survey
-    submission_workshop_metadata = create :csf_intro_post_workshop_submission, :answers_low, pd_workshop: workshop
+    form = create(:foorm_form_csf_intro_post_survey)
+    submission_workshop_metadata = create(:csf_intro_post_workshop_submission, :answers_low, pd_workshop: workshop)
     submission = submission_workshop_metadata.foorm_submission
 
     other_headers = {
@@ -80,22 +80,22 @@ class Foorm::FormTest < ActiveSupport::TestCase
   end
 
   test 'Form validation passes for valid questions' do
-    summer_pre_form = build :foorm_form_summer_pre_survey
+    summer_pre_form = build(:foorm_form_summer_pre_survey)
     assert summer_pre_form.valid?
   end
 
   test 'Form with duplicate question names is invalid' do
-    invalid_form = build :foorm_form_duplicate_question_survey
+    invalid_form = build(:foorm_form_duplicate_question_survey)
     refute invalid_form.valid?
   end
 
   test 'Form with duplicate choice names is invalid' do
-    invalid_form = build :foorm_form_duplicate_choice_survey
+    invalid_form = build(:foorm_form_duplicate_choice_survey)
     refute invalid_form.valid?
   end
 
   test 'submissions_to_csv formats submission of a form with only general questions' do
-    form = create :foorm_form_summer_pre_survey
+    form = create(:foorm_form_summer_pre_survey)
     workshop = create(:csd_summer_workshop)
     user = create(:teacher)
     general_submission_workshop_metadata = create(:day_0_workshop_foorm_submission, :answers_low, user: user, pd_workshop: workshop)
@@ -120,7 +120,7 @@ class Foorm::FormTest < ActiveSupport::TestCase
   end
 
   test 'submissions_to_csv formats submission of general and facilitator specific questions' do
-    form = create :foorm_form_csf_intro_post_survey
+    form = create(:foorm_form_csf_intro_post_survey)
     workshop = build(:csf_101_workshop)
     workshop.save(validate: false)
     user = create(:teacher)
@@ -155,7 +155,7 @@ class Foorm::FormTest < ActiveSupport::TestCase
   end
 
   test 'submissions_to_csv formats multiple submissions where one did not answer facilitator-specific questions' do
-    form = create :foorm_form_csf_intro_post_survey
+    form = create(:foorm_form_csf_intro_post_survey)
     workshop_1 = build(:csf_101_workshop)
     workshop_1.save(validate: false)
     workshop_2 = build(:csf_101_workshop)
@@ -202,13 +202,23 @@ class Foorm::FormTest < ActiveSupport::TestCase
   end
 
   test 'submissions_to_csv can be filtered with an array of submissions' do
-    form = create :foorm_form_csf_intro_post_survey
+    form = create(:foorm_form_csf_intro_post_survey)
     workshop = build(:csf_101_workshop)
     workshop.save(validate: false)
     user = create(:teacher)
     # create multiple submissions
-    facilitator_submission_workshop_metadata_1 = create(:csf_intro_post_facilitator_workshop_submission, :answers_low, user: user, pd_workshop: workshop)
-    general_submission_workshop_metadata_1 = create(:csf_intro_post_workshop_submission, :answers_low, user: user, pd_workshop: workshop)
+    facilitator_submission_workshop_metadata_1 = create(
+      :csf_intro_post_facilitator_workshop_submission,
+      :answers_low,
+      user: user,
+      pd_workshop: workshop
+    )
+    general_submission_workshop_metadata_1 = create(
+      :csf_intro_post_workshop_submission,
+      :answers_low,
+      user: user,
+      pd_workshop: workshop
+    )
     create(:csf_intro_post_workshop_submission, :answers_low, pd_workshop: workshop)
 
     general_submission_1 = general_submission_workshop_metadata_1.foorm_submission
@@ -245,7 +255,7 @@ class Foorm::FormTest < ActiveSupport::TestCase
   end
 
   test 'submissions_to_csv filter will throw out invalid submissions' do
-    form = create :foorm_form_csf_intro_post_survey
+    form = create(:foorm_form_csf_intro_post_survey)
     workshop = build(:csf_101_workshop)
     workshop.save(validate: false)
     user = create(:teacher)
@@ -291,20 +301,20 @@ class Foorm::FormTest < ActiveSupport::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     File.expects(:write).once
 
-    create :foorm_form
+    create(:foorm_form)
   end
 
   test 'creating new form does not write file in non levelbuilder mode' do
     File.expects(:write).never
 
-    create :foorm_form
+    create(:foorm_form)
   end
 
   test 'updating form writes to file in levelbuilder mode' do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     File.expects(:write).twice
 
-    form = create :foorm_form
+    form = create(:foorm_form)
     form.questions = JSON.generate({pages: [{elements: [{name: "test"}]}]})
     form.save
   end
@@ -312,7 +322,7 @@ class Foorm::FormTest < ActiveSupport::TestCase
   test 'updating form does not write to file in non levelbuilder mode' do
     File.expects(:write).never
 
-    form = create :foorm_form
+    form = create(:foorm_form)
     form.questions = JSON.generate({pages: [{elements: [{name: "test"}]}]})
     form.save
   end
@@ -322,7 +332,7 @@ class Foorm::FormTest < ActiveSupport::TestCase
     File.expects(:write).once
 
     # should write to file
-    form = create :foorm_form
+    form = create(:foorm_form)
     # should not write to file, form did not change
     form.save
   end

@@ -2,7 +2,7 @@ require 'test_helper'
 
 class UserMultiAuthHelperTest < ActiveSupport::TestCase
   test 'oauth_tokens_for_provider returns correct tokens for migrated teacher' do
-    user = create :teacher, :with_google_authentication_option, :with_clever_authentication_option
+    user = create(:teacher, :with_google_authentication_option, :with_clever_authentication_option)
     google_token = user.oauth_tokens_for_provider(AuthenticationOption::GOOGLE)[:oauth_token]
     google_expiration = user.oauth_tokens_for_provider(AuthenticationOption::GOOGLE)[:oauth_token_expiration]
     google_refresh_token = user.oauth_tokens_for_provider(AuthenticationOption::GOOGLE)[:oauth_refresh_token]
@@ -19,18 +19,20 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
 
   test 'oauth_tokens_for_provider returns most recently updated tokens for migrated teacher' do
     Timecop.freeze do
-      user = create :teacher
-      create :authentication_option,
+      user = create(:teacher)
+      create(:authentication_option,
         authentication_id: "old-auth-id",
         credential_type: AuthenticationOption::CLEVER,
         user: user,
         data: {oauth_token: 'old-clever-token'}.to_json
+)
       Timecop.travel(1.minute) do
-        create :authentication_option,
+        create(:authentication_option,
           authentication_id: "newer-auth-id",
           credential_type: AuthenticationOption::CLEVER,
           user: user,
           data: {oauth_token: 'newer-clever-token'}.to_json
+)
         clever_token = user.oauth_tokens_for_provider(AuthenticationOption::CLEVER)[:oauth_token]
         assert_equal 'newer-clever-token', clever_token
       end
@@ -38,7 +40,7 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
   end
 
   test 'oauth_tokens_for_provider returns nil values for migrated email teacher' do
-    user = create :teacher
+    user = create(:teacher)
     google_token = user.oauth_tokens_for_provider(AuthenticationOption::GOOGLE)[:oauth_token]
     google_expiration = user.oauth_tokens_for_provider(AuthenticationOption::GOOGLE)[:oauth_token_expiration]
     google_refresh_token = user.oauth_tokens_for_provider(AuthenticationOption::GOOGLE)[:oauth_refresh_token]
@@ -56,7 +58,7 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
   # The following two tests check the oauth_tokens_for_provider logic for demigrated teachers, and
   # can be deleted after we migrate all users to multiauth
   test 'oauth_tokens_for_provider returns correct token for demigrated Google teacher' do
-    user = create :teacher, :google_sso_provider, :demigrated
+    user = create(:teacher, :google_sso_provider, :demigrated)
     google_token = user.oauth_tokens_for_provider(AuthenticationOption::GOOGLE)[:oauth_token]
     google_expiration = user.oauth_tokens_for_provider(AuthenticationOption::GOOGLE)[:oauth_token_expiration]
     google_refresh_token = user.oauth_tokens_for_provider(AuthenticationOption::GOOGLE)[:oauth_refresh_token]
@@ -66,13 +68,13 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
   end
 
   test 'oauth_tokens_for_provider returns correct token for demigrated Clever teacher' do
-    user = create :teacher, :clever_sso_provider, :demigrated
+    user = create(:teacher, :clever_sso_provider, :demigrated)
     clever_token = user.oauth_tokens_for_provider(AuthenticationOption::CLEVER)[:oauth_token]
     assert_equal 'fake-oauth-token', clever_token
   end
 
   test 'does nothing if user is already migrated' do
-    user = create :teacher
+    user = create(:teacher)
     assert user.migrated?
 
     user.expects(:save).never
@@ -83,9 +85,9 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
   end
 
   test 'raises error if attempting to create a second account with the same oauth' do
-    create :user, provider: 'google_oauth2', uid: 'fake-oauth-id'
+    create(:user, provider: 'google_oauth2', uid: 'fake-oauth-id')
     assert_raises ActiveRecord::RecordInvalid do
-      create :user, provider: 'google_oauth2', uid: 'fake-oauth-id'
+      create(:user, provider: 'google_oauth2', uid: 'fake-oauth-id')
     end
   end
 
@@ -114,7 +116,7 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
     # A migrated manual student has no authentication option rows because they
     # sign in with username+password or word/picture, and all of these values
     # are stored on the user row.
-    user = create :manual_username_password_student
+    user = create(:manual_username_password_student)
     assert_user user,
       migrated?: true,
       sponsored?: false,
@@ -130,7 +132,7 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
     # A migrated parent-managed student has no authentication option rows
     # because they sign in with username+password or word/picture, and all of
     # these values are stored on the user row.
-    user = create :parent_managed_student
+    user = create(:parent_managed_student)
     assert_user user,
       migrated?: true,
       sponsored?: false,
@@ -144,13 +146,13 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
   end
 
   test 'create migrated email+password student' do
-    user = create :student
+    user = create(:student)
     assert_empty user.email
     assert_created_email_user user
   end
 
   test 'create migrated email+password teacher' do
-    user = create :teacher
+    user = create(:teacher)
     refute_empty user.email
     assert_created_email_user user
   end
@@ -287,7 +289,7 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
   end
 
   test 'migration clears single-auth fields' do
-    user = create :teacher, :google_sso_provider
+    user = create(:teacher, :google_sso_provider)
 
     assert_user user,
       uid: nil,

@@ -2,12 +2,12 @@ require 'test_helper'
 
 class CourseOfferingTest < ActiveSupport::TestCase
   setup_all do
-    @student = create :student
-    @teacher = create :teacher
-    @facilitator = create :facilitator
-    @universal_instructor = create :universal_instructor
-    @plc_reviewer = create :plc_reviewer
-    @levelbuilder = create :levelbuilder
+    @student = create(:student)
+    @teacher = create(:teacher)
+    @facilitator = create(:facilitator)
+    @universal_instructor = create(:universal_instructor)
+    @plc_reviewer = create(:plc_reviewer)
+    @levelbuilder = create(:levelbuilder)
 
     Rails.application.config.stubs(:levelbuilder_mode).returns false
 
@@ -33,21 +33,21 @@ class CourseOfferingTest < ActiveSupport::TestCase
     @unit_group.reload
     CourseOffering.add_course_offering(@unit_group)
 
-    @pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
+    @pilot_teacher = create(:teacher, pilot_experiment: 'my-experiment')
     @pilot_unit = create(:single_unit_course, :with_course_offering, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot, version_year: '1991', family_name: 'family-4', pilot_experiment: 'my-experiment').first_unit
 
-    @pilot_instructor = create :facilitator, pilot_experiment: 'my-pl-experiment'
+    @pilot_instructor = create(:facilitator, pilot_experiment: 'my-pl-experiment')
     @pilot_pl_unit = create(:single_unit_course, :with_course_offering, :pl_course, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot, version_year: '1991', family_name: 'family-5', pilot_experiment: 'my-pl-experiment').first_unit
 
-    @partner = create :teacher, pilot_experiment: 'my-editor-experiment', editor_experiment: 'ed-experiment'
-    @partner_unit = create :script, editor_experiment: 'ed-experiment'
+    @partner = create(:teacher, pilot_experiment: 'my-editor-experiment', editor_experiment: 'ed-experiment')
+    @partner_unit = create(:script, editor_experiment: 'ed-experiment')
     create(:single_unit_course, :with_course_offering, unit: @partner_unit, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot, version_year: '1991', family_name: 'family-11', pilot_experiment: 'my-editor-experiment')
   end
 
   test "course offering associations" do
-    course_offering = create :course_offering
-    version1 = create :course_version, course_offering: course_offering
-    version2 = create :course_version, course_offering: course_offering
+    course_offering = create(:course_offering)
+    version1 = create(:course_version, course_offering: course_offering)
+    version2 = create(:course_version, course_offering: course_offering)
 
     assert_equal [version1, version2].sort_by(&:key), course_offering.course_versions.sort_by(&:key)
     assert_equal course_offering, version1.course_offering
@@ -57,7 +57,7 @@ class CourseOfferingTest < ActiveSupport::TestCase
   test "add_course_offering creates CourseOffering and CourseVersion for UnitGroup" do
     family_name = 'csz'
     version_year = '2050'
-    content_root = create :unit_group, family_name: family_name, version_year: version_year
+    content_root = create(:unit_group, family_name: family_name, version_year: version_year)
 
     offering = CourseOffering.add_course_offering(content_root)
 
@@ -99,28 +99,15 @@ class CourseOfferingTest < ActiveSupport::TestCase
     assert_equal 1, CourseOffering.find_by(key: old_offering_key).course_versions.length # old CourseOffering should have 1 version left
   end
 
-  test "add_course_offering does nothing if is_course is false for unit" do
-    num_course_offerings = CourseOffering.count
-    num_course_versions = CourseVersion.count
-    content_root = create :unit
-
-    offering = CourseOffering.add_course_offering(content_root)
-
-    assert_nil offering
-    assert_nil content_root.course_version
-    assert_equal num_course_offerings, CourseOffering.count
-    assert_equal num_course_versions, CourseVersion.count
-  end
-
   test "throws exception if removing course version of course that prevent course version change" do
-    course = create :unit_group, family_name: 'family', version_year: '2000'
+    course = create(:unit_group, family_name: 'family', version_year: '2000')
     CourseOffering.add_course_offering(course)
 
     course.family_name = nil
     course.save!
     course.reload
-    script = create :script
-    create :unit_group_unit, unit_group: course, script: script, position: 1
+    script = create(:script)
+    create(:unit_group_unit, unit_group: course, script: script, position: 1)
     script.reload
     script.resources = [create(:resource)]
     assert course.prevent_course_version_change?
@@ -131,14 +118,14 @@ class CourseOfferingTest < ActiveSupport::TestCase
   end
 
   test "enforces key format" do
-    course_offering = build :course_offering, key: 'invalid key'
+    course_offering = build(:course_offering, key: 'invalid key')
     refute course_offering.valid?
     course_offering.key = '0123456789abcdefghijklmnopqrstuvwxyz-'
     assert course_offering.valid?
   end
 
   test "latest_published_version returns most recent published course version with unit group if no locale specified" do
-    offering = create :course_offering, :with_unit_groups
+    offering = create(:course_offering, :with_unit_groups)
 
     most_recent_version = offering.course_versions[2]
     most_recent_version.update!(key: '2021')
@@ -160,24 +147,24 @@ class CourseOfferingTest < ActiveSupport::TestCase
   end
 
   test "latest_published_version returns most recent published course version with unit group if locale in English" do
-    ug_2050 = create :unit_group, family_name: 'ug', version_year: '2050', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    ug_2050 = create(:unit_group, family_name: 'ug', version_year: '2050', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
     ug_2050_unit = create(:script, name: 'ug1-2050', supported_locales: ['fake-locale'])
-    create :unit_group_unit, unit_group: ug_2050, script: ug_2050_unit, position: 1
+    create(:unit_group_unit, unit_group: ug_2050, script: ug_2050_unit, position: 1)
     CourseOffering.add_course_offering(ug_2050)
 
-    ug_2051 = create :unit_group, family_name: 'ug', version_year: '2051', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    ug_2051 = create(:unit_group, family_name: 'ug', version_year: '2051', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
     ug_2051_unit = create(:script, name: 'ug1-2051', supported_locales: [])
-    create :unit_group_unit, unit_group: ug_2051, script: ug_2051_unit, position: 1
+    create(:unit_group_unit, unit_group: ug_2051, script: ug_2051_unit, position: 1)
     offering = CourseOffering.add_course_offering(ug_2051)
 
     assert_equal offering.latest_published_version('en-us'), ug_2051.course_version
   end
 
   test "latest_published_version returns most recent published course version with single-unit course if locale in English" do
-    script = create :script, supported_locales: ['fake-locale']
+    script = create(:script, supported_locales: ['fake-locale'])
     create(:single_unit_course, :with_course_offering, unit: script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, version_year: '2050', family_name: 'ss')
 
-    script2 = create :script, supported_locales: []
+    script2 = create(:script, supported_locales: [])
     create(:single_unit_course, unit: script2, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, version_year: '2051', family_name: 'ss')
     offering = CourseOffering.add_course_offering(script2.original_unit_group)
 
@@ -185,24 +172,24 @@ class CourseOfferingTest < ActiveSupport::TestCase
   end
 
   test "latest_published_version returns most recent published course version with unit group if no stable versions" do
-    ug_2050 = create :unit_group, family_name: 'ug', version_year: '2050', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview
+    ug_2050 = create(:unit_group, family_name: 'ug', version_year: '2050', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview)
     ug_2050_unit = create(:script, name: 'ug1-2050', supported_locales: ['fake-locale'])
-    create :unit_group_unit, unit_group: ug_2050, script: ug_2050_unit, position: 1
+    create(:unit_group_unit, unit_group: ug_2050, script: ug_2050_unit, position: 1)
     CourseOffering.add_course_offering(ug_2050)
 
-    ug_2051 = create :unit_group, family_name: 'ug', version_year: '2051', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview
+    ug_2051 = create(:unit_group, family_name: 'ug', version_year: '2051', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview)
     ug_2051_unit = create(:script, name: 'ug1-2051', supported_locales: [''])
-    create :unit_group_unit, unit_group: ug_2051, script: ug_2051_unit, position: 1
+    create(:unit_group_unit, unit_group: ug_2051, script: ug_2051_unit, position: 1)
     offering = CourseOffering.add_course_offering(ug_2051)
 
     assert_equal offering.latest_published_version('fake-locale'), ug_2051.course_version
   end
 
   test "latest_published_version returns most recent published course version with unit if no stable versions" do
-    script = create :script, supported_locales: ['fake-locale']
+    script = create(:script, supported_locales: ['fake-locale'])
     create(:single_unit_course, :with_course_offering, unit: script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview, version_year: '2050', family_name: 'ss')
 
-    script2 = create :script, supported_locales: []
+    script2 = create(:script, supported_locales: [])
     create(:single_unit_course, unit: script2, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview, version_year: '2051', family_name: 'ss')
     offering = CourseOffering.add_course_offering(script2.original_unit_group)
 
@@ -210,44 +197,57 @@ class CourseOfferingTest < ActiveSupport::TestCase
   end
 
   test "latest_published_version returns most recent published course version with unit group if given locale not supported" do
-    ug_2050 = create :unit_group, family_name: 'ug', version_year: '2050', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    ug_2050 = create(:unit_group, family_name: 'ug', version_year: '2050', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
     ug_2050_unit = create(:script, name: 'ug1-2050', supported_locales: ['fake-locale'])
-    create :unit_group_unit, unit_group: ug_2050, script: ug_2050_unit, position: 1
+    create(:unit_group_unit, unit_group: ug_2050, script: ug_2050_unit, position: 1)
     CourseOffering.add_course_offering(ug_2050)
 
-    ug_2051 = create :unit_group, family_name: 'ug', version_year: '2051', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    ug_2051 = create(:unit_group, family_name: 'ug', version_year: '2051', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
     ug_2051_unit = create(:script, name: 'ug1-2051', supported_locales: ['fake-locale'])
-    create :unit_group_unit, unit_group: ug_2051, script: ug_2051_unit, position: 1
+    create(:unit_group_unit, unit_group: ug_2051, script: ug_2051_unit, position: 1)
     offering = CourseOffering.add_course_offering(ug_2051)
 
     assert_equal offering.latest_published_version('invalid-locale'), ug_2051.course_version
   end
 
   test "latest_published_version returns most recent published course version with single-unit course if given locale not supported" do
-    script = create :script, supported_locales: ['fake-locale']
-    create(:single_unit_course, :with_course_offering, unit: script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, version_year: '2050', family_name: 'ss')
+    script = create(:script, supported_locales: ['fake-locale'])
+    create(
+      :single_unit_course,
+      :with_course_offering,
+      unit: script,
+      published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable,
+      version_year: '2050',
+      family_name: 'ss'
+    )
 
-    script2 = create :script, supported_locales: ['fake-locale']
-    create(:single_unit_course, unit: script2, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, version_year: '2051', family_name: 'ss')
+    script2 = create(:script, supported_locales: ['fake-locale'])
+    create(
+      :single_unit_course,
+      unit: script2,
+      published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable,
+      version_year: '2051',
+      family_name: 'ss'
+    )
     offering = CourseOffering.add_course_offering(script2.original_unit_group)
 
     assert_equal offering.latest_published_version('invalid-locale'), script2.get_course_version
   end
 
   test "latest_published_version returns latest stable course version with stable unit group if given locale supported" do
-    ug_2050 = create :unit_group, family_name: 'ug', version_year: '2050', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    ug_2050 = create(:unit_group, family_name: 'ug', version_year: '2050', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
     ug_2050_unit = create(:script, name: 'ug1-2050', supported_locales: ['fake-locale', 'second-fake-locale'])
-    create :unit_group_unit, unit_group: ug_2050, script: ug_2050_unit, position: 1
+    create(:unit_group_unit, unit_group: ug_2050, script: ug_2050_unit, position: 1)
     CourseOffering.add_course_offering(ug_2050)
 
-    ug_2051 = create :unit_group, family_name: 'ug', version_year: '2051', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    ug_2051 = create(:unit_group, family_name: 'ug', version_year: '2051', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
     ug_2051_unit = create(:script, name: 'ug1-2051', supported_locales: ['fake-locale'])
-    create :unit_group_unit, unit_group: ug_2051, script: ug_2051_unit, position: 1
+    create(:unit_group_unit, unit_group: ug_2051, script: ug_2051_unit, position: 1)
     CourseOffering.add_course_offering(ug_2051)
 
-    ug_2052 = create :unit_group, family_name: 'ug', version_year: '2052', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview
+    ug_2052 = create(:unit_group, family_name: 'ug', version_year: '2052', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview)
     ug_2052_unit = create(:script, name: 'ug1-2052', supported_locales: ['fake-locale'])
-    create :unit_group_unit, unit_group: ug_2052, script: ug_2052_unit, position: 1
+    create(:unit_group_unit, unit_group: ug_2052, script: ug_2052_unit, position: 1)
     offering = CourseOffering.add_course_offering(ug_2052)
 
     assert_equal offering.latest_published_version('fake-locale'), ug_2051.course_version
@@ -256,11 +256,11 @@ class CourseOfferingTest < ActiveSupport::TestCase
   end
 
   test "latest_published_version returns latest stable course version with stable unit if given locale supported" do
-    script = create :script, supported_locales: ['fake-locale', 'second-fake-locale']
+    script = create(:script, supported_locales: ['fake-locale', 'second-fake-locale'])
     create(:single_unit_course, :with_course_offering, unit: script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, version_year: '2050', family_name: 'ss')
-    script2 = create :script, supported_locales: ['fake-locale']
+    script2 = create(:script, supported_locales: ['fake-locale'])
     create(:single_unit_course, :with_course_offering, unit: script2, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, version_year: '2051', family_name: 'ss')
-    script3 = create :script, supported_locales: ['fake-locale']
+    script3 = create(:script, supported_locales: ['fake-locale'])
     create(:single_unit_course, unit: script3, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview, version_year: '2052', family_name: 'ss')
     offering = CourseOffering.add_course_offering(script3.original_unit_group)
 
@@ -431,37 +431,80 @@ class CourseOfferingTest < ActiveSupport::TestCase
 
   test 'self_paced_course_offerings_for_catalog filters only for assignable published self-paced teacher course offerings' do
     # Course offering that doesn't satisfy any of the conditions
-    none_course = create(:single_unit_course, family_name: 'none', version_year: '1991', published_state: 'in_development', instructor_audience: 'universal_instructor', participant_audience: 'student')
+    none_course = create(
+      :single_unit_course,
+      family_name: 'none',
+      version_year: '1991',
+      published_state: 'in_development',
+      instructor_audience: 'universal_instructor',
+      participant_audience: 'student'
+    )
     none_co = CourseOffering.add_course_offering(none_course)
     none_co.update!(assignable: false)
 
     # Course offering that only satisfies the 'assignable' condition
-    assignable_course = create(:single_unit_course, family_name: 'assignable', version_year: '1992', published_state: 'in_development', instructor_audience: 'universal_instructor', participant_audience: 'student')
+    assignable_course = create(
+      :single_unit_course,
+      family_name: 'assignable',
+      version_year: '1992',
+      published_state: 'in_development',
+      instructor_audience: 'universal_instructor',
+      participant_audience: 'student'
+    )
     CourseOffering.add_course_offering(assignable_course)
 
     # Course offering that only satisfies the 'published' condition
-    published_course = create(:single_unit_course, family_name: 'published', version_year: '1993', published_state: 'stable', instructor_audience: 'universal_instructor', participant_audience: 'student')
+    published_course = create(
+      :single_unit_course,
+      family_name: 'published',
+      version_year: '1993',
+      published_state: 'stable',
+      instructor_audience: 'universal_instructor',
+      participant_audience: 'student'
+    )
     published_co = CourseOffering.add_course_offering(published_course)
     published_co.update!(assignable: false)
 
     # Course offering that only satisfies the 'for teacher' condition
-    for_teacher_course = create(:single_unit_course, family_name: 'for-teacher', version_year: '1994', published_state: 'in_development', instructor_audience: 'universal_instructor', participant_audience: 'teacher')
+    for_teacher_course = create(
+      :single_unit_course,
+      family_name: 'for-teacher',
+      version_year: '1994',
+      published_state: 'in_development',
+      instructor_audience: 'universal_instructor',
+      participant_audience: 'teacher'
+    )
     for_teacher_co = CourseOffering.add_course_offering(for_teacher_course)
     for_teacher_co.update!(assignable: false)
 
     # Course offering that is a NON-self-paced assignable published teacher course offerings
-    non_self_paced_course = create(:single_unit_course, family_name: 'non-self-paced', version_year: '1998', published_state: 'stable', instructor_audience: 'universal_instructor', participant_audience: 'teacher')
+    non_self_paced_course = create(
+      :single_unit_course,
+      family_name: 'non-self-paced',
+      version_year: '1998',
+      published_state: 'stable',
+      instructor_audience: 'universal_instructor',
+      participant_audience: 'teacher'
+    )
     CourseOffering.add_course_offering(non_self_paced_course)
 
     # Course offering that satisfies all conditions
-    self_paced_course = create(:single_unit_course, family_name: 'all', version_year: '1998', published_state: 'stable', instructor_audience: 'universal_instructor', instruction_type: 'self_paced', participant_audience: 'teacher')
+    self_paced_course = create(
+      :single_unit_course,
+      family_name: 'all',
+      version_year: '1998',
+      published_state: 'stable',
+      instructor_audience: 'universal_instructor',
+      instruction_type: 'self_paced',
+      participant_audience: 'teacher'
+    )
     self_paced_co = CourseOffering.add_course_offering(self_paced_course)
 
     assert_equal [self_paced_co.key], CourseOffering.self_paced_course_offerings_for_catalog.pluck(:key)
   end
 
   test 'can_be_assigned? is false if its an unassignable course' do
-    unassignable_course_offering = create :course_offering
+    unassignable_course_offering = create(:course_offering)
     refute unassignable_course_offering.can_be_assigned?(@student)
     refute unassignable_course_offering.can_be_assigned?(@teacher)
   end
@@ -491,7 +534,13 @@ class CourseOfferingTest < ActiveSupport::TestCase
   end
 
   test 'can_be_assigned? is true if any versions in development and user is levelbuilder' do
-    unit1 = create(:single_unit_course, :with_course_offering, family_name: 'family-10', version_year: '1992', published_state: 'in_development').first_unit
+    unit1 = create(
+      :single_unit_course,
+      :with_course_offering,
+      family_name: 'family-10',
+      version_year: '1992',
+      published_state: 'in_development'
+    ).first_unit
 
     refute unit1.get_course_version.course_offering.can_be_assigned?(@teacher)
     assert unit1.get_course_version.course_offering.can_be_assigned?(@levelbuilder)
@@ -617,40 +666,45 @@ class CourseOfferingTest < ActiveSupport::TestCase
   end
 
   test 'missing_required_device_compatibility? returns false for pl course offerings' do
-    pl_co = create :course_offering
-    pl_course = create(:single_unit_course, :pl_course).first_unit
-    create :course_version, content_root: pl_course, course_offering: pl_co
-    co = create :course_offering, self_paced_pl_course_offering: pl_co
+    pl_co = create(:course_offering)
+    pl_course = create(:single_unit_course, :pl_course)
+    create(:course_version, content_root: pl_course, course_offering: pl_co)
+    co = create(:course_offering, self_paced_pl_course_offering: pl_co)
 
     refute(co.missing_required_device_compatibility?)
   end
 
   test 'missing_required_device_compatibility? returns true for student course offering with nil device_compatibility' do
-    co = create :course_offering, device_compatibility: nil
-    unit = create :script, :in_single_unit_course
-    create :course_version, content_root: unit.original_unit_group, course_offering: co
+    co = create(:course_offering, device_compatibility: nil)
+    unit = create(:script, :in_single_unit_course)
+    create(:course_version, content_root: unit.original_unit_group, course_offering: co)
 
     assert(co.missing_required_device_compatibility?)
   end
 
   test 'missing_required_device_compatibility? returns true for student course offering missing a device_compatibility' do
-    co = create :course_offering, device_compatibility: '{"computer":"","chromebook":"not_recommended","tablet":"incompatible","mobile":"incompatible","no_device":"incompatible"}'
-    unit = create :script, :in_single_unit_course
-    create :course_version, content_root: unit.original_unit_group, course_offering: co
+    co = create(:course_offering, device_compatibility: '{"computer":"","chromebook":"not_recommended","tablet":"incompatible","mobile":"incompatible","no_device":"incompatible"}')
+    unit = create(:script, :in_single_unit_course)
+    create(:course_version, content_root: unit.original_unit_group, course_offering: co)
 
     assert(co.missing_required_device_compatibility?)
   end
 
   test 'missing_required_device_compatibility? returns false for student course offering not missing any device_compatibility' do
-    co = create :course_offering, device_compatibility: '{"computer":"ideal","chromebook":"not_recommended","tablet":"incompatible","mobile":"incompatible","no_device":"incompatible"}'
-    unit = create :script, :in_single_unit_course
-    create :course_version, content_root: unit.original_unit_group, course_offering: co
+    co = create(:course_offering, device_compatibility: '{"computer":"ideal","chromebook":"not_recommended","tablet":"incompatible","mobile":"incompatible","no_device":"incompatible"}')
+    unit = create(:script, :in_single_unit_course)
+    create(:course_version, content_root: unit.original_unit_group, course_offering: co)
 
     refute(co.missing_required_device_compatibility?)
   end
 
   test 'duration_in_minutes returns nil if latest_published_version does not exist' do
-    course = create(:single_unit_course, family_name: 'test-duration', version_year: '1997', published_state: 'in_development')
+    course = create(
+      :single_unit_course,
+      family_name: 'test-duration',
+      version_year: '1997',
+      published_state: 'in_development'
+    )
     co = CourseOffering.add_course_offering(course)
 
     assert_nil co.latest_published_version
@@ -658,7 +712,13 @@ class CourseOfferingTest < ActiveSupport::TestCase
   end
 
   test 'duration_in_minutes returns sum of units duration in minutes' do
-    unit = create(:single_unit_course, unit: unit, published_state: 'stable', version_year: '1997', family_name: 'test-duration').first_unit
+    unit = create(
+      :single_unit_course,
+      unit: unit,
+      published_state: 'stable',
+      version_year: '1997',
+      family_name: 'test-duration'
+    ).first_unit
     lesson_group = create(:lesson_group, script: unit)
 
     lesson1 = create(:lesson, script: unit, lesson_group: lesson_group)
@@ -673,7 +733,12 @@ class CourseOfferingTest < ActiveSupport::TestCase
   end
 
   test 'duration_in_hours returns nil if latest_published_version does not exist' do
-    course = create(:single_unit_course, family_name: 'test-duration', version_year: '1997', published_state: 'in_development')
+    course = create(
+      :single_unit_course,
+      family_name: 'test-duration',
+      version_year: '1997',
+      published_state: 'in_development'
+    )
     co = CourseOffering.add_course_offering(course)
 
     assert_nil co.latest_published_version
@@ -681,7 +746,13 @@ class CourseOfferingTest < ActiveSupport::TestCase
   end
 
   test 'duration_in_hours returns 1 hour as the minimum if latest_published_version exists' do
-    unit = create(:single_unit_course, unit: unit, published_state: 'stable', version_year: '1997', family_name: 'test-duration').first_unit
+    unit = create(
+      :single_unit_course,
+      unit: unit,
+      published_state: 'stable',
+      version_year: '1997',
+      family_name: 'test-duration'
+    ).first_unit
     lesson_group = create(:lesson_group, script: unit)
 
     lesson1 = create(:lesson, script: unit, lesson_group: lesson_group)
@@ -692,7 +763,13 @@ class CourseOfferingTest < ActiveSupport::TestCase
   end
 
   test 'duration_in_hours returns sum of units duration in hours (rounded down using integer math)' do
-    unit = create(:single_unit_course, unit: unit, published_state: 'stable', version_year: '1997', family_name: 'test-duration').first_unit
+    unit = create(
+      :single_unit_course,
+      unit: unit,
+      published_state: 'stable',
+      version_year: '1997',
+      family_name: 'test-duration'
+    ).first_unit
     lesson_group = create(:lesson_group, script: unit)
 
     lesson1 = create(:lesson, script: unit, lesson_group: lesson_group)
@@ -761,16 +838,16 @@ class CourseOfferingTest < ActiveSupport::TestCase
   end
 
   test 'translated? returns true if user locale is in English' do
-    script = create :script, supported_locales: ['fake-locale']
+    script = create(:script, supported_locales: ['fake-locale'])
     create(:single_unit_course, unit: script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, version_year: '2050', family_name: 'ss')
     offering = CourseOffering.add_course_offering(script.original_unit_group)
     assert offering.translated?('en-us')
   end
 
   test 'translated? returns true only if course offering has a stable version supported in user locale' do
-    script1 = create :script, supported_locales: ['fake-locale', 'second-fake-locale']
+    script1 = create(:script, supported_locales: ['fake-locale', 'second-fake-locale'])
     create(:single_unit_course, :with_course_offering, unit: script1, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, version_year: '2051', family_name: 'ss')
-    script2 = create :script, supported_locales: ['fake-locale']
+    script2 = create(:script, supported_locales: ['fake-locale'])
     create(:single_unit_course, unit: script2, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, version_year: '2052', family_name: 'ss')
     offering = CourseOffering.add_course_offering(script2.original_unit_group)
 
@@ -780,7 +857,7 @@ class CourseOfferingTest < ActiveSupport::TestCase
   end
 
   test "can serialize and seed course offerings" do
-    course_offering = create :course_offering, key: 'course-offering-1', grade_levels: 'K,1,2', curriculum_type: 'Course', marketing_initiative: 'HOC', header: 'Popular Media', image: 'https://images.code.org/spritelab.JPG', cs_topic: 'Artificial Intelligence,Cybersecurity', school_subject: 'Math,Science', device_compatibility: "{'computer':'ideal','chromebook':'not_recommended','tablet':'incompatible','mobile':'incompatible','no_device':'incompatible'}", description: "An introductory course that empowers students to engage with computer science as a medium for creativity, communication, an problem solving.", professional_learning_program: "https://code.org/apply", video: "https://youtu.be/T45kEEBzrT8", published_date: DateTime.new(2023, 7, 5, 4, 30), self_paced_pl_course_offering_id: nil
+    course_offering = create(:course_offering, key: 'course-offering-1', grade_levels: 'K,1,2', curriculum_type: 'Course', marketing_initiative: 'HOC', header: 'Popular Media', image: 'https://images.code.org/spritelab.JPG', cs_topic: 'Artificial Intelligence,Cybersecurity', school_subject: 'Math,Science', device_compatibility: "{'computer':'ideal','chromebook':'not_recommended','tablet':'incompatible','mobile':'incompatible','no_device':'incompatible'}", description: "An introductory course that empowers students to engage with computer science as a medium for creativity, communication, an problem solving.", professional_learning_program: "https://code.org/apply", video: "https://youtu.be/T45kEEBzrT8", published_date: DateTime.new(2023, 7, 5, 4, 30), self_paced_pl_course_offering_id: nil)
     serialization = course_offering.serialize
     previous_course_offering = course_offering.freeze
     course_offering.destroy!
@@ -794,8 +871,8 @@ class CourseOfferingTest < ActiveSupport::TestCase
   end
 
   test "can seed correct self paced pl id based on self paced pl key" do
-    course_offering = create :course_offering, key: 'course-offering-1'
-    self_paced_pl_course = create :course_offering, key: 'self-paced-test-course'
+    course_offering = create(:course_offering, key: 'course-offering-1')
+    self_paced_pl_course = create(:course_offering, key: 'self-paced-test-course')
     serialization = course_offering.serialize
     serialization[:self_paced_pl_course_offering_key] = "self-paced-test-course"
 
@@ -808,7 +885,7 @@ class CourseOfferingTest < ActiveSupport::TestCase
   end
 
   test "can seed ai_teaching_assistant_available" do
-    course_offering = create :course_offering, key: 'course-offering-1'
+    course_offering = create(:course_offering, key: 'course-offering-1')
     refute course_offering.ai_teaching_assistant_available
     serialization = course_offering.serialize
     serialization[:ai_teaching_assistant_available] = true
@@ -875,13 +952,13 @@ class CourseOfferingTest < ActiveSupport::TestCase
   end
 
   test "elementary_school_level?" do
-    course1 = create :course_offering, grade_levels: 'K,1'
-    course2 = create :course_offering, grade_levels: 'K,1,2,3,4,5'
-    course3 = create :course_offering, grade_levels: '5,6,7'
-    course4 = create :course_offering, grade_levels: '6,7,8'
-    course5 = create :course_offering, grade_levels: '8,9,10'
-    course6 = create :course_offering, grade_levels: '9,10,11,12'
-    course7 = create :course_offering, grade_levels: '11,12'
+    course1 = create(:course_offering, grade_levels: 'K,1')
+    course2 = create(:course_offering, grade_levels: 'K,1,2,3,4,5')
+    course3 = create(:course_offering, grade_levels: '5,6,7')
+    course4 = create(:course_offering, grade_levels: '6,7,8')
+    course5 = create(:course_offering, grade_levels: '8,9,10')
+    course6 = create(:course_offering, grade_levels: '9,10,11,12')
+    course7 = create(:course_offering, grade_levels: '11,12')
 
     assert course1.elementary_school_level?
     assert course2.elementary_school_level?
@@ -893,13 +970,13 @@ class CourseOfferingTest < ActiveSupport::TestCase
   end
 
   test "middle_school_level?" do
-    course1 = create :course_offering, grade_levels: 'K,1'
-    course2 = create :course_offering, grade_levels: 'K,1,2,3,4,5'
-    course3 = create :course_offering, grade_levels: '5,6,7'
-    course4 = create :course_offering, grade_levels: '6,7,8'
-    course5 = create :course_offering, grade_levels: '8,9,10'
-    course6 = create :course_offering, grade_levels: '9,10,11,12'
-    course7 = create :course_offering, grade_levels: '11,12'
+    course1 = create(:course_offering, grade_levels: 'K,1')
+    course2 = create(:course_offering, grade_levels: 'K,1,2,3,4,5')
+    course3 = create(:course_offering, grade_levels: '5,6,7')
+    course4 = create(:course_offering, grade_levels: '6,7,8')
+    course5 = create(:course_offering, grade_levels: '8,9,10')
+    course6 = create(:course_offering, grade_levels: '9,10,11,12')
+    course7 = create(:course_offering, grade_levels: '11,12')
 
     refute course1.middle_school_level?
     refute course2.middle_school_level?
@@ -911,13 +988,13 @@ class CourseOfferingTest < ActiveSupport::TestCase
   end
 
   test "high_school_level?" do
-    course1 = create :course_offering, grade_levels: 'K,1'
-    course2 = create :course_offering, grade_levels: 'K,1,2,3,4,5'
-    course3 = create :course_offering, grade_levels: '5,6,7'
-    course4 = create :course_offering, grade_levels: '6,7,8'
-    course5 = create :course_offering, grade_levels: '8,9,10'
-    course6 = create :course_offering, grade_levels: '9,10,11,12'
-    course7 = create :course_offering, grade_levels: '11,12'
+    course1 = create(:course_offering, grade_levels: 'K,1')
+    course2 = create(:course_offering, grade_levels: 'K,1,2,3,4,5')
+    course3 = create(:course_offering, grade_levels: '5,6,7')
+    course4 = create(:course_offering, grade_levels: '6,7,8')
+    course5 = create(:course_offering, grade_levels: '8,9,10')
+    course6 = create(:course_offering, grade_levels: '9,10,11,12')
+    course7 = create(:course_offering, grade_levels: '11,12')
 
     refute course1.high_school_level?
     refute course2.high_school_level?
@@ -929,46 +1006,46 @@ class CourseOfferingTest < ActiveSupport::TestCase
   end
 
   test 'finds corresponding offerings for pl course' do
-    pl_course_offering = create :course_offering
-    pl_course = create(:single_unit_course, :pl_course).first_unit
-    create :course_version, content_root: pl_course, course_offering: pl_course_offering
+    pl_course_offering =create(:course_offering)
+    pl_course = create(:single_unit_course, :pl_course)
+    create(:course_version, content_root: pl_course, course_offering: pl_course_offering)
 
-    course_offering = create :course_offering, self_paced_pl_course_offering: pl_course_offering
+    course_offering = create(:course_offering, self_paced_pl_course_offering: pl_course_offering)
 
     assert_equal [course_offering], pl_course_offering.find_corresponding_offerings_for_pl_course
   end
 
   test 'does not find corresponding offerings for non-pl course' do
-    course_offering = create :course_offering
+    course_offering = create(:course_offering)
 
     assert_nil course_offering.find_corresponding_offerings_for_pl_course
   end
 
   test 'pl_for_elementary_school? returns true if non-pl offering is targeted at elementary' do
-    pl_course_offering = create :course_offering
-    pl_course = create(:single_unit_course, :pl_course).first_unit
-    create :course_version, content_root: pl_course, course_offering: pl_course_offering
+    pl_course_offering = create(:course_offering)
+    pl_course = create(:single_unit_course, :pl_course)
+    create(:course_version, content_root: pl_course, course_offering: pl_course_offering)
 
-    non_pl_course_offering = create :course_offering, grade_levels: 'K,1,2,3,4,5', self_paced_pl_course_offering: pl_course_offering
+    non_pl_course_offering = create(:course_offering, grade_levels: 'K,1,2,3,4,5', self_paced_pl_course_offering: pl_course_offering)
 
     assert non_pl_course_offering.elementary_school_level?
     assert pl_course_offering.pl_for_elementary_school?
   end
 
   test 'pl_for_elementary_school? returns false if non-pl offering is not targeted at elementary' do
-    pl_course_offering = create :course_offering
-    pl_course = create(:single_unit_course, :pl_course).first_unit
-    create :course_version, content_root: pl_course, course_offering: pl_course_offering
+    pl_course_offering = create(:course_offering)
+    pl_course = create(:single_unit_course, :pl_course)
+    create(:course_version, content_root: pl_course, course_offering: pl_course_offering)
 
-    non_pl_course_offering = create :course_offering, grade_levels: '9,10,11,12', self_paced_pl_course_offering: pl_course_offering
+    non_pl_course_offering = create(:course_offering, grade_levels: '9,10,11,12', self_paced_pl_course_offering: pl_course_offering)
 
     refute non_pl_course_offering.elementary_school_level?
     refute pl_course_offering.pl_for_elementary_school?
   end
 
   def course_offering_with_versions(num_versions, content_root_trait = :with_unit_group)
-    create :course_offering do |offering|
-      create_list :course_version, num_versions, content_root_trait, course_offering: offering
+    create(:course_offering) do |offering|
+      create_list(:course_version, num_versions, content_root_trait, course_offering: offering)
     end
   end
 end

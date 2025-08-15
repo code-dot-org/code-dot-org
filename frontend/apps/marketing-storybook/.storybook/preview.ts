@@ -1,14 +1,14 @@
+import {sectionBackground} from '@/components/contentful/section/Section';
 import {useInMemoryEntities} from '@contentful/experiences-sdk-react';
-import {CssBaseline, ThemeProvider} from '@mui/material';
-import {withThemeFromJSXProvider} from '@storybook/addon-themes';
 
 import {loadFonts, injectFontAwesome} from '@code-dot-org/fonts';
 
 import '@code-dot-org/fonts/brands/code.org/index.css';
 import '@code-dot-org/fonts/brands/CSForAll/index.css';
-import cdoTheme from '../../marketing/src/themes/code.org';
-import csforallTheme from '../../marketing/src/themes/csforall';
+
 import './preview.module.scss';
+import MuiDecorator from '../decorators/MuiDecorator';
+import SectionDecorator from '../decorators/SectionDecorator';
 
 injectFontAwesome();
 
@@ -607,17 +607,7 @@ const fontLoader = async () => {
   };
 };
 
-export const decorators = [
-  withThemeFromJSXProvider({
-    themes: {
-      'code.org': cdoTheme,
-      csforall: csforallTheme,
-    },
-    defaultTheme: 'code.org',
-    Provider: ThemeProvider,
-    GlobalStyles: CssBaseline,
-  }),
-];
+export const decorators = [SectionDecorator, MuiDecorator];
 
 const preview = {
   parameters: {
@@ -640,6 +630,21 @@ const preview = {
         },
       },
     },
+  },
+  globalTypes: {
+    sectionBackground: {
+      description: 'Contentful section background',
+      toolbar: {
+        title: 'Section Background',
+        icon: 'moon',
+        items: Object.values(sectionBackground),
+        dynamicTitle: true,
+      },
+    },
+  },
+
+  initialGlobals: {
+    sectionBackground: 'primary',
   },
 };
 export const loaders = document.fonts ? [fontLoader] : [];

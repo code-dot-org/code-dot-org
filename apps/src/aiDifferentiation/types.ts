@@ -1,5 +1,8 @@
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
-import {AiDiffContext} from '@cdo/generated-scripts/sharedConstants';
+import {
+  AiDiffContext,
+  AiInteractionStatus,
+} from '@cdo/generated-scripts/sharedConstants';
 
 import {ResponseValidator} from '../util/HttpClient';
 
@@ -25,6 +28,15 @@ type ServerChatThread = {
   messages?: [ChatItem];
 };
 
+type ServerChatMessage = {
+  id: number;
+  role: string;
+  content: string;
+  updated_at: Date;
+  is_preset: boolean;
+  preset_chip_text: string;
+};
+
 export type ChatThread = {
   id: number;
   title: string;
@@ -43,6 +55,24 @@ export type Context = {
   courseId?: number;
   viewAsUserId?: number;
 };
+
+function messageValidatorHelper(
+  response: Record<string, unknown> | unknown[]
+): ChatTextMessage {
+  if (Array.isArray(response)) {
+    throw new Error('Source response should be an object (received array).');
+  }
+  const serverMsg = response as ServerChatMessage;
+  return {
+    role: serverMsg.role,
+    chatMessageText:
+      serverMsg.is_preset && serverMsg.preset_chip_text
+        ? serverMsg.preset_chip_text
+        : serverMsg.content,
+    status: AiInteractionStatus.OK,
+    id: serverMsg.id,
+  } as ChatTextMessage;
+}
 
 const chatThreadValidator: ResponseValidator<ChatThread[]> = bodyJson => {
   if (!Array.isArray(bodyJson)) {
@@ -73,4 +103,22 @@ const chatThreadValidator: ResponseValidator<ChatThread[]> = bodyJson => {
   return threads;
 };
 
+const chatThreadMessagesValidator: ResponseValidator<ChatThread> = bodyJson => {
+  const serverThread = bodyJson as ServerChatThread;
+  const serverMessages = serverThread.messages as ChatTextMessage[];
+
+  const messages: ChatTextMessage[] = serverMessages.map(serverMessage => {
+    return messageValidatorHelper(serverMessage);
+  });
+
+  return {
+    id: serverThread.id,
+    title: serverThread.title,
+    updatedAt: new Date(serverThread.updated_at),
+    contextType: serverThread.context_type,
+    messages: messages,
+  } as ChatThread;
+};
+
 export {chatThreadValidator};
+export {chatThreadMessagesValidator};

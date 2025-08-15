@@ -2,8 +2,6 @@
 include_recipe 'apt'
 apt_package 'git'
 
-include_recipe 'cdo-ruby::switch-to-deployment-mode'
-
 gem_package 'bundler' do
   action :upgrade
   version node['cdo-ruby']['bundler_version']

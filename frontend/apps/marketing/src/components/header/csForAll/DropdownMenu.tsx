@@ -3,13 +3,14 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import {alpha, Button, MenuItem} from '@mui/material';
 import Box from '@mui/material/Box';
 import Menu from '@mui/material/Menu';
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 
+import {isExternalLink} from '@/components/common/utils';
+import {Brand} from '@/config/brand';
 import theme from '@/themes/csforall';
 
 import {buttonStyles} from './common/styles';
 import {LinkItemProps} from './common/types';
-import LinkItem from './LinkItem';
 
 export interface MenuListProps {
   /** Button id that opens menu */
@@ -18,6 +19,8 @@ export interface MenuListProps {
   buttonLabel: string;
   /** The list of links to display in the menu */
   linkList?: LinkItemProps[];
+  /** Brand for the links, used with external links */
+  brand?: Brand;
 }
 
 const styles = {
@@ -32,13 +35,14 @@ const styles = {
       paddingTop: 0,
       paddingBottom: theme.spacing(1),
       minWidth: '200px',
+      gap: theme.spacing(0),
     },
   },
   menuItem: {
     marginBlock: theme.spacing(0.5),
-    '& a': {
-      width: '100%',
-    },
+    fontSize: theme.typography.body3.fontSize,
+    transition: 'all 0.2s ease',
+    width: '100%',
     '&:hover, &:focus': {
       backgroundColor: alpha(theme.palette.primary.main, 0.1),
       borderRadius: theme.shape.borderRadius,
@@ -58,7 +62,12 @@ const styles = {
   },
 };
 
-const DropdownMenu: React.FC<MenuListProps> = ({id, buttonLabel, linkList}) => {
+const DropdownMenu: React.FC<MenuListProps> = ({
+  id,
+  buttonLabel,
+  linkList,
+  brand = Brand.CS_FOR_ALL,
+}) => {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
 
@@ -66,21 +75,23 @@ const DropdownMenu: React.FC<MenuListProps> = ({id, buttonLabel, linkList}) => {
     setAnchorEl(event.currentTarget);
   };
 
-  const handleKeyDown = (
-    event: React.KeyboardEvent,
-    href: LinkItemProps['href'],
-  ) => {
-    if (event.key === 'Enter' || event.key === ' ') {
-      event.preventDefault();
-      if (href) {
-        window.location.href = href;
-      }
-    }
-  };
-
   const handleClose = () => {
     setAnchorEl(null);
   };
+
+  useEffect(() => {
+    if (!open) return;
+
+    const handleScroll = () => {
+      handleClose();
+    };
+
+    window.addEventListener('scroll', handleScroll, {passive: true});
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [open]);
 
   return (
     <Box>
@@ -112,28 +123,34 @@ const DropdownMenu: React.FC<MenuListProps> = ({id, buttonLabel, linkList}) => {
           },
         }}
         anchorOrigin={{
-          vertical: 64,
+          vertical: 63,
           horizontal: -12,
         }}
         elevation={0}
         disableAutoFocusItem
         disableScrollLock
+        transitionDuration={0}
         sx={styles.menu}
       >
-        {linkList?.map(({label, href, typography = 'body3', ...linkProps}) => (
+        {linkList?.map(({label, href}) => (
           <MenuItem
             key={href ? `${href}-${label}` : `nohref-${label}`}
-            onClick={handleClose}
-            onKeyDown={e => handleKeyDown(e, href)}
+            component="a"
+            href={href}
             disableRipple
             sx={styles.menuItem}
+            target={
+              href && isExternalLink(href, brand, 'production')
+                ? '_blank'
+                : undefined
+            }
+            rel={
+              href && isExternalLink(href, brand, 'production')
+                ? 'noopener noreferrer'
+                : undefined
+            }
           >
-            <LinkItem
-              label={label}
-              href={href}
-              typography={typography}
-              {...linkProps}
-            />
+            {label}
           </MenuItem>
         ))}
       </Menu>

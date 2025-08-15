@@ -6,6 +6,7 @@ const linkList = [
   {label: 'Home', href: '/home'},
   {label: 'About', href: '/about'},
   {label: 'Contact', href: '/contact'},
+  {label: 'External', href: 'https://example.com', external: true},
 ];
 
 const defaultProps: MenuListProps = {
@@ -45,11 +46,13 @@ describe('DropdownMenu', () => {
     });
   });
 
-  it('calls handleClose when menu item is clicked', () => {
+  it('renders external link with correct target and rel', () => {
     render(<DropdownMenu {...defaultProps} />);
     fireEvent.click(screen.getByRole('button', {name: /menu/i}));
-    fireEvent.click(screen.getByText('Home'));
-    expect(screen.queryByRole('menu')).not.toBeInTheDocument();
+    const externalLink = screen.getByRole('menuitem', {name: /external/i});
+    expect(externalLink).toHaveAttribute('href', 'https://example.com');
+    expect(externalLink).toHaveAttribute('target', '_blank');
+    expect(externalLink).toHaveAttribute('rel', 'noopener noreferrer');
   });
 
   it('does not render menu items if linkList is empty', () => {
@@ -64,61 +67,18 @@ describe('DropdownMenu', () => {
     expect(screen.queryAllByRole('menuitem')).toHaveLength(0);
   });
 
-  it('navigates to href when Enter key is pressed on menu item', () => {
-    const originalLocation = window.location.href;
-    Object.defineProperty(window, 'location', {
-      value: {href: ''},
-      writable: true,
-    });
-
+  it('navigates between menu items with arrow keys', () => {
     render(<DropdownMenu {...defaultProps} />);
     fireEvent.click(screen.getByRole('button', {name: /menu/i}));
 
-    const homeMenuItem = screen.getByText('Home').closest('[role="menuitem"]');
-    fireEvent.keyDown(homeMenuItem!, {key: 'Enter'});
+    const homeItem = screen.getByText('Home');
+    const aboutItem = screen.getByText('About');
 
-    expect(window.location.href).toBe('/home');
+    homeItem.focus();
+    fireEvent.keyDown(homeItem, {key: 'ArrowDown', code: 'ArrowDown'});
+    expect(aboutItem).toHaveFocus();
 
-    // Restore original location
-    window.location.href = originalLocation;
-  });
-
-  it('navigates to href when Space key is pressed on menu item', () => {
-    const originalLocation = window.location.href;
-    Object.defineProperty(window, 'location', {
-      value: {href: ''},
-      writable: true,
-    });
-
-    render(<DropdownMenu {...defaultProps} />);
-    fireEvent.click(screen.getByRole('button', {name: /menu/i}));
-
-    const aboutMenuItem = screen
-      .getByText('About')
-      .closest('[role="menuitem"]');
-    fireEvent.keyDown(aboutMenuItem!, {key: ' '});
-
-    expect(window.location.href).toBe('/about');
-
-    // Restore original location
-    window.location.href = originalLocation;
-  });
-
-  it('does not navigate when other keys are pressed on menu item', () => {
-    const originalLocation = window.location.href;
-    Object.defineProperty(window, 'location', {
-      value: {href: originalLocation},
-      writable: true,
-    });
-
-    render(<DropdownMenu {...defaultProps} />);
-    fireEvent.click(screen.getByRole('button', {name: /menu/i}));
-
-    const contactMenuItem = screen
-      .getByText('Contact')
-      .closest('[role="menuitem"]');
-    fireEvent.keyDown(contactMenuItem!, {key: 'Tab'});
-
-    expect(window.location.href).toBe(originalLocation);
+    fireEvent.keyDown(aboutItem, {key: 'ArrowUp', code: 'ArrowUp'});
+    expect(homeItem).toHaveFocus();
   });
 });

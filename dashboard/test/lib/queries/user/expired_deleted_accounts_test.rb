@@ -28,11 +28,11 @@ class Queries::User::ExpiredDeletedAccountsTest < ActiveSupport::TestCase
     context 'when user already scrubbed of PII' do
       before do
         expected_user.update(deleted_at: deleted_before - 1.day)
-        create :user_data_retention_status, user: expected_user, pii_scrubbed_at: Time.now
+        create(:user_data_retention_status, user: expected_user, pii_scrubbed_at: Time.now)
       end
 
       it 'does not return the user' do
-        create :user_data_retention_status, user: expected_user, pii_scrubbed_at: Time.now
+        create(:user_data_retention_status, user: expected_user, pii_scrubbed_at: Time.now)
         _(expired_deleted_accounts).wont_include expected_user
       end
     end
@@ -50,7 +50,7 @@ class Queries::User::ExpiredDeletedAccountsTest < ActiveSupport::TestCase
     context 'when user already anonymized' do
       before do
         expected_user.update(deleted_at: deleted_before - 1.day)
-        create :user_data_retention_status, user: expected_user, anonymized_at: Time.now
+        create(:user_data_retention_status, user: expected_user, anonymized_at: Time.now)
       end
 
       it 'does not return the user' do

@@ -6,6 +6,9 @@ const meta: Meta<typeof Section> = {
   title: 'Marketing/Section',
   component: Section,
   tags: ['autodocs', 'marketing'],
+  parameters: {
+    disableSectionDecorator: true,
+  },
 };
 export default meta;
 type Story = StoryObj<typeof Section>;
@@ -56,7 +59,7 @@ const createStory = (background: SectionBackground): Story => ({
         for (const divider of dividers) {
           const sectionText = `Section | background: ${background} | padding: ${padding} | theme: ${themeOpt} | divider: ${divider}`;
           const section = canvas.getByText(sectionText);
-          expect(section).toBeInTheDocument();
+          await expect(section).toBeInTheDocument();
         }
       }
     }

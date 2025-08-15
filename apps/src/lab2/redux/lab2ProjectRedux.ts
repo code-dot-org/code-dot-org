@@ -89,6 +89,30 @@ const projectSlice = createSlice({
         state.hasEdited = true;
       }
     },
+    createNewExternalFile(
+      state,
+      action: PayloadAction<{
+        fileName: string;
+        url: string;
+        folderId?: FolderId;
+      }>
+    ) {
+      if (state.projectSources?.source) {
+        const source = state.projectSources.source as MultiFileSource;
+        const newFileId = createNewFileHelper(
+          source,
+          action.payload.fileName,
+          action.payload.folderId,
+          undefined,
+          action.payload.url
+        );
+        state.projectSources = {
+          ...state.projectSources,
+          source: newFileId,
+        };
+        state.hasEdited = true;
+      }
+    },
     renameFile(
       state,
       action: PayloadAction<{fileId: FileId; newName: string}>
@@ -395,6 +419,7 @@ export const {
   setSource,
   setProjectTooLarge,
   createNewFile,
+  createNewExternalFile,
   renameFile,
   saveFile,
   setFileType,
