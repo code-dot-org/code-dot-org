@@ -5,7 +5,7 @@
  **/
 export class WeakMapPlus extends WeakMap {
   /*
-   * WeakMap compatiple key to swap for `undefined`.  Currently uses an object
+   * WeakMap compatible key to swap for `undefined`.  Currently uses an object
    * but could use a symbol if our minimum supported browsers implement the spec
    * or if our transpilers (babel/tsc) can add a polyfill implementation .
    * See: https://github.com/tc39/ecma262/pull/2777
