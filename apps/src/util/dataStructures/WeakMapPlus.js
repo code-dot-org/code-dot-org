@@ -10,9 +10,7 @@ export class WeakMapPlus extends WeakMap {
    * or if our transpilers (babel/tsc) can add a polyfill implementation .
    * See: https://github.com/tc39/ecma262/pull/2777
    **/
-  static {
-    this._undefinedKey = {};
-  }
+  static _undefinedKey = {};
   /*
    * Get a key that works with the native WeakMap implementation.  I.e. if
    * key is undefined, we'll use `_undefinedKey` as the key
