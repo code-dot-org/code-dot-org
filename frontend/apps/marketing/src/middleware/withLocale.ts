@@ -1,7 +1,7 @@
 import Negotiator from 'negotiator';
 import {NextFetchEvent, NextRequest} from 'next/server';
 
-import {Brand, getBrandFromHostname} from '@/config/brand';
+import {getBrandFromHostname} from '@/config/brand';
 import {
   getLocalizeJsLocaleFromDashboardLocale,
   SUPPORTED_LOCALE_CODES,
@@ -9,9 +9,7 @@ import {
   SupportedLocale,
 } from '@/config/locale';
 import {getStage} from '@/config/stage';
-import {getStudioBaseUrl} from '@/config/studio';
 import {getContentfulSlug} from '@/contentful/slug/getContentfulSlug';
-import {getCookieNameByStage} from '@/cookies/getCookie';
 import {setLanguageCookie} from '@/middleware/i18n/setLanguageCookie';
 import {getCachedRedirectResponse} from '@/middleware/utils/getCachedRedirectResponse';
 
@@ -67,19 +65,6 @@ export const withLocale: MiddlewareFactory = next => {
       setLanguageCookie({response, maybeLocale, stage, brand, hostname});
 
       return response;
-    }
-
-    if (brand === Brand.CODE_DOT_ORG && isRootRoute) {
-      // If the _user_type cookie is set, then Dashboard successfully logged in the user which is an early indicator
-      // that the user is logged in right now. Therefore, send the user to Code Studio
-      // See: https://github.com/code-dot-org/code-dot-org/blob/3fad8bce055846378ae3da343da93a32acd4df8c/dashboard/config/initializers/devise.rb#L331
-      const userTypeCookie = request.cookies.get(
-        getCookieNameByStage('_user_type', stage),
-      );
-
-      if (userTypeCookie?.value) {
-        return getCachedRedirectResponse(getStudioBaseUrl());
-      }
     }
 
     const slug = isRootRoute ? '' : getContentfulSlug(pathParts);

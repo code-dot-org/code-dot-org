@@ -4,7 +4,11 @@ import {Outlet, useLocation, useParams} from 'react-router-dom';
 
 import {useFetch} from '@cdo/apps/util/useFetch';
 
-import {Enrollment, Workshop} from '../WorkshopFormTemplate/types';
+import {
+  Enrollment,
+  SurveySummary,
+  Workshop,
+} from '../WorkshopFormTemplate/types';
 import {
   enrollmentDataToProps,
   workshopDataToProps,
@@ -42,6 +46,17 @@ export const WorkshopLayout: FC<WorkshopLayoutProps> = ({
     refetch: refetchEnrollments,
   } = useFetch<Enrollment[] | null>(
     workshopId ? `/api/v1/pd/workshops/${workshopId}/enrollments` : ''
+  );
+
+  const {
+    data: surveys,
+    loading: surveysLoading,
+    error: surveysError,
+    refetch: refetchSurveys,
+  } = useFetch<SurveySummary | null>(
+    workshopId
+      ? `/api/v1/pd/workshops/${workshopId}/foorm/workshop_survey_summary`
+      : ''
   );
 
   const workshop = useMemo(
@@ -103,6 +118,10 @@ export const WorkshopLayout: FC<WorkshopLayoutProps> = ({
             enrollmentsLoading,
             enrollmentsError,
             refetchEnrollments,
+            surveys,
+            surveysLoading,
+            surveysError,
+            refetchSurveys,
           }}
         />
       </main>
