@@ -57,6 +57,7 @@ export const ProjectBlockedUI: React.FunctionComponent<{
           },
   };
 
+  // If in edit/view mode with view/edit access, redner workspace alert with warning about flagged project.
   if (['view', 'edit'].includes(pageAction) && hasViewOrEditAccess) {
     return (
       <div
@@ -76,7 +77,8 @@ export const ProjectBlockedUI: React.FunctionComponent<{
     );
   }
 
-  // If in share view, rendder blocked UI for all users, but with customized link depending on user's role.
+  // If in share mode, render blocked UI for all users - blocked UI includes customized link depending on user's role.
+  // If in edit/view mode without view/edit access, render blocked UI.
   return (
     <div
       id="blocked-project-ui-container"
