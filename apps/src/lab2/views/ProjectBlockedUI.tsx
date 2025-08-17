@@ -2,6 +2,7 @@ import Alert, {alertTypes} from '@code-dot-org/component-library/alert';
 import React, {useState} from 'react';
 
 import AbuseExclamation from '@cdo/apps/code-studio/components/AbuseExclamation';
+import {getLabViewPageAction} from '@cdo/apps/lab2/utils';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 
@@ -24,13 +25,7 @@ export const ProjectBlockedUI: React.FunctionComponent<{
   );
   console.log('isTeacherOfProjectOwner', isTeacherOfProjectOwner);
   const canViewFlaggedProject = isTeacherOfProjectOwner || isProjectValidator;
-  const pathname = window.location.pathname;
-
-  const tokens = pathname.split('/');
-  let pageAction = 'share';
-  if (tokens[1] === 'projects') {
-    pageAction = tokens[4];
-  }
+  const pageAction = getLabViewPageAction() || '';
 
   const abuseExclamationProps = {
     canViewFlaggedProject,

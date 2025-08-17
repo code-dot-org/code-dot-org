@@ -11,6 +11,7 @@ import {PERMISSIONS} from '@cdo/apps/lab2/constants';
 import {useInitialLabTheme} from '@cdo/apps/lab2/hooks/useInitialLabTheme';
 import ProgressContainer from '@cdo/apps/lab2/progress/ProgressContainer';
 import {getAppOptionsViewingExemplar} from '@cdo/apps/lab2/projects/utils';
+import {getLabViewPageAction} from '@cdo/apps/lab2/utils';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {lab2EntryPoints} from '../../../lab2EntryPoints';
@@ -44,12 +45,7 @@ const LabViewsRenderer: React.FunctionComponent = () => {
     state.lab.permissions?.includes(PERMISSIONS.PROJECT_VALIDATOR)
   );
 
-  const pathname = window.location.pathname;
-  const tokens = pathname.split('/');
-  let pageAction = 'share';
-  if (tokens[1] === 'projects') {
-    pageAction = tokens[4];
-  }
+  const pageAction = getLabViewPageAction();
 
   const isViewingExemplar = getAppOptionsViewingExemplar();
 
