@@ -23,9 +23,10 @@ export const ProjectBlockedUI: React.FunctionComponent<{
   const isTeacherOfProjectOwner = useAppSelector(
     state => state.lab.isTeacherOfProjectOwner
   );
-  console.log('isTeacherOfProjectOwner', isTeacherOfProjectOwner);
   const canViewFlaggedProject = isTeacherOfProjectOwner || isProjectValidator;
   const pageAction = getLabViewPageAction() || '';
+  const hasViewOrEditAccess =
+    isProjectValidator || isOwner || isTeacherOfProjectOwner;
 
   const abuseExclamationProps = {
     canViewFlaggedProject,
@@ -56,10 +57,7 @@ export const ProjectBlockedUI: React.FunctionComponent<{
           },
   };
 
-  if (
-    ['view', 'edit'].includes(pageAction) &&
-    (isProjectValidator || isOwner || isTeacherOfProjectOwner)
-  ) {
+  if (['view', 'edit'].includes(pageAction) && hasViewOrEditAccess) {
     return (
       <div
         id="blocked-project-ui-container-project-validator"
@@ -78,6 +76,7 @@ export const ProjectBlockedUI: React.FunctionComponent<{
     );
   }
 
+  // If in share view, rendder blocked UI for all users, but with customized link depending on user's role.
   return (
     <div
       id="blocked-project-ui-container"
