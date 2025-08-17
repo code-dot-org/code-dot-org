@@ -39,7 +39,6 @@ const LabViewsRenderer: React.FunctionComponent = () => {
   const isTeacherOfProjectOwner = useAppSelector(
     state => state.lab.isTeacherOfProjectOwner
   );
-  console.log('isTeacherOfProjectOwner', isTeacherOfProjectOwner);
   const isOwner = useAppSelector(state => state.lab.channel?.isOwner || false);
   const isProjectValidator = useAppSelector(state =>
     state.lab.permissions?.includes(PERMISSIONS.PROJECT_VALIDATOR)
@@ -60,18 +59,24 @@ const LabViewsRenderer: React.FunctionComponent = () => {
   });
 
   const isBlocked = isBlockedAbuse || projectSharingDisabled;
+  const hasViewEditAccess =
+    isProjectValidator || isOwner || isTeacherOfProjectOwner;
 
   const blockLabView = () => {
-    if (!currentAppName || (pageAction === 'share' && isBlocked)) {
+    if (!currentAppName) return true;
+    if (!isBlocked) return false;
+
+    // If a project is blocked and in share view, do not render the lab view.
+    if (pageAction === 'share') {
       return true;
     }
-    if (['view', 'edit'].includes(pageAction)) {
-      return !isProjectValidator && !isOwner && !isTeacherOfProjectOwner;
+    // If a project is blocked and in view/edit mode, do not render the lab view if the user does not have view/edit access.
+    if (['view', 'edit'].includes(pageAction) && !hasViewEditAccess) {
+      return true;
     }
     return false;
   };
 
-  // Do not render lab view if project is blocked, and user is not a project validator nor owner, and in share view..
   if (blockLabView()) {
     return null;
   }
