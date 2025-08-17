@@ -57,7 +57,7 @@ export const ProjectBlockedUI: React.FunctionComponent<{
           },
   };
 
-  // If in edit/view mode with view/edit access, redner workspace alert with warning about flagged project.
+  // If in edit/view mode with view/edit access, render workspace alert with warning about flagged project.
   if (['view', 'edit'].includes(pageAction) && hasViewOrEditAccess) {
     return (
       <div
