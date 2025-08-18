@@ -19,10 +19,10 @@
       },
       {
         "text": "##Voice ID \n\nElijah’s login system uses voice recognition with a simple spoken phrase. It sometimes doesn’t recognize him, and worse — someone else in his house can say the same phrase and get in.",
-        "imageUrl": "https://images.code.org/c8e8d067603bd6b4bfd2f6bebec64cd4-Screenshot 2025-08-05 150405.png",
+        "imageUrl": "https://images.code.org/90cd6693d846da46a7e180b9cd8f35cf-elijah_1.png",
         "key": "test-ai-powered-threats-defenses-lesson3-level3-91f6e938-059e-4b97-b572-350b4fa8bbb8",
         "fadeInOverPrevious": true,
-        "layout": "text-bottom-right"
+        "layout": "text-top-right"
       },
       {
         "text": "##Security Questions with Long Typing\n\nSome platforms ask Elijah to answer security questions like \"What’s your pet’s name?\" He can usually answer them, but they take time to type on a small screen and don’t feel very secure.",
@@ -41,6 +41,6 @@
     "thumbnail_url": "https://images.code.org/71d9ee54388fb5edb83bb5d3fe9be644-Screenshot 2025-08-05 145214.png",
     "bubble_choice_description": "A creative student who makes music and videos in a busy, shared home. Elijah often struggles with voice-based security in noisy environments."
   },
-  "audit_log": "[{\"changed_at\":\"2025-08-05T20:04:45.666+00:00\",\"changed\":[\"cloned from \\\"test-ai-powered-threats-defenses-lesson11-level1b\\\"\"],\"cloned_from\":\"test-ai-powered-threats-defenses-lesson11-level1b\"},{\"changed_at\":\"2025-08-05 20:04:48 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-05 21:23:09 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-05 21:33:55 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-05 21:52:58 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-05 21:56:19 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-05 22:04:11 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-08-05T20:04:45.666+00:00\",\"changed\":[\"cloned from \\\"test-ai-powered-threats-defenses-lesson11-level1b\\\"\"],\"cloned_from\":\"test-ai-powered-threats-defenses-lesson11-level1b\"},{\"changed_at\":\"2025-08-05 20:04:48 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-05 21:23:09 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-05 21:33:55 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-05 21:52:58 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-05 21:56:19 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-05 22:04:11 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-14 20:08:02 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Panels>

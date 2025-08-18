@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-07-30 16:25:25 UTC",
+    "serialized_at": "2025-08-14 18:27:21 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -121,7 +121,7 @@
       "key": "519933c4-cd36-4080-8655-9fc6203f9c99",
       "position": 1,
       "properties": {
-        "progression_name": "Data and Privacy"
+        "progression_name": "Introduction to Cybersecuirty"
       },
       "seeding_key": {
         "activity_section.key": "519933c4-cd36-4080-8655-9fc6203f9c99",
@@ -132,7 +132,7 @@
       "key": "d75b7b81-86ca-4d0f-8183-0a01d389e470",
       "position": 2,
       "properties": {
-        "progression_name": "Security Risks"
+        "progression_name": "Phishing"
       },
       "seeding_key": {
         "activity_section.key": "d75b7b81-86ca-4d0f-8183-0a01d389e470",
@@ -143,7 +143,7 @@
       "key": "3b575489-ca6b-4dcc-93d3-f4357bdd8ea4",
       "position": 3,
       "properties": {
-        "progression_name": "Protecting Data"
+        "progression_name": "CIA Triad"
       },
       "seeding_key": {
         "activity_section.key": "3b575489-ca6b-4dcc-93d3-f4357bdd8ea4",
@@ -151,8 +151,19 @@
       }
     },
     {
-      "key": "6b154d47-7c75-46bd-891d-f44d9a4d4747",
+      "key": "70ae6c64-38cc-4955-bd53-03ea776315b8",
       "position": 4,
+      "properties": {
+        "progression_name": "AAA"
+      },
+      "seeding_key": {
+        "activity_section.key": "70ae6c64-38cc-4955-bd53-03ea776315b8",
+        "lesson_activity.key": "112c9257-5390-4089-bdad-9583a727d4c2"
+      }
+    },
+    {
+      "key": "6b154d47-7c75-46bd-891d-f44d9a4d4747",
+      "position": 5,
       "properties": {
         "progression_name": "Final Project and Wrap-Up"
       },
@@ -319,6 +330,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_nets_career_AI_cyber"
+        ],
         "progression": "Course Overview"
       },
       "bonus": false,
@@ -341,6 +355,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_AI_chatbot_overview_cyber"
+        ],
         "progression": "Course Overview"
       },
       "bonus": false,
@@ -491,7 +508,7 @@
         "level_keys": [
           "csaif_pl_overview_objectives_02"
         ],
-        "progression": "Data and Privacy"
+        "progression": "Introduction to Cybersecuirty"
       },
       "bonus": false,
       "seeding_key": {
@@ -513,15 +530,12 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csaif_pl_2_data"
-        ],
-        "progression": "Data and Privacy"
+        "progression": "Introduction to Cybersecuirty"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csaif_pl_2_data"
+          "csaif_pl_2_aithreats_02"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
@@ -529,7 +543,7 @@
         "activity_section.key": "519933c4-cd36-4080-8655-9fc6203f9c99"
       },
       "level_keys": [
-        "csaif_pl_2_data"
+        "csaif_pl_2_aithreats_02"
       ]
     },
     {
@@ -538,15 +552,12 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csaif_pl_2_data_02"
-        ],
-        "progression": "Data and Privacy"
+        "progression": "Introduction to Cybersecuirty"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csaif_pl_2_data_02"
+          "csaif_pl_2_aithreats_03"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
@@ -554,7 +565,7 @@
         "activity_section.key": "519933c4-cd36-4080-8655-9fc6203f9c99"
       },
       "level_keys": [
-        "csaif_pl_2_data_02"
+        "csaif_pl_2_aithreats_03"
       ]
     },
     {
@@ -563,15 +574,12 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csaif_pl_2_privacy_b"
-        ],
-        "progression": "Data and Privacy"
+        "progression": "Introduction to Cybersecuirty"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csaif_pl_2_privacy_b"
+          "csaif_pl_2_aithreats_04"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
@@ -579,7 +587,7 @@
         "activity_section.key": "519933c4-cd36-4080-8655-9fc6203f9c99"
       },
       "level_keys": [
-        "csaif_pl_2_privacy_b"
+        "csaif_pl_2_aithreats_04"
       ]
     },
     {
@@ -588,15 +596,12 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csaif_pl_2_privacy_02"
-        ],
-        "progression": "Data and Privacy"
+        "progression": "Introduction to Cybersecuirty"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csaif_pl_2_privacy_02"
+          "csaif_pl_2_aithreats_05"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
@@ -604,32 +609,29 @@
         "activity_section.key": "519933c4-cd36-4080-8655-9fc6203f9c99"
       },
       "level_keys": [
-        "csaif_pl_2_privacy_02"
+        "csaif_pl_2_aithreats_05"
       ]
     },
     {
       "chapter": 19,
       "position": 6,
-      "activity_section_position": 1,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csaif_pl_security"
-        ],
-        "progression": "Security Risks"
+        "progression": "Introduction to Cybersecuirty"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csaif_pl_security"
+          "test-ai-powered-threats-defenses-lesson3-level2"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "sandbox-csaif-pl-cyber",
-        "activity_section.key": "d75b7b81-86ca-4d0f-8183-0a01d389e470"
+        "activity_section.key": "519933c4-cd36-4080-8655-9fc6203f9c99"
       },
       "level_keys": [
-        "csaif_pl_security"
+        "test-ai-powered-threats-defenses-lesson3-level2"
       ]
     },
     {
@@ -638,23 +640,20 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csaif_pl_2_encryption_03"
-        ],
-        "progression": "Protecting Data"
+        "progression": "Phishing"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csaif_pl_2_encryption_03"
+          "test-ai-powered-threats-defenses-lesson3-level1choice-pl"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "sandbox-csaif-pl-cyber",
-        "activity_section.key": "3b575489-ca6b-4dcc-93d3-f4357bdd8ea4"
+        "activity_section.key": "d75b7b81-86ca-4d0f-8183-0a01d389e470"
       },
       "level_keys": [
-        "csaif_pl_2_encryption_03"
+        "test-ai-powered-threats-defenses-lesson3-level1choice-pl"
       ]
     },
     {
@@ -663,23 +662,20 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csaif_pl_2_encryption"
-        ],
-        "progression": "Protecting Data"
+        "progression": "Phishing"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csaif_pl_2_encryption"
+          "test-ai-powered-threats-defenses-lesson3-level2choice-pl"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "sandbox-csaif-pl-cyber",
-        "activity_section.key": "3b575489-ca6b-4dcc-93d3-f4357bdd8ea4"
+        "activity_section.key": "d75b7b81-86ca-4d0f-8183-0a01d389e470"
       },
       "level_keys": [
-        "csaif_pl_2_encryption"
+        "test-ai-powered-threats-defenses-lesson3-level2choice-pl"
       ]
     },
     {
@@ -688,23 +684,20 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csaif_pl_2_encryption_04"
-        ],
-        "progression": "Protecting Data"
+        "progression": "Phishing"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csaif_pl_2_encryption_04"
+          "test-ai-powered-threats-defenses-lesson3-level4choice-pl"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "sandbox-csaif-pl-cyber",
-        "activity_section.key": "3b575489-ca6b-4dcc-93d3-f4357bdd8ea4"
+        "activity_section.key": "d75b7b81-86ca-4d0f-8183-0a01d389e470"
       },
       "level_keys": [
-        "csaif_pl_2_encryption_04"
+        "test-ai-powered-threats-defenses-lesson3-level4choice-pl"
       ]
     },
     {
@@ -713,40 +706,34 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csaif_pl_2_encryption_02"
-        ],
-        "progression": "Protecting Data"
+        "progression": "Phishing"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csaif_pl_2_encryption_02"
+          "csaif_pl_2_aithreats_06"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "sandbox-csaif-pl-cyber",
-        "activity_section.key": "3b575489-ca6b-4dcc-93d3-f4357bdd8ea4"
+        "activity_section.key": "d75b7b81-86ca-4d0f-8183-0a01d389e470"
       },
       "level_keys": [
-        "csaif_pl_2_encryption_02"
+        "csaif_pl_2_aithreats_06"
       ]
     },
     {
       "chapter": 24,
       "position": 11,
-      "activity_section_position": 5,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csaif_pl_2_encrypt"
-        ],
-        "progression": "Protecting Data"
+        "progression": "CIA Triad"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csaif_pl_2_encrypt"
+          "csaif_pl_2_aithreats_07"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
@@ -754,49 +741,109 @@
         "activity_section.key": "3b575489-ca6b-4dcc-93d3-f4357bdd8ea4"
       },
       "level_keys": [
-        "csaif_pl_2_encrypt"
+        "csaif_pl_2_aithreats_07"
       ]
     },
     {
       "chapter": 25,
       "position": 12,
-      "activity_section_position": 1,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csaif_pl_2_project_1"
-        ],
-        "progression": "Final Project and Wrap-Up"
+        "progression": "CIA Triad"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csaif_pl_2_project_1"
+          "csaif_pl_2_aithreats_08"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "sandbox-csaif-pl-cyber",
-        "activity_section.key": "6b154d47-7c75-46bd-891d-f44d9a4d4747"
+        "activity_section.key": "3b575489-ca6b-4dcc-93d3-f4357bdd8ea4"
       },
       "level_keys": [
-        "csaif_pl_2_project_1"
+        "csaif_pl_2_aithreats_08"
       ]
     },
     {
       "chapter": 26,
       "position": 13,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "CIA Triad"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_2_aithreats_09"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-cyber",
+        "activity_section.key": "3b575489-ca6b-4dcc-93d3-f4357bdd8ea4"
+      },
+      "level_keys": [
+        "csaif_pl_2_aithreats_09"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 14,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "AAA"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_2_aithreats_10"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-cyber",
+        "activity_section.key": "70ae6c64-38cc-4955-bd53-03ea776315b8"
+      },
+      "level_keys": [
+        "csaif_pl_2_aithreats_10"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 15,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csaif_pl_2_project_02"
+        "progression": "AAA"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_2_aithreats_11"
         ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-cyber",
+        "activity_section.key": "70ae6c64-38cc-4955-bd53-03ea776315b8"
+      },
+      "level_keys": [
+        "csaif_pl_2_aithreats_11"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 16,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "progression": "Final Project and Wrap-Up"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csaif_pl_2_project_02"
+          "csaif_pl_lesson_overview_endofUnit_L1_cyber"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
@@ -804,13 +851,101 @@
         "activity_section.key": "6b154d47-7c75-46bd-891d-f44d9a4d4747"
       },
       "level_keys": [
-        "csaif_pl_2_project_02"
+        "csaif_pl_lesson_overview_endofUnit_L1_cyber"
       ]
     },
     {
-      "chapter": 27,
-      "position": 14,
+      "chapter": 30,
+      "position": 17,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Final Project and Wrap-Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_project-description-L2-cyber"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-cyber",
+        "activity_section.key": "6b154d47-7c75-46bd-891d-f44d9a4d4747"
+      },
+      "level_keys": [
+        "csaif_pl_project-description-L2-cyber"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 18,
       "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Final Project and Wrap-Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_3-day-project-L3-cyber"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-cyber",
+        "activity_section.key": "6b154d47-7c75-46bd-891d-f44d9a4d4747"
+      },
+      "level_keys": [
+        "csaif_pl_3-day-project-L3-cyber"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 19,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Final Project and Wrap-Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_collaboration-L4_cyber"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-cyber",
+        "activity_section.key": "6b154d47-7c75-46bd-891d-f44d9a4d4747"
+      },
+      "level_keys": [
+        "csaif_pl_collaboration-L4_cyber"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 20,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Final Project and Wrap-Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-_projectmanage_forum_L5_cyber"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-cyber",
+        "activity_section.key": "6b154d47-7c75-46bd-891d-f44d9a4d4747"
+      },
+      "level_keys": [
+        "csaif-pl-_projectmanage_forum_L5_cyber"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 21,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -833,9 +968,9 @@
       ]
     },
     {
-      "chapter": 28,
-      "position": 15,
-      "activity_section_position": 4,
+      "chapter": 35,
+      "position": 22,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -858,9 +993,9 @@
       ]
     },
     {
-      "chapter": 29,
-      "position": 16,
-      "activity_section_position": 5,
+      "chapter": 36,
+      "position": 23,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1054,9 +1189,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "csaif_pl_2_data",
+        "level.key": "csaif_pl_2_aithreats_02",
         "script_level.level_keys": [
-          "csaif_pl_2_data"
+          "csaif_pl_2_aithreats_02"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
@@ -1066,9 +1201,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "csaif_pl_2_data_02",
+        "level.key": "csaif_pl_2_aithreats_03",
         "script_level.level_keys": [
-          "csaif_pl_2_data_02"
+          "csaif_pl_2_aithreats_03"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
@@ -1078,9 +1213,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "csaif_pl_2_privacy_b",
+        "level.key": "csaif_pl_2_aithreats_04",
         "script_level.level_keys": [
-          "csaif_pl_2_privacy_b"
+          "csaif_pl_2_aithreats_04"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
@@ -1090,9 +1225,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "csaif_pl_2_privacy_02",
+        "level.key": "csaif_pl_2_aithreats_05",
         "script_level.level_keys": [
-          "csaif_pl_2_privacy_02"
+          "csaif_pl_2_aithreats_05"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
@@ -1102,9 +1237,21 @@
     },
     {
       "seeding_key": {
-        "level.key": "csaif_pl_security",
+        "level.key": "test-ai-powered-threats-defenses-lesson3-level2",
         "script_level.level_keys": [
-          "csaif_pl_security"
+          "test-ai-powered-threats-defenses-lesson3-level2"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-cyber",
+        "activity_section.key": "519933c4-cd36-4080-8655-9fc6203f9c99"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-ai-powered-threats-defenses-lesson3-level1choice-pl",
+        "script_level.level_keys": [
+          "test-ai-powered-threats-defenses-lesson3-level1choice-pl"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
@@ -1114,9 +1261,45 @@
     },
     {
       "seeding_key": {
-        "level.key": "csaif_pl_2_encryption_03",
+        "level.key": "test-ai-powered-threats-defenses-lesson3-level2choice-pl",
         "script_level.level_keys": [
-          "csaif_pl_2_encryption_03"
+          "test-ai-powered-threats-defenses-lesson3-level2choice-pl"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-cyber",
+        "activity_section.key": "d75b7b81-86ca-4d0f-8183-0a01d389e470"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-ai-powered-threats-defenses-lesson3-level4choice-pl",
+        "script_level.level_keys": [
+          "test-ai-powered-threats-defenses-lesson3-level4choice-pl"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-cyber",
+        "activity_section.key": "d75b7b81-86ca-4d0f-8183-0a01d389e470"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_2_aithreats_06",
+        "script_level.level_keys": [
+          "csaif_pl_2_aithreats_06"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-cyber",
+        "activity_section.key": "d75b7b81-86ca-4d0f-8183-0a01d389e470"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_2_aithreats_07",
+        "script_level.level_keys": [
+          "csaif_pl_2_aithreats_07"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
@@ -1126,9 +1309,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "csaif_pl_2_encryption",
+        "level.key": "csaif_pl_2_aithreats_08",
         "script_level.level_keys": [
-          "csaif_pl_2_encryption"
+          "csaif_pl_2_aithreats_08"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
@@ -1138,9 +1321,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "csaif_pl_2_encryption_04",
+        "level.key": "csaif_pl_2_aithreats_09",
         "script_level.level_keys": [
-          "csaif_pl_2_encryption_04"
+          "csaif_pl_2_aithreats_09"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
@@ -1150,33 +1333,33 @@
     },
     {
       "seeding_key": {
-        "level.key": "csaif_pl_2_encryption_02",
+        "level.key": "csaif_pl_2_aithreats_10",
         "script_level.level_keys": [
-          "csaif_pl_2_encryption_02"
+          "csaif_pl_2_aithreats_10"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "sandbox-csaif-pl-cyber",
-        "activity_section.key": "3b575489-ca6b-4dcc-93d3-f4357bdd8ea4"
+        "activity_section.key": "70ae6c64-38cc-4955-bd53-03ea776315b8"
       }
     },
     {
       "seeding_key": {
-        "level.key": "csaif_pl_2_encrypt",
+        "level.key": "csaif_pl_2_aithreats_11",
         "script_level.level_keys": [
-          "csaif_pl_2_encrypt"
+          "csaif_pl_2_aithreats_11"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "sandbox-csaif-pl-cyber",
-        "activity_section.key": "3b575489-ca6b-4dcc-93d3-f4357bdd8ea4"
+        "activity_section.key": "70ae6c64-38cc-4955-bd53-03ea776315b8"
       }
     },
     {
       "seeding_key": {
-        "level.key": "csaif_pl_2_project_1",
+        "level.key": "csaif_pl_lesson_overview_endofUnit_L1_cyber",
         "script_level.level_keys": [
-          "csaif_pl_2_project_1"
+          "csaif_pl_lesson_overview_endofUnit_L1_cyber"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
@@ -1186,9 +1369,45 @@
     },
     {
       "seeding_key": {
-        "level.key": "csaif_pl_2_project_02",
+        "level.key": "csaif_pl_project-description-L2-cyber",
         "script_level.level_keys": [
-          "csaif_pl_2_project_02"
+          "csaif_pl_project-description-L2-cyber"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-cyber",
+        "activity_section.key": "6b154d47-7c75-46bd-891d-f44d9a4d4747"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_3-day-project-L3-cyber",
+        "script_level.level_keys": [
+          "csaif_pl_3-day-project-L3-cyber"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-cyber",
+        "activity_section.key": "6b154d47-7c75-46bd-891d-f44d9a4d4747"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_collaboration-L4_cyber",
+        "script_level.level_keys": [
+          "csaif_pl_collaboration-L4_cyber"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-cyber",
+        "activity_section.key": "6b154d47-7c75-46bd-891d-f44d9a4d4747"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-_projectmanage_forum_L5_cyber",
+        "script_level.level_keys": [
+          "csaif-pl-_projectmanage_forum_L5_cyber"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",

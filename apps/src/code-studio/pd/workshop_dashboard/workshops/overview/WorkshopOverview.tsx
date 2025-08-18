@@ -5,11 +5,8 @@ import React from 'react';
 import {useSelector} from 'react-redux';
 import {useOutletContext} from 'react-router-dom';
 
-import {UseFetchResult} from '@cdo/apps/util/useFetch';
-
 import {WorkshopAdmin} from '../../permission';
-import {Workshop} from '../../WorkshopFormTemplate/types';
-import {WorkshopData} from '../types';
+import {WorkshopContextValue} from '../types';
 
 import {TakeAttendanceSection} from './sections/TakeAttendanceSection';
 import {WorkshopInformationSection} from './sections/WorkshopInformationSection';
@@ -24,18 +21,15 @@ export const WorkshopOverview: React.FC = () => {
   );
   const isWorkshopAdmin = permission.has(WorkshopAdmin);
 
-  const {workshop, loading, error, refetch} = useOutletContext<
-    Omit<UseFetchResult<Workshop>, 'data'> & {
-      workshop: WorkshopData;
-    }
-  >();
+  const {workshop, workshopLoading, workshopError, refetchWorkshop} =
+    useOutletContext<WorkshopContextValue>();
 
-  if (!workshop && loading) {
+  if (!workshop && workshopLoading) {
     return <FontAwesomeV6Icon iconName="spinner" animationType="spin" />;
   }
 
-  if (error) {
-    return <Alert size="m" text="Workshop not found" type="warning" />;
+  if (workshopError) {
+    return <Alert size="m" text="Workshop not found" type="danger" />;
   }
 
   if (!workshop) {
@@ -53,7 +47,7 @@ export const WorkshopOverview: React.FC = () => {
         <WorkshopStatusSection
           workshop={workshop}
           isWorkshopAdmin={isWorkshopAdmin}
-          onWorkshopUpdate={refetch}
+          onWorkshopUpdate={refetchWorkshop}
         />
         <TakeAttendanceSection workshop={workshop} />
       </Stack>

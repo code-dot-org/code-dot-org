@@ -4,8 +4,15 @@ import {Outlet, useLocation, useParams} from 'react-router-dom';
 
 import {useFetch} from '@cdo/apps/util/useFetch';
 
-import {Workshop} from '../WorkshopFormTemplate/types';
-import {workshopDataToOverviewProps} from '../WorkshopFormTemplate/utils';
+import {
+  Enrollment,
+  SurveySummary,
+  Workshop,
+} from '../WorkshopFormTemplate/types';
+import {
+  enrollmentDataToProps,
+  workshopDataToProps,
+} from '../WorkshopFormTemplate/utils';
 
 import {FacilitatorSelection} from './components/FacilitatorSelection';
 import {SurveyCategorySelection} from './components/SurveyCategorySelection';
@@ -23,13 +30,43 @@ export const WorkshopLayout: FC<WorkshopLayoutProps> = ({
   const {pathname} = useLocation();
   const {workshopId} = useParams<{workshopId: string}>();
 
-  const {data, loading, error, refetch} = useFetch<Workshop | null>(
+  const {
+    data: workshopData,
+    loading: workshopLoading,
+    error: workshopError,
+    refetch: refetchWorkshop,
+  } = useFetch<Workshop | null>(
     workshopId ? `/api/v1/pd/workshops/${workshopId}` : ''
   );
 
+  const {
+    data: enrollmentData,
+    loading: enrollmentsLoading,
+    error: enrollmentsError,
+    refetch: refetchEnrollments,
+  } = useFetch<Enrollment[] | null>(
+    workshopId ? `/api/v1/pd/workshops/${workshopId}/enrollments` : ''
+  );
+
+  const {
+    data: surveys,
+    loading: surveysLoading,
+    error: surveysError,
+    refetch: refetchSurveys,
+  } = useFetch<SurveySummary | null>(
+    workshopId
+      ? `/api/v1/pd/workshops/${workshopId}/foorm/workshop_survey_summary`
+      : ''
+  );
+
   const workshop = useMemo(
-    () => (data ? workshopDataToOverviewProps(data) : null),
-    [data]
+    () => (workshopData ? workshopDataToProps(workshopData) : null),
+    [workshopData]
+  );
+
+  const enrollments = useMemo(
+    () => (enrollmentData ? enrollmentDataToProps(enrollmentData) : []),
+    [enrollmentData]
   );
 
   const showTabs = !pathname.includes('/edit');
@@ -71,7 +108,22 @@ export const WorkshopLayout: FC<WorkshopLayoutProps> = ({
         {showFacilitatorSelection && <FacilitatorSelection />}
       </nav>
       <main>
-        <Outlet context={{workshop, loading, error, refetch}} />
+        <Outlet
+          context={{
+            workshop,
+            workshopLoading,
+            workshopError,
+            refetchWorkshop,
+            enrollments,
+            enrollmentsLoading,
+            enrollmentsError,
+            refetchEnrollments,
+            surveys,
+            surveysLoading,
+            surveysError,
+            refetchSurveys,
+          }}
+        />
       </main>
     </>
   );

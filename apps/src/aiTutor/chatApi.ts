@@ -131,7 +131,7 @@ export async function getChatCompletionMessage(
   }
 }
 
-export type OpenaiChatCompletionMessage = {
+type OpenaiChatCompletionMessage = {
   status?: AITutorInteractionStatusValue;
   role: Role;
   content: string;

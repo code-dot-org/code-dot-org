@@ -1,0 +1,78 @@
+.codeBlock {
+  margin: .6rem 0;
+  border-radius: 4px;
+  border: 2px solid var(--borders-neutral-primary);
+  overflow: hidden;
+
+  >.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    background-color: var(--background-neutral-tertiary);
+    padding: 4px 4px 5px 4px;
+
+    // Add multiple class names to override Component Library specificity.
+    >.copyButton.copyButton {
+      border: var(--borders-neutral-primary) solid 1px;
+    }
+  }
+
+
+  .codeContentBody {
+    position: relative;
+    width: 100%;
+    display: inline-block;
+
+    >.codeContent {
+      margin: 0;
+      border-radius: 0;
+      border: none;
+      background-color: var(--background-neutral-primary);
+      color: var(--text-neutral-primary);
+    }
+
+    >.codeContentOverlay {
+      position: absolute;
+      transition: opacity 1s ease;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      color: var(--neutral-base-white);
+      font-size: 1.1rem;
+      display: inline-block;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+
+      &.showOverlay {
+        opacity: 1;
+        transition: none;
+        pointer-events: unset;
+      }
+
+      >.codeContentOverlayBackground {
+        width: 100%;
+        height: 100%;
+        background-color: var(--neutral-base-black);
+        opacity: 0.9;
+      }
+
+      >.codeContentAriaMessage {
+        opacity: 0;
+      }
+
+      >.codeContentOverlayMessage {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        >.checkMarkIcon {
+          color: var(--sentiment-success-50);
+          margin-right: .2rem;
+        }
+      }
+    }
+  }
+}
