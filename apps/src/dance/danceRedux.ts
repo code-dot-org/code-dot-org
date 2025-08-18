@@ -29,8 +29,13 @@ export interface DanceState {
   aiOutput?: DanceAiModalOutputType;
   aiModalOpenedFromFlyout: boolean;
   // Fields below are used only by Lab2 Dance
+  /** If the program is currently running */
   isRunning: boolean;
+  /** Metadata for the currently selected song */
   currentSongMetadata: SongMetadata | undefined;
+  /** If a load is in progress */
+  isLoading: boolean;
+  hasRun: boolean;
 }
 
 const initialState: DanceState = {
@@ -42,6 +47,8 @@ const initialState: DanceState = {
   aiModalOpenedFromFlyout: false,
   isRunning: false,
   currentSongMetadata: undefined,
+  isLoading: false,
+  hasRun: false,
 };
 
 // THUNKS
@@ -72,6 +79,8 @@ export const initSongs = createAsyncThunk(
       onSongSelected,
       onSongUnavailable,
     } = payload;
+
+    await new Promise(resolve => setTimeout(resolve, 3000));
 
     // Check for a user-specified manifest file.
     const userManifest = queryParams('manifest') as string;
@@ -132,6 +141,7 @@ export const setSong = createAsyncThunk(
     },
     {dispatch, getState}
   ) => {
+    await new Promise(resolve => setTimeout(resolve, 3000));
     const {songId, onAuthError, onSongSelected} = payload;
     const state = getState() as {dance: DanceState};
     const {selectedSong: lastSongId, songData} = state.dance;
@@ -207,6 +217,36 @@ const danceSlice = createSlice({
       state.currentAiModalBlockId = undefined;
       state.aiModalOpenedFromFlyout = false;
     },
+    setIsRunning: (state, action: PayloadAction<boolean>) => {
+      state.isRunning = action.payload;
+    },
+    setHasRun: (state, action: PayloadAction<boolean>) => {
+      state.hasRun = action.payload;
+    },
+  },
+  extraReducers: builder => {
+    builder.addCase(initSongs.pending, state => {
+      state.isLoading = true;
+    });
+    builder.addCase(initSongs.fulfilled, state => {
+      state.isLoading = false;
+    });
+    builder.addCase(initSongs.rejected, state => {
+      state.isLoading = false;
+      // TODO: Handle error. Should we bubble this up to Lab2 and show the
+      // error modal? Or should we handle internally and retry?
+    });
+    builder.addCase(setSong.pending, state => {
+      state.isLoading = true;
+    });
+    builder.addCase(setSong.fulfilled, state => {
+      state.isLoading = false;
+    });
+    builder.addCase(setSong.rejected, state => {
+      state.isLoading = false;
+      // TODO: Handle error. Should we bubble this up to Lab2 and show the
+      // error modal? Or should we handle internally and retry?
+    });
   },
 });
 
@@ -218,5 +258,7 @@ export const {
   setAiOutput,
   openAiModal,
   closeAiModal,
+  setIsRunning,
+  setHasRun,
 } = danceSlice.actions;
 export const reducers = {dance: danceSlice.reducer};
