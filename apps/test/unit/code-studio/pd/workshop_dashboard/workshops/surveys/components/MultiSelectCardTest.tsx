@@ -1,5 +1,5 @@
 import '@testing-library/jest-dom';
-import {render, screen} from '@testing-library/react';
+import {render, screen, waitFor} from '@testing-library/react';
 import React from 'react';
 
 import {MultiSelectBreakdown} from '@cdo/apps/code-studio/pd/workshop_dashboard/WorkshopFormTemplate/types';
@@ -42,30 +42,32 @@ describe('MultiSelectCard', () => {
       expect(screen.getByText('10 responses')).toBeInTheDocument();
     });
 
-    it('sets the correct width style for each progress bar', () => {
+    it('sets the correct width style for each progress bar after animating', async () => {
       renderComponent();
 
-      // Find the bar for "Option A" by finding its count label and navigating the DOM
-      const countElementA = screen.getByText('15 responses');
-      const barRowA = countElementA.parentElement;
-      const indicatorA = barRowA?.querySelector('div[style]'); // Find the div with an inline style
-      expect(indicatorA).toHaveStyle('width: 50%');
+      await waitFor(() => {
+        const countElementA = screen.getByText('15 responses');
+        const indicatorA =
+          countElementA.parentElement?.querySelector('div[style]');
+        expect(indicatorA).toHaveStyle('width: 50%');
 
-      // Find the bar for "Option B"
-      const countElementB = screen.getByText('10 responses');
-      const barRowB = countElementB.parentElement;
-      const indicatorB = barRowB?.querySelector('div[style]');
-      expect(indicatorB).toHaveStyle('width: 33.3%');
+        const countElementB = screen.getByText('10 responses');
+        const indicatorB =
+          countElementB.parentElement?.querySelector('div[style]');
+        expect(indicatorB).toHaveStyle('width: 33.3%');
+      });
     });
 
-    it('handles a 0% width correctly', () => {
+    it('handles a 0% width correctly after animating', async () => {
       const itemsWithZero = [{label: 'Zero Option', count: 0, percentage: 0}];
       renderComponent({items: itemsWithZero});
 
-      const countElement = screen.getByText('0 responses');
-      const indicator =
-        countElement?.parentElement?.querySelector('div[style]');
-      expect(indicator).toHaveStyle('width: 0%');
+      await waitFor(() => {
+        const countElement = screen.getByText('0 responses');
+        const indicator =
+          countElement?.parentElement?.querySelector('div[style]');
+        expect(indicator).toHaveStyle('width: 0%');
+      });
     });
   });
 

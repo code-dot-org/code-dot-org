@@ -387,6 +387,7 @@ div.card {
             left: 0;
             top: 0;
             bottom: 0;
+            transition: width 0.6s ease-out;
           }
         }
       }

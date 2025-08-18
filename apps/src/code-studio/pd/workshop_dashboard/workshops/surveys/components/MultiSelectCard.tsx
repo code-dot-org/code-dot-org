@@ -5,7 +5,7 @@ import {
 } from '@code-dot-org/component-library/typography';
 import {Card, CardContent, Box, CardHeader} from '@mui/material';
 import classNames from 'classnames';
-import React from 'react';
+import React, {FC, useEffect, useState} from 'react';
 
 import {MultiSelectBreakdown} from '../../../WorkshopFormTemplate/types';
 
@@ -18,7 +18,11 @@ interface MultiSelectCardProps {
   barLabel?: string;
 }
 
-export const MultiSelectCard: React.FC<MultiSelectCardProps> = ({
+interface PercentageBarProps {
+  percentage: number;
+}
+
+export const MultiSelectCard: FC<MultiSelectCardProps> = ({
   title,
   description,
   items,
@@ -53,14 +57,7 @@ export const MultiSelectCard: React.FC<MultiSelectCardProps> = ({
                 <StrongText>{item.label}</StrongText>
               </BodyThreeText>
               <Box className={styles.barRow}>
-                <Box className={styles.barContainer}>
-                  <Box
-                    className={styles.indicator}
-                    style={{
-                      width: `${item.percentage}%`,
-                    }}
-                  />
-                </Box>
+                <PercentageBar percentage={item.percentage} />
                 <BodyThreeText
                   noMargin
                   className={styles.barLabel}
@@ -71,5 +68,30 @@ export const MultiSelectCard: React.FC<MultiSelectCardProps> = ({
         </Box>
       </CardContent>
     </Card>
+  );
+};
+
+const PercentageBar: FC<PercentageBarProps> = ({percentage}) => {
+  const [width, setWidth] = useState(0);
+
+  useEffect(() => {
+    // A tiny delay ensures the browser has painted the initial 0% width
+    // before transitioning to the final percentage.
+    const timer = setTimeout(() => {
+      setWidth(percentage);
+    }, 10);
+
+    return () => clearTimeout(timer);
+  }, [percentage]);
+
+  return (
+    <Box className={styles.barContainer}>
+      <Box
+        className={styles.indicator}
+        style={{
+          width: `${width}%`,
+        }}
+      />
+    </Box>
   );
 };
