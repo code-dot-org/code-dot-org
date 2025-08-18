@@ -1,13 +1,15 @@
 require 'test_helper'
 require 'contentful'
+require_relative '../../app/helpers/external_notifications_helper'
 
 class ExternalNotificationsHelperTest < ActionDispatch::IntegrationTest
   include Minitest::RSpecMocks
 
-  TestEntry = Struct.new(:id, :content_type, :fields, keyword_init: true)
+  TestEntry = Struct.new(:id, :content_type, :first_published_at, :fields, keyword_init: true)
 
   let(:entry_id_1) {SecureRandom.hex(10)}
   let(:entry_id_2) {SecureRandom.hex(10)}
+  let(:yesterday) {1.day.ago}
   let(:tomorrow) {1.day.from_now}
   let(:later) {2.days.from_now}
   let(:user) {create(:user)}
@@ -17,6 +19,7 @@ class ExternalNotificationsHelperTest < ActionDispatch::IntegrationTest
     TestEntry.new(
       content_type: 'dashboard-notification',
       id: entry_id_1,
+      first_published_at: yesterday.to_s,
       fields: {
         title: 'Notification 1',
         description: 'Description 1',
@@ -24,7 +27,7 @@ class ExternalNotificationsHelperTest < ActionDispatch::IntegrationTest
         href_links: [{'url' => 'https://example.com/1', 'text' => 'Link 1'}],
         ai_prompts: [{'text' => 'Prompt 1', 'prompt' => 'Prompt 1 text'}],
         priority: 0,
-        expires_at: tomorrow,
+        expires_at: tomorrow.to_s,
       },
     )
   end
@@ -33,6 +36,7 @@ class ExternalNotificationsHelperTest < ActionDispatch::IntegrationTest
     TestEntry.new(
       content_type: 'dashboard-notification',
       id: entry_id_2,
+      first_published_at: yesterday.to_s,
       fields: {
         title: 'Notification 2',
         description: 'Description 2',
@@ -40,7 +44,7 @@ class ExternalNotificationsHelperTest < ActionDispatch::IntegrationTest
         href_links: [{'url' => 'https://example.com/2', 'text' => 'Link 2'}],
         ai_prompts: [{'text' => 'Prompt 2', 'prompt' => 'Prompt 2 text'}],
         priority: 0,
-        expires_at: later,
+        expires_at: later.to_s,
       },
     )
   end
@@ -51,7 +55,7 @@ class ExternalNotificationsHelperTest < ActionDispatch::IntegrationTest
 
   describe 'get_contentful_notifications_for_user' do
     context 'with contentful data' do
-      it 'returns user external notifications in descending order by created_at' do
+      it 'returns user external notifications' do
         Marketing::ContentfulClient.any_instance.expects(:entries).with('en-US', 'dashboard-notification').returns([entry_1, entry_2])
 
         results = ExternalNotificationsHelper.get_contentful_notifications_for_user(user, 'en-US')
@@ -65,6 +69,7 @@ class ExternalNotificationsHelperTest < ActionDispatch::IntegrationTest
         _(results[0][:href_links]).must_equal [{:url => 'https://example.com/1', :text => 'Link 1'}]
         _(results[0][:ai_prompts]).must_equal [{:text => 'Prompt 1', :prompt => 'Prompt 1 text'}]
         _(results[0][:priority]).must_equal 0
+        _(results[0][:published_at]).must_equal yesterday.iso8601
         _(results[0][:expires_at]).must_equal tomorrow.iso8601
 
         _(results[1][:external_id]).must_equal entry_id_2
@@ -94,6 +99,27 @@ class ExternalNotificationsHelperTest < ActionDispatch::IntegrationTest
 
         _(results[1][:external_id]).must_equal entry_id_2
         _(results[1][:read_at]).must_equal later.iso8601
+      end
+
+      it 'does not return expired notifications' do
+        expired_entry = TestEntry.new(
+          content_type: 'dashboard-notification',
+          id: SecureRandom.hex(10),
+          fields: {
+            title: 'Expired Notification',
+            description: 'This notification has expired',
+            icon_name: 'icon_expired',
+            href_links: [{'url' => 'https://example.com/expired', 'text' => 'Expired Link'}],
+            priority: 0,
+            expires_at: 1.day.ago,
+          },
+          )
+
+        Marketing::ContentfulClient.any_instance.expects(:entries).with('en-US', 'dashboard-notification').returns([expired_entry])
+
+        results = ExternalNotificationsHelper.get_contentful_notifications_for_user(user, 'en-US')
+
+        _(results.length).must_equal 0
       end
     end
   end

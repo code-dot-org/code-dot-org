@@ -4,10 +4,11 @@ require_relative '../../engines/marketing/app/helpers/external_notifications_hel
 
 class NotificationsControllerTest < ActionDispatch::IntegrationTest
   include Minitest::RSpecMocks
-  TestEntry = Struct.new(:external_id, :title, :description, :icon_name, :href_links, :ai_prompts, :priority, :expires_at, :read_at, keyword_init: true)
+  TestEntry = Struct.new(:external_id, :title, :description, :icon_name, :href_links, :ai_prompts, :priority, :published_at, :expires_at, :read_at, keyword_init: true)
 
   let(:entry_id_1) {SecureRandom.hex(10)}
   let(:entry_id_2) {SecureRandom.hex(10)}
+  let(:yesterday) {1.day.ago.iso8601}
   let(:today) {Time.now.iso8601}
   let(:tomorrow) {1.day.from_now.iso8601}
   let(:later) {2.days.from_now.iso8601}
@@ -23,6 +24,7 @@ class NotificationsControllerTest < ActionDispatch::IntegrationTest
       href_links: [{'url' => 'https://example.com/1', 'text' => 'Link 1'}],
       ai_prompts: [{'text' => 'Prompt 1', 'prompt' => 'Prompt 1 text'}],
       priority: 0,
+      published_at: yesterday,
       expires_at: tomorrow,
       read_at: today
       )
@@ -37,6 +39,7 @@ class NotificationsControllerTest < ActionDispatch::IntegrationTest
       href_links: [{'url' => 'https://example.com/2', 'text' => 'Link 2'}],
       ai_prompts: [{'text' => 'Prompt 2', 'prompt' => 'Prompt 2 text'}],
       priority: 0,
+      published_at: yesterday,
       expires_at: later,
       read_at: nil
       )
@@ -73,6 +76,7 @@ class NotificationsControllerTest < ActionDispatch::IntegrationTest
         _(response_data[0]["hrefLinks"]).must_equal [{'url' => 'https://example.com/1', 'text' => 'Link 1'}]
         _(response_data[0]["aiPrompts"]).must_equal [{'text' => 'Prompt 1', 'prompt' => 'Prompt 1 text'}]
         _(response_data[0]["priority"]).must_equal 0
+        _(response_data[0]["publishedAt"]).must_equal yesterday
         _(response_data[0]["expiresAt"]).must_equal tomorrow
         _(response_data[0]["readAt"]).must_equal today
 

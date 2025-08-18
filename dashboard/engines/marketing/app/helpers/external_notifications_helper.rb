@@ -19,6 +19,8 @@ module ExternalNotificationsHelper
 
       next nil if rails_notification&.is_dismissed
 
+      next nil if notification[:expires_at] && Time.parse(notification[:expires_at]) < Time.current
+
       read_at = rails_notification&.read_at&.iso8601 || nil
       notification.merge(
         read_at: read_at
@@ -30,6 +32,9 @@ module ExternalNotificationsHelper
 
   def self.format_contentful_notification(notification)
     fields = notification.fields || {}
+
+    published_at = Time.parse(notification.first_published_at)
+
     formatted_notification = {
       external_id: notification.id,
       title: fields[:title] || nil,
@@ -38,7 +43,8 @@ module ExternalNotificationsHelper
       href_links: fields[:href_links] || [],
       ai_prompts: fields[:ai_prompts] || [],
       priority: fields[:priority] || 0,
-      expires_at: fields[:expires_at],
+      published_at: published_at,
+      expires_at: Time.parse(fields[:expires_at]),
     }
 
     if formatted_notification[:external_id].blank? || formatted_notification[:title].blank? || formatted_notification[:description].blank? || formatted_notification[:icon_name].blank?
@@ -57,6 +63,7 @@ module ExternalNotificationsHelper
 
     # Ensure data types are correct
     formatted_notification[:priority] = formatted_notification[:priority].to_i
+    formatted_notification[:published_at] = formatted_notification[:published_at].is_a?(Time) ? formatted_notification[:published_at].iso8601 : nil
     formatted_notification[:expires_at] = formatted_notification[:expires_at].is_a?(Time) ? formatted_notification[:expires_at].iso8601 : nil
     formatted_notification[:href_links] = formatted_notification[:href_links].filter_map do |link|
       !!link['url'] && !!link['text'] ? {url: link['url'], text: link['text']} : nil
