@@ -136,6 +136,7 @@ module Pd::Foorm
       {
         total_responses: total_responses,
         weighted_score: weighted_score,
+        agreement_count: agreement_count,
         agreement_percentage: agreement_percentage,
         breakdown: breakdown
       }

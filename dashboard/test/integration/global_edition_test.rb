@@ -2,8 +2,8 @@
 
 require 'omniauth'
 
-require 'cdo/global_edition'
 require 'test_helper'
+require 'cdo/global_edition'
 
 class GlobalEditionTest < ActionDispatch::IntegrationTest
   include Minitest::RSpecMocks
@@ -14,6 +14,8 @@ class GlobalEditionTest < ActionDispatch::IntegrationTest
   before do
     allow(DCDO).to receive(:get).and_call_original
     allow(DCDO).to receive(:get).with('global_edition_enabled', anything).and_return(true)
+    allow(Cdo::GlobalEdition).to receive(:target_host?).with('test-studio.code.org').and_return(true)
+    allow(Cdo::GlobalEdition).to receive(:target_host?).with('test.code.org').and_return(true)
     allow(Metrics::Events).to receive(:log_event)
   end
 

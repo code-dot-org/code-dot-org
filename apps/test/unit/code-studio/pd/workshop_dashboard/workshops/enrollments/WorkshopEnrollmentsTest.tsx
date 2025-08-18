@@ -101,14 +101,18 @@ describe('WorkshopEnrollments', () => {
   const createMockContext = (
     overrides: Partial<WorkshopContextValue> = {}
   ): WorkshopContextValue => ({
-    enrollments: [createTestEnrollment()],
     workshop: createTestWorkshop(),
-    refetchEnrollments: mockRefetchEnrollments,
-    enrollmentsLoading: false,
-    enrollmentsError: null,
     workshopLoading: false,
     workshopError: null,
     refetchWorkshop: jest.fn(),
+    enrollments: [createTestEnrollment()],
+    enrollmentsLoading: false,
+    enrollmentsError: null,
+    refetchEnrollments: mockRefetchEnrollments,
+    surveys: null,
+    surveysLoading: false,
+    surveysError: null,
+    refetchSurveys: jest.fn(),
     ...overrides,
   });
 
