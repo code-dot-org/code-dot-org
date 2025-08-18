@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 import {saveReplayLog} from '@cdo/apps/code-studio/components/shareDialogRedux';
@@ -54,6 +55,7 @@ const DanceView: React.FunctionComponent<
     state => state.dance.currentSongMetadata
   );
   const hasRun = useAppSelector(state => state.dance.hasRun);
+  const isLoading = useAppSelector(state => state.dance.isLoading);
 
   const programExecutor = useRef<ProgramExecutor | null>(null);
 
@@ -186,16 +188,6 @@ const DanceView: React.FunctionComponent<
       />
       <div className={moduleStyles.divider} />
       <PanelContainer
-        id="dance-workspace-panel"
-        headerContent={commonI18n.workspaceHeaderShort()}
-        className={moduleStyles.workspaceArea}
-        headerClassName={moduleStyles.panelHeader}
-      >
-        <div id={BLOCKLY_DIV_ID} />
-      </PanelContainer>
-
-      <div className={moduleStyles.divider} />
-      <PanelContainer
         id="visualization"
         headerContent="Dance Party!"
         headerClassName={moduleStyles.panelHeader}
@@ -213,9 +205,31 @@ const DanceView: React.FunctionComponent<
           <div
             id={DANCE_VISUALIZATION_ID}
             className={moduleStyles.visualization}
-          />
+          >
+            <div
+              className={classNames(
+                moduleStyles.loading,
+                isLoading && moduleStyles.loadingShow
+              )}
+            >
+              <img
+                src="//curriculum.code.org/images/DancePartyLoading.gif"
+                className={moduleStyles.loadingGif}
+                alt={'' /** TODO: Sort out Dance locale */}
+              />
+            </div>
+          </div>
           <DanceControls onRun={runProgram} onReset={resetProgram} />
         </div>
+      </PanelContainer>
+      <div className={moduleStyles.divider} />
+      <PanelContainer
+        id="dance-workspace-panel"
+        headerContent={commonI18n.workspaceHeaderShort()}
+        className={moduleStyles.workspaceArea}
+        headerClassName={moduleStyles.panelHeader}
+      >
+        <div id={BLOCKLY_DIV_ID} />
       </PanelContainer>
     </div>
   );

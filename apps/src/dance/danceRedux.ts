@@ -80,8 +80,6 @@ export const initSongs = createAsyncThunk(
       onSongUnavailable,
     } = payload;
 
-    await new Promise(resolve => setTimeout(resolve, 3000));
-
     // Check for a user-specified manifest file.
     const userManifest = queryParams('manifest') as string;
 
@@ -141,7 +139,6 @@ export const setSong = createAsyncThunk(
     },
     {dispatch, getState}
   ) => {
-    await new Promise(resolve => setTimeout(resolve, 3000));
     const {songId, onAuthError, onSongSelected} = payload;
     const state = getState() as {dance: DanceState};
     const {selectedSong: lastSongId, songData} = state.dance;

@@ -14,6 +14,7 @@
   width: 400px;
   height: 400px;
   background-color: var(--background-neutral-secondary);
+  position: relative;
 }
 
 .workArea {
@@ -53,5 +54,26 @@
 .verticalFlex {
   display: flex;
   flex-direction: column;
-  flex:0;
+  flex: 0;
+}
+
+.loading {
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.1s ease-in;
+
+  &Show {
+    opacity: 1;
+  }
+
+  .loadingGif {
+    width: 100px;
+    height: 100px;
+  }
 }
