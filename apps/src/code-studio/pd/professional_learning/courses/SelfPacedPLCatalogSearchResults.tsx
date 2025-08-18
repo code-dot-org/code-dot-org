@@ -25,6 +25,7 @@ const SelfPacedPLCatalogSearchResults: React.FunctionComponent<
     <div className={moduleStyles.catalogContentCards}>
       {filteredCourses.map(courseOffering => (
         <SelfPacedPLCatalogCard
+          key={courseOffering.key}
           courseOffering={courseOffering}
           updateExpandedCardKey={updateExpandedCardKey}
           isExpanded={expandedCardKey === courseOffering.key}

@@ -34,16 +34,12 @@ const SHARED_LINKS = {
     href: '/hour-of-ai',
     label: 'Hour of AI',
   },
-  ISSUES: {
-    href: '/issues',
-    label: 'Issues',
-  },
-  NEWS: {
-    href: '/news',
-    label: 'News',
+  INITIATIVES: {
+    href: '/initiatives',
+    label: 'Initiatives',
   },
   NEWS_AND_RESOURCES: {
-    href: '/news-and-resources',
+    href: '/news',
     label: 'News & Resources',
   },
   PRIVACY_POLICY: {
@@ -94,7 +90,7 @@ export const CALL_TO_ACTION: {callToAction: CallToActionProps} = {
 // Top Level Links used in Main Menu Desktop and Drawer
 export const TOP_LEVEL_LINKS: {linkList: LinkItemProps[]} = {
   linkList: [
-    createLinkItem(SHARED_LINKS.ISSUES, {typography: 'h4'}),
+    createLinkItem(SHARED_LINKS.INITIATIVES, {typography: 'h4'}),
     createLinkItem(SHARED_LINKS.TAKE_ACTION, {typography: 'h4'}),
     createLinkItem(SHARED_LINKS.HOUR_OF_AI, {typography: 'h4'}),
     // Marketing does not have permission to collect donations yet
@@ -103,11 +99,11 @@ export const TOP_LEVEL_LINKS: {linkList: LinkItemProps[]} = {
   ],
 };
 
-// Main Menu Issues Dropdown Links
-export const ISSUES_LINKS: {linkList: LinkItemProps[]} = {
+// Main Menu Initiatives Dropdown Links
+export const INITIATIVES_LINKS: {linkList: LinkItemProps[]} = {
   linkList: [
-    createLinkItem(SHARED_LINKS.CS_IS_EVERYTHING),
     createLinkItem(SHARED_LINKS.UNLOCK8),
+    createLinkItem(SHARED_LINKS.CS_IS_EVERYTHING),
     createLinkItem(SHARED_LINKS.TEACH_AI),
   ],
 };
@@ -120,20 +116,15 @@ export const TAKE_ACTION_LINKS: {linkList: LinkItemProps[]} = {
   ],
 };
 
-// Main Menu News & Resources Dropdown Links
-export const NEWS_AND_RESOURCES_LINKS: {linkList: LinkItemProps[]} = {
-  linkList: [createLinkItem(SHARED_LINKS.NEWS)],
-};
-
 // Main Menu Desktop Configuration
-const [issuesLink, takeActionLink, hourOfAiLink, newsLink] =
+const [initiativesLink, takeActionLink, hourOfAiLink, newsLink] =
   TOP_LEVEL_LINKS.linkList;
 
 export const MAIN_MENU_DESKTOP_ITEMS = [
   {
     type: 'dropdown' as const,
-    topLevelLink: issuesLink,
-    dropdownConfig: ISSUES_LINKS,
+    topLevelLink: initiativesLink,
+    dropdownConfig: INITIATIVES_LINKS,
   },
   {
     type: 'dropdown' as const,
@@ -150,8 +141,7 @@ export const MAIN_MENU_DESKTOP_ITEMS = [
   //topLevelLink: donateLink,
   //},
   {
-    type: 'dropdown' as const,
+    type: 'button' as const,
     topLevelLink: newsLink,
-    dropdownConfig: NEWS_AND_RESOURCES_LINKS,
   },
 ];

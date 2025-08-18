@@ -5,7 +5,12 @@ import UserMessageEditor from '@cdo/apps/aiComponentLibrary/userMessageEditor/Us
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {submitChatContents} from '../redux';
-import {AiChatClientType, ChatButton, ModelParameters} from '../types';
+import {
+  AiChatClientType,
+  ChatButton,
+  ModelParameters,
+  AnalyticsProperties,
+} from '../types';
 
 import moduleStyles from './UserChatMessageEditor.module.scss';
 
@@ -49,7 +54,7 @@ const UserChatMessageEditor: React.FunctionComponent<
   const disabled = isWaitingForChatResponse || saveInProgress || uploadsPending;
 
   const handleSubmit = useCallback(
-    (userMessage: string) => {
+    (userMessage: string, analyticsProperties?: AnalyticsProperties) => {
       if (!disabled) {
         dispatch(
           submitChatContents({
@@ -57,6 +62,7 @@ const UserChatMessageEditor: React.FunctionComponent<
             modelParameters,
             clientType,
             hiddenContext,
+            analyticsProperties,
             assets:
               multimodalAvailable && chatAssets.length > 0
                 ? chatAssets
@@ -93,7 +99,9 @@ const UserChatMessageEditor: React.FunctionComponent<
               key={button.label}
               aria-label={button.label}
               id="button-hint"
-              onClick={() => handleSubmit(button.value)}
+              onClick={() =>
+                handleSubmit(button.value, button.analyticsProperties)
+              }
               text={button.label}
               size="s"
               type="secondary"

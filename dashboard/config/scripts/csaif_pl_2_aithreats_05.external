@@ -1,0 +1,36 @@
+name 'csaif_pl_2_aithreats_05'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Cyber Threats
+
+#### A cybersecurity **threat** is any potential cause of harm to a computer system or network.
+
+#### System-level threats include malware, ransomware, weak default settings, or misconfigured file sharing.
+
+#### Attackers exploit technical vulnerabilities to gain control, disrupt access, or corrupt data.
+
+#### AI may increase the speed or scale of these threats.
+
+
+## 📝 To Do
+
+#### Review the threat vocabulary below. If you have time, check out the activity levels for each threat.
+
+#### **Malware** is software designed to harm, disrupt, or gain unauthorized access to a system. *Check out the <a href='https://studio.code.org/courses/6-12-dev-playground/units/7/lessons/2/levels/1' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>curriculum level</a> to learn more.*
+
+#### **Ransomware** is a type of malware that locks or encrypts files on a computer, then demands payment (often in money or cryptocurrency) to restore access. *Check out the <a href='https://studio.code.org/courses/6-12-dev-playground/units/7/lessons/2/levels/2' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>curriculum level</a> to learn more.*
+
+
+#### **Misconfiguration** is a mistake or oversight in system settings that makes it easier for attackers to gain access. These issues can happen accidentally or as a result of poor default settings that leave files or systems too open. *Check out the <a href='https://studio.code.org/courses/6-12-dev-playground/units/7/lessons/2/levels/3' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>curriculum level</a> to learn more.*
+
+#### **Distributed Denial of Service (DDoS) attack** happens when many devices flood a website or server with requests at the same time. This overwhelms the system, slows it down, or crashes it, preventing others from getting in. *Check out the <a href='https://studio.code.org/courses/6-12-dev-playground/units/7/lessons/2/levels/4' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>curriculum level</a> to learn more.*
+
+<br>
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ These levels are from Lesson 2. You can find more details in the full <a href='https://studio.code.org/s/aif5-2025/lessons/2' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a>.
+</p>
+
+MARKDOWN

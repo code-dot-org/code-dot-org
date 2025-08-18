@@ -861,15 +861,15 @@ module SharedConstants
   }
 
   EDUCATOR_ROLES = [
-    {value: "classroom_teacher", category: 'educator'},
-    {value: "stem_tech_teacher", category: 'educator'},
-    {value: "subject_area_teacher", category: 'educator'},
-    {value: "librarian_media_specialist", category: 'educator'},
-    {value: "homeschool_teacher", category: 'educator'},
-    {value: "school_admin", category: "admin"},
-    {value: "district_admin", category: "admin"},
-    {value: "parent", category: 'other'},
-    {value: "other", category: 'other'}
+    {value: "classroom_teacher", label: "Classroom Teacher", category: 'educator'},
+    {value: "stem_tech_teacher", label: "STEM/Technology Teacher", category: 'educator'},
+    {value: "subject_area_teacher", label: "Subject Area Teacher", category: 'educator'},
+    {value: "librarian_media_specialist", label: "Librarian/Media Specialist", category: 'educator'},
+    {value: "homeschool_teacher", label: "Homeschool Teacher", category: 'educator'},
+    {value: "school_admin", label: "School Administrator", category: "admin"},
+    {value: "district_admin", label: "District Administrator", category: "admin"},
+    {value: "parent", label: "Parent", category: 'other'},
+    {value: "other", label: "Other", category: 'other'}
   ].freeze
 
   AI_DIFF_CONTEXT = {

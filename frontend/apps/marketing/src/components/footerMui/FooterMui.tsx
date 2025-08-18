@@ -11,7 +11,13 @@ import NativeSelect from '@mui/material/NativeSelect';
 import Stack from '@mui/material/Stack';
 import {styled} from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
-import {AnchorHTMLAttributes, HTMLAttributes, Key, ReactNode} from 'react';
+import {
+  AnchorHTMLAttributes,
+  HTMLAttributes,
+  Key,
+  ReactNode,
+  MouseEvent,
+} from 'react';
 
 import {isExternalLink} from '@/components/common/utils';
 import {Brand} from '@/config/brand';
@@ -20,6 +26,7 @@ export interface SiteLink extends AnchorHTMLAttributes<HTMLAnchorElement> {
   key: Key;
   label: string;
   href: string;
+  onClick?: (event: MouseEvent<HTMLAnchorElement>) => void;
 }
 
 export interface SocialLink extends AnchorHTMLAttributes<HTMLAnchorElement> {
@@ -102,21 +109,25 @@ const FooterMui: React.FC<FooterProps> = ({
         >
           {/* Site Links */}
           <FooterLinks className="site-links" aria-label="Site links">
-            {siteLinks?.map(({key, label, href}) => (
+            {siteLinks?.map(({key, label, href, onClick, ...linkProps}) => (
               <ListItem key={key}>
                 <FooterLink
                   href={href}
                   variant="body4"
                   target={
+                    typeof onClick !== 'function' &&
                     isExternalLink(href, brand, 'production')
                       ? '_blank'
                       : undefined
                   }
                   rel={
+                    typeof onClick !== 'function' &&
                     isExternalLink(href, brand, 'production')
                       ? 'noopener noreferrer'
                       : undefined
                   }
+                  onClick={onClick}
+                  {...linkProps}
                 >
                   {label}
                 </FooterLink>

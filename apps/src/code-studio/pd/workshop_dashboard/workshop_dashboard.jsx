@@ -108,6 +108,12 @@ const postSurveyCategoryChildRoutes = [
 
 const surveyTypeChildRoutes = [
   {
+    label: 'Pre-workshop survey',
+    path: 'pre',
+    component: () => <div>Pre workshop</div>,
+    breadcrumbs: 'Workshops,Workshop,Temp,Surveys,Pre',
+  },
+  {
     label: 'Post-workshop survey',
     path: 'post',
     component: Outlet,
@@ -120,12 +126,6 @@ const surveyTypeChildRoutes = [
       },
       ...postSurveyCategoryChildRoutes,
     ],
-  },
-  {
-    label: 'Pre-workshop survey',
-    path: 'pre',
-    component: () => <div>Pre workshop</div>,
-    breadcrumbs: 'Workshops,Workshop,Temp,Surveys,Pre',
   },
 ];
 
