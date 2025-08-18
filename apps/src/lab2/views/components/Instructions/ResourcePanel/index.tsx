@@ -9,8 +9,6 @@ import {queryParams} from '@cdo/apps/code-studio/utils';
 import AiTutor2Chat from '@cdo/apps/lab2/views/components/AiTutor2Chat';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import StudentRubricView from '@cdo/apps/lab2/views/components/rubrics/StudentRubricView';
-import CopyrightDialog from '@cdo/apps/sharedComponents/footer/CopyrightDialog';
-import CopyrightInfo from '@cdo/apps/templates/CopyrightInfo';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {getTypedKeys} from '@cdo/apps/types/utils';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -20,6 +18,7 @@ import ForTeachersOnly from '../ForTeachersOnly';
 import Instructions, {InstructionsProps} from '../InstructionsV2';
 import NavigationArea from '../NavigationArea';
 
+import CopyrightButton from './CopyrightButton';
 import ResourcePanelExtraLinks from './ResourcePanelExtraLinks';
 
 import styles from './styles.module.scss';
@@ -74,7 +73,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     state => state.currentUser.userType === 'student'
   );
   const [currentTab, setCurrentTab] = useState<Tabs>(Tabs.Instructions);
-  const [isCopyrightOpen, setIsCopyrightOpen] = useState(false);
   const includeCopyrightAndSettings =
     LABS_USING_COPYRIGHT_AND_SETTINGS_IN_PANEL.includes(
       instructionsProps.levelProperties.appName
@@ -183,32 +181,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                   <FontAwesomeV6Icon iconName={'gear'} />
                 </button>
               </WithTooltip>
-              <WithTooltip
-                tooltipProps={{
-                  text: commonI18n.copyright(),
-                  tooltipId: 'tooltip-copyright',
-                  direction: 'onRight',
-                  size: 'xs',
-                  'data-theme': theme,
-                }}
-              >
-                <button
-                  type="button"
-                  className={styles.bottomButton}
-                  onClick={() => {
-                    setIsCopyrightOpen(true);
-                  }}
-                >
-                  <FontAwesomeV6Icon iconName={'copyright'} />
-                </button>
-              </WithTooltip>
-              {/* The copyright dialog is not themed, so we have to manually set the theme to light here. */}
-              <div data-theme={'Light'}>
-                <CopyrightDialog
-                  isOpen={isCopyrightOpen}
-                  closeModal={() => setIsCopyrightOpen(false)}
-                />
-              </div>
+              <CopyrightButton theme={theme} />
             </>
           )}
         </div>
