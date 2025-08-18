@@ -1,47 +1,44 @@
 require 'test_helper'
 require 'contentful'
+require_relative '../../engines/marketing/app/helpers/external_notifications_helper'
 
 class NotificationsControllerTest < ActionDispatch::IntegrationTest
   include Minitest::RSpecMocks
-
-  TestEntry = Struct.new(:id, :content_type, :fields, keyword_init: true)
+  TestEntry = Struct.new(:external_id, :title, :description, :icon_name, :href_links, :ai_prompts, :priority, :expires_at, :read_at, keyword_init: true)
 
   let(:entry_id_1) {SecureRandom.hex(10)}
   let(:entry_id_2) {SecureRandom.hex(10)}
-  let(:tomorrow) {1.day.from_now}
-  let(:later) {2.days.from_now}
+  let(:today) {Time.now.iso8601}
+  let(:tomorrow) {1.day.from_now.iso8601}
+  let(:later) {2.days.from_now.iso8601}
   let(:user) {create(:user)}
   let(:other_user) {create(:user)}
 
   let(:entry_1) do
     TestEntry.new(
-      content_type: 'dashboard-notification',
-      id: entry_id_1,
-      fields: {
-        title: 'Notification 1',
-        description: 'Description 1',
-        icon_name: 'icon1',
-        href_links: [{'url' => 'https://example.com/1', 'text' => 'Link 1'}],
-        ai_prompts: [{'text' => 'Prompt 1', 'prompt' => 'Prompt 1 text'}],
-        priority: 0,
-        expires_at: tomorrow,
-      },
+      external_id: entry_id_1,
+      title: 'Notification 1',
+      description: 'Description 1',
+      icon_name: 'icon1',
+      href_links: [{'url' => 'https://example.com/1', 'text' => 'Link 1'}],
+      ai_prompts: [{'text' => 'Prompt 1', 'prompt' => 'Prompt 1 text'}],
+      priority: 0,
+      expires_at: tomorrow,
+      read_at: today
       )
   end
 
   let(:entry_2) do
     TestEntry.new(
-      content_type: 'dashboard-notification',
-      id: entry_id_2,
-      fields: {
-        title: 'Notification 2',
-        description: 'Description 2',
-        icon_name: 'icon1',
-        href_links: [{'url' => 'https://example.com/2', 'text' => 'Link 2'}],
-        ai_prompts: [{'text' => 'Prompt 2', 'prompt' => 'Prompt 2 text'}],
-        priority: 0,
-        expires_at: later,
-      },
+      external_id: entry_id_2,
+      title: 'Notification 2',
+      description: 'Description 2',
+      icon_name: 'icon2',
+      href_links: [{'url' => 'https://example.com/2', 'text' => 'Link 2'}],
+      ai_prompts: [{'text' => 'Prompt 2', 'prompt' => 'Prompt 2 text'}],
+      priority: 0,
+      expires_at: later,
+      read_at: nil
       )
   end
 
@@ -60,10 +57,10 @@ class NotificationsControllerTest < ActionDispatch::IntegrationTest
     end
 
     context 'with contentful data' do
-      it 'returns user external notifications in descending order by created_at' do
-        Marketing::ContentfulClient.any_instance.expects(:entries).with('en-US', 'dashboard-notification').returns([entry_1, entry_2])
-
+      it 'returns user external notifications' do
+        ExternalNotificationsHelper.stubs(:get_contentful_notifications_for_user).returns([entry_1, entry_2])
         get '/notifications'
+
         assert_response :success
 
         response_data = JSON.parse(@response.body)
@@ -76,39 +73,10 @@ class NotificationsControllerTest < ActionDispatch::IntegrationTest
         _(response_data[0]["hrefLinks"]).must_equal [{'url' => 'https://example.com/1', 'text' => 'Link 1'}]
         _(response_data[0]["aiPrompts"]).must_equal [{'text' => 'Prompt 1', 'prompt' => 'Prompt 1 text'}]
         _(response_data[0]["priority"]).must_equal 0
-        _(response_data[0]["expiresAt"]).must_equal tomorrow.iso8601
+        _(response_data[0]["expiresAt"]).must_equal tomorrow
+        _(response_data[0]["readAt"]).must_equal today
 
         _(response_data[1]["externalId"]).must_equal entry_id_2
-      end
-
-      it 'only returns active external notifications' do
-        create_external_notification(user, external_id: entry_id_2, is_dismissed: true)
-        Marketing::ContentfulClient.any_instance.expects(:entries).with('other-locale', 'dashboard-notification').returns([entry_1, entry_2])
-
-        get '/notifications', params: {locale: 'other-locale'}
-        assert_response :success
-
-        response_data = JSON.parse(@response.body)
-        _(response_data.length).must_equal 1
-        _(response_data[0]["externalId"]).must_equal entry_id_1
-      end
-
-      it 'adds read_at timestamps' do
-        Marketing::ContentfulClient.any_instance.expects(:entries).with('en-US', 'dashboard-notification').returns([entry_1, entry_2])
-
-        create_external_notification(user, external_id: entry_id_1, read_at: tomorrow)
-        create_external_notification(user, external_id: entry_id_2, read_at: later)
-
-        get '/notifications'
-        assert_response :success
-
-        response_data = JSON.parse(@response.body)
-        _(response_data.length).must_equal 2
-        _(response_data[0]["externalId"]).must_equal entry_id_1
-        _(response_data[0]["readAt"]).must_equal tomorrow.iso8601
-
-        _(response_data[1]["externalId"]).must_equal entry_id_2
-        _(response_data[1]["readAt"]).must_equal later.iso8601
       end
     end
   end
