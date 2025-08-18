@@ -16,21 +16,6 @@ import YouTubeVideo from './YoutubeVideo';
 
 import moduleStyles from './video.module.scss';
 
-/**
- * ### Production-ready Checklist:
- * * (✔) implementation of component approved by design team;
- * * (✔) has storybook, covered with stories and documentation;
- * * (✔) has tests: test every prop, every state and every interaction that's js related;
- * * (see ./__tests__/Video.test.tsx)
- * * (✔) passes accessibility checks;
- *
- * ###  Status: ```Ready for dev```
- *
- * Design System: Video Component.
- * This component is used to display a video from YouTube with a fallback HTML video player,
- * and the option to download it, if an externally hosted fallback is provided.
- * The video can also be displayed with a caption and works with responsive screen sizes.
- */
 const Video: React.FC<VideoProps> = ({
   youTubeId,
   videoTitle,
