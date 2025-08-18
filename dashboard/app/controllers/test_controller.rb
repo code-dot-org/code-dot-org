@@ -419,9 +419,17 @@ class TestController < ApplicationController
   end
 
   def complete_unit
-    unit_name = params.require(:unit_name)
-    unit = Unit.find_by!(name: unit_name)
-    UserScript.create!(user: current_user, script: unit, completed_at: Time.now)
+    course_name = params.require(:course_name)
+    unit_group = UnitGroup.find_by_name!(course_name)
+    unit_position = params.require(:unit_position).to_i
+    unit_group_unit = unit_group.default_unit_group_units.where(position: unit_position).first
+    raise "Unit not found for course #{unit_group.name} at position #{unit_position}" unless unit_group_unit
+    UserScript.create!(
+      user: current_user,
+      script: unit_group_unit.script,
+      unit_group: unit_group,
+      completed_at: Time.now
+    )
     head :ok
   end
 
