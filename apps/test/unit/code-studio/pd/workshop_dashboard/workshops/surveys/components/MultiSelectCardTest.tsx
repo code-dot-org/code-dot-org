@@ -1,0 +1,94 @@
+import '@testing-library/jest-dom';
+import {render, screen} from '@testing-library/react';
+import React from 'react';
+
+import {MultiSelectBreakdown} from '@cdo/apps/code-studio/pd/workshop_dashboard/WorkshopFormTemplate/types';
+import {MultiSelectCard} from '@cdo/apps/code-studio/pd/workshop_dashboard/workshops/surveys/components/MultiSelectCard';
+
+describe('MultiSelectCard', () => {
+  const defaultItems: MultiSelectBreakdown[] = [
+    {label: 'Option A', count: 15, percentage: 50},
+    {label: 'Option B', count: 10, percentage: 33.3},
+    {label: 'Option C', count: 5, percentage: 16.7},
+  ];
+
+  const defaultProps = {
+    title: 'Test Multi-Select Card',
+    description: 'This is a test description.',
+    items: defaultItems,
+    barLabel: 'responses',
+  };
+
+  const renderComponent = (props = {}) => {
+    return render(<MultiSelectCard {...defaultProps} {...props} />);
+  };
+
+  it('renders the title and description correctly', () => {
+    renderComponent();
+    expect(screen.getByText('Test Multi-Select Card')).toBeInTheDocument();
+    expect(screen.getByText('This is a test description.')).toBeInTheDocument();
+  });
+
+  describe('when items are provided', () => {
+    it('renders the label, count, and bar for each item', () => {
+      renderComponent();
+
+      // Verify content for the first item
+      expect(screen.getByText('Option A')).toBeInTheDocument();
+      expect(screen.getByText('15 responses')).toBeInTheDocument();
+
+      // Verify content for the second item
+      expect(screen.getByText('Option B')).toBeInTheDocument();
+      expect(screen.getByText('10 responses')).toBeInTheDocument();
+    });
+
+    it('sets the correct width style for each progress bar', () => {
+      renderComponent();
+
+      // Find the bar for "Option A" by finding its count label and navigating the DOM
+      const countElementA = screen.getByText('15 responses');
+      const barRowA = countElementA.parentElement;
+      const indicatorA = barRowA?.querySelector('div[style]'); // Find the div with an inline style
+      expect(indicatorA).toHaveStyle('width: 50%');
+
+      // Find the bar for "Option B"
+      const countElementB = screen.getByText('10 responses');
+      const barRowB = countElementB.parentElement;
+      const indicatorB = barRowB?.querySelector('div[style]');
+      expect(indicatorB).toHaveStyle('width: 33.3%');
+    });
+
+    it('handles a 0% width correctly', () => {
+      const itemsWithZero = [{label: 'Zero Option', count: 0, percentage: 0}];
+      renderComponent({items: itemsWithZero});
+
+      const countElement = screen.getByText('0 responses');
+      const indicator =
+        countElement?.parentElement?.querySelector('div[style]');
+      expect(indicator).toHaveStyle('width: 0%');
+    });
+  });
+
+  describe('when barLabel is not provided', () => {
+    it('renders only the count number without a label', () => {
+      renderComponent({barLabel: undefined});
+
+      // The text should just be the number, not "15 "
+      expect(screen.getByText('15')).toBeInTheDocument();
+      expect(screen.queryByText('15 responses')).not.toBeInTheDocument();
+    });
+  });
+
+  describe('when the items array is empty', () => {
+    it('renders without crashing and displays no items', () => {
+      renderComponent({items: []});
+
+      // Ensure the main titles are still there
+      expect(screen.getByText('Test Multi-Select Card')).toBeInTheDocument();
+
+      // Ensure no item-specific content is rendered
+      expect(screen.queryByText('Option A')).not.toBeInTheDocument();
+      expect(screen.queryByText('15 responses')).not.toBeInTheDocument();
+    });
+  });
+});
