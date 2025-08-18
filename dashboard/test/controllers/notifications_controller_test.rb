@@ -26,7 +26,7 @@ class NotificationsControllerTest < ActionDispatch::IntegrationTest
         priority: 0,
         expires_at: tomorrow,
       },
-    )
+      )
   end
 
   let(:entry_2) do
@@ -42,7 +42,7 @@ class NotificationsControllerTest < ActionDispatch::IntegrationTest
         priority: 0,
         expires_at: later,
       },
-    )
+      )
   end
 
   before do
@@ -54,7 +54,8 @@ class NotificationsControllerTest < ActionDispatch::IntegrationTest
       it 'requires authentication' do
         sign_out user
         get '/notifications'
-        assert_redirected_to new_user_session_path
+        assert_response :redirect
+        assert_redirected_to "/users/sign_in"
       end
     end
 
@@ -116,7 +117,7 @@ class NotificationsControllerTest < ActionDispatch::IntegrationTest
     context 'when user is not authenticated' do
       it 'requires authentication' do
         external_notification = create_external_notification(user)
-        sign_out(user)
+        sign_out user
 
         post '/notifications/mark_as_read', params: {notification_ids: [external_notification.id]}
 

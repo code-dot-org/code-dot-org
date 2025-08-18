@@ -1,15 +1,10 @@
 require 'contentful'
+require 'honeybadger/ruby'
 
-class NotificationsController < ApplicationController
-  before_action :authenticate_user!
-
+module ExternalNotificationsHelper
   NOTIFICATION_CONTENTFUL_CONTENT_TYPE = 'dashboard-notification'
 
-  # Index does not use pagination, returns all active notifications for the current user
-  # Consider adding pagination if the number of notifications grows large
-  def index
-    locale = params[:locale] || I18n.default_locale
-
+  def self.get_contentful_notifications_for_user(current_user, locale)
     contentful_entries = Marketing::ContentfulClient.entries(locale.to_s, NOTIFICATION_CONTENTFUL_CONTENT_TYPE)
     contentful_result = contentful_entries.filter_map do |notification|
       format_contentful_notification(notification)
@@ -30,36 +25,10 @@ class NotificationsController < ApplicationController
       )
     end
 
-    render json: results.as_json.map {|notification| notification.deep_transform_keys {|key| key.to_s.camelize(:lower)}}, status: :ok
+    results
   end
 
-  def mark_as_read
-    external_notifications = params[:external_notifications] || []
-
-    if external_notifications.empty?
-      render json: {status: 'error', message: 'No notification IDs provided'}, status: :bad_request
-      return
-    end
-
-    found_external_notifications = current_user.external_notifications.where(external_id: external_notifications)
-
-    found_external_notifications.where(read_at: nil).update_all(read_at: Time.current)
-    found_ids = found_external_notifications.pluck(:external_id)
-    notifications_to_create = external_notifications - found_ids
-    notifications_to_create.each do |external_id|
-      ExternalNotification.create!(user_id: current_user.id, external_id: external_id, read_at: Time.current)
-    end
-
-    response_data = {
-      status: 'success',
-      message: "#{found_ids.count + notifications_to_create.count} notification(s) marked as read",
-      marked_count: found_ids.count + notifications_to_create.count,
-    }
-
-    render json: response_data, status: :ok
-  end
-
-  private def format_contentful_notification(notification)
+  def self.format_contentful_notification(notification)
     fields = notification.fields || {}
     formatted_notification = {
       external_id: notification.id,
@@ -106,4 +75,6 @@ class NotificationsController < ApplicationController
       )
     nil
   end
+
+  private_class_method :format_contentful_notification
 end
