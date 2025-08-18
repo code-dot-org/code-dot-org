@@ -4,6 +4,7 @@ import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import classNames from 'classnames';
 import React, {useMemo, useState} from 'react';
 
+import {getCurrentScriptLevelId} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import AiTutor2Chat from '@cdo/apps/lab2/views/components/AiTutor2Chat';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
@@ -17,6 +18,8 @@ import ForTeachersOnly from '../ForTeachersOnly';
 import Instructions, {InstructionsProps} from '../InstructionsV2';
 import NavigationArea from '../NavigationArea';
 
+import ResourcePanelExtraLinks from './ResourcePanelExtraLinks';
+
 import styles from './styles.module.scss';
 
 enum Tabs {
@@ -25,6 +28,11 @@ enum Tabs {
   TeachersOnly = 'teachersOnly',
   StudentRubric = 'studentRubric',
 }
+
+// We can only put the copyright and language dropdowns into the resource panel
+// if the lab is using the resource panel permanently, since the copyright/language footer is
+// controlled on the backend in game.rb#no_footer?
+const LABS_USING_COPYRIGHT_AND_SETTINGS_IN_PANEL = ['weblab2'];
 
 const tabInfo: {[key in Tabs]: {title: string; icon: string}} = {
   [Tabs.Instructions]: {title: commonI18n.instructions(), icon: 'info-circle'},
@@ -64,6 +72,13 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     state => state.currentUser.userType === 'student'
   );
   const [currentTab, setCurrentTab] = useState<Tabs>(Tabs.Instructions);
+  const includeCopyrightAndSettings =
+    LABS_USING_COPYRIGHT_AND_SETTINGS_IN_PANEL.includes(
+      instructionsProps.levelProperties.appName
+    );
+
+  const levelId = instructionsProps.levelProperties.id;
+  const scriptLevelId = useAppSelector(getCurrentScriptLevelId);
 
   // Build available tabs based on level information.
   const availableTabs = useMemo(() => {
@@ -116,6 +131,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                 size: 'xs',
                 'data-theme': theme,
               }}
+              key={`tooltip-${tab}`}
             >
               <button
                 type="button"
@@ -131,11 +147,62 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
             </WithTooltip>
           ))}
         </div>
+        <div className={styles.bottomTabs}>
+          <ResourcePanelExtraLinks
+            levelId={levelId}
+            scriptLevelId={scriptLevelId}
+            theme={theme}
+          />
+          {includeCopyrightAndSettings && (
+            <>
+              <WithTooltip
+                tooltipProps={{
+                  text: commonI18n.settings(),
+                  tooltipId: 'tooltip-settings',
+                  direction: 'onRight',
+                  size: 'xs',
+                  'data-theme': theme,
+                }}
+              >
+                <button
+                  type="button"
+                  className={classNames(styles.bottomButton)}
+                  onClick={() => {
+                    console.log('Open settings modal');
+                  }}
+                >
+                  <FontAwesomeV6Icon iconName={'gear'} />
+                </button>
+              </WithTooltip>
+              <WithTooltip
+                tooltipProps={{
+                  text: commonI18n.copyright(),
+                  tooltipId: 'tooltip-copyright',
+                  direction: 'onRight',
+                  size: 'xs',
+                  'data-theme': theme,
+                }}
+              >
+                <button
+                  type="button"
+                  className={classNames(styles.bottomButton)}
+                  onClick={() => {
+                    console.log('Open copyright modal');
+                  }}
+                >
+                  <FontAwesomeV6Icon iconName={'copyright'} />
+                </button>
+              </WithTooltip>
+            </>
+          )}
+        </div>
       </div>
       <div
         className={classNames(
           styles.panels,
-          includeFooterSpacing && styles.footerSpacing
+          includeFooterSpacing &&
+            !includeCopyrightAndSettings &&
+            styles.footerSpacing
         )}
       >
         <PanelContainer

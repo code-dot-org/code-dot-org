@@ -43,6 +43,32 @@
       font-size: 14px;
     }
   }
+
+  .bottomTabs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 0;
+  }
+
+  .bottomButton {
+    @include remove-button-styles;
+    height: 2rem;
+    width: 2rem;
+    //margin-left: 5px;
+
+    i {
+      color: var(--text-neutral-secondary);
+      font-size: 14px;
+    }
+
+    &:active, &:hover, &.selected {
+      background-color: var(--background-neutral-tertiary);
+    }
+
+  }
 }
 
 .panels {

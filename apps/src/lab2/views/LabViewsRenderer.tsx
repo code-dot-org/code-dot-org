@@ -11,6 +11,7 @@ import {PERMISSIONS} from '@cdo/apps/lab2/constants';
 import {useInitialLabTheme} from '@cdo/apps/lab2/hooks/useInitialLabTheme';
 import ProgressContainer from '@cdo/apps/lab2/progress/ProgressContainer';
 import {getAppOptionsViewingExemplar} from '@cdo/apps/lab2/projects/utils';
+import experiments from '@cdo/apps/util/experiments';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {lab2EntryPoints} from '../../../lab2EntryPoints';
@@ -20,8 +21,6 @@ import ExtraLinks from './ExtraLinks';
 import Loading from './Loading';
 
 import moduleStyles from './lab-views-renderer.module.scss';
-
-const hideExtraLinks = queryParams('hide-extra-links') === 'true';
 
 const LabViewsRenderer: React.FunctionComponent = () => {
   const levelProperties = useAppSelector(state => state.lab.levelProperties);
@@ -41,6 +40,10 @@ const LabViewsRenderer: React.FunctionComponent = () => {
   );
 
   const isViewingExemplar = getAppOptionsViewingExemplar();
+  const hideExtraLinks =
+    queryParams('hide-extra-links') === 'true' ||
+    levelProperties?.appName === 'weblab2' ||
+    experiments.isEnabledAllowingQueryString(experiments.LAB2_RESOURCE_PANEL);
 
   useInitialLabTheme({
     currentAppName,
