@@ -79,6 +79,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
 
   const levelId = instructionsProps.levelProperties.id;
   const scriptLevelId = useAppSelector(getCurrentScriptLevelId);
+  const hasFooter = includeFooterSpacing && !includeCopyrightAndSettings;
 
   // Build available tabs based on level information.
   const availableTabs = useMemo(() => {
@@ -150,7 +151,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
         <div
           className={classNames(
             styles.bottomTabs,
-            !includeCopyrightAndSettings && styles.bottomTabsWithFooter
+            hasFooter && styles.bottomTabsWithFooter
           )}
         >
           <ResourcePanelExtraLinks
@@ -203,12 +204,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
         </div>
       </div>
       <div
-        className={classNames(
-          styles.panels,
-          includeFooterSpacing &&
-            !includeCopyrightAndSettings &&
-            styles.footerSpacing
-        )}
+        className={classNames(styles.panels, hasFooter && styles.footerSpacing)}
       >
         <PanelContainer
           id={currentTab}
