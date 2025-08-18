@@ -55,7 +55,7 @@ const LabViewsRenderer: React.FunctionComponent = () => {
   });
 
   const isBlocked = isBlockedAbuse || projectSharingDisabled;
-  const hasViewEditAccess =
+  const hasElevatedPrivileges =
     isProjectValidator || isOwner || isTeacherOfProjectOwner;
 
   const blockLabView = () => {
@@ -67,7 +67,7 @@ const LabViewsRenderer: React.FunctionComponent = () => {
       return true;
     }
     // If a project is blocked and in view/edit mode, do not render the lab view if the user does not have view/edit access.
-    if (['view', 'edit'].includes(pageAction) && !hasViewEditAccess) {
+    if (['view', 'edit'].includes(pageAction) && !hasElevatedPrivileges) {
       return true;
     }
     return false;
