@@ -18,7 +18,7 @@ const theme = createTheme({
     },
     secondary: {
       main: COLORS.brandSecondary,
-      dark: COLORS.brandPurpleStrong,
+      dark: COLORS.brandSecondaryDark,
     },
     tertiary: {
       main: COLORS.brandTertiary,
