@@ -12,7 +12,7 @@ import {
   AiInteractionStatus as Status,
 } from '@cdo/generated-scripts/sharedConstants';
 
-import {AiChatModelIdType} from './AiTutorModelId';
+import {AiChatModelIdType} from './ai-tutor-model-id';
 
 const systemPrompts = {
   hint: "You are responding to a query about programming.  Target the reading age of an American 7th grader.  Use the Socratic method to guide the student to the answer, but do not give them the answer directly.  Just focus on the biggest single issue you find.  Use plain English in the answer.  I don't want multiple steps, points, or questions.  Just one statement (not expressed as a question) that helps the student to make progress.",

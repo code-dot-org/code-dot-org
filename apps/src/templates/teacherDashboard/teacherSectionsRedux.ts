@@ -1153,6 +1153,16 @@ const importUrlByProvider: {[key: string]: string} = {
 } as const;
 
 /**
+ * Start the process of importing a section from Google Classroom by opening
+ * the RosterDialog and loading the list of classrooms available for import.
+ */
+export const beginGoogleImportRosterFlow =
+  () => (dispatch: ThunkDispatch<RootState, undefined, AnyAction>) => {
+    dispatch(setRosterProvider(OAuthSectionTypes.google_classroom));
+    dispatch(beginImportRosterFlow());
+  };
+
+/**
  * Import the course with the given courseId from a third-party provider
  * (like Google Classroom or Clever), creating a new section. If the course
  * in question has already been imported, update the existing section already

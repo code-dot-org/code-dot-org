@@ -1,12 +1,12 @@
 import React, {useEffect} from 'react';
 
 import {clearChatMessages} from '@cdo/apps/aichat/redux';
-import {ModelParameters} from '@cdo/apps/aichat/types';
+import {ChatButton, ModelParameters} from '@cdo/apps/aichat/types';
 import ChatWorkspace from '@cdo/apps/aichat/views/ChatWorkspace';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
-import {aiTutorModelId} from '../../ai/AiTutorModelId';
+import {aiTutorModelId} from '../../ai/ai-tutor-model-id';
 
 import moduleStyles from './AiTutor2Chat.module.scss';
 
@@ -19,18 +19,27 @@ const MODEL_PARAMETERS: ModelParameters = {
 };
 
 // Some pre-canned chat buttons.
-const CHAT_BUTTONS = [
+const CHAT_BUTTONS: ChatButton[] = [
   {
     label: 'example',
     value: 'Can you give me an example?',
+    analyticsProperties: {
+      cannedPrompt: 'example',
+    },
   },
   {
     label: 'hint',
     value: 'Can you give me a hint?',
+    analyticsProperties: {
+      cannedPrompt: 'hint',
+    },
   },
   {
     label: 'doc',
     value: 'Can you give me some documentation?',
+    analyticsProperties: {
+      cannedPrompt: 'doc',
+    },
   },
 ];
 
