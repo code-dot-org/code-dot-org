@@ -45,7 +45,7 @@ const LabViewsRenderer: React.FunctionComponent = () => {
     state.lab.permissions?.includes(PERMISSIONS.PROJECT_VALIDATOR)
   );
 
-  const pageAction = getLabViewPageAction();
+  const pageAction = getLabViewPageAction() || '';
 
   const isViewingExemplar = getAppOptionsViewingExemplar();
 
