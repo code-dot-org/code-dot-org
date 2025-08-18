@@ -9,10 +9,7 @@ import i18n from '@cdo/locale';
 
 import AddSectionDialog from '../../teacherDashboard/AddSectionDialog';
 import RosterDialog from '../../teacherDashboard/RosterDialog';
-import {
-  beginCreatingSection,
-  beginEditingSection,
-} from '../../teacherDashboard/teacherSectionsRedux';
+import {beginEditingSection} from '../../teacherDashboard/teacherSectionsRedux';
 
 import {ArchiveAllModal} from './ArchiveAllModal';
 import {ArchivedToggleOption} from './TeacherHomepage';
@@ -36,7 +33,7 @@ export const Header: React.FC<HeaderProps> = ({
   React.useEffect(() => {
     const searchParams = new URLSearchParams(window.location.search);
     if (searchParams.get('openAddSectionDialog') === 'true') {
-      dispatch(beginCreatingSection());
+      dispatch(beginEditingSection());
     }
   }, [dispatch]);
 
