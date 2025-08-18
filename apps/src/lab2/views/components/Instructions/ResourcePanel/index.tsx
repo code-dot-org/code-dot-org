@@ -147,7 +147,12 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
             </WithTooltip>
           ))}
         </div>
-        <div className={styles.bottomTabs}>
+        <div
+          className={classNames(
+            styles.bottomTabs,
+            !includeCopyrightAndSettings && styles.bottomTabsWithFooter
+          )}
+        >
           <ResourcePanelExtraLinks
             levelId={levelId}
             scriptLevelId={scriptLevelId}
@@ -166,7 +171,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
               >
                 <button
                   type="button"
-                  className={classNames(styles.bottomButton)}
+                  className={styles.bottomButton}
                   onClick={() => {
                     console.log('Open settings modal');
                   }}
@@ -185,7 +190,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
               >
                 <button
                   type="button"
-                  className={classNames(styles.bottomButton)}
+                  className={styles.bottomButton}
                   onClick={() => {
                     console.log('Open copyright modal');
                   }}
