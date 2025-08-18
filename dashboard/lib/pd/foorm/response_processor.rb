@@ -71,7 +71,7 @@ module Pd::Foorm
       question_summary ||= {}
       return {} unless question_summary.is_a?(Hash)
 
-      total_responses = question_summary.values.sum
+      total_responses = question_summary.values.filter {|v| v.is_a?(Numeric)}.sum
       breakdown = {}
       promoter_count = 0
 
@@ -102,7 +102,7 @@ module Pd::Foorm
       question_summary ||= {}
       return {} unless question_summary.is_a?(Hash)
 
-      total_responses = question_summary.values.sum
+      total_responses = question_summary.values.filter {|v| v.is_a?(Numeric)}.sum
       breakdown = {}
       weighted_sum = 0
       agreement_count = 0 # Count of responses >= 5 (Slightly Agree and above)
