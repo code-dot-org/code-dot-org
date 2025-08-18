@@ -53,6 +53,8 @@ export const Implementation = () => {
       .map(([_, value]) => value);
   }, [barriersToImplementation]);
 
+  const barriersToImplementation = questions.barriers_implementation_curriculum;
+
   const getDescription = (question: SurveyQuestion) => {
     if (isQuestionType(question, 'likert')) {
       return `${question.results.agreement_count} of ${question.results.total_responses} respondents`;
