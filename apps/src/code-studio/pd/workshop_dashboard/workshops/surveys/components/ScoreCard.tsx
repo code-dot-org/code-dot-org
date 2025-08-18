@@ -12,8 +12,8 @@ import React, {useMemo} from 'react';
 import styles from '../../workshop.module.scss';
 
 interface ScoreCardProps {
-  title: string | null;
-  description: string | null;
+  title: string;
+  description: string;
   footer: string | null;
   score?: number | null;
   responseCount?: number;
