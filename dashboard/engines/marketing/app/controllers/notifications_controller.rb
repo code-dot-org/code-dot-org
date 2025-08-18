@@ -10,7 +10,6 @@ class NotificationsController < ApplicationController
   def index
     locale = params[:locale] || I18n.default_locale
 
-    puts 'lfm:locale', locale, NOTIFICATION_CONTENTFUL_CONTENT_TYPE
     contentful_entries = Marketing::ContentfulClient.entries(locale.to_s, NOTIFICATION_CONTENTFUL_CONTENT_TYPE)
     contentful_result = contentful_entries.filter_map do |notification|
       format_contentful_notification(notification)
@@ -37,7 +36,7 @@ class NotificationsController < ApplicationController
   def mark_as_read
     external_notifications = params[:external_notifications] || []
 
-    if  external_notifications.empty?
+    if external_notifications.empty?
       render json: {status: 'error', message: 'No notification IDs provided'}, status: :bad_request
       return
     end
