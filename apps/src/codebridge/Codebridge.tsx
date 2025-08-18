@@ -220,7 +220,6 @@ export const Codebridge = React.memo(
           <div className={classNames(moduleStyles.codebridgeContainer)}>
             {flaggedImageData && (
               <FlaggedImageModal
-                isOpen={flaggedImageData !== null}
                 onAccept={handleAcceptFlaggedImage}
                 onCancel={handleCancelFlaggedImage}
               />

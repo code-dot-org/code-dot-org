@@ -8,9 +8,9 @@ interface UploadsDisabledModalProps {
   onClose: () => void;
 }
 
-const FlaggedImageModal: React.FunctionComponent<UploadsDisabledModalProps> = ({
-  onClose,
-}) => {
+const UploadsDisabledModal: React.FunctionComponent<
+  UploadsDisabledModalProps
+> = ({onClose}) => {
   return (
     <Modal
       id="uploads-disabled-modal"
@@ -30,4 +30,4 @@ const FlaggedImageModal: React.FunctionComponent<UploadsDisabledModalProps> = ({
   );
 };
 
-export default FlaggedImageModal;
+export default UploadsDisabledModal;

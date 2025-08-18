@@ -5,20 +5,16 @@ import React from 'react';
 import i18n from '@cdo/locale';
 
 interface FlaggedImageModalProps {
-  isOpen: boolean;
   onAccept: () => void;
   onCancel: () => void;
   errorMessage?: string;
 }
 
 const FlaggedImageModal: React.FC<FlaggedImageModalProps> = ({
-  isOpen,
   onAccept,
   onCancel,
   errorMessage,
 }) => {
-  if (!isOpen) return null;
-
   return (
     <Modal
       id="image-flagged-modal"

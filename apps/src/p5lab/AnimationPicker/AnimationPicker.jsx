@@ -339,7 +339,6 @@ class AnimationPicker extends React.Component {
         />
         {this.state.showFlaggedModal && (
           <FlaggedImageModal
-            isOpen
             onAccept={this.handleAcceptFlaggedImage}
             onCancel={this.handleCancelFlaggedImage}
             errorMessage={this.state.flaggedModalError}
