@@ -218,9 +218,7 @@ Multi.prototype.lockAnswers = function () {
   if (this.allowMultipleAttempts) {
     return;
   }
-  $('#' + this.id + ' .answerbutton')
-    .addClass('lock-answers')
-    .attr('tabindex', '-1');
+  $('#' + this.id + ' .answerbutton').addClass('lock-answers');
   $('#reset-predict-progress-button')?.prop('disabled', false);
 };
 
