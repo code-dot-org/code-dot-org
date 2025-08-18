@@ -179,7 +179,7 @@ export const deleteFileHelper = ({
           Lab2Registry.getInstance()
             .getMetricsReporter()
             .logError(
-              'Error unflagging project asset due to flagged image',
+              'Error unflagging project channel due to deletion of flagged project asset',
               error as Error
             );
         }

@@ -14,6 +14,7 @@ import React, {useEffect, useMemo, useState} from 'react';
 
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {ProjectSources} from '@cdo/apps/lab2/types';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
@@ -179,11 +180,18 @@ export const Codebridge = React.memo(
               {'Content-Type': 'application/json; charset=UTF-8'}
             );
           } catch (error) {
-            console.error('Error flagging channel', error);
+            Lab2Registry.getInstance()
+              .getMetricsReporter()
+              .logError(
+                'Error flagging channel due to flagged image',
+                error as Error
+              );
           }
         }
       } catch (error) {
-        console.error('Error uploading flagged image:', error);
+        Lab2Registry.getInstance()
+          .getMetricsReporter()
+          .logError('Error uploading flagged image asset', error as Error);
         setFlaggedImageData(null);
       }
     };
