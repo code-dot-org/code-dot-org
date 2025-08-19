@@ -17,8 +17,12 @@ module I18n
           end
 
           private def i18n_data
-            CourseOffering.find_each.each_with_object({}) do |course_offering, i18n_data|
-              i18n_data[course_offering.key] = course_offering.display_name
+            Dir.glob(ORIGIN_I18N_FILE_PATH).each_with_object({}) do |file_path, i18n_data|
+              course_offering = I18nScriptUtils.parse_file(file_path)
+              i18n_data[course_offering['key']] = {
+                'display_name' => course_offering['display_name'],
+                'description' => course_offering['description']
+              }.compact
             end.sort.to_h
           end
         end

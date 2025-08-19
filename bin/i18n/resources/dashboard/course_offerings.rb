@@ -7,6 +7,8 @@ module I18n
       module CourseOfferings
         FILE_NAME = 'course_offerings.json'.freeze
         FILE_PATH = File.join(DIR_NAME, FILE_NAME).freeze
+
+        ORIGIN_I18N_FILE_PATH = CDO.dir(File.join('dashboard', 'config', 'course_offerings', '**', '*.json'))
         I18N_SOURCE_FILE_PATH = File.join(I18N_SOURCE_DIR_PATH, FILE_NAME).freeze
 
         def self.sync_in
