@@ -214,6 +214,7 @@ export default class Match {
         if (isFromDifferentSlot) {
           console.log('manually calling drop handler');
           // Simulate drag locations
+          /*
           const $container = $('.draggablecolumn');
           const containerOffset = $container.offset();
           const itemOffset = existingElement.offset();
@@ -226,7 +227,7 @@ export default class Match {
             top: relativeTop,
             left: relativeLeft,
             zIndex: 1000,
-          });
+          });*/
           // Simulate the drop call
           const dropHandler = existingElement.data('ui-droppable').options.drop;
 
@@ -244,8 +245,9 @@ export default class Match {
         }
         this.selectedAnswer = null;
 
-        // Disable focusability for slots
-        slots.attr('tabindex', '-1');
+        // Disable focusability for empty slots
+        const emptySlots = $(this.container).find('.emptyslot');
+        emptySlots.attr('tabindex', '-1');
 
         // Disable the focus trap and move focus back to the body, deselecting any selected ansers
         $('.answer.selected').removeClass('selected');
@@ -259,7 +261,8 @@ export default class Match {
           this.selectedAnswer = null; // Clear the selected answer
         }
         $('.submitButton').focus();
-        slots.attr('tabindex', '-1'); // Disable focusability for slots
+        const emptySlots = $(this.container).find('.emptyslot');
+        emptySlots.attr('tabindex', '-1'); // Disable focusability for empty slots
       }
     };
     slots.on('keydown', handleKeydown);
