@@ -50,13 +50,6 @@ export const CONTAINER_OVERRIDES: Components<Theme>['MuiContainer'] = {
       '.section-background-transparent:has(&.MuiContainer-root)': {
         backgroundColor: undefined,
       },
-      '&.video-error-container': {
-        backgroundColor: 'var(--background-neutral-tertiary)',
-        padding: 0,
-        '.MuiTypography-root, svg': {
-          color: 'var(--text-neutral-primary)',
-        },
-      },
     }),
   },
 };
