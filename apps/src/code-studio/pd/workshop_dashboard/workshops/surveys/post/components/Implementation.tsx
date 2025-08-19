@@ -7,6 +7,7 @@ import {
   SurveyQuestions,
 } from '../../../../WorkshopFormTemplate/types';
 import {useWorkshopContext} from '../../../WorkshopLayout';
+import {FreeResponseCard} from '../../components/FreeResponseCard';
 import {MultiSelectCard} from '../../components/MultiSelectCard';
 import {ScoreCard} from '../../components/ScoreCard';
 
@@ -33,6 +34,11 @@ export const Implementation = () => {
   const barriersToImplementation = useMemo(
     () =>
       questions ? questions.barriers_implementation_curriculum : undefined,
+    [questions]
+  );
+
+  const otherQuestionsImplementation = useMemo(
+    () => (questions ? questions.other_questions_implementation : undefined),
     [questions]
   );
 
@@ -85,7 +91,6 @@ export const Implementation = () => {
       <Box className={styles.cardRow}>
         {isQuestionType(barriersToImplementation, 'multiSelect') && (
           <MultiSelectCard
-            key={barriersToImplementation.question_name}
             title={
               barriersToImplementation.question_short_text ??
               barriersToImplementation.question_text
@@ -93,6 +98,19 @@ export const Implementation = () => {
             description={getDescription(barriersToImplementation)}
             items={barriersItems}
             barLabel="Teachers"
+          />
+        )}
+      </Box>
+
+      <Box className={styles.cardRow}>
+        {isQuestionType(otherQuestionsImplementation, 'text') && (
+          <FreeResponseCard
+            title={
+              otherQuestionsImplementation.question_short_text ??
+              otherQuestionsImplementation.question_text
+            }
+            items={otherQuestionsImplementation.results.responses}
+            tagText={`${otherQuestionsImplementation.results.total_responses} Submitted`}
           />
         )}
       </Box>
