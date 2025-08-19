@@ -25120,3 +25120,12 @@ en:
             - Propose security design improvements that consider both human-centered design principles and their impact on diverse users and communities.
             - Describe cybersecurity career roles and how professionals use AI tools in their work.
             :::
+        musiclab-instructions-bash:
+          lessons: {}
+          lesson_groups: {}
+          name: musiclab-instructions-bash
+          title: Musiclab Instructions Bash
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''

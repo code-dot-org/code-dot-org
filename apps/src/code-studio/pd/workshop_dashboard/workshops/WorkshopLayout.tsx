@@ -1,10 +1,14 @@
 import {Button} from '@code-dot-org/component-library/button';
-import React, {FC, useMemo} from 'react';
+import React, {FC, useMemo, createContext, useContext} from 'react';
 import {Outlet, useLocation, useParams} from 'react-router-dom';
 
 import {useFetch} from '@cdo/apps/util/useFetch';
 
-import {Enrollment, Workshop} from '../WorkshopFormTemplate/types';
+import {
+  Enrollment,
+  SurveySummary,
+  Workshop,
+} from '../WorkshopFormTemplate/types';
 import {
   enrollmentDataToProps,
   workshopDataToProps,
@@ -14,9 +18,21 @@ import {FacilitatorSelection} from './components/FacilitatorSelection';
 import {SurveyCategorySelection} from './components/SurveyCategorySelection';
 import {SurveyTypeSelection} from './components/SurveyTypeSelection';
 import {WorkshopTabs} from './components/WorkshopTabs';
-import {WorkshopLayoutProps} from './types';
+import {WorkshopLayoutProps, WorkshopContextValue} from './types';
 
 import styles from './workshop.module.scss';
+
+const WorkshopContext = createContext<WorkshopContextValue | undefined>(
+  undefined
+);
+
+export const useWorkshopContext = (): WorkshopContextValue => {
+  const context = useContext(WorkshopContext);
+  if (context === undefined) {
+    throw new Error('useWorkshopContext must be used within WorkshopLayout');
+  }
+  return context;
+};
 
 export const WorkshopLayout: FC<WorkshopLayoutProps> = ({
   tabList,
@@ -44,6 +60,17 @@ export const WorkshopLayout: FC<WorkshopLayoutProps> = ({
     workshopId ? `/api/v1/pd/workshops/${workshopId}/enrollments` : ''
   );
 
+  const {
+    data: surveys,
+    loading: surveysLoading,
+    error: surveysError,
+    refetch: refetchSurveys,
+  } = useFetch<SurveySummary | null>(
+    workshopId
+      ? `/api/v1/pd/workshops/${workshopId}/foorm/workshop_survey_summary`
+      : ''
+  );
+
   const workshop = useMemo(
     () => (workshopData ? workshopDataToProps(workshopData) : null),
     [workshopData]
@@ -64,8 +91,23 @@ export const WorkshopLayout: FC<WorkshopLayoutProps> = ({
   // TODO: https://codedotorg.atlassian.net/browse/ACQ-3438
   const handleDownload = () => {};
 
+  const contextValue: WorkshopContextValue = {
+    workshop,
+    workshopLoading,
+    workshopError,
+    refetchWorkshop,
+    enrollments,
+    enrollmentsLoading,
+    enrollmentsError,
+    refetchEnrollments,
+    surveys,
+    surveysLoading,
+    surveysError,
+    refetchSurveys,
+  };
+
   return (
-    <>
+    <WorkshopContext.Provider value={contextValue}>
       <nav aria-label="Workshop sections" className={styles.navContainer}>
         {showTabs && <WorkshopTabs tabList={tabList} />}
         <div className={styles.navRow}>
@@ -93,19 +135,8 @@ export const WorkshopLayout: FC<WorkshopLayoutProps> = ({
         {showFacilitatorSelection && <FacilitatorSelection />}
       </nav>
       <main>
-        <Outlet
-          context={{
-            workshop,
-            workshopLoading,
-            workshopError,
-            refetchWorkshop,
-            enrollments,
-            enrollmentsLoading,
-            enrollmentsError,
-            refetchEnrollments,
-          }}
-        />
+        <Outlet />
       </main>
-    </>
+    </WorkshopContext.Provider>
   );
 };

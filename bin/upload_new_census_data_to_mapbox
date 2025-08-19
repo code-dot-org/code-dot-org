@@ -15,7 +15,6 @@
 # can make the new tileset the default (i.e. you won't need a URL param, and it will be the default map data):
 # 1) Update the seeding file name to the new file in census_summary.rb
 # 2) Update the MAP_TILESET_ID constant to censustiles-[ACCESS_REPORT_YEAR] in AdoptionMap.tsx
-# 3) Update the census_tileset to censustiles-[ACCESS_REPORT_YEAR] in embeddable_census_map.haml
 
 require_relative '../dashboard/config/environment'
 require_relative '../pegasus/helpers/properties'

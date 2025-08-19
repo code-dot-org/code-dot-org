@@ -30,7 +30,7 @@ test.describe('Home Page', () => {
 
       await context.addCookies([
         {
-          name: getCookieNameByStage('_user_type', getAppStageFromTestStage()),
+          name: getCookieNameByStage('_shortName', getAppStageFromTestStage()),
           path: '/',
           domain: `.${marketingPage.getCookieDomain()}`,
           value: 'student',

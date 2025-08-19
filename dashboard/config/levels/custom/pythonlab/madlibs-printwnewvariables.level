@@ -7,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "##Try it yourself\r\n\r\nCreate a new variable and print that variable! ",
-    "ai_tutor2_available": "true",
+    "ai_tutor_available": "true",
     "submittable": "false",
     "hide_share_and_remix": "true",
     "enable_micro_bit": "false",

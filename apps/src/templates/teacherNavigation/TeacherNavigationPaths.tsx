@@ -106,7 +106,7 @@ export const LABELED_TEACHER_NAVIGATION_PATHS = {
     url: TEACHER_NAVIGATION_PATHS.aiTutor,
     absoluteUrl: getAbsolutePath(TEACHER_NAVIGATION_PATHS.aiTutor),
     label: i18n.aiTutor(),
-    icon: 'ai-bot-solid',
+    icon: 'ai-head-solid',
   },
   lessonMaterials: {
     url: TEACHER_NAVIGATION_PATHS.lessonMaterials,

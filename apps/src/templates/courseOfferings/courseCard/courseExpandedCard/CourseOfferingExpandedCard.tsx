@@ -85,34 +85,34 @@ const CourseOfferingExpandedCard: React.FunctionComponent<
             )}
             {courseOffering.image && <Image src={courseOffering.image} />}
           </div>
-          {courseOffering.available_resources &&
-            !!Object.keys(courseOffering.available_resources).length && (
-              <div className={moduleStyles.additionalDetails}>
-                {/*TODO: Bring and refactor this functionality back in scope of
+          {/*TODO: Bring and refactor this functionality back in scope of
                  https://codedotorg.atlassian.net/browse/ACQ-3467*/}
-                {/*<div>*/}
-                {/*  <FontAwesomeV6Icon*/}
-                {/*    iconName="book-open-cover"*/}
-                {/*    iconStyle="solid"*/}
-                {/*  />*/}
-                {/*  <BodyThreeText noMargin>*/}
-                {/*    <StrongText>Associated Curriculum:</StrongText>*/}
-                {/*  </BodyThreeText>*/}
-                {/*  {Object.keys(courseOffering.available_resources).length &&*/}
-                {/*    Object.keys(courseOffering.available_resources).map(key => (*/}
-                {/*      <Link*/}
-                {/*        key={key}*/}
-                {/*        href={*/}
-                {/*          courseOffering.available_resources*/}
-                {/*            ? courseOffering.available_resources[key]*/}
-                {/*            : '#'*/}
-                {/*        }*/}
-                {/*        text={key}*/}
-                {/*      />*/}
-                {/*    ))}*/}
-                {/*</div>*/}
-              </div>
-            )}
+          {/*{courseOffering.available_resources &&*/}
+          {/*  !!Object.keys(courseOffering.available_resources).length && (*/}
+          {/*    <div className={moduleStyles.additionalDetails}>*/}
+          {/*      <div>*/}
+          {/*        <FontAwesomeV6Icon*/}
+          {/*          iconName="book-open-cover"*/}
+          {/*          iconStyle="solid"*/}
+          {/*        />*/}
+          {/*        <BodyThreeText noMargin>*/}
+          {/*          <StrongText>Associated Curriculum:</StrongText>*/}
+          {/*        </BodyThreeText>*/}
+          {/*        {Object.keys(courseOffering.available_resources).length &&*/}
+          {/*          Object.keys(courseOffering.available_resources).map(key => (*/}
+          {/*            <Link*/}
+          {/*              key={key}*/}
+          {/*              href={*/}
+          {/*                courseOffering.available_resources*/}
+          {/*                  ? courseOffering.available_resources[key]*/}
+          {/*                  : '#'*/}
+          {/*              }*/}
+          {/*              text={key}*/}
+          {/*            />*/}
+          {/*          ))}*/}
+          {/*      </div>*/}
+          {/*    </div>*/}
+          {/*  )}*/}
 
           {actionRowContent && (
             <div className={moduleStyles.actionRowContent}>

@@ -1,32 +1,36 @@
 class NotificationsController < ApplicationController
   before_action :authenticate_user!
 
-  # Index does not use pagination, returns all active notifications for the current user
-  # Consider adding pagination if the number of notifications grows large
+  # Returns a list of contentful notifications for the user that have not expired or been dismissed
   def index
-    rails_notifications = current_user.external_notifications.not_dismissed.order(created_at: :desc).all
+    locale = params[:locale] || I18n.default_locale
 
-    # TODO(lfm): call contentful and add contentful notifications to the list
+    results = ExternalNotificationsHelper.get_contentful_notifications_for_user(current_user, locale)
 
-    render json: rails_notifications.as_json.map {|notification| notification.deep_transform_keys {|key| key.to_s.camelize(:lower)}}
+    render json: results.as_json.map {|notification| notification.deep_transform_keys {|key| key.to_s.camelize(:lower)}}, status: :ok
   end
 
   def mark_as_read
-    notification_ids = params[:notification_ids] || []
+    external_notification_ids = (params[:external_notification_ids] || []).compact_blank
 
-    if notification_ids.empty?
+    if external_notification_ids.empty?
       render json: {status: 'error', message: 'No notification IDs provided'}, status: :bad_request
       return
     end
 
-    external_notifications = current_user.external_notifications.where(id: notification_ids)
+    found_external_notifications = current_user.external_notifications.where(external_id: external_notification_ids)
 
-    external_notifications.where(read_at: nil).update_all(read_at: Time.current)
+    found_external_notifications.where(read_at: nil).update_all(read_at: Time.current)
+    found_ids = found_external_notifications.pluck(:external_id)
+    notifications_to_create = external_notification_ids - found_ids
+    notifications_to_create.each do |external_id|
+      ExternalNotification.create!(user_id: current_user.id, external_id: external_id, read_at: Time.current)
+    end
 
     response_data = {
       status: 'success',
-      message: "#{external_notifications.count} notification(s) marked as read",
-      marked_count: external_notifications.count,
+      message: "#{found_ids.count + notifications_to_create.count} notification(s) marked as read",
+      marked_count: found_ids.count + notifications_to_create.count,
     }
 
     render json: response_data, status: :ok

@@ -3,10 +3,9 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import {Box, Stack} from '@mui/material';
 import React from 'react';
 import {useSelector} from 'react-redux';
-import {useOutletContext} from 'react-router-dom';
 
 import {WorkshopAdmin} from '../../permission';
-import {WorkshopContextValue} from '../types';
+import {useWorkshopContext} from '../WorkshopLayout';
 
 import {TakeAttendanceSection} from './sections/TakeAttendanceSection';
 import {WorkshopInformationSection} from './sections/WorkshopInformationSection';
@@ -22,7 +21,7 @@ export const WorkshopOverview: React.FC = () => {
   const isWorkshopAdmin = permission.has(WorkshopAdmin);
 
   const {workshop, workshopLoading, workshopError, refetchWorkshop} =
-    useOutletContext<WorkshopContextValue>();
+    useWorkshopContext();
 
   if (!workshop && workshopLoading) {
     return <FontAwesomeV6Icon iconName="spinner" animationType="spin" />;

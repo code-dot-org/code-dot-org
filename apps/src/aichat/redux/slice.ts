@@ -23,6 +23,7 @@ import {
   PendingChatMessage,
   ChatAsset,
   SaveError,
+  AiChatClientType,
 } from '../types';
 import {
   DEFAULT_VISIBILITIES,
@@ -33,6 +34,7 @@ import {validateModelId} from '../views/modelCustomization/utils';
 import {AichatState} from './state';
 
 const initialState: AichatState = {
+  clientType: undefined,
   chatEventsPast: [],
   chatEventsCurrent: [],
   chatMessagePending: undefined,
@@ -102,6 +104,10 @@ const aichatSlice = createSlice({
     },
     setUserHasAichatAccess: (state, action: PayloadAction<boolean>) => {
       state.userHasAichatAccess = action.payload;
+    },
+
+    setClientType(state, action: PayloadAction<AiChatClientType>) {
+      state.clientType = action.payload;
     },
     removeUpdateMessage: (state, action: PayloadAction<number>) => {
       const modelUpdateMessageInfo = getUpdateMessageLocation(
@@ -370,6 +376,7 @@ export const {
   setStudentChatHistory,
   setOwnChatHistory,
   setUserHasAichatAccess,
+  setClientType,
   setViewMode,
   addStagedFile,
   stagedFileUploadFinished,

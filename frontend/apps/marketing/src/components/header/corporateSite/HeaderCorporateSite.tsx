@@ -34,7 +34,7 @@ const defaultProps = getDefaultHeaderProps({
 
 const Header: React.FC = () => {
   const isSignedIn = async (): Promise<boolean> => {
-    return !!getCookie(getCookieNameByStage('_user_type', getStage()));
+    return !!getCookie(getCookieNameByStage('_shortName', getStage()));
   };
 
   return <DSCOHeader {...defaultProps} isSignedIn={isSignedIn} />;

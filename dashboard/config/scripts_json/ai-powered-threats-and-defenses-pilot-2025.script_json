@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-08-15 02:24:09 UTC",
+    "serialized_at": "2025-08-19 00:06:15 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -84,10 +84,11 @@
       "key": "lesson-1",
       "name": "Pre-Assessment",
       "absolute_position": 1,
-      "lockable": false,
+      "lockable": true,
       "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
+        "assessment": true
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -101,7 +102,7 @@
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 2,
+      "relative_position": 1,
       "properties": {
         "overview": "**How does cybersecurity affect me in my every day life?**\n\nThis lesson introduces students to the concept that cybersecurity isn’t just about malicious attackers. Systems can also fail due to technical glitches, human error, or poor design. These failures can lead to frustration, harm, or even lost opportunities. By reading the story of a student whose school day goes very wrong, students analyze the human, technical, and data aspects of everyday breakdowns and begin to explore the foundational challenges that cybersecurity seeks to address.",
         "preparation": "- Print copies of the Unit Guide (one for each student)",
@@ -119,7 +120,7 @@
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 3,
+      "relative_position": 2,
       "properties": {
       },
       "seeding_key": {
@@ -134,7 +135,7 @@
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 4,
+      "relative_position": 3,
       "properties": {
       },
       "seeding_key": {
@@ -149,7 +150,7 @@
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 5,
+      "relative_position": 4,
       "properties": {
         "overview": "**How can AI make social engineering feel more personal or real?**\n\nThis lesson guides students to understand how AI is making social engineering attacks more scalable, convincing, and targeted. Through analyzing case studies and creating their own AI-generated scripts, students learn to identify different types of phishing and compare basic prevention strategies.",
         "preparation": "- Print copies of the Phishing Prevention Strategies Activity Guide (one for each student)",
@@ -167,7 +168,7 @@
       "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 6,
+      "relative_position": 5,
       "properties": {
         "overview": "**How can a cybersecurity defense protect users without them even realizing it?**\n\nThis lesson shifts focus from how systems fail to how they succeed. Students analyze real-world case studies of cyber threats that were stopped or mitigated by smart system design, human behavior, or AI tools. Through a jigsaw activity and class synthesis, they uncover what makes a cybersecurity defense effective, even when it’s invisible to the user.",
         "preparation": "- Print copies of the Defense in Action activity guide (one per student)\n- Print copies of the Case Studies (one case study per student)",
@@ -185,7 +186,7 @@
       "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 7,
+      "relative_position": 6,
       "properties": {
         "overview": "**What core security goals should you keep in mind when designing secure digital systems?**\n\nStudents explore common cybersecurity failures through relatable digital scenarios. By taking on the roles of attacker and defender, they examine how system flaws impact Confidentiality, Integrity, or Availability (CIA). They apply human-centered thinking to propose practical fixes and consider tradeoffs, laying the groundwork for deeper security concepts in upcoming lessons.",
         "preparation": "- Prepare copies of the Investigate a CIA Scenario: Cases handout (one per group)\n- Prepare copies of the Investigate a CIA Scenario: Attacker/Defender activity guide (one per group)",
@@ -203,7 +204,7 @@
       "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 8,
+      "relative_position": 7,
       "properties": {
         "overview": "**How do systems decide who you are and what you're allowed to do?**\n\nThis lesson introduces students to the AAA security framework—authentication, access control, and auditing—by focusing on the first two components through interactive stations. Students categorize authentication methods, explore how AI can exploit them, and design access control rules for real-world scenarios. The activities deepen students’ understanding of how systems verify identity and manage access while connecting those concepts to personal experiences.",
         "preparation": "- Print and cut out one full set of Access Control Scenario Cards for the entire class\n- Print and cut out a set of Authentication Method Cards (one copy per station)\n- Print out the Station Instruction Pages (pages 3-6 in the Station Setup and Instructions teacher resource)\n- Provide multiple sticky notes for each station",
@@ -221,7 +222,7 @@
       "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 9,
+      "relative_position": 8,
       "properties": {
         "overview": "**What role can AI play in enhancing AAA?**\n\nStudents investigate the \"Accounting\" component of AAA by analyzing user audit logs and comparing their findings to an AI chatbot’s results. They reflect on how context and identity influence human and machine judgments. The lesson then shifts to how AI is trained and used in adaptive authentication systems based on real-time risk.",
         "preparation": "- Print copies of the Fraud Detection Investigation Activity Guide (one copy per group)\n- Print copies of the four different user profiles",
@@ -239,7 +240,7 @@
       "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 10,
+      "relative_position": 9,
       "properties": {
         "overview": "**What makes encryption a powerful way to protect data?**\n\nThis lesson introduces encryption as a tool for protecting digital information by guiding students through the design of their own encryption method. Through hands-on exploration and comparison, students deepen their understanding of how symmetric and asymmetric encryption work and when each is used. The lesson concludes with a focus on how encryption protects data across different states — at rest, in transit, and in use — and the tradeoffs between security, speed, and usability.",
         "preparation": "- Print copies of the Encryption Design Challenge activity guide (one for each group of students)\n- (Optional) Print copies of the Design Challenge Inspiration Cards\n- (Optional) Print copies of the Caesar Cipher Wheel",
@@ -257,7 +258,7 @@
       "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 11,
+      "relative_position": 10,
       "properties": {
       },
       "seeding_key": {
@@ -272,7 +273,7 @@
       "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 12,
+      "relative_position": 11,
       "properties": {
       },
       "seeding_key": {
@@ -287,7 +288,7 @@
       "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 13,
+      "relative_position": 12,
       "properties": {
       },
       "seeding_key": {
@@ -302,7 +303,7 @@
       "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 14,
+      "relative_position": 13,
       "properties": {
       },
       "seeding_key": {
@@ -315,10 +316,11 @@
       "key": "lesson-2",
       "name": "End of Unit Assessment",
       "absolute_position": 15,
-      "lockable": false,
+      "lockable": true,
       "has_lesson_plan": false,
-      "relative_position": 15,
+      "relative_position": 2,
       "properties": {
+        "assessment": true
       },
       "seeding_key": {
         "lesson.key": "lesson-2",
@@ -332,7 +334,7 @@
       "absolute_position": 16,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 16,
+      "relative_position": 14,
       "properties": {
       },
       "seeding_key": {
@@ -739,6 +741,7 @@
       "key": "48bb29b5-5f7b-497b-a3e1-d271641f3087",
       "position": 1,
       "properties": {
+        "progression_name": "Pre-Assessment"
       },
       "seeding_key": {
         "activity_section.key": "48bb29b5-5f7b-497b-a3e1-d271641f3087",
@@ -2360,7 +2363,8 @@
       "key": "184263a1-1e13-4f2e-ac41-5d08dab38697",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 8, Level 6 to complete the End of Lesson Survey."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 8, Level 6 to complete the End of Lesson Survey.",
+        "progression_name": "Student Survey"
       },
       "seeding_key": {
         "activity_section.key": "184263a1-1e13-4f2e-ac41-5d08dab38697",
@@ -2819,6 +2823,7 @@
       "key": "bb1734b6-4947-4de6-8ca4-1167f7f61aac",
       "position": 1,
       "properties": {
+        "progression_name": "End of Unit Assessment"
       },
       "seeding_key": {
         "activity_section.key": "bb1734b6-4947-4de6-8ca4-1167f7f61aac",
@@ -2829,6 +2834,7 @@
       "key": "3d44dc92-bb44-4494-ae6b-54872319cf81",
       "position": 1,
       "properties": {
+        "progression_name": "End of Unit Survey"
       },
       "seeding_key": {
         "activity_section.key": "3d44dc92-bb44-4494-ae6b-54872319cf81",
@@ -2839,6 +2845,28 @@
   "script_levels": [
     {
       "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Pre-Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-powered-threats-defenses-preassessment_2025-pilot"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "ai-powered-threats-and-defenses-pilot-2025",
+        "activity_section.key": "48bb29b5-5f7b-497b-a3e1-d271641f3087"
+      },
+      "level_keys": [
+        "ai-powered-threats-defenses-preassessment_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 2,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2863,11 +2891,14 @@
       ]
     },
     {
-      "chapter": 2,
+      "chapter": 3,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-powered-threats-defenses-lesson1-survey-pilot_2025"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -2885,11 +2916,14 @@
       ]
     },
     {
-      "chapter": 3,
+      "chapter": 4,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-powered-threats-defenses-lesson2-survey-pilot_2025"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -2907,11 +2941,14 @@
       ]
     },
     {
-      "chapter": 4,
+      "chapter": 5,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-powered-threats-defenses-lesson3-survey-pilot_2025"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -2929,7 +2966,7 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 6,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2954,7 +2991,7 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 7,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -2979,7 +3016,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 8,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -3004,7 +3041,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 9,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -3029,7 +3066,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 10,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -3054,11 +3091,14 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 11,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-powered-threats-defenses-lesson4-survey-pilot_2025"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -3076,7 +3116,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 12,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3101,7 +3141,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 13,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -3126,11 +3166,14 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 14,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-powered-threats-defenses-lesson5-survey-pilot_2025"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -3148,7 +3191,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 15,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3173,7 +3216,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 16,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3198,7 +3241,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 17,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -3223,7 +3266,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 18,
       "position": 4,
       "activity_section_position": 2,
       "assessment": true,
@@ -3248,11 +3291,14 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 19,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-powered-threats-defenses-lesson6-survey-pilot_2025"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -3270,7 +3316,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 20,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -3295,11 +3341,14 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 21,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-powered-threats-defenses-lesson7-survey-pilot_2025"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -3317,7 +3366,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 22,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3342,7 +3391,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 23,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3367,7 +3416,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 24,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -3392,7 +3441,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 25,
       "position": 4,
       "activity_section_position": 2,
       "assessment": true,
@@ -3417,11 +3466,15 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 26,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-powered-threats-defenses-lesson8-survey-pilot_2025"
+        ],
+        "progression": "Student Survey"
       },
       "bonus": false,
       "seeding_key": {
@@ -3438,7 +3491,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 27,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -3463,11 +3516,14 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 28,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-powered-threats-defenses-lesson9-survey-pilot_2025"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -3485,11 +3541,14 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 29,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-powered-threats-defenses-lesson10-survey-pilot_2025"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -3507,11 +3566,14 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 30,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-powered-threats-defenses-lesson11-survey-pilot_2025"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -3529,11 +3591,14 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 31,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-powered-threats-defenses-lesson12-survey-pilot_2025"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -3549,9 +3614,65 @@
       "level_keys": [
         "ai-powered-threats-defenses-lesson12-survey-pilot_2025"
       ]
+    },
+    {
+      "chapter": 32,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "End of Unit Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-powered-threats-defenses-postassessment-pilot"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "ai-powered-threats-and-defenses-pilot-2025",
+        "activity_section.key": "bb1734b6-4947-4de6-8ca4-1167f7f61aac"
+      },
+      "level_keys": [
+        "ai-powered-threats-defenses-postassessment-pilot"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-powered-threats-defenses-end-of-unit-survey-pilot_2025"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "ai-powered-threats-and-defenses-pilot-2025",
+        "activity_section.key": "3d44dc92-bb44-4494-ae6b-54872319cf81"
+      },
+      "level_keys": [
+        "ai-powered-threats-defenses-end-of-unit-survey-pilot_2025"
+      ]
     }
   ],
   "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "ai-powered-threats-defenses-preassessment_2025-pilot",
+        "script_level.level_keys": [
+          "ai-powered-threats-defenses-preassessment_2025-pilot"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "ai-powered-threats-and-defenses-pilot-2025",
+        "activity_section.key": "48bb29b5-5f7b-497b-a3e1-d271641f3087"
+      }
+    },
     {
       "seeding_key": {
         "level.key": "ai-powered-threats-defenses-lesson1-level1_2025-pilot",
@@ -3910,6 +4031,30 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-powered-threats-and-defenses-pilot-2025",
         "activity_section.key": "b94a6d94-4ce5-4382-84e7-524a4172d033"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-powered-threats-defenses-postassessment-pilot",
+        "script_level.level_keys": [
+          "ai-powered-threats-defenses-postassessment-pilot"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "ai-powered-threats-and-defenses-pilot-2025",
+        "activity_section.key": "bb1734b6-4947-4de6-8ca4-1167f7f61aac"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-powered-threats-defenses-end-of-unit-survey-pilot_2025",
+        "script_level.level_keys": [
+          "ai-powered-threats-defenses-end-of-unit-survey-pilot_2025"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "ai-powered-threats-and-defenses-pilot-2025",
+        "activity_section.key": "3d44dc92-bb44-4494-ae6b-54872319cf81"
       }
     }
   ],
