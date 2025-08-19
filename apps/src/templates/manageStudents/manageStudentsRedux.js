@@ -507,7 +507,6 @@ export default function manageStudents(state = initialState, action) {
         reduxState.studentData[studentId].loginType = action.loginType;
       });
     }
-    console.log(state, reduxState);
     return reduxState;
   }
   if (action.type === SET_STUDENTS) {

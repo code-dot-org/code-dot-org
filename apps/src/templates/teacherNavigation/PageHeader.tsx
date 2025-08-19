@@ -33,7 +33,6 @@ const skeletonSectionName = (
   </Typography>
 );
 
-// const PageHeader: React.FC = () => {
 const PageHeader: React.FC<{urlSectionId: string}> = ({urlSectionId}) => {
   const isLoadingSectionData = useAppSelector(
     state => state.teacherSections.isLoadingSectionData
