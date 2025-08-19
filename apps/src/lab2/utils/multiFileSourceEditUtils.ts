@@ -146,7 +146,12 @@ interface DeleteFileResult {
 }
 
 /**
- * Delete a file.
+ * Deletes a file from the given MultiFileSource.
+ * - Removes the file from the files list and from the list of open files.
+ * - If the file has a URL (e.g., an uploaded asset), delete the asset from S3.
+ * - If the file was flagged and the project is blocked for abuse, returns data about the deleted flagged file for further handling (e.g., unflagging or project).
+ * - Updates the active file if the deleted file was active, activating a new file if possible.
+ * - Returns the updated MultiFileSource and, if applicable, details about the deleted flagged file.
  */
 export const deleteFileHelper = ({
   source,

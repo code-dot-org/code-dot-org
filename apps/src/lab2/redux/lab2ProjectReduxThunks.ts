@@ -190,23 +190,16 @@ export const deleteFileThunk = createAsyncThunk<
   const state = thunkAPI.getState();
   const projectSources = state.lab2Project.projectSources;
   const isBlockedAbuse = state.lab.isBlockedAbuse;
-  const channelId = state.lab.channel?.id;
 
-  if (!projectSources?.source || !channelId) {
-    // Just do a normal file deletion if no project or channel
-    thunkAPI.dispatch(deleteFile({fileId: payload.fileId}));
-    saveProjectIfEditable(thunkAPI.getState, thunkAPI.dispatch);
-    return;
-  }
+  const source = projectSources?.source as MultiFileSource;
 
-  const source = projectSources.source as MultiFileSource;
   const deleteResult = deleteFileHelper({
     source,
     fileId: payload.fileId,
     isBlockedAbuse,
   });
 
-  // Update the project sources
+  // Update the project sources.
   thunkAPI.dispatch(deleteFile({fileId: payload.fileId}));
   saveProjectIfEditable(thunkAPI.getState, thunkAPI.dispatch);
 
