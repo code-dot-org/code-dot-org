@@ -4,7 +4,7 @@ import React, {useEffect, useRef, useState} from 'react';
 
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {ChatEvent} from '../types';
+import {ChatAsset, ChatEvent} from '../types';
 
 import ChatEventView from './ChatEventView';
 import WaitingAnimation from './WaitingAnimation';
@@ -14,6 +14,7 @@ import moduleStyles from './chatWorkspace.module.scss';
 interface ChatEventsListProps {
   events: ChatEvent[];
   isTeacherView?: boolean;
+  buildAssetUrl?: (asset: ChatAsset) => string;
 }
 
 /**
@@ -22,6 +23,7 @@ interface ChatEventsListProps {
 const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
   events,
   isTeacherView,
+  buildAssetUrl,
 }) => {
   const [inProgrammaticScroll, setInProgrammaticScroll] = useState(false);
   const [showScrollToBottom, setShowScrollToBottom] = useState(true);
@@ -105,6 +107,7 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
             event={event}
             key={event.timestamp}
             isTeacherView={isTeacherView}
+            buildAssetUrl={buildAssetUrl}
           />
         ))}
         <WaitingAnimation shouldDisplay={isWaitingForChatResponse} />

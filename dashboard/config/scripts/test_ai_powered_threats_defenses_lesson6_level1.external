@@ -1,0 +1,23 @@
+name 'test-ai-powered-threats-defenses-lesson6-level1'
+title 'Investigate a CIA Scenario'
+
+
+markdown <<MARKDOWN
+##Investigate a CIA Scenario
+
+
+**Make a copy of the [activity guide](https://docs.google.com/document/d/1b7-s3lc2fthmqHlfGlXn39aMuejFy5B0jS0hLrm6FAw/edit?usp=sharing) and the [case files](https://docs.google.com/document/d/1GbUuawSv3U2DthbvwDOVg5P6-oGLPzGtt2qlb9JjpEA/edit?usp=sharing) to get started:**
+
+> * With your partner, take turns acting as the Attacker and Defender for each case. Then discuss what tradeoff your solution might create.
+>   * **Attacker:** What could you see, change, or block in the system?
+>   * **Defender:** Choose a fix that would stop the attack or reduce the damage.
+>   * **Together:** Explain why it matters & what tradeoff the fix  might introduce.
+
+
+<div style="display: flex; gap: 20px; align-items: flex-start;">
+  <img src="https://drive.google.com/thumbnail?sz=w640&id=1b7-s3lc2fthmqHlfGlXn39aMuejFy5B0jS0hLrm6FAw" 
+       style="width: 400px; border: 2px solid black;">
+  <img src="https://drive.google.com/thumbnail?sz=w640&id=1GbUuawSv3U2DthbvwDOVg5P6-oGLPzGtt2qlb9JjpEA" 
+       style="width: 300px; border: 2px solid black;">
+</div>
+MARKDOWN

@@ -74,13 +74,20 @@ export interface Session {
   start: string;
   end: string;
   code: string;
-  location_address?: string | null;
-  location_name?: string | null;
-  meeting_link?: string | null;
+  location_address: string | null;
+  location_name: string | null;
+  meeting_link: string | null;
   session_format: SessionFormat;
+  'show_link?': boolean | null;
+  attendance_count: number | null;
+  is_local: boolean | null;
 }
 
-export interface SessionRequest extends Omit<Session, 'id' | 'code'> {
+export interface SessionRequest
+  extends Omit<
+    Session,
+    'id' | 'code' | 'show_link?' | 'attendance_count' | 'is_local'
+  > {
   id?: number;
 }
 
@@ -100,34 +107,91 @@ export interface SessionFormState {
   format: SessionFormat;
 }
 
+export type WorkshopState = 'Not Started' | 'In Progress' | 'Ended';
+
 export interface Workshop {
   id: number;
-  course?: string | null;
-  name?: string | null;
-  capacity?: number | null;
-  grades?: string[];
-  description?: string | null;
-  notes?: string | null;
-  suppress_email?: boolean;
-  regional_partner_id?: number | null;
-  organizer?: Organizer;
-  facilitators?: Facilitator[];
-  subject?: string | null;
-  fee?: string | null;
-  prereq?: string | null;
-  hidden?: boolean;
-  registration_link?: string | null;
+  course: string | null;
+  name: string | null;
+  capacity: number | null;
+  grades: string[] | null;
+  description: string | null;
+  notes: string | null;
+  suppress_email: boolean | null;
+  regional_partner_id: number | null;
+  organizer: Organizer | null;
+  facilitators: Facilitator[];
+  subject: string | null;
+  fee: string | null;
+  prereq: string | null;
+  hidden: boolean | null;
+  registration_link: string | null;
   sessions: Session[];
-  course_offerings?: number[];
-  participant_group_type?: string | null;
-  time_zone?: string | null;
+  course_offerings: number[];
+  participant_group_type: string | null;
+  time_zone: string | null;
+  state: WorkshopState;
+  enrolled_teacher_count: number | null;
+  'ready_to_close?': boolean | null;
+  'account_required_for_attendance?': boolean | null;
+  regional_partner_name: string | null;
+  course_offering_names: string | null;
+  created_at: string;
 }
 
 export interface WorkshopRequest
-  extends Omit<Workshop, 'id' | 'facilitators' | 'organizer'> {
+  extends Omit<
+    Workshop,
+    | 'id'
+    | 'facilitators'
+    | 'organizer'
+    | 'sessions'
+    | 'state'
+    | 'enrolled_teacher_count'
+    | 'ready_to_close?'
+    | 'account_required_for_attendance?'
+    | 'regional_partner_name'
+    | 'course_offering_names'
+    | 'created_at'
+  > {
   id?: number;
   facilitators: number[];
   organizer_id: number | null;
+}
+
+export interface Enrollment {
+  id: number;
+  first_name: string | null;
+  last_name: string | null;
+  email: string | null;
+  district_name: string | null;
+  school: string | null;
+  role: string | null;
+  user_id: number | null;
+  user_info: {
+    given_name: string | null;
+    family_name: string | null;
+    email: string;
+    school_name: string | null;
+    district_name: string | null;
+    role: string | null;
+  };
+  attended: boolean;
+  attendances: number;
+  enrolled_date: string;
+}
+
+export interface EnrollmentData {
+  id: number;
+  givenName: string;
+  familyName: string;
+  email: string;
+  schoolName: string;
+  districtName: string;
+  role: string;
+  userId: number | null;
+  attendances: number;
+  enrolledDate: string;
 }
 
 export interface CourseOffering {
@@ -261,3 +325,126 @@ export type WorkshopAction =
   | {type: 'REMOVE_COURSE_OFFERING'; payload: string}
   | {type: 'SET_COURSE_OFFERINGS'; payload: string[]}
   | {type: 'SET_WORKSHOP'; payload: WorkshopFormState};
+
+// Survey summary API response types
+export interface SurveySummary {
+  course: string;
+  name: string;
+  facilitators: Record<string, string>;
+  surveys: Record<string, SurveyTypeSummary>;
+}
+
+export interface SurveyTypeSummary {
+  total_responses: number;
+  categories: SurveyCategories;
+}
+
+export interface SurveyCategories {
+  implementation?: SurveyCategory;
+  engagement?: SurveyCategory;
+  logistics?: SurveyCategory;
+  other?: SurveyCategory;
+  facilitator?: Record<string, FacilitatorCategory>;
+}
+
+export interface SurveyCategory {
+  questions: SurveyQuestions;
+}
+
+export type SurveyQuestions = Record<string, SurveyQuestion>;
+
+export interface FacilitatorCategory {
+  name: string;
+  questions: SurveyQuestions;
+}
+
+type SurveyQuestionBase = {
+  question_name: string;
+  question_text: string;
+  question_short_text: string | null;
+  question_sub_text: string | null;
+  category: string | null;
+};
+
+type ResultsBase = {
+  total_responses?: number;
+};
+
+export type SurveyQuestion =
+  | (SurveyQuestionBase & {
+      question_type: 'likert';
+      results: ResultsBase & LikertResults;
+    })
+  | (SurveyQuestionBase & {
+      question_type: 'promoter';
+      results: ResultsBase & PromoterResults;
+    })
+  | (SurveyQuestionBase & {
+      question_type: 'text';
+      results: ResultsBase & TextResults;
+    })
+  | (SurveyQuestionBase & {
+      question_type: 'single_select';
+      results: ResultsBase & SingleSelectResults;
+    })
+  | (SurveyQuestionBase & {
+      question_type: 'multi_select';
+      results: ResultsBase & MultiSelectResults;
+    });
+
+export const isQuestionType = <T extends SurveyQuestion['question_type']>(
+  question: SurveyQuestion | undefined,
+  type: T
+): question is Extract<SurveyQuestion, {question_type: T}> => {
+  return !!question && question.question_type === type;
+};
+
+export interface LikertResults {
+  weighted_score?: number;
+  agreement_count?: number;
+  agreement_percentage?: number;
+  breakdown?: Record<string, LikertBreakdown>;
+}
+
+export interface LikertBreakdown {
+  count: number;
+  percentage: number;
+  label: string;
+  weighted_value: number;
+}
+
+export interface PromoterResults {
+  promoter_percentage?: number;
+  breakdown?: Record<string, PromoterBreakdown>;
+}
+
+export interface PromoterBreakdown {
+  count: number;
+  percentage: number;
+  label: string;
+}
+
+export interface TextResults {
+  responses?: string[];
+}
+
+export interface SingleSelectResults {
+  breakdown?: Record<string, SingleSelectBreakdown>;
+  other_answers?: string[];
+}
+
+export interface SingleSelectBreakdown {
+  count: number;
+  percentage: number;
+  label: string;
+}
+
+export interface MultiSelectResults {
+  breakdown?: Record<string, MultiSelectBreakdown>;
+}
+
+export interface MultiSelectBreakdown {
+  count: number;
+  percentage: number;
+  label: string;
+}

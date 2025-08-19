@@ -10,9 +10,14 @@ import {
   FileUploaderProps,
 } from '@cdo/apps/lab2/hooks';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
+import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-type UseFileUploaderArgs = Omit<FileUploaderProps, 'sendAnalyticsEvent'> & {
+type UseFileUploaderArgs = Omit<
+  FileUploaderProps,
+  'sendAnalyticsEvent' | 'channelId'
+> & {
   validFileTypes?: string[];
 };
 
@@ -20,9 +25,14 @@ export const useFileUploader = (
   args: UseFileUploaderArgs,
   folderId: string
 ) => {
-  const {source, levelProperties} = useCodebridgeContext();
+  const {levelProperties} = useCodebridgeContext();
   const {appName, validationFile} = levelProperties;
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
+  const files = useAppSelector(
+    state => (state.lab2Project.projectSources?.source as MultiFileSource).files
+  );
+  const channelId =
+    useAppSelector(state => state.lab.channel && state.lab.channel.id) || '';
 
   const sendAnalyticsEvent = useCallback(
     (eventName: string, payload: Record<string, string>) => {
@@ -53,18 +63,19 @@ export const useFileUploader = (
       return validateCodebridgeFileName({
         fileName,
         folderId,
-        projectFiles: source.files,
+        projectFiles: files,
         isStartMode,
         validationFile,
         validFileTypes,
       });
     },
-    [folderId, source.files, isStartMode, validationFile, validFileTypes]
+    [folderId, files, isStartMode, validationFile, validFileTypes]
   );
 
   return useLab2FileUploader({
     sendAnalyticsEvent,
     validateFileName,
+    channelId,
     ...lab2FileUploaderArgs,
   });
 };

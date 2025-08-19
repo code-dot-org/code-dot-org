@@ -1,8 +1,0 @@
-{
-  "category": "",
-  "config": {
-    "func": "beginSocialDistancing",
-    "blockText": "monsters begin social distancing",
-    "style": "behavior_blocks"
-  }
-}

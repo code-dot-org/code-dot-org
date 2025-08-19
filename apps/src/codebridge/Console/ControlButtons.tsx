@@ -6,7 +6,6 @@ import {MiniApps} from '@codebridge/constants';
 import {sendCodebridgeAnalyticsEvent} from '@codebridge/utils/analyticsReporterHelper';
 import React, {useCallback} from 'react';
 
-import {setShowSuggestedPrompts} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
 import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
@@ -34,7 +33,7 @@ import moduleStyles from './console.module.scss';
 // Can be extended in the future to include a test button.
 const ControlButtons: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
-  const {onRun, onStop, labConfig, levelProperties} = useCodebridgeContext();
+  const {onRun, onStop, levelProperties} = useCodebridgeContext();
   const {id: levelId, appName, predictSettings} = levelProperties;
   const isPredictLevel = predictSettings?.isPredictLevel;
   const levelPath =
@@ -58,7 +57,9 @@ const ControlButtons: React.FunctionComponent = () => {
   const awaitingPredictSubmit =
     !isStartMode && isPredictLevel && !hasPredictResponse;
 
-  const miniApp = labConfig?.miniApp?.name;
+  const miniApp = useAppSelector(
+    state => state.lab2Project.projectSources?.labConfig?.miniApp?.name
+  );
 
   const resetStatus = useCallback(() => {
     dispatch(setHasRun(false));
@@ -90,7 +91,6 @@ const ControlButtons: React.FunctionComponent = () => {
         }
       });
       dispatch(setHasRun(true));
-      dispatch(setShowSuggestedPrompts(true));
     } else {
       CodebridgeRegistry.getInstance()
         .getConsoleManager()

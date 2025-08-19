@@ -40,3 +40,5 @@ declare module '@blockly/field-bitmap';
 declare module '@blockly/field-colour';
 declare module '@cdo/locale';
 declare module '@code-dot-org/maze';
+declare module 'eslint-linter-browserify';
+declare module '@replit/codemirror-css-color-picker';

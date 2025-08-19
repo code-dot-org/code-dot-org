@@ -6,6 +6,56 @@ module Pd::Foorm
     include Pd::WorkshopSurveyFoormConstants
     extend Helper
 
+    def self.get_workshop_survey_summary(workshop_id, facilitator_id_filter = nil)
+      return unless workshop_id
+      ws_data = Pd::Workshop.find(workshop_id)
+
+      # Get raw data
+      ws_submissions, form_submissions, forms = get_raw_data_for_workshop(workshop_id, facilitator_id_filter)
+      facilitators = get_formatted_facilitators_for_workshop(workshop_id, facilitator_id_filter)
+
+      # Legacy parser that does not preserve question categories but works with WorkshopSummarizer
+      parsed_forms = Pd::Foorm::FoormParser.parse_forms(forms)
+
+      summarized_answers = Pd::Foorm::WorkshopSummarizer.summarize_answers_by_survey(
+        form_submissions,
+        parsed_forms,
+        ws_submissions
+      )
+
+      # Parse forms with categories
+      parsed_forms_with_categories = Pd::Foorm::FoormParser.parse_forms_preserving_categories(forms)
+
+      # Process each survey separately
+      surveys = {}
+      summarized_answers.each do |survey_key, survey_data|
+        # Count general participants for this specific survey
+        survey_participant_count = survey_data.dig(:general, :response_count) || 0
+
+        # Create a single-survey summarized_answers structure for categorization
+        single_survey_answers = {survey_key => survey_data}
+
+        # Process data by category for this survey
+        categorized_report = Pd::Foorm::WorkshopCategorizer.categorize_survey_data(
+          parsed_forms_with_categories,
+          single_survey_answers,
+          facilitators
+        )
+
+        surveys[survey_key.downcase.tr(' ', '_')] = {
+          total_responses: survey_participant_count,
+          categories: categorized_report
+        }
+      end
+
+      {
+        course: ws_data.course,
+        name: ws_data.name,
+        facilitators: facilitators,
+        surveys: surveys
+      }
+    end
+
     # Calculates report for a given workshop id.
     # @param [Integer] workshop_id
     # @param [Integer] facilitator_id_filter. The user id

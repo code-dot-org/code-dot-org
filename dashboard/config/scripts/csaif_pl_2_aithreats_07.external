@@ -1,0 +1,17 @@
+name 'csaif_pl_2_aithreats_07'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Introduction to the CIA Triad
+
+#### The CIA Triad is a set of core rules for protecting information and stands for Confidentiality, Integrity, and Availability.
+
+#### This means that data should be kept private, accurate, and easy to access when needed.
+
+#### Confidentiality is keeping information private so only the right people can see it.
+#### Integrity is ensuring that information stays correct and hasn't been changed without permission.
+#### Availability is making information accessible to the people who need it, when they need it.
+
+
+MARKDOWN

@@ -35,7 +35,7 @@ class HoneybadgerTest < ActionDispatch::IntegrationTest
 
   test "does NOT log encrypted data" do
     skip 'races the reconfiguration and errors if it contacts real honeybadger server'
-    student = create :student
+    student = create(:student)
     sign_in student
 
     get raise_error_path

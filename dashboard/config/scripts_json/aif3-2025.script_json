@@ -35,7 +35,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-07-09 14:23:22 UTC",
+    "serialized_at": "2025-08-06 16:42:06 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -1517,7 +1517,7 @@
       "key": "177a8cfe-b68f-48d7-b467-8f458a63984a",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *troubleshooting*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the SNOT troubleshooting strategy and the first step.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the second step of the SNOT strategy.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the third step of the SNOT strategy.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the last step of the SNOT strategy.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Place students in pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair of students a copy of the Troubleshooting Hardware Issues activity guide.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**  Students should navigate to Lesson 3, Level 1.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students take out their AI and the Systems That Power It Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *troubleshooting*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the SNOT troubleshooting strategy and the first step.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the second step of the SNOT strategy.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the third step of the SNOT strategy.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the last step of the SNOT strategy.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Place students in pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair of students a copy of the Troubleshooting Hardware Issues activity guide.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**  Students should navigate to Lesson 3, Level 1.",
         "name": "Troubleshooting Hardware Issues",
         "progression_name": "Wearable Troubleshooting Scenario"
       },
@@ -6106,12 +6106,48 @@
     },
     {
       "name": "AI and the Systems That Power It Unit Guide",
+      "url": "https://docs.google.com/document/d/1XO4Z4l7dMaK4Y1r45wDUNibkpwUaAq7joHz5qVW0Au0/edit?usp=sharing",
+      "key": "ai_and_the_systems_hat_power_it_unit_guide",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "ai_and_the_systems_hat_power_it_unit_guide"
+      }
+    },
+    {
+      "name": "AI and the Systems That Power It Unit Guide",
       "url": "https://docs.google.com/document/d/1XO4Z4l7dMaK4Y1r45wDUNibkpwUaAq7joHz5qVW0Au0/edit?usp=drivesdk",
       "key": "ai_and_the_systems_that_power_it_unit_guide",
       "properties": {
       },
       "seeding_key": {
         "resource.key": "ai_and_the_systems_that_power_it_unit_guide"
+      }
+    },
+    {
+      "name": "AI and the Systems that Power It Unit Guide",
+      "url": "https://docs.google.com/document/d/1XO4Z4l7dMaK4Y1r45wDUNibkpwUaAq7joHz5qVW0Au0/edit?usp=sharing",
+      "key": "ai_and_the_systems_that_power_it_unit_guide_1",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "ai_and_the_systems_that_power_it_unit_guide_1"
+      }
+    },
+    {
+      "name": "AI and the Systems That Power It Unit Guide",
+      "url": "https://docs.google.com/document/d/1XO4Z4l7dMaK4Y1r45wDUNibkpwUaAq7joHz5qVW0Au0/edit?usp=sharing",
+      "key": "ai_and_the_systems_that_power_it_unit_guide_2",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "ai_and_the_systems_that_power_it_unit_guide_2"
       }
     },
     {
@@ -6151,7 +6187,7 @@
     },
     {
       "name": "All Resources",
-      "url": "/s/csaif3-2025/resources",
+      "url": "/s/aif3-2025/resources",
       "key": "all_resources",
       "properties": {
         "is_rollup": true
@@ -6162,7 +6198,7 @@
     },
     {
       "name": "All Standards",
-      "url": "/s/csaif3-2025/standards",
+      "url": "/s/aif3-2025/standards",
       "key": "all_standards",
       "properties": {
         "is_rollup": true
@@ -6173,7 +6209,7 @@
     },
     {
       "name": "All Vocabulary",
-      "url": "/s/csaif3-2025/vocab",
+      "url": "/s/aif3-2025/vocab",
       "key": "all_vocabulary",
       "properties": {
         "is_rollup": true
@@ -6735,6 +6771,12 @@
     {
       "seeding_key": {
         "lesson.key": "Build a Computer System",
+        "resource.key": "ai_and_the_systems_that_power_it_unit_guide_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Build a Computer System",
         "resource.key": "build_a_computer_system"
       }
     },
@@ -6993,6 +7035,12 @@
     {
       "seeding_key": {
         "lesson.key": "Software and Operating Systems",
+        "resource.key": "ai_and_the_systems_hat_power_it_unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Software and Operating Systems",
         "resource.key": "computer_simulator"
       }
     },
@@ -7054,6 +7102,12 @@
       "seeding_key": {
         "lesson.key": "Sustainable Systems Project",
         "resource.key": "using_ai_as_a_collaborator"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Troubleshooting and Optimizing Hardware",
+        "resource.key": "ai_and_the_systems_that_power_it_unit_guide_1"
       }
     },
     {

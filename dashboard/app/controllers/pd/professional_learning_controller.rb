@@ -24,8 +24,8 @@ class Pd::ProfessionalLearningController < ApplicationController
       has_enrolled_in_workshop: Pd::Enrollment.for_user(current_user).any?,
       pl_courses_started: current_user.pl_units_started,
       user_permissions: current_user.permissions.map(&:permission),
-      joined_student_sections: current_user.sections_as_student_participant&.map(&:summarize_without_students),
-      joined_pl_sections: current_user.sections_as_pl_participant&.map(&:summarize_without_students),
+      joined_student_sections: current_user.sections_as_student_participant&.map(&:summarize_for_participant),
+      joined_pl_sections: current_user.sections_as_pl_participant&.map(&:summarize_for_participant),
       courses_as_facilitator: Pd::CourseFacilitator.where(facilitator: current_user).map(&:course).uniq,
     }.compact
   end
@@ -34,6 +34,11 @@ class Pd::ProfessionalLearningController < ApplicationController
   def courses
     @self_paced_pl_course_offerings = CourseOffering.self_paced_course_offerings_for_catalog
     view_options(full_width: true, no_padding_container: true)
+
+    @page_title = "Computer Science and AI Self Paced Professional Development Courses"
+    @page_description = "Access free, self-paced professional development courses from Code.org for K–12 educators. Learn to teach computer science and AI anytime, anywhere—at your own pace."
+    @canonical_url = CDO.studio_url("/professional-learning/courses")
+
     render :self_paced_pl_catalog
   end
 
@@ -43,6 +48,10 @@ class Pd::ProfessionalLearningController < ApplicationController
     @zip_from_school_info = current_user&.school_info&.school&.zip&.to_s&.rjust(5, '0') || current_user&.school_info&.zip&.to_s&.rjust(5, '0')
 
     view_options(full_width: true, no_padding_container: true)
+
+    @page_title = "Computer Science and AI Professional Development Workshops"
+    @page_description = "Explore Code.org's catalog of K–12 professional development workshops, offered nationwide by expert facilitators and regional partners. Choose from in-person or virtual workshops on computer science and AI—designed to support all types of educators."
+    @canonical_url = CDO.studio_url("/professional-learning/workshops")
     render :regional_workshop_catalog
   end
 

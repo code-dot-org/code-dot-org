@@ -713,9 +713,6 @@ module SharedConstants
       SHAPE: 100,
     },
   }.freeze
-  CENSUS_CONSTANTS = OpenStruct.new(
-    {CURRENT_CENSUS_SCHOOL_YEAR: 2024}
-  )
 
   CAP_LINKS = OpenStruct.new(
     PARENTAL_CONSENT_GUIDE_URL: 'https://support.code.org/hc/en-us/articles/15465423491085-How-do-I-obtain-parent-or-guardian-permission-for-student-accounts',
@@ -830,7 +827,14 @@ module SharedConstants
     LEARNLM: "learnlm-2.0-flash-experimental",
     GEMINI_2_0_FLASH: "gemini-2.0-flash",
     GEMINI_2_5_FLASH: "gemini-2.5-flash",
+    GEMINI_2_5_FLASH_LITE: "gemini-2.5-flash-lite",
     GEMINI_2_5_PRO: "gemini-2.5-pro",
+  }
+
+  AI_CHAT_CLIENT_TYPES = {
+    AI_CHAT_LAB: 0,
+    AI_TUTOR: 1,
+    FLOW_LAB: 2,
   }
 
   AICHAT_METRICS_NAMESPACE = 'GenAICurriculum'.freeze
@@ -857,15 +861,15 @@ module SharedConstants
   }
 
   EDUCATOR_ROLES = [
-    {value: "classroom_teacher", category: 'educator'},
-    {value: "stem_tech_teacher", category: 'educator'},
-    {value: "subject_area_teacher", category: 'educator'},
-    {value: "librarian_media_specialist", category: 'educator'},
-    {value: "homeschool_teacher", category: 'educator'},
-    {value: "school_admin", category: "admin"},
-    {value: "district_admin", category: "admin"},
-    {value: "parent", category: 'other'},
-    {value: "other", category: 'other'}
+    {value: "classroom_teacher", label: "Classroom Teacher", category: 'educator'},
+    {value: "stem_tech_teacher", label: "STEM/Technology Teacher", category: 'educator'},
+    {value: "subject_area_teacher", label: "Subject Area Teacher", category: 'educator'},
+    {value: "librarian_media_specialist", label: "Librarian/Media Specialist", category: 'educator'},
+    {value: "homeschool_teacher", label: "Homeschool Teacher", category: 'educator'},
+    {value: "school_admin", label: "School Administrator", category: "admin"},
+    {value: "district_admin", label: "District Administrator", category: "admin"},
+    {value: "parent", label: "Parent", category: 'other'},
+    {value: "other", label: "Other", category: 'other'}
   ].freeze
 
   AI_DIFF_CONTEXT = {

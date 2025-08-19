@@ -69,7 +69,6 @@ class Unit < ApplicationRecord
   has_many :unit_group_units, foreign_key: 'script_id', dependent: :destroy
   has_many :unit_groups, through: :unit_group_units
   belongs_to :original_unit_group, class_name: 'UnitGroup', optional: true
-  has_one :course_version, as: :content_root, dependent: :destroy
 
   scope(
     :with_associated_models, lambda do
@@ -100,11 +99,6 @@ class Unit < ApplicationRecord
           },
           {
             unit_group_units: :unit_group
-          },
-          {
-            course_version: {
-              course_offering: :course_versions
-            }
           }
         ]
       )
@@ -121,7 +115,6 @@ class Unit < ApplicationRecord
               unit_group: :course_version
             }
           },
-          :course_version,
           :lesson_groups,
           {
             lessons: [
@@ -362,7 +355,7 @@ class Unit < ApplicationRecord
 
     def family_names
       Rails.cache.fetch('script/family_names', force: !Unit.should_cache?) do
-        (CourseVersion.course_offering_keys('Unit') + ScriptConstants::DEPRECATED_FAMILY_NAMES).uniq.sort
+        ScriptConstants::DEPRECATED_FAMILY_NAMES.sort
       end
     end
 
@@ -713,8 +706,9 @@ class Unit < ApplicationRecord
   # @param user [User]
   # @param locale [String] User or request locale. Optional.
   # @return [Boolean] Whether the user can view the unit.
-  def can_view_version?(user, locale: nil)
-    return false unless Ability.new(user).can?(:read, self)
+  def can_view_version?(user, locale: nil, unit_group: nil)
+    unit_group ||= self.unit_group
+    return false unless Ability.new(user).can?(:read, self, unit_group)
 
     # Users can view any course not in a family.
     return true if family_name.nil? && !unit_group&.single_unit_course?
@@ -1058,7 +1052,7 @@ class Unit < ApplicationRecord
 
     # hard code some exceptions. ideally we'd get rid of these and just make our
     # UI tests deal with the 13+ requirement
-    return false if %w(allthethings allthehiddenthings allthettsthings).include?(name)
+    return false if %w(allthethings allthettsthings).include?(name)
 
     script_levels.any? {|script_level| script_level.levels.any?(&:age_13_required?)}
   end
@@ -1210,7 +1204,7 @@ class Unit < ApplicationRecord
     end
   end
 
-  def clone_migrated_unit(new_name, new_level_suffix: nil, destination_unit_group_name: nil, destination_professional_learning_course: nil, version_year: nil, family_name:  nil)
+  def clone_migrated_unit(new_name, new_level_suffix: nil, destination_unit_group_name: nil, destination_professional_learning_course: nil)
     raise 'Unit name has already been taken' if Unit.find_by_name(new_name) || File.exist?(Unit.script_json_filepath(new_name))
 
     if destination_professional_learning_course.nil? && old_professional_learning_course?
@@ -1236,7 +1230,6 @@ class Unit < ApplicationRecord
         copied_unit.announcements = nil
         copied_unit.name = new_name
 
-        copied_unit.is_course = destination_unit_group.nil? && destination_professional_learning_course.nil?
         copied_unit.published_state = destination_unit_group.nil? ? Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development : nil
         copied_unit.instruction_type = destination_unit_group.nil? ? get_instruction_type : nil
         copied_unit.participant_audience = destination_unit_group.nil? ? get_participant_audience : nil
@@ -1252,12 +1245,6 @@ class Unit < ApplicationRecord
           UnitGroupUnit.create!(unit_group: destination_unit_group, script: copied_unit, position: destination_unit_group.default_units.length + 1)
           copied_unit.update!(original_unit_group: destination_unit_group)
           copied_unit.reload
-        else
-          raise "Must supply version year if new unit will be a standalone unit" unless version_year
-          copied_unit.version_year = version_year
-          raise "Must supply family name if new unit will be a standalone unit" unless family_name
-          copied_unit.family_name = family_name
-          CourseOffering.add_course_offering(copied_unit)
         end
 
         copied_unit.save! if copied_unit.changed?
@@ -1564,6 +1551,7 @@ class Unit < ApplicationRecord
         id: id,
         name: name,
         title: title_for_display(unit_group_unit: unit_group_unit),
+        unit_prefix: unit_group_unit&.unit_prefix,
         description: Services::MarkdownPreprocessor.process(localized_description),
         studentDescription: Services::MarkdownPreprocessor.process(localized_student_description),
         course_id: unit_group_unit&.cached_unit_group&.id,
@@ -1644,13 +1632,14 @@ class Unit < ApplicationRecord
   end
 
   def summarize_for_lesson_materials_view(user, unit_group_unit: nil)
-    unit_position = unit_number
-    has_numbered_units = unit_group&.has_numbered_units?
-    course_version_year = unit_group&.version_year || version_year
     if unit_group_unit
       unit_position = unit_group_unit.position
-      has_numbered_units = unit_group_unit.unit_group.has_numbered_units?
+      numbered_units = unit_group_unit.unit_group.numbered_units
       course_version_year = unit_group_unit.unit_group.version_year || version_year
+    else
+      unit_position = unit_number
+      numbered_units = original_unit_group&.numbered_units
+      course_version_year = original_unit_group&.version_year || version_year
     end
     summary = {
       unitId: id,
@@ -1662,7 +1651,7 @@ class Unit < ApplicationRecord
       scriptResourcesPdfUrl: get_unit_resources_pdf_url,
       teacher_resources: resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
       student_resources: student_resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
-      hasNumberedUnits: has_numbered_units,
+      numberedUnits: numbered_units,
       hasUnnumberedLessons: has_unnumbered_lessons?,
       versionYear: course_version_year,
     }
@@ -1693,11 +1682,9 @@ class Unit < ApplicationRecord
     include_lessons = false
     summary = summarize(include_lessons, unit_group_unit: original_unit_group_unit)
     summary[:lesson_groups] = lesson_groups.map(&:summarize_for_unit_edit)
-    summary[:courseOfferingEditPath] = edit_course_offering_path(course_version&.course_offering&.key) if course_version
-    summary[:missingRequiredDeviceCompatibilities] = course_version&.course_offering&.missing_required_device_compatibility?
-    summary[:coursePublishedState] = unit_group ? unit_group.published_state : published_state
-    summary[:unitPublishedState] = unit_group ? published_state : nil
-    summary[:isCSDCourseOffering] = unit_group&.course_version&.course_offering&.csd?
+    summary[:coursePublishedState] = original_unit_group ? original_unit_group.published_state : published_state
+    summary[:unitPublishedState] = original_unit_group ? published_state : nil
+    summary[:isCSDCourseOffering] = original_unit_group&.course_version&.course_offering&.csd?
     summary[:allowMajorCurriculumChanges] = allow_major_curriculum_changes?
     summary
   end
@@ -1795,22 +1782,15 @@ class Unit < ApplicationRecord
   end
 
   # Returns summary object of all the course versions that an instructor can
-  # assign or all the launched versions a participant can view. 'course_assignable'
-  # will always return false for participants so they will fall into the second check for
-  # launched and can_view_version?. For instructors if course_assignable? is false then
-  # launched will also be false.
-  def summarize_course_versions(user = nil, locale_code = 'en-us', unit_group: nil)
-    unit_group ||= original_unit_group
-
-    return {} if unit_group && !unit_group.single_unit_course?
-
+  # assign or all the launched versions a participant can view. A unit can no
+  # longer have course versions, so this method will only return course versions
+  # for single-unit courses.
+  def summarize_course_versions(user = nil, locale_code = 'en-us', unit_group: original_unit_group)
     if unit_group&.single_unit_course?
       return unit_group.summarize_course_versions(user, locale_code)
     end
 
-    all_course_versions = course_version&.course_offering&.course_versions
-    course_versions_for_user = all_course_versions&.select {|cv| cv.course_assignable?(user) || (cv.launched? && cv.can_view_version?(user, locale: locale_code))}
-    course_versions_for_user&.map {|cv| cv.summarize_for_assignment_dropdown(user, locale_code)}.to_h
+    {}
   end
 
   def self.clear_cache
@@ -1841,10 +1821,16 @@ class Unit < ApplicationRecord
     unit_group_unit ||= Queries::Courses.unit_group_unit(self)
     unit_group = unit_group_unit&.cached_unit_group
     title = localized_title
-    has_prefix = unit_group&.has_numbered_units
-    return title unless has_prefix
+    numbered_units = unit_group&.numbered_units
+    return title unless numbered_units
 
-    position = unit_group_unit&.position
+    if numbered_units == Curriculum::SharedCourseConstants::NUMBERED_UNITS_TYPE.auto
+      position = unit_group_unit&.position
+    elsif numbered_units == Curriculum::SharedCourseConstants::NUMBERED_UNITS_TYPE.custom
+      position = unit_group_unit&.unit_prefix
+      return title if position&.strip&.empty?
+    end
+
     prefix = I18n.t "unit_prefix", n: position
     "#{prefix} - #{title}"
   end
@@ -1952,12 +1938,11 @@ class Unit < ApplicationRecord
     unit_group_units.find {|ugu| ugu.unit_group == original_unit_group}
   end
 
-  # If this unit is a standalone unit, returns its CourseVersion. Otherwise,
-  # if this unit belongs to a UnitGroup, returns the UnitGroup's CourseVersion,
+  # If this unit belongs to a UnitGroup, returns the UnitGroup's CourseVersion
   # if there is one.
   # @return [CourseVersion]
   def get_course_version
-    course_version || unit_group&.course_version
+    unit_group&.course_version
   end
 
   # If a script is in a unit group, use that unit group's published state. If not, use the script's published_state
@@ -2001,6 +1986,7 @@ class Unit < ApplicationRecord
     unit_group_unit ||= unit_group_units&.first
     {
       id: id,
+      course_id: unit_group_unit&.course_id,
       key: name,
       version_year: version_year,
       name: launched? ? localized_title : localized_title + " *",
@@ -2209,6 +2195,7 @@ class Unit < ApplicationRecord
     user&.teacher? && in_initiative?('CSD') && ai_assessment_enabled? && !user.has_seen_ai_assessments_announcement?
   end
 
+  # TODO-AITUTOR: update or remove
   def has_ai_tutor_level?
     levels&.any?(&:ai_tutor_available?)
   end

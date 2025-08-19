@@ -1,17 +1,14 @@
-import Button from '@code-dot-org/component-library/button';
-import Tags from '@code-dot-org/component-library/tags';
-import classNames from 'classnames';
 import React, {useEffect, useState} from 'react';
 import Draggable, {DraggableEventHandler} from 'react-draggable';
 import FocusLock from 'react-focus-lock';
 
-import i18n from '@cdo/locale';
-import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
+import experiments from '@cdo/apps/util/experiments';
 
 import {useAppSelector} from '../util/reduxHooks';
 import {tryGetSessionStorage, trySetSessionStorage} from '../utils';
 
-import AiDiffChat from './AiDiffChat';
+import AiDiffHeader from './AiDiffHeader';
+import AiDiffWorkSpace from './AiDiffWorkspace';
 import {Context} from './types';
 import AiDiffWelcome from './welcome/AiDiffWelcome';
 
@@ -19,16 +16,11 @@ import style from './ai-differentiation.module.scss';
 
 const AI_DIFF_POSITION_X = 'aiDiffPositionX';
 const AI_DIFF_POSITION_Y = 'aiDiffPositionY';
-
-// TODO: Update to support i18n
-const AI_DIFF_HEADER_TEXT = 'AI Teaching Assistant';
-
 interface AiDiffContainerProps {
   closeTutor?: () => void;
   context: Context;
   open: boolean;
   scriptName?: string;
-  unitDisplayName?: string;
   curriculumCourses?: string[];
 }
 
@@ -37,7 +29,6 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
   context,
   open,
   scriptName,
-  unitDisplayName,
   curriculumCourses,
 }) => {
   const [showWelcomeExperience, setShowWelcomeExperience] = useState(true);
@@ -86,6 +77,8 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
     setPositionY(data.y);
   };
 
+  const showSidebar = experiments.isEnabled(experiments.AI_DIFF_SIDEBAR);
+
   return (
     <Draggable
       handle=".ai_diff_handle"
@@ -96,45 +89,16 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
         // eslint-disable-next-line react/forbid-dom-props
         data-testid="draggable-test-id"
         id="draggable-id"
-        className={style.aiDiffContainer}
+        className={
+          showSidebar &&
+          !(!hasCompletedAiDifferentiationWelcome && showWelcomeExperience) //don't use wide container for welcome
+            ? style.aiDiffContainerWide
+            : style.aiDiffContainer
+        }
         style={open ? undefined : {display: 'none'}}
       >
         <FocusLock>
-          <div className={classNames(style.aiDiffHeader, 'ai_diff_handle')}>
-            <div className={style.aiDiffHeaderLeftSide}>
-              <div className={style.aiBotHeader}>
-                <img
-                  src={aiBotOutlineIcon}
-                  className={style.aiBotOutlineIcon}
-                  alt={AI_DIFF_HEADER_TEXT}
-                />
-                <div className={style.taOverlayHeader}>
-                  <span>{'TA'}</span>
-                </div>
-              </div>
-              <span className={style.aiDiffHeaderText}>
-                {AI_DIFF_HEADER_TEXT}
-              </span>
-              <span>
-                <Tags
-                  tagsList={[{label: i18n.experiment()}]}
-                  size="s"
-                  className={style.headerTag}
-                />
-              </span>
-            </div>
-            <div className={style.aiDiffHeaderRightSide}>
-              <Button
-                color="white"
-                icon={{iconName: 'times', iconStyle: 'solid'}}
-                type="tertiary"
-                isIconOnly={true}
-                onClick={closeTutor}
-                size="s"
-              />
-            </div>
-          </div>
-
+          <AiDiffHeader closeTutor={closeTutor} />
           <div className={style.fabBackground}>
             {!hasCompletedAiDifferentiationWelcome && showWelcomeExperience
               ? curriculumCourses && (
@@ -142,16 +106,15 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
                     setShowWelcomeExperience={setShowWelcomeExperience}
                     context={context}
                     scriptName={scriptName}
-                    unitDisplayName={unitDisplayName}
                     curriculumCourses={curriculumCourses}
                   />
                 )
               : curriculumCourses && (
-                  <AiDiffChat
+                  <AiDiffWorkSpace
                     context={context}
                     scriptName={scriptName}
-                    unitDisplayName={unitDisplayName}
                     curriculumCourses={curriculumCourses}
+                    showSidebar={showSidebar}
                   />
                 )}
           </div>

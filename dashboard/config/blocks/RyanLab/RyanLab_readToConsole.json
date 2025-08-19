@@ -1,7 +1,0 @@
-{
-  "category": "",
-  "config": {
-    "func": "readToConsole",
-    "blockText": "read to console"
-  }
-}

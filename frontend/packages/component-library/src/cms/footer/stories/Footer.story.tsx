@@ -1,5 +1,5 @@
-import type {Meta, StoryObj} from '@storybook/react';
-import {within, expect, userEvent, fn} from '@storybook/test';
+import type {Meta, StoryObj} from '@storybook/react-webpack5';
+import {within, expect, userEvent, fn} from 'storybook/test';
 
 import Footer, {FooterProps} from '../Footer';
 
@@ -97,17 +97,16 @@ const defaultArgs: FooterProps = {
       icon: {iconFamily: 'brands', iconName: 'medium'},
     },
   ],
-  // Hiding temporarily, see https://codedotorg.atlassian.net/browse/CMS-886
-  // imageLinks: [
-  //   {
-  //     key: 'poweredByAWS',
-  //     label: 'Powered by AWS Cloud Computing',
-  //     href: 'https://aws.amazon.com/what-is-cloud-computing',
-  //     image: {
-  //       src: 'https://code.org/shared/images/Powered-By_logo-horiz_RGB_REV.png',
-  //     },
-  //   },
-  // ],
+  imageLinks: [
+    {
+      key: 'poweredByAWS',
+      label: 'Powered by AWS Cloud Computing',
+      href: 'https://aws.amazon.com/what-is-cloud-computing',
+      image: {
+        src: 'https://code.org/shared/images/Powered-By_logo-horiz_RGB_REV.png',
+      },
+    },
+  ],
   languages: [
     {value: 'en-US', text: 'English'},
     {value: 'es', text: 'Spanish'},

@@ -2,16 +2,16 @@ require 'test_helper'
 
 class LearningGoalAiEvaluationTest < ActiveSupport::TestCase
   setup do
-    @student = create :student
+    @student = create(:student)
     @student.update!(username: 'evalstudent')
 
-    @script = create :script, :in_single_unit_course, name: 'rubric-unit'
-    @lesson = create :lesson, :with_lesson_group, absolute_position: 33, relative_position: 22, script: @script
-    @level = create :level, name: 'rubric level'
-    @script_level = create :script_level, script: @script, lesson: @lesson, levels: [@level]
+    @script = create(:script, :in_single_unit_course, name: 'rubric-unit')
+    @lesson = create(:lesson, :with_lesson_group, absolute_position: 33, relative_position: 22, script: @script)
+    @level = create(:level, name: 'rubric level')
+    @script_level = create(:script_level, script: @script, lesson: @lesson, levels: [@level])
 
-    @rubric = create :rubric, lesson: @lesson, level: @level
-    @learning_goal = create :learning_goal, rubric: @rubric, learning_goal: 'evaluated learning goal'
+    @rubric = create(:rubric, lesson: @lesson, level: @level)
+    @learning_goal = create(:learning_goal, rubric: @rubric, learning_goal: 'evaluated learning goal')
   end
 
   test 'summarize_debug' do

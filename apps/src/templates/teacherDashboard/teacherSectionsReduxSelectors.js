@@ -218,11 +218,7 @@ export const studentFromServerStudent = (serverStudent, sectionId) => ({
   name: serverStudent.name,
   familyName: serverStudent.family_name,
   sharingDisabled: serverStudent.sharing_disabled,
-
-  // @deprecated Use `secretPictureUrl` instead
-  secretPicturePath: serverStudent.secret_picture_path,
   secretPictureUrl: serverStudent.secret_picture_url,
-
   secretPictureName: serverStudent.secret_picture_name,
   secretWords: serverStudent.secret_words,
   userType: serverStudent.user_type,
@@ -292,7 +288,7 @@ const assignmentsForSection = (courseOfferings, section) => {
       ];
     if (courseVersion) {
       assignments.push(courseVersion);
-      if (section.unitId && courseVersion.type === 'UnitGroup') {
+      if (section.unitId) {
         if (courseVersion.units[section.unitId]) {
           assignments.push(courseVersion.units[section.unitId]);
         }

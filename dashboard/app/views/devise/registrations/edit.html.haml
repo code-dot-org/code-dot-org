@@ -4,6 +4,8 @@
 - @page_title = t('activerecord.attributes.user.edit_header')
 - no_email = current_user.no_personal_email? || params[:noEmail] == 'true'
 
+= render 'devise/registrations/sign_up_locale'
+
 = render_parental_permission_banner(current_user, request)
 
 = link_to :back do
@@ -166,14 +168,13 @@
       %span#change-user-type-status
       %button.btn#change-user-type-button{disabled: true}= t('signup_form.user_type_button')
 
-- if DCDO.get('enable-expire-other-sessions', false) # TODO: remove flag once feature is stable
-  %div#expire-other-sessions
-    %hr
-    %h2= t('user.expire_other_sessions')
-    %p= t('user.expire_other_sessions_description')
-    = form_for(resource, as: resource_name, url: expire_other_path, html: {method: :delete}) do |expire_other_form|
-      .farSide
-        = expire_other_form.submit t('user.expire_other_sessions_button'), class: 'btn btn-warning'
+%div#expire-other-sessions
+  %hr
+  %h2= t('user.expire_other_sessions')
+  %p= t('user.expire_other_sessions_description')
+  = form_for(resource, as: resource_name, url: expire_other_path, html: {method: :delete}) do |expire_other_form|
+    .farSide
+      = expire_other_form.submit t('user.expire_other_sessions_button'), class: 'btn btn-warning'
 
 - if current_user.can_delete_own_account?
   -# Mount point for React DeleteAccount component.
@@ -228,6 +229,8 @@
       userEmail: current_user.email,
       userProperties: current_user.properties,
       userUsState: current_user.us_state,
+      userFacilitatorBio: current_user.facilitator? ? current_user.facilitator_bio : nil,
+      isFacilitator: current_user.facilitator?,
       isAdmin: current_user.admin,
       isOauth: current_user.oauth?,
       isPasswordRequired: current_user.encrypted_password.present?,

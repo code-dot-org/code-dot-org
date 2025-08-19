@@ -7,10 +7,7 @@ import EnrollInWorkshop from './components/EnrollInWorkshop';
 import OrganizerInformation from './components/OrganizerInformation';
 import WorkshopDetails from './components/WorkshopDetails';
 import WorkshopEventJsonLdData from './components/WorkshopEventJsonLdData';
-import {
-  GetUserInfoForWorkshopResponse,
-  GetWorkshopInfoScriptDataResponse,
-} from './types';
+import {UserInfoForWorkshop, WorkshopInfo} from './types';
 
 import moduleStyles from './workshopMarketingPage.module.scss';
 
@@ -26,29 +23,29 @@ const workshopMarketingBreadcrumbs: LinkWithText[] = [
 ];
 
 interface WorkshopMarketingPageProps
-  extends GetWorkshopInfoScriptDataResponse,
-    GetUserInfoForWorkshopResponse {}
+  extends WorkshopInfo,
+    UserInfoForWorkshop {}
 
 const WorkshopMarketingPage: React.FunctionComponent<
   WorkshopMarketingPageProps
 > = props => {
   const {
     id,
-    course_offerings,
+    courseOfferings,
     name,
     course,
     subject,
     format,
     capacity,
-    num_enrollments,
-    grade_levels,
+    numEnrollments,
+    gradeLevels,
     sessions,
     fee,
     prereq,
     description,
     notes,
-    custom_registration_link,
-    regional_partner_name,
+    customRegistrationLink,
+    regionalPartnerName,
     organizer,
     facilitators,
     userInfo,
@@ -71,23 +68,23 @@ const WorkshopMarketingPage: React.FunctionComponent<
         <div className={moduleStyles.bodyContainer}>
           <WorkshopDetails
             name={name}
-            grade_levels={grade_levels}
+            gradeLevels={gradeLevels}
             sessions={sessions}
             fee={fee}
             prereq={prereq}
             description={description}
             notes={notes}
-            course_offerings={course_offerings}
+            courseOfferings={courseOfferings}
             facilitators={facilitators}
           />
 
           <aside className={moduleStyles.sidebar}>
             <EnrollInWorkshop
               id={id}
-              custom_registration_link={custom_registration_link}
+              customRegistrationLink={customRegistrationLink}
               capacity={capacity}
-              num_enrollments={num_enrollments}
-              regional_partner_name={regional_partner_name}
+              numEnrollments={numEnrollments}
+              regionalPartnerName={regionalPartnerName}
               userInfo={userInfo}
               course={course}
               subject={subject}
@@ -98,7 +95,7 @@ const WorkshopMarketingPage: React.FunctionComponent<
 
             <OrganizerInformation
               organizer={organizer}
-              regional_partner_name={regional_partner_name}
+              regionalPartnerName={regionalPartnerName}
             />
           </aside>
         </div>

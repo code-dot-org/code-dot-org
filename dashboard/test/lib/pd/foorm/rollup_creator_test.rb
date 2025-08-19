@@ -5,8 +5,8 @@ module Pd::Foorm
     self.use_transactional_test_case = true
 
     setup_all do
-      @summer_post_survey = create :foorm_form_summer_post_survey
-      @summer_pre_survey = create :foorm_form_csf_intro_post_survey
+      @summer_post_survey = create(:foorm_form_summer_post_survey)
+      @summer_pre_survey = create(:foorm_form_csf_intro_post_survey)
     end
 
     teardown_all do
@@ -123,9 +123,9 @@ module Pd::Foorm
     def setup_csd_workshop
       rollup_configuration = JSON.parse(File.read('test/fixtures/rollup_config.json'), symbolize_names: true)
       questions_to_summarize = rollup_configuration[:'CS Discoveries']
-      workshop = create :csd_summer_workshop
-      create :day_5_workshop_foorm_submission, :answers_low, pd_workshop_id: workshop.id
-      create :day_5_workshop_foorm_submission, :answers_high, pd_workshop_id: workshop.id
+      workshop = create(:csd_summer_workshop)
+      create(:day_5_workshop_foorm_submission, :answers_low, pd_workshop_id: workshop.id)
+      create(:day_5_workshop_foorm_submission, :answers_high, pd_workshop_id: workshop.id)
       ws_submissions, foorm_submissions, forms = SurveyReporter.get_raw_data_for_workshop(workshop.id)
       parsed_forms = FoormParser.parse_forms(forms)
       @summarized_answers = WorkshopSummarizer.summarize_answers_by_survey(foorm_submissions, parsed_forms, ws_submissions)
@@ -135,22 +135,24 @@ module Pd::Foorm
     def setup_csf_workshop
       rollup_configuration = JSON.parse(File.read('test/fixtures/rollup_config.json'), symbolize_names: true)
       questions_to_summarize = rollup_configuration[:'CS Fundamentals']
-      workshop = build :csf_workshop
+      workshop = build(:csf_workshop)
       workshop.facilitators << create(:facilitator)
       workshop.save(validate: false)
       @facilitator_id = workshop.facilitators.pick(:id)
       @facilitators = {@facilitator_id => "name"}
-      create :csf_intro_post_facilitator_workshop_submission,
+      create(:csf_intro_post_facilitator_workshop_submission,
         :answers_low,
         pd_workshop_id: workshop.id,
         facilitator_id: @facilitator_id
-      create_list :csf_intro_post_facilitator_workshop_submission,
+)
+      create_list(:csf_intro_post_facilitator_workshop_submission,
         3,
         :answers_high,
         pd_workshop_id: workshop.id,
         facilitator_id: @facilitator_id
-      create_list :csf_intro_post_workshop_submission, 2, :answers_low, pd_workshop_id: workshop.id
-      create_list :csf_intro_post_workshop_submission, 3, :answers_high, pd_workshop_id: workshop.id
+)
+      create_list(:csf_intro_post_workshop_submission, 2, :answers_low, pd_workshop_id: workshop.id)
+      create_list(:csf_intro_post_workshop_submission, 3, :answers_high, pd_workshop_id: workshop.id)
       ws_submissions, foorm_submissions, forms = SurveyReporter.get_raw_data_for_workshop(workshop.id)
       parsed_forms = FoormParser.parse_forms(forms)
       @summarized_answers = WorkshopSummarizer.summarize_answers_by_survey(foorm_submissions, parsed_forms, ws_submissions)

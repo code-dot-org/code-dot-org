@@ -1,4 +1,5 @@
-//This is an experimental library by Mike that is intended to work with a separate scoreboard block.
+// This is an experimental library by Mike that is intended to work with a separate scoreboard block.
+// This library is used in the simcustom levels that show up in CSF.
 
 // Setup sim
 function setupScoreboard(

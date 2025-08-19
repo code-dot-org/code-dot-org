@@ -5,15 +5,15 @@ class Pd::WorkshopFacilitatorsValidationTest < ActiveSupport::TestCase
     @csf = Pd::Workshop::COURSE_CSF
     @csd = Pd::Workshop::COURSE_CSD
     @name = 'Jane Smith'
-    @facilitator = create :facilitator, name: @name
+    @facilitator = create(:facilitator, name: @name)
   end
 
   def create_course_facilitator(facilitator, course)
-    create :pd_course_facilitator, facilitator: facilitator, course: course
+    create(:pd_course_facilitator, facilitator: facilitator, course: course)
   end
 
   def create_offering(permissions)
-    create :course_offering, facilitator_course_permissions: permissions
+    create(:course_offering, facilitator_course_permissions: permissions)
   end
 
   test 'valid_facilitators_for_course_offerings facilitator with permission is valid' do

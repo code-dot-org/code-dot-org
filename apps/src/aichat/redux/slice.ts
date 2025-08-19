@@ -23,6 +23,7 @@ import {
   PendingChatMessage,
   ChatAsset,
   SaveError,
+  AiChatClientType,
 } from '../types';
 import {
   DEFAULT_VISIBILITIES,
@@ -33,6 +34,7 @@ import {validateModelId} from '../views/modelCustomization/utils';
 import {AichatState} from './state';
 
 const initialState: AichatState = {
+  clientType: undefined,
   chatEventsPast: [],
   chatEventsCurrent: [],
   chatMessagePending: undefined,
@@ -52,6 +54,7 @@ const initialState: AichatState = {
   hasUpdatedCustomizations: false,
   saveError: undefined,
   showResetMessage: false,
+  hasSetStartingCustomizations: false,
 };
 
 const aichatSlice = createSlice({
@@ -101,6 +104,10 @@ const aichatSlice = createSlice({
     },
     setUserHasAichatAccess: (state, action: PayloadAction<boolean>) => {
       state.userHasAichatAccess = action.payload;
+    },
+
+    setClientType(state, action: PayloadAction<AiChatClientType>) {
+      state.clientType = action.payload;
     },
     removeUpdateMessage: (state, action: PayloadAction<number>) => {
       const modelUpdateMessageInfo = getUpdateMessageLocation(
@@ -198,6 +205,10 @@ const aichatSlice = createSlice({
       // Reset sent message and updated customizations flags
       state.hasSentMessage = false;
       state.hasUpdatedCustomizations = false;
+      state.hasSetStartingCustomizations = true;
+    },
+    clearHasSetStartingCustomizations: state => {
+      state.hasSetStartingCustomizations = false;
     },
     resetToDefaultAiCustomizations: (
       state,
@@ -244,20 +255,6 @@ const aichatSlice = createSlice({
       // Clear save error and reset message, if any.
       state.saveError = undefined;
       state.showResetMessage = false;
-    },
-    setSavedAiCustomizationProperty: <T extends keyof AiCustomizations>(
-      state: AichatState,
-      action: PayloadAction<{
-        property: T;
-        value: AiCustomizations[T];
-      }>
-    ) => {
-      const {property, value} = action.payload;
-      const updatedAiCustomizations = {
-        ...state.savedAiCustomizations,
-        [property]: value,
-      };
-      state.savedAiCustomizations = updatedAiCustomizations;
     },
     setModelCardProperty: <T extends keyof ModelCardInfo>(
       state: AichatState,
@@ -372,7 +369,6 @@ export const {
   removeUpdateMessage,
   resetToDefaultAiCustomizations,
   setAiCustomizationProperty,
-  setSavedAiCustomizationProperty,
   setModelCardProperty,
   setNewChatSession,
   setShowModalType,
@@ -380,6 +376,7 @@ export const {
   setStudentChatHistory,
   setOwnChatHistory,
   setUserHasAichatAccess,
+  setClientType,
   setViewMode,
   addStagedFile,
   stagedFileUploadFinished,
@@ -388,4 +385,5 @@ export const {
   stagedFilesLimitExceeded,
   clearStagedFilesAlert,
   setSaveError,
+  clearHasSetStartingCustomizations,
 } = aichatSlice.actions;

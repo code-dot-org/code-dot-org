@@ -11,15 +11,17 @@
       "include_student_lesson_plans": true,
       "is_migrated": true,
       "show_calendar": true,
+      "supported_locales": [
+        "de-DE"
+      ],
       "topic_tags": [
         "ai"
       ],
-      "version_year": "2025",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-06-02 17:42:52 UTC",
+    "serialized_at": "2025-08-12 22:06:50 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -5828,8 +5830,6 @@
       "url": "https://docs.google.com/spreadsheets/d/1YuvIyOFDkF8DMgPzv16f7rclVkhQ7asCD3zDBPiOWKw/view",
       "key": "ai4k12_and_csta_standards_mapping",
       "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "ai4k12_and_csta_standards_mapping"
@@ -6162,8 +6162,6 @@
       "url": "https://docs.google.com/document/d/1ztq07VnPY-KfuA1dQEeHjCa5yd4Y-E6qc9RdUIl6vDI/edit",
       "key": "guide_to_ethics_opportunities_in_exploring_generative_ai",
       "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "guide_to_ethics_opportunities_in_exploring_generative_ai"
@@ -6333,8 +6331,6 @@
       "url": "https://docs.google.com/spreadsheets/d/18JCfzIn8XbAHgjcSqY_TkzUC0fNCmJoj-_ql8M8H1S4/edit",
       "key": "learning_framework",
       "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "learning_framework"
@@ -6467,8 +6463,6 @@
       "url": "https://docs.google.com/document/d/1hbjb6Jc0tW6PcxKLWHzjxTegrUUh7sWOG4wvR_33zvY/edit",
       "key": "teaching_guide_-_incorporating_student_responses_via_student_summaries",
       "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "teaching_guide_-_incorporating_student_responses_via_student_summaries"

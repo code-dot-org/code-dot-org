@@ -19,6 +19,7 @@ class ScriptsController < ApplicationController
 
   def show
     if @script.is_deprecated
+      @deprecated_course_name = @script.name
       return render 'errors/deprecated_course'
     end
     #TODO: TEACH-2050 Modularity support redirect to property. Currently this redirects to the script path, which
@@ -212,6 +213,7 @@ class ScriptsController < ApplicationController
   def edit
     # Deprecated scripts should not be edited.
     if @script.is_deprecated
+      @deprecated_course_name = @script.name
       return render 'errors/deprecated_course'
     end
     raise "The new unit editor does not support level variants with experiments" if @script.is_migrated && @script.script_levels.any?(&:has_experiment?)
@@ -459,7 +461,7 @@ class ScriptsController < ApplicationController
 
   private def get_redirect_info(unit, locale, course)
     # Return nil if unit is nil or we know the user can view the version requested.
-    return nil if !unit || unit.can_view_version?(current_user, locale: locale)
+    return nil if !unit || unit.can_view_version?(current_user, locale: locale, unit_group: course)
 
     # Redirect the user to the latest assigned unit in this family, or to the latest stable unit in this family if
     # none are assigned.

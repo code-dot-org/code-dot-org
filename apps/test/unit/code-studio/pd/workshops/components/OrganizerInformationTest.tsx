@@ -14,7 +14,7 @@ describe('OrganizerInformation', () => {
     render(
       <OrganizerInformation
         organizer={organizer}
-        regional_partner_name="The Best Regional Partner"
+        regionalPartnerName="The Best Regional Partner"
         {...props}
       />
     );
@@ -45,7 +45,7 @@ describe('OrganizerInformation', () => {
   });
 
   it('does not render regional partner name if not provided', () => {
-    setup({regional_partner_name: undefined});
+    setup({regionalPartnerName: undefined});
     expect(screen.queryByText(/regional partner:/i)).not.toBeInTheDocument();
   });
 });

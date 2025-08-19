@@ -11,7 +11,7 @@ import {
   restoreRedux,
   stubRedux,
 } from '@cdo/apps/redux';
-import unitSelection, {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
+import unitSelection, {setUnit} from '@cdo/apps/redux/unitSelectionRedux';
 import currentUser, {
   setShowProgressTableV2,
   setProgressTableV2ClosedBeta,
@@ -24,8 +24,8 @@ import SectionProgressSelector from '@cdo/apps/templates/sectionProgressV2/Secti
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import i18n from '@cdo/locale';
 
-const V1_PAGE_LINK_TEXT = 'Try out new progress view (beta)';
-const V2_PAGE_LINK_TEXT = 'Switch to old progress view';
+const V1_PAGE_LINK_TEXT = 'Switch to the new progress view';
+const V2_PAGE_LINK_TEXT = 'Switch to legacy progress view';
 const V1_TEST_ID = 'section-progress-v1';
 const V2_TEST_ID = 'section-progress-v2';
 
@@ -49,11 +49,10 @@ describe('SectionProgressSelector', () => {
     });
 
     store = getStore();
-    store.dispatch(setShowProgressTableV2(false));
-    store.dispatch(setScriptId(1));
+    store.dispatch(setShowProgressTableV2('legacy'));
+    store.dispatch(setUnit(1, 1));
 
     DCDO.set('progress-table-v2-enabled', true);
-    DCDO.set('progress-table-v2-default-v2', false);
     DCDO.set('progress-table-v2-closed-beta-enabled', false);
 
     postStub = jest.spyOn($, 'post').mockClear().mockImplementation();
@@ -83,7 +82,7 @@ describe('SectionProgressSelector', () => {
   it('does not show toggle link if disabled', () => {
     DCDO.set('progress-table-v2-enabled', false);
     renderDefault();
-    store.dispatch(setShowProgressTableV2(true));
+    store.dispatch(setShowProgressTableV2('v2'));
 
     expect(screen.queryByText(V1_PAGE_LINK_TEXT)).toBeFalsy();
     expect(screen.queryByText(V2_PAGE_LINK_TEXT)).toBeFalsy();
@@ -92,7 +91,7 @@ describe('SectionProgressSelector', () => {
   it('shows v1 if disabled', () => {
     DCDO.set('progress-table-v2-enabled', false);
     renderDefault();
-    store.dispatch(setShowProgressTableV2(true));
+    store.dispatch(setShowProgressTableV2('v2'));
 
     // eslint-disable-next-line no-restricted-properties
     screen.getByTestId(V1_TEST_ID);
@@ -102,6 +101,7 @@ describe('SectionProgressSelector', () => {
 
   it('shows v1', () => {
     renderDefault();
+    store.dispatch(setShowProgressTableV2('legacy'));
 
     screen.getByText(V1_PAGE_LINK_TEXT);
     // eslint-disable-next-line no-restricted-properties
@@ -114,7 +114,7 @@ describe('SectionProgressSelector', () => {
 
   it('shows v2', () => {
     renderDefault();
-    store.dispatch(setShowProgressTableV2(true));
+    store.dispatch(setShowProgressTableV2('v2'));
 
     screen.getByText(V2_PAGE_LINK_TEXT);
     // eslint-disable-next-line no-restricted-properties
@@ -125,21 +125,7 @@ describe('SectionProgressSelector', () => {
     expect(screen.queryByTestId(V1_TEST_ID)).toBeFalsy();
   });
 
-  it('shows default v1 if no user preference', () => {
-    renderDefault();
-    store.dispatch(setShowProgressTableV2(undefined));
-
-    screen.getByText(V1_PAGE_LINK_TEXT);
-    // eslint-disable-next-line no-restricted-properties
-    screen.getByTestId(V1_TEST_ID);
-
-    expect(screen.queryByText(V2_PAGE_LINK_TEXT)).toBeFalsy();
-    // eslint-disable-next-line no-restricted-properties
-    expect(screen.queryByTestId(V2_TEST_ID)).toBeFalsy();
-  });
-
   it('shows default v2 if no user preference', () => {
-    DCDO.set('progress-table-v2-default-v2', true);
     store.dispatch(setShowProgressTableV2(undefined));
     renderDefault();
 
@@ -161,7 +147,7 @@ describe('SectionProgressSelector', () => {
     expect(postStub).toHaveBeenCalledWith(
       '/api/v1/users/show_progress_table_v2',
       {
-        show_progress_table_v2: true,
+        show_progress_table_v2: 'v2',
       }
     );
   });
@@ -247,7 +233,7 @@ describe('SectionProgressSelector', () => {
     store.dispatch(setHasSeenProgressTableInvite(false));
 
     renderDefault();
-    store.dispatch(setShowProgressTableV2(true));
+    store.dispatch(setShowProgressTableV2('v2'));
 
     // Click the link to switch to V1
     const link = screen.getByText(V2_PAGE_LINK_TEXT);

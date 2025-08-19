@@ -1,7 +1,6 @@
 import {CodebridgeWorkspaceState} from '@codebridge/redux/workspaceRedux';
 
 import {AichatState} from '@cdo/apps/aichat/redux';
-import {AITutorState} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
 import {CalendarState} from '@cdo/apps/code-studio/calendarRedux';
 import {HeaderReduxState} from '@cdo/apps/code-studio/headerRedux';
 import {ProgressState} from '@cdo/apps/code-studio/progressRedux';
@@ -34,7 +33,6 @@ import {BlocklyState} from '../redux/blockly';
 // with registerReducers.
 export interface RootState {
   manageStudents: ManageStudentsState;
-  aiTutor: AITutorState;
   aichat: AichatState;
   blockly: BlocklyState;
   calendar: CalendarState;
@@ -74,7 +72,6 @@ export interface Student {
   gender?: string;
   genderTeacherInput?: string;
   secretWords: string;
-  secretPicturePath?: string; // @deprecated Use `secretPictureUrl` instead
   secretPictureUrl: string;
   loginType: string;
   sectionId?: number;

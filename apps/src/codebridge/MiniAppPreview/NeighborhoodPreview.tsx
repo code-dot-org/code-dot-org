@@ -10,11 +10,11 @@ import {throttle} from 'lodash';
 import React, {useCallback, useEffect, useMemo, useRef} from 'react';
 
 import {setIsRunning} from '@cdo/apps/lab2/redux/systemRedux';
-import {MazeCell} from '@cdo/apps/lab2/types';
+import {MazeCell, MultiFileSource} from '@cdo/apps/lab2/types';
 import skins from '@cdo/apps/maze/skins';
 import Neighborhood from '@cdo/apps/miniApps/neighborhood/Neighborhood';
 import NeighborhoodVisualization from '@cdo/apps/miniApps/neighborhood/NeighborhoodVisualization';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {DEFAULT_MINI_APP_SIZE} from '../Workspace/constants';
 import {scaleMiniApp} from '../Workspace/outputHelpers';
@@ -29,12 +29,11 @@ interface NeighborhoodPreviewProps {
 const NeighborhoodPreview: React.FunctionComponent<
   NeighborhoodPreviewProps
 > = ({handleScaling}) => {
-  const {source, config, levelProperties} = useCodebridgeContext();
-  const serializedMaze = findFile(
-    source,
-    MAZE_FILE_NAME,
-    DEFAULT_FOLDER_ID
-  )?.contents;
+  const {config, levelProperties} = useCodebridgeContext();
+  const serializedMaze = useAppSelector(state => {
+    const source = state.lab2Project.projectSources?.source as MultiFileSource;
+    return findFile(source, MAZE_FILE_NAME, DEFAULT_FOLDER_ID)?.contents;
+  });
   const dispatch = useAppDispatch();
   const isVertical = config.activeLayout === 'vertical';
   const containerRef = useRef<HTMLDivElement>(null);

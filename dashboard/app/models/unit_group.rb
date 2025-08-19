@@ -42,7 +42,7 @@ class UnitGroup < ApplicationRecord
   has_and_belongs_to_many :resources, join_table: :unit_groups_resources
   has_many :unit_groups_student_resources, dependent: :destroy
   has_many :student_resources, through: :unit_groups_student_resources, source: :resource
-  has_one :course_version, as: :content_root, dependent: :destroy
+  has_one :course_version, foreign_key: 'content_root_id', dependent: :destroy
 
   scope(
     :with_associated_models, lambda do
@@ -77,7 +77,7 @@ class UnitGroup < ApplicationRecord
 
   serialized_attrs %w(
     has_verified_resources
-    has_numbered_units
+    numbered_units
     family_name
     version_year
     pilot_experiment
@@ -133,6 +133,7 @@ class UnitGroup < ApplicationRecord
     unit_group = UnitGroup.find_or_create_by!(name: hash['name'])
     unit_group.update_original_scripts(hash['original_script_names'])
     unit_group.update_scripts(hash['script_names'])
+    unit_group.update_unit_prefixes(hash['unit_prefixes']) if hash['unit_prefixes']
     unit_group.properties = hash['properties']
     unit_group.published_state = hash['published_state'] || Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development
     unit_group.instruction_type = hash['instruction_type'] || Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
@@ -173,6 +174,7 @@ class UnitGroup < ApplicationRecord
       {
         name: name,
         script_names: default_unit_group_units.map(&:script).map(&:name),
+        unit_prefixes: default_unit_group_units.all? {|ugu| ugu.unit_prefix.nil?} ? nil : default_unit_group_units.map(&:unit_prefix),
         original_script_names: original_units.map(&:name),
         published_state: published_state,
         instruction_type: instruction_type,
@@ -236,7 +238,6 @@ class UnitGroup < ApplicationRecord
         ugu.position = index + 1
         unit.update!(published_state: nil, instruction_type: nil, participant_audience: nil, instructor_audience: nil, is_course: false, pilot_experiment: nil, skip_name_format_validation: true)
         unit.update!(original_unit_group_id: id, skip_name_format_validation: true) if unit.original_unit_group.nil?
-        unit.course_version&.destroy unless ENV.fetch('MIGRATE_STANDALONE_UNITS', nil)
 
         unit.reload
         unit.write_script_json
@@ -267,13 +268,20 @@ class UnitGroup < ApplicationRecord
     transaction {reload}
   end
 
+  def update_unit_prefixes(unit_prefixes)
+    return if unit_prefixes.nil?
+    default_unit_group_units.each do |unit_group_unit|
+      unit_group_unit.update!(unit_prefix: unit_prefixes[unit_group_unit.position - 1])
+    end
+  end
+
   def self.all_courses
     return all.to_a unless should_cache?
     @@all_courses ||= course_cache.values.uniq.compact.freeze
   end
 
   def self.family_names
-    CourseVersion.course_offering_keys('UnitGroup')
+    CourseVersion.course_offering_keys
   end
 
   # A course that the general public can assign. Has been soft or
@@ -309,14 +317,14 @@ class UnitGroup < ApplicationRecord
         student_resources: student_resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
         is_migrated: has_migrated_unit?,
         has_verified_resources: has_verified_resources?,
-        has_numbered_units: has_numbered_units?,
+        numbered_units: numbered_units,
         course_versions: summarize_course_versions(user, locale_code),
         show_assign_button: course_assignable?(user),
         announcements: announcements,
         course_offering_id: course_version&.course_offering&.id,
         course_version_id: course_version&.id,
         course_path: link,
-        course_offering_edit_path: for_edit && course_version ? edit_course_offering_path(course_version.course_offering.key) : nil
+        course_offering_edit_path: for_edit && course_version&.course_offering ? edit_course_offering_path(course_version.course_offering.key) : nil
       }
     end
   end
@@ -330,7 +338,7 @@ class UnitGroup < ApplicationRecord
         unit_group_unit = unit.unit_group_units.find {|ugu| ugu.unit_group == self}
         unit.summarize_for_rollup(user, unit_group_unit: unit_group_unit)
       end,
-      has_numbered_units: has_numbered_units?
+      numbered_units: numbered_units,
     }
   end
 

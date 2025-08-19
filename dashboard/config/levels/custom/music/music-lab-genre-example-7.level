@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-06-04T14:24:11.000Z",
   "level_num": "custom",
@@ -9,7 +10,7 @@
     "long_instructions": "####Beethoven’s 6th\r\n\r\nThis remix takes Beethoven’s classical melodies and mixes them with hip-hop beats and bass. Listen for how the strings and main themes repeat and evolve, while beats and low-end sounds give the remix a modern edge. Each part—like intro, uprising, beats, and downfall—is stored in a function to keep everything organized and easy to layer.\r\n\r\n>I thought it would be fun to flip a classical piece into something you could actually nod your head to. I used functions like beats and uprising to mix hip-hop drums and bass with the original strings. I named each function to match the part of the song it represents so it was easier to plan out the structure. Turning Beethoven into a beat was way more fun than I expected.",
     "offer_browser_tts": "true",
     "use_secondary_finish_button": "false",
-    "hide_share_and_remix": "false",
+    "hide_share_and_remix": "true",
     "predict_settings": {
       "isPredictLevel": false
     },
@@ -814,10 +815,23 @@
     "display_name": "Beethoven's 6th",
     "bubble_choice_description": "A Hip-Hop remix of Beethoven's Symphony",
     "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/beethoven_symphony_no_6/beethoven_symphony_no_6.jpg",
+    "submittable": "false",
+    "validations": [
+      {
+        "key": "music-lab-genre-example-7_56033017-017c-4679-948b-dae6b6cb4c83",
+        "message": "",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 10
+          }
+        ]
+      }
+    ],
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-06-04T14:24:11.445+00:00\",\"changed\":[\"cloned from \\\"music-lab-genre-example-6\\\"\"],\"cloned_from\":\"music-lab-genre-example-6\"},{\"changed_at\":\"2025-06-04 14:24:28 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-04 14:25:36 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-04 19:26:58 +0000\",\"changed\":[\"hide_share_and_remix\",\"predict_settings\",\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-28 01:19:06 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-30 17:48:48 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-03 20:39:39 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-06-04T14:24:11.445+00:00\",\"changed\":[\"cloned from \\\"music-lab-genre-example-6\\\"\"],\"cloned_from\":\"music-lab-genre-example-6\"},{\"changed_at\":\"2025-06-04 14:24:28 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-04 14:25:36 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-04 19:26:58 +0000\",\"changed\":[\"hide_share_and_remix\",\"predict_settings\",\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-28 01:19:06 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-30 17:48:48 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-03 20:39:39 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-07-18 14:02:26 +0000\",\"changed\":[\"hide_share_and_remix\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-07-18 14:02:43 +0000\",\"changed\":[\"predict_settings\",\"validations\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

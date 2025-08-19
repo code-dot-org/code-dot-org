@@ -134,12 +134,16 @@ class Services::PartialRegistration::UserBuilderTest < ActiveSupport::TestCase
 
   # Teacher tests
   test 'builds teacher user with default values' do
-    setup_partial_user({user_type: 'teacher'})
+    TEST_GIVEN_NAME = 'Firstname'
+    TEST_FAMILY_NAME = 'Lastname'
+    setup_partial_user({user_type: 'teacher', given_name: TEST_GIVEN_NAME, family_name: TEST_FAMILY_NAME})
 
     assert_creates(User) do
       @user = Services::PartialRegistration::UserBuilder.call(request: @request)
     end
 
+    assert_equal TEST_GIVEN_NAME, @user.given_name
+    assert_equal TEST_FAMILY_NAME, @user.family_name
     assert_equal TEST_USER_NAME, @user.name
     assert_equal TEST_USER_EMAIL, @user.email
     assert_equal '21+', @user.age.to_s
@@ -167,8 +171,8 @@ class Services::PartialRegistration::UserBuilderTest < ActiveSupport::TestCase
   end
 
   test 'builds teacher with nces school in our database' do
-    fake_school = create :school
-    fake_school_info = create :school_info, school_id: fake_school.id
+    fake_school = create(:school)
+    fake_school_info = create(:school_info, school_id: fake_school.id)
     setup_partial_user({user_type: 'teacher', school_info_attributes:
       {
         school_id: fake_school.id,
