@@ -3,7 +3,7 @@
  * currently active Lab (determined by the current app name). This
  * helps facilitate level-switching between labs without page reloads.
  */
-import React, {Suspense} from 'react';
+import React, {Suspense, useEffect} from 'react';
 
 import {getCurrentScriptLevelId} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {queryParams} from '@cdo/apps/code-studio/utils';
@@ -60,6 +60,15 @@ const LabViewsRenderer: React.FunctionComponent = () => {
   const isBlocked = isBlockedAbuse || projectSharingDisabled;
   const hasElevatedPrivileges =
     isProjectValidator || isOwner || isTeacherOfProjectOwner;
+
+  useEffect(() => {
+    const footer = document.getElementById('page-small-footer');
+    if (currentAppName === 'weblab2') {
+      footer?.classList.add(moduleStyles.hiddenFooter);
+    } else if (footer?.classList.contains(moduleStyles.hiddenFooter)) {
+      footer.classList.remove(moduleStyles.hiddenFooter);
+    }
+  }, [currentAppName]);
 
   const blockLabView = () => {
     if (!currentAppName) return true;
