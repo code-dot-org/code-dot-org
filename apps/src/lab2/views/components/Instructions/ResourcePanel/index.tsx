@@ -92,7 +92,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     }
 
     if (
-      (levelProperties.aiTutor2Available ||
+      (levelProperties.aiTutorAvailable ||
         queryParams('show-ai-tutor2') === 'true') &&
       aiTutor2Context
     ) {
