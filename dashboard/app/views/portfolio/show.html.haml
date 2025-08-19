@@ -1,0 +1,18 @@
+:ruby
+    portfolio_data = {}
+    portfolio_data[:studentName] = @student_name
+    portfolio_data[:portfolioEntries] = @portfolio_entries.map do |entry|
+      {
+        id: entry.id,
+        title: entry.title,
+        beforeAssetUrl: entry.before_asset_url,
+        beforeLevelUrl: entry.before_level_url,
+        afterAssetUrl: entry.after_asset_url,
+        afterLevelUrl: entry.after_level_url,
+        reflection: entry.reflection
+      }
+    end
+
+%script{src: webpack_asset_path('js/portfolio/show.js'), data: {portfolioData: portfolio_data.to_json}}
+
+#portfolio

@@ -99,6 +99,7 @@ class Ability
       can :create, StudentWorkEvaluation, user_id: user.id
       can :create, StudentWorkEvaluationSummary
       can :create, UserLevelInteraction, user_id: user.id
+      can :create, PortfolioEntry, user_id: user.id
       can :create, Follower, student_user_id: user.id
       can :destroy, Follower do |follower|
         follower.student_user_id == user.id && !user.student?

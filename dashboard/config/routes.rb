@@ -303,6 +303,8 @@ Dashboard::Application.routes.draw do
       end
     end
 
+    get "/portfolio/:student_id", to: 'portfolio#show'
+
     get "/gallery", to: redirect("/projects/public")
 
     get 'projects/:project_type/:channel_id/submission_status', to: 'projects#submission_status'
