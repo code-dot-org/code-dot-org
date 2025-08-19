@@ -1,8 +1,6 @@
 import PlayArrow from '@mui/icons-material/PlayArrow';
 import MuiButton from '@mui/material/Button';
 
-import moduleStyles from './video.module.scss';
-
 const PlayButton = ({label, onClick}: {label: string; onClick: () => void}) => {
   return (
     <MuiButton
@@ -12,7 +10,7 @@ const PlayButton = ({label, onClick}: {label: string; onClick: () => void}) => {
       disableElevation
       disableRipple
     >
-      <PlayArrow className={moduleStyles.playButton} />
+      <PlayArrow />
     </MuiButton>
   );
 };
