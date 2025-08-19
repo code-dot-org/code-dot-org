@@ -448,6 +448,18 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     workshop.send_exit_surveys
   end
 
+  test 'send_exit_surveys sends to alternate email as well if available for summer workshops' do
+    teacher = create(:teacher)
+    application = create(:pd_teacher_application, :csp, user: teacher, status: 'accepted')
+    summer_workshop = create(:csp_summer_workshop, :ended, num_sessions: 1)
+    enrollment = create(:pd_enrollment, application_id: application.id, user: teacher, workshop: summer_workshop)
+    create(:pd_attendance, session: summer_workshop.sessions.first, teacher: teacher, enrollment: enrollment)
+
+    Pd::Workshop.expects(:send_teacher_post_workshop_survey_email).times(2)
+
+    summer_workshop.send_exit_surveys
+  end
+
   # an issue with this test failing is fixed by prepending TZ=UTC to the test command
   test 'soft delete' do
     workshop = create(:pd_workshop, num_sessions: 0)
