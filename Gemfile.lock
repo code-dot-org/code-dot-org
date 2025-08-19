@@ -291,7 +291,7 @@ GEM
     cancancan (3.5.0)
     case_transform (0.2)
       activesupport
-    cgi (0.3.6)
+    cgi (0.3.7)
     childprocess (5.1.0)
       logger (~> 1.5)
     chronic (0.10.2)
@@ -1008,7 +1008,7 @@ DEPENDENCIES
   bootstrap-sass (~> 2.3.2.2)
   brakeman
   cancancan (~> 3.5.0)
-  cgi (~> 0.3.6)
+  cgi (~> 0.3.7)
   chronic (~> 0.10.2)
   cld
   colorize
