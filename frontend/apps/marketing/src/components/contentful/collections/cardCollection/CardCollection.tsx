@@ -1,0 +1,130 @@
+import {useInMemoryEntities} from '@contentful/experiences-sdk-react';
+import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
+import {EntryFields} from 'contentful';
+import {useMemo, useId} from 'react';
+
+import Card from '@/components/contentful/card';
+import {getAbsoluteImageUrl} from '@/selectors/contentful/getImage';
+import {LinkEntry} from '@/types/contentful/entries/Link';
+import {Entry} from '@/types/contentful/Entry';
+import {ExperienceAsset} from '@/types/contentful/ExperienceAsset';
+
+import {CollectionProps} from '../types';
+
+type ItemFields = {
+  title: EntryFields.Text;
+  actionBlockOverline: EntryFields.Text;
+  shortDescription: EntryFields.Text;
+  image: ExperienceAsset;
+  primaryLinkRef: LinkEntry;
+  secondaryLinkRef: LinkEntry;
+};
+
+type ItemEntry = Entry<ItemFields>;
+
+export type CardCollectionProps = CollectionProps & {
+  /** Collection content w/ fields from Contentful */
+  blocks: ItemEntry[];
+};
+
+const styles = {
+  gridItem: {
+    height: '100%',
+    '& .cardWrapper': {
+      height: '100%',
+    },
+  },
+  hideImages: {
+    '& img': {
+      display: 'none',
+    },
+  },
+};
+
+const ActionBlockCollection: React.FC<CardCollectionProps> = ({
+  blocks,
+  hideImages = false,
+  hideSecondaryButton = false,
+  sortOrder = 'alphabetical',
+  className,
+}) => {
+  const inMemoryEntities = useInMemoryEntities();
+
+  if (!blocks) {
+    return (
+      <Typography variant="body3">
+        <em>
+          <strong>📋 Card Collection placeholder.</strong> Please add a "List"
+          content type entry in the Content sidebar.
+        </em>
+      </Typography>
+    );
+  }
+
+  const blocksData = useMemo(() => {
+    const data = blocks.filter(Boolean).map(({fields}) => {
+      const {
+        actionBlockOverline,
+        title,
+        shortDescription,
+        image,
+        primaryLinkRef,
+        secondaryLinkRef,
+      } = fields;
+
+      const resolvedImage = inMemoryEntities.maybeResolveLink(
+        image,
+      ) as ExperienceAsset;
+      const resolvedPrimaryLinkRef = inMemoryEntities.maybeResolveLink(
+        primaryLinkRef,
+      ) as LinkEntry;
+      const resolvedSecondaryLinkRef = inMemoryEntities.maybeResolveLink(
+        secondaryLinkRef,
+      ) as LinkEntry;
+
+      return {
+        id: title,
+        item: (
+          <Box
+            sx={[{...styles.gridItem}, hideImages && {...styles.hideImages}]}
+          >
+            <Card
+              className="cardWrapper"
+              overline={actionBlockOverline ? actionBlockOverline : undefined}
+              title={title}
+              description={shortDescription}
+              imageSrc={getAbsoluteImageUrl(resolvedImage) || ''}
+              primaryButton={resolvedPrimaryLinkRef}
+              secondaryButton={
+                !hideSecondaryButton && resolvedSecondaryLinkRef
+                  ? resolvedSecondaryLinkRef
+                  : undefined
+              }
+            />
+          </Box>
+        ),
+      };
+    });
+    // Sort alphabetically if sortOrder is 'alphabetical'
+    if (sortOrder === 'alphabetical') {
+      data.sort((a, b) => a?.id?.localeCompare(b?.id));
+    }
+    return data;
+  }, [blocks, hideImages, hideSecondaryButton, sortOrder]);
+
+  console.log(blocksData);
+
+  return (
+    <Grid container spacing={4} className={className}>
+      {blocksData.map(block => (
+        <Grid key={`id-${useId().replaceAll(':', '')}`} size={{xs: 12, md: 6}}>
+          {block.item}
+        </Grid>
+      ))}
+    </Grid>
+  );
+};
+
+export default ActionBlockCollection;

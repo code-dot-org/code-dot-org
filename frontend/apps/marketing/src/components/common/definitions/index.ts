@@ -100,6 +100,20 @@ export const collectionsSortOrderDefinition: Record<
   },
 };
 
+// Used in the Action Block Collection and Card Collection components,
+// and could be used in other components.
+export const hideSecondaryButtonDefinition: Record<
+  string,
+  ComponentDefinitionVariable
+> = {
+  hideSecondaryButton: {
+    displayName: 'Hide secondary button',
+    type: 'Boolean',
+    defaultValue: false,
+    group: 'style',
+  },
+};
+
 // Used in the Action Block Collection, Logo Collection, and People Collection components,
 // and could be used in other components.
 export const hideImagesDefinition: Record<string, ComponentDefinitionVariable> =

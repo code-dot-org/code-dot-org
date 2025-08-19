@@ -22,6 +22,9 @@ import VideoCarousel, {
 import ActionBlockCollection, {
   ActionBlockCollectionContentfulComponentDefinition,
 } from '@/components/contentful/collections/actionBlockCollection';
+import CardCollection, {
+  CardCollectionContentfulComponentDefinition,
+} from '@/components/contentful/collections/cardCollection';
 import LogoCollection, {
   LogoCollectionContentfulComponentDefinition,
 } from '@/components/contentful/collections/logoCollection';
@@ -104,6 +107,10 @@ const contentfulRegistration = {
     {
       component: ActionBlockCollection,
       definition: ActionBlockCollectionContentfulComponentDefinition,
+    },
+    {
+      component: CardCollection,
+      definition: CardCollectionContentfulComponentDefinition,
     },
     {
       component: LogoCollection,

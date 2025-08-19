@@ -21,7 +21,10 @@ type ItemFields = {
 
 type ItemEntry = Entry<ItemFields>;
 
-export type LogoCollectionProps = Omit<CollectionProps, 'hideImages'> & {
+export type LogoCollectionProps = Omit<
+  CollectionProps,
+  'hideImages' | 'hideSecondaryButton'
+> & {
   /** Collection content w/ fields from Contentful */
   logos: ItemEntry[];
 };

@@ -24,7 +24,10 @@ type ItemFields = {
 
 type ItemEntry = Entry<ItemFields>;
 
-export type PeopleCollectionProps = CollectionProps & {
+export type PeopleCollectionProps = Omit<
+  CollectionProps,
+  'hideSecondaryButton'
+> & {
   /** Collection content w/ fields from Contentful */
   people: ItemEntry[];
 };

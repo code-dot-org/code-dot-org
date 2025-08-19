@@ -79,11 +79,11 @@ const Card: React.FC<CardProps> = ({
         {primaryButton && (
           <Button
             {...primaryButton}
-            text={primaryButton.fields.label}
-            href={primaryButton.fields.primaryTarget}
-            ariaLabel={primaryButton.fields.ariaLabel}
+            text={primaryButton?.fields?.label}
+            href={primaryButton?.fields?.primaryTarget}
+            ariaLabel={primaryButton?.fields?.ariaLabel}
             isLinkExternal={
-              primaryButton.fields.isThisAnExternalLink || undefined
+              primaryButton?.fields?.isThisAnExternalLink || undefined
             }
             type="primary"
             size="medium"
@@ -92,11 +92,11 @@ const Card: React.FC<CardProps> = ({
         {secondaryButton && (
           <Button
             {...secondaryButton}
-            text={secondaryButton.fields.label}
-            href={secondaryButton.fields.primaryTarget}
-            ariaLabel={secondaryButton.fields.ariaLabel}
+            text={secondaryButton?.fields?.label}
+            href={secondaryButton?.fields?.primaryTarget}
+            ariaLabel={secondaryButton?.fields?.ariaLabel}
             isLinkExternal={
-              secondaryButton.fields.isThisAnExternalLink || undefined
+              secondaryButton?.fields?.isThisAnExternalLink || undefined
             }
             type="secondary"
             size="medium"

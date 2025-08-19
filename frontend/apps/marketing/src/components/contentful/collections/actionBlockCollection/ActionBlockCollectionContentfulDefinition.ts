@@ -4,6 +4,7 @@ import {ComponentDefinition} from '@contentful/experiences-sdk-react';
 import {
   collectionsSortOrderDefinition,
   hideImagesDefinition,
+  hideSecondaryButtonDefinition,
 } from '@/components/common/definitions';
 
 export const ActionBlockCollectionContentfulComponentDefinition: ComponentDefinition =
@@ -46,5 +47,6 @@ export const ActionBlockCollectionContentfulComponentDefinition: ComponentDefini
       },
       ...collectionsSortOrderDefinition,
       ...hideImagesDefinition,
+      ...hideSecondaryButtonDefinition,
     },
   };
