@@ -24,6 +24,7 @@ import {
   TABLE_CONTAINER_OVERRIDES,
 } from './table';
 import {TYPOGRAPHY_OVERRIDES} from './typography';
+import {VIDEO_OVERRIDES} from './video';
 
 export const STYLE_OVERRIDES: Components<Theme> = {
   MuiAccordion: ACCORDION_OVERRIDES,
@@ -40,9 +41,10 @@ export const STYLE_OVERRIDES: Components<Theme> = {
   MuiLink: LINK_OVERRIDES,
   MuiList: LIST_OVERRIDES,
   MuiListItem: LIST_ITEM_OVERRIDES,
-  MuiTypography: TYPOGRAPHY_OVERRIDES,
   MuiTable: TABLE_OVERRIDES,
   MuiTableCell: TABLE_CELL_OVERRIDES,
   MuiTableRow: TABLE_ROW_OVERRIDES,
   MuiTableContainer: TABLE_CONTAINER_OVERRIDES,
+  MuiTypography: TYPOGRAPHY_OVERRIDES,
+  MuiVideo: VIDEO_OVERRIDES,
 };
