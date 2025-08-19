@@ -1,4 +1,3 @@
-import Tags from '@code-dot-org/component-library/tags';
 import {
   BodyThreeText,
   Heading2,
@@ -8,21 +7,26 @@ import {Card, CardContent, Box, CardHeader} from '@mui/material';
 import classNames from 'classnames';
 import React, {FC} from 'react';
 
-import noResponsesText from '@cdo/static/pd/no-responses-text.png';
+import noResponsesEmail from '@cdo/static/pd/no-responses-email.png';
 
 import {EmptyState} from './EmptyState';
 
 import styles from '../../workshop.module.scss';
 
-interface FreeResponseCardProps {
-  title: string;
-  tagText?: string;
-  items: string[];
+interface FollowUp {
+  name: string;
+  email: string;
 }
 
-export const FreeResponseCard: FC<FreeResponseCardProps> = ({
+interface FollowUpRequestedCardProps {
+  title: string;
+  description: string;
+  items: FollowUp[];
+}
+
+export const FollowUpRequestedCard: FC<FollowUpRequestedCardProps> = ({
   title,
-  tagText,
+  description,
   items,
 }) => {
   return (
@@ -30,40 +34,36 @@ export const FreeResponseCard: FC<FreeResponseCardProps> = ({
       className={classNames(
         styles.card,
         styles.questionCard,
-        styles.freeResponse
+        styles.multiSelect
       )}
     >
       <CardHeader
         className={styles.cardHeader}
         title={
-          <Box className={styles.cardHeaderRow}>
+          <>
             <Heading2 visualAppearance="body-one" noMargin>
               <StrongText>{title}</StrongText>
             </Heading2>
-            {tagText && (
-              <Tags
-                size="s"
-                tagsList={[{label: tagText}]}
-                className={classNames(styles.workshopTag, styles.questionTag)}
-              />
-            )}
-          </Box>
+            <BodyThreeText noMargin className={styles.subHeader}>
+              {description}
+            </BodyThreeText>
+          </>
         }
       />
       <CardContent className={styles.cardContent}>
         {items.length > 0 ? (
-          <Box className={styles.textCardContainer}>
+          <Box className={styles.column}>
             {items.map(item => (
-              <Box key={item} className={styles.textCard}>
-                <BodyThreeText noMargin>{item}</BodyThreeText>
+              <Box key={item.email}>
+                {/* TODO: https://codedotorg.atlassian.net/browse/ACQ-3460 render result rows */}
               </Box>
             ))}
           </Box>
         ) : (
           <EmptyState
-            title="No responses submitted yet."
-            description="Responses will appear here once participants complete the survey."
-            imageProps={{src: noResponsesText}}
+            title="No teachers requested follow-up support."
+            description="All participants feel confident proceeding independently."
+            imageProps={{src: noResponsesEmail}}
           />
         )}
       </CardContent>
