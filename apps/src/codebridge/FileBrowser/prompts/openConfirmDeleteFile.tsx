@@ -8,7 +8,6 @@ import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 
 type OpenConfirmDeleteFileArgsType = {
   file: ProjectFile;
-  isBlockedAbuse?: boolean;
   dialogControl: Pick<DialogControlInterface, 'showDialog'>;
   deleteFile: DeleteFileFunction;
   sendCodebridgeAnalyticsEvent: (eventName: string) => unknown;
@@ -19,7 +18,6 @@ type OpenConfirmDeleteFileArgsType = {
 // but this was still the most logical place to put it.
 export const openConfirmDeleteFile = async ({
   file,
-  isBlockedAbuse,
   dialogControl,
   deleteFile,
   sendCodebridgeAnalyticsEvent,

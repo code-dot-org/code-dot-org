@@ -51,7 +51,6 @@ export const useFileRowOptions = (
   const {files: projectFiles, folders: projectFolders} = useAppSelector(
     state => state.lab2Project.projectSources?.source as MultiFileSource
   );
-  const isBlockedAbuse = useAppSelector(state => state.lab.isBlockedAbuse);
 
   const backpackApi = useBackpackAPIContext();
 
@@ -101,7 +100,7 @@ export const useFileRowOptions = (
         condition: !isLocked,
         iconName: 'trash',
         labelText: codebridgeI18n.deleteFile(),
-        clickHandler: () => openConfirmDeleteFile({file, isBlockedAbuse}),
+        clickHandler: () => openConfirmDeleteFile({file}),
       },
       {
         condition: true,
@@ -115,7 +114,6 @@ export const useFileRowOptions = (
       backpackApi,
       editableFileTypes,
       file,
-      isBlockedAbuse,
       isLocked,
       isStartMode,
       openConfirmDeleteFile,
