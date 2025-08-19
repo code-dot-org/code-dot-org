@@ -408,3 +408,9 @@ export interface LabProps<
   levelProperties: T;
   initialSources?: U;
 }
+
+export interface LocaleOptions {
+  localeUrl: string;
+  currentLocale: string;
+  localeOptions: {text: string; value: string}[];
+}

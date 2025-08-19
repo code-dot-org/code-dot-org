@@ -23,6 +23,7 @@ import NavigationArea from '../NavigationArea';
 
 import CopyrightButton from './CopyrightButton';
 import ResourcePanelExtraLinks from './ResourcePanelExtraLinks';
+import SettingsPanel from './SettingsPanel';
 
 import styles from './styles.module.scss';
 
@@ -86,6 +87,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     state => state.currentUser.userType === 'student'
   );
   const [currentTab, setCurrentTab] = useState<Tabs>(Tabs.Instructions);
+  const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const includeCopyrightAndSettings =
     LABS_USING_COPYRIGHT_AND_SETTINGS_IN_PANEL.includes(
       instructionsProps.levelProperties.appName
@@ -193,7 +195,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                   type="button"
                   className={styles.bottomButton}
                   onClick={() => {
-                    console.log('Open settings modal');
+                    setIsSettingsOpen(!isSettingsOpen);
                   }}
                 >
                   <FontAwesomeV6Icon iconName={'gear'} />
@@ -215,6 +217,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
         >
           {availableTabs[currentTab]}
           <NavigationArea {...instructionsProps} />
+          {isSettingsOpen && <SettingsPanel settings={settings} />}
         </PanelContainer>
       </div>
     </div>

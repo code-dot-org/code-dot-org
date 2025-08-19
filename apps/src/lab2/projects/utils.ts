@@ -2,7 +2,12 @@ import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import currentLocale from '@cdo/apps/util/currentLocale';
 import getScriptData, {hasScriptData} from '@cdo/apps/util/getScriptData';
 
-import {MultiFileSource, ProjectFile, ProjectFileType} from '../types';
+import {
+  LocaleOptions,
+  MultiFileSource,
+  ProjectFile,
+  ProjectFileType,
+} from '../types';
 
 // Partial definition of the App Options structure, only defining the
 // pieces we need in this component.
@@ -157,4 +162,11 @@ export function getActiveFileForSource(source: MultiFileSource) {
  */
 export function getCurrentLocale(): string {
   return currentLocale();
+}
+
+export function getLocaleOptions() {
+  if (hasScriptData('script[data-localeOptions]')) {
+    return getScriptData('localeOptions') as LocaleOptions;
+  }
+  return undefined;
 }
