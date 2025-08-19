@@ -6,7 +6,6 @@
 #  key                :string(255)      not null
 #  display_name       :string(255)      not null
 #  properties         :text(65535)
-#  content_root_type  :string(255)      not null
 #  content_root_id    :integer          not null
 #  created_at         :datetime         not null
 #  updated_at         :datetime         not null
@@ -15,9 +14,9 @@
 #
 # Indexes
 #
-#  index_course_versions_on_content_root_type_and_content_root_id  (content_root_type,content_root_id)
-#  index_course_versions_on_course_offering_id                     (course_offering_id)
-#  index_course_versions_on_offering_id_and_key_and_type           (course_offering_id,key,content_root_type) UNIQUE
+#  index_course_versions_on_content_root_id      (content_root_id)
+#  index_course_versions_on_course_offering_id   (course_offering_id)
+#  index_course_versions_on_offering_id_and_key  (course_offering_id,key) UNIQUE
 #
 
 class CourseVersion < ApplicationRecord
@@ -28,7 +27,6 @@ class CourseVersion < ApplicationRecord
   has_many :vocabularies
   has_many :reference_guides
 
-  attr_readonly :content_root_type
   attr_readonly :content_root_id
 
   KEY_CHAR_RE = /[a-z0-9\-]/
@@ -97,7 +95,6 @@ class CourseVersion < ApplicationRecord
         key: content_root.version_year,
         display_name: content_root.version_year,
         content_root: content_root,
-        content_root_type: content_root.class.name
       )
       course_version.published_state = content_root.published_state
     else

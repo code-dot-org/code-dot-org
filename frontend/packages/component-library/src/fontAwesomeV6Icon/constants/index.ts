@@ -3,19 +3,24 @@
  */
 
 /**
- * List of the available kit icons based on ../stories/FontAwesomeV6Icon.story.tsx
- * and https://fontawesome.com/kits/ea2d9d4413/customicons
+ * List of the available kit icons based on
+ * https://fontawesome.com/kits/ea2d9d4413/customicons
  */
 export const kitIcons = new Set([
+  'ai-bot-regular',
+  'ai-bot-solid',
+  'ai-head-regular',
+  'ai-head-solid',
+  'clever',
   'click-to-continue-down',
   'click-to-continue-up',
   'connected-level',
-  'ai-bot-solid',
-  'ai-bot-regular',
-  'ai-large',
-  'text-speech-pause',
-  'text-speech',
-  'solid-thumbtack-slash',
+  'duotone-solid-message-question-circle-exclamation',
+  'solid-bars-magnifying-glass',
+  'solid-flask-sparkle',
   'solid-gear-pen',
-  'clever',
+  'solid-pen-sparkle',
+  'solid-thumbtack-slash',
+  'text-speech',
+  'text-speech-pause',
 ]);

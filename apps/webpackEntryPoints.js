@@ -220,7 +220,6 @@ const PEGASUS_ENTRIES = {
   'code.org/views/classy_embed_form': './src/sites/code.org/pages/views/classy_embed_form.js',
   'code.org/public/poetry': './src/sites/code.org/pages/public/poetry.js',
   'code.org/public/cms-demo': './src/sites/code.org/pages/public/cms-demo.js',
-  'code.org/public/embeddable_census_map': './src/sites/code.org/pages/public/embeddable_census_map.js',
 
   // hourofcode.com
   'hourofcode.com/views/theme_common_head_after': './src/sites/hourofcode.com/pages/views/theme_common_head_after.js',

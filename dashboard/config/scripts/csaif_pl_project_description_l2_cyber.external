@@ -5,11 +5,13 @@ description 'description here'
 markdown <<MARKDOWN
 # Pixels of Me Project Overview
 
-<img src="https://images.code.org/66f86ca5d8e42abfe1a34e51af2ea606-image-1741790839525.png" alt="Mario made out of pixels" width="170px" style="border-radius:10px; float:left; margin: 0px 50px 0px 50px;">
+<img src="https://images.code.org/615dfc21f720531bfcc14b80a9b103d9-image-1755268620389.png" alt="sample comic from before artifact example. The character is concerned that the message isn't private" width="250px" style="border-radius:10px; float:left; margin: 0px 50px 0px 50px;">
 
-#### In this project, students will create a digital pixel artifact that represents an aspect of their identity — such as a hobby, interest, future career, or favorite book/movie.
+#### In the final project, students analyze a real-world digital system from multiple user perspectives to identify **two key issues**, such as weak input validation or insecure data storage. 
 
-#### They will apply computational thinking, Python programming, and AI tools to develop their designs while engaging in peer feedback and reflection.
+#### They propose defense mechanism solutions, creating “Before” artifacts to show the problems and “After” artifacts to illustrate the fixes—featuring a personified defense mechanism. 
+
+#### Students also explain how each fix works, its trade-offs, and how it protects users.
 
 <div style="clear:both;"></div>
 
@@ -17,52 +19,51 @@ markdown <<MARKDOWN
 
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">🧠 Computational Thinking
+    <summary style="font-size: 1.5em; font-weight: bold;">🧠 User-Centered Analysis
 </summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
 
 
-- #### Break down their design into smaller components (decomposition).
-- #### Identify patterns and simplify code using abstraction.
+- #### Clearly identifies security shortcomings based on a specific user's needs and concerns.
+- #### Reasoning is thoughtful and specific.
 
 
 </p></div>
 </details>
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">🧩 Algorithms & Python</summary>
+    <summary style="font-size: 1.5em; font-weight: bold;">🔒 Security Solutions</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
 
 
-- #### Use sequencing, loops, and selection statements to structure their code.
-- #### Implement functions with descriptive names for clarity.
+- #### Security features effectively address the issues raised in user empathy maps.
+- #### Feature explanations include discussion of any tradeoffs made between security and usability.
 
 
 </p></div>
 </details>
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">✏️ Code Documentation</summary>
+    <summary style="font-size: 1.5em; font-weight: bold;">✏️ "Before" Artifact </summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
 
 
-- #### Add comments to explain the purpose of key functions and code segments.
+- #### Artifact clearly shows at least two different types of security issues present in the current app design.
 
 
 </p></div>
 </details>
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">💭 Feedback & Reflection</summary>
+    <summary style="font-size: 1.5em; font-weight: bold;">📝 "After" Artifact</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
 
 
-- #### Participate in a TAG Method peer review to refine their work.
-- #### Reflect on their computational thinking process and problem-solving strategies.
+- #### Artifact presents two different personified security solutions, demonstrating how they reduce risk, protect users, and/or prevent human error.
 
 
 
@@ -70,13 +71,15 @@ markdown <<MARKDOWN
 </details>
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">🤖 AI Integration</summary>
+    <summary style="font-size: 1.5em; font-weight: bold;">💬 Communication and Creativity
+
+</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
 
 
-- #### Use AI tools for brainstorming, debugging, or refining their code.
-- #### Reflect on AI’s role in their project and discuss its ethical implications.
+- #### Overall, the project communicates ideas clearly through different media. 
+- #### Artifacts are creative, thoughtful, and support understanding of issues and solutions.
 
 
 </p></div>
@@ -84,7 +87,8 @@ markdown <<MARKDOWN
 
 ---
 
-#### This project allows students to apply their coding skills creatively while practicing structured problem-solving, peer collaboration, and responsible AI use.
+#### These requirements come from the  <a href="https://docs.google.com/document/d/1VgnmVktQ4_Kq4yWKW9v4xvuvNRTFfL1KIuRcFrSx2GQ/edit?usp=sharing" target="blank" rel="noopener noreferrer">rubric</a> located at the end of the project guide. 
 
-![]()
+## Next up
+#### Let's examine the project guide and briefly look at the day by day plan for facilitating this project.
 MARKDOWN

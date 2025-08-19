@@ -3,32 +3,36 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Encryption
+# The Day Everything Broke Comic
 
-#### What if instead of shifting the whole alphabet, we matched every letter of the alphabet to a random different letter of the alphabet? This is called a **random substitution cipher**.
+#### Jordan is a 10th grader with a big day ahead. A paper is due, a test is scheduled, and he's part of the planning committee for the school talent show. But from the moment school starts, everything begins to unravel.
+
+<br>
+
+<p align="center">
+<img src="https://images.code.org/2d6ef03c89b7375b3ddd58cd19f8adc4-Screenshot 2025-08-15 at 12.19.10 PM.png" alt="lesson plan diagram" width="90%" style="border-radius:10px; border: 5px solid black;">
+</p>
+
+
+
 
 ## 📝 To Do
 
-#### Explore the widget for decrypting a random substitution cipher in the next level. While you're exploring think about: *How does the widget work? What steps would you take to crack the code?*
+#### *What Went Wrong?* Pick two failure scenarios. For each failure you picked, use the checklist below to figure out possible causes and reflect on what you think happened.
+
+* #### Password was entered wrong
+* #### System didn’t recognize the account
+* #### Password reset link never arrived
+* #### Too many login attempts
+* #### System was busy or too slow
+* #### Multi-factor login didn’t go through
+* #### Email system blocked
+* #### IT system was busy or too slow
 
 <br>
 
 <p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
-    ➡️ This activity is from Lesson 8. You can find more details in the full <a href='https://studio.code.org/s/aif5-2025/lessons/8' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a>.
+    ➡️ This activity is from Lesson 1. You can find more details in the full <a href='https://studio.code.org/s/aif5-2025/lessons/8' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a>.
 </p>
-
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">🧐 Hint
-</summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
-    <p>
-
-####Here are some steps that may be helpful:
-* #### Find the short words and "crack" them first. How many one-letter words do you know? ("a"). A very common 3-letter word is "the".
-* #### Once you've done that, you have substitutes for some of the most common letters. You should be able to use intuition to look at other words with these partial substitutions and make good guesses.
-* #### After finding only a handful of hard-fought letters, the rest will tumble quickly.
-* #### Comparing the frequencies of letters gives good insight for making sensible guesses.
-</p></div>
-</details>
 
 MARKDOWN

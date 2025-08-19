@@ -1,0 +1,124 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2025-08-15T18:44:53.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "#### MC Hammer \"U Can't Touch This\"\r\n\r\nRecreate this portion of the song using what you know about sequencing sounds and playing them together.\r\n\r\n**Prepare:**\r\n1) Listen to the song in the music player. \r\n2) Use the timeline image below as reference. \r\n\r\n**Try:**\r\n3) Build the song with your own code. \r\n\r\n![](https://images.code.org/9e8eea870516b1c2cedf253671949ac5-image-1751061665556.png)",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "sounds": {
+        "mc_hammer_u_cant_touch_this": [
+          "stop_hammer_time",
+          "verse_1",
+          "beat",
+          "main_loop",
+          "oohs",
+          "chopped_oohs"
+        ]
+      },
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2",
+            "play_rest_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together",
+            "play_sounds_sequential"
+          ]
+        },
+        "type": "flyout"
+      },
+      "packId": "mc_hammer_u_cant_touch_this",
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false
+            }
+          ]
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "toolboxDefinition": {
+        "contents": [
+          {
+            "kind": "block",
+            "type": "play_sound_at_current_location_simple2",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "sound": "shakira_amarillo/vocals_chorus_1"
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_sounds_together",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_sounds_sequential",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "enabled": true
+          }
+        ],
+        "kind": "flyoutToolbox"
+      }
+    },
+    "display_name": "Create \"Can't Touch This\"",
+    "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/mc_hammer_u_cant_touch_this/mc_hammer_u_cant_touch_this.jpg",
+    "encrypted_exemplar_sources": "UGYNk6iye9eaFwUY05FzzO/7y8j7ObxryFbKvBPuF528qP4MtsSFqDeG//aJ\nl0T6UI7wWB0H/J+Euq0wtMrnfZIv4KqNWq5gtmuW8ushzt6HJzSVh89nAJ/g\nqoY+ihv6+zHmlLE8msmvDlVnBRmpwSSug3q+SpkXFur9+w3vOPL1o8LhfdJB\n0ep9sKAPNFreeEGpfNaTHyeEek22ZDpwo5g1/91laRFZXLJ3ObFQkI2Mi/SF\neThQ1zPNuOEggHor/cwejr3U15rWOIkH8dDTLeaAYtCh7rvJ4qD5+CIxST8J\npo8kSQgyagj1EJLvspYYvNN+C42EulEajD2oWfRHGGA3n2ORyT1fkUnJwUEk\nEVr+wsEU5TxhwSYhEAsMx7EeClCeRTPBSgHFucRY8Y8Y7G4vFihRjlh7WWLb\nFPmX0kB39aJWwQudFt6cA9gt9OEG+WAOAh81CSrlZ44lhLIcuUt/8EdA9zyy\nWljXliwSBbvKaLbuQNWCsQ8Vy7soe371CviWfgXZZSZ4oHKJXtYMiyI5h/Ko\nnE4/sPZp1tJTVYuEUwtSGWMg4xcwClrL7hhjptE7xS2uJ8cIjRfKW93wESM4\na78F4+pgjs7l0AnnDD+2JenFYm/c8LsPNTS+eDJaJFR8ZJFgs+e3X3HKIPp0\nFBpmXA1gTOSfSmMGfrUgXd0rZv87dEcFpvIt+43iTA8Df7W1IYNN+VYNAI4t\nc+DwX2fPvwX/LsDTrGPfwdrHDfT9w/+pd4J72pQQHJu/pCZwJ4fG55GKBzyV\n8y8qF2Vruv4UjmX2B3e9QAhb+mHd1i85df9x3OrEJgwfWO1HlmX5jjO56AxK\n1qNdRW5mhnuNYbq4QaspqG5oqqCRHs4DeI4JPMQDkF63hYG1oGTJwu1jX3mj\nLL1yD4MDpwaH93fyKxX+2M5PddNCTGhLNpKR8Pwzixk4zkOSygO5H/iX4WwQ\nX+kF4H+U8TCnlUOXUcy4PyG3uILF3VSgF/Bsbn9Tvm3YaO8Lp++avZcphqG6\nwXczhhd9hOwt990uZj9kKspU8odnyKO3hDgtLJolPTeWCQIa/5L2qu719qZz\nzjZG9r04RcZEtLXwIa/3h1qsqGSSEIJGD5hpH8IHYv3snrK31pB8bC1FSeBU\nt+8CIcFhzDhZzlSIQ6Y35MJUKQGoHgB2DokfcWNkazIUXYP6hwmsYOBuYPWF\nTDdtje9TZJ+lt7svUTaLUxuEgBaN6Ey7lZ2IlC+BY3kmYbfky3hS2vDKfRgB\nMoTmJiOg1xTRMmpwab/Sxb8LcWc+FXBUcPBf0fHqnOlMPD+EIpfGPEMukQTM\nA9w8M0acCHgYjaQroYle6MIRF+bj7hhxuHE1Tgb3SU6XqDDm1N2rgeLWK+qj\nLWbm3+gvGt9e7pziPCE/2SoitEXI7Ggb3XID/Lhh8/aVO8/wIum15Gm+4A8F\nLoGegDr6YFISq54yBJihI3UYJ8YTe2NqFL0LhnZ3th1sYbVPdu0Dql/o8Ijh\nbK2aVR9ryEHusWwjETk00GXd0IclHlCWt6vtZ9QIVu+3PUPFqc7ckLq6cd50\nj5kvKmPU2XaX4PjUjfhiERh+rk2IardD3wMSYeNH4qmHmG8NNlbBavDiUMbx\nr95hOFU2S9bT11Yfk+gtaNIzry3JBQkLziR0LjsNJhq5HnCD5QuWw/8MBPeb\nWKyTIiZB95v+DKgao/8/59puG4nlJaznMgtSmRRbIAUyZUjVPMGQhNtKmKuA\nmvInQOtlQsjuMGFrWOXzLd2Zt4oUVx3AehZpmPVTl5XbZ5Wndf6+u97A0x+n\ncOhETvKWctdhrifsA5qMWQB4wdR6tW2oKM7bYKz3c5vJcbhFpZX7onwKyFCT\nOdo/S5ktWE3D1BrIPPES5GBxgRklxrAFg6KEYNqpwa8Xcfwg61gU1rCpAkYm\n7WkpK/VRP4AaAbV88R0+y8gMf3zBeD/5/JPUVIjNPN/1ymvnE7NW+7YHH+bB\nk1mbGWClinhtJi5RuEdzMF8Lv0tYwWTB7q9pdqtdFPSBZEoBB+Bm10Lab2sU\nookK3qtlgdFNwT4jB3rqPTctp6LTV0W6gqmQDi40fZIleOEsFdc=\n",
+    "validations": [
+      {
+        "key": "test-music-lab-sequences-practice-artist-choice-c_ee2214c2-b209-4132-99c6-ad07c1c7c2ed",
+        "message": "",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 4
+          }
+        ]
+      }
+    ],
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": true,
+      "validationSuccessMessage": "Great work ordering those sounds. That was a tricky one! ",
+      "validationFailureMessage": "Remember, you can use `play together` inside a `play sequential` block. ",
+      "playerTitle": "U Can't Touch This",
+      "validationMode": "default"
+    },
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "name_suffix": "_bash",
+    "bubble_choice_description": "Use what you know about sequencing to create this portion of MC Hammer's \"You Can't Touch This\".",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-08-15T18:44:53.025+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-practice-artist-choice-d_v2\\\"\"],\"cloned_from\":\"test-music-lab-sequences-practice-artist-choice-d_v2\"}]"
+}]]></config>
+  <blocks/>
+</Music>

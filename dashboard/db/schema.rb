@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2025_08_13_180707) do
+ActiveRecord::Schema.define(version: 2025_08_15_132016) do
 
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -534,14 +534,13 @@ ActiveRecord::Schema.define(version: 2025_08_13_180707) do
     t.string "key", null: false
     t.string "display_name", null: false
     t.text "properties"
-    t.string "content_root_type", null: false
     t.integer "content_root_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "course_offering_id"
     t.string "published_state", default: "in_development"
-    t.index ["content_root_type", "content_root_id"], name: "index_course_versions_on_content_root_type_and_content_root_id"
-    t.index ["course_offering_id", "key", "content_root_type"], name: "index_course_versions_on_offering_id_and_key_and_type", unique: true
+    t.index ["content_root_id"], name: "index_course_versions_on_content_root_id"
+    t.index ["course_offering_id", "key"], name: "index_course_versions_on_offering_id_and_key", unique: true
     t.index ["course_offering_id"], name: "index_course_versions_on_course_offering_id"
   end
 

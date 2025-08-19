@@ -7,6 +7,7 @@ import {
 } from '@cdo/apps/assetManagement/animationLibraryApi';
 import {PICKER_TYPE} from '@cdo/apps/p5lab/AnimationPicker/AnimationPicker';
 import AnimationPickerBody from '@cdo/apps/p5lab/AnimationPicker/AnimationPickerBody.jsx';
+import {getSerializedAnimationList} from '@cdo/apps/p5lab/shapes';
 import color from '@cdo/apps/util/color';
 import {createUuid} from '@cdo/apps/utils';
 
@@ -165,7 +166,13 @@ export default class SelectStartAnimations extends React.Component {
           {this.displayAnimationPickerBody(this.state.libraryManifest)}
         </div>
         <h2>Generated Animation JSON:</h2>
-        <p>{JSON.stringify({orderedKeys, propsByKey})}</p>
+        <pre className={moduleStyles.jsonPre}>
+          {JSON.stringify(
+            getSerializedAnimationList({orderedKeys, propsByKey}),
+            null,
+            2
+          )}
+        </pre>
       </React.Fragment>
     );
   }
