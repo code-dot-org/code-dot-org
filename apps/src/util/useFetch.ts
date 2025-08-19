@@ -8,7 +8,7 @@ interface BaseFetchState<T> {
   status: number | null;
 }
 
-type UseFetchResult<T> = BaseFetchState<T> & {
+export type UseFetchResult<T> = BaseFetchState<T> & {
   refetch: () => void;
 };
 

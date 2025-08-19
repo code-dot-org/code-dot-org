@@ -1,6 +1,7 @@
 import moment from 'moment-timezone';
 
 import {DATE_FORMAT, DATETIME_FORMAT, TIME_FORMAT} from '../workshopConstants';
+import {WorkshopData} from '../workshops/types';
 
 import {isOption, Option} from './components/MultiSelectInput';
 import {
@@ -11,6 +12,8 @@ import {
   DestroyedSession,
   SessionRequest,
   WorkshopRequest,
+  Enrollment,
+  EnrollmentData,
 } from './types';
 
 export const workshopLabel = (label: string): string =>
@@ -182,3 +185,55 @@ export const emptyValue = (
       return true;
   }
 };
+
+export const workshopDataToProps = (apiData: Workshop): WorkshopData => ({
+  id: apiData.id,
+  state: apiData.state,
+  timeZone: apiData.time_zone,
+  name: apiData.name,
+  course: apiData.course,
+  subject: apiData.subject,
+  courseOfferingNames: apiData.course_offering_names,
+  sessions: apiData.sessions.map(session => ({
+    id: session.id,
+    start: session.start,
+    end: session.end,
+    sessionFormat: session.session_format,
+    locationName: session.location_name,
+    locationAddress: session.location_address,
+    meetingLink: session.meeting_link,
+    code: session.code,
+    showLink: session['show_link?'] ?? false,
+    attendanceCount: session.attendance_count,
+  })),
+  facilitators: apiData.facilitators.map(facilitator => ({
+    id: facilitator.id,
+    name: facilitator.name,
+    email: facilitator.email,
+  })),
+  regionalPartnerName: apiData.regional_partner_name,
+  accountRequiredForAttendance:
+    apiData['account_required_for_attendance?'] ?? false,
+  readyToClose: apiData['ready_to_close?'] ?? false,
+  registrationLink: apiData.registration_link,
+  createdAt: apiData.created_at,
+  enrolledTeacherCount: apiData.enrolled_teacher_count,
+  hidden: apiData.hidden,
+});
+
+export const enrollmentDataToProps = (
+  apiResults: Enrollment[]
+): EnrollmentData[] =>
+  apiResults.map(apiData => ({
+    id: apiData.id,
+    givenName: apiData.user_info.given_name ?? apiData.first_name ?? '',
+    familyName: apiData.user_info.family_name ?? apiData.last_name ?? '',
+    email: apiData.user_info.email ?? apiData.email ?? '',
+    schoolName: apiData.user_info.school_name ?? apiData.school ?? '',
+    districtName:
+      apiData.user_info.district_name ?? apiData.district_name ?? '',
+    role: apiData.user_info.role ?? apiData.role ?? '',
+    userId: apiData.user_id,
+    attendances: apiData.attendances,
+    enrolledDate: apiData.enrolled_date,
+  }));

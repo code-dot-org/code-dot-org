@@ -68,27 +68,9 @@ export interface HeaderProps extends HTMLAttributes<HTMLElement> {
   hamburgerLinks: HamburgerMenuProps['hamburgerLinks'];
   /** Header custom class name */
   className?: string;
+  /** Is the user signed in? */
+  isSignedIn?: () => Promise<boolean>;
 }
-const fetchUserSignedInStatus = async (studioBaseUrl: string) => {
-  try {
-    const signedInStatus = await fetch(
-      `${studioBaseUrl}/api/v1/users/signed_in`,
-      {
-        credentials: 'include',
-      },
-    );
-
-    if (!signedInStatus.ok) {
-      throw new Error(
-        `Received HTTP Code ${signedInStatus.status} while fetching signed in status`,
-      );
-    }
-
-    return await signedInStatus.json();
-  } catch (error) {
-    console.error('There was a problem with the fetch operation:', error);
-  }
-};
 
 /**
  * ## Production-ready Checklist:
@@ -104,7 +86,6 @@ const fetchUserSignedInStatus = async (studioBaseUrl: string) => {
  * Acts as the main page header navigation.
  */
 const Header: React.FC<HeaderProps> = ({
-  studioBaseUrl,
   homeLink,
   logo,
   navLabel,
@@ -118,6 +99,7 @@ const Header: React.FC<HeaderProps> = ({
   helpLinks,
   hamburgerButtonLabel,
   hamburgerLinks,
+  isSignedIn,
   className,
   ...HTMLAttributes
 }) => {
@@ -126,35 +108,19 @@ const Header: React.FC<HeaderProps> = ({
   >('loading');
 
   useEffect(() => {
-    async function getUserStatus() {
-      try {
-        const data = await fetchUserSignedInStatus(studioBaseUrl);
-        if (data) {
-          const isSignedIn = data.is_signed_in;
-
-          if (isSignedIn) {
-            const paths = window.location.pathname?.split('/').filter(Boolean);
-
-            if (paths.length === 0 || paths.length === 1) {
-              // If the user is signed in and on the home page, redirect to dashboard
-              // If parts.length === 0, then they are on code.org
-              // If parts.length === 1, then they are on a localized home page path like code.org/en-US
-              window.location.href = `${studioBaseUrl}`;
-            }
-          }
-
-          const renderState = isSignedIn ? 'signedIn' : 'signedOut';
-          setRenderState(renderState);
-        } else {
-          setRenderState('error');
-        }
-      } catch (error) {
-        console.error('Error fetching user signed in status:', error);
-      }
+    if (isSignedIn === undefined) {
+      setRenderState('signedOut');
+      return;
     }
 
-    getUserStatus();
-  }, [studioBaseUrl]);
+    isSignedIn()
+      .then(isUserSignedIn => {
+        setRenderState(isUserSignedIn ? 'signedIn' : 'signedOut');
+      })
+      .catch(() => {
+        setRenderState('error');
+      });
+  }, []);
 
   return (
     <header

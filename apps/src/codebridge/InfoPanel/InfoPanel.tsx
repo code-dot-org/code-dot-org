@@ -1,7 +1,6 @@
 import Button from '@code-dot-org/component-library/button';
 import React, {useEffect, useState} from 'react';
 
-import {setShowSuggestedPrompts} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import lab2I18n from '@cdo/apps/lab2/locale';
 import {
@@ -88,6 +87,10 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
   const hasLoadedEnvironment = useAppSelector(
     state => state.lab2System.loadedCodeEnvironment
   );
+  // Web Lab 2 uses the resource panel by default, otherwise we defer to the experiment flag.
+  const useResourcePanel =
+    appName === 'weblab2' ||
+    experiments.isEnabledAllowingQueryString(experiments.LAB2_RESOURCE_PANEL);
 
   useEffect(() => {
     // For now, always include Instructions panel.
@@ -159,7 +162,6 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
         dispatch(setIsValidating(false))
       );
       dispatch(setHasValidated(true));
-      dispatch(setShowSuggestedPrompts(true));
     } else {
       CodebridgeRegistry.getInstance()
         .getConsoleManager()
@@ -183,9 +185,7 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
     }
   };
 
-  if (
-    experiments.isEnabledAllowingQueryString(experiments.LAB2_RESOURCE_PANEL)
-  ) {
+  if (useResourcePanel) {
     return (
       <div style={style} className={className}>
         <ResourcePanel

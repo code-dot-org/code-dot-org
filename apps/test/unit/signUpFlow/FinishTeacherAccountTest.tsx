@@ -10,6 +10,8 @@ import locale from '@cdo/apps/signUpFlow/locale';
 import {
   ACCOUNT_TYPE_SESSION_KEY,
   EMAIL_SESSION_KEY,
+  GIVEN_NAME_SESSION_KEY,
+  FAMILY_NAME_SESSION_KEY,
   MAX_DISPLAY_NAME_LENGTH,
   SCHOOL_ID_SESSION_KEY,
   SCHOOL_NAME_SESSION_KEY,
@@ -161,6 +163,17 @@ describe('FinishTeacherAccount', () => {
     expect(navigateToHrefMock).toHaveBeenCalledWith(
       `/users/sign_up/login_type?user_type=${UserTypes.TEACHER}`
     );
+  });
+
+  it('prepopulates first and last names from sessionStorage if available from SSO or LTI provider', async () => {
+    const givenName = 'FakeGivenName';
+    const familyName = 'FakeFamilyName';
+    sessionStorage.setItem(GIVEN_NAME_SESSION_KEY, givenName);
+    sessionStorage.setItem(FAMILY_NAME_SESSION_KEY, familyName);
+    await waitFor(renderDefault);
+
+    screen.getByDisplayValue(givenName);
+    screen.getByDisplayValue(familyName);
   });
 
   it('renders finish teacher account page with school zip when usIp is true', async () => {

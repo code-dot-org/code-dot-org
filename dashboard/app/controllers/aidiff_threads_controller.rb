@@ -55,7 +55,7 @@ class AidiffThreadsController < ApplicationController
     render json: @aidiff_thread.summarize_with_messages
   end
 
-  # POST /ai_diff/curriculum_courses
+  # POST /aidiff_threads/curriculum_courses
   def curriculum_courses
     unless validate_context?
       return render status: :bad_request, json: {}

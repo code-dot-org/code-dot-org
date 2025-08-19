@@ -21,3 +21,8 @@ export interface RubricData {
   rubric: Rubric;
   canShowTaScoresAlert: boolean;
 }
+export interface TeacherEvaluations {
+  id: number;
+  feedback: string | null;
+  understanding: number | null;
+}

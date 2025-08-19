@@ -310,6 +310,8 @@ en:
       The tutorials are fun, visually engaging, and teach the basic concepts of computer science using a simple, guided, game-like experience. Learn to code from Bill Gates, Mark Zuckerberg, Angry Birds, and Plants vs. Zombies! :-)
 
       %{name}
+  inactive_user_purge_mailer:
+    teacher_soft_delete_warning_subject: 'Action Required: Your Code.org Account Will Be Deleted Due to Inactivity'
   parent_mailer:
     student_associated_subject: 'Login information for Code.org'
     parent_email_added_subject: 'Welcome to Code.org!'

@@ -557,6 +557,7 @@ class Ability
         Lesson,
         ReferenceGuide,
         ScriptLevel,
+        TeacherFeedback,
         UserLevel,
         UserScript,
         DataDoc,

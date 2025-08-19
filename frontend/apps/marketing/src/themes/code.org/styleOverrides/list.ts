@@ -10,14 +10,12 @@ export const LIST_OVERRIDES: Components<Theme>['MuiList'] = {
       padding: 0,
       paddingInlineStart: theme.spacing(2.5), // 20px
       gap: '0.5rem',
-      '&.MuiList-root': {
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'flex-start',
-        margin: theme.spacing(2, 0, 0),
-        '&:first-child, &:empty': {
-          margin: 0,
-        },
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'flex-start',
+      margin: theme.spacing(2, 0, 0),
+      '&:first-child, &:empty': {
+        margin: 0,
       },
     }),
   },

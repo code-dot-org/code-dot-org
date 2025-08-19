@@ -6,20 +6,29 @@ export const COPYRIGHT_TEXT = 'All rights reserved';
 
 // Main site links
 export const SITE_LINKS = [
-  {key: 'issues', label: 'Issues', href: '/issues'},
+  {key: 'initiatives', label: 'Initiatives', href: '/initiatives'},
   {key: 'take-action', label: 'Take Action', href: '/take-action'},
   {key: 'hour-of-ai', label: 'Hour of AI', href: '/hour-of-ai'},
-  {
-    key: 'donate',
-    label: 'Donate',
-    href: 'https://donate.code.org/campaign/708610/donate',
-  },
+  // Marketing does not have permission to collect donations yet
+  //{ key: 'donate', label: 'Donate', href: 'https://donate.code.org/campaign/708610/donate',},
   {
     key: 'news-and-resources',
     label: 'News & Resources',
-    href: '/news-and-resources',
+    href: '/news',
   },
   {key: 'privacy-policy', label: 'Privacy Policy', href: '/privacy-policy'},
+  {
+    key: 'manage-cookies',
+    label: 'Manage Cookies',
+    href: '/cookies',
+    onClick: (e: React.MouseEvent<HTMLAnchorElement>) => {
+      if (window?.OneTrust) {
+        e.preventDefault();
+        // Displays the OneTrust cookie dialog
+        window.OneTrust.ToggleInfoDisplay();
+      }
+    },
+  },
 ];
 
 // Social media links
@@ -27,13 +36,13 @@ export const SOCIAL_LINKS = [
   {
     key: 'x-twitter',
     label: 'X',
-    href: 'https://x.com/codeorg',
+    href: 'https://x.com/csforall',
     icon: <XIcon />,
   },
   {
     key: 'linkedin',
     label: 'LinkedIn',
-    href: 'https://linkedin.com/company/code-org',
+    href: 'https://www.linkedin.com/company/csforall',
     icon: <Linkedin />,
   },
 ];

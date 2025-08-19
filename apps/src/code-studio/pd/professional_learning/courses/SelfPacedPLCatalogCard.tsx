@@ -50,14 +50,14 @@ const SelfPacedPLCatalogCardInitial: React.FunctionComponent<
           />
         </>
       }
-      relatedProposalsHeader="Facilitated workshops"
-      // TODO: Should be updated in scope of [ACQ-3455](https://codedotorg.atlassian.net/browse/ACQ-3435)
-      relatedProposalsContent="[HARDCODED]"
+      // relatedProposalsHeader="Facilitated workshops"
+      // TODO: Should be updated in scope of [ACQ-3435](https://codedotorg.atlassian.net/browse/ACQ-3435)
+      // relatedProposalsContent=""
       onCloseExpandedCard={() => updateExpandedCardKey(courseOffering.key)}
       expandedCardActionRowContent={
         <>
           <LinkButton
-            text="Start professional Learning"
+            text="Start professional learning"
             href={courseOffering.course_version_path}
             color={buttonColors.purple}
             size="m"

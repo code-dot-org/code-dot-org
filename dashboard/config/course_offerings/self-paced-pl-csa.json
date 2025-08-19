@@ -3,19 +3,21 @@
   "display_name": "CSA Getting Started Modules",
   "is_featured": false,
   "assignable": true,
-  "curriculum_type": "Professional Learning",
+  "curriculum_type": null,
   "marketing_initiative": null,
   "grade_levels": null,
-  "header": "self_paced",
+  "header": "teacher_led",
   "image": null,
-  "cs_topic": null,
+  "cs_topic": "programming",
   "school_subject": null,
   "device_compatibility": null,
   "description": null,
   "professional_learning_program": "https://code.org/apply",
   "video": null,
   "published_date": null,
-  "self_paced_pl_course_offering_key": null,
+  "self_paced_pl_course_offering_key": "self-paced-pl-csa",
   "ai_teaching_assistant_available": false,
-  "facilitator_course_permissions": null
+  "facilitator_course_permissions": [
+
+  ]
 }

@@ -490,10 +490,6 @@ disable_s3_image_uploads: false
 
 channels_api_secret: !Secret
 
-# Whether to prefix bundler commands with 'sudo'.
-# It may be useful to set this false when doing local development on Linux.
-bundler_use_sudo: <%=chef_managed%>
-
 daemon: <%=name == 'production-daemon'%>
 image_optim: <%=chef_managed && !ci_test%>
 
