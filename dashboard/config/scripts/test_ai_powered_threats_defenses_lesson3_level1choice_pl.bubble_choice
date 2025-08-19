@@ -1,10 +1,10 @@
 name 'test-ai-powered-threats-defenses-lesson3-level1choice-pl'
-display_name 'User Profiles'
-description 'Choose a user persona and go through their social media posts to see what type of information they shared about themeslves.'
+display_name 'Phishing Attacks'
+description 'Choose a user persona to learn about how do cyber attacks exploit human vulnerabilities, i.e. trust, emotion, and predictable behavior.'
 
 sublevels
-level 'test-ai-powered-threats-defenses-lesson3-level1a'
-level 'test-ai-powered-threats-defenses-lesson3-level1b'
-level 'test-ai-powered-threats-defenses-lesson3-level1c'
-level 'test-ai-powered-threats-defenses-lesson3-level1d'
+level 'test-ai-powered-threats-defenses-lesson3-level1-pl'
+level 'test-ai-powered-threats-defenses-lesson3-level1b-pl'
+level 'test-ai-powered-threats-defenses-lesson3-level1c-pl'
+level 'test-ai-powered-threats-defenses-lesson3-level1d-pl'
 

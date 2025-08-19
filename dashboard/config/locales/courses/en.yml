@@ -6287,3 +6287,9 @@ en:
           description_student: ''
           description_teacher: ''
           version_title: "'25-'26"
+        musiclab-instructions-bash:
+          title: Musiclab Instructions Bash
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
