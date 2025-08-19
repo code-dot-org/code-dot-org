@@ -372,7 +372,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     workshop = create(:workshop, :ended)
 
     create(:pd_workshop_participant, workshop: workshop, enrolled: true)
-    Pd::Workshop.any_instance.expects(:send_teacher_post_workshop_survey_email).never
+    Pd::WorkshopMailjetMailer.expects(:send_teacher_post_workshop_survey).never
 
     workshop.send_exit_surveys
   end
@@ -386,7 +386,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     create(:pd_attendance_no_account, session: workshop.sessions.first, enrollment: enrollment)
 
     refute workshop.account_required_for_attendance?
-    Pd::Workshop.expects(:send_teacher_post_workshop_survey_email)
+    Pd::WorkshopMailjetMailer.expects(:send_teacher_post_workshop_survey).times(1)
 
     workshop.send_exit_surveys
   end
@@ -398,7 +398,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     create(:pd_workshop_participant, workshop: workshop, enrolled: true, attended: true)
 
     assert workshop.account_required_for_attendance?
-    Pd::Workshop.expects(:send_teacher_post_workshop_survey_email).times(1)
+    Pd::WorkshopMailjetMailer.expects(:send_teacher_post_workshop_survey).times(1)
 
     workshop.send_exit_surveys
   end
@@ -412,7 +412,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     create(:pd_workshop_participant, workshop: workshop, enrolled: true, attended: true)
 
     # Ensure no exit surveys are sent
-    Pd::Workshop.expects(:send_teacher_post_workshop_survey_email).never
+    Pd::WorkshopMailjetMailer.expects(:send_teacher_post_workshop_survey).never
     workshop.send_exit_surveys
   end
 
@@ -423,7 +423,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     create(:pd_workshop_participant, workshop: workshop, enrolled: true, attended: true)
 
     # Ensure no exit surveys are sent
-    Pd::Workshop.expects(:send_teacher_post_workshop_survey_email).never
+    Pd::WorkshopMailjetMailer.expects(:send_teacher_post_workshop_survey).never
     workshop.send_exit_surveys
   end
 
@@ -434,7 +434,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     create(:pd_workshop_participant, workshop: workshop, enrolled: true, attended: true)
 
     # Ensure no exit surveys are sent
-    Pd::Workshop.expects(:send_teacher_post_workshop_survey_email).never
+    Pd::WorkshopMailjetMailer.expects(:send_teacher_post_workshop_survey).never
     workshop.send_exit_surveys
   end
 
@@ -443,7 +443,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     create(:pd_workshop_participant, workshop: workshop, enrolled: true, attended: true)
     workshop.enrollments.first.update!(survey_sent_at: Time.zone.today)
 
-    Pd::Workshop.expects(:send_teacher_post_workshop_survey_email).never
+    Pd::WorkshopMailjetMailer.expects(:send_teacher_post_workshop_survey).never
 
     workshop.send_exit_surveys
   end
@@ -455,7 +455,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     enrollment = create(:pd_enrollment, application_id: application.id, user: teacher, workshop: summer_workshop)
     create(:pd_attendance, session: summer_workshop.sessions.first, teacher: teacher, enrollment: enrollment)
 
-    Pd::Workshop.expects(:send_teacher_post_workshop_survey_email).times(2)
+    Pd::WorkshopMailjetMailer.expects(:send_teacher_post_workshop_survey).times(2)
 
     summer_workshop.send_exit_surveys
   end

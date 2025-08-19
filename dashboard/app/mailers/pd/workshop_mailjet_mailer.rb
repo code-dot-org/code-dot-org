@@ -34,6 +34,25 @@ class Pd::WorkshopMailjetMailer
     retryable_send_email('teacher_workshop_reminder', email, user.friendly_name, email_vars)
   end
 
+  def self.send_teacher_post_workshop_survey(enrollment, user, use_alternate_email)
+    workshop = enrollment.workshop
+    organizer = workshop.organizer
+    regional_partner = workshop.regional_partner
+    email = use_alternate_email ? user.alternate_email : user.email
+    email_vars = {
+      email_to: email,
+      name: user.given_name || user.name,
+      exit_survey_url: enrollment.exit_survey_url,
+      download_certificate_url: CDO.studio_url("/pd/generate_workshop_certificate/#{enrollment.code}", CDO.default_scheme),
+      rp_email: regional_partner&.contact_email_with_backup,
+      rp_name: regional_partner&.name,
+      organizer_email: organizer&.email,
+      organizer_name: organizer&.name
+    }
+
+    retryable_send_email('teacher_post_workshop_survey', email, user.friendly_name, email_vars)
+  end
+
   private_class_method def self.retryable_send_email(email_name, email, name, vars)
     Retryable.retryable(
       on: RestClient::TooManyRequests,
