@@ -7,6 +7,7 @@ import {
   SessionFormat,
   Workshop,
   WorkshopState,
+  SurveySummary,
 } from '../WorkshopFormTemplate/types';
 
 export interface WorkshopSession {
@@ -56,6 +57,10 @@ export interface WorkshopContextValue {
   enrollmentsLoading: UseFetchResult<EnrollmentData[]>['loading'];
   enrollmentsError: UseFetchResult<EnrollmentData[]>['error'];
   refetchEnrollments: UseFetchResult<EnrollmentData[]>['refetch'];
+  surveys: SurveySummary | null;
+  surveysLoading: UseFetchResult<SurveySummary>['loading'];
+  surveysError: UseFetchResult<SurveySummary>['error'];
+  refetchSurveys: UseFetchResult<SurveySummary>['refetch'];
 }
 
 export interface TabConfig {

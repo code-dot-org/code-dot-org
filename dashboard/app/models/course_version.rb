@@ -16,7 +16,7 @@
 #
 #  index_course_versions_on_content_root_id      (content_root_id)
 #  index_course_versions_on_course_offering_id   (course_offering_id)
-#  index_course_versions_on_offering_id_and_key  (course_offering_id,key)
+#  index_course_versions_on_offering_id_and_key  (course_offering_id,key) UNIQUE
 #
 
 class CourseVersion < ApplicationRecord

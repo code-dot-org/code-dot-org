@@ -1,0 +1,2598 @@
+{
+  "script": {
+    "name": "musiclab-instructions-bash",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "is_migrated": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2025-08-15 18:45:37 UTC",
+    "hide_within_course": false,
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "musiclab-instructions-bash"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Sequencing - Explore",
+      "name": "Sequencing - Explore",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+        "announcements": [
+          {
+            "key": "2f635d5a-70b6-4f4f-808e-8c42df337e21",
+            "notice": "Just-In-Time Professional Learning",
+            "details": "About to start these lessons on Sequencing? Feel prepared by reviewing our Self-Paced Professional Learning specifically for these lessons - in under 30 minutes!",
+            "link": "https://studio.code.org/s/self-paced-pl-teaching-computer-science-discoveries-music-lab/lessons/2/levels/1",
+            "type": "information",
+            "visibility": "Teacher-only",
+            "dismissible": false,
+            "buttonText": "Start Now!"
+          }
+        ],
+        "overview": "Students are introduced to sequencing by following step-by-step instructions to build a song. They learn how to layer tracks and use blocks like play together to combine sounds. Teachers guide discussions, highlight patterns, and encourage students to make predictions before running code.",
+        "preparation": "- Review the levels from the curriculum and their example solutions. [Click here to see how to access example solutions](https://www.loom.com/share/36ee8c6709aa4e8dbe2449103e1b07be). \n\n- Print out the [Sequencing Cheat Sheet](https://drive.google.com/file/d/1wO6RJOBslmoDm2Wwua50BW2v6XpShcuV/view) to keep handy while reviewing students’ work on Check-In and Assessment levels"
+      },
+      "seeding_key": {
+        "lesson.key": "Sequencing - Explore",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash"
+      }
+    },
+    {
+      "key": "Sequencing - Practice",
+      "name": "Sequencing - Practice",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+        "overview": "Students practice sequencing by combining tracks of different lengths and adding rests to create offsets. Working in pairs, they apply concepts from the Explore lesson and build fluency through guided challenges. Teachers circulate to support and adjust instruction as needed.",
+        "preparation": "- Review the levels from the curriculum and their example solutions. [Click here to see how to access example solutions](https://www.loom.com/share/36ee8c6709aa4e8dbe2449103e1b07be)."
+      },
+      "seeding_key": {
+        "lesson.key": "Sequencing - Practice",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash"
+      }
+    },
+    {
+      "key": "Mini Project: Walk-Up Songs",
+      "name": "Mini Project: Walk-Up Songs",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+        "overview": "Students create personalized walk-up songs for characters using everything they've learned about sequencing. They explore a new feature, triggers, to add flair and timing to their music. This creative project gives students space to express themselves while demonstrating mastery of key concepts.",
+        "preparation": "- Review the levels from the curriculum and their example solutions. [Click here to see how to access example solutions](https://www.loom.com/share/36ee8c6709aa4e8dbe2449103e1b07be)."
+      },
+      "seeding_key": {
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash"
+      }
+    },
+    {
+      "key": "Project: Genre Mash-Up",
+      "name": "Project: Genre Mash-Up",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+        "overview": "In this end-of-unit project, students select an existing song and remix it into a new genre using the structure of functions. They draw on skills from the entire unit to define musical sections, apply abstraction, and shift tone or style, just like real-world remix artists.",
+        "preparation": "- Review the levels from the curriculum and their example solutions. [Click here to see how to access example solutions](https://www.loom.com/share/36ee8c6709aa4e8dbe2449103e1b07be)."
+      },
+      "seeding_key": {
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "e3a3e829-edf6-4d44-b510-a92690d68943",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm-Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e3a3e829-edf6-4d44-b510-a92690d68943",
+        "lesson.key": "Sequencing - Explore",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash"
+      }
+    },
+    {
+      "key": "37df43a6-363d-45b7-827c-5b936f43e20b",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "37df43a6-363d-45b7-827c-5b936f43e20b",
+        "lesson.key": "Sequencing - Explore",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash"
+      }
+    },
+    {
+      "key": "fd2451a9-7a13-4c1c-afa9-7e5902283d7b",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap-Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fd2451a9-7a13-4c1c-afa9-7e5902283d7b",
+        "lesson.key": "Sequencing - Explore",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash"
+      }
+    },
+    {
+      "key": "d6fdd81a-7219-4098-8b5a-40a377c5f646",
+      "position": 4,
+      "properties": {
+        "name": "After the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d6fdd81a-7219-4098-8b5a-40a377c5f646",
+        "lesson.key": "Sequencing - Explore",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash"
+      }
+    },
+    {
+      "key": "1ad0c11b-ee45-4c44-a6a1-931839b7bef5",
+      "position": 1,
+      "properties": {
+        "name": "Before the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1ad0c11b-ee45-4c44-a6a1-931839b7bef5",
+        "lesson.key": "Sequencing - Practice",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash"
+      }
+    },
+    {
+      "key": "70700ca8-f016-4499-b5ec-813db0407fe6",
+      "position": 2,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "70700ca8-f016-4499-b5ec-813db0407fe6",
+        "lesson.key": "Sequencing - Practice",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash"
+      }
+    },
+    {
+      "key": "8d08f6c1-42dd-439c-9e32-9603be105271",
+      "position": 3,
+      "properties": {
+        "duration": 40,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8d08f6c1-42dd-439c-9e32-9603be105271",
+        "lesson.key": "Sequencing - Practice",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash"
+      }
+    },
+    {
+      "key": "045b2631-8b32-4ef1-acbb-a11a46f2159b",
+      "position": 1,
+      "properties": {
+        "name": "Before the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "045b2631-8b32-4ef1-acbb-a11a46f2159b",
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash"
+      }
+    },
+    {
+      "key": "20d838a3-386b-4646-80e1-bcae8e813e31",
+      "position": 2,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "20d838a3-386b-4646-80e1-bcae8e813e31",
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash"
+      }
+    },
+    {
+      "key": "2c7f5c74-874a-45cc-854d-1c03b4fa8bde",
+      "position": 3,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2c7f5c74-874a-45cc-854d-1c03b4fa8bde",
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash"
+      }
+    },
+    {
+      "key": "ccbb6724-6db1-4e75-b19d-19eebfbfbfeb",
+      "position": 4,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ccbb6724-6db1-4e75-b19d-19eebfbfbfeb",
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash"
+      }
+    },
+    {
+      "key": "8108e79d-7e6c-4d96-a494-7d53d4a30f88",
+      "position": 5,
+      "properties": {
+        "name": "After the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8108e79d-7e6c-4d96-a494-7d53d4a30f88",
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash"
+      }
+    },
+    {
+      "key": "5cf8c1c1-05bf-40ee-a029-2be2f3300ece",
+      "position": 1,
+      "properties": {
+        "name": "Before the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5cf8c1c1-05bf-40ee-a029-2be2f3300ece",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash"
+      }
+    },
+    {
+      "key": "33e269de-ee9b-4ebf-9969-5332bf613594",
+      "position": 2,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "33e269de-ee9b-4ebf-9969-5332bf613594",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash"
+      }
+    },
+    {
+      "key": "08ee4e73-b0fa-46fc-ac52-1803917fbf43",
+      "position": 3,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "08ee4e73-b0fa-46fc-ac52-1803917fbf43",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash"
+      }
+    },
+    {
+      "key": "9a548bde-f47e-4550-924a-6389fffb010b",
+      "position": 4,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9a548bde-f47e-4550-924a-6389fffb010b",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash"
+      }
+    },
+    {
+      "key": "974de133-f08f-4024-af6a-46f942aecd08",
+      "position": 5,
+      "properties": {
+        "name": "After the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "974de133-f08f-4024-af6a-46f942aecd08",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "183299b5-26e7-4f38-bd5b-fdbcd2a2f9d2",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Show the [Make Music, Learn Code](https://www.youtube.com/watch?v=GqlP5s7KTl4) video\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Think Pair Share:** After watching the video, silently brainstorm how music and technology work together how using computers to make music creates new opportunities for musicians. Then have student turn to a partner to share. Call on 2-3 groups to share their discussion. \n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Use this prompt to surface observations from the video about how music and technology are interconnected, such as designing songs fully \"within the box\". Extend the discussion to highlight areas that students may be excited by as they learn more about music lab.\n\n**Distribute:** [Problem Solving & Computational Thinking](https://docs.google.com/document/d/1b670YBrm2H0PwBKAVoef7lfdsI3ci5SYJz9zWnWTiRI/template/preview) resource. Students will use this resource to follow a clear problem-solving process and apply computational thinking strategies at each step to solve complex problems effectively.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the four aspects of computational thinking:\n- **Algorithmic Thinking:** Going step-by-step to solve a problem\n- **Pattern Recognition:** Using similarities and patterns to solve a problem\n- **Abstraction:** Breaking down a problem into smaller pieces\n- **Decomposition:** Focusing on important details to solve a problem\n\n<i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> There are many ways music and technology are connected in real-life, but another important aspect is how musicians and computer scientists think about creating songs or solving problems. Throughout this unit, we're going to explore four key computational mindsets for how to create songs with code. Be on the lookout for these as we learn more about Music Lab today!",
+        "progression_name": "Make Music, Learn Code Video"
+      },
+      "seeding_key": {
+        "activity_section.key": "183299b5-26e7-4f38-bd5b-fdbcd2a2f9d2",
+        "lesson_activity.key": "e3a3e829-edf6-4d44-b510-a92690d68943"
+      }
+    },
+    {
+      "key": "5178980e-2e3c-4a7f-9d2f-7b7301d794a1",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students open the Explore level and read the instructions. Students are asked to complete a series of tasks to help them become familiar with navigating Music Lab. Give students time to explore and experiment on their own.",
+        "progression_name": "Explore"
+      },
+      "seeding_key": {
+        "activity_section.key": "5178980e-2e3c-4a7f-9d2f-7b7301d794a1",
+        "lesson_activity.key": "37df43a6-363d-45b7-827c-5b936f43e20b"
+      }
+    },
+    {
+      "key": "5e9f683f-9145-430f-be71-9da0a5a9a776",
+      "position": 2,
+      "properties": {
+        "description": "**Regroup:** As a class, go through each of the tasks in the level. Ask students to explain how they solved certain tasks before explaining yourself. Be sure to highlight that students can click on the <i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i> icons to see special callouts as hints within the level.\n\n[Click here to see a video of a curriculum team member exploring this level](https://www.loom.com/share/01b5fd8ef8f04002b09f61fbfdf6dc9a), highlighting each of the tasks in this level and additional features in music lab. You can decide how many of these features you would like to show to the whole class."
+      },
+      "seeding_key": {
+        "activity_section.key": "5e9f683f-9145-430f-be71-9da0a5a9a776",
+        "lesson_activity.key": "37df43a6-363d-45b7-827c-5b936f43e20b"
+      }
+    },
+    {
+      "key": "ff63ba4c-6dc0-4c30-865e-6f043df6acad",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students continue to the Predict level. Have students respond to the two questions within the level:\n- Write down anything you **notice** about the code\n- Make a **prediction** - what do you think will happen when you press Run?\n\nOnce students have made a prediction, they can press Run to see the result.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**No Wrong Answers** - These questions are intentionally structured to encourage \"no wrong answer\" thinking, which invites students to make unstructured observations and participate in class discussions. These predict levels are based on the PRIMM pedagogy for teaching coding, which shows increased engagement and ownership when students are asked to form hypotheses about code before seeing it in action. As you structure these discussions, ensure all students feel supported in participating and try to avoid confirming or denying any ideas and instead letting students make those observations themselves when running the code.\n\n**Music Terminology**- A shared vocabulary is the foundation of meaningful collaboration. The third page of this [Anchor Chart set](https://docs.google.com/presentation/d/12R4e0xxMFBbkyu4gaXbXfwyLba-OjivpRNggZlw8hiE/edit?usp=sharing) could be a powerful resource to share with students at this point. Additionally, the [Music Terms Glossary](https://docs.google.com/presentation/d/1wvllTFs0IBWJI8uzfUhuFW4mUYItUK5nmmVjArNRlCM/edit?usp=sharing) includes definitions and explanations to support instruction.  "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "ff63ba4c-6dc0-4c30-865e-6f043df6acad",
+        "lesson_activity.key": "37df43a6-363d-45b7-827c-5b936f43e20b"
+      }
+    },
+    {
+      "key": "ecf0efee-0126-42e4-88aa-8805fab0364b",
+      "position": 4,
+      "properties": {
+        "progression_name": "Predict"
+      },
+      "seeding_key": {
+        "activity_section.key": "ecf0efee-0126-42e4-88aa-8805fab0364b",
+        "lesson_activity.key": "37df43a6-363d-45b7-827c-5b936f43e20b"
+      }
+    },
+    {
+      "key": "68698c25-63cd-4598-b7b2-f20e3d34b8d6",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Once the class has seen the code, lead a discussion about what went as expected and what was surprising. Explicitly explain how the `play together` block works, and that since the Bass track is on the outside it will play afterwards. Ensure students understand why the code behaves the way it does before continuing. "
+      },
+      "seeding_key": {
+        "activity_section.key": "68698c25-63cd-4598-b7b2-f20e3d34b8d6",
+        "lesson_activity.key": "37df43a6-363d-45b7-827c-5b936f43e20b"
+      }
+    },
+    {
+      "key": "fe701b3c-6fd9-494d-8711-559fddba173e",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students should work through the Investigate levels independently or with a partner. This allows you to circulate and provide targeted support. Your goal is to check in with every student or pair, which is a high-impact practice for boosting engagement.",
+        "progression_name": "Investigate",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Viewing Example Solutions:** Each level has an example solution that verified teachers can access and view. You can view example solutions by expanding the Teacher Panel from the right-side of the screen, then clicking the blue \"Example Solution\" button. This process is [highlighted in this video](https://www.loom.com/share/36ee8c6709aa4e8dbe2449103e1b07be) and the graphic below\n\n<img src=\"https://images.code.org/e2be70507c3a22a08d28a3cd7c8cdd5a-example-solutions.png\" style=\"width: 25%\">"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "fe701b3c-6fd9-494d-8711-559fddba173e",
+        "lesson_activity.key": "37df43a6-363d-45b7-827c-5b936f43e20b"
+      }
+    },
+    {
+      "key": "e29f093d-6472-4877-9e7b-ec3078b626c7",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate & Support:** As students work independently, your presence and encouragement can have a powerful impact. A simple check-in can boost confidence, uncover misunderstandings, or spark deeper thinking. Use this time to:\n\n- Notice patterns then use this info to tailor your next move.\n- Ask open-ended questions to prompt reflection and reasoning.\n- Celebrate progress: Point out creative approaches or persistence, even if a solution isn't perfect yet.\n\nIf students are stuck, guide them to:\n- Re-read the step-by-step instructions and click the icons for hints\n- Listen to the example song for clues\n- Try one idea and observe what happens\n\n**<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i>  Do This (Optional):** Once enough students have completed the Investigate levels, consider regrouping to talk through the levels as a class. This is a good opportunity to cement student thinking on key concepts from the lesson while also elevating student voices by calling on students to help you complete levels in front of the class."
+      },
+      "seeding_key": {
+        "activity_section.key": "e29f093d-6472-4877-9e7b-ec3078b626c7",
+        "lesson_activity.key": "37df43a6-363d-45b7-827c-5b936f43e20b"
+      }
+    },
+    {
+      "key": "93fd26bb-1163-485a-813c-ab980c81c762",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students continue to the Check-In level. The remaining levels can be completed independently at students' own pace."
+      },
+      "seeding_key": {
+        "activity_section.key": "93fd26bb-1163-485a-813c-ab980c81c762",
+        "lesson_activity.key": "37df43a6-363d-45b7-827c-5b936f43e20b"
+      }
+    },
+    {
+      "key": "04eec2eb-aef2-43a7-956d-ca124106238b",
+      "position": 9,
+      "properties": {
+        "progression_name": "Check-In",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Formative Assessment:** Check-in levels are strategically placed in the middle of the lesson so you can check-in on how students are doing while they are still in the room with you and you can adjust instruction if needed. For example:\n- If you notice most students are able to complete the check-in with no assistance, the class can continue to the remaining problems\n- If most of the class is struggling with the check-in, consider regrouping as a class and completing the Investigate levels together or completing the check-in as a class\n- If a few students are struggling, consider working individually with those students to ensure they can be successful in later levels.\n- Use the tips and guiding questions on the [Sequencing Cheat Sheet.](https://drive.google.com/file/d/1wO6RJOBslmoDm2Wwua50BW2v6XpShcuV/view)"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "04eec2eb-aef2-43a7-956d-ca124106238b",
+        "lesson_activity.key": "37df43a6-363d-45b7-827c-5b936f43e20b"
+      }
+    },
+    {
+      "key": "7b519be7-8cf1-4290-aab6-25cd1ff90ac3",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete at least 2 practice levels. Practice levels are designed to be around the same level of difficulty, but may ask students to apply skills in different ways."
+      },
+      "seeding_key": {
+        "activity_section.key": "7b519be7-8cf1-4290-aab6-25cd1ff90ac3",
+        "lesson_activity.key": "37df43a6-363d-45b7-827c-5b936f43e20b"
+      }
+    },
+    {
+      "key": "d6d50456-9601-406e-b624-1bc8c5728c1b",
+      "position": 11,
+      "properties": {
+        "progression_name": "Practice",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Facilitating Practice Levels:** Practice levels give students a chance to apply what they've learned and build fluency with new coding blocks. Students do not need to complete every practice level. Let them choose the ones that match their interests and confidence level.\n\nGiving students real choice often leads to stronger engagement. Encourage them to share and explain the practice levels they completed with the class to reinforce learning.\n\n\n\n**Computational Thinking:** These levels are designed to support computational thinking. As students work, ask which practice they used (such as algorithmic thinking or debugging). This helps prepare them for the wrap-up reflection on computational thinking."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "d6d50456-9601-406e-b624-1bc8c5728c1b",
+        "lesson_activity.key": "37df43a6-363d-45b7-827c-5b936f43e20b"
+      }
+    },
+    {
+      "key": "ffb3d6e9-a7a7-4946-8ba8-8113eb30443a",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete the assessment independently",
+        "progression_name": "Assessment",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Evaluative Assessment:** Assessment levels appear near the end of a lesson and reflect the key skills students have been building. If you only check one level, this is the one. These can be reviewed after class to help guide your next steps.\n\nFor example:\n\n- If many students struggled, consider starting the next class with a quick review and revisit a skipped practice level.\n\n- If most students succeeded, continue with your planned warm-up or encourage students to try a skipped create level."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "ffb3d6e9-a7a7-4946-8ba8-8113eb30443a",
+        "lesson_activity.key": "37df43a6-363d-45b7-827c-5b936f43e20b"
+      }
+    },
+    {
+      "key": "b13938f3-276e-464b-9910-dc99fce50277",
+      "position": 13,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **(Optional) Do This:** Have students complete as many Create levels as they can.",
+        "progression_name": "Create",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Facilitating Create Levels:** Create levels are designed as extensions to the concepts and skills students learn throughout a lesson. Create levels tend to focus on more open-ended tasks for students to complete, or opportunities to combine several skills from previous lessons together into one program.\n\nCreate levels do **not** need to be completed for students to meet the core objectives of a lesson. Instead, every task in a create level is meant to supplement and enrich the learning objectives of a lesson, but are not required for future lessons. Students can still demonstrate mastery of the objectives of a lesson without completing any of the create levels."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b13938f3-276e-464b-9910-dc99fce50277",
+        "lesson_activity.key": "37df43a6-363d-45b7-827c-5b936f43e20b"
+      }
+    },
+    {
+      "key": "eb2bb5e8-e684-46f4-a866-ae476befb4d8",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** What’s one way you used computational thinking in a level you worked on today?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students reflect on the Practice levels they chose and the strategies they used. Sharing allows them to hear new ideas and learn about levels they may have skipped. Try using a speed pair or similar protocol so students can quickly hear from multiple classmates."
+      },
+      "seeding_key": {
+        "activity_section.key": "eb2bb5e8-e684-46f4-a866-ae476befb4d8",
+        "lesson_activity.key": "fd2451a9-7a13-4c1c-afa9-7e5902283d7b"
+      }
+    },
+    {
+      "key": "2989d2c1-649c-4d58-ad44-c00d6393ff83",
+      "position": 1,
+      "properties": {
+        "description": "After class has ended, use the Teacher Dashboard to review how much progress students made and how well they did on the Assessment level. Some things to notice might be:\n- Did most students make it to the Assessment level, or are there still a lot of empty progress bubbles?\n- Did students make it to the Assessment level, but did not complete it (ie: green outlines with white circles)?\n- Did students finish the Assessment level and continue to the create levels?\n\nBased on these observations, you can adapt the warm up tomorrow to best meet the needs of the class.",
+        "name": "Reviewing the Assessment Level"
+      },
+      "seeding_key": {
+        "activity_section.key": "2989d2c1-649c-4d58-ad44-c00d6393ff83",
+        "lesson_activity.key": "d6fdd81a-7219-4098-8b5a-40a377c5f646"
+      }
+    },
+    {
+      "key": "0ccee970-ef54-4d79-a81d-2a896ca767c7",
+      "position": 1,
+      "properties": {
+        "description": "Before teaching today's lesson, be sure to use the Teacher Dashboard to assess how students did to make a decision for how to start today's lesson. The Warm-Up for this lesson is adaptable based on how well students did with the Assessment level from the previous lesson. ",
+        "name": "Reviewing the Assessment"
+      },
+      "seeding_key": {
+        "activity_section.key": "0ccee970-ef54-4d79-a81d-2a896ca767c7",
+        "lesson_activity.key": "1ad0c11b-ee45-4c44-a6a1-931839b7bef5"
+      }
+    },
+    {
+      "key": "6978ee82-ab79-4795-bec6-e6538a448e60",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Start class based on how students performed on yesterday’s Assessment level:\n\n**If many students struggled or didn’t reach the Assessment:** \n- **Whole-Class Reteach** - Walk through a Practice level together, then have students retry the Assessment or move to a Create level.\n\n**If a few students struggled:**\n- **Targeted Support**- Have the class revisit a Create level while you work with students who need extra help.\n\n**If most students did well:**\n- **Move Forward**-  Begin today’s lesson right away to give students more time for practice and deeper exploration.",
+        "name": "Differentiated Warm-Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "6978ee82-ab79-4795-bec6-e6538a448e60",
+        "lesson_activity.key": "70700ca8-f016-4499-b5ec-813db0407fe6"
+      }
+    },
+    {
+      "key": "a20e2f6c-9f65-41f8-908c-71a366cb72d4",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Set students up for successful Pair Programming by clearly explaining roles, expectations, and when to switch. You can also show [this video](https://www.youtube.com/watch?v=q7d_JtyCq1A) to model what it looks like.\n\n**Say:** Today you’ll be working in pairs using Pair Programming. One of you will be the Driver, the person who controls the keyboard and mouse. The other will be the Navigator, who reads the instructions, checks for bugs, and helps think through the steps. Both roles are important, and both of you are responsible for the solution.\nYou must switch roles after each level. This is how both of you learn and stay involved.",
+        "name": "Pair Programming",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Digging Deeper**: To learn more about pair programming in the classroom, check out the [K-12 Pair Programming Toolkit](https://www.etr.org/default/assets/File/projects/Pair%20Programming%20Toolkit_FINAL%207_30_19.pdf) from ETR. \n\nTips for Pair Programming Success:\n- Assign or let students choose partners based on your goals.\n- Use a timer, visual cue, or have students switch after completing a level.\n- Circulate to ensure both students are engaged and switching roles.\n- Ask targeted questions to each role. For example, \"Navigator, what is one suggestion you gave the Driver on this level?\"\n- Students can pair through Practice levels, but should complete the Assessment level individually."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "a20e2f6c-9f65-41f8-908c-71a366cb72d4",
+        "lesson_activity.key": "70700ca8-f016-4499-b5ec-813db0407fe6"
+      }
+    },
+    {
+      "key": "f66b33a3-3776-4caf-a495-65f28e413f0c",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students work through the levels in class. Students can use their pair programming partners for support, along with the callout icons in instructions and the example music players.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Monitor students as they complete levels. Most of class is spent within levels, providing lots of opportunity to check-in individually with students as needed.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Prompts to Build Algorithmic Thinking:** Algorithmic Thinking is all about developing a step-by-step solution to the problem, or the rules to follow to solve the problem. In Music Lab, algorithmic thinking shows up when students follow steps to create a song, such as \"first I'll get my backing beats, then I'll layer in my leads, and finally I'll add the vocals\". Use these questions to help students identify what’s essential in their song or code:\n\n* What steps did you follow to build your song? Could you explain them in order?\n* If you had to teach someone else to build a similar track, what instructions would you give them?\n* Could you create a checklist to build a track like this again?\n\nThese tips come from our Self-Paced Professional Learning module - [click here to see additional tips and learn more about Algorithmic Thinking](https://studio.code.org/s/self-paced-pl-teaching-computer-science-discoveries-music-lab/lessons/2/levels/7)"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "f66b33a3-3776-4caf-a495-65f28e413f0c",
+        "lesson_activity.key": "8d08f6c1-42dd-439c-9e32-9603be105271"
+      }
+    },
+    {
+      "key": "76337ce9-84b3-48a0-8121-e53bc447e17c",
+      "position": 2,
+      "properties": {
+        "progression_name": "Predict",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Music Terminology**- The [Musical Terms Anchor Chart - Organizing Music (p.2)](https://docs.google.com/presentation/d/12R4e0xxMFBbkyu4gaXbXfwyLba-OjivpRNggZlw8hiE/edit?slide=id.g36d127f8520_0_59#slide=id.g36d127f8520_0_59) could be helpful to deepen student understanding. Additionally, the [Music Terms Glossary](https://docs.google.com/presentation/d/1wvllTFs0IBWJI8uzfUhuFW4mUYItUK5nmmVjArNRlCM/edit?slide=id.g33d63a1df26_0_86#slide=id.g33d63a1df26_0_86) includes definitions and explanations to support instruction.\n\n**Viewing Example Solutions:** Each level has an example solution that verified teachers can access and view. You can view example solutions by expanding the Teacher Panel from the right-side of the screen, then clicking the blue \"Example Solution\" button. This process is [highlighted in this video](https://www.loom.com/share/36ee8c6709aa4e8dbe2449103e1b07be) and the graphic below\n\n<img src=\"https://images.code.org/e2be70507c3a22a08d28a3cd7c8cdd5a-example-solutions.png\" style=\"width: 25%\">"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "76337ce9-84b3-48a0-8121-e53bc447e17c",
+        "lesson_activity.key": "8d08f6c1-42dd-439c-9e32-9603be105271"
+      }
+    },
+    {
+      "key": "1482de12-1f73-42ef-b7f6-5b24c0f89f3f",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate & Support:** As students work, check in by asking clarifying or reflective questions like, *“How are you using play sequential to help your tracks line up the way you want?”* or *“What would happen if you changed this block?”* to promote problem solving.",
+        "progression_name": "Play Sequential"
+      },
+      "seeding_key": {
+        "activity_section.key": "1482de12-1f73-42ef-b7f6-5b24c0f89f3f",
+        "lesson_activity.key": "8d08f6c1-42dd-439c-9e32-9603be105271"
+      }
+    },
+    {
+      "key": "43c3b40f-b957-4cf6-8ca9-a82b9a71f101",
+      "position": 4,
+      "properties": {
+        "progression_name": "Check-in",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Formative Assessment:** Check-in levels are strategically placed in the middle of the lesson so you can check-in on how students are doing while they are still in the room with you and you can adjust instruction if needed. For example:\n- If you notice most students are able to complete the check-in with no assistance, the class can continue to the remaining problems\n- If most of the class is struggling with the check-in, consider regrouping as a class and completing the Investigate levels together or completing the check-in as a class\n- If a few students are struggling, consider working individually with those students to ensure they can be successful in later levels.\n- Use the tips and guiding questions on the [Sequencing Cheat Sheet.](https://drive.google.com/file/d/1wO6RJOBslmoDm2Wwua50BW2v6XpShcuV/view)"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "43c3b40f-b957-4cf6-8ca9-a82b9a71f101",
+        "lesson_activity.key": "8d08f6c1-42dd-439c-9e32-9603be105271"
+      }
+    },
+    {
+      "key": "275a43aa-90ce-4261-904c-ec77a8329f2e",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i>  Circulate & Support: As students work, check in by asking clarifying or reflective questions like, “Can you describe what the rest is doing in this part of your code? Are your tracks lining up the way you want? Could a rest help fix that?”",
+        "progression_name": "Rests"
+      },
+      "seeding_key": {
+        "activity_section.key": "275a43aa-90ce-4261-904c-ec77a8329f2e",
+        "lesson_activity.key": "8d08f6c1-42dd-439c-9e32-9603be105271"
+      }
+    },
+    {
+      "key": "dd739ed6-25cb-45ac-9b2f-a17bbc888e0f",
+      "position": 6,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "dd739ed6-25cb-45ac-9b2f-a17bbc888e0f",
+        "lesson_activity.key": "8d08f6c1-42dd-439c-9e32-9603be105271"
+      }
+    },
+    {
+      "key": "ddd93e71-9b16-431d-8d53-87750a2ca0db",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Make sure students split up from pair programming and go back to working independently for the Assessment level.",
+        "progression_name": "Assessment",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Evaluative Assessment:** Assessment levels are provided towards the end of a lesson as a culmination of the skills being emphasized in the lesson. If you need to check only one level in this whole lesson, it can be this level. They are designed to be checked after class, allowing you to decide if you want to adjust instruction for the next day's lesson. For example:\n- If most students struggle with the assessment level, it may be worth starting tomorrow's class with a quick review and completing one of the practice levels they skipped in today's lesson.\n- If most students are successful in the assessment level, you can continue with the planned warm-up or you can encourage students to complete one of the challenge levels they may have skipped."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "ddd93e71-9b16-431d-8d53-87750a2ca0db",
+        "lesson_activity.key": "8d08f6c1-42dd-439c-9e32-9603be105271"
+      }
+    },
+    {
+      "key": "83afa5ef-f5c4-4055-a7ba-33a38918ebbb",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **(Optional) Do This:** Have students complete as many Create levels as they can.",
+        "progression_name": "Create",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**High Ceiling:** Create levels provide opportunities for enrichment for students who complete the progression early or are looking for additional challenges. These levels go above the core concepts from the lesson and should be considered \"extra\". There is always a \"free play\" challenge level for students who want a more open-ended experience in building their songs."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "83afa5ef-f5c4-4055-a7ba-33a38918ebbb",
+        "lesson_activity.key": "8d08f6c1-42dd-439c-9e32-9603be105271"
+      }
+    },
+    {
+      "key": "d56aed88-31ae-44ee-a95f-455573211897",
+      "position": 9,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "d56aed88-31ae-44ee-a95f-455573211897",
+        "lesson_activity.key": "8d08f6c1-42dd-439c-9e32-9603be105271"
+      }
+    },
+    {
+      "key": "77ce6048-d000-44ca-8613-54abf5834233",
+      "position": 1,
+      "properties": {
+        "description": "After reviewing the project guide and rubric, you can view an exemplar for this project in our self-paced professional learning course. [**Click here to view the exemplar**](https://studio.code.org/s/self-paced-pl-teaching-computer-science-discoveries-music-lab/lessons/2/levels/20)",
+        "name": "Project Exemplar"
+      },
+      "seeding_key": {
+        "activity_section.key": "77ce6048-d000-44ca-8613-54abf5834233",
+        "lesson_activity.key": "045b2631-8b32-4ef1-acbb-a11a46f2159b"
+      }
+    },
+    {
+      "key": "5c28a390-5e40-4a4e-9e5c-5efbd1cd12eb",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Who is a character in a movie or show who has a distinctive musical theme? Where every time you hear the music, you think of that character?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** It may take some time for students to think of examples here, but once they hear a few they may be more likely to come up with additional examples. Another way to frame this question is: if you were walking by a room and heard this musical theme, you'd know what movie or show someone was watching Some examples you could supply are:\n- [Bluey](https://www.youtube.com/watch?v=8nv1m-aTCZI) has a very distinctive theme song\n- [Harry Potter](https://www.youtube.com/watch?v=wtHra9tFISY) has a distinctive theme\n- Baseball players or wrestlers have distinctive music for when they enter an arena\n\n<i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Today we're going to apply everything we've learned so far to create Walk-Up songs for different characters in books or TV shows! In order to make these songs, we're going to learn about a new feature in music lab: Triggers!"
+      },
+      "seeding_key": {
+        "activity_section.key": "5c28a390-5e40-4a4e-9e5c-5efbd1cd12eb",
+        "lesson_activity.key": "20d838a3-386b-4646-80e1-bcae8e813e31"
+      }
+    },
+    {
+      "key": "ad954c1c-f493-4621-afbb-27091b0390c9",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> Do This: Have students start with exploring the student project examples. Encourage them to discuss what they notice, wonder and like about the projects",
+        "progression_name": "Example Projects"
+      },
+      "seeding_key": {
+        "activity_section.key": "ad954c1c-f493-4621-afbb-27091b0390c9",
+        "lesson_activity.key": "2c7f5c74-874a-45cc-854d-1c03b4fa8bde"
+      }
+    },
+    {
+      "key": "afafd23d-92db-4a1a-bb8b-e20c98caae4e",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Pass out a copy of the [Walk Up Songs Activity Guide](https://docs.google.com/document/d/1-NOQXuyOA4TXy2X4oACt97K0f64h2TlkP2tc3-YQKRI/edit) to each student\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the Overview as a class\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Define portion of the activity guide\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students return to Music Lab to learn more about triggers.",
+        "progression_name": "Triggers"
+      },
+      "seeding_key": {
+        "activity_section.key": "afafd23d-92db-4a1a-bb8b-e20c98caae4e",
+        "lesson_activity.key": "2c7f5c74-874a-45cc-854d-1c03b4fa8bde"
+      }
+    },
+    {
+      "key": "2bd0977a-4e98-44e7-8a67-60d17749deb9",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> Do This: Have students complete the Prepare section of their activity guide. Use this level to plan which tracks they will use!\n\nRemind students of the [Track Types anchor chart](https://drive.google.com/file/d/16ONMCb6K-cWYW_WVRwYXJM6TXbCI6Okz/view?usp=drive_link) to use as a guide to plan their tracks.\n\n",
+        "progression_name": "Prepare"
+      },
+      "seeding_key": {
+        "activity_section.key": "2bd0977a-4e98-44e7-8a67-60d17749deb9",
+        "lesson_activity.key": "2c7f5c74-874a-45cc-854d-1c03b4fa8bde"
+      }
+    },
+    {
+      "key": "7bbdd7c0-c5c4-4009-9ced-81d4d64d5fa2",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate & Approve:** As students complete their project plan, circulate to give them a quick review and a thumbs-up. Hand them the [Walk Up Songs Rubric](https://docs.google.com/document/d/1poW9kQYsXnBX2w7jCKhN9qjTbJ52qRDrn8jZf62S3-g/edit?tab=t.0) once their plan is solid. Students do not need to stop and wait for you."
+      },
+      "seeding_key": {
+        "activity_section.key": "7bbdd7c0-c5c4-4009-9ced-81d4d64d5fa2",
+        "lesson_activity.key": "2c7f5c74-874a-45cc-854d-1c03b4fa8bde"
+      }
+    },
+    {
+      "key": "fbc84b06-669b-4081-9032-26a6fefdc1cc",
+      "position": 5,
+      "properties": {
+        "progression_name": "Walk-Up Songs"
+      },
+      "seeding_key": {
+        "activity_section.key": "fbc84b06-669b-4081-9032-26a6fefdc1cc",
+        "lesson_activity.key": "2c7f5c74-874a-45cc-854d-1c03b4fa8bde"
+      }
+    },
+    {
+      "key": "e03d75e9-acea-4833-8315-982eed96f282",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **(Optional) Do This:** Students who finish their walk-up songs can participate in this Partner Game:\n- Tell your partners who your three characters are and describe the character's personalities.\n- Play one of your Walk-Up songs without saying which character it belongs to.\n- Allow your partner to match the song to a character.\n- Ask them to explain their choice.\n- If they guess wrong, listen to their explanation and adjust your code to make the song fit the character better.\n- Repeat with new partners until someone guesses all three correctly!",
+        "progression_name": "(Optional) Partner Game"
+      },
+      "seeding_key": {
+        "activity_section.key": "e03d75e9-acea-4833-8315-982eed96f282",
+        "lesson_activity.key": "2c7f5c74-874a-45cc-854d-1c03b4fa8bde"
+      }
+    },
+    {
+      "key": "cc55a143-f33d-4241-913a-7183ceba58d4",
+      "position": 7,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "cc55a143-f33d-4241-913a-7183ceba58d4",
+        "lesson_activity.key": "2c7f5c74-874a-45cc-854d-1c03b4fa8bde"
+      }
+    },
+    {
+      "key": "6e1c9e42-f277-4e32-b9f8-e4287125cae2",
+      "position": 1,
+      "properties": {
+        "description": "**Share Out:** Have students share their work with their peers in some way. Their peers can provide feedback using \"I like...\" and \"What if...\" sentence stems to provide positive constructive feedback. Some options could be:\n- **Class Shareout:** Ask for volunteers and let them share their songs with the whole class, then choose 2-3 students to provide feedback\n- **Pair Networking:** Have students pair up and share their songs and provide feedback, then swap to a new pair\n- **Gallery Walk:** Have students leave their song open on their computer, then walk around and visit other songs. Students carry post-it notes with them and leave feedback on any students they visit."
+      },
+      "seeding_key": {
+        "activity_section.key": "6e1c9e42-f277-4e32-b9f8-e4287125cae2",
+        "lesson_activity.key": "ccbb6724-6db1-4e75-b19d-19eebfbfbfeb"
+      }
+    },
+    {
+      "key": "034f5a5e-9e0b-4d46-b4d8-5438dfef2785",
+      "position": 1,
+      "properties": {
+        "description": "The next set of lessons introduces **Loops** with brand new blocks and programming strategies. Feel prepared to teach these lessons by reviewing our Self-Paced Professional Learning specifically for these lessons - in under 30 minutes! [**Click here to start now!**](https://studio.code.org/s/self-paced-pl-teaching-computer-science-discoveries-music-lab/lessons/3/levels/1)",
+        "name": "Just-In-Time Professional Learning"
+      },
+      "seeding_key": {
+        "activity_section.key": "034f5a5e-9e0b-4d46-b4d8-5438dfef2785",
+        "lesson_activity.key": "8108e79d-7e6c-4d96-a494-7d53d4a30f88"
+      }
+    },
+    {
+      "key": "9ff9a266-7738-4755-b603-22143f65cf19",
+      "position": 1,
+      "properties": {
+        "description": "After reviewing the project guide and rubric, you can view an exemplar for this project in our self-paced professional learning course. [**Click here to view the exemplar**](https://studio.code.org/s/self-paced-pl-teaching-computer-science-discoveries-music-lab/lessons/4/levels/18)",
+        "name": "Project Exemplar"
+      },
+      "seeding_key": {
+        "activity_section.key": "9ff9a266-7738-4755-b603-22143f65cf19",
+        "lesson_activity.key": "5cf8c1c1-05bf-40ee-a029-2be2f3300ece"
+      }
+    },
+    {
+      "key": "42f673e4-94bb-4dad-aad5-67272dc56572",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Try to create a definitive list of the different genres that the songs in Music Lab fall into. For example: Fireworks by Katy Perry and Espresso by Sabrina Carpenter are pop songs, but Karma by Denzel Kennedy is a hip-hop song and Beethoven's Symphony is a classical song. Try to come up with as many genres as you can!\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Have students share their ideas as a class. If students struggle coming up with genres, consider sharing the [list of genres and categories used by the Grammy's](https://en.wikipedia.org/wiki/List_of_Grammy_Award_categories). Don't aim for consensus amongst the class, but instead surface the idea that there are many different genres that a song can fall into and these genres can have distinct styles or feelings. Once a large list has been generated, transition to the next activity"
+      },
+      "seeding_key": {
+        "activity_section.key": "42f673e4-94bb-4dad-aad5-67272dc56572",
+        "lesson_activity.key": "33e269de-ee9b-4ebf-9969-5332bf613594"
+      }
+    },
+    {
+      "key": "40486f34-2a7a-4363-a9f0-0db489c34004",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Every song has a genre or two that it belongs to, and one exciting thing a musical artist can do is remix or re-record a song in a different genre. This is the focus of our next project - taking an existing song and remixing it to a different genre. For example: taking a pop song and making it sound like a heavy rock song, or taking a hip-hop song and making it sound like an indie song.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Real-World Examples:** Depending on how much time you have in class and the interests of your students, consider sharing some real-world examples of this:\n- [The Vitamin String Quartet](https://www.youtube.com/channel/UCC9h6FtIb58ZQCRPJ2ZQtKg) creates string quartet versions of pop music, which are often used in commercials or television shows.\n- The Australian radio program Triple J hosts a series called [Like a Version](https://www.youtube.com/playlist?list=PLFqO_oqoHHMznB9S1bAJa5hOp9_U9ud1h) where artists cover songs often mixing genres. Consider comparing the song [Love](https://www.youtube.com/watch?v=ox7RsX1Ee34) by Kendrick Lamar to the [cover by Chvrches](https://www.youtube.com/watch?v=msgimk3mV6g), which replaces the backing hip-hop drums and beats with synths and bass to create a poppy transformation. Or compare the song [Hide and Seek](https://www.youtube.com/watch?v=UYIAfiVGluk) by Imogen Heap to the [cover by Ball Park Music](https://www.youtube.com/watch?v=VdX8ZfMB02k), which replaces the electronic backing and vocals with a more indie sound using guitars and drums."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "40486f34-2a7a-4363-a9f0-0db489c34004",
+        "lesson_activity.key": "33e269de-ee9b-4ebf-9969-5332bf613594"
+      }
+    },
+    {
+      "key": "35cad5be-15b4-4e7e-b1fd-06a48029fa7e",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students start with exploring the student project examples. Encourage them to discuss what they notice, wonder and like about the projects.",
+        "progression_name": "Example Projects"
+      },
+      "seeding_key": {
+        "activity_section.key": "35cad5be-15b4-4e7e-b1fd-06a48029fa7e",
+        "lesson_activity.key": "08ee4e73-b0fa-46fc-ac52-1803917fbf43"
+      }
+    },
+    {
+      "key": "f6a40410-9e2f-438e-906e-d506a0d9e119",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Pass out a copy of the [Genre Mashup Activity Guide](https://docs.google.com/document/d/12HPEKHdaWP7EG4m84TnoNppAu1eqeYBF6rUEmIFcyLU/edit) to each student\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the Overview as a class\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Define portion of the activity guide\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students login to Music Lab to complete the Prepare portion of the activity guide.\n\nRemind students of the [Song Structure anchor chart](https://drive.google.com/file/d/18VrhTjB7wkv4rJxJIYHg7sPa-i4seZtQ/view?usp=drive_link) to use as a guide to plan their tracks.\n",
+        "progression_name": "Prepare"
+      },
+      "seeding_key": {
+        "activity_section.key": "f6a40410-9e2f-438e-906e-d506a0d9e119",
+        "lesson_activity.key": "08ee4e73-b0fa-46fc-ac52-1803917fbf43"
+      }
+    },
+    {
+      "key": "4fbf48ae-5457-4bf4-8785-0e581f78712f",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate & Approve:** As students complete their project plan, circulate to give them a quick review and a thumbs-up. Hand them the [Genre Mashup Rubric](https://docs.google.com/document/d/1FQAtWffIufswEhLG6LwZnyKSfnP7KG1nhthJi5w65bM/edit?tab=t.0) once their plan is solid. Students do not need to stop and wait for you.",
+        "progression_name": "Genre Mashup"
+      },
+      "seeding_key": {
+        "activity_section.key": "4fbf48ae-5457-4bf4-8785-0e581f78712f",
+        "lesson_activity.key": "08ee4e73-b0fa-46fc-ac52-1803917fbf43"
+      }
+    },
+    {
+      "key": "c100e5c8-2f98-4d5f-bbdd-87d954d677f3",
+      "position": 1,
+      "properties": {
+        "description": "**Share Out:** Have students share their work with their peers in some way. Their peers can provide feedback using \"I like...\" and \"What if...\" sentence stems to provide positive constructive feedback. Some options could be:\n- **Class Shareout:** Ask for volunteers and let them share their songs with the whole class, then choose 2-3 students to provide feedback\n- **Pair Networking:** Have students pair up and share their songs and provide feedback, then swap to a new pair\n- **Gallery Walk:** Have students leave their song open on their computer, then walk around and visit other songs. Students carry post-it notes with them and leave feedback on any students they visit."
+      },
+      "seeding_key": {
+        "activity_section.key": "c100e5c8-2f98-4d5f-bbdd-87d954d677f3",
+        "lesson_activity.key": "9a548bde-f47e-4550-924a-6389fffb010b"
+      }
+    },
+    {
+      "key": "b458bc1a-0f21-4b58-976f-416b5b96a4ed",
+      "position": 1,
+      "properties": {
+        "description": "Have students complete the end of unit assessment. To ensure that students only take the assessment at the appropriate time, it is \"locked\" and unviewable by them until you \"unlock\" it. The [How to Administer a Locked Survey or Assessment](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys) document provides details on how to do that when you are ready.\n\nThe end of unit assessment is 10 questions and mirrors the questions students saw in the pre-assessment. Consider ways to celebrate student growth between the pre-assessment and the end of unit assessment\n",
+        "name": "End of Unit Assessment"
+      },
+      "seeding_key": {
+        "activity_section.key": "b458bc1a-0f21-4b58-976f-416b5b96a4ed",
+        "lesson_activity.key": "974de133-f08f-4024-af6a-46f942aecd08"
+      }
+    },
+    {
+      "key": "92ec83f7-d8b3-4977-a519-d8e37b26fbe5",
+      "position": 2,
+      "properties": {
+        "description": "Have students complete the End of Unit survey as well. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
+        "name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "92ec83f7-d8b3-4977-a519-d8e37b26fbe5",
+        "lesson_activity.key": "974de133-f08f-4024-af6a-46f942aecd08"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Explore"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-music-lab-sequences-explore-investigate_v2_bash"
+        ],
+        "lesson.key": "Sequencing - Explore",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash",
+        "activity_section.key": "5178980e-2e3c-4a7f-9d2f-7b7301d794a1"
+      },
+      "level_keys": [
+        "test-music-lab-sequences-explore-investigate_v2_bash"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Explore"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-music-lab-sequences-explore-play-sequential-overviewpanel_v2_bash"
+        ],
+        "lesson.key": "Sequencing - Explore",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash",
+        "activity_section.key": "5178980e-2e3c-4a7f-9d2f-7b7301d794a1"
+      },
+      "level_keys": [
+        "test-music-lab-sequences-explore-play-sequential-overviewpanel_v2_bash"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Predict"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-music-lab-sequences-explore-predict_v2_bash"
+        ],
+        "lesson.key": "Sequencing - Explore",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash",
+        "activity_section.key": "ecf0efee-0126-42e4-88aa-8805fab0364b"
+      },
+      "level_keys": [
+        "test-music-lab-sequences-explore-predict_v2_bash"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-music-lab-sequences-explore-play-together-1_v2_bash"
+        ],
+        "lesson.key": "Sequencing - Explore",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash",
+        "activity_section.key": "fe701b3c-6fd9-494d-8711-559fddba173e"
+      },
+      "level_keys": [
+        "test-music-lab-sequences-explore-play-together-1_v2_bash"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-music-lab-sequences-explore-play-together-2_v2_bash"
+        ],
+        "lesson.key": "Sequencing - Explore",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash",
+        "activity_section.key": "fe701b3c-6fd9-494d-8711-559fddba173e"
+      },
+      "level_keys": [
+        "test-music-lab-sequences-explore-play-together-2_v2_bash"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-music-lab-sequences-explore-play-together-3_v2_bash"
+        ],
+        "lesson.key": "Sequencing - Explore",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash",
+        "activity_section.key": "fe701b3c-6fd9-494d-8711-559fddba173e"
+      },
+      "level_keys": [
+        "test-music-lab-sequences-explore-play-together-3_v2_bash"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check-In"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-music-lab-sequence-explore-formative_v2_bash"
+        ],
+        "lesson.key": "Sequencing - Explore",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash",
+        "activity_section.key": "04eec2eb-aef2-43a7-956d-ca124106238b"
+      },
+      "level_keys": [
+        "test-music-lab-sequence-explore-formative_v2_bash"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-music-lab-sequences-explore-choice-level_v2_bash"
+        ],
+        "lesson.key": "Sequencing - Explore",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash",
+        "activity_section.key": "d6d50456-9601-406e-b624-1bc8c5728c1b"
+      },
+      "level_keys": [
+        "test-music-lab-sequences-explore-choice-level_v2_bash"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-music-lab-sequence-explore-evaluative_v2_bash"
+        ],
+        "lesson.key": "Sequencing - Explore",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash",
+        "activity_section.key": "ffb3d6e9-a7a7-4946-8ba8-8113eb30443a"
+      },
+      "level_keys": [
+        "test-music-lab-sequence-explore-evaluative_v2_bash"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Create"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-music-lab-sequences-explore-song-choice-level_v2_bash"
+        ],
+        "lesson.key": "Sequencing - Explore",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash",
+        "activity_section.key": "b13938f3-276e-464b-9910-dc99fce50277"
+      },
+      "level_keys": [
+        "test-music-lab-sequences-explore-song-choice-level_v2_bash"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Predict"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-music-lab-sequences-practice-predict_v2_bash"
+        ],
+        "lesson.key": "Sequencing - Practice",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash",
+        "activity_section.key": "76337ce9-84b3-48a0-8121-e53bc447e17c"
+      },
+      "level_keys": [
+        "test-music-lab-sequences-practice-predict_v2_bash"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Play Sequential"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-music-lab-sequences-practice-play-sequential-panel_v2_bash"
+        ],
+        "lesson.key": "Sequencing - Practice",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash",
+        "activity_section.key": "1482de12-1f73-42ef-b7f6-5b24c0f89f3f"
+      },
+      "level_keys": [
+        "test-music-lab-sequences-practice-play-sequential-panel_v2_bash"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Play Sequential"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-music-lab-sequences-practice-play-sequential-1_v2_bash"
+        ],
+        "lesson.key": "Sequencing - Practice",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash",
+        "activity_section.key": "1482de12-1f73-42ef-b7f6-5b24c0f89f3f"
+      },
+      "level_keys": [
+        "test-music-lab-sequences-practice-play-sequential-1_v2_bash"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Play Sequential"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-music-lab-sequences-practice-play-sequential-2_v2_bash"
+        ],
+        "lesson.key": "Sequencing - Practice",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash",
+        "activity_section.key": "1482de12-1f73-42ef-b7f6-5b24c0f89f3f"
+      },
+      "level_keys": [
+        "test-music-lab-sequences-practice-play-sequential-2_v2_bash"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check-in"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-music-lab-sequence-practice-formative_v2_bash"
+        ],
+        "lesson.key": "Sequencing - Practice",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash",
+        "activity_section.key": "43c3b40f-b957-4cf6-8ca9-a82b9a71f101"
+      },
+      "level_keys": [
+        "test-music-lab-sequence-practice-formative_v2_bash"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Rests"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-music-lab-sequences-practice-rest-predict_v2_bash"
+        ],
+        "lesson.key": "Sequencing - Practice",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash",
+        "activity_section.key": "275a43aa-90ce-4261-904c-ec77a8329f2e"
+      },
+      "level_keys": [
+        "test-music-lab-sequences-practice-rest-predict_v2_bash"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 7,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Rests"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-music-lab-sequences-practice-rest-panel_v2_bash"
+        ],
+        "lesson.key": "Sequencing - Practice",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash",
+        "activity_section.key": "275a43aa-90ce-4261-904c-ec77a8329f2e"
+      },
+      "level_keys": [
+        "test-music-lab-sequences-practice-rest-panel_v2_bash"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 8,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Rests"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-music-lab-sequences-practice-rest-1_v2_bash"
+        ],
+        "lesson.key": "Sequencing - Practice",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash",
+        "activity_section.key": "275a43aa-90ce-4261-904c-ec77a8329f2e"
+      },
+      "level_keys": [
+        "test-music-lab-sequences-practice-rest-1_v2_bash"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-music-lab-sequences-practice-artist-choice_v2_bash"
+        ],
+        "lesson.key": "Sequencing - Practice",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash",
+        "activity_section.key": "dd739ed6-25cb-45ac-9b2f-a17bbc888e0f"
+      },
+      "level_keys": [
+        "test-music-lab-sequences-practice-artist-choice_v2_bash"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-music-lab-sequencing-practice-evaluative_v2_bash"
+        ],
+        "lesson.key": "Sequencing - Practice",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash",
+        "activity_section.key": "ddd93e71-9b16-431d-8d53-87750a2ca0db"
+      },
+      "level_keys": [
+        "test-music-lab-sequencing-practice-evaluative_v2_bash"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 11,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Create"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-music-lab-sequences-practice-choice_v2_bash"
+        ],
+        "lesson.key": "Sequencing - Practice",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash",
+        "activity_section.key": "83afa5ef-f5c4-4055-a7ba-33a38918ebbb"
+      },
+      "level_keys": [
+        "test-music-lab-sequences-practice-choice_v2_bash"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Example Projects"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-lab-walkup-examples-choice_bash"
+        ],
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash",
+        "activity_section.key": "ad954c1c-f493-4621-afbb-27091b0390c9"
+      },
+      "level_keys": [
+        "music-lab-walkup-examples-choice_bash"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Triggers"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-lab-triggers-panel_v2_bash"
+        ],
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash",
+        "activity_section.key": "afafd23d-92db-4a1a-bb8b-e20c98caae4e"
+      },
+      "level_keys": [
+        "music-lab-triggers-panel_v2_bash"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Triggers"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-music-lab-mini-project-walk-triggers-2_v2_bash"
+        ],
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash",
+        "activity_section.key": "afafd23d-92db-4a1a-bb8b-e20c98caae4e"
+      },
+      "level_keys": [
+        "test-music-lab-mini-project-walk-triggers-2_v2_bash"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Triggers"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-music-lab-mini-project-walk-triggers-3_v2_bash"
+        ],
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash",
+        "activity_section.key": "afafd23d-92db-4a1a-bb8b-e20c98caae4e"
+      },
+      "level_keys": [
+        "test-music-lab-mini-project-walk-triggers-3_v2_bash"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Prepare"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-lab-sequencing-project-prepare_v2_bash"
+        ],
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash",
+        "activity_section.key": "2bd0977a-4e98-44e7-8a67-60d17749deb9"
+      },
+      "level_keys": [
+        "music-lab-sequencing-project-prepare_v2_bash"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Walk-Up Songs"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-music-lab-mini-project-walk-1_v2_bash"
+        ],
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash",
+        "activity_section.key": "fbc84b06-669b-4081-9032-26a6fefdc1cc"
+      },
+      "level_keys": [
+        "test-music-lab-mini-project-walk-1_v2_bash"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 7,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Walk-Up Songs"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-music-lab-mini-project-walk-2_v2_bash"
+        ],
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash",
+        "activity_section.key": "fbc84b06-669b-4081-9032-26a6fefdc1cc"
+      },
+      "level_keys": [
+        "test-music-lab-mini-project-walk-2_v2_bash"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 8,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Walk-Up Songs"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-music-lab-mini-project-walk-3_v2_bash"
+        ],
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash",
+        "activity_section.key": "fbc84b06-669b-4081-9032-26a6fefdc1cc"
+      },
+      "level_keys": [
+        "test-music-lab-mini-project-walk-3_v2_bash"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "(Optional) Partner Game"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-music-lab-mini-project-walk-4_v2_bash"
+        ],
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash",
+        "activity_section.key": "e03d75e9-acea-4833-8315-982eed96f282"
+      },
+      "level_keys": [
+        "test-music-lab-mini-project-walk-4_v2_bash"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Example Projects"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-lab-genre-examples-choice_bash"
+        ],
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash",
+        "activity_section.key": "35cad5be-15b4-4e7e-b1fd-06a48029fa7e"
+      },
+      "level_keys": [
+        "music-lab-genre-examples-choice_bash"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Prepare"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-lab-functions-project-prepare_v2_bash"
+        ],
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash",
+        "activity_section.key": "f6a40410-9e2f-438e-906e-d506a0d9e119"
+      },
+      "level_keys": [
+        "music-lab-functions-project-prepare_v2_bash"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Genre Mashup"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-lab-genre-project_v2_bash"
+        ],
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash",
+        "activity_section.key": "4fbf48ae-5457-4bf4-8785-0e581f78712f"
+      },
+      "level_keys": [
+        "music-lab-genre-project_v2_bash"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "test-music-lab-sequences-explore-investigate_v2_bash",
+        "script_level.level_keys": [
+          "test-music-lab-sequences-explore-investigate_v2_bash"
+        ],
+        "lesson.key": "Sequencing - Explore",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash",
+        "activity_section.key": "5178980e-2e3c-4a7f-9d2f-7b7301d794a1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-music-lab-sequences-explore-play-sequential-overviewpanel_v2_bash",
+        "script_level.level_keys": [
+          "test-music-lab-sequences-explore-play-sequential-overviewpanel_v2_bash"
+        ],
+        "lesson.key": "Sequencing - Explore",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash",
+        "activity_section.key": "5178980e-2e3c-4a7f-9d2f-7b7301d794a1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-music-lab-sequences-explore-predict_v2_bash",
+        "script_level.level_keys": [
+          "test-music-lab-sequences-explore-predict_v2_bash"
+        ],
+        "lesson.key": "Sequencing - Explore",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash",
+        "activity_section.key": "ecf0efee-0126-42e4-88aa-8805fab0364b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-music-lab-sequences-explore-play-together-1_v2_bash",
+        "script_level.level_keys": [
+          "test-music-lab-sequences-explore-play-together-1_v2_bash"
+        ],
+        "lesson.key": "Sequencing - Explore",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash",
+        "activity_section.key": "fe701b3c-6fd9-494d-8711-559fddba173e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-music-lab-sequences-explore-play-together-2_v2_bash",
+        "script_level.level_keys": [
+          "test-music-lab-sequences-explore-play-together-2_v2_bash"
+        ],
+        "lesson.key": "Sequencing - Explore",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash",
+        "activity_section.key": "fe701b3c-6fd9-494d-8711-559fddba173e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-music-lab-sequences-explore-play-together-3_v2_bash",
+        "script_level.level_keys": [
+          "test-music-lab-sequences-explore-play-together-3_v2_bash"
+        ],
+        "lesson.key": "Sequencing - Explore",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash",
+        "activity_section.key": "fe701b3c-6fd9-494d-8711-559fddba173e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-music-lab-sequence-explore-formative_v2_bash",
+        "script_level.level_keys": [
+          "test-music-lab-sequence-explore-formative_v2_bash"
+        ],
+        "lesson.key": "Sequencing - Explore",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash",
+        "activity_section.key": "04eec2eb-aef2-43a7-956d-ca124106238b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-music-lab-sequences-explore-choice-level_v2_bash",
+        "script_level.level_keys": [
+          "test-music-lab-sequences-explore-choice-level_v2_bash"
+        ],
+        "lesson.key": "Sequencing - Explore",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash",
+        "activity_section.key": "d6d50456-9601-406e-b624-1bc8c5728c1b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-music-lab-sequence-explore-evaluative_v2_bash",
+        "script_level.level_keys": [
+          "test-music-lab-sequence-explore-evaluative_v2_bash"
+        ],
+        "lesson.key": "Sequencing - Explore",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash",
+        "activity_section.key": "ffb3d6e9-a7a7-4946-8ba8-8113eb30443a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-music-lab-sequences-explore-song-choice-level_v2_bash",
+        "script_level.level_keys": [
+          "test-music-lab-sequences-explore-song-choice-level_v2_bash"
+        ],
+        "lesson.key": "Sequencing - Explore",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash",
+        "activity_section.key": "b13938f3-276e-464b-9910-dc99fce50277"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-music-lab-sequences-practice-predict_v2_bash",
+        "script_level.level_keys": [
+          "test-music-lab-sequences-practice-predict_v2_bash"
+        ],
+        "lesson.key": "Sequencing - Practice",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash",
+        "activity_section.key": "76337ce9-84b3-48a0-8121-e53bc447e17c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-music-lab-sequences-practice-play-sequential-panel_v2_bash",
+        "script_level.level_keys": [
+          "test-music-lab-sequences-practice-play-sequential-panel_v2_bash"
+        ],
+        "lesson.key": "Sequencing - Practice",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash",
+        "activity_section.key": "1482de12-1f73-42ef-b7f6-5b24c0f89f3f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-music-lab-sequences-practice-play-sequential-1_v2_bash",
+        "script_level.level_keys": [
+          "test-music-lab-sequences-practice-play-sequential-1_v2_bash"
+        ],
+        "lesson.key": "Sequencing - Practice",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash",
+        "activity_section.key": "1482de12-1f73-42ef-b7f6-5b24c0f89f3f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-music-lab-sequences-practice-play-sequential-2_v2_bash",
+        "script_level.level_keys": [
+          "test-music-lab-sequences-practice-play-sequential-2_v2_bash"
+        ],
+        "lesson.key": "Sequencing - Practice",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash",
+        "activity_section.key": "1482de12-1f73-42ef-b7f6-5b24c0f89f3f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-music-lab-sequence-practice-formative_v2_bash",
+        "script_level.level_keys": [
+          "test-music-lab-sequence-practice-formative_v2_bash"
+        ],
+        "lesson.key": "Sequencing - Practice",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash",
+        "activity_section.key": "43c3b40f-b957-4cf6-8ca9-a82b9a71f101"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-music-lab-sequences-practice-rest-predict_v2_bash",
+        "script_level.level_keys": [
+          "test-music-lab-sequences-practice-rest-predict_v2_bash"
+        ],
+        "lesson.key": "Sequencing - Practice",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash",
+        "activity_section.key": "275a43aa-90ce-4261-904c-ec77a8329f2e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-music-lab-sequences-practice-rest-panel_v2_bash",
+        "script_level.level_keys": [
+          "test-music-lab-sequences-practice-rest-panel_v2_bash"
+        ],
+        "lesson.key": "Sequencing - Practice",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash",
+        "activity_section.key": "275a43aa-90ce-4261-904c-ec77a8329f2e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-music-lab-sequences-practice-rest-1_v2_bash",
+        "script_level.level_keys": [
+          "test-music-lab-sequences-practice-rest-1_v2_bash"
+        ],
+        "lesson.key": "Sequencing - Practice",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash",
+        "activity_section.key": "275a43aa-90ce-4261-904c-ec77a8329f2e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-music-lab-sequences-practice-artist-choice_v2_bash",
+        "script_level.level_keys": [
+          "test-music-lab-sequences-practice-artist-choice_v2_bash"
+        ],
+        "lesson.key": "Sequencing - Practice",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash",
+        "activity_section.key": "dd739ed6-25cb-45ac-9b2f-a17bbc888e0f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-music-lab-sequencing-practice-evaluative_v2_bash",
+        "script_level.level_keys": [
+          "test-music-lab-sequencing-practice-evaluative_v2_bash"
+        ],
+        "lesson.key": "Sequencing - Practice",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash",
+        "activity_section.key": "ddd93e71-9b16-431d-8d53-87750a2ca0db"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-music-lab-sequences-practice-choice_v2_bash",
+        "script_level.level_keys": [
+          "test-music-lab-sequences-practice-choice_v2_bash"
+        ],
+        "lesson.key": "Sequencing - Practice",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash",
+        "activity_section.key": "83afa5ef-f5c4-4055-a7ba-33a38918ebbb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-lab-walkup-examples-choice_bash",
+        "script_level.level_keys": [
+          "music-lab-walkup-examples-choice_bash"
+        ],
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash",
+        "activity_section.key": "ad954c1c-f493-4621-afbb-27091b0390c9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-lab-triggers-panel_v2_bash",
+        "script_level.level_keys": [
+          "music-lab-triggers-panel_v2_bash"
+        ],
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash",
+        "activity_section.key": "afafd23d-92db-4a1a-bb8b-e20c98caae4e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-music-lab-mini-project-walk-triggers-2_v2_bash",
+        "script_level.level_keys": [
+          "test-music-lab-mini-project-walk-triggers-2_v2_bash"
+        ],
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash",
+        "activity_section.key": "afafd23d-92db-4a1a-bb8b-e20c98caae4e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-music-lab-mini-project-walk-triggers-3_v2_bash",
+        "script_level.level_keys": [
+          "test-music-lab-mini-project-walk-triggers-3_v2_bash"
+        ],
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash",
+        "activity_section.key": "afafd23d-92db-4a1a-bb8b-e20c98caae4e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-lab-sequencing-project-prepare_v2_bash",
+        "script_level.level_keys": [
+          "music-lab-sequencing-project-prepare_v2_bash"
+        ],
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash",
+        "activity_section.key": "2bd0977a-4e98-44e7-8a67-60d17749deb9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-music-lab-mini-project-walk-1_v2_bash",
+        "script_level.level_keys": [
+          "test-music-lab-mini-project-walk-1_v2_bash"
+        ],
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash",
+        "activity_section.key": "fbc84b06-669b-4081-9032-26a6fefdc1cc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-music-lab-mini-project-walk-2_v2_bash",
+        "script_level.level_keys": [
+          "test-music-lab-mini-project-walk-2_v2_bash"
+        ],
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash",
+        "activity_section.key": "fbc84b06-669b-4081-9032-26a6fefdc1cc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-music-lab-mini-project-walk-3_v2_bash",
+        "script_level.level_keys": [
+          "test-music-lab-mini-project-walk-3_v2_bash"
+        ],
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash",
+        "activity_section.key": "fbc84b06-669b-4081-9032-26a6fefdc1cc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-music-lab-mini-project-walk-4_v2_bash",
+        "script_level.level_keys": [
+          "test-music-lab-mini-project-walk-4_v2_bash"
+        ],
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash",
+        "activity_section.key": "e03d75e9-acea-4833-8315-982eed96f282"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-lab-genre-examples-choice_bash",
+        "script_level.level_keys": [
+          "music-lab-genre-examples-choice_bash"
+        ],
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash",
+        "activity_section.key": "35cad5be-15b4-4e7e-b1fd-06a48029fa7e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-lab-functions-project-prepare_v2_bash",
+        "script_level.level_keys": [
+          "music-lab-functions-project-prepare_v2_bash"
+        ],
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash",
+        "activity_section.key": "f6a40410-9e2f-438e-906e-d506a0d9e119"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-lab-genre-project_v2_bash",
+        "script_level.level_keys": [
+          "music-lab-genre-project_v2_bash"
+        ],
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash",
+        "activity_section.key": "4fbf48ae-5457-4bf4-8785-0e581f78712f"
+      }
+    }
+  ],
+  "resources": [
+    {
+      "name": "Genre Mashup",
+      "url": "https://docs.google.com/document/d/12HPEKHdaWP7EG4m84TnoNppAu1eqeYBF6rUEmIFcyLU/edit",
+      "key": "genre_mashup",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "genre_mashup"
+      }
+    },
+    {
+      "name": "Genre Mashup Rubric",
+      "url": "https://docs.google.com/document/d/1FQAtWffIufswEhLG6LwZnyKSfnP7KG1nhthJi5w65bM/edit?tab=t.0",
+      "key": "genre_mashup_rubric",
+      "properties": {
+        "audience": "Student",
+        "type": "Rubric"
+      },
+      "seeding_key": {
+        "resource.key": "genre_mashup_rubric"
+      }
+    },
+    {
+      "name": "Make Music, Learn Code",
+      "url": "https://www.youtube.com/watch?v=GqlP5s7KTl4",
+      "key": "make_music_learn_code",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://videos.code.org/levelbuilder/music-lab-_-make-music-learn-code-mp4.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "make_music_learn_code"
+      }
+    },
+    {
+      "name": "Mini Project - Walk Up Songs",
+      "url": "https://docs.google.com/presentation/d/1nQQ_vqwmOqhENzt-qAQYEjQ07R_xO8xTfteYVWnl3MY/template/preview",
+      "key": "mini_project_-_walk_up_songs_1",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "mini_project_-_walk_up_songs_1"
+      }
+    },
+    {
+      "name": "Musical Terms Anchor Chart - Organizing Music",
+      "url": "https://drive.google.com/file/d/1RDFizyrovrwzPzZEjapEur2H3mUzfqs4/view?usp=drive_link",
+      "key": "musical_terms_anchor_chart_-_organizing_music",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "musical_terms_anchor_chart_-_organizing_music"
+      }
+    },
+    {
+      "name": "Musical Terms Anchor Charts - Song Structure",
+      "url": "https://drive.google.com/file/d/18VrhTjB7wkv4rJxJIYHg7sPa-i4seZtQ/view?usp=drive_link",
+      "key": "musical_terms_anchor_charts_-_song_structure",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "musical_terms_anchor_charts_-_song_structure"
+      }
+    },
+    {
+      "name": "Musical Terms Anchor Charts - Track Types",
+      "url": "https://drive.google.com/file/d/16ONMCb6K-cWYW_WVRwYXJM6TXbCI6Okz/view?usp=sharing",
+      "key": "musical_terms_anchor_charts_-_track_types",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "musical_terms_anchor_charts_-_track_types"
+      }
+    },
+    {
+      "name": "Musical Terms Glossary",
+      "url": "https://docs.google.com/presentation/d/1wvllTFs0IBWJI8uzfUhuFW4mUYItUK5nmmVjArNRlCM/view",
+      "key": "musical_terms_glossary",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "musical_terms_glossary"
+      }
+    },
+    {
+      "name": "Pair Programming",
+      "url": "https://www.youtube.com/watch?v=q7d_JtyCq1A",
+      "key": "pair_programming",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "pair_programming"
+      }
+    },
+    {
+      "name": "Problem Solving and Computational Thinking",
+      "url": "https://docs.google.com/document/d/1b670YBrm2H0PwBKAVoef7lfdsI3ci5SYJz9zWnWTiRI/view",
+      "key": "problem_solving_and_computational_thinking",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "problem_solving_and_computational_thinking"
+      }
+    },
+    {
+      "name": "Project - Genre Mash Up",
+      "url": "https://docs.google.com/presentation/d/13sI-kHNF7fvgy0ThzjmhtIQhE5d0Otg4yx_kEoHDFT8/template/preview",
+      "key": "project_-_genre_mash_up_1",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "project_-_genre_mash_up_1"
+      }
+    },
+    {
+      "name": "Sequencing - Explore",
+      "url": "https://docs.google.com/presentation/d/1wvDRrS2P_cY9n-pR_pZd7yi5Ew8MjmJeUSkIFz2hpOo/template/preview",
+      "key": "sequencing_-_explore_1",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "sequencing_-_explore_1"
+      }
+    },
+    {
+      "name": "Sequencing - Practice",
+      "url": "https://docs.google.com/presentation/d/1ObRxUvZcal2jUOnuIaMSs6o_CIC9QnOnHzwAZGv_Nes/template/preview",
+      "key": "sequencing_-_practice_1",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "sequencing_-_practice_1"
+      }
+    },
+    {
+      "name": "Sequencing Assessment Levels Cheat Sheet",
+      "url": "https://drive.google.com/file/d/1wO6RJOBslmoDm2Wwua50BW2v6XpShcuV/view",
+      "key": "sequencing_assessment_levels_cheat_sheet",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "sequencing_assessment_levels_cheat_sheet"
+      }
+    },
+    {
+      "name": "Walk Up Songs",
+      "url": "https://docs.google.com/document/d/1-NOQXuyOA4TXy2X4oACt97K0f64h2TlkP2tc3-YQKRI/edit",
+      "key": "walk_up_songs",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "walk_up_songs"
+      }
+    },
+    {
+      "name": "Walk Up Songs Rubric",
+      "url": "https://docs.google.com/document/d/1poW9kQYsXnBX2w7jCKhN9qjTbJ52qRDrn8jZf62S3-g/edit?tab=t.0",
+      "key": "walk_up_songs_rubric",
+      "properties": {
+        "audience": "Student",
+        "type": "Rubric"
+      },
+      "seeding_key": {
+        "resource.key": "walk_up_songs_rubric"
+      }
+    }
+  ],
+  "lessons_resources": [
+    {
+      "seeding_key": {
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "resource.key": "mini_project_-_walk_up_songs_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "resource.key": "walk_up_songs"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "resource.key": "walk_up_songs_rubric"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Genre Mash-Up",
+        "resource.key": "genre_mashup"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Genre Mash-Up",
+        "resource.key": "genre_mashup_rubric"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Genre Mash-Up",
+        "resource.key": "musical_terms_anchor_charts_-_song_structure"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Genre Mash-Up",
+        "resource.key": "musical_terms_glossary"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Genre Mash-Up",
+        "resource.key": "project_-_genre_mash_up_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing - Explore",
+        "resource.key": "make_music_learn_code"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing - Explore",
+        "resource.key": "musical_terms_anchor_charts_-_track_types"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing - Explore",
+        "resource.key": "musical_terms_glossary"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing - Explore",
+        "resource.key": "problem_solving_and_computational_thinking"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing - Explore",
+        "resource.key": "sequencing_-_explore_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing - Practice",
+        "resource.key": "musical_terms_anchor_chart_-_organizing_music"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing - Practice",
+        "resource.key": "musical_terms_glossary"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing - Practice",
+        "resource.key": "pair_programming"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing - Practice",
+        "resource.key": "sequencing_-_practice_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing - Practice",
+        "resource.key": "sequencing_assessment_levels_cheat_sheet"
+      }
+    }
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+    {
+      "seeding_key": {
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "programming_environment.name": "music",
+        "programming_expression.key": "trigger"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing - Explore",
+        "programming_environment.name": "music",
+        "programming_expression.key": "play_sample"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing - Explore",
+        "programming_environment.name": "music",
+        "programming_expression.key": "play_together"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing - Practice",
+        "programming_environment.name": "music",
+        "programming_expression.key": "play_sequential"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing - Practice",
+        "programming_environment.name": "music",
+        "programming_expression.key": "rest"
+      }
+    }
+  ],
+  "objectives": [
+    {
+      "key": "0d42c3fd-fb20-4319-9dc5-98ed7def6399",
+      "properties": {
+        "description": "Create walk-up songs utilizing trigger blocks and sequencing skills"
+      },
+      "seeding_key": {
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "objective.key": "0d42c3fd-fb20-4319-9dc5-98ed7def6399"
+      }
+    },
+    {
+      "key": "9813017d-5699-4f30-9067-520282b897f8",
+      "properties": {
+        "description": "Follow an algorithm to complete a song using sequencing"
+      },
+      "seeding_key": {
+        "lesson.key": "Sequencing - Explore",
+        "objective.key": "9813017d-5699-4f30-9067-520282b897f8"
+      }
+    },
+    {
+      "key": "e80ef67e-e18a-4b77-b9f4-8dfbb9e9b66b",
+      "properties": {
+        "description": "Create a genre mash-up remix by applying sequencing, loops, and functions"
+      },
+      "seeding_key": {
+        "lesson.key": "Project: Genre Mash-Up",
+        "objective.key": "e80ef67e-e18a-4b77-b9f4-8dfbb9e9b66b"
+      }
+    },
+    {
+      "key": "ed837dce-b79f-412d-8bd2-238c2e11237d",
+      "properties": {
+        "description": "Play tracks sequentially and simultaneously"
+      },
+      "seeding_key": {
+        "lesson.key": "Sequencing - Explore",
+        "objective.key": "ed837dce-b79f-412d-8bd2-238c2e11237d"
+      }
+    },
+    {
+      "key": "f90a8954-c23c-4b8b-b595-966731e0cf7f",
+      "properties": {
+        "description": "Create offset moments in songs with rests"
+      },
+      "seeding_key": {
+        "lesson.key": "Sequencing - Practice",
+        "objective.key": "f90a8954-c23c-4b8b-b595-966731e0cf7f"
+      }
+    },
+    {
+      "key": "fcec731c-f1f3-440a-8257-83f764eba101",
+      "properties": {
+        "description": "Combine tracks with different measure lengths"
+      },
+      "seeding_key": {
+        "lesson.key": "Sequencing - Practice",
+        "objective.key": "fcec731c-f1f3-440a-8257-83f764eba101"
+      }
+    }
+  ],
+  "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Genre Mash-Up",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Genre Mash-Up",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing - Explore",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing - Explore",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing - Practice",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing - Practice",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    }
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

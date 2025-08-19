@@ -540,7 +540,7 @@ ActiveRecord::Schema.define(version: 2025_08_15_132016) do
     t.integer "course_offering_id"
     t.string "published_state", default: "in_development"
     t.index ["content_root_id"], name: "index_course_versions_on_content_root_id"
-    t.index ["course_offering_id", "key"], name: "index_course_versions_on_offering_id_and_key"
+    t.index ["course_offering_id", "key"], name: "index_course_versions_on_offering_id_and_key", unique: true
     t.index ["course_offering_id"], name: "index_course_versions_on_course_offering_id"
   end
 

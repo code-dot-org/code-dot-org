@@ -351,13 +351,24 @@ module Api::V1::Pd
       response = JSON.parse(@response.body, symbolize_names: true)
 
       # Verify top-level structure
-      assert response.key?(:course_name), "Missing course_name"
+      assert response.key?(:course), "Missing course"
+      assert response.key?(:name), "Missing name"
       assert response.key?(:facilitators), "Missing facilitators"
-      assert response.key?(:total_responses), "Missing total_responses"
-      assert response.key?(:categories), "Missing categories"
+      assert response.key?(:surveys), "Missing surveys"
+
+      # Verify surveys structure
+      surveys = response[:surveys]
+      refute_empty surveys, "Should have at least one survey"
+
+      # Get the first survey (should be Post Workshop for BYO)
+      survey_key = surveys.keys.first
+      survey_data = surveys[survey_key]
+
+      assert survey_data.key?(:total_responses), "Missing total_responses for survey"
+      assert survey_data.key?(:categories), "Missing categories for survey"
 
       # Verify categorized structure
-      categories = response[:categories]
+      categories = survey_data[:categories]
       expected_categories = [:implementation, :engagement, :logistics, :facilitators, :other]
       expected_categories.each do |category|
         assert categories.key?(category), "Missing category: #{category}"
@@ -367,53 +378,54 @@ module Api::V1::Pd
       refute_empty categories[:engagement][:questions], "Engagement category should have questions"
 
       # Verify response structure for likert questions
-      likert_question = categories[:engagement][:questions].find {|q| q[:question_type] == 'likert'}
+      likert_question = categories[:engagement][:questions][:motivated_learn_cs_in_education]
       assert likert_question.key?(:question_name)
       assert likert_question.key?(:question_text)
       assert likert_question.key?(:question_type)
-      assert likert_question.key?(:responses)
-      assert likert_question[:responses][:weighted_score].is_a?(Integer)
-      assert likert_question[:responses][:agreement_percentage].is_a?(Integer)
-      assert likert_question[:responses][:total_responses].is_a?(Integer)
-      assert likert_question[:responses].key?(:breakdown)
+      assert likert_question.key?(:results)
+      assert likert_question[:results][:weighted_score].is_a?(Integer)
+      assert likert_question[:results][:agreement_count].is_a?(Integer)
+      assert likert_question[:results][:agreement_percentage].is_a?(Integer)
+      assert likert_question[:results][:total_responses].is_a?(Integer)
+      assert likert_question[:results].key?(:breakdown)
 
       # Verify response structure for promoter questions
-      promoter_question = categories[:engagement][:questions].find {|q| q[:question_type] == 'promoter'}
+      promoter_question = categories[:engagement][:questions][:nps_self_paced_pd_byow]
       assert promoter_question.key?(:question_name)
       assert promoter_question.key?(:question_text)
       assert promoter_question.key?(:question_type)
-      assert promoter_question.key?(:responses)
-      assert promoter_question[:responses][:promoter_percentage].is_a?(Integer)
-      assert promoter_question[:responses][:total_responses].is_a?(Integer)
-      assert promoter_question[:responses].key?(:breakdown)
+      assert promoter_question.key?(:results)
+      assert promoter_question[:results][:promoter_percentage].is_a?(Integer)
+      assert promoter_question[:results][:total_responses].is_a?(Integer)
+      assert promoter_question[:results].key?(:breakdown)
 
       # Verify response structure for multi select questions
-      multi_select_question = categories[:implementation][:questions].find {|q| q[:question_type] == 'multiSelect'}
+      multi_select_question = categories[:implementation][:questions][:barriers_implementation_curriculum]
       assert multi_select_question.key?(:question_name)
       assert multi_select_question.key?(:question_text)
       assert multi_select_question.key?(:question_type)
-      assert multi_select_question.key?(:responses)
-      assert multi_select_question[:responses][:total_respondents].is_a?(Integer)
-      assert multi_select_question[:responses].key?(:breakdown)
+      assert multi_select_question.key?(:results)
+      assert multi_select_question[:results][:total_respondents].is_a?(Integer)
+      assert multi_select_question[:results].key?(:breakdown)
 
-      # Verify response structure for single select questions that are not likert
-      single_select_question = categories[:implementation][:questions].find {|q| q[:question_type] == 'singleSelect' && !q[:responses].key?(:weighted_score)}
+      # Verify response structure for single select questions
+      single_select_question = categories[:implementation][:questions][:cdo_teaching_experience]
       assert single_select_question.key?(:question_name)
       assert single_select_question.key?(:question_text)
       assert single_select_question.key?(:question_type)
-      assert single_select_question.key?(:responses)
-      assert single_select_question[:responses][:total_responses].is_a?(Integer)
-      assert single_select_question[:responses].key?(:breakdown)
+      assert single_select_question.key?(:results)
+      assert single_select_question[:results][:total_responses].is_a?(Integer)
+      assert single_select_question[:results].key?(:breakdown)
 
       # Verify response structure for text questions
-      text_question = categories[:other][:questions].find {|q| q[:question_type] == 'text'}
+      text_question = categories[:other][:questions][:uncategorized_feedback]
       assert text_question.key?(:question_name)
       assert text_question.key?(:question_text)
       assert text_question.key?(:question_type)
-      assert text_question.key?(:responses)
-      assert text_question[:responses][:total_responses].is_a?(Integer)
-      assert text_question[:responses][:responses].is_a?(Array)
-      assert text_question[:responses][:responses].all?(String)
+      assert text_question.key?(:results)
+      assert text_question[:results][:total_responses].is_a?(Integer)
+      assert text_question[:results][:responses].is_a?(Array)
+      assert text_question[:results][:responses].all?(String)
     end
 
     test 'workshop survey summary returns unauthorized for unauthorized users' do
@@ -466,8 +478,12 @@ module Api::V1::Pd
       facilitator_1_id = facilitator_1.id.to_s
       facilitator_2_id = facilitator_2.id.to_s
 
+      # Get the survey data (should be Post Workshop for CSF)
+      surveys = response[:surveys]
+      survey_key = surveys.keys.first
+      categories = surveys[survey_key][:categories]
+
       # Verify facilitator category structure in categories
-      categories = response[:categories]
       assert categories[:facilitators].key?(facilitator_1_id.to_sym), "Should have data for facilitator 1"
       refute categories[:facilitators].key?(facilitator_2_id.to_sym), "Should not have data for facilitator 2"
 
@@ -487,22 +503,28 @@ module Api::V1::Pd
       assert_response :success
       response = JSON.parse(@response.body, symbolize_names: true)
 
+      # Get the survey data (should be Post Workshop for BYO)
+      surveys = response[:surveys]
+      survey_key = surveys.keys.first
+      categories = surveys[survey_key][:categories]
+
       # Matrix questions should be split into individual questions by category
       # Verify that we have questions in implementation and engagement categories
-      categories = response[:categories]
       implementation_questions = categories[:implementation][:questions]
       engagement_questions = categories[:engagement][:questions]
       refute_empty implementation_questions, "Should have implementation questions from matrix rows"
       refute_empty engagement_questions, "Should have engagement questions from matrix rows"
 
       # Verify matrix row questions have proper structure
-      implementation_matrix_question = implementation_questions.find {|q| q[:responses].key?(:weighted_score)}
-      assert implementation_matrix_question[:responses].key?(:weighted_score), "Matrix questions should have weighted scores"
-      assert implementation_matrix_question[:responses].key?(:agreement_percentage), "Matrix questions should have agreement percentages"
+      implementation_matrix_question = implementation_questions[:more_prepared]
+      assert implementation_matrix_question[:results].key?(:weighted_score), "Matrix questions should have weighted scores"
+      assert implementation_matrix_question[:results].key?(:agreement_count), "Matrix questions should have agreement count"
+      assert implementation_matrix_question[:results].key?(:agreement_percentage), "Matrix questions should have agreement percentages"
 
-      engagement_matrix_question = engagement_questions.find {|q| q[:responses].key?(:weighted_score)}
-      assert engagement_matrix_question[:responses].key?(:weighted_score), "Matrix questions should have weighted scores"
-      assert engagement_matrix_question[:responses].key?(:agreement_percentage), "Matrix questions should have agreement percentages"
+      engagement_matrix_question = engagement_questions[:motivated_learn_cs_in_education]
+      assert engagement_matrix_question[:results].key?(:weighted_score), "Matrix questions should have weighted scores"
+      assert engagement_matrix_question[:results].key?(:agreement_count), "Matrix questions should have agreement count"
+      assert engagement_matrix_question[:results].key?(:agreement_percentage), "Matrix questions should have agreement percentages"
     end
 
     test 'workshop survey summary handles workshop without survey responses' do
@@ -513,22 +535,15 @@ module Api::V1::Pd
       assert_response :success
       response = JSON.parse(@response.body, symbolize_names: true)
 
-      # Should still have category structure even with no data
-      categories = response[:categories]
-      # When there's no survey data, only core categories should be present
-      expected_categories = [:facilitators, :other]
-      expected_categories.each do |category|
-        assert categories.key?(category), "Missing category: #{category}"
-        if category == :facilitators
-          assert_equal({}, categories[category], "Facilitators should be empty hash when no facilitators assigned")
-        else
-          assert_equal([], categories[category][:questions], "#{category} should have empty questions array")
-        end
-      end
+      # Verify top-level structure
+      assert response.key?(:course), "Missing course"
+      assert response.key?(:name), "Missing name"
+      assert response.key?(:facilitators), "Missing facilitators"
+      assert response.key?(:surveys), "Missing surveys"
 
-      categories.keys.each do |category|
-        assert expected_categories.include?(category), "Unexpected category: #{category}"
-      end
+      # When there's no survey data, surveys should be empty
+      surveys = response[:surveys]
+      assert_equal({}, surveys, "Surveys should be empty hash when no survey responses")
     end
   end
 end

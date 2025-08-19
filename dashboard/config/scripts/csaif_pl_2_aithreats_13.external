@@ -1,0 +1,15 @@
+name 'csaif_pl_2_aithreats_13'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Symmetric vs Asymmetric Encryption
+
+#### Symmetric encryption is encryption where the same key is used to lock and unlock the message
+
+#### Asymmetric encryption is encryption that uses two different keys: a public key to lock the message and a private key to unlock it.
+
+
+
+
+MARKDOWN
