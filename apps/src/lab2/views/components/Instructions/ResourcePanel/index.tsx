@@ -45,7 +45,7 @@ export interface Setting {
 }
 
 // We can only put the copyright and language dropdowns into the resource panel
-// if the lab is using the resource panel permanently, since the copyright/language footer is
+// if the lab is using the resource panel permanently. The copyright/language footer is
 // controlled on the backend in game.rb#no_footer?
 const LABS_USING_COPYRIGHT_AND_SETTINGS_IN_PANEL = ['weblab2'];
 
@@ -87,7 +87,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   aiTutor2Context,
   rightHeaderContent,
   includeFooterSpacing = true,
-  settings = [],
+  settings,
   ...instructionsProps
 }) => {
   const {theme} = useTheme();
@@ -231,7 +231,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
           <NavigationArea {...instructionsProps} />
           {isSettingsOpen && (
             <SettingsPanel
-              settings={settings}
+              settings={settings || []}
               closePanel={() => setIsSettingsOpen(false)}
               localeProps={localeProps}
             />
