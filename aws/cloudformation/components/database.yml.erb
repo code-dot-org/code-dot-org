@@ -359,7 +359,7 @@
 <%    end -%>
       # Temporarily enable on adhocs to test.
 <%    if rack_env?(:production) || rack_env?(:test) || rack_env?(:adhoc) -%>
-      EnablePerformanceInsights: true
+      PerformanceInsightsEnabled: true
       PerformanceInsightsRetentionPeriod: 465
       DatabaseInsightsMode: advanced
 <%    end -%>
