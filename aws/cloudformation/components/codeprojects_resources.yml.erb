@@ -95,7 +95,7 @@ CodeprojectsCloudFrontDistribution:
         - !Sub preview.${CodeprojectsBaseDomainName}
       Origins:
         - Id: DashboardOrigin
-          DomainName: origin-autoscale-prod.code.org
+          DomainName: !GetAtt <%= load_balancer ? 'ALB.DNSName' : "#{daemon}.PublicIp" %>
           CustomOriginConfig:
             OriginProtocolPolicy: https-only
             OriginSSLProtocols:
