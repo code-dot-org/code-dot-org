@@ -1,3 +1,8 @@
+/** DEPRECATED - See /apps/src/lab2/views/components/aiTutor2/useAiTutor2.tsx for the new AI Tutor
+ * TODO-AITUTOR: Remove along with the ruby controller it's calling
+ *
+ **/
+
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {
   AITutorInteractionStatus as Status,
@@ -34,7 +39,7 @@ const logViolationDetails = (response: OpenaiChatCompletionMessage) => {
 /**
  * This function sends a POST request to the chat completion backend controller.
  */
-export async function postOpenaiChatCompletion(
+async function postOpenaiChatCompletion(
   messagesToSend: OpenaiChatCompletionMessage[],
   levelId?: number,
   scriptId?: number,
@@ -131,7 +136,7 @@ export async function getChatCompletionMessage(
   }
 }
 
-export type OpenaiChatCompletionMessage = {
+type OpenaiChatCompletionMessage = {
   status?: AITutorInteractionStatusValue;
   role: Role;
   content: string;
