@@ -100,7 +100,7 @@ a.button-primary {
 
   &.button-white {
     background-color: var(--background-neutral-white-fixed);
-    color: var(--text-neutral-primary);
+    color: var(--text-neutral-inverse);
 
     &:hover,
     &.button-withForcedHover {
@@ -110,7 +110,7 @@ a.button-primary {
     &:disabled,
     &[aria-disabled='true'] {
       background-color: var(--background-neutral-octonary);
-      color: var(--text-neutral-primary);
+      color: var(--text-neutral-disabled-inverse);
     }
   }
 
