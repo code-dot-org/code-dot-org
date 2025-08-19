@@ -58,10 +58,9 @@ export const MultiSelectCard: FC<MultiSelectCardProps> = ({
               </BodyThreeText>
               <Box className={styles.barRow}>
                 <PercentageBar percentage={item.percentage} />
-                <BodyThreeText
-                  noMargin
-                  className={styles.barLabel}
-                >{`${item.count} ${barLabel}`}</BodyThreeText>
+                <BodyThreeText noMargin className={styles.barLabel}>{`${
+                  item.count
+                }${barLabel ? ` ${barLabel}` : ''}`}</BodyThreeText>
               </Box>
             </Box>
           ))}

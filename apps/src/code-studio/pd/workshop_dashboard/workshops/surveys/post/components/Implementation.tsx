@@ -38,13 +38,12 @@ export const Implementation = () => {
 
   // remove "none" option from barriers items since we only care about barriers, not that there weren't any
   const barriersItems = useMemo(() => {
-    if (isQuestionType(barriersToImplementation, 'multiSelect')) {
-      const {breakdown} = barriersToImplementation.results;
-      const breakdownCopy = {...breakdown};
-      delete breakdownCopy.none;
-      return Object.values(breakdownCopy);
+    if (!isQuestionType(barriersToImplementation, 'multiSelect')) {
+      return [];
     }
-    return [];
+    return Object.entries(barriersToImplementation.results.breakdown)
+      .filter(([key]) => key !== 'none')
+      .map(([_, value]) => value);
   }, [barriersToImplementation]);
 
   const getDescription = (question: SurveyQuestion) => {
