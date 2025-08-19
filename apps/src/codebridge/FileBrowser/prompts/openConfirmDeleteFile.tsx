@@ -39,7 +39,7 @@ export const openConfirmDeleteFile = async ({
     if (file.type === ProjectFileType.VALIDATION) {
       cleanupValidationFile();
     }
-    deleteFile({fileId: file.id, isBlockedAbuse}); // TODO: add isBlockedAbuse
+    deleteFile({fileId: file.id});
     sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_DELETE_FILE);
   }
 };

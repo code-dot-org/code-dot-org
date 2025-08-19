@@ -235,13 +235,14 @@ const projectSlice = createSlice({
           // No-op if the file does not exist.
           return;
         }
+        const deleteResult = deleteFileHelper({
+          source,
+          fileId: action.payload.fileId,
+          isBlockedAbuse: action.payload.isBlockedAbuse,
+        });
         state.projectSources = {
           ...state.projectSources,
-          source: deleteFileHelper({
-            source,
-            fileId: action.payload.fileId,
-            isBlockedAbuse: action.payload.isBlockedAbuse,
-          }),
+          source: deleteResult.newSource,
         };
         state.hasEdited = true;
       }

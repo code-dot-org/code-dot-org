@@ -137,6 +137,14 @@ interface DeleteFileHelperArgs {
   isBlockedAbuse?: boolean;
 }
 
+interface DeleteFileResult {
+  newSource: MultiFileSource;
+  deletedFlaggedFile?: {
+    channelId: string;
+    url: string;
+  };
+}
+
 /**
  * Delete a file.
  */
@@ -144,7 +152,7 @@ export const deleteFileHelper = ({
   source,
   fileId,
   isBlockedAbuse,
-}: DeleteFileHelperArgs): MultiFileSource => {
+}: DeleteFileHelperArgs): DeleteFileResult => {
   const openFileIds = getOpenFileIds(source);
   const newOpenFileIds = openFileIds.find(openFileId => openFileId === fileId)
     ? openFileIds.filter(openFileId => openFileId !== fileId)
@@ -160,35 +168,25 @@ export const deleteFileHelper = ({
   const fileToBeDeleted = newSource.files[fileId];
   delete newSource.files[fileId];
 
+  let deletedFlaggedFile: {channelId: string; url: string} | undefined;
+
   if (fileToBeDeleted.url) {
-    // Check if project is blocked for abusive content due to flagged image.
-    // Unblock project since offending image is being deleted.
-    if (fileToBeDeleted.flagged && isBlockedAbuse) {
-      // Extract channelId from asset url.
-      const match = fileToBeDeleted.url.match(/\/assets\/([^/]+)/);
-      const channelId = match ? match[1] : null;
-      if (channelId) {
-        try {
-          const body = JSON.stringify({
-            type: 'unflag',
-          });
-          HttpClient.post(`/v3/channels/${channelId}/abuse/image`, body, true, {
-            'Content-Type': 'application/json; charset=UTF-8',
-          });
-        } catch (error) {
-          Lab2Registry.getInstance()
-            .getMetricsReporter()
-            .logError(
-              'Error unflagging project channel due to deletion of flagged project asset',
-              error as Error
-            );
-        }
-      }
-    }
     try {
-      // We don't wait for the deletion to complete because a user's project doesn't depend on the completion of the operation.
       // In the case of a failure, we just end up with an orphaned file in S3.
       HttpClient.delete(fileToBeDeleted.url);
+      // Check if project is blocked for abusive content due to flagged image.
+      // Return info about flagged file deletion so caller can handle unflagging.
+      if (fileToBeDeleted.flagged && isBlockedAbuse) {
+        // Extract channelId from asset url.
+        const match = fileToBeDeleted.url.match(/\/assets\/([^/]+)/);
+        const channelId = match ? match[1] : null;
+        if (channelId) {
+          deletedFlaggedFile = {
+            channelId,
+            url: fileToBeDeleted.url,
+          };
+        }
+      }
     } catch (error) {
       Lab2Registry.getInstance()
         .getMetricsReporter()
@@ -204,7 +202,10 @@ export const deleteFileHelper = ({
     };
   }
 
-  return newSource;
+  return {
+    newSource,
+    deletedFlaggedFile,
+  };
 };
 
 /**

@@ -67,9 +67,7 @@ export const usePrompts = () => {
   );
 
   const deleteFile = (arg: {fileId: string; isBlockedAbuse?: boolean}) =>
-    dispatch(
-      deleteFileThunk({fileId: arg.fileId, isBlockedAbuse: arg.isBlockedAbuse})
-    );
+    dispatch(deleteFileThunk({fileId: arg.fileId}));
   const deleteFolder = (folderId: string) =>
     dispatch(deleteFolderThunk(folderId));
   const newFolder = (arg: {folderName: string; parentId?: FolderId}) =>
