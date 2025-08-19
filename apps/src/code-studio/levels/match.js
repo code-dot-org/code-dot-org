@@ -109,7 +109,7 @@ export default class Match {
       '.mainblock .match_answers li.answer'
     );
 
-    // Make answers focusable and draggable via keyboard
+    // Make answers focusable and set up keyboard navigation
     answers
       .attr('tabindex', '0') // Make focusable
       .on('keydown', event => this.handleAnswerKeydown(event));
@@ -132,7 +132,7 @@ export default class Match {
 
   handleAnswerKeydown(event) {
     const answer = $(event.currentTarget);
-    const slots = $(this.container).find('.mainblock .match_slots li');
+    const slots = $(this.container).find('.ui-droppable');
 
     switch (event.key) {
       case 'Enter':
@@ -141,28 +141,16 @@ export default class Match {
 
         if (answer.hasClass('selected')) {
           // Deselect the answer
-          answer.removeClass('selected'); // Remove visual feedback
-          this.selectedAnswer = null; // Clear the selected answer
-          slots.attr('tabindex', '-1'); // Make slots not focusable
-          answer.focus(); // Keep focus on the answer
+          answer.removeClass('selected');
+          this.selectedAnswer = null;
+          slots.attr('tabindex', '-1');
         } else {
-          // Select the answer
-          answer.addClass('selected'); // Add visual feedback
-          this.selectedAnswer = answer; // Store the selected answer
-          slots.each((index, slot) => {
-            const $slot = $(slot);
-            const existingAnswer = $slot.data('currentAnswer');
-
-            if (existingAnswer) {
-              // If the slot contains an answer, remove it from the tab order
-              $slot.attr('tabindex', '-1');
-            } else {
-              // If the slot is empty, make it focusable
-              $slot.attr('tabindex', '0');
-            }
-          });
-          slots.first().focus(); // Move focus to the first slot
-          this.enableFocusTrap(slots); // Enable focus trap for slots
+          // Select the answer and make slots focusable, move focus to first one
+          answer.addClass('selected');
+          this.selectedAnswer = answer;
+          slots.attr('tabindex', '0');
+          slots.first().focus();
+          this.enableSlotNavigation(slots);
         }
         break;
 
@@ -176,9 +164,8 @@ export default class Match {
         answer.prev().focus();
         break;
 
-      case 'Escape': // Deselect the answer or remove it from the slot
+      case 'Escape': // Deselect the answer
         event.preventDefault();
-
         if (this.selectedAnswer) {
           // Deselect the currently selected answer
           this.selectedAnswer.removeClass('selected'); // Remove visual feedback
@@ -191,7 +178,7 @@ export default class Match {
     }
   }
 
-  enableFocusTrap(slots) {
+  enableSlotNavigation(slots) {
     const firstSlot = slots.first();
     const lastSlot = slots.last();
 
@@ -214,18 +201,56 @@ export default class Match {
         }
       } else if (event.key === 'Enter' || event.key === ' ') {
         event.preventDefault();
-        // Drop the selected answer into the slot
         const slot = $(event.currentTarget);
-        if (this.selectedAnswer) {
-          this.moveAnswerToSlot(slot, this.selectedAnswer);
-          this.selectedAnswer.removeClass('selected'); // Remove visual feedback
-          this.selectedAnswer = null; // Clear the selection
-          slots.attr('tabindex', '-1'); // Disable focusability for slots
+        const incomingAnswer = $(this.selectedAnswer);
+        const existingElement = $(event.target);
 
-          // Disable the focus trap
-          slots.off('keydown', handleKeydown);
-          $('body').focus();
+        // This is to find out if the answer is being moved from an existing slot,
+        // as in not from the answer bank on the right.
+        const isFromDifferentSlot =
+          $(incomingAnswer).closest('.match_slots').length === 1;
+        console.log('is from a different slot:', isFromDifferentSlot);
+        // We only want to do a swap if the answer is coming from a different slot
+        if (isFromDifferentSlot) {
+          console.log('manually calling drop handler');
+          // Simulate drag locations
+          const $container = $('.draggablecolumn');
+          const containerOffset = $container.offset();
+          const itemOffset = existingElement.offset();
+
+          const relativeTop = itemOffset.top - containerOffset.top;
+          const relativeLeft = itemOffset.left - containerOffset.left;
+
+          existingElement.css({
+            position: 'absolute',
+            top: relativeTop,
+            left: relativeLeft,
+            zIndex: 1000,
+          });
+          // Simulate the drop call
+          const dropHandler = existingElement.data('ui-droppable').options.drop;
+
+          // Create mock event and ui
+          const fakeEvent = $.Event('drop', {target: existingElement[0]});
+          const ui = {draggable: incomingAnswer};
+
+          // Manually call the drop function
+          dropHandler.call(existingElement[0], fakeEvent, ui);
+        } else if ($(existingElement).hasClass('answer')) {
+          // We do nothing if there's already an answer
+        } else {
+          // Place the incoming answer into the slot
+          this.moveAnswerToSlot(slot, incomingAnswer);
         }
+        this.selectedAnswer = null;
+
+        // Disable focusability for slots
+        slots.attr('tabindex', '-1');
+
+        // Disable the focus trap and move focus back to the body, deselecting any selected ansers
+        $('.answer.selected').removeClass('selected');
+        slots.off('keydown', handleKeydown);
+        $('.submitButton').focus();
       } else if (event.key === 'Escape') {
         event.preventDefault();
         // Deselect the answer and move focus to the top of the page
@@ -233,10 +258,8 @@ export default class Match {
           this.selectedAnswer.removeClass('selected'); // Remove visual feedback
           this.selectedAnswer = null; // Clear the selected answer
         }
+        $('.submitButton').focus();
         slots.attr('tabindex', '-1'); // Disable focusability for slots
-        // Disable the focus trap
-        slots.off('keydown', handleKeydown);
-        $('body').focus(); // Move focus to the top of the page
       }
     };
     slots.on('keydown', handleKeydown);
