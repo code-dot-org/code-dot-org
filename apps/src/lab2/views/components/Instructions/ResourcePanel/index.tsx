@@ -9,11 +9,13 @@ import React, {useMemo, useState} from 'react';
 
 import {getCurrentScriptLevelId} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {queryParams} from '@cdo/apps/code-studio/utils';
+import {LocaleProps} from '@cdo/apps/lab2/types';
 import AiTutor2Chat from '@cdo/apps/lab2/views/components/AiTutor2Chat';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import StudentRubricView from '@cdo/apps/lab2/views/components/rubrics/StudentRubricView';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {getTypedKeys} from '@cdo/apps/types/utils';
+import getScriptData, {hasScriptData} from '@cdo/apps/util/getScriptData';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {useRubric} from '../../rubrics/RubricWrapper';
@@ -60,6 +62,13 @@ const tabInfo: {[key in Tabs]: {title: string; icon: string}} = {
   },
 };
 
+function getLocaleProps() {
+  if (hasScriptData('script[data-localeProps]')) {
+    return getScriptData('localeProps') as LocaleProps;
+  }
+  return undefined;
+}
+
 type ResourcePanelProps = InstructionsProps & {
   className?: string;
   headerClassName?: string;
@@ -92,6 +101,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     LABS_USING_COPYRIGHT_AND_SETTINGS_IN_PANEL.includes(
       instructionsProps.levelProperties.appName
     );
+  const localeProps = getLocaleProps();
 
   const levelId = instructionsProps.levelProperties.id;
   const scriptLevelId = useAppSelector(getCurrentScriptLevelId);
@@ -182,25 +192,27 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
           />
           {includeCopyrightAndSettings && (
             <>
-              <WithTooltip
-                tooltipProps={{
-                  text: commonI18n.settings(),
-                  tooltipId: 'tooltip-settings',
-                  direction: 'onRight',
-                  size: 'xs',
-                  'data-theme': theme,
-                }}
-              >
-                <button
-                  type="button"
-                  className={styles.bottomButton}
-                  onClick={() => {
-                    setIsSettingsOpen(!isSettingsOpen);
+              {(localeProps || settings) && (
+                <WithTooltip
+                  tooltipProps={{
+                    text: commonI18n.settings(),
+                    tooltipId: 'tooltip-settings',
+                    direction: 'onRight',
+                    size: 'xs',
+                    'data-theme': theme,
                   }}
                 >
-                  <FontAwesomeV6Icon iconName={'gear'} />
-                </button>
-              </WithTooltip>
+                  <button
+                    type="button"
+                    className={styles.bottomButton}
+                    onClick={() => {
+                      setIsSettingsOpen(!isSettingsOpen);
+                    }}
+                  >
+                    <FontAwesomeV6Icon iconName={'gear'} />
+                  </button>
+                </WithTooltip>
+              )}
               <CopyrightButton theme={theme} />
             </>
           )}
@@ -221,6 +233,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
             <SettingsPanel
               settings={settings}
               closePanel={() => setIsSettingsOpen(false)}
+              localeProps={localeProps}
             />
           )}
         </PanelContainer>
