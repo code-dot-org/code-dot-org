@@ -357,6 +357,12 @@
 <%    unless rack_env?(:adhoc) -%>
       BackupRetentionPeriod: !Ref DBBackupRetention
 <%    end -%>
+      # Temporarily enable on adhocs to test.
+<%    if rack_env?(:production) || rack_env?(:test) || rack_env?(:adhoc) -%>
+      EnablePerformanceInsights: true
+      PerformanceInsightsRetentionPeriod: 465
+      DatabaseInsightsMode: advanced
+<%    end -%>
 <%    DB_INSTANCE_RANGE.each do |i| %>
   Aurora<%=i%>:
     Type: AWS::RDS::DBInstance
@@ -368,10 +374,6 @@
       DBSubnetGroupName: !ImportValue VPC-DBSubnetGroup
       Engine: aurora-mysql
       DBParameterGroupName: default.aurora-mysql8.0 #Explicitly stop setting a custom Instance ParameterGroup.
-<%      if rack_env?(:production) || rack_env?(:test) -%>
-      EnablePerformanceInsights: true
-      PerformanceInsightsRetentionPeriod: <%= rack_env?(:production) ? 465 : 7 %>
-<%      end -%>
 <%    end -%>
   DBProxy:
     Type: AWS::RDS::DBProxy
