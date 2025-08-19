@@ -96,6 +96,7 @@ module Localizable
   # Main localization method
   def localize_property(property_name, locale_code: I18n.locale, key_override: nil)
     property_name = property_name.to_sym
+    cache_key = "#{property_name}_#{locale_code}"
 
     # Validate that the property is configured as localizable
     unless self.class.localizable_attributes.include?(property_name)
@@ -106,7 +107,6 @@ module Localizable
 
     # Get the fallback value (original property value)
     fallback_value = get_fallback_value(property_name)
-
     # Return nil immediately if the fallback is nil (don't try to localize nil values)
     if fallback_value.nil?
       @localization_cache[cache_key] = nil if @localization_cache
@@ -117,7 +117,6 @@ module Localizable
     return fallback_value if locale_code.to_s == I18n.default_locale.to_s
 
     # Return memoize translation if it exists
-    cache_key = "#{property_name}_#{locale_code}"
     return @localization_cache[cache_key] if @localization_cache&.key?(cache_key)
 
     # Determine lookup key: use override if provided, otherwise use object.key
@@ -158,30 +157,20 @@ module Localizable
   end
 
   # Perform the actual I18n lookup with error handling
-  private def perform_i18n_lookup(property_name, fallback_value, locale_code, key_override)
-    return fallback_value if fallback_value.nil? # Returns the fallback_value if it's nil (no point in localizing nil)
-
-    # Default to using `object.key` as the key, but support overriding that for specific models.
-    lookup_key = key_override
-    lookup_key = key if lookup_key.blank? && respond_to?(:key)
-
-    return fallback_value if lookup_key.blank?
-
-    begin
-      I18n.with_locale(locale_code) do
-        I18n.t(
-          property_name,
-          scope: [:data, self.class.model_name.plural, lookup_key],
-          default: fallback_value,
-          smart: true
-        )
-      end
-    rescue I18n::InvalidLocale => exception
-      Rails.logger.warn("Invalid locale #{locale_code} for #{self.class.name}##{property_name}: #{exception.message}")
-      fallback_value
-    rescue => exception
-      Rails.logger.error("Localization error for #{self.class.name}##{property_name} (locale: #{locale_code}): #{exception.message}")
-      fallback_value
+  private def perform_i18n_lookup(property_name, fallback_value, locale_code, lookup_key)
+    I18n.with_locale(locale_code) do
+      I18n.t(
+        property_name,
+        scope: [:data, self.class.model_name.plural, lookup_key],
+        default: fallback_value,
+        smart: true
+      )
     end
+  rescue I18n::InvalidLocale => exception
+    Rails.logger.warn("Invalid locale #{locale_code} for #{self.class.name}##{property_name}: #{exception.message}")
+    fallback_value
+  rescue => exception
+    Rails.logger.error("Localization error for #{self.class.name}##{property_name} (locale: #{locale_code}): #{exception.message}")
+    fallback_value
   end
 end
