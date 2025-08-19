@@ -53,11 +53,6 @@ class PdWorkshopMailerPreview < ActionMailer::Preview
     mail :teacher_enrollment_receipt, Pd::Workshop::COURSE_FACILITATOR
   end
 
-  def teacher_enrollment_reminder__facilitator
-    mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_FACILITATOR,
-      options: {days_before: 10}
-  end
-
   def teacher_pre_workshop_csa
     mail :teacher_pre_workshop_csa, Pd::Workshop::COURSE_CSA
   end
