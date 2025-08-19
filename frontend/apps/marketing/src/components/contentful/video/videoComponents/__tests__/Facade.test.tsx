@@ -47,6 +47,10 @@ describe('Facade', () => {
     const facadeElement = screen
       .getByAltText(defaultProps.label)
       .closest('div');
-    expect(facadeElement).toHaveClass('facade');
+    expect(
+      Array.from(facadeElement!.classList).some(cls =>
+        cls.endsWith('MuiVideo-facade'),
+      ),
+    ).toBe(true);
   });
 });
