@@ -368,3 +368,112 @@ GroupOfSizesOf_BaseButtons.args = {
     },
   ],
 };
+
+//
+// DARK THEME STORIES
+//
+
+// Template for dark theme stories
+const DarkThemeTemplate: StoryFn<_BaseButtonProps> = args => (
+  <div
+    style={{
+      background: 'var(--neutral-gray-90)',
+      padding: '2rem',
+      borderRadius: '0.5rem',
+    }}
+    data-theme="Dark"
+  >
+    <_BaseButton {...args} />
+  </div>
+);
+
+const DarkThemeMultipleTemplate: StoryFn<{
+  components: _BaseButtonProps[];
+}> = args => (
+  <div
+    style={{
+      background: 'var(--neutral-gray-90)',
+      padding: '2rem',
+      borderRadius: '0.5rem',
+    }}
+    data-theme="Dark"
+  >
+    <div
+      style={{
+        display: 'flex',
+        flexFlow: 'wrap',
+        alignItems: 'flex-start',
+        gap: '20px',
+      }}
+    >
+      {args.components?.map(componentArg => (
+        <_BaseButton
+          key={`${componentArg.size}-${componentArg.text}-${componentArg.color}`}
+          {...componentArg}
+        />
+      ))}
+    </div>
+  </div>
+);
+
+export const DarkTheme_BaseButton = DarkThemeTemplate.bind({});
+DarkTheme_BaseButton.args = {
+  text: 'Dark Theme Button',
+  onClick: () => null,
+  size: 'm',
+  color: buttonColors.white,
+};
+
+export const DarkThemeWhiteButtons = DarkThemeMultipleTemplate.bind({});
+DarkThemeWhiteButtons.args = {
+  components: [
+    {
+      text: 'Primary White',
+      color: buttonColors.white,
+      type: 'primary',
+      size: 'm',
+      onClick: () => null,
+    },
+    {
+      text: 'Secondary White',
+      color: buttonColors.white,
+      type: 'secondary',
+      size: 'm',
+      onClick: () => null,
+    },
+    {
+      text: 'Tertiary White',
+      color: buttonColors.white,
+      type: 'tertiary',
+      size: 'm',
+      onClick: () => null,
+    },
+    {
+      icon: {iconName: 'smile', iconStyle: 'solid'},
+      ariaLabel: 'White primary icon only base button',
+      color: buttonColors.white,
+      type: 'primary',
+      isIconOnly: true,
+      size: 'm',
+      onClick: () => null,
+    },
+    {
+      icon: {iconName: 'smile', iconStyle: 'solid'},
+      ariaLabel: 'White secondary icon only base button',
+      color: buttonColors.white,
+      type: 'secondary',
+      isIconOnly: true,
+      size: 'm',
+      onClick: () => null,
+    },
+    {
+      icon: {iconName: 'smile', iconStyle: 'solid'},
+      ariaLabel: 'White tertiary icon only base button',
+      color: buttonColors.white,
+      type: 'tertiary',
+      isIconOnly: true,
+      size: 'm',
+      onClick: () => null,
+    },
+  ],
+};
