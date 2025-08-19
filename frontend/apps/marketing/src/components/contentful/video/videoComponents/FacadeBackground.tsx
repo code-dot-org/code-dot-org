@@ -1,4 +1,4 @@
-import styles from './video.module.scss';
+import {styled} from '@mui/material/styles';
 
 export interface FacadeProps {
   /** Facade poster thumbnail */
@@ -9,12 +9,20 @@ export interface FacadeProps {
   alt: string;
 }
 
+const MuiVideoPosterImage = styled('img', {
+  name: 'MuiVideo',
+  slot: 'posterImage',
+})(() => ({
+  height: '100%',
+  width: '100%',
+  objectFit: 'cover',
+}));
+
 const FacadeBackground = ({posterThumbnail, alt, onClick}: FacadeProps) => {
   return (
     posterThumbnail && (
-      <img
+      <MuiVideoPosterImage
         onClick={onClick}
-        className={styles.posterImage}
         src={posterThumbnail}
         loading={'lazy'}
         alt={alt}
