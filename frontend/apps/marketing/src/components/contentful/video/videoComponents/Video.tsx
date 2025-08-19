@@ -95,7 +95,6 @@ const Video: React.FC<VideoProps> = ({
             posterThumbnail={posterThumbnail}
             videoTitle={videoTitle}
             src={videoFallback}
-            className={className}
             onError={error => handleError(error, 'error')}
           />
         );
