@@ -85,6 +85,39 @@ const extractNodeContent = (node: RichTextNode): ReactNode[] => {
   }
 };
 
+const renderTableCellContent = (cellNode: RichTextNode): ReactNode => {
+  // Use documentToReactComponents for table cells to preserve paragraph structure
+  if ('content' in cellNode && cellNode.content) {
+    return documentToReactComponents(
+      // Create a minimal document structure for the cell content
+      {
+        nodeType: 'document',
+        data: {},
+        content: cellNode.content,
+      } as Document,
+      {
+        ...richTextRenderOptions,
+        renderNode: {
+          ...richTextRenderOptions.renderNode,
+          // Override paragraph rendering for table cells to use <br/> instead of <Paragraph>
+          [BLOCKS.PARAGRAPH]: (paragraphNode: RichTextNode) => {
+            const paragraphContent = extractNodeContent(paragraphNode);
+            return paragraphContent.some(content => content) ? (
+              <>
+                {paragraphContent}
+                <br />
+              </>
+            ) : (
+              <br />
+            );
+          },
+        },
+      },
+    );
+  }
+  return extractNodeContent(cellNode);
+};
+
 const richTextRenderOptions: Options = {
   preserveWhitespace: true,
   renderNode: {
@@ -155,7 +188,7 @@ const richTextRenderOptions: Options = {
                 {(('content' in headerRow && headerRow.content) || []).map(
                   (cell: RichTextNode, i: number) => (
                     <MuiTableCell key={`header-cell-${i}`}>
-                      {extractNodeContent(cell)}
+                      {renderTableCellContent(cell)}
                     </MuiTableCell>
                   ),
                 )}
@@ -167,7 +200,7 @@ const richTextRenderOptions: Options = {
                   {(('content' in row && row.content) || []).map(
                     (cell: RichTextNode, cellIndex: number) => (
                       <MuiTableCell key={`cell-${cellIndex}`}>
-                        {extractNodeContent(cell)}
+                        {renderTableCellContent(cell)}
                       </MuiTableCell>
                     ),
                   )}
