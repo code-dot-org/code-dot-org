@@ -66,24 +66,20 @@ module Localizable
 
     # Class method to define localizable attributes
     def localizable_attributes=(*attrs)
-      if attrs.any?
-        @localizable_attributes = attrs.flatten.map(&:to_sym)
+      @localizable_attributes = attrs.flatten.map(&:to_sym)
 
-        # Generate localized_* methods for each configured attribute
-        @localizable_attributes.each do |attr|
-          define_method("localized_#{attr}") do |locale_code = I18n.locale, key_override: nil|
-            localize_property(attr, locale_code: locale_code, key_override: key_override)
-          end
-
-          # Also create a method that accepts options hash (for backward compatibility)
-          define_method("localized_#{attr}_with_options") do |options = {}|
-            locale_code = options[:locale] || options[:locale_code] || I18n.locale
-            key_override = options[:key]
-            localize_property(attr, locale_code: locale_code, key_override: key_override)
-          end
+      # Generate localized_* methods for each configured attribute
+      @localizable_attributes.each do |attr|
+        define_method("localized_#{attr}") do |locale_code = I18n.locale, key_override: nil|
+          localize_property(attr, locale_code: locale_code, key_override: key_override)
         end
-      else
-        @localizable_attributes
+
+        # Also create a method that accepts options hash (for backward compatibility)
+        define_method("localized_#{attr}_with_options") do |options = {}|
+          locale_code = options[:locale] || options[:locale_code] || I18n.locale
+          key_override = options[:key]
+          localize_property(attr, locale_code: locale_code, key_override: key_override)
+        end
       end
     end
 
