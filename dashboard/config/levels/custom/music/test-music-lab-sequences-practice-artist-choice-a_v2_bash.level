@@ -1,0 +1,125 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2025-08-15T18:44:52.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "#### Tinashe's \"Tightrope\" \r\n\r\nRecreate this portion of the song using what you know about sequencing sounds and playing them together. \r\n\r\n**Prepare:**\r\n1) Listen to the song in the music player.\r\n2) Look at the timeline image below for reference.\r\n\r\n**Try:**\r\n3) Build the song with code.\r\n\r\n![](https://images.code.org/8b67af89a6d4c1682a02534c2719f17c-image-1741977077842.31.10 AM.png)",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "sounds": {
+        "tinashe_tightrope": [
+          "vocals_chorus_backups",
+          "vocals_chorus_lead_1",
+          "drums_verse"
+        ]
+      },
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2",
+            "play_rest_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together",
+            "play_sounds_sequential"
+          ]
+        },
+        "type": "flyout"
+      },
+      "packId": "tinashe_tightrope",
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false
+            }
+          ]
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "toolboxDefinition": {
+        "contents": [
+          {
+            "kind": "block",
+            "type": "play_sound_at_current_location_simple2",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "sound": "tinashe_tightrope/vocals_chorus_backups"
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_rest_at_current_location_simple2",
+            "fields": {
+              "rest_duration": "<field name=\"rest_duration\">2</field>"
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_sounds_together",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_sounds_sequential",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "enabled": true
+          }
+        ],
+        "kind": "flyoutToolbox"
+      }
+    },
+    "display_name": "Create \"Tightrope\"",
+    "thumbnail_url": "https://images.code.org/9e31194af19b904a457bdb178ccce575-tinashe.png",
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": true,
+      "validationSuccessMessage": "You did it! The song matches the example!",
+      "validationFailureMessage": "Something's not quite right! Try listening to the example again!",
+      "playerTitle": "Tinashe's Chorus"
+    },
+    "encrypted_exemplar_sources": "UGYNk6iye9eaFwUY05FzzO/7y8j7ObxryFbKvBPuF528qP4MtsSFqDeG//aJ\nl0T6UI7wWB0H/J+Euq0wtMrnfZIv4KqNWq5gtmuW8ushzt6HJzSVh89nAJ/g\nqoY+ihv6+zHmlLE8msmvDlVnBRmpwSSug3q+SpkXFur9+w3vOPL1o8LhfdJB\n0ep9sKAPNFreeEGpfNaTHyeEek22ZDpwo5g1/91laRFZXLJ3ObFQkI2Mi/SF\neThQ1zPNuOEggHorpleEeoerSvfZ2JHZpm1GhsSDwCOxBL+fVO3bL+jSF8lL\nW/SyrxeYBOE22MW62zzXxl7ZWtb3HROyH4RPTHsAcBBPo4PK1usYOsBDZKBO\nSB45w5QfTSl1PV+PTL2tu7L/zOMVsZ+3oATtBDd7H5bIlKixaN0iRSXfBQfO\nUP3iAZsT8Eyuhbmx+/+7bQ0+D5ozC1BLzE/l6Sxl0cp7JVy55SPCJdw6h7Bg\nd/njIZRIfi0Hfd0LgeBlY+FXFjmymE9DlvTMyePgxoF3AZOqstijiVVWBc4I\n47L3KqsFIAMIdnd+D8+wY1UHCJLB3++QJ+1FPXMZfGoLYy1RSqV/YdMI7Wpw\nAL0U3uAjmcEa6WKeP1Dw1BtuuS6nJcdpisTJIfz4PMXEpaIH8KCH7xKp7Z0z\nsZ9yJVM7YUZ1rtG0BZV0Mo9oxPsCunkXdJYQbRu2kfGyzfHv+EgXZk9FroLP\n8+biJLaHiFsvJG/kAiOpi9OBI5t2JNbr05kSuVXtO7zF3NiskOv5XShv5eck\nvDyEOurLWDLu27Lmywdb4dVhISvMbsCSu3p3PxtxEIgs4jYNe0XqIs8eFCYR\nVZuf+PFg+1UAGX05CwK7UmXL9oNDPk1lBea8mRFfqW8seX9UqR+tA4778Jux\niSxzeMQ6UO/4nrqasJa3T6UpRaQQbBwneRabI19GgmBklpfvOconfoVgVChZ\nprx5RW48D1+SNeQIvQ36Yz0gVhN5JiuSfM4TWNDFoWr88p70Z0TI7u6xEobP\nCPTIsiiqvxN9xCcGiKg5mV16vGddv8HXzHpFZEUkAWcFYigdccx6gWDj9P3o\n12bwoh0urXHlJYSnlO1OgaTkd9NhqWJThp7D9Xs6Rmf1MCEgIsI17gZ5Bdet\nhlMA0G0DNbYmy5/UUAcp7w8aTcOem7wcdOP4UHv0btGnx5X0dCfmvOc3GWYx\n2ccqbR9+4/EZg6SqrlyXB4gg8z7Ra2JPsAIGHXpQM3Yv5M7iAnlWA3T6ZQ+g\noQftMHHK7yr9OCiUwJG2prKgeQLUpfTgl+8T4berUshFlLJ9kA3d8pplcGmO\nP4yHjZPo3U2VUcJLfBa1q6cBASg9uj4G4n11cC4hLfHIcszaAHQEN/EhsPBw\nPDKagjd3Oo73FE5upn2o/S+HLxc8ya28csa9MHXHSGNYXrcigTX9oeu0lrYF\nAEIElegrJ+Dejd+oFfAn4rDiikOEh/TxHpy3DkZ1iDXc2aZvoUwB9Uirq1yh\nYqS21b/KWlCGrztrx4GEmFhTUQCT7Vvp/QIbcjX0YsgIZoxWkcvPuUGaYx7Q\n24PCAhE4XrdohHWlHhziB+mKbdEQeTtZOb94bdeTENVc9nxFNldVKcNRaQTy\naxwx14XJR02x8Il+nVnYMSKiW0O2dTKxoR/6oV5ng6qA6uGJ7GfDn0FZwMlU\nyNnEtj+rraVFOUf5lp3RsrR83O/3iQr1NTBKjcILLEFPEEJcQQDOTaqfR5yi\ntfHNiVzeDlW0wzro6hINP9JN/nHtPOdcXheBgdg/ADQDj+jaKhV80wk0W0bM\nejXmy8K/tr0CximGoXSgGgr6YkYJze6uW82z4dPNINkF6e5S4kjhKAm3\n",
+    "validations": [
+      {
+        "key": "test-music-lab-sequences-practice-artist-choice-a_e8d7f823-2208-49bf-a83b-93b60485a15f",
+        "message": "[auto-pass for exemplar validation]",
+        "next": true,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "name_suffix": "_bash",
+    "bubble_choice_description": "Use what you know about sequencing to create this portion of Tinashe's \"Tightrope\".",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-08-15T18:44:52.085+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-practice-artist-choice-a_v2\\\"\"],\"cloned_from\":\"test-music-lab-sequences-practice-artist-choice-a_v2\"}]"
+}]]></config>
+  <blocks/>
+</Music>

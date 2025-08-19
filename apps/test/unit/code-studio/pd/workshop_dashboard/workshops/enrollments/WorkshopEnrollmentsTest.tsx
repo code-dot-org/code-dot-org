@@ -18,12 +18,17 @@ const mockGetAuthenticityToken = getAuthenticityToken as jest.MockedFunction<
   typeof getAuthenticityToken
 >;
 
-// Mock React Router's useOutletContext
-const mockUseOutletContext = jest.fn();
-jest.mock('react-router-dom', () => ({
-  ...jest.requireActual('react-router-dom'),
-  useOutletContext: () => mockUseOutletContext(),
-}));
+// Mock useWorkshopContext
+const mockUseWorkshopContext = jest.fn();
+jest.mock(
+  '@cdo/apps/code-studio/pd/workshop_dashboard/workshops/WorkshopLayout',
+  () => ({
+    ...jest.requireActual(
+      '@cdo/apps/code-studio/pd/workshop_dashboard/workshops/WorkshopLayout'
+    ),
+    useWorkshopContext: () => mockUseWorkshopContext(),
+  })
+);
 
 describe('WorkshopEnrollments', () => {
   const user = userEvent.setup();
@@ -120,7 +125,7 @@ describe('WorkshopEnrollments', () => {
     contextOverrides: Partial<WorkshopContextValue> = {}
   ) => {
     const mockContext = createMockContext(contextOverrides);
-    mockUseOutletContext.mockReturnValue(mockContext);
+    mockUseWorkshopContext.mockReturnValue(mockContext);
 
     return render(
       <MemoryRouter>

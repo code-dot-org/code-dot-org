@@ -32,13 +32,12 @@ import React, {
   useMemo,
   useCallback,
 } from 'react';
-import {useOutletContext} from 'react-router-dom';
 
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import {EducatorRoles} from '@cdo/generated-scripts/sharedConstants';
 
 import {EnrollmentData} from '../../WorkshopFormTemplate/types';
-import {WorkshopContextValue} from '../types';
+import {useWorkshopContext} from '../WorkshopLayout';
 
 import styles from '../workshop.module.scss';
 
@@ -62,7 +61,7 @@ export const WorkshopEnrollments: FC = () => {
     refetchEnrollments,
     enrollmentsLoading,
     enrollmentsError,
-  } = useOutletContext<WorkshopContextValue>();
+  } = useWorkshopContext();
 
   const refreshTimeout = useRef<NodeJS.Timeout | null>(null);
   const [selected, setSelected] = useState<EnrollmentData[]>([]);

@@ -1,0 +1,14 @@
+name 'ai-powered-threats-defenses-preassessment-q5_2025-pilot_2025'
+
+question ‘Generative AI poses a significant challenge to traditional methods of spotting scams primarily because it can:’
+
+wrong ‘Only be used by highly-skilled, state-sponsored hacking groups’
+wrong ‘Make fraudulent websites look completely identical to real ones in every way’
+right ‘Eliminate common red flags like poor grammar and create contextually relevant, personalized messages’
+wrong ‘Embed a hidden virus in any image or video file it creates’
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 4: Phishing with AI
+MARKDOWN

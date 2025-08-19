@@ -14,6 +14,7 @@ export {
   setStartingAiCustomizations,
   setStudentChatHistory,
   setUserHasAichatAccess,
+  setClientType,
   setViewMode,
   addStagedFile,
   stagedFileUploadFinished,
