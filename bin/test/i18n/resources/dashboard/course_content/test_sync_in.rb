@@ -87,6 +87,7 @@ class I18n::Resources::Dashboard::CourseContent::SyncInTest < Minitest::Test
     }
 
     script = Unit.new(name: 'unversioned-script')
+    course_version = FactoryBot.build_stubbed(:course_version, key: 'unversioned')
     script_level = ScriptLevel.new(progression: expected_string_level_progression)
     level = Level.new(encrypted: false)
 
@@ -98,7 +99,7 @@ class I18n::Resources::Dashboard::CourseContent::SyncInTest < Minitest::Test
     I18nScriptUtils.expects(:get_level_url_key).with(script, level).in_sequence(exec_seq).returns('expected_level_url')
     sync_in_instance.expects(:get_i18n_strings).with(level).in_sequence(exec_seq).returns(expected_level_i18n_strings)
     script.expects(:in_initiative?).with('HOC').in_sequence(exec_seq).returns(false)
-    script.expects(:unversioned?).in_sequence(exec_seq).returns(true)
+    script.expects(:get_course_version).at_least_once.in_sequence(exec_seq).returns(course_version)
     I18nScriptUtils.expects(:unit_directory_change?).with(expected_i18n_source_dir_path, expected_i18n_source_file_path).in_sequence(exec_seq).returns(false)
     I18nScriptUtils.expects(:write_json_file).with(expected_i18n_source_file_path, {'expected_level_url' => {'expected_script_string_key' => 'expected_script_string_value'}}).in_sequence(exec_seq)
     sync_in_instance.expects(:redact_json_file).with(expected_i18n_source_file_path).in_sequence(exec_seq)
@@ -117,7 +118,7 @@ class I18n::Resources::Dashboard::CourseContent::SyncInTest < Minitest::Test
     exec_seq = sequence('execution')
 
     expected_i18n_source_dir_path = CDO.dir('i18n/locales/source/course_content')
-    expected_i18n_source_file_path = File.join(expected_i18n_source_dir_path, 'expected_version_year/versioned-script.json')
+    expected_i18n_source_file_path = File.join(expected_i18n_source_dir_path, 'expected-version-year/versioned-script.json')
     expected_string_level_progression = 'expected_progression_string'
     expected_block_categories = {'expected_block_category_key' => 'expected_block_category_value'}
     expected_variable_names = {'expected_variable_name_key' => 'expected_variable_name_value'}
@@ -129,7 +130,8 @@ class I18n::Resources::Dashboard::CourseContent::SyncInTest < Minitest::Test
       'parameter_names'            => expected_parameter_names,
     }
 
-    script = Unit.new(name: 'versioned-script', version_year: 'expected_version_year')
+    script = Unit.new(name: 'versioned-script')
+    course_version = FactoryBot.build_stubbed(:course_version, key: 'expected-version-year')
     script_level = ScriptLevel.new(progression: expected_string_level_progression)
     level = Level.new(encrypted: false)
 
@@ -141,7 +143,7 @@ class I18n::Resources::Dashboard::CourseContent::SyncInTest < Minitest::Test
     I18nScriptUtils.expects(:get_level_url_key).with(script, level).in_sequence(exec_seq).returns('expected_level_url')
     sync_in_instance.expects(:get_i18n_strings).with(level).in_sequence(exec_seq).returns(expected_level_i18n_strings)
     script.expects(:in_initiative?).with('HOC').in_sequence(exec_seq).returns(false)
-    script.expects(:unversioned?).in_sequence(exec_seq).returns(false)
+    script.expects(:get_course_version).at_least_once.in_sequence(exec_seq).returns(course_version)
     I18nScriptUtils.expects(:unit_directory_change?).with(expected_i18n_source_dir_path, expected_i18n_source_file_path).in_sequence(exec_seq).returns(false)
     I18nScriptUtils.expects(:write_json_file).with(expected_i18n_source_file_path, {'expected_level_url' => {'expected_script_string_key' => 'expected_script_string_value'}}).in_sequence(exec_seq)
     sync_in_instance.expects(:redact_json_file).with(expected_i18n_source_file_path).in_sequence(exec_seq)
@@ -155,12 +157,12 @@ class I18n::Resources::Dashboard::CourseContent::SyncInTest < Minitest::Test
     assert_equal expected_parameter_names, sync_in_instance.send(:parameter_strings)
   end
 
-  def test_level_content_preparation_of_script_with_changed_derectory
+  def test_level_content_preparation_of_script_with_changed_directory
     sync_in_instance = I18n::Resources::Dashboard::CourseContent::SyncIn.new
     exec_seq = sequence('execution')
 
     expected_i18n_source_dir_path = CDO.dir('i18n/locales/source/course_content')
-    expected_i18n_source_file_path = File.join(expected_i18n_source_dir_path, 'expected_version_year/versioned-script.json')
+    expected_i18n_source_file_path = File.join(expected_i18n_source_dir_path, 'expected-version-year/versioned-script.json')
     expected_string_level_progression = 'expected_progression_string'
     expected_block_categories = {'expected_block_category_key' => 'expected_block_category_value'}
     expected_variable_names = {'expected_variable_name_key' => 'expected_variable_name_value'}
@@ -172,7 +174,8 @@ class I18n::Resources::Dashboard::CourseContent::SyncInTest < Minitest::Test
       'parameter_names'            => expected_parameter_names,
     }
 
-    script = Unit.new(name: 'versioned-script', version_year: 'expected_version_year')
+    script = Unit.new(name: 'versioned-script')
+    course_version = FactoryBot.build_stubbed(:course_version, key: 'expected-version-year')
     script_level = ScriptLevel.new(progression: expected_string_level_progression)
     level = Level.new(encrypted: false)
 
@@ -184,7 +187,7 @@ class I18n::Resources::Dashboard::CourseContent::SyncInTest < Minitest::Test
     I18nScriptUtils.expects(:get_level_url_key).with(script, level).in_sequence(exec_seq).returns('expected_level_url')
     sync_in_instance.expects(:get_i18n_strings).with(level).in_sequence(exec_seq).returns(expected_level_i18n_strings)
     script.expects(:in_initiative?).with('HOC').in_sequence(exec_seq).returns(false)
-    script.expects(:unversioned?).in_sequence(exec_seq).returns(false)
+    script.expects(:get_course_version).at_least_once.in_sequence(exec_seq).returns(course_version)
     I18nScriptUtils.expects(:unit_directory_change?).with(expected_i18n_source_dir_path, expected_i18n_source_file_path).in_sequence(exec_seq).returns(true)
     I18nScriptUtils.expects(:write_json_file).with(expected_i18n_source_file_path, {'expected_level_url' => {'expected_script_string_key' => 'expected_script_string_value'}}).never
     sync_in_instance.expects(:redact_json_file).with(expected_i18n_source_file_path).never

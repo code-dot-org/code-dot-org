@@ -9,13 +9,22 @@ import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
 
 import moduleStyles from './simpleDropdown.module.scss';
 
+export interface ItemProps {
+  value: string;
+  text: string;
+  disabled?: boolean;
+}
+
 export interface SimpleDropdownProps
   extends DropdownFormFieldRelatedProps,
     Omit<SelectHTMLAttributes<HTMLSelectElement>, 'size'> {
   /** SimpleDropdown items list */
-  items?: {value: string; text: string}[];
+  items?: ItemProps[];
   /** SimpleDropdown grouped list of items */
-  itemGroups?: {label: string; groupItems: {value: string; text: string}[]}[];
+  itemGroups?: {
+    label: string;
+    groupItems: ItemProps[];
+  }[];
   /** SimpleDropdown selected value */
   selectedValue?: string;
   /** SimpleDropdown onChange handler */
@@ -120,15 +129,15 @@ const SimpleDropdown: React.FunctionComponent<SimpleDropdownProps> = ({
         {itemGroups.length > 0
           ? itemGroups.map(({label, groupItems}, index) => (
               <optgroup key={index} label={label}>
-                {groupItems.map(({value, text}) => (
-                  <option value={value} key={value}>
+                {groupItems.map(({value, text, disabled}) => (
+                  <option value={value} disabled={disabled} key={value}>
                     {text}
                   </option>
                 ))}
               </optgroup>
             ))
-          : items.map(({value, text}) => (
-              <option value={value} key={value}>
+          : items.map(({value, text, disabled}) => (
+              <option value={value} disabled={disabled} key={value}>
                 {text}
               </option>
             ))}

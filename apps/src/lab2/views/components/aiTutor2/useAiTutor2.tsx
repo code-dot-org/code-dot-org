@@ -3,10 +3,10 @@ import React, {useCallback, useEffect, useRef, useState} from 'react';
 import {WaitingAnimation} from '@cdo/apps/aichat/views/WaitingAnimation';
 import ChatMessage from '@cdo/apps/aiComponentLibrary/chatMessage/ChatMessage';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
+import {aiTutorModelId} from '@cdo/apps/lab2/ai/ai-tutor-model-id';
 import AiTutor2Manager, {
   AiTutor2MessageType,
 } from '@cdo/apps/lab2/ai/AiTutor2Manager';
-import {aiTutorModelId} from '@cdo/apps/lab2/ai/AiTutorModelId';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import moduleStylesFixed from '../AiTutor2ResponseFixed.module.scss';

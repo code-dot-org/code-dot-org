@@ -54,6 +54,7 @@ export interface ProjectAndSources {
   channel: Channel;
   abuseScore?: number;
   sharingDisabled?: boolean;
+  isTeacherOfProjectOwner?: boolean;
 }
 
 /// ------ SOURCES ------ ///
@@ -216,7 +217,6 @@ export interface LevelProperties {
   startDirection?: number;
   widgetView?: boolean;
   widgetViewAllowShowCode?: boolean;
-  aiTutor2Available?: boolean;
   // Properties added for parity with non-lab2 AI Tutor levels
   aiTutorAvailable?: boolean;
   isAssessment?: boolean;

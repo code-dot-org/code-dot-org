@@ -43,7 +43,7 @@ const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
     !experiments.isEnabledAllowingQueryString(
       experiments.LAB2_RESOURCE_PANEL
     ) &&
-    (levelProperties.aiTutor2Available ||
+    (levelProperties.aiTutorAvailable ||
       queryParams('show-ai-tutor2') === 'true');
 
   const {
