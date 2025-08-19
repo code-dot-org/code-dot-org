@@ -29,7 +29,9 @@ export const EmptyState: FC<EmptyStateProps> = ({
         [styles.large]: large,
       })}
     >
-      <Image className={styles.emptyStateImage} {...imageProps} />
+      {/* empty state images generally do not convey additional meaning. 
+      using alt="" by default so screen readers will ignore the image */}
+      <Image className={styles.emptyStateImage} alt="" {...imageProps} />
       <BodyTwoText noMargin>
         <StrongText>{title}</StrongText>
       </BodyTwoText>
