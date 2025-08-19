@@ -14,6 +14,7 @@ import React, {useEffect, useMemo, useState} from 'react';
 
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
+import {setIsBlockedAbuse} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {ProjectSources} from '@cdo/apps/lab2/types';
@@ -179,6 +180,7 @@ export const Codebridge = React.memo(
               true,
               {'Content-Type': 'application/json; charset=UTF-8'}
             );
+            dispatch(setIsBlockedAbuse(true));
           } catch (error) {
             Lab2Registry.getInstance()
               .getMetricsReporter()
