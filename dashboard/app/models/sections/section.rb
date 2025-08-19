@@ -191,6 +191,7 @@ class Section < ApplicationRecord
   ADD_STUDENT_RESTRICTED = 'restricted'.freeze
 
   CSA = 'csa'.freeze
+  CSA_ALT = 'csa-alt'.freeze
   CSA_PILOT_FACILITATOR = 'csa-pilot-facilitator'.freeze
 
   # A section can have five co-teachers, plus the owner, for a total of 6
@@ -689,7 +690,7 @@ class Section < ApplicationRecord
   # A section can be assigned a course (aka unit_group) without being assigned a script,
   # so we check both here.
   def assigned_csa?
-    script&.csa? || [CSA, CSA_PILOT_FACILITATOR].include?(unit_group&.family_name)
+    script&.csa? || [CSA, CSA_ALT, CSA_PILOT_FACILITATOR].include?(unit_group&.family_name)
   end
 
   def assigned_ai_chat?
