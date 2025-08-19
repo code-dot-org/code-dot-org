@@ -45,12 +45,18 @@ module Cdo
       # until we find one that works.
       base = nil
       relative_path = []
+      allowed_classes = [
+        'CdoSoundLibrary::HocSongMeta::Populate',
+        'CdoSoundLibrary::Populate',
+        'Populate'
+      ] # Add all allowed Populate classes here
       until class_parts.empty?
-        begin
-          base = [*class_parts, 'Populate'].join('::').constantize
+        potential_class = [*class_parts, 'Populate'].join('::')
+        if allowed_classes.include?(potential_class)
+          base = potential_class.constantize
           relative_path << path_parts.pop
-          break if base
-        rescue NameError
+          break
+        else
           class_parts.pop
         end
       end
