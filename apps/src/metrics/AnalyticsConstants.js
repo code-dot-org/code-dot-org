@@ -319,16 +319,8 @@ const EVENTS = {
   AI_DIFF_SKIP_WELCOME: 'AI Teaching Assistant Skip Welcome',
 
   // AI Tutor
-  AI_TUTOR_PANEL_OPENED: 'AI Tutor Panel Opened',
-  AI_TUTOR_PANEL_CLOSED: 'AI Tutor Panel Closed',
-  AI_TUTOR_CHAT_EVENT: 'AI Tutor was asked a question',
-  AI_TUTOR_SUGGESTED_PROMPT_NONE: 'None - general chat',
-  AI_TUTOR_SUGGESTED_PROMPT_COMPILATION: 'Compilation',
-  AI_TUTOR_SUGGESTED_PROMPT_GENERIC_HELP: 'Generic Help',
-  AI_TUTOR_SUGGESTED_PROMPT_VALIDATION: 'Validation',
   AI_TUTOR_DISABLED: 'Teacher disabled AI Tutor for a section',
   AI_TUTOR_ENABLED: 'Teacher enabled AI Tutor for a section',
-  AI_TUTOR_FEEDBACK_SUBMITTED: 'AI Tutor Feedback Submitted',
 
   // Javalab
   JAVALAB_RUN_BUTTON_CLICK: 'Javalab Run Button Clicked',

@@ -26,21 +26,21 @@
       },
       {
         "text": "##Security Questions with Long Typing\n\nSome platforms ask Elijah to answer security questions like \"What’s your pet’s name?\" He can usually answer them, but they take time to type on a small screen and don’t feel very secure.",
-        "imageUrl": "https://images.code.org/d3138b5f06518f93663aa0b722dcda08-Screenshot 2025-08-05 134649.png",
+        "imageUrl": "https://images.code.org/4109bc560343a5255bf17828b6ebb9b4-elijah_2.png",
         "key": "test-ai-powered-threats-defenses-lesson3-level3-79557c5a-46fd-42a9-8bcd-652ea77a7ed0",
-        "layout": "text-bottom-right"
+        "layout": "text-bottom-left"
       },
       {
         "text": "##Push Notification Verification\n\nWhen logging in from his laptop, Elijah gets a push notification on his phone asking him to verify. He taps “Yes” and is logged in right away—it’s quick and reliable, even in a noisy environment.",
-        "imageUrl": "https://images.code.org/9e4228fb0207faeab33ad6f19f702954-Screenshot 2025-08-05 134617.png",
+        "imageUrl": "https://images.code.org/787eccf0ca217a61bbf817880946c27e-elijah_3.png",
         "key": "test-ai-powered-threats-defenses-lesson3-level3-10f16dff-0ead-45fb-8aaf-e7607fe82cca",
-        "layout": "text-bottom-right"
+        "layout": "text-top-right"
       }
     ],
     "display_name": "Elijah",
     "thumbnail_url": "https://images.code.org/71d9ee54388fb5edb83bb5d3fe9be644-Screenshot 2025-08-05 145214.png",
     "bubble_choice_description": "A creative student who makes music and videos in a busy, shared home. Elijah often struggles with voice-based security in noisy environments."
   },
-  "audit_log": "[{\"changed_at\":\"2025-08-05T20:04:45.666+00:00\",\"changed\":[\"cloned from \\\"test-ai-powered-threats-defenses-lesson11-level1b\\\"\"],\"cloned_from\":\"test-ai-powered-threats-defenses-lesson11-level1b\"},{\"changed_at\":\"2025-08-05 20:04:48 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-05 21:23:09 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-05 21:33:55 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-05 21:52:58 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-05 21:56:19 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-05 22:04:11 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-14 20:08:02 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-08-05T20:04:45.666+00:00\",\"changed\":[\"cloned from \\\"test-ai-powered-threats-defenses-lesson11-level1b\\\"\"],\"cloned_from\":\"test-ai-powered-threats-defenses-lesson11-level1b\"},{\"changed_at\":\"2025-08-05 20:04:48 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-05 21:23:09 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-05 21:33:55 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-05 21:52:58 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-05 21:56:19 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-05 22:04:11 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-14 20:08:02 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-15 16:33:42 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Panels>

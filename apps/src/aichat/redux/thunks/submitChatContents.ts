@@ -25,6 +25,7 @@ import {
   ChatAsset,
   ModelParameters,
   AiChatClientType,
+  AnalyticsProperties,
 } from '../../types';
 import {getNewRemoveId} from '../utils';
 
@@ -44,14 +45,21 @@ export const submitChatContents = createAsyncThunk(
       clientType: AiChatClientType;
       hiddenContext?: string;
       assets?: ChatAsset[];
+      analyticsProperties?: AnalyticsProperties;
     },
     thunkAPI
   ) => {
     const dispatch = thunkAPI.dispatch as AppDispatch;
     const state = thunkAPI.getState() as RootState;
     const chatEventsCurrent = state.aichat.chatEventsCurrent;
-    const {text, hiddenContext, assets, modelParameters, clientType} =
-      newUserMessageInput;
+    const {
+      text,
+      hiddenContext,
+      assets,
+      modelParameters,
+      clientType,
+      analyticsProperties,
+    } = newUserMessageInput;
 
     // Clear any staged files if present (used with multimodal models)
     thunkAPI.dispatch(clearStagedFiles());
@@ -99,6 +107,8 @@ export const submitChatContents = createAsyncThunk(
           fileCount,
           fileCountImage,
           fileCountPdf,
+          clientType,
+          ...analyticsProperties,
         })
       );
     } catch (error) {

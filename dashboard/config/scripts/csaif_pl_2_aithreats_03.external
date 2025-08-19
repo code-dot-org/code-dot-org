@@ -3,32 +3,42 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Encryption
-
-#### What if instead of shifting the whole alphabet, we matched every letter of the alphabet to a random different letter of the alphabet? This is called a **random substitution cipher**.
+# The Day Everything Broke
 
 ## 📝 To Do
 
-#### Explore the widget for decrypting a random substitution cipher in the next level. While you're exploring think about: *How does the widget work? What steps would you take to crack the code?*
+#### Choose one of the scenarios from Part 1.
 
-<br>
+#### Complete the empathy map for Jordan thinking about what he might say, think, do, and feel in that moment.
 
-<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
-    ➡️ This activity is from Lesson 8. You can find more details in the full <a href='https://studio.code.org/s/aif5-2025/lessons/8' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a>.
-</p>
+<table style="border-collapse: collapse; width: 100%; border: 1px solid #000;">
+  <tr>
+    <th style="background-color: #00A6B4; color: white; font-weight: bold; text-align: center; padding: 10px; border: 1px solid #000; width: 50%;">
+      SAYS<br><span style="font-weight: normal;">What might Jordan say out loud?</span>
+    </th>
+    <th style="background-color: #00A6B4; color: white; font-weight: bold; text-align: center; padding: 10px; border: 1px solid #000; width: 50%;">
+      THINKS<br><span style="font-weight: normal;">What is Jordan thinking internally?</span>
+    </th>
+  </tr>
+  <tr>
+    <td style="height: 150px; border: 1px solid #000;"></td>
+    <td style="height: 150px; border: 1px solid #000;"></td>
+  </tr>
+  <tr>
+    <th style="background-color: #00A6B4; color: white; font-weight: bold; text-align: center; padding: 10px; border: 1px solid #000;">
+      DOES<br><span style="font-weight: normal;">What does Jordan do?</span>
+    </th>
+    <th style="background-color: #00A6B4; color: white; font-weight: bold; text-align: center; padding: 10px; border: 1px solid #000;">
+      FEEL<br><span style="font-weight: normal;">How does Jordan feel?</span>
+    </th>
+  </tr>
+  <tr>
+    <td style="height: 150px; border: 1px solid #000;"></td>
+    <td style="height: 150px; border: 1px solid #000;"></td>
+  </tr>
+</table>
 
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">🧐 Hint
-</summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
-    <p>
-
-####Here are some steps that may be helpful:
-* #### Find the short words and "crack" them first. How many one-letter words do you know? ("a"). A very common 3-letter word is "the".
-* #### Once you've done that, you have substitutes for some of the most common letters. You should be able to use intuition to look at other words with these partial substitutions and make good guesses.
-* #### After finding only a handful of hard-fought letters, the rest will tumble quickly.
-* #### Comparing the frequencies of letters gives good insight for making sensible guesses.
-</p></div>
-</details>
+</body>
+</html>
 
 MARKDOWN
