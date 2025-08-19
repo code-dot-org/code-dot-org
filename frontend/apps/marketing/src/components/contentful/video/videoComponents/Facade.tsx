@@ -1,7 +1,24 @@
+import {styled} from '@mui/material/styles';
+
 import FacadeBackground from './FacadeBackground';
 import PlayButton from './PlayButton';
 
-import moduleStyles from './video.module.scss';
+const MuiVideoFacade = styled('div', {
+  name: 'MuiVideo',
+  slot: 'facade',
+})({
+  position: 'absolute',
+  top: 0,
+  left: 0,
+  width: '100%',
+  height: '100%',
+  backgroundSize: 'cover',
+  backgroundPosition: 'center center',
+  cursor: 'pointer',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+});
 
 const Facade = ({
   label,
@@ -13,14 +30,14 @@ const Facade = ({
   onClick: () => void;
 }) => {
   return (
-    <div className={moduleStyles.facade}>
+    <MuiVideoFacade>
       <FacadeBackground
         posterThumbnail={posterThumbnail}
         alt={label}
         onClick={onClick}
       />
       <PlayButton label={label} onClick={onClick} />
-    </div>
+    </MuiVideoFacade>
   );
 };
 
