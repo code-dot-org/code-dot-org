@@ -2,6 +2,8 @@ import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import React, {useCallback} from 'react';
 import {useSelector} from 'react-redux';
 
+import InstructorsOnly from '@cdo/apps/code-studio/components/InstructorsOnly';
+import TeacherPanel from '@cdo/apps/code-studio/components/progress/teacherPanel/TeacherPanel';
 import {nextLevelId} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {
@@ -9,9 +11,7 @@ import {
   isPredictResponseSubmitted,
   setPredictResponse,
 } from '@cdo/apps/lab2/redux/predictLevelRedux';
-import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-
-import InstructionsPanel from './InstructionsPanel';
+import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 interface InstructionsProps {
   /** Whether the lab is currently running (different labs may define this differently). */
@@ -101,29 +101,23 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
     passingValidation &&
     (!predictSettings?.isPredictLevel || predictResponseSubmitted);
 
+  const pageType = null;
+
+  const scriptId = useAppSelector(
+    state => state.progress.scriptId || undefined
+  );
+
+  const scriptName =
+    useAppSelector(state => state.progress.scriptName) || undefined;
+
   return (
-    <InstructionsPanel
-      text={levelProperties.longInstructions}
-      message={message || undefined}
-      messageIndex={messageIndex}
-      theme={theme}
-      predictSettings={predictSettings}
-      predictResponse={predictResponse}
-      setPredictResponse={setPredictResponseCallback}
-      predictAnswerLocked={predictAnswerLocked}
-      layout={layout}
-      handleInstructionsTextClick={handleInstructionsTextClick}
-      offerBrowserTts={offerBrowserTts}
-      className={className}
-      canShowNextButton={canShowNextButton}
-      hasNextLevel={hasNextLevel}
-      useSecondaryFinishButton={useSecondaryFinishButton}
-      bottomComponent={bottomComponent}
-      isRunning={isRunning}
-      levelProperties={levelProperties}
-      hasRun={hasRun}
-      hasEdited={hasEdited}
-    />
+    <InstructorsOnly>
+      <TeacherPanel
+        unitName={scriptName}
+        pageType={pageType}
+        scriptId={scriptId}
+      />
+    </InstructorsOnly>
   );
 };
 export default Instructions;

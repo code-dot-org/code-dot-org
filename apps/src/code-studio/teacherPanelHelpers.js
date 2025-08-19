@@ -17,18 +17,4 @@ export function renderTeacherPanel(
 ) {
   const div = document.createElement('div');
   div.setAttribute('id', 'teacher-panel-container');
-
-  ReactDOM.render(
-    <Provider store={store}>
-      <InstructorsOnly>
-        <TeacherPanel
-          unitName={scriptName}
-          pageType={pageType}
-          scriptId={scriptId}
-        />
-      </InstructorsOnly>
-    </Provider>,
-    div
-  );
-  document.body.appendChild(div);
 }
