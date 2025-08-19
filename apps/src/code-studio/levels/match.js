@@ -130,22 +130,32 @@ export default class Match {
     this.enableSounds = this.standalone;
   }
 
+  // A method for the 'answer options' that start in the right-most column.
+  // Allows answers to be selected and deselected with the keyboard and moved
+  // between using arrow keys.
   handleAnswerKeydown(event) {
     const answer = $(event.currentTarget);
     const slots = $(this.container).find('.ui-droppable');
 
     switch (event.key) {
+      // Enter and spacebar are used to select an answer
       case 'Enter':
-      case ' ': // Select the answer
+      case ' ':
         event.preventDefault();
-
+        // If there is a different answer already selected and it is not the same as the current one,
+        // ignore this key event.
+        if (this.selectedAnswer && this.selectedAnswer !== answer) {
+          return;
+        }
+        // In this case, clicking on the selected answer should deselect it, moving the user out of
+        // move mode (as in, make the slots not tab navigable again).
         if (answer.hasClass('selected')) {
-          // Deselect the answer
           answer.removeClass('selected');
           this.selectedAnswer = null;
           slots.attr('tabindex', '-1');
         } else {
-          // Select the answer and make slots focusable, move focus to first one
+          // We are selecting a new answer, which means we want to make the slots tab navigable and move
+          // focus there so a user can choose where this answer should be dropped.
           answer.addClass('selected');
           this.selectedAnswer = answer;
           slots.attr('tabindex', '0');
@@ -164,12 +174,11 @@ export default class Match {
         answer.prev().focus();
         break;
 
-      case 'Escape': // Deselect the answer
+      case 'Escape': // Deselect the answer and remove visual feedback
         event.preventDefault();
         if (this.selectedAnswer) {
-          // Deselect the currently selected answer
-          this.selectedAnswer.removeClass('selected'); // Remove visual feedback
-          this.selectedAnswer = null; // Clear the selected answer
+          this.selectedAnswer.removeClass('selected');
+          this.selectedAnswer = null;
         }
         break;
 
@@ -178,94 +187,91 @@ export default class Match {
     }
   }
 
+  // This enables tab navigation for the 'slots' or 'droppable' components. This becomes a
+  // bit confusing because answers can be become 'droppables' once they have been placed in
+  // a slot. That is, both keyDown functions can be called at once if a user is dropping an answer
+  // into a slot that already has an answer. There is logic near line 147 to prevent the second
+  // keyboard nav handler call and keep the action focused here.
   enableSlotNavigation(slots) {
     const firstSlot = slots.first();
     const lastSlot = slots.last();
 
     const handleKeydown = event => {
-      if (event.key === 'ArrowUp' || (event.key === 'Tab' && event.shiftKey)) {
-        event.preventDefault();
-        // Move focus to the previous slot or loop to the last slot
-        if ($(event.currentTarget).is(firstSlot)) {
-          lastSlot.focus();
-        } else {
-          $(event.currentTarget).prev().focus();
+      if (this.selectedAnswer) {
+        if (
+          event.key === 'ArrowUp' ||
+          (event.key === 'Tab' && event.shiftKey)
+        ) {
+          event.preventDefault();
+          // Move focus to the previous slot or loop to the last slot
+          if ($(event.currentTarget).is(firstSlot)) {
+            lastSlot.focus();
+          } else {
+            $(event.currentTarget).prev().focus();
+          }
+        } else if (event.key === 'ArrowDown' || event.key === 'Tab') {
+          event.preventDefault();
+          // Move focus to the next slot or loop to the first slot
+          if ($(event.currentTarget).is(lastSlot)) {
+            firstSlot.focus();
+          } else {
+            $(event.currentTarget).next().focus();
+          }
+        } else if (event.key === 'Enter' || event.key === ' ') {
+          // Here is the bulk of this function: a user is trying to place an answer into a slot!
+          event.preventDefault();
+          const slot = $(event.currentTarget);
+          const incomingAnswer = $(this.selectedAnswer);
+          const existingElement = $(event.target);
+
+          // This is to find out if the answer is being moved from an existing slot,
+          // as in not from the answer bank on the right.
+          const isFromDifferentSlot =
+            $(incomingAnswer).closest('.match_slots').length === 1;
+          // We only want to do a swap if the answer is coming from a different slot
+          if (isFromDifferentSlot) {
+            // Simulate the drop call
+            const dropHandler =
+              existingElement.data('ui-droppable').options.drop;
+
+            // Create mock event and ui
+            const fakeEvent = $.Event('drop', {target: existingElement[0]});
+            const ui = {draggable: incomingAnswer};
+
+            // Manually call the drop function
+            dropHandler.call(existingElement[0], fakeEvent, ui);
+          } else if ($(existingElement).hasClass('answer')) {
+            // We do nothing if the answer is coming from the bank on the far right
+            // and there's already an answer
+          } else {
+            // We are moving an answer from the far right into a brand new slot, so
+            // place the incoming answer into the slot!
+            this.moveAnswerToSlot(slot, incomingAnswer);
+          }
+          // Now, we have moved or rejected the answer move, so call cleanup function.
+          this.cleanupSelectionsAndSlots();
+          slots.off('keydown', handleKeydown);
+        } else if (event.key === 'Escape') {
+          // We are abandoning an answer positioning: call cleanup function.
+          event.preventDefault();
+          this.cleanupSelectionsAndSlots();
+          slots.off('keydown', handleKeydown);
         }
-      } else if (event.key === 'ArrowDown' || event.key === 'Tab') {
-        event.preventDefault();
-        // Move focus to the next slot or loop to the first slot
-        if ($(event.currentTarget).is(lastSlot)) {
-          firstSlot.focus();
-        } else {
-          $(event.currentTarget).next().focus();
-        }
-      } else if (event.key === 'Enter' || event.key === ' ') {
-        event.preventDefault();
-        const slot = $(event.currentTarget);
-        const incomingAnswer = $(this.selectedAnswer);
-        const existingElement = $(event.target);
-
-        // This is to find out if the answer is being moved from an existing slot,
-        // as in not from the answer bank on the right.
-        const isFromDifferentSlot =
-          $(incomingAnswer).closest('.match_slots').length === 1;
-        console.log('is from a different slot:', isFromDifferentSlot);
-        // We only want to do a swap if the answer is coming from a different slot
-        if (isFromDifferentSlot) {
-          console.log('manually calling drop handler');
-          // Simulate drag locations
-          /*
-          const $container = $('.draggablecolumn');
-          const containerOffset = $container.offset();
-          const itemOffset = existingElement.offset();
-
-          const relativeTop = itemOffset.top - containerOffset.top;
-          const relativeLeft = itemOffset.left - containerOffset.left;
-
-          existingElement.css({
-            position: 'absolute',
-            top: relativeTop,
-            left: relativeLeft,
-            zIndex: 1000,
-          });*/
-          // Simulate the drop call
-          const dropHandler = existingElement.data('ui-droppable').options.drop;
-
-          // Create mock event and ui
-          const fakeEvent = $.Event('drop', {target: existingElement[0]});
-          const ui = {draggable: incomingAnswer};
-
-          // Manually call the drop function
-          dropHandler.call(existingElement[0], fakeEvent, ui);
-        } else if ($(existingElement).hasClass('answer')) {
-          // We do nothing if there's already an answer
-        } else {
-          // Place the incoming answer into the slot
-          this.moveAnswerToSlot(slot, incomingAnswer);
-        }
-        this.selectedAnswer = null;
-
-        // Disable focusability for empty slots
-        const emptySlots = $(this.container).find('.emptyslot');
-        emptySlots.attr('tabindex', '-1');
-
-        // Disable the focus trap and move focus back to the body, deselecting any selected ansers
-        $('.answer.selected').removeClass('selected');
-        slots.off('keydown', handleKeydown);
-        $('.submitButton').focus();
-      } else if (event.key === 'Escape') {
-        event.preventDefault();
-        // Deselect the answer and move focus to the top of the page
-        if (this.selectedAnswer) {
-          this.selectedAnswer.removeClass('selected'); // Remove visual feedback
-          this.selectedAnswer = null; // Clear the selected answer
-        }
-        $('.submitButton').focus();
-        const emptySlots = $(this.container).find('.emptyslot');
-        emptySlots.attr('tabindex', '-1'); // Disable focusability for empty slots
       }
     };
     slots.on('keydown', handleKeydown);
+  }
+
+  // This method is a helper to clear a selected answer, remove tab navigability
+  // of the slots, and move focus back to the submit button.
+  cleanupSelectionsAndSlots() {
+    if (this.selectedAnswer) {
+      this.selectedAnswer.removeClass('selected');
+      this.selectedAnswer = null;
+    }
+    $('.submitButton').focus();
+    const emptySlots = $(this.container).find('.emptyslot');
+    emptySlots.attr('tabindex', '-1');
   }
 
   // set up the central list of empty slots.
