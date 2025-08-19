@@ -1,5 +1,8 @@
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {
+  default as FontAwesomeV6Icon,
+  kitIcons,
+} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import classNames from 'classnames';
 import React, {useMemo, useState} from 'react';
@@ -28,7 +31,7 @@ enum Tabs {
 
 const tabInfo: {[key in Tabs]: {title: string; icon: string}} = {
   [Tabs.Instructions]: {title: commonI18n.instructions(), icon: 'info-circle'},
-  [Tabs.AiTutor]: {title: commonI18n.aiTutor(), icon: 'robot'},
+  [Tabs.AiTutor]: {title: commonI18n.aiTutor(), icon: 'ai-head-solid'},
   [Tabs.TeachersOnly]: {
     title: commonI18n.forTeachersOnly(),
     icon: 'chalkboard-teacher',
@@ -126,7 +129,12 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                 onClick={() => setCurrentTab(tab)}
                 key={tab}
               >
-                <FontAwesomeV6Icon iconName={tabInfo[tab].icon} />
+                <FontAwesomeV6Icon
+                  iconName={tabInfo[tab].icon}
+                  iconFamily={
+                    kitIcons.has(tabInfo[tab].icon) ? 'kit' : undefined
+                  }
+                />
               </button>
             </WithTooltip>
           ))}
