@@ -33,6 +33,14 @@ enum Tabs {
   StudentRubric = 'studentRubric',
 }
 
+export interface Setting {
+  id: string;
+  label: string;
+  options: {value: string; text: string}[];
+  selectedValue: string | undefined;
+  onChange: (value: string) => void;
+}
+
 // We can only put the copyright and language dropdowns into the resource panel
 // if the lab is using the resource panel permanently, since the copyright/language footer is
 // controlled on the backend in game.rb#no_footer?
@@ -57,6 +65,7 @@ type ResourcePanelProps = InstructionsProps & {
   aiTutor2Context?: string;
   rightHeaderContent?: React.ReactNode;
   includeFooterSpacing?: boolean;
+  settings?: Setting[];
 };
 
 /**
@@ -68,6 +77,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   aiTutor2Context,
   rightHeaderContent,
   includeFooterSpacing = true,
+  settings = [],
   ...instructionsProps
 }) => {
   const {theme} = useTheme();
