@@ -165,6 +165,15 @@ div.card {
         }
       }
     }
+    &.questionTag {
+      > div {
+        background-color: var(--background-neutral-septenary);
+
+        span {
+          color: var(--text-neutral-white-fixed);
+        }
+      }
+    }
   }
 
   .workshopLink {
@@ -288,8 +297,12 @@ div.card {
 .cardRow {
   display: flex;
   flex: 1;
-  flex-direction: row;
   gap: 1.5rem;
+  flex-direction: column;
+
+  @media (min-width: 900px) {
+    flex-direction: row;
+  }
 
   .questionCard {
     flex: 1;
@@ -411,6 +424,46 @@ div.card {
 
       i {
         margin-right: 0.375rem;
+      }
+    }
+  }
+
+  .freeResponse {
+    .cardHeaderRow {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .cardContent {
+      padding: 1.25rem;
+    }
+
+    .textCardContainer {
+      width: 100%;
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: 1fr;
+
+      .textCard {
+        background: var(--background-neutral-secondary);
+        border-radius: 0.5rem;
+        padding: 1rem;
+      }
+    }
+
+    // Medium Screens: Switch to 2 columns
+    @media (min-width: 600px) {
+      .textCardContainer {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    // Large Screens: Switch to 3 columns
+    @media (min-width: 900px) {
+      .textCardContainer {
+        grid-template-columns: repeat(3, 1fr);
       }
     }
   }
