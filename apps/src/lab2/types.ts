@@ -409,7 +409,7 @@ export interface LabProps<
   initialSources?: U;
 }
 
-export interface LocaleOptions {
+export interface LocaleProps {
   localeUrl: string;
   currentLocale: string;
   localeOptions: {text: string; value: string}[];

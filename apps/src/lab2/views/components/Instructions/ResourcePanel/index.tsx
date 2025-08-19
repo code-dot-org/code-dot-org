@@ -217,7 +217,12 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
         >
           {availableTabs[currentTab]}
           <NavigationArea {...instructionsProps} />
-          {isSettingsOpen && <SettingsPanel settings={settings} />}
+          {isSettingsOpen && (
+            <SettingsPanel
+              settings={settings}
+              closePanel={() => setIsSettingsOpen(false)}
+            />
+          )}
         </PanelContainer>
       </div>
     </div>
