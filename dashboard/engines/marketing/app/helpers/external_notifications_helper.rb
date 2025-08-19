@@ -66,18 +66,19 @@ module ExternalNotificationsHelper
     formatted_notification[:published_at] = formatted_notification[:published_at].is_a?(Time) ? formatted_notification[:published_at].iso8601 : nil
     formatted_notification[:expires_at] = formatted_notification[:expires_at].is_a?(Time) ? formatted_notification[:expires_at].iso8601 : nil
     formatted_notification[:href_links] = formatted_notification[:href_links].filter_map do |link|
-      !!link['url'] && !!link['text'] ? {url: link['url'], text: link['text']} : nil
+      link['url'].present? && link['text'].present? ? {url: link['url'], text: link['text']} : nil
     end
     formatted_notification[:ai_prompts] = formatted_notification[:ai_prompts].filter_map do |prompt|
-      !!prompt['text'] && !!prompt['prompt'] ? {text: prompt['text'], prompt: prompt['prompt']} : nil
+      prompt['text'].present? && prompt['prompt'].present? ? {text: prompt['text'], prompt: prompt['prompt']} : nil
     end
 
     formatted_notification
-  rescue StandardError
+  rescue StandardError => exception
     Honeybadger.notify(
       'Error trying to format Contentful notification',
         context: {
           contentful_id: notification.id,
+          error: exception.message,
         }
       )
     nil
