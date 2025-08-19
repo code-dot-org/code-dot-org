@@ -6,8 +6,7 @@ module Marketing
     include Singleton
 
     class << self
-      delegate :entry, to: :instance
-      delegate :entries, to: :instance
+      delegate :entry, :entries, to: :instance
     end
 
     def initialize

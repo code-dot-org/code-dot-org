@@ -99,7 +99,7 @@ class NotificationsControllerTest < ActionDispatch::IntegrationTest
 
     context 'with valid parameters' do
       it 'successfully creates a record and marks external notifications as read' do
-        post '/notifications/mark_as_read', params: {external_notifications: ['TEST_ENTRY_ID_1']}
+        post '/notifications/mark_as_read', params: {external_notification_ids: ['TEST_ENTRY_ID_1']}
         assert_response :ok
 
         response_data = JSON.parse(@response.body)
@@ -111,7 +111,7 @@ class NotificationsControllerTest < ActionDispatch::IntegrationTest
       end
 
       it 'successfully creates a record and marks external notifications for multiple notifications' do
-        post '/notifications/mark_as_read', params: {external_notifications: ['TEST_ENTRY_ID_1', 'TEST_ENTRY_ID_2']}
+        post '/notifications/mark_as_read', params: {external_notification_ids: ['TEST_ENTRY_ID_1', 'TEST_ENTRY_ID_2']}
         assert_response :ok
 
         response_data = JSON.parse(@response.body)
@@ -127,7 +127,7 @@ class NotificationsControllerTest < ActionDispatch::IntegrationTest
         yesterday = 1.day.ago
         external_notification1 = create_external_notification(user, external_id: 'TEST_ENTRY_ID_1', read_at: yesterday)
 
-        post '/notifications/mark_as_read', params: {external_notifications: ['TEST_ENTRY_ID_1', 'TEST_ENTRY_ID_2']}
+        post '/notifications/mark_as_read', params: {external_notification_ids: ['TEST_ENTRY_ID_1', 'TEST_ENTRY_ID_2']}
         assert_response :ok
 
         response_data = JSON.parse(@response.body)
@@ -145,7 +145,7 @@ class NotificationsControllerTest < ActionDispatch::IntegrationTest
         yesterday = 1.day.ago
         external_notification1 = create_external_notification(user, external_id: 'TEST_ENTRY_ID_1', read_at: yesterday)
 
-        post '/notifications/mark_as_read', params: {external_notifications: ['TEST_ENTRY_ID_1', 'TEST_ENTRY_ID_2']}
+        post '/notifications/mark_as_read', params: {external_notification_ids: ['TEST_ENTRY_ID_1', 'TEST_ENTRY_ID_2']}
         assert_response :ok
 
         response_data = JSON.parse(@response.body)
@@ -160,14 +160,14 @@ class NotificationsControllerTest < ActionDispatch::IntegrationTest
     end
 
     context 'with invalid parameters' do
-      # it 'returns error for empty notification_ids' do
-      #   post '/notifications/mark_as_read', params: {external_notifications: []}
-      #   assert_response :bad_request
+      it 'returns error for empty notification_ids' do
+        post '/notifications/mark_as_read', params: {external_notification_ids: []}
+        assert_response :bad_request
 
-      #   response_data = JSON.parse(@response.body)
-      #   _(response_data["status"]).must_equal "error"
-      #   _(response_data["message"]).must_equal "No notification IDs provided"
-      # end
+        response_data = JSON.parse(@response.body)
+        _(response_data["status"]).must_equal "error"
+        _(response_data["message"]).must_equal "No notification IDs provided"
+      end
 
       it 'returns error when no notification_ids param provided' do
         post '/notifications/mark_as_read', params: {}

@@ -11,18 +11,18 @@ class NotificationsController < ApplicationController
   end
 
   def mark_as_read
-    external_notifications = params[:external_notifications] || []
+    external_notification_ids = (params[:external_notification_ids] || []).compact_blank
 
-    if external_notifications.empty?
+    if external_notification_ids.empty?
       render json: {status: 'error', message: 'No notification IDs provided'}, status: :bad_request
       return
     end
 
-    found_external_notifications = current_user.external_notifications.where(external_id: external_notifications)
+    found_external_notifications = current_user.external_notifications.where(external_id: external_notification_ids)
 
     found_external_notifications.where(read_at: nil).update_all(read_at: Time.current)
     found_ids = found_external_notifications.pluck(:external_id)
-    notifications_to_create = external_notifications - found_ids
+    notifications_to_create = external_notification_ids - found_ids
     notifications_to_create.each do |external_id|
       ExternalNotification.create!(user_id: current_user.id, external_id: external_id, read_at: Time.current)
     end
