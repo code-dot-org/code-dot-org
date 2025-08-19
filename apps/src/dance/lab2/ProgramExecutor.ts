@@ -57,7 +57,8 @@ export default class ProgramExecutor {
       nativeAPI ||
       new DanceParty({
         onPuzzleComplete,
-        playSound: this.playSong.bind(this),
+        playSound: (...args: Parameters<typeof this.playSong>) =>
+          this.playSong(...args),
         recordReplayLog,
         showMeasureLabel: !isReadOnlyWorkspace,
         onHandleEvents: (currentFrameEvents: object[]) =>

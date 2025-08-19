@@ -25,6 +25,7 @@ import {
 } from '../../danceRedux';
 import {getFilterStatus} from '../../songs';
 import {DanceLevelProperties, DanceProjectSources} from '../../types';
+import danceI18n from '../locale';
 import ProgramExecutor from '../ProgramExecutor';
 
 import DanceControls from './DanceControls';
@@ -215,7 +216,7 @@ const DanceView: React.FunctionComponent<
               <img
                 src="//curriculum.code.org/images/DancePartyLoading.gif"
                 className={moduleStyles.loadingGif}
-                alt={'' /** TODO: Sort out Dance locale */}
+                alt={danceI18n.dancePartyLoading()}
               />
             </div>
           </div>
