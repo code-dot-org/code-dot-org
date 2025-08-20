@@ -244,5 +244,10 @@ module Dashboard
 
     config.active_job.queue_adapter = CDO.active_job_queue_adapter
     config.active_job.default_queue_name = CDO.active_job_queues[:default]
+
+    # Notifications
+    config.to_prepare do
+      Notifications.register(::InternalNotificationsSource.new)
+    end
   end
 end

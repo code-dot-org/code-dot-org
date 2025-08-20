@@ -4,11 +4,7 @@ class NotificationsController < ApplicationController
   # Index does not use pagination, returns all active notifications for the current user
   # Consider adding pagination if the number of notifications grows large
   def index
-    rails_notifications = current_user.external_notifications.not_dismissed.order(created_at: :desc).all
-
-    # TODO(lfm): call contentful and add contentful notifications to the list
-
-    render json: rails_notifications.as_json.map {|notification| notification.deep_transform_keys {|key| key.to_s.camelize(:lower)}}
+    render json: Notifications.get_all(current_user.id) # Returns notifications from all registered sources
   end
 
   def mark_as_read
