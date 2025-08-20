@@ -73,7 +73,7 @@ export const Header: React.FC<HeaderProps> = ({
           <Button
             iconLeft={{iconName: 'plus', iconStyle: 'solid'}}
             text={i18n.newClassSection()}
-            onClick={() => onSectionCreateButtonClick()}
+            onClick={onSectionCreateButtonClick}
             size="s"
             className={styles.createSectionButton}
           />
