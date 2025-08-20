@@ -3,7 +3,9 @@ import {Components, Theme} from '@mui/material/styles';
 export const VIDEO_OVERRIDES: Components<Theme>['MuiVideo'] = {
   styleOverrides: {
     root: () => ({}),
-    wrapper: () => ({}),
+    wrapper: () => ({
+      borderRadius: '0.25rem',
+    }),
     facade: ({theme}) => ({
       '.video-play-button': {
         height: '64px',

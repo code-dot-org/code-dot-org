@@ -16,8 +16,6 @@ export const MuiVideoWrapper = styled('div', {
   overflow: 'hidden',
   width: '100%',
   aspectRatio: '16 / 9', // Default aspect ratio for videos
-  // border: 1px solid var(--background-neutral-tertiary);
-  // border-radius: variables.$regular-border-radius;
   boxSizing: 'border-box',
   display: 'block',
 
