@@ -1,5 +1,5 @@
 import {CodebridgeContextProvider} from '@codebridge/codebridgeContext';
-import {useZoomTracker} from '@codebridge/hooks';
+import {useFlaggedImage, useZoomTracker} from '@codebridge/hooks';
 import {setWidgetViewShowCode} from '@codebridge/redux/workspaceRedux';
 import {
   ConfigType,
@@ -10,19 +10,16 @@ import {
   ProjectPickerSettings,
 } from '@codebridge/types';
 import classNames from 'classnames';
-import React, {useEffect, useMemo, useState} from 'react';
+import React, {useEffect, useMemo} from 'react';
 
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
-import {setIsBlockedAbuse} from '@cdo/apps/lab2/lab2Redux';
-import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {ProjectSources} from '@cdo/apps/lab2/types';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import {BackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
 import FlaggedImageModal from '@cdo/apps/sharedComponents/FlaggedImageModal';
-import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import moduleStyles from './styles/codebridgeContainer.module.scss';
@@ -59,7 +56,6 @@ export const Codebridge = React.memo(
     aiTutor2Context,
   }: CodebridgeProps) => {
     const isShareView = useAppSelector(state => state.lab.isShareView);
-    const channelId = useAppSelector(state => state.lab.channel?.id);
     const isWidgetView = !!levelProperties.widgetView;
     const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
 
@@ -146,61 +142,18 @@ export const Codebridge = React.memo(
     useZoomTracker(appName);
 
     const dispatch = useAppDispatch();
-    const [flaggedImageData, setFlaggedImageData] = useState<{
-      file: File;
-      fileType: string;
-      uploadFunction: () => Promise<void>;
-    } | null>(null);
 
     // Set view code to false if level is switched for any levels in widget view.
     useLifecycleNotifier(LifecycleEvent.LevelLoadStarted, () => {
       dispatch(setWidgetViewShowCode(false));
     });
 
-    const onImageFlagged = (
-      file: File,
-      fileType: string,
-      uploadFunction: () => Promise<void>
-    ) => {
-      setFlaggedImageData({file, fileType, uploadFunction});
-    };
-
-    const handleAcceptFlaggedImage = async () => {
-      if (!flaggedImageData) return;
-
-      try {
-        await flaggedImageData.uploadFunction();
-        setFlaggedImageData(null);
-        const body = JSON.stringify({type: 'flag'});
-        if (channelId) {
-          try {
-            await HttpClient.post(
-              `/v3/channels/${channelId}/abuse/image`,
-              body,
-              true,
-              {'Content-Type': 'application/json; charset=UTF-8'}
-            );
-            dispatch(setIsBlockedAbuse(true));
-          } catch (error) {
-            Lab2Registry.getInstance()
-              .getMetricsReporter()
-              .logError(
-                'Error flagging channel due to flagged image',
-                error as Error
-              );
-          }
-        }
-      } catch (error) {
-        Lab2Registry.getInstance()
-          .getMetricsReporter()
-          .logError('Error uploading flagged image asset', error as Error);
-        setFlaggedImageData(null);
-      }
-    };
-
-    const handleCancelFlaggedImage = () => {
-      setFlaggedImageData(null);
-    };
+    const {
+      flaggedImageData,
+      onImageFlagged,
+      handleAcceptFlaggedImage,
+      handleCancelFlaggedImage,
+    } = useFlaggedImage();
 
     return (
       <CodebridgeContextProvider

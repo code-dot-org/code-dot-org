@@ -1,6 +1,7 @@
 import React, {useCallback, useMemo, useRef, useState} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import UploadsDisabledModal from '@cdo/apps/sharedComponents/UploadsDisabledModal';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {createUuid} from '@cdo/apps/utils';
@@ -84,7 +85,10 @@ const moderateImage = async (
     'Content-Type': file.type || 'application/octet-stream',
   });
   if (!response.ok) {
-    throw new Error('Error with image moderation.');
+    Lab2Registry.getInstance()
+      .getMetricsReporter()
+      .logError('Error with image moderation');
+    return 'skipped';
   }
   const json = await response.json();
   if (json?.rating !== 'everyone' && json?.rating !== 'unknown') {
