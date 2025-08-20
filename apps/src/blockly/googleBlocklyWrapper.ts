@@ -51,7 +51,10 @@ import CdoFieldToggle from './addons/cdoFieldToggle';
 import CdoFieldVariable from './addons/cdoFieldVariable';
 import initializeGenerator from './addons/cdoGenerator';
 import {gestureOverrides} from './addons/cdoGesture';
-import {initializeKeyboardNavigation} from './addons/cdoKeyboardNavigation';
+import {
+  initializeKeyboardNavigation,
+  registerKeyboardNavigationStyles,
+} from './addons/cdoKeyboardNavigation';
 import CdoMetricsManager from './addons/cdoMetricsManager';
 import CdoRendererGeras from './addons/cdoRendererGeras';
 import CdoRendererThrasos from './addons/cdoRendererThrasos';
@@ -778,7 +781,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
       Blockly.Xml.domToText(xml),
       includeHiddenDefinitions
     );
-    Blockly.KeyboardNavigation.registerKeyboardNavigationStyles();
+
     // Loop through all the parent blocks and remove vertical translation value
     // This makes the output more condensed and readable, while preserving
     // horizontal translation values for RTL rendering.
@@ -882,6 +885,14 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     // This is also important for ensuring that Blockly does not
     // mistakenly keep orphaned blocks disabled when they are connected.
     options.disable = blocklyWrapper.isStartMode;
+    if (
+      options.enableKeyboardNavigation ||
+      experiments.isEnabledAllowingQueryString(
+        experiments.BLOCKLY_KEYBOARD_NAVIGATION
+      )
+    ) {
+      registerKeyboardNavigationStyles();
+    }
 
     const workspace = blocklyWrapper.blockly_.inject(
       container,

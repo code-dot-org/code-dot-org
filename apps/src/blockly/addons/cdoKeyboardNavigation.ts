@@ -1,6 +1,10 @@
 import {KeyboardNavigation} from '@blockly/keyboard-navigation';
 import * as GoogleBlockly from 'blockly/core';
 
+export function registerKeyboardNavigationStyles() {
+  KeyboardNavigation.registerKeyboardNavigationStyles();
+}
+
 export function initializeKeyboardNavigation(
   workspace: GoogleBlockly.WorkspaceSvg
 ) {
