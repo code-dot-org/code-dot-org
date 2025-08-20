@@ -1,4 +1,3 @@
-import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import Modal from '@code-dot-org/component-library/modal';
 import {BodyTwoText} from '@code-dot-org/component-library/typography';
 import React from 'react';
@@ -12,12 +11,9 @@ interface UploadsDisabledModalProps {
 const UploadsDisabledModal: React.FunctionComponent<
   UploadsDisabledModalProps
 > = ({onClose}) => {
-  const {theme} = useTheme();
-
   return (
     <Modal
       id="uploads-disabled-modal"
-      mode={theme === 'Dark' ? 'dark' : 'light'}
       onClose={onClose}
       title={i18n.uploadsDisabledModal_title()}
       customContent={

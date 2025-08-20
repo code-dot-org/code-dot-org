@@ -1,4 +1,3 @@
-import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import Modal from '@code-dot-org/component-library/modal';
 import {BodyTwoText} from '@code-dot-org/component-library/typography';
 import React from 'react';
@@ -16,12 +15,9 @@ const FlaggedImageModal: React.FC<FlaggedImageModalProps> = ({
   onCancel,
   errorMessage,
 }) => {
-  const {theme} = useTheme();
-
   return (
     <Modal
       id="image-flagged-modal"
-      mode={theme === 'Dark' ? 'dark' : 'light'}
       onClose={onCancel}
       title={i18n.animationPicker_flaggedImageModalTitle()}
       customContent={
