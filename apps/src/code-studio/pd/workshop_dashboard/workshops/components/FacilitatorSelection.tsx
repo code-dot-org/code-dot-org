@@ -40,16 +40,18 @@ export const FacilitatorSelection: FC<{
   };
 
   return (
-    <SimpleDropdown
-      size="s"
-      name="facilitator selection"
-      items={facilitatorOptions}
-      dropdownTextThickness="thin"
-      labelText="Viewing feedback for:"
-      selectedValue={selectedValue}
-      onChange={handleChange}
-      iconLeft={{iconName: 'user'}}
-      className={styles.navDropdown}
-    />
+    <div>
+      <SimpleDropdown
+        size="s"
+        name="facilitator selection"
+        items={facilitatorOptions}
+        dropdownTextThickness="thin"
+        labelText="Viewing feedback for:"
+        selectedValue={selectedValue}
+        onChange={handleChange}
+        iconLeft={{iconName: 'user'}}
+        className={styles.navDropdown}
+      />
+    </div>
   );
 };
