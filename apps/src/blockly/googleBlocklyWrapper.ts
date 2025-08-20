@@ -127,7 +127,7 @@ import {
   setThemeAndRenderBlocks,
 } from './utils';
 
-const options = {
+const options: {contextMenu: true; shortcut: true} = {
   contextMenu: true,
   shortcut: true,
 };
@@ -778,6 +778,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
       Blockly.Xml.domToText(xml),
       includeHiddenDefinitions
     );
+    Blockly.KeyboardNavigation.registerKeyboardNavigationStyles();
     // Loop through all the parent blocks and remove vertical translation value
     // This makes the output more condensed and readable, while preserving
     // horizontal translation values for RTL rendering.
