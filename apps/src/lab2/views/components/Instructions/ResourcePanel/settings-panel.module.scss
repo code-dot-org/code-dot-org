@@ -25,4 +25,19 @@
   align-items: flex-start;
   gap: 12px;
   align-self: stretch;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.dropdown {
+  width: 100%;
+
+  > div,
+  select {
+    width: 100%;
+  }
+}
+
+.languageForm {
+  width: 100%;
 }

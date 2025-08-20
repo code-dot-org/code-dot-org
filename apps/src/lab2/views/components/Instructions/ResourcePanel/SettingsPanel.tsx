@@ -48,6 +48,7 @@ const SettingsPanel: React.FunctionComponent<SettingsPanelProps> = ({
             method="post"
             style={{marginBottom: '0px'}}
             data-notranslate=""
+            className={styles.languageForm}
           >
             <input
               type="hidden"
@@ -64,6 +65,7 @@ const SettingsPanel: React.FunctionComponent<SettingsPanelProps> = ({
               size="s"
               color={dropdownColor}
               dropdownTextThickness="thin"
+              className={styles.dropdown}
             />
           </form>
         )}
@@ -79,6 +81,7 @@ const SettingsPanel: React.FunctionComponent<SettingsPanelProps> = ({
             size="s"
             color={dropdownColor}
             dropdownTextThickness="thin"
+            className={styles.dropdown}
           />
         ))}
       </div>
