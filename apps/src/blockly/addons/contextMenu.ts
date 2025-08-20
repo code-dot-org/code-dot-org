@@ -43,10 +43,9 @@ const registerOverrideBlockId = function (weight: number) {
         }
       );
     },
+    scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.BLOCK,
     id: 'overrideBlockId',
     weight,
-    focusedNode: (scope: GoogleBlockly.ContextMenuRegistry.Scope) =>
-      scope.block,
   };
   GoogleBlockly.ContextMenuRegistry.registry.register(overrideIdOption);
 };
@@ -71,10 +70,9 @@ const registerDeletable = function (weight: number) {
         scope.block.setDeletable(!scope.block.isDeletable());
       }
     },
+    scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.BLOCK,
     id: 'blockDeletable',
     weight,
-    focusedNode: (scope: GoogleBlockly.ContextMenuRegistry.Scope) =>
-      scope.block,
   };
   GoogleBlockly.ContextMenuRegistry.registry.register(deletableOption);
 };
@@ -107,10 +105,9 @@ const registerMovable = function (weight: number) {
         scope.block.setMovable(!scope.block.isMovable());
       }
     },
+    scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.BLOCK,
     id: 'blockMovable',
     weight,
-    focusedNode: (scope: GoogleBlockly.ContextMenuRegistry.Scope) =>
-      scope.block,
   };
   GoogleBlockly.ContextMenuRegistry.registry.register(movableOption);
 };
@@ -144,10 +141,9 @@ const registerNextConnection = function (weight: number) {
       block.nextConnection?.disconnect();
       block.setNextStatement(!block.nextConnection);
     },
+    scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.BLOCK,
     id: 'nextConnection',
     weight,
-    focusedNode: (scope: GoogleBlockly.ContextMenuRegistry.Scope) =>
-      scope.block,
   };
   GoogleBlockly.ContextMenuRegistry.registry.register(nextConnectionOption);
 };
@@ -172,10 +168,9 @@ const registerEditable = function (weight: number) {
         scope.block.setEditable(!scope.block.isEditable());
       }
     },
+    scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.BLOCK,
     id: 'blockEditable',
     weight,
-    focusedNode: (scope: GoogleBlockly.ContextMenuRegistry.Scope) =>
-      scope.block,
   };
   GoogleBlockly.ContextMenuRegistry.registry.register(editableOption);
 };
@@ -198,10 +193,9 @@ const registerShadow = function (weight: number) {
     callback: function (scope: GoogleBlockly.ContextMenuRegistry.Scope) {
       scope.block?.setShadow(true);
     },
+    scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.BLOCK,
     id: 'blockToShadow',
     weight,
-    focusedNode: (scope: GoogleBlockly.ContextMenuRegistry.Scope) =>
-      scope.block,
   };
   GoogleBlockly.ContextMenuRegistry.registry.register(shadowOption);
 };
@@ -241,10 +235,9 @@ const registerUnshadow = function (weight: number) {
         clearShadowState(scope.block);
       }
     },
+    scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.BLOCK,
     id: 'childUnshadow',
     weight,
-    focusedNode: (scope: GoogleBlockly.ContextMenuRegistry.Scope) =>
-      scope.block,
   };
   GoogleBlockly.ContextMenuRegistry.registry.register(unshadowOption);
 };
@@ -290,10 +283,9 @@ const registerToggleShadowStack = function (weight: number) {
         }
       }
     },
+    scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.BLOCK,
     id: 'stackToggleShadow',
     weight,
-    focusedNode: (scope: GoogleBlockly.ContextMenuRegistry.Scope) =>
-      scope.block?.workspace,
   };
   GoogleBlockly.ContextMenuRegistry.registry.register(toggleShadowStackOption);
 };
@@ -321,10 +313,9 @@ const registerAllBlocksUndeletable = function (weight: number) {
           .forEach(block => block.setDeletable(false));
       }
     },
+    scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.WORKSPACE,
     id: 'workspaceBlocksUndeletable',
     weight,
-    focusedNode: (scope: GoogleBlockly.ContextMenuRegistry.Scope) =>
-      scope.block?.workspace,
   };
   GoogleBlockly.ContextMenuRegistry.registry.register(
     workspaceBlocksUndeletableOption
@@ -361,10 +352,9 @@ const registerAllBlocksUneditable = function (weight: number) {
           .forEach(block => block.setEditable(false));
       }
     },
+    scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.WORKSPACE,
     id: 'workspaceBlocksUneditable',
     weight,
-    focusedNode: (scope: GoogleBlockly.ContextMenuRegistry.Scope) =>
-      scope.block?.workspace,
   };
   GoogleBlockly.ContextMenuRegistry.registry.register(
     workspaceBlocksUneditableOption
@@ -394,10 +384,9 @@ const registerAllBlocksUnmovable = function (weight: number) {
           .forEach(block => block.setMovable(false));
       }
     },
+    scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.WORKSPACE,
     id: 'workspaceBlocksUnMovable',
     weight,
-    focusedNode: (scope: GoogleBlockly.ContextMenuRegistry.Scope) =>
-      scope.block?.workspace,
   };
   GoogleBlockly.ContextMenuRegistry.registry.register(
     workspaceBlocksUnmovableOption
@@ -444,10 +433,9 @@ function registerHelp(weight: number) {
       });
       dialog.show();
     },
+    scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.BLOCK,
     id: 'blockHelp',
     weight,
-    focusedNode: (scope: GoogleBlockly.ContextMenuRegistry.Scope) =>
-      scope.block,
   };
   GoogleBlockly.ContextMenuRegistry.registry.register(helpOption);
 }
