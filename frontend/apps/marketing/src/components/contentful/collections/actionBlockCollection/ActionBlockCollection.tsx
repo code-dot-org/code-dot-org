@@ -44,11 +44,6 @@ const styles = {
       height: '100%',
     },
   },
-  hideImages: {
-    '& figure': {
-      display: 'none',
-    },
-  },
 };
 
 const ActionBlockCollection: React.FC<ActionBlockCollectionProps> = ({
@@ -121,9 +116,7 @@ const ActionBlockCollection: React.FC<ActionBlockCollectionProps> = ({
       return {
         id: title,
         item: (
-          <Box
-            sx={[{...styles.gridItem}, hideImages && {...styles.hideImages}]}
-          >
+          <Box sx={[{...styles.gridItem}]}>
             <ActionBlock
               className="actionBlockWrapper"
               overline={
@@ -133,7 +126,11 @@ const ActionBlockCollection: React.FC<ActionBlockCollectionProps> = ({
               }
               title={title}
               description={shortDescription}
-              image={{src: getAbsoluteImageUrl(resolvedImage) || ''}}
+              image={
+                !hideImages
+                  ? {src: getAbsoluteImageUrl(resolvedImage) || ''}
+                  : undefined
+              }
               primaryButton={createButtonConfig(primaryLinkRef)}
               secondaryButton={
                 !hideSecondaryButton &&

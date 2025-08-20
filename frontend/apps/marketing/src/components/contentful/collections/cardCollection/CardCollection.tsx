@@ -36,11 +36,6 @@ const styles = {
       height: '100%',
     },
   },
-  hideImages: {
-    '& img': {
-      display: 'none',
-    },
-  },
 };
 
 const ActionBlockCollection: React.FC<CardCollectionProps> = ({
@@ -87,16 +82,16 @@ const ActionBlockCollection: React.FC<CardCollectionProps> = ({
       return {
         id: title,
         item: (
-          <Box
-            sx={[{...styles.gridItem}, hideImages && {...styles.hideImages}]}
-          >
+          <Box sx={[{...styles.gridItem}]}>
             <Card
               className="cardWrapper"
               overline={actionBlockOverline ? actionBlockOverline : undefined}
               title={title}
               description={shortDescription}
-              imageSrc={getAbsoluteImageUrl(resolvedImage) || ''}
-              primaryButton={resolvedPrimaryLinkRef}
+              imageSrc={!hideImages ? getAbsoluteImageUrl(resolvedImage) : ''}
+              primaryButton={
+                resolvedPrimaryLinkRef ? resolvedPrimaryLinkRef : undefined
+              }
               secondaryButton={
                 !hideSecondaryButton && resolvedSecondaryLinkRef
                   ? resolvedSecondaryLinkRef
@@ -114,12 +109,13 @@ const ActionBlockCollection: React.FC<CardCollectionProps> = ({
     return data;
   }, [blocks, hideImages, hideSecondaryButton, sortOrder]);
 
-  console.log(blocksData);
-
   return (
     <Grid container spacing={4} className={className}>
       {blocksData.map(block => (
-        <Grid key={`id-${useId().replaceAll(':', '')}`} size={{xs: 12, md: 6}}>
+        <Grid
+          key={`id-${useId().replaceAll(':', '')}`}
+          size={{xs: 12, md: 6, lg: 4}}
+        >
           {block.item}
         </Grid>
       ))}
