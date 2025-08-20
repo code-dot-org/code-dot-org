@@ -63,7 +63,7 @@ const LabViewsRenderer: React.FunctionComponent = () => {
     const footer = document.getElementById('page-small-footer');
     // The resource panel has includes copyright and language, so we hide the footer.
     // We control this here so the footer will show up on levels that do not use the resource panel,
-    // such as panels levels. The footer is controleld by the server, so we need to show/hide it here
+    // such as panels levels. The footer is controlled by the server, so we need to show/hide it here
     // to ensure it will show up when we switch to a level that does not use the resource panel.
     if (isUsingResourcePanel(currentAppName || '')) {
       footer?.classList.add(moduleStyles.hiddenFooter);

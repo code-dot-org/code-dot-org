@@ -8,6 +8,7 @@ import {setWidgetViewShowCode} from '@codebridge/redux/workspaceRedux';
 import React, {useEffect, useState} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
+import {isUsingResourcePanel} from '@cdo/apps/lab2/utils';
 import SettingsButton from '@cdo/apps/lab2/views/components/Settings/SettingsButton';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import commonI18n from '@cdo/locale';
@@ -45,6 +46,8 @@ const RightButtons: React.FunctionComponent<RightButtonsProps> = ({
     state => state.codebridgeWorkspace.widgetViewShowCode
   );
   const settings = useCodebridgeSettings();
+
+  const usingResourcePanel = isUsingResourcePanel(appName);
 
   useEffect(() => {
     if (!consoleManager) {
@@ -96,7 +99,7 @@ const RightButtons: React.FunctionComponent<RightButtonsProps> = ({
           />
         </WithTooltip>
       )}
-      {isWidgetView && !widgetViewShowCode && (
+      {isWidgetView && !widgetViewShowCode && !usingResourcePanel && (
         <SettingsButton settings={settings} />
       )}
     </div>
