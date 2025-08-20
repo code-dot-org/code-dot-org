@@ -5,6 +5,7 @@ require_relative '../../../shared/middleware/helpers/experiments'
 require 'metrics/events'
 require 'policies/lti'
 require 'queries/lti'
+require 'policies/devise/disallowed_domains'
 
 class RegistrationsController < Devise::RegistrationsController
   before_action :require_no_authentication, only: [:account_type, :login_type, :finish_student_account, :finish_teacher_account, :new, :create, :cancel]
@@ -63,6 +64,7 @@ class RegistrationsController < Devise::RegistrationsController
   def login_type
     @is_signed_out = current_user.nil?
     @user_type = params[:user_type]
+    @email_domain_disallowed = Policies::Devise::DisallowedDomains::DISALLOWED_DOMAINS
     view_options(full_width: true, responsive_content: true)
     render 'login_type'
   end

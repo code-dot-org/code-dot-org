@@ -51,7 +51,8 @@ const getUserType = () => {
 const LoginTypeSelection: React.FunctionComponent<{
   isSignedOut: boolean;
   passwordMinLength: number;
-}> = ({isSignedOut, passwordMinLength}) => {
+  emailDomainDisallowed?: object;
+}> = ({isSignedOut, passwordMinLength, emailDomainDisallowed}) => {
   const [userType, setUserType] = useState(getUserType());
   const [password, setPassword] = useState('');
   const [passwordIcon, setPasswordIcon] = useState(X_ICON);
@@ -167,6 +168,18 @@ const LoginTypeSelection: React.FunctionComponent<{
     logUserLoginType('email');
     if (!isEmail(email)) {
       setEmailErrorMessage(i18n.censusInvalidEmail());
+      setShowEmailError(true);
+      return;
+    }
+    // Check if the email domain is in the disallowed list. Some districts
+    // require students to log in through their LMS, so we disallow those
+    // domains from logging in with an email and password.
+    const emailDomain = email.split('@')[1];
+    if (
+      Array.isArray(emailDomainDisallowed) &&
+      emailDomainDisallowed.includes(emailDomain)
+    ) {
+      setEmailErrorMessage(i18n.domainDisallowed({domain: emailDomain}));
       setShowEmailError(true);
       return;
     }
