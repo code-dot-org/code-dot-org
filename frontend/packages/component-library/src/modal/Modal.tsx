@@ -51,7 +51,7 @@ export interface ModalProps extends HTMLAttributes<HTMLDivElement> {
  *
  * Design System: Modal Component.
  * Renders Modal window that user should interact with.
- * 
+ *
  * ## Deprecation Notice
  * The `mode` prop is deprecated and will be removed in a future version.
  * Use the theme provider instead for consistent theming across your application.
@@ -76,7 +76,7 @@ const Modal: React.FunctionComponent<ModalProps> = ({
   if (mode) {
     console.warn(
       `Modal: The 'mode' prop is deprecated and will be removed in a future version. ` +
-      `Use the theme provider instead. Current usage: mode="${mode}"`
+        `Use the theme provider instead. Current usage: mode="${mode}"`,
     );
   }
 
