@@ -95,7 +95,7 @@ CodeprojectsCloudFrontDistribution:
         - !Sub preview.${CodeprojectsBaseDomainName}
       Origins:
         - Id: DashboardOrigin
-          DomainName: !GetAtt <%= load_balancer ? 'ALB.DNSName' : "#{daemon}.PublicIp" %>
+          DomainName: <%= load_balancer ? '!GetAtt ALB.DNSName' : '!Sub ${DashboardSubdomainName}.${BaseDomainName}' %>
           CustomOriginConfig:
             OriginProtocolPolicy: https-only
             OriginSSLProtocols:
