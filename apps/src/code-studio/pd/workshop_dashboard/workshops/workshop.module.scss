@@ -451,6 +451,13 @@ div.card {
         background: var(--background-neutral-secondary);
         border-radius: 0.5rem;
         padding: 1rem;
+
+        &.success {
+          background: var(--background-success-extra-light);
+        }
+        &.warning {
+          background: var(--background-warning-light);
+        }
       }
     }
 
@@ -458,6 +465,9 @@ div.card {
     @media (min-width: 600px) {
       .textCardContainer {
         grid-template-columns: repeat(2, 1fr);
+        &.small {
+          grid-template-columns: unset;
+        }
       }
     }
 
@@ -465,6 +475,9 @@ div.card {
     @media (min-width: 900px) {
       .textCardContainer {
         grid-template-columns: repeat(3, 1fr);
+        &.small {
+          grid-template-columns: unset;
+        }
       }
     }
   }

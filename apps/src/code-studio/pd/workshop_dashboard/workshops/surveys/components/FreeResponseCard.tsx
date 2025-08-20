@@ -18,12 +18,16 @@ interface FreeResponseCardProps {
   title: string;
   tagText?: string;
   items: string[];
+  statusColor?: 'success' | 'warning' | 'default';
+  size?: 's' | 'l';
 }
 
 export const FreeResponseCard: FC<FreeResponseCardProps> = ({
   title,
   tagText,
   items,
+  statusColor = 'default',
+  size = 'l',
 }) => {
   return (
     <Card
@@ -37,7 +41,10 @@ export const FreeResponseCard: FC<FreeResponseCardProps> = ({
         className={styles.cardHeader}
         title={
           <Box className={styles.cardHeaderRow}>
-            <Heading2 visualAppearance="body-one" noMargin>
+            <Heading2
+              visualAppearance={size === 's' ? 'body-two' : 'body-one'}
+              noMargin
+            >
               <StrongText>{title}</StrongText>
             </Heading2>
             {tagText && (
@@ -52,9 +59,19 @@ export const FreeResponseCard: FC<FreeResponseCardProps> = ({
       />
       <CardContent className={styles.cardContent}>
         {items.length > 0 ? (
-          <Box className={styles.textCardContainer}>
+          <Box
+            className={classNames(styles.textCardContainer, {
+              [styles.small]: size === 's',
+            })}
+          >
             {items.map(item => (
-              <Box key={item} className={styles.textCard}>
+              <Box
+                key={item}
+                className={classNames(
+                  styles.textCard,
+                  statusColor && styles[statusColor]
+                )}
+              >
                 <BodyThreeText noMargin>{item}</BodyThreeText>
               </Box>
             ))}
