@@ -16,16 +16,16 @@ jest.mock('@/selectors/contentful/getImage', () => ({
   getAbsoluteImageUrl: (image: any) => image?.fields?.file?.url || '',
 }));
 
-const mockCards: CardCollectionProps['cards'] = [
-  {
+const createMockCard = (title: string): CardCollectionProps['cards'][number] =>
+  ({
     fields: {
       actionBlockOverline: 'Test Overline',
-      title: 'Title 3',
+      title,
       shortDescription: 'Test Description',
       image: {
         fields: {
           file: {
-            url: 'https://code.org/image.jpg',
+            url: 'https://example.com/image.jpg',
           },
         },
       },
@@ -45,65 +45,12 @@ const mockCards: CardCollectionProps['cards'] = [
       },
     },
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  } as any,
-  {
-    fields: {
-      actionBlockOverline: 'Test Overline',
-      title: 'Title 1',
-      shortDescription: 'Test Description',
-      image: {
-        fields: {
-          file: {
-            url: 'https://code.org/image2.jpg',
-          },
-        },
-      },
-      primaryLinkRef: {
-        fields: {
-          label: 'Test Primary Button',
-          primaryTarget: '/another-primary-link',
-          ariaLabel: 'Test Primary Button aria label',
-        },
-      },
-      secondaryLinkRef: {
-        fields: {
-          label: 'Test Secondary Button',
-          primaryTarget: '/another-secondary-link',
-          ariaLabel: 'Test Secondary Button aria label',
-        },
-      },
-    },
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  } as any,
-  {
-    fields: {
-      actionBlockOverline: 'Test Overline',
-      title: 'Title 2',
-      shortDescription: 'Test Description',
-      image: {
-        fields: {
-          file: {
-            url: 'https://code.org/image2.jpg',
-          },
-        },
-      },
-      primaryLinkRef: {
-        fields: {
-          label: 'Test Primary Button',
-          primaryTarget: '/another-primary-link',
-          ariaLabel: 'Test Primary Button aria label',
-        },
-      },
-      secondaryLinkRef: {
-        fields: {
-          label: 'Test Secondary Button',
-          primaryTarget: '/another-secondary-link',
-          ariaLabel: 'Test Secondary Button aria label',
-        },
-      },
-    },
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  } as any,
+  }) as any;
+
+const mockCards: CardCollectionProps['cards'] = [
+  createMockCard('Title 3'),
+  createMockCard('Title 1'),
+  createMockCard('Title 2'),
 ];
 
 describe('CardCollection', () => {
