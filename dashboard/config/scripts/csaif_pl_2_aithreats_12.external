@@ -40,7 +40,7 @@ markdown <<MARKDOWN
     <summary style="font-size: 1.5em; font-weight: bold;">🧐 Answer
 </summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
-    <p>
+    <p style="font-size: 18px">
 This message is secret.
 </p></div>
 </details>
@@ -48,11 +48,7 @@ This message is secret.
 <br>
 
 <p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
-    ➡️ This activity is from Lesson 9. You can find more details in the full <a href='https://studio.code.org/s/aif5-2025/lessons/9' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a>.
+    ➡️ Encryption is introduced in Lesson 9. You can find more details in the full <a href='https://studio.code.org/s/aif5-2025/lessons/9' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a>.
 </p>
-
-<br>
-
-
 
 MARKDOWN
