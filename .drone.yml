@@ -260,7 +260,8 @@ steps:
     image: bitnami/git
     commands:
       - git lfs install
-      - git clone --branch $DRONE_BRANCH $DRONE_GIT_HTTP_URL . 
+      # - git clone --branch $DRONE_BRANCH $DRONE_GIT_HTTP_URL . 
+      - git clone --branch $DRONE_SOURCE_BRANCH $DRONE_GIT_HTTP_URL . 
 
   # Do all the work necessary to run UI tests so we can capture a complete
   # snapshot of rbenv and the database, but don't actually run the tests.
@@ -317,12 +318,20 @@ volumes:
   - name: mysql
     temp: {}
 
+# trigger:
+#   branch:
+#     - "staging"
+#     - "staging-next"
+#   event:
+#     - push
 trigger:
   branch:
-    - "staging"
-    - "staging-next"
+    exclude:
+      - "production"
+      - "test"
+      - "levelbuilder"
   event:
-    - push
+    - pull_request
 ---
 kind: signature
 hmac: a3c0459d28345ffc3be58449efd342f31a4804d22ef361aca9fc863f29694e8a
