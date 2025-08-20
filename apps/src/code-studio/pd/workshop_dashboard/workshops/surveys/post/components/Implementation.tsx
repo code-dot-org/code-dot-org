@@ -3,7 +3,6 @@ import React, {useMemo} from 'react';
 
 import {
   isQuestionType,
-  SurveyQuestion,
   SurveyQuestions,
 } from '../../../../WorkshopFormTemplate/types';
 import {useWorkshopContext} from '../../../WorkshopLayout';
@@ -11,10 +10,10 @@ import {FollowUpRequestedCard} from '../../components/FollowUpRequestedCard';
 import {FreeResponseCard} from '../../components/FreeResponseCard';
 import {MultiSelectCard} from '../../components/MultiSelectCard';
 import {ScoreCard} from '../../components/ScoreCard';
+import {MIN_RESPONSE_COUNT} from '../../constants';
+import {getQuestionDescription} from '../../helpers';
 
 import styles from '../../../workshop.module.scss';
-
-export const MIN_RESPONSE_COUNT = 5;
 
 export const Implementation = () => {
   const {surveys} = useWorkshopContext();
@@ -53,25 +52,6 @@ export const Implementation = () => {
       .map(([_, value]) => value);
   }, [barriersToImplementation]);
 
-  const getDescription = (question: SurveyQuestion) => {
-    if (isQuestionType(question, 'likert')) {
-      return `${question.results.agreement_count} of ${question.results.total_responses} respondents`;
-    }
-    if (
-      isQuestionType(question, 'multiSelect') &&
-      question.question_name === 'barriers_implementation_curriculum'
-    ) {
-      if (question.results.total_respondents === 0) {
-        return '';
-      }
-      const numWithBarriers =
-        question.results.total_respondents -
-        (question.results.breakdown.none?.count ?? 0);
-      return `${numWithBarriers} teachers reported at least 1 or more barriers to implementation`;
-    }
-    return '';
-  };
-
   if (!questions) return null;
 
   return (
@@ -82,7 +62,7 @@ export const Implementation = () => {
             <ScoreCard
               key={question.question_name}
               title={question.question_short_text ?? question.question_text}
-              description={getDescription(question)}
+              description={getQuestionDescription(question)}
               footer={question.question_sub_text}
               score={question.results.weighted_score}
               responseCount={question.results.total_responses}
@@ -99,7 +79,7 @@ export const Implementation = () => {
               barriersToImplementation.question_short_text ??
               barriersToImplementation.question_text
             }
-            description={getDescription(barriersToImplementation)}
+            description={getQuestionDescription(barriersToImplementation)}
             items={barriersItems}
             barLabel="Teachers"
           />
