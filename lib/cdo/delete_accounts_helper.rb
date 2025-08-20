@@ -221,7 +221,7 @@ class DeleteAccountsHelper
     end
   end
 
-  # Anonymize peer reviews might be associated with a purged submitter or viewer
+  # Anonymizes peer reviews that might be associated with a purged submitter or viewer
   def anonymize_peer_reviews(user_id)
     PeerReview.where(submitter_id: user_id).update_all(submitter_id: nil, audit_trail: nil)
     PeerReview.where(reviewer_id: user_id).update_all(reviewer_id: nil, data: nil, audit_trail: nil)
