@@ -57,7 +57,8 @@ export default class ProgramExecutor {
       nativeAPI ||
       new DanceParty({
         onPuzzleComplete,
-        playSound: this.playSong,
+        playSound: (...args: Parameters<typeof this.playSong>) =>
+          this.playSong(...args),
         recordReplayLog,
         showMeasureLabel: !isReadOnlyWorkspace,
         onHandleEvents: (currentFrameEvents: object[]) =>
@@ -81,7 +82,7 @@ export default class ProgramExecutor {
     // TODO: Dance.js checks for unwanted top blocks and duplicate variables in for loops
     // before executing. We should do something similar here.
 
-    this.hooks = await this.compileAllCode(code);
+    this.hooks = await this.compileAllCode(code || this.getCode());
     if (!this.hooks.runUserSetup || !this.hooks.getCueList) {
       this.reportMissingHooks('runUserSetup', 'getCueList');
       return;
@@ -109,7 +110,10 @@ export default class ProgramExecutor {
    */
   async staticPreview(code: string) {
     this.reset();
-    this.hooks = await this.preloadSpritesAndCompileCode(code, 'runUserSetup');
+    this.hooks = await this.preloadSpritesAndCompileCode(
+      code || this.getCode(),
+      'runUserSetup'
+    );
     if (!this.hooks.runUserSetup) {
       this.reportMissingHooks('runUserSetup');
       return;
@@ -304,5 +308,10 @@ export default class ProgramExecutor {
     this.metricsReporter.logWarning(
       `Missing required hooks in compiled code: ${hooks.join(', ')}`
     );
+  }
+
+  // Temporary test code. TODO: Replace with code from Blockly workspace.
+  private getCode(): string {
+    return 'whenSetup(function () {\n  setBackgroundEffectWithPalette("kaleidoscope", "electronic");\n  setForegroundEffectExtended("raining_tacos");\n  makeNewDanceSpriteGroup(12, "ALIEN", "circle");\n  makeAnonymousDanceSprite("CAT", {x: 200, y: 200});\n});\n\natTimestamp(4, "measures", function () {\n  setBackgroundEffectWithPalette("disco_ball", "neon");\n  setForegroundEffectExtended("color_lights");\n  changeMoveEachLR(sprites, MOVES.Drop, -1);\n});\n';
   }
 }
