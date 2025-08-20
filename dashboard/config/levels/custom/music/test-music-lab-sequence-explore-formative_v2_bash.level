@@ -1,0 +1,194 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2025-08-15T18:44:32.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "toolbox": {
+        "type": "category",
+        "blocks": {
+        }
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "editable": false
+            },
+            {
+              "type": "play_sounds_together",
+              "id": "play_sounds_together",
+              "x": 230,
+              "y": 50,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              }
+            },
+            {
+              "type": "play_sounds_together",
+              "id": "_rwRo`~K3/j?i5vgxaZ.",
+              "x": 410,
+              "y": 170,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              }
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": "play_sound_at_current_location_simple2",
+              "x": 470,
+              "y": 290,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "sound": "electro/guitar_melody"
+              }
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": "8wmuang|9#[m[:1_%=7D",
+              "x": 390,
+              "y": 70,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "sound": "electro/drum_beat_club"
+              }
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": ")$Ji]^q`)erwF,tthaL=",
+              "x": 110,
+              "y": 150,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "sound": "electro/guitar_moment"
+              }
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": "fQaIDkm/}iXKh%iFBJI{",
+              "x": 170,
+              "y": 250,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "sound": "electro/drum_beat_cowbell"
+              }
+            }
+          ]
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "packId": "default",
+      "validationTimeout": 1
+    },
+    "long_instructions": "#### Check-In\r\n\r\nDan was playing around with sounds and discovered a groove that he liked, but when he walked away from his computer his little sister ran over and pulled apart all the blocks. Can you help him put his song back together?\r\n\r\n> \"I had the **Cowbell beats** and the **Melody Guitar leads** together, and then I had the **Club beat** and **Guitar Moment lead** together\"\r\n\r\nCan you reconstruct his song? Listen to the Example to hear how it's supposed to sound!\r\n\r\n![](https://images.code.org/02d7535d5eb1cf02f5b8051457e061bf-image-1749238267021.png)",
+    "encrypted_exemplar_sources": "UGYNk6iye9eaFwUY05FzzO/7y8j7ObxryFbKvBPuF528qP4MtsSFqDeG//aJ\nl0T6UI7wWB0H/J+Euq0wtMrnfZIv4KqNWq5gtmuW8ushzt6HJzSVh89nAJ/g\nqoY+ihv6+zHmlLE8msmvDlVnBRmpwSSug3q+SpkXFur9+w3vOPL1o8LhfdJB\n0ep9sKAPNFreeEGpfNaTHyeEek22ZDpwo5g1/91laRFZXLJ3ObFQkI2Mi/SF\neThQ1zPNuOEggHor6BCPkf6utFvuIj3W7tTG5Be81z3rwi0UJuctz78mOQv4\nh0WOnZ1OAR3zAoHtp499kaYXN9N25E7USwHrSFw7122eBkYXGp4kT73524m/\nqUCApMWvCRefw8e1xeQ9+ZEgrFe8BbPdpAxCVe09GYC46vAidCMIU7vnAjpv\nNxkgv0aW1QfRS1f1z7XEIbpjeXJZWnz8R/AkJ6XM7rndS4p+1q3w50a48pnK\nECXB1C6EPvIyleaBKmHiT+jPor0v5c1M7bFtpWBI7kswXNR14KuylUMl6rlL\nQPyF20FOINMz2RFRUgiOt2oLKv/RqJZIGBMI4vkhU1VdcxpOgRrDdBsWbGxU\njm0OTbBccJK7M9CFcD08GNZ54moM2jp3qRTrHWULArX+P9kMnDgjOGicMWhu\nTddtO6cnGyCBZ7QBa6sfRlRyBFdtIsRbkvHGfXTfKMXxyLe3tG7q/dodzkbs\nHcodJJ2HlgZUCN8Vpkdw+YAUE/HbdyV0J9admlEP/RSkanOel1AiVpezXmG8\nwNaHZMfAu6nbHZzKE2zMBO5y/2rjhkgxjDhu4n85fSwaTZpt4CGQuar3uUCp\nSDPp28nfmDERCf5D25HGebJ6EjuF92g9le7hmAVlHqBxavzSZeh47vaoiIYw\ny2Z1R+y4zdfZgjiD+MltexxgwWw1Xt2oVCUQsu0INxZB1fD7c26leHiKAjXU\nRdbdkLg1Pckm905peTY8vdI4wXV3gGnklJTbP40mo9UKoUaYVTjE8/dsMcbx\nzLUxMcO/jRdzLpmdgVJYKrP8jScAulqtzmetACOCGB03rh8s5ROdkFgG4iZw\nzBWTHxLa9VmD0JCbXA0YY4qj054jfYi7mtJBDakNUKMgNUZHsyptTb76BaXl\n85R07/ISF8vRXkKKIYPmj6KQ9t4T/ODvbZSFIqvqfjMaXkrPNP7BXokOkyKB\nao54L67jI6viuP3EZ6FF8dLdsvd84R7USrAseqXOZyLSgNQB3xUSQxmeCf0X\nY3LbgcLEYqM8iwPGshUzadx9d9iaoON/odvYPnoBRB8/huImUECZBJk1K59d\nT68=\n",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": true,
+      "validationSuccessMessage": "<i class=\"fa-solid fa-robot\"></i> DJ Robot says: \"You Did It!\"",
+      "validationFailureMessage": "Something's not quite right! Try listening to the example again!",
+      "playerTitle": "Dan's Song"
+    },
+    "validations": [
+      {
+        "key": "test-music-lab-sequence-explore-formative_4c491201-0bff-47f4-a68e-ffcb6a3c9834",
+        "message": "exemplar validation",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 3
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-sequence-explore-formative_v2_d1426871-3f03-4783-8739-86344884cbef",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is listening to your song...",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "play_sound_at_current_location_simple2:4"
+          },
+          {
+            "name": "block_count_by_type",
+            "value": "play_sounds_together:2"
+          }
+        ],
+        "comment": "They've put all the blocks, so now wait until all of the sounds play..."
+      },
+      {
+        "key": "test-music-lab-sequence-explore-formative_v2_4b159d91-4fa2-41da-85c7-e904785e29e2",
+        "message": "Make sure to use all the blocks to recreate the song!",
+        "next": false,
+        "conditions": [
+
+        ],
+        "comment": ""
+      }
+    ],
+    "name_suffix": "_bash",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-08-15T18:44:32.353+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequence-explore-formative_v2\\\"\"],\"cloned_from\":\"test-music-lab-sequence-explore-formative_v2\"}]"
+}]]></config>
+  <blocks/>
+</Music>

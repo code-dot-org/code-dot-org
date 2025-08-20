@@ -67,6 +67,13 @@ class UnitGroup < ApplicationRecord
 
   validates :link, presence: true
   validates :published_state, acceptance: {accept: Curriculum::SharedCourseConstants::PUBLISHED_STATE.to_h.values, message: 'must be in_development, pilot, beta, preview or stable'}
+  validate :validate_family_name_and_version_year
+
+  def validate_family_name_and_version_year
+    unless plc_course || (family_name.present? && version_year.present?)
+      errors.add(:base, 'non-plc course must have family_name and version_year set')
+    end
+  end
 
   def skip_name_format_validation
     !!plc_course
@@ -130,11 +137,13 @@ class UnitGroup < ApplicationRecord
   end
 
   def self.seed_from_hash(hash)
-    unit_group = UnitGroup.find_or_create_by!(name: hash['name'])
+    unit_group = UnitGroup.find_or_initialize_by(name: hash['name'])
+    # set required family_name and version_year fields before running validations
+    unit_group.properties = hash['properties']
+    unit_group.save!
     unit_group.update_original_scripts(hash['original_script_names'])
     unit_group.update_scripts(hash['script_names'])
     unit_group.update_unit_prefixes(hash['unit_prefixes']) if hash['unit_prefixes']
-    unit_group.properties = hash['properties']
     unit_group.published_state = hash['published_state'] || Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development
     unit_group.instruction_type = hash['instruction_type'] || Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
     unit_group.instructor_audience = hash['instructor_audience'] || Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher
@@ -624,7 +633,7 @@ class UnitGroup < ApplicationRecord
 
   # rubocop:disable Naming/PredicateName
   def is_course?
-    return !!family_name && !!version_year
+    return family_name.present? && version_year.present?
   end
   # rubocop:enable Naming/PredicateName
 

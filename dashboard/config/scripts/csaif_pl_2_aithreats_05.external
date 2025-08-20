@@ -5,7 +5,9 @@ description 'description here'
 markdown <<MARKDOWN
 # Cyber Threats
 
-#### A cybersecurity **threat** is any potential cause of harm to a computer system or network.
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Cybersecurity Threat</strong> is any potential cause of harm to a computer system or network.</p>
+</div>
 
 #### System-level threats include malware, ransomware, weak default settings, or misconfigured file sharing.
 
