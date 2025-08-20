@@ -2,21 +2,24 @@ import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import React, {ChangeEvent, FC, useEffect, useMemo} from 'react';
 import {useNavigate, useParams} from 'react-router-dom';
 
+import {WorkshopFacilitator} from '../types';
+
 import styles from '../workshop.module.scss';
 
-const fakeFacilitators = [
-  {id: 123, name: 'Andy Bernard'},
-  {id: 456, name: 'Jane Doe'},
-];
-
-export const FacilitatorSelection: FC = () => {
+export const FacilitatorSelection: FC<{
+  facilitators?: WorkshopFacilitator[];
+}> = ({facilitators}) => {
   const {facilitatorId} = useParams();
   const navigate = useNavigate();
 
-  const facilitatorOptions = fakeFacilitators.map(({id, name}) => ({
-    value: `surveys/post/facilitators/${id}`,
-    text: name,
-  }));
+  const facilitatorOptions = useMemo(
+    () =>
+      facilitators?.map(({id, name}) => ({
+        value: `surveys/post/facilitators/${id}`,
+        text: name,
+      })) ?? [],
+    [facilitators]
+  );
 
   const selectedValue = useMemo(
     () =>

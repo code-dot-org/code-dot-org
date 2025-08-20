@@ -143,7 +143,9 @@ export const WorkshopLayout: FC<WorkshopLayoutProps> = ({
             />
           )}
         </div>
-        {showFacilitatorSelection && <FacilitatorSelection />}
+        {showFacilitatorSelection && (
+          <FacilitatorSelection facilitators={workshop?.facilitators} />
+        )}
       </nav>
       <main>
         {showNoSurveyResponses && <NoSurveyResponses />}
