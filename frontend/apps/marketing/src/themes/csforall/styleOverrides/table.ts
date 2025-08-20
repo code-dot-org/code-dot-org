@@ -14,17 +14,21 @@ export const TABLE_CELL_OVERRIDES: Components<Theme>['MuiTableCell'] = {
       border: `1px solid ${theme.palette.grey['200']}`,
     }),
     head: ({theme}) => ({
-      fontSize: '0.875rem',
-      fontWeight: 500,
       backgroundColor: theme.palette.primary.main,
-      color: theme.palette.common.white,
       borderColor: theme.palette.primary.main,
-      textTransform: 'uppercase',
+      '.MuiTypography-root.MuiTypography-body2.paragraph--color-primary': {
+        fontSize: '0.875rem',
+        color: theme.palette.common.white,
+        textTransform: 'uppercase',
+        fontWeight: 500,
+      },
     }),
     body: ({theme}) => ({
-      fontSize: '1.125rem',
-      color: theme.palette.text.primary,
       border: `1px solid ${theme.palette.grey['200']}`,
+      '.MuiTypography-root.MuiTypography-body2.paragraph--color-primary': {
+        fontSize: '1.125rem',
+        color: theme.palette.text.primary,
+      },
     }),
   },
 };

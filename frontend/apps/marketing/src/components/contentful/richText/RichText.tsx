@@ -16,6 +16,7 @@ import MuiBox from '@mui/material/Box';
 import MuiList from '@mui/material/List';
 import MuiListItem from '@mui/material/ListItem';
 import MuiTable from '@mui/material/Table';
+import MuiTableBody from '@mui/material/TableBody';
 import MuiTableCell from '@mui/material/TableCell';
 import MuiTableContainer from '@mui/material/TableContainer';
 import MuiTableHead from '@mui/material/TableHead';
@@ -103,10 +104,15 @@ const renderTableCellContent = (cellNode: RichTextNode): ReactNode => {
           [BLOCKS.PARAGRAPH]: (paragraphNode: RichTextNode) => {
             const paragraphContent = extractNodeContent(paragraphNode);
             return paragraphContent.some(content => content) ? (
-              <>
+              <Paragraph
+                sx={richTextParagraphStyles}
+                color="primary"
+                visualAppearance="body-two"
+                removeMarginBottom
+                isStrong={false}
+              >
                 {paragraphContent}
-                <br />
-              </>
+              </Paragraph>
             ) : (
               <br />
             );
@@ -179,22 +185,30 @@ const richTextRenderOptions: Options = {
         (row): row is Block => row.nodeType === BLOCKS.TABLE_ROW,
       );
 
-      const [headerRow, ...bodyRows] = rows;
+      const headerRow =
+        'content' in rows[0] &&
+        rows[0]?.content.some(({nodeType}) => nodeType === 'table-header-cell')
+          ? rows[0]
+          : null;
+      const bodyRows = rows.slice(headerRow ? 1 : 0);
+
       return (
         <MuiTableContainer sx={richTextTableStyles}>
           <MuiTable>
-            <MuiTableHead>
-              <MuiTableRow>
-                {(('content' in headerRow && headerRow.content) || []).map(
-                  (cell: RichTextNode, i: number) => (
-                    <MuiTableCell key={`header-cell-${i}`}>
-                      {renderTableCellContent(cell)}
-                    </MuiTableCell>
-                  ),
-                )}
-              </MuiTableRow>
-            </MuiTableHead>
-            <tbody>
+            {headerRow && (
+              <MuiTableHead>
+                <MuiTableRow>
+                  {(('content' in headerRow && headerRow.content) || []).map(
+                    (cell: RichTextNode, i: number) => (
+                      <MuiTableCell key={`header-cell-${i}`}>
+                        {renderTableCellContent(cell)}
+                      </MuiTableCell>
+                    ),
+                  )}
+                </MuiTableRow>
+              </MuiTableHead>
+            )}
+            <MuiTableBody>
               {bodyRows.map((row, rowIndex) => (
                 <MuiTableRow key={`row-${rowIndex}`}>
                   {(('content' in row && row.content) || []).map(
@@ -206,7 +220,7 @@ const richTextRenderOptions: Options = {
                   )}
                 </MuiTableRow>
               ))}
-            </tbody>
+            </MuiTableBody>
           </MuiTable>
         </MuiTableContainer>
       );
