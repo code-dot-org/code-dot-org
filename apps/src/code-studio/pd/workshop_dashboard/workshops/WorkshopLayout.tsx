@@ -18,6 +18,7 @@ import {FacilitatorSelection} from './components/FacilitatorSelection';
 import {SurveyCategorySelection} from './components/SurveyCategorySelection';
 import {SurveyTypeSelection} from './components/SurveyTypeSelection';
 import {WorkshopTabs} from './components/WorkshopTabs';
+import {NoSurveyResponses} from './surveys/components/NoSurveyResponses';
 import {WorkshopLayoutProps, WorkshopContextValue} from './types';
 
 import styles from './workshop.module.scss';
@@ -88,6 +89,16 @@ export const WorkshopLayout: FC<WorkshopLayoutProps> = ({
     '/surveys/post/facilitators'
   );
 
+  const showNoSurveyResponses = useMemo(() => {
+    if (showPostSurveyCategorySelection) {
+      return !surveysLoading && !surveys?.surveys?.post_workshop;
+    }
+  }, [
+    showPostSurveyCategorySelection,
+    surveys?.surveys?.post_workshop,
+    surveysLoading,
+  ]);
+
   // TODO: https://codedotorg.atlassian.net/browse/ACQ-3438
   const handleDownload = () => {};
 
@@ -135,6 +146,7 @@ export const WorkshopLayout: FC<WorkshopLayoutProps> = ({
         {showFacilitatorSelection && <FacilitatorSelection />}
       </nav>
       <main>
+        {showNoSurveyResponses && <NoSurveyResponses />}
         <Outlet />
       </main>
     </WorkshopContext.Provider>

@@ -1,7 +1,5 @@
-import {Box, Card, CardContent} from '@mui/material';
+import {Box} from '@mui/material';
 import React, {useMemo} from 'react';
-
-import noResponsesText from '@cdo/static/pd/no-responses-text.png';
 
 import {
   isQuestionType,
@@ -9,7 +7,6 @@ import {
   SurveyQuestions,
 } from '../../../../WorkshopFormTemplate/types';
 import {useWorkshopContext} from '../../../WorkshopLayout';
-import {EmptyState} from '../../components/EmptyState';
 import {FollowUpRequestedCard} from '../../components/FollowUpRequestedCard';
 import {FreeResponseCard} from '../../components/FreeResponseCard';
 import {MultiSelectCard} from '../../components/MultiSelectCard';
@@ -75,70 +72,57 @@ export const Implementation = () => {
     return '';
   };
 
+  if (!questions) return null;
+
   return (
     <Box className={styles.surveyResultsContainer}>
-      {!questions ? (
-        <Card className={styles.card}>
-          <CardContent className={styles.cardContent}>
-            <EmptyState
-              title="No survey responses submitted yet."
-              description="Results will appear here once participants complete the survey."
-              imageProps={{src: noResponsesText}}
-              large
+      <Box className={styles.cardRow}>
+        {likertQuestionRow.map(question =>
+          isQuestionType(question, 'likert') ? (
+            <ScoreCard
+              key={question.question_name}
+              title={question.question_short_text ?? question.question_text}
+              description={getDescription(question)}
+              footer={question.question_sub_text}
+              score={question.results.weighted_score}
+              responseCount={question.results.total_responses}
+              minResponseCount={MIN_RESPONSE_COUNT}
             />
-          </CardContent>
-        </Card>
-      ) : (
-        <>
-          <Box className={styles.cardRow}>
-            {likertQuestionRow.map(question =>
-              isQuestionType(question, 'likert') ? (
-                <ScoreCard
-                  key={question.question_name}
-                  title={question.question_short_text ?? question.question_text}
-                  description={getDescription(question)}
-                  footer={question.question_sub_text}
-                  score={question.results.weighted_score}
-                  responseCount={question.results.total_responses}
-                  minResponseCount={MIN_RESPONSE_COUNT}
-                />
-              ) : null
-            )}
-          </Box>
+          ) : null
+        )}
+      </Box>
 
-          <Box className={styles.cardRow}>
-            {isQuestionType(barriersToImplementation, 'multiSelect') && (
-              <MultiSelectCard
-                title={
-                  barriersToImplementation.question_short_text ??
-                  barriersToImplementation.question_text
-                }
-                description={getDescription(barriersToImplementation)}
-                items={barriersItems}
-                barLabel="Teachers"
-              />
-            )}
-            <FollowUpRequestedCard
-              items={[]}
-              title="Follow-up requested"
-              description=""
-            />
-          </Box>
+      <Box className={styles.cardRow}>
+        {isQuestionType(barriersToImplementation, 'multiSelect') && (
+          <MultiSelectCard
+            title={
+              barriersToImplementation.question_short_text ??
+              barriersToImplementation.question_text
+            }
+            description={getDescription(barriersToImplementation)}
+            items={barriersItems}
+            barLabel="Teachers"
+          />
+        )}
+        <FollowUpRequestedCard
+          items={[]}
+          title="Follow-up requested"
+          description=""
+        />
+      </Box>
 
-          <Box className={styles.cardRow}>
-            {isQuestionType(otherQuestionsImplementation, 'text') && (
-              <FreeResponseCard
-                title={
-                  otherQuestionsImplementation.question_short_text ??
-                  otherQuestionsImplementation.question_text
-                }
-                items={otherQuestionsImplementation.results.responses}
-                tagText={`${otherQuestionsImplementation.results.total_responses} Submitted`}
-              />
-            )}
-          </Box>
-        </>
-      )}
+      <Box className={styles.cardRow}>
+        {isQuestionType(otherQuestionsImplementation, 'text') && (
+          <FreeResponseCard
+            title={
+              otherQuestionsImplementation.question_short_text ??
+              otherQuestionsImplementation.question_text
+            }
+            items={otherQuestionsImplementation.results.responses}
+            tagText={`${otherQuestionsImplementation.results.total_responses} Submitted`}
+          />
+        )}
+      </Box>
     </Box>
   );
 };
