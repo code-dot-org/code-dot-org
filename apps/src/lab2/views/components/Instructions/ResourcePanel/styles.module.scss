@@ -57,7 +57,6 @@
     @include remove-button-styles;
     height: 2rem;
     width: 2rem;
-    //margin-left: 5px;
 
     i {
       color: var(--text-neutral-secondary);
@@ -71,24 +70,11 @@
   }
 }
 
-// Leave space for the copyright footer.
-// This is used now to put the extra links at the bottom of the panel,
-// whether or not the lab is using the new copyright and settings buttons.
-.bottomTabsWithFooter {
-  margin-bottom: 45px;
-}
-
 .panels {
   display: flex;
   opacity: 1;
   flex-direction: column;
   flex: 1;
-
-  &.footerSpacing {
-    // Space for absolutely positioned footer.
-    // Remove when footer buttons are moved to sidebar.
-    margin-bottom: 45px;
-  }
 }
 
 .panelContent {

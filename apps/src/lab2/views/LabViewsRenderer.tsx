@@ -11,8 +11,7 @@ import {PERMISSIONS} from '@cdo/apps/lab2/constants';
 import {useInitialLabTheme} from '@cdo/apps/lab2/hooks/useInitialLabTheme';
 import ProgressContainer from '@cdo/apps/lab2/progress/ProgressContainer';
 import {getAppOptionsViewingExemplar} from '@cdo/apps/lab2/projects/utils';
-import {getLabViewPageAction} from '@cdo/apps/lab2/utils';
-import experiments from '@cdo/apps/util/experiments';
+import {getLabViewPageAction, isUsingResourcePanel} from '@cdo/apps/lab2/utils';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {lab2EntryPoints} from '../../../lab2EntryPoints';
@@ -49,8 +48,7 @@ const LabViewsRenderer: React.FunctionComponent = () => {
   const isViewingExemplar = getAppOptionsViewingExemplar();
   const hideExtraLinks =
     queryParams('hide-extra-links') === 'true' ||
-    levelProperties?.appName === 'weblab2' ||
-    experiments.isEnabledAllowingQueryString(experiments.LAB2_RESOURCE_PANEL);
+    isUsingResourcePanel(currentAppName || '');
 
   useInitialLabTheme({
     currentAppName,
@@ -63,7 +61,11 @@ const LabViewsRenderer: React.FunctionComponent = () => {
 
   useEffect(() => {
     const footer = document.getElementById('page-small-footer');
-    if (currentAppName === 'weblab2') {
+    // The resource panel has includes copyright and language, so we hide the footer.
+    // We control this here so the footer will show up on levels that do not use the resource panel,
+    // such as panels levels. The footer is controleld by the server, so we need to show/hide it here
+    // to ensure it will show up when we switch to a level that does not use the resource panel.
+    if (isUsingResourcePanel(currentAppName || '')) {
       footer?.classList.add(moduleStyles.hiddenFooter);
     } else if (footer?.classList.contains(moduleStyles.hiddenFooter)) {
       footer.classList.remove(moduleStyles.hiddenFooter);

@@ -44,11 +44,6 @@ export interface Setting {
   onChange: (value: string) => void;
 }
 
-// We can only put the copyright and language dropdowns into the resource panel
-// if the lab is using the resource panel permanently. The copyright/language footer is
-// controlled on the backend in game.rb#no_footer?
-const LABS_USING_COPYRIGHT_AND_SETTINGS_IN_PANEL = ['weblab2'];
-
 const tabInfo: {[key in Tabs]: {title: string; icon: string}} = {
   [Tabs.Instructions]: {title: commonI18n.instructions(), icon: 'info-circle'},
   [Tabs.AiTutor]: {title: commonI18n.aiTutor(), icon: 'ai-head-solid'},
@@ -97,15 +92,10 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   );
   const [currentTab, setCurrentTab] = useState<Tabs>(Tabs.Instructions);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
-  const includeCopyrightAndSettings =
-    LABS_USING_COPYRIGHT_AND_SETTINGS_IN_PANEL.includes(
-      instructionsProps.levelProperties.appName
-    );
   const localeProps = getLocaleProps();
 
   const levelId = instructionsProps.levelProperties.id;
   const scriptLevelId = useAppSelector(getCurrentScriptLevelId);
-  const hasFooter = includeFooterSpacing && !includeCopyrightAndSettings;
 
   // Build available tabs based on level information.
   const availableTabs = useMemo(() => {
@@ -179,48 +169,37 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
             </WithTooltip>
           ))}
         </div>
-        <div
-          className={classNames(
-            styles.bottomTabs,
-            hasFooter && styles.bottomTabsWithFooter
-          )}
-        >
+        <div className={classNames(styles.bottomTabs)}>
           <ResourcePanelExtraLinks
             levelId={levelId}
             scriptLevelId={scriptLevelId}
             theme={theme}
           />
-          {includeCopyrightAndSettings && (
-            <>
-              {(localeProps || settings) && (
-                <WithTooltip
-                  tooltipProps={{
-                    text: commonI18n.settings(),
-                    tooltipId: 'tooltip-settings',
-                    direction: 'onRight',
-                    size: 'xs',
-                    'data-theme': theme,
-                  }}
-                >
-                  <button
-                    type="button"
-                    className={styles.bottomButton}
-                    onClick={() => {
-                      setIsSettingsOpen(!isSettingsOpen);
-                    }}
-                  >
-                    <FontAwesomeV6Icon iconName={'gear'} />
-                  </button>
-                </WithTooltip>
-              )}
-              <CopyrightButton theme={theme} />
-            </>
+          {(localeProps || settings) && (
+            <WithTooltip
+              tooltipProps={{
+                text: commonI18n.settings(),
+                tooltipId: 'tooltip-settings',
+                direction: 'onRight',
+                size: 'xs',
+                'data-theme': theme,
+              }}
+            >
+              <button
+                type="button"
+                className={styles.bottomButton}
+                onClick={() => {
+                  setIsSettingsOpen(!isSettingsOpen);
+                }}
+              >
+                <FontAwesomeV6Icon iconName={'gear'} />
+              </button>
+            </WithTooltip>
           )}
+          <CopyrightButton theme={theme} />
         </div>
       </div>
-      <div
-        className={classNames(styles.panels, hasFooter && styles.footerSpacing)}
-      >
+      <div className={styles.panels}>
         <PanelContainer
           id={currentTab}
           headerContent={tabInfo[currentTab].title}
