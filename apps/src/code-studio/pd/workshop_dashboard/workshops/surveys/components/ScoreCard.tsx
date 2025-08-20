@@ -12,8 +12,8 @@ import React, {useMemo} from 'react';
 import styles from '../../workshop.module.scss';
 
 interface ScoreCardProps {
-  title: string | null;
-  description: string | null;
+  title: string;
+  description: string;
   footer: string | null;
   score?: number | null;
   responseCount?: number;
@@ -77,7 +77,7 @@ export const ScoreCard: React.FC<ScoreCardProps> = ({
   }, [score, responseCount, insufficientData]);
 
   return (
-    <Card className={classNames(styles.card, styles.scoreCard)}>
+    <Card className={classNames(styles.card, styles.questionCard)}>
       <CardContent className={styles.cardContent}>
         <Box>
           <OverlineTwoText noMargin>

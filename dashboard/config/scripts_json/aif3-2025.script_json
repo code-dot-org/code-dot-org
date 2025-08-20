@@ -35,7 +35,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-08-06 16:42:06 UTC",
+    "serialized_at": "2025-08-19 18:43:58 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -6466,6 +6466,18 @@
       }
     },
     {
+      "name": "[KEY] Data in Computer Systems",
+      "url": "https://docs.google.com/document/d/1xQ3mKCtmyJ3KbtqnFbxeCxyaKATZh18UsbevhA7uYUQ",
+      "key": "key_data_in_computer_systems",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "key_data_in_computer_systems"
+      }
+    },
+    {
       "name": "Library Books Dataset",
       "url": "https://docs.google.com/spreadsheets/d/1HDacvJjCHt-7rycng7DXbmmpvxEi2C50JATI7hP-UEc/edit?usp=sharing",
       "key": "library_books_dataset",
@@ -6808,6 +6820,12 @@
       "seeding_key": {
         "lesson.key": "Data in Computer Systems",
         "resource.key": "data_in_computer_systems_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Data in Computer Systems",
+        "resource.key": "key_data_in_computer_systems"
       }
     },
     {

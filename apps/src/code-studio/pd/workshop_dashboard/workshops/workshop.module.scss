@@ -53,6 +53,7 @@
 
 .surveyResultsContainer {
   display: flex;
+  flex-direction: column;
   gap: 1.5rem;
   margin-top: 2rem;
 }
@@ -65,6 +66,10 @@ div.card {
     border-bottom: 1px solid var(--borders-neutral-primary);
     background-color: var(--background-neutral-secondary);
     padding: 0.5rem 0.875rem;
+
+    .subHeader {
+      color: var(--text-neutral-secondary);
+    }
 
     .cardHeaderContainer {
       display: flex;
@@ -280,17 +285,29 @@ div.card {
   margin-top: 1.5rem;
 }
 
-.scoreCardRow {
+.cardRow {
   display: flex;
   flex: 1;
   flex-direction: row;
   gap: 1.5rem;
 
-  .scoreCard {
+  .questionCard {
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    .cardHeader,
+    .cardContent {
+      padding: 1rem 1.25rem;
+    }
+
+    &.multiSelect {
+      .cardContent {
+        padding-right: 0.5rem;
+        padding-bottom: 1.25rem;
+      }
+    }
 
     .cardContent {
       padding-top: 1rem;
@@ -339,6 +356,39 @@ div.card {
 
         &.criticalConcern {
           background-color: var(--background-error-primary);
+        }
+      }
+
+      .barRow {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.5rem;
+
+        .barLabel {
+          min-width: 5rem;
+          flex-shrink: 0;
+          text-align: left;
+          color: var(--text-neutral-tertiary);
+        }
+
+        .barContainer {
+          position: relative;
+          flex: 1;
+          flex-shrink: 0;
+          height: 0.625rem;
+          border-radius: 6.25rem;
+          background: var(--background-neutral-tertiary);
+          overflow: hidden;
+
+          .indicator {
+            background: var(--background-brand-teal-primary);
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            transition: width 0.6s ease-out;
+          }
         }
       }
     }
