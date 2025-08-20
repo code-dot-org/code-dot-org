@@ -80,7 +80,7 @@ module Pd
       should_have_attended = day != 0
       workshop = get_workshop_by_enrollment_or_course_and_subject(
         enrollment_code: enrollment_code,
-        course: [COURSE_CSD, COURSE_CSP, COURSE_CSA],
+        course: [COURSE_CSD, COURSE_CSP, COURSE_CSA, COURSE_BUILD_YOUR_OWN],
         subject: subject,
         should_have_attended: should_have_attended
       )
@@ -111,23 +111,6 @@ module Pd
       else
         new_facilitator_post_foorm(workshop)
       end
-    end
-
-    # Display CSF201 (Deep Dive) pre-workshop survey using Foorm.
-    # GET workshop_survey/csf/pre201
-    def new_csf_pre201
-      # Find the closest CSF 201 workshop the current user enrolled in.
-      workshop = get_workshop_by_course_and_subject(
-        course: COURSE_CSF,
-        subject: SUBJECT_CSF_201,
-        should_have_attended: false
-      )
-
-      return unless workshop
-      return render :too_late unless workshop.state != STATE_ENDED
-
-      survey_name = PRE_SURVEY_CONFIG_PATHS[SUBJECT_CSF_201]
-      render_survey_foorm(survey_name: survey_name, workshop: workshop, session: nil, day: 0)
     end
 
     # Display CSF101 (Intro) post-workshop survey.
@@ -166,11 +149,6 @@ module Pd
 
     # GET /pd/workshop_survey/thanks
     def thanks
-    end
-
-    # Pre survey controller for academic year workshops
-    def new_ayw_pre
-      ayw_helper(survey_names: PRE_SURVEY_CONFIG_PATHS, day: 0)
     end
 
     def new_ayw_daily

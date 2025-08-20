@@ -32,7 +32,8 @@ module Pd
       SUBJECT_WORKSHOP_3 => 'surveys/pd/ayw_workshop_pre_survey',
       SUBJECT_WORKSHOP_4 => 'surveys/pd/ayw_workshop_pre_survey',
       SUBJECT_WORKSHOP_1_2 => 'surveys/pd/ayw_workshop_pre_survey',
-      SUBJECT_WORKSHOP_3_4 => 'surveys/pd/ayw_workshop_pre_survey'
+      SUBJECT_WORKSHOP_3_4 => 'surveys/pd/ayw_workshop_pre_survey',
+      COURSE_BUILD_YOUR_OWN => '/surveys/pd/build_your_own_workshop_teachers_pre_survey'
     }
 
     TEST_PARTICIPANT_SURVEY_CONFIG_PATHS = [
