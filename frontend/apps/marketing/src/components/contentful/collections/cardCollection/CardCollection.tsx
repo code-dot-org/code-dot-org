@@ -42,8 +42,8 @@ const styles = {
 
 const CardCollection: React.FC<CardCollectionProps> = ({
   cards,
-  hideImages = false,
   hideSecondaryButton = false,
+  hideImages = false,
   sortOrder = 'alphabetical',
   className,
 }) => {
