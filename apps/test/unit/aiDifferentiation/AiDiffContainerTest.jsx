@@ -98,15 +98,46 @@ describe('AiDiffContainer', () => {
 
     userEvent.pointer([
       {keys: '[MouseLeft>]', target: handle},
-      {keys: '[MouseLeft>]', target: handle, coords: {x: 5000, y: -5000}},
+      {keys: '[MouseLeft>]', target: handle, coords: {x: 50000, y: -50000}},
       '[/MouseLeft]',
     ]);
 
     await waitFor(() => {
       const newPosition = element.style.transform;
-      const expectedX = window.innerWidth - 100;
-      const expectedY = 760 - window.innerHeight;
-      expect(newPosition).toEqual(`translate(${expectedX}px,${expectedY}px)`);
+      expect(newPosition).toEqual(`translate(1000px,0px)`);
+    });
+
+    userEvent.pointer([
+      {keys: '[MouseLeft>]', target: handle},
+      {keys: '[MouseLeft>]', target: handle, coords: {x: 50000, y: 50000}},
+      '[/MouseLeft]',
+    ]);
+
+    await waitFor(() => {
+      const newPosition = element.style.transform;
+      expect(newPosition).toEqual(`translate(1000px,1000px)`);
+    });
+
+    userEvent.pointer([
+      {keys: '[MouseLeft>]', target: handle},
+      {keys: '[MouseLeft>]', target: handle, coords: {x: -50000, y: -50000}},
+      '[/MouseLeft]',
+    ]);
+
+    await waitFor(() => {
+      const newPosition = element.style.transform;
+      expect(newPosition).toEqual(`translate(0px,0px)`);
+    });
+
+    userEvent.pointer([
+      {keys: '[MouseLeft>]', target: handle},
+      {keys: '[MouseLeft>]', target: handle, coords: {x: -50000, y: 50000}},
+      '[/MouseLeft]',
+    ]);
+
+    await waitFor(() => {
+      const newPosition = element.style.transform;
+      expect(newPosition).toEqual(`translate(0px,1000px)`);
     });
   });
 

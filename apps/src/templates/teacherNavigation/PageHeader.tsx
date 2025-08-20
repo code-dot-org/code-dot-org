@@ -70,7 +70,7 @@ const PageHeader: React.FC = () => {
         path => matchPath(path.absoluteUrl, location.pathname) !== null
       )?.label || 'unknown path';
 
-    if (result === 'Progress' && !showProgressV2) {
+    if (result === 'Progress' && showProgressV2 === 'legacy') {
       return i18n.progressLegacy();
     }
     return result;
