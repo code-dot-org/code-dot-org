@@ -1,7 +1,7 @@
 .settingsPanel {
   border-top: 1px solid var(--borders-neutral-primary);
   border-left: 1px solid var(--borders-neutral-primary);
-  background: var(--background-neutral-secondary);
+  background: var(--background-neutral-primary);
 }
 
 .header {
@@ -10,6 +10,7 @@
   align-items: center;
   padding: 4px 8px;
   background: var(--background-neutral-primary);
+  border-bottom: 1px solid var(--borders-neutral-primary);
 }
 
 .headerText {
