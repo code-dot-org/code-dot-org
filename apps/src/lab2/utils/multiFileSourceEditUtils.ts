@@ -134,12 +134,11 @@ export const closeFileHelper = (
 interface DeleteFileHelperArgs {
   source: MultiFileSource;
   fileId: FileId;
-  isBlockedAbuse?: boolean;
 }
 
 interface DeleteFileResult {
   newSource: MultiFileSource;
-  deletedFlaggedFile?: {
+  deletedFileAsset?: {
     channelId: string;
     url: string;
   };
@@ -148,15 +147,13 @@ interface DeleteFileResult {
 /**
  * Deletes a file from the given MultiFileSource.
  * - Removes the file from the files list and from the list of open files.
- * - If the file has a URL (e.g., an uploaded asset), delete the asset from S3.
- * - If the file was flagged and the project is blocked for abuse, returns data about the deleted flagged file for further handling (e.g., unflagging or project).
  * - Updates the active file if the deleted file was active, activating a new file if possible.
- * - Returns the updated MultiFileSource and, if applicable, details about the deleted flagged file.
+ * - Returns the updated MultiFileSource and, if the file was an uploaded asset (has a URL),
+ *     details about the deleted file.
  */
 export const deleteFileHelper = ({
   source,
   fileId,
-  isBlockedAbuse,
 }: DeleteFileHelperArgs): DeleteFileResult => {
   const openFileIds = getOpenFileIds(source);
   const newOpenFileIds = openFileIds.find(openFileId => openFileId === fileId)
@@ -173,29 +170,17 @@ export const deleteFileHelper = ({
   const fileToBeDeleted = newSource.files[fileId];
   delete newSource.files[fileId];
 
-  let deletedFlaggedFile: {channelId: string; url: string} | undefined;
+  let deletedFileAsset: {channelId: string; url: string} | undefined;
 
   if (fileToBeDeleted.url) {
-    try {
-      // In the case of a failure, we just end up with an orphaned file in S3.
-      HttpClient.delete(fileToBeDeleted.url);
-      // Check if project is blocked for abusive content due to flagged image.
-      // Return info about flagged file deletion so caller can handle unflagging.
-      if (fileToBeDeleted.flagged && isBlockedAbuse) {
-        // Extract channelId from asset url.
-        const match = fileToBeDeleted.url.match(/\/assets\/([^/]+)/);
-        const channelId = match ? match[1] : null;
-        if (channelId) {
-          deletedFlaggedFile = {
-            channelId,
-            url: fileToBeDeleted.url,
-          };
-        }
-      }
-    } catch (error) {
-      Lab2Registry.getInstance()
-        .getMetricsReporter()
-        .logError('Error deleting project asset from S3', error as Error);
+    // Extract channelId from asset url.
+    const match = fileToBeDeleted.url.match(/\/assets\/([^/]+)/);
+    const channelId = match ? match[1] : null;
+    if (channelId) {
+      deletedFileAsset = {
+        channelId,
+        url: fileToBeDeleted.url,
+      };
     }
   }
 
@@ -209,7 +194,7 @@ export const deleteFileHelper = ({
 
   return {
     newSource,
-    deletedFlaggedFile,
+    deletedFileAsset,
   };
 };
 

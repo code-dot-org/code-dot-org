@@ -238,7 +238,6 @@ const projectSlice = createSlice({
         const deleteResult = deleteFileHelper({
           source,
           fileId: action.payload.fileId,
-          isBlockedAbuse: action.payload.isBlockedAbuse,
         });
         state.projectSources = {
           ...state.projectSources,

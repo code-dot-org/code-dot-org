@@ -196,38 +196,48 @@ export const deleteFileThunk = createAsyncThunk<
   const deleteResult = deleteFileHelper({
     source,
     fileId: payload.fileId,
-    isBlockedAbuse,
   });
 
   // Update the project sources.
   thunkAPI.dispatch(deleteFile({fileId: payload.fileId}));
   saveProjectIfEditable(thunkAPI.getState, thunkAPI.dispatch);
-
-  // If a flagged file was deleted and the project is blocked, check if we should unblock project.
-  if (deleteResult.deletedFlaggedFile && isBlockedAbuse) {
+  const {deletedFileAsset} = deleteResult;
+  // If the file has a URL (e.g., an uploaded asset), delete the asset from S3.
+  if (deletedFileAsset) {
     try {
-      const body = JSON.stringify({type: 'unflag'});
-      const response = await HttpClient.post(
-        `/v3/channels/${deleteResult.deletedFlaggedFile.channelId}/abuse/image`,
-        body,
-        true,
-        {'Content-Type': 'application/json; charset=UTF-8'}
-      );
+      // In the case of a failure, we just end up with an orphaned file in S3.
+      await HttpClient.delete(deletedFileAsset.url);
+      // If the project is blocked for abuse, unblock the project if the abuse score is now < 15.
+      if (isBlockedAbuse) {
+        try {
+          const body = JSON.stringify({type: 'unflag'});
+          const response = await HttpClient.post(
+            `/v3/channels/${deletedFileAsset.channelId}/abuse/image`,
+            body,
+            true,
+            {'Content-Type': 'application/json; charset=UTF-8'}
+          );
 
-      // Get the updated abuse score from the response.
-      const responseData = await response.json();
-      const abuseScore = responseData.abuse_score;
-      // Only unblock if abuse score is now < 15.
-      if (abuseScore < 15) {
-        thunkAPI.dispatch(setIsBlockedAbuse(false));
+          // Get the updated abuse score from the response.
+          const responseData = await response.json();
+          const abuseScore = responseData.abuse_score;
+          // Only unblock if abuse score is now < 15.
+          if (abuseScore < 15) {
+            thunkAPI.dispatch(setIsBlockedAbuse(false));
+          }
+        } catch (error) {
+          Lab2Registry.getInstance()
+            .getMetricsReporter()
+            .logError(
+              'Error unflagging project channel due to deletion of flagged project asset',
+              error as Error
+            );
+        }
       }
     } catch (error) {
       Lab2Registry.getInstance()
         .getMetricsReporter()
-        .logError(
-          'Error unflagging project channel due to deletion of flagged project asset',
-          error as Error
-        );
+        .logError('Error deleting project asset from S3', error as Error);
     }
   }
 });
