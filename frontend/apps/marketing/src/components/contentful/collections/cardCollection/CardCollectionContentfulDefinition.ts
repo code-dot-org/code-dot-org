@@ -4,7 +4,6 @@ import {ComponentDefinition} from '@contentful/experiences-sdk-react';
 import {
   collectionsSortOrderDefinition,
   hideImagesDefinition,
-  hideSecondaryButtonDefinition,
 } from '@/components/common/definitions';
 
 export const CardCollectionContentfulComponentDefinition: ComponentDefinition =
@@ -34,6 +33,11 @@ export const CardCollectionContentfulComponentDefinition: ComponentDefinition =
       },
       ...collectionsSortOrderDefinition,
       ...hideImagesDefinition,
-      ...hideSecondaryButtonDefinition,
+      hideSecondaryButton: {
+        displayName: 'Hide secondary button',
+        type: 'Boolean',
+        defaultValue: false,
+        group: 'style',
+      },
     },
   };

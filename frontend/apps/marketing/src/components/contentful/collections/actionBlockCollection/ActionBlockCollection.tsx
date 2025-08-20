@@ -44,13 +44,17 @@ const styles = {
       height: '100%',
     },
   },
+  hideImages: {
+    '& figure': {
+      display: 'none',
+    },
+  },
 };
 
 const ActionBlockCollection: React.FC<ActionBlockCollectionProps> = ({
   blocks,
   background,
   hideImages = false,
-  hideSecondaryButton = false,
   sortOrder = 'alphabetical',
   className,
 }) => {
@@ -116,7 +120,9 @@ const ActionBlockCollection: React.FC<ActionBlockCollectionProps> = ({
       return {
         id: title,
         item: (
-          <Box sx={[{...styles.gridItem}]}>
+          <Box
+            sx={[{...styles.gridItem}, hideImages && {...styles.hideImages}]}
+          >
             <ActionBlock
               className="actionBlockWrapper"
               overline={
@@ -126,14 +132,9 @@ const ActionBlockCollection: React.FC<ActionBlockCollectionProps> = ({
               }
               title={title}
               description={shortDescription}
-              image={
-                !hideImages
-                  ? {src: getAbsoluteImageUrl(resolvedImage) || ''}
-                  : undefined
-              }
+              image={{src: getAbsoluteImageUrl(resolvedImage) || ''}}
               primaryButton={createButtonConfig(primaryLinkRef)}
               secondaryButton={
-                !hideSecondaryButton &&
                 CONTENT_TYPES_WITH_SECONDARY_BUTTON.includes(contentType)
                   ? createButtonConfig(secondaryLinkRef)
                   : undefined
@@ -152,7 +153,7 @@ const ActionBlockCollection: React.FC<ActionBlockCollectionProps> = ({
       data.sort((a, b) => a?.id?.localeCompare(b?.id));
     }
     return data;
-  }, [blocks, hideImages, hideSecondaryButton, sortOrder]);
+  }, [blocks, hideImages, sortOrder]);
 
   return (
     <Grid container spacing={3} className={className}>

@@ -27,6 +27,8 @@ type ItemEntry = Entry<ItemFields>;
 export type CardCollectionProps = CollectionProps & {
   /** Collection content w/ fields from Contentful */
   blocks: ItemEntry[];
+  /** Hide secondary button */
+  hideSecondaryButton?: boolean;
 };
 
 const styles = {
