@@ -1,3 +1,5 @@
+import {TypographyVariant} from '@mui/material/styles';
+import TypographyMui from '@mui/material/Typography';
 import classnames from 'classnames';
 import {memo, ReactNode, CSSProperties} from 'react';
 
@@ -32,10 +34,40 @@ const Typography: React.FunctionComponent<TypographyProps> = ({
   noMargin = false,
   ...props
 }) => {
-  const Tag = semanticTag;
+  /*
+  TODO:
+    - Figure out how to handle strong
+    - How we want to map the styles onto things
+    - Ask stephen if anything needs to be done to set up the theming on a platform level
+  */
+
+  // Maps component-library VisualAppearance values with
+  // MUI Typography `variant` prop values.
+  const visualAppearanceToVariantMap: Record<
+    VisualAppearance,
+    TypographyVariant
+  > = {
+    'heading-xxl': 'h1',
+    'heading-xl': 'h2',
+    'heading-lg': 'h3',
+    'heading-md': 'h4',
+    'heading-sm': 'h5',
+    'heading-xs': 'h6',
+    'body-one': 'body1',
+    'body-two': 'body2',
+    strong: 'body1',
+    em: 'body1',
+    figcaption: 'caption',
+    'body-three': 'body2',
+    'body-four': 'body2',
+    'overline-one': 'overline',
+    'overline-two': 'overline',
+    'overline-three': 'overline',
+    'extra-strong': 'body1',
+  };
 
   return (
-    <Tag
+    <TypographyMui
       id={id}
       className={classnames(
         moduleStyles[visualAppearance],
@@ -45,11 +77,13 @@ const Typography: React.FunctionComponent<TypographyProps> = ({
         },
         className,
       )}
-      style={style}
+      sx={style}
       {...props}
+      component={semanticTag}
+      variant={visualAppearanceToVariantMap[visualAppearance]}
     >
       {children}
-    </Tag>
+    </TypographyMui>
   );
 };
 

@@ -1,3 +1,4 @@
+// remove before merging
 import {Components, Theme} from '@mui/material/styles';
 
 export const TYPOGRAPHY_OVERRIDES: Components<Theme>['MuiTypography'] = {
