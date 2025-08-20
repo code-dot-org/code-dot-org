@@ -1,4 +1,4 @@
-// Creates a definition for the ActionBlockCollection component to be used in Contentful Studio
+// Creates a definition for the CardCollection component to be used in Contentful Studio
 import {ComponentDefinition} from '@contentful/experiences-sdk-react';
 
 import {

@@ -100,8 +100,7 @@ export const collectionsSortOrderDefinition: Record<
   },
 };
 
-// Used in the Action Block Collection and Card Collection components,
-// and could be used in other components.
+// Used in the Action Block Collection and Card Collection components.
 export const hideSecondaryButtonDefinition: Record<
   string,
   ComponentDefinitionVariable
