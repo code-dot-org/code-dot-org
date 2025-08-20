@@ -23,7 +23,7 @@ class BucketHelperTest < Minitest::Test
     )
     mock_s3 = mock
     mock_s3.expects(:list_object_versions).returns(fake_object_versions_response)
-    bucket_helper.s3 = mock_s3
+    bucket_helper.s3_client = mock_s3
 
     mock_where = mock
     mock_where.expects(:first).returns({comment: 'Comment'}).once
@@ -40,7 +40,7 @@ class BucketHelperTest < Minitest::Test
     # s3 is a class attribute of BucketHelper and needs to be reset
     # The linter doesn't love this so we have to disable this check here.
     # rubocop:disable Lint/UselessSetterCall
-    bucket_helper.s3 = nil
+    bucket_helper.s3_client = nil
     # rubocop:enable Lint/UselessSetterCall
   end
 
@@ -56,7 +56,7 @@ class BucketHelperTest < Minitest::Test
     )
     mock_s3 = mock
     mock_s3.expects(:list_object_versions).returns(fake_object_versions_response)
-    bucket_helper.s3 = mock_s3
+    bucket_helper.s3_client = mock_s3
 
     mock_where = mock
     mock_where.expects(:first).returns({comment: nil}).once
@@ -73,7 +73,7 @@ class BucketHelperTest < Minitest::Test
     # s3 is a class attribute of BucketHelper and needs to be reset
     # The linter doesn't love this so we have to disable this check here.
     # rubocop:disable Lint/UselessSetterCall
-    bucket_helper.s3 = nil
+    bucket_helper.s3_client = nil
     # rubocop:enable Lint/UselessSetterCall
   end
 end
