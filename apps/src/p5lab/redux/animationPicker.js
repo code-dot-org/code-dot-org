@@ -61,6 +61,7 @@ export default function reducer(state, action) {
         goal: action.goal,
         isBackground: false,
         isSpriteLab: action.isSpriteLab,
+        uploadsEnabled: state.uploadsEnabled,
       });
     }
     return state;
@@ -72,6 +73,7 @@ export default function reducer(state, action) {
         goal: action.goal,
         isBackground: true,
         isSpriteLab: true,
+        uploadsEnabled: state.uploadsEnabled,
       });
     }
     return state;

@@ -83,7 +83,7 @@ class AnimationPicker extends React.Component {
     onAnimationSelectionComplete: PropTypes.func.isRequired,
     uploadWarningShowing: PropTypes.bool.isRequired,
     uploadsEnabled: PropTypes.bool.isRequired,
-    onDisableUploads: PropTypes.func.isRequired,
+    disableUploads: PropTypes.func.isRequired,
   };
 
   state = {
@@ -236,7 +236,7 @@ class AnimationPicker extends React.Component {
               this.setState({
                 showFlaggedModal: true,
               });
-              this.props.onDisableUploads();
+              this.props.disableUploads();
               analyticsReporter.sendEvent(
                 EVENTS.FLAGGED_CUSTOM_IMAGE,
                 {
@@ -279,6 +279,7 @@ class AnimationPicker extends React.Component {
           showFlaggedModal: false,
           pendingUploadData: null,
         });
+        this.props.disableUploads();
         analyticsReporter.sendEvent(
           EVENTS.ACCEPT_FLAGGED_CUSTOM_IMAGE,
           {
@@ -366,6 +367,7 @@ export default connect(
     playAnimations: !state.pageConstants.allAnimationsSingleFrame,
     selectedAnimations: Object.values(state.animationPicker.selectedAnimations),
     uploadWarningShowing: state.animationPicker.uploadWarningShowing,
+    uploadsEnabled: state.animationPicker.uploadsEnabled,
   }),
   dispatch => ({
     onClose() {
@@ -390,7 +392,7 @@ export default connect(
     onAnimationSelectionComplete() {
       dispatch(saveSelectedAnimations());
     },
-    onDisableUploads() {
+    disableUploads() {
       dispatch(disableUploads());
     },
   })

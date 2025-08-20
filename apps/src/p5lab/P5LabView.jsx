@@ -96,6 +96,7 @@ class P5LabView extends React.Component {
     if (window.dashboard?.project) {
       const project = window.dashboard?.project;
       const isProjectFlagged = project.exceedsAbuseThreshold();
+
       this.props.setUploadsEnabled(!isProjectFlagged);
     }
   }
@@ -173,7 +174,7 @@ class P5LabView extends React.Component {
                   ? PICKER_TYPE.backgrounds
                   : this.state.projectType
               }
-              uploadsEnabled={this.state.uploadsEnabled}
+              uploadsEnabled={this.props.uploadsEnabled}
               projectType={this.props.labType.toLowerCase()}
             />
           )}
@@ -224,7 +225,7 @@ class P5LabView extends React.Component {
             : this.state.projectType
         }
         interfaceMode={interfaceMode}
-        uploadsEnabled={this.state.uploadsEnabled}
+        uploadsEnabled={this.props.uploadsEnabled}
       />
     ) : undefined;
   }
