@@ -91,7 +91,10 @@ export default function reducer(state, action) {
     };
   }
   if (action.type === HIDE) {
-    return initialState;
+    return {
+      ...initialState,
+      uploadsEnabled: state.uploadsEnabled,
+    };
   }
   if (action.type === SHOWING_UPLOAD_WARNING) {
     return {
