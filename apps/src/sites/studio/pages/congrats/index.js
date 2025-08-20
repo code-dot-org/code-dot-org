@@ -18,6 +18,7 @@ $(document).ready(function () {
   const userType = congratsData.current_user
     ? congratsData.current_user.user_type
     : 'signedOut';
+  const userName = congratsData.current_user.name;
   const language = congratsData.language;
   const under13 = congratsData.under_13;
   const nextCourseScriptName = congratsData.next_course_script_name;
@@ -64,6 +65,7 @@ $(document).ready(function () {
         certificateId={certificateId}
         tutorial={courseName}
         userType={userType}
+        userName={userName}
         under13={under13}
         language={language}
         MCShareLink={mcShareLink}

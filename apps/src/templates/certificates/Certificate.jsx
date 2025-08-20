@@ -123,11 +123,21 @@ function Certificate(props) {
     isHocTutorial,
     isPlCourse,
     userType,
+    userName,
   } = props;
 
   const swiperRef = useRef(null);
 
   const [currentCertificateIndex, setCurrentImageIndex] = useState(0);
+  useEffect(() => {
+    if (isPlCourse && !personalized) {
+      // Auto personalize using userName (if available)
+      if (userName) {
+        setStudentName(userName);
+      }
+      setPersonalized(true);
+    }
+  }, [isPlCourse, personalized, userName]);
   useEffect(() => {
     if (swiperRef.current) {
       const swiperParams = {
@@ -270,39 +280,47 @@ function Certificate(props) {
             renderCertificateImage(certificateData[0])}
         </div>
         <div className={`${certificateStyle} ${style.inputContainer}`}>
-          {courseName && !personalized && (
-            <div>
-              <Heading3>{i18n.congratsCertificatePersonalize()}</Heading3>
-              <BodyThreeText className={style.enterName}>
-                {i18n.enterYourName()}
-              </BodyThreeText>
-              <div className={style.inputButtonContainer}>
-                <input
-                  id="name"
-                  type="text"
-                  className={style.nameInput}
-                  placeholder={i18n.yourName()}
-                  ref={nameInputRef}
-                />
-                <button
-                  type="button"
-                  className={style.submit}
-                  onClick={personalizeCertificate.bind(this, certificateId)}
-                >
-                  {i18n.submit()}
-                </button>
-              </div>
-            </div>
+          {!isPlCourse && (
+            <>
+              {courseName && !personalized && (
+                <div>
+                  <Heading3>{i18n.congratsCertificatePersonalize()}</Heading3>
+                  <BodyThreeText className={style.enterName}>
+                    {i18n.enterYourName()}
+                  </BodyThreeText>
+                  <div className={style.inputButtonContainer}>
+                    <input
+                      id="name"
+                      type="text"
+                      className={style.nameInput}
+                      placeholder={i18n.yourName()}
+                      ref={nameInputRef}
+                    />
+                    <button
+                      type="button"
+                      className={style.submit}
+                      onClick={personalizeCertificate.bind(this, certificateId)}
+                    >
+                      {i18n.submit()}
+                    </button>
+                  </div>
+                </div>
+              )}
+              {courseName && personalized && (
+                <div>
+                  <Heading2>
+                    <div id="uitest-thanks">
+                      {i18n.congratsCertificateThanks()}
+                    </div>
+                  </Heading2>
+                  <BodyTwoText>
+                    {i18n.congratsCertificateContinue()}
+                  </BodyTwoText>
+                </div>
+              )}
+              <hr />
+            </>
           )}
-          {courseName && personalized && (
-            <div>
-              <Heading2>
-                <div id="uitest-thanks">{i18n.congratsCertificateThanks()}</div>
-              </Heading2>
-              <BodyTwoText>{i18n.congratsCertificateContinue()}</BodyTwoText>
-            </div>
-          )}
-          <hr />
           <Heading3>{i18n.congratsCertificateShare()}</Heading3>
           <BodyThreeText>
             {i18n.congratsCertificateShareMessage()}
@@ -334,6 +352,7 @@ Certificate.propTypes = {
   isHocTutorial: PropTypes.bool,
   isPlCourse: PropTypes.bool,
   userType: PropTypes.string,
+  userName: PropTypes.string,
 };
 
 export default connect(state => ({
