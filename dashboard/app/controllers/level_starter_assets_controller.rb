@@ -19,7 +19,7 @@ class LevelStarterAssetsController < ApplicationController
     render json: {starter_assets: starter_assets}
   end
 
-  # GET /level_starter_assets/:level_name/:filename
+  # GET /level_starter_assets/:level_name/:filename.:format
   # Returns requested file body as an IO stream.
   def file
     friendly_name = "#{params[:filename]}.#{params[:format]}"
@@ -30,6 +30,7 @@ class LevelStarterAssetsController < ApplicationController
     get_file_and_send(uuid_name)
   end
 
+  # GET /level_starter_assets/:level_name/:uuid.:format
   def file_by_uuid
     uuid_name = "#{params[:uuid]}.#{params[:format]}"
     get_file_and_send(uuid_name)
@@ -39,7 +40,7 @@ class LevelStarterAssetsController < ApplicationController
   def upload
     # upload_data sets an appropriate header and returns nil in error cases.
     upload_data = validate_upload
-    return if !upload_data && performed?
+    return unless upload_data
 
     # Replace the friendly file name with a UUID for storage in S3 to avoid naming conflicts.
     uuid_name = SecureRandom.uuid + upload_data[:extension]
@@ -47,6 +48,7 @@ class LevelStarterAssetsController < ApplicationController
     upload_and_respond(uuid_name, upload_data)
   end
 
+  # POST /level_starter_assets/:level_name/uuid/:uuid
   def upload_by_uuid
     # upload_data sets an appropriate header and returns nil in error cases.
     upload_data = validate_upload
