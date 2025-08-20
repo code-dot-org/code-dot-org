@@ -236,7 +236,6 @@ class AnimationPicker extends React.Component {
               this.setState({
                 showFlaggedModal: true,
               });
-              this.props.disableUploads();
               analyticsReporter.sendEvent(
                 EVENTS.FLAGGED_CUSTOM_IMAGE,
                 {
