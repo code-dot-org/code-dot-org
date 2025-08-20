@@ -15,6 +15,7 @@ import {updateSchoolInfo} from '@cdo/apps/schoolInfo/utils/updateSchoolInfo';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 
+import DonorTeacherBanner from '../../DonorTeacherBanner';
 import SchoolDataInputs from '../../SchoolDataInputs';
 
 import drawerConfirmationImage from './images/drawer-confirmation-image.png';
@@ -44,6 +45,7 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
   const [success, setSuccess] = React.useState(false);
   const [showSchoolInfoUnknownError, setShowSchoolInfoUnknownError] =
     React.useState(false);
+  const [AFEDrawerOpen, setAFEDrawerOpen] = React.useState(true);
 
   const inUSA = useAppSelector(state => state.currentUser.inUSA);
   const schoolInfo = useSchoolInfo({
@@ -160,6 +162,7 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
     setSchoolInfoInterstitialOpen(false);
     setSchoolInfoConfirmationOpen(false);
     setSuccess(false);
+    setAFEDrawerOpen(false);
     onCloseCallback();
   };
 
@@ -167,7 +170,12 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
     <Drawer
       className={styles.drawer}
       anchor={'bottom'}
-      open={schoolInfoInterstitialOpen || schoolInfoConfirmationOpen || success}
+      open={
+        schoolInfoInterstitialOpen ||
+        schoolInfoConfirmationOpen ||
+        success ||
+        AFEDrawerOpen
+      }
       variant={'persistent'}
     >
       <div className={styles.toolbar}>
@@ -179,6 +187,7 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
           className={''}
         />
       </div>
+      {AFEDrawerOpen && <DonorTeacherBanner source="teacher_home" />}
       <div className={styles.drawerText}>
         {success && (
           <img
