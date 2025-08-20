@@ -60,7 +60,28 @@ module Pd
     #
     # If the pre-survey has been already completed, will redirect to thanks page.
     def new_pre_foorm
-      new_general_foorm(survey_names: PRE_SURVEY_CONFIG_PATHS, day: 0)
+      enrollment_code = params[:enrollmentCode]
+
+      workshop = nil
+      if enrollment_code
+        workshop = Pd::Enrollment.find_by(code: enrollment_code, user: current_user)&.workshop
+        unless workshop
+          render :invalid_enrollment_code
+          return false
+        end
+      else
+        workshop = Workshop.where(course: COURSE_BUILD_YOUR_OWN).enrolled_in_by(current_user)&.nearest
+        unless workshop
+          render :not_enrolled
+          return false
+        end
+      end
+
+      agenda = params[:agenda] || nil
+      # remove / from agenda url so module/1 => module1
+      agenda&.tr!("/", "")
+
+      render_survey_foorm(survey_name: PRE_SURVEY_CONFIG_PATHS[COURSE_BUILD_YOUR_OWN], workshop: workshop, session: nil, day: 0, workshop_agenda: agenda)
     end
 
     def new_facilitator_post_foorm(workshop)
@@ -80,7 +101,7 @@ module Pd
       should_have_attended = day != 0
       workshop = get_workshop_by_enrollment_or_course_and_subject(
         enrollment_code: enrollment_code,
-        course: [COURSE_CSD, COURSE_CSP, COURSE_CSA, COURSE_BUILD_YOUR_OWN],
+        course: [COURSE_CSD, COURSE_CSP, COURSE_CSA],
         subject: subject,
         should_have_attended: should_have_attended
       )

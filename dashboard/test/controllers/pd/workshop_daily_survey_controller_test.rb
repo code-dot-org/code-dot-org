@@ -33,6 +33,51 @@ module Pd
       assert_response :not_found
     end
 
+    test 'pre-workshop survey displays not enrolled message when not enrolled' do
+      sign_in unenrolled_teacher
+      get '/pd/workshop_survey/day/0'
+      assert_response :success
+      assert_not_enrolled
+    end
+
+    test 'pre-workshop foorm survey displays not enrolled message when not enrolled' do
+      sign_in unenrolled_teacher
+      get '/pd/workshop_pre_survey'
+      assert_response :success
+      assert_not_enrolled
+    end
+
+    test 'pre-workshop foorm survey shows thanks when a response exists' do
+      teacher = create(:teacher)
+      byo_workshop = create(:byo_workshop)
+      create(:pd_enrollment, workshop: byo_workshop, user: teacher)
+
+      existing_survey = create(:daily_workshop_day_0_foorm_submission,
+        :answers_high,
+        form_name: "surveys/pd/build_your_own_workshop_teachers_pre_survey"
+      )
+      create(:day_0_workshop_foorm_submission,
+        foorm_submission: existing_survey,
+        pd_workshop: byo_workshop,
+        user: teacher
+      )
+
+      sign_in teacher
+      get '/pd/workshop_pre_survey'
+      assert_thanks
+    end
+
+    test 'pre-workshop foorm survey displays foorm when enrolled' do
+      teacher = create(:teacher)
+      byo_workshop = create(:byo_workshop)
+      create(:pd_enrollment, workshop: byo_workshop, user: teacher)
+
+      sign_in teacher
+      get '/pd/workshop_pre_survey'
+      assert_template :new_general_foorm
+      assert_response :success
+    end
+
     test 'post-workshop foorm survey displays foorm when enrolled and attended' do
       setup_summer_workshop
 
