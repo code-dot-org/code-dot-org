@@ -102,7 +102,7 @@ const PythonlabView: React.FunctionComponent<
   );
   const hasSource = !!source;
   const isAiTutor2Enabled =
-    levelProperties.aiTutor2Available ||
+    levelProperties.aiTutorAvailable ||
     queryParams('show-ai-tutor2') === 'true';
 
   const isAiTutor2HintEnabled = queryParams('show-ai-tutor2-hint') === 'true';

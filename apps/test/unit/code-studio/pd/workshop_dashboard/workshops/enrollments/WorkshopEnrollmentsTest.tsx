@@ -18,12 +18,17 @@ const mockGetAuthenticityToken = getAuthenticityToken as jest.MockedFunction<
   typeof getAuthenticityToken
 >;
 
-// Mock React Router's useOutletContext
-const mockUseOutletContext = jest.fn();
-jest.mock('react-router-dom', () => ({
-  ...jest.requireActual('react-router-dom'),
-  useOutletContext: () => mockUseOutletContext(),
-}));
+// Mock useWorkshopContext
+const mockUseWorkshopContext = jest.fn();
+jest.mock(
+  '@cdo/apps/code-studio/pd/workshop_dashboard/workshops/WorkshopLayout',
+  () => ({
+    ...jest.requireActual(
+      '@cdo/apps/code-studio/pd/workshop_dashboard/workshops/WorkshopLayout'
+    ),
+    useWorkshopContext: () => mockUseWorkshopContext(),
+  })
+);
 
 describe('WorkshopEnrollments', () => {
   const user = userEvent.setup();
@@ -101,14 +106,18 @@ describe('WorkshopEnrollments', () => {
   const createMockContext = (
     overrides: Partial<WorkshopContextValue> = {}
   ): WorkshopContextValue => ({
-    enrollments: [createTestEnrollment()],
     workshop: createTestWorkshop(),
-    refetchEnrollments: mockRefetchEnrollments,
-    enrollmentsLoading: false,
-    enrollmentsError: null,
     workshopLoading: false,
     workshopError: null,
     refetchWorkshop: jest.fn(),
+    enrollments: [createTestEnrollment()],
+    enrollmentsLoading: false,
+    enrollmentsError: null,
+    refetchEnrollments: mockRefetchEnrollments,
+    surveys: null,
+    surveysLoading: false,
+    surveysError: null,
+    refetchSurveys: jest.fn(),
     ...overrides,
   });
 
@@ -116,7 +125,7 @@ describe('WorkshopEnrollments', () => {
     contextOverrides: Partial<WorkshopContextValue> = {}
   ) => {
     const mockContext = createMockContext(contextOverrides);
-    mockUseOutletContext.mockReturnValue(mockContext);
+    mockUseWorkshopContext.mockReturnValue(mockContext);
 
     return render(
       <MemoryRouter>

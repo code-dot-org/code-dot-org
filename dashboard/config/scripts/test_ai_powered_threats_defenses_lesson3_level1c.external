@@ -1,9 +1,9 @@
 name 'test-ai-powered-threats-defenses-lesson3-level1c'
 title 'Jordan P. - User Profile'
 
-display_name 'PROFILE 3'
-bubble_choice_description 'DESCRIPTION'
-thumbnail_url 'https://images.code.org/35daf4616746412a061782ab3771c1c6-image-1753987189397.png'
+display_name 'Sofia Hernandez'
+bubble_choice_description 'Sofia is a 14 year old student from Miami, FL'
+thumbnail_url 'https://images.code.org/feb6217203ec38832b5976b7e43173c1-image-1755184977472.png'
 
 markdown <<MARKDOWN
 #Sofia Hernandez
@@ -74,5 +74,4 @@ markdown <<MARKDOWN
     </td>
   </tr>
 </table>
-
 MARKDOWN

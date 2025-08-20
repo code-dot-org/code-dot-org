@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-08-14 03:39:35 UTC",
+    "serialized_at": "2025-08-14 22:33:36 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -66,7 +66,7 @@
     },
     {
       "key": "lesson-3",
-      "name": "Phishing and Password Cracking",
+      "name": "Phishing and Password Attacks",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
@@ -987,6 +987,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "aif-ai-powered-threats-defenses-lesson2-ddos-panels"
+        ],
         "progression": "Explore Cybersecurity Threats"
       },
       "bonus": false,
@@ -1059,6 +1062,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "aif-ai-powered-threats-defenses-lesson2-ransomeware"
+        ],
         "progression": "Explore Cybersecurity Threats"
       },
       "bonus": false,
@@ -1106,6 +1112,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-ai-powered-threats-defenses-lesson3-level1choice"
+        ],
         "progression": "Phishing Investigation"
       },
       "bonus": false,
@@ -1128,6 +1137,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-ai-powered-threats-defenses-lesson3-level2choice"
+        ],
         "progression": "Phishing Investigation"
       },
       "bonus": false,
@@ -1150,6 +1162,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-ai-powered-threats-defenses-lesson3-level2"
+        ],
         "progression": "Phishing Investigation"
       },
       "bonus": false,
@@ -1172,6 +1187,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-ai-powered-threats-defenses-lesson3-level4choice"
+        ],
         "progression": "Password Attacks"
       },
       "bonus": false,
@@ -1720,31 +1738,6 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "test-ai-powered-threats-defenses-lesson12-level2"
-        ],
-        "progression": "Layered Defense Exploration"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "test-ai-powered-threats-defenses-lesson12-level2"
-        ],
-        "lesson.key": "lesson-12",
-        "lesson_group.key": "",
-        "script.name": "6-12-ai-powered-threats-and-defenses",
-        "activity_section.key": "31fff750-6578-4f08-ac27-d9de538d0b28"
-      },
-      "level_keys": [
-        "test-ai-powered-threats-defenses-lesson12-level2"
-      ]
-    },
-    {
-      "chapter": 33,
-      "position": 2,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
           "test-ai-powered-threats-defenses-lesson12-level1"
         ],
         "progression": "Layered Defense Exploration"
@@ -1764,7 +1757,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 33,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1789,7 +1782,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 34,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -1814,7 +1807,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 35,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -2210,18 +2203,6 @@
         "lesson_group.key": "",
         "script.name": "6-12-ai-powered-threats-and-defenses",
         "activity_section.key": "5dbfa394-560e-4caf-8a88-db1d01976889"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "test-ai-powered-threats-defenses-lesson12-level2",
-        "script_level.level_keys": [
-          "test-ai-powered-threats-defenses-lesson12-level2"
-        ],
-        "lesson.key": "lesson-12",
-        "lesson_group.key": "",
-        "script.name": "6-12-ai-powered-threats-and-defenses",
-        "activity_section.key": "31fff750-6578-4f08-ac27-d9de538d0b28"
       }
     },
     {

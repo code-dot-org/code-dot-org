@@ -1,0 +1,8 @@
+name 'csaif_pl_2_aithreats_09'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Attacker/Defender Activity
+
+MARKDOWN

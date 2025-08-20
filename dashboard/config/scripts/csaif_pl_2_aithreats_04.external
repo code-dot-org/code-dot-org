@@ -1,0 +1,26 @@
+name 'csaif_pl_2_aithreats_04'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# The Day Everything Broke
+
+## 📝 To Do
+
+#### For the failure scenario from the comic, choose one of the four cyber professionals who could have helped fix the problem. Reflect on, *how that person might solve the issue*.
+
+### IT Support Specialist
+#### Helps people when they can’t log in, reset passwords, or connect to school systems. Often the first person called when something breaks on a student or teacher's device.
+
+### System Administrator
+#### Sets up and manages the systems that run the school’s technology like email, learning platforms, and user accounts. Makes sure systems are updated, secure, and working properly for everyone.
+
+### Network Engineer
+#### Keeps the school Wi-Fi, internet, and network connections fast and stable. Prevents crashes or slowdowns, especially during high-traffic times like online testing.
+
+### Access Control Manager
+#### Controls who gets access to what files, folders, and data. Makes sure private information stays private, and only the right people can view or edit it.
+
+
+
+MARKDOWN

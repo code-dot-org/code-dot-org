@@ -1,0 +1,23 @@
+name 'csaif_pl_2_aithreats_10'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Introducing AAA
+
+#### The AAA Tools are a set of tools used in cybersecurity to help systems protect information and manage what users can do. 
+#### AAA stands for Authentication, Access Control, and Accounting.
+
+#### Authentication is the process a system uses to check that you are who you say you are. 
+#### This can include:
+* #### Something you know (passwords)
+* #### Something you have (one-time codes text to you)
+* #### Something you are (fingerprints)
+
+#### Access Control are rules a system uses to decide what you’re allowed to do once you’re logged in. 
+#### This can include whether you can view, edit, or share certain information.
+
+#### Accounting is when a system keeps track of what users do so suspicious activity can be detected and reviewed.
+#### This can include logging in, viewing files, or making changes
+
+MARKDOWN

@@ -7,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "## The story continues\r\n\r\nAdd a verb to the story and then print it.",
-    "ai_tutor2_available": "true",
+    "ai_tutor_available": "true",
     "submittable": "false",
     "hide_share_and_remix": "true",
     "enable_micro_bit": "false",
