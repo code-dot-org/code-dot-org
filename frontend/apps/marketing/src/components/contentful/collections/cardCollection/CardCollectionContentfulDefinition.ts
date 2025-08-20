@@ -23,7 +23,7 @@ export const CardCollectionContentfulComponentDefinition: ComponentDefinition =
     builtInStyles: [],
     children: false,
     variables: {
-      blocks: {
+      cards: {
         displayName: 'Card Collection',
         type: 'Array',
         validations: {

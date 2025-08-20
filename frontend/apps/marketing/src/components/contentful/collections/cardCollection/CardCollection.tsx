@@ -26,7 +26,7 @@ type ItemEntry = Entry<ItemFields>;
 
 export type CardCollectionProps = CollectionProps & {
   /** Collection content w/ fields from Contentful */
-  blocks: ItemEntry[];
+  cards: ItemEntry[];
   /** Hide secondary button */
   hideSecondaryButton?: boolean;
 };
@@ -40,8 +40,8 @@ const styles = {
   },
 };
 
-const ActionBlockCollection: React.FC<CardCollectionProps> = ({
-  blocks,
+const CardCollection: React.FC<CardCollectionProps> = ({
+  cards,
   hideImages = false,
   hideSecondaryButton = false,
   sortOrder = 'alphabetical',
@@ -49,7 +49,7 @@ const ActionBlockCollection: React.FC<CardCollectionProps> = ({
 }) => {
   const inMemoryEntities = useInMemoryEntities();
 
-  if (!blocks) {
+  if (!cards) {
     return (
       <Typography variant="body3">
         <em>
@@ -60,8 +60,8 @@ const ActionBlockCollection: React.FC<CardCollectionProps> = ({
     );
   }
 
-  const blocksData = useMemo(() => {
-    const data = blocks.filter(Boolean).map(({fields}) => {
+  const cardsData = useMemo(() => {
+    const data = cards.filter(Boolean).map(({fields}) => {
       const {
         actionBlockOverline,
         title,
@@ -109,20 +109,20 @@ const ActionBlockCollection: React.FC<CardCollectionProps> = ({
       data.sort((a, b) => a?.id?.localeCompare(b?.id));
     }
     return data;
-  }, [blocks, hideImages, hideSecondaryButton, sortOrder]);
+  }, [cards, hideImages, hideSecondaryButton, sortOrder]);
 
   return (
     <Grid container spacing={4} className={className}>
-      {blocksData.map(block => (
+      {cardsData.map(card => (
         <Grid
           key={`id-${useId().replaceAll(':', '')}`}
           size={{xs: 12, md: 6, lg: 4}}
         >
-          {block.item}
+          {card.item}
         </Grid>
       ))}
     </Grid>
   );
 };
 
-export default ActionBlockCollection;
+export default CardCollection;
