@@ -85,9 +85,9 @@ export const WorkshopLayout: FC<WorkshopLayoutProps> = ({
   const showTabs = !pathname.includes('/edit');
   const showSurveyElements = pathname.includes('/surveys');
   const showPostSurveyCategorySelection = pathname.includes('/surveys/post');
-  const showFacilitatorSelection = pathname.includes(
-    '/surveys/post/facilitators'
-  );
+  const showFacilitatorSelection =
+    pathname.includes('/surveys/post/facilitators') &&
+    surveys?.surveys?.post_workshop;
 
   const showNoSurveyResponses = useMemo(() => {
     if (showPostSurveyCategorySelection) {
