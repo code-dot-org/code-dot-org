@@ -384,12 +384,12 @@ export type SurveyQuestion =
       results: ResultsBase & TextResults;
     })
   | (SurveyQuestionBase & {
-      question_type: 'single_select';
+      question_type: 'singleSelect';
       results: ResultsBase & SingleSelectResults;
     })
   | (SurveyQuestionBase & {
-      question_type: 'multi_select';
-      results: ResultsBase & MultiSelectResults;
+      question_type: 'multiSelect';
+      results: MultiSelectResults;
     });
 
 export const isQuestionType = <T extends SurveyQuestion['question_type']>(
@@ -400,10 +400,10 @@ export const isQuestionType = <T extends SurveyQuestion['question_type']>(
 };
 
 export interface LikertResults {
-  weighted_score?: number;
-  agreement_count?: number;
-  agreement_percentage?: number;
-  breakdown?: Record<string, LikertBreakdown>;
+  weighted_score: number;
+  agreement_count: number;
+  agreement_percentage: number;
+  breakdown: Record<string, LikertBreakdown>;
 }
 
 export interface LikertBreakdown {
@@ -414,8 +414,8 @@ export interface LikertBreakdown {
 }
 
 export interface PromoterResults {
-  promoter_percentage?: number;
-  breakdown?: Record<string, PromoterBreakdown>;
+  promoter_percentage: number;
+  breakdown: Record<string, PromoterBreakdown>;
 }
 
 export interface PromoterBreakdown {
@@ -425,11 +425,11 @@ export interface PromoterBreakdown {
 }
 
 export interface TextResults {
-  responses?: string[];
+  responses: string[];
 }
 
 export interface SingleSelectResults {
-  breakdown?: Record<string, SingleSelectBreakdown>;
+  breakdown: Record<string, SingleSelectBreakdown>;
   other_answers?: string[];
 }
 
@@ -440,7 +440,8 @@ export interface SingleSelectBreakdown {
 }
 
 export interface MultiSelectResults {
-  breakdown?: Record<string, MultiSelectBreakdown>;
+  breakdown: Record<string, MultiSelectBreakdown>;
+  total_respondents: number;
 }
 
 export interface MultiSelectBreakdown {
