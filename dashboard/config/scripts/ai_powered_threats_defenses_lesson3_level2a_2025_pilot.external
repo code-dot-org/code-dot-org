@@ -1,0 +1,55 @@
+name 'ai-powered-threats-defenses-lesson3-level2a_2025-pilot'
+title 'Jordan P. - User Profile'
+
+display_name 'Ava Rivera'
+bubble_choice_description 'Ava is a 16 year old student from Austin, TX.'
+thumbnail_url 'https://images.code.org/eb20ea4d27756f0b348bf0d2789077e9-image-1755184382554.png'
+
+markdown <<MARKDOWN
+#Ava
+
+Look through Ava's emails below and see which ones might be legit and which might be phishing attacks.
+
+
+<div style="font-family: sans-serif; font-size: 16px; line-height: 1.6;">
+
+
+
+  <hr>
+
+  <p><strong>Message A – Text</strong></p>
+  <p>
+    Hey Ava — quick thing: it’s Jess from chem class. I’m helping run the Homecoming raffle and need to double-check the list.<br><br>
+    You bought a ticket at lunch last week, right? Can you send me the email you used so I can confirm your entry?
+  </p>
+
+  <hr>
+
+  <p><strong>Message B – Email</strong></p>
+  <p><em>Subject:</em> <strong>Portland Food Truck Fest – Lost Item Report</strong></p>
+  <p>
+    Hi Ava,<br><br>
+    This is the Portland Food Truck Fest volunteer desk. Someone turned in a wallet matching your description (photo ID inside says “Ava Rivera”).<br><br>
+    To return it, we need to confirm your mailing address and phone number.<br><br>
+    Please complete the form here: <a href="#">pdxfoodfest.com-verify.info</a><br><br>
+    You can also call the desk at (503) 872-4182 if you have questions. We’ll hold the item for 48 hours before sending it to lost property.<br><br>
+    Thanks,<br>
+    <em>The Volunteer Team</em>
+  </p>
+
+  <hr>
+
+  <p><strong>Message C – Instagram DM</strong></p>
+  <p>
+    Hey Ava! We’re finalizing the last wave of Taylor Swift pre-show volunteers in Portland.<br><br>
+    You’d help greet guests + hand out wristbands. As thanks, you’d get free merch and early entry.<br><br>
+    If you’re interested, send:<br>
+    - Name & birthday<br>
+    - Cell number<br>
+    - Preferred T-shirt size<br><br>
+    Just need it tonight to lock in your spot. We’ll text you the details tomorrow!
+  </p>
+
+</div>
+
+MARKDOWN

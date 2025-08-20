@@ -1,0 +1,68 @@
+name 'ai-powered-threats-defenses-lesson3-level4d_2025-pilot'
+title 'Ethan C. - User Profile'
+
+display_name 'Ethan Carter'
+bubble_choice_description 'Ethan is a 17 year old student from Seattle, WA'
+thumbnail_url 'https://images.code.org/5ab7f854ed8fb8162a1441be09c13766-image-1755184934057.png'
+
+markdown <<MARKDOWN
+#Ethan 
+
+A data breach is a security incident where sensitive, confidential, or private information is accessed, disclosed, or stolen by unauthorized individuals.
+
+Look through Ethan's breach report to try to determine what happened and what type of password attack your user was vulnerable to.
+
+<div style="font-family: sans-serif; font-size: 16px; line-height: 1.6;">
+
+  <h3 style="color: #00838f;">Breach Report</h3>
+  <p><strong>Service Breached:</strong> CloudVault Photo Backup<br>
+     <strong>Login Location:</strong> Multiple IPs (rotating, high-frequency script behavior)<br>
+     <strong>Time of Access:</strong> 6:20–6:43 p.m.<br>
+     <strong>AI Analysis:</strong> Abnormal activity flagged due to high-frequency login attempts from rotating IP addresses.
+  </p>
+
+  <p>Over 200 password attempts were recorded prior to access.<br>
+     The password used was: <strong>CanonR50</strong><br>
+     Attempts were clustered around photography-related keywords and phrases commonly found on the user’s profile.
+  </p>
+
+  <p><strong>AI Analysis:</strong> Attempted passwords followed thematic keyword sequence based on user content.<br>
+     The attack appeared to use a script simulating human typing speed.<br>
+     No files were modified or deleted during the session.<br>
+     <strong>AI Analysis:</strong> Account had not backed up any new photos in the past 30 days.
+  </p>
+
+  <br>
+
+  <h3 style="color: #00838f;">Password Attacks</h3>
+
+  <table style="width:100%; border-collapse:collapse; border:1px solid #ccc; font-size: 15px;">
+    <tr>
+      <td style="font-weight:bold; padding:10px; border:1px solid #ccc;">Credential stuffing attack</td>
+      <td style="padding:10px; border:1px solid #ccc;">
+        When attackers use real usernames and passwords (often from past breaches) to break into other accounts.
+      </td>
+    </tr>
+    <tr>
+      <td style="font-weight:bold; padding:10px; border:1px solid #ccc;">Password guessing attack</td>
+      <td style="padding:10px; border:1px solid #ccc;">
+        When attackers try different passwords for one account, hoping to guess the right one.
+      </td>
+    </tr>
+    <tr>
+      <td style="font-weight:bold; padding:10px; border:1px solid #ccc;">Password spraying attack</td>
+      <td style="padding:10px; border:1px solid #ccc;">
+        When an attacker tries one common password on many different accounts to avoid detection.
+      </td>
+    </tr>
+    <tr>
+      <td style="font-weight:bold; padding:10px; border:1px solid #ccc;">Brute force attack</td>
+      <td style="padding:10px; border:1px solid #ccc;">
+        When an attacker rapidly tries a large number of possible passwords on one account, using automated tools to find the correct one.
+      </td>
+    </tr>
+  </table>
+
+</div>
+
+MARKDOWN
