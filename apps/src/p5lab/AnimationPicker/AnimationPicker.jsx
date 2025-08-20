@@ -20,6 +20,7 @@ import {
   handleUploadComplete,
   handleUploadError,
   saveSelectedAnimations,
+  disableUploads,
 } from '../redux/animationPicker';
 
 import AnimationPickerBody from './AnimationPickerBody.jsx';
@@ -82,6 +83,7 @@ class AnimationPicker extends React.Component {
     onAnimationSelectionComplete: PropTypes.func.isRequired,
     uploadWarningShowing: PropTypes.bool.isRequired,
     uploadsEnabled: PropTypes.bool.isRequired,
+    onDisableUploads: PropTypes.func.isRequired,
   };
 
   state = {
@@ -234,6 +236,7 @@ class AnimationPicker extends React.Component {
               this.setState({
                 showFlaggedModal: true,
               });
+              this.props.onDisableUploads();
               analyticsReporter.sendEvent(
                 EVENTS.FLAGGED_CUSTOM_IMAGE,
                 {
@@ -386,6 +389,9 @@ export default connect(
     },
     onAnimationSelectionComplete() {
       dispatch(saveSelectedAnimations());
+    },
+    onDisableUploads() {
+      dispatch(disableUploads());
     },
   })
 )(AnimationPicker);
