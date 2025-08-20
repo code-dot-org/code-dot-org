@@ -1,4 +1,5 @@
 import type {PartialAppOptions} from '../types';
+export * from './queryParams';
 
 function currentLocale(): string {
   return 'en';
