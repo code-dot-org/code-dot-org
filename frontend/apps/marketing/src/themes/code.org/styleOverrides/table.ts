@@ -15,6 +15,7 @@ export const TABLE_CELL_OVERRIDES: Components<Theme>['MuiTableCell'] = {
       padding: `${theme.spacing(1.5)} ${theme.spacing(2)}`, //14px 18px
       border: `1px solid var(--borders-neutral-primary)`,
       color: 'var(--text-neutral-primary)',
+      verticalAlign: 'top',
     }),
     head: () => ({
       backgroundColor: 'var(--background-brand-teal-primary)',
