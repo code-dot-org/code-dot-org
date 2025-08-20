@@ -344,7 +344,7 @@ export interface SurveyCategories {
   engagement?: SurveyCategory;
   logistics?: SurveyCategory;
   other?: SurveyCategory;
-  facilitator?: Record<string, FacilitatorCategory>;
+  facilitators?: Record<string, FacilitatorCategory>;
 }
 
 export interface SurveyCategory {
