@@ -31,6 +31,10 @@ class LevelStarterAssetsController < ApplicationController
   end
 
   # GET /level_starter_assets/:level_name/:uuid.:format
+  # Returns requested file body as an IO stream.
+  # Client specifies the UUID of the file rather than the user-friendly name,
+  # and the level's start_sources manages the mapping between friendly names
+  # and UUIDs.
   def file_by_uuid
     uuid_name = "#{params[:uuid]}.#{params[:format]}"
     get_file_and_send(uuid_name)
