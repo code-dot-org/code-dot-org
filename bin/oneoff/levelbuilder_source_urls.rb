@@ -5,7 +5,7 @@ require 'cgi'
 require 'uri'
 
 # Toggle writes
-DRY_RUN = false
+DRY_RUN = true
 
 def fix_start_animations
   puts DRY_RUN ? "THIS IS A DRY RUN" : "THIS IS A FULL RUN"
