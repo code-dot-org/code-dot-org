@@ -18,7 +18,8 @@ type CallbackArgs = {
     initialSources: ProjectSources | undefined,
     abuseScore: number | undefined,
     isReadOnly: boolean | undefined,
-    projectSharingDisabled: boolean | undefined
+    projectSharingDisabled: boolean | undefined,
+    isTeacherOfProjectOwner: boolean | undefined
   ];
 };
 

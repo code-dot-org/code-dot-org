@@ -30,7 +30,7 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
           marginLeft: 0,
         },
         '&:focus-visible': {
-          outline: '2px solid ' + localTheme.palette.secondary.main,
+          outline: '2px solid var(--borders-brand-teal-primary)',
           outlineOffset: '2px',
         },
         '&.MuiButton-contained': {
@@ -46,14 +46,31 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
         '&.MuiButton-contained.MuiButton-sizeSmall, &.MuiButton-outlined.MuiButton-sizeSmall':
           {
             fontSize: '0.875rem',
-            padding: localTheme.spacing(0.75, 1.5),
+            fontWeight: 600,
+            lineHeight: '148%',
+            fontStyle: 'normal',
+            padding: localTheme.spacing(0.625, 1.5),
+            svg: {
+              fontSize: '1.125rem',
+              lineHeight: '1.25',
+            },
           },
         '&.MuiButton-contained.MuiButton-sizeMedium, &.MuiButton-outlined.MuiButton-sizeMedium':
           {
             fontSize: '1rem',
+            fontWeight: 600,
+            lineHeight: '148%',
+            fontStyle: 'normal',
             padding: localTheme.spacing(0.75, 2),
             borderRadius: 4,
           },
+        '&.MuiButton-outlined.button--color-secondary': {
+          color: 'var(--text-neutral-primary)',
+          borderColor: 'var(--border-neutral-primary)',
+          '&:hover': {
+            backgroundColor: 'var(--background-neutral-tertiary)',
+          },
+        },
       };
     },
   },

@@ -30,10 +30,12 @@ export const Header: React.FC<HeaderProps> = ({
   const [archiveAllModalOpen, setArchiveAllModalOpen] =
     React.useState<boolean>(false);
 
-  const searchParams = new URLSearchParams(window.location.search);
-  if (searchParams.get('openAddSectionDialog') === 'true') {
-    dispatch(beginEditingSection());
-  }
+  React.useEffect(() => {
+    const searchParams = new URLSearchParams(window.location.search);
+    if (searchParams.get('openAddSectionDialog') === 'true') {
+      dispatch(beginEditingSection());
+    }
+  }, [dispatch]);
 
   return (
     <div>

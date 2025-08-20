@@ -7,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "###Let's print()! \r\n\r\nPrint something else in the console using the **print()** function. ",
-    "ai_tutor2_available": "true",
+    "ai_tutor_available": "true",
     "submittable": "false",
     "hide_share_and_remix": "true",
     "enable_micro_bit": "false",
