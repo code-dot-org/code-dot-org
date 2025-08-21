@@ -12,6 +12,7 @@ export type ChatButtonClickHandler = (
   userMessage: string,
   analyticsProperties?: AnalyticsProperties
 ) => void;
+
 export type ChatButtonProps = {
   onClick: ChatButtonClickHandler;
 };
