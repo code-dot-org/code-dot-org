@@ -134,6 +134,7 @@ export interface ProjectFile {
   folderId: string;
   type?: ProjectFileType;
   url?: string;
+  flagged?: boolean;
 }
 
 /**
@@ -409,4 +410,10 @@ export interface LabProps<
 > {
   levelProperties: T;
   initialSources?: U;
+}
+
+export interface LocaleProps {
+  localeUrl: string;
+  currentLocale: string;
+  localeOptions: {text: string; value: string}[];
 }

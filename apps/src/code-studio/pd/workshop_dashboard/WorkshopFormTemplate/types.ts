@@ -344,7 +344,7 @@ export interface SurveyCategories {
   engagement?: SurveyCategory;
   logistics?: SurveyCategory;
   other?: SurveyCategory;
-  facilitator?: Record<string, FacilitatorCategory>;
+  facilitators?: Record<string, FacilitatorCategory>;
 }
 
 export interface SurveyCategory {
@@ -367,7 +367,7 @@ type SurveyQuestionBase = {
 };
 
 type ResultsBase = {
-  total_responses?: number;
+  total_responses: number;
 };
 
 export type SurveyQuestion =

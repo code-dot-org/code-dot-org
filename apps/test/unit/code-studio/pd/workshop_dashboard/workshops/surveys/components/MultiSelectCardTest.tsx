@@ -42,7 +42,7 @@ describe('MultiSelectCard', () => {
       expect(screen.getByText('10 responses')).toBeInTheDocument();
     });
 
-    it('sets the correct width style for each progress bar after animating', async () => {
+    it('sets the correct width style for each percentage bar after animating', async () => {
       renderComponent();
 
       await waitFor(() => {
