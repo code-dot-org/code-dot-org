@@ -38,7 +38,7 @@ const LinkOption: React.FC<LinkElementProps> = ({
       {isTeacherDashboard ? (
         <Link
           id={
-            value.includes('lesson')
+            url.includes('lesson')
               ? `ui-test-lesson-${label.replace(' ', '-')}`
               : `ui-test-unit-${label.replace(' ', '-')}`
           }
@@ -60,7 +60,11 @@ const LinkOption: React.FC<LinkElementProps> = ({
         </Link>
       ) : (
         <a
-          id={`ui-test-${label.replaceAll(' ', '-').replaceAll(':', '')}`}
+          id={
+            url.includes('lesson')
+              ? `ui-test-lesson-${label.replace(' ', '-')}`
+              : `ui-test-unit-${label.replace(' ', '-')}`
+          }
           className={styles.dropdownMenuItem}
           href={url}
           onClick={() => {
