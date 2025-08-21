@@ -22,7 +22,7 @@ class AiInteractionFeedbackController < ApplicationController
       :scriptId,
       :thumbsUp,
       :schoolYear,
-      metadata: {}
+      metadata: [:key1, :key2, :key3] # Replace :key1, :key2, :key3 with the actual keys you want to permit
     ).transform_keys {|key| key.to_s.underscore.to_sym}
   end
 end
