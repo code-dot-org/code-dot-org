@@ -42,6 +42,7 @@ describe('animationPicker', function () {
       isBackground: false,
       selectedAnimations: {},
       uploadWarningShowing: false,
+      uploadsEnabled: true,
     };
 
     it('has expected default state', function () {
@@ -93,6 +94,12 @@ describe('animationPicker', function () {
         var newState = reducer(state, show(Goal.NEW_ANIMATION, true));
         expect(newState.isBackground).toBe(false);
       });
+
+      it('keeps uploadsEnabled value', function () {
+        var state = {uploadsEnabled: false};
+        var newState = reducer(state, show(Goal.NEW_ANIMATION, true));
+        expect(newState.uploadsEnabled).toBe(false);
+      });
     });
 
     describe('action: showBackground', function () {
@@ -120,6 +127,18 @@ describe('animationPicker', function () {
         var newState = reducer(state, hide());
         expect(newState).not.toBe(state);
         expect(newState.goal).toBeNull();
+      });
+
+      it('keeps uploadsEnabled value', function () {
+        var state = {
+          visible: true,
+          goal: Goal.NEW_ANIMATION,
+          uploadsEnabled: false,
+        };
+        var newState = reducer(state, hide());
+        expect(newState).not.toBe(state);
+        expect(newState.goal).toBeNull();
+        expect(newState.uploadsEnabled).toBe(false);
       });
     });
 
