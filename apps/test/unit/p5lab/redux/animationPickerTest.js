@@ -159,6 +159,16 @@ describe('animationPicker', function () {
       });
     });
 
+    describe('action: setUploadsEnabled', function () {
+      var setUploadsEnabled = animationPicker.setUploadsEnabled;
+
+      it('sets uploadsEnabled to the provided value', function () {
+        var state = {uploadsEnabled: false};
+        var newState = reducer(state, setUploadsEnabled(true));
+        expect(newState.uploadsEnabled).toBe(true);
+      });
+    });
+
     describe('action: handleUploadError', function () {
       var handleUploadError = animationPicker.handleUploadError;
 

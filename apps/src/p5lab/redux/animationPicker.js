@@ -34,7 +34,6 @@ const SELECT_ANIMATION = 'AnimationPicker/SELECT_ANIMATION';
 const REMOVE_ANIMATION = 'AnimationPicker/REMOVE_ANIMATION';
 const SHOWING_UPLOAD_WARNING = 'AnimationPicker/SHOWING_UPLOAD_WARNING';
 const EXITED_UPLOAD_WARNING = 'AnimationPicker/EXITED_UPLOAD_WARNING';
-const DISABLE_UPLOADS = 'AnimationPicker/DISABLE_UPLOADS';
 const SET_UPLOADS_ENABLED = 'AnimationPicker/SET_UPLOADS_ENABLED';
 
 // Default state, which we reset to any time we hide the animation picker.
@@ -82,12 +81,6 @@ export default function reducer(state, action) {
     return {
       ...state,
       uploadsEnabled: action.uploadsEnabled,
-    };
-  }
-  if (action.type === DISABLE_UPLOADS) {
-    return {
-      ...state,
-      uploadsEnabled: false,
     };
   }
   if (action.type === HIDE) {
@@ -197,14 +190,6 @@ export function showingUploadWarning() {
  */
 export function setUploadsEnabled(uploadsEnabled) {
   return {type: SET_UPLOADS_ENABLED, uploadsEnabled};
-}
-
-/**
- * We are disabling uploads.
- * @returns  {{type: string}}
- */
-export function disableUploads() {
-  return {type: DISABLE_UPLOADS};
 }
 
 /**

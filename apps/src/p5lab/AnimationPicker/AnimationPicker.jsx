@@ -20,7 +20,7 @@ import {
   handleUploadComplete,
   handleUploadError,
   saveSelectedAnimations,
-  disableUploads,
+  setUploadsEnabled,
 } from '../redux/animationPicker';
 
 import AnimationPickerBody from './AnimationPickerBody.jsx';
@@ -392,7 +392,7 @@ export default connect(
       dispatch(saveSelectedAnimations());
     },
     disableUploads() {
-      dispatch(disableUploads());
+      dispatch(setUploadsEnabled(false));
     },
   })
 )(AnimationPicker);
