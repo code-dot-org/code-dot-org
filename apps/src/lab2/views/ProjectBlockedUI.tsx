@@ -57,14 +57,24 @@ export const ProjectBlockedUI: React.FunctionComponent<{
           },
   };
 
-  // If in edit/view mode with view/edit access, render workspace alert with warning about flagged project.
-  if (['view', 'edit', 'level'].includes(pageAction) && hasViewOrEditAccess) {
+  // If sharing is disabled and user has view or edit access, no need to render any project blocked UI.
+  if (blockedType === 'projectSharingDisabled' && hasViewOrEditAccess) {
+    return null;
+  }
+
+  // If page action is view/edit/level, project is flagged for abuse, and user has view or edit access,
+  // render workspace alert with warning about flagged project.
+  if (
+    ['view', 'edit', 'level'].includes(pageAction) &&
+    blockedType === 'projectAbuse' &&
+    hasViewOrEditAccess
+  ) {
     return (
       <div
         id="blocked-project-ui-container-project-validator"
         className={moduleStyles.blockedProjectUIContainerProjectValidator}
       >
-        {showAlert && blockedType === 'projectAbuse' && (
+        {showAlert && (
           <Alert
             text={i18n.tosWithoutLink()}
             type={alertTypes.danger}
@@ -76,9 +86,12 @@ export const ProjectBlockedUI: React.FunctionComponent<{
       </div>
     );
   }
-
-  // If in share mode, render blocked UI for all users - blocked UI includes customized link depending on user's role.
-  // If in edit/view mode without view/edit access, render blocked UI.
+  /* Excluding two cases above, render blocked UI.
+      - If in project edit/view mode and user is without view/edit access, render blocked UI.
+        (Note that only the user and user's teacher can access a user's activity level.)
+      - In share mode (excluding when project sharing is disabled and user has view/edit access),
+          render blocked UI which includes customized link depending on user's role.
+  */
   return (
     <div
       id="blocked-project-ui-container"
