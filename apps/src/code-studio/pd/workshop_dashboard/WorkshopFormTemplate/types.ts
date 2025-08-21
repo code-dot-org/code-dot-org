@@ -367,7 +367,7 @@ type SurveyQuestionBase = {
 };
 
 type ResultsBase = {
-  total_responses?: number;
+  total_responses: number;
 };
 
 export type SurveyQuestion =
