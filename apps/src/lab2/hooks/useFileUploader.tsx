@@ -77,6 +77,7 @@ const moderateImage = async (
   ext: string,
   appName?: string
 ): Promise<'ok' | 'flagged' | 'skipped'> => {
+  return 'flagged';
   if (appName !== 'weblab2' || !['png', 'jpg', 'jpeg'].includes(ext)) {
     return 'skipped';
   }
@@ -196,25 +197,26 @@ export const useFileUploader = ({
         };
       } else {
         try {
-          const ext = file.name.split('.').pop()?.toLowerCase() || '';
-          const moderationStatus = await moderateImage(file, ext, appName);
-          if (moderationStatus === 'flagged' && onImageFlagged) {
-            const uploadFunction = async () => {
-              // check if this works with levelbuilder upload
-              const url = await uploadExternalFile(file);
-              sendAnalyticsEvent(analyticsEvents.UPLOAD_SUCCEEDED, {
-                name: file.name,
-                type: file.type,
-              });
-              // Isn't callbackArgs (second to last arg) supposed to be all remaining args (ie, last arg)?
-              callback(file.name, '', url, callbackArgs.current, true);
-            };
-            // FlagedImageModal will be shown to the user and user can choose to upload the image or not.
-            onImageFlagged(file, ext, uploadFunction);
-            return;
+          if (onImageFlagged) {
+            const ext = file.name.split('.').pop()?.toLowerCase() || '';
+            const moderationStatus = await moderateImage(file, ext, appName);
+            if (moderationStatus === 'flagged') {
+              const uploadFunction = async () => {
+                const url = await uploadExternalFile(file);
+                sendAnalyticsEvent(analyticsEvents.UPLOAD_SUCCEEDED, {
+                  name: file.name,
+                  type: file.type,
+                });
+                callback(file.name, '', url, callbackArgs.current, true);
+              };
+              // FlagedImageModal will be shown to the user and user can choose to upload the image or not.
+              onImageFlagged(file, ext, uploadFunction);
+              return;
+            }
           }
 
-          // For non-text files that are not moderated and images that are deemed safe, upload directly to assets.
+          // For non-text files that are not moderated (eg, files uploaded in start mode by levelbuilders)
+          // and images that are deemed safe, upload directly to assets.
           const url = await uploadExternalFile(file);
           sendAnalyticsEvent(analyticsEvents.UPLOAD_SUCCEEDED, {
             name: file.name,

@@ -36,6 +36,9 @@ export const useFileUploader = (
   const channelId =
     useAppSelector(state => state.lab.channel && state.lab.channel.id) || '';
 
+  // Skip moderating images that are added by levelbuilders in start mode.
+  const onImageFlaggedWithOverride = isStartMode ? undefined : onImageFlagged;
+
   const uploadExternalFile = useCallback(
     async (file: File) => {
       const uuid = createUuid();
@@ -99,7 +102,7 @@ export const useFileUploader = (
     sendAnalyticsEvent,
     validateFileName,
     uploadExternalFile,
-    onImageFlagged,
+    onImageFlagged: onImageFlaggedWithOverride,
     ...lab2FileUploaderArgs,
   });
 };
