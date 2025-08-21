@@ -324,8 +324,17 @@ class DatablockStorageTable < ApplicationRecord
   end
 
   def write_serialization
-    return unless Rails.application.config.levelbuilder_mode && is_shared_table
+    return unless Rails.application.config.levelbuilder_mode
+    return unless project_id == SHARED_TABLE_PROJECT_ID
+
     File.write(shared_table_file(table_name), export_csv)
+  end
+
+  def remove_serialization
+    return unless Rails.application.config.levelbuilder_mode
+    return unless project_id == SHARED_TABLE_PROJECT_ID
+
+    FileUtils.rm_f(shared_table_file(table_name))
   end
 
   ##########################################################

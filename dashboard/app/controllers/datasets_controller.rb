@@ -60,6 +60,7 @@ class DatasetsController < ApplicationController
     table_name = params[:dataset_name]
     table = DatablockStorageTable.find_shared_table table_name
     table.destroy!
+    table.remove_serialization
   end
 
   # GET /datasets/manifest/edit
