@@ -2345,6 +2345,7 @@ ActiveRecord::Schema.define(version: 2025_08_21_182723) do
     t.datetime "updated_at", precision: 6, null: false
     t.datetime "deletion_warning_email_sent_at"
     t.index ["anonymized_at"], name: "index_user_data_retention_statuses_on_anonymized_at"
+    t.index ["deletion_warning_email_sent_at"], name: "index_user_data_retention_statuses_on_warning_email_sent_at"
     t.index ["pii_scrubbed_at"], name: "index_user_data_retention_statuses_on_pii_scrubbed_at"
     t.index ["user_id"], name: "index_user_data_retention_statuses_on_user_id"
   end
