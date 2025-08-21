@@ -35,7 +35,7 @@ const RightButtons: React.FunctionComponent<RightButtonsProps> = ({
   consoleManager,
 }) => {
   const {levelProperties} = useCodebridgeContext();
-  const {appName} = levelProperties;
+  const {appName, isProjectLevel} = levelProperties;
   const isWidgetView = levelProperties.widgetView;
   const widgetViewAllowShowCode = levelProperties.widgetViewAllowShowCode;
   const isRunning = useAppSelector(state => state.lab2System.isRunning);
@@ -47,7 +47,10 @@ const RightButtons: React.FunctionComponent<RightButtonsProps> = ({
   );
   const settings = useCodebridgeSettings();
 
-  const usingResourcePanel = isUsingResourcePanel(appName);
+  const usingResourcePanel = isUsingResourcePanel(
+    appName,
+    isProjectLevel || false
+  );
 
   useEffect(() => {
     if (!consoleManager) {

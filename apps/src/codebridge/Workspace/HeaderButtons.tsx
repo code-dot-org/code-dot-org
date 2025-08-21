@@ -36,7 +36,10 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
   ) as MultiFileSource | undefined;
   const files = source?.files || {};
   // The resource panel includes settings.
-  const showSettings = !isUsingResourcePanel(appName);
+  const showSettings = !isUsingResourcePanel(
+    appName,
+    levelProperties.isProjectLevel || false
+  );
 
   const documentationTooltipProps: TooltipProps = {
     text: commonI18n.documentation(),

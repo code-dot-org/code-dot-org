@@ -64,6 +64,7 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
     predictSettings,
     id: levelId,
     appName,
+    isProjectLevel,
   } = levelProperties;
   const isUserTeacher = useAppSelector(state => state.currentUser.isTeacher);
   const [currentPanel, setCurrentPanel] = useState(Panels.Instructions);
@@ -88,7 +89,10 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
   const hasLoadedEnvironment = useAppSelector(
     state => state.lab2System.loadedCodeEnvironment
   );
-  const useResourcePanel = isUsingResourcePanel(appName);
+  const useResourcePanel = isUsingResourcePanel(
+    appName,
+    isProjectLevel || false
+  );
   const settings = useCodebridgeSettings();
 
   useEffect(() => {

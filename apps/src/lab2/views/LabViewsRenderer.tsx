@@ -46,9 +46,10 @@ const LabViewsRenderer: React.FunctionComponent = () => {
   const pageAction = getLabViewPageAction() || '';
 
   const isViewingExemplar = getAppOptionsViewingExemplar();
+  const isProjectLevel = levelProperties?.isProjectLevel || false;
   const hideExtraLinks =
     queryParams('hide-extra-links') === 'true' ||
-    isUsingResourcePanel(currentAppName || '');
+    isUsingResourcePanel(currentAppName || '', isProjectLevel);
 
   useInitialLabTheme({
     currentAppName,
@@ -65,12 +66,12 @@ const LabViewsRenderer: React.FunctionComponent = () => {
     // We control this here so the footer will show up on levels that do not use the resource panel,
     // such as panels levels. The footer is controlled by the server, so we need to show/hide it here
     // to ensure it will show up when we switch to a level that does not use the resource panel.
-    if (isUsingResourcePanel(currentAppName || '')) {
+    if (isUsingResourcePanel(currentAppName || '', isProjectLevel)) {
       footer?.classList.add(moduleStyles.hiddenFooter);
     } else if (footer?.classList.contains(moduleStyles.hiddenFooter)) {
       footer.classList.remove(moduleStyles.hiddenFooter);
     }
-  }, [currentAppName]);
+  }, [currentAppName, isProjectLevel]);
 
   const blockLabView = () => {
     if (!currentAppName) return true;

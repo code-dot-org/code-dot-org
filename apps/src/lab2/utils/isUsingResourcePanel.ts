@@ -12,8 +12,11 @@ const LABS_WITHOUT_INSTRUCTIONS = [
 // "isUsingInstructions", as the resource panel will be the instructions panel. Some labs do not use
 // instructions, such as Panels, we will need to keep this function to determine if the copyright/language
 // footer should be shown or hidden.
-export function isUsingResourcePanel(appName: string): boolean {
-  if (LABS_WITHOUT_INSTRUCTIONS.includes(appName)) {
+export function isUsingResourcePanel(
+  appName: string,
+  isProjectLevel: boolean
+): boolean {
+  if (isProjectLevel || LABS_WITHOUT_INSTRUCTIONS.includes(appName)) {
     return false;
   }
   return (
