@@ -46,6 +46,8 @@ class DatasetsController < ApplicationController
     end
 
     table.import_csv params[:csv_data]
+    table.write_serialization
+
     data = {
       columns: table.get_columns,
       records: table.read_records.map(&:to_json),

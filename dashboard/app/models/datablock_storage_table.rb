@@ -317,6 +317,18 @@ class DatablockStorageTable < ApplicationRecord
   end
 
   ##########################################################
+  #   Levelbuilder seeding stuff                           #
+  ##########################################################
+  def shared_table_file(table_name)
+    Rails.root.join("config/datablock_storage/#{table_name}.csv")
+  end
+
+  def write_serialization
+    return unless Rails.application.config.levelbuilder_mode && is_shared_table
+    File.write(shared_table_file(table_name), export_csv)
+  end
+
+  ##########################################################
   #   Private                                              #
   ##########################################################
 
