@@ -206,6 +206,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   registerIfMutator();
   registerLogicCompareMutator();
   registerTextJoinMutator();
+  registerKeyboardNavigationStyles();
   // TODO: can we avoid using any here by converting BlocklyWrapper to a class?
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const blocklyWrapper = new (BlocklyWrapper as any)(
@@ -885,14 +886,6 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     // This is also important for ensuring that Blockly does not
     // mistakenly keep orphaned blocks disabled when they are connected.
     options.disable = blocklyWrapper.isStartMode;
-    if (
-      options.enableKeyboardNavigation ||
-      experiments.isEnabledAllowingQueryString(
-        experiments.BLOCKLY_KEYBOARD_NAVIGATION
-      )
-    ) {
-      registerKeyboardNavigationStyles();
-    }
 
     const workspace = blocklyWrapper.blockly_.inject(
       container,
