@@ -7,6 +7,7 @@ import {
   SurveyQuestions,
 } from '../../../../WorkshopFormTemplate/types';
 import {useWorkshopContext} from '../../../WorkshopLayout';
+import {FollowUpRequestedCard} from '../../components/FollowUpRequestedCard';
 import {FreeResponseCard} from '../../components/FreeResponseCard';
 import {MultiSelectCard} from '../../components/MultiSelectCard';
 import {ScoreCard} from '../../components/ScoreCard';
@@ -60,9 +61,12 @@ export const Implementation = () => {
       isQuestionType(question, 'multiSelect') &&
       question.question_name === 'barriers_implementation_curriculum'
     ) {
+      if (question.results.total_respondents === 0) {
+        return '';
+      }
       const numWithBarriers =
-        (question.results.total_respondents ?? 0) -
-        (question.results.breakdown?.none?.count ?? 0);
+        question.results.total_respondents -
+        (question.results.breakdown.none?.count ?? 0);
       return `${numWithBarriers} teachers reported at least 1 or more barriers to implementation`;
     }
     return '';
@@ -100,6 +104,11 @@ export const Implementation = () => {
             barLabel="Teachers"
           />
         )}
+        <FollowUpRequestedCard
+          items={[]}
+          title="Follow-up requested"
+          description=""
+        />
       </Box>
 
       <Box className={styles.cardRow}>
