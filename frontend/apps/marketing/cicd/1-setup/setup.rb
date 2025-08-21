@@ -15,7 +15,8 @@ options = {
   region_stack_name: 'marketing-sites-region-resources',
   region_template_file: 'region-resources.yml.erb',
   # https://github.blog/changelog/2022-01-13-github-actions-update-on-oidc-based-deployments-to-aws/
-  github_intermediate_cert_thumbprints: '6938fd4d98bab03faadb97b34396831e3780aea1,1c58a3a8518e8759bf075b76b750d4f2df264fcd'
+  github_intermediate_cert_thumbprints: '6938fd4d98bab03faadb97b34396831e3780aea1,1c58a3a8518e8759bf075b76b750d4f2df264fcd',
+  template_s3_bucket: nil # Required
 }
 
 opt_parser = OptionParser.new do |opts|
@@ -85,14 +86,23 @@ opt_parser = OptionParser.new do |opts|
     options[:region_template_file] = file
   end
 
+  opts.on(
+    '--template-bucket BUCKET',
+    String,
+    "S3 bucket name for storing CloudFormation templates (REQUIRED)"
+  ) do |bucket|
+    options[:template_s3_bucket] = bucket
+  end
+
   opts.on('-h', '--help', 'Show this help message') do
     puts opts
     puts "\nExamples:"
     puts "  # Setup Marketing Sites Global Resources in the current AWS Account and Region Resources in the default region (us-east-1)"
-    puts "  ./setup.rb"
+    puts "  ./setup.rb --template-bucket cf-templates-1a2b3c4d5e6f-us-east-1"
     puts ""
     puts "  # Setup Marketing Sites Global Resources in the current AWS Account and Region Resources in in a specific region (us-west-2)"
-    puts "  ./setup.rb --region us-west-2"
+    puts "  # Fine to keep it simple and always place templates in a bucket that's in us-east-1"
+    puts "  ./setup.rb --region us-west-2 --template-bucket cf-templates-1a2b3c4d5e6f-us-east-1"
     exit
   end
 end
@@ -110,6 +120,25 @@ def execute_command(command, description)
     puts stderr
     exit 1
   end
+end
+
+def upload_template_to_s3(template_file, bucket_name, region)
+  file_size = File.size(template_file)
+  timestamp = Time.now.strftime("%Y%m%d-%H%M%S")
+  stack_name = File.basename(template_file, ".*")
+  s3_key = "marketing-sites-templates/#{stack_name}-#{timestamp}.yml"
+  s3_url = "https://#{bucket_name}.s3.#{region}.amazonaws.com/#{s3_key}"
+
+  puts "Uploading template to S3 (#{file_size} bytes): s3://#{bucket_name}/#{s3_key}"
+
+  command = <<~CMD
+    aws s3 cp #{template_file} s3://#{bucket_name}/#{s3_key} \\
+      --region #{region} \\
+      --content-type application/x-yaml
+  CMD
+
+  execute_command(command, "Uploading CloudFormation template to S3")
+  return s3_url
 end
 
 def process_template(template_file, output_file, binding_object)
@@ -130,7 +159,8 @@ def process_template(template_file, output_file, binding_object)
     result = renderer.result(binding_object)
     File.write(output_path, result)
 
-    puts "Template processed successfully: #{output_path}"
+    file_size = File.size(output_path)
+    puts "Template processed successfully: #{output_path} (#{file_size} bytes)"
     return output_path
   rescue => exception
     puts "Exception processing template: #{exception.message}"
@@ -138,16 +168,41 @@ def process_template(template_file, output_file, binding_object)
   end
 end
 
-def deploy_stack(stack_name:, template_file:, parameters: {}, region:, role_arn: nil, tags: {}, capabilities: [])
+def stack_exists?(stack_name, region)
+  command = <<~CMD
+    aws cloudformation describe-stacks \\
+        --stack-name #{stack_name} \\
+        --region #{region} \\
+        --query "Stacks[0].StackStatus" \\
+        --output text
+  CMD
+
+  stdout, _, status = Open3.capture3(command)
+  return status.success? && !stdout.strip.empty?
+rescue
+  return false
+end
+
+def deploy_stack(stack_name:, template_file:, parameters: {}, region:, role_arn: nil, tags: {}, capabilities: [], template_s3_bucket:)
   temp_dir = File.join(Dir.pwd, 'tmp')
   FileUtils.mkdir_p(temp_dir)
   parameter_path = nil  # Initialize to nil
+  tag_path = nil       # Initialize to nil
+
+  # Always upload template to S3
+  template_url = upload_template_to_s3(template_file, template_s3_bucket, region)
+
+  # Check if stack exists to determine create vs update
+  stack_exists = stack_exists?(stack_name, region)
+  operation = stack_exists ? "update-stack" : "create-stack"
+
+  puts "Stack #{stack_exists ? 'exists' : 'does not exist'}, using #{operation}"
 
   # Build the AWS CLI command
   command_parts = [
-    "aws cloudformation deploy",
+    "aws cloudformation #{operation}",
     "--stack-name #{stack_name}",
-    "--template-file #{template_file}",
+    "--template-url #{template_url}",
     "--region #{region}"
   ]
 
@@ -164,25 +219,46 @@ def deploy_stack(stack_name:, template_file:, parameters: {}, region:, role_arn:
     parameter_path = File.join(temp_dir, param_file)
     parameter_content = parameters.map {|k, v| {"ParameterKey" => k, "ParameterValue" => v.to_s}}
     File.write(parameter_path, JSON.pretty_generate(parameter_content))
-    command_parts << "--parameter-overrides file://#{parameter_path}"
+    command_parts << "--parameters file://#{parameter_path}"
   end
 
   # Add tags only if there are any
   unless tags.empty?
-    tag_string = tags.map {|k, v| "#{k}=#{v}"}.join(" ")
-    command_parts << "--tags #{tag_string}"
+    tag_content = tags.map {|k, v| {"Key" => k, "Value" => v.to_s}}
+    tag_file = "tags_#{stack_name}_#{Time.now.to_i}.json"
+    tag_path = File.join(temp_dir, tag_file)
+    File.write(tag_path, JSON.pretty_generate(tag_content))
+    command_parts << "--tags file://#{tag_path}"
   end
 
   command = command_parts.join(" \\\n    ")
 
   begin
-    execute_command(command, "Deploying stack '#{stack_name}' in region '#{region}'")
+    execute_command(command, "#{stack_exists ? 'Updating' : 'Creating'} stack '#{stack_name}' in region '#{region}'")
+
+    # Wait for stack operation to complete
+    wait_for_stack_completion(stack_name, region, operation)
   ensure
-    # Clean up the parameter file if it was created
+    # Clean up temporary files
     if parameter_path && File.exist?(parameter_path)
       FileUtils.rm_f(parameter_path)
     end
+    if tag_path && File.exist?(tag_path)
+      FileUtils.rm_f(tag_path)
+    end
   end
+end
+
+def wait_for_stack_completion(stack_name, region, operation)
+  puts "Waiting for stack operation to complete..."
+
+  command = <<~CMD
+    aws cloudformation wait stack-#{operation == 'create-stack' ? 'create' : 'update'}-complete \\
+        --stack-name #{stack_name} \\
+        --region #{region}
+  CMD
+
+  execute_command(command, "Waiting for stack #{operation} to complete")
 end
 
 def get_stack_outputs(stack_name, region)
@@ -211,10 +287,12 @@ def get_stack_outputs(stack_name, region)
   end
 end
 
-def validate_template(template_file, region)
+def validate_template(template_file, region, template_s3_bucket)
+  # Always upload to S3 and validate via URL
+  template_url = upload_template_to_s3(template_file, template_s3_bucket, region)
   command = <<~CMD
     aws cloudformation validate-template \\
-        --template-body file://#{template_file} \\
+        --template-url #{template_url} \\
         --region #{region}
   CMD
 
@@ -232,7 +310,7 @@ def deploy_account_resources(options)
   )
 
   puts "\n=== Step 2: Validating Account-Level Template ==="
-  validate_template(processed_template_path, options[:region])
+  validate_template(processed_template_path, options[:region], options[:template_s3_bucket])
 
   puts "\n=== Step 3: Deploying Account-Level Stack in US East 1 ==="
   parameters = {
@@ -246,7 +324,8 @@ def deploy_account_resources(options)
     parameters: parameters,
     region: options[:region],
     role_arn: options[:role_arn],
-    capabilities: ["CAPABILITY_IAM", "CAPABILITY_NAMED_IAM", "CAPABILITY_AUTO_EXPAND"]
+    capabilities: ["CAPABILITY_IAM", "CAPABILITY_NAMED_IAM", "CAPABILITY_AUTO_EXPAND"],
+    template_s3_bucket: options[:template_s3_bucket]
   )
 
   puts "\n=== Step 4: Account-Level Deployment Results ==="
@@ -278,7 +357,7 @@ def deploy_region_resources(options)
   )
 
   puts "\n=== Step 2: Validating Region-Level Template ==="
-  validate_template(processed_template_path, options[:region])
+  validate_template(processed_template_path, options[:region], options[:template_s3_bucket])
 
   puts "\n=== Step 3: Deploying Region-Level Stack ==="
   parameters = {}
@@ -298,7 +377,8 @@ def deploy_region_resources(options)
     template_file: processed_template_path,
     parameters: parameters,
     region: options[:region],
-    role_arn: options[:role_arn]
+    role_arn: options[:role_arn],
+    template_s3_bucket: options[:template_s3_bucket]
   )
 
   puts "\n=== Step 4: Region-Level Deployment Results ==="
@@ -335,6 +415,7 @@ begin
 
   missing_params = []
   missing_params << "region" unless options[:region]
+  missing_params << "template-bucket" unless options[:template_s3_bucket]
 
   unless missing_params.empty?
     puts "Error: Missing required parameters: #{missing_params.join(', ')}"

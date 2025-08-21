@@ -1,7 +1,7 @@
 AWSTemplateFormatVersion: 2010-09-09
 
 Description: |
-  Provision all the global Resources (such as IAM Roles/Policies) needed in an AWS Account to support provisioning one
+  Provision all the global Resources (such as IAM Roles/Policies, WAF Web ACL) needed in an AWS Account to support provisioning one
   or more Marketing Sites Stacks in the Account.
 
 Parameters:
@@ -39,6 +39,489 @@ Parameters:
 %>
 
 Resources:
+  # ------------------------------------------------------------
+  # Web Application Firewall (WAF) Resources
+  # ------------------------------------------------------------
+  MarketingSitesIPv4AllowList:
+    Type: AWS::WAFv2::IPSet
+    Properties:
+      Name: marketing-sites_IPV4_Allow
+      Description: IPv4 addresses allowed to bypass WAF rules for marketing sites
+      Scope: CLOUDFRONT
+      IPAddressVersion: IPV4
+      Addresses: []  # Empty initially - typically edited manually in response to need.
+  MarketingSitesIPv6AllowList:
+    Type: AWS::WAFv2::IPSet
+    Properties:
+      Name: marketing-sites_IPV6_Allow
+      Description: IPv6 addresses allowed to bypass WAF rules for marketing sites
+      Scope: CLOUDFRONT
+      IPAddressVersion: IPV6
+      Addresses: []  # Empty initially - typically edited manually in response to need.
+  MarketingSitesIPv4BlockList:
+    Type: AWS::WAFv2::IPSet
+    Properties:
+      Name: marketing-sites_IPV4_Block
+      Description: IPv4 addresses blocked by WAF for marketing sites
+      Scope: CLOUDFRONT
+      IPAddressVersion: IPV4
+      Addresses: []  # Empty initially - typically edited manually in response to need.
+  MarketingSitesIPv6BlockList:
+    Type: AWS::WAFv2::IPSet
+    Properties:
+      Name: marketing-sites_IPV6_Block
+      Description: IPv6 addresses blocked by WAF for marketing sites
+      Scope: CLOUDFRONT
+      IPAddressVersion: IPV6
+      Addresses: []  # Empty initially - typically edited manually in response to need.
+  # Any Marketing Site provisioned in this AWS Account can use this WebACL to protect its CloudFront Distribution.
+  MarketingSitesWebACL:
+    Type: AWS::WAFv2::WebACL
+    Properties:
+      Name: marketing-sites
+      Description: Protect Marketing Websites in this AWS Account from Distributed Denial of Service Attacks and malicious HTTP requests.
+      Scope: CLOUDFRONT
+      DefaultAction:
+        Allow: {}
+      VisibilityConfig:
+        CloudWatchMetricsEnabled: true
+        MetricName: marketing-sites
+        SampledRequestsEnabled: true
+      Rules:
+        - Name: AWS-AWSManagedRulesAntiDDoSRuleSet
+          Priority: 0
+          OverrideAction:
+            None: {}
+          Statement:
+            ManagedRuleGroupStatement:
+              VendorName: AWS
+              Name: AWSManagedRulesAntiDDoSRuleSet
+              ManagedRuleGroupConfigs:
+                - AWSManagedRulesAntiDDoSRuleSet:
+                    SensitivityToBlock: LOW
+                    ClientSideActionConfig:
+                      Challenge:
+                        UsageOfAction: ENABLED
+                        Sensitivity: HIGH
+                        # Don't Challenge HTTP requests for URLs that serve a different content-type from text/html
+                        ExemptUriRegularExpressions:
+                          # `/api` endpoints typically serve JSON.
+                          - RegexString: '\\\\/api\\\\/'
+                          # All assets are served from `/_next/static` and HTML pages are never served from this path.
+                          - RegexString: '\\\\/_next\\\\/static'
+                          # Just to be safe, exclude paths where the file extension is a non-HTML resource.
+                          - RegexString: '\\\\.(acc|avi|css|gif|ico|jpe?g|js|json|mp[34]|ogg|otf|pdf|png|tiff?|ttf|webm|webp|woff2?|xml)$'
+          VisibilityConfig:
+            CloudWatchMetricsEnabled: true
+            MetricName: AWS-AWSManagedRulesAntiDDoSRuleSet
+            SampledRequestsEnabled: true
+        - Name: marketing-sites_IPV4_Allow
+          Priority: 1
+          Action:
+            Allow: {}
+          Statement:
+            IPSetReferenceStatement:
+              Arn: !GetAtt MarketingSitesIPv4AllowList.Arn
+          VisibilityConfig:
+            CloudWatchMetricsEnabled: true
+            MetricName: marketing-sites_IPV4_Allow
+            SampledRequestsEnabled: true
+        - Name: marketing-sites_IPV6_Allow
+          Priority: 2
+          Action:
+            Allow: {}
+          Statement:
+            IPSetReferenceStatement:
+              Arn: !GetAtt MarketingSitesIPv6AllowList.Arn
+          VisibilityConfig:
+            CloudWatchMetricsEnabled: true
+            MetricName: marketing-sites_IPV6_Allow
+            SampledRequestsEnabled: true
+        - Name: marketing-sites_IPV4_Block
+          Priority: 3
+          Action:
+            Block: {}
+          Statement:
+            IPSetReferenceStatement:
+              Arn: !GetAtt MarketingSitesIPv4BlockList.Arn
+          VisibilityConfig:
+            CloudWatchMetricsEnabled: true
+            MetricName: marketing-sites_IPV4_Block
+            SampledRequestsEnabled: true
+        - Name: marketing-sites_IPV6_Block
+          Priority: 4
+          Action:
+            Block: {}
+          Statement:
+            IPSetReferenceStatement:
+              Arn: !GetAtt MarketingSitesIPv6BlockList.Arn
+          VisibilityConfig:
+            CloudWatchMetricsEnabled: true
+            MetricName: marketing-sites_IPV6_Block
+            SampledRequestsEnabled: true
+        - Name: GeoRule
+          Priority: 5
+          Action:
+            Block: {}
+          Statement:
+            GeoMatchStatement:
+              CountryCodes:
+                - KP
+          VisibilityConfig:
+            CloudWatchMetricsEnabled: true
+            MetricName: GeoRule
+            SampledRequestsEnabled: true
+        - Name: GlobalRateBasedRule
+          Priority: 6
+          Action:
+            Count: {}
+          Statement:
+            RateBasedStatement:
+              Limit: 100000
+              AggregateKeyType: IP
+              EvaluationWindowSec: 300
+          VisibilityConfig:
+            CloudWatchMetricsEnabled: true
+            MetricName: GlobalRateBasedRule
+            SampledRequestsEnabled: true
+        # Rate based rules don't work well for us because schools and school districts often have multiple users
+        # simultaneously visiting our sites from a single source IP address, so these Limits are set fairly high.
+        - Name: RateBasedRuleGET
+          Priority: 7
+          Action:
+            Count: {}
+          Statement:
+            RateBasedStatement:
+              Limit: 100000
+              AggregateKeyType: IP
+              EvaluationWindowSec: 300
+              ScopeDownStatement:
+                ByteMatchStatement:
+                  SearchString: GET
+                  FieldToMatch:
+                    Method: {}
+                  TextTransformations:
+                    - Priority: 0
+                      Type: NONE
+                  PositionalConstraint: EXACTLY
+          VisibilityConfig:
+            CloudWatchMetricsEnabled: true
+            MetricName: RateBasedRuleGET
+            SampledRequestsEnabled: true
+        - Name: RateBasedRulePOST
+          Priority: 8
+          Action:
+            Count: {}
+          Statement:
+            RateBasedStatement:
+              Limit: 10000
+              AggregateKeyType: IP
+              EvaluationWindowSec: 300
+              ScopeDownStatement:
+                OrStatement:
+                  Statements:
+                    - ByteMatchStatement:
+                        SearchString: POST
+                        FieldToMatch:
+                          Method: {}
+                        TextTransformations:
+                          - Priority: 0
+                            Type: NONE
+                        PositionalConstraint: EXACTLY
+                    - ByteMatchStatement:
+                        SearchString: PUT
+                        FieldToMatch:
+                          Method: {}
+                        TextTransformations:
+                          - Priority: 0
+                            Type: NONE
+                        PositionalConstraint: EXACTLY
+                    - ByteMatchStatement:
+                        SearchString: DELETE
+                        FieldToMatch:
+                          Method: {}
+                        TextTransformations:
+                          - Priority: 0
+                            Type: NONE
+                        PositionalConstraint: EXACTLY
+          VisibilityConfig:
+            CloudWatchMetricsEnabled: true
+            MetricName: RateBasedRulePOST
+            SampledRequestsEnabled: true
+        - Name: BodySizeRestrictionRule
+          Priority: 9
+          Action:
+            Count: {}
+          Statement:
+            SizeConstraintStatement:
+              FieldToMatch:
+                Body:
+                  OversizeHandling: MATCH
+              ComparisonOperator: GT
+              Size: 16384
+              TextTransformations:
+                - Priority: 0
+                  Type: NONE
+          VisibilityConfig:
+            CloudWatchMetricsEnabled: true
+            MetricName: BodySizeRestrictionRule
+            SampledRequestsEnabled: true
+        - Name: AWS-AWSManagedRulesAmazonIpReputationList
+          Priority: 10
+          OverrideAction:
+            None: {}
+          Statement:
+            ManagedRuleGroupStatement:
+              VendorName: AWS
+              Name: AWSManagedRulesAmazonIpReputationList
+              RuleActionOverrides:
+                - Name: AWSManagedReconnaissanceList
+                  ActionToUse:
+                    Count: {}
+                - Name: AWSManagedIPDDoSList
+                  ActionToUse:
+                    Challenge: {}
+          VisibilityConfig:
+            CloudWatchMetricsEnabled: true
+            MetricName: AWS-AWSManagedRulesAmazonIpReputationList
+            SampledRequestsEnabled: true
+        - Name: ManagedIPDDoSRateLimit
+          Priority: 11
+          Action:
+            Count: {}
+          Statement:
+            RateBasedStatement:
+              Limit: 10000
+              AggregateKeyType: IP
+              EvaluationWindowSec: 300
+              ScopeDownStatement:
+                LabelMatchStatement:
+                  Scope: LABEL
+                  Key: awswaf:managed:aws:amazon-ip-list:AWSManagedIPDDoSList
+          VisibilityConfig:
+            CloudWatchMetricsEnabled: true
+            MetricName: ManagedIPDDoSRateLimit
+            SampledRequestsEnabled: true
+        - Name: AWS-AWSManagedRulesAnonymousIpList
+          Priority: 12
+          OverrideAction:
+            None: {}
+          Statement:
+            ManagedRuleGroupStatement:
+              VendorName: AWS
+              Name: AWSManagedRulesAnonymousIpList
+              RuleActionOverrides:
+                - Name: AnonymousIPList
+                  ActionToUse:
+                    Challenge: {}
+                - Name: HostingProviderIPList
+                  ActionToUse:
+                    Challenge: {}
+          VisibilityConfig:
+            CloudWatchMetricsEnabled: true
+            MetricName: AWS-AWSManagedRulesAnonymousIpList
+            SampledRequestsEnabled: true
+        - Name: AWS-AWSManagedRulesCommonRuleSet
+          Priority: 13
+          OverrideAction:
+            Count: {}
+          Statement:
+            ManagedRuleGroupStatement:
+              VendorName: AWS
+              Name: AWSManagedRulesCommonRuleSet
+              RuleActionOverrides:
+                - Name: NoUserAgent_HEADER
+                  ActionToUse:
+                    Challenge: {}
+                - Name: UserAgent_BadBots_HEADER
+                  ActionToUse:
+                    Challenge: {}
+                - Name: SizeRestrictions_QUERYSTRING
+                  ActionToUse:
+                    Challenge: {}
+                - Name: SizeRestrictions_Cookie_HEADER
+                  ActionToUse:
+                    Challenge: {}
+                - Name: SizeRestrictions_BODY
+                  ActionToUse:
+                    Challenge: {}
+                - Name: SizeRestrictions_URIPATH
+                  ActionToUse:
+                    Challenge: {}
+                - Name: EC2MetaDataSSRF_BODY
+                  ActionToUse:
+                    Challenge: {}
+                - Name: EC2MetaDataSSRF_COOKIE
+                  ActionToUse:
+                    Challenge: {}
+                - Name: EC2MetaDataSSRF_URIPATH
+                  ActionToUse:
+                    Challenge: {}
+                - Name: EC2MetaDataSSRF_QUERYARGUMENTS
+                  ActionToUse:
+                    Challenge: {}
+                - Name: GenericLFI_QUERYARGUMENTS
+                  ActionToUse:
+                    Challenge: {}
+                - Name: GenericLFI_URIPATH
+                  ActionToUse:
+                    Challenge: {}
+                - Name: GenericLFI_BODY
+                  ActionToUse:
+                    Challenge: {}
+                - Name: RestrictedExtensions_URIPATH
+                  ActionToUse:
+                    Challenge: {}
+                - Name: RestrictedExtensions_QUERYARGUMENTS
+                  ActionToUse:
+                    Challenge: {}
+                - Name: GenericRFI_QUERYARGUMENTS
+                  ActionToUse:
+                    Challenge: {}
+                - Name: GenericRFI_BODY
+                  ActionToUse:
+                    Challenge: {}
+                - Name: GenericRFI_URIPATH
+                  ActionToUse:
+                    Challenge: {}
+                - Name: CrossSiteScripting_COOKIE
+                  ActionToUse:
+                    Challenge: {}
+                - Name: CrossSiteScripting_QUERYARGUMENTS
+                  ActionToUse:
+                    Challenge: {}
+                - Name: CrossSiteScripting_BODY
+                  ActionToUse:
+                    Challenge: {}
+                - Name: CrossSiteScripting_URIPATH
+                  ActionToUse:
+                    Challenge: {}
+          VisibilityConfig:
+            CloudWatchMetricsEnabled: true
+            MetricName: AWS-AWSManagedRulesCommonRuleSet
+            SampledRequestsEnabled: true
+        # Marketing Sites don't have a relational database, but anyone probing SQL injection is likely malicious.
+        - Name: AWS-AWSManagedRulesSQLiRuleSet
+          Priority: 14
+          OverrideAction:
+            Count: {}
+          Statement:
+            ManagedRuleGroupStatement:
+              VendorName: AWS
+              Name: AWSManagedRulesSQLiRuleSet
+              RuleActionOverrides:
+                - Name: SQLiExtendedPatterns_QUERYARGUMENTS
+                  ActionToUse:
+                    Challenge: {}
+                - Name: SQLi_QUERYARGUMENTS
+                  ActionToUse:
+                    Challenge: {}
+                - Name: SQLi_BODY
+                  ActionToUse:
+                    Challenge: {}
+                - Name: SQLi_COOKIE
+                  ActionToUse:
+                    Challenge: {}
+                - Name: SQLi_URIPATH
+                  ActionToUse:
+                    Challenge: {}
+          VisibilityConfig:
+            CloudWatchMetricsEnabled: true
+            MetricName: AWS-AWSManagedRulesSQLiRuleSet
+            SampledRequestsEnabled: true
+        - Name: AWS-AWSManagedRulesBotControlRuleSet
+          Priority: 16
+          OverrideAction:
+            None: {}
+          Statement:
+            ManagedRuleGroupStatement:
+              VendorName: AWS
+              Name: AWSManagedRulesBotControlRuleSet
+              ManagedRuleGroupConfigs:
+                - AWSManagedRulesBotControlRuleSet:
+                    InspectionLevel: COMMON
+              RuleActionOverrides:
+                - Name: CategoryAdvertising
+                  ActionToUse:
+                    Challenge: {}
+                - Name: CategoryArchiver
+                  ActionToUse:
+                    Challenge: {}
+                - Name: CategoryContentFetcher
+                  ActionToUse:
+                    Challenge: {}
+                - Name: CategoryEmailClient
+                  ActionToUse:
+                    Challenge: {}
+                - Name: CategoryHttpLibrary
+                  ActionToUse:
+                    Challenge: {}
+                - Name: CategoryLinkChecker
+                  ActionToUse:
+                    Challenge: {}
+                - Name: CategoryMiscellaneous
+                  ActionToUse:
+                    Challenge: {}
+                - Name: CategoryMonitoring
+                  ActionToUse:
+                    Challenge: {}
+                - Name: CategoryScrapingFramework
+                  ActionToUse:
+                    Challenge: {}
+                - Name: CategorySearchEngine
+                  ActionToUse:
+                    Challenge: {}
+                - Name: CategorySecurity
+                  ActionToUse:
+                    Challenge: {}
+                - Name: CategorySeo
+                  ActionToUse:
+                    Challenge: {}
+                - Name: CategorySocialMedia
+                  ActionToUse:
+                    Challenge: {}
+                - Name: CategoryAI
+                  ActionToUse:
+                    Challenge: {}
+                - Name: SignalAutomatedBrowser
+                  ActionToUse:
+                    Challenge: {}
+                - Name: SignalKnownBotDataCenter
+                  ActionToUse:
+                    Challenge: {}
+                - Name: SignalNonBrowserUserAgent
+                  ActionToUse:
+                    Challenge: {}
+                - Name: TGT_VolumetricIpTokenAbsent
+                  ActionToUse:
+                    Challenge: {}
+                - Name: TGT_VolumetricSession
+                  ActionToUse:
+                    Challenge: {}
+                - Name: TGT_SignalAutomatedBrowser
+                  ActionToUse:
+                    Challenge: {}
+                - Name: TGT_SignalBrowserInconsistency
+                  ActionToUse:
+                    Challenge: {}
+                - Name: TGT_TokenReuseIp
+                  ActionToUse:
+                    Challenge: {}
+                - Name: TGT_ML_CoordinatedActivityMedium
+                  ActionToUse:
+                    Challenge: {}
+                - Name: TGT_ML_CoordinatedActivityHigh
+                  ActionToUse:
+                    Challenge: {}
+          VisibilityConfig:
+            CloudWatchMetricsEnabled: true
+            MetricName: AWS-AWSManagedRulesBotControlRuleSet
+            SampledRequestsEnabled: true
+
+  # ------------------------------------------------------------
+  # GitHub OIDC Provider and IAM Resources
+  # ------------------------------------------------------------
+
   GitHubOpenIDConnectProvider:
     Type: AWS::IAM::OIDCProvider
     Properties:
@@ -575,6 +1058,12 @@ Resources:
 <% end %>
 
 Outputs:
+  MarketingSitesWebACLArn:
+    Description: ARN of the Marketing Sites WAF Web ACL
+    Value: !GetAtt MarketingSitesWebACL.Arn
+  MarketingSitesWebACLId:
+    Description: ID of the Marketing Sites WAF Web ACL
+    Value: !GetAtt MarketingSitesWebACL.Id
 <%
   marketing_sites_environment_configuration.each do |environment_type, _|
     environment_type = environment_type.to_s
@@ -585,8 +1074,6 @@ Outputs:
   MarketingSitesRoleCreationBoundary<%=environment_type.capitalize%>PolicyArn:
     Description: ARN of the permissions boundary policy for <%=environment_type%> environment roles
     Value: !Ref MarketingSitesRoleCreationBoundary<%=environment_type.capitalize%>Policy
-    Export:
-      Name: !Sub "${AWS::StackName}-MarketingSitesRoleCreationBoundary<%=environment_type.capitalize%>PolicyArn"
 <%  if %w[test production].include?(environment_type) %>
   GitHubActions<%=environment_type.capitalize%>RoleArn:
     Description: ARN of the GitHub Actions role for <%=environment_type%> environment (all site types)
