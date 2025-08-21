@@ -171,18 +171,6 @@ class Pd::WorkshopMailer < ApplicationMailer
          reply_to: email_address(@workshop.organizer.name, @workshop.organizer.email)
   end
 
-  def detail_change_notification(enrollment, to_email = '')
-    @enrollment = enrollment
-    @workshop = enrollment.workshop
-    @cancel_url = url_for controller: 'pd/workshop_enrollment', action: :cancel, code: enrollment.code
-
-    mail content_type: 'text/html',
-      from: from_teacher,
-      subject: detail_change_notification_subject(@workshop),
-      to: email_address(@enrollment.full_name, to_email.presence || @enrollment.email),
-      reply_to: email_address(@workshop.organizer.name, @workshop.organizer.email)
-  end
-
   def facilitator_detail_change_notification(user, workshop)
     @user = user
     @workshop = workshop

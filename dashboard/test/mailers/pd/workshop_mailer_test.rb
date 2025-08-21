@@ -62,7 +62,6 @@ class WorkshopMailerTest < ActionMailer::TestCase
 
     assert_emails 5 do
       Pd::WorkshopMailer.teacher_enrollment_receipt(enrollment).deliver_now
-      Pd::WorkshopMailer.detail_change_notification(enrollment).deliver_now
 
       # Still send cancellation receipt and exit survey to teachers
       Pd::WorkshopMailer.teacher_cancel_receipt(enrollment).deliver_now
@@ -71,22 +70,6 @@ class WorkshopMailerTest < ActionMailer::TestCase
       # email is suppressed
       Pd::WorkshopMailer.organizer_cancel_receipt(enrollment).deliver_now
       Pd::WorkshopMailer.organizer_enrollment_receipt(enrollment).deliver_now
-    end
-  end
-
-  test 'detail change notification links are complete urls' do
-    courses = [
-      Pd::Workshop::COURSE_ADMIN_COUNSELOR,
-      Pd::Workshop::COURSE_CSF
-    ]
-
-    courses.each do |course|
-      workshop = build(:workshop, course: course)
-      workshop.save(validate: false)
-      enrollment = create(:pd_enrollment, workshop: workshop)
-      mail = Pd::WorkshopMailer.detail_change_notification(enrollment)
-
-      assert links_are_complete_urls?(mail)
     end
   end
 
