@@ -300,6 +300,144 @@
         "data": {},
         "content": [{"data": {}, "marks": [], "value": "", "nodeType": "text"}],
         "nodeType": "paragraph"
+      },
+      {
+        "nodeType": "table",
+        "data": {},
+        "content": [
+          {
+            "nodeType": "table-row",
+            "data": {},
+            "content": [
+              {
+                "nodeType": "table-header-cell",
+                "data": {},
+                "content": [
+                  {
+                    "nodeType": "paragraph",
+                    "data": {},
+                    "content": [
+                      {
+                        "nodeType": "text",
+                        "value": "Table with single strings with new lines content in cells",
+                        "marks": [],
+                        "data": {}
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "nodeType": "table-header-cell",
+                "data": {},
+                "content": [
+                  {
+                    "nodeType": "paragraph",
+                    "data": {},
+                    "content": [
+                      {
+                        "nodeType": "text",
+                        "value": "",
+                        "marks": [],
+                        "data": {}
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodeType": "table-row",
+            "data": {},
+            "content": [
+              {
+                "nodeType": "table-cell",
+                "data": {},
+                "content": [
+                  {
+                    "nodeType": "paragraph",
+                    "data": {},
+                    "content": [
+                      {
+                        "nodeType": "text",
+                        "value": "Adobe Employee Giving\nApple Inc. Employee Program\nAtlassian Foundation International\nBain Capital\nBall Aerospace & Technologies\nBright Funds Foundation\nCCC Intelligent Solutions\nCisco Employee Giving\nCrowdstrike\nF5\nGilead\nGitHub",
+                        "marks": [],
+                        "data": {}
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "nodeType": "table-cell",
+                "data": {},
+                "content": [
+                  {
+                    "nodeType": "paragraph",
+                    "data": {},
+                    "content": [
+                      {
+                        "nodeType": "text",
+                        "value": "Google Inc. Employee Program\nLiberty Mutual Foundation\nMicrosoft Matching Gifts Program\nN1234\nNational Instruments\nPaypal Giving Fund\nSalesforce Employee Program\nUK Online Giving Foundation\nUSAA\nVISA Foundation\nWorkiva",
+                        "marks": [],
+                        "data": {}
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "nodeType": "table",
+        "data": {},
+        "content": [
+          {
+            "nodeType": "table-row",
+            "data": {},
+            "content": [
+              {
+                "nodeType": "table-cell",
+                "data": {},
+                "content": [
+                  {
+                    "nodeType": "paragraph",
+                    "data": {},
+                    "content": [
+                      {
+                        "nodeType": "text",
+                        "value": "Table without header",
+                        "marks": [],
+                        "data": {}
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "nodeType": "table-cell",
+                "data": {},
+                "content": [
+                  {
+                    "nodeType": "paragraph",
+                    "data": {},
+                    "content": [
+                      {
+                        "nodeType": "text",
+                        "value": "Some content",
+                        "marks": [],
+                        "data": {}
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       }
     ],
     "nodeType": "document"
