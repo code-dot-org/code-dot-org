@@ -9,7 +9,6 @@ import moduleStyles from './extra-links.module.scss';
 
 interface ExtraLinksProps {
   levelId: number;
-  scriptLevelId?: string;
   positionRightOfFooter?: boolean;
 }
 
@@ -17,14 +16,11 @@ interface ExtraLinksProps {
 // then display a modal with the link data.
 const ExtraLinks: React.FunctionComponent<ExtraLinksProps> = ({
   levelId,
-  scriptLevelId,
   positionRightOfFooter,
 }: ExtraLinksProps) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const {isExtraLinksLoading, levelLinkData, projectLinkData} = useExtraLinks(
-    levelId,
-    scriptLevelId
-  );
+  const {isExtraLinksLoading, levelLinkData, projectLinkData} =
+    useExtraLinks(levelId);
 
   if (isExtraLinksLoading || (!levelLinkData && !projectLinkData)) {
     return null;

@@ -8,18 +8,15 @@ import ButtonWithDialog from './ButtonWithDialog';
 
 interface ResourcePanelExtraLinksProps {
   levelId: number;
-  scriptLevelId?: string;
   theme: Theme;
 }
 
 const ResourcePanelExtraLinks: React.FunctionComponent<
   ResourcePanelExtraLinksProps
-> = ({levelId, scriptLevelId, theme}) => {
+> = ({levelId, theme}) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const {isExtraLinksLoading, levelLinkData, projectLinkData} = useExtraLinks(
-    levelId,
-    scriptLevelId
-  );
+  const {isExtraLinksLoading, levelLinkData, projectLinkData} =
+    useExtraLinks(levelId);
 
   if (isExtraLinksLoading || !levelLinkData) {
     return null;

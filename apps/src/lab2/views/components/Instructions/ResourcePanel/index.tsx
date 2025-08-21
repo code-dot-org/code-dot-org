@@ -7,7 +7,6 @@ import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import classNames from 'classnames';
 import React, {useMemo, useState} from 'react';
 
-import {getCurrentScriptLevelId} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {LocaleProps} from '@cdo/apps/lab2/types';
 import AiTutor2Chat from '@cdo/apps/lab2/views/components/AiTutor2Chat';
@@ -95,7 +94,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const localeProps = getLocaleProps();
 
   const levelId = instructionsProps.levelProperties.id;
-  const scriptLevelId = useAppSelector(getCurrentScriptLevelId);
 
   // Build available tabs based on level information.
   const availableTabs = useMemo(() => {
@@ -170,11 +168,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
           ))}
         </div>
         <div className={classNames(styles.bottomTabs)}>
-          <ResourcePanelExtraLinks
-            levelId={levelId}
-            scriptLevelId={scriptLevelId}
-            theme={theme}
-          />
+          <ResourcePanelExtraLinks levelId={levelId} theme={theme} />
           {(localeProps || settings) && (
             <WithTooltip
               tooltipProps={{

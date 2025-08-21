@@ -1,5 +1,6 @@
 import {useState, useEffect} from 'react';
 
+import {getCurrentScriptLevelId} from '@cdo/apps/code-studio/progressReduxSelectors';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -50,11 +51,13 @@ async function fetchExtraLinksData(
   };
 }
 
-export const useExtraLinks = (levelId: number, scriptLevelId?: string) => {
+export const useExtraLinks = (levelId: number) => {
   const [isExtraLinksLoading, setIsLoading] = useState(false);
   const [extraLinksData, setExtraLinksData] = useState<ExtraLinksData | null>(
     null
   );
+
+  const scriptLevelId = useAppSelector(getCurrentScriptLevelId);
 
   const channelId = useAppSelector(
     state => state.lab.channel && state.lab.channel.id

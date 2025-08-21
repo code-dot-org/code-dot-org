@@ -5,7 +5,6 @@
  */
 import React, {Suspense, useEffect} from 'react';
 
-import {getCurrentScriptLevelId} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {PERMISSIONS} from '@cdo/apps/lab2/constants';
 import {useInitialLabTheme} from '@cdo/apps/lab2/hooks/useInitialLabTheme';
@@ -29,7 +28,6 @@ const LabViewsRenderer: React.FunctionComponent = () => {
   const currentAppName = levelProperties?.appName;
   const exemplarSources = levelProperties?.exemplarSources;
   const levelId = levelProperties?.id;
-  const scriptLevelId = useAppSelector(getCurrentScriptLevelId);
 
   const isBlockedAbuse = useAppSelector(state => state.lab.isBlockedAbuse);
   const projectSharingDisabled = useAppSelector(
@@ -120,7 +118,6 @@ const LabViewsRenderer: React.FunctionComponent = () => {
         {!hideExtraLinks && levelId && (
           <ExtraLinks
             levelId={levelId}
-            scriptLevelId={scriptLevelId}
             positionRightOfFooter={extraLinksButtonRightOfFooter}
           />
         )}
