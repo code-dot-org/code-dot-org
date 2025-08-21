@@ -53,6 +53,13 @@ export const TYPOGRAPHY_OVERRIDES: Components<Theme>['MuiTypography'] = {
       '&.MuiTypography-overline.overline--size-l': {
         fontSize: '1rem', // 16px
       },
+      // Caption styles
+      '&.MuiTypography-caption': {
+        color: theme.palette.common.black,
+        fontSize: '1rem', // 16px
+        fontWeight: '500',
+        margin: theme.spacing(1, 0, 0), // 8px 0 0
+      },
     }),
     gutterBottom: ({theme}) => ({
       '&.MuiTypography-body1': {
@@ -68,6 +75,9 @@ export const TYPOGRAPHY_OVERRIDES: Components<Theme>['MuiTypography'] = {
         marginBottom: theme.spacing(1.25), // 10px
       },
       '&.MuiTypography-overline': {
+        marginBottom: theme.spacing(2), // 16px
+      },
+      '&.MuiTypography-caption': {
         marginBottom: theme.spacing(2), // 16px
       },
     }),

@@ -191,6 +191,7 @@ class Section < ApplicationRecord
   ADD_STUDENT_RESTRICTED = 'restricted'.freeze
 
   CSA = 'csa'.freeze
+  CSA_ALT = 'csa-alt'.freeze
   CSA_PILOT_FACILITATOR = 'csa-pilot-facilitator'.freeze
 
   # A section can have five co-teachers, plus the owner, for a total of 6
@@ -219,11 +220,11 @@ class Section < ApplicationRecord
   end
 
   def course_offering_id
-    unit_group ? unit_group&.course_version&.course_offering&.id : script&.course_version&.course_offering&.id
+    unit_group ? unit_group&.course_version&.course_offering&.id : script&.get_course_version&.course_offering&.id
   end
 
   def course_display_name
-    unit_group ? unit_group&.course_version&.localized_title : script&.course_version&.localized_title
+    unit_group ? unit_group&.course_version&.localized_title : script&.get_course_version&.localized_title
   end
 
   def workshop_section?
@@ -410,7 +411,7 @@ class Section < ApplicationRecord
         code: code,
         course_display_name: course_display_name,
         course_offering_id: course_offering_id,
-        course_version_id: unit_group ? unit_group&.course_version&.id : script&.course_version&.id,
+        course_version_id: unit_group ? unit_group&.course_version&.id : script&.get_course_version&.id,
         unit_id: script_id,
         course_id: course_id,
         hidden: hidden,
@@ -462,7 +463,7 @@ class Section < ApplicationRecord
         },
         course: {
           course_offering_id: course_offering_id,
-          version_id: unit_group ? unit_group&.course_version&.id : script&.course_version&.id,
+          version_id: unit_group ? unit_group&.course_version&.id : script&.get_course_version&.id,
           unit_id: unit_group ? script_id : nil,
           lesson_extras_available: script.try(:lesson_extras_available),
           text_to_speech_enabled: script.try(:text_to_speech_enabled?),
@@ -534,7 +535,7 @@ class Section < ApplicationRecord
           participant_type: participant_type,
           course_display_name: course_display_name,
           course_offering_id: course_offering_id,
-          course_version_id: unit_group ? unit_group&.course_version&.id : script&.course_version&.id,
+          course_version_id: unit_group ? unit_group&.course_version&.id : script&.get_course_version&.id,
           unit_id: unit_group ? script_id : nil,
           unitPosition: unit_group_unit&.position,
           course_id: course_id,
@@ -689,7 +690,7 @@ class Section < ApplicationRecord
   # A section can be assigned a course (aka unit_group) without being assigned a script,
   # so we check both here.
   def assigned_csa?
-    script&.csa? || [CSA, CSA_PILOT_FACILITATOR].include?(unit_group&.family_name)
+    script&.csa? || [CSA, CSA_ALT, CSA_PILOT_FACILITATOR].include?(unit_group&.family_name)
   end
 
   def assigned_ai_chat?

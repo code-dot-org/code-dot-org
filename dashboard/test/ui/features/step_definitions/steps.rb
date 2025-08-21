@@ -922,8 +922,10 @@ Then /^element "([^"]*)" does not exist/ do |selector|
   expect(element_exists?(selector)).to eq(false)
 end
 
-Then /^element "([^"]*)" has focus/ do |selector|
-  expect(element_focused?(selector)).to eq(true)
+Then /^I wait until element "([^"]*)" has focus/ do |selector|
+  wait_short_until do
+    expect(element_focused?(selector)).to eq(true)
+  end
 end
 
 Then /^element "([^"]*)" does not have focus/ do |selector|

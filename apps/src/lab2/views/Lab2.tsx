@@ -13,6 +13,7 @@ import BrowserTextToSpeechWrapper from '@cdo/apps/sharedComponents/BrowserTextTo
 
 import ProjectContainer from '../projects/ProjectContainer';
 
+import RubricFABContainer from './components/rubrics/RubricFABContainer';
 import RubricWrapper from './components/rubrics/RubricWrapper';
 import DialogManager from './dialogs/DialogManager';
 import Lab2Wrapper from './Lab2Wrapper';
@@ -23,17 +24,19 @@ const Lab2: React.FunctionComponent = () => {
   return (
     <Provider store={getStore()}>
       <BrowserTextToSpeechWrapper>
-        <ThemeProvider>
-          <Lab2Wrapper>
-            <DialogManager>
-              <MetricsAdapter />
-              <ProjectContainer channelId={getStandaloneProjectId()}>
-                <LabViewsRenderer />
-              </ProjectContainer>
-              <RubricWrapper />
-            </DialogManager>
-          </Lab2Wrapper>
-        </ThemeProvider>
+        <RubricWrapper>
+          <ThemeProvider>
+            <Lab2Wrapper>
+              <DialogManager>
+                <MetricsAdapter />
+                <ProjectContainer channelId={getStandaloneProjectId()}>
+                  <LabViewsRenderer />
+                </ProjectContainer>
+                <RubricFABContainer />
+              </DialogManager>
+            </Lab2Wrapper>
+          </ThemeProvider>
+        </RubricWrapper>
       </BrowserTextToSpeechWrapper>
     </Provider>
   );

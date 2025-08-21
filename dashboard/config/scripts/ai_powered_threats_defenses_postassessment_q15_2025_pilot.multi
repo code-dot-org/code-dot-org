@@ -1,0 +1,14 @@
+name 'ai-powered-threats-defenses-postassessment-q15_2025-pilot'
+
+question ‘When choosing defenses, why is balancing “cost” and “friction” critical?’
+
+right ‘To maintain both security effectiveness and user usability’
+wrong ‘To maximize the complexity of defenses’
+wrong ‘To ensure the app becomes completely secure’
+wrong ‘To minimize all vulnerabilities’
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 12: Layered Defenses
+MARKDOWN

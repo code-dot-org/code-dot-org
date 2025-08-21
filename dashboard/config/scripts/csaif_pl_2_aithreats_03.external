@@ -1,0 +1,15 @@
+name 'csaif_pl_2_aithreats_03'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# The Day Everything Broke
+
+## 📝 To Do
+
+#### Choose one of the scenarios from Part 1.
+
+#### Complete the empathy map for Jordan thinking about what he might say, think, do, and feel in that moment.
+
+<br>
+MARKDOWN

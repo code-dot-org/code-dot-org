@@ -7,7 +7,7 @@
   "user_id": 16889,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Investigate and Modify\r\n\r\nExperiment with the program by making the following modifications, then run the program to observe the results.\r\n\r\n✅ <strong>TO DO:</strong> What happens if you call the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">filterByDiet()</code> method? Add the following code segment to the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">RecipeRunner</code> class:\r\n\r\n<pre style=\"background-color: #333333; color: white;\">\r\nSystem.out.println(\"Recommended meat recipes: \" + blog.getRecommendedMeatRecipes());\r\n</pre>\r\n\r\nWhat is printed when you run the program? Why do you think this happened?\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> The recipes are stored in fixed fields instead of arrays. Explore how the method works without loops.\r\n</div>\r\n",
+    "long_instructions": "## Investigate and Modify\r\n\r\nExperiment with the program by making the following modifications, then run the program to observe the results.\r\n\r\n✅ <strong>TO DO:</strong> What happens if you call the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">recipesToString()</code> method? Add the following code segment to the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">RecipeRunner</code> class:\r\n\r\n<pre style=\"background-color: #333333; color: white;\">\r\nSystem.out.println(\"Recommended vegetarian recipes:\\n\" + blog.recipesToString(r2, r3));\r\n</pre>\r\n\r\nWhat is printed when you run the program? Why do you think this happened?\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> The recipes are stored in fixed fields instead of arrays. Explore how the method works without loops.\r\n</div>\r\n",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -20,13 +20,13 @@
       }
     },
     "project_template_level_name": "CSA U7L4-L1 Private PBT_alt-2025",
-    "teacher_markdown": "Students will see the following error displayed in the console:\r\n\r\n```\r\n/RecipeRunner.java:20: error: filterByDiet(java.util.ArrayList<Recipe>,java.lang.String) has private access in RecipeBlog\r\n    ArrayList<Recipe> meatRecipes = blog.filterByDiet(recipes, \"meat\");\r\n                                        ^\r\n```\r\n\r\nSince the `filterByDiet()` method is a `private` method, it can only be accessed within the `RecipeBlog` class.",
+    "teacher_markdown": "Students will see the following error displayed in the console:\r\n\r\n```\r\n/RecipeRunner.java:17: error: recipesToString(Recipe,Recipe) has private access in RecipeBlog\r\n    System.out.println(\"Recommended vegetarian recipes:\\n\" + blog.recipesToString(r2, r3));\r\n                                                                 ^\r\n```\r\nSince the `recipesToString()` method is a `private` method, it can only be accessed within the `RecipeBlog` class.",
     "name_suffix": "_alt-2025",
     "ai_tutor_available": "true",
     "encrypted_examples": [
 
     ]
   },
-  "audit_log": "[{\"changed_at\":\"2024-08-02T22:27:35.191+00:00\",\"changed\":[\"cloned from \\\"CSA U7L4-L1_pilot-2025\\\"\"],\"cloned_from\":\"CSA U7L4-L1_pilot-2025\"},{\"changed_at\":\"2025-05-26 01:01:38 +0000\",\"changed\":[\"long_instructions\",\"ai_tutor_available\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-08-02T22:27:35.191+00:00\",\"changed\":[\"cloned from \\\"CSA U7L4-L1_pilot-2025\\\"\"],\"cloned_from\":\"CSA U7L4-L1_pilot-2025\"},{\"changed_at\":\"2025-05-26 01:01:38 +0000\",\"changed\":[\"long_instructions\",\"ai_tutor_available\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-08-20 17:55:46 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-08-20 18:00:14 +0000\",\"changed\":[\"teacher_markdown\",\"encrypted_examples\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
 </Javalab>

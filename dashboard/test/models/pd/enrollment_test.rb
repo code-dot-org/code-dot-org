@@ -101,21 +101,13 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     csp_summer_workshop = build(:csp_summer_workshop)
     csp_summer_workshop_enrollment = build(:pd_enrollment, workshop: csp_summer_workshop)
 
-    csp_academic_year_workshop = build(:csp_academic_year_workshop)
-    csp_academic_year_workshop_enrollment = build(:pd_enrollment, workshop: csp_academic_year_workshop)
-
-    csf_deep_dive_workshop = build(:csf_deep_dive_workshop)
-    csf_201_workshop_enrollment = build(:pd_enrollment, workshop: csf_deep_dive_workshop)
-
-    csf_intro_workshop = build(:csf_intro_workshop)
-    csf_intro_workshop_enrollment = build(:pd_enrollment, workshop: csf_intro_workshop)
+    byo_workshop = build(:byo_workshop)
+    byo_workshop_enrollment = build(:pd_enrollment, workshop: byo_workshop)
 
     assert_equal "/pd/workshop_pre_survey?enrollmentCode=#{csp_summer_workshop_enrollment.code}",
       URI(csp_summer_workshop_enrollment.pre_workshop_survey_url).path + '?' + URI(csp_summer_workshop_enrollment.pre_workshop_survey_url).query
-    assert_equal "/pd/workshop_pre_survey?enrollmentCode=#{csp_academic_year_workshop_enrollment.code}",
-      URI(csp_academic_year_workshop_enrollment.pre_workshop_survey_url).path + '?' + URI(csp_academic_year_workshop_enrollment.pre_workshop_survey_url).query
-    assert_equal '/pd/workshop_survey/csf/pre201', URI(csf_201_workshop_enrollment.pre_workshop_survey_url).path
-    assert_nil csf_intro_workshop_enrollment.pre_workshop_survey_url
+    assert_equal "/pd/workshop_pre_survey?enrollmentCode=#{byo_workshop_enrollment.code}",
+      URI(byo_workshop_enrollment.pre_workshop_survey_url).path + '?' + URI(byo_workshop_enrollment.pre_workshop_survey_url).query
   end
 
   test 'exit_survey_url' do

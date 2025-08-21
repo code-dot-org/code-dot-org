@@ -169,7 +169,9 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       auth_hash = inject_clever_data(auth_hash)
     end
 
-    user = User.from_omniauth(auth_hash, auth_params, request)
+    params = auth_params.presence || {}
+    params[:user_type] = cookies['sign_up_user_type'] unless params[:user_type]
+    user = User.from_omniauth(auth_hash, params, request)
 
     prepare_locale_cookie user
 
@@ -205,9 +207,11 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   private def sign_up_google_oauth2
     session[:sign_up_type] = AuthenticationOption::GOOGLE
+    params = auth_params.presence || {}
+    params[:user_type] = cookies['sign_up_user_type'] unless params[:user_type]
 
     user = User.new.tap do |u|
-      User.initialize_new_oauth_user(u, auth_hash, auth_params)
+      User.initialize_new_oauth_user(u, auth_hash, params)
       u.oauth_token = auth_hash.credentials&.token
       u.oauth_token_expiration = auth_hash.credentials&.expires_at
       u.oauth_refresh_token = auth_hash.credentials&.refresh_token
@@ -235,7 +239,9 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     session[:sign_up_type] = AuthenticationOption::CLEVER
 
     auth_hash = inject_clever_data(auth_hash())
-    user = User.from_omniauth(auth_hash, auth_params, request)
+    params = auth_params.presence || {}
+    params[:user_type] = cookies['sign_up_user_type'] unless params[:user_type]
+    user = User.from_omniauth(auth_hash, params, request)
     prepare_locale_cookie user
 
     # if the registration credentials identify us as an existing user, simply
@@ -292,6 +298,8 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
     @form_data = {
       email: user.email,
+      given_name: user.given_name,
+      family_name: user.family_name,
       provider: provider
     }
     sign_up_url = determine_sign_up_url(user)
@@ -313,7 +321,9 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   private def extract_microsoft_data(auth)
     microsoft_data = OmniAuth::AuthHash.new(
       email: auth[:extra][:raw_info][:userPrincipalName],
-      name: auth[:extra][:raw_info][:displayName]
+      name: auth[:extra][:raw_info][:displayName],
+      given_name: auth_hash.dig(:extra, :raw_info, :givenName),
+      family_name: auth_hash.dig(:extra, :raw_info, :surname)
     )
 
     auth.info.merge!(microsoft_data)

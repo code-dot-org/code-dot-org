@@ -5,15 +5,15 @@ module Pd::Foorm
 
     # Process single select responses with detailed breakdown
     def self.process_single_select_responses(question_summary, choices, has_other = false)
+      question_summary ||= {}
       return {} unless question_summary.is_a?(Hash)
 
       total_responses = question_summary.values.filter {|v| v.is_a?(Numeric)}.sum
       breakdown = {}
 
-      question_summary.each do |choice_key, count|
+      choices.each do |choice_key, choice_label|
         next if choice_key == 'other_answers'
-
-        choice_label = choices[choice_key] || choice_key
+        count = question_summary[choice_key] || 0
         breakdown[choice_key] = {
           count: count,
           percentage: calculate_percentage(count, total_responses, 1),
@@ -36,16 +36,16 @@ module Pd::Foorm
 
     # Process multi-select responses
     def self.process_multi_select_responses(question_summary, choices, has_other = false)
+      question_summary ||= {}
       return {} unless question_summary.is_a?(Hash)
 
       total_respondents = question_summary[:num_respondents] || 0
       breakdown = {}
       skip_keys = [:num_respondents, 'other_answers']
 
-      question_summary.each do |choice_key, count|
+      choices.each do |choice_key, choice_label|
         next if skip_keys.include?(choice_key)
-
-        choice_label = choices[choice_key] || choice_key
+        count = question_summary[choice_key] || 0
         breakdown[choice_key] = {
           count: count,
           percentage: calculate_percentage(count, total_respondents, 1),
@@ -68,16 +68,16 @@ module Pd::Foorm
 
     # Process rating responses with promoter percentage calculation (for NPS-style 0-10 ratings)
     def self.process_rating_responses(question_summary, choices)
+      question_summary ||= {}
       return {} unless question_summary.is_a?(Hash)
 
-      total_responses = question_summary.values.sum
+      total_responses = question_summary.values.filter {|v| v.is_a?(Numeric)}.sum
       breakdown = {}
       promoter_count = 0
 
-      question_summary.each do |choice_key, count|
+      choices.each do |choice_key, choice_label|
         next if choice_key == 'other_answers'
-
-        choice_label = choices[choice_key] || choice_key
+        count = question_summary[choice_key] || 0
         breakdown[choice_key] = {
           count: count,
           percentage: calculate_percentage(count, total_responses, 1),
@@ -99,18 +99,18 @@ module Pd::Foorm
 
     # Process Likert scale responses with weighted score calculation (for 1-7 agreement scales)
     def self.process_likert_responses(question_summary, choices)
+      question_summary ||= {}
       return {} unless question_summary.is_a?(Hash)
 
-      total_responses = question_summary.values.sum
+      total_responses = question_summary.values.filter {|v| v.is_a?(Numeric)}.sum
       breakdown = {}
       weighted_sum = 0
       agreement_count = 0 # Count of responses >= 5 (Slightly Agree and above)
 
-      question_summary.each do |choice_key, count|
+      choices.each do |choice_key, choice_label|
         next if choice_key == 'other_answers'
-
+        count = question_summary[choice_key] || 0
         choice_value = choice_key.to_i
-        choice_label = choices[choice_key] || choice_key
         weighted_value = LIKERT_WEIGHTS[choice_value]
 
         breakdown[choice_key] = {
@@ -136,6 +136,7 @@ module Pd::Foorm
       {
         total_responses: total_responses,
         weighted_score: weighted_score,
+        agreement_count: agreement_count,
         agreement_percentage: agreement_percentage,
         breakdown: breakdown
       }

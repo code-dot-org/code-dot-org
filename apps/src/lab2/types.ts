@@ -54,6 +54,7 @@ export interface ProjectAndSources {
   channel: Channel;
   abuseScore?: number;
   sharingDisabled?: boolean;
+  isTeacherOfProjectOwner?: boolean;
 }
 
 /// ------ SOURCES ------ ///
@@ -133,6 +134,7 @@ export interface ProjectFile {
   folderId: string;
   type?: ProjectFileType;
   url?: string;
+  flagged?: boolean;
 }
 
 /**
@@ -219,7 +221,6 @@ export interface LevelProperties {
   startDirection?: number;
   widgetView?: boolean;
   widgetViewAllowShowCode?: boolean;
-  aiTutor2Available?: boolean;
   // Properties added for parity with non-lab2 AI Tutor levels
   aiTutorAvailable?: boolean;
   isAssessment?: boolean;
@@ -227,6 +228,8 @@ export interface LevelProperties {
   type?: string;
   starterAssets?: {[key: string]: string};
   showRubric?: boolean;
+  customHelperLibrary?: string;
+  validationCode?: string;
 }
 
 // Level configuration data used by project-backed labs that don't require
