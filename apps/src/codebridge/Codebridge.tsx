@@ -58,6 +58,7 @@ export const Codebridge = React.memo(
     const isShareView = useAppSelector(state => state.lab.isShareView);
     const isWidgetView = !!levelProperties.widgetView;
     const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
+    const appName = levelProperties.appName;
 
     // Adds keyboard shortcuts for Editor (1), Run (2), and Console (3)
     // which are preceded by Control (Windows/Linux) or Command (macOS).
@@ -120,18 +121,17 @@ export const Codebridge = React.memo(
       }
       let currentLayout = config.activeLayout;
       if (!currentLayout) {
-        currentLayout = 'vertical';
+        currentLayout = appName === 'pythonlab' ? 'horizontal' : 'vertical';
       }
       return config.layoutComponents[currentLayout];
     }, [
+      appName,
       config.activeLayout,
       config.layoutComponents,
       isShareView,
       isStartMode,
       isWidgetView,
     ]);
-
-    const appName = levelProperties.appName;
 
     const backpackApi = useMemo(
       () => new BackpackClientApi(appName, null),
