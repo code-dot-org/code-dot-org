@@ -103,7 +103,7 @@ class CourseOfferingTest < ActiveSupport::TestCase
     course = create(:unit_group, family_name: 'family', version_year: '2000')
     CourseOffering.add_course_offering(course)
 
-    course.family_name = nil
+    course.family_name = 'other-family'
     course.save!
     course.reload
     script = create(:script)

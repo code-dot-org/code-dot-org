@@ -172,17 +172,6 @@ class Unit < ApplicationRecord
     end
   end
 
-  after_save :check_course_type_settings
-
-  def check_course_type_settings
-    if is_course?
-      raise 'Published state must be set on the unit if its a standalone unit.' if published_state.nil?
-      raise 'Instructor audience must be set on the unit if its a standalone unit.' if instructor_audience.nil?
-      raise 'Participant audience must be set on the unit if its a standalone unit.' if participant_audience.nil?
-      raise 'Instruction type must be set on the unit if its a standalone unit.' if instruction_type.nil?
-    end
-  end
-
   def prevent_new_duplicate_levels(old_dup_level_keys = [])
     new_dup_level_keys = duplicate_level_keys - old_dup_level_keys
     raise "new duplicate levels detected in unit: #{new_dup_level_keys}" if new_dup_level_keys.any?
@@ -276,10 +265,6 @@ class Unit < ApplicationRecord
     end
   end
 
-  # is_course - true if this Unit is intended to be the root of a
-  #   CourseOffering version.  Used during seeding to create the appropriate
-  #   CourseVersion and CourseOffering objects. For example, this should be
-  #   true for CourseA-CourseF .script files.
   # seeded_from - a timestamp indicating when this object was seeded from
   #   its script_json file, as determined by the serialized_at value within
   #   said json.  Expect this to be nil on levelbulider, since those objects
@@ -314,7 +299,6 @@ class Unit < ApplicationRecord
     project_sharing
     curriculum_umbrella
     tts
-    is_course
     show_calendar
     weekly_instructional_minutes
     include_student_lesson_plans
@@ -1121,7 +1105,6 @@ class Unit < ApplicationRecord
 
       unit.generate_plc_objects
 
-      CourseOffering.add_course_offering(unit) if unit.is_course
       unit
     end
   end
@@ -1597,7 +1580,6 @@ class Unit < ApplicationRecord
         hasStandards: has_standards_associations?,
         tts: tts?,
         deprecated: deprecated?,
-        is_course: is_course?,
         is_migrated: is_migrated?,
         scriptPath: unit_path,
         showCalendar: is_migrated ? show_calendar : false, #prevent calendar from showing for non-migrated units for now
@@ -1906,7 +1888,6 @@ class Unit < ApplicationRecord
       :has_verified_resources,
       :project_sharing,
       :tts,
-      :is_course,
       :show_calendar,
       :is_migrated,
       :include_student_lesson_plans,

@@ -1,5 +1,9 @@
 <Gamelab>
   <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2022-11-28T04:18:59.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -89,16 +93,13 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "true",
-    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"46410e18-2410-4aad-b889-2d8b662760d2\",\r\n    \"e87e4bc1-7ecc-4b51-a473-991b0cc01b24\",\r\n    \"33469162-c226-4732-b593-a707bfbbdb10\",\r\n    \"9207a844-ed0e-4f02-bbcd-86e3d75c65d6\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"46410e18-2410-4aad-b889-2d8b662760d2\": {\r\n      \"name\": \"ground_grass_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/gamelab/48a_8kq4NSAHoLjO0VNWNhoKgKghcJDK/category_video_games/ground_grass.png\",\r\n      \"frameSize\": {\r\n        \"x\": 380,\r\n        \"y\": 94\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"48a_8kq4NSAHoLjO0VNWNhoKgKghcJDK\",\r\n      \"categories\": [\r\n        \"video_games\"\r\n      ]\r\n    },\r\n    \"e87e4bc1-7ecc-4b51-a473-991b0cc01b24\": {\r\n      \"name\": \"halloweenemoji_06_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/gamelab/5xtqA.QL.u4oYCh3UMHCBcFczTvjBeQl/category_emoji/halloweenemoji_06.png\",\r\n      \"frameSize\": {\r\n        \"x\": 356,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"5xtqA.QL.u4oYCh3UMHCBcFczTvjBeQl\",\r\n      \"categories\": [\r\n        \"emoji\"\r\n      ]\r\n    },\r\n    \"33469162-c226-4732-b593-a707bfbbdb10\": {\r\n      \"name\": \"halloweenemoji_04_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/gamelab/hq.ucPtTaB_vNQ.1BzHOStATi0Xc_TG_/category_emoji/halloweenemoji_04.png\",\r\n      \"frameSize\": {\r\n        \"x\": 370,\r\n        \"y\": 318\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"hq.ucPtTaB_vNQ.1BzHOStATi0Xc_TG_\",\r\n      \"categories\": [\r\n        \"emoji\"\r\n      ]\r\n    },\r\n    \"9207a844-ed0e-4f02-bbcd-86e3d75c65d6\": {\r\n      \"name\": \"face_pumpkin_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/gamelab/6q.rzBUjjAdRNkTQ.ccs00cxCP4f.sWV/category_food/face_pumpkin.png\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 323\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"6q.rzBUjjAdRNkTQ.ccs00cxCP4f.sWV\",\r\n      \"categories\": [\r\n        \"food\"\r\n      ]\r\n    }\r\n  }\r\n}",
+    "start_animations": "{\n  \"orderedKeys\": [\n    \"46410e18-2410-4aad-b889-2d8b662760d2\",\n    \"e87e4bc1-7ecc-4b51-a473-991b0cc01b24\",\n    \"33469162-c226-4732-b593-a707bfbbdb10\",\n    \"9207a844-ed0e-4f02-bbcd-86e3d75c65d6\"\n  ],\n  \"propsByKey\": {\n    \"46410e18-2410-4aad-b889-2d8b662760d2\": {\n      \"name\": \"ground_grass_1\",\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/48a_8kq4NSAHoLjO0VNWNhoKgKghcJDK/category_video_games/ground_grass.png\",\n      \"frameSize\": {\n        \"x\": 380,\n        \"y\": 94\n      },\n      \"frameCount\": 1,\n      \"looping\": true,\n      \"frameDelay\": 2,\n      \"version\": \"48a_8kq4NSAHoLjO0VNWNhoKgKghcJDK\",\n      \"categories\": [\n        \"video_games\"\n      ]\n    },\n    \"e87e4bc1-7ecc-4b51-a473-991b0cc01b24\": {\n      \"name\": \"halloweenemoji_06_1\",\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/5xtqA.QL.u4oYCh3UMHCBcFczTvjBeQl/category_emoji/halloweenemoji_06.png\",\n      \"frameSize\": {\n        \"x\": 356,\n        \"y\": 400\n      },\n      \"frameCount\": 1,\n      \"looping\": true,\n      \"frameDelay\": 2,\n      \"version\": \"5xtqA.QL.u4oYCh3UMHCBcFczTvjBeQl\",\n      \"categories\": [\n        \"emoji\"\n      ]\n    },\n    \"33469162-c226-4732-b593-a707bfbbdb10\": {\n      \"name\": \"halloweenemoji_04_1\",\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/hq.ucPtTaB_vNQ.1BzHOStATi0Xc_TG_/category_emoji/halloweenemoji_04.png\",\n      \"frameSize\": {\n        \"x\": 370,\n        \"y\": 318\n      },\n      \"frameCount\": 1,\n      \"looping\": true,\n      \"frameDelay\": 2,\n      \"version\": \"hq.ucPtTaB_vNQ.1BzHOStATi0Xc_TG_\",\n      \"categories\": [\n        \"emoji\"\n      ]\n    },\n    \"9207a844-ed0e-4f02-bbcd-86e3d75c65d6\": {\n      \"name\": \"face_pumpkin_1\",\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/6q.rzBUjjAdRNkTQ.ccs00cxCP4f.sWV/category_food/face_pumpkin.png\",\n      \"frameSize\": {\n        \"x\": 400,\n        \"y\": 323\n      },\n      \"frameCount\": 1,\n      \"looping\": true,\n      \"frameDelay\": 2,\n      \"version\": \"6q.rzBUjjAdRNkTQ.ccs00cxCP4f.sWV\",\n      \"categories\": [\n        \"food\"\n      ]\n    }\n  }\n}",
     "instructions_important": "false",
     "hide_animation_mode": "false",
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "true",
     "pause_animations_by_default": "false",
     "show_debug_watch": "true",
-    "encrypted_examples": [
-
-    ],
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "expand_debugger": "false",
@@ -113,11 +114,7 @@
     "validation_enabled": "false",
     "preload_asset_list": null
   },
-  "game_id": 50,
   "published": true,
-  "created_at": "2022-11-28T04:18:59.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-11-28T04:18:59.553+00:00\",\"changed\":[\"cloned from \\\"VPL-CSD-PILOT-S22-AYW-M2-AnimationsGamesSample\\\"\"],\"cloned_from\":\"VPL-CSD-PILOT-S22-AYW-M2-AnimationsGamesSample\"},{\"changed_at\":\"2022-11-28 04:20:30 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2022-11-28 04:21:16 +0000\",\"changed\":[\"code_functions\",\"start_animations\",\"encrypted_examples\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2022-11-28 04:21:56 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"start_blocks\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\",\"preload_asset_list\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2022-11-28 04:22:53 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2022-11-28 04:24:53 +0000\",\"changed\":[\"code_functions\",\"start_animations\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2022-11-28 04:26:12 +0000\",\"changed\":[\"code_functions\",\"text_mode_at_start\",\"callout_json\",\"encrypted_examples\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2022-11-28 04:27:42 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]"
 }]]></config>

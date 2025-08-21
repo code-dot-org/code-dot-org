@@ -70,7 +70,7 @@
           -# When LevelGroup-hosted, with students (or teachers doing PD), set all answers false before rendering page.
           - correct = include_multi_answers?(standalone) ? answer['correct'] : false
           - answer_class = "answerbutton " + (use_tight_layout ? "" : "btn")
-          %button{class: answer_class, style: "display: inline-block; height: #{height}", correct: "#{correct}", index: "#{i}"}
+          %div{class: answer_class, style: "display: inline-block; height: #{height}", correct: "#{correct}", index: "#{i}"}
             .item-mark{id: "unchecked_#{i}"}
               .fa{class: unchecked_class}
             .item-mark{id: "checked_#{i}", style: 'display: none;'}

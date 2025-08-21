@@ -9,6 +9,7 @@ import React, {useCallback} from 'react';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
+import {isUsingResourcePanel} from '@cdo/apps/lab2/utils';
 import SettingsButton from '@cdo/apps/lab2/views/components/Settings/SettingsButton';
 import VersionHistoryButton from '@cdo/apps/lab2/views/components/versionHistory/VersionHistoryButton';
 import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
@@ -34,6 +35,11 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
     state => state.lab2Project.projectSources?.source
   ) as MultiFileSource | undefined;
   const files = source?.files || {};
+  // The resource panel includes settings.
+  const showSettings = !isUsingResourcePanel(
+    appName,
+    levelProperties.isProjectLevel || false
+  );
 
   const documentationTooltipProps: TooltipProps = {
     text: commonI18n.documentation(),
@@ -89,7 +95,7 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
           color={'black'}
         />
       )}
-      <SettingsButton settings={settings} />
+      {showSettings && <SettingsButton settings={settings} />}
       {enableMicroBit && (
         <Button
           iconRight={{iconStyle: 'solid', iconName: 'arrow-right-from-arc'}}

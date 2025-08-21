@@ -1,225 +1,183 @@
 require 'test_helper'
+require 'contentful'
+require_relative '../../engines/marketing/app/helpers/external_notifications_helper'
 
-class NotificationsControllerTest < ActionController::TestCase
-  include Devise::Test::ControllerHelpers
+class NotificationsControllerTest < ActionDispatch::IntegrationTest
+  include Minitest::RSpecMocks
+  TestEntry = Struct.new(:external_id, :title, :description, :icon_name, :href_links, :ai_prompts, :priority, :published_at, :expires_at, :read_at, keyword_init: true)
 
-  setup do
-    @user = create(:user)
-    @other_user = create(:user)
-    sign_in(@user)
+  let(:entry_id_1) {SecureRandom.hex(10)}
+  let(:entry_id_2) {SecureRandom.hex(10)}
+  let(:yesterday) {1.day.ago.iso8601}
+  let(:today) {Time.now.iso8601}
+  let(:tomorrow) {1.day.from_now.iso8601}
+  let(:later) {2.days.from_now.iso8601}
+  let(:user) {create(:user)}
+  let(:other_user) {create(:user)}
+
+  let(:entry_1) do
+    TestEntry.new(
+      external_id: entry_id_1,
+      title: 'Notification 1',
+      description: 'Description 1',
+      icon_name: 'icon1',
+      href_links: [{'url' => 'https://example.com/1', 'text' => 'Link 1'}],
+      ai_prompts: [{'text' => 'Prompt 1', 'prompt' => 'Prompt 1 text'}],
+      priority: 0,
+      published_at: yesterday,
+      expires_at: tomorrow,
+      read_at: today
+      )
   end
 
-  test "index requires authentication" do
-    sign_out(@user)
-    get :index
-    assert_redirected_to_sign_in
+  let(:entry_2) do
+    TestEntry.new(
+      external_id: entry_id_2,
+      title: 'Notification 2',
+      description: 'Description 2',
+      icon_name: 'icon2',
+      href_links: [{'url' => 'https://example.com/2', 'text' => 'Link 2'}],
+      ai_prompts: [{'text' => 'Prompt 2', 'prompt' => 'Prompt 2 text'}],
+      priority: 0,
+      published_at: yesterday,
+      expires_at: later,
+      read_at: nil
+      )
   end
 
-  test "index returns empty array when user has no external notifications" do
-    get :index
-    assert_response :success
-
-    response_data = JSON.parse(@response.body)
-    assert_equal [], response_data
+  before do
+    sign_in user
   end
 
-  test "index returns user external notifications in descending order by created_at" do
-    create_external_notification(@user, external_id: "111", created_at: 2.days.ago)
-    create_external_notification(@user, external_id: "222", created_at: 1.day.ago)
-    create_external_notification(@user, external_id: "333", created_at: Time.current)
+  describe '#index' do
+    context 'when user is not authenticated' do
+      it 'requires authentication' do
+        sign_out user
+        get '/notifications'
+        assert_response :redirect
+        assert_redirected_to "/users/sign_in"
+      end
+    end
 
-    create_external_notification(@other_user, external_id: "999")
+    context 'with contentful data' do
+      it 'returns user external notifications' do
+        ExternalNotificationsHelper.stubs(:get_contentful_notifications_for_user).returns([entry_1, entry_2])
+        get '/notifications'
 
-    get :index
-    assert_response :success
+        assert_response :success
 
-    response_data = JSON.parse(@response.body)
-    assert_equal 3, response_data.length
+        response_data = JSON.parse(@response.body)
+        _(response_data.length).must_equal 2
 
-    assert_equal "333", response_data[0]["externalId"]
-    assert_equal "222", response_data[1]["externalId"]
-    assert_equal "111", response_data[2]["externalId"]
+        _(response_data[0]["externalId"]).must_equal entry_id_1
+        _(response_data[0]["title"]).must_equal 'Notification 1'
+        _(response_data[0]["description"]).must_equal 'Description 1'
+        _(response_data[0]["iconName"]).must_equal 'icon1'
+        _(response_data[0]["hrefLinks"]).must_equal [{'url' => 'https://example.com/1', 'text' => 'Link 1'}]
+        _(response_data[0]["aiPrompts"]).must_equal [{'text' => 'Prompt 1', 'prompt' => 'Prompt 1 text'}]
+        _(response_data[0]["priority"]).must_equal 0
+        _(response_data[0]["publishedAt"]).must_equal yesterday
+        _(response_data[0]["expiresAt"]).must_equal tomorrow
+        _(response_data[0]["readAt"]).must_equal today
+
+        _(response_data[1]["externalId"]).must_equal entry_id_2
+      end
+    end
   end
 
-  test "index only returns active external notifications" do
-    create_external_notification(@user, external_id: "111")
+  describe '#mark_as_read' do
+    context 'when user is not authenticated' do
+      it 'requires authentication' do
+        external_notification = create_external_notification(user)
+        sign_out user
 
-    create_external_notification(@user, external_id: "222", is_dismissed: true)
+        post '/notifications/mark_as_read', params: {notification_ids: [external_notification.id]}
 
-    get :index
-    assert_response :success
+        assert_redirected_to "/users/sign_in"
+      end
+    end
 
-    response_data = JSON.parse(@response.body)
-    assert_equal 1, response_data.length
-    assert_equal "111", response_data[0]["externalId"]
-  end
+    context 'with valid parameters' do
+      it 'successfully creates a record and marks external notifications as read' do
+        post '/notifications/mark_as_read', params: {external_notification_ids: ['TEST_ENTRY_ID_1']}
+        assert_response :ok
 
-  test "mark_as_read requires authentication" do
-    external_notification = create_external_notification(@user)
-    sign_out(@user)
+        response_data = JSON.parse(@response.body)
+        _(response_data["status"]).must_equal "success"
+        _(response_data["message"]).must_equal "1 notification(s) marked as read"
+        _(response_data["marked_count"]).must_equal 1
 
-    patch :mark_as_read, params: {notification_ids: [external_notification.id]}
-    assert_redirected_to_sign_in
-  end
+        _(ExternalNotification.find_by(external_id: 'TEST_ENTRY_ID_1', user: user)&.read_at).wont_be_nil
+      end
 
-  test "mark_as_read successfully marks multiple external notifications as read" do
-    external_notification1 = create_external_notification(@user, external_id: "111")
-    external_notification2 = create_external_notification(@user, external_id: "222")
-    external_notification3 = create_external_notification(@user, external_id: "333")
+      it 'successfully creates a record and marks external notifications for multiple notifications' do
+        post '/notifications/mark_as_read', params: {external_notification_ids: ['TEST_ENTRY_ID_1', 'TEST_ENTRY_ID_2']}
+        assert_response :ok
 
-    assert_nil external_notification1.read_at
-    assert_nil external_notification2.read_at
-    assert_nil external_notification3.read_at
+        response_data = JSON.parse(@response.body)
+        _(response_data["status"]).must_equal "success"
+        _(response_data["message"]).must_equal "2 notification(s) marked as read"
+        _(response_data["marked_count"]).must_equal 2
 
-    patch :mark_as_read, params: {notification_ids: [external_notification1.id, external_notification2.id]}
-    assert_response :ok
+        _(ExternalNotification.find_by(external_id: 'TEST_ENTRY_ID_1', user: user)&.read_at).wont_be_nil
+        _(ExternalNotification.find_by(external_id: 'TEST_ENTRY_ID_2', user: user)&.read_at).wont_be_nil
+      end
 
-    response_data = JSON.parse(@response.body)
-    assert_equal "success", response_data["status"]
-    assert_equal "2 notification(s) marked as read", response_data["message"]
-    assert_equal 2, response_data["marked_count"]
+      it 'creates and updates multiple notifications' do
+        yesterday = 1.day.ago
+        external_notification1 = create_external_notification(user, external_id: 'TEST_ENTRY_ID_1', read_at: yesterday)
 
-    external_notification1.reload
-    external_notification2.reload
-    external_notification3.reload
+        post '/notifications/mark_as_read', params: {external_notification_ids: ['TEST_ENTRY_ID_1', 'TEST_ENTRY_ID_2']}
+        assert_response :ok
 
-    refute_nil external_notification1.read_at
-    refute_nil external_notification2.read_at
-    assert_nil external_notification3.read_at
-  end
+        response_data = JSON.parse(@response.body)
+        _(response_data["status"]).must_equal "success"
+        _(response_data["message"]).must_equal "2 notification(s) marked as read"
+        _(response_data["marked_count"]).must_equal 2
 
-  test "mark_as_read with single external notification" do
-    external_notification = create_external_notification(@user)
-    assert_nil external_notification.read_at
+        external_notification1.reload
+        _(ExternalNotification.find_by(external_id: 'TEST_ENTRY_ID_1', user: user)&.read_at).wont_be_nil
+        _(external_notification1.read_at.to_i).must_equal yesterday.to_i
+        _(ExternalNotification.find_by(external_id: 'TEST_ENTRY_ID_2', user: user)&.read_at).wont_be_nil
+      end
 
-    patch :mark_as_read, params: {notification_ids: [external_notification.id]}
-    assert_response :ok
+      it 'does not update already read external notifications' do
+        yesterday = 1.day.ago
+        external_notification1 = create_external_notification(user, external_id: 'TEST_ENTRY_ID_1', read_at: yesterday)
 
-    response_data = JSON.parse(@response.body)
-    assert_equal "success", response_data["status"]
-    assert_equal "1 notification(s) marked as read", response_data["message"]
-    assert_equal 1, response_data["marked_count"]
+        post '/notifications/mark_as_read', params: {external_notification_ids: ['TEST_ENTRY_ID_1', 'TEST_ENTRY_ID_2']}
+        assert_response :ok
 
-    external_notification.reload
-    refute_nil external_notification.read_at
-  end
+        response_data = JSON.parse(@response.body)
+        _(response_data["status"]).must_equal "success"
+        _(response_data["marked_count"]).must_equal 2
 
-  test "mark_as_read does not update already read external notifications" do
-    external_notification1 = create_external_notification(@user)
-    external_notification2 = create_external_notification(@user)
+        external_notification1.reload
 
-    original_read_time = 1.hour.ago
-    external_notification1.update!(read_at: original_read_time)
+        _(external_notification1.read_at.to_i).must_equal yesterday.to_i
+        _(ExternalNotification.find_by(external_id: 'TEST_ENTRY_ID_2', user: user)&.read_at).wont_be_nil
+      end
+    end
 
-    patch :mark_as_read, params: {notification_ids: [external_notification1.id, external_notification2.id]}
-    assert_response :ok
+    context 'with invalid parameters' do
+      it 'returns error for empty notification_ids' do
+        post '/notifications/mark_as_read', params: {external_notification_ids: []}
+        assert_response :bad_request
 
-    response_data = JSON.parse(@response.body)
-    assert_equal "success", response_data["status"]
-    assert_equal 2, response_data["marked_count"]
+        response_data = JSON.parse(@response.body)
+        _(response_data["status"]).must_equal "error"
+        _(response_data["message"]).must_equal "No notification IDs provided"
+      end
 
-    external_notification1.reload
-    external_notification2.reload
+      it 'returns error when no notification_ids param provided' do
+        post '/notifications/mark_as_read', params: {}
+        assert_response :bad_request
 
-    assert_equal original_read_time.to_i, external_notification1.read_at.to_i
-    refute_nil external_notification2.read_at
-  end
-
-  test "mark_as_read returns error for empty notification_ids" do
-    patch :mark_as_read, params: {notification_ids: []}
-    assert_response :bad_request
-
-    response_data = JSON.parse(@response.body)
-    assert_equal "error", response_data["status"]
-    assert_equal "No notification IDs provided", response_data["message"]
-  end
-
-  test "mark_as_read returns error when no notification_ids param provided" do
-    patch :mark_as_read, params: {}
-    assert_response :bad_request
-
-    response_data = JSON.parse(@response.body)
-    assert_equal "error", response_data["status"]
-    assert_equal "No notification IDs provided", response_data["message"]
-  end
-
-  test "mark_as_read handles mix of valid and invalid notification IDs" do
-    external_notification1 = create_external_notification(@user)
-    external_notification2 = create_external_notification(@user)
-    invalid_id = 999999
-
-    patch :mark_as_read, params: {notification_ids: [external_notification1.id, invalid_id, external_notification2.id]}
-    assert_response :ok
-
-    response_data = JSON.parse(@response.body)
-    assert_equal "success", response_data["status"]
-    assert_equal "2 notification(s) marked as read", response_data["message"]
-    assert_equal 2, response_data["marked_count"]
-
-    external_notification1.reload
-    external_notification2.reload
-    refute_nil external_notification1.read_at
-    refute_nil external_notification2.read_at
-  end
-
-  test "mark_as_read ignores other user's external notifications" do
-    user_external_notification = create_external_notification(@user)
-    other_external_notification = create_external_notification(@other_user)
-
-    patch :mark_as_read, params: {notification_ids: [user_external_notification.id, other_external_notification.id]}
-    assert_response :ok
-
-    response_data = JSON.parse(@response.body)
-    assert_equal "success", response_data["status"]
-    assert_equal "1 notification(s) marked as read", response_data["message"]
-    assert_equal 1, response_data["marked_count"]
-
-    user_external_notification.reload
-    other_external_notification.reload
-    refute_nil user_external_notification.read_at
-    assert_nil other_external_notification.read_at
-  end
-
-  test "authorization prevents access to other user external notifications through cancan" do
-    create_external_notification(@other_user)
-
-    get :index
-    assert_response :success
-
-    response_data = JSON.parse(@response.body)
-    assert_equal 0, response_data.length
-  end
-
-  test "mark_as_read with string IDs converts to integers properly" do
-    external_notification1 = create_external_notification(@user)
-    external_notification2 = create_external_notification(@user)
-
-    patch :mark_as_read, params: {notification_ids: [external_notification1.id.to_s, external_notification2.id.to_s]}
-    assert_response :ok
-
-    response_data = JSON.parse(@response.body)
-    assert_equal "success", response_data["status"]
-    assert_equal 2, response_data["marked_count"]
-
-    external_notification1.reload
-    external_notification2.reload
-    refute_nil external_notification1.read_at
-    refute_nil external_notification2.read_at
-  end
-
-  test "external notification has correct external_id" do
-    external_notification = create_external_notification(@user, external_id: "123")
-    assert_equal "123", external_notification.external_id
-  end
-
-  test "external notification is_dismissed defaults to false" do
-    external_notification = create_external_notification(@user)
-    assert_equal false, external_notification.is_dismissed
-  end
-
-  test "external notification can be dismissed" do
-    external_notification = create_external_notification(@user, is_dismissed: true)
-    assert_equal true, external_notification.is_dismissed
+        response_data = JSON.parse(@response.body)
+        _(response_data["status"]).must_equal "error"
+        _(response_data["message"]).must_equal "No notification IDs provided"
+      end
+    end
   end
 
   private def create_external_notification(user, attributes = {})

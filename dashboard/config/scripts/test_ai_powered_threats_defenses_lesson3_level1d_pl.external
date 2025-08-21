@@ -1,0 +1,189 @@
+name 'test-ai-powered-threats-defenses-lesson3-level1d-pl'
+title 'Jordan P. - User Profile'
+
+display_name 'Ethan Carter'
+bubble_choice_description 'Ethan is a 17 year old student from Seattle, WA'
+thumbnail_url 'https://images.code.org/5ab7f854ed8fb8162a1441be09c13766-image-1755184934057.png'
+
+markdown <<MARKDOWN
+#Ethan Carter
+
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Phishing</strong> is when someone pretends to be a trusted person or company in order to steal your personal information, like passwords or credit card numbers.</p>
+</div>
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ This activity is from Lesson 3. You can find more details in the full <a href='https://studio.code.org/s/aif5-2025/lessons/3' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a>. Optionally, you can reference the <a href='https://docs.google.com/document/d/1owIfysW2x4L7v-2BMGz1NkkrSwuU3XhrsjyXXyLhKmg/edit?tab=t.0#heading=h.45vdw05yjci0' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Activity Guide</a> while you work through this activity.
+</p>
+
+##User Profiles
+
+#### Look through Ethan's social media posts for important information that might be used for a phishing attack.
+
+<table style="width:100%; border-collapse:collapse; border:none;">
+  <!-- Row 1: Top image row -->
+  <tr>
+    <td style="width:48%; vertical-align:top;">
+      <img src="https://images.code.org/b2349724f084cebeece83630eca2e40b-image-1755121508358.png" alt="Social media image 1" style="width:100%; height:auto;">
+    </td>
+    <td style="width:4%;"></td> <!-- blank spacer column -->
+    <td style="width:48%; vertical-align:top;">
+      <img src="https://images.code.org/4cb6e861dd7f3839894b067ec5c4665a-image-1755121508358.png" alt="Social media image 2" style="width:100%; height:auto;">
+    </td>
+  </tr>
+
+  <!-- Row 2: Captions for first set -->
+  <tr>
+    <td style="background-color:black; color:white; padding:8px; font-family:sans-serif; width: 220px; height: 100px; vertical-align: top;">
+    <h3>@LensAndLaces</h3>
+    Meet my new partner in crime 📸✨ Time to see the world through fresh glass
+    <br>
+    #CanonR50 #NewGearDay #PhotographerLife #CameraUnboxing
+    </td>
+    <td></td> <!-- spacer -->
+    <td style="background-color:black; color:white; padding:8px; font-family:sans-serif; width: 220px; height: 100px; vertical-align: top;">
+    <h3>@EthanC_PNW</h3>
+    The light hits different up here in the PNW 🌄
+    <br>
+    #PNWPhotography #HikingViews #CanonShooter #LandscapeLovers
+    </td>
+  </tr>
+
+  <!-- Row 3: Vertical spacer row -->
+  <tr>
+    <td style="height:24px;"></td>
+    <td></td>
+    <td></td>
+  </tr>
+
+  <!-- Row 4: Second image row -->
+  <tr>
+    <td style="vertical-align:top;">
+      <img src="https://images.code.org/c13250cabba520436f041c852cbdbd68-image-1755121508359.png" alt="Social media image 3" style="width:100%; height:auto;">
+    </td>
+    <td></td> <!-- spacer -->
+    <td style="vertical-align:top;">
+      <img src="https://images.code.org/c3322931ad028b103ecaa1b6bdd16a66-image-1755121508360.png" alt="Social media image 4" style="width:100%; height:auto;">
+    </td>
+  </tr>
+
+  <!-- Row 5: Captions for second set -->
+  <tr>
+    <td style="background-color:black; color:white; padding:8px; font-family:sans-serif; width: 220px; height: 100px; vertical-align: top;">
+     <h3>@EthanShootsLive</h3> 
+     Seattle’s indie scene >>> Keep your playlists weird
+     <br>
+     #IndieMusic #SeattleBands #LiveMusicLove #FestivalVibes
+    </td>
+    <td></td> <!-- spacer -->
+    <td style="background-color:black; color:white; padding:8px; font-family:sans-serif; width: 220px; height: 100px; vertical-align: top;">
+    <h3>@EthanC_PNW</h3>
+    Next chapter starts in the fall 🐾💜
+    <br>
+    #UWBound #CollegeLife #FutureHusky
+    </td>
+  </tr>
+</table>
+
+##Phishing Attacks
+
+#### Look through Ethan's emails below and see which ones might be legit and which might be phishing attacks.
+
+<div style="font-family: sans-serif; font-size: 16px; line-height: 1.6;">
+
+
+  <hr>
+
+  <p><strong>Message A – Text</strong></p>
+  <p>
+    Hey Ethan — I’m Jess, a student ambassador with UW’s freshman photo club.<br><br>
+    We’re putting together a welcome feature for incoming students.<br><br>
+    Mind sending your favorite photo and email so we can include you?
+  </p>
+
+  <hr>
+
+  <p><strong>Message B – Email</strong></p>
+  <p><em>Subject:</em> <strong>Canon R50 – Warranty Registration Incomplete</strong></p>
+  <p>
+    Hi Ethan,<br><br>
+    Thank you for purchasing the Canon R50. Our records indicate your warranty registration is still incomplete.<br><br>
+    Register now to ensure full coverage, including protection against accidental damage and theft.<br><br>
+    Complete your registration here:<br>
+    <a href="#">register.canon-support.com</a><br><br>
+    — Canon Product Protection Services
+  </p>
+
+  <hr>
+
+  <p><strong>Message C – Instagram DM</strong></p>
+  <p>
+    <strong>From: @TheVioletLanternsUW</strong><br><br>
+    Hey Ethan! I’m with a local indie band playing at UW’s welcome week.<br>
+    We’re offering free tickets to new students.<br><br>
+    Just need your full name, birthday, and mailing address to get you on the list.<br>
+    Spots are filling fast — hit us back soon!
+  </p>
+
+</div>
+
+
+##Breach Reports
+#### A data breach is a security incident where sensitive, confidential, or private information is accessed, disclosed, or stolen by unauthorized individuals.
+
+#### Look through Ethan's breach report to try to determine what happened and what type of password attack your user was vulnerable to.
+
+<div style="font-family: sans-serif; font-size: 16px; line-height: 1.6;">
+
+  <h3 style="color: #00838f;">Breach Report</h3>
+  <p><strong>Service Breached:</strong> CloudVault Photo Backup<br>
+     <strong>Login Location:</strong> Multiple IPs (rotating, high-frequency script behavior)<br>
+     <strong>Time of Access:</strong> 6:20–6:43 p.m.<br>
+     <strong>AI Analysis:</strong> Abnormal activity flagged due to high-frequency login attempts from rotating IP addresses.
+  </p>
+
+  <p>Over 200 password attempts were recorded prior to access.<br>
+     The password used was: <strong>CanonR50</strong><br>
+     Attempts were clustered around photography-related keywords and phrases commonly found on the user’s profile.
+  </p>
+
+  <p><strong>AI Analysis:</strong> Attempted passwords followed thematic keyword sequence based on user content.<br>
+     The attack appeared to use a script simulating human typing speed.<br>
+     No files were modified or deleted during the session.<br>
+     <strong>AI Analysis:</strong> Account had not backed up any new photos in the past 30 days.
+  </p>
+
+  <br>
+
+  <h3 style="color: #00838f;">Password Attacks</h3>
+
+  <table style="width:100%; border-collapse:collapse; border:1px solid #ccc; font-size: 15px;">
+    <tr>
+      <td style="font-weight:bold; padding:10px; border:1px solid #ccc;">Credential stuffing attack</td>
+      <td style="padding:10px; border:1px solid #ccc;">
+        When attackers use real usernames and passwords (often from past breaches) to break into other accounts.
+      </td>
+    </tr>
+    <tr>
+      <td style="font-weight:bold; padding:10px; border:1px solid #ccc;">Password guessing attack</td>
+      <td style="padding:10px; border:1px solid #ccc;">
+        When attackers try different passwords for one account, hoping to guess the right one.
+      </td>
+    </tr>
+    <tr>
+      <td style="font-weight:bold; padding:10px; border:1px solid #ccc;">Password spraying attack</td>
+      <td style="padding:10px; border:1px solid #ccc;">
+        When an attacker tries one common password on many different accounts to avoid detection.
+      </td>
+    </tr>
+    <tr>
+      <td style="font-weight:bold; padding:10px; border:1px solid #ccc;">Brute force attack</td>
+      <td style="padding:10px; border:1px solid #ccc;">
+        When an attacker rapidly tries a large number of possible passwords on one account, using automated tools to find the correct one.
+      </td>
+    </tr>
+  </table>
+
+</div>
+
+MARKDOWN
