@@ -58,6 +58,9 @@ class DatablockStorageLibraryManifest < ApplicationRecord
   validate :library_manifest
 
   def self.seed_all
+    # FIXME: is there a way to optimize this? as far as we can tell, in `def seed_record` (search for this)
+    # calls in other serialized levelbuilder objects they really don't hash or optimize seeding, so
+    # we're not really worse than anyone else, but some of the tables are REALLY big.
     seed_manifest
     seed_tables
   end
