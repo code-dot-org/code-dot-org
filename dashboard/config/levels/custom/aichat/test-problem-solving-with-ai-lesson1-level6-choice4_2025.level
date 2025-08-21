@@ -7,7 +7,7 @@
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## AI as a Debate Partner\r\n\r\nUse AI Chat to engage in a debate about a topic of your choice.\r\n\r\n### Do This:\r\n\r\n1. Start with a **broad, open-ended debate prompt** (e.g., \"Should schools ban homework?\" or \"Is AI better at making decisions than humans?\").\r\n2. Read **AI Chat’s response**, then **counter** its argument by providing an opposing viewpoint.\r\n3. **Revise your prompt** by making it more specific (e.g., \"Argue why schools should ban homework for middle school students.\").\r\n4. **Add an image** related to your debate topic (e.g., a news article screenshot, a relevant chart, or a meme) and see how AI’s response changes.\r\n5. **Compare AI’s responses**—how did the AI adjust its reasoning as your inputs became more refined?\r\n\r\n**Try it out!**\r\n\r\n\r\n::: details [<i class=\"fa fa-file-image-o\" aria-hidden=\"true\"></i> **How do I add an image?**]\r\n- Click the button labeled **Add** below your chat input.\r\n- Choose **From Library**\r\n- Then browse the existing images.\r\n- When you have an image to upload, click the checkbox next to it to select it and then click **Attach**.\r\n- You should see the image get added to the message being sent to AI Chat.\r\n:::\r\n",
+    "long_instructions": "## AI as a Debate Partner\r\n\r\nUse AI Chat to engage in a debate about a topic of your choice.\r\n\r\n### Do This:\r\n\r\n1. Start with a **broad, open-ended debate prompt** (e.g., \"Should schools ban homework?\" or \"Is AI better at making decisions than humans?\").\r\n2. Read **AI Chat’s response**, then **counter** its argument by providing an opposing viewpoint.\r\n3. **Revise your prompt** by making it more specific (e.g., \"Argue why schools should ban homework for middle school students.\").\r\n4. **Add an image** related to your debate topic (e.g., a news article screenshot, a relevant chart, or a meme) and see how AI’s response changes.\r\n5. **Compare AI’s responses**—how did the AI adjust its reasoning as your inputs became more refined?\r\n\r\n**Try it out!**\r\n\r\n\r\n::: details [<i class=\"fa fa-file-image-o\" aria-hidden=\"true\"></i> **How do I add my own image?**]\r\n- Download or save images related to your topic to your computer.\r\n- Click the button labeled **Add** below your chat input. \r\n- Browse the File Explorer to find the images related to your deb\r\n- You should see the image get added to the message being sent to AI Chat.\r\n:::\r\n",
     "aichat_settings": {
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
@@ -45,8 +45,11 @@
     "bubble_choice_description": " Use AI Chat to engage in a debate on a topic of your choice. Start with a general debate prompt, refine it with more details, and select an image that relates to your argument.",
     "display_name": "Debate an AI Partner",
     "thumbnail_url": "https://images.code.org/573cd8f313abddab1cf56cb9684d4143-debate.png",
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false"
   },
-  "audit_log": "[{\"changed_at\":\"2025-05-08T14:33:37.089+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson1-level6-choice4\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson1-level6-choice4\"},{\"changed_at\":\"2025-05-29 21:22:40 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-08T14:33:37.089+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson1-level6-choice4\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson1-level6-choice4\"},{\"changed_at\":\"2025-05-29 21:22:40 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-08-20 18:39:22 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

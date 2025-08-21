@@ -55,6 +55,22 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
     schoolType: existingSchoolInfo?.school_type,
   });
 
+  React.useEffect(() => {
+    if (schoolInfoInterstitialOpen) {
+      analyticsReporter.sendEvent(
+        EVENTS.SCHOOL_INTERSTITIAL_SHOW,
+        {},
+        PLATFORMS.BOTH
+      );
+    } else if (schoolInfoConfirmationOpen) {
+      analyticsReporter.sendEvent(
+        EVENTS.UPDATE_SCHOOL_INFO_DIALOG_SHOWN,
+        {},
+        PLATFORMS.BOTH
+      );
+    }
+  }, [schoolInfoInterstitialOpen, schoolInfoConfirmationOpen]);
+
   const existingSchoolName =
     existingSchoolInfo?.school_name || i18n.schoolInfoDialogDescriptionNoName();
 

@@ -1,7 +1,6 @@
 import Button from '@code-dot-org/component-library/button';
 import React, {useEffect, useState} from 'react';
 
-import {setShowSuggestedPrompts} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import lab2I18n from '@cdo/apps/lab2/locale';
 import {
@@ -163,7 +162,6 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
         dispatch(setIsValidating(false))
       );
       dispatch(setHasValidated(true));
-      dispatch(setShowSuggestedPrompts(true));
     } else {
       CodebridgeRegistry.getInstance()
         .getConsoleManager()

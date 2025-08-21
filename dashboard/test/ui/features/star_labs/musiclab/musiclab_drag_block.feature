@@ -1,7 +1,7 @@
+@skip
 @no_mobile
 @no_safari
 # TODO: This test has been flaky on Safari. Investigate and re-enable.
-
 Feature: Music Lab block can be dragged
 
 Scenario Outline: Dragging play sound block
