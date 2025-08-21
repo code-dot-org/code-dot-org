@@ -6,7 +6,6 @@ class NotificationsController < ApplicationController
     locale = params[:locale] || I18n.default_locale
 
     results = Notifications.get_all(current_user.id, locale)
-    # results = ExternalNotificationsHelper.get_contentful_notifications_for_user(current_user, locale)
 
     render json: results.as_json.map {|notification| notification.deep_transform_keys {|key| key.to_s.camelize(:lower)}}, status: :ok
   end

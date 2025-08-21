@@ -3,6 +3,8 @@ module Marketing
     class ContentfulNotificationSource < ::Notifications::Source
       NOTIFICATION_CONTENTFUL_CONTENT_TYPE = 'dashboard-notification'
 
+      CONTENTFUL_SOURCE_NAME = 'contentful'
+
       def get(user_id:, locale:)
         contentful_entries = Marketing::ContentfulClient.entries(locale.to_s, NOTIFICATION_CONTENTFUL_CONTENT_TYPE)
         contentful_result = contentful_entries.filter_map do |notification|
@@ -21,9 +23,8 @@ module Marketing
           next nil if notification[:expires_at] && Time.parse(notification[:expires_at]) < Time.current
 
           read_at = rails_notification&.read_at&.iso8601 || nil
-          notification.merge(
-            read_at: read_at
-          )
+
+          notification.merge(read_at: read_at, source: CONTENTFUL_SOURCE_NAME)
         end
       end
     end
