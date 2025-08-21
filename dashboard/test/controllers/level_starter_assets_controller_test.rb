@@ -132,7 +132,7 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
       expects(:read_file).
       with(@file_obj).
       returns('hello, world!')
-    level = create :weblab2
+    level = create(:weblab2)
 
     get :file_by_uuid, params: {level_name: level.name, uuid: @uuid, format: 'png'}
 
