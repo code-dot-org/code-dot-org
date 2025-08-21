@@ -65,8 +65,11 @@ class DatablockStorageLibraryManifest < ApplicationRecord
     end
   end
 
+  def self.manifest_file
+    Rails.root.join('config/datablock_storage/manifest.json')
+  end
+
   def self.seed_manifest
-    manifest_file = Rails.root.join('config', 'datablock_storage', 'manifest.json')
     manifest = JSON.parse(File.read(manifest_file))
     instance.update!(library_manifest: manifest)
   end
@@ -84,6 +87,12 @@ class DatablockStorageLibraryManifest < ApplicationRecord
 
       table.import_csv File.read(path)
     end
+  end
+
+  def self.write_serialization
+    return unless Rails.application.config.levelbuilder_mode
+    manifest = instance.library_manifest
+    File.write(manifest_file, JSON.pretty_generate(manifest))
   end
 
   private def validate_library_manifest

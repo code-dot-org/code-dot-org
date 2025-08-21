@@ -71,6 +71,7 @@ class DatasetsController < ApplicationController
     db_manifest = DatablockStorageLibraryManifest.instance
     db_manifest.library_manifest = parsed_manifest
     db_manifest.save!
+    DatablockStorageLibraryManifest.write_serialization
     render json: {}
   rescue JSON::ParserError
     render json: {msg: 'Invalid JSON'}

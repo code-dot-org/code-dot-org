@@ -1,17 +1,932 @@
 {
   "tables": [
     {
+      "name": "Busiest Airports",
+      "docUrl": "https://studio.code.org/data_docs/busiest-airports/",
+      "current": false,
+      "published": true,
+      "description": "50 Busiest Airports for 2010-2016"
+    },
+    {
+      "name": "RollingStone: 500 Albums",
+      "docUrl": "https://studio.code.org/data_docs/top-500-music-albums/",
+      "current": false,
+      "published": true,
+      "description": "500 Greatest Albums of All Time as rated by Rolling Stone Magazine"
+    },
+    {
+      "name": "American Ninja Warrior Obstacles",
+      "docUrl": "https://studio.code.org/data_docs/american-ninja-warrior-obstacles/",
+      "current": false,
+      "published": true,
+      "description": "Information about obstacles in American Ninja Warrior courses"
+    },
+    {
+      "name": "AP Computer Science Test Taker Demographics by State (2019)",
+      "docUrl": "https://studio.code.org/data_docs/ap-cs-test-demographics-by-state/",
+      "current": false,
+      "published": true,
+      "description": "Data about all AP Computer Science (CS) test takers and their demographics, per state, in the year 2019"
+    },
+    {
+      "name": "Baseball Teams",
+      "docUrl": "https ://studio.code.org/data_docs/baseball-teams/",
+      "current": false,
+      "published": true,
+      "description": "Information about baseball teams from 1900 to 2019"
+    },
+    {
+      "name": "Boston Bike Share Rentals",
+      "docUrl": "https://studio.code.org/data_docs/boston-bike-share-rentals/",
+      "current": false,
+      "published": true,
+      "description": "Bike share rental information for March 8, 2020 in Boston"
+    },
+    {
+      "name": "World's Tallest Buildings",
+      "docUrl": "https://studio.code.org/data_docs/worlds-tallest-buildings/",
+      "current": false,
+      "published": true,
+      "description": "Data about the top 70 tallest buildings in the world, as of June 2020"
+    },
+    {
+      "name": "World's Tallest Mountains",
+      "docUrl": "https://studio.code.org/data_docs/worlds-tallest-mountains/",
+      "current": false,
+      "published": true,
+      "description": "Data about the tallest mountains in the world, including geographical location and parent mountains"
+    },
+    {
+      "name": "NBA Teams",
+      "docUrl": "https://studio.code.org/data_docs/nba-teams/",
+      "current": false,
+      "published": true,
+      "description": "Data about all current NBA teams, as of 2019-20 season"
+    },
+    {
+      "name": "WNBA Teams",
+      "docUrl": "https://studio.code.org/data_docs/wnba-teams/",
+      "current": false,
+      "published": true,
+      "description": "Data about all current WNBA teams, as of 2019-20 season"
+    },
+    {
+      "name": "Wordle",
+      "docUrl": "https://studio.code.org/data_docs/wordle/",
+      "current": false,
+      "published": true,
+      "description": "10,000 valid Wordle guesses and answers from the NYT"
+    },
+    {
+      "name": "US Workers with Disabilities",
+      "docUrl": "https://studio.code.org/data_docs/us-workers-with-disabilities/",
+      "current": false,
+      "published": true,
+      "description": "Data about various job types in the US and workers of those jobs with various disabilities, per 2017"
+    },
+    {
+      "name": "African American Inventors and Scientists",
+      "docUrl": "https://studio.code.org/data_docs/african-american-inventors-and-scientists/",
+      "current": false,
+      "published": true,
+      "description": "Data about various famous African American inventors and scientists"
+    },
+    {
+      "name": "US Gas Prices",
+      "docUrl": "https://studio.code.org/data_docs/us-gas-prices/",
+      "current": false,
+      "published": true,
+      "description": "Average gas prices in 10 US cities, plus US overall average, tallied weekly from May 2003 - March 2022"
+    },
+    {
+      "name": "NCAA Division I Teams",
+      "docUrl": "https://studio.code.org/data_docs/ncaa-division-i-teams/",
+      "current": false,
+      "published": true,
+      "description": "Data about all current NCAA Division I teams, as of 2019-20 season"
+    },
+    {
+      "name": "Historical Non-violent Resistances",
+      "docUrl": "https://studio.code.org/data_docs/historical-non-violent/",
+      "current": false,
+      "published": true,
+      "description": "Data about various non-violent resistances throughout world history"
+    },
+    {
+      "name": "FIFA Men's World Cup Results",
+      "docUrl": "https://studio.code.org/data_docs/fifa-mens-world-cup/",
+      "current": false,
+      "published": true,
+      "description": "Data about all FIFA Men's World Cup soccer tournament results"
+    },
+    {
+      "name": "FIFA Women's World Cup Results",
+      "docUrl": "https://studio.code.org/data_docs/fifa-womens-world-cup/",
+      "current": false,
+      "published": true,
+      "description": "Data about all FIFA Women's World Cup soccer tournament results"
+    },
+    {
+      "name": "US Voter Registration and Demographics By State",
+      "docUrl": "https://studio.code.org/data_docs/us-voters/",
+      "current": false,
+      "published": true,
+      "description": "Data about US voter registration and demographic breakdowns by state, per the 2018 elections"
+    },
+    {
+      "name": "Paralympic Games All-Time Medal Count",
+      "docUrl": "https://studio.code.org/data_docs/paralympic-games/",
+      "current": false,
+      "published": true,
+      "description": "Data about the Summer and Winter Paralympic Games and medal winners per country or region"
+    },
+    {
+      "name": "NFL Teams",
+      "docUrl": "https://studio.code.org/data_docs/nfl-teams/",
+      "current": false,
+      "published": true,
+      "description": "Data about all current NFL teams, as of 2019-20 season"
+    },
+    {
+      "name": "US Household Income",
+      "docUrl": "https://studio.code.org/data_docs/us-household-income/",
+      "current": false,
+      "published": true,
+      "description": "Data about US household income and demographic breakdowns per various characteristics, reflecting 2017-2018"
+    },
+    {
+      "name": "Cats",
+      "docUrl": "https://studio.code.org/data_docs/cats/",
+      "current": false,
+      "published": true,
+      "description": "Information about different cat breeds"
+    },
+    {
+      "name": "cats",
+      "current": false,
+      "published": true,
+      "description": "Information about different cat breeds"
+    },
+    {
+      "name": "Cereal Nutrition",
+      "docUrl": "https://studio.code.org/data_docs/cereal-nutrition/",
+      "current": false,
+      "published": true,
+      "description": "Nutrition Facts for 80 Major Cereals"
+    },
+    {
+      "name": "Countries and Territories",
+      "docUrl": "https://studio.code.org/data_docs/countries-and-territories/",
+      "current": false,
+      "published": true,
+      "description": "Facts about countries and territories"
+    },
+    {
       "name": "100 Birds of the World",
       "docUrl": "https://studio.code.org/data_docs/100-birds/",
       "current": false,
       "published": true,
       "description": "Data and images about 100 different species of birds around the world"
+    },
+    {
+      "name": "Video Game Reviews from IGN",
+      "docUrl": "https://studio.code.org/data_docs/video-game-reviews/",
+      "current": false,
+      "published": true,
+      "description": "Data on 6000+ video game reviews from IGN.com, from 2008-2018"
+    },
+    {
+      "name": "Simpsons Guest Stars",
+      "docUrl": "https://studio.code.org/data_docs/simpsons-guest-stars/",
+      "current": false,
+      "published": true,
+      "description": "Data on guest stars on TV's The Simpsons, seasons 1-30"
+    },
+    {
+      "name": "Ivy League Universities",
+      "docUrl": "https://studio.code.org/data_docs/ivy-league-universities/",
+      "current": false,
+      "published": true,
+      "description": "Data about the 8 Ivy League Universities in the US"
+    },
+    {
+      "name": "DC Comics Characters",
+      "docUrl": "https://studio.code.org/data_docs/dc-comics/",
+      "current": false,
+      "published": true,
+      "description": "Data about various DC Comics characters"
+    },
+    {
+      "name": "Independence Days Worldwide",
+      "docUrl": "https://studio.code.org/data_docs/independence-days/",
+      "current": false,
+      "published": true,
+      "description": "Data about various countries' celebrations of Independence Days worldwide"
+    },
+    {
+      "name": "US 2016 Presidential Election Results",
+      "docUrl": "https://studio.code.org/data_docs/us-2016-election-results-by-state/",
+      "current": false,
+      "published": true,
+      "description": "Data about the 2016 US Presidential election results, per state"
+    },
+    {
+      "name": "Nobel Prize Winners 1901-2016",
+      "docUrl": "https://studio.code.org/data_docs/nobel-prize-winners/",
+      "current": false,
+      "published": true,
+      "description": "Data about all Nobel Prize winners in various fields of study, 1901-2016"
+    },
+    {
+      "name": "Major US Airlines",
+      "docUrl": "https://studio.code.org/data_docs/major-us-airlines/",
+      "current": false,
+      "published": true,
+      "description": "Data about major US airlines, including commercial, cargo, and charter airlines"
+    },
+    {
+      "name": "US National Parks",
+      "docUrl": "https://studio.code.org/data_docs/us-national-parks/",
+      "current": false,
+      "published": true,
+      "description": "Data about all National Parks within the US"
+    },
+    {
+      "name": "Daily Weather",
+      "docUrl": "https://studio.code.org/data_docs/daily-weather/",
+      "current": true,
+      "published": true,
+      "description": "Live weather five-day forecast data for 100 cities. Updates daily with expected weather conditions.",
+      "lastUpdated": 1718625910000
+    },
+    {
+      "name": "COVID-19 Cases per US State",
+      "docUrl": "https://studio.code.org/data_docs/covid19-per-us-state/",
+      "current": true,
+      "published": true,
+      "description": "Live updating dataset on confirmed COVID-19 cases, per each US State.",
+      "lastUpdated": 1718625620000
+    },
+    {
+      "name": "Dinosaur Fossils",
+      "docUrl": "https://studio.code.org/data_docs/dinosaur-fossils/",
+      "current": false,
+      "published": true,
+      "description": "North American Dinosaur Fossils from the Jurassic Period"
+    },
+    {
+      "name": "Planets of our Solar System",
+      "docUrl": "https://studio.code.org/data_docs/planets/",
+      "current": false,
+      "published": true,
+      "description": "Information about the 9 planets of our Solar System"
+    },
+    {
+      "name": "US Supreme Court Justices",
+      "docUrl": "https://studio.code.org/data_docs/us-supreme-court-justices/",
+      "current": false,
+      "published": true,
+      "description": "Information about every US Supreme Court Justice throughout history"
+    },
+    {
+      "name": "US Women Running for Elected Office in 2020",
+      "docUrl": "https://studio.code.org/data_docs/us-women-running-for-office-2020/",
+      "current": false,
+      "published": true,
+      "description": "Information about every woman in the US running for elected office in 2020, as of January 2021"
+    },
+    {
+      "name": "Most Followed Instagram Accounts",
+      "docUrl": "https://studio.code.org/data_docs/most-followed-instagram-accounts/",
+      "current": false,
+      "published": true,
+      "description": "Data about the top 50 most-followed Instagram accounts, as of June 2020"
+    },
+    {
+      "name": "Dogs",
+      "docUrl": "https://studio.code.org/data_docs/dogs/",
+      "current": false,
+      "published": true,
+      "description": "Information about different dog breeds"
+    },
+    {
+      "name": "Grammy Winners",
+      "docUrl": "https://studio.code.org/data_docs/grammy-winners/",
+      "current": false,
+      "published": true,
+      "description": "Grammy Winners from 1959-2019"
+    },
+    {
+      "name": "TheRoot: 100 Influential African Americans",
+      "docUrl": "https://studio.code.org/data_docs/influential-african-americans/",
+      "current": false,
+      "published": true,
+      "description": "100 Influential African Americans (Age 25-45), via TheRoot.com, 2019 Edition."
+    },
+    {
+      "name": "Female State Legislators",
+      "docUrl": "https://studio.code.org/data_docs/female-state-legislators/",
+      "current": false,
+      "published": true,
+      "description": "Number of female state legislators from 1981-2019"
+    },
+    {
+      "name": "US Presidents",
+      "docUrl": "https://studio.code.org/data_docs/presidents/",
+      "current": false,
+      "published": true,
+      "description": "Data about all US Presidents"
+    },
+    {
+      "name": "Netflix Content",
+      "docUrl": "https://studio.code.org/data_docs/netflix-content/",
+      "current": false,
+      "published": true,
+      "description": "Shows and Movies on Netflix"
+    },
+    {
+      "name": "Artistic Works of Bob Ross",
+      "docUrl": "https://studio.code.org/data_docs/bob-ross/",
+      "current": false,
+      "published": true,
+      "description": "Statistical analysis on various elements painted by Bob Ross, across 403 TV episodes."
+    },
+    {
+      "name": "NYC Public Wifi Locations",
+      "docUrl": "https://studio.code.org/data_docs/nyc-public-wifi-locations/",
+      "current": false,
+      "published": true,
+      "description": "Locations of all public wifi hotspots in New York City"
+    },
+    {
+      "name": "Passwords",
+      "docUrl": "https://studio.code.org/data_docs/passwords/",
+      "current": false,
+      "published": true,
+      "description": "Information about the most popular passwords on the internet, and their security level"
+    },
+    {
+      "name": "New York Times Bestsellers 2011-2018",
+      "docUrl": "https://studio.code.org/data_docs/nyt-bestselling-books/",
+      "current": false,
+      "published": true,
+      "description": "Data about all books on the New York Times bestseller list, 2011-2018"
+    },
+    {
+      "name": "Best Selling Video Games",
+      "docUrl": "https://studio.code.org/data_docs/best-selling-video-games/",
+      "current": false,
+      "published": true,
+      "description": "Data about the top 50 best selling video games in history, as of June 2020"
+    },
+    {
+      "name": "Board Games",
+      "docUrl": "https://studio.code.org/data_docs/board-games/",
+      "current": false,
+      "published": true,
+      "description": "Data about 5000 popular board games"
+    },
+    {
+      "name": "Olympic Medals",
+      "docUrl": "https://studio.code.org/data_docs/olympic-medals/",
+      "current": false,
+      "published": true,
+      "description": "Details about medal winners from the 2004 and 2008 summer olympics"
+    },
+    {
+      "name": "Periodic Table Elements",
+      "docUrl": " https://studio.code.org/data_docs/periodic-table-elements/",
+      "current": false,
+      "published": true,
+      "description": "Information on all the periodic table elements"
+    },
+    {
+      "name": "Rollercoasters",
+      "docUrl": " https://studio.code.org/data_docs/rollercoasters/",
+      "current": false,
+      "published": true,
+      "description": "Information on major rollercoasters in the world"
+    },
+    {
+      "name": "Oscar Winners",
+      "docUrl": "https://studio.code.org/data_docs/oscar-winners/",
+      "current": false,
+      "published": true,
+      "description": "Oscar Winners from 1975-2015"
+    },
+    {
+      "name": "US States",
+      "docUrl": "https://studio.code.org/data_docs/states/",
+      "current": false,
+      "published": true,
+      "description": "Interesting facts & statistics about the 50 United States"
+    },
+    {
+      "name": "Bee Colonies",
+      "docUrl": "https://studio.code.org/data_docs/bee-colonies/",
+      "current": false,
+      "published": true,
+      "description": "Analyis on various bee colonies and their losses / renovations, within US states"
+    },
+    {
+      "name": "states",
+      "current": false,
+      "published": true,
+      "description": "Interesting facts & statistics of the 50 states"
+    },
+    {
+      "name": "Tate Museum Artworks",
+      "docUrl": "https://studio.code.org/data_docs/tate-museum-artworks/",
+      "current": false,
+      "published": true,
+      "description": "Artwork from the Tate Museum in London, England"
+    },
+    {
+      "name": "Global Life Expectancy",
+      "docUrl": "https://studio.code.org/data_docs/global-life-expectancy/",
+      "current": false,
+      "published": true,
+      "description": "Data on average life expectancy of various countries worldwide"
+    },
+    {
+      "name": "Target Store Locations",
+      "docUrl": "https://studio.code.org/data_docs/target-store-locations/",
+      "current": false,
+      "published": true,
+      "description": "Locations for all target stores in the US as of April 2017"
+    },
+    {
+      "name": "Viral 50 USA",
+      "docUrl": "https://studio.code.org/data_docs/viral-50-usa/",
+      "current": true,
+      "published": true,
+      "description": "Spotify's most viral 50 songs in the United States, updated daily.",
+      "lastUpdated": 1718625614000
+    },
+    {
+      "name": "Viral 50 Worldwide",
+      "docUrl": "https://studio.code.org/data_docs/viral-50-worldwide/",
+      "current": true,
+      "published": true,
+      "description": "Spotify's most viral 50 songs in the world, updated daily.",
+      "lastUpdated": 1718625612000
+    },
+    {
+      "name": "US Agricultural Crops",
+      "docUrl": "https://studio.code.org/data_docs/us-agricultural-crops/",
+      "current": false,
+      "published": true,
+      "description": "Crop yields in the US for 2000-2018"
+    },
+    {
+      "name": "US Congressional Members",
+      "docUrl": "https://studio.code.org/data_docs/us-congressional-members/",
+      "current": false,
+      "published": true,
+      "description": "All members of Congress between 2001-2017"
+    },
+    {
+      "name": "Volcano Eruptions",
+      "docUrl": "https://studio.code.org/data_docs/volcano-eruptions/",
+      "current": false,
+      "published": true,
+      "description": "Volcano Eruptions in the last 10,000 years"
+    },
+    {
+      "name": "American Sign Language Alphabet",
+      "docUrl": "https://studio.code.org/data_docs/american-sign-language/",
+      "current": false,
+      "published": true,
+      "description": "The English alphabet (A-Z) as illustrated in American Sign Language."
+    },
+    {
+      "name": "NHL Teams",
+      "docUrl": "https://studio.code.org/data_docs/nhl-teams/",
+      "current": false,
+      "published": true,
+      "description": "National Hockey League teams, as of 2020."
+    },
+    {
+      "name": "Air Quality Index by US County",
+      "docUrl": "https://studio.code.org/data_docs/air-quality/",
+      "current": false,
+      "published": true,
+      "description": "Air Quality Index by US County, as of early 2020 recordings"
+    },
+    {
+      "name": "Internet Usage and Access Worldwide",
+      "docUrl": "https://studio.code.org/data_docs/internet-usage/",
+      "current": false,
+      "published": true,
+      "description": "Data about internet usage and access per country worldwide, according to World Bank Group"
+    },
+    {
+      "name": "2017 Women's March Attendance by US City",
+      "docUrl": "https://studio.code.org/data_docs/womens-march/",
+      "current": false,
+      "published": true,
+      "description": "Attendance estimates of the January 2017 Women's March, per US city"
+    },
+    {
+      "name": "Most Spoken Languages Worldwide",
+      "docUrl": "https://studio.code.org/data_docs/most-spoken-languages/",
+      "current": false,
+      "published": true,
+      "description": "Languages of the world ranked by usage and amount of speakers."
+    },
+    {
+      "name": "Words",
+      "docUrl": "https://studio.code.org/data_docs/words/",
+      "current": false,
+      "published": true,
+      "description": "Common English words and information about them"
+    },
+    {
+      "name": "words",
+      "current": false,
+      "published": true,
+      "sourceUrl": "http://www.wordfrequency.info",
+      "sourceText": "wordfrequency.info",
+      "description": "Common English words"
+    },
+    {
+      "name": "Top 50 Worldwide",
+      "docUrl": "https://studio.code.org/data_docs/top-50-worldwide/",
+      "current": true,
+      "published": true,
+      "description": "The top 50 Songs in the world on Spotify, updated daily.",
+      "lastUpdated": 1718625609000
+    },
+    {
+      "name": "MLS Teams",
+      "docUrl": "https://studio.code.org/data_docs/mls-teams/",
+      "current": false,
+      "published": true,
+      "description": "Data about all current MLS teams, as of the 2022 season."
+    },
+    {
+      "name": "Fast Food Nutrition",
+      "docUrl": "https://studio.code.org/data_docs/fast-food-nutrition/",
+      "current": false,
+      "published": true,
+      "description": "Nutritional information data on fast food items from the major American fast food chains"
+    },
+    {
+      "name": "College Majors & Incomes",
+      "docUrl": "https://studio.code.org/data_docs/college-majors/",
+      "current": false,
+      "published": true,
+      "description": "Data on median incomes and gender breakdowns per various college majors and graduates within the US, per 2012 data"
+    },
+    {
+      "name": "Beverages Nutrition",
+      "docUrl": "https://studio.code.org/data_docs/beverages-nutrition/",
+      "current": false,
+      "published": true,
+      "description": "Nutritional information data on various beverages"
+    },
+    {
+      "name": "International Exhibition of Modern Art 1913",
+      "docUrl": "https://studio.code.org/data_docs/international-exhibition-of-modern-art-1913/",
+      "current": false,
+      "published": true,
+      "description": "Data on the works of art included in the International Exhibition of Modern Art 1913"
+    },
+    {
+      "name": "NWSL Teams",
+      "docUrl": "https://studio.code.org/data_docs/nwsl-teams/",
+      "current": false,
+      "published": true,
+      "description": "Data about all current National Women's Soccer League (NWSL) teams, as of the 2022 season."
+    },
+    {
+      "name": "Esports Earnings",
+      "docUrl": "https://studio.code.org/data_docs/esports-earnings/",
+      "current": false,
+      "published": true,
+      "description": "Data from 2021 on earnings from various Esports tournaments."
+    },
+    {
+      "name": "Women of 2020",
+      "docUrl": "https://studio.code.org/data_docs/women-of-2020/",
+      "current": false,
+      "published": true,
+      "description": "Data on the BBC's list of 100 inspiring and influential women from around the world for 2020."
+    },
+    {
+      "name": "HBCU Enrollment",
+      "docUrl": "https://studio.code.org/data_docs/hbcu-enrollment/",
+      "current": false,
+      "published": true,
+      "description": "Data on Fall enrollment in degree-granting historically Black colleges and universities (HBCU)."
+    },
+    {
+      "name": "Bike and Walk Commutes",
+      "docUrl": "https://studio.code.org/data_docs/bike-and-walk-commutes/",
+      "current": false,
+      "published": true,
+      "description": "Data on bicycling and walking to work in the United States: 2008-2012."
+    },
+    {
+      "name": "Palmer Penguins",
+      "docUrl": "https://studio.code.org/data_docs/palmer-penguins/",
+      "current": false,
+      "published": true,
+      "description": "Data on penguins at Palmer Station LTER, located in Antarctica"
+    },
+    {
+      "name": "Ultra Trail Races",
+      "docUrl": "https://studio.code.org/data_docs/ultra-trail-races/",
+      "current": false,
+      "published": true,
+      "description": "Data on the over 1000 ultra trail races globally"
+    },
+    {
+      "name": "Bechdel Test",
+      "docUrl": "https://studio.code.org/data_docs/bechdel-test/",
+      "current": false,
+      "published": true,
+      "description": "Data on the movies released from 1970-2013 and how they fared on the Bechdel Test"
+    },
+    {
+      "name": "Cryptocurrency Historical Prices",
+      "docUrl": "https://studio.code.org/data_docs/cryptocurrency-historical-prices/",
+      "current": false,
+      "published": true,
+      "description": "Data on the prices of Bitcoin, Ethereum, and Dogecoin from 2013-2021."
+    },
+    {
+      "name": "Ramen Ratings",
+      "docUrl": "https://studio.code.org/data_docs/ramen-ratings/",
+      "current": false,
+      "published": true,
+      "description": "Data about over 4000 varieties of ramen, as of April 2022."
+    },
+    {
+      "name": "Aerosol Optical Depth",
+      "docUrl": "https://studio.code.org/data_docs/aerosol-optical-depth/",
+      "current": false,
+      "published": true,
+      "description": "Data on the amount of aerosols in the air over Washington, DC from 2000-2021"
+    },
+    {
+      "name": "Boston Surface Temperature - Citizen Scientists",
+      "docUrl": "https://studio.code.org/data_docs/boston-surface-temperature-citizen-scientists/",
+      "current": false,
+      "published": true,
+      "description": "Data on the surface temperature in Boston, taken by citizen scientists, from 2017-2021"
+    },
+    {
+      "name": "Boston Surface Temperature - Satellite",
+      "docUrl": "https://studio.code.org/data_docs/boston-surface-temperature-satellite/",
+      "current": false,
+      "published": true,
+      "description": "Data on the surface temperature in Boston, taken by satellite, from 2002-2022"
+    },
+    {
+      "name": "Carbon Dioxide Concentrations",
+      "docUrl": "https://studio.code.org/data_docs/carbon-dioxide-concentrations/",
+      "current": false,
+      "published": true,
+      "description": "Carbon Dioxide Concentrations in Major US Cities Sept 2002-Aug 2021"
+    },
+    {
+      "name": "Ozone and Nitrogen Dioxide Concentrations",
+      "docUrl": "https://studio.code.org/data_docs/ozone-and-nitrogen-dioxide-concentrations/",
+      "current": false,
+      "published": true,
+      "description": "Ozone and Nitrogen Dioxide Concentrations in Major US Cities Oct 2004-Sept 2021"
+    },
+    {
+      "name": "Precipitation Rate",
+      "docUrl": "https://studio.code.org/data_docs/precipitation-rate/",
+      "current": false,
+      "published": true,
+      "description": "Monthly Average Precipitation Rate for Baltimore, MD and Tampa Bay, FL from 2000-2021."
+    },
+    {
+      "name": "Big Mac Index",
+      "docUrl": "https://studio.code.org/data_docs/big-mac-index/",
+      "current": false,
+      "published": true,
+      "description": "data from February 2022 about the prices of a Big Mac and currency exchange rates in countries across the world."
+    },
+    {
+      "name": "IMDB Top 1000",
+      "docUrl": "https://studio.code.org/data_docs/imdb1000/",
+      "current": false,
+      "published": true,
+      "description": "Top 1000 Movies and Series"
+    },
+    {
+      "name": "Endangered Species of Canada",
+      "docUrl": "https://studio.code.org/data_docs/endangered-species-canada/",
+      "current": false,
+      "published": true,
+      "description": "A list of Canada's endangered mammals, birds, reptiles, amphibians, fish, arthropods and mollusks."
+    },
+    {
+      "name": "FIFA World Cup 2022",
+      "docUrl": "https://studio.code.org/data_docs/worldcup2022/",
+      "current": false,
+      "published": true,
+      "description": "data about each match of FIFA Men's World Cup 2022 including goals, possession, attempts, and other data."
+    },
+    {
+      "name": "Top 50 USA",
+      "docUrl": "https://studio.code.org/data_docs/top-50-usa/",
+      "current": true,
+      "published": true,
+      "description": "Top 50 Songs on Spotify for the United States, updated daily.",
+      "lastUpdated": 1718625611000
+    },
+    {
+      "name": "A.B",
+      "current": false,
+      "published": false,
+      "description": "test"
     }
   ],
   "categories": [
     {
       "name": "Animals",
-      "datasets": ["100 Birds of the World"],
+      "datasets": [
+        "100 Birds of the World",
+        "Bee Colonies",
+        "Cats",
+        "Dogs",
+        "Endangered Species of Canada",
+        "Palmer Penguins"
+      ],
+      "published": true
+    },
+    {
+      "name": "Art",
+      "datasets": [
+        "Artistic Works of Bob Ross",
+        "International Exhibition of Modern Art 1913",
+        "Tate Museum Artworks"
+      ],
+      "published": true
+    },
+    {
+      "name": "Economics",
+      "datasets": [
+        "Big Mac Index",
+        "College Majors & Incomes",
+        "Cryptocurrency Historical Prices",
+        "US Gas Prices"
+      ],
+      "published": true
+    },
+    {
+      "name": "Geography",
+      "datasets": [
+        "2017 Women's March Attendance by US City",
+        "Countries and Territories",
+        "Global Life Expectancy",
+        "Independence Days Worldwide",
+        "US Agricultural Crops",
+        "US Household Income",
+        "US National Parks",
+        "US States",
+        "US Voter Registration and Demographics By State",
+        "US Workers with Disabilities",
+        "World's Tallest Buildings",
+        "World's Tallest Mountains"
+      ],
+      "published": true
+    },
+    {
+      "name": "Language and Literature",
+      "datasets": [
+        "American Sign Language Alphabet",
+        "Most Spoken Languages Worldwide",
+        "New York Times Bestsellers 2011-2018",
+        "Wordle",
+        "Words"
+      ],
+      "published": true
+    },
+    {
+      "name": "Culture & Entertainment",
+      "datasets": [
+        "Bechdel Test",
+        "Best Selling Video Games",
+        "Board Games",
+        "DC Comics Characters",
+        "Esports Earnings",
+        "Grammy Winners",
+        "IMDB Top 1000",
+        "Most Followed Instagram Accounts",
+        "Netflix Content",
+        "Oscar Winners",
+        "RollingStone: 500 Albums",
+        "Simpsons Guest Stars",
+        "TheRoot: 100 Influential African Americans",
+        "Video Game Reviews from IGN",
+        "Women of 2020"
+      ],
+      "published": true
+    },
+    {
+      "name": "Miscellaneous",
+      "datasets": [
+        "American Ninja Warrior Obstacles",
+        "AP Computer Science Test Taker Demographics by State (2019)",
+        "HBCU Enrollment",
+        "Historical Non-violent Resistances",
+        "Ivy League Universities",
+        "NYC Public Wifi Locations",
+        "Passwords",
+        "Ramen Ratings",
+        "Target Store Locations"
+      ],
+      "published": true
+    },
+    {
+      "name": "NASA",
+      "datasets": [
+        "Aerosol Optical Depth",
+        "Boston Surface Temperature - Citizen Scientists",
+        "Boston Surface Temperature - Satellite",
+        "Carbon Dioxide Concentrations",
+        "Ozone and Nitrogen Dioxide Concentrations",
+        "Precipitation Rate"
+      ],
+      "published": true
+    },
+    {
+      "name": "Politics",
+      "datasets": [
+        "Female State Legislators",
+        "US 2016 Presidential Election Results",
+        "US Congressional Members",
+        "US Presidents",
+        "US Supreme Court Justices",
+        "US Women Running for Elected Office in 2020"
+      ],
+      "published": true
+    },
+    {
+      "name": "Science",
+      "datasets": [
+        "African American Inventors and Scientists",
+        "Air Quality Index by US County",
+        "Beverages Nutrition",
+        "Cereal Nutrition",
+        "COVID-19 Cases per US State",
+        "Daily Weather",
+        "Dinosaur Fossils",
+        "Fast Food Nutrition",
+        "Internet Usage and Access Worldwide",
+        "Nobel Prize Winners 1901-2016",
+        "Periodic Table Elements",
+        "Planets of our Solar System",
+        "Rollercoasters",
+        "Volcano Eruptions"
+      ],
+      "published": true
+    },
+    {
+      "name": "Sports",
+      "datasets": [
+        "Baseball Teams",
+        "FIFA Men's World Cup Results",
+        "FIFA Women's World Cup Results",
+        "FIFA World Cup 2022",
+        "MLS Teams",
+        "NBA Teams",
+        "NCAA Division I Teams",
+        "NFL Teams",
+        "NHL Teams",
+        "NWSL Teams",
+        "Olympic Medals",
+        "Paralympic Games All-Time Medal Count",
+        "Ultra Trail Races",
+        "WNBA Teams"
+      ],
+      "published": true
+    },
+    {
+      "name": "Spotify Charts",
+      "datasets": [
+        "Viral 50 USA",
+        "Viral 50 Worldwide",
+        "Top 50 Worldwide",
+        "Top 50 USA"
+      ],
+      "published": true,
+      "description": "Top songs in the USA and around the world, updated daily. Provided by Spotify at https://spotifycharts.com/."
+    },
+    {
+      "name": "Transportation",
+      "datasets": [
+        "Bike and Walk Commutes",
+        "Boston Bike Share Rentals",
+        "Busiest Airports",
+        "Major US Airlines"
+      ],
       "published": true
     }
   ]
