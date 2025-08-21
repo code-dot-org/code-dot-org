@@ -134,6 +134,7 @@ export interface ProjectFile {
   folderId: string;
   type?: ProjectFileType;
   url?: string;
+  flagged?: boolean;
 }
 
 /**

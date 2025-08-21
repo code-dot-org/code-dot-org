@@ -4,6 +4,8 @@ import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
 import {Heading4} from '@code-dot-org/component-library/typography';
 import React from 'react';
 
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 
@@ -37,6 +39,15 @@ export const Header: React.FC<HeaderProps> = ({
     }
   }, [dispatch]);
 
+  const onSectionCreateButtonClick = () => {
+    analyticsReporter.sendEvent(
+      EVENTS.SECTION_SETUP_STARTED,
+      {},
+      PLATFORMS.BOTH
+    );
+    dispatch(beginEditingSection());
+  };
+
   return (
     <div>
       <Heading4>{i18n.classSections()}</Heading4>
@@ -64,7 +75,7 @@ export const Header: React.FC<HeaderProps> = ({
           <Button
             iconLeft={{iconName: 'plus', iconStyle: 'solid'}}
             text={i18n.newClassSection()}
-            onClick={() => dispatch(beginEditingSection())}
+            onClick={onSectionCreateButtonClick}
             size="s"
             className={styles.createSectionButton}
           />

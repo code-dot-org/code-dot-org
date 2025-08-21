@@ -1,5 +1,9 @@
 <Gamelab>
   <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2022-03-30T23:39:34.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -210,7 +214,7 @@
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "false",
     "pause_animations_by_default": "false",
-    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"9a699232-f391-46f7-b098-4d014458d84c\",\r\n    \"6b428150-188b-47e5-88fe-33efad8face0\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"9a699232-f391-46f7-b098-4d014458d84c\": {\r\n      \"name\": \"alienBlue\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/hKtqhtmV38vpAxNyUaBy4GIjDARxlt1j/category_characters/alienBlue_jump.png\",\r\n      \"frameSize\": {\r\n        \"x\": 66,\r\n        \"y\": 93\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"hKtqhtmV38vpAxNyUaBy4GIjDARxlt1j\"\r\n    },\r\n    \"6b428150-188b-47e5-88fe-33efad8face0\": {\r\n      \"name\": \"alienGreen\",\r\n      \"sourceUrl\": \"https://studio.code.org/v3/animations/M038GOVR2QDM3P7CGKOa4A/6b428150-188b-47e5-88fe-33efad8face0.png\",\r\n      \"frameSize\": {\r\n        \"x\": 67,\r\n        \"y\": 93\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \".4qXMtnnhziUCUAfF6PU1CKzBla6RSTO\"\r\n    }\r\n  }\r\n}",
+    "start_animations": "{\n  \"orderedKeys\": [\n    \"9a699232-f391-46f7-b098-4d014458d84c\",\n    \"6b428150-188b-47e5-88fe-33efad8face0\"\n  ],\n  \"propsByKey\": {\n    \"9a699232-f391-46f7-b098-4d014458d84c\": {\n      \"name\": \"alienBlue\",\n      \"sourceUrl\": \"/api/v1/animation-library/hKtqhtmV38vpAxNyUaBy4GIjDARxlt1j/category_characters/alienBlue_jump.png\",\n      \"frameSize\": {\n        \"x\": 66,\n        \"y\": 93\n      },\n      \"frameCount\": 1,\n      \"looping\": true,\n      \"frameDelay\": 2,\n      \"version\": \"hKtqhtmV38vpAxNyUaBy4GIjDARxlt1j\"\n    },\n    \"6b428150-188b-47e5-88fe-33efad8face0\": {\n      \"name\": \"alienGreen\",\n      \"sourceUrl\": \"https://studio.code.org/v3/animations/M038GOVR2QDM3P7CGKOa4A/6b428150-188b-47e5-88fe-33efad8face0.png\",\n      \"frameSize\": {\n        \"x\": 67,\n        \"y\": 93\n      },\n      \"frameCount\": 1,\n      \"looping\": true,\n      \"frameDelay\": 12,\n      \"version\": \".4qXMtnnhziUCUAfF6PU1CKzBla6RSTO\"\n    }\n  }\n}",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
     "parent_level_id": 20700,
@@ -219,10 +223,6 @@
     "mini_rubric": "false",
     "preload_asset_list": null
   },
-  "level_num": "custom",
-  "game_id": 50,
-  "created_at": "2022-03-30T23:39:34.000Z",
-  "user_id": 1,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-30T23:39:34.310+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Scene Example_2021\\\"\"],\"cloned_from\":\"CSD U3 Scene Example_2021\"}]"

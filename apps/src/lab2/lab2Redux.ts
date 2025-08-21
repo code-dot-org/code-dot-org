@@ -354,6 +354,9 @@ const labSlice = createSlice({
     setIsTeacherOfProjectOwner(state, action: PayloadAction<boolean>) {
       state.isTeacherOfProjectOwner = action.payload;
     },
+    setIsBlockedAbuse(state, action: PayloadAction<boolean>) {
+      state.isBlockedAbuse = action.payload;
+    },
   },
   extraReducers: builder => {
     builder.addCase(setUpWithLevel.fulfilled, state => {
@@ -547,6 +550,7 @@ export const {
   setPermissions,
   setChannel,
   setIsTeacherOfProjectOwner,
+  setIsBlockedAbuse,
 } = labSlice.actions;
 
 export default labSlice.reducer;
