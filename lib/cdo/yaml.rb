@@ -27,6 +27,15 @@ module Cdo
       nil
     end
 
+    # Ensure YAML.safe_load allows aliases across Psych 3/4.
+    # TODO infra: simplify down to just the Psych 4 case once we're fully
+    # upgraded to Ruby 3.1.
+    def safe_load(yaml, *args, **kwargs)
+      super(yaml, *args, **kwargs.merge(aliases: true))
+    rescue ArgumentError
+      super(yaml, *args, **kwargs)
+    end
+
     # Load a `.yml.erb` file
     #
     # Because ERB is already inherently unsafe (and because we never use this
