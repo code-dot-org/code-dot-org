@@ -18,7 +18,7 @@ interface FreeResponseCardProps {
   title: string;
   tagText?: string;
   items: string[];
-  statusColor?: 'success' | 'warning' | 'default';
+  statusColor?: 'success' | 'warning';
   size?: 's' | 'l';
 }
 
@@ -26,7 +26,7 @@ export const FreeResponseCard: FC<FreeResponseCardProps> = ({
   title,
   tagText,
   items,
-  statusColor = 'default',
+  statusColor,
   size = 'l',
 }) => {
   return (
