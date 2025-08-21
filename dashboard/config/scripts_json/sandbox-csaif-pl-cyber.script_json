@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-08-18 16:27:33 UTC",
+    "serialized_at": "2025-08-20 14:59:26 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -544,15 +544,12 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csaif_pl_2_aithreats_03"
-        ],
         "progression": "Introduction to Cybersecuirty"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csaif_pl_2_aithreats_03"
+          "csaif_pl_2_aithreats_03b"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
@@ -560,7 +557,7 @@
         "activity_section.key": "519933c4-cd36-4080-8655-9fc6203f9c99"
       },
       "level_keys": [
-        "csaif_pl_2_aithreats_03"
+        "csaif_pl_2_aithreats_03b"
       ]
     },
     {
@@ -669,15 +666,12 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csaif_pl_2_aithreats_06"
-        ],
         "progression": "Introduction to Cybersecuirty"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csaif_pl_2_aithreats_06"
+          "csaif_pl_2_aithreats_06b"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
@@ -685,7 +679,7 @@
         "activity_section.key": "519933c4-cd36-4080-8655-9fc6203f9c99"
       },
       "level_keys": [
-        "csaif_pl_2_aithreats_06"
+        "csaif_pl_2_aithreats_06b"
       ]
     },
     {
@@ -1247,9 +1241,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "csaif_pl_2_aithreats_03",
+        "level.key": "csaif_pl_2_aithreats_03b",
         "script_level.level_keys": [
-          "csaif_pl_2_aithreats_03"
+          "csaif_pl_2_aithreats_03b"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
@@ -1307,9 +1301,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "csaif_pl_2_aithreats_06",
+        "level.key": "csaif_pl_2_aithreats_06b",
         "script_level.level_keys": [
-          "csaif_pl_2_aithreats_06"
+          "csaif_pl_2_aithreats_06b"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
