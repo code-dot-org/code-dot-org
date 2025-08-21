@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2025_08_15_132016) do
+ActiveRecord::Schema.define(version: 2025_08_21_182723) do
 
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -2337,12 +2337,13 @@ ActiveRecord::Schema.define(version: 2025_08_15_132016) do
     t.index ["unit_group_id", "resource_id"], name: "index_ug_student_resources_on_unit_group_id_and_resource_id", unique: true
   end
 
-  create_table "user_data_retention_statuses", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
+  create_table "user_data_retention_statuses", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.integer "user_id", null: false
     t.datetime "pii_scrubbed_at"
     t.datetime "anonymized_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.datetime "deletion_warning_email_sent_at"
     t.index ["anonymized_at"], name: "index_user_data_retention_statuses_on_anonymized_at"
     t.index ["pii_scrubbed_at"], name: "index_user_data_retention_statuses_on_pii_scrubbed_at"
     t.index ["user_id"], name: "index_user_data_retention_statuses_on_user_id"

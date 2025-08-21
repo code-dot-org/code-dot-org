@@ -2,12 +2,13 @@
 #
 # Table name: user_data_retention_statuses
 #
-#  id              :bigint           not null, primary key
-#  user_id         :integer          not null
-#  pii_scrubbed_at :datetime
-#  anonymized_at   :datetime
-#  created_at      :datetime         not null
-#  updated_at      :datetime         not null
+#  id                             :bigint           not null, primary key
+#  user_id                        :integer          not null
+#  pii_scrubbed_at                :datetime
+#  anonymized_at                  :datetime
+#  created_at                     :datetime         not null
+#  updated_at                     :datetime         not null
+#  deletion_warning_email_sent_at :datetime
 #
 # Indexes
 #
