@@ -1,8 +1,8 @@
 require 'test_helper'
 require 'contentful'
-require_relative '../../app/helpers/external_notifications_helper'
+require_relative '../../lib/marketing/dashboard_notifications/contentful_notification_source'
 
-class ExternalNotificationsHelperTest < ActionDispatch::IntegrationTest
+class ContentfulNotificationSourceTest < ActionDispatch::IntegrationTest
   include Minitest::RSpecMocks
 
   TestEntry = Struct.new(:id, :content_type, :first_published_at, :fields, keyword_init: true)
@@ -58,7 +58,7 @@ class ExternalNotificationsHelperTest < ActionDispatch::IntegrationTest
       it 'returns user external notifications' do
         Marketing::ContentfulClient.any_instance.expects(:entries).with('en-US', 'dashboard-notification').returns([entry_1, entry_2])
 
-        results = ExternalNotificationsHelper.get_contentful_notifications_for_user(user, 'en-US')
+        results = Marketing::DashboardNotifications::ContentfulNotificationSource.new.get(user_id: user.id, locale: 'en-US')
 
         _(results.length).must_equal 2
 
@@ -79,7 +79,7 @@ class ExternalNotificationsHelperTest < ActionDispatch::IntegrationTest
         create_external_notification(user, external_id: entry_id_2, is_dismissed: true)
         Marketing::ContentfulClient.any_instance.expects(:entries).with('other-locale', 'dashboard-notification').returns([entry_1, entry_2])
 
-        results = ExternalNotificationsHelper.get_contentful_notifications_for_user(user, 'other-locale')
+        results = Marketing::DashboardNotifications::ContentfulNotificationSource.new.get(user_id: user.id, locale: 'other-locale')
 
         _(results.length).must_equal 1
         _(results[0][:external_id]).must_equal entry_id_1
@@ -91,7 +91,7 @@ class ExternalNotificationsHelperTest < ActionDispatch::IntegrationTest
         create_external_notification(user, external_id: entry_id_1, read_at: tomorrow)
         create_external_notification(user, external_id: entry_id_2, read_at: later)
 
-        results = ExternalNotificationsHelper.get_contentful_notifications_for_user(user, 'en-US')
+        results = Marketing::DashboardNotifications::ContentfulNotificationSource.new.get(user_id: user.id, locale: 'en-US')
 
         _(results.length).must_equal 2
         _(results[0][:external_id]).must_equal entry_id_1
@@ -117,7 +117,7 @@ class ExternalNotificationsHelperTest < ActionDispatch::IntegrationTest
 
         Marketing::ContentfulClient.any_instance.expects(:entries).with('en-US', 'dashboard-notification').returns([expired_entry])
 
-        results = ExternalNotificationsHelper.get_contentful_notifications_for_user(user, 'en-US')
+        results = Marketing::DashboardNotifications::ContentfulNotificationSource.new.get(user_id: user.id, locale: 'en-US')
 
         _(results.length).must_equal 0
       end
