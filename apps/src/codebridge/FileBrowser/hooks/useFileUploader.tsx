@@ -25,7 +25,7 @@ export const useFileUploader = (
   args: UseFileUploaderArgs,
   folderId: string
 ) => {
-  const {levelProperties} = useCodebridgeContext();
+  const {levelProperties, onImageFlagged} = useCodebridgeContext();
   const {appName, validationFile} = levelProperties;
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
   const files = useAppSelector(
@@ -76,6 +76,7 @@ export const useFileUploader = (
     sendAnalyticsEvent,
     validateFileName,
     channelId,
+    onImageFlagged,
     ...lab2FileUploaderArgs,
   });
 };
