@@ -4,12 +4,11 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "is_migrated": true,
-      "version_year": "unversioned"
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-08-20 14:59:26 UTC",
+    "serialized_at": "2025-08-21 15:02:37 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -544,6 +543,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_2_aithreats_03b"
+        ],
         "progression": "Introduction to Cybersecuirty"
       },
       "bonus": false,
@@ -666,6 +668,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_2_aithreats_06b"
+        ],
         "progression": "Introduction to Cybersecuirty"
       },
       "bonus": false,
