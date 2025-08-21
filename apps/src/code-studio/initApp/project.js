@@ -329,6 +329,9 @@ var projects = (module.exports = {
   },
 
   getSharingDisabled() {
+    if (this.showEvenIfPolicyViolatingOrAbusiveOrSharingDisabled()) {
+      return false;
+    }
     return sharingDisabled;
   },
 
@@ -445,7 +448,7 @@ var projects = (module.exports = {
    *   of showing the project.
    */
   hideBecausePrivacyViolationOrProfane() {
-    if (this.showEvenIfPolicyViolatingOrAbusiveProject()) {
+    if (this.showEvenIfPolicyViolatingOrAbusiveOrSharingDisabled()) {
       return false;
     }
     return this.hasPrivacyProfanityViolation();
@@ -456,7 +459,7 @@ var projects = (module.exports = {
    *   the project.
    */
   hideBecauseAbusive() {
-    if (this.showEvenIfPolicyViolatingOrAbusiveProject()) {
+    if (this.showEvenIfPolicyViolatingOrAbusiveOrSharingDisabled()) {
       return false;
     }
     return this.exceedsAbuseThreshold();
@@ -464,9 +467,9 @@ var projects = (module.exports = {
 
   /**
    * @returns {boolean} true if we should show a project regardless of its
-   * profanity, policy violations or abuse rating level.
+   * profanity, policy violations, abuse rating level, or if sharing is disabled.
    */
-  showEvenIfPolicyViolatingOrAbusiveProject() {
+  showEvenIfPolicyViolatingOrAbusiveOrSharingDisabled() {
     if (appOptions.scriptId) {
       // Never want to hide when in the context of a script, as this will always
       // either be me or my teacher viewing my last submission
