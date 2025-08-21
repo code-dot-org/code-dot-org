@@ -58,11 +58,8 @@ class DatablockStorageLibraryManifest < ApplicationRecord
   validate :library_manifest
 
   def self.seed_all
-    # Don't overwrite if there is already a manifest
-    unless DatablockStorageLibraryManifest.exists?
-      seed_manifest
-      seed_tables
-    end
+    seed_manifest
+    seed_tables
   end
 
   def self.manifest_file
