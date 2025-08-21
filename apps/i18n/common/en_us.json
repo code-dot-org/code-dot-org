@@ -1073,7 +1073,6 @@
   "displayName": "Display name",
   "documentation": "Documentation",
   "documentationBug": "Found a bug in the documentation? Let us know at [support@code.org](mailto:support@code.org).",
-  "domainDisallowed": "{domain} emails disallowed from logging in with email and password.",
   "done": "Done",
   "dontForget": "Don't forget",
   "doSomething": "do something",

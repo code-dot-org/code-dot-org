@@ -51,8 +51,7 @@ const getUserType = () => {
 const LoginTypeSelection: React.FunctionComponent<{
   isSignedOut: boolean;
   passwordMinLength: number;
-  emailDomainDisallowed?: object;
-}> = ({isSignedOut, passwordMinLength, emailDomainDisallowed}) => {
+}> = ({isSignedOut, passwordMinLength}) => {
   const [userType, setUserType] = useState(getUserType());
   const [password, setPassword] = useState('');
   const [passwordIcon, setPasswordIcon] = useState(X_ICON);
@@ -171,18 +170,6 @@ const LoginTypeSelection: React.FunctionComponent<{
       setShowEmailError(true);
       return;
     }
-    // Check if the email domain is in the disallowed list. Some districts
-    // require students to log in through their LMS, so we disallow those
-    // domains from logging in with an email and password.
-    const emailDomain = email.split('@')[1];
-    if (
-      Array.isArray(emailDomainDisallowed) &&
-      emailDomainDisallowed.includes(emailDomain)
-    ) {
-      setEmailErrorMessage(i18n.domainDisallowed({domain: emailDomain}));
-      setShowEmailError(true);
-      return;
-    }
     const submitLoginTypeParams = {
       user: {
         email: email,
@@ -200,10 +187,17 @@ const LoginTypeSelection: React.FunctionComponent<{
         },
         body: JSON.stringify(submitLoginTypeParams),
       });
-      // We are currently only intentionally surfacing errors for duplicate emails
       if (!response.ok) {
-        setEmailErrorMessage(i18n.duplicate_email_error_message());
-        setShowEmailError(true);
+        // Handle disallowed email domains
+        if (response.status === 403) {
+          const res = await response.json();
+          setEmailErrorMessage(res.error);
+          setShowEmailError(true);
+        } else {
+          // We are currently only intentionally surfacing errors for duplicate emails
+          setEmailErrorMessage(i18n.duplicate_email_error_message());
+          setShowEmailError(true);
+        }
         return;
       }
       navigateToHref(finishAccountUrl);

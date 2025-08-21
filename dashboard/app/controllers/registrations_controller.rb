@@ -37,6 +37,13 @@ class RegistrationsController < Devise::RegistrationsController
   # Submit step 1 of the signup process for creating an email/password account.
   #
   def begin_sign_up
+    domain = params[:user][:email].split('@')[1] if params[:user][:email].present?
+    if Policies::Devise::DisallowedDomains::DISALLOWED_DOMAINS.include?(domain)
+      render json: {
+        error: I18n.t('devise.registrations.disallowed_domain', domain: domain)
+      }, status: :forbidden
+      return
+    end
     @user = User.new(begin_sign_up_params)
     @user.country_code = @country_code
     @user.validate_for_finish_sign_up
@@ -64,7 +71,6 @@ class RegistrationsController < Devise::RegistrationsController
   def login_type
     @is_signed_out = current_user.nil?
     @user_type = params[:user_type]
-    @email_domain_disallowed = Policies::Devise::DisallowedDomains::DISALLOWED_DOMAINS
     view_options(full_width: true, responsive_content: true)
     render 'login_type'
   end
