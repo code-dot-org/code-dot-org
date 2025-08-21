@@ -120,7 +120,7 @@ export const Codebridge = React.memo(
       }
       let currentLayout = config.activeLayout;
       if (!currentLayout) {
-        currentLayout = 'horizontal';
+        currentLayout = 'vertical';
       }
       return config.layoutComponents[currentLayout];
     }, [
