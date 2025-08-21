@@ -2,6 +2,8 @@
 
 Dashboard::Application.routes.draw do
   mount ActionCable.server => '/cable'
+  get 'chatter/index'
+
   mount Marketing::Engine => '/marketing'
 
   # Override Error Codes
