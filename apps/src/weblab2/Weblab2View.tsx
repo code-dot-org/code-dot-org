@@ -31,7 +31,6 @@ const defaultConfig: ConfigType = {
     vertical: VerticalLayout,
     widget: VerticalLayout,
     share: ShareView,
-    horizontal: undefined,
   },
 };
 

@@ -1,9 +1,5 @@
 import {Theme, useTheme} from '@code-dot-org/component-library/common/contexts';
-import {
-  LayoutKey,
-  codebridgeLabsWithConsole,
-  codebridgeLabsWithBothLayouts,
-} from '@codebridge/constants';
+import {LayoutKey, codebridgeLabsWithConsole} from '@codebridge/constants';
 import {sendCodebridgeAnalyticsEvent} from '@codebridge/utils/analyticsReporterHelper';
 import {useMemo, useState} from 'react';
 
@@ -161,7 +157,8 @@ export function useCodebridgeSettings(): Setting[] {
   ];
 
   const hasConsole = codebridgeLabsWithConsole.includes(appName);
-  const hasBothLayouts = codebridgeLabsWithBothLayouts.includes(appName);
+  const hasBothLayouts =
+    config.layoutComponents.horizontal && config.layoutComponents.vertical;
 
   return [
     {
