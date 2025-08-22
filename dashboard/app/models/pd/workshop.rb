@@ -630,7 +630,7 @@ class Pd::Workshop < ApplicationRecord
   end
 
   # Called at the very end of the async close-workshop workflow, to actually send exit
-  # surveys to attended teachers.  Note that logic here is more-or-less independent
+  # surveys to attended teachers. Note that logic here is more-or-less independent
   # from other logic deciding whether a workshop should have exit surveys.
   def send_exit_surveys
     # FiT workshops should not send exit surveys
@@ -640,13 +640,29 @@ class Pd::Workshop < ApplicationRecord
 
     # Send the emails
     enrollments.each do |enrollment|
-      if account_required_for_attendance?
-        next unless enrollment.user
+      user = enrollment.user
 
-        next unless attending_teachers.include?(enrollment.user)
+      if enrollment.survey_sent_at
+        CDO.log.warn "Skipping attempt to send a duplicate workshop survey email. Enrollment: #{id}"
+        next
       end
 
-      enrollment.send_exit_survey
+      if account_required_for_attendance?
+        next unless user
+
+        next unless attending_teachers.include?(user)
+      end
+
+      Pd::WorkshopMailjetMailer.send_teacher_post_workshop_survey(enrollment, user, false)
+
+      # Also send to the user's alternate summer email if they entered it in their application and it's for a summer workshop.
+      if enrollment.workshop.subject == SUBJECT_SUMMER_WORKSHOP && user.alternate_email.present?
+        Pd::WorkshopMailjetMailer.send_teacher_post_workshop_survey(enrollment, user, true)
+      end
+
+      enrollment.update!(survey_sent_at: Time.zone.now)
+    rescue => exception
+      raise "teacher enrollment #{enrollment.id} - #{exception.message}"
     end
   end
 

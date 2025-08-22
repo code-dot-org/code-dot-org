@@ -187,15 +187,6 @@ class PdWorkshopMailerPreview < ActionMailer::Preview
     mail :detail_change_notification, Pd::Workshop::COURSE_ADMIN_COUNSELOR, Pd::Workshop::SUBJECT_ADMIN_COUNSELOR_SLP_CALL1
   end
 
-  # Exit survey has variations for CSF and for CSP for returning teachers. It's the same for all other courses.
-  def exit_survey__general
-    mail :exit_survey
-  end
-
-  def exit_survey__csp_for_returning_teachers
-    mail :exit_survey, Pd::Workshop::COURSE_CSP, Pd::Workshop::SUBJECT_CSP_FOR_RETURNING_TEACHERS
-  end
-
   private def mail(method, course = nil, subject = nil, options: nil, target: :enrollment, workshop_params: {})
     unless course
       course = DEFAULT_COURSE
