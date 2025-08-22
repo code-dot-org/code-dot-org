@@ -1,17 +1,8 @@
-@import 'color.scss';
-@import './constants.scss';
-
 .danceLab {
   height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: row;
-  gap: 2px;
-}
-
-.visualizationArea {
-  flex: 0;
-  height: 100%;
-  background-color: $neutral_dark10;
 }
 
 .visualizationColumn {
@@ -20,9 +11,10 @@
 
 .visualization {
   // TODO: support resizing
-  width: $visualization-size;
-  height: $visualization-size;
-  background-color: $neutral_white;
+  width: 400px;
+  height: 400px;
+  background-color: var(--background-neutral-secondary);
+  position: relative;
 }
 
 .workArea {
@@ -33,8 +25,55 @@
 
 .instructionsArea {
   flex: 0;
+  min-width: 25%;
+}
+
+.visualizationArea {
+  flex: 0;
+  background-color: var(--background-neutral-primary);
 }
 
 .workspaceArea {
   flex: 1;
+}
+
+.panelHeader {
+  border-bottom: 1px solid var(--borders-neutral-primary);
+}
+
+.divider {
+  width: 1px;
+  height: 100%;
+  background-color: var(--background-neutral-quaternary);
+}
+
+.controlsContainer {
+  margin: 5px 0;
+}
+
+.verticalFlex {
+  display: flex;
+  flex-direction: column;
+  flex: 0;
+}
+
+.loading {
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.1s ease-in;
+
+  &Show {
+    opacity: 1;
+  }
+
+  .loadingGif {
+    width: 100px;
+    height: 100px;
+  }
 }

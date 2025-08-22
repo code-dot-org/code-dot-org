@@ -1,0 +1,112 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2025-08-15T18:44:29.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "#### Welcome to Music Lab!\r\n\r\nThis is a lab that lets you combine **coding** and **music**! This level is all about exploration! Try clicking things! Try dragging things! Explore this space! \r\n\r\nSee how many of these you can do:\r\n\r\n- Drag out a block [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=flyout-id:play_sound_at_current_location_simple2)\r\n- Connect two blocks [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=id:when-run-block)\r\n- Play a sound [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=run-button)\r\n- Change the sound\r\n- Duplicate a block (hint: right-click on a block!)\r\n- Play 3 tracks in a row: <span style=\"padding: 2px; font-size: 12px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 2px; white-space: nowrap; line-height: 2.5em;\"> <i class=\"fa-solid fa-drum\" style=\"color: #E565F5;\"></i> &nbsp; Beat </span>, <span style=\"padding: 2px; font-size: 12px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 2px; white-space: nowrap; line-height: 2.5em;\"> <i class=\"fa-solid fa-boombox\" style=\"color: #58BEF9;\"></i> &nbsp; Bass </span>, then <span style=\"padding: 2px; font-size: 12px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 2px;  white-space: nowrap; line-height: 2.5em;\"> <i class=\"fa-solid fa-guitars\" style=\"color: #64D25A;\"></i> &nbsp; Lead </span>\r\n- Change the order of your tracks\r\n- Change where the song starts playing in the timeline\r\n- Delete a block\r\n- Clear the workspace and start over [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=start-over-button)\r\n\r\n\r\nIn order to pass this level, you must play 3 sounds in a row!",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "sounds": {
+        "electro": [
+          "drum_beat_cowbell",
+          "drum_beat_club",
+          "drum_beat_edm",
+          "drum_beat_hyper",
+          "drum_beat_fashion",
+          "bass_synth_blocks",
+          "bass_synth_candy",
+          "bass_synth_chips",
+          "bass_synth_duct_tape",
+          "bass_synth_foam",
+          "synth_cave",
+          "synth_sleek",
+          "synth_wiggle",
+          "guitar_code",
+          "guitar_melody"
+        ]
+      },
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ]
+        },
+        "type": "flyout"
+      },
+      "packId": "default",
+      "allowChangeStartingPlayheadPosition": true,
+      "showSoundsPanelInSoundsMode": true,
+      "showSoundFilters": true,
+      "validationTimeout": 1
+    },
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
+    "validations": [
+      {
+        "key": "test-music-lab-sequences-explore-investigate_cb7ae20a-4dfa-4647-81fb-a28cc935c6e0",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot says: \"You Did It!\"",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 3
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-sequences-explore-investigate_6d6b19ad-c364-4989-92e0-563683ca156e",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is listening to your tracks...",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "play_sound_at_current_location_simple2:3"
+          },
+          {
+            "name": "played_sounds",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-sequences-explore-investigate_b40600c0-2378-4876-b62c-b4929dc5601a",
+        "message": "You played a sound! Try to play 3 in total!",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 1
+          }
+        ],
+        "callout": "flyout-id:play_sound_at_current_location_simple2---id:when-run-block"
+      },
+      {
+        "key": "test-music-lab-sequences-explore-investigate_5b77ac2f-f924-47b1-a8e2-b96c505d8008",
+        "message": "Nothing is playing yet! Try connecting a block!",
+        "next": false,
+        "conditions": [
+
+        ],
+        "callout": "flyout-id:play_sound_at_current_location_simple2---id:when-run-block"
+      }
+    ],
+    "name_suffix": "_bash",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-08-15T18:44:29.963+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-explore-investigate_v2\\\"\"],\"cloned_from\":\"test-music-lab-sequences-explore-investigate_v2\"}]"
+}]]></config>
+  <blocks/>
+</Music>

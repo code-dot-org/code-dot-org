@@ -1,7 +1,6 @@
 import Button from '@code-dot-org/component-library/button';
 import React, {useEffect, useState} from 'react';
 
-import {setShowSuggestedPrompts} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import lab2I18n from '@cdo/apps/lab2/locale';
 import {
@@ -9,19 +8,20 @@ import {
   setHasValidated,
 } from '@cdo/apps/lab2/redux/systemRedux';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
+import {isUsingResourcePanel} from '@cdo/apps/lab2/utils';
 import ForTeachersOnly from '@cdo/apps/lab2/views/components/Instructions/ForTeachersOnly';
 import InstructionsV2 from '@cdo/apps/lab2/views/components/Instructions/InstructionsV2';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {logUserLevelInteraction} from '@cdo/apps/userLevelInteractionsLogger/userLevelInteractionsApi';
-import experiments from '@cdo/apps/util/experiments';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {UserLevelInteractions} from '@cdo/generated-scripts/sharedConstants';
 
 import {useCodebridgeContext} from '../codebridgeContext';
 import CodebridgeRegistry from '../CodebridgeRegistry';
 import {getSystemMessage} from '../Console/MessageHelpers';
+import {useCodebridgeSettings} from '../hooks/useCodebridgeSettings';
 import {sendCodebridgeAnalyticsEvent} from '../utils/analyticsReporterHelper';
 
 import moduleStyles from './styles/info-panel.module.scss';
@@ -64,6 +64,7 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
     predictSettings,
     id: levelId,
     appName,
+    isProjectLevel,
   } = levelProperties;
   const isUserTeacher = useAppSelector(state => state.currentUser.isTeacher);
   const [currentPanel, setCurrentPanel] = useState(Panels.Instructions);
@@ -88,10 +89,11 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
   const hasLoadedEnvironment = useAppSelector(
     state => state.lab2System.loadedCodeEnvironment
   );
-  // Web Lab 2 uses the resource panel by default, otherwise we defer to the experiment flag.
-  const useResourcePanel =
-    appName === 'weblab2' ||
-    experiments.isEnabledAllowingQueryString(experiments.LAB2_RESOURCE_PANEL);
+  const useResourcePanel = isUsingResourcePanel(
+    appName,
+    isProjectLevel || false
+  );
+  const settings = useCodebridgeSettings();
 
   useEffect(() => {
     // For now, always include Instructions panel.
@@ -163,7 +165,6 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
         dispatch(setIsValidating(false))
       );
       dispatch(setHasValidated(true));
-      dispatch(setShowSuggestedPrompts(true));
     } else {
       CodebridgeRegistry.getInstance()
         .getConsoleManager()
@@ -206,6 +207,7 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
           levelProperties={levelProperties}
           requireRun={true}
           aiTutor2Context={aiTutor2Context}
+          settings={settings}
         />
       </div>
     );

@@ -1993,14 +1993,6 @@ columns:
   - *48
   - *49
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
-    name: content_root_type
-    sql_type_metadata: *3
-    'null': false
-    default: 
-    default_function: 
-    collation: utf8mb3_unicode_ci
-    comment: 
-  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: content_root_id
     sql_type_metadata: *2
     'null': false
@@ -9653,26 +9645,11 @@ indexes:
   course_versions:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: course_versions
-    name: index_course_versions_on_offering_id_and_key_and_type
+    name: index_course_versions_on_offering_id_and_key
     unique: true
     columns:
     - course_offering_id
     - key
-    - content_root_type
-    lengths: {}
-    orders: {}
-    opclasses: {}
-    where: 
-    type: 
-    using: :btree
-    comment: 
-  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
-    table: course_versions
-    name: index_course_versions_on_content_root_type_and_content_root_id
-    unique: false
-    columns:
-    - content_root_type
-    - content_root_id
     lengths: {}
     orders: {}
     opclasses: {}
@@ -9686,6 +9663,19 @@ indexes:
     unique: false
     columns:
     - course_offering_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: :btree
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: course_versions
+    name: index_course_versions_on_content_root_id
+    unique: false
+    columns:
+    - content_root_id
     lengths: {}
     orders: {}
     opclasses: {}
@@ -14578,7 +14568,7 @@ indexes:
     type: :fulltext
     using: 
     comment: 
-version: 20250813180707
+version: 20250815132016
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 8

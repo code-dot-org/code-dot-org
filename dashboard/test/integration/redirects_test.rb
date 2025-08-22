@@ -158,8 +158,13 @@ class RedirectsTest < ActionDispatch::IntegrationTest
   end
 
   test 'redirects weblab code studio share link to codeprojects' do
-    get "//projects/weblab/abcdef"
-    assert_redirected_to "https://#{CDO.codeprojects_hostname}/abcdef/"
+    # This route is defined based on the value of `CDO.dashboard_hostname` at
+    # initialization time, so we must undo the stub that test_helper adds at
+    # runtime for this to resolve.
+    CDO.unstub(:override_dashboard)
+
+    get "http://#{CDO.dashboard_hostname}/projects/weblab/abcdef"
+    assert_redirected_to "http://#{CDO.codeprojects_hostname}/abcdef/"
   end
 
   test 'redirects to /courses/ from /s/' do

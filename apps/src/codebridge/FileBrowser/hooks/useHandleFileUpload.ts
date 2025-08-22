@@ -28,7 +28,8 @@ export const useHandleFileUpload = (
       fileName: string,
       contents: string,
       url?: string,
-      folderIdArg?: unknown
+      folderIdArg?: unknown,
+      flagged?: boolean
     ) => {
       const folderId = folderIdArg as FolderId;
 
@@ -53,7 +54,9 @@ export const useHandleFileUpload = (
       }
 
       if (url) {
-        dispatch(createNewExternalFileThunk({fileName, folderId, url}));
+        dispatch(
+          createNewExternalFileThunk({fileName, folderId, url, flagged})
+        );
       } else {
         dispatch(createNewFileThunk({fileName, folderId, contents}));
       }

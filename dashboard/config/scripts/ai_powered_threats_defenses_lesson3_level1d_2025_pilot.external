@@ -1,0 +1,79 @@
+name 'ai-powered-threats-defenses-lesson3-level1d_2025-pilot'
+title 'Jordan P. - User Profile'
+
+display_name 'Ethan Carter'
+bubble_choice_description 'Ethan is a 17 year old student from Seattle, WA'
+thumbnail_url 'https://images.code.org/5ab7f854ed8fb8162a1441be09c13766-image-1755184934057.png'
+
+markdown <<MARKDOWN
+#Ethan Carter
+
+Look through Ethan's social media posts and record important information in your activity guide.
+
+<table style="width:100%; border-collapse:collapse; border:none;">
+  <!-- Row 1: Top image row -->
+  <tr>
+    <td style="width:48%; vertical-align:top;">
+      <img src="https://images.code.org/b2349724f084cebeece83630eca2e40b-image-1755121508358.png" alt="Social media image 1" style="width:100%; height:auto;">
+    </td>
+    <td style="width:4%;"></td> <!-- blank spacer column -->
+    <td style="width:48%; vertical-align:top;">
+      <img src="https://images.code.org/4cb6e861dd7f3839894b067ec5c4665a-image-1755121508358.png" alt="Social media image 2" style="width:100%; height:auto;">
+    </td>
+  </tr>
+
+  <!-- Row 2: Captions for first set -->
+  <tr>
+    <td style="background-color:black; color:white; padding:8px; font-family:sans-serif; width: 220px; height: 100px; vertical-align: top;">
+    <h3>@LensAndLaces</h3>
+    Meet my new partner in crime 📸✨ Time to see the world through fresh glass
+    <br>
+    #CanonR50 #NewGearDay #PhotographerLife #CameraUnboxing
+    </td>
+    <td></td> <!-- spacer -->
+    <td style="background-color:black; color:white; padding:8px; font-family:sans-serif; width: 220px; height: 100px; vertical-align: top;">
+    <h3>@EthanC_PNW</h3>
+    The light hits different up here in the PNW 🌄
+    <br>
+    #PNWPhotography #HikingViews #CanonShooter #LandscapeLovers
+    </td>
+  </tr>
+
+  <!-- Row 3: Vertical spacer row -->
+  <tr>
+    <td style="height:24px;"></td>
+    <td></td>
+    <td></td>
+  </tr>
+
+  <!-- Row 4: Second image row -->
+  <tr>
+    <td style="vertical-align:top;">
+      <img src="https://images.code.org/c13250cabba520436f041c852cbdbd68-image-1755121508359.png" alt="Social media image 3" style="width:100%; height:auto;">
+    </td>
+    <td></td> <!-- spacer -->
+    <td style="vertical-align:top;">
+      <img src="https://images.code.org/c3322931ad028b103ecaa1b6bdd16a66-image-1755121508360.png" alt="Social media image 4" style="width:100%; height:auto;">
+    </td>
+  </tr>
+
+  <!-- Row 5: Captions for second set -->
+  <tr>
+    <td style="background-color:black; color:white; padding:8px; font-family:sans-serif; width: 220px; height: 100px; vertical-align: top;">
+     <h3>@EthanShootsLive</h3> 
+     Seattle’s indie scene >>> Keep your playlists weird
+     <br>
+     #IndieMusic #SeattleBands #LiveMusicLove #FestivalVibes
+    </td>
+    <td></td> <!-- spacer -->
+    <td style="background-color:black; color:white; padding:8px; font-family:sans-serif; width: 220px; height: 100px; vertical-align: top;">
+    <h3>@EthanC_PNW</h3>
+    Next chapter starts in the fall 🐾💜
+    <br>
+    #UWBound #CollegeLife #FutureHusky
+    </td>
+  </tr>
+</table>
+
+
+MARKDOWN
