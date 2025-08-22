@@ -76,7 +76,7 @@ const Card: React.FC<CardProps> = ({
         <Typography variant="body3">{description}</Typography>
       </CardContent>
       <CardActions disableSpacing>
-        {primaryButton && (
+        {primaryButton?.fields && (
           <Button
             {...primaryButton}
             text={primaryButton.fields.label}
@@ -89,7 +89,7 @@ const Card: React.FC<CardProps> = ({
             size="medium"
           />
         )}
-        {secondaryButton && (
+        {secondaryButton?.fields && (
           <Button
             {...secondaryButton}
             text={secondaryButton.fields.label}

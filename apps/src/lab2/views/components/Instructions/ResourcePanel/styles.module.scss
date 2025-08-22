@@ -43,6 +43,31 @@
       font-size: 14px;
     }
   }
+
+  .bottomTabs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 0;
+  }
+
+  .bottomButton {
+    @include remove-button-styles;
+    height: 2rem;
+    width: 2rem;
+
+    i {
+      color: var(--text-neutral-secondary);
+      font-size: 14px;
+    }
+
+    &:active, &:hover, &.selected {
+      background-color: var(--background-neutral-tertiary);
+    }
+
+  }
 }
 
 .panels {
@@ -50,12 +75,6 @@
   opacity: 1;
   flex-direction: column;
   flex: 1;
-
-  &.footerSpacing {
-    // Space for absolutely positioned footer.
-    // Remove when footer buttons are moved to sidebar.
-    margin-bottom: 45px;
-  }
 }
 
 .panelContent {
