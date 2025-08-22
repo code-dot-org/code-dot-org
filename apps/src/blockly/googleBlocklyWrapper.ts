@@ -135,8 +135,8 @@ const options: {contextMenu: true; shortcut: true} = {
   shortcut: true,
 };
 
-const plugin = new CrossTabCopyPaste();
-plugin.init(options);
+const crossTabCopyPastePlugin = new CrossTabCopyPaste();
+crossTabCopyPastePlugin.init(options);
 
 const MAX_GET_CODE_RETRIES = 2;
 const RETRY_GET_CODE_INTERVAL_MS = 500;
