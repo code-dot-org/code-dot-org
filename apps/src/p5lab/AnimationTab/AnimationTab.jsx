@@ -35,12 +35,12 @@ class AnimationTab extends React.Component {
       P5LabInterfaceMode.ANIMATION,
       P5LabInterfaceMode.BACKGROUND,
     ]).isRequired,
-    uploadsEnabled: PropTypes.bool.isRequired,
 
     // Provided by Redux
     columnSizes: PropTypes.arrayOf(PropTypes.number).isRequired,
     currentAnimation: shapes.AnimationKey,
     defaultQuery: PropTypes.object,
+    uploadsEnabled: PropTypes.bool.isRequired,
   };
 
   render() {
@@ -162,6 +162,7 @@ export default connect(
   state => ({
     currentAnimation: state.animationTab.currentAnimations[state.interfaceMode],
     columnSizes: state.animationTab.columnSizes,
+    uploadsEnabled: state.animationPicker.uploadsEnabled,
   }),
   dispatch => ({
     onColumnWidthsChange(widths) {
