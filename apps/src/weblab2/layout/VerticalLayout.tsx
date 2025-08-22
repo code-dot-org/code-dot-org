@@ -1,8 +1,11 @@
+import SegmentedButtons, {
+  SegmentedButtonsProps,
+} from '@code-dot-org/component-library/segmentedButtons';
 import {InfoPanel} from '@codebridge/InfoPanel/InfoPanel';
 import {LayoutProps} from '@codebridge/types';
 import Workspace from '@codebridge/Workspace/Workspace';
 import classNames from 'classnames';
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 
 import {HTMLPreview} from '@cdo/apps/codebridge/FilePreview/HTMLPreview';
 import {useVerticalLayout} from '@cdo/apps/lab2/hooks/useVerticalLayout';
@@ -23,6 +26,7 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
   isProjectLevel,
   isWidgetView,
 }) => {
+  const [viewMode, setViewMode] = useState<string>('splitView');
   const widgetViewShowCode = useAppSelector(
     state => state.codebridgeWorkspace.widgetViewShowCode
   );
@@ -67,6 +71,41 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
     appName: 'weblab2',
   });
 
+  const viewModeButtonsProps: SegmentedButtonsProps = {
+    buttons: [
+      {
+        label: 'Code',
+        value: 'code',
+        iconLeft: {
+          iconName: 'code',
+          iconStyle: 'solid',
+          title: 'code',
+        },
+      },
+      {
+        label: 'Preview',
+        value: 'preview',
+        iconLeft: {
+          iconName: 'eye',
+          iconStyle: 'solid',
+          title: 'preview',
+        },
+      },
+      {
+        label: 'Split View',
+        value: 'splitView',
+        iconLeft: {
+          iconName: 'table-columns',
+          iconStyle: 'solid',
+          title: 'split-view',
+        },
+      },
+    ],
+    size: 'xs',
+    selectedButtonValue: viewMode,
+    onChange: (viewMode: string) => setViewMode(viewMode),
+  };
+
   useEffect(() => {
     setRightPanelSize(
       shouldHideEditor ? INITIAL_PREVIEW_WIDTH_WIDGET : INITIAL_PREVIEW_WIDTH
@@ -107,24 +146,55 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
             />
           </>
         )}
-        {!shouldHideEditor && (
-          <>
-            <Workspace
-              style={{width: middlePanelWidth}}
-              className={classNames(moduleStyles.shrinkAndGrow, panelClassName)}
-            />
-            <ResizeBar
-              isVertical={true}
-              separatorProps={rightPanelSeparatorProps}
-              isDragging={rightPanelDragging}
-            />
-          </>
-        )}
         <div
-          style={{width: rightPanelWidth}}
-          className={classNames(moduleStyles.shrinkAndGrow, panelClassName)}
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            flexGrow: 1,
+          }}
         >
-          <HTMLPreview />
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'space-between',
+              alignItems: 'center',
+              height: 40,
+            }}
+          >
+            <SegmentedButtons {...viewModeButtonsProps} />
+            <span>WORKSPACE</span>
+            <span />
+          </div>
+          <div style={{display: 'flex', flexGrow: 1}}>
+            {!shouldHideEditor && viewMode !== 'preview' && (
+              <>
+                <Workspace
+                  style={{width: middlePanelWidth}}
+                  className={classNames(
+                    moduleStyles.shrinkAndGrow,
+                    panelClassName
+                  )}
+                  hideHeaders
+                />
+                <ResizeBar
+                  isVertical={true}
+                  separatorProps={rightPanelSeparatorProps}
+                  isDragging={rightPanelDragging}
+                />
+              </>
+            )}
+            {viewMode !== 'code' && (
+              <div
+                style={{width: rightPanelWidth}}
+                className={classNames(
+                  moduleStyles.shrinkAndGrow,
+                  panelClassName
+                )}
+              >
+                <HTMLPreview />
+              </div>
+            )}
+          </div>
         </div>
       </div>
       {isProjectLevel && <div className={moduleStyles.footerArea} />}

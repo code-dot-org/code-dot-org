@@ -134,7 +134,8 @@ export const HTMLPreview = () => {
     <PanelContainer
       id={'html-preview'}
       headerContent={codebridgeI18n.preview()}
-      rightHeaderContent={<RightButtons />}
+      hideHeaders
+      // rightHeaderContent={<RightButtons />}
     >
       <div className={moduleStyles.previewContainer}>
         <div>
