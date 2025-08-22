@@ -199,7 +199,8 @@ module Services
       @unit.update!(version_year: @unit_group.version_year, family_name: @unit_group.family_name,
                     published_state: @unit_group.published_state, instruction_type: @unit_group.instruction_type,
                     instructor_audience: @unit_group.instructor_audience, participant_audience: @unit_group.participant_audience,
-                    pilot_experiment: @unit_group.pilot_experiment, skip_name_format_validation: true
+                    pilot_experiment: @unit_group.pilot_experiment, skip_name_format_validation: true,
+                    original_unit_group_id: nil
       )
     end
 
