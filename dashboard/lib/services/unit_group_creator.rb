@@ -1,5 +1,5 @@
 module Services
-  class StandaloneUnitMigrator < Services::Base
+  class UnitGroupCreator < Services::Base
     attr_reader :unit
 
     def initialize(unit, verbose: false, log_file: nil, file_system_changes: true)
@@ -153,7 +153,7 @@ module Services
     end
 
     private def update_section_assignments
-      count = Section.where(script_id: @unit.id).update_all(course_id: @unit_group.id)
+      count = Section.where(script_id: @unit.id).where(course_id: nil).update_all(course_id: @unit_group.id)
       log "Updated #{count} sections for unit #{@unit.name}" if @verbose
     end
 
