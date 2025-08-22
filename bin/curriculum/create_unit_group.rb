@@ -5,7 +5,7 @@ require 'optparse'
 MIGRATED_UNITS_LOG = 'migrated_units.log'
 $verbose = false
 
-# This script is used to convert standalone courses to UnitGroups.
+# This script is used to add UnitGroups for assigned units.
 def parse_options
   options = {
     rollback: false,
@@ -13,7 +13,7 @@ def parse_options
   }
 
   OptionParser.new do |opts|
-    opts.banner = "Usage: migrate_standalone_units.rb [options]"
+    opts.banner = "Usage: create_unit_group.rb [options]"
 
     opts.on("-u", "--unit_names UnitName1,UnitName2", Array, "Unit names to migrate or rollback") do |unit_names|
       options[:unit_names] = unit_names
@@ -90,9 +90,9 @@ def migrate_units(options)
 
   units.each do |unit|
     begin
-      result = Services::StandaloneUnitMigrator.call(unit, verbose: $verbose, log_file: log_file, file_system_changes: options[:file_system_changes])
+      result = Services::UnitGroupCreator.call(unit, verbose: $verbose, log_file: log_file, file_system_changes: options[:file_system_changes])
     rescue Exception => exception
-      filtered_backtrace = exception.backtrace.select {|line| line.include?("standalone_unit_migrator.rb")}
+      filtered_backtrace = exception.backtrace.select {|line| line.include?("unit_group_creator.rb")}
       puts "ERROR: Caught an exception while migrating #{unit.name}: #{exception.class} - #{exception.message}\n\tBacktrace: #{filtered_backtrace}"
     end
     migrated_units << unit.name if result
@@ -125,9 +125,9 @@ def rollback_units(options)
 
   units.each do |unit|
     begin
-      result = Services::StandaloneUnitMigrator.rollback(unit, verbose: $verbose, log_file: log_file, file_system_changes: options[:file_system_changes])
+      result = Services::UnitGroupCreator.rollback(unit, verbose: $verbose, log_file: log_file, file_system_changes: options[:file_system_changes])
     rescue Exception => exception
-      filtered_backtrace = exception.backtrace.select {|line| line.include?("standalone_unit_migrator.rb")}
+      filtered_backtrace = exception.backtrace.select {|line| line.include?("unit_group_creator.rb")}
       puts "ERROR: Caught an exception while rolling back #{unit.name}: #{exception.class} - #{exception.message}\n\tBacktrace: #{filtered_backtrace}"
     end
     successful_rollback_count += 1 if result

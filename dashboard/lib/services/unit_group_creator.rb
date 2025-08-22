@@ -1,5 +1,5 @@
 module Services
-  class StandaloneUnitMigrator < Services::Base
+  class UnitGroupCreator < Services::Base
     attr_reader :unit
 
     def initialize(unit, verbose: false, log_file: nil, file_system_changes: true)
