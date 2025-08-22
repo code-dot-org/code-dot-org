@@ -15,10 +15,18 @@
 
   .navRow {
     display: flex;
-    align-items: end;
+    align-items: start;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 100%;
+    overflow-x: auto;
 
-    button {
+    button,
+    select {
       max-height: 2rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     .categorySelectionContainer {
@@ -33,13 +41,25 @@
     }
 
     .divider {
-      margin: 0 0.75rem;
+      margin: 0;
       border-left: 1px solid var(--borders-neutral-primary);
       height: 2rem;
+      display: none;
     }
+  }
 
-    .exportButton {
-      margin-left: auto;
+  @media (min-width: 1100px) {
+    .navRow {
+      flex-direction: row;
+      align-items: end;
+
+      .divider {
+        display: block;
+      }
+
+      .exportButton {
+        margin-left: auto;
+      }
     }
   }
 
@@ -53,6 +73,7 @@
 
 .surveyResultsContainer {
   display: flex;
+  flex-direction: column;
   gap: 1.5rem;
   margin-top: 2rem;
 }
@@ -65,6 +86,10 @@ div.card {
     border-bottom: 1px solid var(--borders-neutral-primary);
     background-color: var(--background-neutral-secondary);
     padding: 0.5rem 0.875rem;
+
+    .subHeader {
+      color: var(--text-neutral-secondary);
+    }
 
     .cardHeaderContainer {
       display: flex;
@@ -80,6 +105,7 @@ div.card {
 
   div.cardContent {
     padding: 0.75rem 1rem 1rem;
+    flex: 1;
   }
 
   .divider {
@@ -154,6 +180,15 @@ div.card {
     &.status {
       > div {
         background-color: var(--background-brand-teal-primary);
+
+        span {
+          color: var(--text-neutral-white-fixed);
+        }
+      }
+    }
+    &.questionTag {
+      > div {
+        background-color: var(--background-neutral-septenary);
 
         span {
           color: var(--text-neutral-white-fixed);
@@ -280,17 +315,33 @@ div.card {
   margin-top: 1.5rem;
 }
 
-.scoreCardRow {
+.cardRow {
   display: flex;
   flex: 1;
-  flex-direction: row;
   gap: 1.5rem;
+  flex-direction: column;
 
-  .scoreCard {
+  @media (min-width: 900px) {
+    flex-direction: row;
+  }
+
+  .questionCard {
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    .cardHeader,
+    .cardContent {
+      padding: 1rem 1.25rem;
+    }
+
+    &.multiSelect {
+      .cardContent {
+        padding-right: 0.5rem;
+        padding-bottom: 1.25rem;
+      }
+    }
 
     .cardContent {
       padding-top: 1rem;
@@ -341,6 +392,39 @@ div.card {
           background-color: var(--background-error-primary);
         }
       }
+
+      .barRow {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.5rem;
+
+        .barLabel {
+          min-width: 5rem;
+          flex-shrink: 0;
+          text-align: left;
+          color: var(--text-neutral-tertiary);
+        }
+
+        .barContainer {
+          position: relative;
+          flex: 1;
+          flex-shrink: 0;
+          height: 0.625rem;
+          border-radius: 6.25rem;
+          background: var(--background-neutral-tertiary);
+          overflow: hidden;
+
+          .indicator {
+            background: var(--background-brand-teal-primary);
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            transition: width 0.6s ease-out;
+          }
+        }
+      }
     }
 
     .scoreCardFooter {
@@ -363,5 +447,77 @@ div.card {
         margin-right: 0.375rem;
       }
     }
+  }
+
+  .freeResponse {
+    .cardHeaderRow {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .cardContent {
+      padding: 1.25rem;
+    }
+
+    .textCardContainer {
+      width: 100%;
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: 1fr;
+
+      .textCard {
+        background: var(--background-neutral-secondary);
+        border-radius: 0.5rem;
+        padding: 1rem;
+
+        &.success {
+          background: var(--background-success-extra-light);
+        }
+        &.warning {
+          background: var(--background-warning-light);
+        }
+      }
+    }
+
+    // Medium Screens: Switch to 2 columns
+    @media (min-width: 600px) {
+      .textCardContainer {
+        grid-template-columns: repeat(2, 1fr);
+        &.small {
+          grid-template-columns: unset;
+        }
+      }
+    }
+
+    // Large Screens: Switch to 3 columns
+    @media (min-width: 900px) {
+      .textCardContainer {
+        grid-template-columns: repeat(3, 1fr);
+        &.small {
+          grid-template-columns: unset;
+        }
+      }
+    }
+  }
+}
+
+.emptyStateContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+  width: 100%;
+
+  &.large {
+    padding: 5rem 0;
+  }
+
+  .emptyStateImage {
+    width: auto;
+    height: 8.75rem;
+    margin-bottom: 1rem;
   }
 }

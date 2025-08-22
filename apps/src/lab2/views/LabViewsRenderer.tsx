@@ -66,7 +66,7 @@ const LabViewsRenderer: React.FunctionComponent = () => {
     if (pageAction === 'share') {
       return true;
     }
-    // If a project is blocked and in view/edit mode, do not render the lab view if the user does not have view/edit access.
+    // If a project is blocked and in view/edit mode or on a level page, do not render the lab view if the user does not have view/edit access.
     if (['view', 'edit'].includes(pageAction) && !hasElevatedPrivileges) {
       return true;
     }

@@ -134,6 +134,7 @@ export interface ProjectFile {
   folderId: string;
   type?: ProjectFileType;
   url?: string;
+  flagged?: boolean;
 }
 
 /**
@@ -223,6 +224,8 @@ export interface LevelProperties {
   type?: string;
   starterAssets?: {[key: string]: string};
   showRubric?: boolean;
+  customHelperLibrary?: string;
+  validationCode?: string;
 }
 
 // Level configuration data used by project-backed labs that don't require
