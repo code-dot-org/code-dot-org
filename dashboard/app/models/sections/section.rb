@@ -398,7 +398,6 @@ class Section < ApplicationRecord
         courseVersionName: unit_group ? unit_group.name : script&.name,
         unitName: script&.name,
         unitPosition: unit_group_unit&.position,
-        isAssignedStandaloneCourse: !unit_group && !!script,
         createdAt: created_at,
         login_type: login_type,
         grades: grades,
