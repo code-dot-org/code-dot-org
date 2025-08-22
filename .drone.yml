@@ -294,7 +294,6 @@ steps:
       - rm -r ./frontend/node_modules/ # 1.9G (!!!)
       - rm -r ./frontend/.yarn/ # necessary to remove node_modules
       - rm -r ./frontend/*/*/node_modules/ # ~115M
-      - rm -r ./frontend/*/*/.yarn/ # necessary to remove node_modules
 
   - name: cache-staging-ci-build
     image: plugins/s3-cache
