@@ -1,5 +1,10 @@
 <Gamelab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 50,
+  "created_at": "2023-02-10T23:44:00.000Z",
+  "level_num": "custom",
+  "user_id": 324,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -50,7 +55,7 @@
     "submittable": "false",
     "hide_view_data_button": "false",
     "debugger_disabled": "true",
-    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"be552e1a-126c-4eff-a914-601d158b8ea5\",\r\n    \"ebda0809-0134-40e0-b74a-565d800b32d2\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"be552e1a-126c-4eff-a914-601d158b8ea5\": {\r\n      \"name\": \"fly\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/v3/animations/N-p-rJJZ4_T4Yy1kFqUP5g/be552e1a-126c-4eff-a914-601d158b8ea5.png?version=YLoo5A2m1cxIOS5PiW62m.Fecf63j7_L\",\r\n      \"frameSize\": {\r\n        \"x\": 67,\r\n        \"y\": 47\r\n      },\r\n      \"frameCount\": 2,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"YLoo5A2m1cxIOS5PiW62m.Fecf63j7_L\",\r\n      \"categories\": [\r\n        \"animals\"\r\n      ]\r\n    },\r\n    \"ebda0809-0134-40e0-b74a-565d800b32d2\": {\r\n      \"name\": \"mouse\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/v3/animations/N-p-rJJZ4_T4Yy1kFqUP5g/ebda0809-0134-40e0-b74a-565d800b32d2.png?version=eRgRkF0WZTaS53zwgqVz2_miHcf8kZUW\",\r\n      \"frameSize\": {\r\n        \"x\": 61,\r\n        \"y\": 37\r\n      },\r\n      \"frameCount\": 2,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"eRgRkF0WZTaS53zwgqVz2_miHcf8kZUW\",\r\n      \"categories\": [\r\n        \"animals\"\r\n      ]\r\n    }\r\n  }\r\n}",
+    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"be552e1a-126c-4eff-a914-601d158b8ea5\",\r\n    \"ebda0809-0134-40e0-b74a-565d800b32d2\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"be552e1a-126c-4eff-a914-601d158b8ea5\": {\r\n      \"name\": \"fly\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/level_animations/h08Mw4.0onR1VD9.faMwwK08oTIRZQfP/lb-fly-black.png\",\r\n      \"frameSize\": {\r\n        \"x\": 67,\r\n        \"y\": 47\r\n      },\r\n      \"frameCount\": 2,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"YLoo5A2m1cxIOS5PiW62m.Fecf63j7_L\",\r\n      \"categories\": [\r\n        \"animals\"\r\n      ]\r\n    },\r\n    \"ebda0809-0134-40e0-b74a-565d800b32d2\": {\r\n      \"name\": \"mouse\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/level_animations/UUq5jmejUbV.VsDlG6jY9TUrJOtefDws/lb-mouse-grey.png\",\r\n      \"frameSize\": {\r\n        \"x\": 61,\r\n        \"y\": 37\r\n      },\r\n      \"frameCount\": 2,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"eRgRkF0WZTaS53zwgqVz2_miHcf8kZUW\",\r\n      \"categories\": [\r\n        \"animals\"\r\n      ]\r\n    }\r\n  }\r\n}",
     "palette_category_at_start": "sprites",
     "pause_animations_by_default": "false",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"CSD_U3_L11_S4_C1\",\r\n  \"callout_text\": \"Add your block here.\",\r\n  \"element_id\": \"\",\r\n  \"on\": \"code_triggered\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\",\r\n     \"codeString\": \"//1) Add the new movement block **outside** of the draw loop.\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top left\",\r\n    \"at\": \"bottom left\",\r\n    \"adjust\": {\r\n     \"x\": 60,\r\n     \"y\": 10\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
@@ -82,13 +87,8 @@
 
     ]
   },
-  "game_id": 50,
-  "published": true,
-  "created_at": "2023-02-10T23:44:00.000Z",
-  "level_num": "custom",
-  "user_id": 324,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-02-10T23:44:00.616+00:00\",\"changed\":[\"cloned from \\\"CSD U3 abstraction velocityX_2023\\\"\"],\"cloned_from\":\"CSD U3 abstraction velocityX_2023\"},{\"changed_at\":\"2023-02-10 23:44:56 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"video_key\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-02-10 23:48:21 +0000\",\"changed\":[\"code_functions\",\"start_animations\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-02-10 23:48:52 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-02-10 23:54:28 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-02-10 23:56:24 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-02-10 23:58:05 +0000\",\"changed\":[\"code_functions\",\"start_animations\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-02-10T23:44:00.616+00:00\",\"changed\":[\"cloned from \\\"CSD U3 abstraction velocityX_2023\\\"\"],\"cloned_from\":\"CSD U3 abstraction velocityX_2023\"},{\"changed_at\":\"2023-02-10 23:44:56 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"video_key\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-02-10 23:48:21 +0000\",\"changed\":[\"code_functions\",\"start_animations\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-02-10 23:48:52 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-02-10 23:54:28 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-02-10 23:56:24 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-02-10 23:58:05 +0000\",\"changed\":[\"code_functions\",\"start_animations\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-21 20:31:13 +0000\",\"changed\":[\"code_functions\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>
