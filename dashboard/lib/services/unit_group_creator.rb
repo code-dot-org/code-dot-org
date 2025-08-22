@@ -110,7 +110,7 @@ module Services
         instructor_audience: @unit.instructor_audience,
         participant_audience: @unit.participant_audience,
         pilot_experiment: @unit.pilot_experiment,
-        has_numbered_units: false
+        numbered_units: nil
       )
       unless @unit_group.save
         new_name = case @unit_group.errors[:name]&.first
@@ -129,7 +129,7 @@ module Services
           instructor_audience: @unit.instructor_audience,
           participant_audience: @unit.participant_audience,
           pilot_experiment: @unit.pilot_experiment,
-          has_numbered_units: false
+          numbered_units: nil
         )
         @name_changed = true
         @unit_group.save
