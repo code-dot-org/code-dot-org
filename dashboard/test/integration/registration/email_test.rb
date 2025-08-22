@@ -56,6 +56,32 @@ module RegistrationsControllerTests
       created_user&.destroy!
     end
 
+    test "user with disallowed domain in new sign-up" do
+      email = "user@testdomain.com"
+      # Mock the disallowed domains to include a test domain
+      original_domains = Policies::Devise::DisallowedDomains::DISALLOWED_DOMAINS
+      test_domains = ['testdomain.com']
+
+      # Stub the constant to return our test domain
+      Policies::Devise::DisallowedDomains.const_set(:DISALLOWED_DOMAINS, test_domains.freeze)
+
+      post '/users/begin_sign_up', params: {
+        user: {
+          email: email,
+          password: 'mypassword',
+          password_confirmation: 'mypassword',
+          user_type: User::TYPE_STUDENT, # user type doesn't matter for this test
+        }
+      }
+
+      assert_response :forbidden
+      assert_match /Emails from testdomain.com are not allowed to sign up with email and password. Please use your LMS to sign in./, @response.body
+      refute PartialRegistration.in_progress? session
+    ensure
+      # Restore the original constant
+      Policies::Devise::DisallowedDomains.const_set(:DISALLOWED_DOMAINS, original_domains)
+    end
+
     private def finish_email_sign_up(user_type, email)
       params = finish_sign_up_params({user_type: user_type, email: email})
       post '/users', params: params

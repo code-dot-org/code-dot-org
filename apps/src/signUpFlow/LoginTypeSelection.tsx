@@ -188,7 +188,8 @@ const LoginTypeSelection: React.FunctionComponent<{
         body: JSON.stringify(submitLoginTypeParams),
       });
       if (!response.ok) {
-        // Handle disallowed email domains
+        // Handle disallowed email domains. We return a 403 status code from the server
+        // in this case.
         if (response.status === 403) {
           const res = await response.json();
           setEmailErrorMessage(res.error);
