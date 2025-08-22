@@ -22,7 +22,6 @@ const SettingsPanel: React.FunctionComponent<SettingsPanelProps> = ({
   const {theme} = useTheme();
   // SimpleDropdown isn't themed properly, so we have to manually set the color.
   const dropdownColor = theme === 'Dark' ? 'white' : 'black';
-  // const currentLocale = useLocalization();
   const [locale, setLocale] = useState<string>(localization.locale);
   const [localeOptions, setLocaleOptions] = useState<LanguageInfo[]>(
     localization.locales
