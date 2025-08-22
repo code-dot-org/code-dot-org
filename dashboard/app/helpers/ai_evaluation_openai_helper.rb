@@ -21,14 +21,13 @@ module AiEvaluationOpenaiHelper
         response_format: {
           type: "json_schema",
           json_schema: {
-            name: "evaluation",
+            name: "overall_evaluation",
             schema: {
               type: "object",
               properties: {
                 evaluationCriteria: {type: "string"},
                 aiEvaluation: {type: "string"},
                 aiReasoning: {type: "string"},
-                skillEvaluations: {type: "array", items: {type: "object"}},
               },
             }
           }
@@ -56,7 +55,7 @@ module AiEvaluationOpenaiHelper
         response_format: {
           type: "json_schema",
           json_schema: {
-            name: "evaluation",
+            name: "skills_evaluation",
             schema: {
               type: "object",
               properties: {
@@ -65,6 +64,7 @@ module AiEvaluationOpenaiHelper
                   items: {
                     type: "object",
                     properties: {
+                      skillId: {type: "string"},
                       evaluationCriteria: {type: "string"},
                       aiEvaluation: {type: "string"},
                       aiReasoning: {type: "string"}

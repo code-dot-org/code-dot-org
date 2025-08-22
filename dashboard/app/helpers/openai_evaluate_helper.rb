@@ -169,5 +169,5 @@ module OpenaiEvaluateHelper
     messages
   end
 
-  private_class_method :client, :prepend_system_prompt, :evaluate_free_response
+  private_class_method :client, :prepend_system_prompt
 end
