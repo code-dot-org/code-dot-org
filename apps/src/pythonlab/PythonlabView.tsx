@@ -100,6 +100,10 @@ const PythonlabView: React.FunctionComponent<
   const labConfig = useAppSelector(
     state => state.lab2Project.projectSources?.labConfig
   );
+  const miniAppName = useAppSelector(
+    state => state.lab2Project.projectSources?.labConfig?.miniApp?.name
+  );
+
   const hasSource = !!source;
   const isAiTutor2Enabled =
     levelProperties.aiTutorAvailable ||
@@ -186,14 +190,17 @@ const PythonlabView: React.FunctionComponent<
   );
 
   useEffect(() => {
-    setAiTutor2Context(
-      getAiTutor2Context(
-        source,
-        validationFile,
-        levelProperties.longInstructions
-      )
-    );
-  }, [levelProperties.longInstructions, source, validationFile]);
+    if (miniAppName) {
+      setAiTutor2Context(
+        getAiTutor2Context(
+          source,
+          validationFile,
+          levelProperties.longInstructions,
+          miniAppName
+        )
+      );
+    }
+  }, [levelProperties.longInstructions, source, validationFile, miniAppName]);
 
   const [askAiTutor2, AiTutor2Response] = useAiTutor2(
     isAiTutor2HintEnabled,
