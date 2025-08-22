@@ -2,10 +2,12 @@ import CloseButton from '@code-dot-org/component-library/closeButton';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import {Heading2} from '@code-dot-org/component-library/typography';
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 
 import {LocaleProps} from '@cdo/apps/lab2/types';
 import {Setting} from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
+import localization from '@cdo/apps/localization';
+import {LanguageInfo} from '@cdo/apps/localization/Localization';
 import {commonI18n} from '@cdo/apps/types/locale';
 
 import styles from './settings-panel.module.scss';
@@ -23,6 +25,19 @@ const SettingsPanel: React.FunctionComponent<SettingsPanelProps> = ({
   const {theme} = useTheme();
   // SimpleDropdown isn't themed properly, so we have to manually set the color.
   const dropdownColor = theme === 'Dark' ? 'white' : 'black';
+  // const currentLocale = useLocalization();
+  const [locale, setLocale] = useState<string>(localization.locale);
+  const [localeOptions, setLocaleOptions] = useState<LanguageInfo[]>(
+    localization.locales
+  );
+  console.log({localUrl: localeProps?.localeUrl});
+
+  useEffect(() => {
+    localization.on('change', info => {
+      setLocale(localization.locale);
+      setLocaleOptions(localization.locales);
+    });
+  }, [setLocale]);
 
   const handleLanguageChange = (
     event: React.ChangeEvent<HTMLSelectElement>
@@ -57,9 +72,9 @@ const SettingsPanel: React.FunctionComponent<SettingsPanelProps> = ({
             />
             <SimpleDropdown
               name="locale"
-              selectedValue={localeProps.currentLocale}
+              selectedValue={locale}
               onChange={handleLanguageChange}
-              items={localeProps.localeOptions}
+              items={localeOptions}
               labelText={commonI18n.language()}
               isLabelVisible={true}
               size="s"
