@@ -1,4 +1,10 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, {
+  Dispatch,
+  SetStateAction,
+  useEffect,
+  useRef,
+  useState,
+} from 'react';
 
 import ChatMessage from '@cdo/apps/aiComponentLibrary/chatMessage/ChatMessage';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
@@ -83,6 +89,7 @@ interface AiDiffChatProps {
   curriculumCourses?: string[];
   threadFetchCallback?: () => void;
   threadId?: number;
+  setThreadId?: Dispatch<SetStateAction<number>>;
 }
 
 const AiDiffChat: React.FC<AiDiffChatProps> = ({
@@ -98,6 +105,7 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
   curriculumCourses = [],
   threadFetchCallback = () => {},
   threadId = 0,
+  setThreadId = () => {},
 }) => {
   const reportingData = React.useMemo(() => {
     return {
@@ -252,6 +260,7 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
           );
           if (json.thread_id) {
             setLocalThreadId(json.thread_id);
+            setThreadId(json.thread_id);
           }
           setMessageHistory(prevMessages => [...prevMessages, newAiMessage]);
         })
@@ -272,6 +281,7 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
       threadFetchCallback,
       setLocalThreadId,
       chatResponseCallback,
+      setThreadId,
     ]
   );
 
