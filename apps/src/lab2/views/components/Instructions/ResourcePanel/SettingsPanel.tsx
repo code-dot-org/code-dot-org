@@ -4,7 +4,6 @@ import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import {Heading2} from '@code-dot-org/component-library/typography';
 import React, {useEffect, useState} from 'react';
 
-import {LocaleProps} from '@cdo/apps/lab2/types';
 import {Setting} from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import localization from '@cdo/apps/localization';
 import {LanguageInfo} from '@cdo/apps/localization/Localization';
@@ -14,13 +13,11 @@ import styles from './settings-panel.module.scss';
 interface SettingsPanelProps {
   settings: Setting[];
   closePanel: () => void;
-  localeProps?: LocaleProps;
 }
 
 const SettingsPanel: React.FunctionComponent<SettingsPanelProps> = ({
   settings,
   closePanel,
-  localeProps,
 }) => {
   const {theme} = useTheme();
   // SimpleDropdown isn't themed properly, so we have to manually set the color.
@@ -30,7 +27,6 @@ const SettingsPanel: React.FunctionComponent<SettingsPanelProps> = ({
   const [localeOptions, setLocaleOptions] = useState<LanguageInfo[]>(
     localization.locales
   );
-  console.log({localUrl: localeProps?.localeUrl});
 
   useEffect(() => {
     localization.on('change', info => {
@@ -57,33 +53,31 @@ const SettingsPanel: React.FunctionComponent<SettingsPanelProps> = ({
         />
       </div>
       <div className={styles.settingsList}>
-        {localeProps && (
-          <form
-            action={localeProps.localeUrl}
-            method="post"
-            style={{marginBottom: '0px'}}
-            data-notranslate=""
-            className={styles.languageForm}
-          >
-            <input
-              type="hidden"
-              name="user_return_to"
-              value={window.location.href}
-            />
-            <SimpleDropdown
-              name="locale"
-              selectedValue={locale}
-              onChange={handleLanguageChange}
-              items={localeOptions}
-              labelText={commonI18n.language()}
-              isLabelVisible={true}
-              size="s"
-              color={dropdownColor}
-              dropdownTextThickness="thin"
-              className={styles.dropdown}
-            />
-          </form>
-        )}
+        <form
+          action={'/locale'}
+          method="post"
+          style={{marginBottom: '0px'}}
+          data-notranslate=""
+          className={styles.languageForm}
+        >
+          <input
+            type="hidden"
+            name="user_return_to"
+            value={window.location.href}
+          />
+          <SimpleDropdown
+            name="locale"
+            selectedValue={locale}
+            onChange={handleLanguageChange}
+            items={localeOptions}
+            labelText={commonI18n.language()}
+            isLabelVisible={true}
+            size="s"
+            color={dropdownColor}
+            dropdownTextThickness="thin"
+            className={styles.dropdown}
+          />
+        </form>
         {settings.map(setting => (
           <SimpleDropdown
             key={setting.id}
