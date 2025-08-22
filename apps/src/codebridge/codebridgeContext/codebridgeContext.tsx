@@ -23,6 +23,11 @@ export type CodebridgeContextType = {
   projectPickerSettings?: ProjectPickerSettings;
   aiTutor2Context?: string;
   AiTutor2ResponseView?: React.ReactNode;
+  onImageFlagged?: (
+    file: File,
+    fileType: string,
+    uploadFunction: () => Promise<void>
+  ) => void;
 };
 
 export const CodebridgeContext = createContext<CodebridgeContextType | null>(

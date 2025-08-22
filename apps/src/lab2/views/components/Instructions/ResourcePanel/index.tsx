@@ -8,17 +8,23 @@ import classNames from 'classnames';
 import React, {useMemo, useState} from 'react';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
+import {LocaleProps} from '@cdo/apps/lab2/types';
 import AiTutor2Chat from '@cdo/apps/lab2/views/components/AiTutor2Chat';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import StudentRubricView from '@cdo/apps/lab2/views/components/rubrics/StudentRubricView';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {getTypedKeys} from '@cdo/apps/types/utils';
+import getScriptData, {hasScriptData} from '@cdo/apps/util/getScriptData';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {useRubric} from '../../rubrics/RubricWrapper';
 import ForTeachersOnly from '../ForTeachersOnly';
 import Instructions, {InstructionsProps} from '../InstructionsV2';
 import NavigationArea from '../NavigationArea';
+
+import CopyrightButton from './CopyrightButton';
+import ResourcePanelExtraLinks from './ResourcePanelExtraLinks';
+import SettingsPanel from './SettingsPanel';
 
 import styles from './styles.module.scss';
 
@@ -27,6 +33,14 @@ enum Tabs {
   AiTutor = 'aiTutor',
   TeachersOnly = 'teachersOnly',
   StudentRubric = 'studentRubric',
+}
+
+export interface Setting {
+  id: string;
+  label: string;
+  options: {value: string; text: string}[];
+  selectedValue: string | undefined;
+  onChange: (value: string) => void;
 }
 
 const tabInfo: {[key in Tabs]: {title: string; icon: string}} = {
@@ -42,12 +56,20 @@ const tabInfo: {[key in Tabs]: {title: string; icon: string}} = {
   },
 };
 
+function getLocaleProps() {
+  if (hasScriptData('script[data-localeProps]')) {
+    return getScriptData('localeProps') as LocaleProps;
+  }
+  return undefined;
+}
+
 type ResourcePanelProps = InstructionsProps & {
   className?: string;
   headerClassName?: string;
   aiTutor2Context?: string;
   rightHeaderContent?: React.ReactNode;
   includeFooterSpacing?: boolean;
+  settings?: Setting[];
 };
 
 /**
@@ -59,6 +81,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   aiTutor2Context,
   rightHeaderContent,
   includeFooterSpacing = true,
+  settings,
   ...instructionsProps
 }) => {
   const {theme} = useTheme();
@@ -67,6 +90,10 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     state => state.currentUser.userType === 'student'
   );
   const [currentTab, setCurrentTab] = useState<Tabs>(Tabs.Instructions);
+  const [isSettingsOpen, setIsSettingsOpen] = useState(false);
+  const localeProps = getLocaleProps();
+
+  const levelId = instructionsProps.levelProperties.id;
 
   // Build available tabs based on level information.
   const availableTabs = useMemo(() => {
@@ -119,6 +146,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                 size: 'xs',
                 'data-theme': theme,
               }}
+              key={`tooltip-${tab}`}
             >
               <button
                 type="button"
@@ -139,13 +167,33 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
             </WithTooltip>
           ))}
         </div>
+        <div className={classNames(styles.bottomTabs)}>
+          <ResourcePanelExtraLinks levelId={levelId} theme={theme} />
+          {(localeProps || settings) && (
+            <WithTooltip
+              tooltipProps={{
+                text: commonI18n.settings(),
+                tooltipId: 'tooltip-settings',
+                direction: 'onRight',
+                size: 'xs',
+                'data-theme': theme,
+              }}
+            >
+              <button
+                type="button"
+                className={styles.bottomButton}
+                onClick={() => {
+                  setIsSettingsOpen(!isSettingsOpen);
+                }}
+              >
+                <FontAwesomeV6Icon iconName={'gear'} />
+              </button>
+            </WithTooltip>
+          )}
+          <CopyrightButton theme={theme} />
+        </div>
       </div>
-      <div
-        className={classNames(
-          styles.panels,
-          includeFooterSpacing && styles.footerSpacing
-        )}
-      >
+      <div className={styles.panels}>
         <PanelContainer
           id={currentTab}
           headerContent={tabInfo[currentTab].title}
@@ -154,6 +202,13 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
         >
           {availableTabs[currentTab]}
           <NavigationArea {...instructionsProps} />
+          {isSettingsOpen && (
+            <SettingsPanel
+              settings={settings || []}
+              closePanel={() => setIsSettingsOpen(false)}
+              localeProps={localeProps}
+            />
+          )}
         </PanelContainer>
       </div>
     </div>

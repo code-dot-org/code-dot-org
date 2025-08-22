@@ -1,6 +1,5 @@
 <Gamelab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 50,
   "created_at": "2024-03-25T22:42:18.000Z",
   "level_num": "custom",
@@ -39,7 +38,7 @@
     "show_debug_watch": "true",
     "debugger_disabled": "false",
     "pause_animations_by_default": "false",
-    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"52d75a8c-cbb1-4eec-bb46-20f1636a6b2e\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"52d75a8c-cbb1-4eec-bb46-20f1636a6b2e\": {\r\n      \"name\": \"ghost_standing_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/Uv9ISNABQXLedEK4yvmqYohWphqG.0e5/category_characters/ghost_standing.png\",\r\n      \"frameSize\": {\r\n        \"x\": 72,\r\n        \"y\": 158\r\n      },\r\n      \"frameCount\": 7,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"Uv9ISNABQXLedEK4yvmqYohWphqG.0e5\"\r\n    }\r\n  }\r\n}",
+    "start_animations": "{\n  \"orderedKeys\": [\n    \"52d75a8c-cbb1-4eec-bb46-20f1636a6b2e\"\n  ],\n  \"propsByKey\": {\n    \"52d75a8c-cbb1-4eec-bb46-20f1636a6b2e\": {\n      \"name\": \"ghost_standing_1\",\n      \"sourceUrl\": \"/api/v1/animation-library/Uv9ISNABQXLedEK4yvmqYohWphqG.0e5/category_characters/ghost_standing.png\",\n      \"frameSize\": {\n        \"x\": 72,\n        \"y\": 158\n      },\n      \"frameCount\": 7,\n      \"looping\": true,\n      \"frameDelay\": 2,\n      \"version\": \"Uv9ISNABQXLedEK4yvmqYohWphqG.0e5\"\n    }\n  }\n}",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "expand_debugger": "false",
@@ -62,11 +61,9 @@
     "encrypted": "false",
     "mini_rubric": "false",
     "libraries_enabled": "false",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "preload_asset_list": null
   },
+  "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2024-03-25T22:42:18.438+00:00\",\"changed\":[\"cloned from \\\"VPL - CSD - M7 U6L4 Level 2_2023\\\"\"],\"cloned_from\":\"VPL - CSD - M7 U6L4 Level 2_2023\"},{\"changed_at\":\"2024-08-29 17:17:48 +0000\",\"changed\":[\"long_instructions\",\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]"
 }]]></config>

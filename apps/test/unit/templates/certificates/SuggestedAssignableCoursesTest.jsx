@@ -36,7 +36,6 @@ describe('SuggestedAssignableCourses', () => {
     course_id: 173,
     course_offering_id: 10,
     script_id: null,
-    is_standalone_unit: false,
     is_translated: true,
     description:
       'Taught as an intro or AP course, this curriculum introduces students to computer science and challenges them to explore how technology can impact the world. ',

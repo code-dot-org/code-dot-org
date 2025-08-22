@@ -18,6 +18,7 @@ import {FacilitatorSelection} from './components/FacilitatorSelection';
 import {SurveyCategorySelection} from './components/SurveyCategorySelection';
 import {SurveyTypeSelection} from './components/SurveyTypeSelection';
 import {WorkshopTabs} from './components/WorkshopTabs';
+import {NoSurveyResponses} from './surveys/components/NoSurveyResponses';
 import {WorkshopLayoutProps, WorkshopContextValue} from './types';
 
 import styles from './workshop.module.scss';
@@ -84,9 +85,19 @@ export const WorkshopLayout: FC<WorkshopLayoutProps> = ({
   const showTabs = !pathname.includes('/edit');
   const showSurveyElements = pathname.includes('/surveys');
   const showPostSurveyCategorySelection = pathname.includes('/surveys/post');
-  const showFacilitatorSelection = pathname.includes(
-    '/surveys/post/facilitators'
-  );
+  const showFacilitatorSelection =
+    pathname.includes('/surveys/post/facilitators') &&
+    surveys?.surveys?.post_workshop;
+
+  const showNoSurveyResponses = useMemo(() => {
+    if (showPostSurveyCategorySelection) {
+      return !surveysLoading && !surveys?.surveys?.post_workshop;
+    }
+  }, [
+    showPostSurveyCategorySelection,
+    surveys?.surveys?.post_workshop,
+    surveysLoading,
+  ]);
 
   // TODO: https://codedotorg.atlassian.net/browse/ACQ-3438
   const handleDownload = () => {};
@@ -132,9 +143,12 @@ export const WorkshopLayout: FC<WorkshopLayoutProps> = ({
             />
           )}
         </div>
-        {showFacilitatorSelection && <FacilitatorSelection />}
+        {showFacilitatorSelection && (
+          <FacilitatorSelection facilitators={workshop?.facilitators} />
+        )}
       </nav>
       <main>
+        {showNoSurveyResponses && <NoSurveyResponses />}
         <Outlet />
       </main>
     </WorkshopContext.Provider>
