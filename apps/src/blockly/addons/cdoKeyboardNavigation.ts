@@ -1,6 +1,8 @@
 import {KeyboardNavigation} from '@blockly/keyboard-navigation';
 import * as GoogleBlockly from 'blockly/core';
 
+import {unregisterCrossTabPluginOptions} from './contextMenu';
+
 export function registerKeyboardNavigationStyles() {
   KeyboardNavigation.registerKeyboardNavigationStyles();
 }
@@ -11,8 +13,11 @@ export function initializeKeyboardNavigation(
   if (Blockly.KeyboardNavigation) {
     Blockly.KeyboardNavigation.dispose();
   }
+  unregisterCrossTabPluginOptions();
   createShortcutsModalContainer();
-  Blockly.KeyboardNavigation = new KeyboardNavigation(workspace);
+  Blockly.KeyboardNavigation = new KeyboardNavigation(workspace, {
+    allowCrossWorkspacePaste: true,
+  });
 
   enableShortcutModalEscape();
 }

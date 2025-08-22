@@ -506,6 +506,19 @@ function unregisterDefaultOptions() {
   } catch (error) {}
 }
 
+/**
+ * Unregisters the cross-tab copy/paste options.
+ * These options are made redundant by the ones provided by @blockly/keyboard-navigation
+ */
+export function unregisterCrossTabPluginOptions() {
+  try {
+    GoogleBlockly.ContextMenuRegistry.registry.unregister('blockCopyToStorage');
+    GoogleBlockly.ContextMenuRegistry.registry.unregister(
+      'blockPasteFromStorage'
+    );
+  } catch (error) {}
+}
+
 function registerCustomBlockOptions() {
   // Each option has a "weight": a number that determines the sort order of the option.
   // Options with higher weights appear later in the context menu.
