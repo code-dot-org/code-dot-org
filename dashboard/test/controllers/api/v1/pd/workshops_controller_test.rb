@@ -613,12 +613,24 @@ class Api::V1::Pd::WorkshopsControllerTest < ActionController::TestCase
 
     # create some enrollments
     5.times do
-      create(:pd_enrollment, workshop: @workshop)
+      create(:pd_enrollment, workshop: @workshop, user: create(:teacher))
     end
+
     mock_mail = stub(deliver_now: nil)
-    Pd::WorkshopMailjetMailer.expects(:send_teacher_workshop_detail_change_notification).times(5)
     Pd::WorkshopMailer.any_instance.expects(:facilitator_detail_change_notification).returns(mock_mail)
     Pd::WorkshopMailer.any_instance.expects(:organizer_detail_change_notification).returns(mock_mail)
+
+    pre_update_workshop_sessions = @workshop.sessions.map(&:session_info_for_emails)
+    post_update_workshop_sessions = pre_update_workshop_sessions + [(create(:pd_session, start: (tomorrow_at 9), end: (tomorrow_at 9) + 8.hours)).session_info_for_emails]
+    Pd::WorkshopMailjetMailer.expects(:send_teacher_workshop_detail_change_notification).with(
+      anything,
+      anything,
+      false,
+      [{name: 'Description', old: 'A really cool workshop', new: workshop_params[:description]}],
+      true,
+      pre_update_workshop_sessions,
+      post_update_workshop_sessions
+    ).times(5)
 
     put :update, params: {
       id: @workshop.id,
