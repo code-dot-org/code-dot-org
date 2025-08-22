@@ -74,9 +74,11 @@ class DatablockStorageLibraryManifest < ApplicationRecord
     instance.update!(library_manifest: manifest)
   end
 
-  def self.seed_tables(glob = "config/datablock_storage/*.csv")
+  def self.seed_tables(glob = "config/datablock_storage/datasets/*.json")
     Dir.glob(Rails.root.join(glob)).each do |path|
-      table_name = path.match(/([^\/]+)\.csv$/)[1]
+      dataset_json = JSON.parse(File.read(path))
+      table_name = dataset_json['table_name']
+      dataset_csv = dataset_json['csv']
 
       # Overwrite the table if it already exists
       table = begin
@@ -85,7 +87,7 @@ class DatablockStorageLibraryManifest < ApplicationRecord
         DatablockStorageTable.create!(project_id: DatablockStorageTable::SHARED_TABLE_PROJECT_ID, table_name: table_name)
       end
 
-      table.import_csv File.read(path)
+      table.import_csv dataset_csv
     end
   end
 
