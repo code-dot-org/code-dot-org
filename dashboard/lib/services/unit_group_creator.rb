@@ -89,8 +89,6 @@ module Services
     private def log_initial_info
       log "Initial info"
       log "Existing unit: #{@unit.inspect}"
-      log "Existing course_version: #{@unit.course_version.inspect}"
-      log "Existing course_offering: #{@unit.course_version&.course_offering.inspect}"
     end
 
     private def set_i18n_params
@@ -108,11 +106,11 @@ module Services
         name: @unit.name,
         family_name: @unit.family_name || @unit.name,
         version_year: @unit.version_year || 'unversioned',
-        instruction_type: @unit.instruction_type,
-        instructor_audience: @unit.instructor_audience,
-        participant_audience: @unit.participant_audience,
+        instruction_type: @unit.instruction_type || Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.teacher_led,
+        instructor_audience: @unit.instructor_audience || Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher,
+        participant_audience: @unit.participant_audience || Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
         pilot_experiment: @unit.pilot_experiment,
-        has_numbered_units: false
+        numbered_units: nil
       )
       unless @unit_group.save
         new_name = case @unit_group.errors[:name]&.first
@@ -125,13 +123,13 @@ module Services
                    end
         @unit_group = UnitGroup.new(
           name: new_name,
-          family_name: @unit.family_name,
-          version_year: @unit.version_year,
-          instruction_type: @unit.instruction_type,
-          instructor_audience: @unit.instructor_audience,
-          participant_audience: @unit.participant_audience,
+          family_name: @unit.family_name || @unit.name,
+          version_year: @unit.version_year || 'unversioned',
+          instruction_type: @unit.instruction_type || Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.teacher_led,
+          instructor_audience: @unit.instructor_audience || Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher,
+          participant_audience: @unit.participant_audience || Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
           pilot_experiment: @unit.pilot_experiment,
-          has_numbered_units: false
+          numbered_units: nil
         )
         @name_changed = true
         @unit_group.save
