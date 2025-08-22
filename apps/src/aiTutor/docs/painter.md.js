@@ -49,7 +49,7 @@ my_painter .turn_left()
 Paints the space the \`Painter\` object is standing on.
 
 **Parameters:**
-- **\`color\`** (\`String\`, required) – the color of the paint - can be a hex color value or color name (any CSS named color in any case is valid, but lowercase and PascalCase are preferred) or a .  
+- **\`color\`** (\`String\`, required) – the color of the paint - can be a hex color value or color name (CSS named color - case insensitive).  
 
 \`\`\`
 my_painter = Painter(2, 4, "South", 10)

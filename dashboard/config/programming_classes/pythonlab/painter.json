@@ -62,7 +62,7 @@
       "position": 4,
       "name": "paint",
       "content": "Paints the space the `Painter` object is standing on.",
-      "parameters": "[{\"name\":\"color\",\"type\":\"String\",\"required\":true,\"description\":\"the color of the paint - can be a color name or a hex value\"}]",
+      "parameters": "[{\"name\":\"color\",\"type\":\"String\",\"required\":true,\"description\":\"the color of the paint - can be a hex color value or color name (CSS named color - case insensitive).  \"}]",
       "examples": "[{\"code\":\"```\\nmy_painter = Painter(2, 4, \\\"South\\\", 10)\\nmy_painter.paint(\\\"white\\\")\\n```\",\"image\":\"https://images.code.org/d66489311bf586df08f4b294621acc95-painter_paint.gif\"},{\"code\":\"![](https://images.code.org/b5f030c497b6f6f61470fc3ab6dd7538-newColorChart.png)\"}]",
       "syntax": null,
       "external_link": null,
