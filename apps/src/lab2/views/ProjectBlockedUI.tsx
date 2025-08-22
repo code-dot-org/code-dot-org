@@ -57,8 +57,11 @@ export const ProjectBlockedUI: React.FunctionComponent<{
           },
   };
 
-  // If sharing is disabled and user has view or edit access, no need to render any project blocked UI.
-  if (blockedType === 'projectSharingDisabled' && hasViewOrEditAccess) {
+  // If sharing is disabled and user is project owner or project owner's teacher, no need to render any project blocked UI.
+  if (
+    blockedType === 'projectSharingDisabled' &&
+    (isOwner || isTeacherOfProjectOwner)
+  ) {
     return null;
   }
 
@@ -88,8 +91,8 @@ export const ProjectBlockedUI: React.FunctionComponent<{
   }
   /* Excluding two cases above, render blocked UI.
       - If in project edit/view mode and user is without view/edit access, render blocked UI.
-        (Note that only the user and user's teacher can access a user's activity level.)
-      - In share mode (excluding when project sharing is disabled and user has view/edit access),
+          (Note that only the user and user's teacher can access a user's activity level.)
+      - In share mode (excluding when project sharing is disabled and user is owner or owner's teacher),
           render blocked UI which includes customized link depending on user's role.
   */
   return (
