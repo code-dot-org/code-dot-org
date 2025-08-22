@@ -36,7 +36,7 @@ module Services
       end
 
       # Clear "course" settings from the unit
-      @unit.update!(is_course: false, version_year: nil, family_name: nil, published_state: nil, instruction_type: nil, instructor_audience: nil, participant_audience: nil, skip_name_format_validation: true)
+      @unit.update!(version_year: nil, family_name: nil, published_state: nil, instruction_type: nil, instructor_audience: nil, participant_audience: nil, skip_name_format_validation: true)
 
       update_unit_group(i18n_params, unit_copy.published_state)
 
@@ -171,9 +171,6 @@ module Services
         "Existing unit is valid" => @unit.valid? || @name_changed,
         "CourseVersion is valid" => course_version.valid?,
         "New UnitGroup has the same name as the existing unit" => @unit_group.name == dupe_unit.name || @name_changed,
-        "New UnitGroup has the same instruction_type as the existing unit" => @unit_group.instruction_type == dupe_unit.instruction_type,
-        "New UnitGroup has the same instructor_audience as the existing unit" => @unit_group.instructor_audience == dupe_unit.instructor_audience,
-        "New UnitGroup has the same participant_audience as the existing unit" => @unit_group.participant_audience == dupe_unit.participant_audience,
         "New UnitGroup has the same published_state as the existing unit" => @unit_group.published_state == dupe_unit.published_state,
         "New UnitGroup is assigned to the existing unit" => @unit_group.first_unit.id == @unit.id,
         "New UnitGroup is a single unit course" => @unit_group.single_unit_course?,
@@ -202,7 +199,8 @@ module Services
       @unit.update!(version_year: @unit_group.version_year, family_name: @unit_group.family_name,
                     published_state: @unit_group.published_state, instruction_type: @unit_group.instruction_type,
                     instructor_audience: @unit_group.instructor_audience, participant_audience: @unit_group.participant_audience,
-                    pilot_experiment: @unit_group.pilot_experiment, skip_name_format_validation: true
+                    pilot_experiment: @unit_group.pilot_experiment, skip_name_format_validation: true,
+                    original_unit_group_id: nil
       )
     end
 
