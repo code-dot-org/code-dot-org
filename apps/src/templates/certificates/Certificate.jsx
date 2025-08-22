@@ -1,3 +1,4 @@
+import Alert from '@code-dot-org/component-library/alert';
 import {
   BodyTwoText,
   BodyThreeText,
@@ -134,8 +135,8 @@ function Certificate(props) {
       // Auto personalize using userName (if available)
       if (userName) {
         setStudentName(userName);
+        setPersonalized(true);
       }
-      setPersonalized(true);
     }
   }, [isPlCourse, personalized, userName]);
   useEffect(() => {
@@ -228,6 +229,11 @@ function Certificate(props) {
     );
   };
 
+  const userNameIsRequiredError = isPlCourse && !userName;
+  const [showNameIsRequiredAlert, setShowNameIsRequiredAlert] = useState(
+    userNameIsRequiredError
+  );
+
   return (
     <div className={style.container}>
       <div className={style.headerContainer}>
@@ -237,6 +243,15 @@ function Certificate(props) {
       </div>
       {courseName && (
         <LargeChevronLink link={coursePath} linkText={i18n.backToActivity()} />
+      )}
+      {showNameIsRequiredAlert && (
+        <Alert
+          className={style.userNameIsRequiredAlert}
+          type="warning"
+          text="You need to add your full name to your account to download or share this certificate"
+          link={{text: 'Go to account settings', href: '/users/edit'}}
+          onClose={() => setShowNameIsRequiredAlert(false)}
+        />
       )}
       <div className={style.certificateContainer}>
         <div
@@ -325,15 +340,17 @@ function Certificate(props) {
           <BodyThreeText>
             {i18n.congratsCertificateShareMessage()}
           </BodyThreeText>
-          <SocialShare
-            facebook={facebook}
-            twitter={twitter}
-            linkedin={linkedin}
-            print={print}
-            under13={under13}
-            isPlCourse={isPlCourse}
-            userType={userType}
-          />
+          {!userNameIsRequiredError && (
+            <SocialShare
+              facebook={facebook}
+              twitter={twitter}
+              linkedin={linkedin}
+              print={print}
+              under13={under13}
+              isPlCourse={isPlCourse}
+              userType={userType}
+            />
+          )}
         </div>
       </div>
       {children}
