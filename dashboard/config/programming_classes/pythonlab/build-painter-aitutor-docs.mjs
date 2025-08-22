@@ -76,7 +76,7 @@ function removeMarkdownImages(markdown) {
 const doc = JSON.parse(fs.readFileSync(path.join(__dirname,"painter.json"), "utf8"));
 
 const markdown = removeMarkdownImages(jsonToMarkdown(doc));
-const markdownJs = `export const painterDocsMarkdown = \`${escapeBackticks(markdown)}\``;
+const markdownJs = `export const painterDocsMarkdown = \`${escapeBackticks(markdown)}\`;\n`;
 
 const docsDir = path.join(__dirname, '../../../../apps/src/aiTutor/docs');
 
