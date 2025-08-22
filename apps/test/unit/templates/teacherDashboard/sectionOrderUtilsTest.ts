@@ -28,7 +28,6 @@ const SECTION: Section = {
   createdAt: '2024-10-04T18:19:41.000Z',
   grades: [],
   isAssignedCSA: false,
-  isAssignedStandaloneCourse: false,
   lessonExtras: false,
   loginType: 'picture',
   loginTypeName: 'Picture Password',

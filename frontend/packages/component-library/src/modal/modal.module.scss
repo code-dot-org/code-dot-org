@@ -8,6 +8,8 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 1rem;
+  background-color: var(--background-neutral-primary);
+  border: 1px solid var(--borders-neutral-primary);
   border-radius: 0.5rem;
   box-shadow: 0 6px 18px 0 rgb(0 0 0 / 0.3);
   overflow: auto;
@@ -22,7 +24,7 @@
     align-items: center;
     height: 0.0625rem;
     flex-shrink: 0;
-    background: var(--neutral-gray-20);
+    background: var(--borders-neutral-primary);
   }
 }
 
@@ -32,7 +34,7 @@
 
   h3 {
     margin-bottom: 0;
-    color: var(--neutral-base-black);
+    color: var(--text-neutral-primary);
   }
 }
 
@@ -51,7 +53,7 @@
 
   p {
     margin: 0;
-    color: var(--neutral-base-black);
+    color: var(--text-neutral-primary);
   }
 }
 
@@ -71,7 +73,7 @@
     align-self: center;
 
     border-radius: 0.25rem;
-    background: var(--neutral-gray-20);
+    background: var(--background-neutral-tertiary);
   }
 }
 
@@ -91,7 +93,7 @@
     gap: 0.625rem;
 
     border-radius: 0.25rem;
-    background: var(--neutral-gray-20);
+    background: var(--background-neutral-tertiary);
   }
 
   .modalDescription {
@@ -114,11 +116,7 @@
   inset-inline-end: 8px;
 }
 
-// Modal colors
-.modal-light {
-  background-color: var(--neutral-base-white);
-}
-
+// Modal colors (deprecated - will be removed in future version)
 .modal-dark {
   background-color: var(--neutral-gray-90);
 

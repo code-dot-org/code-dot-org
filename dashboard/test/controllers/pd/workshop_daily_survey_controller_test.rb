@@ -48,26 +48,31 @@ module Pd
     end
 
     test 'pre-workshop foorm survey shows thanks when a response exists' do
-      setup_summer_workshop
+      teacher = create(:teacher)
+      byo_workshop = create(:byo_workshop)
+      create(:pd_enrollment, workshop: byo_workshop, user: teacher)
+
       existing_survey = create(:daily_workshop_day_0_foorm_submission,
         :answers_high,
-        form_name: "surveys/pd/summer_workshop_pre_survey"
-)
+        form_name: "surveys/pd/build_your_own_workshop_teachers_pre_survey"
+      )
       create(:day_0_workshop_foorm_submission,
         foorm_submission: existing_survey,
-        pd_workshop: @summer_workshop,
-        user: @enrolled_summer_teacher
-)
+        pd_workshop: byo_workshop,
+        user: teacher
+      )
 
-      sign_in @enrolled_summer_teacher
+      sign_in teacher
       get '/pd/workshop_pre_survey'
       assert_thanks
     end
 
     test 'pre-workshop foorm survey displays foorm when enrolled' do
-      setup_summer_workshop
+      teacher = create(:teacher)
+      byo_workshop = create(:byo_workshop)
+      create(:pd_enrollment, workshop: byo_workshop, user: teacher)
 
-      sign_in @enrolled_summer_teacher
+      sign_in teacher
       get '/pd/workshop_pre_survey'
       assert_template :new_general_foorm
       assert_response :success
@@ -190,18 +195,36 @@ module Pd
     end
 
     test 'pre workshop survey without a valid enrollment code renders invalid enrollment code' do
-      setup_summer_workshop
-      sign_in @enrolled_summer_teacher
+      teacher = create(:teacher)
+      byo_workshop = create(:byo_workshop)
+      create(:pd_enrollment, workshop: byo_workshop, user: teacher)
+
+      sign_in teacher
       get '/pd/workshop_survey/day/0?enrollmentCode=invalid_enrollment_code'
       assert_template :invalid_enrollment_code
     end
 
     test 'pre workshop survey with a valid enrollment code but wrong user renders invalid enrollment code' do
-      setup_summer_workshop
-      summer_enrollment2 = create(:pd_enrollment, :from_user, workshop: @summer_workshop)
-      sign_in @enrolled_summer_teacher
-      get "/pd/workshop_survey/day/0?enrollmentCode=#{summer_enrollment2.code}"
+      teacher1 = create(:teacher)
+      teacher2 = create(:teacher)
+      byo_workshop = create(:byo_workshop)
+      create(:pd_enrollment, workshop: byo_workshop, user: teacher1)
+      teacher2_enrollment = create(:pd_enrollment, workshop: byo_workshop, user: teacher2)
+
+      sign_in teacher1
+      get "/pd/workshop_survey/day/0?enrollmentCode=#{teacher2_enrollment.code}"
       assert_template :invalid_enrollment_code
+    end
+
+    test 'pre workshop survey with valid enrollment code and valid user returns byow pre survey' do
+      teacher = create(:teacher)
+      byo_workshop = create(:byo_workshop)
+      teacher_enrollment = create(:pd_enrollment, workshop: byo_workshop, user: teacher)
+
+      sign_in teacher
+      get "/pd/workshop_survey/day/0?enrollmentCode=#{teacher_enrollment.code}"
+      assert_response :success
+      assert_template :new_general_foorm
     end
 
     test 'foorm pre workshop survey without a valid enrollment code renders invalid enrollment code' do
@@ -265,73 +288,6 @@ module Pd
       get "/pd/workshop_survey/csf/post101/#{@csf101_enrollment.code}"
       assert_response :success
       assert_no_attendance
-    end
-
-    test 'csf pre201 survey: unauthenticated teacher is redirected to sign-in' do
-      get '/pd/workshop_survey/csf/pre201'
-      assert_response :redirect
-      assert_redirected_to_sign_in
-    end
-
-    test 'csf pre201 survey: unenrolled teacher gets not_enrolled msg' do
-      sign_in unenrolled_teacher
-      get '/pd/workshop_survey/csf/pre201'
-
-      assert_response :success
-      assert_not_enrolled
-    end
-
-    test 'csf pre201 survey: enrolled teacher in ended workshop gets too-late msg' do
-      setup_csf201_ended_workshop
-      teacher = create(:teacher)
-      create(:pd_enrollment, user: teacher, workshop: @csf201_ended_workshop)
-
-      sign_in teacher
-      get '/pd/workshop_survey/csf/pre201'
-
-      assert_response :success
-      assert_closed
-    end
-
-    test 'csf pre201 survey: enrolled teacher in unended workshop gets survey' do
-      setup_csf201_not_started_workshop
-      teacher = create(:teacher)
-      create(:pd_enrollment, user: teacher, workshop: @csf201_not_started_workshop)
-
-      sign_in teacher
-      get '/pd/workshop_survey/csf/pre201'
-
-      assert_response :success
-      assert_template :new_general_foorm
-
-      submit_params = prop('submitParams')
-      assert_equal @csf201_not_started_workshop.id, submit_params['pd_workshop_id']
-    end
-
-    test 'csf pre201 survey: teacher already submitted survey does not gets survey again' do
-      setup_csf201_not_started_workshop
-      teacher = create(:teacher)
-      create(:pd_enrollment, user: teacher, workshop: @csf201_not_started_workshop)
-
-      _, latest_version = ::Foorm::Form.get_questions_and_latest_version_for_name(PRE_SURVEY_CONFIG_PATHS[SUBJECT_CSF_201])
-      ::Foorm::Submission.create(
-        id: FAKE_SUBMISSION_ID,
-        form_name: PRE_SURVEY_CONFIG_PATHS[SUBJECT_CSF_201],
-        form_version: latest_version,
-        answers: {}
-      )
-
-      WorkshopSurveyFoormSubmission.create(
-        foorm_submission_id: FAKE_SUBMISSION_ID,
-        user_id: teacher.id,
-        pd_workshop_id: @csf201_not_started_workshop.id,
-        day: 0
-      )
-
-      sign_in teacher
-      get '/pd/workshop_survey/csf/pre201'
-
-      assert_thanks
     end
 
     test 'csf post201 survey: redirect to sign-in page if teacher did not authenticate' do
@@ -413,18 +369,6 @@ module Pd
       assert_select 'h1', text: 'Thank you for submitting today’s survey.'
     end
 
-    test 'AYW1 pre-survey link shows foorm survey' do
-      setup_academic_year_workshop
-      sign_in @enrolled_academic_year_teacher
-
-      pre_survey_links = %w(/pd/AYW1/pre /pd/AYW1/pre/module/1 /pd/AYW1/pre/module/2)
-      pre_survey_links.each do |link|
-        get link
-        assert_response :success
-        assert_template :new_general_foorm
-      end
-    end
-
     test 'AYW1 post-survey link shows foorm survey for attended teacher' do
       setup_academic_year_workshop
       sign_in @enrolled_academic_year_teacher
@@ -454,15 +398,6 @@ module Pd
       end
     end
 
-    test 'AYW1_2 pre-survey link shows foorm survey' do
-      setup_two_day_academic_year_workshop
-      sign_in @enrolled_two_day_academic_year_teacher
-
-      get '/pd/AYW1_2/pre'
-      assert_response :success
-      assert_template :new_general_foorm
-    end
-
     test 'AYW1_2 post-survey link shows foorm survey for attended teacher' do
       setup_two_day_academic_year_workshop
       sign_in @enrolled_two_day_academic_year_teacher
@@ -475,15 +410,6 @@ module Pd
       get '/pd/AYW1_2/post/in_person'
       assert_response :success
       assert_template :new_general_foorm
-    end
-
-    test 'User cannot access AYW survey if they are not enrolled' do
-      setup_two_day_academic_year_workshop
-      sign_in @enrolled_two_day_academic_year_teacher
-
-      # two day workshop enrollee should not be able to load 1 day survey
-      get '/pd/AYW1/pre'
-      assert_not_enrolled
     end
 
     private def setup_summer_workshop

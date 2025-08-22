@@ -7,6 +7,7 @@ import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
 import {AnimationProps} from '@cdo/apps/p5lab/shapes';
+import FlaggedImageModal from '@cdo/apps/sharedComponents/FlaggedImageModal';
 import StylizedBaseDialog from '@cdo/apps/sharedComponents/StylizedBaseDialog';
 import BaseDialog from '@cdo/apps/templates/BaseDialog.jsx';
 import HttpClient from '@cdo/apps/util/HttpClient';
@@ -23,7 +24,6 @@ import {
 } from '../redux/animationPicker';
 
 import AnimationPickerBody from './AnimationPickerBody.jsx';
-import FlaggedImageModal from './FlaggedImageModal';
 import styles from './styles';
 
 var msg = require('@cdo/locale');
@@ -339,7 +339,6 @@ class AnimationPicker extends React.Component {
         />
         {this.state.showFlaggedModal && (
           <FlaggedImageModal
-            isOpen
             onAccept={this.handleAcceptFlaggedImage}
             onCancel={this.handleCancelFlaggedImage}
             errorMessage={this.state.flaggedModalError}

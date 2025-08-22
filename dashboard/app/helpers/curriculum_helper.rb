@@ -26,12 +26,10 @@ module CurriculumHelper
     return true
   end
 
-  # retrieves the course version matching the UnitGroup or Unit with a name of course_name
+  # retrieves the course version matching the UnitGroup
   def self.find_matching_course_version(course_name)
     matching_unit_group = UnitGroup.get_from_cache(course_name)
     return matching_unit_group.course_version if matching_unit_group
-    matching_standalone_course = Unit.get_from_cache(course_name, raise_exceptions: false)
-    return matching_standalone_course.course_version if matching_standalone_course&.is_course
     return nil
   end
 

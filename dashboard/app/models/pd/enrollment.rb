@@ -162,11 +162,7 @@ class Pd::Enrollment < ApplicationRecord
 
   # Pre-workshop survey URL (if any)
   def pre_workshop_survey_url
-    if workshop.local_summer? || workshop.ayw?
-      url_for(action: 'new_pre_foorm', controller: 'pd/workshop_daily_survey', enrollmentCode: code)
-    elsif workshop.subject == Pd::Workshop::SUBJECT_CSF_201
-      CDO.studio_url "pd/workshop_survey/csf/pre201", CDO.default_scheme
-    end
+    url_for(action: 'new_pre_foorm', controller: 'pd/workshop_daily_survey', enrollmentCode: code)
   end
 
   def exit_survey_url
@@ -177,38 +173,6 @@ class Pd::Enrollment < ApplicationRecord
     else
       CDO.studio_url "/pd/workshop_survey/post/#{code}", CDO.default_scheme
     end
-  end
-
-  def should_send_exit_survey?
-    !(workshop.fit_weekend? || workshop.course == Pd::Workshop::COURSE_ADMIN_COUNSELOR)
-  end
-
-  def send_exit_survey
-    # In case the workshop is reprocessed, do not send duplicate exit surveys.
-    if survey_sent_at
-      CDO.log.warn "Skipping attempt to send a duplicate workshop survey email. Enrollment: #{id}"
-      return
-    end
-
-    return unless should_send_exit_survey?
-
-    # Don't send if there's no associated survey
-    return unless exit_survey_url
-
-    return unless (mailer = Pd::WorkshopMailer.exit_survey(self))
-
-    mailer.deliver_now
-
-    # Also send to the user's alternate summer email if they entered it in their application and
-    # it's for a summer workshop.
-    if workshop.subject == SUBJECT_SUMMER_WORKSHOP
-      alt_summer_email = user&.alternate_email
-      if alt_summer_email.present?
-        Pd::WorkshopMailer.exit_survey(self, alt_summer_email).deliver_now
-      end
-    end
-
-    update!(survey_sent_at: Time.zone.now)
   end
 
   # TODO: Once we're satisfied with the first/last name split data,
