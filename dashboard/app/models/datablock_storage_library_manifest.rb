@@ -88,6 +88,8 @@ class DatablockStorageLibraryManifest < ApplicationRecord
       end
 
       table.import_csv dataset_csv
+    rescue => exception
+      raise exception.class, "#{exception.message} (while importing #{path})", exception.backtrace
     end
   end
 
