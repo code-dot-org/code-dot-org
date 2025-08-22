@@ -75,9 +75,9 @@ const LabViewsRenderer: React.FunctionComponent = () => {
     if (!currentAppName) return true;
     if (!isBlocked) return false;
 
-    // If a project is blocked and in share view, do not render the lab view.
+    // If a project is blocked and in share view, only render the lab view if owner of project or owner's teacher.
     if (pageAction === 'share') {
-      return true;
+      return isOwner || isTeacherOfProjectOwner ? false : true;
     }
     // If a project is blocked and in view/edit mode or on a level page, do not render the lab view if the user does not have view/edit access.
     if (['view', 'edit'].includes(pageAction) && !hasElevatedPrivileges) {

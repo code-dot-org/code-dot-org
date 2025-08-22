@@ -28,6 +28,11 @@ export const ProjectBlockedUI: React.FunctionComponent<{
   const hasViewOrEditAccess =
     isProjectValidator || isOwner || isTeacherOfProjectOwner;
 
+  const alertText =
+    blockedType === 'projectAbuse'
+      ? i18n.tosWithoutLink()
+      : i18n.sharingDisabledAlert(); // This will be displaced in /view for project validators if project sharing is disabled for owner.
+
   const abuseExclamationProps = {
     canViewFlaggedProject,
     isOwner,
@@ -67,11 +72,7 @@ export const ProjectBlockedUI: React.FunctionComponent<{
 
   // If page action is view/edit/level, project is flagged for abuse, and user has view or edit access,
   // render workspace alert with warning about flagged project.
-  if (
-    ['view', 'edit', 'level'].includes(pageAction) &&
-    blockedType === 'projectAbuse' &&
-    hasViewOrEditAccess
-  ) {
+  if (['view', 'edit', 'level'].includes(pageAction) && hasViewOrEditAccess) {
     return (
       <div
         id="blocked-project-ui-container-project-validator"
@@ -79,7 +80,7 @@ export const ProjectBlockedUI: React.FunctionComponent<{
       >
         {showAlert && (
           <Alert
-            text={i18n.tosWithoutLink()}
+            text={alertText}
             type={alertTypes.danger}
             onClose={() => {
               setShowAlert(false);
