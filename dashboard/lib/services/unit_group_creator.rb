@@ -38,7 +38,7 @@ module Services
       # Clear "course" settings from the unit
       @unit.update!(version_year: nil, family_name: nil, published_state: nil, instruction_type: nil, instructor_audience: nil, participant_audience: nil, skip_name_format_validation: true)
 
-      update_unit_group(i18n_params, unit_copy.published_state)
+      update_unit_group(i18n_params, unit_copy.published_state || Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development)
 
       update_section_assignments
 
@@ -151,7 +151,7 @@ module Services
     end
 
     private def update_section_assignments
-      count = Section.where(script_id: @unit.id).where(course_id: nil).update_all(course_id: @unit_group.id)
+      count = Section.with_deleted.where(script_id: @unit.id).where(course_id: nil).update_all(course_id: @unit_group.id)
       log "Updated #{count} sections for unit #{@unit.name}" if @verbose
     end
 
@@ -191,7 +191,7 @@ module Services
     end
 
     private def rollback_section_assignments
-      count = Section.where(course_id: @unit_group.id).update_all(course_id: nil)
+      count = Section.with_deleted.where(course_id: @unit_group.id).update_all(course_id: nil)
       log "Rolled back #{count} sections for unit #{@unit.name}" if @verbose
     end
 
