@@ -25,10 +25,10 @@ const Generate: React.FunctionComponent<GenerateProps> = () => {
 
   const sounds = library
     ?.getFolderForFolderId(packId || 'indie')
-    ?.sounds.filter(sound => sound.length === 2)
-    .map(sound => {
+    ?.sounds //.filter(sound => sound.length === 2)
+    ?.map(sound => {
       if (sound.type !== 'preview') {
-        return sound.src;
+        return `${sound.src} (${sound.length} measures)`;
       }
     })
     .filter(sound => sound !== undefined)
@@ -52,11 +52,11 @@ Don't include any comments in the generated psuedocode.
 
 Note that each sound is actually 2 measures long.
 
-The valid sounds to use are: "${sounds}".  You can use any of these sounds in your psuedocode.  Each sound name gets the "${packId}/" prefix, so for example, "indie/drum_beat_808".
+The valid sounds to use are: "${sounds}".  (The length of each sound is in parentheses.)  You can use any of these sounds in your psuedocode.  Each sound name gets the "${packId}/" prefix, so for example, "indie/drum_beat_808".
 `;
 
   const [text, setText] = useState(
-    'Please generate a fun song.  Between 10-15 measures is enough duration.  Use layering of sounds to make it exciting.'
+    'Please generate a fun song.  Between 18-20 measures is enough duration.  Use layering of sounds to make it exciting.'
   );
 
   const generateSong = useCallback(() => {
