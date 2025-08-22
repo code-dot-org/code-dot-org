@@ -38,9 +38,10 @@ Section.with_deleted.where(course_id: nil).where.not(script_id: nil).find_each(b
 
     # Find the script associated with the section and add the course_id
     unit = Unit.find_by(id: section.script_id)
-    if unit
+    if unit&.original_unit_group_id
       section.update_columns(course_id: unit.original_unit_group_id)
     else
+      # unassign if the section's script_id does not correspond to a valid unit or course
       section.update_columns(script_id: nil)
     end
 
