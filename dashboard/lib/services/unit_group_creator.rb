@@ -171,7 +171,6 @@ module Services
         "Existing unit is valid" => @unit.valid? || @name_changed,
         "CourseVersion is valid" => course_version.valid?,
         "New UnitGroup has the same name as the existing unit" => @unit_group.name == dupe_unit.name || @name_changed,
-        "New UnitGroup has the same published_state as the existing unit" => @unit_group.published_state == dupe_unit.published_state,
         "New UnitGroup is assigned to the existing unit" => @unit_group.first_unit.id == @unit.id,
         "New UnitGroup is a single unit course" => @unit_group.single_unit_course?,
         "CourseVersion has a content_root of the new UnitGroup" => course_version.content_root_id == @unit_group.id
