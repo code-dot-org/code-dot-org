@@ -89,8 +89,6 @@ module Services
     private def log_initial_info
       log "Initial info"
       log "Existing unit: #{@unit.inspect}"
-      log "Existing course_version: #{@unit.course_version.inspect}"
-      log "Existing course_offering: #{@unit.course_version&.course_offering.inspect}"
     end
 
     private def set_i18n_params
