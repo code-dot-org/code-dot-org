@@ -238,13 +238,17 @@ class Api::V1::Pd::WorkshopsController < ApplicationController
       when "name", "capacity", "description", "notes"
         detail_changes << {name: attribute.capitalize, old: old_value || "(None)", new: new_value || "(None)"}
       when "organizer_id"
-        old_organizer = User.find(old_value)
-        new_organizer = User.find(new_value)
-        detail_changes << {name: 'Organizer', old: "#{old_organizer&.name} (#{old_organizer&.email})", new: "#{new_organizer&.name} (#{new_organizer&.email})"}
+        old_organizer = old_value ? User.find(old_value) : nil
+        new_organizer = new_value ? User.find(new_value) : nil
+        old_organizer_info = old_organizer ? "#{old_organizer&.name} (#{old_organizer&.email})" : "(None)"
+        new_organizer_info = new_organizer ? "#{new_organizer&.name} (#{new_organizer&.email})" : "(None)"
+        detail_changes << {name: 'Organizer', old: old_organizer_info, new: new_organizer_info}
       when "regional_partner_id"
-        old_rp = RegionalPartner.find(old_value)
-        new_rp = RegionalPartner.find(new_value)
-        detail_changes << {name: 'Regional Partner', old: "#{old_rp&.name} (#{old_rp&.contact_email_with_backup})", new: "#{new_rp&.name} (#{new_rp&.contact_email_with_backup})"}
+        old_rp = old_value ? RegionalPartner.find(old_value) : nil
+        new_rp = new_value ? RegionalPartner.find(new_value) : nil
+        old_rp_info = old_rp ? "#{old_rp&.name} (#{old_rp&.contact_email_with_backup})" : "(None)"
+        new_rp_info = new_rp ? "#{new_rp&.name} (#{new_rp&.contact_email_with_backup})" : "(None)"
+        detail_changes << {name: 'Regional Partner', old: old_rp_info, new: new_rp_info}
       when "properties"
         if (old_value['grades'] || new_value['grades']) && old_value['grades'] != new_value['grades']
           detail_changes << {name: 'Grade levels', old: old_value['grades']&.join(', ') || "(None)", new: new_value['grades']&.join(', ') || "(None)"}
