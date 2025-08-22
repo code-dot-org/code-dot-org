@@ -421,6 +421,9 @@ Dashboard::Application.routes.draw do
         get '/:filename', to: 'level_starter_assets#file', format: true
         post '', to: 'level_starter_assets#upload'
         delete '/:filename', to: 'level_starter_assets#destroy', format: true
+
+        get '/uuid/:uuid', to: 'level_starter_assets#file_by_uuid', format: true
+        post '/uuid/:uuid', to: 'level_starter_assets#upload_by_uuid'
       end
     end
 

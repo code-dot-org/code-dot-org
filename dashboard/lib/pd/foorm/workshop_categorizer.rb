@@ -125,7 +125,6 @@ module Pd::Foorm
           question_name: row_key,
           question_text: row_text,
           question_short_text: row_short_text,
-          question_sub_text: row_data[:sub_text],
           question_type: 'likert',
           category: row_data[:category],
           results: Pd::Foorm::ResponseProcessor.process_likert_responses(row_summary, question_data[:columns])
@@ -160,7 +159,6 @@ module Pd::Foorm
           question_name: row_key,
           question_text: row_text,
           question_short_text: row_short_text,
-          question_sub_text: row_data[:sub_text],
           question_type: 'likert',
           category: row_data[:category],
           results: Pd::Foorm::ResponseProcessor.process_likert_responses(row_summary, question_data[:columns])
@@ -193,7 +191,6 @@ module Pd::Foorm
         question_name: question_name,
         question_text: question_text,
         question_short_text: question_short_text,
-        question_sub_text: question_data[:sub_text],
         question_type: question_type,
         category: question_data[:category]
       }

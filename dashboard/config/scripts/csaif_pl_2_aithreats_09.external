@@ -3,6 +3,62 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Attacker/Defender Activity
+#  Lesson Highlight: Investigate a CIA Scenario
+
+<img src="https://images.code.org/ef882e1529a24edab278b762dea5189b-Screenshot 2025-08-20 at 11.20.04 AM.png" alt="activity guide with 'input', 'draw your neural network', and 'output' columns" width="350px" style="border: 2px solid black; border-radius: 8px; float:right; margin: 20px 20px 20px 20px">
+
+#### During <a href='https://levelbuilder-studio.code.org/courses/exploring-gen-ai-2025/units/1/lessons/6' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson 6 - Confidentiality, Integrity, and Availability</a>, students take turns roleplaying attackers and defenders to analyze system failures and apply the CIA Triad. They propose simple fixes and think through tradeoffs, practicing how cybersecurity pros protect people.
+
+
+## How the Activity Works
+#### Students will rotate through 6 case files. Each time, they identify the CIA failure, explain why it matters, pick a fix, and consider the tradeoff.
+
+#### 1. Read a real-world scenario with your partner
+#### 2. One person is the Attacker: What can you see, change, or block?
+#### 3. The other is the Defender: What is a solution to stop or reduce the harm?
+#### 4. Decide what harm was caused.
+#### 5. Determine what tradeoff your fix might create.
+#### 6. Switch roles for the next case!
+
+## Activity Resources
+* #### <a href='https://docs.google.com/document/d/1b7-s3lc2fthmqHlfGlXn39aMuejFy5B0jS0hLrm6FAw/edit?tab=t.0#heading=h.hj9mx4qf72mr' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Activity Guide</a>
+
+* #### <a href='https://docs.google.com/document/d/1GbUuawSv3U2DthbvwDOVg5P6-oGLPzGtt2qlb9JjpEA/edit?tab=t.0#heading=h.pc78lrezil1v' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Scenario Descriptions</a>  including Solution and Tradeoff Answer Banks
+
+## Example: Public WiFi on a Bus Ride
+#### You'll go through the following example with your students before sending them off to work in pairs through the remaining scenarios.
+
+<div style="display: grid; grid-template-columns: repeat(1, 1fr); gap: 12px; margin-top: 15px;">
+
+<div style="background: #fff; padding: 15px; text-align: center; border-radius: 8px; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); border: 2px solid #5a2ca0; font-size: 18px">
+<p style="font-size: 16px"><strong>Example Scenario</strong></p>
+	<p style="font-size: 16px">A student uses public Wi-Fi to check their messages.<br> 
+They log in quickly and the app doesn't ask for any extra info to prove it’s really them. 
+<br>Later, they notice something strange in their account.</p>
+</div>
+</div>
+
+<br>
+
+#### In this case, the attacker saw private messages — that's a confidentiality failure. The student might not even know it happened until it's too late. It matters because private information was exposed or an attacker could impersonate or harass them. A good fix might be requiring two-step verification or strong authentication to prove it's really you. But that might take longer to log in or frustrate users who aren't tech-savvy.
+
+#### When going through the example, you'll model how to record this information on the Activity Guide.
+
+<p align="center">
+<img src="https://images.code.org/cf6c2846c91b7889bbb68c21f7d82d2e-Screenshot 2025-08-20 at 11.41.16 AM.png" alt="Caeasar Cipher shifting the message free pizza in the cafeteria by 13 to serr cvmmn va gur pnsrgrevn" width="90%" style="border-radius:10px; border: 5px solid black;">
+</p>
+
+
+<br>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🧐 Is there an Answer Key?
+</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
+    <p style="font-size: 18px"> Yes! The lesson plans include answer keys for all activities in this Unit, including this one. Check out the <a href='https://docs.google.com/document/d/174vQaj9skmfFjPv99lPHpeizUHwvg1JA1UcDBVJbQrk/edit?tab=t.0#heading=h.hj9mx4qf72mr' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Key</a>.
+</p></div>
+</details>
+
+<br>
 
 MARKDOWN

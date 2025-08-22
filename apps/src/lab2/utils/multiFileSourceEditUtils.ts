@@ -7,6 +7,7 @@ import {
   FolderId,
   MultiFileSource,
   ProjectFile,
+  ProjectFileType,
 } from '@cdo/apps/lab2/types';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
@@ -19,16 +20,28 @@ import {
 
 // Helper functions for editing multi-file sources in lab2.
 
+interface CreateNewFileHelperArgs {
+  source: MultiFileSource;
+  fileName: string;
+  folderId?: FolderId;
+  contents?: string;
+  url?: string;
+  isStartMode?: boolean;
+  flagged?: boolean;
+}
+
 /**
  * Create a new file.
  */
-export const createNewFileHelper = (
-  source: MultiFileSource,
-  fileName: string,
-  folderId: FolderId = DEFAULT_FOLDER_ID,
-  contents: string = '',
-  url?: string
-): MultiFileSource => {
+export const createNewFileHelper = ({
+  source,
+  fileName,
+  folderId = DEFAULT_FOLDER_ID,
+  contents = '',
+  url,
+  isStartMode,
+  flagged,
+}: CreateNewFileHelperArgs): MultiFileSource => {
   const fileId = getNextFileId(Object.values(source.files));
   const newSource = {...source, files: {...source.files}};
   const [, extension] = fileName.split('.');
@@ -46,10 +59,19 @@ export const createNewFileHelper = (
     file.url = url;
   }
 
+  if (isStartMode) {
+    file.type = ProjectFileType.STARTER;
+  }
+
+  if (flagged) {
+    file.flagged = flagged;
+  }
+
   newSource.files[fileId] = file;
 
   return activateFileHelper(newSource, fileId);
 };
+
 /**
  * Activate a file (make active).
  */
@@ -117,13 +139,30 @@ export const closeFileHelper = (
   return newSource;
 };
 
+interface DeleteFileHelperArgs {
+  source: MultiFileSource;
+  fileId: FileId;
+}
+
+interface DeleteFileResult {
+  newSource: MultiFileSource;
+  deletedFileAsset?: {
+    channelId: string;
+    url: string;
+  };
+}
+
 /**
- * Delete a file.
+ * Deletes a file from the given MultiFileSource.
+ * - Removes the file from the files list and from the list of open files.
+ * - Updates the active file if the deleted file was active, activating a new file if possible.
+ * - Returns the updated MultiFileSource and, if the file was an uploaded asset (has a URL),
+ *     details about the deleted file.
  */
-export const deleteFileHelper = (
-  source: MultiFileSource,
-  fileId: FileId
-): MultiFileSource => {
+export const deleteFileHelper = ({
+  source,
+  fileId,
+}: DeleteFileHelperArgs): DeleteFileResult => {
   const openFileIds = getOpenFileIds(source);
   const newOpenFileIds = openFileIds.find(openFileId => openFileId === fileId)
     ? openFileIds.filter(openFileId => openFileId !== fileId)
@@ -139,15 +178,23 @@ export const deleteFileHelper = (
   const fileToBeDeleted = newSource.files[fileId];
   delete newSource.files[fileId];
 
-  if (fileToBeDeleted.url) {
-    try {
-      // We don't wait for the deletion to complete because a user's project doesn't depend on the completion of the operation.
-      // In the case of a failure, we just end up with an orphaned file in S3.
-      HttpClient.delete(fileToBeDeleted.url);
-    } catch (error) {
-      Lab2Registry.getInstance()
-        .getMetricsReporter()
-        .logError('Error deleting project asset from S3', error as Error);
+  let deletedFileAsset: {channelId: string; url: string} | undefined;
+
+  // Only attempt delete from S3 if the file is owned by a student (ie, not a level starter asset).
+  if (
+    fileToBeDeleted.url &&
+    !Object.values(ProjectFileType).includes(
+      fileToBeDeleted?.type as ProjectFileType
+    )
+  ) {
+    // Extract channelId from asset url.
+    const match = fileToBeDeleted.url.match(/\/assets\/([^/]+)/);
+    const channelId = match ? match[1] : null;
+    if (channelId) {
+      deletedFileAsset = {
+        channelId,
+        url: fileToBeDeleted.url,
+      };
     }
   }
 
@@ -159,7 +206,10 @@ export const deleteFileHelper = (
     };
   }
 
-  return newSource;
+  return {
+    newSource,
+    deletedFileAsset,
+  };
 };
 
 /**
@@ -222,7 +272,12 @@ export const deleteFolderHelper = (
       .filter(f => files.has(f.id))
       .forEach(f => {
         delete newSource.files[f.id];
-        if (f.url) {
+
+        // Only attempt delete from S3 if the file is owned by a student (ie, not a level starter asset).
+        if (
+          f.url &&
+          !Object.values(ProjectFileType).includes(f?.type as ProjectFileType)
+        ) {
           try {
             // We don't wait for the deletion to complete because a user's project doesn't depend on the completion of the operation.
             // In the case of a failure, we just end up with an orphaned file in S3.

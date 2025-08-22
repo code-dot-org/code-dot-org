@@ -2,10 +2,10 @@ name 'U1L9 CFU pixel data2022_2025'
 title 'Pixel Data'
 type 'multi2'
 question 'Assume your friend just sent you 32 bits of pixel data (just the 0s and 1s for black and white pixels) that were encoded after sampling an image. Choose the two statements that are true.'
-wrong 'The 32 bits of pixel data is enough to produce the image using the widget. Nothing else is needed. '
-wrong 'The digital image would be an exact copy of the analog image.'
-right 'The correct width and height must be input into the pixelation widget to produce the image. '
-right 'The fact that only 32 bits were used to represent the image indicates relatively large sample squares were used. The digital image may vary from the analog image significantly.'
+wrong 'The digital image would be an exact copy of the original analog image. '
+wrong 'Using fewer bits to represent an image usually results in a sharper, more detailed image.'
+right 'The 32 bits of pixel data are enough to produce a digital image, but the quality depends on how the original image was sampled.'
+right 'The fact that only 32 bits were used suggests that relatively large sample squares were used, which could cause the image to lose detail.'
 
 
 markdown <<MARKDOWN
@@ -13,7 +13,16 @@ markdown <<MARKDOWN
 MARKDOWN
 teacher_markdown <<MARKDOWN
 
-Reinforces that binary (base 2) uses only combinations of the digits zero and one. Correct answers are 1011, 0000, 1011011101111011111011111, and 10.
+This question reinforces two key ideas from the lesson:
+
+- **"The 32 bits of pixel data are enough to produce a digital image, but the quality depends on how the original image was sampled." - true**: Students learned that 0s and 1s can represent black and white pixels, and that 32 bits is enough to construct an image. However, the **quality of that image depends on how the original analog image was sampled** (e.g., small vs. large squares).
+
+- **"The fact that only 32 bits were used suggests that relatively large sample squares were used, which could cause the image to lose detail." - true**: Only using 32 bits for an image likely means large sampling squares were used, which may cause a loss of detail. This supports the idea that **more frequent sampling creates a better approximation** but requires more bits.
+
+- **"The digital image would be an exact copy of the original analog image." - false**: The digital image will not be an exact copy of the analog image due to sampling loss.
+
+- **"Using fewer bits to represent an image usually results in a sharper, more detailed image." - false**: Fewer bits usually means a **lower** resolution image with less detail.
+
 
 MARKDOWN
 
