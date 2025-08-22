@@ -1,9 +1,10 @@
 import Button from '@code-dot-org/component-library/button';
+import Modal from '@code-dot-org/component-library/modal';
 import {Heading2} from '@code-dot-org/component-library/typography';
 import moment from 'moment';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {Table, Button as BootstrapButton, Modal} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
+import {Table} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import ReactTooltip from 'react-tooltip';
 
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
@@ -223,23 +224,21 @@ export default class LandingPageWorkshopsTable extends React.Component {
 
     return (
       <div>
-        <Modal
-          show={this.state.showCancelModal}
-          onHide={this.dismissCancelModal}
-          style={{width: 560}}
-        >
-          <Modal.Body>
-            Are you sure you want to cancel your enrollment in this course?
-          </Modal.Body>
-          <Modal.Footer>
-            <BootstrapButton onClick={this.cancelEnrollment} bsStyle="primary">
-              Yes - cancel my enrollment
-            </BootstrapButton>
-            <BootstrapButton onClick={this.dismissCancelModal}>
-              No - stay enrolled in this class
-            </BootstrapButton>
-          </Modal.Footer>
-        </Modal>
+        {this.state.showCancelModal && (
+          <Modal
+            onClose={this.dismissCancelModal}
+            title="Cancel Enrollment"
+            description="Are you sure you want to cancel your enrollment in this course?"
+            primaryButtonProps={{
+              onClick: this.cancelEnrollment,
+              text: 'Yes - cancel my enrollment',
+            }}
+            secondaryButtonProps={{
+              onClick: this.dismissCancelModal,
+              text: 'No - stay enrolled in this class',
+            }}
+          />
+        )}
         {this.props.workshops && (
           <section>
             {this.props.tableHeader && (
