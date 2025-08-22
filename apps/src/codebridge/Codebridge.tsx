@@ -1,5 +1,5 @@
 import {CodebridgeContextProvider} from '@codebridge/codebridgeContext';
-import {useZoomTracker} from '@codebridge/hooks';
+import {useFlaggedImage, useZoomTracker} from '@codebridge/hooks';
 import {setWidgetViewShowCode} from '@codebridge/redux/workspaceRedux';
 import {
   ConfigType,
@@ -19,6 +19,7 @@ import {ProjectSources} from '@cdo/apps/lab2/types';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import {BackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
+import FlaggedImageModal from '@cdo/apps/sharedComponents/FlaggedImageModal';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import moduleStyles from './styles/codebridgeContainer.module.scss';
@@ -147,6 +148,13 @@ export const Codebridge = React.memo(
       dispatch(setWidgetViewShowCode(false));
     });
 
+    const {
+      flaggedImageData,
+      onImageFlagged,
+      handleAcceptFlaggedImage,
+      handleCancelFlaggedImage,
+    } = useFlaggedImage();
+
     return (
       <CodebridgeContextProvider
         value={{
@@ -160,10 +168,17 @@ export const Codebridge = React.memo(
           projectPickerSettings,
           AiTutor2ResponseView,
           aiTutor2Context,
+          onImageFlagged,
         }}
       >
         <BackpackAPIContext.Provider value={backpackApi}>
           <div className={classNames(moduleStyles.codebridgeContainer)}>
+            {flaggedImageData && (
+              <FlaggedImageModal
+                onAccept={handleAcceptFlaggedImage}
+                onCancel={handleCancelFlaggedImage}
+              />
+            )}
             <InnerLayout
               isProjectLevel={levelProperties.isProjectLevel}
               isWidgetView={levelProperties.widgetView}

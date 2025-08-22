@@ -11,34 +11,5 @@ markdown <<MARKDOWN
 
 #### Complete the empathy map for Jordan thinking about what he might say, think, do, and feel in that moment.
 
-<table style="border-collapse: collapse; width: 100%; border: 1px solid #000;">
-  <tr>
-    <th style="background-color: #00A6B4; color: white; font-weight: bold; text-align: center; padding: 10px; border: 1px solid #000; width: 50%;">
-      SAYS<br><span style="font-weight: normal;">What might Jordan say out loud?</span>
-    </th>
-    <th style="background-color: #00A6B4; color: white; font-weight: bold; text-align: center; padding: 10px; border: 1px solid #000; width: 50%;">
-      THINKS<br><span style="font-weight: normal;">What is Jordan thinking internally?</span>
-    </th>
-  </tr>
-  <tr>
-    <td style="height: 150px; border: 1px solid #000;"></td>
-    <td style="height: 150px; border: 1px solid #000;"></td>
-  </tr>
-  <tr>
-    <th style="background-color: #00A6B4; color: white; font-weight: bold; text-align: center; padding: 10px; border: 1px solid #000;">
-      DOES<br><span style="font-weight: normal;">What does Jordan do?</span>
-    </th>
-    <th style="background-color: #00A6B4; color: white; font-weight: bold; text-align: center; padding: 10px; border: 1px solid #000;">
-      FEEL<br><span style="font-weight: normal;">How does Jordan feel?</span>
-    </th>
-  </tr>
-  <tr>
-    <td style="height: 150px; border: 1px solid #000;"></td>
-    <td style="height: 150px; border: 1px solid #000;"></td>
-  </tr>
-</table>
-
-</body>
-</html>
-
+<br>
 MARKDOWN

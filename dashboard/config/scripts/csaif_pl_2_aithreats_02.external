@@ -18,7 +18,7 @@ markdown <<MARKDOWN
 
 ## 📝 To Do
 
-#### *What Went Wrong?* Pick two failure scenarios. For each failure you picked, use the checklist below to figure out possible causes and reflect on what you think happened.
+#### *What Went Wrong?* Pick one failure scenario. Use the checklist below to figure out possible causes and reflect on what you think happened.
 
 * #### Password was entered wrong
 * #### System didn’t recognize the account

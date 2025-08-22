@@ -1,6 +1,8 @@
-import React, {useCallback, useMemo, useRef} from 'react';
+import React, {useCallback, useMemo, useRef, useState} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import UploadsDisabledModal from '@cdo/apps/sharedComponents/UploadsDisabledModal';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {createUuid} from '@cdo/apps/utils';
 
@@ -16,7 +18,8 @@ export type FileUploaderProps = {
     filename: string,
     contents: string,
     uploadUrl?: string,
-    callbackArgs?: unknown
+    callbackArgs?: unknown,
+    flagged?: boolean
   ) => void;
   errorCallback: (error: string, callbackArgs?: unknown) => void;
   channelId: string;
@@ -26,6 +29,13 @@ export type FileUploaderProps = {
   sendAnalyticsEvent?: (
     eventName: analyticsEvents,
     payload: Record<string, string>
+  ) => void;
+  appName?: string;
+  isBlockedAbuse?: boolean;
+  onImageFlagged?: (
+    file: File,
+    fileType: string,
+    uploadFunction: () => Promise<void>
   ) => void;
 };
 
@@ -63,6 +73,29 @@ const isValidMimeType = (
   );
 };
 
+const moderateImage = async (
+  file: File,
+  ext: string,
+  appName?: string
+): Promise<'ok' | 'flagged' | 'skipped'> => {
+  if (appName !== 'weblab2' || !['png', 'jpg', 'jpeg'].includes(ext)) {
+    return 'skipped';
+  }
+  const response = await HttpClient.post(`/v3/images/moderate`, file, true, {
+    'Content-Type': file.type || 'application/octet-stream',
+  });
+  if (!response.ok) {
+    Lab2Registry.getInstance()
+      .getMetricsReporter()
+      .logError('Error with image moderation');
+    return 'skipped';
+  }
+  const json = await response.json();
+  if (json?.rating !== 'everyone' && json?.rating !== 'unknown') {
+    return 'flagged';
+  }
+  return 'ok';
+};
 /**
  * A custom hook that provides functionality for file uploads,
  * including validation, reading, uploading to S3 for non-text files, and handling callbacks.
@@ -96,9 +129,13 @@ export const useFileUploader = ({
   validateFileName = () => undefined,
   sendAnalyticsEvent = () => {},
   multiple = true,
+  appName,
+  onImageFlagged,
+  isBlockedAbuse,
 }: FileUploaderProps) => {
   const inputRef = useRef<HTMLInputElement>(null);
   const callbackArgs = useRef<unknown>();
+  const [showBlockedModal, setShowBlockedModal] = useState(false);
 
   const changeHandler = useCallback(() => {
     const handleError = (error: Error) => {
@@ -164,8 +201,24 @@ export const useFileUploader = ({
             throw new Error('channelId required for file upload.');
           }
 
-          const fileType = file.name.split('.')[1];
-          const url = `/v3/assets/${channelId}/${createUuid()}.${fileType}`;
+          const ext = file.name.split('.').pop()?.toLowerCase() || '';
+          const moderationStatus = await moderateImage(file, ext, appName);
+          if (moderationStatus === 'flagged' && onImageFlagged) {
+            const uploadFunction = async () => {
+              const url = `/v3/assets/${channelId}/${createUuid()}.${ext}`;
+              await HttpClient.put(url, file);
+              sendAnalyticsEvent(analyticsEvents.UPLOAD_SUCCEEDED, {
+                name: file.name,
+                type: file.type,
+              });
+              callback(file.name, '', url, callbackArgs.current, true);
+            };
+            // FlagedImageModal will be shown to the user and user can choose to upload the image or not.
+            onImageFlagged(file, ext, uploadFunction);
+            return;
+          }
+          // For non-text files that are not moderated and images that are deemed safe, upload directly to assets.
+          const url = `/v3/assets/${channelId}/${createUuid()}.${ext}`;
           await HttpClient.put(url, file);
           sendAnalyticsEvent(analyticsEvents.UPLOAD_SUCCEEDED, {
             name: file.name,
@@ -180,31 +233,47 @@ export const useFileUploader = ({
       }
     });
   }, [
-    validMimeTypes,
-    validateFileName,
     sendAnalyticsEvent,
     errorCallback,
+    validateFileName,
+    validMimeTypes,
     callback,
     channelId,
+    appName,
+    onImageFlagged,
   ]);
+
+  const BlockedModal = useCallback(() => {
+    return showBlockedModal ? (
+      <UploadsDisabledModal onClose={() => setShowBlockedModal(false)} />
+    ) : null;
+  }, [showBlockedModal]);
 
   return useMemo(
     () => ({
       startFileUpload: (newCallbackArgs?: unknown) => {
         callbackArgs.current = newCallbackArgs;
 
+        if (isBlockedAbuse) {
+          setShowBlockedModal(true);
+          return;
+        }
+
         inputRef.current?.click();
       },
       FileUploaderComponent: () => (
-        <input
-          type="file"
-          style={{display: 'none'}}
-          onChange={changeHandler}
-          ref={inputRef}
-          multiple={multiple}
-        />
+        <>
+          <input
+            type="file"
+            style={{display: 'none'}}
+            onChange={changeHandler}
+            ref={inputRef}
+            multiple={multiple}
+          />
+          <BlockedModal />
+        </>
       ),
     }),
-    [changeHandler, inputRef, multiple]
+    [changeHandler, inputRef, multiple, isBlockedAbuse, BlockedModal]
   );
 };
