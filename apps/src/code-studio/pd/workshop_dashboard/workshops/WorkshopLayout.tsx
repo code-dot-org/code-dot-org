@@ -93,6 +93,7 @@ export const WorkshopLayout: FC<WorkshopLayoutProps> = ({
     if (showPostSurveyCategorySelection) {
       return !surveysLoading && !surveys?.surveys?.post_workshop;
     }
+    return false;
   }, [
     showPostSurveyCategorySelection,
     surveys?.surveys?.post_workshop,

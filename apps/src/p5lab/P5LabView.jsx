@@ -8,6 +8,7 @@ import {connect} from 'react-redux';
 import {getManifest} from '@cdo/apps/assetManagement/animationLibraryApi';
 import ModalFunctionEditor from '@cdo/apps/blockly/components/ModalFunctionEditor';
 import VisualizationResizeBar from '@cdo/apps/code-studio/components/VisualizationResizeBar';
+import {setUploadsEnabled} from '@cdo/apps/p5lab/redux/animationPicker';
 import CodeWorkspace from '@cdo/apps/templates/CodeWorkspace';
 import IFrameEmbedOverlay from '@cdo/apps/templates/IFrameEmbedOverlay';
 import InstructionsWithWorkspace from '@cdo/apps/templates/instructions/InstructionsWithWorkspace';
@@ -57,6 +58,8 @@ class P5LabView extends React.Component {
     isBlockly: PropTypes.bool.isRequired,
     isBackground: PropTypes.bool,
     currentUserType: PropTypes.string,
+    uploadsEnabled: PropTypes.bool.isRequired,
+    setUploadsEnabled: PropTypes.func.isRequired,
   };
 
   constructor(props) {
@@ -70,7 +73,6 @@ class P5LabView extends React.Component {
     this.state = {
       libraryManifest: {},
       projectType,
-      uploadsEnabled: true,
     };
   }
 
@@ -93,7 +95,9 @@ class P5LabView extends React.Component {
     });
     if (window.dashboard?.project) {
       const project = window.dashboard?.project;
-      this.setState({uploadsEnabled: !project.exceedsAbuseThreshold()});
+      const isProjectFlagged = project.exceedsAbuseThreshold();
+
+      this.props.setUploadsEnabled(!isProjectFlagged);
     }
   }
 
@@ -170,7 +174,7 @@ class P5LabView extends React.Component {
                   ? PICKER_TYPE.backgrounds
                   : this.state.projectType
               }
-              uploadsEnabled={this.state.uploadsEnabled}
+              uploadsEnabled={this.props.uploadsEnabled}
               projectType={this.props.labType.toLowerCase()}
             />
           )}
@@ -221,7 +225,7 @@ class P5LabView extends React.Component {
             : this.state.projectType
         }
         interfaceMode={interfaceMode}
-        uploadsEnabled={this.state.uploadsEnabled}
+        uploadsEnabled={this.props.uploadsEnabled}
       />
     ) : undefined;
   }
@@ -237,15 +241,23 @@ class P5LabView extends React.Component {
     );
   }
 }
-export default connect(state => ({
-  hideSource: state.pageConstants.hideSource,
-  interfaceMode: state.interfaceMode,
-  isResponsive: isResponsiveFromState(state),
-  pinWorkspaceToBottom: state.pageConstants.pinWorkspaceToBottom,
-  allowAnimationMode: allowAnimationMode(state),
-  isRunning: state.runState.isRunning,
-  isIframeEmbed: state.pageConstants.isIframeEmbed,
-  isBlockly: state.pageConstants.isBlockly,
-  isBackground: state.animationPicker.isBackground,
-  currentUserType: state.currentUser?.userType,
-}))(P5LabView);
+export default connect(
+  state => ({
+    hideSource: state.pageConstants.hideSource,
+    interfaceMode: state.interfaceMode,
+    isResponsive: isResponsiveFromState(state),
+    pinWorkspaceToBottom: state.pageConstants.pinWorkspaceToBottom,
+    allowAnimationMode: allowAnimationMode(state),
+    isRunning: state.runState.isRunning,
+    isIframeEmbed: state.pageConstants.isIframeEmbed,
+    isBlockly: state.pageConstants.isBlockly,
+    isBackground: state.animationPicker.isBackground,
+    currentUserType: state.currentUser?.userType,
+    uploadsEnabled: state.animationPicker.uploadsEnabled,
+  }),
+  dispatch => ({
+    setUploadsEnabled(uploadsEnabled) {
+      dispatch(setUploadsEnabled(uploadsEnabled));
+    },
+  })
+)(P5LabView);
