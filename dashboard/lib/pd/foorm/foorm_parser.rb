@@ -241,7 +241,6 @@ module Pd::Foorm
         name: element['name'],
         title: element['title'],
         short_text: element['shortText'],
-        sub_text: element['subText'],
         type: QUESTION_TO_ANSWER_TYPES[element['type']],
         category: element['category'],
         original_type: element['type']
@@ -269,7 +268,6 @@ module Pd::Foorm
             question_data[:matrix_rows][row['value']] = {
               text: row['text'],
               short_text: row['shortText'],
-              sub_text: row['subText'],
               category: row['category'] || element['category']
             }
           end

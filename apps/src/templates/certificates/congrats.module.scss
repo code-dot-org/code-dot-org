@@ -25,6 +25,21 @@ h1.header {
   border-radius: 5px;
 }
 
+.userNameIsRequiredAlert {
+  margin-bottom: 2.5rem;
+
+  & > div > span {
+    width: 100%;
+    min-width: 0;
+    display: flex;
+    justify-content: space-between;
+
+    a {
+      padding-inline-end: 0.625rem;
+    }
+  }
+}
+
 .certificateContainer {
   display: flex;
   width: 100%;
@@ -58,6 +73,7 @@ h1.mobileHeading {
 
 .desktopHalf {
   width: 50%;
+  height: 100%;
   float: left;
 }
 

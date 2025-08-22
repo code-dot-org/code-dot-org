@@ -101,7 +101,6 @@ module Pd::Foorm
       question_data = {
         title: 'Test Question',
         short_text: 'Test Short',
-        sub_text: 'Test Sub',
         type: 'singleSelect',
         category: 'implementation',
         choices: {'option1' => 'Option 1', 'option2' => 'Option 2'}
@@ -113,7 +112,6 @@ module Pd::Foorm
       assert_equal 'test_question', result[:question_name]
       assert_equal 'Test Question', result[:question_text]
       assert_equal 'Test Short', result[:question_short_text]
-      assert_equal 'Test Sub', result[:question_sub_text]
       assert_equal 'singleSelect', result[:question_type]
       assert_equal 'implementation', result[:category]
       assert result[:results].key?(:total_responses)

@@ -442,7 +442,7 @@ class Ability
 
       # Ability for LevelStarterAssetsController. Since the controller does not have
       # a corresponding model, use lower/snake-case symbol instead of class name.
-      can [:upload, :destroy], :level_starter_asset
+      can [:upload, :upload_by_uuid, :destroy], :level_starter_asset
 
       can [:edit_manifest, :update_manifest, :index, :show, :update, :destroy], :dataset
 

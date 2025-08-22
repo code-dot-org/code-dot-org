@@ -10,7 +10,7 @@ import {FollowUpRequestedCard} from '../../components/FollowUpRequestedCard';
 import {FreeResponseCard} from '../../components/FreeResponseCard';
 import {MultiSelectCard} from '../../components/MultiSelectCard';
 import {ScoreCard} from '../../components/ScoreCard';
-import {MIN_RESPONSE_COUNT} from '../../constants';
+import {LIKERT_QUESTION_FOOTER, MIN_RESPONSE_COUNT} from '../../constants';
 import {getQuestionDescription} from '../../helpers';
 
 import styles from '../../../workshop.module.scss';
@@ -63,7 +63,7 @@ export const Implementation = () => {
               key={question.question_name}
               title={question.question_short_text ?? question.question_text}
               description={getQuestionDescription(question)}
-              footer={question.question_sub_text}
+              footer={LIKERT_QUESTION_FOOTER}
               score={question.results.weighted_score}
               responseCount={question.results.total_responses}
               minResponseCount={MIN_RESPONSE_COUNT}
