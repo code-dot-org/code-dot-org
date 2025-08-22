@@ -190,16 +190,14 @@ const PythonlabView: React.FunctionComponent<
   );
 
   useEffect(() => {
-    if (miniAppName) {
-      setAiTutor2Context(
-        getAiTutor2Context(
-          source,
-          validationFile,
-          levelProperties.longInstructions,
-          miniAppName
-        )
-      );
-    }
+    setAiTutor2Context(
+      getAiTutor2Context(
+        source,
+        validationFile,
+        levelProperties.longInstructions,
+        miniAppName
+      )
+    );
   }, [levelProperties.longInstructions, source, validationFile, miniAppName]);
 
   const [askAiTutor2, AiTutor2Response] = useAiTutor2(
