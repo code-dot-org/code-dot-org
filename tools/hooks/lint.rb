@@ -18,14 +18,6 @@ def filter_eslint_apps(modified_files)
   end
 end
 
-def filter_frontend(modified_files)
-  full_frontend_dir = File.expand_path(FRONTEND_DIR)
-
-  modified_files.select do |f|
-    f.start_with?(full_frontend_dir)
-  end
-end
-
 def filter_python(modified_files)
   full_python_dir = File.expand_path(PYTHON_DIR)
 
@@ -136,7 +128,7 @@ def do_linting(base = nil, current = nil)
     Object.method(:run_scss_dashboard) => filter_scss(modified_files),
     Object.method(:run_eslint_apps) => filter_eslint_apps(modified_files),
     Object.method(:run_eslint_shared) => filter_eslint_shared(modified_files),
-    Object.method(:run_lint_frontend) => filter_frontend(modified_files),
+    Object.method(:run_lint_frontend) => modified_files,
     Object.method(:run_stylelint_apps) => filter_scss_apps(modified_files),
     Object.method(:run_python) => filter_python(modified_files),
     Object.method(:run_rubocop) => filter_rubocop(modified_files)
