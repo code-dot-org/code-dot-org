@@ -1,5 +1,9 @@
 <Gamelab>
   <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2022-09-19T22:58:46.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -103,7 +107,7 @@
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "expand_debugger": "false",
-    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"17369f7c-1bbb-46d0-8092-dbafe7beeb62\",\r\n    \"09ccefd7-e4ee-4d57-b89c-93c67213ef36\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"17369f7c-1bbb-46d0-8092-dbafe7beeb62\": {\r\n      \"name\": \"sky\",\r\n      \"sourceUrl\": \"https://studio.code.org/v3/animations/meFjGLfGxcBdtdU2JhjnmGbQpLZtoa9UKV7VIX1_Wo4/17369f7c-1bbb-46d0-8092-dbafe7beeb62.png?version=k4jW886UZ6v6X5My8q_Jn94rlvCZf6hv\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"k4jW886UZ6v6X5My8q_Jn94rlvCZf6hv\"\r\n    },\r\n    \"09ccefd7-e4ee-4d57-b89c-93c67213ef36\": {\r\n      \"name\": \"creature\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/gamelab/dDlIjUaaxNzryzPG0E7CvEYpaGwGTiti/category_characters/crowned_creature.png\",\r\n      \"frameSize\": {\r\n        \"x\": 396,\r\n        \"y\": 596\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"dDlIjUaaxNzryzPG0E7CvEYpaGwGTiti\"\r\n    }\r\n  }\r\n}",
+    "start_animations": "{\n  \"orderedKeys\": [\n    \"17369f7c-1bbb-46d0-8092-dbafe7beeb62\",\n    \"09ccefd7-e4ee-4d57-b89c-93c67213ef36\"\n  ],\n  \"propsByKey\": {\n    \"17369f7c-1bbb-46d0-8092-dbafe7beeb62\": {\n      \"name\": \"sky\",\n      \"sourceUrl\": \"https://studio.code.org/v3/animations/meFjGLfGxcBdtdU2JhjnmGbQpLZtoa9UKV7VIX1_Wo4/17369f7c-1bbb-46d0-8092-dbafe7beeb62.png?version=k4jW886UZ6v6X5My8q_Jn94rlvCZf6hv\",\n      \"frameSize\": {\n        \"x\": 400,\n        \"y\": 400\n      },\n      \"frameCount\": 1,\n      \"looping\": true,\n      \"frameDelay\": 12,\n      \"version\": \"k4jW886UZ6v6X5My8q_Jn94rlvCZf6hv\"\n    },\n    \"09ccefd7-e4ee-4d57-b89c-93c67213ef36\": {\n      \"name\": \"creature\",\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/dDlIjUaaxNzryzPG0E7CvEYpaGwGTiti/category_characters/crowned_creature.png\",\n      \"frameSize\": {\n        \"x\": 396,\n        \"y\": 596\n      },\n      \"frameCount\": 1,\n      \"looping\": true,\n      \"frameDelay\": 2,\n      \"version\": \"dDlIjUaaxNzryzPG0E7CvEYpaGwGTiti\"\n    }\n  }\n}",
     "parent_level_id": 23060,
     "name_suffix": "_2023",
     "disable_procedure_autopopulate": "false",
@@ -134,11 +138,7 @@
     "libraries_enabled": "false",
     "preload_asset_list": null
   },
-  "game_id": 50,
   "published": true,
-  "created_at": "2022-09-19T22:58:46.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-09-19T22:58:46.654+00:00\",\"changed\":[\"cloned from \\\"CSD web mouse assessment_2022\\\"\"],\"cloned_from\":\"CSD web mouse assessment_2022\"},{\"changed_at\":\"2023-01-18 00:11:55 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"encrypted_examples\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>

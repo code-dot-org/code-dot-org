@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-27 18:56:34 UTC",
+    "serialized_at": "2025-08-20 19:19:56 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -991,8 +991,21 @@
       }
     },
     {
-      "key": "39b9cd61-dada-4fdb-b64f-1a4db820a0e4",
+      "key": "fd73799e-b9f6-4367-b81a-278296069459",
       "position": 1,
+      "properties": {
+        "name": "Project Setup"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fd73799e-b9f6-4367-b81a-278296069459",
+        "lesson.key": "Creative Coding with the Console Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-alt-2025"
+      }
+    },
+    {
+      "key": "39b9cd61-dada-4fdb-b64f-1a4db820a0e4",
+      "position": 2,
       "properties": {
         "duration": 10,
         "name": "Warm Up"
@@ -1006,7 +1019,7 @@
     },
     {
       "key": "d64bc551-be07-45ce-87ac-cddd0430f237",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 30,
         "name": "Activity"
@@ -1020,7 +1033,7 @@
     },
     {
       "key": "0f521947-046e-4465-b9c9-c1028d3bc9ea",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -1034,7 +1047,7 @@
     },
     {
       "key": "4516301b-d4a7-4e90-bfee-8da95dcd41b9",
-      "position": 4,
+      "position": 5,
       "properties": {
       },
       "seeding_key": {
@@ -1100,8 +1113,21 @@
       }
     },
     {
-      "key": "06dd29ff-18bd-4563-989d-f9ab134d387d",
+      "key": "8222d358-cfcd-46c6-9e4d-222ee6045c6c",
       "position": 1,
+      "properties": {
+        "name": "Project Setup"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8222d358-cfcd-46c6-9e4d-222ee6045c6c",
+        "lesson.key": "Creative Coding with The Theater Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-alt-2025"
+      }
+    },
+    {
+      "key": "06dd29ff-18bd-4563-989d-f9ab134d387d",
+      "position": 2,
       "properties": {
         "duration": 10,
         "name": "Warm Up"
@@ -1115,7 +1141,7 @@
     },
     {
       "key": "e2a688bb-1dd5-48fe-824e-bb47c8a193be",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 30,
         "name": "Activity"
@@ -1129,7 +1155,7 @@
     },
     {
       "key": "a1d128e5-9641-49a6-8513-83b164859f42",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -1143,7 +1169,7 @@
     },
     {
       "key": "cea2f754-62e2-438f-bc44-ec6be14ef2f6",
-      "position": 4,
+      "position": 5,
       "properties": {
       },
       "seeding_key": {
@@ -3843,7 +3869,7 @@
       "key": "4539fe34-37c0-4953-8ed8-08dcd3b90967",
       "position": 1,
       "properties": {
-        "description": "The unit assessment project assesses proficiency in the knowledge and skills developed in this unit. Students work on the project throughout the unit to brainstorm, plan, and begin developing their program. Students then have three dedicated class periods to refine and complete their projects.\n\nIf there is not enough time for the three-day project, a one-day option achieves the targeted learning objectives and goals. If using this option, refer to the [**Creative Coding with the Console Project 1-Day Lesson Plan**](https://studio.code.org/s/csa8-2023/lessons/13). While the one-day option covers the learning objectives and goals, it shortens planning and reflection time. Consider this tradeoff when deciding which version to use."
+        "description": "**Note:** The unit assessment project is adapted from the Unit 8 project in the Objects First version of the course. As such, there are criteria contained within the rubric that might not align with the current level of knowledge of students. You are encouraged to create a version of the rubric which you feel is fair for your students, given their trajectory within the CED-aligned version of the course.\n\nStudents work on the project throughout the unit to brainstorm, plan, and begin developing their program. Students then have three dedicated class periods to refine and complete their projects.\n\nIf there is not enough time for the three-day project, a one-day option achieves the targeted learning objectives and goals. If using this option, refer to the [**Creative Coding with the Console Project 1-Day Lesson Plan**](https://studio.code.org/s/csa8-2023/lessons/13). While the one-day option covers the learning objectives and goals, it shortens planning and reflection time. Consider this tradeoff when deciding which version to use."
       },
       "seeding_key": {
         "activity_section.key": "4539fe34-37c0-4953-8ed8-08dcd3b90967",
@@ -4274,6 +4300,17 @@
       }
     },
     {
+      "key": "4aa11d03-5432-4caf-8d39-84860eb94bce",
+      "position": 1,
+      "properties": {
+        "description": "**Note**: The unit assessment project is adapted from the Unit 8 project in the Objects First version of the course. As such, there are criteria contained within the rubric that might not align with the current level of knowledge of students. You are encouraged to create a version of the rubric which you feel is fair for your students, given their trajectory within the CED-aligned version of the course."
+      },
+      "seeding_key": {
+        "activity_section.key": "4aa11d03-5432-4caf-8d39-84860eb94bce",
+        "lesson_activity.key": "fd73799e-b9f6-4367-b81a-278296069459"
+      }
+    },
+    {
       "key": "5cd6163c-e2fc-4d1c-afb8-856da290b3d8",
       "position": 1,
       "properties": {
@@ -4432,7 +4469,7 @@
       "key": "9072ca71-d16a-49ff-985f-186c278ffb9f",
       "position": 1,
       "properties": {
-        "description": "The unit assessment project assesses proficiency in the knowledge and skills developed in this unit. Students work on the project throughout the unit to brainstorm, plan, and begin developing their program. Students then have three dedicated class periods to refine and complete their projects.\n\nIf there is not enough time for the three-day project, a one-day option achieves the targeted learning objectives and goals. If using this option, refer to the [**Creative Coding with The Theater Project 1-Day Lesson Plan**](https://studio.code.org/s/csa7-2023/lessons/14). While the one-day option covers the learning objectives and goals, it shortens planning and reflection time. Consider this tradeoff when deciding which version to use."
+        "description": "**Note**: The unit assessment project is adapted from the Unit 7 project in the Objects First version of the course. As such, there are criteria contained within the rubric that might not align with the current level of knowledge of students. You are encouraged to create a version of the rubric which you feel is fair for your students, given their trajectory within the CED-aligned version of the course.\n\nStudents work on the project throughout the unit to brainstorm, plan, and begin developing their program. Students then have three dedicated class periods to refine and complete their projects.\n\nIf there is not enough time for the three-day project, a one-day option achieves the targeted learning objectives and goals. If using this option, refer to the [**Creative Coding with The Theater Project 1-Day Lesson Plan**](https://studio.code.org/s/csa7-2023/lessons/14). While the one-day option covers the learning objectives and goals, it shortens planning and reflection time. Consider this tradeoff when deciding which version to use."
       },
       "seeding_key": {
         "activity_section.key": "9072ca71-d16a-49ff-985f-186c278ffb9f",
@@ -4895,6 +4932,17 @@
       "seeding_key": {
         "activity_section.key": "fa46243b-438b-4ec8-ae81-4f79344dbaf3",
         "lesson_activity.key": "1270720e-3c59-4cd0-87e7-0ed8993220ac"
+      }
+    },
+    {
+      "key": "25b263d4-37a8-492c-9291-635e29aa8488",
+      "position": 1,
+      "properties": {
+        "description": "**Note**: The unit assessment project is adapted from the Unit 7 project in the Objects First version of the course. As such, there are criteria contained within the rubric that might not align with the current level of knowledge of students. You are encouraged to create a version of the rubric which you feel is fair for your students, given their trajectory within the CED-aligned version of the course."
+      },
+      "seeding_key": {
+        "activity_section.key": "25b263d4-37a8-492c-9291-635e29aa8488",
+        "lesson_activity.key": "8222d358-cfcd-46c6-9e4d-222ee6045c6c"
       }
     },
     {
