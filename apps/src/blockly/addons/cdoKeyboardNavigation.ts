@@ -1,7 +1,11 @@
 import {KeyboardNavigation} from '@blockly/keyboard-navigation';
 import * as GoogleBlockly from 'blockly/core';
 
-import {unregisterCrossTabPluginOptions} from './contextMenu';
+import {
+  overrideOptionWeight as overrideContextMenuOptionWeight,
+  unregisterCrossTabPluginOptions,
+  WeightOptions as ContextMenuWeightOptions,
+} from './contextMenu';
 
 export function registerKeyboardNavigationStyles() {
   KeyboardNavigation.registerKeyboardNavigationStyles();
@@ -18,7 +22,8 @@ export function initializeKeyboardNavigation(
   Blockly.KeyboardNavigation = new KeyboardNavigation(workspace, {
     allowCrossWorkspacePaste: true,
   });
-
+  // Re-register context menu options with our custom weights.
+  reorderContextMenu();
   enableShortcutModalEscape();
 }
 
@@ -49,5 +54,19 @@ function enableShortcutModalEscape() {
         }
       }
     });
+  }
+}
+
+function reorderContextMenu() {
+  const menuWeightMap: Record<string, ContextMenuWeightOptions> = {
+    blockCutFromContextMenu: ContextMenuWeightOptions.CUT,
+    blockCopyFromContextMenu: ContextMenuWeightOptions.COPY,
+    blockPasteFromContextMenu: ContextMenuWeightOptions.PASTE,
+    move: ContextMenuWeightOptions.MOVE,
+    edit: ContextMenuWeightOptions.EDIT,
+    move_comment: ContextMenuWeightOptions.MOVE_COMMENT,
+  };
+  for (const [option, weight] of Object.entries(menuWeightMap)) {
+    overrideContextMenuOptionWeight(option, weight);
   }
 }
