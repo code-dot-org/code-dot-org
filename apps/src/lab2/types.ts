@@ -61,8 +61,8 @@ export interface ProjectAndSources {
 
 // Represents the structure of the full project sources object (i.e. the main.json file)
 export interface ProjectSources {
-  // Source code can either be a string or a nested JSON object (for multi-file).
-  source: string | MultiFileSource;
+  // Source code can either be a string, Blockly JSON, or a nested JSON object (for multi-file).
+  source: string | Source;
   // Optional lab-specific configuration for this project
   labConfig?: LabConfig;
   // Add other properties (animations, html, etc) as needed.
@@ -86,28 +86,8 @@ export interface UpdateSourceOptions extends SaveSourceOptions {
 
 // -- BLOCKLY -- //
 
-export interface BlocklySource {
-  blocks: {
-    languageVersion: number;
-    blocks: BlocklyBlock[];
-  };
-  variables: BlocklyVariable[];
-}
-
-export interface BlocklyBlock {
-  type: string;
-  id: string;
-  x: number;
-  y: number;
-  next: {
-    block: BlocklyBlock;
-  };
-}
-
-export interface BlocklyVariable {
-  name: string;
-  id: string;
-}
+// Blockly JSON is currently typed as a generic object
+export type BlocklySource = {[key: string]: unknown};
 
 // -- MULTI-FILE -- //
 
@@ -187,7 +167,7 @@ export interface LevelProperties {
   isK1?: boolean;
   skin?: string;
   toolboxBlocks?: string;
-  startSources?: MultiFileSource;
+  startSources?: Source;
   templateSources?: MultiFileSource;
   sharedBlocks?: BlockDefinition[];
   validations?: Validation[];
