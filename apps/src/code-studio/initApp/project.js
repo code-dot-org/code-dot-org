@@ -329,11 +329,12 @@ var projects = (module.exports = {
   },
 
   getSharingDisabled() {
+    // Return false if current user is a project validator and pageAction is 'view'.
     if (this.showEvenIfPolicyViolatingOrAbusiveOrSharingDisabled()) {
       return false;
     }
     // sharingDisabled is set to true if the project owner's sharing_disabled is true
-    // and the current user is not the project owner nor the teacher of the project owner.
+    // AND the current user is neither the owner nor the teacher of the owner.
     return sharingDisabled;
   },
 
@@ -2160,10 +2161,9 @@ function parsePath() {
       .join('');
   }
 
-  const pageAction = tokens[PathPart.ACTION] || 'share';
   return {
     appName: tokens[PathPart.APP],
     channelId,
-    action: pageAction,
+    action: tokens[PathPart.ACTION],
   };
 }
