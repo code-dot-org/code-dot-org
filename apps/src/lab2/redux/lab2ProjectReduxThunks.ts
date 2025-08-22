@@ -198,7 +198,7 @@ export const deleteFolderThunk = createAsyncThunk<
   const projectSources = state.lab2Project.projectSources;
   const isBlockedAbuse = state.lab.isBlockedAbuse;
   const source = projectSources?.source as MultiFileSource;
-  const deleteResult = deleteFolderHelper({source, folderId: payload.folderId});
+  const deleteResult = deleteFolderHelper(source, payload.folderId);
   // Update the project sources.
   thunkAPI.dispatch(deleteFolder(payload.folderId));
   saveProjectIfEditable(thunkAPI.getState, thunkAPI.dispatch);

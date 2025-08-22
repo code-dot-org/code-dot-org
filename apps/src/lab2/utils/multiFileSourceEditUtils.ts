@@ -293,10 +293,8 @@ export const deleteFolderHelper = (
             const deletedFileAsset = {
               channelId,
               url: f.url,
+              flagged: f.flagged,
             };
-            if (f.flagged) {
-              deletedFileAsset.flagged = f.flagged;
-            }
             deletedFilesAssets.push(deletedFileAsset);
           }
         }

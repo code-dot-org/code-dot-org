@@ -358,6 +358,12 @@ const projectSlice = createSlice({
           return;
         }
 
+        const deleteResult = deleteFolderHelper(source, action.payload);
+        state.projectSources = {
+          ...state.projectSources,
+          source: deleteResult.newSource,
+        };
+
         state.projectSources = {
           ...state.projectSources,
           source: deleteResult.newSource,
