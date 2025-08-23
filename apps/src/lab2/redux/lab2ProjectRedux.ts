@@ -366,11 +366,6 @@ const projectSlice = createSlice({
           ...state.projectSources,
           source: deleteResult.newSource,
         };
-
-        state.projectSources = {
-          ...state.projectSources,
-          source: deleteResult.newSource,
-        };
         state.hasEdited = true;
       }
     },
