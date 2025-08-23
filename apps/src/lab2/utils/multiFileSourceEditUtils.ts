@@ -33,6 +33,11 @@ interface DeleteFileHelperArgs {
   fileId: FileId;
 }
 
+interface DeleteFolderHelperArgs {
+  source: MultiFileSource;
+  folderId: FolderId;
+}
+
 interface DeletedFileAsset {
   channelId: string;
   url: string;
@@ -184,25 +189,7 @@ export const deleteFileHelper = ({
   const fileToBeDeleted = newSource.files[fileId];
   delete newSource.files[fileId];
 
-  let deletedFileAsset: DeletedFileAsset | undefined;
-
-  // Only attempt delete from S3 if the file is owned by a student (ie, not a level starter asset).
-  if (
-    fileToBeDeleted.url &&
-    !Object.values(ProjectFileType).includes(
-      fileToBeDeleted?.type as ProjectFileType
-    )
-  ) {
-    // Extract channelId from asset url.
-    const match = fileToBeDeleted.url.match(/\/assets\/([^/]+)/);
-    const channelId = match ? match[1] : null;
-    if (channelId) {
-      deletedFileAsset = {
-        channelId,
-        url: fileToBeDeleted.url,
-      };
-    }
-  }
+  const deletedStudentFileAsset = getStudentFileAssetInfo(fileToBeDeleted);
 
   const newActiveFileId = getNewActiveFileId(source, fileToBeDeleted);
   if (newActiveFileId) {
@@ -214,7 +201,7 @@ export const deleteFileHelper = ({
 
   return {
     newSource,
-    deletedFileAsset,
+    deletedFileAsset: deletedStudentFileAsset,
   };
 };
 
@@ -241,10 +228,10 @@ export const createNewFolderHelper = (
 /**
  * Delete a folder and all of its contents.
  */
-export const deleteFolderHelper = (
-  source: MultiFileSource,
-  folderId: FolderId
-): DeleteFolderResult => {
+export const deleteFolderHelper = ({
+  source,
+  folderId,
+}: DeleteFolderHelperArgs): DeleteFolderResult => {
   const deletedFilesAssets: DeletedFileAsset[] = [];
 
   const newSource = {
@@ -281,22 +268,9 @@ export const deleteFolderHelper = (
       .forEach(f => {
         delete newSource.files[f.id];
 
-        // Only attempt delete from S3 if the file is owned by a student (ie, not a level starter asset).
-        if (
-          f.url &&
-          !Object.values(ProjectFileType).includes(f?.type as ProjectFileType)
-        ) {
-          // Extract channelId from asset url.
-          const match = f.url.match(/\/assets\/([^/]+)/);
-          const channelId = match ? match[1] : null;
-          if (channelId) {
-            const deletedFileAsset = {
-              channelId,
-              url: f.url,
-              flagged: f.flagged,
-            };
-            deletedFilesAssets.push(deletedFileAsset);
-          }
+        const deletedStudentFileAsset = getStudentFileAssetInfo(f);
+        if (deletedStudentFileAsset) {
+          deletedFilesAssets.push(deletedStudentFileAsset);
         }
       });
     if (newSource.openFiles) {
@@ -355,6 +329,23 @@ const getNewActiveFileId = (
     }
 
     return newActiveFileId;
+  }
+  return undefined;
+};
+
+// Helper function to extract file asset info to be deleted from S3 if the file is owned by a student
+// (i.e., not a level starter asset).
+const getStudentFileAssetInfo = (file: ProjectFile) => {
+  if (
+    file.url &&
+    !Object.values(ProjectFileType).includes(file?.type as ProjectFileType)
+  ) {
+    // Extract channelId from asset url.
+    const match = file.url.match(/\/assets\/([^/]+)/);
+    const channelId = match ? match[1] : null;
+    if (channelId) {
+      return {channelId, url: file.url, flagged: file.flagged};
+    }
   }
   return undefined;
 };
