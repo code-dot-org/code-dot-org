@@ -226,7 +226,13 @@ export const createNewFolderHelper = (
 };
 
 /**
- * Delete a folder and all of its contents.
+ * Deletes a folder from the given MultiFileSource.
+ * - Removes the folder from the folders list.
+ * - Removes all child folders from the folders list.
+ * - Removes all files housed within this or any child folder from the files list.
+ * - Updates the active file if necessary.
+ * - Returns the updated MultiFileSource and, if the folder contains flagged files,
+ *     details about the deleted files.
  */
 export const deleteFolderHelper = ({
   source,
