@@ -7,6 +7,7 @@ import {
   FolderId,
   MultiFileSource,
   ProjectFile,
+  ProjectFileType,
 } from '@cdo/apps/lab2/types';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
@@ -25,18 +26,20 @@ interface CreateNewFileHelperArgs {
   folderId?: FolderId;
   contents?: string;
   url?: string;
+  isStartMode?: boolean;
   flagged?: boolean;
 }
+
 /**
  * Create a new file.
  */
-
 export const createNewFileHelper = ({
   source,
   fileName,
   folderId = DEFAULT_FOLDER_ID,
   contents = '',
   url,
+  isStartMode,
   flagged,
 }: CreateNewFileHelperArgs): MultiFileSource => {
   const fileId = getNextFileId(Object.values(source.files));
@@ -56,6 +59,10 @@ export const createNewFileHelper = ({
     file.url = url;
   }
 
+  if (isStartMode) {
+    file.type = ProjectFileType.STARTER;
+  }
+
   if (flagged) {
     file.flagged = flagged;
   }
@@ -64,6 +71,7 @@ export const createNewFileHelper = ({
 
   return activateFileHelper(newSource, fileId);
 };
+
 /**
  * Activate a file (make active).
  */
@@ -172,7 +180,13 @@ export const deleteFileHelper = ({
 
   let deletedFileAsset: {channelId: string; url: string} | undefined;
 
-  if (fileToBeDeleted.url) {
+  // Only attempt delete from S3 if the file is owned by a student (ie, not a level starter asset).
+  if (
+    fileToBeDeleted.url &&
+    !Object.values(ProjectFileType).includes(
+      fileToBeDeleted?.type as ProjectFileType
+    )
+  ) {
     // Extract channelId from asset url.
     const match = fileToBeDeleted.url.match(/\/assets\/([^/]+)/);
     const channelId = match ? match[1] : null;
@@ -258,7 +272,12 @@ export const deleteFolderHelper = (
       .filter(f => files.has(f.id))
       .forEach(f => {
         delete newSource.files[f.id];
-        if (f.url) {
+
+        // Only attempt delete from S3 if the file is owned by a student (ie, not a level starter asset).
+        if (
+          f.url &&
+          !Object.values(ProjectFileType).includes(f?.type as ProjectFileType)
+        ) {
           try {
             // We don't wait for the deletion to complete because a user's project doesn't depend on the completion of the operation.
             // In the case of a failure, we just end up with an orphaned file in S3.

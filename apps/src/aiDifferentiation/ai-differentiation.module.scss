@@ -312,6 +312,7 @@ $fab-height: 60;
   background-color: var(--background-neutral-secondary);
   height: auto;
   display: flex;
+  border-right: 1px solid $neutral_dark;
 }
 
 .sidebarBox {
@@ -331,40 +332,56 @@ $fab-height: 60;
 }
 
 .sidebarSectionTitle {
-  margin: 0;
+  margin: 0 !important;
   padding: 8px 16px;
-  color: $neutral_dark80;
+  color: var(--text-neutral-tertiary) !important;
 }
 
 .sidebarChatItem {
-  color: $neutral_dark90;
-  font-family: Figtree, sans-serif;
   margin-top: 0 !important;
   margin-bottom: 0 !important;
 }
 
+:global(.Mui-selected).sidebarChatButton{
+  background-color: var(--background-neutral-tertiary) !important;
+}
+
+//body text three
 .sidebarChatItemPrimary {
-  color: $neutral_dark90;
-  font-family: Figtree, sans-serif;
+  color: var(--text-neutral-primary) !important;
+  font-family: Figtree, sans-serif !important;
+  font-size: var(--font-size-body-sm) !important;
+  line-height: 1.54 !important;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.sidebarChatItemPrimarySelected {
+  font-weight: 600 !important;
+  color: var(--text-neutral-primary) !important;
+  font-family: Figtree, sans-serif !important;
+  font-size: var(--font-size-body-sm) !important;
+  line-height: 1.54 !important;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 }
 
 .sidebarChatItemSecondary {
-  color: $neutral_dark90;
-  font-family: Figtree, sans-serif;
-  font-size: smaller;
-  font-weight: 200;
+  color: var(--text-neutral-tertiary) !important;
+  font-family: Figtree, sans-serif !important;
+  font-size: 0.688rem !important;
+  line-height: 1.64 !important;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 }
 
 .sidebarButton {
-  width: 224px; /* drawerWidth - 16 */
   margin-top: 15px !important;
   margin-left: 8px !important;
+  margin-right: 8px !important;
   border: 1px solid black !important;
   border-radius: 4px;
 }
