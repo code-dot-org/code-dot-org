@@ -204,7 +204,6 @@ export const deleteFolderThunk = createAsyncThunk<
   saveProjectIfEditable(thunkAPI.getState, thunkAPI.dispatch);
 
   const {deletedFilesAssets} = deleteResult;
-  console.log('deletedFilesAssets', deletedFilesAssets);
 
   if (deletedFilesAssets) {
     try {
