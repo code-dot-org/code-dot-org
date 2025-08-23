@@ -28,6 +28,14 @@
     }
   }
 
+  &.fullWidth {
+    width: 100%;
+
+    .dropdownButton {
+      width: 100%;
+    }
+  }
+
   .dropdownLabel {
     display: block;
   }
