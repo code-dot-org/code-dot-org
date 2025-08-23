@@ -71,16 +71,15 @@ CodeprojectsCertificate:
       - DomainName: !Sub bramble-download.${CodeprojectsBaseDomainName}
         HostedZoneId: !Ref CodeprojectsHostedZoneId
 
-CodeprojectsRecords:
-  Type: AWS::Route53::RecordSetGroup
+CodeprojectsPreviewRecord:
+  Type: AWS::Route53::RecordSet
   Properties:
     HostedZoneId: !Ref CodeprojectsHostedZoneId
-    RecordSets:
-      - Name: !Sub preview.${CodeprojectsBaseDomainName}
-        Type: A
-        AliasTarget:
-          DNSName: !GetAtt CodeprojectsCloudFrontDistribution.DomainName
-          HostedZoneId: Z2FDTNDATAQYW2
+    Name: !Sub preview.${CodeprojectsBaseDomainName}
+    Type: A
+    AliasTarget:
+      DNSName: !GetAtt CodeprojectsCloudFrontDistribution.DomainName
+      HostedZoneId: Z2FDTNDATAQYW2
 
 # Codeprojects CloudFront Distribution
 CodeprojectsCloudFrontDistribution:
@@ -95,7 +94,7 @@ CodeprojectsCloudFrontDistribution:
         - !Sub preview.${CodeprojectsBaseDomainName}
       Origins:
         - Id: DashboardOrigin
-          DomainName: <%= load_balancer ? '!GetAtt ALB.DNSName' : '!Sub ${DashboardSubdomainName}.${BaseDomainName}' %>
+          DomainName: <%= cdn_enabled ? subdomain('origin') : '!Sub ${DashboardSubdomainName}.${BaseDomainName}' %>
           CustomOriginConfig:
             OriginProtocolPolicy: https-only
             OriginSSLProtocols:
