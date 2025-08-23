@@ -53,6 +53,10 @@ export interface SimpleDropdownProps
   size?: ComponentSizeXSToL;
   /** Simple Dropdown IconLeft */
   iconLeft?: FontAwesomeV6IconProps;
+  /** Whether the dropdown should take full width of its container */
+  fullWidth?: boolean;
+  /** Custom width for the dropdown (CSS width value - supports px, %, rem, etc.) */
+  width?: string;
 }
 
 /**
@@ -89,19 +93,27 @@ const SimpleDropdown: React.FunctionComponent<SimpleDropdownProps> = ({
   color = 'black',
   size = 'm',
   styleAsFormField = false,
+  fullWidth = false,
+  width,
   ...rest
-}) => (
-  <label
-    className={classNames(
-      moduleStyles.dropdownContainer,
-      moduleStyles[`dropdownContainer-${size}`],
-      moduleStyles[`dropdownContainer-${color}`],
-      moduleStyles[`dropdownContainer-${dropdownTextThickness}`],
-      styleAsFormField && moduleStyles.styleAsFormField,
-      className,
-    )}
-    aria-describedby={rest['aria-describedby']}
-  >
+}) => {
+  // Generate container styles for custom width
+  const containerStyle = width ? { width } : {};
+
+  return (
+    <label
+      className={classNames(
+        moduleStyles.dropdownContainer,
+        moduleStyles[`dropdownContainer-${size}`],
+        moduleStyles[`dropdownContainer-${color}`],
+        moduleStyles[`dropdownContainer-${dropdownTextThickness}`],
+        styleAsFormField && moduleStyles.styleAsFormField,
+        fullWidth && !width && moduleStyles.fullWidth, // Only apply if no custom width
+        className,
+      )}
+      style={containerStyle}
+      aria-describedby={rest['aria-describedby']}
+    >
     {isLabelVisible && (
       <span className={moduleStyles.dropdownLabel}>{labelText}</span>
     )}
@@ -160,7 +172,8 @@ const SimpleDropdown: React.FunctionComponent<SimpleDropdownProps> = ({
         <span>{errorMessage}</span>
       </div>
     )}
-  </label>
-);
+    </label>
+  );
+};
 
 export default SimpleDropdown;

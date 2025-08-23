@@ -29,6 +29,18 @@
     }
   }
 
+  &.fullWidth {
+    width: 100%;
+
+    .dropdownArrowDiv {
+      width: 100%;
+    }
+
+    select {
+      width: 100%;
+    }
+  }
+
   .dropdownLabel {
     display: block;
   }
@@ -75,6 +87,7 @@
   // custom dropdown arrow styles
   .dropdownArrowDiv {
     position: relative;
+    width: 100%; // Ensure it fills the container width
 
     &:after {
       content: '\f078';
