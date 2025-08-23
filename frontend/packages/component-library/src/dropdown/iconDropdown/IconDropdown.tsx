@@ -45,6 +45,10 @@ export interface IconDropdownProps
   selectedOption: IconDropdownOption;
   /** IconDropdown onChange handler */
   onChange: (option: IconDropdownOption) => void;
+  /** Whether the dropdown should take full width of its container */
+  fullWidth?: boolean;
+  /** Custom width for the dropdown (CSS width value - supports px, %, rem, etc.) */
+  width?: string;
 }
 
 /**
