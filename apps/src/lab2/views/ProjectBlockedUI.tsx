@@ -31,7 +31,7 @@ export const ProjectBlockedUI: React.FunctionComponent<{
   const alertText =
     blockedType === 'projectAbuse'
       ? i18n.tosWithoutLink()
-      : i18n.sharingDisabledAlert(); // This will be displaced in /view for project validators if project sharing is disabled for owner.
+      : i18n.sharingDisabledAlert(); // This will be displayed in /view for project validators if project sharing is disabled for owner.
 
   const abuseExclamationProps = {
     canViewFlaggedProject,
