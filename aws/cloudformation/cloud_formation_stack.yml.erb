@@ -860,7 +860,7 @@ Outputs:
     Description: Pegasus URL
   PreviewCodeprojectsURL:
     Description: Codeprojects URL
-    Value: !Ref CodeprojectsPreviewRecord
+    Value: !Sub preview.${CodeprojectsBaseDomainName}
 # display information about how to ssh to console if this is a single instance adhoc environment
 <% if rack_env?(:adhoc) && !frontends -%>
   SSHServerName:
