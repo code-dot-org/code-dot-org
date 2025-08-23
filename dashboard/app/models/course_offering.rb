@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: course_offerings
@@ -46,9 +48,9 @@ class CourseOffering < ApplicationRecord
     lesson: 90,
     week: 250,
     month: 950,
-    quarter: 2500,
-    semester: 5000,
-    school_year: 525600,
+    quarter: 2_500,
+    semester: 5_000,
+    school_year: 525_600,
   }
   ELEMENTARY_SCHOOL_GRADES = %w[K 1 2 3 4 5].freeze
   HIGH_SCHOOL_GRADES = %w[9 10 11 12].freeze

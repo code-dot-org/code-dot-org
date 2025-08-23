@@ -96,7 +96,7 @@ module Localizable
 
     # Validate that the property is configured as localizable
     unless self.class.localizable_attributes.include?(property_name)
-      Rails.logger.warn("Attempting to localize non-configured attribute #{property_name} on #{self.class.name}")
+      CDO.log.warn("Attempting to localize non-configured attribute #{property_name} on #{self.class.name}")
       return public_send(property_name) if respond_to?(property_name)
       return nil
     end
@@ -144,7 +144,7 @@ module Localizable
     return public_send(property_name) if respond_to?(property_name)
 
     # Handle cases where the attribute might not exist
-    Rails.logger.warn("Property #{property_name} not found on #{self.class.name}")
+    CDO.log.warn("Property #{property_name} not found on #{self.class.name}")
     nil
   end
 
@@ -163,10 +163,10 @@ module Localizable
       )
     end
   rescue I18n::InvalidLocale => exception
-    Rails.logger.warn("Invalid locale #{locale_code} for #{self.class.name}##{property_name}: #{exception.message}")
+    CDO.log.warn("Invalid locale #{locale_code} for #{self.class.name}##{property_name}: #{exception.message}")
     fallback_value
   rescue => exception
-    Rails.logger.error("Localization error for #{self.class.name}##{property_name} (locale: #{locale_code}): #{exception.message}")
+    CDO.log.error("Localization error for #{self.class.name}##{property_name} (locale: #{locale_code}): #{exception.message}")
     fallback_value
   end
 end
