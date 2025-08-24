@@ -1,3 +1,4 @@
+import Button from '@code-dot-org/component-library/button';
 import TextField from '@code-dot-org/component-library/textField';
 import React from 'react';
 
@@ -11,6 +12,24 @@ interface UrlBarProps {
 export const UrlBar: React.FC<UrlBarProps> = ({value, onChange}) => {
   return (
     <div className={moduleStyles.urlBarContainer}>
+      <div className={moduleStyles.navigationButtons}>
+        <Button
+          className={moduleStyles.navButton}
+          onClick={() => {}}
+          aria-label="Navigate back"
+          size="xs"
+          isIconOnly={true}
+          icon={{iconName: 'angle-left'}}
+        />
+        <Button
+          className={moduleStyles.navButton}
+          onClick={() => {}}
+          aria-label="Navigate forward"
+          size="xs"
+          isIconOnly={true}
+          icon={{iconName: 'angle-right'}}
+        />
+      </div>
       <TextField
         onChange={e => onChange(e.target.value)}
         value={value}
