@@ -1,4 +1,3 @@
-import TextField from '@code-dot-org/component-library/textField';
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import RightButtons from '@codebridge/RightButtons/RightButtons';
 import React, {useEffect, useMemo, useRef, useState} from 'react';
@@ -11,6 +10,7 @@ import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {IframeMessageType} from './constants';
+import {UrlBar} from './UrlBar';
 
 import moduleStyles from './styles/html-preview.module.scss';
 
@@ -137,14 +137,7 @@ export const HTMLPreview = () => {
       rightHeaderContent={<RightButtons />}
     >
       <div className={moduleStyles.previewContainer}>
-        <div>
-          <TextField
-            onChange={e => setCurrentFile(e.target.value)}
-            value={currentFile}
-            name={'url-input'}
-            size={'s'}
-          />
-        </div>
+        <UrlBar value={currentFile} onChange={setCurrentFile} />
         {/* This iframe points to the environment-specific version of preview.codeprojects.org. That url will eventually
             route to InnerHTMLPreview. */}
         <iframe

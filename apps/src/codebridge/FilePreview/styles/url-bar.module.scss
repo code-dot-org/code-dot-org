@@ -1,0 +1,24 @@
+.urlBarContainer {
+  background-color: var(--background-neutral-tertiary);
+  padding: 8px 12px;
+  display: flex;
+  align-items: center; // Centers the TextField vertically
+}
+
+.urlBarInput {
+  flex: 1;
+  margin: 0;
+  width: 100%;
+  
+  // Target the input element inside the TextField
+      input {
+      width: 100%;
+      height: 24px !important; // Make the textbox height smaller
+      padding: 4px 8px !important; // Reduce padding to maintain proportion
+      border-color: var(--borders-neutral-strong) !important; // Light gray border
+      font-size: 12px; // Smaller font size to match the reduced height
+      box-sizing: border-box !important;
+    //   min-height: 20px !important; // Match the desired height
+    //   max-height: 20px !important; // Prevent it from growing larger
+    }
+}
