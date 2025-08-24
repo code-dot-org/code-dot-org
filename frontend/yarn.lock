@@ -934,6 +934,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/runtime@npm:^7.25.6, @babel/runtime@npm:^7.28.3":
+  version: 7.28.3
+  resolution: "@babel/runtime@npm:7.28.3"
+  checksum: 10c0/b360f82c2c5114f2a062d4d143d7b4ec690094764853937110585a9497977aed66c102166d0e404766c274e02a50ffb8f6d77fef7251ecf3f607f0e03e6397bc
+  languageName: node
+  linkType: hard
+
 "@babel/template@npm:^7.22.5, @babel/template@npm:^7.25.9, @babel/template@npm:^7.3.3":
   version: 7.25.9
   resolution: "@babel/template@npm:7.25.9"
@@ -1077,6 +1084,7 @@ __metadata:
     postcss: "npm:^8.4.49"
     postcss-modules: "npm:^6.0.1"
     prettier: "npm:3.4.2"
+    query-string: "npm:^9.2.2"
     react: "npm:^18.3.1"
     react-dom: "npm:^18.3.1"
     release-it: "npm:^18.1.2"
@@ -1491,7 +1499,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@code-dot-org/lab-base@workspace:packages/lab-base":
+"@code-dot-org/lab-base@workspace:*, @code-dot-org/lab-base@workspace:packages/lab-base":
   version: 0.0.0-use.local
   resolution: "@code-dot-org/lab-base@workspace:packages/lab-base"
   dependencies:
@@ -1935,6 +1943,86 @@ __metadata:
     storybook-addon-rtl: "npm:^1.0.1"
     stylelint: "npm:^16.14.1"
     swiper: "npm:^11.0.5"
+    tsc-alias: "npm:^1.8.11"
+    tsup: "npm:^8.3.5"
+    typescript: "npm:^5.7.3"
+    typescript-eslint: "npm:^8.15.0"
+  peerDependencies:
+    classnames: ^2.5.1
+    react: ">=16"
+    react-dom: ">=16"
+    swiper: ^11.0.5
+  languageName: unknown
+  linkType: soft
+
+"@code-dot-org/lab-music@workspace:*, @code-dot-org/lab-music@workspace:packages/lab-music":
+  version: 0.0.0-use.local
+  resolution: "@code-dot-org/lab-music@workspace:packages/lab-music"
+  dependencies:
+    "@code-dot-org/blockly-workspace": "workspace:*"
+    "@code-dot-org/changelogs": "workspace:*"
+    "@code-dot-org/component-library": "workspace:*"
+    "@code-dot-org/fonts": "workspace:*"
+    "@code-dot-org/lab-base": "workspace:*"
+    "@code-dot-org/lint-config": "workspace:*"
+    "@code-dot-org/localization": "workspace:*"
+    "@code-dot-org/markdown": "workspace:*"
+    "@code-dot-org/metrics": "workspace:*"
+    "@code-dot-org/models": "workspace:*"
+    "@eslint/js": "npm:^9.15.0"
+    "@react-hook/resize-observer": "npm:^2.0.2"
+    "@release-it/conventional-changelog": "npm:^10.0.0"
+    "@rexxars/react-split-pane": "npm:^1.0.0"
+    "@storybook/addon-a11y": "npm:^8.6.9"
+    "@storybook/addon-essentials": "npm:^8.6.9"
+    "@storybook/addon-interactions": "npm:^8.6.9"
+    "@storybook/addon-storysource": "npm:^8.6.9"
+    "@storybook/addon-styling-webpack": "npm:^1.0.1"
+    "@storybook/addon-webpack5-compiler-swc": "npm:^3.0.0"
+    "@storybook/blocks": "npm:^8.6.9"
+    "@storybook/react": "npm:^8.6.9"
+    "@storybook/react-webpack5": "npm:^8.6.9"
+    "@storybook/test": "npm:^8.6.9"
+    "@storybook/test-runner": "npm:^0.22.0"
+    "@swc/core": "npm:^1.9.3"
+    "@swc/jest": "npm:^0.2.37"
+    "@testing-library/dom": "npm:^10.4.0"
+    "@testing-library/jest-dom": "npm:^6.6.3"
+    "@testing-library/react": "npm:^16.0.1"
+    "@types/identity-obj-proxy": "npm:^3"
+    "@types/jest": "npm:^29.5.14"
+    "@types/lodash": "npm:^4"
+    "@types/node": "npm:^22.9.0"
+    "@types/react": "npm:^18.3.12"
+    "@types/react-dom": "npm:^18.3.1"
+    axe-playwright: "npm:^2.0.3"
+    classnames: "npm:^2.5.1"
+    clean-package: "npm:^2.2.0"
+    esbuild-sass-plugin: "npm:^3.3.1"
+    eslint: "npm:^9.15.0"
+    eslint-plugin-jest: "npm:^28.9.0"
+    eslint-plugin-react: "npm:^7.37.2"
+    eslint-plugin-storybook: "npm:^0.11.1"
+    glob: "npm:^11.0.0"
+    globals: "npm:^15.12.0"
+    identity-obj-proxy: "npm:^3.0.0"
+    jest: "npm:^29.7.0"
+    jest-environment-jsdom: "npm:^29.7.0"
+    lodash: "npm:^4.17.21"
+    postcss: "npm:^8.4.49"
+    postcss-modules: "npm:^6.0.1"
+    prettier: "npm:3.4.2"
+    react: "npm:^18.3.1"
+    react-dom: "npm:^18.3.1"
+    react-focus-lock: "npm:^2.13.6"
+    release-it: "npm:^18.1.2"
+    rimraf: "npm:^6.0.1"
+    schema-dts: "npm:^1.1.5"
+    storybook: "npm:^8.6.9"
+    storybook-addon-rtl: "npm:^1.0.1"
+    stylelint: "npm:^16.14.1"
+    swiper: "npm:^11.0.5"
+    tone: "npm:15.1.22"
     tsc-alias: "npm:^1.8.11"
     tsup: "npm:^8.3.5"
     typescript: "npm:^5.7.3"
@@ -2458,10 +2546,12 @@ __metadata:
     "@code-dot-org/fonts": "workspace:*"
     "@code-dot-org/js-interpreter": "npm:1.3.13"
     "@code-dot-org/lab-artist": "workspace:*"
+    "@code-dot-org/lab-base": "workspace:*"
     "@code-dot-org/lab-blockly": "workspace:*"
     "@code-dot-org/lab-frequency-analysis": "workspace:*"
     "@code-dot-org/lab-karel": "workspace:*"
     "@code-dot-org/lab-maze": "workspace:*"
+    "@code-dot-org/lab-music": "workspace:*"
     "@code-dot-org/lab-panels": "workspace:*"
     "@code-dot-org/lab-standalone-video": "workspace:*"
     "@fortawesome/fontawesome-free": "npm:^6.7.2"
@@ -10885,6 +10975,16 @@ __metadata:
     stubborn-fs: "npm:^1.2.5"
     when-exit: "npm:^2.1.1"
   checksum: 10c0/b9008a74f590d29be947f34b7583dab32034335fedfe340ac3e6458e2e315c770d8af6f15cd3947214702c523d91b5f989498348b1ab49c197bd645dc87d7a94
+  languageName: node
+  linkType: hard
+
+"automation-events@npm:^7.0.9":
+  version: 7.1.12
+  resolution: "automation-events@npm:7.1.12"
+  dependencies:
+    "@babel/runtime": "npm:^7.28.3"
+    tslib: "npm:^2.8.1"
+  checksum: 10c0/a069231a532b8c3e864869a7f2608832dc133702c3039c321331580aa695d6d1fda6aea7b4f238b00d76ff937f3f990c30996c1bb042511a6bc81d823b976e66
   languageName: node
   linkType: hard
 
@@ -23244,6 +23344,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"standardized-audio-context@npm:^25.3.70":
+  version: 25.3.77
+  resolution: "standardized-audio-context@npm:25.3.77"
+  dependencies:
+    "@babel/runtime": "npm:^7.25.6"
+    automation-events: "npm:^7.0.9"
+    tslib: "npm:^2.7.0"
+  checksum: 10c0/41d5e3a64b881691fecd709313045ab9bddb864ed79c6eb51490056cec080e808e9f5b3ef94d734567b9da88f9c95e68cc63a3a0343374b2f865b1a961fb46ef
+  languageName: node
+  linkType: hard
+
 "stdin-discarder@npm:^0.2.2":
   version: 0.2.2
   resolution: "stdin-discarder@npm:0.2.2"
@@ -24170,6 +24281,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"tone@npm:15.1.22":
+  version: 15.1.22
+  resolution: "tone@npm:15.1.22"
+  dependencies:
+    standardized-audio-context: "npm:^25.3.70"
+    tslib: "npm:^2.3.1"
+  checksum: 10c0/dd11cd2b0645fec5e188919ace1494deeae30f10775b493e2a4ab44e1be0bf3087dce6c0db78da91f88eddf2fd5f1430a3cc52e2d2d5f76076efe949aa056e64
+  languageName: node
+  linkType: hard
+
 "tough-cookie@npm:^4.1.2":
   version: 4.1.4
   resolution: "tough-cookie@npm:4.1.4"
@@ -24336,7 +24457,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:^2.0.0, tslib@npm:^2.0.1, tslib@npm:^2.0.3, tslib@npm:^2.1.0, tslib@npm:^2.4.0, tslib@npm:^2.6.2, tslib@npm:^2.6.3, tslib@npm:^2.8.0":
+"tslib@npm:^2.0.0, tslib@npm:^2.0.1, tslib@npm:^2.0.3, tslib@npm:^2.1.0, tslib@npm:^2.3.1, tslib@npm:^2.4.0, tslib@npm:^2.6.2, tslib@npm:^2.6.3, tslib@npm:^2.7.0, tslib@npm:^2.8.0, tslib@npm:^2.8.1":
   version: 2.8.1
   resolution: "tslib@npm:2.8.1"
   checksum: 10c0/9c4759110a19c53f992d9aae23aac5ced636e99887b51b9e61def52611732872ff7668757d4e4c61f19691e36f4da981cd9485e869b4a7408d689f6bf1f14e62

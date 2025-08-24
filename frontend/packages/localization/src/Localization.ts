@@ -13,7 +13,7 @@ export type TranslationCallbackData = {
 
 export type TranslationCallback = (info: TranslationCallbackData) => void;
 
-export const DefaultLocale = 'en';
+export const DefaultLocale = 'en-US';
 
 import {Localize, LocalizeOptions} from './Localize';
 

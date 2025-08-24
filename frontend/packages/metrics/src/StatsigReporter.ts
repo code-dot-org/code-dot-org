@@ -34,7 +34,7 @@ export interface StatsigPayload extends StatsigUser {
 const ALWAYS_SEND = false;
 const NO_EVENT_NAME = 'NO_VALID_EVENT_NAME_LOG_ERROR';
 
-class StatsigReporter {
+export class StatsigReporter {
   apiKey: string;
   stableID?: string;
   user: StatsigPayload;
@@ -88,7 +88,10 @@ class StatsigReporter {
 
   // This user object will potentially update via a setUserProperties call
   // (below) from current user redux
-  async initialize(apiKey: string, user: StatsigPayload, options: AnyStatsigOptions): Promise<void> {
+  async initialize(apiKey: string, user?: StatsigPayload, options?: AnyStatsigOptions): Promise<void> {
+    user ||= this.user;
+    options ||= this.options;
+
     if (this.shouldPutRecord(ALWAYS_SEND)) {
       this.statsigClient = new StatsigClient(apiKey, user, options);
       await this.statsigClient.initializeAsync();
@@ -194,5 +197,6 @@ class StatsigReporter {
 }
 
 const statsigReporter = new StatsigReporter();
+statsigReporter.initialize(statsigReporter.apiKey);
 
 export default statsigReporter;

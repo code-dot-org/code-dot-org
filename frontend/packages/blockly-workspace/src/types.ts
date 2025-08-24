@@ -105,6 +105,24 @@ export interface Mixin {
 }
 
 /**
+ * Blockly doesn't expose its own BlockGenerator for some reason. This is more
+ * or less a copy of that which can be used to type code generator functions.
+ */
+export type BlockGenerator<T extends Omit<Blockly.CodeGenerator, 'forBlock'>> = (
+  block: Blockly.Block,
+  generator: T,
+  options?: {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    [key: string]: any;
+  },
+) => string | [string, number] | null;
+
+/**
+ * The code generation function specific for Javascript generators.
+ */
+export type JavascriptBlockGenerator = BlockGenerator<JavascriptGenerator>;
+
+/**
  * Describes a custom block.
  *
  * We add a few additional nice-to-haves over the general Blockly block
@@ -123,14 +141,7 @@ export interface BlockDefinition {
   style?: string;
   /** The function that generates code for this block. */
   generator: {
-    javascript: (
-      block: Blockly.Block,
-      generator: JavascriptGenerator,
-      options?: {
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        [key: string]: any;
-      },
-    ) => string | [string, number] | null;
+    javascript: JavascriptBlockGenerator;
   };
   /** Whether or not this can be attached to a statement */
   previousStatement?: boolean;

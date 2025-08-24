@@ -22,6 +22,8 @@ const levelMap: {
 } = {
   /** Navigation karels that use a small colorful grid */
   Maze: dynamic(() => import('@code-dot-org/lab-maze'), {ssr: false, loading: () => <Spinner />}),
+  /** Music generation and programming lab */
+  Music: dynamic(() => import('@code-dot-org/lab-music'), {ssr: false, loading: () => <Spinner />}),
   /** Cipher analysis exhibiting the weaknesses of symmetric encryption */
   FrequencyAnalysis: dynamic(() => import('@code-dot-org/lab-frequency-analysis'), {ssr: false, loading: () => <Spinner />}),
   /** A turtle karel that can draw shapes and lines based on code */

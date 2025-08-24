@@ -5,6 +5,6 @@ export * as GoogleAnalytics from './GoogleAnalytics';
 export * as NewRelicReporter from './NewRelicReporter';
 export {default as metricsReporter, MetricsReporter} from './MetricsReporter';
 // Export the statsig logic as the generic 'AnalyticsReporter'
-export {default as analyticsReporter} from './StatsigReporter';
+export {default as analyticsReporter, StatsigReporter as AnalyticsReporter} from './StatsigReporter';
 export * from './constants';
 export * from './types';

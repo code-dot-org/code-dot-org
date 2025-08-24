@@ -90,6 +90,7 @@ export enum Experiment {
    * See github.com/code-dot-org/code-dot-org/pull/19557
    */
   BUBBLE_DIALOG = 'bubbleDialog',
+  ZELOS = 'zelos',
 }
 
 const STORAGE_KEY = 'experimentsList';

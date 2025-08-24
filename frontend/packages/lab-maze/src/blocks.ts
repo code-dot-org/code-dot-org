@@ -3,6 +3,7 @@ import {JavascriptGenerator} from 'blockly/javascript';
 import * as En from 'blockly/msg/en';
 
 import type {BlockDefinition} from '@code-dot-org/blockly-workspace';
+import {BaseBlocks} from '@code-dot-org/blockly-workspace';
 
 import type {Skin} from '@lab-maze/skin';
 
@@ -12,17 +13,8 @@ import type {Skin} from '@lab-maze/skin';
  * Some of the blocks use the images from the skin.
  */
 const blocks: (skin: Skin) => BlockDefinition[] = (skin: Skin) => [
-  {
-    type: 'when_run',
-    style: 'setup_blocks',
-    tooltip: '',
-    helpUrl: '',
-    message0: 'when run',
-    generator: {
-      javascript: () => '\n',
-    },
-    nextStatement: true,
-  },
+  BaseBlocks.when_run,
+  BaseBlocks.comment,
   {
     // Simply moves forward
     type: 'maze_moveForward',
@@ -305,28 +297,6 @@ const blocks: (skin: Skin) => BlockDefinition[] = (skin: Skin) => [
           'if (' + argument + ') {\n' + branch0 + '} else {\n' + branch1 + '}\n';
         return code;
       },
-    },
-  },
-  // This block add a harmless comment to the code
-  {
-    type: 'comment',
-    message0: 'comment: %1',
-    style: 'comment_blocks',
-    tooltip: '',
-    helpUrl: '',
-    nextStatement: true,
-    previousStatement: true,
-    args0: [
-      {
-        name: 'COMMENT',
-        check: 'String',
-        type: 'field_input',
-        text: '',
-      },
-    ],
-    generator: {
-      javascript: (block: Blockly.Block) =>
-        `// ${block.getFieldValue('COMMENT')}\n`,
     },
   },
 ];

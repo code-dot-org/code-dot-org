@@ -1,5 +1,6 @@
 import type {PartialAppOptions} from '../types';
 export * from './queryParams';
+export * from './fetchSignedCookies';
 
 function currentLocale(): string {
   return 'en';
