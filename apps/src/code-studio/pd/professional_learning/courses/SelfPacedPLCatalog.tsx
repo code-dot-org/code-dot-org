@@ -4,7 +4,7 @@ import React, {useCallback, useEffect, useState} from 'react';
 import SelfPacedPLCatalogSearchResults from '@cdo/apps/code-studio/pd/professional_learning/courses/SelfPacedPLCatalogSearchResults';
 import {updateQueryParam} from '@cdo/apps/code-studio/utils';
 import {
-  filterByDuration,
+  filterByDurationInHours,
   filterByGradeLevel,
   filterByMarketingInitiative,
   filterByTopic,
@@ -45,7 +45,7 @@ const SelfPacedPLCatalog: React.FunctionComponent<{
           course,
           appliedFilters.marketingInitiative
         ) &&
-        filterByDuration(course, appliedFilters.duration)
+        filterByDurationInHours(course, appliedFilters.duration)
     );
 
     setFilteredCourses(newlyFilteredCourses);

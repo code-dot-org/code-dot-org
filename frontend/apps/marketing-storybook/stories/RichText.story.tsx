@@ -68,7 +68,7 @@ export const FilledOut: Story = {
     });
 
     // Accessibility: table
-    const table = canvas.getByRole('table');
+    const table = canvas.getAllByRole('table')[0];
     expect(table).toBeVisible();
     const rows = canvas.getAllByRole('row');
     expect(rows.length).toBeGreaterThan(0);

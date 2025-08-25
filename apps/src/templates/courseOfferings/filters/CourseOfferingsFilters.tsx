@@ -64,6 +64,7 @@ const CourseOfferingsFilters = <TFilterKey extends string = string>({
           id="clear-filters"
           className={style.catalogClearFiltersButton}
           color={buttonColors.purple}
+          size="s"
           type="tertiary"
           text={i18n.clearFilters()}
           onClick={onClearAllFilters}
@@ -76,6 +77,7 @@ const CourseOfferingsFilters = <TFilterKey extends string = string>({
           return (
             <CheckboxDropdown
               key={name}
+              color="gray"
               name={name}
               labelText={label}
               allOptions={Object.entries(options).map(([key, value]) => ({

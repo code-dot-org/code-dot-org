@@ -158,9 +158,9 @@ class ScriptsController < ApplicationController
   def create
     return head :bad_request unless general_params[:is_migrated]
 
-    # These fields should be set unless a unit is in a unit group
-    # and are required to be set if is_course is true. When creating
-    # a unit it is not yet in a unit group so we set default values here
+    # These fields should be set unless a unit is in a unit group.
+    # When creating a unit it is not yet in a unit group so we
+    # set default values here
     #
     # Setting default values for the columns would not work because those
     # are not used when you call new() just when you call create
@@ -417,7 +417,6 @@ class ScriptsController < ApplicationController
       :has_unnumbered_lessons,
       :has_verified_resources,
       :tts,
-      :is_course,
       :show_calendar,
       :weekly_instructional_minutes,
       :is_migrated,

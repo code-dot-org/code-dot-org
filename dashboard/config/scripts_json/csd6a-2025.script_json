@@ -18,12 +18,11 @@
         "maker"
       ],
       "tts": true,
-      "version_year": "2025",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
-    "family_name": "csd6",
-    "serialized_at": "2025-07-31 16:38:09 UTC",
+    "family_name": null,
+    "serialized_at": "2025-08-22 18:16:46 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,

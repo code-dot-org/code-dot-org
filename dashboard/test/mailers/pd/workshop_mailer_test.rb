@@ -24,11 +24,10 @@ class WorkshopMailerTest < ActionMailer::TestCase
   test 'reminder emails are sent for workshops without suppress_reminders?' do
     facilitator = create(:facilitator)
     workshop = create(:workshop, facilitators: [facilitator])
-    enrollment = create(:pd_enrollment, workshop: workshop)
-    Pd::Workshop.any_instance.expects(:suppress_reminders?).returns(false).times(3)
+    create(:pd_enrollment, workshop: workshop)
+    Pd::Workshop.any_instance.expects(:suppress_reminders?).returns(false).times(2)
 
-    assert_emails 3 do
-      Pd::WorkshopMailer.teacher_enrollment_reminder(enrollment, options: {days_before: 10}).deliver_now
+    assert_emails 2 do
       Pd::WorkshopMailer.facilitator_enrollment_reminder(facilitator, workshop).deliver_now
       Pd::WorkshopMailer.organizer_enrollment_reminder(workshop).deliver_now
     end
@@ -37,33 +36,21 @@ class WorkshopMailerTest < ActionMailer::TestCase
   test 'reminder emails are skipped for workshops with suppress_reminders?' do
     facilitator = create(:facilitator)
     workshop = create(:workshop, facilitators: [facilitator])
-    enrollment = create(:pd_enrollment, workshop: workshop)
-    Pd::Workshop.any_instance.expects(:suppress_reminders?).returns(true).times(3)
+    create(:pd_enrollment, workshop: workshop)
+    Pd::Workshop.any_instance.expects(:suppress_reminders?).returns(true).times(2)
 
     assert_emails 0 do
-      Pd::WorkshopMailer.teacher_enrollment_reminder(enrollment, options: {days_before: 10}).deliver_now
       Pd::WorkshopMailer.facilitator_enrollment_reminder(facilitator, workshop).deliver_now
       Pd::WorkshopMailer.organizer_enrollment_reminder(workshop).deliver_now
-    end
-  end
-
-  test 'exit survey emails are sent for workshops with exit surveys' do
-    workshop = create(:workshop, :ended)
-    enrollment = create(:pd_enrollment, workshop: workshop)
-    Pd::Enrollment.any_instance.expects(:exit_survey_url).returns('a url')
-
-    assert_emails 1 do
-      Pd::WorkshopMailer.exit_survey(enrollment).deliver_now
     end
   end
 
   test 'reminders are not sent for workshops with suppress_email attribute' do
     workshop = create(:csp_summer_workshop, suppress_email: true)
     facilitator = workshop.facilitators.first
-    enrollment = create(:pd_enrollment, workshop: workshop)
+    create(:pd_enrollment, workshop: workshop)
 
     assert_no_emails do
-      Pd::WorkshopMailer.teacher_enrollment_reminder(enrollment, options: {days_before: 10}).deliver_now
       Pd::WorkshopMailer.facilitator_enrollment_reminder(facilitator, workshop).deliver_now
       Pd::WorkshopMailer.organizer_enrollment_reminder(workshop).deliver_now
     end
@@ -73,13 +60,12 @@ class WorkshopMailerTest < ActionMailer::TestCase
     workshop = create(:csp_summer_workshop, suppress_email: true)
     enrollment = create(:pd_enrollment, workshop: workshop)
 
-    assert_emails 6 do
+    assert_emails 5 do
       Pd::WorkshopMailer.teacher_enrollment_receipt(enrollment).deliver_now
       Pd::WorkshopMailer.detail_change_notification(enrollment).deliver_now
 
       # Still send cancellation receipt and exit survey to teachers
       Pd::WorkshopMailer.teacher_cancel_receipt(enrollment).deliver_now
-      Pd::WorkshopMailer.exit_survey(enrollment).deliver_now
 
       # Organizers want to stay informed of who has enrolled, even if
       # email is suppressed
@@ -99,48 +85,6 @@ class WorkshopMailerTest < ActionMailer::TestCase
       workshop.save(validate: false)
       enrollment = create(:pd_enrollment, workshop: workshop)
       mail = Pd::WorkshopMailer.detail_change_notification(enrollment)
-
-      assert links_are_complete_urls?(mail)
-    end
-  end
-
-  test 'enrollment reminder emails send to email stored in enrollment.email' do
-    teacher = create(:teacher, email: 'personal@email.com')
-    workshop = create(:workshop, course: Pd::SharedWorkshopConstants::COURSE_CSD)
-    enrollment = create(:pd_enrollment, user: teacher, workshop: workshop, email: 'enrollment@email.com')
-
-    mail = Pd::WorkshopMailer.teacher_enrollment_reminder(enrollment, options: {days_before: 10})
-
-    refute mail.to_s.include? 'personal@email.com'
-    assert_equal mail.to, ['enrollment@email.com']
-  end
-
-  test 'survey emails send to email stored in enrollment.email' do
-    teacher = create(:teacher, email: 'personal@email.com')
-    workshop = create(:workshop, course: Pd::SharedWorkshopConstants::COURSE_CSD)
-    enrollment = create(:pd_enrollment, user: teacher, workshop: workshop, email: 'enrollment@email.com')
-
-    mail = Pd::WorkshopMailer.exit_survey(enrollment)
-
-    refute mail.to_s.include? 'personal@email.com'
-    assert_equal mail.to, ['enrollment@email.com']
-  end
-
-  test 'exit survey email links are complete urls' do
-    test_cases = [
-      {course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP},
-      {course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_WORKSHOP_1},
-      {course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_WORKSHOP_1},
-    ]
-
-    test_cases.each do |test_case|
-      workshop = create(:workshop,
-        :ended,
-        course: test_case[:course],
-        subject: test_case[:subject]
-)
-      enrollment = create(:pd_enrollment, workshop: workshop)
-      mail = Pd::WorkshopMailer.exit_survey(enrollment)
 
       assert links_are_complete_urls?(mail)
     end
@@ -196,36 +140,6 @@ class WorkshopMailerTest < ActionMailer::TestCase
 
       enrollment = create(:pd_enrollment, workshop: workshop)
       mail = Pd::WorkshopMailer.teacher_enrollment_receipt(enrollment)
-
-      assert links_are_complete_urls?(mail)
-    end
-  end
-
-  test 'teacher enrollment reminder links are complete urls' do
-    test_cases = [
-      {course: Pd::Workshop::COURSE_CSA, subject: Pd::Workshop::SUBJECT_CSA_SUMMER_WORKSHOP, days_before: 3},
-      {course: Pd::Workshop::COURSE_CSA, subject: Pd::Workshop::SUBJECT_CSA_SUMMER_WORKSHOP, days_before: 10},
-      {course: Pd::Workshop::COURSE_CSA, subject: Pd::Workshop::SUBJECT_CSA_WORKSHOP_1, days_before: 3},
-      {course: Pd::Workshop::COURSE_CSA, subject: Pd::Workshop::SUBJECT_CSA_WORKSHOP_1, days_before: 10},
-      {course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_SUMMER_WORKSHOP, days_before: 3},
-      {course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_SUMMER_WORKSHOP, days_before: 10},
-      {course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_WORKSHOP_1, days_before: 3},
-      {course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_WORKSHOP_1, days_before: 10},
-      {course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_WORKSHOP_1, days_before: 3},
-      {course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_WORKSHOP_1, days_before: 10},
-      {course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP, days_before: 3},
-      {course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP, days_before: 10},
-    ]
-
-    test_cases.each do |test_case|
-      workshop = if Pd::Workshop::ACADEMIC_YEAR_WORKSHOP_SUBJECTS.include?(test_case[:subject])
-                   create :academic_year_workshop, course: test_case[:course], subject: test_case[:subject]
-                 else
-                   create :workshop, course: test_case[:course], subject: test_case[:subject]
-                 end
-
-      enrollment = create(:pd_enrollment, workshop: workshop)
-      mail = Pd::WorkshopMailer.teacher_enrollment_reminder(enrollment, options: {days_before: test_case[:days_before]})
 
       assert links_are_complete_urls?(mail)
     end

@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-07-30 15:17:57 UTC",
+    "serialized_at": "2025-08-19 20:49:37 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -5543,11 +5543,10 @@
     },
     {
       "name": "B&W Pixelation Tutorial",
-      "url": "https://youtu.be/rJOa5Q5a1WM",
+      "url": "https://youtu.be/pIc3mrw5e_I",
       "key": "b_w_pixelation_tutorial",
       "properties": {
         "audience": "Student",
-        "download_url": "https://videos.code.org/2015/csp/pixelation_bw.mp4",
         "type": "Video"
       },
       "seeding_key": {

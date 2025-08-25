@@ -35,7 +35,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-07-09 14:23:38 UTC",
+    "serialized_at": "2025-08-19 18:24:08 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -5217,6 +5217,18 @@
       }
     },
     {
+      "name": "[KEY] Scavenger Hunt Activity",
+      "url": "https://docs.google.com/presentation/d/1aX0K_oFJcztNpxmH6uDlHwHqMsG_S9mW7rSP-5GjLDg/edit?usp=sharing",
+      "key": "_key_scavenger_hunt_activity",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_key_scavenger_hunt_activity"
+      }
+    },
+    {
       "name": "[KEY] The Fabric of the Internet and AI Unit Guide",
       "url": "https://docs.google.com/document/d/1BCVxoMP30cx5KxF5Nn_Tr_TMs5y4XIkXUbZ-atLh1aA/edit?usp=drivesdk",
       "key": "_key_the_fabric_of_the_internet_and_ai_unit_guide",
@@ -5849,6 +5861,12 @@
       "seeding_key": {
         "lesson.key": "Emerging Technologies",
         "resource.key": "threat_detection_guided_notes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "HTTP and DNS",
+        "resource.key": "_key_scavenger_hunt_activity"
       }
     },
     {

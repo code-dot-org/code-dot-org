@@ -1,0 +1,50 @@
+name 'ai-powered-threats-defenses-lesson3-level2b_2025-pilot'
+title 'Jordan P. - User Profile'
+
+display_name 'Marcus Lee'
+bubble_choice_description 'Marcus is a 15 year old student from Terre Haute, IN'
+thumbnail_url 'https://images.code.org/e7e1fa149304e0c03c767c590c334fb4-image-1755184710786.png'
+
+markdown <<MARKDOWN
+#Marcus
+
+Look through Marcus's emails below and see which ones might be legit and which might be phishing attacks.
+
+<div style="font-family: sans-serif; font-size: 16px; line-height: 1.6;">
+
+
+  <hr>
+
+  <p><strong>Message A – Text</strong></p>
+  <p>
+    Hey Marcus — Coach D here. The sports store’s got a deal for team players on new sneakers.<br><br>
+    You’ll need your school ID and cell for the discount code.<br><br>
+    Want me to add you to the list?
+  </p>
+
+  <hr>
+
+  <p><strong>Message B – Email</strong></p>
+  <p><em>Subject:</em> <strong>Colorado DMV Action Required – Learner’s Permit Suspension Notice</strong></p>
+  <p>
+    Dear Marcus Lee,<br><br>
+    Our system shows that your learner’s permit file is incomplete. If we don’t receive verification within 72 hours, your permit will be automatically suspended.<br><br>
+    To avoid interruption, please log in to your DMV profile and confirm your info:<br>
+    <a href="#">dmv.colorado.gov-verify.info</a><br><br>
+    Sincerely,<br>
+    Colorado DMV Processing Center
+  </p>
+
+  <hr>
+
+  <p><strong>Message C – Instagram DM</strong></p>
+  <p>
+    <strong>From: @JordanDenverSneaks</strong><br><br>
+    Hey Marcus! We’re giving away early access passes to the Air Jordan Retro Drop in Denver this Saturday!<br><br>
+    To confirm you’re 16+, we just need your full name, birthdate, and cell.<br><br>
+    Spots are limited and going fast — reply by tonight to lock it in!
+  </p>
+
+</div>
+
+MARKDOWN
