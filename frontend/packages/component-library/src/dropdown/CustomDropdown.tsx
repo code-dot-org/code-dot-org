@@ -141,7 +141,7 @@ const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
   // Generate container styles for custom width
   const containerStyle = useMemo(() => {
     if (width) {
-      return { width };
+      return {width};
     }
     return {};
   }, [width]);

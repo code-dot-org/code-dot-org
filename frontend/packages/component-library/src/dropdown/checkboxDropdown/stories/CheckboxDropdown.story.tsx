@@ -489,24 +489,23 @@ GroupOfSizesOfCheckboxDropdown.args = {
   ],
 };
 
-
 export const FullWidthCheckboxDropdown = SingleTemplate.bind({});
 FullWidthCheckboxDropdown.args = {
-  name: "full-width-checkbox-dropdown",
+  name: 'full-width-checkbox-dropdown',
   allOptions: [
-    {value: "option-1", label: "Option 1"},
-    {value: "option-2", label: "Option 2"},
-    {value: "option-3", label: "Option 3"},
-    {value: "option-4", label: "Option 4"},
+    {value: 'option-1', label: 'Option 1'},
+    {value: 'option-2', label: 'Option 2'},
+    {value: 'option-3', label: 'Option 3'},
+    {value: 'option-4', label: 'Option 4'},
   ],
-  checkedOptions: ["option-1"],
-  labelText: "Full Width Checkbox Dropdown",
+  checkedOptions: ['option-1'],
+  labelText: 'Full Width Checkbox Dropdown',
   onChange: () => null,
   onSelectAll: () => null,
   onClearAll: () => null,
-  selectAllText: "Select All",
-  clearAllText: "Clear All",
-  size: "m",
+  selectAllText: 'Select All',
+  clearAllText: 'Clear All',
+  size: 'm',
   color: dropdownColors.black,
   disabled: false,
   fullWidth: true,
@@ -514,22 +513,22 @@ FullWidthCheckboxDropdown.args = {
 
 export const CustomWidthCheckboxDropdown = SingleTemplate.bind({});
 CustomWidthCheckboxDropdown.args = {
-  name: "custom-width-checkbox-dropdown",
+  name: 'custom-width-checkbox-dropdown',
   allOptions: [
-    {value: "option-1", label: "Option 1"},
-    {value: "option-2", label: "Option 2"},
-    {value: "option-3", label: "Option 3"},
-    {value: "option-4", label: "Option 4"},
+    {value: 'option-1', label: 'Option 1'},
+    {value: 'option-2', label: 'Option 2'},
+    {value: 'option-3', label: 'Option 3'},
+    {value: 'option-4', label: 'Option 4'},
   ],
-  checkedOptions: ["option-1"],
-  labelText: "Custom Width Checkbox Dropdown (400px)",
+  checkedOptions: ['option-1'],
+  labelText: 'Custom Width Checkbox Dropdown (400px)',
   onChange: () => null,
   onSelectAll: () => null,
   onClearAll: () => null,
-  selectAllText: "Select All",
-  clearAllText: "Clear All",
-  size: "m",
+  selectAllText: 'Select All',
+  clearAllText: 'Clear All',
+  size: 'm',
   color: dropdownColors.black,
   disabled: false,
-  width: "400px",
+  width: '400px',
 };
