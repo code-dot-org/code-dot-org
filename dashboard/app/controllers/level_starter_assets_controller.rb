@@ -102,8 +102,10 @@ class LevelStarterAssetsController < ApplicationController
         upload_tempfile = LevelStarterAssetsHelper.try_resize_file(upload.tempfile, file_ext, MAX_DIMENSION_PIXELS_AI_CHAT)
       end
 
-      head :payload_too_large if upload_tempfile.size > MAX_FILE_SIZE_AI_CHAT
-      return nil
+      if upload_tempfile.size > MAX_FILE_SIZE_AI_CHAT
+        head :payload_too_large
+        return nil
+      end
     end
 
     {
