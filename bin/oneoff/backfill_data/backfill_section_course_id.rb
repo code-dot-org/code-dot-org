@@ -23,27 +23,36 @@ OptionParser.new do |opts|
 end.parse!
 CDO.log.info "Called with options: #{options}"
 
+BATCH_SIZE = 100
+INFO_INTERVAL = 1_000
+
 sections_processed = 0
 sections_not_processed = 0
 
-Section.with_deleted.where(course_id: nil).where.not(script_id: nil).each do |section|
+Section.with_deleted.where(course_id: nil).where.not(script_id: nil).find_each(batch_size: BATCH_SIZE, start: options[:start_with]) do |section|
+  # Be kind to the database by limiting to 1000 sections processed per second
+  sleep 0.001
+
   ActiveRecord::Base.transaction do
-    CDO.log.info "Processing section #{section.id}"
+    CDO.log.info "Processing section #{section.id}" if section.id % INFO_INTERVAL == 0
 
     # Find the script associated with the section and add the course_id
     unit = Unit.find_by(id: section.script_id)
-    section.update!(course_id: unit.original_unit_group_id) if unit
+    if unit&.original_unit_group_id
+      section.update_columns(course_id: unit.original_unit_group_id)
+    else
+      # unassign if the section's script_id does not correspond to a valid unit or course
+      section.update_columns(script_id: nil)
+    end
 
     sections_processed += 1
 
     raise ActiveRecord::Rollback unless options[:actually_update]
-  rescue ActiveRecord::Rollback
-    # Ignore these during the dry runs
-  rescue => exception
-    CDO.log.error "Could not process section #{section.id}"
-    CDO.log.error exception
-    sections_not_processed += 1
   end
+rescue => exception
+  CDO.log.error "Could not process section #{section.id}"
+  CDO.log.error exception
+  sections_not_processed += 1
 end
 
 CDO.log.info "Script completed"
