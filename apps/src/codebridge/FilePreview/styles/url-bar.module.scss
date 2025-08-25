@@ -37,10 +37,11 @@
     input {
       width: 100%;
       height: 100%;
-      padding: 4px 8px;
+      padding: 4px 8px; 
       border: none; // Remove all borders - the wrapper provides the border
       border-radius: 0 4px 4px 0; // Remove border radius from input - wrapper handles it
       font-size: var(--font-size-body-xs, 12px);
+      box-shadow: none;
     }
   }
 }
