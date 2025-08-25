@@ -5,6 +5,17 @@ class AidiffThreadsController < ApplicationController
   before_action :authenticate_user!
   load_and_authorize_resource
 
+  LEVEL_TO_LAB = {
+    'Applab' => 'applab',
+    'Gamelab' => 'gamelab',
+    'GamelabJr' => 'spritelab',
+    'Javalab' => 'javalab',
+    'Weblab' => 'weblab',
+    'Weblab2' => 'weblab',
+    'Music' => 'music',
+    'Pythonlab' => 'pythonlab'
+  }.freeze
+
   # POST /aidiff_threads
   def create
     unless validate_context? && has_required_chat_params?
@@ -186,7 +197,7 @@ class AidiffThreadsController < ApplicationController
       student_code
     )
 
-    response = AiDiffBedrockHelper.request_bedrock_rag_chat(input, prompt, lesson_num, unit_num, course_names, session_id, @section_contexts)
+    response = AiDiffBedrockHelper.request_bedrock_rag_chat(input, prompt, lesson_num, unit_num, course_names, session_id, @section_contexts, get_labs(context_type))
     #TODO: check for profanity/PII in model response
 
     {
@@ -242,6 +253,34 @@ class AidiffThreadsController < ApplicationController
     if context_type == SharedConstants::AI_DIFF_CONTEXT[:GENERAL]
       @section_contexts = get_active_sections
     end
+  end
+
+  # Returns name(s) of programming environment(s) in the chat context
+  private def get_labs(context_type)
+    if context_type == SharedConstants::AI_DIFF_CONTEXT[:LEVEL]
+      puts 'level context'
+      labs_from_level(@level)
+    elsif context_type == SharedConstants::AI_DIFF_CONTEXT[:LESSON]
+      puts 'lesson context'
+      @lesson.levels.map {|level| labs_from_level(level)}
+    elsif context_type == SharedConstants::AI_DIFF_CONTEXT[:UNIT]
+      puts 'unit context'
+      @unit.levels.map {|level| labs_from_level(level)}
+    elsif context_type == SharedConstants::AI_DIFF_CONTEXT[:COURSE]
+      puts 'unit group context'
+      @unit_group.default_units.map do |unit|
+        unit.levels.map {|level| labs_from_level(level)}
+      end
+    else
+      []
+    end.flatten.compact.uniq
+  end
+
+  private def labs_from_level(level)
+    [
+      LEVEL_TO_LAB[level.type],
+      level.try(:sublevels)&.map {|sublevel| LEVEL_TO_LAB[sublevel.type]}
+    ]
   end
 
   private def log_messages(response_body)
