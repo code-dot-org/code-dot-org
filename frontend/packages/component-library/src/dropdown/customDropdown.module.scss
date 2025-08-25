@@ -80,8 +80,9 @@
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
-      flex: 1;
+      flex: 1 1 auto; // Allow growing and shrinking, but maintain natural size
       min-width: 0; // Allow flex item to shrink below content size
+      text-align: left; // Ensure text stays left-aligned
     }
 
     /* Push the chevron to the right when button is full width */
