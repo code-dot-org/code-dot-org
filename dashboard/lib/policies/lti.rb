@@ -16,7 +16,7 @@ class Policies::Lti
 
   module DeploymentConfiguration
     RESTRICTED_DEPLOYMENTS = [
-      288 # LAUSD
+      223 # LAUSD
     ]
   end
 
