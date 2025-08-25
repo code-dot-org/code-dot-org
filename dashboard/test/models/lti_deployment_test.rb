@@ -19,7 +19,7 @@ class LtiDeploymentTest < ActiveSupport::TestCase
     it 'returns false' do
       _(restricted?).must_equal false
     end
-    
+
     context 'when restricted' do
       before do
         deployment.update(id: restricted_id)
