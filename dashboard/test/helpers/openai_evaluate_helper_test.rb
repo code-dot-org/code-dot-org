@@ -48,7 +48,7 @@ class OpenaiEvaluateHelperTest < ActionView::TestCase
     fr_level_source = create(:level_source, data: "This is my free response answer")
     fr_user_level = create(:user_level, user: @student1, level: @free_response_level, script: @unit, level_source: fr_level_source)
 
-     mock_response = {
+    mock_response = {
       status: :ok,
       json: {"content" => {
         aiEvaluation: "Meets",
@@ -64,7 +64,7 @@ class OpenaiEvaluateHelperTest < ActionView::TestCase
       should_evaluate_skills: false
     ).returns(mock_response)
 
-      StudentWorkEvaluation.expects(:create!).with(
+    StudentWorkEvaluation.expects(:create!).with(
       has_entry(type: 'UserLevelEvaluation')
     ).returns(mock('work_evaluation'))
 
