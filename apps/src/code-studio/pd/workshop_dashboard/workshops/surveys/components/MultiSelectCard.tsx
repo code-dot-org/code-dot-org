@@ -7,7 +7,11 @@ import {Card, CardContent, Box, CardHeader} from '@mui/material';
 import classNames from 'classnames';
 import React, {FC, useEffect, useState} from 'react';
 
+import noResponsesBars from '@cdo/static/pd/no-responses-bars.png';
+
 import {MultiSelectBreakdown} from '../../../WorkshopFormTemplate/types';
+
+import {EmptyState} from './EmptyState';
 
 import styles from '../../workshop.module.scss';
 
@@ -50,21 +54,29 @@ export const MultiSelectCard: FC<MultiSelectCardProps> = ({
         }
       />
       <CardContent className={styles.cardContent}>
-        <Box className={styles.column}>
-          {items.map(item => (
-            <Box key={item.label}>
-              <BodyThreeText noMargin>
-                <StrongText>{item.label}</StrongText>
-              </BodyThreeText>
-              <Box className={styles.barRow}>
-                <PercentageBar percentage={item.percentage} />
-                <BodyThreeText noMargin className={styles.barLabel}>{`${
-                  item.count
-                }${barLabel ? ` ${barLabel}` : ''}`}</BodyThreeText>
+        {items.length > 0 ? (
+          <Box className={styles.column}>
+            {items.map(item => (
+              <Box key={item.label}>
+                <BodyThreeText noMargin>
+                  <StrongText>{item.label}</StrongText>
+                </BodyThreeText>
+                <Box className={styles.barRow}>
+                  <PercentageBar percentage={item.percentage} />
+                  <BodyThreeText noMargin className={styles.barLabel}>{`${
+                    item.count
+                  }${barLabel ? ` ${barLabel}` : ''}`}</BodyThreeText>
+                </Box>
               </Box>
-            </Box>
-          ))}
-        </Box>
+            ))}
+          </Box>
+        ) : (
+          <EmptyState
+            title="No data available yet."
+            description="Check back after responses are submitted."
+            imageProps={{src: noResponsesBars}}
+          />
+        )}
       </CardContent>
     </Card>
   );

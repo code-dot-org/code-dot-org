@@ -1,5 +1,13 @@
+import Alert from '@code-dot-org/component-library/alert';
 import {Button} from '@code-dot-org/component-library/button';
-import React, {FC, useMemo, createContext, useContext} from 'react';
+import React, {
+  FC,
+  useMemo,
+  createContext,
+  useContext,
+  useState,
+  useEffect,
+} from 'react';
 import {Outlet, useLocation, useParams} from 'react-router-dom';
 
 import {useFetch} from '@cdo/apps/util/useFetch';
@@ -15,9 +23,11 @@ import {
 } from '../WorkshopFormTemplate/utils';
 
 import {FacilitatorSelection} from './components/FacilitatorSelection';
+import {Loading} from './components/Loading';
 import {SurveyCategorySelection} from './components/SurveyCategorySelection';
 import {SurveyTypeSelection} from './components/SurveyTypeSelection';
 import {WorkshopTabs} from './components/WorkshopTabs';
+import {NoSurveyResponses} from './surveys/components/NoSurveyResponses';
 import {WorkshopLayoutProps, WorkshopContextValue} from './types';
 
 import styles from './workshop.module.scss';
@@ -42,8 +52,20 @@ export const WorkshopLayout: FC<WorkshopLayoutProps> = ({
   const {pathname} = useLocation();
   const {workshopId} = useParams<{workshopId: string}>();
 
+  const [defaultLoading, setDefaultLoading] = useState(true);
+
+  // prevent flash of loading indicator on fast connections
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setDefaultLoading(false);
+    }, 1000);
+    return () => {
+      clearTimeout(timeout);
+    };
+  }, []);
+
   const {
-    data: workshopData,
+    data: workshopResponse,
     loading: workshopLoading,
     error: workshopError,
     refetch: refetchWorkshop,
@@ -52,7 +74,7 @@ export const WorkshopLayout: FC<WorkshopLayoutProps> = ({
   );
 
   const {
-    data: enrollmentData,
+    data: enrollmentResponse,
     loading: enrollmentsLoading,
     error: enrollmentsError,
     refetch: refetchEnrollments,
@@ -64,7 +86,6 @@ export const WorkshopLayout: FC<WorkshopLayoutProps> = ({
     data: surveys,
     loading: surveysLoading,
     error: surveysError,
-    refetch: refetchSurveys,
   } = useFetch<SurveySummary | null>(
     workshopId
       ? `/api/v1/pd/workshops/${workshopId}/foorm/workshop_survey_summary`
@@ -72,39 +93,75 @@ export const WorkshopLayout: FC<WorkshopLayoutProps> = ({
   );
 
   const workshop = useMemo(
-    () => (workshopData ? workshopDataToProps(workshopData) : null),
-    [workshopData]
+    () => (workshopResponse ? workshopDataToProps(workshopResponse) : null),
+    [workshopResponse]
   );
 
   const enrollments = useMemo(
-    () => (enrollmentData ? enrollmentDataToProps(enrollmentData) : []),
-    [enrollmentData]
+    () => (enrollmentResponse ? enrollmentDataToProps(enrollmentResponse) : []),
+    [enrollmentResponse]
   );
 
   const showTabs = !pathname.includes('/edit');
   const showSurveyElements = pathname.includes('/surveys');
   const showPostSurveyCategorySelection = pathname.includes('/surveys/post');
-  const showFacilitatorSelection = pathname.includes(
-    '/surveys/post/facilitators'
-  );
+  const showFacilitatorSelection =
+    pathname.includes('/surveys/post/facilitators') &&
+    surveys?.surveys?.post_workshop;
+
+  const showNoSurveyResponses = useMemo(() => {
+    if (showPostSurveyCategorySelection) {
+      return !surveysLoading && !surveys?.surveys?.post_workshop;
+    }
+    return false;
+  }, [
+    showPostSurveyCategorySelection,
+    surveys?.surveys?.post_workshop,
+    surveysLoading,
+  ]);
+
+  const showLoading = useMemo(() => {
+    return (
+      defaultLoading ||
+      (!workshop && workshopLoading) ||
+      (!enrollments && enrollmentsLoading) ||
+      (!surveys && surveysLoading)
+    );
+  }, [
+    defaultLoading,
+    enrollments,
+    enrollmentsLoading,
+    surveys,
+    surveysLoading,
+    workshop,
+    workshopLoading,
+  ]);
 
   // TODO: https://codedotorg.atlassian.net/browse/ACQ-3438
   const handleDownload = () => {};
 
   const contextValue: WorkshopContextValue = {
     workshop,
-    workshopLoading,
-    workshopError,
     refetchWorkshop,
     enrollments,
     enrollmentsLoading,
-    enrollmentsError,
     refetchEnrollments,
     surveys,
-    surveysLoading,
-    surveysError,
-    refetchSurveys,
   };
+
+  if (showLoading) {
+    return <Loading />;
+  }
+
+  if (workshopError || enrollmentsError || surveysError) {
+    return (
+      <Alert
+        size="m"
+        text="Something went wrong, please refresh the page."
+        type="danger"
+      />
+    );
+  }
 
   return (
     <WorkshopContext.Provider value={contextValue}>
@@ -132,9 +189,12 @@ export const WorkshopLayout: FC<WorkshopLayoutProps> = ({
             />
           )}
         </div>
-        {showFacilitatorSelection && <FacilitatorSelection />}
+        {showFacilitatorSelection && (
+          <FacilitatorSelection facilitators={workshop?.facilitators} />
+        )}
       </nav>
       <main>
+        {showNoSurveyResponses && <NoSurveyResponses />}
         <Outlet />
       </main>
     </WorkshopContext.Provider>

@@ -5,7 +5,7 @@ module LevelStarterAssetsHelper
 
   def self.try_resize_file(file, extension, max_dimension_px)
     # Resizing takes a lot of compute power.
-    # If we're given an image higher than 20MB (), don't attempt to resize.
+    # If we're given an image higher than 20MB, don't attempt to resize.
     # Since this is intended to be a levelbuilder-specific helper (ie, low volume/levelbuilder machine), it may be safe to increase this limit.
     if ([".jpg", ".jpeg", ".png"].include? extension.downcase) && (file.length < MAX_RESIZE_SIZE)
       image = MiniMagick::Image.read(file, extension)
