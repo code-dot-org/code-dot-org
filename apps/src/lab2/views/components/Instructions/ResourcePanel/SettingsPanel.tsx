@@ -5,7 +5,7 @@ import {Heading2} from '@code-dot-org/component-library/typography';
 import React, {useEffect, useState} from 'react';
 
 import {Setting} from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
-import localization from '@cdo/apps/localization';
+import localization, {useLocalization} from '@cdo/apps/localization';
 import {LanguageInfo} from '@cdo/apps/localization/Localization';
 import {commonI18n} from '@cdo/apps/types/locale';
 
@@ -22,17 +22,16 @@ const SettingsPanel: React.FunctionComponent<SettingsPanelProps> = ({
   const {theme} = useTheme();
   // SimpleDropdown isn't themed properly, so we have to manually set the color.
   const dropdownColor = theme === 'Dark' ? 'white' : 'black';
-  const [locale, setLocale] = useState<string>(localization.locale);
+  const locale = useLocalization();
   const [localeOptions, setLocaleOptions] = useState<LanguageInfo[]>(
     localization.locales
   );
 
   useEffect(() => {
     localization.on('change', info => {
-      setLocale(localization.locale);
       setLocaleOptions(localization.locales);
     });
-  }, [setLocale]);
+  }, []);
 
   const handleLanguageChange = (
     event: React.ChangeEvent<HTMLSelectElement>
