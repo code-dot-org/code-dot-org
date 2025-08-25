@@ -27,6 +27,12 @@
           "type": "library_item",
           "library_name": "surveys/pd/demographic_items",
           "library_version": 0,
+          "name": "grade"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/demographic_items",
+          "library_version": 0,
           "name": "cdo_teaching_experience"
         },
         {
