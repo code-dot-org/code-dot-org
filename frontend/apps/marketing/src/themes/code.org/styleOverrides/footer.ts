@@ -7,9 +7,12 @@ export const FOOTER_OVERRIDES: Components<Theme>['MuiFooter'] = {
       paddingBlock: theme.spacing(5),
       paddingInline: theme.spacing(4),
       // Social icon styles
+      '& .MuiStack-root': {
+        marginInlineStart: theme.spacing(-0.5),
+      },
       '& .social-icon .MuiSvgIcon-root, .social-icon': {
         color: theme.palette.common.white,
-        fontSize: '1.5rem',
+        fontSize: '0.875rem',
         transition: 'opacity 0.2s ease-in-out',
         '&:hover': {
           opacity: 0.8,
@@ -69,7 +72,7 @@ export const FOOTER_OVERRIDES: Components<Theme>['MuiFooter'] = {
     grid: ({theme}) => ({
       maxWidth: '960px',
       margin: '0 auto',
-      rowGap: theme.spacing(7),
+      rowGap: theme.spacing(3),
     }),
     links: ({theme}) => ({
       margin: 0,
@@ -77,8 +80,8 @@ export const FOOTER_OVERRIDES: Components<Theme>['MuiFooter'] = {
       height: 'min-content',
       display: 'flex',
       flexDirection: 'row',
-      gap: theme.spacing(2),
-      [`@media (max-width: ${theme.breakpoints.values.sm}px)`]: {
+      gap: theme.spacing(1.75),
+      [`@media (max-width: ${theme.breakpoints.values.md}px)`]: {
         flexDirection: 'column',
       },
       '& > li': {
@@ -86,11 +89,11 @@ export const FOOTER_OVERRIDES: Components<Theme>['MuiFooter'] = {
         padding: 0,
         width: 'auto',
         borderInlineEnd: `1px solid ${alpha(theme.palette.common.white, 0.2)}`,
-        paddingInlineEnd: theme.spacing(2),
+        paddingInlineEnd: theme.spacing(1.75),
         '&:last-of-type': {
           borderInlineEnd: 'none',
         },
-        [`@media (max-width: ${theme.breakpoints.values.sm}px)`]: {
+        [`@media (max-width: ${theme.breakpoints.values.md}px)`]: {
           borderInlineEnd: 'none',
         },
       },

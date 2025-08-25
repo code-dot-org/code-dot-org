@@ -130,36 +130,38 @@ const FooterMui: React.FC<FooterProps> = ({
           gap={4}
         >
           {/* Site Links */}
-          <FooterLinks
-            className="site-links"
-            aria-label="Site links"
-            sx={{flexWrap: 'wrap'}}
-          >
-            {siteLinks?.map(({key, label, href, onClick, ...linkProps}) => (
-              <ListItem key={key}>
-                <FooterLink
-                  href={href}
-                  variant="body4"
-                  target={
-                    typeof onClick !== 'function' &&
-                    isExternalLink(href, brand, 'production')
-                      ? '_blank'
-                      : undefined
-                  }
-                  rel={
-                    typeof onClick !== 'function' &&
-                    isExternalLink(href, brand, 'production')
-                      ? 'noopener noreferrer'
-                      : undefined
-                  }
-                  onClick={onClick}
-                  {...linkProps}
-                >
-                  {label}
-                </FooterLink>
-              </ListItem>
-            ))}
-          </FooterLinks>
+          <Grid size={{md: 9.5}}>
+            <FooterLinks
+              className="site-links"
+              aria-label="Site links"
+              sx={{flexWrap: 'wrap'}}
+            >
+              {siteLinks?.map(({key, label, href, onClick, ...linkProps}) => (
+                <ListItem key={key}>
+                  <FooterLink
+                    href={href}
+                    variant="body4"
+                    target={
+                      typeof onClick !== 'function' &&
+                      isExternalLink(href, brand, 'production')
+                        ? '_blank'
+                        : undefined
+                    }
+                    rel={
+                      typeof onClick !== 'function' &&
+                      isExternalLink(href, brand, 'production')
+                        ? 'noopener noreferrer'
+                        : undefined
+                    }
+                    onClick={onClick}
+                    {...linkProps}
+                  >
+                    {label}
+                  </FooterLink>
+                </ListItem>
+              ))}
+            </FooterLinks>
+          </Grid>
           {/* Language Selector */}
           <FormControl variant="standard">
             <NativeSelect
@@ -183,19 +185,17 @@ const FooterMui: React.FC<FooterProps> = ({
           size={12}
           display="flex"
           justifyContent="space-between"
-          alignItems="start"
+          alignItems="center"
           flexWrap="wrap"
-          gap={2}
+          gap={1}
         >
-          <Grid size={{sm: 12, md: 8}}>
-            {/* Copyright */}
-            {copyright && (
-              <Copyright variant="body4">
-                {copyright.showIcon && <CopyrightIcon fontSize="small" />}
-                {copyright.value}
-              </Copyright>
-            )}
-          </Grid>
+          {/* Copyright */}
+          {copyright && (
+            <Copyright variant="body4">
+              {copyright.showIcon && <CopyrightIcon fontSize="small" />}
+              {copyright.value}
+            </Copyright>
+          )}
           {/* Social Links */}
           <Stack direction="row" spacing={1} aria-label="Social links">
             {socialLinks?.map(({key, label, icon, href}) => (
@@ -213,18 +213,18 @@ const FooterMui: React.FC<FooterProps> = ({
               </IconButton>
             ))}
           </Stack>
-          {/* Image Link */}
-          {imageLink && (
-            <FooterImageLink
-              href={imageLink.href}
-              target={imageLink.isLinkExternal ? '_blank' : undefined}
-              rel={imageLink.isLinkExternal ? 'noopener noreferrer' : undefined}
-              sx={{mb: 0}}
-            >
-              <img src={imageLink.imageSrc} alt={imageLink.label} />
-            </FooterImageLink>
-          )}
         </Grid>
+        {/* Image Link */}
+        {imageLink && (
+          <FooterImageLink
+            href={imageLink.href}
+            target={imageLink.isLinkExternal ? '_blank' : undefined}
+            rel={imageLink.isLinkExternal ? 'noopener noreferrer' : undefined}
+            sx={{mb: 0}}
+          >
+            <img src={imageLink.imageSrc} alt={imageLink.label} />
+          </FooterImageLink>
+        )}
       </FooterGrid>
     </FooterRoot>
   );

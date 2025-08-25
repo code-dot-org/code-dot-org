@@ -1,6 +1,3 @@
-import Facebook from '@mui/icons-material/Facebook';
-import Instagram from '@mui/icons-material/Instagram';
-import XIcon from '@mui/icons-material/X';
 import Icon from '@mui/material/Icon';
 
 import awsLogo from '@public/images/powered-by-aws.webp';
@@ -75,19 +72,19 @@ export const SOCIAL_LINKS_CORPORATE_SITE = [
     key: 'facebook',
     label: 'Facebook',
     href: 'https://www.facebook.com/Code.org/',
-    icon: <Facebook />,
+    icon: <Icon baseClassName="fa-brands" className="fa-facebook" />,
   },
   {
     key: 'x-twitter',
     label: 'X',
     href: 'https://x.com/codeorg',
-    icon: <XIcon />,
+    icon: <Icon baseClassName="fa-brands" className="fa-x-twitter" />,
   },
   {
     key: 'instagram',
     label: 'Instagram',
     href: 'https://www.instagram.com/codeorg/',
-    icon: <Instagram />,
+    icon: <Icon baseClassName="fa-brands" className="fa-instagram" />,
   },
   {
     key: 'medium',
