@@ -2,7 +2,10 @@ import Linkedin from '@mui/icons-material/LinkedIn';
 import XIcon from '@mui/icons-material/X';
 
 // Copyright text
-export const COPYRIGHT_TEXT_CSFORALL = 'All rights reserved';
+export const COPYRIGHT_TEXT_CSFORALL = {
+  value: 'All rights reserved',
+  showIcon: true,
+};
 
 // Site links
 export const SITE_LINKS_CSFORALL = [

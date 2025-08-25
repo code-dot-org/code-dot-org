@@ -8,7 +8,10 @@ import awsLogo from '@public/images/powered-by-aws.webp';
 const copyrightYear = new Date().getFullYear();
 
 // Copyright text
-export const COPYRIGHT_TEXT_CORPORATE_SITE = `Code.org, ${copyrightYear}. Code.org, the CODE logo, Hour of Code and CS Discoveries are trademarks of Code.org.\nBuilt on GitHub from Microsoft`;
+export const COPYRIGHT_TEXT_CORPORATE_SITE = {
+  value: `© Code.org, ${copyrightYear}. Code.org, the CODE logo, Hour of Code and CS Discoveries are trademarks of Code.org. Built on GitHub from Microsoft.`,
+  showIcon: false,
+};
 
 // Site links
 export const SITE_LINKS_CORPORATE_SITE = [
@@ -77,7 +80,7 @@ export const SOCIAL_LINKS_CORPORATE_SITE = [
   {
     key: 'x-twitter',
     label: 'X',
-    href: 'https://x.com/csforall',
+    href: 'https://x.com/codeorg',
     icon: <XIcon />,
   },
   {
@@ -90,9 +93,7 @@ export const SOCIAL_LINKS_CORPORATE_SITE = [
     key: 'medium',
     label: 'Medium',
     href: 'https://medium.com/@codeorg',
-    icon: (
-      <Icon baseClassName="fa-brands" className="fa-medium" color="inherit" />
-    ),
+    icon: <Icon baseClassName="fa-brands" className="fa-medium" />,
   },
 ];
 

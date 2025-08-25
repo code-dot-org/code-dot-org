@@ -38,6 +38,11 @@ export interface SocialLink extends AnchorHTMLAttributes<HTMLAnchorElement> {
   icon: ReactNode;
 }
 
+export interface Copyright {
+  value: string;
+  showIcon: boolean;
+}
+
 export interface LanguageOption {
   value: string;
   text: string;
@@ -58,7 +63,7 @@ export interface FooterProps extends HTMLAttributes<HTMLElement> {
   /** Footer social links */
   socialLinks?: SocialLink[];
   /** Footer copyright */
-  copyright?: string;
+  copyright?: Copyright;
   /** Footer language options */
   languages: LanguageOption[];
   /** Callback for language change */
@@ -91,6 +96,11 @@ const FooterLink = styled(Link, {
   slot: 'link',
 })(() => ({}));
 
+const FooterImageLink = styled(Link, {
+  name: 'MuiFooter',
+  slot: 'imageLink',
+})(() => ({}));
+
 const Copyright = styled(Typography, {
   name: 'MuiFooter',
   slot: 'copyright',
@@ -120,7 +130,11 @@ const FooterMui: React.FC<FooterProps> = ({
           gap={4}
         >
           {/* Site Links */}
-          <FooterLinks className="site-links" aria-label="Site links">
+          <FooterLinks
+            className="site-links"
+            aria-label="Site links"
+            sx={{flexWrap: 'wrap'}}
+          >
             {siteLinks?.map(({key, label, href, onClick, ...linkProps}) => (
               <ListItem key={key}>
                 <FooterLink
@@ -169,24 +183,19 @@ const FooterMui: React.FC<FooterProps> = ({
           size={12}
           display="flex"
           justifyContent="space-between"
+          alignItems="start"
           flexWrap="wrap"
           gap={2}
         >
-          {/* Copyright */}
-          <Copyright variant="body4">
-            <CopyrightIcon fontSize="small" />
-            {copyright}
-          </Copyright>
-          {/* Image Link */}
-          {imageLink && (
-            <Link
-              href={imageLink.href}
-              target={imageLink.isLinkExternal ? '_blank' : undefined}
-              rel={imageLink.isLinkExternal ? 'noopener noreferrer' : undefined}
-            >
-              <img src={imageLink.imageSrc} alt={imageLink.label} />
-            </Link>
-          )}
+          <Grid size={{sm: 12, md: 8}}>
+            {/* Copyright */}
+            {copyright && (
+              <Copyright variant="body4">
+                {copyright.showIcon && <CopyrightIcon fontSize="small" />}
+                {copyright.value}
+              </Copyright>
+            )}
+          </Grid>
           {/* Social Links */}
           <Stack direction="row" spacing={1} aria-label="Social links">
             {socialLinks?.map(({key, label, icon, href}) => (
@@ -204,6 +213,17 @@ const FooterMui: React.FC<FooterProps> = ({
               </IconButton>
             ))}
           </Stack>
+          {/* Image Link */}
+          {imageLink && (
+            <FooterImageLink
+              href={imageLink.href}
+              target={imageLink.isLinkExternal ? '_blank' : undefined}
+              rel={imageLink.isLinkExternal ? 'noopener noreferrer' : undefined}
+              sx={{mb: 0}}
+            >
+              <img src={imageLink.imageSrc} alt={imageLink.label} />
+            </FooterImageLink>
+          )}
         </Grid>
       </FooterGrid>
     </FooterRoot>
