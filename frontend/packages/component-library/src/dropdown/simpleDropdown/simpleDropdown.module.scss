@@ -97,7 +97,6 @@
   // custom dropdown arrow styles
   .dropdownArrowDiv {
     position: relative;
-    // Remove global width: 100% to maintain default content-based width behavior
 
     &:after {
       content: '\f078';
@@ -106,25 +105,26 @@
       pointer-events: none;
       text-align: center;
     }
+  }
 
-    select {
-      // Remove the global padding rule that conflicts with styleAsFormField
-      // Individual cases (styleAsFormField, customWidth) handle their own padding
+  // Handle custom width prop - ensure inner elements fill container
+  // Applied when the container has the customWidth class
+  &.customWidth {
+    display: flex; // block-level flex so % widths work
+    flex-direction: column; // preserve original stacking
+    align-items: flex-start; // preserve original alignment
+    .dropdownArrowDiv {
+      width: 100%;
     }
 
-    // Handle custom width prop - ensure select fills container completely
-    // This overrides both default and styleAsFormField width behaviors
-    .customWidth & {
+    select {
       width: 100%;
-
-      select {
-        width: 100%;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        // Ensure proper spacing for arrow
-        padding-inline-end: 2.5rem;
-      }
+      box-sizing: border-box;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      // Ensure proper spacing for arrow
+      padding-inline-end: 2.5rem;
     }
   }
 
