@@ -1,5 +1,3 @@
-import Alert from '@code-dot-org/component-library/alert';
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Box, Stack} from '@mui/material';
 import React from 'react';
 import {useSelector} from 'react-redux';
@@ -20,16 +18,7 @@ export const WorkshopOverview: React.FC = () => {
   );
   const isWorkshopAdmin = permission.has(WorkshopAdmin);
 
-  const {workshop, workshopLoading, workshopError, refetchWorkshop} =
-    useWorkshopContext();
-
-  if (!workshop && workshopLoading) {
-    return <FontAwesomeV6Icon iconName="spinner" animationType="spin" />;
-  }
-
-  if (workshopError) {
-    return <Alert size="m" text="Workshop not found" type="danger" />;
-  }
+  const {workshop, refetchWorkshop} = useWorkshopContext();
 
   if (!workshop) {
     return null;

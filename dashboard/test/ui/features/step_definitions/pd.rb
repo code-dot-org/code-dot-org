@@ -340,10 +340,10 @@ Given 'I start a self-paced PL course' do
     And I wait until element "a[title='Level 3 Lesson Instructor In Training Levels']" is visible
     Then I click selector "a[title='Level 3 Lesson Instructor In Training Levels']"
     When I am on "http://studio.code.org/courses/alltheselfpacedplthings/units/1/lessons/1/levels/3"
-    Then I wait until element "a:contains(Submit)" is visible
-    When I click selector "a:contains(Submit)"
+    Then I wait until element "button:contains(Submit)" is visible
+    When I click selector "button:contains(Submit)"
     Then I wait until I am on "http://studio.code.org/courses/alltheselfpacedplthings/units/1/lessons/1/levels/4"
-    And I wait until element "a:contains(Submit)" is visible
+    And I wait until element "button:contains(Submit)" is visible
   GHERKIN
 end
 
