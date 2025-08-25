@@ -1,0 +1,59 @@
+import React from 'react';
+
+import HttpClient from '@cdo/apps/util/HttpClient';
+
+import Notification from './Notification';
+
+import styles from './notifications.module.scss';
+
+export interface AiDiffNotification {
+  id: string;
+  title: string;
+  description: string;
+  readAt: Date | null;
+  iconName: string;
+  publishedAt: Date;
+}
+
+const AiDiffNotificationList: React.FC = () => {
+  const [loading, setLoading] = React.useState<boolean>(true);
+  const [notifications, setNotifications] = React.useState<
+    AiDiffNotification[]
+  >([]);
+
+  React.useEffect(() => {
+    HttpClient.fetchJson<AiDiffNotification[]>('/notifications', {}, undefined)
+      .then(response => {
+        setLoading(false);
+        const notification = response.value.map(n => ({
+          ...n,
+          publishedAt: new Date(n.publishedAt),
+          readAt: n.readAt ? new Date(n.readAt) : null,
+        }));
+        setNotifications(notification);
+      })
+      .catch(error => {
+        console.error('Error fetching notifications:', error);
+      });
+  }, []);
+
+  if (!notifications || notifications.length === 0) {
+    return <div className={styles.noNotifications}>{'no notifications'}</div>;
+  }
+
+  if (loading) {
+    return <div className={styles.loading}>{'loading...'}</div>;
+  }
+
+  return (
+    <div className={styles.listContainer}>
+      <div className={styles.list}>
+        {notifications.map(notification => (
+          <Notification notification={notification} key={notification.id} />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default AiDiffNotificationList;
