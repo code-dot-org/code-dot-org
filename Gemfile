@@ -390,5 +390,6 @@ gem "webrick", "~> 1.9"
 gem 'rubyzip'
 
 # Plugins (engines)
+gem 'cdo_contentful', path: '.', glob: '**/engines/*/*.gemspec'
 gem 'hoc_legacy', path: '.', glob: '**/engines/*/*.gemspec'
 gem 'marketing', path: '.', glob: '**/engines/*/*.gemspec'

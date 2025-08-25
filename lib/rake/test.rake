@@ -374,6 +374,13 @@ namespace :test do
       end
     end
 
+    desc 'Runs dashboard cdo_contentful engine tests'
+    timed_task_with_logging :dashboard_cdo_contentful_engine do
+      run_tests_if_changed('dashboard cdo_contentful engine', %w[Gemfile Gemfile.lock]) do
+        TestRunUtils.run_dashboard_cdo_contentful_engine_tests
+      end
+    end
+
     desc 'Runs dashboard hoc_legacy engine tests if dashboard might have changed from staging.'
     timed_task_with_logging :dashboard_hoc_legacy_engine do
       run_tests_if_changed(
@@ -503,6 +510,7 @@ namespace :test do
       # :interpreter,
       :dashboard,
       :dashboard_legacy,
+      :dashboard_cdo_contentful_engine,
       :dashboard_hoc_legacy_engine,
       :dashboard_marketing_engine,
       :pegasus,
@@ -524,6 +532,7 @@ namespace :test do
     :apps,
     :dashboard,
     :dashboard_legacy,
+    :dashboard_cdo_contentful_engine,
     :dashboard_hoc_legacy_engine,
     :dashboard_marketing_engine,
     :pegasus,
