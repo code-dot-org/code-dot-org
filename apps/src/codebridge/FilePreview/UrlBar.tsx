@@ -19,7 +19,7 @@ export const UrlBar: React.FC<UrlBarProps> = ({value, onChange}) => {
           aria-label="Navigate back"
           size="xs"
           isIconOnly={true}
-          icon={{iconName: 'angle-left'}}
+          icon={{iconName: 'chevron-left'}}
         />
         <Button
           className={moduleStyles.navButton}
@@ -27,7 +27,7 @@ export const UrlBar: React.FC<UrlBarProps> = ({value, onChange}) => {
           aria-label="Navigate forward"
           size="xs"
           isIconOnly={true}
-          icon={{iconName: 'angle-right'}}
+          icon={{iconName: 'chevron-right'}}
         />
       </div>
       <TextField
