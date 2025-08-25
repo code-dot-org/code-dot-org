@@ -9,9 +9,11 @@ import {
   SaveType,
   ServerChatEvent,
   ViewMode,
+  AiChatClientType,
 } from '../types';
 
 export interface AichatState {
+  clientType?: AiChatClientType;
   // Content from previous chat sessions that we track purely for visibility to the user
   // and do not send to the model as history.
   chatEventsPast: ChatEvent[];

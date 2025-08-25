@@ -1,3 +1,6 @@
+/** TODO-AITUTOR: Clean up and remove deprecated types along with chatApi and interactionsApi cleanup
+ **/
+
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {ValueOf} from '@cdo/apps/types/utils';
 import {
@@ -29,22 +32,6 @@ export interface AITutorInteraction {
   aiResponse?: string;
 }
 
-export interface StudentChatRow {
-  aiModelVersion: string;
-  aiResponse?: string;
-  createdAt: string;
-  id: number;
-  levelId?: number;
-  projectId?: string;
-  prompt: string;
-  scriptId?: number;
-  status: AITutorInteractionStatusValue;
-  studentName: string;
-  type: AITutorAction;
-  updatedAt?: string;
-  userId: number;
-}
-
 export interface StudentServerData {
   id: number;
   name: string;
@@ -56,33 +43,3 @@ export interface StudentAccessData {
   name: string;
   aiTutorAccessDenied: boolean;
 }
-
-export interface Level {
-  id: number;
-  type: string;
-  hasValidation: boolean;
-  aiTutorAvailable: boolean;
-  isAssessment: boolean;
-  progressionType: string;
-}
-
-export interface ChatContext {
-  // studentInput is the last user message for general chat
-  // or the student's code for compilation and validation.
-  studentInput: string;
-  studentCode?: string;
-  actionType?: AITutorAction | undefined;
-  systemPrompt?: string;
-}
-
-export type SuggestedPromptOptions = {
-  studentCode: string;
-  showCompilationOption?: boolean;
-  showValidationOption?: boolean;
-  showGenericErrorOption?: boolean;
-};
-
-export type PromptOptionKeys =
-  | 'showCompilationOption'
-  | 'showValidationOption'
-  | 'showGenericErrorOption';

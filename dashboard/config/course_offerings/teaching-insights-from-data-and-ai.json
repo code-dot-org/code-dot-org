@@ -8,14 +8,14 @@
   "grade_levels": "9,10,11,12",
   "header": "self_paced",
   "image": "https://images.code.org/32fe4370c7de0fbdf12185ef502f60b2-aif4.jpg",
-  "cs_topic": "artificial_intelligence",
+  "cs_topic": "artificial_intelligence,data",
   "school_subject": null,
   "device_compatibility": null,
   "description": "This professional learning module is designed to help you prepare to teach Code.org’s Insights from Data and AI Unit.",
   "professional_learning_program": null,
   "video": null,
   "published_date": "2025-05-30 05:00:00 UTC",
-  "self_paced_pl_course_offering_key": null,
+  "self_paced_pl_course_offering_key": "teaching-insights-from-data-and-ai",
   "ai_teaching_assistant_available": true,
   "facilitator_course_permissions": [
 

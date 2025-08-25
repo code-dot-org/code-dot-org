@@ -13,12 +13,12 @@ export const EXPECTED_LOCALIZATION_STRINGS = {
     longText:
       'Join the global community of over 2 million educators empowering the next generation of innovators, problem solvers, and digital citizens! Code.org supports teachers the whole way with professional learning, comprehensive curricula, and support when you need it.',
   },
-  uk: {
-    heading: 'Локалізація',
+  hi: {
+    heading: 'स्थानीयकरण',
     shortText:
-      'Code.org підтримує вчителів протягом усього процесу навчання, надаючи їм комплексні навчальні програми та підтримку, коли вона вам потрібна.',
+      'Code.org शिक्षकों को व्यावसायिक शिक्षा, व्यापक पाठ्यक्रम तथा आवश्यकता पड़ने पर सहायता प्रदान करता है।',
     longText:
-      'Приєднуйтесь до глобальної спільноти, що налічує понад 2 мільйони освітян, які допомагають наступному поколінню новаторів, вирішувачів проблем та цифрових громадян! Code.org підтримує вчителів протягом усього процесу навчання, надаючи комплексні навчальні програми та підтримку, коли вам це потрібно.',
+      '2 मिलियन से अधिक शिक्षकों के वैश्विक समुदाय में शामिल हों जो अगली पीढ़ी के नवप्रवर्तकों, समस्या समाधानकर्ताओं और डिजिटल नागरिकों को सशक्त बना रहे हैं! Code.org शिक्षकों को पेशेवर शिक्षा, व्यापक पाठ्यक्रम और ज़रूरत पड़ने पर सहायता प्रदान करके हर संभव मदद करता है।',
   },
   'zh-TW': {
     heading: '本土化',

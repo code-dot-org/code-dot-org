@@ -54,6 +54,7 @@ export interface ProjectAndSources {
   channel: Channel;
   abuseScore?: number;
   sharingDisabled?: boolean;
+  isTeacherOfProjectOwner?: boolean;
 }
 
 /// ------ SOURCES ------ ///

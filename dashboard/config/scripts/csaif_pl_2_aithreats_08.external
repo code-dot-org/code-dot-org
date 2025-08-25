@@ -1,0 +1,26 @@
+name 'csaif_pl_2_aithreats_08'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# CIA Triad Scenarios
+
+## 📝 To Do
+
+#### Read each scenario read aloud. Decide which pillar it represents: C, I, or A.
+
+#### 1. During an online driver's education course, Mateo logs in on the day of his final exam . . . but the test never loads.  The website is down for maintenance, and there's no backup system or extension. Mateo misses the test window and can't complete the course on time.
+
+#### 2. Jordan adds a personal reminder to their shared family calendar: "Doctor appointment to talk about anxiety." Later, they realize their cousins and grandparents can see it too, and someone brings it up at dinner.
+
+#### 3. A friend asks Sam to proofread their scholarship essay. Instead of helpful feedback, Sam swaps in silly sentences for laughs and hits save. Later, the friend opens the file right before submitting and panics when they see what's been changed.
+
+#### 4. Aisha spent weeks curating the perfect workout playlist on a music app. One morning, she logs in and finds it replaced with her younger brother’s lullaby mix. The content gone! And now her account history shows songs she never listened to. They shared the account without realizing edits were saved automatically.
+
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ This activity is from Lesson 6. You can find more details in the full <a href='https://studio.code.org/s/aif5-2025/lessons/6' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a>.
+</p>
+
+
+MARKDOWN

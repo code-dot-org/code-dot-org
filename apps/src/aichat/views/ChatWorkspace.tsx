@@ -19,6 +19,7 @@ import {
   clearStagedFiles,
   fetchUserChatHistory,
   selectAllVisibleMessages,
+  setClientType,
   setNewChatSession,
 } from '../redux';
 import {findChangedProperties, getNewRemoveId} from '../redux/utils';
@@ -147,6 +148,10 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
       );
     }
   }, [dispatch, currentUserId, currentLevelId, selectedStudent]);
+
+  useEffect(() => {
+    dispatch(setClientType(clientType));
+  }, [dispatch, clientType]);
 
   const selectedStudentName =
     selectedStudent && getShortName(selectedStudent.name);

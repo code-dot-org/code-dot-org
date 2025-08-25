@@ -1,7 +1,9 @@
+import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import HttpClient from '@cdo/apps/util/HttpClient';
-import {AiEvaluationTypes} from '@cdo/generated-scripts/sharedConstants';
-
-import {OpenaiChatCompletionMessage} from '../aiTutor/chatApi';
+import {
+  AiEvaluationTypes,
+  AiInteractionStatus,
+} from '@cdo/generated-scripts/sharedConstants';
 
 import {
   logUserLevelEvaluation,
@@ -133,18 +135,30 @@ export async function summarizeEvaluations(
 }
 
 const EVALUATE_URL = '/openai/evaluate';
-// TODO: We'll need to write code to handle this end point
-// which will return a skill-based evaluation.
-const EVALUATE_SKILL_URL = '/openai/evaluate_skill';
 
 type ValueOf<T> = T[keyof T];
 type EvaluationType = ValueOf<typeof AiEvaluationTypes>;
+// These are the possible statuses returned by ShareFiltering.find_failure
+enum ShareFilterStatus {
+  Email = 'email',
+  Phone = 'phone',
+  Address = 'address',
+  Profanity = 'profanity',
+}
+type OpenaiChatCompletionMessage = {
+  status?: ValueOf<typeof AiInteractionStatus>;
+  role: Role;
+  content: string;
+  // Only used in case of PII or profanity violation
+  flagged_content?: string;
+  safety_status?: ShareFilterStatus;
+};
 
 export async function evaluationFromOpenAI(
   studentWork?: string | Record<string, string>,
   levelId?: number,
   evaluationType?: EvaluationType,
-  evaluateSkill?: boolean
+  shouldEvaluateSkills?: boolean
 ): Promise<OpenaiChatCompletionMessage | null> {
   const payload = {
     studentWork:
@@ -155,13 +169,17 @@ export async function evaluationFromOpenAI(
             .join('\n\n'),
     levelId: levelId,
     evaluationType: evaluationType,
+    shouldEvaluateSkills: shouldEvaluateSkills,
   };
 
-  const url = evaluateSkill ? EVALUATE_SKILL_URL : EVALUATE_URL;
-
-  const response = await HttpClient.post(url, JSON.stringify(payload), true, {
-    'Content-Type': 'application/json; charset=UTF-8',
-  });
+  const response = await HttpClient.post(
+    EVALUATE_URL,
+    JSON.stringify(payload),
+    true,
+    {
+      'Content-Type': 'application/json; charset=UTF-8',
+    }
+  );
   if (response.ok) {
     return await response.json();
   } else {

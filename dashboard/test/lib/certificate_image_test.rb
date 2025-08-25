@@ -1,6 +1,15 @@
 require 'test_helper'
 
 class CertificateImageTest < ActiveSupport::TestCase
+  self.use_transactional_test_case = true
+
+  setup_all do
+    create_csf_unit 'course1'
+    create_csf_unit 'course2'
+    create_csf_unit 'course3'
+    create_csf_unit 'course4'
+  end
+
   def test_special_template_courses
     assert CertificateImage.prefilled_title_course?('hourofcode') # 2014
     assert CertificateImage.prefilled_title_course?('flappy')
@@ -142,7 +151,6 @@ class CertificateImageTest < ActiveSupport::TestCase
     assert CertificateImage.hoc_course?('kodable')
     assert CertificateImage.hoc_course?('hello')
 
-    # course1 is created by dashboard test fixtures
     refute CertificateImage.hoc_course?('course1')
     refute CertificateImage.hoc_course?('coursea-2021')
     refute CertificateImage.hoc_course?('csp-2021')
@@ -155,5 +163,12 @@ class CertificateImageTest < ActiveSupport::TestCase
     assert info_line.match(/#{width}x/)
     assert info_line.match(/x#{height}/)
     image&.destroy!
+  end
+
+  private def create_csf_unit(name)
+    unit = create(:unit, name: name)
+    unit_group = create(:single_unit_course, :stable, unit: unit, name: name)
+    CourseOffering.add_course_offering(unit_group)
+    unit
   end
 end

@@ -218,23 +218,6 @@ Resources:
             AccessControlMaxAgeSec: 31536000
             IncludeSubdomains: false
             Override: false
-  # For immutable static assets (hashed assets like JS/CSS files), ensure that the Cache-Control header is set to immutable
-  ImmutableStaticAssetsResponseHeadersPolicy:
-    Type: AWS::CloudFront::ResponseHeadersPolicy
-    Properties:
-      ResponseHeadersPolicyConfig:
-        Name: !Sub "${AWS::StackName}-Assets-ResponseHeader-Policy"
-        Comment: "Ensure immutable static assets have Cache-Control header set to immutable"
-        CustomHeadersConfig:
-          Items:
-            - Header: cache-control
-              Override: false # Do not override the cache control from the origin if it is available
-              Value: public, max-age=31536000, immutable
-        SecurityHeadersConfig:
-          StrictTransportSecurity:
-            AccessControlMaxAgeSec: 31536000
-            IncludeSubdomains: false
-            Override: false
   CloudFrontDistribution:
     Type: AWS::CloudFront::Distribution
     Properties:
@@ -312,12 +295,15 @@ Resources:
               - GET
               - HEAD
               - OPTIONS
-            CachePolicyId: 658327ea-f89d-4fab-a63d-7e88639e58f6 # Managed-CachingOptimized
+            CachePolicyId: !If
+              - IsCorporateSite
+              - 4135ea2d-6df8-44a3-9df3-4b5a84be39ad # Managed-CachingDisabled (Disabled until this distribution becomes the main one instead of daisy chained)
+              - 658327ea-f89d-4fab-a63d-7e88639e58f6 # Managed-CachingOptimized
             Compress: true
             PathPattern: /_next/*
             TargetOriginId: marketing-sites-static-assets-origin
             ViewerProtocolPolicy: redirect-to-https
-            ResponseHeadersPolicyId: !Ref ImmutableStaticAssetsResponseHeadersPolicy
+            ResponseHeadersPolicyId: !Ref DefaultResponseHeadersPolicy
 
   ####################################
   # Load Balancer Resources          #
