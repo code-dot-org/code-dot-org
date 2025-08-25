@@ -15,7 +15,9 @@ export const ExportSurveysButton = () => {
   const {workshopId} = useParams<{workshopId: string}>();
   const [formsDialogOpen, setFormsDialogOpen] = useState(false);
 
-  const {data: forms} = useFetch<{name: string; version: string}[] | null>(
+  const {data: forms, loading} = useFetch<
+    {name: string; version: string}[] | null
+  >(
     workshopId
       ? `/api/v1/pd/workshops/${workshopId}/foorm/forms_for_workshop`
       : ''
@@ -33,7 +35,11 @@ export const ExportSurveysButton = () => {
     <>
       <Button
         className={styles.exportButton}
-        iconLeft={{iconName: 'download'}}
+        iconLeft={
+          loading
+            ? {iconName: 'spinner', animationType: 'spin'}
+            : {iconName: 'download'}
+        }
         onClick={() => setFormsDialogOpen(true)}
         disabled={!workshopId || !forms?.length}
         text="Export survey results"
