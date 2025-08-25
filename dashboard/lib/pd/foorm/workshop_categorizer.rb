@@ -46,7 +46,6 @@ module Pd::Foorm
 
       # Always ensure these core categories exist
       categories.add(:facilitators)
-      categories.add(:other)
 
       categories.to_a.sort
     end
@@ -61,7 +60,7 @@ module Pd::Foorm
     end
 
     def self.determine_category(category_string)
-      return :other unless category_string.is_a?(String) && !category_string.empty?
+      return unless category_string.is_a?(String) && !category_string.empty?
       category_string.downcase.to_sym
     end
 
@@ -96,6 +95,9 @@ module Pd::Foorm
               # since they should stay grouped under the facilitator, not split by category
               process_facilitator_matrix_question(question_name, question_data, question_summary, categories, facilitator_id, facilitator_name)
             else
+              category = determine_category(question_data[:category])
+              next unless category
+
               processed_question = create_processed_question(question_name, question_data, question_summary, facilitator_name)
               categories[:facilitators][facilitator_id][:questions][question_name] = processed_question
             end
@@ -109,6 +111,7 @@ module Pd::Foorm
         row_summary = question_summary&.dig(row_key)
 
         category = determine_category(row_data[:category])
+        next unless category
 
         # Replace facilitator name placeholder in text if provided
         row_text = row_data[:text]
@@ -126,7 +129,7 @@ module Pd::Foorm
           question_text: row_text,
           question_short_text: row_short_text,
           question_type: 'likert',
-          category: row_data[:category],
+          category: category,
           results: Pd::Foorm::ResponseProcessor.process_likert_responses(row_summary, question_data[:columns])
         }
 
@@ -136,12 +139,17 @@ module Pd::Foorm
 
     def self.process_regular_question_by_category(question_name, question_data, question_summary, categories)
       category = determine_category(question_data[:category])
+      return unless category
+
       processed_question = create_processed_question(question_name, question_data, question_summary)
       categories[category][:questions][question_name] = processed_question
     end
 
     def self.process_facilitator_matrix_question(question_name, question_data, question_summary, categories, facilitator_id, facilitator_name)
       question_data[:matrix_rows].each do |row_key, row_data|
+        category = determine_category(row_data[:category])
+        next unless category
+
         row_summary = question_summary&.dig(row_key)
 
         # Replace facilitator name placeholder in text
@@ -160,7 +168,7 @@ module Pd::Foorm
           question_text: row_text,
           question_short_text: row_short_text,
           question_type: 'likert',
-          category: row_data[:category],
+          category: category,
           results: Pd::Foorm::ResponseProcessor.process_likert_responses(row_summary, question_data[:columns])
         }
 
