@@ -258,16 +258,12 @@ class AidiffThreadsController < ApplicationController
   # Returns name(s) of programming environment(s) in the chat context
   private def get_labs(context_type)
     if context_type == SharedConstants::AI_DIFF_CONTEXT[:LEVEL]
-      puts 'level context'
       labs_from_level(@level)
     elsif context_type == SharedConstants::AI_DIFF_CONTEXT[:LESSON]
-      puts 'lesson context'
       @lesson.levels.map {|level| labs_from_level(level)}
     elsif context_type == SharedConstants::AI_DIFF_CONTEXT[:UNIT]
-      puts 'unit context'
       @unit.levels.map {|level| labs_from_level(level)}
     elsif context_type == SharedConstants::AI_DIFF_CONTEXT[:COURSE]
-      puts 'unit group context'
       @unit_group.default_units.map do |unit|
         unit.levels.map {|level| labs_from_level(level)}
       end
