@@ -2054,6 +2054,33 @@ FactoryBot.define do
     subject {"subject"}
     lti_integration {create(:lti_integration)}
     user {create(:student)}
+
+    # Let callers optionally pass deployments to attach after creation
+    transient do
+      attach_deployments {[]} # accept one or many deployments
+    end
+
+    after(:create) do |identity, evaluator|
+      Array(evaluator.attach_deployments).compact.each do |dep|
+        identity.lti_deployments << dep
+      end
+    end
+
+    # Convenience trait that creates one deployment (linked to same integration)
+    trait :with_deployment do
+      after(:create) do |identity, _|
+        identity.lti_deployments << create(:lti_deployment, lti_integration: identity.lti_integration)
+      end
+    end
+
+    # Add multiple deployments
+    trait :with_deployments do
+      transient {deployment_count {2}}
+      after(:create) do |identity, evaluator|
+        deps = create_list(:lti_deployment, evaluator.deployment_count, lti_integration: identity.lti_integration)
+        identity.lti_deployments << deps
+      end
+    end
   end
 
   factory :lti_deployment do
