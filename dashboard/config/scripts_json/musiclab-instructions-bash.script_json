@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-08-15 18:45:37 UTC",
+    "serialized_at": "2025-08-25 03:24:58 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -987,6 +987,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-sequences-explore-investigate_v2_bash"
+        ],
         "progression": "Explore"
       },
       "bonus": false,
@@ -1009,6 +1012,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-sequences-explore-play-sequential-overviewpanel_v2_bash"
+        ],
         "progression": "Explore"
       },
       "bonus": false,
@@ -1031,6 +1037,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-sequences-explore-predict_v2_bash"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -1053,6 +1062,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-sequences-explore-play-together-1_v2_bash"
+        ],
         "progression": "Investigate"
       },
       "bonus": false,
@@ -1075,6 +1087,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-sequences-explore-play-together-2_v2_bash"
+        ],
         "progression": "Investigate"
       },
       "bonus": false,
@@ -1097,6 +1112,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-sequences-explore-play-together-3_v2_bash"
+        ],
         "progression": "Investigate"
       },
       "bonus": false,
@@ -1119,6 +1137,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "test-music-lab-sequence-explore-formative_v2_bash"
+        ],
         "progression": "Check-In"
       },
       "bonus": false,
@@ -1141,6 +1162,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-sequences-explore-choice-level_v2_bash"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1163,6 +1187,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "test-music-lab-sequence-explore-evaluative_v2_bash"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -1185,6 +1212,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-sequences-explore-song-choice-level_v2_bash"
+        ],
         "progression": "Create"
       },
       "bonus": false,
@@ -1207,6 +1237,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-sequences-practice-predict_v2_bash"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -1229,6 +1262,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-sequences-practice-play-sequential-panel_v2_bash"
+        ],
         "progression": "Play Sequential"
       },
       "bonus": false,
@@ -1251,6 +1287,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-sequences-practice-play-sequential-1_v2_bash"
+        ],
         "progression": "Play Sequential"
       },
       "bonus": false,
@@ -1273,6 +1312,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-sequences-practice-play-sequential-2_v2_bash"
+        ],
         "progression": "Play Sequential"
       },
       "bonus": false,
@@ -1295,6 +1337,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "test-music-lab-sequence-practice-formative_v2_bash"
+        ],
         "progression": "Check-in"
       },
       "bonus": false,
@@ -1317,6 +1362,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-sequences-practice-rest-predict_v2_bash"
+        ],
         "progression": "Rests"
       },
       "bonus": false,
@@ -1339,6 +1387,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-sequences-practice-rest-panel_v2_bash"
+        ],
         "progression": "Rests"
       },
       "bonus": false,
@@ -1361,6 +1412,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-sequences-practice-rest-1_v2_bash"
+        ],
         "progression": "Rests"
       },
       "bonus": false,
@@ -1383,6 +1437,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-sequences-practice-artist-choice_v2_bash"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1405,6 +1462,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "test-music-lab-sequencing-practice-evaluative_v2_bash"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -1427,6 +1487,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-sequences-practice-choice_v2_bash"
+        ],
         "progression": "Create"
       },
       "bonus": false,
@@ -1449,6 +1512,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-walkup-examples-choice_bash"
+        ],
         "progression": "Example Projects"
       },
       "bonus": false,
@@ -1471,6 +1537,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-triggers-panel_v2_bash"
+        ],
         "progression": "Triggers"
       },
       "bonus": false,
@@ -1493,6 +1562,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-mini-project-walk-triggers-2_v2_bash"
+        ],
         "progression": "Triggers"
       },
       "bonus": false,
@@ -1515,6 +1587,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-mini-project-walk-triggers-3_v2_bash"
+        ],
         "progression": "Triggers"
       },
       "bonus": false,
@@ -1537,6 +1612,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-sequencing-project-prepare_v2_bash"
+        ],
         "progression": "Prepare"
       },
       "bonus": false,
@@ -1559,6 +1637,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-mini-project-walk-1_v2_bash"
+        ],
         "progression": "Walk-Up Songs"
       },
       "bonus": false,
@@ -1581,6 +1662,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-mini-project-walk-2_v2_bash"
+        ],
         "progression": "Walk-Up Songs"
       },
       "bonus": false,
@@ -1603,6 +1687,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-mini-project-walk-3_v2_bash"
+        ],
         "progression": "Walk-Up Songs"
       },
       "bonus": false,
@@ -1625,6 +1712,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-mini-project-walk-4_v2_bash"
+        ],
         "progression": "(Optional) Partner Game"
       },
       "bonus": false,
@@ -1647,6 +1737,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-genre-examples-choice_bash"
+        ],
         "progression": "Example Projects"
       },
       "bonus": false,
@@ -1669,6 +1762,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-functions-project-prepare_v2_bash"
+        ],
         "progression": "Prepare"
       },
       "bonus": false,
@@ -1691,6 +1787,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-genre-project_v2_bash"
+        ],
         "progression": "Genre Mashup"
       },
       "bonus": false,
@@ -2587,12 +2686,78 @@
 
   ],
   "rubrics": [
-
+    {
+      "level_name": "test-music-lab-sequencing-practice-evaluative_v2_bash",
+      "seeding_key": {
+        "lesson.key": "Sequencing - Practice",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash"
+      }
+    }
   ],
   "learning_goals": [
-
+    {
+      "key": "ec7878be-2d84-4743-bd67-af57f9e502c2",
+      "position": 1,
+      "learning_goal": "Sequencing",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "ec7878be-2d84-4743-bd67-af57f9e502c2",
+        "lesson.key": "Sequencing - Practice",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash"
+      }
+    }
   ],
   "learning_goal_evidence_levels": [
-
+    {
+      "understanding": 0,
+      "teacher_description": "The song does not have enough tracks or all of them start at the same time.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "ec7878be-2d84-4743-bd67-af57f9e502c2",
+        "lesson.key": "Sequencing - Practice",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "The song contains at least 4 tracks but several of them start at the same time.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "ec7878be-2d84-4743-bd67-af57f9e502c2",
+        "lesson.key": "Sequencing - Practice",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "The song contains at least 4 different tracks that start and stop at different times, but the song does not create a \"build\" effect based on how the tracks are sequenced.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "ec7878be-2d84-4743-bd67-af57f9e502c2",
+        "lesson.key": "Sequencing - Practice",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "The song contains at least 4 different tracks that are layered together to create a complex song that \"builds\". New tracks are introduced at different start times and all tracks end at the same time.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "ec7878be-2d84-4743-bd67-af57f9e502c2",
+        "lesson.key": "Sequencing - Practice",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash"
+      }
+    }
   ]
 }

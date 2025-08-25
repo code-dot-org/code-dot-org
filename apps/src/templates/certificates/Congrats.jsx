@@ -113,6 +113,7 @@ export default function Congrats(props) {
     tutorial,
     certificateId,
     userType,
+    userName,
     under13,
     language,
     randomDonorTwitter,
@@ -444,6 +445,7 @@ export default function Congrats(props) {
               isHocTutorial={isHocTutorial}
               isPlCourse={isPlCourse}
               userType={userType}
+              userName={userName}
             >
               {renderExtraCertificateLinks(language, tutorial, currentDate)}
             </Certificate>
@@ -474,6 +476,7 @@ Congrats.propTypes = {
   certificateId: PropTypes.string,
   tutorial: PropTypes.string,
   userType: PropTypes.oneOf(['signedOut', 'teacher', 'student']).isRequired,
+  userName: PropTypes.string,
   under13: PropTypes.bool,
   language: PropTypes.string.isRequired,
   randomDonorTwitter: PropTypes.string,

@@ -362,7 +362,6 @@ type SurveyQuestionBase = {
   question_name: string;
   question_text: string;
   question_short_text: string | null;
-  question_sub_text: string | null;
   category: string | null;
 };
 
