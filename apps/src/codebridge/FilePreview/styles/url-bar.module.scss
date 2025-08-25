@@ -6,11 +6,22 @@
   gap: 0; // Remove any gap between elements
   border-top: 1px solid var(--borders-neutral-primary);
 
-  // Wrapper for the navigation buttons
-  .navigationButtons {
-    border-radius: var((--border-radius-br-s, 4px 0 0 4px));
+  .spacer {
+    width: 6px; // adjust as needed
+    background-color: var(--background-neutral-primary);
     border: 1px solid var(--borders-neutral-strong);
     border-right: none;
+    border-radius: 4px 0 0 4px; // rounded like the left side of the group
+    height: 26px; // match button height
+    box-sizing: border-box;
+  }
+
+  // Wrapper for the navigation buttons
+  .navigationButtons {
+    border-radius: 0;
+    border: 1px solid var(--borders-neutral-strong);
+    border-right: none;
+    border-left: none;
     display: flex;
     background-color: var(--background-neutral-primary);
     height: 26px; // Match the total input height including border
@@ -20,6 +31,11 @@
 
   .navButton {
     color: var(--text-neutral-quaternary) !important;
+    margin: 0;
+  }
+
+  .navButton + .navButton {
+    margin-left: -2px; // Slight overlap to bring them closer together
   }
 
   .urlBarInput {

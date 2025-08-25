@@ -12,6 +12,7 @@ interface UrlBarProps {
 export const UrlBar: React.FC<UrlBarProps> = ({value, onChange}) => {
   return (
     <div className={moduleStyles.urlBarContainer}>
+      <span className={moduleStyles.spacer} />
       <div className={moduleStyles.navigationButtons}>
         <Button
           onClick={() => {}}
