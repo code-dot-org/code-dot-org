@@ -37,8 +37,9 @@ const AiDiffNotificationList: React.FC = () => {
       });
   }, []);
 
-  if (!notifications || notifications.length === 0) {
-    return <div className={styles.noNotifications}>{'no notifications'}</div>;
+  if (!loading && (!notifications || notifications.length === 0)) {
+    // TODO(lfm): add empty state design
+    return <div className={styles.listContainer}>{'no notifications'}</div>;
   }
 
   return (
