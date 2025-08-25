@@ -11,7 +11,7 @@ module Cdo
   # Lazily loads global configurations for regional pages
   module GlobalEdition
     REGION_KEY = 'ge_region'
-    ROOT_PATH = '/global'
+    ROOT_PATH = ''
 
     # Retrieves a list a global region names.
     REGIONS = Dir.glob('*.yml', base: CDO.dir('config', 'global_editions')).map {|f| File.basename(f, '.yml')}.freeze
@@ -49,17 +49,59 @@ module Cdo
       data.freeze
     end
 
+    # Replaces some string keys in the configuration
+    def self.deep_replace(value, dictionary)
+      case value
+      when String
+        # Replace :region with the contents of the variable `region`
+        dictionary.each do |find, replace|
+          value.gsub!(find.to_s, replace)
+        end
+        value
+      when Hash
+        # Recursively call deep_replace on each key-value pair in the hash
+        value.each {|key, val| value[key] = deep_replace(val, dictionary)}
+      when Array
+        # Recursively call deep_replace on each element of the array
+        value.map {|val| deep_replace(val, dictionary)}
+      else
+        # Return value as-is if it's neither a String, Hash, nor Array
+        value
+      end
+    end
+
     # Retrieves the global configuration for the given region.
     def self.configuration_for(region)
       @@configurations ||= {}
-      @@configurations[region.to_s] ||= load_config(region) || {}
+      @@configurations[region.to_s] ||= begin
+        config = load_config(region) || {}
+
+        # Replace :region tag before freezing
+        deep_replace(config, {
+                       ':region': region,
+                     }
+        )
+
+        deep_freeze(config)
+      end
     end
 
     # Returns the parsed configuration for the given region.
-    def self.load_config(region)
+    def self.load_config(region, inheriting = false)
       return unless region_available?(region)
       config = YAML.load_file(CDO.dir('config', 'global_editions', "#{region}.yml")) || {}
-      deep_freeze(config.deep_symbolize_keys)
+      config = config.deep_symbolize_keys
+
+      # If this inherits, load the inherited region too
+      # (But only allow one inherit, to avoid loops or misconfigurations)
+      if config[:inherit] && !inheriting
+        inherited = load_config(config[:inherit], true)
+
+        # Merge
+        config = inherited.merge(config)
+      end
+
+      config
     end
 
     def self.target_host?(hostname)
