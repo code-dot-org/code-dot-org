@@ -3,6 +3,7 @@ require 'test_helper'
 class OmniauthCallbacksControllerTest < ActionController::TestCase
   include Mocha::API
   include UsersHelper
+  include Minitest::RSpecMocks
   STUB_ENCRYPTION_KEY = SecureRandom.base64(Encryption::KEY_LENGTH / 8)
 
   # This is a sample AuthHash provided by omniauth-clever plugin
@@ -1775,6 +1776,26 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
           assert_equal I18n.t('lti.account_linking.admin_not_allowed'), flash[:alert]
           assert_redirected_to user_session_path
         end
+      end
+    end
+  end
+
+  describe '#register_new_user' do
+    let(:disallowed_domains) {['testdomain.com']}
+    let(:email) {"user@#{disallowed_domains.first}"}
+    let(:auth) {generate_auth_user_hash(provider: AuthenticationOption::GOOGLE, uid: 'some-uid', email: email)}
+
+    context 'when a user has an email domain that is disallowed' do
+      before do
+        @request.env['omniauth.auth'] = auth
+        @request.env['omniauth.params'] = {}
+        stub_const('Policies::Devise::EmailDomains::DISALLOWED_DOMAINS', disallowed_domains)
+      end
+
+      it 'does not create a new user and redirects to the sign in page with an alert' do
+        _(-> {post :google_oauth2, params: {omniauth: auth}}).wont_change -> {User.count}
+        assert_redirected_to new_user_session_path
+        _(flash[:alert]).must_equal I18n.t('devise.registrations.disallowed_domain', domain: disallowed_domains.first)
       end
     end
   end
