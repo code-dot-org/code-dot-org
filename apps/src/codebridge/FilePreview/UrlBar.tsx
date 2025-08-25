@@ -1,5 +1,6 @@
 import Button from '@code-dot-org/component-library/button';
 import TextField from '@code-dot-org/component-library/textField';
+import classNames from 'classnames';
 import React from 'react';
 
 import moduleStyles from './styles/url-bar.module.scss';
@@ -12,8 +13,12 @@ interface UrlBarProps {
 export const UrlBar: React.FC<UrlBarProps> = ({value, onChange}) => {
   return (
     <div className={moduleStyles.urlBarContainer}>
-      <span className={moduleStyles.spacer} />
-      <div className={moduleStyles.navButtonsWrapper}>
+      <div
+        className={classNames(
+          moduleStyles.urlButtonsWrapper,
+          moduleStyles.navButtonsWrapper
+        )}
+      >
         <Button
           onClick={() => {}}
           aria-label="Navigate back"
@@ -40,7 +45,12 @@ export const UrlBar: React.FC<UrlBarProps> = ({value, onChange}) => {
         size={'s'}
         className={moduleStyles.urlBarInput}
       />
-      <div className={moduleStyles.refreshButtonWrapper}>
+      <div
+        className={classNames(
+          moduleStyles.urlButtonsWrapper,
+          moduleStyles.refreshButtonWrapper
+        )}
+      >
         <Button
           onClick={() => {}}
           aria-label="Refresh"

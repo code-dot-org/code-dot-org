@@ -7,11 +7,10 @@ $url-bar-height: 24px;
   align-items: flex-start; // Align to top to prevent height issues
   gap: 0;
   border-top: 1px solid var(--borders-neutral-primary);
-  // Wrapper for the URL buttons
-  .navButtonsWrapper {
-    border-radius: var((--border-radius-br-s, 4px 0 0 4px));
+
+  // Wrapper for the URL buttons and refresh button
+  .urlButtonsWrapper {
     border: 1px solid var(--borders-neutral-strong);
-    border-right: none;
     display: flex;
     background-color: var(--background-neutral-primary);
     height: $url-bar-height;
@@ -19,17 +18,17 @@ $url-bar-height: 24px;
     box-sizing: border-box;
   }
 
-    // Wrapper for the refresh button
-    .refreshButtonWrapper {
-      border-radius: var((--border-radius-br-s, 0 4px 4px 0));
-      border: 1px solid var(--borders-neutral-strong);
-      border-left: none;
-      display: flex;
-      background-color: var(--background-neutral-primary);
-      height: $url-bar-height;
-      overflow: hidden;
-      box-sizing: border-box;
-    }
+  // Customize style for the URL buttons
+  .navButtonsWrapper {
+    border-radius: var((--border-radius-br-s, 4px 0 0 4px));      
+    border-right: none;
+  }
+
+  // Customize style for the refresh button
+  .refreshButtonWrapper {
+    border-radius: var((--border-radius-br-s, 0 4px 4px 0));
+    border-left: none;
+  }
 
   .urlButton {
     color: var(--text-neutral-quaternary) !important;
@@ -37,8 +36,8 @@ $url-bar-height: 24px;
   }
 
   .urlBarInput {
-    border-radius: 0;
     border: 1px solid var(--borders-neutral-strong);
+    border-radius: 0;
     border-left: none;
     border-right: none;
     flex: 1;
