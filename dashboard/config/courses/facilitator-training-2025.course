@@ -6,7 +6,7 @@
   "original_script_names": [
     "facilitator-training"
   ],
-  "published_state": "in_development",
+  "published_state": "stable",
   "instruction_type": "self_paced",
   "participant_audience": "teacher",
   "instructor_audience": "facilitator",

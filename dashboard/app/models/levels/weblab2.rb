@@ -51,4 +51,8 @@ class Weblab2 < Level
   def uses_lab2?
     true
   end
+
+  def add_starter_asset!(_, _)
+    true
+  end
 end
