@@ -3,6 +3,7 @@ import {
   BodyThreeText,
   StrongText,
 } from '@code-dot-org/component-library/typography';
+import classNames from 'classnames';
 import React from 'react';
 
 import i18n from '@cdo/locale';
@@ -10,6 +11,7 @@ import i18n from '@cdo/locale';
 import {AiDiffNotification} from './AiDiffNotificationList';
 
 import styles from './notifications.module.scss';
+import skeletonizeContent from '@cdo/apps/sharedComponents/skeletonize-content.module.scss';
 
 const getRelativeTimeString = (date: Date): string => {
   const now = new Date();
@@ -33,28 +35,54 @@ const getRelativeTimeString = (date: Date): string => {
 };
 
 const Notification: React.FC<{
-  notification: AiDiffNotification;
+  notification: AiDiffNotification | null;
 }> = ({notification}) => {
+  const isLoading = notification === null;
+  const notificationOrPlaceholder: AiDiffNotification = notification || {
+    id: 'placeholder',
+    title: i18n.loading(),
+    description: 'Lorem ipsum dolor sit amet, postea pericula',
+    readAt: null,
+    iconName: 'spinner',
+    publishedAt: new Date(),
+  };
+
   return (
     <div className={styles.notification}>
       <FontAwesomeV6Icon
-        iconName={notification.iconName}
+        iconName={notificationOrPlaceholder.iconName}
         iconStyle="solid"
-        className={styles.icon}
+        className={classNames(
+          styles.icon,
+          isLoading && skeletonizeContent.skeletonizeContent
+        )}
       />
-      <p className={styles.text}>
+      <p
+        className={classNames(
+          styles.text,
+          isLoading && skeletonizeContent.skeletonizeContent
+        )}
+      >
         <BodyThreeText noMargin>
           <StrongText>
-            {notification.title}
+            {notificationOrPlaceholder.title}
             {': '}
           </StrongText>
-          {notification.description}
+          {notificationOrPlaceholder.description}
         </BodyThreeText>
       </p>
-      <BodyThreeText className={styles.date} noMargin>
-        {getRelativeTimeString(notification.publishedAt).toLocaleUpperCase()}
+      <BodyThreeText
+        className={classNames(
+          styles.date,
+          isLoading && skeletonizeContent.skeletonizeContent
+        )}
+        noMargin
+      >
+        {getRelativeTimeString(
+          notificationOrPlaceholder.publishedAt
+        ).toLocaleUpperCase()}
       </BodyThreeText>
-      {notification.readAt !== null ? (
+      {notificationOrPlaceholder.readAt !== null ? (
         <FontAwesomeV6Icon
           iconName="circle"
           iconStyle="solid"

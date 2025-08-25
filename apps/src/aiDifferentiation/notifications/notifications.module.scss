@@ -1,6 +1,7 @@
 .listContainer {
   height: 100%;
   overflow-y: scroll;
+  width: 100%;
 }
 
 .list {
@@ -31,6 +32,12 @@ p.text {
   font-weight: 600;
   margin-inline-end: 16px;
   margin-bottom: 0;
+  flex-grow: 1;
+  height: fit-content;
+
+  p {
+    color: inherit;
+  }
 }
 
 p.date {

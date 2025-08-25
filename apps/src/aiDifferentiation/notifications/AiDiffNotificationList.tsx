@@ -41,16 +41,20 @@ const AiDiffNotificationList: React.FC = () => {
     return <div className={styles.noNotifications}>{'no notifications'}</div>;
   }
 
-  if (loading) {
-    return <div className={styles.loading}>{'loading...'}</div>;
-  }
-
   return (
     <div className={styles.listContainer}>
       <div className={styles.list}>
-        {notifications.map(notification => (
-          <Notification notification={notification} key={notification.id} />
-        ))}
+        {loading ? (
+          <>
+            <Notification notification={null} key={1} />
+            <Notification notification={null} key={2} />
+            <Notification notification={null} key={3} />
+          </>
+        ) : (
+          notifications.map(notification => (
+            <Notification notification={notification} key={notification.id} />
+          ))
+        )}
       </div>
     </div>
   );
