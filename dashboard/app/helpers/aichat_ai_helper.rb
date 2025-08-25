@@ -13,18 +13,11 @@ module AichatAiHelper
     model_id == "gpt-4o-mini" ? SharedConstants::AICHAT_MODEL_VERSION : model_id
   end
 
-  # Get message text, including any hidden context
-  def self.get_message_text(message)
-    text = message['chatMessageText']
-    text = text + "\n" + message['hiddenContext'] if message['hiddenContext']
-    text
-  end
-
   def self.format_message_parts(message, encrypted_channel_id, level_name)
     parts = [
       AichatAiClientTypes::TextMessagePart.new(
         type: 'text',
-        content: get_message_text(message)
+        content: message['chatMessageText']
       )
     ]
 
@@ -66,6 +59,8 @@ module AichatAiHelper
     retrieval_contexts&.each do |retrieval_context|
       system_instructions << AichatAiClientTypes::TextMessagePart.new(type: 'text', content: retrieval_context)
     end
+
+    system_instructions <<  AichatAiClientTypes::TextMessagePart.new(type: 'text', content: new_message['hiddenContext']) if new_message['hiddenContext']
 
     temperature *= if model_id == "gpt-4o-mini"
                      # If OpenAI:

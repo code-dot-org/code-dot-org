@@ -14,7 +14,7 @@ class AichatAiClientTest < ActionView::TestCase
       }.stringify_keys
     ]
     @new_message = {role: 'user', chatMessageText: 'new message from user'}.stringify_keys
-    @new_message_with_hidden_context = {role: 'user', chatMessageText: 'new message from user', hiddenContext: 'extra text'}.stringify_keys
+    @new_message_with_hidden_context = {role: 'user', chatMessageText: 'new message from user', hiddenContext: 'hidden context text'}.stringify_keys
     @new_message_with_assets = {role: 'user',
        chatMessageText: 'message with assets',
        assets: [
