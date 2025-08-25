@@ -1,8 +1,10 @@
 import SegmentedButtons, {
   SegmentedButtonsProps,
 } from '@code-dot-org/component-library/segmentedButtons';
+import {OverlineTwoText} from '@code-dot-org/component-library/typography';
 import {InfoPanel} from '@codebridge/InfoPanel/InfoPanel';
 import {LayoutProps} from '@codebridge/types';
+import HeaderButtons from '@codebridge/Workspace/HeaderButtons';
 import Workspace from '@codebridge/Workspace/Workspace';
 import classNames from 'classnames';
 import React, {useEffect, useState} from 'react';
@@ -17,7 +19,7 @@ import moduleStyles from '@cdo/apps/lab2/views/components/layout/layout.module.s
 const MIN_INFO_PANEL_WIDTH = 150;
 const INITIAL_INFO_PANEL_WIDTH = 300;
 const INITIAL_INFO_PANEL_WIDTH_WIDGET = 500;
-const MIN_EDITOR_WIDTH = 300;
+const MIN_EDITOR_WIDTH = 200;
 const MIN_PREVIEW_WIDTH = 200;
 const INITIAL_PREVIEW_WIDTH = 600;
 const INITIAL_PREVIEW_WIDTH_WIDGET = 900;
@@ -159,11 +161,13 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
               justifyContent: 'space-between',
               alignItems: 'center',
               height: 40,
+              padding: '4px 8px',
+              boxSizing: 'border-box',
             }}
           >
             <SegmentedButtons {...viewModeButtonsProps} />
-            <span>WORKSPACE</span>
-            <span />
+            <OverlineTwoText style={{margin: 0}}>Workspace</OverlineTwoText>
+            <HeaderButtons />
           </div>
           <div style={{display: 'flex', flexGrow: 1}}>
             {!shouldHideEditor && viewMode !== 'preview' && (
