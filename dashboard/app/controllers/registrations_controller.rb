@@ -5,7 +5,7 @@ require_relative '../../../shared/middleware/helpers/experiments'
 require 'metrics/events'
 require 'policies/lti'
 require 'queries/lti'
-require 'policies/devise/disallowed_domains'
+require 'policies/devise/email_domains'
 
 class RegistrationsController < Devise::RegistrationsController
   before_action :require_no_authentication, only: [:account_type, :login_type, :finish_student_account, :finish_teacher_account, :new, :create, :cancel]
@@ -38,7 +38,7 @@ class RegistrationsController < Devise::RegistrationsController
   #
   def begin_sign_up
     domain = params[:user][:email].split('@')[1] if params[:user][:email].present?
-    if Policies::Devise::DisallowedDomains::DISALLOWED_DOMAINS.include?(domain)
+    if Policies::Devise::EmailDomains.disallowed_domains.include?(domain)
       render json: {
         error: I18n.t('devise.registrations.disallowed_domain', domain: domain)
       }, status: :forbidden

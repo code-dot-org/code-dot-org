@@ -59,11 +59,10 @@ module RegistrationsControllerTests
     test "user with disallowed domain in new sign-up" do
       email = "user@testdomain.com"
       # Mock the disallowed domains to include a test domain
-      original_domains = Policies::Devise::DisallowedDomains::DISALLOWED_DOMAINS
-      test_domains = ['testdomain.com']
+      test_domains = ['testdomain.com'].freeze
 
       # Stub the constant to return our test domain
-      Policies::Devise::DisallowedDomains.const_set(:DISALLOWED_DOMAINS, test_domains.freeze)
+      Policies::Devise::EmailDomains.stubs(:disallowed_domains).returns(test_domains)
 
       post '/users/begin_sign_up', params: {
         user: {
@@ -77,9 +76,6 @@ module RegistrationsControllerTests
       assert_response :forbidden
       assert_match /Emails from testdomain.com are not allowed to sign up with email and password. Please use your LMS to sign in./, @response.body
       refute PartialRegistration.in_progress? session
-    ensure
-      # Restore the original constant
-      Policies::Devise::DisallowedDomains.const_set(:DISALLOWED_DOMAINS, original_domains)
     end
 
     private def finish_email_sign_up(user_type, email)
