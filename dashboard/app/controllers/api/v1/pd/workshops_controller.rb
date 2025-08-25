@@ -235,8 +235,10 @@ class Api::V1::Pd::WorkshopsController < ApplicationController
       old_value, new_value = values
 
       case attribute
-      when "name", "capacity", "description", "notes"
+      when "course", "subject", "name", "capacity", "description", "notes"
         detail_changes << {name: attribute.capitalize, old: old_value || "(None)", new: new_value || "(None)"}
+      when "participant_group_type"
+        detail_changes << {name: "Participant group type", old: old_value || "(None)", new: new_value || "(None)"}
       when "organizer_id"
         old_organizer = old_value ? User.find(old_value) : nil
         new_organizer = new_value ? User.find(new_value) : nil
