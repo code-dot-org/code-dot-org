@@ -19,6 +19,8 @@ import {
   MouseEvent,
 } from 'react';
 
+import './onetrust.scss';
+
 import {isExternalLink} from '@/components/common/utils';
 import {Brand} from '@/config/brand';
 
@@ -41,6 +43,13 @@ export interface LanguageOption {
   text: string;
 }
 
+export interface ImageLink extends AnchorHTMLAttributes<HTMLAnchorElement> {
+  imageSrc: string;
+  label: string;
+  href: string;
+  isLinkExternal?: boolean;
+}
+
 export interface FooterProps extends HTMLAttributes<HTMLElement> {
   /** Brand */
   brand: Brand;
@@ -56,6 +65,8 @@ export interface FooterProps extends HTMLAttributes<HTMLElement> {
   onLanguageChange: (args: string) => void;
   /** The selected locale code for the language dropdown */
   selectedLocaleCode?: string;
+  /** Optional image */
+  imageLink?: ImageLink;
   /** Footer class */
   className?: string;
 }
@@ -93,6 +104,7 @@ const FooterMui: React.FC<FooterProps> = ({
   selectedLocaleCode,
   onLanguageChange,
   brand,
+  imageLink,
   className,
 }) => {
   return (
@@ -165,6 +177,16 @@ const FooterMui: React.FC<FooterProps> = ({
             <CopyrightIcon fontSize="small" />
             {copyright}
           </Copyright>
+          {/* Image Link */}
+          {imageLink && (
+            <Link
+              href={imageLink.href}
+              target={imageLink.isLinkExternal ? '_blank' : undefined}
+              rel={imageLink.isLinkExternal ? 'noopener noreferrer' : undefined}
+            >
+              <img src={imageLink.imageSrc} alt={imageLink.label} />
+            </Link>
+          )}
           {/* Social Links */}
           <Stack direction="row" spacing={1} aria-label="Social links">
             {socialLinks?.map(({key, label, icon, href}) => (
