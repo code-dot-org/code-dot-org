@@ -1,6 +1,8 @@
 import {FileId, FolderId} from '@codebridge/types';
 import {PayloadAction, createSlice} from '@reduxjs/toolkit';
 
+import {START_SOURCES} from '@cdo/apps/lab2/constants';
+import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {
   LabConfig,
   MultiFileSource,
@@ -99,17 +101,19 @@ const projectSlice = createSlice({
       }>
     ) {
       if (state.projectSources?.source) {
+        const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
         const source = state.projectSources.source as MultiFileSource;
-        const newFileId = createNewFileHelper({
+        const newSource = createNewFileHelper({
           source,
           fileName: action.payload.fileName,
           folderId: action.payload.folderId,
           url: action.payload.url,
+          isStartMode: isStartMode,
           flagged: action.payload.flagged,
         });
         state.projectSources = {
           ...state.projectSources,
-          source: newFileId,
+          source: newSource,
         };
         state.hasEdited = true;
       }
@@ -353,9 +357,14 @@ const projectSlice = createSlice({
           // No-op if the folder does not exist.
           return;
         }
+
+        const deleteResult = deleteFolderHelper({
+          source,
+          folderId: action.payload,
+        });
         state.projectSources = {
           ...state.projectSources,
-          source: deleteFolderHelper(source, action.payload),
+          source: deleteResult.newSource,
         };
         state.hasEdited = true;
       }
