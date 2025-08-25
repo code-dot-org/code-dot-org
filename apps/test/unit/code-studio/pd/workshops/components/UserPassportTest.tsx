@@ -10,6 +10,7 @@ const DEFAULT_PROPS = {
   givenName: 'Reba',
   familyName: 'McEntire',
   email: 'reba@mcentire.com',
+  educatorRole: 'Homeschool Teacher',
   schoolName: 'Sample School Name',
   schoolType: undefined,
   returnToHref: '/fake-return-url',
@@ -33,11 +34,18 @@ describe('UserPassport', () => {
     screen.getByText(DEFAULT_PROPS.schoolName);
   });
 
-  it('missing name or school shows error messages', () => {
-    renderDefault({givenName: '', schoolName: '', schoolType: ''});
+  it('missing name or role or school shows error messages', () => {
+    renderDefault({
+      givenName: '',
+      educatorRole: '',
+      schoolName: '',
+      schoolType: '',
+    });
 
     screen.getByText('Full name');
     screen.getByText('Add your full name');
+    screen.getByText('Role');
+    screen.getByText('Add your role');
     screen.getByText('School');
     screen.getByText('Add your school');
   });
@@ -51,6 +59,21 @@ describe('UserPassport', () => {
     screen.getByText('School');
     screen.getByText('Non-School Setting');
     expect(screen.queryByText('Add your school')).toBe(null);
+  });
+
+  it('edit link adds missing info params to url: missing role', () => {
+    renderDefault({educatorRole: ''});
+
+    expect(
+      screen.getByRole('link', {
+        name: 'Edit',
+      })
+    ).toHaveAttribute(
+      'href',
+      `/users/edit?user_return_to=${encodeURIComponent(
+        DEFAULT_PROPS.returnToHref
+      )}&accountInformation=true`
+    );
   });
 
   it('edit link adds missing info params to url: missing full name', () => {
