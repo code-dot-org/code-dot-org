@@ -77,7 +77,6 @@ const moderateImage = async (
   ext: string,
   appName?: string
 ): Promise<'ok' | 'flagged' | 'skipped'> => {
-  return 'flagged';
   if (appName !== 'weblab2' || !['png', 'jpg', 'jpeg'].includes(ext)) {
     return 'skipped';
   }
