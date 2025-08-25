@@ -143,6 +143,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                 )}
                 onClick={() => setCurrentTab(tab)}
                 key={tab}
+                color={'gray'}
+                type={'tertiary'}
                 isIconOnly={true}
                 icon={{
                   iconName: tabInfo[tab].icon,
@@ -172,6 +174,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
               }}
               isIconOnly={true}
               icon={{iconName: 'gear'}}
+              color={'gray'}
+              type={'tertiary'}
             />
           </WithTooltip>
           <CopyrightButton theme={theme} />

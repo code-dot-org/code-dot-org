@@ -39,6 +39,8 @@ const ButtonWithDialog: React.FunctionComponent<ButtonWithDialogProps> = ({
           id={`uitest-${id}-button`}
           isIconOnly={true}
           icon={{iconName: iconName}}
+          color={'gray'}
+          type={'tertiary'}
         />
       </WithTooltip>
       {Dialog}

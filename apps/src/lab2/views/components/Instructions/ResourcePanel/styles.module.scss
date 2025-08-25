@@ -18,8 +18,8 @@
     flex-direction: column;
   }
 
-  .tabButton {
-    @include remove-button-styles;
+  // Doubling class name to increase specificity and override default button styles.
+  .tabButton.tabButton {
     height: 2rem;
     width: 2rem;
     min-width: 2rem;
@@ -27,13 +27,6 @@
     border: 1px solid var(--borders-neutral-primary);
     border-right: none;
     border-radius: 4px 0 0 4px;
-    background-color: var(--background-neutral-secondary);
-
-    // Overwrite default button styles.
-    &:active {
-      border: 1px solid var(--borders-neutral-primary) !important;
-      border-right: none !important;
-    }
 
     &.selected {
       background-color: var(--background-neutral-primary);
@@ -54,21 +47,16 @@
     padding: 8px 0;
   }
 
-  .bottomButton {
-    @include remove-button-styles;
+
+  // Doubling class name to increase specificity and override default button styles.
+  .bottomButton.bottomButton {
     height: 2rem;
     width: 2rem;
     min-width: 2rem;
 
     i {
-      color: var(--text-neutral-secondary);
       font-size: 14px;
     }
-
-    &:active, &:hover, &.selected {
-      background-color: var(--background-neutral-tertiary);
-    }
-
   }
 }
 
