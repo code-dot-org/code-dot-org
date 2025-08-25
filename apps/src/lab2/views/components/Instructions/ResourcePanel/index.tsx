@@ -1,8 +1,6 @@
+import {Button} from '@code-dot-org/component-library/button';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
-import {
-  default as FontAwesomeV6Icon,
-  kitIcons,
-} from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {kitIcons} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import classNames from 'classnames';
 import React, {useMemo, useState} from 'react';
@@ -138,22 +136,23 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
               }}
               key={`tooltip-${tab}`}
             >
-              <button
-                type="button"
+              <Button
                 className={classNames(
                   styles.tabButton,
                   tab === currentTab && styles.selected
                 )}
                 onClick={() => setCurrentTab(tab)}
                 key={tab}
-              >
-                <FontAwesomeV6Icon
-                  iconName={tabInfo[tab].icon}
-                  iconFamily={
-                    kitIcons.has(tabInfo[tab].icon) ? 'kit' : undefined
-                  }
-                />
-              </button>
+                color={'gray'}
+                type={'tertiary'}
+                isIconOnly={true}
+                icon={{
+                  iconName: tabInfo[tab].icon,
+                  iconFamily: kitIcons.has(tabInfo[tab].icon)
+                    ? 'kit'
+                    : undefined,
+                }}
+              />
             </WithTooltip>
           ))}
         </div>
@@ -168,15 +167,16 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
               'data-theme': theme,
             }}
           >
-            <button
-              type="button"
+            <Button
               className={styles.bottomButton}
               onClick={() => {
                 setIsSettingsOpen(!isSettingsOpen);
               }}
-            >
-              <FontAwesomeV6Icon iconName={'gear'} />
-            </button>
+              isIconOnly={true}
+              icon={{iconName: 'gear'}}
+              color={'gray'}
+              type={'tertiary'}
+            />
           </WithTooltip>
           <CopyrightButton theme={theme} />
         </div>
