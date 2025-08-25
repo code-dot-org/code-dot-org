@@ -39,7 +39,7 @@ export type ConfigType = {
   activeLayout?: LayoutKey;
   validMimeTypes?: string[];
   layoutComponents: {
-    horizontal: React.FunctionComponent<LayoutProps>;
+    horizontal?: React.FunctionComponent<LayoutProps>;
     vertical: React.FunctionComponent<LayoutProps>;
     share?: React.FunctionComponent<LayoutProps>;
     widget?: React.FunctionComponent<LayoutProps>;

@@ -1,6 +1,5 @@
 require 'test_helper'
 require 'contentful'
-require_relative '../../engines/marketing/app/helpers/external_notifications_helper'
 
 class NotificationsControllerTest < ActionDispatch::IntegrationTest
   include Minitest::RSpecMocks
@@ -61,7 +60,7 @@ class NotificationsControllerTest < ActionDispatch::IntegrationTest
 
     context 'with contentful data' do
       it 'returns user external notifications' do
-        ExternalNotificationsHelper.stubs(:get_contentful_notifications_for_user).returns([entry_1, entry_2])
+        Notifications.stubs(:get_all).returns([entry_1, entry_2])
         get '/notifications'
 
         assert_response :success

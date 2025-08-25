@@ -21,23 +21,23 @@ markdown <<MARKDOWN
 #### Review the threat vocabulary below. If you have time, check out the activity levels for each threat.
 
 <div style="background-color: #e3f2fd; padding: 10px; border-left: 5px solid #2196f3; margin-bottom: 20px; font-size: 16px">
-      <strong>Malware</strong> is software designed to harm, disrupt, or gain unauthorized access to a system. <br><i>Check out the <a href='https://studio.code.org/courses/6-12-dev-playground/units/7/lessons/2/levels/1' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>curriculum level</a> to learn more.</i>
+      <strong>Malware</strong> is software designed to harm, disrupt, or gain unauthorized access to a system. <br><i>Check out the <a href='https://studio.code.org/courses/ai-powered-threats-and-defenses-2025/units/1/lessons/2/levels/3' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>curriculum level</a> to learn more.</i>
 </div>
 
 <div style="background-color: #f3e5f5; padding: 10px; border-left: 5px solid #9c27b0; margin-bottom: 20px; font-size: 16px">
-      <strong>Ransomware</strong> is a type of malware that locks or encrypts files on a computer, then demands payment (often in money or cryptocurrency) to restore access. <br><i>Check out the <a href='https://studio.code.org/courses/6-12-dev-playground/units/7/lessons/2/levels/2' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>curriculum level</a> to learn more.</i>
+      <strong>Ransomware</strong> is a type of malware that locks or encrypts files on a computer, then demands payment (often in money or cryptocurrency) to restore access. <br><i>Check out the <a href='https://studio.code.org/courses/ai-powered-threats-and-defenses-2025/units/1/lessons/2/levels/4' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>curriculum level</a> to learn more.</i>
 </div>
 
 <div style="background-color: #e3f2fd; padding: 10px; border-left: 5px solid #2196f3; margin-bottom: 20px; font-size: 16px">
-      <strong>Misconfiguration</strong> is a mistake or oversight in system settings that makes it easier for attackers to gain access. These issues can happen accidentally or as a result of poor default settings that leave files or systems too open.<br><i>Check out the <a href='https://studio.code.org/courses/6-12-dev-playground/units/7/lessons/2/levels/3' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>curriculum level</a> to learn more.</i>
+      <strong>Misconfiguration</strong> is a mistake or oversight in system settings that makes it easier for attackers to gain access. These issues can happen accidentally or as a result of poor default settings that leave files or systems too open.<br><i>Check out the <a href='https://studio.code.org/courses/ai-powered-threats-and-defenses-2025/units/1/lessons/2/levels/2' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>curriculum level</a> to learn more.</i>
 </div>
 
 <div style="background-color: #f3e5f5; padding: 10px; border-left: 5px solid #9c27b0; margin-bottom: 20px; font-size: 16px">
-      <strong>Distributed Denial of Service (DDoS) attack</strong> happens when many devices flood a website or server with requests at the same time. This overwhelms the system, slows it down, or crashes it, preventing others from getting in. <br><i>Check out the <a href='https://studio.code.org/courses/6-12-dev-playground/units/7/lessons/2/levels/4' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>curriculum level</a> to learn more.</i>
+      <strong>Distributed Denial of Service (DDoS) attack</strong> happens when many devices flood a website or server with requests at the same time. This overwhelms the system, slows it down, or crashes it, preventing others from getting in. <br><i>Check out the <a href='https://studio.code.org/courses/ai-powered-threats-and-defenses-2025/units/1/lessons/2/levels/1' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>curriculum level</a> to learn more.</i>
 </div>
 
 <p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
-    ➡️ These levels are from Lesson 2. You can find more details in the full <a href='https://studio.code.org/s/aif5-2025/lessons/2' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a>.
+    ➡️ These levels are from Lesson 2. You can find more details in the full <a href='https://studio.code.org/courses/ai-powered-threats-and-defenses-2025/units/1/lessons/2' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a>.
 </p>
 
 MARKDOWN

@@ -11,8 +11,16 @@ import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {TestResults} from '@cdo/apps/constants';
 import {setIsBlockedAbuse} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
-import {ProjectSources, MultiFileSource, FileId} from '@cdo/apps/lab2/types';
-import {deleteFileHelper} from '@cdo/apps/lab2/utils/multiFileSourceEditUtils';
+import {
+  ProjectSources,
+  MultiFileSource,
+  FileId,
+  FolderId,
+} from '@cdo/apps/lab2/types';
+import {
+  deleteFileHelper,
+  deleteFolderHelper,
+} from '@cdo/apps/lab2/utils/multiFileSourceEditUtils';
 import {RootState} from '@cdo/apps/types/redux';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
@@ -177,9 +185,47 @@ export const moveFileThunk = makeFileOperationThunk(moveFile);
 export const moveFolderThunk = makeFileOperationThunk(moveFolder);
 export const createNewFolderThunk = makeFileOperationThunk(createNewFolder);
 export const toggleOpenFolderThunk = makeFileOperationThunk(toggleOpenFolder);
-export const deleteFolderThunk = makeFileOperationThunk(deleteFolder);
 export const renameFolderThunk = makeFileOperationThunk(renameFolder);
 export const rearrangeFilesThunk = makeFileOperationThunk(rearrangeFiles);
+
+// Thunk for deleting a folder that handles unblocking of project if deleted folder contains flagged file.
+export const deleteFolderThunk = createAsyncThunk<
+  void,
+  {folderId: FolderId},
+  {dispatch: AppDispatch; state: RootState}
+>('lab2Project/deleteFolderThunk', async (payload, thunkAPI) => {
+  const state = thunkAPI.getState();
+  const projectSources = state.lab2Project.projectSources;
+  const isBlockedAbuse = state.lab.isBlockedAbuse;
+  const source = projectSources?.source as MultiFileSource;
+  const deleteResult = deleteFolderHelper({source, folderId: payload.folderId});
+  // Update the project sources.
+  thunkAPI.dispatch(deleteFolder(payload.folderId));
+  saveProjectIfEditable(thunkAPI.getState, thunkAPI.dispatch);
+
+  const {deletedFilesAssets} = deleteResult;
+
+  if (deletedFilesAssets) {
+    try {
+      for (const deletedFileAsset of deletedFilesAssets) {
+        await HttpClient.delete(deletedFileAsset.url);
+        if (deletedFileAsset.flagged && isBlockedAbuse) {
+          await unflagProjectChannel(
+            deletedFileAsset.channelId,
+            thunkAPI.dispatch
+          );
+        }
+      }
+    } catch (error) {
+      Lab2Registry.getInstance()
+        .getMetricsReporter()
+        .logError(
+          'Error deleting project asset (as part of folder deletion) from S3',
+          error as Error
+        );
+    }
+  }
+});
 
 // Thunk for deleting a file that handles unblocking of project if deleted file was flagged.
 export const deleteFileThunk = createAsyncThunk<
@@ -209,30 +255,10 @@ export const deleteFileThunk = createAsyncThunk<
       await HttpClient.delete(deletedFileAsset.url);
       // If the project is blocked for abuse, unblock the project if the abuse score is now < 15.
       if (isBlockedAbuse) {
-        try {
-          const body = JSON.stringify({type: 'unflag'});
-          const response = await HttpClient.post(
-            `/v3/channels/${deletedFileAsset.channelId}/abuse/image`,
-            body,
-            true,
-            {'Content-Type': 'application/json; charset=UTF-8'}
-          );
-
-          // Get the updated abuse score from the response.
-          const responseData = await response.json();
-          const abuseScore = responseData.abuse_score;
-          // Only unblock if abuse score is now < 15.
-          if (abuseScore < 15) {
-            thunkAPI.dispatch(setIsBlockedAbuse(false));
-          }
-        } catch (error) {
-          Lab2Registry.getInstance()
-            .getMetricsReporter()
-            .logError(
-              'Error unflagging project channel due to deletion of flagged project asset',
-              error as Error
-            );
-        }
+        await unflagProjectChannel(
+          deletedFileAsset.channelId,
+          thunkAPI.dispatch
+        );
       }
     } catch (error) {
       Lab2Registry.getInstance()
@@ -278,3 +304,33 @@ const debouncedStartedProgressReport = debounce(
   },
   100
 );
+
+const unflagProjectChannel = async (
+  channelId: string,
+  dispatch: AppDispatch
+) => {
+  try {
+    const body = JSON.stringify({type: 'unflag'});
+    const response = await HttpClient.post(
+      `/v3/channels/${channelId}/abuse/image`,
+      body,
+      true,
+      {'Content-Type': 'application/json; charset=UTF-8'}
+    );
+
+    // Get the updated abuse score from the response.
+    const responseData = await response.json();
+    const abuseScore = responseData.abuse_score;
+    // Only unblock if abuse score is now < 15.
+    if (abuseScore < 15) {
+      dispatch(setIsBlockedAbuse(false));
+    }
+  } catch (error) {
+    Lab2Registry.getInstance()
+      .getMetricsReporter()
+      .logError(
+        'Error unflagging project channel due to deletion of flagged project asset',
+        error as Error
+      );
+  }
+};

@@ -4,7 +4,6 @@ import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import UploadsDisabledModal from '@cdo/apps/sharedComponents/UploadsDisabledModal';
 import HttpClient from '@cdo/apps/util/HttpClient';
-import {createUuid} from '@cdo/apps/utils';
 
 export const enum analyticsEvents {
   UPLOAD_FAILED = 'UPLOAD_FAILED',
@@ -22,7 +21,7 @@ export type FileUploaderProps = {
     flagged?: boolean
   ) => void;
   errorCallback: (error: string, callbackArgs?: unknown) => void;
-  channelId: string;
+  uploadExternalFile: (file: File) => Promise<string>;
   validateFileName?: (fileName: string) => string | undefined;
   multiple?: boolean;
   validMimeTypes?: string[];
@@ -107,7 +106,7 @@ const moderateImage = async (
  * @property props.errorCallback - A function to be called with an error message if the upload fails.
  * @property props.validMimeTypes - An optional array of strings representing the allowed MIME types for uploaded files.
  *                                  If not provided, the hook will validate against the internal defaultMimeTypes array
- * @property props.channelId - Required so that we can upload non-text files to S3.
+ * @property props.uploadExternalFile - Required so that we can upload non-text files to S3.
  * @property props.sendAnalyticsEvent - An optional function that will be called with analytics data. It will generated analytics events for
                                         analyticsEvents.UPLOAD_UNACCEPTED_FILE, analyticsEvents.UPLOAD_FAILED, and analyticsEvents.UPLOAD_SUCCEEDED.
                                         Map them to your own analytics events. The second argument will be a record with more info, as Record<string, string>
@@ -125,7 +124,7 @@ export const useFileUploader = ({
   callback,
   errorCallback,
   validMimeTypes,
-  channelId,
+  uploadExternalFile,
   validateFileName = () => undefined,
   sendAnalyticsEvent = () => {},
   multiple = true,
@@ -197,29 +196,27 @@ export const useFileUploader = ({
         };
       } else {
         try {
-          if (!channelId) {
-            throw new Error('channelId required for file upload.');
+          if (onImageFlagged) {
+            const ext = file.name.split('.').pop()?.toLowerCase() || '';
+            const moderationStatus = await moderateImage(file, ext, appName);
+            if (moderationStatus === 'flagged') {
+              const uploadFunction = async () => {
+                const url = await uploadExternalFile(file);
+                sendAnalyticsEvent(analyticsEvents.UPLOAD_SUCCEEDED, {
+                  name: file.name,
+                  type: file.type,
+                });
+                callback(file.name, '', url, callbackArgs.current, true);
+              };
+              // FlagedImageModal will be shown to the user and user can choose to upload the image or not.
+              onImageFlagged(file, ext, uploadFunction);
+              return;
+            }
           }
 
-          const ext = file.name.split('.').pop()?.toLowerCase() || '';
-          const moderationStatus = await moderateImage(file, ext, appName);
-          if (moderationStatus === 'flagged' && onImageFlagged) {
-            const uploadFunction = async () => {
-              const url = `/v3/assets/${channelId}/${createUuid()}.${ext}`;
-              await HttpClient.put(url, file);
-              sendAnalyticsEvent(analyticsEvents.UPLOAD_SUCCEEDED, {
-                name: file.name,
-                type: file.type,
-              });
-              callback(file.name, '', url, callbackArgs.current, true);
-            };
-            // FlagedImageModal will be shown to the user and user can choose to upload the image or not.
-            onImageFlagged(file, ext, uploadFunction);
-            return;
-          }
-          // For non-text files that are not moderated and images that are deemed safe, upload directly to assets.
-          const url = `/v3/assets/${channelId}/${createUuid()}.${ext}`;
-          await HttpClient.put(url, file);
+          // For non-text files that are not moderated (eg, files uploaded in start mode by levelbuilders)
+          // and images that are deemed safe, upload directly to assets.
+          const url = await uploadExternalFile(file);
           sendAnalyticsEvent(analyticsEvents.UPLOAD_SUCCEEDED, {
             name: file.name,
             type: file.type,
@@ -238,7 +235,7 @@ export const useFileUploader = ({
     validateFileName,
     validMimeTypes,
     callback,
-    channelId,
+    uploadExternalFile,
     appName,
     onImageFlagged,
   ]);
