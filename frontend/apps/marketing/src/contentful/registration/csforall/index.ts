@@ -1,27 +1,9 @@
-import ActionBlock, {
-  ActionBlockContentfulComponentDefinition,
-} from '@/components/contentful/actionBlocks/defaultActionBlock';
-import FullWidthActionBlock, {
-  FullWidthActionBlockContentfulComponentDefinition,
-} from '@/components/contentful/actionBlocks/fullWidthActionBlock';
 import Button, {
   ButtonMuiContentfulComponentDefinition,
 } from '@/components/contentful/button';
 import Card, {
   CardContentfulComponentDefinition,
 } from '@/components/contentful/card';
-import ActionBlockCarousel, {
-  ActionBlockCarouselContentfulComponentDefinition,
-} from '@/components/contentful/carousels/actionBlockCarousel';
-import ImageCarousel, {
-  ImageCarouselContentfulComponentDefinition,
-} from '@/components/contentful/carousels/imageCarousel';
-import VideoCarousel, {
-  VideoCarouselContentfulComponentDefinition,
-} from '@/components/contentful/carousels/videoCarousel';
-import ActionBlockCollection, {
-  ActionBlockCollectionContentfulComponentDefinition,
-} from '@/components/contentful/collections/actionBlockCollection';
 import CardCollection, {
   CardCollectionContentfulComponentDefinition,
 } from '@/components/contentful/collections/cardCollection';
@@ -37,18 +19,12 @@ import AdoptionMap, {
 import Divider, {
   DividerContentfulComponentDefinition,
 } from '@/components/contentful/divider';
-import EditorialCard, {
-  EditorialCardContentfulComponentDefinition,
-} from '@/components/contentful/editorialCard';
 import FAQAccordion, {
   FAQAccordionContentfulComponentDefinition,
 } from '@/components/contentful/faqAccordion';
 import Heading, {
   HeadingContentfulComponentDefinition,
 } from '@/components/contentful/heading';
-import IconHighlight, {
-  IconHighlightContentfulComponentDefinition,
-} from '@/components/contentful/iconHighlight';
 import Iframe, {
   IframeContentfulComponentDefinition,
 } from '@/components/contentful/iframe';
@@ -73,26 +49,12 @@ import Section, {
 import Spacer, {
   SpacerContentfulComponentDefinition,
 } from '@/components/contentful/spacer';
-import TabGroup, {
-  TabGroupContentfulComponentDefinition,
-} from '@/components/contentful/tabGroup';
 import Video, {
   VideoContentfulComponentDefinition,
 } from '@/components/contentful/video';
 
 const contentfulRegistration = {
   componentRegistrations: [
-    {
-      component: ActionBlock,
-      definition: ActionBlockContentfulComponentDefinition,
-      options: {
-        wrapContainerWidth: '100%',
-      },
-    },
-    {
-      component: ActionBlockCarousel,
-      definition: ActionBlockCarouselContentfulComponentDefinition,
-    },
     {
       component: AdoptionMap,
       definition: AdoptionMapContentfulComponentDefinition,
@@ -103,10 +65,6 @@ const contentfulRegistration = {
     {
       component: Button,
       definition: ButtonMuiContentfulComponentDefinition,
-    },
-    {
-      component: ActionBlockCollection,
-      definition: ActionBlockCollectionContentfulComponentDefinition,
     },
     {
       component: CardCollection,
@@ -135,27 +93,12 @@ const contentfulRegistration = {
       },
     },
     {
-      component: EditorialCard,
-      definition: EditorialCardContentfulComponentDefinition,
-    },
-    {
       component: FAQAccordion,
       definition: FAQAccordionContentfulComponentDefinition,
     },
     {
-      component: FullWidthActionBlock,
-      definition: FullWidthActionBlockContentfulComponentDefinition,
-      options: {
-        wrapContainerWidth: '100%',
-      },
-    },
-    {
       component: Heading,
       definition: HeadingContentfulComponentDefinition,
-    },
-    {
-      component: IconHighlight,
-      definition: IconHighlightContentfulComponentDefinition,
     },
     {
       component: Iframe,
@@ -167,10 +110,6 @@ const contentfulRegistration = {
     {
       component: Image,
       definition: ImageCSforAllContentfulComponentDefinition,
-    },
-    {
-      component: ImageCarousel,
-      definition: ImageCarouselContentfulComponentDefinition,
     },
     {
       component: Link,
@@ -196,17 +135,12 @@ const contentfulRegistration = {
       component: Spacer,
       definition: SpacerContentfulComponentDefinition,
     },
-    {component: TabGroup, definition: TabGroupContentfulComponentDefinition},
     {
       component: Video,
       definition: VideoContentfulComponentDefinition,
       options: {
         wrapContainerWidth: '100%',
       },
-    },
-    {
-      component: VideoCarousel,
-      definition: VideoCarouselContentfulComponentDefinition,
     },
   ],
   options: {
