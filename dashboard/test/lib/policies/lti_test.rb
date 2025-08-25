@@ -3,6 +3,8 @@ require 'user'
 require 'policies/lti'
 
 class Policies::LtiTest < ActiveSupport::TestCase
+  include Minitest::RSpecMocks
+
   setup do
     @ids = ['http://some-iss.com', ['some-aud'], 'some-sub'].freeze
     @roles_key = Policies::Lti::LTI_ROLES_KEY
@@ -216,6 +218,28 @@ class Policies::LtiTest < ActiveSupport::TestCase
       ::PartialRegistration.persist_attributes session, partial_teacher
 
       refute Policies::Lti.lti_registration_in_progress?(session)
+    end
+  end
+
+  describe '.restricted_user?' do
+    let(:user) {create(:user)}
+    let(:deployment) {create(:lti_deployment)}
+    let(:restricted_user?) {described_class.restricted_user?(user)}
+    let(:lti_user_identity) {create(:lti_user_identity, user: user, attach_deployments: [deployment])}
+
+    it 'returns false for normal users' do
+      _(restricted_user?).must_equal false
+    end
+
+    context 'when user is associated with a restricted LTI deployment' do
+      before do
+        lti_user_identity
+        stub_const('Policies::Lti::DeploymentConfiguration::RESTRICTED_DEPLOYMENTS', [deployment.id])
+      end
+
+      it 'returns true' do
+        _(restricted_user?).must_equal true
+      end
     end
   end
 end
