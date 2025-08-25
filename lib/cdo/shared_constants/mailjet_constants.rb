@@ -1,4 +1,6 @@
 module MailJetConstants
+  MAILJET_RETRY_LIMIT = 5
+
   EMAILS = {
     welcome: {
       template_id: {
@@ -29,15 +31,6 @@ module MailJetConstants
         development: {
           default: 6_205_188,
         }
-      },
-      from_address: 'noreply@code.org',
-      from_name: 'Code.org',
-    },
-    inactive_teacher_deletion_warning: {
-      template_id: {
-        production: {
-          default: 7_237_538,
-        },
       },
       from_address: 'noreply@code.org',
       from_name: 'Code.org',
