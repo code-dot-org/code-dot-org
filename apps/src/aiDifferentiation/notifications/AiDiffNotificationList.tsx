@@ -25,12 +25,12 @@ const AiDiffNotificationList: React.FC = () => {
     HttpClient.fetchJson<AiDiffNotification[]>('/notifications', {}, undefined)
       .then(response => {
         setLoading(false);
-        const notification = response.value.map(n => ({
+        const loadedNotifications = response.value.map(n => ({
           ...n,
           publishedAt: new Date(n.publishedAt),
           readAt: n.readAt ? new Date(n.readAt) : null,
         }));
-        setNotifications(notification);
+        setNotifications(loadedNotifications);
       })
       .catch(error => {
         console.error('Error fetching notifications:', error);
