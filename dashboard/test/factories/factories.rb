@@ -2310,4 +2310,26 @@ FactoryBot.define do
   factory :user_data_retention_status, class: 'User::DataRetentionStatus' do
     association :user
   end
+
+  factory :foorm_submission, class: 'Foorm::Submission' do
+    form_name {''}
+    form_version {1}
+    answers {''}
+  end
+
+  factory :simple_survey_form, class: 'Foorm::SimpleSurveyForm' do
+    form_name {''}
+    form_version {1}
+    path {'path'}
+  end
+
+  factory :simple_survey_submission, class: 'Foorm::SimpleSurveySubmission' do
+    association :user
+    association :simple_survey_form
+  end
+
+  factory :misc_survey, class: 'Pd::MiscSurvey' do
+    association :user
+    form_id {1}
+  end
 end
