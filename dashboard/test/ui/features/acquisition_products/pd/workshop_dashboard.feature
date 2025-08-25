@@ -1,7 +1,7 @@
 @dashboard_db_access
-@eyes
 Feature: Workshop Dashboard
 
+@eyes
 Scenario: New workshop: BYOW
   Given I am a program manager named "Test BYO PM" for regional partner "Test Partner"
   Given there is a facilitator named "Test BYO Facilitator 1" for course "Build Your Own Workshop"
@@ -47,6 +47,29 @@ Scenario: New workshop: BYOW
 
   And I see no difference for "created workshop details: BYO"
   And I close my eyes
+
+  And I get the workshop id from the current url
+  And I clean up my records
+
+Scenario: Edit workshop: BYOW
+  Given I create a teacher named "Morgan Izer"
+  And I make the teacher named "Morgan Izer" a workshop organizer
+  And I sign in as "Morgan Izer"
+
+  Then I create a workshop for course "Build Your Own Workshop" organized by "Morgan Izer" with 3 people
+  And I am on "http://studio.code.org/pd/workshop_dashboard"
+  And I wait until element "a:contains('View Workshop')" is visible
+  And I click selector "a:contains('View Workshop')"
+  And I wait until element "span:contains('Workshop Information: ')" is visible
+
+  Then I click selector "button:contains('Edit')"
+  And I wait until element "h1:contains('Edit Build Your Own Workshop')" is visible
+  Then I press keys "This is a new description." for element "textarea[name='description']"
+  And I click selector "button:contains('Publish')"
+  And I wait until element "h2:contains('Workshop Detail Change')" is visible
+  Then I click selector "button:contains('Notify')"
+  And I wait until element "h2:contains('Workshop Detail Change')" is not visible
+  And I wait until element "span:contains('Workshop Information: ')" is visible
 
   And I get the workshop id from the current url
   And I clean up my records
