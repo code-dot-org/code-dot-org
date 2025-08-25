@@ -13,8 +13,15 @@ import {HTMLPreview} from '@cdo/apps/codebridge/FilePreview/HTMLPreview';
 import {useVerticalLayout} from '@cdo/apps/lab2/hooks/useVerticalLayout';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import weblab2I18n from '@cdo/apps/weblab2/locale';
 
 import moduleStyles from '@cdo/apps/lab2/views/components/layout/layout.module.scss';
+
+enum ViewMode {
+  SPLIT = 'split',
+  CODE = 'code',
+  PREVIEW = 'preview',
+}
 
 const MIN_INFO_PANEL_WIDTH = 150;
 const INITIAL_INFO_PANEL_WIDTH = 300;
@@ -28,7 +35,8 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
   isProjectLevel,
   isWidgetView,
 }) => {
-  const [viewMode, setViewMode] = useState<string>('splitView');
+  const [viewMode, setViewMode] = useState<ViewMode>(ViewMode.SPLIT);
+
   const widgetViewShowCode = useAppSelector(
     state => state.codebridgeWorkspace.widgetViewShowCode
   );
@@ -76,36 +84,33 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
   const viewModeButtonsProps: SegmentedButtonsProps = {
     buttons: [
       {
-        label: 'Code',
-        value: 'code',
+        label: weblab2I18n.code(),
+        value: ViewMode.CODE,
         iconLeft: {
           iconName: 'code',
           iconStyle: 'solid',
-          title: 'code',
         },
       },
       {
-        label: 'Preview',
-        value: 'preview',
+        label: weblab2I18n.preview(),
+        value: ViewMode.PREVIEW,
         iconLeft: {
           iconName: 'eye',
           iconStyle: 'solid',
-          title: 'preview',
         },
       },
       {
-        label: 'Split View',
-        value: 'splitView',
+        label: weblab2I18n.splitView(),
+        value: ViewMode.SPLIT,
         iconLeft: {
           iconName: 'table-columns',
           iconStyle: 'solid',
-          title: 'split-view',
         },
       },
     ],
     size: 'xs',
     selectedButtonValue: viewMode,
-    onChange: (viewMode: string) => setViewMode(viewMode),
+    onChange: viewMode => setViewMode(viewMode as ViewMode),
   };
 
   useEffect(() => {
@@ -149,28 +154,20 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
           </>
         )}
         <div
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            flexGrow: 1,
-          }}
+          className={classNames(
+            moduleStyles.flexColumn,
+            moduleStyles.shrinkAndGrow
+          )}
         >
-          <div
-            style={{
-              display: 'flex',
-              justifyContent: 'space-between',
-              alignItems: 'center',
-              height: 40,
-              padding: '4px 8px',
-              boxSizing: 'border-box',
-            }}
-          >
+          <div className={moduleStyles.headerContainer}>
             <SegmentedButtons {...viewModeButtonsProps} />
-            <OverlineTwoText style={{margin: 0}}>Workspace</OverlineTwoText>
+            <OverlineTwoText noMargin>
+              {weblab2I18n.workspace()}
+            </OverlineTwoText>
             <HeaderButtons />
           </div>
-          <div style={{display: 'flex', flexGrow: 1}}>
-            {!shouldHideEditor && viewMode !== 'preview' && (
+          <div className={moduleStyles.editorAndPreviewContainer}>
+            {!shouldHideEditor && viewMode !== ViewMode.PREVIEW && (
               <>
                 <Workspace
                   style={{width: middlePanelWidth}}
@@ -187,7 +184,7 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
                 />
               </>
             )}
-            {viewMode !== 'code' && (
+            {viewMode !== ViewMode.CODE && (
               <div
                 style={{width: rightPanelWidth}}
                 className={classNames(
