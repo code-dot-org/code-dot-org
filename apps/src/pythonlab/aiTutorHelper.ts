@@ -35,7 +35,7 @@ const getAiTutor2Context = (
     miniAppName !== `neighborhood`
       ? []
       : [
-          'Here is some documentation for the Neighborhood (Painter) API used in this lab (as markdown).  IMPORTANT - this documentation is not readily available to the student.  Please assume the student is not looking at this documentation and provide helpful answers based on it.  If you want to reference it make sure the student knows how to view the documentation for the current level (it is available by clicking the documentation button above the code editor with the book icon):',
+          'Here is some documentation for the Neighborhood (Painter) API used in this lab (as markdown).  IMPORTANT -  Please assume the student is not looking at this documentation but provide helpful answers based on it.  If you want to reference it make sure the student knows how to view the documentation for the current level (it is available by clicking the documentation button above the code editor with the book icon):',
           painterDocsMarkdown,
         ];
 
