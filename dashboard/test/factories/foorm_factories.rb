@@ -1037,6 +1037,7 @@ FactoryBot.define do
                  ],
                  "rows": [
                    {
+                     "category": "facilitators",
                      "value": "demonstrated_knowledge",
                      "text": "Demonstrated knowledge of the curriculum."
                    },
@@ -1063,11 +1064,13 @@ FactoryBot.define do
                  ]
                },
                {
+                 "category": "facilitators",
                  "type": "comment",
                  "name": "k5_facilitator_did_well",
                  "title": "What were two things {panel.facilitator_name} did well?"
                },
                {
+                "category": "facilitators",
                  "type": "comment",
                  "name": "k5_facilitator_could_improve",
                  "title": "What were two things {panel.facilitator_name} could do better?"
@@ -1283,7 +1286,7 @@ FactoryBot.define do
             "modality_met_needs": "1"
           },
           "barriers_implementation_curriculum":["needs_more_preparation","lack_admin_support"],
-          "uncategorized_feedback": "Overall experience was okay"
+          "other_feedback": "Overall experience was okay"
         }'
       end
     end
@@ -1303,7 +1306,7 @@ FactoryBot.define do
             "modality_met_needs": "7"
           },
           "barriers_implementation_curriculum":["none"],
-          "uncategorized_feedback": "Amazing workshop experience!"
+          "other_feedback": "Amazing workshop experience!"
         }'
       end
     end
@@ -1429,8 +1432,9 @@ FactoryBot.define do
                 ]
               },
               {
+                "category": "other",
                 "type": "comment",
-                "name": "uncategorized_feedback",
+                "name": "other_feedback",
                 "title": "Any other feedback about the workshop?"
               }
             ]

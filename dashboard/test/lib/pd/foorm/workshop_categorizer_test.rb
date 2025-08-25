@@ -33,14 +33,9 @@ module Pd::Foorm
       assert_equal :logistics, WorkshopCategorizer.determine_category('LOGISTICS')
     end
 
-    test 'determine_category handles dynamic categories and falls back to other for nil or invalid values' do
+    test 'determine_category handles dynamic categories' do
       # Any string category should be converted to symbol
       assert_equal :custom_category, WorkshopCategorizer.determine_category('custom_category')
-
-      # Invalid inputs should fall back to :other
-      assert_equal :other, WorkshopCategorizer.determine_category('')
-      assert_equal :other, WorkshopCategorizer.determine_category(nil)
-      assert_equal :other, WorkshopCategorizer.determine_category(123)
     end
 
     test 'promoter_percentage_scale? correctly identifies Promoter percentage vs Likert scales' do
@@ -199,6 +194,12 @@ module Pd::Foorm
               type: 'singleSelect',
               category: 'logistics',
               choices: {'high' => 'High', 'low' => 'Low'}
+            },
+            'other_question' => {
+              title: 'Other Question',
+              type: 'singleSelect',
+              category: 'other',
+              choices: {'1' => 'Strongly Disagree', '7' => 'Strongly Agree'}
             }
           }
         },
@@ -212,7 +213,8 @@ module Pd::Foorm
             'form1' => {
               'impl_question' => {'yes' => 8, 'no' => 2},
               'engage_question' => {'high' => 6, 'low' => 4},
-              'log_question' => {'high' => 7, 'low' => 3}
+              'log_question' => {'high' => 7, 'low' => 3},
+              'other_question' => {'1' => 4, '7' => 10}
             }
           }
         }
@@ -247,8 +249,13 @@ module Pd::Foorm
       assert_equal 'log_question', engage_questions['log_question'][:question_name]
       assert_equal 'Logistics Question', engage_questions['log_question'][:question_text]
 
-      # Other categories should be empty
-      assert_equal({}, result[:other][:questions])
+      # Check other category has the right question
+      other_questions = result[:other][:questions]
+      assert_equal 1, other_questions.length
+      assert_equal 'other_question', other_questions['other_question'][:question_name]
+      assert_equal 'Other Question', other_questions['other_question'][:question_text]
+
+      # Facilitators categories should be empty
       assert_equal({}, result[:facilitators])
     end
 
@@ -354,39 +361,6 @@ module Pd::Foorm
       fac2_questions = result[:facilitators]['fac2'][:questions]
       assert_equal 1, fac2_questions.length
       assert_equal 'Jane Doe was helpful', fac2_questions['fac_question'][:question_text]
-    end
-
-    test 'categorize_survey_data handles uncategorized questions in other' do
-      parsed_forms_with_categories = {
-        general: {
-          'form1' => {
-            'uncategorized_question' => {
-              title: 'Uncategorized Question',
-              type: 'singleSelect',
-              choices: {'option1' => 'Option 1'}
-            }
-          }
-        },
-        facilitator: {}
-      }
-
-      summarized_answers = {
-        'Survey1' => {
-          general: {
-            'form1' => {
-              'uncategorized_question' => {'option1' => 5}
-            }
-          }
-        }
-      }
-
-      result = WorkshopCategorizer.categorize_survey_data(parsed_forms_with_categories, summarized_answers, nil)
-
-      # Question should end up in 'other' category
-      other_questions = result[:other][:questions]
-      assert_equal 1, other_questions.length
-      assert_equal 'uncategorized_question', other_questions['uncategorized_question'][:question_name]
-      assert_equal 'Uncategorized Question', other_questions['uncategorized_question'][:question_text]
     end
   end
 end
