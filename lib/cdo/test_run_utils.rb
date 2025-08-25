@@ -32,7 +32,20 @@ module TestRunUtils
         if parallel
           RakeUtils.rake_stream_output 'parallel:test'
         else
-          RakeUtils.system_stream_output "RAILS_ENV=#{rack_env}", "RACK_ENV=#{rack_env}", 'bundle', 'exec', 'rails', 'test'
+          RakeUtils.system_stream_output(
+            # Disable AWS access when running in drone or local development.
+            "AWS_EC2_METADATA_DISABLED=true",
+            "AWS_ACCESS_KEY_ID=",
+            "AWS_SECRET_ACCESS_KEY=",
+            "AWS_SESSION_TOKEN=",
+            "AWS_PROFILE=invalid",
+            "RAILS_ENV=#{rack_env}",
+            "RACK_ENV=#{rack_env}",
+            'bundle',
+            'exec',
+            'rails',
+            'test'
+            )
         end
       end
     end
