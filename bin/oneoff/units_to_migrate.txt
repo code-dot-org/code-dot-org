@@ -3,7 +3,6 @@ cspunit2ch2assessment
 cspunit1ch1assessment
 fesbinary
 csd3-draft
-csp3-research-mxghyt
 csp4-pilot
 csp1-pilot
 csp1-pilot-staging
@@ -15,4 +14,3 @@ csp2-pilot
 csp6-pilot
 csp10-pilot
 csp4-preview
-sb-chardev-v1
