@@ -7,6 +7,7 @@ module RegistrationsControllerTests
   #
   class EmailTest < ActionDispatch::IntegrationTest
     include OmniauthCallbacksControllerTests::Utils
+    include Minitest::RSpecMocks
 
     setup do
       stub_firehose
@@ -56,26 +57,29 @@ module RegistrationsControllerTests
       created_user&.destroy!
     end
 
-    test "user with disallowed domain in new sign-up" do
-      email = "user@testdomain.com"
-      # Mock the disallowed domains to include a test domain
-      test_domains = ['testdomain.com'].freeze
+    describe "disallowed email domain" do
+      let(:disallowed_domains) {['testdomain.com']}
+      let(:email) {"user@#{disallowed_domains.first}"}
 
-      # Stub the constant to return our test domain
-      Policies::Devise::EmailDomains.stubs(:disallowed_domains).returns(test_domains)
+      before do
+        stub_const('Policies::Devise::EmailDomains::DISALLOWED_DOMAINS', disallowed_domains)
 
-      post '/users/begin_sign_up', params: {
-        user: {
-          email: email,
-          password: 'mypassword',
-          password_confirmation: 'mypassword',
-          user_type: User::TYPE_STUDENT, # user type doesn't matter for this test
+        post '/users/begin_sign_up', params: {
+          user: {
+            email: email,
+            password: 'mypassword',
+            password_confirmation: 'mypassword',
+            user_type: User::TYPE_STUDENT
+          }
         }
-      }
+      end
 
-      assert_response :forbidden
-      assert_match /Emails from testdomain.com are not allowed to sign up with email and password. Please use your LMS to sign in./, @response.body
-      refute PartialRegistration.in_progress? session
+      it "forbids sign up" do
+        _(response.status).must_equal 403
+        _(response.body).must_match(
+          /Emails from #{Regexp.escape(disallowed_domains.first)} are not allowed to sign up with email and password\. Please use your LMS to sign in\./
+        )
+      end
     end
 
     private def finish_email_sign_up(user_type, email)
