@@ -183,7 +183,7 @@ describe('useInitialSources', () => {
       parsedDefaultSources,
     } = renderDefault(neighborhoodLevelProperties);
     const expectedSources = getExpectedMazeSources(
-      neighborhoodLevelProperties.startSources,
+      neighborhoodLevelProperties.startSources as MultiFileSource,
       neighborhoodLevelProperties.serializedMaze!,
       '1'
     );
@@ -211,7 +211,7 @@ describe('useInitialSources', () => {
       parsedDefaultSources,
     } = renderDefault(levelProperties);
     const expectedLevelSources = getExpectedMazeSources(
-      levelProperties.startSources,
+      levelProperties.startSources as MultiFileSource,
       levelProperties.serializedMaze!,
       '1'
     );

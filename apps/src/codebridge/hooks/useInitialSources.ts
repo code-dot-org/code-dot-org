@@ -41,11 +41,11 @@ export const useInitialSources = (
 ) => {
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
   const exemplarSources = levelProperties.exemplarSources as MultiFileSource;
+  const startSources = levelProperties.startSources as MultiFileSource;
   const {
     serializedMaze,
     miniApp,
     validationFile,
-    startSources,
     templateSources,
     predictSettings,
   } = levelProperties;
