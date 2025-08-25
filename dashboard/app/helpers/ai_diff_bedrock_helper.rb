@@ -162,7 +162,7 @@ module AiDiffBedrockHelper
     }
   end
 
-  def self.filter_for_context(lesson_number, unit_num, course_names, section_contexts, labs)
+  def self.filter_for_context(lesson_number, unit_num, course_names, section_contexts, labs = [])
     filter_config = {}
     and_all_filters = []
     or_all_filters = []
@@ -171,8 +171,8 @@ module AiDiffBedrockHelper
         or_all: [
           {equals: {key: "lesson", value: format("L%02d", lesson_number)}},
           {equals: {key: "lesson", value: "all"}},
-          {in: {key: 'lab', value: labs}}
-        ]
+          labs.empty? ? nil : {in: {key: 'lab', value: labs}}
+        ].compact
       )
     end
     unless unit_num.nil?
@@ -180,17 +180,21 @@ module AiDiffBedrockHelper
         or_all: [
           {equals: {key: "unit", value: format("U%02d", unit_num)}},
           {equals: {key: "unit", value: "all"}},
-          {in: {key: 'lab', value: labs}}
-        ]
+          labs.empty? ? nil : {in: {key: 'lab', value: labs}}
+        ].compact
       )
     end
     unless course_names.nil?
-      and_all_filters.push(
-        or_all: [
-          {in: {key: "course", value: course_names}},
-          {in: {key: 'lab', value: labs}}
-        ]
-      )
+      if labs.empty?
+        and_all_filters.push({in: {key: "course", value: course_names}})
+      else
+        and_all_filters.push(
+          or_all: [
+            {in: {key: "course", value: course_names}},
+            {in: {key: 'lab', value: labs}}
+          ]
+        )
+      end
     end
 
     if lesson_number.nil? && unit_num.nil? && course_names.nil?
@@ -227,7 +231,7 @@ module AiDiffBedrockHelper
     filter_config
   end
 
-  def self.request_bedrock_rag_chat(input, prompt, lesson_number, unit_num, course_name, session_id, section_contexts, labs)
+  def self.request_bedrock_rag_chat(input, prompt, lesson_number, unit_num, course_name, session_id, section_contexts, labs = [])
     config = format_inputs_for_bedrock_request(input, prompt)
     config[:session_id] = session_id unless session_id.nil?
     filter_config = filter_for_context(lesson_number, unit_num, course_name, section_contexts, labs)
