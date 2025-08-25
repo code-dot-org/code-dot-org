@@ -7,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "## Let’s put together a story! \r\n\r\nMake sure the story prints out when you run the program.\r\n",
-    "ai_tutor2_available": "true",
+    "ai_tutor_available": "true",
     "submittable": "false",
     "hide_share_and_remix": "true",
     "enable_micro_bit": "false",

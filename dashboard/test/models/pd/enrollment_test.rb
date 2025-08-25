@@ -101,21 +101,13 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     csp_summer_workshop = build(:csp_summer_workshop)
     csp_summer_workshop_enrollment = build(:pd_enrollment, workshop: csp_summer_workshop)
 
-    csp_academic_year_workshop = build(:csp_academic_year_workshop)
-    csp_academic_year_workshop_enrollment = build(:pd_enrollment, workshop: csp_academic_year_workshop)
-
-    csf_deep_dive_workshop = build(:csf_deep_dive_workshop)
-    csf_201_workshop_enrollment = build(:pd_enrollment, workshop: csf_deep_dive_workshop)
-
-    csf_intro_workshop = build(:csf_intro_workshop)
-    csf_intro_workshop_enrollment = build(:pd_enrollment, workshop: csf_intro_workshop)
+    byo_workshop = build(:byo_workshop)
+    byo_workshop_enrollment = build(:pd_enrollment, workshop: byo_workshop)
 
     assert_equal "/pd/workshop_pre_survey?enrollmentCode=#{csp_summer_workshop_enrollment.code}",
       URI(csp_summer_workshop_enrollment.pre_workshop_survey_url).path + '?' + URI(csp_summer_workshop_enrollment.pre_workshop_survey_url).query
-    assert_equal "/pd/workshop_pre_survey?enrollmentCode=#{csp_academic_year_workshop_enrollment.code}",
-      URI(csp_academic_year_workshop_enrollment.pre_workshop_survey_url).path + '?' + URI(csp_academic_year_workshop_enrollment.pre_workshop_survey_url).query
-    assert_equal '/pd/workshop_survey/csf/pre201', URI(csf_201_workshop_enrollment.pre_workshop_survey_url).path
-    assert_nil csf_intro_workshop_enrollment.pre_workshop_survey_url
+    assert_equal "/pd/workshop_pre_survey?enrollmentCode=#{byo_workshop_enrollment.code}",
+      URI(byo_workshop_enrollment.pre_workshop_survey_url).path + '?' + URI(byo_workshop_enrollment.pre_workshop_survey_url).query
   end
 
   test 'exit_survey_url' do
@@ -132,88 +124,6 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     assert_equal studio_url["/pd/workshop_survey/post/#{local_summer_enrollment.code}"], local_summer_enrollment.exit_survey_url
     assert_equal studio_url["/pd/workshop_survey/post/#{csp_enrollment.code}"], csp_enrollment.exit_survey_url
     assert_equal studio_url["/pd/workshop_survey/post/#{byo_enrollment.code}"], byo_enrollment.exit_survey_url
-  end
-
-  test 'should_send_exit_survey' do
-    normal_workshop = create(:workshop, :ended)
-    normal_enrollment = create(:pd_enrollment, workshop: normal_workshop)
-
-    assert normal_enrollment.should_send_exit_survey?
-
-    fit_workshop = build(:fit_workshop, :ended)
-    # workshop subject is deprecated so validation must be skipped
-    fit_workshop.save(validate: false)
-    fit_enrollment = create(:pd_enrollment, user: create(:teacher), workshop: fit_workshop)
-
-    refute fit_enrollment.should_send_exit_survey?
-  end
-
-  test 'send_exit_survey does not send mail when the survey was already sent' do
-    enrollment = create(:pd_enrollment, user: create(:teacher), survey_sent_at: Time.now)
-    Pd::WorkshopMailer.expects(:exit_survey).never
-
-    enrollment.send_exit_survey
-  end
-
-  test 'send_exit_survey does not send mail for FIT Weekend workshops' do
-    workshop = build(:fit_workshop, :ended)
-    # workshop subject is deprecated so validation must be skipped
-    workshop.save(validate: false)
-    enrollment = create(:pd_enrollment, user: create(:teacher), workshop: workshop)
-    Pd::WorkshopMailer.expects(:exit_survey).never
-
-    enrollment.send_exit_survey
-  end
-
-  test 'send_exit_survey does not send mail for EIR:Admin/Counselor workshops' do
-    workshop = create(:admin_counselor_workshop, :ended)
-    enrollment = create(:pd_enrollment, user: create(:teacher), workshop: workshop)
-    Pd::WorkshopMailer.expects(:exit_survey).never
-
-    enrollment.send_exit_survey
-  end
-
-  test 'send_exit_survey does not send mail for workshops without exit survey URL' do
-    enrollment = create(:pd_enrollment, user: create(:teacher))
-
-    Pd::Enrollment.any_instance.expects(:exit_survey_url).returns(nil)
-    Pd::WorkshopMailer.expects(:exit_survey).never
-
-    enrollment.send_exit_survey
-  end
-
-  test 'send_exit_survey tries to send email and, if successful, updates survey_sent_at ' do
-    enrollment = create(:pd_enrollment, user: create(:teacher))
-
-    mock_mail = stub(deliver_now: nil)
-    Pd::WorkshopMailer.expects(:exit_survey).once.returns(mock_mail)
-
-    enrollment.send_exit_survey
-    refute_nil enrollment.reload.survey_sent_at
-  end
-
-  test 'send_exit_survey tries to send email and, if unsuccessful, does not update survey_sent_at' do
-    enrollment = create(:pd_enrollment, user: create(:teacher))
-
-    Pd::WorkshopMailer.expects(:exit_survey).once.returns(nil)
-
-    enrollment.send_exit_survey
-    assert_nil enrollment.reload.survey_sent_at
-  end
-
-  test 'send_exit_survey sends email to both the users email and alternate email if available and for a summer workshop' do
-    mock_mail = stub(deliver_now: nil)
-
-    teacher = create(:teacher)
-    workshop = create(:summer_workshop, course: Pd::SharedWorkshopConstants::COURSE_CSD)
-    application = create(:pd_teacher_application, course: 'csd', application_year: workshop.school_year, user: teacher, status: 'accepted')
-    enrollment = create(:pd_enrollment, application_id: application.id, user: teacher, workshop: workshop)
-
-    Pd::WorkshopMailer.expects(:exit_survey).with(enrollment).returns(mock_mail)
-    Pd::WorkshopMailer.expects(:exit_survey).with(enrollment, teacher.alternate_email).returns(mock_mail)
-
-    enrollment.send_exit_survey
-    refute_nil enrollment.reload.survey_sent_at
   end
 
   test 'name is deprecated and calls through to full_name' do

@@ -1,10 +1,14 @@
 'use client';
 
+import {getCookie} from 'cookies-next/client';
+
 import DSCOHeader, {
   getDefaultHeaderProps,
 } from '@code-dot-org/component-library/cms/header';
 
+import {getStage} from '@/config/stage';
 import {getStudioBaseUrl} from '@/config/studio';
+import {getCookieNameByStage} from '@/cookies/getCookie';
 import logoImage from '@public/images/cdo-logo-inverse.svg';
 import allProjectsImage from '@public/images/header-all-projects-icon.webp';
 import appLabImage from '@public/images/header-app-lab-icon.webp';
@@ -28,6 +32,12 @@ const defaultProps = getDefaultHeaderProps({
   studioUrl: getStudioBaseUrl(),
 });
 
-const Header: React.FC = () => <DSCOHeader {...defaultProps} />;
+const Header: React.FC = () => {
+  const isSignedIn = async (): Promise<boolean> => {
+    return !!getCookie(getCookieNameByStage('_shortName', getStage()));
+  };
+
+  return <DSCOHeader {...defaultProps} isSignedIn={isSignedIn} />;
+};
 
 export default Header;

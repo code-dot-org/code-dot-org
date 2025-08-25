@@ -314,24 +314,16 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
       course_version = CourseVersion.find_by_id(params[:course_version_id])
       return head :bad_request unless course_version
 
-      case course_version.content_root_type
-      when 'UnitGroup'
-        course_id = course_version.content_root_id
-        @course = UnitGroup.get_from_cache(course_id)
-        return head :bad_request unless @course
-        return head :forbidden unless @course.course_assignable?(current_user)
-        @unit = if @course.single_unit_course?
-                  @course.units_for_user(current_user).first
-                else
-                  params[:unit_id] ? Unit.get_from_cache(params[:unit_id]) : nil
-                end
-        return head :bad_request if @unit && @course && @unit.unit_groups.exclude?(@course)
-      when 'Unit'
-        unit_id = course_version.content_root_id
-        @unit = Unit.get_from_cache(unit_id)
-        return head :bad_request unless @unit
-        return head :forbidden unless @unit.course_assignable?(current_user)
-      end
+      course_id = course_version.content_root_id
+      @course = UnitGroup.get_from_cache(course_id)
+      return head :bad_request unless @course
+      return head :forbidden unless @course.course_assignable?(current_user)
+      @unit = if @course.single_unit_course?
+                @course.units_for_user(current_user).first
+              else
+                params[:unit_id] ? Unit.get_from_cache(params[:unit_id]) : nil
+              end
+      return head :bad_request if @unit && @course && @unit.unit_groups.exclude?(@course)
     else
       # Should not get a unit_id unless also get a course version which is course
       return head :bad_request if params[:unit_id]

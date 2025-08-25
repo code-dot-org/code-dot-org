@@ -1,0 +1,12 @@
+name 'csaif_pl_2_aithreats_11'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Station Overview
+
+* #### Access Control
+* #### Authentication
+* #### Accounting (Lesson 8)
+
+MARKDOWN

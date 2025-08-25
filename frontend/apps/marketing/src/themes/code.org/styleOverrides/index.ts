@@ -19,6 +19,7 @@ import {
   TABLE_CONTAINER_OVERRIDES,
 } from './table';
 import {TYPOGRAPHY_OVERRIDES} from './typography';
+import {VIDEO_OVERRIDES} from './video';
 
 export const STYLE_OVERRIDES: Components<Theme> = {
   MuiButton: BUTTON_OVERRIDES,
@@ -37,4 +38,5 @@ export const STYLE_OVERRIDES: Components<Theme> = {
   MuiTableRow: TABLE_ROW_OVERRIDES,
   MuiTableContainer: TABLE_CONTAINER_OVERRIDES,
   MuiTypography: TYPOGRAPHY_OVERRIDES,
+  MuiVideo: VIDEO_OVERRIDES,
 };

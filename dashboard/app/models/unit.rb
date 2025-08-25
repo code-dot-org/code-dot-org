@@ -69,7 +69,6 @@ class Unit < ApplicationRecord
   has_many :unit_group_units, foreign_key: 'script_id', dependent: :destroy
   has_many :unit_groups, through: :unit_group_units
   belongs_to :original_unit_group, class_name: 'UnitGroup', optional: true
-  has_one :course_version, as: :content_root, dependent: :destroy
 
   scope(
     :with_associated_models, lambda do
@@ -100,11 +99,6 @@ class Unit < ApplicationRecord
           },
           {
             unit_group_units: :unit_group
-          },
-          {
-            course_version: {
-              course_offering: :course_versions
-            }
           }
         ]
       )
@@ -121,7 +115,6 @@ class Unit < ApplicationRecord
               unit_group: :course_version
             }
           },
-          :course_version,
           :lesson_groups,
           {
             lessons: [
@@ -176,17 +169,6 @@ class Unit < ApplicationRecord
   def deeper_learning_courses_cannot_be_launched
     if old_professional_learning_course? && (launched? || pilot?)
       errors.add(:published_state, 'can never be pilot, preview or stable for a deeper learning course.')
-    end
-  end
-
-  after_save :check_course_type_settings
-
-  def check_course_type_settings
-    if is_course?
-      raise 'Published state must be set on the unit if its a standalone unit.' if published_state.nil?
-      raise 'Instructor audience must be set on the unit if its a standalone unit.' if instructor_audience.nil?
-      raise 'Participant audience must be set on the unit if its a standalone unit.' if participant_audience.nil?
-      raise 'Instruction type must be set on the unit if its a standalone unit.' if instruction_type.nil?
     end
   end
 
@@ -283,10 +265,6 @@ class Unit < ApplicationRecord
     end
   end
 
-  # is_course - true if this Unit is intended to be the root of a
-  #   CourseOffering version.  Used during seeding to create the appropriate
-  #   CourseVersion and CourseOffering objects. For example, this should be
-  #   true for CourseA-CourseF .script files.
   # seeded_from - a timestamp indicating when this object was seeded from
   #   its script_json file, as determined by the serialized_at value within
   #   said json.  Expect this to be nil on levelbulider, since those objects
@@ -321,7 +299,6 @@ class Unit < ApplicationRecord
     project_sharing
     curriculum_umbrella
     tts
-    is_course
     show_calendar
     weekly_instructional_minutes
     include_student_lesson_plans
@@ -362,7 +339,7 @@ class Unit < ApplicationRecord
 
     def family_names
       Rails.cache.fetch('script/family_names', force: !Unit.should_cache?) do
-        (CourseVersion.course_offering_keys('Unit') + ScriptConstants::DEPRECATED_FAMILY_NAMES).uniq.sort
+        ScriptConstants::DEPRECATED_FAMILY_NAMES.sort
       end
     end
 
@@ -1128,7 +1105,6 @@ class Unit < ApplicationRecord
 
       unit.generate_plc_objects
 
-      CourseOffering.add_course_offering(unit) if unit.is_course
       unit
     end
   end
@@ -1211,7 +1187,7 @@ class Unit < ApplicationRecord
     end
   end
 
-  def clone_migrated_unit(new_name, new_level_suffix: nil, destination_unit_group_name: nil, destination_professional_learning_course: nil, version_year: nil, family_name:  nil)
+  def clone_migrated_unit(new_name, new_level_suffix: nil, destination_unit_group_name: nil, destination_professional_learning_course: nil)
     raise 'Unit name has already been taken' if Unit.find_by_name(new_name) || File.exist?(Unit.script_json_filepath(new_name))
 
     if destination_professional_learning_course.nil? && old_professional_learning_course?
@@ -1237,7 +1213,6 @@ class Unit < ApplicationRecord
         copied_unit.announcements = nil
         copied_unit.name = new_name
 
-        copied_unit.is_course = destination_unit_group.nil? && destination_professional_learning_course.nil?
         copied_unit.published_state = destination_unit_group.nil? ? Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development : nil
         copied_unit.instruction_type = destination_unit_group.nil? ? get_instruction_type : nil
         copied_unit.participant_audience = destination_unit_group.nil? ? get_participant_audience : nil
@@ -1253,12 +1228,6 @@ class Unit < ApplicationRecord
           UnitGroupUnit.create!(unit_group: destination_unit_group, script: copied_unit, position: destination_unit_group.default_units.length + 1)
           copied_unit.update!(original_unit_group: destination_unit_group)
           copied_unit.reload
-        else
-          raise "Must supply version year if new unit will be a standalone unit" unless version_year
-          copied_unit.version_year = version_year
-          raise "Must supply family name if new unit will be a standalone unit" unless family_name
-          copied_unit.family_name = family_name
-          CourseOffering.add_course_offering(copied_unit)
         end
 
         copied_unit.save! if copied_unit.changed?
@@ -1611,7 +1580,6 @@ class Unit < ApplicationRecord
         hasStandards: has_standards_associations?,
         tts: tts?,
         deprecated: deprecated?,
-        is_course: is_course?,
         is_migrated: is_migrated?,
         scriptPath: unit_path,
         showCalendar: is_migrated ? show_calendar : false, #prevent calendar from showing for non-migrated units for now
@@ -1696,11 +1664,9 @@ class Unit < ApplicationRecord
     include_lessons = false
     summary = summarize(include_lessons, unit_group_unit: original_unit_group_unit)
     summary[:lesson_groups] = lesson_groups.map(&:summarize_for_unit_edit)
-    summary[:courseOfferingEditPath] = edit_course_offering_path(course_version&.course_offering&.key) if course_version
-    summary[:missingRequiredDeviceCompatibilities] = course_version&.course_offering&.missing_required_device_compatibility?
-    summary[:coursePublishedState] = unit_group ? unit_group.published_state : published_state
-    summary[:unitPublishedState] = unit_group ? published_state : nil
-    summary[:isCSDCourseOffering] = unit_group&.course_version&.course_offering&.csd?
+    summary[:coursePublishedState] = original_unit_group ? original_unit_group.published_state : published_state
+    summary[:unitPublishedState] = original_unit_group ? published_state : nil
+    summary[:isCSDCourseOffering] = original_unit_group&.course_version&.course_offering&.csd?
     summary[:allowMajorCurriculumChanges] = allow_major_curriculum_changes?
     summary
   end
@@ -1799,22 +1765,15 @@ class Unit < ApplicationRecord
   end
 
   # Returns summary object of all the course versions that an instructor can
-  # assign or all the launched versions a participant can view. 'course_assignable'
-  # will always return false for participants so they will fall into the second check for
-  # launched and can_view_version?. For instructors if course_assignable? is false then
-  # launched will also be false.
-  def summarize_course_versions(user = nil, locale_code = 'en-us', unit_group: nil)
-    unit_group ||= original_unit_group
-
-    return {} if unit_group && !unit_group.single_unit_course?
-
+  # assign or all the launched versions a participant can view. A unit can no
+  # longer have course versions, so this method will only return course versions
+  # for single-unit courses.
+  def summarize_course_versions(user = nil, locale_code = 'en-us', unit_group: original_unit_group)
     if unit_group&.single_unit_course?
       return unit_group.summarize_course_versions(user, locale_code)
     end
 
-    all_course_versions = course_version&.course_offering&.course_versions
-    course_versions_for_user = all_course_versions&.select {|cv| cv.course_assignable?(user) || (cv.launched? && cv.can_view_version?(user, locale: locale_code))}
-    course_versions_for_user&.map {|cv| cv.summarize_for_assignment_dropdown(user, locale_code)}.to_h
+    {}
   end
 
   def self.clear_cache
@@ -1930,7 +1889,6 @@ class Unit < ApplicationRecord
       :has_verified_resources,
       :project_sharing,
       :tts,
-      :is_course,
       :show_calendar,
       :is_migrated,
       :include_student_lesson_plans,
@@ -1962,12 +1920,11 @@ class Unit < ApplicationRecord
     unit_group_units.find {|ugu| ugu.unit_group == original_unit_group}
   end
 
-  # If this unit is a standalone unit, returns its CourseVersion. Otherwise,
-  # if this unit belongs to a UnitGroup, returns the UnitGroup's CourseVersion,
+  # If this unit belongs to a UnitGroup, returns the UnitGroup's CourseVersion
   # if there is one.
   # @return [CourseVersion]
   def get_course_version
-    course_version || unit_group&.course_version
+    unit_group&.course_version
   end
 
   # If a script is in a unit group, use that unit group's published state. If not, use the script's published_state

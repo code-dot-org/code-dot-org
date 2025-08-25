@@ -8,14 +8,14 @@
   "grade_levels": "K,1,2,3,4,5,6,7,8,9,10,11,12",
   "header": "self_paced",
   "image": "https://images.code.org/aaaaab8d446327cc2e2c3243124e4a9b-self-paced-pl-tile-ai-101.avif",
-  "cs_topic": null,
+  "cs_topic": "artificial_intelligence",
   "school_subject": null,
   "device_compatibility": null,
   "description": "Foundational online learning series for any teacher or educator interested in the groundbreaking world of artificial intelligence (AI) and its transformative potential in education.",
   "professional_learning_program": null,
   "video": null,
   "published_date": "2023-05-31 05:00:00 UTC",
-  "self_paced_pl_course_offering_key": null,
+  "self_paced_pl_course_offering_key": "self-paced-pl-ai-101",
   "ai_teaching_assistant_available": false,
   "facilitator_course_permissions": [
 

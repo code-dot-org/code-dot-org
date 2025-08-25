@@ -19,28 +19,28 @@
       },
       {
         "text": "##Pattern Unlock on Tablet\n\nRiley uses a pattern unlock to get into their school tablet. It’s meant to be a quick, secure way to access their device, but Riley has to try several times before it works. They often feel rushed or anxious when unlocking in front of others.",
-        "imageUrl": "https://images.code.org/344d9e9e602d11a27a7d0bb231a9ba92-Screenshot 2025-08-05 131933.png",
+        "imageUrl": "https://images.code.org/1c2e87f5c3589c7d416b1319fe282549-riley1.png",
         "key": "test-ai-powered-threats-defenses-lesson3-level3-91f6e938-059e-4b97-b572-350b4fa8bbb8",
         "fadeInOverPrevious": true,
         "layout": "text-bottom-right"
       },
       {
-        "text": "##Two-Factor Authentication (2FA) Code Entry\n\nTo access their student portal, Riley has to enter a 6-digit code sent to their phone. This extra layer of protection is important, but entering the code accurately takes effort — especially when under pressure or using one hand.",
-        "imageUrl": "https://images.code.org/ff6a9563a47e5a7dc7734f6b0a0d0556-Screenshot 2025-08-05 132238.png",
+        "text": "##Two-Factor Authentication (2FA) Code Entry\n\nTo access their student portal, Riley has to enter a 10-digit code sent to their phone. This extra layer of protection is important, but entering the code accurately takes effort — especially when under pressure or using one hand.",
+        "imageUrl": "https://images.code.org/427355d9d3efb8a730e2958dce343fa7-Screenshot 2025-08-14 124955.png",
         "key": "test-ai-powered-threats-defenses-lesson3-level3-79557c5a-46fd-42a9-8bcd-652ea77a7ed0",
         "layout": "text-bottom-right"
       },
       {
         "text": "##Gesture Unlock\n\nRiley’s tablet uses a gesture-based unlock system that doesn’t have a PIN or backup option. They have trouble drawing the shape accurately, and it’s easy for someone nearby to see and copy it.",
-        "imageUrl": "https://images.code.org/aae28e6bd6efc3e3b5167efda2034a93-Screenshot 2025-08-05 150243.png",
+        "imageUrl": "https://images.code.org/0487ee42c34e9189426d2a366ae624ad-Screenshot 2025-08-14 132625.png",
         "key": "test-ai-powered-threats-defenses-lesson3-level3-10f16dff-0ead-45fb-8aaf-e7607fe82cca",
-        "layout": "text-bottom-right"
+        "layout": "text-bottom-left"
       }
     ],
     "display_name": "Riley",
     "thumbnail_url": "https://images.code.org/f8c24c0e09b8271583a39a26dad471cb-Screenshot 2025-08-05 145035.png",
     "bubble_choice_description": "An art-loving student who uses a tablet for everything—from sketching to schoolwork. Riley has a tremor that makes touch-based security features tricky to use."
   },
-  "audit_log": "[{\"changed_at\":\"2025-08-05T20:03:34.756+00:00\",\"changed\":[\"cloned from \\\"test-ai-powered-threats-defenses-lesson4-level1\\\"\"],\"cloned_from\":\"test-ai-powered-threats-defenses-lesson4-level1\"},{\"changed_at\":\"2025-08-05 20:04:21 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-05 20:23:59 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-05 21:33:04 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-05 21:50:02 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-05 21:50:51 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-05 21:56:01 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-05 22:03:00 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-08-05T20:03:34.756+00:00\",\"changed\":[\"cloned from \\\"test-ai-powered-threats-defenses-lesson4-level1\\\"\"],\"cloned_from\":\"test-ai-powered-threats-defenses-lesson4-level1\"},{\"changed_at\":\"2025-08-05 20:04:21 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-05 20:23:59 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-05 21:33:04 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-05 21:50:02 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-05 21:50:51 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-05 21:56:01 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-05 22:03:00 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-14 19:11:42 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-14 19:50:35 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-14 20:27:13 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Panels>

@@ -5,46 +5,46 @@ description 'description here'
 markdown <<MARKDOWN
 # Getting Ready 
 
-<img src="https://images.code.org/a602561da92e97ab5bc1fe1f35cffd16-image-1679955031729.png" alt="Image of a cartoon bird wearing a hat" style="float: right; height: 275px; clear: both; margin: 0 20px 20px 0;">
+<img src="https://images.code.org/a602561da92e97ab5bc1fe1f35cffd16-image-1679955031729.png" alt="Cartoon bird wearing a hat" style="float: right; height: 275px; clear: both; margin: 0 20px 20px 0;">
 
 ## Suggested Planning Activities
 
 <hr style="clear:left">
 
 #### **Pick a module to add to your scope and sequence** 
-##### When does the module best fit into what you are already teaching?
+#### When does the module best fit into what you are already teaching?
 
-##### **Example:** If you're discussing animal habitats in science, you can integrate the “Modeling Animal Adaptations” module where students simulate different animals adapting their habitats.
+#### **Example:** If you're discussing animal habitats in science, you can integrate the “Modeling Animal Adaptations” module where students simulate different animals adapting their habitats.
 
 #### **Consider co-teaching** 
-##### What colleagues (e.g. librarian, technology specialist, general education) may want to teach lessons with you?
+#### What colleagues (e.g. librarian, technology specialist, general education) may want to teach lessons with you?
 
-##### **Example:** If you're exploring ancient civilizations in social studies, perhaps the librarian has resources or the technology specialist has software that can help students research different time periods to code their time capsules in “Coding a Time Capsule.”
+#### **Example:** If you're exploring ancient civilizations in social studies, perhaps the librarian has resources or the technology specialist has software that can help students research different time periods to code their time capsules in “Coding a Time Capsule.”
 
 
 #### **Make modifications or accommodations**
-##### How will you adapt the lessons to best meet your students' needs?
-##### **Example:** If your students are learning about the different players in a local ecosystem, students can find images of those animals, save them to their computers, and then upload those images as new sprite costumes and backgrounds to code with! For a tutorial, click <a href = "https://support.code.org/hc/en-us/articles/16555689095565-Sprite-Lab-Uploading-Custom-Sprites-and-Backgrounds" target="blank" rel="noopener noreferrer"> here </a>
+#### How will you adapt the lessons to best meet your students' needs?
+#### **Example:** If your students are learning about the different players in a local ecosystem, students can find images of those animals, save them to their computers, and then upload those images as new sprite costumes and backgrounds to code with! For a tutorial, click <a href = "https://support.code.org/hc/en-us/articles/16555689095565-Sprite-Lab-Uploading-Custom-Sprites-and-Backgrounds" target="blank" rel="noopener noreferrer"> here </a>
 
 
 ## Preparing to Teach
 
-<img src="https://images.code.org/c46adeb1f3cda223361151b3ab88a71d-image-1680733372700.png" alt="Image of a cartoon octopus holding a microphone and wearing a hat" style="float: right; height: 250px; clear: both; margin: 0 20px 20px 0;">
+<img src="https://images.code.org/c46adeb1f3cda223361151b3ab88a71d-image-1680733372700.png" alt="Cartoon octopus wearing a hat." style="float: right; height: 250px; clear: both; margin: 0 20px 20px 0;">
 
 <hr style="clear:left">
 
 #### **Preview lessons**
-##### What lessons (CS or core content) might you need to teach before teaching the module?
-##### What CS concepts or skills might be challenging for your students?  
-##### When will students need support debugging?
+#### What lessons (CS or core content) might you need to teach before teaching the module?
+#### What CS concepts or skills might be challenging for your students?  
+#### When will students need support debugging?
 
 #### **Develop a general lesson flow**
-##### When will teacher-led learning happen as a whole group?  
-##### When will student-led learning happen for individual students or pairs?
+#### When will teacher-led learning happen as a whole group?  
+#### When will student-led learning happen for individual students or pairs?
 
 #### **Keep the end in mind**
-##### What final project are students working towards?  
-##### How will students showcase and share their final projects?
+#### What final project are students working towards?  
+#### How will students showcase and share their final projects?
 
 ## Suggested Pre-Work by Module
 

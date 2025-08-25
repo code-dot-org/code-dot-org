@@ -302,11 +302,16 @@ class User < ApplicationRecord
 
   has_many :pd_workshops_organized, class_name: 'Pd::Workshop', foreign_key: :organizer_id
   has_and_belongs_to_many :pd_workshops_facilitated, class_name: 'Pd::Workshop', join_table: 'pd_workshops_facilitators', association_foreign_key: 'pd_workshop_id'
+  has_many :misc_surveys, class_name: 'Pd::MiscSurvey'
+  has_many :simple_survey_submissions, class_name: 'Foorm::SimpleSurveySubmission'
+  has_many :pd_enrollments, class_name: 'Pd::Enrollment'
 
   has_many :authentication_options, dependent: :destroy
   accepts_nested_attributes_for :authentication_options
 
   has_many :lti_user_identities, dependent: :destroy
+
+  has_many :external_notifications, dependent: :destroy
 
   has_one :latest_parental_permission_request, -> {order(updated_at: :desc)}, class_name: 'ParentalPermissionRequest'
 
@@ -502,6 +507,11 @@ class User < ApplicationRecord
       errors.add(:admin, 'must be a teacher') unless teacher?
       errors.add(:admin, 'cannot be a followed') unless sections_as_student.empty?
     end
+  end
+
+  def friendly_name(ltr = true)
+    return name unless given_name && family_name
+    ltr ? "#{given_name} #{family_name}" : "#{family_name} #{given_name}"
   end
 
   def email
