@@ -1,5 +1,5 @@
 import Alert from '@code-dot-org/component-library/alert';
-import {Button, LinkButton} from '@code-dot-org/component-library/button';
+import {LinkButton} from '@code-dot-org/component-library/button';
 import React, {
   FC,
   useMemo,
@@ -28,6 +28,7 @@ import {Loading} from './components/Loading';
 import {SurveyCategorySelection} from './components/SurveyCategorySelection';
 import {SurveyTypeSelection} from './components/SurveyTypeSelection';
 import {WorkshopTabs} from './components/WorkshopTabs';
+import {ExportSurveysButton} from './surveys/components/ExportSurveysButton';
 import {NoSurveyResponses} from './surveys/components/NoSurveyResponses';
 import {WorkshopLayoutProps, WorkshopContextValue} from './types';
 
@@ -149,9 +150,6 @@ export const WorkshopLayout: FC<WorkshopLayoutProps> = ({
     workshopLoading,
   ]);
 
-  // TODO: https://codedotorg.atlassian.net/browse/ACQ-3438
-  const handleDownload = () => {};
-
   const contextValue: WorkshopContextValue = {
     workshop,
     refetchWorkshop,
@@ -197,15 +195,7 @@ export const WorkshopLayout: FC<WorkshopLayoutProps> = ({
               />
             </>
           )}
-          {showSurveyElements && (
-            <Button
-              className={styles.exportButton}
-              iconLeft={{iconName: 'download'}}
-              onClick={handleDownload}
-              text="Export survey results"
-              size="s"
-            />
-          )}
+          {showSurveyElements && <ExportSurveysButton />}
         </div>
         {showFacilitatorSelection && (
           <FacilitatorSelection facilitators={workshop?.facilitators} />

@@ -529,3 +529,27 @@ div.card {
     margin-bottom: 1rem;
   }
 }
+
+.customDialog {
+  border-radius: 4px;
+  padding: 1.5rem;
+
+  .customDialogContent {
+    display: flex;
+    flex-direction: column;
+
+    table {
+      width: 100%;
+      margin: 1.5rem 0;
+      border-collapse: collapse;
+
+      td {
+        padding: 0.5rem 1rem 0 0;
+
+        &:last-of-type {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+}
