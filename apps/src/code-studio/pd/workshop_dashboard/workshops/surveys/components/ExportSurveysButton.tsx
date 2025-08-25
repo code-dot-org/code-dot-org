@@ -94,7 +94,6 @@ export const ExportSurveysButton = () => {
           </div>
           <Button
             onClick={() => setFormsDialogOpen(false)}
-            disabled={!workshopId || !forms?.length}
             type="secondary"
             color="gray"
             text="Close"
