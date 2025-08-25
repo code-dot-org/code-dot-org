@@ -55,7 +55,7 @@ class Api::V1::Pd::WorkshopEnrollmentCsvSerializer < ActiveModel::Serializer
   end
 
   def pre_workshop_survey
-    object.pre_workshop_survey&.try do |survey|
+    object.pre_workshop_survey&.then do |survey|
       survey.form_data_hash.merge({unitLessonShortName: survey.unit_lesson_short_name})
     end
   end
@@ -73,10 +73,10 @@ class Api::V1::Pd::WorkshopEnrollmentCsvSerializer < ActiveModel::Serializer
   end
 
   def user_school_info
-    resolved_user&.try(:school_info)
+    resolved_user&.school_info
   end
 
   def enrollment_school_info
-    object.try(:school_info)
+    object&.school_info
   end
 end
