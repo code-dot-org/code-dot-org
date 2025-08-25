@@ -1,4 +1,5 @@
 import Alert from '@code-dot-org/component-library/alert';
+import {Dialog} from '@code-dot-org/component-library/dialog';
 import {Heading1} from '@code-dot-org/component-library/typography';
 import React, {
   FC,
@@ -33,6 +34,9 @@ import {
   WorkshopFormState,
   WorkshopFormTemplateProps,
   WorkshopCourseConfig,
+  WorkshopRequest,
+  SessionRequest,
+  DestroyedSession,
 } from './types';
 import {
   workshopDataToState,
@@ -48,6 +52,11 @@ import styles from './styles.module.scss';
 export const REQUIRED_ERROR = 'Required';
 export const VALIDATION_ERROR =
   'Your form contains validation errors that must be corrected';
+const DETAIL_CHANGE_IGNORE_FIELDS = [
+  'hidden',
+  'registration_link',
+  'suppress_email',
+];
 
 export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
   config,
@@ -57,6 +66,8 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
   const {workshopId} = useParams();
   const [workshopConfig, setWorkshopConfig] = useState(config);
   const [loading, setLoading] = useState(false);
+  const [showDetailChangeEmailDialog, setShowDetailChangeEmailDialog] =
+    useState(false);
 
   const {data: workshop} = useFetch<Workshop>(
     workshopId ? `/api/v1/pd/workshops/${workshopId}` : ''
@@ -163,69 +174,129 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
     [workshopConfig?.session_fields, sessionFormState]
   );
 
-  const publish = useCallback(async () => {
-    try {
-      setLoading(true);
-      setResponseErrors([]);
-      const workshopValidationErrors = getWorkshopErrors();
-      setWorkshopErrors(workshopValidationErrors);
-      const sessionValidationErrors = getSessionErrors();
-      setSessionErrors(sessionValidationErrors);
+  // Returns if the editor has made a change of one of the fields that could trigger
+  // a Detail Change Notification email (if notify == true).
+  const madeImportantDetailChange = useCallback(() => {
+    if (!workshop) return false;
+
+    const workshopOld = workshopStateToApi(workshopDataToState(workshop));
+    const workshopNew = workshopStateToApi(workshopFormState);
+    for (const key of Object.keys(workshopOld) as Array<
+      keyof Omit<WorkshopRequest, 'sessions'>
+    >) {
       if (
-        Object.keys({...workshopValidationErrors, ...sessionValidationErrors})
-          .length
+        !DETAIL_CHANGE_IGNORE_FIELDS.includes(key) &&
+        JSON.stringify(workshopOld[key]) !== JSON.stringify(workshopNew[key])
       ) {
-        return;
+        return true;
       }
-      const workshopData = workshopStateToApi(workshopFormState);
-      const sessionData = sessionStateToApi(
-        sessionFormState,
-        workshopFormState.timeZone,
-        workshop?.sessions
-      );
+    }
 
-      const method = workshop ? 'PATCH' : 'POST';
-      const url = workshop
-        ? `/api/v1/pd/workshops/${workshop.id}`
-        : '/api/v1/pd/workshops';
-
-      const response = await fetch(url, {
-        method,
-        headers: {
-          'Content-Type': 'application/json',
-          'X-CSRF-Token': await getAuthenticityToken(),
-        },
-        body: JSON.stringify({
-          pd_workshop: {...workshopData, sessions_attributes: sessionData},
-        }),
-      });
-
-      const responseData = await response.json();
-
-      if (responseData.errors || responseData.error) {
-        const allErrors = [responseData.error]
-          .concat(responseData.errors)
-          .filter(e => !!e);
-        setResponseErrors(allErrors);
+    const sessionsOld = sessionStateToApi(
+      sessionDataToState(workshop.sessions, workshop.time_zone),
+      workshop.time_zone || workshopFormState.timeZone
+    );
+    const sessionsNew = sessionStateToApi(
+      sessionFormState,
+      workshopFormState.timeZone,
+      workshop?.sessions
+    );
+    for (const key of Object.keys(sessionsOld) as Array<
+      keyof Array<SessionRequest | DestroyedSession>
+    >) {
+      if (
+        JSON.stringify(sessionsOld[key]) !== JSON.stringify(sessionsNew[key])
+      ) {
+        return true;
       }
+    }
 
-      if (response.ok) {
-        navigate(`/workshops/${responseData.id}`);
+    return false;
+  }, [workshopFormState, sessionFormState, workshop]);
+
+  const publish = useCallback(
+    async (notify: boolean) => {
+      try {
+        const workshopData = workshopStateToApi(workshopFormState);
+        const sessionData = sessionStateToApi(
+          sessionFormState,
+          workshopFormState.timeZone,
+          workshop?.sessions
+        );
+
+        const method = workshop ? 'PATCH' : 'POST';
+        const url = workshop
+          ? `/api/v1/pd/workshops/${workshop.id}`
+          : '/api/v1/pd/workshops';
+
+        const response = await fetch(url, {
+          method,
+          headers: {
+            'Content-Type': 'application/json',
+            'X-CSRF-Token': await getAuthenticityToken(),
+          },
+          body: JSON.stringify({
+            pd_workshop: {...workshopData, sessions_attributes: sessionData},
+            notify: notify,
+          }),
+        });
+
+        const responseData = await response.json();
+
+        if (responseData.errors || responseData.error) {
+          const allErrors = [responseData.error]
+            .concat(responseData.errors)
+            .filter(e => !!e);
+          setResponseErrors(allErrors);
+        }
+
+        if (response.ok) {
+          navigate(`/workshops/${responseData.id}`);
+        }
+      } catch (error) {
+        setResponseErrors([
+          'There was a problem processing your request. Please try again or contact support@code.org',
+        ]);
+      } finally {
+        setLoading(false);
       }
-    } catch (error) {
-      setResponseErrors([
-        'There was a problem processing your request. Please try again or contact support@code.org',
-      ]);
-    } finally {
-      setLoading(false);
+    },
+    [navigate, sessionFormState, workshop, workshopFormState]
+  );
+
+  const clickPublish = useCallback(async () => {
+    // Ensure no errors before attempting to publish
+    setLoading(true);
+    setResponseErrors([]);
+    const workshopValidationErrors = getWorkshopErrors();
+    setWorkshopErrors(workshopValidationErrors);
+    const sessionValidationErrors = getSessionErrors();
+    setSessionErrors(sessionValidationErrors);
+    if (
+      Object.keys({...workshopValidationErrors, ...sessionValidationErrors})
+        .length
+    ) {
+      return;
+    }
+
+    // If there are enrollees and it's a vital detail change, open dialog asking if an email should
+    // be sent to enrollees about the change. Otherwise, just update.
+    if (
+      workshop?.enrolled_teacher_count &&
+      workshop.enrolled_teacher_count > 0 &&
+      madeImportantDetailChange()
+    ) {
+      setShowDetailChangeEmailDialog(true);
+      publish(true);
+    } else {
+      publish(false);
     }
   }, [
     getSessionErrors,
     getWorkshopErrors,
-    navigate,
-    sessionFormState,
     workshop,
-    workshopFormState,
+    madeImportantDetailChange,
+    publish,
   ]);
 
   const cancel = useCallback(
@@ -249,6 +320,23 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
 
   return (
     <form id="workshop-form-template" className={styles.container}>
+      {showDetailChangeEmailDialog && (
+        <Dialog
+          title="Workshop Detail Change"
+          description="You're making an important update to your workshop, would you like your enrollees to be notified via email?"
+          mode="light"
+          primaryButtonProps={{
+            text: 'Notify',
+            onClick: () => publish(true),
+          }}
+          secondaryButtonProps={{
+            text: "Don't notify",
+            onClick: () => publish(false),
+          }}
+          onClose={() => setShowDetailChangeEmailDialog(false)}
+          closeLabel="Cancel"
+        />
+      )}
       <Heading1 visualAppearance="heading-xl">{heading}</Heading1>
       <Basics
         capacity={workshopFormState.capacity}
@@ -305,7 +393,7 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
           <Alert key={error} type="danger" text={error} />
         ))}
       <PublishCancelButtons
-        publish={publish}
+        publish={clickPublish}
         cancel={cancel}
         loading={loading}
       />
