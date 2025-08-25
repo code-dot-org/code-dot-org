@@ -4,86 +4,43 @@
   display: flex;
   align-items: flex-start; // Align to top to prevent height issues
   gap: 0; // Remove any gap between elements
+  border-top: 1px solid var(--borders-neutral-primary);
 
-  // Create a wrapper border around the entire URL bar
-  .navigationButtons,
-  .urlBarInput {
-    border: 1px solid var(--borders-neutral-strong);
-  }
-
-  // Connect the buttons and input visually
+  // Wrapper for the navigation buttons
   .navigationButtons {
+    border-radius: var((--border-radius-br-s, 4px 0 0 4px));
+    border: 1px solid var(--borders-neutral-strong);
     border-right: none;
-    border-radius: 4px 0 0 4px;
+    display: flex;
+    background-color: var(--background-neutral-primary);
+    height: 26px; // Match the total input height including border
+    overflow: hidden; // Ensures clean appearance
+    box-sizing: border-box;
+  }
+
+  .navButton {
+    color: var(--text-neutral-quaternary) !important;
   }
 
   .urlBarInput {
+    border-radius: var((--border-radius-br-s, 0 4px 4px 0));
+    border: 1px solid var(--borders-neutral-strong);
     border-left: none;
-    border-radius: 0 4px 4px 0;
-  }
-}
+    flex: 1;
+    margin: 0;
+    padding: 0; // Remove any padding from the wrapper
+    background-color: var(--background-neutral-primary);
+    height: 26px;
+    box-sizing: border-box;
 
-.navigationButtons {
-  display: flex;
-  background-color: var(--background-neutral-primary);
-  height: 26px; // Match the total input height including border
-  overflow: hidden; // Ensures clean appearance
-  box-sizing: border-box;
-}
-
-.navButton {
-  min-width: 24px !important;
-  width: 24px !important;
-  height: 100% !important; // Fill the container height
-  padding: 0 !important;
-  border: none !important; // Remove all button borders - wrapper handles border
-  border-radius: 0 !important; // Remove button's default border radius
-  background-color: transparent !important; // Let wrapper background show through
-  color: var(--text-neutral-primary) !important;
-  
-  // Remove any default button styling and ensure proper sizing
-  &:hover {
-    background-color: var(--background-neutral-secondary) !important;
-  }
-  
-  &:focus {
-    box-shadow: none !important;
-    outline: none !important;
-  }
-}
-
-.urlBarInput {
-  flex: 1;
-  margin: 0;
-  padding: 0; // Remove any padding from the wrapper
-  background-color: var(--background-neutral-primary);
-  height: 26px;
-  box-sizing: border-box;
-  
-  // Ensure the FormFieldWrapper doesn't add spacing
-  :global(label) {
-    margin: 0 !important;
-    padding: 0 !important;
-    display: block !important;
-    height: 100%;
-  }
-  
-  // Target the input element inside the TextField
-  input {
-    width: 100%;
-    height: 100% !important;
-    padding: 4px 8px !important;
-    border: none !important; // Remove all borders - the wrapper provides the border
-    border-radius: 0 !important; // Remove border radius from input - wrapper handles it
-    font-size: 12px;
-    box-sizing: border-box !important;
-    background-color: transparent !important; // Let wrapper background show through
-    margin: 0 !important;
-    display: block !important;
-
-    &:focus {
-      outline: none !important;
-      box-shadow: none !important; // Remove any default focus styling
+    // Target the input element inside the TextField
+    input {
+      width: 100%;
+      height: 100%;
+      padding: 4px 8px;
+      border: none; // Remove all borders - the wrapper provides the border
+      border-radius: 0 4px 4px 0; // Remove border radius from input - wrapper handles it
+      font-size: var(--font-size-body-xs, 12px);
     }
   }
 }

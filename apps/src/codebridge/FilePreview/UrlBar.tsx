@@ -14,20 +14,22 @@ export const UrlBar: React.FC<UrlBarProps> = ({value, onChange}) => {
     <div className={moduleStyles.urlBarContainer}>
       <div className={moduleStyles.navigationButtons}>
         <Button
-          className={moduleStyles.navButton}
           onClick={() => {}}
           aria-label="Navigate back"
           size="xs"
+          type="tertiary"
           isIconOnly={true}
           icon={{iconName: 'chevron-left'}}
+          className={moduleStyles.navButton}
         />
         <Button
-          className={moduleStyles.navButton}
           onClick={() => {}}
           aria-label="Navigate forward"
           size="xs"
+          type="tertiary"
           isIconOnly={true}
           icon={{iconName: 'chevron-right'}}
+          className={moduleStyles.navButton}
         />
       </div>
       <TextField
