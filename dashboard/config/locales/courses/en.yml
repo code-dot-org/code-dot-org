@@ -6308,6 +6308,6 @@ en:
         sb-chardev-v1:
           title: Story Board Character Development
           description_short: ''
-          description_student: 'translation missing: en.data.script.name.sb-chardev-v1.student_description'
+          description_student: ''
           description_teacher: ''
           version_title: ''
