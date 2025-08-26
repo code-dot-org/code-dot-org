@@ -99,6 +99,11 @@ const CardCollection: React.FC<CardCollectionProps> = ({
                   ? resolvedSecondaryLinkRef
                   : undefined
               }
+              primaryButtonEventName="Card primary button clicked"
+              secondaryButtonEventName="Card secondary button clicked"
+              eventMetadata={{
+                cardTitle: title,
+              }}
             />
           </Box>
         ),
