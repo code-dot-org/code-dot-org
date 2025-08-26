@@ -12,6 +12,7 @@ export interface AiDiffNotification {
   description: string;
   readAt: Date | null;
   iconName: string;
+  iconColor: string;
   publishedAt: Date;
 }
 

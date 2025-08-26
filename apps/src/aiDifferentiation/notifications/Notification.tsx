@@ -42,11 +42,13 @@ const Notification: React.FC<{
     id: 'placeholder',
     title: i18n.loading(),
     description: 'Lorem ipsum dolor sit amet, postea pericula',
-    readAt: null,
+    readAt: new Date(),
     iconName: 'spinner',
+    iconColor: 'Gray',
     publishedAt: new Date(),
   };
 
+  console.log('lfm', `icon${notificationOrPlaceholder.iconColor}`);
   return (
     <div className={styles.notification}>
       <FontAwesomeV6Icon
@@ -54,6 +56,7 @@ const Notification: React.FC<{
         iconStyle="solid"
         className={classNames(
           styles.icon,
+          styles[`icon${notificationOrPlaceholder.iconColor}`],
           isLoading && skeletonizeContent.skeletonizeContent
         )}
       />

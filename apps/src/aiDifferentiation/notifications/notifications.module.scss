@@ -24,7 +24,34 @@
   font-size: 20px;
   margin-inline-end: 8px;
   line-height: var(--font-line-height-body-sm, 21.56px);
-  color: var(--background-brand-aqua-strong);
+}
+
+.iconGray {
+  color: var(--text-neutral-secondary);
+}
+
+.iconPurple {
+  color: var(--text-brand-purple-primary);
+}
+
+.iconBlue {
+  color: var(--text-info-primary);
+}
+
+.iconAqua {
+  color: var(--text-brand-aqua-primary);
+}
+
+.iconGreen {
+  color: var(--text-success-primary);
+}
+
+.iconRed {
+  color: var(--text-error-primary);
+}
+
+.iconOrange {
+  color: var(--text-warning-primary);
 }
 
 p.text {
