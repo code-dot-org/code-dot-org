@@ -1383,7 +1383,6 @@ Dashboard::Application.routes.draw do
 
         # Datablock Storage: Library Manifest API (=shared table metadata)
         get :get_library_manifest
-        put :set_library_manifest
 
         # Datablock Storage: Project API
         get :project_has_data
