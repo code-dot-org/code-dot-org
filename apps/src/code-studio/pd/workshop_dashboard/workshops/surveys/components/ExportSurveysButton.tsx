@@ -26,7 +26,9 @@ export const ExportSurveysButton = () => {
   const handleDownload = (form: {name: string; version: string}) => {
     if (workshopId) {
       window.open(
-        `/api/v1/pd/workshops/${workshopId}/foorm/csv_survey_report?name=${form.name}&version=${form.version}`
+        `/api/v1/pd/workshops/${workshopId}/foorm/csv_survey_report?name=${encodeURIComponent(
+          form.name
+        )}&version=${encodeURIComponent(form.version)}`
       );
     }
   };

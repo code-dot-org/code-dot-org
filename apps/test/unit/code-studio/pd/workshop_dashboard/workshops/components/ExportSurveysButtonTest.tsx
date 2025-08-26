@@ -27,8 +27,8 @@ describe('ExportSurveysButton', () => {
   beforeEach(() => {
     mockUseFetch.mockReturnValue({
       data: [
-        {name: 'form1', version: '1'},
-        {name: 'form2', version: '2'},
+        {name: 'surveys/pd/form1', version: '1'},
+        {name: 'surveys/pd/form2', version: '2'},
       ],
     });
   });
@@ -72,7 +72,7 @@ describe('ExportSurveysButton', () => {
     await user.click(downloadButtons[0]);
 
     expect(openSpy).toHaveBeenCalledWith(
-      '/api/v1/pd/workshops/42/foorm/csv_survey_report?name=form1&version=1'
+      '/api/v1/pd/workshops/42/foorm/csv_survey_report?name=surveys%2Fpd%2Fform1&version=1'
     );
     openSpy.mockRestore();
   });
