@@ -1,11 +1,10 @@
 import {useEffect, useState} from 'react';
 
 import {BLOCKLY_THEME, Themes} from '@cdo/apps/blockly/constants';
+import {getBaseName, setWorkspaceTheme} from '@cdo/apps/blockly/utils';
+import {Setting} from '@cdo/apps/lab2/views/components/Settings/SettingsDropdown';
+import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
 import {commonI18n} from '@cdo/apps/types/locale';
-
-import {getBaseName, setWorkspaceTheme} from '../../blockly/utils';
-import UserPreferences from '../../lib/util/UserPreferences';
-import {Setting} from '../views/components/Settings/SettingsDropdown';
 
 const blockThemeOptions = [
   {
