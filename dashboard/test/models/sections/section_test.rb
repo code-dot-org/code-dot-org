@@ -200,18 +200,20 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test 'course_id is required if script_id is set' do
-    section = build(:section, script_id: 1, course_id: nil)
+    script = create(:script)
+    section = Section.new(name: 'test section', script_id: script.id, course_id: nil, user: @teacher)
     refute section.valid?
     assert_equal ['Course is required'], section.errors.full_messages
   end
 
   test 'course_id is not required if script_id is not set' do
-    section = build(:section, script_id: nil, course_id: nil)
+    section = Section.new(name: 'test section', script_id: nil, course_id: nil, user: @teacher)
     assert section.valid?
   end
 
   test 'script_id is not required if course_id is set' do
-    section = build(:section, script_id: nil, course_id: 1)
+    course = create(:unit_group)
+    section = Section.new(name: 'test section', script_id: nil, course_id: course.id, user: @teacher)
     assert section.valid?
   end
 
