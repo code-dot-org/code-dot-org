@@ -12,9 +12,9 @@ const definition: BlockJson = {
   style: 'setup_blocks',
 };
 
-const generator: GeneratorFunction = block => {
+const generator: GeneratorFunction = (block, generator) => {
   return `whenSetup(function() {
-    ${Blockly.getGenerator().blockToCode(block.getNextBlock())}
+    ${generator.blockToCode(block.getNextBlock())}
   });`;
 };
 
