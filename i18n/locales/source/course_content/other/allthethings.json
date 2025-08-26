@@ -3085,6 +3085,18 @@
   "https://studio.code.org/s/allthethings/lessons/51/levels/4": {
     "long_instructions": "This level shares a template level with Level 3 in this script."
   },
+  "https://studio.code.org/s/allthethings/lessons/51/levels/5": {
+    "long_instructions": "## Web Lab 2 Lab Widget View\n\nThis is an example of widget view without toggle to view/hide code so workspace is always hidden."
+  },
+  "https://studio.code.org/s/allthethings/lessons/51/levels/6": {
+    "long_instructions": "## Web Lab 2 Lab Widget View\n\nThis is an example of widget view WITH toggle to view/hide code."
+  },
+  "https://studio.code.org/s/allthethings/lessons/51/levels/7": {
+    "long_instructions": "## Web Lab 2 Predict Level\n\nThis is an example of a predict level with free response.\n\nWhat will happen when you click on the 'Click me' button? Submit your answer and then try it out!"
+  },
+  "https://studio.code.org/s/allthethings/lessons/51/levels/8": {
+    "long_instructions": "## Web Lab 2 Predict Level\n\nThis is an example of a predict level with multiple choice options.\n\nWhat will happen when you click on the 'Click me' button? Submit your answer and then try it out!"
+  },
   "https://studio.code.org/s/allthethings/lessons/52/levels/1": {
     "long_instructions": "Try everything!"
   },
