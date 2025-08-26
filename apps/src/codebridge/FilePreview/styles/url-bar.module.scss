@@ -17,7 +17,7 @@ $url-bar-content-height: calc($url-bar-height - $vertical-padding-offset);
     border-radius: var(--border-radius-br-s, 4px);
     background-color: var(--background-neutral-primary);
     height: $url-bar-height;
-    overflow: visible; // Allow focus outlines to extend beyond container
+    overflow: visible;
     padding: 2px 2px; // Inner padding to accommodate focus outlines
     box-sizing: border-box;
     align-items: center;
@@ -27,29 +27,29 @@ $url-bar-content-height: calc($url-bar-height - $vertical-padding-offset);
   .urlButtonsWrapper {
     display: flex;
     background-color: var(--background-neutral-primary);
-    height: $url-bar-content-height; // Account for increased vertical padding
+    height: $url-bar-content-height;
     overflow: hidden;
     box-sizing: border-box;
-    align-items: center; // Center buttons vertically
+    align-items: center;
   }
   
-  // Add spacing between nav buttons and text field
+  // Add spacing between nav buttons and input
   .navButtonsWrapper {
     margin-right: 2px;
   }
   
-  // Add spacing between text field and refresh button
+  // Add spacing between input and refresh button
   .refreshButtonWrapper {
     margin-left: 2px;
   }
 
   .urlButton {
-    color: var(--text-neutral-quaternary) !important;
+    color: var(--text-neutral-quaternary);
     margin: 0;
     
     // Override button sizing for URL bar to fit within URL bar content container
-    padding: 0.125rem !important; // Smaller padding to fit within height constraints
-    min-width: auto !important; // Remove min-width constraint
+    padding: 0.125rem; // Smaller padding to fit within height constraints
+    min-width: auto; // Remove min-width constraint
     width: $url-bar-content-height;
     height: $url-bar-content-height;
     
@@ -84,10 +84,7 @@ $url-bar-content-height: calc($url-bar-height - $vertical-padding-offset);
       background-color: transparent;
 
       &:focus-visible {
-        // Let the default focus styles show properly within the padded container
-        outline: 2px solid var(--borders-brand-teal-primary);
-        outline-offset: 0;
-        position: relative;
+        outline-offset: 0; // update focus outline so that it fits within the URL bar
       }
     }
   }
