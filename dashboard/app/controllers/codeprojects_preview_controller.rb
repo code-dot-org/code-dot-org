@@ -19,6 +19,10 @@ class CodeprojectsPreviewController < ApplicationController
       "style-src 'self' https: 'unsafe-inline' blob:",
       "img-src 'self' https: data: blob: https://*.code.org",
     ]
+
+    unless rack_env?(:development)
+      policies << "upgrade-insecure-requests"
+    end
     response.headers['Content-Security-Policy'] = policies.join('; ')
     render 'show', layout: false
   end

@@ -6,7 +6,6 @@ import {MultiFileSource} from '@cdo/apps/lab2/types';
 
 import {IframeMessageType} from './constants';
 import {
-  setContentSecurityPolicy,
   updateLinksToHtmlFiles,
   updateLinksToNonHtmlFiles,
 } from './htmlParsingHelpers';
@@ -153,7 +152,7 @@ const InnerHTMLPreview = () => {
           source.folders
         );
 
-        setContentSecurityPolicy(doc);
+        //setContentSecurityPolicy(doc);
         updateLinksToNonHtmlFiles(doc, files, fullFileName);
         updateLinksToHtmlFiles(doc, fullFileName);
         const updatedContents = doc.documentElement.outerHTML;
