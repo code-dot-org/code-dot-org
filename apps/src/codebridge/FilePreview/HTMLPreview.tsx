@@ -129,6 +129,7 @@ export const HTMLPreview = () => {
     }
   }, [isIframeLoaded, previewUrl, allowUserScripts]);
 
+  console.log('currentFile in HTMLPreview', currentFile);
   return (
     <PanelContainer
       id={'html-preview'}

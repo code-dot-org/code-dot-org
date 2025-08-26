@@ -27,6 +27,8 @@ const InnerHTMLPreview = () => {
     undefined
   );
   const [allowScripts, setAllowScripts] = useState(false);
+  const [navigationHistory, setNavigationHistory] = useState<string[]>([]);
+  const [historyIndex, setHistoryIndex] = useState<number>(-1);
 
   const parentOrigin = useMemo(() => {
     const regex = /preview\.([^.]+)\.codeprojects\.org/;
@@ -62,10 +64,13 @@ const InnerHTMLPreview = () => {
           // Clear the preview if no source is provided. We are likely changing levels.
           revokeAndSetFilesToBlobs({});
           setBlobUrl(undefined);
+          setNavigationHistory([]);
+          setHistoryIndex(0);
         } else {
           setSource(data.source);
         }
       } else if (data.type === IframeMessageType.CHANGE_FILE_HREF) {
+        console.log('CHANGE_FILE_HREF: Setting currentFile to', data.filePath);
         setCurrentFile(data.filePath);
         // Tell the parent that we are changing the file, as this came from a link click.
         window.parent.postMessage(
@@ -73,6 +78,10 @@ const InnerHTMLPreview = () => {
           parentOrigin
         );
       } else if (data.type === IframeMessageType.CHANGE_FILE_URL_BAR) {
+        console.log(
+          'CHANGE_FILE_URL_BAR: Setting currentFile to',
+          data.fileName
+        );
         setCurrentFile(data.fileName);
         // We don't need to update the parent, because they initiated this change.
       } else if (data.type === IframeMessageType.SET_ALLOW_SCRIPTS) {
@@ -112,6 +121,12 @@ const InnerHTMLPreview = () => {
       const newBlobUrl = filesToBlobs[currentFile];
       if (newBlobUrl) {
         setBlobUrl(newBlobUrl);
+        console.log(
+          'currentFile in useEffect in InnerHTMLPreview',
+          currentFile
+        );
+        setNavigationHistory(prevHistory => [...prevHistory, currentFile]);
+        setHistoryIndex(prevIndex => prevIndex + 1);
       } else {
         console.error(`current file ${currentFile} not found in source files`);
         setBlobUrl(NOT_FOUND_FILE);
@@ -124,6 +139,7 @@ const InnerHTMLPreview = () => {
   // Better regeneration logic: https://codedotorg.atlassian.net/browse/CT-1259
   useEffect(() => {
     if (source) {
+      console.log('source in useEffect in InnerHTMLPreview', source);
       const files: Record<string, string> = {};
       // Handle non-HTML files. These are just converted to Blobs.
       Object.values(source.files).forEach(file => {
@@ -166,6 +182,14 @@ const InnerHTMLPreview = () => {
   }, [parentOrigin, source]);
 
   const getPreview = useCallback(() => {
+    console.log(
+      'navigationHistory in InnerHTMLPreview getPreview',
+      navigationHistory
+    );
+    console.log(
+      'historyIndex in getPreview in InnerHTMLPreview getPreview',
+      historyIndex
+    );
     // TODO: better loading/page not found UI.
     // https://codedotorg.atlassian.net/browse/CT-1258
     if (blobUrl === NOT_FOUND_FILE) {
