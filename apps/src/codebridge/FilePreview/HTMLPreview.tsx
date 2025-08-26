@@ -26,6 +26,7 @@ export const HTMLPreview = () => {
     const port = 'localhost' === environmentKey ? `:${location.port}` : '';
     return `${location.protocol}//preview.${subdomain}codeprojects.org${port}`;
   }, []);
+  const [navigationHistory, setNavigationHistory] = useState<string[]>([]);
 
   const source = useAppSelector(
     state => state.lab2Project.projectSources?.source
@@ -62,20 +63,25 @@ export const HTMLPreview = () => {
           {type: IframeMessageType.CHANGE_FILE_URL_BAR, fileName: currentFile},
           previewUrl
         );
-      } else if (
-        event.data.type === IframeMessageType.FILE_UPDATED &&
-        event.origin === previewUrl
-      ) {
+      } else if (event.data.type === IframeMessageType.FILE_UPDATED) {
         setCurrentFile(event.data.fileName);
+      } else if (
+        event.data.type === IframeMessageType.ADD_FILE_TO_NAVIGATION_HISTORY
+      ) {
+        setNavigationHistory([
+          ...navigationHistory,
+          event.data.fileToAddToNavigationHistory,
+        ]);
       }
     };
 
     window.addEventListener('message', handleMessage);
     return () => window.removeEventListener('message', handleMessage);
-  }, [previewUrl, currentFile]);
+  }, [previewUrl, currentFile, navigationHistory]);
 
   useEffect(() => {
     const debouncedUpdate = setTimeout(() => {
+      console.log('debouncedUpdate in HTMLPreview', currentFile);
       iframeRef.current?.contentWindow?.postMessage(
         {type: IframeMessageType.CHANGE_FILE_URL_BAR, fileName: currentFile},
         previewUrl
@@ -130,6 +136,7 @@ export const HTMLPreview = () => {
   }, [isIframeLoaded, previewUrl, allowUserScripts]);
 
   console.log('currentFile in HTMLPreview', currentFile);
+  console.log('navigationHistory in HTMLPreview', navigationHistory);
   return (
     <PanelContainer
       id={'html-preview'}

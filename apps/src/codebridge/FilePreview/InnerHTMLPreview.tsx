@@ -27,8 +27,8 @@ const InnerHTMLPreview = () => {
     undefined
   );
   const [allowScripts, setAllowScripts] = useState(false);
-  const [navigationHistory, setNavigationHistory] = useState<string[]>([]);
-  const [historyIndex, setHistoryIndex] = useState<number>(-1);
+  const [fileToAddToNavigationHistory, setFileToAddToNavigationHistory] =
+    useState<string | undefined>(undefined);
 
   const parentOrigin = useMemo(() => {
     const regex = /preview\.([^.]+)\.codeprojects\.org/;
@@ -64,11 +64,10 @@ const InnerHTMLPreview = () => {
           // Clear the preview if no source is provided. We are likely changing levels.
           revokeAndSetFilesToBlobs({});
           setBlobUrl(undefined);
-          setNavigationHistory([]);
-          setHistoryIndex(0);
         } else {
           setSource(data.source);
         }
+        setFileToAddToNavigationHistory(undefined);
       } else if (data.type === IframeMessageType.CHANGE_FILE_HREF) {
         console.log('CHANGE_FILE_HREF: Setting currentFile to', data.filePath);
         setCurrentFile(data.filePath);
@@ -125,14 +124,22 @@ const InnerHTMLPreview = () => {
           'currentFile in useEffect in InnerHTMLPreview',
           currentFile
         );
-        setNavigationHistory(prevHistory => [...prevHistory, currentFile]);
-        setHistoryIndex(prevIndex => prevIndex + 1);
+        if (currentFile !== fileToAddToNavigationHistory) {
+          setFileToAddToNavigationHistory(currentFile);
+          window.parent.postMessage(
+            {
+              type: IframeMessageType.ADD_FILE_TO_NAVIGATION_HISTORY,
+              fileToAddToNavigationHistory: currentFile,
+            },
+            parentOrigin
+          );
+        }
       } else {
         console.error(`current file ${currentFile} not found in source files`);
         setBlobUrl(NOT_FOUND_FILE);
       }
     }
-  }, [currentFile, filesToBlobs]);
+  }, [currentFile, fileToAddToNavigationHistory, filesToBlobs, parentOrigin]);
 
   // TODOs:
   // Support other file types (images, etc.): https://codedotorg.atlassian.net/browse/CT-1255
@@ -182,14 +189,6 @@ const InnerHTMLPreview = () => {
   }, [parentOrigin, source]);
 
   const getPreview = useCallback(() => {
-    console.log(
-      'navigationHistory in InnerHTMLPreview getPreview',
-      navigationHistory
-    );
-    console.log(
-      'historyIndex in getPreview in InnerHTMLPreview getPreview',
-      historyIndex
-    );
     // TODO: better loading/page not found UI.
     // https://codedotorg.atlassian.net/browse/CT-1258
     if (blobUrl === NOT_FOUND_FILE) {
