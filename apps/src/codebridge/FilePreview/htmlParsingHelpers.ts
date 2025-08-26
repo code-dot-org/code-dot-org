@@ -14,9 +14,6 @@ export const setContentSecurityPolicy = (doc: Document) => {
 
   const metaTag = doc.createElement('meta');
   metaTag.setAttribute('http-equiv', 'Content-Security-Policy');
-  // TODO: Improve the list of allowed origins.
-  // https://codedotorg.atlassian.net/browse/CT-579
-  metaTag.setAttribute('content', "connect-src 'self' http://numbersapi.com");
 
   const head = doc.querySelector('head');
   if (head) {

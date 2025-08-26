@@ -121,7 +121,6 @@ const InnerHTMLPreview = () => {
 
   // TODOs:
   // Support other file types (images, etc.): https://codedotorg.atlassian.net/browse/CT-1255
-  // Better regeneration logic: https://codedotorg.atlassian.net/browse/CT-1259
   useEffect(() => {
     if (source) {
       const files: Record<string, string> = {};
