@@ -33,7 +33,6 @@ class Weblab2 < Level
     submittable
     validation_enabled
     widget_view
-    widget_view_allow_show_code
     disable_edit_run_for_submission
     predict_settings
   )
