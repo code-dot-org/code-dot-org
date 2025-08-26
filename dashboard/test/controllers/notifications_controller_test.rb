@@ -5,8 +5,8 @@ class NotificationsControllerTest < ActionDispatch::IntegrationTest
   include Minitest::RSpecMocks
   TestEntry = Struct.new(:external_id, :title, :description, :icon_name, :href_links, :ai_prompts, :priority, :published_at, :expires_at, :read_at, keyword_init: true)
 
-  let(:entry_id_1) {SecureRandom.hex(10)}
-  let(:entry_id_2) {SecureRandom.hex(10)}
+  let(:entry_id_1) {SecureRandom.hex(10).to_s}
+  let(:entry_id_2) {SecureRandom.hex(10).to_s}
   let(:yesterday) {1.day.ago.iso8601}
   let(:today) {Time.now.iso8601}
   let(:tomorrow) {1.day.from_now.iso8601}
@@ -98,7 +98,9 @@ class NotificationsControllerTest < ActionDispatch::IntegrationTest
 
     context 'with valid parameters' do
       it 'successfully creates a record and marks external notifications as read' do
-        post '/notifications/mark_as_read', params: {external_notification_ids: ['TEST_ENTRY_ID_1']}
+        Notifications.stubs(:get_all).returns([entry_1, entry_2])
+
+        post '/notifications/mark_as_read', params: {external_notification_ids: [entry_1.external_id]}
         assert_response :ok
 
         response_data = JSON.parse(@response.body)
@@ -106,11 +108,13 @@ class NotificationsControllerTest < ActionDispatch::IntegrationTest
         _(response_data["message"]).must_equal "1 notification(s) marked as read"
         _(response_data["marked_count"]).must_equal 1
 
-        _(ExternalNotification.find_by(external_id: 'TEST_ENTRY_ID_1', user: user)&.read_at).wont_be_nil
+        _(ExternalNotification.find_by(external_id: entry_1.external_id, user: user)&.read_at).wont_be_nil
       end
 
       it 'successfully creates a record and marks external notifications for multiple notifications' do
-        post '/notifications/mark_as_read', params: {external_notification_ids: ['TEST_ENTRY_ID_1', 'TEST_ENTRY_ID_2']}
+        Notifications.stubs(:get_all).returns([entry_1, entry_2])
+
+        post '/notifications/mark_as_read', params: {external_notification_ids: [entry_1.external_id, entry_2.external_id]}
         assert_response :ok
 
         response_data = JSON.parse(@response.body)
@@ -118,15 +122,17 @@ class NotificationsControllerTest < ActionDispatch::IntegrationTest
         _(response_data["message"]).must_equal "2 notification(s) marked as read"
         _(response_data["marked_count"]).must_equal 2
 
-        _(ExternalNotification.find_by(external_id: 'TEST_ENTRY_ID_1', user: user)&.read_at).wont_be_nil
-        _(ExternalNotification.find_by(external_id: 'TEST_ENTRY_ID_2', user: user)&.read_at).wont_be_nil
+        _(ExternalNotification.find_by(external_id: entry_1.external_id, user: user)&.read_at).wont_be_nil
+        _(ExternalNotification.find_by(external_id: entry_2.external_id, user: user)&.read_at).wont_be_nil
       end
 
       it 'creates and updates multiple notifications' do
-        yesterday = 1.day.ago
-        external_notification1 = create_external_notification(user, external_id: 'TEST_ENTRY_ID_1', read_at: yesterday)
+        Notifications.stubs(:get_all).returns([entry_1, entry_2])
 
-        post '/notifications/mark_as_read', params: {external_notification_ids: ['TEST_ENTRY_ID_1', 'TEST_ENTRY_ID_2']}
+        yesterday = 1.day.ago
+        external_notification1 = create_external_notification(user, external_id: entry_1.external_id, read_at: yesterday)
+
+        post '/notifications/mark_as_read', params: {external_notification_ids: [entry_1.external_id, entry_2.external_id]}
         assert_response :ok
 
         response_data = JSON.parse(@response.body)
@@ -135,16 +141,17 @@ class NotificationsControllerTest < ActionDispatch::IntegrationTest
         _(response_data["marked_count"]).must_equal 2
 
         external_notification1.reload
-        _(ExternalNotification.find_by(external_id: 'TEST_ENTRY_ID_1', user: user)&.read_at).wont_be_nil
+        _(ExternalNotification.find_by(external_id: entry_1.external_id, user: user)&.read_at).wont_be_nil
         _(external_notification1.read_at.to_i).must_equal yesterday.to_i
-        _(ExternalNotification.find_by(external_id: 'TEST_ENTRY_ID_2', user: user)&.read_at).wont_be_nil
+        _(ExternalNotification.find_by(external_id: entry_2.external_id, user: user)&.read_at).wont_be_nil
       end
 
       it 'does not update already read external notifications' do
+        Notifications.stubs(:get_all).returns([entry_1, entry_2])
         yesterday = 1.day.ago
-        external_notification1 = create_external_notification(user, external_id: 'TEST_ENTRY_ID_1', read_at: yesterday)
+        external_notification1 = create_external_notification(user, external_id: entry_1.external_id, read_at: yesterday)
 
-        post '/notifications/mark_as_read', params: {external_notification_ids: ['TEST_ENTRY_ID_1', 'TEST_ENTRY_ID_2']}
+        post '/notifications/mark_as_read', params: {external_notification_ids: [entry_1.external_id, entry_2.external_id]}
         assert_response :ok
 
         response_data = JSON.parse(@response.body)
@@ -154,7 +161,7 @@ class NotificationsControllerTest < ActionDispatch::IntegrationTest
         external_notification1.reload
 
         _(external_notification1.read_at.to_i).must_equal yesterday.to_i
-        _(ExternalNotification.find_by(external_id: 'TEST_ENTRY_ID_2', user: user)&.read_at).wont_be_nil
+        _(ExternalNotification.find_by(external_id: entry_2.external_id, user: user)&.read_at).wont_be_nil
       end
     end
 
@@ -175,6 +182,17 @@ class NotificationsControllerTest < ActionDispatch::IntegrationTest
         response_data = JSON.parse(@response.body)
         _(response_data["status"]).must_equal "error"
         _(response_data["message"]).must_equal "No notification IDs provided"
+      end
+
+      it 'does not update if notification does not exist for user' do
+        Notifications.stubs(:get_all).returns([])
+
+        post '/notifications/mark_as_read', params: {external_notification_ids: [entry_1.external_id]}
+        assert_response :ok
+
+        response_data = JSON.parse(@response.body)
+        _(response_data["status"]).must_equal "success"
+        _(response_data["marked_count"]).must_equal 0
       end
     end
   end
