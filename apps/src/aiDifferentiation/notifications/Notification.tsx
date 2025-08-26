@@ -8,7 +8,7 @@ import React from 'react';
 
 import i18n from '@cdo/locale';
 
-import {AiDiffNotification} from './AiDiffNotificationList';
+import {AiDiffNotification, IconColor} from './AiDiffNotificationList';
 
 import styles from './notifications.module.scss';
 import skeletonizeContent from '@cdo/apps/sharedComponents/skeletonize-content.module.scss';
@@ -42,9 +42,9 @@ const Notification: React.FC<{
     id: 'placeholder',
     title: i18n.loading(),
     description: 'Lorem ipsum dolor sit amet, postea pericula',
-    readAt: new Date(),
+    readAt: null,
     iconName: 'spinner',
-    iconColor: 'Gray',
+    iconColor: IconColor.Gray,
     publishedAt: new Date(),
   };
 

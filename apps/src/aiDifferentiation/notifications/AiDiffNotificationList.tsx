@@ -6,13 +6,23 @@ import Notification from './Notification';
 
 import styles from './notifications.module.scss';
 
+export enum IconColor {
+  Gray = 'Gray',
+  Purple = 'Purple',
+  Blue = 'Blue',
+  Aqua = 'Aqua',
+  Green = 'Green',
+  Red = 'Red',
+  Orange = 'Orange',
+}
+
 export interface AiDiffNotification {
   id: string;
   title: string;
   description: string;
   readAt: Date | null;
   iconName: string;
-  iconColor: string;
+  iconColor: IconColor;
   publishedAt: Date;
 }
 
