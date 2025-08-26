@@ -4,13 +4,7 @@ import {SupportedLocale} from '@/config/locale';
 import FooterCorporateSite from './corporateSite';
 import FooterCSforAll from './csForAll';
 
-export const getFooter = async (
-  brand: Brand,
-  params: Promise<{brand: Brand; locale: SupportedLocale}>,
-) => {
-  const syncParams = await params;
-  const {locale} = syncParams;
-
+export const getFooter = async (brand: Brand, locale: SupportedLocale) => {
   switch (brand) {
     case Brand.CS_FOR_ALL:
       return <FooterCSforAll locale={locale} />;

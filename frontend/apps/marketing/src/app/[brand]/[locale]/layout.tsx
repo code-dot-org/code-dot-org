@@ -62,7 +62,7 @@ export default async function Layout({
               >
                 {getHeader(brand)}
                 {children}
-                {getFooter(brand, params)}
+                {getFooter(brand, locale)}
               </StatsigProvider>
             </OneTrustProvider>
 
