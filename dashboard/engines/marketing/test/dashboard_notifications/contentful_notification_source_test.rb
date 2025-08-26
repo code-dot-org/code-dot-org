@@ -51,6 +51,7 @@ class ContentfulNotificationSourceTest < ActionDispatch::IntegrationTest
   end
 
   before do
+    CDO.shared_cache.clear
     sign_in user
   end
 
@@ -146,12 +147,12 @@ class ContentfulNotificationSourceTest < ActionDispatch::IntegrationTest
         _(results_es[0][:external_id]).must_equal entry_id_2
       end
 
-      it 'cache expires after 2 hours' do
+      it 'cache expires after 1 hour' do
         Marketing::ContentfulClient.any_instance.expects(:entries).with('en-US', 'dashboard-notification').returns([entry_1]).once
         results1 = contentful_source.get(user_id: user.id, locale: 'en-US')
         _(results1.length).must_equal 1
 
-        travel 3.hours do
+        travel 2.hours do
           Marketing::ContentfulClient.any_instance.expects(:entries).with('en-US', 'dashboard-notification').returns([entry_2]).once
           results2 = contentful_source.get(user_id: user.id, locale: 'en-US')
           _(results2.length).must_equal 1

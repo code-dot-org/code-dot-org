@@ -4,7 +4,7 @@ module Marketing
       NOTIFICATION_CONTENTFUL_CONTENT_TYPE = 'dashboard-notification'
 
       CONTENTFUL_SOURCE_NAME = 'contentful'
-      CACHE_EXPIRATION = 2.hours
+      CACHE_EXPIRATION = 1.hour
 
       def get(user_id:, locale:)
         contentful_entries = cached_contentful_entries(locale.to_s)
@@ -30,7 +30,7 @@ module Marketing
       end
 
       private def cached_contentful_entries(locale)
-        Rails.cache.fetch("contentful-#{NOTIFICATION_CONTENTFUL_CONTENT_TYPE}:#{locale}", expires_in: CACHE_EXPIRATION) do
+        CDO.shared_cache.fetch("contentful-#{NOTIFICATION_CONTENTFUL_CONTENT_TYPE}:#{locale}", expires_in: CACHE_EXPIRATION) do
           Marketing::ContentfulClient.entries(locale, NOTIFICATION_CONTENTFUL_CONTENT_TYPE)
         end
       end
