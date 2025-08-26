@@ -12,7 +12,6 @@ import React, {useEffect, useState} from 'react';
 import {HTMLPreview} from '@cdo/apps/codebridge/FilePreview/HTMLPreview';
 import {useVerticalLayout} from '@cdo/apps/lab2/hooks/useVerticalLayout';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import weblab2I18n from '@cdo/apps/weblab2/locale';
 
 import moduleStyles from '@cdo/apps/lab2/views/components/layout/layout.module.scss';
@@ -37,18 +36,14 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
 }) => {
   const [viewMode, setViewMode] = useState<ViewMode>(ViewMode.SPLIT);
 
-  const widgetViewShowCode = useAppSelector(
-    state => state.codebridgeWorkspace.widgetViewShowCode
-  );
-  const shouldHideEditor = isWidgetView && !widgetViewShowCode;
   const infoPanelInitialWidth = isProjectLevel
     ? 0
-    : shouldHideEditor
+    : isWidgetView
     ? INITIAL_INFO_PANEL_WIDTH_WIDGET
     : INITIAL_INFO_PANEL_WIDTH;
 
-  const editorMinWidth = shouldHideEditor ? 0 : MIN_EDITOR_WIDTH;
-  const previewInitialWidth = shouldHideEditor
+  const editorMinWidth = isWidgetView ? 0 : MIN_EDITOR_WIDTH;
+  const previewInitialWidth = isWidgetView
     ? INITIAL_PREVIEW_WIDTH_WIDGET
     : INITIAL_PREVIEW_WIDTH;
 
@@ -115,21 +110,21 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
 
   useEffect(() => {
     setRightPanelSize(
-      shouldHideEditor ? INITIAL_PREVIEW_WIDTH_WIDGET : INITIAL_PREVIEW_WIDTH
+      isWidgetView ? INITIAL_PREVIEW_WIDTH_WIDGET : INITIAL_PREVIEW_WIDTH
     );
-  }, [setRightPanelSize, shouldHideEditor]);
+  }, [setRightPanelSize, isWidgetView]);
 
   useEffect(() => {
     if (!isProjectLevel) {
       setLeftPanelSize(
-        shouldHideEditor
+        isWidgetView
           ? INITIAL_INFO_PANEL_WIDTH_WIDGET
           : INITIAL_INFO_PANEL_WIDTH
       );
     } else {
       setLeftPanelSize(0);
     }
-  }, [isProjectLevel, setLeftPanelSize, shouldHideEditor]);
+  }, [isProjectLevel, setLeftPanelSize, isWidgetView]);
 
   return (
     <div
@@ -171,7 +166,7 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
             <HeaderButtons />
           </div>
           <div className={moduleStyles.editorAndPreviewContainer}>
-            {!shouldHideEditor && viewMode !== ViewMode.PREVIEW && (
+            {!isWidgetView && viewMode !== ViewMode.PREVIEW && (
               <>
                 <Workspace
                   style={{width: middlePanelWidth}}
