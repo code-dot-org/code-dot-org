@@ -125,7 +125,7 @@ const MultipleSectionsAssigner = ({
       );
 
       if (isSectionToBeRemoved) {
-        // if on COURSE landing page or a STANDALONE UNIT, unassign entirely
+        // if on COURSE landing page or a SINGLE-UNIT COURSE unit overview, unassign entirely
         isAssigningCourseOnly || isAssigningUnitOnly
           ? unassignSection(initialSectionsAssigned[i].id, '')
           : assignCourseWithoutUnit(initialSectionsAssigned[i]);
