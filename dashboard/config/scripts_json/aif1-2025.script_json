@@ -35,7 +35,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-07-09 14:21:59 UTC",
+    "serialized_at": "2025-08-19 19:06:34 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -1748,7 +1748,13 @@
       "key": "a5ee905c-35be-432e-b459-6c5f5733a588",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to complete Round 1 in their activity guide. Use the steps on the slide to explain the activity procedure and answer any questions. When everyone has added a word, instruct student to unfold the paper and read the full sentence aloud as a group. Have groups to compare their sentences in order to see how similar or different they were. For example, students' sentences could end up like this:\n- Space travel is \n- exciting \n- and \n- dangerous\n- animals \n- live.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Circulate to ensure students aren't peeking back at earlier words or the full sentence.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Round 2 in their activity guide. Use the steps on the slide to explain the activity procedure and answer any questions. When everyone has contributed, read the full sentence aloud as a group. Direct groups to compare their sentences to Round 1—how did having more context change the predictions? \n\nExample:\n- The exhausted student left school to go home to . . .*rest before starting homework*.\n- The exhausted student left school to go home to . . .*eat dinner with the family*.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students read full sentences, listen for students noticing how more words made it easier to choose a logical next word. If students aren’t making the connection, ask: \"What helped you decide which word to add this time?\" and \"Was it easier or harder than the first round?\"\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *How did having limited context affect predictions?*\n- *What changed when you had access to the entire starting sentence and all words that were added before you?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students recognize that limited context leads to less accurate and more random predictions, while access to more context helps predictions become more logical and connected to previous content. This mirrors how modern AI, like transformers, improves its output by analyzing longer sequences of data.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *In the neural network activity, predictions improved when more context was provided. How do you think this applies to AI prompts?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students recognize that just like their own predictions, AI performs better when it has more context. The more details and structure we give in a prompt, the more accurate, relevant, and helpful the AI's response becomes. Encourage students to connect this back to their experience seeing the full sentence in Round 2."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to complete Round 1 in their activity guide. Use the steps on the slide to explain the activity procedure and answer any questions. When everyone has added a word, instruct student to unfold the paper and read the full sentence aloud as a group. Have groups to compare their sentences in order to see how similar or different they were. For example, students' sentences could end up like this:\n- Space travel is \n- exciting \n- and \n- dangerous\n- animals \n- live.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Circulate to ensure students aren't peeking back at earlier words or the full sentence.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Round 2 in their activity guide. Use the steps on the slide to explain the activity procedure and answer any questions. When everyone has contributed, read the full sentence aloud as a group. Direct groups to compare their sentences to Round 1—how did having more context change the predictions? \n\nExample:\n- The exhausted student left school to go home to . . .*rest before starting homework*.\n- The exhausted student left school to go home to . . .*eat dinner with the family*.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students read full sentences, listen for students noticing how more words made it easier to choose a logical next word. If students aren’t making the connection, ask: \"What helped you decide which word to add this time?\" and \"Was it easier or harder than the first round?\"",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Due to the variety of answers possible, there is no exemplar provided for this activity. Reference the examples above for possible student generated sentences."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "a5ee905c-35be-432e-b459-6c5f5733a588",
@@ -1756,8 +1762,19 @@
       }
     },
     {
-      "key": "483c7520-fd29-4b8e-a288-fb94fd256e80",
+      "key": "ebce1769-41cc-4576-8b13-4a6ff770a7b4",
       "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *How did having limited context affect predictions?*\n- *What changed when you had access to the entire starting sentence and all words that were added before you?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students recognize that limited context leads to less accurate and more random predictions, while access to more context helps predictions become more logical and connected to previous content. This mirrors how modern AI, like transformers, improves its output by analyzing longer sequences of data.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *In the neural network activity, predictions improved when more context was provided. How do you think this applies to AI prompts?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students recognize that just like their own predictions, AI performs better when it has more context. The more details and structure we give in a prompt, the more accurate, relevant, and helpful the AI's response becomes. Encourage students to connect this back to their experience seeing the full sentence in Round 2."
+      },
+      "seeding_key": {
+        "activity_section.key": "ebce1769-41cc-4576-8b13-4a6ff770a7b4",
+        "lesson_activity.key": "4f76b28d-51a6-4d92-8947-617bf4bc5b45"
+      }
+    },
+    {
+      "key": "483c7520-fd29-4b8e-a288-fb94fd256e80",
+      "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students look at this slide. Explain that generative AI uses probabilities to predict what word should come next in a sentence. In this example, AI is most likely to predict the word “presents” or “eyes” next. AI is extremely unlikely to choose the word “clouds”, which is why the percentage is so small. Since this model has limited context, i.e. it only sees the words “opened their”, sometimes its predictions don’t make sense in the context of what came before it. ",
         "tips": [
@@ -1774,7 +1791,7 @@
     },
     {
       "key": "8c430aa8-d867-4746-a588-9204047592c9",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students look at the Improved AI Predictions slide and note the differences between this slide and the previous slide.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Why did AI’s predictions change? How does this relate to the neuron activity? \n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should be able to explain that increased context allows AI to make more appropriate predictions. Here, the inclusion of the words “The students” led the AI to make next word predictions related to a school setting.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students take out their Problem Solving with AI Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *neural network*."
       },
@@ -1785,7 +1802,7 @@
     },
     {
       "key": "3d76bac7-3069-4b7d-b834-bad92b84265f",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** To help students understand how large language models (LLMs) like ChatGPT learn from data, recognize patterns, and refine responses through human feedback.\n\n<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the \"Chatbots and Large Language Models\" video (0:00-1:20).\n\n**Questions to consider with the video:**\n- What is the difference between LLMs and typical neural networks?\n\n**Discussion Goal:** Students recognize that typical neural networks perform specific tasks, while LLMs process vast text data to generate responses. LLMs predict words using probabilities, making them more flexible and capable of producing human-like text.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *large language model*.\n\n<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the \"Chatbots and Large Language Models\" video (1:20-1:51).\n\n**Questions to consider with the video:**\n\n- Why is it important for the AI to look at longer sequences such as sentences or paragraphs? \n- How does this relate to the context we provide in our prompts?\n\n**Discussion Goal:** Students recognize that longer sequences provide more context, leading to more accurate predictions. They connect this to AI prompting, understanding that detailed prompts help AI generate more relevant and coherent responses.\n\n<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the \"Chatbots and Large Language Models\" video (1:51-2:30).\n\n**Questions to consider with the video:**\n\n- How does human feedback improve AI responses? \n- Why is it still important to be cautious when using AI, even with fine-tuning?\n\n**Discussion Goal:** Students recognize that human feedback helps AI refine responses by correcting errors and reducing biases. They also understand that, despite fine-tuning, AI can still produce inaccurate or biased outputs, requiring users to think critically about its responses.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *training data*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *training*.",
         "duration": "10",
@@ -1798,7 +1815,7 @@
     },
     {
       "key": "be0377ee-1848-4d38-84db-be5496358a7b",
-      "position": 7,
+      "position": 8,
       "properties": {
         "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** To give students hands-on practice with AI prompting, focusing on how context, examples, and structured inputs improve AI-generated responses. Students will explore real-world career scenarios and experiment with zero-shot, one-shot, and multi-shot prompting to refine AI responses.",
         "duration": "10",
@@ -1811,7 +1828,7 @@
     },
     {
       "key": "3ed29e6c-114c-46d1-a82c-7eb8c69de232",
-      "position": 8,
+      "position": 9,
       "properties": {
         "description": "You've seen how AI predictions get better when given more context. Now, you're going to test that idea by giving the AI different types of prompts—starting with no example, then adding one, and finally, adding multiple examples. Try to notice how the responses change at each level.",
         "remarks": true
@@ -1823,7 +1840,7 @@
     },
     {
       "key": "3447161b-d433-4625-bcb8-a97e3df658d8",
-      "position": 9,
+      "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 3, Level 1 on Code Studio to complete Levels 1 through 3 of the Prompting Challenges activity. For each level, students will choose one of three options based on a real-world career path:\n- **Level 1:** Students provide a basic, unstructured prompt for their chosen career path.\n- **Level 2:** Students add one example to guide the AI's response.\n- **Level 3:** Students refine the prompt with multiple details and structure to improve accuracy.",
         "progression_name": "Prompting Challenges"
@@ -1835,7 +1852,7 @@
     },
     {
       "key": "aee43ac5-2810-4792-bf0c-ab71bffb97bf",
-      "position": 10,
+      "position": 11,
       "properties": {
         "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are completing the Prompting Challenges section of their Unit Guide after each level, noting how the AI's responses changed and what role context played in improving them. Listen for how they describe the differences between each AI response as they add more context. Encourage students to be specific in their reflections. If students are unsure what to write, ask:\n- What changed in the AI’s response when you gave an example?\n- Did the response get more accurate, creative, or specific? How do you know?\n- What kind of details made the biggest difference?",
         "tips": [
@@ -8588,14 +8605,14 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "AI's Wild Imagination",
-        "vocabulary.key": "prompt_engineering"
+        "lesson.key": "Beyond Words",
+        "vocabulary.key": "multimodal_model"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Beyond Words",
-        "vocabulary.key": "multimodal_model"
+        "lesson.key": "Debugging and Refining Outputs",
+        "vocabulary.key": "prompt_engineering"
       }
     },
     {

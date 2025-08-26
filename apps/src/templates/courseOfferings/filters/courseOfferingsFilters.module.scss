@@ -1,9 +1,13 @@
+$catalog-filters-z-index: 10;
+
 .catalogFiltersContainer {
   position: sticky;
   top: 0;
   padding-inline: 2rem;
+  padding-block-start: 1.5rem;
+  padding-block-end: 1.875rem;
   background-color: white;
-  z-index: 2;
+  z-index: $catalog-filters-z-index;
 }
 
 .catalogDropdownFiltersTopRow {
@@ -11,7 +15,7 @@
   align-items: baseline;
   max-width: 60rem;
   margin: 0 auto;
-  padding: 1em 0 0 0;
+  padding: 0;
   justify-content: space-between;
 }
 
@@ -19,8 +23,12 @@
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
-  gap: 16px;
+  gap: 0.5rem;
   max-width: 60rem;
   margin: 0 auto;
-  padding: 0 0 1em 0;
+  padding: 0;
+
+  &:not(:last-child) {
+    padding-bottom: 0.75rem;
+  }
 }

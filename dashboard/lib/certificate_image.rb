@@ -229,7 +229,7 @@ class CertificateImage
       apply_text(image, name, name_constants[:font_size], 'Helvetica bold', 'rgb(118,101,160)', name_constants[:x_offset], name_constants[:y_offset], name_constants[:width], name_constants[:height])
 
       # When we have a unit within a unit_group, we want to display both the unit and unit_group titles.
-      # When we have a standalone unit or the unit group, we only display the localized title of unit_or_unit_group.
+      # When we have a unit group, we only display the localized title of unit_or_unit_group.
       if unit_or_unit_group.is_a?(Unit) && unit_or_unit_group.unit_group.present?
         unit = unit_or_unit_group
         unit_group = unit.unit_group

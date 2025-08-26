@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-08-04 20:57:33 UTC",
+    "serialized_at": "2025-08-19 17:48:01 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -386,21 +386,8 @@
       }
     },
     {
-      "key": "8447af5f-d0df-4462-ad61-aa7cd8fbdd5f",
-      "position": 2,
-      "properties": {
-        "name": "CSD Pre-Course Survey"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "8447af5f-d0df-4462-ad61-aa7cd8fbdd5f",
-        "lesson.key": "Intro to Problem Solving",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csd1-2025"
-      }
-    },
-    {
       "key": "3f723828-f61b-42c7-ae86-8d27c3277d8a",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -414,7 +401,7 @@
     },
     {
       "key": "0602c96a-73ee-4cac-ba38-ba587b9f1c6a",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -428,7 +415,7 @@
     },
     {
       "key": "e11057f0-82fc-40c9-ae12-52d0b9d3a93a",
-      "position": 5,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -1133,28 +1120,11 @@
       "key": "e8c26036-1634-412a-8fc8-77befeecec84",
       "position": 3,
       "properties": {
-        "description": "## At the beginning of class\n\n1. Have students create a Code Studio account at [https://studio.code.org](https://studio.code.org) if they don't already have one\n2. Share the section Join URL with students and tell them to navigate to it to join your section\n\t- You can confirm that a student successfully joined your section by having the section progress page on the Teacher Home Page open and hitting refresh as students join. Students should see a small green bar at the top of their page that says 'You've successfully joined ...' \n3. From [studio.code.org](https://studio.code.org) have students locate the Computer Science Discoveries tile and click 'View course', then go to Unit 1.\n\nOnce students are looking at the Unit 1 overview page, they will be ready to take the CSD Pre-Course survey"
+        "description": "## At the beginning of class\n\n1. Have students create a Code Studio account at [https://studio.code.org](https://studio.code.org) if they don't already have one\n2. Share the section Join URL with students and tell them to navigate to it to join your section\n\t- You can confirm that a student successfully joined your section by having the section progress page on the Teacher Home Page open and hitting refresh as students join. Students should see a small green bar at the top of their page that says 'You've successfully joined ...' \n3. From [studio.code.org](https://studio.code.org) have students locate the Computer Science Discoveries tile and click 'View course', then go to Unit 1.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "e8c26036-1634-412a-8fc8-77befeecec84",
         "lesson_activity.key": "e92420be-b05a-4ca8-8e8b-4caa622e37c1"
-      }
-    },
-    {
-      "key": "3784918f-56d1-469e-bc04-30bbf14f6c6e",
-      "position": 1,
-      "properties": {
-        "description": "#### Important! Have your students take the CSD Pre-Course Survey!\n\nStudents can find a link to the survey in Code Studio as the first item on the Unit 1 overview page. To ensure that students only take the survey at the appropriate time, it is \"locked\" and unviewable by them until you \"unlock\" the survey. The [How to Administer a Locked Assessment](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys) support article provides details on how to do that when you are ready. Note that the instructions for administering an assessment and a survey are the same.    \n\n**How much time does it take?** The survey does take some time - it is roughly 30 questions.  You might consider administering it on an admin day at school, or as an early homework.\n\n**When should I give the survey?** Because it is a pre-course survey it is important that students take it as early in the course as possible before they have had much (or any) exposure to the class so that we may accurately gauge changes in attitudes and beliefs caused by the course.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "* A major goal of CS Discoveries is to broaden participation in computer science.  \n* It is *crucial* therefore to have insight into students' attitudes and beliefs about computer science *before* the course so that we can measure the amount of change that occurred *after* the course is over.\n\n* Please note that this survey is **anonymous for students**\n* Completing it also helps us understand important improvements we can make to the curriculum to improve the teacher and student experience.\n\n**Please help by having your students contribute to this vital dataset.  Their voices make the difference!**\n\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "3784918f-56d1-469e-bc04-30bbf14f6c6e",
-        "lesson_activity.key": "8447af5f-d0df-4462-ad61-aa7cd8fbdd5f"
       }
     },
     {

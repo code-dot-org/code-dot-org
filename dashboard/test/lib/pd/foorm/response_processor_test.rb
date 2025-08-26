@@ -218,11 +218,19 @@ module Pd::Foorm
       # Test with non-hash input for hash-expecting methods
       assert_equal({}, ResponseProcessor.process_single_select_responses([], {}))
       assert_equal({}, ResponseProcessor.process_multi_select_responses('invalid', {}))
-      assert_equal({}, ResponseProcessor.process_rating_responses(nil, {}))
       assert_equal({}, ResponseProcessor.process_likert_responses(42, {}))
 
       # Test with non-array input for array-expecting method
       assert_equal({}, ResponseProcessor.process_text_responses({}))
+
+      # Test that nil gets converted to empty hash and processed normally
+      expected_rating_result = {
+        total_responses: 0,
+        promoter_percentage: 0,
+        breakdown: {}
+      }
+      assert_equal expected_rating_result.with_indifferent_access,
+                   ResponseProcessor.process_rating_responses(nil, {}).with_indifferent_access
     end
 
     test 'LIKERT_WEIGHTS constant has correct conversion values' do

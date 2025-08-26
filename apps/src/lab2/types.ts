@@ -54,6 +54,7 @@ export interface ProjectAndSources {
   channel: Channel;
   abuseScore?: number;
   sharingDisabled?: boolean;
+  isTeacherOfProjectOwner?: boolean;
 }
 
 /// ------ SOURCES ------ ///
@@ -133,6 +134,7 @@ export interface ProjectFile {
   folderId: string;
   type?: ProjectFileType;
   url?: string;
+  flagged?: boolean;
 }
 
 /**
@@ -145,6 +147,10 @@ export interface ProjectFile {
  *  deleted or renamed.
  * System Support: Files that are used for running code and for share/remix, but are hidden from the user.
  *  For example, the serialized maze for a neighborhood level.
+ *
+ *  NOTE: we have some logic that assumes that if a file has been assigned one of these types,
+ *  that it was uploaded by a levelbuilder. If that changes, we should update the logic that decides whether to
+ *  delete a file from S3 in multiFileSourceEditUtils.
  */
 export enum ProjectFileType {
   STARTER = 'starter',
@@ -215,7 +221,6 @@ export interface LevelProperties {
   startDirection?: number;
   widgetView?: boolean;
   widgetViewAllowShowCode?: boolean;
-  aiTutor2Available?: boolean;
   // Properties added for parity with non-lab2 AI Tutor levels
   aiTutorAvailable?: boolean;
   isAssessment?: boolean;
@@ -223,6 +228,8 @@ export interface LevelProperties {
   type?: string;
   starterAssets?: {[key: string]: string};
   showRubric?: boolean;
+  customHelperLibrary?: string;
+  validationCode?: string;
 }
 
 // Level configuration data used by project-backed labs that don't require
@@ -407,4 +414,10 @@ export interface LabProps<
 > {
   levelProperties: T;
   initialSources?: U;
+}
+
+export interface LocaleProps {
+  localeUrl: string;
+  currentLocale: string;
+  localeOptions: {text: string; value: string}[];
 }

@@ -35,12 +35,17 @@
         "text": "import java.util.Scanner;\nimport java.util.ArrayList;\nimport java.io.File;\nimport java.io.FileNotFoundException;\n\npublic class FileReader {\n\n  public static String[] toStringArray(String filename) {\n    ArrayList<String> temp = readDataFromFile(filename);\n    String[] data = new String[temp.size()];\n\n    for (int index = 0; index < data.length; index++) {\n      String currentValue = temp.get(index);\n      data[index] = currentValue;\n    }\n\n    return data;\n  }\n\n  public static int[] toIntArray(String filename) {\n    ArrayList<String> temp = readDataFromFile(filename);\n    int[] data = new int[temp.size()];\n\n    for (int index = 0; index < data.length; index++) {\n      String currentValue = temp.get(index);\n      data[index] = Integer.parseInt(currentValue);\n    }\n\n    return data;\n  }\n\n  public static double[] toDoubleArray(String filename) {\n    ArrayList<String> temp = readDataFromFile(filename);\n    double[] data = new double[temp.size()];\n\n    for (int index = 0; index < data.length; index++) {\n      String currentValue = temp.get(index);\n      data[index] = Double.parseDouble(currentValue);\n    }\n\n    return data;\n  }\n\n  public static ArrayList<Double> toDoubleList(String filename) {\n    ArrayList<String> tempList = readDataFromFile(filename);\n    ArrayList<Double> returnList = new ArrayList<Double>();\n    for (String temp : tempList) {\n      returnList.add(Double.parseDouble(temp));\n    }\n\n    return returnList;\n  }\n\n\n  private static Scanner createScanner(File theFile) {\n    Scanner tempScanner = null;\n\n    try {\n      tempScanner = new Scanner(theFile);\n    } catch(FileNotFoundException error) {\n      System.out.println(\"File not found.\");\n    }\n\n    return tempScanner;\n  }\n\n  private static ArrayList<String> readDataFromFile(String filename) {\n    File dataFile = new File(filename);\n    Scanner reader = createScanner(dataFile);\n    ArrayList<String> temp = new ArrayList<String>();\n\n    while (reader.hasNextLine()) {\n      String currentLine = reader.nextLine().trim();\n      temp.add(currentLine);\n    }\n\n    reader.close();\n    return temp;\n  }\n  \n}",
         "isVisible": false,
         "tabOrder": 4
+      },
+      "detroittemps.txt": {
+        "text": "32.0\n42.1\n41.5\n34.5\n34.5\n38.5\n35.4\n24.4\n32.0\n46.6\n44.4\n27.0\n33.1\n36.5\n34.0\n30.6\n22.5\n33.1\n23.5\n20.5\n24.4\n26.1\n32.0\n35.4\n36.0\n35.4\n35.1\n33.1\n30.6\n31.5\n29.5",
+        "isVisible": true,
+        "tabOrder": 5
       }
     },
     "name_suffix": "_oo2025",
     "ai_tutor_available": true
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-13T01:15:44.512+00:00\",\"changed\":[\"cloned from \\\"CSA U8L7-Multiple Lists PBT_pilot-2025\\\"\"],\"cloned_from\":\"CSA U8L7-Multiple Lists PBT_pilot-2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-13T01:15:44.512+00:00\",\"changed\":[\"cloned from \\\"CSA U8L7-Multiple Lists PBT_pilot-2025\\\"\"],\"cloned_from\":\"CSA U8L7-Multiple Lists PBT_pilot-2025\"},{\"changed_at\":\"2025-08-21 20:43:09 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-21 20:43:36 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Javalab>

@@ -108,7 +108,15 @@ export default class ProjectManager {
     const sharingDisabled = await this.channelsStore.getSharingDisabled(
       channel
     );
-    return {sources, channel, abuseScore, sharingDisabled};
+    const isTeacherOfProjectOwner =
+      await this.channelsStore.getIsTeacherOfProjectOwner(channel);
+    return {
+      sources,
+      channel,
+      abuseScore,
+      sharingDisabled,
+      isTeacherOfProjectOwner,
+    };
   }
 
   // Restore the given version of the project. This will call restore on the sources store

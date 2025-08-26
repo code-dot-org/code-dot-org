@@ -341,8 +341,10 @@ describe('ManageStudentsTable', () => {
     });
 
     it('renders correctly if loginType is picture', () => {
+      const store = getStore();
+      store.dispatch(setLoginType(SectionLoginType.picture));
       const wrapper = mount(
-        <Provider store={getStore()}>
+        <Provider store={store}>
           <ManageStudentsTable />
         </Provider>
       );

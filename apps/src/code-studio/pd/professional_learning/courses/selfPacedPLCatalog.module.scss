@@ -26,8 +26,9 @@ $card-width: 309px;
       justify-content: center;
       grid-gap: 1em;
       max-width: 60rem;
-      margin: 0 auto 1em auto;
-      }
+      margin: 0 auto;
+      padding-block-end: 1rem;
+    }
 
   }
 }

@@ -9,7 +9,8 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
     FileUtils.touch(@filename)
 
     # Mocks file object received from S3.
-    @uuid_name = "#{SecureRandom.uuid}.png"
+    @uuid = SecureRandom.uuid
+    @uuid_name = "#{@uuid}.png"
     @file_obj = MockS3ObjectSummary.new(@uuid_name, 123, 1.day.ago)
     # Mocks file sent to server for upload.
     @file = fixture_file_upload(@filename, 'image/jpg')
@@ -122,6 +123,24 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
     assert_response :not_found
   end
 
+  test 'file_by_uuid: returns requested file' do
+    LevelStarterAssetsHelper.
+      expects(:get_object).
+      with(@uuid_name).
+      returns(@file_obj)
+    LevelStarterAssetsHelper.
+      expects(:read_file).
+      with(@file_obj).
+      returns('hello, world!')
+    level = create(:weblab2)
+
+    get :file_by_uuid, params: {level_name: level.name, uuid: @uuid, format: 'png'}
+
+    assert_equal 'hello, world!', response.body
+    assert_equal 'image/png', response.headers['Content-Type']
+    assert_equal 'inline', response.headers['Content-Disposition']
+  end
+
   test 'upload: forbidden for non-levelbuilders' do
     sign_in create(:student)
     post :upload, params: {level_name: create(:applab).name, files: []}
@@ -135,11 +154,24 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
+  test 'upload_by_uuid: forbidden for non-levelbuilders' do
+    sign_in create(:student)
+    post :upload, params: {level_name: create(:weblab2).name, uuid: @uuid, files: []}
+    assert_response :forbidden
+  end
+
+  test 'upload_by_uuid: forbidden if not in levelbuilder_mode' do
+    Rails.application.config.stubs(:levelbuilder_mode).returns(false)
+    sign_in create(:levelbuilder)
+    post :upload_by_uuid, params: {level_name: create(:weblab2).name, uuid: @uuid, files: []}
+    assert_response :forbidden
+  end
+
   test 'upload: raises an error if 2+ files are uploaded' do
     sign_in create(:levelbuilder)
 
     e = assert_raises do
-      post :upload, params: {level_name: create(:applab).name, files: ['file-1', 'file-2']}
+      post :upload, params: {level_name: create(:weblab2).name, uuid: @uuid, files: ['file-1', 'file-2']}
     end
     assert_equal 'One file upload expected. Actual: 2', e.message
   end
@@ -192,6 +224,21 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
 
     level.reload
     assert_equal 1, level.starter_assets.length
+    assert_response :success
+    summary = JSON.parse(response.body)
+    assert_equal @filename, summary['filename']
+    assert_equal 'image', summary['category']
+    assert_equal 123, summary['size']
+  end
+
+  test 'upload_by_uuid: returns summary if file uploads' do
+    LevelStarterAssetsHelper.expects(:get_object).returns(@file_obj)
+    @file_obj.expects(:upload_file).returns(true)
+
+    sign_in create(:levelbuilder)
+    level = create(:weblab2)
+    post :upload_by_uuid, params: {level_name: level.name, uuid: @uuid, files: [@file]}
+
     assert_response :success
     summary = JSON.parse(response.body)
     assert_equal @filename, summary['filename']
