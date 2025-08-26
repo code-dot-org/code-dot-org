@@ -3,28 +3,9 @@ import React from 'react';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 import Notification from './Notification';
+import {AiDiffNotification} from './types';
 
 import styles from './notifications.module.scss';
-
-export enum IconColor {
-  Gray = 'Gray',
-  Purple = 'Purple',
-  Blue = 'Blue',
-  Aqua = 'Aqua',
-  Green = 'Green',
-  Red = 'Red',
-  Orange = 'Orange',
-}
-
-export interface AiDiffNotification {
-  id: string;
-  title: string;
-  description: string;
-  readAt: Date | null;
-  iconName: string;
-  iconColor: IconColor;
-  publishedAt: Date;
-}
 
 const AiDiffNotificationList: React.FC = () => {
   const [loading, setLoading] = React.useState<boolean>(true);

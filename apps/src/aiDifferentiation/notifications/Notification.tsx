@@ -8,7 +8,7 @@ import React from 'react';
 
 import i18n from '@cdo/locale';
 
-import {AiDiffNotification, IconColor} from './AiDiffNotificationList';
+import {AiDiffNotification, IconColor} from './types';
 
 import styles from './notifications.module.scss';
 import skeletonizeContent from '@cdo/apps/sharedComponents/skeletonize-content.module.scss';
