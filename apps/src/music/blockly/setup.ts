@@ -29,7 +29,7 @@ import FieldPatternAi from './FieldPatternAi';
 import FieldSounds from './FieldSounds';
 import FieldTune from './FieldTune';
 import {MUSIC_BLOCKS} from './musicBlocks';
-import {BlockConfig} from './types';
+import {MusicBlockConfig} from './types';
 
 /**
  * Set up the global Blockly environment for Music Lab. This should
@@ -52,16 +52,16 @@ export function setUpBlocklyForMusicLab() {
 
   // Needed for TypeScript to recognize the type of the MUSIC_BLOCKS. Remove
   // after converting musicBlocks to TypeScript.
-  const typedMusicBlocks = MUSIC_BLOCKS as {[key: string]: BlockConfig};
+  const typedMusicBlocks = MUSIC_BLOCKS as {[key: string]: MusicBlockConfig};
   for (const blockType of Object.keys(typedMusicBlocks)) {
-    const blockConfig = typedMusicBlocks[blockType] as BlockConfig;
+    const blockConfig = typedMusicBlocks[blockType] as MusicBlockConfig;
     Blockly.Blocks[blockType] = {
       init: function () {
         this.jsonInit(blockConfig.definition);
       },
     };
 
-    Blockly.JavaScript.forBlock[blockType] = blockConfig.generator;
+    Blockly.getGenerator().forBlock[blockType] = blockConfig.generator;
   }
 
   Blockly.JavaScript.addReservedWords(

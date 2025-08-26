@@ -3,12 +3,12 @@ import {Order} from 'blockly/javascript';
 import {BlockTypes} from '../blockTypes';
 import {FIELD_SOUNDS_NAME, SOUND_VALUE_TYPE} from '../constants';
 import {fieldSoundsDefinition} from '../fields';
-import {BlockConfig} from '../types';
+import {MusicBlockConfig} from '../types';
 
 /**
  * Value block for a sample
  */
-export const valueSample: BlockConfig = {
+export const valueSample: MusicBlockConfig = {
   definition: {
     type: BlockTypes.VALUE_SAMPLE,
     message0: '%1',

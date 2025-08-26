@@ -481,16 +481,33 @@ export type PointerMetadataMap = {
 
 export type BlockColor = [number, number, number];
 
+export type GeneratorFunction = (
+  block: GoogleBlockly.Block,
+  generator: GoogleBlockly.CodeGenerator
+) => string | [string, number] | null;
+
 export type JavascriptGeneratorType = typeof javascriptGenerator;
 export interface ExtendedJavascriptGenerator
   extends ExtendedCodeGenerator,
     JavascriptGeneratorType {
   nameDB_: GoogleBlockly.Names | undefined;
-  forBlock: Record<
-    string,
-    (
-      block: GoogleBlockly.Block,
-      generator: GoogleBlockly.CodeGenerator
-    ) => string | [string, number] | null
-  >;
+  forBlock: Record<string, GeneratorFunction>;
+}
+
+export interface BlockJson<BlockType extends string = string> {
+  type: BlockType;
+  [key: `message${number}`]: string;
+  [key: `args${number}`]: FieldJson[];
+  style?: string;
+  inputsInline?: boolean;
+  previousStatement?: null;
+  nextStatement?: string | null;
+  output?: string | null;
+  tooltip?: string;
+  helpUrl?: string;
+}
+
+export interface FieldJson {
+  type: string;
+  name: string;
 }
