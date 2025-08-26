@@ -17559,8 +17559,8 @@ en:
           title: 2nd Grade
           description_audience: ''
           description_short: ''
-          description: "#### This module covers the concepts and skills that are in the first micro:bit  track.\n\n#### **You will:**\n\n-   #### Code using events and conditionals with Code.org.\n\n#### **Suggested Time:** 55 minutes"
-          student_description: "#### This module covers the concepts and skills that are in the first micro:bit  track.\n\n#### **You will:**\n\n-   #### Code using events and conditionals with Code.org.\n\n#### **Suggested Time:** 55 minutes"
+          description: "#### This module covers the concepts and skills that are in the first micro:bit  track.\n\n#### **You will:**\n\n-   #### Code using events and conditionals with Code.org.\n\n#### **Suggested Time:** 30 minutes"
+          student_description: "#### This module covers the concepts and skills that are in the first micro:bit  track.\n\n#### **You will:**\n\n-   #### Code using events and conditionals with Code.org.\n\n#### **Suggested Time:** 30 minutes"
         k5microbitmaker:
           lessons: {}
           lesson_groups: {}
@@ -17708,8 +17708,8 @@ en:
           title: Getting Started [Optional]
           description_audience: ''
           description_short: ''
-          description: "#### **You will:**\n\n-   #### Get an introduction to Code.org’s mission.\n-   #### Learn how to navigate the Code.org website and teacher tools.\n-   #### Set up a classroom section.\n-   #### Locate and use course lesson plans and teacher resources.\n-   #### Learn how to access support while teaching Code.org curricula.\n\n#### **Suggested time:** 80 minutes"
-          student_description: "#### **You will:**\n\n#### \\* Get an introduction to Code.org’s mission.\n\n#### \\* Learn how to navigate the Code.org website and teacher tools.\n\n#### \\* Set up a classroom section.\n\n#### \\* Locate and use course lesson plans and teacher resources.\n\n#### \\* Learn how to access support while teaching Code.org curricula.\n\n#### **Suggested time:** 80 minutes"
+          description: "#### **You will:**\n\n-   #### Get an introduction to Code.org’s mission.\n-   #### Learn how to navigate the Code.org website and teacher tools.\n-   #### Set up a classroom section.\n-   #### Locate and use course lesson plans and teacher resources.\n-   #### Learn how to access support while teaching Code.org curricula.\n\n#### **Suggested time:** 30 minutes"
+          student_description: "#### **You will:**\n\n#### \\* Get an introduction to Code.org’s mission.\n\n#### \\* Learn how to navigate the Code.org website and teacher tools.\n\n#### \\* Set up a classroom section.\n\n#### \\* Locate and use course lesson plans and teacher resources.\n\n#### \\* Learn how to access support while teaching Code.org curricula.\n\n#### **Suggested time:** 30 minutes"
         getting-started-with-code-game-design:
           lessons: {}
           lesson_groups:
@@ -19708,7 +19708,7 @@ en:
           title: AI-Powered Threats and Defenses
           description_audience: ''
           description_short: ''
-          description: "## Welcome!\n\n#### This professional learning module is designed to help you prepare to teach Code.org’s AI-Powered Threats and Defenses Unit.\n\n#### The Cybersecurity and Global Impacts unit is part of the **_AI Foundations_** curriculum but can also stand alone for grades 9-12. Designed for flexibility, it can be seamlessly integrated into any existing curriculum, allowing teachers to introduce it at their own pace and align it with their educational goals.\n\n#### **Find the learning that works for you**\n\n#### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.\n\n#### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Cybersecurity and Global Impacts unit. However, you can engage with the content in the order that best meets your needs."
+          description: "## Welcome!\n\n#### This professional learning module is designed to help you prepare to teach Code.org’s AI-Powered Threats and Defenses Unit.\n\n#### The AI-Powered Threats and Defenses unit is part of the **_AI Foundations_** curriculum but can also stand alone for grades 9-12. Designed for flexibility, it can be seamlessly integrated into any existing curriculum, allowing teachers to introduce it at their own pace and align it with their educational goals.\n\n#### **Find the learning that works for you**\n\n#### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.\n\n#### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the AI-Powered Threats and Defenses unit. However, you can engage with the content in the order that best meets your needs."
           student_description: "## Welcome!\n\n#### This professional learning module is designed to help you prepare to teach Code.org’s Cybersecurity and Global Impacts Unit.\n\n#### The Cybersecurity and Global Impacts unit is part of the **_AI Foundations_** curriculum but can also stand alone for grades 9-12. Designed for flexibility, it can be seamlessly integrated into any existing curriculum, allowing teachers to introduce it at their own pace and align it with their educational goals.\n\n#### **Find the learning that works for you**\n\n#### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.\n\n#### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Cybersecurity and Global Impacts unit. However, you can engage with the content in the order that best meets your needs."
         sandbox-csaif-pl-networks:
           lessons:
@@ -23237,3 +23237,94 @@ en:
           description_short: ''
           description: "This unit aims to build a foundational understanding of text-based generative AI models, focusing on core concepts over technical skills. Students will demystify generative AI models by exploring their internal structures through the familiar lens of input, storage, process, and output. They will gain insights into how these models represent language, the impact of training data on model performance, and the potential for bias. Using this knowledge they will be presented with scenarios throughout the unit where they can help educate individuals who feel powerless or lack agency in how AI is impacting their lives, or respond to individuals who have only read the hype headlines and offer feedback or criticism based on their knowledge of how these AI systems work.\n\nThis unit is the **fully unpluggedd** version of our Foundations of Generative AI unit. It is designed for classrooms where students do not have access to technology, but teachers are still expected to use technology to run slides, show videos, etc. To see the extended unit with additional lessons and on-device levels, [you can view the unit here][0].\n\n## Just Starting this Unit?\n\nWe recommend watching the [5-Part Exploring Generative AI Video Series][1] which introduces key concepts for generative AI. The entire video series takes ~15 minutes to watch.\n\n## Optional Lessons\n\nThis unit includes two optional lessons that provide a deeper technical understanding of how Embeddings and Neural Networks are created \"from scratch\" to be used in language models. These lessons are not required to complete the final project of the unit, but can provide a deeper technical understanding of these topics for programs with a technical or career-ready focus.\n\n## Finished Teaching This Unit?\n\nAnswer this [**short survey**][2] to let the Code.org curriculum team know how the unit went."
           student_description: Learn how chatbots and large-language models work behind the scenes!
+        ai-powered-threats-and-defenses-pilot-2025:
+          lessons:
+            lesson-1:
+              name: Pre-Assessment
+            lesson-2:
+              name: End of Unit Assessment
+            lesson-3:
+              name: End of Unit Survey
+            lesson-4:
+              name: 'Lesson 1: Introduction to Cybersecurity'
+            lesson-5:
+              name: 'Lesson 2: Cybersecurity Threats'
+            lesson-6:
+              name: 'Lesson 3: Phishing and Password Cracking'
+            lesson-7:
+              name: 'Lesson 4: Phishing with AI'
+            lesson-8:
+              name: 'Lesson 5: Successful Cybersecurity Stories'
+            lesson-9:
+              name: 'Lesson 6: Confidentiality, Integrity, and Availability'
+            lesson-10:
+              name: 'Lesson 7: Authentication, Authorization, and Accounting'
+            lesson-11:
+              name: 'Lesson 8: AAA and AI'
+            lesson-12:
+              name: 'Lesson 9: Encryption'
+            lesson-13:
+              name: 'Lesson 10: AI in Encryption'
+            lesson-14:
+              name: 'Lesson 11: Security vs Usability'
+            lesson-15:
+              name: 'Lesson 12: Layered Defenses'
+            lesson-16:
+              name: 'Lesson 13: Designing Secure Systems Project'
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pre-Assessment
+            lessonGroup-3:
+              display_name: Content
+            lessonGroup-4:
+              display_name: End of Unit Project
+            lessonGroup-5:
+              display_name: End of Unit Assessment and Survey
+          name: ai-powered-threats-and-defenses-pilot-2025
+          title: "[PILOT] AI-Powered Threats and Defenses"
+          description_audience: ''
+          description_short: ''
+          description: |-
+            Cybersecurity is a fast-changing field shaped by evolving threats, intelligent systems, and the professionals who work to defend digital infrastructure. In this unit, students take a systems-level look at how cyberattacks happen, how defenses are built, and how artificial intelligence (AI) is reshaping both offense and defense. Students analyze common attack types such as phishing, malware, and denial-of-service, and examine how these threats are increasingly powered by AI tools that automate, personalize, or scale digital attacks. They also explore how AI is used in defense strategies, such as detecting anomalies, managing access, and adapting authentication. Throughout the unit, students use computational thinking practices to analyze threats, evaluate system behavior, and reason through design tradeoffs. They apply human-centered design principles to propose security features that consider user needs and system constraints. Students examine real-world decisions made by cybersecurity professionals, including how they balance protection with usability, anticipate unintended consequences, and build trust in systems. Through case analysis, collaborative design challenges, and reflection routines, students gain insight into cybersecurity as a sociotechnical system. They also explore career pathways in cybersecurity and AI, learning how professionals contribute to safer, more ethical, and more inclusive computing systems.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, students will be able to . . .**]
+
+            -   Explain how different types of cybersecurity attacks work, including how AI is used to enhance or scale these threats.
+            -   Describe how AI is used in cybersecurity tools to detect, prevent, or respond to attacks.
+            -   Analyze cybersecurity scenarios using concepts such as system vulnerabilities, authentication, and data protection.
+            -   Apply computational thinking strategies to examine cybersecurity threats, vulnerabilities, and defenses.
+            -   Evaluate tradeoffs between usability and security in the design of digital systems.
+            -   Propose security design improvements that consider both human-centered design principles and their impact on diverse users and communities.
+            -   Describe cybersecurity career roles and how professionals use AI tools in their work.
+                :::
+          student_description: |-
+            Cybersecurity is a fast-changing field shaped by evolving threats, intelligent systems, and the professionals who work to defend digital infrastructure. In this unit, you take a systems-level look at how cyberattacks happen, how defenses are built, and how artificial intelligence (AI) is reshaping both offense and defense. You analyze common attack types such as phishing, malware, and denial-of-service, and examine how these threats are increasingly powered by AI tools that automate, personalize, or scale digital attacks. You also explore how AI is used in defense strategies, such as detecting anomalies, managing access, and adapting authentication.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, students will be able to . . .**]
+
+            -   Explain how different types of cybersecurity attacks work, including how AI is used to enhance or scale these threats.
+            -   Describe how AI is used in cybersecurity tools to detect, prevent, or respond to attacks.
+            -   Analyze cybersecurity scenarios using concepts such as system vulnerabilities, authentication, and data protection.
+            -   Apply computational thinking strategies to examine cybersecurity threats, vulnerabilities, and defenses.
+            -   Evaluate tradeoffs between usability and security in the design of digital systems.
+            -   Propose security design improvements that consider both human-centered design principles and their impact on diverse users and communities.
+            -   Describe cybersecurity career roles and how professionals use AI tools in their work.
+                :::
+        musiclab-instructions-bash:
+          lessons: {}
+          lesson_groups: {}
+          name: musiclab-instructions-bash
+          title: Musiclab Instructions Bash
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-pl-teaching-ai-powered-threats-and-defenses-pilot-2025:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-ai-powered-threats-and-defenses-pilot-2025
+          title: "[PILOT] Teaching AI-Powered Threats and Defenses"
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
