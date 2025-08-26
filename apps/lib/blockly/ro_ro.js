@@ -36,7 +36,6 @@ Blockly.Msg.CONTROLS_FLOW_STATEMENTS_TOOLTIP_CONTINUE = "Sări peste restul acea
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_WARNING = "Avertisment: Acest bloc poate fi utilizat numai în interiorul unei bucle.";
 Blockly.Msg.CONTROLS_FOREACH_HELPURL = "https://code.google.com/p/blockly/wiki/Loops#for_each";
 Blockly.Msg.CONTROLS_FOREACH_INPUT_INLIST = "în listă";
-Blockly.Msg.CONTROLS_FOREACH_INPUT_INLIST_TAIL = "[șir gol]";
 Blockly.Msg.CONTROLS_FOREACH_INPUT_ITEM = "pentru fiecare element";
 Blockly.Msg.CONTROLS_FOREACH_TOOLTIP = "Pentru fiecare element dintr-o listă, setează valoarea variabilei '%1' la valoare elementului, şi apoi fă unele instrucțiuni.";
 Blockly.Msg.CONTROLS_FOR_HELPURL = "https://code.google.com/p/blockly/wiki/Loops#count_with";
