@@ -49,15 +49,17 @@ def main
     # Complain if any pages keys are not URLs
     raise "'pages' must contain URLs starting with '/'" unless (configuration['pages'] || {}).keys.all? {|url| url.to_s.include?('/')}
 
+    jsName = region.to_s.camelize.gsub('-', '_')
+
     # Build out the region specific table. This is, effectively, a JSON copy of the
     # configuration found in config/global/*.yml
     #
     # The table itself will be named Region<Name>, so, for example, region 'fa'
     # will be: RegionFa
-    content << "export const Region#{region.to_s.camelize} = #{JSON.pretty_generate(configuration)} as const;"
+    content << "export const Region#{jsName} = #{JSON.pretty_generate(configuration)} as const;"
 
     # The entry into the lookup table we will write out in the end
-    table_content << "\"#{region.to_s}\": Region#{region.to_s.camelize},"
+    table_content << "\"#{region.to_s}\": Region#{jsName},"
   end
 
   # Build the lookup table keyed for each region and point that name to the data
