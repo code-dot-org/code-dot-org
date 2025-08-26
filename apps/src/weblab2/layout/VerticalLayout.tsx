@@ -160,7 +160,11 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
           )}
         >
           <div className={moduleStyles.headerContainer}>
-            <SegmentedButtons {...viewModeButtonsProps} />
+            {isWidgetView ? (
+              <span />
+            ) : (
+              <SegmentedButtons {...viewModeButtonsProps} />
+            )}
             <OverlineTwoText noMargin>
               {weblab2I18n.workspace()}
             </OverlineTwoText>
