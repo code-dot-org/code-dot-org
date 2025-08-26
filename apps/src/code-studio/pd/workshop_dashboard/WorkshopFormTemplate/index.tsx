@@ -287,7 +287,6 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
       madeImportantDetailChange()
     ) {
       setShowDetailChangeEmailDialog(true);
-      publish(true);
     } else {
       publish(false);
     }
@@ -333,7 +332,10 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
             text: "Don't notify",
             onClick: () => publish(false),
           }}
-          onClose={() => setShowDetailChangeEmailDialog(false)}
+          onClose={() => {
+            setShowDetailChangeEmailDialog(false);
+            setLoading(false);
+          }}
           closeLabel="Cancel"
         />
       )}
