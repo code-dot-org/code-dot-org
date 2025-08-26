@@ -9,9 +9,7 @@ markdown <<MARKDOWN
 <p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Cybersecurity Threat</strong> is any potential cause of harm to a computer system or network.</p>
 </div>
 
-#### System-level threats include malware, ransomware, weak default settings, or misconfigured file sharing.
-
-#### Attackers exploit technical vulnerabilities to gain control, disrupt access, or corrupt data.
+#### System-level threats include malware, ransomware, weak default settings, or misconfigured file sharing. Attackers exploit technical vulnerabilities to gain control, disrupt access, or corrupt data.
 
 #### AI may increase the speed or scale of these threats.
 

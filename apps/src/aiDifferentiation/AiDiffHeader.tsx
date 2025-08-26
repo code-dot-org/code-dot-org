@@ -13,9 +13,13 @@ const AI_DIFF_HEADER_TEXT = commonI18n.aiDifferentiation_header();
 
 interface AiDiffHeaderProps {
   closeTutor?: () => void;
+  closeButtonClassName: string;
 }
 
-const AiDiffHeader: React.FC<AiDiffHeaderProps> = ({closeTutor}) => {
+const AiDiffHeader: React.FC<AiDiffHeaderProps> = ({
+  closeTutor,
+  closeButtonClassName,
+}) => {
   return (
     <div className={classNames(style.aiDiffHeader, 'ai_diff_handle')}>
       <div className={style.aiDiffHeaderLeftSide}>
@@ -40,6 +44,7 @@ const AiDiffHeader: React.FC<AiDiffHeaderProps> = ({closeTutor}) => {
       </div>
       <div className={style.aiDiffHeaderRightSide}>
         <Button
+          className={closeButtonClassName}
           color="white"
           icon={{iconName: 'times', iconStyle: 'solid'}}
           type="tertiary"

@@ -4,6 +4,7 @@ import {Box, List, ListItem, ListItemButton, ListItemText} from '@mui/material';
 import React from 'react';
 
 import {commonI18n} from '@cdo/apps/types/locale';
+import experiments from '@cdo/apps/util/experiments';
 
 import {ChatThread} from './types';
 
@@ -13,6 +14,7 @@ interface AiDiffSidebarProps {
   threads?: ChatThread[];
   selectedThreadId?: number;
   threadSelectCallback?: (thread: number) => void;
+  setShowNotifications: (show: boolean) => void;
 }
 
 const now = new Date();
@@ -59,8 +61,10 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
   threads = [],
   selectedThreadId,
   threadSelectCallback = () => {},
+  setShowNotifications,
 }) => {
   const handleListItemClick = (chatId: number) => {
+    setShowNotifications(false);
     threadSelectCallback(chatId);
   };
 
@@ -95,10 +99,24 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
           size="s"
           type="primary"
           iconLeft={{iconName: 'plus'}}
-          onClick={() => threadSelectCallback(0)}
+          onClick={() => {
+            setShowNotifications(false);
+            threadSelectCallback(0);
+          }}
           text={commonI18n.aiDifferentiation_new_chat()}
           className={styles.sidebarButton}
         />
+        {experiments.isEnabled('teacher-notifications') && (
+          <Button
+            color={buttonColors.white}
+            size="m"
+            type="secondary"
+            iconLeft={{iconName: 'bell'}}
+            onClick={() => setShowNotifications(true)}
+            text={commonI18n.notifications()}
+            className={styles.sidebarButton}
+          />
+        )}
         <div className={styles.sidebarContent}>
           <List disablePadding={true}>
             {todayChats.length > 0 && (

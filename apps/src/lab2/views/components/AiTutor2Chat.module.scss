@@ -9,3 +9,26 @@
     margin-top: auto;
   }
 }
+
+/* Multiple classes used to increase specifity to override default DSCO styles */
+.chatButton.chatButton.chatButton {
+  padding: .25rem .65rem;
+  border-radius: 50rem;
+  gap: 4px;
+  
+  > .icon {
+    width: 1rem;
+  }
+
+  > .icon-code {
+    color: var(--text-success-primary);
+  }
+
+  > .icon-lightbulb {
+    color: var(--accent-orange-50);
+  }
+
+  > .icon-file-code {
+    color: var(--text-info-primary);
+  }
+}
