@@ -11,7 +11,6 @@ import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import StudentRubricView from '@cdo/apps/lab2/views/components/rubrics/StudentRubricView';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {getTypedKeys} from '@cdo/apps/types/utils';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {useRubric} from '../../rubrics/RubricWrapper';
 import ForTeachersOnly from '../ForTeachersOnly';
@@ -75,9 +74,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
 }) => {
   const {theme} = useTheme();
   const {showRubric} = useRubric();
-  const isParticipant = useAppSelector(
-    state => state.currentUser.userType === 'student'
-  );
   const [currentTab, setCurrentTab] = useState<Tabs>(Tabs.Instructions);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
 
@@ -114,12 +110,12 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       tabMap[Tabs.AiTutor] = <AiTutor2Chat hiddenContext={aiTutor2Context} />;
     }
 
-    if (isParticipant && showRubric) {
+    if (showRubric) {
       tabMap[Tabs.StudentRubric] = <StudentRubricView />;
     }
 
     return tabMap;
-  }, [instructionsProps, aiTutor2Context, isParticipant, showRubric]);
+  }, [instructionsProps, aiTutor2Context, showRubric]);
 
   return (
     <div className={classNames(styles.resourcePanel, className)}>
