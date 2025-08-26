@@ -12,6 +12,7 @@ import {
 import {
   initSongs,
   reducers,
+  setHasEdited,
   setHasRun,
   setIsRunning,
   setRunIsStarting,
@@ -21,6 +22,7 @@ import {getFilterStatus} from '@cdo/apps/dance/songs';
 import SongSelector from '@cdo/apps/dance/SongSelector';
 import {DanceLevelProperties, DanceProjectSources} from '@cdo/apps/dance/types';
 import {useBlocklySettings} from '@cdo/apps/lab2/hooks/useBlocklySettings';
+import useLevelEditMode from '@cdo/apps/lab2/hooks/useLevelEditMode';
 import {setPageError} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {getIsShareView} from '@cdo/apps/lab2/projects/utils';
@@ -66,10 +68,47 @@ const DanceView: React.FunctionComponent<
     state => state.dance.currentSongMetadata
   );
   const hasRun = useAppSelector(state => state.dance.hasRun);
+  const hasEdited = useAppSelector(state => state.dance.hasEdited);
   const isLoading = useAppSelector(state => state.dance.isLoading);
 
   const programExecutor = useRef<ProgramExecutor | null>(null);
   const workspace = useRef<WorkspaceSvg | null>(null);
+
+  const getSourcesToSave = (selectedSong: string) => {
+    if (!workspace.current) {
+      return;
+    }
+    const blocksJson = Blockly.serialization.workspaces.save(workspace.current);
+    return {
+      selectedSong,
+      source: blocksJson,
+    };
+  };
+
+  const WorkspaceAlert = useLevelEditMode(
+    levelProperties.id,
+    !!levelProperties.projectTemplateLevelName,
+    useCallback(
+      mode => {
+        if (mode === 'toolbox') {
+          // TODO: Support toolbox edit mode (get toolbox definition from workspace)
+          return {};
+        }
+        if (!selectedSong) {
+          return {};
+        }
+        const sourcesToSave = getSourcesToSave(selectedSong);
+        if (sourcesToSave) {
+          return {
+            [mode === 'start' ? 'start_sources' : 'exemplar_sources']:
+              sourcesToSave,
+          };
+        }
+        return {};
+      },
+      [selectedSong]
+    )
+  );
 
   const [filterOn, setFilterOn] = useState<boolean>(
     getFilterStatus(userType, under13)
@@ -107,7 +146,7 @@ const DanceView: React.FunctionComponent<
   };
 
   const runProgram = useCallback(async () => {
-    if (!programExecutor.current || !currentSongMetadata) {
+    if (!programExecutor.current || !currentSongMetadata || !selectedSong) {
       return;
     }
 
@@ -158,9 +197,12 @@ const DanceView: React.FunctionComponent<
       if (!isRunning) {
         programExecutor.current?.staticPreview(Blockly.getWorkspaceCode());
       }
-      saveProject(selectedSong);
+      if (selectedSong) {
+        saveProject(selectedSong);
+        dispatch(setHasEdited(true));
+      }
     },
-    [selectedSong, isRunning]
+    [selectedSong, isRunning, dispatch]
   );
 
   // Setup Blockly for dance party when first mounting.
@@ -168,12 +210,15 @@ const DanceView: React.FunctionComponent<
 
   // Save project when selected song changes
   useEffect(() => {
-    saveProject(selectedSong);
+    if (selectedSong) {
+      saveProject(selectedSong);
+    }
   }, [selectedSong]);
 
-  // Reset hasRun flag when level changes
+  // Reset hasRun and hasEdited flag when level changes
   useEffect(() => {
     dispatch(setHasRun(false));
+    dispatch(setHasEdited(false));
   }, [levelProperties.id, dispatch]);
 
   // Initialize song manifest and load initial song when level loads.
@@ -239,6 +284,7 @@ const DanceView: React.FunctionComponent<
     if (recordReplayLog) {
       dispatch(saveReplayLog(programExecutor.current.getReplayLog()));
     }
+    resetProgram();
 
     return () => {
       programExecutor.current?.destroy();
@@ -246,7 +292,7 @@ const DanceView: React.FunctionComponent<
   }, [
     levelProperties,
     dispatch,
-    programExecutor,
+    resetProgram,
     onPuzzleComplete,
     readonlyWorkspace,
   ]);
@@ -258,8 +304,7 @@ const DanceView: React.FunctionComponent<
       <ResourcePanel
         isRunning={isRunning}
         hasRun={hasRun}
-        // Always passing true for now; update when Blockly workspace is set up.
-        hasEdited={true}
+        hasEdited={hasEdited}
         levelProperties={levelProperties}
         headerClassName={moduleStyles.panelHeader}
         className={moduleStyles.instructionsArea}
@@ -273,14 +318,16 @@ const DanceView: React.FunctionComponent<
         className={moduleStyles.visualizationArea}
       >
         <div className={moduleStyles.visualizationColumn}>
-          <SongSelector
-            enableSongSelection={!isRunning}
-            setSong={onSetSong}
-            selectedSong={selectedSong}
-            songData={songData}
-            filterOn={filterOn}
-            levelIsRunning={isRunning}
-          />
+          {selectedSong && (
+            <SongSelector
+              enableSongSelection={!isRunning}
+              setSong={onSetSong}
+              selectedSong={selectedSong}
+              songData={songData}
+              filterOn={filterOn}
+              levelIsRunning={isRunning}
+            />
+          )}
           <div
             id={DANCE_VISUALIZATION_ID}
             className={moduleStyles.visualization}
@@ -308,6 +355,7 @@ const DanceView: React.FunctionComponent<
         className={moduleStyles.workspaceArea}
         headerClassName={moduleStyles.panelHeader}
       >
+        {WorkspaceAlert}
         <div id={BLOCKLY_DIV_ID} />
       </PanelContainer>
     </div>
