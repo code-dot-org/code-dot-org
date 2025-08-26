@@ -1810,7 +1810,6 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
       before do
         @request.env['omniauth.auth'] = allowed_auth
         @request.env['omniauth.params'] = {}
-        stub_const('Policies::Devise::EmailDomains::DISALLOWED_DOMAINS', disallowed_domains)
       end
 
       it 'creates a new user and redirects to complete registration' do

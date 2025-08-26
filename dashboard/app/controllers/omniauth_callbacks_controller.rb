@@ -297,7 +297,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   private def register_new_user(user, provider)
     # Disallow sign up with email addresses from disallowed domains
     if user.email.present?
-      domain = user.email.split('@')[1]
+      domain = user.email.include?('@') ? user.email.split('@', 2)[1] : nil
       if Policies::Devise::EmailDomains::DISALLOWED_DOMAINS.include?(domain)
         flash.alert = I18n.t('devise.registrations.disallowed_domain', domain: domain)
         return redirect_to user_session_path
