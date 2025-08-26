@@ -11,11 +11,15 @@ module User
       inactive_teachers.find_each do |teacher|
         next if teacher.email.blank?
         send_warning_email(teacher.email, teacher.name)
+        # Set email sent at field
       end
     end
 
     private def inactive_teachers
-      inactive_query = Queries::User::Inactive.new(inactive_since: 41.months.ago)
+      inactive_query = Queries::User::Inactive.new(
+        scope: User.where(user_type: USER::TYPE_TEACHER),
+        inactive_since: 41.months.ago
+      )
       @inactive_teachers ||= inactive_query.call
     end
 
