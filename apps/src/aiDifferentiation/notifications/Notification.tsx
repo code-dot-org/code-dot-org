@@ -48,7 +48,6 @@ const Notification: React.FC<{
     publishedAt: new Date(),
   };
 
-  console.log('lfm', `icon${notificationOrPlaceholder.iconColor}`);
   return (
     <div className={styles.notification}>
       <FontAwesomeV6Icon
