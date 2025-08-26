@@ -599,7 +599,7 @@ describe('AiDiffChat', () => {
       screen.getAllByLabelText(i18n.aiChatMessageBot())[1]
     ).toHaveTextContent("Beep boop I'm a bot");
 
-    //User message editor should be enabled once we have a server response
+    //User message editor should not be enabled once we have a server response
     expect(submit_btn).not.toBeEnabled();
   });
 
