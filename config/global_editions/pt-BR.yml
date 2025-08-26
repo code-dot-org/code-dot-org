@@ -7,8 +7,7 @@
 # with the ones given here, or, if the value is 'false', it removes the
 # component from the page.
 
-locales: [pt-BR]
-locale_lock: true
+locale_lock: pt-BR
 countries: [BR]
 
 # The list of available project types

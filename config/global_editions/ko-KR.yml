@@ -7,8 +7,7 @@
 # with the ones given here, or, if the value is 'false', it removes the
 # component from the page.
 
-locales: [ko-KR]
-locale_lock: true
+locale_lock: ko-KR
 countries: [KR]
 
 # The list of available project types

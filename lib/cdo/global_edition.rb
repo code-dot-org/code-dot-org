@@ -140,8 +140,9 @@ module Cdo
       @region_locked_locales ||= begin
         region_locked_locales = {}
         REGIONS.each do |region|
-          next unless locale_lock?(region)
-          locale = main_region_locale(region)
+          locked_locale = locale_lock?(region)
+          next unless locked_locale
+          locale = locked_locale == true ? main_region_locale(region) : locked_locale
           region_locked_locales[locale] = region
         end
         region_locked_locales

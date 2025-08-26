@@ -7,9 +7,8 @@
 # with the ones given here, or, if the value is 'false', it removes the
 # component from the page.
 
-locales: [id-ID]
-locale_lock: true
-countries: [SA]
+locale_lock: id-ID
+countries: [ID]
 
 # The list of available project types
 project_types: &project_types
