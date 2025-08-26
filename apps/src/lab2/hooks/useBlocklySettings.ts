@@ -3,9 +3,9 @@ import {useEffect, useState} from 'react';
 import {BLOCKLY_THEME, Themes} from '@cdo/apps/blockly/constants';
 import {commonI18n} from '@cdo/apps/types/locale';
 
-import {getBaseName, setWorkspaceTheme} from '../blockly/utils';
-import {Setting} from '../lab2/views/components/Settings/SettingsDropdown';
-import UserPreferences from '../lib/util/UserPreferences';
+import {getBaseName, setWorkspaceTheme} from '../../blockly/utils';
+import UserPreferences from '../../lib/util/UserPreferences';
+import {Setting} from '../views/components/Settings/SettingsDropdown';
 
 const blockThemeOptions = [
   {
@@ -30,7 +30,7 @@ const blockThemeOptions = [
   },
 ];
 
-export function useMusicSettings(): Setting[] {
+export function useBlocklySettings(): Setting[] {
   const [selectedTheme, setSelectedTheme] = useState<string | null>(null);
 
   useEffect(() => {
