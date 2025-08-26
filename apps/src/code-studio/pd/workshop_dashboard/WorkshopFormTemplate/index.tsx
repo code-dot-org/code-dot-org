@@ -34,9 +34,6 @@ import {
   WorkshopFormState,
   WorkshopFormTemplateProps,
   WorkshopCourseConfig,
-  WorkshopRequest,
-  SessionRequest,
-  DestroyedSession,
 } from './types';
 import {
   workshopDataToState,
@@ -45,6 +42,7 @@ import {
   sessionStateToApi,
   workshopStateToApi,
   emptyValue,
+  madeImportantDetailChange,
 } from './utils';
 
 import styles from './styles.module.scss';
@@ -52,11 +50,6 @@ import styles from './styles.module.scss';
 export const REQUIRED_ERROR = 'Required';
 export const VALIDATION_ERROR =
   'Your form contains validation errors that must be corrected';
-const DETAIL_CHANGE_IGNORE_FIELDS = [
-  'hidden',
-  'registration_link',
-  'suppress_email',
-];
 
 export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
   config,
@@ -174,49 +167,10 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
     [workshopConfig?.session_fields, sessionFormState]
   );
 
-  // Returns if the editor has made a change of one of the fields that could trigger
-  // a Detail Change Notification email (if notify == true).
-  const madeImportantDetailChange = useCallback(() => {
-    if (!workshop) return false;
-
-    const workshopOld = workshopStateToApi(workshopDataToState(workshop));
-    const workshopNew = workshopStateToApi(workshopFormState);
-    for (const key of Object.keys(workshopOld) as Array<
-      keyof Omit<WorkshopRequest, 'sessions'>
-    >) {
-      if (
-        !DETAIL_CHANGE_IGNORE_FIELDS.includes(key) &&
-        JSON.stringify(workshopOld[key]) !== JSON.stringify(workshopNew[key])
-      ) {
-        return true;
-      }
-    }
-
-    const sessionsOld = sessionStateToApi(
-      sessionDataToState(workshop.sessions, workshop.time_zone),
-      workshop.time_zone || workshopFormState.timeZone
-    );
-    const sessionsNew = sessionStateToApi(
-      sessionFormState,
-      workshopFormState.timeZone,
-      workshop?.sessions
-    );
-    for (const key of Object.keys(sessionsOld) as Array<
-      keyof Array<SessionRequest | DestroyedSession>
-    >) {
-      if (
-        JSON.stringify(sessionsOld[key]) !== JSON.stringify(sessionsNew[key])
-      ) {
-        return true;
-      }
-    }
-
-    return false;
-  }, [workshopFormState, sessionFormState, workshop]);
-
   const publish = useCallback(
     async (notify: boolean) => {
       try {
+        setLoading(true);
         const workshopData = workshopStateToApi(workshopFormState);
         const sessionData = sessionStateToApi(
           sessionFormState,
@@ -266,7 +220,6 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
 
   const clickPublish = useCallback(async () => {
     // Ensure no errors before attempting to publish
-    setLoading(true);
     setResponseErrors([]);
     const workshopValidationErrors = getWorkshopErrors();
     setWorkshopErrors(workshopValidationErrors);
@@ -284,7 +237,7 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
     if (
       workshop?.enrolled_teacher_count &&
       workshop.enrolled_teacher_count > 0 &&
-      madeImportantDetailChange()
+      madeImportantDetailChange(workshop, workshopFormState, sessionFormState)
     ) {
       setShowDetailChangeEmailDialog(true);
     } else {
@@ -294,7 +247,8 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
     getSessionErrors,
     getWorkshopErrors,
     workshop,
-    madeImportantDetailChange,
+    workshopFormState,
+    sessionFormState,
     publish,
   ]);
 
