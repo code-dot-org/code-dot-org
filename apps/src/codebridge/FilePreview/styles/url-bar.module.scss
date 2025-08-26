@@ -1,4 +1,6 @@
 $url-bar-height: 24px;
+$vertical-padding-offset: 4px;
+$url-bar-content-height: calc($url-bar-height - $vertical-padding-offset);
 
 .urlBarContainer {
   background-color: var(--background-neutral-tertiary);
@@ -18,14 +20,14 @@ $url-bar-height: 24px;
     overflow: visible; // Allow focus outlines to extend beyond container
     padding: 2px 2px; // Inner padding to accommodate focus outlines
     box-sizing: border-box;
-    align-items: center; // Center content vertically within the padded container
+    align-items: center;
   }
 
   // Wrapper for the URL buttons and refresh button
   .urlButtonsWrapper {
     display: flex;
     background-color: var(--background-neutral-primary);
-    height: calc($url-bar-height - 4px); // Account for increased vertical padding
+    height: $url-bar-content-height; // Account for increased vertical padding
     overflow: hidden;
     box-sizing: border-box;
     align-items: center; // Center buttons vertically
@@ -34,33 +36,28 @@ $url-bar-height: 24px;
   // Add spacing between nav buttons and text field
   .navButtonsWrapper {
     margin-right: 2px;
-    margin-left: 4px;
   }
   
   // Add spacing between text field and refresh button
   .refreshButtonWrapper {
-    margin-right: 4px;
     margin-left: 2px;
   }
-
-  // Navigation and refresh button wrappers no longer need individual styling
-  // as borders and border-radius are handled by the parent urlBarInner container
 
   .urlButton {
     color: var(--text-neutral-quaternary) !important;
     margin: 0;
     
-    // Override button sizing for URL bar to fit within container
+    // Override button sizing for URL bar to fit within URL bar content container
     padding: 0.125rem !important; // Smaller padding to fit within height constraints
     min-width: auto !important; // Remove min-width constraint
-    width: calc($url-bar-height - 4px); // Make button square, accounting for increased vertical padding
-    height: calc($url-bar-height - 4px); // Match width for square shape
+    width: $url-bar-content-height;
+    height: $url-bar-content-height;
     
     // Override button focus styles for tight URL bar layout
     &:focus-visible {
       outline: 1px solid var(--borders-brand-teal-primary);
-      outline-offset: -1px; // Remove offset to put outline right on button border
-      border-radius: 0.25rem; // Use default button border radius
+      outline-offset: -1px; // Move outline slightly inside button border so that it doesn't get cut off by adjacent elements.
+      border-radius: 0.25rem;
       position: relative;
     }
   }
@@ -70,26 +67,26 @@ $url-bar-height: 24px;
     margin: 0;
     padding: 0;
     background-color: var(--background-neutral-primary);
-    height: calc($url-bar-height - 6px); // Account for increased vertical padding
+    height: $url-bar-content-height;
     box-sizing: border-box;
     display: flex;
-    align-items: center; // Center the input vertically
+    align-items: center;
 
     // Target the input element inside the TextField
     input {
       width: 100%;
       height: 100%;
       padding: 4px 8px; 
-      border: none !important; // Remove all borders, handled by parent
+      border: none; // Remove all borders, handled by parent
       border-radius: 0;
       font-size: var(--font-size-body-xs, 12px);
-      box-shadow: none !important;
+      box-shadow: none;
       background-color: transparent;
 
       &:focus-visible {
         // Let the default focus styles show properly within the padded container
-        outline: 2px solid var(--borders-brand-teal-primary) !important;
-        outline-offset: 1px;
+        outline: 2px solid var(--borders-brand-teal-primary);
+        outline-offset: 0;
         position: relative;
       }
     }
