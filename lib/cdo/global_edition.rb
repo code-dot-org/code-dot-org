@@ -123,26 +123,32 @@ module Cdo
     end
 
     def self.main_region_locale(region)
+      locked_locale = configuration_for(region)&.dig(:locale_lock)
+      return locked_locale if locked_locale.is_a?(String)
       region_locales(region)&.first
     end
 
-    # @note Only Pegasus pages are available in all regional languages.
     def self.locale_available?(region, locale)
       return true if region.nil? || region.empty?
       region_locales(region)&.include?(locale)
     end
 
+    def self.locked_locale(region)
+      locale_lock = configuration_for(region)&.dig(:locale_lock)
+      return locale_lock if locale_lock.is_a?(String)
+      nil
+    end
+
     def self.locale_lock?(region)
-      configuration_for(region)&.dig(:locale_lock)
+      !!configuration_for(region)&.dig(:locale_lock)
     end
 
     def self.region_locked_locales
       @region_locked_locales ||= begin
         region_locked_locales = {}
         REGIONS.each do |region|
-          locked_locale = locale_lock?(region)
-          next unless locked_locale
-          locale = locked_locale == true ? main_region_locale(region) : locked_locale
+          next unless locale_lock?(region)
+          locale = main_region_locale(region)
           region_locked_locales[locale] = region
         end
         region_locked_locales

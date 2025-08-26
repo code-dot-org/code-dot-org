@@ -11,7 +11,7 @@ export interface RegionConfigurationPageObject {
 
 export interface RegionConfiguration {
   locales?: readonly string[];
-  locale_lock?: boolean;
+  locale_lock?: boolean | string;
   countries?: readonly string[];
   header?: RegionConfigurationObject;
   footer?: RegionConfigurationObject;
