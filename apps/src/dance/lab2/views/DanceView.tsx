@@ -131,19 +131,14 @@ const DanceView: React.FunctionComponent<
     [dispatch]
   );
 
-  const saveProject = (selectedSong: string, forceSave = false) => {
-    if (!workspace.current) {
-      return;
+  const saveProject = useCallback((selectedSong: string, forceSave = false) => {
+    const sourcesToSave = getSourcesToSave(selectedSong);
+    if (sourcesToSave) {
+      Lab2Registry.getInstance()
+        .getProjectManager()
+        ?.save(sourcesToSave, forceSave);
     }
-    const blocksJson = Blockly.serialization.workspaces.save(workspace.current);
-    const sourcesToSave = {
-      selectedSong,
-      source: blocksJson,
-    };
-    Lab2Registry.getInstance()
-      .getProjectManager()
-      ?.save(sourcesToSave, forceSave);
-  };
+  }, []);
 
   const runProgram = useCallback(async () => {
     if (!programExecutor.current || !currentSongMetadata || !selectedSong) {
@@ -162,7 +157,13 @@ const DanceView: React.FunctionComponent<
     dispatch(setIsRunning(true));
     dispatch(setHasRun(true));
     saveProject(selectedSong, true);
-  }, [programExecutor, currentSongMetadata, selectedSong, dispatch]);
+  }, [
+    programExecutor,
+    currentSongMetadata,
+    selectedSong,
+    saveProject,
+    dispatch,
+  ]);
 
   const resetProgram = useCallback(() => {
     programExecutor.current?.reset();
@@ -202,7 +203,7 @@ const DanceView: React.FunctionComponent<
         dispatch(setHasEdited(true));
       }
     },
-    [selectedSong, isRunning, dispatch]
+    [selectedSong, isRunning, dispatch, saveProject]
   );
 
   // Setup Blockly for dance party when first mounting.
@@ -213,7 +214,7 @@ const DanceView: React.FunctionComponent<
     if (selectedSong) {
       saveProject(selectedSong);
     }
-  }, [selectedSong]);
+  }, [selectedSong, saveProject]);
 
   // Reset hasRun and hasEdited flag when level changes
   useEffect(() => {
