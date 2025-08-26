@@ -4,6 +4,9 @@ export const getQuestionDescription = (question: SurveyQuestion) => {
   if (isQuestionType(question, 'likert')) {
     return `${question.results.agreement_count} of ${question.results.total_responses} respondents`;
   }
+  if (isQuestionType(question, 'promoter')) {
+    return `${question.results.promoter_count} of ${question.results.total_responses} respondents`;
+  }
   if (
     isQuestionType(question, 'multiSelect') &&
     question.question_name === 'barriers_implementation_curriculum'

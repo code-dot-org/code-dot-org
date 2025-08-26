@@ -413,6 +413,7 @@ export interface LikertBreakdown {
 }
 
 export interface PromoterResults {
+  promoter_count: number;
   promoter_percentage: number;
   breakdown: Record<string, PromoterBreakdown>;
 }
