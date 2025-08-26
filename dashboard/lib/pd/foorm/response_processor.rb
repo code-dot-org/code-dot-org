@@ -92,6 +92,7 @@ module Pd::Foorm
 
       {
         total_responses: total_responses,
+        promoter_count: promoter_count,
         promoter_percentage: calculate_percentage(promoter_count, total_responses),
         breakdown: breakdown
       }

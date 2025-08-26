@@ -80,6 +80,7 @@ module Pd::Foorm
       expected_promoter_percentage = 80
 
       assert_equal 5, result[:total_responses]
+      assert_equal 4, result[:promoter_count]
       assert_equal expected_promoter_percentage, result[:promoter_percentage]
       assert_equal 4, result[:breakdown].size
     end
@@ -95,6 +96,7 @@ module Pd::Foorm
       result = ResponseProcessor.process_rating_responses(question_summary, choices)
 
       assert_equal 4, result[:total_responses]
+      assert_equal 0, result[:promoter_count]
       assert_equal 0, result[:promoter_percentage]
     end
 
@@ -226,6 +228,7 @@ module Pd::Foorm
       # Test that nil gets converted to empty hash and processed normally
       expected_rating_result = {
         total_responses: 0,
+        promoter_count: 0,
         promoter_percentage: 0,
         breakdown: {}
       }

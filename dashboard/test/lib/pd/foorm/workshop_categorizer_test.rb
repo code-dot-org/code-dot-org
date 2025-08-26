@@ -128,6 +128,8 @@ module Pd::Foorm
       result = WorkshopCategorizer.create_processed_question(question_name, question_data, question_summary)
 
       assert_equal 'promoter', result[:question_type]
+      assert result[:results].key?(:promoter_count)
+      assert_equal 4, result[:results][:promoter_count] # Count of responses >= 7
       assert result[:results].key?(:promoter_percentage)
       assert_equal 100, result[:results][:promoter_percentage] # All responses >= 7
     end

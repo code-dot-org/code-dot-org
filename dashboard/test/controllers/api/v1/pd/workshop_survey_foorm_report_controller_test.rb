@@ -395,6 +395,7 @@ module Api::V1::Pd
       assert promoter_question.key?(:question_text)
       assert promoter_question.key?(:question_type)
       assert promoter_question.key?(:results)
+      assert promoter_question[:results][:promoter_count].is_a?(Integer)
       assert promoter_question[:results][:promoter_percentage].is_a?(Integer)
       assert promoter_question[:results][:total_responses].is_a?(Integer)
       assert promoter_question[:results].key?(:breakdown)
