@@ -48,7 +48,7 @@ describe('Notification', () => {
     it('hides unread indicator when notification is read', () => {
       render(<Notification notification={mockReadNotification} />);
 
-      expect(screen.queryByAltText('Unread')).toBeNull();
+      expect(screen.queryByLabelText('Unread')).toBeNull();
     });
 
     it('displays "TODAY" for notifications published today', () => {
@@ -79,7 +79,7 @@ describe('Notification', () => {
 
     screen.getByText('Loading...:');
     screen.getByText('Lorem ipsum dolor sit amet, postea pericula');
-    expect(screen.queryByAltText('Unread')).toBeNull();
+    expect(screen.queryByLabelText('Unread')).toBeNull();
 
     const skeletonElements = document.querySelectorAll('.skeletonizeContent');
     expect(skeletonElements.length).toEqual(3);

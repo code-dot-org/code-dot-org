@@ -85,7 +85,7 @@ const Notification: React.FC<{
           notificationOrPlaceholder.publishedAt
         ).toLocaleUpperCase()}
       </BodyThreeText>
-      {notificationOrPlaceholder.readAt === null ? (
+      {notificationOrPlaceholder.readAt === null && notification !== null ? (
         <FontAwesomeV6Icon
           iconName="circle"
           iconStyle="solid"
