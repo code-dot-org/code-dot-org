@@ -56,44 +56,60 @@
               ],
               "rows": [
                 {
+                  "category": "facilitators",
                   "value": "demonstrated_knowledge",
-                  "text": "Demonstrated knowledge of the curriculum."
+                  "text": "Demonstrated knowledge of the curriculum.",
+                  "shortText": "Knowledge of curriculum (%)"
                 },
                 {
+                  "category": "facilitators",
                   "value": "equitable_workshop_environment",
                   "visibleIf": "{regional_partner_name} <> 'Broward County Public Schools' and {regional_partner_name}<>  'Florida International University' and {regional_partner_name} <> 'Orlando Science Center' and {regional_partner_name} <> 'Tampa Bay STEM Network' and {regional_partner_name} <> 'University of North Florida & STEM2 Hub'",
-                  "text": "Built and sustained a supportive learning environment for all participants."
+                  "text": "Built and sustained a supportive learning environment for all participants.",
+                  "shortText": "Supportive learning environment (%)"
                 },
                 {
+                  "category": "facilitators",
                   "value": "on_track",
-                  "text": "Kept the workshop and participants on track."
+                  "text": "Kept the workshop and participants on track.",
+                  "shortText": "Kept workshop on track (%)"
                 },
                 {
+                  "category": "facilitators",
                   "value": "productive_discussions",
-                  "text": "Supported productive workshop discussions."
+                  "text": "Supported productive workshop discussions.",
+                  "shortText": "Supported productive discussions (%)"
                 },
                 {
+                  "category": "facilitators",
                   "value": "create_equity_for_students",
                   "visibleIf": "{regional_partner_name} <> 'Broward County Public Schools' and {regional_partner_name}<>  'Florida International University' and {regional_partner_name} <> 'Orlando Science Center' and {regional_partner_name} <> 'Tampa Bay STEM Network' and {regional_partner_name} <> 'University of North Florida & STEM2 Hub'",
-                  "text": "Guided me towards building a supportive learning environment for all learners."
+                  "text": "Guided me towards building a supportive learning environment for all learners.",
+                  "shortText": "Taught inclusive teaching (%)"
                 },
                 {
+                  "category": "facilitators",
                   "value": "healthy_relationship",
-                  "text": "Demonstrated a healthy working relationship with their co-facilitator (if applicable)."
+                  "text": "Demonstrated a healthy working relationship with their co-facilitator (if applicable).",
+                  "shortText": "Healthy co-facilitator interaction (%)"
                 }
               ]
             },
             {
+              "category": "facilitators",
               "type": "comment",
               "name": "facilitator_did_well_fr",
               "title": "What were two things {panel.facilitator_name} did well?",
+              "shortText": "What did {panel.facilitator_name} do well?",
               "maxLength": 4000,
               "rows": 2
             },
             {
+              "category": "facilitators",
               "type": "comment",
               "name": "facilitator_could_improve_fr",
               "title": "What were two things {panel.facilitator_name} could do better?",
+              "shortText": "What could {panel.facilitator_name} do better?",
               "maxLength": 4000,
               "rows": 2
             }
@@ -147,42 +163,58 @@
               ],
               "rows": [
                 {
+                  "category": "facilitators",
                   "value": "demonstrated_knowledge",
-                  "text": "Demonstrated knowledge of the curriculum."
+                  "text": "Demonstrated knowledge of the curriculum.",
+                  "shortText": "Knowledge of curriculum (%)"
                 },
                 {
+                  "category": "facilitators",
                   "value": "equitable_workshop_environment",
-                  "text": "Built and sustained a supportive learning environment for all participants."
+                  "text": "Built and sustained a supportive learning environment for all participants.",
+                  "shortText": "Supportive learning environment (%)"
                 },
                 {
+                  "category": "facilitators",
                   "value": "on_track",
-                  "text": "Kept the workshop and participants on track."
+                  "text": "Kept the workshop and participants on track.",
+                  "shortText": "Kept workshop on track (%)"
                 },
                 {
+                  "category": "facilitators",
                   "value": "productive_discussions",
-                  "text": "Supported productive workshop discussions."
+                  "text": "Supported productive workshop discussions.",
+                  "shortText": "Supported productive discussions (%)"
                 },
                 {
+                  "category": "facilitators",
                   "value": "create_equity_for_students",
-                  "text": "Guided me towards building a supportive learning environment for all learners."
+                  "text": "Guided me towards building a supportive learning environment for all learners.",
+                  "shortText": "Taught inclusive teaching (%)"
                 },
                 {
+                  "category": "facilitators",
                   "value": "healthy_relationship",
-                  "text": "Demonstrated a healthy working relationship with their co-facilitator (if applicable)."
+                  "text": "Demonstrated a healthy working relationship with their co-facilitator (if applicable).",
+                  "shortText": "Healthy co-facilitator interaction (%)"
                 }
               ]
             },
             {
+              "category": "facilitators",
               "type": "comment",
               "name": "facilitator_did_well_fr",
               "title": "What were two things {panel.facilitator_name} did well?",
+              "shortText": "What did {panel.facilitator_name} do well?",
               "maxLength": 4000,
               "rows": 2
             },
             {
+              "category": "facilitators",
               "type": "comment",
               "name": "facilitator_could_improve_fr",
               "title": "What were two things {panel.facilitator_name} could do better?",
+              "shortText": "What could {panel.facilitator_name} do better?",
               "maxLength": 4000,
               "rows": 2
             }
