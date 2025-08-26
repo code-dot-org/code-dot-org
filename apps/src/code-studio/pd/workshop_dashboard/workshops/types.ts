@@ -50,17 +50,11 @@ export interface WorkshopData {
 
 export interface WorkshopContextValue {
   workshop: WorkshopData | null;
-  workshopLoading: UseFetchResult<Workshop>['loading'];
-  workshopError: UseFetchResult<Workshop>['error'];
   refetchWorkshop: UseFetchResult<Workshop>['refetch'];
   enrollments: EnrollmentData[];
   enrollmentsLoading: UseFetchResult<EnrollmentData[]>['loading'];
-  enrollmentsError: UseFetchResult<EnrollmentData[]>['error'];
   refetchEnrollments: UseFetchResult<EnrollmentData[]>['refetch'];
   surveys: SurveySummary | null;
-  surveysLoading: UseFetchResult<SurveySummary>['loading'];
-  surveysError: UseFetchResult<SurveySummary>['error'];
-  refetchSurveys: UseFetchResult<SurveySummary>['refetch'];
 }
 
 export interface TabConfig {

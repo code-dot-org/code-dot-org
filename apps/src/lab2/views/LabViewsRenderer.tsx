@@ -10,7 +10,11 @@ import {PERMISSIONS} from '@cdo/apps/lab2/constants';
 import {useInitialLabTheme} from '@cdo/apps/lab2/hooks/useInitialLabTheme';
 import ProgressContainer from '@cdo/apps/lab2/progress/ProgressContainer';
 import {getAppOptionsViewingExemplar} from '@cdo/apps/lab2/projects/utils';
-import {getLabViewPageAction, isUsingResourcePanel} from '@cdo/apps/lab2/utils';
+import {
+  getLabViewPageAction,
+  isUsingResourcePanel,
+  getIsLabViewBlocked,
+} from '@cdo/apps/lab2/utils';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {lab2EntryPoints} from '../../../lab2EntryPoints';
@@ -29,12 +33,12 @@ const LabViewsRenderer: React.FunctionComponent = () => {
   const exemplarSources = levelProperties?.exemplarSources;
   const levelId = levelProperties?.id;
 
-  const isBlockedAbuse = useAppSelector(state => state.lab.isBlockedAbuse);
+  const isBlockedAbuse = useAppSelector(state => !!state.lab.isBlockedAbuse);
   const projectSharingDisabled = useAppSelector(
-    state => state.lab.projectSharingDisabled
+    state => !!state.lab.projectSharingDisabled
   );
   const isTeacherOfProjectOwner = useAppSelector(
-    state => state.lab.isTeacherOfProjectOwner
+    state => !!state.lab.isTeacherOfProjectOwner
   );
   const isOwner = useAppSelector(state => state.lab.channel?.isOwner || false);
   const isProjectValidator = useAppSelector(state =>
@@ -54,10 +58,6 @@ const LabViewsRenderer: React.FunctionComponent = () => {
     levelProperties,
   });
 
-  const isBlocked = isBlockedAbuse || projectSharingDisabled;
-  const hasElevatedPrivileges =
-    isProjectValidator || isOwner || isTeacherOfProjectOwner;
-
   useEffect(() => {
     const footer = document.getElementById('page-small-footer');
     // The resource panel has includes copyright and language, so we hide the footer.
@@ -71,22 +71,16 @@ const LabViewsRenderer: React.FunctionComponent = () => {
     }
   }, [currentAppName, isProjectLevel]);
 
-  const blockLabView = () => {
-    if (!currentAppName) return true;
-    if (!isBlocked) return false;
+  const blockLabView = getIsLabViewBlocked(
+    pageAction,
+    isBlockedAbuse,
+    projectSharingDisabled,
+    isOwner,
+    isTeacherOfProjectOwner,
+    isProjectValidator
+  );
 
-    // If a project is blocked and in share view, do not render the lab view.
-    if (pageAction === 'share') {
-      return true;
-    }
-    // If a project is blocked and in view/edit mode or on a level page, do not render the lab view if the user does not have view/edit access.
-    if (['view', 'edit'].includes(pageAction) && !hasElevatedPrivileges) {
-      return true;
-    }
-    return false;
-  };
-
-  if (blockLabView()) {
+  if (!currentAppName || blockLabView) {
     return null;
   }
   // Show a fallback no exemplar page if we are trying to view
