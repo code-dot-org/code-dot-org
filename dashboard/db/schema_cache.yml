@@ -7166,6 +7166,14 @@ columns:
     comment: 
   - *14
   - *15
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: deletion_warning_email_sent_at
+    sql_type_metadata: *4
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
   user_facilitator_infos:
   - *9
   - *11
@@ -14042,6 +14050,19 @@ indexes:
     type: 
     using: :btree
     comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: user_data_retention_statuses
+    name: index_user_data_retention_statuses_on_warning_email_sent_at
+    unique: false
+    columns:
+    - deletion_warning_email_sent_at
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: :btree
+    comment: 
   user_facilitator_infos:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: user_facilitator_infos
@@ -14568,7 +14589,7 @@ indexes:
     type: :fulltext
     using: 
     comment: 
-version: 20250815132016
+version: 20250821182723
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 8

@@ -1,9 +1,12 @@
 import React, {useCallback, useEffect, useState} from 'react';
 
+import experiments from '@cdo/apps/util/experiments';
+
 import HttpClient from '../util/HttpClient';
 
 import AiDiffChat from './AiDiffChat';
 import AiDiffSidebar from './AiDiffSidebar';
+import AiDiffNotificationList from './notifications/AiDiffNotificationList';
 import {
   ChatItem,
   ChatThread,
@@ -30,6 +33,9 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
   const [threads, setThreads] = useState<ChatThread[]>();
   const [threadMessages, setThreadMessages] = useState<ChatItem[]>();
   const [threadId, setThreadId] = useState<number>(0);
+  const [keyId, setKeyId] = useState<number>(0);
+
+  const [showNotifications, setShowNotifications] = useState<boolean>(false);
 
   async function asyncFetchThreads(): Promise<ChatThread[]> {
     const response = await HttpClient.fetchJson<ChatThread[]>(
@@ -70,14 +76,24 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
       if (thread === 0) {
         setThreadMessages([]);
         setThreadId(thread);
+        // changing the keyId resets the component state.
+        // if key is already 0 (i.e. starting a new thread from a new thread)
+        // then we need to alternate to a different key value to reset state
+        // -1 is safe because it won't accidentally match a threadID value
+        if (keyId === 0) {
+          setKeyId(-1);
+        } else {
+          setKeyId(thread);
+        }
       } else {
         asyncFetchThreadMessages(thread).then(response => {
           setThreadMessages(response.messages);
           setThreadId(thread);
+          setKeyId(thread);
         });
       }
     },
-    [setThreadMessages]
+    [setThreadMessages, keyId]
   );
 
   return (
@@ -87,17 +103,23 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
           threads={threads}
           selectedThreadId={threadId}
           threadSelectCallback={fetchThreadMessages}
+          setShowNotifications={setShowNotifications}
         />
       )}
-      <AiDiffChat
-        context={context}
-        scriptName={scriptName}
-        curriculumCourses={curriculumCourses}
-        threadFetchCallback={showSidebar ? fetchThreads : () => {}}
-        threadMessages={threadMessages}
-        key={threadId}
-        threadId={threadId}
-      />
+      {showNotifications && experiments.isEnabled('teacher-notifications') ? (
+        <AiDiffNotificationList />
+      ) : (
+        <AiDiffChat
+          context={context}
+          scriptName={scriptName}
+          curriculumCourses={curriculumCourses}
+          threadFetchCallback={showSidebar ? fetchThreads : () => {}}
+          threadMessages={threadMessages}
+          key={keyId}
+          threadId={threadId}
+          setThreadId={setThreadId}
+        />
+      )}
     </div>
   );
 };

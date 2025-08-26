@@ -43,6 +43,8 @@ const minY = isNaN(originY)
   : originY - document.documentElement.clientHeight + boxHeight;
 const maxY = isNaN(originY) ? 1000 : originY + boxHeight - MIN_VISIBLE;
 
+const AI_DIFF_CLOSE_BUTTON_CLASSNAME = 'ai_diff_close_button';
+
 const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
   closeTutor,
   context,
@@ -107,6 +109,7 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
       handle=".ai_diff_handle"
       position={{x: positionX, y: positionY}}
       onStop={onStopHandler}
+      cancel={`.${AI_DIFF_CLOSE_BUTTON_CLASSNAME}`}
     >
       <div
         // eslint-disable-next-line react/forbid-dom-props
@@ -121,7 +124,10 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
         style={open ? undefined : {display: 'none'}}
       >
         <FocusLock>
-          <AiDiffHeader closeTutor={closeTutor} />
+          <AiDiffHeader
+            closeTutor={closeTutor}
+            closeButtonClassName={AI_DIFF_CLOSE_BUTTON_CLASSNAME}
+          />
           <div className={style.fabBackground}>
             {!hasCompletedAiDifferentiationWelcome && showWelcomeExperience
               ? curriculumCourses && (

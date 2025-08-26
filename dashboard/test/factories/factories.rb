@@ -2054,6 +2054,33 @@ FactoryBot.define do
     subject {"subject"}
     lti_integration {create(:lti_integration)}
     user {create(:student)}
+
+    # Let callers optionally pass deployments to attach after creation
+    transient do
+      attach_deployments {[]} # accept one or many deployments
+    end
+
+    after(:create) do |identity, evaluator|
+      Array(evaluator.attach_deployments).compact.each do |dep|
+        identity.lti_deployments << dep
+      end
+    end
+
+    # Convenience trait that creates one deployment (linked to same integration)
+    trait :with_deployment do
+      after(:create) do |identity, _|
+        identity.lti_deployments << create(:lti_deployment, lti_integration: identity.lti_integration)
+      end
+    end
+
+    # Add multiple deployments
+    trait :with_deployments do
+      transient {deployment_count {2}}
+      after(:create) do |identity, evaluator|
+        deps = create_list(:lti_deployment, evaluator.deployment_count, lti_integration: identity.lti_integration)
+        identity.lti_deployments << deps
+      end
+    end
   end
 
   factory :lti_deployment do
@@ -2309,5 +2336,27 @@ FactoryBot.define do
 
   factory :user_data_retention_status, class: 'User::DataRetentionStatus' do
     association :user
+  end
+
+  factory :foorm_submission, class: 'Foorm::Submission' do
+    form_name {''}
+    form_version {1}
+    answers {''}
+  end
+
+  factory :simple_survey_form, class: 'Foorm::SimpleSurveyForm' do
+    form_name {''}
+    form_version {1}
+    path {'path'}
+  end
+
+  factory :simple_survey_submission, class: 'Foorm::SimpleSurveySubmission' do
+    association :user
+    association :simple_survey_form
+  end
+
+  factory :misc_survey, class: 'Pd::MiscSurvey' do
+    association :user
+    form_id {1}
   end
 end

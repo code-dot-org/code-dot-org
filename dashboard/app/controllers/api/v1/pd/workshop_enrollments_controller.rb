@@ -26,7 +26,7 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
         render json: @workshop.enrollments, each_serializer: Api::V1::Pd::WorkshopEnrollmentSerializer
       end
       format.csv do
-        response = render_to_json @workshop.enrollments, each_serializer: Api::V1::Pd::WorkshopEnrollmentSerializer
+        response = render_to_json @workshop.enrollments, each_serializer: Api::V1::Pd::WorkshopEnrollmentCsvSerializer
         send_as_csv_attachment response, 'workshop_enrollments.csv'
       end
     end

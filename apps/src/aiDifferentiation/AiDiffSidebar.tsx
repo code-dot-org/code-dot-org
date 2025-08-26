@@ -1,8 +1,10 @@
 import Button, {buttonColors} from '@code-dot-org/component-library/button';
+import {OverlineThreeText} from '@code-dot-org/component-library/typography';
 import {Box, List, ListItem, ListItemButton, ListItemText} from '@mui/material';
 import React from 'react';
 
 import {commonI18n} from '@cdo/apps/types/locale';
+import experiments from '@cdo/apps/util/experiments';
 
 import {ChatThread} from './types';
 
@@ -12,6 +14,7 @@ interface AiDiffSidebarProps {
   threads?: ChatThread[];
   selectedThreadId?: number;
   threadSelectCallback?: (thread: number) => void;
+  setShowNotifications: (show: boolean) => void;
 }
 
 const now = new Date();
@@ -31,7 +34,11 @@ const ThreadItem: React.FC<{
   onClick: () => void;
 }> = ({chat, selected, onClick}) => (
   <ListItem key={chat.id} disablePadding>
-    <ListItemButton onClick={() => onClick()} selected={selected}>
+    <ListItemButton
+      onClick={() => onClick()}
+      selected={selected}
+      className={styles.sidebarChatButton}
+    >
       <ListItemText
         primary={chat.title}
         secondary={chat.updatedAt.toLocaleString([], {
@@ -40,7 +47,9 @@ const ThreadItem: React.FC<{
         })}
         className={styles.sidebarChatItem}
         classes={{
-          primary: styles.sidebarChatItemPrimary,
+          primary: selected
+            ? styles.sidebarChatItemPrimarySelected
+            : styles.sidebarChatItemPrimary,
           secondary: styles.sidebarChatItemSecondary,
         }}
       />
@@ -52,8 +61,10 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
   threads = [],
   selectedThreadId,
   threadSelectCallback = () => {},
+  setShowNotifications,
 }) => {
   const handleListItemClick = (chatId: number) => {
+    setShowNotifications(false);
     threadSelectCallback(chatId);
   };
 
@@ -85,18 +96,34 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
       >
         <Button
           color={buttonColors.white}
-          size="m"
+          size="s"
           type="primary"
           iconLeft={{iconName: 'plus'}}
-          onClick={() => threadSelectCallback(0)}
+          onClick={() => {
+            setShowNotifications(false);
+            threadSelectCallback(0);
+          }}
           text={commonI18n.aiDifferentiation_new_chat()}
           className={styles.sidebarButton}
         />
+        {experiments.isEnabled('teacher-notifications') && (
+          <Button
+            color={buttonColors.white}
+            size="m"
+            type="secondary"
+            iconLeft={{iconName: 'bell'}}
+            onClick={() => setShowNotifications(true)}
+            text={commonI18n.notifications()}
+            className={styles.sidebarButton}
+          />
+        )}
         <div className={styles.sidebarContent}>
           <List disablePadding={true}>
             {todayChats.length > 0 && (
               <>
-                <p className={styles.sidebarSectionTitle}>TODAY</p>
+                <OverlineThreeText className={styles.sidebarSectionTitle}>
+                  TODAY
+                </OverlineThreeText>
                 {todayChats.map(chat => (
                   <ThreadItem
                     key={chat.id}
@@ -109,7 +136,9 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
             )}
             {past7DaysChats.length > 0 && (
               <>
-                <p className={styles.sidebarSectionTitle}>PREVIOUS 7 DAYS</p>
+                <OverlineThreeText className={styles.sidebarSectionTitle}>
+                  PREVIOUS 7 DAYS
+                </OverlineThreeText>
                 {past7DaysChats.map(chat => (
                   <ThreadItem
                     key={chat.id}
@@ -122,7 +151,9 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
             )}
             {past30DaysChats.length > 0 && (
               <>
-                <p className={styles.sidebarSectionTitle}>PREVIOUS 30 DAYS</p>
+                <OverlineThreeText className={styles.sidebarSectionTitle}>
+                  PREVIOUS 30 DAYS
+                </OverlineThreeText>
                 {past30DaysChats.map(chat => (
                   <ThreadItem
                     key={chat.id}
@@ -135,7 +166,9 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
             )}
             {oldChats.length > 0 && (
               <>
-                <p className={styles.sidebarSectionTitle}>OLDER CHATS</p>
+                <OverlineThreeText className={styles.sidebarSectionTitle}>
+                  OLDER CHATS
+                </OverlineThreeText>
                 {oldChats.map(chat => (
                   <ThreadItem
                     key={chat.id}
