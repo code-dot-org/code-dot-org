@@ -1,3 +1,3 @@
 export * from './sessionId';
-export * from './reducers';
+export * from './redux';
 export * from './types';

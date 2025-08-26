@@ -49,13 +49,13 @@
       "import": "./dist/esm/player/index.mjs",
       "require": "./dist/cjs/player/index.js"
     },
-    "./reducers": {
+    "./redux": {
       "types": {
-        "import": "./dist/esm/reducers/index.d.ts",
-        "require": "./dist/cjs/reducers/index.d.js"
+        "import": "./dist/esm/redux/index.d.ts",
+        "require": "./dist/cjs/redux/index.d.js"
       },
-      "import": "./dist/esm/reducers/index.mjs",
-      "require": "./dist/cjs/reducers/index.js"
+      "import": "./dist/esm/redux/index.mjs",
+      "require": "./dist/cjs/redux/index.js"
     }
   },
   "scripts": {

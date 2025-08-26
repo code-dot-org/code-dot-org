@@ -6,11 +6,11 @@ import {
 } from '@reduxjs/toolkit';
 
 import * as userLevelsApi from '@code-dot-org/api/userLevels';
-import {progressActions} from '@code-dot-org/progress/reducers';
+import {progressActions} from '@code-dot-org/progress/redux';
 
-import type {RootState, AppDispatch} from '../store';
+import type {RootState, AppDispatch} from '../redux/store';
 
-import {setLoadedPredictResponse} from './lab';
+import {setLoadedPredictResponse} from './labSlice';
 
 export interface PredictLevelState {
   response: string;

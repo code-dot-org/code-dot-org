@@ -5,10 +5,11 @@ import _ from 'lodash';
 import type {Lesson} from '@code-dot-org/models/lessons';
 import type {Level} from '@code-dot-org/models/levels';
 import {LevelKind} from '@code-dot-org/models/levels';
-import type {RootStateFor, AppDispatchFor} from '@code-dot-org/redux';
+import type {StateFor, AppDispatchFor, MockStore} from '@code-dot-org/redux';
 
-type RootState = RootStateFor<[typeof progressSlice]>;
-type AppDispatch = AppDispatchFor<[typeof progressSlice]>;
+type Store = MockStore<[typeof progressSlice]>;
+type RootState = StateFor<Store>;
+type AppDispatch = AppDispatchFor<Store>;
 
 import {PUZZLE_PAGE_NONE, LevelStatus, TestResults, MINIMUM_PASS_RESULT, MINIMUM_OPTIMAL_RESULT} from '../constants';
 import {LevelResults, PeerReviewLevelInfo, ProgressState, UnitProgress, UnitProgressDefinition, InitProgressPayload, ViewType, MilestoneReport, OptionalMilestoneData, ProgressLevelType, NumberedLevel} from '../types';

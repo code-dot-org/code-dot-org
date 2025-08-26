@@ -112,7 +112,7 @@ const config: StorybookConfig = {
       config.plugins.push(
         new IgnorePlugin({
           resourceRegExp: /^\.\/index.css$/,
-          contextRegExp: /component-library\/src/,
+          contextRegExp: /\/src/,
         }),
       );
     }

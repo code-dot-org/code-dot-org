@@ -10,7 +10,7 @@ import type {AppName} from '@code-dot-org/api/projects';
 import {LabConfig, MultiFileSource, ProjectSources} from '@code-dot-org/api/sources';
 
 import LabRegistry from '../LabRegistry';
-import type {AppDispatch, RootState} from '../store';
+import type {AppDispatch, RootState} from '../redux/store';
 
 export interface LabProjectState {
   projectSources: ProjectSources | undefined;

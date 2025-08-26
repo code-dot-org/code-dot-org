@@ -15,7 +15,7 @@ import type {ProjectType} from '@code-dot-org/projects';
 import {TEACHER_FEEDBACK_LINK, STUDENT_FEEDBACK_LINK, ProjectSubmissionStatus} from '@lab-base/constants';
 import {useShare} from '@lab-base/contexts';
 
-import {useAppSelector} from '../../store';
+import {useAppSelector} from '../../redux/store';
 
 import moduleStyles from './share-dialog.module.scss';
 

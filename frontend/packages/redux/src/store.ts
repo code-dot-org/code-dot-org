@@ -1,26 +1,33 @@
 import {configureStore, combineReducers} from '@reduxjs/toolkit';
 import type {Slice} from  '@reduxjs/toolkit'
 import {useDispatch, useSelector} from 'react-redux';
-import type {Reducer, ReducersMapObject} from 'redux';
+import type {AnyAction, Reducer, ReducersMapObject, Store} from 'redux';
 
-import reduxSlice from './reducers/redux';
-import type {SlicesState, StateFromStore, StoreWithState, StoreWithAsyncReducers} from './types';
+import reduxSlice from './reduxSlice';
+import type {SlicesState, StoreWithState, StoreWithAsyncReducers} from './types';
 
 const staticReducers: ReducersMapObject = {
   redux: reduxSlice.reducer as Reducer,
 };
 
-const store = configureStore({
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export type StoreFor<TExtendedStore> = TExtendedStore extends StoreWithState<infer S, any> ? S : never;
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export type StateFor<TExtendedStore> = TExtendedStore extends StoreWithState<any, infer S> ? S : never;
+
+const initialStore = configureStore({
   reducer: staticReducers,
-   
 });
 
 export function injectSlices<
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  TSlices extends readonly Slice<any, any, string>[]
+  TSlices extends readonly Slice<any, any, string>[],
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  TExtendedStore extends StoreWithState<any, any>, 
 >(
-  slices: TSlices
-): StoreWithState<typeof store, StateFromStore<typeof store> & SlicesState<TSlices>> {
+  slices: TSlices,
+  store: TExtendedStore,
+): StoreWithState<StoreFor<TExtendedStore>, StateFor<TExtendedStore> & SlicesState<TSlices>> {
   const s = store as StoreWithAsyncReducers<typeof store>;
 
   // start from whatever we already have (or an empty object)
@@ -38,27 +45,32 @@ export function injectSlices<
 
   // refine the type of getState() to include the injected slices
   return store as unknown as StoreWithState<
-    typeof store,
-    StateFromStore<typeof store> & SlicesState<TSlices>
+    StoreFor<TExtendedStore>,
+    StateFor<TExtendedStore> & SlicesState<TSlices>
   >;
 }
 
 /** Optional convenience overload for a single slice */
 export function injectSlice<
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  S extends Slice<any, any, string>
->(slice: S) {
-  return injectSlices([slice] as const);
+  S extends Slice<any, any, string>,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  TStore extends Store<any, AnyAction>,
+>(slice: S, store: TStore) {
+  return injectSlices([slice] as const, store);
 }
 
-export type RootState = ReturnType<typeof store['getState']>;
-export type AppDispatch = typeof store.dispatch;
+const defaultStore = initialStore as unknown as StoreWithState<typeof initialStore, SlicesState<[typeof reduxSlice]>>;
+
+export type RootState = ReturnType<typeof defaultStore['getState']>;
+export type AppDispatch = typeof defaultStore.dispatch;
 export const useAppDispatch = useDispatch.withTypes<AppDispatch>();
 export const useAppSelector = useSelector.withTypes<RootState>();
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-export type RootStateFor<TSlices extends readonly Slice<any, any, string>[]> = ReturnType<(StoreWithState<typeof store, StateFromStore<typeof store> & SlicesState<TSlices>>)['getState']>;
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export type AppDispatchFor<TSlices extends readonly Slice<any, any, string>[]> = (StoreWithState<typeof store, StateFromStore<typeof store> & SlicesState<TSlices>>)['dispatch'];
+export type AppDispatchFor<TStore extends Store<any, AnyAction>> = TStore['dispatch'];
 
-export default store;
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export type MockStore<TSlices extends readonly Slice<any, any, string>[]> = StoreWithState<typeof initialStore, SlicesState<TSlices>>;
+
+export default defaultStore;

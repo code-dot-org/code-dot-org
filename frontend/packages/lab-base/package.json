@@ -48,29 +48,37 @@
       "import": "./dist/esm/contexts/index.mjs",
       "require": "./dist/cjs/contexts/index.js"
     },
-    "./reducers": {
+    "./redux": {
       "types": {
-        "import": "./dist/esm/reducers/index.d.ts",
-        "require": "./dist/cjs/reducers/index.d.js"
+        "import": "./dist/esm/redux/index.d.ts",
+        "require": "./dist/cjs/redux/index.d.js"
       },
-      "import": "./dist/esm/reducers/index.mjs",
-      "require": "./dist/cjs/reducers/index.js"
+      "import": "./dist/esm/redux/index.mjs",
+      "require": "./dist/cjs/redux/index.js"
     },
-    "./stores": {
+    "./redux/labSlice": {
       "types": {
-        "import": "./dist/esm/stores/index.d.ts",
-        "require": "./dist/cjs/stores/index.d.js"
-      },
-      "import": "./dist/esm/stores/index.mjs",
-      "require": "./dist/cjs/stores/index.js"
+        "import": "./dist/esm/redux/labSlice.d.ts",
+        "require": "./dist/cjs/redux/labSlice.d.js"
+      }
     },
-    "./providers": {
+    "./redux/labSystemSlice": {
       "types": {
-        "import": "./dist/esm/providers/index.d.ts",
-        "require": "./dist/cjs/providers/index.d.js"
-      },
-      "import": "./dist/esm/providers/index.mjs",
-      "require": "./dist/cjs/providers/index.js"
+        "import": "./dist/esm/redux/labSystemSlice.d.ts",
+        "require": "./dist/cjs/redux/labSystemSlice.d.js"
+      }
+    },
+    "./redux/labProjectSlice": {
+      "types": {
+        "import": "./dist/esm/redux/labProjectSlice.d.ts",
+        "require": "./dist/cjs/redux/labProjectSlice.d.js"
+      }
+    },
+    "./redux/predictLevelSlice": {
+      "types": {
+        "import": "./dist/esm/redux/predictLevelSlice.d.ts",
+        "require": "./dist/cjs/redux/predictLevelSlice.d.js"
+      }
     }
   },
   "scripts": {

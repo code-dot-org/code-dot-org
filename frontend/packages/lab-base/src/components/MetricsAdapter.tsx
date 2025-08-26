@@ -3,7 +3,7 @@ import React, {useEffect} from 'react';
 import useLifecycleNotifier from '../hooks/useLifecycleNotifier';
 import LabRegistry from '../LabRegistry';
 import {Callback, LifecycleEvent} from '../LifecycleNotifier';
-import {useAppSelector} from '../store';
+import {useAppSelector} from '../redux/store';
 
 /**
  * Listens for Redux state changes and updates the LabMetricsReporter accordingly.

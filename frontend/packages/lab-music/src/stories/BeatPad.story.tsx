@@ -2,12 +2,12 @@ import {Meta, StoryFn} from '@storybook/react';
 import type {PropsWithChildren} from 'react';
 
 import {ThemeProvider, Theme, useTheme} from '@code-dot-org/component-library/common/contexts';
-import {injectSlice, RootStateProvider, useAppDispatch} from '@code-dot-org/redux';
+import {default as defaultStore, injectSlice, RootStateProvider, useAppDispatch} from '@code-dot-org/redux';
 
 import {BeatPad, BeatPadProps} from '@lab-music/.';
-import {musicSlice} from '@lab-music/reducers';
+import {musicSlice} from '@lab-music/redux';
 
-injectSlice(musicSlice);
+injectSlice(musicSlice, defaultStore);
 
 export default {
   title: 'Labs/Music/BeatPad',
@@ -18,7 +18,7 @@ export default {
 interface WrapperProps extends PropsWithChildren {
   /** The theme to render the wrapped components within */
   theme: Theme;
-  isPlaying: boolean;
+  isPlaying?: boolean;
 }
 
 const Wrapper: React.FunctionComponent<WrapperProps> = ({
@@ -27,7 +27,7 @@ const Wrapper: React.FunctionComponent<WrapperProps> = ({
   children,
 }) => {
   const dispatch = useAppDispatch();
-  dispatch(musicSlice.actions.setIsPlaying(isPlaying));
+  dispatch(musicSlice.actions.setIsPlaying(isPlaying || false));
   useTheme().setTheme(theme || 'Light');
   return children;
 };
@@ -61,7 +61,6 @@ const Template: StoryFn<WrapperProps & BeatPadProps> = ({
 
 const defaultArgs: BeatPadProps = {
   triggers: [],
-  isPlaying: false,
   playTrigger: (id: string) => alert(`playing trigger ${id}`),
 };
 

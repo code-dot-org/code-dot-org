@@ -32,22 +32,6 @@
       "import": "./dist/esm/index.mjs",
       "require": "./dist/cjs/index.js"
     },
-    "./reducers": {
-      "types": {
-        "import": "./dist/esm/reducers/index.d.ts",
-        "require": "./dist/cjs/reducers/index.d.js"
-      },
-      "import": "./dist/esm/reducers/index.mjs",
-      "require": "./dist/cjs/reducers/index.js"
-    },
-    "./stores": {
-      "types": {
-        "import": "./dist/esm/stores/index.d.ts",
-        "require": "./dist/cjs/stores/index.d.js"
-      },
-      "import": "./dist/esm/stores/index.mjs",
-      "require": "./dist/cjs/stores/index.js"
-    },
     "./providers": {
       "types": {
         "import": "./dist/esm/providers/index.d.ts",
@@ -55,6 +39,12 @@
       },
       "import": "./dist/esm/providers/index.mjs",
       "require": "./dist/cjs/providers/index.js"
+    },
+    "./reduxSlice": {
+      "types": {
+        "import": "./dist/esm/reduxSlice.d.ts",
+        "require": "./dist/cjs/reduxSlice.d.js"
+      }
     }
   },
   "scripts": {

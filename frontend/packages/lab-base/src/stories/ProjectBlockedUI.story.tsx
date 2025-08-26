@@ -1,12 +1,12 @@
 import {Meta, StoryFn} from '@storybook/react';
 
 import {ThemeProvider, useTheme} from '@code-dot-org/component-library/common/contexts';
-import {injectSlice, RootStateProvider, useAppDispatch} from '@code-dot-org/redux';
+import {default as defaultStore, injectSlice, RootStateProvider, useAppDispatch} from '@code-dot-org/redux';
 
 import {ProjectBlockedUI, ProjectBlockedUIProps} from '@lab-base/components';
-import {labSlice} from '@lab-base/reducers';
+import {labSlice} from '@lab-base/redux';
 
-injectSlice(labSlice);
+injectSlice(labSlice, defaultStore);
 
 export default {
   title: 'Labs/Base/ProjectBlockedUI',

@@ -1,8 +1,8 @@
 import classNames from 'classnames';
 import React from 'react';
 
-import {Trigger} from '../../constants';
-import {useAppSelector} from '../../store';
+import {useAppSelector} from '../../redux/store';
+import type {Trigger} from '../../types';
 
 import styles from './beatpad.module.scss';
 

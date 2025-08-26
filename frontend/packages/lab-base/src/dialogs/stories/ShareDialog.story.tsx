@@ -2,11 +2,11 @@ import {Meta, StoryFn} from '@storybook/react';
 
 import {ThemeProvider, useTheme} from '@code-dot-org/component-library/common/contexts';
 import {ShareDialog, ShareDialogProps} from '@code-dot-org/lab-base/dialogs';
-import {injectSlice, RootStateProvider, useAppDispatch} from '@code-dot-org/redux';
+import {default as defaultStore, injectSlice, RootStateProvider, useAppDispatch} from '@code-dot-org/redux';
 import {UserType} from '@code-dot-org/user';
-import {currentUserSlice} from '@code-dot-org/user/reducers';
+import {currentUserSlice} from '@code-dot-org/user/redux';
 
-injectSlice(currentUserSlice);
+injectSlice(currentUserSlice, defaultStore);
 
 export default {
   title: 'Labs/Base/Dialogs/ShareDialog',

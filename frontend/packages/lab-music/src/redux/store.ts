@@ -4,15 +4,16 @@
 
 import {useDispatch, useSelector} from 'react-redux';
 
-import {injectSlices} from '@code-dot-org/redux';
+import {default as labStore} from '@code-dot-org/lab-base/redux';
+import {injectSlices, StateFor} from '@code-dot-org/redux';
 
-import {musicSlice} from './reducers';
+import musicSlice from './musicSlice';
 
 const store = injectSlices([
   musicSlice,
-]);
+], labStore);
 
-export type RootState = ReturnType<typeof store['getState']>;
+export type RootState = StateFor<typeof store>;
 export type AppDispatch = typeof store.dispatch;
 export const useAppDispatch = useDispatch.withTypes<AppDispatch>();
 export const useAppSelector = useSelector.withTypes<RootState>();

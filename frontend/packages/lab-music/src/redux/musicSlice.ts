@@ -1,8 +1,6 @@
 import {createSlice} from "@reduxjs/toolkit";
 import type {PayloadAction} from "@reduxjs/toolkit";
 
-import type {RootStateFor} from '@code-dot-org/redux';
-
 import {
   BlockMode,
   DEFAULT_BPM,
@@ -16,7 +14,7 @@ import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
 import {MusicLevelData} from '../types';
 import {Key} from '../utils/Notes';
 
-type RootState = RootStateFor<[typeof musicSlice]>;
+import type {RootState} from './store';
 
 /**
  * A type that is one of the values of an object type.

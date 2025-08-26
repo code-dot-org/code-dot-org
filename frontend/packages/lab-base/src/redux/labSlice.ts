@@ -14,21 +14,21 @@ import {OPEN_ENDED_LAB2_PROJECT_TYPES} from '@code-dot-org/api/projects';
 import {getPredictResponse} from '@code-dot-org/api/userLevels';
 import type {Validation, ValidationState} from '@code-dot-org/progress';
 import {getInitialValidationState, LevelStatus} from '@code-dot-org/progress';
-import {progressActions} from '@code-dot-org/progress/reducers';
+import {progressActions} from '@code-dot-org/progress/redux';
 import {ProjectManagerFactory, ProjectManager} from '@code-dot-org/projects';
 import type {Channel, ProjectSources} from '@code-dot-org/projects';
-import {projectActions} from '@code-dot-org/projects/reducers';
+import {projectActions} from '@code-dot-org/projects/redux';
 import {CourseRoles} from '@code-dot-org/user';
-import {currentUserActions} from '@code-dot-org/user/reducers';
+import {currentUserActions} from '@code-dot-org/user/redux';
 
 import LabRegistry from '../LabRegistry';
 import {LifecycleEvent} from '../LifecycleNotifier';
 import {LevelPropertiesValidator} from '../responseValidators';
-import type {RootState, AppDispatch} from '../store';
+import type {RootState, AppDispatch} from '../redux/store';
 import type {LevelProperties, PartialUserAppOptions} from '../types';
 import {queryParams, updateQueryParam} from '../utils/queryParams';
 
-import {setProjectTooLarge} from './labProject';
+import {setProjectTooLarge} from './labProjectSlice';
 
 interface PageError {
   errorMessage: string;
