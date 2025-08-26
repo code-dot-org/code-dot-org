@@ -5,15 +5,19 @@ import {
   AiInteractionStatus,
 } from '@cdo/generated-scripts/sharedConstants';
 
-import {logStudentWorkEvaluations} from './studentWorkEvaluationsApi';
+import {
+  logUserLevelEvaluation,
+  logUserLevelSkillEvaluations,
+} from './studentWorkEvaluationsApi';
+import {UserLevelSkillEvaluation} from './types';
 
 export interface StudentAnswer {
   studentId: number;
   studentDisplayName: string;
-  studentWork: string | Record<string, string>;
+  studentWork: string;
+  updatedAt?: string;
   codeVersion?: string;
   projectId?: string;
-  updatedAt?: string;
 }
 
 export interface AIResponse {
@@ -35,7 +39,28 @@ export interface StudentWorkEvaluation extends StudentAnswer, AIResponse {
   id: number;
 }
 
-export async function evaluateStudentWork(
+export async function evaluateFreeResponse(
+  studentAnswer: StudentAnswer,
+  levelId: number,
+  unitId: number
+): Promise<AIResponse> {
+  return evaluateStudentWorkOverall(studentAnswer, levelId, unitId);
+}
+
+export async function evaluateStudentCode(
+  studentAnswer: StudentAnswer,
+  levelId: number,
+  unitId: number,
+  evaluateSkills?: boolean
+): Promise<AIResponse> {
+  if (evaluateSkills) {
+    return evaluateStudentWorkSkills(studentAnswer, levelId, unitId);
+  } else {
+    return evaluateStudentWorkOverall(studentAnswer, levelId, unitId);
+  }
+}
+
+async function evaluateStudentWorkOverall(
   studentWorkSample: StudentAnswer,
   levelId: number,
   unitId: number
@@ -48,7 +73,7 @@ export async function evaluateStudentWork(
   let parsedResponse;
   if (response?.content) {
     parsedResponse = JSON.parse(response?.content);
-    const userLevelEvaluationId = await logStudentWorkEvaluations(
+    const userLevelEvaluationId = await logUserLevelEvaluation(
       studentWorkSample,
       parsedResponse,
       levelId,
@@ -56,6 +81,32 @@ export async function evaluateStudentWork(
     );
 
     parsedResponse.id = userLevelEvaluationId;
+  }
+  return parsedResponse;
+}
+
+async function evaluateStudentWorkSkills(
+  studentWorkSample: StudentAnswer,
+  levelId: number,
+  unitId: number
+): Promise<AIResponse> {
+  const response = await evaluationFromOpenAI(
+    studentWorkSample.studentWork,
+    levelId,
+    AiEvaluationTypes.SINGLE_STUDENT,
+    true
+  );
+  let parsedResponse;
+  if (response?.content) {
+    parsedResponse = JSON.parse(response?.content);
+    const skillEvaluations: UserLevelSkillEvaluation[] =
+      parsedResponse.skillEvaluations || [];
+    await logUserLevelSkillEvaluations(
+      skillEvaluations,
+      studentWorkSample,
+      levelId,
+      unitId
+    );
   }
   return parsedResponse;
 }
@@ -106,7 +157,8 @@ type OpenaiChatCompletionMessage = {
 export async function evaluationFromOpenAI(
   studentWork?: string | Record<string, string>,
   levelId?: number,
-  evaluationType?: EvaluationType
+  evaluationType?: EvaluationType,
+  shouldEvaluateSkills?: boolean
 ): Promise<OpenaiChatCompletionMessage | null> {
   const payload = {
     studentWork:
@@ -117,6 +169,7 @@ export async function evaluationFromOpenAI(
             .join('\n\n'),
     levelId: levelId,
     evaluationType: evaluationType,
+    shouldEvaluateSkills: shouldEvaluateSkills,
   };
 
   const response = await HttpClient.post(

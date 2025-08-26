@@ -5,7 +5,7 @@ import React, {useState} from 'react';
 
 import {
   AIResponse,
-  evaluateStudentWork,
+  evaluateStudentCode,
   StudentAnswer,
 } from '@cdo/apps/aiEvaluation/aiEvaluationApi';
 
@@ -91,10 +91,13 @@ const StudentCodeDatasetMaker: React.FC = () => {
   };
 
   const evaluateStudentResponse = async (studentAnswer: StudentAnswer) => {
-    const aiResponse = await evaluateStudentWork(
+    const aiResponse = await evaluateStudentCode(
       studentAnswer,
       parseInt(levelId),
       parseInt(unitId)
+      // TODO: Pass evaluateSkills as true if you want to evaluate skills
+      // which means we need to know earlier in the process if the level has skills
+      // or not.
     );
     const evaluation: EvaluatedCodeSample = {
       ...studentAnswer,
