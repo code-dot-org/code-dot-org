@@ -151,6 +151,22 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_equal @script_level.script, UserLevel.last.script
   end
 
+  test "logged in milestone sets unit_group_id from course_id parameter" do
+    # do all the logging
+    @controller.expects :log_milestone
+
+    assert_creates(LevelSource, UserLevel, UserScript) do
+      assert_does_not_create(Activity) do
+        post :milestone, params: @milestone_params
+      end
+    end
+    assert_response :success
+
+    # created UserLevel should have unit_group_id matching the course_id parameter
+    user_level = UserLevel.last
+    assert_equal @milestone_params[:course_id], user_level.unit_group_id
+  end
+
   test "successful milestone does not require script_level_id" do
     params = @milestone_params
     params.delete(:script_level_id)

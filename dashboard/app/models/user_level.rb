@@ -199,6 +199,7 @@ class UserLevel < ApplicationRecord
   # This is called when a teacher updates the lock or readonly status for each student.
   # As such, one of locked or readonly will be populated, and the other nil.
   def self.update_lockable_state(user_id, level_id, script_id, locked, readonly_answers)
+    # TODO: TEACH-2145 set UserLevel#unit_group_id
     user_level = UserLevel.find_or_initialize_by(
       user_id: user_id,
       level_id: level_id,
