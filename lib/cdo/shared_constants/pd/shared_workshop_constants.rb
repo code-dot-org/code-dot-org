@@ -443,17 +443,19 @@ module Pd
       },
     }
 
+    BUILD_YOUR_OWN_WORKSHOP_CONFIG = {
+      slug: COURSE_BUILD_YOUR_OWN.parameterize(separator: "_"),
+      label: COURSE_BUILD_YOUR_OWN,
+      icon: 'plus-square',
+      session_fields: SESSION_FIELDS,
+      fields: COMMON_COURSE_FIELDS.merge(
+        course_offerings: {required: true, stateKey: 'courseOfferings', label: 'Select workshop topic(s)'},
+        participant_group_type: {required: true, stateKey: 'participantGroupType', label: 'Cohort type', options: PARTICIPANT_GROUP_TYPES.map {|s| {value: s, label: s}}}
+      )
+    }.freeze
+
     WORKSHOP_COURSE_CONFIGS = [
-      {
-        slug: COURSE_BUILD_YOUR_OWN.parameterize(separator: "_"),
-        label: COURSE_BUILD_YOUR_OWN,
-        icon: 'plus-square',
-        session_fields: SESSION_FIELDS,
-        fields: COMMON_COURSE_FIELDS.merge(
-          course_offerings: {required: true, stateKey: 'courseOfferings', label: 'Select workshop topic(s)'},
-          participant_group_type: {required: true, stateKey: 'participantGroupType', label: 'Cohort type', options: PARTICIPANT_GROUP_TYPES.map {|s| {value: s, label: s}}}
-        )
-      },
+      BUILD_YOUR_OWN_WORKSHOP_CONFIG,
       {
         slug: COURSE_CSP.parameterize(separator: "_"),
         label: COURSE_CSP,

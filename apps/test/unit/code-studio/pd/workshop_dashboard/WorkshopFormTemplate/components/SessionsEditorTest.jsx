@@ -15,11 +15,7 @@ import {
 } from '@cdo/apps/code-studio/pd/workshop_dashboard/WorkshopFormTemplate/components/SessionsEditor';
 import {SessionPart} from '@cdo/apps/code-studio/pd/workshop_dashboard/WorkshopFormTemplate/components/SessionsEditor/components/SessionPart';
 import {sessionsReducer} from '@cdo/apps/code-studio/pd/workshop_dashboard/WorkshopFormTemplate/reducers/sessionsReducer';
-import {WorkshopCourseConfigs} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
-
-const config = WorkshopCourseConfigs.find(
-  ({slug}) => slug === 'build_your_own_workshop'
-);
+import {BuildYourOwnWorkshopConfig} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
 // mock redux store
 const initialState = {mapbox: {mapboxAccessToken: 'test-token'}};
@@ -94,7 +90,7 @@ describe('SessionsEditor', () => {
           sessions={initialSessions}
           dispatchSessions={mockDispatchSessions}
           errors={{}}
-          fields={config.session_fields}
+          fields={BuildYourOwnWorkshopConfig.session_fields}
           {...props}
         />
       </Provider>
@@ -192,7 +188,7 @@ describe('SessionPart', () => {
     return (
       <Provider store={store}>
         <SessionPart
-          fields={config.session_fields}
+          fields={BuildYourOwnWorkshopConfig.session_fields}
           dispatchSessions={dispatchSessions.mockImplementation(dispatch)}
           index={0}
           {...props}
@@ -217,22 +213,32 @@ describe('SessionPart', () => {
     render(<SessionPartWithState />);
 
     expect(
-      screen.getByLabelText(config.session_fields.date.label)
+      screen.getByLabelText(
+        BuildYourOwnWorkshopConfig.session_fields.date.label
+      )
     ).toBeInTheDocument();
     expect(
-      screen.getByLabelText(config.session_fields.start.label)
+      screen.getByLabelText(
+        BuildYourOwnWorkshopConfig.session_fields.start.label
+      )
     ).toBeInTheDocument();
     expect(
-      screen.getByLabelText(config.session_fields.end.label)
+      screen.getByLabelText(BuildYourOwnWorkshopConfig.session_fields.end.label)
     ).toBeInTheDocument();
     expect(
-      screen.getByLabelText(config.session_fields.session_format.label)
+      screen.getByLabelText(
+        BuildYourOwnWorkshopConfig.session_fields.session_format.label
+      )
     ).toBeInTheDocument();
     expect(
-      screen.getByLabelText(config.session_fields.location_name.label)
+      screen.getByLabelText(
+        BuildYourOwnWorkshopConfig.session_fields.location_name.label
+      )
     ).toBeInTheDocument();
     expect(
-      screen.getByLabelText(config.session_fields.location_address.label)
+      screen.getByLabelText(
+        BuildYourOwnWorkshopConfig.session_fields.location_address.label
+      )
     ).toBeInTheDocument();
   });
 
@@ -258,7 +264,7 @@ describe('SessionPart', () => {
     render(<SessionPartWithState />);
 
     const startTimeDropdown = screen.getByLabelText(
-      config.session_fields.start.label
+      BuildYourOwnWorkshopConfig.session_fields.start.label
     );
     await user.selectOptions(startTimeDropdown, '8:30am');
 
@@ -278,7 +284,7 @@ describe('SessionPart', () => {
     render(<SessionPartWithState />);
 
     const endTimeDropdown = screen.getByLabelText(
-      config.session_fields.end.label
+      BuildYourOwnWorkshopConfig.session_fields.end.label
     );
     await user.selectOptions(endTimeDropdown, '5:30pm');
 
@@ -298,7 +304,7 @@ describe('SessionPart', () => {
     render(<SessionPartWithState />);
 
     const formatDropdown = screen.getByLabelText(
-      config.session_fields.session_format.label
+      BuildYourOwnWorkshopConfig.session_fields.session_format.label
     );
     await user.selectOptions(formatDropdown, 'virtual');
 
@@ -333,7 +339,7 @@ describe('SessionPart', () => {
     render(<SessionPartWithState />);
 
     const locationNameInput = screen.getByLabelText(
-      config.session_fields.location_name.label
+      BuildYourOwnWorkshopConfig.session_fields.location_name.label
     );
     const newLocation = 'New Location';
     await user.clear(locationNameInput);
@@ -355,7 +361,7 @@ describe('SessionPart', () => {
     render(<SessionPartWithState />);
 
     const locationAddressInput = screen.getByLabelText(
-      config.session_fields.location_address.label
+      BuildYourOwnWorkshopConfig.session_fields.location_address.label
     );
     const newAddress = 'New Address';
     await user.clear(locationAddressInput);
@@ -382,7 +388,7 @@ describe('SessionPart', () => {
     render(<SessionPartWithState session={virtualSession} />);
 
     const meetingLinkInput = screen.getByLabelText(
-      config.session_fields.meeting_link.label
+      BuildYourOwnWorkshopConfig.session_fields.meeting_link.label
     );
     const newLink = 'new.com';
     await user.clear(meetingLinkInput);
@@ -408,13 +414,19 @@ describe('SessionPart', () => {
     render(<SessionPartWithState session={virtualSession} />);
 
     expect(
-      screen.getByLabelText(config.session_fields.meeting_link.label)
+      screen.getByLabelText(
+        BuildYourOwnWorkshopConfig.session_fields.meeting_link.label
+      )
     ).toBeInTheDocument();
     expect(
-      screen.queryByLabelText(config.session_fields.location_name.label)
+      screen.queryByLabelText(
+        BuildYourOwnWorkshopConfig.session_fields.location_name.label
+      )
     ).not.toBeInTheDocument();
     expect(
-      screen.queryByLabelText(config.session_fields.location_address.label)
+      screen.queryByLabelText(
+        BuildYourOwnWorkshopConfig.session_fields.location_address.label
+      )
     ).not.toBeInTheDocument();
   });
 });
