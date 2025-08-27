@@ -2,25 +2,6 @@ import {findFilePathByRelativePath} from '../utils';
 
 import {IframeMessageType} from './constants';
 
-// Remove any existing content security policy from the document, and
-// add a new Content Security Policy to the document to allow for certain
-// HTTP requests.
-export const setContentSecurityPolicy = (doc: Document) => {
-  // Remove any existing CSP meta tags, as we need to set our own.
-  const existingCspTags = doc.querySelectorAll(
-    'meta[http-equiv="Content-Security-Policy"]'
-  );
-  existingCspTags.forEach(tag => tag.remove());
-
-  const metaTag = doc.createElement('meta');
-  metaTag.setAttribute('http-equiv', 'Content-Security-Policy');
-
-  const head = doc.querySelector('head');
-  if (head) {
-    head.appendChild(metaTag);
-  }
-};
-
 // Replace links to non-html files (css and js) with their appropriate blob URLs.
 // We support <link> tags for CSS files and <script> tags for JavaScript files,
 // and support both relative and absolute paths.
