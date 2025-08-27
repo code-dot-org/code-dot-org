@@ -26,6 +26,7 @@ import WorkspaceSvgFrame from './addons/workspaceSvgFrame';
 import {
   BLOCK_TYPES,
   BlocklyVersion,
+  BlockStyles,
   Themes,
   WORKSPACE_EVENTS,
 } from './constants';
@@ -497,17 +498,17 @@ export interface ExtendedJavascriptGenerator
 export interface BlockJson<BlockType extends string = string> {
   type: BlockType;
   [key: `message${number}`]: string;
-  [key: `args${number}`]: FieldJson[];
-  style?: string;
+  [key: `args${number}`]: ArgumentJson[];
+  style?: BlockStyles;
   inputsInline?: boolean;
-  previousStatement?: null;
-  nextStatement?: string | null;
-  output?: string | null;
+  previousStatement?: string | string[] | null;
+  nextStatement?: string | string[] | null;
+  output?: string | string[] | null;
   tooltip?: string;
   helpUrl?: string;
 }
 
-export interface FieldJson {
+export interface ArgumentJson {
   type: string;
   name: string;
 }

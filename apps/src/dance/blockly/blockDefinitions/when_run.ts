@@ -1,3 +1,4 @@
+import {BlockStyles} from '@cdo/apps/blockly/constants';
 import {
   BlockJson,
   ExtendedBlock,
@@ -9,7 +10,7 @@ const definition: BlockJson = {
   type: 'when_run',
   message0: commonI18n.whenRun(),
   nextStatement: null,
-  style: 'setup_blocks',
+  style: BlockStyles.SETUP,
 };
 
 const generator: GeneratorFunction = (block, generator) => {
