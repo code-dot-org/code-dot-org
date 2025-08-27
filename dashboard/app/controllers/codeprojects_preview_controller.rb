@@ -21,6 +21,7 @@ class CodeprojectsPreviewController < ApplicationController
     ]
 
     unless rack_env?(:development)
+      # In non-development environments, we ensure all requests are over HTTPS.
       policies << "upgrade-insecure-requests"
     end
     response.headers['Content-Security-Policy'] = policies.join('; ')
