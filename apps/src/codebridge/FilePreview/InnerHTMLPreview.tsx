@@ -142,22 +142,15 @@ const InnerHTMLPreview = () => {
             parentOrigin
           );
         }
-
-        // Reset the navigation flag after successful navigation
-        if (isNavigatingToFileRef.current) {
-          console.log('Navigation to file completed, resetting flag');
-          isNavigatingToFileRef.current = false;
-        }
       } else {
         console.error(`current file ${currentFile} not found in source files`);
         setBlobUrl(NOT_FOUND_FILE);
-
-        // Reset the navigation flag even if navigation failed
-        if (isNavigatingToFileRef.current) {
-          console.log('Navigation to file failed, resetting flag');
-          isNavigatingToFileRef.current = false;
-        }
       }
+    }
+    // Reset the isNavigatingToFileRef flag.
+    if (isNavigatingToFileRef.current) {
+      console.log('Navigation to file failed, resetting flag');
+      isNavigatingToFileRef.current = false;
     }
   }, [currentFile, fileToAddToNavigationHistory, filesToBlobs, parentOrigin]);
 
