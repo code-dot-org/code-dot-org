@@ -218,7 +218,6 @@ const CurriculumCatalog = ({
                 course_id,
                 course_offering_id,
                 script_id,
-                is_standalone_unit,
                 is_translated,
                 //Expanded Card Props
                 device_compatibility,
@@ -248,7 +247,6 @@ const CurriculumCatalog = ({
                   courseId={course_id}
                   courseOfferingId={course_offering_id}
                   scriptId={script_id}
-                  isStandAloneUnit={is_standalone_unit}
                   onAssignSuccess={response => handleAssignSuccess(response)}
                   deviceCompatibility={device_compatibility}
                   description={description}

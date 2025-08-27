@@ -94,7 +94,9 @@ jobs:
 
           echo "Uploading static assets to $BUCKET_NAME"
 
-          aws s3 sync static/ "s3://$BUCKET_NAME/_next/static" --quiet
+          # Upload to S3 and set the cache control for these static assets to be immutable.
+          # More details: https://nextjs.org/docs/app/guides/self-hosting#automatic-caching
+          aws s3 sync static/ "s3://$BUCKET_NAME/_next/static" --quiet --cache-control "public, max-age=31536000, immutable"
 
       - name: "[${{ env.GITHUB_ENVIRONMENT_NAME }}] Deploy Marketing App to AWS"
         working-directory: ./frontend/apps/marketing/cicd/3-app
@@ -129,7 +131,6 @@ jobs:
   ui-tests:
     runs-on: ubuntu-24.04
     environment: marketing-sites-${{ inputs.ENVIRONMENT_TYPE }}-${{ inputs.SITE_TYPE }}
-    if: ${{ inputs.SITE_TYPE == 'corporate' }}
     needs:
       - deploy
 
@@ -164,6 +165,7 @@ jobs:
           APPLICATION_BASE_ADDRESS: "${{ vars.APPLICATION_SUBDOMAIN_NAME }}.${{ vars.APPLICATION_BASE_DOMAIN }}"
           DRAFT_MODE_TOKEN: ${{ secrets.DRAFT_MODE_TOKEN }}
           GITHUB_ENVIRONMENT_NAME: ${{ env.GITHUB_ENVIRONMENT_NAME }}
+          SITE_TYPE: ${{ inputs.SITE_TYPE }}
           SHARD_INDEX: ${{ matrix.shardIndex }}
           SHARD_TOTAL: ${{ matrix.shardTotal }}
 

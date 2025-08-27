@@ -74,7 +74,7 @@
     "disable_if_else_editing": "false",
     "expand_debugger": "false",
     "watchers_prepopulated": "[\"pan.rotation\"]",
-    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"001671d5-7f72-4645-8f6d-7cc948f7fe11\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"001671d5-7f72-4645-8f6d-7cc948f7fe11\": {\r\n      \"name\": \"pan\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/R2MK5WwBxF.EZ9RymYu6G23tmFie5ZFg/category_generic_items/pan.png\",\r\n      \"frameSize\": {\r\n        \"x\": 95,\r\n        \"y\": 152\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"R2MK5WwBxF.EZ9RymYu6G23tmFie5ZFg\"\r\n    }\r\n  }\r\n}",
+    "start_animations": "{\n  \"orderedKeys\": [\n    \"001671d5-7f72-4645-8f6d-7cc948f7fe11\"\n  ],\n  \"propsByKey\": {\n    \"001671d5-7f72-4645-8f6d-7cc948f7fe11\": {\n      \"name\": \"pan\",\n      \"sourceUrl\": \"/api/v1/animation-library/R2MK5WwBxF.EZ9RymYu6G23tmFie5ZFg/category_generic_items/pan.png\",\n      \"frameSize\": {\n        \"x\": 95,\n        \"y\": 152\n      },\n      \"frameCount\": 1,\n      \"looping\": true,\n      \"frameDelay\": 2,\n      \"version\": \"R2MK5WwBxF.EZ9RymYu6G23tmFie5ZFg\"\n    }\n  }\n}",
     "parent_level_id": 20730,
     "name_suffix": "_2021",
     "encrypted": "false",

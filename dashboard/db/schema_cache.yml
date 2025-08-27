@@ -1993,14 +1993,6 @@ columns:
   - *48
   - *49
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
-    name: content_root_type
-    sql_type_metadata: *3
-    'null': false
-    default: 
-    default_function: 
-    collation: utf8mb3_unicode_ci
-    comment: 
-  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: content_root_id
     sql_type_metadata: *2
     'null': false
@@ -2402,6 +2394,35 @@ columns:
     collation: 
     comment: 
   - *17
+  external_notifications:
+  - *9
+  - *11
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: external_id
+    sql_type_metadata: *3
+    'null': false
+    default: 
+    default_function: 
+    collation: utf8mb4_unicode_ci
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: read_at
+    sql_type_metadata: *4
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: is_dismissed
+    sql_type_metadata: *13
+    'null': false
+    default: '0'
+    default_function: 
+    collation: 
+    comment: 
+  - *14
+  - *15
   featured_projects:
   - *5
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
@@ -7145,6 +7166,14 @@ columns:
     comment: 
   - *14
   - *15
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: deletion_warning_email_sent_at
+    sql_type_metadata: *4
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
   user_facilitator_infos:
   - *9
   - *11
@@ -8295,6 +8324,7 @@ primary_keys:
   donors: id
   email_preferences: id
   experiments: id
+  external_notifications: id
   featured_projects: id
   followers: id
   foorm_forms: id
@@ -8507,6 +8537,7 @@ data_sources:
   donors: true
   email_preferences: true
   experiments: true
+  external_notifications: true
   featured_projects: true
   followers: true
   foorm_forms: true
@@ -9622,26 +9653,11 @@ indexes:
   course_versions:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: course_versions
-    name: index_course_versions_on_offering_id_and_key_and_type
+    name: index_course_versions_on_offering_id_and_key
     unique: true
     columns:
     - course_offering_id
     - key
-    - content_root_type
-    lengths: {}
-    orders: {}
-    opclasses: {}
-    where: 
-    type: 
-    using: :btree
-    comment: 
-  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
-    table: course_versions
-    name: index_course_versions_on_content_root_type_and_content_root_id
-    unique: false
-    columns:
-    - content_root_type
-    - content_root_id
     lengths: {}
     orders: {}
     opclasses: {}
@@ -9655,6 +9671,19 @@ indexes:
     unique: false
     columns:
     - course_offering_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: :btree
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: course_versions
+    name: index_course_versions_on_content_root_id
+    unique: false
+    columns:
+    - content_root_id
     lengths: {}
     orders: {}
     opclasses: {}
@@ -9876,6 +9905,35 @@ indexes:
     unique: false
     columns:
     - start_at
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: :btree
+    comment: 
+  external_notifications:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: external_notifications
+    name: index_external_notifications_on_user_id_and_read_at
+    unique: false
+    columns:
+    - user_id
+    - read_at
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: :btree
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: external_notifications
+    name: index_external_notifications_on_user_id_and_created_at
+    unique: false
+    columns:
+    - user_id
+    - created_at
     lengths: {}
     orders: {}
     opclasses: {}
@@ -13992,6 +14050,19 @@ indexes:
     type: 
     using: :btree
     comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: user_data_retention_statuses
+    name: index_user_data_retention_statuses_on_warning_email_sent_at
+    unique: false
+    columns:
+    - deletion_warning_email_sent_at
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: :btree
+    comment: 
   user_facilitator_infos:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: user_facilitator_infos
@@ -14518,7 +14589,7 @@ indexes:
     type: :fulltext
     using: 
     comment: 
-version: 20250812140655
+version: 20250821182723
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 8

@@ -120,8 +120,10 @@ class ScriptsController < ApplicationController
     @page_title = "Unit: #{@script.localized_title}"
     @page_description = @script.localized_description.truncate(200, separator: '.', omission: '.')
 
-    link = Unit.latest_stable_version(@script.family_name)&.link(unit_group_unit: @unit_group_unit)
-    @canonical_url = CDO.studio_url(link) if @script.unit_group&.single_unit_course? && link
+    if @script.unit_group&.single_unit_course?
+      canonical_ug = UnitGroup.latest_stable_version(@course.family_name)&.name
+      @canonical_url = CDO.studio_url("/courses/#{canonical_ug}/units/1") if canonical_ug
+    end
 
     if @script.old_professional_learning_course? && current_user && Plc::UserCourseEnrollment.exists?(user: current_user, plc_course: @script.plc_course_unit.plc_course)
       @plc_breadcrumb = {unit_name: @script.plc_course_unit.unit_name, course_view_path: course_path(@script.plc_course_unit.plc_course.unit_group)}
@@ -158,9 +160,9 @@ class ScriptsController < ApplicationController
   def create
     return head :bad_request unless general_params[:is_migrated]
 
-    # These fields should be set unless a unit is in a unit group
-    # and are required to be set if is_course is true. When creating
-    # a unit it is not yet in a unit group so we set default values here
+    # These fields should be set unless a unit is in a unit group.
+    # When creating a unit it is not yet in a unit group so we
+    # set default values here
     #
     # Setting default values for the columns would not work because those
     # are not used when you call new() just when you call create
@@ -417,7 +419,6 @@ class ScriptsController < ApplicationController
       :has_unnumbered_lessons,
       :has_verified_resources,
       :tts,
-      :is_course,
       :show_calendar,
       :weekly_instructional_minutes,
       :is_migrated,

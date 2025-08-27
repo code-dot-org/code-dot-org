@@ -199,7 +199,7 @@ describe('ProgramExecutor', () => {
 
   it('resets the native API on reset', () => {
     programExecutor.reset();
-    expect(nativeAPI.reset).to.have.been.calledOnce;
+    expect(nativeAPI.reset).to.have.been.calledTwice;
   });
 
   it('gets the replay log from the native API', () => {

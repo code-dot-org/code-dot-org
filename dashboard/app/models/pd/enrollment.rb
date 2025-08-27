@@ -162,11 +162,7 @@ class Pd::Enrollment < ApplicationRecord
 
   # Pre-workshop survey URL (if any)
   def pre_workshop_survey_url
-    if workshop.local_summer? || workshop.ayw?
-      url_for(action: 'new_pre_foorm', controller: 'pd/workshop_daily_survey', enrollmentCode: code)
-    elsif workshop.subject == Pd::Workshop::SUBJECT_CSF_201
-      CDO.studio_url "pd/workshop_survey/csf/pre201", CDO.default_scheme
-    end
+    url_for(action: 'new_pre_foorm', controller: 'pd/workshop_daily_survey', enrollmentCode: code)
   end
 
   def exit_survey_url

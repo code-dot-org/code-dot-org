@@ -1,0 +1,14 @@
+name 'ai-powered-threats-defenses-preassessment-q1_2025-pilot_2025'
+
+question ‘Which of the following is the best definition of cybersecurity?’
+
+wrong ‘The study of how to program computers and write secure code’
+wrong ‘The practice of protecting digital systems from physical theft’
+right ‘The practice of protecting computers, networks, and data from being stolen, changed, or damaged’
+wrong ‘The process of building websites that prevent pop-up ads and spam’
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 1: Intro to Cybersecurity
+MARKDOWN

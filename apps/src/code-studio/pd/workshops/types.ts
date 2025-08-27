@@ -105,6 +105,7 @@ export interface GetUserInfoForWorkshopResponse {
   is_student?: boolean;
   given_name?: string;
   family_name?: string;
+  educator_role?: string;
   school_info?: {
     school_id?: number;
     country?: string;
@@ -122,6 +123,7 @@ export type UserInfoForWorkshop = {
     isStudent?: boolean;
     givenName?: string;
     familyName?: string;
+    educatorRole?: string;
     schoolInfo?: {
       schoolId?: number;
       country?: string;
@@ -145,6 +147,7 @@ export const userInfoDataResponseToParams = (
       isStudent: response.is_student,
       givenName: response.given_name,
       familyName: response.family_name,
+      educatorRole: response.educator_role,
       schoolInfo: {
         schoolId: response.school_info?.school_id,
         country: response.school_info?.country,

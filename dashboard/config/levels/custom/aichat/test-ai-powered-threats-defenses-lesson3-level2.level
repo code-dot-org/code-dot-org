@@ -7,7 +7,7 @@
   "user_id": 1574,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Generate A Phishing Email\r\n\r\nUse AI Chat to generate the text for a phishing email.\r\n\r\n### Do This:\r\n\r\n1. Use your classmates interest questionnaire to generate the text of a phishing email.\r\n\r\n\r\n**Try it out!**\r\n\r\n:::details [<i class=\"fa fa-briefcase\" aria-hidden=\"true\"></i> **Need a starting prompt?**]\r\n>Generate a phishing email (e.g. a link to a birthday gift certificate) given the following information about the person: [insert info from questionnaire]\r\n:::\r\n&nbsp\r\n\r\n:::details [<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Need help narrowing down which details to focus on?**]\r\nYou can ask AI Chat what vulnerabilities to attack based on your partner’s interests.\r\n:::\r\n",
+    "long_instructions": "## Real or Not Real?\r\n\r\nUse AI Chat to analyze your fictional user's messages and evaluate your own phishing detection skills.\r\n\r\n### Do This:\r\n\r\n1. Upload your fictional user’s profile and messages from the Library to AI Chat.\r\n2. Tell the AI which messages you think are phishing, and explain why.\r\n3. Ask the AI if it agrees — and if it doesn’t, ask questions to understand what you missed.\r\n4. Share which human behaviors or emotions you think the phishing messages tried to exploit.\r\n5. Compare your ideas with the AI's response — were your instincts right? What were the “tells”?\r\n\r\n**Important:** Ask follow-up questions, explore different perspectives, or get clarification if you're unsure.\r\n\r\n\r\n**Try it out!**\r\n\r\n:::details [<i class=\"fa fa-briefcase\" aria-hidden=\"true\"></i> **Need a starting prompt?**]\r\n>Here’s a fictional person’s profile and the messages they received. I think [X and Y] are phishing because [your reason]. Can you tell me if I’m right? \r\n\r\n>What human behaviors or emotions are being targeted in those messages?\r\n:::\r\n&nbsp\r\n\r\n\r\n",
     "submittable": "false",
     "aichat_settings": {
       "initialCustomizations": {
@@ -36,14 +36,22 @@
         "retrievalContexts": "hidden",
         "modelCardInfo": "hidden"
       },
-      "levelSystemPrompt": "You are a phishing email generator. Students should prompt you to generate text of an email based on characteristics they know about a person.",
+      "levelSystemPrompt": "You are a cybersecurity expert helping students learn how to detect phishing emails. Students will share a fictional user’s profile and a set of emails. They will tell you which messages they think are phishing, and why.\n\nYour job is to:\n1. Review the fictional user's profile and the provided messages.\n2. Evaluate whether the student correctly identified each phishing message.\n3. If the student was wrong about any messages, explain what signs they missed and what made the real phishing messages believable or manipulative.\n4. If the student was correct, confirm their reasoning and offer any additional insights or patterns they might have missed.\n5. Identify the human behaviors or emotions each phishing message is trying to exploit (e.g., trust, curiosity, urgency, habit, fear).\n6. Use a supportive and educational tone. Encourage follow-up questions or reflection if the student is unsure or asks for more clarification.\n\nDo not just give the “right answer” — help the student understand how and why these types of messages work so they can improve their phishing detection skills.",
       "hidePresentationPanel": false,
       "availableModelIds": [
         "gpt-4o-mini"
       ],
-      "multimodalEnabled": false
+      "multimodalEnabled": true
+    },
+    "offer_browser_tts": "false",
+    "disable_edit_run_for_submission": "false",
+    "starter_assets": {
+      "Ava Posts and Messages.pdf": "734016ca-0fe5-4634-ab0f-6ad1fd7ee120.pdf",
+      "Marcus Posts and Messages.pdf": "c327c214-45b2-4b76-a058-21e4ba522a28.pdf",
+      "Sofia Posts and Messages.pdf": "8752ef2b-0e02-49b6-a6c2-6c77a1ed11f2.pdf",
+      "Ethan Posts and Messages.pdf": "9f716d65-bf29-4be6-86fb-def4cd13e207.pdf"
     }
   },
-  "audit_log": "[{\"changed_at\":\"2025-07-16 18:47:02 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-07-17 17:09:28 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-07-16 18:47:02 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-07-17 17:09:28 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-08-13 19:13:39 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-13 19:24:50 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-13 21:06:09 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-13 21:07:07 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-13 21:08:03 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-13 21:39:28 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-14 14:47:42 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-14 15:57:26 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

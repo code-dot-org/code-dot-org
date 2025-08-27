@@ -18,6 +18,7 @@ class PeerReviewsControllerTest < ActionController::TestCase
 
     @script_level = create(:script_level, levels: [level], lesson: @learning_module.lesson)
     @script = @script_level.script
+    @unit_group = UnitGroupUnit.where(script_id: @script.id).last.unit_group
 
     @level_source = create(:level_source, data: 'My submitted answer')
   end
@@ -25,7 +26,7 @@ class PeerReviewsControllerTest < ActionController::TestCase
   setup do
     sign_in(@user)
     Plc::EnrollmentModuleAssignment.stubs(:exists?).returns(true)
-    User.track_level_progress(user_id: @other_user.id, level_id: @script_level.level_id, script_id: @script_level.script_id, new_result: Activity::UNSUBMITTED_RESULT, submitted: true, level_source_id: @level_source.id)
+    User.track_level_progress(user_id: @other_user.id, level_id: @script_level.level_id, script_id: @script_level.script_id, new_result: Activity::UNSUBMITTED_RESULT, submitted: true, level_source_id: @level_source.id, unit_group: @unit_group)
     @peer_review = PeerReview.first
     @peer_review.user_level.update_column(:best_result, ActivityConstants::UNREVIEWED_SUBMISSION_RESULT)
   end

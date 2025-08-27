@@ -1,4 +1,4 @@
-# Categorizes survey questions and responses
+# Categorizes survey questions and results
 
 module Pd::Foorm
   class WorkshopCategorizer
@@ -12,7 +12,7 @@ module Pd::Foorm
       facilitators&.each do |facilitator_id, facilitator_name|
         categories[:facilitators][facilitator_id] = {
           name: facilitator_name,
-          questions: []
+          questions: {}
         }
       end
 
@@ -46,7 +46,6 @@ module Pd::Foorm
 
       # Always ensure these core categories exist
       categories.add(:facilitators)
-      categories.add(:other)
 
       categories.to_a.sort
     end
@@ -55,24 +54,22 @@ module Pd::Foorm
     def self.initialize_categories(form_categories)
       categories_hash = {}
       form_categories.each do |category|
-        categories_hash[category] = category == :facilitators ? {} : {questions: []}
+        categories_hash[category] = category == :facilitators ? {} : {questions: {}}
       end
       categories_hash
     end
 
     def self.determine_category(category_string)
-      return :other unless category_string.is_a?(String) && !category_string.empty?
+      return unless category_string.is_a?(String) && !category_string.empty?
       category_string.downcase.to_sym
     end
 
     def self.process_general_questions_by_category(parsed_forms_with_categories, summarized_answers, categories)
       parsed_forms_with_categories[:general].each do |form_key, questions|
         form_summary = find_form_summary_in_answers(summarized_answers, form_key, :general)
-        next unless form_summary
 
         questions.each do |question_name, question_data|
-          question_summary = form_summary[question_name]
-          next unless question_summary
+          question_summary = form_summary&.dig(question_name)
 
           if question_data[:original_type] == 'matrix'
             process_matrix_question_by_category(question_name, question_data, question_summary, categories)
@@ -88,20 +85,21 @@ module Pd::Foorm
 
       parsed_forms_with_categories[:facilitator].each do |form_key, questions|
         form_summary = find_form_summary_in_answers(summarized_answers, form_key, :facilitator)
-        next unless form_summary
 
         questions.each do |question_name, question_data|
           facilitators.each do |facilitator_id, facilitator_name|
-            question_summary = form_summary.dig(question_name, facilitator_id)
-            next unless question_summary
+            question_summary = form_summary&.dig(question_name, facilitator_id)
 
             if question_data[:original_type] == 'matrix'
               # For matrix questions in facilitator context, we need to process them differently
               # since they should stay grouped under the facilitator, not split by category
               process_facilitator_matrix_question(question_name, question_data, question_summary, categories, facilitator_id, facilitator_name)
             else
+              category = determine_category(question_data[:category])
+              next unless category
+
               processed_question = create_processed_question(question_name, question_data, question_summary, facilitator_name)
-              categories[:facilitators][facilitator_id][:questions] << processed_question
+              categories[:facilitators][facilitator_id][:questions][question_name] = processed_question
             end
           end
         end
@@ -110,10 +108,10 @@ module Pd::Foorm
 
     def self.process_matrix_question_by_category(question_name, question_data, question_summary, categories, facilitator_name = nil)
       question_data[:matrix_rows].each do |row_key, row_data|
-        row_summary = question_summary[row_key]
-        next unless row_summary
+        row_summary = question_summary&.dig(row_key)
 
         category = determine_category(row_data[:category])
+        next unless category
 
         # Replace facilitator name placeholder in text if provided
         row_text = row_data[:text]
@@ -130,26 +128,29 @@ module Pd::Foorm
           question_name: row_key,
           question_text: row_text,
           question_short_text: row_short_text,
-          question_sub_text: row_data[:sub_text],
           question_type: 'likert',
-          category: row_data[:category],
-          responses: Pd::Foorm::ResponseProcessor.process_likert_responses(row_summary, question_data[:columns])
+          category: category,
+          results: Pd::Foorm::ResponseProcessor.process_likert_responses(row_summary, question_data[:columns])
         }
 
-        categories[category][:questions] << processed_question
+        categories[category][:questions][row_key] = processed_question
       end
     end
 
     def self.process_regular_question_by_category(question_name, question_data, question_summary, categories)
       category = determine_category(question_data[:category])
+      return unless category
+
       processed_question = create_processed_question(question_name, question_data, question_summary)
-      categories[category][:questions] << processed_question
+      categories[category][:questions][question_name] = processed_question
     end
 
     def self.process_facilitator_matrix_question(question_name, question_data, question_summary, categories, facilitator_id, facilitator_name)
       question_data[:matrix_rows].each do |row_key, row_data|
-        row_summary = question_summary[row_key]
-        next unless row_summary
+        category = determine_category(row_data[:category])
+        next unless category
+
+        row_summary = question_summary&.dig(row_key)
 
         # Replace facilitator name placeholder in text
         row_text = row_data[:text]
@@ -166,13 +167,12 @@ module Pd::Foorm
           question_name: row_key,
           question_text: row_text,
           question_short_text: row_short_text,
-          question_sub_text: row_data[:sub_text],
           question_type: 'likert',
-          category: row_data[:category],
-          responses: Pd::Foorm::ResponseProcessor.process_likert_responses(row_summary, question_data[:columns])
+          category: category,
+          results: Pd::Foorm::ResponseProcessor.process_likert_responses(row_summary, question_data[:columns])
         }
 
-        categories[:facilitators][facilitator_id][:questions] << processed_question
+        categories[:facilitators][facilitator_id][:questions][row_key] = processed_question
       end
     end
 
@@ -199,30 +199,29 @@ module Pd::Foorm
         question_name: question_name,
         question_text: question_text,
         question_short_text: question_short_text,
-        question_sub_text: question_data[:sub_text],
         question_type: question_type,
         category: question_data[:category]
       }
 
       has_other = question_data[:has_other] || false
 
-      base_question[:responses] = case question_data[:type]
-                                  when ANSWER_SINGLE_SELECT
-                                    Pd::Foorm::ResponseProcessor.process_single_select_responses(question_summary, question_data[:choices] || {}, has_other)
-                                  when ANSWER_MULTI_SELECT
-                                    Pd::Foorm::ResponseProcessor.process_multi_select_responses(question_summary, question_data[:choices] || {}, has_other)
-                                  when ANSWER_RATING
-                                    # Determine if this is Promoter percentage (0-10) or Likert (1-7) based on scale
-                                    if promoter_percentage_scale?(question_data)
-                                      Pd::Foorm::ResponseProcessor.process_rating_responses(question_summary, question_data[:choices] || {})
-                                    else
-                                      Pd::Foorm::ResponseProcessor.process_likert_responses(question_summary, question_data[:choices] || {})
-                                    end
-                                  when ANSWER_TEXT
-                                    Pd::Foorm::ResponseProcessor.process_text_responses(question_summary)
+      base_question[:results] = case question_data[:type]
+                                when ANSWER_SINGLE_SELECT
+                                  Pd::Foorm::ResponseProcessor.process_single_select_responses(question_summary, question_data[:choices] || {}, has_other)
+                                when ANSWER_MULTI_SELECT
+                                  Pd::Foorm::ResponseProcessor.process_multi_select_responses(question_summary, question_data[:choices] || {}, has_other)
+                                when ANSWER_RATING
+                                  # Determine if this is Promoter percentage (0-10) or Likert (1-7) based on scale
+                                  if promoter_percentage_scale?(question_data)
+                                    Pd::Foorm::ResponseProcessor.process_rating_responses(question_summary, question_data[:choices] || {})
                                   else
-                                    question_summary
+                                    Pd::Foorm::ResponseProcessor.process_likert_responses(question_summary, question_data[:choices] || {})
                                   end
+                                when ANSWER_TEXT
+                                  Pd::Foorm::ResponseProcessor.process_text_responses(question_summary)
+                                else
+                                  question_summary
+                                end
 
       base_question
     end

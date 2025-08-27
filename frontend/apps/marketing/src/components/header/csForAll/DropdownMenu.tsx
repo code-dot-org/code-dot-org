@@ -3,7 +3,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import {alpha, Button, MenuItem} from '@mui/material';
 import Box from '@mui/material/Box';
 import Menu from '@mui/material/Menu';
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 
 import {isExternalLink} from '@/components/common/utils';
 import {Brand} from '@/config/brand';
@@ -79,6 +79,20 @@ const DropdownMenu: React.FC<MenuListProps> = ({
     setAnchorEl(null);
   };
 
+  useEffect(() => {
+    if (!open) return;
+
+    const handleScroll = () => {
+      handleClose();
+    };
+
+    window.addEventListener('scroll', handleScroll, {passive: true});
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [open]);
+
   return (
     <Box>
       <Button
@@ -115,6 +129,7 @@ const DropdownMenu: React.FC<MenuListProps> = ({
         elevation={0}
         disableAutoFocusItem
         disableScrollLock
+        transitionDuration={0}
         sx={styles.menu}
       >
         {linkList?.map(({label, href}) => (

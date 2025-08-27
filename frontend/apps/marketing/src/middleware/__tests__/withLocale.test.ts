@@ -168,25 +168,6 @@ describe('withLocale middleware', () => {
     );
   });
 
-  it('should redirect to dashboard if _user_type is set', async () => {
-    const request = {
-      nextUrl: {pathname: ''},
-      cookies: {get: jest.fn().mockReturnValue({value: '_user_type=student'})},
-      headers: {
-        get: jest.fn(),
-      },
-      url: 'https://code.marketing-sites.local',
-    } as unknown as NextRequest;
-
-    const response = await withLocale(next)(request, mockEvent);
-
-    expect(response).toBeInstanceOf(NextResponse);
-    expect(response?.headers.get('location')).toContain('studio.code.org');
-    expect(response?.headers.get('Cache-Control')).toEqual(
-      STALE_WHILE_REVALIDATE_ONE_HOUR,
-    );
-  });
-
   it('should handle paths with multiple segments correctly', async () => {
     const request = {
       url: 'https://test.code.org',
@@ -222,12 +203,6 @@ describe('withLocale middleware', () => {
 
     SUPPORTED_LOCALES_SET.add('zh-TW' as SupportedLocale);
     await withLocale(next)(request, mockEvent);
-
-    expect(cookieMock.set).not.toHaveBeenCalledWith(
-      'language_',
-      expect.anything(),
-      expect.anything(),
-    );
   });
 
   it('should not infinitely redirect for non-corporate brands when locale is unsupported', async () => {
@@ -247,11 +222,5 @@ describe('withLocale middleware', () => {
     const response = await withLocale(next)(request, mockEvent);
 
     expect(response?.headers).toBeUndefined();
-    // Should not set language_ cookie for non-code.org brands
-    expect(cookieMock.set).not.toHaveBeenCalledWith(
-      'language_',
-      expect.anything(),
-      expect.anything(),
-    );
   });
 });

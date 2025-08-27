@@ -60,7 +60,28 @@ module Pd
     #
     # If the pre-survey has been already completed, will redirect to thanks page.
     def new_pre_foorm
-      new_general_foorm(survey_names: PRE_SURVEY_CONFIG_PATHS, day: 0)
+      enrollment_code = params[:enrollmentCode]
+
+      workshop = nil
+      if enrollment_code
+        workshop = Pd::Enrollment.find_by(code: enrollment_code, user: current_user)&.workshop
+        unless workshop
+          render :invalid_enrollment_code
+          return false
+        end
+      else
+        workshop = Workshop.where(course: COURSE_BUILD_YOUR_OWN).enrolled_in_by(current_user)&.nearest
+        unless workshop
+          render :not_enrolled
+          return false
+        end
+      end
+
+      agenda = params[:agenda] || nil
+      # remove / from agenda url so module/1 => module1
+      agenda&.tr!("/", "")
+
+      render_survey_foorm(survey_name: PRE_SURVEY_CONFIG_PATHS[COURSE_BUILD_YOUR_OWN], workshop: workshop, session: nil, day: 0, workshop_agenda: agenda)
     end
 
     def new_facilitator_post_foorm(workshop)
@@ -113,23 +134,6 @@ module Pd
       end
     end
 
-    # Display CSF201 (Deep Dive) pre-workshop survey using Foorm.
-    # GET workshop_survey/csf/pre201
-    def new_csf_pre201
-      # Find the closest CSF 201 workshop the current user enrolled in.
-      workshop = get_workshop_by_course_and_subject(
-        course: COURSE_CSF,
-        subject: SUBJECT_CSF_201,
-        should_have_attended: false
-      )
-
-      return unless workshop
-      return render :too_late unless workshop.state != STATE_ENDED
-
-      survey_name = PRE_SURVEY_CONFIG_PATHS[SUBJECT_CSF_201]
-      render_survey_foorm(survey_name: survey_name, workshop: workshop, session: nil, day: 0)
-    end
-
     # Display CSF101 (Intro) post-workshop survey.
     # The survey, on submit, will display thanks.
     # GET /pd/workshop_survey/csf/post101(/:enrollment_code)
@@ -166,11 +170,6 @@ module Pd
 
     # GET /pd/workshop_survey/thanks
     def thanks
-    end
-
-    # Pre survey controller for academic year workshops
-    def new_ayw_pre
-      ayw_helper(survey_names: PRE_SURVEY_CONFIG_PATHS, day: 0)
     end
 
     def new_ayw_daily

@@ -48,6 +48,12 @@ Dashboard::Application.routes.draw do
       end
     end
 
+    resources :notifications, only: [:index] do
+      collection do
+        post '/mark_as_read', controller: :notifications, action: :mark_as_read
+      end
+    end
+
     resource :user_preference, only: [:update] do
       get '/font_size/console', to: 'user_preferences#console_font_size'
       get '/font_size/editor', to: 'user_preferences#editor_font_size'
@@ -415,6 +421,9 @@ Dashboard::Application.routes.draw do
         get '/:filename', to: 'level_starter_assets#file', format: true
         post '', to: 'level_starter_assets#upload'
         delete '/:filename', to: 'level_starter_assets#destroy', format: true
+
+        get '/uuid/:uuid', to: 'level_starter_assets#file_by_uuid', format: true
+        post '/uuid/:uuid', to: 'level_starter_assets#upload_by_uuid'
       end
     end
 
@@ -1374,7 +1383,6 @@ Dashboard::Application.routes.draw do
 
         # Datablock Storage: Library Manifest API (=shared table metadata)
         get :get_library_manifest
-        put :set_library_manifest
 
         # Datablock Storage: Project API
         get :project_has_data

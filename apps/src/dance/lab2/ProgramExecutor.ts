@@ -57,7 +57,8 @@ export default class ProgramExecutor {
       nativeAPI ||
       new DanceParty({
         onPuzzleComplete,
-        playSound: this.playSong,
+        playSound: (...args: Parameters<typeof this.playSong>) =>
+          this.playSong(...args),
         recordReplayLog,
         showMeasureLabel: !isReadOnlyWorkspace,
         onHandleEvents: (currentFrameEvents: object[]) =>
@@ -71,6 +72,7 @@ export default class ProgramExecutor {
         resourceLoader: new ResourceLoader(ASSET_BASE),
         logger: metricsReporter,
       });
+    this.nativeAPI.reset();
     this.metricsReporter = metricsReporter;
   }
 

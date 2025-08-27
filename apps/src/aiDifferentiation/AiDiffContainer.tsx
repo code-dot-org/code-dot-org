@@ -24,6 +24,27 @@ interface AiDiffContainerProps {
   curriculumCourses?: string[];
 }
 
+const MIN_VISIBLE = 40;
+const boxWidth = parseInt(style.containerWidth);
+const originX = parseInt(style.fabOriginX);
+// These isNaN checks are for testing as the SCSS variables don't come
+// through properly in the test environment.
+const minX = isNaN(originX) ? 0 : MIN_VISIBLE - originX - boxWidth;
+const maxX = isNaN(originX)
+  ? 1000
+  : document.documentElement.clientWidth - originX - MIN_VISIBLE;
+
+const boxHeight = parseInt(style.containerHeight);
+const originY = parseInt(style.fabOriginY);
+// These isNaN checks are for testing as the SCSS variables don't come
+// through properly in the test environment.
+const minY = isNaN(originY)
+  ? 0
+  : originY - document.documentElement.clientHeight + boxHeight;
+const maxY = isNaN(originY) ? 1000 : originY + boxHeight - MIN_VISIBLE;
+
+const AI_DIFF_CLOSE_BUTTON_CLASSNAME = 'ai_diff_close_button';
+
 const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
   closeTutor,
   context,
@@ -46,8 +67,10 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
 
   useEffect(() => {
     const ensureDraggableIsVisible = () => {
-      if (window.innerWidth < positionX + 100) {
-        setPositionX(window.innerWidth - 100);
+      if (positionX < minX) {
+        setPositionX(minX);
+      } else if (positionX > maxX) {
+        setPositionX(maxX);
       }
     };
     ensureDraggableIsVisible();
@@ -60,8 +83,10 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
 
   useEffect(() => {
     const ensureDraggableIsVisible = () => {
-      if (positionY + window.innerHeight < 760) {
-        setPositionY(760 - window.innerHeight);
+      if (positionY < minY) {
+        setPositionY(minY);
+      } else if (positionY > maxY) {
+        setPositionY(maxY);
       }
     };
     ensureDraggableIsVisible();
@@ -84,6 +109,7 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
       handle=".ai_diff_handle"
       position={{x: positionX, y: positionY}}
       onStop={onStopHandler}
+      cancel={`.${AI_DIFF_CLOSE_BUTTON_CLASSNAME}`}
     >
       <div
         // eslint-disable-next-line react/forbid-dom-props
@@ -98,7 +124,10 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
         style={open ? undefined : {display: 'none'}}
       >
         <FocusLock>
-          <AiDiffHeader closeTutor={closeTutor} />
+          <AiDiffHeader
+            closeTutor={closeTutor}
+            closeButtonClassName={AI_DIFF_CLOSE_BUTTON_CLASSNAME}
+          />
           <div className={style.fabBackground}>
             {!hasCompletedAiDifferentiationWelcome && showWelcomeExperience
               ? curriculumCourses && (

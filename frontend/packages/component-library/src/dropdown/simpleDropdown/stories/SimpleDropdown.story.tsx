@@ -102,6 +102,19 @@ DisabledDropdown.args = {
   size: 'm',
 };
 
+export const DisabledOptionDropdown = SingleTemplate.bind({});
+DisabledOptionDropdown.args = {
+  name: 'disabled-option-dropdown',
+  items: [
+    {value: 'option-1', text: 'Option 1'},
+    {value: 'option-2', text: 'Option 2', disabled: true},
+  ],
+  selectedValue: 'option-1',
+  labelText: 'Disabled Option Dropdown',
+  onChange: args => console.log(args),
+  size: 'm',
+};
+
 export const StyledAsFormFieldSimpleDropdown = SingleTemplate.bind({});
 StyledAsFormFieldSimpleDropdown.args = {
   name: 'styled-as-field-simple-dropdown',

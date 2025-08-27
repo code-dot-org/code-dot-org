@@ -35,7 +35,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-08-06 16:42:06 UTC",
+    "serialized_at": "2025-08-20 19:42:40 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -5961,6 +5961,150 @@
       }
     },
     {
+      "name": "[KEY] AI and the Systems That Power It Unit Guide",
+      "url": "https://docs.google.com/document/d/1G2myZQmHiKXETfLn6E7iC7n-GEf-aQkWbszX7XpEdPI/edit?usp=sharing",
+      "key": "_key_ai_and_the_systems_that_power_it_unit_guide",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_ai_and_the_systems_that_power_it_unit_guide"
+      }
+    },
+    {
+      "name": "[KEY] AI and the Systems That Power It Unit Guide",
+      "url": "https://docs.google.com/document/d/1G2myZQmHiKXETfLn6E7iC7n-GEf-aQkWbszX7XpEdPI/",
+      "key": "_key_ai_and_the_systems_that_power_it_unit_guide_1",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_ai_and_the_systems_that_power_it_unit_guide_1"
+      }
+    },
+    {
+      "name": "[KEY] AI and the Systems That Power It Unit Guide",
+      "url": "https://docs.google.com/document/d/1G2myZQmHiKXETfLn6E7iC7n-GEf-aQkWbszX7XpEdPI/",
+      "key": "_key_ai_and_the_systems_that_power_it_unit_guide_10",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_ai_and_the_systems_that_power_it_unit_guide_10"
+      }
+    },
+    {
+      "name": "[KEY] AI and the Systems That Power It Unit Guide",
+      "url": "https://docs.google.com/document/d/1G2myZQmHiKXETfLn6E7iC7n-GEf-aQkWbszX7XpEdPI/",
+      "key": "_key_ai_and_the_systems_that_power_it_unit_guide_11",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_ai_and_the_systems_that_power_it_unit_guide_11"
+      }
+    },
+    {
+      "name": "[KEY] AI and the Systems That Power It Unit Guide",
+      "url": "https://docs.google.com/document/d/1G2myZQmHiKXETfLn6E7iC7n-GEf-aQkWbszX7XpEdPI/",
+      "key": "_key_ai_and_the_systems_that_power_it_unit_guide_2",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_ai_and_the_systems_that_power_it_unit_guide_2"
+      }
+    },
+    {
+      "name": "[KEY] AI and the Systems That Power It Unit Guide",
+      "url": "https://docs.google.com/document/d/1G2myZQmHiKXETfLn6E7iC7n-GEf-aQkWbszX7XpEdPI/",
+      "key": "_key_ai_and_the_systems_that_power_it_unit_guide_3",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_ai_and_the_systems_that_power_it_unit_guide_3"
+      }
+    },
+    {
+      "name": "[KEY] AI and the Systems That Power It Unit Guide",
+      "url": "https://docs.google.com/document/d/1G2myZQmHiKXETfLn6E7iC7n-GEf-aQkWbszX7XpEdPI/",
+      "key": "_key_ai_and_the_systems_that_power_it_unit_guide_4",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_ai_and_the_systems_that_power_it_unit_guide_4"
+      }
+    },
+    {
+      "name": "[KEY] AI and the Systems That Power It Unit Guide",
+      "url": "https://docs.google.com/document/d/1G2myZQmHiKXETfLn6E7iC7n-GEf-aQkWbszX7XpEdPI/",
+      "key": "_key_ai_and_the_systems_that_power_it_unit_guide_5",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_ai_and_the_systems_that_power_it_unit_guide_5"
+      }
+    },
+    {
+      "name": "[KEY] AI and the Systems That Power It Unit Guide",
+      "url": "https://docs.google.com/document/d/1G2myZQmHiKXETfLn6E7iC7n-GEf-aQkWbszX7XpEdPI/",
+      "key": "_key_ai_and_the_systems_that_power_it_unit_guide_6",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_ai_and_the_systems_that_power_it_unit_guide_6"
+      }
+    },
+    {
+      "name": "[KEY] AI and the Systems That Power It Unit Guide",
+      "url": "https://docs.google.com/document/d/1G2myZQmHiKXETfLn6E7iC7n-GEf-aQkWbszX7XpEdPI/",
+      "key": "_key_ai_and_the_systems_that_power_it_unit_guide_7",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_ai_and_the_systems_that_power_it_unit_guide_7"
+      }
+    },
+    {
+      "name": "[KEY] AI and the Systems That Power It Unit Guide",
+      "url": "https://docs.google.com/document/d/1G2myZQmHiKXETfLn6E7iC7n-GEf-aQkWbszX7XpEdPI/",
+      "key": "_key_ai_and_the_systems_that_power_it_unit_guide_8",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_ai_and_the_systems_that_power_it_unit_guide_8"
+      }
+    },
+    {
+      "name": "[KEY] AI and the Systems That Power It Unit Guide",
+      "url": "https://docs.google.com/document/d/1G2myZQmHiKXETfLn6E7iC7n-GEf-aQkWbszX7XpEdPI/",
+      "key": "_key_ai_and_the_systems_that_power_it_unit_guide_9",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_ai_and_the_systems_that_power_it_unit_guide_9"
+      }
+    },
+    {
       "name": "[KEY] Build a Computer System",
       "url": "https://docs.google.com/document/d/1XpFitGPWjTMiYedgzcU6QH-xTw0ODGGq9BE0aYLo0bk/edit?usp=drivesdk",
       "key": "_key_build_a_computer_system",
@@ -6466,6 +6610,18 @@
       }
     },
     {
+      "name": "[KEY] Data in Computer Systems",
+      "url": "https://docs.google.com/document/d/1xQ3mKCtmyJ3KbtqnFbxeCxyaKATZh18UsbevhA7uYUQ",
+      "key": "key_data_in_computer_systems",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "key_data_in_computer_systems"
+      }
+    },
+    {
       "name": "Library Books Dataset",
       "url": "https://docs.google.com/spreadsheets/d/1HDacvJjCHt-7rycng7DXbmmpvxEi2C50JATI7hP-UEc/edit?usp=sharing",
       "key": "library_books_dataset",
@@ -6651,6 +6807,18 @@
       }
     },
     {
+      "name": "[KEY] Troubleshooting Hardware Issues",
+      "url": "https://docs.google.com/document/d/1BQFjkBGlq8ABku-7JqbYQ8mOuzpp421OjuVBshoNmOc",
+      "key": "troubleshooting_and_optimizing_hardware_key",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "troubleshooting_and_optimizing_hardware_key"
+      }
+    },
+    {
       "name": "Troubleshooting and Optimizing Software",
       "url": "https://docs.google.com/presentation/d/1mqbKGSob1u05LPmptD4ZlHbHFtHgh29XxZAW9Oj3IjI/edit?usp=drivesdk",
       "key": "troubleshooting_and_optimizing_software",
@@ -6765,6 +6933,12 @@
     {
       "seeding_key": {
         "lesson.key": "Build a Computer System",
+        "resource.key": "_key_ai_and_the_systems_that_power_it_unit_guide_5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Build a Computer System",
         "resource.key": "_key_build_a_computer_system"
       }
     },
@@ -6795,6 +6969,12 @@
     {
       "seeding_key": {
         "lesson.key": "Data in Computer Systems",
+        "resource.key": "_key_ai_and_the_systems_that_power_it_unit_guide_6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Data in Computer Systems",
         "resource.key": "computer_systems_and_devices_unit_guide"
       }
     },
@@ -6813,7 +6993,19 @@
     {
       "seeding_key": {
         "lesson.key": "Data in Computer Systems",
+        "resource.key": "key_data_in_computer_systems"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Data in Computer Systems",
         "resource.key": "station_activity_cards"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Hardware",
+        "resource.key": "_key_ai_and_the_systems_that_power_it_unit_guide_1"
       }
     },
     {
@@ -6849,6 +7041,12 @@
     {
       "seeding_key": {
         "lesson.key": "How AI Uses Data",
+        "resource.key": "_key_ai_and_the_systems_that_power_it_unit_guide_8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "How AI Uses Data",
         "resource.key": "_key_how_ai_uses_data"
       }
     },
@@ -6868,6 +7066,12 @@
       "seeding_key": {
         "lesson.key": "How AI Uses Data",
         "resource.key": "how_ai_uses_data_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Computer Systems",
+        "resource.key": "_key_ai_and_the_systems_that_power_it_unit_guide"
       }
     },
     {
@@ -6921,6 +7125,12 @@
     {
       "seeding_key": {
         "lesson.key": "IoT and Emerging Technologies",
+        "resource.key": "_key_ai_and_the_systems_that_power_it_unit_guide_9"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "IoT and Emerging Technologies",
         "resource.key": "_key_lesson_10_-_unit_guide"
       }
     },
@@ -6963,6 +7173,12 @@
     {
       "seeding_key": {
         "lesson.key": "Just Because We Can, Should We?",
+        "resource.key": "_key_ai_and_the_systems_that_power_it_unit_guide_11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Just Because We Can, Should We?",
         "resource.key": "ai_and_emerging_technology_slide_template"
       }
     },
@@ -6988,6 +7204,12 @@
       "seeding_key": {
         "lesson.key": "Just Because We Can, Should We?",
         "resource.key": "technology_ethics_roleplaying_discussion_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Processing Data in a System",
+        "resource.key": "_key_ai_and_the_systems_that_power_it_unit_guide_7"
       }
     },
     {
@@ -7024,6 +7246,12 @@
       "seeding_key": {
         "lesson.key": "Processing Data in a System",
         "resource.key": "uno_cards"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Software and Operating Systems",
+        "resource.key": "_key_ai_and_the_systems_that_power_it_unit_guide_3"
       }
     },
     {
@@ -7107,6 +7335,12 @@
     {
       "seeding_key": {
         "lesson.key": "Troubleshooting and Optimizing Hardware",
+        "resource.key": "_key_ai_and_the_systems_that_power_it_unit_guide_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Troubleshooting and Optimizing Hardware",
         "resource.key": "ai_and_the_systems_that_power_it_unit_guide_1"
       }
     },
@@ -7125,7 +7359,19 @@
     {
       "seeding_key": {
         "lesson.key": "Troubleshooting and Optimizing Hardware",
+        "resource.key": "troubleshooting_and_optimizing_hardware_key"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Troubleshooting and Optimizing Hardware",
         "resource.key": "troubleshooting_hardware_issues"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Troubleshooting and Optimizing Software",
+        "resource.key": "_key_ai_and_the_systems_that_power_it_unit_guide_4"
       }
     },
     {
@@ -7150,6 +7396,12 @@
       "seeding_key": {
         "lesson.key": "Troubleshooting and Optimizing Software",
         "resource.key": "troubleshooting_and_optimizing_software"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "User Testing",
+        "resource.key": "_key_ai_and_the_systems_that_power_it_unit_guide_10"
       }
     },
     {

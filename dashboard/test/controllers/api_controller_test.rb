@@ -242,7 +242,25 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test "should get no text_responses results for section with script without text response" do
-    script = Unit.find_by_name('course1')
+    script = create(:script, :in_single_unit_course, name: 'text-response-script')
+    lesson_group = create(:lesson_group, script: script)
+    lesson1 = create(:lesson, script: script, name: 'First Lesson', key: 'First Lesson', lesson_group: lesson_group)
+    lesson2 = create(:lesson, script: script, name: 'Second Lesson', key: 'Second Lesson', lesson_group: lesson_group)
+
+    # create 2 text_match levels
+    level1 = create(:text_match)
+    level1.properties['title'] = 'Text Match 1'
+    level1.save!
+    create(:script_level, script: script, levels: [level1], lesson: lesson1)
+
+    level2 = create(:text_match)
+    level2.properties['title'] = 'Text Match 2'
+    level2.save!
+    create(:script_level, script: script, levels: [level2], lesson: lesson2)
+    # create some other random levels
+    7.times do
+      create(:script_level, script: script)
+    end
 
     get :section_text_responses, params: {
       section_id: @section.id,
@@ -1706,7 +1724,7 @@ class ApiControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
-  test 'import_google_classroom upgrades elibible teacher to verified' do
+  test 'import_google_classroom upgrades eligible teacher to verified' do
     mock_service = mock('Google::Apis::ClassroomV1::ClassroomService')
     mock_students = Google::Apis::ClassroomV1::ListStudentsResponse.from_json(
       {

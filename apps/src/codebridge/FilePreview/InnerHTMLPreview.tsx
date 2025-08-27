@@ -1,16 +1,22 @@
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
-import {getFolderPath} from '@codebridge/utils';
-import React, {useCallback, useEffect, useMemo, useRef} from 'react';
+import {createBlobUrlForFile, getFolderPath} from '@codebridge/utils';
+import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 
 import {IframeMessageType} from './constants';
+import {
+  setContentSecurityPolicy,
+  updateLinksToHtmlFiles,
+  updateLinksToNonHtmlFiles,
+} from './htmlParsingHelpers';
 
 import moduleStyles from './styles/inner-html-preview.module.scss';
 const NOT_FOUND_FILE = 'NOT_FOUND';
 
 const InnerHTMLPreview = () => {
   const iframeRef = useRef<HTMLIFrameElement | null>(null);
+  const isNavigatingToFileRef = useRef<boolean>(false);
   const [source, setSource] = React.useState<MultiFileSource | undefined>(
     undefined
   );
@@ -21,6 +27,9 @@ const InnerHTMLPreview = () => {
   const [currentFile, setCurrentFile] = React.useState<string | undefined>(
     undefined
   );
+  const [allowScripts, setAllowScripts] = useState(false);
+  const [fileToAddToNavigationHistory, setFileToAddToNavigationHistory] =
+    useState<string | undefined>(undefined);
 
   const parentOrigin = useMemo(() => {
     const regex = /preview\.([^.]+)\.codeprojects\.org/;
@@ -59,16 +68,22 @@ const InnerHTMLPreview = () => {
         } else {
           setSource(data.source);
         }
+        setFileToAddToNavigationHistory(undefined);
       } else if (data.type === IframeMessageType.CHANGE_FILE_HREF) {
-        setCurrentFile(data.fileName);
+        setCurrentFile(data.filePath);
         // Tell the parent that we are changing the file, as this came from a link click.
         window.parent.postMessage(
-          {type: IframeMessageType.FILE_UPDATED, fileName: data.fileName},
+          {type: IframeMessageType.FILE_UPDATED, fileName: data.filePath},
           parentOrigin
         );
       } else if (data.type === IframeMessageType.CHANGE_FILE_URL_BAR) {
         setCurrentFile(data.fileName);
         // We don't need to update the parent, because they initiated this change.
+      } else if (data.type === IframeMessageType.NAVIGATE_TO_FILE) {
+        isNavigatingToFileRef.current = true;
+        setCurrentFile(data.fileName);
+      } else if (data.type === IframeMessageType.SET_ALLOW_SCRIPTS) {
+        setAllowScripts(!!data.allow);
       }
     },
     [parentOrigin]
@@ -104,16 +119,32 @@ const InnerHTMLPreview = () => {
       const newBlobUrl = filesToBlobs[currentFile];
       if (newBlobUrl) {
         setBlobUrl(newBlobUrl);
+        if (
+          currentFile !== fileToAddToNavigationHistory &&
+          !isNavigatingToFileRef.current
+        ) {
+          setFileToAddToNavigationHistory(currentFile);
+          window.parent.postMessage(
+            {
+              type: IframeMessageType.ADD_FILE_TO_NAVIGATION_HISTORY,
+              fileToAddToNavigationHistory: currentFile,
+            },
+            parentOrigin
+          );
+        }
       } else {
         console.error(`current file ${currentFile} not found in source files`);
         setBlobUrl(NOT_FOUND_FILE);
       }
     }
-  }, [currentFile, filesToBlobs]);
+    // Reset the isNavigatingToFileRef flag.
+    if (isNavigatingToFileRef.current) {
+      isNavigatingToFileRef.current = false;
+    }
+  }, [currentFile, fileToAddToNavigationHistory, filesToBlobs, parentOrigin]);
 
   // TODOs:
   // Support other file types (images, etc.): https://codedotorg.atlassian.net/browse/CT-1255
-  // More robust file paths: https://codedotorg.atlassian.net/browse/CT-1256
   // Better regeneration logic: https://codedotorg.atlassian.net/browse/CT-1259
   useEffect(() => {
     if (source) {
@@ -121,87 +152,37 @@ const InnerHTMLPreview = () => {
       // Handle non-HTML files. These are just converted to Blobs.
       Object.values(source.files).forEach(file => {
         if (file.language !== 'html') {
-          let fileType = '';
-          if (file.language === 'css' || file.language === 'csv') {
-            fileType = `text/${file.language}`;
-          } else if (file.language === 'js') {
-            fileType = 'text/javascript';
-          } else {
-            // TODO: handle other file types, like images
-            fileType = file.language;
-          }
-          const blob = new Blob([file.contents], {type: fileType});
           const fullFileName = getFullyQualifiedFileName(
             file.name,
             file.folderId,
             source.folders
           );
-          files[fullFileName] = URL.createObjectURL(blob);
+          files[fullFileName] = createBlobUrlForFile(file);
         }
       });
-      // Handle HTML files. We replace src links to non-html files with blob URLs.
-      // We update links to other files with a click handler that will post a message to us
-      // to change the file.
+      // Handle HTML files. We do the following;
+      // 1. Set the Content Security Policy to allow requests to certain origins.
+      // 2. Replace src links to non-html files with blob URLs.
+      // 3. Update links to other files with a click handler that will post a message to us
+      //    to change the file.
       const htmlFiles = Object.values(source.files).filter(
         file => file.language === 'html'
       );
       htmlFiles.forEach(file => {
         const parser = new DOMParser();
         const doc = parser.parseFromString(file.contents, 'text/html');
-        // Remove any existing CSP meta tags, as we need to set our own.
-        const existingCspTags = doc.querySelectorAll(
-          'meta[http-equiv="Content-Security-Policy"]'
-        );
-        existingCspTags.forEach(tag => tag.remove());
 
-        const metaTag = doc.createElement('meta');
-        metaTag.setAttribute('http-equiv', 'Content-Security-Policy');
-        // TODO: Improve the list of allowed origins.
-        // https://codedotorg.atlassian.net/browse/CT-579
-        metaTag.setAttribute(
-          'content',
-          "connect-src 'self' http://numbersapi.com"
-        );
-
-        const head = doc.querySelector('head');
-        if (head) {
-          head.appendChild(metaTag);
-        }
-        const links = doc.querySelectorAll(
-          'link[rel="stylesheet"], script[src]'
-        );
-        links.forEach(link => {
-          const src = link.getAttribute('src') || link.getAttribute('href');
-          if (src && files[src]) {
-            const blobUrl = files[src];
-            if (link.tagName.toLowerCase() === 'link') {
-              link.setAttribute('href', blobUrl);
-            } else {
-              link.setAttribute('src', blobUrl);
-            }
-          }
-        });
-        const fileLinks: NodeListOf<HTMLAnchorElement> =
-          doc.querySelectorAll('a[href]');
-        fileLinks.forEach(link => {
-          const href = link.getAttribute('href');
-          if (href?.endsWith('.html')) {
-            link.setAttribute(
-              'onclick',
-              `event.preventDefault();
-              window.parent.postMessage({type: '${IframeMessageType.CHANGE_FILE_HREF}', fileName: '${href}'}, '${location.origin}');
-              return false;
-            `
-            );
-          }
-        });
-        const updatedContents = doc.documentElement.outerHTML;
-        const blob = new Blob([updatedContents], {type: 'text/html'});
         const fullFileName = getFullyQualifiedFileName(
           file.name,
           file.folderId,
           source.folders
         );
+
+        setContentSecurityPolicy(doc);
+        updateLinksToNonHtmlFiles(doc, files, fullFileName);
+        updateLinksToHtmlFiles(doc, fullFileName);
+        const updatedContents = doc.documentElement.outerHTML;
+        const blob = new Blob([updatedContents], {type: 'text/html'});
         files[fullFileName] = URL.createObjectURL(blob);
       });
       revokeAndSetFilesToBlobs(files);
@@ -217,10 +198,11 @@ const InnerHTMLPreview = () => {
       return (
         <iframe
           ref={iframeRef}
-          sandbox="allow-scripts allow-same-origin"
+          sandbox={`${allowScripts ? 'allow-scripts ' : ''}allow-same-origin`}
           allow="self"
           title="Inner HTML Preview"
           id="inner-preview"
+          key={allowScripts ? 1 : 0} // This forces a re-render when allowScripts changes.
           src={blobUrl}
           className={moduleStyles.fileIframe}
         />
@@ -228,7 +210,7 @@ const InnerHTMLPreview = () => {
     } else {
       return <div>Loading...</div>;
     }
-  }, [blobUrl]);
+  }, [blobUrl, allowScripts]);
 
   return getPreview();
 };

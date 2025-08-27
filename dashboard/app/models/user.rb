@@ -302,11 +302,16 @@ class User < ApplicationRecord
 
   has_many :pd_workshops_organized, class_name: 'Pd::Workshop', foreign_key: :organizer_id
   has_and_belongs_to_many :pd_workshops_facilitated, class_name: 'Pd::Workshop', join_table: 'pd_workshops_facilitators', association_foreign_key: 'pd_workshop_id'
+  has_many :misc_surveys, class_name: 'Pd::MiscSurvey'
+  has_many :simple_survey_submissions, class_name: 'Foorm::SimpleSurveySubmission'
+  has_many :pd_enrollments, class_name: 'Pd::Enrollment'
 
   has_many :authentication_options, dependent: :destroy
   accepts_nested_attributes_for :authentication_options
 
   has_many :lti_user_identities, dependent: :destroy
+
+  has_many :external_notifications, dependent: :destroy
 
   has_one :latest_parental_permission_request, -> {order(updated_at: :desc)}, class_name: 'ParentalPermissionRequest'
 
@@ -998,6 +1003,7 @@ class User < ApplicationRecord
       display_name: name,
       given_name: given_name,
       family_name: family_name,
+      educator_role: educator_role ? SharedConstants::EDUCATOR_ROLES.find {|role| role[:value] == educator_role}&.dig(:label) : nil,
       school_info: Queries::SchoolInfo.current_school(self),
     }
   end
@@ -1253,7 +1259,8 @@ class User < ApplicationRecord
             script_id: script_level.script_id,
             new_result: ActivityConstants::BEST_PASS_RESULT,
             submitted: false,
-            level_source_id: nil
+            level_source_id: nil,
+            unit_group: nil
           )
         end
       end
@@ -1565,9 +1572,14 @@ class User < ApplicationRecord
     user.provider = auth.provider
     user.uid = auth.uid
     user.name = name_from_omniauth auth.info.name
-    user.family_name = auth.info.family_name if auth.info.family_name.present?
-    user.user_type = params['user_type'] || auth.info.user_type
+    user.user_type = params['user_type'] || params[:user_type] || auth.info.user_type
     user.user_type = 'teacher' if user.user_type == 'staff' # Powerschool sends through 'staff' instead of 'teacher'
+
+    if user.user_type == User::TYPE_TEACHER
+      Teacher.set_teacher_names_from_auth(user, auth)
+    else
+      user.family_name = auth.info.family_name if auth.info.family_name.present?
+    end
 
     # Store emails, except when using an authentication provider whose emails
     # we don't trust
@@ -1646,7 +1658,8 @@ class User < ApplicationRecord
     pairing_user_ids: nil,
     is_navigator: false,
     time_spent: nil,
-    locale: nil
+    locale: nil,
+    unit_group: nil
   )
     new_level_completed = false
     new_csf_level_perfected = false
@@ -1698,6 +1711,10 @@ class User < ApplicationRecord
         user_level.locale_supported = script.supported_locale?(locale)
       end
 
+      if unit_group && user_level.new_record?
+        user_level.unit_group_id = unit_group.id
+      end
+
       user_level.atomic_save!
     end
 
@@ -1713,7 +1730,8 @@ class User < ApplicationRecord
           pairing_user_ids: nil,
           is_navigator: true,
           locale: locale,
-          time_spent: time_spent
+          time_spent: time_spent,
+          unit_group: unit_group
         )
         Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
           PairedUserLevel.find_or_create_by(

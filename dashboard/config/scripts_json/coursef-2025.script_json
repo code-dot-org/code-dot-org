@@ -15,12 +15,12 @@
         "artist"
       ],
       "show_calendar": true,
-      "version_year": "2025",
+      "tts": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-07-31 23:31:33 UTC",
+    "serialized_at": "2025-08-14 15:24:31 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,

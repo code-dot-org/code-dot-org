@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 export const evidenceLevelShape = PropTypes.shape({
-  understanding: PropTypes.number,
+  understanding: PropTypes.number.isRequired,
   teacherDescription: PropTypes.string,
 });
 
@@ -14,6 +14,7 @@ export const learningGoalShape = PropTypes.shape({
 });
 
 export const rubricShape = PropTypes.shape({
+  id: PropTypes.number.isRequired,
   learningGoals: PropTypes.arrayOf(learningGoalShape),
   lesson: PropTypes.shape({
     position: PropTypes.number,

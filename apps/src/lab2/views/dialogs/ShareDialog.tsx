@@ -1,7 +1,7 @@
 import Alert from '@code-dot-org/component-library/alert';
 import {Button, LinkButton} from '@code-dot-org/component-library/button';
-import Dialog from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import Modal from '@code-dot-org/component-library/modal';
 import Typography from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
 import QRCode from 'qrcode.react';
@@ -190,15 +190,16 @@ const ShareDialog: React.FunctionComponent<{
   const theme = Lab2Registry.getInstance().getTheme();
 
   return sharingDisabled() ? (
-    <Dialog
-      title={i18n.sharingDisabledTitle()}
-      description={i18n.sharingBlockedByTeacherOpenEndedProjects()}
-      mode={theme === 'Light' ? 'light' : 'dark'}
-      primaryButtonProps={{
-        onClick: () => dispatch(hideShareDialog()),
-        text: i18n.ok(),
-      }}
-    />
+    <div data-theme={theme}>
+      <Modal
+        title={i18n.sharingDisabledTitle()}
+        description={i18n.sharingBlockedByTeacherOpenEndedProjects()}
+        primaryButtonProps={{
+          onClick: () => dispatch(hideShareDialog()),
+          text: i18n.ok(),
+        }}
+      />
+    </div>
   ) : (
     <FocusLock>
       <div className={moduleStyles.dialogContainer} data-theme={theme}>
