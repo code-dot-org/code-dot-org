@@ -126,6 +126,7 @@ export default class LandingPageWorkshopsTable extends React.Component {
             <Button
               {...workshopsTableButtonCommonProps}
               onClick={() => this.showCancelModal(workshop.enrollment_code)}
+              color="destructive"
               text="Cancel enrollment"
             />
           )}
