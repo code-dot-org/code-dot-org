@@ -3,7 +3,7 @@ import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {kitIcons} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import classNames from 'classnames';
-import React, {useMemo, useState} from 'react';
+import React, {useEffect, useMemo, useState} from 'react';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import AiTutor2Chat from '@cdo/apps/lab2/views/components/AiTutor2Chat';
@@ -11,6 +11,7 @@ import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import StudentRubricView from '@cdo/apps/lab2/views/components/rubrics/StudentRubricView';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {getTypedKeys} from '@cdo/apps/types/utils';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {useRubric} from '../../rubrics/RubricWrapper';
 import ForTeachersOnly from '../ForTeachersOnly';
@@ -42,7 +43,7 @@ const tabInfo: {[key in Tabs]: {title: string; icon: string}} = {
   [Tabs.Instructions]: {title: commonI18n.instructions(), icon: 'info-circle'},
   [Tabs.AiTutor]: {title: commonI18n.aiTutor(), icon: 'ai-head-solid'},
   [Tabs.TeachersOnly]: {
-    title: commonI18n.forTeachersOnly(),
+    title: commonI18n.teachingTips(),
     icon: 'chalkboard-teacher',
   },
   [Tabs.StudentRubric]: {
@@ -76,6 +77,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const {showRubric} = useRubric();
   const [currentTab, setCurrentTab] = useState<Tabs>(Tabs.Instructions);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
+  const isUserTeacher = useAppSelector(state => state.currentUser.isTeacher);
 
   const levelId = instructionsProps.levelProperties.id;
 
@@ -91,8 +93,9 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     }
 
     if (
-      levelProperties.teacherMarkdown ||
-      levelProperties.predictSettings?.solution
+      isUserTeacher &&
+      (levelProperties.teacherMarkdown ||
+        levelProperties.predictSettings?.solution)
     ) {
       tabMap[Tabs.TeachersOnly] = (
         <ForTeachersOnly
@@ -115,7 +118,14 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     }
 
     return tabMap;
-  }, [instructionsProps, aiTutor2Context, showRubric]);
+  }, [instructionsProps, isUserTeacher, aiTutor2Context, showRubric]);
+
+  useEffect(() => {
+    if (!(currentTab in availableTabs)) {
+      // If the current tab is no longer available, switch to the first available tab.
+      setCurrentTab(getTypedKeys(availableTabs)[0] || Tabs.Instructions);
+    }
+  }, [currentTab, availableTabs]);
 
   return (
     <div className={classNames(styles.resourcePanel, className)}>
