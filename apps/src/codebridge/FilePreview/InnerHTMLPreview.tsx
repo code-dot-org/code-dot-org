@@ -16,6 +16,7 @@ const NOT_FOUND_FILE = 'NOT_FOUND';
 
 const InnerHTMLPreview = () => {
   const iframeRef = useRef<HTMLIFrameElement | null>(null);
+  const isNavigatingToFileRef = useRef<boolean>(false);
   const [source, setSource] = React.useState<MultiFileSource | undefined>(
     undefined
   );
@@ -85,6 +86,10 @@ const InnerHTMLPreview = () => {
         // We don't need to update the parent, because they initiated this change.
       } else if (data.type === IframeMessageType.SET_ALLOW_SCRIPTS) {
         setAllowScripts(!!data.allow);
+      } else if (data.type === IframeMessageType.NAVIGATE_TO_FILE) {
+        console.log('NAVIGATE_TO_FILE: Setting currentFile to', data.fileName);
+        isNavigatingToFileRef.current = true;
+        setCurrentFile(data.fileName);
       }
     },
     [parentOrigin]
@@ -124,7 +129,10 @@ const InnerHTMLPreview = () => {
           'currentFile in useEffect in InnerHTMLPreview',
           currentFile
         );
-        if (currentFile !== fileToAddToNavigationHistory) {
+        if (
+          currentFile !== fileToAddToNavigationHistory &&
+          !isNavigatingToFileRef.current
+        ) {
           setFileToAddToNavigationHistory(currentFile);
           window.parent.postMessage(
             {
@@ -134,9 +142,21 @@ const InnerHTMLPreview = () => {
             parentOrigin
           );
         }
+
+        // Reset the navigation flag after successful navigation
+        if (isNavigatingToFileRef.current) {
+          console.log('Navigation to file completed, resetting flag');
+          isNavigatingToFileRef.current = false;
+        }
       } else {
         console.error(`current file ${currentFile} not found in source files`);
         setBlobUrl(NOT_FOUND_FILE);
+
+        // Reset the navigation flag even if navigation failed
+        if (isNavigatingToFileRef.current) {
+          console.log('Navigation to file failed, resetting flag');
+          isNavigatingToFileRef.current = false;
+        }
       }
     }
   }, [currentFile, fileToAddToNavigationHistory, filesToBlobs, parentOrigin]);

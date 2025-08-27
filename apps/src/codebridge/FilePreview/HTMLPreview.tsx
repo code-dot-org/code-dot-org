@@ -27,6 +27,7 @@ export const HTMLPreview = () => {
     return `${location.protocol}//preview.${subdomain}codeprojects.org${port}`;
   }, []);
   const [navigationHistory, setNavigationHistory] = useState<string[]>([]);
+  const [navigationHistoryIndex, setNavigationHistoryIndex] = useState(-1);
 
   const source = useAppSelector(
     state => state.lab2Project.projectSources?.source
@@ -41,6 +42,50 @@ export const HTMLPreview = () => {
     isPredictResponseSubmitted
   );
   const allowUserScripts = !isPredictLevel || hasSubmittedPredictResponse;
+  console.log('navigationHistoryIndex in HTMLPreview', navigationHistoryIndex);
+  console.log('navigationHistory in HTMLPreview', navigationHistory);
+  const canNavigateBack = navigationHistoryIndex > 0;
+  console.log('canNavigateBack in HTMLPreview', canNavigateBack);
+  const canNavigateForward =
+    navigationHistoryIndex < navigationHistory.length - 1;
+  console.log('canNavigateForward in HTMLPreview', canNavigateForward);
+
+  const onNavigateBack = () => {
+    console.log(
+      'onNavigateBack in HTMLPreview - navigationHistoryIndex',
+      navigationHistoryIndex
+    );
+    if (!canNavigateBack) {
+      return;
+    }
+    const updatedFile = navigationHistory[navigationHistoryIndex - 1];
+    console.log('navigationHistoryIndex before navigateBack', navigationHistoryIndex);
+    setNavigationHistoryIndex(navigationHistoryIndex - 1);
+    console.log('navigationHistoryIndex after navigateBack', navigationHistoryIndex);
+    setCurrentFile(updatedFile);
+    iframeRef.current?.contentWindow?.postMessage(
+      {type: IframeMessageType.NAVIGATE_TO_FILE, fileName: updatedFile},
+      previewUrl
+    );
+  };
+  const onNavigateForward = () => {
+    console.log(
+      'onNavigateForward in HTMLPreview - navigationHistoryIndex',
+      navigationHistoryIndex
+    );
+    if (!canNavigateForward) {
+      return;
+    }
+    const updatedFile = navigationHistory[navigationHistoryIndex + 1];
+    console.log('navigationHistoryIndex before navigateForward', navigationHistoryIndex);
+    setNavigationHistoryIndex(navigationHistoryIndex + 1);
+    console.log('navigationHistoryIndex after navigateForward', navigationHistoryIndex);
+    setCurrentFile(updatedFile);
+    iframeRef.current?.contentWindow?.postMessage(
+      {type: IframeMessageType.NAVIGATE_TO_FILE, fileName: updatedFile},
+      previewUrl
+    );
+  };
 
   useLifecycleNotifier(LifecycleEvent.LevelLoadStarted, () => {
     // When we switch levels, clear the source so the preview does not show outdated content.
@@ -68,16 +113,30 @@ export const HTMLPreview = () => {
       } else if (
         event.data.type === IframeMessageType.ADD_FILE_TO_NAVIGATION_HISTORY
       ) {
-        setNavigationHistory([
-          ...navigationHistory,
-          event.data.fileToAddToNavigationHistory,
-        ]);
+        console.log('ADD_FILE_TO_NAVIGATION_HISTORY in HTMLPreview');
+        // if navigationHistoryIndex is the last index, add the file to the end of the array
+        // else truncate the array after the current index and add the file to the end
+        if (navigationHistoryIndex === navigationHistory.length - 1) {
+          const updatedNavigationHistory = [
+            ...navigationHistory,
+            event.data.fileToAddToNavigationHistory,
+          ];
+          setNavigationHistory(updatedNavigationHistory);
+          setNavigationHistoryIndex(updatedNavigationHistory.length - 1);
+        } else {
+          const updatedNavigationHistory = [
+            ...navigationHistory.slice(0, navigationHistoryIndex + 1),
+            event.data.fileToAddToNavigationHistory,
+          ];
+          setNavigationHistory(updatedNavigationHistory);
+          setNavigationHistoryIndex(updatedNavigationHistory.length - 1);
+        }
       }
     };
 
     window.addEventListener('message', handleMessage);
     return () => window.removeEventListener('message', handleMessage);
-  }, [previewUrl, currentFile, navigationHistory]);
+  }, [previewUrl, currentFile, navigationHistory, navigationHistoryIndex]);
 
   useEffect(() => {
     const debouncedUpdate = setTimeout(() => {
@@ -144,7 +203,14 @@ export const HTMLPreview = () => {
       hideHeaders
     >
       <div className={moduleStyles.previewContainer}>
-        <UrlBar value={currentFile} onChange={setCurrentFile} />
+        <UrlBar
+          value={currentFile}
+          onChange={setCurrentFile}
+          canNavigateBack={canNavigateBack}
+          canNavigateForward={canNavigateForward}
+          onNavigateBack={onNavigateBack}
+          onNavigateForward={onNavigateForward}
+        />
         {/* This iframe points to the environment-specific version of preview.codeprojects.org. That url will eventually
             route to InnerHTMLPreview. */}
         <iframe

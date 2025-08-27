@@ -8,9 +8,20 @@ import moduleStyles from './styles/url-bar.module.scss';
 interface UrlBarProps {
   value: string;
   onChange: (value: string) => void;
+  canNavigateBack: boolean;
+  canNavigateForward: boolean;
+  onNavigateBack: () => void;
+  onNavigateForward: () => void;
 }
 
-export const UrlBar: React.FC<UrlBarProps> = ({value, onChange}) => {
+export const UrlBar: React.FC<UrlBarProps> = ({
+  value,
+  onChange,
+  canNavigateBack,
+  canNavigateForward,
+  onNavigateBack,
+  onNavigateForward,
+}) => {
   return (
     <div className={moduleStyles.urlBarContainer}>
       <div className={moduleStyles.urlBarContent}>
@@ -21,7 +32,7 @@ export const UrlBar: React.FC<UrlBarProps> = ({value, onChange}) => {
           )}
         >
           <Button
-            onClick={() => {}}
+            onClick={onNavigateBack}
             aria-label="Navigate back"
             size="xs"
             type="tertiary"
@@ -29,9 +40,10 @@ export const UrlBar: React.FC<UrlBarProps> = ({value, onChange}) => {
             isIconOnly={true}
             icon={{iconName: 'chevron-left'}}
             className={moduleStyles.urlButton}
+            disabled={!canNavigateBack}
           />
           <Button
-            onClick={() => {}}
+            onClick={onNavigateForward}
             aria-label="Navigate forward"
             size="xs"
             type="tertiary"
@@ -39,6 +51,7 @@ export const UrlBar: React.FC<UrlBarProps> = ({value, onChange}) => {
             isIconOnly={true}
             icon={{iconName: 'chevron-right'}}
             className={moduleStyles.urlButton}
+            disabled={!canNavigateForward}
           />
         </div>
         <TextField
