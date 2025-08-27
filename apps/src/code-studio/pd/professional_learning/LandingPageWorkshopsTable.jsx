@@ -233,6 +233,7 @@ export default class LandingPageWorkshopsTable extends React.Component {
             primaryButtonProps={{
               onClick: this.cancelEnrollment,
               text: 'Yes - cancel my enrollment',
+              color: 'destructive',
             }}
             secondaryButtonProps={{
               onClick: this.dismissCancelModal,
