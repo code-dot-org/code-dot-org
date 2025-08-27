@@ -8,3 +8,5 @@ export enum IframeMessageType {
   ADD_FILE_TO_NAVIGATION_HISTORY = 'ADD_FILE_TO_NAVIGATION_HISTORY',
   NAVIGATE_TO_FILE = 'NAVIGATE_TO_FILE',
 }
+
+export const DEFAULT_START_HTML_FILE = 'index.html';

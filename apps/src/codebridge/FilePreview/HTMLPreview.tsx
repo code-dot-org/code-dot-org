@@ -8,7 +8,7 @@ import {LifecycleEvent} from '@cdo/apps/lab2/utils';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {IframeMessageType} from './constants';
+import {IframeMessageType, DEFAULT_START_HTML_FILE} from './constants';
 import {UrlBar} from './UrlBar';
 
 import moduleStyles from './styles/html-preview.module.scss';
@@ -36,32 +36,24 @@ export const HTMLPreview = () => {
   const [debouncedSource, setDebouncedSource] = useState(source);
   const sourceLevelId = useRef<number | undefined>(undefined);
   const [isLevelLoading, setIsLevelLoading] = useState(false);
-  const [currentFile, setCurrentFile] = useState<string>('index.html');
+  const [currentFile, setCurrentFile] = useState<string>(
+    DEFAULT_START_HTML_FILE
+  );
   const isPredictLevel = levelProperties?.predictSettings?.isPredictLevel;
   const hasSubmittedPredictResponse = useAppSelector(
     isPredictResponseSubmitted
   );
   const allowUserScripts = !isPredictLevel || hasSubmittedPredictResponse;
-  console.log('navigationHistoryIndex in HTMLPreview', navigationHistoryIndex);
-  console.log('navigationHistory in HTMLPreview', navigationHistory);
   const canNavigateBack = navigationHistoryIndex > 0;
-  console.log('canNavigateBack in HTMLPreview', canNavigateBack);
   const canNavigateForward =
     navigationHistoryIndex < navigationHistory.length - 1;
-  console.log('canNavigateForward in HTMLPreview', canNavigateForward);
 
   const onNavigateBack = () => {
-    console.log(
-      'onNavigateBack in HTMLPreview - navigationHistoryIndex',
-      navigationHistoryIndex
-    );
     if (!canNavigateBack) {
       return;
     }
     const updatedFile = navigationHistory[navigationHistoryIndex - 1];
-    console.log('navigationHistoryIndex before navigateBack', navigationHistoryIndex);
     setNavigationHistoryIndex(navigationHistoryIndex - 1);
-    console.log('navigationHistoryIndex after navigateBack', navigationHistoryIndex);
     setCurrentFile(updatedFile);
     iframeRef.current?.contentWindow?.postMessage(
       {type: IframeMessageType.NAVIGATE_TO_FILE, fileName: updatedFile},
@@ -69,17 +61,11 @@ export const HTMLPreview = () => {
     );
   };
   const onNavigateForward = () => {
-    console.log(
-      'onNavigateForward in HTMLPreview - navigationHistoryIndex',
-      navigationHistoryIndex
-    );
     if (!canNavigateForward) {
       return;
     }
     const updatedFile = navigationHistory[navigationHistoryIndex + 1];
-    console.log('navigationHistoryIndex before navigateForward', navigationHistoryIndex);
     setNavigationHistoryIndex(navigationHistoryIndex + 1);
-    console.log('navigationHistoryIndex after navigateForward', navigationHistoryIndex);
     setCurrentFile(updatedFile);
     iframeRef.current?.contentWindow?.postMessage(
       {type: IframeMessageType.NAVIGATE_TO_FILE, fileName: updatedFile},
@@ -91,6 +77,8 @@ export const HTMLPreview = () => {
     // When we switch levels, clear the source so the preview does not show outdated content.
     setDebouncedSource(undefined);
     setIsLevelLoading(true);
+    setNavigationHistory([]);
+    setNavigationHistoryIndex(-1);
   });
 
   useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, () => {
@@ -113,7 +101,6 @@ export const HTMLPreview = () => {
       } else if (
         event.data.type === IframeMessageType.ADD_FILE_TO_NAVIGATION_HISTORY
       ) {
-        console.log('ADD_FILE_TO_NAVIGATION_HISTORY in HTMLPreview');
         // if navigationHistoryIndex is the last index, add the file to the end of the array
         // else truncate the array after the current index and add the file to the end
         if (navigationHistoryIndex === navigationHistory.length - 1) {
@@ -140,7 +127,6 @@ export const HTMLPreview = () => {
 
   useEffect(() => {
     const debouncedUpdate = setTimeout(() => {
-      console.log('debouncedUpdate in HTMLPreview', currentFile);
       iframeRef.current?.contentWindow?.postMessage(
         {type: IframeMessageType.CHANGE_FILE_URL_BAR, fileName: currentFile},
         previewUrl
@@ -194,8 +180,6 @@ export const HTMLPreview = () => {
     }
   }, [isIframeLoaded, previewUrl, allowUserScripts]);
 
-  console.log('currentFile in HTMLPreview', currentFile);
-  console.log('navigationHistory in HTMLPreview', navigationHistory);
   return (
     <PanelContainer
       id={'html-preview'}
