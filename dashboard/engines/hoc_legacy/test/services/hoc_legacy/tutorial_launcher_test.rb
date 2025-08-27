@@ -16,7 +16,7 @@ class HocLegacy::TutorialLauncherTest < ActiveSupport::TestCase
     end
   end
   let(:tutorial_code) {'tutorial_code'}
-  let(:tutorial) {{code: tutorial_code}}
+  let(:tutorial) {OpenStruct.new(tutorial_id: tutorial_code)}
   let(:company) {'test_company'}
 
   let(:dcdo_hoc_learn_activity_sample_weight) {2}

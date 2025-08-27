@@ -30,7 +30,7 @@ module HocLegacy
         session_row = create_session_row(
           {
             referer: request.host_with_port,
-            tutorial: tutorial.try(:[], :code),
+            tutorial: tutorial&.tutorial_id,
             finished_at: DateTime.now,
             finished_ip: request.ip
           }

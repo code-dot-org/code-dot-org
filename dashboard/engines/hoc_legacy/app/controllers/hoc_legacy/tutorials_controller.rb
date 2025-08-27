@@ -1,10 +1,11 @@
 # frozen_string_literal: true
 
 require 'cdo/db'
-require 'cdo/tutorials'
 
 module HocLegacy
   class TutorialsController < ApplicationController
+    CACHE_TTL = 1.hour.freeze
+
     before_action :assign_tutorial, only: %i[begin begin_pixel finish finish_pixel]
     before_action :require_tutorial, only: %i[show begin begin_pixel finish finish_pixel]
 
@@ -21,7 +22,7 @@ module HocLegacy
         TutorialLauncher.call(controller: self, tutorial: @tutorial, company: company)
       end
 
-      redirect_to @tutorial[:url], status: :found
+      redirect_to @tutorial.primary_link_ref.primary_target, status: :found
     end
 
     # GET /api/hour/begin_:code.png
@@ -77,8 +78,9 @@ module HocLegacy
     end
 
     private def assign_tutorial
-      @tutorial = Tutorials.new(:tutorials).find_with_code(params[:code]) ||
-        Tutorials.new(:tutorials_more).find_with_code(params[:code])
+      @tutorial = Rails.cache.fetch("hoc_legacy:tutorial:#{params[:code]}", expires_in: CACHE_TTL) do
+        CdoContentful::CsForAll::Entry::Tutorial.find_by_tutorial_id(params[:code])
+      end
     end
 
     private def require_tutorial
@@ -98,7 +100,7 @@ module HocLegacy
 
       congrats_url_params[:i]  = session_row[:session] if session_row.try(:[], :session).present?
       congrats_url_params[:co] = session_row[:company] if session_row.try(:[], :company).present?
-      congrats_url_params[:s]  = Base64.urlsafe_encode64(@tutorial[:code]) if @tutorial.try(:[], :code).present?
+      congrats_url_params[:s]  = Base64.urlsafe_encode64(@tutorial.tutorial_id) if @tutorial
 
       redirect_to main_app.congrats_url(congrats_url_params), status: :found
     end

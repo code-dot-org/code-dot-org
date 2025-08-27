@@ -23,7 +23,7 @@ module HocLegacy
         create_session_row(
           {
             referer: request.host_with_port,
-            tutorial: tutorial.try(:[], :code),
+            tutorial: tutorial&.tutorial_id,
             pixel_finished_at: DateTime.now,
             pixel_finished_ip: request.ip,
           }

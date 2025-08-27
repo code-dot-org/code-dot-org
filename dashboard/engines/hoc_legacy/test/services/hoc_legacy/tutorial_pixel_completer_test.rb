@@ -16,7 +16,7 @@ class HocLegacy::TutorialPixelCompleterTest < ActiveSupport::TestCase
     end
   end
   let(:tutorial_code) {'tutorial_code'}
-  let(:tutorial) {{code: tutorial_code}}
+  let(:tutorial) {OpenStruct.new(tutorial_id: tutorial_code)}
 
   describe 'class' do
     it 'includes SessionManageable concern' do

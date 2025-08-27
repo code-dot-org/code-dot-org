@@ -1,5 +1,3 @@
-require 'cdo/tutorials'
-
 partner_sites = CDO.partners.map {|x| x + '.code.org'}
 
 get '/:short_code' do |short_code|

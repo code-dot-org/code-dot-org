@@ -14,7 +14,9 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
 
     let(:tutorial_code) {'tutorial_code'}
     let(:tutorial_url) {'https://studio.code.org/expected/tutorial_url'}
-    let(:tutorial) {OpenStruct.new(code: tutorial_code, url: tutorial_url)}
+    let(:tutorial) do
+      OpenStruct.new(tutorial_id: tutorial_code, primary_link_ref: OpenStruct.new(primary_target: tutorial_url))
+    end
 
     let(:pegasus_db_mock) {double(:pegasus_db)}
     let(:forms_table_mock) {double(:forms_table)}
@@ -28,7 +30,8 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
 
       allow(DCDO).to receive(:get).with('hoc_apis_in_dashboard', anything).and_return(true)
 
-      allow_any_instance_of(Tutorials).to receive(:find_with_code).with(tutorial_code).and_return(tutorial)
+      allow(CdoContentful::CsForAll::Entry::Tutorial).to receive(:find_by_tutorial_id)
+      allow(CdoContentful::CsForAll::Entry::Tutorial).to receive(:find_by_tutorial_id).with(tutorial_code).and_return(tutorial)
       allow(HocLegacy::TutorialLauncher).to receive(:call)
 
       stub_const('PEGASUS_DB', pegasus_db_mock)
@@ -123,12 +126,12 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
 
     let(:company) {'expected_company'}
     let(:tutorial_code) {'tutorial_code'}
-    let(:tutorial) {OpenStruct.new(code: tutorial_code)}
+    let(:tutorial) {OpenStruct.new(tutorial_id: tutorial_code)}
 
     before do
       allow(DCDO).to receive(:get).with('hoc_apis_in_dashboard', anything).and_return(true)
 
-      allow_any_instance_of(Tutorials).to receive(:find_with_code).with(tutorial_code).and_return(tutorial)
+      allow(CdoContentful::CsForAll::Entry::Tutorial).to receive(:find_by_tutorial_id).with(tutorial_code).and_return(tutorial)
       allow(HocLegacy::TutorialPixelLauncher).to receive(:call)
     end
 
@@ -259,7 +262,7 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
 
     let(:tutorial_code) {'tutorial_code'}
     let(:encoded_tutorial_code) {CGI.escape(Base64.urlsafe_encode64(tutorial_code))}
-    let(:tutorial) {OpenStruct.new(code: tutorial_code)}
+    let(:tutorial) {OpenStruct.new(tutorial_id: tutorial_code)}
 
     let(:session_id) {Faker::Internet.unique.uuid}
     let(:session_company) {'session_company'}
@@ -268,7 +271,7 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
     before do
       allow(DCDO).to receive(:get).with('hoc_apis_in_dashboard', anything).and_return(true)
 
-      allow_any_instance_of(Tutorials).to receive(:find_with_code).with(tutorial_code).and_return(tutorial)
+      allow(CdoContentful::CsForAll::Entry::Tutorial).to receive(:find_by_tutorial_id).with(tutorial_code).and_return(tutorial)
       allow(HocLegacy::TutorialCompleter).to receive(:call).
         with(controller: instance_of(described_class), tutorial:).
         and_return(session_row)
@@ -341,12 +344,12 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
     subject(:finish_tutorial_pixel_request) {get "/api/hour/finish_#{tutorial_code}.png"}
 
     let(:tutorial_code) {'tutorial_code'}
-    let(:tutorial) {OpenStruct.new(code: tutorial_code)}
+    let(:tutorial) {OpenStruct.new(tutorial_id: tutorial_code)}
 
     before do
       allow(DCDO).to receive(:get).with('hoc_apis_in_dashboard', anything).and_return(true)
 
-      allow_any_instance_of(Tutorials).to receive(:find_with_code).with(tutorial_code).and_return(tutorial)
+      allow(CdoContentful::CsForAll::Entry::Tutorial).to receive(:find_by_tutorial_id).with(tutorial_code).and_return(tutorial)
       allow(HocLegacy::TutorialPixelCompleter).to receive(:call)
     end
 

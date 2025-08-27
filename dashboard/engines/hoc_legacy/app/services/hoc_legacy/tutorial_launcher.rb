@@ -21,7 +21,7 @@ module HocLegacy
       create_session_row(
         {
           referer: request.referer_site_with_port,
-          tutorial: tutorial[:code],
+          tutorial: tutorial&.tutorial_id,
           company: company,
           started_at: DateTime.now,
           started_ip: request.ip,

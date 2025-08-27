@@ -16,7 +16,8 @@ class HocLegacy::TutorialCompleterTest < ActiveSupport::TestCase
       controller.response = response
     end
   end
-  let(:tutorial) {{code: 'tutorial_code'}}
+  let(:tutorial_code) {'tutorial_code'}
+  let(:tutorial) {OpenStruct.new(tutorial_id: tutorial_code)}
 
   describe 'class' do
     it 'includes SessionManageable concern' do
@@ -31,7 +32,7 @@ class HocLegacy::TutorialCompleterTest < ActiveSupport::TestCase
     let(:cookie_session_id) {Faker::Internet.unique.uuid}
     let(:request_ip) {Faker::Internet.unique.ip_v4_address}
     let(:request_host_with_port) {Faker::Internet.unique.domain_name}
-    let(:encoded_tutorial_code) {CGI.escape(Base64.urlsafe_encode64(tutorial[:code]))}
+    let(:encoded_tutorial_code) {CGI.escape(Base64.urlsafe_encode64(tutorial_code))}
 
     around do |test|
       Timecop.freeze(current_time) {test.call}
@@ -55,7 +56,7 @@ class HocLegacy::TutorialCompleterTest < ActiveSupport::TestCase
       new_session_id = Faker::Internet.unique.uuid
       new_session_row_params = {
         referer: request_host_with_port,
-        tutorial: tutorial[:code],
+        tutorial: tutorial_code,
         finished_at: current_time,
         finished_ip: request_ip,
       }
