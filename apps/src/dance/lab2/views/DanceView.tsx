@@ -1,8 +1,27 @@
+import {Events, WorkspaceSvg} from 'blockly/core';
 import classNames from 'classnames';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
+import {loadBlocksToWorkspace} from '@cdo/apps/blockly/addons/cdoUtils';
 import {saveReplayLog} from '@cdo/apps/code-studio/components/shareDialogRedux';
+import defaultSources from '@cdo/apps/dance/blockly/defaultSources.json';
+import {
+  installSharedBlocks,
+  setupBlocklyEnvironment,
+} from '@cdo/apps/dance/blockly/setup';
+import {
+  initSongs,
+  reducers,
+  setHasRun,
+  setIsRunning,
+  setRunIsStarting,
+  setSong,
+} from '@cdo/apps/dance/danceRedux';
+import {getFilterStatus} from '@cdo/apps/dance/songs';
 import SongSelector from '@cdo/apps/dance/SongSelector';
+import {DanceLevelProperties, DanceProjectSources} from '@cdo/apps/dance/types';
+import {useBlocklySettings} from '@cdo/apps/lab2/hooks/useBlocklySettings';
+import {setPageError} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {getIsShareView} from '@cdo/apps/lab2/projects/utils';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
@@ -13,20 +32,11 @@ import {registerReducers} from '@cdo/apps/redux';
 import AgeDialog from '@cdo/apps/templates/AgeDialog';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import loadingGif from '@cdo/static/dance/DancePartyLoading.gif';
 
-import {installCommonBlocks, installDanceBlocks} from '../../blockly/setup';
-import {
-  initSongs,
-  reducers,
-  setHasRun,
-  setIsRunning,
-  setRunIsStarting,
-  setSong,
-} from '../../danceRedux';
-import {getFilterStatus} from '../../songs';
-import {DanceLevelProperties, DanceProjectSources} from '../../types';
 import danceI18n from '../locale';
 import ProgramExecutor from '../ProgramExecutor';
+import getInitialSources from '../utils/getInitialSources';
 
 import DanceControls from './DanceControls';
 
@@ -43,7 +53,7 @@ registerReducers(reducers);
  */
 const DanceView: React.FunctionComponent<
   LabProps<DanceLevelProperties, DanceProjectSources>
-> = ({initialSources, levelProperties}) => {
+> = ({levelProperties, initialSources}) => {
   const dispatch = useAppDispatch();
 
   const isRunning = useAppSelector(state => state.dance.isRunning);
@@ -59,6 +69,7 @@ const DanceView: React.FunctionComponent<
   const isLoading = useAppSelector(state => state.dance.isLoading);
 
   const programExecutor = useRef<ProgramExecutor | null>(null);
+  const workspace = useRef<WorkspaceSvg | null>(null);
 
   const [filterOn, setFilterOn] = useState<boolean>(
     getFilterStatus(userType, under13)
@@ -81,6 +92,20 @@ const DanceView: React.FunctionComponent<
     [dispatch]
   );
 
+  const saveProject = (selectedSong: string, forceSave = false) => {
+    if (!workspace.current) {
+      return;
+    }
+    const blocksJson = Blockly.serialization.workspaces.save(workspace.current);
+    const sourcesToSave = {
+      selectedSong,
+      source: blocksJson,
+    };
+    Lab2Registry.getInstance()
+      .getProjectManager()
+      ?.save(sourcesToSave, forceSave);
+  };
+
   const runProgram = useCallback(async () => {
     if (!programExecutor.current || !currentSongMetadata) {
       return;
@@ -89,15 +114,21 @@ const DanceView: React.FunctionComponent<
     // Set the runIsStartingFlag to true while the run function is executing,
     // and set the isRunning flag to true once the run actually starts.
     dispatch(setRunIsStarting(true));
-    await programExecutor.current.execute('', currentSongMetadata);
+    programExecutor.current.reset();
+    await programExecutor.current.execute(
+      Blockly.getWorkspaceCode(),
+      currentSongMetadata
+    );
     dispatch(setRunIsStarting(false));
     dispatch(setIsRunning(true));
     dispatch(setHasRun(true));
-  }, [programExecutor, currentSongMetadata, dispatch]);
+    saveProject(selectedSong, true);
+  }, [programExecutor, currentSongMetadata, selectedSong, dispatch]);
 
   const resetProgram = useCallback(() => {
     programExecutor.current?.reset();
     dispatch(setIsRunning(false));
+    programExecutor.current?.staticPreview(Blockly.getWorkspaceCode());
   }, [programExecutor, dispatch]);
 
   const onPuzzleComplete = useCallback(
@@ -114,13 +145,31 @@ const DanceView: React.FunctionComponent<
     console.log('onEventsChanged');
   };
 
-  useEffect(() => {
-    installCommonBlocks(levelProperties.skin, levelProperties.isK1);
-  }, [levelProperties.skin, levelProperties.isK1]);
+  const onBlockSpaceChange = useCallback(
+    (e: Events.Abstract) => {
+      if (e.type !== Events.BLOCK_DRAG && e.type !== Events.BLOCK_CHANGE) {
+        return;
+      }
 
+      if (e.type === Events.BLOCK_DRAG && (e as Events.BlockDrag).isStart) {
+        return;
+      }
+
+      if (!isRunning) {
+        programExecutor.current?.staticPreview(Blockly.getWorkspaceCode());
+      }
+      saveProject(selectedSong);
+    },
+    [selectedSong, isRunning]
+  );
+
+  // Setup Blockly for dance party when first mounting.
+  useEffect(setupBlocklyEnvironment, []);
+
+  // Save project when selected song changes
   useEffect(() => {
-    installDanceBlocks(levelProperties.sharedBlocks);
-  }, [levelProperties.sharedBlocks]);
+    saveProject(selectedSong);
+  }, [selectedSong]);
 
   // Reset hasRun flag when level changes
   useEffect(() => {
@@ -143,6 +192,33 @@ const DanceView: React.FunctionComponent<
     );
   }, [levelProperties, initialSources, dispatch]);
 
+  // Set up the Blockly workspace when the level changes
+  useEffect(() => {
+    const blocklyDiv = document.getElementById(BLOCKLY_DIV_ID);
+    if (!blocklyDiv) {
+      dispatch(setPageError({errorMessage: 'Blockly div not found'}));
+      return;
+    }
+    if (levelProperties.sharedBlocks) {
+      installSharedBlocks(levelProperties.sharedBlocks);
+    }
+    workspace.current = Blockly.inject(blocklyDiv, {
+      toolbox: levelProperties.toolboxBlocks,
+    });
+
+    const sources =
+      getInitialSources(levelProperties, initialSources) || defaultSources;
+    loadBlocksToWorkspace(workspace.current, JSON.stringify(sources.source));
+
+    return () => workspace.current?.dispose();
+  }, [dispatch, initialSources, levelProperties]);
+
+  useEffect(() => {
+    workspace.current?.addChangeListener(onBlockSpaceChange);
+    return () => workspace.current?.removeChangeListener(onBlockSpaceChange);
+  }, [onBlockSpaceChange]);
+
+  // Set up the ProgramExecutor
   useEffect(() => {
     const {isProjectLevel, freePlay, customHelperLibrary, validationCode} =
       levelProperties;
@@ -174,6 +250,7 @@ const DanceView: React.FunctionComponent<
     onPuzzleComplete,
     readonlyWorkspace,
   ]);
+  const settings = useBlocklySettings();
 
   return (
     <div id="dance-lab" className={moduleStyles.danceLab}>
@@ -186,6 +263,7 @@ const DanceView: React.FunctionComponent<
         levelProperties={levelProperties}
         headerClassName={moduleStyles.panelHeader}
         className={moduleStyles.instructionsArea}
+        settings={settings}
       />
       <div className={moduleStyles.divider} />
       <PanelContainer
@@ -214,7 +292,7 @@ const DanceView: React.FunctionComponent<
               )}
             >
               <img
-                src="//curriculum.code.org/images/DancePartyLoading.gif"
+                src={loadingGif}
                 className={moduleStyles.loadingGif}
                 alt={danceI18n.dancePartyLoading()}
               />

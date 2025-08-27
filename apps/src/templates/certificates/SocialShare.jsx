@@ -1,3 +1,4 @@
+import {LinkButton} from '@code-dot-org/component-library/button';
 import PropTypes from 'prop-types';
 import React, {useEffect, useState} from 'react';
 
@@ -6,6 +7,8 @@ import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
+
+import moduleStyles from './social_share.module.scss';
 
 export default function SocialShare({
   facebook,
@@ -27,9 +30,8 @@ export default function SocialShare({
     );
   }, []);
   useEffect(() => {
-    testImageAccess(
-      'https://twitter.com/favicon.ico' + '?' + Math.random(),
-      () => setIsTwitterAvailable(true)
+    testImageAccess('https://x.com/favicon.ico' + '?' + Math.random(), () =>
+      setIsTwitterAvailable(true)
     );
   }, []);
   useEffect(() => {
@@ -51,63 +53,70 @@ export default function SocialShare({
   const linkedShareUrl = `https://www.linkedin.com/sharing/share-offsite/?${linkedin}`;
 
   return (
-    <div>
+    <div className={moduleStyles.social_share_container}>
       {/* note that linkedin share doesn't work with localhost urls */}
       {!under13 && isPlCourse && isLinkedinAvailable && (
-        <a
+        <LinkButton
+          useAsLink
+          size="s"
           href={linkedShareUrl}
           target="_blank"
           rel="noopener noreferrer"
-          onClick={e => onShare(e, 'linkedin')}
-        >
-          <button
-            type="button"
-            style={{background: color.linkedin_blue, ...styles.shareButton}}
-            onClick={e => e.preventDefault()}
-          >
-            <i className="fa fa-linkedin" title={i18n.shareToLinkedIn()} />
-          </button>
-        </a>
+          analyticsCallback={e => onShare(e, 'linkedin')}
+          isIconOnly
+          icon={{
+            iconName: 'linkedin',
+            iconFamily: 'brands',
+            title: i18n.shareToLinkedIn(),
+          }}
+          style={{backgroundColor: color.linkedin_blue}}
+        />
       )}
 
       {!under13 && isFacebookAvailable && (
-        <a
+        <LinkButton
+          useAsLink
+          size="s"
           href={facebookShareUrl}
           target="_blank"
           rel="noopener noreferrer"
-          onClick={e => onShare(e, 'facebook')}
-        >
-          <button
-            type="button"
-            style={{background: color.facebook_blue, ...styles.shareButton}}
-            onClick={e => e.preventDefault()}
-          >
-            <i className="fa fa-facebook" title={i18n.shareToFacebook()} />
-          </button>
-        </a>
+          analyticsCallback={e => onShare(e, 'facebook')}
+          isIconOnly
+          icon={{
+            iconName: 'facebook',
+            iconFamily: 'brands',
+            title: i18n.shareToFacebook(),
+          }}
+          style={{backgroundColor: color.facebook_blue}}
+        />
       )}
       {!under13 && isTwitterAvailable && (
-        <a
+        <LinkButton
+          useAsLink
+          size="s"
           href={twitterShareUrl}
           target="_blank"
           rel="noopener noreferrer"
-          onClick={e => onShare(e, 'twitter')}
-        >
-          <button
-            type="button"
-            style={{background: color.twitter_blue, ...styles.shareButton}}
-            onClick={e => e.preventDefault()}
-          >
-            <i className="fa fa-twitter" title={i18n.shareToTwitter()} />
-          </button>
-        </a>
+          analyticsCallback={e => onShare(e, 'twitter')}
+          isIconOnly
+          icon={{
+            iconName: 'x-twitter',
+            iconFamily: 'brands',
+            title: i18n.shareToTwitter(),
+          }}
+          style={{backgroundColor: color.x_black}}
+        />
       )}
-      <a href={print} className="social-print-link">
-        <button type="button" style={styles.printButton}>
-          <i className="fa fa-print" />
-          {' ' + i18n.print()}
-        </button>
-      </a>
+      <LinkButton
+        useAsLink
+        href={print}
+        type="secondary"
+        size="s"
+        color="gray"
+        className="social-print-link"
+        iconLeft={{iconName: 'print'}}
+        text={i18n.print()}
+      />
     </div>
   );
 }
@@ -120,17 +129,4 @@ SocialShare.propTypes = {
   under13: PropTypes.bool,
   isPlCourse: PropTypes.bool,
   userType: PropTypes.string,
-};
-
-const styles = {
-  shareButton: {
-    color: color.white,
-    minWidth: 40,
-  },
-  printButton: {
-    backgroundColor: 'transparent',
-    borderColor: color.black,
-    borderWidth: '1px',
-    padding: '10px 20px',
-  },
 };

@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2025-03-12T21:09:03.000Z",
   "level_num": "custom",
@@ -45,7 +46,7 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "circuitPlayground",
-    "long_instructions": "<div markdown=\"1\" style=\"float: right; margin: 20px;\">\r\n\r\n![expandable](https://images.code.org/bcea7eb7f2a178af27fac304204de2d0-image-1691602693089.png)\r\n\r\n<br/>\r\n\r\nClick to Expand\r\n\r\n</div>\r\n\r\n# Add an LED\r\n\r\nLet's update our device to toggle an external LED rather than the small red LED on the circuit playground!\r\n\r\n## Do This\r\n\r\n**Wiring Our Device:**\r\n\r\n1) Disconnect your Circuit Playground from the computer\r\n2) Use two wires to connect an LED to the Circuit Playground on pin `\"A4\"`\r\n\t- One wire connects the negative (-) end of the LED to the `GND` pin\r\n    - One wire connects the positive (+) end of the LED to the `\"A4\"` pin\r\n3) Reconnect your Circuit Playground to the computer. You may need to run the [Maker Setup](https://studio.code.org/maker/setup) again.\r\n\r\n**Coding Your Device:**\r\n\r\n1) Create an LED variable on pin `\"A4\"`\r\n\t- Drag out a [`createLed()`(#4dd0e1)](/docs/applab/createLed/) block.\r\n    - Change the pin to `\"A4\"`\r\n2) Update the code to use the external LED instead of the small red led\r\n\t- Replace the `led.toggle()`(#f78183) block with a `___.toggle()`(#f78183) block.\r\n    - Type your variable name into the first blank\r\n\r\n**Run the program!** You should use the `\"GND\"` wire to switch between your two buttons - connecting it to the `buzzButton` should make the buzzer sounds from before, and connecting it to the `ledButton` should make your external LED turn on and off",
+    "long_instructions": "<div markdown=\"1\" style=\"float: right; margin: 20px;\">\r\n\r\n![expandable](https://images.code.org/2f7cae6cc699e7bc1277ee8004fd81fb-image-1755886440436.13.08 AM.png)\r\n\r\n<br/>\r\n\r\nClick to Expand\r\n\r\n</div>\r\n\r\n# Add an LED\r\n\r\nLet's update our device to toggle an external LED rather than the small red LED on the circuit playground!\r\n\r\n## Do This\r\n\r\n**Wiring Our Device:**\r\n\r\n1) Disconnect your Circuit Playground from the computer\r\n2) Use two wires to connect an LED to the Circuit Playground on pin `\"A4\"`\r\n\t- One wire connects the negative (-) end of the LED to the `GND` pin\r\n    - One wire connects the positive (+) end of the LED to the `\"A4\"` pin\r\n3) Reconnect your Circuit Playground to the computer. You may need to run the [Maker Setup](https://studio.code.org/maker/setup) again.\r\n\r\n**Coding Your Device:**\r\n\r\n1) Create an LED variable on pin `\"A4\"`\r\n\t- Drag out a [`createLed()`(#4dd0e1)](/docs/applab/createLed/) block.\r\n    - Change the pin to `\"A4\"`\r\n2) Update the code to use the external LED instead of the small red led\r\n\t- Replace the `led.toggle()`(#f78183) block with a `___.toggle()`(#f78183) block.\r\n    - Type your variable name into the first blank\r\n\r\n**Run the program!** You should use the `\"GND\"` wire to switch between your two buttons - connecting it to the `buzzButton` should make the buzzer sounds from before, and connecting it to the `ledButton` should make your external LED turn on and off",
     "text_mode_at_start": "false",
     "parent_level_id": 20603,
     "name_suffix": "_2025",
@@ -72,9 +73,8 @@
     },
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2025-03-12T21:09:03.870+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Physical Input - SB4_2024\\\"\"],\"cloned_from\":\"CSD U6 - Physical Input - SB4_2024\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-12T21:09:03.870+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Physical Input - SB4_2024\\\"\"],\"cloned_from\":\"CSD U6 - Physical Input - SB4_2024\"},{\"changed_at\":\"2025-08-22 18:19:10 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

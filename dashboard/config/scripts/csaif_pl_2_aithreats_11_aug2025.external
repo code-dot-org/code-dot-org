@@ -1,0 +1,74 @@
+name 'csaif_pl_2_aithreats_11_aug2025'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+#  Lesson Highlight: AAA Stations
+
+#### During <a href='https://studio.code.org/courses/ai-powered-threats-and-defenses-2025/units/1/lessons/7' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson 7: Authentication, Authorization, and Accounting</a>, students explore the first two components of the AAA security framework (authentication and access control) through interactive stations.
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ The "Accounting" component is explored in Lesson 8. You can find more details in the full <a href='hthttps://studio.code.org/courses/ai-powered-threats-and-defenses-2025/units/1/lessons/8' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a>.
+</p>
+
+## Station A: Authentication 
+
+#### Students will...
+#### (1) Sort authentication cards into three categories: What You Know, What You Have, and What You Are.
+#### (2) Identify one method per category that could be vulnerable to AI and explain how.
+#### (3) Brainstorm one new example per category and add it to the class poster.
+
+<p align="center">
+<img src="https://images.code.org/c8f56c4ba6c5c58751803a9e979a7fdc-Screenshot 2025-08-26 at 10.17.02 AM.png" alt="three columns: what you know, what you have, and what you are" width="70%" style="border-radius:10px; border: 2px solid black;">
+</p>
+
+<img src="https://images.code.org/bc5fdaa6674f3a3c00a6f63bebc24cf5-Screenshot 2025-08-26 at 10.06.56 AM.png" alt="fingerprint scan authentication method card" width="200px" style="border: 2px solid black; border-radius: 8px; float:right; margin: 20px 20px 20px 20px">
+
+#### **Example:**
+
+#### (1) Students sort authentication cards onto the 3 categories at their station. For example, they may start with the "Fingerprint Scan" card. They decide that it fits into the "What you Are" Category and add it to that column.
+
+#### Students will check their answers before continuing using an answer key available to them at the station.
+
+#### (2) Students then choose one authentication card and add a sticky note identifying a potential AI vulnerabilities to the card. For example, they may note that "An AI may be able to design a fingerprint that could match many different fingerprints".
+
+#### (3) Students will add one new example to a column of their choice on one central station poster. For example, they could add "single-sign on" to the "What you Know" column.
+
+#### *If you have time, check out all of the <a href='https://docs.google.com/presentation/d/1r7gmPcIga3Cq5wKAqkGFUuB9jZlu3strvpSSWvIX3e4/edit?slide=id.g373d8537075_0_55#slide=id.g373d8537075_0_55' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Authentication Method Cards</a>.*
+
+
+## Station B: Access Control
+
+#### Students will choose a scenario card and do the following:
+#### (1) Write an access rule using the sentence frame: "If [conditions], then [grant/deny] access".
+#### (2) Label the rule with one of the three access models (see image below), adding a short explanation of why that model fits.
+
+<p align="center">
+<img src="https://images.code.org/5cac6de54f6943d9d471575607deb5a5-Screenshot 2025-08-26 at 10.45.17 AM.png" alt="club website access control scenario card" width="70%" style="border-radius:10px; border: 2px solid black;">
+</p>
+
+#### (3) Post the card on the appropriate column of the Station B poster.
+#### (4) Add a sticky note describing a real-life example or a personal connection they've seen to this scenario.
+
+<img src="https://images.code.org/754a85fce319a9a7af6f974d55904ca2-Screenshot 2025-08-26 at 10.32.04 AM.png" alt="activity guide with 'input', 'draw your neural network', and 'output' columns" width="200px" style="border: 2px solid black; border-radius: 8px; float:right; margin: 20px 20px 20px 20px">
+
+
+#### **Example:**
+
+#### A student chooses the scenario "A club website allows only registered members to vote on decisions"
+
+#### (1) They write an access rule using the sentence frame and come up with: "If [in club], then [grant] access".
+#### (2) They circle **Role-Based** for the Access Control and provide the explanation that "Access is granted based on whether or not has the role of being in the club".
+#### (3) They post the card in the **Role-Based** column of the Station B poster.
+#### (4) They add a sticky note describing a time when they couldn't access a Zoom link for a club meeting they wanted to go to because they weren't a member of the club yet.
+
+#### *If you have time, check out all of the <a href='https://docs.google.com/presentation/d/15LGd19V5t8D7AqQbaumUrqOcAa4IJOZr1n6Q0Wwi0tg/edit?slide=id.g373d8537151_0_99#slide=id.g373d8537151_0_99' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Access Control Scenario Cards</a>.*
+
+<br>
+
+<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
+
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px"><strong>⚠️ Set-Up Required:</strong> This lesson requires setting up two physical stations. Review the <strong>Preparation</strong> section of the <a href='https://studio.code.org/courses/ai-powered-threats-and-defenses-2025/units/1/lessons/7' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a> and the <a href='https://docs.google.com/document/d/1wcfldDo6kLWuNsg6Xc1Adci7kAkHxRTfxJwZDeolPyg/edit?tab=t.0#heading=h.ffsbxl60jyy4' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Station Setup and Instructions Teacher Resource</a> for more details.
+</p>
+</div>
+MARKDOWN

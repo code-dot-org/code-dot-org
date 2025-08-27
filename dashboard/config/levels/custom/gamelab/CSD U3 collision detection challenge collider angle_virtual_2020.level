@@ -91,7 +91,7 @@
     "encrypted": "false",
     "start_blocks": "var roller = createSprite(200, 200);\r\nroller.scale = 2;\r\nroller.setAnimation(\"roller_1\");\r\n// Use .setCollider() with all 6 parameters.\r\nroller.debug = true;\r\ndrawSprites();\r\n",
     "libraries_enabled": "false",
-    "start_animations": "\r\n{\r\n  \"orderedKeys\": [\r\n    \"43453431-d1de-4dd9-a58d-05a04fb88d86\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"43453431-d1de-4dd9-a58d-05a04fb88d86\": {\r\n      \"name\": \"roller_1\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/api/v1/animation-library/gamelab/mEW.gLy7gYlZMGGw9Zk73i7N_3b4RrNO/category_tools/roller.png\",\r\n      \"frameSize\": {\r\n        \"x\": 100,\r\n        \"y\": 158\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"mEW.gLy7gYlZMGGw9Zk73i7N_3b4RrNO\"\r\n    }\r\n  }\r\n}",
+    "start_animations": "{\n  \"orderedKeys\": [\n    \"43453431-d1de-4dd9-a58d-05a04fb88d86\"\n  ],\n  \"propsByKey\": {\n    \"43453431-d1de-4dd9-a58d-05a04fb88d86\": {\n      \"name\": \"roller_1\",\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/mEW.gLy7gYlZMGGw9Zk73i7N_3b4RrNO/category_tools/roller.png\",\n      \"frameSize\": {\n        \"x\": 100,\n        \"y\": 158\n      },\n      \"frameCount\": 1,\n      \"looping\": true,\n      \"frameDelay\": 2,\n      \"version\": \"mEW.gLy7gYlZMGGw9Zk73i7N_3b4RrNO\"\n    }\n  }\n}",
     "display_name": "Collider at an Angle",
     "bubble_choice_description": "Improve collisions for sprites with angled animations.",
     "thumbnail_url": "https://images.code.org/4a5e2648d2e054660278c6f33bb2173d-image-1589907616573.png",
