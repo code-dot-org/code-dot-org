@@ -3,7 +3,7 @@ class CodeprojectsPreviewController < ApplicationController
   # Public preview page, static content for now.
   def show
     code_studio_url = CDO.dashboard_site_host
-    allowed_connect_src = ALLOWED_HOSTNAME_SUFFIXES.map {|hostname| "http://#{hostname}"}.join(" ")
+    allowed_connect_src = ALLOWED_HOSTNAME_SUFFIXES.join(" ")
 
     if rack_env?(:development)
       # dashboard_site_host is set to use port 3000 in development, but we want to also allow port 9000.
@@ -24,7 +24,6 @@ class CodeprojectsPreviewController < ApplicationController
       policies << "upgrade-insecure-requests"
     end
     response.headers['Content-Security-Policy'] = policies.join('; ')
-    response.headers['Access-Control-Allow-Origin'] = allowed_connect_src
     render 'show', layout: false
   end
 end
