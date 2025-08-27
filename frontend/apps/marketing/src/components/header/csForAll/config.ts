@@ -34,6 +34,22 @@ const SHARED_LINKS = {
     href: '/hour-of-ai',
     label: 'Hour of AI',
   },
+  HOUR_OF_AI_HOW_TO_HOST: {
+    href: '/hour-of-ai/how-to/k-12educator',
+    label: 'How to Host',
+  },
+  HOUR_OF_AI_ACTIVITIES: {
+    href: '/hour-of-ai/activities',
+    label: 'Activities',
+  },
+  HOUR_OF_AI_RESOURCES: {
+    href: '/hour-of-ai/resources',
+    label: 'Resources',
+  },
+  HOUR_OF_AI_PARTNERS: {
+    href: '/hour-of-ai/partners',
+    label: 'Partners',
+  },
   INITIATIVES: {
     href: '/initiatives',
     label: 'Initiatives',
@@ -116,6 +132,16 @@ export const TAKE_ACTION_LINKS: {linkList: LinkItemProps[]} = {
   ],
 };
 
+// Main Menu Hour of AI Dropdown Links
+export const HOUR_OF_AI_LINKS: {linkList: LinkItemProps[]} = {
+  linkList: [
+    createLinkItem(SHARED_LINKS.HOUR_OF_AI_HOW_TO_HOST),
+    createLinkItem(SHARED_LINKS.HOUR_OF_AI_ACTIVITIES),
+    createLinkItem(SHARED_LINKS.HOUR_OF_AI_RESOURCES),
+    createLinkItem(SHARED_LINKS.HOUR_OF_AI_PARTNERS),
+  ],
+};
+
 // Main Menu Desktop Configuration
 const [initiativesLink, takeActionLink, hourOfAiLink, newsLink] =
   TOP_LEVEL_LINKS.linkList;
@@ -132,8 +158,9 @@ export const MAIN_MENU_DESKTOP_ITEMS = [
     dropdownConfig: TAKE_ACTION_LINKS,
   },
   {
-    type: 'button' as const,
+    type: 'dropdown' as const,
     topLevelLink: hourOfAiLink,
+    dropdownConfig: HOUR_OF_AI_LINKS,
   },
   // Marketing does not have permission to collect donations yet
   //{
