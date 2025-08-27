@@ -96,13 +96,17 @@ export const HTMLPreview = () => {
           {type: IframeMessageType.CHANGE_FILE_URL_BAR, fileName: currentFile},
           previewUrl
         );
-      } else if (event.data.type === IframeMessageType.FILE_UPDATED) {
+      } else if (
+        event.data.type === IframeMessageType.FILE_UPDATED &&
+        event.origin === previewUrl
+      ) {
         setCurrentFile(event.data.fileName);
       } else if (
-        event.data.type === IframeMessageType.ADD_FILE_TO_NAVIGATION_HISTORY
+        event.data.type === IframeMessageType.ADD_FILE_TO_NAVIGATION_HISTORY &&
+        event.origin === previewUrl
       ) {
-        // if navigationHistoryIndex is the last index, add the file to the end of the array
-        // else truncate the array after the current index and add the file to the end
+        // If navigationHistoryIndex is the last index, add the file to the end of the array.
+        // Otherwise, truncate the array after the current index and add the file to the end.
         if (navigationHistoryIndex === navigationHistory.length - 1) {
           const updatedNavigationHistory = [
             ...navigationHistory,
