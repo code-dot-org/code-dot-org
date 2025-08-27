@@ -22,6 +22,7 @@ import currentUser, {
 } from '@cdo/apps/templates/currentUserRedux';
 import {SchoolInfo} from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/TeacherHomepageConstants';
 import TeacherHomepageDrawer from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/TeacherHomepageDrawer';
+import HttpClient from '@cdo/apps/util/HttpClient';
 import i18n from '@cdo/locale';
 
 describe('TeacherHomepageDrawer', () => {
@@ -79,6 +80,7 @@ describe('TeacherHomepageDrawer', () => {
   let sendEventSpy: jest.SpyInstance;
   let schoolInfoSpy: jest.SpyInstance;
   let updateSchoolInfoSpy: jest.SpyInstance;
+  let postSpy: jest.SpyInstance;
 
   beforeEach(() => {
     stubRedux();
@@ -87,6 +89,7 @@ describe('TeacherHomepageDrawer', () => {
       .spyOn(schoolInfoFunc, 'updateSchoolInfo')
       .mockImplementation(jest.fn());
     schoolInfoSpy = jest.spyOn(useSchoolInfoModule, 'useSchoolInfo');
+    postSpy = jest.spyOn(HttpClient, 'post');
   });
 
   afterEach(() => {
@@ -196,5 +199,23 @@ describe('TeacherHomepageDrawer', () => {
     await act(async () => await fireEvent.click(primaryButton));
     expect(sendEventSpy).toHaveBeenCalled();
     screen.getByLabelText(i18n.whatCountry());
+  });
+
+  it('renders the correct title and subtitle when AFEDrawerOpen is true', async () => {
+    schoolInfoSpy.mockReturnValue(mockSchoolInfo);
+    renderComponent(false, false, true, schoolInfo);
+    await act(async () => await new Promise(process.nextTick));
+    screen.getByText(i18n.afeDrawerHeader());
+    screen.getByText(i18n.afeBannerParagraph());
+  });
+
+  it('sends analytics event and posts to database when primary button is clicked and AFEDrawerOpen is true', async () => {
+    schoolInfoSpy.mockReturnValue(mockSchoolInfo);
+    renderComponent(false, false, true, schoolInfo);
+    await act(async () => await new Promise(process.nextTick));
+    const primaryButton = screen.getByText(i18n.learnMore());
+    await act(async () => await fireEvent.click(primaryButton));
+    expect(sendEventSpy).toHaveBeenCalled();
+    expect(postSpy).toHaveBeenCalled();
   });
 });
