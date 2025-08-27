@@ -9,7 +9,7 @@ import React, {FC, useEffect, useState} from 'react';
 
 import noResponsesBars from '@cdo/static/pd/no-responses-bars.png';
 
-import {MultiSelectBreakdown} from '../../../WorkshopFormTemplate/types';
+import {Breakdown} from '../../../WorkshopFormTemplate/types';
 
 import {EmptyState} from './EmptyState';
 
@@ -18,7 +18,7 @@ import styles from '../../workshop.module.scss';
 interface MultiSelectCardProps {
   title: string;
   description: string;
-  items: MultiSelectBreakdown[];
+  items: Breakdown[];
   barLabel?: string;
 }
 
