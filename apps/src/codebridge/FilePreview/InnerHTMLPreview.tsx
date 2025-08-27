@@ -152,7 +152,6 @@ const InnerHTMLPreview = () => {
           source.folders
         );
 
-        //setContentSecurityPolicy(doc);
         updateLinksToNonHtmlFiles(doc, files, fullFileName);
         updateLinksToHtmlFiles(doc, fullFileName);
         const updatedContents = doc.documentElement.outerHTML;
