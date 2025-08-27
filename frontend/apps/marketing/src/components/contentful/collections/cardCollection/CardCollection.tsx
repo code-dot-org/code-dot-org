@@ -20,6 +20,7 @@ type ItemFields = {
   image: ExperienceAsset;
   primaryLinkRef: LinkEntry;
   secondaryLinkRef: LinkEntry;
+  tutorialID: EntryFields.Text;
 };
 
 type ItemEntry = Entry<ItemFields>;
@@ -69,6 +70,7 @@ const CardCollection: React.FC<CardCollectionProps> = ({
         image,
         primaryLinkRef,
         secondaryLinkRef,
+        tutorialID,
       } = fields;
 
       const resolvedImage = inMemoryEntities.maybeResolveLink(
@@ -87,6 +89,7 @@ const CardCollection: React.FC<CardCollectionProps> = ({
           <Box sx={[{...styles.gridItem}]}>
             <Card
               className="cardWrapper"
+              id={tutorialID}
               overline={actionBlockOverline ? actionBlockOverline : undefined}
               title={title}
               description={shortDescription}
@@ -102,6 +105,7 @@ const CardCollection: React.FC<CardCollectionProps> = ({
               primaryButtonEventName="Card primary button clicked"
               secondaryButtonEventName="Card secondary button clicked"
               eventMetadata={{
+                cardId: tutorialID,
                 cardTitle: title,
               }}
             />

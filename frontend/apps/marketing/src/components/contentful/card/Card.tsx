@@ -13,6 +13,8 @@ import {getAbsoluteImageUrl} from '@/selectors/contentful/getImage';
 import {LinkEntry} from '@/types/contentful/entries/Link';
 
 export interface CardProps extends HTMLAttributes<HTMLDivElement> {
+  /** Card ID */
+  id?: string;
   /** Card title */
   title?: string;
   /** Card description */
@@ -38,6 +40,7 @@ export interface CardProps extends HTMLAttributes<HTMLDivElement> {
 }
 
 const Card: React.FC<CardProps> = ({
+  id,
   title,
   description,
   imageSrc,
@@ -61,7 +64,7 @@ const Card: React.FC<CardProps> = ({
 
   const handlePrimaryButtonClick = () => {
     if (primaryButton && primaryButtonEventName && eventMetadata) {
-      logEvent(primaryButtonEventName, primaryButton.fields.ariaLabel ?? '', {
+      logEvent(primaryButtonEventName, id ?? '', {
         ...eventMetadata,
         buttonText: primaryButton.fields.ariaLabel,
         buttonTarget: primaryButton.fields.primaryTarget,
@@ -71,15 +74,11 @@ const Card: React.FC<CardProps> = ({
 
   const handleSecondaryButtonClick = () => {
     if (secondaryButton && secondaryButtonEventName && eventMetadata) {
-      logEvent(
-        secondaryButtonEventName,
-        secondaryButton.fields.ariaLabel ?? '',
-        {
-          ...eventMetadata,
-          buttonText: secondaryButton.fields.ariaLabel,
-          buttonTarget: secondaryButton.fields.primaryTarget,
-        },
-      );
+      logEvent(secondaryButtonEventName, id ?? '', {
+        ...eventMetadata,
+        buttonText: secondaryButton.fields.ariaLabel,
+        buttonTarget: secondaryButton.fields.primaryTarget,
+      });
     }
   };
 
