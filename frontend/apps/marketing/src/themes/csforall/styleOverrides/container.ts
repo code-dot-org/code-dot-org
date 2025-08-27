@@ -17,6 +17,10 @@ export const CONTAINER_OVERRIDES: Components<Theme>['MuiContainer'] = {
         paddingTop: theme.spacing(5),
         paddingBottom: theme.spacing(5),
       },
+      '&.MuiContainer-root.container--spacing-none': {
+        paddingTop: theme.spacing(0),
+        paddingBottom: theme.spacing(0),
+      },
       // Background styles
       '.section-background-primary:has(&.MuiContainer-root)': {
         backgroundColor: theme.palette.common.white,
