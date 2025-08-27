@@ -40,6 +40,7 @@ const Notification: React.FC<{
   const isLoading = notification === null;
   const notificationOrPlaceholder: AiDiffNotification = notification || {
     id: 'placeholder',
+    externalId: 'placeholder',
     title: i18n.loading(),
     description: 'Lorem ipsum dolor sit amet, postea pericula',
     readAt: null,
