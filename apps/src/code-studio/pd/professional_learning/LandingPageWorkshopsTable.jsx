@@ -117,7 +117,7 @@ export default class LandingPageWorkshopsTable extends React.Component {
             {...workshopsTableButtonCommonProps}
             onClick={() =>
               utils.windowOpen(
-                `/pd/workshop_enrollment/${workshop.enrollment_code}`
+                `/professional-learning/workshops/${workshop.id}`
               )
             }
             text="Workshop details"
