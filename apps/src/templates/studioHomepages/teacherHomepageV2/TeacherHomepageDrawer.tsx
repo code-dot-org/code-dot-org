@@ -1,5 +1,5 @@
 import Alert from '@code-dot-org/component-library/alert';
-import {Button, LinkButton} from '@code-dot-org/component-library/button';
+import {Button} from '@code-dot-org/component-library/button';
 import CloseButton from '@code-dot-org/component-library/closeButton';
 import {
   BodyThreeText,
@@ -13,6 +13,7 @@ import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {useSchoolInfo} from '@cdo/apps/schoolInfo/hooks/useSchoolInfo';
 import {updateSchoolInfo} from '@cdo/apps/schoolInfo/utils/updateSchoolInfo';
+import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 
@@ -45,7 +46,8 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
   const [schoolInfoConfirmationOpen, setSchoolInfoConfirmationOpen] =
     React.useState(schoolInfoConfirmationOpenInitially);
   const [success, setSuccess] = React.useState(false);
-  const [AFEDrawerOpen, setAFEDrawerOpen] = React.useState(true);
+  const [AFEDrawerOpen, setAFEDrawerOpen] = React.useState(afeOpenInitially);
+  const [AFEParticipate, setAFEParticipate] = React.useState(false);
   const [showSchoolInfoUnknownError, setShowSchoolInfoUnknownError] =
     React.useState(false);
 
@@ -151,12 +153,12 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
       );
     } else if (AFEDrawerOpen) {
       return (
-        <LinkButton
+        <Button
           type={'primary'}
           size={'m'}
           iconRight={{iconName: 'up-right-from-square'}}
           text={i18n.learnMore()}
-          href={pegasus('/amazon-future-engineer')}
+          onClick={handlePrimaryButtonClick}
         />
       );
     }
@@ -265,7 +267,14 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
       // If the interstitial is open, we want to submit the school info.
       tryUpdateSchoolInfo();
     } else if (AFEDrawerOpen) {
-      //TODO: add link here
+      analyticsReporter.sendEvent(
+        EVENTS.AFE_HOMEPAGE_BANNER_SUBMIT,
+        {},
+        PLATFORMS.BOTH
+      );
+
+      setAFEParticipate(true);
+      onDrawerClose();
     }
   };
 
@@ -282,6 +291,29 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
         {},
         PLATFORMS.BOTH
       );
+    } else if (AFEDrawerOpen) {
+      analyticsReporter.sendEvent(
+        EVENTS.AFE_HOMEPAGE_BANNER_SUBMIT,
+        {},
+        PLATFORMS.BOTH
+      );
+
+      HttpClient.post(
+        '/dashboardapi/v1/users/me/dismiss_donor_teacher_banner',
+        JSON.stringify({
+          participate: AFEParticipate,
+          source: 'teacher_home',
+        }),
+        true,
+        {
+          'Content-Type': 'application/json',
+        }
+      ).catch(error => console.log(error));
+
+      // redirect to form on amazon-future-engineer page if user accepted
+      if (AFEParticipate) {
+        window.location.assign(pegasus('/amazon-future-engineer#eligibility'));
+      }
     }
     setSchoolInfoInterstitialOpen(false);
     setSchoolInfoConfirmationOpen(false);
