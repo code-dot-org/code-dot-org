@@ -1,8 +1,11 @@
 import {isQuestionType, SurveyQuestion} from '../../WorkshopFormTemplate/types';
 
 export const getQuestionDescription = (question: SurveyQuestion) => {
-  if (isQuestionType(question, 'likert')) {
-    return `${question.results.agreement_count} of ${question.results.total_responses} respondents`;
+  if (
+    isQuestionType(question, 'likert') ||
+    isQuestionType(question, 'promoter')
+  ) {
+    return `${question.results.total_responses} responses`;
   }
   if (
     isQuestionType(question, 'multiSelect') &&

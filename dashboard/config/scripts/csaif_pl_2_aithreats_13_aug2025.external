@@ -1,0 +1,32 @@
+name 'csaif_pl_2_aithreats_13_aug2025'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Symmetric vs Asymmetric Encryption
+
+#### The Caesar Cipher is an example of **symmetric encryption**. in symmetric encryption both people need to have the same secret key. That key is used to scramble the message and also to unlock it. It’s fast and efficient — but it only works if the key stays secret and both people have it.
+
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Symmetric encryption</strong> is encryption where the same key is used to lock and unlock the message.</p>
+</div>
+
+#### In contrast, **asymmetric encryption** uses two keys. Anyone can use your public key to lock a message — but only you can unlock it using your private key. That’s how secure messages can be exchanged between people who haven’t met before.
+
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Asymmetric encryption</strong> is encryption that uses two different keys: a public key to lock the message and a private key to unlock it.</p>
+</div>
+
+
+#### Encryption keeps data safe, but data doesn't just sit in one place. It moves and changes, like a message on your phone that's stored, sent, and read. We protect data at different times.
+
+<p align="center">
+<img src="https://images.code.org/c716141459d46465ab5e907c5d825d4b-Screenshot 2025-08-19 at 1.22.11 PM.png" alt="data state explanation table" width="90%" style="border-radius:10px; border: 5px solid black;">
+</p>
+
+
+* #### When it's saved on your device, symmetric encryption is used because it’s fast and efficient.
+* #### When it's sent across a network, asymmetric encryption is used to establish a secure connection — even over public internet. Then symmetric encryption protects the message itself.
+* #### When it's opened and being read or edited, it's typically decrypted so apps can access it. Then symmetric encryption protects the message itself.
+
+MARKDOWN
