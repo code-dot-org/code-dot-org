@@ -19,6 +19,8 @@ import {
   MouseEvent,
 } from 'react';
 
+import './onetrust.scss';
+
 import {isExternalLink} from '@/components/common/utils';
 import {Brand} from '@/config/brand';
 
@@ -36,9 +38,21 @@ export interface SocialLink extends AnchorHTMLAttributes<HTMLAnchorElement> {
   icon: ReactNode;
 }
 
+export interface Copyright {
+  value: string;
+  showIcon: boolean;
+}
+
 export interface LanguageOption {
   value: string;
   text: string;
+}
+
+export interface ImageLink extends AnchorHTMLAttributes<HTMLAnchorElement> {
+  imageSrc: string;
+  label: string;
+  href: string;
+  isLinkExternal?: boolean;
 }
 
 export interface FooterProps extends HTMLAttributes<HTMLElement> {
@@ -49,13 +63,15 @@ export interface FooterProps extends HTMLAttributes<HTMLElement> {
   /** Footer social links */
   socialLinks?: SocialLink[];
   /** Footer copyright */
-  copyright?: string;
+  copyright?: Copyright;
   /** Footer language options */
   languages: LanguageOption[];
   /** Callback for language change */
   onLanguageChange: (args: string) => void;
   /** The selected locale code for the language dropdown */
   selectedLocaleCode?: string;
+  /** Optional image */
+  imageLink?: ImageLink;
   /** Footer class */
   className?: string;
 }
@@ -80,6 +96,11 @@ const FooterLink = styled(Link, {
   slot: 'link',
 })(() => ({}));
 
+const FooterImageLink = styled(Link, {
+  name: 'MuiFooter',
+  slot: 'imageLink',
+})(() => ({}));
+
 const Copyright = styled(Typography, {
   name: 'MuiFooter',
   slot: 'copyright',
@@ -93,6 +114,7 @@ const FooterMui: React.FC<FooterProps> = ({
   selectedLocaleCode,
   onLanguageChange,
   brand,
+  imageLink,
   className,
 }) => {
   return (
@@ -108,32 +130,38 @@ const FooterMui: React.FC<FooterProps> = ({
           gap={4}
         >
           {/* Site Links */}
-          <FooterLinks className="site-links" aria-label="Site links">
-            {siteLinks?.map(({key, label, href, onClick, ...linkProps}) => (
-              <ListItem key={key}>
-                <FooterLink
-                  href={href}
-                  variant="body4"
-                  target={
-                    typeof onClick !== 'function' &&
-                    isExternalLink(href, brand, 'production')
-                      ? '_blank'
-                      : undefined
-                  }
-                  rel={
-                    typeof onClick !== 'function' &&
-                    isExternalLink(href, brand, 'production')
-                      ? 'noopener noreferrer'
-                      : undefined
-                  }
-                  onClick={onClick}
-                  {...linkProps}
-                >
-                  {label}
-                </FooterLink>
-              </ListItem>
-            ))}
-          </FooterLinks>
+          <Grid size={{md: 9.5}}>
+            <FooterLinks
+              className="site-links"
+              aria-label="Site links"
+              sx={{flexWrap: 'wrap'}}
+            >
+              {siteLinks?.map(({key, label, href, onClick, ...linkProps}) => (
+                <ListItem key={key}>
+                  <FooterLink
+                    href={href}
+                    variant="body4"
+                    target={
+                      typeof onClick !== 'function' &&
+                      isExternalLink(href, brand, 'production')
+                        ? '_blank'
+                        : undefined
+                    }
+                    rel={
+                      typeof onClick !== 'function' &&
+                      isExternalLink(href, brand, 'production')
+                        ? 'noopener noreferrer'
+                        : undefined
+                    }
+                    onClick={onClick}
+                    {...linkProps}
+                  >
+                    {label}
+                  </FooterLink>
+                </ListItem>
+              ))}
+            </FooterLinks>
+          </Grid>
           {/* Language Selector */}
           <FormControl variant="standard">
             <NativeSelect
@@ -157,14 +185,17 @@ const FooterMui: React.FC<FooterProps> = ({
           size={12}
           display="flex"
           justifyContent="space-between"
+          alignItems="center"
           flexWrap="wrap"
-          gap={2}
+          gap={1}
         >
           {/* Copyright */}
-          <Copyright variant="body4">
-            <CopyrightIcon fontSize="small" />
-            {copyright}
-          </Copyright>
+          {copyright && (
+            <Copyright variant="body4">
+              {copyright.showIcon && <CopyrightIcon fontSize="small" />}
+              {copyright.value}
+            </Copyright>
+          )}
           {/* Social Links */}
           <Stack direction="row" spacing={1} aria-label="Social links">
             {socialLinks?.map(({key, label, icon, href}) => (
@@ -183,6 +214,17 @@ const FooterMui: React.FC<FooterProps> = ({
             ))}
           </Stack>
         </Grid>
+        {/* Image Link */}
+        {imageLink && (
+          <FooterImageLink
+            href={imageLink.href}
+            target={imageLink.isLinkExternal ? '_blank' : undefined}
+            rel={imageLink.isLinkExternal ? 'noopener noreferrer' : undefined}
+            sx={{mb: 0}}
+          >
+            <img src={imageLink.imageSrc} alt={imageLink.label} />
+          </FooterImageLink>
+        )}
       </FooterGrid>
     </FooterRoot>
   );

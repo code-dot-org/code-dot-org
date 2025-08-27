@@ -39,7 +39,10 @@ describe('FooterMui', () => {
       icon: <XIcon />,
     },
   ];
-  const copyright = 'Copyright notices';
+  const copyright = {
+    value: 'Copyright notices',
+    showIcon: false,
+  };
   const languages = [
     {value: 'en', text: 'English'},
     {value: 'es', text: 'Spanish'},
@@ -73,7 +76,7 @@ describe('FooterMui', () => {
 
   it('renders footer copyright notices', () => {
     renderFooterContainer();
-    const copyrightNotices = screen.getByText(copyright);
+    const copyrightNotices = screen.getByText(copyright.value);
     expect(copyrightNotices).toBeVisible();
   });
 
