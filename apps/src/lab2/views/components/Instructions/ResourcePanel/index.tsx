@@ -29,6 +29,7 @@ enum Tabs {
   AiTutor = 'aiTutor',
   TeachersOnly = 'teachersOnly',
   StudentRubric = 'studentRubric',
+  VersionHistory = 'versionHistory',
 }
 
 export interface Setting {
@@ -50,6 +51,10 @@ const tabInfo: {[key in Tabs]: {title: string; icon: string}} = {
     title: commonI18n.rubric(),
     icon: 'clipboard-list',
   },
+  [Tabs.VersionHistory]: {
+    title: commonI18n.versionHistory_header(),
+    icon: 'history',
+  },
 };
 
 type ResourcePanelProps = InstructionsProps & {
@@ -59,6 +64,7 @@ type ResourcePanelProps = InstructionsProps & {
   rightHeaderContent?: React.ReactNode;
   includeFooterSpacing?: boolean;
   settings?: Setting[];
+  includeVersionHistory?: boolean;
 };
 
 /**
@@ -71,6 +77,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   rightHeaderContent,
   includeFooterSpacing = true,
   settings,
+  includeVersionHistory = false,
   ...instructionsProps
 }) => {
   const {theme} = useTheme();
@@ -113,12 +120,22 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       tabMap[Tabs.AiTutor] = <AiTutor2Chat hiddenContext={aiTutor2Context} />;
     }
 
+    if (includeVersionHistory) {
+      tabMap[Tabs.VersionHistory] = <div>Version history</div>;
+    }
+
     if (showRubric) {
       tabMap[Tabs.StudentRubric] = <StudentRubricView />;
     }
 
     return tabMap;
-  }, [instructionsProps, isUserTeacher, aiTutor2Context, showRubric]);
+  }, [
+    instructionsProps,
+    isUserTeacher,
+    aiTutor2Context,
+    includeVersionHistory,
+    showRubric,
+  ]);
 
   useEffect(() => {
     if (!(currentTab in availableTabs)) {

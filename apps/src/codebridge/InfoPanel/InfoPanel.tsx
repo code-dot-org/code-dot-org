@@ -208,6 +208,7 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
           requireRun={true}
           aiTutor2Context={aiTutor2Context}
           settings={settings}
+          includeVersionHistory={true}
         />
       </div>
     );
