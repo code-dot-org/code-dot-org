@@ -16,6 +16,7 @@ const NOT_FOUND_FILE = 'NOT_FOUND';
 
 const InnerHTMLPreview = () => {
   const iframeRef = useRef<HTMLIFrameElement | null>(null);
+  const isNavigatingToFileRef = useRef<boolean>(false);
   const [source, setSource] = React.useState<MultiFileSource | undefined>(
     undefined
   );
@@ -27,6 +28,8 @@ const InnerHTMLPreview = () => {
     undefined
   );
   const [allowScripts, setAllowScripts] = useState(false);
+  const [fileToAddToNavigationHistory, setFileToAddToNavigationHistory] =
+    useState<string | undefined>(undefined);
 
   const parentOrigin = useMemo(() => {
     const regex = /preview\.([^.]+)\.codeprojects\.org/;
@@ -65,6 +68,7 @@ const InnerHTMLPreview = () => {
         } else {
           setSource(data.source);
         }
+        setFileToAddToNavigationHistory(undefined);
       } else if (data.type === IframeMessageType.CHANGE_FILE_HREF) {
         setCurrentFile(data.filePath);
         // Tell the parent that we are changing the file, as this came from a link click.
@@ -75,6 +79,9 @@ const InnerHTMLPreview = () => {
       } else if (data.type === IframeMessageType.CHANGE_FILE_URL_BAR) {
         setCurrentFile(data.fileName);
         // We don't need to update the parent, because they initiated this change.
+      } else if (data.type === IframeMessageType.NAVIGATE_TO_FILE) {
+        isNavigatingToFileRef.current = true;
+        setCurrentFile(data.fileName);
       } else if (data.type === IframeMessageType.SET_ALLOW_SCRIPTS) {
         setAllowScripts(!!data.allow);
       }
@@ -112,12 +119,29 @@ const InnerHTMLPreview = () => {
       const newBlobUrl = filesToBlobs[currentFile];
       if (newBlobUrl) {
         setBlobUrl(newBlobUrl);
+        if (
+          currentFile !== fileToAddToNavigationHistory &&
+          !isNavigatingToFileRef.current
+        ) {
+          setFileToAddToNavigationHistory(currentFile);
+          window.parent.postMessage(
+            {
+              type: IframeMessageType.ADD_FILE_TO_NAVIGATION_HISTORY,
+              fileToAddToNavigationHistory: currentFile,
+            },
+            parentOrigin
+          );
+        }
       } else {
         console.error(`current file ${currentFile} not found in source files`);
         setBlobUrl(NOT_FOUND_FILE);
       }
     }
-  }, [currentFile, filesToBlobs]);
+    // Reset the isNavigatingToFileRef flag.
+    if (isNavigatingToFileRef.current) {
+      isNavigatingToFileRef.current = false;
+    }
+  }, [currentFile, fileToAddToNavigationHistory, filesToBlobs, parentOrigin]);
 
   // TODOs:
   // Support other file types (images, etc.): https://codedotorg.atlassian.net/browse/CT-1255
