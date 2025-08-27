@@ -1,8 +1,13 @@
 .generatePanel {
+  gap: 0;
+  width: 40%;
+  top: 60px;
+  right: 80px;
+  border-radius: 20px;
+  padding: 20px;
+  border: solid 2px black;
+  filter: drop-shadow(0 0 0.75rem black);
   position: absolute;
-  width: 100%;
-  top: 32px;
-  bottom: 0;
   z-index: 71;
   background: #4802AA;
   background: linear-gradient(49deg, rgba(72 2 170 / 1) 0%, rgba(176 14 229 / 1) 52%, rgba(77 202 239 / 1) 100%);
@@ -10,7 +15,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 30px;
+
 }
 
 .heading {
@@ -35,5 +40,9 @@
 
 .footer {
   height: 60px;
+  font-size: 16px;
+}
+
+.info {
   font-size: 16px;
 }

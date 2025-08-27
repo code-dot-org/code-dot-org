@@ -91,41 +91,51 @@ The valid sounds to use are: "${sounds}".  (The length of each sound is in paren
     packId,
   ]);
 
-  if (!packId || aiGenerateState === 'done') {
+  if (!packId) {
     return null;
   }
 
   return (
     <div id="generate-panel" className={styles.generatePanel}>
-      <Typography
-        semanticTag="h1"
-        visualAppearance="heading-lg"
-        className={styles.heading}
-      >
-        Generate a song with AI
-      </Typography>
+      {aiGenerateState === 'done' && (
+        <div className={styles.info}>
+          You can generate again by choosing a new song.
+        </div>
+      )}
 
-      <textarea
-        id="generate-description"
-        onChange={evt => setText(evt.target.value)}
-        value={text}
-        rows={4}
-        className={styles.textArea}
-      />
+      {aiGenerateState !== 'done' && (
+        <>
+          <Typography
+            semanticTag="h1"
+            visualAppearance="heading-lg"
+            className={styles.heading}
+          >
+            Generate a song with AI
+          </Typography>
 
-      <div className={styles.footer}>
-        {aiGenerateState === 'generating' ? 'Generating a song...' : ''}
-        {aiGenerateState === 'none' && (
-          <Button
-            ariaLabel={'Generate song'}
-            text={'Generate song'}
-            type="primary"
-            color="purple"
-            size="s"
-            onClick={generateSong}
+          <textarea
+            id="generate-description"
+            onChange={evt => setText(evt.target.value)}
+            value={text}
+            rows={4}
+            className={styles.textArea}
           />
-        )}
-      </div>
+
+          <div className={styles.footer}>
+            {aiGenerateState === 'generating' ? 'Generating a song...' : ''}
+            {aiGenerateState === 'none' && (
+              <Button
+                ariaLabel={'Generate song'}
+                text={'Generate song'}
+                type="primary"
+                color="purple"
+                size="s"
+                onClick={generateSong}
+              />
+            )}
+          </div>
+        </>
+      )}
     </div>
   );
 };
