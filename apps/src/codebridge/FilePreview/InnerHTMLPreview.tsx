@@ -70,7 +70,6 @@ const InnerHTMLPreview = () => {
         }
         setFileToAddToNavigationHistory(undefined);
       } else if (data.type === IframeMessageType.CHANGE_FILE_HREF) {
-        console.log('CHANGE_FILE_HREF: Setting currentFile to', data.filePath);
         setCurrentFile(data.filePath);
         // Tell the parent that we are changing the file, as this came from a link click.
         window.parent.postMessage(
@@ -78,18 +77,13 @@ const InnerHTMLPreview = () => {
           parentOrigin
         );
       } else if (data.type === IframeMessageType.CHANGE_FILE_URL_BAR) {
-        console.log(
-          'CHANGE_FILE_URL_BAR: Setting currentFile to',
-          data.fileName
-        );
         setCurrentFile(data.fileName);
         // We don't need to update the parent, because they initiated this change.
-      } else if (data.type === IframeMessageType.SET_ALLOW_SCRIPTS) {
-        setAllowScripts(!!data.allow);
       } else if (data.type === IframeMessageType.NAVIGATE_TO_FILE) {
-        console.log('NAVIGATE_TO_FILE: Setting currentFile to', data.fileName);
         isNavigatingToFileRef.current = true;
         setCurrentFile(data.fileName);
+      } else if (data.type === IframeMessageType.SET_ALLOW_SCRIPTS) {
+        setAllowScripts(!!data.allow);
       }
     },
     [parentOrigin]
@@ -149,7 +143,6 @@ const InnerHTMLPreview = () => {
     }
     // Reset the isNavigatingToFileRef flag.
     if (isNavigatingToFileRef.current) {
-      console.log('Navigation to file failed, resetting flag');
       isNavigatingToFileRef.current = false;
     }
   }, [currentFile, fileToAddToNavigationHistory, filesToBlobs, parentOrigin]);
@@ -159,7 +152,6 @@ const InnerHTMLPreview = () => {
   // Better regeneration logic: https://codedotorg.atlassian.net/browse/CT-1259
   useEffect(() => {
     if (source) {
-      console.log('source in useEffect in InnerHTMLPreview', source);
       const files: Record<string, string> = {};
       // Handle non-HTML files. These are just converted to Blobs.
       Object.values(source.files).forEach(file => {
