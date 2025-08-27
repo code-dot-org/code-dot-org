@@ -3611,7 +3611,7 @@ en:
           description_short: 'Welcome to Code.org’s free self-paced online educator course for getting started with Computer Science Fundamentals! '
           description_student: 'Welcome to Code.org’s free online educator course for CS Fundamentals! '
           description_teacher: "Welcome to Code.org’s free self-paced online educator course for getting started with Computer Science Fundamentals! \n"
-          version_title: '2022'
+          version_title: "'22-'23"
         spritelab:
           title: Introduction to Sprite Lab (PILOT)
           description_short: This is a pilot course for Code.org's new Sprite Lab tool for Courses E and F
