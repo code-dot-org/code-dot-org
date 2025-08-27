@@ -1,5 +1,5 @@
 import {Codebridge} from '@codebridge/Codebridge';
-import {CodebridgeLevelProperties, ConfigType} from '@codebridge/types';
+import {ConfigType} from '@codebridge/types';
 import {css} from '@codemirror/lang-css';
 import {html} from '@codemirror/lang-html';
 import {javascript} from '@codemirror/lang-javascript';
@@ -15,7 +15,7 @@ import {useAppDispatch, useAppSelector} from '../util/reduxHooks';
 import ShareView from './layout/ShareView';
 import VerticalLayout from './layout/VerticalLayout';
 import {setViewMode} from './redux';
-import {ViewMode} from './types';
+import {Weblab2LevelProperties, ViewMode} from './types';
 
 import moduleStyles from './styles/weblab2-view.module.scss';
 
@@ -60,7 +60,7 @@ const defaultSource: MultiFileSource = {
 const defaultProject: ProjectSources = {source: defaultSource};
 
 const Weblab2View: React.FC<
-  LabProps<CodebridgeLevelProperties, ProjectSources>
+  LabProps<Weblab2LevelProperties, ProjectSources>
 > = ({levelProperties, initialSources}) => {
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
   const {startSources} = useSource(
