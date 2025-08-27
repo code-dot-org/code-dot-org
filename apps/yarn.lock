@@ -11081,6 +11081,7 @@ __metadata:
     radium: "npm:^0.25.2"
     react: "npm:^17.0.2"
     react-beautiful-dnd: "npm:^13.1.0"
+    react-bodymovin: "npm:^2.0.0"
     react-bootstrap: "npm:^0.33.1"
     react-bootstrap-2: "npm:react-bootstrap@^2.7.4"
     react-color: "npm:^2.17.3"
@@ -11250,6 +11251,13 @@ __metadata:
     raw-body: "npm:~1.1.0"
     safe-json-parse: "npm:~1.0.1"
   checksum: 10/e11cf04a6ce4d9a9d0760b755c66d2b83aabcb7b30355373b3132c2af3bab7055ee15fe2540932b956084223d18f80fde47a289a106d4d773acb637ae82d832d
+  languageName: node
+  linkType: hard
+
+"bodymovin@npm:^4.13.0":
+  version: 4.13.0
+  resolution: "bodymovin@npm:4.13.0"
+  checksum: 10/cd57173ae3548cfc077b0ec77d879cfdcd29ca0993a7105db0ed115fc767b0cbd547415f35461aac88950ab1179776ba2bbff5b8794debb0b91ec50bbec4b79c
   languageName: node
   linkType: hard
 
@@ -24587,6 +24595,18 @@ canvg@gabelerner/canvg:
     react: ^16.8.5 || ^17.0.0
     react-dom: ^16.8.5 || ^17.0.0
   checksum: 10/15060195e41f016b39d962adb523d979b8bb56f84674137a5a9724c126cc9ae2f85972fbee807e249ae6ade7cf8237cd0b6d1665c4c68f91000f57762164569a
+  languageName: node
+  linkType: hard
+
+"react-bodymovin@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "react-bodymovin@npm:2.0.0"
+  dependencies:
+    bodymovin: "npm:^4.13.0"
+  peerDependencies:
+    react: "*"
+    react-dom: "*"
+  checksum: 10/c26fa1b521ce7b4278dfa18464781f59a23a5b535eacd9b92061e90070da1f7e8cf1b65db060c67b630d9268da1838c5d3168e0b182e159dfbf1445faa2180cf
   languageName: node
   linkType: hard
 

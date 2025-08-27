@@ -312,6 +312,7 @@
     "radium": "^0.25.2",
     "react": "^17.0.2",
     "react-beautiful-dnd": "^13.1.0",
+    "react-bodymovin": "^2.0.0",
     "react-bootstrap": "^0.33.1",
     "react-bootstrap-2": "npm:react-bootstrap@^2.7.4",
     "react-color": "^2.17.3",

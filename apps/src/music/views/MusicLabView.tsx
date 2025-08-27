@@ -50,6 +50,7 @@ import {MusicExemplarSettings, MusicLevelData} from '../types';
 
 import AdvancedControls from './AdvancedControls';
 import Controls from './Controls';
+import Dancer from './Dancer';
 import ExemplarPlayerView from './ExemplarPlayerView';
 import HeaderButtons from './HeaderButtons';
 import usePlaybackUpdate from './hooks/usePlaybackUpdate';
@@ -323,6 +324,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
       )}
     >
       {allowPackSelection && <PackDialog player={player} />}
+      {AppConfig.getValue('show-dancer') === 'true' && <Dancer />}
       <div
         id="work-area"
         className={classNames(moduleStyles.workArea, {
