@@ -242,7 +242,7 @@ const UnitOverviewActionRow: React.FC<UnitOverviewActionRowProps> = ({
                 assignmentName={unitTitle}
                 reassignConfirm={onReassignConfirm}
                 isAssigningCourseOnly={false}
-                isAssigningUnitOnly={isSingleUnitCourse}
+                isSingleUnitCourse={isSingleUnitCourse}
                 participantAudience={participantAudience}
               />
             </div>
