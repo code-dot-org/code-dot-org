@@ -3,17 +3,9 @@ import React from 'react';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 import Notification from './Notification';
+import {AiDiffNotification} from './types';
 
 import styles from './notifications.module.scss';
-
-export interface AiDiffNotification {
-  id: string;
-  title: string;
-  description: string;
-  readAt: Date | null;
-  iconName: string;
-  publishedAt: Date;
-}
 
 const AiDiffNotificationList: React.FC = () => {
   const [loading, setLoading] = React.useState<boolean>(true);

@@ -8,7 +8,7 @@ import React from 'react';
 
 import i18n from '@cdo/locale';
 
-import {AiDiffNotification} from './AiDiffNotificationList';
+import {AiDiffNotification, IconColor} from './types';
 
 import styles from './notifications.module.scss';
 import skeletonizeContent from '@cdo/apps/sharedComponents/skeletonize-content.module.scss';
@@ -44,6 +44,7 @@ const Notification: React.FC<{
     description: 'Lorem ipsum dolor sit amet, postea pericula',
     readAt: null,
     iconName: 'spinner',
+    iconColor: IconColor.Gray,
     publishedAt: new Date(),
   };
 
@@ -54,6 +55,7 @@ const Notification: React.FC<{
         iconStyle="solid"
         className={classNames(
           styles.icon,
+          styles[`icon${notificationOrPlaceholder.iconColor}`],
           isLoading && skeletonizeContent.skeletonizeContent
         )}
       />
