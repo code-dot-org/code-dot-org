@@ -315,6 +315,8 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
     </div>
   );
 
+  const dancerId = AppConfig.getValue('show-dancer');
+
   return (
     <div
       id="music-lab"
@@ -324,7 +326,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
       )}
     >
       {allowPackSelection && <PackDialog player={player} />}
-      {AppConfig.getValue('show-dancer') === 'true' && <Dancer />}
+      {isPlaying && dancerId && <Dancer dancerId={dancerId} />}
       <div
         id="work-area"
         className={classNames(moduleStyles.workArea, {
