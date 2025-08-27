@@ -1,0 +1,186 @@
+{
+  "script": {
+    "name": "hoai-dance-pilot1",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "is_migrated": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2025-08-26 19:58:25 UTC",
+    "hide_within_course": false,
+    "published_state": "in_development",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "hoai-dance-pilot1"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "hoai-dance-pilot1"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Hour of AI Dance Party Pilot 1a",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "hoai-dance-pilot1"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "f9a4dfb8-39db-429c-88ce-f3c06da468c9",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f9a4dfb8-39db-429c-88ce-f3c06da468c9",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "hoai-dance-pilot1"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "f2514c01-ab09-4c55-b94b-c3e4ec6b7ae0",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "f2514c01-ab09-4c55-b94b-c3e4ec6b7ae0",
+        "lesson_activity.key": "f9a4dfb8-39db-429c-88ce-f3c06da468c9"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "MusicLab_Intro"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "hoai-dance-pilot1",
+        "activity_section.key": "f2514c01-ab09-4c55-b94b-c3e4ec6b7ae0"
+      },
+      "level_keys": [
+        "MusicLab_Intro"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "DanceLab_Intro"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "hoai-dance-pilot1",
+        "activity_section.key": "f2514c01-ab09-4c55-b94b-c3e4ec6b7ae0"
+      },
+      "level_keys": [
+        "DanceLab_Intro"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "MusicLab_Intro",
+        "script_level.level_keys": [
+          "MusicLab_Intro"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "hoai-dance-pilot1",
+        "activity_section.key": "f2514c01-ab09-4c55-b94b-c3e4ec6b7ae0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "DanceLab_Intro",
+        "script_level.level_keys": [
+          "DanceLab_Intro"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "hoai-dance-pilot1",
+        "activity_section.key": "f2514c01-ab09-4c55-b94b-c3e4ec6b7ae0"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

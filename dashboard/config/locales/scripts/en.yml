@@ -25136,5 +25136,29 @@ en:
           title: "[PILOT] Teaching AI-Powered Threats and Defenses"
           description_audience: ''
           description_short: ''
+          description: |-
+            ##Welcome!
+            #### This professional learning module is designed to help you prepare to teach Code.org’s AI-Powered Threats and Defenses Unit.
+
+            #### The AI-Powered Threats and Defenses unit is part of the ***AI Foundations*** curriculum but can also stand alone for grades 9-12. Designed for flexibility, it can be seamlessly integrated into any existing curriculum, allowing teachers to introduce it at their own pace and align it with their educational goals.
+
+            #### **Find the learning that works for you**
+
+            #### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.
+
+            #### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the AI-Powered Threats and Defenses unit. However, you can engage with the content in the order that best meets your needs.
+          student_description: |-
+            #### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.
+
+            #### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Cybersecurity and Global Impacts unit. However, you can engage with the content in the order that best meets your needs.
+        hoai-dance-pilot1:
+          lessons:
+            lesson-1:
+              name: Hour of AI Dance Party Pilot 1a
+          lesson_groups: {}
+          name: hoai-dance-pilot1
+          title: Hour of AI Dance Party Pilot 1
+          description_audience: ''
+          description_short: ''
           description: ''
           student_description: ''
