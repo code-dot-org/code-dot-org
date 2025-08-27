@@ -10,10 +10,12 @@ import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
 import {LabProps, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 
 import {useSource} from '../codebridge/hooks/useSource';
-import {useAppSelector, useAppDispatch} from '../util/reduxHooks';
+import {useAppDispatch, useAppSelector} from '../util/reduxHooks';
 
 import ShareView from './layout/ShareView';
 import VerticalLayout from './layout/VerticalLayout';
+import {setViewMode} from './redux';
+import {ViewMode} from './types';
 
 import moduleStyles from './styles/weblab2-view.module.scss';
 
@@ -82,6 +84,10 @@ const Weblab2View: React.FC<
       dispatch(setHasRun(false));
     };
   }, [dispatch]);
+
+  useEffect(() => {
+    dispatch(setViewMode(levelProperties?.initialViewMode || ViewMode.SPLIT));
+  }, [dispatch, levelProperties?.initialViewMode]);
 
   return (
     <div className={moduleStyles.weblab2Container}>

@@ -7,6 +7,7 @@ import {
   ProjectFile,
   ProjectSources,
 } from '@cdo/apps/lab2/types';
+import {ViewMode} from '@cdo/apps/weblab2/types';
 
 import {LayoutKey} from './constants';
 
@@ -72,6 +73,7 @@ export interface CodebridgeLevelProperties extends LevelProperties {
   startDirection?: number;
   widgetView?: boolean;
   widgetViewAllowShowCode?: boolean;
+  initialViewMode?: ViewMode;
 }
 
 // Python Lab specific property
