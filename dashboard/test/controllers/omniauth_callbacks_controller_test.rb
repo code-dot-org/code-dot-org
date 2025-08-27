@@ -1805,10 +1805,46 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
     context 'when a user has an email domain that is allowed' do
       let(:allowed_email) {"user@alloweddomain.com"}
-      let(:allowed_auth) {generate_auth_user_hash(provider: AuthenticationOption::GOOGLE, uid: 'other-uid', email: allowed_email)}
+      let(:auth) {generate_auth_user_hash(provider: AuthenticationOption::GOOGLE, uid: 'other-uid', email: allowed_email)}
 
       before do
-        @request.env['omniauth.auth'] = allowed_auth
+        @request.env['omniauth.auth'] = auth
+        @request.env['omniauth.params'] = {}
+      end
+
+      it 'creates a new user and redirects to complete registration' do
+        _(-> {get :google_oauth2}).wont_change -> {User.count}
+        _(@response.status).must_equal 200
+        assert_template 'omniauth/redirect'
+        partial_user = User.new_from_partial_registration(session)
+        _(partial_user.provider).must_equal AuthenticationOption::GOOGLE
+        _(partial_user.uid).must_equal 'other-uid'
+      end
+    end
+
+    context 'when a user has an empty email' do
+      let(:auth) {generate_auth_user_hash(provider: AuthenticationOption::GOOGLE, uid: 'other-uid', email: nil)}
+
+      before do
+        @request.env['omniauth.auth'] = auth
+        @request.env['omniauth.params'] = {}
+      end
+
+      it 'creates a new user and redirects to complete registration' do
+        _(-> {get :google_oauth2}).wont_change -> {User.count}
+        _(@response.status).must_equal 200
+        assert_template 'omniauth/redirect'
+        partial_user = User.new_from_partial_registration(session)
+        _(partial_user.provider).must_equal AuthenticationOption::GOOGLE
+        _(partial_user.uid).must_equal 'other-uid'
+      end
+    end
+
+    context 'when a user has an invalid email' do
+      let(:auth) {generate_auth_user_hash(provider: AuthenticationOption::GOOGLE, uid: 'other-uid', email: 'email-without-at-sign')}
+
+      before do
+        @request.env['omniauth.auth'] = auth
         @request.env['omniauth.params'] = {}
       end
 
