@@ -109,6 +109,7 @@ class User < ApplicationRecord
   include Purgeable
   include Facilitator
   include TermsOfService
+  include Timeoutable
   include Rails.application.routes.url_helpers
 
   self.inheritance_column = :user_type
@@ -434,7 +435,7 @@ class User < ApplicationRecord
 
   scope :ignore_deleted_at_index, -> {from 'users IGNORE INDEX(index_users_on_deleted_at)'}
   # Include default Devise modules. Others available are:
-  # :token_authenticatable, :confirmable, :timeoutable
+  # :token_authenticatable, :confirmable
   devise :invitable, :database_authenticatable, :registerable, :omniauthable,
     :recoverable, :rememberable, :trackable, :lockable
 
