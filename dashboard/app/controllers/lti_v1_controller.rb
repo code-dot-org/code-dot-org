@@ -183,7 +183,9 @@ class LtiV1Controller < ApplicationController
 
       if user
         sign_in user
-
+        # Set session variables for the user
+        session[:login_time] = Time.current
+        session[:max_session_duration] = user.organization&.session_length || CDO.default_session_length
         metadata = {
           'user_type' => user.user_type,
           'lms_name' => integration[:platform_name],
@@ -223,6 +225,10 @@ class LtiV1Controller < ApplicationController
         user = Services::Lti.initialize_lti_user(decoded_jwt)
         # PartialRegistration removes the email address, so store it in a local variable first
         email_address = Services::Lti.get_claim(decoded_jwt, :email)
+
+        org = Organization.find_by(domain: email_address.split('@').last)
+        user.organization = org if org
+
         Services::Lti.initialize_lms_landing_session(session, integration[:platform_name], 'new', user.user_type)
         PartialRegistration.persist_attributes(session, user)
         publish_linking_page_visit(user, integration[:platform_name])

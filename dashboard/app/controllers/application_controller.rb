@@ -31,6 +31,18 @@ class ApplicationController < ActionController::Base
   helper_method :statsig_stable_id
   before_action :statsig_stable_id
 
+  before_action :check_session_timeout
+
+  def check_session_timeout
+    return unless session[:login_time] && session[:max_session_duration]
+
+    if Time.current > session[:login_time] + session[:max_session_duration]
+      reset_session
+      flash[:alert] = "Your session has expired. Please sign in again."
+      redirect_to login_path
+    end
+  end
+
   around_action :with_global_current_user
 
   def fix_crawlers_with_bad_accept_headers
