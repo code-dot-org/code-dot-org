@@ -120,7 +120,6 @@ Given /^I open the new workshop form$/ do
     And I am on "http://studio.code.org/pd/workshop_dashboard"
     Then I wait until element "h1:contains('Your Workshops')" is visible
     Then I press "new-workshop-button"
-    Then I press the last link with text "Build Your Own Workshop"
 
     And I wait until element "h1:contains('New Build Your Own Workshop')" is visible
   GHERKIN
