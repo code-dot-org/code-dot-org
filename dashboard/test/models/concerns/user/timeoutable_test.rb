@@ -14,15 +14,18 @@ class User::TimeoutableTest < ActiveSupport::TestCase
   end
 
   describe '#timedout?' do
-    it 'returns false' do
-      _(user.timedout?(last_activity_at)).must_equal false
-    end
+    subject(:timedout?) {user.timedout?(last_activity_at)}
 
+    it 'returns false' do
+      _(timedout?).must_equal false
+    end
     context 'when timed out' do
+      around do |test|
+        travel_to(last_activity_at + timeout + 1.minute) {test.call}
+      end
+    
       it 'returns true' do
-        travel_to(last_activity_at + timeout + 1.minute) do
-          _(user.timedout?(last_activity_at)).must_equal true
-        end
+        _(timedout?).must_equal true
       end
     end
   end
