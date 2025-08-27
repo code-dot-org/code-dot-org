@@ -22,9 +22,9 @@ const workshopMarketingBreadcrumbs: LinkWithText[] = [
   },
 ];
 
-interface WorkshopMarketingPageProps
-  extends WorkshopInfo,
-    UserInfoForWorkshop {}
+interface WorkshopMarketingPageProps extends WorkshopInfo, UserInfoForWorkshop {
+  userEnrollment?: UserWorkshopEnrollment;
+}
 
 const WorkshopMarketingPage: React.FunctionComponent<
   WorkshopMarketingPageProps
@@ -49,6 +49,7 @@ const WorkshopMarketingPage: React.FunctionComponent<
     organizer,
     facilitators,
     userInfo,
+    userEnrollment,
   } = props;
 
   return (
