@@ -3,6 +3,8 @@ import TextField from '@code-dot-org/component-library/textField';
 import classNames from 'classnames';
 import React from 'react';
 
+import weblab2I18n from '@cdo/apps/weblab2/locale';
+
 import moduleStyles from './styles/url-bar.module.scss';
 
 interface UrlBarProps {
@@ -33,7 +35,7 @@ export const UrlBar: React.FC<UrlBarProps> = ({
         >
           <Button
             onClick={onNavigateBack}
-            aria-label="Navigate back"
+            aria-label={weblab2I18n.navigateBack()}
             size="xs"
             type="tertiary"
             color="gray"
@@ -44,7 +46,7 @@ export const UrlBar: React.FC<UrlBarProps> = ({
           />
           <Button
             onClick={onNavigateForward}
-            aria-label="Navigate forward"
+            aria-label={weblab2I18n.navigateForward()}
             size="xs"
             type="tertiary"
             color="gray"
@@ -69,7 +71,7 @@ export const UrlBar: React.FC<UrlBarProps> = ({
         >
           <Button
             onClick={() => {}}
-            aria-label="Refresh"
+            aria-label={weblab2I18n.refresh()}
             size="xs"
             type="tertiary"
             color="gray"
