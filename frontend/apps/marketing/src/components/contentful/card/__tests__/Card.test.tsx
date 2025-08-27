@@ -137,7 +137,9 @@ describe('Card', () => {
     );
   });
 
-  it('calls handleSecondaryButtonClick when secondary button is clicked', () => {
+  it('calls handleSecondaryButtonClick when secondary button is clicked', async () => {
+    const user = userEvent.setup();
+
     render(
       <Card
         {...defaultProps}
@@ -146,12 +148,20 @@ describe('Card', () => {
         id="card-id"
       />,
     );
-    screen.getByText('Secondary').click();
-    expect(mockLogEvent).toHaveBeenCalledWith('secondary_click', 'card-id', {
-      cardTitle: 'Test Title',
-      buttonText: 'Secondary Button',
-      buttonTarget: '/secondary',
-    });
+
+    const secondaryButton = screen.getByText('Secondary');
+    await user.click(secondaryButton);
+
+    expect(mockLogEvent).toHaveBeenCalledTimes(1);
+    expect(mockLogEvent).toHaveBeenCalledWith(
+      'secondary_click',
+      'card-id',
+      expect.objectContaining({
+        cardTitle: 'Test Title',
+        buttonText: 'Secondary Button',
+        buttonTarget: '/secondary',
+      }),
+    );
   });
 
   it('does not call logEvent if event name or eventMetadata is missing for primary button', () => {
