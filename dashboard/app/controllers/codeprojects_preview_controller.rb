@@ -24,6 +24,7 @@ class CodeprojectsPreviewController < ApplicationController
       policies << "upgrade-insecure-requests"
     end
     response.headers['Content-Security-Policy'] = policies.join('; ')
+    response.headers['Access-Control-Allow-Origin'] = allowed_connect_src
     render 'show', layout: false
   end
 end
