@@ -251,15 +251,13 @@ export const madeImportantDetailChange = (
   // Ignore 'hidden', 'registration_link', and 'suppress_email' when checking for
   // detail changes as already-enrolled users would be aware of these.
   const workshopOldWithImportantFields = Object.fromEntries(
-    Object.entries(workshopStateToApi(workshopDataToState(workshop))).filter(
-      ([key]) =>
-        !['hidden', 'registration_link', 'suppress_email'].includes(key)
+    Object.entries(workshopDataToState(workshop)).filter(
+      ([key]) => !['hidden', 'registrationLink', 'suppressEmail'].includes(key)
     )
   );
   const workshopNewWithImportantFields = Object.fromEntries(
-    Object.entries(workshopStateToApi(workshopFormState)).filter(
-      ([key]) =>
-        !['hidden', 'registration_link', 'suppress_email'].includes(key)
+    Object.entries(workshopFormState).filter(
+      ([key]) => !['hidden', 'registrationLink', 'suppressEmail'].includes(key)
     )
   );
   if (
@@ -268,16 +266,12 @@ export const madeImportantDetailChange = (
     return true;
   }
 
-  const sessionsOld = sessionStateToApi(
-    sessionDataToState(workshop.sessions, workshopFormState.timeZone),
-    workshop.time_zone || workshopFormState.timeZone
+  const sessionsOld = sessionDataToState(
+    workshop.sessions,
+    workshop.time_zone || ''
   );
-  const sessionsNew = sessionStateToApi(
-    sessionFormState,
-    workshopFormState.timeZone
-  );
-  if (sessionsOld.length !== sessionsNew.length) return true;
+  if (sessionsOld.length !== sessionFormState.length) return true;
   return sessionsOld.some(
-    (session, index) => !isEqual(session, sessionsNew[index])
+    (session, index) => !isEqual(session, sessionFormState[index])
   );
 };
