@@ -119,10 +119,6 @@ const InnerHTMLPreview = () => {
       const newBlobUrl = filesToBlobs[currentFile];
       if (newBlobUrl) {
         setBlobUrl(newBlobUrl);
-        console.log(
-          'currentFile in useEffect in InnerHTMLPreview',
-          currentFile
-        );
         if (
           currentFile !== fileToAddToNavigationHistory &&
           !isNavigatingToFileRef.current

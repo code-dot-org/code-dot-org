@@ -107,21 +107,16 @@ export const HTMLPreview = () => {
       ) {
         // If navigationHistoryIndex is the last index, add the file to the end of the array.
         // Otherwise, truncate the array after the current index and add the file to the end.
-        if (navigationHistoryIndex === navigationHistory.length - 1) {
-          const updatedNavigationHistory = [
-            ...navigationHistory,
-            event.data.fileToAddToNavigationHistory,
-          ];
-          setNavigationHistory(updatedNavigationHistory);
-          setNavigationHistoryIndex(updatedNavigationHistory.length - 1);
-        } else {
-          const updatedNavigationHistory = [
-            ...navigationHistory.slice(0, navigationHistoryIndex + 1),
-            event.data.fileToAddToNavigationHistory,
-          ];
-          setNavigationHistory(updatedNavigationHistory);
-          setNavigationHistoryIndex(updatedNavigationHistory.length - 1);
-        }
+        const updatedNavigationHistory =
+          navigationHistoryIndex === navigationHistory.length - 1
+            ? [...navigationHistory, event.data.fileToAddToNavigationHistory]
+            : [
+                ...navigationHistory.slice(0, navigationHistoryIndex + 1),
+                event.data.fileToAddToNavigationHistory,
+              ];
+
+        setNavigationHistory(updatedNavigationHistory);
+        setNavigationHistoryIndex(updatedNavigationHistory.length - 1);
       }
     };
 
