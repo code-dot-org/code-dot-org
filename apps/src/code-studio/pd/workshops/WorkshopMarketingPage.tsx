@@ -101,6 +101,8 @@ const WorkshopMarketingPage: React.FunctionComponent<
               name={name}
               format={format}
               sessions={sessions}
+              isUserEnrolled={isUserEnrolled}
+              userEnrollment={userEnrollment}
             />
 
             <OrganizerInformation
