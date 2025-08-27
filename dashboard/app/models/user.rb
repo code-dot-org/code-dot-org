@@ -1033,8 +1033,9 @@ class User < ApplicationRecord
 
   def should_see_add_password_form?
     !can_create_personal_login? && # mutually exclusive with personal login UI
-      can_edit_password? && encrypted_password.blank? &&
-      !Policies::Lti.restricted_user?(self)
+      can_edit_password? && # allowed to edit password (i.e. not sponsored)
+      encrypted_password.blank? && # no password exists
+      !Policies::Lti.restricted_user?(self) # not restricted by their school district
   end
 
   def should_disable_user_type?
