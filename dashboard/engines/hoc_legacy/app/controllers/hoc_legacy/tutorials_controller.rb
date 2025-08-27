@@ -13,7 +13,7 @@ module HocLegacy
 
     # GET /api/hour/begin/:code
     def begin
-      if db_write_enabled?
+      if activity_tracking_enabled?
         # set company to nil if not a valid company
         company = params[:company].presence || request.cookies['company']
         # Pass through the company param to the congrats page only if an entry exists in the forms.
@@ -27,25 +27,25 @@ module HocLegacy
 
     # GET /api/hour/begin_:code.png
     def begin_pixel
-      TutorialPixelLauncher.call(controller: self, tutorial: @tutorial, company: params[:company]) if db_write_enabled?
+      TutorialPixelLauncher.call(controller: self, tutorial: @tutorial, company: params[:company]) if activity_tracking_enabled?
       send_pixel_png
     end
 
     # GET /api/hour/finish
     def finish_current
-      session_row = db_write_enabled? ? TutorialCompleter.call(controller: self) : nil
+      session_row = TutorialCompleter.call(controller: self) if activity_tracking_enabled?
       redirect_to_congrats_page(session_row:)
     end
 
     # GET /api/hour/finish/:code
     def finish
-      session_row = db_write_enabled? ? TutorialCompleter.call(controller: self, tutorial: @tutorial) : nil
+      session_row = TutorialCompleter.call(controller: self, tutorial: @tutorial) if activity_tracking_enabled?
       redirect_to_congrats_page(session_row:)
     end
 
     # GET /api/hour/finish_:code.png
     def finish_pixel
-      TutorialPixelCompleter.call(controller: self, tutorial: @tutorial) if db_write_enabled?
+      TutorialPixelCompleter.call(controller: self, tutorial: @tutorial) if activity_tracking_enabled?
       send_pixel_png
     end
 
@@ -73,7 +73,7 @@ module HocLegacy
       }
     end
 
-    private def db_write_enabled?
+    private def activity_tracking_enabled?
       DCDO.get('hoc_apis_in_dashboard', false)
     end
 
