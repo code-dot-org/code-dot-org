@@ -4,9 +4,10 @@ module Marketing
       NOTIFICATION_CONTENTFUL_CONTENT_TYPE = 'dashboard-notification'
 
       CONTENTFUL_SOURCE_NAME = 'contentful'
+      CACHE_EXPIRATION = 1.hour
 
       def get(user_id:, locale:)
-        contentful_entries = Marketing::ContentfulClient.entries(locale.to_s, NOTIFICATION_CONTENTFUL_CONTENT_TYPE)
+        contentful_entries = cached_contentful_entries(locale.to_s)
         contentful_result = contentful_entries.filter_map do |notification|
           Services::ContentfulNotificationFormatter.call(notification)
         end
@@ -25,6 +26,12 @@ module Marketing
           read_at = rails_notification&.read_at&.iso8601 || nil
 
           notification.merge(read_at: read_at, source: CONTENTFUL_SOURCE_NAME)
+        end
+      end
+
+      private def cached_contentful_entries(locale)
+        CDO.shared_cache.fetch("contentful-#{NOTIFICATION_CONTENTFUL_CONTENT_TYPE}:#{locale}", expires_in: CACHE_EXPIRATION) do
+          Marketing::ContentfulClient.entries(locale, NOTIFICATION_CONTENTFUL_CONTENT_TYPE)
         end
       end
     end
