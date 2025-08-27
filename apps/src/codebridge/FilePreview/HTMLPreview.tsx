@@ -77,8 +77,7 @@ export const HTMLPreview = () => {
     // When we switch levels, clear the source so the preview does not show outdated content.
     setDebouncedSource(undefined);
     setIsLevelLoading(true);
-    setNavigationHistory([]);
-    setNavigationHistoryIndex(-1);
+    setCurrentFile(DEFAULT_START_HTML_FILE);
   });
 
   useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, () => {
@@ -143,6 +142,8 @@ export const HTMLPreview = () => {
     if (sourceLevelId.current !== levelProperties.id) {
       // If we have a new level id, update the source immediately.
       setDebouncedSource(source);
+      setNavigationHistory([]);
+      setNavigationHistoryIndex(-1);
       sourceLevelId.current = levelProperties.id;
     } else {
       // Set a timeout to send the debounced value after 500ms
