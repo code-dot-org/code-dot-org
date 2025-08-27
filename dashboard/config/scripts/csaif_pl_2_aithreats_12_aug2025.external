@@ -1,0 +1,54 @@
+name 'csaif_pl_2_aithreats_12_aug2025'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Encryption
+
+#### Many of the ideas we use to keep secrets in the digital age are far older than the Internet.
+
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Encryption</strong> is a process of encoding messages to keep them secret, so only "authorized" parties can read it.</p>
+</div>
+
+
+#### For example, during Roman Empire, Julius Caesar is reported to have encrypted messages to his soldiers and generals by using a simple alphabetic shift - every character was encrypted by substituting it with a character that was some fixed number of letters away in the alphabet.
+
+#### As a result, an alphabetic shift is often referred to as the **Caesar Cipher**.
+
+<p align="center">
+<img src="https://images.code.org/24a2ed5e5656b809731ce608b56b7a82-Screenshot 2025-03-12 at 2.22.59 PM.png" alt="Caeasar Cipher shifting the message free pizza in the cafeteria by 13 to serr cvmmn va gur pnsrgrevn" width="90%" style="border-radius:10px; border: 5px solid black;">
+</p>
+
+## 📝 To Do
+
+#### Decrypt the following message.
+
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Decryption</strong> is the process of using a key to turn encrypted data back into its original form.</p>
+</div>
+
+#### The **method** is the amount to shift each letter in the message forward or backward in the alphabet. The **key** is a number that tells how many letters to shift and in which direction
+
+<p align="center">
+<img src="https://images.code.org/2cba3da355983b19e509ae58712cd22a-Screenshot 2025-08-15 at 2.11.51 PM.png" alt="Wklv phvvdjh lv vhfuhw, method shift letters backwards, key three letters" width="50%" style="border-radius:10px; border: 5px solid black;">
+</p>
+
+<br>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🧐 Answer
+</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
+    <p style="font-size: 18px">
+This message is secret.
+</p></div>
+</details>
+
+<br>
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ Encryption is introduced in Lesson 9. You can find more details in the full <a href='https://studio.code.org/courses/ai-powered-threats-and-defenses-2025/units/1/lessons/9' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a>.
+</p>
+
+MARKDOWN

@@ -20,6 +20,7 @@ import {
 import {getFilterStatus} from '@cdo/apps/dance/songs';
 import SongSelector from '@cdo/apps/dance/SongSelector';
 import {DanceLevelProperties, DanceProjectSources} from '@cdo/apps/dance/types';
+import {useBlocklySettings} from '@cdo/apps/lab2/hooks/useBlocklySettings';
 import {setPageError} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {getIsShareView} from '@cdo/apps/lab2/projects/utils';
@@ -249,6 +250,7 @@ const DanceView: React.FunctionComponent<
     onPuzzleComplete,
     readonlyWorkspace,
   ]);
+  const settings = useBlocklySettings();
 
   return (
     <div id="dance-lab" className={moduleStyles.danceLab}>
@@ -261,6 +263,7 @@ const DanceView: React.FunctionComponent<
         levelProperties={levelProperties}
         headerClassName={moduleStyles.panelHeader}
         className={moduleStyles.instructionsArea}
+        settings={settings}
       />
       <div className={moduleStyles.divider} />
       <PanelContainer
