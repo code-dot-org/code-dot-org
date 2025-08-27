@@ -120,8 +120,10 @@ class ScriptsController < ApplicationController
     @page_title = "Unit: #{@script.localized_title}"
     @page_description = @script.localized_description.truncate(200, separator: '.', omission: '.')
 
-    link = Unit.latest_stable_version(@script.family_name)&.link(unit_group_unit: @unit_group_unit)
-    @canonical_url = CDO.studio_url(link) if @script.unit_group&.single_unit_course? && link
+    if @script.unit_group&.single_unit_course?
+      canonical_ug = UnitGroup.latest_stable_version(@course.family_name)&.name
+      @canonical_url = CDO.studio_url("/courses/#{canonical_ug}/units/1") if canonical_ug
+    end
 
     if @script.old_professional_learning_course? && current_user && Plc::UserCourseEnrollment.exists?(user: current_user, plc_course: @script.plc_course_unit.plc_course)
       @plc_breadcrumb = {unit_name: @script.plc_course_unit.unit_name, course_view_path: course_path(@script.plc_course_unit.plc_course.unit_group)}
