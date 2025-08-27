@@ -1,6 +1,5 @@
 import TextField from '@code-dot-org/component-library/textField';
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
-import RightButtons from '@codebridge/RightButtons/RightButtons';
 import React, {useEffect, useMemo, useRef, useState} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
@@ -134,7 +133,7 @@ export const HTMLPreview = () => {
     <PanelContainer
       id={'html-preview'}
       headerContent={codebridgeI18n.preview()}
-      rightHeaderContent={<RightButtons />}
+      hideHeaders
     >
       <div className={moduleStyles.previewContainer}>
         <div>

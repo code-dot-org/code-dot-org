@@ -39,7 +39,7 @@ Feature: After completing the Hour of Code, the player is directed to a congratu
     And I wait to see element with ID "uitest-certificate"
     And element "#uitest-certificate" is visible
     And I wait for image "#uitest-certificate img" to load
-    And I wait until element ".fa-twitter" is visible
+    And I wait until element ".fa-x-twitter" is visible
     And the href of selector ".social-print-link" contains "/print_certificates/"
     And I wait for 5 seconds
     Then I see no difference for "uncustomized flappy certificate"
@@ -67,7 +67,7 @@ Feature: After completing the Hour of Code, the player is directed to a congratu
     And I wait to see element with ID "uitest-certificate"
     And element "#uitest-certificate" is visible
     And I wait for image "#uitest-certificate img" to load
-    And I wait until element ".fa-twitter" is visible
+    And I wait until element ".fa-x-twitter" is visible
     And the href of selector ".social-print-link" contains "/print_certificates/"
     And I wait for 5 seconds
     And I see no difference for "uncustomized oceans certificate"

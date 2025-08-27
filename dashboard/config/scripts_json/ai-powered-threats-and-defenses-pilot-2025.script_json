@@ -4,6 +4,18 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "key": "938c16d9-13ea-475a-aa67-3d6b60c5cef9",
+          "notice": "AI-Powered Threats and Defenses Professional Development",
+          "details": "Before starting this unit, consider exploring our free online self-paced professional development module that introduces you to the key concepts, tools, and projects of this unit.",
+          "link": "https://studio.code.org/courses/teaching-ai-powered-theats-and-defenses-2025/units/1",
+          "type": "information",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "Let's Go!"
+        }
+      ],
       "content_area": "curriculum_9_12",
       "curriculum_umbrella": "AIF",
       "has_unnumbered_lessons": true,
@@ -19,7 +31,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-08-19 20:33:30 UTC",
+    "serialized_at": "2025-08-25 16:56:12 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -4810,6 +4822,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-powered-threats-defenses-lesson2-level1_2025-pilot"
+        ],
         "progression": "Cybersecurity Attacks Demos"
       },
       "bonus": false,
@@ -4832,6 +4847,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-powered-threats-defenses-lesson2-level2_2025-pilot"
+        ],
         "progression": "Cybersecurity Attacks Demos"
       },
       "bonus": false,
@@ -4854,6 +4872,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-powered-threats-defenses-lesson2-level3_2025-pilot"
+        ],
         "progression": "Cybersecurity Attacks Demos"
       },
       "bonus": false,
@@ -4876,6 +4897,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-powered-threats-defenses-lesson2-level4_2025-pilot"
+        ],
         "progression": "Cybersecurity Attacks Demos"
       },
       "bonus": false,
@@ -4898,6 +4922,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-powered-threats-defenses-lesson2-level5_2025-pilot"
+        ],
         "progression": "Chat with a Cyber Expert"
       },
       "bonus": false,
@@ -4945,6 +4972,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-powered-threats-defenses-lesson3-level1_2025-pilot"
+        ],
         "progression": "Phishing Investigation"
       },
       "bonus": false,
@@ -4967,6 +4997,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-powered-threats-defenses-lesson3-level2_2025-pilot"
+        ],
         "progression": "Phishing Investigation"
       },
       "bonus": false,
@@ -4989,6 +5022,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-powered-threats-defenses-lesson3-level3_2025-pilot"
+        ],
         "progression": "Phishing Investigation"
       },
       "bonus": false,
@@ -5011,6 +5047,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-powered-threats-defenses-lesson3-level4_2025-pilot"
+        ],
         "progression": "Breach Reports"
       },
       "bonus": false,
@@ -5633,6 +5672,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-powered-threats-defenses-lesson10-level1_2025-pilot"
+        ],
         "progression": "AI Generate Password Guesses"
       },
       "bonus": false,
@@ -5655,6 +5697,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-powered-threats-defenses-lesson10-level2_2025-pilot"
+        ],
         "progression": "AI Metadata Analysis"
       },
       "bonus": false,
@@ -5677,6 +5722,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "ai-powered-threats-and-defenses-lesson10-level3_2025-pilot"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5724,6 +5772,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-powered-threats-defenses-lesson11-level1_2025-pilot"
+        ],
         "progression": "Analyze the Experience"
       },
       "bonus": false,
@@ -5771,6 +5822,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-powered-threats-defenses-lesson12-level1_2025-pilot"
+        ],
         "progression": "Exploring Apps"
       },
       "bonus": false,
@@ -5818,6 +5872,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-powered-threats-defenses-lesson13-level1_2025-pilot"
+        ],
         "progression": "Choose an App"
       },
       "bonus": false,
@@ -5840,6 +5897,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-powered-threats-defenses-lesson13-level2_2025-pilot"
+        ],
         "progression": "Explore Issues and Defenses"
       },
       "bonus": false,
@@ -5862,6 +5922,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-powered-threats-defenses-lesson13-level3_2025-pilot"
+        ],
         "progression": "Planning Your Creative Artifact"
       },
       "bonus": false,
@@ -5884,6 +5947,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-powered-threats-defenses-lesson13-survey-pilot_2025"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,

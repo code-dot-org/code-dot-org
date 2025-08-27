@@ -9,17 +9,61 @@ markdown <<MARKDOWN
 
 #### Read each scenario aloud. Decide which pillar it represents: Confidentiality, Integrity, and Availability.
 
-#### 1. During an online driver's education course, Mateo logs in on the day of his final exam . . . but the test never loads.  The website is down for maintenance, and there's no backup system or extension. Mateo misses the test window and can't complete the course on time.
+<div style="background-color: #e3f2fd; padding: 10px; border-left: 5px solid #2196f3; margin-bottom: 20px; font-size: 16px">
+      <strong>Scenario 1</strong><br>
+      During an online driver's education course, Mateo logs in on the day of his final exam . . . but the test never loads.  The website is down for maintenance, and there's no backup system or extension. Mateo misses the test window and can't complete the course on time.<br> <br>
+      <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1em; font-weight: bold;">🧐 Answer
+</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
+    <p style="font-size: 16px">
+Availability – the system wasn't accessible when needed, leading to a missed deadline.
+</p></div>
+</details>
+</div>
 
-#### 2. Jordan adds a personal reminder to their shared family calendar: "Doctor appointment to talk about anxiety." Later, they realize their cousins and grandparents can see it too, and someone brings it up at dinner.
+<div style="background-color: #f3e5f5; padding: 10px; border-left: 5px solid #9c27b0; margin-bottom: 20px; font-size: 16px">
+      <strong>Scenario 2</strong><br>
+      Jordan adds a personal reminder to their shared family calendar: "Doctor appointment to talk about anxiety." Later, they realize their cousins and grandparents can see it too, and someone brings it up at dinner.<br> <br>
+      <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1em; font-weight: bold;">🧐 Answer
+</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
+    <p style="font-size: 16px">
+Confidentiality — sensitive personal information was visible to people it wasn't intended for.
+</p></div>
+</details>
+</div>
 
-#### 3. A friend asks Sam to proofread their scholarship essay. Instead of helpful feedback, Sam swaps in silly sentences for laughs and hits save. Later, the friend opens the file right before submitting and panics when they see what's been changed.
+<div style="background-color: #e3f2fd; padding: 10px; border-left: 5px solid #2196f3; margin-bottom: 20px; font-size: 16px">
+      <strong>Scenario 3</strong><br>
+      A friend asks Sam to proofread their scholarship essay. Instead of helpful feedback, Sam swaps in silly sentences for laughs and hits save. Later, the friend opens the file right before submitting and panics when they see what's been changed.<br> <br>
+      <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1em; font-weight: bold;">🧐 Answer
+</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
+    <p style="font-size: 16px">
+Integrity — the file was tampered with and is no longer what the author intended.
+</p></div>
+</details>
+</div>
 
-#### 4. Aisha spent weeks curating the perfect workout playlist on a music app. One morning, she logs in and finds it replaced with her younger brother’s lullaby mix. The content gone! And now her account history shows songs she never listened to. They shared the account without realizing edits were saved automatically.
+<div style="background-color: #f3e5f5; padding: 10px; border-left: 5px solid #9c27b0; margin-bottom: 20px; font-size: 16px">
+      <strong>Scenario 4</strong><br>
+      Aisha spent weeks curating the perfect workout playlist on a music app. One morning, she logs in and finds it replaced with her younger brother’s lullaby mix. The content gone! And now her account history shows songs she never listened to. They shared the account without realizing edits were saved automatically.<br> <br>
+      <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1em; font-weight: bold;">🧐 Answer
+</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
+    <p style="font-size: 16px">
+Integrity and Confidentiality — the playlist was altered without permission (Integrity), and her listening habits were visible and changed by someone else (Confidentiality).
+</p></div>
+</details>
+</div>
 
 
 <p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
-    ➡️ This activity is from Lesson 6. You can find more details in the full <a href='https://studio.code.org/s/aif5-2025/lessons/6' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a>.
+    ➡️ This activity is from Lesson 6. You can find more details in the full <a href='https://studio.code.org/courses/ai-powered-threats-and-defenses-2025/units/1/lessons/6' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a>.
 </p>
 
 

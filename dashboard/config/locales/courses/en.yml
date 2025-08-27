@@ -6299,3 +6299,15 @@ en:
           description_student: ''
           description_teacher: ''
           version_title: "'25-'26"
+        csp3-research-mxghyt:
+          title: CSP Unit 3 - Intro to Programming (subgoals)
+          description_short: Learn the basics of programming in JavaScript through a top-down design approach using classic turtle drawing.
+          description_student: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
+          description_teacher: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
+          version_title: ''
+        sb-chardev-v1:
+          title: Story Board Character Development
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''

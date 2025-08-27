@@ -1,5 +1,5 @@
+import {Button} from '@code-dot-org/component-library/button';
 import {Theme} from '@code-dot-org/component-library/common/contexts';
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import React from 'react';
 
@@ -33,14 +33,15 @@ const ButtonWithDialog: React.FunctionComponent<ButtonWithDialogProps> = ({
           'data-theme': theme,
         }}
       >
-        <button
-          type="button"
+        <Button
           className={styles.bottomButton}
           onClick={() => setIsDialogOpen(true)}
           id={`uitest-${id}-button`}
-        >
-          <FontAwesomeV6Icon iconName={iconName} />
-        </button>
+          isIconOnly={true}
+          icon={{iconName: iconName}}
+          color={'gray'}
+          type={'tertiary'}
+        />
       </WithTooltip>
       {Dialog}
     </>
