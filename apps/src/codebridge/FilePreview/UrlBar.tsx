@@ -25,6 +25,7 @@ export const UrlBar: React.FC<UrlBarProps> = ({value, onChange}) => {
             aria-label="Navigate back"
             size="xs"
             type="tertiary"
+            color="gray"
             isIconOnly={true}
             icon={{iconName: 'chevron-left'}}
             className={moduleStyles.urlButton}
@@ -34,6 +35,7 @@ export const UrlBar: React.FC<UrlBarProps> = ({value, onChange}) => {
             aria-label="Navigate forward"
             size="xs"
             type="tertiary"
+            color="gray"
             isIconOnly={true}
             icon={{iconName: 'chevron-right'}}
             className={moduleStyles.urlButton}
@@ -57,6 +59,7 @@ export const UrlBar: React.FC<UrlBarProps> = ({value, onChange}) => {
             aria-label="Refresh"
             size="xs"
             type="tertiary"
+            color="gray"
             isIconOnly={true}
             icon={{iconName: 'refresh'}}
             className={moduleStyles.urlButton}
