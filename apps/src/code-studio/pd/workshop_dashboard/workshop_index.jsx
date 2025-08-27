@@ -14,6 +14,7 @@ import {
   DATE_ORDER_DESC,
 } from '@cdo/apps/code-studio/pd/constants';
 import {BuildYourOwnWorkshopConfig} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
+import color from '@cdo/apps/util/color';
 
 import ServerSortWorkshopTable from './components/server_sort_workshop_table';
 import {
@@ -112,6 +113,7 @@ export class WorkshopIndex extends React.Component {
             <Button
               id="new-workshop-button"
               bsStyle="primary"
+              style={styles.createWorkshopButton}
               href={`/pd/workshop_dashboard/workshops/new/${BuildYourOwnWorkshopConfig.slug}`}
               onClick={e =>
                 this.handleNewWorkshopClick(e, BuildYourOwnWorkshopConfig.slug)
@@ -189,6 +191,9 @@ export class WorkshopIndex extends React.Component {
 }
 
 const styles = {
+  createWorkshopButton: {
+    backgroundColor: color.purple,
+  },
   surveySubmissionsButton: {
     marginLeft: 5,
   },
