@@ -63,8 +63,8 @@ const Card: React.FC<CardProps> = ({
   const {logEvent} = useStatsigLogger();
 
   const handlePrimaryButtonClick = () => {
-    if (primaryButton && primaryButtonEventName && eventMetadata) {
-      logEvent(primaryButtonEventName, id ?? '', {
+    if (id && primaryButton && primaryButtonEventName && eventMetadata) {
+      logEvent(primaryButtonEventName, id, {
         ...eventMetadata,
         buttonText: primaryButton.fields.ariaLabel,
         buttonTarget: primaryButton.fields.primaryTarget,
@@ -73,8 +73,8 @@ const Card: React.FC<CardProps> = ({
   };
 
   const handleSecondaryButtonClick = () => {
-    if (secondaryButton && secondaryButtonEventName && eventMetadata) {
-      logEvent(secondaryButtonEventName, id ?? '', {
+    if (id && secondaryButton && secondaryButtonEventName && eventMetadata) {
+      logEvent(secondaryButtonEventName, id, {
         ...eventMetadata,
         buttonText: secondaryButton.fields.ariaLabel,
         buttonTarget: secondaryButton.fields.primaryTarget,
