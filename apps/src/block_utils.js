@@ -482,7 +482,7 @@ const determineInputs = function (text, args, strictTypes = []) {
       }
       const strict = arg.strict || strictTypes.includes(arg.type);
       let mode;
-      if (arg.options) {
+      if (arg.options && !arg.customInput) {
         mode = DROPDOWN_INPUT;
       } else if (arg.field) {
         mode = FIELD_INPUT;

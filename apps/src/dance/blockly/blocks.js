@@ -76,6 +76,23 @@ const customInputTypes = {
       return block.getFieldValue(arg.name);
     },
   },
+  dancerPicker: {
+    addInput(blockly, block, inputConfig, currentInputRow) {
+      const options = inputConfig.options.map(option => [
+        `/blockly/media/skins/dance/${option[0]}.png`,
+        option[1],
+      ]);
+      currentInputRow
+        .appendField(inputConfig.label)
+        .appendField(
+          new Blockly.FieldImageDropdown(options, 40, 40),
+          inputConfig.name
+        );
+    },
+    generateCode(block, arg) {
+      return block.getFieldValue(arg.name);
+    },
+  },
 };
 
 export default {
