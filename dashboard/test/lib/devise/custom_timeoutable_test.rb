@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class User::TimeoutableTest < ActiveSupport::TestCase
+class Devise::Models::CustomTimeoutableTest < ActiveSupport::TestCase
   include ActiveSupport::Testing::TimeHelpers
 
   subject(:user) {build_stubbed(:user)}
