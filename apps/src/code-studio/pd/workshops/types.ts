@@ -141,7 +141,7 @@ export type UserWorkshopEnrollment = {
   firstName?: string;
   lastName?: string;
   email: string;
-  code?: string;
+  code: string;
   surveySentAt?: string;
   completedSurveyId?: number;
   schoolInfoId?: number;
