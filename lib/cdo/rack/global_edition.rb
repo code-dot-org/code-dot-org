@@ -50,7 +50,7 @@ module Rack
           ge_prefix, ge_region, main_path = request_path_vars(:ge_prefix, :ge_region, :main_path)
 
           if Cdo::GlobalEdition.region_available?(ge_region) && dashboard_route?(main_path)
-            # Strips the Global Edition path prefix (e.g., `/global/fa`) from the request path.
+            # Strips the Global Edition path prefix (e.g., `/fa`) from the request path.
             # request.path == request.script_name + request.path_info
             # - `request.script_name` strips the prefix from the request path
             #   so the application processes requests as if it were running at the root level.
@@ -59,7 +59,13 @@ module Rack
             request.path_info = main_path
           end
 
-          setup_region(ge_region)
+          locale_region = Cdo::GlobalEdition.region_locked_locales[request.cookies[LOCALE_KEY]]
+          if locale_region == ge_region
+            setup_region(ge_region)
+          else
+            # This locale actually maps to a different global region, so redirect to it
+            setup_redirect_to(regional_path_for(locale_region, main_path))
+          end
         elsif Cdo::GlobalEdition.region_available?(request.cookies[REGION_KEY])
           # Redirects to the regional version if it is available.
           setup_region_redirect(request.cookies[REGION_KEY])
@@ -174,7 +180,8 @@ module Rack
       end
 
       private def setup_region_redirect(region)
-        redirect_path = regional_path_for(region, request.fullpath)
+        main_path = request_path_vars(:main_path).first || request.path_info
+        redirect_path = regional_path_for(region, main_path)
         setup_redirect_to(redirect_path) if redirectable?(redirect_path)
       end
     end

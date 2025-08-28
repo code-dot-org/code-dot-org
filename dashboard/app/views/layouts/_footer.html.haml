@@ -38,7 +38,7 @@
           = hidden_field_tag :user_return_to, request.url
           - options = options_for_select(locale_options, locale)
           = select_tag :locale, options, { data: { notranslate: '' }, onchange: 'this.form.submit();', 'aria-label':  t('footer.locale_select', default: 'Select language') }
-        - if request.ge_region && Cdo::GlobalEdition.region_locales(request.ge_region).any?
+        - if request.ge_region && !Cdo::GlobalEdition.region_locales(request.ge_region).nil?
           = render_shared_haml('global_edition/region_reset_button')
         %small.dim
           !="&copy; Code.org, #{Time.now.year}"

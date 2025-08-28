@@ -11,7 +11,6 @@ module Cdo
   # Lazily loads global configurations for regional pages
   module GlobalEdition
     REGION_KEY = 'ge_region'
-    ROOT_PATH = ''
 
     # Retrieves a list a global region names.
     REGIONS = Dir.glob('*.yml', base: CDO.dir('config', 'global_editions')).map {|f| File.basename(f, '.yml')}.freeze
@@ -26,10 +25,7 @@ module Cdo
     # - ge_region: "fa"
     # - main_path: "/home"
     PATH_PATTERN = Regexp.new <<~REGEXP.gsub(/\s+/, '')
-      ^(?<ge_prefix>
-        #{ROOT_PATH}/
-        (?<ge_region>#{REGIONS.join('|')})
-      )
+      ^(?<ge_prefix>/(?<ge_region>#{REGIONS.join('|')}))
       (?<main_path>/.*|$)
     REGEXP
 
@@ -78,7 +74,7 @@ module Cdo
 
         # Replace :region tag before freezing
         deep_replace(config, {
-                       ':region': region,
+                       ':region': region.to_s,
                      }
         )
 
@@ -193,7 +189,7 @@ module Cdo
     def self.path(region, *paths)
       path = ::File.join('/', *paths)
       path = Cdo::GlobalEdition::PATH_PATTERN.match(path)[:main_path] if Cdo::GlobalEdition::PATH_PATTERN.match?(path)
-      ::File.join(ROOT_PATH, region, path)
+      ::File.join('/', region, path)
     end
   end
 end
