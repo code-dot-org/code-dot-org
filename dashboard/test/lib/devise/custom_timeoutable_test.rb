@@ -23,7 +23,7 @@ class Devise::Models::CustomTimeoutableTest < ActiveSupport::TestCase
       around do |test|
         travel_to(last_activity_at + timeout + 1.minute) {test.call}
       end
-    
+
       it 'returns true' do
         _(timedout?).must_equal true
       end
