@@ -11,6 +11,7 @@ import {
 } from '@cdo/apps/aichat/types';
 import ChatWorkspace from '@cdo/apps/aichat/views/ChatWorkspace';
 import {queryParams} from '@cdo/apps/code-studio/utils';
+import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
@@ -22,6 +23,13 @@ import moduleStyles from './AiTutor2Chat.module.scss';
 /*
  * Fetch a custom prompt from our 'experimentation-settings' repo:
  *   https://github.com/code-dot-org/experimentation-settings/tree/main/tools/aitutor.
+ *
+ *  IMPORTANT: THIS IS A QUICK AND DIRTY HACK, ONLY TO BE USED FOR INTERNAL PROMPT TESTING AND
+ *  LIMITED AND INDIVIDUALIZED USER TESTING. EVEN DURING PILOT, PROMPTS FOR ANY WIDER TESTING
+ *  MUST BE COMMITTED TO THE CODEBASE TO AVOID ANY EXTERNAL DEPENDENCY ON GITHUB RAW FILES.
+ *
+ *  DROP DEAD DATE: 01/01/2026 - ANYONE ENCOUNTERING THIS CUSTOM PROMPT CODE CAN REMOVE IT WITHOUT
+ *  CONSIDERING HOW IT IS USED OR THE DEVELOPMENT STATE
  *
  * Returns either the custom prompt or null if the custom prompt fails to load or times out.
  * Optionally pass a timeout in milliseconds (defaults to 10s) to revert to the default prompt.
@@ -199,7 +207,9 @@ const AiTutor2Chat: React.FunctionComponent<AiTutor2ChatProps> = ({
       />
     </div>
   ) : (
-    <></>
+    <div className={moduleStyles.loading}>
+      <Spinner />
+    </div>
   );
 };
 
