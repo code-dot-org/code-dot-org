@@ -27,11 +27,6 @@ module Cdo
       nil
     end
 
-    # Ensure YAML.safe_load allows aliases with Psych 4.
-    def safe_load(yaml, *args, **kwargs)
-      super(yaml, *args, **kwargs.merge(aliases: true))
-    end
-
     # Load a `.yml.erb` file
     #
     # Because ERB is already inherently unsafe (and because we never use this
