@@ -9,9 +9,7 @@ markdown <<MARKDOWN
 <p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Cybersecurity Threat</strong> is any potential cause of harm to a computer system or network.</p>
 </div>
 
-#### System-level threats include malware, ransomware, weak default settings, or misconfigured file sharing.
-
-#### Attackers exploit technical vulnerabilities to gain control, disrupt access, or corrupt data.
+#### System-level threats include malware, ransomware, weak default settings, or misconfigured file sharing. Attackers exploit technical vulnerabilities to gain control, disrupt access, or corrupt data.
 
 #### AI may increase the speed or scale of these threats.
 
@@ -36,8 +34,9 @@ markdown <<MARKDOWN
       <strong>Distributed Denial of Service (DDoS) attack</strong> happens when many devices flood a website or server with requests at the same time. This overwhelms the system, slows it down, or crashes it, preventing others from getting in. <br><i>Check out the <a href='https://studio.code.org/courses/ai-powered-threats-and-defenses-2025/units/1/lessons/2/levels/1' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>curriculum level</a> to learn more.</i>
 </div>
 
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #B7E0E5; display: inline-block;">🚀 Additional Teacher Resource: <a href='https://www.canva.com/design/DAGvNt-cbGk/1hBKgfCeiM1NKJX9WIX7Ag/view?utm_content=DAGvNt-cbGk&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h4745770232#3' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Cyber Threat Vocabulary</a></p>
+
 <p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
     ➡️ These levels are from Lesson 2. You can find more details in the full <a href='https://studio.code.org/courses/ai-powered-threats-and-defenses-2025/units/1/lessons/2' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a>.
 </p>
-
 MARKDOWN

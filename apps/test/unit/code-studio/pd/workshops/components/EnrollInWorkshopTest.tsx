@@ -12,6 +12,7 @@ const baseUserInfo = {
   displayName: 'Mr. Doe',
   givenName: 'John',
   familyName: 'Doe',
+  educatorRole: 'Homeschool Teacher',
   schoolInfo: {
     schoolId: 1,
     country: 'United States',

@@ -1,5 +1,5 @@
 import Alert from '@code-dot-org/component-library/alert';
-import {Button} from '@code-dot-org/component-library/button';
+import {LinkButton} from '@code-dot-org/component-library/button';
 import React, {
   FC,
   useMemo,
@@ -10,6 +10,7 @@ import React, {
 } from 'react';
 import {Outlet, useLocation, useParams} from 'react-router-dom';
 
+import {CourseBuildYourOwn} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import {useFetch} from '@cdo/apps/util/useFetch';
 
 import {
@@ -27,6 +28,7 @@ import {Loading} from './components/Loading';
 import {SurveyCategorySelection} from './components/SurveyCategorySelection';
 import {SurveyTypeSelection} from './components/SurveyTypeSelection';
 import {WorkshopTabs} from './components/WorkshopTabs';
+import {ExportSurveysButton} from './surveys/components/ExportSurveysButton';
 import {NoSurveyResponses} from './surveys/components/NoSurveyResponses';
 import {WorkshopLayoutProps, WorkshopContextValue} from './types';
 
@@ -102,12 +104,23 @@ export const WorkshopLayout: FC<WorkshopLayoutProps> = ({
     [enrollmentResponse]
   );
 
-  const showTabs = !pathname.includes('/edit');
-  const showSurveyElements = pathname.includes('/surveys');
-  const showPostSurveyCategorySelection = pathname.includes('/surveys/post');
+  const onSurveysPage = pathname.includes('/surveys');
+  const onPostSurveyPage = pathname.includes('/surveys/post');
+  const onFacilitatorPage = pathname.includes('/surveys/post/facilitators');
+  const onEditPage = pathname.includes('/edit');
+
+  const showTabs = !onEditPage;
+
+  const showLegacySurveyLinkButton =
+    onSurveysPage && workshop?.course && workshop.course !== CourseBuildYourOwn;
+
+  const showSurveyElements = onSurveysPage && !showLegacySurveyLinkButton;
+
+  const showPostSurveyCategorySelection =
+    showSurveyElements && onPostSurveyPage;
+
   const showFacilitatorSelection =
-    pathname.includes('/surveys/post/facilitators') &&
-    surveys?.surveys?.post_workshop;
+    showSurveyElements && onFacilitatorPage && surveys?.surveys?.post_workshop;
 
   const showNoSurveyResponses = useMemo(() => {
     if (showPostSurveyCategorySelection) {
@@ -136,9 +149,6 @@ export const WorkshopLayout: FC<WorkshopLayoutProps> = ({
     workshop,
     workshopLoading,
   ]);
-
-  // TODO: https://codedotorg.atlassian.net/browse/ACQ-3438
-  const handleDownload = () => {};
 
   const contextValue: WorkshopContextValue = {
     workshop,
@@ -171,6 +181,12 @@ export const WorkshopLayout: FC<WorkshopLayoutProps> = ({
           {showSurveyElements && (
             <SurveyTypeSelection surveyTypeOptions={surveyTypeOptions} />
           )}
+          {showLegacySurveyLinkButton && (
+            <LinkButton
+              href={`/pd/workshop_dashboard/workshop_daily_survey_results/${workshopId}`}
+              text="Survey results"
+            />
+          )}
           {showPostSurveyCategorySelection && (
             <>
               <div className={styles.divider} />
@@ -179,15 +195,7 @@ export const WorkshopLayout: FC<WorkshopLayoutProps> = ({
               />
             </>
           )}
-          {showSurveyElements && (
-            <Button
-              className={styles.exportButton}
-              iconLeft={{iconName: 'download'}}
-              onClick={handleDownload}
-              text="Export survey results"
-              size="s"
-            />
-          )}
+          {showSurveyElements && <ExportSurveysButton />}
         </div>
         {showFacilitatorSelection && (
           <FacilitatorSelection facilitators={workshop?.facilitators} />

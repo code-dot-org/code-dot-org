@@ -3,7 +3,7 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Pixels of Me Project Overview
+# Designing Secure Systems Project Overview
 
 <img src="https://images.code.org/615dfc21f720531bfcc14b80a9b103d9-image-1755268620389.png" alt="sample comic from before artifact example. The character is concerned that the message isn't private" width="250px" style="border-radius:10px; float:left; margin: 0px 50px 0px 50px;">
 
@@ -90,5 +90,5 @@ markdown <<MARKDOWN
 #### These requirements come from the  <a href="https://docs.google.com/document/d/1VgnmVktQ4_Kq4yWKW9v4xvuvNRTFfL1KIuRcFrSx2GQ/edit?usp=sharing" target="blank" rel="noopener noreferrer">rubric</a> located at the end of the project guide. 
 
 ## Next up
-#### Let's examine the project guide and briefly look at the day by day plan for facilitating this project.
+#### Let's examine the project guide and briefly look at the day-by-day plan for facilitating this project.
 MARKDOWN

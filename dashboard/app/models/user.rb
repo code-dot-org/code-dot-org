@@ -509,11 +509,6 @@ class User < ApplicationRecord
     end
   end
 
-  def friendly_name(ltr = true)
-    return name unless given_name && family_name
-    ltr ? "#{given_name} #{family_name}" : "#{family_name} #{given_name}"
-  end
-
   def email
     return read_attribute(:email) unless migrated?
     primary_contact_info.try(:email) || ''
@@ -1008,6 +1003,7 @@ class User < ApplicationRecord
       display_name: name,
       given_name: given_name,
       family_name: family_name,
+      educator_role: educator_role ? SharedConstants::EDUCATOR_ROLES.find {|role| role[:value] == educator_role}&.dig(:label) : nil,
       school_info: Queries::SchoolInfo.current_school(self),
     }
   end
@@ -1263,7 +1259,8 @@ class User < ApplicationRecord
             script_id: script_level.script_id,
             new_result: ActivityConstants::BEST_PASS_RESULT,
             submitted: false,
-            level_source_id: nil
+            level_source_id: nil,
+            unit_group: nil
           )
         end
       end
@@ -1661,7 +1658,8 @@ class User < ApplicationRecord
     pairing_user_ids: nil,
     is_navigator: false,
     time_spent: nil,
-    locale: nil
+    locale: nil,
+    unit_group: nil
   )
     new_level_completed = false
     new_csf_level_perfected = false
@@ -1713,6 +1711,10 @@ class User < ApplicationRecord
         user_level.locale_supported = script.supported_locale?(locale)
       end
 
+      if unit_group && user_level.new_record?
+        user_level.unit_group_id = unit_group.id
+      end
+
       user_level.atomic_save!
     end
 
@@ -1728,7 +1730,8 @@ class User < ApplicationRecord
           pairing_user_ids: nil,
           is_navigator: true,
           locale: locale,
-          time_spent: time_spent
+          time_spent: time_spent,
+          unit_group: unit_group
         )
         Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
           PairedUserLevel.find_or_create_by(

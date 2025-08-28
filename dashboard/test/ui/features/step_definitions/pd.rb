@@ -310,7 +310,7 @@ Given(/^I am a "([^"]*)" user enrolling in workshop with "([^"]*)" status$/) do 
 
            school_info = FactoryBot.create(:school_info)
            teacher = find_test_user_by_name(random_name)
-           teacher.update!(school_info: school_info)
+           teacher.update!(educator_role: 'classroom_teacher', school_info: school_info)
            teacher
          else
            nil

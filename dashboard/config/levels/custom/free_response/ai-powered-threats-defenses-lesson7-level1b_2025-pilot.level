@@ -7,7 +7,7 @@
   "user_id": 1574,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "Explain what part of this process is access control:\r\n* *(Use your own words and refer to any models if you can)*",
+    "long_instructions": "Explain what part of this process is authorization:\r\n* *(Use your own words and refer to any models if you can)*",
     "stay_on_level_after_submit": "false",
     "allow_user_uploads": "false",
     "submittable": "false",
@@ -17,7 +17,7 @@
     "skip_dialog": true,
     "skip_sound": true
   },
-  "audit_log": "[{\"changed_at\":\"2025-08-13T16:05:14.491+00:00\",\"changed\":[\"cloned from \\\"test-ai-powered-threats-defenses-lesson7-level1b\\\"\"],\"cloned_from\":\"test-ai-powered-threats-defenses-lesson7-level1b\"},{\"changed_at\":\"2025-08-13 16:05:18 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2025-08-13T16:05:14.491+00:00\",\"changed\":[\"cloned from \\\"test-ai-powered-threats-defenses-lesson7-level1b\\\"\"],\"cloned_from\":\"test-ai-powered-threats-defenses-lesson7-level1b\"},{\"changed_at\":\"2025-08-13 16:05:18 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-08-27 17:04:56 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

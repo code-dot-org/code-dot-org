@@ -17,7 +17,7 @@ module Notifications
     end
   end
 
-  Notification = Struct.new(:id, :source, :external_id, :title, :description, :icon_name, :href_links, :ai_prompts, :priority, :published_at, :expires_at, :read_at, keyword_init: true) do
+  Notification = Struct.new(:id, :source, :external_id, :title, :description, :icon_name, :icon_color, :href_links, :ai_prompts, :priority, :published_at, :expires_at, :read_at, keyword_init: true) do
     def initialize(...)
       super
       freeze

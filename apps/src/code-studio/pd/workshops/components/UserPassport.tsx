@@ -21,6 +21,7 @@ export const isMissingUserInfo = (
     !userInfo.givenName ||
     !userInfo.familyName ||
     !userInfo.email ||
+    !userInfo.educatorRole ||
     (!userInfo.schoolInfo?.schoolName && !userInfo.schoolInfo?.schoolType)
   );
 };
@@ -30,6 +31,7 @@ const UserPassport: React.FunctionComponent<{
   givenName?: string;
   familyName?: string;
   email: string;
+  educatorRole?: string;
   schoolName?: string;
   schoolType?: string;
   returnToHref: string;
@@ -39,6 +41,7 @@ const UserPassport: React.FunctionComponent<{
   givenName,
   familyName,
   email,
+  educatorRole,
   schoolName,
   schoolType,
   returnToHref,
@@ -63,7 +66,7 @@ const UserPassport: React.FunctionComponent<{
       returnToHref
     )}`;
 
-    if (!givenName || !familyName) {
+    if (!givenName || !familyName || !educatorRole) {
       editLink += `&${AccountSettingsSectionUrlParams.AccountInformation}=true`;
     }
     if (!schoolName && !schoolType) {
@@ -104,6 +107,16 @@ const UserPassport: React.FunctionComponent<{
             Email
           </OverlineThreeText>
           <BodyThreeText>{email}</BodyThreeText>
+        </div>
+        <div className={style.userInfoRow}>
+          <OverlineThreeText className={style.userInfoLabel}>
+            Role
+          </OverlineThreeText>
+          {educatorRole ? (
+            <BodyThreeText>{educatorRole}</BodyThreeText>
+          ) : (
+            RenderErrorMessage('Add your role')
+          )}
         </div>
         <div className={style.userInfoRow}>
           <OverlineThreeText className={style.userInfoLabel}>

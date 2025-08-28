@@ -6,6 +6,13 @@ module Pd::Foorm
     include Pd::WorkshopSurveyFoormConstants
     extend Helper
 
+    # **Currently this method only supports Build Your Own Workshop survey results**
+    # Creates a survey summary for a given workshop, filtered by an individual facilitator if they are viewing their
+    # own feedback. This method differs from get_workshop_report below, in that it categorizes the results and does
+    # some response processing to better shape the data for the new survey summary view in the workshop dashboard.
+    # It still relies on the existing form parser and answer summarizer, but uses an additional form parser that
+    # preserves the question `category` and `shortText` properties that have been added to the form json and are
+    # needed in the new summary view (see the build your own workshop surveys for an example).
     def self.get_workshop_survey_summary(workshop_id, facilitator_id_filter = nil)
       return unless workshop_id
       ws_data = Pd::Workshop.find(workshop_id)
@@ -42,6 +49,7 @@ module Pd::Foorm
           facilitators
         )
 
+        # BYO workshops only have pre and post surveys, so this will be either pre_workshop or post_workshop
         surveys[survey_key.downcase.tr(' ', '_')] = {
           total_responses: survey_participant_count,
           categories: categorized_report
