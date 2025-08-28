@@ -150,7 +150,9 @@ export const setSong = createAsyncThunk(
     }
 
     dispatch(setSelectedSong(songId));
-    unloadSong(lastSongId, songData);
+    if (lastSongId) {
+      unloadSong(lastSongId, songData);
+    }
 
     loadSong(songId, songData, async (status: number) => {
       if (status === 403) {
@@ -182,6 +184,43 @@ async function handleSongSelection(
   const metadata = await loadSongMetadata(songId);
   dispatch(setCurrentSongMetadata(metadata));
 }
+
+interface LoadSongsPayload {
+  useRestrictedSongs: boolean;
+  songSelection?: string[];
+}
+
+/** Loads the song manifest only. Used by Lab2 Dance. */
+export const loadSongs = createAsyncThunk(
+  'dance/loadSongs',
+  async ({useRestrictedSongs, songSelection}: LoadSongsPayload, thunkAPI) => {
+    // Check for a user-specified manifest file.
+    const userManifest = queryParams('manifest') as string;
+
+    // Build up a set from our song selection so we can filter our manifest later.
+    const filteredSongSet = new Set(songSelection || []);
+
+    const unfilteredSongManifest = await getSongManifest(
+      useRestrictedSongs,
+      userManifest
+    );
+
+    // TODO: Cache unfiltered song manifest so it persists across multiple levels for Lab2.
+    // a song should be included if we do NOT have a filtered song set
+    // OR if we do have a set and our song's id is in them.
+    let songManifest = unfilteredSongManifest.filter(
+      (song: {id: string}) =>
+        !filteredSongSet.size || filteredSongSet.has(song.id)
+    );
+    // Handle dev scenario where there's no overlap between
+    // levelbuilder-configured songs and the list of dev-only songs
+    if (!songManifest.length) {
+      songManifest = unfilteredSongManifest;
+    }
+    const songData = parseSongOptions(songManifest) as SongData;
+    thunkAPI.dispatch(setSongData(songData));
+  }
+);
 
 const danceSlice = createSlice({
   name: 'dance',
