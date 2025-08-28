@@ -109,7 +109,6 @@ class User < ApplicationRecord
   include Purgeable
   include Facilitator
   include TermsOfService
-  include Timeoutable
   include Rails.application.routes.url_helpers
 
   self.inheritance_column = :user_type
@@ -444,6 +443,7 @@ class User < ApplicationRecord
   # that would be overridden by them if we included it before.
   include Devise::Models::ManualSessionExpiration
   include Devise::DatabaseAuthenticationOverrides
+  include Devise::Models::CustomTimeoutable
 
   acts_as_paranoid # use deleted_at column instead of deleting rows
 
