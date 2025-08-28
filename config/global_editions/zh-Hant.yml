@@ -1,4 +1,4 @@
-# Indonesian Global Region
+# Traditional Chinese Global Region
 
 # The structure of a global configuration is to start with the page context and
 # then list the page name, then list components within that page.
@@ -25,45 +25,45 @@ header:
       - title: teach
         id: header-teach
         domain: code.org
-        url: /global/fa/teacher
+        url: /:region/teacher
       - title: about
         id: header-about
         domain: code.org
-        url: /global/fa/about
+        url: /:region/about
       - title: csf
         id: header-csf
         domain: code.org
-        url: /global/fa/csf
+        url: /:region/csf
       - title: hour_of_code
         id: header-hoc
         domain: code.org
-        url: /global/fa/hourofcode
+        url: /:region/hourofcode
       - title: videos
         id: header-videos
         domain: code.org
-        url: /global/fa/videos
+        url: /:region/videos
 
     student:
       - title: my_dashboard
-        url: /global/fa/home
+        url: /:region/home
         domain: studio.code.org
         id: header-student-home
       - title: course_catalog
-        url: /global/fa/catalog
+        url: /:region/catalog
         domain: studio.code.org
         id: header-student-courses
 
     teacher:
       - title: my_dashboard
-        url: /global/fa/home
+        url: /:region/home
         domain: studio.code.org
         id: header-student-home
       - title: course_catalog
-        url: /global/fa/catalog
+        url: /:region/catalog
         domain: studio.code.org
         id: header-teacher-courses
       - title: professional_learning
-        url: /global/fa/my-professional-learning
+        url: /:region/my-professional-learning
         domain: studio.code.org
         id: header-teacher-professional-learning
 
@@ -72,7 +72,7 @@ header:
     student:
       - title: learn
         domain: studio.code.org
-        url: /global/fa/catalog
+        url: /:region/catalog
         id: learn
       - title: legal
         type: expander
@@ -88,7 +88,7 @@ header:
     teacher:
       - title: learn
         domain: studio.code.org
-        url: /global/fa/catalog
+        url: /:region/catalog
         id: learn
       - title: legal
         type: expander
@@ -199,4 +199,4 @@ pages:
         hideMyPLStaticRecommendedPL: false
         hideMyPLStaticRecommendedPLMidHighBlock: true
         hideMyPLStaticRecommendedPLSelfPacedBlock: false
-        myPLStaticRecommendedPLSelfPacedBlockButtonUrl: /global/fa/teacher
+        myPLStaticRecommendedPLSelfPacedBlockButtonUrl: /:region/teacher

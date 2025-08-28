@@ -49,7 +49,6 @@ module Cdo
     def self.deep_replace(value, dictionary)
       case value
       when String
-        # Replace :region with the contents of the variable `region`
         dictionary.each do |find, replace|
           value.gsub!(find.to_s, replace)
         end
