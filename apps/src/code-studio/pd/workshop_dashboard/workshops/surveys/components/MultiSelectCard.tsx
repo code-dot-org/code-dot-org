@@ -3,27 +3,24 @@ import {
   Heading2,
   StrongText,
 } from '@code-dot-org/component-library/typography';
-import {Card, CardContent, Box, CardHeader} from '@mui/material';
+import {Card, CardContent, CardHeader} from '@mui/material';
 import classNames from 'classnames';
-import React, {FC, useEffect, useState} from 'react';
+import React, {FC} from 'react';
 
 import noResponsesBars from '@cdo/static/pd/no-responses-bars.png';
 
-import {MultiSelectBreakdown} from '../../../WorkshopFormTemplate/types';
+import {Breakdown} from '../../../WorkshopFormTemplate/types';
 
 import {EmptyState} from './EmptyState';
+import {PercentageBarGroup} from './PercentageBarGroup';
 
 import styles from '../../workshop.module.scss';
 
 interface MultiSelectCardProps {
   title: string;
   description: string;
-  items: MultiSelectBreakdown[];
+  items: Breakdown[];
   barLabel?: string;
-}
-
-interface PercentageBarProps {
-  percentage: number;
 }
 
 export const MultiSelectCard: FC<MultiSelectCardProps> = ({
@@ -55,21 +52,7 @@ export const MultiSelectCard: FC<MultiSelectCardProps> = ({
       />
       <CardContent className={styles.cardContent}>
         {items.length > 0 ? (
-          <Box className={styles.column}>
-            {items.map(item => (
-              <Box key={item.label}>
-                <BodyThreeText noMargin>
-                  <StrongText>{item.label}</StrongText>
-                </BodyThreeText>
-                <Box className={styles.barRow}>
-                  <PercentageBar percentage={item.percentage} />
-                  <BodyThreeText noMargin className={styles.barLabel}>{`${
-                    item.count
-                  }${barLabel ? ` ${barLabel}` : ''}`}</BodyThreeText>
-                </Box>
-              </Box>
-            ))}
-          </Box>
+          <PercentageBarGroup items={items} barLabel={barLabel} />
         ) : (
           <EmptyState
             title="No data available yet."
@@ -79,30 +62,5 @@ export const MultiSelectCard: FC<MultiSelectCardProps> = ({
         )}
       </CardContent>
     </Card>
-  );
-};
-
-const PercentageBar: FC<PercentageBarProps> = ({percentage}) => {
-  const [width, setWidth] = useState(0);
-
-  useEffect(() => {
-    // A tiny delay ensures the browser has painted the initial 0% width
-    // before transitioning to the final percentage.
-    const timer = setTimeout(() => {
-      setWidth(percentage);
-    }, 10);
-
-    return () => clearTimeout(timer);
-  }, [percentage]);
-
-  return (
-    <Box className={styles.barContainer}>
-      <Box
-        className={styles.indicator}
-        style={{
-          width: `${width}%`,
-        }}
-      />
-    </Box>
   );
 };

@@ -2179,7 +2179,12 @@ StudioApp.prototype.configureDom = function (config) {
     if (!runButtonWasClicked) {
       analyticsReporter.sendEvent(
         eventName,
-        {signedIn: config.isSignedIn, unitName: config.scriptName},
+        {
+          signedIn: config.isSignedIn,
+          unitName: config.scriptName,
+          levelId: config.serverLevelId,
+          levelName: config.level.name,
+        },
         PLATFORMS.BOTH
       );
       runButtonWasClicked = true;
