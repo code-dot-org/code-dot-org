@@ -7,7 +7,7 @@ import {
 } from '@code-dot-org/component-library/typography';
 import {Card, CardContent, Box} from '@mui/material';
 import classNames from 'classnames';
-import React, {useMemo} from 'react';
+import {CRITICAL_CONCERN_LIMIT, NEEDS_ATTENTION_LIMIT} from '../constants';
 
 import styles from '../../workshop.module.scss';
 
@@ -19,9 +19,6 @@ interface ScoreCardProps {
   responseCount?: number;
   minResponseCount?: number;
 }
-
-export const CRITICAL_CONCERN_LIMIT = 50;
-export const NEEDS_ATTENTION_LIMIT = 70;
 
 export const ScoreCard: React.FC<ScoreCardProps> = ({
   title,

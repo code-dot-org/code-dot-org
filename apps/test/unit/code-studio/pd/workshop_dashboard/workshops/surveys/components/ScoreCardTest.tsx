@@ -2,11 +2,11 @@ import '@testing-library/jest-dom';
 import {render, screen} from '@testing-library/react';
 import React from 'react';
 
+import {ScoreCard} from '@cdo/apps/code-studio/pd/workshop_dashboard/workshops/surveys/components/ScoreCard';
 import {
-  ScoreCard,
   CRITICAL_CONCERN_LIMIT,
   NEEDS_ATTENTION_LIMIT,
-} from '@cdo/apps/code-studio/pd/workshop_dashboard/workshops/surveys/components/ScoreCard';
+} from '@cdo/apps/code-studio/pd/workshop_dashboard/workshops/surveys/constants';
 
 // Mock the FontAwesomeV6Icon component to make it testable.
 // It will render a span with the iconName as its text content.
