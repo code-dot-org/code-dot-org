@@ -36,6 +36,7 @@ export const HTMLPreview = () => {
   const [debouncedSource, setDebouncedSource] = useState(source);
   const sourceLevelId = useRef<number | undefined>(undefined);
   const [isLevelLoading, setIsLevelLoading] = useState(false);
+  const [inputValue, setInputValue] = useState<string>(DEFAULT_START_HTML_FILE);
   const [currentFile, setCurrentFile] = useState<string>(
     DEFAULT_START_HTML_FILE
   );
@@ -47,6 +48,14 @@ export const HTMLPreview = () => {
   const canNavigateBack = navigationHistoryIndex > 0;
   const canNavigateForward =
     navigationHistoryIndex < navigationHistory.length - 1;
+
+  const handleUrlSubmit = (newInputValue: string) => {
+    setCurrentFile(newInputValue);
+    iframeRef.current?.contentWindow?.postMessage(
+      {type: IframeMessageType.CHANGE_FILE_URL_BAR, fileName: newInputValue},
+      previewUrl
+    );
+  };
 
   const onNavigateBack = () => {
     if (!canNavigateBack) {
@@ -84,6 +93,11 @@ export const HTMLPreview = () => {
     setIsLevelLoading(false);
   });
 
+  // Update inputValue when currentFile changes (for navigation buttons)
+  useEffect(() => {
+    setInputValue(currentFile);
+  }, [currentFile]);
+
   useEffect(() => {
     const handleMessage = (event: MessageEvent) => {
       if (event.origin !== previewUrl) {
@@ -100,6 +114,7 @@ export const HTMLPreview = () => {
         event.origin === previewUrl
       ) {
         setCurrentFile(event.data.fileName);
+        setInputValue(event.data.fileName);
       } else if (
         event.data.type === IframeMessageType.ADD_FILE_TO_NAVIGATION_HISTORY &&
         event.origin === previewUrl
@@ -188,8 +203,9 @@ export const HTMLPreview = () => {
     >
       <div className={moduleStyles.previewContainer}>
         <UrlBar
-          value={currentFile}
-          onChange={setCurrentFile}
+          value={inputValue}
+          onChange={setInputValue}
+          onSubmit={handleUrlSubmit}
           canNavigateBack={canNavigateBack}
           canNavigateForward={canNavigateForward}
           onNavigateBack={onNavigateBack}
