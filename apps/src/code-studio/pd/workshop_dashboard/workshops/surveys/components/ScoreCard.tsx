@@ -14,9 +14,10 @@ import React, {FC, useMemo, useState} from 'react';
 
 import {Breakdown} from '../../../WorkshopFormTemplate/types';
 import {CRITICAL_CONCERN_LIMIT, NEEDS_ATTENTION_LIMIT} from '../constants';
+
 import {PercentageBarGroup} from './PercentageBarGroup';
 
-import componentStyles from './ScoreCardStyles.module.scss';
+import styles from './ScoreCardStyles.module.scss';
 import commonStyles from '../../workshop.module.scss';
 
 interface ScoreCardProps {
@@ -106,23 +107,20 @@ export const ScoreCard: FC<ScoreCardProps> = ({
           </Box>
 
           <Box
-            className={classNames(
-              componentStyles.scoreBox,
-              componentStyles[status]
-            )}
+            className={classNames(styles.scoreBox, styles[status])}
             data-status={status}
           >
             {responseBasedScore}
           </Box>
         </CardContent>
-        <Box className={componentStyles.scoreCardFooter}>
-          <Box className={componentStyles.scoreCardFooterText}>
+        <Box className={styles.scoreCardFooter}>
+          <Box className={styles.scoreCardFooterText}>
             <FontAwesomeV6Icon iconName="info-circle" />
             <BodyFourText noMargin>{footer}</BodyFourText>
           </Box>
           {breakdown && !insufficientData && (
             <Button
-              className={componentStyles.breakdownButton}
+              className={styles.breakdownButton}
               text="See breakdown"
               type="tertiary"
               size="s"
@@ -133,12 +131,18 @@ export const ScoreCard: FC<ScoreCardProps> = ({
       </Card>
       {showBreakdown && breakdown && (
         <CustomDialog
+          aria-labelledby="response-breakdown"
           className={commonStyles.customDialog}
           onClose={() => setShowBreakdown(false)}
         >
-          <Heading3 noMargin>Response breakdown</Heading3>
-          <Box className={componentStyles.breakdownContentContainer}>
-            <Box className={componentStyles.longTitleContainer}>
+          <Heading3 id="response-breakdown" noMargin>
+            Response breakdown
+          </Heading3>
+          <Box className={styles.breakdownContentContainer}>
+            <Box
+              id="dsco-dialog-description"
+              className={styles.longTitleContainer}
+            >
               <BodyThreeText noMargin>
                 <StrongText>{longTitle}</StrongText>
               </BodyThreeText>
@@ -148,14 +152,14 @@ export const ScoreCard: FC<ScoreCardProps> = ({
             </Box>
             {questionType === 'likert' && (
               <PercentageBarGroup
-                className={componentStyles.breakdownBarGroup}
+                className={styles.breakdownBarGroup}
                 items={breakdown}
                 barLabel="Teachers"
               />
             )}
           </Box>
           <Button
-            className={componentStyles.breakdownCloseButton}
+            className={styles.breakdownCloseButton}
             text="Return to dashboard"
             onClick={() => setShowBreakdown(false)}
           />

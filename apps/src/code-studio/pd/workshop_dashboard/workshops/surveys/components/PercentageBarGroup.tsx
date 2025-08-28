@@ -8,7 +8,7 @@ import React, {FC, useEffect, useState} from 'react';
 
 import {Breakdown} from '../../../WorkshopFormTemplate/types';
 
-import componentStyles from './PercentageBarGroupStyles.module.scss';
+import styles from './PercentageBarGroupStyles.module.scss';
 import commonStyles from '../../workshop.module.scss';
 
 interface PercentageBarGroupProps {
@@ -34,12 +34,12 @@ export const PercentageBarGroup: FC<PercentageBarGroupProps> = ({
           <BodyThreeText noMargin>
             <StrongText>{item.label}</StrongText>
           </BodyThreeText>
-          <Box className={componentStyles.barRow}>
+          <Box className={styles.barRow}>
             <PercentageBar
               percentage={item.percentage}
-              className={item.status && componentStyles[item.status]}
+              className={item.status && styles[item.status]}
             />
-            <BodyThreeText noMargin className={componentStyles.barLabel}>{`${
+            <BodyThreeText noMargin className={styles.barLabel}>{`${
               item.count
             }${barLabel ? ` ${barLabel}` : ''}`}</BodyThreeText>
           </Box>
@@ -63,9 +63,9 @@ const PercentageBar: FC<PercentageBarProps> = ({percentage, className}) => {
   }, [percentage]);
 
   return (
-    <Box className={componentStyles.barContainer}>
+    <Box className={styles.barContainer}>
       <Box
-        className={classNames(componentStyles.indicator, className)}
+        className={classNames(styles.indicator, className)}
         style={{
           width: `${width}%`,
         }}
