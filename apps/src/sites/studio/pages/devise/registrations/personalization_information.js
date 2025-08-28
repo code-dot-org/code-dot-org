@@ -1,9 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import PersonalizationCollectorContainer from '@cdo/apps/aiDifferentiation/PersonalizationCollectorContainer';
+
 $(document).ready(() => {
   ReactDOM.render(
-    <h1>Hello, world!</h1>,
+    <PersonalizationCollectorContainer />,
     document.getElementById('personalization-information')
   );
 });
