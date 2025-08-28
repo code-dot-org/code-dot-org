@@ -1,0 +1,100 @@
+.scoreBox {
+  height: 3rem;
+  width: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-success-primary);
+  border-radius: 4px;
+  flex-shrink: 0;
+  margin-left: 0.75rem;
+
+  p {
+    color: var(--text-neutral-white-fixed);
+  }
+
+  &.insufficientData {
+    background-color: var(--background-neutral-tertiary);
+    p,
+    i {
+      color: var(--text-neutral-quaternary);
+    }
+
+    i {
+      font-size: 1.75rem;
+    }
+  }
+
+  &.needsAttention {
+    background-color: var(--background-warning-primary);
+    p {
+      color: var(--text-neutral-black-fixed);
+    }
+  }
+
+  &.criticalConcern {
+    background-color: var(--background-error-primary);
+  }
+}
+
+.scoreCardFooter {
+  background-color: var(--background-neutral-secondary);
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
+  border-top: 1px solid var(--borders-neutral-primary);
+  padding: 0.5rem;
+  padding-left: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: space-between;
+
+  .scoreCardFooterText {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .breakdownButton {
+    padding: 0;
+  }
+
+  * {
+    white-space: nowrap;
+  }
+
+  i,
+  p {
+    color: var(--text-neutral-quaternary);
+  }
+
+  i {
+    margin-right: 0.375rem;
+  }
+}
+
+.breakdownContentContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1rem 0;
+  padding: 1rem 0;
+  border-top: 1px solid var(--borders-neutral-primary);
+  border-bottom: 1px solid var(--borders-neutral-primary);
+
+  .longTitleContainer {
+    border-radius: 4px;
+    background-color: var(--background-neutral-secondary);
+    padding: 0.75rem;
+  }
+
+  .breakdownBarGroup {
+    min-width: 37.5rem;
+  }
+}
+
+.breakdownCloseButton {
+  margin-left: auto;
+}

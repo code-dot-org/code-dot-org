@@ -1,36 +1,53 @@
+import {Button} from '@code-dot-org/component-library/button';
+import {CustomDialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {
   BodyFourText,
   BodyThreeText,
+  Heading3,
   OverlineTwoText,
   StrongText,
 } from '@code-dot-org/component-library/typography';
 import {Card, CardContent, Box} from '@mui/material';
 import classNames from 'classnames';
-import {CRITICAL_CONCERN_LIMIT, NEEDS_ATTENTION_LIMIT} from '../constants';
+import React, {FC, useMemo, useState} from 'react';
 
-import styles from '../../workshop.module.scss';
+import {Breakdown} from '../../../WorkshopFormTemplate/types';
+import {CRITICAL_CONCERN_LIMIT, NEEDS_ATTENTION_LIMIT} from '../constants';
+import {PercentageBarGroup} from './PercentageBarGroup';
+
+import componentStyles from './ScoreCardStyles.module.scss';
+import commonStyles from '../../workshop.module.scss';
 
 interface ScoreCardProps {
   title: string;
+  longTitle: string;
   description: string;
   footer: string | null;
+  questionType: 'likert' | 'promoter';
   score?: number | null;
   responseCount?: number;
   minResponseCount?: number;
+  breakdown?: Breakdown[];
 }
 
-export const ScoreCard: React.FC<ScoreCardProps> = ({
+export const ScoreCard: FC<ScoreCardProps> = ({
   title,
+  longTitle,
   description,
   footer,
+  questionType,
   score,
   responseCount,
   minResponseCount,
+  breakdown,
 }) => {
+  const [showBreakdown, setShowBreakdown] = useState(false);
   const insufficientData = useMemo(
     () =>
-      (responseCount && minResponseCount && responseCount < minResponseCount) ||
+      (typeof responseCount === 'number' &&
+        typeof minResponseCount === 'number' &&
+        responseCount < minResponseCount) ||
       score === null ||
       score === undefined,
     [responseCount, minResponseCount, score]
@@ -74,28 +91,76 @@ export const ScoreCard: React.FC<ScoreCardProps> = ({
   }, [score, responseCount, insufficientData]);
 
   return (
-    <Card className={classNames(styles.card, styles.questionCard)}>
-      <CardContent className={styles.cardContent}>
-        <Box>
-          <OverlineTwoText noMargin>
-            <StrongText>{title}</StrongText>
-          </OverlineTwoText>
-          <BodyFourText className={styles.description} noMargin>
-            {responseBasedDescription}
-          </BodyFourText>
-        </Box>
+    <>
+      <Card
+        className={classNames(commonStyles.card, commonStyles.questionCard)}
+      >
+        <CardContent className={commonStyles.cardContent}>
+          <Box>
+            <OverlineTwoText noMargin>
+              <StrongText>{title}</StrongText>
+            </OverlineTwoText>
+            <BodyFourText className={commonStyles.description} noMargin>
+              {responseBasedDescription}
+            </BodyFourText>
+          </Box>
 
-        <Box
-          className={classNames(styles.scoreBox, styles[status])}
-          data-status={status}
-        >
-          {responseBasedScore}
+          <Box
+            className={classNames(
+              componentStyles.scoreBox,
+              componentStyles[status]
+            )}
+            data-status={status}
+          >
+            {responseBasedScore}
+          </Box>
+        </CardContent>
+        <Box className={componentStyles.scoreCardFooter}>
+          <Box className={componentStyles.scoreCardFooterText}>
+            <FontAwesomeV6Icon iconName="info-circle" />
+            <BodyFourText noMargin>{footer}</BodyFourText>
+          </Box>
+          {breakdown && !insufficientData && (
+            <Button
+              className={componentStyles.breakdownButton}
+              text="See breakdown"
+              type="tertiary"
+              size="s"
+              onClick={() => setShowBreakdown(true)}
+            />
+          )}
         </Box>
-      </CardContent>
-      <Box className={styles.scoreCardFooter}>
-        <FontAwesomeV6Icon iconName="info-circle" />
-        <BodyFourText noMargin>{footer}</BodyFourText>
-      </Box>
-    </Card>
+      </Card>
+      {showBreakdown && breakdown && (
+        <CustomDialog
+          className={commonStyles.customDialog}
+          onClose={() => setShowBreakdown(false)}
+        >
+          <Heading3 noMargin>Response breakdown</Heading3>
+          <Box className={componentStyles.breakdownContentContainer}>
+            <Box className={componentStyles.longTitleContainer}>
+              <BodyThreeText noMargin>
+                <StrongText>{longTitle}</StrongText>
+              </BodyThreeText>
+              <BodyFourText
+                noMargin
+              >{`${responseCount} responses received`}</BodyFourText>
+            </Box>
+            {questionType === 'likert' && (
+              <PercentageBarGroup
+                className={componentStyles.breakdownBarGroup}
+                items={breakdown}
+                barLabel="Teachers"
+              />
+            )}
+          </Box>
+          <Button
+            className={componentStyles.breakdownCloseButton}
+            text="Return to dashboard"
+            onClick={() => setShowBreakdown(false)}
+          />
+        </CustomDialog>
+      )}
+    </>
   );
 };

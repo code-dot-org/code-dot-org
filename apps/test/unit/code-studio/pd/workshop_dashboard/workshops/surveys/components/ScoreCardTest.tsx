@@ -20,7 +20,9 @@ jest.mock(
 describe('ScoreCard', () => {
   const defaultProps = {
     title: 'Test Score Card',
+    longTitle: 'Test Score Card Long',
     description: 'This is a test description',
+    questionType: 'likert' as const,
     footer: 'Test footer information',
     score: 85,
     responseCount: 10,
