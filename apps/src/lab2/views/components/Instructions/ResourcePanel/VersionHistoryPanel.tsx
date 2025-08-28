@@ -1,11 +1,10 @@
 import Alert from '@code-dot-org/component-library/alert';
 import {Button} from '@code-dot-org/component-library/button';
-import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {RadioButton} from '@code-dot-org/component-library/radioButton';
 import Tags from '@code-dot-org/component-library/tags';
 import classNames from 'classnames';
-import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
+import React, {useCallback, useEffect, useMemo, useState} from 'react';
 
 import {sendCodebridgeAnalyticsEvent} from '@cdo/apps/codebridge/utils/analyticsReporterHelper';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
@@ -28,7 +27,7 @@ import {commonI18n} from '@cdo/apps/types/locale';
 import currentLocale from '@cdo/apps/util/currentLocale';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import moduleStyles from './version-history.module.scss';
+import moduleStyles from './version-history-panel.module.scss';
 
 interface VersionHistoryPanelProps {
   versionList: ProjectVersion[];
@@ -46,47 +45,28 @@ const INITIAL_VERSION_ID = 'initial-version';
 
 const VersionHistoryPanel: React.FunctionComponent<
   VersionHistoryPanelProps
-> = ({updatedSourceCallback, startSources, appName}) => {
+> = ({
+  versionList,
+  listLoaded,
+  listLoading,
+  listLoadError,
+  selectedVersion,
+  setSelectedVersion,
+  updatedSourceCallback,
+  startSources,
+  appName,
+}) => {
   const [versionLoadError, setVersionLoadError] = useState(false);
   const [versionLoading, setVersionLoading] = useState(false);
-  const [isVersionListLoaded, setIsVersionListLoaded] = useState(false);
-  const [versionList, setVersionList] = useState<ProjectVersion[]>([]);
-  const [selectedVersion, setSelectedVersion] = useState('');
-  const [listLoadError, setListLoadError] = useState(false);
-  const [versionListLoading, setVersionListLoading] = useState(false);
   const locale = currentLocale();
   const latestVersion = useMemo(
     () => versionList?.find(v => v.isLatest)?.versionId || INITIAL_VERSION_ID,
     [versionList]
   );
 
-  useEffect(() => {
-    const projectManager = Lab2Registry.getInstance().getProjectManager();
-    if (!projectManager) {
-      setListLoadError(true);
-      return;
-    }
-    setVersionListLoading(true);
-    projectManager
-      .getVersionList()
-      .then(versionList => {
-        setVersionList(versionList);
-        setIsVersionListLoaded(true);
-        setVersionListLoading(false);
-      })
-      .catch(() => {
-        setListLoadError(true);
-        setVersionListLoading(false);
-      });
-  }, []);
-
-  // We need to set the theme here becausse the dropdown is rendered in a portal, outside of the
-  // main lab container.
-  const {theme} = useTheme();
-
-  const viewingOldVersion = useAppSelector(
-    state => state.lab2Project.viewingOldVersion
-  );
+  // const viewingOldVersion = useAppSelector(
+  //   state => state.lab2Project.viewingOldVersion
+  // );
 
   // If this is a teacher viewing a student's project, we hide the restore button,
   // but still allow viewing old versions.
@@ -111,47 +91,7 @@ const VersionHistoryPanel: React.FunctionComponent<
     }
   }, [versionList, selectedVersion, latestVersion, setSelectedVersion]);
 
-  useEffect(() => {
-    if (listLoaded && !previousListLoaded.current && selectedVersion !== '') {
-      // If we are currently viewing an old version (this happens if
-      // the user x'd out of the dropdown, but did not cancel), focus the selected version,
-      // otherwise focus the latest version and set the selected version to the latest version.
-      // We explicitly focus because we are using a react portal, and we need to ensure the focus
-      // goes to the correct element.
-      // Wait a tick to ensure the selected version is rendered before focusing it.
-      const versionId = viewingOldVersion ? selectedVersion : latestVersion;
-      if (!viewingOldVersion) {
-        setSelectedVersion(latestVersion);
-      }
-      if (versionId) {
-        setTimeout(() => {
-          const selectedVersionButton =
-            document.querySelector<HTMLInputElement>(
-              `input[type="radio"][name="${versionId}"]`
-            );
-          if (selectedVersionButton) {
-            selectedVersionButton.focus();
-          }
-        }, 0);
-      }
-    }
-
-    previousListLoaded.current = listLoaded;
-  }, [
-    listLoaded,
-    selectedVersion,
-    latestVersion,
-    viewingOldVersion,
-    setSelectedVersion,
-  ]);
-
-  useEffect(() => {
-    // If we are on the loading screen or load error screen, focus the close button.
-    if (listLoadError || listLoading) {
-      const closeButton = document.getElementById('close-version-history');
-      closeButton?.focus();
-    }
-  }, [listLoadError, listLoading]);
+  // TODO: ensure we focus the selected version when we open the panel.
 
   const successfulRestoreCleanUp = useCallback(
     (sources: ProjectSources) => {
@@ -301,13 +241,7 @@ const VersionHistoryPanel: React.FunctionComponent<
   };
 
   return (
-    <div
-      className={moduleStyles.versionHistoryDropdown}
-      role="dialog"
-      aria-modal="true"
-      aria-label={lab2I18n.versionHistoryList()}
-      data-theme={theme}
-    >
+    <div className={moduleStyles.versionHistoryPanel}>
       {listLoading && (
         <div
           className={classNames(
