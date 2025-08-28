@@ -99,6 +99,7 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
         selectedThreadId={threadId}
         threadSelectCallback={fetchThreadMessages}
         setShowNotifications={setShowNotifications}
+        showNotifications={showNotifications}
       />
       {showNotifications && experiments.isEnabled('teacher-notifications') ? (
         <AiDiffNotificationList />
