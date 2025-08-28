@@ -2,7 +2,8 @@ class BackfillSectionCourseId < ActiveRecord::Migration[6.1]
   BATCH_SIZE = 100
   INFO_INTERVAL = 1_000
   def up
-    return if Rails.env.production?
+    return if Rails.env.production? || Rails.env.test?
+
     CDO.log = Logger.new($stdout)
     ActiveRecord::Base.record_timestamps = false
 
