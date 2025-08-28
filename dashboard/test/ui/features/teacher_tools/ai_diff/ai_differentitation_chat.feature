@@ -20,7 +20,7 @@ Feature: Send and receive messages in the AI differentiation chat
     And I wait until element "button:contains(Get Started)" is not visible
 
     #Go to curriculum page
-    And I am on "http://studio.code.org/courses/csp-2025"
+    And I am on "http://studio.code.org/courses/csp-2025?enableExperiments=ai-diff-sidebar"
     And I wait until element "#ui-floatingActionButton" is visible
     #wait for pulse to finish
     And I wait for 5 seconds
@@ -53,7 +53,7 @@ Feature: Send and receive messages in the AI differentiation chat
 
     And I click selector "button:contains(Finish)" once I see it
 
-    #Now we see the regular AI diff chat
+    #Now we see the regular AI diff chat (with thread sidebar)
     And I wait until element "input[value='Give me an example']" is visible
     Then I see no difference for "ai diff chat initial view"
 

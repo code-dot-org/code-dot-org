@@ -1,0 +1,55 @@
+name 'csaif_pl_course_overview_aug2025'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# AI-Powered Threats and Defenses Unit Overview
+ 
+#### Teachers can use the AI-Powered Threats and Defenses Unit as part of the AI Foundations course, or as a standalone resource for grades 9-12. It can also be integrated into existing computer science, math, or science curricula, offering scheduling flexibility.
+
+<div style="display: flex; align-items: center; justify-content: space-between; background: #f7f8fa; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-family: Figtree, sans-serif; font-size: 14pt; line-height: 1.6; max-width: 800px; margin: 20px auto;">
+
+  <div>
+    <h4 style="margin-top: 0; font-weight: bold;">Students will:</h4>
+    <ul style="list-style-type: disc; padding-left: 10px; font-size: 14pt">
+      <li>Explain how different types of cybersecurity attacks work.</li>
+      <li>Describe how AI is used in cybersecurity tools.</li>
+      <li>Analyze cybersecurity scenarios.</li>
+      <li>Apply computational thinking strategies to examine cybersecurity threats, vulnerabilities, and defenses.</li>
+      <li>Evaluate tradeoffs between usability and security in the design of digital systems.</li>
+      <li>Propose security design improvements that consider both human-centered design principles and their impact on diverse users and communities.
+</li>
+<li>Describe cybersecurity career roles and how professionals use AI tools in their work.</li>
+    </ul>
+  </div>
+  <div>
+    <img src="https://images.code.org/c1d4fc3061ce15ad22ce124dd8ebf2e6-Screenshot 2025-04-18 at 10.51.37 AM.png" 
+         alt="Computer icon" 
+         style="width: 300px; height: auto; border-radius: 10px;margin: 10px">
+  </div>
+</div>
+
+---
+
+<div style="clear:both;"></div>
+
+## Unit Calendar 
+
+#### Take a quick look at the lessons included in this unit using the calendar tool.
+
+#### This version of the calendar shows the pacing for 45 minute class periods and can be customized using the drop-down menu to accommodate your schedule. 
+
+#### Check out the <a href="https://studio.code.org/s/aif5-2025" target="blank" rel="noopener noreferrer">calendar feature</a> on top of the unit preview. 
+
+
+<div style="clear:both;"></div>
+
+<p align="center">
+<img src="https://images.code.org/f423269fd552d79874d354c922be5c80-Screenshot 2025-08-26 at 12.36.06 PM.png" alt="calendar of lesson overview" width="700px" style="border-radius:10px; ">
+</p>
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ Preview the full <a href='https://studio.code.org/courses/ai-powered-threats-and-defenses-2025/units/1' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'> Unit</a>.
+</p>
+
+MARKDOWN

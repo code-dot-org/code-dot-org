@@ -1,4 +1,3 @@
-import TextField from '@code-dot-org/component-library/textField';
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import React, {useEffect, useMemo, useRef, useState} from 'react';
 
@@ -9,7 +8,8 @@ import {LifecycleEvent} from '@cdo/apps/lab2/utils';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {IframeMessageType} from './constants';
+import {IframeMessageType, DEFAULT_START_HTML_FILE} from './constants';
+import {UrlBar} from './UrlBar';
 
 import moduleStyles from './styles/html-preview.module.scss';
 
@@ -26,6 +26,8 @@ export const HTMLPreview = () => {
     const port = 'localhost' === environmentKey ? `:${location.port}` : '';
     return `${location.protocol}//preview.${subdomain}codeprojects.org${port}`;
   }, []);
+  const [navigationHistory, setNavigationHistory] = useState<string[]>([]);
+  const [navigationHistoryIndex, setNavigationHistoryIndex] = useState(-1);
 
   const source = useAppSelector(
     state => state.lab2Project.projectSources?.source
@@ -34,17 +36,48 @@ export const HTMLPreview = () => {
   const [debouncedSource, setDebouncedSource] = useState(source);
   const sourceLevelId = useRef<number | undefined>(undefined);
   const [isLevelLoading, setIsLevelLoading] = useState(false);
-  const [currentFile, setCurrentFile] = useState<string>('index.html');
+  const [currentFile, setCurrentFile] = useState<string>(
+    DEFAULT_START_HTML_FILE
+  );
   const isPredictLevel = levelProperties?.predictSettings?.isPredictLevel;
   const hasSubmittedPredictResponse = useAppSelector(
     isPredictResponseSubmitted
   );
   const allowUserScripts = !isPredictLevel || hasSubmittedPredictResponse;
+  const canNavigateBack = navigationHistoryIndex > 0;
+  const canNavigateForward =
+    navigationHistoryIndex < navigationHistory.length - 1;
+
+  const onNavigateBack = () => {
+    if (!canNavigateBack) {
+      return;
+    }
+    const updatedFile = navigationHistory[navigationHistoryIndex - 1];
+    setNavigationHistoryIndex(navigationHistoryIndex - 1);
+    setCurrentFile(updatedFile);
+    iframeRef.current?.contentWindow?.postMessage(
+      {type: IframeMessageType.NAVIGATE_TO_FILE, fileName: updatedFile},
+      previewUrl
+    );
+  };
+  const onNavigateForward = () => {
+    if (!canNavigateForward) {
+      return;
+    }
+    const updatedFile = navigationHistory[navigationHistoryIndex + 1];
+    setNavigationHistoryIndex(navigationHistoryIndex + 1);
+    setCurrentFile(updatedFile);
+    iframeRef.current?.contentWindow?.postMessage(
+      {type: IframeMessageType.NAVIGATE_TO_FILE, fileName: updatedFile},
+      previewUrl
+    );
+  };
 
   useLifecycleNotifier(LifecycleEvent.LevelLoadStarted, () => {
     // When we switch levels, clear the source so the preview does not show outdated content.
     setDebouncedSource(undefined);
     setIsLevelLoading(true);
+    setCurrentFile(DEFAULT_START_HTML_FILE);
   });
 
   useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, () => {
@@ -67,12 +100,28 @@ export const HTMLPreview = () => {
         event.origin === previewUrl
       ) {
         setCurrentFile(event.data.fileName);
+      } else if (
+        event.data.type === IframeMessageType.ADD_FILE_TO_NAVIGATION_HISTORY &&
+        event.origin === previewUrl
+      ) {
+        // If navigationHistoryIndex is the last index, add the file to the end of the array.
+        // Otherwise, truncate the array after the current index and add the file to the end.
+        const updatedNavigationHistory =
+          navigationHistoryIndex === navigationHistory.length - 1
+            ? [...navigationHistory, event.data.fileToAddToNavigationHistory]
+            : [
+                ...navigationHistory.slice(0, navigationHistoryIndex + 1),
+                event.data.fileToAddToNavigationHistory,
+              ];
+
+        setNavigationHistory(updatedNavigationHistory);
+        setNavigationHistoryIndex(updatedNavigationHistory.length - 1);
       }
     };
 
     window.addEventListener('message', handleMessage);
     return () => window.removeEventListener('message', handleMessage);
-  }, [previewUrl, currentFile]);
+  }, [previewUrl, currentFile, navigationHistory, navigationHistoryIndex]);
 
   useEffect(() => {
     const debouncedUpdate = setTimeout(() => {
@@ -93,6 +142,8 @@ export const HTMLPreview = () => {
     if (sourceLevelId.current !== levelProperties.id) {
       // If we have a new level id, update the source immediately.
       setDebouncedSource(source);
+      setNavigationHistory([]);
+      setNavigationHistoryIndex(-1);
       sourceLevelId.current = levelProperties.id;
     } else {
       // Set a timeout to send the debounced value after 500ms
@@ -136,14 +187,14 @@ export const HTMLPreview = () => {
       hideHeaders
     >
       <div className={moduleStyles.previewContainer}>
-        <div>
-          <TextField
-            onChange={e => setCurrentFile(e.target.value)}
-            value={currentFile}
-            name={'url-input'}
-            size={'s'}
-          />
-        </div>
+        <UrlBar
+          value={currentFile}
+          onChange={setCurrentFile}
+          canNavigateBack={canNavigateBack}
+          canNavigateForward={canNavigateForward}
+          onNavigateBack={onNavigateBack}
+          onNavigateForward={onNavigateForward}
+        />
         {/* This iframe points to the environment-specific version of preview.codeprojects.org. That url will eventually
             route to InnerHTMLPreview. */}
         <iframe

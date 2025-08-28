@@ -28,9 +28,16 @@ const SettingsPanel: React.FunctionComponent<SettingsPanelProps> = ({
   );
 
   useEffect(() => {
+    // Set up a listener for localization changes.
     localization.on('change', info => {
       setLocaleOptions(localization.locales);
     });
+
+    // On load, focus the language dropdown.
+    const languageDropdown = document.getElementById(
+      'settings-language-dropdown'
+    );
+    languageDropdown?.focus();
   }, []);
 
   const handleLanguageChange = (
@@ -74,6 +81,7 @@ const SettingsPanel: React.FunctionComponent<SettingsPanelProps> = ({
             color={dropdownColor}
             dropdownTextThickness="thin"
             className={styles.dropdown}
+            id={'settings-language-dropdown'}
           />
         </form>
         {settings.map(setting => (
