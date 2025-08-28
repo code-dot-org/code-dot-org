@@ -5,7 +5,9 @@ $space-l: 8px;
 $space-xl: 10px;
 
 .versionHistoryPanel {
-  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
 }
 
 .message {
@@ -14,8 +16,9 @@ $space-xl: 10px;
 }
 
 .list {
-  max-height: 300px;
   overflow-y: auto;
+  flex: 1;
+  min-height: 0;
 }
 
 .row {
@@ -31,6 +34,7 @@ $space-xl: 10px;
 }
 
 .footer {
+  flex-shrink: 0;
   display: flex;
   justify-content: flex-end;
   gap: $space-s;

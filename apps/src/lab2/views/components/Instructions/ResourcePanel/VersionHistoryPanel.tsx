@@ -303,7 +303,7 @@ const VersionHistoryPanel: React.FunctionComponent<
         </div>
       )}
       {listLoaded && (
-        <div>
+        <>
           <div className={moduleStyles.list}>
             {versionList.map(version => (
               <div id={version.versionId} key={version.versionId}>
@@ -332,16 +332,16 @@ const VersionHistoryPanel: React.FunctionComponent<
               </RadioButton>
             </div>
           </div>
-          {versionLoadError && (
-            <div className={classNames(moduleStyles.versionLoadError)}>
-              <Alert
-                type="danger"
-                text={lab2I18n.versionLoadFailure()}
-                size="s"
-              />
-            </div>
-          )}
           <div className={moduleStyles.footer}>
+            {versionLoadError && (
+              <div className={classNames(moduleStyles.versionLoadError)}>
+                <Alert
+                  type="danger"
+                  text={lab2I18n.versionLoadFailure()}
+                  size="s"
+                />
+              </div>
+            )}
             {versionLoading && (
               <div className={classNames(moduleStyles.loadingVersionSpinner)}>
                 <FontAwesomeV6Icon iconName="spinner" animationType="spin" />
@@ -367,7 +367,7 @@ const VersionHistoryPanel: React.FunctionComponent<
               color="black"
             />
           </div>
-        </div>
+        </>
       )}
     </div>
   );
