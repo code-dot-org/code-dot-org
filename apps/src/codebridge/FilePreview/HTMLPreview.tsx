@@ -69,6 +69,7 @@ export const HTMLPreview = () => {
     const updatedFile = navigationHistory[navigationHistoryIndex - 1];
     setNavigationHistoryIndex(navigationHistoryIndex - 1);
     setCurrentFile(updatedFile);
+    setInputValue(updatedFile);
     iframeRef.current?.contentWindow?.postMessage(
       {type: IframeMessageType.NAVIGATE_TO_FILE, fileName: updatedFile},
       previewUrl
@@ -81,6 +82,7 @@ export const HTMLPreview = () => {
     const updatedFile = navigationHistory[navigationHistoryIndex + 1];
     setNavigationHistoryIndex(navigationHistoryIndex + 1);
     setCurrentFile(updatedFile);
+    setInputValue(updatedFile);
     iframeRef.current?.contentWindow?.postMessage(
       {type: IframeMessageType.NAVIGATE_TO_FILE, fileName: updatedFile},
       previewUrl
@@ -92,6 +94,7 @@ export const HTMLPreview = () => {
     setDebouncedSource(undefined);
     setIsLevelLoading(true);
     setCurrentFile(DEFAULT_START_HTML_FILE);
+    setInputValue(DEFAULT_START_HTML_FILE);
   });
 
   useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, () => {
