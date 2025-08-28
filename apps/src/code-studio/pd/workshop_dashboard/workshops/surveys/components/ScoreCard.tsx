@@ -15,6 +15,7 @@ import React, {FC, useMemo, useState} from 'react';
 import {Breakdown} from '../../../WorkshopFormTemplate/types';
 import {CRITICAL_CONCERN_LIMIT, NEEDS_ATTENTION_LIMIT} from '../constants';
 
+import BarChart from './BarChart';
 import {PercentageBarGroup} from './PercentageBarGroup';
 
 import styles from './ScoreCardStyles.module.scss';
@@ -155,6 +156,13 @@ export const ScoreCard: FC<ScoreCardProps> = ({
                 className={styles.breakdownBarGroup}
                 items={breakdown}
                 barLabel="Teachers"
+              />
+            )}
+            {questionType === 'promoter' && (
+              <BarChart
+                items={breakdown}
+                xLabel="nps scale"
+                yLabel="responses"
               />
             )}
           </Box>

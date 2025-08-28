@@ -1,6 +1,7 @@
 import {
   isQuestionType,
   LikertResults,
+  PromoterResults,
   SurveyQuestion,
 } from '../../WorkshopFormTemplate/types';
 
@@ -31,3 +32,13 @@ export const prepLikertBreakdown = (breakdown: LikertResults['breakdown']) =>
         Number(key) === 4 ? 'neutral' : Number(key) > 4 ? 'success' : 'error',
     }))
     .reverse();
+
+export const prepPromoterBreakdown = (
+  breakdown: PromoterResults['breakdown']
+) =>
+  Object.entries(breakdown).map(([key, value]) => ({
+    ...value,
+    label: key,
+    className:
+      Number(key) >= 9 ? 'success' : Number(key) >= 7 ? 'warning' : 'error',
+  }));
