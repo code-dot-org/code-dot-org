@@ -67,7 +67,4 @@ class TeacherDashboardController < ApplicationController
       existingSchoolInfo: school_info,
     }
   end
-
-  def personalization_information
-  end
 end
