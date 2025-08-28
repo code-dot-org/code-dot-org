@@ -54,7 +54,8 @@ const VersionHistoryPanel: React.FunctionComponent<
     [versionList]
   );
   const previousLevelId = useRef<number>(levelId);
-  const [focusSelectedVersion, setFocusSelectedVersion] = useState(true);
+  const [focusSelectedVersion, setFocusSelectedVersion] = useState(false);
+  const previousListLoaded = useRef<boolean>(listLoaded);
 
   const viewingOldVersion = useAppSelector(
     state => state.lab2Project.viewingOldVersion
@@ -123,7 +124,10 @@ const VersionHistoryPanel: React.FunctionComponent<
   }, [versionList, selectedVersion, latestVersion, setSelectedVersion]);
 
   useEffect(() => {
-    if (focusSelectedVersion && selectedVersion !== '') {
+    if (
+      (focusSelectedVersion || (listLoaded && !previousListLoaded.current)) &&
+      selectedVersion !== ''
+    ) {
       // If we are currently viewing an old version (this happens if
       // the user switched panels but did not cancel), focus the selected version,
       // otherwise focus the latest version and set the selected version to the latest version.
@@ -144,6 +148,8 @@ const VersionHistoryPanel: React.FunctionComponent<
           }
         }, 0);
       }
+      setFocusSelectedVersion(false);
+      previousListLoaded.current = listLoaded;
     }
   }, [
     focusSelectedVersion,
@@ -151,6 +157,7 @@ const VersionHistoryPanel: React.FunctionComponent<
     latestVersion,
     viewingOldVersion,
     setSelectedVersion,
+    listLoaded,
   ]);
 
   const successfulRestoreCleanUp = useCallback(
@@ -326,7 +333,7 @@ const VersionHistoryPanel: React.FunctionComponent<
           />
         </div>
       )}
-      {listLoaded && (
+      {!listLoading && (
         <>
           <div className={moduleStyles.list}>
             {versionList.map(version => (
