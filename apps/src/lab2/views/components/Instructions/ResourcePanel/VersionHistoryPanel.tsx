@@ -34,13 +34,14 @@ interface VersionHistoryPanelProps {
   selectedVersion: string;
   setSelectedVersion: (version: string) => void;
   appName: string;
+  levelId: number;
 }
 
 const INITIAL_VERSION_ID = 'initial-version';
 
 const VersionHistoryPanel: React.FunctionComponent<
   VersionHistoryPanelProps
-> = ({selectedVersion, setSelectedVersion, startSources, appName}) => {
+> = ({selectedVersion, setSelectedVersion, startSources, appName, levelId}) => {
   const [versionList, setVersionList] = useState<ProjectVersion[]>([]);
   const [listLoaded, setListLoaded] = useState(false);
   const [listLoading, setListLoading] = useState(false);
@@ -53,6 +54,7 @@ const VersionHistoryPanel: React.FunctionComponent<
     [versionList]
   );
   const previousListLoaded = useRef<boolean>(listLoaded);
+  const previousLevelId = useRef<number>(levelId);
 
   const viewingOldVersion = useAppSelector(
     state => state.lab2Project.viewingOldVersion
@@ -75,27 +77,38 @@ const VersionHistoryPanel: React.FunctionComponent<
 
   const dispatch = useAppDispatch();
 
-  // Load version list on first open
-  // TODO: refresh buttton?
-  useEffect(() => {
-    const projectManager = Lab2Registry.getInstance().getProjectManager();
-    if (!projectManager) {
-      setListLoadError(true);
-      return;
-    }
-    setListLoading(true);
-    projectManager
-      .getVersionList()
-      .then(versionList => {
-        setVersionList(versionList);
-        setListLoaded(true);
-        setListLoading(false);
-      })
-      .catch(() => {
+  const loadVersionList = useCallback(
+    (resetSelected: boolean) => {
+      const projectManager = Lab2Registry.getInstance().getProjectManager();
+      if (!projectManager) {
         setListLoadError(true);
-        setListLoading(false);
-      });
-  }, []);
+        return;
+      }
+      setListLoading(true);
+      projectManager
+        .getVersionList()
+        .then(versionList => {
+          setVersionList(versionList);
+          setListLoaded(true);
+          setListLoading(false);
+          if (resetSelected) {
+            setSelectedVersion('');
+          }
+        })
+        .catch(() => {
+          setListLoadError(true);
+          setListLoading(false);
+        });
+    },
+    [setSelectedVersion]
+  );
+
+  // Load version list on first open or if the levelId changes.
+  useEffect(() => {
+    const resetSelected = previousLevelId.current !== levelId;
+    loadVersionList(resetSelected);
+    previousLevelId.current = levelId;
+  }, [loadVersionList, levelId]);
 
   useEffect(() => {
     if (selectedVersion === '') {
@@ -141,8 +154,9 @@ const VersionHistoryPanel: React.FunctionComponent<
     (sources: ProjectSources) => {
       dispatch(setViewingOldVersion(false));
       dispatch(setRestoredOldVersion(true));
+      loadVersionList(true);
     },
-    [dispatch]
+    [dispatch, loadVersionList]
   );
 
   const startOver = useCallback(() => {
@@ -251,13 +265,20 @@ const VersionHistoryPanel: React.FunctionComponent<
   );
 
   // Function called when clicking 'cancel'. This will reset the project to the current version
-  // if the user is viewing an old version, then close the dropdown.
+  // if the user is viewing an old version, then set the selected version to the latest version.
   const handleCancel = useCallback(() => {
     // Go back to current version if we are viewing an old version
     if (selectedVersion && !isLatestVersion(selectedVersion)) {
       dispatch(resetToCurrentVersion());
+      setSelectedVersion(latestVersion);
     }
-  }, [dispatch, isLatestVersion, selectedVersion]);
+  }, [
+    dispatch,
+    isLatestVersion,
+    latestVersion,
+    selectedVersion,
+    setSelectedVersion,
+  ]);
 
   const renderLatestTag = () => {
     return (

@@ -8,6 +8,7 @@ $space-xl: 10px;
   display: flex;
   flex-direction: column;
   min-height: 0;
+  background-color: var(--background-neutral-primary);
 }
 
 .message {

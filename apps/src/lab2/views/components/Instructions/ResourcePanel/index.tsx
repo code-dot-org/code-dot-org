@@ -134,6 +134,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
           setSelectedVersion={setSelectedVersion}
           startSources={versionHistoryProps.startSources}
           appName={levelProperties.appName}
+          levelId={levelId}
         />
       );
     }
@@ -150,6 +151,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     versionHistoryProps,
     showRubric,
     selectedVersion,
+    levelId,
   ]);
 
   useEffect(() => {
