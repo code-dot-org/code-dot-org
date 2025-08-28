@@ -119,10 +119,8 @@ class Pd::Workshop < ApplicationRecord
       c[:label] == course
     end
 
-    unless config
-      errors.add(:course, "#{course} is not a valid workshop course")
-      return
-    end
+    # Ignore config validation for legacy courses without a config
+    return unless config
 
     required_validation(config)
   end
