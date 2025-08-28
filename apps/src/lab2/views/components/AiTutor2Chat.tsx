@@ -160,6 +160,11 @@ const AiTutor2Chat: React.FunctionComponent<AiTutor2ChatProps> = ({
   const dispatch = useAppDispatch();
 
   const [systemPrompt, setSystemPrompt] = useState<string>();
+  const [startLoading, setStartLoading] = useState(false);
+
+  useEffect(() => {
+    setStartLoading(true);
+  }, []);
 
   useEffect(() => {
     if (customPromptName) {
@@ -207,7 +212,11 @@ const AiTutor2Chat: React.FunctionComponent<AiTutor2ChatProps> = ({
       />
     </div>
   ) : (
-    <div className={moduleStyles.loading}>
+    <div
+      className={`${moduleStyles.loading} ${
+        startLoading ? moduleStyles.started : ''
+      }`}
+    >
       <Spinner />
     </div>
   );
