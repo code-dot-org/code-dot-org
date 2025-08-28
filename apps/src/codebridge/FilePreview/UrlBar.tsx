@@ -14,6 +14,7 @@ interface UrlBarProps {
   canNavigateForward: boolean;
   onNavigateBack: () => void;
   onNavigateForward: () => void;
+  onRefresh: () => void;
 }
 
 export const UrlBar: React.FC<UrlBarProps> = ({
@@ -23,6 +24,7 @@ export const UrlBar: React.FC<UrlBarProps> = ({
   canNavigateForward,
   onNavigateBack,
   onNavigateForward,
+  onRefresh,
 }) => {
   return (
     <div className={moduleStyles.urlBarContainer}>
@@ -70,7 +72,7 @@ export const UrlBar: React.FC<UrlBarProps> = ({
           )}
         >
           <Button
-            onClick={() => {}}
+            onClick={onRefresh}
             aria-label={weblab2I18n.refresh()}
             size="xs"
             type="tertiary"
