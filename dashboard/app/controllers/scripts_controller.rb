@@ -341,12 +341,6 @@ class ScriptsController < ApplicationController
 
     return {script: script} if script
 
-    if Unit.family_names.include?(unit_name)
-      script = Unit.get_unit_family_redirect_for_user(unit_name, user: current_user, locale: request.locale)
-      Unit.log_redirect(unit_name, script.redirect_to, request, 'unversioned-script-redirect', current_user&.user_type) if script.present?
-      return {script: script}
-    end
-
     # Redirect to the latest version or the assigned version of a single-unit course
     if UnitGroup.family_names.include?(unit_name)
       unit_group = UnitGroup.latest_stable_version(unit_name, locale: request.locale) ||
