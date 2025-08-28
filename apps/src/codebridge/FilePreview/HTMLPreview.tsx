@@ -19,6 +19,7 @@ const SOURCE_CHANGE_DELAY_MS = 500;
 export const HTMLPreview = () => {
   const {levelProperties} = useCodebridgeContext();
   const iframeRef = useRef<HTMLIFrameElement | null>(null);
+  const previewContainerRef = useRef<HTMLDivElement | null>(null);
   const previewUrl = useMemo(() => {
     const re = /([-.]?studio)?\.?(cdn-)?code.org/i;
     const environmentKey = location.hostname.replace(re, '');
@@ -55,6 +56,10 @@ export const HTMLPreview = () => {
       {type: IframeMessageType.CHANGE_FILE_URL_BAR, fileName: newInputValue},
       previewUrl
     );
+    // Focus the iframe after submitting the URL
+    if (isIframeLoaded && iframeRef.current) {
+      previewContainerRef.current?.focus();
+    }
   };
 
   const onNavigateBack = () => {
@@ -213,15 +218,25 @@ export const HTMLPreview = () => {
         />
         {/* This iframe points to the environment-specific version of preview.codeprojects.org. That url will eventually
             route to InnerHTMLPreview. */}
-        <iframe
-          sandbox="allow-scripts allow-same-origin"
-          allow="self"
-          title="Web Preview"
-          ref={iframeRef}
-          id="preview"
-          className={moduleStyles.previewIframe}
-          src={previewUrl}
-        />
+        <div
+          ref={previewContainerRef}
+          // This provides a small visual indicator when the iframe is focused after submitting the URL.
+          // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
+          tabIndex={0}
+          className={moduleStyles.previewWrapper}
+          role="application"
+          aria-label="Web Preview Frame"
+        >
+          <iframe
+            sandbox="allow-scripts allow-same-origin"
+            allow="self"
+            title="Web Preview"
+            ref={iframeRef}
+            id="preview"
+            className={moduleStyles.previewIframe}
+            src={previewUrl}
+          />
+        </div>
       </div>
     </PanelContainer>
   );
