@@ -6,6 +6,7 @@ import classNames from 'classnames';
 import React, {useEffect, useMemo, useState} from 'react';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
+import {ProjectSources} from '@cdo/apps/lab2/types';
 import AiTutor2Chat from '@cdo/apps/lab2/views/components/AiTutor2Chat';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import StudentRubricView from '@cdo/apps/lab2/views/components/rubrics/StudentRubricView';
@@ -21,6 +22,7 @@ import NavigationArea from '../NavigationArea';
 import CopyrightButton from './CopyrightButton';
 import ResourcePanelExtraLinks from './ResourcePanelExtraLinks';
 import SettingsPanel from './SettingsPanel';
+import VersionHistoryPanel from './VersionHistoryPanel';
 
 import styles from './styles.module.scss';
 
@@ -38,6 +40,10 @@ export interface Setting {
   options: {value: string; text: string}[];
   selectedValue: string | undefined;
   onChange: (value: string) => void;
+}
+
+interface VersionHistoryProps {
+  startSources: ProjectSources;
 }
 
 const tabInfo: {[key in Tabs]: {title: string; icon: string}} = {
@@ -64,7 +70,7 @@ type ResourcePanelProps = InstructionsProps & {
   rightHeaderContent?: React.ReactNode;
   includeFooterSpacing?: boolean;
   settings?: Setting[];
-  includeVersionHistory?: boolean;
+  versionHistoryProps?: VersionHistoryProps;
 };
 
 /**
@@ -77,7 +83,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   rightHeaderContent,
   includeFooterSpacing = true,
   settings,
-  includeVersionHistory = false,
+  versionHistoryProps,
   ...instructionsProps
 }) => {
   const {theme} = useTheme();
@@ -85,6 +91,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const [currentTab, setCurrentTab] = useState<Tabs>(Tabs.Instructions);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const isUserTeacher = useAppSelector(state => state.currentUser.isTeacher);
+  const [selectedVersion, setSelectedVersion] = useState<string>('');
 
   const levelId = instructionsProps.levelProperties.id;
 
@@ -120,8 +127,15 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       tabMap[Tabs.AiTutor] = <AiTutor2Chat hiddenContext={aiTutor2Context} />;
     }
 
-    if (includeVersionHistory) {
-      tabMap[Tabs.VersionHistory] = <div>Version history</div>;
+    if (versionHistoryProps) {
+      tabMap[Tabs.VersionHistory] = (
+        <VersionHistoryPanel
+          selectedVersion={selectedVersion}
+          setSelectedVersion={setSelectedVersion}
+          startSources={versionHistoryProps.startSources}
+          appName={levelProperties.appName}
+        />
+      );
     }
 
     if (showRubric) {
@@ -133,8 +147,9 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     instructionsProps,
     isUserTeacher,
     aiTutor2Context,
-    includeVersionHistory,
+    versionHistoryProps,
     showRubric,
+    selectedVersion,
   ]);
 
   useEffect(() => {
