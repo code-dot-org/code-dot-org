@@ -53,8 +53,8 @@ const VersionHistoryPanel: React.FunctionComponent<
     () => versionList?.find(v => v.isLatest)?.versionId || INITIAL_VERSION_ID,
     [versionList]
   );
-  const previousListLoaded = useRef<boolean>(listLoaded);
   const previousLevelId = useRef<number>(levelId);
+  const [focusSelectedVersion, setFocusSelectedVersion] = useState(true);
 
   const viewingOldVersion = useAppSelector(
     state => state.lab2Project.viewingOldVersion
@@ -93,6 +93,7 @@ const VersionHistoryPanel: React.FunctionComponent<
           setListLoading(false);
           if (resetSelected) {
             setSelectedVersion('');
+            setFocusSelectedVersion(true);
           }
         })
         .catch(() => {
@@ -105,8 +106,13 @@ const VersionHistoryPanel: React.FunctionComponent<
 
   // Load version list on first open or if the levelId changes.
   useEffect(() => {
-    const resetSelected = previousLevelId.current !== levelId;
-    loadVersionList(resetSelected);
+    const levelChanged = previousLevelId.current !== levelId;
+    if (levelChanged) {
+      // If we just changed levels, reset the version list so that we don't briefly show
+      // the previous level's versions.
+      setVersionList([]);
+    }
+    loadVersionList(levelChanged);
     previousLevelId.current = levelId;
   }, [loadVersionList, levelId]);
 
@@ -117,13 +123,12 @@ const VersionHistoryPanel: React.FunctionComponent<
   }, [versionList, selectedVersion, latestVersion, setSelectedVersion]);
 
   useEffect(() => {
-    if (listLoaded && !previousListLoaded.current && selectedVersion !== '') {
+    if (focusSelectedVersion && selectedVersion !== '') {
       // If we are currently viewing an old version (this happens if
-      // the user x'd out of the dropdown, but did not cancel), focus the selected version,
+      // the user switched panels but did not cancel), focus the selected version,
       // otherwise focus the latest version and set the selected version to the latest version.
-      // We explicitly focus because we are using a react portal, and we need to ensure the focus
-      // goes to the correct element.
       // Wait a tick to ensure the selected version is rendered before focusing it.
+      // We do this when the list is first loaded or when we change levels.
       const versionId = viewingOldVersion ? selectedVersion : latestVersion;
       if (!viewingOldVersion) {
         setSelectedVersion(latestVersion);
@@ -140,10 +145,8 @@ const VersionHistoryPanel: React.FunctionComponent<
         }, 0);
       }
     }
-
-    previousListLoaded.current = listLoaded;
   }, [
-    listLoaded,
+    focusSelectedVersion,
     selectedVersion,
     latestVersion,
     viewingOldVersion,
