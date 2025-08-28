@@ -135,18 +135,7 @@ export type UserInfoForWorkshop = {
 };
 
 export type UserWorkshopEnrollment = {
-  id: number;
-  workshopId: number;
-  userId: number;
-  firstName?: string;
-  lastName?: string;
-  email: string;
   code: string;
-  surveySentAt?: string;
-  completedSurveyId?: number;
-  schoolInfoId?: number;
-  deletedAt?: string;
-  applicationId?: number;
 };
 
 export const userInfoDataResponseToParams = (
