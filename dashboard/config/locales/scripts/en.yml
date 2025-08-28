@@ -25162,3 +25162,34 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        sandbox-jit-pl-prompting-basics:
+          lessons:
+            lesson-1:
+              name: 'Prompting Power-Up: Critical Thinking'
+          lesson_groups: {}
+          name: sandbox-jit-pl-prompting-basics
+          title: 'Prompt Power-Up: Critical Thinking '
+          description_audience: ''
+          description_short: ''
+          description: |-
+            ## Welcome to this quick PD Pocket!
+            #### Designed to take 5 minutes or less, this microlearning will keep you confident and ready to teach in no time.
+
+            #### **In this mini-lesson, you will:**
+
+            - #### Recognize the difference between prompts that produce quick fixes vs. prompts that model deeper reasoning.
+
+            - #### Practice reframing prompts so they encourage explanation and critical thinking.
+
+            #### **Suggested Time:** 10 minutes
+          student_description: |-
+            ## Welcome to this quick PD Pocket!
+            #### Designed to take 5 minutes or less, this microlearning will keep you confident and ready to teach in no time.
+
+            #### **In this mini-lesson, you will:**
+
+            - #### Recognize the difference between prompts that produce quick fixes vs. prompts that model deeper reasoning.
+
+            - #### Practice reframing prompts so they encourage explanation and critical thinking.
+
+            #### **Suggested Time:** 10 minutes

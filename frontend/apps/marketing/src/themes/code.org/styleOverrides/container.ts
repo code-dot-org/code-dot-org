@@ -18,6 +18,10 @@ export const CONTAINER_OVERRIDES: Components<Theme>['MuiContainer'] = {
         paddingTop: theme.spacing(5),
         paddingBottom: theme.spacing(5),
       },
+      '&.MuiContainer-root.container--spacing-none': {
+        paddingTop: theme.spacing(0),
+        paddingBottom: theme.spacing(0),
+      },
       // Divider styles
       '&.MuiContainer-root.container--divider-primary': {
         borderBottom: `1px solid var(--background-neutral-quaternary)`,
