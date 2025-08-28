@@ -19,8 +19,8 @@ $(document).ready(function () {
     ? congratsData.current_user.user_type
     : 'signedOut';
 
-  const givenName = congratsData.current_user.properties?.given_name;
-  const familyName = congratsData.current_user.properties?.family_name;
+  const givenName = congratsData.current_user?.properties?.given_name;
+  const familyName = congratsData.current_user?.properties?.family_name;
   const userName = givenName && familyName ? `${givenName} ${familyName}` : '';
 
   const language = congratsData.language;
