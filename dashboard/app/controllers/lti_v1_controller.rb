@@ -200,6 +200,11 @@ class LtiV1Controller < ApplicationController
           deployment.lti_user_identities << lti_user_identity
         end
 
+        # TODO: We could also do this when creating users during sync_course
+        if Policies::Lti::DeploymentConfiguration::RESTRICTED_DEPLOYMENTS.include?(deployment.id) && !user.lms_landing_opted_out
+          user.update!(lms_landing_opted_out: true)
+        end
+
         # If this is the user's first login, send them into the account linking flow
         unless user.lms_landing_opted_out
           Services::Lti.initialize_lms_landing_session(session, integration[:platform_name], 'continue', user.user_type)
@@ -221,6 +226,13 @@ class LtiV1Controller < ApplicationController
         redirect_to destination_url
       else
         user = Services::Lti.initialize_lti_user(decoded_jwt)
+        # If this is a restricted deployment, skip the account linking flow and
+        # immediately create the user and sign them in.
+        if Policies::Lti::DeploymentConfiguration::RESTRICTED_DEPLOYMENTS.include?(deployment.id)
+          user.save!
+          sign_in user
+          redirect_to destination_url and return
+        end
         # PartialRegistration removes the email address, so store it in a local variable first
         email_address = Services::Lti.get_claim(decoded_jwt, :email)
         Services::Lti.initialize_lms_landing_session(session, integration[:platform_name], 'new', user.user_type)
