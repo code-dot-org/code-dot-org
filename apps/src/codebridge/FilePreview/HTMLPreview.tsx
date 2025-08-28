@@ -60,6 +60,23 @@ export const HTMLPreview = () => {
     if (isIframeLoaded && iframeRef.current) {
       previewContainerRef.current?.focus();
     }
+    // Only add newInputValue to navigation history if it is not already in history at the current index.
+    const addToNavHistory =
+      newInputValue !== navigationHistory[navigationHistoryIndex];
+    // If navigationHistoryIndex is the last index, add the file to the end of the array.
+    // Otherwise, truncate the array after the current index and add the file to the end.
+    if (addToNavHistory) {
+      const updatedNavigationHistory =
+        navigationHistoryIndex === navigationHistory.length - 1
+          ? [...navigationHistory, newInputValue]
+          : [
+              ...navigationHistory.slice(0, navigationHistoryIndex + 1),
+              newInputValue,
+            ];
+
+      setNavigationHistory(updatedNavigationHistory);
+      setNavigationHistoryIndex(updatedNavigationHistory.length - 1);
+    }
   };
 
   const onNavigateBack = () => {
@@ -71,7 +88,7 @@ export const HTMLPreview = () => {
     setCurrentFile(updatedFile);
     setInputValue(updatedFile);
     iframeRef.current?.contentWindow?.postMessage(
-      {type: IframeMessageType.NAVIGATE_TO_FILE, fileName: updatedFile},
+      {type: IframeMessageType.CHANGE_FILE_URL_BAR, fileName: updatedFile},
       previewUrl
     );
   };
@@ -84,7 +101,7 @@ export const HTMLPreview = () => {
     setCurrentFile(updatedFile);
     setInputValue(updatedFile);
     iframeRef.current?.contentWindow?.postMessage(
-      {type: IframeMessageType.NAVIGATE_TO_FILE, fileName: updatedFile},
+      {type: IframeMessageType.CHANGE_FILE_URL_BAR, fileName: updatedFile},
       previewUrl
     );
   };
@@ -93,8 +110,6 @@ export const HTMLPreview = () => {
     // When we switch levels, clear the source so the preview does not show outdated content.
     setDebouncedSource(undefined);
     setIsLevelLoading(true);
-    setCurrentFile(DEFAULT_START_HTML_FILE);
-    setInputValue(DEFAULT_START_HTML_FILE);
   });
 
   useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, () => {
@@ -123,22 +138,23 @@ export const HTMLPreview = () => {
       ) {
         setCurrentFile(event.data.fileName);
         setInputValue(event.data.fileName);
-      } else if (
-        event.data.type === IframeMessageType.ADD_FILE_TO_NAVIGATION_HISTORY &&
-        event.origin === previewUrl
-      ) {
+        // Only add newInputValue to navigation history if it is not already in history at the current index.
+        const addToNavHistory =
+          event.data.fileName !== navigationHistory[navigationHistoryIndex];
         // If navigationHistoryIndex is the last index, add the file to the end of the array.
         // Otherwise, truncate the array after the current index and add the file to the end.
-        const updatedNavigationHistory =
-          navigationHistoryIndex === navigationHistory.length - 1
-            ? [...navigationHistory, event.data.fileToAddToNavigationHistory]
-            : [
-                ...navigationHistory.slice(0, navigationHistoryIndex + 1),
-                event.data.fileToAddToNavigationHistory,
-              ];
+        if (addToNavHistory) {
+          const updatedNavigationHistory =
+            navigationHistoryIndex === navigationHistory.length - 1
+              ? [...navigationHistory, event.data.fileName]
+              : [
+                  ...navigationHistory.slice(0, navigationHistoryIndex + 1),
+                  event.data.fileName,
+                ];
 
-        setNavigationHistory(updatedNavigationHistory);
-        setNavigationHistoryIndex(updatedNavigationHistory.length - 1);
+          setNavigationHistory(updatedNavigationHistory);
+          setNavigationHistoryIndex(updatedNavigationHistory.length - 1);
+        }
       }
     };
 
@@ -165,9 +181,11 @@ export const HTMLPreview = () => {
     if (sourceLevelId.current !== levelProperties.id) {
       // If we have a new level id, update the source immediately.
       setDebouncedSource(source);
-      setNavigationHistory([]);
-      setNavigationHistoryIndex(-1);
       sourceLevelId.current = levelProperties.id;
+      setCurrentFile(DEFAULT_START_HTML_FILE);
+      setInputValue(DEFAULT_START_HTML_FILE);
+      setNavigationHistory([DEFAULT_START_HTML_FILE]);
+      setNavigationHistoryIndex(0);
     } else {
       // Set a timeout to send the debounced value after 500ms
       const debouncedSourceSetter = setTimeout(() => {
@@ -202,6 +220,13 @@ export const HTMLPreview = () => {
       );
     }
   }, [isIframeLoaded, previewUrl, allowUserScripts]);
+
+  console.log('navigationHistory', navigationHistory);
+  console.log('navigationHistoryIndex', navigationHistoryIndex);
+  console.log('currentFile', currentFile);
+  console.log('inputValue', inputValue);
+  console.log('canNavigateBack', canNavigateBack);
+  console.log('canNavigateForward', canNavigateForward);
 
   return (
     <PanelContainer
