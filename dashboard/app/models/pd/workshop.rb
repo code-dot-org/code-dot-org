@@ -109,7 +109,7 @@ class Pd::Workshop < ApplicationRecord
   end
 
   def subject_must_be_valid_for_course
-    unless SUBJECTS[course]&.include?(subject) || (!SUBJECTS[course] && !subject)
+    unless SUBJECTS[course]&.include?(subject) || LEGACY_SUBJECTS[course]&.include?(subject) || (!SUBJECTS[course] && !subject)
       errors.add(:subject, 'must be a valid option for the course')
     end
   end
@@ -119,10 +119,8 @@ class Pd::Workshop < ApplicationRecord
       c[:label] == course
     end
 
-    unless config
-      errors.add(:course, "#{course} is not a valid workshop course")
-      return
-    end
+    # Ignore config validation for legacy courses without a config
+    return unless config
 
     required_validation(config)
   end

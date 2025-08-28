@@ -81,7 +81,6 @@ module Pd
         SUBJECT_CS_IN_S_PHASE_3_SEMESTER_2 = 'Phase 3 - Semester 2'.freeze
       ],
       COURSE_CSP => [
-        SUBJECT_CSP_SUMMER_WORKSHOP = SUBJECT_SUMMER_WORKSHOP,
         SUBJECT_CSP_WORKSHOP_1 = SUBJECT_WORKSHOP_1,
         SUBJECT_CSP_WORKSHOP_2 = SUBJECT_WORKSHOP_2,
         SUBJECT_CSP_WORKSHOP_3 = SUBJECT_WORKSHOP_3,
@@ -90,7 +89,6 @@ module Pd
         SUBJECT_CSP_WORKSHOP_3_4 = SUBJECT_WORKSHOP_3_4,
       ],
       COURSE_CSA => [
-        SUBJECT_CSA_SUMMER_WORKSHOP = SUBJECT_SUMMER_WORKSHOP,
         SUBJECT_CSA_WORKSHOP_1 = SUBJECT_WORKSHOP_1,
         SUBJECT_CSA_WORKSHOP_2 = SUBJECT_WORKSHOP_2,
         SUBJECT_CSA_WORKSHOP_3 = SUBJECT_WORKSHOP_3,
@@ -99,7 +97,6 @@ module Pd
         SUBJECT_CSA_WORKSHOP_3_4 = SUBJECT_WORKSHOP_3_4,
       ],
       COURSE_CSD => [
-        SUBJECT_CSD_SUMMER_WORKSHOP = SUBJECT_SUMMER_WORKSHOP,
         SUBJECT_CSD_WORKSHOP_1 = SUBJECT_WORKSHOP_1,
         SUBJECT_CSD_WORKSHOP_2 = SUBJECT_WORKSHOP_2,
         SUBJECT_CSD_WORKSHOP_3 = SUBJECT_WORKSHOP_3,
@@ -195,7 +192,8 @@ module Pd
         SUBJECT_CSP_TEACHER_CON = SUBJECT_TEACHER_CON,
         SUBJECT_CSP_FIT = SUBJECT_FIT,
         SUBJECT_CSP_FOR_RETURNING_TEACHERS,
-        SUBJECT_CSP_VIRTUAL_KICKOFF = SUBJECT_VIRTUAL_KICKOFF
+        SUBJECT_CSP_VIRTUAL_KICKOFF = SUBJECT_VIRTUAL_KICKOFF,
+        SUBJECT_CSP_SUMMER_WORKSHOP = SUBJECT_SUMMER_WORKSHOP
       ],
       COURSE_CSD => [
         LEGACY_SUBJECT_CSD_WORKSHOP_1_1920 = 'Workshop 1: Unit 3'.freeze,
@@ -224,7 +222,8 @@ module Pd
         SUBJECT_CSD_CUSTOM_WORKSHOP = SUBJECT_CUSTOM_WORKSHOP,
         SUBJECT_CSD_TEACHER_CON = SUBJECT_TEACHER_CON,
         SUBJECT_CSD_FIT = SUBJECT_FIT,
-        SUBJECT_CSD_VIRTUAL_KICKOFF = SUBJECT_VIRTUAL_KICKOFF
+        SUBJECT_CSD_VIRTUAL_KICKOFF = SUBJECT_VIRTUAL_KICKOFF,
+        SUBJECT_CSD_SUMMER_WORKSHOP = SUBJECT_SUMMER_WORKSHOP
       ],
       COURSE_CSF => [
         SUBJECT_CSF_FIT = SUBJECT_FIT
@@ -232,7 +231,8 @@ module Pd
       COURSE_CSA => [
         SUBJECT_CSA_FIT = SUBJECT_FIT,
         SUBJECT_CSA_CAPSTONE = 'Capstone'.freeze,
-        SUBJECT_CSA_VIRTUAL_KICKOFF = SUBJECT_VIRTUAL_KICKOFF
+        SUBJECT_CSA_VIRTUAL_KICKOFF = SUBJECT_VIRTUAL_KICKOFF,
+        SUBJECT_CSA_SUMMER_WORKSHOP = SUBJECT_SUMMER_WORKSHOP
       ]
     }.freeze
 
@@ -443,19 +443,17 @@ module Pd
       },
     }
 
-    BUILD_YOUR_OWN_WORKSHOP_CONFIG = {
-      slug: COURSE_BUILD_YOUR_OWN.parameterize(separator: "_"),
-      label: COURSE_BUILD_YOUR_OWN,
-      icon: 'plus-square',
-      session_fields: SESSION_FIELDS,
-      fields: COMMON_COURSE_FIELDS.merge(
-        course_offerings: {required: true, stateKey: 'courseOfferings', label: 'Select workshop topic(s)'},
-        participant_group_type: {required: true, stateKey: 'participantGroupType', label: 'Cohort type', options: PARTICIPANT_GROUP_TYPES.map {|s| {value: s, label: s}}}
-      )
-    }.freeze
-
     WORKSHOP_COURSE_CONFIGS = [
-      BUILD_YOUR_OWN_WORKSHOP_CONFIG,
+      {
+        slug: COURSE_BUILD_YOUR_OWN.parameterize(separator: "_"),
+        label: COURSE_BUILD_YOUR_OWN,
+        icon: 'plus-square',
+        session_fields: SESSION_FIELDS,
+        fields: COMMON_COURSE_FIELDS.merge(
+          course_offerings: {required: true, stateKey: 'courseOfferings', label: 'Select workshop topic(s)'},
+          participant_group_type: {required: true, stateKey: 'participantGroupType', label: 'Cohort type', options: PARTICIPANT_GROUP_TYPES.map {|s| {value: s, label: s}}}
+        )
+      },
       {
         slug: COURSE_CSP.parameterize(separator: "_"),
         label: COURSE_CSP,
@@ -476,20 +474,6 @@ module Pd
         icon: 'book',
         session_fields: SESSION_FIELDS,
         fields: COMMON_COURSE_FIELDS.merge(subject: {required: true, stateKey: 'subject', label: 'Subject', options: SUBJECTS[COURSE_CSA].map {|s| {value: s, label: s}}})
-      },
-      {
-        slug: COURSE_ADMIN_COUNSELOR.parameterize(separator: "_"),
-        label: COURSE_ADMIN_COUNSELOR,
-        icon: 'users',
-        session_fields: SESSION_FIELDS,
-        fields: COMMON_COURSE_FIELDS.merge(subject: {required: true, stateKey: 'subject', label: 'Subject', options: SUBJECTS[COURSE_ADMIN_COUNSELOR].map {|s| {value: s, label: s}}})
-      },
-      {
-        slug: COURSE_FACILITATOR.parameterize(separator: "_"),
-        label: COURSE_FACILITATOR,
-        icon: 'users',
-        session_fields: SESSION_FIELDS,
-        fields: COMMON_COURSE_FIELDS
       }
     ].freeze
   end
