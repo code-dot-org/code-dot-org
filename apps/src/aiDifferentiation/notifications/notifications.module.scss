@@ -67,6 +67,16 @@ p.text {
   }
 }
 
+.links {
+  margin: 0;
+  & li {
+    list-style-type: none;
+    & i {
+      margin-inline-start: 4px;
+    }
+  }
+}
+
 p.date {
   font-size: 10px;
   color: var(--text-neutral-quaternary);

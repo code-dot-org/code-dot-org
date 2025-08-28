@@ -46,6 +46,8 @@ const Notification: React.FC<{
     iconName: 'spinner',
     iconColor: IconColor.Gray,
     publishedAt: new Date(),
+    aiPrompts: [],
+    hrefLinks: [],
   };
 
   return (
@@ -59,20 +61,42 @@ const Notification: React.FC<{
           isLoading && skeletonizeContent.skeletonizeContent
         )}
       />
-      <p
-        className={classNames(
-          styles.text,
-          isLoading && skeletonizeContent.skeletonizeContent
-        )}
-      >
-        <BodyThreeText noMargin>
-          <StrongText>
-            {notificationOrPlaceholder.title}
-            {': '}
-          </StrongText>
-          {notificationOrPlaceholder.description}
-        </BodyThreeText>
-      </p>
+      <div className={styles.textAndLinks}>
+        <p
+          className={classNames(
+            styles.text,
+            isLoading && skeletonizeContent.skeletonizeContent
+          )}
+        >
+          <BodyThreeText noMargin>
+            <StrongText>
+              {notificationOrPlaceholder.title}
+              {': '}
+            </StrongText>
+            {notificationOrPlaceholder.description}
+          </BodyThreeText>
+        </p>
+        <ol className={styles.links}>
+          {notificationOrPlaceholder.hrefLinks?.length > 0 &&
+            notificationOrPlaceholder.hrefLinks.map(link => (
+              <li>
+                <a
+                  key={link.url}
+                  href={link.url}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className={styles.link}
+                >
+                  {link.text}
+                  <FontAwesomeV6Icon
+                    iconName="arrow-up-right-from-square"
+                    className={styles.externalLinkIcon}
+                  />
+                </a>
+              </li>
+            ))}
+        </ol>
+      </div>
       <BodyThreeText
         className={classNames(
           styles.date,
