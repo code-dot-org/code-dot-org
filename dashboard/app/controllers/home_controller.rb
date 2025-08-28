@@ -37,6 +37,12 @@ class HomeController < ApplicationController
       redirect_params['lang'] = params[:locale].split('|').first
       redirect_uri.query = URI.encode_www_form(redirect_params)
       redirect_path = redirect_uri.to_s
+
+      # Determine the global edition to redirect to, if any
+      locale_region = Cdo::GlobalEdition.region_locked_locales[params[:locale]]
+      unless locale_region.nil? || locale_region == request.ge_region
+        redirect_path = Cdo::GlobalEdition.path(locale_region, redirect_path)
+      end
     end
 
     redirect_to redirect_path

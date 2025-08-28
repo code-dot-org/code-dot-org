@@ -59,13 +59,7 @@ module Rack
             request.path_info = main_path
           end
 
-          locale_region = Cdo::GlobalEdition.region_locked_locales[request.cookies[LOCALE_KEY]]
-          if locale_region == ge_region
-            setup_region(ge_region)
-          elsif locale_region
-            # This locale actually maps to a different global region, so redirect to it
-            setup_redirect_to(regional_path_for(locale_region, main_path))
-          end
+          setup_region(ge_region)
         elsif Cdo::GlobalEdition.region_available?(request.cookies[REGION_KEY])
           # Redirects to the regional version if it is available.
           setup_region_redirect(request.cookies[REGION_KEY])
