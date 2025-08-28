@@ -6,6 +6,7 @@ import {EntryFields} from 'contentful';
 import {useMemo, useId} from 'react';
 
 import Card from '@/components/contentful/card';
+import {EVENT} from '@/providers/statsig/statsigConstants';
 import {getAbsoluteImageUrl} from '@/selectors/contentful/getImage';
 import {LinkEntry} from '@/types/contentful/entries/Link';
 import {Entry} from '@/types/contentful/Entry';
@@ -102,8 +103,8 @@ const CardCollection: React.FC<CardCollectionProps> = ({
                   ? resolvedSecondaryLinkRef
                   : undefined
               }
-              primaryButtonEventName="Card primary button clicked"
-              secondaryButtonEventName="Card secondary button clicked"
+              primaryButtonEventName={EVENT.CARD_PRIMARY_BUTTON_CLICKED}
+              secondaryButtonEventName={EVENT.CARD_SECONDARY_BUTTON_CLICKED}
               eventMetadata={{
                 cardId: tutorialID,
                 cardTitle: title,
