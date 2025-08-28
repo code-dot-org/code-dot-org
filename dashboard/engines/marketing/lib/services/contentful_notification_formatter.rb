@@ -16,6 +16,7 @@ module Services
         title: fields[:title] || nil,
         description: fields[:description] || nil,
         icon_name: fields[:icon_name] || nil,
+        icon_color: fields[:icon_color] || nil,
         href_links: fields[:href_links] || [],
         ai_prompts: fields[:ai_prompts] || [],
         priority: fields[:priority] || 0,

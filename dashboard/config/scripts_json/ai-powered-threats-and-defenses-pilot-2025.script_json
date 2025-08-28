@@ -31,7 +31,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-08-25 16:56:12 UTC",
+    "serialized_at": "2025-08-27 16:58:43 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -2526,7 +2526,7 @@
       "key": "30d8b0a6-ac6a-488d-909f-2dfa83bd39b4",
       "position": 4,
       "properties": {
-        "description": "AAA stands for Authentication, Access Control, and Accounting. These are the tools systems use to figure out who you are, what you're allowed to do, and what you actually did. Whether you're logging into a game, checking your grades, or using a shared playlist, AAA tools help manage and protect that experience. Today's activities are going to dive into Authentication and Access Control. We will get a deeper look into Accounting in the next lesson.",
+        "description": "AAA stands for Authentication, Authorization, and Accounting. These are the tools systems use to figure out who you are, what you're allowed to do, and what you actually did. Whether you're logging into a game, checking your grades, or using a shared playlist, AAA tools help manage and protect that experience. Today's activities are going to dive into Authentication and Authorization. We will get a deeper look into Accounting in the next lesson.",
         "remarks": true
       },
       "seeding_key": {
@@ -2542,7 +2542,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Write \"Authentication\", \"Access Control\", and \"Accounting\" on the board as visible anchors for the rest of the lesson."
+            "markdown": "Write \"Authentication\", \"Authorization\", and \"Accounting\" on the board as visible anchors for the rest of the lesson."
           }
         ]
       },
@@ -2592,7 +2592,7 @@
       "key": "47d406e4-21a5-4f5b-a8c7-8f5d09f7d62f",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *Access Control*. Clarify that access control only matters once a system knows who you are; it's the next step after authentication.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the three most common access control types listed for students in their Unit Guide (RBAC, DAC, ABAC). Provide additional examples if needed.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *Authorization*. Clarify that access control only matters once a system knows who you are; it's the next step after authentication.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the three most common access control types listed for students in their Unit Guide (RBAC, DAC, ABAC). Provide additional examples if needed.",
         "tips": [
           {
             "type": "teachingTip",
@@ -7601,16 +7601,6 @@
       }
     },
     {
-      "key": "access_control",
-      "word": "access control",
-      "definition": "rules a system uses to decide what you’re allowed to do once you’re logged in",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "access_control"
-      }
-    },
-    {
       "key": "accounting",
       "word": "accounting",
       "definition": "when a system keeps track of what users do so suspicious activity can be detected and reviewed",
@@ -7648,6 +7638,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "authentication"
+      }
+    },
+    {
+      "key": "authorization",
+      "word": "authorization",
+      "definition": "rules a system uses to decide what you’re allowed to do once you’re logged in",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "authorization"
       }
     },
     {
@@ -7831,12 +7831,6 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-10",
-        "vocabulary.key": "access_control"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-10",
         "vocabulary.key": "accounting"
       }
     },
@@ -7844,6 +7838,12 @@
       "seeding_key": {
         "lesson.key": "lesson-10",
         "vocabulary.key": "authentication"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "vocabulary.key": "authorization"
       }
     },
     {

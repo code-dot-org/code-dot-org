@@ -91,15 +91,16 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test 'canonical url is added if it is a single unit course' do
-    unit = create(:script, family_name: 'my-script')
-    course = create(:single_unit_course, unit: unit, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    sign_in create(:teacher)
+    course2024 = create(:single_unit_course, family_name: 'my-family', version_year: '2024', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    course2025 = create(:single_unit_course, family_name: 'my-family', version_year: '2025', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
 
     get :show, params: {
-      course_course_name: course.name,
+      course_course_name: course2024.name,
       position: 1
     }
     assert_response :ok
-    assert_includes(@response.body, "<link rel=\"canonical\" href=\"//test-studio.code.org/courses/#{course.name}/units/1")
+    assert_includes(@response.body, "<link rel=\"canonical\" href=\"//test-studio.code.org/courses/#{course2025.name}/units/1")
   end
 
   test 'canonical url is not added if is not single unit course' do

@@ -1,0 +1,89 @@
+name 'PLGuide_L1_Closing-Cert'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Congratulations, you are finished!
+
+<img src="https://images.code.org/2df93307f477af0f75dc1c179d9a9a4c-image-1707852636486.30.31 AM.png" 
+     alt="Dance party characters celebrating" 
+     style="float: left; height: 350px; clear: both; margin: 0 20px 20px 0;">
+
+<div style="clear: both;"></div>
+<hr>
+
+## Next Steps
+
+#### Follow the three steps below to complete your learning experience and celebrate your progress.
+
+<div style="width: 95%; margin: 20px auto 0px auto; display: flex; flex-direction: column; gap: 20px;">
+  <!-- Step 1: Certificate Card -->
+  <div style="background-color: #FFFFFF; border: 2px solid #F5F7F8; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);">
+    <div style="display: flex; align-items: flex-start;">
+      <span style="font-size: 30pt; font-weight: bold; color: #717171; margin-right: 15px;">1</span>
+      <div style="width: 100%; text-align: left;">
+        <p style="font-size: 14pt; font-weight: bold; margin: 0;">🎉 Access Your Certificate of Completion</p>
+        <p style="font-size: 14pt; margin: 15px 0;">
+          To recognize your effort and learning, you’ll receive a personalized certificate showing your name, the title of this professional learning experience, and the total estimated hours.
+        </p>
+        <div style="text-align: center;">
+          <img src="https://images.code.org/3c1a4c73b4ae82cc41d2a0961c529b56-image-1740605049082.png" 
+               alt="A blank certificate of completion" 
+               style="width: 40%; border-radius: 10px; height: auto;">
+        </div>
+        <p style="font-size: 14pt; margin-top: 15px;">
+          Access your certificate by navigating to <a href="https://studio.code.org/my-professional-learning" target="blank" rel="noopener noreferrer">studio.code.org/my-professional-learning</a>. Your self-paced certificates will be in the “My Self Paced Professional Learning Courses” section in the Actions column once you have completed the self-paced experience.
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- Step 2 & 3 Cards -->
+  <div style="display: flex; gap: 20px; justify-content: space-between;">
+    <!-- Step 2: Survey Card -->
+    <div style="background-color: #FFFFFF; border: 2px solid #F5F7F8; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05); width: 50%;">
+      <div style="display: flex; align-items: flex-start;">
+        <span style="font-size: 30pt; font-weight: bold; color: #717171; margin-right: 15px;">2</span>
+        <div style="width: 100%; text-align: left;">
+          <img src="https://images.code.org/a80122489de1e5f82370109a47941ff1-image-1756334955537.png" 
+               alt="A happiness meter survey" 
+               style="width: 35%; height: auto; border-radius: 10px; margin: 0 auto 0px auto; display: block;">
+          <p style="font-size: 14pt; font-weight: bold; margin: 0;">Help Us Improve</p>
+          <p style="font-size: 14pt; margin-top: 10px;">
+            Your feedback shapes future learning experiences. Please take our short <a href="https://studio.code.org/form/selfpaced_csd_post?survey_data[module]=3" target="blank" rel="noopener noreferrer">end-of-module survey</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- Step 3: Assign Curriculum Card -->
+    <div style="background-color: #FFFFFF; border: 2px solid #F5F7F8; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05); width: 50%;">
+      <div style="display: flex; align-items: flex-start;">
+        <span style="font-size: 30pt; font-weight: bold; color: #717171; margin-right: 15px;">3</span>
+        <div style="width: 100%; text-align: left;">
+          <img src="https://images.code.org/0a455cf3c74eb17e25fe5850442dfbf8-image-1756334953630.png" 
+               alt="A laptop computer with code displayed on the screen" 
+               style="width: 25%; height: auto; border-radius: 10px; margin: 0 auto 25px auto; display: block;">
+          <p style="font-size: 14pt; font-weight: bold; margin: 0;">Get Started with Students</p>
+          <p style="font-size: 14pt; margin-top: 10px;">
+            Ready to teach? <a href="https://support.code.org/hc/en-us/articles/115000488132-Creating-a-Classroom-Section" target="blank" rel="noopener noreferrer">Create a section</a> and assign the <a href="https://studio.code.org/s/csd3-2023" target="blank" rel="noopener noreferrer">Interactive Animations and Games</a> unit.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+## Stay Connected
+
+* #### Continue participating in the <a href="https://forum.code.org/" target="blank" rel="noopener noreferrer">Code.org teacher forum</a>. 
+
+* #### Connect with <a href="http://twitter.com/teachcode" target="blank" rel="noopener noreferrer">@teachcode</a> on Twitter.
+
+* #### Explore opportunities with the <a href="https://code.org/afe" target="blank" rel="noopener noreferrer">Amazon Future Engineer program</a>. 
+
+* #### Join the <a href="https://www.csteachers.org/" target="blank" rel="noopener noreferrer">Computer Science Teachers Association (CSTA)</a>. 
+
+* #### Join us for a facilitator-led professional learning workshop. <a href="https://code.org/educate/professional-learning/middle-high" target="blank" rel="noopener noreferrer" >Click here</a>  to learn about opportunities in your area. 
+
+### Thank you for learning with us!
+MARKDOWN
