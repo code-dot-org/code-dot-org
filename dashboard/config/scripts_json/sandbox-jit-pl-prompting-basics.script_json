@@ -1,0 +1,429 @@
+{
+  "script": {
+    "name": "sandbox-jit-pl-prompting-basics",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "content_area": "skills_focused_self_paced_pl",
+      "curriculum_umbrella": "AIF",
+      "is_migrated": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2025-08-27 21:36:45 UTC",
+    "hide_within_course": false,
+    "published_state": "in_development",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "sandbox-jit-pl-prompting-basics"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "sandbox-jit-pl-prompting-basics"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Prompting Power-Up: Critical Thinking",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-jit-pl-prompting-basics"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "73e6f249-571e-49eb-896d-2b60389ca0d1",
+      "position": 1,
+      "properties": {
+        "duration": 10
+      },
+      "seeding_key": {
+        "lesson_activity.key": "73e6f249-571e-49eb-896d-2b60389ca0d1",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-jit-pl-prompting-basics"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "d017ecc6-30f7-48ac-b486-a89b766a6a97",
+      "position": 1,
+      "properties": {
+        "progression_name": "Prompting Power-Ups"
+      },
+      "seeding_key": {
+        "activity_section.key": "d017ecc6-30f7-48ac-b486-a89b766a6a97",
+        "lesson_activity.key": "73e6f249-571e-49eb-896d-2b60389ca0d1"
+      }
+    },
+    {
+      "key": "a3c6f51d-29fa-4efa-a038-a71b9995ab5c",
+      "position": 2,
+      "properties": {
+        "progression_name": "Power-Up in Action"
+      },
+      "seeding_key": {
+        "activity_section.key": "a3c6f51d-29fa-4efa-a038-a71b9995ab5c",
+        "lesson_activity.key": "73e6f249-571e-49eb-896d-2b60389ca0d1"
+      }
+    },
+    {
+      "key": "c944dd7f-ea78-49ae-8296-23432c2e06c0",
+      "position": 3,
+      "properties": {
+        "progression_name": "Power-Up Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "c944dd7f-ea78-49ae-8296-23432c2e06c0",
+        "lesson_activity.key": "73e6f249-571e-49eb-896d-2b60389ca0d1"
+      }
+    },
+    {
+      "key": "25e1a6bc-2574-4f35-8956-a300a8070157",
+      "position": 4,
+      "properties": {
+        "progression_name": "Power-Up Unlocked "
+      },
+      "seeding_key": {
+        "activity_section.key": "25e1a6bc-2574-4f35-8956-a300a8070157",
+        "lesson_activity.key": "73e6f249-571e-49eb-896d-2b60389ca0d1"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Prompting Power-Ups"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "jit-pl-prompting-basics-overview-1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-jit-pl-prompting-basics",
+        "activity_section.key": "d017ecc6-30f7-48ac-b486-a89b766a6a97"
+      },
+      "level_keys": [
+        "jit-pl-prompting-basics-overview-1"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Power-Up in Action"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "jit-pl-prompting-basics-buggy-code-2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-jit-pl-prompting-basics",
+        "activity_section.key": "a3c6f51d-29fa-4efa-a038-a71b9995ab5c"
+      },
+      "level_keys": [
+        "jit-pl-prompting-basics-buggy-code-2"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Power-Up in Action"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "jit-pl-prompting-basics-fix-my-code-3"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-jit-pl-prompting-basics",
+        "activity_section.key": "a3c6f51d-29fa-4efa-a038-a71b9995ab5c"
+      },
+      "level_keys": [
+        "jit-pl-prompting-basics-fix-my-code-3"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Power-Up in Action"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "jit-pl-prompting-basics-explain-why-4"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-jit-pl-prompting-basics",
+        "activity_section.key": "a3c6f51d-29fa-4efa-a038-a71b9995ab5c"
+      },
+      "level_keys": [
+        "jit-pl-prompting-basics-explain-why-4"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Power-Up Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "jit-pl-prompting-basics-prompt-power-up-5"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-jit-pl-prompting-basics",
+        "activity_section.key": "c944dd7f-ea78-49ae-8296-23432c2e06c0"
+      },
+      "level_keys": [
+        "jit-pl-prompting-basics-prompt-power-up-5"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Power-Up Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "jit-pl-prompting-basics-hold-6"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-jit-pl-prompting-basics",
+        "activity_section.key": "c944dd7f-ea78-49ae-8296-23432c2e06c0"
+      },
+      "level_keys": [
+        "jit-pl-prompting-basics-hold-6"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Power-Up Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "jit-pl-prompting-basics-reflection-7"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-jit-pl-prompting-basics",
+        "activity_section.key": "c944dd7f-ea78-49ae-8296-23432c2e06c0"
+      },
+      "level_keys": [
+        "jit-pl-prompting-basics-reflection-7"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Power-Up Unlocked "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "jit-pl-prompting-basics-wrap-up-8"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-jit-pl-prompting-basics",
+        "activity_section.key": "25e1a6bc-2574-4f35-8956-a300a8070157"
+      },
+      "level_keys": [
+        "jit-pl-prompting-basics-wrap-up-8"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "jit-pl-prompting-basics-overview-1",
+        "script_level.level_keys": [
+          "jit-pl-prompting-basics-overview-1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-jit-pl-prompting-basics",
+        "activity_section.key": "d017ecc6-30f7-48ac-b486-a89b766a6a97"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "jit-pl-prompting-basics-buggy-code-2",
+        "script_level.level_keys": [
+          "jit-pl-prompting-basics-buggy-code-2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-jit-pl-prompting-basics",
+        "activity_section.key": "a3c6f51d-29fa-4efa-a038-a71b9995ab5c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "jit-pl-prompting-basics-fix-my-code-3",
+        "script_level.level_keys": [
+          "jit-pl-prompting-basics-fix-my-code-3"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-jit-pl-prompting-basics",
+        "activity_section.key": "a3c6f51d-29fa-4efa-a038-a71b9995ab5c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "jit-pl-prompting-basics-explain-why-4",
+        "script_level.level_keys": [
+          "jit-pl-prompting-basics-explain-why-4"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-jit-pl-prompting-basics",
+        "activity_section.key": "a3c6f51d-29fa-4efa-a038-a71b9995ab5c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "jit-pl-prompting-basics-prompt-power-up-5",
+        "script_level.level_keys": [
+          "jit-pl-prompting-basics-prompt-power-up-5"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-jit-pl-prompting-basics",
+        "activity_section.key": "c944dd7f-ea78-49ae-8296-23432c2e06c0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "jit-pl-prompting-basics-hold-6",
+        "script_level.level_keys": [
+          "jit-pl-prompting-basics-hold-6"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-jit-pl-prompting-basics",
+        "activity_section.key": "c944dd7f-ea78-49ae-8296-23432c2e06c0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "jit-pl-prompting-basics-reflection-7",
+        "script_level.level_keys": [
+          "jit-pl-prompting-basics-reflection-7"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-jit-pl-prompting-basics",
+        "activity_section.key": "c944dd7f-ea78-49ae-8296-23432c2e06c0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "jit-pl-prompting-basics-wrap-up-8",
+        "script_level.level_keys": [
+          "jit-pl-prompting-basics-wrap-up-8"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-jit-pl-prompting-basics",
+        "activity_section.key": "25e1a6bc-2574-4f35-8956-a300a8070157"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}
