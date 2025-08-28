@@ -4,8 +4,6 @@ module Pd
       COURSE_CSP = 'CS Principles'.freeze,
       COURSE_CSD = 'CS Discoveries'.freeze,
       COURSE_CSA = 'Computer Science A'.freeze,
-      COURSE_FACILITATOR = 'Facilitator'.freeze,
-      COURSE_ADMIN_COUNSELOR = 'Admin/Counselor Workshop'.freeze,
       COURSE_BUILD_YOUR_OWN = 'Build Your Own Workshop'.freeze,
       COURSE_AIF = 'AI Foundations'.freeze,
     ].freeze
@@ -16,12 +14,14 @@ module Pd
       COURSE_CS_IN_A = 'CS in Algebra'.freeze,
       COURSE_CS_IN_S = 'CS in Science'.freeze,
       COURSE_COUNSELOR = 'Counselor'.freeze,
-      COURSE_ADMIN = 'Admin'.freeze
+      COURSE_ADMIN = 'Admin'.freeze,
+      COURSE_FACILITATOR = 'Facilitator'.freeze,
+      COURSE_ADMIN_COUNSELOR = 'Admin/Counselor Workshop'.freeze
     ].freeze
 
     COURSES = ACTIVE_COURSES + ARCHIVED_COURSES
 
-    ACTIVE_PERMISSION_COURSES = [*ACTIVE_COURSES, COURSE_CSF].freeze
+    ACTIVE_PERMISSION_COURSES = [*ACTIVE_COURSES, COURSE_CSF, COURSE_FACILITATOR].freeze
 
     STATES = [
       STATE_NOT_STARTED = 'Not Started'.freeze,
