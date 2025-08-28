@@ -1,4 +1,4 @@
-# India Global Region
+# India - Hindi Global Region
 
 # The structure of a global configuration is to start with the page context and
 # then list the page name, then list components within that page.
@@ -7,8 +7,8 @@
 # with the ones given here, or, if the value is 'false', it removes the
 # component from the page.
 
-#locales: [hi-IN, kn-IN, mr-IN, ta-IN, te-IN, en-IN]
-countries: [IN]
+inherit: IN
+locale_lock: 'ta-IN'
 
 # The list of available project types
 project_types: &project_types
@@ -151,12 +151,12 @@ pages:
         # For section setup, truncate the 'quick access' course listing to
         # only items that are translated to Farsi
         courseFilters:
-          language: hi-IN
+          language: ta-IN
       AssignmentVersionSelector:
         # When viewing a course, only populate the version selector with
         # versions that are translated
         courseFilters:
-          language: hi-IN
+          language: ta-IN
   # Teacher dashboard
   - path: /teacher_dashboard
     components:

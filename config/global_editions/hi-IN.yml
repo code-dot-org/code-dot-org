@@ -1,4 +1,4 @@
-# India Global Region
+# India - Hindi Global Region
 
 # The structure of a global configuration is to start with the page context and
 # then list the page name, then list components within that page.
@@ -7,8 +7,8 @@
 # with the ones given here, or, if the value is 'false', it removes the
 # component from the page.
 
-#locales: [hi-IN, kn-IN, mr-IN, ta-IN, te-IN, en-IN]
-countries: [IN]
+inherit: IN
+locale_lock: 'hi-IN'
 
 # The list of available project types
 project_types: &project_types
