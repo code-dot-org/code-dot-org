@@ -1,0 +1,139 @@
+.chartWrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0 0;
+
+  .plotRow {
+    position: relative;
+    display: grid;
+    grid-template-columns: 2rem 1fr;
+    column-gap: 0.5rem;
+    align-items: end;
+    width: 100%;
+  }
+
+  .yAxisTitleAbs {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translate(-100%, -50%) rotate(180deg);
+    writing-mode: vertical-rl;
+    color: var(--text-neutral-tertiary);
+    pointer-events: none;
+    white-space: nowrap;
+  }
+
+  .yGutter {
+    position: relative;
+    width: 2rem;
+    overflow: visible;
+  }
+
+  .yLabels {
+    position: absolute;
+    inset: 0;
+  }
+
+  .yLabel {
+    position: absolute;
+    right: 0;
+    transform: translateY(-50%);
+    font-size: 0.75rem;
+    color: var(--text-neutral-tertiary);
+    line-height: 1;
+    pointer-events: none;
+  }
+
+  .gridArea {
+    position: relative;
+    width: 100%;
+  }
+
+  .gridLines {
+    position: absolute;
+    inset: 0;
+  }
+
+  .gridLine {
+    position: absolute;
+    left: 0;
+    right: 0;
+    border-top: 1px dashed var(--borders-neutral-primary);
+
+    &:first-of-type {
+      border-top: 1px solid var(--borders-neutral-primary);
+    }
+  }
+
+  .barsRow {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    gap: 0.5rem;
+    align-items: end;
+    padding: 0;
+    z-index: 1;
+    overflow: visible;
+  }
+
+  .barGroup {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .barCount {
+    margin-bottom: 0.25rem;
+    font-size: 0.75rem;
+    line-height: 1;
+    color: var(--text-neutral-primary);
+    pointer-events: none;
+    white-space: nowrap;
+  }
+
+  .barFill {
+    width: 56%;
+    border-radius: 0.25rem 0.25rem 0 0;
+    background: var(--background-brand-teal-primary);
+    transition: height 0.6s ease-out;
+
+    &.success {
+      background: var(--background-success-primary);
+    }
+    &.warning {
+      background: var(--background-warning-primary);
+    }
+    &.error {
+      background: var(--background-error-primary);
+    }
+  }
+
+  .barLabelsRow {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    margin-top: 0.25rem;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    gap: 0.5rem;
+    text-align: center;
+    z-index: 2;
+  }
+
+  .barLabel {
+    color: var(--text-neutral-tertiary);
+  }
+
+  .xLabel {
+    text-align: center;
+    color: var(--text-neutral-tertiary);
+    margin-top: 1.75rem;
+  }
+}
