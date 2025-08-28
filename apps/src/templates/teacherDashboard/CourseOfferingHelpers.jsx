@@ -121,6 +121,7 @@ export const subjectsAndTopicsOrder = [
   'cybersecurity',
   'physical_computing',
   'internet',
+  'music',
   'app_design',
   'games_and_animations',
   'art_and_design',
