@@ -23,6 +23,7 @@ const CancelWorkshopEnrollmentButton: React.FC<
   } | null>(null);
 
   const handleCancel = async () => {
+    if (isSubmitting) return; // guard against double clicks
     setIsSubmitting(true);
     setAlert(null);
     try {
@@ -33,24 +34,28 @@ const CancelWorkshopEnrollmentButton: React.FC<
           'X-CSRF-Token': await getAuthenticityToken(),
         },
       });
-      if (response.ok) {
-        setAlert({
-          type: 'success',
-          text: 'Your registration has been canceled.',
-        });
-        setShowConfirmation(false);
-        if (onCanceled) onCanceled();
-        else window.location.reload();
-      } else {
+
+      if (!response.ok) {
         throw new Error('Failed to cancel enrollment.');
       }
+
+      setAlert({type: 'success', text: 'Your registration has been canceled.'});
+      setShowConfirmation(false);
+
+      setIsSubmitting(false);
+
+      if (onCanceled) {
+        onCanceled();
+      } else {
+        window.location.reload();
+      }
+      return;
     } catch (e) {
+      setIsSubmitting(false);
       setAlert({
         type: 'danger',
         text: 'Error canceling registration. Please try again.',
       });
-    } finally {
-      setIsSubmitting(false);
     }
   };
 
