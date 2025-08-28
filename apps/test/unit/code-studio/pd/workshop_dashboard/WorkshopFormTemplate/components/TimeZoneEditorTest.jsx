@@ -44,9 +44,7 @@ describe('TimeZoneEditor', () => {
     await user.click(editButton);
 
     expect(
-      screen.getByRole('combobox', {
-        name: config.fields.time_zone.label,
-      })
+      screen.getByRole('combobox', {name: config.fields.time_zone.label})
     ).toBeInTheDocument();
   });
 
