@@ -3,7 +3,11 @@ import userEvent from '@testing-library/user-event';
 import React from 'react';
 
 import {TimeZoneEditor} from '@cdo/apps/code-studio/pd/workshop_dashboard/WorkshopFormTemplate/components/TimeZoneEditor';
-import {BuildYourOwnWorkshopConfig} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
+import {WorkshopCourseConfigs} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
+
+const config = WorkshopCourseConfigs.find(
+  ({slug}) => slug === 'build_your_own_workshop'
+);
 
 describe('TimeZoneEditor', () => {
   const mockHandleChange = jest.fn();
@@ -18,13 +22,11 @@ describe('TimeZoneEditor', () => {
       <TimeZoneEditor
         timeZone="America/Denver"
         handleChange={mockHandleChange}
-        config={BuildYourOwnWorkshopConfig}
+        config={config}
       />
     );
 
-    expect(
-      screen.getByText(BuildYourOwnWorkshopConfig.fields.time_zone.label)
-    ).toBeInTheDocument();
+    expect(screen.getByText(config.fields.time_zone.label)).toBeInTheDocument();
     expect(screen.getByText('America/Denver')).toBeInTheDocument();
     expect(screen.getByText('Edit')).toBeInTheDocument();
   });
@@ -34,7 +36,7 @@ describe('TimeZoneEditor', () => {
       <TimeZoneEditor
         timeZone="America/Denver"
         handleChange={mockHandleChange}
-        config={BuildYourOwnWorkshopConfig}
+        config={config}
       />
     );
 
@@ -43,7 +45,7 @@ describe('TimeZoneEditor', () => {
 
     expect(
       screen.getByRole('combobox', {
-        name: BuildYourOwnWorkshopConfig.fields.time_zone.label,
+        name: config.fields.time_zone.label,
       })
     ).toBeInTheDocument();
   });
@@ -53,7 +55,7 @@ describe('TimeZoneEditor', () => {
       <TimeZoneEditor
         timeZone="America/Denver"
         handleChange={mockHandleChange}
-        config={BuildYourOwnWorkshopConfig}
+        config={config}
       />
     );
 
@@ -61,7 +63,7 @@ describe('TimeZoneEditor', () => {
     await user.click(editButton);
 
     const timezoneDropdown = screen.getByRole('combobox', {
-      name: BuildYourOwnWorkshopConfig.fields.time_zone.label,
+      name: config.fields.time_zone.label,
     });
     await user.selectOptions(timezoneDropdown, 'America/Chicago');
 
@@ -76,7 +78,7 @@ describe('TimeZoneEditor', () => {
       <TimeZoneEditor
         timeZone="America/Denver"
         handleChange={mockHandleChange}
-        config={BuildYourOwnWorkshopConfig}
+        config={config}
       />
     );
 
@@ -84,7 +86,7 @@ describe('TimeZoneEditor', () => {
     await user.click(editButton);
 
     const timezoneDropdown = screen.getByRole('combobox', {
-      name: BuildYourOwnWorkshopConfig.fields.time_zone.label,
+      name: config.fields.time_zone.label,
     });
     await user.selectOptions(timezoneDropdown, 'America/Chicago');
 

@@ -5,7 +5,7 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import $ from 'jquery';
 import React from 'react';
-import {Button, ButtonToolbar} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
+import {Button, ButtonToolbar, DropdownButton, MenuItem} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {connect} from 'react-redux';
 
 import {RouterContext} from '@cdo/apps/code-studio/legacyDashboardRoutingCompatibility';
@@ -13,8 +13,7 @@ import {
   DATE_ORDER_ASC,
   DATE_ORDER_DESC,
 } from '@cdo/apps/code-studio/pd/constants';
-import {BuildYourOwnWorkshopConfig} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
-import color from '@cdo/apps/util/color';
+import {WorkshopCourseConfigs} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
 import ServerSortWorkshopTable from './components/server_sort_workshop_table';
 import {
@@ -110,19 +109,27 @@ export class WorkshopIndex extends React.Component {
         <h1>Your Workshops</h1>
         <ButtonToolbar>
           {canCreate && (
-            <Button
+            <DropdownButton
               id="new-workshop-button"
-              bsStyle="primary"
-              style={styles.createWorkshopButton}
-              href={`/pd/workshop_dashboard/workshops/new/${BuildYourOwnWorkshopConfig.slug}`}
-              onClick={e =>
-                this.handleNewWorkshopClick(e, BuildYourOwnWorkshopConfig.slug)
+              title={
+                <span>
+                  New Workshop&nbsp;&nbsp; <FontAwesomeV6Icon iconName="plus" />
+                </span>
               }
+              bsStyle="primary"
+              noCaret
+              className="newWorkshopButton"
             >
-              <span>
-                New Workshop&nbsp;&nbsp; <FontAwesomeV6Icon iconName="plus" />
-              </span>
-            </Button>
+              {WorkshopCourseConfigs.map(({label, slug, icon}) => (
+                <MenuItem
+                  key={slug}
+                  href={`/pd/workshop_dashboard/workshops/new/${slug}`}
+                  onClick={e => this.handleNewWorkshopClick(e, slug)}
+                >
+                  <FontAwesomeV6Icon iconName={icon} /> {label}
+                </MenuItem>
+              ))}
+            </DropdownButton>
           )}
 
           {canSeeAttendanceReports && (
@@ -191,9 +198,6 @@ export class WorkshopIndex extends React.Component {
 }
 
 const styles = {
-  createWorkshopButton: {
-    backgroundColor: color.purple,
-  },
   surveySubmissionsButton: {
     marginLeft: 5,
   },

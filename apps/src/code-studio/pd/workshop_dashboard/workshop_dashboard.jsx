@@ -12,7 +12,7 @@ import {
   RouterProvider,
   WithRouterProps,
 } from '@cdo/apps/code-studio/legacyDashboardRoutingCompatibility';
-import {BuildYourOwnWorkshopConfig} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
+import {WorkshopCourseConfigs} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import mapboxReducer, {setMapboxAccessToken} from '@cdo/apps/redux/mapbox';
 
 import Header from '../components/header';
@@ -176,14 +176,12 @@ const routeConfigs = [
     component: WorkshopFilter,
     withRouter: true,
   },
-  {
-    path: `workshops/new/${BuildYourOwnWorkshopConfig.slug}`,
-    breadcrumbs: `Workshops,${workshopLabel(
-      `New ${BuildYourOwnWorkshopConfig.label}`
-    )}`,
+  ...WorkshopCourseConfigs.map(config => ({
+    path: `workshops/new/${config.slug}`,
+    breadcrumbs: `Workshops,${workshopLabel(`New ${config.label}`)}`,
     component: WorkshopFormTemplate,
-    props: {config: BuildYourOwnWorkshopConfig},
-  },
+    props: {config},
+  })),
   // replace with temp route when ready to switch over
   {
     path: 'workshops/:workshopId',

@@ -443,19 +443,17 @@ module Pd
       },
     }
 
-    BUILD_YOUR_OWN_WORKSHOP_CONFIG = {
-      slug: COURSE_BUILD_YOUR_OWN.parameterize(separator: "_"),
-      label: COURSE_BUILD_YOUR_OWN,
-      icon: 'plus-square',
-      session_fields: SESSION_FIELDS,
-      fields: COMMON_COURSE_FIELDS.merge(
-        course_offerings: {required: true, stateKey: 'courseOfferings', label: 'Select workshop topic(s)'},
-        participant_group_type: {required: true, stateKey: 'participantGroupType', label: 'Cohort type', options: PARTICIPANT_GROUP_TYPES.map {|s| {value: s, label: s}}}
-      )
-    }.freeze
-
     WORKSHOP_COURSE_CONFIGS = [
-      BUILD_YOUR_OWN_WORKSHOP_CONFIG,
+      {
+        slug: COURSE_BUILD_YOUR_OWN.parameterize(separator: "_"),
+        label: COURSE_BUILD_YOUR_OWN,
+        icon: 'plus-square',
+        session_fields: SESSION_FIELDS,
+        fields: COMMON_COURSE_FIELDS.merge(
+          course_offerings: {required: true, stateKey: 'courseOfferings', label: 'Select workshop topic(s)'},
+          participant_group_type: {required: true, stateKey: 'participantGroupType', label: 'Cohort type', options: PARTICIPANT_GROUP_TYPES.map {|s| {value: s, label: s}}}
+        )
+      },
       {
         slug: COURSE_CSP.parameterize(separator: "_"),
         label: COURSE_CSP,
@@ -476,20 +474,6 @@ module Pd
         icon: 'book',
         session_fields: SESSION_FIELDS,
         fields: COMMON_COURSE_FIELDS.merge(subject: {required: true, stateKey: 'subject', label: 'Subject', options: SUBJECTS[COURSE_CSA].map {|s| {value: s, label: s}}})
-      },
-      {
-        slug: COURSE_ADMIN_COUNSELOR.parameterize(separator: "_"),
-        label: COURSE_ADMIN_COUNSELOR,
-        icon: 'users',
-        session_fields: SESSION_FIELDS,
-        fields: COMMON_COURSE_FIELDS.merge(subject: {required: true, stateKey: 'subject', label: 'Subject', options: SUBJECTS[COURSE_ADMIN_COUNSELOR].map {|s| {value: s, label: s}}})
-      },
-      {
-        slug: COURSE_FACILITATOR.parameterize(separator: "_"),
-        label: COURSE_FACILITATOR,
-        icon: 'users',
-        session_fields: SESSION_FIELDS,
-        fields: COMMON_COURSE_FIELDS
       }
     ].freeze
   end
