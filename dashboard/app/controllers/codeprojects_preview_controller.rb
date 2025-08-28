@@ -3,7 +3,9 @@ class CodeprojectsPreviewController < ApplicationController
   # Public preview page, static content for now.
   def show
     code_studio_url = CDO.dashboard_site_host
-    allowed_connect_src = ALLOWED_HOSTNAME_SUFFIXES.join(" ")
+    prefix = rack_env?(:development) ? 'http://' : 'https://'
+    # We allow connections to the domain and all subdomains of each allowed hostname.
+    allowed_connect_src = ALLOWED_HOSTNAME_SUFFIXES.map {|hostname| "#{prefix}#{hostname} #{prefix}*.#{hostname}"}.join(" ")
 
     if rack_env?(:development)
       # dashboard_site_host is set to use port 3000 in development, but we want to also allow port 9000.
@@ -14,7 +16,7 @@ class CodeprojectsPreviewController < ApplicationController
     policies = [
       "default-src 'self' blob:",
       "connect-src 'self' #{allowed_connect_src}",
-      "frame-ancestors #{code_studio_url}",
+      "frame-ancestors #{code_studio_url} 'self'",
       "script-src 'self' 'unsafe-eval' 'unsafe-inline' blob:",
       "style-src 'self' https: 'unsafe-inline' blob:",
       "img-src 'self' https: data: blob: https://*.code.org",
