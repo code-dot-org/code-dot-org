@@ -4,10 +4,10 @@ class CodeprojectsPreviewController < ApplicationController
   def show
     code_studio_url = CDO.dashboard_site_host
     # Chrome will block connecting to an http url from an https page, even with upgrade-insecure-requests.
-    # Therefore we need to allow both http and https in non-development environments.
-    prefixes = rack_env?(:development) ? ['http://'] : ['http://', 'https://']
+    # Therefore we explicitly set the prefix to 'http', which will also allow https.
+    prefix = 'http://'
     # We allow connections to the domain and all subdomains of each allowed hostname.
-    allowed_connect_src = ALLOWED_HOSTNAME_SUFFIXES.map {|hostname| prefixes.map {|prefix| "#{prefix}#{hostname} #{prefix}*.#{hostname}"}}.join(" ")
+    allowed_connect_src = ALLOWED_HOSTNAME_SUFFIXES.map {|hostname| "#{prefix}#{hostname} #{prefix}*.#{hostname}"}.join(" ")
 
     if rack_env?(:development)
       # dashboard_site_host is set to use port 3000 in development, but we want to also allow port 9000.
