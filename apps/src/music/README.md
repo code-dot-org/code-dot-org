@@ -100,4 +100,3 @@ The contents of a user's project are represented as various types corresponding 
 - There are a few view components rendered by custom Blockly fields. These include:
   - [SoundsPanel](./views/SoundsPanel.tsx) which represents the sound picker UI.
   - [ChordPanel](./views/ChordPanel.tsx) which represents the "play notes" keyboard/chord selection UI.
-  - [PatternPanel](./views/PatternPanel.tsx) which represents the "play drums" grid drum editor.
