@@ -115,12 +115,16 @@ class Pd::Workshop < ApplicationRecord
   end
 
   def config_validation
+    return if ARCHIVED_COURSES.include?(course)
+
     config = WORKSHOP_COURSE_CONFIGS.find do |c|
       c[:label] == course
     end
 
-    # Ignore config validation for legacy courses without a config
-    return unless config
+    unless config
+      errors.add(:course, "#{course} is not a valid workshop course")
+      return
+    end
 
     required_validation(config)
   end
