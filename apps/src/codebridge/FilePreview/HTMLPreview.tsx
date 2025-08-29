@@ -73,6 +73,13 @@ export const HTMLPreview = () => {
     );
   };
 
+  const onRefresh = () => {
+    iframeRef.current?.contentWindow?.postMessage(
+      {type: IframeMessageType.REFRESH},
+      previewUrl
+    );
+  };
+
   useLifecycleNotifier(LifecycleEvent.LevelLoadStarted, () => {
     // When we switch levels, clear the source so the preview does not show outdated content.
     setDebouncedSource(undefined);
@@ -194,6 +201,7 @@ export const HTMLPreview = () => {
           canNavigateForward={canNavigateForward}
           onNavigateBack={onNavigateBack}
           onNavigateForward={onNavigateForward}
+          onRefresh={onRefresh}
         />
         {/* This iframe points to the environment-specific version of preview.codeprojects.org. That url will eventually
             route to InnerHTMLPreview. */}

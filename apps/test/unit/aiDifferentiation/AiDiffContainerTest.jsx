@@ -8,6 +8,7 @@ import {getStore, registerReducers} from '@cdo/apps/redux';
 import currentUser, {
   setInitialData,
 } from '@cdo/apps/templates/currentUserRedux';
+import HttpClient from '@cdo/apps/util/HttpClient';
 import {AiDiffContext} from '@cdo/generated-scripts/sharedConstants';
 
 jest.mock('@react-pdf/renderer', () => {
@@ -30,10 +31,27 @@ const DEFAULT_PROPS = {
   curriculumCourses: [],
 };
 
+const defaultThreadListResponse = [
+  {
+    id: 1,
+    title: 'blah thread one',
+    updatedAt: Date(),
+    contextType: 'lesson',
+  },
+];
+
 describe('AiDiffContainer', () => {
+  let fetchJsonStub;
+
   beforeEach(() => {
     window.HTMLElement.prototype.scrollIntoView = () => {};
     sessionStorage.clear();
+    fetchJsonStub = jest.fn();
+    fetchJsonStub.mockResolvedValue({
+      value: defaultThreadListResponse,
+      response: new Response(),
+    });
+    HttpClient.fetchJson = fetchJsonStub;
   });
 
   afterEach(() => {
@@ -62,10 +80,12 @@ describe('AiDiffContainer', () => {
     );
   }
 
-  it('visible when open', () => {
+  it('visible when open', async () => {
     renderDefault();
-    expect(screen.getByText('AI Teaching Assistant')).toBeVisible();
-    screen.getByText('Experiment');
+    await waitFor(() => {
+      expect(screen.getByText('AI Teaching Assistant')).toBeVisible();
+      screen.getByText('Experiment');
+    });
   });
 
   it('moves TA container when user clicks and drags component', async () => {

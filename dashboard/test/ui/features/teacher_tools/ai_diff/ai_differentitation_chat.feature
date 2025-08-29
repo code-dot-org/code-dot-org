@@ -20,7 +20,7 @@ Feature: Send and receive messages in the AI differentiation chat
     And I wait until element "button:contains(Get Started)" is not visible
 
     #Go to curriculum page
-    And I am on "http://studio.code.org/courses/csp-2025?enableExperiments=ai-diff-sidebar"
+    And I am on "http://studio.code.org/courses/csp-2025"
     And I wait until element "#ui-floatingActionButton" is visible
     #wait for pulse to finish
     And I wait for 5 seconds
