@@ -65,20 +65,20 @@ module Localizable
     end
 
     # Class method to define localizable attributes
-    def localizable_attributes=(*attrs)
-      @localizable_attributes = attrs.flatten.map(&:to_sym)
+    def localizable_attributes=(attrs)
+      @localizable_attributes = Array(attrs).map(&:to_sym)
 
       # Generate localized_* methods for each configured attribute
       @localizable_attributes.each do |attr|
         define_method("localized_#{attr}") do |locale_code = I18n.locale, key_override: nil|
-          localize_property(attr, locale_code: locale_code, key_override: key_override)
+          localize_property(attr, locale_code:, key_override:)
         end
 
         # Also create a method that accepts options hash (for backward compatibility)
         define_method("localized_#{attr}_with_options") do |options = {}|
           locale_code = options[:locale] || options[:locale_code] || I18n.locale
           key_override = options[:key]
-          localize_property(attr, locale_code: locale_code, key_override: key_override)
+          localize_property(attr, locale_code:, key_override:)
         end
       end
     end
@@ -97,14 +97,13 @@ module Localizable
     # Validate that the property is configured as localizable
     unless self.class.localizable_attributes.include?(property_name)
       CDO.log.warn("Attempting to localize non-configured attribute #{property_name} on #{self.class.name}")
-      return public_send(property_name) if respond_to?(property_name)
-      return nil
+      return try(property_name)
     end
 
     # Get the fallback value (original property value)
-    fallback_value = get_fallback_value(property_name)
+    fallback_value = fallback_value_for(property_name)
     # Return nil immediately if the fallback is nil (don't try to localize nil values)
-    if fallback_value.nil?
+    if fallback_value.blank?
       @localization_cache[cache_key] = nil if @localization_cache
       return nil
     end
@@ -116,8 +115,7 @@ module Localizable
     return @localization_cache[cache_key] if @localization_cache&.key?(cache_key)
 
     # Determine lookup key: use override if provided, otherwise use object.key
-    lookup_key = key_override
-    lookup_key = key if lookup_key.blank? && respond_to?(:key)
+    lookup_key = key_override.presence || try(:key)
 
     result = if lookup_key.blank?
                fallback_value
@@ -140,7 +138,7 @@ module Localizable
     @localization_cache&.clear
   end
 
-  private def get_fallback_value(property_name)
+  private def fallback_value_for(property_name)
     return public_send(property_name) if respond_to?(property_name)
 
     # Handle cases where the attribute might not exist
