@@ -7,6 +7,7 @@ import classNames from 'classnames';
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import {sendCodebridgeAnalyticsEvent} from '@cdo/apps/codebridge/utils/analyticsReporterHelper';
+import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import lab2I18n from '@cdo/apps/lab2/locale';
 import {
@@ -21,6 +22,7 @@ import {
   setAndSaveProjectSources,
 } from '@cdo/apps/lab2/redux/lab2ProjectReduxThunks';
 import {ProjectSources, ProjectVersion} from '@cdo/apps/lab2/types';
+import {LifecycleEvent} from '@cdo/apps/lab2/utils';
 import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {commonI18n} from '@cdo/apps/types/locale';
@@ -56,13 +58,16 @@ const VersionHistoryPanel: React.FunctionComponent<
   const [focusSelectedVersion, setFocusSelectedVersion] = useState(false);
   const previousListLoaded = useRef<boolean>(listLoaded);
 
-  const viewingOldVersion = useAppSelector(
-    state => state.lab2Project.viewingOldVersion
-  );
-
   // If this is a teacher viewing a student's project, we hide the restore button,
   // but still allow viewing old versions.
   const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
+
+  const previousLevelId = useRef<number>(levelId);
+  const previewViewAsUserId = useRef<number | null>(viewAsUserId);
+
+  const viewingOldVersion = useAppSelector(
+    state => state.lab2Project.viewingOldVersion
+  );
 
   const dialogControl = useDialogControl();
 
@@ -104,13 +109,28 @@ const VersionHistoryPanel: React.FunctionComponent<
     [setSelectedVersion]
   );
 
-  // Load version list on first open, if the levelId changes, or if viewAsUserId changes.
+  useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, () => {
+    loadVersionList(true);
+  });
+
+  // Ensure the version list is empty if the levelId changes or if viewAsUserId changes,
+  // then load the version list.
+  // We do this again when the level load finishes to ensure we have the correct list,
+  // as viewAsUserId changes before the project is loaded.
   useEffect(() => {
     // Reset the version list so that we don't briefly show
     // the previous level's/user's versions.
-    console.log('Resetting version list');
     setVersionList([]);
-    loadVersionList(true);
+    let resetSelectedVersion = false;
+    if (
+      previousLevelId.current !== levelId ||
+      viewAsUserId !== previewViewAsUserId.current
+    ) {
+      resetSelectedVersion = true;
+    }
+    loadVersionList(resetSelectedVersion);
+    previousLevelId.current = levelId;
+    previewViewAsUserId.current = viewAsUserId;
   }, [loadVersionList, levelId, viewAsUserId]);
 
   useEffect(() => {
