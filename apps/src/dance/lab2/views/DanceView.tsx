@@ -268,9 +268,10 @@ const DanceView: React.FunctionComponent<
     const sources =
       getInitialSources(levelProperties, initialSources) ||
       (defaultSources as DanceProjectSources);
-    dispatch(
-      setSong({songId: sources.selectedSong || songKeys[0], onAuthError})
-    );
+    const selectedSong = sources.selectedSong || levelProperties.defaultSong;
+    const songToUse =
+      selectedSong && songData[selectedSong] ? selectedSong : songKeys[0];
+    dispatch(setSong({songId: songToUse, onAuthError}));
   }, [dispatch, initialSources, levelProperties, songData]);
 
   useEffect(() => {
