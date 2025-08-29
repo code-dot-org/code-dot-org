@@ -14589,7 +14589,7 @@ indexes:
     type: :fulltext
     using: 
     comment: 
-version: 20250821182723
+version: 20250828171244
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 8

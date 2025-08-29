@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-08-14 15:24:31 UTC",
+    "serialized_at": "2025-08-28 18:16:46 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -8460,6 +8460,19 @@
   ],
   "resources": [
     {
+      "name": "Activity Guide",
+      "url": "https://docs.google.com/document/d/1aJYcWupWohkRQhi2HG4jl1mMK5JprBW3-gc9dyy30xg/template/preview",
+      "key": "activity_guide",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://docs.google.com/document/d/1aJYcWupWohkRQhi2HG4jl1mMK5JprBW3-gc9dyy30xg/export/pdf",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "activity_guide"
+      }
+    },
+    {
       "name": "AI: Impact on Society",
       "url": "https://youtu.be/ng4c1g3COfs",
       "key": "ai_impact_on_society",
@@ -9093,6 +9106,12 @@
       "seeding_key": {
         "lesson.key": "Making Sprites",
         "resource.key": "sprite_lab_documentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "resource.key": "activity_guide"
       }
     },
     {

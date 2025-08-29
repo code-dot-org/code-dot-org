@@ -10,6 +10,7 @@ export enum IconColor {
 
 export interface AiDiffNotification {
   id: string;
+  externalId: string;
   title: string;
   description: string;
   readAt: Date | null;

@@ -13,7 +13,7 @@ import {
   MIN_RESPONSE_COUNT,
   PROMOTER_QUESTION_FOOTER,
 } from '../../constants';
-import {getQuestionDescription} from '../../helpers';
+import {getQuestionDescription, prepLikertBreakdown} from '../../helpers';
 
 import styles from '../../../workshop.module.scss';
 
@@ -44,6 +44,8 @@ export const Engagement = () => {
               likelyToRecommend.question_short_text ??
               likelyToRecommend.question_text
             }
+            longTitle={likelyToRecommend.question_text}
+            questionType={likelyToRecommend.question_type}
             description={getQuestionDescription(likelyToRecommend)}
             footer={PROMOTER_QUESTION_FOOTER}
             score={likelyToRecommend.results.promoter_percentage}
@@ -56,11 +58,14 @@ export const Engagement = () => {
             <ScoreCard
               key={question.question_name}
               title={question.question_short_text ?? question.question_text}
+              longTitle={question.question_text}
+              questionType={question.question_type}
               description={getQuestionDescription(question)}
               footer={LIKERT_QUESTION_FOOTER}
               score={question.results.weighted_score}
               responseCount={question.results.total_responses}
               minResponseCount={MIN_RESPONSE_COUNT}
+              breakdown={prepLikertBreakdown(question.results.breakdown)}
             />
           ) : null
         )}

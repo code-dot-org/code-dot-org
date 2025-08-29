@@ -145,11 +145,35 @@ module Pd::Foorm
     def self.process_text_responses(question_summary)
       return {} unless question_summary.is_a?(Array)
 
-      responses = question_summary.compact_blank
+      useless_answers = %w(
+        none
+        na
+        no
+        nothing
+        noneoftheabove
+        notapplicable
+        noopinion
+        noidea
+        nada
+        idk
+        idc
+        idontknow
+        dontknow
+        dunno
+      )
+
+      # Filter responses
+      responses = question_summary.compact_blank.filter do |response|
+        sanitized_response = response.downcase.gsub(/\W/, '') # Remove spaces and non-word characters and then downcase
+        response.length >= 3 && useless_answers.exclude?(sanitized_response) # Exclude short and useless answers
+      end
+
+      # Sort responses by length, longest first
+      sorted_responses = responses.sort_by {|response| -response.length}
 
       {
-        total_responses: responses.length,
-        responses: responses
+        total_responses: sorted_responses.length,
+        responses: sorted_responses
       }
     end
 
