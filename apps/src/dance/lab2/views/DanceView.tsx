@@ -10,7 +10,7 @@ import {
   setupBlocklyEnvironment,
 } from '@cdo/apps/dance/blockly/setup';
 import {
-  initSongs,
+  loadSongs,
   reducers,
   setHasEdited,
   setHasRun,
@@ -222,21 +222,19 @@ const DanceView: React.FunctionComponent<
     dispatch(setHasEdited(false));
   }, [levelProperties.id, dispatch]);
 
-  // Initialize song manifest and load initial song when level loads.
+  // Load or update song manifest when level properties change.
   useEffect(() => {
     dispatch(
-      initSongs({
+      loadSongs({
         useRestrictedSongs: levelProperties.useRestrictedSongs || false,
-        selectSongOptions: {
-          defaultSong: levelProperties.defaultSong,
-          selectedSong: initialSources?.selectedSong,
-          isProjectLevel: levelProperties.isProjectLevel || false,
-          freePlay: levelProperties.freePlay || false,
-        },
-        onAuthError,
+        songSelection: levelProperties.songSelection || [],
       })
     );
-  }, [levelProperties, initialSources, dispatch]);
+  }, [
+    levelProperties.useRestrictedSongs,
+    levelProperties.songSelection,
+    dispatch,
+  ]);
 
   // Set up the Blockly workspace when the level changes
   useEffect(() => {
@@ -250,6 +248,7 @@ const DanceView: React.FunctionComponent<
     }
     workspace.current = Blockly.inject(blocklyDiv, {
       toolbox: levelProperties.toolboxBlocks,
+      readOnly: readonlyWorkspace,
     });
 
     const sources =
@@ -257,7 +256,23 @@ const DanceView: React.FunctionComponent<
     loadBlocksToWorkspace(workspace.current, JSON.stringify(sources.source));
 
     return () => workspace.current?.dispose();
-  }, [dispatch, initialSources, levelProperties]);
+  }, [dispatch, initialSources, readonlyWorkspace, levelProperties]);
+
+  // Set the initial song based on initial sources or level default
+  useEffect(() => {
+    const songKeys = Object.keys(songData);
+    if (songKeys.length === 0) {
+      // Song data has not been loaded yet.
+      return;
+    }
+    const sources =
+      getInitialSources(levelProperties, initialSources) ||
+      (defaultSources as DanceProjectSources);
+    const selectedSong = sources.selectedSong || levelProperties.defaultSong;
+    const songToUse =
+      selectedSong && songData[selectedSong] ? selectedSong : songKeys[0];
+    dispatch(setSong({songId: songToUse, onAuthError}));
+  }, [dispatch, initialSources, levelProperties, songData]);
 
   useEffect(() => {
     workspace.current?.addChangeListener(onBlockSpaceChange);
