@@ -31,8 +31,8 @@ class CodeprojectsPreviewController < ApplicationController
     # Goal: Allow student code execution while preventing external script injection
     script_src_base = "'self' blob:"
 
-    # Security Control: Allow eval() for dynamic code execution in student projects
-    # Goal: Enable legitimate student programming features (e.g ???)
+    # Security Control: Allow eval() for dynamic code execution in student projects and to load our dependencies.
+    # Goal: Enable loading dependencies that use eval() so we can preview student projects.
     # Remaining Risk: Malicious student code could use eval() for attacks (mitigated by iframe sandbox)
     script_src_eval = " 'unsafe-eval'"
 
