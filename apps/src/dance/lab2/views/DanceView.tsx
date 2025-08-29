@@ -230,13 +230,12 @@ const DanceView: React.FunctionComponent<{
       return;
     }
     const blocks = Blockly.serialization.workspaces.save(workspace.current);
-    if (isEqual(blocks, currentSources.source)) {
-      return;
+    if (!isEqual(blocks, currentSources.source)) {
+      loadBlocksToWorkspace(
+        workspace.current,
+        JSON.stringify(currentSources.source)
+      );
     }
-    loadBlocksToWorkspace(
-      workspace.current,
-      JSON.stringify(currentSources.source)
-    );
   }, [currentSources.source]);
 
   useEffect(() => {
@@ -247,9 +246,12 @@ const DanceView: React.FunctionComponent<{
     }
     // In case there is no song set in the current sources, set it to the default.
     if (!currentSources.selectedSong) {
-      updateSources({...currentSources, selectedSong: songKeys[0]});
+      const defaultSong = levelProperties.defaultSong;
+      const songToUse =
+        defaultSong && songData[defaultSong] ? defaultSong : songKeys[0];
+      updateSources({...currentSources, selectedSong: songToUse});
     }
-  }, [songData, currentSources, updateSources]);
+  }, [songData, currentSources, updateSources, levelProperties.defaultSong]);
 
   // Load the selected song whenever it changes in project sources.
   useEffect(() => {
@@ -368,14 +370,8 @@ const DanceView: React.FunctionComponent<{
   );
 };
 
-const DanceLab: React.FC<
-  LabProps<DanceLevelProperties, DanceProjectSources>
-> = props => {
-  return (
-    <SourcesContainer {...props} defaultSources={defaultSources}>
-      <DanceView levelProperties={props.levelProperties} />
-    </SourcesContainer>
-  );
-};
-
-export default DanceLab;
+export default (props: LabProps<DanceLevelProperties, DanceProjectSources>) => (
+  <SourcesContainer {...props} defaultSources={defaultSources}>
+    <DanceView levelProperties={props.levelProperties} />
+  </SourcesContainer>
+);
