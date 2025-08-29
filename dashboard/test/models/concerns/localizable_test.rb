@@ -158,7 +158,7 @@ class LocalizableTest < ActiveSupport::TestCase
         let(:property_name) {:non_localizable_attr}
 
         it 'logs warning and returns original value' do
-          allow(CDO).to receive(:log).and_return(double(warn: nil))
+          expect(CDO).to receive(:log).and_return(double(warn: nil))
 
           _localize_property.must_be_nil
         end
@@ -226,22 +226,12 @@ class LocalizableTest < ActiveSupport::TestCase
         end
       end
 
-      context 'when invalid locale is provided' do
-        let(:locale_code) {'invalid-locale'}
-
-        it 'logs warning and returns fallback value' do
-          allow(CDO).to receive(:log).and_return(double(warn: nil))
-
-          _localize_property.must_equal 'Test Display'
-        end
-      end
-
       context 'when I18n raises unexpected error' do
         let(:locale_code) {:es}
 
         it 'logs error and returns fallback value' do
-          allow(CDO).to receive(:log).and_return(double(error: nil))
-          allow(I18n).to receive(:t).and_raise(StandardError, 'Test error')
+          expect(I18n).to receive(:t).and_raise(StandardError, 'Test error')
+          expect(CDO).to receive(:log).and_return(double(error: nil))
 
           _localize_property.must_equal 'Test Display'
         end

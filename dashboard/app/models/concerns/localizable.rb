@@ -160,9 +160,6 @@ module Localizable
         smart: true
       )
     end
-  rescue I18n::InvalidLocale => exception
-    CDO.log.warn("Invalid locale #{locale_code} for #{self.class.name}##{property_name}: #{exception.message}")
-    fallback_value
   rescue => exception
     CDO.log.error("Localization error for #{self.class.name}##{property_name} (locale: #{locale_code}): #{exception.message}")
     fallback_value
