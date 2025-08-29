@@ -8,6 +8,7 @@ import {
 import Drawer from '@mui/material/Drawer';
 import React from 'react';
 
+//import Foorm from '@cdo/apps/code-studio/pd/foorm/Foorm';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
@@ -45,11 +46,13 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
     React.useState(schoolInfoInterstitialOpenInitially);
   const [schoolInfoConfirmationOpen, setSchoolInfoConfirmationOpen] =
     React.useState(schoolInfoConfirmationOpenInitially);
+  const [showSchoolInfoUnknownError, setShowSchoolInfoUnknownError] =
+    React.useState(false);
   const [success, setSuccess] = React.useState(false);
   const [AFEDrawerOpen, setAFEDrawerOpen] = React.useState(afeOpenInitially);
   const [AFEParticipate, setAFEParticipate] = React.useState(false);
-  const [showSchoolInfoUnknownError, setShowSchoolInfoUnknownError] =
-    React.useState(false);
+  const [NPSOpen, setNPSOpen] = React.useState(true);
+  // const [NPSData, setNPSData] = React.useState(null);
 
   const isOpen = React.useMemo<boolean>(
     () =>
@@ -77,6 +80,18 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
 
   const existingSchoolName =
     existingSchoolInfo?.school_name || i18n.schoolInfoDialogDescriptionNoName();
+
+  React.useEffect(() => {
+    if (NPSOpen) {
+      HttpClient.fetchJson('/form/nps_survey/configuration').then(result => {
+        if (result) {
+          console.log(result.value);
+          //setNPSData(result.value);
+        }
+      });
+    }
+    setNPSOpen(false); //TODO: Remove this
+  }, [NPSOpen]);
 
   const headerText: () => string = () => {
     if (schoolInfoInterstitialOpen) {
@@ -120,6 +135,8 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
       );
     } else if (schoolInfoConfirmationOpen || success || AFEDrawerOpen) {
       return null;
+    } else if (NPSOpen) {
+      //<Foorm {...NPSData} />;
     }
   };
 
