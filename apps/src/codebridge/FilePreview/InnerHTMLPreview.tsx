@@ -6,7 +6,6 @@ import {MultiFileSource} from '@cdo/apps/lab2/types';
 
 import {IframeMessageType} from './constants';
 import {
-  setContentSecurityPolicy,
   updateLinksToHtmlFiles,
   updateLinksToNonHtmlFiles,
 } from './htmlParsingHelpers';
@@ -147,7 +146,6 @@ const InnerHTMLPreview = () => {
 
   // TODOs:
   // Support other file types (images, etc.): https://codedotorg.atlassian.net/browse/CT-1255
-  // Better regeneration logic: https://codedotorg.atlassian.net/browse/CT-1259
   useEffect(() => {
     if (source) {
       const files: Record<string, string> = {};
@@ -180,7 +178,6 @@ const InnerHTMLPreview = () => {
           source.folders
         );
 
-        setContentSecurityPolicy(doc);
         updateLinksToNonHtmlFiles(doc, files, fullFileName);
         updateLinksToHtmlFiles(doc, fullFileName);
         const updatedContents = doc.documentElement.outerHTML;
