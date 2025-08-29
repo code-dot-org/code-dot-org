@@ -84,6 +84,8 @@ const InnerHTMLPreview = () => {
         setCurrentFile(data.fileName);
       } else if (data.type === IframeMessageType.SET_ALLOW_SCRIPTS) {
         setAllowScripts(!!data.allow);
+      } else if (data.type === IframeMessageType.REFRESH) {
+        iframeRef.current?.contentWindow?.location.reload();
       }
     },
     [parentOrigin]

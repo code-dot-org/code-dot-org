@@ -398,29 +398,28 @@ export const isQuestionType = <T extends SurveyQuestion['question_type']>(
   return !!question && question.question_type === type;
 };
 
+export interface Breakdown {
+  count: number;
+  percentage: number;
+  label: string;
+  status?: string;
+}
+
 export interface LikertResults {
   weighted_score: number;
   agreement_count: number;
   agreement_percentage: number;
-  breakdown: Record<string, LikertBreakdown>;
-}
-
-export interface LikertBreakdown {
-  count: number;
-  percentage: number;
-  label: string;
-  weighted_value: number;
+  breakdown: Record<
+    string,
+    Breakdown & {
+      weighted_value: number;
+    }
+  >;
 }
 
 export interface PromoterResults {
   promoter_percentage: number;
-  breakdown: Record<string, PromoterBreakdown>;
-}
-
-export interface PromoterBreakdown {
-  count: number;
-  percentage: number;
-  label: string;
+  breakdown: Record<string, Breakdown>;
 }
 
 export interface TextResults {
@@ -428,23 +427,11 @@ export interface TextResults {
 }
 
 export interface SingleSelectResults {
-  breakdown: Record<string, SingleSelectBreakdown>;
+  breakdown: Record<string, Breakdown>;
   other_answers?: string[];
 }
 
-export interface SingleSelectBreakdown {
-  count: number;
-  percentage: number;
-  label: string;
-}
-
 export interface MultiSelectResults {
-  breakdown: Record<string, MultiSelectBreakdown>;
+  breakdown: Record<string, Breakdown>;
   total_respondents: number;
-}
-
-export interface MultiSelectBreakdown {
-  count: number;
-  percentage: number;
-  label: string;
 }

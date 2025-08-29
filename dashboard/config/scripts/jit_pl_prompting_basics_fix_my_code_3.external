@@ -3,36 +3,28 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# The Day Everything Broke Comic
-
-#### Jordan is a 10th grader with a big day ahead. A paper is due, a test is scheduled, and he's part of the planning committee for the school talent show. But from the moment school starts, everything begins to unravel.
-
-<br>
-
-<p align="center">
-<img src="https://images.code.org/2d6ef03c89b7375b3ddd58cd19f8adc4-Screenshot 2025-08-15 at 12.19.10 PM.png" alt="The Day Everything Broke Comic" width="90%" style="border-radius:10px; border: 5px solid black;">
-</p>
+# "Fix my code" 
 
 
+#### It might feel natural to ask AI for a quick fix — after all, it can patch errors instantly. But it’s important to learn to use AI as a partner in **problem-solving**, not just as a tool that does the work without our understanding.
 
 
-## 📝 To Do
+#### On the left, notice the prompt and response and the auto-corrected code on the right. 
 
-#### *What Went Wrong?* Pick one failure scenario. Use the checklist below to figure out possible causes and reflect on what you think happened.
+<img src="https://images.code.org/23ee154c31dfe6e39e36d8561e79ed72-image-1756404369072.png" 
+     alt="ai prompt and response on the left fixing code by adding let. Corrected code sample on the right" 
+     width="650px" 
+     style="display: block; margin-left: auto; margin-right: auto; border: 3pt solid #8C52BA; border-radius: 12px;">
 
-* #### Password was entered wrong
-* #### System didn’t recognize the account
-* #### Password reset link never arrived
-* #### Too many login attempts
-* #### System was busy or too slow
-* #### Multi-factor login didn’t go through
-* #### Email system blocked
-* #### IT system was busy or too slow
+#### With this prompt, the AI fixes the code and leaves a brief explanation about declaring the variable. The more complex the code or error, the less clear this will be. 
 
-<br>
+#### It can also lead students to moving ahead with working code instead of critically thinking about the bug.
 
-<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
-    ➡️ This activity is from Lesson 1. You can find more details in the full <a href='https://studio.code.org/courses/ai-powered-threats-and-defenses-2025/units/1/lessons/1' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a>.
-</p>
+
+
+
+
+<div style="clear:both;"></div>
+
 
 MARKDOWN
