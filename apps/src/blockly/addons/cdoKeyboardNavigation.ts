@@ -1,5 +1,6 @@
 import {KeyboardNavigation} from '@blockly/keyboard-navigation';
 import * as GoogleBlockly from 'blockly/core';
+import './shortcutMenuStyles.scss';
 
 export function registerKeyboardNavigationStyles() {
   KeyboardNavigation.registerKeyboardNavigationStyles();
@@ -23,6 +24,7 @@ function createShortcutsModalContainer() {
   if (!document.getElementById('shortcuts')) {
     const shortcutDialog = document.createElement('div');
     shortcutDialog.id = 'shortcuts';
+    shortcutDialog.className = 'shortcut-dialog';
     document.body.appendChild(shortcutDialog);
   }
 }

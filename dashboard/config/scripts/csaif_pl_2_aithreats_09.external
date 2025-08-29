@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 #  Lesson Highlight: Investigate a CIA Scenario
 
-<img src="https://images.code.org/ef882e1529a24edab278b762dea5189b-Screenshot 2025-08-20 at 11.20.04 AM.png" alt="activity guide with 'input', 'draw your neural network', and 'output' columns" width="350px" style="border: 2px solid black; border-radius: 8px; float:right; margin: 20px 20px 20px 20px">
+<img src="https://images.code.org/ef882e1529a24edab278b762dea5189b-Screenshot 2025-08-20 at 11.20.04 AM.png" alt="activity guide Investigate a CIA Scenario" width="350px" style="border: 2px solid black; border-radius: 8px; float:right; margin: 20px 20px 20px 20px">
 
 #### During <a href='https://levelbuilder-studio.code.org/courses/exploring-gen-ai-2025/units/1/lessons/6' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson 6 - Confidentiality, Integrity, and Availability</a>, students take turns roleplaying attackers and defenders to analyze system failures and apply the CIA Triad. They propose simple fixes and think through tradeoffs, practicing how cybersecurity pros protect people.
 
@@ -24,6 +24,8 @@ markdown <<MARKDOWN
 * #### <a href='https://docs.google.com/document/d/1b7-s3lc2fthmqHlfGlXn39aMuejFy5B0jS0hLrm6FAw/edit?tab=t.0#heading=h.hj9mx4qf72mr' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Activity Guide</a>
 
 * #### <a href='https://docs.google.com/document/d/1GbUuawSv3U2DthbvwDOVg5P6-oGLPzGtt2qlb9JjpEA/edit?tab=t.0#heading=h.pc78lrezil1v' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Scenario Descriptions</a>  including Solution and Tradeoff Answer Banks
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #B7E0E5; display: inline-block;">🚀 Additional Teacher Resource: <a href='https://www.canva.com/design/DAGvNt-cbGk/1hBKgfCeiM1NKJX9WIX7Ag/view?utm_content=DAGvNt-cbGk&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h4745770232#6' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Facilitating Attacker and Defender Scenarios</a></p>
 
 ## Example: Public WiFi on a Bus Ride
 #### You'll go through the following example with your students before sending them off to work in pairs through the remaining scenarios.
@@ -45,7 +47,7 @@ They log in quickly and the app doesn't ask for any extra info to prove it’s r
 #### When going through the example, you'll model how to record this information on the Activity Guide.
 
 <p align="center">
-<img src="https://images.code.org/cf6c2846c91b7889bbb68c21f7d82d2e-Screenshot 2025-08-20 at 11.41.16 AM.png" alt="Caeasar Cipher shifting the message free pizza in the cafeteria by 13 to serr cvmmn va gur pnsrgrevn" width="90%" style="border-radius:10px; border: 5px solid black;">
+<img src="https://images.code.org/cf6c2846c91b7889bbb68c21f7d82d2e-Screenshot 2025-08-20 at 11.41.16 AM.png" alt="example table with Case, Attacker's Target, CIA Pillar, Why it Matters, Defender's fix, and Tradeoff" width="90%" style="border-radius:10px; border: 5px solid black;">
 </p>
 
 

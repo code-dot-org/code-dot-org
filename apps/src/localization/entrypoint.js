@@ -44,8 +44,10 @@ const prefixes = {
 };
 
 const live = [
+  '/courses/3-5gamedesign-2024',
   '/courses/foundations-gen-ai-2024',
   '/courses/foundations-gen-ai-2025',
+  '/courses/foundations-generative-ai-unplugged',
   '/courses/k5-ai-data-2024',
 ];
 
