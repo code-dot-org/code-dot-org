@@ -11,10 +11,13 @@ import style from './personalization-information.module.scss';
 const PersonalizationCollectorContainer: React.FC = () => {
   const [questionsNumber, setQuestionsNumber] = React.useState(0);
 
-  const onCarouselPress = (direction: -1 | 1) => {
+  const NEXT = 1;
+  const BACK = -1;
+
+  const onCarouselPress = (direction: number) => {
     if (
-      (direction === -1 && questionsNumber === 0) ||
-      (direction === 1 &&
+      (direction === BACK && questionsNumber === 0) ||
+      (direction === NEXT &&
         questionsNumber === PERSONALIZATION_PROMPTS.length - 1)
     ) {
       return;
@@ -33,7 +36,7 @@ const PersonalizationCollectorContainer: React.FC = () => {
           type="secondary"
           color="gray"
           size="m"
-          onClick={() => onCarouselPress(-1)}
+          onClick={() => onCarouselPress(BACK)}
           iconLeft={{iconName: 'angle-left'}}
         />
         <Button
@@ -41,7 +44,7 @@ const PersonalizationCollectorContainer: React.FC = () => {
           text={i18n.next()}
           type="primary"
           size="m"
-          onClick={() => onCarouselPress(1)}
+          onClick={() => onCarouselPress(NEXT)}
           iconRight={{iconName: 'angle-right'}}
         />
       </div>
