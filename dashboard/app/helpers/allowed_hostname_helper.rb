@@ -1,5 +1,10 @@
 # Web Lab 2 and App Lab projects use the same list of allowed hostnames.
 # These are the hostnames that users are allowed to make requests to in their projects.
+# SECURITY CONSIDERATIONS:
+# - These APIs are allowlisted to let students make web requests in their projects
+# - All APIs should be public, well-documented, and not require authentication for basic usage
+# - APIs that require API keys should be documented as such.  These risk student exposure to the API keys.
+#
 module AllowedHostnameHelper
   # 'code.org' is included so applab apps can access the tables and properties of other applab apps.
   ALLOWED_HOSTNAME_SUFFIXES = %w(
