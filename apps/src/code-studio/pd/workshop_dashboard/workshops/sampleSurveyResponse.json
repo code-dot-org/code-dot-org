@@ -1,0 +1,2782 @@
+{
+  "course": "Build Your Own Workshop",
+  "name": "Computing Foundations for a Digital Age using Code.org",
+  "facilitators": {
+    "3862249": "Sara Roberts",
+    "6003270": "Nick Weyer",
+    "22488229": "RAEGAN TOWNE"
+  },
+  "surveys": {
+    "pre_workshop": {
+      "total_responses": 7,
+      "categories": {
+        "cohort_profile": {
+          "questions": {
+            "years_teaching": {
+              "question_name": "years_teaching",
+              "question_text": "How many years have you taught at the K-12 level (any subject)?",
+              "question_short_text": "Years teaching at K-12 level (any subject)",
+              "question_type": "text",
+              "category": "cohort_profile",
+              "results": {
+                "total_responses": 7,
+                "responses": ["11", "25", "12", "21", "14", "15", "6"]
+              }
+            },
+            "years_teaching_cs": {
+              "question_name": "years_teaching_cs",
+              "question_text": "How many years have you taught COMPUTER SCIENCE at the K-12 level?",
+              "question_short_text": "Years teaching at K-12 level (CS only)",
+              "question_type": "text",
+              "category": "cohort_profile",
+              "results": {
+                "total_responses": 7,
+                "responses": ["10", "0", "0", "1", "0", "0", "1"]
+              }
+            },
+            "grade": {
+              "question_name": "grade",
+              "question_text": "What grade levels do you currently support or work with?",
+              "question_short_text": "Grade levels currently teaching",
+              "question_type": "multiSelect",
+              "category": "cohort_profile",
+              "results": {
+                "total_respondents": 7,
+                "breakdown": {
+                  "k": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "Kindergarten"
+                  },
+                  "1": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "1st grade"
+                  },
+                  "2": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "2nd grade"
+                  },
+                  "3": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "3rd grade"
+                  },
+                  "4": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "4th grade"
+                  },
+                  "5": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "5th grade"
+                  },
+                  "6": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "6th grade"
+                  },
+                  "7": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "7th grade"
+                  },
+                  "8": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "8th grade"
+                  },
+                  "9": {
+                    "count": 7,
+                    "percentage": 100,
+                    "label": "9th grade"
+                  },
+                  "10": {
+                    "count": 6,
+                    "percentage": 85.7,
+                    "label": "10th grade"
+                  },
+                  "11": {
+                    "count": 6,
+                    "percentage": 85.7,
+                    "label": "11th grade"
+                  },
+                  "12": {
+                    "count": 6,
+                    "percentage": 85.7,
+                    "label": "12th grade"
+                  },
+                  "12up": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "Above 12th grade"
+                  },
+                  "na": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "N/A"
+                  }
+                }
+              }
+            },
+            "cdo_teaching_experience": {
+              "question_name": "cdo_teaching_experience",
+              "question_text": "Which of the following options best captures your previous experience using Code.org in the classroom?",
+              "question_short_text": "Previous experience with Code.org in the classroom",
+              "question_type": "singleSelect",
+              "category": "cohort_profile",
+              "results": {
+                "total_responses": 7,
+                "breakdown": {
+                  "cs_teaching": {
+                    "count": 3,
+                    "percentage": 42.9,
+                    "label": " I use Code.org to teach a computer science course"
+                  },
+                  "co_curricular_teaching": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": " I use Code.org to introduce computer science when teaching other content"
+                  },
+                  "hoc": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "My students have done Hour of Code activities"
+                  },
+                  "not_used": {
+                    "count": 4,
+                    "percentage": 57.1,
+                    "label": "I have not used Code.org in my classroom yet"
+                  }
+                }
+              }
+            },
+            "cdo_pd_experience": {
+              "question_name": "cdo_pd_experience",
+              "question_text": "What is your previous experience with Code.org professional learning?",
+              "question_short_text": "Previous experience with Code.org professional learning",
+              "question_type": "singleSelect",
+              "category": "cohort_profile",
+              "results": {
+                "total_responses": 7,
+                "breakdown": {
+                  "first": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "This is my first Code.org workshop"
+                  },
+                  "experienced_most_recent_this_sy": {
+                    "count": 6,
+                    "percentage": 85.7,
+                    "label": "I've attended Code.org workshops before, the most recent one was this school year"
+                  },
+                  "experienced_most_recent_prior_sys": {
+                    "count": 1,
+                    "percentage": 14.3,
+                    "label": "I've attended Code.org workshops before, the most recent one was in a previous school year"
+                  },
+                  "not_sure": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "I’m not sure"
+                  }
+                }
+              }
+            },
+            "highest_level_cs_education": {
+              "question_name": "highest_level_cs_education",
+              "question_text": "Which most accurately describes the highest level of formal computer science education you have completed? ",
+              "question_short_text": "Highest level of formal computer science education",
+              "question_type": "singleSelect",
+              "category": "cohort_profile",
+              "results": {
+                "total_responses": 7,
+                "breakdown": {
+                  "little_no": {
+                    "count": 5,
+                    "percentage": 71.4,
+                    "label": "At this time, I have little to no formal education in computer science."
+                  },
+                  "online_courses": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "I have taken one or more courses online for credit."
+                  },
+                  "college_courses": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "I took one or more courses in college."
+                  },
+                  "earning_degree": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "I am currently in the process of earning a computer science degree."
+                  },
+                  "bachelors_degree": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "I have a Bachelor's degree in computer science."
+                  },
+                  "masters_degree": {
+                    "count": 1,
+                    "percentage": 14.3,
+                    "label": "I have a Master's degree in computer science."
+                  },
+                  "phd": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "I have a PhD in computer science."
+                  }
+                },
+                "other_answers": []
+              }
+            }
+          }
+        },
+        "facilitators": {
+          "11157021": {
+            "name": "Susi Burger",
+            "questions": {}
+          },
+          "28403856": {
+            "name": "Ms. Laird",
+            "questions": {}
+          }
+        },
+        "readiness_expectations": {
+          "questions": {
+            "feel_prepared": {
+              "question_name": "feel_prepared",
+              "question_text": "I am prepared to participate in this workshop.",
+              "question_short_text": "Prepared to participate (%)",
+              "question_type": "likert",
+              "category": "readiness_expectations",
+              "results": {
+                "total_responses": 7,
+                "weighted_score": 83,
+                "agreement_count": 6,
+                "agreement_percentage": 86,
+                "breakdown": {
+                  "1": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "Strongly Disagree",
+                    "weighted_value": 0
+                  },
+                  "2": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "Disagree",
+                    "weighted_value": 17
+                  },
+                  "3": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "Slightly Disagree",
+                    "weighted_value": 33
+                  },
+                  "4": {
+                    "count": 1,
+                    "percentage": 14.3,
+                    "label": "Neutral",
+                    "weighted_value": 50
+                  },
+                  "5": {
+                    "count": 1,
+                    "percentage": 14.3,
+                    "label": "Slightly Agree",
+                    "weighted_value": 67
+                  },
+                  "6": {
+                    "count": 2,
+                    "percentage": 28.6,
+                    "label": "Agree",
+                    "weighted_value": 83
+                  },
+                  "7": {
+                    "count": 3,
+                    "percentage": 42.9,
+                    "label": "Strongly Agree",
+                    "weighted_value": 100
+                  }
+                }
+              }
+            },
+            "understand_cs_concepts": {
+              "question_name": "understand_cs_concepts",
+              "question_text": "I am confident in my understanding of computer science concepts.",
+              "question_short_text": "Confident in CS concepts (%)",
+              "question_type": "likert",
+              "category": "readiness_expectations",
+              "results": {
+                "total_responses": 7,
+                "weighted_score": 69,
+                "agreement_count": 5,
+                "agreement_percentage": 71,
+                "breakdown": {
+                  "1": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "Strongly Disagree",
+                    "weighted_value": 0
+                  },
+                  "2": {
+                    "count": 1,
+                    "percentage": 14.3,
+                    "label": "Disagree",
+                    "weighted_value": 17
+                  },
+                  "3": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "Slightly Disagree",
+                    "weighted_value": 33
+                  },
+                  "4": {
+                    "count": 1,
+                    "percentage": 14.3,
+                    "label": "Neutral",
+                    "weighted_value": 50
+                  },
+                  "5": {
+                    "count": 2,
+                    "percentage": 28.6,
+                    "label": "Slightly Agree",
+                    "weighted_value": 67
+                  },
+                  "6": {
+                    "count": 1,
+                    "percentage": 14.3,
+                    "label": "Agree",
+                    "weighted_value": 83
+                  },
+                  "7": {
+                    "count": 2,
+                    "percentage": 28.6,
+                    "label": "Strongly Agree",
+                    "weighted_value": 100
+                  }
+                }
+              }
+            },
+            "know_where_to_get_help": {
+              "question_name": "know_where_to_get_help",
+              "question_text": "I know where to find help when preparing to teach computer science content.",
+              "question_short_text": "Know where to find help (%)",
+              "question_type": "likert",
+              "category": "readiness_expectations",
+              "results": {
+                "total_responses": 7,
+                "weighted_score": 78,
+                "agreement_count": 6,
+                "agreement_percentage": 86,
+                "breakdown": {
+                  "1": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "Strongly Disagree",
+                    "weighted_value": 0
+                  },
+                  "2": {
+                    "count": 1,
+                    "percentage": 14.3,
+                    "label": "Disagree",
+                    "weighted_value": 17
+                  },
+                  "3": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "Slightly Disagree",
+                    "weighted_value": 33
+                  },
+                  "4": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "Neutral",
+                    "weighted_value": 50
+                  },
+                  "5": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "Slightly Agree",
+                    "weighted_value": 67
+                  },
+                  "6": {
+                    "count": 4,
+                    "percentage": 57.1,
+                    "label": "Agree",
+                    "weighted_value": 83
+                  },
+                  "7": {
+                    "count": 2,
+                    "percentage": 28.6,
+                    "label": "Strongly Agree",
+                    "weighted_value": 100
+                  }
+                }
+              }
+            },
+            "community_cs_educators": {
+              "question_name": "community_cs_educators",
+              "question_text": "I have a community of educators I can turn to for support with computer science.",
+              "question_short_text": "Have a CS educator community (%)",
+              "question_type": "likert",
+              "category": "readiness_expectations",
+              "results": {
+                "total_responses": 7,
+                "weighted_score": 74,
+                "agreement_count": 6,
+                "agreement_percentage": 86,
+                "breakdown": {
+                  "1": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "Strongly Disagree",
+                    "weighted_value": 0
+                  },
+                  "2": {
+                    "count": 1,
+                    "percentage": 14.3,
+                    "label": "Disagree",
+                    "weighted_value": 17
+                  },
+                  "3": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "Slightly Disagree",
+                    "weighted_value": 33
+                  },
+                  "4": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "Neutral",
+                    "weighted_value": 50
+                  },
+                  "5": {
+                    "count": 2,
+                    "percentage": 28.6,
+                    "label": "Slightly Agree",
+                    "weighted_value": 67
+                  },
+                  "6": {
+                    "count": 2,
+                    "percentage": 28.6,
+                    "label": "Agree",
+                    "weighted_value": 83
+                  },
+                  "7": {
+                    "count": 2,
+                    "percentage": 28.6,
+                    "label": "Strongly Agree",
+                    "weighted_value": 100
+                  }
+                }
+              }
+            },
+            "confindent_use_cdo_resources": {
+              "question_name": "confindent_use_cdo_resources",
+              "question_text": "I am confident using the Code.org platform and resources.",
+              "question_short_text": "Confident using Code.org (%)",
+              "question_type": "likert",
+              "category": "readiness_expectations",
+              "results": {
+                "total_responses": 7,
+                "weighted_score": 69,
+                "agreement_count": 5,
+                "agreement_percentage": 71,
+                "breakdown": {
+                  "1": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "Strongly Disagree",
+                    "weighted_value": 0
+                  },
+                  "2": {
+                    "count": 1,
+                    "percentage": 14.3,
+                    "label": "Disagree",
+                    "weighted_value": 17
+                  },
+                  "3": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "Slightly Disagree",
+                    "weighted_value": 33
+                  },
+                  "4": {
+                    "count": 1,
+                    "percentage": 14.3,
+                    "label": "Neutral",
+                    "weighted_value": 50
+                  },
+                  "5": {
+                    "count": 2,
+                    "percentage": 28.6,
+                    "label": "Slightly Agree",
+                    "weighted_value": 67
+                  },
+                  "6": {
+                    "count": 1,
+                    "percentage": 14.3,
+                    "label": "Agree",
+                    "weighted_value": 83
+                  },
+                  "7": {
+                    "count": 2,
+                    "percentage": 28.6,
+                    "label": "Strongly Agree",
+                    "weighted_value": 100
+                  }
+                }
+              }
+            },
+            "strategies_support_all_learners": {
+              "question_name": "strategies_support_all_learners",
+              "question_text": "I have strategies to support the engagement and success of all learners in a computer science classroom.",
+              "question_short_text": "Have strategies to support learners (%)",
+              "question_type": "likert",
+              "category": "readiness_expectations",
+              "results": {
+                "total_responses": 7,
+                "weighted_score": 71,
+                "agreement_count": 6,
+                "agreement_percentage": 86,
+                "breakdown": {
+                  "1": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "Strongly Disagree",
+                    "weighted_value": 0
+                  },
+                  "2": {
+                    "count": 1,
+                    "percentage": 14.3,
+                    "label": "Disagree",
+                    "weighted_value": 17
+                  },
+                  "3": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "Slightly Disagree",
+                    "weighted_value": 33
+                  },
+                  "4": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "Neutral",
+                    "weighted_value": 50
+                  },
+                  "5": {
+                    "count": 2,
+                    "percentage": 28.6,
+                    "label": "Slightly Agree",
+                    "weighted_value": 67
+                  },
+                  "6": {
+                    "count": 3,
+                    "percentage": 42.9,
+                    "label": "Agree",
+                    "weighted_value": 83
+                  },
+                  "7": {
+                    "count": 1,
+                    "percentage": 14.3,
+                    "label": "Strongly Agree",
+                    "weighted_value": 100
+                  }
+                }
+              }
+            },
+            "learning_expectations": {
+              "question_name": "learning_expectations",
+              "question_text": "What are you hoping to learn or take away from this specific workshop?  What questions or topics do you hope this workshop will cover?.",
+              "question_short_text": "Expectations for this workshop",
+              "question_type": "text",
+              "category": "readiness_expectations",
+              "results": {
+                "total_responses": 5,
+                "responses": [
+                  "I am hoping to get a good understanding of the next topics in the Computer Science Principles course.  So far, we have done mostly unplugged lessons at this point in the school year.  I have noticed that a few of my students have access to the teacher version of the course and I want to know how to remove that before we start doing plugged activities in class.  The teacher who teaches the other section has one student who cannot seem to access her section, and if I cannot figure that out tomorrow, I may need help with that.\n\nThe lessons are designed for 45 minutes, in theory, but sometimes I have a little time left over and other times we have to finish something up the next time we meet, so clearly, I could use some help with pacing, too. ",
+                  "I would like to learn how to keep the class engaged especially when different people finish early,  having something for them to continue working on instead of wasting time. I think some of the lessons with choices, having them go back to them to do some things they did not and refresh their memory on the topics covered already.",
+                  "I look forward to learning how to implement all the Code.org lessons for my classes.",
+                  "Guidance on how execute this course with a way of understanding it myself. ",
+                  "I to properly teach Coding in the high school settings. "
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "post_workshop": {
+      "total_responses": 41,
+      "categories": {
+        "engagement": {
+          "questions": {
+            "motivated_learn_cs_in_education": {
+              "question_name": "motivated_learn_cs_in_education",
+              "question_text": "This workshop motivated me to continue learning about computer science in education.",
+              "question_short_text": "Motivated to teach CS (%)",
+              "question_type": "likert",
+              "category": "engagement",
+              "results": {
+                "total_responses": 0,
+                "weighted_score": 0,
+                "agreement_count": 0,
+                "agreement_percentage": 0,
+                "breakdown": {
+                  "1": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "Strongly Disagree",
+                    "weighted_value": 0
+                  },
+                  "2": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "Disagree",
+                    "weighted_value": 17
+                  },
+                  "3": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "Slightly Disagree",
+                    "weighted_value": 33
+                  },
+                  "4": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "Neutral",
+                    "weighted_value": 50
+                  },
+                  "5": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "Slightly Agree",
+                    "weighted_value": 67
+                  },
+                  "6": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "Agree",
+                    "weighted_value": 83
+                  },
+                  "7": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "Strongly Agree",
+                    "weighted_value": 100
+                  }
+                }
+              }
+            },
+            "nps_self_paced_pd_byow": {
+              "question_name": "nps_self_paced_pd_byow",
+              "question_text": "How likely are you to recommend this professional learning workshop to a friend or colleague?",
+              "question_short_text": "Likely to recommend",
+              "question_type": "promoter",
+              "category": "engagement",
+              "results": {
+                "total_responses": 41,
+                "promoter_percentage": 100,
+                "breakdown": {
+                  "0": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "0 - Not likely at all"
+                  },
+                  "1": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "1"
+                  },
+                  "2": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "2"
+                  },
+                  "3": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "3"
+                  },
+                  "4": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "4"
+                  },
+                  "5": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "5"
+                  },
+                  "6": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "6"
+                  },
+                  "7": {
+                    "count": 1,
+                    "percentage": 2.4,
+                    "label": "7"
+                  },
+                  "8": {
+                    "count": 4,
+                    "percentage": 9.8,
+                    "label": "8"
+                  },
+                  "9": {
+                    "count": 11,
+                    "percentage": 26.8,
+                    "label": "9"
+                  },
+                  "10": {
+                    "count": 25,
+                    "percentage": 61,
+                    "label": "10 - Extremely likely"
+                  }
+                }
+              }
+            },
+            "likelihood_other_pd": {
+              "question_name": "likelihood_other_pd",
+              "question_text": "How likely would you be to attend other workshops in the future that cover other areas of Code.org computer science curriculum?",
+              "question_short_text": "Likely to attend again (%)",
+              "question_type": "likert",
+              "category": "engagement",
+              "results": {
+                "total_responses": 41,
+                "weighted_score": 95,
+                "agreement_count": 41,
+                "agreement_percentage": 100,
+                "breakdown": {
+                  "1": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "1 - Not Interested",
+                    "weighted_value": 0
+                  },
+                  "2": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "2",
+                    "weighted_value": 17
+                  },
+                  "3": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "3",
+                    "weighted_value": 33
+                  },
+                  "4": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "4",
+                    "weighted_value": 50
+                  },
+                  "5": {
+                    "count": 2,
+                    "percentage": 4.9,
+                    "label": "5",
+                    "weighted_value": 67
+                  },
+                  "6": {
+                    "count": 7,
+                    "percentage": 17.1,
+                    "label": "6",
+                    "weighted_value": 83
+                  },
+                  "7": {
+                    "count": 32,
+                    "percentage": 78,
+                    "label": "7 - Very interested",
+                    "weighted_value": 100
+                  }
+                }
+              }
+            },
+            "rp_as_resource": {
+              "question_name": "rp_as_resource",
+              "question_text": "I see my Regional Partner as a resource and support for computer science education in my community.",
+              "question_short_text": "See RP as a resource (%)",
+              "question_type": "likert",
+              "category": "engagement",
+              "results": {
+                "total_responses": 41,
+                "weighted_score": 81,
+                "agreement_count": 34,
+                "agreement_percentage": 83,
+                "breakdown": {
+                  "1": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "Strongly Disagree",
+                    "weighted_value": 0
+                  },
+                  "2": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "Disagree",
+                    "weighted_value": 17
+                  },
+                  "3": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "Slightly Disagree",
+                    "weighted_value": 33
+                  },
+                  "4": {
+                    "count": 7,
+                    "percentage": 17.1,
+                    "label": "Neutral",
+                    "weighted_value": 50
+                  },
+                  "5": {
+                    "count": 4,
+                    "percentage": 9.8,
+                    "label": "Slightly Agree",
+                    "weighted_value": 67
+                  },
+                  "6": {
+                    "count": 17,
+                    "percentage": 41.5,
+                    "label": "Agree",
+                    "weighted_value": 83
+                  },
+                  "7": {
+                    "count": 13,
+                    "percentage": 31.7,
+                    "label": "Strongly Agree",
+                    "weighted_value": 100
+                  }
+                }
+              }
+            },
+            "other_feedback_FR": {
+              "question_name": "other_feedback_FR",
+              "question_text": "Is there anything else you’d like to tell us about your experience at this workshop?",
+              "question_short_text": "Additional experience comments",
+              "question_type": "text",
+              "category": "engagement",
+              "results": {
+                "total_responses": 19,
+                "responses": [
+                  "This has been WONDERFUL. I prepped the BETA version of this course all spring and am SO HAPPY to have this workshop on the new course and see how different it is from APCSP (the other CS class I teach) - I will sign up for one of these every summer!!!!",
+                  "Wish that code.org gave us full blown examples on how lesson being taught. Especially in the coding part. SO we can show the kids the an example on what is being taught with the code being taught. There no real example. even the teacher example is incomplete. ",
+                  "This is great!  Keep it up.  I look forward to next year!",
+                  "No",
+                  "No",
+                  "n/a",
+                  "none",
+                  "I alway enjoy meeting up with old friends and making new friends. \nLearning what others are doing in their classroom, especially the classroom projects. \nI enjoyed the evening options to learn more about different vendors. ",
+                  "good experience/ workshop",
+                  "na",
+                  "This was a very helpful experience, and I feel much better about the upcoming semester now than I did coming in.",
+                  "No",
+                  "Some of the bugs of Code.org looked obvious and untouched.",
+                  "I felt more prepared teaching CSD (the session I did last year) versus this class.  It felt like we saw more lessons in action.  This year I felt like we were looking at the course more on our own.  Maybe because it is new?  ",
+                  "N/a",
+                  "I loved it",
+                  "I don't love the TLOs but I see their role in the process.",
+                  "No",
+                  "It was a great workshop!"
+                ]
+              }
+            }
+          }
+        },
+        "facilitators": {
+          "3862249": {
+            "name": "Sara Roberts",
+            "questions": {
+              "demonstrated_knowledge": {
+                "question_name": "demonstrated_knowledge",
+                "question_text": "Demonstrated knowledge of the curriculum.",
+                "question_short_text": "Knowledge of curriculum (%)",
+                "question_type": "likert",
+                "category": "facilitators",
+                "results": {
+                  "total_responses": 41,
+                  "weighted_score": 96,
+                  "agreement_count": 41,
+                  "agreement_percentage": 100,
+                  "breakdown": {
+                    "1": {
+                      "count": 0,
+                      "percentage": 0,
+                      "label": "Strongly Disagree",
+                      "weighted_value": 0
+                    },
+                    "2": {
+                      "count": 0,
+                      "percentage": 0,
+                      "label": "Disagree",
+                      "weighted_value": 17
+                    },
+                    "3": {
+                      "count": 0,
+                      "percentage": 0,
+                      "label": "Slightly Disagree",
+                      "weighted_value": 33
+                    },
+                    "4": {
+                      "count": 0,
+                      "percentage": 0,
+                      "label": "Neutral",
+                      "weighted_value": 50
+                    },
+                    "5": {
+                      "count": 2,
+                      "percentage": 4.9,
+                      "label": "Slightly Agree",
+                      "weighted_value": 67
+                    },
+                    "6": {
+                      "count": 6,
+                      "percentage": 14.6,
+                      "label": "Agree",
+                      "weighted_value": 83
+                    },
+                    "7": {
+                      "count": 33,
+                      "percentage": 80.5,
+                      "label": "Strongly Agree",
+                      "weighted_value": 100
+                    }
+                  }
+                }
+              },
+              "equitable_workshop_environment": {
+                "question_name": "equitable_workshop_environment",
+                "question_text": "Built and sustained a supportive learning environment for all participants.",
+                "question_short_text": "Supportive learning environment (%)",
+                "question_type": "likert",
+                "category": "facilitators",
+                "results": {
+                  "total_responses": 41,
+                  "weighted_score": 96,
+                  "agreement_count": 41,
+                  "agreement_percentage": 100,
+                  "breakdown": {
+                    "1": {
+                      "count": 0,
+                      "percentage": 0,
+                      "label": "Strongly Disagree",
+                      "weighted_value": 0
+                    },
+                    "2": {
+                      "count": 0,
+                      "percentage": 0,
+                      "label": "Disagree",
+                      "weighted_value": 17
+                    },
+                    "3": {
+                      "count": 0,
+                      "percentage": 0,
+                      "label": "Slightly Disagree",
+                      "weighted_value": 33
+                    },
+                    "4": {
+                      "count": 0,
+                      "percentage": 0,
+                      "label": "Neutral",
+                      "weighted_value": 50
+                    },
+                    "5": {
+                      "count": 1,
+                      "percentage": 2.4,
+                      "label": "Slightly Agree",
+                      "weighted_value": 67
+                    },
+                    "6": {
+                      "count": 7,
+                      "percentage": 17.1,
+                      "label": "Agree",
+                      "weighted_value": 83
+                    },
+                    "7": {
+                      "count": 33,
+                      "percentage": 80.5,
+                      "label": "Strongly Agree",
+                      "weighted_value": 100
+                    }
+                  }
+                }
+              },
+              "on_track": {
+                "question_name": "on_track",
+                "question_text": "Kept the workshop and participants on track.",
+                "question_short_text": "Kept workshop on track (%)",
+                "question_type": "likert",
+                "category": "facilitators",
+                "results": {
+                  "total_responses": 41,
+                  "weighted_score": 97,
+                  "agreement_count": 41,
+                  "agreement_percentage": 100,
+                  "breakdown": {
+                    "1": {
+                      "count": 0,
+                      "percentage": 0,
+                      "label": "Strongly Disagree",
+                      "weighted_value": 0
+                    },
+                    "2": {
+                      "count": 0,
+                      "percentage": 0,
+                      "label": "Disagree",
+                      "weighted_value": 17
+                    },
+                    "3": {
+                      "count": 0,
+                      "percentage": 0,
+                      "label": "Slightly Disagree",
+                      "weighted_value": 33
+                    },
+                    "4": {
+                      "count": 0,
+                      "percentage": 0,
+                      "label": "Neutral",
+                      "weighted_value": 50
+                    },
+                    "5": {
+                      "count": 1,
+                      "percentage": 2.4,
+                      "label": "Slightly Agree",
+                      "weighted_value": 67
+                    },
+                    "6": {
+                      "count": 5,
+                      "percentage": 12.2,
+                      "label": "Agree",
+                      "weighted_value": 83
+                    },
+                    "7": {
+                      "count": 35,
+                      "percentage": 85.4,
+                      "label": "Strongly Agree",
+                      "weighted_value": 100
+                    }
+                  }
+                }
+              },
+              "productive_discussions": {
+                "question_name": "productive_discussions",
+                "question_text": "Supported productive workshop discussions.",
+                "question_short_text": "Supported productive discussions (%)",
+                "question_type": "likert",
+                "category": "facilitators",
+                "results": {
+                  "total_responses": 41,
+                  "weighted_score": 97,
+                  "agreement_count": 41,
+                  "agreement_percentage": 100,
+                  "breakdown": {
+                    "1": {
+                      "count": 0,
+                      "percentage": 0,
+                      "label": "Strongly Disagree",
+                      "weighted_value": 0
+                    },
+                    "2": {
+                      "count": 0,
+                      "percentage": 0,
+                      "label": "Disagree",
+                      "weighted_value": 17
+                    },
+                    "3": {
+                      "count": 0,
+                      "percentage": 0,
+                      "label": "Slightly Disagree",
+                      "weighted_value": 33
+                    },
+                    "4": {
+                      "count": 0,
+                      "percentage": 0,
+                      "label": "Neutral",
+                      "weighted_value": 50
+                    },
+                    "5": {
+                      "count": 1,
+                      "percentage": 2.4,
+                      "label": "Slightly Agree",
+                      "weighted_value": 67
+                    },
+                    "6": {
+                      "count": 6,
+                      "percentage": 14.6,
+                      "label": "Agree",
+                      "weighted_value": 83
+                    },
+                    "7": {
+                      "count": 34,
+                      "percentage": 82.9,
+                      "label": "Strongly Agree",
+                      "weighted_value": 100
+                    }
+                  }
+                }
+              },
+              "create_equity_for_students": {
+                "question_name": "create_equity_for_students",
+                "question_text": "Guided me towards building a supportive learning environment for all learners.",
+                "question_short_text": "Taught inclusive teaching (%)",
+                "question_type": "likert",
+                "category": "facilitators",
+                "results": {
+                  "total_responses": 41,
+                  "weighted_score": 96,
+                  "agreement_count": 41,
+                  "agreement_percentage": 100,
+                  "breakdown": {
+                    "1": {
+                      "count": 0,
+                      "percentage": 0,
+                      "label": "Strongly Disagree",
+                      "weighted_value": 0
+                    },
+                    "2": {
+                      "count": 0,
+                      "percentage": 0,
+                      "label": "Disagree",
+                      "weighted_value": 17
+                    },
+                    "3": {
+                      "count": 0,
+                      "percentage": 0,
+                      "label": "Slightly Disagree",
+                      "weighted_value": 33
+                    },
+                    "4": {
+                      "count": 0,
+                      "percentage": 0,
+                      "label": "Neutral",
+                      "weighted_value": 50
+                    },
+                    "5": {
+                      "count": 2,
+                      "percentage": 4.9,
+                      "label": "Slightly Agree",
+                      "weighted_value": 67
+                    },
+                    "6": {
+                      "count": 5,
+                      "percentage": 12.2,
+                      "label": "Agree",
+                      "weighted_value": 83
+                    },
+                    "7": {
+                      "count": 34,
+                      "percentage": 82.9,
+                      "label": "Strongly Agree",
+                      "weighted_value": 100
+                    }
+                  }
+                }
+              },
+              "healthy_relationship": {
+                "question_name": "healthy_relationship",
+                "question_text": "Demonstrated a healthy working relationship with their co-facilitator (if applicable).",
+                "question_short_text": "Healthy co-facilitator interaction (%)",
+                "question_type": "likert",
+                "category": "facilitators",
+                "results": {
+                  "total_responses": 41,
+                  "weighted_score": 97,
+                  "agreement_count": 41,
+                  "agreement_percentage": 100,
+                  "breakdown": {
+                    "1": {
+                      "count": 0,
+                      "percentage": 0,
+                      "label": "Strongly Disagree",
+                      "weighted_value": 0
+                    },
+                    "2": {
+                      "count": 0,
+                      "percentage": 0,
+                      "label": "Disagree",
+                      "weighted_value": 17
+                    },
+                    "3": {
+                      "count": 0,
+                      "percentage": 0,
+                      "label": "Slightly Disagree",
+                      "weighted_value": 33
+                    },
+                    "4": {
+                      "count": 0,
+                      "percentage": 0,
+                      "label": "Neutral",
+                      "weighted_value": 50
+                    },
+                    "5": {
+                      "count": 1,
+                      "percentage": 2.4,
+                      "label": "Slightly Agree",
+                      "weighted_value": 67
+                    },
+                    "6": {
+                      "count": 6,
+                      "percentage": 14.6,
+                      "label": "Agree",
+                      "weighted_value": 83
+                    },
+                    "7": {
+                      "count": 34,
+                      "percentage": 82.9,
+                      "label": "Strongly Agree",
+                      "weighted_value": 100
+                    }
+                  }
+                }
+              },
+              "facilitator_did_well_fr": {
+                "question_name": "facilitator_did_well_fr",
+                "question_text": "What were two things Sara Roberts did well?",
+                "question_short_text": "What did Sara Roberts do well?",
+                "question_type": "text",
+                "category": "facilitators",
+                "results": {
+                  "total_responses": 29,
+                  "responses": [
+                    "Sara cares about each individual teacher learning the Computing Foundations course. She answered some TOUGH questions I had this week. ",
+                    "kept us engaged and enteratained",
+                    "Kind and supportive",
+                    "Instilled humor and knowledge into the training.",
+                    "Sara was enthusiastic and knowledgeable. ",
+                    "Sara was knowledgable and was willing to listen to concerns and help with them.",
+                    "very knowledgable and helpful!",
+                    "Personable and friendly, made the experience comfortable",
+                    "funny!\nsmart",
+                    "Communicate & Lead",
+                    "communicate and invite questions",
+                    "Very informative about the curriculum. ",
+                    "communicate well/ present information in a meaningful way",
+                    "Very Engaging and Super clear in direction",
+                    "Facilitated group discussion and kept the classroom attitude positive and encouraging.",
+                    "Teaching and being positive",
+                    "Kept the conversation going. Explained daily expectations and communicated extremely well.",
+                    "Adding humor and organizing",
+                    "Sara excels at getting links and materials available to the class quickly.  She also makes connections with participants very well.  ",
+                    "Made course enjoyable",
+                    "We very positive and energetic. Answered any questions to the best of her ability. ",
+                    "Sara was enthusiastic and made for a great learning environment.",
+                    "She had a lot of energy and she was really good at making sure all the links were working. ",
+                    "Clear explanations, lovely, inclusive manner",
+                    "She explains things well and brings a lot of excitement.",
+                    "Empowering the teachers ",
+                    "everything and everything",
+                    "Engaged the audience\nSolicited answers from a variety of people",
+                    "Sara is a great communicator and presenter of the curriculum!\nShe kept me engaged and I appreciated her advice and thoughts this week!"
+                  ]
+                }
+              },
+              "facilitator_could_improve_fr": {
+                "question_name": "facilitator_could_improve_fr",
+                "question_text": "What were two things Sara Roberts could do better?",
+                "question_short_text": "What could Sara Roberts do better?",
+                "question_type": "text",
+                "category": "facilitators",
+                "results": {
+                  "total_responses": 21,
+                  "responses": [
+                    "explain code.org classes a little better",
+                    "She was great",
+                    "Can't think of anything.",
+                    "Nothing. ",
+                    "She didn't always answer questions asked.  She either didn't get back to them or time wasn't there.",
+                    "n/a",
+                    "nothing",
+                    "Nothing.  It was great to see her again. ",
+                    "Not say hello to everyone as they entered. It was funny at first.",
+                    "Nothing!",
+                    "N/A",
+                    "nothing",
+                    "N/A",
+                    "n/a",
+                    "N/A",
+                    "N/A",
+                    "Sorry she was great",
+                    "I can't think of anything.",
+                    "not possible",
+                    "Honestly, nothing!",
+                    "Nothing"
+                  ]
+                }
+              }
+            }
+          },
+          "6003270": {
+            "name": "Nick Weyer",
+            "questions": {
+              "demonstrated_knowledge": {
+                "question_name": "demonstrated_knowledge",
+                "question_text": "Demonstrated knowledge of the curriculum.",
+                "question_short_text": "Knowledge of curriculum (%)",
+                "question_type": "likert",
+                "category": "facilitators",
+                "results": {
+                  "total_responses": 41,
+                  "weighted_score": 96,
+                  "agreement_count": 41,
+                  "agreement_percentage": 100,
+                  "breakdown": {
+                    "1": {
+                      "count": 0,
+                      "percentage": 0,
+                      "label": "Strongly Disagree",
+                      "weighted_value": 0
+                    },
+                    "2": {
+                      "count": 0,
+                      "percentage": 0,
+                      "label": "Disagree",
+                      "weighted_value": 17
+                    },
+                    "3": {
+                      "count": 0,
+                      "percentage": 0,
+                      "label": "Slightly Disagree",
+                      "weighted_value": 33
+                    },
+                    "4": {
+                      "count": 0,
+                      "percentage": 0,
+                      "label": "Neutral",
+                      "weighted_value": 50
+                    },
+                    "5": {
+                      "count": 1,
+                      "percentage": 2.4,
+                      "label": "Slightly Agree",
+                      "weighted_value": 67
+                    },
+                    "6": {
+                      "count": 8,
+                      "percentage": 19.5,
+                      "label": "Agree",
+                      "weighted_value": 83
+                    },
+                    "7": {
+                      "count": 32,
+                      "percentage": 78,
+                      "label": "Strongly Agree",
+                      "weighted_value": 100
+                    }
+                  }
+                }
+              },
+              "equitable_workshop_environment": {
+                "question_name": "equitable_workshop_environment",
+                "question_text": "Built and sustained a supportive learning environment for all participants.",
+                "question_short_text": "Supportive learning environment (%)",
+                "question_type": "likert",
+                "category": "facilitators",
+                "results": {
+                  "total_responses": 41,
+                  "weighted_score": 96,
+                  "agreement_count": 41,
+                  "agreement_percentage": 100,
+                  "breakdown": {
+                    "1": {
+                      "count": 0,
+                      "percentage": 0,
+                      "label": "Strongly Disagree",
+                      "weighted_value": 0
+                    },
+                    "2": {
+                      "count": 0,
+                      "percentage": 0,
+                      "label": "Disagree",
+                      "weighted_value": 17
+                    },
+                    "3": {
+                      "count": 0,
+                      "percentage": 0,
+                      "label": "Slightly Disagree",
+                      "weighted_value": 33
+                    },
+                    "4": {
+                      "count": 0,
+                      "percentage": 0,
+                      "label": "Neutral",
+                      "weighted_value": 50
+                    },
+                    "5": {
+                      "count": 2,
+                      "percentage": 4.9,
+                      "label": "Slightly Agree",
+                      "weighted_value": 67
+                    },
+                    "6": {
+                      "count": 6,
+                      "percentage": 14.6,
+                      "label": "Agree",
+                      "weighted_value": 83
+                    },
+                    "7": {
+                      "count": 33,
+                      "percentage": 80.5,
+                      "label": "Strongly Agree",
+                      "weighted_value": 100
+                    }
+                  }
+                }
+              },
+              "on_track": {
+                "question_name": "on_track",
+                "question_text": "Kept the workshop and participants on track.",
+                "question_short_text": "Kept workshop on track (%)",
+                "question_type": "likert",
+                "category": "facilitators",
+                "results": {
+                  "total_responses": 41,
+                  "weighted_score": 96,
+                  "agreement_count": 41,
+                  "agreement_percentage": 100,
+                  "breakdown": {
+                    "1": {
+                      "count": 0,
+                      "percentage": 0,
+                      "label": "Strongly Disagree",
+                      "weighted_value": 0
+                    },
+                    "2": {
+                      "count": 0,
+                      "percentage": 0,
+                      "label": "Disagree",
+                      "weighted_value": 17
+                    },
+                    "3": {
+                      "count": 0,
+                      "percentage": 0,
+                      "label": "Slightly Disagree",
+                      "weighted_value": 33
+                    },
+                    "4": {
+                      "count": 0,
+                      "percentage": 0,
+                      "label": "Neutral",
+                      "weighted_value": 50
+                    },
+                    "5": {
+                      "count": 1,
+                      "percentage": 2.4,
+                      "label": "Slightly Agree",
+                      "weighted_value": 67
+                    },
+                    "6": {
+                      "count": 8,
+                      "percentage": 19.5,
+                      "label": "Agree",
+                      "weighted_value": 83
+                    },
+                    "7": {
+                      "count": 32,
+                      "percentage": 78,
+                      "label": "Strongly Agree",
+                      "weighted_value": 100
+                    }
+                  }
+                }
+              },
+              "productive_discussions": {
+                "question_name": "productive_discussions",
+                "question_text": "Supported productive workshop discussions.",
+                "question_short_text": "Supported productive discussions (%)",
+                "question_type": "likert",
+                "category": "facilitators",
+                "results": {
+                  "total_responses": 41,
+                  "weighted_score": 95,
+                  "agreement_count": 41,
+                  "agreement_percentage": 100,
+                  "breakdown": {
+                    "1": {
+                      "count": 0,
+                      "percentage": 0,
+                      "label": "Strongly Disagree",
+                      "weighted_value": 0
+                    },
+                    "2": {
+                      "count": 0,
+                      "percentage": 0,
+                      "label": "Disagree",
+                      "weighted_value": 17
+                    },
+                    "3": {
+                      "count": 0,
+                      "percentage": 0,
+                      "label": "Slightly Disagree",
+                      "weighted_value": 33
+                    },
+                    "4": {
+                      "count": 0,
+                      "percentage": 0,
+                      "label": "Neutral",
+                      "weighted_value": 50
+                    },
+                    "5": {
+                      "count": 1,
+                      "percentage": 2.4,
+                      "label": "Slightly Agree",
+                      "weighted_value": 67
+                    },
+                    "6": {
+                      "count": 9,
+                      "percentage": 22,
+                      "label": "Agree",
+                      "weighted_value": 83
+                    },
+                    "7": {
+                      "count": 31,
+                      "percentage": 75.6,
+                      "label": "Strongly Agree",
+                      "weighted_value": 100
+                    }
+                  }
+                }
+              },
+              "create_equity_for_students": {
+                "question_name": "create_equity_for_students",
+                "question_text": "Guided me towards building a supportive learning environment for all learners.",
+                "question_short_text": "Taught inclusive teaching (%)",
+                "question_type": "likert",
+                "category": "facilitators",
+                "results": {
+                  "total_responses": 41,
+                  "weighted_score": 97,
+                  "agreement_count": 41,
+                  "agreement_percentage": 100,
+                  "breakdown": {
+                    "1": {
+                      "count": 0,
+                      "percentage": 0,
+                      "label": "Strongly Disagree",
+                      "weighted_value": 0
+                    },
+                    "2": {
+                      "count": 0,
+                      "percentage": 0,
+                      "label": "Disagree",
+                      "weighted_value": 17
+                    },
+                    "3": {
+                      "count": 0,
+                      "percentage": 0,
+                      "label": "Slightly Disagree",
+                      "weighted_value": 33
+                    },
+                    "4": {
+                      "count": 0,
+                      "percentage": 0,
+                      "label": "Neutral",
+                      "weighted_value": 50
+                    },
+                    "5": {
+                      "count": 1,
+                      "percentage": 2.4,
+                      "label": "Slightly Agree",
+                      "weighted_value": 67
+                    },
+                    "6": {
+                      "count": 6,
+                      "percentage": 14.6,
+                      "label": "Agree",
+                      "weighted_value": 83
+                    },
+                    "7": {
+                      "count": 34,
+                      "percentage": 82.9,
+                      "label": "Strongly Agree",
+                      "weighted_value": 100
+                    }
+                  }
+                }
+              },
+              "healthy_relationship": {
+                "question_name": "healthy_relationship",
+                "question_text": "Demonstrated a healthy working relationship with their co-facilitator (if applicable).",
+                "question_short_text": "Healthy co-facilitator interaction (%)",
+                "question_type": "likert",
+                "category": "facilitators",
+                "results": {
+                  "total_responses": 41,
+                  "weighted_score": 97,
+                  "agreement_count": 41,
+                  "agreement_percentage": 100,
+                  "breakdown": {
+                    "1": {
+                      "count": 0,
+                      "percentage": 0,
+                      "label": "Strongly Disagree",
+                      "weighted_value": 0
+                    },
+                    "2": {
+                      "count": 0,
+                      "percentage": 0,
+                      "label": "Disagree",
+                      "weighted_value": 17
+                    },
+                    "3": {
+                      "count": 0,
+                      "percentage": 0,
+                      "label": "Slightly Disagree",
+                      "weighted_value": 33
+                    },
+                    "4": {
+                      "count": 0,
+                      "percentage": 0,
+                      "label": "Neutral",
+                      "weighted_value": 50
+                    },
+                    "5": {
+                      "count": 1,
+                      "percentage": 2.4,
+                      "label": "Slightly Agree",
+                      "weighted_value": 67
+                    },
+                    "6": {
+                      "count": 6,
+                      "percentage": 14.6,
+                      "label": "Agree",
+                      "weighted_value": 83
+                    },
+                    "7": {
+                      "count": 34,
+                      "percentage": 82.9,
+                      "label": "Strongly Agree",
+                      "weighted_value": 100
+                    }
+                  }
+                }
+              },
+              "facilitator_did_well_fr": {
+                "question_name": "facilitator_did_well_fr",
+                "question_text": "What were two things Nick Weyer did well?",
+                "question_short_text": "What did Nick Weyer do well?",
+                "question_type": "text",
+                "category": "facilitators",
+                "results": {
+                  "total_responses": 29,
+                  "responses": [
+                    "Nick's positivity is INFECTIOUS. He is inspiring to me. ",
+                    "kept us on task and entrained ",
+                    "humorous and knowledgeable",
+                    "Kept course on track and was very chill",
+                    "Nick brought a lot of engagement and fun to the room while also encouraging us to do our best with what we have. ",
+                    "Nick was enthusiastic and helpful",
+                    "helpful and knowledgable",
+                    "Enthusiastic and communicative",
+                    "led great discussions",
+                    "Entertaining & Engaging",
+                    "communicate and invite questions",
+                    "Funny and did well with the speech after the Higher Commission about what we can and can not control and how to release it. ",
+                    "Make it engaging/ communicate well",
+                    "He was engaging and super fun",
+                    "He was consistently positive, and I appreciate the realism he brought to the PD.",
+                    "brining energy and information",
+                    "Very positive very engaging. Was able to roll with the tough questions.",
+                    "Enthusiasm for the topics and understanding the real-world conditions of teaching CS",
+                    "Nick kept the workshop lively and fun, peaking my engagement.  He also does a good job of reading the room and keeps things real with us and reminding us that we are there for our students.",
+                    "Adapt during lessons",
+                    "We very positive and energetic. Answered any questions to the best of his ability. ",
+                    "Nick was great and provided great feedback.  Nick also used humor, that made for a fun and relaxed learning environment.",
+                    "He was very good at capturing the room and making everyone feel welcome. ",
+                    "Relaxed manner, humor",
+                    "Excitement is his lifestyle. He seems to really know the content.",
+                    "Enthusiasm and humor",
+                    "Everything and everything",
+                    "Enthusiasm\nEngaging the audience",
+                    "Nick is a great communicator and presenter of the curriculum!\nHe kept me engaged and I appreciated his advice and thoughts this week!"
+                  ]
+                }
+              },
+              "facilitator_could_improve_fr": {
+                "question_name": "facilitator_could_improve_fr",
+                "question_text": "What were two things Nick Weyer could do better?",
+                "question_short_text": "What could Nick Weyer do better?",
+                "question_type": "text",
+                "category": "facilitators",
+                "results": {
+                  "total_responses": 21,
+                  "responses": [
+                    "explain how code.org work a little better",
+                    "He was great",
+                    "Can't think of anything.",
+                    "Nothing.",
+                    "Nick didn't seem to do as much training as the other 2 facilitators.",
+                    "n/a",
+                    "Few areas didn't seem to really have planned out/ready to go and we glossed over.",
+                    "nothing",
+                    "Nothing.  More energy needed (LOL)",
+                    "NA",
+                    "Dive into more detail",
+                    "Maybe was not the absolute most professional, though I was not bothered by that.",
+                    "nothing",
+                    "N/A",
+                    "n/a",
+                    "N/A ",
+                    "N/a",
+                    "I can't think of anything.",
+                    "not possible",
+                    "Honestly, nothing!",
+                    "Nothing"
+                  ]
+                }
+              }
+            }
+          },
+          "22488229": {
+            "name": "RAEGAN TOWNE",
+            "questions": {
+              "demonstrated_knowledge": {
+                "question_name": "demonstrated_knowledge",
+                "question_text": "Demonstrated knowledge of the curriculum.",
+                "question_short_text": "Knowledge of curriculum (%)",
+                "question_type": "likert",
+                "category": "facilitators",
+                "results": {
+                  "total_responses": 41,
+                  "weighted_score": 97,
+                  "agreement_count": 41,
+                  "agreement_percentage": 100,
+                  "breakdown": {
+                    "1": {
+                      "count": 0,
+                      "percentage": 0,
+                      "label": "Strongly Disagree",
+                      "weighted_value": 0
+                    },
+                    "2": {
+                      "count": 0,
+                      "percentage": 0,
+                      "label": "Disagree",
+                      "weighted_value": 17
+                    },
+                    "3": {
+                      "count": 0,
+                      "percentage": 0,
+                      "label": "Slightly Disagree",
+                      "weighted_value": 33
+                    },
+                    "4": {
+                      "count": 0,
+                      "percentage": 0,
+                      "label": "Neutral",
+                      "weighted_value": 50
+                    },
+                    "5": {
+                      "count": 0,
+                      "percentage": 0,
+                      "label": "Slightly Agree",
+                      "weighted_value": 67
+                    },
+                    "6": {
+                      "count": 7,
+                      "percentage": 17.1,
+                      "label": "Agree",
+                      "weighted_value": 83
+                    },
+                    "7": {
+                      "count": 34,
+                      "percentage": 82.9,
+                      "label": "Strongly Agree",
+                      "weighted_value": 100
+                    }
+                  }
+                }
+              },
+              "equitable_workshop_environment": {
+                "question_name": "equitable_workshop_environment",
+                "question_text": "Built and sustained a supportive learning environment for all participants.",
+                "question_short_text": "Supportive learning environment (%)",
+                "question_type": "likert",
+                "category": "facilitators",
+                "results": {
+                  "total_responses": 41,
+                  "weighted_score": 98,
+                  "agreement_count": 41,
+                  "agreement_percentage": 100,
+                  "breakdown": {
+                    "1": {
+                      "count": 0,
+                      "percentage": 0,
+                      "label": "Strongly Disagree",
+                      "weighted_value": 0
+                    },
+                    "2": {
+                      "count": 0,
+                      "percentage": 0,
+                      "label": "Disagree",
+                      "weighted_value": 17
+                    },
+                    "3": {
+                      "count": 0,
+                      "percentage": 0,
+                      "label": "Slightly Disagree",
+                      "weighted_value": 33
+                    },
+                    "4": {
+                      "count": 0,
+                      "percentage": 0,
+                      "label": "Neutral",
+                      "weighted_value": 50
+                    },
+                    "5": {
+                      "count": 0,
+                      "percentage": 0,
+                      "label": "Slightly Agree",
+                      "weighted_value": 67
+                    },
+                    "6": {
+                      "count": 6,
+                      "percentage": 14.6,
+                      "label": "Agree",
+                      "weighted_value": 83
+                    },
+                    "7": {
+                      "count": 35,
+                      "percentage": 85.4,
+                      "label": "Strongly Agree",
+                      "weighted_value": 100
+                    }
+                  }
+                }
+              },
+              "on_track": {
+                "question_name": "on_track",
+                "question_text": "Kept the workshop and participants on track.",
+                "question_short_text": "Kept workshop on track (%)",
+                "question_type": "likert",
+                "category": "facilitators",
+                "results": {
+                  "total_responses": 41,
+                  "weighted_score": 98,
+                  "agreement_count": 41,
+                  "agreement_percentage": 100,
+                  "breakdown": {
+                    "1": {
+                      "count": 0,
+                      "percentage": 0,
+                      "label": "Strongly Disagree",
+                      "weighted_value": 0
+                    },
+                    "2": {
+                      "count": 0,
+                      "percentage": 0,
+                      "label": "Disagree",
+                      "weighted_value": 17
+                    },
+                    "3": {
+                      "count": 0,
+                      "percentage": 0,
+                      "label": "Slightly Disagree",
+                      "weighted_value": 33
+                    },
+                    "4": {
+                      "count": 0,
+                      "percentage": 0,
+                      "label": "Neutral",
+                      "weighted_value": 50
+                    },
+                    "5": {
+                      "count": 0,
+                      "percentage": 0,
+                      "label": "Slightly Agree",
+                      "weighted_value": 67
+                    },
+                    "6": {
+                      "count": 6,
+                      "percentage": 14.6,
+                      "label": "Agree",
+                      "weighted_value": 83
+                    },
+                    "7": {
+                      "count": 35,
+                      "percentage": 85.4,
+                      "label": "Strongly Agree",
+                      "weighted_value": 100
+                    }
+                  }
+                }
+              },
+              "productive_discussions": {
+                "question_name": "productive_discussions",
+                "question_text": "Supported productive workshop discussions.",
+                "question_short_text": "Supported productive discussions (%)",
+                "question_type": "likert",
+                "category": "facilitators",
+                "results": {
+                  "total_responses": 41,
+                  "weighted_score": 98,
+                  "agreement_count": 41,
+                  "agreement_percentage": 100,
+                  "breakdown": {
+                    "1": {
+                      "count": 0,
+                      "percentage": 0,
+                      "label": "Strongly Disagree",
+                      "weighted_value": 0
+                    },
+                    "2": {
+                      "count": 0,
+                      "percentage": 0,
+                      "label": "Disagree",
+                      "weighted_value": 17
+                    },
+                    "3": {
+                      "count": 0,
+                      "percentage": 0,
+                      "label": "Slightly Disagree",
+                      "weighted_value": 33
+                    },
+                    "4": {
+                      "count": 0,
+                      "percentage": 0,
+                      "label": "Neutral",
+                      "weighted_value": 50
+                    },
+                    "5": {
+                      "count": 0,
+                      "percentage": 0,
+                      "label": "Slightly Agree",
+                      "weighted_value": 67
+                    },
+                    "6": {
+                      "count": 6,
+                      "percentage": 14.6,
+                      "label": "Agree",
+                      "weighted_value": 83
+                    },
+                    "7": {
+                      "count": 35,
+                      "percentage": 85.4,
+                      "label": "Strongly Agree",
+                      "weighted_value": 100
+                    }
+                  }
+                }
+              },
+              "create_equity_for_students": {
+                "question_name": "create_equity_for_students",
+                "question_text": "Guided me towards building a supportive learning environment for all learners.",
+                "question_short_text": "Taught inclusive teaching (%)",
+                "question_type": "likert",
+                "category": "facilitators",
+                "results": {
+                  "total_responses": 41,
+                  "weighted_score": 98,
+                  "agreement_count": 41,
+                  "agreement_percentage": 100,
+                  "breakdown": {
+                    "1": {
+                      "count": 0,
+                      "percentage": 0,
+                      "label": "Strongly Disagree",
+                      "weighted_value": 0
+                    },
+                    "2": {
+                      "count": 0,
+                      "percentage": 0,
+                      "label": "Disagree",
+                      "weighted_value": 17
+                    },
+                    "3": {
+                      "count": 0,
+                      "percentage": 0,
+                      "label": "Slightly Disagree",
+                      "weighted_value": 33
+                    },
+                    "4": {
+                      "count": 0,
+                      "percentage": 0,
+                      "label": "Neutral",
+                      "weighted_value": 50
+                    },
+                    "5": {
+                      "count": 0,
+                      "percentage": 0,
+                      "label": "Slightly Agree",
+                      "weighted_value": 67
+                    },
+                    "6": {
+                      "count": 6,
+                      "percentage": 14.6,
+                      "label": "Agree",
+                      "weighted_value": 83
+                    },
+                    "7": {
+                      "count": 35,
+                      "percentage": 85.4,
+                      "label": "Strongly Agree",
+                      "weighted_value": 100
+                    }
+                  }
+                }
+              },
+              "healthy_relationship": {
+                "question_name": "healthy_relationship",
+                "question_text": "Demonstrated a healthy working relationship with their co-facilitator (if applicable).",
+                "question_short_text": "Healthy co-facilitator interaction (%)",
+                "question_type": "likert",
+                "category": "facilitators",
+                "results": {
+                  "total_responses": 40,
+                  "weighted_score": 98,
+                  "agreement_count": 40,
+                  "agreement_percentage": 100,
+                  "breakdown": {
+                    "1": {
+                      "count": 0,
+                      "percentage": 0,
+                      "label": "Strongly Disagree",
+                      "weighted_value": 0
+                    },
+                    "2": {
+                      "count": 0,
+                      "percentage": 0,
+                      "label": "Disagree",
+                      "weighted_value": 17
+                    },
+                    "3": {
+                      "count": 0,
+                      "percentage": 0,
+                      "label": "Slightly Disagree",
+                      "weighted_value": 33
+                    },
+                    "4": {
+                      "count": 0,
+                      "percentage": 0,
+                      "label": "Neutral",
+                      "weighted_value": 50
+                    },
+                    "5": {
+                      "count": 0,
+                      "percentage": 0,
+                      "label": "Slightly Agree",
+                      "weighted_value": 67
+                    },
+                    "6": {
+                      "count": 5,
+                      "percentage": 12.5,
+                      "label": "Agree",
+                      "weighted_value": 83
+                    },
+                    "7": {
+                      "count": 35,
+                      "percentage": 87.5,
+                      "label": "Strongly Agree",
+                      "weighted_value": 100
+                    }
+                  }
+                }
+              },
+              "facilitator_did_well_fr": {
+                "question_name": "facilitator_did_well_fr",
+                "question_text": "What were two things RAEGAN TOWNE did well?",
+                "question_short_text": "What did RAEGAN TOWNE do well?",
+                "question_type": "text",
+                "category": "facilitators",
+                "results": {
+                  "total_responses": 27,
+                  "responses": [
+                    "Raegan was wonderful to talk to during small group about not only Computing Foundations but to pick her brain on APCSP and on Python and Javascript. Instructors for C.F. were perfect.",
+                    "kept us entrained and on task",
+                    "knowledgeable and easy to approach",
+                    "Extremely knowledgeable in the content and very approachable! 1st time with her and loved it.",
+                    "Raegan was knowledgeable about the material and shared more in depth python knowledge which helped a lot of us. ",
+                    "knowledgable and helpful",
+                    "Seemed extremely knowledgeable and on top of things",
+                    "knew Python content",
+                    "Pulled us together & Knew the stuff",
+                    "communicate and invite questions",
+                    "Does a great job breaking things down and relating to her classroom experience. ",
+                    "Communicate well/ present information effectively",
+                    "She was informative and clear in direction",
+                    "Raegan was very knowledgeable, consistently helpful ,and supportive throughout.",
+                    "being informative and understanding",
+                    "Brought a nice calm to the group. Was able to flow, move, and adapt with each group and still push as professionals.",
+                    "Kept us on task and offering personal experience",
+                    "I looked to Raegan as the expert on Python.  As the week grew, I found myself really enjoying her style of delivery, serious at times, slow at times, fun at times.  ",
+                    "Assist in the instruction of python",
+                    "We very positive and energetic. Answered any questions to the best of her ability. ",
+                    "Energetic and knowledgeable.  She really helped with the Python learning. ",
+                    "She was very knowledgeable about python and was very good at what she did. ",
+                    "I liked how she broke down the curriculum. She communicated clearly.",
+                    "Strong content knowledge and modeled flexibility ",
+                    "everything and everything",
+                    "Helping with Python questions\nEngaging the audience",
+                    "Raegan is a great communicator and presenter of the curriculum! Her knowledge of python was very helpful!\nShe kept me engaged and I appreciated her advice and thoughts this week!"
+                  ]
+                }
+              },
+              "facilitator_could_improve_fr": {
+                "question_name": "facilitator_could_improve_fr",
+                "question_text": "What were two things RAEGAN TOWNE could do better?",
+                "question_short_text": "What could RAEGAN TOWNE do better?",
+                "question_type": "text",
+                "category": "facilitators",
+                "results": {
+                  "total_responses": 20,
+                  "responses": [
+                    "explain out how code.org works better",
+                    "she was great",
+                    "Can't think of anything.",
+                    "Nothing",
+                    "n/a",
+                    "Would have appreciated TOL observation feedback",
+                    "nothing",
+                    "Nothing.",
+                    "NA",
+                    "Nothing!",
+                    "N/A",
+                    "nothing",
+                    "N/A",
+                    "n/a",
+                    "At the beginning of the week she seemed tense.  But that might be because I knew Sara and Nick from the past year and was just unfamiliar with Raegan.  ",
+                    "N/a",
+                    "I can't think of anything.",
+                    "not possible",
+                    "Honestly, nothing!",
+                    "None"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "implementation": {
+          "questions": {
+            "more_prepared": {
+              "question_name": "more_prepared",
+              "question_text": "I feel more prepared to teach the material covered in this workshop than before I came.",
+              "question_short_text": "Feel prepared to teach (%)",
+              "question_type": "likert",
+              "category": "implementation",
+              "results": {
+                "total_responses": 41,
+                "weighted_score": 88,
+                "agreement_count": 40,
+                "agreement_percentage": 98,
+                "breakdown": {
+                  "1": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "Strongly Disagree",
+                    "weighted_value": 0
+                  },
+                  "2": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "Disagree",
+                    "weighted_value": 17
+                  },
+                  "3": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "Slightly Disagree",
+                    "weighted_value": 33
+                  },
+                  "4": {
+                    "count": 1,
+                    "percentage": 2.4,
+                    "label": "Neutral",
+                    "weighted_value": 50
+                  },
+                  "5": {
+                    "count": 3,
+                    "percentage": 7.3,
+                    "label": "Slightly Agree",
+                    "weighted_value": 67
+                  },
+                  "6": {
+                    "count": 19,
+                    "percentage": 46.3,
+                    "label": "Agree",
+                    "weighted_value": 83
+                  },
+                  "7": {
+                    "count": 18,
+                    "percentage": 43.9,
+                    "label": "Strongly Agree",
+                    "weighted_value": 100
+                  }
+                }
+              }
+            },
+            "plan_to_teach": {
+              "question_name": "plan_to_teach",
+              "question_text": "I am planning to teach this curriculum.",
+              "question_short_text": "Plan to teach curriculum (%)",
+              "question_type": "likert",
+              "category": "implementation",
+              "results": {
+                "total_responses": 41,
+                "weighted_score": 89,
+                "agreement_count": 37,
+                "agreement_percentage": 90,
+                "breakdown": {
+                  "1": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "Strongly Disagree",
+                    "weighted_value": 0
+                  },
+                  "2": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "Disagree",
+                    "weighted_value": 17
+                  },
+                  "3": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "Slightly Disagree",
+                    "weighted_value": 33
+                  },
+                  "4": {
+                    "count": 4,
+                    "percentage": 9.8,
+                    "label": "Neutral",
+                    "weighted_value": 50
+                  },
+                  "5": {
+                    "count": 4,
+                    "percentage": 9.8,
+                    "label": "Slightly Agree",
+                    "weighted_value": 67
+                  },
+                  "6": {
+                    "count": 8,
+                    "percentage": 19.5,
+                    "label": "Agree",
+                    "weighted_value": 83
+                  },
+                  "7": {
+                    "count": 25,
+                    "percentage": 61,
+                    "label": "Strongly Agree",
+                    "weighted_value": 100
+                  }
+                }
+              }
+            },
+            "know_where_to_get_help": {
+              "question_name": "know_where_to_get_help",
+              "question_text": "I know where to go if I need help preparing to teach this material.",
+              "question_short_text": "Know where to find help (%)",
+              "question_type": "likert",
+              "category": "implementation",
+              "results": {
+                "total_responses": 41,
+                "weighted_score": 91,
+                "agreement_count": 41,
+                "agreement_percentage": 100,
+                "breakdown": {
+                  "1": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "Strongly Disagree",
+                    "weighted_value": 0
+                  },
+                  "2": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "Disagree",
+                    "weighted_value": 17
+                  },
+                  "3": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "Slightly Disagree",
+                    "weighted_value": 33
+                  },
+                  "4": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "Neutral",
+                    "weighted_value": 50
+                  },
+                  "5": {
+                    "count": 5,
+                    "percentage": 12.2,
+                    "label": "Slightly Agree",
+                    "weighted_value": 67
+                  },
+                  "6": {
+                    "count": 12,
+                    "percentage": 29.3,
+                    "label": "Agree",
+                    "weighted_value": 83
+                  },
+                  "7": {
+                    "count": 24,
+                    "percentage": 58.5,
+                    "label": "Strongly Agree",
+                    "weighted_value": 100
+                  }
+                }
+              }
+            },
+            "intention_to_apply_in_classroom": {
+              "question_name": "intention_to_apply_in_classroom",
+              "question_text": "I plan to incorporate into my teaching practices what I learned in this workshop.",
+              "question_short_text": "Plan to apply practices (%)",
+              "question_type": "likert",
+              "category": "implementation",
+              "results": {
+                "total_responses": 0,
+                "weighted_score": 0,
+                "agreement_count": 0,
+                "agreement_percentage": 0,
+                "breakdown": {
+                  "1": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "Strongly Disagree",
+                    "weighted_value": 0
+                  },
+                  "2": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "Disagree",
+                    "weighted_value": 17
+                  },
+                  "3": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "Slightly Disagree",
+                    "weighted_value": 33
+                  },
+                  "4": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "Neutral",
+                    "weighted_value": 50
+                  },
+                  "5": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "Slightly Agree",
+                    "weighted_value": 67
+                  },
+                  "6": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "Agree",
+                    "weighted_value": 83
+                  },
+                  "7": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "Strongly Agree",
+                    "weighted_value": 100
+                  }
+                }
+              }
+            },
+            "barriers_implementation_curriculum": {
+              "question_name": "barriers_implementation_curriculum",
+              "question_text": "Please share the main reasons you might not teach this workshop's content in your classroom this year.",
+              "question_short_text": "Barriers to implementation",
+              "question_type": "multiSelect",
+              "category": "implementation",
+              "results": {
+                "total_respondents": 39,
+                "breakdown": {
+                  "needs_more_preparation": {
+                    "count": 7,
+                    "percentage": 17.9,
+                    "label": "I would like more preparation before teaching this content in my classroom"
+                  },
+                  "time_constraints": {
+                    "count": 1,
+                    "percentage": 2.6,
+                    "label": "I have limited time to adopt new curriculum"
+                  },
+                  "lack_admin_support": {
+                    "count": 1,
+                    "percentage": 2.6,
+                    "label": "I don’t have enough support from my school’s administration"
+                  },
+                  "limited_student_interest": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "My students don’t seem interested in this content"
+                  },
+                  "none": {
+                    "count": 27,
+                    "percentage": 69.2,
+                    "label": "None of these"
+                  },
+                  "other": {
+                    "count": 3,
+                    "percentage": 7.7,
+                    "label": "Other"
+                  }
+                }
+              }
+            },
+            "other_questions_implementation": {
+              "question_name": "other_questions_implementation",
+              "question_text": "Do you have any questions about implementing this curriculum in the classroom that were not answered during this workshop?",
+              "question_short_text": "Implementation questions",
+              "question_type": "text",
+              "category": "implementation",
+              "results": {
+                "total_responses": 19,
+                "responses": [
+                  "none",
+                  "no",
+                  "I do not have questions at this time. I have to get a clear direction from my district as to what I will be teaching and the pathway for our district.",
+                  "No",
+                  "n/a",
+                  "N/A.  This will be my first year teaching a computer science of any kind, so it will be trial and error with implementation adjusting as I go.",
+                  "no",
+                  "no",
+                  "None at this time.  However, after I get a chance to teach it, I may have some questions. ",
+                  "I still do not think that there is time to go through every single lesson in a semester. I would like to know which lessons could be skipped, or not completed. Or which lesson should not be skipped. ",
+                  "N/A",
+                  "N/A",
+                  "No",
+                  "N/A",
+                  "None at this time. ",
+                  "None that I can currently think of. ",
+                  "No",
+                  "no",
+                  "I'm too overwhelmed at this point to think about questions that were not answered. Sorry!"
+                ]
+              }
+            }
+          }
+        },
+        "logistics": {
+          "questions": {
+            "clear_communication_when_where": {
+              "question_name": "clear_communication_when_where",
+              "question_text": "I received clear communication about when and where the workshop would take place.",
+              "question_short_text": "Received clear communication (%)",
+              "question_type": "likert",
+              "category": "logistics",
+              "results": {
+                "total_responses": 40,
+                "weighted_score": 94,
+                "agreement_count": 39,
+                "agreement_percentage": 98,
+                "breakdown": {
+                  "1": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "Strongly Disagree",
+                    "weighted_value": 0
+                  },
+                  "2": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "Disagree",
+                    "weighted_value": 17
+                  },
+                  "3": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "Slightly Disagree",
+                    "weighted_value": 33
+                  },
+                  "4": {
+                    "count": 1,
+                    "percentage": 2.5,
+                    "label": "Neutral",
+                    "weighted_value": 50
+                  },
+                  "5": {
+                    "count": 1,
+                    "percentage": 2.5,
+                    "label": "Slightly Agree",
+                    "weighted_value": 67
+                  },
+                  "6": {
+                    "count": 10,
+                    "percentage": 25,
+                    "label": "Agree",
+                    "weighted_value": 83
+                  },
+                  "7": {
+                    "count": 28,
+                    "percentage": 70,
+                    "label": "Strongly Agree",
+                    "weighted_value": 100
+                  }
+                }
+              }
+            },
+            "modality_met_needs": {
+              "question_name": "modality_met_needs",
+              "question_text": "The modality (in person, virtual, or hybrid) met my learning needs",
+              "question_short_text": "Workshop modality met needs (%)",
+              "question_type": "likert",
+              "category": "logistics",
+              "results": {
+                "total_responses": 39,
+                "weighted_score": 95,
+                "agreement_count": 38,
+                "agreement_percentage": 97,
+                "breakdown": {
+                  "1": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "Strongly Disagree",
+                    "weighted_value": 0
+                  },
+                  "2": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "Disagree",
+                    "weighted_value": 17
+                  },
+                  "3": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "Slightly Disagree",
+                    "weighted_value": 33
+                  },
+                  "4": {
+                    "count": 1,
+                    "percentage": 2.6,
+                    "label": "Neutral",
+                    "weighted_value": 50
+                  },
+                  "5": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "Slightly Agree",
+                    "weighted_value": 67
+                  },
+                  "6": {
+                    "count": 8,
+                    "percentage": 20.5,
+                    "label": "Agree",
+                    "weighted_value": 83
+                  },
+                  "7": {
+                    "count": 30,
+                    "percentage": 76.9,
+                    "label": "Strongly Agree",
+                    "weighted_value": 100
+                  }
+                }
+              }
+            },
+            "other_feedback_logistics": {
+              "question_name": "other_feedback_logistics",
+              "question_text": "Do you have any feedback about the way logistics were run for the workshop?",
+              "question_short_text": "Additional logistics feedback",
+              "question_type": "text",
+              "category": "logistics",
+              "results": {
+                "total_responses": 17,
+                "responses": [
+                  "This was amazing",
+                  "ran well",
+                  "I feel lunch should be more simple; bread, lunch meat and cheese sandwiches and chips etc... and dinner should be supplied in some way.  I spent a lot of money on food this week.",
+                  "As always, loved every part of this week. ",
+                  "The teachers were given time to look over and prepare a lesson, but some of the information presented was incorrect and the modeling of instruction really did not help my need to learn the material. I prefer a more indepth dive into the curriculum taught be a professional rather than someone who just learned it just like me. ",
+                  "n/a",
+                  "N/A",
+                  "none",
+                  "Everything went every well.  ",
+                  "I had a very positive experience with the logistics of this event and how it was run.",
+                  "No",
+                  "There were a lot of scattered links to PDF's. It may have been the amount of information but it potentially could have been clearer.",
+                  "The facilitators were awesome!  ",
+                  "Less uphill and stairs",
+                  "Maybe have the TLOs a little later in the week, or give more model lessons before we do them. ",
+                  "No",
+                  "excellent"
+                ]
+              }
+            }
+          }
+        },
+        "other": {
+          "questions": {
+            "suitable_for_my_level": {
+              "question_name": "suitable_for_my_level",
+              "question_text": "This professional development was suitable for my level of experience with teaching Computer Science.",
+              "question_short_text": "PD suitable for level of experience (%)",
+              "question_type": "likert",
+              "category": "other",
+              "results": {
+                "total_responses": 41,
+                "weighted_score": 93,
+                "agreement_count": 41,
+                "agreement_percentage": 100,
+                "breakdown": {
+                  "1": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "Strongly Disagree",
+                    "weighted_value": 0
+                  },
+                  "2": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "Disagree",
+                    "weighted_value": 17
+                  },
+                  "3": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "Slightly Disagree",
+                    "weighted_value": 33
+                  },
+                  "4": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "Neutral",
+                    "weighted_value": 50
+                  },
+                  "5": {
+                    "count": 3,
+                    "percentage": 7.3,
+                    "label": "Slightly Agree",
+                    "weighted_value": 67
+                  },
+                  "6": {
+                    "count": 12,
+                    "percentage": 29.3,
+                    "label": "Agree",
+                    "weighted_value": 83
+                  },
+                  "7": {
+                    "count": 26,
+                    "percentage": 63.4,
+                    "label": "Strongly Agree",
+                    "weighted_value": 100
+                  }
+                }
+              }
+            },
+            "someone_to_turn_to": {
+              "question_name": "someone_to_turn_to",
+              "question_text": "When I need help teaching computer science, I have someone to turn to.",
+              "question_short_text": "Have CS support (%)",
+              "question_type": "likert",
+              "category": "other",
+              "results": {
+                "total_responses": 41,
+                "weighted_score": 84,
+                "agreement_count": 39,
+                "agreement_percentage": 95,
+                "breakdown": {
+                  "1": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "Strongly Disagree",
+                    "weighted_value": 0
+                  },
+                  "2": {
+                    "count": 1,
+                    "percentage": 2.4,
+                    "label": "Disagree",
+                    "weighted_value": 17
+                  },
+                  "3": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "Slightly Disagree",
+                    "weighted_value": 33
+                  },
+                  "4": {
+                    "count": 1,
+                    "percentage": 2.4,
+                    "label": "Neutral",
+                    "weighted_value": 50
+                  },
+                  "5": {
+                    "count": 7,
+                    "percentage": 17.1,
+                    "label": "Slightly Agree",
+                    "weighted_value": 67
+                  },
+                  "6": {
+                    "count": 17,
+                    "percentage": 41.5,
+                    "label": "Agree",
+                    "weighted_value": 83
+                  },
+                  "7": {
+                    "count": 15,
+                    "percentage": 36.6,
+                    "label": "Strongly Agree",
+                    "weighted_value": 100
+                  }
+                }
+              }
+            },
+            "workshop_helped_create_community": {
+              "question_name": "workshop_helped_create_community",
+              "question_text": "This workshop has allowed me to meet CS teachers in my community to collaborate with.",
+              "question_short_text": "Helped create CS community (%)",
+              "question_type": "likert",
+              "category": "other",
+              "results": {
+                "total_responses": 41,
+                "weighted_score": 89,
+                "agreement_count": 41,
+                "agreement_percentage": 100,
+                "breakdown": {
+                  "1": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "Strongly Disagree",
+                    "weighted_value": 0
+                  },
+                  "2": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "Disagree",
+                    "weighted_value": 17
+                  },
+                  "3": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "Slightly Disagree",
+                    "weighted_value": 33
+                  },
+                  "4": {
+                    "count": 0,
+                    "percentage": 0,
+                    "label": "Neutral",
+                    "weighted_value": 50
+                  },
+                  "5": {
+                    "count": 2,
+                    "percentage": 4.9,
+                    "label": "Slightly Agree",
+                    "weighted_value": 67
+                  },
+                  "6": {
+                    "count": 22,
+                    "percentage": 53.7,
+                    "label": "Agree",
+                    "weighted_value": 83
+                  },
+                  "7": {
+                    "count": 17,
+                    "percentage": 41.5,
+                    "label": "Strongly Agree",
+                    "weighted_value": 100
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

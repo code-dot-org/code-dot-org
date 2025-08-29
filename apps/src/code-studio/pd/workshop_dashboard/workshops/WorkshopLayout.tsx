@@ -28,6 +28,7 @@ import {Loading} from './components/Loading';
 import {SurveyCategorySelection} from './components/SurveyCategorySelection';
 import {SurveyTypeSelection} from './components/SurveyTypeSelection';
 import {WorkshopTabs} from './components/WorkshopTabs';
+import sampleSurveyResponse from './sampleSurveyResponse.json';
 import {ExportSurveysButton} from './surveys/components/ExportSurveysButton';
 import {NoSurveyResponses} from './surveys/components/NoSurveyResponses';
 import {WorkshopLayoutProps, WorkshopContextValue} from './types';
@@ -85,7 +86,7 @@ export const WorkshopLayout: FC<WorkshopLayoutProps> = ({
   );
 
   const {
-    data: surveys,
+    // data: surveys,
     loading: surveysLoading,
     error: surveysError,
   } = useFetch<SurveySummary | null>(
@@ -93,6 +94,8 @@ export const WorkshopLayout: FC<WorkshopLayoutProps> = ({
       ? `/api/v1/pd/workshops/${workshopId}/foorm/workshop_survey_summary`
       : ''
   );
+
+  const surveys = sampleSurveyResponse as SurveySummary;
 
   const workshop = useMemo(
     () => (workshopResponse ? workshopDataToProps(workshopResponse) : null),
