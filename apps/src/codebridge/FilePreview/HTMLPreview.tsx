@@ -60,23 +60,11 @@ export const HTMLPreview = () => {
     if (isIframeLoaded && iframeRef.current) {
       previewContainerRef.current?.focus();
     }
-    // Only add newInputValue to navigation history if it is not already in history at the current index.
-    const addToNavHistory =
-      newInputValue !== navigationHistory[navigationHistoryIndex];
-    // If navigationHistoryIndex is the last index, add the file to the end of the array.
-    // Otherwise, truncate the array after the current index and add the file to the end.
-    if (addToNavHistory) {
-      const updatedNavigationHistory =
-        navigationHistoryIndex === navigationHistory.length - 1
-          ? [...navigationHistory, newInputValue]
-          : [
-              ...navigationHistory.slice(0, navigationHistoryIndex + 1),
-              newInputValue,
-            ];
-
-      setNavigationHistory(updatedNavigationHistory);
-      setNavigationHistoryIndex(updatedNavigationHistory.length - 1);
-    }
+    addToNavigationHistory(
+      newInputValue,
+      navigationHistoryIndex,
+      navigationHistory
+    );
   };
 
   const onNavigateBack = () => {
@@ -104,6 +92,29 @@ export const HTMLPreview = () => {
       {type: IframeMessageType.CHANGE_FILE_URL_BAR, fileName: updatedFile},
       previewUrl
     );
+  };
+
+  const addToNavigationHistory = (
+    filePath: string,
+    navigationHistoryIndex: number,
+    navigationHistory: string[]
+  ) => {
+    // Only add filePath to navigation history if it is not already in history at the current index.
+    const addToNavHistory =
+      filePath !== navigationHistory[navigationHistoryIndex];
+    // If navigationHistoryIndex is the last index, add filePath to the end of the array.
+    // Otherwise, truncate the array after the current index and then add filePath to the end.
+    if (addToNavHistory) {
+      const updatedNavigationHistory =
+        navigationHistoryIndex === navigationHistory.length - 1
+          ? [...navigationHistory, filePath]
+          : [
+              ...navigationHistory.slice(0, navigationHistoryIndex + 1),
+              filePath,
+            ];
+      setNavigationHistory(updatedNavigationHistory);
+      setNavigationHistoryIndex(updatedNavigationHistory.length - 1);
+    }
   };
 
   useLifecycleNotifier(LifecycleEvent.LevelLoadStarted, () => {
@@ -138,23 +149,11 @@ export const HTMLPreview = () => {
       ) {
         setCurrentFile(event.data.fileName);
         setInputValue(event.data.fileName);
-        // Only add newInputValue to navigation history if it is not already in history at the current index.
-        const addToNavHistory =
-          event.data.fileName !== navigationHistory[navigationHistoryIndex];
-        // If navigationHistoryIndex is the last index, add the file to the end of the array.
-        // Otherwise, truncate the array after the current index and add the file to the end.
-        if (addToNavHistory) {
-          const updatedNavigationHistory =
-            navigationHistoryIndex === navigationHistory.length - 1
-              ? [...navigationHistory, event.data.fileName]
-              : [
-                  ...navigationHistory.slice(0, navigationHistoryIndex + 1),
-                  event.data.fileName,
-                ];
-
-          setNavigationHistory(updatedNavigationHistory);
-          setNavigationHistoryIndex(updatedNavigationHistory.length - 1);
-        }
+        addToNavigationHistory(
+          event.data.fileName,
+          navigationHistoryIndex,
+          navigationHistory
+        );
       }
     };
 
@@ -220,13 +219,6 @@ export const HTMLPreview = () => {
       );
     }
   }, [isIframeLoaded, previewUrl, allowUserScripts]);
-
-  console.log('navigationHistory', navigationHistory);
-  console.log('navigationHistoryIndex', navigationHistoryIndex);
-  console.log('currentFile', currentFile);
-  console.log('inputValue', inputValue);
-  console.log('canNavigateBack', canNavigateBack);
-  console.log('canNavigateForward', canNavigateForward);
 
   return (
     <PanelContainer
