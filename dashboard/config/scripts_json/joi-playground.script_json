@@ -8,12 +8,12 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-07-17 18:15:33 UTC",
+    "serialized_at": "2025-08-29 00:19:55 UTC",
     "hide_within_course": false,
-    "published_state": "in_development",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "joi-playground"
     }
@@ -96,6 +96,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "aif-cyber-l2-app1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -117,6 +120,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "aif-cyber-l2-app2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -138,6 +144,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "aif-cyber-l2-app3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -159,6 +168,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "aif-cyber-l2-app4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -180,6 +192,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "aif-cyber-l2-app5"
+        ]
       },
       "bonus": false,
       "seeding_key": {

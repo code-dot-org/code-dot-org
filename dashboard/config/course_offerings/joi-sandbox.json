@@ -1,6 +1,6 @@
 {
-  "key": "fit2019-apprentice-old",
-  "display_name": "fit2019-apprentice-old",
+  "key": "joi-sandbox",
+  "display_name": "joi-sandbox",
   "is_featured": false,
   "assignable": true,
   "curriculum_type": null,
@@ -17,7 +17,5 @@
   "published_date": null,
   "self_paced_pl_course_offering_key": null,
   "ai_teaching_assistant_available": false,
-  "facilitator_course_permissions": [
-
-  ]
+  "facilitator_course_permissions": null
 }
