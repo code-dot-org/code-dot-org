@@ -524,21 +524,19 @@ Dashboard::Application.routes.draw do
     get '/s/csp10-2020/lockable/1(*all)', to: redirect(path: '/s/csp10-2020/lessons/14%{all}')
 
     # Hardcoded redirects for old courses that used unit family names
-    get '/s/csd1', to: redirect('/courses/csd-2019/units/1')
-    get '/s/csd2', to: redirect('/courses/csd-2019/units/2')
-    get '/s/csd3', to: redirect('/courses/csd-2019/units/3')
-    get '/s/csd4', to: redirect('/courses/csd-2019/units/4')
-    get '/s/csd5', to: redirect('/courses/csd-2019/units/5')
-    get '/s/csd6', to: redirect('/courses/csd-2019/units/6')
+    get '/s/csd:unit', to: redirect('/courses/csd-2019/units/%{unit}'), constraints: {unit: /[1-6]/}
+    get '/s/csd:unit/(*all)', to: redirect('/courses/csd-2019/units/%{unit}/%{all}'), constraints: {unit: /[1-6]/}
 
-    get '/s/csp1', to: redirect('/courses/csp-2019/units/1')
-    get '/s/csp2', to: redirect('/courses/csp-2019/units/2')
-    get '/s/csp3', to: redirect('/courses/csp-2019/units/3')
-    get '/s/csp4', to: redirect('/courses/csp-2019/units/4')
+    get '/s/csp:unit', to: redirect('/courses/csp-2019/units/%{unit}'), constraints: {unit: /[1-4]/}
+    get '/s/csp:unit/(*all)', to: redirect('/courses/csp-2019/units/%{unit}/%{all}'), constraints: {unit: /[1-4]/}
     get '/s/csp-explore', to: redirect('/courses/csp-2019/units/5')
+    get '/s/csp-explore/(*all)', to: redirect('/courses/csp-2019/units/5/%{all}')
     get '/s/csp5', to: redirect('/courses/csp-2019/units/6')
+    get '/s/csp5/(*all)', to: redirect('/courses/csp-2019/units/6/%{all}')
     get '/s/csp-create', to: redirect('/courses/csp-2019/units/7')
+    get '/s/csp-create/(*all)', to: redirect('/courses/csp-2019/units/7/%{all}')
     get '/s/csppostap', to: redirect('/courses/csp-2019/units/8')
+    get '/s/csppostap/(*all)', to: redirect('/courses/csp-2019/units/8/%{all}')
 
     resources :data_docs, param: :key do
       collection do

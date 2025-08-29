@@ -181,8 +181,18 @@ class RedirectsTest < ActionDispatch::IntegrationTest
   test 'redirect old courses that used unit family names' do
     get '/s/csp1'
     assert_redirected_to '/courses/csp-2019/units/1'
+    get '/s/csp1/lessons/1/levels/1'
+    assert_redirected_to '/courses/csp-2019/units/1/lessons/1/levels/1'
 
     get '/s/csd1'
     assert_redirected_to '/courses/csd-2019/units/1'
+    get '/s/csd1/lessons/1/levels/1'
+    assert_redirected_to '/courses/csd-2019/units/1/lessons/1/levels/1'
+
+    get '/s/csp5'
+    assert_redirected_to '/courses/csp-2019/units/6'
+
+    get '/s/csd11'
+    assert_response :not_found
   end
 end
