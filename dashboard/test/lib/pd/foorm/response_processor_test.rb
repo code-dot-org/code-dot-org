@@ -187,17 +187,17 @@ module Pd::Foorm
 
     test 'process_text_responses handles text array correctly' do
       question_summary = [
-        'First response',
-        'Second response',
+        'Response 1',
+        'Response 2',
         '',  # Should be filtered out by compact_blank
-        'Third response'
+        'Response 3'
       ]
 
       result = ResponseProcessor.process_text_responses(question_summary)
 
       expected = {
         total_responses: 3,
-        responses: ['First response', 'Second response', 'Third response']
+        responses: ['Response 1', 'Response 2', 'Response 3']
       }
 
       assert_equal expected, result
@@ -214,15 +214,84 @@ module Pd::Foorm
       assert_equal expected.with_indifferent_access, result.with_indifferent_access
     end
 
+    test 'process_text_responses filters useless responses' do
+      result = ResponseProcessor.process_text_responses([
+                                                          'none',
+                                                          'None',
+                                                          'None of the above',
+                                                          'nothing',
+                                                          'Nothing',
+                                                          'Nothing!',
+                                                          'Nothing.',
+                                                          'N/A',
+                                                          'N/a',
+                                                          'n/a',
+                                                          'NA',
+                                                          'Not applicable',
+                                                          '',
+                                                          'No',
+                                                          'no',
+                                                          'no opinion',
+                                                          'no idea',
+                                                          'n',
+                                                          'nada',
+                                                          'idc',
+                                                          'idk',
+                                                          "i don't know",
+                                                          "don't know",
+                                                          'dunno',
+                                                          'This is valid',
+                                                          'Another valid response'
+                                                        ]
+)
+
+      expected = {
+        total_responses: 2,
+        responses: ['Another valid response', 'This is valid']
+      }
+
+      assert_equal expected.with_indifferent_access, result.with_indifferent_access
+    end
+
+    test 'process_text_responses sorts responses by length' do
+      result = ResponseProcessor.process_text_responses([
+                                                          'it was okay',
+                                                          'this was the best workshop ever!',
+                                                          'meh',
+                                                          'solid ws'
+                                                        ]
+)
+
+      expected = {
+        total_responses: 4,
+        responses: [
+          'this was the best workshop ever!',
+          'it was okay',
+          'solid ws',
+          'meh',
+        ]
+      }
+
+      assert_equal expected.with_indifferent_access, result.with_indifferent_access
+    end
+
     test 'all processors handle invalid input gracefully' do
       # Test with non-hash input for hash-expecting methods
       assert_equal({}, ResponseProcessor.process_single_select_responses([], {}))
       assert_equal({}, ResponseProcessor.process_multi_select_responses('invalid', {}))
-      assert_equal({}, ResponseProcessor.process_rating_responses(nil, {}))
       assert_equal({}, ResponseProcessor.process_likert_responses(42, {}))
 
       # Test with non-array input for array-expecting method
       assert_equal({}, ResponseProcessor.process_text_responses({}))
+
+      # Test that nil gets converted to empty hash and processed normally
+      expected_rating_result = {
+        total_responses: 0,
+        promoter_percentage: 0,
+        breakdown: {}
+      }
+      assert_equal expected_rating_result.with_indifferent_access,
+                   ResponseProcessor.process_rating_responses(nil, {}).with_indifferent_access
     end
 
     test 'LIKERT_WEIGHTS constant has correct conversion values' do

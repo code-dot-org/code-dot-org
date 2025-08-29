@@ -1,6 +1,7 @@
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {
   commonFilterTypes,
+  durationInHoursFilterTypes,
   FilterTypeConfig,
 } from '@cdo/apps/templates/courseOfferings/filters/helpers';
 
@@ -8,7 +9,7 @@ export const SELF_PACED_PL_CATALOG_FILTERS: FilterTypeConfig[] = [
   commonFilterTypes.grade,
   commonFilterTypes.topic,
   commonFilterTypes.marketingInitiative,
-  commonFilterTypes.duration,
+  durationInHoursFilterTypes,
 ] as const;
 
 export type SelfPacedCatalogFilterKey =

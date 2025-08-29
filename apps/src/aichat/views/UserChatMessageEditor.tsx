@@ -1,11 +1,15 @@
-import {Button} from '@code-dot-org/component-library/button';
 import React, {useCallback, useEffect, useRef} from 'react';
 
 import UserMessageEditor from '@cdo/apps/aiComponentLibrary/userMessageEditor/UserMessageEditor';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {submitChatContents} from '../redux';
-import {AiChatClientType, ChatButton, ModelParameters} from '../types';
+import {
+  AiChatClientType,
+  ChatButtonComponent,
+  ModelParameters,
+  AnalyticsProperties,
+} from '../types';
 
 import moduleStyles from './UserChatMessageEditor.module.scss';
 
@@ -13,7 +17,7 @@ interface UserChatMessageEditorProps {
   modelParameters: ModelParameters;
   clientType: AiChatClientType;
   editorContainerClassName?: string;
-  chatButtons?: ChatButton[];
+  chatButtons?: ChatButtonComponent[];
   hiddenContext?: string;
   multimodalAvailable?: boolean;
 }
@@ -49,7 +53,7 @@ const UserChatMessageEditor: React.FunctionComponent<
   const disabled = isWaitingForChatResponse || saveInProgress || uploadsPending;
 
   const handleSubmit = useCallback(
-    (userMessage: string) => {
+    (userMessage: string, analyticsProperties?: AnalyticsProperties) => {
       if (!disabled) {
         dispatch(
           submitChatContents({
@@ -57,6 +61,7 @@ const UserChatMessageEditor: React.FunctionComponent<
             modelParameters,
             clientType,
             hiddenContext,
+            analyticsProperties,
             assets:
               multimodalAvailable && chatAssets.length > 0
                 ? chatAssets
@@ -88,17 +93,8 @@ const UserChatMessageEditor: React.FunctionComponent<
     <>
       {chatButtons && (
         <div className={moduleStyles.chatButtonsContainer}>
-          {chatButtons.map(button => (
-            <Button
-              key={button.label}
-              aria-label={button.label}
-              id="button-hint"
-              onClick={() => handleSubmit(button.value)}
-              text={button.label}
-              size="s"
-              type="secondary"
-              color="gray"
-            />
+          {chatButtons.map(ChatButton => (
+            <ChatButton onClick={handleSubmit} />
           ))}
         </div>
       )}

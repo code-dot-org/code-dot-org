@@ -26,6 +26,7 @@ const DEFAULT_PROPS = {
     givenName: 'Reba',
     familyName: 'McEntire',
     email: 'reba@mcentire.com',
+    educatorRole: 'Homeschool Teacher',
     schoolInfo: {
       schoolId: 1,
       country: 'United States',
@@ -115,6 +116,7 @@ describe('WorkshopJoin', () => {
     renderDefault({
       userInfo: {
         givenName: '',
+        educatorRole: '',
         schoolInfo: {},
       },
     });

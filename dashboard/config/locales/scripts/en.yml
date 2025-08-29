@@ -18715,7 +18715,7 @@ en:
             * #### Code using events and conditionals with Code.org.
 
 
-            #### **Suggested Time:** 55 minutes
+            #### **Suggested Time:** 30 minutes
           student_description: |
             #### This module covers the concepts and skills that are in the first micro:bit  track.
 
@@ -18723,7 +18723,7 @@ en:
             * #### Code using events and conditionals with Code.org.
 
 
-            #### **Suggested Time:** 55 minutes
+            #### **Suggested Time:** 30 minutes
         k5microbitmaker:
           lessons: {}
           lesson_groups: {}
@@ -18889,8 +18889,8 @@ en:
           title: Getting Started [Optional]
           description_audience: ''
           description_short: ''
-          description: "#### **You will:**\n\n* ####  Get an introduction to Code.org’s mission. \n* ####  Learn how to navigate the Code.org website and teacher tools.\n* ####  Set up a classroom section.\n* ####  Locate and use course lesson plans and teacher resources.\n* ####  Learn how to access support while teaching Code.org curricula.\n\n#### **Suggested time:** 80 minutes\n"
-          student_description: "#### **You will:**\n\n#### * Get an introduction to Code.org’s mission. \n#### * Learn how to navigate the Code.org website and teacher tools.\n#### * Set up a classroom section.\n#### * Locate and use course lesson plans and teacher resources.\n#### * Learn how to access support while teaching Code.org curricula.\n\n#### **Suggested time:** 80 minutes\n"
+          description: "#### **You will:**\n\n* ####  Get an introduction to Code.org’s mission. \n* ####  Learn how to navigate the Code.org website and teacher tools.\n* ####  Set up a classroom section.\n* ####  Locate and use course lesson plans and teacher resources.\n* ####  Learn how to access support while teaching Code.org curricula.\n\n#### **Suggested time:** 30 minutes\n"
+          student_description: "#### **You will:**\n\n#### * Get an introduction to Code.org’s mission. \n#### * Learn how to navigate the Code.org website and teacher tools.\n#### * Set up a classroom section.\n#### * Locate and use course lesson plans and teacher resources.\n#### * Learn how to access support while teaching Code.org curricula.\n\n#### **Suggested time:** 30 minutes\n"
         getting-started-with-code-game-design:
           lessons: {}
           lesson_groups:
@@ -21034,13 +21034,13 @@ en:
             ##Welcome!
             #### This professional learning module is designed to help you prepare to teach Code.org’s AI-Powered Threats and Defenses Unit.
 
-            #### The Cybersecurity and Global Impacts unit is part of the ***AI Foundations*** curriculum but can also stand alone for grades 9-12. Designed for flexibility, it can be seamlessly integrated into any existing curriculum, allowing teachers to introduce it at their own pace and align it with their educational goals.
+            #### The AI-Powered Threats and Defenses unit is part of the ***AI Foundations*** curriculum but can also stand alone for grades 9-12. Designed for flexibility, it can be seamlessly integrated into any existing curriculum, allowing teachers to introduce it at their own pace and align it with their educational goals.
 
             #### **Find the learning that works for you**
 
             #### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.
 
-            #### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Cybersecurity and Global Impacts unit. However, you can engage with the content in the order that best meets your needs.
+            #### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the AI-Powered Threats and Defenses unit. However, you can engage with the content in the order that best meets your needs.
           student_description: |-
             ##Welcome!
             #### This professional learning module is designed to help you prepare to teach Code.org’s Cybersecurity and Global Impacts Unit.
@@ -25120,3 +25120,76 @@ en:
             - Propose security design improvements that consider both human-centered design principles and their impact on diverse users and communities.
             - Describe cybersecurity career roles and how professionals use AI tools in their work.
             :::
+        musiclab-instructions-bash:
+          lessons: {}
+          lesson_groups: {}
+          name: musiclab-instructions-bash
+          title: Musiclab Instructions Bash
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-pl-teaching-ai-powered-threats-and-defenses-pilot-2025:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-ai-powered-threats-and-defenses-pilot-2025
+          title: "[PILOT] Teaching AI-Powered Threats and Defenses"
+          description_audience: ''
+          description_short: ''
+          description: |-
+            ##Welcome!
+            #### This professional learning module is designed to help you prepare to teach Code.org’s AI-Powered Threats and Defenses Unit.
+
+            #### The AI-Powered Threats and Defenses unit is part of the ***AI Foundations*** curriculum but can also stand alone for grades 9-12. Designed for flexibility, it can be seamlessly integrated into any existing curriculum, allowing teachers to introduce it at their own pace and align it with their educational goals.
+
+            #### **Find the learning that works for you**
+
+            #### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.
+
+            #### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the AI-Powered Threats and Defenses unit. However, you can engage with the content in the order that best meets your needs.
+          student_description: |-
+            #### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.
+
+            #### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Cybersecurity and Global Impacts unit. However, you can engage with the content in the order that best meets your needs.
+        hoai-dance-pilot1:
+          lessons:
+            lesson-1:
+              name: Hour of AI Dance Party Pilot 1a
+          lesson_groups: {}
+          name: hoai-dance-pilot1
+          title: Hour of AI Dance Party Pilot 1
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        sandbox-jit-pl-prompting-basics:
+          lessons:
+            lesson-1:
+              name: 'Prompting Power-Up: Critical Thinking'
+          lesson_groups: {}
+          name: sandbox-jit-pl-prompting-basics
+          title: 'Prompt Power-Up: Critical Thinking '
+          description_audience: ''
+          description_short: ''
+          description: |-
+            ## Welcome to this quick PD Pocket!
+            #### Designed to take 5 minutes or less, this microlearning will keep you confident and ready to teach in no time.
+
+            #### **In this mini-lesson, you will:**
+
+            - #### Recognize the difference between prompts that produce quick fixes vs. prompts that model deeper reasoning.
+
+            - #### Practice reframing prompts so they encourage explanation and critical thinking.
+
+            #### **Suggested Time:** 10 minutes
+          student_description: |-
+            ## Welcome to this quick PD Pocket!
+            #### Designed to take 5 minutes or less, this microlearning will keep you confident and ready to teach in no time.
+
+            #### **In this mini-lesson, you will:**
+
+            - #### Recognize the difference between prompts that produce quick fixes vs. prompts that model deeper reasoning.
+
+            - #### Practice reframing prompts so they encourage explanation and critical thinking.
+
+            #### **Suggested Time:** 10 minutes

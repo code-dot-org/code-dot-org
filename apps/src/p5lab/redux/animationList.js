@@ -941,12 +941,28 @@ export function animationSourceUrl(key, props, channelId) {
 export function withAbsoluteSourceUrls(serializedList, channelId) {
   let list = _.cloneDeep(serializedList);
   list.orderedKeys.forEach(key => {
-    let props = list.propsByKey[key];
+    const props = list.propsByKey[key];
 
-    const relativeUrl = animationSourceUrl(key, props, channelId);
-    const sourceLocation = document.createElement('a');
-    sourceLocation.href = relativeUrl;
-    props.sourceUrl = sourceLocation.href;
+    const rawUrl = props.sourceUrl || animationSourceUrl(key, props, channelId);
+    let updatedUrl = rawUrl;
+
+    // Unwrap proxy if present
+    const proxyPrefix = '/media?u=';
+    if (rawUrl?.includes(proxyPrefix)) {
+      const encoded = rawUrl.split(proxyPrefix)[1];
+      updatedUrl = decodeURIComponent(encoded);
+    }
+
+    // Use relative URL for animation library URLs
+    if (updatedUrl.includes('v1/animation-library/')) {
+      props.sourceUrl = updatedUrl.split('code.org')[1] || updatedUrl;
+      return;
+    }
+
+    // Convert others to absolute URL (retaining original host)
+    const url = document.createElement('a');
+    url.href = updatedUrl;
+    props.sourceUrl = url.href;
   });
   return list;
 }

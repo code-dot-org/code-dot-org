@@ -57,7 +57,7 @@ const SelfPacedPLCatalogCardInitial: React.FunctionComponent<
       expandedCardActionRowContent={
         <>
           <LinkButton
-            text="Start professional Learning"
+            text="Start professional learning"
             href={courseOffering.course_version_path}
             color={buttonColors.purple}
             size="m"

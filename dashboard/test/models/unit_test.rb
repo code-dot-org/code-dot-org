@@ -72,7 +72,6 @@ class UnitTest < ActiveSupport::TestCase
     UnitGroup.course_cache
 
     CourseVersion.stubs(:should_cache?).returns true
-    CourseVersion.course_offering_keys('Unit')
 
     CourseOffering.all.pluck(:key).each do |key|
       CourseOffering.get_from_cache(key)
@@ -942,6 +941,8 @@ class UnitTest < ActiveSupport::TestCase
 
   test 'should generate a shorter summary for header' do
     unit = create(:script, :in_single_unit_course, name: 'single-lesson-script')
+    unit_group_unit = UnitGroupUnit.where(script: unit).last
+    unit_group = unit_group_unit.unit_group
     lesson_group = create(:lesson_group, key: 'key1', script: unit)
     lesson = create(:lesson, script: unit, name: 'lesson 1', lesson_group: lesson_group)
     create(:script_level, script: unit, lesson: lesson)
@@ -954,10 +955,11 @@ class UnitTest < ActiveSupport::TestCase
       age_13_required: false,
       show_sign_in_callout: false,
       hasUnnumberedLessons: false,
-      course_name: nil,
-      unit_position: nil,
+      course_name: unit_group.name,
+      course_id: unit_group.id,
+      unit_position: unit_group_unit.position,
     }
-    assert_equal expected, unit.summarize_header
+    assert_equal expected, unit.summarize_header(unit_group_unit: unit_group_unit)
   end
 
   test 'should exclude lessons if include_lessons is false' do
@@ -2355,7 +2357,10 @@ class UnitTest < ActiveSupport::TestCase
       create(:script_level, levels: [level1], script: @single_unit, lesson: lesson, activity_section: activity_section, activity_section_position: 1)
       create(:script_level, levels: [level2], script: @single_unit, lesson: lesson, activity_section: activity_section, activity_section_position: 2)
 
-      cloned_unit = @single_unit.clone_migrated_unit('single-unit-2022', version_year: '2022', family_name: 'csf')
+      single_unit_course_2022 = create(:unit_group, name: 'single-unit-course-2022')
+      create(:course_version, course_offering: @single_unit_course_offering, content_root: single_unit_course_2022, key: "2022", display_name: "2022")
+
+      cloned_unit = @single_unit.clone_migrated_unit('single-unit-2022', destination_unit_group_name: 'single-unit-course-2022')
       assert_equal [level1, level2], cloned_unit.levels
     end
 
@@ -2370,15 +2375,20 @@ class UnitTest < ActiveSupport::TestCase
       create(:script_level, levels: [level1], script: @single_unit, lesson: lesson, activity_section: activity_section, activity_section_position: 1)
       create(:script_level, levels: [level2], script: @single_unit, lesson: lesson, activity_section: activity_section, activity_section_position: 2)
 
-      cloned_unit = @single_unit.clone_migrated_unit('single-unit-2022', new_level_suffix: '2022', version_year: '2022', family_name: 'csf')
+      single_unit_course_2022 = create(:unit_group, name: 'single-unit-course-2022')
+      create(:course_version, course_offering: @single_unit_course_offering, content_root: single_unit_course_2022, key: "2022", display_name: "2022")
+
+      cloned_unit = @single_unit.clone_migrated_unit('single-unit-2022', destination_unit_group_name: 'single-unit-course-2022', new_level_suffix: '2022')
       refute_equal [level1, level2], cloned_unit.levels
     end
 
     test 'can copy teacher and student resources' do
       @single_unit.resources = [create(:resource)]
       @single_unit.student_resources = [create(:resource)]
+      single_unit_course_2022 = create(:unit_group, name: 'single-unit-course-2022')
+      create(:course_version, course_offering: @single_unit_course_offering, content_root: single_unit_course_2022, key: "2022", display_name: "2022")
 
-      cloned_unit = @single_unit.clone_migrated_unit('single-unit-2022', version_year: '2022', family_name: 'csf')
+      cloned_unit = @single_unit.clone_migrated_unit('single-unit-2022', destination_unit_group_name: 'single-unit-course-2022')
       assert_equal 1, cloned_unit.resources.count
       assert_equal 1, cloned_unit.student_resources.count
       refute_equal @single_unit.resources[0], cloned_unit.resources[0]
@@ -2409,17 +2419,6 @@ class UnitTest < ActiveSupport::TestCase
       assert_equal 1, cloned_unit.get_course_version.reference_guides.count
     end
 
-    test 'can copy a script without a course version' do
-      source_unit = create(:script)
-      lesson = create(:lesson, script: source_unit)
-      create(:lesson_group, script: source_unit, lessons: [lesson])
-
-      cloned_unit = source_unit.clone_migrated_unit('cloned-unit', family_name: 'family-name', version_year: 'unversioned')
-      assert_equal 1, cloned_unit.lesson_groups.count
-      assert_equal 1, cloned_unit.lessons.count
-      refute_nil cloned_unit.get_course_version
-    end
-
     test 'clone raises exception if deeper learning course is being copied to a non-deeper learning course' do
       raise = assert_raises do
         @deeper_learning_unit.clone_migrated_unit('my-name')
@@ -2437,7 +2436,7 @@ class UnitTest < ActiveSupport::TestCase
     test 'clone raises exception if script name has already been taken' do
       create(:script, name: 'my-name')
       raise = assert_raises do
-        @single_unit.clone_migrated_unit('my-name', version_year: '2022')
+        @single_unit.clone_migrated_unit('my-name')
       end
       assert_equal 'Unit name has already been taken', raise.message
     end

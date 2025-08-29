@@ -22,19 +22,25 @@ import {
 import {SongData, SongMetadata} from './types';
 
 export interface DanceState {
-  selectedSong: string;
+  selectedSong: string | undefined;
   songData: SongData;
   runIsStarting: boolean;
   currentAiModalBlockId: string | undefined;
   aiOutput?: DanceAiModalOutputType;
   aiModalOpenedFromFlyout: boolean;
   // Fields below are used only by Lab2 Dance
+  /** If the program is currently running */
   isRunning: boolean;
+  /** Metadata for the currently selected song */
   currentSongMetadata: SongMetadata | undefined;
+  /** If a load is in progress */
+  isLoading: boolean;
+  hasRun: boolean;
+  hasEdited: boolean;
 }
 
 const initialState: DanceState = {
-  selectedSong: 'macklemore90',
+  selectedSong: undefined,
   songData: {},
   runIsStarting: false,
   currentAiModalBlockId: undefined,
@@ -42,6 +48,9 @@ const initialState: DanceState = {
   aiModalOpenedFromFlyout: false,
   isRunning: false,
   currentSongMetadata: undefined,
+  isLoading: false,
+  hasRun: false,
+  hasEdited: false,
 };
 
 // THUNKS
@@ -207,6 +216,39 @@ const danceSlice = createSlice({
       state.currentAiModalBlockId = undefined;
       state.aiModalOpenedFromFlyout = false;
     },
+    setIsRunning: (state, action: PayloadAction<boolean>) => {
+      state.isRunning = action.payload;
+    },
+    setHasRun: (state, action: PayloadAction<boolean>) => {
+      state.hasRun = action.payload;
+    },
+    setHasEdited: (state, action: PayloadAction<boolean>) => {
+      state.hasEdited = action.payload;
+    },
+  },
+  extraReducers: builder => {
+    builder.addCase(initSongs.pending, state => {
+      state.isLoading = true;
+    });
+    builder.addCase(initSongs.fulfilled, state => {
+      state.isLoading = false;
+    });
+    builder.addCase(initSongs.rejected, state => {
+      state.isLoading = false;
+      // TODO: Handle error. Should we bubble this up to Lab2 and show the
+      // error modal? Or should we handle internally and retry?
+    });
+    builder.addCase(setSong.pending, state => {
+      state.isLoading = true;
+    });
+    builder.addCase(setSong.fulfilled, state => {
+      state.isLoading = false;
+    });
+    builder.addCase(setSong.rejected, state => {
+      state.isLoading = false;
+      // TODO: Handle error. Should we bubble this up to Lab2 and show the
+      // error modal? Or should we handle internally and retry?
+    });
   },
 });
 
@@ -218,5 +260,8 @@ export const {
   setAiOutput,
   openAiModal,
   closeAiModal,
+  setIsRunning,
+  setHasRun,
+  setHasEdited,
 } = danceSlice.actions;
 export const reducers = {dance: danceSlice.reducer};

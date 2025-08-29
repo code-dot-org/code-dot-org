@@ -134,6 +134,7 @@ const EnrollInWorkshop: React.FC<EnrollInWorkshopProps> = ({
             givenName={userInfo.givenName}
             familyName={userInfo.familyName}
             email={userInfo.email}
+            educatorRole={userInfo.educatorRole}
             schoolName={userInfo.schoolInfo?.schoolName}
             schoolType={userInfo.schoolInfo?.schoolType}
             returnToHref={`/professional-learning/workshops/${id}`}

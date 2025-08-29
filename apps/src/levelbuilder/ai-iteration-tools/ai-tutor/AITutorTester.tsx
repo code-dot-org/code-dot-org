@@ -2,14 +2,16 @@ import Button from '@code-dot-org/component-library/button';
 import Papa from 'papaparse';
 import React, {useEffect, useState} from 'react';
 
-import {getChatCompletionMessage} from '@cdo/apps/aiTutor/chatApi';
-import {formatQuestionForAITutor} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
-
 import AITutorTesterSampleColumns from './AITutorTesterSampleColumns';
 
 import styles from './ai-tutor-tester.module.scss';
 
 /**
+ * *** This tester is currently non-functional, as it was written for the old version of ai tutor.
+ * For now, we are leaving this code here to be possibly ported to the new AI Tutor in the future.
+ * Commented out broken bits due to references to removed code. ***
+ *
+ *
  * Renders a series of buttons that allow levelbuilders to upload a CSV of
  * student inputs and get back AI responses in bulk.
  */
@@ -56,14 +58,27 @@ const AITutorTester: React.FC = () => {
     await Promise.allSettled(responsePromises);
   };
 
+  // const formatQuestionForAITutor = (chatContext: ChatContext) => {
+  //   let formattedQuestion = chatContext.studentInput;
+
+  //   if (chatContext.studentCode) {
+  //     const separator = '\n\n---\n\n';
+  //     const codePrefix = "Here is the student's code:\n\n```\n";
+  //     const codePostfix = '\n```';
+  //     formattedQuestion = `${chatContext.studentInput}${separator}${codePrefix}${chatContext.studentCode}${codePostfix}`;
+  //   }
+
+  //   return formattedQuestion;
+  // };
+
   const askAITutor = async (row: AIInteraction) => {
-    const chatApiResponse = await getChatCompletionMessage(
-      formatQuestionForAITutor(row),
-      [],
-      row.systemPrompt,
-      row.levelId
-    );
-    row.aiResponse = chatApiResponse.assistantResponse;
+    // const chatApiResponse = await getChatCompletionMessage(
+    //   formatQuestionForAITutor(row),
+    //   [],
+    //   row.systemPrompt,
+    //   row.levelId
+    // );
+    // row.aiResponse = chatApiResponse.assistantResponse;
     setResponseCount(prevResponseCount => prevResponseCount + 1);
   };
 

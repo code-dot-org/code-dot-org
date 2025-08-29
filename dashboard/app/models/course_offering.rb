@@ -62,7 +62,7 @@ class CourseOffering < ApplicationRecord
     '6-12 Workshops': 'https://code.org/apply',
   }
 
-  has_many :course_versions, -> {where(content_root_type: ['UnitGroup', 'Unit'])}
+  has_many :course_versions
   belongs_to :self_paced_pl_course_offering, class_name: 'CourseOffering', optional: true
 
   has_and_belongs_to_many :pd_workshops, class_name: 'Pd::Workshop', join_table: :course_offerings_pd_workshops, association_foreign_key: 'pd_workshop_id'
@@ -80,23 +80,21 @@ class CourseOffering < ApplicationRecord
   self.localizable_attributes = :display_name, :description
 
   # Seeding method for creating / updating / deleting a CourseOffering and CourseVersion for the given
-  # potential content root, i.e. a Unit or UnitGroup.
+  # potential content root, i.e. a UnitGroup.
   #
   # Examples:
   #
-  # coursea-2019.script represents the content root for Course A, Version 2019.
-  # Therefore, it should contain "is_course true", which will cause this method to create the
-  # corresponding CourseOffering and CourseVersion objects.
-  #
   # csp1-2019.script does not represent a content root (the root for CSP, Version 2019 is a UnitGroup).
-  # Therefore, it does not contain "is_course true". so this method will not create any new objects.
+  # Therefore, this method will not create any new objects.
   #
   # This method will also delete CourseOfferings and/or CourseVersions that were previously associated with
   # the content_root, if appropriate. See CourseVersion#add_course_version for details.
   def self.add_course_offering(content_root)
-    if content_root.is_course?
-      raise "family_name must be set, since is_course is true, for: #{content_root.name}" if content_root.family_name.nil_or_empty?
+    unless content_root.is_a?(UnitGroup)
+      raise "cannot create CourseOffering for content root #{content_root.name} that is not a UnitGroup"
+    end
 
+    if content_root.is_course?
       offering = CourseOffering.find_or_create_by!(key: content_root.family_name) do |co|
         co.display_name = content_root.family_name if co.display_name.nil_or_empty?
       end
@@ -121,7 +119,7 @@ class CourseOffering < ApplicationRecord
   def latest_published_version(locale_code = 'en-us')
     locale_str = locale_code&.to_s
     unless locale_str&.start_with?('en')
-      latest_stable_version = any_version_is_unit? ? Unit.latest_stable_version(key, locale: locale_str) : UnitGroup.latest_stable_version(key, locale: locale_str)
+      latest_stable_version = UnitGroup.latest_stable_version(key, locale: locale_str)
       return latest_stable_version.course_version unless latest_stable_version.nil?
     end
 
@@ -141,17 +139,7 @@ class CourseOffering < ApplicationRecord
   end
 
   def course_id
-    return unless latest_published_version&.content_root_type == 'UnitGroup'
-    latest_published_version.content_root.id
-  end
-
-  def script_id
-    return unless latest_published_version&.content_root_type == 'Unit'
-    latest_published_version.content_root.id
-  end
-
-  def standalone_unit?
-    latest_published_version&.content_root_type == 'Unit'
+    latest_published_version&.content_root&.id
   end
 
   def self.should_cache?
@@ -328,7 +316,7 @@ class CourseOffering < ApplicationRecord
     locale_str = locale_code&.to_s
     return true if locale_str&.start_with?('en')
 
-    latest_stable_version = any_version_is_unit? ? Unit.latest_stable_version(key, locale: locale_str) : UnitGroup.latest_stable_version(key, locale: locale_str)
+    latest_stable_version = UnitGroup.latest_stable_version(key, locale: locale_str)
     !latest_stable_version.nil?
   end
 
@@ -373,8 +361,6 @@ class CourseOffering < ApplicationRecord
       course_version_id: latest_published_version(locale_code)&.id,
       course_id: course_id,
       course_offering_id: id,
-      script_id: script_id,
-      is_standalone_unit: standalone_unit?,
       is_translated: translated?(locale_code),
       description: localized_description,
       professional_learning_program: professional_learning_program,
@@ -449,10 +435,6 @@ class CourseOffering < ApplicationRecord
 
   def units_included_in_any_version?(unit_ids)
     course_versions.any? {|cv| cv.included_in_units?(unit_ids)}
-  end
-
-  def any_version_is_unit?
-    course_versions.any? {|cv| cv.content_root_type == 'Unit'}
   end
 
   def csd?

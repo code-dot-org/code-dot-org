@@ -79,7 +79,7 @@
     "bubble_choice_description": "Some animations have multiple frames, but this one isn't working correctly.",
     "libraries_enabled": "false",
     "start_blocks": "var ghost = createSprite(200, 200);\r\nghost.setAnimation(\"bubbly\");\r\nfunction draw() {\r\n  drawSprites();\r\n}\r\n",
-    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"bd1fb240-f20b-40cf-afa6-3603212239c9\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"bd1fb240-f20b-40cf-afa6-3603212239c9\": {\r\n      \"name\": \"bubbly\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/api/v1/animation-library/gamelab/aTEW8AtEEdRuAHf5uRFooQ6hPUC2kqr9/category_characters/bubbly.png\",\r\n      \"frameSize\": {\r\n        \"x\": 82,\r\n        \"y\": 130\r\n      },\r\n      \"frameCount\": 4,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"aTEW8AtEEdRuAHf5uRFooQ6hPUC2kqr9\"\r\n    }\r\n  }\r\n}",
+    "start_animations": "{\n  \"orderedKeys\": [\n    \"bd1fb240-f20b-40cf-afa6-3603212239c9\"\n  ],\n  \"propsByKey\": {\n    \"bd1fb240-f20b-40cf-afa6-3603212239c9\": {\n      \"name\": \"bubbly\",\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/aTEW8AtEEdRuAHf5uRFooQ6hPUC2kqr9/category_characters/bubbly.png\",\n      \"frameSize\": {\n        \"x\": 82,\n        \"y\": 130\n      },\n      \"frameCount\": 4,\n      \"looping\": true,\n      \"frameDelay\": 2,\n      \"version\": \"aTEW8AtEEdRuAHf5uRFooQ6hPUC2kqr9\"\n    }\n  }\n}",
     "thumbnail_url": "https://images.code.org/7823e3eb26dbc913edc5b47a0023e7ac-image-1589576594977.2020-05-15 17_01_26.gif",
     "encrypted_examples": "fFYOyM0ZMtnC+kMe0y//M7tkyWsRP8BttPdx3lPOBp70uObiGedyopfesHeg\nD/Qh/Vg0h2GlwX08sa1EMZw4TA==\n",
     "preload_asset_list": null

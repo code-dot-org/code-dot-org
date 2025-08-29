@@ -152,6 +152,7 @@ class UnitOverview extends React.Component {
       courseVersionId,
       courseId,
       isProfessionalLearningCourse,
+      isSingleUnitCourse,
       publishedState,
       participantAudience,
       showAiAssessmentsAnnouncement,
@@ -202,6 +203,7 @@ class UnitOverview extends React.Component {
               viewAs={viewAs}
               showAssignButton={showAssignButton}
               courseOfferingId={courseOfferingId}
+              isSingleUnitCourse={isSingleUnitCourse}
               currentCourseId={courseId}
               scriptId={scriptId}
               participantAudience={participantAudience}
