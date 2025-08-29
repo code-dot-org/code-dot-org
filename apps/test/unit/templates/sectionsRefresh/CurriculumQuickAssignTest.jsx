@@ -36,7 +36,7 @@ describe('CurriculumQuickAssign', () => {
     expect(wrapper.find('h3').length).toBe(1);
     expect(wrapper.find('p').length).toBe(1);
     // We haven't specified participantType = student, so all 5 buttons appear
-    expect(wrapper.find('Button').length).toBe(5);
+    expect(wrapper.find('Button').length).toBe(6);
     expect(wrapper.find('Button').at(0).props().text).toBe(
       i18n.courseBlocksGradeBandsElementary()
     );
