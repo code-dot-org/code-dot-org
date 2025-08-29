@@ -6,11 +6,9 @@ import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
-import DCDO from '@cdo/apps/dcdo';
 import {ParticipantAudience} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import SectionAvatar from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/sectionAvatars/SectionAvatar';
-import experiments from '@cdo/apps/util/experiments';
 import {StudentGradeLevels} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
@@ -69,35 +67,31 @@ export default function SingleSectionSetUp({
           )}
         </label>
       </div>
-      {(experiments.isEnabled('teacher-homepage-v2') ||
-        DCDO.get('teacher-homepage-v2', false)) && (
-        <label className={moduleStyles.typographyLabelTwo}>
-          {i18n.avatar()}
-
-          <div className={styles.avatarContainer}>
-            {isLoading ? (
-              <Spinner />
-            ) : (
-              <>
-                <SectionAvatar
-                  color={section.avatar_color || 0}
-                  emoji={section.avatar_emoji || 0}
-                  size={'m'}
-                />
-                <Button
-                  className={styles.avatarButton}
-                  text={i18n.editAvatar()}
-                  aria-label={i18n.editAvatar()}
-                  type={'secondary'}
-                  color={'gray'}
-                  size={'s'}
-                  onClick={() => setShowAvatarDialog(true)}
-                />
-              </>
-            )}
-          </div>
-        </label>
-      )}
+      <label className={moduleStyles.typographyLabelTwo}>
+        {i18n.avatar()}
+        <div className={styles.avatarContainer}>
+          {isLoading ? (
+            <Spinner />
+          ) : (
+            <>
+              <SectionAvatar
+                color={section.avatar_color || 0}
+                emoji={section.avatar_emoji || 0}
+                size={'m'}
+              />
+              <Button
+                className={styles.avatarButton}
+                text={i18n.editAvatar()}
+                aria-label={i18n.editAvatar()}
+                type={'secondary'}
+                color={'gray'}
+                size={'s'}
+                onClick={() => setShowAvatarDialog(true)}
+              />
+            </>
+          )}
+        </div>
+      </label>
       {participantType === ParticipantAudience.student && (
         <div className={moduleStyles.containerWithMarginTop}>
           <Chips

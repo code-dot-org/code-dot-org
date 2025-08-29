@@ -52,8 +52,6 @@ experiments.SECTION_PROGRESS_V2 = 'section_progress_v2';
 experiments.BIG_PLAYSPACE = 'bigPlayspace';
 // Allows user to view the new version of the teacher navigation
 experiments.TEACHER_LOCAL_NAV_V2 = 'teacher-local-nav-v2';
-// Allows users to view the new version of the teacher homepage
-experiments.TEACHER_HOMEPAGE_V2 = 'teacher-homepage-v2';
 // Use glow effect for Blockly block highlighting
 experiments.BLOCKLY_GLOW_HIGHLIGHT = 'blockly-glow-highlight';
 // Turn on Blockly Keyboard Navigation
