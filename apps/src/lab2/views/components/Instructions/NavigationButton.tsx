@@ -36,8 +36,43 @@ const NavigationButton: React.FC<NavigationButtonProps> = ({
   hasEdited,
   className,
   size,
-  requireRun,
 }) => {
+  const {predictSettings, submittable} = levelProperties;
+  const hasSubmittedPredictResponse = useAppSelector(
+    isPredictResponseSubmitted
+  );
+  const hasConditions = useAppSelector(
+    state => state.lab.validationState.hasConditions
+  );
+  const validationSatisfied = useAppSelector(
+    state => state.lab.validationState.satisfied
+  );
+  const hasSubmitted = useAppSelector(
+    state => getCurrentLevel(state)?.status === LevelStatus.submitted
+  );
+  const canShow = useMemo(() => {
+    if (predictSettings?.isPredictLevel) {
+      return hasSubmittedPredictResponse;
+    } else if (submittable && hasSubmitted) {
+      return true;
+    } else if (hasConditions) {
+      return validationSatisfied;
+    } else {
+      return true;
+    }
+  }, [
+    hasConditions,
+    predictSettings?.isPredictLevel,
+    hasSubmittedPredictResponse,
+    validationSatisfied,
+    submittable,
+    hasSubmitted,
+  ]);
+
+  if (!canShow) {
+    return null;
+  }
+
   if (levelProperties.submittable) {
     return (
       <SubmitButton
@@ -57,9 +92,7 @@ const NavigationButton: React.FC<NavigationButtonProps> = ({
     <ContinueButton
       className={className}
       size={size}
-      hasRun={hasRun}
       isPredictLevel={levelProperties.predictSettings?.isPredictLevel}
-      requireRun={requireRun}
     />
   );
 };
@@ -68,8 +101,6 @@ interface ContinueButtonProps {
   className?: string;
   size?: ComponentSizeXSToL;
   isPredictLevel?: boolean;
-  hasRun?: boolean;
-  requireRun?: boolean;
 }
 
 /**
@@ -79,43 +110,15 @@ const ContinueButton: React.FC<ContinueButtonProps> = ({
   className,
   size,
   isPredictLevel,
-  hasRun,
-  requireRun,
 }) => {
   const dispatch = useAppDispatch();
   const hasNextLevel = useAppSelector(
     state => nextLevelId(state) !== undefined
   );
-  const hasSubmittedPredictResponse = useAppSelector(
-    isPredictResponseSubmitted
-  );
-  const hasConditions = useAppSelector(
-    state => state.lab.validationState.hasConditions
-  );
-  const validationSatisfied = useAppSelector(
-    state => state.lab.validationState.satisfied
-  );
   const useSecondaryFinishButton =
     useAppSelector(
       state => state.lab.levelProperties?.useSecondaryFinishButton
     ) || queryParams('use-secondary-finish-button') === 'true';
-
-  const canShow = useMemo(() => {
-    if (isPredictLevel) {
-      return hasSubmittedPredictResponse;
-    } else if (hasConditions) {
-      return validationSatisfied;
-    } else {
-      return !requireRun || hasRun;
-    }
-  }, [
-    hasRun,
-    hasConditions,
-    isPredictLevel,
-    hasSubmittedPredictResponse,
-    validationSatisfied,
-    requireRun,
-  ]);
 
   const text = hasNextLevel ? commonI18n.continue() : commonI18n.finish();
 
@@ -127,10 +130,6 @@ const ContinueButton: React.FC<ContinueButtonProps> = ({
   const iconRight: FontAwesomeV6IconProps | undefined = hasNextLevel
     ? {iconName: 'arrow-right', iconStyle: 'solid'}
     : undefined;
-
-  if (!canShow) {
-    return null;
-  }
 
   return (
     <Button
