@@ -12,6 +12,7 @@ import {
 import ChatWorkspace from '@cdo/apps/aichat/views/ChatWorkspace';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
+import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
@@ -20,55 +21,10 @@ import {aiTutorModelId} from '../../ai/ai-tutor-model-id';
 
 import moduleStyles from './AiTutor2Chat.module.scss';
 
-/*
- * Fetch a custom prompt from our 'experimentation-settings' repo:
- *   https://github.com/code-dot-org/experimentation-settings/tree/main/tools/aitutor.
- *
- *  IMPORTANT: THIS IS A QUICK AND DIRTY HACK, ONLY TO BE USED FOR INTERNAL PROMPT TESTING AND
- *  LIMITED AND INDIVIDUALIZED USER TESTING. EVEN DURING PILOT, PROMPTS FOR ANY WIDER TESTING
- *  MUST BE COMMITTED TO THE CODEBASE TO AVOID ANY EXTERNAL DEPENDENCY ON GITHUB RAW FILES.
- *
- *  DROP DEAD DATE: 01/01/2026 - ANYONE ENCOUNTERING THIS CUSTOM PROMPT CODE CAN REMOVE IT WITHOUT
- *  CONSIDERING HOW IT IS USED OR THE DEVELOPMENT STATE
- *
- * Returns either the custom prompt or null if the custom prompt fails to load or times out.
- * Optionally pass a timeout in milliseconds (defaults to 10s) to revert to the default prompt.
- *
- * Example:
- *
- *    fetchCustomPrompt(customPromptName).then(prompt => {
- *      if (prompt) {
- *        console.log('got custom prompt:',prompt);
- *      } else {
- *        console.log('failed to get custom prompt!');
- *      }
- *    });
- **/
-
-export const fetchCustomPrompt = async (
-  promptName: string,
-  timeoutMs = 10000
-) => {
-  const url = `https://raw.githubusercontent.com/code-dot-org/experimentation-settings/refs/heads/main/tools/aitutor/${promptName}.md`;
-  const controller = new AbortController();
-
-  //Timeout and use default system prompt.
-  const timeout = setTimeout(() => controller.abort(), timeoutMs);
-
-  try {
-    const response = await fetch(url, {signal: controller.signal});
-
-    if (!response.ok) {
-      throw new Error(`Fetch error: ${response.status}`);
-    }
-
-    const text = await response.text();
-    return text;
-  } catch (err) {
-    return null;
-  } finally {
-    clearTimeout(timeout);
-  }
+export const fetchCustomPrompt = async (promptName: string) => {
+  const url = `https://curriculum.code.org/media/prompt-library/${promptName}.md`;
+  const response = await HttpClient.get(url);
+  return await response.text();
 };
 
 // Provide a looser system prompt that allows for more copyable code for code generation
@@ -160,21 +116,20 @@ const AiTutor2Chat: React.FunctionComponent<AiTutor2ChatProps> = ({
   const dispatch = useAppDispatch();
 
   const [systemPrompt, setSystemPrompt] = useState<string>();
-  const [startLoading, setStartLoading] = useState(false);
-
-  useEffect(() => {
-    setStartLoading(true);
-  }, []);
 
   useEffect(() => {
     if (customPromptName) {
-      fetchCustomPrompt(customPromptName).then(prompt => {
-        if (prompt) {
-          setSystemPrompt(prompt);
-        } else {
+      fetchCustomPrompt(customPromptName)
+        .then(prompt => {
+          if (prompt) {
+            setSystemPrompt(prompt);
+          } else {
+            setSystemPrompt(defaultSystemPrompt);
+          }
+        })
+        .catch(() => {
           setSystemPrompt(defaultSystemPrompt);
-        }
-      });
+        });
     } else {
       setSystemPrompt(defaultSystemPrompt);
     }
@@ -212,11 +167,7 @@ const AiTutor2Chat: React.FunctionComponent<AiTutor2ChatProps> = ({
       />
     </div>
   ) : (
-    <div
-      className={`${moduleStyles.loading} ${
-        startLoading ? moduleStyles.started : ''
-      }`}
-    >
+    <div className={moduleStyles.loading}>
       <Spinner />
     </div>
   );
