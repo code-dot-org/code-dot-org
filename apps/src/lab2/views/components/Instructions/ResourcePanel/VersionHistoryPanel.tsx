@@ -53,7 +53,6 @@ const VersionHistoryPanel: React.FunctionComponent<
     () => versionList?.find(v => v.isLatest)?.versionId || INITIAL_VERSION_ID,
     [versionList]
   );
-  const previousLevelId = useRef<number>(levelId);
   const [focusSelectedVersion, setFocusSelectedVersion] = useState(false);
   const previousListLoaded = useRef<boolean>(listLoaded);
 
@@ -105,17 +104,14 @@ const VersionHistoryPanel: React.FunctionComponent<
     [setSelectedVersion]
   );
 
-  // Load version list on first open or if the levelId changes.
+  // Load version list on first open, if the levelId changes, or if viewAsUserId changes.
   useEffect(() => {
-    const levelChanged = previousLevelId.current !== levelId;
-    if (levelChanged) {
-      // If we just changed levels, reset the version list so that we don't briefly show
-      // the previous level's versions.
-      setVersionList([]);
-    }
-    loadVersionList(levelChanged);
-    previousLevelId.current = levelId;
-  }, [loadVersionList, levelId]);
+    // Reset the version list so that we don't briefly show
+    // the previous level's/user's versions.
+    console.log('Resetting version list');
+    setVersionList([]);
+    loadVersionList(true);
+  }, [loadVersionList, levelId, viewAsUserId]);
 
   useEffect(() => {
     if (selectedVersion === '') {
@@ -312,6 +308,8 @@ const VersionHistoryPanel: React.FunctionComponent<
     );
   };
 
+  const showList = listLoaded && !listLoading && !listLoadError;
+
   return (
     <div className={moduleStyles.versionHistoryPanel}>
       {listLoading && (
@@ -333,7 +331,7 @@ const VersionHistoryPanel: React.FunctionComponent<
           />
         </div>
       )}
-      {!listLoading && (
+      {showList && (
         <>
           <div className={moduleStyles.list}>
             {versionList.map(version => (

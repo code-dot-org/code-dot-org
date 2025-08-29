@@ -6,6 +6,7 @@ import classNames from 'classnames';
 import React, {useEffect, useMemo, useState} from 'react';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
+import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {ProjectSources} from '@cdo/apps/lab2/types';
 import AiTutor2Chat from '@cdo/apps/lab2/views/components/AiTutor2Chat';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
@@ -92,6 +93,12 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const isUserTeacher = useAppSelector(state => state.currentUser.isTeacher);
   const [selectedVersion, setSelectedVersion] = useState<string>('');
+  const isViewingOldVersion = useAppSelector(
+    state => state.lab2Project.viewingOldVersion
+  );
+  const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
+  const isReadOnly = useAppSelector(isReadOnlyWorkspace);
+  const isWidgetView = instructionsProps.levelProperties.widgetView || false;
 
   const levelId = instructionsProps.levelProperties.id;
 
@@ -127,7 +134,14 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       tabMap[Tabs.AiTutor] = <AiTutor2Chat hiddenContext={aiTutor2Context} />;
     }
 
-    if (versionHistoryProps) {
+    // The version history tab is hidden in read only mode with two exceptions:
+    // if the user is viewing an old version of the project, or if this is a teacher viewing
+    // a student's project (in which case they can view old versions, but not restore them).
+    // We never show the version history tab in widget view, as widget view is always read-only
+    // and therefore can never have version history.
+    const versionHistoryHidden =
+      (isReadOnly && !isViewingOldVersion && !viewAsUserId) || isWidgetView;
+    if (versionHistoryProps && !versionHistoryHidden) {
       tabMap[Tabs.VersionHistory] = (
         <VersionHistoryPanel
           selectedVersion={selectedVersion}
@@ -148,6 +162,10 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     instructionsProps,
     isUserTeacher,
     aiTutor2Context,
+    isReadOnly,
+    isViewingOldVersion,
+    viewAsUserId,
+    isWidgetView,
     versionHistoryProps,
     showRubric,
     selectedVersion,
