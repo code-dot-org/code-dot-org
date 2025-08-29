@@ -17,7 +17,7 @@ class AichatOpenaiResponsesClientTest < AichatAiClientTest
     {
       'Accept'=>'*/*',
             'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
-            'Authorization'=>'Bearer',
+            'Authorization'=>/^Bearer(?: .*)?$/,
             'Content-Type'=>'application/json',
             'User-Agent'=>'Ruby'
     }

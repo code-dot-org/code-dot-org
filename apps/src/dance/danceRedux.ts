@@ -22,7 +22,7 @@ import {
 import {SongData, SongMetadata} from './types';
 
 export interface DanceState {
-  selectedSong: string;
+  selectedSong: string | undefined;
   songData: SongData;
   runIsStarting: boolean;
   currentAiModalBlockId: string | undefined;
@@ -36,10 +36,11 @@ export interface DanceState {
   /** If a load is in progress */
   isLoading: boolean;
   hasRun: boolean;
+  hasEdited: boolean;
 }
 
 const initialState: DanceState = {
-  selectedSong: 'macklemore90',
+  selectedSong: undefined,
   songData: {},
   runIsStarting: false,
   currentAiModalBlockId: undefined,
@@ -49,6 +50,7 @@ const initialState: DanceState = {
   currentSongMetadata: undefined,
   isLoading: false,
   hasRun: false,
+  hasEdited: false,
 };
 
 // THUNKS
@@ -220,6 +222,9 @@ const danceSlice = createSlice({
     setHasRun: (state, action: PayloadAction<boolean>) => {
       state.hasRun = action.payload;
     },
+    setHasEdited: (state, action: PayloadAction<boolean>) => {
+      state.hasEdited = action.payload;
+    },
   },
   extraReducers: builder => {
     builder.addCase(initSongs.pending, state => {
@@ -257,5 +262,6 @@ export const {
   closeAiModal,
   setIsRunning,
   setHasRun,
+  setHasEdited,
 } = danceSlice.actions;
 export const reducers = {dance: danceSlice.reducer};

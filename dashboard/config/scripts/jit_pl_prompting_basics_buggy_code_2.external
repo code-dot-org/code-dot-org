@@ -3,43 +3,50 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# What is Cybersecurity?
+# Oh no! It's a bug! 
 
 
-<img src="https://images.code.org/93be18287edae8d6630b3d2b9807bf9f-Screenshot 2025-05-19 at 3.34.15 PM.png" alt="computer icon" style="border-radius:10px; float: right; ; height: 150px; margin: 20px 20px 0px 10px; ">
+<img src="https://images.code.org/179ad2e997d54d12219e2dfcc8e2fdbf-image-1756402210978.png" alt="computer with a bug and magnifying glass icon" style="border-radius:10px; float: left; ; height: 90px; margin: 5px 10px 10px 0px; ">
 
-## Defining Cybersecurity
 
-#### Cybersecurity is the practice of protecting systems, networks, and data from digital attacks, unauthorized access, and other security threats.
+#### It’s completely normal to run into mistakes or bugs when coding — they’re part of the learning process! 
 
-#### In today’s digital world, cybersecurity is essential to safeguard sensitive information, prevent data breaches, and ensure privacy and safety online.
+#### With the use of AI, it’s important to get the helping relationship right to make sure our students are learning fundamental skills and not just having the AI doing all of the work. 
 
-<br>
+<div style="clear:both;"></div>
+
+<div style="background-color: #f3e5f5; padding: 10px; border-left: 5px solid #9c27b0; margin-bottom: 20px; font-size: 16px">
+      <strong>📖 Debugging</strong><br>
+      The process of finding and fixing mistakes, or “bugs,” in your code so it works the way you want.
+</div>
 
 ---
 
-## Why students should learn it
+#### Take a look at the buggy code below: 
 
-#### Learning cybersecurity empowers students to protect themselves and others in an increasingly connected and digital world. It builds critical thinking and problem-solving skills that are valuable in everyday life and across many careers. 
+<img src="https://images.code.org/2679a40eb94208f9031d7c3666d3ff47-image-1756403135006.png" 
+     alt="design process graph of the cycle" 
+     width="450px" 
+     style="display: block; margin-left: auto; margin-right: auto; border: 3pt solid #8C52BA; border-radius: 12px;">
 
-#### Through learning cybersecurity, students become more aware of how to keep their personal information safe and make informed decisions about technology use. 
+#### When this code runs, it doesn't work. Let's practice using AI to help debug!
 
-#### Cybersecurity knowledge also opens doors to high-demand careers in technology and security, and it helps students grow into responsible digital citizens who understand the impact of their actions online.
+## Debugging with AI
 
-<div style="display: flex; align-items: left; margin:20px 0px 30px 0px">
+#### Success with AI usually comes down to **prompting**. 
 
-<a href="https://forum.code.org/" target="_blank" rel="noopener noreferrer">
-<img src="https://images.code.org/7dbe63a051fbad4ef262d6ab710e2966-image-1731959037460.png" style="width: auto; height: 100px;"  alt="A browser with two text boxes, both including an avatar and lines of text."></a>
-
-<div style="background-color: #007786; border-radius: 20px 20px 20px 20px; color: #000000; width: 80%; margin-left: 5%; margin-right: 5%; padding: 10px 10px 5px 10px;">
-
-<p style="color: white; line-height: 1.5; margin-left: 10px; margin-right: 10px; font-size: 18px"><b>Post to the Code.org Forum - Not Available During Pilot</b></p>
-
-<p style="color: white; line-height: 1.2; margin-left: 10px; margin-right: 10px; font-size: 18px">Share your motivation for teaching cybersecurity! Click on the icon to the left to direct to our forum post.
-</p>
-
-
+<div style="background-color: #e3f2fd; padding: 10px; border-left: 5px solid #2196f3; margin-bottom: 20px; font-size: 16px">
+      <strong>📖 Prompting</strong><br>
+      The way we give instructions or questions to an AI so it knows what kind of help we’re looking for..
 </div>
-</div>
+
+#### Let’s compare two prompting strategies to correct this bug:
+
+### **”Fix my code”** vs. **“Explain why this code is not working”**
+
+#### Which strategy do you think will lead to more understanding? 
+
+
+## Let's find out! 
 
 MARKDOWN

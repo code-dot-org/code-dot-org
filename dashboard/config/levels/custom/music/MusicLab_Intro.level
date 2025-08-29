@@ -7,14 +7,69 @@
   "user_id": 18605,
   "properties": {
     "encrypted": "false",
-    "tts_long_instructions_override": "Welcome to Music Lab where you can use coding blocks to create music! \r\n\r\nAdd at least 2 sounds to the workspace. ",
     "offer_browser_tts": "false",
     "use_secondary_finish_button": "false",
     "submittable": "false",
     "disable_edit_run_for_submission": "false",
     "hide_share_and_remix": "false",
     "level_data": {
-      "library": "launch2024"
+      "library": "launch2024",
+      "toolbox": {
+        "blocks": {
+        }
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "next": {
+                "block": {
+                  "type": "play_sound_at_current_location_simple2",
+                  "id": "play_sound_at_current_location_simple2",
+                  "extraState": {
+                    "disableNextConnection": false
+                  },
+                  "fields": {
+                    "sound": "electro/drum_beat_cowbell"
+                  },
+                  "next": {
+                    "block": {
+                      "type": "play_sound_at_current_location_simple2",
+                      "id": "wHpHMi~tgA]=zW!r*lpr",
+                      "extraState": {
+                        "disableNextConnection": false
+                      },
+                      "fields": {
+                        "sound": "groove/synth_funk"
+                      },
+                      "next": {
+                        "block": {
+                          "type": "play_sound_at_current_location_simple2",
+                          "id": "17vlitm)R/H[m{S6Mj5N",
+                          "extraState": {
+                            "disableNextConnection": false
+                          },
+                          "fields": {
+                            "sound": "groove/funky_bass"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "packId": "benson_boone_beautiful_things"
     },
     "predict_settings": {
       "isPredictLevel": false
@@ -23,9 +78,24 @@
       "playerEnabled": false,
       "validationEnabled": false
     },
+    "long_instructions": "#Welcome to Music Lab. \r\n\r\nUse AI to help you get started coding music!\r\n\r\nDo This: \r\n- Click _____ to activate AI\r\n- Complete the prompt by choosing how many sounds you want to start with\r\n- Press Run to hear what AI created\r\n- Choose to Use the code, regenerate or give AI a new prompt",
+    "validations": [
+      {
+        "key": "MusicLab_Intro_4e0c1e64-bc57-4a6b-8cd9-9c68db876f21",
+        "message": "**Wow!** AI wrote this code for you!",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 2
+          }
+        ],
+        "callout": "play-sound-block"
+      }
+    ],
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-08-26 19:59:55 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-08-26 19:59:55 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-28 17:59:47 +0000\",\"changed\":[\"tts_long_instructions_override\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-28 18:04:18 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-28 21:44:22 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-28 21:45:12 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-28 21:46:45 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-28 21:47:37 +0000\",\"changed\":[\"predict_settings\",\"validations\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

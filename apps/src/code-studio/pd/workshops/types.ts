@@ -134,6 +134,10 @@ export type UserInfoForWorkshop = {
   } | null;
 };
 
+export type UserWorkshopEnrollment = {
+  code: string;
+};
+
 export const userInfoDataResponseToParams = (
   response: GetUserInfoForWorkshopResponse | null
 ): UserInfoForWorkshop | null => {

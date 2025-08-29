@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-08-14 15:23:59 UTC",
+    "serialized_at": "2025-08-28 18:16:49 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -10321,6 +10321,19 @@
       }
     },
     {
+      "name": "Activity Guide",
+      "url": "https://docs.google.com/document/d/1aJYcWupWohkRQhi2HG4jl1mMK5JprBW3-gc9dyy30xg/template/preview",
+      "key": "activity_guide",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://docs.google.com/document/d/1aJYcWupWohkRQhi2HG4jl1mMK5JprBW3-gc9dyy30xg/export/pdf",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "activity_guide"
+      }
+    },
+    {
       "name": "All Resources",
       "url": "/s/coursee-2024/resources",
       "key": "all_resources",
@@ -10839,6 +10852,12 @@
       "seeding_key": {
         "lesson.key": "Be A Super Digital Citizen",
         "resource.key": "be_a_super_digital_citizen_super_digital_citizen"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Career Journeys B",
+        "resource.key": "activity_guide"
       }
     },
     {

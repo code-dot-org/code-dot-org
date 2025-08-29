@@ -77,6 +77,8 @@ const InnerHTMLPreview = () => {
         // We don't need to update the parent, because they initiated this change.
       } else if (data.type === IframeMessageType.SET_ALLOW_SCRIPTS) {
         setAllowScripts(!!data.allow);
+      } else if (data.type === IframeMessageType.REFRESH) {
+        iframeRef.current?.contentWindow?.location.reload();
       }
     },
     [parentOrigin]

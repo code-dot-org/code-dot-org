@@ -6311,3 +6311,9 @@ en:
           description_student: ''
           description_teacher: ''
           version_title: ''
+        joi-sandbox:
+          title: Joi's Sandbox Course
+          description_short: "Hi! This course is a personal testing ground for experimenting with lesson structures, activity designs, and course flow. It serves as a space to practice building modules, writing descriptions, setting objectives, and organizing content into levels or units. The course is not intended for learners but as a sandbox environment to refine ideas, test features, and prototype instructional approaches before applying them in real courses. \n\nIf you see something that you want to use, feel free to copy, clone, or shoot me a Slack message to learn more!"
+          description_student: "Hi! This course is a personal testing ground for experimenting with lesson structures, activity designs, and course flow. It serves as a space to practice building modules, writing descriptions, setting objectives, and organizing content into levels or units. The course is not intended for learners but as a sandbox environment to refine ideas, test features, and prototype instructional approaches before applying them in real courses. \n\nIf you see something that you want to use, feel free to copy, clone, or shoot me a Slack message to learn more!"
+          description_teacher: "Hi! This course is a personal testing ground for experimenting with lesson structures, activity designs, and course flow. It serves as a space to practice building modules, writing descriptions, setting objectives, and organizing content into levels or units. The course is not intended for learners but as a sandbox environment to refine ideas, test features, and prototype instructional approaches before applying them in real courses. \n\nIf you see something that you want to use, feel free to copy, clone, or shoot me a Slack message to learn more!"
+          version_title: "'25-26"

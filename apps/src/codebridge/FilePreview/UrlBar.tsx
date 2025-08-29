@@ -15,6 +15,7 @@ interface UrlBarProps {
   canNavigateForward: boolean;
   onNavigateBack: () => void;
   onNavigateForward: () => void;
+  onRefresh: () => void;
 }
 
 export const UrlBar: React.FC<UrlBarProps> = ({
@@ -25,6 +26,7 @@ export const UrlBar: React.FC<UrlBarProps> = ({
   canNavigateForward,
   onNavigateBack,
   onNavigateForward,
+  onRefresh,
 }) => {
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter') {
@@ -79,7 +81,7 @@ export const UrlBar: React.FC<UrlBarProps> = ({
           )}
         >
           <Button
-            onClick={() => {}}
+            onClick={onRefresh}
             aria-label={weblab2I18n.refresh()}
             size="xs"
             type="tertiary"

@@ -31,7 +31,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-08-27 16:58:43 UTC",
+    "serialized_at": "2025-08-28 13:45:37 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -794,7 +794,7 @@
       "position": 1,
       "properties": {
         "duration": 5,
-        "name": "Warm UUp"
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "f54d6955-bd0d-481f-a1fe-1aaf432e7f0f",

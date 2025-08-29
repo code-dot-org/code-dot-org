@@ -31,6 +31,7 @@ class Dancelab < GamelabJr
     song_selection
     uses_lab2
     uses_preview
+    exemplar_sources
   )
 
   def self.skins

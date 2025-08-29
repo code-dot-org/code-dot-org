@@ -1,5 +1,6 @@
 <Dancelab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 63,
   "created_at": "2025-08-26T19:58:20.000Z",
   "level_num": "custom",
@@ -14,9 +15,32 @@
     ],
     "hide_animation_mode": true,
     "show_type_hints": true,
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted": "false",
+    "encrypted_examples": [
+
+    ],
+    "embed": "false",
+    "instructions_important": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "use_modal_function_editor": "false",
+    "disable_if_else_editing": "false",
+    "free_play": "false",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "validation_enabled": "false",
+    "uses_lab2": "true",
+    "hide_pause_button": "false",
+    "default_song": "introtoshamstep_47SOUL",
+    "long_instructions": "#Code the Choreography!\r\n\r\nUse AI to help you get started. \r\n\r\nDo This: \r\n- Click _ to activate AI \r\n- Complete the prompt\r\n- Choose the use the code, regenerate or give AI a new prompt"
   },
-  "published": true
+  "audit_log": "[{\"changed_at\":\"2025-08-28 21:07:50 +0000\",\"changed\":[\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-28 21:14:13 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Dancelab>

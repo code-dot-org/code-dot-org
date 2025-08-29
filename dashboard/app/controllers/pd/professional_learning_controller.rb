@@ -58,8 +58,11 @@ class Pd::ProfessionalLearningController < ApplicationController
   # GET professional-learning/workshops/:workshop_id
   def workshop_marketing_page
     view_options(full_width: true, responsive_content: true, no_padding_container: true)
+
     @workshop_info = Pd::Workshop.find(params[:workshop_id])&.summarize_for_marketing_page
     @user_info = current_user&.summarize_for_workshop
+    @user_enrollment = Pd::Enrollment.find_by(user: current_user, pd_workshop_id: params[:workshop_id])&.summarize_for_workshop
+
     render 'pd/professional_learning/workshops/index'
   end
 
