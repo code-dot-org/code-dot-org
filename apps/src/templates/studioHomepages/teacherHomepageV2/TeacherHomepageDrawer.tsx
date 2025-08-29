@@ -8,7 +8,6 @@ import {
 import Drawer from '@mui/material/Drawer';
 import React from 'react';
 
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 //import Foorm from '@cdo/apps/code-studio/pd/foorm/Foorm';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
@@ -47,8 +46,6 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
     React.useState(schoolInfoInterstitialOpenInitially);
   const [schoolInfoConfirmationOpen, setSchoolInfoConfirmationOpen] =
     React.useState(schoolInfoConfirmationOpenInitially);
-  const [AFEDrawerOpen, setAFEDrawerOpen] = React.useState(afeOpenInitially);
-  const [AFEParticipate, setAFEParticipate] = React.useState(false);
   const [showSchoolInfoUnknownError, setShowSchoolInfoUnknownError] =
     React.useState(false);
   const [success, setSuccess] = React.useState(false);
@@ -56,20 +53,6 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
   const [AFEParticipate, setAFEParticipate] = React.useState(false);
   const [NPSOpen, setNPSOpen] = React.useState(true);
   // const [NPSData, setNPSData] = React.useState(null);
-
-  const isOpen = React.useMemo<boolean>(
-    () =>
-      schoolInfoInterstitialOpen ||
-      schoolInfoConfirmationOpen ||
-      success ||
-      AFEDrawerOpen,
-    [
-      schoolInfoInterstitialOpen,
-      schoolInfoConfirmationOpen,
-      success,
-      AFEDrawerOpen,
-    ]
-  );
 
   const isOpen = React.useMemo<boolean>(
     () =>
@@ -98,55 +81,7 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
   const existingSchoolName =
     existingSchoolInfo?.school_name || i18n.schoolInfoDialogDescriptionNoName();
 
-  const existingSchoolName =
-    existingSchoolInfo?.school_name || i18n.schoolInfoDialogDescriptionNoName();
-
-  const headerText: () => string = () => {
-    if (schoolInfoInterstitialOpen) {
-      return i18n.censusHeading();
-    } else if (schoolInfoConfirmationOpen) {
-      return i18n.reviewSchoolInfo();
-    } else if (success) {
-      return i18n.thankYouForUpdatingYourSchool();
-    } else if (AFEDrawerOpen) {
-      return i18n.afeDrawerHeader();
-    }
-  };
-
-  const bodyText: () => string = () => {
-    if (schoolInfoInterstitialOpen) {
-      return i18n.schoolInfoInterstitialTitle();
-    } else if (schoolInfoConfirmationOpen) {
-      return `${i18n.schoolInfoDialogDescription()}${i18n.schoolInfoDialogDescriptionSchoolName(
-        {schoolName: existingSchoolName}
-      )}`;
-    } else if (success) {
-      return i18n.schoolInfoDrawerSuccess();
-    } else if (AFEDrawerOpen) {
-      return i18n.afeBannerParagraph();
-    }
-  };
-
-  const interactiveContent: () => React.ReactNode = () => {
-    if (schoolInfoInterstitialOpen) {
-      return (
-        <div className={styles.drawerContent}>
-          {showSchoolInfoUnknownError && (
-            <Alert
-              type={'danger'}
-              size={'s'}
-              text={i18n.schoolInfoInterstitialUnknownError()}
-            />
-          )}
-          <SchoolDataInputs {...schoolInfo} includeHeaders={false} />
-        </div>
-      );
-    } else if (schoolInfoConfirmationOpen || success || AFEDrawerOpen) {
-      return null;
-    }
-  };
-
-  const primaryButton: () => React.ReactNode = () => {
+  React.useEffect(() => {
     if (NPSOpen) {
       HttpClient.fetchJson('/form/nps_survey/configuration').then(result => {
         if (result) {
