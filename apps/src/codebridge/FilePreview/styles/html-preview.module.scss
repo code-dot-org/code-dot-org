@@ -12,7 +12,10 @@
 .previewWrapper {
   position: relative;
   flex: 1;
-  
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid var(--borders-neutral-strong);
+  background-color: var(--background-neutral-tertiary);
   &:focus {
     @include mixins.focus-styles;
     outline-offset: 0;
@@ -25,10 +28,8 @@
 }
 
 .previewIframe{
-  border: none;
+  border: 1px solid var(--borders-neutral-primary);
   width: 100%;
   height: 100%;
-  background-color: white;
-  padding: 5px;
   box-sizing: border-box;
 }
