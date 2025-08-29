@@ -32,6 +32,7 @@ interface TeacherHomepageDrawerProps {
   schoolInfoInterstitialOpenInitially: boolean;
   schoolInfoConfirmationOpenInitially: boolean;
   afeOpenInitially: boolean;
+  npsOpenInitially: boolean;
   onCloseCallback: () => void;
 }
 
@@ -40,6 +41,7 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
   schoolInfoInterstitialOpenInitially,
   schoolInfoConfirmationOpenInitially,
   afeOpenInitially,
+  npsOpenInitially,
   onCloseCallback,
 }) => {
   const [schoolInfoInterstitialOpen, setSchoolInfoInterstitialOpen] =
@@ -51,7 +53,7 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
   const [success, setSuccess] = React.useState(false);
   const [AFEDrawerOpen, setAFEDrawerOpen] = React.useState(afeOpenInitially);
   const [AFEParticipate, setAFEParticipate] = React.useState(false);
-  const [NPSOpen, setNPSOpen] = React.useState(true);
+  const [NPSOpen, setNPSOpen] = React.useState(npsOpenInitially);
   // const [NPSData, setNPSData] = React.useState(null);
 
   const isOpen = React.useMemo<boolean>(
@@ -83,14 +85,14 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
 
   React.useEffect(() => {
     if (NPSOpen) {
-      HttpClient.fetchJson('/form/nps_survey/configuration').then(result => {
+      HttpClient.get('/form/nps_survey/configuration').then(result => {
         if (result) {
-          console.log(result.value);
+          console.log();
           //setNPSData(result.value);
         }
       });
     }
-    setNPSOpen(false); //TODO: Remove this
+    setNPSOpen(false); //TODO: remove
   }, [NPSOpen]);
 
   const headerText: () => string = () => {

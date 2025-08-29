@@ -101,6 +101,7 @@ describe('TeacherHomepageDrawer', () => {
     showInterstitial: boolean,
     showConfirmation: boolean,
     showAFE: boolean,
+    showNPS: boolean,
     existingSchoolInfo: SchoolInfo
   ) {
     const store = getStore();
@@ -113,6 +114,7 @@ describe('TeacherHomepageDrawer', () => {
           schoolInfoConfirmationOpenInitially={showConfirmation}
           schoolInfoInterstitialOpenInitially={showInterstitial}
           afeOpenInitially={showAFE}
+          npsOpenInitially={showNPS}
           onCloseCallback={() => {}}
         />
       </Provider>
@@ -121,7 +123,7 @@ describe('TeacherHomepageDrawer', () => {
 
   it('renders the correct title, subtitle, and school data inputs when showSchoolInfoInterstitial is true', async () => {
     schoolInfoSpy.mockReturnValue(mockSchoolInfo);
-    renderComponent(true, false, false, schoolInfo);
+    renderComponent(true, false, false, false, schoolInfo);
     await act(async () => await new Promise(process.nextTick));
     screen.getByText(i18n.censusHeading());
     screen.getByText(i18n.schoolInfoInterstitialTitle());
@@ -130,7 +132,7 @@ describe('TeacherHomepageDrawer', () => {
 
   it('sends analytics event when the secondary button is clicked', async () => {
     schoolInfoSpy.mockReturnValue(mockSchoolInfo);
-    renderComponent(true, false, false, schoolInfo);
+    renderComponent(true, false, false, false, schoolInfo);
     await act(async () => await new Promise(process.nextTick));
     const secondaryButton = screen.getByText(i18n.dismiss());
     await act(async () => await fireEvent.click(secondaryButton));
@@ -139,7 +141,7 @@ describe('TeacherHomepageDrawer', () => {
 
   it('sends analytics event and calls updateSchoolInfo when the school data entry submit button is clicked', async () => {
     schoolInfoSpy.mockReturnValue(mockSchoolInfo);
-    renderComponent(true, false, false, schoolInfo);
+    renderComponent(true, false, false, false, schoolInfo);
     await act(async () => await new Promise(process.nextTick));
     const primaryButton = screen.getByText(i18n.save());
     await act(async () => await fireEvent.click(primaryButton));
@@ -149,7 +151,7 @@ describe('TeacherHomepageDrawer', () => {
 
   it('displays success message after school data entry submit button is clicked', async () => {
     schoolInfoSpy.mockReturnValue(mockSchoolInfo);
-    renderComponent(true, false, false, schoolInfo);
+    renderComponent(true, false, false, false, schoolInfo);
     await act(async () => await new Promise(process.nextTick));
     const primaryButton = screen.getByText(i18n.save());
     await act(async () => await fireEvent.click(primaryButton));
@@ -160,7 +162,7 @@ describe('TeacherHomepageDrawer', () => {
   it('renders the correct title and subtitle when showSchoolInfoConfirmation is true', async () => {
     schoolInfoSpy.mockReturnValue(mockSchoolInfo);
     const schoolName = 'School One';
-    renderComponent(false, true, false, schoolInfo);
+    renderComponent(false, true, false, false, schoolInfo);
     await act(async () => await new Promise(process.nextTick));
     screen.getByText(i18n.reviewSchoolInfo());
     screen.getByText(
@@ -177,7 +179,7 @@ describe('TeacherHomepageDrawer', () => {
   it('displays a custom school name on the confirmation first page when the teacher has entered one', async () => {
     schoolInfoSpy.mockReturnValue(mockSchoolInfoCustomSchool);
     const schoolName = 'Test School';
-    renderComponent(false, true, false, customSchoolInfo);
+    renderComponent(false, true, false, false, customSchoolInfo);
     await act(async () => await new Promise(process.nextTick));
     screen.getByText(i18n.reviewSchoolInfo());
     screen.getByText(
@@ -193,7 +195,7 @@ describe('TeacherHomepageDrawer', () => {
 
   it('sends analytics event and displays the school data inputs after clicking the primary button when showSchoolInfoConfirmation is true', async () => {
     schoolInfoSpy.mockReturnValue(mockSchoolInfo);
-    renderComponent(false, true, false, schoolInfo);
+    renderComponent(false, true, false, false, schoolInfo);
     await act(async () => await new Promise(process.nextTick));
     const primaryButton = screen.getByText(i18n.imAtaNewSchool());
     await act(async () => await fireEvent.click(primaryButton));
@@ -203,7 +205,7 @@ describe('TeacherHomepageDrawer', () => {
 
   it('renders the correct title and subtitle when AFEDrawerOpen is true', async () => {
     schoolInfoSpy.mockReturnValue(mockSchoolInfo);
-    renderComponent(false, false, true, schoolInfo);
+    renderComponent(false, false, true, false, schoolInfo);
     await act(async () => await new Promise(process.nextTick));
     screen.getByText(i18n.afeDrawerHeader());
     screen.getByText(i18n.afeBannerParagraph());
@@ -211,7 +213,7 @@ describe('TeacherHomepageDrawer', () => {
 
   it('sends analytics event and posts to database when primary button is clicked and AFEDrawerOpen is true', async () => {
     schoolInfoSpy.mockReturnValue(mockSchoolInfo);
-    renderComponent(false, false, true, schoolInfo);
+    renderComponent(false, false, true, false, schoolInfo);
     await act(async () => await new Promise(process.nextTick));
     const primaryButton = screen.getByText(i18n.learnMore());
     await act(async () => await fireEvent.click(primaryButton));
