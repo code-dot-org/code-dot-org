@@ -22,8 +22,7 @@ import {aiTutorModelId} from '../../ai/ai-tutor-model-id';
 import moduleStyles from './AiTutor2Chat.module.scss';
 
 export const fetchCustomPrompt = async (promptName: string) => {
-  // TODO: Change to use dedicated S3 bucket.
-  const url = `https://curriculum.code.org/media/musiclab/prompts/${promptName}.md`;
+  const url = `https://curriculum.code.org/media/prompt-library/${promptName}.md`;
   const response = await HttpClient.get(url);
   return await response.text();
 };
