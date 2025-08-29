@@ -3,17 +3,9 @@ import React from 'react';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 import Notification from './Notification';
+import {AiDiffNotification} from './types';
 
 import styles from './notifications.module.scss';
-
-export interface AiDiffNotification {
-  id: string;
-  title: string;
-  description: string;
-  readAt: Date | null;
-  iconName: string;
-  publishedAt: Date;
-}
 
 const AiDiffNotificationList: React.FC = () => {
   const [loading, setLoading] = React.useState<boolean>(true);
@@ -36,6 +28,27 @@ const AiDiffNotificationList: React.FC = () => {
         console.error('Error fetching notifications:', error);
       });
   }, []);
+
+  React.useEffect(() => {
+    const unreadNotifications = notifications.filter(n => n.readAt === null);
+    if (unreadNotifications.length > 0) {
+      const unreadIds = unreadNotifications.map(n => n.externalId);
+      const payload = {external_notification_ids: unreadIds};
+
+      // We don't mark the notifications locally as read so that we still get the `unread`
+      // UI state until the user refreshes.
+      HttpClient.post(
+        '/notifications/mark_as_read',
+        JSON.stringify(payload),
+        true,
+        {
+          'Content-Type': 'application/json; charset=UTF-8',
+        }
+      ).catch(error => {
+        console.error('Error marking notifications as read:', error);
+      });
+    }
+  }, [notifications]);
 
   if (!loading && (!notifications || notifications.length === 0)) {
     // TODO(lfm): add empty state design

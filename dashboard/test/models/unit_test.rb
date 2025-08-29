@@ -941,6 +941,8 @@ class UnitTest < ActiveSupport::TestCase
 
   test 'should generate a shorter summary for header' do
     unit = create(:script, :in_single_unit_course, name: 'single-lesson-script')
+    unit_group_unit = UnitGroupUnit.where(script: unit).last
+    unit_group = unit_group_unit.unit_group
     lesson_group = create(:lesson_group, key: 'key1', script: unit)
     lesson = create(:lesson, script: unit, name: 'lesson 1', lesson_group: lesson_group)
     create(:script_level, script: unit, lesson: lesson)
@@ -953,10 +955,11 @@ class UnitTest < ActiveSupport::TestCase
       age_13_required: false,
       show_sign_in_callout: false,
       hasUnnumberedLessons: false,
-      course_name: nil,
-      unit_position: nil,
+      course_name: unit_group.name,
+      course_id: unit_group.id,
+      unit_position: unit_group_unit.position,
     }
-    assert_equal expected, unit.summarize_header
+    assert_equal expected, unit.summarize_header(unit_group_unit: unit_group_unit)
   end
 
   test 'should exclude lessons if include_lessons is false' do

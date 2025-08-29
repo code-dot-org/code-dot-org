@@ -4,6 +4,7 @@ class UserScriptTest < ActiveSupport::TestCase
   self.use_transactional_test_case = true
   setup_all do
     @script = create(:script, :in_single_unit_course)
+    @unit_group = create(:unit_group, :with_unit, unit: @script)
     @lesson_group = create(:lesson_group, script: @script)
     @lesson = create(:lesson, script: @script, lesson_group: @lesson_group)
     @script_levels = 1.upto(10).map do
@@ -16,13 +17,13 @@ class UserScriptTest < ActiveSupport::TestCase
     @user_script = create(:user_script, user: @user, script: @script)
   end
 
-  def complete_level(script_level, result = 100)
-    User.track_level_progress(user_id: @user.id, script_id: script_level.script.id, new_result: result, submitted: false, level_source_id: nil, level_id: script_level.oldest_active_level.id)
+  def complete_level(script_level, unit_group, result = 100)
+    User.track_level_progress(user_id: @user.id, script_id: script_level.script.id, new_result: result, submitted: false, level_source_id: nil, level_id: script_level.oldest_active_level.id, unit_group: unit_group)
   end
 
   def complete_all_levels
     @script_levels.each do |script_level|
-      complete_level(script_level)
+      complete_level(script_level, @unit_group)
     end
   end
 
@@ -41,12 +42,12 @@ class UserScriptTest < ActiveSupport::TestCase
   test "check completed for script with all levels completed but some not passed" do
     # complete some levels
     @script_levels[0...8].each do |script_level|
-      complete_level(script_level)
+      complete_level(script_level, @unit_group)
     end
 
     # attempt some levels
     @script_levels[8..].each do |script_level|
-      complete_level(script_level, 10)
+      complete_level(script_level, @unit_group, 10)
     end
 
     refute @user_script.check_completed?

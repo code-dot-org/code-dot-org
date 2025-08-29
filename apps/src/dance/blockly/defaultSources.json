@@ -3,7 +3,8 @@
     "blocks": {
       "blocks": [
         {
-          "type": "Dancelab_whenSetup",
+          "id": "when-run-block",
+          "type": "when_run",
           "deletable": false,
           "movable": false
         }

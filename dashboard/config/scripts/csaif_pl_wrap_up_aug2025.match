@@ -1,0 +1,18 @@
+name 'csaif_pl_wrap-up_aug2025'
+title 'Check for Understanding'
+description 'Match the vocabulary term with the definition. It is okay if you are not sure about some of the answers! Do your best and review any incorrect answers on the next level.'
+height'125'
+question 'Access Control'
+question 'Phishing'
+question 'Decryption'
+question 'Asymmetric encryption'
+question 'CIA Triad'
+question 'Vulnerability'
+answer 'rules a system uses to decide what you are allowed to do once you are logged in'
+answer 'when someone pretends to be a trusted person or company in order to steal your personal information, like passwords or credit card numbers'
+answer 'the process of using a key to turn encrypted data back into its original form'
+answer 'encryption that uses two different keys: a public key to lock the message and a private key to unlock it'
+answer 'a set of core rules for protecting information and stands for Confidentiality, Integrity, and Availability'
+answer 'a weakness in a system that could be exploited by an attacker'
+
+allow_multiple_attempts true
