@@ -1,16 +1,15 @@
 import {Box, Stack} from '@mui/material';
-import React from 'react';
+import React, {FC} from 'react';
 import {useSelector} from 'react-redux';
 
 import {WorkshopAdmin} from '../../permission';
 import {useWorkshopContext} from '../WorkshopLayout';
 
-import {TakeAttendanceSection} from './sections/TakeAttendanceSection';
 import {WorkshopInformationSection} from './sections/WorkshopInformationSection';
 import {WorkshopLinksSection} from './sections/WorkshopLinksSection';
 import {WorkshopStatusSection} from './sections/WorkshopStatusSection';
 
-export const WorkshopOverview: React.FC = () => {
+export const WorkshopOverview: FC = () => {
   const permission = useSelector(
     (state: {
       workshopDashboard: {permission: {has: (permission: string) => boolean}};
@@ -37,7 +36,6 @@ export const WorkshopOverview: React.FC = () => {
           isWorkshopAdmin={isWorkshopAdmin}
           onWorkshopUpdate={refetchWorkshop}
         />
-        <TakeAttendanceSection workshop={workshop} />
       </Stack>
     </Box>
   );
