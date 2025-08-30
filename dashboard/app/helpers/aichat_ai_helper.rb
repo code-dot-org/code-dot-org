@@ -78,10 +78,72 @@ module AichatAiHelper
                      2
                    end
 
+    #         {
+    #   "$schema": "http://json-schema.org/draft-07/schema#",
+    #   "type": "array",
+    #   "items": {
+    #     "type": "object",
+    #     "properties": {
+    #       "type": {
+    #         "type": "string",
+    #         "description": ""
+    #       },
+    #       "content": {
+    #         "type": "string",
+    #         "description": ""
+    #       }
+    #     },
+    #     "description": "",
+    #     "required": [
+    #       "type",
+    #       "content"
+    #     ]
+    #   },
+    #   "description": ""
+    # }
+
+    #  json_schema = {
+    #   type: "object",
+    #   properties: {
+    #     classification: {
+    #       type: "string",
+    #       description: "Define whether the PDF contains a specific string or not.",
+    # //TODO ADD ENUM
+    #       enum: ["YES", "NO"]
+    #     }
+    #   },
+    #   required: ["classification"],
+    #//TODO ADD ME AS OPTIONAL false value (only nil or false)
+    #   additionalProperties: false
+    # }
+
+    json_schema = AichatAiClientTypes::JsonObjectSchema.new(
+      type: 'object',
+      properties: AichatAiClientTypes::JsonProperty.new(
+        code:
+          AichatAiClientTypes::JsonPropertySchema.new(
+            type: 'string',
+            description: 'The code to send to the user (optional).'
+          ),
+        text:
+          AichatAiClientTypes::JsonPropertySchema.new(
+            type: 'string',
+            description: 'The text to send to the user (required)'
+          )
+      ),
+      required: ['text']
+    )
+    response_validation = AichatAiClientTypes::JsonResponseConfigValidation.new(
+      type: 'jsonSchema',
+      schema: json_schema
+    )
+    response = AichatAiClientTypes::JsonResponseConfig.new(mimeType: 'application/json', validation: response_validation)
+
     config = AichatAiClientTypes::AiConfig.new(
       model: get_api_model(model_id),
       systemInstructions: system_instructions,
-      temperature: temperature
+      temperature: temperature,
+      response: response
     )
 
     request = format_message_parts(new_message, encrypted_channel_id, level_name)
@@ -119,7 +181,7 @@ module AichatAiHelper
     config, request, context = get_config_request_context(stored_messages, new_message, temperature, system_prompt, retrieval_contexts,  model_id, level_id, encrypted_channel_id, user_id, project_id)
 
     begin
-      response = client.get_response_text(config, request, context)
+      response = client.get_response(config, request, context)
     rescue Net::ReadTimeout
       raise OpenaiUserInputResponseTimeout.new("Timeout waiting for AI client to provide response to user input.")
     end

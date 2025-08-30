@@ -1,3 +1,6 @@
+#TODO - try to make optional args
+# :arg?: mightNotBeHere
+
 # This module defines and documents the `config`, `request`, and `context` data structures
 # that provide a unified model/provider agnostic (currently Gemini + OpenAI) API for our AI
 # backend.  This module uses a bespoke DSL (domain specific language) that I'm simply calling
@@ -68,26 +71,119 @@ module AichatAiClientTypes
     :parts, MessagePart[]
   )
 
+  # // type JsonPrimitiveType = 'string' | 'number' | 'boolean' | 'null';
+  JsonPrimitiveType = string("string") | string("number") | string("boolean") | string("null")
+
+  # // interface JsonPropertySchema {
+  # //   type: JsonPrimitiveType | 'object' | 'array';
+  # //   description?: string;
+  # //   // Does not include `$ref` to avoid recursion.
+  # // }
+  JsonPropertySchema = Interface(
+    :type, JsonPrimitiveType | string('object') | string('array'),
+    :description, Optional(string)
+  )
+
+  JsonProperty_ = ForwardRef()
+
+  # // interface JsonObjectSchema {
+  # //   type: 'object';
+  # //   properties: JsonProperty;
+  # //   required?: string[];
+  # //   description?: string;
+  # // }
+  JsonObjectSchema = Interface(
+    :type, string('object'),
+    :properties, JsonProperty_,
+    :required, Optional(string[]),
+    :description, Optional(string)
+  )
+
+  JsonArraySchema_ = ForwardRef()
+
+  # // interface JsonArraySchema {
+  # //   type: 'array';
+  # //   items: JsonPropertySchema | JsonArraySchema | JsonObjectSchema;
+  # //   description?: string;
+  # // }
+  JsonArraySchema = Interface(
+    ForwardRef(JsonArraySchema_),
+    :type, string('array'),
+    :items, JsonPropertySchema | JsonObjectSchema | JsonArraySchema_,
+    :description, Optional(string)
+  )
+
+  # // interface JsonProperty {
+  # //   [key: string]: JsonPropertySchema | JsonArraySchema | JsonObjectSchema;
+  # // }
+  JsonProperty = Interface(
+    ForwardRef(JsonProperty_),
+    key[string],  JsonPropertySchema | JsonArraySchema | JsonObjectSchema
+  )
+
+  # // interface JsonPrimitiveSchema {
+  # //   type: JsonPrimitiveType
+  # // }
+  JsonPrimitiveSchema = Interface(
+    :type, JsonPrimitiveType,
+    :description, Optional(string)
+  )
+
+  # // type JsonSchema =
+  # //   JsonPrimitiveSchema
+  # //   | JsonObjectSchema
+  # //   | JsonArraySchema;
+  JsonSchema = JsonPrimitiveSchema | JsonObjectSchema | JsonArraySchema
+
+  # Interface TextResponseConfig {
+  #   "mimeType": 'text/plain'
+  # }
+  TextResponseConfig = Interface(
+    :mimeType, string('text/plain')
+  )
+
+  # Interface JsonResponseConfigValidation
+  #   "type": 'jsonSchema',
+  #   "schema": JsonSchema
+  # }
+  JsonResponseConfigValidation = Interface(
+    :type, string('jsonSchema'),
+    :schema, JsonSchema
+  )
+
+  # Interface JsonResponseConfig {
+  #   "mimeType": 'application/json',
+  #   "validation": JsonResponseConfigValidation
+  # }
+  JsonResponseConfig = Interface(
+    :mimeType, string('application/json'),
+    :validation, JsonResponseConfigValidation
+  )
+
   # // Config object (required):
   # // Sets up which model to call, the temperature, and any system instructions
   # // to configure the model's response.
 
   # interface AiConfig {
-  #     // Actual model passed to 3rd party AI API (e.g. 'gpt-4o-mini-2024-07-18').
-  #     model: string;
+  #   // Actual model passed to 3rd party AI API (e.g. 'gpt-4o-mini-2024-07-18').
+  #   model: string;
 
-  #     // System instructions (made up of message parts).
-  #     // When coming from OpenAI's format, it should be noted that there is no need
-  #     // for the 'role' concept here since all request messages come from the user.
-  #     systemInstructions?: MessagePart[];
+  #   // System instructions (made up of message parts).
+  #   // When coming from OpenAI's format, it should be noted that there is no need
+  #   // for the 'role' concept here since all request messages come from the user.
+  #   systemInstructions?: MessagePart[];
 
-  #     // Actual temperature passed to 3rd party AI API (e.g. 1.6)
+  #   // Actual temperature passed to 3rd party AI API (e.g. 1.6)
   #     temperature: number;
+
+  #   // Configure the response. Optional, defaults to TextResponse.
+  #   response?: TextResponseConfig | JsonResponseConfig
   # }
   AiConfig = Interface(
     :model, string,
     :systemInstructions, Optional(MessagePart[]),
-    :temperature, number
+    :temperature, number,
+    :response,  Optional(TextResponseConfig | JsonResponseConfig)
   )
 
   # // Request array (required):

@@ -16,7 +16,7 @@ class AichatAiClient
   # Call the API (through methods overridden in derived class) and get response text to send back to user.
   # Accept a config hash, request array and optional context array.  These types are defined and documented
   # in `aichat_ai_client_types.rb``.
-  def get_response_text(config, request, context = [])
+  def get_response(config, request, context = [])
     # Assert the parameter types are correct, using RubyTypes.
     AichatRubyTypes.assert_value_is_type(config, AichatAiClientTypes::AiConfig)
     AichatRubyTypes.assert_value_is_type(request, AichatAiClientTypes::AiRequest)
@@ -53,10 +53,6 @@ class AichatAiClient
 
     response_text
   end
-
-  # TODO - implement structured output
-  # def get_structured_response_json(stored_messages, new_message, temperature, system_prompt, retrieval_contexts,  model_id, level_id, encrypted_channel_id, user_id, project_id)
-  # end
 
   attr_accessor :api_key, :model, :usage_reporter
 

@@ -75,8 +75,8 @@ class AichatOpenaiResponsesClientTest < AichatAiClientTest
     }
   end
 
-  describe '#def get_response_text (unit)' do
-    subject {stub_request_and_get_response_text(new_message, endpoint_url, request_body, request_headers, stubbed_response_body, internal_model_id, level)}
+  describe '#def get_response (unit)' do
+    subject {stub_request_and_get_response(new_message, endpoint_url, request_body, request_headers, stubbed_response_body, internal_model_id, level)}
 
     let(:input_with_level_system_prompt) do
       [
