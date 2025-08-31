@@ -92,9 +92,14 @@ $url-bar-content-height: calc($url-bar-height - $vertical-padding-offset);
 
 // Custom styles for segmented buttons in preview header
 .customSegmentedButtons {
+  height: $url-bar-height; // Match the input bar height
+  
   // Target all buttons within segmented buttons container
   :global(button) {
     background-color: var(--background-neutral-primary) !important;
+    border: 1px solid var(--borders-neutral-strong) !important;
+    height: $url-bar-height; // Match the input bar height including borders
+    box-sizing: border-box;
     
     &:hover {
       // Using secondary instead of tertiary because the preview header already uses background-neutral-tertiary color.
@@ -112,7 +117,10 @@ $url-bar-content-height: calc($url-bar-height - $vertical-padding-offset);
   
   // Override for selected buttons to keep their original styling
   :global(button[class*="selectedSegmentedButton"]) {
+    border: 1px solid transparent !important;
     background-color: var(--background-brand-teal-primary) !important;
+    height: $url-bar-height !important; // Match the input bar height including borders
+    box-sizing: border-box !important;
     
     &:hover {
       background-color: var(--background-brand-teal-primary) !important;
