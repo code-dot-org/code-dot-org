@@ -43,5 +43,9 @@
 }
 
 .mobilePreview{
-  width: 50%;
+  width: min(375px, 50vw); /* Standard mobile width, but responsive */
+  aspect-ratio: 9 / 16; /* Mobile aspect ratio */
+  height: auto; /* Let aspect-ratio control height */
+  max-height: calc(100vh - 120px); /* Account for header and some padding */
+  max-width: calc((100vh - 120px) * 9 / 16); /* Maintain aspect ratio when height-constrained */
 }
