@@ -14,7 +14,7 @@ $url-bar-content-height: calc($url-bar-height - $vertical-padding-offset);
   .urlBarContent {
     display: flex;
     flex: 1;
-    min-width: 0; // Allow URL bar to shrink and truncate
+    min-width: 0; // Allow URL bar to shrink
     border: 1px solid var(--borders-neutral-strong);
     border-radius: var(--border-radius-br-s, 4px);
     background-color: var(--background-neutral-primary);
