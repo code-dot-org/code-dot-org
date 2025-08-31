@@ -1,4 +1,5 @@
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
+import classNames from 'classnames';
 import React, {useEffect, useMemo, useRef, useState} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
@@ -271,11 +272,14 @@ export const HTMLPreview = () => {
             title="Web Preview"
             ref={iframeRef}
             id="preview"
-            className={
-              previewViewMode === PreviewViewMode.DESKTOP
-                ? moduleStyles.desktopPreviewIframe
-                : moduleStyles.mobilePreviewIframe
-            }
+            className={classNames(
+              moduleStyles.previewIframe,
+              moduleStyles[
+                previewViewMode === PreviewViewMode.DESKTOP
+                  ? 'desktopPreview'
+                  : 'mobilePreview'
+              ]
+            )}
             src={previewUrl}
           />
         </div>

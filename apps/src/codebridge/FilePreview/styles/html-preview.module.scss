@@ -20,7 +20,6 @@
   flex: 1;
   display: flex;
   justify-content: center;
-  border-top: 1px solid var(--borders-neutral-strong);
   background-color: var(--background-neutral-tertiary);
   &:focus {
     @include mixins.focus-styles;
@@ -33,16 +32,16 @@
   }
 }
 
-.desktopPreviewIframe{
-  border: 1px solid var(--borders-neutral-primary);
-  width: 100%;
+.previewIframe{
+  border: none;
   height: 100%;
   box-sizing: border-box;
 }
 
-.mobilePreviewIframe{
-  border: 1px solid var(--borders-neutral-primary);
+.desktopPreview{
+  width: 100%;
+}
+
+.mobilePreview{
   width: 50%;
-  height: 100%;
-  box-sizing: border-box;
 }

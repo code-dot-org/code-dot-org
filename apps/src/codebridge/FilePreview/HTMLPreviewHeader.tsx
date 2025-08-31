@@ -4,7 +4,7 @@ import SegmentedButtons, {
 } from '@code-dot-org/component-library/segmentedButtons';
 import TextField from '@code-dot-org/component-library/textField';
 import classNames from 'classnames';
-import React, {useState} from 'react';
+import React from 'react';
 
 import weblab2I18n from '@cdo/apps/weblab2/locale';
 
@@ -34,10 +34,9 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
   onNavigateBack,
   onNavigateForward,
   onRefresh,
+  previewViewMode,
+  setPreviewViewMode,
 }) => {
-  const [previewViewMode, setPreviewViewMode] = useState<PreviewViewMode>(
-    PreviewViewMode.DESKTOP
-  );
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter') {
       onSubmit(value);
