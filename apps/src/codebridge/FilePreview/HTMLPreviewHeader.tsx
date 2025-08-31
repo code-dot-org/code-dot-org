@@ -126,7 +126,10 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
           />
         </div>
       </div>
-      <SegmentedButtons {...previewViewModeButtonsProps} />
+      <SegmentedButtons
+        {...previewViewModeButtonsProps}
+        className={moduleStyles.customSegmentedButtons}
+      />
     </div>
   );
 };

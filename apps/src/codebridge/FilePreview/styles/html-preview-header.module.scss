@@ -84,8 +84,46 @@ $url-bar-content-height: calc($url-bar-height - $vertical-padding-offset);
       background-color: transparent;
 
       &:focus-visible {
-        outline-offset: 0; // update focus outline so that it fits within the URL bar
+        outline-offset: 0; // Update focus outline so that it fits within the URL bar
       }
+    }
+  }
+}
+
+// Custom styles for segmented buttons in preview header
+.customSegmentedButtons {
+  // Target all buttons within segmented buttons container
+  :global(button) {
+    background-color: var(--background-neutral-primary) !important;
+    
+    &:hover {
+      // Using secondary instead of tertiary because the preview header already uses background-neutral-tertiary color.
+      background-color: var(--background-neutral-secondary) !important;
+    }
+    
+    &:focus-visible {
+      background-color: var(--background-brand-teal-light) !important;
+    }
+    
+    &:active {
+      background-color: var(--background-neutral-tertiary) !important;
+    }
+  }
+  
+  // Override for selected buttons to keep their original styling
+  :global(button[class*="selectedSegmentedButton"]) {
+    background-color: var(--background-brand-teal-primary) !important;
+    
+    &:hover {
+      background-color: var(--background-brand-teal-primary) !important;
+    }
+    
+    &:focus-visible {
+      background-color: var(--background-brand-teal-light) !important;
+    }
+    
+    &:active {
+      background-color: var(--background-brand-teal-primary) !important;
     }
   }
 }
