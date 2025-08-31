@@ -9,6 +9,12 @@
   grid-template-rows: 40px 1fr;
 }
 
+.previewHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .previewWrapper {
   position: relative;
   flex: 1;
@@ -27,9 +33,16 @@
   }
 }
 
-.previewIframe{
+.desktopPreviewIframe{
   border: 1px solid var(--borders-neutral-primary);
   width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.mobilePreviewIframe{
+  border: 1px solid var(--borders-neutral-primary);
+  width: 50%;
   height: 100%;
   box-sizing: border-box;
 }

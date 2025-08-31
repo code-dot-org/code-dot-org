@@ -2,13 +2,13 @@ $url-bar-height: 24px;
 $vertical-padding-offset: 4px;
 $url-bar-content-height: calc($url-bar-height - $vertical-padding-offset);
 
-.urlBarContainer {
+.previewHeaderContainer {
   background-color: var(--background-neutral-tertiary);
   border-top: 1px solid var(--borders-neutral-primary);
   padding: 8px 12px;
   display: flex;
   align-items: center;
-  gap: 0;
+  gap: 8px;
   
   .urlBarContent {
     display: flex;

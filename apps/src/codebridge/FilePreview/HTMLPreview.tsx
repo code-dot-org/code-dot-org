@@ -7,9 +7,14 @@ import {isPredictResponseSubmitted} from '@cdo/apps/lab2/redux/predictLevelRedux
 import {LifecycleEvent} from '@cdo/apps/lab2/utils';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+// import weblab2I18n from '@cdo/apps/weblab2/locale';
 
-import {IframeMessageType, DEFAULT_START_HTML_FILE} from './constants';
-import {UrlBar} from './UrlBar';
+import {
+  IframeMessageType,
+  PreviewViewMode,
+  DEFAULT_START_HTML_FILE,
+} from './constants';
+import {HTMLPreviewHeader} from './HTMLPreviewHeader';
 
 import moduleStyles from './styles/html-preview.module.scss';
 
@@ -40,6 +45,9 @@ export const HTMLPreview = () => {
   const [inputValue, setInputValue] = useState<string>(DEFAULT_START_HTML_FILE);
   const [currentFile, setCurrentFile] = useState<string>(
     DEFAULT_START_HTML_FILE
+  );
+  const [previewViewMode, setPreviewViewMode] = useState<PreviewViewMode>(
+    PreviewViewMode.DESKTOP
   );
   const isPredictLevel = levelProperties?.predictSettings?.isPredictLevel;
   const hasSubmittedPredictResponse = useAppSelector(
@@ -234,7 +242,7 @@ export const HTMLPreview = () => {
       hideHeaders
     >
       <div className={moduleStyles.previewContainer}>
-        <UrlBar
+        <HTMLPreviewHeader
           value={inputValue}
           onChange={setInputValue}
           onSubmit={handleUrlSubmit}
@@ -243,6 +251,8 @@ export const HTMLPreview = () => {
           onNavigateBack={onNavigateBack}
           onNavigateForward={onNavigateForward}
           onRefresh={onRefresh}
+          previewViewMode={previewViewMode}
+          setPreviewViewMode={setPreviewViewMode}
         />
         {/* This iframe points to the environment-specific version of preview.codeprojects.org. That url will eventually
             route to InnerHTMLPreview. */}
@@ -261,7 +271,11 @@ export const HTMLPreview = () => {
             title="Web Preview"
             ref={iframeRef}
             id="preview"
-            className={moduleStyles.previewIframe}
+            className={
+              previewViewMode === PreviewViewMode.DESKTOP
+                ? moduleStyles.desktopPreviewIframe
+                : moduleStyles.mobilePreviewIframe
+            }
             src={previewUrl}
           />
         </div>

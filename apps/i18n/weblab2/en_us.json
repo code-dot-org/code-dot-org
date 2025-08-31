@@ -5,5 +5,7 @@
   "preview": "Preview",
   "refresh": "Refresh",
   "splitView": "Split View",
-  "workspace": "Workspace"
+  "workspace": "Workspace",
+  "desktop": "Desktop",
+  "mobile": "Mobile"
 }
