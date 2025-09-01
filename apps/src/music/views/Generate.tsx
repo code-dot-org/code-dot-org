@@ -1,15 +1,25 @@
 import {Button} from '@code-dot-org/component-library/button';
-import React, {useCallback, useState} from 'react';
+import React, {useCallback, useEffect, useMemo, useState} from 'react';
+import reactStringReplace from 'react-string-replace';
 
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {trySetLocalStorage} from '@cdo/apps/utils';
 
 import askAi from '../ai/generate/askAi';
 import {generateBlocklyJson} from '../ai/generate/generateBlocklyJson';
+import appConfig from '../appConfig';
 import MusicLibrary from '../player/MusicLibrary';
 import {setCodeToLoad, setAiGenerateState} from '../redux/musicRedux';
 
 import styles from './Generate.module.scss';
+
+const prefabTextTemplate =
+  'Please generate a fun song.  Around {length} measures in duration is good.  Got for a {mood} vibe.  Sequence it like a {sequence}.';
+const prefabTextOptions: {[key: string]: string[]} = {
+  length: ['20', '30', '40'],
+  mood: ['happy', 'sad', 'energetic', 'calm', 'upbeat', 'chill'],
+  sequence: ['verse-chorus-verse', 'A-B-A', 'A-B-A-C-A', 'A-A-B-A'],
+};
 
 interface GenerateProps {}
 
@@ -22,10 +32,11 @@ const Generate: React.FunctionComponent<GenerateProps> = () => {
 
   const library = MusicLibrary.getInstance();
 
+  const prefabText = appConfig.getValue('ai-generate-prefab') === 'true';
+
   const sounds = library
     ?.getFolderForFolderId(packId || 'indie')
-    ?.sounds //.filter(sound => sound.length === 2)
-    ?.map(sound => {
+    ?.sounds?.map(sound => {
       if (sound.type !== 'preview') {
         return `${sound.src} (${sound.length} measures)`;
       }
@@ -58,7 +69,63 @@ The valid sounds to use are: "${sounds}".  (The length of each sound is in paren
     'Please generate a fun song.  Between 18-20 measures is enough duration.  Use layering of sounds to make it exciting.'
   );
 
+  const [prefabOptions, setPrefabOptions] = useState<{[key: string]: string}>(
+    {}
+  );
+
+  useEffect(() => {
+    const initialOptions: {[key: string]: string} = {};
+    Object.keys(prefabTextOptions).forEach(key => {
+      initialOptions[key] = prefabTextOptions[key][0];
+    });
+    setPrefabOptions(initialOptions);
+  }, []);
+
+  const prefabHtml = useMemo(() => {
+    let output: React.ReactNode[] = [prefabTextTemplate];
+    Object.keys(prefabTextOptions).forEach(key => {
+      output = reactStringReplace(output, `{${key}}`, match => {
+        return (
+          <select
+            key={key}
+            id={key}
+            className={styles.select}
+            value={prefabOptions[key]}
+            onChange={event => {
+              setPrefabOptions({
+                ...prefabOptions,
+                [key]: event.target.value,
+              });
+            }}
+          >
+            {(
+              prefabTextOptions[
+                key as keyof typeof prefabTextOptions
+              ] as string[]
+            ).map((option: string) => (
+              <option key={option} value={option}>
+                {option}
+              </option>
+            ))}
+          </select>
+        );
+      });
+    });
+
+    return output;
+  }, [prefabOptions]);
+
+  const getFilledPrefabText = useCallback(() => {
+    let output = prefabTextTemplate;
+    Object.keys(prefabTextOptions).forEach(key => {
+      output = output.replace(`{${key}}`, prefabOptions[key]);
+    });
+    return output;
+  }, [prefabOptions]);
+
   const generateSong = useCallback(() => {
+    const useText = prefabText ? getFilledPrefabText() : text;
+
     console.log('starting ask');
     dispatch(setAiGenerateState('generating'));
     askAi(
@@ -66,7 +133,7 @@ The valid sounds to use are: "${sounds}".  (The length of each sound is in paren
   ${contextGenerateMusicPsuedocodeFromDescription}
 
   And here is the request:
-  ${text}`
+  ${useText}`
     ).then(result => {
       console.log(result[1].chatMessageText);
       const psuedocode = result[1].chatMessageText.replaceAll('```', '');
@@ -83,9 +150,11 @@ The valid sounds to use are: "${sounds}".  (The length of each sound is in paren
       );
     });
   }, [
+    prefabText,
+    getFilledPrefabText,
+    text,
     dispatch,
     contextGenerateMusicPsuedocodeFromDescription,
-    text,
     channelId,
     packId,
   ]);
@@ -99,13 +168,16 @@ The valid sounds to use are: "${sounds}".  (The length of each sound is in paren
       {aiGenerateState === 'none' && (
         <>
           <div className={styles.info}>Generate a song with AI.</div>
-          <textarea
-            id="generate-description"
-            onChange={evt => setText(evt.target.value)}
-            value={text}
-            rows={4}
-            className={styles.textArea}
-          />
+          {!prefabText && (
+            <textarea
+              id="generate-description"
+              onChange={evt => setText(evt.target.value)}
+              value={text}
+              rows={4}
+              className={styles.textArea}
+            />
+          )}
+          {prefabText && <div className={styles.textArea}>{prefabHtml}</div>}
         </>
       )}
 
