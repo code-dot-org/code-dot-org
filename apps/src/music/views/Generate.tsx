@@ -1,5 +1,4 @@
 import {Button} from '@code-dot-org/component-library/button';
-import Typography from '@code-dot-org/component-library/typography';
 import React, {useCallback, useState} from 'react';
 
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -97,22 +96,9 @@ The valid sounds to use are: "${sounds}".  (The length of each sound is in paren
 
   return (
     <div id="generate-panel" className={styles.generatePanel}>
-      {aiGenerateState === 'done' && (
-        <div className={styles.info}>
-          You can generate again by choosing a new song.
-        </div>
-      )}
-
-      {aiGenerateState !== 'done' && (
+      {aiGenerateState === 'none' && (
         <>
-          <Typography
-            semanticTag="h1"
-            visualAppearance="heading-lg"
-            className={styles.heading}
-          >
-            Generate a song with AI
-          </Typography>
-
+          <div className={styles.info}>Generate a song with AI.</div>
           <textarea
             id="generate-description"
             onChange={evt => setText(evt.target.value)}
@@ -120,20 +106,36 @@ The valid sounds to use are: "${sounds}".  (The length of each sound is in paren
             rows={4}
             className={styles.textArea}
           />
+        </>
+      )}
 
-          <div className={styles.footer}>
-            {aiGenerateState === 'generating' ? 'Generating a song...' : ''}
-            {aiGenerateState === 'none' && (
-              <Button
-                ariaLabel={'Generate song'}
-                text={'Generate song'}
-                type="primary"
-                color="purple"
-                size="s"
-                onClick={generateSong}
-              />
-            )}
+      {aiGenerateState === 'generating' ? 'Generating a song...' : ''}
+
+      {aiGenerateState === 'none' && (
+        <Button
+          ariaLabel={'Generate song'}
+          text={'Generate song'}
+          type="primary"
+          color="purple"
+          size="s"
+          onClick={generateSong}
+        />
+      )}
+
+      {aiGenerateState === 'done' && (
+        <>
+          <div className={styles.info}>
+            Here is the code that was generated.
           </div>
+
+          <Button
+            ariaLabel={'Generate again'}
+            text={'Generate again'}
+            type="primary"
+            color="purple"
+            size="s"
+            onClick={generateSong}
+          />
         </>
       )}
     </div>

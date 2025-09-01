@@ -1,5 +1,5 @@
 .generatePanel {
-  gap: 0;
+  gap: 20px;
   width: 40%;
   top: 60px;
   right: 80px;
@@ -15,7 +15,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
+  font-size: 16px;
 }
 
 .heading {
@@ -27,8 +27,8 @@
   line-height: 1.3;
   width: calc(70%);
   height: 40%;
-  margin: 20px;
   padding: 20px;
+  margin: 0;
   box-sizing: border-box;
   color: white;
   background-color: rgba(26 11 76 / 0.6);
@@ -36,13 +36,4 @@
   resize: vertical;
   border-radius: 10px;
   //border: solid 1px #48BCFC;
-}
-
-.footer {
-  height: 60px;
-  font-size: 16px;
-}
-
-.info {
-  font-size: 16px;
 }
