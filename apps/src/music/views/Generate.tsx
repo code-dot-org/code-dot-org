@@ -3,7 +3,6 @@ import React, {useCallback, useEffect, useMemo, useState} from 'react';
 import reactStringReplace from 'react-string-replace';
 
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {trySetLocalStorage} from '@cdo/apps/utils';
 
 import askAi from '../ai/generate/askAi';
 import {generateBlocklyJson} from '../ai/generate/generateBlocklyJson';
@@ -28,7 +27,6 @@ const Generate: React.FunctionComponent<GenerateProps> = () => {
 
   const packId = useAppSelector(state => state.music.packId);
   const aiGenerateState = useAppSelector(state => state.music.aiGenerateState);
-  const channelId = useAppSelector(state => state.lab.channel?.id);
 
   const library = MusicLibrary.getInstance();
 
@@ -142,12 +140,6 @@ The valid sounds to use are: "${sounds}".  (The length of each sound is in paren
       dispatch(setCodeToLoad(resultBlockly));
 
       dispatch(setAiGenerateState('done'));
-
-      // And save the psuedocode to session storage.
-      trySetLocalStorage(
-        'music-ai-generate',
-        JSON.stringify({channelId, packId, psuedocode})
-      );
     });
   }, [
     prefabText,
@@ -155,8 +147,6 @@ The valid sounds to use are: "${sounds}".  (The length of each sound is in paren
     text,
     dispatch,
     contextGenerateMusicPsuedocodeFromDescription,
-    channelId,
-    packId,
   ]);
 
   if (!packId) {

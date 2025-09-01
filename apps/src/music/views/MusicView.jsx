@@ -67,6 +67,7 @@ import {
   addPlaybackEvents,
   setCodeToLoad,
 } from '../redux/musicRedux';
+import {saveGeneratedSongMetadata} from '../utils/Generate';
 import {Key} from '../utils/Notes';
 import SoundUploader from '../utils/SoundUploader';
 
@@ -851,6 +852,16 @@ class UnconnectedMusicView extends React.Component {
     Lab2Registry.getInstance()
       .getProjectManager()
       ?.save(sourcesToSave, forceSave);
+
+    // If we are AI generating, then save metadata for Dance Party.
+    if (AppConfig.getValue('ai-generate') === 'true') {
+      saveGeneratedSongMetadata(
+        Lab2Registry.getInstance().getProjectManager().getChannelId(),
+        this.props.packId,
+        this.library.getBPM(),
+        this.props.playbackEvents
+      );
+    }
   };
 
   loadCode = code => {
