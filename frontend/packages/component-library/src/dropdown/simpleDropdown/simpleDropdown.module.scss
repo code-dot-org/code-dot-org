@@ -107,8 +107,8 @@
     }
   }
 
-  // Handle custom width prop - ensure inner elements fill container
-  // Applied when the container has the customWidth class
+  // When the container has the .customWidth class (typically set via the width prop),
+  // ensure inner elements fill the container
   &.customWidth {
     display: flex; // block-level flex so % widths work
     flex-direction: column; // preserve original stacking

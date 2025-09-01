@@ -138,14 +138,6 @@ const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
 
   const ariaProps = getAriaPropsFromProps(rest);
 
-  // Generate container styles for custom width
-  const containerStyle = useMemo(() => {
-    if (width) {
-      return {width};
-    }
-    return {};
-  }, [width]);
-
   useEffect(() => {
     document.addEventListener('mousedown', handleClickOutside);
     document.addEventListener('keydown', handleClickOutside);
@@ -203,7 +195,7 @@ const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
           [moduleStyles.hasError]: errorMessage,
           [moduleStyles.readOnly]: readOnly,
           [moduleStyles.styleAsFormField]: styleAsFormField,
-          [moduleStyles.fullWidth]: fullWidth && !width, // Only apply if no custom width
+          [moduleStyles.fullWidth]: fullWidth,
         },
         moduleStyles.dropdownContainer,
         moduleStyles[`dropdownContainer-${menuPlacement}-menuPlacement`],
@@ -211,7 +203,7 @@ const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
         moduleStyles[`dropdownContainer-${size}`],
         className,
       )}
-      style={containerStyle}
+      style={width ? {width} : {}}
       onKeyDown={onKeyDown}
       ref={dropdownRef}
       aria-describedby={ariaProps['aria-describedby']}

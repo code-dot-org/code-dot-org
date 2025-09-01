@@ -37,9 +37,6 @@
     }
   }
 
-  // Handle custom width prop - ensure text truncates properly
-  // This applies when width prop is set to a specific value
-
   .dropdownLabel {
     display: block;
   }
@@ -77,17 +74,16 @@
     }
 
     span {
+      /* Manually center dropdown button label */
+      margin-top: 2px;
+
+      /* Ensure text truncates when custom width is applied */
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
       flex: 1 1 auto; // Allow growing and shrinking, but maintain natural size
       min-width: 0; // Allow flex item to shrink below content size
       text-align: left; // Ensure text stays left-aligned
-    }
-
-    /* Push the chevron to the right when button is full width */
-    i:last-child {
-      margin-left: auto;
     }
   }
 
@@ -245,6 +241,7 @@
     align-items: flex-start;
     justify-content: space-between;
     padding: 0.25rem 0.25rem 0 0.25rem;
+    // Adds visual separation from the menu items above; keeps controls from touching the list
     margin-top: 0.25rem;
     border-radius: 0 0 0.25rem 0.25rem;
     border-top: 1px solid var(--borders-neutral-primary);

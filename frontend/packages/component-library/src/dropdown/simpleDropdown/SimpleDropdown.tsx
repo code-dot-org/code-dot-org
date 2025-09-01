@@ -97,9 +97,6 @@ const SimpleDropdown: React.FunctionComponent<SimpleDropdownProps> = ({
   width,
   ...rest
 }) => {
-  // Generate container styles for custom width
-  const containerStyle = width ? {width} : {};
-
   return (
     <label
       className={classNames(
@@ -108,11 +105,11 @@ const SimpleDropdown: React.FunctionComponent<SimpleDropdownProps> = ({
         moduleStyles[`dropdownContainer-${color}`],
         moduleStyles[`dropdownContainer-${dropdownTextThickness}`],
         styleAsFormField && moduleStyles.styleAsFormField,
-        fullWidth && !width && moduleStyles.fullWidth, // Only apply if no custom width
+        fullWidth && moduleStyles.fullWidth,
         width && moduleStyles.customWidth, // Add class when custom width is applied
         className,
       )}
-      style={containerStyle}
+      style={width ? {width} : {}}
       aria-describedby={rest['aria-describedby']}
     >
       {isLabelVisible && (
