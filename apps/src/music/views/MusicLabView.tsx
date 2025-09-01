@@ -9,6 +9,7 @@ import {
   TOOLBOX_BLOCKS,
   WARNING_BANNER_MESSAGES,
 } from '@cdo/apps/lab2/constants';
+import {useBlocklySettings} from '@cdo/apps/lab2/hooks/useBlocklySettings';
 import {ProgressManagerContext} from '@cdo/apps/lab2/progress/ProgressContainer';
 import {
   getAppOptionsEditBlocks,
@@ -299,6 +300,8 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
     AppConfig.getValue('player') === 'tonejs' &&
     AppConfig.getValue('advanced-controls-enabled') === 'true';
 
+  const settings = useBlocklySettings();
+
   if (isPlayView) {
     return <MusicPlayView setPlaying={setPlaying} />;
   }
@@ -364,6 +367,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
                 includeFooterSpacing={false}
                 levelProperties={levelProperties}
                 headerClassName={moduleStyles.headerWithBorder}
+                settings={settings}
               />
             ) : (
               <PanelContainer

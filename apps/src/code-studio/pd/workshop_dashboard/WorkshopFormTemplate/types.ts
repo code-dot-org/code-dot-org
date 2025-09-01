@@ -159,6 +159,41 @@ export interface WorkshopRequest
   organizer_id: number | null;
 }
 
+export interface Enrollment {
+  id: number;
+  first_name: string | null;
+  last_name: string | null;
+  email: string | null;
+  district_name: string | null;
+  school: string | null;
+  role: string | null;
+  user_id: number | null;
+  user_info: {
+    given_name: string | null;
+    family_name: string | null;
+    email: string;
+    school_name: string | null;
+    district_name: string | null;
+    role: string | null;
+  };
+  attended: boolean;
+  attendances: number;
+  enrolled_date: string;
+}
+
+export interface EnrollmentData {
+  id: number;
+  givenName: string;
+  familyName: string;
+  email: string;
+  schoolName: string;
+  districtName: string;
+  role: string;
+  userId: number | null;
+  attendances: number;
+  enrolledDate: string;
+}
+
 export interface CourseOffering {
   id: number;
   display_name: string;
@@ -290,3 +325,113 @@ export type WorkshopAction =
   | {type: 'REMOVE_COURSE_OFFERING'; payload: string}
   | {type: 'SET_COURSE_OFFERINGS'; payload: string[]}
   | {type: 'SET_WORKSHOP'; payload: WorkshopFormState};
+
+// Survey summary API response types
+export interface SurveySummary {
+  course: string;
+  name: string;
+  facilitators: Record<string, string>;
+  surveys: Record<string, SurveyTypeSummary>;
+}
+
+export interface SurveyTypeSummary {
+  total_responses: number;
+  categories: SurveyCategories;
+}
+
+export interface SurveyCategories {
+  implementation?: SurveyCategory;
+  engagement?: SurveyCategory;
+  logistics?: SurveyCategory;
+  other?: SurveyCategory;
+  facilitators?: Record<string, FacilitatorCategory>;
+}
+
+export interface SurveyCategory {
+  questions: SurveyQuestions;
+}
+
+export type SurveyQuestions = Record<string, SurveyQuestion>;
+
+export interface FacilitatorCategory {
+  name: string;
+  questions: SurveyQuestions;
+}
+
+type SurveyQuestionBase = {
+  question_name: string;
+  question_text: string;
+  question_short_text: string | null;
+  category: string | null;
+};
+
+type ResultsBase = {
+  total_responses: number;
+};
+
+export type SurveyQuestion =
+  | (SurveyQuestionBase & {
+      question_type: 'likert';
+      results: ResultsBase & LikertResults;
+    })
+  | (SurveyQuestionBase & {
+      question_type: 'promoter';
+      results: ResultsBase & PromoterResults;
+    })
+  | (SurveyQuestionBase & {
+      question_type: 'text';
+      results: ResultsBase & TextResults;
+    })
+  | (SurveyQuestionBase & {
+      question_type: 'singleSelect';
+      results: ResultsBase & SingleSelectResults;
+    })
+  | (SurveyQuestionBase & {
+      question_type: 'multiSelect';
+      results: MultiSelectResults;
+    });
+
+export const isQuestionType = <T extends SurveyQuestion['question_type']>(
+  question: SurveyQuestion | undefined,
+  type: T
+): question is Extract<SurveyQuestion, {question_type: T}> => {
+  return !!question && question.question_type === type;
+};
+
+export interface Breakdown {
+  count: number;
+  percentage: number;
+  label: string;
+  status?: string;
+}
+
+export interface LikertResults {
+  weighted_score: number;
+  agreement_count: number;
+  agreement_percentage: number;
+  breakdown: Record<
+    string,
+    Breakdown & {
+      weighted_value: number;
+    }
+  >;
+}
+
+export interface PromoterResults {
+  promoter_percentage: number;
+  breakdown: Record<string, Breakdown>;
+}
+
+export interface TextResults {
+  responses: string[];
+}
+
+export interface SingleSelectResults {
+  breakdown: Record<string, Breakdown>;
+  other_answers?: string[];
+}
+
+export interface MultiSelectResults {
+  breakdown: Record<string, Breakdown>;
+  total_respondents: number;
+}

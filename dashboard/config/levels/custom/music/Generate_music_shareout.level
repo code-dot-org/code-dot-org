@@ -1,0 +1,36 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-08-29T15:34:55.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "level_data": {
+      "library": "launch2024",
+      "toolbox": {
+        "blocks": {
+        }
+      },
+      "packId": "aloe_blacc_wake_me_up"
+    },
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
+    "long_instructions": "#Party time!\r\n\r\nUse AI to code your music. \r\n\r\nThen prompt AI to choreograph the dancers!\r\n\r\n\r\n---\r\n>**Music Prompt:** Make a song _______ (short, medium, long) featuring ____ (instruments). \r\n\r\n>**Dance Prompt:** Make a dance with _______ (#) dancers. \r\n>\r\n>They start by doing the ___________ (dance move) and then the _______(dance move). \r\n>\r\n> Temperature= ___ (high, medium, low)",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-08-29T15:34:55.357+00:00\",\"changed\":[\"cloned from \\\"Generate_music_3\\\"\"],\"cloned_from\":\"Generate_music_3\"},{\"changed_at\":\"2025-08-29 15:40:51 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-29 21:25:57 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

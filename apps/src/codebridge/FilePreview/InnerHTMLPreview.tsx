@@ -1,12 +1,11 @@
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import {createBlobUrlForFile, getFolderPath} from '@codebridge/utils';
-import React, {useCallback, useEffect, useMemo, useRef} from 'react';
+import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 
 import {IframeMessageType} from './constants';
 import {
-  setContentSecurityPolicy,
   updateLinksToHtmlFiles,
   updateLinksToNonHtmlFiles,
 } from './htmlParsingHelpers';
@@ -16,6 +15,7 @@ const NOT_FOUND_FILE = 'NOT_FOUND';
 
 const InnerHTMLPreview = () => {
   const iframeRef = useRef<HTMLIFrameElement | null>(null);
+  const isNavigatingToFileRef = useRef<boolean>(false);
   const [source, setSource] = React.useState<MultiFileSource | undefined>(
     undefined
   );
@@ -26,6 +26,9 @@ const InnerHTMLPreview = () => {
   const [currentFile, setCurrentFile] = React.useState<string | undefined>(
     undefined
   );
+  const [allowScripts, setAllowScripts] = useState(false);
+  const [fileToAddToNavigationHistory, setFileToAddToNavigationHistory] =
+    useState<string | undefined>(undefined);
 
   const parentOrigin = useMemo(() => {
     const regex = /preview\.([^.]+)\.codeprojects\.org/;
@@ -64,6 +67,7 @@ const InnerHTMLPreview = () => {
         } else {
           setSource(data.source);
         }
+        setFileToAddToNavigationHistory(undefined);
       } else if (data.type === IframeMessageType.CHANGE_FILE_HREF) {
         setCurrentFile(data.filePath);
         // Tell the parent that we are changing the file, as this came from a link click.
@@ -74,6 +78,13 @@ const InnerHTMLPreview = () => {
       } else if (data.type === IframeMessageType.CHANGE_FILE_URL_BAR) {
         setCurrentFile(data.fileName);
         // We don't need to update the parent, because they initiated this change.
+      } else if (data.type === IframeMessageType.NAVIGATE_TO_FILE) {
+        isNavigatingToFileRef.current = true;
+        setCurrentFile(data.fileName);
+      } else if (data.type === IframeMessageType.SET_ALLOW_SCRIPTS) {
+        setAllowScripts(!!data.allow);
+      } else if (data.type === IframeMessageType.REFRESH) {
+        iframeRef.current?.contentWindow?.location.reload();
       }
     },
     [parentOrigin]
@@ -109,16 +120,32 @@ const InnerHTMLPreview = () => {
       const newBlobUrl = filesToBlobs[currentFile];
       if (newBlobUrl) {
         setBlobUrl(newBlobUrl);
+        if (
+          currentFile !== fileToAddToNavigationHistory &&
+          !isNavigatingToFileRef.current
+        ) {
+          setFileToAddToNavigationHistory(currentFile);
+          window.parent.postMessage(
+            {
+              type: IframeMessageType.ADD_FILE_TO_NAVIGATION_HISTORY,
+              fileToAddToNavigationHistory: currentFile,
+            },
+            parentOrigin
+          );
+        }
       } else {
         console.error(`current file ${currentFile} not found in source files`);
         setBlobUrl(NOT_FOUND_FILE);
       }
     }
-  }, [currentFile, filesToBlobs]);
+    // Reset the isNavigatingToFileRef flag.
+    if (isNavigatingToFileRef.current) {
+      isNavigatingToFileRef.current = false;
+    }
+  }, [currentFile, fileToAddToNavigationHistory, filesToBlobs, parentOrigin]);
 
   // TODOs:
   // Support other file types (images, etc.): https://codedotorg.atlassian.net/browse/CT-1255
-  // Better regeneration logic: https://codedotorg.atlassian.net/browse/CT-1259
   useEffect(() => {
     if (source) {
       const files: Record<string, string> = {};
@@ -151,7 +178,6 @@ const InnerHTMLPreview = () => {
           source.folders
         );
 
-        setContentSecurityPolicy(doc);
         updateLinksToNonHtmlFiles(doc, files, fullFileName);
         updateLinksToHtmlFiles(doc, fullFileName);
         const updatedContents = doc.documentElement.outerHTML;
@@ -171,10 +197,11 @@ const InnerHTMLPreview = () => {
       return (
         <iframe
           ref={iframeRef}
-          sandbox="allow-scripts allow-same-origin"
+          sandbox={`${allowScripts ? 'allow-scripts ' : ''}allow-same-origin`}
           allow="self"
           title="Inner HTML Preview"
           id="inner-preview"
+          key={allowScripts ? 1 : 0} // This forces a re-render when allowScripts changes.
           src={blobUrl}
           className={moduleStyles.fileIframe}
         />
@@ -182,7 +209,7 @@ const InnerHTMLPreview = () => {
     } else {
       return <div>Loading...</div>;
     }
-  }, [blobUrl]);
+  }, [blobUrl, allowScripts]);
 
   return getPreview();
 };

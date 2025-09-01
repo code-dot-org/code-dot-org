@@ -34,6 +34,11 @@ class Pd::ProfessionalLearningController < ApplicationController
   def courses
     @self_paced_pl_course_offerings = CourseOffering.self_paced_course_offerings_for_catalog
     view_options(full_width: true, no_padding_container: true)
+
+    @page_title = "Computer Science and AI Self Paced Professional Development Courses"
+    @page_description = "Access free, self-paced professional development courses from Code.org for K–12 educators. Learn to teach computer science and AI anytime, anywhere—at your own pace."
+    @canonical_url = CDO.studio_url("/professional-learning/courses")
+
     render :self_paced_pl_catalog
   end
 
@@ -53,8 +58,11 @@ class Pd::ProfessionalLearningController < ApplicationController
   # GET professional-learning/workshops/:workshop_id
   def workshop_marketing_page
     view_options(full_width: true, responsive_content: true, no_padding_container: true)
+
     @workshop_info = Pd::Workshop.find(params[:workshop_id])&.summarize_for_marketing_page
     @user_info = current_user&.summarize_for_workshop
+    @user_enrollment = Pd::Enrollment.find_by(user: current_user, pd_workshop_id: params[:workshop_id])&.summarize_for_workshop
+
     render 'pd/professional_learning/workshops/index'
   end
 

@@ -787,6 +787,8 @@ const pathPatterns = [
   /^\/_next\/static\//, // Next.js static assets
   /^\/forms\//,         // /forms/*
   /^\/schools\//,       // /schools/*
+  /^\/applab\/docs\//,  // /applab/docs/*
+  /^\/educate\//,       // /educate/*
 ];
 
 const SUPPORTED_LOCALES = new Set([

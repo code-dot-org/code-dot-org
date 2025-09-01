@@ -42,7 +42,6 @@ export default class EnrollmentsPanel extends React.Component {
   };
 
   state = {
-    enrollmentActiveTab: 0,
     selectedEnrollments: [],
     enrollmentChangeDialogOpen: false,
     error: null,
@@ -135,10 +134,6 @@ export default class EnrollmentsPanel extends React.Component {
         return {selectedEnrollments};
       });
     }
-  };
-
-  handleEnrollmentActiveTabSelect = enrollmentActiveTab => {
-    this.setState({enrollmentActiveTab});
   };
 
   handleDeleteEnrollment = id => {
@@ -249,8 +244,6 @@ export default class EnrollmentsPanel extends React.Component {
               workshop['account_required_for_attendance?']
             }
             scholarshipWorkshop={workshop['scholarship_workshop?']}
-            activeTab={this.state.enrollmentActiveTab}
-            onTabSelect={this.handleEnrollmentActiveTabSelect}
             selectedEnrollments={this.state.selectedEnrollments}
           />
 

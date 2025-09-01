@@ -158,6 +158,11 @@ class RedirectsTest < ActionDispatch::IntegrationTest
   end
 
   test 'redirects weblab code studio share link to codeprojects' do
+    # This route is defined based on the value of `CDO.dashboard_hostname` at
+    # initialization time, so we must undo the stub that test_helper adds at
+    # runtime for this to resolve.
+    CDO.unstub(:override_dashboard)
+
     get "http://#{CDO.dashboard_hostname}/projects/weblab/abcdef"
     assert_redirected_to "http://#{CDO.codeprojects_hostname}/abcdef/"
   end
@@ -171,5 +176,23 @@ class RedirectsTest < ActionDispatch::IntegrationTest
     multi_unit_course = create(:unit_group, :with_units, name: 'multi-unit-course')
     get "/s/#{multi_unit_course.default_units.last.name}"
     assert_redirected_to "/courses/#{multi_unit_course.name}/units/#{multi_unit_course.default_unit_group_units.last.position}"
+  end
+
+  test 'redirect old courses that used unit family names' do
+    get '/s/csp1'
+    assert_redirected_to '/courses/csp-2019/units/1'
+    get '/s/csp1/lessons/1/levels/1'
+    assert_redirected_to '/courses/csp-2019/units/1/lessons/1/levels/1'
+
+    get '/s/csd1'
+    assert_redirected_to '/courses/csd-2019/units/1'
+    get '/s/csd1/lessons/1/levels/1'
+    assert_redirected_to '/courses/csd-2019/units/1/lessons/1/levels/1'
+
+    get '/s/csp5'
+    assert_redirected_to '/courses/csp-2019/units/6'
+
+    get '/s/csd11'
+    assert_response :not_found
   end
 end

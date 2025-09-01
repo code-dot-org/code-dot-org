@@ -225,16 +225,6 @@ class CourseVersionTest < ActiveSupport::TestCase
     assert_nil CourseVersion.find_by(course_offering: offering, key: '2050') # old CourseVersion should be deleted
   end
 
-  test "add_course_version does nothing for script without CourseVersion if is_course is false" do
-    offering = create(:course_offering)
-    script = create(:script, family_name: 'csz', version_year: '2050')
-    course_version = CourseVersion.add_course_version(offering, script)
-
-    assert_nil course_version
-    assert_nil script.course_version
-    assert_nil CourseVersion.find_by(course_offering: offering, key: '2050')
-  end
-
   test "cannot destroy course version if it has resources" do
     course_version = create(:course_version)
     create(:resource, course_version: course_version)

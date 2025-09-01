@@ -1017,7 +1017,6 @@ export const assignToSection = (
   return (dispatch, getState) => {
     const section = getState().teacherSections.sections[sectionId];
     // Only log if the assignment is changing.
-    // We need an OR here because unitId will be null for standalone units
     if (
       (courseOfferingId && section.courseOfferingId !== courseOfferingId) ||
       (courseVersionId && section.courseVersionId !== courseVersionId) ||
@@ -1151,6 +1150,16 @@ const importUrlByProvider: {[key: string]: string} = {
   [OAuthSectionTypes.clever]: '/dashboardapi/import_clever_classroom',
   [SectionLoginType.lti_v1]: '/lti/v1/sync_course',
 } as const;
+
+/**
+ * Start the process of importing a section from Google Classroom by opening
+ * the RosterDialog and loading the list of classrooms available for import.
+ */
+export const beginGoogleImportRosterFlow =
+  () => (dispatch: ThunkDispatch<RootState, undefined, AnyAction>) => {
+    dispatch(setRosterProvider(OAuthSectionTypes.google_classroom));
+    dispatch(beginImportRosterFlow());
+  };
 
 /**
  * Import the course with the given courseId from a third-party provider

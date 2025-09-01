@@ -27,7 +27,6 @@ export interface Section {
   hidden: boolean;
   id: number;
   isAssignedCSA?: boolean;
-  isAssignedStandaloneCourse: boolean;
   lessonExtras: boolean;
   loginType?: keyof typeof SectionLoginType;
   loginTypeName?: string;
@@ -92,7 +91,6 @@ export interface ServerSection {
   grades?: string[];
   hidden: boolean;
   id: number;
-  isAssignedStandaloneCourse: boolean;
   lesson_extras: boolean;
   login_type: string;
   name: string;

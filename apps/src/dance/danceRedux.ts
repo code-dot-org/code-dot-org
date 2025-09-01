@@ -22,19 +22,25 @@ import {
 import {SongData, SongMetadata} from './types';
 
 export interface DanceState {
-  selectedSong: string;
+  selectedSong: string | undefined;
   songData: SongData;
   runIsStarting: boolean;
   currentAiModalBlockId: string | undefined;
   aiOutput?: DanceAiModalOutputType;
   aiModalOpenedFromFlyout: boolean;
   // Fields below are used only by Lab2 Dance
+  /** If the program is currently running */
   isRunning: boolean;
+  /** Metadata for the currently selected song */
   currentSongMetadata: SongMetadata | undefined;
+  /** If a load is in progress */
+  isLoading: boolean;
+  hasRun: boolean;
+  hasEdited: boolean;
 }
 
 const initialState: DanceState = {
-  selectedSong: 'macklemore90',
+  selectedSong: undefined,
   songData: {},
   runIsStarting: false,
   currentAiModalBlockId: undefined,
@@ -42,6 +48,9 @@ const initialState: DanceState = {
   aiModalOpenedFromFlyout: false,
   isRunning: false,
   currentSongMetadata: undefined,
+  isLoading: false,
+  hasRun: false,
+  hasEdited: false,
 };
 
 // THUNKS
@@ -141,7 +150,9 @@ export const setSong = createAsyncThunk(
     }
 
     dispatch(setSelectedSong(songId));
-    unloadSong(lastSongId, songData);
+    if (lastSongId) {
+      unloadSong(lastSongId, songData);
+    }
 
     loadSong(songId, songData, async (status: number) => {
       if (status === 403) {
@@ -173,6 +184,43 @@ async function handleSongSelection(
   const metadata = await loadSongMetadata(songId);
   dispatch(setCurrentSongMetadata(metadata));
 }
+
+interface LoadSongsPayload {
+  useRestrictedSongs: boolean;
+  songSelection?: string[];
+}
+
+/** Loads the song manifest only. Used by Lab2 Dance. */
+export const loadSongs = createAsyncThunk(
+  'dance/loadSongs',
+  async ({useRestrictedSongs, songSelection}: LoadSongsPayload, thunkAPI) => {
+    // Check for a user-specified manifest file.
+    const userManifest = queryParams('manifest') as string;
+
+    // Build up a set from our song selection so we can filter our manifest later.
+    const filteredSongSet = new Set(songSelection || []);
+
+    const unfilteredSongManifest = await getSongManifest(
+      useRestrictedSongs,
+      userManifest
+    );
+
+    // TODO: Cache unfiltered song manifest so it persists across multiple levels for Lab2.
+    // a song should be included if we do NOT have a filtered song set
+    // OR if we do have a set and our song's id is in them.
+    let songManifest = unfilteredSongManifest.filter(
+      (song: {id: string}) =>
+        !filteredSongSet.size || filteredSongSet.has(song.id)
+    );
+    // Handle dev scenario where there's no overlap between
+    // levelbuilder-configured songs and the list of dev-only songs
+    if (!songManifest.length) {
+      songManifest = unfilteredSongManifest;
+    }
+    const songData = parseSongOptions(songManifest) as SongData;
+    thunkAPI.dispatch(setSongData(songData));
+  }
+);
 
 const danceSlice = createSlice({
   name: 'dance',
@@ -207,6 +255,39 @@ const danceSlice = createSlice({
       state.currentAiModalBlockId = undefined;
       state.aiModalOpenedFromFlyout = false;
     },
+    setIsRunning: (state, action: PayloadAction<boolean>) => {
+      state.isRunning = action.payload;
+    },
+    setHasRun: (state, action: PayloadAction<boolean>) => {
+      state.hasRun = action.payload;
+    },
+    setHasEdited: (state, action: PayloadAction<boolean>) => {
+      state.hasEdited = action.payload;
+    },
+  },
+  extraReducers: builder => {
+    builder.addCase(initSongs.pending, state => {
+      state.isLoading = true;
+    });
+    builder.addCase(initSongs.fulfilled, state => {
+      state.isLoading = false;
+    });
+    builder.addCase(initSongs.rejected, state => {
+      state.isLoading = false;
+      // TODO: Handle error. Should we bubble this up to Lab2 and show the
+      // error modal? Or should we handle internally and retry?
+    });
+    builder.addCase(setSong.pending, state => {
+      state.isLoading = true;
+    });
+    builder.addCase(setSong.fulfilled, state => {
+      state.isLoading = false;
+    });
+    builder.addCase(setSong.rejected, state => {
+      state.isLoading = false;
+      // TODO: Handle error. Should we bubble this up to Lab2 and show the
+      // error modal? Or should we handle internally and retry?
+    });
   },
 });
 
@@ -218,5 +299,8 @@ export const {
   setAiOutput,
   openAiModal,
   closeAiModal,
+  setIsRunning,
+  setHasRun,
+  setHasEdited,
 } = danceSlice.actions;
 export const reducers = {dance: danceSlice.reducer};

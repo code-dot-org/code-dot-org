@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2025_08_12_140655) do
+ActiveRecord::Schema.define(version: 2025_08_28_171244) do
 
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -534,14 +534,13 @@ ActiveRecord::Schema.define(version: 2025_08_12_140655) do
     t.string "key", null: false
     t.string "display_name", null: false
     t.text "properties"
-    t.string "content_root_type", null: false
     t.integer "content_root_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "course_offering_id"
     t.string "published_state", default: "in_development"
-    t.index ["content_root_type", "content_root_id"], name: "index_course_versions_on_content_root_type_and_content_root_id"
-    t.index ["course_offering_id", "key", "content_root_type"], name: "index_course_versions_on_offering_id_and_key_and_type", unique: true
+    t.index ["content_root_id"], name: "index_course_versions_on_content_root_id"
+    t.index ["course_offering_id", "key"], name: "index_course_versions_on_offering_id_and_key", unique: true
     t.index ["course_offering_id"], name: "index_course_versions_on_course_offering_id"
   end
 
@@ -662,6 +661,17 @@ ActiveRecord::Schema.define(version: 2025_08_12_140655) do
     t.index ["overflow_max_user_id"], name: "index_experiments_on_overflow_max_user_id"
     t.index ["section_id"], name: "index_experiments_on_section_id"
     t.index ["start_at"], name: "index_experiments_on_start_at"
+  end
+
+  create_table "external_notifications", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.string "external_id", null: false
+    t.datetime "read_at"
+    t.boolean "is_dismissed", default: false, null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id", "created_at"], name: "index_external_notifications_on_user_id_and_created_at"
+    t.index ["user_id", "read_at"], name: "index_external_notifications_on_user_id_and_read_at"
   end
 
   create_table "featured_projects", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
@@ -2297,6 +2307,14 @@ ActiveRecord::Schema.define(version: 2025_08_12_140655) do
     t.index ["user_level_id"], name: "index_teacher_scores_on_user_level_id"
   end
 
+  create_table "teaching_profile_data", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.json "individual_data"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_teaching_profile_data_on_user_id"
+  end
+
   create_table "unit_groups", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.string "name"
     t.text "properties"
@@ -2333,7 +2351,9 @@ ActiveRecord::Schema.define(version: 2025_08_12_140655) do
     t.datetime "anonymized_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.datetime "deletion_warning_email_sent_at"
     t.index ["anonymized_at"], name: "index_user_data_retention_statuses_on_anonymized_at"
+    t.index ["deletion_warning_email_sent_at"], name: "index_user_data_retention_statuses_on_warning_email_sent_at"
     t.index ["pii_scrubbed_at"], name: "index_user_data_retention_statuses_on_pii_scrubbed_at"
     t.index ["user_id"], name: "index_user_data_retention_statuses_on_user_id"
   end
@@ -2626,6 +2646,7 @@ ActiveRecord::Schema.define(version: 2025_08_12_140655) do
   add_foreign_key "cap_user_events", "users"
   add_foreign_key "census_submission_form_maps", "census_submissions"
   add_foreign_key "census_summaries", "schools"
+  add_foreign_key "external_notifications", "users"
   add_foreign_key "hint_view_requests", "users"
   add_foreign_key "learning_goal_ai_evaluations", "learning_goals"
   add_foreign_key "learning_goal_ai_evaluations", "rubric_ai_evaluations"
@@ -2671,6 +2692,7 @@ ActiveRecord::Schema.define(version: 2025_08_12_140655) do
   add_foreign_key "student_work_evaluation_summaries", "student_work_evaluations"
   add_foreign_key "student_work_evaluation_summaries", "student_work_evaluations", column: "student_work_evaluation_summary_id"
   add_foreign_key "survey_results", "users"
+  add_foreign_key "teaching_profile_data", "users"
   add_foreign_key "user_data_retention_statuses", "users"
   add_foreign_key "user_facilitator_infos", "users"
   add_foreign_key "user_geos", "users"

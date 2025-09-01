@@ -35,6 +35,7 @@ class Weblab2 < Level
     widget_view
     widget_view_allow_show_code
     disable_edit_run_for_submission
+    predict_settings
   )
 
   def self.create_from_level_builder(params, level_params)
@@ -48,6 +49,10 @@ class Weblab2 < Level
   end
 
   def uses_lab2?
+    true
+  end
+
+  def add_starter_asset!(_, _)
     true
   end
 end

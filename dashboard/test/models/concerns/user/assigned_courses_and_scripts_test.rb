@@ -619,7 +619,7 @@ class AssignedCoursesAndScripts < ActiveSupport::TestCase
       let(:lesson) {create(:lesson, script: pl_unit, lesson_group: lesson_group)}
 
       before do
-        create(:course_version, content_root: pl_unit)
+        create(:course_version, content_root: pl_unit.original_unit_group)
 
         3.times do
           sublevels << create(:level)
@@ -652,7 +652,7 @@ class AssignedCoursesAndScripts < ActiveSupport::TestCase
       let(:lesson) {create(:lesson, script: pl_unit, lesson_group: lesson_group)}
 
       before do
-        create(:course_version, content_root: pl_unit)
+        create(:course_version, content_root: pl_unit.original_unit_group)
 
         game_level.contained_level_names = ['free response level']
         game_level.save!

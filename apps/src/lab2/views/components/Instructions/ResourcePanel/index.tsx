@@ -1,8 +1,9 @@
+import {Button} from '@code-dot-org/component-library/button';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {kitIcons} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import classNames from 'classnames';
-import React, {useMemo, useState} from 'react';
+import React, {useEffect, useMemo, useState} from 'react';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import AiTutor2Chat from '@cdo/apps/lab2/views/components/AiTutor2Chat';
@@ -17,6 +18,10 @@ import ForTeachersOnly from '../ForTeachersOnly';
 import Instructions, {InstructionsProps} from '../InstructionsV2';
 import NavigationArea from '../NavigationArea';
 
+import CopyrightButton from './CopyrightButton';
+import ResourcePanelExtraLinks from './ResourcePanelExtraLinks';
+import SettingsPanel from './SettingsPanel';
+
 import styles from './styles.module.scss';
 
 enum Tabs {
@@ -26,11 +31,19 @@ enum Tabs {
   StudentRubric = 'studentRubric',
 }
 
+export interface Setting {
+  id: string;
+  label: string;
+  options: {value: string; text: string}[];
+  selectedValue: string | undefined;
+  onChange: (value: string) => void;
+}
+
 const tabInfo: {[key in Tabs]: {title: string; icon: string}} = {
   [Tabs.Instructions]: {title: commonI18n.instructions(), icon: 'info-circle'},
-  [Tabs.AiTutor]: {title: commonI18n.aiTutor(), icon: 'robot'},
+  [Tabs.AiTutor]: {title: commonI18n.aiTutor(), icon: 'ai-head-solid'},
   [Tabs.TeachersOnly]: {
-    title: commonI18n.forTeachersOnly(),
+    title: commonI18n.teachingTips(),
     icon: 'chalkboard-teacher',
   },
   [Tabs.StudentRubric]: {
@@ -45,6 +58,7 @@ type ResourcePanelProps = InstructionsProps & {
   aiTutor2Context?: string;
   rightHeaderContent?: React.ReactNode;
   includeFooterSpacing?: boolean;
+  settings?: Setting[];
 };
 
 /**
@@ -56,14 +70,16 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   aiTutor2Context,
   rightHeaderContent,
   includeFooterSpacing = true,
+  settings,
   ...instructionsProps
 }) => {
   const {theme} = useTheme();
   const {showRubric} = useRubric();
-  const isParticipant = useAppSelector(
-    state => state.currentUser.userType === 'student'
-  );
   const [currentTab, setCurrentTab] = useState<Tabs>(Tabs.Instructions);
+  const [isSettingsOpen, setIsSettingsOpen] = useState(false);
+  const isUserTeacher = useAppSelector(state => state.currentUser.isTeacher);
+
+  const levelId = instructionsProps.levelProperties.id;
 
   // Build available tabs based on level information.
   const availableTabs = useMemo(() => {
@@ -77,8 +93,9 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     }
 
     if (
-      levelProperties.teacherMarkdown ||
-      levelProperties.predictSettings?.solution
+      isUserTeacher &&
+      (levelProperties.teacherMarkdown ||
+        levelProperties.predictSettings?.solution)
     ) {
       tabMap[Tabs.TeachersOnly] = (
         <ForTeachersOnly
@@ -89,19 +106,26 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     }
 
     if (
-      (levelProperties.aiTutor2Available ||
+      (levelProperties.aiTutorAvailable ||
         queryParams('show-ai-tutor2') === 'true') &&
       aiTutor2Context
     ) {
       tabMap[Tabs.AiTutor] = <AiTutor2Chat hiddenContext={aiTutor2Context} />;
     }
 
-    if (isParticipant && showRubric) {
+    if (showRubric) {
       tabMap[Tabs.StudentRubric] = <StudentRubricView />;
     }
 
     return tabMap;
-  }, [instructionsProps, aiTutor2Context, isParticipant, showRubric]);
+  }, [instructionsProps, isUserTeacher, aiTutor2Context, showRubric]);
+
+  useEffect(() => {
+    if (!(currentTab in availableTabs)) {
+      // If the current tab is no longer available, switch to the first available tab.
+      setCurrentTab(getTypedKeys(availableTabs)[0] || Tabs.Instructions);
+    }
+  }, [currentTab, availableTabs]);
 
   return (
     <div className={classNames(styles.resourcePanel, className)}>
@@ -116,28 +140,54 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                 size: 'xs',
                 'data-theme': theme,
               }}
+              key={`tooltip-${tab}`}
             >
-              <button
-                type="button"
+              <Button
                 className={classNames(
                   styles.tabButton,
                   tab === currentTab && styles.selected
                 )}
                 onClick={() => setCurrentTab(tab)}
                 key={tab}
-              >
-                <FontAwesomeV6Icon iconName={tabInfo[tab].icon} />
-              </button>
+                color={'gray'}
+                type={'tertiary'}
+                isIconOnly={true}
+                icon={{
+                  iconName: tabInfo[tab].icon,
+                  iconFamily: kitIcons.has(tabInfo[tab].icon)
+                    ? 'kit'
+                    : undefined,
+                }}
+              />
             </WithTooltip>
           ))}
         </div>
+        <div className={classNames(styles.bottomTabs)}>
+          <ResourcePanelExtraLinks levelId={levelId} theme={theme} />
+          <WithTooltip
+            tooltipProps={{
+              text: commonI18n.settings(),
+              tooltipId: 'tooltip-settings',
+              direction: 'onRight',
+              size: 'xs',
+              'data-theme': theme,
+            }}
+          >
+            <Button
+              className={styles.bottomButton}
+              onClick={() => {
+                setIsSettingsOpen(!isSettingsOpen);
+              }}
+              isIconOnly={true}
+              icon={{iconName: 'gear'}}
+              color={'gray'}
+              type={'tertiary'}
+            />
+          </WithTooltip>
+          <CopyrightButton theme={theme} />
+        </div>
       </div>
-      <div
-        className={classNames(
-          styles.panels,
-          includeFooterSpacing && styles.footerSpacing
-        )}
-      >
+      <div className={styles.panels}>
         <PanelContainer
           id={currentTab}
           headerContent={tabInfo[currentTab].title}
@@ -146,6 +196,12 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
         >
           {availableTabs[currentTab]}
           <NavigationArea {...instructionsProps} />
+          {isSettingsOpen && (
+            <SettingsPanel
+              settings={settings || []}
+              closePanel={() => setIsSettingsOpen(false)}
+            />
+          )}
         </PanelContainer>
       </div>
     </div>

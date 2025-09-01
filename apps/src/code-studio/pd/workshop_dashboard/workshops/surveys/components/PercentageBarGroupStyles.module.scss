@@ -1,0 +1,42 @@
+.barRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+
+  .barLabel {
+    min-width: 5rem;
+    flex-shrink: 0;
+    text-align: left;
+    color: var(--text-neutral-tertiary);
+  }
+
+  .barContainer {
+    position: relative;
+    flex: 1;
+    flex-shrink: 0;
+    height: 0.625rem;
+    border-radius: 6.25rem;
+    background: var(--background-neutral-tertiary);
+    overflow: hidden;
+
+    .indicator {
+      background: var(--background-brand-teal-primary);
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      transition: width 0.6s ease-out;
+
+      &.neutral {
+        background: var(--background-neutral-septenary);
+      }
+      &.agree {
+        background: var(--background-success-primary);
+      }
+      &.disagree {
+        background: var(--background-error-primary);
+      }
+    }
+  }
+}

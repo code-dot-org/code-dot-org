@@ -1,4 +1,10 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, {
+  Dispatch,
+  SetStateAction,
+  useEffect,
+  useRef,
+  useState,
+} from 'react';
 
 import ChatMessage from '@cdo/apps/aiComponentLibrary/chatMessage/ChatMessage';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
@@ -83,6 +89,7 @@ interface AiDiffChatProps {
   curriculumCourses?: string[];
   threadFetchCallback?: () => void;
   threadId?: number;
+  setThreadId?: Dispatch<SetStateAction<number>>;
 }
 
 const AiDiffChat: React.FC<AiDiffChatProps> = ({
@@ -98,6 +105,7 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
   curriculumCourses = [],
   threadFetchCallback = () => {},
   threadId = 0,
+  setThreadId = () => {},
 }) => {
   const reportingData = React.useMemo(() => {
     return {
@@ -252,6 +260,7 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
           );
           if (json.thread_id) {
             setLocalThreadId(json.thread_id);
+            setThreadId(json.thread_id);
           }
           setMessageHistory(prevMessages => [...prevMessages, newAiMessage]);
         })
@@ -272,17 +281,21 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
       threadFetchCallback,
       setLocalThreadId,
       chatResponseCallback,
+      setThreadId,
     ]
   );
 
   // Scroll to bottom of content when a new message comes in
-  const chatWindowRef = useRef<HTMLDivElement>(null);
+  const chatWindowRef = useRef<HTMLImageElement>(null);
   useEffect(() => {
-    chatWindowRef.current?.lastElementChild?.scrollIntoView();
+    if (chatWindowRef.current) {
+      chatWindowRef.current?.scrollIntoView();
+    }
   }, [messageHistory]);
+
   return (
     <div className={style.chatContainer}>
-      <div className={style.chatContent} ref={chatWindowRef}>
+      <div className={style.chatContent}>
         {messageHistory.map((item: ChatItem, id: number) =>
           Array.isArray(item) ? (
             <AiDiffSuggestedPrompts
@@ -309,15 +322,17 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
             />
           )
         )}
-        <img
-          src="/blockly/media/aichat/typing-animation.gif"
-          alt={'Waiting for response'}
-          className={
-            isWaitingForResponse
-              ? style.waitingForResponse
-              : style.hideWaitingForResponse
-          }
-        />
+        <div ref={chatWindowRef}>
+          <img
+            src="/blockly/media/aichat/typing-animation.gif"
+            alt={'Waiting for response'}
+            className={
+              isWaitingForResponse
+                ? style.waitingForResponse
+                : style.hideWaitingForResponse
+            }
+          />
+        </div>
       </div>
       <AiDiffChatFooter
         onSubmit={onMessageSend}
