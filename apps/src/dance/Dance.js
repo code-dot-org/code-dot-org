@@ -204,7 +204,7 @@ Dance.prototype.init = function (config) {
     queryParams('dance-music-channel-id') || this.musicAiGenerate?.channelId;
   const musicPackId =
     queryParams('dance-music-pack-id') || this.musicAiGenerate?.packId;
-  const psuedoCode = this.musicAiGenerate?.psuedocode;
+  const eventMeasures = this.musicAiGenerate?.eventMeasures;
 
   ReactDOM.render(
     <Provider store={getStore()}>
@@ -231,7 +231,7 @@ Dance.prototype.init = function (config) {
           onMount={onMount}
         />
         {queryParams('ai-generate') === 'true' && (
-          <Generate psuedoCode={psuedoCode} />
+          <Generate eventMeasures={eventMeasures} />
         )}
       </ErrorBoundary>
     </Provider>,
