@@ -194,17 +194,21 @@ Dance.prototype.init = function (config) {
     userId: state.currentUser.userId,
   });
 
+  let musicChannelId = undefined;
+  let musicPackId = undefined;
+  let eventMeasures = undefined;
+
   if (queryParams('ai-generate') === 'true') {
-    this.musicAiGenerate = JSON.parse(
+    const musicAiGenerate = JSON.parse(
       tryGetLocalStorage('music-ai-generate', {})
     );
-  }
 
-  const musicChannelId =
-    queryParams('dance-music-channel-id') || this.musicAiGenerate?.channelId;
-  const musicPackId =
-    queryParams('dance-music-pack-id') || this.musicAiGenerate?.packId;
-  const eventMeasures = this.musicAiGenerate?.eventMeasures;
+    musicChannelId = musicAiGenerate.channelId;
+    musicPackId = musicAiGenerate.packId;
+    eventMeasures = musicAiGenerate.eventMeasures;
+
+    this.musicAiGenerate = musicAiGenerate;
+  }
 
   ReactDOM.render(
     <Provider store={getStore()}>
@@ -765,12 +769,19 @@ Dance.prototype.execute = async function () {
   await this.initSongsPromise;
 
   const songMetadata = await this.songMetadataPromise;
+
+  // Hack in the BPM from music AI generate if it exists.
+  const updatedSongMetadata = {
+    ...songMetadata,
+    bpm: this.musicAiGenerate?.bpm || songMetadata.bpm,
+  };
+
   const userBlockTypes = Blockly.getMainWorkspace()
     .getAllBlocks()
     .map(block => block.type);
   return new Promise((resolve, reject) => {
     this.nativeAPI.play(
-      songMetadata,
+      updatedSongMetadata,
       success => {
         this.performanceData_.lastRunButtonDelay =
           performance.now() - this.performanceData_.lastRunButtonClick;
