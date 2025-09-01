@@ -1,5 +1,7 @@
 @use '@code-dot-org/component-library-styles/mixins.scss' as mixins;
 
+$mobile-aspect-ratio: 9 / 16;
+
 .previewContainer {
   position: relative;
   width: 100%;
@@ -34,20 +36,16 @@
 
 .previewIframe{
   border: none;
-  height: 100%;
   box-sizing: border-box;
+  height: calc(100vh - 120px); /* Account for header and some padding and ensure doesn't exceed available space */
 }
 
-.desktopPreview{
-  width: 100%;
-  height: 80vh; /* Set a specific height so content can extend beyond and become scrollable */
-  max-height: calc(100vh - 120px); /* Ensure it doesn't exceed available space */
+.desktopPreviewIframe{
+  width: 100%;  
 }
 
-.mobilePreview{
+.mobilePreviewIframe{
+  aspect-ratio: $mobile-aspect-ratio; /* Mobile aspect ratio */
   width: min(375px, 50vw); /* Standard mobile width, but responsive */
-  aspect-ratio: 9 / 16; /* Mobile aspect ratio */
-  height: auto; /* Let aspect-ratio control height */
-  max-height: calc(100vh - 120px); /* Account for header and some padding */
-  max-width: calc((100vh - 120px) * 9 / 16); /* Maintain aspect ratio when height-constrained */
+  max-width: calc((100vh - 120px) * $mobile-aspect-ratio); /* Maintain aspect ratio when height-constrained */
 }

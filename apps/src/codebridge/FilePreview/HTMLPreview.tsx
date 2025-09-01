@@ -276,8 +276,8 @@ export const HTMLPreview = () => {
               moduleStyles.previewIframe,
               moduleStyles[
                 previewViewMode === PreviewViewMode.DESKTOP
-                  ? 'desktopPreview'
-                  : 'mobilePreview'
+                  ? 'desktopPreviewIframe'
+                  : 'mobilePreviewIframe'
               ]
             )}
             src={previewUrl}
