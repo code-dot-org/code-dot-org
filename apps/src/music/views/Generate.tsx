@@ -208,6 +208,15 @@ The valid sounds to use are: "${sounds}".  (The length of each sound is in paren
             size="s"
             onClick={generateSong}
           />
+
+          <Button
+            ariaLabel={'Adjust prompt'}
+            text={'Adjust prompt'}
+            type="primary"
+            color="purple"
+            size="s"
+            onClick={() => dispatch(setAiGenerateState('none'))}
+          />
         </>
       )}
     </div>
