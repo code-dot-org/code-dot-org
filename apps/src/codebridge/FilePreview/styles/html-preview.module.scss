@@ -37,7 +37,15 @@ $mobile-aspect-ratio: 9 / 16;
 .previewIframe{
   border: none;
   box-sizing: border-box;
+}
+
+.nonShareViewPreviewIframeHeight {
   height: calc(100vh - 120px); /* Account for header and some padding and ensure doesn't exceed available space */
+}
+
+/* ShareView-specific styles to account for footer */
+.shareViewPreviewIframeHeight {
+  height: 100%;
 }
 
 .desktopPreviewIframe{

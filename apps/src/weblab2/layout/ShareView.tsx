@@ -38,7 +38,7 @@ const ShareView: React.FunctionComponent = () => {
         />
       </div>
       <div className={moduleStyles.previewContainer}>
-        <HTMLPreview />
+        <HTMLPreview isShareView={true} />
       </div>
     </div>
   );

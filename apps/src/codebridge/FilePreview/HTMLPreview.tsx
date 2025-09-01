@@ -22,7 +22,14 @@ import moduleStyles from './styles/html-preview.module.scss';
 const URL_CHANGE_DELAY_MS = 300;
 const SOURCE_CHANGE_DELAY_MS = 500;
 
-export const HTMLPreview = () => {
+interface HTMLPreviewProps {
+  isShareView?: boolean;
+}
+
+export const HTMLPreview: React.FC<HTMLPreviewProps> = ({
+  isShareView = false,
+}) => {
+  console.log('isShareView', isShareView);
   const {levelProperties} = useCodebridgeContext();
   const iframeRef = useRef<HTMLIFrameElement | null>(null);
   const previewContainerRef = useRef<HTMLDivElement | null>(null);
@@ -274,6 +281,11 @@ export const HTMLPreview = () => {
             id="preview"
             className={classNames(
               moduleStyles.previewIframe,
+              moduleStyles[
+                isShareView
+                  ? 'shareViewPreviewIframeHeight'
+                  : 'nonShareViewPreviewIframeHeight'
+              ],
               moduleStyles[
                 previewViewMode === PreviewViewMode.DESKTOP
                   ? 'desktopPreviewIframe'
