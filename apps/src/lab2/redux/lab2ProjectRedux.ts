@@ -357,9 +357,14 @@ const projectSlice = createSlice({
           // No-op if the folder does not exist.
           return;
         }
+
+        const deleteResult = deleteFolderHelper({
+          source,
+          folderId: action.payload,
+        });
         state.projectSources = {
           ...state.projectSources,
-          source: deleteFolderHelper(source, action.payload),
+          source: deleteResult.newSource,
         };
         state.hasEdited = true;
       }

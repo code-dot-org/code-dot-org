@@ -1,9 +1,12 @@
 import React, {useCallback, useEffect, useState} from 'react';
 
+import experiments from '@cdo/apps/util/experiments';
+
 import HttpClient from '../util/HttpClient';
 
 import AiDiffChat from './AiDiffChat';
 import AiDiffSidebar from './AiDiffSidebar';
+import AiDiffNotificationList from './notifications/AiDiffNotificationList';
 import {
   ChatItem,
   ChatThread,
@@ -18,19 +21,19 @@ interface AiDiffWorkSpaceProps {
   context: Context;
   scriptName?: string;
   curriculumCourses?: string[];
-  showSidebar?: boolean;
 }
 
 const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
   context,
   scriptName,
   curriculumCourses,
-  showSidebar,
 }) => {
   const [threads, setThreads] = useState<ChatThread[]>();
   const [threadMessages, setThreadMessages] = useState<ChatItem[]>();
   const [threadId, setThreadId] = useState<number>(0);
   const [keyId, setKeyId] = useState<number>(0);
+
+  const [showNotifications, setShowNotifications] = useState<boolean>(false);
 
   async function asyncFetchThreads(): Promise<ChatThread[]> {
     const response = await HttpClient.fetchJson<ChatThread[]>(
@@ -52,10 +55,8 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
   }, [setThreads]);
 
   useEffect(() => {
-    if (showSidebar) {
-      fetchThreads();
-    }
-  }, [showSidebar, fetchThreads]);
+    fetchThreads();
+  }, [fetchThreads]);
 
   async function asyncFetchThreadMessages(thread: number): Promise<ChatThread> {
     const response = await HttpClient.fetchJson<ChatThread>(
@@ -93,23 +94,27 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
 
   return (
     <div className={style.aiDiffWorkspace}>
-      {showSidebar && (
-        <AiDiffSidebar
-          threads={threads}
-          selectedThreadId={threadId}
-          threadSelectCallback={fetchThreadMessages}
+      <AiDiffSidebar
+        threads={threads}
+        selectedThreadId={threadId}
+        threadSelectCallback={fetchThreadMessages}
+        setShowNotifications={setShowNotifications}
+        showNotifications={showNotifications}
+      />
+      {showNotifications && experiments.isEnabled('teacher-notifications') ? (
+        <AiDiffNotificationList />
+      ) : (
+        <AiDiffChat
+          context={context}
+          scriptName={scriptName}
+          curriculumCourses={curriculumCourses}
+          threadFetchCallback={fetchThreads}
+          threadMessages={threadMessages}
+          key={keyId}
+          threadId={threadId}
+          setThreadId={setThreadId}
         />
       )}
-      <AiDiffChat
-        context={context}
-        scriptName={scriptName}
-        curriculumCourses={curriculumCourses}
-        threadFetchCallback={showSidebar ? fetchThreads : () => {}}
-        threadMessages={threadMessages}
-        key={keyId}
-        threadId={threadId}
-        setThreadId={setThreadId}
-      />
     </div>
   );
 };

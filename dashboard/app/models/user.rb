@@ -302,6 +302,9 @@ class User < ApplicationRecord
 
   has_many :pd_workshops_organized, class_name: 'Pd::Workshop', foreign_key: :organizer_id
   has_and_belongs_to_many :pd_workshops_facilitated, class_name: 'Pd::Workshop', join_table: 'pd_workshops_facilitators', association_foreign_key: 'pd_workshop_id'
+  has_many :misc_surveys, class_name: 'Pd::MiscSurvey'
+  has_many :simple_survey_submissions, class_name: 'Foorm::SimpleSurveySubmission'
+  has_many :pd_enrollments, class_name: 'Pd::Enrollment'
 
   has_many :authentication_options, dependent: :destroy
   accepts_nested_attributes_for :authentication_options
@@ -504,11 +507,6 @@ class User < ApplicationRecord
       errors.add(:admin, 'must be a teacher') unless teacher?
       errors.add(:admin, 'cannot be a followed') unless sections_as_student.empty?
     end
-  end
-
-  def friendly_name(ltr = true)
-    return name unless given_name && family_name
-    ltr ? "#{given_name} #{family_name}" : "#{family_name} #{given_name}"
   end
 
   def email
@@ -1005,6 +1003,7 @@ class User < ApplicationRecord
       display_name: name,
       given_name: given_name,
       family_name: family_name,
+      educator_role: educator_role ? SharedConstants::EDUCATOR_ROLES.find {|role| role[:value] == educator_role}&.dig(:label) : nil,
       school_info: Queries::SchoolInfo.current_school(self),
     }
   end
@@ -1260,7 +1259,8 @@ class User < ApplicationRecord
             script_id: script_level.script_id,
             new_result: ActivityConstants::BEST_PASS_RESULT,
             submitted: false,
-            level_source_id: nil
+            level_source_id: nil,
+            unit_group: nil
           )
         end
       end
@@ -1658,7 +1658,8 @@ class User < ApplicationRecord
     pairing_user_ids: nil,
     is_navigator: false,
     time_spent: nil,
-    locale: nil
+    locale: nil,
+    unit_group: nil
   )
     new_level_completed = false
     new_csf_level_perfected = false
@@ -1710,6 +1711,10 @@ class User < ApplicationRecord
         user_level.locale_supported = script.supported_locale?(locale)
       end
 
+      if unit_group && user_level.new_record?
+        user_level.unit_group_id = unit_group.id
+      end
+
       user_level.atomic_save!
     end
 
@@ -1725,7 +1730,8 @@ class User < ApplicationRecord
           pairing_user_ids: nil,
           is_navigator: true,
           locale: locale,
-          time_spent: time_spent
+          time_spent: time_spent,
+          unit_group: unit_group
         )
         Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
           PairedUserLevel.find_or_create_by(

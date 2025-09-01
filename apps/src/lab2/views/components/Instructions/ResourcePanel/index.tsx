@@ -1,20 +1,16 @@
+import {Button} from '@code-dot-org/component-library/button';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
-import {
-  default as FontAwesomeV6Icon,
-  kitIcons,
-} from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {kitIcons} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import classNames from 'classnames';
-import React, {useMemo, useState} from 'react';
+import React, {useEffect, useMemo, useState} from 'react';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
-import {LocaleProps} from '@cdo/apps/lab2/types';
 import AiTutor2Chat from '@cdo/apps/lab2/views/components/AiTutor2Chat';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import StudentRubricView from '@cdo/apps/lab2/views/components/rubrics/StudentRubricView';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {getTypedKeys} from '@cdo/apps/types/utils';
-import getScriptData, {hasScriptData} from '@cdo/apps/util/getScriptData';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {useRubric} from '../../rubrics/RubricWrapper';
@@ -47,7 +43,7 @@ const tabInfo: {[key in Tabs]: {title: string; icon: string}} = {
   [Tabs.Instructions]: {title: commonI18n.instructions(), icon: 'info-circle'},
   [Tabs.AiTutor]: {title: commonI18n.aiTutor(), icon: 'ai-head-solid'},
   [Tabs.TeachersOnly]: {
-    title: commonI18n.forTeachersOnly(),
+    title: commonI18n.teachingTips(),
     icon: 'chalkboard-teacher',
   },
   [Tabs.StudentRubric]: {
@@ -55,13 +51,6 @@ const tabInfo: {[key in Tabs]: {title: string; icon: string}} = {
     icon: 'clipboard-list',
   },
 };
-
-function getLocaleProps() {
-  if (hasScriptData('script[data-localeProps]')) {
-    return getScriptData('localeProps') as LocaleProps;
-  }
-  return undefined;
-}
 
 type ResourcePanelProps = InstructionsProps & {
   className?: string;
@@ -86,12 +75,9 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
 }) => {
   const {theme} = useTheme();
   const {showRubric} = useRubric();
-  const isParticipant = useAppSelector(
-    state => state.currentUser.userType === 'student'
-  );
   const [currentTab, setCurrentTab] = useState<Tabs>(Tabs.Instructions);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
-  const localeProps = getLocaleProps();
+  const isUserTeacher = useAppSelector(state => state.currentUser.isTeacher);
 
   const levelId = instructionsProps.levelProperties.id;
 
@@ -107,8 +93,9 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     }
 
     if (
-      levelProperties.teacherMarkdown ||
-      levelProperties.predictSettings?.solution
+      isUserTeacher &&
+      (levelProperties.teacherMarkdown ||
+        levelProperties.predictSettings?.solution)
     ) {
       tabMap[Tabs.TeachersOnly] = (
         <ForTeachersOnly
@@ -126,12 +113,19 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       tabMap[Tabs.AiTutor] = <AiTutor2Chat hiddenContext={aiTutor2Context} />;
     }
 
-    if (isParticipant && showRubric) {
+    if (showRubric) {
       tabMap[Tabs.StudentRubric] = <StudentRubricView />;
     }
 
     return tabMap;
-  }, [instructionsProps, aiTutor2Context, isParticipant, showRubric]);
+  }, [instructionsProps, isUserTeacher, aiTutor2Context, showRubric]);
+
+  useEffect(() => {
+    if (!(currentTab in availableTabs)) {
+      // If the current tab is no longer available, switch to the first available tab.
+      setCurrentTab(getTypedKeys(availableTabs)[0] || Tabs.Instructions);
+    }
+  }, [currentTab, availableTabs]);
 
   return (
     <div className={classNames(styles.resourcePanel, className)}>
@@ -148,48 +142,48 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
               }}
               key={`tooltip-${tab}`}
             >
-              <button
-                type="button"
+              <Button
                 className={classNames(
                   styles.tabButton,
                   tab === currentTab && styles.selected
                 )}
                 onClick={() => setCurrentTab(tab)}
                 key={tab}
-              >
-                <FontAwesomeV6Icon
-                  iconName={tabInfo[tab].icon}
-                  iconFamily={
-                    kitIcons.has(tabInfo[tab].icon) ? 'kit' : undefined
-                  }
-                />
-              </button>
+                color={'gray'}
+                type={'tertiary'}
+                isIconOnly={true}
+                icon={{
+                  iconName: tabInfo[tab].icon,
+                  iconFamily: kitIcons.has(tabInfo[tab].icon)
+                    ? 'kit'
+                    : undefined,
+                }}
+              />
             </WithTooltip>
           ))}
         </div>
         <div className={classNames(styles.bottomTabs)}>
           <ResourcePanelExtraLinks levelId={levelId} theme={theme} />
-          {(localeProps || settings) && (
-            <WithTooltip
-              tooltipProps={{
-                text: commonI18n.settings(),
-                tooltipId: 'tooltip-settings',
-                direction: 'onRight',
-                size: 'xs',
-                'data-theme': theme,
+          <WithTooltip
+            tooltipProps={{
+              text: commonI18n.settings(),
+              tooltipId: 'tooltip-settings',
+              direction: 'onRight',
+              size: 'xs',
+              'data-theme': theme,
+            }}
+          >
+            <Button
+              className={styles.bottomButton}
+              onClick={() => {
+                setIsSettingsOpen(!isSettingsOpen);
               }}
-            >
-              <button
-                type="button"
-                className={styles.bottomButton}
-                onClick={() => {
-                  setIsSettingsOpen(!isSettingsOpen);
-                }}
-              >
-                <FontAwesomeV6Icon iconName={'gear'} />
-              </button>
-            </WithTooltip>
-          )}
+              isIconOnly={true}
+              icon={{iconName: 'gear'}}
+              color={'gray'}
+              type={'tertiary'}
+            />
+          </WithTooltip>
           <CopyrightButton theme={theme} />
         </div>
       </div>
@@ -206,7 +200,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
             <SettingsPanel
               settings={settings || []}
               closePanel={() => setIsSettingsOpen(false)}
-              localeProps={localeProps}
             />
           )}
         </PanelContainer>

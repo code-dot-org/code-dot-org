@@ -75,41 +75,55 @@
           ],
           "rows": [
             {
+              "category": "implementation",
               "value": "more_prepared",
               "text": "I feel more prepared to teach the material covered in this workshop than before I came.",
+              "shortText": "Feel prepared to teach (%)",
               "visibleIf": "{pl_topics} <> ['getting-started', 'self-paced-pl-ai-101', 'self-paced-pl-k5'] and {pl_topics} <> ['getting-started', 'self-paced-pl-ai-101'] and {pl_topics} <> ['getting-started', 'self-paced-pl-k5'] and {pl_topics} <> ['self-paced-pl-ai-101', 'self-paced-pl-k5'] and {pl_topics} <> ['getting-started'] and {pl_topics} <> ['self-paced-pl-ai-101'] and {pl_topics} <> ['self-paced-pl-k5']"
             },
             {
+              "category": "implementation",
               "value": "plan_to_teach",
               "text": "I am planning to teach this curriculum.",
+              "shortText": "Plan to teach curriculum (%)",
               "visibleIf": "{pl_topics} <> ['getting-started', 'self-paced-pl-ai-101', 'self-paced-pl-k5'] and {pl_topics} <> ['getting-started', 'self-paced-pl-ai-101'] and {pl_topics} <> ['getting-started', 'self-paced-pl-k5'] and {pl_topics} <> ['self-paced-pl-ai-101', 'self-paced-pl-k5'] and {pl_topics} <> ['getting-started'] and {pl_topics} <> ['self-paced-pl-ai-101'] and {pl_topics} <> ['self-paced-pl-k5']"
             },
             {
+              "category": "implementation",
               "value": "know_where_to_get_help",
               "text": "I know where to go if I need help preparing to teach this material.",
+              "shortText": "Know where to find help (%)",
               "visibleIf": "{pl_topics} <> ['getting-started', 'self-paced-pl-ai-101', 'self-paced-pl-k5'] and {pl_topics} <> ['getting-started', 'self-paced-pl-ai-101'] and {pl_topics} <> ['getting-started', 'self-paced-pl-k5'] and {pl_topics} <> ['self-paced-pl-ai-101', 'self-paced-pl-k5'] and {pl_topics} <> ['getting-started'] and {pl_topics} <> ['self-paced-pl-ai-101'] and {pl_topics} <> ['self-paced-pl-k5']"
             },
             {
+              "category": "implementation",
               "value": "intention_to_apply_in_classroom",
+              "shortText": "Plan to apply practices (%)",
               "text": "I plan to incorporate into my teaching practices what I learned in this workshop.",
               "visibleIf": "{pl_topics} anyof ['getting-started', 'self-paced-pl-ai-101', 'self-paced-pl-k5']"
             },
             {
+              "category": "engagement",
               "value": "motivated_learn_cs_in_education",
+              "shortText": "Motivated to teach CS (%)",
               "text": "This workshop motivated me to continue learning about computer science in education.",
               "visibleIf": "{pl_topics} anyof ['getting-started', 'self-paced-pl-ai-101', 'self-paced-pl-k5']"
             },
             {
+              "category": "other",
               "value": "suitable_for_my_level",
+              "shortText": "PD suitable for level of experience (%)",
               "text": "This professional development was suitable for my level of experience with teaching Computer Science."
             }
           ]
         },
         {
+          "category": "implementation",
           "type": "checkbox",
           "name": "barriers_implementation_curriculum",
           "visibleIf": "{pl_topics} <> ['getting-started', 'self-paced-pl-ai-101', 'self-paced-pl-k5'] and {pl_topics} <> ['getting-started', 'self-paced-pl-ai-101'] and {pl_topics} <> ['getting-started', 'self-paced-pl-k5'] and {pl_topics} <> ['self-paced-pl-ai-101', 'self-paced-pl-k5'] and {pl_topics} <> ['getting-started'] and {pl_topics} <> ['self-paced-pl-ai-101'] and {pl_topics} <> ['self-paced-pl-k5']",
           "title": "Please share the main reasons you might not teach this workshop's content in your classroom this year.",
+          "shortText": "Barriers to implementation",
           "description": "(Select all that apply)",
           "choices": [
             {
@@ -139,9 +153,11 @@
           ]
         },
         {
+          "category": "engagement",
           "type": "rating",
           "name": "nps_self_paced_pd_byow",
           "title": "How likely are you to recommend this professional learning workshop to a friend or colleague?",
+          "shortText": "Likely to recommend",
           "rateCount": 11,
           "rateMin": 0,
           "rateMax": 10,
@@ -149,18 +165,22 @@
           "maxRateDescription": "Extremely likely"
         },
         {
+          "category": "engagement",
           "type": "rating",
           "name": "likelihood_other_pd",
           "title": "How likely would you be to attend other workshops in the future that cover other areas of Code.org computer science curriculum?",
+          "shortText": "Likely to attend again (%)",
           "rateCount": 7,
           "rateMax": 7,
           "minRateDescription": "Not Interested",
           "maxRateDescription": "Very interested"
         },
         {
+          "category": "implementation",
           "type": "comment",
           "name": "other_questions_implementation",
           "title": "Do you have any questions about implementing this curriculum in the classroom that were not answered during this workshop?",
+          "shortText": "Implementation questions",
           "rows": 3
         },
         {
@@ -199,18 +219,24 @@
           ],
           "rows": [
             {
+              "category": "other",
               "value": "someone_to_turn_to",
               "text": "When I need help teaching computer science, I have someone to turn to.",
+              "shortText": "Have CS support (%)",
               "visibleIf": "{pl_topics} <> ['getting-started', 'self-paced-pl-ai-101', 'self-paced-pl-k5'] and {pl_topics} <> ['getting-started', 'self-paced-pl-ai-101'] and {pl_topics} <> ['getting-started', 'self-paced-pl-k5'] and {pl_topics} <> ['self-paced-pl-ai-101', 'self-paced-pl-k5'] and {pl_topics} <> ['getting-started'] and {pl_topics} <> ['self-paced-pl-ai-101'] and {pl_topics} <> ['self-paced-pl-k5']"
             },
             {
+              "category": "engagement",
               "value": "rp_as_resource",
               "text": "I see my Regional Partner as a resource and support for computer science education in my community.",
+              "shortText": "See RP as a resource (%)",
               "visibleIf": "{pl_topics} <> ['getting-started', 'self-paced-pl-ai-101', 'self-paced-pl-k5'] and {pl_topics} <> ['getting-started', 'self-paced-pl-ai-101'] and {pl_topics} <> ['getting-started', 'self-paced-pl-k5'] and {pl_topics} <> ['self-paced-pl-ai-101', 'self-paced-pl-k5'] and {pl_topics} <> ['getting-started'] and {pl_topics} <> ['self-paced-pl-ai-101'] and {pl_topics} <> ['self-paced-pl-k5']"
             },
             {
+              "category": "other",
               "value": "workshop_helped_create_community",
               "text": "This workshop has allowed me to meet CS teachers in my community to collaborate with.",
+              "shortText": "Helped create CS community (%)",
               "visibleIf": "{pl_topics} <> ['getting-started', 'self-paced-pl-ai-101', 'self-paced-pl-k5'] and {pl_topics} <> ['getting-started', 'self-paced-pl-ai-101'] and {pl_topics} <> ['getting-started', 'self-paced-pl-k5'] and {pl_topics} <> ['self-paced-pl-ai-101', 'self-paced-pl-k5'] and {pl_topics} <> ['getting-started'] and {pl_topics} <> ['self-paced-pl-ai-101'] and {pl_topics} <> ['self-paced-pl-k5']"
             }
           ]
@@ -261,19 +287,25 @@
           ],
           "rows": [
             {
+              "category": "logistics",
               "value": "clear_communication_when_where",
+              "shortText": "Received clear communication (%)",
               "text": "I received clear communication about when and where the workshop would take place."
             },
             {
+              "category": "logistics",
               "value": "modality_met_needs",
+              "shortText": "Workshop modality met needs (%)",
               "text": "The modality (in person, virtual, or hybrid) met my learning needs"
             }
           ]
         },
         {
+          "category": "logistics",
           "type": "text",
           "name": "other_feedback_logistics",
-          "title": "Do you have any feedback about the way logistics were run for the workshop?"
+          "title": "Do you have any feedback about the way logistics were run for the workshop?",
+          "shortText": "Additional logistics feedback"
         },
         {
           "type": "library_item",
@@ -339,9 +371,11 @@
           "hasOther": true
         },
         {
+          "category": "engagement",
           "type": "comment",
           "name": "other_feedback_FR",
           "title": "Is there anything else you’d like to tell us about your experience at this workshop?",
+          "shortText": "Additional experience comments",
           "rows": 3
         },
         {

@@ -34,4 +34,5 @@ export interface DanceProjectSources extends ProjectSources {
 export interface DanceLevelProperties extends LevelProperties {
   defaultSong?: string;
   useRestrictedSongs?: boolean;
+  songSelection?: string[];
 }

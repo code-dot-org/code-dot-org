@@ -107,17 +107,11 @@ describe('WorkshopEnrollments', () => {
     overrides: Partial<WorkshopContextValue> = {}
   ): WorkshopContextValue => ({
     workshop: createTestWorkshop(),
-    workshopLoading: false,
-    workshopError: null,
     refetchWorkshop: jest.fn(),
     enrollments: [createTestEnrollment()],
     enrollmentsLoading: false,
-    enrollmentsError: null,
     refetchEnrollments: mockRefetchEnrollments,
     surveys: null,
-    surveysLoading: false,
-    surveysError: null,
-    refetchSurveys: jest.fn(),
     ...overrides,
   });
 
@@ -133,46 +127,6 @@ describe('WorkshopEnrollments', () => {
       </MemoryRouter>
     );
   };
-
-  describe('loading and error states', () => {
-    it('shows spinner when enrollments are loading', () => {
-      renderWithContext({
-        enrollments: [],
-        enrollmentsLoading: true,
-      });
-
-      // Check that only the spinner is rendered, not the table or the empty state text
-      expect(screen.queryByRole('table')).not.toBeInTheDocument();
-      expect(
-        screen.queryByText('No enrollments found for this workshop')
-      ).not.toBeInTheDocument();
-    });
-
-    it('shows error alert when there is an enrollments error', () => {
-      renderWithContext({
-        enrollments: [],
-        enrollmentsError: new Error('Failed to load'),
-      });
-
-      expect(
-        screen.getByText(
-          'There was an error fetching enrollments. Please try again.'
-        )
-      ).toBeInTheDocument();
-      expect(screen.queryByRole('table')).not.toBeInTheDocument();
-    });
-
-    it('shows warning alert when there are no enrollments', () => {
-      renderWithContext({
-        enrollments: [],
-      });
-
-      expect(
-        screen.getByText('No enrollments found for this workshop')
-      ).toBeInTheDocument();
-      expect(screen.queryByRole('table')).not.toBeInTheDocument();
-    });
-  });
 
   describe('enrollment table rendering', () => {
     it('renders enrollment table with data', () => {

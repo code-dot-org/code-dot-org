@@ -636,25 +636,6 @@ class Unit < ApplicationRecord
       ) : nil
   end
 
-  def self.log_redirect(old_unit_name, new_unit_name, request, event_name, user_type)
-    FirehoseClient.instance.put_record(
-      :analysis,
-      {
-        study: 'script-family-redirect',
-        event: event_name,
-        data_string: request.path,
-        data_json: {
-          old_script_name: old_unit_name,
-          new_script_name: new_unit_name,
-          method: request.method,
-          url: request.url,
-          referer: request.referer,
-          user_type: user_type
-        }.to_json
-      }
-    )
-  end
-
   # @param user [User]
   # @param locale [String] User or request locale. Optional.
   # @return [String|nil] URL to the unit overview page the user should be redirected to (if any).
@@ -1711,6 +1692,7 @@ class Unit < ApplicationRecord
       show_sign_in_callout: csf? || csc?,
       hasUnnumberedLessons: has_unnumbered_lessons?,
       course_name: unit_group_unit&.unit_group&.name,
+      course_id: unit_group_unit&.unit_group&.id,
       unit_position: unit_group_unit&.position,
     }
   end

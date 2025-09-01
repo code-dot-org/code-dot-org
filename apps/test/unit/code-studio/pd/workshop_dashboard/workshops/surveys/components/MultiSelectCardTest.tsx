@@ -2,11 +2,11 @@ import '@testing-library/jest-dom';
 import {render, screen, waitFor} from '@testing-library/react';
 import React from 'react';
 
-import {MultiSelectBreakdown} from '@cdo/apps/code-studio/pd/workshop_dashboard/WorkshopFormTemplate/types';
+import {Breakdown} from '@cdo/apps/code-studio/pd/workshop_dashboard/WorkshopFormTemplate/types';
 import {MultiSelectCard} from '@cdo/apps/code-studio/pd/workshop_dashboard/workshops/surveys/components/MultiSelectCard';
 
 describe('MultiSelectCard', () => {
-  const defaultItems: MultiSelectBreakdown[] = [
+  const defaultItems: Breakdown[] = [
     {label: 'Option A', count: 15, percentage: 50},
     {label: 'Option B', count: 10, percentage: 33.3},
     {label: 'Option C', count: 5, percentage: 16.7},

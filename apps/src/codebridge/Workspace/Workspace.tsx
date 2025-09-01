@@ -26,12 +26,14 @@ interface WorkspaceProps {
   className?: string;
   style?: React.CSSProperties;
   isWidgetView?: boolean;
+  hideHeaders?: boolean;
 }
 
 const Workspace: React.FunctionComponent<WorkspaceProps> = ({
   style,
   className,
   isWidgetView,
+  hideHeaders,
 }) => {
   const {config} = useCodebridgeContext();
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
@@ -108,6 +110,7 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
     <div style={style} className={className}>
       <PanelContainer
         id="editor-workspace"
+        hideHeaders={hideHeaders}
         headerContent={headerContent}
         rightHeaderContent={<HeaderButtons />}
         className={moduleStyles.workspace}
