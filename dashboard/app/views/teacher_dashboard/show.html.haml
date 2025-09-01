@@ -23,6 +23,9 @@
 - if current_user
   - if current_user.admin
     = render partial: 'home/admin'
+  - if current_user.teacher? && !current_user.accepted_latest_terms?
+    - current_user.update_user_tos_version_accept()
+    = render partial: 'layouts/implicit_new_user_terms_interstitial'
   - if Policies::Ai.ai_differentiation_enabled?(current_user)
     %div#ai-differentiation-fab-mount-point
 

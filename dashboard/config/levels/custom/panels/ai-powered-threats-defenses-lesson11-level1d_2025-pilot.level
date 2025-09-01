@@ -1,0 +1,46 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-08-19T19:30:27.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "##Mei\n\nMei is a thoughtful and tech-savvy student who follows safety guidelines closely—she wears a mask every day due to a health condition and often wears glasses. \n\nShe’s passionate about environmental science and enjoys digital journaling and organizing her schoolwork with apps. \n\nWhile she’s comfortable using technology, she finds that some biometric security features don’t work well with the way she shows up in the world.",
+        "imageUrl": "https://images.code.org/55c99c837c7a5628329be1b2debc3e4c-Screenshot 2025-08-05 142915.png",
+        "key": "test-ai-powered-threats-defenses-lesson3-level3-6ea9678a-ce7e-41b9-abb2-d878eb87ac30",
+        "typing": false,
+        "fadeInOverPrevious": true,
+        "layout": "text-top-right"
+      },
+      {
+        "text": "##Face ID \n\nMei’s laptop uses Face ID, but it doesn’t work with her mask and glasses. It falls back to a weak password that she uses on several school accounts, which could be guessed or reused by others.",
+        "imageUrl": "https://images.code.org/e6389661c4a6fbdf5d504599131a9f30-Screenshot 2025-08-14 150836.png",
+        "key": "test-ai-powered-threats-defenses-lesson3-level3-91f6e938-059e-4b97-b572-350b4fa8bbb8",
+        "fadeInOverPrevious": true,
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "##Password Manager with Fingerprint Unlock\n\nMei’s password manager uses a fingerprint scanner, but it doesn’t always work when her hands are damp or the sensor is fogged up. It’s supposed to be a fast option, but it often takes longer than expected.",
+        "imageUrl": "https://images.code.org/24345ee31f56c3b9294ae7d2e563ee0c-Screenshot 2025-08-14 154411.png",
+        "key": "test-ai-powered-threats-defenses-lesson3-level3-79557c5a-46fd-42a9-8bcd-652ea77a7ed0",
+        "layout": "text-top-right"
+      },
+      {
+        "text": "##Timed Logout From Wi-Fi Portal\n\nMei is automatically logged out of the school Wi-Fi portal if she steps away too long. It’s easy enough to log back in, but the interruptions can break her focus and slow her down.",
+        "imageUrl": "https://images.code.org/c447e24fd10f09a53a769c4496411fbe-Screenshot 2025-08-14 155113.png",
+        "key": "test-ai-powered-threats-defenses-lesson3-level3-10f16dff-0ead-45fb-8aaf-e7607fe82cca",
+        "layout": "text-top-left"
+      }
+    ],
+    "display_name": "Mei",
+    "thumbnail_url": "https://images.code.org/6ffa2b9f809506487d2b3a34b9aebd5e-Screenshot 2025-08-05 145316.png",
+    "bubble_choice_description": "An organized student who wears a mask and glasses every day for health reasons. Mei often runs into trouble with facial recognition and other biometric login tools."
+  },
+  "audit_log": "[{\"changed_at\":\"2025-08-19T19:30:27.137+00:00\",\"changed\":[\"cloned from \\\"test-ai-powered-threats-defenses-lesson11-level1d\\\"\"],\"cloned_from\":\"test-ai-powered-threats-defenses-lesson11-level1d\"},{\"changed_at\":\"2025-08-19 19:30:52 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Panels>

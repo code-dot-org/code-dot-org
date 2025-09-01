@@ -1354,6 +1354,49 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert_equal nil, workshop.time_zone
   end
 
+  test 'subject_must_be_valid_for_course validation passes if workshop has valid subject in course' do
+    workshop = create(:workshop, course: Pd::Workshop::COURSE_CSD, subject: SUBJECT_CSD_WORKSHOP_1)
+    assert workshop.valid?
+  end
+
+  test 'subject_must_be_valid_for_course validation error if workshop has invalid subject in course' do
+    workshop = build(:workshop, course: Pd::Workshop::COURSE_CSD, subject: 'INVALID_SUBJECT')
+    refute workshop.valid?
+    assert_equal 1, workshop.errors.messages.count
+    assert_equal 'Subject must be a valid option for the course', workshop.errors.full_messages[0]
+  end
+
+  test 'subject_must_be_valid_for_course validation passes if workshop has valid legacy subject in course' do
+    workshop = create(:workshop, course: Pd::Workshop::COURSE_CSD, subject: SUBJECT_CSD_SUMMER_WORKSHOP)
+    assert workshop.valid?
+  end
+
+  test 'subject_must_be_valid_for_course validation error if workshop has invalid legacy subject in course' do
+    workshop = build(:workshop, course: Pd::Workshop::COURSE_CSD, subject: 'INVALID_SUBJECT')
+    refute workshop.valid?
+    assert_equal 1, workshop.errors.messages.count
+    assert_equal 'Subject must be a valid option for the course', workshop.errors.full_messages[0]
+  end
+
+  test 'subject_must_be_valid_for_course validation passes if workshop course does not require subject and no subject is present' do
+    workshop = create(:byo_workshop, subject: nil)
+    assert workshop.valid?
+  end
+
+  test 'subject_must_be_valid_for_course validation error if workshop course does not require subject and subject is present' do
+    workshop = build(:byo_workshop, subject: SUBJECT_CSD_WORKSHOP_1)
+    refute workshop.valid?
+    assert_equal 1, workshop.errors.messages.count
+    assert_equal 'Subject must be a valid option for the course', workshop.errors.full_messages[0]
+  end
+
+  test 'subject_must_be_valid_for_course validation error if workshop course requires subject and no subject is present' do
+    workshop = build(:workshop, course: Pd::Workshop::COURSE_CSD, subject: nil)
+    refute workshop.valid?
+    assert_equal 1, workshop.errors.messages.count
+    assert_equal 'Subject must be a valid option for the course', workshop.errors.full_messages[0]
+  end
+
   test 'workshop config_validation' do
     workshop = build(:pd_workshop, grades: nil, name: nil, description: nil)
 
@@ -1361,6 +1404,11 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert_includes workshop.errors.full_messages, 'Please select at least one grade level'
     assert_includes workshop.errors.full_messages, 'Name is required'
     assert_includes workshop.errors.full_messages, 'Description is required'
+  end
+
+  test 'workshop config_validation does not raise errors for legacy courses without configs' do
+    workshop = create(:admin_counselor_workshop)
+    assert_empty workshop.errors
   end
 
   test 'valid_registration_link_format validation passes' do

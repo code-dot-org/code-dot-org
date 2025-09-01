@@ -18,7 +18,7 @@ export const START_SOURCES = 'start_sources';
 export const TOOLBOX_BLOCKS = 'toolbox_blocks';
 export const EDIT_EXEMPLAR = 'edit_exemplar';
 
-export const LABS_USING_NEW_SHARE_DIALOG = ['music', 'pythonlab'];
+export const LABS_USING_NEW_SHARE_DIALOG = ['music', 'pythonlab', 'weblab2'];
 
 // Text-based labs that are currently supported by lab2.
 export const TEXT_BASED_LABS: AppName[] = ['aichat', 'pythonlab', 'weblab2'];

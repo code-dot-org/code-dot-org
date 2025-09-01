@@ -18,6 +18,7 @@ interface DrawerData {
   showSchoolInfoInterstitial: boolean;
   showSchoolInfoConfirmation: boolean;
   existingSchoolInfo: SchoolInfo;
+  afeEligible: boolean;
 }
 
 /**
@@ -38,6 +39,7 @@ const TeacherHomepagePopups: React.FC<TeacherHomepagePopupsProps> = () => {
   const [existingSchoolInfo, setExistingSchoolInfo] = React.useState<
     SchoolInfo | undefined
   >(undefined);
+  const [AFEDrawerOpen, setAFEDrawerOpen] = React.useState(true); //TODO: set to false
 
   const [hasSeenPopup, setHasSeenPopup] = React.useState(false);
 
@@ -46,6 +48,16 @@ const TeacherHomepagePopups: React.FC<TeacherHomepagePopupsProps> = () => {
   );
 
   const hasSeenPopupInLastDay = React.useMemo(() => {
+    // Allows triggering of drawer with URL params for testing / debugging
+    const searchParams = new URLSearchParams(window.location.search);
+    if (
+      searchParams.has('showSchoolInfoInterstitial') ||
+      searchParams.has('showSchoolInfoConfirmation') ||
+      searchParams.has('showAFE')
+    ) {
+      return null;
+    }
+
     const lastSeen = tryGetLocalStorage('teacher-homepage-popup-last-seen', '');
     if (!lastSeen || lastSeen === '') {
       return null;
@@ -66,22 +78,23 @@ const TeacherHomepagePopups: React.FC<TeacherHomepagePopupsProps> = () => {
 
   // Load school data and set the drawer state based on the response.
   React.useEffect(() => {
-    HttpClient.fetchJson<DrawerData>(
-      '/teacher_dashboard/get_school_info_interstitial_data'
-    )
+    HttpClient.fetchJson<DrawerData>('/teacher_dashboard/get_drawer_data')
       .then(data => {
+        console.log(data.value);
         setExistingSchoolInfo(data.value.existingSchoolInfo);
         setSchoolInfoInterstitialOpen(data.value.showSchoolInfoInterstitial);
         setSchoolInfoConfirmationOpen(data.value.showSchoolInfoConfirmation);
+        setAFEDrawerOpen(data.value.afeEligible);
 
+        // Allows triggering of drawer with URL params for testing / debugging
         const searchParams = new URLSearchParams(window.location.search);
-        // If the URL has a query param to show the interstitial or confirmation,
-        // we want to set that state to true to open the drawer.
         if (searchParams.get('showSchoolInfoInterstitial') === 'true') {
           setSchoolInfoInterstitialOpen(true);
-          // We don't want to set both to true at the same time
+          // We don't want to set all to true at the same time
         } else if (searchParams.get('showSchoolInfoConfirmation') === 'true') {
           setSchoolInfoConfirmationOpen(true);
+        } else if (searchParams.get('showAFE') === 'true') {
+          setAFEDrawerOpen(true);
         }
         setIsLoading(false);
       })
@@ -98,12 +111,17 @@ const TeacherHomepagePopups: React.FC<TeacherHomepagePopupsProps> = () => {
   const popup = React.useMemo(() => {
     if (isLoading || hasSeenPopupInLastDay || hasSeenPopup) {
       return null;
-    } else if (schoolInfoInterstitialOpen || schoolInfoConfirmationOpen) {
+    } else if (
+      schoolInfoInterstitialOpen ||
+      schoolInfoConfirmationOpen ||
+      AFEDrawerOpen
+    ) {
       return (
         <TeacherHomepageDrawer
           existingSchoolInfo={existingSchoolInfo}
           schoolInfoConfirmationOpenInitially={schoolInfoConfirmationOpen}
           schoolInfoInterstitialOpenInitially={schoolInfoInterstitialOpen}
+          afeOpenInitially={AFEDrawerOpen}
           onCloseCallback={onClosePopup}
         />
       );
@@ -122,6 +140,7 @@ const TeacherHomepagePopups: React.FC<TeacherHomepagePopupsProps> = () => {
     hasSeenPopupInLastDay,
     schoolInfoInterstitialOpen,
     schoolInfoConfirmationOpen,
+    AFEDrawerOpen,
     existingSchoolInfo,
     onClosePopup,
     hasSeenHomepageWelcome,

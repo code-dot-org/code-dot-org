@@ -46,6 +46,8 @@ class DatasetsController < ApplicationController
     end
 
     table.import_csv params[:csv_data]
+    table.write_serialization
+
     data = {
       columns: table.get_columns,
       records: table.read_records.map(&:to_json),
@@ -58,6 +60,7 @@ class DatasetsController < ApplicationController
     table_name = params[:dataset_name]
     table = DatablockStorageTable.find_shared_table table_name
     table.destroy!
+    table.remove_serialization
   end
 
   # GET /datasets/manifest/edit
@@ -71,6 +74,7 @@ class DatasetsController < ApplicationController
     db_manifest = DatablockStorageLibraryManifest.instance
     db_manifest.library_manifest = parsed_manifest
     db_manifest.save!
+    DatablockStorageLibraryManifest.write_serialization
     render json: {}
   rescue JSON::ParserError
     render json: {msg: 'Invalid JSON'}

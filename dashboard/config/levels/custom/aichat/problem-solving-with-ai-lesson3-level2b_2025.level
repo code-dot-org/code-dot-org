@@ -35,7 +35,7 @@
         "retrievalContexts": "hidden",
         "modelCardInfo": "hidden"
       },
-      "levelSystemPrompt": "Answer the prompt with maximum 4 sentences. It should be a back and forth dialogue where each character speaks only once or twice.\n\n",
+      "levelSystemPrompt": "Answer the prompt with a maximum of 4 sentences. The response should be a back-and-forth dialogue where each character speaks only once or twice.\n\nIf the user provides a single example, match the tone, pacing, and style of that example. Maintain the same sentence structure and energy level.\n\nAvoid long explanations or narration — just give the dialogue. Focus on capturing character personality through voice or humor, as suggested by the example.\n\n\n",
       "hidePresentationPanel": true,
       "availableModelIds": [
         "gpt-4o-mini"
@@ -44,8 +44,11 @@
     "display_name": "Video Game Developer",
     "bubble_choice_description": "Practice prompting through the career of a video game developer by adding a single example to help guide the AI's dialogue.",
     "thumbnail_url": "https://images.code.org/8c4485c1eac15a6acacbe43a90f97480-game-developer.png",
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false"
   },
-  "audit_log": "[{\"changed_at\":\"2025-05-08T14:34:05.985+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson3-level2b_2024\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson3-level2b_2024\"},{\"changed_at\":\"2025-05-15 16:49:04 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-15 17:06:10 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-15 17:08:49 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-15 17:13:07 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-15 17:19:16 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-15 17:23:05 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-08T14:34:05.985+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson3-level2b_2024\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson3-level2b_2024\"},{\"changed_at\":\"2025-05-15 16:49:04 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-15 17:06:10 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-15 17:08:49 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-15 17:13:07 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-15 17:19:16 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-15 17:23:05 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-21 19:06:23 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

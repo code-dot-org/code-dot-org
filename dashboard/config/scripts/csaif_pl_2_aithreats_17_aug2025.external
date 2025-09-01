@@ -1,0 +1,35 @@
+name 'csaif_pl_2_aithreats_17_aug2025'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# AI in Encryption
+
+#### AI is reshaping what it means for data to be "secure" in encrypted systems. AI tools can both attack and defend password systems by identifying patterns.
+
+<p align="center">
+<img src="https://images.code.org/02d2c487870b431e1b31cd32d6eacd46-Screenshot 2025-08-28 at 10.08.27 AM.png" alt="AI can be used by both hackers and secuirty teams" width="70%" style="border-radius:10px; border: 3px solid black;">
+</p>
+
+####  AI can be trained on massive collections of leaked passwords and publicly available data. Then, AI can analyze and spot patterns from these datasets.
+
+
+## 📝 To Do
+
+#### For this activity, you'll act like an AI model - scanning a social media profile and past passwords to look for patterns. Your goal is to figure out how this person makes their passwords, and what they might choose next.
+
+#### Scan Maya’s profile and leaked passwords below and try to *identify any “patterns” or rules are behind how she makes passwords.* 
+
+<p align="center">
+<img src="https://images.code.org/49c10a4ae7f45ad0f9ac44f43a386816-Screenshot 2025-08-28 at 9.56.05 AM.png" alt="AI can be used by both hackers and secuirty teams" width="70%" style="border-radius:10px; border: 3px solid black;">
+</p>
+
+#### Based on any patterns you identified, write down 2 new passwords do you think Maya might use next. *You'll need these for the next level*.
+
+
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ This activity is from Lesson 10. You can find more details in the full <a href='https://studio.code.org/courses/ai-powered-threats-and-defenses-2025/units/1/lessons/10' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a>.
+</p>
+
+MARKDOWN

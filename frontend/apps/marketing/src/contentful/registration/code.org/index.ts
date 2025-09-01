@@ -213,6 +213,9 @@ const contentfulRegistration = {
     {
       component: RichText,
       definition: RichTextContentfulComponentDefinition,
+      options: {
+        wrapContainerWidth: '100%',
+      },
     },
     {
       component: Section,

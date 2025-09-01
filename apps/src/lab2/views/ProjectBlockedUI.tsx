@@ -2,6 +2,7 @@ import Alert, {alertTypes} from '@code-dot-org/component-library/alert';
 import React, {useState} from 'react';
 
 import AbuseExclamation from '@cdo/apps/code-studio/components/AbuseExclamation';
+import {getLabViewPageAction} from '@cdo/apps/lab2/utils';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 
@@ -19,7 +20,21 @@ export const ProjectBlockedUI: React.FunctionComponent<{
   const projectManager = Lab2Registry.getInstance().getProjectManager();
   const shareUrl = projectManager ? projectManager.getShareUrl() : null;
   const isOwner = useAppSelector(state => state.lab.channel?.isOwner || false);
+  const isTeacherOfProjectOwner = useAppSelector(
+    state => state.lab.isTeacherOfProjectOwner
+  );
+  const canViewFlaggedProject = isTeacherOfProjectOwner || isProjectValidator;
+  const pageAction = getLabViewPageAction() || '';
+  const hasViewOrEditAccess =
+    isProjectValidator || isOwner || isTeacherOfProjectOwner;
+
+  const alertText =
+    blockedType === 'projectAbuse'
+      ? i18n.tosWithoutLink()
+      : i18n.sharingDisabledAlert(); // This will be displayed in /view for project validators if project sharing is disabled for owner.
+
   const abuseExclamationProps = {
+    canViewFlaggedProject,
     isOwner,
     i18n:
       blockedType === 'projectAbuse'
@@ -31,6 +46,7 @@ export const ProjectBlockedUI: React.FunctionComponent<{
               )}`,
             }),
             edit_project: i18n.editProject(),
+            view_project: i18n.viewProject(),
             go_to_code_studio: i18n.goToCodeStudio(),
           }
         : {
@@ -41,19 +57,30 @@ export const ProjectBlockedUI: React.FunctionComponent<{
               url: 'https://support.code.org/hc/en-us/requests/new',
             }),
             edit_project: i18n.editProject(),
+            view_project: i18n.viewProject(),
             go_to_code_studio: i18n.goToCodeStudio(),
           },
   };
 
-  if (isProjectValidator) {
+  // If sharing is disabled and user is project owner or project owner's teacher, no need to render any project blocked UI.
+  if (
+    blockedType === 'projectSharingDisabled' &&
+    (isOwner || isTeacherOfProjectOwner)
+  ) {
+    return null;
+  }
+
+  // If page action is view/edit/level, project is flagged for abuse, and user has view or edit access,
+  // render workspace alert with warning about flagged project.
+  if (['view', 'edit', 'level'].includes(pageAction) && hasViewOrEditAccess) {
     return (
       <div
         id="blocked-project-ui-container-project-validator"
         className={moduleStyles.blockedProjectUIContainerProjectValidator}
       >
-        {showAlert && blockedType === 'projectAbuse' && (
+        {showAlert && (
           <Alert
-            text={i18n.tosWithoutLink()}
+            text={alertText}
             type={alertTypes.danger}
             onClose={() => {
               setShowAlert(false);
@@ -63,7 +90,12 @@ export const ProjectBlockedUI: React.FunctionComponent<{
       </div>
     );
   }
-
+  /* Excluding two cases above, render blocked UI.
+      - If in project edit/view mode and user is without view/edit access, render blocked UI.
+          (Note that only the user and user's teacher can access a user's activity level.)
+      - In share mode (excluding when project sharing is disabled and user is owner or owner's teacher),
+          render blocked UI which includes customized link depending on user's role.
+  */
   return (
     <div
       id="blocked-project-ui-container"

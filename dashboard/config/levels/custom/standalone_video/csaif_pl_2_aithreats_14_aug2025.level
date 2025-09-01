@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2025-08-27T02:53:17.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "video_key": "csp_concept_encryption",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 28731,
+    "name_suffix": "_aug2025",
+    "encrypted": "false",
+    "long_instructions": "#### Watch this video to learn more about encryption.\r\n\r\n#### As you watch, reflect on: *why might asymmetric encryption be more useful when the two people don’t know each other yet?*\r\n\r\n\r\n"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2025-08-27T02:53:17.992+00:00\",\"changed\":[\"cloned from \\\"csaif_pl_2_aithreats_14\\\"\"],\"cloned_from\":\"csaif_pl_2_aithreats_14\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

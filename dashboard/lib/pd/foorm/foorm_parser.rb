@@ -241,7 +241,6 @@ module Pd::Foorm
         name: element['name'],
         title: element['title'],
         short_text: element['shortText'],
-        sub_text: element['subText'],
         type: QUESTION_TO_ANSWER_TYPES[element['type']],
         category: element['category'],
         original_type: element['type']
@@ -254,8 +253,8 @@ module Pd::Foorm
         question_data[:other_text] = element['otherPlaceHolder'] || 'other' if element['hasOther']
       when 'rating'
         question_data[:choices] = get_rating_choices_with_labels(element)
-        question_data[:rate_min] = element['rateMin'] || DEFAULT_RATE_MIN
-        question_data[:rate_max] = element['rateMax'] || DEFAULT_RATE_MAX
+        question_data[:rate_min] = element['rateMin'] || DEFAULT_MIN_RATING
+        question_data[:rate_max] = element['rateMax'] || DEFAULT_MAX_RATING
         question_data[:min_rate_description] = element['minRateDescription']
         question_data[:max_rate_description] = element['maxRateDescription']
       when 'matrix'
@@ -269,7 +268,6 @@ module Pd::Foorm
             question_data[:matrix_rows][row['value']] = {
               text: row['text'],
               short_text: row['shortText'],
-              sub_text: row['subText'],
               category: row['category'] || element['category']
             }
           end
@@ -295,8 +293,8 @@ module Pd::Foorm
 
     def self.get_rating_choices_with_labels(element)
       choices = {}
-      min_rate = element['rateMin'] || DEFAULT_RATE_MIN
-      max_rate = element['rateMax'] || DEFAULT_RATE_MAX
+      min_rate = element['rateMin'] || DEFAULT_MIN_RATING
+      max_rate = element['rateMax'] || DEFAULT_MAX_RATING
 
       min_description = element['minRateDescription']
       max_description = element['maxRateDescription']
