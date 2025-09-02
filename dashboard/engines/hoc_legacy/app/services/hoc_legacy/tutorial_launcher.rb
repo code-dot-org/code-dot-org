@@ -6,12 +6,11 @@ module HocLegacy
   class TutorialLauncher < Services::Base
     include SessionManageable
 
-    attr_reader :controller, :tutorial, :company, :track_learn
+    attr_reader :controller, :tutorial, :track_learn
 
-    def initialize(controller:, tutorial:, company: nil, track_learn: false)
+    def initialize(controller:, tutorial:, track_learn: false)
       @controller = controller
       @tutorial = tutorial
-      @company = company
       @track_learn = track_learn
     end
 
@@ -22,7 +21,6 @@ module HocLegacy
         {
           referer: request.referer_site_with_port,
           tutorial: tutorial&.tutorial_id,
-          company: company,
           started_at: DateTime.now,
           started_ip: request.ip,
         }

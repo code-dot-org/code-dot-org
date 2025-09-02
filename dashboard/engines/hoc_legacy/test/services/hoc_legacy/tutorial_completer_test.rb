@@ -81,16 +81,10 @@ class HocLegacy::TutorialCompleterTest < ActiveSupport::TestCase
     end
 
     context 'when session row exists' do
-      let(:session_row) do
-        {
-          session: cookie_session_id,
-          company: session_company,
-        }
-      end
+      let(:session_row) {{session: cookie_session_id}}
 
       let!(:session_row_id) {PEGASUS_DB[:hoc_activity].insert(session_row)}
 
-      let(:session_company) {Faker::Company.unique.name}
       let(:session_row_query) {PEGASUS_DB[:hoc_activity].where(id: session_row_id)}
 
       it 'updates existing session row with finished_ip and finished_at' do
@@ -103,7 +97,6 @@ class HocLegacy::TutorialCompleterTest < ActiveSupport::TestCase
         _complete_tutorial.must_be_instance_of Hash
         _(complete_tutorial[:id]).must_equal session_row_id
         _(complete_tutorial[:session]).must_equal cookie_session_id
-        _(complete_tutorial[:company]).must_equal session_company
         _(complete_tutorial[:finished_ip]).must_equal request_ip
         _(complete_tutorial[:finished_at]).must_equal current_time
       end

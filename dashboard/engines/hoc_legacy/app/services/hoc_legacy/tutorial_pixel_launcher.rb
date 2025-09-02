@@ -4,12 +4,11 @@ module HocLegacy
   class TutorialPixelLauncher < Services::Base
     include SessionManageable
 
-    attr_reader :controller, :tutorial, :company
+    attr_reader :controller, :tutorial
 
-    def initialize(controller:, tutorial:, company: nil)
+    def initialize(controller:, tutorial:)
       @controller = controller
       @tutorial = tutorial
-      @company = company
     end
 
     def call
@@ -25,7 +24,6 @@ module HocLegacy
           {
             referer: request.host_with_port,
             tutorial: tutorial&.tutorial_id,
-            company: company,
             pixel_started_at: DateTime.now,
             pixel_started_ip: request.ip,
           }

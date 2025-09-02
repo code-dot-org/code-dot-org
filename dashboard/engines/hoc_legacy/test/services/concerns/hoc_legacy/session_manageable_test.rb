@@ -55,14 +55,12 @@ class HocLegacy::SessionManageableTest < ActiveSupport::TestCase
     let(:weight) {2.0}
     let(:row_referer) {'expected_referer'}
     let(:row_tutorial) {'expected_tutorial_code'}
-    let(:row_company) {'expected_company'}
     let(:row_started_at) {DateTime.now}
     let(:row_started_ip) {'expected_ip'}
     let(:session_row) do
       {
         referer: row_referer,
         tutorial: row_tutorial,
-        company: row_company,
         started_at: row_started_at,
         started_ip: row_started_ip
       }
@@ -87,7 +85,6 @@ class HocLegacy::SessionManageableTest < ActiveSupport::TestCase
 
       _(create_session_row[:referer]).must_equal row_referer
       _(create_session_row[:tutorial]).must_equal row_tutorial
-      _(create_session_row[:company]).must_equal row_company
       _(create_session_row[:started_at]).must_equal row_started_at
       _(create_session_row[:started_ip]).must_equal row_started_ip
 

@@ -7,8 +7,6 @@ class HocLegacy::TutorialApiTest < ActionDispatch::IntegrationTest
 
   let(:tutorial_code) {'poem_art'}
   let(:encoded_tutorial_code) {CGI.escape(Base64.urlsafe_encode64(tutorial_code))}
-  let(:param_company) {'param_company'}
-  let!(:cookie_company) {cookies[:company] = 'cookie_company'}
   let(:student_name) {'Student Name'}
 
   setup do
@@ -24,28 +22,16 @@ class HocLegacy::TutorialApiTest < ActionDispatch::IntegrationTest
   before do
     allow(DCDO).to receive(:get).and_call_original
     allow(DCDO).to receive(:get).with('hoc_apis_in_dashboard', false).and_return(true)
-
-    PEGASUS_DB[:forms].insert(
-      kind: 'CompanyProfile',
-      name: param_company,
-      secret: SecureRandom.hex,
-      email: Faker::Internet.unique.email,
-      data: {}.to_json,
-      created_ip: Faker::Internet.unique.ip_v4_address,
-      updated_ip: Faker::Internet.unique.ip_v4_address,
-      created_at: Time.now,
-      updated_at: Time.now,
-    )
   end
 
-  it 'has expected basic flow from begin to finish with company from params' do
-    VCR.use_cassette('hoc_legacy/tutorial_api/basic_flow_with_company_param') do
-      get "/api/hour/begin/#{tutorial_code}", params: {company: param_company}
+  it 'has expected basic flow from begin to finish' do
+    VCR.use_cassette('hoc_legacy/tutorial_api/basic_flow') do
+      get "/api/hour/begin/#{tutorial_code}"
       must_redirect_to 'https://code.org/poetry'
       _(cookies[HocLegacy::HOC_COOKIE_KEY]).wont_be_nil
       _(PEGASUS_DB[:hoc_activity].where(session: cookies[HocLegacy::HOC_COOKIE_KEY]).count).must_equal 1
 
-      get "/api/hour/begin_#{tutorial_code}.png", params: {company: param_company}
+      get "/api/hour/begin_#{tutorial_code}.png"
       must_respond_with :success
       _(response.media_type).must_equal 'image/png'
       _(response.headers["Content-Disposition"]).must_equal %q[inline; filename="1x1.png"; filename*=UTF-8''1x1.png]
@@ -56,7 +42,7 @@ class HocLegacy::TutorialApiTest < ActionDispatch::IntegrationTest
       _(response.headers["Content-Disposition"]).must_equal %q[inline; filename="1x1.png"; filename*=UTF-8''1x1.png]
 
       get "/api/hour/finish/#{tutorial_code}"
-      must_redirect_to "https://test-studio.code.org/congrats?co=#{param_company}&i=#{cookies[HocLegacy::HOC_COOKIE_KEY]}&s=#{encoded_tutorial_code}"
+      must_redirect_to "https://test-studio.code.org/congrats?i=#{cookies[HocLegacy::HOC_COOKIE_KEY]}&s=#{encoded_tutorial_code}"
 
       post '/api/hour/certificate', params: {session_s: cookies[HocLegacy::HOC_COOKIE_KEY], name_s: student_name}
       must_respond_with :success
@@ -64,7 +50,7 @@ class HocLegacy::TutorialApiTest < ActionDispatch::IntegrationTest
         {
           'session'          => cookies[HocLegacy::HOC_COOKIE_KEY],
           'tutorial'         => tutorial_code,
-          'company'          => param_company,
+          'company'          => nil,
           'started'          => true,
           'pixel_started'    => true,
           'pixel_finished'   => true,
@@ -76,20 +62,20 @@ class HocLegacy::TutorialApiTest < ActionDispatch::IntegrationTest
     end
   end
 
-  it 'has expected basic flow from begin to finish_current with company from params' do
+  it 'has expected basic flow from begin to finish_current' do
     VCR.use_cassette('hoc_legacy/tutorial_api/basic_flow_with_finish_current') do
-      get "/api/hour/begin/#{tutorial_code}", params: {company: param_company}
+      get "/api/hour/begin/#{tutorial_code}"
       must_redirect_to 'https://code.org/poetry'
       _(cookies[HocLegacy::HOC_COOKIE_KEY]).wont_be_nil
 
-      get "/api/hour/begin_#{tutorial_code}.png", params: {company: param_company}
+      get "/api/hour/begin_#{tutorial_code}.png"
       must_respond_with :success
 
       get "/api/hour/finish_#{tutorial_code}.png"
       must_respond_with :success
 
       get '/api/hour/finish'
-      must_redirect_to "https://test-studio.code.org/congrats?co=#{param_company}&i=#{cookies[HocLegacy::HOC_COOKIE_KEY]}"
+      must_redirect_to "https://test-studio.code.org/congrats?i=#{cookies[HocLegacy::HOC_COOKIE_KEY]}"
 
       post '/api/hour/certificate', params: {session_s: cookies[HocLegacy::HOC_COOKIE_KEY], name_s: student_name}
       must_respond_with :success
@@ -97,7 +83,7 @@ class HocLegacy::TutorialApiTest < ActionDispatch::IntegrationTest
         {
           'session'          => cookies[HocLegacy::HOC_COOKIE_KEY],
           'tutorial'         => tutorial_code,
-          'company'          => param_company,
+          'company'          => nil,
           'started'          => true,
           'pixel_started'    => true,
           'pixel_finished'   => true,
@@ -106,54 +92,6 @@ class HocLegacy::TutorialApiTest < ActionDispatch::IntegrationTest
           'certificate_sent' => true,
         }
       )
-    end
-  end
-
-  context 'when no company provided in params' do
-    before do
-      PEGASUS_DB[:forms].insert(
-        kind: 'CompanyProfile',
-        name: cookie_company,
-        secret: SecureRandom.hex,
-        email: Faker::Internet.unique.email,
-        data: {}.to_json,
-        created_ip: Faker::Internet.unique.ip_v4_address,
-        updated_ip: Faker::Internet.unique.ip_v4_address,
-        created_at: Time.now,
-        updated_at: Time.now,
-      )
-    end
-
-    it 'has expected basic flow from begin to finish with company from cookie' do
-      VCR.use_cassette('hoc_legacy/tutorial_api/basic_flow_with_company_cookie') do
-        get "/api/hour/begin/#{tutorial_code}"
-        must_redirect_to 'https://code.org/poetry'
-
-        get "/api/hour/begin_#{tutorial_code}.png"
-        must_respond_with :success
-
-        get "/api/hour/finish_#{tutorial_code}.png"
-        must_respond_with :success
-
-        get "/api/hour/finish/#{tutorial_code}"
-        must_redirect_to "https://test-studio.code.org/congrats?co=#{cookie_company}&i=#{cookies[HocLegacy::HOC_COOKIE_KEY]}&s=#{encoded_tutorial_code}"
-
-        post '/api/hour/certificate', params: {session_s: cookies[HocLegacy::HOC_COOKIE_KEY], name_s: student_name}
-        must_respond_with :success
-        _(json_response).must_equal(
-          {
-            'session'          => cookies[HocLegacy::HOC_COOKIE_KEY],
-            'tutorial'         => tutorial_code,
-            'company'          => cookie_company,
-            'started'          => true,
-            'pixel_started'    => true,
-            'pixel_finished'   => true,
-            'finished'         => true,
-            'name'             => student_name,
-            'certificate_sent' => true,
-          }
-        )
-      end
     end
   end
 
@@ -164,10 +102,10 @@ class HocLegacy::TutorialApiTest < ActionDispatch::IntegrationTest
 
     it 'has expected basic flow from begin to finish without activity tracking' do
       VCR.use_cassette('hoc_legacy/tutorial_api/basic_flow_without_activity_tracking') do
-        get "/api/hour/begin/#{tutorial_code}", params: {company: param_company}
+        get "/api/hour/begin/#{tutorial_code}"
         must_redirect_to 'https://code.org/poetry'
 
-        get "/api/hour/begin_#{tutorial_code}.png", params: {company: param_company}
+        get "/api/hour/begin_#{tutorial_code}.png"
         must_respond_with :success
         _(response.media_type).must_equal 'image/png'
         _(response.headers["Content-Disposition"]).must_equal %q[inline; filename="1x1.png"; filename*=UTF-8''1x1.png]

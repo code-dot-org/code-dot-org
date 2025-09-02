@@ -5,7 +5,7 @@ require 'test_helper'
 class HocLegacy::TutorialPixelLauncherTest < ActiveSupport::TestCase
   include Minitest::RSpecMocks
 
-  let(:described_instance) {described_class.new(controller:, tutorial:, company:)}
+  let(:described_instance) {described_class.new(controller:, tutorial:)}
 
   let(:request) {ActionDispatch::TestRequest.create}
   let(:response) {ActionDispatch::TestResponse.new}
@@ -17,7 +17,6 @@ class HocLegacy::TutorialPixelLauncherTest < ActiveSupport::TestCase
   end
   let(:tutorial_code) {'tutorial_code'}
   let(:tutorial) {OpenStruct.new(tutorial_id: tutorial_code)}
-  let(:company) {'test_company'}
 
   describe 'class' do
     it 'includes SessionManageable concern' do
@@ -56,7 +55,6 @@ class HocLegacy::TutorialPixelLauncherTest < ActiveSupport::TestCase
       expect(described_instance).to have_received(:create_session_row).with(
         referer: request_host_with_port,
         tutorial: tutorial_code,
-        company: company,
         pixel_started_at: current_time,
         pixel_started_ip: request_ip,
       ).once
@@ -79,7 +77,6 @@ class HocLegacy::TutorialPixelLauncherTest < ActiveSupport::TestCase
         PEGASUS_DB[:hoc_activity].insert(
           session: cookie_session_id,
           tutorial: tutorial_code,
-          company: company,
           referer: request_host_with_port,
           pixel_started_ip: nil,
           pixel_started_at: nil,

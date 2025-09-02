@@ -16,14 +16,7 @@ module HocLegacy
       tutorial_url = @tutorial.primary_link_ref&.primary_target
       return head :not_found if tutorial_url.blank?
 
-      if activity_tracking_enabled?
-        # set company to nil if not a valid company
-        company = params[:company].presence || request.cookies['company']
-        # Pass through the company param to the congrats page only if an entry exists in the forms.
-        company = nil if company.present? && !PEGASUS_DB[:forms].where(kind: 'CompanyProfile', name: company).first
-
-        TutorialLauncher.call(controller: self, tutorial: @tutorial, company: company)
-      end
+      TutorialLauncher.call(controller: self, tutorial: @tutorial) if activity_tracking_enabled?
 
       # If the tutorial_url is a relative path, make it absolute by prepending code.org
       tutorial_url = CDO.code_org_url(tutorial_url, CDO.default_scheme) if tutorial_url.starts_with?('/')
@@ -33,7 +26,7 @@ module HocLegacy
 
     # GET /api/hour/begin_:code.png
     def begin_pixel
-      TutorialPixelLauncher.call(controller: self, tutorial: @tutorial, company: params[:company]) if activity_tracking_enabled?
+      TutorialPixelLauncher.call(controller: self, tutorial: @tutorial) if activity_tracking_enabled?
       send_pixel_png
     end
 
@@ -105,7 +98,6 @@ module HocLegacy
       congrats_url_params = {}
 
       congrats_url_params[:i]  = session_row[:session] if session_row.try(:[], :session).present?
-      congrats_url_params[:co] = session_row[:company] if session_row.try(:[], :company).present?
       congrats_url_params[:s]  = Base64.urlsafe_encode64(@tutorial.tutorial_id) if @tutorial
 
       redirect_to main_app.congrats_url(congrats_url_params), status: :found

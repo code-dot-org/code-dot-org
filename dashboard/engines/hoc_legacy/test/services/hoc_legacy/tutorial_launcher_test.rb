@@ -5,7 +5,7 @@ require 'test_helper'
 class HocLegacy::TutorialLauncherTest < ActiveSupport::TestCase
   include Minitest::RSpecMocks
 
-  let(:described_instance) {described_class.new(controller:, tutorial:, company:)}
+  let(:described_instance) {described_class.new(controller:, tutorial:)}
 
   let(:request) {ActionDispatch::TestRequest.create}
   let(:response) {ActionDispatch::TestResponse.new}
@@ -17,7 +17,6 @@ class HocLegacy::TutorialLauncherTest < ActiveSupport::TestCase
   end
   let(:tutorial_code) {'tutorial_code'}
   let(:tutorial) {OpenStruct.new(tutorial_id: tutorial_code)}
-  let(:company) {'test_company'}
 
   let(:dcdo_hoc_learn_activity_sample_weight) {2}
   let(:request_ip) {Faker::Internet.unique.ip_v4_address}
@@ -60,7 +59,6 @@ class HocLegacy::TutorialLauncherTest < ActiveSupport::TestCase
         {
           referer: referer_site_with_port,
           tutorial: tutorial_code,
-          company: company,
           started_at: current_time,
           started_ip: request_ip
         }

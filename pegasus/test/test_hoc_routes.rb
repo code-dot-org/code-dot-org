@@ -352,7 +352,7 @@ class HocRoutesTest < Minitest::Test
       end
 
       it 'redirects to studio when starting tutorial' do
-        api_request_path = '/api/hour/begin/mc?company=test_company'
+        api_request_path = '/api/hour/begin/mc?test_param=1'
 
         @pegasus.expects(:launch_tutorial).never
 
@@ -385,7 +385,7 @@ class HocRoutesTest < Minitest::Test
       end
 
       it 'redirects to studio when starting tutorial with png image' do
-        api_request_path = '/api/hour/begin_mc.png?company=test_company'
+        api_request_path = '/api/hour/begin_mc.png'
 
         @pegasus.expects(:launch_tutorial_pixel).never
 
@@ -396,7 +396,7 @@ class HocRoutesTest < Minitest::Test
       end
 
       it 'redirects to studio when ending tutorial with png image' do
-        api_request_path = '/api/hour/finish_mc.png?company=test_company'
+        api_request_path = '/api/hour/finish_mc.png'
 
         @pegasus.expects(:complete_tutorial_pixel).never
 

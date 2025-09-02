@@ -10,7 +10,7 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
   end
 
   describe 'GET /api/hour/begin/:code' do
-    subject(:begin_tutorial_request) {get "/api/hour/begin/#{tutorial_code}?company=#{params_company}"}
+    subject(:begin_tutorial_request) {get "/api/hour/begin/#{tutorial_code}"}
 
     let(:tutorial_code) {'tutorial_code'}
     let(:tutorial_url) {'https://studio.code.org/expected/tutorial_url'}
@@ -19,31 +19,18 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
 
     let(:pegasus_db_mock) {double(:pegasus_db)}
     let(:forms_table_mock) {double(:forms_table)}
-    let(:cookie_company) {'cookie_company'}
-    let(:params_company) {'params_company'}
-    let(:cookie_company_form) {'cookie_company_form'}
-    let(:params_company_form) {'params_company_form'}
 
     before do
-      cookies[:company] = cookie_company
-
       allow(DCDO).to receive(:get).with('hoc_apis_in_dashboard', anything).and_return(true)
 
       allow(CdoContentful::CsForAll::Entry::Tutorial).to receive(:find_by_tutorial_id)
       allow(CdoContentful::CsForAll::Entry::Tutorial).to receive(:find_by_tutorial_id).with(tutorial_code).and_return(tutorial)
       allow(HocLegacy::TutorialLauncher).to receive(:call)
-
-      stub_const('PEGASUS_DB', pegasus_db_mock)
-      allow(pegasus_db_mock).to receive(:[]).with(:forms).and_return(forms_table_mock)
-      allow(forms_table_mock).to receive(:where).and_return([])
-      allow(forms_table_mock).to receive(:where).with(kind: 'CompanyProfile', name: cookie_company).and_return([cookie_company_form])
-      allow(forms_table_mock).to receive(:where).with(kind: 'CompanyProfile', name: params_company).and_return([params_company_form])
     end
 
-    it 'launches tutorial for company from params' do
+    it 'launches tutorial' do
       begin_tutorial_request
-      expect(HocLegacy::TutorialLauncher).to have_received(:call).
-        with(controller:, tutorial:, company: params_company).once
+      expect(HocLegacy::TutorialLauncher).to have_received(:call).with(controller:, tutorial:).once
     end
 
     it 'disables caching' do
@@ -97,36 +84,6 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
       end
     end
 
-    context 'without company param' do
-      let(:params_company) {nil}
-
-      it 'launches tutorial for company from cookies' do
-        begin_tutorial_request
-        expect(HocLegacy::TutorialLauncher).to have_received(:call).
-          with(controller:, tutorial:, company: cookie_company).once
-      end
-
-      context 'when requested company has no CompanyProfile form' do
-        let(:cookie_company_form) {nil}
-
-        it 'launches tutorial without company' do
-          begin_tutorial_request
-          expect(HocLegacy::TutorialLauncher).to have_received(:call).
-            with(controller:, tutorial:, company: nil).once
-        end
-      end
-    end
-
-    context 'when requested company has no CompanyProfile form' do
-      let(:params_company_form) {nil}
-
-      it 'launches tutorial without company' do
-        begin_tutorial_request
-        expect(HocLegacy::TutorialLauncher).to have_received(:call).
-          with(controller:, tutorial:, company: nil).once
-      end
-    end
-
     context 'when DCDO hoc_apis_in_dashboard is false' do
       before do
         allow(DCDO).to receive(:get).with('hoc_apis_in_dashboard', anything).and_return(false)
@@ -151,9 +108,8 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
   end
 
   describe 'GET /api/hour/begin_:code.png' do
-    subject(:begin_tutorial_pixel_request) {get "/api/hour/begin_#{tutorial_code}.png?company=#{company}"}
+    subject(:begin_tutorial_pixel_request) {get "/api/hour/begin_#{tutorial_code}.png"}
 
-    let(:company) {'expected_company'}
     let(:tutorial_code) {'tutorial_code'}
     let(:tutorial) {OpenStruct.new(tutorial_id: tutorial_code)}
 
@@ -164,9 +120,9 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
       allow(HocLegacy::TutorialPixelLauncher).to receive(:call)
     end
 
-    it 'launches tutorial pixel for company from params' do
+    it 'launches tutorial pixel' do
       begin_tutorial_pixel_request
-      expect(HocLegacy::TutorialPixelLauncher).to have_received(:call).with(controller:, tutorial:, company:,).once
+      expect(HocLegacy::TutorialPixelLauncher).to have_received(:call).with(controller:, tutorial:).once
     end
 
     it 'sends pixel png file' do
@@ -225,8 +181,7 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
     subject(:finish_current_tutorial_request) {get '/api/hour/finish'}
 
     let(:session_id) {Faker::Internet.unique.uuid}
-    let(:session_company) {'session_company'}
-    let(:session_row) {{session: session_id, company: session_company}}
+    let(:session_row) {{session: session_id}}
 
     before do
       allow(DCDO).to receive(:get).with('hoc_apis_in_dashboard', anything).and_return(true)
@@ -242,7 +197,7 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
       finish_current_tutorial_request
 
       must_respond_with :found
-      must_redirect_to "https://test-studio.code.org/congrats?co=#{session_company}&i=#{session_id}"
+      must_redirect_to "https://test-studio.code.org/congrats?i=#{session_id}"
     end
 
     it 'disables caching' do
@@ -294,8 +249,7 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
     let(:tutorial) {OpenStruct.new(tutorial_id: tutorial_code)}
 
     let(:session_id) {Faker::Internet.unique.uuid}
-    let(:session_company) {'session_company'}
-    let(:session_row) {{session: session_id, company: session_company}}
+    let(:session_row) {{session: session_id}}
 
     before do
       allow(DCDO).to receive(:get).with('hoc_apis_in_dashboard', anything).and_return(true)
@@ -315,7 +269,7 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
 
       must_respond_with :found
       must_redirect_to(
-        "https://test-studio.code.org/congrats?co=#{session_company}&i=#{session_id}&s=#{encoded_tutorial_code}"
+        "https://test-studio.code.org/congrats?i=#{session_id}&s=#{encoded_tutorial_code}"
       )
     end
 
@@ -382,7 +336,7 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
       allow(HocLegacy::TutorialPixelCompleter).to receive(:call)
     end
 
-    it 'launches tutorial pixel for company from params' do
+    it 'launches tutorial pixel' do
       finish_tutorial_pixel_request
       expect(HocLegacy::TutorialPixelCompleter).to have_received(:call).with(controller:, tutorial:).once
     end
@@ -417,7 +371,7 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
         allow(DCDO).to receive(:get).with('hoc_apis_in_dashboard', anything).and_return(false)
       end
 
-      it 'does not launch tutorial pixel for company from params' do
+      it 'does not launch tutorial pixel' do
         finish_tutorial_pixel_request
         expect(HocLegacy::TutorialPixelCompleter).not_to have_received(:call)
       end
