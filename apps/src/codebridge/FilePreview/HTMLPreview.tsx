@@ -7,7 +7,9 @@ import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import {isPredictResponseSubmitted} from '@cdo/apps/lab2/redux/predictLevelRedux';
 import {getLabViewPageAction, LifecycleEvent} from '@cdo/apps/lab2/utils';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {setViewMode} from '@cdo/apps/weblab2/redux';
+import {ViewMode} from '@cdo/apps/weblab2/types';
 
 import {
   IframeMessageType,
@@ -65,6 +67,8 @@ export const HTMLPreview: React.FC = () => {
   const canNavigateForward =
     navigationHistoryIndex < navigationHistory.length - 1;
 
+  const dispatch = useAppDispatch();
+
   const handleUrlSubmit = (newInputValue: string) => {
     setCurrentFile(newInputValue);
     iframeRef.current?.contentWindow?.postMessage(
@@ -111,7 +115,7 @@ export const HTMLPreview: React.FC = () => {
 
   const onMaximize = () => {
     console.log('onMaximize');
-    setPreviewViewMode(PreviewViewMode.MAXIMIZED);
+    dispatch(setViewMode(ViewMode.MAXIMIZED));
   };
 
   const addToNavigationHistory = (
