@@ -83,9 +83,8 @@ const Notification: React.FC<{
         <ol className={styles.links}>
           {notificationOrPlaceholder.hrefLinks?.length > 0 &&
             notificationOrPlaceholder.hrefLinks.map(link => (
-              <li>
+              <li key={link.url}>
                 <a
-                  key={link.url}
                   href={link.url}
                   target="_blank"
                   rel="noreferrer noopener"
@@ -97,7 +96,7 @@ const Notification: React.FC<{
             ))}
           {notificationOrPlaceholder.aiPrompts?.length > 0 &&
             notificationOrPlaceholder.aiPrompts.map(prompt => (
-              <li>
+              <li key={prompt.prompt}>
                 <button
                   onClick={() => {}}
                   className={styles.aiButton}
