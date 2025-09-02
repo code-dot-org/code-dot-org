@@ -5,11 +5,12 @@ description 'description here'
 markdown <<MARKDOWN
 # Congratulations, you are finished!
 
-<img src="https://images.code.org/2df93307f477af0f75dc1c179d9a9a4c-image-1707852636486.30.31 AM.png" 
-     alt="Dance party characters celebrating" 
-     style="float: left; height: 350px; clear: both; margin: 0 20px 20px 0;">
+<div style="text-align: center; margin: 20px auto;">
+  <img src="https://images.code.org/2df93307f477af0f75dc1c179d9a9a4c-image-1707852636486.30.31 AM.png" 
+       alt="Dance party characters celebrating" 
+       style="height: 250px; border-radius: 10px;">
+</div>
 
-<div style="clear: both;"></div>
 <hr>
 
 ## Next Steps
@@ -20,10 +21,10 @@ markdown <<MARKDOWN
   <!-- Step 1: Certificate Card -->
   <div style="background-color: #FFFFFF; border: 2px solid #F5F7F8; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);">
     <div style="display: flex; align-items: flex-start;">
-      <span style="font-size: 30pt; font-weight: bold; color: #717171; margin-right: 15px;">1</span>
+      <span style="font-size: 30pt; font-weight: bold; color: #717171; margin-right: 15px; line-height: 1.2">1</span>
       <div style="width: 100%; text-align: left;">
         <p style="font-size: 14pt; font-weight: bold; margin: 0;">🎉 Access Your Certificate of Completion</p>
-        <p style="font-size: 14pt; margin: 15px 0;">
+        <p style="font-size: 14pt; margin: 15px 0; line-height: 1.2">
           To recognize your effort and learning, you’ll receive a personalized certificate showing your name, the title of this professional learning experience, and the total estimated hours.
         </p>
         <div style="text-align: center;">
@@ -31,10 +32,17 @@ markdown <<MARKDOWN
                alt="A blank certificate of completion" 
                style="width: 40%; border-radius: 10px; height: auto;">
         </div>
-        <p style="font-size: 14pt; margin-top: 15px;">
+        <p style="font-size: 14pt; margin-top: 15px; line-height: 1.2">
           Access your certificate by navigating to <a href="https://studio.code.org/my-professional-learning" target="blank" rel="noopener noreferrer">studio.code.org/my-professional-learning</a>. Your self-paced certificates will be in the “My Self Paced Professional Learning Courses” section in the Actions column once you have completed the self-paced experience.
         </p>
-      </div>
+        <p style="font-size: 14pt; margin-top: 15px; line-height: 1.2">We encourage you to share your certificates to social media to celebrate your success! Choose your platform of choice under "Share Your Achievement" to do so.</p>
+        <div style="text-align: center; margin: 20px auto;">
+          <img 
+            src="https://images.code.org/1743c8dbe5280205adf6cee5acbefef8-image-1756487621091.13.34 AM.png" 
+            alt="Share to social media options" 
+            style="width: 50%; border-radius: 10px;">
+        </div>
+	</div>
     </div>
   </div>
   <!-- Step 2 & 3 Cards -->
@@ -48,7 +56,7 @@ markdown <<MARKDOWN
                alt="A happiness meter survey" 
                style="width: 35%; height: auto; border-radius: 10px; margin: 0 auto 0px auto; display: block;">
           <p style="font-size: 14pt; font-weight: bold; margin: 0;">Help Us Improve</p>
-          <p style="font-size: 14pt; margin-top: 10px;">
+          <p style="font-size: 14pt; margin-top: 10px; line-height: 1.2">
             Your feedback shapes future learning experiences. Please take our short <a href="https://studio.code.org/form/selfpaced_csd_post?survey_data[module]=3" target="blank" rel="noopener noreferrer">end-of-module survey</a>.
           </p>
         </div>
@@ -63,7 +71,7 @@ markdown <<MARKDOWN
                alt="A laptop computer with code displayed on the screen" 
                style="width: 25%; height: auto; border-radius: 10px; margin: 0 auto 25px auto; display: block;">
           <p style="font-size: 14pt; font-weight: bold; margin: 0;">Get Started with Students</p>
-          <p style="font-size: 14pt; margin-top: 10px;">
+          <p style="font-size: 14pt; margin-top: 10px; line-height: 1.2">
             Ready to teach? <a href="https://support.code.org/hc/en-us/articles/115000488132-Creating-a-Classroom-Section" target="blank" rel="noopener noreferrer">Create a section</a> and assign the <a href="https://studio.code.org/s/csd3-2023" target="blank" rel="noopener noreferrer">Interactive Animations and Games</a> unit.
           </p>
         </div>

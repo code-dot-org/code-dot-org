@@ -1,0 +1,14 @@
+name 'HoAI_intro'
+title 'Review'
+description 'description here'
+
+markdown <<MARKDOWN
+<h1 style="text-align: center;"><i class="fa-solid fa-music"></i> Welcome to Music Lab: AI Session! <i class="fa-solid fa-music"></i></h1>
+
+##VIDEO PLACEHOLDER LEVEL
+
+**Main Messages in the video:** 
+- AI Hype
+- AI as a creative helper
+- Humans guide AI and make the decisions
+MARKDOWN

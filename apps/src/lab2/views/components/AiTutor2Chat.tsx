@@ -1,7 +1,7 @@
 import {Button} from '@code-dot-org/component-library/button';
 import {FontAwesomeV6IconProps} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
-import React, {useEffect} from 'react';
+import React, {useState, useEffect} from 'react';
 
 import {clearChatMessages} from '@cdo/apps/aichat/redux';
 import {
@@ -10,6 +10,9 @@ import {
   ChatButtonData,
 } from '@cdo/apps/aichat/types';
 import ChatWorkspace from '@cdo/apps/aichat/views/ChatWorkspace';
+import {queryParams} from '@cdo/apps/code-studio/utils';
+import Spinner from '@cdo/apps/sharedComponents/Spinner';
+import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
@@ -18,14 +21,26 @@ import {aiTutorModelId} from '../../ai/ai-tutor-model-id';
 
 import moduleStyles from './AiTutor2Chat.module.scss';
 
+export const fetchCustomPrompt = async (promptName: string) => {
+  const url = `https://curriculum.code.org/media/prompt-library/${promptName}.md`;
+  const response = await HttpClient.get(url);
+  return await response.text();
+};
+
 // Provide a looser system prompt that allows for more copyable code for code generation
 // if the copy code query param is set to true.
-const systemPrompt = shouldShowCopyCode
+const defaultSystemPrompt = shouldShowCopyCode
   ? `You are an AI Computer Science Tutor that supports students through scaffolded learning, metacognitive reflection, and problem-solving strategies. Target the reading age of an American 7th grader. By default, when a student asks a question, you should respond with a clarifying question, a small hint, or a reflective nudge—to help them take the next step without solving the task for them. Do not give them the whole answer directly. If the student appears frustrated, you may include syntax, code, or pseudocode. When sharing code meant to be copied into the student's solution, ask them where they think the code should be copied to, so that the student will have to think about where the code fits in the solution. If the student explicitly asks for a HINT, provide a tip that nudges them forward to take the next step. If they ask for an EXAMPLE, give a short (1–3 line) conceptual code snippet from a different context that illustrates the relevant idea without solving the actual task. If they request DOCUMENTATION, share 1–3 concise and relevant references formatted with a clear keyword, short explanation and example code. Always work within the provided instructions, student code, and question, and tailor your support to encourage confidence, independence, and thoughtful programming.`
   : `You are an AI Computer Science Tutor that supports students through scaffolded learning, metacognitive reflection, and problem-solving strategies. Target the reading age of an American 7th grader. By default, when a student asks a question, you should respond with a clarifying question, a small hint, or a reflective nudge—to help them take the next step without solving the task for them. Do not give them the answer directly. If the student appears frustrated, you may include syntax or pseudocode. If the student explicitly asks for a HINT, provide a tip that nudges them forward to take the next step. If they ask for an EXAMPLE, give a short (1–3 line) conceptual code snippet from a different context that illustrates the relevant idea without solving the actual task. If they request DOCUMENTATION, share 1–3 concise and relevant references formatted with a clear keyword, short explanation and example code. Always work within the provided instructions, student code, and question, and tailor your support to encourage confidence, independence, and thoughtful programming.`;
 
+// Optional name to retrieve custom system prompt from 'experimentation-settings' repo.
+const customPromptName =
+  typeof queryParams('aitutor-custom-prompt') === 'string'
+    ? (queryParams('aitutor-custom-prompt') as string)
+    : null;
+
 const modelParameters: ModelParameters = {
-  systemPrompt,
+  systemPrompt: defaultSystemPrompt,
   selectedModelId: aiTutorModelId,
   temperature: 0.5,
   retrievalContexts: [],
@@ -100,6 +115,35 @@ const AiTutor2Chat: React.FunctionComponent<AiTutor2ChatProps> = ({
 }) => {
   const dispatch = useAppDispatch();
 
+  const [systemPrompt, setSystemPrompt] = useState<string>();
+
+  useEffect(() => {
+    if (customPromptName) {
+      fetchCustomPrompt(customPromptName)
+        .then(prompt => {
+          if (prompt) {
+            setSystemPrompt(prompt);
+          } else {
+            setSystemPrompt(defaultSystemPrompt);
+          }
+        })
+        .catch(() => {
+          setSystemPrompt(defaultSystemPrompt);
+        });
+    } else {
+      setSystemPrompt(defaultSystemPrompt);
+    }
+  }, []);
+
+  useEffect(() => {
+    // Log which system prompt we end up using.
+    if (customPromptName) {
+      console.log(`🤖: systemPrompt: ${customPromptName}`, systemPrompt);
+    } else {
+      console.log(`🤖: systemPrompt: default`);
+    }
+  }, [systemPrompt]);
+
   useEffect(() => {
     // We currently use query params to allow AI model selection but otherwise do not provide any user
     // interface to select or see the selected model. This console log was added to give users (testers)
@@ -110,17 +154,21 @@ const AiTutor2Chat: React.FunctionComponent<AiTutor2ChatProps> = ({
     console.log('🤖: aiTutorModelId:', aiTutorModelId);
   }, []);
 
-  return (
+  return systemPrompt ? (
     <div className={moduleStyles.container}>
       <ChatWorkspace
         clientType={AiChatClientTypes.AI_TUTOR}
-        modelParameters={modelParameters}
+        modelParameters={{...modelParameters, systemPrompt}}
         chatButtons={chatButtons}
         hiddenContext={hiddenContext}
         onClear={() => {
           dispatch(clearChatMessages());
         }}
       />
+    </div>
+  ) : (
+    <div className={moduleStyles.loading}>
+      <Spinner />
     </div>
   );
 };

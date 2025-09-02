@@ -16,22 +16,22 @@ import {
   TableRow,
   TableCell,
 } from '@mui/material';
-import React from 'react';
+import React, {FC} from 'react';
 
 import {getSessionDate} from '@cdo/apps/code-studio/pd/sessionDateUtils';
 
-import {DATE_FORMAT, US_DATE_FORMAT} from '../../../workshopConstants';
-import {WorkshopData} from '../../types';
+import {DATE_FORMAT, US_DATE_FORMAT} from '../../workshopConstants';
+import {useWorkshopContext} from '../WorkshopLayout';
 
-import styles from '../../workshop.module.scss';
+import styles from '../workshop.module.scss';
 
-interface TakeAttendanceSectionProps {
-  workshop: WorkshopData;
-}
+export const WorkshopAttendance: FC = () => {
+  const {workshop} = useWorkshopContext();
 
-export const TakeAttendanceSection: React.FC<TakeAttendanceSectionProps> = ({
-  workshop,
-}) => {
+  if (!workshop) {
+    return null;
+  }
+
   return (
     <Card className={styles.card}>
       <CardHeader
@@ -94,7 +94,8 @@ export const TakeAttendanceSection: React.FC<TakeAttendanceSectionProps> = ({
                   format: DATE_FORMAT,
                   isLocal: !workshop.timeZone,
                 });
-                const attendanceUrl = `${window.origin}/pd/attend/${session.code}`;
+                const attendanceUrl = `/pd/attend/${session.code}`;
+                const attendanceUrlFull = `${window.origin}${attendanceUrl}`;
                 const rosterLabel = `Attendance for ${formattedDate}`;
                 const rosterUrl = `/pd/workshop_dashboard/workshops/${workshop.id}/attendance/${session.id}`;
 
@@ -108,7 +109,7 @@ export const TakeAttendanceSection: React.FC<TakeAttendanceSectionProps> = ({
                     <TableCell>
                       {session.showLink && (
                         <Link
-                          text={attendanceUrl}
+                          text={attendanceUrlFull}
                           href={attendanceUrl}
                           openInNewTab
                           size="xs"

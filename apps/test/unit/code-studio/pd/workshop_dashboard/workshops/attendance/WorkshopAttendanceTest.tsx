@@ -2,10 +2,25 @@ import {render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
 
-import {TakeAttendanceSection} from '@cdo/apps/code-studio/pd/workshop_dashboard/workshops/overview/sections/TakeAttendanceSection';
-import {WorkshopData} from '@cdo/apps/code-studio/pd/workshop_dashboard/workshops/types';
+import {WorkshopAttendance} from '@cdo/apps/code-studio/pd/workshop_dashboard/workshops/attendance/WorkshopAttendance';
+import {
+  WorkshopContextValue,
+  WorkshopData,
+} from '@cdo/apps/code-studio/pd/workshop_dashboard/workshops/types';
 
-describe('TakeAttendanceSection', () => {
+// Mock useWorkshopContext
+const mockUseWorkshopContext = jest.fn();
+jest.mock(
+  '@cdo/apps/code-studio/pd/workshop_dashboard/workshops/WorkshopLayout',
+  () => ({
+    ...jest.requireActual(
+      '@cdo/apps/code-studio/pd/workshop_dashboard/workshops/WorkshopLayout'
+    ),
+    useWorkshopContext: () => mockUseWorkshopContext(),
+  })
+);
+
+describe('WorkshopAttendance', () => {
   const createTestWorkshop = (
     overrides: Partial<WorkshopData> = {}
   ): WorkshopData => ({
@@ -59,15 +74,27 @@ describe('TakeAttendanceSection', () => {
     ...overrides,
   });
 
-  const renderDefault = (workshop: WorkshopData) => {
-    return render(<TakeAttendanceSection workshop={workshop} />);
-  };
+  const createMockContext = (
+    overrides: Partial<WorkshopContextValue> = {}
+  ): WorkshopContextValue =>
+    ({
+      workshop: createTestWorkshop(),
+      ...overrides,
+    } as WorkshopContextValue);
 
+  const renderWithContext = (
+    contextOverrides: Partial<WorkshopContextValue> = {}
+  ) => {
+    const mockContext = createMockContext(contextOverrides);
+    mockUseWorkshopContext.mockReturnValue(mockContext);
+
+    return render(<WorkshopAttendance />);
+  };
   describe('rendering', () => {
     it('renders the section title correctly', () => {
       const workshop = createTestWorkshop();
 
-      renderDefault(workshop);
+      renderWithContext({workshop});
 
       expect(screen.getByText('Take Attendance')).toBeInTheDocument();
     });
@@ -75,7 +102,7 @@ describe('TakeAttendanceSection', () => {
     it('renders the instructional text', () => {
       const workshop = createTestWorkshop();
 
-      renderDefault(workshop);
+      renderWithContext({workshop});
 
       expect(
         screen.getByText(
@@ -87,7 +114,7 @@ describe('TakeAttendanceSection', () => {
     it('renders table headers correctly', () => {
       const workshop = createTestWorkshop();
 
-      renderDefault(workshop);
+      renderWithContext({workshop});
 
       expect(screen.getByText('Date')).toBeInTheDocument();
       expect(screen.getByText('Attendance URL')).toBeInTheDocument();
@@ -99,7 +126,7 @@ describe('TakeAttendanceSection', () => {
     it('renders all sessions in the table', () => {
       const workshop = createTestWorkshop();
 
-      renderDefault(workshop);
+      renderWithContext({workshop});
 
       const table = screen.getByRole('table');
       const bodyRows = table.querySelectorAll('tbody tr');
@@ -109,7 +136,7 @@ describe('TakeAttendanceSection', () => {
     it('renders session dates', () => {
       const workshop = createTestWorkshop();
 
-      renderDefault(workshop);
+      renderWithContext({workshop});
 
       const table = screen.getByRole('table');
       const bodyRows = table.querySelectorAll('tbody tr');
@@ -125,10 +152,11 @@ describe('TakeAttendanceSection', () => {
     it('renders attendance URL when showLink is true', () => {
       const workshop = createTestWorkshop();
 
-      renderDefault(workshop);
+      renderWithContext({workshop});
 
-      const attendanceUrl = `${window.origin}/pd/attend/ABCD123`;
-      expect(screen.getByText(attendanceUrl)).toBeInTheDocument();
+      const attendanceUrl = '/pd/attend/ABCD123';
+      const attendanceUrlFull = `${window.origin}${attendanceUrl}`;
+      expect(screen.getByText(attendanceUrlFull)).toBeInTheDocument();
 
       const attendanceLink = screen.getByRole('link', {
         name: /Open attendance URL for .* in new tab/,
@@ -140,7 +168,7 @@ describe('TakeAttendanceSection', () => {
     it('does not render attendance URL when showLink is false', () => {
       const workshop = createTestWorkshop();
 
-      renderDefault(workshop);
+      renderWithContext({workshop});
 
       const attendanceUrl = `${window.origin}/pd/attend/EFGH456`;
       expect(screen.queryByText(attendanceUrl)).not.toBeInTheDocument();
@@ -164,7 +192,7 @@ describe('TakeAttendanceSection', () => {
         ],
       });
 
-      renderDefault(workshop);
+      renderWithContext({workshop});
 
       expect(
         screen.getByText(`${window.origin}/pd/attend/UNIQUE123`)
@@ -176,7 +204,7 @@ describe('TakeAttendanceSection', () => {
     it('renders daily roster buttons for all sessions', () => {
       const workshop = createTestWorkshop();
 
-      renderDefault(workshop);
+      renderWithContext({workshop});
 
       const rosterButtons = screen.getAllByText(/Attendance for .*/);
       expect(rosterButtons).toHaveLength(2); // Two sessions
@@ -185,7 +213,7 @@ describe('TakeAttendanceSection', () => {
     it('generates correct roster URLs', () => {
       const workshop = createTestWorkshop();
 
-      renderDefault(workshop);
+      renderWithContext({workshop});
 
       const rosterButtons = screen.getAllByRole('link', {
         name: /View daily roster for .* in new tab/,
@@ -208,7 +236,7 @@ describe('TakeAttendanceSection', () => {
     it('has proper aria-label for the table', () => {
       const workshop = createTestWorkshop();
 
-      renderDefault(workshop);
+      renderWithContext({workshop});
 
       const table = screen.getByRole('table');
       expect(table).toHaveAttribute(
@@ -220,7 +248,7 @@ describe('TakeAttendanceSection', () => {
     it('has proper aria-labels for attendance links', () => {
       const workshop = createTestWorkshop();
 
-      renderDefault(workshop);
+      renderWithContext({workshop});
 
       const attendanceLink = screen.getByLabelText(
         /Open attendance URL for .* in new tab/
@@ -231,7 +259,7 @@ describe('TakeAttendanceSection', () => {
     it('has proper aria-labels for roster buttons', () => {
       const workshop = createTestWorkshop();
 
-      renderDefault(workshop);
+      renderWithContext({workshop});
 
       const rosterButtons = screen.getAllByLabelText(
         /View daily roster for .* in new tab/
@@ -244,7 +272,7 @@ describe('TakeAttendanceSection', () => {
     it('handles workshop with no sessions', () => {
       const workshop = createTestWorkshop({sessions: []});
 
-      renderDefault(workshop);
+      renderWithContext({workshop});
 
       expect(screen.getByText('Take Attendance')).toBeInTheDocument();
       expect(screen.getByText('Date')).toBeInTheDocument();
@@ -275,7 +303,7 @@ describe('TakeAttendanceSection', () => {
         ],
       });
 
-      renderDefault(workshop);
+      renderWithContext({workshop});
 
       const table = screen.getByRole('table');
       const rows = table.querySelectorAll('tbody tr');
@@ -301,7 +329,7 @@ describe('TakeAttendanceSection', () => {
         ],
       });
 
-      renderDefault(workshop);
+      renderWithContext({workshop});
 
       const rosterButton = screen.getByRole('link', {
         name: /View daily roster for .* in new tab/,
@@ -338,7 +366,7 @@ describe('TakeAttendanceSection', () => {
         ],
       });
 
-      renderDefault(workshop);
+      renderWithContext({workshop});
 
       expect(
         screen.getByText('https://test.code.org/pd/attend/TESTCODE')
@@ -350,7 +378,7 @@ describe('TakeAttendanceSection', () => {
     it('renders correct number of table rows for sessions', () => {
       const workshop = createTestWorkshop();
 
-      renderDefault(workshop);
+      renderWithContext({workshop});
 
       const table = screen.getByRole('table');
       const headerRows = table.querySelectorAll('thead tr');
@@ -378,7 +406,7 @@ describe('TakeAttendanceSection', () => {
         ],
       });
 
-      renderDefault(workshop);
+      renderWithContext({workshop});
 
       const table = screen.getByRole('table');
       const bodyRow = table.querySelector('tbody tr');
@@ -392,7 +420,7 @@ describe('TakeAttendanceSection', () => {
     it('handles workshop without timezone (uses local time)', () => {
       const workshop = createTestWorkshop({timeZone: null});
 
-      renderDefault(workshop);
+      renderWithContext({workshop});
 
       // Should still render the component without errors
       expect(screen.getByText('Take Attendance')).toBeInTheDocument();
@@ -406,7 +434,7 @@ describe('TakeAttendanceSection', () => {
     it('handles workshop with timezone (uses timezone conversion)', () => {
       const workshop = createTestWorkshop({timeZone: 'America/Denver'});
 
-      renderDefault(workshop);
+      renderWithContext({workshop});
 
       // Should still render the component without errors
       expect(screen.getByText('Take Attendance')).toBeInTheDocument();
@@ -449,7 +477,7 @@ describe('TakeAttendanceSection', () => {
         ],
       });
 
-      renderDefault(workshop);
+      renderWithContext({workshop});
 
       // First session should show attendance URL
       expect(
@@ -486,7 +514,7 @@ describe('TakeAttendanceSection', () => {
         ],
       });
 
-      expect(() => renderDefault(workshop)).not.toThrow();
+      expect(() => renderWithContext({workshop})).not.toThrow();
     });
 
     it('handles various session formats', () => {
@@ -507,7 +535,7 @@ describe('TakeAttendanceSection', () => {
         ],
       });
 
-      renderDefault(workshop);
+      renderWithContext({workshop});
 
       expect(screen.getByText('Take Attendance')).toBeInTheDocument();
       expect(

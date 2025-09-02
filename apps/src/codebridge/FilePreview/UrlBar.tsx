@@ -10,20 +10,30 @@ import moduleStyles from './styles/url-bar.module.scss';
 interface UrlBarProps {
   value: string;
   onChange: (value: string) => void;
+  onSubmit: (value: string) => void;
   canNavigateBack: boolean;
   canNavigateForward: boolean;
   onNavigateBack: () => void;
   onNavigateForward: () => void;
+  onRefresh: () => void;
 }
 
 export const UrlBar: React.FC<UrlBarProps> = ({
   value,
   onChange,
+  onSubmit,
   canNavigateBack,
   canNavigateForward,
   onNavigateBack,
   onNavigateForward,
+  onRefresh,
 }) => {
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter') {
+      onSubmit(value);
+    }
+  };
+
   return (
     <div className={moduleStyles.urlBarContainer}>
       <div className={moduleStyles.urlBarContent}>
@@ -58,6 +68,7 @@ export const UrlBar: React.FC<UrlBarProps> = ({
         </div>
         <TextField
           onChange={e => onChange(e.target.value)}
+          onKeyDown={handleKeyDown}
           value={value}
           name={'url-input'}
           size={'s'}
@@ -70,7 +81,7 @@ export const UrlBar: React.FC<UrlBarProps> = ({
           )}
         >
           <Button
-            onClick={() => {}}
+            onClick={onRefresh}
             aria-label={weblab2I18n.refresh()}
             size="xs"
             type="tertiary"

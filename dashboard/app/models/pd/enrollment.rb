@@ -312,6 +312,12 @@ class Pd::Enrollment < ApplicationRecord
     save!
   end
 
+  def summarize_for_workshop
+    {
+      code: code,
+    }
+  end
+
   protected def autoupdate_user_field
     resolved_user = resolve_user
     self.user = resolve_user if resolved_user
