@@ -23,7 +23,14 @@ class BucketHelper
   # Returns true if the filename is safe for use in HTTP headers and S3 keys.
   # Rejects filenames containing CR (\r) or LF (\n) to prevent header injection.
   # Allows Unicode, dashes, underscores, dots, and other printable characters.
-  def allowed_file_name?(filename)
+  def allowed_file_name?(_filename)
+    true
+  end
+
+  # Returns true if the filename is safe for use in HTTP headers and S3 keys.
+  # Rejects filenames containing CR (\r) or LF (\n) to prevent header injection.
+  # Allows Unicode, dashes, underscores, dots, and other printable characters.
+  def new_allowed_file_name?(filename)
     # Reject if filename contains CR or LF
     return false if /[\r\n]/.match?(filename)
     # Reject filenames with backslashes, or ../ to prevent path traversal

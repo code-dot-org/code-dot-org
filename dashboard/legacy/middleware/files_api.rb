@@ -86,6 +86,24 @@ class FilesApi < Sinatra::Base
     forbidden
   end
 
+  # Log filename validation failures for monitoring unsafe filename attempts
+  def report_filename_validation_failure(filename, endpoint, encrypted_channel_id)
+    return unless CDO.newrelic_logging
+
+    owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
+    owner_user_id = user_id_for_storage_id(owner_storage_id)
+
+    event_details = {
+      filename: filename,
+      endpoint: endpoint,
+      encrypted_channel_id: encrypted_channel_id,
+      owner_user_id: owner_user_id,
+      timestamp: Time.now.iso8601
+    }
+
+    NewRelic::Agent.record_custom_event("FilesApiFilenameValidationFailure", event_details)
+  end
+
   def record_metric(quota_event_type, quota_type, value = 1)
     return unless CDO.newrelic_logging
 
@@ -398,7 +416,9 @@ class FilesApi < Sinatra::Base
     # The Layer 1 defenses are naming conventions for most file upload routes, but for
     # Web Lab file uploads, the Layer 1 sanitization also strips out unsafe characters,
     # replacing them with dashes.
-    bad_request unless buckets.allowed_file_name?(filename)
+    unless buckets.allowed_file_name?(filename)
+      report_filename_validation_failure(filename, endpoint, encrypted_channel_id)
+    end
     if body.length >= max_file_size
       body = buckets.try_resize_file(body, file_type)
     end
@@ -749,7 +769,9 @@ class FilesApi < Sinatra::Base
     # The Layer 1 defenses are naming conventions for most file upload routes, but for
     # Web Lab file uploads, the Layer 1 sanitization also strips out unsafe characters,
     # replacing them with dashes.
-    bad_request unless bucket.allowed_file_name?(filename)
+    unless bucket.allowed_file_name?(filename)
+      report_filename_validation_failure(filename, 'files', encrypted_channel_id)
+    end
 
     unescaped_filename = CGI.unescape(filename)
     unescaped_filename_downcased = unescaped_filename.downcase
