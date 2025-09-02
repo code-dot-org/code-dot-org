@@ -39,13 +39,16 @@ $mobile-aspect-ratio: 9 / 16;
   box-sizing: border-box;
 }
 
-.nonShareViewPreviewIframeHeight {
-  height: calc(100vh - 120px); /* Account for header and some padding and ensure doesn't exceed available space */
+.levelViewPreviewIframeHeight {
+  height: calc(100vh - 120px); // Account for header and some padding
 }
 
-/* ShareView-specific styles to account for footer */
 .shareViewPreviewIframeHeight {
   height: 100%;
+}
+
+.projectViewPreviewIframeHeight {
+  height: calc(100vh - 180px); // Account for header, some padding, and footer
 }
 
 .desktopPreviewIframe{
@@ -53,7 +56,7 @@ $mobile-aspect-ratio: 9 / 16;
 }
 
 .mobilePreviewIframe{
-  aspect-ratio: $mobile-aspect-ratio; /* Mobile aspect ratio */
-  width: min(375px, 50vw); /* Standard mobile width, but responsive */
-  max-width: calc((100vh - 120px) * $mobile-aspect-ratio); /* Maintain aspect ratio when height-constrained */
+  aspect-ratio: $mobile-aspect-ratio; // Mobile aspect ratio
+  width: min(375px, 50vw); // Standard mobile width, but responsive
+  max-width: calc((100vh - 120px) * $mobile-aspect-ratio); // Maintain aspect ratio when height-constrained
 }

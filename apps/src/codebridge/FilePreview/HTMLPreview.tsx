@@ -5,7 +5,7 @@ import React, {useEffect, useMemo, useRef, useState} from 'react';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import {isPredictResponseSubmitted} from '@cdo/apps/lab2/redux/predictLevelRedux';
-import {LifecycleEvent} from '@cdo/apps/lab2/utils';
+import {getLabViewPageAction, LifecycleEvent} from '@cdo/apps/lab2/utils';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 // import weblab2I18n from '@cdo/apps/weblab2/locale';
@@ -22,14 +22,14 @@ import moduleStyles from './styles/html-preview.module.scss';
 const URL_CHANGE_DELAY_MS = 300;
 const SOURCE_CHANGE_DELAY_MS = 500;
 
-interface HTMLPreviewProps {
-  isShareView?: boolean;
-}
-
-export const HTMLPreview: React.FC<HTMLPreviewProps> = ({
-  isShareView = false,
-}) => {
-  console.log('isShareView', isShareView);
+export const HTMLPreview: React.FC = () => {
+  const pageAction = getLabViewPageAction();
+  let iframeHeightClass = 'levelViewPreviewIframeHeight';
+  if (pageAction === 'share') {
+    iframeHeightClass = 'shareViewPreviewIframeHeight';
+  } else if (pageAction === 'edit' || pageAction === 'view') {
+    iframeHeightClass = 'projectViewPreviewIframeHeight';
+  }
   const {levelProperties} = useCodebridgeContext();
   const iframeRef = useRef<HTMLIFrameElement | null>(null);
   const previewContainerRef = useRef<HTMLDivElement | null>(null);
@@ -281,11 +281,7 @@ export const HTMLPreview: React.FC<HTMLPreviewProps> = ({
             id="preview"
             className={classNames(
               moduleStyles.previewIframe,
-              moduleStyles[
-                isShareView
-                  ? 'shareViewPreviewIframeHeight'
-                  : 'nonShareViewPreviewIframeHeight'
-              ],
+              moduleStyles[iframeHeightClass],
               moduleStyles[
                 previewViewMode === PreviewViewMode.DESKTOP
                   ? 'desktopPreviewIframe'
