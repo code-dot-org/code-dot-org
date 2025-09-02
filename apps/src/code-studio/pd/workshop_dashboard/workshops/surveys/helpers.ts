@@ -1,8 +1,15 @@
-import {isQuestionType, SurveyQuestion} from '../../WorkshopFormTemplate/types';
+import {
+  isQuestionType,
+  LikertResults,
+  SurveyQuestion,
+} from '../../WorkshopFormTemplate/types';
 
 export const getQuestionDescription = (question: SurveyQuestion) => {
-  if (isQuestionType(question, 'likert')) {
-    return `${question.results.agreement_count} of ${question.results.total_responses} respondents`;
+  if (
+    isQuestionType(question, 'likert') ||
+    isQuestionType(question, 'promoter')
+  ) {
+    return `${question.results.total_responses} responses`;
   }
   if (
     isQuestionType(question, 'multiSelect') &&
@@ -18,3 +25,12 @@ export const getQuestionDescription = (question: SurveyQuestion) => {
   }
   return '';
 };
+
+export const prepLikertBreakdown = (breakdown: LikertResults['breakdown']) =>
+  Object.entries(breakdown)
+    .map(([key, value]) => ({
+      ...value,
+      className:
+        Number(key) === 4 ? 'neutral' : Number(key) > 4 ? 'success' : 'error',
+    }))
+    .reverse();

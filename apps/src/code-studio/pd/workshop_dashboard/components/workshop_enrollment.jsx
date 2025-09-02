@@ -4,16 +4,9 @@
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {Tabs, Tab} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
-
-import {
-  SubjectNames,
-  ActiveCourseWorkshops,
-} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
 import {enrollmentShape} from '../types';
 
-import WorkshopEnrollmentPreSurvey from './workshop_enrollment_pre_survey';
 import WorkshopEnrollmentSchoolInfo from './workshop_enrollment_school_info';
 
 export default class WorkshopEnrollment extends React.Component {
@@ -29,22 +22,8 @@ export default class WorkshopEnrollment extends React.Component {
     onDelete: PropTypes.func.isRequired,
     onClickSelect: PropTypes.func.isRequired,
     location: PropTypes.object,
-    activeTab: PropTypes.number,
-    onTabSelect: PropTypes.func,
     selectedEnrollments: PropTypes.array,
   };
-
-  static defaultProps = {activeTab: 0};
-
-  shouldShowPreSurveys() {
-    return (
-      Object.values(ActiveCourseWorkshops).includes(
-        this.props.workshopCourse
-      ) &&
-      this.props.workshopSubject !==
-        SubjectNames.SUBJECT_CSP_FOR_RETURNING_TEACHERS
-    );
-  }
 
   render() {
     if (this.props.enrollments.length === 0) {
@@ -69,7 +48,7 @@ export default class WorkshopEnrollment extends React.Component {
       'last_name',
       'first_name',
     ]);
-    const workshopEnrollmentSchoolInfo = (
+    return (
       <WorkshopEnrollmentSchoolInfo
         enrollments={sortedEnrollments}
         accountRequiredForAttendance={this.props.accountRequiredForAttendance}
@@ -82,27 +61,5 @@ export default class WorkshopEnrollment extends React.Component {
         selectedEnrollments={this.props.selectedEnrollments}
       />
     );
-
-    if (this.shouldShowPreSurveys()) {
-      return (
-        <Tabs
-          activeKey={this.props.activeTab}
-          onSelect={this.props.onTabSelect}
-          id="enrollment-tabs"
-        >
-          <Tab eventKey={0} title="Attendee School Info">
-            {workshopEnrollmentSchoolInfo}
-          </Tab>
-          <Tab eventKey={1} title="Attendee Pre-Survey">
-            <WorkshopEnrollmentPreSurvey
-              enrollments={sortedEnrollments}
-              workshopDate={this.props.workshopDate}
-            />
-          </Tab>
-        </Tabs>
-      );
-    } else {
-      return workshopEnrollmentSchoolInfo;
-    }
   }
 }

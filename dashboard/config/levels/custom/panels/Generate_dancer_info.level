@@ -1,0 +1,41 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-08-29T15:34:25.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "###AI can help generate new images for you!\n\nFirst, you tell the AI what to draw using words.",
+        "imageUrl": "https://images.code.org/87f7b5bc452ed85cb37e222388cb1a2c-panel1.jpg",
+        "key": "Generate_dancer_info-e349bed8-89d6-4efc-8a0e-29b8a1e5afb1"
+      },
+      {
+        "text": "The AI starts with random dots, like TV static.",
+        "imageUrl": "https://images.code.org/f93855dcede59a7539247aab2023debe-panel2.jpg",
+        "key": "Generate_dancer_info-35731f8b-92f2-4309-954a-d8481cc58b14"
+      },
+      {
+        "text": "It slowly turns the dots into shapes and colors that match your words.",
+        "imageUrl": "https://images.code.org/e14ecfde14f9d8088565355126df9fcf-panel3.jpg",
+        "key": "Generate_dancer_info-93102ee9-aa96-4429-aafb-52f8fe7fd787"
+      },
+      {
+        "text": "In the end, you get a brand-new picture based on your imagination.\n\nYou choose to accept the image, have AI try again or make a new prompt. ",
+        "imageUrl": "https://images.code.org/0951953f2ae3fd2332f79871f61d8a10-panel4.jpg",
+        "key": "Generate_dancer_info-07287924-c7c1-45c4-86e6-1dc2621827a0"
+      },
+      {
+        "text": "***To come...\nInfo that explains how the dance generation tool works.***",
+        "imageUrl": "",
+        "key": "Generate_dancer_info-8ecdd906-47ef-4f42-b3cd-b9874b884c51"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2025-08-29 15:59:15 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-29 16:00:05 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

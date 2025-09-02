@@ -1,6 +1,8 @@
 import Button, {buttonColors} from '@code-dot-org/component-library/button';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {OverlineThreeText} from '@code-dot-org/component-library/typography';
 import {Box, List, ListItem, ListItemButton, ListItemText} from '@mui/material';
+import classNames from 'classnames';
 import React from 'react';
 
 import {commonI18n} from '@cdo/apps/types/locale';
@@ -15,6 +17,7 @@ interface AiDiffSidebarProps {
   selectedThreadId?: number;
   threadSelectCallback?: (thread: number) => void;
   setShowNotifications: (show: boolean) => void;
+  showNotifications: boolean;
 }
 
 const now = new Date();
@@ -25,8 +28,6 @@ const thirtyDaysAgo = new Date(now);
 thirtyDaysAgo.setDate(now.getDate() - 30);
 const lastYear = new Date(now);
 lastYear.setFullYear(now.getFullYear() - 1);
-
-const drawerWidth = 240;
 
 const ThreadItem: React.FC<{
   chat: ChatThread;
@@ -62,6 +63,7 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
   selectedThreadId,
   threadSelectCallback = () => {},
   setShowNotifications,
+  showNotifications,
 }) => {
   const handleListItemClick = (chatId: number) => {
     setShowNotifications(false);
@@ -90,7 +92,7 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
     <aside className={styles.sidebarContainer}>
       <Box
         component="nav"
-        sx={{width: {sm: drawerWidth}, flexShrink: {sm: 0}}}
+        sx={{width: {sm: '100%'}, flexShrink: {sm: 0}}}
         aria-label="AI differentiation chat threads"
         className={styles.sidebarBox}
       >
@@ -107,15 +109,16 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
           className={styles.sidebarButton}
         />
         {experiments.isEnabled('teacher-notifications') && (
-          <Button
-            color={buttonColors.white}
-            size="m"
-            type="secondary"
-            iconLeft={{iconName: 'bell'}}
+          <button
             onClick={() => setShowNotifications(true)}
-            text={commonI18n.notifications()}
-            className={styles.sidebarButton}
-          />
+            className={classNames(styles.notificationsButton, {
+              [styles.selected]: showNotifications,
+            })}
+            type="button"
+          >
+            <FontAwesomeV6Icon iconName="bell" />
+            <span>{commonI18n.notifications()}</span>
+          </button>
         )}
         <div className={styles.sidebarContent}>
           <List disablePadding={true}>
@@ -128,7 +131,9 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
                   <ThreadItem
                     key={chat.id}
                     chat={chat}
-                    selected={chat.id === selectedThreadId}
+                    selected={
+                      !showNotifications && chat.id === selectedThreadId
+                    }
                     onClick={() => handleListItemClick(chat.id)}
                   />
                 ))}
@@ -143,7 +148,9 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
                   <ThreadItem
                     key={chat.id}
                     chat={chat}
-                    selected={chat.id === selectedThreadId}
+                    selected={
+                      !showNotifications && chat.id === selectedThreadId
+                    }
                     onClick={() => handleListItemClick(chat.id)}
                   />
                 ))}
@@ -158,7 +165,9 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
                   <ThreadItem
                     key={chat.id}
                     chat={chat}
-                    selected={chat.id === selectedThreadId}
+                    selected={
+                      !showNotifications && chat.id === selectedThreadId
+                    }
                     onClick={() => handleListItemClick(chat.id)}
                   />
                 ))}
@@ -173,7 +182,9 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
                   <ThreadItem
                     key={chat.id}
                     chat={chat}
-                    selected={chat.id === selectedThreadId}
+                    selected={
+                      !showNotifications && chat.id === selectedThreadId
+                    }
                     onClick={() => handleListItemClick(chat.id)}
                   />
                 ))}

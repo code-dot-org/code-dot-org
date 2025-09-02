@@ -10,7 +10,7 @@ import {useWorkshopContext} from '../../../WorkshopLayout';
 import {FreeResponseCard} from '../../components/FreeResponseCard';
 import {ScoreCard} from '../../components/ScoreCard';
 import {LIKERT_QUESTION_FOOTER, MIN_RESPONSE_COUNT} from '../../constants';
-import {getQuestionDescription} from '../../helpers';
+import {getQuestionDescription, prepLikertBreakdown} from '../../helpers';
 
 import styles from '../../../workshop.module.scss';
 
@@ -65,11 +65,14 @@ export const FacilitatorFeedback = () => {
               <ScoreCard
                 key={question.question_name}
                 title={question.question_short_text ?? question.question_text}
+                longTitle={question.question_text}
                 description={getQuestionDescription(question)}
+                questionType={question.question_type}
                 footer={LIKERT_QUESTION_FOOTER}
                 score={question.results.weighted_score}
                 responseCount={question.results.total_responses}
                 minResponseCount={MIN_RESPONSE_COUNT}
+                breakdown={prepLikertBreakdown(question.results.breakdown)}
               />
             ) : null
           )}
