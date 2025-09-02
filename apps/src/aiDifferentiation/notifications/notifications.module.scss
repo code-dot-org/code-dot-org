@@ -69,12 +69,29 @@ p.text {
 
 .links {
   margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 4px;
+  column-gap: 8px;
+
   & li {
-    margin-top: 4px;
     list-style-type: none;
-    & i {
-      margin-inline-start: 4px;
-    }
+  }
+}
+
+.hrefLink {
+  border: 1px solid var(--borders-neutral-strong);
+  border-radius: 4px;
+  padding: 0 8px;
+  font-size: 12px;
+  color: var(--text-neutral-black-fixed);
+  display: flex;
+  align-items: center;
+  height: 24px;
+  font-weight: 600;
+
+  & i {
+    margin-inline-start: 4px;
   }
 }
 
@@ -85,6 +102,7 @@ p.text {
   background-color: var(--background-neutral-primary);
   border: 1px solid var(--borders-neutral-solid);
   border-radius: 100px;
+  font-weight: 600;
 }
 
 p.date {

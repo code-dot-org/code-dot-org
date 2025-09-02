@@ -89,13 +89,9 @@ const Notification: React.FC<{
                   href={link.url}
                   target="_blank"
                   rel="noreferrer noopener"
-                  className={styles.link}
+                  className={styles.hrefLink}
                 >
                   {link.text}
-                  <FontAwesomeV6Icon
-                    iconName="arrow-up-right-from-square"
-                    className={styles.externalLinkIcon}
-                  />
                 </a>
               </li>
             ))}
