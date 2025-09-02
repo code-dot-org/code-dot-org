@@ -20,7 +20,7 @@ const StartOverDialog: React.FC<StartOverDialogProps> = ({
 }) => (
   <Modal
     title={commonI18n.startOverTitle()}
-    customContent={
+    description={
       type === 'text'
         ? commonI18n.startOverWorkspaceText()
         : type === 'blocks'
