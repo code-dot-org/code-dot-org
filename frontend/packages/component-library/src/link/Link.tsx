@@ -74,11 +74,7 @@ const Link: React.FunctionComponent<LinkProps> = ({
   ...HTMLAttributes
 }) => {
   // Determine if link is external: use external prop if provided, otherwise auto-detect
-  let isExternal = external !== undefined ? external : false;
-
-  if (external === undefined) {
-    isExternal = isExternalUrl(href);
-  }
+  const isExternal = external !== undefined ? external : isExternalUrl(href);
 
   return (
     <a
