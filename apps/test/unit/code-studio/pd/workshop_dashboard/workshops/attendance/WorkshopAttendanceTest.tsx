@@ -154,8 +154,9 @@ describe('WorkshopAttendance', () => {
 
       renderWithContext({workshop});
 
-      const attendanceUrl = `${window.origin}/pd/attend/ABCD123`;
-      expect(screen.getByText(attendanceUrl)).toBeInTheDocument();
+      const attendanceUrl = '/pd/attend/ABCD123';
+      const attendanceUrlFull = `${window.origin}${attendanceUrl}`;
+      expect(screen.getByText(attendanceUrlFull)).toBeInTheDocument();
 
       const attendanceLink = screen.getByRole('link', {
         name: /Open attendance URL for .* in new tab/,
