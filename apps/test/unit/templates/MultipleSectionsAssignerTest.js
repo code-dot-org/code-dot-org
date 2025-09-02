@@ -39,7 +39,7 @@ describe('MultipleSectionsAssigner', () => {
     const wrapper = setUp({
       isAssigningCourseOnly: false,
       courseId: assignedCourseANDUnitSection.courseId,
-      isAssigningUnitOnly: false,
+      isSingleUnitCourse: false,
       scriptId: assignedCourseANDUnitSection.unitId,
     });
 
@@ -66,7 +66,7 @@ describe('MultipleSectionsAssigner', () => {
     const wrapper = setUp({
       isAssigningCourseOnly: true,
       courseId: assignedCourseANDUnitSection.courseId,
-      isAssigningUnitOnly: false,
+      isSingleUnitCourse: false,
       scriptId: assignedCourseANDUnitSection.unitId,
     });
 
@@ -111,7 +111,7 @@ describe('MultipleSectionsAssigner', () => {
     const wrapper = setUp({
       isAssigningCourseOnly: true,
       courseId: assignedCourseANDUnitSection.courseId,
-      isAssigningUnitOnly: false,
+      isSingleUnitCourse: false,
       scriptId: assignedCourseANDUnitSection.unitId,
       courseOfferingId: assignedCourseANDUnitSection.courseOfferingId,
       courseVersionId: assignedCourseANDUnitSection.courseVersionId,
@@ -144,7 +144,7 @@ describe('MultipleSectionsAssigner', () => {
     const wrapper = setUp({
       isAssigningCourseOnly: true,
       courseId: assignedCourseANDUnitSection.courseId,
-      isAssigningUnitOnly: false,
+      isSingleUnitCourse: false,
       scriptId: assignedCourseANDUnitSection.unitId,
       courseOfferingId: assignedCourseANDUnitSection.courseOfferingId,
       courseVersionId: assignedCourseANDUnitSection.courseVersionId,
@@ -181,7 +181,7 @@ describe('MultipleSectionsAssigner', () => {
     const wrapper = setUp({
       isAssigningCourseOnly: false,
       courseId: assignedCourseANDUnitSection.courseId,
-      isAssigningUnitOnly: false,
+      isSingleUnitCourse: false,
       scriptId: assignedCourseANDUnitSection.unitId,
       assignToSection,
       reassignConfirm,
@@ -223,7 +223,7 @@ describe('MultipleSectionsAssigner', () => {
     const wrapper = setUp({
       isAssigningCourseOnly: false,
       courseId: assignedSingleUnitCourseSection.courseId,
-      isAssigningUnitOnly: true,
+      isSingleUnitCourse: true,
       scriptId: assignedSingleUnitCourseSection.unitId,
       assignToSection,
       reassignConfirm,
@@ -266,7 +266,7 @@ describe('MultipleSectionsAssigner', () => {
     const wrapper = setUp({
       isAssigningCourseOnly: false,
       courseId: assignedSingleUnitCourseSection.courseId,
-      isAssigningUnitOnly: true,
+      isSingleUnitCourse: true,
       scriptId: assignedSingleUnitCourseSection.unitId,
       unassignSection,
       reassignConfirm,
@@ -305,7 +305,7 @@ describe('MultipleSectionsAssigner', () => {
     const wrapper = setUp({
       isAssigningCourseOnly: false,
       courseId: assignedCourseANDUnitSection.courseId,
-      isAssigningUnitOnly: false,
+      isSingleUnitCourse: false,
       scriptId: assignedCourseANDUnitSection.unitId,
       reassignConfirm,
       assignToSection,
@@ -349,7 +349,7 @@ describe('MultipleSectionsAssigner', () => {
     const wrapper = setUp({
       isAssigningCourseOnly: true,
       courseId: assignedCourseANDUnitSection.courseId,
-      isAssigningUnitOnly: false,
+      isSingleUnitCourse: false,
       scriptId: assignedCourseANDUnitSection.unitId,
       unassignSection,
       reassignConfirm,
@@ -388,7 +388,7 @@ describe('MultipleSectionsAssigner', () => {
     const wrapper = setUp({
       isAssigningCourseOnly: true,
       courseId: assignedCourseANDUnitSection.courseId,
-      isAssigningUnitOnly: false,
+      isSingleUnitCourse: false,
       scriptId: assignedCourseANDUnitSection.unitId,
       assignToSection,
       reassignConfirm,
@@ -427,7 +427,7 @@ describe('MultipleSectionsAssigner', () => {
     const wrapper = setUp({
       isAssigningCourseOnly: false,
       courseId: assignedCourseANDUnitSection.courseId,
-      isAssigningUnitOnly: false,
+      isSingleUnitCourse: false,
       scriptId: assignedCourseANDUnitSection.unitId,
     });
 
