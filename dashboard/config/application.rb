@@ -213,6 +213,12 @@ module Dashboard
       Rails.root.join('../lib/cdo/shared_constants')
     ].map(&:to_s)
 
+    # Ignore certain directories for autoloading and eager loading
+    Rails.autoloaders.main.ignore(
+      Rails.root.join("lib", "tasks"),
+      Rails.root.join("lib", "assets")
+    )
+
     # use https://(*-)studio.code.org urls in mails
     config.action_mailer.default_url_options = {host: CDO.canonical_hostname('studio.code.org'), protocol: 'https'}
     config.action_mailer.delivery_job = 'MailDeliveryJob'
