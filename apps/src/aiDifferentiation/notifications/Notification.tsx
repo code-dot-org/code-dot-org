@@ -34,9 +34,17 @@ const getRelativeTimeString = (date: Date): string => {
   }
 };
 
-const Notification: React.FC<{
+interface NotificationProps {
+  key: string;
   notification: AiDiffNotification | null;
-}> = ({notification}) => {
+  aiPromptClick?: (prompt: string) => void;
+}
+
+const Notification: React.FC<NotificationProps> = ({
+  key,
+  notification,
+  aiPromptClick,
+}) => {
   const isLoading = notification === null;
   const notificationOrPlaceholder: AiDiffNotification = notification || {
     id: 'placeholder',
@@ -52,7 +60,7 @@ const Notification: React.FC<{
   };
 
   return (
-    <div className={styles.notification}>
+    <div className={styles.notification} key={key}>
       <FontAwesomeV6Icon
         iconName={notificationOrPlaceholder.iconName}
         iconStyle="solid"
@@ -66,7 +74,7 @@ const Notification: React.FC<{
         data-testid={'icon-' + notificationOrPlaceholder.iconName}
       />
       <div className={styles.textAndLinks}>
-        <p
+        <div
           className={classNames(
             styles.text,
             isLoading && skeletonizeContent.skeletonizeContent
@@ -79,7 +87,7 @@ const Notification: React.FC<{
             </StrongText>
             {notificationOrPlaceholder.description}
           </BodyThreeText>
-        </p>
+        </div>
         <ol className={styles.links}>
           {notificationOrPlaceholder.hrefLinks?.length > 0 &&
             notificationOrPlaceholder.hrefLinks.map(link => (
@@ -98,7 +106,11 @@ const Notification: React.FC<{
             notificationOrPlaceholder.aiPrompts.map(prompt => (
               <li key={prompt.prompt}>
                 <button
-                  onClick={() => {}}
+                  onClick={() => {
+                    if (aiPromptClick) {
+                      aiPromptClick(prompt.prompt);
+                    }
+                  }}
                   className={styles.aiButton}
                   type="button"
                 >
