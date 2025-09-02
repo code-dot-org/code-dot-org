@@ -2,6 +2,7 @@ import {Button} from '@code-dot-org/component-library/button';
 import React, {useCallback, useEffect, useMemo, useState} from 'react';
 import reactStringReplace from 'react-string-replace';
 
+import Guide from '@cdo/apps/lab2/views/components/guide/Guide';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import askAi from '../ai/generate/askAi';
@@ -154,7 +155,7 @@ The valid sounds to use are: "${sounds}".  (The length of each sound is in paren
   }
 
   return (
-    <div id="generate-panel" className={styles.generatePanel}>
+    <Guide id="generate-panel">
       {aiGenerateState === 'none' && (
         <>
           <div className={styles.info}>Generate a song with AI.</div>
@@ -209,7 +210,7 @@ The valid sounds to use are: "${sounds}".  (The length of each sound is in paren
           />
         </>
       )}
-    </div>
+    </Guide>
   );
 };
 
