@@ -3,9 +3,9 @@ import {render, screen, waitFor} from '@testing-library/react';
 import React from 'react';
 
 import {Breakdown} from '@cdo/apps/code-studio/pd/workshop_dashboard/WorkshopFormTemplate/types';
-import {MultiSelectCard} from '@cdo/apps/code-studio/pd/workshop_dashboard/workshops/surveys/components/MultiSelectCard';
+import {SelectCard} from '@cdo/apps/code-studio/pd/workshop_dashboard/workshops/surveys/components/SelectCard';
 
-describe('MultiSelectCard', () => {
+describe('SelectCard', () => {
   const defaultItems: Breakdown[] = [
     {label: 'Option A', count: 15, percentage: 50},
     {label: 'Option B', count: 10, percentage: 33.3},
@@ -13,7 +13,7 @@ describe('MultiSelectCard', () => {
   ];
 
   const defaultProps = {
-    title: 'Test Multi-Select Card',
+    title: 'Test Select Card',
     description: 'This is a test description.',
     items: defaultItems,
     totalRespondents: 30,
@@ -21,12 +21,12 @@ describe('MultiSelectCard', () => {
   };
 
   const renderComponent = (props = {}) => {
-    return render(<MultiSelectCard {...defaultProps} {...props} />);
+    return render(<SelectCard {...defaultProps} {...props} />);
   };
 
   it('renders the title and description correctly', () => {
     renderComponent();
-    expect(screen.getByText('Test Multi-Select Card')).toBeInTheDocument();
+    expect(screen.getByText('Test Select Card')).toBeInTheDocument();
     expect(screen.getByText('This is a test description.')).toBeInTheDocument();
   });
 

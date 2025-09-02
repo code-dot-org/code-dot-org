@@ -8,8 +8,8 @@ import {
 import {useWorkshopContext} from '../../../WorkshopLayout';
 import {FollowUpRequestedCard} from '../../components/FollowUpRequestedCard';
 import {FreeResponseCard} from '../../components/FreeResponseCard';
-import {MultiSelectCard} from '../../components/MultiSelectCard';
 import {ScoreCard} from '../../components/ScoreCard';
+import {SelectCard} from '../../components/SelectCard';
 import {LIKERT_QUESTION_FOOTER, MIN_RESPONSE_COUNT} from '../../constants';
 import {getQuestionDescription, prepLikertBreakdown} from '../../helpers';
 
@@ -77,7 +77,7 @@ export const Implementation = () => {
 
       <Box className={styles.cardRow}>
         {isQuestionType(barriersToImplementation, 'multiSelect') && (
-          <MultiSelectCard
+          <SelectCard
             title={
               barriersToImplementation.question_short_text ??
               barriersToImplementation.question_text
