@@ -7093,6 +7093,19 @@ columns:
     comment: 
   - *24
   - *25
+  teaching_profile_data:
+  - *9
+  - *11
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: individual_data
+    sql_type_metadata: *20
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - *14
+  - *15
   unit_groups:
   - *5
   - *44
@@ -8464,6 +8477,7 @@ primary_keys:
   teacher_feedbacks: id
   teacher_profiles: id
   teacher_scores: id
+  teaching_profile_data: id
   unit_groups: id
   unit_groups_resources: 
   unit_groups_student_resources: id
@@ -8675,6 +8689,7 @@ data_sources:
   teacher_feedbacks: true
   teacher_profiles: true
   teacher_scores: true
+  teaching_profile_data: true
   unit_groups: true
   unit_groups_resources: true
   unit_groups_student_resources: true
@@ -13879,6 +13894,20 @@ indexes:
     unique: false
     columns:
     - user_level_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: :btree
+    comment: 
+  teaching_profile_data:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: teaching_profile_data
+    name: index_teaching_profile_data_on_user_id
+    unique: false
+    columns:
+    - user_id
     lengths: {}
     orders: {}
     opclasses: {}
