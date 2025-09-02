@@ -87,7 +87,7 @@ class FilesApi < Sinatra::Base
   end
 
   # Log filename validation failures for monitoring unsafe filename attempts
-  def report_filename_validation_failure(filename, endpoint, encrypted_channel_id)
+  def report_filename_validation_failure(filename, endpoint, encrypted_channel_id, event_type = 'FilesApiFilenameValidationFailure')
     return unless CDO.newrelic_logging
 
     owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
@@ -101,7 +101,7 @@ class FilesApi < Sinatra::Base
       timestamp: Time.now.iso8601
     }
 
-    NewRelic::Agent.record_custom_event("FilesApiFilenameValidationFailure", event_details)
+    NewRelic::Agent.record_custom_event(event_type, event_details)
   end
 
   def record_metric(quota_event_type, quota_type, value = 1)
@@ -892,6 +892,11 @@ class FilesApi < Sinatra::Base
     # (Layer 2 is the allowed_file_name? check in put_file and files_put_file)
     sanitized_filename = BucketHelper.replace_unsafe_chars(filename)
 
+    # Compare when the sanitized filename is different from the original filename
+    if sanitized_filename != filename
+      report_filename_validation_failure(filename, 'files', encrypted_channel_id, 'FilesApiFilenameValidationFailureSanitizedFilename')
+    end
+
     if params['src'].nil?
       # read the entire request before considering rejecting it, otherwise varnish
       # may return a 503 instead of whatever status code we specify. Unfortunately
@@ -900,7 +905,8 @@ class FilesApi < Sinatra::Base
       body = request.body.read
     end
 
-    files_put_file(encrypted_channel_id, sanitized_filename, body)
+    # TEMPORARY: use un-sanitized filename for now to monitor the impact of stricter validation
+    files_put_file(encrypted_channel_id, filename, body)
   end
 
   #
