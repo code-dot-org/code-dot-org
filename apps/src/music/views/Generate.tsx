@@ -13,9 +13,9 @@ import {setCodeToLoad, setAiGenerateState} from '../redux/musicRedux';
 
 import styles from './Generate.module.scss';
 
-const prefabTextTemplate =
+const adlibTextTemplate =
   'Please generate a fun song.  Around {length} measures in duration is good.  Got for a {mood} vibe.  Sequence it like a {sequence}.';
-const prefabTextOptions: {[key: string]: string[]} = {
+const adlibTextOptions: {[key: string]: string[]} = {
   length: ['20', '30', '40'],
   mood: ['happy', 'sad', 'energetic', 'calm', 'upbeat', 'chill'],
   sequence: ['verse-chorus-verse', 'A-B-A', 'A-B-A-C-A', 'A-A-B-A'],
@@ -31,7 +31,7 @@ const Generate: React.FunctionComponent<GenerateProps> = () => {
 
   const library = MusicLibrary.getInstance();
 
-  const prefabText = appConfig.getValue('ai-generate-prefab') === 'true';
+  const useAdlibText = appConfig.getValue('ai-generate-adlib') === 'true';
 
   const sounds = library
     ?.getFolderForFolderId(packId || 'indie')
@@ -68,39 +68,35 @@ The valid sounds to use are: "${sounds}".  (The length of each sound is in paren
     'Please generate a fun song.  Between 18-20 measures is enough duration.  Use layering of sounds to make it exciting.'
   );
 
-  const [prefabOptions, setPrefabOptions] = useState<{[key: string]: string}>(
-    {}
-  );
+  const [adlibOptions, setAdlibOptions] = useState<{[key: string]: string}>({});
 
   useEffect(() => {
     const initialOptions: {[key: string]: string} = {};
-    Object.keys(prefabTextOptions).forEach(key => {
-      initialOptions[key] = prefabTextOptions[key][0];
+    Object.keys(adlibTextOptions).forEach(key => {
+      initialOptions[key] = adlibTextOptions[key][0];
     });
-    setPrefabOptions(initialOptions);
+    setAdlibOptions(initialOptions);
   }, []);
 
-  const prefabHtml = useMemo(() => {
-    let output: React.ReactNode[] = [prefabTextTemplate];
-    Object.keys(prefabTextOptions).forEach(key => {
+  const adlibHtml = useMemo(() => {
+    let output: React.ReactNode[] = [adlibTextTemplate];
+    Object.keys(adlibTextOptions).forEach(key => {
       output = reactStringReplace(output, `{${key}}`, match => {
         return (
           <select
             key={key}
             id={key}
             className={styles.select}
-            value={prefabOptions[key]}
+            value={adlibOptions[key]}
             onChange={event => {
-              setPrefabOptions({
-                ...prefabOptions,
+              setAdlibOptions({
+                ...adlibOptions,
                 [key]: event.target.value,
               });
             }}
           >
             {(
-              prefabTextOptions[
-                key as keyof typeof prefabTextOptions
-              ] as string[]
+              adlibTextOptions[key as keyof typeof adlibTextOptions] as string[]
             ).map((option: string) => (
               <option key={option} value={option}>
                 {option}
@@ -112,18 +108,18 @@ The valid sounds to use are: "${sounds}".  (The length of each sound is in paren
     });
 
     return output;
-  }, [prefabOptions]);
+  }, [adlibOptions]);
 
-  const getFilledPrefabText = useCallback(() => {
-    let output = prefabTextTemplate;
-    Object.keys(prefabTextOptions).forEach(key => {
-      output = output.replace(`{${key}}`, prefabOptions[key]);
+  const getFilledAdlibText = useCallback(() => {
+    let output = adlibTextTemplate;
+    Object.keys(adlibTextOptions).forEach(key => {
+      output = output.replace(`{${key}}`, adlibOptions[key]);
     });
     return output;
-  }, [prefabOptions]);
+  }, [adlibOptions]);
 
   const generateSong = useCallback(() => {
-    const useText = prefabText ? getFilledPrefabText() : text;
+    const useText = useAdlibText ? getFilledAdlibText() : text;
 
     console.log('starting ask');
     dispatch(setAiGenerateState('generating'));
@@ -143,8 +139,8 @@ The valid sounds to use are: "${sounds}".  (The length of each sound is in paren
       dispatch(setAiGenerateState('done'));
     });
   }, [
-    prefabText,
-    getFilledPrefabText,
+    useAdlibText,
+    getFilledAdlibText,
     text,
     dispatch,
     contextGenerateMusicPsuedocodeFromDescription,
@@ -159,7 +155,7 @@ The valid sounds to use are: "${sounds}".  (The length of each sound is in paren
       {aiGenerateState === 'none' && (
         <>
           <div className={styles.info}>Generate a song with AI.</div>
-          {!prefabText && (
+          {!useAdlibText && (
             <textarea
               id="generate-description"
               onChange={evt => setText(evt.target.value)}
@@ -168,7 +164,7 @@ The valid sounds to use are: "${sounds}".  (The length of each sound is in paren
               className={styles.textArea}
             />
           )}
-          {prefabText && <div className={styles.textArea}>{prefabHtml}</div>}
+          {useAdlibText && <div className={styles.textArea}>{adlibHtml}</div>}
         </>
       )}
 
