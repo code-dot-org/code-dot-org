@@ -109,6 +109,11 @@ export const HTMLPreview: React.FC = () => {
     );
   };
 
+  const onMaximize = () => {
+    console.log('onMaximize');
+    // setPreviewViewMode(PreviewViewMode.MAXIMIZED);
+  };
+
   const addToNavigationHistory = (
     filePath: string,
     navigationHistoryIndex: number,
@@ -258,6 +263,7 @@ export const HTMLPreview: React.FC = () => {
           onNavigateBack={onNavigateBack}
           onNavigateForward={onNavigateForward}
           onRefresh={onRefresh}
+          onMaximize={onMaximize}
           previewViewMode={previewViewMode}
           setPreviewViewMode={setPreviewViewMode}
         />

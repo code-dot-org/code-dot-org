@@ -21,6 +21,7 @@ interface HTMLPreviewHeaderProps {
   onNavigateBack: () => void;
   onNavigateForward: () => void;
   onRefresh: () => void;
+  onMaximize: () => void;
   previewViewMode: PreviewViewMode;
   setPreviewViewMode: (previewViewMode: PreviewViewMode) => void;
 }
@@ -34,6 +35,7 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
   onNavigateBack,
   onNavigateForward,
   onRefresh,
+  onMaximize,
   previewViewMode,
   setPreviewViewMode,
 }) => {
@@ -128,6 +130,17 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
       <SegmentedButtons
         {...previewViewModeButtonsProps}
         className={moduleStyles.customSegmentedButtons}
+      />
+      <Button
+        onClick={onMaximize}
+        aria-label="Maximize Preview"
+        // aria-label={weblab2I18n.maximizePreview()}
+        size="xs"
+        type="tertiary"
+        color="gray"
+        isIconOnly={true}
+        icon={{iconName: 'maximize'}}
+        className={moduleStyles.urlButton}
       />
     </div>
   );
