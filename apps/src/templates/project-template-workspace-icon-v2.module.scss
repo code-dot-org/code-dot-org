@@ -4,6 +4,7 @@
 .iconButton {
   @include remove-button-styles;
   font-size: 13px;
+  margin-bottom: 2px;
 }
 
 .icon {
