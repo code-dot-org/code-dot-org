@@ -1,5 +1,7 @@
 {
   "code": "Code",
+  "desktop": "Desktop",
+  "mobile": "Mobile",
   "maximizePreview": "Maximize preview",
   "navigateBack": "Navigate back",
   "navigateForward": "Navigate forward",
@@ -7,6 +9,4 @@
   "refresh": "Refresh",
   "splitView": "Split View",
   "workspace": "Workspace",
-  "desktop": "Desktop",
-  "mobile": "Mobile"
 }
