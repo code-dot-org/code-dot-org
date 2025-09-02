@@ -167,8 +167,10 @@ export interface LevelProperties {
   isK1?: boolean;
   skin?: string;
   toolboxBlocks?: string;
-  startSources?: Source;
-  templateSources?: MultiFileSource;
+  // Dance stores the full main.json source structure (ProjectSources) in start/template/exemplar sources,
+  // while PythonLab/Weblab2 stores just the source code (MultiFileSource). TODO: Can we reconcile these?
+  startSources?: ProjectSources | MultiFileSource;
+  templateSources?: ProjectSources | MultiFileSource;
   sharedBlocks?: BlockDefinition[];
   validations?: Validation[];
   baseAssetUrl?: string;
@@ -182,7 +184,7 @@ export interface LevelProperties {
   helpVideos?: VideoData[];
   // Exemplars
   exampleSolutions?: string[];
-  exemplarSources?: Source;
+  exemplarSources?: ProjectSources | MultiFileSource;
   exemplarSettings?: ExemplarSettings;
   // For Teachers Only value
   teacherMarkdown?: string;
