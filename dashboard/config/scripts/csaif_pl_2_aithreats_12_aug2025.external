@@ -28,7 +28,7 @@ markdown <<MARKDOWN
 <p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Decryption</strong> is the process of using a key to turn encrypted data back into its original form.</p>
 </div>
 
-#### The **method** is the amount to shift each letter in the message forward or backward in the alphabet. The **key** is a number that tells how many letters to shift and in which direction
+#### The **method** here describes how decryption happens. In the case of a Caesar Cipher each letter in the message is shifted forward or backward in the alphabet. The **key** is a number that tells how many letters to shift.
 
 <p align="center">
 <img src="https://images.code.org/2cba3da355983b19e509ae58712cd22a-Screenshot 2025-08-15 at 2.11.51 PM.png" alt="Wklv phvvdjh lv vhfuhw, method shift letters backwards, key three letters" width="50%" style="border-radius:10px; border: 5px solid black;">

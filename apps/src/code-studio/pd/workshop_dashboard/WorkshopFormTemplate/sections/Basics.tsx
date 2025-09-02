@@ -31,7 +31,7 @@ export const Basics: FC<BasicsProps> = ({
 }) => {
   const {data: fetchedCourseOfferings} = useFetch<CourseOffering[]>(
     fields.course_offerings
-      ? '/course_offerings/self_paced_pl_course_offerings'
+      ? '/course_offerings/self_paced_pl_course_offerings_for_workshops'
       : ''
   );
 

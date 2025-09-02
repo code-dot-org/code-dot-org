@@ -1,5 +1,6 @@
 import {Codebridge} from '@codebridge/Codebridge';
-import {ConfigType} from '@codebridge/types';
+import {DEFAULT_START_HTML_FILE} from '@codebridge/FilePreview/constants';
+import {CodebridgeLevelProperties, ConfigType} from '@codebridge/types';
 import {css} from '@codemirror/lang-css';
 import {html} from '@codemirror/lang-html';
 import {javascript} from '@codemirror/lang-javascript';
@@ -41,7 +42,7 @@ const defaultSource: MultiFileSource = {
   files: {
     '1': {
       id: '1',
-      name: 'index.html',
+      name: DEFAULT_START_HTML_FILE,
       language: 'html',
       contents: `<!DOCTYPE html>
 <html>

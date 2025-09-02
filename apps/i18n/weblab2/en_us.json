@@ -1,6 +1,9 @@
 {
   "code": "Code",
+  "navigateBack": "Navigate back",
+  "navigateForward": "Navigate forward",
   "preview": "Preview",
+  "refresh": "Refresh",
   "splitView": "Split View",
   "workspace": "Workspace"
 }
