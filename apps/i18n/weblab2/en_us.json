@@ -1,6 +1,7 @@
 {
   "code": "Code",
   "desktop": "Desktop",
+  "maximizePreview": "Maximize preview",
   "mobile": "Mobile",
   "navigateBack": "Navigate back",
   "navigateForward": "Navigate forward",
