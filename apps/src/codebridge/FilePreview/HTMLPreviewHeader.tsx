@@ -6,7 +6,9 @@ import TextField from '@code-dot-org/component-library/textField';
 import classNames from 'classnames';
 import React from 'react';
 
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import weblab2I18n from '@cdo/apps/weblab2/locale';
+import {ViewMode} from '@cdo/apps/weblab2/types';
 
 import {PreviewViewMode} from './constants';
 
@@ -22,6 +24,7 @@ interface HTMLPreviewHeaderProps {
   onNavigateForward: () => void;
   onRefresh: () => void;
   onMaximize: () => void;
+  onMinimize: () => void;
   previewViewMode: PreviewViewMode;
   setPreviewViewMode: (previewViewMode: PreviewViewMode) => void;
 }
@@ -36,9 +39,11 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
   onNavigateForward,
   onRefresh,
   onMaximize,
+  onMinimize,
   previewViewMode,
   setPreviewViewMode,
 }) => {
+  const viewMode = useAppSelector(state => state.weblab2.viewMode);
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter') {
       onSubmit(value);
@@ -131,16 +136,29 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
         {...previewViewModeButtonsProps}
         className={moduleStyles.customSegmentedButtons}
       />
-      <Button
-        onClick={onMaximize}
-        aria-label={weblab2I18n.maximizePreview()}
-        size="xs"
-        type="tertiary"
-        color="gray"
-        isIconOnly={true}
-        icon={{iconName: 'expand'}}
-        className={moduleStyles.urlButton}
-      />
+      {viewMode !== ViewMode.MAXIMIZED ? (
+        <Button
+          onClick={onMaximize}
+          aria-label={weblab2I18n.maximizePreview()}
+          size="xs"
+          type="tertiary"
+          color="gray"
+          isIconOnly={true}
+          icon={{iconName: 'expand'}}
+          className={moduleStyles.urlButton}
+        />
+      ) : (
+        <Button
+          onClick={onMinimize}
+          aria-label={weblab2I18n.minimizePreview()}
+          size="xs"
+          type="tertiary"
+          color="gray"
+          isIconOnly={true}
+          icon={{iconName: 'compress'}}
+          className={moduleStyles.urlButton}
+        />
+      )}
     </div>
   );
 };
