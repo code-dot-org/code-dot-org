@@ -376,7 +376,10 @@ namespace :test do
 
     desc 'Runs dashboard cdo_contentful engine tests'
     timed_task_with_logging :dashboard_cdo_contentful_engine do
-      run_tests_if_changed('dashboard cdo_contentful engine', %w[Gemfile Gemfile.lock]) do
+      run_tests_if_changed(
+        'dashboard cdo_contentful engine',
+        %w[Gemfile Gemfile.lock dashboard/engines/cdo_contentful/**/*],
+      ) do
         TestRunUtils.run_dashboard_cdo_contentful_engine_tests
       end
     end
