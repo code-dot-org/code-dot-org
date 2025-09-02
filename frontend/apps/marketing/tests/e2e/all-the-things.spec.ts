@@ -79,7 +79,7 @@ test.describe(`[${getSiteType()}] All the things`, () => {
 
       await allTheThingsPage.goto('/engineering/all-the-things');
 
-      await page.waitForURL('**/zh-TW/engineering/all-the-things');
+      await page.waitForURL('**/zh-Hant/engineering/all-the-things');
     });
 
     test.use({
@@ -121,16 +121,16 @@ test.describe(`[${getSiteType()}] All the things`, () => {
       );
       const allTheThingsPage = new MarketingPage(page);
 
-      await allTheThingsPage.goto('/zh-TW/engineering/all-the-things');
+      await allTheThingsPage.goto('/zh-Hant/engineering/all-the-things');
 
-      // The middleware should send us back to /zh-TW with the language_ cookie set via the previous visit
+      // The middleware should send us back to /zh-Hant with the language_ cookie set via the previous visit
       await allTheThingsPage.goto('/engineering/all-the-things');
-      await page.waitForURL('**/zh-TW/engineering/all-the-things');
+      await page.waitForURL('**/zh-Hant/engineering/all-the-things');
     });
 
     test.describe('accept-language header', () => {
       test.use({
-        locale: 'zh-TW',
+        locale: 'zh-Hant',
       });
 
       test('redirects to localized page via accept-language', async ({
@@ -144,7 +144,7 @@ test.describe(`[${getSiteType()}] All the things`, () => {
         const allTheThingsPage = new MarketingPage(page);
         await allTheThingsPage.goto('/engineering/all-the-things');
 
-        await page.waitForURL('**/zh-TW/engineering/all-the-things');
+        await page.waitForURL('**/zh-Hant/engineering/all-the-things');
       });
     });
   });

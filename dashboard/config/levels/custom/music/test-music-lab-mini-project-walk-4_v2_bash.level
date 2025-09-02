@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-08-15T18:45:16.000Z",
   "level_num": "custom",
@@ -119,7 +120,7 @@
         "kind": "flyoutToolbox"
       }
     },
-    "long_instructions": "### Partner Game\r\nFind out what others think of your songs! \r\n\r\n**Do This:**\r\n- Tell your partners who your three characters are and describe the character's personalities.\r\n- Play one of your Walk-Up songs without saying which character it belongs to.\r\n- Allow your partner to match the song to a character.\r\n- Ask them to explain their choice.\r\n- If they guess wrong, listen to their explanation and adjust your code to make the song fit the character better.\r\n- Repeat with new partners until someone guesses all three correctly!",
+    "long_instructions": "### Submit your Project!\r\n\r\nIt's time to submit your project!\r\n\r\n**Do This:**\r\n- Listen to your song one last time to make sure it sounds the way you want it to!\r\n- Look at the Rubric and make sure your song meets all the requirements\r\n- Make sure your project guide is complete\r\n- Make any edits you need before submitting!\r\n\r\nWhen you're ready to submit, [INSTRUCTIONS FOR WHAT TO EXPECT HERE]",
     "exemplar_settings": {
       "playerEnabled": false,
       "validationEnabled": false
@@ -130,10 +131,12 @@
       "isPredictLevel": false
     },
     "name_suffix": "_bash",
+    "teacher_markdown": "[TEACHER INSTRUCTIONS FOR HOW TO VIEW STUDENT WORK!]",
+    "submittable": "true",
+    "disable_edit_run_for_submission": "true",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-08-15T18:45:16.110+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-mini-project-walk-4_v2\\\"\"],\"cloned_from\":\"test-music-lab-mini-project-walk-4_v2\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-08-15T18:45:16.110+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-mini-project-walk-4_v2\\\"\"],\"cloned_from\":\"test-music-lab-mini-project-walk-4_v2\"},{\"changed_at\":\"2025-08-25 20:43:08 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

@@ -100,6 +100,7 @@ progress.generateLessonProgress = function (
     age_13_required,
     hasUnnumberedLessons,
     course_name,
+    course_id,
   } = scriptData;
 
   initializeStoreWithProgress(
@@ -114,6 +115,7 @@ progress.generateLessonProgress = function (
       id: lessonData.script_id,
       hasUnnumberedLessons,
       courseName: course_name,
+      course_id: course_id,
     },
     currentLevelId,
     false,

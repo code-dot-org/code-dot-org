@@ -2,7 +2,6 @@ import Alert from '@code-dot-org/component-library/alert';
 import {Button, buttonColors} from '@code-dot-org/component-library/button';
 import Checkbox from '@code-dot-org/component-library/checkbox';
 import Dialog from '@code-dot-org/component-library/dialog';
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import TextField from '@code-dot-org/component-library/textField';
 import Typography, {
   BodyTwoText,
@@ -55,13 +54,8 @@ const columns: {key: keyof EnrollmentData; label: string}[] = [
 ];
 
 export const WorkshopEnrollments: FC = () => {
-  const {
-    enrollments,
-    workshop,
-    refetchEnrollments,
-    enrollmentsLoading,
-    enrollmentsError,
-  } = useWorkshopContext();
+  const {workshop, enrollments, enrollmentsLoading, refetchEnrollments} =
+    useWorkshopContext();
 
   const refreshTimeout = useRef<NodeJS.Timeout | null>(null);
   const [selected, setSelected] = useState<EnrollmentData[]>([]);
@@ -246,20 +240,6 @@ export const WorkshopEnrollments: FC = () => {
     },
     []
   );
-
-  if (!enrollments.length && enrollmentsLoading) {
-    return <FontAwesomeV6Icon iconName="spinner" animationType="spin" />;
-  }
-
-  if (enrollmentsError) {
-    return (
-      <Alert
-        size="m"
-        text="There was an error fetching enrollments. Please try again."
-        type="danger"
-      />
-    );
-  }
 
   if (!enrollments.length) {
     return (

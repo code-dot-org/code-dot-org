@@ -418,7 +418,7 @@ module Api::V1::Pd
       assert single_select_question[:results].key?(:breakdown)
 
       # Verify response structure for text questions
-      text_question = categories[:other][:questions][:uncategorized_feedback]
+      text_question = categories[:other][:questions][:other_feedback]
       assert text_question.key?(:question_name)
       assert text_question.key?(:question_text)
       assert text_question.key?(:question_type)
