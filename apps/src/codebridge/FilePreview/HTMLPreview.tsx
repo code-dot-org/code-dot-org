@@ -120,6 +120,11 @@ export const HTMLPreview: React.FC = () => {
     dispatch(setViewMode(ViewMode.MAXIMIZED));
   };
 
+  const onMinimize = () => {
+    console.log('onMinimize');
+    dispatch(setViewMode(ViewMode.SPLIT));
+  };
+
   const addToNavigationHistory = (
     filePath: string,
     navigationHistoryIndex: number,
@@ -270,6 +275,7 @@ export const HTMLPreview: React.FC = () => {
           onNavigateForward={onNavigateForward}
           onRefresh={onRefresh}
           onMaximize={onMaximize}
+          onMinimize={onMinimize}
           previewViewMode={previewViewMode}
           setPreviewViewMode={setPreviewViewMode}
         />

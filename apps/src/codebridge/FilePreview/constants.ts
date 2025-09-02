@@ -11,7 +11,6 @@ export enum IframeMessageType {
 export enum PreviewViewMode {
   DESKTOP = 'desktop',
   MOBILE = 'mobile',
-  MAXIMIZED = 'maximized',
 }
 
 export const DEFAULT_START_HTML_FILE = 'index.html';
