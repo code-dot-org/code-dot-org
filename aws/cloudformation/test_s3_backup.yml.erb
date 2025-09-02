@@ -181,36 +181,10 @@ Resources:
                   - 's3:DescribeJob'
                   - 's3:ListJobs'
                 Resource: '*'
-              # DynamoDB permissions for tracking
-              - Effect: 'Allow'
-                Action:
-                  - 'dynamodb:GetItem'
-                  - 'dynamodb:PutItem'
-                  - 'dynamodb:UpdateItem'
-                  - 'dynamodb:Query'
-                Resource: !GetAtt BatchTrackingTable.Arn
               # IAM permission to pass role
               - Effect: 'Allow'
                 Action: 'iam:PassRole'
                 Resource: !GetAtt S3BatchOperationsRole.Arn
-
-  # DynamoDB table to track replication state
-  BatchTrackingTable:
-    Type: 'AWS::DynamoDB::Table'
-    Properties:
-      TableName: 'batch-replication-tracking'
-      BillingMode: 'PAY_PER_REQUEST'
-      AttributeDefinitions:
-        - AttributeName: 'bucket_name'
-          AttributeType: 'S'
-        - AttributeName: 'date_key'
-          AttributeType: 'S'
-      KeySchema:
-        - AttributeName: 'bucket_name'
-          KeyType: 'HASH'
-        - AttributeName: 'date_key'
-          KeyType: 'RANGE'
-
   # Lambda function to process S3 Inventory and create batch replication jobs
   BatchReplicationLambda:
     Type: 'AWS::Lambda::Function'
@@ -227,9 +201,9 @@ Resources:
           DESTINATION_ACCOUNT: !Ref SecondaryAccount
           BATCH_ROLE_ARN: !GetAtt S3BatchOperationsRole.Arn
           INVENTORY_BUCKET: !Ref InventoryBucket
-          TRACKING_TABLE: !Ref BatchTrackingTable
+          LOG_LEVEL: 'DEBUG'
           # Removed DEST_KMS_KEY since we're using S3-managed encryption
-      Code: {"S3Bucket":"cdo-ci-artifacts","S3Key":"test_s3_backup/batch-replication-20250815.zip"}
+      Code: {"S3Bucket":"cdo-ci-artifacts","S3Key":"test_s3_backup/batch-replication.2025082211.zip"}
       Description: "Inventory-based batch replication Lambda"
 
   # EventBridge rule to trigger Lambda daily at 00:00 UTC
