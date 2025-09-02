@@ -10,12 +10,16 @@ import React, {
 
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {LabProps, ProjectSources} from '@cdo/apps/lab2/types';
+import StartOverDialog, {
+  MessageType,
+} from '@cdo/apps/lab2/views/dialogs/dsco/StartOverDialog';
 
 import getInitialSources from '../utils/getInitialSources';
 
 interface SourcesContextType<T extends ProjectSources = ProjectSources> {
   currentSources: T;
   updateSources: (newSources: T, forceSave?: boolean) => void;
+  showStartOverDialog: (type: MessageType, message?: string) => void;
 }
 
 const SourcesContext = createContext<SourcesContextType | null>(null);
@@ -64,9 +68,39 @@ const SourcesContainer: React.FC<
     [setCurrentSources]
   );
 
+  const onStartOver = useCallback(() => {
+    const {templateSources, startSources} = levelProperties;
+    const startOverSources = templateSources || startSources || defaultSources;
+    updateSources(startOverSources as ProjectSources, true);
+    setShowStartOver(false);
+  }, [levelProperties, defaultSources, updateSources]);
+
+  const [showStartOver, setShowStartOver] = useState(false);
+  const [startOverProps, setStartOverProps] = useState<{
+    type: MessageType;
+    message?: string;
+  }>();
+
+  const showStartOverDialog = useCallback(
+    (type: MessageType, message?: string) => {
+      setStartOverProps({type, message});
+      setShowStartOver(true);
+    },
+    []
+  );
+
   return (
-    <SourcesContext.Provider value={{currentSources, updateSources}}>
+    <SourcesContext.Provider
+      value={{currentSources, updateSources, showStartOverDialog}}
+    >
       {children}
+      {showStartOver && startOverProps && (
+        <StartOverDialog
+          onConfirm={onStartOver}
+          onCancel={() => setShowStartOver(false)}
+          {...startOverProps}
+        />
+      )}
     </SourcesContext.Provider>
   );
 };
