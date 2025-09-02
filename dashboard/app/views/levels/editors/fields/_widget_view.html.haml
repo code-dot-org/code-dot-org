@@ -4,6 +4,8 @@
   = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :widget_view, description: "Enable Widget View"}
   %p
     If checked, the level will be in widget view, i.e., the code editor workspace is hidden.
+    - if @level.is_a? Weblab2
+      The view mode toggle is also hidden.
 
   - if @level.is_a? Pythonlab
     = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :widget_view_allow_show_code, description: "Enable Show/Hide Code in Widget View"}
