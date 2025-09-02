@@ -13,7 +13,7 @@ import {PercentageBarGroup} from './PercentageBarGroup';
 
 import styles from '../../workshop.module.scss';
 
-interface MultiSelectCardProps {
+interface SelectCardProps {
   title: string;
   description: string;
   items: Breakdown[];
@@ -21,7 +21,7 @@ interface MultiSelectCardProps {
   barLabel?: string;
 }
 
-export const MultiSelectCard: FC<MultiSelectCardProps> = ({
+export const SelectCard: FC<SelectCardProps> = ({
   title,
   description,
   items,
