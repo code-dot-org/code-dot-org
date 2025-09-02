@@ -18,14 +18,26 @@ describe('getBrandRedirects', () => {
     expect(result).toBeUndefined();
   });
 
-  it('redirects /es to /es-LA', () => {
+  it('redirects /es-LA to /es', () => {
     const request = makeMockRequest(
-      '/es/engineering/all-the-things',
+      '/es-LA/engineering/all-the-things',
       'http://localhost:3000',
     );
     const result = getBrandRedirects(Brand.CODE_DOT_ORG, request);
     expect(result?.headers.get('Location')).toEqual(
-      'http://localhost:3000/es-LA/engineering/all-the-things',
+      'http://localhost:3000/es/engineering/all-the-things',
+    );
+    expect(result?.status).toEqual(308);
+  });
+
+  it('redirects /zh-TW to /zh-Hant', () => {
+    const request = makeMockRequest(
+      '/zh-TW/engineering/all-the-things',
+      'http://localhost:3000',
+    );
+    const result = getBrandRedirects(Brand.CODE_DOT_ORG, request);
+    expect(result?.headers.get('Location')).toEqual(
+      'http://localhost:3000/zh-Hant/engineering/all-the-things',
     );
     expect(result?.status).toEqual(308);
   });

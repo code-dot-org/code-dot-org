@@ -21,14 +21,12 @@ interface AiDiffWorkSpaceProps {
   context: Context;
   scriptName?: string;
   curriculumCourses?: string[];
-  showSidebar?: boolean;
 }
 
 const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
   context,
   scriptName,
   curriculumCourses,
-  showSidebar,
 }) => {
   const [threads, setThreads] = useState<ChatThread[]>();
   const [threadMessages, setThreadMessages] = useState<ChatItem[]>();
@@ -57,10 +55,8 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
   }, [setThreads]);
 
   useEffect(() => {
-    if (showSidebar) {
-      fetchThreads();
-    }
-  }, [showSidebar, fetchThreads]);
+    fetchThreads();
+  }, [fetchThreads]);
 
   async function asyncFetchThreadMessages(thread: number): Promise<ChatThread> {
     const response = await HttpClient.fetchJson<ChatThread>(
@@ -98,14 +94,13 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
 
   return (
     <div className={style.aiDiffWorkspace}>
-      {showSidebar && (
-        <AiDiffSidebar
-          threads={threads}
-          selectedThreadId={threadId}
-          threadSelectCallback={fetchThreadMessages}
-          setShowNotifications={setShowNotifications}
-        />
-      )}
+      <AiDiffSidebar
+        threads={threads}
+        selectedThreadId={threadId}
+        threadSelectCallback={fetchThreadMessages}
+        setShowNotifications={setShowNotifications}
+        showNotifications={showNotifications}
+      />
       {showNotifications && experiments.isEnabled('teacher-notifications') ? (
         <AiDiffNotificationList />
       ) : (
@@ -113,7 +108,7 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
           context={context}
           scriptName={scriptName}
           curriculumCourses={curriculumCourses}
-          threadFetchCallback={showSidebar ? fetchThreads : () => {}}
+          threadFetchCallback={fetchThreads}
           threadMessages={threadMessages}
           key={keyId}
           threadId={threadId}

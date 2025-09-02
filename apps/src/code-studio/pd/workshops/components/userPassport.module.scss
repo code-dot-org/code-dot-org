@@ -17,6 +17,15 @@
     background-color: var(--background-neutral-secondary);
     border-bottom: 1px solid var(--neutral-gray-20);
 
+    &.enrolledUserInfoHeader {
+      background-color: var(--background-neutral-primary);
+      border-bottom: none;
+
+      .enrolledTag > div{
+        background-color: var(--background-success-extra-light);
+      }
+    }
+
     .displayName {
       display: flex;
       flex-direction: row;

@@ -8,7 +8,7 @@ import React from 'react';
 
 import i18n from '@cdo/locale';
 
-import {AiDiffNotification} from './AiDiffNotificationList';
+import {AiDiffNotification, IconColor} from './types';
 
 import styles from './notifications.module.scss';
 import skeletonizeContent from '@cdo/apps/sharedComponents/skeletonize-content.module.scss';
@@ -40,10 +40,12 @@ const Notification: React.FC<{
   const isLoading = notification === null;
   const notificationOrPlaceholder: AiDiffNotification = notification || {
     id: 'placeholder',
+    externalId: 'placeholder',
     title: i18n.loading(),
     description: 'Lorem ipsum dolor sit amet, postea pericula',
     readAt: null,
     iconName: 'spinner',
+    iconColor: IconColor.Gray,
     publishedAt: new Date(),
   };
 
@@ -54,8 +56,12 @@ const Notification: React.FC<{
         iconStyle="solid"
         className={classNames(
           styles.icon,
+          styles[`icon${notificationOrPlaceholder.iconColor}`],
           isLoading && skeletonizeContent.skeletonizeContent
         )}
+        // This icon is decorative and does not need to be read by screen readers
+        // eslint-disable-next-line react/forbid-component-props
+        data-testid={'icon-' + notificationOrPlaceholder.iconName}
       />
       <p
         className={classNames(
@@ -82,11 +88,12 @@ const Notification: React.FC<{
           notificationOrPlaceholder.publishedAt
         ).toLocaleUpperCase()}
       </BodyThreeText>
-      {notificationOrPlaceholder.readAt === null ? (
+      {notificationOrPlaceholder.readAt === null && notification !== null ? (
         <FontAwesomeV6Icon
           iconName="circle"
           iconStyle="solid"
           className={styles.readAt}
+          aria-label={i18n.unread()}
         />
       ) : (
         <div className={styles.readAt} />

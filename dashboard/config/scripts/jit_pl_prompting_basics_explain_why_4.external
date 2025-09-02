@@ -1,0 +1,43 @@
+name 'jit-pl-prompting-basics-explain-why-4'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# "Explain why this is not working" 
+
+
+#### Take a look at the response to the full prompt:
+
+> #### *Explain why this code is not working in JavaScript, and walk me through the fix step by step.* 
+
+
+
+
+<img src="https://images.code.org/935c721326346482de6bd3623ee4eba1-image-1756406027233.png" 
+     alt="ai prompt and response on the left fixing code by adding let. Corrected code sample on the right" 
+     width="650px" 
+     style="display: block; margin-left: auto; margin-right: auto; border: 3pt solid #8C52BA; border-radius: 12px;">
+<br>
+     
+<img src="https://images.code.org/f91b0ac2647f94f97074efedef966017-image-1756406199237.png" 
+     alt="ai prompt and response on the left fixing code by adding let. Corrected code sample on the right" 
+     width="650px" 
+     style="display: block; margin-left: auto; margin-right: auto; border: 3pt solid #8C52BA; border-radius: 12px;">
+     
+## Thinking critically
+
+#### It may take a little longer to phrase and read through, but asking AI to explain the error helps shift the focus from simply getting the answer to actually **understanding the problem.**
+
+#### With this prompt, AI walks through the reasoning **step by step**, showing what went wrong and how to fix it. This encourages students to slow down, think critically, and build the debugging habits they’ll need when AI isn’t available.
+
+#### In addition, it leaves room for the human to make the correction themselves to fully grasp the changes needed. 
+
+
+<div style="background-color: #f3e5f5; padding: 10px; border-left: 5px solid #9c27b0; margin-bottom: 20px; font-size: 16px">
+      <strong>💡 Teacher Tip</strong><br>
+     When modeling with AI, remind students that the goal *isn’t just working code — it’s understanding why the code works*. Encourage them to use **explanation-style** prompts so they can practice the thinking process, not just the fix.
+</div>
+
+## Let's practice!
+
+MARKDOWN
