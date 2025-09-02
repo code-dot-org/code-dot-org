@@ -416,7 +416,10 @@ class FilesApi < Sinatra::Base
     # The Layer 1 defenses are naming conventions for most file upload routes, but for
     # Web Lab file uploads, the Layer 1 sanitization also strips out unsafe characters,
     # replacing them with dashes.
-    unless buckets.allowed_file_name?(filename)
+    #
+    # TEMPORARY: Monitor when new_allowed_file_name? would reject but allowed_file_name? allows
+    # This helps us understand the impact before switching to stricter validation.
+    unless buckets.new_allowed_file_name?(filename)
       report_filename_validation_failure(filename, endpoint, encrypted_channel_id)
     end
     if body.length >= max_file_size
@@ -769,7 +772,10 @@ class FilesApi < Sinatra::Base
     # The Layer 1 defenses are naming conventions for most file upload routes, but for
     # Web Lab file uploads, the Layer 1 sanitization also strips out unsafe characters,
     # replacing them with dashes.
-    unless bucket.allowed_file_name?(filename)
+    #
+    # TEMPORARY: Monitor when new_allowed_file_name? would reject but allowed_file_name? allows
+    # This helps us understand the impact before switching to stricter validation.
+    unless bucket.new_allowed_file_name?(filename)
       report_filename_validation_failure(filename, 'files', encrypted_channel_id)
     end
 
