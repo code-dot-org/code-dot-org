@@ -14,9 +14,8 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
 
     let(:tutorial_code) {'tutorial_code'}
     let(:tutorial_url) {'https://studio.code.org/expected/tutorial_url'}
-    let(:tutorial) do
-      OpenStruct.new(tutorial_id: tutorial_code, primary_link_ref: OpenStruct.new(primary_target: tutorial_url))
-    end
+    let(:tutorial_primary_ref) {OpenStruct.new(primary_target: tutorial_url)}
+    let(:tutorial) {OpenStruct.new(tutorial_id: tutorial_code, primary_link_ref: tutorial_primary_ref)}
 
     let(:pegasus_db_mock) {double(:pegasus_db)}
     let(:forms_table_mock) {double(:forms_table)}
@@ -58,8 +57,38 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
       must_redirect_to tutorial_url
     end
 
+    context 'when tutorial primary link has relative url' do
+      let(:tutorial_url) {'/relative/tutorial_url'}
+
+      it 'redirects to tutorial URL on code.org domain' do
+        begin_tutorial_request
+        must_respond_with :found
+        must_redirect_to 'https://test.code.org/relative/tutorial_url'
+      end
+    end
+
     context 'when no tutorial is found' do
       let(:tutorial) {nil}
+
+      it 'returns error 404' do
+        begin_tutorial_request
+        must_respond_with :not_found
+        expect(HocLegacy::TutorialLauncher).not_to have_received(:call)
+      end
+    end
+
+    context 'when tutorial has no primary link' do
+      let(:tutorial_primary_ref) {nil}
+
+      it 'returns error 404' do
+        begin_tutorial_request
+        must_respond_with :not_found
+        expect(HocLegacy::TutorialLauncher).not_to have_received(:call)
+      end
+    end
+
+    context 'when tutorial primary link has no url' do
+      let(:tutorial_url) {''}
 
       it 'returns error 404' do
         begin_tutorial_request

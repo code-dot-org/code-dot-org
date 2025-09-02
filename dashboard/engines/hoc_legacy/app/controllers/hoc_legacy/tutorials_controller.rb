@@ -13,6 +13,9 @@ module HocLegacy
 
     # GET /api/hour/begin/:code
     def begin
+      tutorial_url = @tutorial.primary_link_ref&.primary_target
+      return head :not_found if tutorial_url.blank?
+
       if activity_tracking_enabled?
         # set company to nil if not a valid company
         company = params[:company].presence || request.cookies['company']
@@ -22,7 +25,10 @@ module HocLegacy
         TutorialLauncher.call(controller: self, tutorial: @tutorial, company: company)
       end
 
-      redirect_to @tutorial.primary_link_ref.primary_target, status: :found
+      # If the tutorial_url is a relative path, make it absolute by prepending code.org
+      tutorial_url = CDO.code_org_url(tutorial_url, CDO.default_scheme) if tutorial_url.starts_with?('/')
+
+      redirect_to tutorial_url, status: :found
     end
 
     # GET /api/hour/begin_:code.png
