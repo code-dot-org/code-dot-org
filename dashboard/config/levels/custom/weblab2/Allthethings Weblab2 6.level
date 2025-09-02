@@ -2,15 +2,31 @@
   <config><![CDATA[{
   "published": true,
   "game_id": 74,
-  "created_at": "2025-07-31T21:46:31.000Z",
+  "created_at": "2025-08-26T14:51:49.000Z",
   "level_num": "custom",
   "user_id": 6959,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Web Lab 2 Lab Widget View\r\n\r\nThis is an example of widget view WITH toggle to view/hide code.",
-    "widget_view": "true",
-    "widget_view_allow_show_code": "true"
+    "long_instructions": "## Web Lab 2 with Initial View Mode Set to Preview\r\n\r\nThis is an example of setting the initial \"view mode\" to preview, with the option to switch to see code.",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "true",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "false",
+    "initial_view_mode": "preview",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    }
   },
-  "audit_log": "[{\"changed_at\":\"2025-07-31T21:46:31.103+00:00\",\"changed\":[\"cloned from \\\"Allthethings Weblab2 5\\\"\"],\"cloned_from\":\"Allthethings Weblab2 5\"},{\"changed_at\":\"2025-07-31 21:46:44 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-01 16:37:50 +0000\",\"changed\":[\"long_instructions\",\"widget_view\",\"widget_view_allow_show_code\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-07-31T21:46:31.103+00:00\",\"changed\":[\"cloned from \\\"Allthethings Weblab2 5\\\"\"],\"cloned_from\":\"Allthethings Weblab2 5\"},{\"changed_at\":\"2025-07-31 21:46:44 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-01 16:37:50 +0000\",\"changed\":[\"long_instructions\",\"widget_view\",\"widget_view_allow_show_code\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-27 16:58:39 -0400\",\"changed\":[\"long_instructions\",\"widget_view\"],\"changed_by_id\":1,\"changed_by_email\":\"ben+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab2>

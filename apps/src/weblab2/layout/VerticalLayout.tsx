@@ -7,20 +7,18 @@ import {LayoutProps} from '@codebridge/types';
 import HeaderButtons from '@codebridge/Workspace/HeaderButtons';
 import Workspace from '@codebridge/Workspace/Workspace';
 import classNames from 'classnames';
-import React, {useEffect, useState} from 'react';
+import React, {useEffect} from 'react';
 
 import {HTMLPreview} from '@cdo/apps/codebridge/FilePreview/HTMLPreview';
 import {useVerticalLayout} from '@cdo/apps/lab2/hooks/useVerticalLayout';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
+import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import weblab2I18n from '@cdo/apps/weblab2/locale';
 
-import moduleStyles from '@cdo/apps/lab2/views/components/layout/layout.module.scss';
+import {setViewMode} from '../redux';
+import {ViewMode} from '../types';
 
-enum ViewMode {
-  SPLIT = 'split',
-  CODE = 'code',
-  PREVIEW = 'preview',
-}
+import moduleStyles from '@cdo/apps/lab2/views/components/layout/layout.module.scss';
 
 const MIN_INFO_PANEL_WIDTH = 150;
 const INITIAL_INFO_PANEL_WIDTH = 300;
@@ -34,7 +32,8 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
   isProjectLevel,
   isWidgetView,
 }) => {
-  const [viewMode, setViewMode] = useState<ViewMode>(ViewMode.SPLIT);
+  const viewMode = useAppSelector(state => state.weblab2.viewMode);
+  const dispatch = useAppDispatch();
 
   const infoPanelInitialWidth = isProjectLevel
     ? 0
@@ -105,7 +104,7 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
     ],
     size: 'xs',
     selectedButtonValue: viewMode,
-    onChange: viewMode => setViewMode(viewMode as ViewMode),
+    onChange: viewMode => dispatch(setViewMode(viewMode as ViewMode)),
   };
 
   useEffect(() => {
