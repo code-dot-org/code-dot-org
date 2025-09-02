@@ -125,6 +125,16 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
     }
   }, [isProjectLevel, setLeftPanelSize, isWidgetView]);
 
+  if (viewMode === ViewMode.MAXIMIZED) {
+    return (
+      <div className={moduleStyles.defaultContainer}>
+        <div className={moduleStyles.layoutContainer}>
+          <HTMLPreview />
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div
       className={
