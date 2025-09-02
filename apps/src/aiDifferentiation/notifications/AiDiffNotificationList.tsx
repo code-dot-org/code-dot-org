@@ -17,7 +17,8 @@ const AiDiffNotificationList: React.FC = () => {
     HttpClient.fetchJson<AiDiffNotification[]>('/notifications', {}, undefined)
       .then(response => {
         setLoading(false);
-        const loadedNotifications = response.value.map(n => ({
+        console.log('lfm', response);
+        const loadedNotifications = response?.value?.map(n => ({
           ...n,
           publishedAt: new Date(n.publishedAt),
           readAt: n.readAt ? new Date(n.readAt) : null,

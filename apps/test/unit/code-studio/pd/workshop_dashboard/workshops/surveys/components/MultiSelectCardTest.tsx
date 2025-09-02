@@ -16,6 +16,7 @@ describe('MultiSelectCard', () => {
     title: 'Test Multi-Select Card',
     description: 'This is a test description.',
     items: defaultItems,
+    totalRespondents: 30,
     barLabel: 'responses',
   };
 
@@ -81,16 +82,11 @@ describe('MultiSelectCard', () => {
     });
   });
 
-  describe('when the items array is empty', () => {
-    it('renders without crashing and displays no items', () => {
-      renderComponent({items: []});
+  describe('when there are no respondents', () => {
+    it('does not render', () => {
+      const {container} = renderComponent({totalRespondents: 0});
 
-      // Ensure the main titles are still there
-      expect(screen.getByText('Test Multi-Select Card')).toBeInTheDocument();
-
-      // Ensure no item-specific content is rendered
-      expect(screen.queryByText('Option A')).not.toBeInTheDocument();
-      expect(screen.queryByText('15 responses')).not.toBeInTheDocument();
+      expect(container.firstChild).toBeNull();
     });
   });
 });

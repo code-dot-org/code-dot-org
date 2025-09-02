@@ -7,11 +7,8 @@ import {Card, CardContent, CardHeader} from '@mui/material';
 import classNames from 'classnames';
 import React, {FC} from 'react';
 
-import noResponsesBars from '@cdo/static/pd/no-responses-bars.png';
-
 import {Breakdown} from '../../../WorkshopFormTemplate/types';
 
-import {EmptyState} from './EmptyState';
 import {PercentageBarGroup} from './PercentageBarGroup';
 
 import styles from '../../workshop.module.scss';
@@ -20,6 +17,7 @@ interface MultiSelectCardProps {
   title: string;
   description: string;
   items: Breakdown[];
+  totalRespondents: number;
   barLabel?: string;
 }
 
@@ -27,8 +25,12 @@ export const MultiSelectCard: FC<MultiSelectCardProps> = ({
   title,
   description,
   items,
+  totalRespondents,
   barLabel = '',
 }) => {
+  if (!totalRespondents) {
+    return null;
+  }
   return (
     <Card
       className={classNames(
@@ -51,15 +53,7 @@ export const MultiSelectCard: FC<MultiSelectCardProps> = ({
         }
       />
       <CardContent className={styles.cardContent}>
-        {items.length > 0 ? (
-          <PercentageBarGroup items={items} barLabel={barLabel} />
-        ) : (
-          <EmptyState
-            title="No data available yet."
-            description="Check back after responses are submitted."
-            imageProps={{src: noResponsesBars}}
-          />
-        )}
+        <PercentageBarGroup items={items} barLabel={barLabel} />
       </CardContent>
     </Card>
   );
