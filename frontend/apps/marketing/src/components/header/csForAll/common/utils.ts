@@ -19,9 +19,9 @@ export async function getLinksFromEntry(entryId: string) {
 
   try {
     const entry = await client?.getEntry(entryId);
-
-    const items = entry?.fields.itemsInThisList;
-    const links = Array.isArray(items) ? items : [];
+    const links = Array.isArray(entry?.fields.itemsInThisList)
+      ? entry.fields.itemsInThisList
+      : [];
 
     // Remove before committing
     console.log(links);
