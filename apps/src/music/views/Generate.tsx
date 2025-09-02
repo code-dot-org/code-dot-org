@@ -61,6 +61,12 @@ const Generate: React.FunctionComponent<GenerateProps> = () => {
   const adlibOption = appConfig.getValue('ai-generate-adlib') as string;
   const [adlibText, setAdlibText] = useState<string | undefined>(undefined);
 
+  const [text, setText] = useState(
+    'Please generate a fun song.  Between 18-20 measures is enough duration.  Use layering of sounds to make it exciting.'
+  );
+
+  const useText = adlibOption ? adlibText : text;
+
   const sounds = library
     ?.getFolderForFolderId(packId || 'indie')
     ?.sounds?.map(sound => {
@@ -92,13 +98,7 @@ Note that each sound is actually 2 measures long.
 The valid sounds to use are: "${sounds}".  (The length of each sound is in parentheses.)  You can use any of these sounds in your psuedocode.  Each sound name gets the "${packId}/" prefix, so for example, "indie/drum_beat_808".
 `;
 
-  const [text, setText] = useState(
-    'Please generate a fun song.  Between 18-20 measures is enough duration.  Use layering of sounds to make it exciting.'
-  );
-
   const generateSong = useCallback(() => {
-    const useText = adlibOption ? adlibText : text;
-
     console.log('starting ask');
     dispatch(setAiGenerateState('generating'));
     askAi(
@@ -116,13 +116,7 @@ The valid sounds to use are: "${sounds}".  (The length of each sound is in paren
 
       dispatch(setAiGenerateState('done'));
     });
-  }, [
-    adlibOption,
-    adlibText,
-    text,
-    dispatch,
-    contextGenerateMusicPsuedocodeFromDescription,
-  ]);
+  }, [dispatch, contextGenerateMusicPsuedocodeFromDescription, useText]);
 
   if (!packId) {
     return null;
@@ -130,9 +124,12 @@ The valid sounds to use are: "${sounds}".  (The length of each sound is in paren
 
   return (
     <Guide id="generate-panel">
+      {(aiGenerateState === 'generating' || aiGenerateState === 'done') && (
+        <div className={styles.textArea}>{useText}</div>
+      )}
+
       {aiGenerateState === 'none' && (
         <>
-          <div className={styles.info}>Generate a song with AI.</div>
           {!adlibOption && (
             <textarea
               id="generate-description"
