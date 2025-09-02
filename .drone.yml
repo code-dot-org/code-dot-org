@@ -52,7 +52,7 @@ steps:
         - .
 
   - name: checkout
-    image: bitnami/git
+    image: bitnamilegacy/git
     commands:
       - git lfs install --skip-repo
       # We should be in a cached git repo, but clone if the cache failed
@@ -185,7 +185,7 @@ steps:
         - .
 
   - name: checkout
-    image: bitnami/git
+    image: bitnamilegacy/git
     commands:
       - git lfs install --skip-repo
       # We should be in a cached git repo, but clone if the cache failed
@@ -288,7 +288,7 @@ clone:
 
 steps:
   - name: clone
-    image: bitnami/git
+    image: bitnamilegacy/git
     commands:
       - git lfs install
       - git clone --branch $DRONE_BRANCH $DRONE_GIT_HTTP_URL . 
