@@ -11136,7 +11136,6 @@ __metadata:
     sanitize-html: "npm:^1.11.3"
     sass: "npm:^1.51.0"
     sass-loader: "npm:^12.1.0"
-    save-csv: "npm:^4.0.6"
     schema-dts: "npm:^1.1.5"
     script-loader: "npm:^0.7.2"
     seedrandom: "npm:2.4.2"
@@ -26890,13 +26889,6 @@ canvg@gabelerner/canvg:
   bin:
     sass: sass.js
   checksum: 10/ff8640745449932d72c54fb00d6913ba9c5f27021949b2008cdc76476a177dcd661eb9990fcca94d20d6dbf4010159de5b222ce7125569053e953d5fed076313
-  languageName: node
-  linkType: hard
-
-"save-csv@npm:^4.0.6":
-  version: 4.0.6
-  resolution: "save-csv@npm:4.0.6"
-  checksum: 10/2a35dbf8d38846d19511239c70fd8af007318f9c6631f82af6f7561e96494055ad3c044b049a0fcb0b70b1a488acc3abae90b6c38e5fc9770ed3bb5ea444b282
   languageName: node
   linkType: hard
 
