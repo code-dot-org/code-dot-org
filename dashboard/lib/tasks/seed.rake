@@ -88,7 +88,6 @@ namespace :seed do
     ui-test-unnumbered-lessons
   ).map {|script| "test/ui/config/scripts_json/#{script}.script_json"}.freeze
   UI_TEST_SCRIPTS = SPECIAL_UI_TEST_SCRIPTS + %w(
-    20-hour
     algebra
     allthehiddenthings
     allthelessonplans
@@ -97,10 +96,6 @@ namespace :seed do
     allthethings
     allthettsthings
     artist
-    course1
-    course2
-    course3
-    course4
     coursea-2017
     courseb-2017
     coursec-2017
