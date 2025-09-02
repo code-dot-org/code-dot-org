@@ -27,7 +27,6 @@ interface NavigationButtonProps {
   hasEdited: boolean;
   className?: string;
   size?: ComponentSizeXSToL;
-  requireRun?: boolean;
 }
 
 const NavigationButton: React.FC<NavigationButtonProps> = ({
@@ -88,29 +87,18 @@ const NavigationButton: React.FC<NavigationButtonProps> = ({
     );
   }
 
-  return (
-    <ContinueButton
-      className={className}
-      size={size}
-      isPredictLevel={levelProperties.predictSettings?.isPredictLevel}
-    />
-  );
+  return <ContinueButton className={className} size={size} />;
 };
 
 interface ContinueButtonProps {
   className?: string;
   size?: ComponentSizeXSToL;
-  isPredictLevel?: boolean;
 }
 
 /**
  * Displays the "Continue" or "Finish" button that advances to the next level or finishes the progression.
  */
-const ContinueButton: React.FC<ContinueButtonProps> = ({
-  className,
-  size,
-  isPredictLevel,
-}) => {
+const ContinueButton: React.FC<ContinueButtonProps> = ({className, size}) => {
   const dispatch = useAppDispatch();
   const hasNextLevel = useAppSelector(
     state => nextLevelId(state) !== undefined
