@@ -133,13 +133,12 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
       />
       <Button
         onClick={onMaximize}
-        aria-label="Maximize Preview"
-        // aria-label={weblab2I18n.maximizePreview()}
+        aria-label={weblab2I18n.maximizePreview()}
         size="xs"
         type="tertiary"
         color="gray"
         isIconOnly={true}
-        icon={{iconName: 'maximize'}}
+        icon={{iconName: 'expand'}}
         className={moduleStyles.urlButton}
       />
     </div>

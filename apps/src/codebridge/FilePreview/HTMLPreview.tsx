@@ -111,7 +111,7 @@ export const HTMLPreview: React.FC = () => {
 
   const onMaximize = () => {
     console.log('onMaximize');
-    // setPreviewViewMode(PreviewViewMode.MAXIMIZED);
+    setPreviewViewMode(PreviewViewMode.MAXIMIZED);
   };
 
   const addToNavigationHistory = (
