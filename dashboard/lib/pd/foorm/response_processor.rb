@@ -165,7 +165,7 @@ module Pd::Foorm
       # Filter responses
       responses = question_summary.compact_blank.filter do |response|
         sanitized_response = response.downcase.gsub(/\W/, '') # Remove spaces and non-word characters and then downcase
-        response.length >= 3 && useless_answers.exclude?(sanitized_response) # Exclude short and useless answers
+        useless_answers.exclude?(sanitized_response) # Exclude useless answers
       end
 
       # Sort responses by length, longest first
