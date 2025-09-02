@@ -99,6 +99,18 @@ const Notification: React.FC<{
                 </a>
               </li>
             ))}
+          {notificationOrPlaceholder.aiPrompts?.length > 0 &&
+            notificationOrPlaceholder.aiPrompts.map(prompt => (
+              <li>
+                <button
+                  onClick={() => {}}
+                  className={styles.aiButton}
+                  type="button"
+                >
+                  {prompt.text}
+                </button>
+              </li>
+            ))}
         </ol>
       </div>
       <BodyThreeText

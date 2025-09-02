@@ -70,11 +70,22 @@ p.text {
 .links {
   margin: 0;
   & li {
+    margin-top: 4px;
     list-style-type: none;
     & i {
       margin-inline-start: 4px;
     }
   }
+}
+
+.aiButton {
+  margin: 0;
+  margin-top: 4px;
+  padding: 2px 16px;
+  font-size: 12px;
+  background-color: var(--background-neutral-primary);
+  border: 1px solid var(--borders-neutral-solid);
+  border-radius: 100px;
 }
 
 p.date {
