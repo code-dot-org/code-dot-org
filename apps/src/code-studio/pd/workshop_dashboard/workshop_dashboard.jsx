@@ -26,7 +26,6 @@ import regionalPartnerReducers, {
   setRegionalPartners,
 } from '../components/regional_partners_reducers';
 
-import WorkshopAttendance from './attendance/workshop_attendance';
 import LegacySurveySummaries from './legacy_survey_summaries.jsx';
 import {WorkshopAdmin} from './permission';
 import workshopDashboardReducers, {
@@ -41,6 +40,7 @@ import WorkshopFilter from './workshop_filter';
 import WorkshopIndex from './workshop_index';
 import {WorkshopFormTemplate} from './WorkshopFormTemplate';
 import {workshopLabel} from './WorkshopFormTemplate/utils';
+import {WorkshopAttendance} from './workshops/attendance/WorkshopAttendance';
 import {WorkshopEnrollments} from './workshops/enrollments/WorkshopEnrollments';
 import {WorkshopOverview} from './workshops/overview/WorkshopOverview';
 import {Engagement} from './workshops/surveys/post/components/Engagement';
@@ -108,6 +108,12 @@ const postSurveyCategoryChildRoutes = [
 
 const surveyTypeChildRoutes = [
   {
+    label: 'Pre-workshop survey',
+    path: 'pre',
+    component: () => <div>Pre workshop</div>,
+    breadcrumbs: 'Workshops,Workshop,Temp,Surveys,Pre',
+  },
+  {
     label: 'Post-workshop survey',
     path: 'post',
     component: Outlet,
@@ -120,12 +126,6 @@ const surveyTypeChildRoutes = [
       },
       ...postSurveyCategoryChildRoutes,
     ],
-  },
-  {
-    label: 'Pre-workshop survey',
-    path: 'pre',
-    component: () => <div>Pre workshop</div>,
-    breadcrumbs: 'Workshops,Workshop,Temp,Surveys,Pre',
   },
 ];
 
@@ -140,6 +140,12 @@ const workshopChildRouteConfigs = [
     path: 'enrollments',
     component: WorkshopEnrollments,
     breadcrumbs: 'Workshops,Workshop,Temp,Enrollments',
+  },
+  {
+    label: 'Attendance',
+    path: 'attendance',
+    component: WorkshopAttendance,
+    breadcrumbs: 'Workshops,Workshop,Temp,Attendance',
   },
   {
     label: 'Surveys',
@@ -211,7 +217,14 @@ const routeConfigs = [
         })
       ),
     },
-    childRoutes: workshopChildRouteConfigs,
+    childRoutes: [
+      ...workshopChildRouteConfigs,
+      {
+        path: 'edit',
+        breadcrumbs: 'Workshops,Workshop,Temp,Edit',
+        component: WorkshopFormTemplate,
+      },
+    ],
   },
   {
     path: 'workshops/:workshopId/edit',

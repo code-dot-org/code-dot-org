@@ -43,6 +43,7 @@ Feature: Send and receive messages in the AI differentiation chat
     And I click selector "#uitest_aiDiffWelcomeContinue"
     And I click selector "input[value='Write an extension activity for students who finish early']" once I see it
     And I wait until element "p:contains(Lorem ipsum)" is visible
+    And I wait until element "#uitest-chat-textarea" has focus
     Then I see no difference for "ai diff welcome create chat"
     #eyes here
     And I click selector "#uitest_aiDiffWelcomeContinue"
@@ -50,10 +51,9 @@ Feature: Send and receive messages in the AI differentiation chat
     And I wait for 3 seconds
     Then I see no difference for "ai diff welcome finish"
 
-    And I scroll the "button:contains(Finish)" element into view
     And I click selector "button:contains(Finish)" once I see it
 
-    #Now we see the regular AI diff chat
+    #Now we see the regular AI diff chat (with thread sidebar)
     And I wait until element "input[value='Give me an example']" is visible
     Then I see no difference for "ai diff chat initial view"
 

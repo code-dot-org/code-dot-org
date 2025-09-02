@@ -12,7 +12,7 @@ module Pd::Foorm
       # All categories except facilitators should have questions array
       [:implementation, :engagement, :logistics, :other].each do |category|
         assert categories[category].key?(:questions)
-        assert_equal [], categories[category][:questions]
+        assert_equal({}, categories[category][:questions])
       end
 
       # Facilitators should be empty hash (will be populated with facilitator data)
@@ -33,14 +33,9 @@ module Pd::Foorm
       assert_equal :logistics, WorkshopCategorizer.determine_category('LOGISTICS')
     end
 
-    test 'determine_category handles dynamic categories and falls back to other for nil or invalid values' do
+    test 'determine_category handles dynamic categories' do
       # Any string category should be converted to symbol
       assert_equal :custom_category, WorkshopCategorizer.determine_category('custom_category')
-
-      # Invalid inputs should fall back to :other
-      assert_equal :other, WorkshopCategorizer.determine_category('')
-      assert_equal :other, WorkshopCategorizer.determine_category(nil)
-      assert_equal :other, WorkshopCategorizer.determine_category(123)
     end
 
     test 'promoter_percentage_scale? correctly identifies Promoter percentage vs Likert scales' do
@@ -101,7 +96,6 @@ module Pd::Foorm
       question_data = {
         title: 'Test Question',
         short_text: 'Test Short',
-        sub_text: 'Test Sub',
         type: 'singleSelect',
         category: 'implementation',
         choices: {'option1' => 'Option 1', 'option2' => 'Option 2'}
@@ -113,14 +107,13 @@ module Pd::Foorm
       assert_equal 'test_question', result[:question_name]
       assert_equal 'Test Question', result[:question_text]
       assert_equal 'Test Short', result[:question_short_text]
-      assert_equal 'Test Sub', result[:question_sub_text]
       assert_equal 'singleSelect', result[:question_type]
       assert_equal 'implementation', result[:category]
-      assert result[:responses].key?(:total_responses)
-      assert_equal 5, result[:responses][:total_responses]
+      assert result[:results].key?(:total_responses)
+      assert_equal 5, result[:results][:total_responses]
     end
 
-    test 'create_processed_question handles NPS scale questions' do
+    test 'create_processed_question handles promoter scale questions' do
       question_name = 'promoter_percentage_question'
       question_data = {
         title: 'How likely are you to recommend?',
@@ -134,9 +127,9 @@ module Pd::Foorm
 
       result = WorkshopCategorizer.create_processed_question(question_name, question_data, question_summary)
 
-      assert_equal 'scale', result[:question_type]
-      assert result[:responses].key?(:promoter_percentage)
-      assert_equal 100, result[:responses][:promoter_percentage] # All responses >= 7
+      assert_equal 'promoter', result[:question_type]
+      assert result[:results].key?(:promoter_percentage)
+      assert_equal 100, result[:results][:promoter_percentage] # All responses >= 7
     end
 
     test 'create_processed_question handles Likert scale questions' do
@@ -152,11 +145,13 @@ module Pd::Foorm
 
       result = WorkshopCategorizer.create_processed_question(question_name, question_data, question_summary)
 
-      assert_equal 'scale', result[:question_type]
-      assert result[:responses].key?(:weighted_score)
-      assert result[:responses].key?(:agreement_percentage)
+      assert_equal 'likert', result[:question_type]
+      assert result[:results].key?(:weighted_score)
+      assert result[:results].key?(:total_responses)
+      assert result[:results].key?(:agreement_count)
+      assert result[:results].key?(:agreement_percentage)
       # All responses are >= 5, so 100% agreement
-      assert_equal 100, result[:responses][:agreement_percentage]
+      assert_equal 100, result[:results][:agreement_percentage]
     end
 
     test 'create_processed_question handles facilitator name replacement' do
@@ -199,6 +194,12 @@ module Pd::Foorm
               type: 'singleSelect',
               category: 'logistics',
               choices: {'high' => 'High', 'low' => 'Low'}
+            },
+            'other_question' => {
+              title: 'Other Question',
+              type: 'singleSelect',
+              category: 'other',
+              choices: {'1' => 'Strongly Disagree', '7' => 'Strongly Agree'}
             }
           }
         },
@@ -212,7 +213,8 @@ module Pd::Foorm
             'form1' => {
               'impl_question' => {'yes' => 8, 'no' => 2},
               'engage_question' => {'high' => 6, 'low' => 4},
-              'log_question' => {'high' => 7, 'low' => 3}
+              'log_question' => {'high' => 7, 'low' => 3},
+              'other_question' => {'1' => 4, '7' => 10}
             }
           }
         }
@@ -232,23 +234,28 @@ module Pd::Foorm
       # Check implementation category has the right question
       impl_questions = result[:implementation][:questions]
       assert_equal 1, impl_questions.length
-      assert_equal 'impl_question', impl_questions[0][:question_name]
-      assert_equal 'Implementation Question', impl_questions[0][:question_text]
+      assert_equal 'impl_question', impl_questions['impl_question'][:question_name]
+      assert_equal 'Implementation Question', impl_questions['impl_question'][:question_text]
 
       # Check engagement category has the right question
       engage_questions = result[:engagement][:questions]
       assert_equal 1, engage_questions.length
-      assert_equal 'engage_question', engage_questions[0][:question_name]
-      assert_equal 'Engagement Question', engage_questions[0][:question_text]
+      assert_equal 'engage_question', engage_questions['engage_question'][:question_name]
+      assert_equal 'Engagement Question', engage_questions['engage_question'][:question_text]
 
       # Check logistics category has the right question
       engage_questions = result[:logistics][:questions]
       assert_equal 1, engage_questions.length
-      assert_equal 'log_question', engage_questions[0][:question_name]
-      assert_equal 'Logistics Question', engage_questions[0][:question_text]
+      assert_equal 'log_question', engage_questions['log_question'][:question_name]
+      assert_equal 'Logistics Question', engage_questions['log_question'][:question_text]
 
-      # Other categories should be empty
-      assert_equal [], result[:other][:questions]
+      # Check other category has the right question
+      other_questions = result[:other][:questions]
+      assert_equal 1, other_questions.length
+      assert_equal 'other_question', other_questions['other_question'][:question_name]
+      assert_equal 'Other Question', other_questions['other_question'][:question_text]
+
+      # Facilitators categories should be empty
       assert_equal({}, result[:facilitators])
     end
 
@@ -296,13 +303,13 @@ module Pd::Foorm
       # Each matrix row should be processed as separate question in its category
       impl_questions = result[:implementation][:questions]
       assert_equal 1, impl_questions.length
-      assert_equal 'row1', impl_questions[0][:question_name]
-      assert_equal 'Implementation Row', impl_questions[0][:question_text]
+      assert_equal 'row1', impl_questions['row1'][:question_name]
+      assert_equal 'Implementation Row', impl_questions['row1'][:question_text]
 
       engage_questions = result[:engagement][:questions]
       assert_equal 1, engage_questions.length
-      assert_equal 'row2', engage_questions[0][:question_name]
-      assert_equal 'Engagement Row', engage_questions[0][:question_text]
+      assert_equal 'row2', engage_questions['row2'][:question_name]
+      assert_equal 'Engagement Row', engage_questions['row2'][:question_text]
     end
 
     test 'categorize_survey_data handles facilitator questions' do
@@ -349,44 +356,11 @@ module Pd::Foorm
       # Check questions with name replacement
       fac1_questions = result[:facilitators]['fac1'][:questions]
       assert_equal 1, fac1_questions.length
-      assert_equal 'John Smith was helpful', fac1_questions[0][:question_text]
+      assert_equal 'John Smith was helpful', fac1_questions['fac_question'][:question_text]
 
       fac2_questions = result[:facilitators]['fac2'][:questions]
       assert_equal 1, fac2_questions.length
-      assert_equal 'Jane Doe was helpful', fac2_questions[0][:question_text]
-    end
-
-    test 'categorize_survey_data handles uncategorized questions in other' do
-      parsed_forms_with_categories = {
-        general: {
-          'form1' => {
-            'uncategorized_question' => {
-              title: 'Uncategorized Question',
-              type: 'singleSelect',
-              choices: {'option1' => 'Option 1'}
-            }
-          }
-        },
-        facilitator: {}
-      }
-
-      summarized_answers = {
-        'Survey1' => {
-          general: {
-            'form1' => {
-              'uncategorized_question' => {'option1' => 5}
-            }
-          }
-        }
-      }
-
-      result = WorkshopCategorizer.categorize_survey_data(parsed_forms_with_categories, summarized_answers, nil)
-
-      # Question should end up in 'other' category
-      other_questions = result[:other][:questions]
-      assert_equal 1, other_questions.length
-      assert_equal 'uncategorized_question', other_questions[0][:question_name]
-      assert_equal 'Uncategorized Question', other_questions[0][:question_text]
+      assert_equal 'Jane Doe was helpful', fac2_questions['fac_question'][:question_text]
     end
   end
 end

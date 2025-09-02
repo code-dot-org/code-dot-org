@@ -2,8 +2,8 @@ require 'test_helper'
 
 class LessonsProgrammingExpressionTest < ActiveSupport::TestCase
   test 'lesson and programming_expression associations' do
-    lesson = create :lesson
-    programming_expression = create :programming_expression
+    lesson = create(:lesson)
+    programming_expression = create(:programming_expression)
     lesson.programming_expressions.push(programming_expression)
 
     lesson_programming_expression = lesson.lessons_programming_expressions.first
@@ -12,10 +12,10 @@ class LessonsProgrammingExpressionTest < ActiveSupport::TestCase
   end
 
   test 'seeding_key' do
-    lesson_group = create :lesson_group
+    lesson_group = create(:lesson_group)
     script = lesson_group.script
-    lesson = create :lesson, lesson_group: lesson_group, script: script
-    programming_expression = create :programming_expression
+    lesson = create(:lesson, lesson_group: lesson_group, script: script)
+    programming_expression = create(:programming_expression)
     lesson.programming_expressions.push(programming_expression)
     seed_context = Services::ScriptSeed::SeedContext.new(
       script: script,

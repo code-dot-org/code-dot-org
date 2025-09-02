@@ -10,7 +10,7 @@ module RegistrationsControllerTests
     end
 
     test "update student without user param returns 400 BAD REQUEST" do
-      student = create :student
+      student = create(:student)
       sign_in student
       assert_does_not_create(User) do
         put '/users', params: {}
@@ -19,7 +19,7 @@ module RegistrationsControllerTests
     end
 
     test "update student with utf8mb4 in name succeeds" do
-      student = create :student
+      student = create(:student)
 
       sign_in student
 
@@ -32,7 +32,7 @@ module RegistrationsControllerTests
 
     test "update student with age" do
       Timecop.travel Time.local(2013, 9, 1, 12, 0, 0) do
-        student = create :student, birthday: '1981/03/24'
+        student = create(:student, birthday: '1981/03/24')
 
         sign_in student
 
@@ -48,7 +48,7 @@ module RegistrationsControllerTests
       # "user" => {"age" => {"Pr" => ""}}
       # https://www.honeybadger.io/projects/3240/faults/9963470
       Timecop.travel Time.local(2013, 9, 1, 12, 0, 0) do
-        student = create :student, birthday: '1981/03/24'
+        student = create(:student, birthday: '1981/03/24')
 
         sign_in student
 
@@ -61,7 +61,7 @@ module RegistrationsControllerTests
     end
 
     test 'update rejects unwanted parameters' do
-      user = create :user, name: 'non-admin'
+      user = create(:user, name: 'non-admin')
       sign_in user
       put '/users', params: {user: {name: 'admin', admin: true}}
 
@@ -72,7 +72,7 @@ module RegistrationsControllerTests
 
     test "converting student to teacher is not allowed" do
       test_email = 'me@example.com'
-      student = create :student, email: test_email
+      student = create(:student, email: test_email)
       sign_in student
 
       put '/users', as: :json, params: {
@@ -90,7 +90,7 @@ module RegistrationsControllerTests
 
     test "converting teacher to student is not allowed" do
       test_email = 'me@example.com'
-      teacher = create :teacher, email: test_email
+      teacher = create(:teacher, email: test_email)
       sign_in teacher
 
       put '/users', as: :json, params: {
@@ -108,7 +108,7 @@ module RegistrationsControllerTests
 
     test "editing email is not allowed" do
       current_password = 'oldpassword'
-      user = create :teacher, password: current_password
+      user = create(:teacher, password: current_password)
 
       new_email = 'new@example.com'
 
@@ -124,7 +124,7 @@ module RegistrationsControllerTests
 
     test "editing hashed_email is not allowed" do
       current_password = 'oldpassword'
-      user = create :student, password: current_password
+      user = create(:student, password: current_password)
 
       new_hashed_email = '729980b94e1439aeed40122476b0f695'
 
@@ -142,7 +142,7 @@ module RegistrationsControllerTests
       # so it's possible to add a recovery option to their account.  Once they are
       # on multi-auth they can just add an email or another SSO, so this is no
       # longer needed.
-      student = create :student, :clever_sso_provider
+      student = create(:student, :clever_sso_provider)
       assert_nil student.parent_email
       assert_nil student.encrypted_password
 
@@ -162,7 +162,7 @@ module RegistrationsControllerTests
       # on multi-auth they can just add an email or another SSO, so this is no
       # longer needed.
       password = 'drowssap'
-      student = create :student, password: password
+      student = create(:student, password: password)
       assert_nil student.parent_email
       refute_nil student.encrypted_password
 
@@ -184,7 +184,7 @@ module RegistrationsControllerTests
       # so it's possible to add a recovery option to their account.  Once they are
       # on multi-auth they can just add an email or another SSO, so this is no
       # longer needed.
-      student = create :student, password: 'drowssap'
+      student = create(:student, password: 'drowssap')
       assert_nil student.parent_email
       refute_nil student.encrypted_password
 
@@ -203,7 +203,7 @@ module RegistrationsControllerTests
       # so it's possible to add a recovery option to their account.  Once they are
       # on multi-auth they can just add an email or another SSO, so this is no
       # longer needed.
-      student = create :student, password: 'drowssap'
+      student = create(:student, password: 'drowssap')
       assert_nil student.parent_email
       refute_nil student.encrypted_password
 
@@ -226,7 +226,7 @@ module RegistrationsControllerTests
     # via oauth (a third-party account), or students with a picture password.
 
     test "editing password of student-without-password is allowed" do
-      student_without_password = create :student, encrypted_password: ''
+      student_without_password = create(:student, encrypted_password: '')
       assert student_without_password.encrypted_password.blank?
 
       assert can_edit_password_without_password? student_without_password
@@ -236,14 +236,14 @@ module RegistrationsControllerTests
     end
 
     test "editing password of student-with-password requires current password" do
-      student_with_password = create :student, password: 'oldpassword'
+      student_with_password = create(:student, password: 'oldpassword')
       refute can_edit_password_without_password? student_with_password
       refute can_edit_password_with_password? student_with_password, 'wrongpassword'
       assert can_edit_password_with_password? student_with_password, 'oldpassword'
     end
 
     test "editing password of teacher-without-password is allowed" do
-      teacher_without_password = create :teacher, encrypted_password: ''
+      teacher_without_password = create(:teacher, encrypted_password: '')
       assert teacher_without_password.encrypted_password.blank?
 
       assert can_edit_password_without_password? teacher_without_password
@@ -253,7 +253,7 @@ module RegistrationsControllerTests
     end
 
     test "editing password of teacher-with-password requires current password" do
-      teacher_with_password = create :teacher, password: 'oldpassword'
+      teacher_with_password = create(:teacher, password: 'oldpassword')
       refute can_edit_password_without_password? teacher_with_password
       refute can_edit_password_with_password? teacher_with_password, 'wrongpassword'
       assert can_edit_password_with_password? teacher_with_password, 'oldpassword'

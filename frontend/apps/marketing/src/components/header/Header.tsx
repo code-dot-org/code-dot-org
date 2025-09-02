@@ -1,7 +1,7 @@
 import {Brand} from '@/config/brand';
 
-import HeaderCorporateSite from './corporateSite/HeaderCorporateSite';
-import HeaderCSforAll from './csForAll/HeaderCSforAll';
+import HeaderCorporateSite from './corporateSite';
+import HeaderCSforAll from './csForAll';
 
 export const getHeader = (brand: Brand) => {
   switch (brand) {

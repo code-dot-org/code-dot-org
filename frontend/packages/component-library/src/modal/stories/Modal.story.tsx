@@ -164,9 +164,10 @@ ModalWithImageInlinePlacement.args = {
 
 export const DarkModal = SingleTemplate.bind({});
 DarkModal.args = {
-  title: 'Dark Mode Modal',
+  title: 'Dark Mode Modal (Deprecated)',
   description:
-    'This modal uses the dark color theme to create a visually distinct and focused experience for the user.',
+    'DEPRECATED: This modal uses the deprecated "mode" prop. Use the theme provider instead. ' +
+    'This story demonstrates the deprecated functionality that will be removed in a future version.',
   mode: 'dark',
   primaryButtonProps: {
     text: 'Primary Action',
@@ -259,9 +260,10 @@ MultipleModals.args = {
       onClose: () => null,
     },
     {
-      title: 'Modal 3 with Dark Theme',
+      title: 'Modal 3 with Dark Theme (Deprecated)',
       description:
-        'Content for modal 3 with dark theme. This modal uses the dark color mode to enhance readability and focus.',
+        '⚠️ DEPRECATED: This modal uses the deprecated "mode" prop. Use the theme provider instead. ' +
+        'This demonstrates the deprecated functionality that will be removed in a future version.',
       mode: 'dark',
       primaryButtonProps: {
         text: 'Primary Action',

@@ -9,15 +9,17 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
   self.use_transactional_test_case = true
 
   setup_all do
-    @workshop_admin = create :workshop_admin
-    @workshop_organizer = create :workshop_organizer
-    @program_manager = create :teacher
-    @regional_partner = create :regional_partner,
+    @workshop_admin = create(:workshop_admin)
+    @workshop_organizer = create(:workshop_organizer)
+    @program_manager = create(:teacher)
+    @regional_partner = create(:regional_partner,
       program_managers: [@workshop_organizer, @program_manager],
       cohort_capacity_csd: 25,
       cohort_capacity_csp: 50
+)
 
-    @serializing_teacher = create(:teacher,
+    @serializing_teacher = create(
+      :teacher,
       school_info: create(
         :school_info,
         school: create(
@@ -39,15 +41,15 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
   end
 
   test 'index gets regional partners for user' do
-    program_manager = create :teacher
+    program_manager = create(:teacher)
 
-    regional_partner_for_user = create :regional_partner, name: 'Regional Partner'
+    regional_partner_for_user = create(:regional_partner, name: 'Regional Partner')
     regional_partner_for_user.program_manager = program_manager.id
 
-    another_regional_partner_for_user = create :regional_partner, name: 'Another Regional Partner'
+    another_regional_partner_for_user = create(:regional_partner, name: 'Another Regional Partner')
     another_regional_partner_for_user.program_manager = program_manager.id
 
-    create :regional_partner, name: 'Other regional partner'
+    create(:regional_partner, name: 'Other regional partner')
 
     sign_in program_manager
 
@@ -60,7 +62,7 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
   end
 
   test 'index gets all regional partners for workshop admin' do
-    regional_partner = create :regional_partner, name: 'New regional partner'
+    regional_partner = create(:regional_partner, name: 'New regional partner')
     sign_in(create(:workshop_admin))
 
     get :index
@@ -193,7 +195,7 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
   end
 
   test 'show regional partner summer workshops for valid partner ID' do
-    regional_partner = create :regional_partner_beverly_hills
+    regional_partner = create(:regional_partner_beverly_hills)
 
     get :show, params: {partner_id: regional_partner.id}
     assert_response :success
@@ -209,7 +211,7 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
   test 'find regional partner summer workshops for specific zip' do
     Geocoder.expects(:search).never
 
-    regional_partner = create :regional_partner_beverly_hills
+    regional_partner = create(:regional_partner_beverly_hills)
 
     get :find, params: {zip_code: 90210}
     assert_response :success
@@ -220,7 +222,7 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
     mock_illinois_object = OpenStruct.new(country_code: "US", state_code: "IL")
     Geocoder.expects(:search).returns([mock_illinois_object])
 
-    regional_partner = create :regional_partner_illinois
+    regional_partner = create(:regional_partner_illinois)
 
     get :find, params: {zip_code: 60415}
     assert_response :success
@@ -279,12 +281,13 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
           [COURSE_CSA, SUBJECT_CSA_SUMMER_WORKSHOP]
         end
 
-      create :workshop,
+      create(:workshop,
         course: course,
         subject: subject,
         enrolled_absent_users: index,
         sessions_from: application_year_start_date,
         regional_partner: @regional_partner
+)
     end
 
     Api::V1::Pd::ApplicationsController::ROLES.each_with_index do |role, index|

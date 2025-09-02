@@ -2,17 +2,27 @@
 # Get region configuration and selected AZs from the new configuration structure
 region_config = MarketingSites::Configuration::regions[options[:region].to_sym]
 selected_azs = region_config[:selected_availability_zones]
+
+is_production = options[:environment_type] == 'production'
+has_production_domain = options[:production_domain_name] && !options[:production_domain_name].empty?
+has_production_hosted_zone = options[:production_hosted_zone_id] && !options[:production_hosted_zone_id].empty?
+enable_production_domain = is_production && has_production_domain && has_production_hosted_zone
+
+base_domain_url = "https://#{options[:subdomain_name]}.#{options[:base_domain_name]}"
+domain_display = enable_production_domain ?
+  "https://#{options[:production_domain_name]} and #{base_domain_url}" :
+  base_domain_url
 %>
 AWSTemplateFormatVersion: 2010-09-09
 
 Description: >
-  Provision a marketing website (<%="https://#{options[:subdomain_name]}.#{options[:base_domain_name]}"%>) powered by
+  Provision a marketing website (<%=domain_display%>) powered by
   our Next.js web application server and the Contentful cloud service.
 
 Parameters:
   CloudFrontTLSCertificateArn:
     Type: String
-    Description: The ARN of the TLS certificate for this marketing site's CloudFront Distribution.
+    Description: The ARN of the TLS certificate for this marketing site's CloudFront Distribution (provisioned and Output in us-east-1 by a separate Stack).
   HostedZoneId:
     Type: String
     Description: AWS Route 53 Hosted Zone ID to provision this marketing site's domain name. (e.g. the Hosted Zone ID for 'marketing-sites.dev-code.org').
@@ -22,6 +32,21 @@ Parameters:
   SubdomainName:
     Type: String
     Description: Subdomain name for this marketing site (e.g. 'hourofcode' in 'hourofcode.marketing-sites.test-code.org').
+<% if enable_production_domain %>
+  # Avoid complex CloudFormation template string concatenation logic (subdomain + basedomain) to handle a fully
+  # qualified domain name for production sites typically not having a subdomain, by explicitly specifying the
+  # production domain name when it's just a top level domain.
+  ProductionDomainName:
+    Type: String
+    Default: "<%= options[:production_domain_name] %>"
+    Description: >
+      Fully qualified domain name of this site for production. For example, 'hourofai.org' when
+      EnvironmentType is 'production', BaseDomainName is 'marketing-sites.code.org', SubdomainName is 'hourofai'.
+  ProductionHostedZoneId:
+    Type: String
+    Default: "<%= options[:production_hosted_zone_id] %>"
+    Description: AWS Route 53 Hosted Zone ID for the production domain name.
+<% end %>
   EnvironmentType:
     Type: String
     Default: development
@@ -42,6 +67,7 @@ Parameters:
 
 Conditions:
   IsProductionEnvironment: !Equals [!Ref EnvironmentType, production]
+  IsCorporateSite: !Equals [ !Ref SiteType, corporate ]
 
 Mappings:
   # Cloudfront Mappings
@@ -90,7 +116,7 @@ Resources:
     Properties:
       AliasTarget:
         DNSName: !GetAtt CloudFrontDistribution.DomainName
-        HostedZoneId: Z2FDTNDATAQYW2 # Cloudfront Hosted Zone ID, see: https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset-aliastarget.html
+        HostedZoneId: Z2FDTNDATAQYW2 # Cloudfront Hosted Zone ID
       HostedZoneId: !Ref HostedZoneId
       Name: !Sub "${SubdomainName}.${BaseDomainName}"
       Type: A
@@ -99,10 +125,24 @@ Resources:
     Properties:
       AliasTarget:
         DNSName: !GetAtt CloudFrontDistribution.DomainName
-        HostedZoneId: Z2FDTNDATAQYW2 # Cloudfront Hosted Zone ID, see: https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset-aliastarget.html
+        HostedZoneId: Z2FDTNDATAQYW2 # Cloudfront Hosted Zone ID
       HostedZoneId: !Ref HostedZoneId
       Name: !Sub "preview-${SubdomainName}.${BaseDomainName}"
       Type: A
+<% if enable_production_domain %>
+  # Avoid complex CloudFormation template string concatenation logic (subdomain + basedomain) to handle a fully
+  # qualified domain name for production sites typically not having a subdomain, by explicitly specifying the
+  # production domain name when it's just a top level domain.
+  ProductionDomainDNS:
+    Type: AWS::Route53::RecordSet
+    Properties:
+      AliasTarget:
+        DNSName: !GetAtt CloudFrontDistribution.DomainName
+        HostedZoneId: Z2FDTNDATAQYW2 # Cloudfront Hosted Zone ID, see: https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset-aliastarget.html
+      HostedZoneId: !Ref ProductionHostedZoneId
+      Name: !Ref ProductionDomainName
+      Type: A
+<% end %>
   CloudFrontOriginAccessControl:
     Type: AWS::CloudFront::OriginAccessControl
     Properties:
@@ -165,18 +205,19 @@ Resources:
       FunctionConfig:
         Comment: Adds Cache-Control if not present
         Runtime: cloudfront-js-2.0
-  # For immutable static assets (hashed assets like JS/CSS files), ensure that the Cache-Control header is set to immutable
-  ImmutableStaticAssetsResponseHeadersPolicy:
+  # Default response headers policy for the marketing sites
+  # This policy sets the Strict-Transport-Security header to ensure that the site is only served over HTTPS
+  DefaultResponseHeadersPolicy:
     Type: AWS::CloudFront::ResponseHeadersPolicy
     Properties:
       ResponseHeadersPolicyConfig:
-        Name: !Sub "${AWS::StackName}-Assets-ResponseHeader-Policy"
-        Comment: "Ensure immutable static assets have Cache-Control header set to immutable"
-        CustomHeadersConfig:
-          Items:
-            - Header: cache-control
-              Override: false # Do not override the cache control from the origin if it is available
-              Value: public, max-age=31536000, immutable
+        Name: !Sub "${AWS::StackName}-Default-ResponseHeader-Policy"
+        Comment: "Marketing Sites default response headers policy"
+        SecurityHeadersConfig:
+          StrictTransportSecurity:
+            AccessControlMaxAgeSec: 31536000
+            IncludeSubdomains: false
+            Override: false
   CloudFrontDistribution:
     Type: AWS::CloudFront::Distribution
     Properties:
@@ -188,6 +229,9 @@ Resources:
         Aliases:
           - !Sub "${SubdomainName}.${BaseDomainName}"
           - !Sub "preview-${SubdomainName}.${BaseDomainName}"
+<% if enable_production_domain %>
+          - !Ref ProductionDomainName
+<% end %>
         Origins:
           - Id: marketing-sites-application-origin
             DomainName: !Sub "${SubdomainName}-loadbalancer.${BaseDomainName}"
@@ -205,8 +249,12 @@ Resources:
           TargetOriginId: marketing-sites-application-origin
           ViewerProtocolPolicy: redirect-to-https
           Compress: true
-          CachePolicyId: 4135ea2d-6df8-44a3-9df3-4b5a84be39ad # Managed-CachingDisabled (Disabled until this distribution becomes the main one instead of daisy chained)
+          CachePolicyId: !If
+            - IsCorporateSite
+            - 4135ea2d-6df8-44a3-9df3-4b5a84be39ad # Managed-CachingDisabled (Disabled until this distribution becomes the main one instead of daisy chained)
+            - !Ref ApplicationCachingPolicy
           OriginRequestPolicyId: "216adef6-5c7f-47e4-b989-5492eafa07d3" # AllViewer
+          ResponseHeadersPolicyId: !Ref DefaultResponseHeadersPolicy
           FunctionAssociations:
             - EventType: viewer-response
               FunctionARN: !GetAtt ViewerResponseCloudFrontFunction.FunctionARN
@@ -216,16 +264,14 @@ Resources:
         Restrictions:
           GeoRestriction:
             RestrictionType: none
-
         # Temporary (and in production only) until distribution becomes the main one, after which Real Time Logging is
         # enabled to avoid double counting between Pegasus and this distribution.
-        Logging: !If
-          - IsProductionEnvironment
-          - Bucket: "cdo-logs.s3.amazonaws.com"
-            Prefix: !Sub "AWSLogs/${AWS::AccountId}/CloudFront/${SubdomainName}.${BaseDomainName}/"
-            IncludeCookies: false
-          - !Ref "AWS::NoValue"
-
+<% if is_production %>
+        Logging:
+          Bucket: "cdo-logs.s3.amazonaws.com"
+          Prefix: !Sub "AWSLogs/${AWS::AccountId}/CloudFront/${SubdomainName}.${BaseDomainName}/"
+          IncludeCookies: false
+<% end %>
         CacheBehaviors:
           # Path: /api/*
           # Description: Marketing application API routes
@@ -239,6 +285,7 @@ Resources:
               - DELETE
             CachePolicyId: 4135ea2d-6df8-44a3-9df3-4b5a84be39ad # Managed-CachingDisabled (APIs are not cached)
             OriginRequestPolicyId: 216adef6-5c7f-47e4-b989-5492eafa07d3 # AllViewer
+            ResponseHeadersPolicyId: !Ref DefaultResponseHeadersPolicy
             PathPattern: /api/*
             TargetOriginId: marketing-sites-application-origin
             ViewerProtocolPolicy: redirect-to-https
@@ -248,12 +295,15 @@ Resources:
               - GET
               - HEAD
               - OPTIONS
-            CachePolicyId: 658327ea-f89d-4fab-a63d-7e88639e58f6 # Managed-CachingOptimized
+            CachePolicyId: !If
+              - IsCorporateSite
+              - 4135ea2d-6df8-44a3-9df3-4b5a84be39ad # Managed-CachingDisabled (Disabled until this distribution becomes the main one instead of daisy chained)
+              - 658327ea-f89d-4fab-a63d-7e88639e58f6 # Managed-CachingOptimized
             Compress: true
             PathPattern: /_next/*
             TargetOriginId: marketing-sites-static-assets-origin
             ViewerProtocolPolicy: redirect-to-https
-            ResponseHeadersPolicyId: !Ref ImmutableStaticAssetsResponseHeadersPolicy
+            ResponseHeadersPolicyId: !Ref DefaultResponseHeadersPolicy
 
   ####################################
   # Load Balancer Resources          #
@@ -267,6 +317,7 @@ Resources:
         - DomainName: !Sub "${SubdomainName}-loadbalancer.${BaseDomainName}"
           HostedZoneId: !Ref HostedZoneId
       ValidationMethod: DNS
+
   FargateServiceLB:
     Type: AWS::ElasticLoadBalancingV2::LoadBalancer
     Properties:
@@ -288,6 +339,7 @@ Resources:
       Tags:
         - Key: Name
           Value: !Sub "${SubdomainName}-${EnvironmentType}-alb"
+
   FargateServiceLBSecurityGroup:
     Type: AWS::EC2::SecurityGroup
     Properties:
@@ -719,7 +771,6 @@ Resources:
       Tags:
         - Key: Name
           Value: !Sub "${SubdomainName}-${EnvironmentType}-efs-sg"
-
   StaticAssetsBucket:
     Type: AWS::S3::Bucket
     Properties:
@@ -741,6 +792,7 @@ Resources:
             Status: Enabled
             NoncurrentVersionExpiration:
               NoncurrentDays: 90
+
   StaticAssetsBucketCloudFrontPolicy:
     Type: AWS::S3::BucketPolicy
     Properties:
@@ -755,9 +807,15 @@ Resources:
             Condition:
               StringEquals:
                 AWS:SourceArn: !Sub 'arn:aws:cloudfront::${AWS::AccountId}:distribution/${CloudFrontDistribution}'
+
 Outputs:
   SiteDomainName:
-    Description: Fully qualified domain name of the marketing site
+    Description: Fully qualified domain name of the marketing site.
     Value: !Sub "${SubdomainName}.${BaseDomainName}"
+<% if enable_production_domain %>
+  ProductionSiteDomainName:
+    Description: Production fully qualified domain name of the marketing site.
+    Value: !Ref ProductionDomainName
+<% end %>
   CloudFrontDistributionId:
     Value: !Ref CloudFrontDistribution

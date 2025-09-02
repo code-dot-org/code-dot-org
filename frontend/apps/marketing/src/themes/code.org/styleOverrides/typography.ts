@@ -8,7 +8,7 @@ export const TYPOGRAPHY_OVERRIDES: Components<Theme>['MuiTypography'] = {
     },
   },
   styleOverrides: {
-    root: {
+    root: ({theme}) => ({
       color: 'var(--text-neutral-primary)',
       // Paragraph styles
       '&.MuiTypography-body1.paragraph--color-primary, &.MuiTypography-body2.paragraph--color-primary, &.MuiTypography-body3.paragraph--color-primary, &.MuiTypography-body4.paragraph--color-primary':
@@ -42,7 +42,14 @@ export const TYPOGRAPHY_OVERRIDES: Components<Theme>['MuiTypography'] = {
       '&.MuiTypography-overline.overline--size-l': {
         fontSize: '0.875rem', // 14px
       },
-    },
+      // Caption styles
+      '&.MuiTypography-caption': {
+        color: 'var(--text-neutral-primary)',
+        fontSize: '0.875rem', // 14px
+        fontWeight: '600',
+        margin: theme.spacing(1, 0, 0), // 8px 0 0
+      },
+    }),
     gutterBottom: ({theme}) => ({
       '&.MuiTypography-h1': {
         marginBottom: theme.spacing(3), // 24px
@@ -75,6 +82,9 @@ export const TYPOGRAPHY_OVERRIDES: Components<Theme>['MuiTypography'] = {
         marginBottom: theme.spacing(1.25), // 10px
       },
       '&.MuiTypography-overline': {
+        marginBottom: theme.spacing(2), // 16px
+      },
+      '&.MuiTypography-caption': {
         marginBottom: theme.spacing(2), // 16px
       },
     }),

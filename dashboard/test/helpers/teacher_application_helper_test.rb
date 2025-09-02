@@ -9,37 +9,37 @@ class TeacherApplicationHelperTest < ActionView::TestCase
   end
 
   setup_all do
-    @user_with_two_incomplete_apps = create :teacher
+    @user_with_two_incomplete_apps = create(:teacher)
     @incomplete_application = create TEACHER_APPLICATION_FACTORY, user: @user_with_two_incomplete_apps, status: 'incomplete'
     create TEACHER_APPLICATION_FACTORY, user: @user_with_two_incomplete_apps, status: 'incomplete', application_year: '2018-2019'
 
-    @user_with_incomplete_closed_app = create :teacher
-    regional_partner_with_closed_apps = create :regional_partner, apps_close_date_teacher: (Time.zone.today - 3.days).strftime("%Y-%m-%d")
-    hash_with_rp_closed_apps = build :pd_teacher_application_hash, regional_partner_id: regional_partner_with_closed_apps.id
+    @user_with_incomplete_closed_app = create(:teacher)
+    regional_partner_with_closed_apps = create(:regional_partner, apps_close_date_teacher: (Time.zone.today - 3.days).strftime("%Y-%m-%d"))
+    hash_with_rp_closed_apps = build(:pd_teacher_application_hash, regional_partner_id: regional_partner_with_closed_apps.id)
     create TEACHER_APPLICATION_FACTORY,
       user: @user_with_incomplete_closed_app,
       status: 'incomplete',
       regional_partner: regional_partner_with_closed_apps,
       form_data_hash: hash_with_rp_closed_apps
 
-    @user_with_incomplete_open_app = create :teacher
-    regional_partner_with_open_apps = create :regional_partner, apps_close_date_teacher: (Time.zone.today + 3.days).strftime("%Y-%m-%d")
-    hash_with_rp_open_apps = build :pd_teacher_application_hash, regional_partner_id: regional_partner_with_open_apps.id
+    @user_with_incomplete_open_app = create(:teacher)
+    regional_partner_with_open_apps = create(:regional_partner, apps_close_date_teacher: (Time.zone.today + 3.days).strftime("%Y-%m-%d"))
+    hash_with_rp_open_apps = build(:pd_teacher_application_hash, regional_partner_id: regional_partner_with_open_apps.id)
     create TEACHER_APPLICATION_FACTORY,
       user: @user_with_incomplete_open_app,
       status: 'incomplete',
       form_data_hash: hash_with_rp_open_apps
 
-    @user_with_reopened_app = create :teacher
+    @user_with_reopened_app = create(:teacher)
     create TEACHER_APPLICATION_FACTORY, user: @user_with_reopened_app, status: 'reopened'
 
-    @user_with_outdated_incomplete = create :teacher
+    @user_with_outdated_incomplete = create(:teacher)
     create TEACHER_APPLICATION_FACTORY,
       user: @user_with_outdated_incomplete,
       status: 'incomplete',
       application_year: '2018-2019'
 
-    @user_with_outdated_reopened = create :teacher
+    @user_with_outdated_reopened = create(:teacher)
     create TEACHER_APPLICATION_FACTORY,
       user: @user_with_outdated_reopened,
       status: 'reopened',

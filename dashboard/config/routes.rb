@@ -29,12 +29,15 @@ Dashboard::Application.routes.draw do
     get '/weblab/footer', to: 'projects#weblab_footer'
   end
 
+  constraints host: CDO.preview_codeprojects_hostname do
+    get '/', to: 'codeprojects_preview#show'
+  end
   # This matches any host that is not the codeprojects hostname
-  constraints host: /^(?!#{CDO.codeprojects_hostname})/ do
+  constraints host: /^(?!#{CDO.codeprojects_hostname}|#{CDO.preview_codeprojects_hostname})/ do
     # React-router will handle sub-routes on the client.
     resource :teacher_dashboard, only: [] do
       get :home, controller: :teacher_dashboard, action: :show
-      get :get_school_info_interstitial_data, controller: :teacher_dashboard, action: :get_school_info_interstitial_data
+      get :get_drawer_data, controller: :teacher_dashboard, action: :get_drawer_data
       resources :sections, only: %i[show], param: :section_id, controller: :teacher_dashboard do
         member do
           get :parent_letter
@@ -42,6 +45,12 @@ Dashboard::Application.routes.draw do
           get :unit, params: :unitName, action: :show
           get '*path', action: :show, via: :all, as: :subpath
         end
+      end
+    end
+
+    resources :notifications, only: [:index] do
+      collection do
+        post '/mark_as_read', controller: :notifications, action: :mark_as_read
       end
     end
 
@@ -412,6 +421,9 @@ Dashboard::Application.routes.draw do
         get '/:filename', to: 'level_starter_assets#file', format: true
         post '', to: 'level_starter_assets#upload'
         delete '/:filename', to: 'level_starter_assets#destroy', format: true
+
+        get '/uuid/:uuid', to: 'level_starter_assets#file_by_uuid', format: true
+        post '/uuid/:uuid', to: 'level_starter_assets#upload_by_uuid'
       end
     end
 
@@ -421,7 +433,7 @@ Dashboard::Application.routes.draw do
       end
     end
 
-    get 'course_offerings/self_paced_pl_course_offerings', to: 'course_offerings#self_paced_pl_course_offerings'
+    get 'course_offerings/self_paced_pl_course_offerings_for_workshops', to: 'course_offerings#self_paced_pl_course_offerings_for_workshops'
     get '/course/:course_name', to: redirect('/courses/%{course_name}')
     get '/courses/:course_name/vocab/edit', to: 'vocabularies#edit'
     # these routes use course_course_name to match generated routes below that are nested within courses
@@ -510,6 +522,21 @@ Dashboard::Application.routes.draw do
     get '/s/csp7-2020/lockable/1(*all)', to: redirect(path: '/s/csp7-2020/lessons/11%{all}')
     get '/s/csp9-2020/lockable/1(*all)', to: redirect(path: '/s/csp9-2020/lessons/9%{all}')
     get '/s/csp10-2020/lockable/1(*all)', to: redirect(path: '/s/csp10-2020/lessons/14%{all}')
+
+    # Hardcoded redirects for old courses that used unit family names
+    get '/s/csd:unit', to: redirect('/courses/csd-2019/units/%{unit}'), constraints: {unit: /[1-6]/}
+    get '/s/csd:unit/(*all)', to: redirect('/courses/csd-2019/units/%{unit}/%{all}'), constraints: {unit: /[1-6]/}
+
+    get '/s/csp:unit', to: redirect('/courses/csp-2019/units/%{unit}'), constraints: {unit: /[1-4]/}
+    get '/s/csp:unit/(*all)', to: redirect('/courses/csp-2019/units/%{unit}/%{all}'), constraints: {unit: /[1-4]/}
+    get '/s/csp-explore', to: redirect('/courses/csp-2019/units/5')
+    get '/s/csp-explore/(*all)', to: redirect('/courses/csp-2019/units/5/%{all}')
+    get '/s/csp5', to: redirect('/courses/csp-2019/units/6')
+    get '/s/csp5/(*all)', to: redirect('/courses/csp-2019/units/6/%{all}')
+    get '/s/csp-create', to: redirect('/courses/csp-2019/units/7')
+    get '/s/csp-create/(*all)', to: redirect('/courses/csp-2019/units/7/%{all}')
+    get '/s/csppostap', to: redirect('/courses/csp-2019/units/8')
+    get '/s/csppostap/(*all)', to: redirect('/courses/csp-2019/units/8/%{all}')
 
     resources :data_docs, param: :key do
       collection do
@@ -817,6 +844,7 @@ Dashboard::Application.routes.draw do
           get :workshop_organizer_survey_report, action: :workshop_organizer_survey_report, controller: 'workshop_organizer_survey_report'
 
           get 'foorm/generic_survey_report', action: :generic_survey_report, controller: 'workshop_survey_foorm_report'
+          get 'foorm/workshop_survey_summary', action: :workshop_survey_summary, controller: 'workshop_survey_foorm_report'
           get 'foorm/csv_survey_report', action: :csv_survey_report, controller: 'workshop_survey_foorm_report'
           get 'foorm/forms_for_workshop', action: :forms_for_workshop, controller: 'workshop_survey_foorm_report'
         end
@@ -1370,7 +1398,6 @@ Dashboard::Application.routes.draw do
 
         # Datablock Storage: Library Manifest API (=shared table metadata)
         get :get_library_manifest
-        put :set_library_manifest
 
         # Datablock Storage: Project API
         get :project_has_data

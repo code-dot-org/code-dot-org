@@ -1,7 +1,6 @@
 // Pythonlab view
 import {Codebridge} from '@codebridge/Codebridge';
 import {useSource} from '@codebridge/hooks/useSource';
-import {setWidgetViewShowCode} from '@codebridge/redux/workspaceRedux';
 import {CodebridgeLevelProperties, ConfigType} from '@codebridge/types';
 import {python} from '@codemirror/lang-python';
 import {LanguageSupport} from '@codemirror/language';
@@ -103,7 +102,7 @@ const PythonlabView: React.FunctionComponent<
   );
   const hasSource = !!source;
   const isAiTutor2Enabled =
-    levelProperties.aiTutor2Available ||
+    levelProperties.aiTutorAvailable ||
     queryParams('show-ai-tutor2') === 'true';
 
   const isAiTutor2HintEnabled = queryParams('show-ai-tutor2-hint') === 'true';
@@ -185,11 +184,6 @@ const PythonlabView: React.FunctionComponent<
     LifecycleEvent.LevelLoadStarted,
     restartPyodideIfProgramIsRunning
   );
-
-  // Set view code to false if level is switched for any levels in widget view.
-  useLifecycleNotifier(LifecycleEvent.LevelLoadStarted, () => {
-    dispatch(setWidgetViewShowCode(false));
-  });
 
   useEffect(() => {
     setAiTutor2Context(

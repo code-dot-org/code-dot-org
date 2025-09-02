@@ -4,24 +4,24 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
   self.use_transactional_test_case = true
 
   setup do
-    @plc_reviewer = create :plc_reviewer
+    @plc_reviewer = create(:plc_reviewer)
     sign_in(@plc_reviewer)
   end
 
   def common_scenario
-    @course_unit = create :plc_course_unit
-    @level_1, @level_2, @level_3 = create_list :free_response, 3, peer_reviewable: true
+    @course_unit = create(:plc_course_unit)
+    @level_1, @level_2, @level_3 = create_list(:free_response, 3, peer_reviewable: true)
 
     levels = [@level_1, @level_2, @level_3]
 
     levels.each do |level|
-      create :script_level, script: @course_unit.script, levels: [level]
+      create(:script_level, script: @course_unit.script, levels: [level])
     end
 
-    @submitter = create :teacher
-    create :plc_user_course_enrollment, user: @submitter, plc_course: @course_unit.plc_course
-    @teacher_reviewer = create :teacher
-    create :plc_user_course_enrollment, user: @teacher_reviewer, plc_course: @course_unit.plc_course
+    @submitter = create(:teacher)
+    create(:plc_user_course_enrollment, user: @submitter, plc_course: @course_unit.plc_course)
+    @teacher_reviewer = create(:teacher)
+    create(:plc_user_course_enrollment, user: @teacher_reviewer, plc_course: @course_unit.plc_course)
 
     levels.each do |level|
       create_peer_reviews_for_user_and_level(@submitter, level)
@@ -47,7 +47,7 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
     common_scenario
 
     # Create some for another submitter
-    other_submitter = create :teacher
+    other_submitter = create(:teacher)
     create_peer_reviews_for_user_and_level(other_submitter, @level_3)
     submissions = PeerReview.where(level: @level_3, submitter: other_submitter)
 
@@ -78,7 +78,7 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
     common_scenario
 
     # Create some for another submitter
-    unmigrated_submitter = create :teacher, :demigrated
+    unmigrated_submitter = create(:teacher, :demigrated)
     create_peer_reviews_for_user_and_level(unmigrated_submitter, @level_3)
     submissions = PeerReview.where(level: @level_3, submitter: unmigrated_submitter)
 
@@ -106,9 +106,9 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
   end
 
   test 'Peer reviews email filter can also fuzzy-search for name' do
-    daneel = create :teacher, name: 'R. Daneel Olivaw'
-    danielle = create :teacher, name: 'Danielle B'
-    gerbil = create :teacher, name: 'Toothy the Gerbil'
+    daneel = create(:teacher, name: 'R. Daneel Olivaw')
+    danielle = create(:teacher, name: 'Danielle B')
+    gerbil = create(:teacher, name: 'Toothy the Gerbil')
 
     create_peer_reviews_for_user daneel
     create_peer_reviews_for_user danielle
@@ -136,10 +136,10 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
   end
 
   test 'Peer reviews are sorted by most recent submission, descending' do
-    teacher1 = create :teacher
-    teacher2 = create :teacher
-    teacher3 = create :teacher
-    instructor = create :plc_reviewer
+    teacher1 = create(:teacher)
+    teacher2 = create(:teacher)
+    teacher3 = create(:teacher)
+    instructor = create(:plc_reviewer)
 
     Timecop.freeze(7.days.ago) do
       # Make three peer review submissions at different times.
@@ -242,8 +242,8 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
     sign_out @plc_reviewer
 
     # Create a PD'd teacher and an instructor
-    learner = create :teacher
-    instructor = create :plc_reviewer
+    learner = create(:teacher)
+    instructor = create(:plc_reviewer)
 
     course_unit, level = create_peer_review_module_for_learner learner
 
@@ -252,14 +252,15 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
       Timecop.travel 1.day
 
       # Learner submits an answer for the level
-      first_answer = create :level_source, level: level
-      user_level = create :user_level,
+      first_answer = create(:level_source, level: level)
+      user_level = create(:user_level,
         user: learner,
         level: level,
         level_source: first_answer,
         script: course_unit.script,
         submitted: true,
         best_result: ActivityConstants::UNREVIEWED_SUBMISSION_RESULT
+)
       # Setup check: We created two peer reviews for this submission
       assert_equal 2, PeerReview.where(level_source: first_answer).count
 
@@ -277,7 +278,7 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
 
       # The learner updates their answer
       Timecop.travel 1.day
-      second_answer = create :level_source, level: level
+      second_answer = create(:level_source, level: level)
       user_level.update level_source: second_answer
       # Setup check: Two new peer reviews should exist for this submission
       assert_equal 2, PeerReview.where(level_source: second_answer).count
@@ -293,7 +294,7 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
 
       # The learner updates their answer one more time
       Timecop.travel 1.day
-      final_answer = create :level_source, level: level
+      final_answer = create(:level_source, level: level)
       user_level.update level_source: final_answer
       # Setup check: Two new peer reviews should exist for this submission
       assert_equal 2, PeerReview.where(level_source: final_answer).count
@@ -342,19 +343,20 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
     sign_out @plc_reviewer
 
     # Set up PD'd teacher
-    learner = create :teacher
+    learner = create(:teacher)
     course_unit, level = create_peer_review_module_for_learner learner
 
     # Learner saves their answer (creating a UserLevel) but does not *submit* it,
     # so no Peer Reviews are created.
-    first_answer = create :level_source, level: level
-    create :user_level,
+    first_answer = create(:level_source, level: level)
+    create(:user_level,
       user: learner,
       level: level,
       level_source: first_answer,
       script: course_unit.script,
       submitted: false,
       best_result: ActivityConstants::UNREVIEWED_SUBMISSION_RESULT
+)
 
     # Setup check: We have a UserLevel but no peer reviews for this submission
     assert_equal 0, PeerReview.where(level_source: first_answer).count
@@ -380,8 +382,8 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
 
   test 'Peer Review report returns expected columns' do
     common_scenario
-    create :peer_review, reviewer: @submitter, script: @course_unit.script
-    create :peer_review, reviewer: @submitter
+    create(:peer_review, reviewer: @submitter, script: @course_unit.script)
+    create(:peer_review, reviewer: @submitter)
 
     get :report_csv, params: {plc_course_unit_id: @course_unit.id}
 
@@ -445,10 +447,10 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
 
   private def create_peer_review_module_for_learner(learner)
     # Create a one-level peer review module
-    course_unit = create :plc_course_unit
-    level = create :free_response, peer_reviewable: true
-    script_level = create :script_level, script: course_unit.script, levels: [level]
-    learning_module = create :plc_learning_module, plc_course_unit: course_unit, lesson: script_level.lesson
+    course_unit = create(:plc_course_unit)
+    level = create(:free_response, peer_reviewable: true)
+    script_level = create(:script_level, script: course_unit.script, levels: [level])
+    learning_module = create(:plc_learning_module, plc_course_unit: course_unit, lesson: script_level.lesson)
 
     # Assign the learner to the peer review module
     # (Whoa let's simplify this in the future...)
@@ -472,21 +474,22 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
   end
 
   private def create_peer_reviews_for_user_and_level(user, level, course_unit = @course_unit)
-    level_source = create :level_source, level: level
-    user_level = create :user_level,
+    level_source = create(:level_source, level: level)
+    user_level = create(:user_level,
       user: user,
       level: level,
       level_source: level_source,
       script: course_unit.script,
       best_result: ActivityConstants::UNREVIEWED_SUBMISSION_RESULT
+)
 
     PeerReview.create_for_submission(user_level, level_source.id)
   end
 
   private def create_peer_reviews_for_user(user)
-    course_unit = create :plc_course_unit
-    level = create :free_response, peer_reviewable: true
-    create :script_level, script: course_unit.script, levels: [level]
+    course_unit = create(:plc_course_unit)
+    level = create(:free_response, peer_reviewable: true)
+    create(:script_level, script: course_unit.script, levels: [level])
     create_peer_reviews_for_user_and_level(user, level, course_unit)
   end
 end

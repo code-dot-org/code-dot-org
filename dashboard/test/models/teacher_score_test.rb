@@ -3,17 +3,17 @@ require 'timecop'
 
 class TeacherScoreTest < ActiveSupport::TestCase
   setup do
-    @teacher = create :teacher
-    @student_1 = create :student
-    @student_2 = create :student
-    @student_3 = create :student
-    @section = create :section, user: @teacher
+    @teacher = create(:teacher)
+    @student_1 = create(:student)
+    @student_2 = create(:student)
+    @student_3 = create(:student)
+    @section = create(:section, user: @teacher)
     @section.add_student(@student_1)
     @section.add_student(@student_2)
     @section.add_student(@student_3)
-    @script = create :script, :in_single_unit_course
-    @lesson_group = create :lesson_group, script: @script
-    @lesson = create :lesson, script: @script, lesson_group: @lesson_group, unplugged: true
+    @script = create(:script, :in_single_unit_course)
+    @lesson_group = create(:lesson_group, script: @script)
+    @lesson = create(:lesson, script: @script, lesson_group: @lesson_group, unplugged: true)
     @script_level = create(
       :script_level,
       script: @script,

@@ -777,19 +777,28 @@ const marketingPaths = {
   "/promote/wi": true,
   "/promote/wy": true,
   "/back-to-school-kit": true,
+  "/global/partners": true,
+  "/global/india": true,
+  "/back-to-school-for-district": true,
+  "/india": true,
 }
 
 const pathPatterns = [
   /^\/_next\/static\//, // Next.js static assets
   /^\/forms\//,         // /forms/*
   /^\/schools\//,       // /schools/*
+  /^\/applab\/docs\//,  // /applab/docs/*
+  /^\/educate\//,       // /educate/*
 ];
 
 const SUPPORTED_LOCALES = new Set([
   'en-US',
   'es',
   'ar',
+  'cs',
   'de',
+  'es-ES',
+  'es-LA',
   'fa',
   'fr',
   'hi',
@@ -797,14 +806,18 @@ const SUPPORTED_LOCALES = new Set([
   'it',
   'ja',
   'ko',
+  'kn',
   'mr',
   'pl',
   'pt-BR',
   'sk',
+  'ta',
+  'te',
   'th',
   'tr',
   'uk',
   'vi',
+  'zh-CN',
   'zh-TW',
   'sq',
   'tl',

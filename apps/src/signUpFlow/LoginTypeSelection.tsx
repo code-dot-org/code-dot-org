@@ -187,10 +187,18 @@ const LoginTypeSelection: React.FunctionComponent<{
         },
         body: JSON.stringify(submitLoginTypeParams),
       });
-      // We are currently only intentionally surfacing errors for duplicate emails
       if (!response.ok) {
-        setEmailErrorMessage(i18n.duplicate_email_error_message());
-        setShowEmailError(true);
+        // Handle disallowed email domains. We return a 403 status code from the server
+        // in this case.
+        if (response.status === 403) {
+          const res = await response.json();
+          setEmailErrorMessage(res.error);
+          setShowEmailError(true);
+        } else {
+          // We are currently only intentionally surfacing errors for duplicate emails
+          setEmailErrorMessage(i18n.duplicate_email_error_message());
+          setShowEmailError(true);
+        }
         return;
       }
       navigateToHref(finishAccountUrl);

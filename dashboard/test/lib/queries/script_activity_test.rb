@@ -2,13 +2,13 @@ require 'test_helper'
 
 class Queries::ScriptActivityTest < ActiveSupport::TestCase
   setup do
-    @user = create :user
+    @user = create(:user)
   end
 
   test 'user is working on student scripts' do
-    s1 = create :user_script, user: @user, started_at: (Time.now - 10.days), last_progress_at: (Time.now - 4.days)
-    s2 = create :user_script, user: @user, started_at: (Time.now - 50.days), last_progress_at: (Time.now - 3.days)
-    c = create :user_script, user: @user, started_at: (Time.now - 10.days), completed_at: (Time.now - 8.days)
+    s1 = create(:user_script, user: @user, started_at: (Time.now - 10.days), last_progress_at: (Time.now - 4.days))
+    s2 = create(:user_script, user: @user, started_at: (Time.now - 50.days), last_progress_at: (Time.now - 3.days))
+    c = create(:user_script, user: @user, started_at: (Time.now - 10.days), completed_at: (Time.now - 8.days))
 
     # all scripts
     assert_equal [s2, s1, c], @user.user_scripts
@@ -20,15 +20,15 @@ class Queries::ScriptActivityTest < ActiveSupport::TestCase
     assert_equal s2.script, Queries::ScriptActivity.primary_student_unit(@user)
 
     # add an assigned script that's more recent
-    a = create :user_script, user: @user, started_at: (Time.now - 1.day)
+    a = create(:user_script, user: @user, started_at: (Time.now - 1.day))
     assert_equal [a.script, s2.script, s1.script], Queries::ScriptActivity.working_on_student_units(@user)
     assert_equal a.script, Queries::ScriptActivity.primary_student_unit(@user)
 
-    unit_group = create :unit_group, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
-    course_script = create :script, published_state: nil
-    create :unit_group_unit, unit_group: unit_group, script: course_script, position: 1
+    unit_group = create(:unit_group, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    course_script = create(:script, published_state: nil)
+    create(:unit_group_unit, unit_group: unit_group, script: course_script, position: 1)
     course_script.reload
-    create :user_script, user: @user, started_at: Time.now - 12.hours, script: course_script
+    create(:user_script, user: @user, started_at: Time.now - 12.hours, script: course_script)
     assert_equal [course_script, a.script, s2.script, s1.script], Queries::ScriptActivity.working_on_student_units(@user)
     assert_equal course_script, Queries::ScriptActivity.primary_student_unit(@user)
 
@@ -39,13 +39,13 @@ class Queries::ScriptActivityTest < ActiveSupport::TestCase
   end
 
   test 'user is working on pl scripts' do
-    teacher = create :teacher
+    teacher = create(:teacher)
     script1 = create(:single_unit_course, :pl_course, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable).first_unit
     script2 = create(:single_unit_course, :pl_course, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable).first_unit
     script3 = create(:single_unit_course, :pl_course, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable).first_unit
-    s1 = create :user_script, user: teacher, script: script1, started_at: (Time.now - 10.days), last_progress_at: (Time.now - 4.days)
-    s2 = create :user_script, user: teacher, script: script2, started_at: (Time.now - 50.days), last_progress_at: (Time.now - 3.days)
-    c = create :user_script, user: teacher, script: script3, started_at: (Time.now - 10.days), completed_at: (Time.now - 8.days)
+    s1 = create(:user_script, user: teacher, script: script1, started_at: (Time.now - 10.days), last_progress_at: (Time.now - 4.days))
+    s2 = create(:user_script, user: teacher, script: script2, started_at: (Time.now - 50.days), last_progress_at: (Time.now - 3.days))
+    c = create(:user_script, user: teacher, script: script3, started_at: (Time.now - 10.days), completed_at: (Time.now - 8.days))
 
     # all scripts
     assert_equal [s2, s1, c], teacher.user_scripts
@@ -58,15 +58,15 @@ class Queries::ScriptActivityTest < ActiveSupport::TestCase
 
     # add an assigned script that's more recent
     script4 = create(:single_unit_course, :pl_course, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable).first_unit
-    a = create :user_script, user: teacher, script: script4, started_at: (Time.now - 1.day)
+    a = create(:user_script, user: teacher, script: script4, started_at: (Time.now - 1.day))
     assert_equal [a.script, s2.script, s1.script], Queries::ScriptActivity.working_on_pl_units(teacher)
     assert_equal a.script, Queries::ScriptActivity.primary_pl_unit(teacher)
 
-    unit_group = create :unit_group, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
-    course_script = create :script, published_state: nil
-    create :unit_group_unit, unit_group: unit_group, script: course_script, position: 1
+    unit_group = create(:unit_group, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
+    course_script = create(:script, published_state: nil)
+    create(:unit_group_unit, unit_group: unit_group, script: course_script, position: 1)
     course_script.reload
-    create :user_script, user: teacher, started_at: Time.now - 12.hours, script: course_script
+    create(:user_script, user: teacher, started_at: Time.now - 12.hours, script: course_script)
     assert_equal [course_script, a.script, s2.script, s1.script], Queries::ScriptActivity.working_on_pl_units(teacher)
     assert_equal course_script, Queries::ScriptActivity.primary_pl_unit(teacher)
 
@@ -91,10 +91,10 @@ class Queries::ScriptActivityTest < ActiveSupport::TestCase
 
   test 'in_progress_and_completed_scripts does not include deleted scripts' do
     real_script = Unit.starwars_unit
-    fake_script = create :script
+    fake_script = create(:script)
 
-    user_script_1 = create :user_script, user: @user, script: real_script
-    user_script_2 = create :user_script, user: @user, script: fake_script
+    user_script_1 = create(:user_script, user: @user, script: real_script)
+    user_script_2 = create(:user_script, user: @user, script: fake_script)
 
     fake_script.destroy!
 

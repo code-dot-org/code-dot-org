@@ -6,6 +6,7 @@ import {
   FolderId,
   MultiFileSource,
   ProjectFile,
+  ProjectFileType,
 } from '@cdo/apps/lab2/types';
 
 import {
@@ -17,30 +18,84 @@ import {
 
 // Helper functions for editing multi-file sources in lab2.
 
+interface CreateNewFileHelperArgs {
+  source: MultiFileSource;
+  fileName: string;
+  folderId?: FolderId;
+  contents?: string;
+  url?: string;
+  isStartMode?: boolean;
+  flagged?: boolean;
+}
+
+interface DeleteFileHelperArgs {
+  source: MultiFileSource;
+  fileId: FileId;
+}
+
+interface DeleteFolderHelperArgs {
+  source: MultiFileSource;
+  folderId: FolderId;
+}
+
+interface DeletedFileAsset {
+  channelId: string;
+  url: string;
+  flagged?: boolean;
+}
+
+interface DeleteFileResult {
+  newSource: MultiFileSource;
+  deletedFileAsset?: DeletedFileAsset;
+}
+
+interface DeleteFolderResult {
+  newSource: MultiFileSource;
+  deletedFilesAssets?: DeletedFileAsset[];
+}
+
 /**
  * Create a new file.
  */
-export const createNewFileHelper = (
-  source: MultiFileSource,
-  fileName: string,
-  folderId: FolderId = DEFAULT_FOLDER_ID,
-  contents: string = ''
-): MultiFileSource => {
+export const createNewFileHelper = ({
+  source,
+  fileName,
+  folderId = DEFAULT_FOLDER_ID,
+  contents = '',
+  url,
+  isStartMode,
+  flagged,
+}: CreateNewFileHelperArgs): MultiFileSource => {
   const fileId = getNextFileId(Object.values(source.files));
   const newSource = {...source, files: {...source.files}};
   const [, extension] = fileName.split('.');
   const defaultContents = `Add your changes to ${fileName}`;
 
-  newSource.files[fileId] = {
+  const file: ProjectFile = {
     id: fileId,
     name: fileName,
     language: extension || 'html',
-    contents: contents || defaultContents,
+    contents: url ? '' : contents || defaultContents,
     folderId,
   };
 
+  if (url) {
+    file.url = url;
+  }
+
+  if (isStartMode) {
+    file.type = ProjectFileType.STARTER;
+  }
+
+  if (flagged) {
+    file.flagged = flagged;
+  }
+
+  newSource.files[fileId] = file;
+
   return activateFileHelper(newSource, fileId);
 };
+
 /**
  * Activate a file (make active).
  */
@@ -109,12 +164,16 @@ export const closeFileHelper = (
 };
 
 /**
- * Delete a file.
+ * Deletes a file from the given MultiFileSource.
+ * - Removes the file from the files list and from the list of open files.
+ * - Updates the active file if the deleted file was active, activating a new file if possible.
+ * - Returns the updated MultiFileSource and, if the file was an uploaded asset (has a URL),
+ *     details about the deleted file.
  */
-export const deleteFileHelper = (
-  source: MultiFileSource,
-  fileId: FileId
-): MultiFileSource => {
+export const deleteFileHelper = ({
+  source,
+  fileId,
+}: DeleteFileHelperArgs): DeleteFileResult => {
   const openFileIds = getOpenFileIds(source);
   const newOpenFileIds = openFileIds.find(openFileId => openFileId === fileId)
     ? openFileIds.filter(openFileId => openFileId !== fileId)
@@ -130,6 +189,8 @@ export const deleteFileHelper = (
   const fileToBeDeleted = newSource.files[fileId];
   delete newSource.files[fileId];
 
+  const deletedStudentFileAsset = getStudentFileAssetInfo(fileToBeDeleted);
+
   const newActiveFileId = getNewActiveFileId(source, fileToBeDeleted);
   if (newActiveFileId) {
     newSource.files[newActiveFileId] = {
@@ -138,7 +199,10 @@ export const deleteFileHelper = (
     };
   }
 
-  return newSource;
+  return {
+    newSource,
+    deletedFileAsset: deletedStudentFileAsset,
+  };
 };
 
 /**
@@ -162,12 +226,20 @@ export const createNewFolderHelper = (
 };
 
 /**
- * Delete a folder and all of its contents.
+ * Deletes a folder from the given MultiFileSource.
+ * - Removes the folder from the folders list.
+ * - Removes all child folders from the folders list.
+ * - Removes all files housed within this or any child folder from the files list.
+ * - Updates the active file if necessary.
+ * - Returns the updated MultiFileSource and, if the folder contains flagged files,
+ *     details about the deleted files.
  */
-export const deleteFolderHelper = (
-  source: MultiFileSource,
-  folderId: FolderId
-): MultiFileSource => {
+export const deleteFolderHelper = ({
+  source,
+  folderId,
+}: DeleteFolderHelperArgs): DeleteFolderResult => {
+  const deletedFilesAssets: DeletedFileAsset[] = [];
+
   const newSource = {
     ...source,
     folders: {
@@ -199,7 +271,14 @@ export const deleteFolderHelper = (
     newSource.files = {...newSource.files};
     Object.values(newSource.files)
       .filter(f => files.has(f.id))
-      .forEach(f => delete newSource.files[f.id]);
+      .forEach(f => {
+        delete newSource.files[f.id];
+
+        const deletedStudentFileAsset = getStudentFileAssetInfo(f);
+        if (deletedStudentFileAsset) {
+          deletedFilesAssets.push(deletedStudentFileAsset);
+        }
+      });
     if (newSource.openFiles) {
       // Delete files from the list of open files.
       newSource.openFiles = newSource.openFiles.filter(
@@ -221,7 +300,10 @@ export const deleteFolderHelper = (
     }
   }
 
-  return newSource;
+  return {
+    newSource,
+    deletedFilesAssets,
+  };
 };
 
 // If we either close or delete a file, we may need to update the active file.
@@ -253,6 +335,23 @@ const getNewActiveFileId = (
     }
 
     return newActiveFileId;
+  }
+  return undefined;
+};
+
+// Helper function to extract file asset info to be deleted from S3 if the file is owned by a student
+// (i.e., not a level starter asset).
+const getStudentFileAssetInfo = (file: ProjectFile) => {
+  if (
+    file.url &&
+    !Object.values(ProjectFileType).includes(file?.type as ProjectFileType)
+  ) {
+    // Extract channelId from asset url.
+    const match = file.url.match(/\/assets\/([^/]+)/);
+    const channelId = match ? match[1] : null;
+    if (channelId) {
+      return {channelId, url: file.url, flagged: file.flagged};
+    }
   }
   return undefined;
 };

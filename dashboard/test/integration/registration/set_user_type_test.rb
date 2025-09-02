@@ -6,7 +6,7 @@ module RegistrationsControllerTests
   #
   class SetUserTypeTest < ActionDispatch::IntegrationTest
     test "update user type without user param returns 400 BAD REQUEST" do
-      student = create :student
+      student = create(:student)
       sign_in student
       assert_does_not_create(User) do
         patch '/users/user_type', as: :json, params: {}
@@ -15,7 +15,7 @@ module RegistrationsControllerTests
     end
 
     test "update user type without user_type param returns 400 BAD REQUEST" do
-      student = create :student
+      student = create(:student)
       sign_in student
       assert_does_not_create(User) do
         patch '/users/user_type', as: :json, params: {user: {}}
@@ -28,7 +28,7 @@ module RegistrationsControllerTests
     #
 
     test 'update rejects unwanted parameters' do
-      user = create :teacher, :demigrated, name: 'non-admin'
+      user = create(:teacher, :demigrated, name: 'non-admin')
       sign_in user
       patch '/users/user_type', as: :json, params: {user: {user_type: 'student', admin: true}}
       assert_response :success
@@ -40,7 +40,7 @@ module RegistrationsControllerTests
 
     test "converting unmigrated student to teacher" do
       test_email = 'me@example.com'
-      student = create :student, :demigrated, email: test_email
+      student = create(:student, :demigrated, email: test_email)
       original_hashed_email = student.hashed_email
       assert_empty student.email
       sign_in student
@@ -64,7 +64,7 @@ module RegistrationsControllerTests
 
     test "converting unmigrated student to teacher with positive email opt-in" do
       test_email = 'me@example.com'
-      student = create :student, :demigrated, email: test_email
+      student = create(:student, :demigrated, email: test_email)
       sign_in student
 
       patch '/users/user_type', as: :json, params: {
@@ -87,7 +87,7 @@ module RegistrationsControllerTests
 
     test "converting unmigrated student to teacher with negative email opt-in" do
       test_email = 'me@example.com'
-      student = create :student, :demigrated, email: test_email
+      student = create(:student, :demigrated, email: test_email)
       sign_in student
 
       patch '/users/user_type', as: :json, params: {
@@ -114,7 +114,7 @@ module RegistrationsControllerTests
 
     test "converting unmigrated student to teacher fails when email doesn't match" do
       test_email = 'me@example.com'
-      student = create :student, :demigrated, email: test_email
+      student = create(:student, :demigrated, email: test_email)
       original_hashed_email = student.hashed_email
       sign_in student
 
@@ -137,7 +137,7 @@ module RegistrationsControllerTests
 
     test "converting unmigrated student to teacher doesn't cause email opt-in when email doesn't match" do
       test_email = 'me@example.com'
-      student = create :student, :demigrated, email: test_email
+      student = create(:student, :demigrated, email: test_email)
       sign_in student
 
       patch '/users/user_type', as: :json, params: {
@@ -155,7 +155,7 @@ module RegistrationsControllerTests
 
     test "converting unmigrated teacher to student without password succeeds" do
       test_email = 'me@example.com'
-      teacher = create :teacher, :demigrated, email: test_email
+      teacher = create(:teacher, :demigrated, email: test_email)
       original_hashed_email = teacher.hashed_email
       sign_in teacher
 
@@ -178,7 +178,7 @@ module RegistrationsControllerTests
 
     test "converting unmigrated teacher to student ignores email opt-in" do
       test_email = 'me@example.com'
-      teacher = create :teacher, :demigrated, email: test_email
+      teacher = create(:teacher, :demigrated, email: test_email)
       sign_in teacher
 
       patch '/users/user_type', as: :json, params: {
@@ -200,7 +200,7 @@ module RegistrationsControllerTests
 
     test "converting student to teacher" do
       test_email = 'example@email.com'
-      student = create :student, email: test_email
+      student = create(:student, email: test_email)
       original_hashed_email = student.hashed_email
       assert_empty student.email
       sign_in student
@@ -224,7 +224,7 @@ module RegistrationsControllerTests
 
     test "converting student to teacher with positive email opt-in" do
       test_email = 'example@email.com'
-      student = create :student, email: test_email
+      student = create(:student, email: test_email)
       sign_in student
 
       patch '/users/user_type', as: :json, params: {
@@ -247,7 +247,7 @@ module RegistrationsControllerTests
 
     test "converting student to teacher with negative email opt-in" do
       test_email = 'example@email.com'
-      student = create :student, email: test_email
+      student = create(:student, email: test_email)
       sign_in student
 
       patch '/users/user_type', as: :json, params: {
@@ -274,7 +274,7 @@ module RegistrationsControllerTests
 
     test "converting student to teacher succeeds when given new email" do
       new_email = 'new_email@example.com'
-      student = create :student, email: 'example@email.com'
+      student = create(:student, email: 'example@email.com')
       sign_in student
 
       patch '/users/user_type', as: :json, params: {
@@ -300,7 +300,7 @@ module RegistrationsControllerTests
 
     test "converting student to teacher doesn't cause email opt-in when email isn't provided" do
       test_email = 'example@email.com'
-      student = create :student, email: test_email
+      student = create(:student, email: test_email)
       sign_in student
 
       patch '/users/user_type', as: :json, params: {
@@ -318,7 +318,7 @@ module RegistrationsControllerTests
 
     test "converting teacher to student succeeds" do
       test_email = 'example@email.com'
-      teacher = create :teacher, email: test_email
+      teacher = create(:teacher, email: test_email)
       original_hashed_email = teacher.hashed_email
       sign_in teacher
 
@@ -342,7 +342,7 @@ module RegistrationsControllerTests
 
     test "converting teacher to student ignores email opt-in" do
       test_email = 'example@email.com'
-      teacher = create :teacher, email: test_email
+      teacher = create(:teacher, email: test_email)
       sign_in teacher
 
       patch '/users/user_type', as: :json, params: {

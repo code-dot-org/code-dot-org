@@ -7,25 +7,26 @@ class PeerReviewsControllerTest < ActionController::TestCase
   self.use_transactional_test_case = true
 
   setup_all do
-    @user = create :teacher
-    @other_user = create :teacher
+    @user = create(:teacher)
+    @other_user = create(:teacher)
 
-    level = create :free_response
+    level = create(:free_response)
     level.update(submittable: true, peer_reviewable: true)
 
-    @learning_module = create :plc_learning_module
+    @learning_module = create(:plc_learning_module)
     @learning_module.plc_course_unit.script.update(peer_reviews_to_complete: 1)
 
-    @script_level = create :script_level, levels: [level], lesson: @learning_module.lesson
+    @script_level = create(:script_level, levels: [level], lesson: @learning_module.lesson)
     @script = @script_level.script
+    @unit_group = UnitGroupUnit.where(script_id: @script.id).last.unit_group
 
-    @level_source = create :level_source, data: 'My submitted answer'
+    @level_source = create(:level_source, data: 'My submitted answer')
   end
 
   setup do
     sign_in(@user)
     Plc::EnrollmentModuleAssignment.stubs(:exists?).returns(true)
-    User.track_level_progress(user_id: @other_user.id, level_id: @script_level.level_id, script_id: @script_level.script_id, new_result: Activity::UNSUBMITTED_RESULT, submitted: true, level_source_id: @level_source.id)
+    User.track_level_progress(user_id: @other_user.id, level_id: @script_level.level_id, script_id: @script_level.script_id, new_result: Activity::UNSUBMITTED_RESULT, submitted: true, level_source_id: @level_source.id, unit_group: @unit_group)
     @peer_review = PeerReview.first
     @peer_review.user_level.update_column(:best_result, ActivityConstants::UNREVIEWED_SUBMISSION_RESULT)
   end
@@ -50,7 +51,7 @@ class PeerReviewsControllerTest < ActionController::TestCase
   end
 
   test 'Reviewers can access peer escalated reviews and view other submissions' do
-    reviewer = create :plc_reviewer
+    reviewer = create(:plc_reviewer)
 
     @peer_review.update(reviewer: @user, data: 'Looks good to the user')
     PeerReview.second.update(reviewer: reviewer, status: 'accepted', data: 'Looks good to the reviewer')
@@ -90,7 +91,7 @@ class PeerReviewsControllerTest < ActionController::TestCase
   end
 
   test 'Submitting a review redirects to the index if user is a plc reviewer' do
-    plc_reviewer = create :plc_reviewer
+    plc_reviewer = create(:plc_reviewer)
 
     sign_out @user
     sign_in plc_reviewer
@@ -106,7 +107,7 @@ class PeerReviewsControllerTest < ActionController::TestCase
   end
 
   test 'Submitting a review requires a status if user is a plc reviewer' do
-    plc_reviewer = create :plc_reviewer
+    plc_reviewer = create(:plc_reviewer)
     @peer_review.update reviewer_id: plc_reviewer.id
 
     sign_out @user
@@ -140,7 +141,7 @@ class PeerReviewsControllerTest < ActionController::TestCase
   end
 
   test 'Dashboard dropdown gets only plc courses that have peer reviews' do
-    create :plc_course, name: 'Non peer reviewable course'
+    create(:plc_course, name: 'Non peer reviewable course')
     sign_in(create(:plc_reviewer))
 
     get :dashboard

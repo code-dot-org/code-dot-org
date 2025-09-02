@@ -2,9 +2,9 @@ require 'test_helper'
 
 class PuzzleRatingTest < ActiveSupport::TestCase
   setup do
-    @student = create :student
-    @script = create :script, :in_single_unit_course
-    @level = create :level
+    @student = create(:student)
+    @script = create(:script, :in_single_unit_course)
+    @level = create(:level)
   end
 
   test "logged-in user can rate unless already rated" do

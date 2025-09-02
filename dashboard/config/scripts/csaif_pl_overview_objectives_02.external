@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Lesson 2: Lesson Exploration
  
-#### This lesson explores key cybersecurity concepts, introduces important pedagogical approaches to teaching the unit, and provides time for teachers to explore selected lessons and activities from the Cybersecurity and Global Impacts unit.
+#### This lesson explores key cybersecurity concepts, introduces important pedagogical approaches to teaching the unit, and provides time for teachers to explore selected lessons and activities from the AI-Powered Threats and Defenses unit.
 
 
 <div style="display: flex; align-items: center; justify-content: space-between; background: #f7f8fa; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-family: Figtree, sans-serif; font-size: 14pt; line-height: 1.6; max-width: 800px; margin: 20px auto;">
