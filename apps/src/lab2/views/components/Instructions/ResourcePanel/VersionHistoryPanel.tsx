@@ -148,7 +148,8 @@ const VersionHistoryPanel: React.FunctionComponent<
       // the user switched panels but did not cancel), focus the selected version,
       // otherwise focus the latest version and set the selected version to the latest version.
       // Wait a tick to ensure the selected version is rendered before focusing it.
-      // We do this when the list is first loaded or when we change levels.
+      // We do this when the list is first loaded, when we change levels, when we change users, or when
+      // we change the version for the user (such as when restoring/cancelling).
       const versionId = viewingOldVersion ? selectedVersion : latestVersion;
       if (!viewingOldVersion) {
         setSelectedVersion(latestVersion);
@@ -297,6 +298,7 @@ const VersionHistoryPanel: React.FunctionComponent<
     if (selectedVersion && !isLatestVersion(selectedVersion)) {
       dispatch(resetToCurrentVersion());
       setSelectedVersion(latestVersion);
+      setFocusSelectedVersion(true);
     }
   }, [
     dispatch,
@@ -410,7 +412,7 @@ const VersionHistoryPanel: React.FunctionComponent<
               text={commonI18n.cancel()}
               size={'s'}
               onClick={handleCancel}
-              disabled={versionLoading}
+              disabled={versionLoading || latestVersion === selectedVersion}
               className={moduleStyles.footerButton}
               type={'secondary'}
               color="black"
