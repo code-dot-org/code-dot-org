@@ -34,7 +34,7 @@ export interface CardProps extends HTMLAttributes<HTMLDivElement> {
   /** Statsig event name for secondary button clicks */
   secondaryButtonEventName?: string;
   /** Additional event metadata */
-  eventMetadata?: Record<string, unknown>;
+  eventMetadata?: Record<string, string>;
   /** Card custom className */
   className?: string;
 }
@@ -66,8 +66,8 @@ const Card: React.FC<CardProps> = ({
     if (id && primaryButton && primaryButtonEventName && eventMetadata) {
       logEvent(primaryButtonEventName, id, {
         ...eventMetadata,
-        buttonText: primaryButton.fields.ariaLabel,
-        buttonTarget: primaryButton.fields.primaryTarget,
+        buttonText: primaryButton.fields.ariaLabel || '',
+        buttonTarget: primaryButton.fields.primaryTarget || '',
       });
     }
   };
@@ -76,8 +76,8 @@ const Card: React.FC<CardProps> = ({
     if (id && secondaryButton && secondaryButtonEventName && eventMetadata) {
       logEvent(secondaryButtonEventName, id, {
         ...eventMetadata,
-        buttonText: secondaryButton.fields.ariaLabel,
-        buttonTarget: secondaryButton.fields.primaryTarget,
+        buttonText: secondaryButton.fields.ariaLabel || '',
+        buttonTarget: secondaryButton.fields.primaryTarget || '',
       });
     }
   };

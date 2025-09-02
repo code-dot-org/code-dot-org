@@ -52,8 +52,7 @@ export function useStatsigLogger() {
   const logEvent = (
     eventName: string,
     value: string,
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    metadata?: Record<string, any>,
+    metadata?: Record<string, string>,
   ) => {
     try {
       if (client) {
