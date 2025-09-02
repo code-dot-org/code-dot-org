@@ -2,7 +2,7 @@ import logoImage from '@public/images/csforall-logo.webp';
 
 import {CallToActionProps} from './CallToAction';
 import {LinkItemProps} from './common/types';
-import {createLinkItem} from './common/utils';
+import {createLinkItem, getLinksFromEntry} from './common/utils';
 import {SiteLogoProps} from './SiteLogo';
 
 const SHARED_LINKS = {
@@ -101,11 +101,7 @@ export const TOP_LEVEL_LINKS: {linkList: LinkItemProps[]} = {
 
 // Main Menu Initiatives Dropdown Links
 export const INITIATIVES_LINKS: {linkList: LinkItemProps[]} = {
-  linkList: [
-    createLinkItem(SHARED_LINKS.UNLOCK8),
-    createLinkItem(SHARED_LINKS.CS_IS_EVERYTHING),
-    createLinkItem(SHARED_LINKS.TEACH_AI),
-  ],
+  linkList: await getLinksFromEntry('36lird9ux97FVwMw5xNYMH'),
 };
 
 // Main Menu Take Action Dropdown Links
