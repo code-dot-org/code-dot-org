@@ -138,7 +138,7 @@ class FileBucketTest < FilesApiTestBase
       ""
     ]
     unsafe_filenames.each do |filename|
-      refute @file_bucket.allowed_file_name?(filename), "Should reject: #{filename.inspect}"
+      refute @file_bucket.new_allowed_file_name?(filename), "Should reject: #{filename.inspect}"
     end
   end
 end
