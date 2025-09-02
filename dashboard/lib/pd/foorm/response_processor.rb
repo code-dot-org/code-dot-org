@@ -149,6 +149,8 @@ module Pd::Foorm
         none
         na
         no
+        n
+        nope
         nothing
         noneoftheabove
         notapplicable

@@ -93,7 +93,7 @@
               "category": "readiness_expectations",
               "value": "understand_cs_concepts",
               "text": "I am confident in my understanding of computer science concepts.",
-              "shortText": "Confidence in CS concepts (%)"
+              "shortText": "Confident in CS concepts (%)"
             },
             {
               "category": "readiness_expectations",
@@ -111,7 +111,7 @@
               "category": "readiness_expectations",
               "value": "confindent_use_cdo_resources",
               "text": "I am confident using the Code.org platform and resources.",
-              "shortText": "Confidence using Code.org (%)"
+              "shortText": "Confident using Code.org (%)"
             },
             {
               "category": "readiness_expectations",
