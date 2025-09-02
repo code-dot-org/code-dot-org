@@ -13,12 +13,39 @@ import {setCodeToLoad, setAiGenerateState} from '../redux/musicRedux';
 
 import styles from './Generate.module.scss';
 
-const adlibTextTemplate =
-  'Please generate a new song.  Around {length} measures in duration is good.  Go for a {mood} vibe.  Sequence it like a {sequence}.';
-const adlibTextOptions: {[key: string]: string[]} = {
-  length: ['20', '30', '40'],
-  mood: ['happy', 'sad', 'energetic', 'calm', 'upbeat', 'chill'],
-  sequence: ['verse-chorus-verse', 'A-B-A', 'A-B-A-C-A', 'A-A-B-A'],
+const adlibs: {
+  [key: string]: {template: string; options: {[key: string]: string[]}};
+} = {
+  complex: {
+    template:
+      'Please generate a new song.  Around {length} measures in duration is good.  Go for a {mood} vibe.  Sequence it like a {sequence}.',
+    options: {
+      length: ['20', '30', '40'],
+      mood: ['happy', 'sad', 'energetic', 'calm', 'upbeat', 'chill'],
+      sequence: ['verse-chorus-verse', 'A-B-A', 'A-B-A-C-A', 'A-A-B-A'],
+    },
+  },
+  length: {
+    template:
+      'Please generate a new song.  Around {length} measures in duration is good.',
+    options: {
+      length: ['20', '30', '40'],
+    },
+  },
+  sounds: {
+    template: 'Please make a song with {sounds} sounds in order.',
+    options: {
+      sounds: ['2', '3', '4', '5'],
+    },
+  },
+  layers: {
+    template:
+      'Please make a song that layers {type1} and {type2} together. Around 10 measures is good.',
+    options: {
+      type1: ['bass', 'leads', 'beats', 'vocals'],
+      type2: ['bass', 'leads', 'beats', 'vocals'],
+    },
+  },
 };
 
 interface GenerateProps {}
@@ -31,7 +58,7 @@ const Generate: React.FunctionComponent<GenerateProps> = () => {
 
   const library = MusicLibrary.getInstance();
 
-  const useAdlibText = appConfig.getValue('ai-generate-adlib') === 'true';
+  const adlibOption = appConfig.getValue('ai-generate-adlib') as string;
   const [adlibText, setAdlibText] = useState<string | undefined>(undefined);
 
   const sounds = library
@@ -70,7 +97,7 @@ The valid sounds to use are: "${sounds}".  (The length of each sound is in paren
   );
 
   const generateSong = useCallback(() => {
-    const useText = useAdlibText ? adlibText : text;
+    const useText = adlibOption ? adlibText : text;
 
     console.log('starting ask');
     dispatch(setAiGenerateState('generating'));
@@ -90,7 +117,7 @@ The valid sounds to use are: "${sounds}".  (The length of each sound is in paren
       dispatch(setAiGenerateState('done'));
     });
   }, [
-    useAdlibText,
+    adlibOption,
     adlibText,
     text,
     dispatch,
@@ -106,7 +133,7 @@ The valid sounds to use are: "${sounds}".  (The length of each sound is in paren
       {aiGenerateState === 'none' && (
         <>
           <div className={styles.info}>Generate a song with AI.</div>
-          {!useAdlibText && (
+          {!adlibOption && (
             <textarea
               id="generate-description"
               onChange={evt => setText(evt.target.value)}
@@ -115,10 +142,10 @@ The valid sounds to use are: "${sounds}".  (The length of each sound is in paren
               className={styles.textArea}
             />
           )}
-          {useAdlibText && (
+          {adlibOption && (
             <Adlib
-              template={adlibTextTemplate}
-              options={adlibTextOptions}
+              template={adlibs[adlibOption].template}
+              options={adlibs[adlibOption].options}
               onChange={setAdlibText}
               className={styles.textArea}
             />
