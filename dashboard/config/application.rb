@@ -206,9 +206,11 @@ module Dashboard
     # These directories will also be treated as top-level directories by
     # Zeitwerk, rather than as subdirectories which require namspacing.
     config.eager_load_paths += [
+      Rails.root.join('lib'),
       Rails.root.join('app', 'models', 'experiments'),
       Rails.root.join('app', 'models', 'levels'),
-      Rails.root.join('app', 'models', 'sections')
+      Rails.root.join('app', 'models', 'sections'),
+      Rails.root.join('../lib/cdo/shared_constants')
     ].map(&:to_s)
 
     # use https://(*-)studio.code.org urls in mails
