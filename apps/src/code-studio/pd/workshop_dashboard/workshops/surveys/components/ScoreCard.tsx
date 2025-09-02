@@ -26,9 +26,9 @@ interface ScoreCardProps {
   description: string;
   footer: string | null;
   questionType: 'likert' | 'promoter';
-  score?: number | null;
-  responseCount?: number;
-  minResponseCount?: number;
+  score: number;
+  responseCount: number;
+  minResponseCount: number;
   breakdown?: Breakdown[];
 }
 
@@ -44,52 +44,28 @@ export const ScoreCard: FC<ScoreCardProps> = ({
   breakdown,
 }) => {
   const [showBreakdown, setShowBreakdown] = useState(false);
-  const insufficientData = useMemo(
-    () =>
-      (typeof responseCount === 'number' &&
-        typeof minResponseCount === 'number' &&
-        responseCount < minResponseCount) ||
-      score === null ||
-      score === undefined,
-    [responseCount, minResponseCount, score]
-  );
+  const insufficientData = responseCount < minResponseCount;
 
-  const responseBasedDescription = useMemo(() => {
-    if (!responseCount) {
-      return 'No responses received';
-    }
-    if (insufficientData) {
-      return `Insufficient data (<${minResponseCount} responses)`;
-    }
-    return description;
-  }, [description, insufficientData, minResponseCount, responseCount]);
-
-  const responseBasedScore = useMemo(() => {
-    if (!responseCount) {
-      return <FontAwesomeV6Icon iconName="dash" />;
-    }
-    if (insufficientData) {
-      return <FontAwesomeV6Icon iconName="question" />;
-    }
-    return (
-      <BodyThreeText noMargin visualAppearance="heading-lg">
-        {score}
-      </BodyThreeText>
-    );
-  }, [insufficientData, responseCount, score]);
+  const responseBasedDescription = insufficientData
+    ? `Insufficient data (<${minResponseCount} responses)`
+    : description;
 
   const status = useMemo(() => {
-    if (!responseCount || insufficientData) {
+    if (insufficientData) {
       return 'insufficientData';
     }
-    if ((score ?? 0) < CRITICAL_CONCERN_LIMIT) {
+    if (score < CRITICAL_CONCERN_LIMIT) {
       return 'criticalConcern';
     }
-    if ((score ?? 0) < NEEDS_ATTENTION_LIMIT) {
+    if (score < NEEDS_ATTENTION_LIMIT) {
       return 'needsAttention';
     }
     return 'good';
-  }, [score, responseCount, insufficientData]);
+  }, [insufficientData, score]);
+
+  if (!responseCount) {
+    return null;
+  }
 
   return (
     <>
@@ -110,7 +86,13 @@ export const ScoreCard: FC<ScoreCardProps> = ({
             className={classNames(styles.scoreBox, styles[status])}
             data-status={status}
           >
-            {responseBasedScore}
+            {insufficientData ? (
+              <FontAwesomeV6Icon iconName="question" />
+            ) : (
+              <BodyThreeText noMargin visualAppearance="heading-lg">
+                {score}
+              </BodyThreeText>
+            )}
           </Box>
         </CardContent>
         <Box className={styles.scoreCardFooter}>

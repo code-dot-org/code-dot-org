@@ -83,6 +83,9 @@ export const Implementation = () => {
               barriersToImplementation.question_text
             }
             description={getQuestionDescription(barriersToImplementation)}
+            totalRespondents={
+              barriersToImplementation.results.total_respondents
+            }
             items={barriersItems}
             barLabel="Teachers"
           />

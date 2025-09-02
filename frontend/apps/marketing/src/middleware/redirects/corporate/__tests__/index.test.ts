@@ -26,20 +26,20 @@ function createMockRequest(pathname: string, origin = 'https://example.com') {
 describe('getRedirects', () => {
   afterEach(() => jest.clearAllMocks());
 
-  it('redirects /es to /es-LA', () => {
-    const req = createMockRequest('/es');
+  it('redirects /es-LA to /es', () => {
+    const req = createMockRequest('/es-LA');
     getRedirects(req);
     expect(getCachedRedirectResponse).toHaveBeenCalledWith(
-      new URL('/es-LA/', req.nextUrl.origin),
+      new URL('/es', req.nextUrl.origin),
       {status: 308},
     );
   });
 
-  it('redirects /es/foo/bar to /es-LA/foo/bar', () => {
-    const req = createMockRequest('/es/foo/bar');
+  it('redirects /es-LA/foo/bar to /es/foo/bar', () => {
+    const req = createMockRequest('/es-LA/foo/bar');
     getRedirects(req);
     expect(getCachedRedirectResponse).toHaveBeenCalledWith(
-      new URL('/es-LA/foo/bar', req.nextUrl.origin),
+      new URL('/es/foo/bar', req.nextUrl.origin),
       {status: 308},
     );
   });
