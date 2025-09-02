@@ -1,5 +1,6 @@
 import {Events, WorkspaceSvg} from 'blockly/core';
 import classNames from 'classnames';
+import {isEqual} from 'lodash';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 import {loadBlocksToWorkspace} from '@cdo/apps/blockly/addons/cdoUtils';
@@ -38,9 +39,9 @@ import loadingGif from '@cdo/static/dance/DancePartyLoading.gif';
 
 import danceI18n from '../locale';
 import ProgramExecutor from '../ProgramExecutor';
-import getInitialSources from '../utils/getInitialSources';
 
 import DanceControls from './DanceControls';
+import SourcesContainer, {useSources} from './SourcesContainer';
 
 import moduleStyles from './dance-view.module.scss';
 
@@ -53,15 +54,14 @@ registerReducers(reducers);
  * Renders the Lab2 version of Dance Lab. This separate container
  * allows us to support both Lab2 and legacy Dance.
  */
-const DanceView: React.FunctionComponent<
-  LabProps<DanceLevelProperties, DanceProjectSources>
-> = ({levelProperties, initialSources}) => {
+const DanceView: React.FunctionComponent<{
+  levelProperties: DanceLevelProperties;
+}> = ({levelProperties}) => {
   const dispatch = useAppDispatch();
 
   const isRunning = useAppSelector(state => state.dance.isRunning);
   const userType = useAppSelector(state => state.currentUser.userType);
   const under13 = useAppSelector(state => state.currentUser.under13);
-  const selectedSong = useAppSelector(state => state.dance.selectedSong);
   const songData = useAppSelector(state => state.dance.songData);
   const readonlyWorkspace = useAppSelector(isReadOnlyWorkspace);
   const currentSongMetadata = useAppSelector(
@@ -71,19 +71,10 @@ const DanceView: React.FunctionComponent<
   const hasEdited = useAppSelector(state => state.dance.hasEdited);
   const isLoading = useAppSelector(state => state.dance.isLoading);
 
+  const {currentSources, updateSources} = useSources<DanceProjectSources>();
+
   const programExecutor = useRef<ProgramExecutor | null>(null);
   const workspace = useRef<WorkspaceSvg | null>(null);
-
-  const getSourcesToSave = (selectedSong: string) => {
-    if (!workspace.current) {
-      return;
-    }
-    const blocksJson = Blockly.serialization.workspaces.save(workspace.current);
-    return {
-      selectedSong,
-      source: blocksJson,
-    };
-  };
 
   const WorkspaceAlert = useLevelEditMode(
     levelProperties.id,
@@ -94,19 +85,12 @@ const DanceView: React.FunctionComponent<
           // TODO: Support toolbox edit mode (get toolbox definition from workspace)
           return {};
         }
-        if (!selectedSong) {
-          return {};
-        }
-        const sourcesToSave = getSourcesToSave(selectedSong);
-        if (sourcesToSave) {
-          return {
-            [mode === 'start' ? 'start_sources' : 'exemplar_sources']:
-              sourcesToSave,
-          };
-        }
-        return {};
+        return {
+          [mode === 'start' ? 'start_sources' : 'exemplar_sources']:
+            currentSources,
+        };
       },
-      [selectedSong]
+      [currentSources]
     )
   );
 
@@ -126,22 +110,24 @@ const DanceView: React.FunctionComponent<
 
   const onSetSong = useCallback(
     (songId: string) => {
-      dispatch(setSong({songId, onAuthError}));
+      updateSources({...currentSources, selectedSong: songId});
     },
-    [dispatch]
+    [updateSources, currentSources]
   );
 
-  const saveProject = useCallback((selectedSong: string, forceSave = false) => {
-    const sourcesToSave = getSourcesToSave(selectedSong);
-    if (sourcesToSave) {
-      Lab2Registry.getInstance()
-        .getProjectManager()
-        ?.save(sourcesToSave, forceSave);
-    }
-  }, []);
+  const saveBlocks = useCallback(
+    (forceSave = false) => {
+      if (!workspace.current) {
+        return;
+      }
+      const blocks = Blockly.serialization.workspaces.save(workspace.current);
+      updateSources({...currentSources, source: blocks}, forceSave);
+    },
+    [currentSources, updateSources]
+  );
 
   const runProgram = useCallback(async () => {
-    if (!programExecutor.current || !currentSongMetadata || !selectedSong) {
+    if (!programExecutor.current || !currentSongMetadata) {
       return;
     }
 
@@ -156,14 +142,8 @@ const DanceView: React.FunctionComponent<
     dispatch(setRunIsStarting(false));
     dispatch(setIsRunning(true));
     dispatch(setHasRun(true));
-    saveProject(selectedSong, true);
-  }, [
-    programExecutor,
-    currentSongMetadata,
-    selectedSong,
-    saveProject,
-    dispatch,
-  ]);
+    saveBlocks(true);
+  }, [programExecutor, currentSongMetadata, saveBlocks, dispatch]);
 
   const resetProgram = useCallback(() => {
     programExecutor.current?.reset();
@@ -198,23 +178,14 @@ const DanceView: React.FunctionComponent<
       if (!isRunning) {
         programExecutor.current?.staticPreview(Blockly.getWorkspaceCode());
       }
-      if (selectedSong) {
-        saveProject(selectedSong);
-        dispatch(setHasEdited(true));
-      }
+      saveBlocks();
+      dispatch(setHasEdited(true));
     },
-    [selectedSong, isRunning, dispatch, saveProject]
+    [isRunning, dispatch, saveBlocks]
   );
 
   // Setup Blockly for dance party when first mounting.
   useEffect(setupBlocklyEnvironment, []);
-
-  // Save project when selected song changes
-  useEffect(() => {
-    if (selectedSong) {
-      saveProject(selectedSong);
-    }
-  }, [selectedSong, saveProject]);
 
   // Reset hasRun and hasEdited flag when level changes
   useEffect(() => {
@@ -251,28 +222,49 @@ const DanceView: React.FunctionComponent<
       readOnly: readonlyWorkspace,
     });
 
-    const sources =
-      getInitialSources(levelProperties, initialSources) || defaultSources;
-    loadBlocksToWorkspace(workspace.current, JSON.stringify(sources.source));
-
     return () => workspace.current?.dispose();
-  }, [dispatch, initialSources, readonlyWorkspace, levelProperties]);
+  }, [dispatch, readonlyWorkspace, levelProperties]);
 
-  // Set the initial song based on initial sources or level default
+  useEffect(() => {
+    if (!workspace.current) {
+      return;
+    }
+    const blocks = Blockly.serialization.workspaces.save(workspace.current);
+    if (!isEqual(blocks, currentSources.source)) {
+      loadBlocksToWorkspace(
+        workspace.current,
+        JSON.stringify(currentSources.source)
+      );
+    }
+  }, [currentSources.source]);
+
   useEffect(() => {
     const songKeys = Object.keys(songData);
     if (songKeys.length === 0) {
       // Song data has not been loaded yet.
       return;
     }
-    const sources =
-      getInitialSources(levelProperties, initialSources) ||
-      (defaultSources as DanceProjectSources);
-    const selectedSong = sources.selectedSong || levelProperties.defaultSong;
-    const songToUse =
-      selectedSong && songData[selectedSong] ? selectedSong : songKeys[0];
-    dispatch(setSong({songId: songToUse, onAuthError}));
-  }, [dispatch, initialSources, levelProperties, songData]);
+    // In case there is no song set in the current sources, set it to the default.
+    if (!currentSources.selectedSong) {
+      const defaultSong = levelProperties.defaultSong;
+      const songToUse =
+        defaultSong && songData[defaultSong] ? defaultSong : songKeys[0];
+      updateSources({...currentSources, selectedSong: songToUse});
+    }
+  }, [songData, currentSources, updateSources, levelProperties.defaultSong]);
+
+  // Load the selected song whenever it changes in project sources.
+  useEffect(() => {
+    const songKeys = Object.keys(songData);
+    if (songKeys.length === 0 || !currentSources.selectedSong) {
+      return;
+    }
+    // Make sure the song is available
+    const songId = songData[currentSources.selectedSong]
+      ? currentSources.selectedSong
+      : songKeys[0];
+    dispatch(setSong({songId, onAuthError}));
+  }, [dispatch, currentSources.selectedSong, levelProperties, songData]);
 
   useEffect(() => {
     workspace.current?.addChangeListener(onBlockSpaceChange);
@@ -334,11 +326,11 @@ const DanceView: React.FunctionComponent<
         className={moduleStyles.visualizationArea}
       >
         <div className={moduleStyles.visualizationColumn}>
-          {selectedSong && (
+          {currentSources.selectedSong && (
             <SongSelector
               enableSongSelection={!isRunning}
               setSong={onSetSong}
-              selectedSong={selectedSong}
+              selectedSong={currentSources.selectedSong}
               songData={songData}
               filterOn={filterOn}
               levelIsRunning={isRunning}
@@ -378,4 +370,8 @@ const DanceView: React.FunctionComponent<
   );
 };
 
-export default DanceView;
+export default (props: LabProps<DanceLevelProperties, DanceProjectSources>) => (
+  <SourcesContainer {...props} defaultSources={defaultSources}>
+    <DanceView levelProperties={props.levelProperties} />
+  </SourcesContainer>
+);
