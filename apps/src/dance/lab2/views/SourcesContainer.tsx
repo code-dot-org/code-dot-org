@@ -72,10 +72,9 @@ const SourcesContainer: React.FC<
     const {templateSources, startSources} = levelProperties;
     const startOverSources = templateSources || startSources || defaultSources;
     updateSources(startOverSources as ProjectSources, true);
-    setShowStartOver(false);
+    setStartOverProps(undefined);
   }, [levelProperties, defaultSources, updateSources]);
 
-  const [showStartOver, setShowStartOver] = useState(false);
   const [startOverProps, setStartOverProps] = useState<{
     type: MessageType;
     message?: string;
@@ -84,7 +83,6 @@ const SourcesContainer: React.FC<
   const showStartOverDialog = useCallback(
     (type: MessageType, message?: string) => {
       setStartOverProps({type, message});
-      setShowStartOver(true);
     },
     []
   );
@@ -94,10 +92,10 @@ const SourcesContainer: React.FC<
       value={{currentSources, updateSources, showStartOverDialog}}
     >
       {children}
-      {showStartOver && startOverProps && (
+      {startOverProps && (
         <StartOverDialog
           onConfirm={onStartOver}
-          onCancel={() => setShowStartOver(false)}
+          onCancel={() => setStartOverProps(undefined)}
           {...startOverProps}
         />
       )}
