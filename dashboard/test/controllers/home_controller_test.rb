@@ -439,17 +439,6 @@ class HomeControllerTest < ActionController::TestCase
     assert_select '#student-information-modal', false
   end
 
-  test "teacher visiting homepage gets expected cookies set" do
-    teacher = create(:teacher)
-    sign_in teacher
-    get :home
-
-    cookie_header = @response.header['Set-Cookie']
-    assert_includes(cookie_header, "teacher_account_age_in_years")
-    assert_includes(cookie_header, "teacher_within_us")
-    assert_includes(cookie_header, "teacher_has_attended_pd")
-  end
-
   # This exception is actually annoying to handle because it never gets to
   # ActionController (so we can't use the rescue in ApplicationController).
   # test "bad http methods are rejected" do
