@@ -1,7 +1,7 @@
 import {Button} from '@code-dot-org/component-library/button';
-import React, {useCallback, useEffect, useMemo, useState} from 'react';
-import reactStringReplace from 'react-string-replace';
+import React, {useCallback, useState} from 'react';
 
+import Adlib from '@cdo/apps/lab2/views/components/guide/Adlib';
 import Guide from '@cdo/apps/lab2/views/components/guide/Guide';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -14,7 +14,7 @@ import {setCodeToLoad, setAiGenerateState} from '../redux/musicRedux';
 import styles from './Generate.module.scss';
 
 const adlibTextTemplate =
-  'Please generate a fun song.  Around {length} measures in duration is good.  Got for a {mood} vibe.  Sequence it like a {sequence}.';
+  'Please generate a new song.  Around {length} measures in duration is good.  Go for a {mood} vibe.  Sequence it like a {sequence}.';
 const adlibTextOptions: {[key: string]: string[]} = {
   length: ['20', '30', '40'],
   mood: ['happy', 'sad', 'energetic', 'calm', 'upbeat', 'chill'],
@@ -32,6 +32,7 @@ const Generate: React.FunctionComponent<GenerateProps> = () => {
   const library = MusicLibrary.getInstance();
 
   const useAdlibText = appConfig.getValue('ai-generate-adlib') === 'true';
+  const [adlibText, setAdlibText] = useState<string | undefined>(undefined);
 
   const sounds = library
     ?.getFolderForFolderId(packId || 'indie')
@@ -68,58 +69,8 @@ The valid sounds to use are: "${sounds}".  (The length of each sound is in paren
     'Please generate a fun song.  Between 18-20 measures is enough duration.  Use layering of sounds to make it exciting.'
   );
 
-  const [adlibOptions, setAdlibOptions] = useState<{[key: string]: string}>({});
-
-  useEffect(() => {
-    const initialOptions: {[key: string]: string} = {};
-    Object.keys(adlibTextOptions).forEach(key => {
-      initialOptions[key] = adlibTextOptions[key][0];
-    });
-    setAdlibOptions(initialOptions);
-  }, []);
-
-  const adlibHtml = useMemo(() => {
-    let output: React.ReactNode[] = [adlibTextTemplate];
-    Object.keys(adlibTextOptions).forEach(key => {
-      output = reactStringReplace(output, `{${key}}`, match => {
-        return (
-          <select
-            key={key}
-            id={key}
-            className={styles.select}
-            value={adlibOptions[key]}
-            onChange={event => {
-              setAdlibOptions({
-                ...adlibOptions,
-                [key]: event.target.value,
-              });
-            }}
-          >
-            {(
-              adlibTextOptions[key as keyof typeof adlibTextOptions] as string[]
-            ).map((option: string) => (
-              <option key={option} value={option}>
-                {option}
-              </option>
-            ))}
-          </select>
-        );
-      });
-    });
-
-    return output;
-  }, [adlibOptions]);
-
-  const getFilledAdlibText = useCallback(() => {
-    let output = adlibTextTemplate;
-    Object.keys(adlibTextOptions).forEach(key => {
-      output = output.replace(`{${key}}`, adlibOptions[key]);
-    });
-    return output;
-  }, [adlibOptions]);
-
   const generateSong = useCallback(() => {
-    const useText = useAdlibText ? getFilledAdlibText() : text;
+    const useText = useAdlibText ? adlibText : text;
 
     console.log('starting ask');
     dispatch(setAiGenerateState('generating'));
@@ -140,7 +91,7 @@ The valid sounds to use are: "${sounds}".  (The length of each sound is in paren
     });
   }, [
     useAdlibText,
-    getFilledAdlibText,
+    adlibText,
     text,
     dispatch,
     contextGenerateMusicPsuedocodeFromDescription,
@@ -164,7 +115,14 @@ The valid sounds to use are: "${sounds}".  (The length of each sound is in paren
               className={styles.textArea}
             />
           )}
-          {useAdlibText && <div className={styles.textArea}>{adlibHtml}</div>}
+          {useAdlibText && (
+            <Adlib
+              template={adlibTextTemplate}
+              options={adlibTextOptions}
+              onChange={setAdlibText}
+              className={styles.textArea}
+            />
+          )}
         </>
       )}
 
