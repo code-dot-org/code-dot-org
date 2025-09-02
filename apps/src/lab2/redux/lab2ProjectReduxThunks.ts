@@ -277,6 +277,11 @@ function saveProjectIfEditable(
   forceSave: boolean = false,
   forceNewVersion: boolean = false
 ) {
+  const isLoadingProjectOrLevel = getState().lab.isLoadingProjectOrLevel;
+  if (isLoadingProjectOrLevel) {
+    // Don't save or do a progress report if we are still loading the project or level.
+    return;
+  }
   const projectSources = getState().lab2Project.projectSources;
   const isReadOnly = isReadOnlyWorkspace(getState());
   const hasEdited = getState().lab2Project.hasEdited;
