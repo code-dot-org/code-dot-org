@@ -83,4 +83,111 @@ describe('Design System - Link', () => {
     const link = screen.getByText('Disabled');
     expect(link).not.toHaveAttribute('href');
   });
+
+  describe('automatic external link detection', () => {
+    const originalWindow = window;
+
+    beforeEach(() => {
+      Object.defineProperty(window, 'location', {
+        value: {
+          origin: 'https://studio.code.org',
+          href: 'https://studio.code.org/home',
+        },
+        writable: true,
+      });
+    });
+
+    afterEach(() => {
+      Object.defineProperty(window, 'location', {
+        value: originalWindow.location,
+        writable: true,
+      });
+    });
+
+    it('automatically detects external links and shows external icon', () => {
+      render(<Link href="https://google.com">External Link</Link>);
+
+      const link = screen.getByRole('link', {name: 'External Link'});
+      expect(link).toHaveAttribute('rel', 'noopener noreferrer');
+      expect(screen.getByTestId('font-awesome-v6-icon')).toBeInTheDocument();
+    });
+
+    it('treats relative paths as internal links', () => {
+      render(<Link href="/about">About</Link>);
+
+      const link = screen.getByRole('link', {name: 'About'});
+      expect(link).not.toHaveAttribute('rel');
+      expect(
+        screen.queryByTestId('font-awesome-v6-icon'),
+      ).not.toBeInTheDocument();
+    });
+
+    it('treats hash links as internal', () => {
+      render(<Link href="#section">Section</Link>);
+
+      const link = screen.getByRole('link', {name: 'Section'});
+      expect(link).not.toHaveAttribute('rel');
+      expect(
+        screen.queryByTestId('font-awesome-v6-icon'),
+      ).not.toBeInTheDocument();
+    });
+
+    it('treats query-only links as internal', () => {
+      render(<Link href="?param=value">Query Link</Link>);
+
+      const link = screen.getByRole('link', {name: 'Query Link'});
+      expect(link).not.toHaveAttribute('rel');
+      expect(
+        screen.queryByTestId('font-awesome-v6-icon'),
+      ).not.toBeInTheDocument();
+    });
+
+    it('treats same-origin links as internal', () => {
+      render(
+        <Link href="https://studio.code.org/different-path">Same Origin</Link>,
+      );
+
+      const link = screen.getByRole('link', {name: 'Same Origin'});
+      expect(link).not.toHaveAttribute('rel');
+      expect(
+        screen.queryByTestId('font-awesome-v6-icon'),
+      ).not.toBeInTheDocument();
+    });
+
+    it('allows external prop to override automatic detection (external=true)', () => {
+      render(
+        <Link href="https://studio.code.org/same-origin" external={true}>
+          Override External
+        </Link>,
+      );
+
+      const link = screen.getByRole('link', {name: 'Override External'});
+      expect(link).toHaveAttribute('rel', 'noopener noreferrer');
+      expect(screen.getByTestId('font-awesome-v6-icon')).toBeInTheDocument();
+    });
+
+    it('allows external prop to override automatic detection (external=false)', () => {
+      render(
+        <Link href="https://google.com" external={false}>
+          Override Internal
+        </Link>,
+      );
+
+      const link = screen.getByRole('link', {name: 'Override Internal'});
+      expect(link).not.toHaveAttribute('rel');
+      expect(
+        screen.queryByTestId('font-awesome-v6-icon'),
+      ).not.toBeInTheDocument();
+    });
+
+    it('handles malformed URLs gracefully', () => {
+      render(<Link href="not-a-valid-url">Invalid URL</Link>);
+
+      const link = screen.getByRole('link', {name: 'Invalid URL'});
+      expect(link).not.toHaveAttribute('rel');
+      expect(
+        screen.queryByTestId('font-awesome-v6-icon'),
+      ).not.toBeInTheDocument();
+    });
+  });
 });
