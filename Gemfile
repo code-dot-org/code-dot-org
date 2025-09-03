@@ -389,7 +389,7 @@ gem "webrick", "~> 1.9"
 
 gem 'rubyzip'
 
-# Plugins (engines)
-gem 'cdo_contentful', path: '.', glob: '**/engines/*/*.gemspec'
-gem 'hoc_legacy', path: '.', glob: '**/engines/*/*.gemspec'
-gem 'marketing', path: '.', glob: '**/engines/*/*.gemspec'
+# Automatically include all rails engines
+Dir[Bundler.root.join('**/engines/*/*.gemspec')].sort.each do |gemspec_path|
+  gem File.basename(gemspec_path, '.gemspec'), path: '.', glob: '**/engines/*/*.gemspec'
+end
