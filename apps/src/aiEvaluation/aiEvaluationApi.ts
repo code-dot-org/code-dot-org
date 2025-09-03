@@ -47,20 +47,7 @@ export async function evaluateFreeResponse(
   return evaluateStudentWorkOverall(studentAnswer, levelId, unitId);
 }
 
-export async function evaluateStudentCode(
-  studentAnswer: StudentAnswer,
-  levelId: number,
-  unitId: number,
-  evaluateSkills?: boolean
-): Promise<AIResponse> {
-  if (evaluateSkills) {
-    return evaluateStudentWorkSkills(studentAnswer, levelId, unitId);
-  } else {
-    return evaluateStudentWorkOverall(studentAnswer, levelId, unitId);
-  }
-}
-
-async function evaluateStudentWorkOverall(
+export async function evaluateStudentWorkOverall(
   studentWorkSample: StudentAnswer,
   levelId: number,
   unitId: number
@@ -85,7 +72,7 @@ async function evaluateStudentWorkOverall(
   return parsedResponse;
 }
 
-async function evaluateStudentWorkSkills(
+export async function evaluateStudentWorkSkills(
   studentWorkSample: StudentAnswer,
   levelId: number,
   unitId: number
