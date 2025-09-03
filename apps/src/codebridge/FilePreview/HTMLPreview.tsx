@@ -23,12 +23,14 @@ const SOURCE_CHANGE_DELAY_MS = 500;
 
 export const HTMLPreview: React.FC = () => {
   const pageAction = getLabViewPageAction();
-  let iframeHeightClass = 'levelViewPreviewIframeHeight';
-  if (pageAction === 'share') {
-    iframeHeightClass = 'shareViewPreviewIframeHeight';
-  } else if (pageAction === 'edit' || pageAction === 'view') {
-    iframeHeightClass = 'projectViewPreviewIframeHeight';
-  }
+  const iframeHeightClass = useMemo(() => {
+    if (pageAction === 'share') {
+      return moduleStyles.shareViewPreviewIframeHeight;
+    } else if (pageAction === 'edit' || pageAction === 'view') {
+      return moduleStyles.projectViewPreviewIframeHeight;
+    }
+    return moduleStyles.levelViewPreviewIframeHeight;
+  }, [pageAction]);
   const {levelProperties} = useCodebridgeContext();
   const iframeRef = useRef<HTMLIFrameElement | null>(null);
   const previewContainerRef = useRef<HTMLDivElement | null>(null);
@@ -280,12 +282,10 @@ export const HTMLPreview: React.FC = () => {
             id="preview"
             className={classNames(
               moduleStyles.previewIframe,
-              moduleStyles[iframeHeightClass],
-              moduleStyles[
-                previewViewMode === PreviewViewMode.DESKTOP
-                  ? 'desktopPreviewIframe'
-                  : 'mobilePreviewIframe'
-              ]
+              iframeHeightClass,
+              previewViewMode === PreviewViewMode.DESKTOP
+                ? moduleStyles.desktopPreviewIframe
+                : moduleStyles.mobilePreviewIframe
             )}
             src={previewUrl}
           />
