@@ -1,11 +1,12 @@
 import {GlobalFooterProps} from '@/components/footer/common/types';
 import FooterCorporateSite from '@/components/footer/corporateSite';
+import FooterCSforAll from '@/components/footer/csForAll'; // Adjust import path as needed
 import {SupportedLocale} from '@/config/locale';
 import {Meta, StoryObj} from '@storybook/react';
 
-const meta: Meta<typeof FooterCorporateSite> = {
-  title: 'Marketing/Footer/CorporateSite',
-  component: FooterCorporateSite,
+const meta: Meta = {
+  title: 'Marketing/Footer',
+  tags: ['marketing'],
   parameters: {
     disableSectionDecorator: true,
     nextjs: {
@@ -19,19 +20,31 @@ const meta: Meta<typeof FooterCorporateSite> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof FooterCorporateSite>;
 
 const defaultArgs: Partial<GlobalFooterProps> = {
   locale: SupportedLocale['en-US'],
 };
 
-export const Default: Story = {
+export const CorporateSite: StoryObj<typeof FooterCorporateSite> = {
+  render: args => <FooterCorporateSite {...args} />,
   args: {
     ...defaultArgs,
   },
   parameters: {
     eyes: {
       themes: ['code.org'],
+    },
+  },
+};
+
+export const CSForAll: StoryObj<typeof FooterCSforAll> = {
+  render: args => <FooterCSforAll {...args} />,
+  args: {
+    ...defaultArgs,
+  },
+  parameters: {
+    eyes: {
+      themes: ['csforall'],
     },
   },
 };
