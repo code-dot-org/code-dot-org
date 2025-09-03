@@ -38,6 +38,7 @@ const SectionCardBody: React.FC<SectionCardBodyProps> = ({section}) => {
             buttonText={i18n.viewProgressButton()}
             icon={'chart-line'}
             sectionId={section.id}
+            sectionName={section.name}
             path={TEACHER_NAVIGATION_PATHS.progress}
           />
         ) : section.studentCount > 0 && !section.courseId ? (
@@ -66,6 +67,7 @@ const SectionCardBody: React.FC<SectionCardBodyProps> = ({section}) => {
             buttonText={i18n.viewLessonMaterialsButton()}
             icon={'folder-open'}
             sectionId={section.id}
+            sectionName={section.name}
             path={TEACHER_NAVIGATION_PATHS.lessonMaterials}
           />
         )}

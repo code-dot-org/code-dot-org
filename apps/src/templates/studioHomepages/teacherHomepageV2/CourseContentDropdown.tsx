@@ -91,6 +91,7 @@ export const CourseContentDropdown: React.FC<CourseContentDropdownProps> = ({
           buttonText={i18n.goToCourse()}
           icon="desktop"
           sectionId={section.id}
+          sectionName={section.name}
           path={`courses/${section.courseVersionName}`}
         />
       )}

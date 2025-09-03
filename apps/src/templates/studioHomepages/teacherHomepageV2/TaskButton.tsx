@@ -13,6 +13,7 @@ interface TaskButtonProps {
   buttonText: string;
   icon: string;
   sectionId: number;
+  sectionName: string;
   path: string;
 }
 
@@ -28,6 +29,7 @@ export const TaskButton: React.FC<TaskButtonProps> = ({
   buttonText,
   icon,
   sectionId,
+  sectionName,
   path,
 }) => {
   const sendEvent = () => {
@@ -42,7 +44,10 @@ export const TaskButton: React.FC<TaskButtonProps> = ({
 
   return (
     <NavLink
-      id={`task-button-${buttonText.replaceAll(' ', '-')}`}
+      id={`task-button-${buttonText.replaceAll(
+        ' ',
+        '-'
+      )}-${sectionName.replaceAll(' ', '-')}`}
       className={styles.taskButtons}
       onClick={sendEvent}
       to={`${TEACHER_NAVIGATION_SECTIONS_URL}/${sectionId}/${path}`}
