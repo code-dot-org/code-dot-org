@@ -64,9 +64,9 @@ export const FreeResponseCard: FC<FreeResponseCardProps> = ({
               [styles.small]: size === 's',
             })}
           >
-            {items.map(item => (
+            {items.map((item, i) => (
               <Box
-                key={item}
+                key={`${item}-${i}`}
                 className={classNames(
                   styles.textCard,
                   statusColor && styles[statusColor]

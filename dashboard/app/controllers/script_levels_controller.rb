@@ -95,10 +95,6 @@ class ScriptLevelsController < ApplicationController
       new_script = Unit.get_from_cache(@script.redirect_to)
       new_path = request.fullpath.sub(%r{^/s/#{params[:script_id]}/}, "/s/#{new_script.name}/")
 
-      if Unit.family_names.include?(params[:script_id])
-        Unit.log_redirect(params[:script_id], new_script.name, request, 'unversioned-script-level-redirect', current_user&.user_type)
-      end
-
       # avoid a redirect loop if the string substitution failed
       # TODO: TEACH-2050 Modularity support for redirects. This redirects to the current script. Redirect to the new script's
       # original unit group for now.

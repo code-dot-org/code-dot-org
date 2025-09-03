@@ -8,10 +8,10 @@ import {
 import {useWorkshopContext} from '../../../WorkshopLayout';
 import {FollowUpRequestedCard} from '../../components/FollowUpRequestedCard';
 import {FreeResponseCard} from '../../components/FreeResponseCard';
-import {MultiSelectCard} from '../../components/MultiSelectCard';
 import {ScoreCard} from '../../components/ScoreCard';
+import {SelectCard} from '../../components/SelectCard';
 import {LIKERT_QUESTION_FOOTER, MIN_RESPONSE_COUNT} from '../../constants';
-import {getQuestionDescription} from '../../helpers';
+import {getQuestionDescription, prepLikertBreakdown} from '../../helpers';
 
 import styles from '../../../workshop.module.scss';
 
@@ -62,11 +62,14 @@ export const Implementation = () => {
             <ScoreCard
               key={question.question_name}
               title={question.question_short_text ?? question.question_text}
+              longTitle={question.question_text}
               description={getQuestionDescription(question)}
+              questionType={question.question_type}
               footer={LIKERT_QUESTION_FOOTER}
               score={question.results.weighted_score}
               responseCount={question.results.total_responses}
               minResponseCount={MIN_RESPONSE_COUNT}
+              breakdown={prepLikertBreakdown(question.results.breakdown)}
             />
           ) : null
         )}
@@ -74,12 +77,15 @@ export const Implementation = () => {
 
       <Box className={styles.cardRow}>
         {isQuestionType(barriersToImplementation, 'multiSelect') && (
-          <MultiSelectCard
+          <SelectCard
             title={
               barriersToImplementation.question_short_text ??
               barriersToImplementation.question_text
             }
             description={getQuestionDescription(barriersToImplementation)}
+            totalRespondents={
+              barriersToImplementation.results.total_respondents
+            }
             items={barriersItems}
             barLabel="Teachers"
           />

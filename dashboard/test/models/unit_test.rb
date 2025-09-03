@@ -635,6 +635,7 @@ class UnitTest < ActiveSupport::TestCase
   test 'self.latest_assigned_version returns latest assigned unit in family if unit is not in course family' do
     student = create(:student)
     courseg_2017 = create(:script, name: 'courseg-2017', family_name: 'courseg', version_year: '2017')
+    create(:single_unit_course, unit: courseg_2017, family_name: 'courseg', version_year: '2017')
     create(:script, name: 'courseg-2018', family_name: 'courseg', version_year: '2018')
     section = create(:section, script: courseg_2017)
     section.students << student

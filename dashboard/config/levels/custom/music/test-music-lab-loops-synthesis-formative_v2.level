@@ -290,9 +290,11 @@
     },
     "name_suffix": "_v2",
     "submittable": "false",
+    "teacher_markdown": "💡 **Teacher Tip**: Have students investigate the sound packs to find blocks that belong to the same genre together.",
+    "disable_edit_run_for_submission": "false",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-05-31T03:00:02.826+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-synthesis-formative\\\"\"],\"cloned_from\":\"test-music-lab-loops-synthesis-formative\"},{\"changed_at\":\"2025-07-03 16:48:07 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-31T03:00:02.826+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-synthesis-formative\\\"\"],\"cloned_from\":\"test-music-lab-loops-synthesis-formative\"},{\"changed_at\":\"2025-07-03 16:48:07 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-02 17:54:39 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

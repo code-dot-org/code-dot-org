@@ -9,10 +9,12 @@ import React from 'react';
 
 import {
   UserInfoForWorkshop,
+  UserWorkshopEnrollment,
   WorkshopInfo,
 } from '@cdo/apps/code-studio/pd/workshops/types';
 
 import {useWorkshopEnrollment} from './../hooks/useWorkshopEnrollment';
+import CancelWorkshopEnrollment from './CancelWorkshopEnrollment';
 import UserPassport, {isMissingUserInfo} from './UserPassport';
 
 import moduleStyles from './../workshopMarketingPage.module.scss';
@@ -33,7 +35,10 @@ interface EnrollInWorkshopProps
       | 'format'
       | 'subject'
     >,
-    UserInfoForWorkshop {}
+    UserInfoForWorkshop {
+  isUserEnrolled?: boolean;
+  userEnrollment?: UserWorkshopEnrollment;
+}
 /** Component to display the enrollment information for a workshop. */
 const EnrollInWorkshop: React.FC<EnrollInWorkshopProps> = ({
   id,
@@ -47,6 +52,8 @@ const EnrollInWorkshop: React.FC<EnrollInWorkshopProps> = ({
   format,
   name,
   subject,
+  userEnrollment,
+  isUserEnrolled,
 }) => {
   const {handleClick, isSubmitting, alertState, setAlertState} =
     useWorkshopEnrollment({
@@ -138,6 +145,7 @@ const EnrollInWorkshop: React.FC<EnrollInWorkshopProps> = ({
             schoolName={userInfo.schoolInfo?.schoolName}
             schoolType={userInfo.schoolInfo?.schoolType}
             returnToHref={`/professional-learning/workshops/${id}`}
+            isUserEnrolled={isUserEnrolled}
             className={moduleStyles.userPassport}
           />
         )}
@@ -151,15 +159,19 @@ const EnrollInWorkshop: React.FC<EnrollInWorkshopProps> = ({
             }
           />
         )}
-        <Button
-          className={moduleStyles.fullWidthButton}
-          type="primary"
-          size="m"
-          isPending={isSubmitting}
-          onClick={handleClick}
-          text="Enroll in this workshop"
-          disabled={isMissingUserInfo(userInfo)}
-        />
+        {isUserEnrolled && userEnrollment?.code ? (
+          <CancelWorkshopEnrollment enrollmentCode={userEnrollment.code} />
+        ) : (
+          <Button
+            className={moduleStyles.fullWidthButton}
+            type="primary"
+            size="m"
+            isPending={isSubmitting}
+            onClick={handleClick}
+            text="Enroll in this workshop"
+            disabled={isMissingUserInfo(userInfo)}
+          />
+        )}
       </div>
     );
   };

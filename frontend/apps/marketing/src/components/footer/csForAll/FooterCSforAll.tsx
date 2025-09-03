@@ -1,6 +1,6 @@
 'use client';
 import {Brand} from '@/config/brand';
-import {LOCALIZE_JS_CONFIG_MAP} from '@/config/locale';
+import {SUPPORTED_LOCALES_CONFIG} from '@/config/locale';
 
 import {GlobalFooterProps} from '../common/types';
 import {useFooterLocalization} from '../common/utils';
@@ -28,7 +28,7 @@ const FooterCSforAll = ({locale}: GlobalFooterProps) => {
       {...defaultProps}
       onLanguageChange={handleLanguageChange}
       selectedLocaleCode={locale}
-      languages={LOCALIZE_JS_CONFIG_MAP}
+      languages={SUPPORTED_LOCALES_CONFIG}
     />
   );
 };
