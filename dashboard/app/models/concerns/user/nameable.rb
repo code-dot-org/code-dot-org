@@ -36,7 +36,7 @@ module User::Nameable
   end
 
   def full_name
-    return "#{given_name} #{family_name}".strip if given_name || family_name
+    return "#{given_name} #{family_name}" if given_name && family_name
     name || username || ""
   end
 

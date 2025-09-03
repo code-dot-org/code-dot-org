@@ -130,14 +130,14 @@ class NameableTest < ActiveSupport::TestCase
       _(user.full_name).must_equal 'John Doe'
     end
 
-    it 'returns given_name if family_name is missing' do
+    it 'returns name if family_name is missing' do
       user = build(:user, given_name: 'John', family_name: nil, name: 'Fallback Name', username: 'johndoe')
-      _(user.full_name).must_equal 'John'
+      _(user.full_name).must_equal 'Fallback Name'
     end
 
-    it 'returns family_name if given_name is missing' do
+    it 'returns name if given_name is missing' do
       user = build(:user, given_name: nil, family_name: 'Doe', name: 'Fallback Name', username: 'johndoe')
-      _(user.full_name).must_equal 'Doe'
+      _(user.full_name).must_equal 'Fallback Name'
     end
 
     it 'returns name if both given_name and family_name are missing' do
