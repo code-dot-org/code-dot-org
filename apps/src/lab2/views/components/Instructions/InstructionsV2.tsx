@@ -50,7 +50,7 @@ export interface InstructionsProps {
   hideNavigation?: boolean;
 }
 
-interface ValidationSettings {
+export interface ValidationSettings {
   onValidate: () => void;
   onStopValidation: () => void;
   isValidating: boolean;
@@ -132,21 +132,21 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
               <TextToSpeech text={longInstructions} />
             </div>
           )}
-          {validationSettings && (
+          {/* {validationSettings && (
             <ValidationButton
               onValidate={validationSettings.onValidate}
               onStopValidation={validationSettings.onStopValidation}
               isValidating={validationSettings.isValidating}
               isValidateDisabled={validationSettings.isValidateDisabled}
             />
-          )}
+          )} */}
           {bottomComponent && (
             <div className={moduleStyles.bottomComponent}>
               {bottomComponent}
             </div>
           )}
         </div>
-        {validationResults && (
+        {/* {validationResults && (
           <div className={moduleStyles.bubble}>
             <div className={moduleStyles.textContent}>
               <div className={moduleStyles.scrollingContent}>
@@ -154,7 +154,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
               </div>
             </div>
           </div>
-        )}
+        )} */}
         {AiTutor2ResponseView && AiTutor2ResponseView}
         {isPredictLevel && (
           <>
