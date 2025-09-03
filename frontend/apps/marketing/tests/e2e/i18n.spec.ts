@@ -10,6 +10,9 @@ test.describe('i18n', () => {
     await allTheThingsPage.goto();
     await page.waitForURL('**/en-US/engineering/all-the-things**');
 
+    // Wait until window.Localize is available and truthy
+    await page.waitForFunction(() => !!window.Localize);
+
     const languageDropdown = page.locator(
       '[aria-label="Language selection dropdown"]',
     );

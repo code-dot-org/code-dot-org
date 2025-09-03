@@ -781,6 +781,7 @@ const marketingPaths = {
   "/global/india": true,
   "/back-to-school-for-district": true,
   "/india": true,
+  "/global/cuantrix": true,
 }
 
 const pathPatterns = [
