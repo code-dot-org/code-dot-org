@@ -8,6 +8,10 @@ class Devise::Models::CustomTimeoutableTest < ActiveSupport::TestCase
   let(:last_activity_at) {Time.current}
 
   describe '#timeout_in' do
+    it 'sets the value based on CDO config' do
+      _(timeout).must_equal CDO.dashboard_session_ttl_days.days
+    end
+
     it 'returns the correct default value' do
       _(user.timeout_in).must_equal timeout
     end
