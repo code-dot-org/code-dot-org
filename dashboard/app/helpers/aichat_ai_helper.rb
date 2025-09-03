@@ -78,60 +78,28 @@ module AichatAiHelper
                      2
                    end
 
-    #         {
-    #   "$schema": "http://json-schema.org/draft-07/schema#",
-    #   "type": "array",
-    #   "items": {
-    #     "type": "object",
-    #     "properties": {
-    #       "type": {
-    #         "type": "string",
-    #         "description": ""
-    #       },
-    #       "content": {
-    #         "type": "string",
-    #         "description": ""
-    #       }
-    #     },
-    #     "description": "",
-    #     "required": [
-    #       "type",
-    #       "content"
-    #     ]
-    #   },
-    #   "description": ""
-    # }
-
-    #  json_schema = {
-    #   type: "object",
-    #   properties: {
-    #     classification: {
-    #       type: "string",
-    #       description: "Define whether the PDF contains a specific string or not.",
-    # //TODO ADD ENUM
-    #       enum: ["YES", "NO"]
-    #     }
-    #   },
-    #   required: ["classification"],
-    #//TODO ADD ME AS OPTIONAL false value (only nil or false)
-    #   additionalProperties: false
-    # }
-
     json_schema = AichatAiClientTypes::JsonObjectSchema.new(
       type: 'object',
-      properties: AichatAiClientTypes::JsonProperty.new(
+      properties: AichatAiClientTypes::JsonProperties.new(
         code:
-          AichatAiClientTypes::JsonPropertySchema.new(
+          AichatAiClientTypes::JsonStringSchema.new(
             type: 'string',
-            description: 'The code to send to the user (optional).'
+            description: 'The code to send to the user (optional - empty array if none to send).'
           ),
         text:
-          AichatAiClientTypes::JsonPropertySchema.new(
+          AichatAiClientTypes::JsonStringSchema.new(
             type: 'string',
             description: 'The text to send to the user (required)'
+          ),
+        hasCode:
+          AichatAiClientTypes::JsonStringSchema.new(
+            type: 'string',
+            description: 'Flag whether the response JSON has a code property or not (required)',
+            enum: ['YES', 'NO']
           )
       ),
-      required: ['text']
+      required: ['text', 'code', 'hasCode'],
+      additionalProperties: false
     )
     response_validation = AichatAiClientTypes::JsonResponseConfigValidation.new(
       type: 'jsonSchema',

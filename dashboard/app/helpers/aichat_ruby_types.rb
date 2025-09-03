@@ -70,10 +70,16 @@ module AichatRubyTypes
     end
   end
 
-  # These are the operators we need to add to Interface which is different
+  # These are the methods we need to add to Interface which is different
   # from Type.  Type-derived classes are compared to values as instances
   # (StringType, NumberType, OrType) but Interface is compared directly (not instantiated).
-  module InterfaceOperators
+  module InterfaceMethods
+    def as_json(*_args)
+      # Convert Struct/OpenStruct to a hash, removing nil values.
+      # I.e. Optional() becomes nil but should be removed from JSON)
+      to_h.compact
+    end
+
     # Add struct methods when creating an Interface.
     def self.included(base)
       base.extend(StructMethods)
@@ -208,7 +214,7 @@ module AichatRubyTypes
 
       # Create and return the actual open struct derived class.
       new_class = Class.new(OpenStruct) do
-        include InterfaceOperators
+        include InterfaceMethods
         @value_type = value_type
 
         class << self
@@ -244,7 +250,7 @@ module AichatRubyTypes
 
       # Create and return the actual struct derived class.
       new_class = Class.new(Struct.new(*fields, keyword_init: true)) do
-        include InterfaceOperators
+        include InterfaceMethods
         @types = types
 
         class << self
@@ -374,10 +380,18 @@ module AichatRubyTypes
     NumberType.new
   end
 
-  # A boolean type.  Not used directly.  The boolean function returns an instance.
+  # A boolean type.  Can be initialized to accept either true or false (no parameter)
+  # or a given value (boolean as parameter). Not used directly.  The boolean
+  # function returns an instance.
   class BooleanType < Type
+    attr_accessor :boolean_contents
+
     def type_string
-      'boolean'
+      @boolean_contents.nil? ? 'boolean' : @boolean_contents.to_s
+    end
+
+    def initialize(boolean_contents = nil)
+      @boolean_contents = boolean_contents
     end
 
     def value_is_type?(value)
@@ -386,8 +400,8 @@ module AichatRubyTypes
   end
 
   # The boolean function to return an instance of BooleanType.
-  def boolean
-    BooleanType.new
+  def boolean(boolean_contents = nil)
+    BooleanType.new(boolean_contents)
   end
 
   # A null (nil) type.  Not used directly.  The null function returns an instance.

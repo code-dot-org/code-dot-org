@@ -26,6 +26,8 @@ class AichatAiClient
 
     body = create_body(config, request, context)
 
+    AichatAiClientTypes.validate_json_schema(body)
+
     http_response = HTTParty.post(
       url,
       headers: headers,

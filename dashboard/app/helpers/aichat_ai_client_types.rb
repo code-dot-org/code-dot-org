@@ -1,3 +1,5 @@
+require 'set'
+
 #TODO - try to make optional args
 # :arg?: mightNotBeHere
 
@@ -74,66 +76,94 @@ module AichatAiClientTypes
   # // type JsonPrimitiveType = 'string' | 'number' | 'boolean' | 'null';
   JsonPrimitiveType = string("string") | string("number") | string("boolean") | string("null")
 
-  # // interface JsonPropertySchema {
-  # //   type: JsonPrimitiveType | 'object' | 'array';
+  # // interface JsonStringSchema {
+  # //   type: 'string';
   # //   description?: string;
-  # //   // Does not include `$ref` to avoid recursion.
+  # //   enum?: string[];
   # // }
-  JsonPropertySchema = Interface(
-    :type, JsonPrimitiveType | string('object') | string('array'),
+  JsonStringSchema = Interface(
+    :type, string("string"),
+    :description, Optional(string),
+    :enum, Optional(string[])
+  )
+
+  # // interface JsonNumberSchema {
+  # //   type: 'number';
+  # //   description?: string;
+  # //   enum?: number[];
+  # // }
+  JsonNumberSchema = Interface(
+    :type, string("number"),
+    :description, Optional(string),
+    :enum, Optional(number[])
+  )
+
+  # // interface JsonBooleanSchema {
+  # //   type: 'boolean';
+  # //   description?: string;
+  # // }
+  JsonBooleanSchema = Interface(
+    :type, string("boolean"),
     :description, Optional(string)
   )
 
-  JsonProperty_ = ForwardRef()
+  # // interface JsonNullSchema {
+  # //   type: 'null';
+  # //   description?: string;
+  # // }
+  JsonNullSchema = Interface(
+    :type, string("null"),
+    :description, Optional(string)
+  )
+
+  # // type JsonPrimitiveSchema = JsonStringSchema | JsonNumberSchema | JsonBooleanSchema | JsonNullSchema;
+  JsonPrimitiveSchema = JsonStringSchema | JsonNumberSchema | JsonBooleanSchema | JsonNullSchema
+
+  JsonProperties_ = ForwardRef()
 
   # // interface JsonObjectSchema {
   # //   type: 'object';
-  # //   properties: JsonProperty;
-  # //   required?: string[];
+  # //   properties: JsonProperties;
+  # //   // The required array is optional in JsonSchema but required w/ OpenAI.
+  # //   // OpenAI also requires that all properties are required which  we don't
+  # //   // have a way to check w/ RubyTypes so an additional check is required.
+  # //   required: string[];
   # //   description?: string;
   # // }
   JsonObjectSchema = Interface(
     :type, string('object'),
-    :properties, JsonProperty_,
-    :required, Optional(string[]),
-    :description, Optional(string)
+    :properties, JsonProperties_,
+    :required, string[],
+    :description, Optional(string),
+    :additionalProperties, boolean(false),
   )
 
   JsonArraySchema_ = ForwardRef()
 
   # // interface JsonArraySchema {
   # //   type: 'array';
-  # //   items: JsonPropertySchema | JsonArraySchema | JsonObjectSchema;
+  # //   items: JsonPrimitiveSchema | JsonArraySchema | JsonObjectSchema;
   # //   description?: string;
   # // }
   JsonArraySchema = Interface(
     ForwardRef(JsonArraySchema_),
     :type, string('array'),
-    :items, JsonPropertySchema | JsonObjectSchema | JsonArraySchema_,
+    :items, JsonPrimitiveSchema | JsonObjectSchema | JsonArraySchema_,
     :description, Optional(string)
   )
 
-  # // interface JsonProperty {
-  # //   [key: string]: JsonPropertySchema | JsonArraySchema | JsonObjectSchema;
+  # // interface JsonProperties {
+  # //   [key: string]: JsonPrimitiveSchema | JsonArraySchema | JsonObjectSchema;
   # // }
-  JsonProperty = Interface(
-    ForwardRef(JsonProperty_),
-    key[string],  JsonPropertySchema | JsonArraySchema | JsonObjectSchema
+  JsonProperties = Interface(
+    ForwardRef(JsonProperties_),
+    key[string],  JsonPrimitiveSchema | JsonArraySchema | JsonObjectSchema
   )
 
-  # // interface JsonPrimitiveSchema {
-  # //   type: JsonPrimitiveType
-  # // }
-  JsonPrimitiveSchema = Interface(
-    :type, JsonPrimitiveType,
-    :description, Optional(string)
-  )
-
-  # // type JsonSchema =
-  # //   JsonPrimitiveSchema
-  # //   | JsonObjectSchema
-  # //   | JsonArraySchema;
-  JsonSchema = JsonPrimitiveSchema | JsonObjectSchema | JsonArraySchema
+  # // // While JsonSchema allows primitives and arrays at the top level, OpenAI's
+  # // // implementation is limited to objects at the top level.
+  # // type JsonSchema = JsonObjectSchema
+  JsonSchema = JsonObjectSchema
 
   # Interface TextResponseConfig {
   #   "mimeType": 'text/plain'
@@ -159,6 +189,37 @@ module AichatAiClientTypes
     :mimeType, string('application/json'),
     :validation, JsonResponseConfigValidation
   )
+
+  # Recursivley validate a hash/struct to ensure that each JsonObjectSchema lists all its
+  # properties in the required array. This is currently a requirement for OpenAI.
+  def self.validate_json_schema(obj, visited = Set.new)
+    # Avoid infinite recursion with a visited set.
+    return if visited.include?(obj.object_id)
+    visited.add(obj.object_id)
+
+    if obj.is_a?(JsonObjectSchema)
+      property_names = obj[:properties].to_h.keys.map(&:to_s)
+      property_names.each do |property_name|
+        # Note: You may want to check if obj[:required] is nil first
+        unless obj[:required]&.include?(property_name)
+          raise StandardError.new("JsonObjectSchema's 'required' array must include all properties but is missing '#{property_name}'")
+        end
+      end
+    end
+
+    # Recursively process Array elements.
+    if obj.is_a?(Array)
+      obj.each do |item|
+        validate_json_schema(item, visited)
+      end
+
+    # Recursively process anything with a each_value (Structs, OpenStructs, and Hashes).
+    elsif obj.respond_to?(:each_value)
+      obj.each_value do |value|
+        validate_json_schema(value, visited)
+      end
+    end
+  end
 
   # // Config object (required):
   # // Sets up which model to call, the temperature, and any system instructions
