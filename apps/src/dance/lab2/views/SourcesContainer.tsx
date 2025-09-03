@@ -8,13 +8,17 @@ import React, {
   useState,
 } from 'react';
 
+import {START_BLOCKS} from '@cdo/apps/constants';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {LabProps, ProjectSources} from '@cdo/apps/lab2/types';
 import StartOverDialog, {
   MessageType,
 } from '@cdo/apps/lab2/views/dialogs/dsco/StartOverDialog';
 
 import getInitialSources from '../utils/getInitialSources';
+
+const isStartMode = getAppOptionsEditBlocks() === START_BLOCKS;
 
 interface SourcesContextType<T extends ProjectSources = ProjectSources> {
   currentSources: T;
@@ -70,7 +74,9 @@ const SourcesContainer: React.FC<
 
   const onStartOver = useCallback(() => {
     const {templateSources, startSources} = levelProperties;
-    const startOverSources = templateSources || startSources || defaultSources;
+    const startOverSources = isStartMode
+      ? defaultSources
+      : templateSources || startSources || defaultSources;
     updateSources(startOverSources as ProjectSources, true);
     setStartOverProps(undefined);
   }, [levelProperties, defaultSources, updateSources]);

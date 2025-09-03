@@ -369,15 +369,17 @@ const DanceView: React.FunctionComponent<{
         className={moduleStyles.workspaceArea}
         headerClassName={moduleStyles.panelHeader}
         rightHeaderContent={
-          <Button
-            text={commonI18n.startOver()}
-            iconRight={{iconStyle: 'solid', iconName: 'refresh'}}
-            color={'black'}
-            onClick={onClickStartOver}
-            ariaLabel={commonI18n.startOver()}
-            size={'xs'}
-            type="secondary"
-          />
+          !readonlyWorkspace && (
+            <Button
+              text={commonI18n.startOver()}
+              iconRight={{iconStyle: 'solid', iconName: 'refresh'}}
+              color={'black'}
+              onClick={onClickStartOver}
+              ariaLabel={commonI18n.startOver()}
+              size={'xs'}
+              type="secondary"
+            />
+          )
         }
       >
         {WorkspaceAlert}
