@@ -4,7 +4,7 @@ $url-bar-content-height: calc($url-bar-height - $vertical-padding-offset);
 
 .previewHeaderContainer {
   background-color: var(--background-neutral-tertiary);
-  border-top: 1px solid var(--borders-neutral-primary);
+  border-bottom: 1px solid var(--borders-neutral-primary);
   padding: 8px 12px;
   display: flex;
   align-items: center;
