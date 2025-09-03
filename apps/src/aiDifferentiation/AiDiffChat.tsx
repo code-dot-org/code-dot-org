@@ -252,7 +252,7 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
       };
 
       setMessageHistory(prevMessages => [...prevMessages, newUserMessage]);
-      getAIResponse(message, false, null);
+      getAIResponse(message, true, null);
     },
     [setMessageHistory, getAIResponse]
   );

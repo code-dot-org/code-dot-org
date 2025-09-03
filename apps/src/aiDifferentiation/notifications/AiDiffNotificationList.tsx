@@ -60,7 +60,6 @@ const AiDiffNotificationList: React.FC<AiDiffNotificationListProps> = ({
     // TODO(lfm): add empty state design
     return <div className={styles.listContainer}>{'no notifications'}</div>;
   }
-  console.log('Rendering notifications:', notifications);
 
   return (
     <div className={styles.listContainer}>
