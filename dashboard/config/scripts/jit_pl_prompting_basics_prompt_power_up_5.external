@@ -3,68 +3,62 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# CIA Triad Scenarios
+# Prompt Power-Ups
+
+#### With the prompts below, your task is to transform each solution-seeking prompt into a critical thinking prompt. 
 
 ## 📝 To Do
 
-#### Read each scenario aloud. Decide which pillar it represents: Confidentiality, Integrity, and Availability.
+- #### Read the example prompt.
+- #### Rewrite it so it encourages explanation, reasoning, or comparison.
+- #### Jot down your version (or think it through)
+- #### When ready, check your answer by opening the dropdown to see an example improved prompt.
 
 <div style="background-color: #e3f2fd; padding: 10px; border-left: 5px solid #2196f3; margin-bottom: 20px; font-size: 16px">
-      <strong>Scenario 1</strong><br>
-      During an online driver's education course, Mateo logs in on the day of his final exam . . . but the test never loads.  The website is down for maintenance, and there's no backup system or extension. Mateo misses the test window and can't complete the course on time.<br> <br>
+      <strong>Solution-seeking → </strong><br>
+     "What’s the right answer to this math function?”.<br> <br>
       <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1em; font-weight: bold;">🧐 Answer
+    <summary style="font-size: 1em; font-weight: bold;">🧐 Critical-thinking →
 </summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
     <p style="font-size: 16px">
-Availability – the system wasn't accessible when needed, leading to a missed deadline.
+     “Explain how this function works step by step, and point out where the mistake is in my calculation.”
 </p></div>
 </details>
 </div>
 
 <div style="background-color: #f3e5f5; padding: 10px; border-left: 5px solid #9c27b0; margin-bottom: 20px; font-size: 16px">
-      <strong>Scenario 2</strong><br>
-      Jordan adds a personal reminder to their shared family calendar: "Doctor appointment to talk about anxiety." Later, they realize their cousins and grandparents can see it too, and someone brings it up at dinner.<br> <br>
+      <strong>Solution-seeking → </strong><br>
+      “Write the function that reverses this string.”<br> <br>
       <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1em; font-weight: bold;">🧐 Answer
+    <summary style="font-size: 1em; font-weight: bold;">🧐 ACritical-thinking →
 </summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
     <p style="font-size: 16px">
-Confidentiality — sensitive personal information was visible to people it wasn't intended for.
+ “Show me two different ways to reverse a string in JavaScript and explain the pros and cons of each approach.”
 </p></div>
 </details>
 </div>
 
 <div style="background-color: #e3f2fd; padding: 10px; border-left: 5px solid #2196f3; margin-bottom: 20px; font-size: 16px">
-      <strong>Scenario 3</strong><br>
-      A friend asks Sam to proofread their scholarship essay. Instead of helpful feedback, Sam swaps in silly sentences for laughs and hits save. Later, the friend opens the file right before submitting and panics when they see what's been changed.<br> <br>
+      <strong>Solution-seeking → </strong><br>
+      “Give me the CSS to center this box.”<br> <br>
       <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1em; font-weight: bold;">🧐 Answer
+    <summary style="font-size: 1em; font-weight: bold;">🧐 Critical-thinking →
 </summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
     <p style="font-size: 16px">
-Integrity — the file was tampered with and is no longer what the author intended.
-</p></div>
-</details>
-</div>
-
-<div style="background-color: #f3e5f5; padding: 10px; border-left: 5px solid #9c27b0; margin-bottom: 20px; font-size: 16px">
-      <strong>Scenario 4</strong><br>
-      Aisha spent weeks curating the perfect workout playlist on a music app. One morning, she logs in and finds it replaced with her younger brother’s lullaby mix. The content gone! And now her account history shows songs she never listened to. They shared the account without realizing edits were saved automatically.<br> <br>
-      <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1em; font-weight: bold;">🧐 Answer
-</summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
-    <p style="font-size: 16px">
-Integrity and Confidentiality — the playlist was altered without permission (Integrity), and her listening habits were visible and changed by someone else (Confidentiality).
+“Write CSS to center this box, and explain what each property does so I can understand how the alignment works.”
 </p></div>
 </details>
 </div>
 
 
-<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
-    ➡️ This activity is from Lesson 6. You can find more details in the full <a href='https://studio.code.org/courses/ai-powered-threats-and-defenses-2025/units/1/lessons/6' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a>.
-</p>
+## Next up
+
+#### Practice debugging code with AI. 
+
+
 
 
 MARKDOWN

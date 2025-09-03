@@ -6,6 +6,7 @@ import {EntryFields} from 'contentful';
 import {useMemo, useId} from 'react';
 
 import Card from '@/components/contentful/card';
+import {EVENT} from '@/providers/statsig/statsigConstants';
 import {getAbsoluteImageUrl} from '@/selectors/contentful/getImage';
 import {LinkEntry} from '@/types/contentful/entries/Link';
 import {Entry} from '@/types/contentful/Entry';
@@ -20,6 +21,7 @@ type ItemFields = {
   image: ExperienceAsset;
   primaryLinkRef: LinkEntry;
   secondaryLinkRef: LinkEntry;
+  tutorialID: EntryFields.Text;
 };
 
 type ItemEntry = Entry<ItemFields>;
@@ -69,6 +71,7 @@ const CardCollection: React.FC<CardCollectionProps> = ({
         image,
         primaryLinkRef,
         secondaryLinkRef,
+        tutorialID,
       } = fields;
 
       const resolvedImage = inMemoryEntities.maybeResolveLink(
@@ -87,6 +90,7 @@ const CardCollection: React.FC<CardCollectionProps> = ({
           <Box sx={[{...styles.gridItem}]}>
             <Card
               className="cardWrapper"
+              id={tutorialID}
               overline={actionBlockOverline ? actionBlockOverline : undefined}
               title={title}
               description={shortDescription}
@@ -99,6 +103,12 @@ const CardCollection: React.FC<CardCollectionProps> = ({
                   ? resolvedSecondaryLinkRef
                   : undefined
               }
+              primaryButtonEventName={EVENT.CARD_PRIMARY_BUTTON_CLICKED}
+              secondaryButtonEventName={EVENT.CARD_SECONDARY_BUTTON_CLICKED}
+              eventMetadata={{
+                cardId: tutorialID,
+                cardTitle: title,
+              }}
             />
           </Box>
         ),

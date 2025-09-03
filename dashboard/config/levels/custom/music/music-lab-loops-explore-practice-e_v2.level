@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "#### Halleluja Remix\r\nTom noticed that the vocals for Halleluja by Rosa Linn are pretty long and could be combined with lots of other sounds to make interesting remixes:\r\n\r\n> I like how haunting the vocals are, and I wanted to combine it with a bunch of different sounds to see if I could make it sound interesting.\r\n\r\nTom is using **abstraction** by focusing on the essential structure: vocals supported by a mix of beat, bass, and lead tracks.\r\n\r\n**Your task:** Use abstraction to organize your code into loops that back the vocals with rich, layered sounds. Your song should use at least 10 unique tracks, but focus only on the ones that best support the mood and pacing of the vocals. Use the example for inspiration!",
+    "long_instructions": "#### Hallelujah Remix\r\nTim noticed that the vocals for Hallelujah by Rosa Linn are pretty long and could be combined with lots of other sounds to make interesting remixes:\r\n\r\n> I like how haunting the vocals are, and I wanted to combine it with a bunch of different sounds to see if I could make it sound interesting.\r\n\r\nTim is using **abstraction** by focusing on the essential structure: vocals supported by a mix of beat, bass, and lead tracks.\r\n\r\n**Your task:** Use abstraction to organize your code into loops that back the vocals with rich, layered sounds. Your song should use at least 10 unique tracks, but focus only on the ones that best support the mood and pacing of the vocals. Use the example for inspiration!",
     "offer_browser_tts": "true",
     "use_secondary_finish_button": "false",
     "hide_share_and_remix": "true",
@@ -533,9 +533,11 @@
     },
     "name_suffix": "_v2",
     "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/rosa_linn_hallelujah/rosa_linn_hallelujah.jpg",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-05-31T02:57:39.261+00:00\",\"changed\":[\"cloned from \\\"music-lab-loops-explore-practice-e\\\"\"],\"cloned_from\":\"music-lab-loops-explore-practice-e\"},{\"changed_at\":\"2025-06-12 16:06:17 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-24 20:56:05 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:57:39.261+00:00\",\"changed\":[\"cloned from \\\"music-lab-loops-explore-practice-e\\\"\"],\"cloned_from\":\"music-lab-loops-explore-practice-e\"},{\"changed_at\":\"2025-06-12 16:06:17 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-24 20:56:05 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-09-02 18:57:04 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

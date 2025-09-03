@@ -59,11 +59,71 @@
         }
       }
     },
+    "exemplar_sources": {
+      "selectedSong": "good4u_oliviarodrigo",
+      "source": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run",
+              "id": "when-run-block",
+              "x": 16,
+              "y": 16,
+              "deletable": false,
+              "movable": false,
+              "next": {
+                "block": {
+                  "type": "Dancelab_makeAnonymousDanceSprite",
+                  "id": "1",
+                  "fields": {
+                    "COSTUME": "<field name=\"COSTUME\" config=\"&quot;CAT&quot;,&quot;SLOTH&quot;\">\"CAT\"</field>",
+                    "LOCATION": "<field name=\"LOCATION\">{x: 300, y: 200}</field>"
+                  },
+                  "next": {
+                    "block": {
+                      "type": "Dancelab_makeAnonymousDanceSprite",
+                      "id": "O3,0evv7cLQ0HPA(8WqE",
+                      "fields": {
+                        "COSTUME": "<field name=\"COSTUME\" config=\"&quot;CAT&quot;,&quot;SLOTH&quot;\">\"SLOTH\"</field>",
+                        "LOCATION": "<field name=\"LOCATION\">{x: 100, y: 200}</field>"
+                      },
+                      "next": {
+                        "block": {
+                          "type": "Dancelab_changeMoveEachLR",
+                          "id": "|y+CWEBlleENO5MU(?yL",
+                          "fields": {
+                            "GROUP": "<field name=\"GROUP\" config=\"&quot;CAT&quot;,&quot;SLOTH&quot;\">\"CAT\"</field>",
+                            "MOVE": "<field name=\"MOVE\">MOVES.ClapHigh</field>",
+                            "DIR": "<field name=\"DIR\">-1</field>"
+                          },
+                          "next": {
+                            "block": {
+                              "type": "Dancelab_changeMoveEachLR",
+                              "id": "Vw/DajSIL)Uf2r!oa7jd",
+                              "fields": {
+                                "GROUP": "<field name=\"GROUP\" config=\"&quot;CAT&quot;,&quot;SLOTH&quot;\">\"SLOTH\"</field>",
+                                "MOVE": "<field name=\"MOVE\">MOVES.Floss</field>",
+                                "DIR": "<field name=\"DIR\">1</field>"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
     "preload_asset_list": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-09-05T12:46:08.190-07:00\",\"changed\":[\"cloned from \\\"allthethings HOC Dance 1\\\"\"],\"cloned_from\":\"allthethings HOC Dance 1\"},{\"changed_at\":\"2025-08-20 23:36:05 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"skin\",\"validation_code\",\"default_song\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2025-08-20 23:41:21 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"free_play\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2025-08-22 22:53:47 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2025-08-26 21:05:16 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-09-05T12:46:08.190-07:00\",\"changed\":[\"cloned from \\\"allthethings HOC Dance 1\\\"\"],\"cloned_from\":\"allthethings HOC Dance 1\"},{\"changed_at\":\"2025-08-20 23:36:05 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"skin\",\"validation_code\",\"default_song\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2025-08-20 23:41:21 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"free_play\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2025-08-22 22:53:47 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2025-08-26 21:05:16 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2025-08-27 22:54:36 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2025-08-28 18:07:26 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2025-08-28 18:09:07 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2025-08-28 18:15:17 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2025-08-28 18:16:16 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
