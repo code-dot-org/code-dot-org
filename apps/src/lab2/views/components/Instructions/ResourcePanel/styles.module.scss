@@ -8,8 +8,6 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  flex-shrink: 0;
-  width: min-content;
 
   .tabs {
     margin-top: 2rem;
@@ -65,7 +63,6 @@
   flex-direction: column;
   flex: 1;
   min-width: 0;
-  overflow: hidden;
 }
 
 .panelContent {
