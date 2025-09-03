@@ -15,11 +15,7 @@
     ],
     "hide_animation_mode": true,
     "show_type_hints": true,
-    "preload_asset_list": null,
     "encrypted": "false",
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "instructions_important": "false",
     "submittable": "false",
@@ -36,9 +32,31 @@
     "uses_lab2": "true",
     "hide_pause_button": "false",
     "default_song": "introtoshamstep_47SOUL",
-    "long_instructions": "#Code the Choreography!\r\n\r\nUse AI to help you get started. \r\n\r\nDo This: \r\n- Click _ to activate AI \r\n- Complete the prompt\r\n- Choose the use the code, regenerate or give AI a new prompt"
+    "long_instructions": "#Code your dancer!\r\n\r\nUse AI to help you get started. \r\n\r\nDo This: \r\n- Click _ to activate AI \r\n- Complete the prompt\r\n- Choose the use the code, regenerate or give AI a new prompt\r\n\r\n---\r\n>**Prompt:** Make my dancer do ____ move",
+    "start_sources": {
+      "selectedSong": "introtoshamstep_47SOUL",
+      "source": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run",
+              "id": "when-run-block",
+              "x": 16,
+              "y": 16,
+              "deletable": false,
+              "movable": false
+            }
+          ]
+        }
+      }
+    },
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
-  "audit_log": "[{\"changed_at\":\"2025-08-28 21:07:50 +0000\",\"changed\":[\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-28 21:14:13 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2025-08-28 21:07:50 +0000\",\"changed\":[\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-28 21:14:13 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-29 15:38:30 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-29 20:51:03 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-29 21:23:20 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

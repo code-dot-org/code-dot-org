@@ -6,6 +6,8 @@ import classNames from 'classnames';
 import React, {useEffect, useMemo, useState} from 'react';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
+import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
+import {ProjectSources} from '@cdo/apps/lab2/types';
 import AiTutor2Chat from '@cdo/apps/lab2/views/components/AiTutor2Chat';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import StudentRubricView from '@cdo/apps/lab2/views/components/rubrics/StudentRubricView';
@@ -21,6 +23,7 @@ import NavigationArea from '../NavigationArea';
 import CopyrightButton from './CopyrightButton';
 import ResourcePanelExtraLinks from './ResourcePanelExtraLinks';
 import SettingsPanel from './SettingsPanel';
+import VersionHistoryPanel from './VersionHistoryPanel';
 
 import styles from './styles.module.scss';
 
@@ -29,6 +32,7 @@ enum Tabs {
   AiTutor = 'aiTutor',
   TeachersOnly = 'teachersOnly',
   StudentRubric = 'studentRubric',
+  VersionHistory = 'versionHistory',
 }
 
 export interface Setting {
@@ -37,6 +41,10 @@ export interface Setting {
   options: {value: string; text: string}[];
   selectedValue: string | undefined;
   onChange: (value: string) => void;
+}
+
+interface VersionHistoryProps {
+  startSources: ProjectSources;
 }
 
 const tabInfo: {[key in Tabs]: {title: string; icon: string}} = {
@@ -50,6 +58,10 @@ const tabInfo: {[key in Tabs]: {title: string; icon: string}} = {
     title: commonI18n.rubric(),
     icon: 'clipboard-list',
   },
+  [Tabs.VersionHistory]: {
+    title: commonI18n.versionHistory_header(),
+    icon: 'history',
+  },
 };
 
 type ResourcePanelProps = InstructionsProps & {
@@ -59,6 +71,7 @@ type ResourcePanelProps = InstructionsProps & {
   rightHeaderContent?: React.ReactNode;
   includeFooterSpacing?: boolean;
   settings?: Setting[];
+  versionHistoryProps?: VersionHistoryProps;
 };
 
 /**
@@ -71,6 +84,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   rightHeaderContent,
   includeFooterSpacing = true,
   settings,
+  versionHistoryProps,
   ...instructionsProps
 }) => {
   const {theme} = useTheme();
@@ -78,6 +92,13 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const [currentTab, setCurrentTab] = useState<Tabs>(Tabs.Instructions);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const isUserTeacher = useAppSelector(state => state.currentUser.isTeacher);
+  const [selectedVersion, setSelectedVersion] = useState<string>('');
+  const isViewingOldVersion = useAppSelector(
+    state => state.lab2Project.viewingOldVersion
+  );
+  const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
+  const isReadOnly = useAppSelector(isReadOnlyWorkspace);
+  const isWidgetView = instructionsProps.levelProperties.widgetView || false;
 
   const levelId = instructionsProps.levelProperties.id;
 
@@ -113,12 +134,43 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       tabMap[Tabs.AiTutor] = <AiTutor2Chat hiddenContext={aiTutor2Context} />;
     }
 
+    // The version history tab is hidden in read only mode with two exceptions:
+    // if the user is viewing an old version of the project, or if this is a teacher viewing
+    // a student's project (in which case they can view old versions, but not restore them).
+    // We never show the version history tab in widget view, as widget view is always read-only
+    // and therefore can never have version history.
+    const versionHistoryHidden =
+      (isReadOnly && !isViewingOldVersion && !viewAsUserId) || isWidgetView;
+    if (versionHistoryProps && !versionHistoryHidden) {
+      tabMap[Tabs.VersionHistory] = (
+        <VersionHistoryPanel
+          selectedVersion={selectedVersion}
+          setSelectedVersion={setSelectedVersion}
+          startSources={versionHistoryProps.startSources}
+          appName={levelProperties.appName}
+          levelId={levelId}
+        />
+      );
+    }
+
     if (showRubric) {
       tabMap[Tabs.StudentRubric] = <StudentRubricView />;
     }
 
     return tabMap;
-  }, [instructionsProps, isUserTeacher, aiTutor2Context, showRubric]);
+  }, [
+    instructionsProps,
+    isUserTeacher,
+    aiTutor2Context,
+    isReadOnly,
+    isViewingOldVersion,
+    viewAsUserId,
+    isWidgetView,
+    versionHistoryProps,
+    showRubric,
+    selectedVersion,
+    levelId,
+  ]);
 
   useEffect(() => {
     if (!(currentTab in availableTabs)) {

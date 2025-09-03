@@ -1,3 +1,4 @@
+@use '@code-dot-org/component-library-styles/mixins.scss' as mixins;
 
 .previewContainer {
   position: relative;
@@ -6,6 +7,21 @@
   box-sizing: border-box;
   display: grid;
   grid-template-rows: 40px 1fr;
+}
+
+.previewWrapper {
+  position: relative;
+  flex: 1;
+  
+  &:focus {
+    @include mixins.focus-styles;
+    outline-offset: 0;
+  }
+  
+  &:focus-visible {
+    @include mixins.focus-styles;
+    outline-offset: 0;
+  }
 }
 
 .previewIframe{

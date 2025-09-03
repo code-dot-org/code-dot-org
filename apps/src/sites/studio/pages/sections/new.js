@@ -2,6 +2,7 @@ import {Heading1} from '@code-dot-org/component-library/typography';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import {displayDifferentiationChat} from '@cdo/apps/aiDifferentiation/aiDiffUtils';
 import SectionsSetUpContainer from '@cdo/apps/templates/sectionsRefresh/SectionsSetUpContainer';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import i18n from '@cdo/locale';
@@ -27,4 +28,5 @@ $(document).ready(() => {
     </div>,
     document.getElementById('form')
   );
+  displayDifferentiationChat();
 });

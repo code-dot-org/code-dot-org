@@ -59,6 +59,9 @@ const Notification: React.FC<{
           styles[`icon${notificationOrPlaceholder.iconColor}`],
           isLoading && skeletonizeContent.skeletonizeContent
         )}
+        // This icon is decorative and does not need to be read by screen readers
+        // eslint-disable-next-line react/forbid-component-props
+        data-testid={'icon-' + notificationOrPlaceholder.iconName}
       />
       <p
         className={classNames(
@@ -85,11 +88,12 @@ const Notification: React.FC<{
           notificationOrPlaceholder.publishedAt
         ).toLocaleUpperCase()}
       </BodyThreeText>
-      {notificationOrPlaceholder.readAt === null ? (
+      {notificationOrPlaceholder.readAt === null && notification !== null ? (
         <FontAwesomeV6Icon
           iconName="circle"
           iconStyle="solid"
           className={styles.readAt}
+          aria-label={i18n.unread()}
         />
       ) : (
         <div className={styles.readAt} />
