@@ -13,6 +13,7 @@ import {
   chatThreadValidator,
   chatThreadMessagesValidator,
   Context,
+  ChatPrompt,
 } from './types';
 
 import style from './ai-differentiation.module.scss';
@@ -32,9 +33,8 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
   const [threadMessages, setThreadMessages] = useState<ChatItem[]>();
   const [threadId, setThreadId] = useState<number>(0);
   const [keyId, setKeyId] = useState<number>(0);
-  const [initialThreadPrompt, setInitialThreadPrompt] = useState<string | null>(
-    null
-  );
+  const [initialThreadPrompt, setInitialThreadPrompt] =
+    useState<ChatPrompt | null>(null);
 
   const [showNotifications, setShowNotifications] = useState<boolean>(false);
 
@@ -96,9 +96,12 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
   );
 
   const aiPromptOutsideChatClicked = useCallback(
-    (prompt: string) => {
+    (label: string, prompt: string) => {
       setShowNotifications(false);
-      setInitialThreadPrompt(prompt);
+      setInitialThreadPrompt({
+        label: label,
+        prompt: prompt,
+      });
       fetchThreadMessages(0);
     },
     [fetchThreadMessages]

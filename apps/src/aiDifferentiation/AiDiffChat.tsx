@@ -90,8 +90,8 @@ interface AiDiffChatProps {
   threadFetchCallback?: () => void;
   threadId?: number;
   setThreadId?: Dispatch<SetStateAction<number>>;
-  initialThreadPrompt?: string | null;
-  setInitialThreadPrompt?: Dispatch<SetStateAction<string | null>>;
+  initialThreadPrompt?: ChatPrompt | null;
+  setInitialThreadPrompt?: Dispatch<SetStateAction<ChatPrompt | null>>;
 }
 
 const AiDiffChat: React.FC<AiDiffChatProps> = ({
@@ -252,45 +252,48 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
       };
 
       setMessageHistory(prevMessages => [...prevMessages, newUserMessage]);
-      getAIResponse(message, true, null);
+      getAIResponse(message, false, null);
     },
     [setMessageHistory, getAIResponse]
   );
 
+  const onPromptSelect = React.useCallback(
+    (prompt: ChatPrompt) => {
+      if (prompt.response !== undefined) {
+        setMessageHistory(prevMessages => [
+          ...prevMessages,
+          {
+            role: Role.ASSISTANT,
+            chatMessageText: prompt.response ?? '',
+            status: Status.OK,
+          },
+        ]);
+      }
+      if (prompt.followUpPrompts !== undefined) {
+        setMessageHistory(prevMessages => [
+          ...prevMessages,
+          prompt.followUpPrompts ?? [],
+        ]);
+      }
+      if (!prompt.followUpPrompts && !prompt.response) {
+        getAIResponse(prompt.prompt, true, prompt.label);
+      }
+    },
+    [getAIResponse, setMessageHistory]
+  );
+
   React.useEffect(() => {
     if (initialThreadPrompt && threadMessages.length === 0 && threadId === 0) {
-      onMessageSend(initialThreadPrompt);
+      onPromptSelect(initialThreadPrompt);
       setInitialThreadPrompt(null);
     }
   }, [
     initialThreadPrompt,
     threadMessages,
     threadId,
-    onMessageSend,
+    onPromptSelect,
     setInitialThreadPrompt,
   ]);
-
-  const onPromptSelect = (prompt: ChatPrompt) => {
-    if (prompt.response !== undefined) {
-      setMessageHistory(prevMessages => [
-        ...prevMessages,
-        {
-          role: Role.ASSISTANT,
-          chatMessageText: prompt.response ?? '',
-          status: Status.OK,
-        },
-      ]);
-    }
-    if (prompt.followUpPrompts !== undefined) {
-      setMessageHistory(prevMessages => [
-        ...prevMessages,
-        prompt.followUpPrompts ?? [],
-      ]);
-    }
-    if (!prompt.followUpPrompts && !prompt.response) {
-      getAIResponse(prompt.prompt, true, prompt.label);
-    }
-  };
 
   const onSuggestPrompts = () => {
     const nextPage = (suggestionPage + 1) % SUGGESTED_PROMPTS.length;

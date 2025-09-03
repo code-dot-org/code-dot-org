@@ -8,7 +8,7 @@ import {AiDiffNotification} from './types';
 import styles from './notifications.module.scss';
 
 interface AiDiffNotificationListProps {
-  aiPromptClick: (prompt: string) => void;
+  aiPromptClick: (label: string, prompt: string) => void;
 }
 
 const AiDiffNotificationList: React.FC<AiDiffNotificationListProps> = ({

@@ -37,7 +37,7 @@ const getRelativeTimeString = (date: Date): string => {
 interface NotificationProps {
   key: string;
   notification: AiDiffNotification | null;
-  aiPromptClick?: (prompt: string) => void;
+  aiPromptClick?: (label: string, prompt: string) => void;
 }
 
 const Notification: React.FC<NotificationProps> = ({
@@ -108,7 +108,7 @@ const Notification: React.FC<NotificationProps> = ({
                 <button
                   onClick={() => {
                     if (aiPromptClick) {
-                      aiPromptClick(prompt.prompt);
+                      aiPromptClick(prompt.text, prompt.prompt);
                     }
                   }}
                   className={styles.aiButton}
