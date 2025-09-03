@@ -96,12 +96,10 @@ $url-bar-content-height: calc($url-bar-height - $vertical-padding-offset);
 
 // Custom styles for segmented buttons in preview header
 .customSegmentedButtons {
-  height: $url-bar-height; // Match the input bar height
   flex-shrink: 0; // Prevent segmented buttons from shrinking
   
   // Target all buttons within segmented buttons container
   :global(button) {
-    background-color: var(--background-neutral-primary) !important;
     border: 1px solid var(--borders-neutral-strong) !important;
     height: $url-bar-height; // Match the input bar height including borders
     box-sizing: border-box;
@@ -110,32 +108,13 @@ $url-bar-content-height: calc($url-bar-height - $vertical-padding-offset);
       // Using secondary instead of tertiary because the preview header already uses background-neutral-tertiary color.
       background-color: var(--background-neutral-secondary) !important;
     }
-    
-    &:focus-visible {
-      background-color: var(--background-brand-teal-light) !important;
-    }
-    
-    &:active {
-      background-color: var(--background-neutral-tertiary) !important;
-    }
   }
   
   // Override for selected buttons to keep their original styling
   :global(button[class*="selectedSegmentedButton"]) {
     border: 1px solid transparent !important;
-    background-color: var(--background-brand-teal-primary) !important;
-    height: $url-bar-height !important; // Match the input bar height including borders
-    box-sizing: border-box !important;
     
     &:hover {
-      background-color: var(--background-brand-teal-primary) !important;
-    }
-    
-    &:focus-visible {
-      background-color: var(--background-brand-teal-light) !important;
-    }
-    
-    &:active {
       background-color: var(--background-brand-teal-primary) !important;
     }
   }
