@@ -59,7 +59,10 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
 
       it 'returns error 404' do
         begin_tutorial_request
+
         must_respond_with :not_found
+        must_select 'h1', '404: Page Not Found'
+
         expect(HocLegacy::TutorialLauncher).not_to have_received(:call)
       end
     end
@@ -69,7 +72,10 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
 
       it 'returns error 404' do
         begin_tutorial_request
+
         must_respond_with :not_found
+        must_select 'h1', '404: Page Not Found'
+
         expect(HocLegacy::TutorialLauncher).not_to have_received(:call)
       end
     end
@@ -79,7 +85,10 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
 
       it 'returns error 404' do
         begin_tutorial_request
+
         must_respond_with :not_found
+        must_select 'h1', '404: Page Not Found'
+
         expect(HocLegacy::TutorialLauncher).not_to have_received(:call)
       end
     end
@@ -298,7 +307,10 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
 
       it 'returns error 404' do
         finish_tutorial_request
+
         must_respond_with :not_found
+        must_select 'h1', '404: Page Not Found'
+
         expect(HocLegacy::TutorialCompleter).not_to have_received(:call)
       end
     end

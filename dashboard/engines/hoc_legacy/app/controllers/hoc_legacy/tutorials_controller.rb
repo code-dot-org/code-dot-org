@@ -14,7 +14,7 @@ module HocLegacy
     # GET /api/hour/begin/:code
     def begin
       tutorial_url = @tutorial.primary_link_ref&.primary_target
-      return head :not_found if tutorial_url.blank?
+      return render_404 if tutorial_url.blank?
 
       TutorialLauncher.call(controller: self, tutorial: @tutorial) if activity_tracking_enabled?
 
@@ -83,7 +83,7 @@ module HocLegacy
     end
 
     private def require_tutorial
-      head :not_found unless @tutorial
+      render_404 unless @tutorial
     end
 
     private def disable_caching
@@ -97,8 +97,8 @@ module HocLegacy
     private def redirect_to_congrats_page(session_row:)
       congrats_url_params = {}
 
-      congrats_url_params[:i]  = session_row[:session] if session_row.try(:[], :session).present?
-      congrats_url_params[:s]  = Base64.urlsafe_encode64(@tutorial.tutorial_id) if @tutorial
+      congrats_url_params[:i] = session_row[:session] if session_row.try(:[], :session).present?
+      congrats_url_params[:s] = Base64.urlsafe_encode64(@tutorial.tutorial_id) if @tutorial
 
       redirect_to main_app.congrats_url(congrats_url_params), status: :found
     end
