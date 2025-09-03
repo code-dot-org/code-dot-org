@@ -22,7 +22,7 @@ $mobile-aspect-ratio: 9 / 16;
   flex: 1;
   display: flex;
   justify-content: center;
-  background-color: var(--background-neutral-tertiary);
+  background-color: var(--background-neutral-secondary);
   &:focus {
     @include mixins.focus-styles;
     outline-offset: 0;
