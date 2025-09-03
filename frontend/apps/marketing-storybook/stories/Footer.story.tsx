@@ -44,7 +44,11 @@ export const CSForAll: StoryObj<typeof FooterCSforAll> = {
   },
   parameters: {
     eyes: {
-      themes: ['csforall'],
+      browser: [
+        {width: 1400, height: 768, name: 'chrome'},
+        {width: 1400, height: 768, name: 'firefox'},
+        {width: 1400, height: 768, name: 'safari'},
+      ],
     },
   },
 };
