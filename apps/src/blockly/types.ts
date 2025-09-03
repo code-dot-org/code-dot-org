@@ -524,12 +524,3 @@ interface FieldDropdown extends FieldJson {
   type: 'field_dropdown';
   options: [string, string][];
 }
-
-export interface SerializedBlock {
-  id?: string;
-  type: string;
-  fields?: {[key: string]: string};
-  next?: {
-    block: SerializedBlock;
-  };
-}
