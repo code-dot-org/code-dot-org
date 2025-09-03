@@ -10,6 +10,20 @@ export const updateLinksToNonHtmlFiles = (
   filesToBlobs: Record<string, string>,
   fullFileName: string
 ) => {
+  const imgLinks = doc.querySelectorAll('img[src]');
+  //
+  imgLinks.forEach(link => {
+    const src = link.getAttribute('src');
+    if (src) {
+      const filePath = findFilePathByRelativePath(src, fullFileName);
+      const blobUrl = filesToBlobs[filePath];
+      link.setAttribute(
+        'src',
+        `http://localhost-studio.code.org:3000${blobUrl}`
+      );
+    }
+  });
+
   const links = doc.querySelectorAll('link[rel="stylesheet"], script[src]');
   links.forEach(link => {
     const src = link.getAttribute('src') || link.getAttribute('href');
