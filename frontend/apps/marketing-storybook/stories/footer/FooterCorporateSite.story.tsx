@@ -6,7 +6,6 @@ import {Meta, StoryObj} from '@storybook/react';
 const meta: Meta<typeof FooterCorporateSite> = {
   title: 'Marketing/Footer/CorporateSite',
   component: FooterCorporateSite,
-  tags: ['autodocs', 'marketing'],
   parameters: {
     disableSectionDecorator: true,
     nextjs: {
@@ -29,5 +28,10 @@ const defaultArgs: Partial<GlobalFooterProps> = {
 export const Default: Story = {
   args: {
     ...defaultArgs,
+  },
+  parameters: {
+    eyes: {
+      themes: ['code.org'],
+    },
   },
 };

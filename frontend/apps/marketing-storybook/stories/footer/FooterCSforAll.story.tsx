@@ -6,7 +6,6 @@ import {Meta, StoryObj} from '@storybook/react';
 const meta: Meta<typeof FooterCSforAll> = {
   title: 'Marketing/Footer/CSforAll',
   component: FooterCSforAll,
-  tags: ['autodocs', 'marketing'],
   parameters: {
     disableSectionDecorator: true,
     nextjs: {
@@ -29,5 +28,10 @@ const defaultArgs: Partial<GlobalFooterProps> = {
 export const Default: Story = {
   args: {
     ...defaultArgs,
+  },
+  parameters: {
+    eyes: {
+      themes: ['csforall'],
+    },
   },
 };
