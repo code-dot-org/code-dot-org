@@ -135,29 +135,40 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
         {...previewViewModeButtonsProps}
         className={moduleStyles.customSegmentedButtons}
       />
-      {!isFullScreenView ? (
-        <Button
-          onClick={onMaximize}
-          aria-label={weblab2I18n.maximizePreview()}
-          size="xs"
-          type="tertiary"
-          color="gray"
-          isIconOnly={true}
-          icon={{iconName: 'expand'}}
-          className={moduleStyles.urlButton}
-        />
-      ) : (
-        <Button
-          onClick={onMinimize}
-          aria-label={weblab2I18n.minimizePreview()}
-          size="xs"
-          type="tertiary"
-          color="gray"
-          isIconOnly={true}
-          icon={{iconName: 'compress'}}
-          className={moduleStyles.urlButton}
-        />
-      )}
+      <MaximizeMinimizeButton
+        isFullScreenView={isFullScreenView}
+        onMaximize={onMaximize}
+        onMinimize={onMinimize}
+      />
     </div>
+  );
+};
+
+interface MaximizeMinimizeButtonProps {
+  isFullScreenView: boolean | undefined;
+  onMaximize: () => void;
+  onMinimize: () => void;
+}
+
+const MaximizeMinimizeButton: React.FC<MaximizeMinimizeButtonProps> = ({
+  isFullScreenView,
+  onMaximize,
+  onMinimize,
+}) => {
+  return (
+    <Button
+      onClick={isFullScreenView ? onMinimize : onMaximize}
+      aria-label={
+        isFullScreenView
+          ? weblab2I18n.minimizePreview()
+          : weblab2I18n.maximizePreview()
+      }
+      size="xs"
+      type="tertiary"
+      color="gray"
+      isIconOnly={true}
+      icon={{iconName: isFullScreenView ? 'compress' : 'expand'}}
+      className={moduleStyles.urlButton}
+    />
   );
 };
