@@ -107,7 +107,7 @@ module AichatAiHelper
 
     temperature = aichat_model_customizations['temperature'].to_f
 
-    http_read_timeout = aichat_model_customizations['maxPollingTimeSeconds']
+    http_read_timeout = aichat_model_customizations['readTimeoutSeconds']
 
     # System prompt - string or nil.
     system_prompt = aichat_model_customizations['systemPrompt']

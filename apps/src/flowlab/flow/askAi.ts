@@ -51,7 +51,7 @@ export default async function askAi(
     ...EMPTY_AI_CUSTOMIZATIONS,
     selectedModelId: aiTutorModelId,
     systemPrompt: '',
-    maxPollingTimeSeconds,
+    readTimeoutSeconds: maxPollingTimeSeconds,
   };
 
   const messages = await postAichatCompletionMessage(
