@@ -36,7 +36,7 @@ export const SelectCard: FC<SelectCardProps> = ({
       className={classNames(
         styles.card,
         styles.questionCard,
-        styles.multiSelect
+        styles.selectCard
       )}
     >
       <CardHeader
