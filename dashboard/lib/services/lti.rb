@@ -213,7 +213,7 @@ module Services
           end
 
           # Check for restricted deployment here and set lms_landing_opted_out so the user isn't sent through the account linking flow
-          if Policies::Lti::DeploymentConfiguration::RESTRICTED_DEPLOYMENTS.include?(deployment.id) && !user.lms_landing_opted_out
+          if deployment.restricted? && !user.lms_landing_opted_out
             user.update!(lms_landing_opted_out: true) # will skip account linking
           end
 

@@ -500,6 +500,16 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     # could confirm more things here
   end
 
+  test 'auth - create new user but skip account linking if user is part of restricted deployment' do
+    payload = get_valid_payload
+    jwt = create_jwt_and_stub(payload)
+    LtiDeployment.any_instance.stubs(:restricted?).returns(true)
+    post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
+    assert_response :redirect
+    user = LtiUserIdentity.find_by(subject: @subject).user
+    assert_equal true, user.lms_landing_opted_out
+  end
+
   test 'auth - given a deployment_id not in our system yet, create LtiDeployment' do
     payload = get_valid_payload
     jwt = create_jwt_and_stub(payload)
@@ -968,9 +978,9 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
 
   # Create a user with an auth option matching the given JWT.
   # Useful for bypassing the landing/linking flow.
-  private def create_preexisting_user(jwt_payload, user_type = User::TYPE_TEACHER)
+  private def create_preexisting_user(jwt_payload, user_type = User::TYPE_TEACHER, landing_opt_out = true)
     user = user_type == User::TYPE_TEACHER ? create(:teacher) : create(:student)
-    user.update(lms_landing_opted_out: true)
+    user.update(lms_landing_opted_out: landing_opt_out)
     ao = AuthenticationOption.new(
       user: user,
       email: Services::Lti.get_claim(jwt_payload, :email),

@@ -223,7 +223,7 @@ class LtiV1Controller < ApplicationController
         user = Services::Lti.initialize_lti_user(decoded_jwt)
         # If this is a restricted deployment, skip the account linking flow and
         # immediately create the user and sign them in.
-        if Policies::Lti::DeploymentConfiguration::RESTRICTED_DEPLOYMENTS.include?(deployment.id)
+        if deployment.restricted?
           user.lms_landing_opted_out = true
           user.save!
           sign_in user
