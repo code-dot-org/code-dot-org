@@ -99,7 +99,7 @@ class AssignedCoursesAndScripts < ActiveSupport::TestCase
   describe 'assigned and section scripts' do
     let(:user) {create(:student)}
     let(:single_script) {create(:script)}
-    let(:section_1) {create(:section, script: single_script)}
+    let(:section_1) {create(:section, script: single_script, unit_group: unit_group)}
     let(:section_2) {create(:section, unit_group: unit_group)}
     let(:unit_group_unit) {create(:script)}
     before do
@@ -110,7 +110,7 @@ class AssignedCoursesAndScripts < ActiveSupport::TestCase
     describe '#assigned_script?' do
       context 'when the user is assigned a script' do
         subject(:assigned_script?) {user.assigned_script?(single_script)}
-        subject(:assigned_script_course?) {user.assigned_script?(section_2)}
+        subject(:assigned_script_course?) {user.assigned_script?(unit_group.first_unit)}
 
         it 'returns true' do
           _(assigned_script?).must_equal true
@@ -283,7 +283,8 @@ class AssignedCoursesAndScripts < ActiveSupport::TestCase
       context 'when the script is a pilot and the user has access' do
         let(:pilot_teacher) {create(:teacher, pilot_experiment: 'my-experiment')}
         let(:pilot_script) {create(:script, name: 'pilot-script', pilot_experiment: 'my-experiment')}
-        let(:pilot_section) {create(:section, user: pilot_teacher, script: pilot_script)}
+        let(:pilot_course) {create(:single_unit_course, unit: pilot_script, pilot_experiment: 'my-experiment')}
+        let(:pilot_section) {create(:section, user: pilot_teacher, script: pilot_script, course_id: pilot_course.id)}
         let(:pilot_student) {create(:follower, section: pilot_section).student_user}
         subject(:can_access_pilot?) {pilot_student.can_access_most_recently_assigned_script?}
 

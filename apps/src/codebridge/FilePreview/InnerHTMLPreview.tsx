@@ -6,7 +6,6 @@ import {MultiFileSource} from '@cdo/apps/lab2/types';
 
 import {IframeMessageType} from './constants';
 import {
-  setContentSecurityPolicy,
   updateLinksToHtmlFiles,
   updateLinksToNonHtmlFiles,
 } from './htmlParsingHelpers';
@@ -77,6 +76,8 @@ const InnerHTMLPreview = () => {
         // We don't need to update the parent, because they initiated this change.
       } else if (data.type === IframeMessageType.SET_ALLOW_SCRIPTS) {
         setAllowScripts(!!data.allow);
+      } else if (data.type === IframeMessageType.REFRESH) {
+        iframeRef.current?.contentWindow?.location.reload();
       }
     },
     [parentOrigin]
@@ -117,11 +118,10 @@ const InnerHTMLPreview = () => {
         setBlobUrl(NOT_FOUND_FILE);
       }
     }
-  }, [currentFile, filesToBlobs]);
+  }, [currentFile, filesToBlobs, parentOrigin]);
 
   // TODOs:
   // Support other file types (images, etc.): https://codedotorg.atlassian.net/browse/CT-1255
-  // Better regeneration logic: https://codedotorg.atlassian.net/browse/CT-1259
   useEffect(() => {
     if (source) {
       const files: Record<string, string> = {};
@@ -154,7 +154,6 @@ const InnerHTMLPreview = () => {
           source.folders
         );
 
-        setContentSecurityPolicy(doc);
         updateLinksToNonHtmlFiles(doc, files, fullFileName);
         updateLinksToHtmlFiles(doc, fullFileName);
         const updatedContents = doc.documentElement.outerHTML;

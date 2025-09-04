@@ -109,12 +109,14 @@ class Pd::Workshop < ApplicationRecord
   end
 
   def subject_must_be_valid_for_course
-    unless SUBJECTS[course]&.include?(subject) || (!SUBJECTS[course] && !subject)
+    unless SUBJECTS[course]&.include?(subject) || LEGACY_SUBJECTS[course]&.include?(subject) || (!SUBJECTS[course] && !subject)
       errors.add(:subject, 'must be a valid option for the course')
     end
   end
 
   def config_validation
+    return if ARCHIVED_COURSES.include?(course)
+
     config = WORKSHOP_COURSE_CONFIGS.find do |c|
       c[:label] == course
     end
@@ -482,11 +484,11 @@ class Pd::Workshop < ApplicationRecord
     update_attribute(:ended_at, Time.zone.now)
 
     # We want to send exit surveys now, but that needs to be done on the
-    # production-daemon machine, so we'll let the process_pd_workshop_emails
+    # production-daemon machine, so we'll let the process_pd_workshop_ends
     # cron job call the process_ends function below on that machine.
   end
 
-  # This is called by the process_pd_workshop_emails cron job which is run
+  # This is called by the process_pd_workshop_ends cron job which is run
   # on the production-daemon machine, and will send exit surveys to workshops
   # that have been ended in the last two days when they haven't already had
   # that done.

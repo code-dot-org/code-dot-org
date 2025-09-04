@@ -56,6 +56,7 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
     onStop,
     AiTutor2ResponseView,
     aiTutor2Context,
+    startSources,
   } = useCodebridgeContext();
   const {
     mapReference,
@@ -208,6 +209,7 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
           requireRun={true}
           aiTutor2Context={aiTutor2Context}
           settings={settings}
+          versionHistoryProps={{startSources}}
         />
       </div>
     );

@@ -152,7 +152,7 @@ class HomeController < ApplicationController
     script = Queries::ScriptActivity.primary_student_unit(current_user)
     if script
       script_level = current_user.next_unpassed_progression_level(script)
-      unit_group = script.unit_group
+      unit_group = script.get_original_unit_group
       unit_group_unit = script.unit_group_units.find {|ugu| ugu.unit_group == unit_group} if unit_group
     end
     @homepage_data[:topCourse] = nil
@@ -181,7 +181,7 @@ class HomeController < ApplicationController
       pl_unit = Queries::ScriptActivity.primary_pl_unit(current_user)
       if pl_unit
         pl_script_level = current_user.next_unpassed_progression_level(pl_unit)
-        pl_unit_group = pl_unit.unit_group
+        pl_unit_group = pl_unit.get_original_unit_group
         pl_unit_group_unit = pl_unit.unit_group_units.find {|ugu| ugu.unit_group == pl_unit_group} if pl_unit_group
       end
       @homepage_data[:topPlCourse] = nil

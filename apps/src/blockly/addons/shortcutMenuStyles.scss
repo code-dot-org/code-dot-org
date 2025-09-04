@@ -1,0 +1,25 @@
+@use '@code-dot-org/component-library-styles/typography.module.scss' as
+  typography;
+@import 'color.scss';
+
+.shortcut-dialog {
+  h1 {
+    @include typography.heading-lg;
+    font-size: revert;
+    color: unset;
+    margin: 0;
+  }
+  h2 {
+    @include typography.heading-md;
+    color: var(--text-neutral-tertiary);
+    margin: revert;
+    padding-block-end: revert;
+  }
+  th {
+    background-color: unset;
+    padding: 0;
+  }
+  td {
+    @include typography.body-two;
+  }
+}

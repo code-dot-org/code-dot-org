@@ -1,0 +1,110 @@
+# Web Lab 2 and App Lab projects use the same list of allowed hostnames.
+# These are the hostnames that users are allowed to make requests to in their projects.
+# SECURITY CONSIDERATIONS:
+# - These APIs are allowlisted to let students make web requests in their projects
+# - All APIs should be public, well-documented, and not require authentication for basic usage
+# - APIs that require API keys should be documented as such.  These risk student exposure to the API keys.
+#
+module AllowedHostnameHelper
+  # 'code.org' is included so applab apps can access the tables and properties of other applab apps.
+  ALLOWED_HOSTNAME_SUFFIXES = %w(
+    api.amadeus.com
+    api.arasaac.org
+    api.blizzard.com
+    api.census.gov
+    api.coinlayer.com
+    api.datamuse.com
+    api.energidataservice.dk
+    api.exchangeratesapi.io
+    api.fda.gov
+    api.football-data.org
+    api.foursquare.com
+    api.github.com
+    api.mathjs.org
+    api.mojang.com
+    api.nal.usda.gov
+    api.nasa.gov
+    api.nookipedia.com
+    api.opencagedata.com
+    api.open-notify.org
+    api.open-meteo.com
+    api.openrouteservice.org
+    api.openweathermap.org
+    api.pegelalarm.at
+    api.quotable.io
+    api.randomuser.me
+    api.rebrandly.com
+    api.scripture.api.bible
+    api.scryfall.com
+    api.spoonacular.com
+    api.sportsdata.io
+    api.si.edu
+    api.spacexdata.com
+    api.spotify.com
+    api.themoviedb.org
+    api.thingspeak.com
+    api.waqi.info
+    api.weather.gov
+    api.weatherapi.com
+    api.wolframalpha.com
+    api.zippopotam.us
+    bnefoodtrucks.com.au
+    ch.tetr.io
+    code.org
+    covidtracking.com
+    cryptonator.com
+    currencyapi.com
+    data.austintexas.gov
+    data.cityofchicago.org
+    data.gv.at
+    data.nasa.gov
+    data.weather.gov.hk
+    dataservice.accuweather.com
+    deckofcardsapi.com
+    distanza.org
+    githubusercontent.com
+    googleapis.com
+    grobchess.com
+    hubblesite.org
+    images-api.nasa.gov
+    itunes.apple.com
+    io.adafruit.com
+    isenseproject.org
+    lakeside-cs.org
+    maker.ifttt.com
+    moneyconvert.net
+    myschoolapp.com
+    native-land.ca
+    newsapi.org
+    noaa.gov
+    numbersapi.com
+    open.mapquestapi.com
+    openlibrary.org
+    opentdb.com
+    perenual.com
+    pixabay.com
+    pokeapi.co
+    pro-api.coinmarketcap.com
+    qrng.anu.edu.au
+    quandl.com
+    random.org
+    rejseplanen.dk
+    restcountries.com
+    roblox.com
+    runescape.com
+    serpapi.com
+    sessionserver.mojang.com
+    stats.minecraftservers.org
+    swapi.dev
+    textures.minecraft.net
+    thecatapi.com
+    thedogapi.com
+    theunitedstates.io
+    transitchicago.com
+    vpic.nhtsa.dot.gov
+    wikipedia.org
+    worldclockapi.com
+    worldtimeapi.org
+    xeno-canto.org
+  ).freeze
+end

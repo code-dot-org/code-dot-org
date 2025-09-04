@@ -7,7 +7,7 @@
   "marketing_initiative": "CSC",
   "grade_levels": "3,4,5",
   "header": "csc",
-  "image": "https://images.code.org/22ec06894131ab04095b9eda64ae97d5-intro-programming-music-lab (1).jpg",
+  "image": "https://images.code.org/9c56321a4b208541d52bfe0b42c433a5-K-5 Coding with Music.jpg",
   "cs_topic": "art_and_design,programming",
   "school_subject": null,
   "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"ideal\",\"mobile\":\"not_recommended\",\"no_device\":\"incompatible\"}",
@@ -17,5 +17,7 @@
   "published_date": "2025-05-30 05:00:00 UTC",
   "self_paced_pl_course_offering_key": "teaching-coding-with-music",
   "ai_teaching_assistant_available": false,
-  "facilitator_course_permissions": null
+  "facilitator_course_permissions": [
+
+  ]
 }

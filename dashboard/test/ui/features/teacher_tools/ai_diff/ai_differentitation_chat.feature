@@ -53,7 +53,7 @@ Feature: Send and receive messages in the AI differentiation chat
 
     And I click selector "button:contains(Finish)" once I see it
 
-    #Now we see the regular AI diff chat
+    #Now we see the regular AI diff chat (with thread sidebar)
     And I wait until element "input[value='Give me an example']" is visible
     Then I see no difference for "ai diff chat initial view"
 

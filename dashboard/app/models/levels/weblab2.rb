@@ -33,7 +33,7 @@ class Weblab2 < Level
     submittable
     validation_enabled
     widget_view
-    widget_view_allow_show_code
+    initial_view_mode
     disable_edit_run_for_submission
     predict_settings
   )
@@ -46,6 +46,10 @@ class Weblab2 < Level
         level_num: 'custom',
       )
     )
+  end
+
+  def self.view_modes
+    [['Code + Preview (default)', 'split'], ['Preview only', 'preview'], ['Code only', 'code']]
   end
 
   def uses_lab2?

@@ -125,9 +125,12 @@
       "validationMode": "type"
     },
     "name_suffix": "_v2",
+    "teacher_markdown": "💡 **Teacher Tip**: The <span style=\"padding: 2px; font-size: 12px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 5px; white-space: nowrap; line-height: 2.5em;\"> <i class=\"fa-solid fa-microphone-stand\" style=\"color: #F99258; margin-right: 2px\"></i> Chorus 1 </span> block runs for 8 measures, while the <span style=\"padding: 2px; font-size: 12px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 5px; white-space: nowrap; line-height: 2.5em;\"> <i class=\"fa-solid fa-guitars\" style=\"color: #64D25A; margin-right: 2px\"></i> Guitar Lead </span> blocks run for 2 measures each. Students will need four to match track lengths.",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-05-31T02:56:46.028+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequence-practice-formative\\\"\"],\"cloned_from\":\"test-music-lab-sequence-practice-formative\"},{\"changed_at\":\"2025-06-09 22:24:11 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:56:46.028+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequence-practice-formative\\\"\"],\"cloned_from\":\"test-music-lab-sequence-practice-formative\"},{\"changed_at\":\"2025-06-09 22:24:11 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-02 17:33:17 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>
