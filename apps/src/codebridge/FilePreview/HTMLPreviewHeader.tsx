@@ -43,6 +43,7 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
     }
   };
   const previewViewModeButtonsProps: SegmentedButtonsProps = {
+    color: 'strong',
     buttons: [
       {
         label: weblab2I18n.desktop(),
