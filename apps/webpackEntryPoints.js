@@ -61,6 +61,7 @@ const CODE_STUDIO_ENTRIES = {
   'devise/shared/_oauth_links': './src/sites/studio/pages/devise/shared/_oauth_links.js',
   'devise/registrations/edit': './src/sites/studio/pages/devise/registrations/edit.js',
   'devise/registrations/account_type': './src/sites/studio/pages/devise/registrations/account_type.js',
+  'devise/registrations/test_mailjet_page': './src/sites/studio/pages/devise/registrations/test_mailjet_page.js',
   'gates/logged_out': './src/sites/studio/pages/gates/logged_out.js',
   'gates/teacher_account_required': './src/sites/studio/pages/gates/teacher_account_required.js',
   'essential': './src/sites/studio/pages/essential.js',

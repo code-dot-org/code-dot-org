@@ -270,6 +270,8 @@ Dashboard::Application.routes.draw do
       get '/users/migrate_to_multi_auth', to: 'registrations#migrate_to_multi_auth'
       get '/users/demigrate_from_multi_auth', to: 'registrations#demigrate_from_multi_auth'
       get '/users/to_destroy', to: 'registrations#users_to_destroy'
+      get '/users/test_mailjet_page', to: 'registrations#test_mailjet_page'
+      post '/users/send_test_mailjet', to: 'registrations#send_test_mailjet'
       get '/reset_session', to: 'sessions#reset'
       get '/lockout', to: 'sessions#lockout'
       delete '/expire_other', to: 'sessions#expire_other'
