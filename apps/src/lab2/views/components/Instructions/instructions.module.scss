@@ -22,6 +22,7 @@
   line-height: 1.5;
   display: flex;
   overflow: hidden;
+  border: 1px solid var(--borders-neutral-primary);
 
   &.vertical {
     flex-direction: column;
@@ -29,7 +30,7 @@
 }
 
 .fixedDarkBackground {
-  background-color: var( --background-neutral-black-fixed);
+  background-color: var(--background-neutral-black-fixed);
 }
 
 .standardBackground {
