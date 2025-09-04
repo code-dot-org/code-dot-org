@@ -978,9 +978,9 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
 
   # Create a user with an auth option matching the given JWT.
   # Useful for bypassing the landing/linking flow.
-  private def create_preexisting_user(jwt_payload, user_type = User::TYPE_TEACHER, landing_opt_out = true)
+  private def create_preexisting_user(jwt_payload, user_type = User::TYPE_TEACHER)
     user = user_type == User::TYPE_TEACHER ? create(:teacher) : create(:student)
-    user.update(lms_landing_opted_out: landing_opt_out)
+    user.update(lms_landing_opted_out: true)
     ao = AuthenticationOption.new(
       user: user,
       email: Services::Lti.get_claim(jwt_payload, :email),
