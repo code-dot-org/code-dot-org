@@ -112,7 +112,9 @@ export const Implementation = () => {
               otherQuestionsImplementation.question_text
             }
             items={otherQuestionsImplementation.results.responses ?? []}
-            tagText={`${otherQuestionsImplementation.results.total_responses} Submitted`}
+            tagText={`${
+              otherQuestionsImplementation.results.total_responses ?? 0
+            } Submitted`}
           />
         )}
       </Box>
