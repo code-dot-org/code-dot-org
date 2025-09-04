@@ -24,8 +24,8 @@ Feature: Evaluate student code against rubrics using AI
 
     # Teacher views student progress and floating action button
     When I sign in as "Teacher_Aiden"
-    And I am on "http://studio.code.org/home"
-    And I wait until element "#homepage-container" is visible
+    And I am on "http://studio.code.org/teacher_dashboard/home"
+    And I wait until element "#ui-test-section-list" is visible
     And element "#sign_in_or_user" contains text "Teacher_Aiden"
     And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/48/levels/2"
     And I wait for the lab page to fully load
@@ -70,8 +70,8 @@ Feature: Evaluate student code against rubrics using AI
     # Teacher views student progress and floating action button
     When I sign in as "Teacher_Aiden"
     And I get debug info for the current user
-    And I am on "http://studio.code.org/home"
-    And I wait until element "#homepage-container" is visible
+    And I am on "http://studio.code.org/teacher_dashboard/home"
+    And I wait until element "#ui-test-section-list" is visible
     And element "#sign_in_or_user" contains text "Teacher_Aiden"
     And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/48/levels/2"
     And I wait for the lab page to fully load
@@ -121,8 +121,8 @@ Feature: Evaluate student code against rubrics using AI
 
     # Teacher views student progress and floating action button
     When I sign in as "Teacher_Aiden"
-    And I am on "http://studio.code.org/home"
-    And I wait until element "#homepage-container" is visible
+    And I am on "http://studio.code.org/teacher_dashboard/home"
+    And I wait until element "#ui-test-section-list" is visible
     And element "#sign_in_or_user" contains text "Teacher_Aiden"
     And I get debug info for the current user
     And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/48/levels/2"
@@ -179,8 +179,8 @@ Feature: Evaluate student code against rubrics using AI
 
     # Teacher views floating action button on assessment level
     When I sign in as "Teacher_Aiden"
-    And I am on "http://studio.code.org/home"
-    And I wait until element "#homepage-container" is visible
+    And I am on "http://studio.code.org/teacher_dashboard/home"
+    And I wait until element "#ui-test-section-list" is visible
     And element "#sign_in_or_user" contains text "Teacher_Aiden"
     And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/48/levels/2"
     And I wait for the lab page to fully load
@@ -221,8 +221,8 @@ Feature: Evaluate student code against rubrics using AI
 
     # Teacher views floating action button on assessment level
     When I sign in as "Teacher_Aiden"
-    And I am on "http://studio.code.org/home"
-    And I wait until element "#homepage-container" is visible
+    And I am on "http://studio.code.org/teacher_dashboard/home"
+    And I wait until element "#ui-test-section-list" is visible
     And element "#sign_in_or_user" contains text "Teacher_Aiden"
     And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/48/levels/2"
     And I wait for the lab page to fully load
