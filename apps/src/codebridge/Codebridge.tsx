@@ -22,6 +22,7 @@ import {BackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAP
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
 import FlaggedImageModal from '@cdo/apps/sharedComponents/FlaggedImageModal';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {ViewMode} from '@cdo/apps/weblab2/types';
 
 import moduleStyles from './styles/codebridgeContainer.module.scss';
 import './styles/codebridge.scss';
@@ -60,6 +61,8 @@ export const Codebridge = React.memo(
     const isWidgetView = !!levelProperties.widgetView;
     const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
     const appName = levelProperties.appName;
+    const viewMode = useAppSelector(state => state.weblab2.viewMode);
+    console.log('viewMode', viewMode);
 
     // Adds keyboard shortcuts for Editor (1), Run (2), and Console (3)
     // which are preceded by Control (Windows/Linux) or Command (macOS).
@@ -120,6 +123,12 @@ export const Codebridge = React.memo(
       if (isWidgetView && config.layoutComponents.widget && !isStartMode) {
         return config.layoutComponents.widget;
       }
+      if (
+        viewMode === ViewMode.MAXIMIZED &&
+        config.layoutComponents.maximized
+      ) {
+        return config.layoutComponents.maximized;
+      }
       let currentLayout = config.activeLayout;
       if (!currentLayout) {
         currentLayout = appName === 'pythonlab' ? 'horizontal' : 'vertical';
@@ -137,6 +146,7 @@ export const Codebridge = React.memo(
       isShareView,
       isStartMode,
       isWidgetView,
+      viewMode,
     ]);
 
     const backpackApi = useMemo(

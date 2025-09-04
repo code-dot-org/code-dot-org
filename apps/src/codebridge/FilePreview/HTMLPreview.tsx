@@ -116,12 +116,10 @@ export const HTMLPreview: React.FC = () => {
   };
 
   const onMaximize = () => {
-    console.log('onMaximize');
     dispatch(setViewMode(ViewMode.MAXIMIZED));
   };
 
   const onMinimize = () => {
-    console.log('onMinimize');
     dispatch(setViewMode(ViewMode.SPLIT));
   };
 
