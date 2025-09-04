@@ -22,8 +22,7 @@ interface HTMLPreviewHeaderProps {
   onNavigateBack: () => void;
   onNavigateForward: () => void;
   onRefresh: () => void;
-  onMaximize: () => void;
-  onMinimize: () => void;
+  onToggleFullScreen: () => void;
   previewViewMode: PreviewViewMode;
   setPreviewViewMode: (previewViewMode: PreviewViewMode) => void;
 }
@@ -37,8 +36,7 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
   onNavigateBack,
   onNavigateForward,
   onRefresh,
-  onMaximize,
-  onMinimize,
+  onToggleFullScreen,
   previewViewMode,
   setPreviewViewMode,
 }) => {
@@ -135,29 +133,26 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
         {...previewViewModeButtonsProps}
         className={moduleStyles.customSegmentedButtons}
       />
-      <MaximizeMinimizeButton
+      <ToggleFullScreenButton
         isFullScreenView={isFullScreenView}
-        onMaximize={onMaximize}
-        onMinimize={onMinimize}
+        onToggleFullScreen={onToggleFullScreen}
       />
     </div>
   );
 };
 
-interface MaximizeMinimizeButtonProps {
+interface ToggleFullScreenButtonProps {
   isFullScreenView: boolean | undefined;
-  onMaximize: () => void;
-  onMinimize: () => void;
+  onToggleFullScreen: () => void;
 }
 
-const MaximizeMinimizeButton: React.FC<MaximizeMinimizeButtonProps> = ({
+const ToggleFullScreenButton: React.FC<ToggleFullScreenButtonProps> = ({
   isFullScreenView,
-  onMaximize,
-  onMinimize,
+  onToggleFullScreen,
 }) => {
   return (
     <Button
-      onClick={isFullScreenView ? onMinimize : onMaximize}
+      onClick={onToggleFullScreen}
       aria-label={
         isFullScreenView
           ? weblab2I18n.minimizePreview()

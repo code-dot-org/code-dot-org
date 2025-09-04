@@ -115,12 +115,8 @@ export const HTMLPreview: React.FC = () => {
     );
   };
 
-  const onMaximize = () => {
-    dispatch(setIsFullScreenView(true));
-  };
-
-  const onMinimize = () => {
-    dispatch(setIsFullScreenView(false));
+  const toggleFullScreen = () => {
+    dispatch(setIsFullScreenView(!isFullScreenView));
   };
 
   const addToNavigationHistory = (
@@ -272,8 +268,7 @@ export const HTMLPreview: React.FC = () => {
           onNavigateBack={onNavigateBack}
           onNavigateForward={onNavigateForward}
           onRefresh={onRefresh}
-          onMaximize={onMaximize}
-          onMinimize={onMinimize}
+          onToggleFullScreen={toggleFullScreen}
           previewViewMode={previewViewMode}
           setPreviewViewMode={setPreviewViewMode}
         />
