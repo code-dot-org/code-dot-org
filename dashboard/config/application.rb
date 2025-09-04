@@ -191,7 +191,7 @@ module Dashboard
       Rails.root.join('app', 'models', 'levels'),
       Rails.root.join('app', 'models', 'sections'),
       Rails.root.join('../lib/cdo/shared_constants')
-    ].map(&:to_s)
+    ]
 
     config.autoload_paths += runtime_load_paths
 
@@ -209,7 +209,7 @@ module Dashboard
     #
     # These directories will also be treated as top-level directories by
     # Zeitwerk, rather than as subdirectories which require namspacing.
-    config.eager_load_paths += runtime_load_paths
+    config.eager_load_paths += runtime_load_paths.map(&:to_s)
 
     # Ignore certain directories for autoloading and eager loading
     Rails.autoloaders.main.ignore(
