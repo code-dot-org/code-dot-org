@@ -21,6 +21,7 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
     let(:forms_table_mock) {double(:forms_table)}
 
     before do
+      allow(CDO).to receive(:default_scheme).and_return('https:')
       allow(DCDO).to receive(:get).with('hoc_apis_in_dashboard', anything).and_return(true)
 
       allow(CdoContentful::CsForAll::Entry::Tutorial).to receive(:find_by_tutorial_id)
