@@ -223,10 +223,10 @@ class Unit < ApplicationRecord
     if old_professional_learning_course?
       unit_group = UnitGroup.find_by_name(professional_learning_course)
 
-      new_published_state = published_state ? published_state : Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
-      new_instruction_type = instruction_type ? instruction_type : Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
-      new_instructor_audience = instructor_audience ? instructor_audience : Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer
-      new_participant_audience = participant_audience ? participant_audience : Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator
+      new_published_state = Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
+      new_instruction_type = Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
+      new_instructor_audience = Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer
+      new_participant_audience =  Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator
 
       if unit_group
         # Check if anything needs to be updated on the PL course
@@ -601,9 +601,6 @@ class Unit < ApplicationRecord
         # to allow the redirect to happen for any user
         return Unit.new(
           redirect_to: unit_name,
-          published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta,
-          instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher,
-          participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student
         )
       end
     end
@@ -630,9 +627,6 @@ class Unit < ApplicationRecord
       # to allow the redirect to happen for any user
       Unit.new(
         redirect_to: unit_name,
-        published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta,
-        instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher,
-        participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student
       ) : nil
   end
 
@@ -1189,15 +1183,9 @@ class Unit < ApplicationRecord
       ActiveRecord::Base.transaction do
         copied_unit = dup
 
-        copied_unit.pilot_experiment = nil
         copied_unit.tts = false
         copied_unit.announcements = nil
         copied_unit.name = new_name
-
-        copied_unit.published_state = destination_unit_group.nil? ? Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development : nil
-        copied_unit.instruction_type = destination_unit_group.nil? ? get_instruction_type : nil
-        copied_unit.participant_audience = destination_unit_group.nil? ? get_participant_audience : nil
-        copied_unit.instructor_audience = destination_unit_group.nil? ? get_instructor_audience : nil
 
         copied_unit.save!
 
@@ -1328,9 +1316,6 @@ class Unit < ApplicationRecord
           wrapup_video: general_params[:wrapup_video],
           family_name: general_params[:family_name].presence ? general_params[:family_name] : nil, # default nil
           hide_within_course: general_params[:hide_within_course].nil? ? false : general_params[:hide_within_course], # default false
-          instruction_type: get_original_unit_group.present? ? nil : general_params[:instruction_type],
-          participant_audience: get_original_unit_group.present? ? nil : general_params[:participant_audience],
-          instructor_audience: get_original_unit_group.present? ? nil : general_params[:instructor_audience],
           properties: Unit.build_property_hash(general_params)
         },
         unit_data[:lesson_groups]
@@ -1913,22 +1898,22 @@ class Unit < ApplicationRecord
     published_state || get_original_unit_group&.published_state || Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development
   end
 
-  # If a script is in a unit group, use that unit group's instruction type. If not, use the units's instruction type
-  # If both are null, the unit should be teacher led
-  def get_instruction_type
-    get_original_unit_group&.instruction_type || instruction_type || Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
+  # If a script is in a unit group, use that unit group's instruction type.
+  # Otherwise, default to teacher led
+  def get_instruction_type(unit_group: get_original_unit_group)
+    unit_group&.instruction_type || Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
   end
 
-  # If a script is in a unit group, use that unit group's instructor_audience. If not, use the units's instructor_audience
-  # If both are null, the unit should be instructed by teacher
-  def get_instructor_audience
-    get_original_unit_group&.instructor_audience || instructor_audience || Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher
+  # If a script is in a unit group, use that unit group's instructor_audience.
+  # Otherwise, default to instructed by teacher
+  def get_instructor_audience(unit_group: get_original_unit_group)
+    unit_group&.instructor_audience || Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher
   end
 
-  # If a script is in a unit group, use that unit group's participant_audience. If not, use the units's participant_audience
-  # If both are null, the unit should be participated in by students
-  def get_participant_audience
-    get_original_unit_group&.participant_audience || participant_audience || Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student
+  # If a script is in a unit group, use that unit group's participant_audience.
+  # Otherwise, default to participated in by students
+  def get_participant_audience(unit_group: get_original_unit_group)
+    unit_group&.participant_audience || Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student
   end
 
   # Use the unit group's pilot_experiment if one exists
