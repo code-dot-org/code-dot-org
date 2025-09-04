@@ -24,14 +24,15 @@ const SOURCE_CHANGE_DELAY_MS = 500;
 
 export const HTMLPreview: React.FC = () => {
   const pageAction = getLabViewPageAction();
+  const isFullScreenView = useAppSelector(state => state.lab.isFullScreenView);
   const iframeHeightClass = useMemo(() => {
-    if (pageAction === 'share') {
-      return moduleStyles.shareViewPreviewIframeHeight;
+    if (pageAction === 'share' || isFullScreenView) {
+      return moduleStyles.fullScreenPreviewIframeHeight;
     } else if (pageAction === 'edit' || pageAction === 'view') {
       return moduleStyles.projectViewPreviewIframeHeight;
     }
     return moduleStyles.levelViewPreviewIframeHeight;
-  }, [pageAction]);
+  }, [pageAction, isFullScreenView]);
   const {levelProperties} = useCodebridgeContext();
   const iframeRef = useRef<HTMLIFrameElement | null>(null);
   const previewContainerRef = useRef<HTMLDivElement | null>(null);
