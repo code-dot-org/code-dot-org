@@ -1,6 +1,6 @@
 .resourcePanel {
   display: flex;
-  background-color: var(--background-neutral-primary);
+  background-color: var(--background-neutral-secondary);
   height: 100%;
 }
 
@@ -13,7 +13,6 @@
     margin-top: calc(2.5rem - 1px);
     display: flex;
     flex-direction: column;
-    background-color: var(--background-neutral-secondary);
   }
 
   // Doubling class name to increase specificity and override default button styles.
