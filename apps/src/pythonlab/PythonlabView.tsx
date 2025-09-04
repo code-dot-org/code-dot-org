@@ -31,10 +31,10 @@ import {
 } from '@cdo/apps/util/reduxHooks';
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
+import {AiTutorContext} from '../aiTutor/types';
 import CodebridgeRegistry from '../codebridge/CodebridgeRegistry';
-import {useAiTutor2} from '../lab2/views/components/aiTutor2/useAiTutor2';
 
-import getAiTutor2Context from './aiTutorHelper';
+import getAiTutorContextPromise from './aiTutorHelper';
 import ProjectTypePicker from './components/ProjectTypePicker';
 import {
   DEFAULT_PROJECT,
@@ -105,15 +105,15 @@ const PythonlabView: React.FunctionComponent<
   );
 
   const hasSource = !!source;
-  const isAiTutor2Enabled =
-    levelProperties.aiTutorAvailable ||
-    queryParams('show-ai-tutor2') === 'true';
+  const isAiTutor2Enabled = useMemo(() => {
+    return (
+      levelProperties.aiTutorAvailable ||
+      queryParams('show-ai-tutor2') === 'true'
+    );
+  }, [levelProperties.aiTutorAvailable]);
 
-  const isAiTutor2HintEnabled = queryParams('show-ai-tutor2-hint') === 'true';
-
-  const [aiTutor2Context, setAiTutor2Context] = useState<string | undefined>(
-    undefined
-  );
+  const [aiTutorContextPromise, setAiTutorContextPromise] =
+    useState<Promise<AiTutorContext>>();
 
   const dispatch = useAppDispatch();
 
@@ -190,20 +190,30 @@ const PythonlabView: React.FunctionComponent<
   );
 
   useEffect(() => {
-    setAiTutor2Context(
-      getAiTutor2Context(
-        source,
-        validationFile,
-        levelProperties.longInstructions,
-        miniAppName
-      )
+    console.log(
+      `🤖: useEffect : aiTutor2Context was updated:`,
+      aiTutorContextPromise
     );
-  }, [levelProperties.longInstructions, source, validationFile, miniAppName]);
+  }, [aiTutorContextPromise]);
 
-  const [askAiTutor2, AiTutor2Response] = useAiTutor2(
-    isAiTutor2HintEnabled,
-    'hint'
-  );
+  useEffect(() => {
+    if (isAiTutor2Enabled) {
+      setAiTutorContextPromise(
+        getAiTutorContextPromise(
+          source,
+          validationFile,
+          levelProperties.longInstructions,
+          miniAppName
+        )
+      );
+    }
+  }, [
+    levelProperties.longInstructions,
+    source,
+    validationFile,
+    miniAppName,
+    isAiTutor2Enabled,
+  ]);
 
   const onRun = async (
     runTests: boolean,
@@ -235,13 +245,13 @@ const PythonlabView: React.FunctionComponent<
     }
     dispatch(submitPredictResponse({appType: 'pythonlab'}));
 
-    if (isAiTutor2Enabled) {
-      // Ask a question to AITutor2.
-      askAiTutor2(
-        "What's wrong with my code, if anything?",
-        aiTutor2Context || ''
-      );
-    }
+    // if (isAiTutor2Enabled) {
+    //   // Ask a question to AITutor2.
+    //   askAiTutor2(
+    //     "What's wrong with my code, if anything?",
+    //     aiTutor2Context || ''
+    //   );
+    // }
   };
 
   return (
@@ -256,8 +266,7 @@ const PythonlabView: React.FunctionComponent<
           sendConsoleInput={sendInput}
           levelProperties={levelProperties}
           projectPickerSettings={projectPickerSettings}
-          aiTutor2Context={aiTutor2Context}
-          AiTutor2ResponseView={AiTutor2Response}
+          aiTutorContextPromise={aiTutorContextPromise}
         />
       )}
       {showProjectPickerModal && (

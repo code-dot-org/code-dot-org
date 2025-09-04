@@ -5,6 +5,7 @@ import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import classNames from 'classnames';
 import React, {useEffect, useMemo, useState} from 'react';
 
+import {AiTutorContext} from '@cdo/apps/aiTutor/types';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import AiTutor2Chat from '@cdo/apps/lab2/views/components/AiTutor2Chat';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
@@ -55,7 +56,7 @@ const tabInfo: {[key in Tabs]: {title: string; icon: string}} = {
 type ResourcePanelProps = InstructionsProps & {
   className?: string;
   headerClassName?: string;
-  aiTutor2Context?: string;
+  aiTutorContextPromise?: Promise<AiTutorContext>;
   rightHeaderContent?: React.ReactNode;
   includeFooterSpacing?: boolean;
   settings?: Setting[];
@@ -67,7 +68,7 @@ type ResourcePanelProps = InstructionsProps & {
 const ResourcePanel: React.FC<ResourcePanelProps> = ({
   className,
   headerClassName,
-  aiTutor2Context,
+  aiTutorContextPromise,
   rightHeaderContent,
   includeFooterSpacing = true,
   settings,
@@ -108,9 +109,11 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     if (
       (levelProperties.aiTutorAvailable ||
         queryParams('show-ai-tutor2') === 'true') &&
-      aiTutor2Context
+      aiTutorContextPromise
     ) {
-      tabMap[Tabs.AiTutor] = <AiTutor2Chat hiddenContext={aiTutor2Context} />;
+      tabMap[Tabs.AiTutor] = (
+        <AiTutor2Chat aiTutorContextPromise={aiTutorContextPromise} />
+      );
     }
 
     if (showRubric) {
@@ -118,7 +121,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     }
 
     return tabMap;
-  }, [instructionsProps, isUserTeacher, aiTutor2Context, showRubric]);
+  }, [instructionsProps, isUserTeacher, aiTutorContextPromise, showRubric]);
 
   useEffect(() => {
     if (!(currentTab in availableTabs)) {

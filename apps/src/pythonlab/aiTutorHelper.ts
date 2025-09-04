@@ -1,29 +1,28 @@
 import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
 
-import {painterDocsMarkdown} from '../aiTutor/docs/painter.md.js';
+import {fetchDocsForClass} from '../aiTutor/docContextApi';
+import {AiTutorContext} from '../aiTutor/types.js';
 import {ProjectFile} from '../codebridge/types';
 
 import PythonValidationTracker from './progress/PythonValidationTracker';
 
 // Return additional context for AiTutor2.
-const getAiTutor2Context = (
+export const getAiTutorContextPromise = async (
   source: MultiFileSource | undefined,
   validationFile: ProjectFile | undefined,
   longInstructions: string | undefined,
   miniAppName: string | undefined
-) => {
-  if (!source) {
-    return '';
-  }
-
-  const sourceCode = Object.entries(source.files)
-    .filter(
-      ([_, file]) =>
-        file.type !== ProjectFileType.VALIDATION &&
-        file.type !== ProjectFileType.SYSTEM_SUPPORT
-    )
-    .map(([_, file]) => file.contents)
-    .join('\n');
+): Promise<AiTutorContext> => {
+  const sourceCode = source
+    ? Object.entries(source.files)
+        .filter(
+          ([_, file]) =>
+            file.type !== ProjectFileType.VALIDATION &&
+            file.type !== ProjectFileType.SYSTEM_SUPPORT
+        )
+        .map(([_, file]) => file.contents)
+        .join('\n')
+    : undefined;
 
   const validationContents = validationFile?.contents;
 
@@ -31,17 +30,31 @@ const getAiTutor2Context = (
     PythonValidationTracker.getInstance().getValidationResults()
   );
 
-  const neighborhoodContext =
-    miniAppName !== `neighborhood`
-      ? []
-      : [
-          'Here is some documentation for the Neighborhood (Painter) API used in this lab (as markdown).  IMPORTANT -  Please assume the student is not looking at this documentation but provide helpful answers based on it.  If you want to reference it make sure the student knows how to view the documentation for the current level (it is available by clicking the documentation button above the code editor with the book icon):',
-          painterDocsMarkdown,
-        ];
+  const documentation =
+    miniAppName === 'neighborhood'
+      ? await fetchDocsForClass('painter')
+      : undefined;
 
-  console.log('🤖: neighborhoodContext', neighborhoodContext);
+  return {
+    sourceCode,
+    validationContents,
+    validationResults,
+    longInstructions,
+    documentation,
+  };
+};
 
-  const context = [
+// TODO: change the location of this to somewher emore generic, and update the wording -> system prompt
+export const buildHiddenContextString = (context: AiTutorContext) => {
+  const {
+    sourceCode,
+    validationContents,
+    validationResults,
+    longInstructions,
+    documentation,
+  } = context;
+
+  const hiddenContextString = [
     'Here is my code:',
     sourceCode,
     ...(validationContents
@@ -55,10 +68,13 @@ const getAiTutor2Context = (
       : []),
     'And here are the instructions:',
     longInstructions,
-    ...neighborhoodContext,
+    'And here is the documentation:',
+    documentation,
   ].join('\n\n');
 
-  return context;
+  console.log(`🤖: hiddenContextString:`, hiddenContextString);
+
+  return hiddenContextString;
 };
 
-export default getAiTutor2Context;
+export default getAiTutorContextPromise;
