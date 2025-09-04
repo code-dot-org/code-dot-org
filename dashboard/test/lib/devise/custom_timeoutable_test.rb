@@ -25,7 +25,7 @@ class Devise::Models::CustomTimeoutableTest < ActiveSupport::TestCase
       end
 
       it 'returns 24 hours' do
-        _(timeout_in).must_equal 24.hours
+        _(timeout_in).must_equal Devise::Models::CustomTimeoutable::RESTRICTED_USER_TIMEOUT
       end
     end
   end

@@ -7,11 +7,13 @@ module Devise
     module CustomTimeoutable
       extend ActiveSupport::Concern
 
+      RESTRICTED_USER_TIMEOUT = 24.hours
+
       # Devise provides the timeout_in method. Override this functionality here
       # to set custom session timeout values for different users.
       def timeout_in
         if Policies::Lti.restricted_user?(self)
-          return 24.hours
+          return RESTRICTED_USER_TIMEOUT
         end
 
         self.class.timeout_in
