@@ -27,9 +27,6 @@ export function getNewStaticCategory(
 ): GoogleBlockly.utils.toolbox.StaticCategoryInfo {
   return {
     kind: 'category',
-    // name is not localized upon saving, because levelbuilder is English only.
-    // Instead, we localize the category names when loading the toolbox.
-    // See prepareToolboxCategories().
     name,
     cssconfig: undefined,
     contents: [] as GoogleBlockly.utils.toolbox.ToolboxItemInfo[],
@@ -51,9 +48,6 @@ export function getNewDynamicCategory(
   return {
     kind: 'category',
     custom: DYNAMIC_CATEGORY_OPTIONS[name],
-    // name is not localized upon saving, because levelbuilder is English only.
-    // Instead, we localize the category names when loading the toolbox.
-    // See prepareToolboxCategories().
     name,
     cssconfig: undefined,
     id: name,
