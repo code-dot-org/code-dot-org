@@ -107,6 +107,8 @@ module AichatAiHelper
 
     temperature = aichat_model_customizations['temperature'].to_f
 
+    http_read_timeout = aichat_model_customizations['maxPollingTimeSeconds']
+
     # System prompt - string or nil.
     system_prompt = aichat_model_customizations['systemPrompt']
 
@@ -119,7 +121,7 @@ module AichatAiHelper
     config, request, context = get_config_request_context(stored_messages, new_message, temperature, system_prompt, retrieval_contexts,  model_id, level_id, encrypted_channel_id, user_id, project_id)
 
     begin
-      response = client.get_response_text(config, request, context)
+      response = client.get_response_text(config, request, context, http_read_timeout)
     rescue Net::ReadTimeout
       raise OpenaiUserInputResponseTimeout.new("Timeout waiting for AI client to provide response to user input.")
     end

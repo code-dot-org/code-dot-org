@@ -16,6 +16,8 @@ import {
 // This type is the union of all the valid AI Model IDs.
 export type AiChatModelIdType = ValueOf<typeof AiChatModelIds>;
 
+const maxPollingTimeSeconds = 60;
+
 export default async function askAi(
   message: string,
   currentLevelId: number | null,
@@ -49,13 +51,15 @@ export default async function askAi(
     ...EMPTY_AI_CUSTOMIZATIONS,
     selectedModelId: aiTutorModelId,
     systemPrompt: '',
+    maxPollingTimeSeconds,
   };
 
   const messages = await postAichatCompletionMessage(
     newUserMessage,
     [],
     aiCustomizations,
-    aichatContext
+    aichatContext,
+    maxPollingTimeSeconds * 1000
   );
 
   return messages;
