@@ -315,13 +315,15 @@ class ScriptLevelTest < ActiveSupport::TestCase
     sl = create_script_level_with_ancestors({assessment: false})
     sl_other = create_script_level_with_ancestors({levels: sl.levels})
 
+    unit_group = create(:unit_group, :with_unit, unit: sl_other.script)
     User.track_level_progress(
       user_id: student.id,
       level_id: sl_other.levels[0].id,
       script_id: sl_other.script.id,
       new_result: ActivityConstants::BEST_PASS_RESULT,
       submitted: true,
-      level_source_id: nil
+      level_source_id: nil,
+      unit_group: unit_group
     )
 
     summary = sl.summarize_for_teacher_panel(student, teacher)

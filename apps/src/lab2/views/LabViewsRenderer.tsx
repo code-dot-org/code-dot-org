@@ -3,15 +3,18 @@
  * currently active Lab (determined by the current app name). This
  * helps facilitate level-switching between labs without page reloads.
  */
-import React, {Suspense} from 'react';
+import React, {Suspense, useEffect} from 'react';
 
-import {getCurrentScriptLevelId} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {PERMISSIONS} from '@cdo/apps/lab2/constants';
 import {useInitialLabTheme} from '@cdo/apps/lab2/hooks/useInitialLabTheme';
 import ProgressContainer from '@cdo/apps/lab2/progress/ProgressContainer';
 import {getAppOptionsViewingExemplar} from '@cdo/apps/lab2/projects/utils';
-import {getLabViewPageAction} from '@cdo/apps/lab2/utils';
+import {
+  getLabViewPageAction,
+  isUsingResourcePanel,
+  getIsLabViewBlocked,
+} from '@cdo/apps/lab2/utils';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {lab2EntryPoints} from '../../../lab2EntryPoints';
@@ -22,8 +25,6 @@ import Loading from './Loading';
 
 import moduleStyles from './lab-views-renderer.module.scss';
 
-const hideExtraLinks = queryParams('hide-extra-links') === 'true';
-
 const LabViewsRenderer: React.FunctionComponent = () => {
   const levelProperties = useAppSelector(state => state.lab.levelProperties);
   const initialSources = useAppSelector(state => state.lab.initialSources);
@@ -31,14 +32,13 @@ const LabViewsRenderer: React.FunctionComponent = () => {
   const currentAppName = levelProperties?.appName;
   const exemplarSources = levelProperties?.exemplarSources;
   const levelId = levelProperties?.id;
-  const scriptLevelId = useAppSelector(getCurrentScriptLevelId);
 
-  const isBlockedAbuse = useAppSelector(state => state.lab.isBlockedAbuse);
+  const isBlockedAbuse = useAppSelector(state => !!state.lab.isBlockedAbuse);
   const projectSharingDisabled = useAppSelector(
-    state => state.lab.projectSharingDisabled
+    state => !!state.lab.projectSharingDisabled
   );
   const isTeacherOfProjectOwner = useAppSelector(
-    state => state.lab.isTeacherOfProjectOwner
+    state => !!state.lab.isTeacherOfProjectOwner
   );
   const isOwner = useAppSelector(state => state.lab.channel?.isOwner || false);
   const isProjectValidator = useAppSelector(state =>
@@ -48,32 +48,39 @@ const LabViewsRenderer: React.FunctionComponent = () => {
   const pageAction = getLabViewPageAction() || '';
 
   const isViewingExemplar = getAppOptionsViewingExemplar();
+  const isProjectLevel = levelProperties?.isProjectLevel || false;
+  const hideExtraLinks =
+    queryParams('hide-extra-links') === 'true' ||
+    isUsingResourcePanel(currentAppName || '', isProjectLevel);
 
   useInitialLabTheme({
     currentAppName,
     levelProperties,
   });
 
-  const isBlocked = isBlockedAbuse || projectSharingDisabled;
-  const hasElevatedPrivileges =
-    isProjectValidator || isOwner || isTeacherOfProjectOwner;
-
-  const blockLabView = () => {
-    if (!currentAppName) return true;
-    if (!isBlocked) return false;
-
-    // If a project is blocked and in share view, do not render the lab view.
-    if (pageAction === 'share') {
-      return true;
+  useEffect(() => {
+    const footer = document.getElementById('page-small-footer');
+    // The resource panel has includes copyright and language, so we hide the footer.
+    // We control this here so the footer will show up on levels that do not use the resource panel,
+    // such as panels levels. The footer is controlled by the server, so we need to show/hide it here
+    // to ensure it will show up when we switch to a level that does not use the resource panel.
+    if (isUsingResourcePanel(currentAppName || '', isProjectLevel)) {
+      footer?.classList.add(moduleStyles.hiddenFooter);
+    } else if (footer?.classList.contains(moduleStyles.hiddenFooter)) {
+      footer.classList.remove(moduleStyles.hiddenFooter);
     }
-    // If a project is blocked and in view/edit mode, do not render the lab view if the user does not have view/edit access.
-    if (['view', 'edit'].includes(pageAction) && !hasElevatedPrivileges) {
-      return true;
-    }
-    return false;
-  };
+  }, [currentAppName, isProjectLevel]);
 
-  if (blockLabView()) {
+  const blockLabView = getIsLabViewBlocked(
+    pageAction,
+    isBlockedAbuse,
+    projectSharingDisabled,
+    isOwner,
+    isTeacherOfProjectOwner,
+    isProjectValidator
+  );
+
+  if (!currentAppName || blockLabView) {
     return null;
   }
   // Show a fallback no exemplar page if we are trying to view
@@ -105,7 +112,6 @@ const LabViewsRenderer: React.FunctionComponent = () => {
         {!hideExtraLinks && levelId && (
           <ExtraLinks
             levelId={levelId}
-            scriptLevelId={scriptLevelId}
             positionRightOfFooter={extraLinksButtonRightOfFooter}
           />
         )}

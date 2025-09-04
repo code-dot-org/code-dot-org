@@ -62,6 +62,7 @@ const CODE_STUDIO_ENTRIES = {
   'devise/registrations/edit': './src/sites/studio/pages/devise/registrations/edit.js',
   'devise/registrations/personalization_information': './src/sites/studio/pages/devise/registrations/personalization_information.js',
   'devise/registrations/account_type': './src/sites/studio/pages/devise/registrations/account_type.js',
+  'devise/registrations/test_mailjet_page': './src/sites/studio/pages/devise/registrations/test_mailjet_page.js',
   'gates/logged_out': './src/sites/studio/pages/gates/logged_out.js',
   'gates/teacher_account_required': './src/sites/studio/pages/gates/teacher_account_required.js',
   'essential': './src/sites/studio/pages/essential.js',

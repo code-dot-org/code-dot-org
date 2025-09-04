@@ -1,5 +1,9 @@
 <Gamelab>
   <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2023-04-04T22:36:40.000Z",
+  "level_num": "custom",
+  "user_id": 324,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -51,7 +55,7 @@
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "true",
     "pause_animations_by_default": "false",
-    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"147cf4d8-54fb-462a-a536-96dc879fc0ea\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"147cf4d8-54fb-462a-a536-96dc879fc0ea\": {\r\n      \"name\": \"greenAlien\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/0ZA2mU0GDgAh.ZL5FMn7lTLtsNFkLlwh/category_characters/alienGreen_jump.png\",\r\n      \"frameSize\": {\r\n        \"x\": 67,\r\n        \"y\": 93\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"0ZA2mU0GDgAh.ZL5FMn7lTLtsNFkLlwh\"\r\n    }\r\n  }\r\n}",
+    "start_animations": "{\n  \"orderedKeys\": [\n    \"147cf4d8-54fb-462a-a536-96dc879fc0ea\"\n  ],\n  \"propsByKey\": {\n    \"147cf4d8-54fb-462a-a536-96dc879fc0ea\": {\n      \"name\": \"greenAlien\",\n      \"sourceUrl\": \"/api/v1/animation-library/0ZA2mU0GDgAh.ZL5FMn7lTLtsNFkLlwh/category_characters/alienGreen_jump.png\",\n      \"frameSize\": {\n        \"x\": 67,\n        \"y\": 93\n      },\n      \"frameCount\": 1,\n      \"looping\": true,\n      \"frameDelay\": 2,\n      \"version\": \"0ZA2mU0GDgAh.ZL5FMn7lTLtsNFkLlwh\"\n    }\n  }\n}",
     "long_instructions": "# Sprites in the Draw Loop\r\n\r\nThe draw loop creates an animation effect by changing what is drawn by a small amount each time the draw function runs. Students. will be able to animate their sprites by changing sprite properties in the draw loop.\r\n\r\n**Misconception Alert!**\r\n\r\nWhen the draw loop runs, it does not \"clear\" out previous drawing, so it will continue to show anything that has not been covered up by the new draw loop. If students do not add a \"background\" at the beginning of the draw loop, they will still see all the images drawn to the screen previously.\r\n\r\n# Do This\r\n1) Run the code to see how it works.\r\n2) Consider why some code is inside the draw loop and some code is outside.\r\n3) Try changing the numbers in the random number block and running the program again.",
     "parent_level_id": 20714,
     "name_suffix": "_2023",
@@ -73,16 +77,9 @@
     "encrypted": "false",
     "mini_rubric": "false",
     "libraries_enabled": "false",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "preload_asset_list": null
   },
-  "game_id": 50,
   "published": true,
-  "created_at": "2023-04-04T22:36:40.000Z",
-  "level_num": "custom",
-  "user_id": 324,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2023-04-04T22:36:40.366+00:00\",\"changed\":[\"cloned from \\\"VPL-CSD-PILOT-S22-CI-CSD U3 dancing alien_2021\\\"\"],\"cloned_from\":\"VPL-CSD-PILOT-S22-CI-CSD U3 dancing alien_2021\"},{\"changed_at\":\"2023-04-05 23:36:08 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>

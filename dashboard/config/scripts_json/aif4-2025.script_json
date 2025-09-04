@@ -35,7 +35,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-08-19 18:24:08 UTC",
+    "serialized_at": "2025-08-25 23:59:54 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -3427,8 +3427,19 @@
       }
     },
     {
-      "key": "41db16bf-4890-440a-beda-afc057e0b54d",
+      "key": "2111aa02-cd31-496e-bc74-61ad64d07619",
       "position": 1,
+      "properties": {
+        "description": "**How do we create a network security risk assessment?**"
+      },
+      "seeding_key": {
+        "activity_section.key": "2111aa02-cd31-496e-bc74-61ad64d07619",
+        "lesson_activity.key": "6d72c70d-c8be-4638-831c-d0a0c7f922df"
+      }
+    },
+    {
+      "key": "41db16bf-4890-440a-beda-afc057e0b54d",
+      "position": 2,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.*What vulnerabilities would you look for first, and why? \nHow might these weaknesses affect the company if exploited?*\n- *What vulnerabilities would you look for first, and why?*\n- *How might these weaknesses affect the company if exploited?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should explore both technical and human vulnerabilities, considering how cybercriminals exploit weak security measures. Guide students to discuss the real-world impact of these breaches on businesses and individuals, including financial loss, reputational damage, and privacy concerns.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day",
         "duration": "5",
@@ -3441,7 +3452,7 @@
     },
     {
       "key": "34397bf1-56ad-44ba-a853-c4ecfa3c531c",
-      "position": 2,
+      "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:**  Give each student a copy of the Network Security Risk Assessment Project Planning Guide. This will guide them through all three days of the project.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain to students that for the next three days, they will work as network security analysts. This means they will select a company scenario, identify vulnerabilities, assess their societal and ethical impacts, and propose both traditional and AI-driven solutions. Along the way, they will refine their recommendations through peer review.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the project requirements and answer any questions.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to read the project rubric and hold on to any questions they may have.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What do you notice about the project rubric?*\n- *What does success look like for this project?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students share what they notice about the project requirements and rubric and identify the tasks they will need to complete for this project.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Walk through the first example to model what quality assessment looks like for Critical Vulnerabilities and how it connects to the rubric.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Walk through the example of societal / ethical impact risk assessment to model what quality work looks like and how it connects to the rubric.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Walk through the example of critical vulnerabilities risk assessment to model what quality work looks like and how it connects to the rubric.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What barriers do you anticipate to achieving success on this project?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students identify barriers they anticipate and share any questions they have about the project.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the steps students will take on Day 1.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the steps students will take on Day 2.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the steps students will take on Day 3.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to Lesson 11, Level 1 to choose a company scenario. Instruct them to complete the graphic organizer on their Project Planning Guide for their chosen company. ",
         "duration": "30",
@@ -3455,7 +3466,7 @@
     },
     {
       "key": "f2c8ee81-55bd-4dde-aa7f-09134a9d26a8",
-      "position": 3,
+      "position": 4,
       "properties": {
         "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:**  As students identify vulnerabilities, check that they are categorizing them correctly (technical, human, systemic). If students list general risks, ask: ‘How does this vulnerability actually lead to a security breach?’ Encourage deeper thinking by asking: ‘What would happen if this vulnerability were exploited? Who would be affected?'\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What types of vulnerabilities came up the most?*\n- *Which ones do you think pose the biggest risks, and why?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should identify patterns in network vulnerabilities across different scenarios and evaluate which pose the most significant risks. Guide them to justify their reasoning using examples, considering which vulnerabilities are most easily exploited, which have the greatest impact, and which are hardest to mitigate."
       },
@@ -3466,7 +3477,7 @@
     },
     {
       "key": "e47bcc13-bb32-4f32-bd1b-a92e134756fc",
-      "position": 4,
+      "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How do we create a network security risk assessment?*\n- Use the Modified Whip Around protocol to facilitate this discussion.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students explain the key components of a Network Security Risk Assessment, including examples from their own learning from the day’s lesson.",
         "duration": "10",
@@ -3485,7 +3496,7 @@
     },
     {
       "key": "3e379d52-5034-4d7b-b499-3ffa4d1ba56d",
-      "position": 5,
+      "position": 6,
       "properties": {
       },
       "seeding_key": {
@@ -3494,8 +3505,19 @@
       }
     },
     {
-      "key": "ec58e58b-bca3-422f-ade5-5fae9b6703c7",
+      "key": "2f08cf89-6810-4e74-83f4-16c8f18000b3",
       "position": 1,
+      "properties": {
+        "description": "**How can we ensure our security recommendations are effective?**"
+      },
+      "seeding_key": {
+        "activity_section.key": "2f08cf89-6810-4e74-83f4-16c8f18000b3",
+        "lesson_activity.key": "b08fa003-cc19-4977-a1a0-44cca5d97332"
+      }
+    },
+    {
+      "key": "ec58e58b-bca3-422f-ade5-5fae9b6703c7",
+      "position": 2,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What kind of assistance would you hope AI could provide?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Activate prior knowledge by encouraging students to brainstorm potential AI applications in cybersecurity before being introduced to specific AI-driven solutions.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "duration": "5",
@@ -3508,7 +3530,7 @@
     },
     {
       "key": "246b664f-5480-4ecd-8cb5-4ffdc352e8bb",
-      "position": 2,
+      "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review the steps students will take on Day 2.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Display the steps students will take as they engage with the AI chatbots to explore how AI is transforming cybersecurity, engaging with specialized AI chatbots to see how these tools detect threats, respond to attacks, and protect networks. Remind students to think about how these AI-driven solutions could strengthen the security recommendations in your risk assessment project as they interact with the chatbots.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to Lesson 11, Level 2 to learn about four possible AI-driven solutions to network vulnerabilities. ",
         "duration": "30",
@@ -3522,7 +3544,7 @@
     },
     {
       "key": "fba16366-01bc-4ecf-b955-192c8d6f6072",
-      "position": 3,
+      "position": 4,
       "properties": {
         "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate**: Listen for misconceptions that AI eliminates the need for human oversight. Ask: ‘Would this AI tool catch every security threat? Why or why not?’ If students struggle to connect AI to specific vulnerabilities, prompt them to revisit their case study and ask: ‘How would this AI solution specifically help prevent or detect this threat?’",
         "tips": [
@@ -3539,7 +3561,7 @@
     },
     {
       "key": "a33e02fb-72d1-4afb-9dfd-b7ae375eb395",
-      "position": 4,
+      "position": 5,
       "properties": {
       },
       "seeding_key": {
@@ -3549,7 +3571,7 @@
     },
     {
       "key": "5420af55-b4cd-41b8-8603-9293b7c1cae9",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Describe each of the AI-Driven solutions and ask students to connect a tool to their company’s biggest risk."
       },
@@ -3560,7 +3582,7 @@
     },
     {
       "key": "d0f416e5-4214-4850-ac96-f0491fd4537b",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to begin drafting their Network Security Risk Assessment using their Project Planning Guide. Encourage students to focus on clear, specific details about their chosen scenario, vulnerabilities, mitigation strategies, and societal impacts.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students are working, check for depth and specificity—are they identifying vulnerabilities with enough detail? Ask questions like: “How does this vulnerability affect the company and its customers?” Guide students struggling with AI solutions by prompting: \"Which AI-driven strategy fits best with this risk? Why?\" Redirect students who list solutions without explanation by asking: “How does this mitigation strategy actually reduce the risk?”",
         "tips": [
@@ -3581,7 +3603,7 @@
     },
     {
       "key": "97cc47af-4e9e-47d0-88e5-40ce09c3c984",
-      "position": 7,
+      "position": 8,
       "properties": {
       },
       "seeding_key": {
@@ -3591,7 +3613,7 @@
     },
     {
       "key": "812cac0b-7688-44d0-8e3d-ba2ebf88c9cc",
-      "position": 8,
+      "position": 9,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:**  *How can AI enhance network security?*\n- Use the Modified Whip Around protocol to facilitate this discussion.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should evaluate how AI-driven security tools improve threat detection and mitigation. Encourage them to compare AI’s capabilities to traditional security methods and consider how AI can support (but not replace) human decision-making in cybersecurity. Guide students to connect these insights to real-world applications in their risk assessments.",
         "duration": "10",
@@ -3603,8 +3625,19 @@
       }
     },
     {
-      "key": "3ce28ff4-9c13-4d50-9623-d3e237a8ca08",
+      "key": "e5ef0cc3-d75a-4a4f-98fe-750b428ed706",
       "position": 1,
+      "properties": {
+        "description": "**What makes a network risk assessment thorough and actionable?**"
+      },
+      "seeding_key": {
+        "activity_section.key": "e5ef0cc3-d75a-4a4f-98fe-750b428ed706",
+        "lesson_activity.key": "7d243d36-3e48-4142-aeef-3788f35c37f0"
+      }
+    },
+    {
+      "key": "3ce28ff4-9c13-4d50-9623-d3e237a8ca08",
+      "position": 2,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:**  Click through the animated slide to display the prompts.\n- *What have you learned?*\n- *How has your understanding of network vulnerabilities and solutions changed?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:**  Students reflect on their learning by identifying key takeaways about network vulnerabilities, the consequences of those vulnerabilities, mitigation strategies, and AI-driven solutions.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day",
         "duration": "5",
@@ -3617,7 +3650,7 @@
     },
     {
       "key": "9c223595-d04e-4db7-9bb8-3327f5b2c2f2",
-      "position": 2,
+      "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Put students into groups of two to conduct peer reviews. Either assign peer-review partners or direct students to find a partner and exchange drafts. Remind them to use their Project Planning Guide to structure their feedback, making sure it is specific and constructive.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:**  As students work, check that both partners are giving and receiving feedback. To ensure students are engaged and on-task, ask probing questions :*“What’s one suggestion you’ve given your partner to improve their assessment?”*Listen for specific feedback, not just “this looks good” or “I agree.” Redirect with:*“Can you explain why this solution is effective or suggest an alternative?”*\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Direct students to navigate to Lesson 11, Level 3 in order to complete their final Network Security Risk Assessment. Once students have finished, make sure that they prepare a 30-second oral summary to share with a classmate.",
         "duration": "30",
@@ -3631,7 +3664,7 @@
     },
     {
       "key": "7e3042b3-0679-4a99-ade9-26f5e4ea9c6f",
-      "position": 3,
+      "position": 4,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Divide students into two equal groups and arrange them into two lines, facing each other. Explain the students that they will take turns delivering a 30-second summary of their project and receiving feedback from the peer they are facing. Direct students to use the prompts on the screen to guide their responses if needed, and listen carefully to your partner’s insights. After 5 minutes, they will switch roles. After both pairs have shared, one line will rotate down and they will share again with a new partner.",
         "tips": [
@@ -3652,7 +3685,7 @@
     },
     {
       "key": "d00e4259-128f-438e-a341-9fb8aa07ca56",
-      "position": 4,
+      "position": 5,
       "properties": {
         "progression_name": "Survey"
       },

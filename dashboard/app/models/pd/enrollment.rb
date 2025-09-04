@@ -205,6 +205,15 @@ class Pd::Enrollment < ApplicationRecord
     end
 
     update!(survey_sent_at: Time.zone.now)
+
+    begin
+      test_pd_mailjet_email = DCDO.get('test_pd_mailjet_email', false)
+      if test_pd_mailjet_email && test_pd_mailjet_email == user.email
+        Pd::WorkshopMailjetMailer.send_teacher_post_workshop_survey(self, user, false)
+      end
+    rescue => exception
+      CDO.log.warn "PD MailJet Error: #{exception.message}"
+    end
   end
 
   # TODO: Once we're satisfied with the first/last name split data,
@@ -310,6 +319,12 @@ class Pd::Enrollment < ApplicationRecord
     self.application_id = nil
     self.deleted_at = Time.now
     save!
+  end
+
+  def summarize_for_workshop
+    {
+      code: code,
+    }
   end
 
   protected def autoupdate_user_field

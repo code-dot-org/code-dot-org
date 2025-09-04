@@ -714,6 +714,7 @@ class AbilityTest < ActiveSupport::TestCase
   test 'student of verified teacher in CSA section can access main javabuilder' do
     teacher = create(:authorized_teacher)
     csa_script = create(:csa_script)
+    create(:single_unit_course, unit: csa_script)
     section = create(:section, user: teacher, login_type: 'word', script: csa_script)
     student = create(:follower, section: section).student_user
 

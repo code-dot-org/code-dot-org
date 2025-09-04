@@ -1,4 +1,3 @@
-import {useInMemoryEntities} from '@contentful/experiences-sdk-react';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Link from '@mui/material/Link';
@@ -6,6 +5,7 @@ import Typography from '@mui/material/Typography';
 import {EntryFields} from 'contentful';
 import {useId, useMemo} from 'react';
 
+import {resolveContentfulLink} from '@/contentful/resolveLink';
 import {getAbsoluteImageUrl} from '@/selectors/contentful/getImage';
 import {LinkEntry} from '@/types/contentful/entries/Link';
 import {Entry} from '@/types/contentful/Entry';
@@ -69,18 +69,14 @@ const LogoCollection: React.FC<LogoCollectionProps> = ({
     );
   }
 
-  const inMemoryEntities = useInMemoryEntities();
-
   const logosData = useMemo(() => {
     const data = logos.filter(Boolean).map(({fields}) => {
       const {title, logoImage, primaryLinkRef} = fields;
 
-      const resolvedLogoImage = inMemoryEntities.maybeResolveLink(
-        logoImage,
-      ) as ExperienceAsset;
-      const resolvedPrimaryLinkRef = inMemoryEntities.maybeResolveLink(
-        primaryLinkRef,
-      ) as LinkEntry;
+      const resolvedLogoImage =
+        resolveContentfulLink<ExperienceAsset>(logoImage);
+      const resolvedPrimaryLinkRef =
+        resolveContentfulLink<LinkEntry>(primaryLinkRef);
 
       const url = resolvedPrimaryLinkRef?.fields?.primaryTarget || '';
       const getImage = () => (

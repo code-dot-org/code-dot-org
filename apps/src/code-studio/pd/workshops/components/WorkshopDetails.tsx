@@ -30,7 +30,9 @@ interface WorkshopDetailsProps
     | 'notes'
     | 'courseOfferings'
     | 'facilitators'
-  > {}
+  > {
+  isUserEnrolled?: boolean;
+}
 
 /** Component to display the details of a workshop. */
 const WorkshopDetails: React.FC<WorkshopDetailsProps> = ({
@@ -43,6 +45,7 @@ const WorkshopDetails: React.FC<WorkshopDetailsProps> = ({
   notes,
   courseOfferings,
   facilitators,
+  isUserEnrolled,
 }) => {
   return (
     <section className={moduleStyles.workshopDetails}>
@@ -72,7 +75,10 @@ const WorkshopDetails: React.FC<WorkshopDetailsProps> = ({
         <Heading3 visualAppearance={'heading-xs'}>
           Sessions in This Workshop
         </Heading3>
-        <WorkshopSessionsList sessions={sessions} />
+        <WorkshopSessionsList
+          sessions={sessions}
+          isUserEnrolled={isUserEnrolled}
+        />
       </section>
 
       <section className={moduleStyles.workshopDetailsItem}>

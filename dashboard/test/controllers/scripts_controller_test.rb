@@ -91,15 +91,16 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test 'canonical url is added if it is a single unit course' do
-    unit = create(:script, family_name: 'my-script')
-    course = create(:single_unit_course, unit: unit, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    sign_in create(:teacher)
+    course2024 = create(:single_unit_course, family_name: 'my-family', version_year: '2024', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    course2025 = create(:single_unit_course, family_name: 'my-family', version_year: '2025', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
 
     get :show, params: {
-      course_course_name: course.name,
+      course_course_name: course2024.name,
       position: 1
     }
     assert_response :ok
-    assert_includes(@response.body, "<link rel=\"canonical\" href=\"//test-studio.code.org/courses/#{course.name}/units/1")
+    assert_includes(@response.body, "<link rel=\"canonical\" href=\"//test-studio.code.org/courses/#{course2025.name}/units/1")
   end
 
   test 'canonical url is not added if is not single unit course' do
@@ -121,13 +122,13 @@ class ScriptsControllerTest < ActionController::TestCase
     not_admin = create(:user)
     sign_in not_admin
     @migrated_unit.update!(login_required: true)
-    get :show, params: {course_course_name: @migrated_unit.unit_group.name, position: 1}
+    get :show, params: {course_course_name: @migrated_unit.get_original_unit_group.name, position: 1}
     assert_response :success
   end
 
   test "should get show if login required and not signed in" do
     @migrated_unit.update!(login_required: true)
-    get :show, params: {course_course_name: @migrated_unit.unit_group.name, position: 1}
+    get :show, params: {course_course_name: @migrated_unit.get_original_unit_group.name, position: 1}
     assert_response :success
   end
 
@@ -138,21 +139,21 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test "should get show if not signed in" do
-    get :show, params: {course_course_name: @migrated_unit.unit_group.name, position: 1}
+    get :show, params: {course_course_name: @migrated_unit.get_original_unit_group.name, position: 1}
     assert_response :success
   end
 
   test "should get show if not admin" do
     not_admin = create(:user)
     sign_in not_admin
-    get :show, params: {course_course_name: @migrated_unit.unit_group.name, position: 1}
+    get :show, params: {course_course_name: @migrated_unit.get_original_unit_group.name, position: 1}
     assert_response :success
   end
 
   test 'should not get show if admin' do
     admin = create(:admin)
     sign_in admin
-    get :show, params: {course_course_name: @migrated_unit.unit_group.name, position: 1}
+    get :show, params: {course_course_name: @migrated_unit.get_original_unit_group.name, position: 1}
     assert_response :forbidden
   end
 

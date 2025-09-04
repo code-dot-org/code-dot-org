@@ -9,9 +9,20 @@ import {AnyAction} from 'redux';
 import {sendProgressReport} from '@cdo/apps/code-studio/progressRedux';
 import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {TestResults} from '@cdo/apps/constants';
+import {setIsBlockedAbuse} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
-import {ProjectSources, MultiFileSource} from '@cdo/apps/lab2/types';
+import {
+  ProjectSources,
+  MultiFileSource,
+  FileId,
+  FolderId,
+} from '@cdo/apps/lab2/types';
+import {
+  deleteFileHelper,
+  deleteFolderHelper,
+} from '@cdo/apps/lab2/utils/multiFileSourceEditUtils';
 import {RootState} from '@cdo/apps/types/redux';
+import HttpClient from '@cdo/apps/util/HttpClient';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
@@ -170,14 +181,92 @@ export const saveFileThunk = makeFileOperationThunk(saveFile);
 export const setFileTypeThunk = makeFileOperationThunk(setFileType);
 export const setActiveFileThunk = makeFileOperationThunk(activateFile);
 export const closeFileThunk = makeFileOperationThunk(closeFile);
-export const deleteFileThunk = makeFileOperationThunk(deleteFile);
 export const moveFileThunk = makeFileOperationThunk(moveFile);
 export const moveFolderThunk = makeFileOperationThunk(moveFolder);
 export const createNewFolderThunk = makeFileOperationThunk(createNewFolder);
 export const toggleOpenFolderThunk = makeFileOperationThunk(toggleOpenFolder);
-export const deleteFolderThunk = makeFileOperationThunk(deleteFolder);
 export const renameFolderThunk = makeFileOperationThunk(renameFolder);
 export const rearrangeFilesThunk = makeFileOperationThunk(rearrangeFiles);
+
+// Thunk for deleting a folder that handles unblocking of project if deleted folder contains flagged file.
+export const deleteFolderThunk = createAsyncThunk<
+  void,
+  {folderId: FolderId},
+  {dispatch: AppDispatch; state: RootState}
+>('lab2Project/deleteFolderThunk', async (payload, thunkAPI) => {
+  const state = thunkAPI.getState();
+  const projectSources = state.lab2Project.projectSources;
+  const isBlockedAbuse = state.lab.isBlockedAbuse;
+  const source = projectSources?.source as MultiFileSource;
+  const deleteResult = deleteFolderHelper({source, folderId: payload.folderId});
+  // Update the project sources.
+  thunkAPI.dispatch(deleteFolder(payload.folderId));
+  saveProjectIfEditable(thunkAPI.getState, thunkAPI.dispatch);
+
+  const {deletedFilesAssets} = deleteResult;
+
+  if (deletedFilesAssets) {
+    try {
+      for (const deletedFileAsset of deletedFilesAssets) {
+        await HttpClient.delete(deletedFileAsset.url);
+        if (deletedFileAsset.flagged && isBlockedAbuse) {
+          await unflagProjectChannel(
+            deletedFileAsset.channelId,
+            thunkAPI.dispatch
+          );
+        }
+      }
+    } catch (error) {
+      Lab2Registry.getInstance()
+        .getMetricsReporter()
+        .logError(
+          'Error deleting project asset (as part of folder deletion) from S3',
+          error as Error
+        );
+    }
+  }
+});
+
+// Thunk for deleting a file that handles unblocking of project if deleted file was flagged.
+export const deleteFileThunk = createAsyncThunk<
+  void,
+  {fileId: FileId},
+  {dispatch: AppDispatch; state: RootState}
+>('lab2Project/deleteFileThunk', async (payload, thunkAPI) => {
+  const state = thunkAPI.getState();
+  const projectSources = state.lab2Project.projectSources;
+  const isBlockedAbuse = state.lab.isBlockedAbuse;
+
+  const source = projectSources?.source as MultiFileSource;
+
+  const deleteResult = deleteFileHelper({
+    source,
+    fileId: payload.fileId,
+  });
+
+  // Update the project sources.
+  thunkAPI.dispatch(deleteFile({fileId: payload.fileId}));
+  saveProjectIfEditable(thunkAPI.getState, thunkAPI.dispatch);
+  const {deletedFileAsset} = deleteResult;
+  // If the file has a URL (e.g., an uploaded asset), delete the asset from S3.
+  if (deletedFileAsset) {
+    try {
+      // In the case of a failure, we just end up with an orphaned file in S3.
+      await HttpClient.delete(deletedFileAsset.url);
+      // If the project is blocked for abuse, unblock the project if the abuse score is now < 15.
+      if (isBlockedAbuse) {
+        await unflagProjectChannel(
+          deletedFileAsset.channelId,
+          thunkAPI.dispatch
+        );
+      }
+    } catch (error) {
+      Lab2Registry.getInstance()
+        .getMetricsReporter()
+        .logError('Error deleting project asset from S3', error as Error);
+    }
+  }
+});
 
 // Save the current project sources to the project manager if we are not in a read-only state.
 // If the level status is not_tried and the project has been edited, we will also report the progress
@@ -188,6 +277,13 @@ function saveProjectIfEditable(
   forceSave: boolean = false,
   forceNewVersion: boolean = false
 ) {
+  const isLoadingProjectOrLevel = getState().lab.isLoadingProjectOrLevel;
+  if (isLoadingProjectOrLevel) {
+    // Don't save or do a progress report if we are still loading the project or level.
+    // The channel comes in before the new project code, so we can end up in a bad state
+    // if we try to save while loading.
+    return;
+  }
   const projectSources = getState().lab2Project.projectSources;
   const isReadOnly = isReadOnlyWorkspace(getState());
   const hasEdited = getState().lab2Project.hasEdited;
@@ -215,3 +311,33 @@ const debouncedStartedProgressReport = debounce(
   },
   100
 );
+
+const unflagProjectChannel = async (
+  channelId: string,
+  dispatch: AppDispatch
+) => {
+  try {
+    const body = JSON.stringify({type: 'unflag'});
+    const response = await HttpClient.post(
+      `/v3/channels/${channelId}/abuse/image`,
+      body,
+      true,
+      {'Content-Type': 'application/json; charset=UTF-8'}
+    );
+
+    // Get the updated abuse score from the response.
+    const responseData = await response.json();
+    const abuseScore = responseData.abuse_score;
+    // Only unblock if abuse score is now < 15.
+    if (abuseScore < 15) {
+      dispatch(setIsBlockedAbuse(false));
+    }
+  } catch (error) {
+    Lab2Registry.getInstance()
+      .getMetricsReporter()
+      .logError(
+        'Error unflagging project channel due to deletion of flagged project asset',
+        error as Error
+      );
+  }
+};

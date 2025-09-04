@@ -1,0 +1,26 @@
+{
+  "name": "joi-sandbox",
+  "script_names": [
+    "jois-sandbox-unit1",
+    "joi-playground"
+  ],
+  "original_script_names": [
+    "joi-playground",
+    "jois-sandbox-unit1"
+  ],
+  "published_state": "in_development",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "joi-sandbox",
+    "numbered_units": "auto",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

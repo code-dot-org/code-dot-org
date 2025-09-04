@@ -26,7 +26,7 @@ import {findChangedProperties, getNewRemoveId} from '../redux/utils';
 import {
   AiChatClientType,
   ChatAsset,
-  ChatButton,
+  ChatButtonComponent,
   ModelParameters,
 } from '../types';
 import {getAssetUrl, getShortName} from '../utils';
@@ -42,7 +42,7 @@ import moduleStyles from './chatWorkspace.module.scss';
 interface ChatWorkspaceProps {
   modelParameters: ModelParameters;
   clientType: AiChatClientType;
-  chatButtons?: ChatButton[];
+  chatButtons?: ChatButtonComponent[];
   hiddenContext?: string;
   onClear: () => void;
 

@@ -5,13 +5,15 @@ description 'description here'
 markdown <<MARKDOWN
 #Check for Understanding: Answer
 
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #B7E0E5; display: inline-block;">🚀 Additional Teacher Resource: <a href='https://www.canva.com/design/DAGvNt-cbGk/1hBKgfCeiM1NKJX9WIX7Ag/view?utm_content=DAGvNt-cbGk&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h4745770232#8' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Unit Vocabulary</a></p>
+
 <table style="width: 100%; border-collapse: separate; border-spacing: 20px; font-family: Arial, sans-serif;">
   <tr>
     <td style="width: 30%; background-color: #fff; border: 3px solid #ccc; padding: 20px; text-align: center; vertical-align: middle; border-radius: 10px;">
-      Personally Identifiable Information
+      Access Control
     </td>
     <td style="width: 65%; background-color: #fff; border: 3px solid #a7dff3; padding: 20px; text-align: center; vertical-align: middle; border-radius: 10px;">
-      a wireless access point that gives unauthorized access to secure networks
+      rules a system uses to decide what you’re allowed to do once you’re logged in
     </td>
   </tr>
   <tr>
@@ -19,7 +21,7 @@ markdown <<MARKDOWN
       Phishing
     </td>
     <td style="background-color: #fff; border: 3px solid #a7dff3; padding: 20px; text-align: center; border-radius: 10px;">
-      a technique that attempts to trick a user into providing personal information.
+      when someone pretends to be a trusted person or company in order to steal your personal information, like passwords or credit card numbers
     </td>
   </tr>
   <tr>
@@ -27,31 +29,31 @@ markdown <<MARKDOWN
       Decryption
     </td>
     <td style="background-color: #fff; border: 3px solid #a7dff3; padding: 20px; text-align: center; border-radius: 10px;">
-      pairs a public key for encryption and a private key for decryption
+      the process of using a key to turn encrypted data back into its original form
     </td>
   </tr>
   <tr>
     <td style="background-color: #fff; border: 3px solid #ccc; padding: 20px; text-align: center; border-radius: 10px;">
-      Rogue Access Point
+      Asymmetric encryption
     </td>
     <td style="background-color: #fff; border: 3px solid #a7dff3; padding: 20px; text-align: center; border-radius: 10px;">
-      a process that takes a secret message and reproduces the original plain text
+      encryption that uses two different keys: a public key to lock the message and a private key to unlock it
     </td>
   </tr>
     <tr>
     <td style="background-color: #fff; border: 3px solid #ccc; padding: 20px; text-align: center; border-radius: 10px;">
-      Public Key Encryption
+      CIA Triad
     </td>
     <td style="background-color: #fff; border: 3px solid #a7dff3; padding: 20px; text-align: center; border-radius: 10px;">
-      pairs a public key for encryption and a private key for decryption
+      a set of core rules for protecting information and stands for Confidentiality, Integrity, and Availability
     </td>
   </tr>
     <tr>
     <td style="background-color: #fff; border: 3px solid #ccc; padding: 20px; text-align: center; border-radius: 10px;">
-      Malware
+      Vulnerability
     </td>
     <td style="background-color: #fff; border: 3px solid #a7dff3; padding: 20px; text-align: center; border-radius: 10px;">
-      software intended to damage or to take partial control over a computing system
+      a weakness in a system that could be exploited by an attacker
     </td>
   </tr>
 </table>

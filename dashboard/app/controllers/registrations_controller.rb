@@ -5,6 +5,7 @@ require_relative '../../../shared/middleware/helpers/experiments'
 require 'metrics/events'
 require 'policies/lti'
 require 'queries/lti'
+require 'policies/devise/email_domains'
 
 class RegistrationsController < Devise::RegistrationsController
   before_action :require_no_authentication, only: [:account_type, :login_type, :finish_student_account, :finish_teacher_account, :new, :create, :cancel]
@@ -36,6 +37,13 @@ class RegistrationsController < Devise::RegistrationsController
   # Submit step 1 of the signup process for creating an email/password account.
   #
   def begin_sign_up
+    domain = params[:user][:email].split('@')[1] if params[:user][:email].present?
+    if Policies::Devise::EmailDomains::DISALLOWED_DOMAINS.include?(domain)
+      render json: {
+        error: I18n.t('devise.registrations.disallowed_domain', domain: domain)
+      }, status: :forbidden
+      return
+    end
     @user = User.new(begin_sign_up_params)
     @user.country_code = @country_code
     @user.validate_for_finish_sign_up
@@ -453,11 +461,38 @@ class RegistrationsController < Devise::RegistrationsController
   end
 
   #
+
   # GET /users/personalization_information
   #
   def personalization_information
     # Add in once data is ready
     # @teacher_context = current_user.teacher_context || TeacherContext.new
+  end
+
+  # GET /users/test_mailjet_page
+  #
+  def test_mailjet_page
+  end
+
+  #
+  # POST /users/send_test_mailjet
+  #
+  def send_test_mailjet
+    email = params[:email]
+    name = params[:name]
+
+    MailJet.send_email(:teacher_post_workshop_survey, email, name, vars:
+      {
+        email_to: email,
+        name: name,
+        exit_survey_url: 'https://studio.code.org/catalog',
+        download_certificate_url: 'https://studio.code.org/professional-learning/workshops',
+        rp_email: 'testrp@email.com',
+        rp_name: 'Fake Regional Partner',
+        organizer_email: 'testorganizer@email.com',
+        organizer_name: 'Fake Organizer'
+      }
+    )
   end
 
   private def update_user_email

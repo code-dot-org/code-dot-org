@@ -1,5 +1,6 @@
 import {Codebridge} from '@codebridge/Codebridge';
-import {CodebridgeLevelProperties, ConfigType} from '@codebridge/types';
+import {DEFAULT_START_HTML_FILE} from '@codebridge/FilePreview/constants';
+import {ConfigType} from '@codebridge/types';
 import {css} from '@codemirror/lang-css';
 import {html} from '@codemirror/lang-html';
 import {javascript} from '@codemirror/lang-javascript';
@@ -10,11 +11,12 @@ import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
 import {LabProps, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 
 import {useSource} from '../codebridge/hooks/useSource';
-import {useAppSelector, useAppDispatch} from '../util/reduxHooks';
+import {useAppDispatch, useAppSelector} from '../util/reduxHooks';
 
-import HorizontalLayout from './layout/HorizontalLayout';
 import ShareView from './layout/ShareView';
 import VerticalLayout from './layout/VerticalLayout';
+import {setViewMode} from './redux';
+import {Weblab2LevelProperties, ViewMode} from './types';
 
 import moduleStyles from './styles/weblab2-view.module.scss';
 
@@ -30,7 +32,6 @@ const defaultConfig: ConfigType = {
   activeLayout: 'vertical',
   layoutComponents: {
     vertical: VerticalLayout,
-    horizontal: HorizontalLayout,
     widget: VerticalLayout,
     share: ShareView,
   },
@@ -41,7 +42,7 @@ const defaultSource: MultiFileSource = {
   files: {
     '1': {
       id: '1',
-      name: 'index.html',
+      name: DEFAULT_START_HTML_FILE,
       language: 'html',
       contents: `<!DOCTYPE html>
 <html>
@@ -60,7 +61,7 @@ const defaultSource: MultiFileSource = {
 const defaultProject: ProjectSources = {source: defaultSource};
 
 const Weblab2View: React.FC<
-  LabProps<CodebridgeLevelProperties, ProjectSources>
+  LabProps<Weblab2LevelProperties, ProjectSources>
 > = ({levelProperties, initialSources}) => {
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
   const {startSources} = useSource(
@@ -84,6 +85,10 @@ const Weblab2View: React.FC<
       dispatch(setHasRun(false));
     };
   }, [dispatch]);
+
+  useEffect(() => {
+    dispatch(setViewMode(levelProperties?.initialViewMode || ViewMode.SPLIT));
+  }, [dispatch, levelProperties?.initialViewMode]);
 
   return (
     <div className={moduleStyles.weblab2Container}>

@@ -84,6 +84,7 @@ class Section < ApplicationRecord
   accepts_nested_attributes_for :students
 
   validates :name, presence: true, unless: -> {deleted?}
+  validates :course_id, presence: true, if: -> {script_id.present?}
 
   belongs_to :script, class_name: 'Unit', optional: true
   belongs_to :unit_group, foreign_key: 'course_id', optional: true
@@ -398,7 +399,6 @@ class Section < ApplicationRecord
         courseVersionName: unit_group ? unit_group.name : script&.name,
         unitName: script&.name,
         unitPosition: unit_group_unit&.position,
-        isAssignedStandaloneCourse: !unit_group && !!script,
         createdAt: created_at,
         login_type: login_type,
         grades: grades,
