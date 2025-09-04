@@ -1,4 +1,5 @@
 import {Box} from '@mui/material';
+import classNames from 'classnames';
 import React, {useMemo} from 'react';
 
 import {
@@ -77,7 +78,7 @@ export const Implementation = () => {
         )}
       </Box>
 
-      <Box className={styles.cardRow}>
+      <Box className={classNames(styles.cardRow, styles.scrollContainerRow)}>
         {isQuestionType(barriersToImplementation, 'multiSelect') && (
           <SelectCard
             title={
@@ -93,9 +94,13 @@ export const Implementation = () => {
           />
         )}
         <FollowUpRequestedCard
-          items={[]}
+          items={followUpRequestedItems}
           title="Follow-up requested"
-          description=""
+          description={
+            followUpRequestedItems.length
+              ? `${followUpRequestedItems.length} teachers requested additional support with implementation.`
+              : ''
+          }
         />
       </Box>
 
