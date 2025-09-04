@@ -123,8 +123,8 @@ Feature: Professional learning Sections
     And I sign in as "Teacher" and go home
 
     # Create section button
-    When I see the section set up box
-    Then I press the new section button
+    Then I wait until element "#teacher-home-header" is visible
+    And I click selector "button:contains(New class section)"
 
     # Participant Type Picker Does Not Show
     Then I should see the new section dialog
