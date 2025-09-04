@@ -1,14 +1,17 @@
 @no_mobile
 Feature: Using the V2 progress page
+  Background:
+    Given I am on "http://studio.code.org"
+    And I use a cookie to mock the DCDO key "progress-table-v2-enabled" as "true"
 
 Scenario: Teacher can open and close Icon Key and details
   Given I create an authorized teacher-associated student named "Sally"
-  Given I am assigned to course "allthethingscourse" unit 1
+  Given I am assigned to course "allthethingscourse" with teacher "Teacher_Sally" in a section named "Test Section"
   And I complete the level on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/2/levels/1"
 
   When I sign in as "Teacher_Sally" and go home
   And I get levelbuilder access
-  And I navigate to the V2 progress dashboard for "Untitled Section"
+  And I navigate to the V2 progress dashboard for "Test Section"
 
   # toggle to V2 progress view
   And I wait until element "h6:contains(Icon Key)" is visible
@@ -31,7 +34,7 @@ Scenario: Teacher can open and close Icon Key and details
 @properties_encryption_key
 Scenario: Viewing student metadata
   Given I create an authorized teacher-associated student named "Sally"
-  Given I am assigned to course "allthethingscourse" unit 1
+  Given I am assigned to course "allthethingscourse" with teacher "Teacher_Sally" in a section named "Test Section"
   And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/44/levels/9?noautoplay=true"
   And I wait to see "#runButton"
   And I submit this level
@@ -39,7 +42,7 @@ Scenario: Viewing student metadata
   # Progress tab
   When I sign in as "Teacher_Sally" and go home
   And I get levelbuilder access
-  And I navigate to the V2 progress dashboard for "Untitled Section"
+  And I navigate to the V2 progress dashboard for "Test Section"
 
   # Toggle to V2 progress view
   And I wait until element "h6:contains(Icon Key)" is visible

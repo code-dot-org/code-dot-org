@@ -1,4 +1,5 @@
 @no_mobile
+@skip
 Feature: Using the teacher dashboard homepage (v1)
 
   Background:

@@ -425,10 +425,9 @@ end
 
 And /^I navigate to the V2 progress dashboard for "([^"]+)"$/ do |section_name|
   steps <<-GHERKIN
-    Given I am on "http://studio.code.org"
-    When I use a cookie to mock the DCDO key "progress-table-v2-enabled" as "true"
-    When I click selector "a:contains(#{section_name})" once I see it to load a new page
-    And I wait until element "#ui-test-teacher-sidebar" is visible
+    Given I am on "http://studio.code.org/teacher_dashboard/home"
+    When I click "#task-button-View-progress-#{section_name.tr!(' ', '-')}" once it exists
+    Then I wait until element "#ui-test-teacher-sidebar" is visible
     And check that the URL contains "/teacher_dashboard/sections/"
     And element "#ui-test-progress-table-v2" is visible
   GHERKIN
