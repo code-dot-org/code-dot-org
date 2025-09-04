@@ -220,7 +220,8 @@ class AidiffThreadsController < ApplicationController
       {
         context: context_scope,
         course_display_name: course_display_name,
-        course_names: course_names
+        course_names: course_names,
+        section: section
       }
     end
     contexts
@@ -266,6 +267,20 @@ class AidiffThreadsController < ApplicationController
     elsif context_type == SharedConstants::AI_DIFF_CONTEXT[:COURSE]
       @unit_group.default_units.map do |unit|
         unit.levels.map {|level| labs_from_level(level)}
+      end
+    elsif context_type == SharedConstants::AI_DIFF_CONTEXT[:GENERAL]
+      @section_contexts.map do |sc|
+        units =
+          if sc[:section]&.unit_group.present?
+            sc[:section].unit_group.default_units
+          elsif sc[:section]&.script.present?
+            [sc[:section].script]
+          else
+            []
+          end
+        units.map do |unit|
+          unit.levels.map {|level| labs_from_level(level)}
+        end
       end
     else
       []

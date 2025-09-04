@@ -744,6 +744,7 @@ The courses that this teacher may ask you about are:
         course_names: ["fake_b"]
       }
     ]
+    labs = ['javalab', 'pythonlab']
     formatted_input = AiDiffBedrockHelper.format_inputs_for_bedrock_request(input, prompt)
     expected_input = {
       input: {
@@ -778,11 +779,12 @@ The courses that this teacher may ask you about are:
       or_all: [
         {equals: {key: "scope", value: "general"}},
         {in: {key: "course", value: ["fake_a"]}},
-        {in: {key: "course", value: ["fake_b"]}}
+        {in: {key: "course", value: ["fake_b"]}},
+        {in: {key: 'lab', value: ['javalab', 'pythonlab']}}
       ]
     }
     assert_equal formatted_input, expected_input
-    filter = AiDiffBedrockHelper.filter_for_context(lesson_number, unit_num, course_names, section_contexts)
+    filter = AiDiffBedrockHelper.filter_for_context(lesson_number, unit_num, course_names, section_contexts, labs)
     assert_equal filter, expected_filter
   end
 

@@ -202,6 +202,7 @@ module AiDiffBedrockHelper
       section_contexts&.each do |section_context|
         or_all_filters.push({in: {key: "course", value: section_context[:course_names]}})
       end
+      or_all_filters.push({in: {key: 'lab', value: labs}}) unless labs.empty?
     end
 
     #can't use "and_all" if there is only 1 expression to filter on, only 2+
