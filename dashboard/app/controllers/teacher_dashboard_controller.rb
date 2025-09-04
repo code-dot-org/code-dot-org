@@ -54,17 +54,22 @@ class TeacherDashboardController < ApplicationController
     render layout: false
   end
 
-  def get_school_info_interstitial_data
+  def get_drawer_data
     show_school_info_interstitial = SchoolInfoInterstitialHelper.show?(current_user)
     show_school_info_confirmation = SchoolInfoInterstitialHelper.show_confirmation_dialog?(current_user)
     school_info = Queries::SchoolInfo.current_school(current_user)
+
+    unless current_user.donor_teacher_banner_dismissed
+      afe_eligible = current_user&.school_info&.school&.afe_high_needs?
+    end
 
     SchoolInfoInterstitialHelper.update_last_seen_timestamp(current_user)
 
     render json: {
       showSchoolInfoInterstitial: show_school_info_interstitial,
       showSchoolInfoConfirmation: show_school_info_confirmation,
-      schoolInfo: school_info,
+      existingSchoolInfo: school_info,
+      afeEligible: afe_eligible,
     }
   end
 end

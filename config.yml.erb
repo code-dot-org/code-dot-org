@@ -168,9 +168,7 @@ gdrive_export_secret:     !Secret
 
 # Mapbox
 mapbox_upload_token:
-mapbox_upload_tileset:
 mapbox_access_token:      !Secret
-mapbox_access_tileset:    'censustiles'
 
 # Crowdin
 crowdin_codeorg_api_key:
@@ -425,6 +423,9 @@ dashboard_sock:
 # Causes dashboard-server to run pegasus as middleware, starting both in a
 # single command.  This is preferred (and default) in development mode.
 dashboard_enable_pegasus: false
+
+# Session timeout in days. Controls both the Devise timeout and the Rails session store (Redis) TTL.
+dashboard_session_ttl_days: 40
 
 # Pegasus
 override_pegasus:

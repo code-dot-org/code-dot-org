@@ -1,0 +1,14 @@
+name 'ai-powered-threats-defenses-preassessment-q7_2025-pilot_2025'
+
+question ‘Which cybersecurity fix is best for improving Integrity in shared documents?’
+
+wrong ‘Allowing public access’
+wrong ‘Disabling version history’
+wrong ‘Giving everyone editing access’
+right ‘Keeping a change log or version history’
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 6: Confidentiality, Integrity, and Availability
+MARKDOWN

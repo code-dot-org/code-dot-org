@@ -35,7 +35,15 @@ module Pd::Summary
     def calculate_teacher_attendance
       teacher_attendance = TeacherAttendanceTotal.new
       session_ids = workshop.sessions.pluck(:id)
-      attendances = Pd::Attendance.where(pd_session_id: session_ids, teacher_id: teacher.id)
+      conditions = {pd_session_id: session_ids}
+      if teacher&.id
+        conditions[:teacher_id] = teacher.id
+      elsif enrollment.id
+        conditions[:pd_enrollment_id] = enrollment.id
+      else
+        return teacher_attendance
+      end
+      attendances = Pd::Attendance.where(conditions)
 
       attendances.each do |attendance|
         session = workshop.sessions.find {|s| s.id == attendance.pd_session_id}

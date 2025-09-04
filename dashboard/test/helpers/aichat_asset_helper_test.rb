@@ -12,11 +12,6 @@ class AichatAssetHelperTest < ActionView::TestCase
     end
   end
 
-  if AichatAssetHelper.const_defined?(:ASSET_BUCKET)
-    AichatAssetHelper.send(:remove_const, :ASSET_BUCKET)
-  end
-  AichatAssetHelper.const_set(:ASSET_BUCKET, FAKE_BUCKET)
-
   let(:channel_id) {'abc123'}
   let(:level_name) {'level-one'}
 
@@ -25,6 +20,8 @@ class AichatAssetHelperTest < ActionView::TestCase
   let(:missing_asset) {{"filename" => "missing.png", "source" => "level"}}
 
   before do
+    AichatAssetHelper.stubs(:asset_bucket).returns(FAKE_BUCKET)
+
     LevelStarterAssetsHelper.stubs(:get_object).returns(
       OpenStruct.new(get: OpenStruct.new(body: StringIO.new("level content for uuid-123")))
     )

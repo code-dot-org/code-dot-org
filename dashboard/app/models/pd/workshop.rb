@@ -109,12 +109,14 @@ class Pd::Workshop < ApplicationRecord
   end
 
   def subject_must_be_valid_for_course
-    unless SUBJECTS[course]&.include?(subject) || (!SUBJECTS[course] && !subject)
+    unless SUBJECTS[course]&.include?(subject) || LEGACY_SUBJECTS[course]&.include?(subject) || (!SUBJECTS[course] && !subject)
       errors.add(:subject, 'must be a valid option for the course')
     end
   end
 
   def config_validation
+    return if ARCHIVED_COURSES.include?(course)
+
     config = WORKSHOP_COURSE_CONFIGS.find do |c|
       c[:label] == course
     end
@@ -170,8 +172,8 @@ class Pd::Workshop < ApplicationRecord
   end
 
   def valid_registration_link_format
-    unless self.class.valid_url?(registration_link, true)
-      errors.add(:registration_link, "is not a valid URL")
+    unless self.class.valid_url?(registration_link)
+      errors.add(:registration_link, "is not valid or is missing http or https")
     end
   end
 
@@ -194,7 +196,7 @@ class Pd::Workshop < ApplicationRecord
 
   def set_registration_link
     if [COURSE_CSD, COURSE_CSP, COURSE_CSA].include?(course) && local_summer?
-      self.registration_link = "/pd/application/teacher"
+      self.registration_link = Rails.application.routes.url_helpers.pd_application_teacher_url
     end
   end
 
@@ -482,11 +484,11 @@ class Pd::Workshop < ApplicationRecord
     update_attribute(:ended_at, Time.zone.now)
 
     # We want to send exit surveys now, but that needs to be done on the
-    # production-daemon machine, so we'll let the process_pd_workshop_emails
+    # production-daemon machine, so we'll let the process_pd_workshop_ends
     # cron job call the process_ends function below on that machine.
   end
 
-  # This is called by the process_pd_workshop_emails cron job which is run
+  # This is called by the process_pd_workshop_ends cron job which is run
   # on the production-daemon machine, and will send exit surveys to workshops
   # that have been ended in the last two days when they haven't already had
   # that done.
@@ -918,6 +920,7 @@ class Pd::Workshop < ApplicationRecord
       sessions: sessions,
       location_name: location_name,
       location_address: location_address,
+      time_zone: time_zone,
       on_map: on_map,
       funded: funded,
       virtual: virtual?,
@@ -949,17 +952,12 @@ class Pd::Workshop < ApplicationRecord
   end
 
   def summarize_for_marketing_page
-    facilitators_info = facilitators.map do |facilitator|
-      # TODO [CMS-65]: Come up with more permanent solution that doesn't require cross-project file dependency.
-
-      bio_file = pegasus_dir("sites.v3/code.org/views/workshop_affiliates/#{facilitator.id}_bio.md")
-      image_file = pegasus_dir("sites.v3/code.org/public/images/affiliate-images/#{facilitator.id}.jpg")
-
+    facilitators_info = facilitators.includes(:facilitator_info).map do |facilitator|
       {
         name: facilitator.name,
         email: facilitator.email,
-        bio: File.exist?(bio_file) ? File.read(bio_file) : nil,
-        image_path: File.exist?(image_file) ? CDO.code_org_url("/images/affiliate-images/fit-150/#{facilitator.id}.jpg") : nil
+        bio: facilitator.facilitator_bio,
+        image_path: nil
       }
     end
 

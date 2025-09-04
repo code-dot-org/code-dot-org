@@ -15,11 +15,23 @@
 #  index_user_facilitator_infos_on_user_id  (user_id)
 #
 class User::FacilitatorInfo < ApplicationRecord
-  belongs_to :user
+  BIO_MIN_LENGTH = 24
+  BIO_MAX_LENGTH = 500
 
-  validate :validate_user_is_facilitator, if: :user_id_changed?
+  belongs_to :user, inverse_of: :facilitator_info
 
-  private def validate_user_is_facilitator
+  auto_strip_attributes :bio
+
+  validates :bio, length: BIO_MIN_LENGTH..BIO_MAX_LENGTH, allow_blank: true, if: :bio_changed?
+  validate :user_is_facilitator, if: :user_id_changed?
+  validate :bio_has_no_profanity, if: :bio_changed?
+
+  private def user_is_facilitator
     errors.add(:user, :not_facilitator) unless user&.facilitator?
+  end
+
+  private def bio_has_no_profanity
+    return if bio.blank? || errors.present?
+    errors.add(:bio, :has_profanity) if ProfanityFilter.find_potential_profanity(bio, I18n.locale.to_s)
   end
 end

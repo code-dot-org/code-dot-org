@@ -1,0 +1,51 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2025-08-15T18:44:51.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "true",
+    "panels": [
+      {
+        "text": "### Rest\n\nA `rest` block creates a gap in your timeline\n\n---\n\n<i class=\"fa-solid fa-pencil\"></i> A **rest** is a moment of silence in music\n",
+        "imageUrl": "https://images.code.org/99974398c26c378b4ff853e3093de8bc-Slide9.PNG",
+        "key": "test-music-lab-sequences-practice-rest-panel-18ead53c-578a-4f5b-a4ee-9b67dea847e4",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "### Rest\n\nYou can change how long the rest lasts. \n\nEach number on the top of the timeline is one measure.\n",
+        "imageUrl": "https://images.code.org/2a736160f90f10dde27f20c978755601-Slide10.PNG",
+        "key": "test-music-lab-sequences-practice-rest-panel-8f0f3e39-c985-452b-a49b-a19df1a00f17",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "### Rest\n\nYou can also rest on the beat of a song instead of the measure. This lets you create shorter gaps between tracks\n\n---\n\n<i class=\"fa-solid fa-pencil\"></i> The **beat** is the steady pulse in music that measures time. There are four beats per measure in Music Lab. \n",
+        "imageUrl": "https://images.code.org/e983263b8c3dce10ae8d9a73dc75cf03-Slide11.PNG",
+        "key": "test-music-lab-sequences-practice-rest-panel-c9ce43f4-c787-4b12-adf8-b5e0b2133570",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "### Rest\n\nYou can use rests strategically with `play sequential` to offset when a sound starts\n\nThis may make it line up better with the song being played",
+        "imageUrl": "https://images.code.org/48fb7457e0eeb0c5f1ffd943aefb441d-Slide12.PNG",
+        "key": "test-music-lab-sequences-practice-rest-panel-d4d20c5f-1689-4f9d-aa75-0b87a3bbf35a",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "Key Takeaway: Rests add gaps to your timeline. Use them strategically with play sequential to line up your tracks and create special moments in songs.\n",
+        "imageUrl": "https://images.code.org/4f19cf5c8967a1a7fe227806c85ab5f2-Slide13.PNG",
+        "key": "test-music-lab-sequences-practice-rest-panel-246c7605-509f-4de6-a51d-3eb96fea4367",
+        "typing": true,
+        "fadeInOverPrevious": true
+      }
+    ],
+    "bubble_choice_description": "Review how to use Rests when creating songs",
+    "display_name": "Rests",
+    "name_suffix": "_bash",
+    "thumbnail_url": "https://images.code.org/795c4ae0ee55d7e8dd1e85e8d789a92a-Screenshot 2025-04-02 at 7.42.08 AM.png"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-08-15T18:44:51.153+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-practice-rest-panel_v2\\\"\"],\"cloned_from\":\"test-music-lab-sequences-practice-rest-panel_v2\"}]"
+}]]></config>
+</Panels>

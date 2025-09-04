@@ -1,3 +1,5 @@
+@use '@code-dot-org/component-library-styles/typography.module.scss' as
+  typography;
 @import 'color';
 @import '@code-dot-org/component-library-styles/font';
 @import '@code-dot-org/component-library-styles/mixins';
@@ -609,6 +611,7 @@ h2.studentName {
 
 .evidenceLevelLabel {
   @include main-font-semi-bold;
+  color: var(--text-neutral-primary);
   font-size: 0.875rem;
   line-height: 154%;
   margin-bottom: 0;
@@ -1113,9 +1116,12 @@ p.evidenceLevelHeaderText {
 .evidenceLevelSetHorizontalV2 {
   display: flex;
   flex-direction: row;
-  height: 100px;
   width: 100%;
   gap: 8px;
+
+  p {
+    margin-bottom: 0;
+  }
 }
 
 .evidenceLevelOptionV2 {
@@ -1329,89 +1335,95 @@ p.detailsHidden {
   justify-content: space-between;
 }
 
-.studentDropdownOption {
+.dropdownOption {
+  /* Reset's every elements apperance */
+  background: none repeat scroll 0 0 transparent;
+  border: none !important;
+  border-radius: 0;
+  border-spacing: 0;
+  list-style: none outside none;
+  margin: 0;
+  text-decoration: none;
+  text-indent: 0;
+  box-shadow: none;
+  flex-grow: 1;
+
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 5px;
-  margin-top: 3px;
+  align-items: center;
+  cursor: pointer;
+  color: var(--neutral-base-black);
+
+  padding: 0.3125rem 1rem;
+  gap: 16px;
+
+  span {
+    @include typography.body-three;
+    color: inherit;
+    margin-bottom: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &:active {
+    border: 0 !important;
+  }
+
+  &:hover {
+    color: var(--neutral-base-black);
+    text-decoration: none;
+    box-shadow: none;
+  }
+}
+
+.unselectableDropdownOption {
+  div {
+    cursor: default !important;
+    span {
+      font-style: italic;
+    }
+  }
+
+  &:hover {
+    background-color: inherit !important;
+  }
+
+  &:active {
+    background-color: inherit !important;
+    span {
+      color: inherit !important;
+    }
+  }
+}
+
+.statusBlob {
+  border-radius: 20px;
+  padding: 0 10px;
   height: 26px;
+  min-height: 26px;
+  min-width: 82px;
+  max-width: 82px;
+  display: flex;
+  align-items: center;
 }
 
 .greenStatusBlob {
   background-color: $light_affirmative_100;
-  border-radius: 20px;
-  padding: 4px 10px 0;
-  height: 22px;
-  min-width: 80px;
-  display: inline;
-  margin-right: 17px;
-  p {
-    margin-bottom: 0;
-  }
 }
 
 .yellowStatusBlob {
   background-color: $lighter_yellow;
-  border-radius: 20px;
-  padding: 5px 10px 0;
-  height: 22px;
-  min-width: 82px;
-  display: inline;
-  margin-right: 17px;
-  p {
-    margin: 0, 0, 0, 0;
-  }
 }
 
 .purpleStatusBlob {
   background-color: var(--background-brand-purple-light);
-  border-radius: 20px;
-  padding: 4px 10px 0;
-  height: 22px;
-  min-width: 80px;
-  display: inline;
-  margin-right: 17px;
-  p {
-    margin-bottom: 0;
-  }
 }
 
 .redStatusBlob {
   background-color: $light_negative_100;
-  border-radius: 20px;
-  padding: 4px 10px 0;
-  height: 22px;
-  min-width: 115px;
-  display: inline;
-  margin-right: 17px;
-  p {
-    margin-bottom: 0;
-  }
 }
 
 .grayStatusBlob {
   background-color: $light_gray_100;
-  border-radius: 20px;
-  padding: 5px 10px 0;
-  height: 22px;
-  min-width: 87px;
-  display: inline;
-  margin-right: 17px;
-  p {
-    margin: 0, 0, 0, 0;
-  }
-}
-
-.submitStatusText {
-  display: inline;
-  padding-top: 3px;
-  p {
-    margin-bottom: 0;
-  }
-  overflow: hidden;
-  height: 20px;
-  text-overflow: ellipsis;
 }
 
 .announcementDialog {

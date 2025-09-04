@@ -26,7 +26,7 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
         render json: @workshop.enrollments, each_serializer: Api::V1::Pd::WorkshopEnrollmentSerializer
       end
       format.csv do
-        response = render_to_json @workshop.enrollments, each_serializer: Api::V1::Pd::WorkshopEnrollmentSerializer
+        response = render_to_json @workshop.enrollments, each_serializer: Api::V1::Pd::WorkshopEnrollmentCsvSerializer
         send_as_csv_attachment response, 'workshop_enrollments.csv'
       end
     end
@@ -137,13 +137,6 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
       Pd::Attendance.where(pd_enrollment_id: enrollments).delete_all
       enrollments.each {|e| e.update!(pd_workshop_id: params[:destination_workshop_id])}
     end
-  end
-
-  # POST /api/v1/pd/enrollments/edit
-  def edit
-    return head :forbidden unless current_user.workshop_admin?
-    enrollment = Pd::Enrollment.find_by(id: params[:id])
-    enrollment.update!(first_name: params[:first_name], last_name: params[:last_name], email: params[:email])
   end
 
   private def render_unsuccessful(error_message, options = {})

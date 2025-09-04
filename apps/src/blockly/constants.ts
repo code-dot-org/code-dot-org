@@ -45,6 +45,7 @@ export enum BlockStyles {
   TEXT = 'text_blocks',
   COLOR = 'colour_blocks',
   BEHAVIOR = 'behavior_blocks',
+  LAB_BLOCKS = 'lab_blocks',
 }
 
 export const BlockColors = {
@@ -185,7 +186,6 @@ export const READ_ONLY_PROPERTIES = [
   'ConnectionType',
   'ContextMenu',
   'ContextMenuRegistry',
-  'contractEditor',
   'createBlockDefinitionsFromJsonArray',
   'Css',
   'Cursor',

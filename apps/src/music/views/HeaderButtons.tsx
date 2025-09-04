@@ -2,10 +2,13 @@ import classNames from 'classnames';
 import React, {memo, useCallback, useContext} from 'react';
 import {useSelector} from 'react-redux';
 
+import {useBlocklySettings} from '@cdo/apps/lab2/hooks/useBlocklySettings';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
+import SettingsButton from '@cdo/apps/lab2/views/components/Settings/SettingsButton';
 import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {commonI18n} from '@cdo/apps/types/locale';
+import experiments from '@cdo/apps/util/experiments';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {getBaseAssetUrl} from '../appConfig';
@@ -139,6 +142,8 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
     }
   }, [dialogControl, skipUrl]);
 
+  const settings = useBlocklySettings();
+
   return (
     <div className={moduleStyles.container}>
       {!allowPackSelection && packFolder && (
@@ -174,6 +179,18 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
               className={'icon'}
             />
           </button>
+        </>
+      )}
+      {!experiments.isEnabledAllowingQueryString(
+        experiments.LAB2_RESOURCE_PANEL
+      ) ? (
+        <SettingsButton
+          settings={settings}
+          className={classNames(moduleStyles.button)}
+        />
+      ) : null}
+      {!readOnlyWorkspace && (
+        <>
           <button
             onClick={() => onClickUndoRedo('undo')}
             type="button"

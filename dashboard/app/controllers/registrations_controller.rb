@@ -5,6 +5,7 @@ require_relative '../../../shared/middleware/helpers/experiments'
 require 'metrics/events'
 require 'policies/lti'
 require 'queries/lti'
+require 'policies/devise/email_domains'
 
 class RegistrationsController < Devise::RegistrationsController
   before_action :require_no_authentication, only: [:account_type, :login_type, :finish_student_account, :finish_teacher_account, :new, :create, :cancel]
@@ -36,6 +37,13 @@ class RegistrationsController < Devise::RegistrationsController
   # Submit step 1 of the signup process for creating an email/password account.
   #
   def begin_sign_up
+    domain = params[:user][:email].split('@')[1] if params[:user][:email].present?
+    if Policies::Devise::EmailDomains::DISALLOWED_DOMAINS.include?(domain)
+      render json: {
+        error: I18n.t('devise.registrations.disallowed_domain', domain: domain)
+      }, status: :forbidden
+      return
+    end
     @user = User.new(begin_sign_up_params)
     @user.country_code = @country_code
     @user.validate_for_finish_sign_up
@@ -310,7 +318,7 @@ class RegistrationsController < Devise::RegistrationsController
     user_params[:hashed_email] = User.hash_email(user_params[:email]) if user_params[:email].present?
     current_user.reload # Needed to make tests pass for reasons noted in registrations_controller_test.rb
 
-    successfully_updated = current_user.upgrade_to_personal_login(upgrade_params)
+    successfully_updated = Services::User::UpgradeToPersonalLogin.call(user: current_user, params: upgrade_params)
     has_email = current_user.parent_email.blank? && current_user.hashed_email.present?
     success_message_kind = has_email ? :personal_login_created_email : :personal_login_created_username
 
@@ -376,10 +384,11 @@ class RegistrationsController < Devise::RegistrationsController
         if forbidden_change?(current_user, params)
           false
         else
-          current_user.set_user_type(
-            set_user_type_params[:user_type],
-            set_user_type_params[:email],
-            email_preference_params(EmailPreference::ACCOUNT_TYPE_CHANGE, "0")
+          Services::User::UserTypeSetter.call(
+            user: current_user,
+            user_type: set_user_type_params[:user_type],
+            email: set_user_type_params[:email],
+            email_preference: email_preference_params(EmailPreference::ACCOUNT_TYPE_CHANGE, "0")
           )
         end
       else
@@ -449,6 +458,33 @@ class RegistrationsController < Devise::RegistrationsController
       @pending_email = permission_request&.parent_email
       @request_date = permission_request&.updated_at || Date.new
     end
+  end
+
+  #
+  # GET /users/test_mailjet_page
+  #
+  def test_mailjet_page
+  end
+
+  #
+  # POST /users/send_test_mailjet
+  #
+  def send_test_mailjet
+    email = params[:email]
+    name = params[:name]
+
+    MailJet.send_email(:teacher_post_workshop_survey, email, name, vars:
+      {
+        email_to: email,
+        name: name,
+        exit_survey_url: 'https://studio.code.org/catalog',
+        download_certificate_url: 'https://studio.code.org/professional-learning/workshops',
+        rp_email: 'testrp@email.com',
+        rp_name: 'Fake Regional Partner',
+        organizer_email: 'testorganizer@email.com',
+        organizer_name: 'Fake Organizer'
+      }
+    )
   end
 
   private def update_user_email
@@ -545,6 +581,7 @@ class RegistrationsController < Devise::RegistrationsController
       :username,
       :given_name,
       :family_name,
+      :educator_role,
       :password,
       :encrypted_password,
       :current_password,
@@ -564,6 +601,9 @@ class RegistrationsController < Devise::RegistrationsController
       :user_provided_us_state,
       :ai_rubrics_disabled,
       :lti_roster_sync_enabled,
+      facilitator_info_attributes: [
+        :bio,
+      ],
       school_info_attributes: [
         :country,
         :school_type,

@@ -27,7 +27,6 @@ export interface Section {
   hidden: boolean;
   id: number;
   isAssignedCSA?: boolean;
-  isAssignedStandaloneCourse: boolean;
   lessonExtras: boolean;
   loginType?: keyof typeof SectionLoginType;
   loginTypeName?: string;
@@ -87,11 +86,11 @@ export interface ServerSection {
   course_id: number | null;
   course_offering_id?: number | null;
   course_version_id?: number | null;
+  courseVersionName?: string | null;
   createdAt?: string;
   grades?: string[];
   hidden: boolean;
   id: number;
-  isAssignedStandaloneCourse: boolean;
   lesson_extras: boolean;
   login_type: string;
   name: string;
@@ -106,6 +105,7 @@ export interface ServerSection {
   sync_enabled?: boolean;
   tts_autoplay_enabled?: boolean;
   unit_id?: number | null;
+  unitName?: string | null;
   unitPosition?: number | null;
   avatar_color?: number | null;
   avatar_emoji?: number | null;
@@ -128,7 +128,6 @@ export interface ServerStudent {
   id: number;
   name: string;
   secret_picture_name: string;
-  secret_picture_path?: string; // @deprecated Use `secret_picture_url` instead
   secret_picture_url: string;
   secret_words: string;
   sectionId: number;

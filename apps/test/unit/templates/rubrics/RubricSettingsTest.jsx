@@ -192,7 +192,7 @@ describe('RubricSettings', () => {
     );
 
     // section selector is visible
-    screen.getByText(fakeSection.name);
+    screen.getByRole('button', {name: fakeSection.name});
   });
 
   it('allows teacher to run AI assessment for all students when AI status is ready', async () => {
@@ -204,6 +204,7 @@ describe('RubricSettings', () => {
           rubric={defaultRubric}
           sectionId={1}
           aiEvalStatusCounters={ready}
+          teacherHasEnabledAi={true}
         />
       </Provider>
     );
@@ -225,6 +226,7 @@ describe('RubricSettings', () => {
           refreshAiEvaluations={refreshAiEvaluationsSpy}
           rubric={defaultRubric}
           sectionId={1}
+          teacherHasEnabledAi={true}
         />
       </Provider>
     );
@@ -243,6 +245,7 @@ describe('RubricSettings', () => {
           refreshAiEvaluations={refreshAiEvaluationsSpy}
           rubric={defaultRubric}
           sectionId={1}
+          teacherHasEnabledAi={true}
         />
       </Provider>
     );
@@ -266,6 +269,7 @@ describe('RubricSettings', () => {
           refreshAiEvaluations={refreshAiEvaluationsSpy}
           rubric={defaultRubric}
           sectionId={1}
+          teacherHasEnabledAi={true}
         />
       </Provider>
     );
@@ -305,6 +309,7 @@ describe('RubricSettings', () => {
           sectionId={1}
           aiEvalStatusCounters={ready}
           setAiEvalStatusMap={jest.fn()}
+          teacherHasEnabledAi={true}
         />
       </Provider>
     );
@@ -434,12 +439,38 @@ describe('RubricSettings', () => {
           rubric={defaultRubric}
           sectionId={1}
           aiEvalStatusCounters={ready}
+          teacherHasEnabledAi={true}
         />
       </Provider>
     );
 
     const input = screen.getByRole('checkbox', {name: i18n.useAiFeatures()});
     expect(input.checked).toBe(true);
+  });
+
+  it('Doesnt display AI sections if ai is disabled', () => {
+    render(
+      <Provider store={store}>
+        <RubricSettings
+          visible
+          refreshAiEvaluations={refreshAiEvaluationsSpy}
+          rubric={defaultRubric}
+          sectionId={1}
+          aiEvalStatusCounters={ready}
+          teacherHasEnabledAi={false}
+        />
+      </Provider>
+    );
+
+    expect(
+      screen.queryByRole('checkbox', {name: i18n.useAiFeatures()})
+    ).toBeNull();
+
+    expect(
+      screen.queryByRole('button', {
+        name: i18n.runAiAssessmentClass(),
+      })
+    ).toBeNull();
   });
 
   it('ensures the AI enable toggle represents the current value of the AI disabled user setting', () => {
@@ -454,6 +485,7 @@ describe('RubricSettings', () => {
           rubric={defaultRubric}
           sectionId={1}
           aiEvalStatusCounters={ready}
+          teacherHasEnabledAi={true}
         />
       </Provider>
     );
@@ -471,6 +503,7 @@ describe('RubricSettings', () => {
           rubric={defaultRubric}
           sectionId={1}
           aiEvalStatusCounters={ready}
+          teacherHasEnabledAi={true}
         />
       </Provider>
     );

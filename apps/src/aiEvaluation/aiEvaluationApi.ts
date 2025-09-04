@@ -1,14 +1,16 @@
+import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import HttpClient from '@cdo/apps/util/HttpClient';
-import {AiEvaluationTypes} from '@cdo/generated-scripts/sharedConstants';
-
-import {OpenaiChatCompletionMessage} from '../aiTutor/chatApi';
+import {
+  AiEvaluationTypes,
+  AiInteractionStatus,
+} from '@cdo/generated-scripts/sharedConstants';
 
 import {logStudentWorkEvaluations} from './studentWorkEvaluationsApi';
 
 export interface StudentAnswer {
   studentId: number;
   studentDisplayName: string;
-  studentWork: string;
+  studentWork: string | Record<string, string>;
   codeVersion?: string;
   projectId?: string;
   updatedAt?: string;
@@ -85,14 +87,34 @@ const EVALUATE_URL = '/openai/evaluate';
 
 type ValueOf<T> = T[keyof T];
 type EvaluationType = ValueOf<typeof AiEvaluationTypes>;
+// These are the possible statuses returned by ShareFiltering.find_failure
+enum ShareFilterStatus {
+  Email = 'email',
+  Phone = 'phone',
+  Address = 'address',
+  Profanity = 'profanity',
+}
+type OpenaiChatCompletionMessage = {
+  status?: ValueOf<typeof AiInteractionStatus>;
+  role: Role;
+  content: string;
+  // Only used in case of PII or profanity violation
+  flagged_content?: string;
+  safety_status?: ShareFilterStatus;
+};
 
 export async function evaluationFromOpenAI(
-  studentWork?: string,
+  studentWork?: string | Record<string, string>,
   levelId?: number,
   evaluationType?: EvaluationType
 ): Promise<OpenaiChatCompletionMessage | null> {
   const payload = {
-    studentWork: studentWork,
+    studentWork:
+      typeof studentWork === 'string'
+        ? studentWork
+        : Object.entries(studentWork || {})
+            .map(([filename, contents]) => `${filename}:\n${contents}`)
+            .join('\n\n'),
     levelId: levelId,
     evaluationType: evaluationType,
   };

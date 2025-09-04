@@ -16,7 +16,7 @@
     "k5-maker-pilot-2024-4",
     "k5-maker-pilot-2024-5"
   ],
-  "published_state": "stable",
+  "published_state": "deprecated",
   "instruction_type": "self_paced",
   "participant_audience": "teacher",
   "instructor_audience": "facilitator",

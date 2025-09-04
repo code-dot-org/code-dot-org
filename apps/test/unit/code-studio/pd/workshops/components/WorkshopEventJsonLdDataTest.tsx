@@ -3,12 +3,12 @@ import React from 'react';
 
 import WorkshopEventJsonLdData from '@cdo/apps/code-studio/pd/workshops/components/WorkshopEventJsonLdData';
 import {
-  GetWorkshopInfoScriptDataResponse,
+  WorkshopInfo,
   SessionInfo,
 } from '@cdo/apps/code-studio/pd/workshops/types';
 
 describe('WorkshopEventJsonLdData', () => {
-  const mockData: GetWorkshopInfoScriptDataResponse = {
+  const mockData: WorkshopInfo = {
     id: 1,
     name: 'Sample Workshop',
     description: 'Workshop Description',
@@ -22,16 +22,16 @@ describe('WorkshopEventJsonLdData', () => {
       } as SessionInfo,
     ],
     format: 'in_person',
-    location_name: 'Sample Location',
+    locationName: 'Sample Location',
     fee: '100',
     capacity: 10,
-    num_enrollments: 5,
+    numEnrollments: 5,
     organizer: {name: 'Organizer Name', email: 'organizer@email.com'},
-    regional_partner_name: 'Regional Partner',
-    grade_levels: ['K', '1', '2'],
+    regionalPartnerName: 'Regional Partner',
+    gradeLevels: ['K', '1', '2'],
     course: 'CS Fundamentals',
     subject: 'Computer Science',
-    course_offerings: ['Course A'],
+    courseOfferings: ['Course A'],
   };
 
   it('renders JSON-LD data correctly', () => {

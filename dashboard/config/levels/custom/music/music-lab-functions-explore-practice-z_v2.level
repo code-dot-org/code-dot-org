@@ -1,6 +1,5 @@
 <Music>
   <config><![CDATA[{
-  "published": true,
   "game_id": 70,
   "created_at": "2025-05-31T03:00:39.000Z",
   "level_num": "custom",
@@ -252,7 +251,8 @@
               "x": 590,
               "y": 70,
               "disabledReasons": [
-                "MANUALLY_DISABLED"
+                "MANUALLY_DISABLED",
+                "ORPHANED"
               ],
               "extraState": {
                 "disableNextConnection": true
@@ -268,7 +268,7 @@
                       "disableNextConnection": false
                     },
                     "fields": {
-                      "sound": "acoustic_arcade/drum_beat_trees"
+                      "sound": "acoustic_arcade/drum_beat_hands"
                     },
                     "next": {
                       "block": {
@@ -280,7 +280,7 @@
                           "disableNextConnection": false
                         },
                         "fields": {
-                          "sound": "acoustic_arcade/drum_beat_trees"
+                          "sound": "acoustic_arcade/bass_giant"
                         },
                         "next": {
                           "block": {
@@ -292,7 +292,7 @@
                               "disableNextConnection": true
                             },
                             "fields": {
-                              "sound": "acoustic_arcade/drum_beat_trees"
+                              "sound": "acoustic_arcade/synth_tines"
                             }
                           }
                         }
@@ -308,7 +308,8 @@
               "x": 350,
               "y": 70,
               "disabledReasons": [
-                "MANUALLY_DISABLED"
+                "MANUALLY_DISABLED",
+                "ORPHANED"
               ],
               "extraState": {
                 "disableNextConnection": true
@@ -336,7 +337,7 @@
                           "disableNextConnection": false
                         },
                         "fields": {
-                          "sound": "acoustic_arcade/drum_beat_trees"
+                          "sound": "acoustic_arcade/bass_bounce"
                         },
                         "next": {
                           "block": {
@@ -348,7 +349,7 @@
                               "disableNextConnection": true
                             },
                             "fields": {
-                              "sound": "acoustic_arcade/drum_beat_trees"
+                              "sound": "acoustic_arcade/lead_swoop"
                             }
                           }
                         }
@@ -364,7 +365,8 @@
               "x": 830,
               "y": 70,
               "disabledReasons": [
-                "MANUALLY_DISABLED"
+                "MANUALLY_DISABLED",
+                "ORPHANED"
               ],
               "extraState": {
                 "disableNextConnection": true
@@ -380,7 +382,7 @@
                       "disableNextConnection": false
                     },
                     "fields": {
-                      "sound": "acoustic_arcade/drum_beat_trees"
+                      "sound": "acoustic_arcade/drum_beat_wobble"
                     },
                     "next": {
                       "block": {
@@ -392,7 +394,7 @@
                           "disableNextConnection": false
                         },
                         "fields": {
-                          "sound": "acoustic_arcade/drum_beat_trees"
+                          "sound": "acoustic_arcade/bass_stamp"
                         },
                         "next": {
                           "block": {
@@ -404,7 +406,7 @@
                               "disableNextConnection": true
                             },
                             "fields": {
-                              "sound": "acoustic_arcade/drum_beat_trees"
+                              "sound": "acoustic_arcade/synth_cosmic"
                             }
                           }
                         }
@@ -462,7 +464,8 @@
     "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/acoustic_arcade/acoustic_arcade.png",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-05-31T03:00:39.115+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-explore-practice-z\\\"\"],\"cloned_from\":\"music-lab-functions-explore-practice-z\"},{\"changed_at\":\"2025-06-12 21:06:26 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-05-31T03:00:39.115+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-explore-practice-z\\\"\"],\"cloned_from\":\"music-lab-functions-explore-practice-z\"},{\"changed_at\":\"2025-06-12 21:06:26 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-16 22:40:53 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

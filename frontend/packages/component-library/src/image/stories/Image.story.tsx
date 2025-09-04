@@ -1,7 +1,7 @@
 import imageFile from '@public/images/image-component.png';
-import type {Meta, StoryObj} from '@storybook/react';
-import {within, expect} from '@storybook/test';
+import type {Meta, StoryObj} from '@storybook/react-webpack5';
 import {useState} from 'react';
+import {within, expect} from 'storybook/test';
 
 import Image, {ImageProps} from '../index';
 

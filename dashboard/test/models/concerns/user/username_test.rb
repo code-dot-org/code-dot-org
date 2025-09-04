@@ -4,7 +4,7 @@ class UserUsernameTest < ActiveSupport::TestCase
   include Minitest::RSpecMocks
 
   describe 'presence validations' do
-    subject(:user) {build :user}
+    subject(:user) {build(:user)}
 
     before {allow(user).to receive(:generate_username).and_return(nil)}
 
@@ -28,7 +28,7 @@ class UserUsernameTest < ActiveSupport::TestCase
   end
 
   describe 'length validations' do
-    subject(:user) {build :user}
+    subject(:user) {build(:user)}
 
     before {allow(user).to receive(:generate_username).and_return(nil)}
 
@@ -56,7 +56,7 @@ class UserUsernameTest < ActiveSupport::TestCase
   end
 
   describe 'format validations' do
-    subject(:user) {build :user, username: 'coder123'}
+    subject(:user) {build(:user, username: 'coder123')}
 
     before do
       allow(user).to receive(:username_required?).and_return(true)
@@ -109,13 +109,13 @@ class UserUsernameTest < ActiveSupport::TestCase
 
   describe 'uniqueness validations' do
     let!(:existing_user) do
-      user = create :user
+      user = create(:user)
       user.update!(username: 'unique_user') #overwriting the generated username to something predictable
       user
     end
 
     describe 'on create' do
-      subject(:new_user) {build :user, username: 'unique_user'}
+      subject(:new_user) {build(:user, username: 'unique_user')}
 
       before {allow(new_user).to receive(:generate_username).and_return(nil)}
 
@@ -140,7 +140,7 @@ class UserUsernameTest < ActiveSupport::TestCase
     end
 
     describe 'on update' do
-      subject(:user) {create :user, username: 'coder123'}
+      subject(:user) {create(:user, username: 'coder123')}
 
       before {allow(user).to receive(:generate_username).and_return(nil)}
 
@@ -175,7 +175,7 @@ class UserUsernameTest < ActiveSupport::TestCase
     let(:valid_name) {'Valid User'}
 
     context 'when name is present and email is not utf8mb4' do
-      subject(:user) {create :user, name: valid_name, email: 'foo@bar.com'}
+      subject(:user) {create(:user, name: valid_name, email: 'foo@bar.com')}
 
       it 'generates a non-nil username' do
         user.send(:generate_username)
@@ -189,7 +189,7 @@ class UserUsernameTest < ActiveSupport::TestCase
     end
 
     context 'when name is blank' do
-      subject(:user) {build :user, name: '', email: 'foo@bar.com', username: nil}
+      subject(:user) {build(:user, name: '', email: 'foo@bar.com', username: nil)}
 
       it 'does not generate a username' do
         user.send(:generate_username)
@@ -199,7 +199,7 @@ class UserUsernameTest < ActiveSupport::TestCase
 
     context 'when email.utf8mb4? returns true' do
       let(:invalid_email) {panda_panda + 'email.com'}
-      subject(:user) {build :user, name: valid_name, email: invalid_email, username: nil}
+      subject(:user) {build(:user, name: valid_name, email: invalid_email, username: nil)}
 
       it 'does not generate a username' do
         user.send(:generate_username)

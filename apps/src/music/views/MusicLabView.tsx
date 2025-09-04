@@ -9,6 +9,7 @@ import {
   TOOLBOX_BLOCKS,
   WARNING_BANNER_MESSAGES,
 } from '@cdo/apps/lab2/constants';
+import {useBlocklySettings} from '@cdo/apps/lab2/hooks/useBlocklySettings';
 import {ProgressManagerContext} from '@cdo/apps/lab2/progress/ProgressContainer';
 import {
   getAppOptionsEditBlocks,
@@ -20,6 +21,7 @@ import {LevelProperties} from '@cdo/apps/lab2/types';
 import CodeEditor from '@cdo/apps/lab2/views/components/editor/CodeEditor';
 import Instructions from '@cdo/apps/lab2/views/components/Instructions';
 import InstructionsV2 from '@cdo/apps/lab2/views/components/Instructions/InstructionsV2';
+import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
 import ProjectTemplateWorkspaceIconV2 from '@cdo/apps/templates/ProjectTemplateWorkspaceIconV2';
@@ -298,6 +300,8 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
     AppConfig.getValue('player') === 'tonejs' &&
     AppConfig.getValue('advanced-controls-enabled') === 'true';
 
+  const settings = useBlocklySettings();
+
   if (isPlayView) {
     return <MusicPlayView setPlaying={setPlaying} />;
   }
@@ -339,60 +343,89 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
               moduleStyles.instructionsSide
             )}
           >
-            <PanelContainer
-              id="instructions-panel"
-              headerContent={musicI18n.panelHeaderInstructions()}
-              hideHeaders={hideHeaders}
-            >
-              {useNewInstructions ? (
-                <InstructionsV2
-                  isRunning={isPlaying}
-                  handleInstructionsTextClick={onInstructionsTextClick}
-                  bottomComponent={
-                    exemplarPlayerInsideInstructions &&
-                    showExemplarPlayer && (
-                      <ExemplarPlayerView
-                        playbackEvents={exemplarPlaybackEvents}
-                        title={exemplarSettings.playerTitle!}
-                        player={player}
-                        insideInstructions={exemplarPlayerInsideInstructions}
-                      />
-                    )
-                  }
-                  hasRun={hasRun}
-                  hasEdited={hasEdited}
-                  fixedDarkBackground={true}
-                  overrideTheme={'Light'}
-                  levelProperties={levelProperties}
-                />
-              ) : (
-                <Instructions
-                  isRunning={isPlaying}
-                  handleInstructionsTextClick={onInstructionsTextClick}
-                  bottomComponent={
-                    exemplarPlayerInsideInstructions &&
-                    showExemplarPlayer && (
-                      <ExemplarPlayerView
-                        playbackEvents={exemplarPlaybackEvents}
-                        title={exemplarSettings.playerTitle!}
-                        player={player}
-                        insideInstructions={exemplarPlayerInsideInstructions}
-                      />
-                    )
-                  }
-                  hasRun={hasRun}
-                  hasEdited={hasEdited}
-                />
-              )}
-              {!exemplarPlayerInsideInstructions && showExemplarPlayer && (
-                <ExemplarPlayerView
-                  playbackEvents={exemplarPlaybackEvents}
-                  title={exemplarSettings.playerTitle!}
-                  player={player}
-                  insideInstructions={exemplarPlayerInsideInstructions}
-                />
-              )}
-            </PanelContainer>
+            {experiments.isEnabledAllowingQueryString(
+              experiments.LAB2_RESOURCE_PANEL
+            ) ? (
+              <ResourcePanel
+                isRunning={isPlaying}
+                handleInstructionsTextClick={onInstructionsTextClick}
+                bottomComponent={
+                  exemplarPlayerInsideInstructions &&
+                  showExemplarPlayer && (
+                    <ExemplarPlayerView
+                      playbackEvents={exemplarPlaybackEvents}
+                      title={exemplarSettings.playerTitle!}
+                      player={player}
+                      insideInstructions={exemplarPlayerInsideInstructions}
+                    />
+                  )
+                }
+                hasRun={hasRun}
+                hasEdited={hasEdited}
+                fixedDarkBackground={true}
+                overrideTheme={'Light'}
+                includeFooterSpacing={false}
+                levelProperties={levelProperties}
+                headerClassName={moduleStyles.headerWithBorder}
+                settings={settings}
+              />
+            ) : (
+              <PanelContainer
+                id="instructions-panel"
+                headerContent={musicI18n.panelHeaderInstructions()}
+                hideHeaders={hideHeaders}
+                headerClassName={moduleStyles.panelContainerHeader}
+              >
+                {useNewInstructions ? (
+                  <InstructionsV2
+                    isRunning={isPlaying}
+                    handleInstructionsTextClick={onInstructionsTextClick}
+                    bottomComponent={
+                      exemplarPlayerInsideInstructions &&
+                      showExemplarPlayer && (
+                        <ExemplarPlayerView
+                          playbackEvents={exemplarPlaybackEvents}
+                          title={exemplarSettings.playerTitle!}
+                          player={player}
+                          insideInstructions={exemplarPlayerInsideInstructions}
+                        />
+                      )
+                    }
+                    hasRun={hasRun}
+                    hasEdited={hasEdited}
+                    fixedDarkBackground={true}
+                    overrideTheme={'Light'}
+                    levelProperties={levelProperties}
+                  />
+                ) : (
+                  <Instructions
+                    isRunning={isPlaying}
+                    handleInstructionsTextClick={onInstructionsTextClick}
+                    bottomComponent={
+                      exemplarPlayerInsideInstructions &&
+                      showExemplarPlayer && (
+                        <ExemplarPlayerView
+                          playbackEvents={exemplarPlaybackEvents}
+                          title={exemplarSettings.playerTitle!}
+                          player={player}
+                          insideInstructions={exemplarPlayerInsideInstructions}
+                        />
+                      )
+                    }
+                    hasRun={hasRun}
+                    hasEdited={hasEdited}
+                  />
+                )}
+                {!exemplarPlayerInsideInstructions && showExemplarPlayer && (
+                  <ExemplarPlayerView
+                    playbackEvents={exemplarPlaybackEvents}
+                    title={exemplarSettings.playerTitle!}
+                    player={player}
+                    insideInstructions={exemplarPlayerInsideInstructions}
+                  />
+                )}
+              </PanelContainer>
+            )}
           </div>
         )}
 
@@ -411,7 +444,13 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
                 hideChaff={hideChaff}
               />
             }
-            headerClassName={moduleStyles.panelContainerHeader}
+            headerClassName={
+              experiments.isEnabledAllowingQueryString(
+                experiments.LAB2_RESOURCE_PANEL
+              )
+                ? moduleStyles.headerWithBorder
+                : moduleStyles.panelContainerHeader
+            }
           >
             {isStartMode && (
               <div

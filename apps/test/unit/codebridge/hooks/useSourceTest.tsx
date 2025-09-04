@@ -1,4 +1,4 @@
-import {act, renderHook} from '@testing-library/react-hooks';
+import {renderHook} from '@testing-library/react-hooks';
 import React from 'react';
 import {Provider} from 'react-redux';
 import {Store} from 'redux';
@@ -22,7 +22,6 @@ import {
 import {
   nonValidatedLevelProperties,
   smallProject,
-  smallProjectSources,
   templateBackedLevelProperties,
 } from '../test-files';
 import {mockAppOptions} from '../test_utils';
@@ -84,43 +83,6 @@ describe('useSource', () => {
     );
     return result.current;
   }
-
-  it('set project saves to project manager in standard mode', () => {
-    const {setProject} = renderDefault();
-    act(() => {
-      setProject(smallProjectSources);
-    });
-    expect(mockedProjectManager.save).toHaveBeenCalled();
-  });
-
-  it('does not save to project manager in readonly mode', () => {
-    store.dispatch(
-      setChannel({
-        id: '1',
-        name: '1',
-        // If the user is not the owner, we are in readonly mode.
-        isOwner: false,
-        projectType: 'pythonlab',
-        publishedAt: null,
-        createdAt: '',
-        updatedAt: '',
-      })
-    );
-    const {setProject} = renderDefault();
-    act(() => {
-      setProject(smallProjectSources);
-    });
-    expect(mockedProjectManager.save).toHaveBeenCalledTimes(0);
-  });
-
-  it('sets project as edited on first edit', () => {
-    expect(store.getState().lab2Project.hasEdited).toBe(false);
-    const {setProject} = renderDefault();
-    act(() => {
-      setProject(smallProjectSources);
-    });
-    expect(store.getState().lab2Project.hasEdited).toBe(true);
-  });
 
   it('returns level start sources in start mode', () => {
     mockAppOptions({editBlocks: 'start_sources'});

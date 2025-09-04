@@ -130,20 +130,11 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
               noTextAnimation && moduleStyles.noAnimation
             )}
           >
-            {offerBrowserTts && (
-              <TextToSpeech text={text} higherPosition={!!bottomComponent} />
-            )}
             <div
               id="instructions-text-content"
               className={moduleStyles.textContent}
             >
-              <div
-                className={
-                  offerBrowserTts
-                    ? moduleStyles.scrollingContentWithTTS
-                    : moduleStyles.scrollingContentWithoutTTS
-                }
-              >
+              <div className={moduleStyles.scrollingContent}>
                 <EnhancedSafeMarkdown
                   markdown={text}
                   className={moduleStyles.markdownText}
@@ -163,6 +154,11 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
                   </InstructorsOnly>
                 )}
               </div>
+              {offerBrowserTts && (
+                <div className={moduleStyles.ttsContainer}>
+                  <TextToSpeech text={text} />
+                </div>
+              )}
               {bottomComponent && (
                 <div className={moduleStyles.bottomComponent}>
                   {bottomComponent}
@@ -184,24 +180,30 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
               id="instructions-feedback-message"
               className={moduleStyles['message-' + theme]}
             >
-              {offerBrowserTts && useMessage && !canShowNextButton && (
-                <TextToSpeech text={useMessage} />
-              )}
-              {useMessage && (
-                <div ref={feedbackRef} tabIndex={-1}>
-                  <EnhancedSafeMarkdown
-                    markdown={useMessage}
-                    className={moduleStyles.markdownText}
-                    handleInstructionsTextClick={handleInstructionsTextClick}
+              <div className={moduleStyles.messageContent}>
+                {useMessage && (
+                  <div id="focusable-feedback" ref={feedbackRef} tabIndex={-1}>
+                    <EnhancedSafeMarkdown
+                      markdown={useMessage}
+                      className={moduleStyles.markdownText}
+                      handleInstructionsTextClick={handleInstructionsTextClick}
+                    />
+                  </div>
+                )}
+                <div className={moduleStyles.navigationContainer}>
+                  <NavigationButton
+                    levelProperties={levelProperties}
+                    hasRun={hasRun}
+                    hasEdited={hasEdited}
+                    className={moduleStyles.buttonInstruction}
                   />
                 </div>
+              </div>
+              {offerBrowserTts && useMessage && !canShowNextButton && (
+                <div className={moduleStyles.ttsContainer}>
+                  <TextToSpeech text={useMessage} />
+                </div>
               )}
-              <NavigationButton
-                levelProperties={levelProperties}
-                hasRun={hasRun}
-                hasEdited={hasEdited}
-                className={moduleStyles.buttonInstruction}
-              />
             </div>
           </div>
         )}

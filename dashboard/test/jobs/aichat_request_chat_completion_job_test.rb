@@ -3,7 +3,7 @@ require "test_helper"
 class AichatRequestChatCompletionJobTest < ActiveJob::TestCase
   setup do
     @locale = 'en'
-    @student = create :student
+    @student = create(:student)
     @model_customizations = {temperature: 0.5, retrievalContexts: ["test"], systemPrompt: "test", selectedModelId: SharedConstants::AI_CHAT_MODEL_IDS[:MISTRAL]}
     @new_message = {chatMessageText: 'hello', role: 'user', status: 'unknown', timestamp: Time.now.to_i}
     @toxic_response = {text: 'profane text', blocked_by: 'openai', details: {evaluation: 'INAPPROPRIATE'}}
@@ -15,15 +15,15 @@ class AichatRequestChatCompletionJobTest < ActiveJob::TestCase
   end
 
   test 'execution status is set to QUEUED before perform' do
-    request = create :aichat_request, user_id: @student.id
+    request = create(:aichat_request, user_id: @student.id)
     AichatRequestChatCompletionJob.perform_later(request: request, locale: 'en')
     assert_equal SharedConstants::AI_REQUEST_EXECUTION_STATUS[:QUEUED], request.reload.execution_status
   end
 
   test "execution status is set to USER_PROFANITY if toxicity detected in user input" do
-    request = create :aichat_request, user_id: @student.id
+    request = create(:aichat_request, user_id: @student.id)
     user_message = request.new_message['chatMessageText']
-    AichatSafetyHelper.expects(:find_toxicity).with('user', user_message, @locale, request.level_id).returns(@toxic_response)
+    AichatSafetyHelper.expects(:find_toxicity).with(user_message, request.level_id).returns(@toxic_response)
 
     perform_enqueued_jobs do
       AichatRequestChatCompletionJob.perform_later(request: request, locale: @locale)
@@ -34,11 +34,11 @@ class AichatRequestChatCompletionJobTest < ActiveJob::TestCase
   end
 
   test "execution status is set to MODEL_PROFANITY if toxicity detected in model output" do
-    AichatSafetyHelper.stubs(:find_toxicity).with('user', anything, anything, anything).returns(nil)
+    AichatSafetyHelper.stubs(:find_toxicity).with(@new_message['chatMessageText'], anything).returns(nil)
     AichatSagemakerHelper.stubs(:get_sagemaker_assistant_response).returns('response')
-    AichatSafetyHelper.stubs(:find_toxicity).with('assistant', anything, anything, anything).returns(@toxic_response)
+    AichatSafetyHelper.stubs(:find_toxicity).with('response', anything).returns(@toxic_response)
 
-    request = create :aichat_request, user_id: @student.id
+    request = create(:aichat_request, user_id: @student.id)
 
     perform_enqueued_jobs do
       AichatRequestChatCompletionJob.perform_later(request: request, locale: 'en')
@@ -52,7 +52,7 @@ class AichatRequestChatCompletionJobTest < ActiveJob::TestCase
     model_response = 'response'
     AichatSagemakerHelper.stubs(:get_sagemaker_assistant_response).returns(model_response)
 
-    request = create :aichat_request, user_id: @student.id
+    request = create(:aichat_request, user_id: @student.id)
     perform_enqueued_jobs do
       AichatRequestChatCompletionJob.perform_later(request: request, locale: 'en')
     end
@@ -66,7 +66,7 @@ class AichatRequestChatCompletionJobTest < ActiveJob::TestCase
     AichatAiHelper.expects(:get_openai_assistant_response).once.returns(model_response)
     chatgpt_model_customizations = @model_customizations.merge({selectedModelId: SharedConstants::AI_CHAT_MODEL_IDS[:CHATGPT]})
 
-    request = create :aichat_request, user_id: @student.id, model_customizations: chatgpt_model_customizations
+    request = create(:aichat_request, user_id: @student.id, model_customizations: chatgpt_model_customizations)
     perform_enqueued_jobs do
       AichatRequestChatCompletionJob.perform_later(request: request, locale: 'en')
     end
@@ -79,7 +79,7 @@ class AichatRequestChatCompletionJobTest < ActiveJob::TestCase
     error_message = 'error'
     AichatSagemakerHelper.stubs(:get_sagemaker_assistant_response).raises(StandardError.new(error_message))
 
-    request = create :aichat_request, user_id: @student.id
+    request = create(:aichat_request, user_id: @student.id)
     exception = assert_raises(StandardError) do
       AichatRequestChatCompletionJob.perform_now(request: request, locale: 'en')
     end
@@ -96,7 +96,7 @@ class AichatRequestChatCompletionJobTest < ActiveJob::TestCase
     ].each do |error_message|
       AichatSagemakerHelper.stubs(:get_sagemaker_assistant_response).raises(Aws::SageMakerRuntime::Errors::ModelError.new(nil, error_message))
 
-      request = create :aichat_request, user_id: @student.id
+      request = create(:aichat_request, user_id: @student.id)
       perform_enqueued_jobs do
         AichatRequestChatCompletionJob.perform_later(request: request, locale: 'en')
       end
@@ -108,7 +108,7 @@ class AichatRequestChatCompletionJobTest < ActiveJob::TestCase
 
   test 'reports metrics for successful job' do
     customizations = {temperature: 0.5, retrievalContexts: ["test"], systemPrompt: "test", selectedModelId: @metrics_model_id}
-    request = create :aichat_request, user_id: @student.id, model_customizations: customizations
+    request = create(:aichat_request, user_id: @student.id, model_customizations: customizations)
 
     reported_metrics = []
 
@@ -159,7 +159,7 @@ class AichatRequestChatCompletionJobTest < ActiveJob::TestCase
 
   test 'reports metrics for failed job' do
     customizations = {temperature: 0.5, retrievalContexts: ["test"], systemPrompt: "test", selectedModelId: @metrics_model_id}
-    request = create :aichat_request, user_id: @student.id, model_customizations: customizations
+    request = create(:aichat_request, user_id: @student.id, model_customizations: customizations)
 
     reported_metrics = []
 

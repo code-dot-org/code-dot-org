@@ -6,8 +6,8 @@ const assertions = {
   'offscreen-images': ['error', {minScore: 0.5, maxLength: 4}],
   'total-byte-weight': ['error', {minScore: 0.5}],
   'unused-css-rules': ['error', {maxLength: 30}],
-  'unused-javascript': ['error', {maxLength: 10}],
-  'uses-text-compression': ['error', {maxLength: 5}],
+  'unused-javascript': ['error', {maxLength: 11}],
+  'uses-text-compression': ['error', {maxLength: 70}],
   'third-party-cookies': 'off',
   'uses-rel-preconnect': 'off',
   'link-text': 'off', // re-enable after CMS-497

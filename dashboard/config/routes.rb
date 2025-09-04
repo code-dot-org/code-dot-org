@@ -29,12 +29,15 @@ Dashboard::Application.routes.draw do
     get '/weblab/footer', to: 'projects#weblab_footer'
   end
 
+  constraints host: CDO.preview_codeprojects_hostname do
+    get '/', to: 'codeprojects_preview#show'
+  end
   # This matches any host that is not the codeprojects hostname
-  constraints host: /^(?!#{CDO.codeprojects_hostname})/ do
+  constraints host: /^(?!#{CDO.codeprojects_hostname}|#{CDO.preview_codeprojects_hostname})/ do
     # React-router will handle sub-routes on the client.
     resource :teacher_dashboard, only: [] do
       get :home, controller: :teacher_dashboard, action: :show
-      get :get_school_info_interstitial_data, controller: :teacher_dashboard, action: :get_school_info_interstitial_data
+      get :get_drawer_data, controller: :teacher_dashboard, action: :get_drawer_data
       resources :sections, only: %i[show], param: :section_id, controller: :teacher_dashboard do
         member do
           get :parent_letter
@@ -42,6 +45,12 @@ Dashboard::Application.routes.draw do
           get :unit, params: :unitName, action: :show
           get '*path', action: :show, via: :all, as: :subpath
         end
+      end
+    end
+
+    resources :notifications, only: [:index] do
+      collection do
+        post '/mark_as_read', controller: :notifications, action: :mark_as_read
       end
     end
 
@@ -87,8 +96,6 @@ Dashboard::Application.routes.draw do
     get "/home", to: "home#home"
 
     get "/congrats", to: "congrats#index"
-
-    get "/flowlab", to: "flowlab#index"
 
     get "/incubator", to: redirect(CDO.code_org_url("/incubator"))
     get "/musiclab", to: redirect(CDO.code_org_url("/music"))
@@ -263,6 +270,8 @@ Dashboard::Application.routes.draw do
       get '/users/migrate_to_multi_auth', to: 'registrations#migrate_to_multi_auth'
       get '/users/demigrate_from_multi_auth', to: 'registrations#demigrate_from_multi_auth'
       get '/users/to_destroy', to: 'registrations#users_to_destroy'
+      get '/users/test_mailjet_page', to: 'registrations#test_mailjet_page'
+      post '/users/send_test_mailjet', to: 'registrations#send_test_mailjet'
       get '/reset_session', to: 'sessions#reset'
       get '/lockout', to: 'sessions#lockout'
       delete '/expire_other', to: 'sessions#expire_other'
@@ -414,6 +423,9 @@ Dashboard::Application.routes.draw do
         get '/:filename', to: 'level_starter_assets#file', format: true
         post '', to: 'level_starter_assets#upload'
         delete '/:filename', to: 'level_starter_assets#destroy', format: true
+
+        get '/uuid/:uuid', to: 'level_starter_assets#file_by_uuid', format: true
+        post '/uuid/:uuid', to: 'level_starter_assets#upload_by_uuid'
       end
     end
 
@@ -423,7 +435,7 @@ Dashboard::Application.routes.draw do
       end
     end
 
-    get 'course_offerings/self_paced_pl_course_offerings', to: 'course_offerings#self_paced_pl_course_offerings'
+    get 'course_offerings/self_paced_pl_course_offerings_for_workshops', to: 'course_offerings#self_paced_pl_course_offerings_for_workshops'
     get '/course/:course_name', to: redirect('/courses/%{course_name}')
     get '/courses/:course_name/vocab/edit', to: 'vocabularies#edit'
     # these routes use course_course_name to match generated routes below that are nested within courses
@@ -501,7 +513,6 @@ Dashboard::Application.routes.draw do
     end
 
     resources :potential_teachers, only: [:create]
-    get '/potential_teachers/:id', param: :id, to: 'potential_teachers#show'
 
     # CSP 20-21 lockable lessons with lesson plan redirects
     get '/s/csp1-2020/lockable/2(*all)', to: redirect(path: '/s/csp1-2020/lessons/14%{all}')
@@ -513,6 +524,21 @@ Dashboard::Application.routes.draw do
     get '/s/csp7-2020/lockable/1(*all)', to: redirect(path: '/s/csp7-2020/lessons/11%{all}')
     get '/s/csp9-2020/lockable/1(*all)', to: redirect(path: '/s/csp9-2020/lessons/9%{all}')
     get '/s/csp10-2020/lockable/1(*all)', to: redirect(path: '/s/csp10-2020/lessons/14%{all}')
+
+    # Hardcoded redirects for old courses that used unit family names
+    get '/s/csd:unit', to: redirect('/courses/csd-2019/units/%{unit}'), constraints: {unit: /[1-6]/}
+    get '/s/csd:unit/(*all)', to: redirect('/courses/csd-2019/units/%{unit}/%{all}'), constraints: {unit: /[1-6]/}
+
+    get '/s/csp:unit', to: redirect('/courses/csp-2019/units/%{unit}'), constraints: {unit: /[1-4]/}
+    get '/s/csp:unit/(*all)', to: redirect('/courses/csp-2019/units/%{unit}/%{all}'), constraints: {unit: /[1-4]/}
+    get '/s/csp-explore', to: redirect('/courses/csp-2019/units/5')
+    get '/s/csp-explore/(*all)', to: redirect('/courses/csp-2019/units/5/%{all}')
+    get '/s/csp5', to: redirect('/courses/csp-2019/units/6')
+    get '/s/csp5/(*all)', to: redirect('/courses/csp-2019/units/6/%{all}')
+    get '/s/csp-create', to: redirect('/courses/csp-2019/units/7')
+    get '/s/csp-create/(*all)', to: redirect('/courses/csp-2019/units/7/%{all}')
+    get '/s/csppostap', to: redirect('/courses/csp-2019/units/8')
+    get '/s/csppostap/(*all)', to: redirect('/courses/csp-2019/units/8/%{all}')
 
     resources :data_docs, param: :key do
       collection do
@@ -754,6 +780,7 @@ Dashboard::Application.routes.draw do
         get    'channels/:channel_id/abuse', action: :show_abuse
         delete 'channels/:channel_id/abuse', action: :reset_abuse
         post   'channels/:channel_id/abuse/delete', action: :reset_abuse
+        post   'channels/:channel_id/abuse/image', action: :update_abuse_image_moderation
         patch  '(:endpoint)/:encrypted_channel_id', action: :update_file_abuse,
                constraints: {endpoint: /(animations|assets|sources|files|libraries)/}
       end
@@ -819,6 +846,7 @@ Dashboard::Application.routes.draw do
           get :workshop_organizer_survey_report, action: :workshop_organizer_survey_report, controller: 'workshop_organizer_survey_report'
 
           get 'foorm/generic_survey_report', action: :generic_survey_report, controller: 'workshop_survey_foorm_report'
+          get 'foorm/workshop_survey_summary', action: :workshop_survey_summary, controller: 'workshop_survey_foorm_report'
           get 'foorm/csv_survey_report', action: :csv_survey_report, controller: 'workshop_survey_foorm_report'
           get 'foorm/forms_for_workshop', action: :forms_for_workshop, controller: 'workshop_survey_foorm_report'
         end
@@ -830,7 +858,6 @@ Dashboard::Application.routes.draw do
         delete 'enrollments/:enrollment_code', action: 'cancel', controller: 'workshop_enrollments'
         post 'enrollment/:enrollment_id/scholarship_info', action: 'update_scholarship_info', controller: 'workshop_enrollments'
         post 'enrollments/move', action: 'move', controller: 'workshop_enrollments'
-        post 'enrollment/:id/edit', action: 'edit', controller: 'workshop_enrollments'
         get 'legacy_survey_summaries', action: :legacy_survey_summaries, controller: 'legacy_survey_summaries'
 
         # persistent namespace for FiT Weekend registrations, can be updated/replaced each year
@@ -957,7 +984,7 @@ Dashboard::Application.routes.draw do
 
       delete 'fit_weekend_registration/:application_guid', to: 'fit_weekend_registration#destroy'
 
-      get 'workshops/:workshop_id/enroll', to: redirect("/pd/workshops/%{workshop_id}/join")
+      get 'workshops/:workshop_id/enroll', to: redirect("/professional-learning/workshops/%{workshop_id}")
       get 'workshops/:workshop_id/join', action: 'join', controller: 'workshop_enrollment'
       get 'workshop_enrollment/:code', action: 'show', controller: 'workshop_enrollment'
       get 'workshop_enrollment/:code/cancel', action: 'cancel', controller: 'workshop_enrollment'
@@ -1065,6 +1092,7 @@ Dashboard::Application.routes.draw do
         post 'users/show_progress_table_v2', to: 'users#post_show_progress_table_v2'
         post 'users/date_progress_table_invitation_last_delayed', to: 'users#post_date_progress_table_invitation_last_delayed'
         post 'users/has_seen_progress_table_v2_invitation', to: 'users#post_has_seen_progress_table_v2_invitation'
+        post 'users/has_seen_homepage_welcome', to: 'users#post_has_seen_homepage_welcome'
         post 'users/ai_rubrics_disabled', to: 'users#post_ai_rubrics_disabled'
         post 'users/ai_differentiation_enabled', to: 'users#post_ai_differentiation_enabled'
         post 'users/has_seen_ai_assessments_announcement', to: 'users#post_has_seen_ai_assessments_announcement'
@@ -1254,7 +1282,7 @@ Dashboard::Application.routes.draw do
 
     resources :code_review_comments, only: [:create, :update, :destroy]
 
-    resources :rubrics, only: [:create, :edit, :new, :update] do
+    resources :rubrics, only: [:create, :edit, :new, :update, :show] do
       member do
         get 'get_ai_evaluations'
         get 'get_teacher_evaluations'
@@ -1307,15 +1335,26 @@ Dashboard::Application.routes.draw do
     get '/aichat/user_has_access', to: 'aichat#user_has_access'
     post '/aichat/find_toxicity', to: 'aichat#find_toxicity'
 
-    post 'ai_diff/chat_completion', to: 'ai_diff#chat_completion'
-    post 'ai_diff/curriculum_courses', to: 'ai_diff#curriculum_courses'
-    post 'aidiff_messages/:aidiff_message_id/submit_feedback', to: 'aidiff_messages#submit_feedback'
-
     resources :ai_tutor_interactions, only: [:create, :index] do
       resources :feedbacks, controller: 'ai_tutor_interaction_feedbacks', only: [:create]
     end
 
     resources :ai_interaction_feedback, only: [:create]
+
+    resources :aidiff_threads, only: [:create, :index, :show] do
+      collection do
+        post :curriculum_courses
+      end
+      member do
+        post :chat_completion
+      end
+    end
+
+    resources :aidiff_messages, only: [] do
+      member do
+        post :submit_feedback
+      end
+    end
 
     # Policy Compliance
     namespace :policy_compliance do
@@ -1361,7 +1400,6 @@ Dashboard::Application.routes.draw do
 
         # Datablock Storage: Library Manifest API (=shared table metadata)
         get :get_library_manifest
-        put :set_library_manifest
 
         # Datablock Storage: Project API
         get :project_has_data

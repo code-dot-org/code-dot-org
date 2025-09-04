@@ -2,11 +2,11 @@ require 'test_helper'
 
 class LearningGoalTeacherEvaluationsControllerTest < ActionController::TestCase
   setup do
-    @teacher = create :teacher
+    @teacher = create(:teacher)
     sign_in @teacher
-    @student = create :student
-    @learning_goal = create :learning_goal
-    @learning_goal_teacher_evaluation = create :learning_goal_teacher_evaluation, teacher_id: @teacher.id, user_id: @student.id, learning_goal_id: @learning_goal.id
+    @student = create(:student)
+    @learning_goal = create(:learning_goal)
+    @learning_goal_teacher_evaluation = create(:learning_goal_teacher_evaluation, teacher_id: @teacher.id, user_id: @student.id, learning_goal_id: @learning_goal.id)
   end
 
   test 'create learning goal teacher evaluation' do
@@ -82,7 +82,7 @@ class LearningGoalTeacherEvaluationsControllerTest < ActionController::TestCase
   end
 
   test 'get_or_create_evaluation method creates evaluation if one does not exist' do
-    new_student = create :student
+    new_student = create(:student)
     user_id = new_student.id
     learning_goal_id = @learning_goal.id
 

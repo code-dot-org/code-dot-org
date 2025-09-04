@@ -26,12 +26,14 @@ interface WorkspaceProps {
   className?: string;
   style?: React.CSSProperties;
   isWidgetView?: boolean;
+  hideHeaders?: boolean;
 }
 
 const Workspace: React.FunctionComponent<WorkspaceProps> = ({
   style,
   className,
   isWidgetView,
+  hideHeaders,
 }) => {
   const {config} = useCodebridgeContext();
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
@@ -48,6 +50,9 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
   );
   const projectTooLarge = useAppSelector(
     state => state.lab2Project.projectTooLarge
+  );
+  const showFileBrowser = useAppSelector(
+    state => state.codebridgeWorkspace.showFileBrowser
   );
   const dispatch = useAppDispatch();
 
@@ -105,6 +110,7 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
     <div style={style} className={className}>
       <PanelContainer
         id="editor-workspace"
+        hideHeaders={hideHeaders}
         headerContent={headerContent}
         rightHeaderContent={<HeaderButtons />}
         className={moduleStyles.workspace}
@@ -112,22 +118,22 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
       >
         <div
           className={classnames(moduleStyles.workspaceWorkarea, {
-            [moduleStyles.withFileBrowser]: config.showFileBrowser,
+            [moduleStyles.withFileBrowser]: showFileBrowser,
           })}
         >
           <div
             className={classnames(moduleStyles.workspaceToggleButtonContainer, {
-              [moduleStyles.withFileBrowser]: config.showFileBrowser,
+              [moduleStyles.withFileBrowser]: showFileBrowser,
             })}
           >
             <ToggleFileBrowserButton />
           </div>
           <FileTabs />
-          {config.showFileBrowser && <FileBrowser />}
+          {showFileBrowser && <FileBrowser />}
           {/* eslint-disable jsx-a11y/no-noninteractive-tabindex */}
           <div
             className={classnames(moduleStyles.workplaceEditorWrapper, {
-              [moduleStyles.withFileBrowser]: config.showFileBrowser,
+              [moduleStyles.withFileBrowser]: showFileBrowser,
             })}
             tabIndex={0}
             onKeyDown={onKeyDown}

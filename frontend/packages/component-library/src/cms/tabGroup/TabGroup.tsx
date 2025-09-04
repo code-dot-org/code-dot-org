@@ -66,6 +66,7 @@ const parseTabsGroupTabToRegularTab = (tab: TabGroupTabModel | TabModel) => {
             <Image
               className={moduleStyles.tabGroupModelTabImageContainer}
               {...image}
+              alt=""
             />
           )}
           <div className={moduleStyles.tabGroupModelTabContentContainer}>
@@ -101,6 +102,7 @@ const parseTabsGroupTabToAccordionItem = (
             <Image
               className={moduleStyles.tabGroupAccordionItemImage}
               {...image}
+              alt=""
             />
           )}
         </div>

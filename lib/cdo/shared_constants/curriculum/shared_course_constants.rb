@@ -164,6 +164,7 @@ module Curriculum
       games_and_animations
       hardware
       internet
+      music
       physical_computing
       web_design
       programming
@@ -202,6 +203,14 @@ module Curriculum
         student: ['student'],
         teacher: ['student', 'teacher'],
         facilitator: ['student', 'teacher', 'facilitator']
+      }
+    ).freeze
+
+    NUMBERED_UNITS_TYPE = OpenStruct.new(
+      {
+        none: nil,
+        auto: "auto",
+        custom: "custom"
       }
     ).freeze
   end

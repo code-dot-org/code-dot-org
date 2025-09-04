@@ -42,13 +42,14 @@ class CoursesController < ApplicationController
       redirect_path = Policies::Courses.modularity_enabled? ?
                         course_unit_path(@unit_group, 1) :
                         script_path(@unit_group.first_unit)
-      redirect_to request.query_string.present? ? "#{redirect_path}?#{request.query_string}" : redirect_path
+      redirect_to request.query_string.present? ? "#{redirect_path}?#{request.query_string}" : redirect_path, status: :moved_permanently
       return
     end
 
     # Attempt to redirect user if we think they ended up on the wrong course overview page.
     override_redirect = VersionRedirectOverrider.override_course_redirect?(session, @unit_group)
-    if !override_redirect && redirect_unit_group = redirect_unit_group(@unit_group)
+    redirect_unit_group = redirect_unit_group(@unit_group)
+    if !override_redirect && redirect_unit_group
       redirect_to "#{course_path(redirect_unit_group)}/?redirect_warning=true"
       return
     end
@@ -60,6 +61,14 @@ class CoursesController < ApplicationController
         return
       end
     end
+
+    # For deprecated courses, show deprecated course page
+    # if we haven't already redirected to a newer version of the course or the teacher dashboard.
+    units = @unit_group.default_units
+    if !units.empty? && units.all?(&:is_deprecated)
+      return render 'errors/deprecated_course'
+    end
+
     if !params[:section_id] && current_user&.last_section_id && !TeacherDashboardUtils.can_redirect_to_teacher_dashboard?(current_user)
       redirect_to "#{request.path}?section_id=#{current_user.last_section_id}"
       return
@@ -86,7 +95,7 @@ class CoursesController < ApplicationController
       instruction_type: params[:instruction_type] ? params[:instruction_type] : Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.teacher_led,
       instructor_audience: params[:instructor_audience] ? params[:instructor_audience] : Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher,
       participant_audience: params[:participant_audience] ? params[:participant_audience] : Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
-      has_numbered_units: true
+      numbered_units: Curriculum::SharedCourseConstants::NUMBERED_UNITS_TYPE.auto,
     )
     if @unit_group.save
       @unit_group.write_serialization
@@ -105,6 +114,12 @@ class CoursesController < ApplicationController
     if @unit_group.has_migrated_unit? && @unit_group.course_version
       @unit_group.resources = params[:resourceIds].map {|id| Resource.find(id)} if params.key?(:resourceIds)
       @unit_group.student_resources = params[:studentResourceIds].map {|id| Resource.find(id)} if params.key?(:studentResourceIds)
+    end
+
+    if @unit_group.numbered_units == Curriculum::SharedCourseConstants::NUMBERED_UNITS_TYPE.custom
+      @unit_group.default_unit_group_units.each do |ugu|
+        ugu.update!(unit_prefix: params[:unit_prefixes][ugu.position-1])
+      end
     end
 
     @unit_group.reload
@@ -218,7 +233,7 @@ class CoursesController < ApplicationController
   end
 
   private def course_params
-    cp = params.permit(:version_year, :family_name, :has_verified_resources, :has_numbered_units, :pilot_experiment, :published_state, :instruction_type, :instructor_audience, :participant_audience, :announcements).to_h
+    cp = params.permit(:version_year, :family_name, :has_verified_resources, :numbered_units, :pilot_experiment, :published_state, :instruction_type, :instructor_audience, :participant_audience, :announcements).to_h
     cp[:announcements] = JSON.parse(cp[:announcements]) if cp[:announcements]
     cp[:published_state] = Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development unless cp[:published_state]
 

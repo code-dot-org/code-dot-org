@@ -771,7 +771,7 @@ module LevelsHelper
     app_options[:public_caching] = @public_caching
     if @script_level&.lesson
       app_options[:theme] = @script_level.lesson.get_background_for_user(current_user)
-    elsif @level.is_a?(Pythonlab) && current_user
+    elsif @level.uses_theme_preference? && current_user
       theme_preference = UserPreference.find_by(user_id: current_user.id)&.theme
       app_options[:theme] = (theme_preference && theme_preference['global']) || 'dark'
     end
@@ -1077,7 +1077,20 @@ module LevelsHelper
         Honeybadger.notify(exception, context: {message: "No code sample found in S3 with with args: #{s3_args}"})
         return
       end
-      student_code = body ? JSON.parse(body)['source'] : nil
+      student_code = nil
+      if body
+        parsed = JSON.parse(body)
+        source = parsed['source']
+        if source.is_a?(Hash) && source['files']
+          # Transform files hash into {filename => contents}
+          student_code = {}
+          source['files'].each do |_, file_obj|
+            student_code[file_obj['name']] = file_obj['contents']
+          end
+        else
+          student_code = source
+        end
+      end
     end
     {
       project_id: channel_id,

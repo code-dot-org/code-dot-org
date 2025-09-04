@@ -15,7 +15,7 @@ class NameableTest < ActiveSupport::TestCase
     end
 
     context 'when purged_at is set' do
-      let(:user) {build :user, name: nil, purged_at: Time.now}
+      let(:user) {build(:user, name: nil, purged_at: Time.now)}
       it 'allows a user without a name' do
         _(user).must_be :valid?
         _(user.errors[:name]).must_be :empty?
@@ -44,7 +44,7 @@ class NameableTest < ActiveSupport::TestCase
   end
 
   describe 'strip_display_given_family_names callback' do
-    subject(:user) {create :teacher, name: '  First  ', given_name: '   Given   ', family_name: ' Last '}
+    subject(:user) {create(:teacher, name: '  First  ', given_name: '   Given   ', family_name: ' Last ')}
     it 'strips whitespace from name, given_name, and family_name if changed' do
       _(user.name).must_equal 'First'
       _(user.given_name).must_equal 'Given'
@@ -52,7 +52,7 @@ class NameableTest < ActiveSupport::TestCase
     end
 
     context 'on update' do
-      let(:user) {create :student}
+      let(:user) {create(:student)}
 
       it 'strips whitespace when name is updated' do
         user.update(name: '  UpdatedFirst  ')
@@ -76,7 +76,7 @@ class NameableTest < ActiveSupport::TestCase
 
   describe 'creating a user with the same name as a deleted user' do
     before do
-      create :user, :deleted, name: 'Same Name'
+      create(:user, :deleted, name: 'Same Name')
     end
 
     it 'is valid with the same name as a deleted user' do
@@ -87,12 +87,12 @@ class NameableTest < ActiveSupport::TestCase
 
   describe '#sort_by_family_name?' do
     it 'returns true when sort_by_family_name is set' do
-      user = build :user, sort_by_family_name: true
+      user = build(:user, sort_by_family_name: true)
       _(user.sort_by_family_name?).must_equal true
     end
 
     it 'returns false when sort_by_family_name is nil' do
-      user = build :user, sort_by_family_name: nil
+      user = build(:user, sort_by_family_name: nil)
       _(user.sort_by_family_name?).must_equal false
     end
   end
@@ -122,5 +122,37 @@ class NameableTest < ActiveSupport::TestCase
     it {_(build(:user, name: '樊瑞').second_name).must_equal nil} # ok, this isn't actually right but ok for now
     it {_(build(:user, name: 'Laurel').second_name).must_equal nil} # just one name
     it {_(build(:user, name: '  some whitespace in front  ').second_name).must_equal 'whitespace'} # whitespace in front
+  end
+
+  describe '#full_name' do
+    it 'returns given_name and family_name if both are present' do
+      user = build(:user, given_name: 'John', family_name: 'Doe', name: 'Fallback Name', username: 'johndoe')
+      _(user.full_name).must_equal 'John Doe'
+    end
+
+    it 'returns name if family_name is missing' do
+      user = build(:user, given_name: 'John', family_name: nil, name: 'Fallback Name', username: 'johndoe')
+      _(user.full_name).must_equal 'Fallback Name'
+    end
+
+    it 'returns name if given_name is missing' do
+      user = build(:user, given_name: nil, family_name: 'Doe', name: 'Fallback Name', username: 'johndoe')
+      _(user.full_name).must_equal 'Fallback Name'
+    end
+
+    it 'returns name if both given_name and family_name are missing' do
+      user = build(:user, given_name: nil, family_name: nil, name: 'Fallback Name', username: 'johndoe')
+      _(user.full_name).must_equal 'Fallback Name'
+    end
+
+    it 'returns username if all name fields are missing' do
+      user = build(:user, given_name: nil, family_name: nil, name: nil, username: 'johndoe')
+      _(user.full_name).must_equal 'johndoe'
+    end
+
+    it 'returns an empty string if all name fields and username are missing' do
+      user = build(:user, given_name: nil, family_name: nil, name: nil, username: nil)
+      _(user.full_name).must_equal ''
+    end
   end
 end

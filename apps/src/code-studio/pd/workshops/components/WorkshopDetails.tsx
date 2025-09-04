@@ -1,6 +1,6 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Tags from '@code-dot-org/component-library/tags';
-import {
+import Typography, {
   Heading2,
   Heading3,
   BodyTwoText,
@@ -10,7 +10,8 @@ import {
 import React from 'react';
 
 import {DATA_SHARING_NOTICE} from '@cdo/apps/code-studio/pd/constants';
-import {GetWorkshopInfoScriptDataResponse} from '@cdo/apps/code-studio/pd/workshops/types';
+import {WorkshopInfo} from '@cdo/apps/code-studio/pd/workshops/types';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 import WorkshopFacilitatorsList from './WorkshopFacilitatorsList';
 import WorkshopSessionsList from './WorkshsopSessionsList';
@@ -19,29 +20,32 @@ import moduleStyles from './../workshopMarketingPage.module.scss';
 
 interface WorkshopDetailsProps
   extends Pick<
-    GetWorkshopInfoScriptDataResponse,
+    WorkshopInfo,
     | 'name'
-    | 'grade_levels'
+    | 'gradeLevels'
     | 'sessions'
     | 'fee'
     | 'prereq'
     | 'description'
     | 'notes'
-    | 'course_offerings'
+    | 'courseOfferings'
     | 'facilitators'
-  > {}
+  > {
+  isUserEnrolled?: boolean;
+}
 
 /** Component to display the details of a workshop. */
 const WorkshopDetails: React.FC<WorkshopDetailsProps> = ({
   name,
-  grade_levels,
+  gradeLevels,
   sessions,
   fee,
   prereq,
   description,
   notes,
-  course_offerings,
+  courseOfferings,
   facilitators,
+  isUserEnrolled,
 }) => {
   return (
     <section className={moduleStyles.workshopDetails}>
@@ -50,7 +54,7 @@ const WorkshopDetails: React.FC<WorkshopDetailsProps> = ({
         <div className={moduleStyles.workshopUnderHeadingDetails}>
           <BodyTwoText className={moduleStyles.gradeLevels}>
             <FontAwesomeV6Icon iconName="users" />
-            <StrongText>Grades:</StrongText> {grade_levels?.join(', ')}
+            <StrongText>Grades:</StrongText> {gradeLevels?.join(', ')}
           </BodyTwoText>
           {prereq && (
             <BodyTwoText className={moduleStyles.prerequisites}>
@@ -71,28 +75,35 @@ const WorkshopDetails: React.FC<WorkshopDetailsProps> = ({
         <Heading3 visualAppearance={'heading-xs'}>
           Sessions in This Workshop
         </Heading3>
-        <WorkshopSessionsList sessions={sessions} />
+        <WorkshopSessionsList
+          sessions={sessions}
+          isUserEnrolled={isUserEnrolled}
+        />
       </section>
 
       <section className={moduleStyles.workshopDetailsItem}>
         <Heading3 visualAppearance={'heading-xs'}>Description:</Heading3>
-        <BodyTwoText>{description}</BodyTwoText>
+        <Typography semanticTag="div" visualAppearance="body-two">
+          <SafeMarkdown unwrapped markdown={description} />
+        </Typography>
       </section>
 
       {notes && (
         <section className={moduleStyles.workshopDetailsItem}>
           <Heading3 visualAppearance={'heading-xs'}>Attendee Notes:</Heading3>
-          <BodyTwoText>{notes}</BodyTwoText>
+          <Typography semanticTag="div" visualAppearance="body-two">
+            <SafeMarkdown unwrapped markdown={notes} />
+          </Typography>
         </section>
       )}
 
-      {course_offerings && course_offerings.length > 0 && (
+      {courseOfferings && courseOfferings.length > 0 && (
         <section className={moduleStyles.workshopDetailsItem}>
           <Heading3 visualAppearance="heading-xs">PL Topics Covered:</Heading3>
           <Tags
             size="s"
             className={moduleStyles.plTopicsTags}
-            tagsList={course_offerings.map(course => ({label: course}))}
+            tagsList={courseOfferings.map(course => ({label: course}))}
           />
         </section>
       )}

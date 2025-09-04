@@ -1,4 +1,10 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, {
+  Dispatch,
+  SetStateAction,
+  useEffect,
+  useRef,
+  useState,
+} from 'react';
 
 import ChatMessage from '@cdo/apps/aiComponentLibrary/chatMessage/ChatMessage';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
@@ -69,23 +75,29 @@ const GENERAL_SUGGESTED_PROMPTS = [
   ADDITIONAL_HELP_PROMPT,
 ];
 
-const AI_DIFF_CHAT_MESSAGE_ENDPOINT = '/ai_diff/chat_completion';
+const AIDIFF_THREADS_ENDPOINT = '/aidiff_threads';
+const AIDIFF_CHAT_COMPLETION = 'chat_completion';
 
 interface AiDiffChatProps {
   context: Context;
+  threadMessages?: ChatItem[];
   scriptName?: string;
-  unitDisplayName?: string;
   chatResponseCallback?: () => void;
   initialChatMessage?: string;
   suggestedPrompts?: ChatPrompt[];
   disableEndButtons?: boolean;
   curriculumCourses?: string[];
+  threadFetchCallback?: () => void;
+  threadId?: number;
+  setThreadId?: Dispatch<SetStateAction<number>>;
+  initialThreadPrompt?: ChatPrompt | null;
+  setInitialThreadPrompt?: Dispatch<SetStateAction<ChatPrompt | null>>;
 }
 
 const AiDiffChat: React.FC<AiDiffChatProps> = ({
   context,
+  threadMessages = [],
   scriptName,
-  unitDisplayName,
   chatResponseCallback = () => {},
   initialChatMessage = INITIAL_CHAT_MESSAGE,
   suggestedPrompts = context.type === AiDiffContext.GENERAL
@@ -93,20 +105,26 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
     : SUGGESTED_PROMPTS[0],
   disableEndButtons = false,
   curriculumCourses = [],
+  threadFetchCallback = () => {},
+  threadId = 0,
+  setThreadId = () => {},
+  initialThreadPrompt = null,
+  setInitialThreadPrompt = () => {},
 }) => {
   const reportingData = React.useMemo(() => {
     return {
       chatContext: context,
       scriptName,
-      unitName: unitDisplayName,
     };
-  }, [context, scriptName, unitDisplayName]);
-
-  const [sessionId, setSessionId] = useState(null);
+  }, [context, scriptName]);
 
   const [isWaitingForResponse, setIsWaitingForResponse] = useState(false);
 
   const [suggestionPage, setSuggestionPage] = useState(0);
+
+  const [localThreadId, setLocalThreadId] = useState(threadId);
+
+  const userMessageEditorRef = useRef<HTMLTextAreaElement>(null);
 
   const viewAsUserId = useAppSelector(
     state => state.progress?.viewAsUserId || undefined
@@ -118,50 +136,164 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
   }
   if (context.type === AiDiffContext.LEVEL) {
     additionalPrompts.push(DEBUG_THIS_CODE, IMPROVE_THIS_CODE);
-    context.viewAsUserId = viewAsUserId;
   }
 
-  const [messageHistory, setMessageHistory] = useState<ChatItem[]>([
-    {
-      role: Role.ASSISTANT,
-      chatMessageText: initialChatMessage,
-      status: Status.OK,
+  const [messageHistory, setMessageHistory] = useState<ChatItem[]>(
+    threadMessages.length > 0
+      ? threadMessages
+      : [
+          {
+            role: Role.ASSISTANT,
+            chatMessageText: initialChatMessage,
+            status: Status.OK,
+          },
+          suggestedPrompts.concat(additionalPrompts),
+        ]
+  );
+
+  const sendChatEvent = React.useCallback(
+    (role: string, prompt: string, preset: boolean, thread: number) => {
+      const responseEventData = {
+        ...reportingData,
+        role: role,
+        isPreset: preset,
+        text: prompt,
+        threadId: thread,
+        url: window.location.href,
+      };
+      analyticsReporter.sendEvent(
+        EVENTS.AI_DIFF_CHAT_EVENT,
+        responseEventData,
+        PLATFORMS.STATSIG
+      );
     },
-    suggestedPrompts.concat(additionalPrompts),
+    [reportingData]
+  );
+
+  const getAIResponse = React.useCallback(
+    (prompt: string, isPreset: boolean, presetChipText: string | null) => {
+      setIsWaitingForResponse(true);
+
+      if (localThreadId !== 0) {
+        sendChatEvent(Role.USER, prompt, isPreset, localThreadId);
+      }
+
+      const endpoint =
+        localThreadId === 0
+          ? `${AIDIFF_THREADS_ENDPOINT}`
+          : `${AIDIFF_THREADS_ENDPOINT}/${localThreadId}/${AIDIFF_CHAT_COMPLETION}`;
+
+      const body = JSON.stringify({
+        inputText: prompt,
+        isPreset,
+        presetChipText,
+        ...(localThreadId === 0 ? {context} : {}),
+        ...(context.type === AiDiffContext.LEVEL ? {viewAsUserId} : {}),
+      });
+
+      HttpClient.post(endpoint, body, true, {
+        'Content-Type': 'application/json',
+      })
+        .then(response => response.json())
+        .then(json => {
+          const newAiMessage = {
+            role: Role.ASSISTANT,
+            chatMessageText: json.chat_message_text,
+            status: json.status,
+            id: json.message_id,
+          };
+
+          // logging here because on the first user message the threadID is 0
+          // we only get a threadID initialized in the response
+          if (localThreadId === 0) {
+            threadFetchCallback();
+            sendChatEvent(Role.USER, prompt, isPreset, json.thread_id);
+          }
+
+          sendChatEvent(
+            Role.ASSISTANT,
+            json.chat_message_text,
+            isPreset,
+            json.thread_id
+          );
+          if (json.thread_id) {
+            setLocalThreadId(json.thread_id);
+            setThreadId(json.thread_id);
+          }
+          setMessageHistory(prevMessages => [...prevMessages, newAiMessage]);
+        })
+        .catch(error => console.log(error))
+        .finally(() => {
+          setIsWaitingForResponse(false);
+          chatResponseCallback();
+          if (userMessageEditorRef && userMessageEditorRef.current) {
+            userMessageEditorRef.current?.focus();
+          }
+        });
+    },
+    [
+      localThreadId,
+      context,
+      viewAsUserId,
+      sendChatEvent,
+      threadFetchCallback,
+      setLocalThreadId,
+      chatResponseCallback,
+      setThreadId,
+    ]
+  );
+
+  const onMessageSend = React.useCallback(
+    (message: string) => {
+      const newUserMessage = {
+        role: Role.USER,
+        chatMessageText: message,
+        status: Status.OK,
+      };
+
+      setMessageHistory(prevMessages => [...prevMessages, newUserMessage]);
+      getAIResponse(message, false, null);
+    },
+    [setMessageHistory, getAIResponse]
+  );
+
+  const onPromptSelect = React.useCallback(
+    (prompt: ChatPrompt) => {
+      if (prompt.response !== undefined) {
+        setMessageHistory(prevMessages => [
+          ...prevMessages,
+          {
+            role: Role.ASSISTANT,
+            chatMessageText: prompt.response ?? '',
+            status: Status.OK,
+          },
+        ]);
+      }
+      if (prompt.followUpPrompts !== undefined) {
+        setMessageHistory(prevMessages => [
+          ...prevMessages,
+          prompt.followUpPrompts ?? [],
+        ]);
+      }
+      if (!prompt.followUpPrompts && !prompt.response) {
+        getAIResponse(prompt.prompt, true, prompt.label);
+      }
+    },
+    [getAIResponse, setMessageHistory]
+  );
+
+  React.useEffect(() => {
+    if (initialThreadPrompt && threadMessages.length === 0 && threadId === 0) {
+      onPromptSelect(initialThreadPrompt);
+      setInitialThreadPrompt(null);
+    }
+  }, [
+    initialThreadPrompt,
+    threadMessages,
+    threadId,
+    onPromptSelect,
+    setInitialThreadPrompt,
   ]);
-
-  const onMessageSend = (message: string) => {
-    const newUserMessage = {
-      role: Role.USER,
-      chatMessageText: message,
-      status: Status.OK,
-    };
-
-    setMessageHistory(prevMessages => [...prevMessages, newUserMessage]);
-    getAIResponse(message, false);
-  };
-
-  const onPromptSelect = (prompt: ChatPrompt) => {
-    if (prompt.response !== undefined) {
-      setMessageHistory(prevMessages => [
-        ...prevMessages,
-        {
-          role: Role.ASSISTANT,
-          chatMessageText: prompt.response ?? '',
-          status: Status.OK,
-        },
-      ]);
-    }
-    if (prompt.followUpPrompts !== undefined) {
-      setMessageHistory(prevMessages => [
-        ...prevMessages,
-        prompt.followUpPrompts ?? [],
-      ]);
-    }
-    if (!prompt.followUpPrompts && !prompt.response) {
-      getAIResponse(prompt.prompt, true);
-    }
-  };
 
   const onSuggestPrompts = () => {
     const nextPage = (suggestionPage + 1) % SUGGESTED_PROMPTS.length;
@@ -176,84 +308,17 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
     ]);
   };
 
-  const sendChatEvent = React.useCallback(
-    (role: string, prompt: string, preset: boolean, session: string) => {
-      const responseEventData = {
-        ...reportingData,
-        role: role,
-        isPreset: preset,
-        text: prompt,
-        sessionId: session,
-        url: window.location.href,
-      };
-      analyticsReporter.sendEvent(
-        EVENTS.AI_DIFF_CHAT_EVENT,
-        responseEventData,
-        PLATFORMS.STATSIG
-      );
-    },
-    [reportingData]
-  );
-
-  const getAIResponse = React.useCallback(
-    (prompt: string, isPreset: boolean) => {
-      setIsWaitingForResponse(true);
-
-      if (sessionId !== null) {
-        sendChatEvent(Role.USER, prompt, isPreset, sessionId);
-      }
-
-      const body = JSON.stringify({
-        context,
-        inputText: prompt,
-        unitDisplayName,
-        sessionId,
-        isPreset,
-      });
-      HttpClient.post(`${AI_DIFF_CHAT_MESSAGE_ENDPOINT}`, body, true, {
-        'Content-Type': 'application/json',
-      })
-        .then(response => response.json())
-        .then(json => {
-          const newAiMessage = {
-            role: Role.ASSISTANT,
-            chatMessageText: json.chat_message_text,
-            status: json.status,
-            id: json.messageId,
-          };
-
-          // logging here because on the first user message the sessionId is null
-          // we only get a sessionID initialized in the response
-          if (sessionId === null) {
-            sendChatEvent(Role.USER, prompt, isPreset, json.session_id);
-          }
-
-          sendChatEvent(
-            Role.ASSISTANT,
-            json.chat_message_text,
-            isPreset,
-            json.session_id
-          );
-          setSessionId(json.session_id);
-          setMessageHistory(prevMessages => [...prevMessages, newAiMessage]);
-        })
-        .catch(error => console.log(error))
-        .finally(() => {
-          setIsWaitingForResponse(false);
-          chatResponseCallback();
-        });
-    },
-    [context, unitDisplayName, sessionId, chatResponseCallback, sendChatEvent]
-  );
-
   // Scroll to bottom of content when a new message comes in
-  const chatWindowRef = useRef<HTMLDivElement>(null);
+  const chatWindowRef = useRef<HTMLImageElement>(null);
   useEffect(() => {
-    chatWindowRef.current?.lastElementChild?.scrollIntoView();
+    if (chatWindowRef.current) {
+      chatWindowRef.current?.scrollIntoView();
+    }
   }, [messageHistory]);
+
   return (
     <div className={style.chatContainer}>
-      <div className={style.chatContent} ref={chatWindowRef}>
+      <div className={style.chatContent}>
         {messageHistory.map((item: ChatItem, id: number) =>
           Array.isArray(item) ? (
             <AiDiffSuggestedPrompts
@@ -280,15 +345,17 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
             />
           )
         )}
-        <img
-          src="/blockly/media/aichat/typing-animation.gif"
-          alt={'Waiting for response'}
-          className={
-            isWaitingForResponse
-              ? style.waitingForResponse
-              : style.hideWaitingForResponse
-          }
-        />
+        <div ref={chatWindowRef}>
+          <img
+            src="/blockly/media/aichat/typing-animation.gif"
+            alt={'Waiting for response'}
+            className={
+              isWaitingForResponse
+                ? style.waitingForResponse
+                : style.hideWaitingForResponse
+            }
+          />
+        </div>
       </div>
       <AiDiffChatFooter
         onSubmit={onMessageSend}
@@ -296,6 +363,7 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
         messages={messageHistory}
         waiting={isWaitingForResponse}
         disableEndButtons={disableEndButtons}
+        userMessageEditorRef={userMessageEditorRef}
       />
     </div>
   );

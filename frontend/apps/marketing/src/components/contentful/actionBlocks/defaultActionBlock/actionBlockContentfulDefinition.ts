@@ -64,12 +64,6 @@ export const ActionBlockContentfulComponentDefinition: ComponentDefinition = {
       type: 'Link',
       group: 'content',
       description: 'The primary button of the action block.',
-      defaultValue: {
-        fields: {
-          label: 'Primary button',
-          url: '#',
-        },
-      },
       validations: {
         bindingSourceType: ['entry'],
       },

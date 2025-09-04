@@ -10,6 +10,7 @@ import ActionBlock, {
 
 import {externalLinkIconProps} from '@/components/common/constants';
 import {showNewTag} from '@/components/contentful/actionBlocks/helpers';
+import {resolveContentfulLink} from '@/contentful/resolveLink';
 import {getAbsoluteImageUrl} from '@/selectors/contentful/getImage';
 import {LinkEntry} from '@/types/contentful/entries/Link';
 import {Entry} from '@/types/contentful/Entry';
@@ -65,7 +66,8 @@ const ActionBlockCollection: React.FC<ActionBlockCollectionProps> = ({
   ];
   const CONTENT_TYPES_WITH_SECONDARY_BUTTON = ['selfPacedPl', 'lab'];
 
-  const createButtonConfig = (linkRef: LinkEntry) => {
+  const createButtonConfig = (maybeLinkRef: LinkEntry) => {
+    const linkRef = resolveContentfulLink<LinkEntry>(maybeLinkRef);
     if (!linkRef?.fields?.label) return undefined;
 
     const {fields} = linkRef;
@@ -85,7 +87,7 @@ const ActionBlockCollection: React.FC<ActionBlockCollectionProps> = ({
 
   if (!blocks) {
     return (
-      <Typography variant="body2" sx={{color: 'var(--text-neutral-primary)'}}>
+      <Typography variant="body3" sx={{color: 'var(--text-neutral-primary)'}}>
         <em>
           <strong>📋 Action Block Collection placeholder.</strong> Please add a
           "List" content type entry in the Content sidebar.
@@ -107,6 +109,8 @@ const ActionBlockCollection: React.FC<ActionBlockCollectionProps> = ({
         publishedDate,
       } = fields;
 
+      const resolvedImage = resolveContentfulLink<ExperienceAsset>(image);
+
       return {
         id: title,
         item: (
@@ -122,7 +126,7 @@ const ActionBlockCollection: React.FC<ActionBlockCollectionProps> = ({
               }
               title={title}
               description={shortDescription}
-              image={{src: getAbsoluteImageUrl(image) || ''}}
+              image={{src: getAbsoluteImageUrl(resolvedImage) || ''}}
               primaryButton={createButtonConfig(primaryLinkRef)}
               secondaryButton={
                 CONTENT_TYPES_WITH_SECONDARY_BUTTON.includes(contentType)

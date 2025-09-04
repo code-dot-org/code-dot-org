@@ -1,0 +1,9 @@
+name 'pl-java-class-design-scanner-practice-21_pl'
+display_name 'Getting User Input'
+description 'Get user input to greet the user, perform calculations, or create objects.'
+
+sublevels
+level 'CSA-UserInput-L2a_revised_pl'
+level 'CSA-UserInput-L2b_pilot_oo2025_pl'
+level 'CSA-UserInput-L2c_pilot_oo2025_pl'
+level 'CSA-UserInput-L2d_pilot_oo2025_pl'

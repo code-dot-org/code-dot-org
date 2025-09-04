@@ -4,9 +4,9 @@ class AichatRequestsControllerTest < ActionController::TestCase
   self.use_transactional_test_case = true
 
   setup_all do
-    @authorized_teacher1 = create :authorized_teacher
-    unit_group = create :unit_group, name: 'exploring-gen-ai-2024'
-    section = create :section, user: @authorized_teacher1, unit_group: unit_group
+    @authorized_teacher1 = create(:authorized_teacher)
+    unit_group = create(:unit_group, name: 'exploring-gen-ai-2024')
+    section = create(:section, user: @authorized_teacher1, unit_group: unit_group)
     @authorized_student1 = create(:follower, section: section).student_user
     @unauthorized_student = create(:student)
     @unauthorized_teacher = create(:teacher)
@@ -23,7 +23,7 @@ class AichatRequestsControllerTest < ActionController::TestCase
 
     @common_params = {
       storedMessages: [],
-      aichatModelCustomizations: @default_model_customizations,
+      modelParameters: @default_model_customizations,
       aichatContext: @default_aichat_context
     }
 
@@ -63,7 +63,7 @@ class AichatRequestsControllerTest < ActionController::TestCase
 
   test 'unauthorized users can access start_chat_completion from python lab levels' do
     sign_in(@unauthorized_student)
-    python_lab_level = create :pythonlab
+    python_lab_level = create(:pythonlab)
     params_with_python_level = @valid_params_chat_completion.merge(aichatContext: @default_aichat_context.merge(currentLevelId: python_lab_level.id))
     post :start_chat_completion, params: params_with_python_level, as: :json
     assert_response :success
@@ -72,7 +72,7 @@ class AichatRequestsControllerTest < ActionController::TestCase
   test 'ai_tutor2 DCDO flag blocks access to start_chat_completion from python lab levels' do
     sign_in(@unauthorized_student)
     DCDO.stubs(:get).with('block_ai_tutor2_chat_completion', anything).returns(true)
-    python_lab_level = create :pythonlab
+    python_lab_level = create(:pythonlab)
     params_with_python_level = @valid_params_chat_completion.merge(aichatContext: @default_aichat_context.merge(currentLevelId: python_lab_level.id))
     post :start_chat_completion, params: params_with_python_level, as: :json
     assert_response :forbidden
@@ -88,7 +88,7 @@ class AichatRequestsControllerTest < ActionController::TestCase
   test 'aichat DCDO flag does not block access to start_chat_completion from python lab levels' do
     sign_in(@unauthorized_student)
     DCDO.stubs(:get).with('block_aichat_chat_completion', anything).returns(true)
-    python_lab_level = create :pythonlab
+    python_lab_level = create(:pythonlab)
     params_with_python_level = @valid_params_chat_completion.merge(aichatContext: @default_aichat_context.merge(currentLevelId: python_lab_level.id))
     post :start_chat_completion, params: params_with_python_level, as: :json
     assert_response :success
@@ -165,6 +165,19 @@ class AichatRequestsControllerTest < ActionController::TestCase
     sign_in(@authorized_teacher1)
     post :start_chat_completion, params: @valid_params_chat_completion, as: :json
     assert_response :too_many_requests
+  end
+
+  # Note that this is only required for clients with stale JavaScript code using the
+  # old parameter name. This should be removed in the future.
+  test 'start_chat_completion reassigns aichatModelCustomizations param to modelParameters' do
+    AichatRequestChatCompletionJob.stubs(:perform_later)
+    sign_in(@authorized_teacher1)
+    params_with_aichat_customizations = @valid_params_chat_completion.merge(aichatModelCustomizations: @default_model_customizations)
+    post :start_chat_completion, params: params_with_aichat_customizations, as: :json
+    assert_response :success
+    request_id = json_response['requestId']
+    request = AichatRequest.find(request_id)
+    assert_equal request.model_customizations, @default_model_customizations
   end
 
   # chat_request tests

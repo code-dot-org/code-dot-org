@@ -1,14 +1,6 @@
 @dashboard_db_access
 Feature: Workshop Enrollment
 
-Scenario: Visiting old workshop enroll form redirects to join page
-  Given I am a teacher
-  And I visit the old enroll form page of a workshop
-  And I wait until current URL contains "/join"
-
-  # test clean up
-  And I delete the workshop
-
 Scenario: Attempting to join workshop signed-out prompts user to sign in
   Given I am a "signed_out" user enrolling in workshop with "unsubmitted" status
   And I wait until element "span:contains('Create an account')" is visible

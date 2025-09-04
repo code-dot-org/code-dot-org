@@ -11,7 +11,6 @@ import {
 
 import Spinner from '../../../sharedComponents/Spinner';
 
-import EditEnrollmentNameDialog from './components/edit_enrollment_name_dialog';
 import MoveEnrollmentsDialog from './components/move_enrollments_dialog';
 import WorkshopEnrollment from './components/workshop_enrollment';
 import {
@@ -19,9 +18,6 @@ import {
   shouldShowSurveyResults,
 } from './workshop_summary_utils';
 import WorkshopPanel from './WorkshopPanel';
-
-export const MOVE_ENROLLMENT_BUTTON_NAME = 'moveEnrollment';
-export const EDIT_ENROLLMENT_NAME_BUTTON_NAME = 'editEnrollmentName';
 
 /**
  * View and manage the list of teachers enrolled in a workshop.
@@ -46,9 +42,8 @@ export default class EnrollmentsPanel extends React.Component {
   };
 
   state = {
-    enrollmentActiveTab: 0,
     selectedEnrollments: [],
-    enrollmentChangeDialogOpen: null,
+    enrollmentChangeDialogOpen: false,
     error: null,
   };
 
@@ -73,20 +68,12 @@ export default class EnrollmentsPanel extends React.Component {
     window.open(`/api/v1/pd/workshops/${workshopId}/enrollments.csv`);
   };
 
-  handleClickChangeEnrollments = event => {
-    const name = event.target.name;
-    if (
-      name === MOVE_ENROLLMENT_BUTTON_NAME ||
-      name === EDIT_ENROLLMENT_NAME_BUTTON_NAME
-    ) {
-      this.setState({enrollmentChangeDialogOpen: name});
-    }
+  handleClickChangeEnrollments = () => {
+    this.setState({enrollmentChangeDialogOpen: true});
   };
 
   handleChangeEnrollmentsCanceled = () => {
-    this.setState({
-      enrollmentChangeDialogOpen: null,
-    });
+    this.setState({enrollmentChangeDialogOpen: false});
   };
 
   handleMoveEnrollmentsConfirmed = destinationWorkshopId => {
@@ -95,7 +82,7 @@ export default class EnrollmentsPanel extends React.Component {
       this.state.selectedEnrollments
     );
     this.setState({
-      enrollmentChangeDialogOpen: null,
+      enrollmentChangeDialogOpen: false,
       selectedEnrollments: [],
     });
   };
@@ -126,43 +113,6 @@ export default class EnrollmentsPanel extends React.Component {
       });
   };
 
-  handleEditEnrollmentConfirmed = (updatedName, updatedEmail) => {
-    this.handleEditEnrollment(
-      updatedName,
-      updatedEmail,
-      this.state.selectedEnrollments[0]
-    );
-    this.setState({
-      enrollmentChangeDialogOpen: null,
-      selectedEnrollments: [],
-    });
-  };
-
-  handleEditEnrollment = (updatedName, updatedEmail, selectedEnrollment) => {
-    let updatedInfoSnakeCase = {
-      first_name: updatedName.firstName,
-      last_name: updatedName.lastName,
-      email: updatedEmail,
-    };
-
-    this.editEnrollmentRequest = $.ajax({
-      method: 'POST',
-      url: `/api/v1/pd/enrollment/${selectedEnrollment.id}/edit`,
-      contentType: 'application/json',
-      data: JSON.stringify(updatedInfoSnakeCase),
-    })
-      .done(() => {
-        // reload
-        this.handleEnrollmentRefresh();
-        this.editEnrollmentRequest = null;
-      })
-      .fail(() => {
-        this.setState({error: 'Error: unable to update attendee information'});
-        this.handleEnrollmentRefresh();
-        this.editEnrollmentRequest = null;
-      });
-  };
-
   handleClickSelect = enrollment => {
     if (
       this.state.selectedEnrollments.findIndex(e => e.id === enrollment.id) >= 0
@@ -184,10 +134,6 @@ export default class EnrollmentsPanel extends React.Component {
         return {selectedEnrollments};
       });
     }
-  };
-
-  handleEnrollmentActiveTabSelect = enrollmentActiveTab => {
-    this.setState({enrollmentActiveTab});
   };
 
   handleDeleteEnrollment = id => {
@@ -249,39 +195,17 @@ export default class EnrollmentsPanel extends React.Component {
             bsSize="xsmall"
             disabled={this.state.selectedEnrollments.length === 0}
             onClick={this.handleClickChangeEnrollments}
-            name={MOVE_ENROLLMENT_BUTTON_NAME}
+            name="moveEnrollment"
           >
             Move (admin)
             <MoveEnrollmentsDialog
-              show={
-                this.state.enrollmentChangeDialogOpen ===
-                MOVE_ENROLLMENT_BUTTON_NAME
-              }
+              show={this.state.enrollmentChangeDialogOpen}
               selectedEnrollments={this.state.selectedEnrollments}
               onCancel={this.handleChangeEnrollmentsCanceled}
               onMove={this.handleMoveEnrollmentsConfirmed}
             />
           </Button>
         )}{' '}
-        {isWorkshopAdmin && (
-          <Button
-            bsSize="xsmall"
-            disabled={this.state.selectedEnrollments.length !== 1}
-            onClick={this.handleClickChangeEnrollments}
-            name={EDIT_ENROLLMENT_NAME_BUTTON_NAME}
-          >
-            Edit (admin)
-            <EditEnrollmentNameDialog
-              show={
-                this.state.enrollmentChangeDialogOpen ===
-                EDIT_ENROLLMENT_NAME_BUTTON_NAME
-              }
-              selectedEnrollment={this.state.selectedEnrollments[0]}
-              onCancel={this.handleChangeEnrollmentsCanceled}
-              onEdit={this.handleEditEnrollmentConfirmed}
-            />
-          </Button>
-        )}
         <p style={styles.error}>{this.state.error}</p>
       </div>
     );
@@ -320,8 +244,6 @@ export default class EnrollmentsPanel extends React.Component {
               workshop['account_required_for_attendance?']
             }
             scholarshipWorkshop={workshop['scholarship_workshop?']}
-            activeTab={this.state.enrollmentActiveTab}
-            onTabSelect={this.handleEnrollmentActiveTabSelect}
             selectedEnrollments={this.state.selectedEnrollments}
           />
 

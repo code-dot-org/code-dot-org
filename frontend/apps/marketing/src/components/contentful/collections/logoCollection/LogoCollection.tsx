@@ -5,6 +5,7 @@ import Typography from '@mui/material/Typography';
 import {EntryFields} from 'contentful';
 import {useId, useMemo} from 'react';
 
+import {resolveContentfulLink} from '@/contentful/resolveLink';
 import {getAbsoluteImageUrl} from '@/selectors/contentful/getImage';
 import {LinkEntry} from '@/types/contentful/entries/Link';
 import {Entry} from '@/types/contentful/Entry';
@@ -43,6 +44,7 @@ const logoStyles = {
     justifyContent: 'center',
     width: 'fit-content',
     height: '100%',
+    marginBottom: 0,
     textDecoration: 'none',
     transition: 'opacity 0.3s ease-in-out',
     '&:hover': {
@@ -58,7 +60,7 @@ const LogoCollection: React.FC<LogoCollectionProps> = ({
 }) => {
   if (!logos) {
     return (
-      <Typography variant="body2" sx={{color: 'var(--text-neutral-primary)'}}>
+      <Typography variant="body3" sx={{color: 'var(--text-neutral-primary)'}}>
         <em>
           <strong>📋 Logo Collection placeholder.</strong> Please add a "List"
           content type entry in the Content sidebar.
@@ -70,11 +72,17 @@ const LogoCollection: React.FC<LogoCollectionProps> = ({
   const logosData = useMemo(() => {
     const data = logos.filter(Boolean).map(({fields}) => {
       const {title, logoImage, primaryLinkRef} = fields;
-      const url = primaryLinkRef?.fields?.primaryTarget || '';
+
+      const resolvedLogoImage =
+        resolveContentfulLink<ExperienceAsset>(logoImage);
+      const resolvedPrimaryLinkRef =
+        resolveContentfulLink<LinkEntry>(primaryLinkRef);
+
+      const url = resolvedPrimaryLinkRef?.fields?.primaryTarget || '';
       const getImage = () => (
         <img
-          src={getAbsoluteImageUrl(logoImage)}
-          alt={logoImage?.fields?.title || title || 'Logo'}
+          src={getAbsoluteImageUrl(resolvedLogoImage)}
+          alt={resolvedLogoImage?.fields?.title || title || 'Logo'}
           loading="lazy"
         />
       );

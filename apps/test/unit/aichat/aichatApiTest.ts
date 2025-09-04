@@ -15,6 +15,7 @@ import {
   type GetResponse,
 } from '@cdo/apps/util/HttpClient';
 import {
+  AiChatClientTypes,
   AiChatModelIds,
   AiInteractionStatus,
   AiRequestExecutionStatus,
@@ -60,6 +61,7 @@ describe('aichatApi', () => {
     };
 
     aichatContext = {
+      clientType: AiChatClientTypes.AI_CHAT_LAB,
       currentLevelId: 123,
       scriptId: 321,
       channelId: 'abc123',
@@ -141,7 +143,7 @@ describe('aichatApi', () => {
         JSON.stringify({
           newMessage: chatMessage,
           storedMessages,
-          aichatModelCustomizations: modelParameters,
+          modelParameters,
           aichatContext,
         })
       );

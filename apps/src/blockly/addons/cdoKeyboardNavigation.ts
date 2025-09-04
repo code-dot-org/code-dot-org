@@ -1,9 +1,9 @@
 import {KeyboardNavigation} from '@blockly/keyboard-navigation';
 import * as GoogleBlockly from 'blockly/core';
+import './shortcutMenuStyles.scss';
 
 export function initializeKeyboardNavigation(
-  workspace: GoogleBlockly.WorkspaceSvg,
-  theme: GoogleBlockly.Theme
+  workspace: GoogleBlockly.WorkspaceSvg
 ) {
   unregisterShortcuts(['undo', 'redo']);
   backupShortcuts(['copy', 'paste', 'cut']);
@@ -22,8 +22,6 @@ export function initializeKeyboardNavigation(
   });
 
   enableShortcutModalEscape();
-  // Rerun user theme after Keyboard Experiment bug introduces incorrect theme
-  workspace.setTheme(Blockly.cdoUtils.getUserTheme(theme));
 }
 
 function unregisterShortcuts(shortcutNames: string[]) {
@@ -86,6 +84,7 @@ function createShortcutsModalContainer() {
   if (!document.getElementById('shortcuts')) {
     const shortcutDialog = document.createElement('div');
     shortcutDialog.id = 'shortcuts';
+    shortcutDialog.className = 'shortcut-dialog';
     document.body.appendChild(shortcutDialog);
   }
 }

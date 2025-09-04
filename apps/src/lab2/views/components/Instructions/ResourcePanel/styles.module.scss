@@ -1,0 +1,71 @@
+.resourcePanel {
+  display: flex;
+  background-color: var(--background-neutral-secondary);
+  height: 100%;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .tabs {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  // Doubling class name to increase specificity and override default button styles.
+  .tabButton.tabButton {
+    height: 2rem;
+    width: 2rem;
+    min-width: 2rem;
+    margin-left: 5px;
+    border: 1px solid var(--borders-neutral-primary);
+    border-right: none;
+    border-radius: 4px 0 0 4px;
+
+    &.selected {
+      background-color: var(--background-neutral-primary);
+    }
+
+    i {
+      color: var(--text-neutral-secondary);
+      font-size: 14px;
+    }
+  }
+
+  .bottomTabs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 0;
+  }
+
+
+  // Doubling class name to increase specificity and override default button styles.
+  .bottomButton.bottomButton {
+    height: 2rem;
+    width: 2rem;
+    min-width: 2rem;
+
+    i {
+      font-size: 14px;
+    }
+  }
+}
+
+.panels {
+  display: flex;
+  opacity: 1;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.panelContent {
+  background-color: var(--background-neutral-primary);
+  height: 100%;
+}

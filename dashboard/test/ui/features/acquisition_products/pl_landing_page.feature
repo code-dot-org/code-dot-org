@@ -19,7 +19,7 @@ Feature: Professional Learning landing page
 
     # Sees Recommended for you section
     And element "a:contains(Learn more about workshops)" is visible
-    And the href of selector "a:contains(Learn more about workshops)" contains "/professional-learning/middle-high"
+    And the href of selector "a:contains(Learn more about workshops)" contains "/professional-learning/workshops"
     And element "a:contains(Start professional learning courses)" is visible
     And the href of selector "a:contains(Start professional learning courses)" contains "/educate/professional-development-online"
     And I see no difference for "PL Recommended for you section"
@@ -112,7 +112,7 @@ Feature: Professional Learning landing page
 
     # Sees Recommended for you section
     And element "a:contains(Learn more about workshops)" is visible
-    And the href of selector "a:contains(Learn more about workshops)" contains "/professional-learning/middle-high"
+    And the href of selector "a:contains(Learn more about workshops)" contains "/professional-learning/workshops"
     And element "a:contains(Start professional learning courses)" is visible
     And the href of selector "a:contains(Start professional learning courses)" contains "/educate/professional-development-online"
 

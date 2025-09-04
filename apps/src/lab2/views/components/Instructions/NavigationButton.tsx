@@ -27,7 +27,6 @@ interface NavigationButtonProps {
   hasEdited: boolean;
   className?: string;
   size?: ComponentSizeXSToL;
-  requireRun?: boolean;
 }
 
 const NavigationButton: React.FC<NavigationButtonProps> = ({
@@ -36,53 +35,8 @@ const NavigationButton: React.FC<NavigationButtonProps> = ({
   hasEdited,
   className,
   size,
-  requireRun,
 }) => {
-  if (levelProperties.submittable) {
-    return (
-      <SubmitButton
-        levelId={levelProperties.id}
-        appName={levelProperties.appName}
-        hasRun={hasRun}
-        hasEdited={hasEdited}
-        className={className}
-      />
-    );
-  }
-
-  return (
-    <ContinueButton
-      className={className}
-      size={size}
-      hasRun={hasRun}
-      isPredictLevel={levelProperties.predictSettings?.isPredictLevel}
-      requireRun={requireRun}
-    />
-  );
-};
-
-interface ContinueButtonProps {
-  className?: string;
-  size?: ComponentSizeXSToL;
-  isPredictLevel?: boolean;
-  hasRun?: boolean;
-  requireRun?: boolean;
-}
-
-/**
- * Displays the "Continue" or "Finish" button that advances to the next level or finishes the progression.
- */
-const ContinueButton: React.FC<ContinueButtonProps> = ({
-  className,
-  size,
-  isPredictLevel,
-  hasRun,
-  requireRun,
-}) => {
-  const dispatch = useAppDispatch();
-  const hasNextLevel = useAppSelector(
-    state => nextLevelId(state) !== undefined
-  );
+  const {predictSettings, submittable} = levelProperties;
   const hasSubmittedPredictResponse = useAppSelector(
     isPredictResponseSubmitted
   );
@@ -92,27 +46,67 @@ const ContinueButton: React.FC<ContinueButtonProps> = ({
   const validationSatisfied = useAppSelector(
     state => state.lab.validationState.satisfied
   );
+  const hasSubmitted = useAppSelector(
+    state => getCurrentLevel(state)?.status === LevelStatus.submitted
+  );
+  const canShow = useMemo(() => {
+    if (predictSettings?.isPredictLevel) {
+      return hasSubmittedPredictResponse;
+    } else if (submittable && hasSubmitted) {
+      return true;
+    } else if (hasConditions) {
+      return validationSatisfied;
+    } else {
+      return true;
+    }
+  }, [
+    hasConditions,
+    predictSettings?.isPredictLevel,
+    hasSubmittedPredictResponse,
+    validationSatisfied,
+    submittable,
+    hasSubmitted,
+  ]);
+
+  if (!canShow) {
+    return null;
+  }
+
+  if (levelProperties.submittable) {
+    return (
+      <SubmitButton
+        levelId={levelProperties.id}
+        appName={levelProperties.appName}
+        disableEditRunForSubmission={
+          levelProperties.disableEditRunForSubmission
+        }
+        hasRun={hasRun}
+        hasEdited={hasEdited}
+        className={className}
+      />
+    );
+  }
+
+  return <ContinueButton className={className} size={size} />;
+};
+
+interface ContinueButtonProps {
+  className?: string;
+  size?: ComponentSizeXSToL;
+}
+
+/**
+ * Displays the "Continue" or "Finish" button that advances to the next level or finishes the progression.
+ */
+const ContinueButton: React.FC<ContinueButtonProps> = ({className, size}) => {
+  const dispatch = useAppDispatch();
+  const hasNextLevel = useAppSelector(
+    state => nextLevelId(state) !== undefined
+  );
   const useSecondaryFinishButton =
     useAppSelector(
       state => state.lab.levelProperties?.useSecondaryFinishButton
     ) || queryParams('use-secondary-finish-button') === 'true';
-
-  const canShow = useMemo(() => {
-    if (isPredictLevel) {
-      return hasSubmittedPredictResponse;
-    } else if (hasConditions) {
-      return validationSatisfied;
-    } else {
-      return !requireRun || hasRun;
-    }
-  }, [
-    hasRun,
-    hasConditions,
-    isPredictLevel,
-    hasSubmittedPredictResponse,
-    validationSatisfied,
-    requireRun,
-  ]);
 
   const text = hasNextLevel ? commonI18n.continue() : commonI18n.finish();
 
@@ -124,10 +118,6 @@ const ContinueButton: React.FC<ContinueButtonProps> = ({
   const iconRight: FontAwesomeV6IconProps | undefined = hasNextLevel
     ? {iconName: 'arrow-right', iconStyle: 'solid'}
     : undefined;
-
-  if (!canShow) {
-    return null;
-  }
 
   return (
     <Button
@@ -144,17 +134,19 @@ interface SubmitButtonProps {
   appName: string;
   hasRun: boolean;
   hasEdited: boolean;
+  disableEditRunForSubmission?: boolean;
   className?: string;
 }
 
 /**
  * Displays the "Submit" or "Unsubmit" button that submits or unsubmits the project on a submittable level.
  */
-const SubmitButton: React.FC<SubmitButtonProps> = ({
+export const SubmitButton: React.FC<SubmitButtonProps> = ({
   levelId,
   appName,
   hasRun,
   hasEdited,
+  disableEditRunForSubmission = false,
   className,
 }) => {
   const hasSubmitted = useAppSelector(
@@ -164,7 +156,8 @@ const SubmitButton: React.FC<SubmitButtonProps> = ({
     state => state.progress.scriptId || undefined
   );
 
-  const enabled = hasSubmitted || (hasRun && hasEdited);
+  const enabled =
+    disableEditRunForSubmission || hasSubmitted || (hasRun && hasEdited);
   const buttonText = hasSubmitted ? commonI18n.unsubmit() : commonI18n.submit();
 
   const dialogControl = useDialogControl();

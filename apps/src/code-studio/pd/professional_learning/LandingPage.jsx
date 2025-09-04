@@ -414,7 +414,7 @@ function LandingPage({
         buttons: [
           {
             color: 'purple',
-            url: pegasus('/educate/professional-learning/middle-high'),
+            url: '/professional-learning/workshops',
             text: i18n.plLandingStaticPLMidHighButton(),
           },
         ],
@@ -740,8 +740,8 @@ LandingPage.propTypes = {
   plCoursesInstructed: PropTypes.array,
   plCoursesStarted: PropTypes.array,
   userPermissions: PropTypes.arrayOf(PropTypes.string),
-  joinedStudentSections: shapes.sections,
-  joinedPlSections: shapes.sections,
+  joinedStudentSections: shapes.participantSections,
+  joinedPlSections: shapes.participantSections,
   coursesAsFacilitator: PropTypes.arrayOf(PropTypes.string),
   plSectionIds: PropTypes.arrayOf(PropTypes.number),
   hiddenPlSectionIds: PropTypes.arrayOf(PropTypes.number),

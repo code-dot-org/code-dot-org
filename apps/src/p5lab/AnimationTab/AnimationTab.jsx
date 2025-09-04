@@ -40,6 +40,7 @@ class AnimationTab extends React.Component {
     columnSizes: PropTypes.arrayOf(PropTypes.number).isRequired,
     currentAnimation: shapes.AnimationKey,
     defaultQuery: PropTypes.object,
+    uploadsEnabled: PropTypes.bool.isRequired,
   };
 
   render() {
@@ -100,6 +101,8 @@ class AnimationTab extends React.Component {
             pickerType={pickerType}
             defaultQuery={defaultQuery}
             shouldWarnOnAnimationUpload={shouldWarnOnAnimationUpload}
+            uploadsEnabled={this.props.uploadsEnabled}
+            projectType={labType.toLowerCase()}
           />
         )}
       </div>
@@ -159,6 +162,7 @@ export default connect(
   state => ({
     currentAnimation: state.animationTab.currentAnimations[state.interfaceMode],
     columnSizes: state.animationTab.columnSizes,
+    uploadsEnabled: state.animationPicker.uploadsEnabled,
   }),
   dispatch => ({
     onColumnWidthsChange(widths) {

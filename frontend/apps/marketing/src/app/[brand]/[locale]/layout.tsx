@@ -3,8 +3,8 @@ import {AppRouterCacheProvider} from '@mui/material-nextjs/v15-appRouter';
 import {GoogleAnalytics} from '@next/third-parties/google';
 import {draftMode} from 'next/headers';
 
-import Footer from '@/components/footer';
-import Header from '@/components/header';
+import {getFooter} from '@/components/footer/Footer';
+import {getHeader} from '@/components/header/Header';
 import {Brand} from '@/config/brand';
 import {getGoogleAnalyticsMeasurementId} from '@/config/ga4';
 import OrganizationJsonLd from '@/config/jsonLd/OrganizationJsonLd';
@@ -17,7 +17,7 @@ import OneTrustLoader from '@/providers/onetrust/OneTrustLoader';
 import OneTrustProvider from '@/providers/onetrust/OneTrustProvider';
 import {generateBootstrapValues} from '@/providers/statsig/statsig-backend';
 import StatsigProvider from '@/providers/statsig/StatsigProvider';
-import {getMuiTheme} from '@/themes';
+import {getCriticalFonts, getMuiTheme} from '@/themes';
 
 export default async function Layout({
   children,
@@ -29,6 +29,7 @@ export default async function Layout({
   const syncParams = await params;
   const {brand, locale} = syncParams;
 
+  await getCriticalFonts(brand);
   const googleAnalyticsMeasurementId = getGoogleAnalyticsMeasurementId(brand);
   const statsigBootstrapValues = await generateBootstrapValues();
   const statsigClientKey = process.env.STATSIG_CLIENT_KEY;
@@ -59,10 +60,9 @@ export default async function Layout({
                 clientKey={statsigClientKey}
                 values={statsigBootstrapValues}
               >
-                <Header />
+                {getHeader(brand)}
                 {children}
-
-                <Footer locale={locale} />
+                {await getFooter(brand, locale)}
               </StatsigProvider>
             </OneTrustProvider>
 

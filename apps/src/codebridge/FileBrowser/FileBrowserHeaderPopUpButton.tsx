@@ -5,8 +5,10 @@ import {PopUpButtonOption} from '@codebridge/PopUpButton/PopUpButtonOption';
 import React from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
+import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {PYTHONLAB_VALID_FILE_TYPES} from '@cdo/apps/pythonlab/constants';
 import {useBackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {
   useFileUploader,
@@ -19,29 +21,34 @@ export const FileBrowserHeaderPopUpButton = () => {
   const {openNewFilePrompt, openNewFolderPrompt, openImportFromBackpackPrompt} =
     usePrompts();
   const {
-    source,
     config: {validMimeTypes},
     levelProperties,
   } = useCodebridgeContext();
   const {appName, validationFile} = levelProperties;
+  const isBlockedAbuse = useAppSelector(state => state.lab.isBlockedAbuse);
   const openNewFilePromptArgs = {
     folderId: DEFAULT_FOLDER_ID,
     ...(appName === 'pythonlab' && {
       validFileTypes: PYTHONLAB_VALID_FILE_TYPES,
     }),
   };
+  const files = useAppSelector(
+    state => (state.lab2Project.projectSources?.source as MultiFileSource).files
+  );
 
   const uploadErrorCallback = useFileUploadErrorCallback();
-  const handleFileUpload = useHandleFileUpload(source.files);
+  const handleFileUpload = useHandleFileUpload(files);
 
   const {startFileUpload, FileUploaderComponent} = useFileUploader(
     {
+      appName,
       callback: handleFileUpload,
       errorCallback: uploadErrorCallback,
       validMimeTypes,
       ...(appName === 'pythonlab' && {
         validFileTypes: PYTHONLAB_VALID_FILE_TYPES,
       }),
+      isBlockedAbuse,
     },
     DEFAULT_FOLDER_ID
   );
@@ -80,7 +87,7 @@ export const FileBrowserHeaderPopUpButton = () => {
           clickHandler={() =>
             openImportFromBackpackPrompt({
               backpackApi: backpackApi,
-              projectFiles: source.files,
+              projectFiles: files,
               validationFile: validationFile,
             })
           }

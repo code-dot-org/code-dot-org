@@ -24,15 +24,24 @@ const DEFAULT_PROPS = {
     scriptId: 1,
   },
   scriptName: 'test_lesson',
-  unitDisplayName: 'test unit name',
 };
 
 const defaultCoursesResponse = {
   courses: ['dummy_course_2025', 'dummy_course'],
 };
 
+const defaultThreadListResponse = [
+  {
+    id: 1,
+    title: 'blah thread one',
+    updatedAt: Date(),
+    contextType: 'lesson',
+  },
+];
+
 describe('AIDiffFloatingActionButton', () => {
   let fetchStub;
+  let fetchJsonStub;
 
   beforeEach(() => {
     window.HTMLElement.prototype.scrollIntoView = () => {};
@@ -43,6 +52,12 @@ describe('AIDiffFloatingActionButton', () => {
       .mockResolvedValue(
         Promise.resolve(new Response(JSON.stringify(defaultCoursesResponse)))
       );
+    fetchJsonStub = jest.fn();
+    fetchJsonStub.mockResolvedValue({
+      value: defaultThreadListResponse,
+      response: new Response(),
+    });
+    HttpClient.fetchJson = fetchJsonStub;
   });
 
   afterEach(() => {
@@ -77,7 +92,7 @@ describe('AIDiffFloatingActionButton', () => {
     renderDefault();
     await waitFor(() => {
       expect(fetchStub).toHaveBeenCalledWith(
-        '/ai_diff/curriculum_courses',
+        '/aidiff_threads/curriculum_courses',
         JSON.stringify({
           context: DEFAULT_PROPS.context,
         }),
@@ -95,7 +110,7 @@ describe('AIDiffFloatingActionButton', () => {
     renderDefault();
     await waitFor(() => {
       expect(fetchStub).toHaveBeenCalledWith(
-        '/ai_diff/curriculum_courses',
+        '/aidiff_threads/curriculum_courses',
         JSON.stringify({
           context: DEFAULT_PROPS.context,
         }),
@@ -112,7 +127,7 @@ describe('AIDiffFloatingActionButton', () => {
     renderDefault({});
     await waitFor(() => {
       expect(fetchStub).toHaveBeenCalledWith(
-        '/ai_diff/curriculum_courses',
+        '/aidiff_threads/curriculum_courses',
         JSON.stringify({
           context: DEFAULT_PROPS.context,
         }),
@@ -130,7 +145,7 @@ describe('AIDiffFloatingActionButton', () => {
     renderDefault();
     await waitFor(() => {
       expect(fetchStub).toHaveBeenCalledWith(
-        '/ai_diff/curriculum_courses',
+        '/aidiff_threads/curriculum_courses',
         JSON.stringify({
           context: DEFAULT_PROPS.context,
         }),
@@ -148,7 +163,7 @@ describe('AIDiffFloatingActionButton', () => {
     renderDefault();
     await waitFor(() => {
       expect(fetchStub).toHaveBeenCalledWith(
-        '/ai_diff/curriculum_courses',
+        '/aidiff_threads/curriculum_courses',
         JSON.stringify({
           context: DEFAULT_PROPS.context,
         }),
@@ -170,7 +185,7 @@ describe('AIDiffFloatingActionButton', () => {
       renderDefault({});
       await waitFor(() => {
         expect(fetchStub).toHaveBeenCalledWith(
-          '/ai_diff/curriculum_courses',
+          '/aidiff_threads/curriculum_courses',
           JSON.stringify({
             context: DEFAULT_PROPS.context,
           }),
@@ -196,7 +211,7 @@ describe('AIDiffFloatingActionButton', () => {
       renderDefault();
       await waitFor(() => {
         expect(fetchStub).toHaveBeenCalledWith(
-          '/ai_diff/curriculum_courses',
+          '/aidiff_threads/curriculum_courses',
           JSON.stringify({
             context: DEFAULT_PROPS.context,
           }),

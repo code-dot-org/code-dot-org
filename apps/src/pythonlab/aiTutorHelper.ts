@@ -6,7 +6,7 @@ import PythonValidationTracker from './progress/PythonValidationTracker';
 
 // Return additional context for AiTutor2.
 const getAiTutor2Context = (
-  source: MultiFileSource,
+  source: MultiFileSource | undefined,
   validationFile: ProjectFile | undefined,
   longInstructions: string | undefined
 ) => {

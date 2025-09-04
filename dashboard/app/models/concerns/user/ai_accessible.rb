@@ -10,24 +10,26 @@ module User::AiAccessible
 
   AI_TUTOR_EXPERIMENT_NAME = 'ai-tutor'
 
+  # TODO-AITUTOR: It looks like the only utility UserPermission::AI_TUTOR_ACCESS
+  # gives us at the moment is the ability for teachers to use AI Tutor on a level
+  # without impersonating a student. We could let teachers
+  # in the pilot use AI Tutor without a separate user permission.
   def has_ai_tutor_access?
     return false if ai_tutor_access_denied || ai_tutor_feature_globally_disabled?
-    permission_for_ai_tutor? || in_ai_tutor_experiment_with_enabled_section?
+    permission?(UserPermission::AI_TUTOR_ACCESS) || in_ai_tutor_experiment_with_enabled_section?
   end
 
+  # TODO-AITUTOR: Decide if we need a different experiment
   def can_enable_ai_tutor?
-    !DCDO.get('ai-tutor-disabled', false) && (ai_tutor_permission? ||
+    !ai_tutor_feature_globally_disabled? && (permission?(UserPermission::AI_TUTOR_ACCESS) ||
       SingleUserExperiment.enabled?(user: self, experiment_name: AI_TUTOR_EXPERIMENT_NAME))
   end
 
-  def ai_tutor_permission?
-    permission?(UserPermission::AI_TUTOR_ACCESS)
-  end
-
   def can_use_ai_iteration_tools?
-    ai_tutor_permission? && levelbuilder?
+    permission?(UserPermission::AI_TUTOR_ACCESS) && levelbuilder?
   end
 
+  # TODO-AITUTOR: Remove this method when cleaning up tutor code.
   def can_view_student_ai_chat_messages?
     ai_tutor_courses = ['programming-fundamentals-aitutor-2024']
     (sections.any?(&:assigned_csa?) || sections.any? {|s| ai_tutor_courses.include?(s.unit_group&.name)}) &&
@@ -47,12 +49,15 @@ module User::AiAccessible
     teacher_can_access_ai_chat? || student_can_access_ai_chat?
   end
 
-  private def ai_tutor_feature_globally_disabled?
-    DCDO.get('ai-tutor-disabled', false)
+  def can_access_ai_tutor2?(level_id)
+    # If the request is coming from a python lab level, trust the client to decide
+    # if it can access AiTutor2. This allows easy testing of AiTutor2 using a url param.
+    return false if level_id.nil?
+    Level.find(level_id).is_a? Pythonlab
   end
 
-  private def permission_for_ai_tutor?
-    permission?(UserPermission::AI_TUTOR_ACCESS)
+  private def ai_tutor_feature_globally_disabled?
+    DCDO.get('ai-tutor-disabled', false)
   end
 
   private def in_ai_tutor_experiment_with_enabled_section?

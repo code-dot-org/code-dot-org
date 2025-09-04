@@ -1,40 +1,18 @@
 require 'cdo/aws/metrics'
 
 # Provides functionality to detect toxicity in user input and model output used in the AI Chat Lab.
-# Uses various services to check for profanity and toxicity based on DCDO settings.
 module AichatSafetyHelper
   API_KEY = CDO.openai_student_learning_api_key
   MODEL = SharedConstants::AICHAT_MODEL_VERSION
 
   class ToxicityDetector
-    DEFAULT_TOXICITY_THRESHOLD_USER_INPUT = 0.3
-    DEFAULT_TOXICITY_THRESHOLD_MODEL_OUTPUT = 0.5
     VALID_EVALUATION_RESPONSES_SIMPLE = ['INAPPROPRIATE', 'OK']
 
-    # Checks for toxicity in the given text using various services, determined by DCDO settings.
     # Returns {text: input (string), blocked_by: serviced that detected toxicity (string), details: filtering details (hash)}
-    def find_toxicity(role, text, locale, level_id)
-      if blocklist_enabled?(role)
-        text.split.each do |word|
-          return {text: text, blocked_by: 'blocklist', details: {blocked_word: word}} if profane_word_blocklist.include? word
-        end
-      end
-
-      if webpurify_enabled?(role)
-        profanity = ShareFiltering.find_profanity_failure(text, locale)
-        return {text: text, blocked_by: 'webpurify', details: profanity.to_h} if profanity
-      end
-
-      if comprehend_enabled?(role)
-        threshold = role == 'user' ? get_toxicity_threshold_user_input : get_toxicity_threshold_model_output
-        comprehend_response = AichatComprehendHelper.get_toxicity(text, locale)
-        return {text: text, blocked_by: 'comprehend', details: comprehend_response} if comprehend_response && comprehend_response[:toxicity] > threshold
-      end
-
-      if openai_enabled?(role)
-        details = openai_safety_check(text, level_id)
-        return {text: text, blocked_by: 'openai', details: details} if details
-      end
+    # We currently use OpenAI for content moderation.
+    def find_toxicity(text, level_id)
+      details = openai_safety_check(text, level_id)
+      {text: text, blocked_by: 'openai', details: details} if details
     end
 
     # Used to check safety content given text with the given moderation system prompt.
@@ -43,7 +21,7 @@ module AichatSafetyHelper
       start_time = Time.now
       report_openai_safety_check("Start")
       attempts = 0
-      messages = safety_check_messages(text, level_id)
+      input = safety_check_input(text, level_id)
 
       # Retry only on network-related exceptions
       response = Retryable.retryable(
@@ -51,21 +29,21 @@ module AichatSafetyHelper
         on: [Net::OpenTimeout, Net::ReadTimeout, SocketError, Errno::ECONNRESET]
       ) do
         attempts += 1
-        client.request_chat_completion(messages, 1)
+        client.request_chat_completion(input, 1)
       end
       raise "OpenAI request failed with status #{response.code}: #{response.body}" unless response.success?
 
-      evaluation = JSON.parse(response.body)['choices'][0]['message']['content']
+      evaluation = JSON.parse(response.body)['output'][0]['content'][0]['text']
       unless VALID_EVALUATION_RESPONSES_SIMPLE.include?(evaluation)
         report_openai_safety_check("InvalidResponse")
         attempts +=1
 
         # Fallback to structured call (non-retryable)
-        response = client.request_chat_completion(messages, 0, options: {response_format: structured_response_format})
+        response = client.request_chat_completion(input, 0, options: {text: structured_response_format})
         raise "OpenAI structured request failed with status #{response.code}: #{response.body}" unless response.success?
 
         body = JSON.parse(response.body)
-        raw_content = body.dig("choices", 0, "message", "content")
+        raw_content = body.dig("output", 0, "content", 0, "text")
 
         begin
           parsed = JSON.parse(raw_content)
@@ -84,7 +62,6 @@ module AichatSafetyHelper
 
       if evaluation == 'INAPPROPRIATE'
         details = {evaluation: evaluation}
-
       end
 
       report_openai_safety_check("Finish", attempts)
@@ -95,34 +72,6 @@ module AichatSafetyHelper
 
     private def client
       AichatOpenaiResponsesHelper::Client.new(API_KEY, MODEL)
-    end
-
-    private def comprehend_enabled?(role)
-      DCDO.get("aichat_safety_comprehend_enabled_#{role}", false)
-    end
-
-    private def webpurify_enabled?(role)
-      DCDO.get("aichat_safety_webpurify_enabled_#{role}", false)
-    end
-
-    private def openai_enabled?(role)
-      DCDO.get("aichat_safety_openai_enabled_#{role}", true)
-    end
-
-    private def blocklist_enabled?(role)
-      DCDO.get("aichat_safety_blocklist_enabled_#{role}", false)
-    end
-
-    private def profane_word_blocklist
-      DCDO.get("aichat_safety_profane_word_blocklist", [])
-    end
-
-    private def get_toxicity_threshold_user_input
-      DCDO.get("aichat_toxicity_threshold_user_input", DEFAULT_TOXICITY_THRESHOLD_USER_INPUT)
-    end
-
-    private def get_toxicity_threshold_model_output
-      DCDO.get("aichat_toxicity_threshold_model_output", DEFAULT_TOXICITY_THRESHOLD_MODEL_OUTPUT)
     end
 
     private def get_safety_system_prompt(level_id)
@@ -148,24 +97,24 @@ module AichatSafetyHelper
     end
 
     # Format messages with text to be checked for safety and moderation system prompt.
-    private def safety_check_messages(text, level_id)
+    private def safety_check_input(text, level_id)
       [
         {
           role: "system",
-          content: get_safety_system_prompt(level_id)
+          content: [{type: 'input_text', text: get_safety_system_prompt(level_id)}]
         },
         {
           role: "user",
-          content: text
+          content: [{type: 'input_text', text: text}]
         }
       ]
     end
 
     private def structured_response_format
       {
-        type: "json_schema",
-        json_schema: {
+        format: {
           name: "safety_evaluation",
+          type: "json_schema",
           schema: {
             type: "object",
             properties: {
@@ -175,7 +124,8 @@ module AichatSafetyHelper
                 enum: ["OK", "INAPPROPRIATE"]
               }
             },
-            required: ["classification"]
+            required: ["classification"],
+            additionalProperties: false
           }
         }
       }
@@ -222,7 +172,7 @@ module AichatSafetyHelper
   end
 
   class StubbedToxicityDetector
-    def find_toxicity(_, text, _, _)
+    def find_toxicity(text, _)
       # Note that it's important that we use the word "Damn" here, as our UI tests specifically use this word
       # so that we can use a stubbed version of our toxicity detection service in CI environments (ie, Drone).
       text == 'Damn' ?
@@ -231,10 +181,10 @@ module AichatSafetyHelper
     end
   end
 
-  def self.find_toxicity(role, text, locale, level_id)
+  def self.find_toxicity(text, level_id)
     # Stubbed toxicity detection allows UI tests (without the roundtrip to third-party moderation services) to run in CI environments
     Rails.application.config.respond_to?(:stub_aichat_external_services) && Rails.application.config.stub_aichat_external_services ?
-      StubbedToxicityDetector.new.find_toxicity(nil, text, nil, nil) :
-      ToxicityDetector.new.find_toxicity(role, text, locale, level_id)
+      StubbedToxicityDetector.new.find_toxicity(text, nil) :
+      ToxicityDetector.new.find_toxicity(text, level_id)
   end
 end

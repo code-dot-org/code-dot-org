@@ -9,7 +9,7 @@ Dashboard::Application.config.session_store Middlewares::RedisSessionStore,
   domain: :all,
 
   # Users who interact with the site at least once a month will remain logged in.
-  expire_after: 40.days,
+  expire_after: CDO.dashboard_session_ttl_days.days,
 
   # Enable pooling by specifying a pool size; we arbitrarily use the value this
   # would default to anyway, for simplicity. In practice, we run with enough

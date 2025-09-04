@@ -8,7 +8,7 @@ import {
   restoreRedux,
   stubRedux,
 } from '@cdo/apps/redux';
-import unitSelection, {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
+import unitSelection, {setUnit} from '@cdo/apps/redux/unitSelectionRedux';
 import {fakeLessonWithLevels} from '@cdo/apps/templates/progress/progressTestHelpers';
 import sectionProgress, {
   expandMetadataForStudents,
@@ -37,6 +37,7 @@ const FAKE_SECTION = {
   sharing_disabled: false,
   script: null,
   course_id: 29,
+  course_version_id: 99,
   studentCount: 5,
   students: Object.values(STUDENTS),
   hidden: false,
@@ -58,7 +59,7 @@ describe('SkeletonProgressDataColumn', () => {
     stubRedux();
     registerReducers({sectionProgress, unitSelection, teacherSections});
     store = getStore();
-    store.dispatch(setScriptId(1));
+    store.dispatch(setUnit(1, 99));
 
     store.dispatch(setSections([FAKE_SECTION]));
     store.dispatch(selectSection(FAKE_SECTION.id));

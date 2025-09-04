@@ -163,7 +163,7 @@ class CourseScript extends Component {
                   assignmentName={title}
                   reassignConfirm={this.onReassignConfirm}
                   isAssigningCourseOnly={false}
-                  isAssigningUnitOnly={false}
+                  isSingleUnitCourse={false}
                   participantAudience={participantAudience}
                 />
               </div>

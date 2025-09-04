@@ -19,6 +19,7 @@ class ScriptsController < ApplicationController
 
   def show
     if @script.is_deprecated
+      @deprecated_course_name = @script.name
       return render 'errors/deprecated_course'
     end
     #TODO: TEACH-2050 Modularity support redirect to property. Currently this redirects to the script path, which
@@ -40,7 +41,7 @@ class ScriptsController < ApplicationController
         end
         return
       end
-      if current_user&.user_type == "teacher" && current_user.sections_instructed.any? {|s| s.script_id == @script.id || s.unit_group&.id == @course.id}
+      if current_user&.user_type == "teacher" && current_user.sections_instructed.any? {|s| s.script_id == @script.id || s.unit_group&.id == @course&.id}
         most_recent_section = current_user.sections_instructed.select {|s| s.script_id == @script.id || s.unit_group&.id == @course.id}.last
         section_id = params[:section_id]
         section_id ||= most_recent_section&.id
@@ -119,8 +120,10 @@ class ScriptsController < ApplicationController
     @page_title = "Unit: #{@script.localized_title}"
     @page_description = @script.localized_description.truncate(200, separator: '.', omission: '.')
 
-    link = Unit.latest_stable_version(@script.family_name)&.link(unit_group_unit: @unit_group_unit)
-    @canonical_url = CDO.studio_url(link) if @script.unit_group&.single_unit_course? && link
+    if @script.get_original_unit_group&.single_unit_course?
+      canonical_ug = UnitGroup.latest_stable_version(@course.family_name)&.name
+      @canonical_url = CDO.studio_url("/courses/#{canonical_ug}/units/1") if canonical_ug
+    end
 
     if @script.old_professional_learning_course? && current_user && Plc::UserCourseEnrollment.exists?(user: current_user, plc_course: @script.plc_course_unit.plc_course)
       @plc_breadcrumb = {unit_name: @script.plc_course_unit.unit_name, course_view_path: course_path(@script.plc_course_unit.plc_course.unit_group)}
@@ -157,9 +160,9 @@ class ScriptsController < ApplicationController
   def create
     return head :bad_request unless general_params[:is_migrated]
 
-    # These fields should be set unless a unit is in a unit group
-    # and are required to be set if is_course is true. When creating
-    # a unit it is not yet in a unit group so we set default values here
+    # These fields should be set unless a unit is in a unit group.
+    # When creating a unit it is not yet in a unit group so we
+    # set default values here
     #
     # Setting default values for the columns would not work because those
     # are not used when you call new() just when you call create
@@ -212,6 +215,7 @@ class ScriptsController < ApplicationController
   def edit
     # Deprecated scripts should not be edited.
     if @script.is_deprecated
+      @deprecated_course_name = @script.name
       return render 'errors/deprecated_course'
     end
     raise "The new unit editor does not support level variants with experiments" if @script.is_migrated && @script.script_levels.any?(&:has_experiment?)
@@ -337,12 +341,6 @@ class ScriptsController < ApplicationController
 
     return {script: script} if script
 
-    if Unit.family_names.include?(unit_name)
-      script = Unit.get_unit_family_redirect_for_user(unit_name, user: current_user, locale: request.locale)
-      Unit.log_redirect(unit_name, script.redirect_to, request, 'unversioned-script-redirect', current_user&.user_type) if script.present?
-      return {script: script}
-    end
-
     # Redirect to the latest version or the assigned version of a single-unit course
     if UnitGroup.family_names.include?(unit_name)
       unit_group = UnitGroup.latest_stable_version(unit_name, locale: request.locale) ||
@@ -415,7 +413,6 @@ class ScriptsController < ApplicationController
       :has_unnumbered_lessons,
       :has_verified_resources,
       :tts,
-      :is_course,
       :show_calendar,
       :weekly_instructional_minutes,
       :is_migrated,
@@ -459,7 +456,7 @@ class ScriptsController < ApplicationController
 
   private def get_redirect_info(unit, locale, course)
     # Return nil if unit is nil or we know the user can view the version requested.
-    return nil if !unit || unit.can_view_version?(current_user, locale: locale)
+    return nil if !unit || unit.can_view_version?(current_user, locale: locale, unit_group: course)
 
     # Redirect the user to the latest assigned unit in this family, or to the latest stable unit in this family if
     # none are assigned.

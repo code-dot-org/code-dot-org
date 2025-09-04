@@ -7,6 +7,7 @@ import React, {useMemo} from 'react';
 import DSCOCarousel from '@code-dot-org/component-library/carousel';
 
 import Video from '@/components/contentful/video';
+import {resolveContentfulLink} from '@/contentful/resolveLink';
 import {Entry} from '@/types/contentful/Entry';
 import {ExperienceAsset} from '@/types/contentful/ExperienceAsset';
 
@@ -41,6 +42,9 @@ const VideoCarousel: React.FC<VideoCarouselProps> = ({slides}) => {
       slides.filter(Boolean).map(({fields}) => {
         const {videoTitle, youTubeId, videoFallbackFile} = fields;
 
+        const resolvedVideoFallbackFile =
+          resolveContentfulLink<ExperienceAsset>(videoFallbackFile);
+
         return {
           id: youTubeId,
           slide: (
@@ -48,7 +52,7 @@ const VideoCarousel: React.FC<VideoCarouselProps> = ({slides}) => {
               videoTitle={videoTitle}
               youTubeId={youTubeId}
               showCaption={true}
-              videoFallback={videoFallbackFile?.fields?.file?.url}
+              videoFallback={resolvedVideoFallbackFile?.fields?.file?.url}
             />
           ),
         };

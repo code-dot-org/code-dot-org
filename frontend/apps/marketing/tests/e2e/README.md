@@ -10,6 +10,11 @@ The E2E tests are designed to ensure that the marketing application behaves as e
 
 To run the full set of tests locally, an [Applitools Eyes API Key](https://applitools.com/tutorials/getting-started/retrieve-api-key) is needed. Define `APPLITOOLS_API_KEY` in `marketing/.env` to use.
 
+You will also want a copy of `marketing/.env` for each site to copy the UI test experience to:
+
+1. `marketing/.env.corporate`: The Corporate website environment variables
+2. `marketing/.env.csforall`: The CSForAll environment variables
+
 ## Running Tests
 
 ### Against a local server
@@ -57,7 +62,7 @@ To update the "All The Things" page, execute the fork command which will take th
 To create a fork:
 
 ```bash
-yarn test:ui:fork
+yarn test:ui:fork --env .env.corporate
 ```
 
 ### Updating the source control snapshot
@@ -65,21 +70,21 @@ yarn test:ui:fork
 To download a copy of the "All The Things" page to source control:
 
 ```bash
-yarn test:ui:update-snapshot --environment <development|test|production>
+yarn test:ui:update-snapshot --env .env.corporate --environment <development|test|production>
 ```
 
 If working on a fork and you want to update the version control version, specify the source entry id:
 
 ```bash
-yarn test:ui:update-snapshot --environment development --source-entry-id <fork experience entry id>
+yarn test:ui:update-snapshot --env .env.corporate --environment development --source-entry-id <fork experience entry id>
 ```
 
 ### Updating "All The Things" on Contentful from source control
 
-To upload the source control version of "All the Things" to Contentful:
+To upload the source control version of "All the Things" to Contentful. **Be sure to repeat for other site types.**
 
 ```bash
-yarn test:ui:publish-snapshot --environment <development|test|production>
+yarn test:ui:publish-snapshot --env .env.corporate --environment <development|test|production>
 ```
 
 This will save "All The Things", open up the experience in the associated environment and publish the page if it looks correct.
@@ -91,7 +96,7 @@ This will save "All The Things", open up the experience in the associated enviro
 1. Create a new fork (see [Forking](#forking) section above):
 
 ```bash
-yarn test:ui:fork
+yarn test:ui:fork --env .env.corporate
 ```
 
 2. Make updates on the forked page in Contentful.
@@ -99,43 +104,37 @@ yarn test:ui:fork
 - Any new content entries used in your component(s) should be prepended with "❌ [ENG]" to indicate they are for engineering/testing purposes only. These entries will be copied to Production in Step 9.
 - Make sure top level sections have a Fixed height in the Design sidebar in the Experiences editor, this can prevent page shifting in preparation to add Eyes tests in Step 11.
 
-3. Update the `development` snapshot with your forked version; the ID can be found at the end of the url on the forked experience in Contentful:
+3. Create a PR with the updates from steps 1-3. Label this PR with `All The Things` which will trigger the UI tests to test against the forked page.
+
+4. Once the PR is merged, update your workspace with `staging`.
+
+5. Publish the updated snapshot in the `development` environment to the corporate site (repeat for other site types):
 
 ```bash
-yarn test:ui:update-snapshot --source-entry-id <ID HERE> --environment development
+yarn test:ui:publish-snapshot --env .env.corporate --environment development
 ```
 
-4. Create a PR with the updates from steps 1-3.
+6. Open the development output link in the terminal in Contentful, and Publish the experience.
 
-5. Once the PR is merged, update your workspace with `staging`.
-
-6. Publish the updated snapshot in the `development` environment:
+7. Publish the updated snapshot in the `test` environment (repeat for other site types):
 
 ```bash
-yarn test:ui:publish-snapshot --environment development
+yarn test:ui:publish-snapshot --env .env.corporate --environment test
 ```
 
-7. Open the development output link in the terminal in Contentful, and Publish the experience.
-
-8. Publish the updated snapshot in the `test` environment:
+8. Publish the updated snapshot in the `production` environment (repeat for other site types):
 
 ```bash
-yarn test:ui:publish-snapshot --environment test
+yarn test:ui:publish-snapshot --env .env.corporate --environment production
 ```
 
-9. Publish the updated snapshot in the `production` environment:
+9. Publish updated `production` version of the All The Things page in Contentful. Repeat for other site types.
 
-```bash
-yarn test:ui:publish-snapshot --environment production
-```
+10. **If you're adding a new component:** add the component to the Section Types on `/apps/marketing/tests/e2e/pom/all-the-things.ts` and add unit and Eyes tests to `/apps/marketing/tests/e2e/all-the-things.spec.ts`. Create/merge a PR with these tests.
 
-10. Publish updated `production` version of the All The Things page in Contentful.
+11. Eyes diffs may show up in a Marketing-App-Deploy message in the _#infra-marketing-app-staging_ Slack channel.
 
-11. **If you're adding a new component:** add the component to the Section Types on `/apps/marketing/tests/e2e/pom/all-the-things.ts` and add unit and Eyes tests to `/apps/marketing/tests/e2e/all-the-things.spec.ts`. Create/merge a PR with these tests.
-
-12. Eyes diffs may show up in a Marketing-App-Deploy message in the _#infra-marketing-app-staging_ Slack channel.
-
-13. Approve Eyes diffs and rerun failed tests if needed.
+12. Approve Eyes diffs and rerun failed tests if needed.
 
 #### ⛔️ Troubleshooting
 

@@ -103,6 +103,7 @@ let newSourceVersionInterval = 15 * 60 * 1000; // 15 minutes
 var currentAbuseScore = 0;
 var sharingDisabled = false;
 var currentHasPrivacyProfanityViolation = false;
+var isTeacherOfProjectOwner = false;
 var currentShareFailureEnglish = '';
 var currentShareFailureIntl = '';
 var intlLanguage = false;
@@ -328,6 +329,12 @@ var projects = (module.exports = {
   },
 
   getSharingDisabled() {
+    // Return false if current user is a project validator and pageAction is 'view'.
+    if (this.showEvenIfPolicyViolatingOrAbusiveOrSharingDisabled()) {
+      return false;
+    }
+    // sharingDisabled is set to true if the project owner's sharing_disabled is true
+    // AND the current user is neither the owner nor the teacher of the owner.
     return sharingDisabled;
   },
 
@@ -345,30 +352,6 @@ var projects = (module.exports = {
 
   getCurrentSourceVersionId() {
     return currentSourceVersionId;
-  },
-
-  disableAutoContentModeration() {
-    return new Promise((resolve, reject) => {
-      channels.update(
-        `${this.getCurrentId()}/disable-content-moderation`,
-        null,
-        err => {
-          err ? reject(err) : resolve();
-        }
-      );
-    });
-  },
-
-  enableAutoContentModeration() {
-    return new Promise((resolve, reject) => {
-      channels.update(
-        `${this.getCurrentId()}/enable-content-moderation`,
-        null,
-        err => {
-          err ? reject(err) : resolve();
-        }
-      );
-    });
   },
 
   /**
@@ -413,6 +396,14 @@ var projects = (module.exports = {
    */
   isOwner() {
     return !!(current && current.isOwner);
+  },
+
+  /**
+   * @returns {boolean} true if the current user is a teacher of the owner of the project or
+   * a project validator.
+   */
+  canViewFlaggedProject() {
+    return !!isTeacherOfProjectOwner || appOptions.canResetAbuse;
   },
 
   isPublished() {
@@ -460,7 +451,7 @@ var projects = (module.exports = {
    *   of showing the project.
    */
   hideBecausePrivacyViolationOrProfane() {
-    if (this.showEvenIfPolicyViolatingOrAbusiveProject()) {
+    if (this.showEvenIfPolicyViolatingOrAbusiveOrSharingDisabled()) {
       return false;
     }
     return this.hasPrivacyProfanityViolation();
@@ -471,7 +462,7 @@ var projects = (module.exports = {
    *   the project.
    */
   hideBecauseAbusive() {
-    if (this.showEvenIfPolicyViolatingOrAbusiveProject()) {
+    if (this.showEvenIfPolicyViolatingOrAbusiveOrSharingDisabled()) {
       return false;
     }
     return this.exceedsAbuseThreshold();
@@ -479,9 +470,9 @@ var projects = (module.exports = {
 
   /**
    * @returns {boolean} true if we should show a project regardless of its
-   * profanity, policy violations or abuse rating level.
+   * profanity, policy violations, abuse rating level, or if sharing is disabled.
    */
-  showEvenIfPolicyViolatingOrAbusiveProject() {
+  showEvenIfPolicyViolatingOrAbusiveOrSharingDisabled() {
     if (appOptions.scriptId) {
       // Never want to hide when in the context of a script, as this will always
       // either be me or my teacher viewing my last submission
@@ -495,10 +486,13 @@ var projects = (module.exports = {
     // NOTE: appOptions.canResetAbuse is not a security setting as it can be
     // manipulated by the user. In this case that's okay, since all that does
     // is allow them to view a project that was marked as abusive.
-    const hasEditPermissions = this.isOwner() || appOptions.canResetAbuse;
+    // If current user is teacher of project's owner, then allow them to view as well.
+    const hasViewPermissions =
+      appOptions.canResetAbuse || isTeacherOfProjectOwner;
+
     const isEditOrViewPage = pageAction === 'edit' || pageAction === 'view';
 
-    return hasEditPermissions && isEditOrViewPage;
+    return (this.isOwner() || hasViewPermissions) && isEditOrViewPage;
   },
 
   channelNotFound() {
@@ -1968,6 +1962,19 @@ function fetchShareFailure(resolve) {
   });
 }
 
+function fetchIsTeacherOfProjectOwner(resolve) {
+  channels.fetch(current.id + '/is_teacher_of_project_owner', (err, data) => {
+    isTeacherOfProjectOwner =
+      (data && !!data.is_teacher_of_project_owner) || isTeacherOfProjectOwner;
+    resolve();
+    if (err) {
+      // Throw an error so that things like New Relic see this. This shouldn't
+      // affect anything else.
+      throw err;
+    }
+  });
+}
+
 function fetchPrivacyProfanityViolations(resolve) {
   channels.fetch(current.id + '/privacy-profanity', (err, data) => {
     // data.has_violation is 0 or true, coerce to a boolean.
@@ -1990,6 +1997,7 @@ function fetchAbuseScoreAndPrivacyViolations(project) {
   const promises = [
     new Promise(fetchAbuseScore),
     new Promise(fetchShareFailure),
+    new Promise(fetchIsTeacherOfProjectOwner),
   ];
 
   if (OPEN_ENDED_PROJECTS_YOUNG_AGE.includes(project.getStandaloneApp())) {
