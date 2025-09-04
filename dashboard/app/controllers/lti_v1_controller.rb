@@ -200,11 +200,6 @@ class LtiV1Controller < ApplicationController
           deployment.lti_user_identities << lti_user_identity
         end
 
-        # If this is a restricted deployment, skip the account linking flow by setting lms_landing_opted_out to true
-        # if Policies::Lti::DeploymentConfiguration::RESTRICTED_DEPLOYMENTS.include?(deployment.id) && !user.lms_landing_opted_out
-        #   user.update!(lms_landing_opted_out: true)
-        # end
-
         # If this is the user's first login, send them into the account linking flow
         unless user.lms_landing_opted_out
           Services::Lti.initialize_lms_landing_session(session, integration[:platform_name], 'continue', user.user_type)
