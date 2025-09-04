@@ -204,7 +204,7 @@ module Dashboard
     # this line.
     config.autoload_paths.map!(&:to_s)
 
-    # Also make sure some of these directories are always loaded up front in production
+    # Also make sure these directories are always loaded up front in production
     # environments.
     #
     # These directories will also be treated as top-level directories by
