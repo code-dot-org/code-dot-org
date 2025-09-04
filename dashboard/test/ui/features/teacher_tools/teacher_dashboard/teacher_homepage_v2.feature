@@ -1,9 +1,5 @@
 @no_mobile
 Feature: Using the teacher homepage
-  # This line can be removed when the new teacher homepage is the default
-  Background:
-    Given I am on "http://studio.code.org/home"
-    And I use a cookie to mock the DCDO key "teacher-homepage-v2" as "true"
 
   Scenario: Teacher can access section pages from section options dropdown
     Given I create a teacher named "Teacher Hank"
@@ -101,14 +97,14 @@ Scenario: Teacher can delete a section from the section options dropdown
     And I join the section
     Then I sign out and sign in as "Teacher Hank"
     And I am on "http://studio.code.org/teacher_dashboard/home"
-    Then I click "#task-button-View-progress" once it exists
+    Then I click "#task-button-View-progress-New-Section" once it exists
     Then I wait until element "h1:contains(Progress)" is visible
 
   Scenario: Teacher can view lesson materials from the "View lesson materials" button on the section card
     Given I am a teacher
     And I create a new student section assigned to course "interactive-games-animations-2024" unit 1
     And I am on "http://studio.code.org/teacher_dashboard/home"
-    Then I click "#task-button-View-lesson-materials" once it exists
+    Then I click "#task-button-View-lesson-materials-New-Section" once it exists
     Then I wait until element "h1:contains(Lesson Materials)" is visible
 
   @eyes
