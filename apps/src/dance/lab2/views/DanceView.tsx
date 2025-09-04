@@ -1,3 +1,4 @@
+import {Button} from '@code-dot-org/component-library/button';
 import {Events, WorkspaceSvg} from 'blockly/core';
 import classNames from 'classnames';
 import {isEqual} from 'lodash';
@@ -71,7 +72,8 @@ const DanceView: React.FunctionComponent<{
   const hasEdited = useAppSelector(state => state.dance.hasEdited);
   const isLoading = useAppSelector(state => state.dance.isLoading);
 
-  const {currentSources, updateSources} = useSources<DanceProjectSources>();
+  const {currentSources, updateSources, showStartOverDialog} =
+    useSources<DanceProjectSources>();
 
   const programExecutor = useRef<ProgramExecutor | null>(null);
   const workspace = useRef<WorkspaceSvg | null>(null);
@@ -183,6 +185,10 @@ const DanceView: React.FunctionComponent<{
     },
     [isRunning, dispatch, saveBlocks]
   );
+
+  const onClickStartOver = useCallback(() => {
+    showStartOverDialog('blocks');
+  }, [showStartOverDialog]);
 
   // Setup Blockly for dance party when first mounting.
   useEffect(setupBlocklyEnvironment, []);
@@ -362,6 +368,19 @@ const DanceView: React.FunctionComponent<{
         headerContent={commonI18n.workspaceHeaderShort()}
         className={moduleStyles.workspaceArea}
         headerClassName={moduleStyles.panelHeader}
+        rightHeaderContent={
+          !readonlyWorkspace && (
+            <Button
+              text={commonI18n.startOver()}
+              iconRight={{iconStyle: 'solid', iconName: 'refresh'}}
+              color={'black'}
+              onClick={onClickStartOver}
+              ariaLabel={commonI18n.startOver()}
+              size={'xs'}
+              type="secondary"
+            />
+          )
+        }
       >
         {WorkspaceAlert}
         <div id={BLOCKLY_DIV_ID} />

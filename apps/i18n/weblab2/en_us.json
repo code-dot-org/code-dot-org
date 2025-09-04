@@ -1,5 +1,7 @@
 {
   "code": "Code",
+  "desktop": "Desktop",
+  "mobile": "Mobile",
   "navigateBack": "Navigate back",
   "navigateForward": "Navigate forward",
   "preview": "Preview",

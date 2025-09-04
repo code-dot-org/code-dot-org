@@ -460,6 +460,33 @@ class RegistrationsController < Devise::RegistrationsController
     end
   end
 
+  #
+  # GET /users/test_mailjet_page
+  #
+  def test_mailjet_page
+  end
+
+  #
+  # POST /users/send_test_mailjet
+  #
+  def send_test_mailjet
+    email = params[:email]
+    name = params[:name]
+
+    MailJet.send_email(:teacher_post_workshop_survey, email, name, vars:
+      {
+        email_to: email,
+        name: name,
+        exit_survey_url: 'https://studio.code.org/catalog',
+        download_certificate_url: 'https://studio.code.org/professional-learning/workshops',
+        rp_email: 'testrp@email.com',
+        rp_name: 'Fake Regional Partner',
+        organizer_email: 'testorganizer@email.com',
+        organizer_name: 'Fake Organizer'
+      }
+    )
+  end
+
   private def update_user_email
     return false if forbidden_change?(current_user, params)
 

@@ -2,17 +2,19 @@ $url-bar-height: 24px;
 $vertical-padding-offset: 4px;
 $url-bar-content-height: calc($url-bar-height - $vertical-padding-offset);
 
-.urlBarContainer {
+.previewHeaderContainer {
   background-color: var(--background-neutral-tertiary);
-  border-top: 1px solid var(--borders-neutral-primary);
+  border-bottom: 1px solid var(--borders-neutral-primary);
   padding: 8px 12px;
   display: flex;
   align-items: center;
-  gap: 0;
+  gap: 8px;
+  min-width: 0; // Allow container to shrink
   
   .urlBarContent {
     display: flex;
     flex: 1;
+    min-width: 0; // Allow URL bar to shrink
     border: 1px solid var(--borders-neutral-strong);
     border-radius: var(--border-radius-br-s, 4px);
     background-color: var(--background-neutral-primary);
@@ -64,6 +66,7 @@ $url-bar-content-height: calc($url-bar-height - $vertical-padding-offset);
 
   .urlBarInput {
     flex: 1;
+    min-width: 0; // Allow input to shrink
     margin: 0;
     padding: 0;
     background-color: var(--background-neutral-primary);
@@ -82,10 +85,37 @@ $url-bar-content-height: calc($url-bar-height - $vertical-padding-offset);
       font-size: var(--font-size-body-xs, 12px);
       box-shadow: none;
       background-color: transparent;
+      min-width: 0; // Allow input to shrink
 
       &:focus-visible {
-        outline-offset: 0; // update focus outline so that it fits within the URL bar
+        outline-offset: 0; // Update focus outline so that it fits within the URL bar
       }
+    }
+  }
+}
+
+// Custom styles for segmented buttons in preview header
+.customSegmentedButtons {
+  flex-shrink: 0; // Prevent segmented buttons from shrinking
+  
+  // Target all buttons within segmented buttons container
+  :global(button) {
+    border: 1px solid var(--borders-neutral-strong) !important;
+    height: $url-bar-height; // Match the input bar height including borders
+    box-sizing: border-box;
+    
+    &:hover {
+      // Using secondary instead of tertiary because the preview header already uses background-neutral-tertiary color.
+      background-color: var(--background-neutral-secondary) !important;
+    }
+  }
+  
+  // Override for selected buttons to keep their original styling
+  :global(button[class*="selectedSegmentedButton"]) {
+    border: 1px solid transparent !important;
+    
+    &:hover {
+      background-color: var(--background-brand-teal-primary) !important;
     }
   }
 }

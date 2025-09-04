@@ -7,7 +7,7 @@
   "user_id": 1,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "### Assessment 2\r\n\r\n> This level does **not** require you to edit and run your code before submitting. Good luck!\r\n\r\nCreate a song using multiple sounds! Each part of your song should include a different type of sound.\r\n\r\nExperiment and have fun!\r\n\r\n_Tips_:\r\n- Try using blocks from different packs.\r\n- Try using the Play Together and repeat blocks.\r\n- Try factoring your song using functions.",
+    "long_instructions": "### Assessment 2\r\n\r\n- _This level does **not** require you to edit and run your code before submitting._\r\n- _This level does have validation._\r\n\r\nCreate a song using multiple sounds! Each part of your song should include a different type of sound.\r\n\r\nExperiment and have fun!\r\n\r\n_Tips_:\r\n- Try using blocks from different packs.\r\n- Try using the Play Together and repeat blocks.\r\n- Try factoring your song using functions.",
     "offer_browser_tts": "false",
     "use_secondary_finish_button": "false",
     "submittable": "true",
@@ -24,9 +24,30 @@
       "validationEnabled": false
     },
     "disable_edit_run_for_submission": "true",
+    "validations": [
+      {
+        "key": "Submittable Music Level 2_2b74745f-e210-45fa-9a07-4f6698b68850",
+        "message": "You played one sound!",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "key": "Submittable Music Level 2_5594a84f-c061-4811-af8d-e380c7cb0345",
+        "message": "Please play a sound.",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-07-23T17:30:02.496+00:00\",\"changed\":[\"cloned from \\\"Submittable Music Level 1\\\"\"],\"cloned_from\":\"Submittable Music Level 1\"},{\"changed_at\":\"2025-07-23 17:32:01 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-07-23T17:30:02.496+00:00\",\"changed\":[\"cloned from \\\"Submittable Music Level 1\\\"\"],\"cloned_from\":\"Submittable Music Level 1\"},{\"changed_at\":\"2025-07-23 17:32:01 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2025-08-29 20:57:31 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

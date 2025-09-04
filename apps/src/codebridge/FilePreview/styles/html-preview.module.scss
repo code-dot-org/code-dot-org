@@ -1,5 +1,7 @@
 @use '@code-dot-org/component-library-styles/mixins.scss' as mixins;
 
+$mobile-aspect-ratio: 9 / 16;
+
 .previewContainer {
   position: relative;
   width: 100%;
@@ -9,10 +11,18 @@
   grid-template-rows: 40px 1fr;
 }
 
+.previewHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .previewWrapper {
   position: relative;
   flex: 1;
-  
+  display: flex;
+  justify-content: center;
+  background-color: var(--background-neutral-secondary);
   &:focus {
     @include mixins.focus-styles;
     outline-offset: 0;
@@ -25,9 +35,36 @@
 }
 
 .previewIframe{
-  width: 100%;
-  height: 100%;
-  background-color: white;
-  padding: 5px;
+  border: none;
   box-sizing: border-box;
+}
+
+.levelViewPreviewIframeHeight {
+  height: calc(100vh - 120px); // Account for header and some padding
+}
+
+.shareViewPreviewIframeHeight {
+  height: 100%;
+}
+
+.projectViewPreviewIframeHeight {
+  height: calc(100vh - 180px); // Account for header, some padding, and footer
+}
+
+.desktopPreviewIframe{
+  display: flex;
+  align-items: flex-start;
+  width: 100%;}
+
+.mobilePreviewIframe{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: $mobile-aspect-ratio; // Mobile aspect ratio
+  width: min(460px, 50vw); // Standard mobile width, but responsive
+  max-width: calc((100vh - 120px) * $mobile-aspect-ratio); // Maintain aspect ratio when height-constrained
+  padding: var(--padding-p-xs, 16px);
+  border-right: 1px solid var(--borders-neutral-primary);
+  border-left: 1px solid var(--borders-neutral-primary);
+  background-color: var(--background-neutral-primary);
 }

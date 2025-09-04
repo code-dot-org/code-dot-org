@@ -1,13 +1,18 @@
 import Button from '@code-dot-org/component-library/button';
+import SegmentedButtons, {
+  SegmentedButtonsProps,
+} from '@code-dot-org/component-library/segmentedButtons';
 import TextField from '@code-dot-org/component-library/textField';
 import classNames from 'classnames';
 import React from 'react';
 
 import weblab2I18n from '@cdo/apps/weblab2/locale';
 
-import moduleStyles from './styles/url-bar.module.scss';
+import {PreviewViewMode} from './constants';
 
-interface UrlBarProps {
+import moduleStyles from './styles/html-preview-header.module.scss';
+
+interface HTMLPreviewHeaderProps {
   value: string;
   onChange: (value: string) => void;
   onSubmit: (value: string) => void;
@@ -16,9 +21,11 @@ interface UrlBarProps {
   onNavigateBack: () => void;
   onNavigateForward: () => void;
   onRefresh: () => void;
+  previewViewMode: PreviewViewMode;
+  setPreviewViewMode: (previewViewMode: PreviewViewMode) => void;
 }
 
-export const UrlBar: React.FC<UrlBarProps> = ({
+export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
   value,
   onChange,
   onSubmit,
@@ -27,15 +34,41 @@ export const UrlBar: React.FC<UrlBarProps> = ({
   onNavigateBack,
   onNavigateForward,
   onRefresh,
+  previewViewMode,
+  setPreviewViewMode,
 }) => {
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter') {
       onSubmit(value);
     }
   };
+  const previewViewModeButtonsProps: SegmentedButtonsProps = {
+    buttons: [
+      {
+        label: weblab2I18n.desktop(),
+        value: PreviewViewMode.DESKTOP,
+        iconLeft: {
+          iconName: 'desktop',
+          iconStyle: 'solid',
+        },
+      },
+      {
+        label: weblab2I18n.mobile(),
+        value: PreviewViewMode.MOBILE,
+        iconLeft: {
+          iconName: 'mobile',
+          iconStyle: 'solid',
+        },
+      },
+    ],
+    size: 'xs',
+    selectedButtonValue: previewViewMode,
+    onChange: previewViewMode =>
+      setPreviewViewMode(previewViewMode as PreviewViewMode),
+  };
 
   return (
-    <div className={moduleStyles.urlBarContainer}>
+    <div className={moduleStyles.previewHeaderContainer}>
       <div className={moduleStyles.urlBarContent}>
         <div
           className={classNames(
@@ -92,6 +125,10 @@ export const UrlBar: React.FC<UrlBarProps> = ({
           />
         </div>
       </div>
+      <SegmentedButtons
+        {...previewViewModeButtonsProps}
+        className={moduleStyles.customSegmentedButtons}
+      />
     </div>
   );
 };

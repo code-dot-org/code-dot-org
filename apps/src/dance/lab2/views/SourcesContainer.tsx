@@ -8,14 +8,22 @@ import React, {
   useState,
 } from 'react';
 
+import {START_BLOCKS} from '@cdo/apps/constants';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {LabProps, ProjectSources} from '@cdo/apps/lab2/types';
+import StartOverDialog, {
+  MessageType,
+} from '@cdo/apps/lab2/views/dialogs/dsco/StartOverDialog';
 
 import getInitialSources from '../utils/getInitialSources';
+
+const isStartMode = getAppOptionsEditBlocks() === START_BLOCKS;
 
 interface SourcesContextType<T extends ProjectSources = ProjectSources> {
   currentSources: T;
   updateSources: (newSources: T, forceSave?: boolean) => void;
+  showStartOverDialog: (type: MessageType, message?: string) => void;
 }
 
 const SourcesContext = createContext<SourcesContextType | null>(null);
@@ -64,9 +72,39 @@ const SourcesContainer: React.FC<
     [setCurrentSources]
   );
 
+  const onStartOver = useCallback(() => {
+    const {templateSources, startSources} = levelProperties;
+    const startOverSources = isStartMode
+      ? defaultSources
+      : templateSources || startSources || defaultSources;
+    updateSources(startOverSources as ProjectSources, true);
+    setStartOverProps(undefined);
+  }, [levelProperties, defaultSources, updateSources]);
+
+  const [startOverProps, setStartOverProps] = useState<{
+    type: MessageType;
+    message?: string;
+  }>();
+
+  const showStartOverDialog = useCallback(
+    (type: MessageType, message?: string) => {
+      setStartOverProps({type, message});
+    },
+    []
+  );
+
   return (
-    <SourcesContext.Provider value={{currentSources, updateSources}}>
+    <SourcesContext.Provider
+      value={{currentSources, updateSources, showStartOverDialog}}
+    >
       {children}
+      {startOverProps && (
+        <StartOverDialog
+          onConfirm={onStartOver}
+          onCancel={() => setStartOverProps(undefined)}
+          {...startOverProps}
+        />
+      )}
     </SourcesContext.Provider>
   );
 };
