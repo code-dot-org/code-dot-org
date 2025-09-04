@@ -4,12 +4,11 @@ import React, {useEffect, useMemo, useRef, useState} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
+import {setIsFullScreenView} from '@cdo/apps/lab2/lab2Redux';
 import {isPredictResponseSubmitted} from '@cdo/apps/lab2/redux/predictLevelRedux';
 import {getLabViewPageAction, LifecycleEvent} from '@cdo/apps/lab2/utils';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
-import {setViewMode} from '@cdo/apps/weblab2/redux';
-import {ViewMode} from '@cdo/apps/weblab2/types';
 
 import {
   IframeMessageType,
@@ -116,11 +115,11 @@ export const HTMLPreview: React.FC = () => {
   };
 
   const onMaximize = () => {
-    dispatch(setViewMode(ViewMode.MAXIMIZED));
+    dispatch(setIsFullScreenView(true));
   };
 
   const onMinimize = () => {
-    dispatch(setViewMode(ViewMode.SPLIT));
+    dispatch(setIsFullScreenView(false));
   };
 
   const addToNavigationHistory = (

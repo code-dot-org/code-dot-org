@@ -8,7 +8,6 @@ import React from 'react';
 
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import weblab2I18n from '@cdo/apps/weblab2/locale';
-import {ViewMode} from '@cdo/apps/weblab2/types';
 
 import {PreviewViewMode} from './constants';
 
@@ -43,7 +42,7 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
   previewViewMode,
   setPreviewViewMode,
 }) => {
-  const viewMode = useAppSelector(state => state.weblab2.viewMode);
+  const isFullScreenView = useAppSelector(state => state.lab.isFullScreenView);
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter') {
       onSubmit(value);
@@ -136,7 +135,7 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
         {...previewViewModeButtonsProps}
         className={moduleStyles.customSegmentedButtons}
       />
-      {viewMode !== ViewMode.MAXIMIZED ? (
+      {!isFullScreenView ? (
         <Button
           onClick={onMaximize}
           aria-label={weblab2I18n.maximizePreview()}
