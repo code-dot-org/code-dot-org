@@ -106,11 +106,11 @@ Resources:
                         # Don't Challenge HTTP requests for URLs that serve a different content-type from text/html
                         ExemptUriRegularExpressions:
                           # `/api` endpoints typically serve JSON.
-                          - RegexString: '\\\\/api\\\\/'
+                          - RegexString: '\\/api\\/'
                           # All assets are served from `/_next/static` and HTML pages are never served from this path.
-                          - RegexString: '\\\\/_next\\\\/static'
+                          - RegexString: '\\/_next\\/static'
                           # Just to be safe, exclude paths where the file extension is a non-HTML resource.
-                          - RegexString: '\\\\.(acc|avi|css|gif|ico|jpe?g|js|json|mp[34]|ogg|otf|pdf|png|tiff?|ttf|webm|webp|woff2?|xml)$'
+                          - RegexString: '\\.(acc|avi|css|gif|ico|jpe?g|js|json|mp[34]|ogg|otf|pdf|png|tiff?|ttf|webm|webp|woff2?|xml)$'
           VisibilityConfig:
             CloudWatchMetricsEnabled: true
             MetricName: AWS-AWSManagedRulesAntiDDoSRuleSet
@@ -516,6 +516,76 @@ Resources:
           VisibilityConfig:
             CloudWatchMetricsEnabled: true
             MetricName: AWS-AWSManagedRulesBotControlRuleSet
+            SampledRequestsEnabled: true
+        # Protection against Linux-specific Local File Inclusion attacks
+        - Name: AWS-AWSManagedRulesLinuxRuleSet
+          Priority: 17
+          OverrideAction:
+            None: {}
+          Statement:
+            ManagedRuleGroupStatement:
+              VendorName: AWS
+              Name: AWSManagedRulesLinuxRuleSet
+              RuleActionOverrides:
+                - Name: LFI_URIPATH
+                  ActionToUse:
+                    Challenge: {}
+                - Name: LFI_QUERYSTRING
+                  ActionToUse:
+                    Challenge: {}
+                - Name: LFI_HEADER
+                  ActionToUse:
+                    Challenge: {}
+          VisibilityConfig:
+            CloudWatchMetricsEnabled: true
+            MetricName: AWS-AWSManagedRulesLinuxRuleSet
+            SampledRequestsEnabled: true
+        # Protection against requests with known malicious inputs
+        - Name: AWS-AWSManagedRulesKnownBadInputsRuleSet
+          Priority: 18
+          OverrideAction:
+            None: {}
+          Statement:
+            ManagedRuleGroupStatement:
+              VendorName: AWS
+              Name: AWSManagedRulesKnownBadInputsRuleSet
+              RuleActionOverrides:
+                - Name: JavaDeserializationRCE_BODY
+                  ActionToUse:
+                    Challenge: {}
+                - Name: JavaDeserializationRCE_URIPATH
+                  ActionToUse:
+                    Challenge: {}
+                - Name: JavaDeserializationRCE_QUERYSTRING
+                  ActionToUse:
+                    Challenge: {}
+                - Name: JavaDeserializationRCE_HEADER
+                  ActionToUse:
+                    Challenge: {}
+                - Name: Host_localhost_HEADER
+                  ActionToUse:
+                    Challenge: {}
+                - Name: PROPFIND_METHOD
+                  ActionToUse:
+                    Challenge: {}
+                - Name: ExploitablePaths_URIPATH
+                  ActionToUse:
+                    Challenge: {}
+                - Name: Log4JRCE_QUERYSTRING
+                  ActionToUse:
+                    Challenge: {}
+                - Name: Log4JRCE_BODY
+                  ActionToUse:
+                    Challenge: {}
+                - Name: Log4JRCE_URIPATH
+                  ActionToUse:
+                    Challenge: {}
+                - Name: Log4JRCE_HEADER
+                  ActionToUse:
+                    Challenge: {}
+          VisibilityConfig:
+            CloudWatchMetricsEnabled: true
+            MetricName: AWS-AWSManagedRulesKnownBadInputsRuleSet
             SampledRequestsEnabled: true
 
   # ------------------------------------------------------------
