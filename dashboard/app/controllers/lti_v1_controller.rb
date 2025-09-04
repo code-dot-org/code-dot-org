@@ -200,10 +200,10 @@ class LtiV1Controller < ApplicationController
           deployment.lti_user_identities << lti_user_identity
         end
 
-        # TODO: We could also do this when creating users during sync_course
-        if Policies::Lti::DeploymentConfiguration::RESTRICTED_DEPLOYMENTS.include?(deployment.id) && !user.lms_landing_opted_out
-          user.update!(lms_landing_opted_out: true)
-        end
+        # If this is a restricted deployment, skip the account linking flow by setting lms_landing_opted_out to true
+        # if Policies::Lti::DeploymentConfiguration::RESTRICTED_DEPLOYMENTS.include?(deployment.id) && !user.lms_landing_opted_out
+        #   user.update!(lms_landing_opted_out: true)
+        # end
 
         # If this is the user's first login, send them into the account linking flow
         unless user.lms_landing_opted_out
@@ -229,6 +229,7 @@ class LtiV1Controller < ApplicationController
         # If this is a restricted deployment, skip the account linking flow and
         # immediately create the user and sign them in.
         if Policies::Lti::DeploymentConfiguration::RESTRICTED_DEPLOYMENTS.include?(deployment.id)
+          user.lms_landing_opted_out = true
           user.save!
           sign_in user
           redirect_to destination_url and return
