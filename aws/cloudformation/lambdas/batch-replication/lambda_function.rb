@@ -259,7 +259,7 @@ def lambda_handler(event:, context:)
 end
 
 def find_all_inventory_reports(s3_client, inventory_bucket, source_bucket)
-  inventory_prefix = "inventory-reports/#{source_bucket}/DailyInventory/"
+  inventory_prefix = "inventory-reports//#{source_bucket}/DailyInventory/"
 
   log(:debug, 'inventory_search', {prefix: inventory_prefix})
 
