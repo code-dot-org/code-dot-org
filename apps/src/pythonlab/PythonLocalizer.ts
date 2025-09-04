@@ -13,7 +13,9 @@ class PythonLocalizer extends Localizer {
       return file;
     }
 
-    if (!localization.isLocalizeJS() || localization.locale === 'en') {
+    // Only localize if we are using LocalizeJS and we are currently viewing
+    // with a language that is not some form of English
+    if (!localization.isLocalizeJS() || localization.locale.startsWith('en')) {
       return file;
     }
 
