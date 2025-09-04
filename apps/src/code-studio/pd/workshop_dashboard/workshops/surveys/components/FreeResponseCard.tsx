@@ -17,7 +17,7 @@ import styles from '../../workshop.module.scss';
 interface FreeResponseCardProps {
   title: string;
   tagText?: string;
-  items: string[];
+  items?: string[];
   statusColor?: 'success' | 'warning';
   size?: 's' | 'l';
 }
@@ -25,7 +25,7 @@ interface FreeResponseCardProps {
 export const FreeResponseCard: FC<FreeResponseCardProps> = ({
   title,
   tagText,
-  items,
+  items = [],
   statusColor,
   size = 'l',
 }) => {

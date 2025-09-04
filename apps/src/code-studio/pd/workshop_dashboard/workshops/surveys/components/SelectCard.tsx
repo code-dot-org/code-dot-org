@@ -17,7 +17,7 @@ interface SelectCardProps {
   title: string;
   description: string;
   items: Breakdown[];
-  totalRespondents: number;
+  totalRespondents?: number;
   barLabel?: string;
 }
 
@@ -25,7 +25,7 @@ export const SelectCard: FC<SelectCardProps> = ({
   title,
   description,
   items,
-  totalRespondents,
+  totalRespondents = 0,
   barLabel = '',
 }) => {
   if (!totalRespondents) {

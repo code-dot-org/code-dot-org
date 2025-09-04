@@ -15,19 +15,19 @@ export const getQuestionDescription = (question: SurveyQuestion) => {
     isQuestionType(question, 'multiSelect') &&
     question.question_name === 'barriers_implementation_curriculum'
   ) {
-    if (question.results.total_respondents === 0) {
+    if (!question.results.total_respondents) {
       return '';
     }
     const numWithBarriers =
       question.results.total_respondents -
-      (question.results.breakdown.none?.count ?? 0);
+      (question.results.breakdown?.none?.count ?? 0);
     return `${numWithBarriers} teachers reported at least 1 or more barriers to implementation`;
   }
   return '';
 };
 
 export const prepLikertBreakdown = (breakdown: LikertResults['breakdown']) =>
-  Object.entries(breakdown)
+  Object.entries(breakdown ?? {})
     .map(([key, value]) => ({
       ...value,
       className:

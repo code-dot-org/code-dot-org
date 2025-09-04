@@ -47,10 +47,12 @@ export const Implementation = () => {
     if (!isQuestionType(barriersToImplementation, 'multiSelect')) {
       return [];
     }
-    return Object.entries(barriersToImplementation.results.breakdown)
+    return Object.entries(barriersToImplementation.results.breakdown ?? {})
       .filter(([key]) => key !== 'none')
       .map(([_, value]) => value);
   }, [barriersToImplementation]);
+
+  const followUpRequestedItems = surveys?.follow_up_requested ?? [];
 
   if (!questions) return null;
 
@@ -104,7 +106,7 @@ export const Implementation = () => {
               otherQuestionsImplementation.question_short_text ??
               otherQuestionsImplementation.question_text
             }
-            items={otherQuestionsImplementation.results.responses}
+            items={otherQuestionsImplementation.results.responses ?? []}
             tagText={`${otherQuestionsImplementation.results.total_responses} Submitted`}
           />
         )}
