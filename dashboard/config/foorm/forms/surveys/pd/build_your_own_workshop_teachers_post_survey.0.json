@@ -422,7 +422,7 @@
           "category": "implementation",
           "type": "radiogroup",
           "name": "followup_requested",
-          "title": "Would you like someone from the Regional Partner team to contact you with further resources or support for teaching this curriculum? If you choose yes, we will share your contact information (but not your survey responses) in a list for the Regional partner team to follow up.",
+          "title": "Would you like someone from the Regional Partner team to contact you with further resources or support for teaching this curriculum? If you choose yes, we will share your contact information (but not your survey responses) with the Regional partner team to follow up.",
           "shortText": "Follow-up requested",
           "choices": [
             {
@@ -440,7 +440,7 @@
           "type": "text",
           "name": "followup_email",
           "visibleIf": "{followup_requested} = 'yes'",
-          "title": "Please enter the email address where  the Regional Partner team to contact you with further resources and support for teaching."
+          "title": "Please enter the email address where the Regional Partner team can contact you with further resources and support for teaching."
         },
         {
           "type": "html",
