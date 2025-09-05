@@ -9,12 +9,7 @@ import CallToAction from './CallToAction';
 import CloseButton from './CloseButton';
 import {headerStyles} from './common/styles';
 import {LinkItemProps} from './common/types';
-import {
-  CALL_TO_ACTION,
-  TOP_LEVEL_LINKS,
-  SITE_LOGO,
-  MAIN_MENU_DESKTOP_ITEMS,
-} from './config';
+import {CALL_TO_ACTION, TOP_LEVEL_LINKS, SITE_LOGO} from './config';
 import HamburgerButton from './HamburgerButton';
 import LinkList from './LinkList';
 import MainMenuDesktop from './MainMenuDesktop';
@@ -69,7 +64,7 @@ const HeaderCSforAll: React.FC<HeaderProps> = ({className}) => {
             {/* Site Logo */}
             {siteLogo}
             {/* Main Menu Desktop with Dropdowns */}
-            <MainMenuDesktop mainMenuDesktopItems={MAIN_MENU_DESKTOP_ITEMS} />
+            <MainMenuDesktop />
           </Box>
           {/* Call to Action */}
           {callToAction}

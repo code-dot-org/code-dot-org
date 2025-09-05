@@ -2,7 +2,7 @@ import logoImage from '@public/images/csforall-logo.webp';
 
 import {CallToActionProps} from './CallToAction';
 import {LinkItemProps} from './common/types';
-import {createLinkItem, getLinksFromEntry} from './common/utils';
+import {createLinkItem} from './common/utils';
 import {SiteLogoProps} from './SiteLogo';
 
 const SHARED_LINKS = {
@@ -99,11 +99,6 @@ export const TOP_LEVEL_LINKS: {linkList: LinkItemProps[]} = {
   ],
 };
 
-// Main Menu Initiatives Dropdown Links
-export const INITIATIVES_LINKS: {linkList: LinkItemProps[]} = {
-  linkList: await getLinksFromEntry('36lird9ux97FVwMw5xNYMH'),
-};
-
 // Main Menu Take Action Dropdown Links
 export const TAKE_ACTION_LINKS: {linkList: LinkItemProps[]} = {
   linkList: [
@@ -111,33 +106,3 @@ export const TAKE_ACTION_LINKS: {linkList: LinkItemProps[]} = {
     createLinkItem(SHARED_LINKS.STATE_OF_CS_REPORT),
   ],
 };
-
-// Main Menu Desktop Configuration
-const [initiativesLink, takeActionLink, hourOfAiLink, newsLink] =
-  TOP_LEVEL_LINKS.linkList;
-
-export const MAIN_MENU_DESKTOP_ITEMS = [
-  {
-    type: 'dropdown' as const,
-    topLevelLink: initiativesLink,
-    dropdownConfig: INITIATIVES_LINKS,
-  },
-  {
-    type: 'dropdown' as const,
-    topLevelLink: takeActionLink,
-    dropdownConfig: TAKE_ACTION_LINKS,
-  },
-  {
-    type: 'button' as const,
-    topLevelLink: hourOfAiLink,
-  },
-  // Marketing does not have permission to collect donations yet
-  //{
-  //type: 'button' as const,
-  //topLevelLink: donateLink,
-  //},
-  {
-    type: 'button' as const,
-    topLevelLink: newsLink,
-  },
-];

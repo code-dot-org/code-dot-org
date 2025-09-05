@@ -6,6 +6,8 @@ import {Brand} from '@/config/brand';
 
 import {buttonStyles} from './common/styles';
 import {LinkItemProps} from './common/types';
+import {getLinksFromEntry} from './common/utils';
+import {TAKE_ACTION_LINKS, TOP_LEVEL_LINKS} from './config';
 import DropdownMenu from './DropdownMenu';
 
 export interface MenuConfig {
@@ -26,8 +28,6 @@ export interface MenuItemConfig {
 }
 
 interface MainMenuDesktopProps {
-  /** Main menu items */
-  mainMenuDesktopItems: MenuItemConfig[];
   /** Brand for the links, used with external links */
   brand?: Brand;
   /** Custom class */
@@ -42,8 +42,37 @@ const styles = {
   },
 };
 
+// Main Menu Initiatives Dropdown Links
+const INITIATIVES_LINKS: {linkList: LinkItemProps[]} = {
+  linkList: await getLinksFromEntry('36lird9ux97FVwMw5xNYMH'),
+};
+
+// Main Menu Desktop Configuration
+const [initiativesLink, takeActionLink, hourOfAiLink, newsLink] =
+  TOP_LEVEL_LINKS.linkList;
+
+export const MAIN_MENU_DESKTOP_ITEMS = [
+  {
+    type: 'dropdown' as const,
+    topLevelLink: initiativesLink,
+    dropdownConfig: INITIATIVES_LINKS,
+  },
+  {
+    type: 'dropdown' as const,
+    topLevelLink: takeActionLink,
+    dropdownConfig: TAKE_ACTION_LINKS,
+  },
+  {
+    type: 'button' as const,
+    topLevelLink: hourOfAiLink,
+  },
+  {
+    type: 'button' as const,
+    topLevelLink: newsLink,
+  },
+];
+
 const MainMenuDesktop = ({
-  mainMenuDesktopItems,
   brand = Brand.CS_FOR_ALL,
   className = 'link-list-desktop',
 }: MainMenuDesktopProps) => {
@@ -92,7 +121,7 @@ const MainMenuDesktop = ({
 
   return (
     <Box className={className} sx={styles.linkListDesktop}>
-      {mainMenuDesktopItems.map(renderMenuItem)}
+      {MAIN_MENU_DESKTOP_ITEMS.map(renderMenuItem)}
     </Box>
   );
 };
