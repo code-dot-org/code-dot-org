@@ -461,7 +461,6 @@ class RegistrationsController < Devise::RegistrationsController
   end
 
   #
-
   # GET /users/personalization_information
   #
   def personalization_information
@@ -469,6 +468,7 @@ class RegistrationsController < Devise::RegistrationsController
     # @teacher_context = current_user.teacher_context || TeacherContext.new
   end
 
+  #
   # GET /users/test_mailjet_page
   #
   def test_mailjet_page
