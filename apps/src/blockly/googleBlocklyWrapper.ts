@@ -53,7 +53,7 @@ import initializeGenerator from './addons/cdoGenerator';
 import {gestureOverrides} from './addons/cdoGesture';
 import {
   initializeKeyboardNavigation,
-  preInjectRegisterItems,
+  preInjectRegistrations,
 } from './addons/cdoKeyboardNavigation';
 import CdoMetricsManager from './addons/cdoMetricsManager';
 import CdoRendererGeras from './addons/cdoRendererGeras';
@@ -206,7 +206,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   registerIfMutator();
   registerLogicCompareMutator();
   registerTextJoinMutator();
-  preInjectRegisterItems();
+  preInjectRegistrations();
   // TODO: can we avoid using any here by converting BlocklyWrapper to a class?
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const blocklyWrapper = new (BlocklyWrapper as any)(
@@ -782,7 +782,6 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
       Blockly.Xml.domToText(xml),
       includeHiddenDefinitions
     );
-
     // Loop through all the parent blocks and remove vertical translation value
     // This makes the output more condensed and readable, while preserving
     // horizontal translation values for RTL rendering.

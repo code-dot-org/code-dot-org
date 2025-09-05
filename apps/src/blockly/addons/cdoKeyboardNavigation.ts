@@ -12,7 +12,7 @@ export class NavigationDeferringToolbox extends GoogleBlockly.Toolbox {
 
 // Covers functions that need to be called prior to Blockly Inject. Because
 // we initialize and dispose here, we need to call these ourselves.
-export function preInjectRegisterItems() {
+export function preInjectRegistrations() {
   KeyboardNavigation.registerKeyboardNavigationStyles();
   GoogleBlockly.registry.register(
     GoogleBlockly.registry.Type.TOOLBOX,
