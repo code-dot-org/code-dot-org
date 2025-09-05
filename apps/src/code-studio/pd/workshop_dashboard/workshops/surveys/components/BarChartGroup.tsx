@@ -166,9 +166,11 @@ const SimpleBarChart: React.FC<SimpleBarChartProps> = ({
 
         <Bar
           dataKey="value"
-          radius={[8, 8, 0, 0]} // rounded tops
-          shape={<Rectangle radius={[8, 8, 0, 0]} />} // ensures rounding everywhere in v2.8
-          isAnimationActive={false}
+          radius={[4, 4, 0, 0]} // rounded tops
+          shape={<Rectangle radius={[4, 4, 0, 0]} />} // ensures rounding everywhere in v2.8
+          isAnimationActive={true}
+          animationDuration={600}
+          animationEasing="ease-out"
         >
           {!!data.length &&
             data.map((d, i) => {
