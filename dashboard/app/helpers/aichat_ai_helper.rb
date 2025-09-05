@@ -51,7 +51,7 @@ module AichatAiHelper
   # "config" object and "request" and "context" arrays.
   #
   # See 'aichat_ai_client.rb' for typescript definitions of these objects.
-  def self.get_config_request_context(stored_messages, new_message, temperature, system_prompt, retrieval_contexts,  model_id, level_id, encrypted_channel_id, user_id, project_id)
+  def self.get_config_request_context(stored_messages, new_message, temperature, system_prompt, retrieval_contexts,  model_id, level_id, encrypted_channel_id, user_id, project_id, client_type)
     level = Level.find_by(id: level_id)
 
     # Level system prompt - string or nil.
@@ -81,7 +81,8 @@ module AichatAiHelper
     config = AichatAiClientTypes::AiConfig.new(
       model: get_api_model(model_id),
       systemInstructions: system_instructions,
-      temperature: temperature
+      temperature: temperature,
+      clientType: client_type
     )
 
     request = format_message_parts(new_message, encrypted_channel_id, level_name)
@@ -107,7 +108,7 @@ module AichatAiHelper
 
     temperature = aichat_model_customizations['temperature'].to_f
 
-    http_read_timeout = aichat_model_customizations['readTimeoutSeconds']
+    client_type = aichat_model_customizations['clientType']
 
     # System prompt - string or nil.
     system_prompt = aichat_model_customizations['systemPrompt']
@@ -118,10 +119,10 @@ module AichatAiHelper
     usage_reporter = AichatAiUsageReporter.new(model_id, user_id, project_id, level_id)
     client = AichatAiClient.create_instance(model_id, usage_reporter)
 
-    config, request, context = get_config_request_context(stored_messages, new_message, temperature, system_prompt, retrieval_contexts,  model_id, level_id, encrypted_channel_id, user_id, project_id)
+    config, request, context = get_config_request_context(stored_messages, new_message, temperature, system_prompt, retrieval_contexts,  model_id, level_id, encrypted_channel_id, user_id, project_id, client_type)
 
     begin
-      response = client.get_response_text(config, request, context, http_read_timeout)
+      response = client.get_response_text(config, request, context)
     rescue Net::ReadTimeout
       raise OpenaiUserInputResponseTimeout.new("Timeout waiting for AI client to provide response to user input.")
     end

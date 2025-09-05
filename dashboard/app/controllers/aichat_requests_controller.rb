@@ -44,8 +44,8 @@ class AichatRequestsController < ApplicationController
     messages_for_model = params[:storedMessages].select {|message| message[:status] == SharedConstants::AI_INTERACTION_STATUS[:OK]}
     context = params[:aichatContext]
 
-    # Only verified teachers can set a new read timeout.
-    params[:modelParameters]['readTimeoutSeconds'] = nil unless current_user.verified_teacher?
+    # Add client type to model parameters.
+    params[:modelParameters][:clientType] = params[:aichatContext][:clientType]
 
     # Create the request object.
     begin

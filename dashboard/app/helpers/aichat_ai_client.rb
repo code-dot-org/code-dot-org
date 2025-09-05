@@ -16,7 +16,7 @@ class AichatAiClient
   # Call the API (through methods overridden in derived class) and get response text to send back to user.
   # Accept a config hash, request array and optional context array.  These types are defined and documented
   # in `aichat_ai_client_types.rb``.
-  def get_response_text(config, request, context = [], http_read_timeout = nil)
+  def get_response_text(config, request, context = [])
     # Assert the parameter types are correct, using RubyTypes.
     AichatRubyTypes.assert_value_is_type(config, AichatAiClientTypes::AiConfig)
     AichatRubyTypes.assert_value_is_type(request, AichatAiClientTypes::AiRequest)
@@ -26,12 +26,14 @@ class AichatAiClient
 
     body = create_body(config, request, context)
 
+    read_timeout = DCDO.get('openai_http_read_timeout', SharedConstants::AI_CHAT_READ_TIMEOUTS[config[:clientType]] || 30)
+
     http_response = HTTParty.post(
       url,
       headers: headers,
       body: body.to_json,
       open_timeout: DCDO.get('openai_http_open_timeout', 5),
-      read_timeout: DCDO.get('openai_http_read_timeout', http_read_timeout || 30)
+      read_timeout: read_timeout
     )
 
     response_body = JSON.parse(http_response.body)
