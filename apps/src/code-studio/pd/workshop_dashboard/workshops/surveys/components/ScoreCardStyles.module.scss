@@ -92,6 +92,12 @@
 
   .breakdownBarGroup {
     min-width: 37.5rem;
+    position: relative;
+  }
+
+  .breakdownBarChartGroup {
+    display: flex;
+    justify-content: center;
   }
 }
 
