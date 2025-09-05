@@ -4,9 +4,12 @@
 .iconButton {
   @include remove-button-styles;
   font-size: 13px;
-  margin-bottom: 1px;
 }
 
 .icon {
   color: $light_gray_500;
+}
+
+.flexContainer {
+  display: flex;
 }
