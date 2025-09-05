@@ -108,82 +108,76 @@ const SimpleBarChart: React.FC<SimpleBarChartProps> = ({
   );
 
   return (
-    <Box className={moduleStyles.simpleBarChartContainer}>
-      <BarChart
-        width={width}
-        height={height}
-        data={data}
-        margin={{top: 16, right: 8, bottom: 28, left: 8}}
-        barCategoryGap="30%" // tighter spacing so bars feel centered under labels
-        barSize={barSize}
+    <BarChart
+      width={width}
+      height={height}
+      data={data}
+      margin={{top: 16, right: 8, bottom: 28, left: 8}}
+      barCategoryGap="30%" // tighter spacing so bars feel centered under labels
+      barSize={barSize}
+    >
+      <CartesianGrid vertical={false} stroke="#E2E8F0" strokeDasharray="4 4" />
+
+      <XAxis
+        dataKey="label"
+        interval={0}
+        tickLine={false}
+        axisLine={false}
+        tick={{...bodyFourTextStyle}}
+        tickMargin={10}
       >
-        <CartesianGrid
-          vertical={false}
-          stroke="#E2E8F0"
-          strokeDasharray="4 4"
-        />
+        {xAxisLabel && (
+          <Label
+            value={xAxisLabel}
+            position="bottom"
+            offset={14}
+            style={{...overlineThreeTextStyle}}
+          />
+        )}
+      </XAxis>
 
-        <XAxis
-          dataKey="label"
-          interval={0}
-          tickLine={false}
-          axisLine={false}
-          tick={{...bodyFourTextStyle}}
-          tickMargin={10}
-        >
-          {xAxisLabel && (
-            <Label
-              value={xAxisLabel}
-              position="bottom"
-              offset={14}
-              style={{...overlineThreeTextStyle}}
-            />
-          )}
-        </XAxis>
+      <YAxis
+        domain={[0, niceMax]}
+        ticks={yTicks}
+        allowDecimals={false}
+        tickLine={false}
+        axisLine={false}
+        tick={{...bodyFourTextStyle}}
+        width={30}
+      >
+        {yAxisLabel && (
+          <Label
+            value={yAxisLabel}
+            angle={-90}
+            position="insideLeft"
+            offset={-4}
+            style={{
+              textAnchor: 'middle',
+              ...overlineThreeTextStyle,
+            }}
+          />
+        )}
+      </YAxis>
 
-        <YAxis
-          domain={[0, niceMax]}
-          ticks={yTicks}
-          allowDecimals={false}
-          tickLine={false}
-          axisLine={false}
-          tick={{...bodyFourTextStyle}}
-          width={30}
-        >
-          {yAxisLabel && (
-            <Label
-              value={yAxisLabel}
-              angle={-90}
-              position="insideLeft"
-              offset={-4}
-              style={{
-                textAnchor: 'middle',
-                ...overlineThreeTextStyle,
-              }}
-            />
-          )}
-        </YAxis>
-
-        <Bar
-          dataKey="value"
-          radius={[4, 4, 0, 0]} // rounded tops
-          shape={<Rectangle radius={[4, 4, 0, 0]} />} // ensures rounding everywhere in v2.8
-          isAnimationActive={true}
-          animationDuration={600}
-          animationEasing="ease-out"
-        >
-          {!!data.length &&
-            data.map((d, i) => {
-              let fillColor = barColors[i % barColors.length];
-              if (typeof d.color === 'string') {
-                fillColor = COLOR_MAP.get(d.color);
-              }
-              return <Cell key={i} fill={fillColor} />;
-            })}
-          <LabelList dataKey="value" content={<ValueLabel />} />
-        </Bar>
-      </BarChart>
-    </Box>
+      <Bar
+        dataKey="value"
+        radius={[4, 4, 0, 0]} // rounded tops
+        shape={<Rectangle radius={[4, 4, 0, 0]} />} // ensures rounding everywhere in v2.8
+        isAnimationActive={true}
+        animationDuration={600}
+        animationEasing="ease-out"
+      >
+        {!!data.length &&
+          data.map((d, i) => {
+            let fillColor = barColors[i % barColors.length];
+            if (typeof d.color === 'string') {
+              fillColor = COLOR_MAP.get(d.color);
+            }
+            return <Cell key={i} fill={fillColor} />;
+          })}
+        <LabelList dataKey="value" content={<ValueLabel />} />
+      </Bar>
+    </BarChart>
   );
 };
 
@@ -210,13 +204,15 @@ const BarChartGroup: React.FC<BarChartGroupProps> = ({
         <StrongText>{title}</StrongText>
       </BodyTwoText>
     </Box>
-    <SimpleBarChart
-      width={chartWidth}
-      height={chartHeight}
-      data={data}
-      xAxisLabel={xAxisLabel}
-      yAxisLabel={yAxisLabel}
-    />
+    <Box className={moduleStyles.simpleBarChartContainer}>
+      <SimpleBarChart
+        width={chartWidth}
+        height={chartHeight}
+        data={data}
+        xAxisLabel={xAxisLabel}
+        yAxisLabel={yAxisLabel}
+      />
+    </Box>
   </Box>
 );
 
