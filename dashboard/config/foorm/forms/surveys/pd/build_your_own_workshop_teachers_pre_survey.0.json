@@ -84,35 +84,49 @@
           ],
           "rows": [
             {
+              "category": "readiness_expectations",
               "value": "feel_prepared",
-              "text": "I am prepared to participate in this workshop."
+              "text": "I am prepared to participate in this workshop.",
+              "shortText": "Prepared to participate (%)"
             },
             {
+              "category": "readiness_expectations",
               "value": "understand_cs_concepts",
-              "text": "I am confident in my understanding of computer science concepts."
+              "text": "I am confident in my understanding of computer science concepts.",
+              "shortText": "Confident in CS concepts (%)"
             },
             {
+              "category": "readiness_expectations",
               "value": "know_where_to_get_help",
-              "text": "I know where to find help when preparing to teach computer science content."
+              "text": "I know where to find help when preparing to teach computer science content.",
+              "shortText": "Know where to find help (%)"
             },
             {
+              "category": "readiness_expectations",
               "value": "community_cs_educators",
-              "text": "I have a community of educators I can turn to for support with computer science."
+              "text": "I have a community of educators I can turn to for support with computer science.",
+              "shortText": "Have a CS educator community (%)"
             },
             {
+              "category": "readiness_expectations",
               "value": "confindent_use_cdo_resources",
-              "text": "I am confident using the Code.org platform and resources."
+              "text": "I am confident using the Code.org platform and resources.",
+              "shortText": "Confident using Code.org (%)"
             },
             {
+              "category": "readiness_expectations",
               "value": "strategies_support_all_learners",
-              "text": "I have strategies to support the engagement and success of all learners in a computer science classroom."
+              "text": "I have strategies to support the engagement and success of all learners in a computer science classroom.",
+              "shortText": "Have strategies to support learners (%)"
             }
           ]
         },
         {
+          "category": "readiness_expectations",
           "type": "comment",
           "name": "learning_expectations",
-          "title": "What are you hoping to learn or take away from this specific workshop?  What questions or topics do you hope this workshop will cover?."
+          "title": "What are you hoping to learn or take away from this specific workshop?  What questions or topics do you hope this workshop will cover?.",
+          "shortText": "Expectations for this workshop"
         },
         {
           "type": "html",

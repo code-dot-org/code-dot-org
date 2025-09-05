@@ -26,8 +26,8 @@ interface ScoreCardProps {
   description: string;
   footer: string | null;
   questionType: 'likert' | 'promoter';
-  score: number;
-  responseCount: number;
+  score?: number;
+  responseCount?: number;
   minResponseCount: number;
   breakdown?: Breakdown[];
 }
@@ -38,8 +38,8 @@ export const ScoreCard: FC<ScoreCardProps> = ({
   description,
   footer,
   questionType,
-  score,
-  responseCount,
+  score = 0,
+  responseCount = 0,
   minResponseCount,
   breakdown,
 }) => {

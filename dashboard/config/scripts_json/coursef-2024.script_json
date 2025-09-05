@@ -20,7 +20,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-03 01:05:35 UTC",
+    "serialized_at": "2025-09-04 17:20:17 UTC",
+    "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -8010,7 +8011,7 @@
     },
     {
       "name": "All Resources",
-      "url": "/s/coursef-2024/resources",
+      "url": "/s/coursef-2025/resources",
       "key": "all_resources",
       "properties": {
         "is_rollup": true
@@ -8021,7 +8022,7 @@
     },
     {
       "name": "All Standards",
-      "url": "/s/coursef-2024/standards",
+      "url": "/s/coursef-2025/standards",
       "key": "all_standards",
       "properties": {
         "is_rollup": true
@@ -8032,7 +8033,7 @@
     },
     {
       "name": "All Vocabulary",
-      "url": "/s/coursef-2024/vocab",
+      "url": "/s/coursef-2025/vocab",
       "key": "all_vocabulary",
       "properties": {
         "is_rollup": true

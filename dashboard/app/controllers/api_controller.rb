@@ -298,7 +298,7 @@ class ApiController < ApplicationController
       unit_group = UnitGroup.get_from_cache(section.course_id)
     elsif section.script_id
       # Some older Sections only have a script_id defined.
-      unit_group = Unit.get_from_cache(section.script_id)&.unit_group
+      unit_group = Unit.get_from_cache(section.script_id)&.get_original_unit_group
     end
     unit_ids.concat(unit_group.default_units.pluck(:id)).uniq! if unit_group
     render json: CourseVersion.courses_for_unit_selector(unit_ids, current_user)

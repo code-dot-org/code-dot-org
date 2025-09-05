@@ -820,9 +820,9 @@ FactoryBot.define do
 
     initialize_with {Section.new(attributes)}
 
-    after(:create) do |section|
+    after(:build) do |section|
       if section.script_id && section.course_id.nil?
-        section.update!(course_id: section.script.original_unit_group_id)
+        section.course_id = section.script.original_unit_group_id
       end
     end
 

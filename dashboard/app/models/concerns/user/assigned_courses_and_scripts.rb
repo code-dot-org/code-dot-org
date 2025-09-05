@@ -14,7 +14,7 @@ module User::AssignedCoursesAndScripts
 
   # Returns the set of courses the user has been assigned to or has progress in.
   def courses_as_participant
-    visible_scripts.filter_map(&:unit_group).concat(section_courses).uniq
+    visible_scripts.filter_map(&:get_original_unit_group).concat(section_courses).uniq
   end
 
   def visible_scripts
@@ -22,7 +22,7 @@ module User::AssignedCoursesAndScripts
   end
 
   def assigned_script?(script)
-    section_scripts.include?(script) || section_courses.include?(script&.unit_group)
+    section_scripts.include?(script) || section_courses.include?(script&.get_original_unit_group)
   end
 
   # Checks if there are any launched scripts assigned to the user.
