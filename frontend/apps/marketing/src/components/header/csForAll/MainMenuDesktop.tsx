@@ -3,10 +3,10 @@ import Button from '@mui/material/Button';
 
 import {isExternalLink} from '@/components/common/utils';
 import {Brand} from '@/config/brand';
+import {getLinksFromEntry} from '@/contentful/get-links-from-entry';
 
 import {buttonStyles} from './common/styles';
 import {LinkItemProps} from './common/types';
-import {getLinksFromEntry} from './common/utils';
 import {TAKE_ACTION_LINKS, TOP_LEVEL_LINKS} from './config';
 import DropdownMenu from './DropdownMenu';
 
