@@ -1,5 +1,5 @@
 module Services
-  class UnitGroupCreator < Services::Base
+  class StandaloneUnitMigrator < Services::Base
     attr_reader :unit
 
     def initialize(unit, verbose: false, log_file: nil, file_system_changes: true)
@@ -10,6 +10,11 @@ module Services
     end
 
     def call
+      unless ENV.fetch('MIGRATE_STANDALONE_UNITS', nil)
+        log "MIGRATE_STANDALONE_UNITS is not set", type: "error"
+        return false
+      end
+
       if @unit.unit_group
         log "Unit already has a UnitGroup: #{@unit.name}", type: "error"
         return false
@@ -25,26 +30,36 @@ module Services
         return false
       end
 
-      # Create a new course offering and course version
-      CourseOffering.add_course_offering(@unit_group)
-      course_version = @unit_group.course_version
-
+      # Get existing Unit's course version
+      course_version = @unit.course_version
       if course_version.nil?
+        log "Existing Unit's course version not found: #{@unit.name}", type: "error"
+        @unit_group.destroy!
+        return false
+      end
+      original_course_version_id = course_version.id
+
+      # Point existing CourseVersion to the new UnitGroup
+      course_version.update!(content_root_id: @unit_group.id, content_root_type: 'UnitGroup')
+      @unit.reload
+      @unit_group.reload
+
+      if @unit_group.course_version.nil?
         log "New UnitGroup's course version not found: #{@unit_group.name}", type: "error"
         @unit_group.destroy!
         return false
       end
 
       # Clear "course" settings from the unit
-      @unit.update!(version_year: nil, family_name: nil, published_state: nil, instruction_type: nil, instructor_audience: nil, participant_audience: nil, skip_name_format_validation: true)
+      @unit.update!(is_course: false, version_year: nil, family_name: nil, published_state: nil, instruction_type: nil, instructor_audience: nil, participant_audience: nil, skip_name_format_validation: true)
 
-      update_unit_group(i18n_params, unit_copy.published_state || Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development)
+      update_unit_group(i18n_params, unit_copy.published_state)
 
       update_section_assignments
 
       update_levelbuilder_files
 
-      passed_checks = run_checks(course_version, unit_copy)
+      passed_checks = run_checks(course_version, unit_copy, original_course_version_id)
       rollback unless passed_checks
       passed_checks
     end
@@ -54,6 +69,11 @@ module Services
     end
 
     def rollback
+      unless ENV.fetch('MIGRATE_STANDALONE_UNITS', nil)
+        log "MIGRATE_STANDALONE_UNITS is not set", type: "error"
+        return false
+      end
+
       log "Rolling back migration for unit #{@unit.name}"
 
       @unit_group ||= @unit.unit_group
@@ -73,7 +93,7 @@ module Services
       # Add "course" settings back to unit
       rollback_unit_settings
 
-      course_version&.destroy!
+      course_version.update!(content_root_id: @unit.id, content_root_type: 'Unit')
 
       # Make sure we are referencing the most recent data
       @unit_group.reload
@@ -89,6 +109,8 @@ module Services
     private def log_initial_info
       log "Initial info"
       log "Existing unit: #{@unit.inspect}"
+      log "Existing course_version: #{@unit.course_version.inspect}"
+      log "Existing course_offering: #{@unit.course_version&.course_offering.inspect}"
     end
 
     private def set_i18n_params
@@ -104,13 +126,13 @@ module Services
     private def create_new_unit_group
       @unit_group = UnitGroup.new(
         name: @unit.name,
-        family_name: @unit.family_name || @unit.name,
-        version_year: @unit.version_year || 'unversioned',
-        instruction_type: @unit.instruction_type || Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.teacher_led,
-        instructor_audience: @unit.instructor_audience || Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher,
-        participant_audience: @unit.participant_audience || Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+        family_name: @unit.family_name,
+        version_year: @unit.version_year,
+        instruction_type: @unit.instruction_type,
+        instructor_audience: @unit.instructor_audience,
+        participant_audience: @unit.participant_audience,
         pilot_experiment: @unit.pilot_experiment,
-        numbered_units: nil
+        has_numbered_units: false
       )
       unless @unit_group.save
         new_name = case @unit_group.errors[:name]&.first
@@ -123,13 +145,13 @@ module Services
                    end
         @unit_group = UnitGroup.new(
           name: new_name,
-          family_name: @unit.family_name || @unit.name,
-          version_year: @unit.version_year || 'unversioned',
-          instruction_type: @unit.instruction_type || Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.teacher_led,
-          instructor_audience: @unit.instructor_audience || Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher,
-          participant_audience: @unit.participant_audience || Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+          family_name: @unit.family_name,
+          version_year: @unit.version_year,
+          instruction_type: @unit.instruction_type,
+          instructor_audience: @unit.instructor_audience,
+          participant_audience: @unit.participant_audience,
           pilot_experiment: @unit.pilot_experiment,
-          numbered_units: nil
+          has_numbered_units: false
         )
         @name_changed = true
         @unit_group.save
@@ -151,7 +173,7 @@ module Services
     end
 
     private def update_section_assignments
-      count = Section.with_deleted.where(script_id: @unit.id).where(course_id: nil).update_all(course_id: @unit_group.id)
+      count = Section.where(script_id: @unit.id).update_all(course_id: @unit_group.id)
       log "Updated #{count} sections for unit #{@unit.name}" if @verbose
     end
 
@@ -165,14 +187,22 @@ module Services
       @logger.send(type, message)
     end
 
-    private def run_checks(course_version, dupe_unit)
+    private def run_checks(course_version, dupe_unit, original_course_version_id)
       checks = {
         "New UnitGroup is valid" => @unit_group.valid?,
         "Existing unit is valid" => @unit.valid? || @name_changed,
         "CourseVersion is valid" => course_version.valid?,
         "New UnitGroup has the same name as the existing unit" => @unit_group.name == dupe_unit.name || @name_changed,
+        "New UnitGroup has the same family_name as the existing unit" => @unit_group.family_name == dupe_unit.family_name,
+        "New UnitGroup has the same version_year as the existing unit" => @unit_group.version_year == dupe_unit.version_year,
+        "New UnitGroup has the same instruction_type as the existing unit" => @unit_group.instruction_type == dupe_unit.instruction_type,
+        "New UnitGroup has the same instructor_audience as the existing unit" => @unit_group.instructor_audience == dupe_unit.instructor_audience,
+        "New UnitGroup has the same participant_audience as the existing unit" => @unit_group.participant_audience == dupe_unit.participant_audience,
+        "New UnitGroup has the same published_state as the existing unit" => @unit_group.published_state == dupe_unit.published_state,
         "New UnitGroup is assigned to the existing unit" => @unit_group.first_unit.id == @unit.id,
         "New UnitGroup is a single unit course" => @unit_group.single_unit_course?,
+        "New UnitGroup has the same course_version as the existing unit" => @unit_group.course_version.id == original_course_version_id,
+        "CourseVersion has a content_root_type of 'UnitGroup'" => course_version.content_root_type == 'UnitGroup',
         "CourseVersion has a content_root of the new UnitGroup" => course_version.content_root_id == @unit_group.id
       }
 
@@ -190,16 +220,15 @@ module Services
     end
 
     private def rollback_section_assignments
-      count = Section.with_deleted.where(course_id: @unit_group.id).update_all(course_id: nil)
+      count = Section.where(course_id: @unit_group.id).update_all(course_id: nil)
       log "Rolled back #{count} sections for unit #{@unit.name}" if @verbose
     end
 
     private def rollback_unit_settings
-      @unit.update!(version_year: @unit_group.version_year, family_name: @unit_group.family_name,
+      @unit.update!(is_course: true, version_year: @unit_group.version_year, family_name: @unit_group.family_name,
                     published_state: @unit_group.published_state, instruction_type: @unit_group.instruction_type,
                     instructor_audience: @unit_group.instructor_audience, participant_audience: @unit_group.participant_audience,
-                    pilot_experiment: @unit_group.pilot_experiment, skip_name_format_validation: true,
-                    original_unit_group_id: nil
+                    pilot_experiment: @unit_group.pilot_experiment, skip_name_format_validation: true
       )
     end
 
@@ -214,7 +243,11 @@ module Services
       checks = {
         "UnitGroup is destroyed" => UnitGroup.find_by(id: unit_group_id).nil?,
         "Unit is valid" => @unit.valid? || @name_changed,
+        "CourseVersion is valid" => @unit.course_version.valid?,
+        "Unit is a course" => @unit.is_course?,
         "Unit does not have a unit_group" => @unit.unit_group.nil?,
+        "CourseVersion has a content_root_type of 'UnitGroup'" => @unit.course_version.content_root_type == 'Unit',
+        "CourseVersion has a content_root of the new UnitGroup" => @unit.course_version.content_root_id == @unit.id
       }
 
       # Determine if all checks passed

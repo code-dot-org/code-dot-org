@@ -79,9 +79,7 @@ export const Engagement = () => {
               otherQuestionsEngagement.question_text
             }
             items={otherQuestionsEngagement.results.responses}
-            tagText={`${
-              otherQuestionsEngagement.results.total_responses ?? 0
-            } Submitted`}
+            tagText={`${otherQuestionsEngagement.results.total_responses} Submitted`}
           />
         )}
       </Box>

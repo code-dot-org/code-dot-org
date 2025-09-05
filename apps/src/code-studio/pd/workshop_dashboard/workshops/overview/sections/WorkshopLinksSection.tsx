@@ -16,7 +16,7 @@ import {
 import classNames from 'classnames';
 import React from 'react';
 
-import {CopyButton} from '../../components/CopyButton';
+import {CopyLinkButton} from '../../components/CopyLinkButton';
 import {WorkshopData} from '../../types';
 
 import styles from '../../workshop.module.scss';
@@ -91,9 +91,8 @@ export const WorkshopLinksSection: React.FC<WorkshopLinksSectionProps> = ({
               </Link>
             </Box>
             <Box>
-              <CopyButton
-                buttonText="Copy link"
-                textToCopy={fullMarketingPageUrl}
+              <CopyLinkButton
+                link={fullMarketingPageUrl}
                 ariaLabel="Copy marketing page link to clipboard"
               />
             </Box>
@@ -130,9 +129,8 @@ export const WorkshopLinksSection: React.FC<WorkshopLinksSectionProps> = ({
                   </Link>
                 </Box>
                 <Box>
-                  <CopyButton
-                    buttonText="Copy link"
-                    textToCopy={fullJoinWorkshopUrl}
+                  <CopyLinkButton
+                    link={fullJoinWorkshopUrl}
                     ariaLabel="Copy join workshop link to clipboard"
                   />
                 </Box>

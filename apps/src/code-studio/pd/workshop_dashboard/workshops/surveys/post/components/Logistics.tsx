@@ -63,9 +63,7 @@ export const Logistics = () => {
               otherQuestionsLogistics.question_text
             }
             items={otherQuestionsLogistics.results.responses}
-            tagText={`${
-              otherQuestionsLogistics.results.total_responses ?? 0
-            } Submitted`}
+            tagText={`${otherQuestionsLogistics.results.total_responses} Submitted`}
           />
         )}
       </Box>

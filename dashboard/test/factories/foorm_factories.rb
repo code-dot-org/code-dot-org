@@ -1286,9 +1286,7 @@ FactoryBot.define do
             "modality_met_needs": "1"
           },
           "barriers_implementation_curriculum":["needs_more_preparation","lack_admin_support"],
-          "other_feedback": "Overall experience was okay",
-          "followup_requested":"yes",
-          "followup_email":"struggling_teacher@mail.com"
+          "other_feedback": "Overall experience was okay"
         }'
       end
     end
@@ -1308,8 +1306,7 @@ FactoryBot.define do
             "modality_met_needs": "7"
           },
           "barriers_implementation_curriculum":["none"],
-          "other_feedback": "Amazing workshop experience!",
-          "followup_requested":"no"
+          "other_feedback": "Amazing workshop experience!"
         }'
       end
     end

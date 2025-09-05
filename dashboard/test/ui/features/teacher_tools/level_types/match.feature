@@ -1,13 +1,12 @@
 Feature: Playing match levels
 
 Background:
-  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/11/levels/1?noautoplay=true"
-  And I dismiss the match instructions dialog
+  Given I am on "http://studio.code.org/courses/course1/units/1/lessons/14/levels/13?noautoplay=true"
   Then I wait to see ".submitButton"
   And element ".submitButton" is visible
 
 Scenario: Loading the level
-  And element ".match .content2" has text "Match the puzzles and blocks"
+  And element ".match .content2" has text "Match the blocks"
 
 @no_mobile
 Scenario: Solving puzzle

@@ -17,7 +17,7 @@ interface SelectCardProps {
   title: string;
   description: string;
   items: Breakdown[];
-  totalRespondents?: number;
+  totalRespondents: number;
   barLabel?: string;
 }
 
@@ -25,7 +25,7 @@ export const SelectCard: FC<SelectCardProps> = ({
   title,
   description,
   items,
-  totalRespondents = 0,
+  totalRespondents,
   barLabel = '',
 }) => {
   if (!totalRespondents) {
@@ -36,7 +36,7 @@ export const SelectCard: FC<SelectCardProps> = ({
       className={classNames(
         styles.card,
         styles.questionCard,
-        styles.selectCard
+        styles.multiSelect
       )}
     >
       <CardHeader

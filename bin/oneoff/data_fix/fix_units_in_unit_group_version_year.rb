@@ -29,7 +29,7 @@ def set_nil_version_year(actual_execution)
       next
     end
 
-    unless unit.get_original_unit_group
+    unless unit.unit_group
       puts "#{unit_name} is not part of unit group. Skipping."
       next
     end

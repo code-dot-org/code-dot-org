@@ -43,7 +43,6 @@ export type ConfigType = {
     vertical: React.FunctionComponent<LayoutProps>;
     share?: React.FunctionComponent<LayoutProps>;
     widget?: React.FunctionComponent<LayoutProps>;
-    fullScreen?: React.FunctionComponent<LayoutProps>;
   };
 };
 
