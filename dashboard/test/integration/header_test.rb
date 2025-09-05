@@ -163,7 +163,7 @@ class HeaderTest < ActionDispatch::IntegrationTest
     end
 
     around do |test|
-      get '/home'
+      get '/teacher_dashboard/home'
 
       must_select '.header-wrapper' do
         test.call
