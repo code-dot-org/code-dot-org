@@ -577,7 +577,7 @@ Resources:
               - Effect: Allow
                 Action:
                   - 'autoscaling:StartInstanceRefresh'
-                Resource: !GetAtt Frontends.AutoScalingGroupARN
+                Resource: !Sub "arn:aws:autoscaling:${AWS::Region}:${AWS::AccountId}:autoScalingGroup:*:autoScalingGroupName/Frontends-${AWS::StackName}"
 <% end -%>
               # Lookup Route53 Hosted Zones to get Hosted Zone ID when rendering updated CloudFormation templates during ci_build process.
               - Effect: Allow
