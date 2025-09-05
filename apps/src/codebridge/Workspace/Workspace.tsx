@@ -55,6 +55,7 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
     state => state.codebridgeWorkspace.showFileBrowser
   );
   const dispatch = useAppDispatch();
+  console.log('projectTemplateLevel', projectTemplateLevel);
 
   const headerContent = (
     <div className={moduleStyles.centerHeaderContent}>
