@@ -11,7 +11,9 @@ import React, {useEffect} from 'react';
 
 import {HTMLPreview} from '@cdo/apps/codebridge/FilePreview/HTMLPreview';
 import {useVerticalLayout} from '@cdo/apps/lab2/hooks/useVerticalLayout';
+import {isProjectTemplateLevel} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
+import ProjectTemplateWorkspaceIconV2 from '@cdo/apps/templates/ProjectTemplateWorkspaceIconV2';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import weblab2I18n from '@cdo/apps/weblab2/locale';
 
@@ -33,6 +35,7 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
   isWidgetView,
 }) => {
   const viewMode = useAppSelector(state => state.weblab2.viewMode);
+  const projectTemplateLevel = useAppSelector(isProjectTemplateLevel);
   const dispatch = useAppDispatch();
 
   const infoPanelInitialWidth = isProjectLevel
@@ -159,9 +162,15 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
             ) : (
               <SegmentedButtons {...viewModeButtonsProps} />
             )}
-            <OverlineTwoText noMargin>
-              {weblab2I18n.workspace()}
-            </OverlineTwoText>
+            <div className={moduleStyles.centerHeaderContent}>
+              <OverlineTwoText
+                className={moduleStyles.centerHeaderContentText}
+                noMargin
+              >
+                {weblab2I18n.workspace()}
+              </OverlineTwoText>
+              {projectTemplateLevel && <ProjectTemplateWorkspaceIconV2 />}
+            </div>
             <HeaderButtons />
           </div>
           <div className={moduleStyles.editorAndPreviewContainer}>
