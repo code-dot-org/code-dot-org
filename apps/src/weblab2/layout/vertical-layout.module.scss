@@ -1,0 +1,30 @@
+
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  padding: 4px 8px;
+  box-sizing: border-box;
+  border-bottom: 1px solid var(--borders-neutral-primary);
+  background-color: var(--background-neutral-secondary);
+}
+
+.editorAndPreviewContainer {
+  display: flex;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.centerHeaderContent {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  overflow: hidden;
+
+  &Text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
