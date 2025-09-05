@@ -84,6 +84,11 @@ p.text {
   height: 24px;
   font-weight: 600;
 
+  &:hover {
+    text-decoration: none;
+    color: var(--text-neutral-black-fixed);
+  }
+
   & i {
     margin-inline-start: 4px;
   }
