@@ -40,3 +40,12 @@ export const prepLikertBreakdown = (
       })
     )
     .reverse();
+
+export const prepPromoterBreakdown = (
+  breakdown: PromoterResults['breakdown']
+): Breakdown[] =>
+  Object.entries(breakdown ?? {}).map(([key, value]) => ({
+    ...value,
+    label: value.label.replace(/\D+/, ''),
+    color: Number(key) > 8 ? 'success' : Number(key) > 6 ? 'warning' : 'error',
+  }));
