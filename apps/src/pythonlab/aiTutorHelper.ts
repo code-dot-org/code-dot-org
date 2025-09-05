@@ -44,7 +44,6 @@ export const getAiTutorContextPromise = async (
   };
 };
 
-// TODO: change the location of this to somewher emore generic, and update the wording -> system prompt
 export const buildHiddenContextString = (context: AiTutorContext) => {
   const {
     sourceCode,
@@ -55,10 +54,10 @@ export const buildHiddenContextString = (context: AiTutorContext) => {
   } = context;
 
   const hiddenContextString = [
-    'Here is my code:',
-    sourceCode,
+    "Here is the student's current code:",
+    `\`\`\`${sourceCode}\`\`\``,
     ...(validationContents
-      ? ['Here is the validation code:', validationContents]
+      ? ['Here is the validation code:', `\`\`\`${validationContents}\`\`\``]
       : []),
     ...(validationResults
       ? [
@@ -66,10 +65,15 @@ export const buildHiddenContextString = (context: AiTutorContext) => {
           validationResults,
         ]
       : []),
-    'And here are the instructions:',
-    longInstructions,
-    'And here is the documentation:',
-    documentation,
+    ...(longInstructions
+      ? ['Here are the instructions:', longInstructions]
+      : []),
+    ...(documentation
+      ? [
+          'Here is the documentation. (The student can view the documentation by clicking the book icon at the top of the workspace.):',
+          documentation,
+        ]
+      : []),
   ].join('\n\n');
 
   console.log(`🤖: hiddenContextString:`, hiddenContextString);
