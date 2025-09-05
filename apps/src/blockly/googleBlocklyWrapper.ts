@@ -53,7 +53,7 @@ import initializeGenerator from './addons/cdoGenerator';
 import {gestureOverrides} from './addons/cdoGesture';
 import {
   initializeKeyboardNavigation,
-  registerKeyboardNavigationStyles,
+  preInjectRegisterItems,
 } from './addons/cdoKeyboardNavigation';
 import CdoMetricsManager from './addons/cdoMetricsManager';
 import CdoRendererGeras from './addons/cdoRendererGeras';
@@ -206,7 +206,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   registerIfMutator();
   registerLogicCompareMutator();
   registerTextJoinMutator();
-  registerKeyboardNavigationStyles();
+  preInjectRegisterItems();
   // TODO: can we avoid using any here by converting BlocklyWrapper to a class?
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const blocklyWrapper = new (BlocklyWrapper as any)(

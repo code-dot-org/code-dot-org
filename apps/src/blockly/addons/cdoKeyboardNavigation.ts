@@ -2,8 +2,24 @@ import {KeyboardNavigation} from '@blockly/keyboard-navigation';
 import * as GoogleBlockly from 'blockly/core';
 import './shortcutMenuStyles.scss';
 
-export function registerKeyboardNavigationStyles() {
+// This is a Monkey patch while Blockly fixes issue #713. Once merged and
+// bumped, we can replace this class and the manual registry of
+// NavigationDeferringToolbox below with one line function.
+export class NavigationDeferringToolbox extends GoogleBlockly.Toolbox {
+  // eslint-disable-next-line @typescript-eslint/naming-convention
+  protected override onKeyDown_(e: KeyboardEvent) {}
+}
+
+// Covers functions that need to be called prior to Blockly Inject. Because
+// we initialize and dispose here, we need to call these ourselves.
+export function preInjectRegisterItems() {
   KeyboardNavigation.registerKeyboardNavigationStyles();
+  GoogleBlockly.registry.register(
+    GoogleBlockly.registry.Type.TOOLBOX,
+    GoogleBlockly.registry.DEFAULT,
+    NavigationDeferringToolbox,
+    true
+  );
 }
 
 export function initializeKeyboardNavigation(
