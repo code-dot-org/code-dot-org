@@ -243,14 +243,6 @@ const PythonlabView: React.FunctionComponent<
       );
     }
     dispatch(submitPredictResponse({appType: 'pythonlab'}));
-
-    // if (isAiTutor2Enabled) {
-    //   // Ask a question to AITutor2.
-    //   askAiTutor2(
-    //     "What's wrong with my code, if anything?",
-    //     aiTutor2Context || ''
-    //   );
-    // }
   };
 
   return (
