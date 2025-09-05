@@ -1,5 +1,3 @@
-import {tryGetLocalStorage, trySetLocalStorage} from '../utils';
-
 import CdoBramble, {BRAMBLE_CONTAINER} from './CdoBramble';
 import {FILE_SYSTEM_ERROR, BRAMBLE_READY_STATE} from './constants';
 
@@ -21,8 +19,6 @@ if (parent.getWebLab) {
 }
 
 function load(Bramble) {
-  // Remember experiments since Bramble will clear localStorage
-  const experiments = tryGetLocalStorage('experimentsList', '[]');
   const api = webLab_.brambleApi();
   const cdoBramble = new CdoBramble(
     Bramble,
@@ -34,12 +30,7 @@ function load(Bramble) {
   );
   cdoBramble
     .on('mountable', () => api.onBrambleMountable(cdoBramble.getInterface()))
-    .on('ready', () => {
-      // Reset the experiments list after Bramble loads which should restore
-      // the experiment list that existed when the level page loaded.
-      trySetLocalStorage('experimentsList', experiments);
-      api.onBrambleReady();
-    })
+    .on('ready', api.onBrambleReady)
     .on('projectChange', api.onProjectChanged)
     .init();
 }

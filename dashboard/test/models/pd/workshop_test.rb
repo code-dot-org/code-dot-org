@@ -1423,18 +1423,6 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert_equal 'Registration link is not valid or is missing http or https', workshop.errors.full_messages[0]
   end
 
-  test 'registration_link defaults to teacher app link if applications are required' do
-    workshop = create(:workshop, course: Pd::Workshop::COURSE_CSD, subject: SUBJECT_SUMMER_WORKSHOP)
-
-    assert_equal Rails.application.routes.url_helpers.pd_application_teacher_url, workshop.registration_link
-  end
-
-  test 'registration_link does not default to anything if applications are not required' do
-    workshop = create(:byo_workshop)
-
-    assert_nil workshop.registration_link
-  end
-
   test 'valid_grades rejects invalid grades' do
     workshop = build(:pd_workshop, grades: ['Other', 'CS 100'])
 

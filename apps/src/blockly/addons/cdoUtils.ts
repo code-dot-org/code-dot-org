@@ -652,7 +652,10 @@ export function getSimplifiedStateForFlyout(
 
   // Replace variable ids with names and simplify state for flyout.
   blocksCopy.blocks?.forEach(block => {
-    updateVariableFields(block, serializedVariableMap);
+    updateVariableFields(
+      block as {fields: SerializedFields},
+      serializedVariableMap
+    );
     blocksList.push(simplifyBlockState(block));
   });
 

@@ -5,20 +5,27 @@ import React, {
   useCallback,
   useContext,
   useEffect,
+  useMemo,
   useState,
 } from 'react';
 
-import {START_BLOCKS} from '@cdo/apps/constants';
+import {toolboxToWorkspaceBlocks} from '@cdo/apps/blockly/utils/toolbox';
+import {START_SOURCES, TOOLBOX_BLOCKS} from '@cdo/apps/lab2/constants';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
-import {LabProps, ProjectSources} from '@cdo/apps/lab2/types';
+import {
+  BlocklyLevelProperties,
+  LabProps,
+  ProjectSources,
+} from '@cdo/apps/lab2/types';
 import StartOverDialog, {
   MessageType,
 } from '@cdo/apps/lab2/views/dialogs/dsco/StartOverDialog';
 
 import getInitialSources from '../utils/getInitialSources';
 
-const isStartMode = getAppOptionsEditBlocks() === START_BLOCKS;
+const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
+const isToolboxMode = getAppOptionsEditBlocks() === TOOLBOX_BLOCKS;
 
 interface SourcesContextType<T extends ProjectSources = ProjectSources> {
   currentSources: T;
@@ -56,6 +63,21 @@ const SourcesContainer: React.FC<
     );
   }, [levelProperties, initialSources, defaultSources]);
 
+  // Sources to reset to when starting over. Depends on the level edit mode.
+  const startOverSources: ProjectSources = useMemo(() => {
+    const {templateSources, startSources} = levelProperties;
+    if (isToolboxMode) {
+      return {
+        source: toolboxToWorkspaceBlocks(
+          (levelProperties as BlocklyLevelProperties).toolboxDefinition
+        ),
+      };
+    }
+    return isStartMode
+      ? defaultSources
+      : ((templateSources || startSources || defaultSources) as ProjectSources);
+  }, [defaultSources, levelProperties]);
+
   const updateSources = useCallback(
     (newSources: ProjectSources, forceSave = false) => {
       setCurrentSources(prev => {
@@ -73,13 +95,9 @@ const SourcesContainer: React.FC<
   );
 
   const onStartOver = useCallback(() => {
-    const {templateSources, startSources} = levelProperties;
-    const startOverSources = isStartMode
-      ? defaultSources
-      : templateSources || startSources || defaultSources;
     updateSources(startOverSources as ProjectSources, true);
     setStartOverProps(undefined);
-  }, [levelProperties, defaultSources, updateSources]);
+  }, [startOverSources, updateSources]);
 
   const [startOverProps, setStartOverProps] = useState<{
     type: MessageType;

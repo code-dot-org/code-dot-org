@@ -8,6 +8,7 @@ import {connect} from 'react-redux';
 
 import './small-footer-music-overrides.scss';
 
+import {validateBlockCategories} from '@cdo/apps/blockly/utils';
 import DCDO from '@cdo/apps/dcdo';
 import {START_SOURCES, TOOLBOX_BLOCKS} from '@cdo/apps/lab2/constants';
 import {setIsLoading, setPageError} from '@cdo/apps/lab2/lab2Redux';
@@ -24,7 +25,6 @@ import {setExtraCopyrightContent} from '@cdo/apps/sharedComponents/footer/Copyri
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 
 import AppConfig from '../appConfig';
-import {validateBlockCategories} from '../blockly/blockUtils';
 import {TRIGGER_FIELD} from '../blockly/constants';
 import MusicBlocklyWorkspace from '../blockly/MusicBlocklyWorkspace';
 import {
