@@ -51,7 +51,8 @@ const live = [
   '/courses/k5-ai-data-2024',
 ];
 
-const experiments = JSON.parse(window.localStorage.experimentsList || '[]') || [];
+const experiments =
+  JSON.parse(window.localStorage.experimentsList || '[]') || [];
 const inExperiment =
   experiments?.some(experiment =>
     experiment ? experiment.key === 'localizejs' : false
