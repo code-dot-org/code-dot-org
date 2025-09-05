@@ -92,7 +92,7 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
   }, [canStartOpen, hasOpened, hasClosed, canDefaultOpen]);
 
   const updateUnreadNotificationCount = React.useCallback(() => {
-    HttpClient.fetchJson<AiDiffNotification[]>('/notifications', {}, undefined)
+    HttpClient.fetchJson<AiDiffNotification[]>('/notifications')
       .then(response => {
         const unreadNotificationCount =
           response?.value?.filter(n => n.readAt === null).length || 0;
