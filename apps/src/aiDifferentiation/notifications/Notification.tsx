@@ -74,20 +74,19 @@ const Notification: React.FC<NotificationProps> = ({
         data-testid={'icon-' + notificationOrPlaceholder.iconName}
       />
       <div className={styles.textAndLinks}>
-        <div
+        <BodyThreeText
+          noMargin
           className={classNames(
             styles.text,
             isLoading && skeletonizeContent.skeletonizeContent
           )}
         >
-          <BodyThreeText noMargin>
-            <StrongText>
-              {notificationOrPlaceholder.title}
-              {': '}
-            </StrongText>
-            {notificationOrPlaceholder.description}
-          </BodyThreeText>
-        </div>
+          <StrongText>
+            {notificationOrPlaceholder.title}
+            {': '}
+          </StrongText>
+          {notificationOrPlaceholder.description}
+        </BodyThreeText>
         <ol className={styles.links}>
           {notificationOrPlaceholder.hrefLinks?.length > 0 &&
             notificationOrPlaceholder.hrefLinks.map(link => (

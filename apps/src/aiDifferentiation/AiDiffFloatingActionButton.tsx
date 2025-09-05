@@ -2,6 +2,7 @@ import {Badge} from '@mui/material';
 import classNames from 'classnames';
 import React, {useEffect, useState} from 'react';
 
+import experiments from '@cdo/apps/util/experiments';
 import {
   tryGetSessionStorage,
   trySetSessionStorage,
@@ -90,18 +91,21 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
     }
   }, [canStartOpen, hasOpened, hasClosed, canDefaultOpen]);
 
-  React.useEffect(() => {
+  const updateUnreadNotificationCount = React.useCallback(() => {
     HttpClient.fetchJson<AiDiffNotification[]>('/notifications', {}, undefined)
       .then(response => {
         const unreadNotificationCount =
           response?.value?.filter(n => n.readAt === null).length || 0;
         setUnreadNotificationCount(unreadNotificationCount);
-        console.log('lfm', unreadNotificationCount);
       })
       .catch(error => {
         console.error('Error fetching notifications:', error);
       });
   }, []);
+
+  React.useEffect(() => {
+    updateUnreadNotificationCount();
+  }, [updateUnreadNotificationCount]);
 
   const [curriculumCourses, setCurriculumCourses] = useState<string[]>();
 
@@ -151,6 +155,7 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
     }
     setIsOpen(!isOpen);
     trySetSessionStorage(SESSION_STORAGE_KEY, (!isOpen).toString());
+    updateUnreadNotificationCount();
   };
 
   return (
@@ -162,8 +167,9 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
         onClick={handleClick}
         type="button"
       >
-        {unreadNotificationCount === 'loading' ||
-        unreadNotificationCount > 0 ? (
+        {experiments.isEnabled('teacher-notifications') &&
+        (unreadNotificationCount === 'loading' ||
+          unreadNotificationCount > 0) ? (
           <Badge
             badgeContent={
               unreadNotificationCount === 'loading'
@@ -178,6 +184,7 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
                 unreadCount: unreadNotificationCount,
               })
             }
+            sx={{height: '48px', width: '48px'}}
           >
             <img
               alt="AI bot - unread notifications"
