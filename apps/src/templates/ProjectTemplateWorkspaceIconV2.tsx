@@ -9,7 +9,6 @@ import styles from './project-template-workspace-icon-v2.module.scss';
 
 interface ProjectTemplateWorkspaceIconV2Props {
   tooltipPlace?: ComponentPlacementDirection;
-  darkMode?: boolean;
   className?: string;
 }
 
@@ -20,14 +19,12 @@ interface ProjectTemplateWorkspaceIconV2Props {
  * header.
  * @param tooltipPlace - The placement of the tooltip relative to the icon. Uses
  * the DSCO ComponentPlacementDirection enum.
- * @param darkMode - boolean to indicate if the workspace is in dark mode. This is only
- * used to style the tooltip. The icon will inherit its color from the parent component.
  * @param className - Additional class name to apply to the icon container.
  * @returns
  */
 const ProjectTemplateWorkspaceIconV2: React.FunctionComponent<
   ProjectTemplateWorkspaceIconV2Props
-> = ({tooltipPlace, darkMode, className}) => {
+> = ({tooltipPlace, className}) => {
   return (
     <WithTooltip
       tooltipProps={{
