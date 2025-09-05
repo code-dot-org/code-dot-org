@@ -88,6 +88,7 @@ type SimpleBarChartProps = {
   yAxisLabel?: string;
   xAxisLabel?: string;
   barSize?: number;
+  step?: number;
 };
 
 const SimpleBarChart: React.FC<SimpleBarChartProps> = ({
@@ -96,11 +97,15 @@ const SimpleBarChart: React.FC<SimpleBarChartProps> = ({
   data,
   yAxisLabel,
   xAxisLabel,
+  step = 2,
   barSize = 42,
 }) => {
   const yMax = Math.max(...data.map(d => d.value), 10);
-  const niceMax = Math.min(12, Math.ceil(yMax / 2) * 2);
-  const yTicks = Array.from({length: yMax / 2 + 1}, (_, i) => i * 2);
+  const niceMax = Math.ceil(yMax / step) * step + step;
+  const yTicks = Array.from(
+    {length: Math.floor(niceMax / step) + 1},
+    (_, i) => i * step
+  );
 
   return (
     <Box className={moduleStyles.simpleBarChartContainer}>
