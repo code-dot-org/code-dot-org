@@ -115,7 +115,8 @@ describe('TeacherNavigationBar', () => {
   const renderDefault = (
     selectedSectionId = 11,
     selectedRoute = null,
-    showAITutorTab = false
+    showAITutorTab = false,
+    aiDiffEnabled = true
   ) => {
     store = getStore();
     registerReducers({
@@ -128,6 +129,7 @@ describe('TeacherNavigationBar', () => {
         id: 1,
         name: 'test_user',
         has_completed_ai_differentiation_welcome: true,
+        ai_differentiation_enabled: aiDiffEnabled,
       })
     );
 
@@ -330,9 +332,25 @@ describe('TeacherNavigationBar', () => {
   });
 
   test('does not render AiDiffFloatingActionButton component when experiement is not enabled', async () => {
-    // mock experiment is enabled
+    // mock experiment is disabled
     experiments.isEnabled = jest.fn(() => false);
     renderDefault(13, `/teacher_dashboard/sections/13/unit/csd3-2022`);
+
+    expect(
+      screen.queryByRole('button', {name: i18n.openOrCloseTeachingAssistant()})
+    ).toBeNull();
+  });
+
+  test('does not render AiDiffFloatingActionButton component when user pref is not enabled', async () => {
+    // mock experiment is enabled
+    experiments.isEnabled = jest.fn(() => true);
+    // mock user preference disabled
+    renderDefault(
+      13,
+      `/teacher_dashboard/sections/13/unit/csd3-2022`,
+      false,
+      false
+    );
 
     expect(
       screen.queryByRole('button', {name: i18n.openOrCloseTeachingAssistant()})
