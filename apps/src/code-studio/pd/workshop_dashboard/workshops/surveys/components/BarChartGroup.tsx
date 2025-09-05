@@ -87,6 +87,7 @@ type SimpleBarChartProps = {
   data: SimpleBarChartData[];
   yAxisLabel?: string;
   xAxisLabel?: string;
+  barSize?: number;
 };
 
 const SimpleBarChart: React.FC<SimpleBarChartProps> = ({
@@ -95,6 +96,7 @@ const SimpleBarChart: React.FC<SimpleBarChartProps> = ({
   data,
   yAxisLabel,
   xAxisLabel,
+  barSize = 42,
 }) => {
   const yMax = Math.max(...data.map(d => d.value), 10);
   const niceMax = Math.min(12, Math.ceil(yMax / 2) * 2);
@@ -108,7 +110,7 @@ const SimpleBarChart: React.FC<SimpleBarChartProps> = ({
         data={data}
         margin={{top: 16, right: 8, bottom: 28, left: 8}}
         barCategoryGap="30%" // tighter spacing so bars feel centered under labels
-        barSize={42} // consistent bar thickness
+        barSize={barSize}
       >
         <CartesianGrid
           vertical={false}
