@@ -17,15 +17,18 @@ import {
   Rectangle,
 } from 'recharts';
 
+import {ColorMapKey} from '../../../WorkshopFormTemplate/types';
+import {COLOR_MAP} from '../constants';
+
 import moduleStyles from './barChartGroupStyles.module.scss';
 
-const barColors = [
-  'var(--sentiment-success-50, #3EA33E)', // green
-  'var(--accent-orange-50, #FFB42E)', // orange
-  'var(--accent-strawberry-50, #ED6060)', // red
-  'var(--brand-teal-50, #0093A4)', // teal
-  'var(--brand-purple-50, #8c52ba)', // purple
-  'var(--brand-aqua-50, #3cfff7)', // aqua
+export const barColors = [
+  COLOR_MAP.get('green'),
+  COLOR_MAP.get('orange'),
+  COLOR_MAP.get('red'),
+  COLOR_MAP.get('teal'),
+  COLOR_MAP.get('purple'),
+  COLOR_MAP.get('aqua'),
 ];
 
 const bodyFourTextStyle = {
@@ -75,6 +78,7 @@ const ValueLabel = (props: LabelProps) => {
 type SimpleBarChartData = {
   label: string;
   value: number;
+  color?: ColorMapKey;
 };
 
 type SimpleBarChartProps = {
@@ -160,9 +164,13 @@ const SimpleBarChart: React.FC<SimpleBarChartProps> = ({
           isAnimationActive={false}
         >
           {!!data.length &&
-            data.map((d, i) => (
-              <Cell key={i} fill={barColors[i % barColors.length]} />
-            ))}
+            data.map((d, i) => {
+              let fillColor = barColors[i % barColors.length];
+              if (typeof d.color === 'string') {
+                fillColor = COLOR_MAP.get(d.color);
+              }
+              return <Cell key={i} fill={fillColor} />;
+            })}
           <LabelList dataKey="value" content={<ValueLabel />} />
         </Bar>
       </BarChart>
