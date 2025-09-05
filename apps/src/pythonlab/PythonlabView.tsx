@@ -190,10 +190,9 @@ const PythonlabView: React.FunctionComponent<
   );
 
   useEffect(() => {
-    console.log(
-      `🤖: useEffect : aiTutor2Context was updated:`,
-      aiTutorContextPromise
-    );
+    // TODO: This log is a bit chatty, but useful while we're working on this feature.
+    // remove once tutor context is more stable, or if it gets annoying.
+    console.log(`🤖: Tutor context updated:`, aiTutorContextPromise);
   }, [aiTutorContextPromise]);
 
   useEffect(() => {

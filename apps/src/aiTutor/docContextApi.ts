@@ -6,13 +6,7 @@ const docsCache: Map<string, Promise<string>> = new Map();
 
 // Fetch serialized JSON docs from programmingClassesController to use in tutor's context
 export const fetchDocsForClass = async (programmingClassKey: string) => {
-  console.log(`🤖: fetchDocsForClass called with ${programmingClassKey}`);
   if (docsCache.has(programmingClassKey)) {
-    console.log(`🤖: fetchDocsForClass cache hit for ${programmingClassKey}`);
-    console.log(
-      `🤖: fetchDocsForClass awaited docsCache.get(programmingClassKey)`,
-      await docsCache.get(programmingClassKey)
-    );
     return await docsCache.get(programmingClassKey);
   }
   docsCache.set(
@@ -35,14 +29,10 @@ export const fetchDocsForClass = async (programmingClassKey: string) => {
           }
           const classDocs = JSON.stringify(await response.json());
 
-          console.log(
-            `🤖: fetchDocsForClass about to resolve the class docs promise`,
-            classDocs
-          );
           resolve(classDocs);
         } catch (error) {
-          console.log(
-            `🤖: fetchDocsForClass catching an error!!!!!!! : `,
+          console.error(
+            `🤖: error getting docs for ${programmingClassKey}: `,
             error
           );
           MetricsReporter.logError({
@@ -54,6 +44,6 @@ export const fetchDocsForClass = async (programmingClassKey: string) => {
       })();
     })
   );
-  console.log(`🤖: fetchDocsForClass about to return the await`);
+
   return await docsCache.get(programmingClassKey);
 };

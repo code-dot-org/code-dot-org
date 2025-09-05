@@ -76,8 +76,6 @@ export const buildHiddenContextString = (context: AiTutorContext) => {
       : []),
   ].join('\n\n');
 
-  console.log(`🤖: hiddenContextString:`, hiddenContextString);
-
   return hiddenContextString;
 };
 
