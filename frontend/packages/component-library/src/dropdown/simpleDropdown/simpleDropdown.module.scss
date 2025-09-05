@@ -17,15 +17,35 @@
     text-wrap: nowrap;
     text-overflow: ellipsis;
 
+    // Target all size variants to ensure proper arrow spacing
+    &.dropdownContainer-xs,
+    &.dropdownContainer-s,
+    &.dropdownContainer-m,
+    &.dropdownContainer-l {
+      .dropdownArrowDiv {
+        width: 100%;
+
+        select {
+          width: 100%;
+          flex-grow: 1;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          padding-inline-end: 2.5rem;
+        }
+      }
+    }
+  }
+
+  &.fullWidth {
+    width: 100%;
+
     .dropdownArrowDiv {
       width: 100%;
+    }
 
-      select {
-        flex-grow: 1;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-      }
+    select {
+      width: 100%;
     }
   }
 
@@ -43,10 +63,13 @@
     display: inline-flex;
     align-items: center;
     align-self: stretch;
-    width: 100%;
+    width: auto; // Default to content-based width
     background-color: unset;
     border-radius: 0.25rem;
     border: 1px solid;
+    transition:
+      color 0.15s ease-in-out,
+      background-color 0.15s ease-in-out;
 
     -moz-appearance: none;
     -webkit-appearance: none;
@@ -61,7 +84,7 @@
     }
 
     &:focus-visible {
-      outline: 2px solid var(--brand-teal-50);
+      outline: 2px solid var(--borders-brand-teal-primary);
       border-radius: 0.25rem;
       outline-offset: 2px;
     }
@@ -84,6 +107,27 @@
     }
   }
 
+  // When the container has the .customWidth class (typically set via the width prop),
+  // ensure inner elements fill the container
+  &.customWidth {
+    display: flex; // block-level flex so % widths work
+    flex-direction: column; // preserve original stacking
+    align-items: flex-start; // preserve original alignment
+    .dropdownArrowDiv {
+      width: 100%;
+    }
+
+    select {
+      width: 100%;
+      box-sizing: border-box;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      // Ensure proper spacing for arrow
+      padding-inline-end: 2.5rem;
+    }
+  }
+
   .helperSection {
     display: flex;
     align-items: baseline;
@@ -94,39 +138,39 @@
 // Dropdown colors
 .dropdownContainer-black {
   .dropdownLabel {
-    color: var(--neutral-base-black);
+    color: var(--text-neutral-primary);
   }
 
   select {
-    color: var(--neutral-base-black);
-    border-color: var(--neutral-base-black);
-    background-color: var(--neutral-base-white);
+    color: var(--text-neutral-primary);
+    border-color: var(--borders-neutral-solid);
+    background-color: var(--background-neutral-primary);
 
     &.hasError {
-      border-color: var(--sentiment-error-50);
+      border-color: var(--borders-error-primary);
     }
   }
 
   .dropdownArrowDiv:after {
-    color: var(--neutral-base-black);
+    color: var(--text-neutral-primary);
   }
 
   .helperSection {
-    color: var(--neutral-base-black);
+    color: var(--text-neutral-primary);
   }
 
   .errorSection {
-    color: var(--sentiment-error-50);
+    color: var(--text-error-primary);
   }
 
   &:has(select:hover) {
     select:not(:disabled) {
-      color: var(--neutral-base-black);
-      background-color: var(--neutral-gray-10);
+      color: var(--text-neutral-primary);
+      background-color: var(--background-neutral-tertiary);
     }
 
     .dropdownArrowDiv:after {
-      color: var(--neutral-base-black);
+      color: var(--text-neutral-primary);
     }
   }
 
@@ -472,8 +516,8 @@
 
   select {
     height: 2rem;
-    padding: 0.3125rem 1rem;
-    padding-inline-end: 2.625rem;
+    padding: 0.3125rem 0.85rem;
+    padding-inline-end: 2.25rem;
   }
 
   .iconLeft {
@@ -487,7 +531,7 @@
 
   &:has(.iconLeft) {
     select {
-      padding-inline-start: 2.625rem;
+      padding-inline-start: 2.5rem;
     }
   }
 
@@ -496,7 +540,7 @@
     line-height: 1.25;
     height: 1.125rem;
     width: 1.125rem;
-    inset-inline-end: 1rem;
+    inset-inline-end: 0.85rem;
     top: 0.425rem;
   }
 

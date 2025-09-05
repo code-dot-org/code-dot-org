@@ -332,3 +332,48 @@ GroupOfSizesOfDropdown.args = {
     },
   ],
 };
+
+export const FullWidthSimpleDropdown = SingleTemplate.bind({});
+FullWidthSimpleDropdown.args = {
+  name: 'full-width-dropdown',
+  items: [
+    {value: 'option-1', text: 'Option 1'},
+    {value: 'option-2', text: 'Option 2'},
+    {value: 'option-3', text: 'Option 3'},
+  ],
+  selectedValue: 'option-1',
+  labelText: 'Full Width Dropdown',
+  onChange: args => console.log(args),
+  size: 'm',
+  fullWidth: true,
+};
+
+export const CustomWidthSimpleDropdown = SingleTemplate.bind({});
+CustomWidthSimpleDropdown.args = {
+  name: 'custom-width-dropdown',
+  items: [
+    {value: 'option-1', text: 'Option 1'},
+    {value: 'option-2', text: 'Option 2'},
+    {value: 'option-3', text: 'Option 3'},
+  ],
+  selectedValue: 'option-1',
+  labelText: 'Custom Width Dropdown (300px)',
+  onChange: args => console.log(args),
+  size: 'm',
+  width: '300px',
+};
+
+export const PercentageWidthSimpleDropdown = SingleTemplate.bind({});
+PercentageWidthSimpleDropdown.args = {
+  name: 'percentage-width-dropdown',
+  items: [
+    {value: 'option-1', text: 'Option 1'},
+    {value: 'option-2', text: 'Option 2'},
+    {value: 'option-3', text: 'Option 3'},
+  ],
+  selectedValue: 'option-1',
+  labelText: 'Percentage Width Dropdown (50%)',
+  onChange: args => console.log(args),
+  size: 'm',
+  width: '50%',
+};

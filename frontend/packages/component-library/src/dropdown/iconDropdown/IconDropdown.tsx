@@ -45,6 +45,10 @@ export interface IconDropdownProps
   selectedOption: IconDropdownOption;
   /** IconDropdown onChange handler */
   onChange: (option: IconDropdownOption) => void;
+  /** Whether the dropdown should take full width of its container */
+  fullWidth?: boolean;
+  /** Custom width for the dropdown (CSS width value - supports px, %, rem, etc.) */
+  width?: string;
 }
 
 /**
@@ -76,6 +80,8 @@ const IconDropdown: React.FunctionComponent<IconDropdownProps> = ({
   helperIcon,
   errorMessage,
   styleAsFormField = false,
+  fullWidth,
+  width,
   ...rest
 }) => {
   const {setActiveDropdownName} = useDropdownContext();
@@ -100,6 +106,8 @@ const IconDropdown: React.FunctionComponent<IconDropdownProps> = ({
       color={color}
       icon={selectedOption?.icon}
       size={size}
+      fullWidth={fullWidth}
+      width={width}
       helperMessage={helperMessage}
       helperIcon={helperIcon}
       errorMessage={errorMessage}
