@@ -87,7 +87,9 @@ export const FacilitatorFeedback = () => {
               facilitatorDidWell.question_text
             }
             items={facilitatorDidWell.results.responses}
-            tagText={`${facilitatorDidWell.results.total_responses} Submitted`}
+            tagText={`${
+              facilitatorDidWell.results.total_responses ?? 0
+            } Submitted`}
             statusColor="success"
             size="s"
           />
@@ -99,7 +101,9 @@ export const FacilitatorFeedback = () => {
               facilitatorCouldImprove.question_text
             }
             items={facilitatorCouldImprove.results.responses}
-            tagText={`${facilitatorCouldImprove.results.total_responses} Submitted`}
+            tagText={`${
+              facilitatorCouldImprove.results.total_responses ?? 0
+            } Submitted`}
             statusColor="warning"
             size="s"
           />

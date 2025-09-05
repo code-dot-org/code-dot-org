@@ -4,7 +4,7 @@ import userEvent from '@testing-library/user-event';
 import {UserEvent} from 'node_modules/@testing-library/user-event/dist/types/setup/setup';
 import React from 'react';
 
-import {CopyLinkButton} from '@cdo/apps/code-studio/pd/workshop_dashboard/workshops/components/CopyLinkButton';
+import {CopyButton} from '@cdo/apps/code-studio/pd/workshop_dashboard/workshops/components/CopyButton';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 
 jest.mock('@cdo/apps/util/copyToClipboard', () => jest.fn());
@@ -12,7 +12,7 @@ const mockCopyToClipboard = copyToClipboard as jest.MockedFunction<
   typeof copyToClipboard
 >;
 
-describe('CopyLinkButton', () => {
+describe('CopyButton', () => {
   let user: UserEvent;
   const advanceTimers = () => {
     // Fast-forward time by 2 seconds
@@ -43,11 +43,12 @@ describe('CopyLinkButton', () => {
   });
 
   const defaultProps = {
-    link: 'https://example.com/test-link',
+    buttonText: 'Copy link',
+    textToCopy: 'https://example.com/test-link',
   };
 
   it('renders with correct text and initial icon', () => {
-    render(<CopyLinkButton {...defaultProps} />);
+    render(<CopyButton {...defaultProps} />);
 
     expect(screen.getByRole('button', {name: 'Copy link'})).toBeInTheDocument();
     expect(screen.getByText('Copy link')).toBeInTheDocument();
@@ -55,7 +56,7 @@ describe('CopyLinkButton', () => {
 
   it('renders with custom aria-label when provided', () => {
     const customAriaLabel = 'Copy workshop marketing page link';
-    render(<CopyLinkButton {...defaultProps} ariaLabel={customAriaLabel} />);
+    render(<CopyButton {...defaultProps} ariaLabel={customAriaLabel} />);
 
     expect(
       screen.getByRole('button', {name: customAriaLabel})
@@ -63,7 +64,7 @@ describe('CopyLinkButton', () => {
   });
 
   it('calls copyToClipboard with correct link when clicked', async () => {
-    render(<CopyLinkButton {...defaultProps} />);
+    render(<CopyButton {...defaultProps} />);
 
     const button = screen.getByRole('button', {name: 'Copy link'});
     await act(async () => {
@@ -72,13 +73,13 @@ describe('CopyLinkButton', () => {
     advanceTimers();
 
     expect(mockCopyToClipboard).toHaveBeenCalledWith(
-      defaultProps.link,
+      defaultProps.textToCopy,
       expect.any(Function)
     );
   });
 
   it('changes text to "Copied!" when copy is successful', async () => {
-    render(<CopyLinkButton {...defaultProps} />);
+    render(<CopyButton {...defaultProps} />);
 
     const button = screen.getByRole('button', {name: 'Copy link'});
     await act(async () => {
@@ -94,7 +95,7 @@ describe('CopyLinkButton', () => {
   });
 
   it('resets text back to "Copy link" after 2 seconds', async () => {
-    render(<CopyLinkButton {...defaultProps} />);
+    render(<CopyButton {...defaultProps} />);
 
     const button = screen.getByRole('button', {name: 'Copy link'});
     await act(async () => {
@@ -115,7 +116,7 @@ describe('CopyLinkButton', () => {
   it('handles link values correctly', async () => {
     const customLink = 'https://code.org/workshops/123/join';
 
-    render(<CopyLinkButton link={customLink} />);
+    render(<CopyButton {...defaultProps} textToCopy={customLink} />);
 
     const button = screen.getByRole('button', {name: 'Copy link'});
     await act(async () => {
@@ -130,7 +131,7 @@ describe('CopyLinkButton', () => {
   });
 
   it('cleans up timeout when component unmounts', async () => {
-    const {unmount} = render(<CopyLinkButton {...defaultProps} />);
+    const {unmount} = render(<CopyButton {...defaultProps} />);
 
     // Click to trigger the timeout
     const button = screen.getByRole('button', {name: 'Copy link'});

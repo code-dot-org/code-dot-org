@@ -13,6 +13,7 @@ import {LabProps, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 import {useSource} from '../codebridge/hooks/useSource';
 import {useAppDispatch, useAppSelector} from '../util/reduxHooks';
 
+import FullScreenView from './layout/FullScreenView';
 import ShareView from './layout/ShareView';
 import VerticalLayout from './layout/VerticalLayout';
 import {setViewMode} from './redux';
@@ -34,6 +35,7 @@ const defaultConfig: ConfigType = {
     vertical: VerticalLayout,
     widget: VerticalLayout,
     share: ShareView,
+    fullScreen: FullScreenView,
   },
 };
 

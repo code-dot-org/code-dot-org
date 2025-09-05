@@ -3,15 +3,17 @@ import React, {useState, useEffect} from 'react';
 
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 
-interface CopyLinkButtonProps {
-  link: string;
+interface CopyButtonProps {
+  buttonText: string;
+  textToCopy: string;
   ariaLabel?: string;
 }
 
 const RESET_TIMEOUT = 2000;
 
-export const CopyLinkButton: React.FC<CopyLinkButtonProps> = ({
-  link,
+export const CopyButton: React.FC<CopyButtonProps> = ({
+  textToCopy,
+  buttonText,
   ariaLabel,
 }) => {
   const [icon, setIcon] = useState<'copy' | 'check'>('copy');
@@ -31,12 +33,12 @@ export const CopyLinkButton: React.FC<CopyLinkButtonProps> = ({
 
   return (
     <Button
-      text={icon === 'copy' ? 'Copy link' : 'Copied!'}
+      text={icon === 'copy' ? buttonText : 'Copied!'}
       type="secondary"
       size="xs"
       color={buttonColors.gray}
       iconLeft={{iconName: icon, iconStyle: 'solid'}}
-      onClick={() => copyToClipboard(link, () => setIcon('check'))}
+      onClick={() => copyToClipboard(textToCopy, () => setIcon('check'))}
       ariaLabel={ariaLabel}
     />
   );
