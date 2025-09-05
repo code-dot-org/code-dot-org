@@ -36,7 +36,7 @@ Feature: Using the V2 teacher dashboard local navigation
 
     And I wait until element "#ui-test-skeleton-progress-column" is not visible
 
-    And I wait until element "#unit-selector-v2" contains text "Interactive Animations and Games ('24-'25)"
+    And I wait until element "#unit-selector-v2" contains text "Interactive Animations and Games"
     Then element "#uitest-sidebar-section-dropdown" contains text "Sally's Super Section"
     Then element "#uitest-sidebar-section-dropdown" does not contain text "All the Things Section"
 
