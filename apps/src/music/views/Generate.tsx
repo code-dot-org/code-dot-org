@@ -4,56 +4,26 @@ import React, {useCallback, useState} from 'react';
 import Adlib from '@cdo/apps/lab2/views/components/guide/Adlib';
 import Guide from '@cdo/apps/lab2/views/components/guide/Guide';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {AiInteractionStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import askAi from '../ai/generate/askAi';
+import adlibsUntyped from '../ai/generate/GenerateAdlibs.json';
 import {generateBlocklyJson} from '../ai/generate/generateBlocklyJson';
+import GenerateContext from '../ai/generate/GenerateContext';
 import appConfig from '../appConfig';
 import MusicLibrary from '../player/MusicLibrary';
 import {setCodeToLoad, setAiGenerateState} from '../redux/musicRedux';
 
 import styles from './Generate.module.scss';
 
-const adlibs: {
+const adlibs = adlibsUntyped as {
   [key: string]: {template: string; options: {[key: string]: string[]}};
-} = {
-  complex: {
-    template:
-      'Please generate a new song.  Around {length} measures in duration is good.  Go for a {mood} vibe.  Sequence it like a {sequence}.',
-    options: {
-      length: ['20', '30', '40'],
-      mood: ['happy', 'sad', 'energetic', 'calm', 'upbeat', 'chill'],
-      sequence: ['verse-chorus-verse', 'A-B-A', 'A-B-A-C-A', 'A-A-B-A'],
-    },
-  },
-  length: {
-    template:
-      'Please generate a new song.  Around {length} measures in duration is good.',
-    options: {
-      length: ['20', '30', '40'],
-    },
-  },
-  sounds: {
-    template: 'Please make a song with {sounds} sounds in order.',
-    options: {
-      sounds: ['2', '3', '4', '5'],
-    },
-  },
-  layers: {
-    template:
-      'Please make a song that layers {type1} and {type2} together. Around 10 measures is good.',
-    options: {
-      type1: ['bass', 'leads', 'beats', 'vocals'],
-      type2: ['bass', 'leads', 'beats', 'vocals'],
-    },
-  },
 };
 
-interface GenerateProps {}
-
-const Generate: React.FunctionComponent<GenerateProps> = () => {
+const Generate: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
 
-  const packId = useAppSelector(state => state.music.packId);
+  const packId = useAppSelector(state => state.music.packId) || '';
   const aiGenerateState = useAppSelector(state => state.music.aiGenerateState);
 
   const library = MusicLibrary.getInstance();
@@ -67,36 +37,21 @@ const Generate: React.FunctionComponent<GenerateProps> = () => {
 
   const useText = adlibOption ? adlibText : text;
 
-  const sounds = library
-    ?.getFolderForFolderId(packId || 'indie')
-    ?.sounds?.map(sound => {
-      if (sound.type !== 'preview') {
-        return `${sound.src} (${sound.length} measures)`;
-      }
-    })
-    .filter(sound => sound !== undefined)
-    .join('", "');
+  const sounds =
+    library
+      ?.getFolderForFolderId(packId || 'indie')
+      ?.sounds?.map(sound => {
+        if (sound.type !== 'preview') {
+          return `${sound.src} (${sound.length} measures)`;
+        }
+      })
+      .filter(sound => sound !== undefined)
+      .join('", "') || '';
 
-  const contextGenerateMusicPsuedocodeFromDescription = `Your job will be to generate psuedocode for a system that plays a song.  You'll be given a description of what to play, and then you should output code that generates the song to be played.  The psuedocode looks something like this:
-
-when_run
-  play "hiphop/drum_beat_808"
-  play "electro/drum_beat_hyper"
-  play_together
-    play "hiphop/drum_beat_808"
-    play "electro/drum_beat_hyper"
-  repeat 3
-    play "hiphop/drum_beat_808"
-    play "electro/drum_beat_hyper"
-
-Indenting is important.  In this example, when the code is run, it plays "hiphop/drum_beat_808" and then "electro/drum_beat_hyper".  Then it plays "electro_beat_808" and "electro/drum_beat_hyper" at the same time.  Then it plays the same thing three times: "hiphop/drum_beat_808" followed by "electro/drum_beat_hyper".
-
-Don't include any comments in the generated psuedocode.
-
-Note that each sound is actually 2 measures long.
-
-The valid sounds to use are: "${sounds}".  (The length of each sound is in parentheses.)  You can use any of these sounds in your psuedocode.  Each sound name gets the "${packId}/" prefix, so for example, "indie/drum_beat_808".
-`;
+  const contextGenerateMusicPsuedocodeFromDescription = GenerateContext(
+    sounds,
+    packId
+  );
 
   const generateSong = useCallback(() => {
     console.log('starting ask');
@@ -108,11 +63,14 @@ The valid sounds to use are: "${sounds}".  (The length of each sound is in paren
   And here is the request:
   ${useText}`
     ).then(result => {
-      console.log(result[1].chatMessageText);
-      const psuedocode = result[1].chatMessageText.replaceAll('```', '');
-
-      const resultBlockly = generateBlocklyJson(psuedocode);
-      dispatch(setCodeToLoad(resultBlockly));
+      if (result.length > 1 && result[1].status === AiInteractionStatus.OK) {
+        console.log(result[1].chatMessageText);
+        const psuedocode = result[1].chatMessageText.replaceAll('```', '');
+        const resultBlockly = generateBlocklyJson(psuedocode);
+        dispatch(setCodeToLoad(resultBlockly));
+      } else {
+        console.error('Error getting AI response.');
+      }
 
       dispatch(setAiGenerateState('done'));
     });

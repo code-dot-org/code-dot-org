@@ -5,8 +5,11 @@ import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {
   AiChatModelIds,
   AiInteractionStatus as Status,
+  AiChatClientTypes,
 } from '@cdo/generated-scripts/sharedConstants';
 
+// This is currently for internal use only.  It will allow for the exploration
+// of AI queries, but we don't currenly intend for it to be used externally.
 export default async function askAi(message: string) {
   const newUserMessage: PendingChatMessage = {
     role: Role.USER,
@@ -16,8 +19,9 @@ export default async function askAi(message: string) {
     timestamp: Date.now(),
   };
 
+  // Use FLoW_LAB to receive longer timeouts for internal use.
   const aichatContext: AichatContext = {
-    clientType: 2,
+    clientType: AiChatClientTypes.FLOW_LAB,
     currentLevelId: null,
     scriptId: null,
     channelId: undefined,

@@ -59,13 +59,11 @@ const Adlib: React.FunctionComponent<AdlibProps> = ({
               });
             }}
           >
-            {(options[key as keyof typeof options] as string[]).map(
-              (option: string) => (
-                <option key={option} value={option}>
-                  {option}
-                </option>
-              )
-            )}
+            {options[key].map(option => (
+              <option key={option} value={option}>
+                {option}
+              </option>
+            ))}
           </select>
         );
       });

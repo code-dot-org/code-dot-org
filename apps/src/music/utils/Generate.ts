@@ -13,18 +13,19 @@ export const saveGeneratedSongMetadata = (
   // starting at them.  For now, only measures that have more than 2 sounds starting at them
   // should be stored.  Note that measures might be fractional (e.g. 0.5).
   const eventMeasures: number[] = [];
-  const measureCounts: {[measure: string]: number} = {};
+  const measureCounts: {[measure: number]: number} = {};
   events.forEach(event => {
-    const measureKey = event.when.toString();
+    const measureKey = event.when;
     if (measureKey in measureCounts) {
       measureCounts[measureKey]++;
     } else {
       measureCounts[measureKey] = 1;
     }
   });
-  Object.keys(measureCounts).forEach(measureStr => {
-    if (measureCounts[measureStr] > 2) {
-      eventMeasures.push(parseFloat(measureStr));
+  Object.keys(measureCounts).forEach(measure => {
+    const measureNumber = parseFloat(measure);
+    if (measureCounts[measureNumber] > 2) {
+      eventMeasures.push(measureNumber);
     }
   });
 
