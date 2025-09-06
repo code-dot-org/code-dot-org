@@ -8,14 +8,23 @@ class User::InactiveTeacherDeletionWarningJobTest < ActiveJob::TestCase
 
     let(:teacher_email) {Faker::Internet.unique.email}
     let(:teacher_name) {Faker::Name.unique.name}
-
-    let(:teacher) {create(:teacher, email: teacher_email, name: teacher_name)}
+    let!(:teacher) {create(:teacher, email: teacher_email, name: teacher_name, current_sign_in_at: 48.months.ago)}
 
     let(:expect_teacher_warning_to_be_sent) do
       MailJet.expects(:send_email).with(
         :inactive_teacher_deletion_warning,
         teacher_email,
         teacher_name,
+        vars: {first_name: teacher.given_name || teacher.name},
+      )
+    end
+
+    let(:expect_event_logging) do
+      Metrics::Events.expects(:log_event).with(
+        event_name: 'inactive_teacher_deletion_warning',
+        metadata: {
+          teacher_id: teacher.id,
+        },
       )
     end
 
@@ -31,6 +40,17 @@ class User::InactiveTeacherDeletionWarningJobTest < ActiveJob::TestCase
 
     it 'send an email using MailJet with expected arguments' do
       expect_teacher_warning_to_be_sent.once
+      perform_enqueued_jobs {perform_later}
+    end
+
+    it 'sets deletion_warning_email_sent_at' do
+      perform_enqueued_jobs {perform_later}
+      teacher.reload
+      _(teacher.user_data_retention_status.deletion_warning_email_sent_at).wont_be_nil
+    end
+
+    it 'logs event' do
+      expect_event_logging.once
       perform_enqueued_jobs {perform_later}
     end
 

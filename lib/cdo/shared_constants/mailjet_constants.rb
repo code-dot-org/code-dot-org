@@ -59,7 +59,7 @@ module MailJetConstants
     inactive_teacher_deletion_warning: {
       template_id: {
         production: {
-          default: 7_237_538,
+          default: 7_237_548,
         }
       },
       from_address: 'noreply@code.org',

@@ -53,5 +53,18 @@ class Queries::User::InactiveTest < ActiveSupport::TestCase
         _(-> {inactive_users}).must_raise ArgumentError
       end
     end
+
+    context 'when quering for inactive_teacher_deletion_warning' do
+      let(:described_instance) {described_class.new(scope: scope, inactive_since: inactive_since, query_with_warning: true)}
+      let(:inactive_since) {42.months.ago}
+      let(:scope) {User.where(user_type: ::User::TYPE_TEACHER)}
+
+      subject(:inactive_users) {described_instance.call}
+
+      it 'returns users who have not signed in since the given date' do
+        expected_user = create(:teacher, current_sign_in_at: inactive_since - 1.day)
+        _(inactive_users).must_include expected_user
+      end
+    end
   end
 end
