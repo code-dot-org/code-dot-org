@@ -19,9 +19,14 @@ interface PercentageBarGroupProps {
 }
 
 interface PercentageBarProps {
+  label: string;
+  count: number;
   percentage: number;
   color?: ColorMapKey;
 }
+
+const normalizeString = (s: string): string =>
+  s.toLowerCase().replace(/\s+/g, '-');
 
 export const PercentageBarGroup: FC<PercentageBarGroupProps> = ({
   items,
@@ -32,11 +37,16 @@ export const PercentageBarGroup: FC<PercentageBarGroupProps> = ({
     <Box className={classNames(commonStyles.column, className)}>
       {items.map(item => (
         <Box key={item.label}>
-          <BodyThreeText noMargin>
+          <BodyThreeText noMargin id={normalizeString(item.label)}>
             <StrongText>{item.label}</StrongText>
           </BodyThreeText>
           <Box className={styles.barRow}>
-            <PercentageBar percentage={item.percentage} color={item.color} />
+            <PercentageBar
+              percentage={item.percentage}
+              color={item.color}
+              count={item.count}
+              label={item.label}
+            />
             <BodyThreeText noMargin className={styles.barLabel}>{`${
               item.count
             }${barLabel ? ` ${barLabel}` : ''}`}</BodyThreeText>
@@ -48,6 +58,8 @@ export const PercentageBarGroup: FC<PercentageBarGroupProps> = ({
 };
 
 const PercentageBar: FC<PercentageBarProps> = ({
+  label,
+  count,
   percentage,
   color = 'teal',
 }) => {
@@ -69,6 +81,12 @@ const PercentageBar: FC<PercentageBarProps> = ({
     <Box className={styles.barContainer}>
       <Box
         className={styles.indicator}
+        role="meter"
+        aria-valuemin={0}
+        aria-valuemax={100}
+        aria-valuenow={Number(width.toFixed(2))}
+        aria-labelledby={normalizeString(label)}
+        aria-valuetext={`${percentage}% — ${count} responses`}
         sx={{
           width: `${width}%`,
           backgroundColor: fillColor,
