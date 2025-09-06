@@ -297,7 +297,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   private def register_new_user(user, provider)
     # Disallow sign up with email addresses from disallowed domains
     domain = user.email&.split('@', 2)&.last
-    if Policies::Devise::EmailDomains::DISALLOWED_DOMAINS.include?(domain)
+    if disallowed_login?(domain:, provider:)
       flash.alert = I18n.t('devise.registrations.disallowed_domain', domain: domain)
       return redirect_to user_session_path
     end
@@ -311,6 +311,13 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     }
     sign_up_url = determine_sign_up_url(user)
     render 'omniauth/redirect', layout: false, locals: {sign_up_url: sign_up_url}
+  end
+
+  # Custom handling for the LAUSD email domain
+  # Clever is an exception to the disallowed domain rule
+  # TODO: refactor this into district-level configuration
+  private def disallowed_login?(domain:, provider:)
+    Policies::Devise::EmailDomains::DISALLOWED_DOMAINS.include?(domain) && Policies::Devise::EmailDomains::PROVIDER_EXCEPTIONS.exclude?(provider)
   end
 
   private def determine_sign_up_url(user)

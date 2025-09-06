@@ -1782,13 +1782,15 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
   describe '#register_new_user' do
     let(:disallowed_domains) {['testdomain.com']}
+    let(:provider_exceptions) {['clever']}
+    let(:email) {Faker::Internet.email(domain: disallowed_domains.first)}
 
     before do
       stub_const('Policies::Devise::EmailDomains::DISALLOWED_DOMAINS', disallowed_domains)
+      stub_const('Policies::Devise::EmailDomains::PROVIDER_EXCEPTIONS', provider_exceptions)
     end
 
     context 'when a user has an email domain that is disallowed' do
-      let(:email) {"user@#{disallowed_domains.first}"}
       let(:auth) {generate_auth_user_hash(provider: AuthenticationOption::GOOGLE, uid: 'some-uid', email: email)}
 
       before do
@@ -1804,8 +1806,8 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     end
 
     context 'when a user has an email domain that is allowed' do
-      let(:allowed_email) {"user@alloweddomain.com"}
-      let(:auth) {generate_auth_user_hash(provider: AuthenticationOption::GOOGLE, uid: 'other-uid', email: allowed_email)}
+      let(:email) {"user@alloweddomain.com"}
+      let(:auth) {generate_auth_user_hash(provider: AuthenticationOption::GOOGLE, uid: 'other-uid', email: email)}
 
       before do
         @request.env['omniauth.auth'] = auth
@@ -1819,6 +1821,23 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
         partial_user = User.new_from_partial_registration(session)
         _(partial_user.provider).must_equal AuthenticationOption::GOOGLE
         _(partial_user.uid).must_equal 'other-uid'
+      end
+    end
+
+    context 'when email is disallowed but provider is on the exceptions list' do
+      let(:auth) {generate_auth_user_hash(provider: provider_exceptions.first, uid: 'some-uid', email: email)}
+
+      before do
+        @request.env['omniauth.auth'] = auth
+        @request.env['omniauth.params'] = {}
+      end
+
+      it 'creates a new user and redirects to complete registration' do
+        # This test asserts must_change instead of wont_change because sign_up_clever calls User.from_omniauth,
+        # which creates a user. sign_up_google_oauth2 instead calls User.initialize_new_oauth_user, which calls
+        # new but does not save the user.
+        _(-> {get :clever}).must_change -> {User.count}
+        assert_redirected_to home_path
       end
     end
 
