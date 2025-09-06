@@ -10,8 +10,6 @@ class User
     rescue_from StandardError, with: :report_exception
 
     def perform
-      # user = ::User.find_by_email_or_hashed_email('juan.manzo@code.org')
-      # send_warning_email(user)
       inactive_teachers.find_each do |teacher|
         next if teacher.email.blank?
         send_warning_email(teacher)
