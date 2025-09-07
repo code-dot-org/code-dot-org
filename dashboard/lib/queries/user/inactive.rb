@@ -21,10 +21,11 @@ module Queries
         # Queries for users who have not been sent the deletion waring email for inactive teachers.
         if @query_with_warning
           result = result.left_outer_joins(:user_data_retention_status)
-          result.where(user_data_retention_status: {deletion_warning_email_sent_at: nil}).or(
+          result = result.where(user_data_retention_status: {deletion_warning_email_sent_at: nil}).or(
             result.where(user_data_retention_status: {deletion_warning_email_sent_at: ..@inactive_since})
           )
         end
+        result
       end
 
       private def validate_inactive_since

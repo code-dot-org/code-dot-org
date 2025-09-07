@@ -1,9 +1,10 @@
 require 'test_helper'
 
 class Queries::User::InactiveTest < ActiveSupport::TestCase
-  let(:described_instance) {described_class.new(scope: scope, inactive_since: inactive_since)}
+  let(:described_instance) {described_class.new(scope: scope, inactive_since: inactive_since, query_with_warning: query_with_warning)}
   let(:inactive_since) {42.months.ago}
   let(:scope) {User.all}
+  let(:query_with_warning) {false}
 
   describe '#call' do
     subject(:inactive_users) {described_instance.call}
@@ -55,9 +56,9 @@ class Queries::User::InactiveTest < ActiveSupport::TestCase
     end
 
     context 'when quering for inactive_teacher_deletion_warning' do
-      let(:described_instance) {described_class.new(scope: scope, inactive_since: inactive_since, query_with_warning: true)}
       let(:inactive_since) {42.months.ago}
       let(:scope) {User.where(user_type: ::User::TYPE_TEACHER)}
+      let(:query_with_warning) {true}
 
       subject(:inactive_users) {described_instance.call}
 
