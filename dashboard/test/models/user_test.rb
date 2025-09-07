@@ -4158,7 +4158,9 @@ class UserTest < ActiveSupport::TestCase
   test 'marketing_segment_data returns expected curriculums for teacher with sections' do
     teacher = create(:teacher)
     csf_script = create(:csf_script)
+    create(:single_unit_course, unit: csf_script)
     csd_script = create(:csd_script)
+    create(:single_unit_course, unit: csd_script)
     create(:section, user: teacher, script: csf_script)
     create(:section, user: teacher, script: csd_script)
 

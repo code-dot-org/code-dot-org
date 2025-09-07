@@ -10,7 +10,7 @@ module Services
     end
 
     def call
-      if @unit.unit_group
+      if @unit.get_original_unit_group
         log "Unit already has a UnitGroup: #{@unit.name}", type: "error"
         return false
       end
@@ -56,7 +56,7 @@ module Services
     def rollback
       log "Rolling back migration for unit #{@unit.name}"
 
-      @unit_group ||= @unit.unit_group
+      @unit_group ||= @unit.get_original_unit_group
       if @unit_group.nil?
         log "Unit's unit_group not found: #{@unit.name}", type: "error"
         return false
@@ -214,7 +214,7 @@ module Services
       checks = {
         "UnitGroup is destroyed" => UnitGroup.find_by(id: unit_group_id).nil?,
         "Unit is valid" => @unit.valid? || @name_changed,
-        "Unit does not have a unit_group" => @unit.unit_group.nil?,
+        "Unit does not have a unit_group" => @unit.get_original_unit_group.nil?,
       }
 
       # Determine if all checks passed

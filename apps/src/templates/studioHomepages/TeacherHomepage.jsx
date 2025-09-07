@@ -12,7 +12,6 @@ import DonorTeacherBanner from '@cdo/apps/templates/DonorTeacherBanner';
 import ParticipantFeedbackNotification from '@cdo/apps/templates/feedback/ParticipantFeedbackNotification';
 import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
 import ProjectWidgetWithData from '@cdo/apps/templates/projects/ProjectWidgetWithData';
-import BorderedCallToAction from '@cdo/apps/templates/studioHomepages/BorderedCallToAction';
 import JoinSectionArea from '@cdo/apps/templates/studioHomepages/JoinSectionArea';
 import {
   tryGetSessionStorage,
@@ -52,8 +51,6 @@ export const UnconnectedTeacherHomepage = ({
   queryStringOpen,
   schoolYear,
   showCensusBanner,
-  showFinishTeacherApplication,
-  showReturnToReopenedTeacherApplication,
   showNpsSurvey,
   specialAnnouncement,
   teacherEmail,
@@ -230,25 +227,7 @@ export const UnconnectedTeacherHomepage = ({
           </div>
         )}
         {!showAnnouncement && <br />}
-        {showFinishTeacherApplication && (
-          <BorderedCallToAction
-            headingText="Return to Your Application"
-            descriptionText="Finish applying for our Professional Learning Program"
-            buttonText="Finish Application"
-            buttonUrl="/pd/application/teacher"
-            solidBorder={true}
-          />
-        )}
         {showPLBanner && <ProfessionalLearningSkinnyBanner />}
-        {showReturnToReopenedTeacherApplication && (
-          <BorderedCallToAction
-            headingText="Return to Your Application"
-            descriptionText="Your Regional Partner has requested updates to your Professional Learning Application."
-            buttonText="Return to Application"
-            buttonUrl="/pd/application/teacher"
-            solidBorder={true}
-          />
-        )}
         {displayCensusBanner && (
           <div>
             <CensusTeacherBanner
@@ -342,8 +321,6 @@ UnconnectedTeacherHomepage.propTypes = {
   schoolYear: PropTypes.number,
   showCensusBanner: PropTypes.bool.isRequired,
   showNpsSurvey: PropTypes.bool,
-  showFinishTeacherApplication: PropTypes.bool,
-  showReturnToReopenedTeacherApplication: PropTypes.bool,
   specialAnnouncement: shapes.specialAnnouncement,
   teacherEmail: PropTypes.string,
   teacherId: PropTypes.number,

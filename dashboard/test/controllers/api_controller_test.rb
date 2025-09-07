@@ -29,14 +29,14 @@ class ApiControllerTest < ActionController::TestCase
     @student_1, @student_2, @student_3, @student_4, @student_5, @student_6, @student_7 = @students
 
     @flappy = create(:text_match, :with_script).script_levels.first.script
-    create(:single_unit_course, unit: @flappy)
-    @flappy_section = create(:section, user: @teacher, script_id: @flappy.id)
+    @flappy_course = create(:single_unit_course, unit: @flappy)
+    @flappy_section = create(:section, user: @teacher, script_id: @flappy.id, course_id: @flappy_course.id)
     @student_flappy_1 = create(:follower, section: @flappy_section).student_user
     @student_flappy_1.reload
 
     @allthings = create(:text_match, :with_script).script_levels.first.script
-    create(:single_unit_course, unit: @allthings)
-    @allthings_section = create(:section, user: @teacher, script_id: @allthings.id)
+    @allthingscourse = create(:single_unit_course, unit: @allthings)
+    @allthings_section = create(:section, user: @teacher, script_id: @allthings.id, course_id: @allthings.original_unit_group_id)
     @student_allthings = create(:student, name: 'student_allthings')
     create(:follower, section: @allthings_section, student_user: @student_allthings)
     @allthings_section.reload

@@ -328,9 +328,21 @@ div.card {
   flex: 1;
   gap: 1.5rem;
   flex-direction: column;
+  position: relative;
 
   @media (min-width: 900px) {
     flex-direction: row;
+  }
+
+  &.scrollContainerRow {
+    @media (min-width: 900px) {
+      // empty element to take space of absolutely positioned scrollable card
+      &::after {
+        content: '';
+        display: block;
+        flex: 1;
+      }
+    }
   }
 
   .questionCard {
@@ -338,29 +350,29 @@ div.card {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+  }
 
-    .cardHeader,
+  .cardHeader,
+  .cardContent {
+    padding: 1rem 1.25rem;
+  }
+
+  &.selectCard {
     .cardContent {
-      padding: 1rem 1.25rem;
+      padding-right: 0.5rem;
+      padding-bottom: 1.25rem;
     }
+  }
 
-    &.multiSelect {
-      .cardContent {
-        padding-right: 0.5rem;
-        padding-bottom: 1.25rem;
-      }
-    }
+  .cardContent {
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 
-    .cardContent {
-      padding-top: 1rem;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-
-      .description {
-        color: var(--text-neutral-tertiary);
-        margin-top: 0.313rem;
-      }
+    .description {
+      color: var(--text-neutral-tertiary);
+      margin-top: 0.313rem;
     }
   }
 

@@ -355,6 +355,7 @@ module Api::V1::Pd
       assert response.key?(:name), "Missing name"
       assert response.key?(:facilitators), "Missing facilitators"
       assert response.key?(:surveys), "Missing surveys"
+      assert response.key?(:follow_up_requested), "Missing follow up requests"
 
       # Verify surveys structure
       surveys = response[:surveys]
@@ -525,6 +526,38 @@ module Api::V1::Pd
       assert engagement_matrix_question[:results].key?(:weighted_score), "Matrix questions should have weighted scores"
       assert engagement_matrix_question[:results].key?(:agreement_count), "Matrix questions should have agreement count"
       assert engagement_matrix_question[:results].key?(:agreement_percentage), "Matrix questions should have agreement percentages"
+    end
+
+    test 'workshop survey summary returns user data for respondents who requested follow up' do
+      sign_in @workshop_admin
+      byo_workshop = create(:byo_workshop)
+
+      # answers_low includes a request for follow up
+      low_submission = create(:build_your_own_workshop_foorm_submission, :answers_low, pd_workshop_id: byo_workshop.id)
+
+      get :workshop_survey_summary, params: {workshop_id: byo_workshop.id}
+      assert_response :success
+      response = JSON.parse(@response.body, symbolize_names: true)
+
+      answers = JSON.parse(low_submission.foorm_submission.answers)
+      expected_follow_up = [{name: low_submission.user.full_name, email: answers['followup_email']}]
+      follow_up = response[:follow_up_requested]
+      assert_equal(expected_follow_up, follow_up, "Follow up request array should include user data")
+    end
+
+    test 'workshop survey summary returns an empty follow up array if no users requested follow up' do
+      sign_in @workshop_admin
+      byo_workshop = create(:byo_workshop)
+
+      # answers_high does not include a request for follow up
+      create(:build_your_own_workshop_foorm_submission, :answers_high, pd_workshop_id: byo_workshop.id)
+
+      get :workshop_survey_summary, params: {workshop_id: byo_workshop.id}
+      assert_response :success
+      response = JSON.parse(@response.body, symbolize_names: true)
+
+      follow_up = response[:follow_up_requested]
+      assert_equal([], follow_up, "Follow up request array should be empty")
     end
 
     test 'workshop survey summary handles workshop without survey responses' do
