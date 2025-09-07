@@ -2,7 +2,7 @@
 import Script from 'next/script';
 
 import {Brand} from '@/config/brand';
-import {getLocalizeJsLocaleFromBCP47} from '@/config/locale';
+import {getLocalizeJsLocaleFromSupportedLocale} from '@/config/locale';
 import {getLocalizePath, getProjectId} from '@/config/localize';
 
 /**
@@ -67,7 +67,7 @@ const LocalizeLoader = ({
               key: projectId!,
               autodetectLanguage: true,
               rememberLanguage: false, // use the locale in the URL instead
-              defaultLanguage: getLocalizeJsLocaleFromBCP47(locale),
+              defaultLanguage: getLocalizeJsLocaleFromSupportedLocale(locale),
               disableWidget: true, // use our own language dropdown
               // Block classes that match developer mode Next.js overlays
               blockedClasses: [

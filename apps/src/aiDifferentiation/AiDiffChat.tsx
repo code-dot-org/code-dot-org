@@ -90,6 +90,8 @@ interface AiDiffChatProps {
   threadFetchCallback?: () => void;
   threadId?: number;
   setThreadId?: Dispatch<SetStateAction<number>>;
+  initialThreadPrompt?: ChatPrompt | null;
+  setInitialThreadPrompt?: Dispatch<SetStateAction<ChatPrompt | null>>;
 }
 
 const AiDiffChat: React.FC<AiDiffChatProps> = ({
@@ -106,6 +108,8 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
   threadFetchCallback = () => {},
   threadId = 0,
   setThreadId = () => {},
+  initialThreadPrompt = null,
+  setInitialThreadPrompt = () => {},
 }) => {
   const reportingData = React.useMemo(() => {
     return {
@@ -146,52 +150,6 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
           suggestedPrompts.concat(additionalPrompts),
         ]
   );
-
-  const onMessageSend = (message: string) => {
-    const newUserMessage = {
-      role: Role.USER,
-      chatMessageText: message,
-      status: Status.OK,
-    };
-
-    setMessageHistory(prevMessages => [...prevMessages, newUserMessage]);
-    getAIResponse(message, false, null);
-  };
-
-  const onPromptSelect = (prompt: ChatPrompt) => {
-    if (prompt.response !== undefined) {
-      setMessageHistory(prevMessages => [
-        ...prevMessages,
-        {
-          role: Role.ASSISTANT,
-          chatMessageText: prompt.response ?? '',
-          status: Status.OK,
-        },
-      ]);
-    }
-    if (prompt.followUpPrompts !== undefined) {
-      setMessageHistory(prevMessages => [
-        ...prevMessages,
-        prompt.followUpPrompts ?? [],
-      ]);
-    }
-    if (!prompt.followUpPrompts && !prompt.response) {
-      getAIResponse(prompt.prompt, true, prompt.label);
-    }
-  };
-
-  const onSuggestPrompts = () => {
-    const nextPage = (suggestionPage + 1) % SUGGESTED_PROMPTS.length;
-    const newSuggestions =
-      context.type === AiDiffContext.GENERAL
-        ? GENERAL_SUGGESTED_PROMPTS
-        : SUGGESTED_PROMPTS[nextPage];
-    setSuggestionPage(nextPage);
-    setMessageHistory(prevMessages => [
-      ...prevMessages,
-      newSuggestions.concat(additionalPrompts),
-    ]);
-  };
 
   const sendChatEvent = React.useCallback(
     (role: string, prompt: string, preset: boolean, thread: number) => {
@@ -284,6 +242,71 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
       setThreadId,
     ]
   );
+
+  const onMessageSend = React.useCallback(
+    (message: string) => {
+      const newUserMessage = {
+        role: Role.USER,
+        chatMessageText: message,
+        status: Status.OK,
+      };
+
+      setMessageHistory(prevMessages => [...prevMessages, newUserMessage]);
+      getAIResponse(message, false, null);
+    },
+    [setMessageHistory, getAIResponse]
+  );
+
+  const onPromptSelect = React.useCallback(
+    (prompt: ChatPrompt) => {
+      if (prompt.response !== undefined) {
+        setMessageHistory(prevMessages => [
+          ...prevMessages,
+          {
+            role: Role.ASSISTANT,
+            chatMessageText: prompt.response ?? '',
+            status: Status.OK,
+          },
+        ]);
+      }
+      if (prompt.followUpPrompts !== undefined) {
+        setMessageHistory(prevMessages => [
+          ...prevMessages,
+          prompt.followUpPrompts ?? [],
+        ]);
+      }
+      if (!prompt.followUpPrompts && !prompt.response) {
+        getAIResponse(prompt.prompt, true, prompt.label);
+      }
+    },
+    [getAIResponse, setMessageHistory]
+  );
+
+  React.useEffect(() => {
+    if (initialThreadPrompt && threadMessages.length === 0 && threadId === 0) {
+      onPromptSelect(initialThreadPrompt);
+      setInitialThreadPrompt(null);
+    }
+  }, [
+    initialThreadPrompt,
+    threadMessages,
+    threadId,
+    onPromptSelect,
+    setInitialThreadPrompt,
+  ]);
+
+  const onSuggestPrompts = () => {
+    const nextPage = (suggestionPage + 1) % SUGGESTED_PROMPTS.length;
+    const newSuggestions =
+      context.type === AiDiffContext.GENERAL
+        ? GENERAL_SUGGESTED_PROMPTS
+        : SUGGESTED_PROMPTS[nextPage];
+    setSuggestionPage(nextPage);
+    setMessageHistory(prevMessages => [
+      ...prevMessages,
+      newSuggestions.concat(additionalPrompts),
+    ]);
+  };
 
   // Scroll to bottom of content when a new message comes in
   const chatWindowRef = useRef<HTMLImageElement>(null);
