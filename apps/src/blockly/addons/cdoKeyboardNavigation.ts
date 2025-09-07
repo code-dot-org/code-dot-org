@@ -6,7 +6,6 @@ import './shortcutMenuStyles.scss';
 // bumped, we can replace this class and the manual registry of
 // NavigationDeferringToolbox below with one line function.
 export class NavigationDeferringToolbox extends GoogleBlockly.Toolbox {
-  // eslint-disable-next-line @typescript-eslint/naming-convention
   protected override onKeyDown_(e: KeyboardEvent) {}
 }
 
