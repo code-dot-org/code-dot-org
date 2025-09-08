@@ -114,6 +114,7 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
             className={classNames(styles.notificationsButton, {
               [styles.selected]: showNotifications,
             })}
+            id="ui-notificationsButton"
             type="button"
           >
             <FontAwesomeV6Icon iconName="bell" />
