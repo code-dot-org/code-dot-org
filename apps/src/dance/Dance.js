@@ -40,6 +40,7 @@ import {
   setSong,
   setAiOutput,
 } from './danceRedux';
+import DanceRendererLottie from './DanceRendererLottie';
 import DanceVisualizationColumn from './DanceVisualizationColumn';
 import danceMsg from './locale';
 import {loadSongMetadata} from './songs';
@@ -457,6 +458,7 @@ Dance.prototype.afterInject_ = function () {
     i18n: danceMsg,
     resourceLoader: new ResourceLoader(ASSET_BASE),
     logger: danceMetricsReporter,
+    externalRendererFactory: () => new DanceRendererLottie(),
   });
 
   // Add command names from the Dance Party API to the Blockly generator's

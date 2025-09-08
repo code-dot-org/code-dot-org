@@ -36,3 +36,21 @@ export interface DanceLevelProperties extends LevelProperties {
   useRestrictedSongs?: boolean;
   songSelection?: string[];
 }
+
+export type DancerLayout = {
+  mode: 'fit' | 'cover' | 'stretch' | 'none';
+  scale?: number;
+  align?: {x: 'start' | 'center' | 'end'; y: 'start' | 'center' | 'end'};
+  offset?: {x: number; y: number};
+  preserveAspectRatio?: string;
+  clearBeforeDraw?: boolean;
+};
+
+export interface DancerRenderer {
+  init(ctx: CanvasRenderingContext2D): void;
+  setSource(src: {url?: string; data?: unknown}): Promise<void>;
+  renderFrame(frameIndex: number, layout?: DancerLayout): void;
+  getDurationFrames(): number | null;
+  getCompSize(): {w: number; h: number} | null;
+  dispose(): void;
+}

@@ -1,0 +1,25 @@
+{
+  "category": "",
+  "config": {
+    "func": "setGeneratedDancer",
+    "docFunc": "gamelab_makeNewSpriteAnon",
+    "inline": false,
+    "blockText": "generated dancer do {NAME}",
+    "style": "lab_blocks",
+    "args": [
+      {
+        "name": "NAME",
+        "options": [
+          [
+            "Double Down",
+            "\"dancer-moose-rightscale\""
+          ],
+          [
+            "Double Down (wrong scale)",
+            "\"dancer-moose-wrongscale\""
+          ]
+        ]
+      }
+    ]
+  }
+}

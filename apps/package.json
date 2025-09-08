@@ -36,7 +36,8 @@
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "ua-parser-js": "^0.7.40",
-    "@amplitude/ua-parser-js": "^0.7.33"
+    "@amplitude/ua-parser-js": "^0.7.33",
+    "@code-dot-org/dance-party": "portal:/Users/mike/dance-party"
   },
   "devDependencies": {
     "@babel/core": "^7.26.0",
@@ -289,6 +290,7 @@
     "loadable-components": "2.2.3",
     "loader-utils": "^2.0.4",
     "lodash": "^4.17.21",
+    "lottie-web": "^5.13.0",
     "markdown-to-txt": "^2.0.1",
     "md5": "^2.3.0",
     "memoize-one": "^5.1.1",
