@@ -636,6 +636,14 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
                               className={getOuterCellClasses(tick)}
                               onClick={() => toggleEvent(tick, index)}
                               key={tick}
+                              role="button"
+                              tabIndex={0}
+                              onKeyDown={e => {
+                                if (e.key === 'Enter') {
+                                  toggleEvent(tick, index);
+                                  e.preventDefault();
+                                }
+                              }}
                             >
                               <div className={getInnerCellClasses(tick)}>
                                 <div
