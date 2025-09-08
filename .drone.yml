@@ -60,11 +60,11 @@ steps:
       - git lfs install --skip-repo
       # Extract repo info from DRONE_GIT_HTTP_URL and construct authenticated URL
       - REPO_URL=$(echo $DRONE_GIT_HTTP_URL | sed 's|https://||')
-      - AUTH_URL="https://${GITHUB_TOKEN}@${REPO_URL}"
+      - AUTHENTICATED_GITHUB_URL="https://${GITHUB_TOKEN}@${REPO_URL}"
       # We should be in a cached git repo, but clone if the cache failed
-      - "[ -d .git ] || (echo 'WARNING: get-cached-staging failed: checkout will be SLOW and LFS $$$!' && git clone --branch $DRONE_BRANCH $AUTH_URL .)"
+      - "[ -d .git ] || (echo 'WARNING: get-cached-staging failed: checkout will be SLOW and LFS $$$!' && git clone --branch $DRONE_BRANCH $AUTHENTICATED_GITHUB_URL .)"
       # Update the remote URL to use authentication
-      - git remote set-url origin $AUTH_URL
+      - git remote set-url origin $AUTHENTICATED_GITHUB_URL
       # Checkout our source branch (=the PR)
       - git fetch origin $DRONE_SOURCE_BRANCH
       - git checkout $DRONE_SOURCE_BRANCH
@@ -199,13 +199,14 @@ steps:
         from_secret: GITHUB_TOKEN
     commands:
       - git lfs install --skip-repo
-      # Extract repo info from DRONE_GIT_HTTP_URL and construct authenticated URL
-      - REPO_URL=$(echo $DRONE_GIT_HTTP_URL | sed 's|https://||')
-      - AUTH_URL="https://${GITHUB_TOKEN}@${REPO_URL}"
+      # Construct authenticated URL using Drone's built-in environment variables
+      # DRONE_REPO_OWNER = organization name (e.g., "code-dot-org")
+      # DRONE_REPO_NAME = repository name (e.g., "code-dot-org")
+      - AUTHENTICATED_GITHUB_URL="https://${GITHUB_TOKEN}@github.com/${DRONE_REPO_OWNER}/${DRONE_REPO_NAME}.git"
       # We should be in a cached git repo, but clone if the cache failed
-      - "[ -d .git ] || (echo 'get-cached-staging failed: checkout will be SLOW and LFS $$$!' && git clone --branch $DRONE_BRANCH $AUTH_URL .)"
+      - "[ -d .git ] || (echo 'get-cached-staging failed: checkout will be SLOW and LFS $$!' && git clone --branch $DRONE_BRANCH $AUTHENTICATED_GITHUB_URL .)"
       # Update the remote URL to use authentication
-      - git remote set-url origin $AUTH_URL
+      - git remote set-url origin $AUTHENTICATED_GITHUB_URL
       # Checkout our source branch (the PR's branch).
       - git fetch origin $DRONE_SOURCE_BRANCH
       - git checkout $DRONE_SOURCE_BRANCH
@@ -310,11 +311,11 @@ steps:
         from_secret: GITHUB_TOKEN
     commands:
       - git lfs install
-      # Construct authenticated URL by inserting token into the DRONE_GIT_HTTP_URL
-      # DRONE_GIT_HTTP_URL format: https://github.com/owner/repo.git
-      # AUTH_URL format: https://TOKEN@github.com/owner/repo.git
-      - AUTH_URL=$(echo $DRONE_GIT_HTTP_URL | sed "s|https://|https://${GITHUB_TOKEN}@|")
-      - git clone --branch $DRONE_BRANCH $AUTH_URL .
+      # Construct authenticated URL using Drone's built-in environment variables
+      # DRONE_REPO_OWNER = organization name (e.g., "code-dot-org")
+      # DRONE_REPO_NAME = repository name (e.g., "code-dot-org")
+      - AUTHENTICATED_GITHUB_URL="https://${GITHUB_TOKEN}@github.com/${DRONE_REPO_OWNER}/${DRONE_REPO_NAME}.git"
+      - git clone --branch $DRONE_BRANCH $AUTHENTICATED_GITHUB_URL .
 
   - name: cache-staging-clone
     image: plugins/s3-cache
@@ -376,6 +377,6 @@ trigger:
     - push
 ---
 kind: signature
-hmac: 31cee1760cc05aacc5414e90085d5771bb68576eeb2aa7532eebcc1cfe2ec531
+hmac: 88f601477a02f8e63f96137ed6a5b1b7ba85f3226f3e027586fd8f1781f9b98c
 
 ...
