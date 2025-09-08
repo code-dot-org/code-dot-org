@@ -99,7 +99,7 @@ module AichatAiHelper
   # "config" object and "request" and "context" arrays.
   #
   # See 'aichat_ai_client.rb' for typescript definitions of these objects.
-  def self.get_config_request_context(stored_messages, new_message, temperature, system_prompt, retrieval_contexts,  model_id, level_id, encrypted_channel_id, user_id, project_id, json_schema = nil)
+  def self.get_config_request_context(stored_messages, new_message, temperature, system_prompt, retrieval_contexts,  model_id, level_id, encrypted_channel_id, user_id, project_id, client_type, json_schema = nil)
     level = Level.find_by(id: level_id)
 
     # Level system prompt - string or nil.
@@ -138,6 +138,7 @@ module AichatAiHelper
       model: get_api_model(model_id),
       systemInstructions: system_instructions,
       temperature: temperature,
+      clientType: client_type,
       response: response
     )
 
@@ -164,6 +165,8 @@ module AichatAiHelper
 
     temperature = aichat_model_customizations['temperature'].to_f
 
+    client_type = aichat_model_customizations['clientType']
+
     # System prompt - string or nil.
     system_prompt = aichat_model_customizations['systemPrompt']
 
@@ -173,7 +176,7 @@ module AichatAiHelper
     usage_reporter = AichatAiUsageReporter.new(model_id, user_id, project_id, level_id)
     client = AichatAiClient.create_instance(model_id, usage_reporter)
 
-    config, request, context = get_config_request_context(stored_messages, new_message, temperature, system_prompt, retrieval_contexts,  model_id, level_id, encrypted_channel_id, user_id, project_id)
+    config, request, context = get_config_request_context(stored_messages, new_message, temperature, system_prompt, retrieval_contexts,  model_id, level_id, encrypted_channel_id, user_id, project_id, client_type)
 
     begin
       response = client.get_response(config, request, context)

@@ -42,13 +42,9 @@ export const useInitialSources = (
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
   const exemplarSources = levelProperties.exemplarSources as MultiFileSource;
   const startSources = levelProperties.startSources as MultiFileSource;
-  const {
-    serializedMaze,
-    miniApp,
-    validationFile,
-    templateSources,
-    predictSettings,
-  } = levelProperties;
+  const templateSources = levelProperties.templateSources as MultiFileSource;
+  const {serializedMaze, miniApp, validationFile, predictSettings} =
+    levelProperties;
 
   const generateMazeFile = (mazeContents: MazeCell[][], fileId: string) => {
     return {

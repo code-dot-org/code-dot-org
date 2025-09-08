@@ -234,13 +234,19 @@ module AichatAiClientTypes
   #   // Actual temperature passed to 3rd party AI API (e.g. 1.6)
   #     temperature: number;
 
+  #   // Client type.
+  #   clientType: number
+
   #   // Configure the response. Optional, defaults to TextResponse.
   #   response?: TextResponseConfig | JsonResponseConfig
+  #
+
   # }
   AiConfig = Interface(
     :model, string,
     :systemInstructions, Optional(MessagePart[]),
     :temperature, number,
+    :clientType, number,
     :response,  Optional(TextResponseConfig | JsonResponseConfig)
   )
 

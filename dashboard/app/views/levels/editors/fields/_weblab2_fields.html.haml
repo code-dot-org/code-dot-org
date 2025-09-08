@@ -1,1 +1,18 @@
-%h1 Web Lab 2 Fields
+%h1.control-legend{data: {toggle: "collapse", target: "#weblab2_fields"}}
+  Web Lab 2 Fields
+
+#weblab2_fields.in.collapse
+  = f.label :initial_view_mode, 'Initial View Mode'
+  = f.select :initial_view_mode, options_for_select(@level.class.view_modes, @level.initial_view_mode)
+  %p Allows setting the initial view mode when the level is loaded, which can be:
+  %ul
+    %li
+      %strong Split mode (default):
+      shows both code editing and HTML preview in a split view.
+    %li
+      %strong Preview only:
+      Shows HTML preview only.
+    %li
+      %strong Code only:
+      Shows code editor only.
+  %p Students can switch between modes using buttons in the header.

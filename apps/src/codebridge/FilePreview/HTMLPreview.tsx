@@ -1,24 +1,41 @@
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
+import classNames from 'classnames';
 import React, {useEffect, useMemo, useRef, useState} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
+import {setIsFullScreenView} from '@cdo/apps/lab2/lab2Redux';
 import {isPredictResponseSubmitted} from '@cdo/apps/lab2/redux/predictLevelRedux';
-import {LifecycleEvent} from '@cdo/apps/lab2/utils';
+import {getLabViewPageAction, LifecycleEvent} from '@cdo/apps/lab2/utils';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
-import {IframeMessageType, DEFAULT_START_HTML_FILE} from './constants';
-import {UrlBar} from './UrlBar';
+import {
+  IframeMessageType,
+  PreviewViewMode,
+  DEFAULT_START_HTML_FILE,
+} from './constants';
+import {HTMLPreviewHeader} from './HTMLPreviewHeader';
 
 import moduleStyles from './styles/html-preview.module.scss';
 
 const URL_CHANGE_DELAY_MS = 300;
 const SOURCE_CHANGE_DELAY_MS = 500;
 
-export const HTMLPreview = () => {
+export const HTMLPreview: React.FC = () => {
+  const pageAction = getLabViewPageAction();
+  const isFullScreenView = useAppSelector(state => state.lab.isFullScreenView);
+  const iframeHeightClass = useMemo(() => {
+    if (pageAction === 'share' || isFullScreenView) {
+      return moduleStyles.fullScreenPreviewIframeHeight;
+    } else if (pageAction === 'edit' || pageAction === 'view') {
+      return moduleStyles.projectViewPreviewIframeHeight;
+    }
+    return moduleStyles.levelViewPreviewIframeHeight;
+  }, [pageAction, isFullScreenView]);
   const {levelProperties} = useCodebridgeContext();
   const iframeRef = useRef<HTMLIFrameElement | null>(null);
+  const previewContainerRef = useRef<HTMLDivElement | null>(null);
   const previewUrl = useMemo(() => {
     const re = /([-.]?studio)?\.?(cdn-)?code.org/i;
     const environmentKey = location.hostname.replace(re, '');
@@ -36,8 +53,12 @@ export const HTMLPreview = () => {
   const [debouncedSource, setDebouncedSource] = useState(source);
   const sourceLevelId = useRef<number | undefined>(undefined);
   const [isLevelLoading, setIsLevelLoading] = useState(false);
+  const [inputValue, setInputValue] = useState<string>(DEFAULT_START_HTML_FILE);
   const [currentFile, setCurrentFile] = useState<string>(
     DEFAULT_START_HTML_FILE
+  );
+  const [previewViewMode, setPreviewViewMode] = useState<PreviewViewMode>(
+    PreviewViewMode.DESKTOP
   );
   const isPredictLevel = levelProperties?.predictSettings?.isPredictLevel;
   const hasSubmittedPredictResponse = useAppSelector(
@@ -48,6 +69,25 @@ export const HTMLPreview = () => {
   const canNavigateForward =
     navigationHistoryIndex < navigationHistory.length - 1;
 
+  const dispatch = useAppDispatch();
+
+  const handleUrlSubmit = (newInputValue: string) => {
+    setCurrentFile(newInputValue);
+    iframeRef.current?.contentWindow?.postMessage(
+      {type: IframeMessageType.CHANGE_FILE_URL_BAR, fileName: newInputValue},
+      previewUrl
+    );
+    // Focus the iframe after submitting the URL
+    if (isIframeLoaded && iframeRef.current) {
+      previewContainerRef.current?.focus();
+    }
+    addToNavigationHistory(
+      newInputValue,
+      navigationHistoryIndex,
+      navigationHistory
+    );
+  };
+
   const onNavigateBack = () => {
     if (!canNavigateBack) {
       return;
@@ -55,8 +95,9 @@ export const HTMLPreview = () => {
     const updatedFile = navigationHistory[navigationHistoryIndex - 1];
     setNavigationHistoryIndex(navigationHistoryIndex - 1);
     setCurrentFile(updatedFile);
+    setInputValue(updatedFile);
     iframeRef.current?.contentWindow?.postMessage(
-      {type: IframeMessageType.NAVIGATE_TO_FILE, fileName: updatedFile},
+      {type: IframeMessageType.CHANGE_FILE_URL_BAR, fileName: updatedFile},
       previewUrl
     );
   };
@@ -67,10 +108,38 @@ export const HTMLPreview = () => {
     const updatedFile = navigationHistory[navigationHistoryIndex + 1];
     setNavigationHistoryIndex(navigationHistoryIndex + 1);
     setCurrentFile(updatedFile);
+    setInputValue(updatedFile);
     iframeRef.current?.contentWindow?.postMessage(
-      {type: IframeMessageType.NAVIGATE_TO_FILE, fileName: updatedFile},
+      {type: IframeMessageType.CHANGE_FILE_URL_BAR, fileName: updatedFile},
       previewUrl
     );
+  };
+
+  const toggleFullScreen = () => {
+    dispatch(setIsFullScreenView(!isFullScreenView));
+  };
+
+  const addToNavigationHistory = (
+    filePath: string,
+    navigationHistoryIndex: number,
+    navigationHistory: string[]
+  ) => {
+    // Only add filePath to navigation history if it is not already in history at the current index.
+    const addToNavHistory =
+      filePath !== navigationHistory[navigationHistoryIndex];
+    // If navigationHistoryIndex is the last index, add filePath to the end of the array.
+    // Otherwise, truncate the array after the current index and then add filePath to the end.
+    if (addToNavHistory) {
+      const updatedNavigationHistory =
+        navigationHistoryIndex === navigationHistory.length - 1
+          ? [...navigationHistory, filePath]
+          : [
+              ...navigationHistory.slice(0, navigationHistoryIndex + 1),
+              filePath,
+            ];
+      setNavigationHistory(updatedNavigationHistory);
+      setNavigationHistoryIndex(updatedNavigationHistory.length - 1);
+    }
   };
 
   const onRefresh = () => {
@@ -84,12 +153,16 @@ export const HTMLPreview = () => {
     // When we switch levels, clear the source so the preview does not show outdated content.
     setDebouncedSource(undefined);
     setIsLevelLoading(true);
-    setCurrentFile(DEFAULT_START_HTML_FILE);
   });
 
   useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, () => {
     setIsLevelLoading(false);
   });
+
+  // Update inputValue when currentFile changes (for navigation buttons)
+  useEffect(() => {
+    setInputValue(currentFile);
+  }, [currentFile]);
 
   useEffect(() => {
     const handleMessage = (event: MessageEvent) => {
@@ -107,22 +180,12 @@ export const HTMLPreview = () => {
         event.origin === previewUrl
       ) {
         setCurrentFile(event.data.fileName);
-      } else if (
-        event.data.type === IframeMessageType.ADD_FILE_TO_NAVIGATION_HISTORY &&
-        event.origin === previewUrl
-      ) {
-        // If navigationHistoryIndex is the last index, add the file to the end of the array.
-        // Otherwise, truncate the array after the current index and add the file to the end.
-        const updatedNavigationHistory =
-          navigationHistoryIndex === navigationHistory.length - 1
-            ? [...navigationHistory, event.data.fileToAddToNavigationHistory]
-            : [
-                ...navigationHistory.slice(0, navigationHistoryIndex + 1),
-                event.data.fileToAddToNavigationHistory,
-              ];
-
-        setNavigationHistory(updatedNavigationHistory);
-        setNavigationHistoryIndex(updatedNavigationHistory.length - 1);
+        setInputValue(event.data.fileName);
+        addToNavigationHistory(
+          event.data.fileName,
+          navigationHistoryIndex,
+          navigationHistory
+        );
       }
     };
 
@@ -149,9 +212,11 @@ export const HTMLPreview = () => {
     if (sourceLevelId.current !== levelProperties.id) {
       // If we have a new level id, update the source immediately.
       setDebouncedSource(source);
-      setNavigationHistory([]);
-      setNavigationHistoryIndex(-1);
       sourceLevelId.current = levelProperties.id;
+      setCurrentFile(DEFAULT_START_HTML_FILE);
+      setInputValue(DEFAULT_START_HTML_FILE);
+      setNavigationHistory([DEFAULT_START_HTML_FILE]);
+      setNavigationHistoryIndex(0);
     } else {
       // Set a timeout to send the debounced value after 500ms
       const debouncedSourceSetter = setTimeout(() => {
@@ -194,26 +259,46 @@ export const HTMLPreview = () => {
       hideHeaders
     >
       <div className={moduleStyles.previewContainer}>
-        <UrlBar
-          value={currentFile}
-          onChange={setCurrentFile}
+        <HTMLPreviewHeader
+          value={inputValue}
+          onChange={setInputValue}
+          onSubmit={handleUrlSubmit}
           canNavigateBack={canNavigateBack}
           canNavigateForward={canNavigateForward}
           onNavigateBack={onNavigateBack}
           onNavigateForward={onNavigateForward}
           onRefresh={onRefresh}
+          onToggleFullScreen={toggleFullScreen}
+          previewViewMode={previewViewMode}
+          setPreviewViewMode={setPreviewViewMode}
         />
         {/* This iframe points to the environment-specific version of preview.codeprojects.org. That url will eventually
             route to InnerHTMLPreview. */}
-        <iframe
-          sandbox="allow-scripts allow-same-origin"
-          allow="self"
-          title="Web Preview"
-          ref={iframeRef}
-          id="preview"
-          className={moduleStyles.previewIframe}
-          src={previewUrl}
-        />
+        <div
+          ref={previewContainerRef}
+          // This provides a small visual indicator when the iframe is focused after submitting the URL.
+          // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
+          tabIndex={0}
+          className={moduleStyles.previewWrapper}
+          role="application"
+          aria-label="Web Preview Frame"
+        >
+          <iframe
+            sandbox="allow-scripts allow-same-origin"
+            allow="self"
+            title="Web Preview"
+            ref={iframeRef}
+            id="preview"
+            className={classNames(
+              moduleStyles.previewIframe,
+              iframeHeightClass,
+              previewViewMode === PreviewViewMode.DESKTOP
+                ? moduleStyles.desktopPreviewIframe
+                : moduleStyles.mobilePreviewIframe
+            )}
+            src={previewUrl}
+          />
+        </div>
       </div>
     </PanelContainer>
   );

@@ -1,4 +1,5 @@
 import {Box} from '@mui/material';
+import classNames from 'classnames';
 import React, {useMemo} from 'react';
 
 import {
@@ -8,8 +9,8 @@ import {
 import {useWorkshopContext} from '../../../WorkshopLayout';
 import {FollowUpRequestedCard} from '../../components/FollowUpRequestedCard';
 import {FreeResponseCard} from '../../components/FreeResponseCard';
-import {MultiSelectCard} from '../../components/MultiSelectCard';
 import {ScoreCard} from '../../components/ScoreCard';
+import {SelectCard} from '../../components/SelectCard';
 import {LIKERT_QUESTION_FOOTER, MIN_RESPONSE_COUNT} from '../../constants';
 import {getQuestionDescription, prepLikertBreakdown} from '../../helpers';
 
@@ -47,10 +48,12 @@ export const Implementation = () => {
     if (!isQuestionType(barriersToImplementation, 'multiSelect')) {
       return [];
     }
-    return Object.entries(barriersToImplementation.results.breakdown)
+    return Object.entries(barriersToImplementation.results.breakdown ?? {})
       .filter(([key]) => key !== 'none')
       .map(([_, value]) => value);
   }, [barriersToImplementation]);
+
+  const followUpRequestedItems = surveys?.follow_up_requested ?? [];
 
   if (!questions) return null;
 
@@ -75,22 +78,29 @@ export const Implementation = () => {
         )}
       </Box>
 
-      <Box className={styles.cardRow}>
+      <Box className={classNames(styles.cardRow, styles.scrollContainerRow)}>
         {isQuestionType(barriersToImplementation, 'multiSelect') && (
-          <MultiSelectCard
+          <SelectCard
             title={
               barriersToImplementation.question_short_text ??
               barriersToImplementation.question_text
             }
             description={getQuestionDescription(barriersToImplementation)}
+            totalRespondents={
+              barriersToImplementation.results.total_respondents
+            }
             items={barriersItems}
             barLabel="Teachers"
           />
         )}
         <FollowUpRequestedCard
-          items={[]}
+          items={followUpRequestedItems}
           title="Follow-up requested"
-          description=""
+          description={
+            followUpRequestedItems.length
+              ? `${followUpRequestedItems.length} teachers requested additional support with implementation.`
+              : ''
+          }
         />
       </Box>
 
@@ -101,8 +111,10 @@ export const Implementation = () => {
               otherQuestionsImplementation.question_short_text ??
               otherQuestionsImplementation.question_text
             }
-            items={otherQuestionsImplementation.results.responses}
-            tagText={`${otherQuestionsImplementation.results.total_responses} Submitted`}
+            items={otherQuestionsImplementation.results.responses ?? []}
+            tagText={`${
+              otherQuestionsImplementation.results.total_responses ?? 0
+            } Submitted`}
           />
         )}
       </Box>

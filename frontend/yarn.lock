@@ -1142,7 +1142,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.0.0, @babel/runtime@npm:^7.12.1, @babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.24.1, @babel/runtime@npm:^7.9.2":
+"@babel/runtime@npm:^7.0.0, @babel/runtime@npm:^7.12.5":
   version: 7.26.10
   resolution: "@babel/runtime@npm:7.26.10"
   dependencies:
@@ -1486,7 +1486,7 @@ __metadata:
     "@applitools/eyes-playwright": "npm:^1.36.3"
     "@code-dot-org/component-library": "workspace:*"
     "@code-dot-org/fonts": "workspace:*"
-    "@contentful/experiences-sdk-react": "npm:^2.0.1"
+    "@contentful/experiences-sdk-react": "npm:^3.6.0"
     "@contentful/rich-text-html-renderer": "npm:^17.1.0"
     "@contentful/rich-text-plain-text-renderer": "npm:^17.1.0"
     "@emotion/cache": "npm:^11.14.0"
@@ -1576,55 +1576,44 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@contentful/experiences-components-react@npm:2.0.1":
-  version: 2.0.1
-  resolution: "@contentful/experiences-components-react@npm:2.0.1"
+"@contentful/experiences-components-react@npm:3.6.0":
+  version: 3.6.0
+  resolution: "@contentful/experiences-components-react@npm:3.6.0"
   dependencies:
-    "@contentful/experiences-core": "npm:2.0.1"
+    "@contentful/experiences-core": "npm:3.6.0"
     "@contentful/rich-text-react-renderer": "npm:^16.0.1"
     postcss-import: "npm:^16.0.1"
     style-inject: "npm:^0.3.0"
   peerDependencies:
     react: ">=17.0.0"
     react-dom: ">=17.0.0"
-  checksum: 10c0/b14cbf6c1409a33887a1b0aa4f1308655ef5b35d55a0f55cd0d47c25f592632eaa540f745933462543661cc4abb0268d946ec280ff0a02456ca84f29c8834638
+  checksum: 10c0/a8d438caf7d9e7c04bbeae4ce4c00c27c91380d6ac8b184d99f10440749de8e918f2a7f703488a6feb03593725d1db984e807f3283d71938e19bc0db4d92bae7
   languageName: node
   linkType: hard
 
-"@contentful/experiences-core@npm:2.0.1":
-  version: 2.0.1
-  resolution: "@contentful/experiences-core@npm:2.0.1"
+"@contentful/experiences-core@npm:3.6.0":
+  version: 3.6.0
+  resolution: "@contentful/experiences-core@npm:3.6.0"
   dependencies:
-    "@contentful/experiences-validators": "npm:2.0.1"
+    "@contentful/experiences-validators": "npm:3.6.0"
     "@contentful/rich-text-types": "npm:^17.0.0"
+    lodash-es: "npm:^4.17.21"
+    zustand: "npm:^4.4.7"
   peerDependencies:
     contentful: ">=10.6.0"
-  checksum: 10c0/a1457467f00c0206491794bc2d4fa129b02664225e66f8e22e37998fe4792527a4bb618ff12d31771df8085d77880f80bf6d7a8707c61f36f1c0a044b72f29ce
+  checksum: 10c0/84cbbb0aa55347a81d687ed157bce2ecf34b200b3d99be7a564f7b8984e5c200915c07aa7cb54c2bc16a28be94f9dfe0add15746dcef8aa5f60854b9c42c5b95
   languageName: node
   linkType: hard
 
-"@contentful/experiences-core@patch:@contentful/experiences-core@npm%3A2.0.1#~/apps/marketing/patches/@contentful-experiences-core-npm-2.0.1-c20f8b5e11.patch":
-  version: 2.0.1
-  resolution: "@contentful/experiences-core@patch:@contentful/experiences-core@npm%3A2.0.1#~/apps/marketing/patches/@contentful-experiences-core-npm-2.0.1-c20f8b5e11.patch::version=2.0.1&hash=883b0e"
+"@contentful/experiences-sdk-react@npm:^3.6.0":
+  version: 3.6.0
+  resolution: "@contentful/experiences-sdk-react@npm:3.6.0"
   dependencies:
-    "@contentful/experiences-validators": "npm:2.0.1"
+    "@contentful/experiences-components-react": "npm:3.6.0"
+    "@contentful/experiences-core": "npm:3.6.0"
+    "@contentful/experiences-validators": "npm:3.6.0"
+    "@contentful/experiences-visual-editor-react": "npm:3.6.0"
     "@contentful/rich-text-types": "npm:^17.0.0"
-  peerDependencies:
-    contentful: ">=10.6.0"
-  checksum: 10c0/239d409a9ff8d4002d41efba184e4b2db1ad1cedf5d0a99d4b6829b0f15a453be098f5721e432e31027f23088224c5ff7856216ab054c244e316a83a5345258b
-  languageName: node
-  linkType: hard
-
-"@contentful/experiences-sdk-react@npm:^2.0.1":
-  version: 2.0.1
-  resolution: "@contentful/experiences-sdk-react@npm:2.0.1"
-  dependencies:
-    "@contentful/experiences-components-react": "npm:2.0.1"
-    "@contentful/experiences-core": "npm:2.0.1"
-    "@contentful/experiences-validators": "npm:2.0.1"
-    "@contentful/experiences-visual-editor-react": "npm:2.0.1"
-    "@contentful/rich-text-types": "npm:^17.0.0"
-    classnames: "npm:^2.3.2"
     csstype: "npm:^3.1.2"
     immer: "npm:^10.0.3"
     lodash-es: "npm:^4.17.21"
@@ -1634,27 +1623,25 @@ __metadata:
     contentful: ">=10.6.0"
     react: ">=16.0.0"
     react-dom: ">=16.0.0"
-  checksum: 10c0/989b9101f0434ef10357f44286c8203ab9bd02825c12776064ae2abf8cf46d3c65cee98d664234d4c4f14cda7ba7d9744e0d55a96c6021e610b1753fc64c499f
+  checksum: 10c0/22c2291106ebecf43e6ad76e53895bf84e5495e6e82938a248e444be969d837924f2c545e1cee147fff3a4a02eafc452439cfa7deff17d4043d5c0453ecca601
   languageName: node
   linkType: hard
 
-"@contentful/experiences-validators@npm:2.0.1":
-  version: 2.0.1
-  resolution: "@contentful/experiences-validators@npm:2.0.1"
+"@contentful/experiences-validators@npm:3.6.0":
+  version: 3.6.0
+  resolution: "@contentful/experiences-validators@npm:3.6.0"
   dependencies:
     zod: "npm:^3.22.4"
-  checksum: 10c0/ff8f6e35f286fbac47a071e126020fc0c48ea43a98ed3f1ad36503b580e291702247a761a715a8780ae20fe53a2932753535d361f4d27dfce965c4a70cb1d95e
+  checksum: 10c0/5cc0134865f1abc24d0b246e16c4c75ea731c4107bb3d83b8c691a9d7d1c67e64e4d8289da9e68aa15287ac4718f7669300e696ba1f452780a28c0f0b3df5c6f
   languageName: node
   linkType: hard
 
-"@contentful/experiences-visual-editor-react@npm:2.0.1":
-  version: 2.0.1
-  resolution: "@contentful/experiences-visual-editor-react@npm:2.0.1"
+"@contentful/experiences-visual-editor-react@npm:3.6.0":
+  version: 3.6.0
+  resolution: "@contentful/experiences-visual-editor-react@npm:3.6.0"
   dependencies:
-    "@contentful/experiences-components-react": "npm:2.0.1"
-    "@contentful/experiences-core": "npm:2.0.1"
-    "@hello-pangea/dnd": "npm:^16.3.0"
-    classnames: "npm:^2.3.2"
+    "@contentful/experiences-components-react": "npm:3.6.0"
+    "@contentful/experiences-core": "npm:3.6.0"
     contentful: "npm:^10.6.14"
     immer: "npm:^10.0.3"
     lodash-es: "npm:^4.17.21"
@@ -1666,7 +1653,7 @@ __metadata:
   peerDependencies:
     react: ">=17.0.0"
     react-dom: ">=17.0.0"
-  checksum: 10c0/8ca320627a00abe438d1126b6f352af62c829d0cdb640ae1c07e2bd081cc7104375a0709408c88aa3063a893128a7282f77f11c467af21139898f7aed4231e87
+  checksum: 10c0/1e7fa261157e15dd267980af9967e0450fd56c3cca9702177ab51ab9826a268edb76f07c551b7e59578ba2faf631ed880ad090e9f8fad032d9dda699a56a363d
   languageName: node
   linkType: hard
 
@@ -3189,24 +3176,6 @@ __metadata:
   dependencies:
     "@hapi/hoek": "npm:^9.0.0"
   checksum: 10c0/b16b06d9357947149e032bdf10151eb71aea8057c79c4046bf32393cb89d0d0f7ca501c40c0f7534a5ceca078de0700d2257ac855c15e59fe4e00bba2f25c86f
-  languageName: node
-  linkType: hard
-
-"@hello-pangea/dnd@npm:^16.3.0":
-  version: 16.6.0
-  resolution: "@hello-pangea/dnd@npm:16.6.0"
-  dependencies:
-    "@babel/runtime": "npm:^7.24.1"
-    css-box-model: "npm:^1.2.1"
-    memoize-one: "npm:^6.0.0"
-    raf-schd: "npm:^4.0.3"
-    react-redux: "npm:^8.1.3"
-    redux: "npm:^4.2.1"
-    use-memo-one: "npm:^1.1.3"
-  peerDependencies:
-    react: ^16.8.5 || ^17.0.0 || ^18.0.0
-    react-dom: ^16.8.5 || ^17.0.0 || ^18.0.0
-  checksum: 10c0/ef43ba21f063f6497f399b457452d45be456b1f28405b148d9683d2ca65e5f77e2685a0b7e9998aaca4f8676b1642ba2c277fc78643ea59fd6b9f71a56ffc5e0
   languageName: node
   linkType: hard
 
@@ -7929,16 +7898,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/hoist-non-react-statics@npm:^3.3.1":
-  version: 3.3.6
-  resolution: "@types/hoist-non-react-statics@npm:3.3.6"
-  dependencies:
-    "@types/react": "npm:*"
-    hoist-non-react-statics: "npm:^3.3.0"
-  checksum: 10c0/149a4c217d81f21f8a1e152160a59d5b99b6a9aa6d354385d5f5bc02760cbf1e170a8442ba92eb653befff44b0c5bc2234bb77ce33e0d11a65f779e8bab5c321
-  languageName: node
-  linkType: hard
-
 "@types/html-minifier-terser@npm:^6.0.0":
   version: 6.1.0
   resolution: "@types/html-minifier-terser@npm:6.1.0"
@@ -8346,13 +8305,6 @@ __metadata:
   version: 4.0.5
   resolution: "@types/tough-cookie@npm:4.0.5"
   checksum: 10c0/68c6921721a3dcb40451543db2174a145ef915bc8bcbe7ad4e59194a0238e776e782b896c7a59f4b93ac6acefca9161fccb31d1ce3b3445cb6faa467297fb473
-  languageName: node
-  linkType: hard
-
-"@types/use-sync-external-store@npm:^0.0.3":
-  version: 0.0.3
-  resolution: "@types/use-sync-external-store@npm:0.0.3"
-  checksum: 10c0/82824c1051ba40a00e3d47964cdf4546a224e95f172e15a9c62aa3f118acee1c7518b627a34f3aa87298a2039f982e8509f92bfcc18bea7c255c189c293ba547
   languageName: node
   linkType: hard
 
@@ -10529,7 +10481,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"classnames@npm:^2.3.2, classnames@npm:^2.5.1":
+"classnames@npm:^2.5.1":
   version: 2.5.1
   resolution: "classnames@npm:2.5.1"
   checksum: 10c0/afff4f77e62cea2d79c39962980bf316bacb0d7c49e13a21adaadb9221e1c6b9d3cdb829d8bb1b23c406f4e740507f37e1dcf506f7e3b7113d17c5bab787aa69
@@ -11267,15 +11219,6 @@ __metadata:
   version: 0.0.2
   resolution: "crypt@npm:0.0.2"
   checksum: 10c0/adbf263441dd801665d5425f044647533f39f4612544071b1471962209d235042fb703c27eea2795c7c53e1dfc242405173003f83cf4f4761a633d11f9653f18
-  languageName: node
-  linkType: hard
-
-"css-box-model@npm:^1.2.1":
-  version: 1.2.1
-  resolution: "css-box-model@npm:1.2.1"
-  dependencies:
-    tiny-invariant: "npm:^1.0.6"
-  checksum: 10c0/611e56d76b16e4e21956ed9fa53f1936fbbfaccd378659587e9c929f342037fc6c062f8af9447226e11fe7c95e31e6c007a37e592f9bff4c2d40e6915553104a
   languageName: node
   linkType: hard
 
@@ -14752,7 +14695,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"hoist-non-react-statics@npm:^3.3.0, hoist-non-react-statics@npm:^3.3.1, hoist-non-react-statics@npm:^3.3.2":
+"hoist-non-react-statics@npm:^3.3.1":
   version: 3.3.2
   resolution: "hoist-non-react-statics@npm:3.3.2"
   dependencies:
@@ -17376,13 +17319,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"memoize-one@npm:^6.0.0":
-  version: 6.0.0
-  resolution: "memoize-one@npm:6.0.0"
-  checksum: 10c0/45c88e064fd715166619af72e8cf8a7a17224d6edf61f7a8633d740ed8c8c0558a4373876c9b8ffc5518c2b65a960266adf403cc215cb1e90f7e262b58991f54
-  languageName: node
-  linkType: hard
-
 "meow@npm:^13.0.0, meow@npm:^13.2.0":
   version: 13.2.0
   resolution: "meow@npm:13.2.0"
@@ -19603,13 +19539,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"raf-schd@npm:^4.0.3":
-  version: 4.0.3
-  resolution: "raf-schd@npm:4.0.3"
-  checksum: 10c0/ecabf0957c05fad059779bddcd992f1a9d3a35dfea439a6f0935c382fcf4f7f7fa60489e467b4c2db357a3665167d2a379782586b59712bb36c766e02824709b
-  languageName: node
-  linkType: hard
-
 "randombytes@npm:^2.1.0":
   version: 2.1.0
   resolution: "randombytes@npm:2.1.0"
@@ -19780,38 +19709,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-redux@npm:^8.1.3":
-  version: 8.1.3
-  resolution: "react-redux@npm:8.1.3"
-  dependencies:
-    "@babel/runtime": "npm:^7.12.1"
-    "@types/hoist-non-react-statics": "npm:^3.3.1"
-    "@types/use-sync-external-store": "npm:^0.0.3"
-    hoist-non-react-statics: "npm:^3.3.2"
-    react-is: "npm:^18.0.0"
-    use-sync-external-store: "npm:^1.0.0"
-  peerDependencies:
-    "@types/react": ^16.8 || ^17.0 || ^18.0
-    "@types/react-dom": ^16.8 || ^17.0 || ^18.0
-    react: ^16.8 || ^17.0 || ^18.0
-    react-dom: ^16.8 || ^17.0 || ^18.0
-    react-native: ">=0.59"
-    redux: ^4 || ^5.0.0-beta.0
-  peerDependenciesMeta:
-    "@types/react":
-      optional: true
-    "@types/react-dom":
-      optional: true
-    react-dom:
-      optional: true
-    react-native:
-      optional: true
-    redux:
-      optional: true
-  checksum: 10c0/64c8be2765568dc66a3c442a41dd0ed74fe048d5ceb7a4fe72e5bac3d3687996a7115f57b5156af7406521087065a0e60f9194318c8ca99c55e9ce48558980ce
-  languageName: node
-  linkType: hard
-
 "react-schemaorg@npm:^2.0.0":
   version: 2.0.0
   resolution: "react-schemaorg@npm:2.0.0"
@@ -19964,15 +19861,6 @@ __metadata:
     "@redis/search": "npm:1.2.0"
     "@redis/time-series": "npm:1.1.0"
   checksum: 10c0/36fc11b7b305e73cafd0a32c5e7070aef72d3a33f2b34f609a1c295afb7d1a022d74eeda96e8d887ef596bbe8ce10811450d02b63175a338d2ff258ff34bd237
-  languageName: node
-  linkType: hard
-
-"redux@npm:^4.2.1":
-  version: 4.2.1
-  resolution: "redux@npm:4.2.1"
-  dependencies:
-    "@babel/runtime": "npm:^7.9.2"
-  checksum: 10c0/136d98b3d5dbed1cd6279c8c18a6a74c416db98b8a432a46836bdd668475de6279a2d4fd9d1363f63904e00f0678a8a3e7fa532c897163340baf1e71bb42c742
   languageName: node
   linkType: hard
 
@@ -22244,7 +22132,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tiny-invariant@npm:^1.0.6, tiny-invariant@npm:^1.3.3":
+"tiny-invariant@npm:^1.3.3":
   version: 1.3.3
   resolution: "tiny-invariant@npm:1.3.3"
   checksum: 10c0/65af4a07324b591a059b35269cd696aba21bef2107f29b9f5894d83cc143159a204b299553435b03874ebb5b94d019afa8b8eff241c8a4cfee95872c2e1c1c4a
@@ -23155,30 +23043,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"use-memo-one@npm:^1.1.3":
-  version: 1.1.3
-  resolution: "use-memo-one@npm:1.1.3"
-  peerDependencies:
-    react: ^16.8.0 || ^17.0.0 || ^18.0.0
-  checksum: 10c0/3d596e65a6b47b2f1818061599738e00daad1f9a9bb4e5ce1f014b20a35b297e50fe4bf1d8c1699ab43ea97f01f84649a736c15ceff96de83bfa696925f6cc6b
-  languageName: node
-  linkType: hard
-
 "use-sync-external-store@npm:1.2.2":
   version: 1.2.2
   resolution: "use-sync-external-store@npm:1.2.2"
   peerDependencies:
     react: ^16.8.0 || ^17.0.0 || ^18.0.0
   checksum: 10c0/23b1597c10adf15b26ade9e8c318d8cc0abc9ec0ab5fc7ca7338da92e89c2536abd150a5891bf076836c352fdfa104fc7231fb48f806fd9960e0cbe03601abaf
-  languageName: node
-  linkType: hard
-
-"use-sync-external-store@npm:^1.0.0":
-  version: 1.4.0
-  resolution: "use-sync-external-store@npm:1.4.0"
-  peerDependencies:
-    react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
-  checksum: 10c0/ec011a5055962c0f6b509d6e78c0b143f8cd069890ae370528753053c55e3b360d3648e76cfaa854faa7a59eb08d6c5fb1015e60ffde9046d32f5b2a295acea5
   languageName: node
   linkType: hard
 
