@@ -89,6 +89,7 @@ type SimpleBarChartProps = {
   xAxisLabel?: string;
   barSize?: number;
   step?: number;
+  animate?: boolean;
 };
 
 const SimpleBarChart: React.FC<SimpleBarChartProps> = ({
@@ -99,6 +100,7 @@ const SimpleBarChart: React.FC<SimpleBarChartProps> = ({
   xAxisLabel,
   step = 2,
   barSize = 42,
+  animate = false,
 }) => {
   const yMax = Math.max(...data.map(d => d.value), 10);
   const niceMax = Math.ceil(yMax / step) * step + step;
@@ -163,9 +165,9 @@ const SimpleBarChart: React.FC<SimpleBarChartProps> = ({
         dataKey="value"
         radius={[4, 4, 0, 0]} // rounded tops
         shape={<Rectangle radius={[4, 4, 0, 0]} />} // ensures rounding everywhere in v2.8
-        isAnimationActive={true}
-        animationDuration={600}
-        animationEasing="ease-out"
+        isAnimationActive={animate}
+        animationDuration={animate ? 600 : undefined}
+        animationEasing={animate ? 'ease-out' : undefined}
       >
         {!!data.length &&
           data.map((d, i) => {
@@ -188,6 +190,7 @@ type BarChartGroupProps = {
   data: SimpleBarChartData[];
   xAxisLabel?: string;
   yAxisLabel?: string;
+  animate?: boolean;
 };
 
 const BarChartGroup: React.FC<BarChartGroupProps> = ({
@@ -197,6 +200,7 @@ const BarChartGroup: React.FC<BarChartGroupProps> = ({
   data = [],
   xAxisLabel,
   yAxisLabel,
+  animate,
 }) => (
   <Box className={moduleStyles.barChartGroupContainer}>
     <Box className={moduleStyles.barChartGroupHeaderContainer}>
@@ -211,6 +215,7 @@ const BarChartGroup: React.FC<BarChartGroupProps> = ({
         data={data}
         xAxisLabel={xAxisLabel}
         yAxisLabel={yAxisLabel}
+        animate={animate}
       />
     </Box>
   </Box>

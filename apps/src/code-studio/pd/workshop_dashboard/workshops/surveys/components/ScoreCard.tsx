@@ -153,6 +153,7 @@ export const ScoreCard: FC<ScoreCardProps> = ({
                   width={620}
                   height={250}
                   barSize={20}
+                  animate={true}
                 />
               </Box>
             )}
