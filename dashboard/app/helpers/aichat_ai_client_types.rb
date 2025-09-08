@@ -70,63 +70,63 @@ module AichatAiClientTypes
     :parts, MessagePart[]
   )
 
-  # // type JsonPrimitiveType = 'string' | 'number' | 'boolean' | 'null';
+  # type JsonPrimitiveType = 'string' | 'number' | 'boolean' | 'null';
   JsonPrimitiveType = string("string") | string("number") | string("boolean") | string("null")
 
-  # // interface JsonStringSchema {
-  # //   type: 'string';
-  # //   description?: string;
-  # //   enum?: string[];
-  # // }
+  # interface JsonStringSchema {
+  #   type: 'string';
+  #   description?: string;
+  #   enum?: string[];
+  # }
   JsonStringSchema = Interface(
     :type, string("string"),
     :description, Optional(string),
     :enum, Optional(string[])
   )
 
-  # // interface JsonNumberSchema {
-  # //   type: 'number';
-  # //   description?: string;
-  # //   enum?: number[];
-  # // }
+  # interface JsonNumberSchema {
+  #   type: 'number';
+  #   description?: string;
+  #   enum?: number[];
+  # }
   JsonNumberSchema = Interface(
     :type, string("number"),
     :description, Optional(string),
     :enum, Optional(number[])
   )
 
-  # // interface JsonBooleanSchema {
-  # //   type: 'boolean';
-  # //   description?: string;
-  # // }
+  # interface JsonBooleanSchema {
+  #   type: 'boolean';
+  #   description?: string;
+  # }
   JsonBooleanSchema = Interface(
     :type, string("boolean"),
     :description, Optional(string)
   )
 
-  # // interface JsonNullSchema {
-  # //   type: 'null';
-  # //   description?: string;
-  # // }
+  # interface JsonNullSchema {
+  #   type: 'null';
+  #   description?: string;
+  # }
   JsonNullSchema = Interface(
     :type, string("null"),
     :description, Optional(string)
   )
 
-  # // type JsonPrimitiveSchema = JsonStringSchema | JsonNumberSchema | JsonBooleanSchema | JsonNullSchema;
+  # type JsonPrimitiveSchema = JsonStringSchema | JsonNumberSchema | JsonBooleanSchema | JsonNullSchema;
   JsonPrimitiveSchema = JsonStringSchema | JsonNumberSchema | JsonBooleanSchema | JsonNullSchema
 
   JsonProperties_ = ForwardRef()
 
-  # // interface JsonObjectSchema {
-  # //   type: 'object';
-  # //   properties: JsonProperties;
-  # //   // The required array is optional in JsonSchema but required w/ OpenAI.
-  # //   // OpenAI also requires that all properties are required which  we don't
-  # //   // have a way to check w/ RubyTypes so an additional check is required.
-  # //   required: string[];
-  # //   description?: string;
-  # // }
+  # interface JsonObjectSchema {
+  #   type: 'object';
+  #   properties: JsonProperties;
+  #   // The required array is optional in JsonSchema but required w/ OpenAI.
+  #   // OpenAI also requires that all properties are required which  we don't
+  #   // have a way to check w/ RubyTypes so an additional check is required.
+  #   required: string[];
+  #   description?: string;
+  # }
   JsonObjectSchema = Interface(
     :type, string('object'),
     :properties, JsonProperties_,
@@ -137,11 +137,11 @@ module AichatAiClientTypes
 
   JsonArraySchema_ = ForwardRef()
 
-  # // interface JsonArraySchema {
-  # //   type: 'array';
-  # //   items: JsonPrimitiveSchema | JsonArraySchema | JsonObjectSchema;
-  # //   description?: string;
-  # // }
+  # interface JsonArraySchema {
+  #   type: 'array';
+  #   items: JsonPrimitiveSchema | JsonArraySchema | JsonObjectSchema;
+  #   description?: string;
+  # }
   JsonArraySchema = Interface(
     ForwardRef(JsonArraySchema_),
     :type, string('array'),
@@ -149,17 +149,17 @@ module AichatAiClientTypes
     :description, Optional(string)
   )
 
-  # // interface JsonProperties {
-  # //   [key: string]: JsonPrimitiveSchema | JsonArraySchema | JsonObjectSchema;
-  # // }
+  # interface JsonProperties {
+  #   [key: string]: JsonPrimitiveSchema | JsonArraySchema | JsonObjectSchema;
+  # }
   JsonProperties = Interface(
     ForwardRef(JsonProperties_),
     key[string],  JsonPrimitiveSchema | JsonArraySchema | JsonObjectSchema
   )
 
-  # // // While JsonSchema allows primitives and arrays at the top level, OpenAI's
-  # // // implementation is limited to objects at the top level.
-  # // type JsonSchema = JsonObjectSchema
+  # // While JsonSchema allows primitives and arrays at the top level, OpenAI's
+  # // implementation is limited to objects at the top level.
+  # type JsonSchema = JsonObjectSchema
   JsonSchema = JsonObjectSchema
 
   # Interface TextResponseConfig {
