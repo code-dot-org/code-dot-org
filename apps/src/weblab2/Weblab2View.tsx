@@ -14,6 +14,7 @@ import {useSource} from '../codebridge/hooks/useSource';
 import {useAppDispatch, useAppSelector} from '../util/reduxHooks';
 
 import {WEBLAB2_EDITABLE_FILE_TYPES} from './constants';
+import getAiTutor2Context from './helpers/aiTutorHelper';
 import FullScreenView from './layout/FullScreenView';
 import ShareView from './layout/ShareView';
 import VerticalLayout from './layout/VerticalLayout';
@@ -67,6 +68,14 @@ const Weblab2View: React.FC<
   LabProps<Weblab2LevelProperties, ProjectSources>
 > = ({levelProperties, initialSources}) => {
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
+  const [aiTutor2Context, setAiTutor2Context] = useState<string | undefined>(
+    undefined
+  );
+  const sources = useAppSelector(
+    state =>
+      state.lab2Project.projectSources?.source as MultiFileSource | undefined
+  );
+
   const {startSources} = useSource(
     defaultProject,
     levelProperties,
@@ -76,6 +85,16 @@ const Weblab2View: React.FC<
   const hasSource = useAppSelector(
     state => !!state.lab2Project.projectSources?.source
   );
+
+  // Note: this causes Web Lab 2 to re-render when sources change.
+  // Unfortunately, the way AI tutor is set up right now requires passing in a context
+  // rather than a callback for the context. In the future, we should consider refactoring AI
+  // Tutor so we don't have to re-render the entire lab when sources change (this is also the case for Python Lab).
+  useEffect(() => {
+    setAiTutor2Context(
+      getAiTutor2Context(sources, levelProperties.longInstructions)
+    );
+  }, [sources, levelProperties.longInstructions]);
 
   // Since there's no run button in Weblab2, set it to true by default
   // to enable the Submit button on edit on submittable levels.
@@ -101,6 +120,7 @@ const Weblab2View: React.FC<
           setConfig={setConfig}
           startSources={startSources}
           levelProperties={levelProperties}
+          aiTutor2Context={aiTutor2Context}
         />
       )}
     </div>

@@ -101,6 +101,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const isWidgetView = instructionsProps.levelProperties.widgetView || false;
 
   const levelId = instructionsProps.levelProperties.id;
+  const appName = instructionsProps.levelProperties.appName;
 
   // Build available tabs based on level information.
   const availableTabs = useMemo(() => {
@@ -127,7 +128,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     }
 
     if (
-      (levelProperties.aiTutorAvailable ||
+      (appName === 'weblab2' ||
+        levelProperties.aiTutorAvailable ||
         queryParams('show-ai-tutor2') === 'true') &&
       aiTutor2Context
     ) {
@@ -161,6 +163,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   }, [
     instructionsProps,
     isUserTeacher,
+    appName,
     aiTutor2Context,
     isReadOnly,
     isViewingOldVersion,
