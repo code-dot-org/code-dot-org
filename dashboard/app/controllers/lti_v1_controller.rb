@@ -8,6 +8,8 @@ require "clients/lti_logger"
 require "cdo/honeybadger"
 require 'metrics/events'
 
+# TODO: remove this comment
+
 class LtiV1Controller < ApplicationController
   # Don't require an authenticity token because LTI Platforms POST to this
   # controller.
