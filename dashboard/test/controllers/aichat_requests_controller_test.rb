@@ -14,11 +14,12 @@ class AichatRequestsControllerTest < ActionController::TestCase
     @level = create(:level)
     @script = create(:script, :in_single_unit_course)
 
-    @default_model_customizations = {temperature: 0.5, retrievalContexts: ['test'], systemPrompt: 'test', selectedModelId: 'gpt-4o-mini'}.stringify_keys
+    @default_model_customizations = {clientType: 0, temperature: 0.5, retrievalContexts: ['test'], systemPrompt: 'test', selectedModelId: 'gpt-4o-mini'}.stringify_keys
     @default_aichat_context = {
       currentLevelId: @level.id,
       scriptId: @script.id,
-      channelId: 'test'
+      channelId: 'test',
+      clientType: SharedConstants::AI_CHAT_CLIENT_TYPES[:AI_CHAT_LAB]
     }
 
     @common_params = {

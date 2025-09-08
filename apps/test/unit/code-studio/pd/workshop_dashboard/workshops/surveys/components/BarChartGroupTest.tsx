@@ -4,18 +4,9 @@ import React from 'react';
 
 import {
   BarChartGroup,
+  barColors,
   SimpleBarChart,
 } from '@cdo/apps/code-studio/pd/workshop_dashboard/workshops/surveys/components/BarChartGroup';
-
-// Keep these in sync with the component
-const barColors = [
-  'var(--sentiment-success-50, #3EA33E)',
-  'var(--accent-orange-50, #FFB42E)',
-  'var(--accent-strawberry-50, #ED6060)',
-  'var(--brand-teal-50, #0093A4)',
-  'var(--brand-purple-50, #8c52ba)',
-  'var(--brand-aqua-50, #3cfff7)',
-];
 
 const sampleData = [
   {label: '0–2', value: 9},

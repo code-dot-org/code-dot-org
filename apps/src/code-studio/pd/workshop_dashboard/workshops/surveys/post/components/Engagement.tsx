@@ -13,7 +13,11 @@ import {
   MIN_RESPONSE_COUNT,
   PROMOTER_QUESTION_FOOTER,
 } from '../../constants';
-import {getQuestionDescription, prepLikertBreakdown} from '../../helpers';
+import {
+  getQuestionDescription,
+  prepLikertBreakdown,
+  prepPromoterBreakdown,
+} from '../../helpers';
 
 import styles from '../../../workshop.module.scss';
 
@@ -51,6 +55,9 @@ export const Engagement = () => {
             score={likelyToRecommend.results.promoter_percentage}
             responseCount={likelyToRecommend.results.total_responses}
             minResponseCount={MIN_RESPONSE_COUNT}
+            breakdown={prepPromoterBreakdown(
+              likelyToRecommend.results.breakdown
+            )}
           />
         )}
         {likertQuestionRow.map(question =>

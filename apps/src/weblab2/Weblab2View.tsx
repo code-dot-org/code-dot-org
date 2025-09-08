@@ -13,6 +13,8 @@ import {LabProps, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 import {useSource} from '../codebridge/hooks/useSource';
 import {useAppDispatch, useAppSelector} from '../util/reduxHooks';
 
+import {WEBLAB2_EDITABLE_FILE_TYPES} from './constants';
+import FullScreenView from './layout/FullScreenView';
 import ShareView from './layout/ShareView';
 import VerticalLayout from './layout/VerticalLayout';
 import {setViewMode} from './redux';
@@ -20,20 +22,21 @@ import {Weblab2LevelProperties, ViewMode} from './types';
 
 import moduleStyles from './styles/weblab2-view.module.scss';
 
-const weblabLangMapping: {[key: string]: LanguageSupport} = {
+const weblab2LangMapping: {[key: string]: LanguageSupport} = {
   html: html(),
   css: css(),
   js: javascript(),
 };
 
 const defaultConfig: ConfigType = {
-  languageMapping: weblabLangMapping,
-  editableFileTypes: ['html', 'css', 'js'],
+  languageMapping: weblab2LangMapping,
+  editableFileTypes: WEBLAB2_EDITABLE_FILE_TYPES,
   activeLayout: 'vertical',
   layoutComponents: {
     vertical: VerticalLayout,
     widget: VerticalLayout,
     share: ShareView,
+    fullScreen: FullScreenView,
   },
 };
 
