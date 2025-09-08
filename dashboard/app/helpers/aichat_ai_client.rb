@@ -26,12 +26,14 @@ class AichatAiClient
 
     body = create_body(config, request, context)
 
+    read_timeout = DCDO.get('openai_http_read_timeout', SharedConstants::AI_CHAT_READ_TIMEOUTS[config[:clientType]] || 30)
+
     http_response = HTTParty.post(
       url,
       headers: headers,
       body: body.to_json,
       open_timeout: DCDO.get('openai_http_open_timeout', 5),
-      read_timeout: DCDO.get('openai_http_read_timeout', 30)
+      read_timeout: read_timeout
     )
 
     response_body = JSON.parse(http_response.body)

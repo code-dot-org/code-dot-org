@@ -3,6 +3,8 @@ import classNames from 'classnames';
 import React, {memo, useCallback, useContext, useEffect} from 'react';
 import {useSelector} from 'react-redux';
 
+import {WorkspaceSerialization} from '@cdo/apps/blockly/types';
+import {applyBlockIdOverrides} from '@cdo/apps/blockly/utils';
 import header from '@cdo/apps/code-studio/header';
 import {
   START_SOURCES,
@@ -30,10 +32,7 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import AnalyticsReporter from '../analytics/AnalyticsReporter';
 import AppConfig from '../appConfig';
-import {
-  applyBlockIdOverrides,
-  installFunctionBlocks,
-} from '../blockly/blockUtils';
+import {installFunctionBlocks} from '../blockly/blockUtils';
 import MusicBlocklyWorkspace from '../blockly/MusicBlocklyWorkspace';
 import {Trigger} from '../constants';
 import musicI18n from '../locale';
@@ -52,6 +51,7 @@ import {MusicExemplarSettings, MusicLevelData} from '../types';
 import AdvancedControls from './AdvancedControls';
 import Controls from './Controls';
 import ExemplarPlayerView from './ExemplarPlayerView';
+import Generate from './Generate';
 import HeaderButtons from './HeaderButtons';
 import usePlaybackUpdate from './hooks/usePlaybackUpdate';
 import useUpdateAnalytics from './hooks/useUpdateAnalytics';
@@ -168,7 +168,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
         const workspaceSerialization = blocklyWorkspace.getCode();
         if (Blockly.blockIdOverrides) {
           applyBlockIdOverrides(
-            workspaceSerialization,
+            workspaceSerialization as WorkspaceSerialization,
             Blockly.blockIdOverrides
           );
         }
@@ -430,6 +430,8 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
         )}
 
         <div id="blockly-area" className={moduleStyles.blocklyArea}>
+          {AppConfig.getValue('ai-generate') === 'true' && <Generate />}
+
           <PanelContainer
             id="workspace-panel"
             headerContent={headerContent}
