@@ -10,8 +10,15 @@ module MysqlCheckIndexUsed
   class NoIndexUsedException < StandardError; end
 
   # Copy/extend logic in AbstractMySQLAdapter#execute, and AbstractAdapter#log.
-  def execute(sql, name = nil)
+  def execute(sql, name = nil, async: false)
     materialize_transactions
+
+    # Rails 7 added both the mark_transaction_written_if_write method and a
+    # call to it right here, so to preserve compatibility between 6 and 7 we
+    # call the method if and only if it exists.
+    #
+    # TODO infra: remove the if clause once we've fully upgraded to Rails 7.
+    mark_transaction_written_if_write(sql) if respond_to?(:mark_transaction_written_if_write)
 
     options = {
       sql:               sql,
@@ -19,6 +26,7 @@ module MysqlCheckIndexUsed
       binds:             [],
       type_casted_binds: [],
       statement_name:    nil,
+      async:             async,
       connection_id:     object_id
     }
     @instrumenter.instrument("sql.active_record", options) do
