@@ -1,3 +1,5 @@
+# This is being deprecated due to the new teacher homepage roll out.
+@skip
 @as_teacher
 @no_mobile
 @no_firefox
