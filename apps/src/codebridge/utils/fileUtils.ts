@@ -30,6 +30,12 @@ export function getFileIconNameAndStyle(file: ProjectFile): {
   if (!isStartMode) {
     if (file.name.endsWith('.py')) {
       return {iconName: 'python', iconStyle: 'regular', isBrand: true};
+    } else if (file.name.endsWith('.html')) {
+      return {iconName: 'file-code', iconStyle: 'regular', isBrand: true}; // not working
+    } else if (file.name.endsWith('.js')) {
+      return {iconName: 'js', iconStyle: 'regular', isBrand: true};
+    } else if (file.name.endsWith('.css')) {
+      return {iconName: 'css', iconStyle: 'regular', isBrand: true};
     }
     return {iconName: 'file', iconStyle: 'regular'};
   }
