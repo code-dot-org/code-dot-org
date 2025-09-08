@@ -1,6 +1,6 @@
-include FactoryBot::Syntax::Methods
-
 class MegaSection
+  include FactoryBot::Syntax::Methods
+
   SAMPLE_TEACHER_EMAIL = 'mega_section_teacher@code.org'.freeze
   SAMPLE_TEACHER_PASSWORD = 'mega_section_password'.freeze
   SAMPLE_TEACHER_NAME = 'MegaSection_Teacher'.freeze

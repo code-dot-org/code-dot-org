@@ -43,7 +43,7 @@ $mobile-aspect-ratio: 9 / 16;
   height: calc(100vh - 120px); // Account for header and some padding
 }
 
-.shareViewPreviewIframeHeight {
+.fullScreenPreviewIframeHeight {
   height: 100%;
 }
 
@@ -54,7 +54,8 @@ $mobile-aspect-ratio: 9 / 16;
 .desktopPreviewIframe{
   display: flex;
   align-items: flex-start;
-  width: 100%;}
+  width: 100%;
+}
 
 .mobilePreviewIframe{
   display: flex;

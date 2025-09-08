@@ -1,4 +1,4 @@
-import {Heading2} from '@code-dot-org/component-library/typography';
+import {OverlineTwoText} from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -59,20 +59,19 @@ const PanelContainer: React.FunctionComponent<PanelContainerProps> = ({
             {leftHeaderContent}
           </div>
 
-          <Heading2
+          <OverlineTwoText
             className={classNames(
               'panelContainerHeaderItemText',
               moduleStyles.panelContainerHeaderItem,
               moduleStyles.panelContainerHeaderItemCenter
             )}
-            visualAppearance={'body-three'}
           >
             <span
               className={classNames(moduleStyles.panelContainerHeaderItemText)}
             >
               {headerContent}
             </span>
-          </Heading2>
+          </OverlineTwoText>
           <div
             className={classNames(
               'panelContainerHeaderItemRight',

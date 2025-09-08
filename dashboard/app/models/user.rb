@@ -434,7 +434,7 @@ class User < ApplicationRecord
 
   scope :ignore_deleted_at_index, -> {from 'users IGNORE INDEX(index_users_on_deleted_at)'}
   # Include default Devise modules. Others available are:
-  # :token_authenticatable, :confirmable, :timeoutable
+  # :token_authenticatable, :confirmable
   devise :invitable, :database_authenticatable, :registerable, :omniauthable,
     :recoverable, :rememberable, :trackable, :lockable
 
@@ -443,6 +443,7 @@ class User < ApplicationRecord
   # that would be overridden by them if we included it before.
   include Devise::Models::ManualSessionExpiration
   include Devise::DatabaseAuthenticationOverrides
+  include Devise::Models::CustomTimeoutable
 
   acts_as_paranoid # use deleted_at column instead of deleting rows
 
@@ -801,7 +802,7 @@ class User < ApplicationRecord
     return false if sections_as_student.empty?
 
     # Can't hide a unit that isn't part of a course
-    unit_group = unit.try(:unit_group)
+    unit_group = unit.try(:get_original_unit_group)
     return false unless unit_group
 
     get_participant_hidden_ids(unit_group.id, false).include?(unit.id)

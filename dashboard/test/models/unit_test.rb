@@ -2340,7 +2340,7 @@ class UnitTest < ActiveSupport::TestCase
       cloned_unit = @single_unit.clone_migrated_unit('single-unit-2022', destination_unit_group_name: @unit_group.name)
       assert_equal 2, @unit_group.default_units.count
       assert_equal 'single-unit-2022', @unit_group.default_units[1].name
-      assert_equal cloned_unit.unit_group, @unit_group
+      assert_equal cloned_unit.get_original_unit_group, @unit_group
       assert_nil cloned_unit.published_state
       assert_nil cloned_unit.instruction_type
       assert_nil cloned_unit.instructor_audience
@@ -2416,7 +2416,7 @@ class UnitTest < ActiveSupport::TestCase
       ReferenceGuide.any_instance.expects(:write_serialization).once
       File.stubs(:write)
       cloned_unit = @unit_in_course.clone_migrated_unit('refguidetest-ug-coursename-2021', destination_unit_group_name: @unit_group.name)
-      assert_equal cloned_unit.unit_group, @unit_group
+      assert_equal cloned_unit.get_original_unit_group, @unit_group
       assert_equal 1, cloned_unit.get_course_version.reference_guides.count
     end
 

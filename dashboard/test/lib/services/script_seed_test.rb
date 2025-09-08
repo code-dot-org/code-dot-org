@@ -92,7 +92,7 @@ module Services
     # a particular machine.
     test 'seed script not yet in unit group' do
       script = create_script_tree
-      assert script.unit_group.course_version
+      assert script.get_original_unit_group.course_version
 
       # Capture the json while resources are still present. This test checks
       # that these resources do not get added back during the seed process.
@@ -102,14 +102,14 @@ module Services
       script.resources.destroy_all
       script.student_resources.destroy_all
       script.freeze
-      script.unit_group.course_version.resources.destroy_all
-      script.unit_group.course_version.vocabularies.destroy_all
+      script.get_original_unit_group.course_version.resources.destroy_all
+      script.get_original_unit_group.course_version.vocabularies.destroy_all
       expected_counts = get_counts
 
       # destroy the script and its unit group, so that no course version will
       # be available during seed.
       script_to_destroy = Unit.find(script.id)
-      unit_group_to_destroy = script_to_destroy.unit_group
+      unit_group_to_destroy = script_to_destroy.get_original_unit_group
       script_to_destroy.original_unit_group.course_version.destroy!
       script_to_destroy.destroy!
       unit_group_to_destroy.destroy!

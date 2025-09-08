@@ -352,3 +352,8 @@ export const COLOURS: string[] = [
   '#663366',
   '#330033',
 ];
+
+export const DYNAMIC_CATEGORY_OPTIONS: {[key: string]: string} = {
+  Functions: 'PROCEDURE',
+  Variables: 'VARIABLE',
+};

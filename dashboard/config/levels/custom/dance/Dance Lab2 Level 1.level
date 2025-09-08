@@ -119,27 +119,99 @@
         }
       }
     },
+    "toolbox_definition": {
+      "contents": [
+        {
+          "kind": "block",
+          "type": "Dancelab_makeAnonymousDanceSprite",
+          "id": "O$O.bva_1Ph7~Y.~iux-",
+          "fields": {
+            "COSTUME": "<field name=\"COSTUME\">\"ALIEN\"</field>",
+            "LOCATION": "<field name=\"LOCATION\">{x: 200, y: 100}</field>"
+          },
+          "enabled": true
+        },
+        {
+          "kind": "block",
+          "type": "Dancelab_makeNewDanceSpriteGroup",
+          "id": "ec$AvzNAC~[ZY0!CH~OW",
+          "fields": {
+            "N": "<field name=\"N\">2</field>",
+            "COSTUME": "<field name=\"COSTUME\">\"ALIEN\"</field>",
+            "LAYOUT": "<field name=\"LAYOUT\">\"border\"</field>"
+          },
+          "enabled": true
+        },
+        {
+          "kind": "block",
+          "type": "Dancelab_changeMoveEachLR_slothcat",
+          "id": ")ib*n^o5OYR}R[mXad51",
+          "fields": {
+            "GROUP": "<field name=\"GROUP\">\"CAT\"</field>",
+            "MOVE": "<field name=\"MOVE\">MOVES.Roll</field>",
+            "DIR": "<field name=\"DIR\">-1</field>"
+          },
+          "enabled": true
+        },
+        {
+          "kind": "block",
+          "type": "Dancelab_doMoveEachLR",
+          "id": "xTmotz3im4nyO3t9)1fD",
+          "fields": {
+            "GROUP": "<field name=\"GROUP\">sprites</field>",
+            "MOVE": "<field name=\"MOVE\">\"rand\"</field>",
+            "DIR": "<field name=\"DIR\">-1</field>"
+          },
+          "enabled": true
+        },
+        {
+          "kind": "block",
+          "type": "Dancelab_ai",
+          "id": "*G.#js[A?o~Mn!Gw]Zol",
+          "fields": {
+            "VALUE": null
+          },
+          "enabled": true
+        },
+        {
+          "kind": "block",
+          "type": "Dancelab_setBackgroundEffectWithPaletteAI",
+          "id": "hoz1N{ey~x7z%f;]^{?N",
+          "fields": {
+            "PALETTE": "<field name=\"PALETTE\">\"autumn\"</field>",
+            "EFFECT": "<field name=\"EFFECT\">\"none\"</field>"
+          },
+          "enabled": true
+        },
+        {
+          "kind": "block",
+          "type": "Dancelab_setForegroundEffect",
+          "id": "E.myuB4`,-!iO9hQ_j/#",
+          "fields": {
+            "EFFECT": "<field name=\"EFFECT\">\"none\"</field>"
+          },
+          "enabled": true
+        },
+        {
+          "kind": "block",
+          "type": "Dancelab_atTimestampNotAfter",
+          "id": "AiJxd[T6gt9E_shE?WE$",
+          "fields": {
+            "TIMESTAMP": 0,
+            "UNIT": "<field name=\"UNIT\">\"measures\"</field>"
+          },
+          "enabled": true
+        }
+      ],
+      "kind": "flyoutToolbox"
+    },
     "preload_asset_list": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-09-05T12:46:08.190-07:00\",\"changed\":[\"cloned from \\\"allthethings HOC Dance 1\\\"\"],\"cloned_from\":\"allthethings HOC Dance 1\"},{\"changed_at\":\"2025-08-20 23:36:05 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"skin\",\"validation_code\",\"default_song\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2025-08-20 23:41:21 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"free_play\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2025-08-22 22:53:47 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2025-08-26 21:05:16 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2025-08-27 22:54:36 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2025-08-28 18:07:26 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2025-08-28 18:09:07 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2025-08-28 18:15:17 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2025-08-28 18:16:16 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-09-05T12:46:08.190-07:00\",\"changed\":[\"cloned from \\\"allthethings HOC Dance 1\\\"\"],\"cloned_from\":\"allthethings HOC Dance 1\"},{\"changed_at\":\"2025-08-20 23:36:05 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"skin\",\"validation_code\",\"default_song\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2025-08-20 23:41:21 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"free_play\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2025-08-22 22:53:47 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2025-08-26 21:05:16 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2025-08-27 22:54:36 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2025-08-28 18:07:26 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2025-08-28 18:09:07 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2025-08-28 18:15:17 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2025-08-28 18:16:16 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2025-09-03 23:34:57 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2025-09-03 23:36:58 +0000\",\"changed\":[\"toolbox_definition\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
-  <blocks>
-    <toolbox_blocks>
-      <xml>
-        <block type="Dancelab_makeAnonymousDanceSprite" id="1" x="54" y="185">
-          <field name="COSTUME" config="&quot;CAT&quot;,&quot;SLOTH&quot;">"CAT"</field>
-          <field name="LOCATION">{x: 200, y: 200}</field>
-        </block>
-        <block type="Dancelab_changeMoveEachLR" id="|y+CWEBlleENO5MU(?yL" x="67" y="265">
-          <field name="GROUP" config="&quot;CAT&quot;,&quot;SLOTH&quot;">"CAT"</field>
-          <field name="MOVE">MOVES.Roll</field>
-          <field name="DIR">-1</field>
-        </block>
-      </xml>
-    </toolbox_blocks>
-  </blocks>
+  <blocks/>
 </Dancelab>

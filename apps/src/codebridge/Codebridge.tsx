@@ -60,6 +60,9 @@ export const Codebridge = React.memo(
     const isWidgetView = !!levelProperties.widgetView;
     const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
     const appName = levelProperties.appName;
+    const isFullScreenView = useAppSelector(
+      state => state.lab.isFullScreenView
+    );
 
     // Adds keyboard shortcuts for Editor (1), Run (2), and Console (3)
     // which are preceded by Control (Windows/Linux) or Command (macOS).
@@ -120,6 +123,9 @@ export const Codebridge = React.memo(
       if (isWidgetView && config.layoutComponents.widget && !isStartMode) {
         return config.layoutComponents.widget;
       }
+      if (isFullScreenView && config.layoutComponents.fullScreen) {
+        return config.layoutComponents.fullScreen;
+      }
       let currentLayout = config.activeLayout;
       if (!currentLayout) {
         currentLayout = appName === 'pythonlab' ? 'horizontal' : 'vertical';
@@ -134,6 +140,7 @@ export const Codebridge = React.memo(
       appName,
       config.activeLayout,
       config.layoutComponents,
+      isFullScreenView,
       isShareView,
       isStartMode,
       isWidgetView,

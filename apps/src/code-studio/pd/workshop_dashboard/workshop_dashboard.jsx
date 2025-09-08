@@ -26,6 +26,7 @@ import regionalPartnerReducers, {
   setRegionalPartners,
 } from '../components/regional_partners_reducers';
 
+import LegacyWorkshopAttendance from './attendance/workshop_attendance';
 import LegacySurveySummaries from './legacy_survey_summaries.jsx';
 import {WorkshopAdmin} from './permission';
 import workshopDashboardReducers, {
@@ -234,13 +235,13 @@ const routeConfigs = [
   {
     path: 'workshops/:workshopId/attendance',
     breadcrumbs: 'Workshops,Workshop,Take Attendance',
-    component: WorkshopAttendance,
+    component: LegacyWorkshopAttendance,
     withRouter: true,
   },
   {
     path: 'workshops/:workshopId/attendance/:sessionId',
     breadcrumbs: 'Workshops,Workshop,Take Attendance',
-    component: WorkshopAttendance,
+    component: LegacyWorkshopAttendance,
     withRouter: true,
   },
   {

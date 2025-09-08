@@ -63,7 +63,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 40px;
+  height: 2.5rem;
   padding: 4px 8px;
   box-sizing: border-box;
   border-bottom: 1px solid var(--borders-neutral-primary);
@@ -73,4 +73,5 @@
 .editorAndPreviewContainer {
   display: flex;
   flex-grow: 1;
+  overflow: hidden;
 }

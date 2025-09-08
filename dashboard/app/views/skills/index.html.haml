@@ -1,6 +1,6 @@
 :ruby
     skills_data = {}
-    skills_data[:canEditSkills] = current_user.levelbuilder?
+    skills_data[:canEditSkills] = current_user.levelbuilder? && !Rails.env.production?
     skills_data[:skills] = @skills_by_concept
     skills_data[:levels] = @levels_skills
 
