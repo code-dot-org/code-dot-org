@@ -38,14 +38,6 @@ module Dashboard
     # TODO infra: remove these values once we're loading defaults for 7.0 above
     config.active_support.disable_to_s_conversion = true
 
-    # Temporarily disable some default values that we aren't yet ready for.
-    # Right now, these changes to cookie functionality break projects
-    #
-    # TODO infra: Figure out why, fix, and reenable.
-    #
-    # added in Rails 6.0 (https://github.com/rails/rails/pull/32937)
-    config.action_dispatch.use_cookies_with_metadata = false
-
     config.middleware.insert_before 0, Rack::Cors do
       allow do
         origins CDO.pegasus_site_host

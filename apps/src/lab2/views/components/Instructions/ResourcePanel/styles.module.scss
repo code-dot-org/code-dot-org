@@ -10,7 +10,7 @@
   justify-content: space-between;
 
   .tabs {
-    margin-top: 2rem;
+    margin-top: calc(2.5rem - 1px);
     display: flex;
     flex-direction: column;
   }
@@ -62,6 +62,7 @@
   opacity: 1;
   flex-direction: column;
   flex: 1;
+  min-width: 0;
 }
 
 .panelContent {

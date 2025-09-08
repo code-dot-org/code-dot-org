@@ -1,0 +1,6 @@
+{
+  "key": "musiclab-loops-basic",
+  "concept": "musiclab_loops",
+  "description": "play sounds with a loop",
+  "evaluation_criteria": "{\"all_complete_correct\":\"The workspace contains a repeat block that repeats at least 2 times and plays multiple tracks together using a play_together block\\n\\nExample:\\n```\\nrepeat 2\\n  play_together\\n    play \\\"pack/drums_track 1\\\"\\n    play \\\"pack/bass_track 1\\\"\\n```\",\"partial_complete_correct\":\"The workspace contains a repeat block that repeats at least 2 times and contains exactly one play block\\n\\nExample:\\n```\\nrepeat 2\\n  play \\\"pack/drums_track_1\\\"\\n```\",\"incomplete_incorrect\":\"The workspace contains a repeat block, but it either repeats only 1 time or has multiple play blocks that do not play together\\n\\nExample:\\n```\\nrepeat 1:\\n  play \\\"pack/drums_track_1\\\"\\n```\\n\\nExample:\\n```\\nrepeat 2\\n  play \\\"pack/drums_track_1\\\"\\n  play \\\"pack/drums_track_2\\\"\\n```}"
+}

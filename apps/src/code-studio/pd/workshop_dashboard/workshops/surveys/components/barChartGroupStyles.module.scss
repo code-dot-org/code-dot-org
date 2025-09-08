@@ -1,0 +1,41 @@
+@use '@code-dot-org/component-library-styles/colors';
+
+.barChartGroupContainer {
+  display: flex;
+  height: 16.5rem;
+  overflow: hidden;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1 0 0;
+  border-radius: 0.25rem;
+  border: 1px solid var(--borders-neutral-primary, #D4DAE1);
+  background: var(--background-neutral-primary, #FFF);
+  box-shadow: 0 2px 3px 0 rgb(0 0 0 / 0.05);
+
+  .barChartGroupHeaderContainer > p {
+      margin: 0;
+    }
+}
+
+.barChartGroupHeaderContainer {
+  display: flex;
+  padding: 0.75rem 1rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  align-self: stretch;
+
+  border-bottom: 1px solid var(--borders-neutral-primary, #D4DAE1);
+  background: var(--background-neutral-secondary, #F0F2F5);
+}
+
+.simpleBarChartContainer {
+  display: flex;
+  padding: 1rem var(--padding-p-s, 1.5rem) 1rem 1rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+  flex: 1 0 0;
+  align-self: stretch;
+}

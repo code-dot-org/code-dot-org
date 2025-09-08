@@ -51,7 +51,7 @@ And /^I've initialized the workspace with level 2 flappy blocks$/ do
 end
 
 And /^I've initialized the workspace with valid maze blocks$/ do
-  load_json_blocks('{"blocks":{"languageVersion":0,"blocks":[{"type":"when_run","x":16,"y":16,"next":{"block":{"type":"maze_forever","inputs":{"DO":{"block":{"type":"maze_moveForward","next":{"block":{"type":"maze_if","fields":{"DIR":"<field name=\"DIR\">isPathRight</field>"},"inputs":{"DO":{"block":{"type":"maze_turn","fields":{"DIR":"<field name=\"DIR\">turnRight</field>"}}}}}}}}}}}}]}}')
+  load_json_blocks('{"blocks":{"languageVersion":0,"blocks":[{"type":"when_run","x":16,"y":16,"next":{"block":{"type":"maze_forever","inputs":{"DO":{"block":{"type":"maze_moveForward","next":{"block":{"type":"maze_if","fields":{"DIR":"<field name=\"DIR\">isPathLeft</field>"},"inputs":{"DO":{"block":{"type":"maze_turn","fields":{"DIR":"<field name=\"DIR\">turnLeft</field>"}}}}}}}}}}}}]}}')
 end
 
 And /^I've initialized the workspace with incorrect maze blocks$/ do

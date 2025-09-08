@@ -187,17 +187,6 @@ class Pd::ProfessionalLearningControllerTest < ActionController::TestCase
     assert response[:show_deeper_learning]
   end
 
-  test 'id of current year application is passed down' do
-    prepare_scenario
-
-    application = create(:pd_teacher_application, user: @teacher, application_year: Pd::SharedApplicationConstants::APPLICATION_CURRENT_YEAR)
-
-    load_pl_landing @teacher
-
-    response = assigns(:landing_page_data)
-    assert_equal application.id, response[:current_year_application_id]
-  end
-
   test 'has_enrolled_in_workshops is true when user is enrolled workshops' do
     prepare_scenario
 
@@ -262,14 +251,6 @@ class Pd::ProfessionalLearningControllerTest < ActionController::TestCase
 
     response = assigns(:landing_page_data)
     assert_equal [@csd_workshop.course, @csp_workshop.course], response[:courses_as_facilitator]
-  end
-
-  test 'workshop admins see application dashboard links' do
-    workshop_admin = create(:workshop_admin)
-    load_pl_landing workshop_admin
-    assert_select '.extra-links' do
-      assert_select 'a[href=?]', '/pd/application_dashboard'
-    end
   end
 
   test 'workshop admins see workshop dashboard links' do

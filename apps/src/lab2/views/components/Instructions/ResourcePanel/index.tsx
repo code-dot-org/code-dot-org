@@ -191,6 +191,11 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     }
   }, [currentTab, availableTabs]);
 
+  useEffect(() => {
+    // Reset current tab to instructions when switching levels or viewAsUserId
+    setCurrentTab(Tabs.Instructions);
+  }, [levelId, viewAsUserId]);
+
   return (
     <div className={classNames(styles.resourcePanel, className)}>
       <div className={styles.sidebar}>
