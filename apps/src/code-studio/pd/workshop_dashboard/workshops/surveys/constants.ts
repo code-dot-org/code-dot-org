@@ -11,6 +11,7 @@ export const COLOR_MAP = new Map([
   ['warning', 'var(--background-warning-primary, #F9CB28)'],
   ['error', 'var(--background-error-primary, #E02D16)'],
   ['neutral', 'var(--background-neutral-septenary, #768699)'],
+  ['light-gray', 'var(--borders-neutral-light, #DFE3E9)'],
   ['green', 'var(--sentiment-success-50, #3EA33E)'],
   ['orange', 'var(--accent-orange-50, #FFB42E)'],
   ['red', 'var(--accent-strawberry-50, #ED6060)'],

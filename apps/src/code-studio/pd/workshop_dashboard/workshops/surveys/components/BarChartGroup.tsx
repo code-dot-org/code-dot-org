@@ -15,6 +15,7 @@ import {
   LabelProps,
   LabelList,
   Rectangle,
+  ReferenceLine,
 } from 'recharts';
 
 import {ColorMapKey} from '../../../WorkshopFormTemplate/types';
@@ -30,6 +31,8 @@ export const barColors = [
   COLOR_MAP.get('purple'),
   COLOR_MAP.get('aqua'),
 ];
+
+const gridColor = COLOR_MAP.get('light-gray');
 
 const bodyFourTextStyle = {
   // Body-4 Text styles
@@ -118,7 +121,11 @@ const SimpleBarChart: React.FC<SimpleBarChartProps> = ({
       barCategoryGap="30%" // tighter spacing so bars feel centered under labels
       barSize={barSize}
     >
-      <CartesianGrid vertical={false} stroke="#E2E8F0" strokeDasharray="4 4" />
+      <CartesianGrid
+        vertical={false}
+        stroke={gridColor}
+        strokeDasharray="4 4"
+      />
 
       <XAxis
         dataKey="label"
@@ -160,6 +167,8 @@ const SimpleBarChart: React.FC<SimpleBarChartProps> = ({
           />
         )}
       </YAxis>
+
+      <ReferenceLine y={0} stroke={gridColor} strokeWidth={2} />
 
       <Bar
         dataKey="value"
