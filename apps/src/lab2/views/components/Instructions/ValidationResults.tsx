@@ -19,6 +19,7 @@ interface ValidationResultsProps {
   className?: string;
 }
 
+// TODO: When Python Lab uses the resource panel permanently, we can remove this component.
 const ValidationResults: React.FunctionComponent<ValidationResultsProps> = ({
   className,
 }) => {

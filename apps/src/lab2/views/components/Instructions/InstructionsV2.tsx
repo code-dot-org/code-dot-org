@@ -82,6 +82,9 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
   const validationResults = useAppSelector(
     state => state.lab.validationState?.validationResults
   );
+
+  // TODO: When Python Lab uses the resource panel permanently, we can remove all validation
+  // from this component.`
   const includeValidation =
     validationSettings !== undefined &&
     !isUsingResourcePanel(

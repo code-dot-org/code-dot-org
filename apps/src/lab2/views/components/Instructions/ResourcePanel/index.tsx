@@ -119,6 +119,12 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       );
     }
 
+    if (instructionsProps.validationSettings) {
+      tabMap[Tabs.Validation] = (
+        <ValidationPanel {...instructionsProps.validationSettings} />
+      );
+    }
+
     if (
       isUserTeacher &&
       (levelProperties.teacherMarkdown ||
@@ -161,12 +167,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
 
     if (showRubric) {
       tabMap[Tabs.StudentRubric] = <StudentRubricView />;
-    }
-
-    if (instructionsProps.validationSettings) {
-      tabMap[Tabs.Validation] = (
-        <ValidationPanel {...instructionsProps.validationSettings} />
-      );
     }
 
     return tabMap;

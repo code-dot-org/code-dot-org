@@ -32,7 +32,16 @@ export default class PythonValidationTracker {
     }
   }
 
-  reset() {
-    this.validationResults = undefined;
+  reset(isChangingLevels: boolean = false) {
+    console.log(`in reset, isChangingLevels: ${isChangingLevels}`);
+    if (isChangingLevels) {
+      this.validationResults = undefined;
+    } else {
+      this.validationResults = this.validationResults?.map(result => ({
+        message: result.message,
+        result: 'PENDING',
+      }));
+    }
+    console.log({validationResults: this.validationResults});
   }
 }

@@ -13,6 +13,8 @@ export function getStatusForResult(result: ValidationResult) {
       return 'caution';
     case 'ERROR':
       return 'error';
+    case 'PENDING':
+      return 'pending';
   }
 }
 
@@ -30,5 +32,7 @@ export function getTranslatedResult(result: ValidationResult) {
       return lab2I18n.unexpectedSuccess();
     case 'ERROR':
       return lab2I18n.error();
+    case 'PENDING':
+      return '';
   }
 }
