@@ -205,6 +205,7 @@ module Dashboard
     Rails.autoloaders.main.do_not_eager_load(Rails.root.join('lib', 'devtools'))
 
     # use https://(*-)studio.code.org urls in mails
+    require_relative '../app/jobs/mail_delivery_job'
     config.action_mailer.default_url_options = {host: CDO.canonical_hostname('studio.code.org'), protocol: 'https'}
     config.action_mailer.delivery_job = 'MailDeliveryJob'
     config.action_mailer.deliver_later_queue_name = CDO.active_job_queues[:mailers]
