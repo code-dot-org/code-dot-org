@@ -47,7 +47,7 @@ const VersionHistoryRow: React.FunctionComponent<VersionHistoryRowProps> = ({
   };
 
   return (
-    <div id={versionId}>
+    <div id={versionId} className={moduleStyles.rowContainer}>
       <RadioButton
         name={versionId}
         value={versionId}
