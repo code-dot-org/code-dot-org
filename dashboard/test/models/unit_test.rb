@@ -580,31 +580,31 @@ class UnitTest < ActiveSupport::TestCase
   end
 
   test 'self.latest_stable_version returns latest stable version for user locale' do
-    create(:script, name: 's-2017', family_name: 'fake-family', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, supported_locales: ["it-it"])
-    unit_2018 = create(:script, name: 's-2018', family_name: 'fake-family', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, supported_locales: ["it-it"])
+    create(:script, :in_single_unit_course, name: 's-2017', family_name: 'fake-family', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, supported_locales: ["it-it"])
+    unit_2018 = create(:script, :in_single_unit_course,  name: 's-2018', family_name: 'fake-family', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, supported_locales: ["it-it"])
 
     assert_equal unit_2018, Unit.latest_stable_version('fake-family', locale: 'it-it')
   end
 
   test 'self.latest_stable_version returns latest stable version for English locales' do
-    create(:script, name: 's-2017', family_name: 'fake-family', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
-    unit_2018 = create(:script, name: 's-2018', family_name: 'fake-family', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    create(:script, :in_single_unit_course, name: 's-2017', family_name: 'fake-family', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    unit_2018 = create(:script, :in_single_unit_course, name: 's-2018', family_name: 'fake-family', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
 
     assert_equal unit_2018, Unit.latest_stable_version('fake-family')
     assert_equal unit_2018, Unit.latest_stable_version('fake-family', locale: 'en-ca')
   end
 
   test 'self.latest_stable_version returns correct unit version in family if version_year is supplied' do
-    unit_2017 = create(:script, name: 's-2017', family_name: 'fake-family', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
-    create(:script, name: 's-2018', family_name: 'fake-family', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    unit_2017 = create(:script, :in_single_unit_course, name: 's-2017', family_name: 'fake-family', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    create(:script, :in_single_unit_course, name: 's-2018', family_name: 'fake-family', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
 
     assert_equal unit_2017, Unit.latest_stable_version('fake-family', version_year: '2017')
   end
 
   test 'self.lastest_stable_version supports some family members having nil version_years' do
-    unit_2017 = create(:script, name: 's-2017', family_name: 'fake-family', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
-    create(:script, name: 's-unknown', family_name: 'fake-family', version_year: nil, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
-    create(:script, name: 's-2018', family_name: 'fake-family', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    unit_2017 = create(:script, :in_single_unit_course, name: 's-2017', family_name: 'fake-family', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    create(:script, :in_single_unit_course, name: 's-unknown', family_name: 'fake-family', version_year: nil, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    create(:script, :in_single_unit_course, name: 's-2018', family_name: 'fake-family', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
 
     assert_equal unit_2017, Unit.latest_stable_version('fake-family', version_year: '2017')
   end
@@ -1844,7 +1844,7 @@ class UnitTest < ActiveSupport::TestCase
 
   test 'has pilot access' do
     unit = create(:script, :in_single_unit_course)
-    pilot_unit = create(:script, :in_single_unit_course, pilot_experiment: 'my-experiment')
+    pilot_unit = create(:single_unit_course, pilot_experiment: 'my-experiment').first_unit
 
     student = create(:student)
     teacher = create(:teacher)
@@ -1904,7 +1904,7 @@ class UnitTest < ActiveSupport::TestCase
     student = create(:student)
     teacher = create(:teacher)
     pilot_teacher = create(:teacher, pilot_experiment: 'my-experiment')
-    create(:script, :in_single_unit_course, pilot_experiment: 'my-experiment')
+    create(:single_unit_course, pilot_experiment: 'my-experiment')
     levelbuilder = create(:levelbuilder)
 
     refute Unit.has_any_pilot_access?
@@ -1916,7 +1916,7 @@ class UnitTest < ActiveSupport::TestCase
 
   test 'platformization partner has pilot access' do
     unit = create(:script, :in_single_unit_course)
-    partner_pilot_unit = create(:script, :in_single_unit_course, pilot_experiment: 'my-experiment', editor_experiment: 'ed-experiment')
+    partner_pilot_unit = create(:script, :in_single_unit_course, editor_experiment: 'ed-experiment', pilot_experiment: 'my-experiment', published_state: 'pilot')
 
     student = create(:student)
     teacher = create(:teacher)
