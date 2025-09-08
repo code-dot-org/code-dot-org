@@ -47,6 +47,54 @@ module AichatAiHelper
     parts
   end
 
+  def self.convert_json_schema_to_ruby_types(json_schema)
+    type = json_schema[:type]
+    description = json_schema[:description]
+
+    case (type)
+    when "object"
+      AichatAiClientTypes::JsonObjectSchema.new(
+        type: type,
+        description: description,
+        properties:  AichatAiClientTypes::JsonProperties.new(
+          **(json_schema[:properties].transform_values {|value| convert_json_schema_to_ruby_types(value)})
+        ),
+        required: json_schema[:required],
+        additionalProperties: json_schema[:additionalProperties]
+      )
+    when "array"
+      AichatAiClientTypes::JsonArraySchema.new(
+        type: type,
+        description: description,
+        items:  json_schema[:items].map {|item| convert_json_schema_to_ruby_types(item)}
+      )
+    when "string"
+      AichatAiClientTypes::JsonStringSchema.new(
+        type: type,
+        description: description,
+        enum: json_schema[:enum]
+      )
+    when "number"
+      AichatAiClientTypes::JsonNumberSchema.new(
+        type: type,
+        description: description,
+        enum: json_schema[:enum]
+      )
+    when "boolean"
+      AichatAiClientTypes::JsonBooleanSchema.new(
+        type: type,
+        description: description
+      )
+    when "null"
+      AichatAiClientTypes::JsonNullSchema.new(
+        type: type,
+        description: description
+      )
+    else
+      raise StandardError.new("Unexpected schema type='#{type}'")
+    end
+  end
+
   # Parse the AI Chat message format and convert it to the AI-API-endpoint-agnostic
   # "config" object and "request" and "context" arrays.
   #
@@ -78,32 +126,57 @@ module AichatAiHelper
                      2
                    end
 
-    json_schema = AichatAiClientTypes::JsonObjectSchema.new(
+    # json_schema = AichatAiClientTypes::JsonObjectSchema.new(
+    #   type: 'object',
+    #   properties: AichatAiClientTypes::JsonProperties.new(
+    #     code:
+    #       AichatAiClientTypes::JsonStringSchema.new(
+    #         type: 'string',
+    #         description: 'The code to send to the user (optional - empty array if none to send).'
+    #       ),
+    #     text:
+    #       AichatAiClientTypes::JsonStringSchema.new(
+    #         type: 'string',
+    #         description: 'The text to send to the user (required)'
+    #       ),
+    #     hasCode:
+    #       AichatAiClientTypes::JsonStringSchema.new(
+    #         type: 'string',
+    #         description: 'Flag whether the response JSON has a code property or not (required)',
+    #         enum: ['YES', 'NO']
+    #       )
+    #   ),
+    #   required: ['text', 'code', 'hasCode'],
+    #   additionalProperties: false
+    # )
+
+    json_schema = {
       type: 'object',
-      properties: AichatAiClientTypes::JsonProperties.new(
+      properties: {
         code:
-          AichatAiClientTypes::JsonStringSchema.new(
+          {
             type: 'string',
             description: 'The code to send to the user (optional - empty array if none to send).'
-          ),
+          },
         text:
-          AichatAiClientTypes::JsonStringSchema.new(
+          {
             type: 'string',
             description: 'The text to send to the user (required)'
-          ),
+          },
         hasCode:
-          AichatAiClientTypes::JsonStringSchema.new(
+          {
             type: 'string',
             description: 'Flag whether the response JSON has a code property or not (required)',
             enum: ['YES', 'NO']
-          )
-      ),
+          }
+      },
       required: ['text', 'code', 'hasCode'],
       additionalProperties: false
-    )
+    }
+
     response_validation = AichatAiClientTypes::JsonResponseConfigValidation.new(
       type: 'jsonSchema',
-      schema: json_schema
+      schema: convert_json_schema_to_ruby_types(json_schema)
     )
     response = AichatAiClientTypes::JsonResponseConfig.new(mimeType: 'application/json', validation: response_validation)
 

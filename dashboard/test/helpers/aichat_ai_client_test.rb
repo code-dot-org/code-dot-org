@@ -46,7 +46,7 @@ class AichatAiClientTest < ActionView::TestCase
     AichatAssetHelper.stubs(:get_asset_base64_string).returns(@image_data, @pdf_data)
   end
 
-  private def call_get_response(model_id, level, new_message)
+  private def call_get_response(model_id, level, new_message, json_schema)
     usage_reporter = AichatAiUsageReporter.new(model_id, @user_id, @project_id, level.id)
 
     config, request, context = AichatAiHelper.get_config_request_context(
@@ -59,7 +59,8 @@ class AichatAiClientTest < ActionView::TestCase
       level.id,
       @encrypted_channel_id,
       @user_id,
-      @project_id
+      @project_id,
+      json_schema
     )
 
     AichatAiClient.create_instance(model_id, usage_reporter).get_response(
@@ -67,7 +68,7 @@ class AichatAiClientTest < ActionView::TestCase
     )
   end
 
-  private def stub_request_and_get_response(new_message, url_to_post, expected_request_body, expected_headers, stubbed_response_body, model_id, level)
+  private def stub_request_and_get_response(new_message, url_to_post, expected_request_body, expected_headers, stubbed_response_body, model_id, level, json_schema = nil)
     stub_request(:post, url_to_post).
           with(
             body: expected_request_body,
@@ -75,6 +76,6 @@ class AichatAiClientTest < ActionView::TestCase
         ).
         to_return(status: 200, body: stubbed_response_body.to_json, headers: {})
 
-    call_get_response(model_id, level, new_message)
+    call_get_response(model_id, level, new_message, json_schema)
   end
 end
