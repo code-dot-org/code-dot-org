@@ -33,7 +33,6 @@ export default class PythonValidationTracker {
   }
 
   reset(isChangingLevels: boolean = false) {
-    console.log(`in reset, isChangingLevels: ${isChangingLevels}`);
     if (isChangingLevels) {
       this.validationResults = undefined;
     } else {
@@ -42,6 +41,5 @@ export default class PythonValidationTracker {
         result: 'PENDING',
       }));
     }
-    console.log({validationResults: this.validationResults});
   }
 }
