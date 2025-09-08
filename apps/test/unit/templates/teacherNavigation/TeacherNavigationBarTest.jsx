@@ -37,6 +37,7 @@ jest.mock('@cdo/apps/util/HttpClient', () => ({
       json: () => Promise.resolve({}),
     })
   ),
+  fetchJson: jest.fn(() => Promise.resolve({})),
 }));
 
 const LocationElement = () => {
