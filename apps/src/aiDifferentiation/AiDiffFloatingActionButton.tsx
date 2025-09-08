@@ -127,14 +127,8 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
   }, [context]);
 
   const [isFabImageLoaded, setIsFabImageLoaded] = useState(false);
-  const [isFabWithoutTextImageLoaded, setIsFabWithoutTextImageLoaded] =
-    useState(false);
 
-  const showPulse =
-    canShowPulse &&
-    !hasOpened &&
-    isFabImageLoaded &&
-    !isFabWithoutTextImageLoaded;
+  const showPulse = canShowPulse && !hasOpened && isFabImageLoaded;
   const classes = showPulse
     ? classNames(style.floatingActionButton, style.pulse, 'unittest-fab-pulse')
     : style.floatingActionButton;
@@ -167,14 +161,14 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
         onClick={handleClick}
         type="button"
       >
-        {experiments.isEnabled('teacher-notifications') &&
-        (unreadNotificationCount === 'loading' ||
-          unreadNotificationCount > 0) ? (
+        {experiments.isEnabled('teacher-notifications') ? (
           <Badge
             badgeContent={
               unreadNotificationCount === 'loading'
                 ? 0
-                : unreadNotificationCount
+                : unreadNotificationCount > 0
+                ? unreadNotificationCount
+                : 'TA'
             }
             color="error"
             overlap="circular"
@@ -188,9 +182,18 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
               height: '48px',
               width: '48px',
               '& .MuiBadge-badge': {
-                backgroundColor: 'var(--background-error-primary)',
-                top: '8%',
-                right: '8%',
+                backgroundColor:
+                  unreadNotificationCount === 'loading' ||
+                  unreadNotificationCount > 0
+                    ? 'var(--background-error-primary)'
+                    : '#3CFFF8',
+                color:
+                  unreadNotificationCount === 'loading' ||
+                  unreadNotificationCount > 0
+                    ? 'var(--text-neutral-white-fixed)'
+                    : 'var(--text-neutral-black-fixed)',
+                top: '5%',
+                right: '5%',
               },
             }}
             className={style.badge}
@@ -198,10 +201,7 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
             <img
               alt="AI bot - unread notifications"
               src={aiFabWithoutText}
-              onLoad={() =>
-                !isFabWithoutTextImageLoaded &&
-                setIsFabWithoutTextImageLoaded(true)
-              }
+              onLoad={() => !isFabImageLoaded && setIsFabImageLoaded(true)}
               className={style.fabImageWithBadge}
             />
           </Badge>
