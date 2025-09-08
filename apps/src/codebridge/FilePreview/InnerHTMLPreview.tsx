@@ -126,17 +126,16 @@ const InnerHTMLPreview = () => {
     if (source) {
       const files: Record<string, string> = {};
       // Handle non-HTML files. These are just converted to Blobs.
-      Object.values(source.files).forEach(async file => {
+      Object.values(source.files).forEach(file => {
         if (file.language !== 'html') {
           const fullFileName = getFullyQualifiedFileName(
             file.name,
             file.folderId,
             source.folders
           );
-          files[fullFileName] = await createBlobUrlForFile(file);
+          files[fullFileName] = createBlobUrlForFile(file);
         }
       });
-
       // Handle HTML files. We do the following;
       // 1. Set the Content Security Policy to allow requests to certain origins.
       // 2. Replace src links to non-html files with blob URLs.
