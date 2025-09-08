@@ -154,7 +154,7 @@ const InnerHTMLPreview = () => {
           source.folders
         );
 
-        updateLinksToNonHtmlFiles(doc, files, fullFileName);
+        updateLinksToNonHtmlFiles(doc, files, fullFileName, parentOrigin);
         updateLinksToHtmlFiles(doc, fullFileName);
         const updatedContents = doc.documentElement.outerHTML;
         const blob = new Blob([updatedContents], {type: 'text/html'});

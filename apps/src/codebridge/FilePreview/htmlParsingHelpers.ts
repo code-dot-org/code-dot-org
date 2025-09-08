@@ -8,19 +8,18 @@ import {IframeMessageType} from './constants';
 export const updateLinksToNonHtmlFiles = (
   doc: Document,
   filesToBlobs: Record<string, string>,
-  fullFileName: string
+  fullFileName: string,
+  parentOrigin: string
 ) => {
   const imgLinks = doc.querySelectorAll('img[src]');
   //
   imgLinks.forEach(link => {
     const src = link.getAttribute('src');
-    if (src) {
+    // better search for non-relative paths
+    if (src && !src.startsWith('http')) {
       const filePath = findFilePathByRelativePath(src, fullFileName);
       const blobUrl = filesToBlobs[filePath];
-      link.setAttribute(
-        'src',
-        `http://localhost-studio.code.org:3000${blobUrl}`
-      );
+      link.setAttribute('src', `${parentOrigin}${blobUrl}`);
     }
   });
 
