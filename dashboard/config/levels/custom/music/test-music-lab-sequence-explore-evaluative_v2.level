@@ -185,11 +185,11 @@
     },
     "name_suffix": "_v2",
     "teacher_markdown": "💡 **Teacher Tip**: Fidelity to the original song doesn't matter here. Prompt students to explore as long as they have each required element.",
-    "submittable": "false",
-    "disable_edit_run_for_submission": "false",
+    "submittable": "true",
+    "disable_edit_run_for_submission": "true",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-05-31T02:56:30.906+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequence-explore-evaluative\\\"\"],\"cloned_from\":\"test-music-lab-sequence-explore-evaluative\"},{\"changed_at\":\"2025-06-06 21:46:31 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-09-02 17:23:13 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:56:30.906+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequence-explore-evaluative\\\"\"],\"cloned_from\":\"test-music-lab-sequence-explore-evaluative\"},{\"changed_at\":\"2025-06-06 21:46:31 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-09-02 17:23:13 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2025-09-05 20:28:40 +0000\",\"changed\":[\"predict_settings\",\"submittable\",\"disable_edit_run_for_submission\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

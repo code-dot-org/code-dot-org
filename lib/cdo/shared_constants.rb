@@ -837,6 +837,12 @@ module SharedConstants
     FLOW_LAB: 2,
   }
 
+  AI_CHAT_READ_TIMEOUTS = {
+    AI_CHAT_CLIENT_TYPES[:AI_CHAT_LAB] => 30,
+    AI_CHAT_CLIENT_TYPES[:AI_TUTOR] => 30,
+    AI_CHAT_CLIENT_TYPES[:FLOW_LAB] => 60,
+  }
+
   AICHAT_METRICS_NAMESPACE = 'GenAICurriculum'.freeze
 
   AI_CHAT_TEACHER_FEEDBACK = {

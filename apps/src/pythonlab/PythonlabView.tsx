@@ -40,7 +40,7 @@ import {
   DEFAULT_PROJECT,
   STANDALONE_CONSOLE_PROJECT,
   STANDALONE_NEIGHBORHOOD_PROJECT,
-  PYTHONLAB_VALID_FILE_TYPES,
+  PYTHONLAB_EDITABLE_FILE_TYPES,
 } from './constants';
 import HorizontalLayout from './layout/HorizontalLayout';
 import ShareView from './layout/ShareView';
@@ -62,7 +62,7 @@ const standaloneStartSources: {[key: string]: ProjectSources} = {
 
 const defaultConfig: ConfigType = {
   languageMapping: pythonlabLangMapping,
-  editableFileTypes: PYTHONLAB_VALID_FILE_TYPES,
+  editableFileTypes: PYTHONLAB_EDITABLE_FILE_TYPES,
   activeLayout: 'horizontal',
   layoutComponents: {
     horizontal: HorizontalLayout,

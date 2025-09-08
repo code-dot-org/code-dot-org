@@ -44,6 +44,9 @@ class AichatRequestsController < ApplicationController
     messages_for_model = params[:storedMessages].select {|message| message[:status] == SharedConstants::AI_INTERACTION_STATUS[:OK]}
     context = params[:aichatContext]
 
+    # Add client type to model parameters.
+    params[:modelParameters][:clientType] = params[:aichatContext][:clientType]
+
     # Create the request object.
     begin
       request = AichatRequest.create!(
