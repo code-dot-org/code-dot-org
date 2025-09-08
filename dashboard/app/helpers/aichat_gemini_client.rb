@@ -47,7 +47,7 @@ class AichatGeminiClient < AichatAiClient
         temperature: config[:temperature],
         responseMimeType: response_mime_type,
         responseJsonSchema: response_json_schema
-      },
+      }.compact, # Use compact to remove null responseMimeType / responseJsonSchema
       system_instruction: {
         parts: format_parts(config[:systemInstructions])
       },

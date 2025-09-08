@@ -53,7 +53,7 @@ class AichatOpenaiResponsesClient < AichatAiClient
       temperature: config[:temperature],
       text: text,
       input: input
-    }
+    }.compact # Use compact to remove null text
 
     body
   end

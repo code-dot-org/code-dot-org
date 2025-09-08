@@ -66,7 +66,7 @@ module AichatAiHelper
       AichatAiClientTypes::JsonArraySchema.new(
         type: type,
         description: description,
-        items:  json_schema[:items].map {|item| convert_json_schema_to_ruby_types(item)}
+        items: convert_json_schema_to_ruby_types(json_schema[:items])
       )
     when "string"
       AichatAiClientTypes::JsonStringSchema.new(
@@ -99,7 +99,7 @@ module AichatAiHelper
   # "config" object and "request" and "context" arrays.
   #
   # See 'aichat_ai_client.rb' for typescript definitions of these objects.
-  def self.get_config_request_context(stored_messages, new_message, temperature, system_prompt, retrieval_contexts,  model_id, level_id, encrypted_channel_id, user_id, project_id)
+  def self.get_config_request_context(stored_messages, new_message, temperature, system_prompt, retrieval_contexts,  model_id, level_id, encrypted_channel_id, user_id, project_id, json_schema = nil)
     level = Level.find_by(id: level_id)
 
     # Level system prompt - string or nil.
@@ -150,35 +150,37 @@ module AichatAiHelper
     #   additionalProperties: false
     # )
 
-    json_schema = {
-      type: 'object',
-      properties: {
-        code:
-          {
-            type: 'string',
-            description: 'The code to send to the user (optional - empty array if none to send).'
-          },
-        text:
-          {
-            type: 'string',
-            description: 'The text to send to the user (required)'
-          },
-        hasCode:
-          {
-            type: 'string',
-            description: 'Flag whether the response JSON has a code property or not (required)',
-            enum: ['YES', 'NO']
-          }
-      },
-      required: ['text', 'code', 'hasCode'],
-      additionalProperties: false
-    }
+    # json_schema = {
+    #   type: 'object',
+    #   properties: {
+    #     code:
+    #       {
+    #         type: 'string',
+    #         description: 'The code to send to the user (optional - empty array if none to send).'
+    #       },
+    #     text:
+    #       {
+    #         type: 'string',
+    #         description: 'The text to send to the user (required)'
+    #       },
+    #     hasCode:
+    #       {
+    #         type: 'string',
+    #         description: 'Flag whether the response JSON has a code property or not (required)',
+    #         enum: ['YES', 'NO']
+    #       }
+    #   },
+    #   required: ['text', 'code', 'hasCode'],
+    #   additionalProperties: false
+    # }
 
-    response_validation = AichatAiClientTypes::JsonResponseConfigValidation.new(
-      type: 'jsonSchema',
-      schema: convert_json_schema_to_ruby_types(json_schema)
-    )
-    response = AichatAiClientTypes::JsonResponseConfig.new(mimeType: 'application/json', validation: response_validation)
+    unless json_schema.nil?
+      response_validation = AichatAiClientTypes::JsonResponseConfigValidation.new(
+        type: 'jsonSchema',
+        schema: convert_json_schema_to_ruby_types(json_schema)
+      )
+      response = AichatAiClientTypes::JsonResponseConfig.new(mimeType: 'application/json', validation: response_validation)
+    end
 
     config = AichatAiClientTypes::AiConfig.new(
       model: get_api_model(model_id),

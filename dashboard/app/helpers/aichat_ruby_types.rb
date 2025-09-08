@@ -57,7 +57,7 @@ module AichatRubyTypes
     # so we use is_a?(Class to catch this case.
     if type.is_a?(Class)
       # If an interface, we check that the value is an instance of that stuct.
-      raise StandardError.new("#{AichatRubyTypes.stringify_type_local.call(value)} does not match type: #{type}#{key.nil? ? "" : " for key=#{key}"}") unless value.is_a?(type)
+      raise StandardError.new("#{AichatRubyTypes.stringify_type(value)} does not match type: #{type}#{key.nil? ? "" : " for key=#{key}"}") unless value.is_a?(type)
 
     # For all instances of Type-derived classes, we call its assert_value_is_type
     # to do the assertion.
@@ -395,7 +395,7 @@ module AichatRubyTypes
     end
 
     def value_is_type?(value)
-      value.is_a?(TrueClass) || value.is_a?(FalseClass)
+      (value.is_a?(TrueClass) || value.is_a?(FalseClass)) && (@boolean_contents.nil? || @boolean_contents == value)
     end
   end
 
