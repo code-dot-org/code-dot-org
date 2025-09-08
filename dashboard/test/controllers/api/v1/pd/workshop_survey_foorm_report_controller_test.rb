@@ -314,7 +314,7 @@ module Api::V1::Pd
       assert_response :unprocessable_entity
 
       response = JSON.parse(@response.body, symbolize_names: true)
-      assert_equal 'Insufficient data to generate a report.', response[:error]
+      assert_equal "There must be at least #{Pd::SharedWorkshopConstants::MIN_SURVEY_RESPONSE_COUNT} responses to generate a report.", response[:error]
     end
 
     test 'succeeds when there are enough submissions' do
@@ -323,7 +323,7 @@ module Api::V1::Pd
       form_name = 'surveys/pd/build_your_own_workshop_teachers_post_survey_test'
 
       # Create 5 submissions (at least 5 are required for the download)
-      create_list(:build_your_own_workshop_foorm_submission, 5, :answers_low, pd_workshop_id: workshop.id)
+      create_list(:build_your_own_workshop_foorm_submission, Pd::SharedWorkshopConstants::MIN_SURVEY_RESPONSE_COUNT, :answers_low, pd_workshop_id: workshop.id)
 
       get :csv_survey_report, params: {workshop_id: workshop.id, name: form_name, version: 0}
 
