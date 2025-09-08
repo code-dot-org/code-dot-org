@@ -111,8 +111,9 @@ const surveyTypeChildRoutes = [
   {
     label: 'Pre-workshop survey',
     path: 'pre',
-    component: () => <div>Pre workshop</div>,
-    breadcrumbs: 'Workshops,Workshop,Temp,Surveys,Pre',
+    component: () => <div>Coming soon!</div>,
+    breadcrumbs: 'Workshops,Workshop,Surveys,Pre',
+    disabled: true,
   },
   {
     label: 'Post-workshop survey',
