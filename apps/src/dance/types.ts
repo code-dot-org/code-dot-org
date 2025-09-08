@@ -1,4 +1,4 @@
-import {LevelProperties, ProjectSources} from '../lab2/types';
+import {BlocklyLevelProperties, ProjectSources} from '../lab2/types';
 
 export type SongData = {
   [key: string]: {
@@ -31,7 +31,7 @@ export interface DanceProjectSources extends ProjectSources {
   selectedSong?: string;
 }
 
-export interface DanceLevelProperties extends LevelProperties {
+export interface DanceLevelProperties extends BlocklyLevelProperties {
   defaultSong?: string;
   useRestrictedSongs?: boolean;
   songSelection?: string[];
