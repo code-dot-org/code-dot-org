@@ -63,8 +63,15 @@ class Queries::User::InactiveTest < ActiveSupport::TestCase
       subject(:inactive_users) {described_instance.call}
 
       it 'returns users who have not signed in since the given date' do
-        expected_user = create(:teacher, current_sign_in_at: inactive_since - 1.day)
+        expected_user = create(:teacher, current_sign_in_at: inactive_since - 1.day, user_data_retention_status: create(:user_data_retention_status))
+        expected_user.user_data_retention_status.update!(deletion_warning_email_sent_at: 42.months.ago)
         _(inactive_users).must_include expected_user
+      end
+
+      it 'returns users who have not signed in since the given date' do
+        expected_user = create(:teacher, current_sign_in_at: inactive_since - 1.day, user_data_retention_status: create(:user_data_retention_status))
+        expected_user.user_data_retention_status.update!(deletion_warning_email_sent_at: 40.months.ago)
+        _(inactive_users).wont_include expected_user
       end
     end
   end

@@ -8,7 +8,7 @@ class User::InactiveTeacherDeletionWarningJobTest < ActiveJob::TestCase
 
     let(:teacher_email) {Faker::Internet.unique.email}
     let(:teacher_name) {Faker::Name.unique.name}
-    let!(:teacher) {create(:teacher, email: teacher_email, name: teacher_name, current_sign_in_at: 48.months.ago)}
+    let!(:teacher) {create(:teacher, email: teacher_email, name: teacher_name, current_sign_in_at: 48.months.ago, user_data_retention_status: create(:user_data_retention_status))}
 
     let(:expect_teacher_warning_to_be_sent) do
       MailJet.expects(:send_email).with(
@@ -38,7 +38,7 @@ class User::InactiveTeacherDeletionWarningJobTest < ActiveJob::TestCase
       end
     end
 
-    it 'send an email using MailJet with expected arguments' do
+    it 'sends an email using MailJet with expected arguments' do
       expect_teacher_warning_to_be_sent.once
       perform_enqueued_jobs {perform_later}
     end
@@ -47,6 +47,18 @@ class User::InactiveTeacherDeletionWarningJobTest < ActiveJob::TestCase
       perform_enqueued_jobs {perform_later}
       teacher.reload
       _(teacher.user_data_retention_status.deletion_warning_email_sent_at).wont_be_nil
+    end
+
+    it 'resends a deletion warning email if inactivity and last warning both exceed 3 years' do
+      teacher.user_data_retention_status.update!(deletion_warning_email_sent_at: 42.months.ago)
+      expect_teacher_warning_to_be_sent.once
+      perform_enqueued_jobs {perform_later}
+    end
+
+    it 'does not send a deletion warning email if last warning does not exceed 41 months' do
+      teacher.user_data_retention_status.update!(deletion_warning_email_sent_at: 40.months.ago)
+      expect_teacher_warning_to_be_sent.never
+      perform_enqueued_jobs {perform_later}
     end
 
     it 'logs event' do
