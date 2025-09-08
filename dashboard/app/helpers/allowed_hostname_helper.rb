@@ -11,10 +11,8 @@
 module AllowedHostnameHelper
   ALLOWED_HOSTNAME_SUFFIXES = [
     # === ENTERTAINMENT ===
-    # SECURITY: All are public APIs with no authentication required for basic usage
     'api.themoviedb.org',         # Movie/TV data - API key required 🔑
     # === FINANCE & CRYPTOCURRENCY ===
-    # SECURITY: Most require API keys for production use, but offer free tiers
     'api.coinlayer.com',          # Cryptocurrency exchange rates - API key required 🔑
     'pro-api.coinmarketcap.com',  # Cryptocurrency market data - API key required 🔑
     'api.exchangeratesapi.io',    # Currency exchange rates - API key required 🔑
