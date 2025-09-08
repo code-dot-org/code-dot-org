@@ -28,14 +28,21 @@ export function getFileIconNameAndStyle(file: ProjectFile): {
 } {
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
   if (!isStartMode) {
-    if (file.name.endsWith('.py')) {
+    const [, fileType] = file.name.split('.');
+    if (fileType === 'py') {
       return {iconName: 'python', iconStyle: 'regular', isBrand: true};
-    } else if (file.name.endsWith('.html')) {
-      return {iconName: 'file-code', iconStyle: 'regular', isBrand: true}; // not working
-    } else if (file.name.endsWith('.js')) {
+    } else if (fileType === 'html') {
+      return {iconName: 'file-code', iconStyle: 'regular', isBrand: false};
+    } else if (fileType === 'js') {
       return {iconName: 'js', iconStyle: 'regular', isBrand: true};
-    } else if (file.name.endsWith('.css')) {
+    } else if (fileType === 'css') {
       return {iconName: 'css', iconStyle: 'regular', isBrand: true};
+    } else if (fileType === 'jpg' || fileType === 'png') {
+      return {iconName: 'image', iconStyle: 'regular', isBrand: false};
+    } else if (fileType === 'txt') {
+      return {iconName: 'file-lines', iconStyle: 'regular', isBrand: false};
+    } else if (fileType === 'csv') {
+      return {iconName: 'file-csv', iconStyle: 'regular', isBrand: false};
     }
     return {iconName: 'file', iconStyle: 'regular'};
   }
