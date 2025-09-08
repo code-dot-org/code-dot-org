@@ -38,13 +38,14 @@ const ValidationButton: React.FunctionComponent<ValidationButtonProps> = ({
     <Button
       text={codebridgeI18n.stopValidation()}
       onClick={onStopValidation}
-      color={'destructive'}
+      color={buttonColor}
       iconLeft={{iconStyle: 'solid', iconName: 'square'}}
       className={classNames(
         moduleStyles.buttonInstruction,
         moduleStyles.validationButton
       )}
       size={'s'}
+      type={buttonType}
     />
   ) : (
     <Button
