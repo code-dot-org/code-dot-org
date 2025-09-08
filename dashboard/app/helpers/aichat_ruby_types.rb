@@ -296,6 +296,7 @@ module AichatRubyTypes
 
   # The Optional() function to return an instance of OptionalType.
   # We use a lambda to get around rubocops insistence that methods need to by snake-case.
+  #TODO - make optional args with ? instead of Optional() e.g. arg?, number
   define_method(
     :Optional,
     lambda do |type|

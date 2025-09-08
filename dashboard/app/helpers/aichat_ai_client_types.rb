@@ -1,8 +1,5 @@
 require 'set'
 
-#TODO - try to make optional args
-# :arg?: mightNotBeHere
-
 # This module defines and documents the `config`, `request`, and `context` data structures
 # that provide a unified model/provider agnostic (currently Gemini + OpenAI) API for our AI
 # backend.  This module uses a bespoke DSL (domain specific language) that I'm simply calling

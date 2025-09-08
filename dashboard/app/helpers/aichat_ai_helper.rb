@@ -126,54 +126,6 @@ module AichatAiHelper
                      2
                    end
 
-    # json_schema = AichatAiClientTypes::JsonObjectSchema.new(
-    #   type: 'object',
-    #   properties: AichatAiClientTypes::JsonProperties.new(
-    #     code:
-    #       AichatAiClientTypes::JsonStringSchema.new(
-    #         type: 'string',
-    #         description: 'The code to send to the user (optional - empty array if none to send).'
-    #       ),
-    #     text:
-    #       AichatAiClientTypes::JsonStringSchema.new(
-    #         type: 'string',
-    #         description: 'The text to send to the user (required)'
-    #       ),
-    #     hasCode:
-    #       AichatAiClientTypes::JsonStringSchema.new(
-    #         type: 'string',
-    #         description: 'Flag whether the response JSON has a code property or not (required)',
-    #         enum: ['YES', 'NO']
-    #       )
-    #   ),
-    #   required: ['text', 'code', 'hasCode'],
-    #   additionalProperties: false
-    # )
-
-    # json_schema = {
-    #   type: 'object',
-    #   properties: {
-    #     code:
-    #       {
-    #         type: 'string',
-    #         description: 'The code to send to the user (optional - empty array if none to send).'
-    #       },
-    #     text:
-    #       {
-    #         type: 'string',
-    #         description: 'The text to send to the user (required)'
-    #       },
-    #     hasCode:
-    #       {
-    #         type: 'string',
-    #         description: 'Flag whether the response JSON has a code property or not (required)',
-    #         enum: ['YES', 'NO']
-    #       }
-    #   },
-    #   required: ['text', 'code', 'hasCode'],
-    #   additionalProperties: false
-    # }
-
     unless json_schema.nil?
       response_validation = AichatAiClientTypes::JsonResponseConfigValidation.new(
         type: 'jsonSchema',
