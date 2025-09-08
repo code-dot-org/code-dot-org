@@ -10,12 +10,15 @@
 }
 
 .visualization {
-  // TODO: support resizing
-  width: 400px;
-  height: 400px;
+  width: 100%;
   background-color: var(--background-neutral-secondary);
   position: relative;
   border: 1px solid var(--borders-neutral-primary);
+
+  canvas {
+    width: 100% !important;
+    height: 100% !important;
+  }
 }
 
 .workArea {
@@ -32,6 +35,13 @@
 .visualizationArea {
   flex: 0;
   background-color: var(--background-neutral-primary);
+
+  &HalfWidth {
+    flex: initial;
+    // The visualization area can take up to half the window, but never
+    // exceeds the available height.
+    width: min(50vw, calc(100vh - 140px));
+  }
 }
 
 .workspaceArea {

@@ -1,3 +1,4 @@
+import {queryParams} from '@cdo/apps/code-studio/utils';
 import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
 import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {commands as audioCommands} from '@cdo/apps/lib/util/audioApi';
@@ -22,6 +23,8 @@ const allEvents: {[name in HookName]: Handler} = {
   runUserEvents: {code: 'runUserEvents(events);', args: ['events']},
   getCueList: {code: 'return getCueList();'},
 };
+
+const aiGenerate = queryParams('ai-generate') === 'true';
 
 /**
  * Handles program execution for Dance Party and wraps the native Dance Party API.
@@ -295,11 +298,16 @@ export default class ProgramExecutor {
       onEnded();
     };
 
-    audioCommands.playSound({
-      url,
-      callback: callbackWrapper,
-      onEnded: onEndedWrapper,
-    });
+    if (aiGenerate) {
+      // Simulate successful sound play.
+      callbackWrapper(true);
+    } else {
+      audioCommands.playSound({
+        url,
+        callback: callbackWrapper,
+        onEnded: onEndedWrapper,
+      });
+    }
   }
 
   private reportMissingHooks(...hooks: string[]) {

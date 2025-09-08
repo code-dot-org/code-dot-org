@@ -16,6 +16,7 @@ import {
   workspaceToToolboxDefinition,
 } from '@cdo/apps/blockly/utils/toolbox';
 import {saveReplayLog} from '@cdo/apps/code-studio/components/shareDialogRedux';
+import {queryParams} from '@cdo/apps/code-studio/utils';
 import defaultSources from '@cdo/apps/dance/blockly/defaultSources.json';
 import {
   installSharedBlocks,
@@ -44,14 +45,17 @@ import {
 } from '@cdo/apps/lab2/projects/utils';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {BlocklySource, LabProps} from '@cdo/apps/lab2/types';
+import Guide from '@cdo/apps/lab2/views/components/guide/Guide';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {registerReducers} from '@cdo/apps/redux';
 import AgeDialog from '@cdo/apps/templates/AgeDialog';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {tryGetLocalStorage} from '@cdo/apps/utils';
 import loadingGif from '@cdo/static/dance/DancePartyLoading.gif';
 
+import generateBlocklyJson from '../ai/generateBlocklyJson';
 import danceI18n from '../locale';
 import ProgramExecutor from '../ProgramExecutor';
 
@@ -59,13 +63,18 @@ import DanceControls from './DanceControls';
 import SourcesContainer, {useSources} from './SourcesContainer';
 
 import moduleStyles from './dance-view.module.scss';
-
 const DANCE_VISUALIZATION_ID = 'dance-visualization';
 const BLOCKLY_DIV_ID = 'dance-blockly-div';
 
 registerReducers(reducers);
 
 const isToolboxMode = getAppOptionsEditBlocks() === TOOLBOX_BLOCKS;
+
+const aiGenerate = queryParams('ai-generate') === 'true';
+
+const musicAiGenerate = aiGenerate
+  ? JSON.parse(tryGetLocalStorage('music-ai-generate', '{}'))
+  : undefined;
 
 /**
  * Renders the Lab2 version of Dance Lab. This separate container
@@ -93,6 +102,10 @@ const DanceView: React.FunctionComponent<{
 
   const programExecutor = useRef<ProgramExecutor | null>(null);
   const workspace = useRef<WorkspaceSvg | null>(null);
+
+  const [aiGenerateState, setAiGenerateState] = useState<'none' | 'done'>(
+    'none'
+  );
 
   const WorkspaceAlert = useLevelEditMode<DanceLevelProperties>(
     levelProperties.id,
@@ -163,13 +176,21 @@ const DanceView: React.FunctionComponent<{
       return;
     }
 
+    // Hack in the BPM from Music Lab song if it exists.
+    const updatedSongMetadata = aiGenerate
+      ? {
+          ...currentSongMetadata,
+          bpm: musicAiGenerate?.bpm || currentSongMetadata.bpm,
+        }
+      : currentSongMetadata;
+
     // Set the runIsStartingFlag to true while the run function is executing,
     // and set the isRunning flag to true once the run actually starts.
     dispatch(setRunIsStarting(true));
     programExecutor.current.reset();
     await programExecutor.current.execute(
       Blockly.getWorkspaceCode(),
-      currentSongMetadata
+      updatedSongMetadata
     );
     dispatch(setRunIsStarting(false));
     dispatch(setIsRunning(true));
@@ -273,7 +294,12 @@ const DanceView: React.FunctionComponent<{
       toolbox,
       readOnly: readonlyWorkspace,
       editBlocks: getAppOptionsEditBlocks(),
+      theme: Blockly.themes.cdomoderndark,
     } as BlocklyOptions);
+
+    if (aiGenerate) {
+      workspace.current.setTheme(Blockly.themes.cdomoderndark);
+    }
 
     return () => workspace.current?.dispose();
   }, [dispatch, readonlyWorkspace, levelProperties]);
@@ -361,30 +387,50 @@ const DanceView: React.FunctionComponent<{
     onPuzzleComplete,
     readonlyWorkspace,
   ]);
+
+  const generateDance = useCallback(() => {
+    console.log('starting dance generation');
+
+    const resultBlockly = generateBlocklyJson(musicAiGenerate?.eventMeasures);
+    console.log(resultBlockly);
+
+    Blockly.serialization.workspaces.load(
+      resultBlockly,
+      Blockly.getMainWorkspace()
+    );
+
+    setAiGenerateState('done');
+  }, []);
+
   const settings = useBlocklySettings();
 
   return (
     <div id="dance-lab" className={moduleStyles.danceLab}>
       {!getIsShareView() && <AgeDialog turnOffFilter={turnOffFilter} />}
-      <ResourcePanel
-        isRunning={isRunning}
-        hasRun={hasRun}
-        hasEdited={hasEdited}
-        levelProperties={levelProperties}
-        headerClassName={moduleStyles.panelHeader}
-        className={moduleStyles.instructionsArea}
-        settings={settings}
-      />
+      {!aiGenerate && (
+        <ResourcePanel
+          isRunning={isRunning}
+          hasRun={hasRun}
+          hasEdited={hasEdited}
+          levelProperties={levelProperties}
+          headerClassName={moduleStyles.panelHeader}
+          className={moduleStyles.instructionsArea}
+          settings={settings}
+        />
+      )}
       <div className={moduleStyles.divider} />
       {!isToolboxMode && (
         <PanelContainer
           id="visualization"
-          headerContent="Dance Party!"
+          headerContent={aiGenerate ? 'Dance' : 'Dance Party!'}
           headerClassName={moduleStyles.panelHeader}
-          className={moduleStyles.visualizationArea}
+          className={classNames(
+            moduleStyles.visualizationArea,
+            aiGenerate && moduleStyles.visualizationAreaHalfWidth
+          )}
         >
           <div className={moduleStyles.visualizationColumn}>
-            {currentSources.selectedSong && (
+            {!aiGenerate && currentSources.selectedSong && (
               <SongSelector
                 enableSongSelection={!isRunning}
                 setSong={onSetSong}
@@ -411,7 +457,12 @@ const DanceView: React.FunctionComponent<{
                 />
               </div>
             </div>
-            <DanceControls onRun={runProgram} onReset={resetProgram} />
+            <DanceControls
+              onRun={runProgram}
+              onReset={resetProgram}
+              musicChannelId={musicAiGenerate?.channelId}
+              musicPackId={musicAiGenerate?.packId}
+            />
           </div>
         </PanelContainer>
       )}
@@ -438,6 +489,26 @@ const DanceView: React.FunctionComponent<{
         {WorkspaceAlert}
         <div id={BLOCKLY_DIV_ID} />
       </PanelContainer>
+      {aiGenerate && (
+        <Guide id="generate-panel">
+          {aiGenerateState === 'none' && (
+            <>
+              <div>
+                Now, let's generate a dance sequence to go with your song!
+              </div>
+              <Button
+                ariaLabel={'Generate dance'}
+                text={'Generate dance'}
+                type="primary"
+                color="purple"
+                size="s"
+                onClick={generateDance}
+              />
+            </>
+          )}
+          {aiGenerateState === 'done' && <div>Let's dance!</div>}
+        </Guide>
+      )}
     </div>
   );
 };

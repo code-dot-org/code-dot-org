@@ -1,6 +1,7 @@
 import {Button} from '@code-dot-org/component-library/button';
 import React from 'react';
 
+import MiniMusicPlayer from '@cdo/apps/music/views/MiniMusicPlayer';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import moduleStyles from './dance-view.module.scss';
@@ -8,6 +9,8 @@ import moduleStyles from './dance-view.module.scss';
 interface DanceControlsProps {
   onRun: () => void;
   onReset: () => void;
+  musicChannelId?: string;
+  musicPackId?: string;
 }
 
 /**
@@ -17,6 +20,8 @@ interface DanceControlsProps {
 const DanceControls: React.FunctionComponent<DanceControlsProps> = ({
   onRun,
   onReset,
+  musicChannelId,
+  musicPackId,
 }) => {
   const isRunning = useAppSelector(state => state.dance.isRunning);
   const disabled = useAppSelector(
@@ -34,6 +39,26 @@ const DanceControls: React.FunctionComponent<DanceControlsProps> = ({
   return (
     <div className={moduleStyles.controlsContainer}>
       <Button {...props} disabled={disabled} />
+      {musicChannelId && (
+        <div style={{position: 'absolute', bottom: -10, right: 0}}>
+          <MiniMusicPlayer
+            projects={[
+              {
+                name: 'My Music',
+                id: musicChannelId,
+                labConfig: {music: {packId: musicPackId || ''}},
+                isOwner: false,
+                projectType: 'music',
+                publishedAt: null,
+                createdAt: '',
+                updatedAt: '',
+              },
+            ]}
+            libraryName="launch2024"
+            isPlaying={isRunning}
+          />
+        </div>
+      )}
     </div>
   );
 };
