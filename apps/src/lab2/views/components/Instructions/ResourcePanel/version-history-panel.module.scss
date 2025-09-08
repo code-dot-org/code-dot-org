@@ -23,16 +23,16 @@ $space-xl: 10px;
   min-height: 0;
 }
 
-.row {
-  padding: $space-l;
-}
-
-.row:has(input[type="radio"]:checked) {
-  background-color: var(--background-neutral-tertiary);
-}
-
-.row:hover {
-  background-color: var(--background-neutral-tertiary);
+.rowContainer {
+  display: flex;
+  padding: var(--padding-p-xxs, 8px) 12px;
+  align-items: flex-end;
+  gap: 10px;
+  align-self: stretch;
+  border-radius: var(--border-radius-br-s, 4px);
+  border: 1px solid var(--borders-neutral-primary);
+  background: var(--background-neutral-secondary);
+  margin: 8px;
 }
 
 .footer {
