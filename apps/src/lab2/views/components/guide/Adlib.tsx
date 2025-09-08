@@ -7,7 +7,7 @@ import styles from './Adlib.module.scss';
 interface AdlibProps {
   template: string;
   options: {[key: string]: string[]};
-  onChange: (value: string) => void;
+  onChange: (value: string, joinedChoices: string) => void;
   className?: string;
 }
 
@@ -30,7 +30,7 @@ const Adlib: React.FunctionComponent<AdlibProps> = ({
       initialOptions[key] = sample(options[key]) || '';
     });
     setAdlibOptions(initialOptions);
-  }, [onChange, options]);
+  }, [options]);
 
   // Compute filled text.
   const filledAdlibText = useMemo(() => {
@@ -40,6 +40,16 @@ const Adlib: React.FunctionComponent<AdlibProps> = ({
     });
     return output;
   }, [adlibOptions, options, template]);
+
+  // Compute joined choices text.
+  const joinedChoicesText = useMemo(() => {
+    const output = Object.keys(options)
+      .map(key => {
+        return adlibOptions[key];
+      })
+      .join('-');
+    return output;
+  }, [adlibOptions, options]);
 
   // Compute HTML.
   const adlibHtml = useMemo(() => {
@@ -72,10 +82,10 @@ const Adlib: React.FunctionComponent<AdlibProps> = ({
     return output;
   }, [adlibOptions, options, template]);
 
-  // Notify parent when filled text changes.
+  // Notify parent when choices change.
   useEffect(() => {
-    onChange(filledAdlibText);
-  }, [filledAdlibText, onChange]);
+    onChange(filledAdlibText, joinedChoicesText);
+  }, [adlibOptions, filledAdlibText, joinedChoicesText, onChange]);
 
   return <div className={className}>{adlibHtml}</div>;
 };
