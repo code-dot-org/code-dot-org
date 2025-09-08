@@ -310,9 +310,10 @@ steps:
         from_secret: GITHUB_TOKEN
     commands:
       - git lfs install
-      # Extract repo info from DRONE_GIT_HTTP_URL and construct authenticated URL
-      - REPO_URL=$(echo $DRONE_GIT_HTTP_URL | sed 's|https://||')
-      - AUTH_URL="https://${GITHUB_TOKEN}@${REPO_URL}"
+      # Construct authenticated URL by inserting token into the DRONE_GIT_HTTP_URL
+      # DRONE_GIT_HTTP_URL format: https://github.com/owner/repo.git
+      # AUTH_URL format: https://TOKEN@github.com/owner/repo.git
+      - AUTH_URL=$(echo $DRONE_GIT_HTTP_URL | sed "s|https://|https://${GITHUB_TOKEN}@|")
       - git clone --branch $DRONE_BRANCH $AUTH_URL .
 
   - name: cache-staging-clone
@@ -375,6 +376,6 @@ trigger:
     - push
 ---
 kind: signature
-hmac: ce69954bb74895420492e8513c41c47eae31a308e8bc6ca1093881da936b0140
+hmac: 31cee1760cc05aacc5414e90085d5771bb68576eeb2aa7532eebcc1cfe2ec531
 
 ...
