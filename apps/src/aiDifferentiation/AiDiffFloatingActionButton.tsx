@@ -184,7 +184,16 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
                 unreadCount: unreadNotificationCount,
               })
             }
-            sx={{height: '48px', width: '48px'}}
+            sx={{
+              height: '48px',
+              width: '48px',
+              '& .MuiBadge-badge': {
+                backgroundColor: 'var(--background-error-primary)',
+                top: '8%',
+                right: '8%',
+              },
+            }}
+            className={style.badge}
           >
             <img
               alt="AI bot - unread notifications"
@@ -193,6 +202,7 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
                 !isFabWithoutTextImageLoaded &&
                 setIsFabWithoutTextImageLoaded(true)
               }
+              className={style.fabImageWithBadge}
             />
           </Badge>
         ) : (
