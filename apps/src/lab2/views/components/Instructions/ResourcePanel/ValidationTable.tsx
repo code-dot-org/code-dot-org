@@ -1,25 +1,26 @@
 import {
-  BodyFourText,
-  Heading4,
-  Heading6,
+  BodyThreeText,
+  OverlineThreeText,
   StrongText,
 } from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
 import React from 'react';
 
 import lab2I18n from '@cdo/apps/lab2/locale';
+import {
+  getStatusForResult,
+  getTranslatedResult,
+} from '@cdo/apps/lab2/views/components/Instructions/validationHelpers';
+import ValidationStatusIcon from '@cdo/apps/lab2/views/components/Instructions/ValidationStatusIcon';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {getStatusForResult, getTranslatedResult} from './validationHelpers';
-import ValidationStatusIcon from './ValidationStatusIcon';
-
-import moduleStyles from './validation-results.module.scss';
+import moduleStyles from './validation-panel.module.scss';
 
 interface ValidationResultsProps {
   className?: string;
 }
 
-const ValidationResults: React.FunctionComponent<ValidationResultsProps> = ({
+const ValidationTable: React.FunctionComponent<ValidationResultsProps> = ({
   className,
 }) => {
   const {validationResults} = useAppSelector(
@@ -31,17 +32,16 @@ const ValidationResults: React.FunctionComponent<ValidationResultsProps> = ({
   }
 
   return (
-    <div className={classNames(className, moduleStyles.validationResults)}>
-      <Heading4>{lab2I18n.validationResults()}</Heading4>
+    <div className={classNames(className)}>
       <div>
         <table className={moduleStyles.validationResultsTable}>
           <thead>
             <tr>
               <td>
-                <Heading6>{lab2I18n.testName()}</Heading6>
+                <OverlineThreeText>{lab2I18n.test()}</OverlineThreeText>
               </td>
               <td>
-                <Heading6>{lab2I18n.result()}</Heading6>
+                <OverlineThreeText>{lab2I18n.result()}</OverlineThreeText>
               </td>
             </tr>
           </thead>
@@ -49,17 +49,14 @@ const ValidationResults: React.FunctionComponent<ValidationResultsProps> = ({
             {validationResults.map((result, index) => (
               <tr key={index}>
                 <td>
-                  <BodyFourText>{result.message}</BodyFourText>
+                  <BodyThreeText>{result.message}</BodyThreeText>
                 </td>
                 <td>
-                  <div className={moduleStyles.results}>
-                    <ValidationStatusIcon
-                      status={getStatusForResult(result)}
-                      className={moduleStyles.icon}
-                    />
-                    <BodyFourText>
+                  <div className={moduleStyles.resultsText}>
+                    <ValidationStatusIcon status={getStatusForResult(result)} />
+                    <BodyThreeText>
                       <StrongText>{getTranslatedResult(result)}</StrongText>
-                    </BodyFourText>
+                    </BodyThreeText>
                   </div>
                 </td>
               </tr>
@@ -71,4 +68,4 @@ const ValidationResults: React.FunctionComponent<ValidationResultsProps> = ({
   );
 };
 
-export default ValidationResults;
+export default ValidationTable;
