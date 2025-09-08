@@ -94,8 +94,6 @@ class Pd::Workshop < ApplicationRecord
   validate :valid_facilitators_for_course_offerings, if: -> {course == COURSE_BUILD_YOUR_OWN}
   validate :config_validation
 
-  before_create :set_registration_link
-
   before_save :assign_regional_partner, if: -> {organizer_id_changed? && !regional_partner_id?}
   def assign_regional_partner
     self.regional_partner = organizer.try {|o| o.regional_partners.first}
@@ -192,12 +190,6 @@ class Pd::Workshop < ApplicationRecord
 
   def sanitize_time_zone
     self.time_zone = time_zone.present? && ActiveSupport::TimeZone[time_zone].present? ? time_zone : nil
-  end
-
-  def set_registration_link
-    if [COURSE_CSD, COURSE_CSP, COURSE_CSA].include?(course) && local_summer?
-      self.registration_link = Rails.application.routes.url_helpers.pd_application_teacher_url
-    end
   end
 
   # Whether enrollment in this workshop requires an application
