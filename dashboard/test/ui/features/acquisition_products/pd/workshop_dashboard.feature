@@ -43,7 +43,7 @@ Scenario: New workshop: BYOW
   And I see no difference for "new workshop details: BYO"
 
   And I click selector "button:contains('Publish')"
-  And I wait until element "span:contains('Workshop Information: ')" is visible
+  And I wait until element "h2:contains('Workshop Information')" is visible
 
   And I see no difference for "created workshop details: BYO"
   And I close my eyes
