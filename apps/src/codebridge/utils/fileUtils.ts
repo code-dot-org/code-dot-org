@@ -31,19 +31,20 @@ export function getFileIconNameAndStyle(file: ProjectFile): {
     const [, fileType] = file.name.split('.');
     if (fileType === 'py') {
       return {iconName: 'python', iconStyle: 'regular', isBrand: true};
+    } else if (fileType === 'csv') {
+      return {iconName: 'file-csv', iconStyle: 'solid', isBrand: false};
+    } else if (fileType === 'txt') {
+      return {iconName: 'file-lines', iconStyle: 'solid', isBrand: false};
     } else if (fileType === 'html') {
-      return {iconName: 'file-code', iconStyle: 'regular', isBrand: false};
+      return {iconName: 'file-code', iconStyle: 'solid', isBrand: false};
     } else if (fileType === 'js') {
       return {iconName: 'js', iconStyle: 'regular', isBrand: true};
     } else if (fileType === 'css') {
       return {iconName: 'css', iconStyle: 'regular', isBrand: true};
-    } else if (fileType === 'jpg' || fileType === 'png') {
-      return {iconName: 'image', iconStyle: 'regular', isBrand: false};
-    } else if (fileType === 'txt') {
-      return {iconName: 'file-lines', iconStyle: 'regular', isBrand: false};
-    } else if (fileType === 'csv') {
-      return {iconName: 'file-csv', iconStyle: 'regular', isBrand: false};
+    } else if (['jpg', 'png', 'jpeg'].includes(fileType)) {
+      return {iconName: 'image', iconStyle: 'solid', isBrand: false};
     }
+
     return {iconName: 'file', iconStyle: 'regular'};
   }
   if (file.type === ProjectFileType.VALIDATION) {
