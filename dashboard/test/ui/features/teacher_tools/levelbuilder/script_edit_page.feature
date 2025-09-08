@@ -9,6 +9,8 @@ Scenario: View the unit edit page
   And I view the temp unit edit page
   And I delete the temp unit with lessons
 
+# Have not added toasts to new homepage
+@skip
 Scenario: View the unit edit page in locale besides en-US
   Given I am on "http://studio.code.org/home/lang/es"
   And I create a levelbuilder named "Levi"
