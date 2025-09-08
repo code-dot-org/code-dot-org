@@ -11175,6 +11175,7 @@ __metadata:
     react-select: "npm:^1.2.1"
     react-select-5: "npm:react-select@5"
     react-sticky: "npm:^6.0.3"
+    react-string-replace: "npm:^1.1.1"
     react-tether: "npm:^1.0.4"
     react-tooltip: "npm:^3.2.7"
     react-transition-group: "npm:2.9.0"
@@ -25558,6 +25559,13 @@ canvg@gabelerner/canvg:
     react: ">=15"
     react-dom: ">=15"
   checksum: 10/e23eaf80979ea1d2794470266b61fa0abe604f47deb0d5406f3a393d775bc459285a23a089f6ead7cea1480eb758f269561ec85a911209f755e8c63dab3d56a1
+  languageName: node
+  linkType: hard
+
+"react-string-replace@npm:^1.1.1":
+  version: 1.1.1
+  resolution: "react-string-replace@npm:1.1.1"
+  checksum: 10/75cedb24ae7f37ec3e3adbf393cc65842609ff5901ec3423048bb60a90681783544e6feeca276c8954e1136e3b1560a9535325878ec3bddd75b80b9220980648
   languageName: node
   linkType: hard
 

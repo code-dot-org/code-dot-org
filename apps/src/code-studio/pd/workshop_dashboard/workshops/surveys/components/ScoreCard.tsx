@@ -4,8 +4,8 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import {
   BodyFourText,
   BodyThreeText,
+  Heading2,
   Heading3,
-  OverlineTwoText,
   StrongText,
 } from '@code-dot-org/component-library/typography';
 import {Card, CardContent, Box} from '@mui/material';
@@ -74,9 +74,9 @@ export const ScoreCard: FC<ScoreCardProps> = ({
       >
         <CardContent className={commonStyles.cardContent}>
           <Box>
-            <OverlineTwoText noMargin>
+            <Heading2 visualAppearance="overline-two" noMargin>
               <StrongText>{title}</StrongText>
-            </OverlineTwoText>
+            </Heading2>
             <BodyFourText className={commonStyles.description} noMargin>
               {responseBasedDescription}
             </BodyFourText>

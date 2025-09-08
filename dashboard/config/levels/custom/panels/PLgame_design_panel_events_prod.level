@@ -1,5 +1,6 @@
 <Panels>
   <config><![CDATA[{
+  "published": true,
   "game_id": 73,
   "created_at": "2024-07-10T19:31:18.000Z",
   "level_num": "custom",
@@ -14,7 +15,7 @@
         "layout": "text-top-left"
       },
       {
-        "text": "#Events in Game Design\nYou will find informational levels in the curriculum. For example, this page features interactive elements to help students and teachers understand events. \n\n\n\n\n\n\n###Using Events\n\nEvents do not snap into your main program.\n\nThey create little programs of their own.\n\n##### <b> Teacher Tip: </b> To ensure students engage with this level, frontload the concept as a whole group. ",
+        "text": "#Events in Game Design\nYou will find informational levels in the curriculum. For example, this page features interactive elements to help students and teachers understand events. \n\n\n\n\n\n\n###Using Events\n\nEvents do not snap into your main program.\n\nThey create little programs of their own.\n\n####<b> Teacher Tip: </b> To ensure students engage with this level, frontload the concept as a whole group. ",
         "imageUrl": "https://images.code.org/9da18ffb06b15ac54cbbe2cad591a28d-eventsalone panel.gif",
         "key": "game_design_panel_events-adeb522e-b960-4614-8df7-dfe6a2d2c354"
       },
@@ -34,9 +35,9 @@
         "key": "game_design_panel_events-068701d9-edca-4086-99eb-27a027450240"
       }
     ],
-    "name_suffix": "_prod"
+    "name_suffix": "_prod",
+    "offer_browser_tts": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-07-10T19:31:18.368+00:00\",\"changed\":[\"cloned from \\\"PLgame_design_panel_events_independent\\\"\"],\"cloned_from\":\"PLgame_design_panel_events_independent\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-07-10T19:31:18.368+00:00\",\"changed\":[\"cloned from \\\"PLgame_design_panel_events_independent\\\"\"],\"cloned_from\":\"PLgame_design_panel_events_independent\"},{\"changed_at\":\"2025-09-05 19:33:04 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]"
 }]]></config>
 </Panels>

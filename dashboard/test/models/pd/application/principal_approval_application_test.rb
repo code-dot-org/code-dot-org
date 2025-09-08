@@ -73,16 +73,5 @@ module Pd::Application
       create(:pd_principal_approval_application, teacher_application: teacher_application)
       assert_equal 'pending', teacher_application.reload.status
     end
-
-    test 'create placeholder and send mail creates a placeholder and sends principal approval' do
-      teacher_application = create(:pd_teacher_application)
-
-      assert_creates Pd::Application::PrincipalApprovalApplication do
-        Pd::Application::PrincipalApprovalApplication.create_placeholder_and_send_mail(teacher_application)
-      end
-
-      assert Pd::Application::PrincipalApprovalApplication.last.placeholder?
-      assert_equal 1, teacher_application.emails.where.not(sent_at: nil).where(email_type: 'admin_approval').count
-    end
   end
 end

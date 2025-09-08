@@ -10,7 +10,6 @@ import styles from './project-template-workspace-icon-v2.module.scss';
 interface ProjectTemplateWorkspaceIconV2Props {
   tooltipPlace?: ComponentPlacementDirection;
   darkMode?: boolean;
-  className?: string;
 }
 
 /**
@@ -22,12 +21,11 @@ interface ProjectTemplateWorkspaceIconV2Props {
  * the DSCO ComponentPlacementDirection enum.
  * @param darkMode - boolean to indicate if the workspace is in dark mode. This is only
  * used to style the tooltip. The icon will inherit its color from the parent component.
- * @param className - Additional class name to apply to the icon container.
  * @returns
  */
 const ProjectTemplateWorkspaceIconV2: React.FunctionComponent<
   ProjectTemplateWorkspaceIconV2Props
-> = ({tooltipPlace, darkMode, className}) => {
+> = ({tooltipPlace, darkMode}) => {
   return (
     <WithTooltip
       tooltipProps={{
@@ -36,7 +34,7 @@ const ProjectTemplateWorkspaceIconV2: React.FunctionComponent<
         tooltipId: 'project-template-workspace-icon-tooltip',
         size: 'xs',
       }}
-      tooltipOverlayClassName={className}
+      tooltipOverlayClassName={styles.flexContainer}
     >
       {/* Wrap the icon in a button so that the tooltip is tabbable. */}
       <button type="button" className={styles.iconButton}>
