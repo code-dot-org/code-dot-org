@@ -1,3 +1,5 @@
+# This is deprecated with the new teacher homepage. Will remove this test as part of cleanup.
+@skip
 @single_session
 Feature: Using the SectionActionDropdown
 
