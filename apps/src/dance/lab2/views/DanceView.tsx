@@ -1,10 +1,20 @@
 import {Button} from '@code-dot-org/component-library/button';
-import {Events, WorkspaceSvg} from 'blockly/core';
+import {BlocklyOptions, Events, WorkspaceSvg} from 'blockly/core';
 import classNames from 'classnames';
 import {isEqual} from 'lodash';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 import {loadBlocksToWorkspace} from '@cdo/apps/blockly/addons/cdoUtils';
+import {BLOCK_TYPES} from '@cdo/apps/blockly/constants';
+import {WorkspaceSerialization} from '@cdo/apps/blockly/types';
+import {
+  applyBlockIdOverrides,
+  validateBlockCategories,
+} from '@cdo/apps/blockly/utils';
+import {
+  getToolboxDefinition,
+  workspaceToToolboxDefinition,
+} from '@cdo/apps/blockly/utils/toolbox';
 import {saveReplayLog} from '@cdo/apps/code-studio/components/shareDialogRedux';
 import defaultSources from '@cdo/apps/dance/blockly/defaultSources.json';
 import {
@@ -23,13 +33,17 @@ import {
 import {getFilterStatus} from '@cdo/apps/dance/songs';
 import SongSelector from '@cdo/apps/dance/SongSelector';
 import {DanceLevelProperties, DanceProjectSources} from '@cdo/apps/dance/types';
+import {TOOLBOX_BLOCKS} from '@cdo/apps/lab2/constants';
 import {useBlocklySettings} from '@cdo/apps/lab2/hooks/useBlocklySettings';
 import useLevelEditMode from '@cdo/apps/lab2/hooks/useLevelEditMode';
 import {setPageError} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
-import {getIsShareView} from '@cdo/apps/lab2/projects/utils';
+import {
+  getAppOptionsEditBlocks,
+  getIsShareView,
+} from '@cdo/apps/lab2/projects/utils';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
-import {LabProps} from '@cdo/apps/lab2/types';
+import {BlocklySource, LabProps} from '@cdo/apps/lab2/types';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {registerReducers} from '@cdo/apps/redux';
@@ -50,6 +64,8 @@ const DANCE_VISUALIZATION_ID = 'dance-visualization';
 const BLOCKLY_DIV_ID = 'dance-blockly-div';
 
 registerReducers(reducers);
+
+const isToolboxMode = getAppOptionsEditBlocks() === TOOLBOX_BLOCKS;
 
 /**
  * Renders the Lab2 version of Dance Lab. This separate container
@@ -78,14 +94,26 @@ const DanceView: React.FunctionComponent<{
   const programExecutor = useRef<ProgramExecutor | null>(null);
   const workspace = useRef<WorkspaceSvg | null>(null);
 
-  const WorkspaceAlert = useLevelEditMode(
+  const WorkspaceAlert = useLevelEditMode<DanceLevelProperties>(
     levelProperties.id,
     !!levelProperties.projectTemplateLevelName,
     useCallback(
       mode => {
         if (mode === 'toolbox') {
-          // TODO: Support toolbox edit mode (get toolbox definition from workspace)
-          return {};
+          if (workspace.current) {
+            return {
+              toolbox_definition: workspaceToToolboxDefinition(
+                workspace.current
+              ),
+            };
+          }
+        }
+
+        if (mode === 'start' && Blockly.blockIdOverrides) {
+          applyBlockIdOverrides(
+            currentSources.source as WorkspaceSerialization,
+            Blockly.blockIdOverrides
+          );
         }
         return {
           [mode === 'start' ? 'start_sources' : 'exemplar_sources']:
@@ -122,7 +150,9 @@ const DanceView: React.FunctionComponent<{
       if (!workspace.current) {
         return;
       }
-      const blocks = Blockly.serialization.workspaces.save(workspace.current);
+      const blocks = Blockly.serialization.workspaces.save(
+        workspace.current
+      ) as BlocklySource;
       updateSources({...currentSources, source: blocks}, forceSave);
     },
     [currentSources, updateSources]
@@ -169,6 +199,14 @@ const DanceView: React.FunctionComponent<{
 
   const onBlockSpaceChange = useCallback(
     (e: Events.Abstract) => {
+      if (
+        isToolboxMode &&
+        workspace.current &&
+        e.type === Blockly.Events.BLOCK_MOVE
+      ) {
+        validateBlockCategories(workspace.current);
+      }
+
       if (e.type !== Events.BLOCK_DRAG && e.type !== Events.BLOCK_CHANGE) {
         return;
       }
@@ -220,13 +258,22 @@ const DanceView: React.FunctionComponent<{
       dispatch(setPageError({errorMessage: 'Blockly div not found'}));
       return;
     }
-    if (levelProperties.sharedBlocks) {
-      installSharedBlocks(levelProperties.sharedBlocks);
-    }
+    const blocksByCategory = installSharedBlocks(
+      levelProperties.sharedBlocks || []
+    );
+    const toolboxModeBlocks = {
+      Categories: [BLOCK_TYPES.category, BLOCK_TYPES.categoryDynamic],
+      ...blocksByCategory,
+    };
+    const toolbox = isToolboxMode
+      ? getToolboxDefinition(toolboxModeBlocks, 'categoryToolbox')
+      : levelProperties.toolboxDefinition;
+
     workspace.current = Blockly.inject(blocklyDiv, {
-      toolbox: levelProperties.toolboxBlocks,
+      toolbox,
       readOnly: readonlyWorkspace,
-    });
+      editBlocks: getAppOptionsEditBlocks(),
+    } as BlocklyOptions);
 
     return () => workspace.current?.dispose();
   }, [dispatch, readonlyWorkspace, levelProperties]);
@@ -279,6 +326,10 @@ const DanceView: React.FunctionComponent<{
 
   // Set up the ProgramExecutor
   useEffect(() => {
+    // Skip setting up the ProgramExecutor in toolbox mode as we are not running code.
+    if (isToolboxMode) {
+      return;
+    }
     const {isProjectLevel, freePlay, customHelperLibrary, validationCode} =
       levelProperties;
     // record a replay log (and generate a video) for both project levels and any
@@ -325,43 +376,45 @@ const DanceView: React.FunctionComponent<{
         settings={settings}
       />
       <div className={moduleStyles.divider} />
-      <PanelContainer
-        id="visualization"
-        headerContent="Dance Party!"
-        headerClassName={moduleStyles.panelHeader}
-        className={moduleStyles.visualizationArea}
-      >
-        <div className={moduleStyles.visualizationColumn}>
-          {currentSources.selectedSong && (
-            <SongSelector
-              enableSongSelection={!isRunning}
-              setSong={onSetSong}
-              selectedSong={currentSources.selectedSong}
-              songData={songData}
-              filterOn={filterOn}
-              levelIsRunning={isRunning}
-            />
-          )}
-          <div
-            id={DANCE_VISUALIZATION_ID}
-            className={moduleStyles.visualization}
-          >
-            <div
-              className={classNames(
-                moduleStyles.loading,
-                isLoading && moduleStyles.loadingShow
-              )}
-            >
-              <img
-                src={loadingGif}
-                className={moduleStyles.loadingGif}
-                alt={danceI18n.dancePartyLoading()}
+      {!isToolboxMode && (
+        <PanelContainer
+          id="visualization"
+          headerContent="Dance Party!"
+          headerClassName={moduleStyles.panelHeader}
+          className={moduleStyles.visualizationArea}
+        >
+          <div className={moduleStyles.visualizationColumn}>
+            {currentSources.selectedSong && (
+              <SongSelector
+                enableSongSelection={!isRunning}
+                setSong={onSetSong}
+                selectedSong={currentSources.selectedSong}
+                songData={songData}
+                filterOn={filterOn}
+                levelIsRunning={isRunning}
               />
+            )}
+            <div
+              id={DANCE_VISUALIZATION_ID}
+              className={moduleStyles.visualization}
+            >
+              <div
+                className={classNames(
+                  moduleStyles.loading,
+                  isLoading && moduleStyles.loadingShow
+                )}
+              >
+                <img
+                  src={loadingGif}
+                  className={moduleStyles.loadingGif}
+                  alt={danceI18n.dancePartyLoading()}
+                />
+              </div>
             </div>
+            <DanceControls onRun={runProgram} onReset={resetProgram} />
           </div>
-          <DanceControls onRun={runProgram} onReset={resetProgram} />
-        </div>
-      </PanelContainer>
+        </PanelContainer>
+      )}
       <div className={moduleStyles.divider} />
       <PanelContainer
         id="dance-workspace-panel"

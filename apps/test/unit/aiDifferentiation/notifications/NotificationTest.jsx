@@ -18,6 +18,28 @@ const mockReadNotification = {
   readAt: new Date('2023-01-02T12:00:00Z'),
 };
 
+const mockNotificationWithLinks = {
+  ...mockNotification,
+  id: 'test-notification-3',
+  hrefLinks: [
+    {url: 'https://example.com', text: 'Example Link'},
+    {url: 'https://test.com', text: 'Test Link'},
+  ],
+};
+
+const mockNotificationWithAiPrompts = {
+  ...mockNotification,
+  id: 'test-notification-4',
+  aiPrompts: [{text: 'Generate a story'}, {text: 'Create a lesson plan'}],
+};
+
+const mockNotificationWithBoth = {
+  ...mockNotification,
+  id: 'test-notification-5',
+  hrefLinks: [{url: 'https://example.com', text: 'Example Link'}],
+  aiPrompts: [{text: 'Generate a story'}],
+};
+
 describe('Notification', () => {
   beforeEach(() => {
     jest.useFakeTimers();
@@ -117,6 +139,50 @@ describe('Notification', () => {
       render(<Notification notification={multipleDaysAgoNotification} />);
 
       screen.getByText('4 DAYS AGO');
+    });
+  });
+
+  describe('href links', () => {
+    it('renders href links when provided', () => {
+      render(<Notification notification={mockNotificationWithLinks} />);
+
+      const exampleLink = screen.getByRole('link', {name: 'Example Link'});
+      expect(exampleLink).toHaveAttribute('href', 'https://example.com');
+      expect(exampleLink).toHaveAttribute('target', '_blank');
+      expect(exampleLink).toHaveAttribute('rel', 'noreferrer noopener');
+
+      const testLink = screen.getByRole('link', {name: 'Test Link'});
+      expect(testLink).toHaveAttribute('href', 'https://test.com');
+    });
+
+    it('does not render href links when not provided', () => {
+      render(<Notification notification={mockNotification} />);
+
+      expect(screen.queryByRole('link')).toBeNull();
+    });
+  });
+
+  describe('ai prompts', () => {
+    it('renders ai prompt buttons when provided', () => {
+      render(<Notification notification={mockNotificationWithAiPrompts} />);
+
+      screen.getByRole('button', {name: 'Generate a story'});
+      screen.getByRole('button', {name: 'Create a lesson plan'});
+    });
+
+    it('does not render ai prompt buttons when not provided', () => {
+      render(<Notification notification={mockNotification} />);
+
+      expect(screen.queryByRole('button')).toBeNull();
+    });
+  });
+
+  describe('links and prompts together', () => {
+    it('renders both href links and ai prompts when both are provided', () => {
+      render(<Notification notification={mockNotificationWithBoth} />);
+
+      screen.getByRole('link', {name: 'Example Link'});
+      screen.getByRole('button', {name: 'Generate a story'});
     });
   });
 });

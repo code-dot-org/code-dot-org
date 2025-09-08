@@ -110,7 +110,7 @@ class AssignedCoursesAndScripts < ActiveSupport::TestCase
     describe '#assigned_script?' do
       context 'when the user is assigned a script' do
         subject(:assigned_script?) {user.assigned_script?(single_script)}
-        subject(:assigned_script_course?) {user.assigned_script?(section_2)}
+        subject(:assigned_script_course?) {user.assigned_script?(unit_group.first_unit)}
 
         it 'returns true' do
           _(assigned_script?).must_equal true

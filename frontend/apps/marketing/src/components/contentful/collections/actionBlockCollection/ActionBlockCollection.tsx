@@ -1,4 +1,3 @@
-import {useInMemoryEntities} from '@contentful/experiences-sdk-react';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
@@ -11,6 +10,7 @@ import ActionBlock, {
 
 import {externalLinkIconProps} from '@/components/common/constants';
 import {showNewTag} from '@/components/contentful/actionBlocks/helpers';
+import {resolveContentfulLink} from '@/contentful/resolveLink';
 import {getAbsoluteImageUrl} from '@/selectors/contentful/getImage';
 import {LinkEntry} from '@/types/contentful/entries/Link';
 import {Entry} from '@/types/contentful/Entry';
@@ -58,8 +58,6 @@ const ActionBlockCollection: React.FC<ActionBlockCollectionProps> = ({
   sortOrder = 'alphabetical',
   className,
 }) => {
-  const inMemoryEntities = useInMemoryEntities();
-
   const CONTENT_TYPES_WITH_OVERLINE = [
     'curriculum',
     'selfPacedPl',
@@ -69,9 +67,7 @@ const ActionBlockCollection: React.FC<ActionBlockCollectionProps> = ({
   const CONTENT_TYPES_WITH_SECONDARY_BUTTON = ['selfPacedPl', 'lab'];
 
   const createButtonConfig = (maybeLinkRef: LinkEntry) => {
-    const linkRef = inMemoryEntities.maybeResolveLink(
-      maybeLinkRef,
-    ) as LinkEntry;
+    const linkRef = resolveContentfulLink<LinkEntry>(maybeLinkRef);
     if (!linkRef?.fields?.label) return undefined;
 
     const {fields} = linkRef;
@@ -113,9 +109,7 @@ const ActionBlockCollection: React.FC<ActionBlockCollectionProps> = ({
         publishedDate,
       } = fields;
 
-      const resolvedImage = inMemoryEntities.maybeResolveLink(
-        image,
-      ) as ExperienceAsset;
+      const resolvedImage = resolveContentfulLink<ExperienceAsset>(image);
 
       return {
         id: title,

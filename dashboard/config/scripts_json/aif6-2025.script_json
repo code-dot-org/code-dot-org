@@ -36,7 +36,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-07-09 14:24:14 UTC",
+    "serialized_at": "2025-09-04 21:45:25 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -7527,7 +7527,7 @@
     {
       "key": "data",
       "word": "data",
-      "definition": "any form of organized information, such as words, numbers, pictures, etc.",
+      "definition": "Information that is collected, stored, and used to understand and solve problems",
       "properties": {
       },
       "seeding_key": {

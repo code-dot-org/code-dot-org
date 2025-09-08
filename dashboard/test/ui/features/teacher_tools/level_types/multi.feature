@@ -1,13 +1,13 @@
 Feature: Playing multi levels
 
 Scenario: Loading the level
-  Given I am on "http://studio.code.org/courses/course1/units/1/lessons/2/levels/2?noautoplay=true"
+  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/9/levels/1?noautoplay=true"
   Then I wait to see ".submitButton"
   And element ".submitButton" is visible
-  And element ".multi-question" has text "Which algorithm gets the Flurb to the flowers?"
+  And element ".multi-question" has text "Which arrow gets the Flurb to the treasure?"
 
 Scenario: Clicking an option enables submit and submitting the correct answer wins
-  Given I am on "http://studio.code.org/courses/course1/units/1/lessons/2/levels/2?noautoplay=true"
+  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/9/levels/1?noautoplay=true"
   Then I rotate to landscape
   And I wait to see ".submitButton"
   And element ".submitButton" is visible
@@ -20,7 +20,7 @@ Scenario: Clicking an option enables submit and submitting the correct answer wi
   And I wait to see ".modal"
 
 Scenario: Submitting an incorrect option
-  Given I am on "http://studio.code.org/courses/course1/units/1/lessons/2/levels/2/lang/en-US?noautoplay=true"
+  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/9/levels/1/lang/en-US?noautoplay=true"
   Then I rotate to landscape
   And I wait to see ".submitButton"
   And element ".submitButton" is visible

@@ -120,7 +120,7 @@ class ScriptsController < ApplicationController
     @page_title = "Unit: #{@script.localized_title}"
     @page_description = @script.localized_description.truncate(200, separator: '.', omission: '.')
 
-    if @script.unit_group&.single_unit_course?
+    if @script.get_original_unit_group&.single_unit_course?
       canonical_ug = UnitGroup.latest_stable_version(@course.family_name)&.name
       @canonical_url = CDO.studio_url("/courses/#{canonical_ug}/units/1") if canonical_ug
     end
