@@ -59,13 +59,13 @@ steps:
     commands:
       # Configure git to use the token for all GitHub operations
       - git config credential.helper store
-      - echo "https://${GITHUB_TOKEN}:x-oauth-basic@github.com" > .git/git-credentials
+      - echo "https://$GITHUB_TOKEN:x-oauth-basic@github.com" > .git/git-credentials
       - git config credential.helper 'store --file=.git/git-credentials'
       - git lfs install --skip-repo
       # Construct authenticated GitHub URL.
       # DRONE_REPO_OWNER = organization name (e.g., "code-dot-org")
       # DRONE_REPO_NAME = repository name (e.g., "code-dot-org")
-      - AUTHENTICATED_GITHUB_URL="https://${GITHUB_TOKEN}@github.com/${DRONE_REPO_OWNER}/${DRONE_REPO_NAME}.git"
+      - AUTHENTICATED_GITHUB_URL="https://$GITHUB_TOKEN@github.com/$DRONE_REPO_OWNER/$DRONE_REPO_NAME.git"
       # We should be in a cached git repo, but clone if the cache failed
       - "[ -d .git ] || (echo 'WARNING: get-cached-staging failed: checkout will be SLOW and LFS $$$!' && git clone --branch $DRONE_BRANCH $AUTHENTICATED_GITHUB_URL .)"
       # Update the remote URL to use authentication
@@ -82,7 +82,6 @@ steps:
       - git config user.name "Drone"
       - git config user.email "drone-fake-user@code.org"
       - git merge origin/$DRONE_TARGET_BRANCH
-      - while pgrep bash >/dev/null; do echo "found bash process; keeping container alive"; sleep 20; done
 
   - name: restore-cache
     image: plugins/s3-cache
@@ -206,13 +205,13 @@ steps:
     commands:
       # Configure git to use the token for all GitHub operations
       - git config credential.helper store
-      - echo "https://${GITHUB_TOKEN}:x-oauth-basic@github.com" > .git/git-credentials
+      - echo "https://$GITHUB_TOKEN:x-oauth-basic@github.com" > .git/git-credentials
       - git config credential.helper 'store --file=.git/git-credentials'
       - git lfs install --skip-repo
       # Construct authenticated URL.
       # DRONE_REPO_OWNER = organization name (e.g., "code-dot-org")
       # DRONE_REPO_NAME = repository name (e.g., "code-dot-org")
-      - AUTHENTICATED_GITHUB_URL="https://${GITHUB_TOKEN}@github.com/${DRONE_REPO_OWNER}/${DRONE_REPO_NAME}.git"
+      - AUTHENTICATED_GITHUB_URL="https://$GITHUB_TOKEN@github.com/$DRONE_REPO_OWNER/$DRONE_REPO_NAME.git"
       # We should be in a cached git repo, but clone if the cache failed
       - "[ -d .git ] || (echo 'get-cached-staging failed: checkout will be SLOW and LFS $$!' && git clone --branch $DRONE_BRANCH $AUTHENTICATED_GITHUB_URL .)"
       # Update the remote URL to use authentication
@@ -322,13 +321,13 @@ steps:
     commands:
       # Configure git to use the token for all GitHub operations
       - git config credential.helper store
-      - echo "https://${GITHUB_TOKEN}:x-oauth-basic@github.com" > .git/git-credentials
+      - echo "https://$GITHUB_TOKEN:x-oauth-basic@github.com" > .git/git-credentials
       - git config credential.helper 'store --file=.git/git-credentials'
       - git lfs install
       # Construct authenticated GitHub URL
       # DRONE_REPO_OWNER = organization name (e.g., "code-dot-org")
       # DRONE_REPO_NAME = repository name (e.g., "code-dot-org")
-      - AUTHENTICATED_GITHUB_URL="https://${GITHUB_TOKEN}@github.com/${DRONE_REPO_OWNER}/${DRONE_REPO_NAME}.git"
+      - AUTHENTICATED_GITHUB_URL="https://$GITHUB_TOKEN@github.com/$DRONE_REPO_OWNER/$DRONE_REPO_NAME.git"
       - git clone --branch $DRONE_BRANCH $AUTHENTICATED_GITHUB_URL .
 
   - name: cache-staging-clone
@@ -391,6 +390,6 @@ trigger:
     - push
 ---
 kind: signature
-hmac: f532636ec054d7e34a7231785d7d045348094ee0c7b3cd1099f4b852c2b37768
+hmac: de143275c737d6e17e0ad7ebb011170240ab53825acd581b1da94eca3c3fef2d
 
 ...
