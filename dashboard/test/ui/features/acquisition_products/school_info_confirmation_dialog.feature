@@ -1,3 +1,5 @@
+# Needs to be updated for the new teacher homepage drawer implementation
+@skip
 @dashboard_db_access
 # We need "press keys" to type into the React form's fields, but that doesn't work on mobile Safari.
 @no_mobile

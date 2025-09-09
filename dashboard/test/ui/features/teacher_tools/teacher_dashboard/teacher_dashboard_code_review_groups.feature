@@ -3,10 +3,9 @@ Feature: Managing code review groups in the "Manage Students" tab of the teacher
 
 Background:
   Given I create a levelbuilder named "Dumbledore"
-  And I create a new student section assigned to course "ui-test-csa-family-script" unit 1
+  And I create a new student section assigned to course "ui-test-csa-family-script" unit 1 and save the section
   And I sign in as "Dumbledore" and go home
-  And I save the student section url
-  And I save the section id from row 0 of the section table
+  #And I save the student section url
   Given I create a student named "Hermione"
   And I join the section
   # Observed flakiness trying to navigate to teacher dashboard while still signed in as Hermione.

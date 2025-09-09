@@ -151,10 +151,9 @@ And(/^I create a(n authorized)? teacher-associated( under-13)?( sponsored)? stud
 end
 
 And(/^I save the student section url$/) do
-  wait_short_until {steps 'Then I should see the student section table'}
   section_code = @browser.execute_script <<-SCRIPT
     return document
-      .querySelector('.uitest-owned-sections tbody tr:last-of-type td:nth-child(6)')
+      .querySelector('#ui-test-section-code-button')
       .textContent
       .trim();
   SCRIPT
