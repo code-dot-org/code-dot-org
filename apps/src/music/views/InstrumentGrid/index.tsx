@@ -178,7 +178,7 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
 
   const getRowInfo = (name: string, note: number) => {
     if (interfaceMode === 'drums') {
-      return {style: styles.textLabel, label: name};
+      return {style: styles.textLabel, label: name, tabIndex: 0, showing: true};
     }
 
     const {textColor, keyColor, selectedColor} = getNoteColorInfo(
