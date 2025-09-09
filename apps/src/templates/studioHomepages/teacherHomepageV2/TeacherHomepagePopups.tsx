@@ -47,6 +47,10 @@ const TeacherHomepagePopups: React.FC<TeacherHomepagePopupsProps> = () => {
     state => state.currentUser.hasSeenHomepageWelcome
   );
 
+  const aiDifferentiationEnabled = useAppSelector(
+    state => state.currentUser.aiDifferentiationEnabled
+  );
+
   const hasSeenPopupInLastDay = React.useMemo(() => {
     // Allows triggering of drawer with URL params for testing / debugging
     const searchParams = new URLSearchParams(window.location.search);
@@ -80,7 +84,6 @@ const TeacherHomepagePopups: React.FC<TeacherHomepagePopupsProps> = () => {
   React.useEffect(() => {
     HttpClient.fetchJson<DrawerData>('/teacher_dashboard/get_drawer_data')
       .then(data => {
-        console.log(data.value);
         setExistingSchoolInfo(data.value.existingSchoolInfo);
         setSchoolInfoInterstitialOpen(data.value.showSchoolInfoInterstitial);
         setSchoolInfoConfirmationOpen(data.value.showSchoolInfoConfirmation);
@@ -150,18 +153,19 @@ const TeacherHomepagePopups: React.FC<TeacherHomepagePopupsProps> = () => {
   return (
     <>
       {popup}
-      {experiments.isEnabled('ai-differentiation') && (
-        <AiDiffFloatingActionButton
-          context={{type: AiDiffContext.GENERAL}}
-          canShowPulse={
-            !isLoading && !hasSeenPopup && !popup && !hasSeenPopupInLastDay
-          }
-          canStartOpen={!isLoading && !hasSeenPopup && !popup}
-          canDefaultOpen={
-            !isLoading && !hasSeenPopup && !popup && !hasSeenPopupInLastDay
-          }
-        />
-      )}
+      {aiDifferentiationEnabled &&
+        experiments.isEnabled('ai-differentiation') && (
+          <AiDiffFloatingActionButton
+            context={{type: AiDiffContext.GENERAL}}
+            canShowPulse={
+              !isLoading && !hasSeenPopup && !popup && !hasSeenPopupInLastDay
+            }
+            canStartOpen={!isLoading && !hasSeenPopup && !popup}
+            canDefaultOpen={
+              !isLoading && !hasSeenPopup && !popup && !hasSeenPopupInLastDay
+            }
+          />
+        )}
     </>
   );
 };

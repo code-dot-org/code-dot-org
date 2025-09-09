@@ -3234,7 +3234,7 @@ en:
           description_short: 'Welcome to Code.org’s free self-paced online educator course for getting started with Computer Science Fundamentals! '
           description_student: 'Welcome to Code.org’s free online educator course for CS Fundamentals! '
           description_teacher: 'Welcome to Code.org’s free self-paced online educator course for getting started with Computer Science Fundamentals! '
-          version_title: '2022'
+          version_title: "'22-'23"
         spritelab:
           title: Introduction to Sprite Lab (PILOT)
           description_short: This is a pilot course for Code.org's new Sprite Lab tool for Courses E and F
@@ -5363,6 +5363,24 @@ en:
           description_student: ''
           description_teacher: ''
           version_title: "'25-'26"
+        csp3-research-mxghyt:
+          title: CSP Unit 3 - Intro to Programming (subgoals)
+          description_short: Learn the basics of programming in JavaScript through a top-down design approach using classic turtle drawing.
+          description_student: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
+          description_teacher: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
+          version_title: ''
+        sb-chardev-v1:
+          title: Story Board Character Development
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        joi-sandbox:
+          title: Joi's Sandbox Course
+          description_short: "Hi! This course is a personal testing ground for experimenting with lesson structures, activity designs, and course flow. It serves as a space to practice building modules, writing descriptions, setting objectives, and organizing content into levels or units. The course is not intended for learners but as a sandbox environment to refine ideas, test features, and prototype instructional approaches before applying them in real courses. \n\nIf you see something that you want to use, feel free to copy, clone, or shoot me a Slack message to learn more!"
+          description_student: "Hi! This course is a personal testing ground for experimenting with lesson structures, activity designs, and course flow. It serves as a space to practice building modules, writing descriptions, setting objectives, and organizing content into levels or units. The course is not intended for learners but as a sandbox environment to refine ideas, test features, and prototype instructional approaches before applying them in real courses. \n\nIf you see something that you want to use, feel free to copy, clone, or shoot me a Slack message to learn more!"
+          description_teacher: "Hi! This course is a personal testing ground for experimenting with lesson structures, activity designs, and course flow. It serves as a space to practice building modules, writing descriptions, setting objectives, and organizing content into levels or units. The course is not intended for learners but as a sandbox environment to refine ideas, test features, and prototype instructional approaches before applying them in real courses. \n\nIf you see something that you want to use, feel free to copy, clone, or shoot me a Slack message to learn more!"
+          version_title: "'25-26"
     resources:
       curriculum/csd/2017:
         name: Curriculum

@@ -2,6 +2,8 @@ import {Box} from '@mui/material';
 import React, {useMemo} from 'react';
 import {useParams} from 'react-router-dom';
 
+import {MinSurveyResponseCount} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
+
 import {
   isQuestionType,
   SurveyQuestions,
@@ -9,7 +11,7 @@ import {
 import {useWorkshopContext} from '../../../WorkshopLayout';
 import {FreeResponseCard} from '../../components/FreeResponseCard';
 import {ScoreCard} from '../../components/ScoreCard';
-import {LIKERT_QUESTION_FOOTER, MIN_RESPONSE_COUNT} from '../../constants';
+import {LIKERT_QUESTION_FOOTER} from '../../constants';
 import {getQuestionDescription, prepLikertBreakdown} from '../../helpers';
 
 import styles from '../../../workshop.module.scss';
@@ -71,7 +73,7 @@ export const FacilitatorFeedback = () => {
                 footer={LIKERT_QUESTION_FOOTER}
                 score={question.results.weighted_score}
                 responseCount={question.results.total_responses}
-                minResponseCount={MIN_RESPONSE_COUNT}
+                minResponseCount={MinSurveyResponseCount}
                 breakdown={prepLikertBreakdown(question.results.breakdown)}
               />
             ) : null
@@ -87,7 +89,9 @@ export const FacilitatorFeedback = () => {
               facilitatorDidWell.question_text
             }
             items={facilitatorDidWell.results.responses}
-            tagText={`${facilitatorDidWell.results.total_responses} Submitted`}
+            tagText={`${
+              facilitatorDidWell.results.total_responses ?? 0
+            } Submitted`}
             statusColor="success"
             size="s"
           />
@@ -99,7 +103,9 @@ export const FacilitatorFeedback = () => {
               facilitatorCouldImprove.question_text
             }
             items={facilitatorCouldImprove.results.responses}
-            tagText={`${facilitatorCouldImprove.results.total_responses} Submitted`}
+            tagText={`${
+              facilitatorCouldImprove.results.total_responses ?? 0
+            } Submitted`}
             statusColor="warning"
             size="s"
           />

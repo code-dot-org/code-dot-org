@@ -30,8 +30,8 @@ class Policies::UnitTest < ActiveSupport::TestCase
   end
 
   test 'check deletion unit with section assignment' do
-    unit = create(:script, published_state: PUBLISHED_STATE.in_development)
-    create(:section, script: unit, unit_group: nil)
+    unit = create(:single_unit_course, published_state: PUBLISHED_STATE.in_development).first_unit
+    create(:section, script: unit)
     assert_equal false, Policies::Unit.can_be_deleted?(unit)
   end
 end

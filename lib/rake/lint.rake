@@ -48,7 +48,14 @@ namespace :lint do
     end
   end
 
-  timed_task_with_logging all: [:ruby, :haml, :scss, :javascript, :python]
+  desc 'Check for Rails code loader errors.'
+  timed_task_with_logging :zeitwerk do
+    Dir.chdir(dashboard_dir) do
+      RakeUtils.rake_stream_output('zeitwerk:check')
+    end
+  end
+
+  timed_task_with_logging all: [:ruby, :haml, :scss, :javascript, :python, :zeitwerk]
 end
 desc 'Lints all code.'
 timed_task_with_logging lint: ['lint:all']

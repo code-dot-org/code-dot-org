@@ -117,39 +117,3 @@ WithDSCOButtonTriggerCustomDropdown.args = {
   },
   size: 'm',
 };
-
-export const FullWidthCustomDropdown = SingleTemplate.bind({});
-FullWidthCustomDropdown.args = {
-  name: 'full-width-custom-dropdown',
-  labelText: 'Full Width Custom Dropdown',
-  size: 'm',
-  color: 'black',
-  fullWidth: true,
-};
-
-export const CustomWidthCustomDropdown = SingleTemplate.bind({});
-CustomWidthCustomDropdown.args = {
-  name: 'custom-width-custom-dropdown',
-  labelText: 'Custom Width Dropdown (400px)',
-  size: 'm',
-  color: 'black',
-  width: '400px',
-};
-
-export const PercentageWidthCustomDropdown = SingleTemplate.bind({});
-PercentageWidthCustomDropdown.args = {
-  name: 'percentage-width-custom-dropdown',
-  labelText: 'Percentage Width Dropdown (75%)',
-  size: 'm',
-  color: 'black',
-  width: '75%',
-};
-
-export const ResponsiveWidthCustomDropdown = SingleTemplate.bind({});
-ResponsiveWidthCustomDropdown.args = {
-  name: 'responsive-width-custom-dropdown',
-  labelText: 'Responsive Width Dropdown (clamp)',
-  size: 'm',
-  color: 'black',
-  width: 'clamp(200px, 50vw, 600px)',
-};

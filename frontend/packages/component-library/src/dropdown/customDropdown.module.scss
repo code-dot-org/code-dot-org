@@ -13,7 +13,6 @@
     width: variables.$form-field-width;
     text-wrap: nowrap;
     text-overflow: ellipsis;
-    color: var(--text-neutral-primary);
 
     button {
       width: 100%;
@@ -28,15 +27,6 @@
     }
   }
 
-  &.fullWidth {
-    width: 100%;
-
-    .dropdownButton {
-      width: 100%;
-      justify-content: space-between; // This will push the chevron to the right
-    }
-  }
-
   .dropdownLabel {
     display: block;
   }
@@ -45,26 +35,22 @@
     display: inline-flex;
     align-items: center;
     align-self: stretch;
-    width: 100%;
-    background-color: var(--background-neutral-primary);
+    width: auto;
+    background-color: unset;
     border-radius: 0.25rem;
     border: 1px solid;
-    color: var(--text-neutral-primary);
+    color: var(--neutral-base-black);
     box-shadow: none;
     gap: 0.5rem;
     margin: 0;
     cursor: pointer;
-    transition:
-      color 0.15s ease-in-out,
-      background-color 0.15s ease-in-out;
-    justify-content: flex-start; // Keep content left-aligned
 
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
 
     &:focus-visible {
-      outline: 2px solid var(--borders-brand-teal-primary);
+      outline: 2px solid var(--brand-teal-50);
       border-radius: 0.25rem;
       outline-offset: 2px;
     }
@@ -74,13 +60,8 @@
     }
 
     span {
-      /* Ensure text truncates when custom width is applied */
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      flex: 1 1 auto; // Allow growing and shrinking, but maintain natural size
-      min-width: 0; // Allow flex item to shrink below content size
-      text-align: left; // Ensure text stays left-aligned
+      /* Manually center dropdown button label */
+      margin-top: 2px;
     }
   }
 
@@ -103,8 +84,8 @@
     float: left;
     margin: 0.25rem 0;
     list-style: none;
-    background-color: var(--background-neutral-primary);
-    border: 1px solid var(--borders-neutral-primary);
+    background-color: #fff;
+    border: 1px solid rgba(0 0 0 / 0.15);
     border-radius: 4px;
     -webkit-box-shadow: 0 6px 12px rgba(0 0 0 / 0.175);
     box-shadow: 0 6px 12px rgba(0 0 0 / 0.175);
@@ -138,32 +119,32 @@
           display: flex;
           align-items: center;
           cursor: pointer;
-          color: var(--text-neutral-primary);
+          color: var(--neutral-base-black);
 
           &.destructiveDropdownMenuItem {
-            color: var(--text-error-primary);
+            color: var(--sentiment-error-50);
 
             i {
-              color: var(--text-error-primary);
+              color: var(--sentiment-error-50);
             }
 
             &:hover {
-              background-color: var(--background-error-extra-light);
+              background-color: var(--sentiment-error-10);
             }
 
             &:active {
-              background-color: var(--background-error-primary);
-              color: var(--text-neutral-white-fixed);
+              background-color: var(--sentiment-error-50);
+              color: var(--neutral-base-white);
 
               i::before {
-                background-color: var(--background-error-primary);
-                color: var(--text-neutral-white-fixed);
+                background-color: var(--sentiment-error-50);
+                color: var(--neutral-base-white);
               }
             }
           }
 
           &:focus-visible {
-            outline: 2px solid var(--borders-brand-teal-primary);
+            outline: 2px solid var(--brand-teal-50);
             outline-offset: -2px;
           }
 
@@ -179,39 +160,38 @@
         }
 
         &:hover {
-          background-color: var(--background-neutral-tertiary);
-          transition: background-color 0.15s ease-in-out;
+          background-color: var(--neutral-gray-10);
         }
 
         &:active,
         &:has(input[type='checkbox']:checked),
         &:has(.selectedDropdownMenuItem) {
-          background-color: var(--background-brand-teal-primary);
+          background-color: var(--brand-teal-50);
 
           i::before {
-            background-color: var(--background-neutral-primary);
-            color: var(--text-brand-teal-primary);
+            background-color: var(--neutral-base-white);
+            color: var(--brand-teal-50);
           }
 
           span {
-            color: var(--text-neutral-white-fixed);
+            color: var(--neutral-base-white);
           }
 
           .dropdownMenuItem {
             i::before {
-              background-color: var(--background-brand-teal-primary);
-              color: var(--text-neutral-white-fixed);
+              background-color: var(--brand-teal-50);
+              color: var(--neutral-base-white);
             }
 
             span {
-              color: var(--text-neutral-white-fixed);
+              color: var(--neutral-base-white);
             }
           }
         }
 
         &:has(input[type='checkbox']:disabled),
         &:has(.disabledDropdownMenuItem) {
-          color: var(--text-neutral-disabled);
+          color: var(--neutral-gray-20);
           background-color: unset;
           cursor: not-allowed;
 
@@ -220,13 +200,13 @@
 
             i::before {
               background-color: unset;
-              color: var(--text-neutral-disabled);
+              color: var(--neutral-gray-20);
             }
           }
 
           span,
           .dropdownMenuItem span {
-            color: var(--text-neutral-disabled);
+            color: var(--neutral-gray-20);
           }
         }
       }
@@ -237,11 +217,10 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    padding: 0.25rem 0.25rem 0 0.25rem;
-    // Adds visual separation from the menu items above; keeps controls from touching the list
-    margin-top: 0.25rem;
+    padding: 0.25rem;
+
     border-radius: 0 0 0.25rem 0.25rem;
-    border-top: 1px solid var(--borders-neutral-primary);
+    border-top: 1px solid var(--neutral-gray-30);
   }
 }
 
@@ -268,11 +247,11 @@
 // Dropdown colors
 .dropdownContainer-black {
   .dropdownLabel {
-    color: var(--text-neutral-primary);
+    color: var(--neutral-base-black);
   }
 
   .helperSection {
-    @include mixins.field-helper-section-common;
+    @include mixins.field-helper-section-black;
   }
 
   &.hasError {
@@ -281,43 +260,43 @@
     }
 
     .dropdownButton {
-      border-color: var(--borders-error-primary);
+      border-color: var(--sentiment-error-50);
     }
   }
 
   .dropdownButton {
-    color: var(--text-neutral-primary);
-    border-color: var(--borders-neutral-solid);
-    background-color: var(--background-neutral-primary);
+    color: var(--neutral-base-black);
+    border-color: var(--neutral-base-black);
+    background-color: var(--neutral-base-white);
   }
 
   &:has(.dropdownButton:hover),
   &:has(.activeDropdownButton) {
     .dropdownButton:not(:disabled) {
-      color: var(--text-neutral-primary);
-      background-color: var(--background-neutral-tertiary);
+      color: var(--neutral-base-black);
+      background-color: var(--neutral-gray-10);
     }
   }
   &:has(.dropdownButton:active) {
     .dropdownButton:not(:disabled) {
-      color: var(--text-neutral-primary);
-      background-color: var(--background-neutral-primary);
+      color: var(--neutral-base-black);
+      background-color: var(--neutral-base-white);
     }
   }
 
   &:has(.dropdownButton:disabled) {
     .dropdownButton {
-      color: var(--text-neutral-disabled);
-      border-color: var(--borders-neutral-disabled) !important;
+      color: var(--neutral-gray-20);
+      border-color: var(--neutral-gray-20) !important;
       cursor: not-allowed;
 
       .dropdownLabel {
-        color: var(--text-neutral-disabled);
+        color: var(--neutral-gray-20);
       }
     }
 
     .dropdownLabel {
-      color: var(--text-neutral-disabled);
+      color: var(--neutral-gray-20);
     }
 
     .helperSection,
@@ -344,7 +323,7 @@
 
 .dropdownContainer-gray {
   .dropdownLabel {
-    color: var(--text-neutral-primary);
+    color: var(--neutral-base-black);
   }
 
   .helperSection {
@@ -356,39 +335,39 @@
   }
 
   .dropdownButton {
-    color: var(--text-neutral-primary);
-    border-color: var(--borders-neutral-strong);
-    background-color: var(--background-neutral-primary);
+    color: var(--neutral-base-black);
+    border-color: var(--neutral-gray-40);
+    background-color: var(--neutral-base-white);
   }
 
   &:has(.dropdownButton:hover),
   &:has(.activeDropdownButton) {
     .dropdownButton:not(:disabled) {
-      color: var(--text-neutral-primary);
-      background-color: var(--background-neutral-tertiary);
+      color: var(--neutral-base-black);
+      background-color: var(--neutral-gray-10);
     }
   }
 
   &:has(.dropdownButton:active) {
     .dropdownButton:not(:disabled) {
-      color: var(--text-neutral-primary);
-      background-color: var(--background-neutral-primary);
+      color: var(--neutral-base-black);
+      background-color: var(--neutral-base-white);
     }
   }
 
   &:has(.dropdownButton:disabled) {
     .dropdownButton {
-      color: var(--text-neutral-disabled);
-      border-color: var(--borders-neutral-disabled) !important;
+      color: var(--neutral-gray-20);
+      border-color: var(--neutral-gray-20) !important;
       cursor: not-allowed;
 
       .dropdownLabel {
-        color: var(--text-neutral-disabled);
+        color: var(--neutral-gray-20);
       }
     }
 
     .dropdownLabel {
-      color: var(--text-neutral-disabled);
+      color: var(--neutral-gray-20);
     }
 
     .helperSection,
@@ -629,14 +608,13 @@
   .dropdownButton {
     @include mixins.button-three-text;
     height: 2rem;
-    padding: 0.3125rem 0.85rem;
+    padding: 0.3125rem 1rem;
     margin-bottom: 0;
 
     i {
       font-size: 0.875rem;
       line-height: 125%;
       width: 1.125rem;
-      margin-top: -1px;
     }
   }
 

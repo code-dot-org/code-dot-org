@@ -4,7 +4,7 @@ require 'honeybadger/ruby'
 require_relative './shared_constants/mailjet_constants'
 
 module MailJet
-  include MailJetConstants
+  include MailjetConstants
 
   API_KEY = CDO.try(:mailjet_api_key).freeze
   SECRET_KEY = CDO.try(:mailjet_secret_key).freeze

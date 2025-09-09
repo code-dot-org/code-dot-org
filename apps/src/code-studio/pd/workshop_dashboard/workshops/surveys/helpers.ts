@@ -1,6 +1,8 @@
 import {
+  Breakdown,
   isQuestionType,
   LikertResults,
+  PromoterResults,
   SurveyQuestion,
 } from '../../WorkshopFormTemplate/types';
 
@@ -15,22 +17,35 @@ export const getQuestionDescription = (question: SurveyQuestion) => {
     isQuestionType(question, 'multiSelect') &&
     question.question_name === 'barriers_implementation_curriculum'
   ) {
-    if (question.results.total_respondents === 0) {
+    if (!question.results.total_respondents) {
       return '';
     }
     const numWithBarriers =
       question.results.total_respondents -
-      (question.results.breakdown.none?.count ?? 0);
+      (question.results.breakdown?.none?.count ?? 0);
     return `${numWithBarriers} teachers reported at least 1 or more barriers to implementation`;
   }
   return '';
 };
 
-export const prepLikertBreakdown = (breakdown: LikertResults['breakdown']) =>
-  Object.entries(breakdown)
-    .map(([key, value]) => ({
-      ...value,
-      className:
-        Number(key) === 4 ? 'neutral' : Number(key) > 4 ? 'success' : 'error',
-    }))
+export const prepLikertBreakdown = (
+  breakdown: LikertResults['breakdown']
+): Breakdown[] =>
+  Object.entries(breakdown ?? {})
+    .map(
+      ([key, value]): Breakdown => ({
+        ...value,
+        color:
+          Number(key) === 4 ? 'neutral' : Number(key) > 4 ? 'success' : 'error',
+      })
+    )
     .reverse();
+
+export const prepPromoterBreakdown = (
+  breakdown: PromoterResults['breakdown']
+): Breakdown[] =>
+  Object.entries(breakdown ?? {}).map(([key, value]) => ({
+    ...value,
+    label: value.label.replace(/\D+/, ''),
+    color: Number(key) > 8 ? 'success' : Number(key) > 6 ? 'warning' : 'error',
+  }));

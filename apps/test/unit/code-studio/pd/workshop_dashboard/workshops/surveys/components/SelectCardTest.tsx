@@ -47,15 +47,11 @@ describe('SelectCard', () => {
       renderComponent();
 
       await waitFor(() => {
-        const countElementA = screen.getByText('15 responses');
-        const indicatorA =
-          countElementA.parentElement?.querySelector('div[style]');
-        expect(indicatorA).toHaveStyle('width: 50%');
+        const meterA = screen.getByRole('meter', {name: /option a/i});
+        expect(meterA).toHaveAttribute('aria-valuenow', '50');
 
-        const countElementB = screen.getByText('10 responses');
-        const indicatorB =
-          countElementB.parentElement?.querySelector('div[style]');
-        expect(indicatorB).toHaveStyle('width: 33.3%');
+        const meterB = screen.getByRole('meter', {name: /option b/i});
+        expect(meterB).toHaveAttribute('aria-valuenow', '33.3');
       });
     });
 
@@ -64,10 +60,8 @@ describe('SelectCard', () => {
       renderComponent({items: itemsWithZero});
 
       await waitFor(() => {
-        const countElement = screen.getByText('0 responses');
-        const indicator =
-          countElement?.parentElement?.querySelector('div[style]');
-        expect(indicator).toHaveStyle('width: 0%');
+        const meterZero = screen.getByRole('meter', {name: /zero option/i});
+        expect(meterZero).toHaveAttribute('aria-valuenow', '0');
       });
     });
   });

@@ -34,9 +34,15 @@ const getRelativeTimeString = (date: Date): string => {
   }
 };
 
-const Notification: React.FC<{
+interface NotificationProps {
   notification: AiDiffNotification | null;
-}> = ({notification}) => {
+  aiPromptClick?: (label: string, prompt: string) => void;
+}
+
+const Notification: React.FC<NotificationProps> = ({
+  notification,
+  aiPromptClick,
+}) => {
   const isLoading = notification === null;
   const notificationOrPlaceholder: AiDiffNotification = notification || {
     id: 'placeholder',
@@ -47,6 +53,8 @@ const Notification: React.FC<{
     iconName: 'spinner',
     iconColor: IconColor.Gray,
     publishedAt: new Date(),
+    aiPrompts: [],
+    hrefLinks: [],
   };
 
   return (
@@ -63,20 +71,52 @@ const Notification: React.FC<{
         // eslint-disable-next-line react/forbid-component-props
         data-testid={'icon-' + notificationOrPlaceholder.iconName}
       />
-      <p
-        className={classNames(
-          styles.text,
-          isLoading && skeletonizeContent.skeletonizeContent
-        )}
-      >
-        <BodyThreeText noMargin>
+      <div className={styles.textAndLinks}>
+        <BodyThreeText
+          noMargin
+          className={classNames(
+            styles.text,
+            isLoading && skeletonizeContent.skeletonizeContent
+          )}
+        >
           <StrongText>
             {notificationOrPlaceholder.title}
             {': '}
           </StrongText>
           {notificationOrPlaceholder.description}
         </BodyThreeText>
-      </p>
+        <ol className={styles.links}>
+          {notificationOrPlaceholder.hrefLinks?.length > 0 &&
+            notificationOrPlaceholder.hrefLinks.map((link, index) => (
+              <li key={'url-' + index}>
+                <a
+                  href={link.url}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className={styles.hrefLink}
+                >
+                  {link.text}
+                </a>
+              </li>
+            ))}
+          {notificationOrPlaceholder.aiPrompts?.length > 0 &&
+            notificationOrPlaceholder.aiPrompts.map((prompt, index) => (
+              <li key={'ai-' + index}>
+                <button
+                  onClick={() => {
+                    if (aiPromptClick) {
+                      aiPromptClick(prompt.text, prompt.prompt);
+                    }
+                  }}
+                  className={styles.aiButton}
+                  type="button"
+                >
+                  {prompt.text}
+                </button>
+              </li>
+            ))}
+        </ol>
+      </div>
       <BodyThreeText
         className={classNames(
           styles.date,

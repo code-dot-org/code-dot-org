@@ -4,8 +4,8 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import {
   BodyFourText,
   BodyThreeText,
+  Heading2,
   Heading3,
-  OverlineTwoText,
   StrongText,
 } from '@code-dot-org/component-library/typography';
 import {Card, CardContent, Box} from '@mui/material';
@@ -15,6 +15,7 @@ import React, {FC, useMemo, useState} from 'react';
 import {Breakdown} from '../../../WorkshopFormTemplate/types';
 import {CRITICAL_CONCERN_LIMIT, NEEDS_ATTENTION_LIMIT} from '../constants';
 
+import {SimpleBarChart} from './BarChartGroup';
 import {PercentageBarGroup} from './PercentageBarGroup';
 
 import styles from './ScoreCardStyles.module.scss';
@@ -26,8 +27,8 @@ interface ScoreCardProps {
   description: string;
   footer: string | null;
   questionType: 'likert' | 'promoter';
-  score: number;
-  responseCount: number;
+  score?: number;
+  responseCount?: number;
   minResponseCount: number;
   breakdown?: Breakdown[];
 }
@@ -38,8 +39,8 @@ export const ScoreCard: FC<ScoreCardProps> = ({
   description,
   footer,
   questionType,
-  score,
-  responseCount,
+  score = 0,
+  responseCount = 0,
   minResponseCount,
   breakdown,
 }) => {
@@ -74,9 +75,9 @@ export const ScoreCard: FC<ScoreCardProps> = ({
       >
         <CardContent className={commonStyles.cardContent}>
           <Box>
-            <OverlineTwoText noMargin>
+            <Heading2 visualAppearance="overline-two" noMargin>
               <StrongText>{title}</StrongText>
-            </OverlineTwoText>
+            </Heading2>
             <BodyFourText className={commonStyles.description} noMargin>
               {responseBasedDescription}
             </BodyFourText>
@@ -138,6 +139,23 @@ export const ScoreCard: FC<ScoreCardProps> = ({
                 items={breakdown}
                 barLabel="Teachers"
               />
+            )}
+            {questionType === 'promoter' && (
+              <Box className={styles.breakdownBarChartGroup}>
+                <SimpleBarChart
+                  data={breakdown.map(({count, label, color}) => ({
+                    value: count,
+                    label,
+                    color,
+                  }))}
+                  xAxisLabel="NPS SCALE"
+                  yAxisLabel="RESPONSES"
+                  width={620}
+                  height={250}
+                  barSize={20}
+                  animate={true}
+                />
+              </Box>
             )}
           </Box>
           <Button

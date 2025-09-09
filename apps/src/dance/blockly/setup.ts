@@ -28,9 +28,11 @@ export function setupBlocklyEnvironment() {
   isBlocklyEnvironmentSetup = true;
 }
 
-export function installSharedBlocks(sharedBlocks: BlockDefinition[]) {
+export function installSharedBlocks(sharedBlocks: BlockDefinition[]): {
+  [category: string]: string[];
+} {
   // @ts-expect-error needed to handle CommonJS export. Eventually this may be replaced by using Blockly JSON directly
-  blockUtils.installCustomBlocks({
+  return blockUtils.installCustomBlocks({
     blockly: Blockly,
     blockDefinitions: sharedBlocks,
     customInputTypes: danceBlocks.customInputTypes,

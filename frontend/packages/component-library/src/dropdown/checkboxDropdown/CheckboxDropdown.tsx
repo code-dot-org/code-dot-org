@@ -42,10 +42,6 @@ interface BaseCheckboxDropdownProps
   checkedOptions: string[];
   /** CheckboxDropdown onChange handler */
   onChange: (args: React.ChangeEvent<HTMLInputElement>) => void;
-  /** Whether the dropdown should take full width of its container */
-  fullWidth?: boolean;
-  /** Custom width for the dropdown (CSS width value - supports px, %, rem, etc.) */
-  width?: string;
 }
 
 interface CheckboxDropdownWithoutControlProps
@@ -102,8 +98,6 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
   helperIcon,
   errorMessage,
   styleAsFormField = false,
-  fullWidth,
-  width,
   ...rest
 }) => {
   return (
@@ -116,8 +110,6 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
       disabled={disabled}
       readOnly={readOnly}
       size={size}
-      fullWidth={fullWidth}
-      width={width}
       isSomeValueSelected={checkedOptions.length > 0}
       helperMessage={helperMessage}
       helperIcon={helperIcon}
