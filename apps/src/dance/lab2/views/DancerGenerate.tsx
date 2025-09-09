@@ -5,6 +5,7 @@ import {getGeneratedDancerAssets} from '@cdo/apps/lab2/utils/GeneratedDancer';
 import Adlib from '@cdo/apps/lab2/views/components/guide/Adlib';
 import Guide from '@cdo/apps/lab2/views/components/guide/Guide';
 import getRandomInt from '@cdo/apps/util/getRandomInt';
+import {trySetLocalStorage} from '@cdo/apps/utils';
 
 import moduleStyles from './dancer-generate.module.scss';
 
@@ -45,7 +46,14 @@ const DancerGenerate: React.FunctionComponent = () => {
       joinedChoicesText,
       variant
     );
+
     setHeadImageUrl(head);
+
+    trySetLocalStorage(
+      'dancer-ai-generate',
+      JSON.stringify({adlibOption: 'basic', joinedChoicesText, variant})
+    );
+
     const elapsedTime = Date.now() - startTime;
     const delayDuration = 2000; // 2 seconds.
     const remainingDelayDuration = Math.max(delayDuration - elapsedTime, 0);
