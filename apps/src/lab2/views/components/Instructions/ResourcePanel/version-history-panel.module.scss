@@ -30,7 +30,7 @@ $space-xl: 10px;
 .rowContainer {
   display: flex;
   padding: var(--padding-p-xxs, 8px) 12px;
-  align-items: flex-end;
+  align-items: flex-start;
   gap: 10px;
   align-self: stretch;
   border-radius: var(--border-radius-br-s, 4px);
@@ -39,6 +39,19 @@ $space-xl: 10px;
   margin: 8px;
   position: relative;
   z-index: 1;
+}
+
+.versionContent {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.commitDescription {
+  margin-left: 34px; // Align with radio button label
+  color: var(--text-neutral-secondary);
+  font-size: 14px;
 }
 
 /* Mask the vertical line above the first row and below the last row */
