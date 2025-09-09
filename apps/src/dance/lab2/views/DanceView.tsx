@@ -16,6 +16,7 @@ import {
   workspaceToToolboxDefinition,
 } from '@cdo/apps/blockly/utils/toolbox';
 import {saveReplayLog} from '@cdo/apps/code-studio/components/shareDialogRedux';
+import {queryParams} from '@cdo/apps/code-studio/utils';
 import defaultSources from '@cdo/apps/dance/blockly/defaultSources.json';
 import {
   installSharedBlocks,
@@ -56,6 +57,7 @@ import danceI18n from '../locale';
 import ProgramExecutor from '../ProgramExecutor';
 
 import DanceControls from './DanceControls';
+import DancerGenerate from './DancerGenerate';
 import SourcesContainer, {useSources} from './SourcesContainer';
 
 import moduleStyles from './dance-view.module.scss';
@@ -66,6 +68,9 @@ const BLOCKLY_DIV_ID = 'dance-blockly-div';
 registerReducers(reducers);
 
 const isToolboxMode = getAppOptionsEditBlocks() === TOOLBOX_BLOCKS;
+
+const mode =
+  queryParams('ai-generate-dancer') === 'true' ? 'ai-generate-dancer' : false;
 
 /**
  * Renders the Lab2 version of Dance Lab. This separate container
@@ -444,6 +449,10 @@ const DanceView: React.FunctionComponent<{
 
 export default (props: LabProps<DanceLevelProperties, DanceProjectSources>) => (
   <SourcesContainer {...props} defaultSources={defaultSources}>
-    <DanceView levelProperties={props.levelProperties} />
+    {mode === 'ai-generate-dancer' ? (
+      <DancerGenerate />
+    ) : (
+      <DanceView levelProperties={props.levelProperties} />
+    )}
   </SourcesContainer>
 );
