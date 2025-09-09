@@ -1,6 +1,6 @@
 const baseAssetUrl = 'https://curriculum.code.org/media/musiclab/';
 
-// Returns the URL for the head of a generated dancer.
+// Given information about a generated dancer, this returns the URL for the head image.
 const getGeneratedDancerAssets = async (
   adlibOption: string,
   joinedChoicesText: string,

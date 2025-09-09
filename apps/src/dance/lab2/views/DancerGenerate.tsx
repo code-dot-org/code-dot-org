@@ -20,6 +20,10 @@ const adlibs = {
   },
 };
 
+// This UI takes over the entire lab area and allows the user to generate a dancer using
+// a Guide UI component containing an Adlib UI component.  Pre-generated dancer assets are
+// retrieved from an online cache.  Information about the generated dancer is written to local
+// storage.
 const DancerGenerate: React.FunctionComponent = () => {
   const [adlibText, setAdlibText] = useState<string | undefined>(undefined);
   const [joinedChoicesText, setJoinedChoicesText] = useState('');
