@@ -1,0 +1,60 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2025-08-11T21:32:13.000Z",
+  "level_num": "custom",
+  "user_id": 6959,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Web Lab 2 Predict Level\r\n\r\nThis is an example of a predict level with multiple choice options.\r\n\r\nWhat will happen when you click on the 'Click me' button? Submit your answer and then try it out!",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "hide_share_and_remix": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "predict_settings": {
+      "isPredictLevel": true,
+      "solution": "'Good night!' will be displayed.",
+      "questionType": "multipleChoice",
+      "allowMultipleAttempts": false,
+      "placeholderText": "Put your answer here.",
+      "multipleChoiceOptions": [
+        "No change will occur.",
+        "'Hello World!' will be displayed.",
+        "'Good night!' will be displayed.",
+        "An image will apear."
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <title>Predict: Click me</title>\n  </head>\n  <body>\n    <h1>Web Lab 2 Predict Level</h1>\n\n    <button id=\"clickMe\">Click me</button>\n    <p id=\"output\" aria-live=\"polite\"></p>\n\n    <script src=\"script.js\"></script>\n  </body>\n</html>\n  ",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "script.js",
+          "language": "js",
+          "contents": "document.addEventListener('DOMContentLoaded', () => {\n  const button = document.getElementById('clickMe');\n  const output = document.getElementById('output');\n    \n  if (!button || !output) return;\n\n  button.addEventListener('click', () => {\n    output.textContent = 'Good night!';\n  });\n});",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2"
+      ]
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2025-08-11T21:32:13.890+00:00\",\"changed\":[\"cloned from \\\"Allthethings Weblab2 7\\\"\"],\"cloned_from\":\"Allthethings Weblab2 7\"},{\"changed_at\":\"2025-08-11 21:33:21 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-11 21:35:36 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-11 21:37:12 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-11 22:12:56 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-11 22:19:38 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-12 02:48:22 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

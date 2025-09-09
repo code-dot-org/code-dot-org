@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 54,
+  "created_at": "2024-12-09T22:30:56.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "video_key": "PL_equitymod_identity",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 28731,
+    "name_suffix": "_2024",
+    "encrypted": "false",
+    "long_instructions": "<br>\r\n\r\n#### This video builds on what we've covered regarding identity so far. Chimamanda Ngozi Adichie, the Nigerian-born author of <ins>Americanah</ins> and <ins>We Should All Be Feminists</ins>, speaks of the danger of a \"single story\" when it comes to understanding others.\r\n\r\n#### Watch the following TED Talk video from <b>8:27 - 13:24 minutes</b>. While you watch, consider the following: \r\n\r\n### Imagine a teacher told themselves a \"single story\" about you as a student. \r\n* #### What might that story tell about you? \r\n* #### What does it leave out?\r\n\r\n___\r\n\r\n<div style=\"display: flex; align-items: left;\">\r\n\r\n<img src=\"https://images.code.org/dd51b2d288841f86773ca05520f6104c-image-1731961166553.png\" style=\"width: auto; height: 100px;\"  alt=\"An illuminated light bulb with a brain inside of it.\">\r\n\r\n<div style=\"background-color: #B8E0E5; border-radius: 20px 20px 20px 20px; color: #000000; width: 80%; margin-left: 5%; margin-right: 5%; padding: 10px 10px 5px 10px;\">\r\n\r\n<p style=\"color: black; line-height: 1.5; margin-left: 10px; margin-right: 10px; font-size: 18px\"><b>Extension Activity</b></p>\r\n\r\n<p style=\"color: black; line-height: 1.2; margin-left: 10px; margin-right: 10px; font-size: 18px\">We love this video, and we think you will too! If you have time, consider watching all 18 minutes of the video. We think it's well worth it.</p>\r\n\r\n</div>\r\n</div>\r\n\r\n### Prefer to read? Check out the <a href=\"https://jamesclear.com/great-speeches/the-danger-of-a-single-story-by-chimamanda-ngozi-adichie\" target=\"blank\" rel=\"noopener noreferrer\">full transcript</a> instead.\r\n<br>\r\n"
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-12-09T22:30:56.620+00:00\",\"changed\":[\"cloned from \\\"self-paced-equity-U1L1-equityvid\\\"\"],\"cloned_from\":\"self-paced-equity-U1L1-equityvid\"},{\"changed_at\":\"2024-12-10 20:16:08 +0000\",\"changed\":[\"video_key\",\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2024-12-10 20:18:15 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2024-12-10 20:19:10 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2024-12-10 20:25:56 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2024-12-11 21:15:23 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2024-12-13 23:24:10 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2024-12-13 23:24:34 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2024-12-16 17:12:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2025-01-06 22:15:09 +0000\",\"changed\":[],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

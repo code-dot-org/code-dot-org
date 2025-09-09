@@ -1,12 +1,12 @@
-import classNames from 'classnames';
-import PropTypes from 'prop-types';
-import React from 'react';
-
 import {
   BodyThreeText,
   Heading6,
   StrongText,
-} from '@cdo/apps/componentLibrary/typography';
+} from '@code-dot-org/component-library/typography';
+import classNames from 'classnames';
+import PropTypes from 'prop-types';
+import React from 'react';
+
 import i18n from '@cdo/locale';
 
 import {UNDERSTANDING_LEVEL_STRINGS} from './rubricHelpers';

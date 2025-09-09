@@ -1,6 +1,8 @@
+@use '@code-dot-org/component-library-styles/typography.module.scss' as
+  typography;
 @import 'color';
-@import 'font';
-@import '@cdo/apps/componentLibrary/common/styles/mixins';
+@import '@code-dot-org/component-library-styles/font';
+@import '@code-dot-org/component-library-styles/mixins';
 
 @keyframes pulse {
   0% {
@@ -74,15 +76,15 @@
   align-items: center;
   flex-shrink: 0;
 
-  background: var(--sentiment-error-50, #E5311A);
+  background: var(--sentiment-error-50, #e5311a);
 }
 
 .countText {
   margin-top: 1px;
-  margin-bottom: 0;
+  margin-bottom: 0 !important;
   padding: 0 2px;
 
-  color: var(--light-white, #FFF);
+  color: var(--light-white, #fff);
   font-variant-ligatures: no-common-ligatures;
 }
 
@@ -101,8 +103,8 @@
   gap: 20px;
 
   border-radius: 4px;
-  border: 1px solid var(--neutral-gray-20, #D1D4D8);
-  background: var(--neutral-base-white, #FFF);
+  border: 1px solid var(--neutral-gray-20, #d1d4d8);
+  background: var(--neutral-base-white, #fff);
 
   box-shadow: 0 4px 4px 0 rgb(0 0 0 / 0.25);
 }
@@ -113,7 +115,7 @@
   margin-left: 4px;
   margin-bottom: -24px;
 
-  color: var(--text-neutral-primary, #292F36);
+  color: var(--text-neutral-primary, #292f36);
   font-variant-ligatures: no-common-ligatures;
 }
 
@@ -129,15 +131,15 @@
   flex: 1 0 0;
 
   border-radius: 4px;
-  background: var(--brand-aqua-50, #3CFFF7) !important;
+  background: var(--brand-aqua-50, #3cfff7) !important;
 }
 
 .viewScoresText {
-  color: var(--light-black, #292F36);
+  color: var(--light-black, #292f36);
   font-variant-ligatures: no-common-ligatures;
 
   /* Button/Button 3 */
-  font-family: Metropolis, sans-serif;
+  font-family: Figtree, sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 600;
@@ -443,7 +445,7 @@ button.rubricHeaderTab {
     height: 40px;
     padding: 0 1rem 0 2rem;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     align-self: stretch;
     line-height: 154%;
     position: relative;
@@ -486,6 +488,7 @@ button.rubricHeaderTab {
   gap: 16px;
   font-size: 14px;
   padding-left: 10px;
+  padding-top: 0.5rem;
 }
 
 .learningGoalHeaderRightSide {
@@ -559,7 +562,6 @@ h2.studentName {
   display: flex;
   flex-direction: row;
   width: 100%;
-  height: 100px;
   gap: 8px;
   min-height: 92px;
 }
@@ -609,6 +611,7 @@ h2.studentName {
 
 .evidenceLevelLabel {
   @include main-font-semi-bold;
+  color: var(--text-neutral-primary);
   font-size: 0.875rem;
   line-height: 154%;
   margin-bottom: 0;
@@ -1115,6 +1118,10 @@ p.evidenceLevelHeaderText {
   flex-direction: row;
   width: 100%;
   gap: 8px;
+
+  p {
+    margin-bottom: 0;
+  }
 }
 
 .evidenceLevelOptionV2 {
@@ -1328,89 +1335,95 @@ p.detailsHidden {
   justify-content: space-between;
 }
 
-.studentDropdownOption {
+.dropdownOption {
+  /* Reset's every elements apperance */
+  background: none repeat scroll 0 0 transparent;
+  border: none !important;
+  border-radius: 0;
+  border-spacing: 0;
+  list-style: none outside none;
+  margin: 0;
+  text-decoration: none;
+  text-indent: 0;
+  box-shadow: none;
+  flex-grow: 1;
+
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 5px;
-  margin-top: 3px;
+  align-items: center;
+  cursor: pointer;
+  color: var(--neutral-base-black);
+
+  padding: 0.3125rem 1rem;
+  gap: 16px;
+
+  span {
+    @include typography.body-three;
+    color: inherit;
+    margin-bottom: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &:active {
+    border: 0 !important;
+  }
+
+  &:hover {
+    color: var(--neutral-base-black);
+    text-decoration: none;
+    box-shadow: none;
+  }
+}
+
+.unselectableDropdownOption {
+  div {
+    cursor: default !important;
+    span {
+      font-style: italic;
+    }
+  }
+
+  &:hover {
+    background-color: inherit !important;
+  }
+
+  &:active {
+    background-color: inherit !important;
+    span {
+      color: inherit !important;
+    }
+  }
+}
+
+.statusBlob {
+  border-radius: 20px;
+  padding: 0 10px;
   height: 26px;
+  min-height: 26px;
+  min-width: 82px;
+  max-width: 82px;
+  display: flex;
+  align-items: center;
 }
 
 .greenStatusBlob {
   background-color: $light_affirmative_100;
-  border-radius: 20px;
-  padding: 4px 10px 0;
-  height: 22px;
-  min-width: 80px;
-  display: inline;
-  margin-right: 17px;
-  p {
-    margin-bottom: 0;
-  }
 }
 
 .yellowStatusBlob {
   background-color: $lighter_yellow;
-  border-radius: 20px;
-  padding: 5px 10px 0;
-  height: 22px;
-  min-width: 82px;
-  display: inline;
-  margin-right: 17px;
-  p {
-    margin: 0, 0, 0, 0;
-  }
 }
 
 .purpleStatusBlob {
   background-color: var(--background-brand-purple-light);
-  border-radius: 20px;
-  padding: 4px 10px 0;
-  height: 22px;
-  min-width: 80px;
-  display: inline;
-  margin-right: 17px;
-  p {
-      margin-bottom: 0;
-  }
 }
 
 .redStatusBlob {
   background-color: $light_negative_100;
-  border-radius: 20px;
-  padding: 4px 10px 0;
-  height: 22px;
-  min-width: 115px;
-  display: inline;
-  margin-right: 17px;
-  p {
-    margin-bottom: 0;
-  }
 }
 
 .grayStatusBlob {
   background-color: $light_gray_100;
-  border-radius: 20px;
-  padding: 5px 10px 0;
-  height: 22px;
-  min-width: 87px;
-  display: inline;
-  margin-right: 17px;
-  p {
-    margin: 0, 0, 0, 0;
-  }
-}
-
-.submitStatusText {
-  display: inline;
-  padding-top: 3px;
-  p {
-    margin-bottom: 0;
-  }
-  overflow: hidden;
-  height: 20px;
-  text-overflow: ellipsis;
 }
 
 .announcementDialog {

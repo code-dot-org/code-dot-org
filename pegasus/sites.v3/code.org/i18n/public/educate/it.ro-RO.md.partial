@@ -17,7 +17,7 @@ theme: responsive
 
 ## Browsere și Platforme Minimum Sprijinite
 
-Începând cu iulie 2024, vom actualiza versiunile minime necesare pentru browsere și sisteme de operare. Deși versiunile vechi pot funcționa în continuare, nu vom putea accepta cererile de remediere a erorilor în versiunile mai vechi.
+În fiecare an vom actualiza versiunile minime necesare pentru browsere și sisteme de operare. Deși versiunile vechi pot funcționa în continuare, nu vom putea accepta cererile de remediere a erorilor în versiunile mai vechi.
 
 <table>
   <tr>
@@ -25,28 +25,6 @@ theme: responsive
       <table>
         <th>
           Browser
-        </th>
-        <tr>
-          <td>Chrome 96.x</td>
-        </tr>
-        <tr>
-          <td>Safari 13.x</td>
-        </tr>
-        <tr>
-          <td>Mobile Safari 13.x</td>
-        </tr>
-        <tr>
-          <td>Edge 94.x</td>
-        </tr>
-        <tr>
-          <td>Firefox 91.x</td>
-        </tr>
-      </table>
-    </td>
-    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
-      <table>
-        <th>
-          Browser iulie '24
         </th>
         <tr>
           <td>Chrome 103.x</td>
@@ -71,28 +49,6 @@ theme: responsive
           Platformă
         </th>
         <tr>
-          <td>macOS 10.13</td>
-        </tr>
-        <tr>
-          <td>iOS 11.x</td>
-        </tr>
-        <tr>
-          <td>Windows 7</td>
-        </tr>
-        <tr>
-          <td>Android 6</td>
-        </tr>
-        <tr>
-          <td>ChromeOS (Chromebooks)</td>
-        </tr>
-      </table>
-    </td>
-    <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
-      <table>
-        <th>
-          Platforma iulie '24
-        </th>
-        <tr>
           <td>MacOS 10.15</td>
         </tr>
         <tr>
@@ -103,6 +59,51 @@ theme: responsive
         </tr>
         <tr>
           <td>Android 8.x</td>
+        </tr>
+        <tr>
+          <td>ChromeOS (Chromebooks)</td>
+        </tr>
+      </table>
+    </td>
+    <!-- "coming soon" system requirements, to be updated and made live from March through July. -->
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+      <table>
+        <th>
+          Browser iulie '25
+        </th>
+        <tr>
+          <td>Crom 109</td>
+        </tr>
+        <tr>
+          <td>Safari 16.6</td>
+        </tr>
+        <tr>
+          <td>Safari mobil 16</td>
+        </tr>
+        <tr>
+          <td>Marginea 128</td>
+        </tr>
+        <tr>
+          <td>Firefox 115</td>
+        </tr>
+      </table>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+      <table>
+        <th>
+          Platforma iulie '25
+        </th>
+        <tr>
+          <td>MacOS 10.15</td>
+        </tr>
+        <tr>
+          <td>iOS 16.x</td>
+        </tr>
+        <tr>
+          <td>Windows 10</td>
+        </tr>
+        <tr>
+          <td>Android 8</td>
         </tr>
         <tr>
           <td>ChromeOS (Chromebooks)</td>
@@ -147,7 +148,6 @@ Noi utilizăm [YouTube](https://www.youtube.com) pentru a insera videoclipuri î
 ### Puteți reda acest videoclip?
 
 Înainte de a începe cursurile online Code.org, testați redarea videoclipului de mai jos pentru a vă asigura că sunteți pregătit.
-
 
 <!--
 The following HTML is a copy of video_with_fallback.haml. once this file can be converted to

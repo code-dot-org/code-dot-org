@@ -1,0 +1,10 @@
+name 'gen-ai-customizing-retrieval-explore-L9_latm'
+display_name 'Make Levels'
+description 'Choose 1-2 levels to try and make something of your own!'
+
+sublevels
+level 'gen-ai-customizing-retrieval-explore-L9A_latm'
+level 'gen-ai-customizing-retrieval-explore-L9B_latm'
+level 'gen-ai-customizing-retrieval-explore-L9C_latm'
+level 'gen-ai-customizing-retrieval-explore-L9D_latm'
+level 'gen-ai-customizing-retrieval-explore-L9E_latm'

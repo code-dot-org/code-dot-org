@@ -485,6 +485,7 @@ export default function manageStudents(state = initialState, action) {
             ...blankAddRow,
             loginType: action.loginType,
           },
+          ...state.studentData,
         },
         editingData: {
           [addRowId]: {
@@ -494,11 +495,19 @@ export default function manageStudents(state = initialState, action) {
         },
       };
     }
-    return {
+
+    let reduxState = {
       ...state,
       loginType: action.loginType,
       ...addRowInitialization,
     };
+
+    if (reduxState.studentData) {
+      Object.keys(reduxState.studentData).forEach(studentId => {
+        reduxState.studentData[studentId].loginType = action.loginType;
+      });
+    }
+    return reduxState;
   }
   if (action.type === SET_STUDENTS) {
     let studentData = {
@@ -729,7 +738,7 @@ export default function manageStudents(state = initialState, action) {
         ...state.studentData,
         [action.studentId]: {
           ...state.studentData[action.studentId],
-          secretPicturePath: action.image,
+          secretPictureUrl: action.image,
         },
       },
     };
@@ -884,7 +893,7 @@ export const convertStudentServerData = (studentData, loginType, sectionId) => {
       gender: student.gender || '',
       genderTeacherInput: student.gender_teacher_input || '',
       secretWords: student.secret_words,
-      secretPicturePath: student.secret_picture_path,
+      secretPictureUrl: student.secret_picture_url,
       loginType: loginType,
       sectionId: sectionId,
       sharingDisabled: student.sharing_disabled,
@@ -894,7 +903,9 @@ export const convertStudentServerData = (studentData, loginType, sectionId) => {
       isSaving: false,
       rowType: RowType.STUDENT,
       userType: student.user_type,
-      atRiskAgeGatedStudent: student.at_risk_age_gated,
+      atRiskAgeGatedDate: student.at_risk_age_gated_date
+        ? new Date(student.at_risk_age_gated_date)
+        : null,
       childAccountComplianceState: student.child_account_compliance_state,
       latestPermissionRequestSentAt:
         student.latest_permission_request_sent_at &&
@@ -1034,6 +1045,22 @@ export const loadSectionStudentData = sectionId => {
   };
 };
 
-export const filterAgeGatedStudents = studentData => {
-  return studentData.filter(student => student.atRiskAgeGatedStudent);
+/**
+ * Filters an array of students by the presence of an 'atRiskAgeGatedDate' property.
+ *
+ * @param {Array} students - The array of students to filter.
+ * @returns {Array} - An array of students that have the 'atRiskAgeGatedDate' property.
+ */
+export const filterAgeGatedStudents = students => {
+  return students.filter(student => student.atRiskAgeGatedDate);
+};
+
+/**
+ * Returns the at-risk age gated date for the selected students.
+ *
+ * @param {Array} students - The array of student objects.
+ * @returns {Date} The at-risk age gated date for the selected students, or undefined if no students are found or no at-risk date is available.
+ */
+export const selectAtRiskAgeGatedDate = students => {
+  return filterAgeGatedStudents(students)[0]?.atRiskAgeGatedDate;
 };

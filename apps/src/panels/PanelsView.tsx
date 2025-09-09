@@ -1,9 +1,9 @@
+import {Button} from '@code-dot-org/component-library/button';
 import classNames from 'classnames';
 import markdownToTxt from 'markdown-to-txt';
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 import Typist from 'react-typist';
 
-import {Button} from '@cdo/apps/componentLibrary/button';
 import TextToSpeech from '@cdo/apps/lab2/views/components/TextToSpeech';
 
 import {queryParams} from '../code-studio/utils';
@@ -234,7 +234,12 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
               textLayoutClass
             )}
           >
-            {offerBrowserTts && <TextToSpeech text={panel.text} />}
+            {offerBrowserTts && (
+              // Override the theme since the text container is always white.
+              <div className={styles.ttsContainer} data-theme="Light">
+                <TextToSpeech text={panel.text} />
+              </div>
+            )}
             {showTyping ? (
               <div>
                 <div className={styles.invisiblePlaceholder}>{plainText}</div>
@@ -289,6 +294,19 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
                   )}
                   title={undefined}
                   icon="circle"
+                  tabIndex={0}
+                  aria-label={
+                    commonI18n.panel() +
+                    (index + 1) +
+                    (index === currentPanelIndex ? commonI18n.selected() : '')
+                  }
+                  onKeyDown={(event: React.KeyboardEvent) => {
+                    if (event.key === 'Enter' || event.key === ' ') {
+                      handleBubbleClick(index);
+                      event.preventDefault();
+                    }
+                  }}
+                  role="button"
                   onClick={() => handleBubbleClick(index)}
                 />
               );

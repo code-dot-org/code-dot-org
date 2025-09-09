@@ -12,7 +12,7 @@
     "csa_view_mode": "console",
     "start_sources": {
       "TeacherRunner.java": {
-        "text": "public class TeacherRunner {\n  public static void main(String[] args) {\n\n    int[][] augustGrades = { {85, 90, 78}, {92, 87, 80}, {76, 89, 97} };\n\n    Teacher msHamilton = new Teacher(augustGrades);\n\n    int currentStudent = msHamilton.getGrade(1, 1);\n    System.out.println(currentStudent);\n\n    msHamilton.setGrade(1, 1, 100);\n\n    currentStudent = msHamilton.getGrade(1, 1);\n    System.out.println(currentStudent);\n\n    System.out.println(\"\\nPrint First Row:\");\n    System.out.println(msHamilton.getStudentGrades(0));\n    \n    /* ---- 🔎 ADD YOUR CODE BELOW THIS LINE ---- */\n\n\n    \n\n\n    \n    \n  }\n}",
+        "text": "public class TeacherRunner {\n  public static void main(String[] args) {\n\n    int[][] augustGrades = { {85, 90, 78}, \n                             {92, 87, 80}, \n                             {76, 89, 97} };\n\n    Teacher msHamilton = new Teacher(augustGrades);\n\n    int currentStudent = msHamilton.getGrade(1, 1);\n    System.out.println(currentStudent);\n\n    msHamilton.setGrade(1, 1, 100);\n\n    currentStudent = msHamilton.getGrade(1, 1);\n    System.out.println(currentStudent);\n    \n    /* ---- 🔎 ADD YOUR CODE BELOW THIS LINE ---- */",
         "isVisible": true,
         "tabOrder": 0
       },
@@ -25,6 +25,6 @@
     "name_suffix": "_alt-2025"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-08-02T22:53:02.085+00:00\",\"changed\":[\"cloned from \\\"CSA U5L2-2D Arrays PBT_pilot-2025\\\"\"],\"cloned_from\":\"CSA U5L2-2D Arrays PBT_pilot-2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-08-02T22:53:02.085+00:00\",\"changed\":[\"cloned from \\\"CSA U5L2-2D Arrays PBT_pilot-2025\\\"\"],\"cloned_from\":\"CSA U5L2-2D Arrays PBT_pilot-2025\"},{\"changed_at\":\"2025-05-22 17:44:03 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-22 17:44:11 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-22 17:44:11 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-22 18:06:26 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
 </Javalab>

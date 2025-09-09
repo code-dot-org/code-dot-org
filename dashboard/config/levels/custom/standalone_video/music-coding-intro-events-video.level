@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 54,
+  "created_at": "2025-04-16T17:34:21.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "uses_lab2": true,
+    "background": "music-black",
+    "encrypted": "false",
+    "video_key": "music-lab-roxanne-triggers",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "video_full_width": true,
+    "name_suffix": "_launch"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-04-16T17:34:21.330+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-functions-video-hold3_launch\\\"\"],\"cloned_from\":\"music-coding-intro-functions-video-hold3_launch\"},{\"changed_at\":\"2025-04-16 17:35:07 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

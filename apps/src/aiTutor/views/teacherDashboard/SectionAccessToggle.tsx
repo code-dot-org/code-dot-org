@@ -1,7 +1,7 @@
+import Toggle from '@code-dot-org/component-library/toggle';
 import React, {useState, useEffect} from 'react';
 
 import {handleUpdateSectionAITutorEnabled} from '@cdo/apps/aiTutor/accessControlsApi';
-import Toggle from '@cdo/apps/componentLibrary/toggle/Toggle';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import InfoHelpTip from '@cdo/apps/sharedComponents/InfoHelpTip';
@@ -9,7 +9,7 @@ import {updateSectionAiTutorEnabled} from '@cdo/apps/templates/teacherDashboard/
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 
-import style from '@cdo/apps/aiTutor/views/teacherDashboard/access-controls.module.scss';
+import style from '@cdo/apps/aiTutor/views/teacherDashboard/ai-tutor-access-controls.module.scss';
 
 interface SectionAccessToggleProps {
   sectionId: number;

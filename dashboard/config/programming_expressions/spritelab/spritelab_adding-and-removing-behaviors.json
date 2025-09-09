@@ -1,8 +1,9 @@
 {
   "key": "spritelab_adding-and-removing-behaviors",
   "name": "Adding and Removing Behaviors",
-  "category": null,
+  "category": "Behaviors",
   "category_key": "behaviors",
+  "block_name": "gamelab_behavior_get",
   "content": "Behaviors are pre-defined sets of actions that a sprite can perform over and over. When a sprite begins a behavior you are telling the computer to run that set of actions on the sprite over and over until the behavior stops.\r\n\r\nBehaviors can be added to and removed from sprites using [`sprite begins`(#89eba4)](/docs/spritelab/gamelab_addBehaviorSimple/), [`sprite stops`(#89eba4)](/docs/spritelab/gamelab_removeBehaviorSimple/), and [`stops everything`(#89eba4)](/docs/spritelab/gamelab_removeAllBehaviors/). Sprites can have multiple behaviors at the same time and each behavior will continue until stopped.\r\n\r\nSprite lab provides some premade behaviors, but there is also an option to create a custom behavior. You can learn more about [`Defining Behaviors`(#89eba4)](/docs/spritelab/codestudio_defining-behaviors/).",
   "examples": [
     {

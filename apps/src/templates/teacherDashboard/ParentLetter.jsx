@@ -38,7 +38,7 @@ const LOGIN_TYPE_NAMES = {
  *
  * The letter can be personalized by passing optional props:
  *   studentName
- *   secretPicturePath
+ *   secretPictureUrl
  *   secretWords
  */
 class ParentLetter extends React.Component {
@@ -56,7 +56,7 @@ class ParentLetter extends React.Component {
       PropTypes.shape({
         id: PropTypes.number.isRequired,
         name: PropTypes.string.isRequired,
-        secretPicturePath: PropTypes.string,
+        secretPictureUrl: PropTypes.string,
         secretWords: PropTypes.string,
       })
     ),
@@ -86,7 +86,7 @@ class ParentLetter extends React.Component {
             .shift()
         : null;
     const studentName = student ? student.name : 'your student';
-    const secretPicturePath = student ? student.secretPicturePath : null;
+    const secretPictureUrl = student ? student.secretPictureUrl : null;
     const secretWords = student ? student.secretWords : null;
 
     return (
@@ -103,7 +103,7 @@ class ParentLetter extends React.Component {
           <ParentLetterSteps
             loginType={loginType}
             loginTypeName={loginTypeName}
-            secretPicturePath={secretPicturePath}
+            secretPictureUrl={secretPictureUrl}
             secretWords={secretWords}
             sectionCode={sectionCode}
             studentName={studentName}
@@ -157,7 +157,7 @@ Header.defaultProps = {
 const ParentLetterSteps = ({
   loginType,
   loginTypeName,
-  secretPicturePath,
+  secretPictureUrl,
   secretWords,
   sectionCode,
   studentName,
@@ -177,7 +177,7 @@ const ParentLetterSteps = ({
           <SignInInstructions
             loginType={loginType}
             loginTypeName={loginTypeName}
-            secretPicturePath={secretPicturePath}
+            secretPictureUrl={secretPictureUrl}
             secretWords={secretWords}
             sectionCode={sectionCode}
             studentName={studentName}
@@ -204,7 +204,7 @@ const ParentLetterSteps = ({
           <SignInInstructions
             loginType={loginType}
             loginTypeName={loginTypeName}
-            secretPicturePath={secretPicturePath}
+            secretPictureUrl={secretPictureUrl}
             secretWords={secretWords}
             sectionCode={sectionCode}
             studentName={studentName}
@@ -230,7 +230,7 @@ const ParentLetterSteps = ({
 ParentLetterSteps.propTypes = {
   loginType: PropTypes.oneOf(Object.values(SectionLoginType)),
   loginTypeName: PropTypes.string,
-  secretPicturePath: PropTypes.string,
+  secretPictureUrl: PropTypes.string,
   secretWords: PropTypes.string,
   sectionCode: PropTypes.string,
   studentName: PropTypes.string,
@@ -239,7 +239,7 @@ ParentLetterSteps.propTypes = {
 const SignInInstructions = ({
   loginType,
   loginTypeName,
-  secretPicturePath,
+  secretPictureUrl,
   secretWords,
   sectionCode,
   studentName,
@@ -316,18 +316,18 @@ const SignInInstructions = ({
           />
           <li>
             {i18n.parentLetterPicturePassword()}
-            {secretPicturePath && (
+            {secretPictureUrl && (
               <span>
                 <br />
                 <img
-                  src={pegasus(`/images/${secretPicturePath}`)}
+                  src={secretPictureUrl}
                   style={{width: 60, margin: 10}}
                   alt={i18n.parentLetterPicturePasswordImg()}
                 />
               </span>
             )}
           </li>
-          {!secretPicturePath && (
+          {!secretPictureUrl && (
             <li>{i18n.parentLetterForgotPicturePassword()}</li>
           )}
         </ol>
@@ -381,7 +381,7 @@ const SignInInstructions = ({
 SignInInstructions.propTypes = {
   loginType: PropTypes.oneOf(Object.values(SectionLoginType)),
   loginTypeName: PropTypes.string,
-  secretPicturePath: PropTypes.string,
+  secretPictureUrl: PropTypes.string,
   secretWords: PropTypes.string,
   sectionCode: PropTypes.string, // TODO: Conditional required
   studentName: PropTypes.string,

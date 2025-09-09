@@ -1,0 +1,9 @@
+name 'programming-fundamentals-lesson1-level1_2025'
+display_name 'Persona Social Media Sleuthing'
+description 'Pick one of the personas below. Investigate their social media posts and record clues about their interests and skills.'
+
+sublevels
+level 'programming-fundamentals-lesson1-level1a_2025'
+level 'programming-fundamentals-lesson1-level1b_2025'
+level 'programming-fundamentals-lesson1-level1c_2025'
+level 'programming-fundamentals-lesson1-level1d_2025'

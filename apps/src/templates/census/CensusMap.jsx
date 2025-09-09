@@ -3,11 +3,9 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 
-import i18n from '@cdo/locale';
-
 class CensusMapInfoWindow extends Component {
   static propTypes = {
-    onTakeSurveyClick: PropTypes.func.isRequired,
+    onTakeSurveyClick: PropTypes.func,
     schoolId: PropTypes.string.isRequired,
     schoolName: PropTypes.string.isRequired,
     city: PropTypes.string.isRequired,
@@ -75,21 +73,23 @@ class CensusMapInfoWindow extends Component {
           <div className={colorClass} />
           {censusMessage}
         </div>
-        <div className="button-container">
-          <div className="button-link-div">
-            <a
-              onClick={() =>
-                this.props.onTakeSurveyClick(schoolDropdownOption, false)
-              }
-            >
-              <div className="button">
-                <div className="button-text">
-                  Take the survey for this school
+        {this.props.onTakeSurveyClick && (
+          <div className="button-container">
+            <div className="button-link-div">
+              <a
+                onClick={() =>
+                  this.props.onTakeSurveyClick(schoolDropdownOption, false)
+                }
+              >
+                <div className="button">
+                  <div className="button-text">
+                    Take the survey for this school
+                  </div>
                 </div>
-              </div>
-            </a>
+              </a>
+            </div>
           </div>
-        </div>
+        )}
       </div>
     );
   }
@@ -97,7 +97,7 @@ class CensusMapInfoWindow extends Component {
 
 export default class CensusMap extends Component {
   static propTypes = {
-    onTakeSurveyClick: PropTypes.func.isRequired,
+    onTakeSurveyClick: PropTypes.func,
     school: PropTypes.object,
     tileset: PropTypes.string.isRequired,
   };
@@ -399,20 +399,6 @@ export default class CensusMap extends Component {
           <div className="caption">No CS opportunities</div>
           <div className="color legend-no-data-cs" />
           <div className="caption">No Data</div>
-        </div>
-        <div id="map-footer">
-          <div id="left">
-            <a href="/yourschool/about" target="_blank">
-              Summary of the data sources we use
-            </a>
-          </div>
-          <div id="right">
-            <span id="footer-text">In partnership with</span>
-            <img
-              src="/images/fit-100/avatars/computer_science_teachers_association.png"
-              alt={i18n.CSTALogo()}
-            />
-          </div>
         </div>
         <br />
         <br />

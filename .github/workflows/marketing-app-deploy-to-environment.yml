@@ -1,0 +1,187 @@
+# Deploys the Marketing App to a specific Github Environment.
+# See Marketing-App-Deploy for the parent workflow that provides the matrix inputs to this reusable workflow.
+
+# The name does not use spaces due to https://github.com/integrations/slack/issues/1790
+name: Marketing-App-Deploy-To-Environment
+
+# Configures this workflow to run every time a change is pushed to `frontend`
+on:
+  workflow_dispatch:
+    inputs:
+      ENVIRONMENT_TYPE:
+        description: "The type of environment to deploy to, e.g. 'test' or 'production'."
+        required: true
+        type: string
+      SITE_TYPE:
+        description: "The type of site to deploy, e.g. 'csforall' or 'corporate'."
+        required: true
+        type: string
+      CONTAINER_IMAGE_DIGEST:
+        description: "The sha256 digest of the container image to deploy."
+        required: true
+        type: string
+  workflow_call:
+    inputs:
+      ENVIRONMENT_TYPE:
+        description: "The type of environment to deploy to, e.g. 'test' or 'production'."
+        required: true
+        type: string
+      SITE_TYPE:
+        description: "The type of site to deploy, e.g. 'csforall' or 'corporate'."
+        required: true
+        type: string
+      CONTAINER_IMAGE_DIGEST:
+        description: "The sha256 digest of the container image to deploy."
+        required: true
+        type: string
+
+# Defines two custom environment variables for the workflow. These are used for the Container registry domain, and a name for the Docker image that this workflow builds.
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: code-dot-org/marketing
+  GITHUB_ENVIRONMENT_NAME: marketing-sites-${{ inputs.ENVIRONMENT_TYPE }}-${{ inputs.SITE_TYPE }}
+
+# There is a single job in this workflow. It's configured to run on the latest available version of Ubuntu.
+jobs:
+  # Job: deploy
+  # This job pulls the task definition for the current task running in the cluster and updates the docker image tag with the one built in the previous job
+  # Then, the task definition is deployed to the ECS service
+  # See: https://docs.github.com/en/actions/use-cases-and-examples/deploying/deploying-to-amazon-elastic-container-service
+  deploy:
+    runs-on: ubuntu-24.04
+    environment: marketing-sites-${{ inputs.ENVIRONMENT_TYPE }}-${{ inputs.SITE_TYPE }}
+
+    permissions:
+      # Allows Github to retrieve AWS credentials via OIDC
+      # See: https://docs.github.com/en/actions/security-for-github-actions/security-hardening-your-deployments/configuring-openid-connect-in-amazon-web-services#adding-permissions-settings
+      id-token: write
+
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          sparse-checkout: |
+            frontend/apps/marketing
+
+      - uses: ruby/setup-ruby@eaecf785f6a34567a6d97f686bbb7bccc1ac1e5c # v1.237.0
+        with:
+          working-directory: ./frontend/apps/marketing/cicd
+          bundler-cache: true
+
+      # Warning: Use minimal permissions for the deployer
+      # See: https://github.com/aws-actions/amazon-ecs-deploy-task-definition?tab=readme-ov-file#permissions
+      - name: Configure ECS/Github Deployer AWS credentials
+        uses: aws-actions/configure-aws-credentials@f24d7193d98baebaeacc7e2227925dd47cc267f5 # v4.2.0
+        with:
+          role-to-assume: ${{ secrets.GH_ACTIONS_DEPLOYER_IAM_ROLE_ARN }}
+          role-session-name: GithubActions-${{ env.GITHUB_ENVIRONMENT_NAME }}
+          aws-region: ${{ vars.AWS_REGION }}
+
+      - name: "Download Built Docker Image"
+        run: |
+          docker pull ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}@${{ inputs.CONTAINER_IMAGE_DIGEST }}
+          docker create --name temp ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}@${{ inputs.CONTAINER_IMAGE_DIGEST }}
+
+      - name: "Extract Static Assets from Docker"
+        run: |
+          docker cp temp:/app/apps/marketing/.next/static/ ./static
+
+      - name: "[${{ env.GITHUB_ENVIRONMENT_NAME }}] Upload Static Assets to S3"
+        env:
+          BASE_DOMAIN: ${{ vars.APPLICATION_BASE_DOMAIN }}
+          SUBDOMAIN_NAME: ${{ vars.APPLICATION_SUBDOMAIN_NAME }}
+        run: |
+          BUCKET_NAME="$SUBDOMAIN_NAME.$BASE_DOMAIN-static-assets"
+
+          echo "Uploading static assets to $BUCKET_NAME"
+
+          # Upload to S3 and set the cache control for these static assets to be immutable.
+          # More details: https://nextjs.org/docs/app/guides/self-hosting#automatic-caching
+          aws s3 sync static/ "s3://$BUCKET_NAME/_next/static" --quiet --cache-control "public, max-age=31536000, immutable"
+
+      - name: "[${{ env.GITHUB_ENVIRONMENT_NAME }}] Deploy Marketing App to AWS"
+        working-directory: ./frontend/apps/marketing/cicd/3-app
+        run: |
+          bundle exec ruby deploy.rb --environment_type ${{ vars.ENVIRONMENT_TYPE }} \
+            --site_type ${{ vars.SITE_TYPE }} \
+            --region ${{ vars.AWS_REGION }} \
+            --hosted_zone_id ${{ secrets.ROOT_HOSTED_ZONE_ID }} \
+            --base_domain_name ${{ vars.APPLICATION_BASE_DOMAIN }} \
+            --subdomain_name ${{ vars.APPLICATION_SUBDOMAIN_NAME }} \
+            --container_image_hash ${{ inputs.CONTAINER_IMAGE_DIGEST }} \
+            --role_arn ${{ secrets.CLOUDFORMATION_DEPLOYER_ROLE_ARN }} \
+            --web_application_server_secrets_arn ${{ secrets.APPLICATION_SERVER_SECRETS_ARN }} \
+            --cloudformation_role_boundary ${{ secrets.CLOUDFORMATION_ROLE_BOUNDARY_ARN }} \
+            --production_domain_name "${{ vars.PRODUCTION_DOMAIN_NAME }}" \
+            --production_hosted_zone_id "${{ secrets.PRODUCTION_HOSTED_ZONE_ID }}"
+
+      - name: "[${{ env.GITHUB_ENVIRONMENT_NAME }}] Invalidate CloudFront Cache"
+        env:
+          AWS_REGION: ${{ vars.AWS_REGION }}
+          STACK_NAME: "${{ vars.APPLICATION_SUBDOMAIN_NAME }}-${{ vars.APPLICATION_BASE_DOMAIN }}"
+        run: |
+          CFN_STACK_NAME=$(echo "$STACK_NAME" | tr '.' '-')
+          CLOUDFRONT_DISTRIBUTION_ID=$(aws cloudformation describe-stacks --region $AWS_REGION --stack-name $CFN_STACK_NAME --query "Stacks[0].Outputs[?OutputKey=='CloudFrontDistributionId'].OutputValue" --output text)
+          
+          echo "::add-mask::$CLOUDFRONT_DISTRIBUTION_ID"
+          
+          aws cloudfront create-invalidation \
+            --distribution-id $CLOUDFRONT_DISTRIBUTION_ID \
+            --paths "/*"
+
+  ui-tests:
+    runs-on: ubuntu-24.04
+    environment: marketing-sites-${{ inputs.ENVIRONMENT_TYPE }}-${{ inputs.SITE_TYPE }}
+    needs:
+      - deploy
+
+    strategy:
+      fail-fast: false
+      matrix:
+        shardIndex: [1, 2, 3, 4]
+        # shardTotal is used to determine how many shards there are in total.
+        shardTotal: [4]
+
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          lfs: true
+          sparse-checkout: |
+            frontend
+            .github
+
+      - name: Setup Frontend
+        uses: ./.github/actions/frontend/setup
+
+      - name: Build
+        run: yarn build --filter @code-dot-org/marketing
+        working-directory: ./frontend
+
+      - name: UI Tests
+        uses: ./.github/actions/frontend/marketing/ui-tests
+        with:
+          ENVIRONMENT_TYPE: ${{ vars.ENVIRONMENT_TYPE }}
+          CONTENTFUL_SPACE_ID: ${{ vars.CONTENTFUL_SPACE_ID }}
+          APPLITOOLS_API_KEY: ${{ secrets.APPLITOOLS_API_KEY}}
+          APPLICATION_BASE_ADDRESS: "${{ vars.APPLICATION_SUBDOMAIN_NAME }}.${{ vars.APPLICATION_BASE_DOMAIN }}"
+          DRAFT_MODE_TOKEN: ${{ secrets.DRAFT_MODE_TOKEN }}
+          GITHUB_ENVIRONMENT_NAME: ${{ env.GITHUB_ENVIRONMENT_NAME }}
+          SITE_TYPE: ${{ inputs.SITE_TYPE }}
+          SHARD_INDEX: ${{ matrix.shardIndex }}
+          SHARD_TOTAL: ${{ matrix.shardTotal }}
+
+  merge-reports:
+    needs: [ ui-tests ]
+
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+          sparse-checkout: |
+            frontend
+            .github
+
+      - name: Merge Playwright Reports
+        uses: ./.github/actions/frontend/merge-playwright-reports
+        with:
+          GITHUB_ENVIRONMENT_NAME: ${{ env.GITHUB_ENVIRONMENT_NAME }}

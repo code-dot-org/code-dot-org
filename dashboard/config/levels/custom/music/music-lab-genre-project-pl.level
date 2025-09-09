@@ -1,0 +1,1295 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-04-22T23:37:29.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "toolbox": {
+        "type": "flyout",
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2",
+            "play_rest_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together",
+            "play_sounds_sequential",
+            "repeat_simple2"
+          ],
+          "Effects": [
+            "set_volume_effect_at_current_location_simple2",
+            "set_filter_effect_at_current_location_simple2",
+            "set_delay_effect_at_current_location_simple2"
+          ],
+          "Functions": [
+
+          ]
+        },
+        "addFunctionDefinition": true,
+        "addFunctionCalls": true
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "next": {
+                "block": {
+                  "type": "procedures_callnoreturn",
+                  "id": "*B.gE5[cVGm4|03ln2%^",
+                  "extraState": {
+                    "name": "verse"
+                  },
+                  "next": {
+                    "block": {
+                      "type": "procedures_callnoreturn",
+                      "id": "42}H4n06QS7Y4Wx8HgYS",
+                      "extraState": {
+                        "name": "prechorus"
+                      },
+                      "next": {
+                        "block": {
+                          "type": "play_sound_at_current_location_simple2",
+                          "id": "d%CxtS-Y%!OrG9e{g8+~",
+                          "extraState": {
+                            "disableNextConnection": false
+                          },
+                          "fields": {
+                            "sound": "rock/pick_scrape"
+                          },
+                          "next": {
+                            "block": {
+                              "type": "play_sounds_together",
+                              "id": "W5i^q7yr.ke~@E073g@t",
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
+                              "inputs": {
+                                "code": {
+                                  "block": {
+                                    "type": "procedures_callnoreturn",
+                                    "id": "KM/1!m73b^i{~9^I:9(l",
+                                    "extraState": {
+                                      "name": "chorus"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "SiL^zhklr|vw`.9J|DqY",
+              "x": 1070,
+              "y": 410,
+              "extraState": {
+                "procedureId": "Th!ygb{q/;T88NZpq-,G",
+                "initialDeleteConfig": true,
+                "initialEditConfig": true,
+                "initialMoveConfig": true
+              },
+              "fields": {
+                "NAME": "verse_vocals"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "play_sound_at_current_location_simple2",
+                    "id": "rni!K?NPRe%o{`1~rDY9",
+                    "extraState": {
+                      "disableNextConnection": false
+                    },
+                    "fields": {
+                      "sound": "katy_perry_firework/vocals_verse_1"
+                    },
+                    "next": {
+                      "block": {
+                        "type": "play_sound_at_current_location_simple2",
+                        "id": "[mMLOpCXnS~/Pw$~6hJq",
+                        "extraState": {
+                          "disableNextConnection": false
+                        },
+                        "fields": {
+                          "sound": "katy_perry_firework/vocals_verse_2"
+                        },
+                        "next": {
+                          "block": {
+                            "type": "play_sound_at_current_location_simple2",
+                            "id": "Cu7hND(7x/lJfc$Hd:BH",
+                            "extraState": {
+                              "disableNextConnection": false
+                            },
+                            "fields": {
+                              "sound": "katy_perry_firework/vocals_verse_3"
+                            },
+                            "next": {
+                              "block": {
+                                "type": "play_sound_at_current_location_simple2",
+                                "id": "-6?-(yXa,]Q/VCn$;_Qm",
+                                "extraState": {
+                                  "disableNextConnection": false
+                                },
+                                "fields": {
+                                  "sound": "katy_perry_firework/vocals_verse_4"
+                                },
+                                "next": {
+                                  "block": {
+                                    "type": "play_sound_at_current_location_simple2",
+                                    "id": "Unp1DKHiACu^rci8(.br",
+                                    "extraState": {
+                                      "disableNextConnection": false
+                                    },
+                                    "fields": {
+                                      "sound": "katy_perry_firework/bass_fill"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "NQLgYCrmHJLC9,p9ld^+",
+              "x": 1070,
+              "y": 270,
+              "extraState": {
+                "procedureId": "=nM$$%sA^wT@`^u|Jl9P",
+                "initialDeleteConfig": true,
+                "initialEditConfig": true,
+                "initialMoveConfig": true
+              },
+              "fields": {
+                "NAME": "verse_beats"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "repeat_simple2",
+                    "id": "repeat_simple2",
+                    "extraState": {
+                      "disableNextConnection": false
+                    },
+                    "fields": {
+                      "times": 2
+                    },
+                    "inputs": {
+                      "code": {
+                        "block": {
+                          "type": "play_sound_at_current_location_simple2",
+                          "id": "NFnxd++l,E0OM_9JrV%M",
+                          "extraState": {
+                            "disableNextConnection": false
+                          },
+                          "fields": {
+                            "sound": "rock/arena_beat"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "Uj920WmpH-xI2/naI(bn",
+              "x": 1070,
+              "y": 10,
+              "extraState": {
+                "procedureId": "cgJXi7jhYiq@V-0Mm|c5",
+                "initialDeleteConfig": true,
+                "initialEditConfig": true,
+                "initialMoveConfig": true
+              },
+              "fields": {
+                "NAME": "verse_bass"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "play_sound_at_current_location_simple2",
+                    "id": "]?iRTo{9NHo:DXOZ(6@e",
+                    "extraState": {
+                      "disableNextConnection": false
+                    },
+                    "fields": {
+                      "sound": "rock/amped_bass"
+                    },
+                    "next": {
+                      "block": {
+                        "type": "play_sound_at_current_location_simple2",
+                        "id": "QW8%Z1E$oN/I]MDaMkqF",
+                        "extraState": {
+                          "disableNextConnection": false
+                        },
+                        "fields": {
+                          "sound": "rock/amped_bass"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "wVsl|/;_5YF0=lTr|Y1K",
+              "x": 1070,
+              "y": 130,
+              "extraState": {
+                "procedureId": ",.?a@SLX]Hd@.Ki+9E^?",
+                "initialDeleteConfig": true,
+                "initialEditConfig": true,
+                "initialMoveConfig": true
+              },
+              "fields": {
+                "NAME": "verse_guitar"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "repeat_simple2",
+                    "id": "jm1XP$4T9$gB#dQt^=dV",
+                    "extraState": {
+                      "disableNextConnection": false
+                    },
+                    "fields": {
+                      "times": 2
+                    },
+                    "inputs": {
+                      "code": {
+                        "block": {
+                          "type": "play_sound_at_current_location_simple2",
+                          "id": "YK=Xda6JVlAf@Gzi76T#",
+                          "extraState": {
+                            "disableNextConnection": false
+                          },
+                          "fields": {
+                            "sound": "rock/power_guitar"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "156?^]y-2(*0Q6=]?p=Y",
+              "x": 790,
+              "y": 10,
+              "extraState": {
+                "procedureId": "xpX[GN.2Yv,R=y_Bh13*",
+                "initialDeleteConfig": true,
+                "initialEditConfig": true,
+                "initialMoveConfig": true
+              },
+              "fields": {
+                "NAME": "verse"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "play_sounds_together",
+                    "id": "/ife^atGX6meWq2JA{5q",
+                    "extraState": {
+                      "disableNextConnection": false
+                    },
+                    "inputs": {
+                      "code": {
+                        "block": {
+                          "type": "procedures_callnoreturn",
+                          "id": "TvDrOyD*-Y|wnBqi3J#I",
+                          "extraState": {
+                            "name": "verse_vocals"
+                          },
+                          "next": {
+                            "block": {
+                              "type": "repeat_simple2",
+                              "id": "y5[MB;jPe7+o[vVkfm7~",
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
+                              "fields": {
+                                "times": 4
+                              },
+                              "inputs": {
+                                "code": {
+                                  "block": {
+                                    "type": "procedures_callnoreturn",
+                                    "id": "X:lp5q5T:8-]G^F]3v]w",
+                                    "extraState": {
+                                      "name": "verse_beats"
+                                    }
+                                  }
+                                }
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "play_sounds_sequential",
+                                  "id": "play_sounds_sequential",
+                                  "extraState": {
+                                    "disableNextConnection": false
+                                  },
+                                  "inputs": {
+                                    "code": {
+                                      "block": {
+                                        "type": "repeat_simple2",
+                                        "id": "/pD]%%zLSTE[BK{ipK=j",
+                                        "extraState": {
+                                          "disableNextConnection": false
+                                        },
+                                        "fields": {
+                                          "times": 4
+                                        },
+                                        "inputs": {
+                                          "code": {
+                                            "block": {
+                                              "type": "play_rest_at_current_location_simple2",
+                                              "id": "play_rest_at_current_location_simple2",
+                                              "extraState": {
+                                                "disableNextConnection": false
+                                              },
+                                              "fields": {
+                                                "rest_duration": "<field name=\"rest_duration\">1</field>"
+                                              }
+                                            }
+                                          }
+                                        },
+                                        "next": {
+                                          "block": {
+                                            "type": "repeat_simple2",
+                                            "id": "[YK*{iUs^#OrQ|[REjU~",
+                                            "extraState": {
+                                              "disableNextConnection": false
+                                            },
+                                            "fields": {
+                                              "times": 3
+                                            },
+                                            "inputs": {
+                                              "code": {
+                                                "block": {
+                                                  "type": "procedures_callnoreturn",
+                                                  "id": "4;%kR/F1Rd%iM0SK?.4w",
+                                                  "extraState": {
+                                                    "name": "verse_bass"
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "next": {
+                                    "block": {
+                                      "type": "play_sounds_sequential",
+                                      "id": "Y__CVN|9ACJ/~[oVHlsO",
+                                      "extraState": {
+                                        "disableNextConnection": false
+                                      },
+                                      "inputs": {
+                                        "code": {
+                                          "block": {
+                                            "type": "repeat_simple2",
+                                            "id": "Z*/I)LH#;)}^o^(pup02",
+                                            "extraState": {
+                                              "disableNextConnection": false
+                                            },
+                                            "fields": {
+                                              "times": 8
+                                            },
+                                            "inputs": {
+                                              "code": {
+                                                "block": {
+                                                  "type": "play_rest_at_current_location_simple2",
+                                                  "id": "Nj{+v1r(Wcf`fcVskl}V",
+                                                  "extraState": {
+                                                    "disableNextConnection": false
+                                                  },
+                                                  "fields": {
+                                                    "rest_duration": "<field name=\"rest_duration\">1</field>"
+                                                  }
+                                                }
+                                              }
+                                            },
+                                            "next": {
+                                              "block": {
+                                                "type": "repeat_simple2",
+                                                "id": "u^P$5g6YV**l:q#v(zY[",
+                                                "extraState": {
+                                                  "disableNextConnection": false
+                                                },
+                                                "fields": {
+                                                  "times": 2
+                                                },
+                                                "inputs": {
+                                                  "code": {
+                                                    "block": {
+                                                      "type": "procedures_callnoreturn",
+                                                      "id": "#I6=P@.H1-UPXlOu`U;W",
+                                                      "extraState": {
+                                                        "name": "verse_guitar"
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "next": {
+                                        "block": {
+                                          "type": "play_sounds_sequential",
+                                          "id": "3RR!b[/L:#!mIBw*)#9~",
+                                          "extraState": {
+                                            "disableNextConnection": false
+                                          },
+                                          "inputs": {
+                                            "code": {
+                                              "block": {
+                                                "type": "repeat_simple2",
+                                                "id": ")]K(5[VJvC@5eqP~[Hmq",
+                                                "extraState": {
+                                                  "disableNextConnection": false
+                                                },
+                                                "fields": {
+                                                  "times": 12
+                                                },
+                                                "inputs": {
+                                                  "code": {
+                                                    "block": {
+                                                      "type": "play_rest_at_current_location_simple2",
+                                                      "id": "6xh_p[[zc$gE{q4Vg$Y+",
+                                                      "extraState": {
+                                                        "disableNextConnection": false
+                                                      },
+                                                      "fields": {
+                                                        "rest_duration": "<field name=\"rest_duration\">1</field>"
+                                                      }
+                                                    }
+                                                  }
+                                                },
+                                                "next": {
+                                                  "block": {
+                                                    "type": "repeat_simple2",
+                                                    "id": "@M9`qi]O^1J29VS4DMH9",
+                                                    "extraState": {
+                                                      "disableNextConnection": false
+                                                    },
+                                                    "fields": {
+                                                      "times": 2
+                                                    },
+                                                    "inputs": {
+                                                      "code": {
+                                                        "block": {
+                                                          "type": "play_sound_at_current_location_simple2",
+                                                          "id": "[~[@t^9sNgNe}K.sXH,k",
+                                                          "extraState": {
+                                                            "disableNextConnection": false
+                                                          },
+                                                          "fields": {
+                                                            "sound": "rock/organ_grind"
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "k`x7!zBvvx/kM(.#b)A6",
+              "x": 530,
+              "y": 30,
+              "extraState": {
+                "procedureId": "iN*}.tI)*hkVEj{JEXnd",
+                "initialDeleteConfig": true,
+                "initialEditConfig": true,
+                "initialMoveConfig": true
+              },
+              "fields": {
+                "NAME": "prechorus"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "play_sounds_together",
+                    "id": "]sA^sm%OFfZ~-7P2FC{,",
+                    "extraState": {
+                      "disableNextConnection": false
+                    },
+                    "inputs": {
+                      "code": {
+                        "block": {
+                          "type": "play_sounds_sequential",
+                          "id": ":$sZ4d^OC`w_hYe7*Br6",
+                          "extraState": {
+                            "disableNextConnection": false
+                          },
+                          "inputs": {
+                            "code": {
+                              "shadow": {
+                                "type": "play_sound_at_current_location_simple2",
+                                "id": "yM`C}yP(2MQ)_NJaNEF+",
+                                "extraState": {
+                                  "disableNextConnection": false
+                                },
+                                "fields": {
+                                  "sound": "katy_perry_firework/vocals_prechorus_1"
+                                },
+                                "next": {
+                                  "shadow": {
+                                    "type": "play_sound_at_current_location_simple2",
+                                    "id": "?EkfnwjBem%ZGP~6mMEc",
+                                    "extraState": {
+                                      "disableNextConnection": false
+                                    },
+                                    "fields": {
+                                      "sound": "katy_perry_firework/vocals_prechorus_2"
+                                    }
+                                  }
+                                }
+                              },
+                              "block": {
+                                "type": "play_sound_at_current_location_simple2",
+                                "id": "yM`C}yP(2MQ)_NJaNEF+",
+                                "extraState": {
+                                  "disableNextConnection": false
+                                },
+                                "fields": {
+                                  "sound": "katy_perry_firework/vocals_prechorus_1"
+                                },
+                                "next": {
+                                  "shadow": {
+                                    "type": "play_sound_at_current_location_simple2",
+                                    "id": "?EkfnwjBem%ZGP~6mMEc",
+                                    "extraState": {
+                                      "disableNextConnection": false
+                                    },
+                                    "fields": {
+                                      "sound": "katy_perry_firework/vocals_prechorus_2"
+                                    }
+                                  },
+                                  "block": {
+                                    "type": "play_sound_at_current_location_simple2",
+                                    "id": "?EkfnwjBem%ZGP~6mMEc",
+                                    "extraState": {
+                                      "disableNextConnection": false
+                                    },
+                                    "fields": {
+                                      "sound": "katy_perry_firework/vocals_prechorus_2"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "next": {
+                            "shadow": {
+                              "type": "play_sounds_sequential",
+                              "id": "lOINc4L#-Dd~!x%%hJaN",
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
+                              "inputs": {
+                                "code": {
+                                  "shadow": {
+                                    "type": "play_sound_at_current_location_simple2",
+                                    "id": ":s=hHwAZW.gy!G0vNt;)",
+                                    "extraState": {
+                                      "disableNextConnection": false
+                                    },
+                                    "fields": {
+                                      "sound": "rock/shredded_guitar"
+                                    },
+                                    "next": {
+                                      "shadow": {
+                                        "type": "play_sound_at_current_location_simple2",
+                                        "id": "pU6*Lxr)=3|5Y5TBL}f5",
+                                        "extraState": {
+                                          "disableNextConnection": false
+                                        },
+                                        "fields": {
+                                          "sound": "rock/shredded_guitar"
+                                        },
+                                        "next": {
+                                          "shadow": {
+                                            "type": "play_sound_at_current_location_simple2",
+                                            "id": "T}OPit8c(x{,hg6OzKoC",
+                                            "extraState": {
+                                              "disableNextConnection": false
+                                            },
+                                            "fields": {
+                                              "sound": "rock/shredded_guitar"
+                                            },
+                                            "next": {
+                                              "shadow": {
+                                                "type": "play_sound_at_current_location_simple2",
+                                                "id": "~Nq_4$P=i-^wN?DDTj2+",
+                                                "extraState": {
+                                                  "disableNextConnection": false
+                                                },
+                                                "fields": {
+                                                  "sound": "rock/shredded_guitar"
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "block": {
+                              "type": "repeat_simple2",
+                              "id": "tm;fE/C]fW7,BD}/h45C",
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
+                              "fields": {
+                                "times": 4
+                              },
+                              "inputs": {
+                                "code": {
+                                  "block": {
+                                    "type": "play_sound_at_current_location_simple2",
+                                    "id": "}Pq?)f*?$k=B#$q+2!Xv",
+                                    "extraState": {
+                                      "disableNextConnection": false
+                                    },
+                                    "fields": {
+                                      "sound": "rock/shredded_guitar"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "o$x@8N/kL((%.6_sv}d~",
+              "x": 530,
+              "y": 370,
+              "extraState": {
+                "procedureId": "[6HgS=U]F+*@:$Y^P#mu",
+                "initialDeleteConfig": true,
+                "initialEditConfig": true,
+                "initialMoveConfig": true
+              },
+              "fields": {
+                "NAME": "chorus_backing"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "play_sounds_together",
+                    "id": "D]|`4JOD8sZRB/fY,y+!",
+                    "extraState": {
+                      "disableNextConnection": false
+                    },
+                    "inputs": {
+                      "code": {
+                        "shadow": {
+                          "type": "play_sound_at_current_location_simple2",
+                          "id": "72*N*{wf`(DIa5qGAg)G",
+                          "extraState": {
+                            "disableNextConnection": false
+                          },
+                          "fields": {
+                            "sound": "rock/drum_kit_crash"
+                          },
+                          "next": {
+                            "shadow": {
+                              "type": "play_sound_at_current_location_simple2",
+                              "id": "4V*FGy7(LnB!B#@4,,!Z",
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
+                              "fields": {
+                                "sound": "rock/bass_down_steady_up"
+                              },
+                              "next": {
+                                "shadow": {
+                                  "type": "play_sound_at_current_location_simple2",
+                                  "id": "}ng/=wZzZZ0H6W1PX@R#",
+                                  "extraState": {
+                                    "disableNextConnection": false
+                                  },
+                                  "fields": {
+                                    "sound": "rock/guitar_buzz_riff"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "block": {
+                          "type": "play_sound_at_current_location_simple2",
+                          "id": "72*N*{wf`(DIa5qGAg)G",
+                          "extraState": {
+                            "disableNextConnection": false
+                          },
+                          "fields": {
+                            "sound": "rock/drum_kit_crash"
+                          },
+                          "next": {
+                            "shadow": {
+                              "type": "play_sound_at_current_location_simple2",
+                              "id": ":=ErW^*gUY,+4ghG|TQr",
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
+                              "fields": {
+                                "sound": "rock/bass_down_steady_up"
+                              },
+                              "next": {
+                                "shadow": {
+                                  "type": "play_sound_at_current_location_simple2",
+                                  "id": "x5bLHfnwaWKvZ]~Uk!3w",
+                                  "extraState": {
+                                    "disableNextConnection": false
+                                  },
+                                  "fields": {
+                                    "sound": "rock/guitar_buzz_riff"
+                                  }
+                                }
+                              }
+                            },
+                            "block": {
+                              "type": "play_sound_at_current_location_simple2",
+                              "id": "4V*FGy7(LnB!B#@4,,!Z",
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
+                              "fields": {
+                                "sound": "rock/bass_down_steady_up"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "6i//e*fNvRZ(~cIj^Vpx",
+              "x": 290,
+              "y": 10,
+              "extraState": {
+                "procedureId": "(}17m3BwAfK**]*v/wB4",
+                "initialDeleteConfig": true,
+                "initialEditConfig": true,
+                "initialMoveConfig": true
+              },
+              "fields": {
+                "NAME": "chorus"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "play_sounds_together",
+                    "id": "R4d/ZSjspaX%A2d9T(jZ",
+                    "extraState": {
+                      "disableNextConnection": false
+                    },
+                    "inputs": {
+                      "code": {
+                        "shadow": {
+                          "type": "play_sound_at_current_location_simple2",
+                          "id": "$_:Ng~9`t:o]4_Dus^^4",
+                          "extraState": {
+                            "disableNextConnection": false
+                          },
+                          "fields": {
+                            "sound": "katy_perry_firework/vocals_chorus_1"
+                          },
+                          "next": {
+                            "shadow": {
+                              "type": "play_sounds_sequential",
+                              "id": "Z2Kt0A!fTwvk2sWrr_k/",
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
+                              "inputs": {
+                                "code": {
+                                  "shadow": {
+                                    "type": "play_sounds_together",
+                                    "id": "vkxjA].wEM_IW5Vl}l[y",
+                                    "extraState": {
+                                      "disableNextConnection": false
+                                    },
+                                    "inputs": {
+                                      "code": {
+                                        "shadow": {
+                                          "type": "play_sound_at_current_location_simple2",
+                                          "id": "XpcA7gCpCQ8=owB@tZL%",
+                                          "extraState": {
+                                            "disableNextConnection": false
+                                          },
+                                          "fields": {
+                                            "sound": "rock/drum_kit_crash"
+                                          },
+                                          "next": {
+                                            "shadow": {
+                                              "type": "play_sound_at_current_location_simple2",
+                                              "id": "HLoU;J=}FZD(j]xW+-WC",
+                                              "extraState": {
+                                                "disableNextConnection": false
+                                              },
+                                              "fields": {
+                                                "sound": "rock/bass_down_steady_up"
+                                              },
+                                              "next": {
+                                                "shadow": {
+                                                  "type": "play_sound_at_current_location_simple2",
+                                                  "id": "N*!TS|{?(-7IL-=y{Gkc",
+                                                  "extraState": {
+                                                    "disableNextConnection": false
+                                                  },
+                                                  "fields": {
+                                                    "sound": "rock/guitar_buzz_riff"
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "next": {
+                                      "shadow": {
+                                        "type": "play_sounds_together",
+                                        "id": "|M3H$wpq:[2CIh2F(mMT",
+                                        "extraState": {
+                                          "disableNextConnection": false
+                                        },
+                                        "inputs": {
+                                          "code": {
+                                            "shadow": {
+                                              "type": "play_sound_at_current_location_simple2",
+                                              "id": "6Hro#-f`Pjuoj[81{qNl",
+                                              "extraState": {
+                                                "disableNextConnection": false
+                                              },
+                                              "fields": {
+                                                "sound": "rock/drum_kit_crash"
+                                              },
+                                              "next": {
+                                                "shadow": {
+                                                  "type": "play_sound_at_current_location_simple2",
+                                                  "id": "!-zmxT}o{L$mU1FI0_z_",
+                                                  "extraState": {
+                                                    "disableNextConnection": false
+                                                  },
+                                                  "fields": {
+                                                    "sound": "rock/bass_down_steady_up"
+                                                  },
+                                                  "next": {
+                                                    "shadow": {
+                                                      "type": "play_sound_at_current_location_simple2",
+                                                      "id": "EUOAn,d!Q(iPM0VYGZhq",
+                                                      "extraState": {
+                                                        "disableNextConnection": false
+                                                      },
+                                                      "fields": {
+                                                        "sound": "rock/guitar_buzz_riff"
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "block": {
+                          "type": "play_sounds_sequential",
+                          "id": "m(QR|vU^mQ!wY[`dHb_)",
+                          "extraState": {
+                            "disableNextConnection": false
+                          },
+                          "inputs": {
+                            "code": {
+                              "block": {
+                                "type": "play_sound_at_current_location_simple2",
+                                "id": "kFeQiwrta~x~/H#VzsFE",
+                                "extraState": {
+                                  "disableNextConnection": false
+                                },
+                                "fields": {
+                                  "sound": "katy_perry_firework/vocals_chorus_1"
+                                },
+                                "next": {
+                                  "block": {
+                                    "type": "play_sound_at_current_location_simple2",
+                                    "id": ")-JF-Ssok6W:{EHbx?/i",
+                                    "extraState": {
+                                      "disableNextConnection": false
+                                    },
+                                    "fields": {
+                                      "sound": "katy_perry_firework/vocals_chorus_2"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "next": {
+                            "block": {
+                              "type": "repeat_simple2",
+                              "id": "k8}Uv7CqHbAtS:GTFpgU",
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
+                              "fields": {
+                                "times": 4
+                              },
+                              "inputs": {
+                                "code": {
+                                  "block": {
+                                    "type": "procedures_callnoreturn",
+                                    "id": "dgfOEfO;Gl:3vS7+{iet",
+                                    "extraState": {
+                                      "name": "chorus_backing"
+                                    }
+                                  }
+                                }
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "repeat_simple2",
+                                  "id": "Ed;1J^b[@M*_(ut:KzmR",
+                                  "extraState": {
+                                    "disableNextConnection": false
+                                  },
+                                  "fields": {
+                                    "times": 3
+                                  },
+                                  "inputs": {
+                                    "code": {
+                                      "block": {
+                                        "type": "procedures_callnoreturn",
+                                        "id": "faDz1.-N#=z3xu2I/(/t",
+                                        "extraState": {
+                                          "name": "guitar_shreds"
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "_r^?c6sVYh82_93.r0+|",
+              "x": 290,
+              "y": 370,
+              "extraState": {
+                "procedureId": "t=J*,|)14~q+i-s1k.NV",
+                "initialDeleteConfig": true,
+                "initialEditConfig": true,
+                "initialMoveConfig": true
+              },
+              "fields": {
+                "NAME": "guitar_shreds"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "play_sounds_together",
+                    "id": "play_sounds_together",
+                    "extraState": {
+                      "disableNextConnection": false
+                    },
+                    "inputs": {
+                      "code": {
+                        "block": {
+                          "type": "set_effect_at_current_location_simple2",
+                          "id": "fU3f=ACPUKR*2quf08Cw",
+                          "fields": {
+                            "effects_name": "<field name=\"effects_name\">delay</field>",
+                            "effects_value": "<field name=\"effects_value\">medium</field>"
+                          },
+                          "next": {
+                            "block": {
+                              "type": "play_sound_at_current_location_simple2",
+                              "id": "play_sound_at_current_location_simple2",
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
+                              "fields": {
+                                "sound": "rock/guitar_fast_chop"
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "play_sounds_sequential",
+                                  "id": "6.y-,M~B-$^a3/U6$[Mm",
+                                  "extraState": {
+                                    "disableNextConnection": false
+                                  },
+                                  "inputs": {
+                                    "code": {
+                                      "block": {
+                                        "type": "play_rest_at_current_location_simple2",
+                                        "id": "OaoN!G@bvZ*@6ed:EzaC",
+                                        "extraState": {
+                                          "disableNextConnection": false
+                                        },
+                                        "fields": {
+                                          "rest_duration": "<field name=\"rest_duration\">0.5</field>"
+                                        },
+                                        "next": {
+                                          "block": {
+                                            "type": "play_sound_at_current_location_simple2",
+                                            "id": ";J9S(5^0`~WlVURh2tXs",
+                                            "extraState": {
+                                              "disableNextConnection": false
+                                            },
+                                            "fields": {
+                                              "sound": "rock/power_guitar"
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "next": {
+                                    "block": {
+                                      "type": "play_sounds_sequential",
+                                      "id": "Us*HU6#m*ndoO15T6::)",
+                                      "extraState": {
+                                        "disableNextConnection": false
+                                      },
+                                      "inputs": {
+                                        "code": {
+                                          "block": {
+                                            "type": "play_rest_at_current_location_simple2",
+                                            "id": "fX=f_=TmRq.%(o@[~pSZ",
+                                            "extraState": {
+                                              "disableNextConnection": false
+                                            },
+                                            "fields": {
+                                              "rest_duration": "<field name=\"rest_duration\">1</field>"
+                                            },
+                                            "next": {
+                                              "block": {
+                                                "type": "play_sound_at_current_location_simple2",
+                                                "id": "Q}8oO`_iE1*ok$zQBuhk",
+                                                "extraState": {
+                                                  "disableNextConnection": false
+                                                },
+                                                "fields": {
+                                                  "sound": "rock/shredded_guitar"
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "next": {
+                                        "block": {
+                                          "type": "play_sounds_sequential",
+                                          "id": "=vwbyc=6K(Qw)[E[,vXw",
+                                          "extraState": {
+                                            "disableNextConnection": false
+                                          },
+                                          "inputs": {
+                                            "code": {
+                                              "block": {
+                                                "type": "play_rest_at_current_location_simple2",
+                                                "id": "5eA#!Q:SL=Y{qWmq:-KZ",
+                                                "extraState": {
+                                                  "disableNextConnection": false
+                                                },
+                                                "fields": {
+                                                  "rest_duration": "<field name=\"rest_duration\">2</field>"
+                                                },
+                                                "next": {
+                                                  "block": {
+                                                    "type": "play_sound_at_current_location_simple2",
+                                                    "id": "P$2?4DM9;Z6sd0Yw%LGT",
+                                                    "extraState": {
+                                                      "disableNextConnection": false
+                                                    },
+                                                    "fields": {
+                                                      "sound": "rock/pick_scrape"
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          },
+                                          "next": {
+                                            "block": {
+                                              "type": "set_effect_at_current_location_simple2",
+                                              "id": "ORa2MF_QPW:0I?^cR$c*",
+                                              "fields": {
+                                                "effects_name": "<field name=\"effects_name\">delay</field>",
+                                                "effects_value": "<field name=\"effects_value\">normal</field>"
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "procedures": [
+          {
+            "id": "Th!ygb{q/;T88NZpq-,G",
+            "name": "verse_vocals",
+            "returnTypes": null
+          },
+          {
+            "id": "=nM$$%sA^wT@`^u|Jl9P",
+            "name": "verse_beats",
+            "returnTypes": null
+          },
+          {
+            "id": "cgJXi7jhYiq@V-0Mm|c5",
+            "name": "verse_bass",
+            "returnTypes": null
+          },
+          {
+            "id": ",.?a@SLX]Hd@.Ki+9E^?",
+            "name": "verse_guitar",
+            "returnTypes": null
+          },
+          {
+            "id": "xpX[GN.2Yv,R=y_Bh13*",
+            "name": "verse",
+            "returnTypes": null
+          },
+          {
+            "id": "iN*}.tI)*hkVEj{JEXnd",
+            "name": "prechorus",
+            "returnTypes": null
+          },
+          {
+            "id": "[6HgS=U]F+*@:$Y^P#mu",
+            "name": "chorus_backing",
+            "returnTypes": null
+          },
+          {
+            "id": "(}17m3BwAfK**]*v/wB4",
+            "name": "chorus",
+            "returnTypes": null
+          },
+          {
+            "id": "t=J*,|)14~q+i-s1k.NV",
+            "name": "guitar_shreds",
+            "returnTypes": null
+          }
+        ]
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "showSoundFilters": true,
+      "sortUnrestrictedPacksByType": true,
+      "packId": "katy_perry_firework"
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false,
+      "playerTitle": "Example"
+    },
+    "encrypted_exemplar_sources": "UGYNk6iye9eaFwUY05FzzO/7y8j7ObxryFbKvBPuF528qP4MtsSFqDeG//aJ\nl0T6dATAqvqCNBaL7gcusy6Gy2fnwYBnaYjrEyWA22GQe18mHEDAVVuD+erp\n6+LrpK8JgB2eI/Ulu4eZqf6lTA7dPl8pyRY44SThBAixCQO2uPGvaLHvevoP\n2haLZw8WVSPfmTdT1IEQdUAYuaZdIu3NQIBRui+78JkvN9iuKfCrdA4=\n",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "long_instructions": "#### Genre Mashup Exemplar\r\n\r\nCheck out this Genre Mashup of Katy Perry's <i>Firework</i>. Click <code style=\"background-color: #fca401; color: white; border: none; box-shadow: inset -1px -1px 1px1 rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px\">Run</code>, and look closely at the functions - how do they work?",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-04-22T23:37:29.728+00:00\",\"changed\":[\"cloned from \\\"music-lab-genre-project\\\"\"],\"cloned_from\":\"music-lab-genre-project\"},{\"changed_at\":\"2025-04-22 23:37:36 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-23 16:28:49 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-23 16:45:14 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-23 16:45:50 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-23 19:23:27 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

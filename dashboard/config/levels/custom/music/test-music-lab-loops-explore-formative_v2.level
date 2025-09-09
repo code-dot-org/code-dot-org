@@ -1,0 +1,228 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-05-31T02:57:35.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "toolbox": {
+        "type": "category",
+        "addFunctionDefinition": false,
+        "addFunctionCalls": false,
+        "blocks": {
+        }
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "editable": false
+            },
+            {
+              "type": "repeat_simple2",
+              "id": "Z4N@Mew)D*yqXMOV=+Z!",
+              "x": 150,
+              "y": 50,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "times": 2
+              }
+            },
+            {
+              "type": "play_sounds_together",
+              "id": "m9OR}sJNJA-RGb*~D():",
+              "x": 310,
+              "y": 50,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              }
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": "WubZOc[y9PDpz-aCy%AA",
+              "x": 450,
+              "y": 50,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "sound": "chloe_treat_me/808_verse"
+              }
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": "By3TX9b9Cl1B2^:KjXDj",
+              "x": 650,
+              "y": 50,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "sound": "chloe_treat_me/drums_verse_beat"
+              }
+            },
+            {
+              "type": "repeat_simple2",
+              "id": "^Ta1|`{p0=INe$@C()9%",
+              "x": 150,
+              "y": 150,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "times": 2
+              }
+            },
+            {
+              "type": "play_sounds_together",
+              "id": "+_v,]G`Mvn4fk9E97|ui",
+              "x": 310,
+              "y": 150,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              }
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": "P2,Pmx1h,65`vTQNQ!3u",
+              "x": 450,
+              "y": 210,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "sound": "chloe_treat_me/808_chorus"
+              }
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": "c#;#pZ2mS@_9,WB?QV7v",
+              "x": 450,
+              "y": 130,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "sound": "chloe_treat_me/drums_chorus_beat"
+              }
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": "OlEyX47E/pbj3?oC?3b{",
+              "x": 650,
+              "y": 130,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "sound": "chloe_treat_me/keys_verse"
+              }
+            }
+          ]
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "showSoundFilters": true,
+      "packId": "chloe_treat_me",
+      "sounds": {
+        "chloe_treat_me": [
+          "drums_chorus_beat",
+          "drums_verse_beat",
+          "808_verse",
+          "808_chorus",
+          "keys_verse"
+        ]
+      }
+    },
+    "long_instructions": "#### Treat Me\r\n\r\nRe-create the backing tracks for the verse and chorus of Treat Me by Chloe:\r\n- The verse has 3 tracks that are repeated twice\r\n- The chorus has 2 tracks that are repeated twice.\r\n\r\nAll the blocks you need are already in the workspace - you just need to connect them in the right order! Your final timeline should look like this:\r\n\r\n![](https://images.code.org/38804da6afae06fd30ade0c9ac4dd2c3-image-1741021616619.png)",
+    "encrypted_exemplar_sources": "UGYNk6iye9eaFwUY05FzzO/7y8j7ObxryFbKvBPuF528qP4MtsSFqDeG//aJ\nl0T6lfe2BzN4biKVeTvfD80/YL+3G5Bj3YmNK3/UM/xNlM4UFpxqaM8r0Ju1\nAECRzcycDraxxDvwhRR3E1WGqwBVYl2igtUE+clNUhMch5zn39NedMm86QQD\nSNE/vqliphrufSGnbbJ7q2y+Nx6eM5RXJ+lZZk4sqapSH+vKD0pDXXdgOc+W\nOubeIkjQXgAlbS41Zryd0OBtFrr6KBsLWVi2pLlAvVJUickbslXR6gBTiaQv\ndWt1OrAveQjDZKNKssd0+AD3dOnZ9EPcggzoNOz0p2aFnOucKExj81kOHGED\nDuf5kBR/1GwYpHAJfFfMxE1NoNQImiDKT3xs0ulZ7xRuQ4PUKHW7R9nUuPuX\n0cUT8rfsSz9wETUUS9/2DRT+yXDV4kEwCrbXNEe6oG1Gy0Rw/es1LnaOloFE\n2XsMihUpCZDDfV4jeGel8MeH6BwdtomS0q8E0KRkABe1Po399Bt+nN07aPjp\nknVAI9se0zYjhBTgQ+zpjIrTLZEvqIlIhOTvisxVCt7X/li4CkEFAVwz2iJP\nVtMOvtiFC0jU8eeF9FKbwUQXRVZa7m8iuQcQA7H4XftFN1Rr3j/VXhgBmgvr\nS12DEuKUz+VYsYcc3zhv8tfwh2gKA25iAt5SRrzvbMBMzNSf6ILD7rTVN563\nEvnfwI5XGomJfuS3yjNZYJPyoJXQO0Q8QpIgAv0d+IHZpDY1EE1q9SV/mZfq\ntNS5InPI4ASF24dOZ7Yl9vZ6ndFhsqKYQanFrCPCpuFCf9KKfV5fYcyVBO7+\nz8yHA5lKFWRlH3c+BxmeFbWfc50dgELuna44DgSCmjiRKF6KpNBZr5EMufmO\ndxUHHNiTJzZ4UG1gGpG1seCB+FBTrsDRTvFys3IOJZW6yH7Ve23PMqvTV8UT\neBD4tC68++vwEF0Ii/dQNHgXBPQi+C4cDDD03OopgnEZ70GyhCxBT30nPCUA\n1wCJsA7LTOFNk4CVeOOGx65gWY62wlW5Myid3NH4nDVMubR6hszWn9hjsLo9\nBnKbh78oIrlKDxXbC8oiakxwo3qw9KJpPtqh6s3De8NA87D+b9NZa0F7ebfh\nh+Jv8jRzP35AiN+maCtUMsLyV/VtpOaLhLzKVKO1qpwFNVrOzyRVwq+jBOiu\nKoFGbWlTcoMHsxLxSgFCdNeUy9gG54IsGyCK6kLoLCPNzolX1lx84I8T3j+W\nDMgpy0t0qqslMUkML4obr1lHi1tSAABcta1ZKnh95hMpNBxd9ed1ay2+G2tR\nONvCAQI+0XiKcxP9s8wgz+IXcYcFV6CvurJxZZtO+OQCWLv/sDvcd9kLEVID\nS05/BK2vLF/TpAx/gZfqmvbs8ylfJKJnPE+2dgdzdFlzJtn8+/mLEIyGAnVT\nGH1adxgQNQYnIXWDEi85Jh1VTpd4sQNKITyKzF34EcEfbUjPSBTSpOcGSQK7\n+Dvzi+ZbO1iAz+qKTmgsidNQFuZe1BaG+NXs53GmNOr+yya0sN0JHl+2+GcQ\nclVHeIOL0Qef0LAO6oGBcC+FKMNiBCUHD2grnRB4aitcKcXVga+vqBhck42d\ncY0ZTYKL2OerlgSLeaTUkURVlaQhfLolvT1roCtkdS2N3/maQ1RffkxLsAps\nTU7iUA==\n",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": true,
+      "validationSuccessMessage": "You did it! The song matches the example!",
+      "validationFailureMessage": "Something's not quite right! Try listening to the example again!",
+      "playerTitle": "Treat Me (Remix)"
+    },
+    "validations": [
+      {
+        "key": "test-music-lab-loops-explore-formative_32960ac1-e0a3-4da7-a5bb-a5470726c0dc",
+        "message": "auto-pass for exemplar validation",
+        "next": true,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "name_suffix": "_v2",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:57:35.551+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-explore-formative\\\"\"],\"cloned_from\":\"test-music-lab-loops-explore-formative\"},{\"changed_at\":\"2025-06-26 22:20:57 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

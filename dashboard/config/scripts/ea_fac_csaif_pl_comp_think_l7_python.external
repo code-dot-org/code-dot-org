@@ -1,0 +1,33 @@
+name 'ea-fac-csaif_pl_comp_think_L7_python'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Reflecting on Computational Thinking in the Maze Activity
+
+<img src="https://images.code.org/98110267b6c3ee2f93700b03b95d940b-image-1741026340788.png" alt="bargraph and data icon" style="border-radius:10px; float: left; ; height: 100px; margin: 0px 20px 0px 10px; ">
+
+
+#### In this activity, students engage with core computational thinking concepts as they navigate the Painter through the maze and write pseudocode.
+
+#### Here’s how each concept applies:
+
+<div style="clear:both;"></div>
+
+<div style="background-color: #F5F7F8; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
+    <h2>Computational Thinking</h2>
+  	<ul style="font-size: 14pt; line-height: 1.5; margin-top: 10px; padding-left: 20px;">         
+       <li><strong>Decomposition</strong> – Students break down the challenge of navigating the maze into smaller, manageable steps (e.g., moving, turning, and painting).</li><br>
+    <li><strong>Pattern Recognition</strong> – They identify repeated movement patterns, such as using three left turns to simulate a right turn.</li><br>
+    <li><strong>Abstraction</strong> – By using predefined commands (<code>move()</code> and <code>turn_left()</code>), students focus on the essential steps needed to solve the problem without worrying about unnecessary details.</li><br>
+    <li><strong>Algorithm Design</strong> – They create a step-by-step set of instructions (pseudocode) that a computer (or the Painter) can follow to reach the goal.</li>
+</ul>
+</div>
+
+## Prioritizing Understanding
+
+#### By working through the unplugged activity first, students develop a deeper understanding of computational thinking before applying these concepts in Python.
+
+
+
+MARKDOWN

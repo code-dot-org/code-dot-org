@@ -1,0 +1,66 @@
+# Common workflow for execution of continuous integration for the `frontend` code base.
+# This workflow handles setup and teardown for parallel workflow execution for the various apps and packages in `frontend`.
+name: Frontend-CI
+
+on:
+  pull_request:
+    branches:
+      - staging
+      - staging-next
+    paths:
+      - 'frontend/**'
+      - '.github/**'
+
+env:
+  APPLITOOLS_BATCH_ID: ${{ github.event.pull_request.head.sha || github.sha }}
+
+jobs:
+  # Initializes common variables and environment prior to executing other jobs
+  setup:
+    runs-on: ubuntu-24.04
+    outputs:
+      component-library-changed: ${{ steps.changes.outputs.component-library }}
+    steps:
+      # Determine what changed to later skip workflows
+      # Github Actions does not offer conditional runtime path filtering, thus use this action to calculate the
+      # changes. Root level applications (such as marketing) are not skipped as its dependency tree always changes
+      - name: Get Change Sets
+        uses: dorny/paths-filter@de90cc6fb38fc0963ad72b210f1f284cd68cea36 # v3.0.2
+        id: changes
+        with:
+          filters: |
+            component-library:
+              - 'frontend/apps/design-system-storybook/**'
+              - 'frontend/packages/component-library/**'
+              - 'frontend/packages/component-library-styles/**'
+              - 'frontend/packages/fonts/**'
+              - 'frontend/*'
+
+  # Start the marketing app CI workflow
+  marketing:
+    needs: setup
+    uses: ./.github/workflows/marketing-app-ci.yml
+    with:
+      BRANCHED_TESTING_ENABLED: ${{ contains( github.event.pull_request.labels.*.name, 'All The Things') }}
+      PR_HEAD_REF: ${{ github.event.pull_request.head.ref }}
+    secrets: inherit
+
+  # Start the component library CI workflow
+  component-library:
+    if: ${{ needs.setup.outputs.component-library-changed == 'true' }}
+    needs: setup
+    uses: ./.github/workflows/component-library-ci.yml
+    secrets: inherit
+
+  # Common teardown actions that must occur after _all_ workflows have completed.
+  # For example, closing the Applitools batch after its completion.
+  teardown:
+    needs: [setup, marketing, component-library]
+    if: always()
+    runs-on: ubuntu-24.04
+    steps:
+      # Close the eyes batch after all distributed eyes tests have completed
+      - name: Update Applitools batch status
+        shell: bash
+        run: |
+          curl -X POST "https://eyesapi.applitools.com/api/externals/github/servers/github.com/commit/${{ env.APPLITOOLS_BATCH_ID }}/${{ github.run_id }}/complete?apiKey=${{secrets.APPLITOOLS_API_KEY}}"

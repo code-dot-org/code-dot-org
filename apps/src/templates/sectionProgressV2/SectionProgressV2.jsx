@@ -1,11 +1,15 @@
+import {Heading1, Heading6} from '@code-dot-org/component-library/typography';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 import {useParams} from 'react-router-dom';
 
-import {Heading1, Heading6} from '@cdo/apps/componentLibrary/typography';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {
+  getSelectedCourseId,
+  getSelectedUnitPosition,
+} from '@cdo/apps/redux/unitSelectionRedux';
 import i18n from '@cdo/locale';
 
 import {unitDataPropType} from '../sectionProgress/sectionProgressConstants';
@@ -14,9 +18,9 @@ import {
   getCurrentUnitData,
   loadExpandedLessonsFromLocalStorage,
 } from '../sectionProgress/sectionProgressRedux';
-import {showV2TeacherDashboard} from '../teacherNavigation/TeacherNavFlagUtils';
 import UnitSelectorV2 from '../UnitSelectorV2';
 
+import DownloadProgressCsv from './DownloadProgressCsv';
 import IconKey from './IconKey';
 import MoreOptionsDropdown from './MoreOptionsDropdown';
 import ProgressTableV2 from './ProgressTableV2';
@@ -26,6 +30,8 @@ import styles from './progress-table-v2.module.scss';
 function SectionProgressV2({
   scriptId,
   sectionId,
+  courseId,
+  unitPosition,
   unitData,
   isLoadingProgress,
   isRefreshingProgress,
@@ -68,9 +74,11 @@ function SectionProgressV2({
       !isRefreshingProgress &&
       sectionId &&
       scriptId &&
+      courseId &&
+      unitPosition &&
       isMounted // only update loaded data if component is still mounted.
     ) {
-      loadUnitProgress(scriptId, sectionId).then(() =>
+      loadUnitProgress(scriptId, sectionId, courseId, unitPosition).then(() =>
         setLoadedData({scriptId, sectionId})
       );
     }
@@ -80,6 +88,8 @@ function SectionProgressV2({
   }, [
     scriptId,
     sectionId,
+    courseId,
+    unitPosition,
     unitData,
     isLoadingProgress,
     isRefreshingProgress,
@@ -94,9 +104,8 @@ function SectionProgressV2({
   }, [expandedLessonIds, unitData]);
 
   const isLoading = React.useMemo(() => {
-    if (showV2TeacherDashboard() && parseInt(params.sectionId) !== sectionId) {
-      // If we're in the V2 teacher dashboard, we want to show a loading state if the
-      // redux section does not yet match the URL section.
+    if (parseInt(params.sectionId) !== sectionId) {
+      // Show a loading state if the redux section does not yet match the URL section.
       return true;
     }
     return (
@@ -129,6 +138,7 @@ function SectionProgressV2({
           {i18n.lessonsIn()}
 
           <UnitSelectorV2 className={styles.titleUnitSelectorDropdown} />
+          <DownloadProgressCsv isLoading={isLoading} />
           <MoreOptionsDropdown />
         </Heading6>
       </div>
@@ -140,6 +150,8 @@ function SectionProgressV2({
 SectionProgressV2.propTypes = {
   scriptId: PropTypes.number,
   sectionId: PropTypes.number,
+  courseId: PropTypes.number,
+  unitPosition: PropTypes.number,
   unitData: unitDataPropType,
   isLoadingProgress: PropTypes.bool.isRequired,
   isRefreshingProgress: PropTypes.bool.isRequired,
@@ -154,6 +166,8 @@ export default connect(
   state => ({
     scriptId: state.unitSelection.scriptId,
     sectionId: state.teacherSections.selectedSectionId,
+    courseId: getSelectedCourseId(state),
+    unitPosition: getSelectedUnitPosition(state),
     unitData: getCurrentUnitData(state),
     isLoadingProgress: state.sectionProgress.isLoadingProgress,
     isRefreshingProgress: state.sectionProgress.isRefreshingProgress,

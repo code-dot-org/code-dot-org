@@ -14,7 +14,7 @@ module I18n
             return unless File.file?(crowdin_file_path)
 
             # Distributes the localization
-            target_i18n_file_path = File.join(ORIGIN_I18N_DIR_PATH, "devise.#{language[:locale_s]}.yml")
+            target_i18n_file_path = File.join(ORIGIN_I18N_DIR_PATH, "devise/#{language[:locale_s]}.yml")
             I18nScriptUtils.sanitize_file_and_write(crowdin_file_path, target_i18n_file_path)
 
             i18n_file_path = I18nScriptUtils.locale_dir(language[:locale_s], FILE_PATH)

@@ -1,7 +1,6 @@
+import Alert from '@code-dot-org/component-library/alert';
+import {Button} from '@code-dot-org/component-library/button';
 import React, {useEffect, useState} from 'react';
-
-import Alert from '@cdo/apps/componentLibrary/alert/Alert';
-import {Button} from '@cdo/apps/componentLibrary/button';
 
 import moduleStyles from './edit-music-level-data.module.scss';
 
@@ -42,16 +41,6 @@ const RawJsonEditor: React.FunctionComponent<RawJsonEditorProps> = ({
 
   return (
     <div className={moduleStyles.section}>
-      {editing ? (
-        <textarea
-          name={fieldName}
-          value={currentValueString}
-          onChange={event => setCurrentValueString(event.target.value)}
-          className={moduleStyles.textarea}
-        />
-      ) : (
-        <p className={moduleStyles.renderedJson}>{currentValueString}</p>
-      )}
       <div className={moduleStyles.row}>
         <Button
           text={editing ? 'Done' : 'Edit'}
@@ -79,6 +68,16 @@ const RawJsonEditor: React.FunctionComponent<RawJsonEditorProps> = ({
           />
         )}
       </div>
+      {editing ? (
+        <textarea
+          name={fieldName}
+          value={currentValueString}
+          onChange={event => setCurrentValueString(event.target.value)}
+          className={moduleStyles.textarea}
+        />
+      ) : (
+        <p className={moduleStyles.renderedJson}>{currentValueString}</p>
+      )}
     </div>
   );
 };

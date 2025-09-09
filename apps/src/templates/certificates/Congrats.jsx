@@ -1,12 +1,12 @@
-import PropTypes from 'prop-types';
-import React from 'react';
-
-import {hasQueryParam, queryParams} from '@cdo/apps/code-studio/utils';
 import {
   BodyTwoText,
   Heading3,
   Heading4,
-} from '@cdo/apps/componentLibrary/typography';
+} from '@code-dot-org/component-library/typography';
+import PropTypes from 'prop-types';
+import React from 'react';
+
+import {hasQueryParam, queryParams} from '@cdo/apps/code-studio/utils';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import GraduateToNextLevel from '@cdo/apps/templates/certificates/GraduateToNextLevel';
 import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
@@ -67,8 +67,8 @@ export default function Congrats(props) {
    */
   const getExtraLinkData = (language, tutorial, currentDate) => {
     // https://codedotorg.atlassian.net/browse/P20-1144
-    const codingPartyStart = new Date('2024-10-07:00:00+09:00');
-    const codingPartyEnd = new Date('2024-11-17:00:00+09:00');
+    const codingPartyStart = new Date('2025-06-16:00:00+09:00');
+    const codingPartyEnd = new Date('2025-07-27:00:00+09:00');
     const codingPartyActive =
       codingPartyStart <= currentDate && currentDate < codingPartyEnd;
     if (language === 'ko' && codingPartyActive) {
@@ -76,17 +76,22 @@ export default function Congrats(props) {
         '온라인 코딩 파티 인증서 받으러 가기! (과학기술정보통신부 인증)';
       if (/oceans/.test(tutorial)) {
         return {
-          extraLinkUrl: pegasus('/files/online-coding-party-2024-2-oceans.png'),
+          extraLinkUrl: pegasus('/files/online-coding-party-2025-1-oceans.png'),
           extraLinkText: extraLinkText,
         };
       } else if (/hero/.test(tutorial)) {
         return {
-          extraLinkUrl: pegasus('/files/online-coding-party-2024-2-hero.png'),
+          extraLinkUrl: pegasus('/files/online-coding-party-2025-1-hero.png'),
           extraLinkText: extraLinkText,
         };
-      } else if (/dance/.test(tutorial)) {
+      } else if (/dance-ai/.test(tutorial)) {
         return {
-          extraLinkUrl: pegasus('/files/online-coding-party-2024-2-dance.png'),
+          extraLinkUrl: pegasus('/files/online-coding-party-2025-1-dance.png'),
+          extraLinkText: extraLinkText,
+        };
+      } else if (/music-jam/.test(tutorial)) {
+        return {
+          extraLinkUrl: pegasus('/files/online-coding-party-2025-1-music.png'),
           extraLinkText: extraLinkText,
         };
       }
@@ -108,6 +113,7 @@ export default function Congrats(props) {
     tutorial,
     certificateId,
     userType,
+    userName,
     under13,
     language,
     randomDonorTwitter,
@@ -439,6 +445,7 @@ export default function Congrats(props) {
               isHocTutorial={isHocTutorial}
               isPlCourse={isPlCourse}
               userType={userType}
+              userName={userName}
             >
               {renderExtraCertificateLinks(language, tutorial, currentDate)}
             </Certificate>
@@ -469,6 +476,7 @@ Congrats.propTypes = {
   certificateId: PropTypes.string,
   tutorial: PropTypes.string,
   userType: PropTypes.oneOf(['signedOut', 'teacher', 'student']).isRequired,
+  userName: PropTypes.string,
   under13: PropTypes.bool,
   language: PropTypes.string.isRequired,
   randomDonorTwitter: PropTypes.string,

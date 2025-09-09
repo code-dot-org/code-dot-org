@@ -54,6 +54,11 @@ module Cdo::CloudFormation
       super(**options)
       options = @options = OpenStruct.new(options)
 
+      # For adhoc stacks only (for now), preserve initial options via 'Op:' CloudFormation tags
+      if rack_env?(:adhoc)
+        read_existing_stack_op_tags.each {|key, val| options[key] = val if options[key].nil?}
+      end
+
       # Various option defaults.
       options.frontends     ||= rack_env?(:production)
       options.database      ||= [:staging, :test, :levelbuilder, :production].include?(rack_env)
@@ -80,6 +85,7 @@ module Cdo::CloudFormation
 
     def render(*)
       check_branch!
+      persist_op_tags
       super
     end
 
@@ -118,14 +124,33 @@ To specify an alternate branch name, run `rake adhoc:start branch=BRANCH`."
     def certificate_arn
       acm = Aws::ACM::Client.new(region: ACM_REGION)
       wildcard = "*.#{domain}"
-      acm.
-        list_certificates(certificate_statuses: ['ISSUED']).
-        certificate_summary_list.
+      all_certificates = []
+      next_token = nil
+
+      # Paginate through all certificate pages
+      loop do
+        response = acm.list_certificates(
+          certificate_statuses: ['ISSUED'],
+          next_token: next_token
+        )
+
+        all_certificates.concat(response.certificate_summary_list)
+
+        # Break if there are no more pages
+        break unless response.next_token
+        next_token = response.next_token
+      end
+
+      # Process all certificates to find the best match
+      selected = all_certificates.
         select {|cert| cert.domain_name == wildcard || cert.domain_name == domain}.
         map {|cert| acm.describe_certificate(certificate_arn: cert.certificate_arn).certificate}.
         select {|cert| cert.subject_alternative_names.include? wildcard}.
-        max_by(&:not_after).
-        certificate_arn
+        max_by(&:not_after)
+
+      raise "No valid ACM certificate found for domain #{domain}" unless selected
+
+      selected.certificate_arn
     end
 
     # S3 path to bootstrap script.
@@ -195,8 +220,35 @@ To specify an alternate branch name, run `rake adhoc:start branch=BRANCH`."
       )
     end
 
+    # Fetch adhoc-specific tags prefixed with 'Op:' for preserving options
+    private def read_existing_stack_op_tags
+      client = Aws::CloudFormation::Client.new
+      tags = client.describe_stacks(stack_name: stack_name).
+                  stacks.first.tags
+      tags.each_with_object({}) do |t, memo|
+        next unless t.key.start_with?('Op:')
+        raw_key = t.key.delete_prefix('Op:')
+        # Convert 'CdnEnabled' -> 'cdn_enabled', others like 'Database' -> 'database'
+        snake = raw_key.gsub(/([a-z])([A-Z])/, '\1_\2').downcase.to_sym
+        memo[snake] = t.value.to_s.match?(/\A(true|1)\z/i)
+      end
+    rescue Aws::CloudFormation::Errors::ValidationError
+      {}
+    end
+
     private def get_binding
       binding
+    end
+
+    # Persist (or Re-persist) "Op:" tags based on final option values before rendering
+    private def persist_op_tags
+      # Remove any existing "Op:" tags
+      tags.reject! {|t| t[:key].start_with?('Op:')}
+      # Add or Re-add fresh values
+      tags.push(key: 'Op:Database', value: options.database.to_s)
+      tags.push(key: 'Op:Frontends', value: options.frontends.to_s)
+      tags.push(key: 'Op:CdnEnabled', value: options.cdn_enabled.to_s)
+      tags.push(key: 'Op:Alarms', value: options.alarms.to_s)
     end
   end
 end

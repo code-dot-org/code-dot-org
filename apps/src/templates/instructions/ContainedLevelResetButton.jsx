@@ -1,10 +1,10 @@
+import {Button, buttonColors} from '@code-dot-org/component-library/button';
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 import {connect} from 'react-redux';
 
 import {resetContainedLevel} from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import {queryUserProgress} from '@cdo/apps/code-studio/progressRedux';
-import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
 import firehoseClient from '@cdo/apps/metrics/firehose';
 import HelpTip from '@cdo/apps/sharedComponents/HelpTip';
 import {CourseRoles} from '@cdo/apps/templates/currentUserRedux';

@@ -46,6 +46,7 @@ $text-horizontal-padding: 2.6cqw;
   top: 0;
   left: 0;
   flex-direction: column;
+  background-color: var(--background-neutral-lab);
 
   .panel {
     margin: 0 auto;
@@ -94,9 +95,12 @@ $text-horizontal-padding: 2.6cqw;
 
       h1, h2, h3, h4 {
         margin: 0 0 1cqw 0;
-        font-family: $barlowSemiCondensed-semibold;
         font-size: 3cqw;
         line-height: 1.2em;
+
+        &, em, strong {
+          font-family: $barlowSemiCondensed-semibold;
+        }
       }
 
       p {
@@ -105,6 +109,16 @@ $text-horizontal-padding: 2.6cqw;
 
         &:last-child {
           margin-bottom: 0;
+        }
+      }
+
+      ol, ul {
+        font-size: 1.6cqw;
+        margin: 0 0 1.1cqw 2.2cqw;
+
+        li {
+          margin-bottom: 1.1cqw;
+          line-height: 1.4em;
         }
       }
 
@@ -154,6 +168,14 @@ $text-horizontal-padding: 2.6cqw;
         bottom: $text-offset-y;
         right: $text-offset-x;
       }
+
+      .ttsContainer {
+        position: absolute;
+        display: flex;
+        justify-content: flex-end;
+        right: 7px;
+        bottom: 7px;
+      }
     }
   }
 
@@ -185,11 +207,11 @@ $text-horizontal-padding: 2.6cqw;
       margin: 0 7px;
 
       &Current {
-        color: $neutral_light;
+        color: var(--text-neutral-primary);
       }
 
       &NotCurrent {
-        color: $neutral_dark70;
+        color: var(--text-neutral-placeholder);
         cursor: pointer;
       }
     }

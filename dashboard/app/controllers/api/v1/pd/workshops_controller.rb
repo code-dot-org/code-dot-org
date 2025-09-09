@@ -107,58 +107,6 @@ class Api::V1::Pd::WorkshopsController < ApplicationController
     render json: {error: exception.message}, status: :bad_request
   end
 
-  def to_geojson(workshops)
-    locations = []
-    grouped_workshops = workshops.group_by do |w|
-      location = JSON.parse(w.processed_location)
-      [location['longitude'].round(3), location['latitude'].round(3)]
-    end
-    grouped_workshops.each do |location, workshop_list|
-      next if location.blank?
-      next unless location.length == 2
-      properties = {
-        show_deep_dive_marker: workshop_list.any? {|w| w.subject == Pd::Workshop::SUBJECT_CSF_201}.to_s,
-        workshop_count: workshop_list.count
-      }
-      properties['workshops'] = workshop_list.map do |w|
-        {
-          id: w.id,
-          location_name: w.location_name,
-          subject: w.subject,
-          sessions: w.sessions.map(&:formatted_date_with_start_and_end_times)
-        }
-      end
-      locations.append(
-        {
-          type: "Feature",
-          geometry: {type: "Point", coordinates: location},
-          properties: properties
-        }
-      )
-    end
-    {type: 'FeatureCollection', features: locations}.to_json
-  end
-
-  # Upcoming (not started) public CSF workshops.
-  def k5_public_map_index
-    conditions = {
-      course: Pd::Workshop::COURSE_CSF,
-      on_map: true
-    }
-
-    if params['deep_dive_only']
-      conditions[:subject] = Pd::Workshop::SUBJECT_CSF_201
-    end
-
-    @workshops = Pd::Workshop.scheduled_start_on_or_after(Time.zone.today.beginning_of_day).
-      where(conditions).where.not(processed_location: nil)
-    if params['geojson']
-      render json: to_geojson(@workshops)
-    else
-      render json: @workshops, each_serializer: Api::V1::Pd::WorkshopK5MapSerializer
-    end
-  end
-
   # GET /api/v1/pd/workshops/1
   def show
     render json: @workshop, serializer: Api::V1::Pd::WorkshopSerializer
@@ -167,15 +115,8 @@ class Api::V1::Pd::WorkshopsController < ApplicationController
   # PATCH /api/v1/pd/workshops/1
   def update
     adjust_facilitators
-
-    if params[:pd_workshop][:course] == Pd::Workshop::COURSE_BUILD_YOUR_OWN
-      supplied_course_offering_ids = params[:pd_workshop].delete(:course_offerings)
-      if supplied_course_offering_ids.blank?
-        return render json: {error: "Cannot create a Build Your Own workshop without PL topics"}, status: :bad_request
-      else
-        @workshop.course_offerings = supplied_course_offering_ids.filter_map {|id| CourseOffering.find_by(id: id)}
-      end
-    end
+    adjust_course_offerings
+    adjust_grades
 
     # The below user types have permission to set the regional partner. CSF Facilitators
     # can initially set the regional partner, but cannot edit it once it is set.
@@ -185,11 +126,7 @@ class Api::V1::Pd::WorkshopsController < ApplicationController
 
     new_workshop_params = workshop_params(can_update_regional_partner)
 
-    workshop_start_date = new_workshop_params[:sessions] ? Date.parse(new_workshop_params[:sessions].select {|s| s[:start]}.min_by {|s| Date.parse(s[:start])}[:start]) : @workshop.workshop_starting_date
-
-    if @workshop.virtual != new_workshop_params[:virtual] && user_cannot_freely_edit_virtual(new_workshop_params[:course], new_workshop_params[:subject], workshop_start_date)
-      render json: {error: "non-workshop-admin cannot change CSP/CSA Summer Workshop virtual field within a month of it starting."}, status: :bad_request
-    elsif @workshop.update(new_workshop_params)
+    if @workshop.update(new_workshop_params)
       notify if should_notify?
       render json: @workshop, serializer: Api::V1::Pd::WorkshopSerializer
     else
@@ -201,19 +138,10 @@ class Api::V1::Pd::WorkshopsController < ApplicationController
   def create
     @workshop.organizer = current_user
     adjust_facilitators
+    adjust_course_offerings
+    adjust_grades
 
-    if params[:pd_workshop][:course] == Pd::Workshop::COURSE_BUILD_YOUR_OWN
-      supplied_course_offering_ids = params[:pd_workshop].delete(:course_offerings)
-      if supplied_course_offering_ids.blank?
-        return render json: {error: "Cannot create a Build Your Own workshop without PL topics"}, status: :bad_request
-      else
-        @workshop.course_offerings = supplied_course_offering_ids.filter_map {|id| CourseOffering.find_by(id: id)}
-      end
-    end
-
-    if @workshop.virtual && user_cannot_freely_edit_virtual(@workshop.course, @workshop.subject, @workshop.workshop_starting_date)
-      render json: {error: "non-workshop-admin cannot create a virtual CSP/CSA Summer Workshop within a month of it starting."}, status: :bad_request
-    elsif @workshop.save
+    if @workshop.save
       render json: @workshop, serializer: Api::V1::Pd::WorkshopSerializer
     else
       render json: {errors: @workshop.errors.full_messages}, status: :bad_request
@@ -234,7 +162,8 @@ class Api::V1::Pd::WorkshopsController < ApplicationController
 
   # POST /api/v1/pd/workshops/1/unstart (admin only)
   def unstart
-    @workshop.update!(started_at: nil)
+    # using update_attribute to skip validation
+    @workshop.update_attribute(:started_at, nil)
     head :no_content
   end
 
@@ -246,7 +175,8 @@ class Api::V1::Pd::WorkshopsController < ApplicationController
 
   # POST /api/v1/pd/workshops/1/reopen (admin only)
   def reopen
-    @workshop.update!(ended_at: nil)
+    # using update_attribute to skip validation
+    @workshop.update_attribute(:ended_at, nil)
     head :no_content
   end
 
@@ -289,6 +219,15 @@ class Api::V1::Pd::WorkshopsController < ApplicationController
   private def notify
     @workshop.enrollments.each do |enrollment|
       Pd::WorkshopMailer.detail_change_notification(enrollment).deliver_now
+
+      # Also send to the user's alternate summer email if they entered it in their application and it's
+      # for a summer workshop.
+      if enrollment.workshop&.subject == Pd::Workshop::SUBJECT_SUMMER_WORKSHOP
+        alt_summer_email = enrollment.user&.alternate_email
+        if alt_summer_email.present?
+          Pd::WorkshopMailer.detail_change_notification(enrollment, to_email: alt_summer_email).deliver_now
+        end
+      end
     end
     @workshop.facilitators.each do |facilitator|
       Pd::WorkshopMailer.facilitator_detail_change_notification(facilitator, @workshop).deliver_now
@@ -297,29 +236,36 @@ class Api::V1::Pd::WorkshopsController < ApplicationController
   end
 
   private def adjust_facilitators
-    supplied_facilitator_ids = params[:pd_workshop].delete(:facilitators)
-    return unless supplied_facilitator_ids
+    ws_params = params[:pd_workshop]
+    return unless ws_params.key?(:facilitators) || ws_params.key?("facilitators")
+    supplied_facilitator_ids = ws_params.delete(:facilitators) || ws_params.delete("facilitators")
+    supplied_facilitator_ids = [] if supplied_facilitator_ids.blank?
 
-    existing_facilitator_ids = @workshop.facilitators.map(&:id)
-    new_facilitator_ids = supplied_facilitator_ids - existing_facilitator_ids
-    facilitator_ids_to_remove = existing_facilitator_ids - supplied_facilitator_ids
+    valid_facilitators = User.joins(:permissions).where(id: supplied_facilitator_ids, user_permissions: {permission: 'facilitator'}).distinct
 
-    facilitator_ids_to_remove.each do |facilitator_id|
-      @workshop.facilitators.delete(facilitator_id)
-    end
+    @workshop.facilitators = valid_facilitators
+  end
 
-    new_facilitator_ids.each do |facilitator_id|
-      facilitator = User.find_by(id: facilitator_id)
+  private def adjust_course_offerings
+    ws_params = params[:pd_workshop]
 
-      # Since these ids are supplied by the caller, make sure they each actually represent a real user
-      # and that the user is actually a facilitator before adding.
-      next unless facilitator&.facilitator?
-      @workshop.facilitators << facilitator
-    end
+    return unless ws_params.key?(:course_offerings) ||  ws_params.key?("course_offerings")
+    supplied_course_offering_ids = ws_params.delete(:course_offerings) || ws_params.delete("course_offerings")
+    supplied_course_offering_ids = [] if supplied_course_offering_ids.blank?
+    @workshop.course_offerings = CourseOffering.where(id: supplied_course_offering_ids)
+  end
+
+  private def adjust_grades
+    ws_params = params[:pd_workshop]
+    return unless ws_params.key?(:grades) || ws_params.key?("grades")
+    new_grades = ws_params.delete(:grades) || ws_params.delete("grades")
+    new_grades = [] if new_grades.blank?
+    @workshop.grades = new_grades
   end
 
   private def workshop_params(can_update_regional_partner = true)
     allowed_params = [
+      :name,
       :location_name,
       :location_address,
       :capacity,
@@ -332,34 +278,22 @@ class Api::V1::Pd::WorkshopsController < ApplicationController
       :fee,
       :regional_partner_id,
       :organizer_id,
-      :virtual,
       :suppress_email,
       :third_party_provider,
-      {sessions_attributes: [:id, :start, :end, :_destroy]},
+      {sessions_attributes: [:id, :start, :end, :session_format, :meeting_link, :location_name, :location_address, :_destroy]},
       :module,
+      :participant_group_type,
+      :description,
+      :registration_link,
+      :prereq,
+      :hidden,
+      :grades,
+      :time_zone,
     ]
 
     allowed_params.delete :regional_partner_id unless can_update_regional_partner
     allowed_params.delete :organizer_id unless current_user.permission?(UserPermission::WORKSHOP_ADMIN)
 
     params.require(:pd_workshop).permit(*allowed_params)
-  end
-
-  # Determine if the 'virtual' workshop field cannot be freely set/updated by the user.
-  # Returns true if the following are all true:
-  #   - it is a CSP or CSA Summer Workshop
-  #   - the user is not a Workshop Admin
-  #   - it is being created within a month of it starting (averaged to 30 days to avoid odd
-  #     behavior from time edge cases)
-  # If true, then setting/updating 'virtual' is limited:
-  #   - when creating this workshop, 'virtual' can only be set as false (i.e. 'in-person').
-  #   - when editing this workshop, 'virtual' cannot be changed.
-  private def user_cannot_freely_edit_virtual(course, subject, start_date)
-    (
-      [Pd::Workshop::COURSE_CSP, Pd::Workshop::COURSE_CSA].include?(course) &&
-      subject == Pd::Workshop::SUBJECT_SUMMER_WORKSHOP &&
-      !current_user.permission?(UserPermission::WORKSHOP_ADMIN) &&
-      (start_date - 30.days <= Time.zone.now && Time.zone.now <= start_date)
-    )
   end
 end

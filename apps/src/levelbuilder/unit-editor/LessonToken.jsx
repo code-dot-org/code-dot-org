@@ -83,8 +83,7 @@ export class LessonTokenContents extends Component {
 
   handleEditLesson = () => {
     const url = this.props.lesson.lessonEditPath;
-    const win = window.open(url, 'noopener', 'noreferrer');
-    win.focus();
+    window.open(url, '_blank', 'noopener,noreferrer');
   };
 
   handleDragStart = e => {

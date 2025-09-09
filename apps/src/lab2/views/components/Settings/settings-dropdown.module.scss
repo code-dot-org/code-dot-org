@@ -1,0 +1,61 @@
+$space-xs: 2px;
+$space-s: 4px;
+$space-m: 6px;
+$space-l: 8px;
+
+.settingsDropdown {
+  position: absolute;
+  cursor: pointer;
+  border: 1px solid var(--borders-neutral-primary);
+  border-radius: 4px;
+  background-color: var(--background-neutral-secondary);
+  scrollbar-color: var(--text-neutral-tertiary) var(--background-neutral-secondary);
+  color: var(--text-neutral-primary);
+  width: 400px;
+  text-align: left;
+  vertical-align: top;
+  z-index: 1000;
+  right: 0;
+  padding: $space-l $space-l 16px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: $space-m;
+  padding-right: $space-m;
+  padding-bottom: $space-l;
+
+  .heading {
+    margin: $space-s;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.dropdownRow {
+  display: flex;
+  justify-content: space-between;
+  padding: $space-m;
+  align-items: center;
+
+  .dropdownLabel {
+    min-width: 150px;
+    font-size: 14px;
+    font-weight: 500;
+    margin: $space-xs;
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: $space-m $space-m $space-s;
+  gap: $space-s;
+  margin-top: $space-m;
+
+  .footerButton {
+    margin: $space-xs;
+  }
+}

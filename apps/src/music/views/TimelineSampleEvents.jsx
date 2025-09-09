@@ -12,8 +12,9 @@ import TimelineElement from './TimelineElement';
 const TimelineSampleEvents = ({
   paddingOffset,
   barWidth,
-  eventVerticalSpace,
+  onKeyDown,
   getEventHeight,
+  getEventVerticalSpace,
 }) => {
   const soundEvents = useSelector(state => state.music.playbackEvents);
 
@@ -35,6 +36,9 @@ const TimelineSampleEvents = ({
     return currentUniqueSounds.indexOf(id);
   };
 
+  const eventHeight = getEventHeight(currentUniqueSounds.length);
+  const eventVerticalSpace = getEventVerticalSpace(eventHeight);
+
   return (
     <>
       {soundEvents.map((eventData, index) => (
@@ -42,9 +46,8 @@ const TimelineSampleEvents = ({
           key={index}
           eventData={eventData}
           barWidth={barWidth}
-          height={
-            getEventHeight(currentUniqueSounds.length) - eventVerticalSpace
-          }
+          onKeyDown={onKeyDown}
+          height={eventHeight - eventVerticalSpace}
           top={32 + getVerticalOffsetForEventId(eventData.id)}
           left={paddingOffset + barWidth * (eventData.when - 1)}
           when={eventData.when}
@@ -57,8 +60,9 @@ const TimelineSampleEvents = ({
 TimelineSampleEvents.propTypes = {
   paddingOffset: PropTypes.number.isRequired,
   barWidth: PropTypes.number.isRequired,
-  eventVerticalSpace: PropTypes.number.isRequired,
+  onKeyDown: PropTypes.func.isRequired,
   getEventHeight: PropTypes.func.isRequired,
+  getEventVerticalSpace: PropTypes.func.isRequired,
 };
 
 export default TimelineSampleEvents;

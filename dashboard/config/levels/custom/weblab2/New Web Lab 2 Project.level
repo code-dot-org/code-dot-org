@@ -1,0 +1,15 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2025-03-26T18:13:02.000Z",
+  "level_num": "custom",
+  "user_id": 6959,
+  "properties": {
+    "is_project_level": "true",
+    "encrypted": "false"
+  },
+
+  "audit_log": "[{\"changed_at\":\"2025-03-26T11:13:02.113-07:00\",\"changed\":[\"cloned from \\\"Weblab2 Lab2 Showcase\\\"\"],\"cloned_from\":\"Weblab2 Lab2 Showcase\"},{\"changed_at\":\"2025-03-26 11:13:15 -0700\",\"changed\":[\"long_instructions\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

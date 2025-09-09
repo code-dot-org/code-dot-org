@@ -31,43 +31,42 @@ class ReportAbuseControllerTest < ActionController::TestCase
     assert_equal 0, @controller.update_channel_abuse_score(@channel_id)
   end
 
-  test "signed in user can update abuse score without dcdo flag enabled" do
-    DCDO.stubs(:get).with('restrict-abuse-reporting-to-verified', true).returns(false)
+  test "signed in user can update abuse score when reporting not restricted to verified teachers" do
+    @controller.stubs(:restrict_reporting_to_verified_teachers).returns(false)
+    DCDO.stubs(:get).with('restrict_reporting_to_verified_teachers', false).returns(false)
+    DCDO.stubs(:get).with('migration_service_enabled', false).returns(false)
 
     user = create(:student)
     sign_in user
 
-    # check initial state
+    # Check initial state.
     assert_equal 0, Projects.get_abuse(@channel_id)
 
-    # authenticated non-teacher should get a score of 10
+    # Authenticated non-teacher should get a score of 10.
     assert_equal 10, @controller.update_channel_abuse_score(@channel_id)
     assert_equal 10, Projects.get_abuse(@channel_id)
-
-    DCDO.unstub(:get)
   end
 
-  test "student can't update abuse score with dcdo flag enabled" do
-    DCDO.stubs(:get).with('restrict-abuse-reporting-to-verified', true).returns(true)
+  test "signed in student can't update abuse score reporting restricted to verified teachers" do
+    @controller.stubs(:restrict_reporting_to_verified_teachers).returns(true)
 
     user = create(:student)
     sign_in user
 
-    # check initial state
+    # Check initial state.
     assert_equal 0, Projects.get_abuse(@channel_id)
+    puts "Projects.get_abuse(@channel_id) #{Projects.get_abuse(@channel_id)}"
 
-    # authenticated non-teacher, with flag, should get a score of 0
+    # Authenticated student should get a score of 0 when reporting is restricted to verified teachers.
     assert_equal 0, @controller.update_channel_abuse_score(@channel_id)
     assert_equal 0, Projects.get_abuse(@channel_id)
-
-    DCDO.unstub(:get)
   end
 
-  test "verified teacher can update abuse score with dcdo flag enabled" do
+  test "verified teacher can update abuse score when reporting restricted to verified teacher users" do
     user = create(:authorized_teacher)
     sign_in user
 
-    DCDO.stubs(:get).with('restrict-abuse-reporting-to-verified', true).returns(true)
+    @controller.stubs(:restrict_reporting_to_verified_teachers).returns(true)
 
     # check initial state
     assert_equal 0, Projects.get_abuse(@channel_id)
@@ -75,8 +74,6 @@ class ReportAbuseControllerTest < ActionController::TestCase
     # authenticated verified teacher should get a score of 20
     assert_equal 20, @controller.update_channel_abuse_score(@channel_id)
     assert_equal 20, Projects.get_abuse(@channel_id)
-
-    DCDO.unstub(:get)
   end
 
   test "signed in user can't update abuse score when channel is frozen" do
@@ -131,6 +128,58 @@ class ReportAbuseControllerTest < ActionController::TestCase
     response = delete :reset_abuse, params: {channel_id: @channel_id}
     assert response.ok?
     assert_equal 0, JSON.parse(response.body)['abuse_score']
+  end
+
+  test "update_abuse_image_moderation with updates abuse score according to type for signed in user" do
+    user = create(:student)
+    sign_in user
+
+    # Ensure initial score is 0
+    assert_equal 0, Projects.get_abuse(@channel_id)
+
+    post :update_abuse_image_moderation, params: {channel_id: @channel_id, type: 'flag'}
+
+    assert response.ok?
+    assert_equal 15, JSON.parse(response.body)["abuse_score"]
+    assert_equal 15, Projects.get_abuse(@channel_id)
+
+    post :update_abuse_image_moderation, params: {channel_id: @channel_id, type: 'unflag'}
+
+    assert response.ok?
+    assert_equal 0, JSON.parse(response.body)["abuse_score"]
+    assert_equal 0, Projects.get_abuse(@channel_id)
+  end
+
+  test "update_abuse_image_moderation requires login" do
+    post :update_abuse_image_moderation, params: {channel_id: @channel_id, type: 'flag'}
+
+    assert_response :unauthorized
+  end
+
+  test "update_abuse_image_moderation raises bad request on bad channel_id" do
+    user = create(:student)
+    sign_in user
+
+    assert_raises(ActionController::BadRequest) do
+      post :update_abuse_image_moderation, params: {channel_id: "invalid-channel", type: 'flag'}
+    end
+  end
+
+  test "update_abuse_image_moderation with invalid type returns bad request" do
+    user = create(:student)
+    sign_in user
+
+    # Ensure initial score is 0
+    assert_equal 0, Projects.get_abuse(@channel_id)
+
+    post :update_abuse_image_moderation, params: {channel_id: @channel_id, type: 'invalid_type'}
+
+    assert_response :bad_request
+    json = JSON.parse(response.body)
+    assert_equal "Invalid type parameter. Must be 'flag' or 'unflag'.", json["error"]
+
+    # Ensure abuse score was not changed
+    assert_equal 0, Projects.get_abuse(@channel_id)
   end
 
   test "base64 error" do

@@ -1,0 +1,132 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-05-31T02:57:04.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "packId": "beethoven_symphony_no_6",
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "editable": false
+            }
+          ]
+        }
+      },
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2",
+            "play_rest_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together",
+            "play_sounds_sequential"
+          ],
+          "Effects": [
+            "set_volume_effect_at_current_location_simple2",
+            "set_filter_effect_at_current_location_simple2",
+            "set_delay_effect_at_current_location_simple2"
+          ]
+        },
+        "type": "flyout"
+      },
+      "sounds": {
+        "beethoven_symphony_no_6": [
+          "strings_repeating",
+          "main_theme_1",
+          "main_theme_2",
+          "main_theme_3",
+          "main_theme_4",
+          "hit",
+          "fanfare",
+          "strings_legato",
+          "strings_build",
+          "strings_open",
+          "strings_ascending",
+          "strings_resolve",
+          "strings_punch",
+          "flute_sustain",
+          "flute_theme",
+          "strings_sneaky",
+          "strings_up_and_down",
+          "strings_arpeggio",
+          "strings_melody",
+          "call_and_response"
+        ]
+      },
+      "allowChangeStartingPlayheadPosition": true
+    },
+    "long_instructions": "### Wakeup Song\r\n\r\n**Define:** You've been asked to design a new alarm clock ringtone that helps people wake up. The volume should slowly increase as different tracks play and end in some kind of big surprise.\r\n\r\n**Prepare:** Pick the tracks and effects you want to use and imagine what you want the timeline to look like. Consider using rests to surprise the listener!\r\n\r\n**Try:** Create your alarm clock ringtone!\r\n\r\n<div style=\"background:#ebe8f1; border: 0; border-radius: 10px; clear:both; padding: 5px\">\r\n\r\nNeed some help? Try the [<i class=\"fa-solid fa-book\"></i> Docs](#clickable=documentation-button) in the upper-right corner!\r\n\r\n</div>\r\n\r\n**Reflect:** In order to pass this level, make sure your code has:\r\n- At least 6 tracks\r\n- At least 3 effects\r\n- A \"rising\" volume and a surprise moment!",
+    "display_name": "Time to Wake Up",
+    "thumbnail_url": "https://images.code.org/63e2b15e381dd58b61d6c4a006e3ab89-Screenshot 2025-03-12 at 12.55.53 PM.png",
+    "encrypted_exemplar_sources": "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\nyHb6SQisRguqWuu9P6jpBRwKNVX+J+aL\n",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": false,
+      "playerTitle": "Example"
+    },
+    "bubble_choice_description": "A client has asked you to make a new alarm clock ringtone",
+    "validations": [
+      {
+        "key": "test-music-lab-sequences-synthesize-filters-choice-a_3d1b8f6a-c6a4-4ab3-b890-500d1e11b703",
+        "message": "Your code seems on the right track! Make sure you meet all of the other requirements!",
+        "next": true,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "play_sound_at_current_location_simple2:6"
+          },
+          {
+            "name": "block_count_by_type",
+            "value": "set_effect_at_current_location_simple2:3"
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-sequences-synthesize-filters-choice-a_0f5f2082-f0ee-4f38-8f1f-a5dc8be00166",
+        "message": "Make sure your code has at least 3 effects!",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "play_sound_at_current_location_simple2:6"
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-sequences-synthesize-filters-choice-a_9bb7a659-b16c-4e37-a469-ab43793fbd97",
+        "message": "Make sure your code has at least 6 tracks!",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "name_suffix": "_v2",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:57:04.425+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-synthesize-filters-choice-a\\\"\"],\"cloned_from\":\"test-music-lab-sequences-synthesize-filters-choice-a\"},{\"changed_at\":\"2025-06-30 17:01:16 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

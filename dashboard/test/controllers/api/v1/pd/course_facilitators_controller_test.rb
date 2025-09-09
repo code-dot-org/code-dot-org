@@ -17,17 +17,19 @@ class Api::V1::Pd::CourseFacilitatorsControllerTest < ActionController::TestCase
   end
 
   test 'index returns unique and sorted list of facilitators' do
-    facilitator1 = create :facilitator, name: 'B'
-    facilitator2 = create :facilitator, name: 'A'
+    facilitator1 = create(:facilitator, name: 'B')
+    facilitator2 = create(:facilitator, name: 'A')
 
-    create :pd_course_facilitator, facilitator: facilitator1, course: Pd::Workshop::COURSE_CSF
-    create :pd_course_facilitator, facilitator: facilitator2, course: Pd::Workshop::COURSE_CSF
-    create :pd_course_facilitator, facilitator: facilitator2, course: Pd::Workshop::COURSE_CSD
+    create(:pd_course_facilitator, facilitator: facilitator1, course: Pd::Workshop::COURSE_CSF)
+    create(:pd_course_facilitator, facilitator: facilitator2, course: Pd::Workshop::COURSE_CSF)
+    create(:pd_course_facilitator, facilitator: facilitator2, course: Pd::Workshop::COURSE_CSD)
 
     sign_in create(:workshop_organizer)
     get :index
     assert_response :success
     response_body = JSON.parse(response.body)
-    assert_equal([facilitator2, facilitator1].map(&:email), response_body.map {|f| f['email']})
+    facilitator_emails = [facilitator2.email, facilitator1.email]
+    filtered_response = response_body.select {|f| facilitator_emails.include?(f['email'])}
+    assert_equal(facilitator_emails, filtered_response.map {|f| f['email']})
   end
 end

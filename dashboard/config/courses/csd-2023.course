@@ -11,6 +11,17 @@
     "csd7-2023",
     "csd-post-survey-2023"
   ],
+  "original_script_names": [
+    "csd1-2023",
+    "csd2-2023",
+    "csd4-2023",
+    "csd5-2023",
+    "csd3-2023",
+    "csd7-2023",
+    "csd6a-2023",
+    "csd6b-2023",
+    "csd-post-survey-2023"
+  ],
   "published_state": "stable",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

@@ -1,0 +1,25 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2025-02-19T19:35:05.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "title": "Check for Understanding",
+    "long_instructions": "Which tasks (e.g., sort, filter, group) were easier to automate, and why? How does automation help make these tasks faster and more consistent?",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "height": "100"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-02-19T19:35:05.870+00:00\",\"changed\":[\"cloned from \\\"computing-systems-lesson9-reflection3\\\"\"],\"cloned_from\":\"computing-systems-lesson9-reflection3\"},{\"changed_at\":\"2025-02-19 19:35:09 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

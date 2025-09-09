@@ -33,13 +33,10 @@ class DCDOBase < DynamicConfigBase
       'pl-launch-hero-banner': DCDO.get('pl-launch-hero-banner', false),
       'curriculum-launch-2024': DCDO.get('curriculum-launch-2024', false),
       'csta-form-extension': DCDO.get('csta-form-extension', false),
-      cpa_experience: DCDO.get('cpa_experience', false),
       gender: DCDO.get('gender', false),
       'amplitude-event-sample-rates': DCDO.get('amplitude-event-sample-rates', {}),
       # Whether to allow the user to toggle between the v1 and v2 progress tables.
       'progress-table-v2-enabled': DCDO.get('progress-table-v2-enabled', false),
-      # Whether to show the v1 or v2 progress table by default.
-      'progress-table-v2-default-v2': DCDO.get('progress-table-v2-default-v2', false),
       # Whether to allow users with `progress_table_v2_closed_beta` user preference to toggle between v1 and v2.
       'progress-table-v2-closed-beta-enabled': DCDO.get('progress-table-v2-closed-beta-enabled', false),
       # Whether the scholarship dropdown is locked on the application dashboard.
@@ -51,18 +48,23 @@ class DCDOBase < DynamicConfigBase
       'music-lab-samples-report': DCDO.get('music-lab-samples-report', true),
       'disable-try-new-progress-view-modal': DCDO.get('disable-try-new-progress-view-modal', false),
       'music-lab-existing-projects-default-sounds': DCDO.get('music-lab-existing-projects-default-sounds', true),
-      'show-age-gated-students-banner': DCDO.get('show-age-gated-students-banner', true),
       'cfu-pin-hide-enabled': DCDO.get('cfu-pin-hide-enabled', false),
-      'teacher-local-nav-v2': DCDO.get('teacher-local-nav-v2', false),
+      'teacher-local-nav-v2': DCDO.get('teacher-local-nav-v2', true),
+      'teacher-homepage-v2': DCDO.get('teacher-homepage-v2', false),
+      'teacher-homepage-v2-announcement': DCDO.get('teacher-homepage-v2-announcement', false),
       'best-of-stem-2024': DCDO.get('best-of-stem-2024', false),
-      lti_account_unlinking: DCDO.get('lti_account_unlinking', false),
-      # TODO ACQ-2556 - Remove this after the 2024 HOC sweepstakes is over
-      'hoc-2024-sweepstakes': DCDO.get('hoc-2024-sweepstakes', false),
-      # TODO ACQ-2556 - Remove this after the 2024 HOC launch
-      'hoc-2024-nov-launch': DCDO.get('hoc-2024-nov-launch', false),
       # Enabled locales for browser text to speech. Set to an empty array to disable all languages, or true to enable all.
       'browser-tts-button-enabled-locales': DCDO.get('browser-tts-button-enabled-locales', ['en-US']),
       'lab2-submit-project-enabled': DCDO.get('lab2-submit-project-enabled', true),
+      'cdo-blockly-usage': DCDO.get('cdo-blockly-usage', false),
+      # TODO ACQ-3074 - Remove this after the Exploring Gen AI launch
+      'exploring-gen-ai-launch': DCDO.get('exploring-gen-ai-launch', false),
+      'music-lab-banner': DCDO.get('music-lab-banner', false),
+      modularity: DCDO.get('modularity', true),
+      # Remove this as part of Pegasus cleanup after the move to the CMS
+      'aif-launch': DCDO.get('aif-launch', false),
+      'skills-dashboard': DCDO.get('skills-dashboard', false),
+      'teacher-homepage-welcome': DCDO.get('teacher-homepage-welcome', false),
     }
   end
 end

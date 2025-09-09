@@ -1,0 +1,10 @@
+name 'computer-systems-lesson-3-wrap-up'
+display_name 'Hardware Careers: Components & Troubleshooting'
+description '### Explore a hardware-focused career and reflect on the components and troubleshooting involved in the field.'
+
+sublevels
+level 'computer-systems-lesson3-wearable-technology'
+level 'computer-systems-lesson3-electric-vehicle'
+level 'computer-systems-lesson3-robots-in-space'
+level 'computer-systems-lesson3-farming-technology'
+level 'computer-systems-lesson3-medical-robots'

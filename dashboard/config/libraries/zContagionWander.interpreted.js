@@ -1,3 +1,5 @@
+// This library is used in levels throughout the contagion-pilot script, which means users might rely on it.
+
 function contagionWander(){
   addBehaviorSimple(({costume: "all"}), new Behavior(contagionWandering, []));
 }

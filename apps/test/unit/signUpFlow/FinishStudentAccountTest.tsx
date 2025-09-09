@@ -1,4 +1,5 @@
 import {render, screen, fireEvent, act, waitFor} from '@testing-library/react';
+import '@testing-library/jest-dom';
 import React from 'react';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
@@ -7,6 +8,7 @@ import locale from '@cdo/apps/signUpFlow/locale';
 import {
   ACCOUNT_TYPE_SESSION_KEY,
   EMAIL_SESSION_KEY,
+  MAX_DISPLAY_NAME_LENGTH,
   USER_RETURN_TO_SESSION_KEY,
 } from '@cdo/apps/signUpFlow/signUpFlowConstants';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
@@ -40,6 +42,10 @@ describe('FinishStudentAccount', () => {
     {value: 'NY', text: 'New York'},
     {value: 'WA', text: 'Washington'},
   ];
+
+  const displayNameErrorMessage = locale.name_error_message({
+    nameType: 'display name',
+  });
 
   beforeEach(() => {
     fetchStub = sinon.stub(window, 'fetch').resolves({
@@ -81,7 +87,19 @@ describe('FinishStudentAccount', () => {
     });
 
     expect(navigateToHrefMock).toHaveBeenCalledWith(
-      '/users/new_sign_up/account_type'
+      '/users/sign_up/account_type'
+    );
+  });
+
+  it('redirects user back to account type page if invalid user type set', async () => {
+    sessionStorage.setItem(ACCOUNT_TYPE_SESSION_KEY, 'invalid');
+
+    await waitFor(() => {
+      renderDefault(true, false, false);
+    });
+
+    expect(navigateToHrefMock).toHaveBeenCalledWith(
+      '/users/sign_up/account_type'
     );
   });
 
@@ -91,7 +109,7 @@ describe('FinishStudentAccount', () => {
     });
 
     expect(navigateToHrefMock).toHaveBeenCalledWith(
-      '/users/new_sign_up/login_type'
+      `/users/sign_up/login_type?user_type=${UserTypes.STUDENT}`
     );
   });
 
@@ -153,7 +171,7 @@ describe('FinishStudentAccount', () => {
     const finishSignUpButton = screen.getByRole('button', {
       name: locale.go_to_my_account(),
     });
-    expect(finishSignUpButton.getAttribute('aria-disabled')).toBe('true');
+    expect(finishSignUpButton).toBeDisabled();
   });
 
   it('leaving the displayName field empty shows error message and disabled submit button until display name is entered', async () => {
@@ -173,22 +191,67 @@ describe('FinishStudentAccount', () => {
     fireEvent.change(stateInput, {target: {value: 'WA'}});
 
     // Error message doesn't show and button is disabled by default
-    expect(screen.queryByText(locale.display_name_error_message())).toBe(null);
-    expect(finishSignUpButton.getAttribute('aria-disabled')).toBe('true');
+    expect(screen.queryByText(displayNameErrorMessage)).toBe(null);
+    expect(finishSignUpButton).toBeDisabled();
 
     // Enter display name
     fireEvent.change(displayNameInput, {target: {value: 'FirstName'}});
 
     // Error does not show and button is enabled when display name is entered
-    expect(screen.queryByText(locale.display_name_error_message())).toBe(null);
-    expect(finishSignUpButton.getAttribute('aria-disabled')).toBe(null);
+    expect(screen.queryByText(displayNameErrorMessage)).toBe(null);
+    expect(finishSignUpButton).not.toBeDisabled();
 
     // Clear display name
     fireEvent.change(displayNameInput, {target: {value: ''}});
 
     // Error shows and button is disabled with empty display name
-    screen.getByText(locale.display_name_error_message());
-    expect(finishSignUpButton.getAttribute('aria-disabled')).toBe('true');
+    screen.getByText(displayNameErrorMessage);
+    expect(finishSignUpButton).toBeDisabled();
+  });
+
+  it('only whitespace in the displayName field shows error message', () => {
+    renderDefault();
+    const displayNameInput = screen.getAllByDisplayValue('')[1];
+
+    // Error message doesn't show and button is disabled by default
+    expect(screen.queryByText(displayNameErrorMessage)).toBe(null);
+
+    // Enter display name
+    fireEvent.change(displayNameInput, {target: {value: ' '}});
+
+    // Error shows with whitespace display name
+    screen.getByText(displayNameErrorMessage);
+
+    const finishSignUpButton = screen.getByRole('button', {
+      name: locale.go_to_my_account(),
+    });
+    expect(finishSignUpButton).toBeDisabled();
+  });
+
+  it('adding a long display name shows error message', () => {
+    renderDefault();
+    const displayNameInput = screen.getAllByDisplayValue('')[1];
+
+    // Error message doesn't show and button is disabled by default
+    expect(screen.queryByText(displayNameErrorMessage)).toBe(null);
+
+    // Enter display name
+    fireEvent.change(displayNameInput, {
+      target: {value: 'a'.repeat(MAX_DISPLAY_NAME_LENGTH + 1)},
+    });
+
+    // Error shows with long display name
+    screen.getByText(
+      locale.name_too_long_error_message({
+        nameType: 'Display name',
+        maxLength: MAX_DISPLAY_NAME_LENGTH,
+      })
+    );
+
+    const finishSignUpButton = screen.getByRole('button', {
+      name: locale.go_to_my_account(),
+    });
+    expect(finishSignUpButton).toBeDisabled();
   });
 
   it('leaving the age field empty shows error message and disabled submit button until age is entered', async () => {
@@ -209,21 +272,21 @@ describe('FinishStudentAccount', () => {
 
     // Error message doesn't show and button is disabled by default
     expect(screen.queryByText(locale.age_error_message())).toBe(null);
-    expect(finishSignUpButton.getAttribute('aria-disabled')).toBe('true');
+    expect(finishSignUpButton).toBeDisabled();
 
     // Enter age
     fireEvent.change(ageInput, {target: {value: '6'}});
 
     // Error does not show and button is enabled when age is entered
     expect(screen.queryByText(locale.age_error_message())).toBe(null);
-    expect(finishSignUpButton.getAttribute('aria-disabled')).toBe(null);
+    expect(finishSignUpButton).not.toBeDisabled();
 
     // Clear age
     fireEvent.change(ageInput, {target: {value: ''}});
 
     // Error shows and button is disabled with empty age
     screen.getByText(locale.age_error_message());
-    expect(finishSignUpButton.getAttribute('aria-disabled')).toBe('true');
+    expect(finishSignUpButton).toBeDisabled();
   });
 
   it('leaving the state field empty shows error message and disabled submit button until state is entered for US users', async () => {
@@ -244,21 +307,21 @@ describe('FinishStudentAccount', () => {
 
     // Error message doesn't show and button is disabled by default
     expect(screen.queryByText(locale.state_error_message())).toBe(null);
-    expect(finishSignUpButton.getAttribute('aria-disabled')).toBe('true');
+    expect(finishSignUpButton).toBeDisabled();
 
     // Enter state
     fireEvent.change(stateInput, {target: {value: 'WA'}});
 
     // Error does not show and button is enabled when state is entered
     expect(screen.queryByText(locale.state_error_message())).toBe(null);
-    expect(finishSignUpButton.getAttribute('aria-disabled')).toBe(null);
+    expect(finishSignUpButton).not.toBeDisabled();
 
     // Clear state
     fireEvent.change(stateInput, {target: {value: ''}});
 
     // Error shows and button is disabled with empty state
     screen.getByText(locale.state_error_message());
-    expect(finishSignUpButton.getAttribute('aria-disabled')).toBe('true');
+    expect(finishSignUpButton).toBeDisabled();
   });
 
   it('state field is not required if user is not detected in the U.S.', async () => {
@@ -277,7 +340,7 @@ describe('FinishStudentAccount', () => {
     fireEvent.change(ageInput, {target: {value: '6'}});
 
     // Button is enabled without having to enter anything for 'state'
-    expect(finishSignUpButton.getAttribute('aria-disabled')).toBe(null);
+    expect(finishSignUpButton).not.toBeDisabled();
   });
 
   it('parentEmail error shows if parent checkbox is selected and parentEmail is selected then cleared', async () => {
@@ -298,7 +361,7 @@ describe('FinishStudentAccount', () => {
     fireEvent.change(ageInput, {target: {value: '6'}});
 
     // Button is enabled after required fields are filled before parent checkbox is checked
-    expect(finishSignUpButton.getAttribute('aria-disabled')).toBe(null);
+    expect(finishSignUpButton).not.toBeDisabled();
 
     // Check parent checkbox
     fireEvent.click(screen.getAllByRole('checkbox')[0]);
@@ -306,21 +369,95 @@ describe('FinishStudentAccount', () => {
     // Error message doesn't show and button is disabled after parent checkbox is checked
     const parentEmailInput = screen.getAllByDisplayValue('')[1];
     expect(screen.queryByText(locale.email_error_message())).toBe(null);
-    expect(finishSignUpButton.getAttribute('aria-disabled')).toBe('true');
+    expect(finishSignUpButton).toBeDisabled();
 
-    // Enter state
+    // Enter parent email
     fireEvent.change(parentEmailInput, {target: {value: 'parent@email.com'}});
 
     // Error does not show and button is enabled when email is entered
     expect(screen.queryByText(locale.email_error_message())).toBe(null);
-    expect(finishSignUpButton.getAttribute('aria-disabled')).toBe(null);
+    expect(finishSignUpButton).not.toBeDisabled();
 
-    // Clear state
+    // Clear parent email
     fireEvent.change(parentEmailInput, {target: {value: ''}});
 
     // Error shows and button is disabled with empty email
     screen.getByText(locale.email_error_message());
-    expect(finishSignUpButton.getAttribute('aria-disabled')).toBe('true');
+    expect(finishSignUpButton).toBeDisabled();
+  });
+
+  it('parentEmail error shows if parent checkbox is selected and parentEmail is an invalid email', async () => {
+    renderDefault();
+    await waitFor(() => {
+      expect(fetchStub.calledOnce).toBe(true);
+    });
+    const finishSignUpButton = screen.getByRole('button', {
+      name: locale.go_to_my_account(),
+    });
+
+    // Set other required fields
+    const displayNameInput = screen.getAllByDisplayValue('')[1];
+    const stateInput = screen.getAllByRole('combobox')[1];
+    const ageInput = screen.getAllByRole('combobox')[0];
+    fireEvent.change(displayNameInput, {target: {value: 'FirstName'}});
+    fireEvent.change(stateInput, {target: {value: 'WA'}});
+    fireEvent.change(ageInput, {target: {value: '6'}});
+
+    // Button is enabled after required fields are filled before parent checkbox is checked
+    expect(finishSignUpButton).not.toBeDisabled();
+
+    // Check parent checkbox
+    fireEvent.click(screen.getAllByRole('checkbox')[0]);
+
+    // Error message doesn't show and button is disabled after parent checkbox is checked
+    const parentEmailInput = screen.getAllByDisplayValue('')[1];
+    expect(screen.queryByText(locale.email_error_message())).toBe(null);
+    expect(finishSignUpButton).toBeDisabled();
+
+    // Enter parent email
+    fireEvent.change(parentEmailInput, {
+      target: {value: '@invalidparentemail'},
+    });
+
+    // Error shows and button is disabled with empty email
+    screen.getByText(locale.email_error_message());
+    expect(finishSignUpButton).toBeDisabled();
+  });
+
+  it('clears parent email if parent checkbox is unchecked, and can submit successfully', async () => {
+    renderDefault();
+    await waitFor(() => {
+      expect(fetchStub.calledOnce).toBe(true);
+    });
+    const finishSignUpButton = screen.getByRole('button', {
+      name: locale.go_to_my_account(),
+    });
+
+    // Set other required fields
+    const displayNameInput = screen.getAllByDisplayValue('')[1];
+    const stateInput = screen.getAllByRole('combobox')[1];
+    const ageInput = screen.getAllByRole('combobox')[0];
+    fireEvent.change(displayNameInput, {target: {value: 'FirstName'}});
+    fireEvent.change(stateInput, {target: {value: 'WA'}});
+    fireEvent.change(ageInput, {target: {value: '6'}});
+    // Check parent checkbox
+    fireEvent.click(screen.getAllByRole('checkbox')[0]);
+
+    // Enter parent email
+    const parentEmailInput = screen.getAllByDisplayValue('')[1];
+    fireEvent.change(parentEmailInput, {
+      target: {value: '@invalidparentemail'},
+    });
+
+    // Uncheck parent checkbox
+    fireEvent.click(screen.getAllByRole('checkbox')[0]);
+    // Click finish sign up button
+    fireEvent.click(finishSignUpButton);
+
+    await waitFor(() => {
+      // Verify the user is redirected to the finish sign up page
+      expect(navigateToHrefMock).toHaveBeenCalledWith('/home');
+    });
   });
 
   it('GDPR has expected behavior if api call returns true', async () => {
@@ -348,12 +485,97 @@ describe('FinishStudentAccount', () => {
     const finishSignUpButton = screen.getByRole('button', {
       name: locale.go_to_my_account(),
     });
-    expect(finishSignUpButton.getAttribute('aria-disabled')).toBe('true');
+    expect(finishSignUpButton).toBeDisabled();
     fireEvent.click(screen.getAllByRole('checkbox')[1]);
-    expect(finishSignUpButton.getAttribute('aria-disabled')).toBe(null);
+    expect(finishSignUpButton).not.toBeDisabled();
   });
 
-  it('clicking finish sign up button triggers fetch call and shows error if backend error', async () => {
+  it('clicking finish sign up button triggers fetch call and shows error message if 400 error response', async () => {
+    const errorMessage = 'SAMPLE ERROR MESSAGE';
+
+    fetchStub.callsFake(() =>
+      Promise.resolve({
+        ok: false,
+        status: 400,
+        json: () => Promise.resolve({error: errorMessage}),
+      } as Response)
+    );
+
+    // Declare parameter values and set sessionStorage variables
+    const name = 'FirstName';
+    const email = 'fake@email.com';
+    const age = '6';
+    const gender = 'Female';
+    const state = 'AZ';
+    const country = 'US';
+    const parentEmail = 'parent@email.com';
+    const finishSignUpParams = {
+      user: {
+        user_type: UserTypes.STUDENT,
+        email: email,
+        name: name,
+        age: age,
+        gender: gender,
+        us_state: state,
+        country_code: country,
+        parent_email_preference_email: parentEmail,
+        parent_email_preference_opt_in: true,
+      },
+    };
+    sessionStorage.setItem('email', email);
+
+    await waitFor(() => {
+      renderDefault();
+    });
+
+    // Set up finish sign up button onClick jest function
+    const finishSignUpButton = screen.getByRole('button', {
+      name: locale.go_to_my_account(),
+    }) as HTMLButtonElement;
+    const handleClick = jest.fn();
+    finishSignUpButton.onclick = handleClick;
+
+    // Fill in fields
+    fireEvent.click(screen.getAllByRole('checkbox')[0]);
+    fireEvent.click(screen.getAllByRole('checkbox')[1]);
+    const parentEmailInput = screen.getAllByDisplayValue('')[1];
+    const displayNameInput = screen.getAllByDisplayValue('')[3];
+    const ageInput = screen.getAllByDisplayValue('')[4];
+    const stateInput = screen.getAllByDisplayValue('')[5];
+    const genderInput = screen.getAllByDisplayValue('')[6];
+    fireEvent.change(parentEmailInput, {target: {value: parentEmail}});
+    fireEvent.change(displayNameInput, {target: {value: name}});
+    fireEvent.change(ageInput, {target: {value: age}});
+    fireEvent.change(stateInput, {target: {value: state}});
+    fireEvent.change(genderInput, {target: {value: gender}});
+
+    // Click finish sign up button
+    fireEvent.click(finishSignUpButton);
+
+    await waitFor(() => {
+      // Verify the button's click handler was called
+      expect(handleClick).toHaveBeenCalled();
+
+      // Verify the authenticity token was obtained
+      expect(getAuthenticityTokenMock).toHaveBeenCalled;
+
+      // Verify the button's fetch method was called
+      expect(fetchStub.calledTwice).toBe(true);
+      const fetchCall = fetchStub.getCall(1);
+      expect(fetchCall.args[0]).toEqual('/users');
+      expect(fetchCall.args[1]?.body).toEqual(
+        JSON.stringify(finishSignUpParams)
+      );
+
+      // Verify the user is NOT redirected to the finish sign up page
+      expect(navigateToHrefMock).toHaveBeenCalledTimes(0);
+      // Verify the error message is shown. Since the message includes a hyperlinked email, it requires the use of a
+      // SafeMarkdown tag, so the email itself is checked to know if the message shows.
+      screen.getByText(errorMessage);
+    });
+  });
+
+  it('clicking finish sign up button triggers fetch call and shows generic error if 500 error response', async () => {
     fetchStub.callsFake(() =>
       Promise.resolve({
         ok: false,
@@ -371,7 +593,6 @@ describe('FinishStudentAccount', () => {
     const country = 'US';
     const parentEmail = 'parent@email.com';
     const finishSignUpParams = {
-      new_sign_up: true,
       user: {
         user_type: UserTypes.STUDENT,
         email: email,
@@ -463,7 +684,6 @@ describe('FinishStudentAccount', () => {
     const country = 'US';
     const parentEmail = 'parent@email.com';
     const finishSignUpParams = {
-      new_sign_up: true,
       user: {
         user_type: UserTypes.STUDENT,
         email: email,
@@ -553,7 +773,6 @@ describe('FinishStudentAccount', () => {
     const parentEmail = 'parent@email.com';
     const userReturnToUrl = '/sample/url';
     const finishSignUpParams = {
-      new_sign_up: true,
       user: {
         user_type: UserTypes.STUDENT,
         email: email,

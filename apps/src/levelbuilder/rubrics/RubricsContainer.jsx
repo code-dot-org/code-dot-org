@@ -1,11 +1,11 @@
-import PropTypes from 'prop-types';
-import React, {useState} from 'react';
-
 import {
   BodyThreeText,
   BodyTwoText,
   Heading1,
-} from '@cdo/apps/componentLibrary/typography';
+} from '@code-dot-org/component-library/typography';
+import PropTypes from 'prop-types';
+import React, {useState} from 'react';
+
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import {RubricUnderstandingLevels} from '@cdo/generated-scripts/sharedConstants';
 
@@ -137,7 +137,7 @@ export default function RubricsContainer({
   // TODO-AITT-168: Check that there is at least one submittable programming level here
   const initialLevelForAssessment = !!rubric
     ? rubric.levelId
-    : submittableLevels[0].id;
+    : submittableLevels[0]?.id;
   const [selectedLevelForAssessment, setSelectedLevelForAssessment] = useState(
     initialLevelForAssessment
   );

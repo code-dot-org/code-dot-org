@@ -7,6 +7,7 @@ require 'state_abbr'
 # teachers' behalf to that program and related programs.
 #
 class Api::V1::AmazonFutureEngineerController < ApplicationController
+  before_action :allow_cdo_cors, only: %i[submit]
   # Necessary since Pegasus pages use this controller via dashboardapi
   skip_before_action :verify_authenticity_token
 

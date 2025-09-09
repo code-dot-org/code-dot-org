@@ -135,7 +135,7 @@ GoogleBlockly.Extensions.register(
   'behaviors_block_frame',
   function (this: ExtendedBlockSvg) {
     if (
-      !Blockly.useModalFunctionEditor &&
+      this.workspace === Blockly.getMainWorkspace() &&
       !this.workspace.noFunctionBlockFrame
     ) {
       // Used to create and render an SVG frame instance.

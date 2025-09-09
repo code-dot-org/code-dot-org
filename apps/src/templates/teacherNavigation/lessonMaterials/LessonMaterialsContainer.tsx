@@ -1,13 +1,22 @@
+import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
+import classNames from 'classnames';
 import _ from 'lodash';
 import React, {useState, useMemo, useCallback} from 'react';
-import {useLoaderData} from 'react-router-dom';
+import {useSelector} from 'react-redux';
 
-import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import {getStore} from '@cdo/apps/redux';
-import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
+import {
+  asyncLoadCoursesWithProgress,
+  getSelectedUnitId,
+} from '@cdo/apps/redux/unitSelectionRedux';
+import Spinner from '@cdo/apps/sharedComponents/Spinner';
+import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
+import HttpClient from '@cdo/apps/util/HttpClient';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
+
+import UnitSelectorV2 from '../../UnitSelectorV2';
 
 import {LessonMaterialsEmptyState} from './LessonMaterialsEmptyState';
 import {Lesson} from './LessonMaterialTypes';
@@ -15,6 +24,7 @@ import LessonResources from './LessonResources';
 import UnitResourcesDropdown from './UnitResourcesDropdown';
 
 import styles from './lesson-materials.module.scss';
+import skeletonizeContent from '@cdo/apps/sharedComponents/skeletonize-content.module.scss';
 
 interface LessonMaterialsData {
   unitId: number;
@@ -25,57 +35,41 @@ interface LessonMaterialsData {
   scriptResourcesPdfUrl: string;
   lessons: Lesson[];
   hasNumberedUnits: boolean;
+  hasUnnumberedLessons: boolean;
   versionYear?: number;
 }
 
-const lessonMaterialsCachedLoader = _.memoize(
-  async (assignedUnitId, unitName) =>
-    getAuthenticityToken()
-      .then(token =>
-        fetch(`/dashboardapi/lesson_materials/${assignedUnitId}`, {
-          method: 'GET',
-          headers: {
-            'Content-Type': 'application/json',
-            'X-CSRF-Token': token,
-          },
-        })
-      )
-      .then(response => {
-        return response.json();
-      })
-      .then(json => {
-        return {...json, unitName};
-      })
-      .catch(error => {
-        console.error('Error loading lesson materials', error);
-        analyticsReporter.sendEvent(EVENTS.LESSON_MATERIALS_FAILURE, {
-          unitName: unitName,
-        });
-        return null;
-      })
+const lessonMaterialsApiCall = (unitId: number) =>
+  HttpClient.fetchJson<LessonMaterialsData>(
+    `/dashboardapi/lesson_materials/${unitId}`
+  ).then(response => response?.value);
+
+const skeletonDropdown = () => (
+  <div
+    className={classNames(
+      styles.skeletonDropdown,
+      skeletonizeContent.skeletonizeContent
+    )}
+  />
 );
 
-export const lessonMaterialsLoader =
-  async (): Promise<LessonMaterialsData | null> => {
-    const state = getStore().getState().teacherSections;
-    const selectedSectionId = state.selectedSectionId;
-    const sectionData = state.sections[selectedSectionId];
-
-    if (!selectedSectionId || !sectionData.unitId) {
-      return null;
-    }
-
-    return lessonMaterialsCachedLoader(
-      sectionData.unitId,
-      sectionData.unitName
-    );
-  };
-
-const createDisplayName = (lessonName: string, lessonPosition: number) => {
-  return i18n.lessonNumberAndName({
-    lessonNumber: lessonPosition,
-    lessonName: lessonName,
-  });
+// Some lessons are lockable and don't have lesson plans (typically assessments or surveys).
+// In this case, we want to display the lesson name without a number.  See CSP1-2022 for an example.
+const createDisplayName = (
+  lessonName: string,
+  lessonPosition: number,
+  hasLessonPlan: boolean,
+  isLockable: boolean,
+  hasUnnumberedLessons: boolean
+) => {
+  if (hasUnnumberedLessons || (isLockable && !hasLessonPlan)) {
+    return lessonName;
+  } else {
+    return i18n.lessonNumberAndName({
+      lessonNumber: lessonPosition,
+      lessonName: lessonName,
+    });
+  }
 };
 
 interface LessonMaterialsContainerProps {
@@ -85,19 +79,99 @@ interface LessonMaterialsContainerProps {
 const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
   showNoCurriculumAssigned,
 }) => {
-  const loadedData = useLoaderData() as LessonMaterialsData | null;
-  const {hasNumberedUnits, lessons, unitNumber, versionYear} = useMemo(() => {
+  const [lessonMaterials, setLessonMaterials] =
+    useState<LessonMaterialsData | null>(null);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+
+  const selectedSection = useAppSelector(selectedSectionSelector);
+
+  const needsReload = useAppSelector(
+    state => state.teacherSections.needsReload
+  );
+
+  const selectedUnitId = useSelector(getSelectedUnitId);
+
+  const dispatch = useAppDispatch();
+
+  const lessonMaterialsCachedLoader = React.useMemo(
+    () => _.memoize(lessonMaterialsApiCall),
+    []
+  );
+
+  React.useEffect(() => {
+    dispatch(asyncLoadCoursesWithProgress());
+  }, [dispatch]);
+
+  const isLoadingCoursesWithProgress = useSelector(
+    (state: {unitSelection: {isLoadingCoursesWithProgress: boolean}}) =>
+      state.unitSelection.isLoadingCoursesWithProgress
+  );
+
+  const unitToLoad = React.useMemo(
+    () =>
+      !!selectedSection.unitId
+        ? selectedUnitId || selectedSection.unitId
+        : null,
+    [selectedSection.unitId, selectedUnitId]
+  );
+
+  React.useEffect(() => {
+    const selectedSectionId = selectedSection.id;
+    if (!selectedSectionId || !unitToLoad) {
+      setLessonMaterials(null);
+      setIsLoading(false);
+      return;
+    }
+
+    setIsLoading(true);
+
+    if (isLoadingCoursesWithProgress) {
+      return;
+    }
+
+    lessonMaterialsCachedLoader(unitToLoad).then(data => {
+      setLessonMaterials(data);
+      setIsLoading(false);
+
+      if (data?.unitName) {
+        analyticsReporter.sendEvent(EVENTS.VIEW_LESSON_MATERIALS, {
+          unitName: data.unitName,
+        });
+      }
+    });
+  }, [
+    isLoadingCoursesWithProgress,
+    unitToLoad,
+    selectedSection.id,
+    lessonMaterialsCachedLoader,
+  ]);
+
+  const {
+    hasNumberedUnits,
+    hasUnnumberedLessons,
+    lessons,
+    unitNumber,
+    versionYear,
+  } = useMemo(() => {
     return {
-      hasNumberedUnits: loadedData?.hasNumberedUnits || false,
-      lessons: loadedData?.lessons || [],
-      unitNumber: loadedData?.unitNumber || -1,
-      versionYear: loadedData?.versionYear || -1,
+      hasNumberedUnits: lessonMaterials?.hasNumberedUnits || false,
+      hasUnnumberedLessons: lessonMaterials?.hasUnnumberedLessons || false,
+      lessons: lessonMaterials?.lessons || [],
+      unitNumber: lessonMaterials?.unitNumber || -1,
+      versionYear: lessonMaterials?.versionYear || -1,
     };
-  }, [loadedData]);
+  }, [lessonMaterials]);
   const isLegacyScript = useMemo(() => versionYear < 2021, [versionYear]);
 
+  const hasNoLessonsWithLessonPlans = useMemo(() => {
+    return lessons.every(lesson => !lesson.hasLessonPlan);
+  }, [lessons]);
+
   const hasEmptyState =
-    isLegacyScript || showNoCurriculumAssigned || !loadedData;
+    isLegacyScript ||
+    showNoCurriculumAssigned ||
+    hasNoLessonsWithLessonPlans ||
+    !lessonMaterials;
 
   const getLessonFromId = (lessonId: number): Lesson | null => {
     return lessons.find(lesson => lesson.id === lessonId) || null;
@@ -111,27 +185,27 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
     }
   }, [lessons]);
 
-  React.useEffect(() => {
-    analyticsReporter.sendEvent(EVENTS.VIEW_LESSON_MATERIALS, {
-      unitName: loadedData?.unitName,
-    });
-  }, [loadedData?.unitName]);
-
   const onDropdownChange = (value: string) => {
     setSelectedLesson(getLessonFromId(Number(value)));
 
     analyticsReporter.sendEvent(EVENTS.LESSON_MATERIALS_LESSON_CHANGE, {
-      unitName: loadedData?.unitName,
+      unitName: lessonMaterials?.unitName,
       lessonId: value,
     });
   };
 
   const generateLessonDropdownOptions = useCallback(() => {
     return lessons.map((lesson: Lesson) => {
-      const displayName = createDisplayName(lesson.name, lesson.position);
+      const displayName = createDisplayName(
+        lesson.name,
+        lesson.position,
+        lesson.hasLessonPlan,
+        lesson.isLockable,
+        hasUnnumberedLessons
+      );
       return {text: displayName, value: lesson.id.toString()};
     });
-  }, [lessons]);
+  }, [lessons, hasUnnumberedLessons]);
 
   const lessonOptions = useMemo(
     () => generateLessonDropdownOptions(),
@@ -141,21 +215,34 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
   const renderHeader = () => {
     return (
       <div className={styles.lessonMaterialsPageHeader}>
-        <SimpleDropdown
-          labelText={i18n.chooseLesson()}
-          isLabelVisible={false}
-          onChange={event => onDropdownChange(event.target.value)}
-          items={lessonOptions}
-          selectedValue={selectedLesson ? selectedLesson.id.toString() : ''}
-          name={'lessons-in-assigned-unit-dropdown'}
-          size="s"
-        />
-        {loadedData?.unitNumber && (
+        <div className={styles.lessonMaterialsDropdowns}>
+          <UnitSelectorV2
+            filterToSelectedCourse={true}
+            className={styles.unitSelector}
+          />
+          {isLoading || isLoadingCoursesWithProgress || needsReload ? (
+            skeletonDropdown()
+          ) : (
+            <SimpleDropdown
+              labelText={i18n.chooseLesson()}
+              isLabelVisible={false}
+              onChange={event => onDropdownChange(event.target.value)}
+              items={lessonOptions}
+              color="gray"
+              selectedValue={selectedLesson ? selectedLesson.id.toString() : ''}
+              name={'lessons-in-assigned-unit-dropdown'}
+              size="s"
+              id="ui-test-lessons-in-assigned-unit-dropdown"
+            />
+          )}
+        </div>
+        {lessonMaterials && (
           <UnitResourcesDropdown
             hasNumberedUnits={hasNumberedUnits}
-            unitNumber={loadedData.unitNumber}
-            scriptOverviewPdfUrl={loadedData.scriptOverviewPdfUrl}
-            scriptResourcesPdfUrl={loadedData.scriptResourcesPdfUrl}
+            unitNumber={lessonMaterials.unitNumber}
+            scriptOverviewPdfUrl={lessonMaterials.scriptOverviewPdfUrl}
+            scriptResourcesPdfUrl={lessonMaterials.scriptResourcesPdfUrl}
+            disabled={isLoading || needsReload}
           />
         )}
       </div>
@@ -177,6 +264,7 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
         lessonPlanUrl={selectedLesson.lessonPlanHtmlUrl}
         lessonPlanPdfUrl={selectedLesson.lessonPlanPdfUrl}
         lessonName={selectedLesson.name}
+        hasLessonPlan={selectedLesson.hasLessonPlan}
       />
     );
   };
@@ -195,20 +283,33 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
     );
   };
 
-  if (hasEmptyState) {
+  if (
+    hasEmptyState &&
+    !isLoading &&
+    !isLoadingCoursesWithProgress &&
+    !needsReload
+  ) {
     return (
       <LessonMaterialsEmptyState
-        showNoCurriculumAssigned={showNoCurriculumAssigned}
         isLegacyScript={isLegacyScript}
+        hasNoLessonsWithLessonPlans={hasNoLessonsWithLessonPlans}
       />
     );
   }
 
   return (
-    <div>
+    <div className={styles.lessonMaterialsContainer}>
       {renderHeader()}
-      {renderTeacherResources()}
-      {renderStudentResources()}
+      {isLoading || needsReload ? (
+        <div>
+          <Spinner size={'large'} />
+        </div>
+      ) : (
+        <>
+          {renderTeacherResources()}
+          {renderStudentResources()}
+        </>
+      )}
     </div>
   );
 };

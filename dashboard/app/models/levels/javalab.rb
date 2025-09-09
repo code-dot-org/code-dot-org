@@ -22,6 +22,7 @@
 #  index_levels_on_game_id    (game_id)
 #  index_levels_on_level_num  (level_num)
 #  index_levels_on_name       (name)
+#  index_levels_on_type       (type)
 #
 
 class Javalab < Level
@@ -172,5 +173,9 @@ class Javalab < Level
 
   def validated?
     properties['encrypted_validation'].present?
+  end
+
+  def get_starter_code
+    properties["start_sources"]
   end
 end

@@ -3,7 +3,7 @@
 Feature: Submittable multi
 
 Background:
-  Given I am on "http://studio.code.org/s/allthethings/lessons/9/levels/3?noautoplay=true"
+  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/9/levels/3?noautoplay=true"
   Then I wait to see ".submitButton"
   And element ".submitButton" is visible
 

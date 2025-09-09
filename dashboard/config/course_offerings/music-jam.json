@@ -16,5 +16,6 @@
   "video": "https://www.youtube-nocookie.com/embed/6oK8392nq5c/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=6oK8392nq5c&wmode=transparent",
   "published_date": "2024-11-13 08:00:00 UTC",
   "self_paced_pl_course_offering_key": null,
-  "ai_teaching_assistant_available": false
+  "ai_teaching_assistant_available": false,
+  "facilitator_course_permissions": null
 }

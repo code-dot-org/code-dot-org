@@ -15,7 +15,9 @@ import autogenerateML from '@cdo/apps/applab/ai';
 import * as aiConfig from '@cdo/apps/applab/ai/dropletConfig';
 import SmallFooter from '@cdo/apps/code-studio/components/SmallFooter';
 import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
+import {logUserLevelInteraction} from '@cdo/apps/userLevelInteractionsLogger/userLevelInteractionsApi';
 import {workspace_running_background, white} from '@cdo/apps/util/color';
+import {UserLevelInteractions} from '@cdo/generated-scripts/sharedConstants';
 import commonMsg from '@cdo/locale';
 
 import annotationList from '../acemode/annotationList';
@@ -284,7 +286,22 @@ function queueOnTick() {
 function handleExecutionError(err, lineNumber, outputString, libraryName) {
   outputError(outputString, lineNumber, libraryName);
   Applab.executionError = {err: err, lineNumber: lineNumber};
-
+  const analyticsData = studioApp().analyticsData();
+  // We don't want to log a User Level Interaction if we don't have a scriptId, which is the case
+  // for users working on App Lab standalone projects outside of the curriculum.
+  if (analyticsData.scriptId) {
+    logUserLevelInteraction({
+      levelId: analyticsData.levelId,
+      scriptId: analyticsData.scriptId,
+      interaction: UserLevelInteractions.code_execution_error,
+      metadata: JSON.stringify({
+        error: err,
+        lineNumber: lineNumber,
+        outputString: outputString,
+        libraryName: libraryName,
+      }),
+    });
+  }
   // prevent further execution
   Applab.clearEventHandlersKillTickLoop();
 
@@ -1106,6 +1123,16 @@ Applab.runButtonClick = function () {
     Blockly.mainBlockSpace.traceOn(true);
   }
   Applab.execute();
+  const analyticsData = studioApp().analyticsData();
+  // We don't want to log a User Level Interaction if we don't have a scriptId, which is the case
+  // for users working on App Lab standalone projects outside of the curriculum.
+  if (analyticsData.scriptId) {
+    logUserLevelInteraction({
+      levelId: analyticsData.levelId,
+      scriptId: analyticsData.scriptId,
+      interaction: UserLevelInteractions.click_run,
+    });
+  }
 
   // Enable the Finish button if is present:
   var shareCell = document.getElementById('share-cell');
@@ -1290,6 +1317,16 @@ function onInterfaceModeChange(mode) {
 }
 
 Applab.onPuzzleFinish = function () {
+  const analyticsData = studioApp().analyticsData();
+  // We don't want to log a User Level Interaction if we don't have a scriptId, which is the case
+  // for users working on App Lab standalone projects outside of the curriculum.
+  if (analyticsData.scriptId) {
+    logUserLevelInteraction({
+      levelId: analyticsData.levelId,
+      scriptId: analyticsData.scriptId,
+      interaction: UserLevelInteractions.click_finish,
+    });
+  }
   Applab.onPuzzleComplete(false); // complete without submitting
 };
 

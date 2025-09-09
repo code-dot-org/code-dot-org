@@ -28,6 +28,15 @@ class AiRubricConfig
       'CSD U3 collisions flyman bounceOff_2024' => 'csd3-2023-L24',
       'CSD games project review_2024' => 'csd3-2023-L28',
     },
+    'csd3-2025' => {
+      'CSD U3 L7 mini project_2025' => 'csd3-2023-L7',
+      'CSD U3 Sprites scene challenge_2025' => 'csd3-2023-L11',
+      'CSD web project animated review_2025' => 'csd3-2023-L14',
+      'CSD U3 Interactive Card Final_2025' => 'csd3-2023-L18',
+      'CSD games sidescroll review_2025' => 'csd3-2023-L21',
+      'CSD U3 collisions flyman bounceOff_2025' => 'csd3-2023-L24',
+      'CSD games project review_2025' => 'csd3-2023-L28',
+    },
     'allthethings' => {
       'CSD U3 Sprites scene challenge_allthethings' => 'allthethings-L48',
     },
@@ -132,7 +141,7 @@ class AiRubricConfig
     UNIT_AND_LEVEL_TO_LESSON_S3_NAME.each do |unit_name, level_to_lesson|
       levels = level_to_lesson.keys
       unless Unit.find_by_name(unit_name)
-        raise "Unit not found: #{unit_name.inspect}. Make sure you ran `rake seed:scripts` locally, and added it to UI_TEST_SCRIPTS for drone/ci."
+        raise "Unit not found: #{unit_name.inspect}. Make sure you ran `rake seed:scripts` locally, and added it to UI_TEST_SCRIPTS for CI."
       end
       levels.each do |level_name|
         level = Level.find_by_name!(level_name)

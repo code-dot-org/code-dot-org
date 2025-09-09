@@ -1,14 +1,15 @@
-import classNames from 'classnames';
-import React, {useCallback, useEffect, useRef, useState} from 'react';
-
-import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
-import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
-import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
+import Checkbox from '@code-dot-org/component-library/checkbox';
+import {ThemeProvider} from '@code-dot-org/component-library/common/contexts';
+import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {
   BodyThreeText,
   Heading3,
   Heading5,
-} from '@cdo/apps/componentLibrary/typography';
+} from '@code-dot-org/component-library/typography';
+import classNames from 'classnames';
+import React, {useCallback, useEffect, useRef, useState} from 'react';
+
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import ImageInput from '@cdo/apps/levelbuilder/ImageInput';
 import PanelsView from '@cdo/apps/panels/PanelsView';
@@ -18,6 +19,9 @@ import {createUuid} from '@cdo/apps/utils';
 import moduleStyles from './edit-panels.module.scss';
 
 const createKey = (levelName: string) => levelName + '-' + createUuid();
+
+const PANEL_WIDTH = 1920;
+const PANEL_HEIGHT = 1080;
 
 function sanitizePanels(panels: Panel[], levelName: string) {
   return panels.map(panel => {
@@ -54,9 +58,22 @@ const EditPanels: React.FunctionComponent<EditPanelsProps> = ({
     [panels]
   );
 
-  const addPanel = useCallback(() => {
-    setPanels([...panels, {text: '', imageUrl: '', key: createKey(levelName)}]);
-  }, [panels, levelName]);
+  const createNewPanel = useCallback(
+    () => ({
+      text: '',
+      imageUrl: '',
+      key: createKey(levelName),
+    }),
+    [levelName]
+  );
+
+  const prependPanel = useCallback(() => {
+    setPanels([createNewPanel(), ...panels]);
+  }, [panels, createNewPanel]);
+
+  const appendPanel = useCallback(() => {
+    setPanels([...panels, createNewPanel()]);
+  }, [panels, createNewPanel]);
 
   const movePanel = useCallback(
     (key: string, direction: 'up' | 'down') => {
@@ -117,17 +134,30 @@ const EditPanels: React.FunctionComponent<EditPanelsProps> = ({
       <div className={moduleStyles.panelsContainer}>
         <Toast message={toastMessage} index={toastIndex} />
         <div className={moduleStyles.fullSizeContainer}>
-          <PanelsView
-            panels={panels}
-            onContinue={onContinue}
-            targetWidth={1920}
-            targetHeight={1080}
-            offerBrowserTts={false}
-            resetOnChange={false}
-            levelId={null}
-          />
+          <ThemeProvider>
+            <PanelsView
+              panels={panels}
+              onContinue={onContinue}
+              targetWidth={PANEL_WIDTH}
+              targetHeight={PANEL_HEIGHT}
+              offerBrowserTts={false}
+              resetOnChange={false}
+              levelId={null}
+            />
+          </ThemeProvider>
         </div>
       </div>
+      {panels.length > 0 && (
+        <div className={moduleStyles.addButtonContainer}>
+          <Button
+            type="button"
+            onClick={prependPanel}
+            text="Add Panel"
+            color="gray"
+            icon="plus"
+          />
+        </div>
+      )}
       <div className={moduleStyles.panelEditors}>
         {panels.map((panel, index) => (
           <EditPanel
@@ -144,7 +174,7 @@ const EditPanels: React.FunctionComponent<EditPanelsProps> = ({
       <div className={moduleStyles.addButtonContainer}>
         <Button
           type="button"
-          onClick={addPanel}
+          onClick={appendPanel}
           text="Add Panel"
           color="gray"
           icon="plus"
@@ -238,6 +268,8 @@ const EditPanel: React.FunctionComponent<EditPanelProps> = ({
           updateImageUrl={imageUrl => {
             updatePanel({...panel, imageUrl: imageUrl});
           }}
+          dimensions={{width: PANEL_WIDTH, height: PANEL_HEIGHT}}
+          fileTypes={['GIF', 'JPG', 'PNG']}
         />
       </div>
       <div className={moduleStyles.fieldRow}>
@@ -250,6 +282,20 @@ const EditPanel: React.FunctionComponent<EditPanelProps> = ({
             updatePanel({
               ...panel,
               typing: event.target.checked,
+            })
+          }
+        />
+      </div>
+      <div className={moduleStyles.fieldRow}>
+        <Checkbox
+          checked={!!panel.fadeInOverPrevious}
+          name="fadeInOverPrevious"
+          label="Fade in over previous"
+          size="s"
+          onChange={event =>
+            updatePanel({
+              ...panel,
+              fadeInOverPrevious: event.target.checked,
             })
           }
         />

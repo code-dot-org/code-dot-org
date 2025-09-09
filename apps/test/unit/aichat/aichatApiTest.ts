@@ -4,11 +4,10 @@ import {
 } from '@cdo/apps/aichat/aichatApi';
 import {
   AichatContext,
-  AichatModelCustomizations,
-  AiCustomizations,
-  ChatMessage,
+  ModelParameters,
+  CompletedChatMessage,
+  PendingChatMessage,
 } from '@cdo/apps/aichat/types';
-import {EMPTY_MODEL_CARD_INFO} from '@cdo/apps/aichat/views/modelCustomization/constants';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {ValueOf} from '@cdo/apps/types/utils';
 import {
@@ -16,16 +15,16 @@ import {
   type GetResponse,
 } from '@cdo/apps/util/HttpClient';
 import {
+  AiChatClientTypes,
   AiChatModelIds,
   AiInteractionStatus,
   AiRequestExecutionStatus,
 } from '@cdo/generated-scripts/sharedConstants';
 
 describe('aichatApi', () => {
-  let chatMessage: ChatMessage,
-    storedMessages: ChatMessage[],
-    aiCustomizations: AiCustomizations,
-    aichatModelCustomizations: AichatModelCustomizations,
+  let chatMessage: PendingChatMessage,
+    storedMessages: CompletedChatMessage[],
+    modelParameters: ModelParameters,
     aichatContext: AichatContext,
     post: jest.MockedFunction<typeof HttpClient.post>,
     fetchJson: jest.MockedFunction<typeof HttpClient.fetchJson>;
@@ -34,7 +33,7 @@ describe('aichatApi', () => {
     chatMessage = {
       chatMessageText: 'hello',
       role: Role.USER,
-      status: AiInteractionStatus.OK,
+      status: AiInteractionStatus.UNKNOWN,
       timestamp: Date.now(),
     };
     storedMessages = [
@@ -43,30 +42,26 @@ describe('aichatApi', () => {
         role: Role.USER,
         status: AiInteractionStatus.OK,
         timestamp: Date.now(),
+        requestId: 1,
       },
       {
         chatMessageText: 'great thank you',
         role: Role.ASSISTANT,
         status: AiInteractionStatus.OK,
         timestamp: Date.now(),
+        requestId: 1,
       },
     ];
-    aiCustomizations = {
+
+    modelParameters = {
       selectedModelId: AiChatModelIds.ARITHMO,
       temperature: 0.5,
       retrievalContexts: ['123'],
       systemPrompt: 'hello',
-      modelCardInfo: EMPTY_MODEL_CARD_INFO,
-    };
-
-    aichatModelCustomizations = {
-      selectedModelId: aiCustomizations.selectedModelId,
-      temperature: aiCustomizations.temperature,
-      retrievalContexts: aiCustomizations.retrievalContexts,
-      systemPrompt: aiCustomizations.systemPrompt,
     };
 
     aichatContext = {
+      clientType: AiChatClientTypes.AI_CHAT_LAB,
       currentLevelId: 123,
       scriptId: 321,
       channelId: 'abc123',
@@ -114,15 +109,13 @@ describe('aichatApi', () => {
     });
 
     async function callApiGetMessages(maxPollingTime?: number) {
-      return (
-        await postAichatCompletionMessage(
-          chatMessage,
-          storedMessages,
-          aiCustomizations,
-          aichatContext,
-          maxPollingTime
-        )
-      ).messages;
+      return await postAichatCompletionMessage(
+        chatMessage,
+        storedMessages,
+        modelParameters,
+        aichatContext,
+        maxPollingTime
+      );
     }
 
     function createResponse(
@@ -150,7 +143,7 @@ describe('aichatApi', () => {
         JSON.stringify({
           newMessage: chatMessage,
           storedMessages,
-          aichatModelCustomizations,
+          modelParameters,
           aichatContext,
         })
       );
@@ -162,6 +155,9 @@ describe('aichatApi', () => {
       expect(messages[0].status).toBe(AiInteractionStatus.OK);
       expect(messages[1].status).toBe(AiInteractionStatus.OK);
       expect(messages[1].chatMessageText).toBe(botResponse);
+      for (const message of messages) {
+        expect(message.requestId).toBe(requestId);
+      }
     });
 
     it('waits until the chat request finishes processing before returning messages', async () => {

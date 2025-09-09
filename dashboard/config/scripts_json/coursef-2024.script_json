@@ -7,7 +7,6 @@
       "content_area": "curriculum_k_5",
       "curriculum_umbrella": "CSF",
       "hideable_lessons": true,
-      "is_course": true,
       "is_migrated": true,
       "lesson_extras_available": true,
       "project_widget_types": [
@@ -15,16 +14,18 @@
         "playlab_k1",
         "artist"
       ],
+      "show_calendar": true,
       "tts": true,
-      "version_year": "2024"
+      "weekly_instructional_minutes": 225
     },
     "new_name": null,
-    "family_name": "coursef",
-    "serialized_at": "2024-11-19 01:14:39 UTC",
-    "published_state": "stable",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "family_name": null,
+    "serialized_at": "2025-09-04 17:20:17 UTC",
+    "hide_within_course": false,
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "coursef-2024"
     }
@@ -8010,7 +8011,7 @@
     },
     {
       "name": "All Resources",
-      "url": "/s/coursef-2024/resources",
+      "url": "/s/coursef-2025/resources",
       "key": "all_resources",
       "properties": {
         "is_rollup": true
@@ -8021,7 +8022,7 @@
     },
     {
       "name": "All Standards",
-      "url": "/s/coursef-2024/standards",
+      "url": "/s/coursef-2025/standards",
       "key": "all_standards",
       "properties": {
         "is_rollup": true
@@ -8032,7 +8033,7 @@
     },
     {
       "name": "All Vocabulary",
-      "url": "/s/coursef-2024/vocab",
+      "url": "/s/coursef-2025/vocab",
       "key": "all_vocabulary",
       "properties": {
         "is_rollup": true

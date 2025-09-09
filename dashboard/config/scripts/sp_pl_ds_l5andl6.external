@@ -5,33 +5,32 @@ description 'description here'
 markdown <<MARKDOWN
 # Data Questions and Stories
 
-
-#### In lessons 6 and 7, students explore the art of crafting effective data-driven questions and learn how to tell compelling data stories, focusing on the clarity, relevance, and ethical implications of their inquiries while examining real-life examples to understand the elements of impactful data storytelling.
-
----
-
-## Lesson 6: Effective Data Questions
+## Effective Data Questions
 
 <img src="https://images.code.org/f37f3e02d208df56ab9ee693170e03e4-image-1724342677390.png" alt="judicial scale icon" width="250px"  style="border-radius:10px; float:right; margin: 0 20px 0px 40px;">
 
+#### Asking good questions is at the heart of working with data. But not all questions are created equal. Effective data questions are **clear, specific, and focused** on things that can actually be measured with available data. 
 
-#### In this lesson, students will learn to derive meaningful questions from a dataset using criteria to evaluate and refine them. 
+#### But crafting strong questions isn’t just a technical skill—it also involves thinking about ethics. For example, a question might be measurable and clear, but if it invades privacy or makes assumptions about certain groups, it may not be appropriate to ask. 
 
-#### They'll engage in activities to rank, refine, and formulate data-driven questions focused on relevance, clarity, measurability, and ethics.
-
-### <b>Check out the entire lesson plan  <a href="LINK" rel="noopener noreferrer">here</a>.</b>
-
-<div style="clear:both;"></div>
-
-## Lesson 7: Data Storytelling 
-<img src="https://images.code.org/009ab39825563cff628bf976699c3e10-image-1724342741218.png" alt="scale icon" width="250px" style="border-radius:10px; float:right; margin: 0 20px 0px 40px;">
-
-#### In this lesson, students will explore both expository and persuasive data stories and learn some of the properties that are unique to each.
-#### They will explore several real-life examples of data stories in order to learn the traits that make telling a data story engaging and insightful.
-
-### <b>Check out the entire lesson plan  <a href="LINK" target="blank" rel="noopener noreferrer">here</a>.</b>
 <div style="clear:both;"></div>
 <br>
+
+## Data Storytelling
+
+<img src="https://images.code.org/009ab39825563cff628bf976699c3e10-image-1724342741218.png" alt="scale icon" width="250px" style="border-radius:10px; float:right; margin: 0 20px 0px 40px;">
+
+#### Once we have good questions, the next step is communicating what we find. A data story combines visuals (like charts or graphs) with words to explain something in a way that others can understand. 
+
+#### Some stories are **expository** —describing trends or telling what the data shows. Others are **persuasive**, aiming to convince the audience to take a stance or support an idea using evidence from data.
+
+<div style="clear:both;"></div>
+<br>
+
+---
+## Students and Data Stories
+
+#### In the classroom, students practice forming and refining data questions, and explore how stories built from data can inform or persuade. By analyzing real examples, they learn how to structure their own stories in ways that are clear, ethical, and engaging.
 
 > #### **Key Concepts:**
 > - #### **data storytelling** - presenting visualizations and narratives to a specific audience for an expository or persuasive purpose

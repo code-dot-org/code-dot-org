@@ -1,0 +1,51 @@
+name 'PLStyleGuide_L1_Color3'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Color and Accessibility
+
+## Contrast
+
+#### You may need to layer differently-colored items on top of each other. There should be sufficient contrast between the top and bottom layer to comply with Web Content Accessibility Guidelines (WCAG).
+
+### **How to Check Contrast**
+
+#### Several websites allow you to check contrast. <a href="https://webaim.org/resources/contrastchecker/" target="blank" rel="noopener noreferrer">WebAIM's Contrast Checker</a> is intuitive and easy to use.
+
+#### Enter the hex code for your foreground (typically the color of your text) and background color. Your colors will pass or fail guidelines. **Passing WCAG AA tests is mandatory. Passing WCAG AAA tests is nice to have, but not strictly necessary.**
+
+<div style="text-align:center; margin: 20px">
+    <img src="https://images.code.org/63ee6eb6dcd034bed2eaa00a52cd2399-image-1739225796182.16.32 PM.png" width="500" alt="WCAG color contrast test that has passed." style="display:block;margin:auto; border:0.5px solid black;">
+    <p style="font-size:14pt;margin-top:10px;">This color combo passes guidelines.</p>
+</div>
+
+<div style="text-align:center; margin: 20px">
+    <img src="https://images.code.org/dae55c5a30f70c090d2d93c9a8e28640-image-1739226003199.20.00 PM.png" alt="WCAG color contrast test that has failed." width="500" style="display:block;margin:auto; border:0.5px solid black;">
+    <p style="font-size:14pt;margin-top:10px;">This color combo does not.</p>
+</div>
+
+#### Watch a <a href="https://www.loom.com/share/571ca43e3fc542a8957223a429981692?sid=8ec753ee-20fa-42ab-bc46-cd96ca266763" target="blank" rel="noopener noreferrer">Loom video explaining how to check contrast</a> for more.
+
+## Redundant Signaling
+
+#### Avoid using color as the only signal for users. Use a combination of elements (color, shape, text, size) instead.
+
+#### For example, imagine you've asked your user to "Click the blue button below".
+
+<div style="text-align:center; margin: 20px">
+    <img src="https://images.code.org/d87373046ff1f876f17ef224bea214eb-image-1739226544038.26.04 PM.png" alt="Three buttons in a row, red, green, and blue." width="500" style="display:block;margin:auto;">
+</div>
+
+#### Here's what that looks like to a person who is colorblind.
+
+<div style="text-align:center; margin: 20px">
+    <img src="https://images.code.org/20629f67b4c28ea6b472499de428b3e3-image-1739226599324.29.55 PM.png" alt="Three buttons in a row in grayscale." width="500" style="display:block;margin:auto;">
+</div>
+
+#### And here's what that same example looks like with redundant signaling (color, shape, and text).
+
+<div style="text-align:center; margin: 20px">
+    <img src="https://images.code.org/5e42c415e69feeddaec3e8be552ddb30-image-1739300937204.08.53 AM.png" alt="Two sets of three buttons in a row. The last one is a different shape and has different text." width="500" style="display:block;margin:auto;">
+</div>
+MARKDOWN

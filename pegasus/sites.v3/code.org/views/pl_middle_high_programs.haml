@@ -65,7 +65,7 @@
           %a.link-button{href: "#subscribe-form"}
             =hoc_s(:call_to_action_applications_notify_me)
         - else
-          %a.link-button{href: "/educate/professional-learning/program-information", aria:{label: aria_label_primary[index]}}
+          %a.link-button{href: CDO.studio_url("/regional-partner-search"), aria:{label: aria_label_primary[index]}}
             =hoc_s(:call_to_action_apply_now)
           %a.link-button.secondary{href: button_url_secondary[index], aria:{label: aria_label_secondary[index]}}
             =hoc_s(:call_to_action_learn_more)

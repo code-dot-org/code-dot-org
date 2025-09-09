@@ -139,14 +139,6 @@ describe('FindProgrammingExpressionDialog', () => {
       />
     );
 
-    // doesn't search if there is no query
-    wrapper.instance().handleSearch({
-      target: {
-        value: false,
-      },
-    });
-    expect(fetchStub.callCount).to.equal(0);
-
     // searches with a query and page
     wrapper.instance().handleSearch({
       target: {

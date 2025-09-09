@@ -1,0 +1,29 @@
+name 'self-paced-pl-gen-ai-foundations-project_01_2025'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Lesson 11: Project: Demystifying Generative AI
+
+#### In this project, students read several generative AI opinion articles that contain misrepresentations or exaggerations of what generative AI is capable of and how it works. Using their newfound knowledge from this unit, students draft a rebuttal and create an artifact to help visualize or conceptualize an aspect of their argument. This project acts as a summative assessment for the content of this unit.
+
+---
+
+## Project Guide
+
+### Click <a href="https://docs.google.com/document/d/17KY7ewQfVZY9qApboAJpxzi9QRpVs6TOSas-MzMRGGU/edit#heading=h.gbh1qymtqi0z" target="blank" rel="noopener noreferrer">here</a> for the complete Project Guide.
+
+<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px; clear: both;">
+
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; "><strong>Teacher Tip:</strong> Some teachers have found that students require more than two class periods to finish this project. You may choose to build in additional project time when you're planning for this Unit.
+</p>
+</div>
+
+---
+
+## Up Next!
+#### Explore the steps students will go through when completing their projects.
+
+
+
+MARKDOWN

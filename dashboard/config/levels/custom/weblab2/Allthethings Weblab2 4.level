@@ -1,0 +1,16 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2025-07-31T22:02:33.000Z",
+  "level_num": "custom",
+  "user_id": 6959,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "This level shares a template level with Level 3 in this script.",
+    "project_template_level_name": "Allthethings Weblab2 template",
+    "hide_share_and_remix": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-07-30T11:30:42.032-07:00\",\"changed\":[\"cloned from \\\"Allthethings Weblab2 3\\\"\"],\"cloned_from\":\"Allthethings Weblab2 3\"},{\"changed_at\":\"2025-07-30 11:30:50 -0700\",\"changed\":[\"long_instructions\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-31 15:46:21 -0700\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"ben+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

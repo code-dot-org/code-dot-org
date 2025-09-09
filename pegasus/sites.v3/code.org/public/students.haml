@@ -1,8 +1,7 @@
 ---
-title: Learn Computer Science
+title: Fun tutorials to learn computer science and artificial intelligence
 theme: responsive_full_width
 ---
-%script{src: webpack_asset_path('js/code.org/public/students.js')}
 
 -# Determine if a user is signed in
 - cookie_key = environment_specific_cookie_name("_user_type")
@@ -18,7 +17,7 @@ theme: responsive_full_width
       =hoc_s(:student_courses_top_desc)
     - if !user_type
       -# This button is mislabeled: it is to sign up, not sign in
-      %a#sign-in-button.link-button{href: CDO.studio_url("/users/sign_up"), style: "margin-top: 2rem"}
+      %a#sign-in-button.link-button{href: CDO.studio_url("/users/sign_up/account_type"), style: "margin-top: 2rem"}
         =hoc_s(:call_to_action_sign_up_free)
 
 = view :section_divider_line
@@ -51,3 +50,5 @@ theme: responsive_full_width
         .content-footer
           %a.link-button{href: "/student/middle-high"}
             =hoc_s(:call_to_action_explore_learning_ages_11_plus)
+
+= view :analytics_event_log_helper, event_name: AnalyticsConstants::STUDENTS_PAGE_VISITED_EVENT

@@ -6,23 +6,31 @@ import {useCallback} from 'react';
 
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
+import {
+  createNewFileThunk,
+  createNewExternalFileThunk,
+} from '@cdo/apps/lab2/redux/lab2ProjectReduxThunks';
 import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 export const useHandleFileUpload = (
   projectFiles: Record<string, ProjectFile>
 ) => {
-  const appName = useAppSelector(state => state.lab.levelProperties?.appName);
+  const {levelProperties} = useCodebridgeContext();
+  const {appName, validationFile} = levelProperties;
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
-  const validationFile = useAppSelector(
-    state => state.lab.levelProperties?.validationFile
-  );
+  const dispatch = useAppDispatch();
 
-  const {newFile} = useCodebridgeContext();
   const dialogControl = useDialogControl();
   return useCallback(
-    (fileName: string, contents: string, folderIdArg: unknown) => {
+    (
+      fileName: string,
+      contents: string,
+      url?: string,
+      folderIdArg?: unknown,
+      flagged?: boolean
+    ) => {
       const folderId = folderIdArg as FolderId;
 
       const validationError = validateFileName({
@@ -45,16 +53,24 @@ export const useHandleFileUpload = (
         return;
       }
 
-      newFile({
-        fileName,
-        folderId,
-        contents,
-        validationFileId: validationFile?.id,
-      });
+      if (url) {
+        dispatch(
+          createNewExternalFileThunk({fileName, folderId, url, flagged})
+        );
+      } else {
+        dispatch(createNewFileThunk({fileName, folderId, contents}));
+      }
       sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_UPLOAD_FILE, appName, {
         fileName,
       });
     },
-    [appName, dialogControl, projectFiles, newFile, isStartMode, validationFile]
+    [
+      projectFiles,
+      isStartMode,
+      validationFile,
+      dispatch,
+      appName,
+      dialogControl,
+    ]
   );
 };

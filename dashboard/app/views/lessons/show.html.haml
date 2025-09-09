@@ -1,6 +1,8 @@
-- @page_title = "#{@lesson_data[:displayName]} - #{t('stage_number', number: @lesson_data[:position])}"
-
 %link{href: asset_path('css/lessons.css'), rel: 'stylesheet', type: 'text/css'}
+/ TODO: Add an explicit "associated programming environment" property to levels,
+// so we only load the locale strings and block definitions needed for that environment.
+// Currently we always include music and Sprite Lab assets for embedded blocks for code docs.
+%script{src: webpack_asset_path("js/#{js_locale}/music_locale.js")}
 %script{src: webpack_asset_path('js/lessons/show.js'),
         data: {lesson: @lesson_data.to_json, customBlocksConfig: Block.for('GamelabJr').to_json}}
 %script{src: webpack_asset_path('js/googleblockly.js')}

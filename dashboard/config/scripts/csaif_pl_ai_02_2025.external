@@ -1,0 +1,33 @@
+name 'csaif_pl_ai_02_2025'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Multimodal Prompting
+
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Multimodal Model</strong> is an AI system that can process information from multiple types of input.</p>
+</div>
+
+<img src="https://images.code.org/1a18d8f154f916d657b501f0ad677efd-Screenshot 2025-04-07 at 11.29.10 AM.png" alt="Remember to chat responsibily pop-up" width="250px" style="border: 2px solid black; border-radius: 8px; float:right; margin: 0 0 40px 40px">
+
+#### AI Chat Lab allows for multimodal prompting through images and PDF. While including additional information in prompts can lead to better responses considerations must be taken before sharing images online with AI tools. AI can infer more than just visible objects in an image, including time, location, and personal details. 
+
+#### There also are both benefits and risks of AI interpreting images without human context. AI can misinterpret an image and make incorrect assumptions.
+
+<div style="background-color:#F5F7F8; border-left: 6px solid #B7E0E5; padding: 10px; margin-top: 20px; font-family: sans-serif; max-width: 70%">
+  <strong style="font-size: 16px;"><i class="fa-solid fa-user-graduate"></i> Career Journeys:</strong>
+  <span style="font-size: 14px;">Multimodal AI is used in many industries including: </span>
+  <ul>
+  <li>Accessibility: screen readers interpreting images and text</li>
+  <li>Healthcare: AI analyzing X-ray images and text</li>
+  <li>Translation: real-time text and audio speech translation</li>
+  <li>Security: facial and object recognition</li>
+  </ul>
+</div>
+
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ Multimodal AI is introduced in Lesson 2. You can find more details in the full <a href='https://studio.code.org/s/aif1-2025/lessons/2' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a>.
+</p>
+MARKDOWN

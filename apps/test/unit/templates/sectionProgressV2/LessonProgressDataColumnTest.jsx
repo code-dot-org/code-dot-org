@@ -8,7 +8,7 @@ import {
   restoreRedux,
   stubRedux,
 } from '@cdo/apps/redux';
-import unitSelection, {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
+import unitSelection, {setUnit} from '@cdo/apps/redux/unitSelectionRedux';
 import {
   fakeLessonWithLevels,
   fakeLesson,
@@ -83,7 +83,7 @@ describe('LessonProgressDataColumn', () => {
     });
 
     store = getStore();
-    store.dispatch(setScriptId(1));
+    store.dispatch(setUnit(1, 1));
     store.dispatch(
       addDataByUnit({
         unitDataByUnit: {},

@@ -51,6 +51,7 @@ Feature: Lab share page logo
     And check that I am on "http://studio.code.org/home"
 
   @no_mobile
+  @pegasus_content
   Scenario: Select the logo on a playlab share page while logged out and visit the homepage
     Given I am on "http://studio.code.org/projects/playlab"
     And I wait for the lab page to fully load
@@ -61,10 +62,11 @@ Feature: Lab share page logo
     And I sign out
     And I navigate to the last shared URL
     And element "div:contains('STUDIO')" does not exist
-    And I press the first "#logo-img img" element to load a new page
-    And check that I am on "http://code.org/"
+    And I click "#logo-img img" once it exists to load a new page
+    And check that the URL contains "http://code.org"
 
   @no_mobile
+  @pegasus_content
   Scenario: Select the logo on a gamelab share page while logged out and visit the homepage
     Given I am on "http://studio.code.org/projects/gamelab"
     And I wait for the lab page to fully load
@@ -75,8 +77,8 @@ Feature: Lab share page logo
     And I sign out
     And I navigate to the last shared URL
     And element "div:contains('STUDIO')" does not exist
-    And I press the first "#logo-img img" element to load a new page
-    And check that I am on "http://code.org/"
+    And I click "#logo-img img" once it exists to load a new page
+    And check that the URL contains "http://code.org"
 
   @only_mobile
   Scenario: When on an applab share page while logged out on mobile, there is no logo.

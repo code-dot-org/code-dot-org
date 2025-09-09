@@ -953,6 +953,10 @@ export function isTestEnvironment() {
   return getEnvironment() === Environments.test;
 }
 
+export function isLevelbuilderEnvironment() {
+  return getEnvironment() === Environments.levelbuilder;
+}
+
 export function isProductionEnvironment() {
   return getEnvironment() === Environments.production;
 }

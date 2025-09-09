@@ -1,0 +1,30 @@
+name 'self-paced-CSDMusicLab-L1-CT-CFU'
+title 'Check for Understanding'
+description 'Match each example with their computational thinking practice.'
+height'150'
+width'450'
+
+
+question 'Jordan is working on a coding challenge and says, "This whole thing feels overwhelming. I\'m going to focus just on the drum track first, then I\’ll figure out the melody, and then the timing."'
+answer 'Decomposition'
+
+question 'Samira has noticed that several parts of her song follow the same structure: a bass note, a snare, and a rest. She decides to reuse this structure instead of rewriting it each time.'
+answer 'Pattern Recognition'
+
+question 'Luis is reviewing a long piece of code and says, "I\’m going to ignore the comments and beat tracks for now and just focus on what the vocals are doing."'
+answer 'Abstraction'
+
+question 'Taylor is trying to help a friend debug a level. She says, "Let\’s write out the steps the program should follow to build the song correctly, kind of like a recipe we can follow."'
+answer 'Algorithmic Thinking'
+
+
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN
+
+markdown <<MARKDOWN
+
+MARKDOWN
+
+allow_multiple_attempts true

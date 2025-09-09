@@ -1,0 +1,48 @@
+name 'gen-ai-student-level-L15'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# ✅ Lesson Recap: Neural Networks: How They're Trained
+
+#### After this lesson, you can 
+
+* #### Use trial-and-error and past data to increase their accuracy in a supervised learning process
+
+## **Key Terms**
+
+* #### **Supervised Learning** - A process that uses examples that are already labeled to find patterns and make decisions
+
+## Resources
+
+### **Videos**
+<!-- Unified container for the grid of cards -->
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; width: 90%; margin: 20px auto;">
+<!-- Video for https://www.youtube.com/watch?v=JrXazCEACVo -->
+<!-- Youtube code JrXazCEACVo --->
+<div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); text-align: center;">
+  <img src="https://i.ytimg.com/vi/JrXazCEACVo/1.jpg" alt="Thumbnail image for youtube video How AI Works: Neural Networks" style="width: 150px; height: auto; margin-right: 15px; border-radius: 5px;">
+  <p style="font-size: 14pt; line-height: 1.25;">
+  <b><a href="https://www.youtube.com/watch?v=JrXazCEACVo" target="_blank">How AI Works: Neural Networks</a></b>
+  </p>
+</div>
+
+</div>
+
+### **Activity Guides**
+
+<!-- Unified container for the grid of cards -->
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; width: 90%; margin: 20px auto;">
+<div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); text-align: center;">
+  <img src="https://drive.google.com/thumbnail?sz=w640&id=1uHOI2WO5f2W51DLLXv4Xf9xflx38BeChbnZ2uFSEc5w" alt="Document thumbnail" style="width: 150px; height: auto; margin-right: 15px; border-radius: 5px;">
+  <p style="font-size: 14pt; line-height: 1.25;">
+    <a href="https://docs.google.com/document/d/1uHOI2WO5f2W51DLLXv4Xf9xflx38BeChbnZ2uFSEc5w/template/preview" target="_blank" style="font-weight: bold; text-decoration: none;">Learning a Language</a><br>
+  </p>
+</div>
+
+</div>
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN

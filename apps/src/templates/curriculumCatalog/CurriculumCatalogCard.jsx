@@ -1,3 +1,12 @@
+import {
+  Button,
+  buttonColors,
+  LinkButton,
+} from '@code-dot-org/component-library/button';
+import {
+  BodyThreeText,
+  Heading4,
+} from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
 import {concat, intersection} from 'lodash';
 import PropTypes from 'prop-types';
@@ -5,12 +14,6 @@ import React, {useEffect, useState} from 'react';
 import {createPortal} from 'react-dom';
 import {connect} from 'react-redux';
 
-import {
-  Button,
-  buttonColors,
-  LinkButton,
-} from '@cdo/apps/componentLibrary/button';
-import {BodyThreeText, Heading4} from '@cdo/apps/componentLibrary/typography';
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
@@ -145,7 +148,6 @@ CurriculumCatalogCard.propTypes = {
   courseId: PropTypes.number,
   courseOfferingId: PropTypes.number,
   scriptId: PropTypes.number,
-  isStandAloneUnit: PropTypes.bool,
   onAssignSuccess: PropTypes.func,
   deviceCompatibility: PropTypes.string,
   description: PropTypes.string,
@@ -247,7 +249,7 @@ const CustomizableCurriculumCatalogCard = ({
           sections={sectionsForDropdown}
           participantAudience="student"
           onAssignSuccess={onAssignSuccess}
-          isAssigningCourse={!!courseId}
+          isAssigningCourseOnly={!!courseId}
           courseId={courseId}
           sectionDirections={i18n.chooseSectionsDirectionsOnCatalog()}
           {...props}
@@ -446,7 +448,6 @@ CustomizableCurriculumCatalogCard.propTypes = {
   courseId: PropTypes.number,
   courseOfferingId: PropTypes.number,
   scriptId: PropTypes.number,
-  isStandAloneUnit: PropTypes.bool,
   sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
   isTeacher: PropTypes.bool.isRequired,
   isSignedOut: PropTypes.bool.isRequired,

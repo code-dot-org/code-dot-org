@@ -17,6 +17,7 @@
 #  time_spent       :integer
 #  deleted_at       :datetime
 #  properties       :text(65535)
+#  unit_group_id    :integer
 #
 # Indexes
 #
@@ -32,6 +33,8 @@ class UserLevel < ApplicationRecord
 
   acts_as_paranoid # Use deleted_at column instead of deleting rows.
 
+  store :properties, accessors: %i[locale locale_supported], coder: JSON
+
   belongs_to :user, optional: true
   belongs_to :level, optional: true
   belongs_to :script, class_name: 'Unit', optional: true
@@ -39,6 +42,8 @@ class UserLevel < ApplicationRecord
 
   after_save :after_submit, if: :submitted_or_resubmitted?
   before_save :before_unsubmit, if: ->(ul) {ul.submitted_changed? from: true, to: false}
+
+  validates :locale, inclusion: {in: I18n.available_locales.as_json}, allow_nil: true, if: :locale_changed?
 
   # TODO(asher): Consider making these scopes and the methods below more consistent, in tense and in
   # word choice.
@@ -194,6 +199,7 @@ class UserLevel < ApplicationRecord
   # This is called when a teacher updates the lock or readonly status for each student.
   # As such, one of locked or readonly will be populated, and the other nil.
   def self.update_lockable_state(user_id, level_id, script_id, locked, readonly_answers)
+    # TODO: TEACH-2145 set UserLevel#unit_group_id
     user_level = UserLevel.find_or_initialize_by(
       user_id: user_id,
       level_id: level_id,

@@ -1,0 +1,58 @@
+@import '@code-dot-org/component-library-styles/primitiveColors';
+@import '@code-dot-org/component-library-styles/variables.scss';
+
+.joinWorkshopPage {
+  background-color: var(--background-neutral-secondary);
+
+  .joinWorkshopContent {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    max-width: 60rem;
+    margin: 0 auto;
+
+    .statusContentContainer {
+      padding: 1.875rem;
+      background-color: var(--neutral-base-white);
+      border: 1px solid var(--neutral-gray-20);
+      border-radius: $regular-border-radius;
+
+      h3, p {
+        margin-bottom: 0;
+      }
+
+      .statusTextContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .unsubmittedContainer {
+        display: flex;
+        flex-direction: row;
+        gap: 1.5rem;
+
+        .unsupportedStatusTextContainer {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+          flex: 1 1 0;
+          width: 0;
+
+          .joinWorkshopButton {
+            width: fit-content;
+          }
+        }
+
+        .userPassport {
+          flex: 1 1 0;
+          width: 0;
+        }
+      }
+    }
+
+    .bottomContainerGap {
+      padding: 4rem;
+    }
+  }
+}

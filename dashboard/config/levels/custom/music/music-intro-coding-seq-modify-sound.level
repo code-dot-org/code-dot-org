@@ -9,7 +9,7 @@
     "encrypted": "false",
     "instructions_important": "false",
     "long_instructions": "####Take a Rest\r\n\r\n1. We want the guitar to play after the rest.\r\n2. Click and drag the blocks into the correct order.\r\n3. Then press [Run](#clickable=run-button).",
-    "hide_share_and_remix": "false",
+    "hide_share_and_remix": "true",
     "level_data": {
       "library": "intro2024",
       "startSources": {

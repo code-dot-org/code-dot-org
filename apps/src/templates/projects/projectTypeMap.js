@@ -73,4 +73,5 @@ export const FEATURED_PROJECT_TYPE_MAP = {
   thebadguys: i18n.projectTypeThebadguys(),
   spritelab: i18n.projectTypeSpriteLab(),
   music: i18n.projectTypeMusic(),
+  pythonlab: i18n.projectTypePythonlab(),
 };

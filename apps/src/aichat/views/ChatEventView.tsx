@@ -1,29 +1,42 @@
-import React from 'react';
+import Alert from '@code-dot-org/component-library/alert';
+import React, {memo} from 'react';
 
-import ChatMessage from '@cdo/apps/aiComponentLibrary/chatMessage/ChatMessage';
-import Alert from '@cdo/apps/componentLibrary/alert/Alert';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
-import {modelDescriptions} from '../constants';
-import {removeUpdateMessage} from '../redux/aichatRedux';
+import {FAQ_LINK, modelDescriptions} from '../constants';
+import aichatI18n from '../locale';
+import {removeUpdateMessage} from '../redux';
 import {timestampToLocalTime} from '../redux/utils';
 import {
   ChatEvent,
-  ChatEventDescriptions,
   ModelUpdate,
   isChatMessage,
   isNotification,
   isModelUpdate,
+  ChatEventDescriptionKey,
+  ChatAsset,
 } from '../types';
 
+import ChatMessageView from './ChatMessageView';
 import {AI_CUSTOMIZATIONS_LABELS} from './modelCustomization/constants';
 
 import styles from './chatWorkspace.module.scss';
 
+const chatEventDescriptionsOwner = {
+  CLEAR_CHAT: aichatI18n.chatEventDescriptions_clearChatOwner(),
+  LOAD_LEVEL: aichatI18n.chatEventDescriptions_loadLevelOwner(),
+} as const satisfies {[key in ChatEventDescriptionKey]: string};
+
+const chatEventDescriptionsStudent = {
+  CLEAR_CHAT: aichatI18n.chatEventDescriptions_clearChat(),
+  LOAD_LEVEL: aichatI18n.chatEventDescriptions_loadLevel(),
+} as const satisfies {[key in ChatEventDescriptionKey]: string};
+
 interface ChatEventViewProps {
   event: ChatEvent;
   isTeacherView?: boolean;
+  buildAssetUrl?: (asset: ChatAsset) => string;
 }
 
 function formatModelUpdateText(update: ModelUpdate): string {
@@ -40,11 +53,18 @@ function formatModelUpdateText(update: ModelUpdate): string {
     )?.name;
   }
 
-  const updatedText = updatedToText
-    ? `has been updated to ${updatedToText}.`
-    : 'has been updated.';
+  const modelUpdateText = updatedToText
+    ? aichatI18n.modelUpdateText({
+        fieldLabel: fieldLabel,
+        updatedText: updatedToText.toString(),
+        timestamp: timestampToLocalTime(timestamp),
+      })
+    : aichatI18n.modelUpdateText2({
+        fieldLabel: fieldLabel,
+        timestamp: timestampToLocalTime(timestamp),
+      });
 
-  return `${fieldLabel} ${updatedText} ${timestampToLocalTime(timestamp)}`;
+  return modelUpdateText;
 }
 
 /**
@@ -53,17 +73,26 @@ function formatModelUpdateText(update: ModelUpdate): string {
 const ChatEventView: React.FunctionComponent<ChatEventViewProps> = ({
   event,
   isTeacherView,
+  buildAssetUrl,
 }) => {
   const dispatch = useAppDispatch();
 
+  const chatEventDescriptions = isTeacherView
+    ? chatEventDescriptionsStudent
+    : chatEventDescriptionsOwner;
+
   if (isChatMessage(event)) {
     return (
-      <ChatMessage {...event} showProfaneUserMessageToggle={isTeacherView} />
+      <ChatMessageView
+        chatMessage={event}
+        isChatHistoryView={isTeacherView || false}
+        buildAssetUrl={buildAssetUrl}
+      />
     );
   }
 
   if (isNotification(event)) {
-    const {id, text, notificationType, timestamp} = event;
+    const {removeId, text, notificationType, timestamp} = event;
     return (
       <Alert
         text={`${text} ${timestampToLocalTime(timestamp)}`}
@@ -73,12 +102,14 @@ const ChatEventView: React.FunctionComponent<ChatEventViewProps> = ({
             : 'success'
         }
         onClose={
-          isTeacherView ? undefined : () => dispatch(removeUpdateMessage(id))
+          isTeacherView
+            ? undefined
+            : () => dispatch(removeUpdateMessage(removeId))
         }
         link={
           notificationType === 'permissionsError'
             ? {
-                href: 'https://support.code.org/hc/en-us/articles/30162711193741-AI-Chat-Lab-FAQ',
+                href: FAQ_LINK,
                 text: commonI18n.learnMore(),
                 className: styles.alertLink,
               }
@@ -99,23 +130,20 @@ const ChatEventView: React.FunctionComponent<ChatEventViewProps> = ({
         onClose={
           isTeacherView
             ? undefined
-            : () => dispatch(removeUpdateMessage(event.id))
+            : () => dispatch(removeUpdateMessage(event.removeId))
         }
       />
     );
   }
 
-  if (event.descriptionKey) {
-    return (
-      <Alert
-        text={ChatEventDescriptions[event.descriptionKey] as string}
-        type="info"
-        size="s"
-      />
-    );
-  }
-
-  return null;
+  // Automatically narrowed to UserActionEvent
+  return (
+    <Alert
+      text={chatEventDescriptions[event.descriptionKey]}
+      type="info"
+      size="s"
+    />
+  );
 };
 
-export default ChatEventView;
+export default memo(ChatEventView);

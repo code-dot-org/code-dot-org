@@ -83,6 +83,7 @@ import {
 import * as shareWarnings from './shareWarnings';
 import Sounds from './Sounds';
 import ChallengeDialog from './templates/ChallengeDialog';
+import SettingsModal from './templates/Settings';
 import VersionHistory from './templates/VersionHistory';
 import color from './util/color';
 import KeyHandler from './util/KeyHandler';
@@ -546,14 +547,20 @@ StudioApp.prototype.init = function (config) {
       }, this)
     );
 
-    if (Blockly.getHiddenDefinitionWorkspace()) {
-      this.hiddenWorkspaceChangeListener =
-        Blockly.getHiddenDefinitionWorkspace().addChangeListener(
-          _.bind(function () {
-            this.updateBlockCount();
-          }, this)
-        );
-    }
+    this.hiddenWorkspaceChangeListener =
+      Blockly.getHiddenDefinitionWorkspace()?.addChangeListener(
+        _.bind(function () {
+          this.updateBlockCount();
+        }, this)
+      );
+
+    this.mainWorkspaceChangeListener =
+      Blockly.getMainWorkspace()?.addChangeListener(
+        _.bind(function () {
+          project.projectChanged();
+        }, this)
+      );
+
     if (config.level.openFunctionDefinition) {
       this.openFunctionDefinition_(config);
     }
@@ -576,28 +583,8 @@ StudioApp.prototype.init = function (config) {
     );
   }
 
+  this.initSettingsUI();
   this.initVersionHistoryUI(config);
-
-  if (this.isUsingBlockly() && Blockly.contractEditor) {
-    Blockly.contractEditor.registerTestsFailedOnCloseHandler(
-      function () {
-        this.feedback_.showSimpleDialog({
-          headerText: undefined,
-          bodyText: msg.examplesFailedOnClose(),
-          cancelText: msg.ignore(),
-          confirmText: msg.tryAgain(),
-          onConfirm: null,
-          onCancel: function () {
-            Blockly.contractEditor.hideIfOpen();
-          },
-        });
-
-        // return true to indicate to blockly-core that we'll own closing the
-        // contract editor
-        return true;
-      }.bind(this)
-    );
-  }
 
   if (config.legacyShareStyle && config.hideSource) {
     this.setupLegacyShareView();
@@ -746,6 +733,19 @@ StudioApp.prototype.alertIfCompletedWhilePairing = function (config) {
   }
 };
 
+StudioApp.prototype.getSettingsHandler = function () {
+  return () => {
+    const contentDiv = document.createElement('div');
+    const dialog = this.createModalDialog({
+      contentDiv: contentDiv,
+      id: 'settings-modal',
+    });
+
+    ReactDOM.render(React.createElement(SettingsModal), contentDiv);
+    dialog.show();
+  };
+};
+
 StudioApp.prototype.getVersionHistoryHandler = function (config) {
   return () => {
     var contentDiv = document.createElement('div');
@@ -775,6 +775,13 @@ StudioApp.prototype.initTimeSpent = function () {
     this.silentlyReport.bind(this),
     1000
   );
+};
+
+StudioApp.prototype.initSettingsUI = function () {
+  const settingsButton = document.getElementById('settings-header');
+  if (settingsButton) {
+    dom.addClickTouchEvent(settingsButton, this.getSettingsHandler());
+  }
 };
 
 StudioApp.prototype.initVersionHistoryUI = function (config) {
@@ -1270,6 +1277,7 @@ StudioApp.prototype.inject = function (div, options) {
   }
 
   options.levelBlockIds = utils.findExplicitlySetBlockIds(window.appOptions);
+  options.showBlockHelp = experiments.isEnabled(experiments.BLOCKLY_DOCS);
   Blockly.inject(div, utils.extend(defaults, options), Sounds.getSingleton());
 };
 
@@ -2169,7 +2177,16 @@ StudioApp.prototype.configureDom = function (config) {
       eventName = EVENTS.LEVEL_ACTIVITY;
     }
     if (!runButtonWasClicked) {
-      analyticsReporter.sendEvent(eventName, {}, PLATFORMS.BOTH);
+      analyticsReporter.sendEvent(
+        eventName,
+        {
+          signedIn: config.isSignedIn,
+          unitName: config.scriptName,
+          levelId: config.serverLevelId,
+          levelName: config.level.name,
+        },
+        PLATFORMS.BOTH
+      );
       runButtonWasClicked = true;
     }
   };
@@ -2801,6 +2818,13 @@ StudioApp.prototype.validateCodeChanged = function () {
   return project.isCurrentCodeDifferent(level.startBlocks);
 };
 
+StudioApp.prototype.analyticsData = function () {
+  return {
+    levelId: this.config.serverLevelId,
+    scriptId: this.config.scriptId,
+  };
+};
+
 /**
  * Set whether to alert user to empty blocks, short-circuiting all other tests.
  * @param {boolean} checkBlocks Whether to check for empty blocks.
@@ -2878,21 +2902,7 @@ StudioApp.prototype.setStartBlocks_ = function (config, loadLastAttempt) {
  * @param {AppOptionsConfig}
  */
 StudioApp.prototype.openFunctionDefinition_ = function (config) {
-  if (Blockly.contractEditor) {
-    Blockly.contractEditor.autoOpenWithLevelConfiguration({
-      autoOpenFunction: config.level.openFunctionDefinition,
-      contractCollapse: config.level.contractCollapse,
-      contractHighlight: config.level.contractHighlight,
-      examplesCollapse: config.level.examplesCollapse,
-      examplesHighlight: config.level.examplesHighlight,
-      definitionCollapse: config.level.definitionCollapse,
-      definitionHighlight: config.level.definitionHighlight,
-    });
-  } else {
-    Blockly.functionEditor.autoOpenFunction(
-      config.level.openFunctionDefinition
-    );
-  }
+  Blockly.functionEditor.autoOpenFunction(config.level.openFunctionDefinition);
 };
 
 /**
@@ -2938,6 +2948,7 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
   }
 
   var div = document.getElementById('codeWorkspace');
+  var isJigsaw = config.levelGameName === 'Jigsaw';
   // TODO: How many of these options apply to modal function editor?
   var options = {
     toolbox: config.level.toolbox,
@@ -2978,8 +2989,8 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
     showExampleTestButtons: utils.valueOr(config.showExampleTestButtons, false),
     valueTypeTabShapeMap: utils.valueOr(config.valueTypeTabShapeMap, {}),
     typeHints: utils.valueOr(config.level.showTypeHints, false),
-    isBlocklyRtl:
-      getStore().getState().isRtl && config.levelGameName !== 'Jigsaw', // disable RTL for blockly on jigsaw
+    isBlocklyRtl: getStore().getState().isRtl && !isJigsaw, // disable RTL for blockly on jigsaw
+    isJigsaw,
     analyticsData: {
       appType: config.app,
       scriptName: config.scriptName,
@@ -3057,173 +3068,6 @@ StudioApp.prototype.hasUnwantedExtraTopBlocks = function () {
  */
 StudioApp.prototype.hasQuestionMarksInNumberField = function () {
   return this.feedback_.hasQuestionMarksInNumberField();
-};
-
-/**
- * @returns true if any non-example block in the workspace has an unfilled input
- */
-StudioApp.prototype.hasUnfilledFunctionalBlock = function () {
-  return !!this.getUnfilledFunctionalBlock();
-};
-
-/**
- * @returns {Block} The first block that has an unfilled input, or undefined
- *   if there isn't one.
- */
-StudioApp.prototype.getUnfilledFunctionalBlock = function () {
-  return this.getFilteredUnfilledFunctionalBlock_(function (rootBlock) {
-    return rootBlock.type !== 'functional_example';
-  });
-};
-
-/**
- * @returns {Block} The first example block that has an unfilled input, or
- *   undefined if there isn't one. Ignores example blocks that don't have a
- *   call portion, as these are considered invalid.
- */
-StudioApp.prototype.getUnfilledFunctionalExample = function () {
-  return this.getFilteredUnfilledFunctionalBlock_(function (rootBlock) {
-    if (rootBlock.type !== 'functional_example') {
-      return false;
-    }
-    var actual = rootBlock.getInputTargetBlock('ACTUAL');
-    return actual && actual.getFieldValue('NAME');
-  });
-};
-
-/**
- * @param {function} filter Run against root block in chain. Returns true if
- *   this is a block we care about
- */
-StudioApp.prototype.getFilteredUnfilledFunctionalBlock_ = function (filter) {
-  var unfilledBlock;
-  Blockly.mainBlockSpace.getAllUsedBlocks().some(function (block) {
-    // Get the root block in the chain
-    var rootBlock = block.getRootBlock();
-    if (!filter(rootBlock)) {
-      return false;
-    }
-  });
-
-  return unfilledBlock;
-};
-
-/**
- * @returns {string} The name of a function that doesn't have any examples, or
- *   undefined if all have at least one.
- */
-StudioApp.prototype.getFunctionWithoutTwoExamples = function () {
-  var definitionNames = Blockly.mainBlockSpace
-    .getTopBlocks()
-    .filter(function (block) {
-      return block.type === 'functional_definition' && !block.isVariable();
-    })
-    .map(function (definitionBlock) {
-      return definitionBlock.getProcedureInfo().name;
-    });
-
-  var exampleNames = Blockly.mainBlockSpace
-    .getTopBlocks()
-    .filter(function (block) {
-      if (block.type !== 'functional_example') {
-        return false;
-      }
-
-      // Only care about functional_examples that have an ACTUAL input (i.e. it's
-      // clear which function they're for
-      var actual = block.getInputTargetBlock('ACTUAL');
-      return actual && actual.getFieldValue('NAME');
-    })
-    .map(function (exampleBlock) {
-      return exampleBlock.getInputTargetBlock('ACTUAL').getFieldValue('NAME');
-    });
-
-  var definitionWithLessThanTwoExamples;
-  definitionNames.forEach(function (def) {
-    var definitionExamples = exampleNames.filter(function (example) {
-      return def === example;
-    });
-
-    if (definitionExamples.length < 2) {
-      definitionWithLessThanTwoExamples = def;
-    }
-  });
-  return definitionWithLessThanTwoExamples;
-};
-
-/**
- * Get the error message when we have an unfilled block
- * @param {string} topLevelType The block.type For our expected top level block
- */
-StudioApp.prototype.getUnfilledFunctionalBlockError = function (topLevelType) {
-  var unfilled = this.getUnfilledFunctionalBlock();
-
-  if (!unfilled) {
-    return null;
-  }
-
-  var topParent = unfilled;
-  while (topParent.getParent()) {
-    topParent = topParent.getParent();
-  }
-
-  if (unfilled.type === topLevelType) {
-    return msg.emptyTopLevelBlock({
-      topLevelBlockName: unfilled.getFieldValue(),
-    });
-  }
-
-  if (topParent.type !== 'functional_definition') {
-    return msg.emptyFunctionalBlock();
-  }
-
-  var procedureInfo = topParent.getProcedureInfo();
-  if (topParent.isVariable()) {
-    return msg.emptyBlockInVariable({name: procedureInfo.name});
-  } else {
-    return msg.emptyBlockInFunction({name: procedureInfo.name});
-  }
-};
-
-/**
- * Looks for failing examples, and updates the result text for them if they're
- * open in the contract editor
- * @param {function} failureChecker Apps example tester that takes in an example
- *   block, and outputs a failure string (or null if success)
- * @returns {string} Name of block containing first failing example we found, or
- *   empty string if no failures.
- */
-StudioApp.prototype.checkForFailingExamples = function (failureChecker) {
-  var failingBlockName = '';
-  Blockly.mainBlockSpace
-    .findFunctionExamples()
-    .forEach(function (exampleBlock) {
-      var failure = failureChecker(exampleBlock, false);
-
-      // Update the example result. No-op if we're not currently editing this
-      // function.
-      Blockly.contractEditor.updateExampleResult(exampleBlock, failure);
-
-      if (failure) {
-        failingBlockName = exampleBlock
-          .getInputTargetBlock('ACTUAL')
-          .getFieldValue('NAME');
-      }
-    });
-  return failingBlockName;
-};
-
-/**
- * @returns {boolean} True if we have a function or variable named "" (empty string)
- */
-StudioApp.prototype.hasEmptyFunctionOrVariableName = function () {
-  return Blockly.mainBlockSpace.getTopBlocks().some(function (block) {
-    if (block.type !== 'functional_definition') {
-      return false;
-    }
-
-    return !block.getProcedureInfo().name;
-  });
 };
 
 StudioApp.prototype.createCoordinateGridBackground = function (options) {
@@ -3619,6 +3463,9 @@ if (IN_UNIT_TEST) {
     }
     if (instance.hiddenWorkspaceChangeListener) {
       Blockly.removeChangeListener(instance.hiddenWorkspaceChangeListener);
+    }
+    if (instance.mainWorkspaceChangeListener) {
+      Blockly.removeChangeListener(instance.mainWorkspaceChangeListener);
     }
     instance = __oldInstance;
     __oldInstance = null;

@@ -29,44 +29,43 @@ experiments.TEACHER_DASHBOARD_SECTION_BUTTONS =
   'teacher-dashboard-section-buttons';
 experiments.TEACHER_DASHBOARD_SECTION_BUTTONS_ALTERNATE_TEXT =
   'teacher-dashboard-section-buttons-alternate-text';
-// Enables notifications in Teaching Assistant when new AI evaluations are ready to review
-experiments.TA_NOTIFICATIONS = 'taNotifications';
 experiments.FINISH_DIALOG_METRICS = 'finish-dialog-metrics';
 experiments.I18N_TRACKING = 'frontend-i18n-tracking';
 experiments.TIME_SPENT = 'time-spent';
 experiments.BYPASS_DIALOG_POPUP = 'bypass-dialog-popup';
 experiments.SPECIAL_TOPIC = 'special-topic';
-experiments.OPT_IN_EMAIL_REG_PARTNER = 'optInEmailRegPartner';
 // Experiment for showing a backgrounds tab and enabling student upload
 // for Sprite Lab animations
 experiments.BACKGROUNDS_AND_UPLOAD = 'backgroundsTab';
 experiments.SECTION_SETUP_REFRESH = 'sectionSetupRefresh';
 // Experiment for showing the gender field
 experiments.GENDER_FEATURE_ENABLED = 'gender';
-// Experiment for enabling the CPA lockout
-experiments.CPA_EXPERIENCE = 'cpa_experience';
 // Experiment for enabling the AI-TA differentiation chat
 experiments.AI_DIFFERENTIATION = 'ai-differentiation';
 // Experiment for showing the toggle a teacher can use to turn on AI Tutor for their section
 experiments.AI_TUTOR_ACCESS = 'ai-tutor';
-// Uses Google Blockly for a given user across labs/levels until the experiment is disabled
-experiments.GOOGLE_BLOCKLY = 'google_blockly';
-// Adds documentation links to block context menus in Sprite Lab (supported with Google Blockly only)
-experiments.SPRITE_LAB_DOCS = 'sl_docs';
-// Adds a keyboard navigation toggle to the workspace header in Google Blockly labs
-experiments.KEYBOARD_NAVIGATION = 'blockly_keyboard';
+// Adds a "Get help with this block" option to block context menus if docs exist (e.g. Sprite Lab)
+experiments.BLOCKLY_DOCS = 'blockly_docs';
 // Adds the ability to toggle between v1 and v2 of the section progress page of the teacher dashboard
 experiments.SECTION_PROGRESS_V2 = 'section_progress_v2';
 // Allows the playspace to be dragged to take up a larger portion of the screen
 experiments.BIG_PLAYSPACE = 'bigPlayspace';
-// Shows the new sign-up flow
-experiments.NEW_SIGN_UP_FLOW = 'new_sign_up_flow';
 // Allows user to view the new version of the teacher navigation
 experiments.TEACHER_LOCAL_NAV_V2 = 'teacher-local-nav-v2';
-// Enables LTI account disconnect buttons on the Account Settings page
-experiments.LTI_ACCOUNT_UNLINKING = 'lti_account_unlinking';
-// Shows 'check my code' button in App Lab for validation via AI
-experiments.CSP_VALIDATION_VIA_AI = 'csp_validation_via_ai';
+// Allows users to view the new version of the teacher homepage
+experiments.TEACHER_HOMEPAGE_V2 = 'teacher-homepage-v2';
+// Use glow effect for Blockly block highlighting
+experiments.BLOCKLY_GLOW_HIGHLIGHT = 'blockly-glow-highlight';
+// Turn on Blockly Keyboard Navigation
+experiments.BLOCKLY_KEYBOARD_NAVIGATION = 'blockly-keyboard-navigation';
+// Use nested course URLs like /courses/csd-2024/units/1/...
+experiments.MODULARITY = 'modularity';
+// LocalizeJS
+experiments.LOCALIZEJS = 'localizejs';
+// Use the new lab2 instructions panel
+experiments.LAB2_INSTRUCTIONS_V2 = 'lab2-instructions-v2';
+// Use the new lab2 tabbed resource panel
+experiments.LAB2_RESOURCE_PANEL = 'lab2-resource-panel';
 
 /**
  * This was a gamified version of the finish dialog, built in 2018,

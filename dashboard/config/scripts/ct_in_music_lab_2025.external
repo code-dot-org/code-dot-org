@@ -1,0 +1,73 @@
+name 'ct_in_music_lab_2025'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Computational Thinking in Music Lab
+
+## Computational Thinking Fosters:
+
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 16px; font-weight: bold;">Resilence</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+<p style="font-size: 16px;"> Computational thinking teaches students to persist through challenges by encouraging trial and error. When they debug code or revise solutions, they build confidence and learn that failure is part of growth.
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 16px; font-weight: bold;">Creativity</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+<p style="font-size: 16px;"> Computational thinking encourages students to design, invent, and express ideas in new ways. Coding, building, and creating digital projects fosters imagination and originality.
+</p></div>
+</details>
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 16px; font-weight: bold;">Digital World Understanding</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+<p style="font-size: 16px;"> 
+By understanding how computers process information, students become more informed and responsible digital citizens. They gain insight into how apps, algorithms, and devices work.
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 16px; font-weight: bold;">Problem-Solving Skills</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+<p style="font-size: 16px;"> 
+Students learn to break complex problems into smaller steps, spot patterns, and develop logical solutions. These skills are essential across all subjects and in everyday life.
+</p></div>
+</details>
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 16px; font-weight: bold;">Critical Thinking</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+<p style="font-size: 16px;"> 
+Computational thinking strengthens critical thinking by teaching students to question, analyze, and evaluate information systematically. They learn to approach problems with logic, assess different solutions, and make reasoned decisions based on evidence.
+</p></div>
+</details>
+
+
+
+
+## How can I best support my students to develop computational thinking skills? 
+#### **Encourage and Model Growth Mindset**.
+* #### Celebrate perseverance and revision: “What can we try differently?”
+
+* #### Reinforce that it’s okay to “debug” and revise ideas.
+
+#### **Use Tools that Scaffold Thinking**.
+* #### Try unplugged CS activities (provided in lesson plans) that guide students from play to purpose
+
+#### **Model Thinking Out Loud**.
+* #### When solving a problem (in any subject), talk through your steps: “First, I’ll break this into parts… now I’ll look for what’s repeating…” This makes abstract thinking visible and learnable.
+
+#### **Ask Guiding Questions**.
+* ####	“What did you try?”
+
+* #### “What changed when you did that?”
+
+* #### “How else could you solve this?”
+
+
+#### **Note:** The **Teacher Tips** in this professional learning module offer ways to incorporate computational thinking into your teaching practice.
+
+
+MARKDOWN

@@ -1,8 +1,11 @@
 class SectionsController < ApplicationController
+  include LevelsHelper
   include UsersHelper
   before_action :load_section_by_code, only: [:log_in, :show]
   load_and_authorize_resource :section, only: [:edit]
   authorize_resource :section, only: [:new]
+
+  skip_before_action :verify_authenticity_token, only: [:archive_all]
 
   def new
     redirect_to home_path unless params[:loginType] && params[:participantType]
@@ -11,27 +14,8 @@ class SectionsController < ApplicationController
   end
 
   def edit
-    existing_section = Section.find_by(
-      id: params[:id]
-    )
-
-    @section = existing_section.attributes
-
-    @section['course'] = {
-      course_offering_id: existing_section.unit_group ? existing_section.unit_group&.course_version&.course_offering&.id : existing_section.script&.course_version&.course_offering&.id,
-      version_id: existing_section.unit_group ? existing_section.unit_group&.course_version&.id : existing_section.script&.course_version&.id,
-      unit_id: existing_section.unit_group ? existing_section.script_id : nil
-    }
-
-    @section['sectionInstructors'] = ActiveModelSerializers::SerializableResource.new(existing_section.section_instructors, each_serializer: Api::V1::SectionInstructorInfoSerializer).as_json
-
-    @section['primaryInstructor'] = {
-      email: existing_section.teacher.email,
-      name: existing_section.teacher.name,
-      lti_roster_sync_enabled: existing_section.teacher&.properties&.[]("lti_roster_sync_enabled")
-    }
-
-    @section = @section.to_json.camelize
+    redirect_to "/teacher_dashboard/sections/#{params[:id]}/settings"
+    return
   end
 
   def show
@@ -61,9 +45,56 @@ class SectionsController < ApplicationController
     end
   end
 
+  # POST /api/sections/archive
+  # Archive all sections owned by the current user.
+  # Note: does not archive co-taught sections created by another user.
+  def archive_all
+    sections = current_user.sections_instructed
+
+    num_hidden = sections.count {|s| !s.hidden}
+
+    sections.each do |section|
+      section.update!(hidden: true)
+    end
+
+    render json: {num_hidden: num_hidden}
+  end
+
+  def retrieve_lessons_for_dropdown
+    section = Section.find(params[:id])
+    lessons = []
+    if section.script_id
+      unit = Unit.get_from_cache(section.script_id)
+      unit_group = UnitGroup.get_from_cache(section.course_id)
+      unit_group_unit = Queries::Courses.unit_group_unit(unit, unit_group)
+      lessons << {text: unit.title_for_display(unit_group_unit: unit_group_unit).sub(" - ", ": "), value: unit.link(unit_group_unit: unit_group_unit)}
+      unit.lesson_groups.each do |lesson_group|
+        lessons.concat(lesson_group.lessons.select(&:has_lesson_plan).map do |lesson|
+          path =
+            if lesson.script_levels.nil_or_empty? && unit_group_unit && unit_group
+              course_unit_lesson_path(unit_group, unit_group_unit.position, lesson)
+            elsif !lesson.script_levels.nil_or_empty? && unit_group_unit && unit_group
+              course_unit_lesson_script_level_path(unit_group, unit_group_unit.position, lesson, 1)
+            elsif !lesson.script_levels.nil_or_empty?
+              script_lesson_script_level_path(unit, lesson, 1)
+            else
+              script_lesson_path(unit, lesson)
+            end
+          {
+            text: lesson.localized_title,
+            value: path,
+          }
+        end
+        )
+      end
+    end
+    render json: lessons
+  end
+
   private def redirect_to_section_script_or_course
     if @section.script
-      redirect_to script_path(@section.script)
+      unit_group_unit = Queries::Courses.unit_group_unit(@section.script, @section.unit_group)
+      redirect_to course_unit_path(@section.unit_group, unit_group_unit.position)
     elsif @section.unit_group
       redirect_to course_path(@section.unit_group)
     else

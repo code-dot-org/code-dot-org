@@ -1,0 +1,69 @@
+@import 'color';
+
+.modalHeader {
+  padding: 0 1rem !important;
+  border: none !important;
+}
+
+.modalBody {
+  max-height: 600px;
+  overflow: scroll;
+  padding: 0 1rem 1rem 1rem !important;
+}
+
+.miniContactContainer {
+  background-color: $lightest_cyan;
+  padding: 1.25rem;
+  border-radius: 0.625rem;
+  text-align: left;
+}
+
+.intro {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  padding-bottom: 0.5rem;
+}
+
+.error {
+  color: $red;
+}
+
+input, span {
+  margin-bottom: 0 !important;
+}
+
+.fieldGroup {
+  select {
+    padding: 100px;
+  }
+
+  .row {
+    margin-left: 0;
+    font-size: 0.875rem;
+  }
+
+  .controlLabel, label[for="grade_levels"] {
+    font-weight: 600;
+    margin-top: 0.75rem;
+  }
+
+  .roleSelect {
+    max-width: 13.75rem;
+  }
+
+  textarea {
+    width: 50%;
+  }
+}
+
+.submitContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  margin-top: 2rem;
+
+  .submitButton {
+    color: $white !important;
+  }
+}

@@ -1,0 +1,9 @@
+name 'computer-systems-lesson13-level1_2025-project'
+display_name 'Explore Sustainable Development Goal Targets'
+description 'Select a category to explore related Sustainable Development Goals (SDGs).'
+
+sublevels
+level 'computer-systems-lesson13-level1a_2025-project'
+level 'computer-systems-lesson13-level1b_2025-project'
+level 'computer-systems-lesson13-level1c_2025-project'
+level 'computer-systems-lesson13-level1d_2025-project'

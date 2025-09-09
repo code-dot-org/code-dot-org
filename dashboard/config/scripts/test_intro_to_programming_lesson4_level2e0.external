@@ -1,0 +1,18 @@
+name 'test-intro-to-programming-lesson4-level2e0'
+title 'Designing an Algorithm - Access to Laptops'
+description 'description here'
+
+markdown <<MARKDOWN
+# Recommending Online Content
+
+## Scenario Introduction
+
+##### You are designing an algorithm to recommend videos or articles on a school platform based on students' past preferences.
+
+## Background Information:
+
+- Recommendations should be educational and age-appropriate.
+- Students should be exposed to a variety of content to avoid limiting their learning.
+
+
+MARKDOWN

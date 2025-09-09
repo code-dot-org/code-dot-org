@@ -28,6 +28,7 @@ const {
   PROFESSIONAL_DEVELOPMENT_ENTRIES,
   SHARED_ENTRIES,
   OTHER_ENTRIES,
+  LOCALIZATION_ENTRIES,
 } = require('./webpackEntryPoints');
 
 const WEBPACK_DEV_SERVER_PORT = 9000;
@@ -44,7 +45,6 @@ const nodeModulesToTranspile = [
   'playground-io',
   'json-parse-better-errors',
   '@blockly/field-grid-dropdown',
-  '@blockly/keyboard-navigation',
   '@blockly/plugin-scroll-options',
   '@blockly/field-angle',
   '@blockly/field-bitmap',
@@ -190,6 +190,10 @@ const APPLICATION_ALIASES = {
   '@cdoide': p('src/weblab2/CDOIDE'),
   '@cdo/generated-scripts': p('generated-scripts'),
   '@codebridge': p('src/codebridge'),
+  // Prevent webpack from including linked npm dependencies' version of React
+  // In other words, only bundle one copy of React (the one specified in this file)
+  // and not the one specified by linked dependencies.
+  react: p('node_modules/react'),
 };
 
 const LOCALE_ALIASES = {
@@ -202,11 +206,13 @@ const LOCALE_ALIASES = {
     localeDoNotImport('@cdo/lab2/locale'),
     localeDoNotImport('@cdo/music/locale'),
     localeDoNotImport('@cdo/netsim/locale'),
+    localeDoNotImport('@cdo/pythonlab/locale'),
     localeDoNotImport('@cdo/regionalPartnerMiniContact/locale'),
     localeDoNotImport('@cdo/regionalPartnerSearch/locale'),
     localeDoNotImport('@cdo/standaloneVideo/locale'),
     localeDoNotImport('@cdo/tutorialExplorer/locale'),
     localeDoNotImport('@cdo/weblab/locale'),
+    localeDoNotImport('@cdo/weblab2/locale'),
     localeDoNotImport('@cdo/signup/locale'),
     localeDoNotImportP5Lab('@cdo/gamelab/locale'),
     localeDoNotImportP5Lab('@cdo/poetry/locale'),
@@ -333,6 +339,13 @@ const WEBPACK_BASE_CONFIG = {
               use: ['source-map-loader'],
               enforce: 'pre',
             },
+            // Enable source maps for shared frontend packages
+            {
+              test: /\.js$/,
+              enforce: 'pre',
+              include: /frontend\/packages/,
+              use: ['source-map-loader'],
+            },
           ]
         : []),
     ],
@@ -388,18 +401,21 @@ function createWebpackConfig({
     // Don't output >1000 lines of webpack build stats to the CI logs
     stats: envConstants.DEV ? 'normal' : 'errors-only',
     devtool: devtool({minify}),
-    entry: addPollyfillsToEntryPoints(
-      {
-        ...appsEntries,
-        ...CODE_STUDIO_ENTRIES,
-        ...INTERNAL_ENTRIES,
-        ...PEGASUS_ENTRIES,
-        ...PROFESSIONAL_DEVELOPMENT_ENTRIES,
-        ...SHARED_ENTRIES,
-        ...OTHER_ENTRIES,
-      },
-      ['@babel/polyfill/noConflict', 'whatwg-fetch']
-    ),
+    entry: {
+      ...addPollyfillsToEntryPoints(
+        {
+          ...appsEntries,
+          ...CODE_STUDIO_ENTRIES,
+          ...INTERNAL_ENTRIES,
+          ...PEGASUS_ENTRIES,
+          ...PROFESSIONAL_DEVELOPMENT_ENTRIES,
+          ...SHARED_ENTRIES,
+          ...OTHER_ENTRIES,
+        },
+        ['@babel/polyfill/noConflict', 'whatwg-fetch']
+      ),
+      ...LOCALIZATION_ENTRIES,
+    },
     externals: [
       {
         jquery: 'var $',
@@ -580,6 +596,9 @@ function createWebpackConfig({
         ),
         PISKEL_DEVELOPMENT_MODE: JSON.stringify(piskelDevMode),
         DEBUG_MINIFIED: envConstants.DEBUG_MINIFIED || 0,
+        'process.env.STATSIG_LOCAL_MODE_OFF': JSON.stringify(
+          envConstants.STATSIG_LOCAL_MODE_OFF ?? ''
+        ),
       }),
       ...(process.env.ANALYZE_BUNDLE
         ? [
@@ -697,6 +716,7 @@ function createWebpackConfig({
             'localhost-studio.code.org',
             'localhost.code.org',
             'localhost.hourofcode.com',
+            'preview.localhost.codeprojects.org',
           ],
           client: {overlay: false},
           port: WEBPACK_DEV_SERVER_PORT,

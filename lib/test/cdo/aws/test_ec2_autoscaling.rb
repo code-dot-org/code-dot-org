@@ -54,8 +54,9 @@ class TestEC2Autoscaling < Minitest::Test
         params[:preferences][:min_healthy_percentage] == 100 &&
         params[:preferences][:max_healthy_percentage] == 200 &&
         params[:preferences][:instance_warmup] == 0 &&
+        params[:preferences][:skip_matching] == false &&
         params.keys.length == 2 && # No other params
-        params[:preferences].keys.length == 3 # No other preferences
+        params[:preferences].keys.length == 4 # No other preferences
     end
 
     AWS::EC2Autoscaling.refresh_instances_in_group('test-group')

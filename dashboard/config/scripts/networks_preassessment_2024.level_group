@@ -1,0 +1,28 @@
+name 'networks-preassessment-2024'
+title 'Networks and the Internet Pre-Assessment'
+
+submittable 'true'
+anonymous 'false'
+activity_guide_level 'false'
+
+page
+text 'networks-preassessment-intro-2024'
+level 'networks-preassessment-question1-2024'
+level 'networks-preassessment-question2-2024'
+level 'networks-preassessment-question3-2024'
+level 'networks-preassessment-question4-2024'
+level 'networks-preassessment-question5-2024'
+
+page
+level 'networks-preassessment-question6-2024'
+level 'networks-preassessment-question7-2024'
+level 'networks-preassessment-question8-2024'
+level 'networks-preassessment-question9-2024'
+level 'networks-preassessment-question10-2024'
+
+page
+level 'networks-preassessment-question11-2024'
+level 'networks-preassessment-question12-2024'
+level 'networks-preassessment-question13-2024'
+level 'networks-preassessment-question14-2024'
+level 'networks-preassessment-question15-2024'

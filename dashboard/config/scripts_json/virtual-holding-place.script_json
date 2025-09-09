@@ -7,17 +7,15 @@
       "content_area": "other",
       "curriculum_umbrella": "Other",
       "hideable_lessons": true,
-      "is_course": true,
-      "is_migrated": true,
-      "version_year": "unversioned"
+      "is_migrated": true
     },
     "new_name": null,
-    "family_name": "virtual-holding-place",
-    "serialized_at": "2024-11-19 01:19:45 UTC",
-    "published_state": "beta",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "family_name": null,
+    "serialized_at": "2025-03-28 09:28:43 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "virtual-holding-place"
     }

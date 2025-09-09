@@ -3,6 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
+import AiDiffFloatingActionButton from '@cdo/apps/aiDifferentiation/AiDiffFloatingActionButton';
 import announcementsReducer, {
   addAnnouncement,
 } from '@cdo/apps/code-studio/announcementsRedux';
@@ -30,8 +31,9 @@ import {
   setPageType,
   pageTypes,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {showV2TeacherDashboard} from '@cdo/apps/templates/teacherNavigation/TeacherNavFlagUtils';
+import experiments from '@cdo/apps/util/experiments';
 import {tooltipifyVocabulary} from '@cdo/apps/utils';
+import {AiDiffContext} from '@cdo/generated-scripts/sharedConstants';
 
 import locales, {setLocaleCode} from '../../../../redux/localesRedux';
 
@@ -88,10 +90,8 @@ function initPage() {
   store.dispatch(initializeHiddenScripts(scriptData.section_hidden_unit_info));
   store.dispatch(setPageType(pageTypes.scriptOverview));
 
-  const v2TeacherDashboardEnabled = showV2TeacherDashboard();
-
   // Don't show the teacher panel if v2 dashboard is enabled
-  initCourseProgress(scriptData, !v2TeacherDashboardEnabled);
+  initCourseProgress(scriptData);
 
   const mountPoint = document.createElement('div');
   $('.user-stats-block').prepend(mountPoint);
@@ -122,6 +122,7 @@ function initPage() {
         courseVersionId={scriptData.courseVersionId}
         courseTitle={scriptData.course_title}
         courseLink={scriptData.course_link}
+        isSingleUnitCourse={scriptData.is_single_unit_course}
         excludeCsfColumnInLegend={!scriptData.csf}
         teacherResources={scriptData.teacher_resources}
         studentResources={scriptData.student_resources || []}
@@ -144,6 +145,7 @@ function initPage() {
         unitHasLevels={unitHasLevels}
         isMigrated={scriptData.is_migrated}
         scriptOverviewPdfUrl={scriptData.scriptOverviewPdfUrl}
+        scriptPath={scriptData.scriptPath}
         scriptResourcesPdfUrl={scriptData.scriptResourcesPdfUrl}
         isCsdOrCsp={scriptData.isCsd || scriptData.isCsp}
         completedLessonNumber={completedLessonNumber}
@@ -156,6 +158,7 @@ function initPage() {
   );
 
   tooltipifyVocabulary();
+  displayDifferentiationChat(scriptData);
 }
 
 function initializeGooglePlatformApi(store) {
@@ -185,4 +188,25 @@ function initializeStoreWithSections(store, sections, currentSection) {
   }
   store.dispatch(setSections(sections));
   store.dispatch(selectSection(currentSection.id.toString()));
+}
+
+function displayDifferentiationChat(scriptData) {
+  const aiDiffFabMountPoint = document.getElementById(
+    'ai-differentiation-fab-mount-point'
+  );
+
+  if (aiDiffFabMountPoint && experiments.isEnabled('ai-differentiation')) {
+    ReactDOM.render(
+      <Provider store={getStore()}>
+        <AiDiffFloatingActionButton
+          context={{
+            type: AiDiffContext.UNIT,
+            unitId: scriptData.id,
+          }}
+          scriptName={scriptData.name}
+        />
+      </Provider>,
+      aiDiffFabMountPoint
+    );
+  }
 }

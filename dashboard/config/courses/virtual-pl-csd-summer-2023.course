@@ -7,6 +7,13 @@
     "virtual-pl-csd-summer-day4",
     "virtual-pl-csd-summer-day5"
   ],
+  "original_script_names": [
+    "virtual-pl-csd-summer-day1",
+    "virtual-pl-csd-summer-day2",
+    "virtual-pl-csd-summer-day3",
+    "virtual-pl-csd-summer-day4",
+    "virtual-pl-csd-summer-day5"
+  ],
   "published_state": "stable",
   "instruction_type": "teacher_led",
   "participant_audience": "teacher",

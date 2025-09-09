@@ -1,10 +1,13 @@
 @import 'color.scss';
 @import 'font.scss';
-@import '@cdo/apps/componentLibrary/typography/typography.module';
+@import '@code-dot-org/component-library-styles/typography.module';
 
 $message-border-radius: 8px;
 $user-color: $light_gray_100;
 $assistant-color: $brand_primary_light;
+$bot-container-size: 32px;
+$icon-message-gap: 8px;
+$icon-overlay-padding-right: 8px;
 
 %message {
   @extend %markdown-styles;
@@ -57,14 +60,14 @@ $assistant-color: $brand_primary_light;
 
 .message-user {
   @extend %message;
-  background-color: $user_color;
+  background-color: var(--background-neutral-tertiary);
   border-end-start-radius: $message-border-radius;
   border-end-end-radius: 0;
 }
 
 .message-assistant {
   @extend %message;
-  background-color: $assistant-color;
+  background-color: var(--background-brand-teal-extra-light);
   border-end-start-radius: 0;
   border-end-end-radius: $message-border-radius;
   overflow-x: auto;
@@ -88,7 +91,7 @@ $assistant-color: $brand_primary_light;
 %container {
   display: flex;
   flex-direction: row;
-  gap: 8px;
+  gap: $icon-message-gap;
 }
 
 .container-assistant {
@@ -102,16 +105,11 @@ $assistant-color: $brand_primary_light;
   justify-content: flex-end;
 }
 
-.userProfaneMessageButton {
-  width: 120px;
-  margin-top: -10px;
-}
-
 .botIconContainer {
-  flex: 0 0 32px;
-  height: 32px;
-  width: 32px;
-  background: $light-black;
+  flex: 0 0 $bot-container-size;
+  height: $bot-container-size;
+  width: $bot-container-size;
+  background: var(--background-neutral-primary-inverse);
   border-radius: 20px;
   display: flex;
   justify-content: center;
@@ -122,12 +120,17 @@ $assistant-color: $brand_primary_light;
 .botIconContainerWithOverlay {
   position: relative;
   display: flex;
-  padding-right: 8px;
+  padding-right: $icon-overlay-padding-right;
   padding-top: 3px;
 }
 
-.childContainer {
-  margin-left: 48px;
+.footer {
+  margin-left: $bot-container-size + $icon-message-gap;
+}
+
+
+.footerWithOverlay {
+  margin-left: $bot-container-size + $icon-message-gap + $icon-overlay-padding-right;
 }
 
 .botIcon {
@@ -137,7 +140,7 @@ $assistant-color: $brand_primary_light;
 }
 
 .botOverlay {
-  position:absolute;
+  position: absolute;
   top: 0;
   right: 0;
   display: flex;
@@ -164,9 +167,9 @@ $assistant-color: $brand_primary_light;
 }
 
 .danger {
-  background-color: $light_negative_100;
+  background-color: var(--background-error-extra-light);
 }
 
 .warning {
-  background-color: $light_caution_100;
+  background-color: var(--background-warning-light);
 }

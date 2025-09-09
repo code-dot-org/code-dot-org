@@ -6,7 +6,6 @@ export default function initializeCdoConstants(
   blocklyWrapper.Procedures.DEFINITION_BLOCK_TYPES = [
     'procedures_defnoreturn',
     'procedures_defreturn',
-    'functional_definition',
   ];
 
   blocklyWrapper.BlockValueType = {

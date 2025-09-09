@@ -7,116 +7,30 @@ module RegistrationsControllerTests
   #
   class EmailTest < ActionDispatch::IntegrationTest
     include OmniauthCallbacksControllerTests::Utils
+    include Minitest::RSpecMocks
 
     setup do
       stub_firehose
-
-      # Force split-test to control group (override in tests over experiment)
-      SignUpTracking.stubs(:split_test_percentage).returns(100)
-    end
-
-    test "student sign-up" do
-      email = "student@example.com"
-
-      get '/users/sign_up'
-      assert_template partial: '_sign_up'
-      post '/users/begin_sign_up', params: {
-        user: {
-          email: email,
-          password: 'mypassword',
-          password_confirmation: 'mypassword'
-        }
-      }
-      assert_template partial: '_finish_sign_up'
-      assert PartialRegistration.in_progress? session
-
-      assert_creates(User) {finish_email_sign_up(User::TYPE_STUDENT, email)}
-      assert_redirected_to '/'
-      follow_redirect!
-      assert_redirected_to '/home'
-      assert_equal I18n.t('devise.registrations.signed_up'), flash[:notice]
-      refute PartialRegistration.in_progress? session
-
-      created_user = User.find signed_in_user_id
-      assert_equal User.hash_email(email), created_user.hashed_email
-
-      assert_sign_up_tracking(
-        SignUpTracking::NEW_SIGN_UP_GROUP,
-        %w(
-          load-new-sign-up-page
-          begin-sign-up-success
-          email-load-finish-sign-up-page
-          email-sign-up-success
-        )
-      )
-    ensure
-      created_user&.destroy!
-    end
-
-    test "teacher sign-up" do
-      email = "teacher@example.com"
-
-      get '/users/sign_up'
-      assert_template partial: '_sign_up'
-      post '/users/begin_sign_up', params: {
-        user: {
-          email: email,
-          password: 'mypassword',
-          password_confirmation: 'mypassword'
-        }
-      }
-      assert_template partial: '_finish_sign_up'
-      assert PartialRegistration.in_progress? session
-
-      assert_creates(User) {finish_email_sign_up(User::TYPE_TEACHER, email)}
-      assert_redirected_to '/home'
-      assert_equal I18n.t('devise.registrations.signed_up'), flash[:notice]
-      refute PartialRegistration.in_progress? session
-
-      created_user = User.find signed_in_user_id
-      assert_equal email, created_user.email
-
-      assert_sign_up_tracking(
-        SignUpTracking::NEW_SIGN_UP_GROUP,
-        %w(
-          load-new-sign-up-page
-          begin-sign-up-success
-          email-load-finish-sign-up-page
-          email-sign-up-success
-        )
-      )
-    ensure
-      created_user&.destroy!
     end
 
     test "student in new sign-up" do
       email = "student@example.com"
 
       post '/users/begin_sign_up', params: {
-        new_sign_up: true,
         user: {
           email: email,
           password: 'mypassword',
-          password_confirmation: 'mypassword'
+          password_confirmation: 'mypassword',
+          user_type: User::TYPE_STUDENT,
         }
       }
       assert PartialRegistration.in_progress? session
 
-      assert_creates(User) {finish_email_sign_up(User::TYPE_STUDENT, email, true)}
+      assert_creates(User) {finish_email_sign_up(User::TYPE_STUDENT, email)}
       refute PartialRegistration.in_progress? session
 
       created_user = User.find signed_in_user_id
       assert_equal User.hash_email(email), created_user.hashed_email
-
-      assert_sign_up_tracking(
-        SignUpTracking::NOT_IN_STUDY_GROUP,
-        %w(
-          load-sign-up-page
-          begin-sign-up-success
-          email-load-finish-sign-up-page
-          email-sign-up-success
-        )
-      )
     ensure
       created_user&.destroy!
     end
@@ -125,36 +39,51 @@ module RegistrationsControllerTests
       email = "teacher@example.com"
 
       post '/users/begin_sign_up', params: {
-        new_sign_up: true,
         user: {
           email: email,
           password: 'mypassword',
-          password_confirmation: 'mypassword'
+          password_confirmation: 'mypassword',
+          user_type: User::TYPE_TEACHER
         }
       }
       assert PartialRegistration.in_progress? session
 
-      assert_creates(User) {finish_email_sign_up(User::TYPE_TEACHER, email, true)}
+      assert_creates(User) {finish_email_sign_up(User::TYPE_TEACHER, email)}
       refute PartialRegistration.in_progress? session
 
       created_user = User.find signed_in_user_id
       assert_equal email, created_user.email
-
-      assert_sign_up_tracking(
-        SignUpTracking::NOT_IN_STUDY_GROUP,
-        %w(
-          load-sign-up-page
-          begin-sign-up-success
-          email-load-finish-sign-up-page
-          email-sign-up-success
-        )
-      )
     ensure
       created_user&.destroy!
     end
 
-    private def finish_email_sign_up(user_type, email, new_sign_up = false)
-      params = finish_sign_up_params({user_type: user_type, email: email}, new_sign_up)
+    describe "disallowed email domain" do
+      let(:disallowed_domains) {['testdomain.com']}
+      let(:email) {"user@#{disallowed_domains.first}"}
+
+      before do
+        stub_const('Policies::Devise::EmailDomains::DISALLOWED_DOMAINS', disallowed_domains)
+
+        post '/users/begin_sign_up', params: {
+          user: {
+            email: email,
+            password: 'mypassword',
+            password_confirmation: 'mypassword',
+            user_type: User::TYPE_STUDENT
+          }
+        }
+      end
+
+      it "forbids sign up" do
+        _(response.status).must_equal 403
+        _(response.body).must_match(
+          /Emails from #{Regexp.escape(disallowed_domains.first)} are not allowed to sign up with email and password\. Please use your LMS to sign in\./
+        )
+      end
+    end
+
+    private def finish_email_sign_up(user_type, email)
+      params = finish_sign_up_params({user_type: user_type, email: email})
       post '/users', params: params
     end
   end

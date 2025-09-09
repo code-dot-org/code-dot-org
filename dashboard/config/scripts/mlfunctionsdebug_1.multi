@@ -1,0 +1,15 @@
+name 'MLfunctionsdebug_1'
+title 'Debugging Functions'
+description ''
+question 'How would you debug the error?'
+
+
+
+wrong 'Select different sound blocks in the chorus.'
+wrong 'Define the function.'
+wrong 'Naming the function.'
+right 'Call the function by dragging the chorus block and connecting it to the run block.'
+allow_multiple_attempts true
+markdown <<MARKDOWN
+![](https://images.code.org/bd49c730fe0853f7ab078e76a34adcb5-image-1738109086635.04.40 PM.png)
+MARKDOWN

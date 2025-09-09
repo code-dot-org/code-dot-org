@@ -2,6 +2,7 @@ import project from '@cdo/apps/code-studio/initApp/project';
 import logToCloud from '@cdo/apps/logToCloud';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {ConsoleSignalType} from '@cdo/apps/miniApps/neighborhood/constants';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import javalabMsg from '@cdo/javalab/locale';
 
@@ -66,6 +67,30 @@ export default class JavabuilderConnection {
     this.allValidationPassed = true;
     this.seenMessage = false;
     this.hadWebsocketConnectionError = false;
+
+    if (this.miniApp && this.miniAppType === CsaViewMode.NEIGHBORHOOD) {
+      this.onOutputMessage = message => {
+        if (this.miniApp.isRunning()) {
+          this.miniApp.handleSignal({
+            value: ConsoleSignalType.CONSOLE_LOG,
+            detail: message,
+          });
+        } else {
+          onMessage(message);
+        }
+      };
+
+      this.onNewlineMessage = () => {
+        if (this.miniApp.isRunning()) {
+          this.miniApp.handleSignal({
+            value: ConsoleSignalType.CONSOLE_LOG,
+            detail: '\n',
+          });
+        } else {
+          onNewlineMessage();
+        }
+      };
+    }
   }
 
   // Get the access token to connect to javabuilder and then open the websocket connection.

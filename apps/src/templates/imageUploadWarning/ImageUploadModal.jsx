@@ -58,7 +58,7 @@ export default function ImageUploadModal({
         <p className={styles.modalDetails}>
           {isTeacher && (
             <>
-              {msg.animationPicker_warnNoPublishShare()}
+              {msg.animationPicker_warnNoRemix()}
               <br />
             </>
           )}

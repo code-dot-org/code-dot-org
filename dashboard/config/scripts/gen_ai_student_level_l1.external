@@ -1,0 +1,79 @@
+name 'gen-ai-student-level-L1'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# ✅ Lesson Recap: Introduction to Generative AI
+
+#### After this lesson, you can 
+
+* #### Identify and explain the four key components that make up a computer system.
+* #### Evaluate the potential impact of generative AI on society and discuss its capabilities and limitations.
+* #### Distinguish between different types of AI, including machine learning, deep learning, and generative AI.
+
+## **Key Terms**
+
+* #### **Artificial Intelligence** - A technology that mimics human intelligence, performing tasks such as understanding language, recognizing patterns, and making decisions
+* #### **Large Language Model** - A computer program that analyzes large amounts of raw human-created data to the point where it can represent and recreate new data to perform a variety of tasks
+* #### **Model** - A computer program designed to make a decision
+
+## Resources
+
+### **Videos**
+<!-- Unified container for the grid of cards -->
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; width: 90%; margin: 20px auto;">
+<!-- Video for https://www.youtube.com/watch?v=21eVegaVMtE -->
+<!-- Youtube code 21eVegaVMtE --->
+<div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); text-align: center;">
+  <img src="https://i.ytimg.com/vi/21eVegaVMtE/1.jpg" alt="Thumbnail image for youtube video Careers in Generative AI" style="width: 150px; height: auto; margin-right: 15px; border-radius: 5px;">
+  <p style="font-size: 14pt; line-height: 1.25;">
+  <b><a href="https://www.youtube.com/watch?v=21eVegaVMtE" target="_blank">Careers in Generative AI</a></b>
+  </p>
+</div>
+
+<!-- Video for https://youtu.be/6NDEoJ4gWtM -->
+<!-- Youtube code 6NDEoJ4gWtM --->
+<div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); text-align: center;">
+  <img src="https://i.ytimg.com/vi/6NDEoJ4gWtM/1.jpg" alt="Thumbnail image for youtube video Introduction to Large Language Models" style="width: 150px; height: auto; margin-right: 15px; border-radius: 5px;">
+  <p style="font-size: 14pt; line-height: 1.25;">
+  <b><a href="https://youtu.be/6NDEoJ4gWtM" target="_blank">Introduction to Large Language Models</a></b>
+  </p>
+</div>
+
+<!-- Video for https://www.youtube.com/watch?v=KHbwOetbmbs -->
+<!-- Youtube code KHbwOetbmbs --->
+<div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); text-align: center;">
+  <img src="https://i.ytimg.com/vi/KHbwOetbmbs/1.jpg" alt="Thumbnail image for youtube video What Is Machine Learning?" style="width: 150px; height: auto; margin-right: 15px; border-radius: 5px;">
+  <p style="font-size: 14pt; line-height: 1.25;">
+  <b><a href="https://www.youtube.com/watch?v=KHbwOetbmbs" target="_blank">What Is Machine Learning?</a></b>
+  </p>
+</div>
+
+<!-- Video for https://www.youtube.com/watch?v=sLIJNEIE0Rs -->
+<!-- Youtube code sLIJNEIE0Rs --->
+<div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); text-align: center;">
+  <img src="https://i.ytimg.com/vi/sLIJNEIE0Rs/1.jpg" alt="Thumbnail image for youtube video What Makes a Computer a Computer?" style="width: 150px; height: auto; margin-right: 15px; border-radius: 5px;">
+  <p style="font-size: 14pt; line-height: 1.25;">
+  <b><a href="https://www.youtube.com/watch?v=sLIJNEIE0Rs" target="_blank">What Makes a Computer a Computer?</a></b>
+  </p>
+</div>
+
+</div>
+
+### **Activity Guides**
+
+<!-- Unified container for the grid of cards -->
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; width: 90%; margin: 20px auto;">
+<div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); text-align: center;">
+  <img src="https://drive.google.com/thumbnail?sz=w640&id=1iKiiURXTDQktgr9_r_B8-9_XBW-YrCp8ueQGVtqrJIc" alt="Document thumbnail" style="width: 150px; height: auto; margin-right: 15px; border-radius: 5px;">
+  <p style="font-size: 14pt; line-height: 1.25;">
+    <a href="https://docs.google.com/presentation/d/1iKiiURXTDQktgr9_r_B8-9_XBW-YrCp8ueQGVtqrJIc/template/preview" target="_blank" style="font-weight: bold; text-decoration: none;">Foundations of Generative AI Graphic Organizer</a><br>
+  </p>
+</div>
+
+</div>
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN

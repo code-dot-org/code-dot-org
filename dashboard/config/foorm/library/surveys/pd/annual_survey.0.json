@@ -4,6 +4,210 @@
     {
       "elements": [
         {
+          "type": "checkbox",
+          "name": "csd_improvement_areas",
+          "title": "What are aspects of Code.org's CS Discoveries that could be improved and/or currently prevent you from teaching it?",
+          "description": " (Select up to three options)",
+          "visibleIf": "{survey_variable_name}='csd' or {grade} anyof [6, 7, 8]",
+          "validators": [
+            {
+              "type": "answercount",
+              "text": "Please select up to three choices",
+              "minCount": 0,
+              "maxCount": 3
+            }
+          ],
+          "choices": [
+            {
+              "value": "not_familiar_csd",
+              "text": "I'm not familiar with Code.org's CS Discoveries content"
+            },
+            {
+              "value": "not_engaging",
+              "text": "Content is not engaging enough for my students"
+            },
+            {
+              "value": "outdated",
+              "text": "Content is outdated"
+            },
+            {
+              "value": "missing_content",
+              "text": "Doesn't include content I need to cover"
+            },
+            {
+              "value": "hard_assessing_students",
+              "text": "It's too hard to grade students"
+            },
+            {
+              "value": "need_support",
+              "text": "I need more help supporting students"
+            },
+            {
+              "value": "too_long",
+              "text": "Content is too long to include in my schedule"
+            },
+            {
+              "value": "implementation_confusing",
+              "text": "It's difficult to know which units to teach or how to sequence them"
+            }
+          ],
+          "hasOther": true
+        },
+        {
+          "type": "checkbox",
+          "name": "other_cs_providers_select",
+          "title": "Which other education providers do you use to teach computer science?",
+          "visibleIf": "{use_other_cs_providers} anyof ['another_most_of_the_time', 'multiple_providers_evenly', 'cdo_most_of_the_time']",
+          "description": "(Please select all that apply)",
+          "choices": [
+            {
+              "value": "ap_classroom",
+              "text": "AP Classroom"
+            },
+            {
+              "value": "bjc",
+              "text": "BJC"
+            },
+            {
+              "value": "bootstrap",
+              "text": "Bootstrap"
+            },
+            {
+              "value": "cmu_cs_academy",
+              "text": "CMU CS Academy"
+            },
+            {
+              "value": "codecademy",
+              "text": "Codecademy"
+            },
+            {
+              "value": "code_hs",
+              "text": "CodeHS"
+            },
+            {
+              "value": "code_monkey",
+              "text": "Code Monkey"
+            },
+            {
+              "value": "code_savvy",
+              "text": "Code Savvy"
+            },
+            {
+              "value": "code_spark",
+              "text": "CodeSpark"
+            },
+            {
+              "value": "code_wizards",
+              "text": "Code Wizards"
+            },
+            {
+              "value": "csawesome",
+              "text": "CS Awesome"
+            },
+            {
+              "value": "cs4all",
+              "text": "CS4ALL"
+            },
+            {
+              "value": "google_cs_first",
+              "text": "Google CS First"
+            },
+            {
+              "value": "khan_academy",
+              "text": "Khan Academy"
+            },
+            {
+              "value": "kodable",
+              "text": "Kodable"
+            },
+            {
+              "value": "popfizz",
+              "text": "Popfizz"
+            },
+            {
+              "value": "project_lead_the_way",
+              "text": "Project Lead The Way"
+            },
+            {
+              "value": "project_stem",
+              "text": "Project STEM"
+            },
+            {
+              "value": "scratch",
+              "text": "Scratch/Scratch Jr."
+            },
+            {
+              "value": "tynker",
+              "text": "Tynker"
+            }
+          ],
+          "hasOther": true
+        },
+        {
+          "type": "checkbox",
+          "name": "pl_interest_content",
+          "title": "What additional professional development content would you like to see offered by Code.org?",
+          "choices": [
+            {
+              "value": "additional_cs_content",
+              "text": "Additional content on specific computer science concepts (i.e. programming, data science)"
+            },
+            {
+              "value": "specific_cs_topics",
+              "text": "Additional content on pedagogical topics and instructional practices (i.e., debugging, computational thinking, classroom practices)"
+            },
+            {
+              "value": "additional_topics_ai",
+              "text": "Additional content about AI concepts"
+            },
+            {
+              "value": "using_ai_classroom",
+              "text": "Additional content about using AI in the classroom"
+            },
+            {
+              "value": "jit_microlearning_teaching_practices",
+              "text": "In-the-moment, micro learning to support day-to-day lesson planning and classroom instruction"
+            },
+            {
+              "value": "integrate_cs_content_areas",
+              "text": "Integrating computer science into other subject areas"
+            },
+            {
+              "value": "assessment_practices",
+              "text": "Effective assessment practices"
+            }
+          ],
+          "hasOther": true
+        },
+        {
+          "type": "checkbox",
+          "name": "pl_interest_format",
+          "title": "What types of professional learning experiences could Code.org offer to support your growth as a computer science teacher?",
+          "choices": [
+            {
+              "value": "self_paced_pl",
+              "text": "Additional online self-paced professional learning topics"
+            },
+            {
+              "value": "complement_synchronous_networking_spaces",
+              "text": "Complement online self-paced professional learning experiences with synchronous spaces to connect with other teachers, share experiences, and receive guidance"
+            },
+            {
+              "value": "facilitator_led_pl",
+              "text": "Facilitator-led, synchronous professional learning experiences"
+            },
+            {
+              "value": "ai_coaching_tool_cs_concepts",
+              "text": "AI-assisted coaching tool to support learning computer science concepts"
+            },
+            {
+              "value": "ai_coaching_tool_teaching_practices",
+              "text": "AI-assisted coaching tool to enhance computer science teaching practices"
+            }
+          ],
+          "hasOther": true
+        },
+        {
           "type": "panel",
           "name": "teaching_with_ai_panel",
           "elements": [
@@ -49,23 +253,14 @@
                 {
                   "value": "lack_access_ai_tools",
                   "text": "My school restricts access to AI tools"
-                },
-                {
-                  "value": "other",
-                  "text": "Other"
                 }
-              ]
-            },
-            {
-              "type": "text",
-              "name": "teaching_with_ai_ta_reasons_other_comment",
-              "visibleIf": "{teaching_with_ai_ta_reasons} contains 'other'",
-              "title": "Please share what are some other reasons why you wouldn't use an AI-assisted tool to assess and evaluate students' computer science projects."
+              ],
+              "hasOther": true
             },
             {
               "type": "rating",
               "name": "teaching_with_ai_pl_tutor_teaching_cs",
-              "title": "How likely are you to use an AI-assisted professional learning coaching tool to support and guide your professional development and ultimately enhance your computer science teaching practices?",
+              "title": "How likely are you to use an AI-assisted professional learning coaching tool to enhance your computer science teaching practices?",
               "description": "This AI-assisted professional learning coaching tool would support your professional development by offering customized guidance for lesson planning, differentiation, and suggesting activities and assessments relevant to the computer science concepts you are teaching.",
               "rateCount": 7,
               "rateMax": 7,
@@ -79,6 +274,10 @@
               "title": "Please share the reasons why you wouldn't use an AI-assisted professional learning coaching tool to enhance your computer science teaching practices.",
               "description": "(Please select all that apply)",
               "choices": [
+                {
+                  "value": "dont_need_more_pl",
+                  "text": "I don't need additional professional learning"
+                },
                 {
                   "value": "need_more_prep_or_knowledge",
                   "text": "I would like to understand how the tool works before using it"
@@ -94,18 +293,9 @@
                 {
                   "value": "lack_access_ai_tools",
                   "text": "My school restricts access to AI tools"
-                },
-                {
-                  "value": "other",
-                  "text": "Other"
                 }
-              ]
-            },
-            {
-              "type": "text",
-              "name": "teaching_with_ai_pl_tutor_teaching_cs_reasons_other_comment",
-              "visibleIf": "{teaching_with_ai_pl_tutor_teaching_cs_reasons} contains 'other'",
-              "title": "Please share what are some other reasons why you wouldn't use an AI-assisted professional learning coaching tool to enhance your computer science teaching practices."
+              ],
+              "hasOther": true
             },
             {
               "type": "rating",
@@ -125,6 +315,10 @@
               "description": "(Please select all that apply)",
               "choices": [
                 {
+                  "value": "dont_need_more_pl",
+                  "text": "I don't need additional professional learning"
+                },
+                {
                   "value": "need_more_prep_or_knowledge",
                   "text": "I would like to understand how the tool works before using it"
                 },
@@ -139,18 +333,9 @@
                 {
                   "value": "lack_access_ai_tools",
                   "text": "My school restricts access to AI tools"
-                },
-                {
-                  "value": "other",
-                  "text": "Other"
                 }
-              ]
-            },
-            {
-              "type": "text",
-              "name": "teaching_with_ai_pl_tutor_learn_cs_reasons_other_comment",
-              "visibleIf": "{teaching_with_ai_pl_tutor_learn_cs_reasons} contains 'other'",
-              "title": "Please share what are some other reasons why you wouldn't use an AI-assisted professional learning coaching tool to enhance your learning and understanding of the computer science concepts you are teaching."
+              ],
+              "hasOther": true
             },
             {
               "type": "rating",
@@ -188,18 +373,16 @@
                 {
                   "value": "lack_access_ai_tools",
                   "text": "My school restricts access to AI tools"
-                },
-                {
-                  "value": "other",
-                  "text": "Other"
                 }
-              ]
+              ],
+              "hasOther": true
             },
             {
-              "type": "text",
-              "name": "teaching_with_ai_cs_tutor_students_reasons_other_comment",
-              "visibleIf": "{teaching_with_ai_cs_tutor_students_reasons} contains 'other'",
-              "title": "Please share what are some other reasons why you wouldn't enable your students to use an AI-assisted tool to support their computer science learning, such as an AI tutor."
+              "type": "comment",
+              "name": "teaching_with_ai_comments",
+              "title": "Is there anything you would like us to know as we think about developing AI-supported tools to complement your teaching and student learning?",
+              "description": "(Optional)",
+              "rows": 3
             }
           ]
         }

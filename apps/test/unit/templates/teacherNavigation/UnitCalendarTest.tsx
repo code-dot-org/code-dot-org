@@ -13,7 +13,9 @@ import {
   stubRedux,
 } from '@cdo/apps/redux';
 import locales, {setLocaleCode} from '@cdo/apps/redux/localesRedux';
-import unitSelection, {setUnitName} from '@cdo/apps/redux/unitSelectionRedux';
+import unitSelection, {
+  setCoursesWithProgress,
+} from '@cdo/apps/redux/unitSelectionRedux';
 import currentUser, {
   setInitialData,
 } from '@cdo/apps/templates/currentUserRedux';
@@ -21,62 +23,92 @@ import teacherSections, {
   selectSection,
   setSections,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {ServerSection} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
 import UnitCalendar from '@cdo/apps/templates/teacherNavigation/UnitCalendar';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import i18n from '@cdo/locale';
 
-const SECTIONS = [
+const SECTIONS: ServerSection[] = [
   {
     id: 1,
     name: 'Period 2',
     course_offering_id: 123,
-    courseVersionId: 2023,
+    course_version_id: 2024,
+    courseVersionName: 'csd-2024',
+    course_display_name: 'CSD 2024',
+    course_id: 2024,
     unitName: 'csd1-2024',
-    unitSelection: {
-      unitName: 'csd1-2024',
-    },
+    unitPosition: 1,
+    code: '',
+    hidden: false,
+    lesson_extras: false,
+    login_type: '',
+    pairing_allowed: false,
+    sharing_disabled: false,
+    studentCount: 0,
   },
   {
     id: 9,
     name: 'Period 9',
     course_offering_id: null,
-    courseVersionId: null,
-    unitName: null,
-    unitSelection: null,
+    course_version_id: null,
+    courseVersionName: null,
+    code: '',
+    course_id: null,
+    hidden: false,
+    lesson_extras: false,
+    login_type: '',
+    pairing_allowed: false,
+    sharing_disabled: false,
+    studentCount: 0,
   },
   {
     id: 10,
     name: 'Period 10',
     course_offering_id: 123,
-    courseVersionId: 2023,
+    course_version_id: 2024,
     courseVersionName: 'csd-2024',
-    unitName: null,
-    unitSelection: null,
+    course_id: 2024,
     course_display_name: 'CSD',
+    code: '',
+    hidden: false,
+    lesson_extras: false,
+    login_type: '',
+    pairing_allowed: false,
+    sharing_disabled: false,
+    studentCount: 0,
   },
   {
     id: 11,
     name: 'Period 11',
     course_offering_id: 1234,
-    courseVersionId: 20234,
-    courseVersionName: 'csd1-2020',
+    course_version_id: 2020,
+    courseVersionName: 'csd-2020',
+    course_id: 2020,
     unitName: 'csd1-2020',
-    unitSelection: {
-      unitName: 'csd1-2020',
-    },
-    course_display_name: 'CSD1-2020',
+    unitPosition: 1,
+    course_display_name: 'CSD-2020',
+    code: '',
+    hidden: false,
+    lesson_extras: false,
+    login_type: '',
+    pairing_allowed: false,
+    sharing_disabled: false,
+    studentCount: 0,
   },
 ];
 
 const UNIT_SUMMARY = {
   id: 1,
   name: 'csd1-2024',
+  course_name: 'csd-2024',
+  unit_position: 1,
   lessons: [],
   title: "Unit 1 - Problem Solving and Computing ('23-'24)",
   description: 'CSD description',
   studentDescription: 'CSD student description',
   course_versions: {},
-  courseVersionId: 2,
+  courseVersionId: 2024,
   lessonGroups: [],
   isPlCourse: false,
   plc: false,
@@ -102,8 +134,64 @@ const NO_SHOW_CALENDAR_UNIT_SUMMARY = {
 
 const LEGACY_UNIT_SUMMARY = {
   ...UNIT_SUMMARY,
+  id: 2,
   name: 'csd1-2020',
+  course_name: 'csd-2020',
+  unit_position: 1,
+  courseVersionId: 2020,
   version_year: '2020',
+};
+
+const COURSES_WITH_PROGRESS = [
+  {
+    id: 2024,
+    display_name: 'CSD',
+    units: [
+      {
+        id: UNIT_SUMMARY.id,
+        version_year: UNIT_SUMMARY.version_year,
+        key: UNIT_SUMMARY.name,
+        name: UNIT_SUMMARY.title,
+        position: 1,
+      },
+    ],
+  },
+];
+
+const LEGACY_COURSES_WITH_PROGRESS = [
+  {
+    id: 2020,
+    display_name: 'CSD',
+    units: [
+      {
+        id: LEGACY_UNIT_SUMMARY.id,
+        version_year: LEGACY_UNIT_SUMMARY.version_year,
+        key: LEGACY_UNIT_SUMMARY.name,
+        name: LEGACY_UNIT_SUMMARY.title,
+        position: 1,
+      },
+    ],
+  },
+];
+
+const mockSpy = (
+  spy: jest.SpyInstance,
+  unitSummaryResponse: any, // eslint-disable-line @typescript-eslint/no-explicit-any
+  coursesWithProgress: any // eslint-disable-line @typescript-eslint/no-explicit-any
+) => {
+  spy.mockImplementation((url: string) => {
+    if (url.includes('unit_summary')) {
+      return Promise.resolve({
+        value: unitSummaryResponse,
+        response: new Response(),
+      });
+    } else if (url.includes('section_courses')) {
+      return Promise.resolve({
+        value: coursesWithProgress,
+        response: new Response(),
+      });
+    }
+  });
 };
 
 describe('UnitCalendar', () => {
@@ -129,7 +217,7 @@ describe('UnitCalendar', () => {
     store.dispatch(setInitialData({id: 1, user_type: 'teacher'}));
     store.dispatch(setSections(SECTIONS));
     store.dispatch(selectSection(1));
-    store.dispatch(setUnitName('csd1-2024'));
+    store.dispatch(setCoursesWithProgress(COURSES_WITH_PROGRESS));
 
     fetchSpy = jest.spyOn(HttpClient, 'fetchJson');
   });
@@ -156,16 +244,18 @@ describe('UnitCalendar', () => {
   });
 
   it('renders calendar with instructional minutes dropdown, week, and calendar when loaded', async () => {
-    fetchSpy.mockResolvedValue({
-      value: {
+    mockSpy(
+      fetchSpy,
+      {
         unitData: UNIT_SUMMARY,
         plcBreadcrumb: {
           unit_name: 'csd1-2024',
           course_view_path: 'http://example.com/course',
         },
       },
-      response: new Response(),
-    });
+      COURSES_WITH_PROGRESS
+    );
+
     await act(async () => {
       renderComponent();
     });
@@ -197,7 +287,6 @@ describe('UnitCalendar', () => {
 
   it('tells users to select a curriculum when no curriculum assigned', async () => {
     store.dispatch(selectSection(9));
-    store.dispatch(setUnitName(null));
 
     await act(async () => {
       renderComponent();
@@ -211,7 +300,6 @@ describe('UnitCalendar', () => {
 
   it('tells users to select a unit when no unit assigned', async () => {
     store.dispatch(selectSection(10));
-    store.dispatch(setUnitName(null));
 
     await act(async () => {
       renderComponent();
@@ -226,18 +314,18 @@ describe('UnitCalendar', () => {
   });
 
   it('notifies users that the assigned curriculum is pre-2020', async () => {
-    store.dispatch(setUnitName('csd1-2020'));
     store.dispatch(selectSection(11));
-    fetchSpy.mockResolvedValue({
-      value: {
+    mockSpy(
+      fetchSpy,
+      {
         unitData: LEGACY_UNIT_SUMMARY,
         plcBreadcrumb: {
           unit_name: 'csd1-2020',
           course_view_path: 'http://example.com/course',
         },
       },
-      response: new Response(),
-    });
+      LEGACY_COURSES_WITH_PROGRESS
+    );
 
     await act(async () => {
       renderComponent();
@@ -245,6 +333,6 @@ describe('UnitCalendar', () => {
 
     screen.getByAltText(i18n.calendarNotAvailable());
     screen.getByText(i18n.calendarNotAvailable());
-    screen.getByText(i18n.calendarLegacyMessage({courseName: 'CSD1-2020'}));
+    screen.getByText(i18n.calendarLegacyMessage({courseName: 'CSD-2020'}));
   });
 });

@@ -244,7 +244,6 @@ export default class AddParentEmailModal extends React.Component {
             onCancel={this.cancel}
             disableConfirm={saving || !isFormValid}
             disableCancel={saving}
-            tabIndex="2"
           >
             {saving && <em>{i18n.saving()}</em>}
             {STATE_UNKNOWN_ERROR === saveState && (

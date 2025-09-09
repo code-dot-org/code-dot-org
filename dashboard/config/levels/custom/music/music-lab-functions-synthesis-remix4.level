@@ -1,0 +1,1262 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2025-07-03T18:43:08.000Z",
+  "level_num": "custom",
+  "user_id": 14639,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "#### Espresso\r\n\r\nThis is an example of an \"Only What You Gave Me\" remix, where tracks from the original song are used in new and interesting ways to change how the song sounds and feels. As you listen, consider the following:\r\n\r\n- Notice how the song alternates between vocal sections and instrumental sections. How does that affect how the song feels?\r\n- Notice how the song repeats the same vocals in different ways throughout the song, but uses different effects or instruments to change how they sound. How does that affect how the song feels?",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "level_data": {
+      "library": "launch2024",
+      "packId": "sabrina_carpenter_espresso",
+      "toolbox": {
+        "blocks": {
+        }
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "next": {
+                "block": {
+                  "type": "procedures_callnoreturn",
+                  "id": "OoIA-01X`0aFlzAk.``]",
+                  "deletable": false,
+                  "movable": false,
+                  "editable": false,
+                  "extraState": {
+                    "name": "start"
+                  },
+                  "next": {
+                    "block": {
+                      "type": "procedures_callnoreturn",
+                      "id": "TvX}Q]E8+d{Z?lzHUk}8",
+                      "deletable": false,
+                      "movable": false,
+                      "editable": false,
+                      "extraState": {
+                        "name": "middle"
+                      },
+                      "next": {
+                        "block": {
+                          "type": "procedures_callnoreturn",
+                          "id": "JAhq|P^nX@)dLe]2Frb)",
+                          "deletable": false,
+                          "movable": false,
+                          "editable": false,
+                          "extraState": {
+                            "name": "end"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "procedures_defnoreturn",
+              "x": 130,
+              "y": 150,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "extraState": {
+                "procedureId": "uqVh*_f?UG,#[,4i,qzL",
+                "initialDeleteConfig": false,
+                "initialEditConfig": false,
+                "initialMoveConfig": false
+              },
+              "fields": {
+                "NAME": "start"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "set_effect_at_current_location_simple2",
+                    "id": "set_effect_at_current_location_simple2",
+                    "deletable": false,
+                    "movable": false,
+                    "editable": false,
+                    "fields": {
+                      "effects_name": "<field name=\"effects_name\">volume</field>",
+                      "effects_value": "<field name=\"effects_value\">medium</field>"
+                    },
+                    "next": {
+                      "block": {
+                        "type": "set_effect_at_current_location_simple2",
+                        "id": "3*MjYDU,FjD)i%JmPw{5",
+                        "deletable": false,
+                        "movable": false,
+                        "editable": false,
+                        "fields": {
+                          "effects_name": "<field name=\"effects_name\">filter</field>",
+                          "effects_value": "<field name=\"effects_value\">low</field>"
+                        },
+                        "next": {
+                          "block": {
+                            "type": "set_effect_at_current_location_simple2",
+                            "id": "`_X@!(25Q*++X(%!eTgU",
+                            "deletable": false,
+                            "movable": false,
+                            "editable": false,
+                            "fields": {
+                              "effects_name": "<field name=\"effects_name\">delay</field>",
+                              "effects_value": "<field name=\"effects_value\">low</field>"
+                            },
+                            "next": {
+                              "block": {
+                                "type": "play_sounds_together",
+                                "id": "play_sounds_together",
+                                "deletable": false,
+                                "movable": false,
+                                "editable": false,
+                                "extraState": {
+                                  "disableNextConnection": false
+                                },
+                                "inputs": {
+                                  "code": {
+                                    "block": {
+                                      "type": "play_sound_at_current_location_simple2",
+                                      "id": "(,2/OlYsHaqb.|X:x4p$",
+                                      "deletable": false,
+                                      "movable": false,
+                                      "editable": false,
+                                      "extraState": {
+                                        "disableNextConnection": false
+                                      },
+                                      "fields": {
+                                        "sound": "sabrina_carpenter_espresso/drums_intro"
+                                      },
+                                      "next": {
+                                        "block": {
+                                          "type": "repeat_simple2",
+                                          "id": "uh5#WI[20Dt4Ae^!cK1I",
+                                          "deletable": false,
+                                          "movable": false,
+                                          "editable": false,
+                                          "extraState": {
+                                            "disableNextConnection": false
+                                          },
+                                          "fields": {
+                                            "times": 2
+                                          },
+                                          "inputs": {
+                                            "code": {
+                                              "block": {
+                                                "type": "play_sound_at_current_location_simple2",
+                                                "id": "n@D9XM(+HBfZCwzAVOW]",
+                                                "deletable": false,
+                                                "movable": false,
+                                                "editable": false,
+                                                "extraState": {
+                                                  "disableNextConnection": false
+                                                },
+                                                "fields": {
+                                                  "sound": "electro/bass_synth_blocks"
+                                                }
+                                              }
+                                            }
+                                          },
+                                          "next": {
+                                            "block": {
+                                              "type": "repeat_simple2",
+                                              "id": "repeat_simple2",
+                                              "deletable": false,
+                                              "movable": false,
+                                              "editable": false,
+                                              "extraState": {
+                                                "disableNextConnection": false
+                                              },
+                                              "fields": {
+                                                "times": 6
+                                              },
+                                              "inputs": {
+                                                "code": {
+                                                  "block": {
+                                                    "type": "play_sound_at_current_location_simple2",
+                                                    "id": "Z?B(7Cv-lczB{_@PO#C9",
+                                                    "deletable": false,
+                                                    "movable": false,
+                                                    "editable": false,
+                                                    "extraState": {
+                                                      "disableNextConnection": false
+                                                    },
+                                                    "fields": {
+                                                      "sound": "sabrina_carpenter_espresso/mmm"
+                                                    }
+                                                  }
+                                                }
+                                              },
+                                              "next": {
+                                                "block": {
+                                                  "type": "repeat_simple2",
+                                                  "id": "uFyF#8Gw}^f1MT0|/S,L",
+                                                  "deletable": false,
+                                                  "movable": false,
+                                                  "editable": false,
+                                                  "extraState": {
+                                                    "disableNextConnection": false
+                                                  },
+                                                  "fields": {
+                                                    "times": 2
+                                                  },
+                                                  "inputs": {
+                                                    "code": {
+                                                      "block": {
+                                                        "type": "procedures_callnoreturn",
+                                                        "id": "=KE!HOd0=6f7D#md3X,^",
+                                                        "deletable": false,
+                                                        "movable": false,
+                                                        "editable": false,
+                                                        "extraState": {
+                                                          "name": "extra1"
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                },
+                                "next": {
+                                  "block": {
+                                    "type": "set_effect_at_current_location_simple2",
+                                    "id": "EQ(e1Z?,IE[PP0YzJZ,C",
+                                    "deletable": false,
+                                    "movable": false,
+                                    "editable": false,
+                                    "fields": {
+                                      "effects_name": "<field name=\"effects_name\">volume</field>",
+                                      "effects_value": "<field name=\"effects_value\">normal</field>"
+                                    },
+                                    "next": {
+                                      "block": {
+                                        "type": "set_effect_at_current_location_simple2",
+                                        "id": "-Cre5POr;U2KIsmnv$Ez",
+                                        "deletable": false,
+                                        "movable": false,
+                                        "editable": false,
+                                        "fields": {
+                                          "effects_name": "<field name=\"effects_name\">filter</field>",
+                                          "effects_value": "<field name=\"effects_value\">normal</field>"
+                                        },
+                                        "next": {
+                                          "block": {
+                                            "type": "set_effect_at_current_location_simple2",
+                                            "id": "r5(qT[n7C8X(Kf-||,;Y",
+                                            "deletable": false,
+                                            "movable": false,
+                                            "editable": false,
+                                            "fields": {
+                                              "effects_name": "<field name=\"effects_name\">delay</field>",
+                                              "effects_value": "<field name=\"effects_value\">normal</field>"
+                                            },
+                                            "next": {
+                                              "block": {
+                                                "type": "play_sounds_together",
+                                                "id": "K,M~!]vCfI:,AbOFWX.i",
+                                                "deletable": false,
+                                                "movable": false,
+                                                "editable": false,
+                                                "extraState": {
+                                                  "disableNextConnection": false
+                                                },
+                                                "inputs": {
+                                                  "code": {
+                                                    "block": {
+                                                      "type": "play_sound_at_current_location_simple2",
+                                                      "id": "$4[w7[t0b0g]70G.Hzqg",
+                                                      "deletable": false,
+                                                      "movable": false,
+                                                      "editable": false,
+                                                      "extraState": {
+                                                        "disableNextConnection": false
+                                                      },
+                                                      "fields": {
+                                                        "sound": "rock/amped_alternate_bass"
+                                                      },
+                                                      "next": {
+                                                        "block": {
+                                                          "type": "play_sound_at_current_location_simple2",
+                                                          "id": "nK@`+^tYyLEFZDF2{ctR",
+                                                          "deletable": false,
+                                                          "movable": false,
+                                                          "editable": false,
+                                                          "extraState": {
+                                                            "disableNextConnection": false
+                                                          },
+                                                          "fields": {
+                                                            "sound": "sabrina_carpenter_espresso/bass_main"
+                                                          },
+                                                          "next": {
+                                                            "block": {
+                                                              "type": "play_sound_at_current_location_simple2",
+                                                              "id": "j3)w*2$gWTADkKG}sXsb",
+                                                              "deletable": false,
+                                                              "movable": false,
+                                                              "editable": false,
+                                                              "extraState": {
+                                                                "disableNextConnection": false
+                                                              },
+                                                              "fields": {
+                                                                "sound": "hiphop/relaxed_beat"
+                                                              },
+                                                              "next": {
+                                                                "block": {
+                                                                  "type": "play_sounds_sequential",
+                                                                  "id": ";;_=pz%FBHfPP$o.{%$f",
+                                                                  "deletable": false,
+                                                                  "movable": false,
+                                                                  "editable": false,
+                                                                  "extraState": {
+                                                                    "disableNextConnection": false
+                                                                  },
+                                                                  "inputs": {
+                                                                    "code": {
+                                                                      "block": {
+                                                                        "type": "play_sound_at_current_location_simple2",
+                                                                        "id": ",=c.e|@gz2_j~@RgZg{*",
+                                                                        "deletable": false,
+                                                                        "movable": false,
+                                                                        "editable": false,
+                                                                        "extraState": {
+                                                                          "disableNextConnection": false
+                                                                        },
+                                                                        "fields": {
+                                                                          "sound": "sabrina_carpenter_espresso/wow"
+                                                                        },
+                                                                        "next": {
+                                                                          "block": {
+                                                                            "type": "play_sounds_together",
+                                                                            "id": "$g179@oZq-_@7HwQHcPi",
+                                                                            "deletable": false,
+                                                                            "movable": false,
+                                                                            "editable": false,
+                                                                            "extraState": {
+                                                                              "disableNextConnection": false
+                                                                            },
+                                                                            "inputs": {
+                                                                              "code": {
+                                                                                "block": {
+                                                                                  "type": "play_sound_at_current_location_simple2",
+                                                                                  "id": "|f2^5H@ESpNq}MA~_k9]",
+                                                                                  "deletable": false,
+                                                                                  "movable": false,
+                                                                                  "editable": false,
+                                                                                  "extraState": {
+                                                                                    "disableNextConnection": false
+                                                                                  },
+                                                                                  "fields": {
+                                                                                    "sound": "electro/bass_synth_blocks"
+                                                                                  },
+                                                                                  "next": {
+                                                                                    "block": {
+                                                                                      "type": "play_sound_at_current_location_simple2",
+                                                                                      "id": "IMT=)WDedlKdr|HH6K3n",
+                                                                                      "deletable": false,
+                                                                                      "movable": false,
+                                                                                      "editable": false,
+                                                                                      "extraState": {
+                                                                                        "disableNextConnection": false
+                                                                                      },
+                                                                                      "fields": {
+                                                                                        "sound": "hiphop/horns"
+                                                                                      },
+                                                                                      "next": {
+                                                                                        "block": {
+                                                                                          "type": "play_sound_at_current_location_simple2",
+                                                                                          "id": "03g-OMCx]7xXD5I64`DI",
+                                                                                          "deletable": false,
+                                                                                          "movable": false,
+                                                                                          "editable": false,
+                                                                                          "extraState": {
+                                                                                            "disableNextConnection": false
+                                                                                          },
+                                                                                          "fields": {
+                                                                                            "sound": "sabrina_carpenter_espresso/synth"
+                                                                                          },
+                                                                                          "next": {
+                                                                                            "block": {
+                                                                                              "type": "play_sound_at_current_location_simple2",
+                                                                                              "id": "O3[*eCM/znWs;2`d.z$i",
+                                                                                              "deletable": false,
+                                                                                              "movable": false,
+                                                                                              "editable": false,
+                                                                                              "extraState": {
+                                                                                                "disableNextConnection": false
+                                                                                              },
+                                                                                              "fields": {
+                                                                                                "sound": "sabrina_carpenter_espresso/drums_main_beat"
+                                                                                              }
+                                                                                            }
+                                                                                          }
+                                                                                        }
+                                                                                      }
+                                                                                    }
+                                                                                  }
+                                                                                }
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "Q6)Z^UR0?W=SuE5;_B%M",
+              "x": 470,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "extraState": {
+                "procedureId": "uHNYT?Tx6Ss6P~PK:$y9",
+                "initialDeleteConfig": false,
+                "initialEditConfig": false,
+                "initialMoveConfig": false
+              },
+              "fields": {
+                "NAME": "middle"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "play_sounds_together",
+                    "id": "T%2^M$+T~Yv@mGJdL6CP",
+                    "deletable": false,
+                    "movable": false,
+                    "editable": false,
+                    "extraState": {
+                      "disableNextConnection": false
+                    },
+                    "inputs": {
+                      "code": {
+                        "block": {
+                          "type": "play_sound_at_current_location_simple2",
+                          "id": "6.TP~$7e.[t{{lE_.n(l",
+                          "deletable": false,
+                          "movable": false,
+                          "editable": false,
+                          "extraState": {
+                            "disableNextConnection": false
+                          },
+                          "fields": {
+                            "sound": "sabrina_carpenter_espresso/drums_intro"
+                          },
+                          "next": {
+                            "block": {
+                              "type": "play_sound_at_current_location_simple2",
+                              "id": "1BRCl~ELPA?1K;17kdTN",
+                              "deletable": false,
+                              "movable": false,
+                              "editable": false,
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
+                              "fields": {
+                                "sound": "electro/synth_cave"
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "repeat_simple2",
+                                  "id": "SNNsh/$#gkKw}a.6glT9",
+                                  "deletable": false,
+                                  "movable": false,
+                                  "editable": false,
+                                  "extraState": {
+                                    "disableNextConnection": false
+                                  },
+                                  "fields": {
+                                    "times": 2
+                                  },
+                                  "inputs": {
+                                    "code": {
+                                      "block": {
+                                        "type": "play_sounds_together",
+                                        "id": "n|xh:.$#%6AdxvOjJu]V",
+                                        "deletable": false,
+                                        "movable": false,
+                                        "editable": false,
+                                        "extraState": {
+                                          "disableNextConnection": false
+                                        },
+                                        "inputs": {
+                                          "code": {
+                                            "block": {
+                                              "type": "procedures_callnoreturn",
+                                              "id": "%7J09Mfr~^ji.3wahlka",
+                                              "deletable": false,
+                                              "movable": false,
+                                              "editable": false,
+                                              "extraState": {
+                                                "name": "extra1"
+                                              },
+                                              "next": {
+                                                "block": {
+                                                  "type": "procedures_callnoreturn",
+                                                  "id": "%(mBCX9B4RfwUg((Qg=~",
+                                                  "deletable": false,
+                                                  "movable": false,
+                                                  "editable": false,
+                                                  "extraState": {
+                                                    "name": "extra2"
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "next": {
+                      "block": {
+                        "type": "play_sounds_together",
+                        "id": "N]884*W8|hL@|Fl^D^[Z",
+                        "deletable": false,
+                        "movable": false,
+                        "editable": false,
+                        "extraState": {
+                          "disableNextConnection": false
+                        },
+                        "inputs": {
+                          "code": {
+                            "block": {
+                              "type": "play_sound_at_current_location_simple2",
+                              "id": "1}{5Ddl3szsSh:aviKK4",
+                              "deletable": false,
+                              "movable": false,
+                              "editable": false,
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
+                              "fields": {
+                                "sound": "sabrina_carpenter_espresso/drums_intro"
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "play_sound_at_current_location_simple2",
+                                  "id": "?TXS^k!-2;wBJnNat2bh",
+                                  "deletable": false,
+                                  "movable": false,
+                                  "editable": false,
+                                  "extraState": {
+                                    "disableNextConnection": false
+                                  },
+                                  "fields": {
+                                    "sound": "sabrina_carpenter_espresso/keys_chorus_2"
+                                  },
+                                  "next": {
+                                    "block": {
+                                      "type": "repeat_simple2",
+                                      "id": "k|30wx{c1eeOyhpD%j.0",
+                                      "deletable": false,
+                                      "movable": false,
+                                      "editable": false,
+                                      "extraState": {
+                                        "disableNextConnection": false
+                                      },
+                                      "fields": {
+                                        "times": 2
+                                      },
+                                      "inputs": {
+                                        "code": {
+                                          "block": {
+                                            "type": "play_sound_at_current_location_simple2",
+                                            "id": "09r||mOj}Wun8Jm_[Fc`",
+                                            "deletable": false,
+                                            "movable": false,
+                                            "editable": false,
+                                            "extraState": {
+                                              "disableNextConnection": false
+                                            },
+                                            "fields": {
+                                              "sound": "acoustic_arcade/lead_swoop"
+                                            },
+                                            "next": {
+                                              "block": {
+                                                "type": "play_rest_at_current_location_simple2",
+                                                "id": "play_rest_at_current_location_simple2",
+                                                "deletable": false,
+                                                "movable": false,
+                                                "editable": false,
+                                                "extraState": {
+                                                  "disableNextConnection": false
+                                                },
+                                                "fields": {
+                                                  "rest_duration": "<field name=\"rest_duration\">1</field>"
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "next": {
+                                        "block": {
+                                          "type": "repeat_simple2",
+                                          "id": "z|,P8L_eg_F1W.oD?vTT",
+                                          "deletable": false,
+                                          "movable": false,
+                                          "editable": false,
+                                          "extraState": {
+                                            "disableNextConnection": false
+                                          },
+                                          "fields": {
+                                            "times": 2
+                                          },
+                                          "inputs": {
+                                            "code": {
+                                              "block": {
+                                                "type": "play_sound_at_current_location_simple2",
+                                                "id": "z7dx^HOmXcqhI?EqVPWM",
+                                                "deletable": false,
+                                                "movable": false,
+                                                "editable": false,
+                                                "extraState": {
+                                                  "disableNextConnection": false
+                                                },
+                                                "fields": {
+                                                  "sound": "pop/sub_bass_wave"
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "next": {
+                          "block": {
+                            "type": "play_sounds_sequential",
+                            "id": "play_sounds_sequential",
+                            "deletable": false,
+                            "movable": false,
+                            "editable": false,
+                            "extraState": {
+                              "disableNextConnection": false
+                            },
+                            "inputs": {
+                              "code": {
+                                "block": {
+                                  "type": "set_effect_at_current_location_simple2",
+                                  "id": "|*miee#jI^fe|W(AHVjx",
+                                  "deletable": false,
+                                  "movable": false,
+                                  "editable": false,
+                                  "fields": {
+                                    "effects_name": "<field name=\"effects_name\">delay</field>",
+                                    "effects_value": "<field name=\"effects_value\">medium</field>"
+                                  },
+                                  "next": {
+                                    "block": {
+                                      "type": "play_sound_at_current_location_simple2",
+                                      "id": "[R-*u63=(9yW$[T?2;YR",
+                                      "deletable": false,
+                                      "movable": false,
+                                      "editable": false,
+                                      "extraState": {
+                                        "disableNextConnection": false
+                                      },
+                                      "fields": {
+                                        "sound": "sabrina_carpenter_espresso/vocals_adlib"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "O/R,a}lM/6tB)$mD^w%B",
+              "x": 510,
+              "y": 870,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "extraState": {
+                "procedureId": "mXipACRsQ_cpSWp}$m|(",
+                "initialDeleteConfig": false,
+                "initialEditConfig": false,
+                "initialMoveConfig": false
+              },
+              "fields": {
+                "NAME": "extra1"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "play_sound_at_current_location_simple2",
+                    "id": "R@F*BB6N8c,oFL^?z^Xj",
+                    "deletable": false,
+                    "movable": false,
+                    "editable": false,
+                    "extraState": {
+                      "disableNextConnection": false
+                    },
+                    "fields": {
+                      "sound": "sabrina_carpenter_espresso/vocals_adlib_espresso"
+                    },
+                    "next": {
+                      "block": {
+                        "type": "play_sound_at_current_location_simple2",
+                        "id": "04x(8,|T2[75|$C?HkyO",
+                        "deletable": false,
+                        "movable": false,
+                        "editable": false,
+                        "extraState": {
+                          "disableNextConnection": false
+                        },
+                        "fields": {
+                          "sound": "sabrina_carpenter_espresso/vocals_now_hes"
+                        },
+                        "next": {
+                          "block": {
+                            "type": "play_sound_at_current_location_simple2",
+                            "id": "AM[1YXfna1}*fX8e*E,n",
+                            "deletable": false,
+                            "movable": false,
+                            "editable": false,
+                            "extraState": {
+                              "disableNextConnection": false
+                            },
+                            "fields": {
+                              "sound": "sabrina_carpenter_espresso/vocals_adlib_i_know"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "(-ui@p3^UjU/vnMoEok1",
+              "x": 750,
+              "y": 870,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "extraState": {
+                "procedureId": "a4/9C.B^o=qZP+.eE4ZE",
+                "initialDeleteConfig": false,
+                "initialEditConfig": false,
+                "initialMoveConfig": false
+              },
+              "fields": {
+                "NAME": "extra2"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "play_sound_at_current_location_simple2",
+                    "id": "{|V_~]~[m3hLyK=l$h/-",
+                    "deletable": false,
+                    "movable": false,
+                    "editable": false,
+                    "extraState": {
+                      "disableNextConnection": false
+                    },
+                    "fields": {
+                      "sound": "sabrina_carpenter_espresso/mmm"
+                    },
+                    "next": {
+                      "block": {
+                        "type": "play_sound_at_current_location_simple2",
+                        "id": "BxOF.Xt}1y#9Bs7}!DY6",
+                        "deletable": false,
+                        "movable": false,
+                        "editable": false,
+                        "extraState": {
+                          "disableNextConnection": false
+                        },
+                        "fields": {
+                          "sound": "sabrina_carpenter_espresso/wow"
+                        },
+                        "next": {
+                          "block": {
+                            "type": "play_sound_at_current_location_simple2",
+                            "id": "1wp^YsfASVLt{03_m(mU",
+                            "deletable": false,
+                            "movable": false,
+                            "editable": false,
+                            "extraState": {
+                              "disableNextConnection": false
+                            },
+                            "fields": {
+                              "sound": "sabrina_carpenter_espresso/vocals_adlib"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": ":8FAksmb^*RzA(!f0L{A",
+              "x": 727,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "extraState": {
+                "procedureId": "?ohO}Nfo+oU#kA7+~$}U",
+                "initialDeleteConfig": false,
+                "initialEditConfig": false,
+                "initialMoveConfig": false
+              },
+              "fields": {
+                "NAME": "end"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "play_sounds_together",
+                    "id": "IOFLZt)Y*vNl%vP7r{S3",
+                    "deletable": false,
+                    "movable": false,
+                    "editable": false,
+                    "extraState": {
+                      "disableNextConnection": false
+                    },
+                    "inputs": {
+                      "code": {
+                        "block": {
+                          "type": "repeat_simple2",
+                          "id": "hZDX7DF/acisI[PFL((6",
+                          "deletable": false,
+                          "movable": false,
+                          "editable": false,
+                          "extraState": {
+                            "disableNextConnection": false
+                          },
+                          "fields": {
+                            "times": 2
+                          },
+                          "inputs": {
+                            "code": {
+                              "block": {
+                                "type": "play_sounds_together",
+                                "id": "sbIlj(*t]vy#)Fo)GWPb",
+                                "deletable": false,
+                                "movable": false,
+                                "editable": false,
+                                "extraState": {
+                                  "disableNextConnection": false
+                                },
+                                "inputs": {
+                                  "code": {
+                                    "block": {
+                                      "type": "play_sound_at_current_location_simple2",
+                                      "id": "{!No3BoJEEOnC:]Q$jW9",
+                                      "deletable": false,
+                                      "movable": false,
+                                      "editable": false,
+                                      "extraState": {
+                                        "disableNextConnection": false
+                                      },
+                                      "fields": {
+                                        "sound": "sabrina_carpenter_espresso/guitar_intro"
+                                      },
+                                      "next": {
+                                        "block": {
+                                          "type": "play_sound_at_current_location_simple2",
+                                          "id": "mD)a=xvo;2`oEF?=p*IE",
+                                          "deletable": false,
+                                          "movable": false,
+                                          "editable": false,
+                                          "extraState": {
+                                            "disableNextConnection": false
+                                          },
+                                          "fields": {
+                                            "sound": "sabrina_carpenter_espresso/keys_intro"
+                                          },
+                                          "next": {
+                                            "block": {
+                                              "type": "play_sound_at_current_location_simple2",
+                                              "id": "=rZY}b?khUC,1DOf;qe!",
+                                              "deletable": false,
+                                              "movable": false,
+                                              "editable": false,
+                                              "extraState": {
+                                                "disableNextConnection": false
+                                              },
+                                              "fields": {
+                                                "sound": "sabrina_carpenter_espresso/bass_intro"
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "next": {
+                            "block": {
+                              "type": "repeat_simple2",
+                              "id": "%CB];[/3~aO/sTp}4D+Z",
+                              "deletable": false,
+                              "movable": false,
+                              "editable": false,
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
+                              "fields": {
+                                "times": 4
+                              },
+                              "inputs": {
+                                "code": {
+                                  "block": {
+                                    "type": "play_rest_at_current_location_simple2",
+                                    "id": "+ryha|m{{)MY7UN3+8n;",
+                                    "deletable": false,
+                                    "movable": false,
+                                    "editable": false,
+                                    "extraState": {
+                                      "disableNextConnection": false
+                                    },
+                                    "fields": {
+                                      "rest_duration": "<field name=\"rest_duration\">1</field>"
+                                    },
+                                    "next": {
+                                      "block": {
+                                        "type": "play_sound_at_current_location_simple2",
+                                        "id": "^)s|=}#hhh$9BuS3No~8",
+                                        "deletable": false,
+                                        "movable": false,
+                                        "editable": false,
+                                        "extraState": {
+                                          "disableNextConnection": false
+                                        },
+                                        "fields": {
+                                          "sound": "sabrina_carpenter_espresso/drums_fill"
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "play_sounds_sequential",
+                                  "id": "D}#kL3j:2D[^@4X-^bh]",
+                                  "deletable": false,
+                                  "movable": false,
+                                  "editable": false,
+                                  "extraState": {
+                                    "disableNextConnection": false
+                                  },
+                                  "inputs": {
+                                    "code": {
+                                      "block": {
+                                        "type": "play_sound_at_current_location_simple2",
+                                        "id": "9eqK.XFhyO{hwK;ey9v8",
+                                        "deletable": false,
+                                        "movable": false,
+                                        "editable": false,
+                                        "extraState": {
+                                          "disableNextConnection": false
+                                        },
+                                        "fields": {
+                                          "sound": "sabrina_carpenter_espresso/vocals_adlib_espresso"
+                                        },
+                                        "next": {
+                                          "block": {
+                                            "type": "procedures_callnoreturn",
+                                            "id": "$kxOU[JC6g;0d/,KDz,?",
+                                            "deletable": false,
+                                            "movable": false,
+                                            "editable": false,
+                                            "extraState": {
+                                              "name": "extra 3"
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "6Jf%ww$cn#/cO]Vld=B:",
+              "x": 950,
+              "y": 850,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "extraState": {
+                "procedureId": "Z[{M;C)_)M}/W%auLWQn",
+                "initialDeleteConfig": false,
+                "initialEditConfig": false,
+                "initialMoveConfig": false
+              },
+              "fields": {
+                "NAME": "extra 3"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "play_sound_at_current_location_simple2",
+                    "id": "SGqERf??P)n2:`DY}}Q7",
+                    "deletable": false,
+                    "movable": false,
+                    "editable": false,
+                    "extraState": {
+                      "disableNextConnection": false
+                    },
+                    "fields": {
+                      "sound": "electro/crackle"
+                    },
+                    "next": {
+                      "block": {
+                        "type": "play_sound_at_current_location_simple2",
+                        "id": "|SBYExC#=,Fr94i~_]*e",
+                        "deletable": false,
+                        "movable": false,
+                        "editable": false,
+                        "extraState": {
+                          "disableNextConnection": false
+                        },
+                        "fields": {
+                          "sound": "sabrina_carpenter_espresso/vocals_now_hes"
+                        },
+                        "next": {
+                          "block": {
+                            "type": "play_sound_at_current_location_simple2",
+                            "id": "}n@;@x[f!.h/11jMWElO",
+                            "deletable": false,
+                            "movable": false,
+                            "editable": false,
+                            "extraState": {
+                              "disableNextConnection": false
+                            },
+                            "fields": {
+                              "sound": "sabrina_carpenter_espresso/vocals_chorus_backgrounds"
+                            },
+                            "next": {
+                              "block": {
+                                "type": "play_sound_at_current_location_simple2",
+                                "id": "V{,n8A%RCR-vmNUxFkkA",
+                                "deletable": false,
+                                "movable": false,
+                                "editable": false,
+                                "extraState": {
+                                  "disableNextConnection": false
+                                },
+                                "fields": {
+                                  "sound": "sabrina_carpenter_espresso/vocals_adlib"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "procedures": [
+          {
+            "id": "uqVh*_f?UG,#[,4i,qzL",
+            "name": "start",
+            "returnTypes": null
+          },
+          {
+            "id": "uHNYT?Tx6Ss6P~PK:$y9",
+            "name": "middle",
+            "returnTypes": null
+          },
+          {
+            "id": "mXipACRsQ_cpSWp}$m|(",
+            "name": "extra1",
+            "returnTypes": null
+          },
+          {
+            "id": "a4/9C.B^o=qZP+.eE4ZE",
+            "name": "extra2",
+            "returnTypes": null
+          },
+          {
+            "id": "?ohO}Nfo+oU#kA7+~$}U",
+            "name": "end",
+            "returnTypes": null
+          },
+          {
+            "id": "Z[{M;C)_)M}/W%auLWQn",
+            "name": "extra 3",
+            "returnTypes": null
+          }
+        ]
+      },
+      "allowChangeStartingPlayheadPosition": false,
+      "validationTimeout": 1
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
+    "display_name": "Espresso",
+    "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/sabrina_carpenter_espresso/sabrina_carpenter_espresso.jpg",
+    "submittable": "false",
+    "validations": [
+      {
+        "key": "music-lab-functions-synthesis-remix4_4b47674d-f263-4dec-b67b-06bcee9c3820",
+        "message": "That was great! <i class=\"fa-solid fa-robot\"></i> DJ Robot learned a lot from listening to that song!",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 59
+          }
+        ]
+      },
+      {
+        "key": "music-lab-functions-synthesis-remix4_d200ba3c-2069-42de-ab9d-e6adde63bb14",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is taking notes on how this outro sounds different from the rest of the song...",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 48
+          }
+        ]
+      },
+      {
+        "key": "music-lab-functions-synthesis-remix4_86b83e3a-6e71-4f6c-bc5a-8d5c2505ee10",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot notices the vibe of this instrumental section is different from before...",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 41
+          }
+        ]
+      },
+      {
+        "key": "music-lab-functions-synthesis-remix4_8a60a44f-7e6e-463b-879c-ddc4bdd167d0",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is taking notes on how these vocals sound different from before...",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 27
+          }
+        ]
+      },
+      {
+        "key": "music-lab-functions-synthesis-remix4_19c5ecd2-5c24-451a-a5ca-daa67554ea83",
+        "message": "Whoa! <i class=\"fa-solid fa-robot\"></i> DJ Robot notices the contrast between the vocals and the instrumental section!",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 19
+          }
+        ]
+      },
+      {
+        "key": "music-lab-functions-synthesis-remix4_9b5fffe5-e3a9-4b4b-bc36-b97c29c41b84",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot notices the vocal tracks right away - they sound so different!",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-07-03T18:43:08.528+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-synthesis-remix2\\\"\"],\"cloned_from\":\"music-lab-functions-synthesis-remix2\"},{\"changed_at\":\"2025-07-03 18:44:28 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"level_data\",\"display_name\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-07-03 19:30:01 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"display_name\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-07-03 19:30:42 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-07-03 20:02:47 +0000\",\"changed\":[\"predict_settings\",\"level_data\",\"validations\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-07-03 20:03:06 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-07-03 20:28:57 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

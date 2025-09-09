@@ -14,10 +14,10 @@ public static int bSearch(ArrayList<Integer> myList, int low, int high, int targ
   int mid = (high + low) / 2;
 
   if (target < myList.get(mid)) {
-    return binarySearch(myList, low, mid - 1, target);
+    return bSearch(myList, low, mid - 1, target);
   }
   else if (target > myList.get(mid)) {
-    return binarySearch(myList, mid + 1, high, target);
+    return bSearch(myList, mid + 1, high, target);
   }
   else if (myList.get(mid).equals(target)) {
     return mid;

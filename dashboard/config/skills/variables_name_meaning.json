@@ -1,0 +1,6 @@
+{
+  "key": "variables_name_meaning",
+  "concept": "variables",
+  "description": "Do variable names reflect the function they represent",
+  "evaluation_criteria": "Do the variables that are declared in student code have names that reflect their function?\n"
+}

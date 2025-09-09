@@ -1,7 +1,7 @@
-import {CodebridgeContextType, FileId, FolderId} from '@cdo/apps/codebridge';
-import {ProjectFileType} from '@cdo/apps/lab2/types';
+import {CodebridgeContextType} from '@cdo/apps/codebridge';
 import {DialogControlInterface} from '@cdo/apps/lab2/views/dialogs';
 import {GenericPromptProps} from '@cdo/apps/lab2/views/dialogs/GenericPrompt';
+import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
 
 import {smallProject} from './test-files';
 
@@ -30,6 +30,20 @@ export const getDialogAlertMock = (
   },
 });
 
+export const getDialogConfirmationMock = (
+  type: 'confirm' | 'neutral' | 'cancel'
+): Pick<DialogControlInterface, 'showDialog'> => ({
+  showDialog: () => {
+    if (type === 'confirm') {
+      return Promise.resolve({type: 'confirm'});
+    } else if (type === 'neutral') {
+      return Promise.resolve({type: 'neutral'});
+    } else {
+      return Promise.resolve({type: 'cancel'});
+    }
+  },
+});
+
 type AnalyticsDataType = {event: string};
 type AnalyticsMockType = (event: string) => void;
 
@@ -44,53 +58,61 @@ export const getAnalyticsMock = (): [AnalyticsDataType, AnalyticsMockType] => {
 
 export const getDefaultCodebridgeContext = () => {
   const context: CodebridgeContextType = {
-    project: smallProject,
     config: {
-      activeLeftNav: '',
-      sideBar: [],
-      instructions: undefined,
-      Instructions: undefined,
       defaultTheme: undefined,
-      leftNav: [],
-      gridLayout: undefined,
-      gridLayoutRows: undefined,
-      gridLayoutColumns: undefined,
       editableFileTypes: [],
-      previewFileTypes: undefined,
       PreviewComponents: undefined,
       languageMapping: {},
-      labeledGridLayouts: undefined,
-      activeGridLayout: undefined,
-      showFileBrowser: false,
+      activeLayout: undefined,
       validMimeTypes: undefined,
+      layoutComponents: {
+        horizontal: () => null,
+        vertical: () => null,
+      },
     },
-    setProject: () => {},
     setConfig: () => {},
     onRun: () => {
       return Promise.resolve();
     },
     onStop: () => {},
-    saveFile: (fileId: FileId, contents: string) => {},
-    closeFile: (fileId: FileId) => {},
-    setActiveFile: (fileId: FileId) => {},
-    newFolder: (arg: {folderName: string; parentId?: FolderId}) => {},
-    toggleOpenFolder: (folderId: FolderId) => {},
-    deleteFolder: (folderId: FolderId) => {},
-    openFile: (fileId: FileId) => {},
-    deleteFile: (fileId: FileId) => {},
-    newFile: (arg: {
-      fileName: string;
-      folderId?: FolderId;
-      contents?: string;
-      validationFileId?: string;
-    }) => {},
-    renameFile: (fileId: FileId, newName: string) => {},
-    moveFile: (fileId: FileId, folderId: FolderId) => {},
-    moveFolder: (folderId: FolderId, parentId: FolderId) => {},
-    renameFolder: (folderId: string, newName: string) => {},
-    setFileType: (fileId: FileId, type: ProjectFileType) => {},
-    rearrangeFiles: (fileIds: FileId[]) => {},
-    startSource: {source: smallProject},
+    startSources: {source: smallProject},
+    levelProperties: {
+      id: 0,
+      name: '',
+      appName: 'pythonlab',
+    },
   };
   return context;
+};
+
+export const mockAppOptions = (innerAppOptions: Record<string, unknown>) => {
+  jest.spyOn(document, 'querySelector').mockReturnValue({
+    dataset: {
+      appoptions: JSON.stringify(innerAppOptions),
+    },
+  } as unknown as Element);
+};
+
+export const getBackpackAPIMock = (
+  fileList: string[] = []
+): BackpackClientApi => {
+  return {
+    hasBackpack: jest.fn(() => true),
+    fetchChannelId: jest.fn(callback => callback()),
+    fetchFile: jest.fn((filename, onError, onSuccess) => {
+      onSuccess(`Mock contents of backpack file ${filename}`);
+    }),
+    getFileList: jest.fn((onError, onSuccess) => {
+      onSuccess(fileList);
+    }),
+    saveFiles: jest.fn(),
+    savePythonlabFile: jest.fn(),
+    deleteFiles: jest.fn(),
+    updateFilesHelper: jest.fn(),
+    saveFilesHelper: jest.fn(),
+    writeSingleFileToBackpack: jest.fn(),
+    deleteFilesHelper: jest.fn(),
+    deleteSingleFileFromBackpack: jest.fn(),
+    onRequestComplete: jest.fn(),
+  } as unknown as BackpackClientApi;
 };

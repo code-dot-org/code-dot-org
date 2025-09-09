@@ -84,7 +84,7 @@ export default class CdoFieldParameter extends GoogleBlockly.FieldVariable {
     if (variable) {
       // Find the index of the procedure parameter to delete
       const paramIndexToDelete = parameters.findIndex(
-        parameter => parameter.getName() === variable.name
+        parameter => parameter.getName() === variable.getName()
       );
 
       // Delete the parameter from the procedure model
@@ -101,7 +101,10 @@ export default class CdoFieldParameter extends GoogleBlockly.FieldVariable {
         const varField = paramBlock?.getField(
           'VAR'
         ) as GoogleBlockly.FieldVariable | null;
-        if (varField && varField.getVariable()?.name === variable.name) {
+        if (
+          varField &&
+          varField.getVariable()?.getName() === variable.getName()
+        ) {
           paramBlock.dispose(true);
         }
       });
@@ -199,42 +202,6 @@ export default class CdoFieldParameter extends GoogleBlockly.FieldVariable {
     }
     return {definitionBlock, workspace};
   }
-  /**
-   * Override of createTextArrow_ to fix the arrow position on Safari.
-   * We need to add dominant-baseline="central" to the arrow element in order to
-   * center it on Safari.
-   *  @override */
-  createTextArrow_() {
-    const arrow = Blockly.utils.dom.createSvgElement(
-      Blockly.utils.Svg.TSPAN,
-      {},
-      this.textElement_
-    );
-    arrow.appendChild(
-      document.createTextNode(
-        this.getSourceBlock()?.RTL
-          ? Blockly.FieldDropdown.ARROW_CHAR + ' '
-          : ' ' + Blockly.FieldDropdown.ARROW_CHAR
-      )
-    );
-
-    /**
-     * Begin CDO customization
-     */
-    arrow.setAttribute('dominant-baseline', 'central');
-    /**
-     * End CDO customization
-     */
-
-    if (this.getSourceBlock()?.RTL) {
-      this.getTextElement().insertBefore(arrow, this.textContent_);
-    } else {
-      this.getTextElement().appendChild(arrow);
-    }
-    // this.arrow is private in the parent.
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    (this as any).arrow = arrow;
-  }
 
   menuGenerator_ = function (
     this: GoogleBlockly.FieldDropdown
@@ -271,6 +238,7 @@ export const getAddParameterButtonWithCallback = (
 ) => {
   const addParameterCallbackKey = 'addParameterCallback';
   workspace.registerButtonCallback(addParameterCallbackKey, () => {
+    workspace.hideChaff();
     CdoFieldParameter.parameterPrompt({
       promptText: commonI18n.newParameterTitle(),
       confirmButtonLabel: commonI18n.create(),

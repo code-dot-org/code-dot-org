@@ -1,10 +1,41 @@
+import '@testing-library/jest-dom';
+import {fireEvent, render, screen} from '@testing-library/react';
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
 import {ParticipantAudience} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import SingleSectionSetUp from '@cdo/apps/templates/sectionsRefresh/SingleSectionSetUp';
+import experiments from '@cdo/apps/util/experiments';
 
 describe('SingleSectionSetUp', () => {
+  const renderComponent = (
+    updateSection = () => {},
+    batchUpdateSection = () => {}
+  ) => {
+    return render(
+      <SingleSectionSetUp
+        sectionNum={1}
+        section={{}}
+        updateSection={updateSection}
+        batchUpdateSection={batchUpdateSection}
+        isNewSection={false}
+        isLoading={false}
+      />
+    );
+  };
+
+  let updateSectionSpy;
+  let batchUpdateSectionSpy;
+
+  beforeEach(() => {
+    updateSectionSpy = jest.fn();
+    batchUpdateSectionSpy = jest.fn();
+  });
+
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
+
   it('calls updateSection when name is updated', () => {
     const updateSectionSpy = jest.fn();
     const wrapper = shallow(
@@ -70,5 +101,31 @@ describe('SingleSectionSetUp', () => {
       target: {setCustomValidity: () => {}, checked: true},
     });
     expect(updateSectionSpy).toHaveBeenCalledTimes(1);
+  });
+
+  it('renders section avatar and button when teacher-homepage-v2 experiment is enabled', () => {
+    experiments.setEnabled('teacher-homepage-v2', true);
+    renderComponent();
+    screen.getByText('Avatar');
+    screen.getByText('Edit avatar');
+  });
+
+  it('displays avatar edit dialog when Edit Avatar is clicked', () => {
+    experiments.setEnabled('teacher-homepage-v2', true);
+    renderComponent();
+    const dialogButton = screen.getByText('Edit avatar');
+    fireEvent.click(dialogButton);
+    screen.getByText('Choose an emoji');
+    screen.getByText('Choose a background color');
+  });
+
+  it('calls batchUpdateSection when avatar is updated', () => {
+    experiments.setEnabled('teacher-homepage-v2', true);
+    renderComponent(updateSectionSpy, batchUpdateSectionSpy);
+    const dialogButton = screen.getByText('Edit avatar');
+    fireEvent.click(dialogButton);
+    const avatarSelectButton = screen.getByText('Select avatar');
+    fireEvent.click(avatarSelectButton);
+    expect(batchUpdateSectionSpy).toHaveBeenCalled();
   });
 });

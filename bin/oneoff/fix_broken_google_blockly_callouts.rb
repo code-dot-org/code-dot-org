@@ -2,7 +2,7 @@
 
 require_relative '../../dashboard/config/environment'
 
-DRY_RUN = true
+DRY_RUN = false
 
 # This script finds callouts written for CDO Blockly and adds duplicate versions of those
 # callouts for Google Blockly. If the Google Blockly version already exists for the level,

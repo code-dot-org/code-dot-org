@@ -16,6 +16,11 @@ const defaultStyle = {
   left: '50%',
 };
 
+/*
+  Makes confetti appear first behind and then in front of any HTML element.
+  Confetti appears when the `active` prop is changed from false to true.
+  `active` must start false in order to show confetti.
+*/
 export default class BackToFrontConfetti extends React.Component {
   static propTypes = {
     style: PropTypes.object,

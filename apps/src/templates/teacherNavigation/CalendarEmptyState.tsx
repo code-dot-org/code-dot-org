@@ -1,5 +1,4 @@
 import React from 'react';
-import {useSelector} from 'react-redux';
 
 import CalendarNotAvailable from '@cdo/apps/templates/teacherNavigation/images/CalendarNotAvailable.svg';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -8,25 +7,23 @@ import i18n from '@cdo/locale';
 import {selectedSectionSelector} from '../teacherDashboard/teacherSectionsReduxSelectors';
 import {Section} from '../teacherDashboard/types/teacherSectionTypes';
 
-import {EmptyState, EmptyStateContent} from './EmptyState';
+import {EmptyState, EmptyStateProps} from './EmptyState';
 import {
   getNoCurriculumAssignedEmptyState,
   getNoUnitAssignedForCalendarOrLessonMaterials,
 } from './EmptyStateUtils';
 
 export const CalendarEmptyState: React.FC = () => {
-  const unitName = useSelector(
-    (state: {unitSelection: {unitName: string}}) => state.unitSelection.unitName
-  );
-
   const selectedSection = useAppSelector(selectedSectionSelector);
-  const versionYear = useAppSelector(state => state.calendar?.versionYear);
+  const versionYear = useAppSelector(state => {
+    return state.calendar?.versionYear;
+  });
   const isLegacyScript = versionYear ? versionYear < 2021 : false;
   const hasCalendar = useAppSelector(state => state.calendar?.showCalendar);
   const showNoCurriculumAssigned = !selectedSection.courseOfferingId;
   const emptyStateDetails = generateCalendarEmptyState(
     showNoCurriculumAssigned,
-    unitName,
+    selectedSection.unitName,
     selectedSection,
     isLegacyScript,
     hasCalendar
@@ -36,12 +33,12 @@ export const CalendarEmptyState: React.FC = () => {
     return null;
   }
 
-  return <EmptyState emptyStateDetails={emptyStateDetails} />;
+  return <EmptyState {...emptyStateDetails} />;
 };
 
 export const getNoCalendarForLegacyCourses = (
   courseName: string
-): EmptyStateContent => {
+): EmptyStateProps => {
   return {
     headline: i18n.calendarNotAvailable(),
     descriptionText: i18n.calendarLegacyMessage({courseName: courseName}),
@@ -52,7 +49,7 @@ export const getNoCalendarForLegacyCourses = (
   };
 };
 
-export const getNoCalendarForThisUnit: EmptyStateContent = {
+export const getNoCalendarForThisUnit: EmptyStateProps = {
   headline: i18n.calendarNotAvailable(),
   descriptionText: null,
   imageComponent: (
@@ -67,7 +64,7 @@ function generateCalendarEmptyState(
   selectedSection: Section,
   isLegacyScript: boolean,
   hasCalendar: boolean
-): EmptyStateContent | null {
+): EmptyStateProps | null {
   let calendarEmptyState = null;
 
   if (showNoCurriculumAssigned) {

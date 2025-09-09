@@ -1,3 +1,4 @@
+import {Heading1} from '@code-dot-org/component-library/typography';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -20,7 +21,9 @@ const GraduateToNextLevel = ({scriptName, courseTitle, courseDesc}) => {
   return (
     <>
       <div id="next-level-block">
-        <h1 id="next-level-title">{i18n.congratsNextLevelHeading()}</h1>
+        <Heading1 id="next-level-title">
+          {i18n.congratsNextLevelHeading()}
+        </Heading1>
         <VerticalImageResourceCard
           id={`course-card-${courseInfo.scriptName}`}
           title={courseTitle || i18n.introToAppLabTitle()}

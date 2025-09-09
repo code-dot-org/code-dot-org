@@ -1,7 +1,7 @@
+import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
 import React from 'react';
 import {useSelector} from 'react-redux';
 
-import SegmentedButtons from '@cdo/apps/componentLibrary/segmentedButtons/SegmentedButtons';
 import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
@@ -11,11 +11,6 @@ import {Version} from '@cdo/apps/templates/courseOverview/TeacherCourseOverview'
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import MultipleAssignButton from '@cdo/apps/templates/MultipleAssignButton';
 import AssignmentVersionSelector from '@cdo/apps/templates/teacherDashboard/AssignmentVersionSelector';
-import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
-import {
-  isOnTeacherDashboard,
-  showV2TeacherDashboard,
-} from '@cdo/apps/templates/teacherNavigation/TeacherNavFlagUtils';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 
@@ -41,19 +36,13 @@ interface TeacherResource {
   isRollup: boolean;
 }
 
-interface DropdownSection {
-  id: number;
-  name: string;
-  isAssigned: boolean;
-}
-
 interface UnitOverviewActionRowProps {
   courseVersionId: number;
   versions: Version[];
   showAssignButton: boolean;
   currentCourseId: number;
   courseOfferingId: number;
-  courseLink: string;
+  isSingleUnitCourse: boolean;
   participantAudience: string;
   isMigrated: boolean;
   scriptOverviewPdfUrl: string;
@@ -116,7 +105,7 @@ const UnitOverviewActionRow: React.FC<UnitOverviewActionRowProps> = ({
   showAssignButton,
   currentCourseId,
   courseOfferingId,
-  courseLink,
+  isSingleUnitCourse,
   participantAudience,
   isMigrated,
   scriptOverviewPdfUrl,
@@ -126,15 +115,6 @@ const UnitOverviewActionRow: React.FC<UnitOverviewActionRowProps> = ({
 }) => {
   const [confirmationMessageOpen, setConfirmationMessageOpen] =
     React.useState(false);
-
-  const sections = useAppSelector(state =>
-    sectionsForDropdown(
-      state.teacherSections,
-      courseOfferingId,
-      courseVersionId,
-      state.progress.scriptId
-    )
-  ) as DropdownSection[];
 
   const {unitTitle, unitName, scriptId, deeperLearningCourse} = useAppSelector(
     state => ({
@@ -147,8 +127,9 @@ const UnitOverviewActionRow: React.FC<UnitOverviewActionRowProps> = ({
   const viewAs = useSelector(
     (state: {viewAs: keyof typeof ViewType}) => state.viewAs
   ) as string;
-  const selectedSectionId = useAppSelector(
-    state => state.teacherSections.selectedSectionId
+
+  const isTeacher = useSelector(
+    (state: {currentUser: {isTeacher: boolean}}) => state.currentUser.isTeacher
   );
 
   const pdfDropdownOptions = compilePdfDropdownOptions(
@@ -172,7 +153,7 @@ const UnitOverviewActionRow: React.FC<UnitOverviewActionRowProps> = ({
   };
 
   const viewAsToggleAction = (viewType: string) => {
-    if (!isOnTeacherDashboard()) {
+    if (!location.pathname.includes('teacher_dashboard')) {
       updateQueryParam('viewAs', viewType);
     }
 
@@ -185,11 +166,6 @@ const UnitOverviewActionRow: React.FC<UnitOverviewActionRowProps> = ({
       viewType,
     });
   };
-
-  const selectedSection = React.useMemo(
-    () => sections.find(section => section.id === selectedSectionId),
-    [sections, selectedSectionId]
-  );
 
   const displayPrintingOptionsDropdown =
     pdfDropdownOptions.length > 0 &&
@@ -256,26 +232,24 @@ const UnitOverviewActionRow: React.FC<UnitOverviewActionRowProps> = ({
             </div>
           )}
 
-          {selectedSection && showAssignButton && (
+          {showAssignButton && (
             <div className={styles.assignButton}>
               <MultipleAssignButton
-                sectionId={selectedSection.id}
                 courseOfferingId={courseOfferingId}
                 courseVersionId={courseVersionId}
                 courseId={currentCourseId}
                 scriptId={scriptId}
                 assignmentName={unitTitle}
-                sectionName={selectedSection.name}
                 reassignConfirm={onReassignConfirm}
-                isAssigningCourse={false}
-                isStandAloneUnit={courseLink === null}
+                isAssigningCourseOnly={false}
+                isSingleUnitCourse={isSingleUnitCourse}
                 participantAudience={participantAudience}
               />
             </div>
           )}
         </div>
 
-        {showV2TeacherDashboard() && (
+        {isTeacher && (
           <div className={styles.viewAs}>
             {<label className={styles.viewAsLabel}>{i18n.viewPageAs()}</label>}
             <SegmentedButtons
@@ -283,10 +257,12 @@ const UnitOverviewActionRow: React.FC<UnitOverviewActionRowProps> = ({
                 {
                   label: i18n.student(),
                   value: ViewType.Participant,
+                  id: 'uitest-view-as-student',
                 },
                 {
                   label: i18n.teacher(),
                   value: ViewType.Instructor,
+                  id: 'uitest-view-as-teacher',
                 },
               ]}
               onChange={viewAsToggleAction}

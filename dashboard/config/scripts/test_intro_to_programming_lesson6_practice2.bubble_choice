@@ -1,0 +1,10 @@
+name 'test-intro-to-programming-lesson6-practice2'
+display_name 'Practice with Painting'
+description 'Choose one of the practice options below. Then, try out the Bonus if there is time!'
+
+sublevels
+level '4test-intro-to-programming-lesson6-level5'
+level 'test-intro-to-programming-lesson6-level3'
+level 'test-intro-to-programming-lesson6-levelbonus'
+
+

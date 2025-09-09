@@ -1,9 +1,9 @@
+import Checkbox from '@code-dot-org/component-library/checkbox';
+import {BodyFourText} from '@code-dot-org/component-library/typography';
 import PropTypes from 'prop-types';
 import React, {useEffect, useState} from 'react';
 import {connect} from 'react-redux';
 
-import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
-import {BodyFourText} from '@cdo/apps/componentLibrary/typography';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
@@ -42,7 +42,7 @@ function RubricSubmitFooter({
 
   // When the rubric opens, we should get the current feedback, if any
   useEffect(() => {
-    if (open && studentLevelInfo) {
+    if (open && studentLevelInfo?.user_id) {
       // Get the teacher feedback
       const studentId = studentLevelInfo.user_id;
       const levelId = rubric.level.id;
@@ -71,7 +71,7 @@ function RubricSubmitFooter({
     rubric.id,
     rubric.level.id,
     rubric.script.id,
-    studentLevelInfo,
+    studentLevelInfo?.user_id,
   ]);
 
   // The first stage of submission is the progress state submission

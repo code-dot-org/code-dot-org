@@ -1,0 +1,21 @@
+name 'self-paced-pl-gen-ai-foundations-preview-05c_2025'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Attention
+
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Attention:</strong> A process that updates the meaning of each word by using the context from the other words in the input.
+</div>
+
+
+#### Words often have multiple meanings (e.g., "bat," "spring," "fly"), and humans rely on surrounding context to interpret which meaning is intended. Language models face the same challenge, and need to analyze surrounding words to disambiguate meanings.
+
+<p align="center">
+<img src="https://images.code.org/d13425168782b748fc2e08c23f08e52c-Screenshot 2025-05-28 at 12.51.30 PM.png" alt="The sentence 'The tiny animal was overwhelmed by the confetti and it attempted to bat away the glitter with its little paws' with a box around the word bat and arrows connecting animal to away and paws to the box" width="90%" style="border-radius:10px; border: 5px solid black;">
+</p>
+
+#### The **attention mechanism** allows a model to look at all the other words in a sentence and update each word’s meaning dynamically. This means the model can better understand how a word is used in a specific sentence by comparing it with the other words nearby, using neural networks to find and adjust those relationships. 
+
+MARKDOWN

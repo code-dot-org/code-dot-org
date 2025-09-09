@@ -1,0 +1,12 @@
+name 'computer-systems-lesson9-matching'
+title 'Match AI Hardware'
+description 'description here'
+question 'Question A'
+answer 'Answer 1'
+allow_multiple_attempts false
+question 'Question B'
+answer 'Answer 2'
+allow_multiple_attempts false
+question 'Question C'
+answer 'Answer 3'
+allow_multiple_attempts false

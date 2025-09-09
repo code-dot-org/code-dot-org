@@ -1,0 +1,24 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2025-02-25T01:16:48.000Z",
+  "level_num": "custom",
+  "user_id": 1574,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "What parts of your algorithm involve **selection** (making decisions)?",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "name_suffix": "_aitutor-2024"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-02-25T01:16:48.463+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson3-level7b-2024\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson3-level7b-2024\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

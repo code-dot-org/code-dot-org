@@ -25,7 +25,7 @@
       },
       {
         "key": "music-ai-skill-function-verse_03ed3be5-172e-4df5-97cb-075d4032388f",
-        "message": "That chorus sounds great! Now, add sounds into the `verse function`. ",
+        "message": "That chorus sounds great! Now, add sounds into the [verse](#clickable=id:verse_workspace) function. ",
         "next": false,
         "conditions": [
           {

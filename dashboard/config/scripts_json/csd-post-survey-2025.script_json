@@ -1,0 +1,159 @@
+{
+  "script": {
+    "name": "csd-post-survey-2025",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "content_area": "curriculum_6_8",
+      "curriculum_umbrella": "CSD",
+      "is_migrated": true,
+      "topic_tags": [
+        "survey"
+      ]
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2025-03-12 21:14:02 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "csd-post-survey-2025"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "csd-post-survey-2025"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Post-Course Survey",
+      "name": "Post-Course Survey",
+      "absolute_position": 1,
+      "lockable": true,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Post-Course Survey",
+        "lesson_group.key": "",
+        "script.name": "csd-post-survey-2025"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "5aca6462-bd81-4593-accb-80b0a0930d75",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5aca6462-bd81-4593-accb-80b0a0930d75",
+        "lesson.key": "Post-Course Survey",
+        "lesson_group.key": "",
+        "script.name": "csd-post-survey-2025"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "9ef0c463-2863-4bc5-8a90-123b1494a59a",
+      "position": 1,
+      "properties": {
+        "progression_name": "Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "9ef0c463-2863-4bc5-8a90-123b1494a59a",
+        "lesson_activity.key": "5aca6462-bd81-4593-accb-80b0a0930d75"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csd-post-survey-levelgroup_2025"
+        ],
+        "lesson.key": "Post-Course Survey",
+        "lesson_group.key": "",
+        "script.name": "csd-post-survey-2025",
+        "activity_section.key": "9ef0c463-2863-4bc5-8a90-123b1494a59a"
+      },
+      "level_keys": [
+        "csd-post-survey-levelgroup_2025"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "csd-post-survey-levelgroup_2025",
+        "script_level.level_keys": [
+          "csd-post-survey-levelgroup_2025"
+        ],
+        "lesson.key": "Post-Course Survey",
+        "lesson_group.key": "",
+        "script.name": "csd-post-survey-2025",
+        "activity_section.key": "9ef0c463-2863-4bc5-8a90-123b1494a59a"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

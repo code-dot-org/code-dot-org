@@ -1,0 +1,106 @@
+name 'ea-fac-csaif_pl_cyber_impact'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Cybersecurity is Everywhere
+
+<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
+
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 16px; "><strong>Teacher Tip: </strong> Cybersecurity plays a crucial role in various industries, from healthcare to transportation. Helping students connect these real-world applications to cybersecurity principles enhances their understanding of digital security, privacy, and risk management.
+
+  
+</p>
+</div>
+
+<br>
+<br>
+
+<body>
+ <table>
+        <tr>
+            <td style="width: 250px; border: 1px solid transparent; text-align: center; vertical-align: middle;">
+                <img src="https://images.code.org/c063cc1809e98ebc07d0659bb8dc52c8-image-1724079338929.png" alt="healthcare icon" style="width: 75px; border-radius: 10px;">
+            </td>
+            <td style="width: 250px; border: 1px solid transparent; text-align: center; vertical-align: middle;">
+                <img src="https://images.code.org/4d6957c590afe4356a34fd0d880dada9-image-1724079415496.png" alt="finance icon" style="width:70px; border-radius: 10px;">
+            </td>
+            <td style="width: 250px; border: 1px solid transparent; text-align: center; vertical-align: middle;">
+                <img src="https://images.code.org/fe851509654f7a2f909715868a3d7fde-image-1724079637108.png" alt="retail shop icon" style="width:75px; border-radius: 10px;">
+            </td>
+             <td style="width: 250px; border: 1px solid transparent; text-align: center; vertical-align: middle;">
+                <img src="https://images.code.org/febd63b16d05af08c0c69b6f2b76fb09-image-1724079744724.png" alt="transportation icon" style="width:75px; border-radius: 10px;">
+            </td>
+        </tr>
+    </table>
+    
+      <table border="1" style="font-size: 14pt; width: 100%; table-layout: fixed;">
+        <tr>
+ 
+            <th align="center">Healthcare</th>
+            <th align="center">Finance</th>
+            <th align="center">Retail</th>
+            <th align="center">Transportation</th>
+        </tr>
+    <tr>
+            <td style="font-size: 12pt; vertical-align: top; padding-left: 10px;">Protecting patient records from cyber threats, securing medical devices from hacking, and ensuring data privacy in telemedicine services.</td>
+            
+           <td style="font-size: 12pt; vertical-align: top; padding-left: 10px;">Preventing fraud through advanced security systems, encrypting online transactions, and safeguarding financial institutions from cyberattacks.
+</td>
+            
+           <td style="font-size: 12pt; vertical-align: top; padding-left: 10px;">Protecting customer data from breaches, securing e-commerce transactions, and preventing cyber fraud in digital payment systems.
+</td>
+            
+            <td style="font-size: 12pt; vertical-align: top; padding-left: 10px;">Securing GPS navigation systems, protecting ride-sharing and public transit platforms from cyber threats, and ensuring safe communication between smart vehicles.
+</td>
+            
+           
+        </tr>
+    </table>
+</body>
+
+<br>
+<br>
+
+ <table>
+        <tr>
+            <td style="width: 330px; border: 1px solid transparent; text-align: center; vertical-align: middle;">
+                <img src="https://images.code.org/24815a5ef848a7ae17799879e481847f-image-1724079815627.png" alt="education icon" style="width: 75px; border-radius: 10px;">
+            </td>
+            <td style="width: 330px; border: 1px solid transparent; text-align: center; vertical-align: middle;">
+                <img src="https://images.code.org/5cc860b95a9d00dc52d3498c31e05673-image-1724079929431.png" alt="Sports icon" style="width:70px; border-radius: 10px;">
+            </td>
+            <td style="width: 330px; border: 1px solid transparent; text-align: center; vertical-align: middle;">
+                <img src="https://images.code.org/a93502230072c87cd257ac2516e45e91-image-1724080036483.png" alt="Earth icon" style="width:75px; border-radius: 10px;">
+            </td>
+        
+           
+        </tr>
+    </table>
+    
+      <table border="1" style="font-size: 14pt; width: 100%; table-layout: fixed;">
+        <tr>
+ 
+            <th align="center">Education</th>
+            <th align="center">Sports</th>
+            <th align="center">Environmental Science</th>
+            
+        </tr>
+    <tr>
+            <td style="font-size: 12pt; vertical-align: top; padding-left: 10px;"> Implementing secure online learning environments, preventing cyberbullying and phishing attacks, and protecting student data from unauthorized access.</td>
+            
+           <td style="font-size: 12pt; vertical-align: top; padding-left: 10px;">Ensuring cybersecurity in sports analytics platforms, protecting athlete data from unauthorized access, and securing smart stadiums from digital threats.</td>
+            
+           <td style="font-size: 12pt; vertical-align: top; padding-left: 10px;">Safeguarding data from environmental monitoring systems, securing smart grids from cyber threats, and ensuring the integrity of climate research data.</td>
+            
+   
+            
+           
+        </tr>
+    </table>
+
+
+
+
+
+MARKDOWN

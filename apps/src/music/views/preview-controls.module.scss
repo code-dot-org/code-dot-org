@@ -9,6 +9,11 @@
   margin: 10px 0;
   justify-content: space-around;
 
+  &.v2 {
+    margin: 0;
+    gap: 16px;
+  }
+
   .buttonContainer {
     @include remove-button-styles($color: $background_gray);
 

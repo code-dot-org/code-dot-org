@@ -27,10 +27,11 @@ class AssetBucket < BucketHelper
     # in our web apps.
     if ([".jpg", ".jpeg", ".png"].include? extension.downcase) && (body.length < max_resize_size)
       image = MiniMagick::Image.read(body, extension)
-      image.resize (image.height / 4).floor.to_s + "x" + (image.width / 4).floor.to_s
+      image.resize('25%')
       return image.to_blob
     end
-    return body
+
+    body
   end
 
   def cache_duration_seconds
@@ -54,7 +55,7 @@ class AssetBucket < BucketHelper
     # the level associated with the channel is the template level (rather than the "derived" level).
     # Therefore, we always copy the level's starter assets (rather than having to look up a template level's assets).
     level.starter_assets.map do |friendly_name, uuid_name|
-      src = "#{@bucket}/#{LevelStarterAssetsController::S3_PREFIX}#{uuid_name}"
+      src = "#{@bucket}/#{LevelStarterAssetsHelper::S3_PREFIX}#{uuid_name}"
       dest = s3_path dest_owner_id, dest_storage_app_id, friendly_name
       s3.copy_object(bucket: @bucket, key: dest, copy_source: ERB::Util.url_encode(src), metadata_directive: 'REPLACE')
     end

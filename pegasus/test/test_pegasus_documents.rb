@@ -1,6 +1,7 @@
 require_relative './test_helper'
 require_relative '../router'
 require 'cdo/rack/request'
+require 'varnish_environment'
 require 'shared_resources'
 require 'parallel'
 require 'open3'
@@ -13,6 +14,10 @@ require 'zlib'
 class PegasusTest < Minitest::Test
   include Rack::Test::Methods
   include CaptureQueries
+
+  def setup
+    skip unless CDO.has_pegasus_content
+  end
 
   def app
     @app ||= Documents.new
@@ -29,7 +34,6 @@ class PegasusTest < Minitest::Test
   # All documents expected to return 200 status-codes, with the following exceptions:
   STATUS_EXCEPTIONS = {
     302 => %w[
-      code.org/amazon-future-engineer
       code.org/congrats
       code.org/educate
       code.org/educate/weblab-test
@@ -48,6 +52,7 @@ class PegasusTest < Minitest::Test
     'text/plain' => %w[
       code.org/health_check
       code.org/robots.txt
+      hourofcode.com/us/robots.txt
       hourofcode.com/us/health_check
     ]
   }

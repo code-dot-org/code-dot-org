@@ -42,7 +42,7 @@ describe('CurriculumCatalogExpandedCard', () => {
       video:
         'https://www.youtube-nocookie.com/embed/KHbwOetbmbs/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=KHbwOetbmbs&wmode=transparent',
       publishedDate: '2019-12-01T13:00:00.000Z',
-      pathToCourse: '/s/course',
+      pathToCourse: '/courses/oceans',
       assignButtonOnClick: () => {},
       assignButtonDescription: 'Assign AI for Oceans to your classroom',
       onClose: () => {},
@@ -143,7 +143,7 @@ describe('CurriculumCatalogExpandedCard', () => {
 
   it('renders available resources section when resources are available', () => {
     const availableResources = {
-      'Lesson Plan': '/s/oceans/lessons/1',
+      'Lesson Plan': '/courses/oceans/units/1/lessons/1',
       'Slide Deck': 'slides',
     };
     renderCurriculumExpandedCard({

@@ -186,6 +186,9 @@ class ProjectsController < ApplicationController
     },
     transformers: {
       name: 'New Transformers Project'
+    },
+    weblab2: {
+      name: 'New Web Lab 2 Project',
     }
     # Note: When adding to this list, remember that project level files must include "is_project_level": true
   }.with_indifferent_access.freeze
@@ -229,7 +232,7 @@ class ProjectsController < ApplicationController
   end
 
   def combine_projects_and_featured_projects_data
-    projects = "#{CDO.dashboard_db_name}__projects".to_sym
+    projects = :"#{CDO.dashboard_db_name}__projects"
     project_featured_project_combo_data = DASHBOARD_DB[:featured_projects].
       select(*project_and_featured_project_fields).
       join(projects, id: :storage_app_id, state: 'active').all
@@ -453,6 +456,14 @@ class ProjectsController < ApplicationController
 
     @body_classes = @level.properties['background']
 
+    if @level.uses_theme_preference?
+      user_theme = current_user ? UserPreference.find_by(user_id: current_user.id)&.theme : nil
+      theme_preference = user_theme['global'] if user_theme
+      if theme_preference
+        @body_classes = "background-#{theme_preference&.downcase}"
+      end
+    end
+
     if [Game::ARTIST, Game::SPRITELAB, Game::POETRY].include? @game.app
       @project_image = CDO.studio_url "/v3/files/#{@view_options['channel']}/.metadata/thumbnail.png", 'https:'
     end
@@ -555,16 +566,7 @@ class ProjectsController < ApplicationController
     begin
       storage_id, _ = storage_decrypt_channel_id(channel_id)
       Projects.new(storage_id).publish(channel_id, project_type, current_user)
-    rescue Projects::PublishError => exception
-      Honeybadger.notify(
-        exception.message,
-        context: {
-          message: "Project publish failed - user unexpectedly bypassed submission_status restriction in the share dialog and project submit authorization restrictions and attempted to publish project."
-        }
-      )
-      return render(status: :forbidden, json: {error: exception.message})
     end
-    # TODO: Store submission_description in our database.
     # Send ZenDesk ticket with user/project info and submission description.
     send_project_submission(current_user.name || '', current_user.username || '', project_type, channel_id, submission_description)
   end
@@ -645,20 +647,23 @@ class ProjectsController < ApplicationController
     owner_info['name'] = User.find_channel_owner(src_channel_id).try(:username)
     project_info['is_featured_project'] = FeaturedProject.exists?(storage_app_id: project_info['id'])
 
+    project = Project.find_by_channel_id(src_channel_id)
     remix_ancestry = Projects.remix_ancestry(src_channel_id, depth: 5)
     project_info['remix_ancestry'] = []
-    project_type = Project.find_by_channel_id(src_channel_id)['project_type']
+    project_type = project.project_type
     if remix_ancestry.present?
       remix_ancestry.each do |channel_id|
         project_info['remix_ancestry'] << "/projects/#{project_type}/#{channel_id}/view"
       end
     end
     if project_info['is_featured_project']
-      project = FeaturedProject.find_by project_id: project_info['id']
-      project_info['featured_status'] = project.status
+      featured_project = FeaturedProject.find_by project_id: project_info['id']
+      project_info['featured_status'] = featured_project.status
     else
       project_info['featured_status'] = 'n/a'
     end
+    project_info['abuse_score'] = project['abuse_score']
+    project_info['is_published_project'] = project['published_at'] ? 'yes' : 'no'
     return render json: {owner_info: owner_info, project_info: project_info}
   end
 

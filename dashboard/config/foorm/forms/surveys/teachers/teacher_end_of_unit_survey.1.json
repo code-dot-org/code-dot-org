@@ -8,7 +8,7 @@
         {
           "type": "panel",
           "name": "variable_panel",
-          "visible": "false",
+          "visible": false,
           "elements": [
             {
               "type": "radiogroup",
@@ -59,8 +59,13 @@
         },
         {
           "type": "html",
+          "name": "intro_text",
+          "html": "<h3>Post-Unit Teacher Survey\n\n<p><strong>Code.org relies on surveys as a crucial tool to remain connected to teachers, and to give you the opportunity to provide feedback about your experience teaching our curriculum.</strong></p>\n<p>The purpose of this survey is to understand better our teachers' experience with Code.org's CSA, {unit_name} unit.&nbsp;</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul>\n<li>Your individual responses here are completely <strong>confidential.</strong></li>\n<li>Your identity will&nbsp;<strong>never</strong> be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share <strong>de-identified</strong>, aggregate data (representing all responses) publicly.</li>\n<li>Your <strong>de-identified&nbsp;</strong>responses will be used by Code.org to improve our curriculum and programs.</li>\n</ul>\n<p>This survey should take <strong>less than 5 minutes</strong> to complete.&nbsp;&nbsp;<strong>Your complete honesty and candor are appreciated.</strong></p>"
+        },
+        {
+          "type": "html",
           "name": "unit_instructions",
-          "html": " <p style='font-size: larger'>Please tell us your overall thoughts about teaching this unit. Your feedback is crucial for us to better understand how to improve this course for teachers.</p>"
+          "html": "<n><p><h2>CSA - {unit_name} Unit</h2><p style='font-size: larger'>Please tell us your overall thoughts about teaching this unit. Your feedback is crucial for us to better understand how to improve this course for teachers.</p>"
         },
         {
           "type": "html",

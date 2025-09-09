@@ -1,8 +1,11 @@
+import {Button} from '@code-dot-org/component-library/button';
+import {
+  Heading2,
+  BodyTwoText,
+} from '@code-dot-org/component-library/typography';
 import React, {memo, useCallback, useContext, useMemo} from 'react';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
-import {Button} from '@cdo/apps/componentLibrary/button';
-import {Heading2, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import commonI18n from '@cdo/locale';
@@ -111,7 +114,7 @@ const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = ({
             <Button
               text={commonI18n.viewCode()}
               type="tertiary"
-              color="white"
+              color="black"
               size="xs"
               iconLeft={{iconStyle: 'solid', iconName: 'code'}}
               onClick={onViewCode}
@@ -120,7 +123,7 @@ const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = ({
               <Button
                 text={musicI18n.share()}
                 type="tertiary"
-                color="white"
+                color="black"
                 size="xs"
                 iconLeft={{
                   iconStyle: 'solid',
@@ -132,7 +135,7 @@ const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = ({
             <Button
               text={commonI18n.makeMyOwn()}
               type="tertiary"
-              color="white"
+              color="black"
               size="xs"
               iconLeft={{iconStyle: 'regular', iconName: 'pen-to-square'}}
               onClick={onRemix}

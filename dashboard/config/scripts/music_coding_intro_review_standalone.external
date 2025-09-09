@@ -1,0 +1,58 @@
+name 'music-coding-intro-review_standalone'
+title 'Review'
+description 'description here'
+
+markdown <<MARKDOWN
+<h1 style="text-align: center;"><i class="fa-duotone fa-regular fa-party-horn"></i> Great Job!</h1>
+
+<div style="max-width: 600px; margin: 0 auto 30px auto; text-align: center;">
+  <h4>You're ready to code your own music in Music Lab! </br> </br> Review the coding concepts you have learned so far:</h4>
+</div>
+
+<div style="display: flex; justify-content: space-between; width: 90%; margin: 20px auto;">
+  <!-- Sequencing -->
+  <div style="background: #B7E0E5; width: 30%; padding: 15px; box-sizing: border-box; border-radius: 5px">
+    <img src="https://images.code.org/29cee3a2ce0e3e8f7875dfb7de029936-image-1745530307138.png" alt="Sequencing" style="width: 70px; height: 70px; display: block; margin: 0 auto 10px;">
+    <h4 style="text-align: center;"><b>Sequencing</b></h4>
+    <p style="text-align: center;">The order of steps in a program or task.</p>
+    <details style="margin-top: 10px;">
+      <summary style="cursor: pointer; font-weight: bold; text-align: center; background: #e0f7fa; padding: 8px; border-radius: 5px;">Review more</summary>
+      <div style="margin-top: 10px; font-size: 14px; text-align: left; background: #e0f7fa; padding: 10px; border-radius: 5px;">
+        Sequencing is all about order. Just like you follow steps in a recipe, your computer follows your blocks in the order you give them. This helps your sounds play at the right time and in the right way.
+      </div>
+    </details>
+  </div>
+
+  <!-- Functions -->
+  <div style="background: #B7E0E5; width: 30%; padding: 15px; box-sizing: border-box; border-radius: 5px">
+    <img src="https://images.code.org/bb9581106b58d6a3760a9ab9f0bb379d-image-1745531140729.png" alt="Functions" style="width: 70px; height: 70px; display: block; margin: 0 auto 10px;">
+    <h4 style="text-align: center;"><b>Functions</b></h4>
+    <p style="text-align: center;">A group of code blocks you name then call to play again and again!</p>
+    <details style="margin-top: 10px;">
+      <summary style="cursor: pointer; font-weight: bold; text-align: center; background: #e0f7fa; padding: 8px; border-radius: 5px;">Review more</summary>
+      <div style="margin-top: 10px; font-size: 14px; text-align: left; background: #e0f7fa; padding: 10px; border-radius: 5px;">
+        A function is like an efficient shortcut.  You just use the function instead of rewriting the code. It saves time and keeps your code neat!
+      </div>
+    </details>
+  </div>
+
+  <!-- Events -->
+  <div style="background: #B7E0E5; width: 30%; padding: 15px; box-sizing: border-box; border-radius: 5px">
+    <img src="https://images.code.org/5e1ea140ef4584d5eac24494bd4fd012-image-1745531439660.png" alt="Events" style="width: 70px; height: 70px; display: block; margin: 0 auto 10px;">
+    <h4 style="text-align: center;"><b>Events</b></h4>
+    <p style="text-align: center;">An action that causes something to happen.</p>
+    <details style="margin-top: 10px;">
+      <summary style="cursor: pointer; font-weight: bold; text-align: center; background: #e0f7fa; padding: 8px; border-radius: 5px;">Review more</summary>
+      <div style="margin-top: 10px; font-size: 14px; text-align: left; background: #e0f7fa; padding: 10px; border-radius: 5px;">
+        Events are actions your program listens for—like clicking a sprite, pressing a key, or tapping a button. When that action happens, your program runs the blocks you added. It’s how you make your music interactive!
+      </div>
+    </details>
+  </div>
+</div>
+
+
+<div style="max-width: 600px; margin: 0 auto 30px auto; text-align: left;">
+  <h4>If you ever need a reminder on how to code something, just hop back into the levels you already completed!</h4>
+</div>
+
+MARKDOWN

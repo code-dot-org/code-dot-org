@@ -21,6 +21,7 @@ export enum Themes {
   DARK = 'cdomoderndark',
   HIGH_CONTRAST = 'cdohighcontrast',
   HIGH_CONTRAST_DARK = 'cdohighcontrastdark',
+  JIGSAW = 'jigsaw',
   PROTANOPIA = 'cdoprotanopia',
   PROTANOPIA_DARK = 'cdoprotanopiadark',
   DEUTERANOPIA = 'cdodeuteranopia',
@@ -44,6 +45,7 @@ export enum BlockStyles {
   TEXT = 'text_blocks',
   COLOR = 'colour_blocks',
   BEHAVIOR = 'behavior_blocks',
+  LAB_BLOCKS = 'lab_blocks',
 }
 
 export const BlockColors = {
@@ -118,6 +120,8 @@ export enum BLOCK_TYPES {
   argumentReporter = 'argument_reporter',
   behaviorDefinition = 'behavior_definition',
   behaviorGet = 'gamelab_behavior_get',
+  category = 'category',
+  categoryDynamic = 'custom_category',
   colourRandom = 'colour_random',
   danceWhenSetup = 'Dancelab_whenSetup',
   parametersGet = 'parameters_get',
@@ -138,6 +142,15 @@ export enum BLOCK_TYPES {
 export const PROCEDURE_DEFINITION_TYPES: string[] = [
   BLOCK_TYPES.behaviorDefinition,
   BLOCK_TYPES.procedureDefinition,
+];
+
+// A list of block types that are definitions or calls to procedures,
+// including functions and behaviors.
+export const PROCEDURE_BLOCK_TYPES: string[] = [
+  BLOCK_TYPES.procedureCall,
+  BLOCK_TYPES.procedureDefinition,
+  BLOCK_TYPES.behaviorDefinition,
+  BLOCK_TYPES.behaviorGet,
 ];
 
 // A list of blocks for getting and setting variables.
@@ -172,13 +185,11 @@ export const READ_ONLY_PROPERTIES = [
   'Connection',
   'ConnectionType',
   'ContextMenu',
-  'contractEditor',
+  'ContextMenuRegistry',
   'createBlockDefinitionsFromJsonArray',
-  'createSvgElement',
   'Css',
   'Cursor',
   'dialog',
-  'disableVariableEditing',
   'DropDownDiv',
   'Events',
   'Extensions',
@@ -192,20 +203,25 @@ export const READ_ONLY_PROPERTIES = [
   'FieldTextInput',
   'fish_locale',
   'Flyout',
+  'FocusableTreeTraverser',
   'FunctionalBlockUtils',
   'FunctionalTypeColors',
   'FunctionEditor',
+  'FocusManager',
   'gamelab_locale',
   'Generator',
   'geras',
   'Gesture',
   'getRelativeXY',
+  'getSelected',
   'googlecode',
   'hasCategories',
   'html',
   'Input',
   'inputs',
   'INPUT_VALUE',
+  'isDraggable',
+  'isSelectable',
   'js',
   'MenuItem',
   'MetricsManager',
@@ -215,16 +231,15 @@ export const READ_ONLY_PROPERTIES = [
   'netsim_locale',
   'Procedures',
   'registry',
-  'removeChangeListener',
   'RTL',
   'Scrollbar',
   'serialization',
+  'ShortcutRegistry',
   'SPRITE',
   'svgResize',
   'thrasos',
   'Toolbox',
   'Touch',
-  'Trashcan',
   'tutorialExplorer_locale',
   'useContractEditor',
   'utils',
@@ -255,6 +270,7 @@ export const SETTABLE_PROPERTIES = [
   'JavaScript',
   'readOnly',
   'showUnusedBlocks',
+  'Trashcan',
   'typeHints',
   'valueTypeTabShapeMap',
 ];
@@ -336,3 +352,8 @@ export const COLOURS: string[] = [
   '#663366',
   '#330033',
 ];
+
+export const DYNAMIC_CATEGORY_OPTIONS: {[key: string]: string} = {
+  Functions: 'PROCEDURE',
+  Variables: 'VARIABLE',
+};

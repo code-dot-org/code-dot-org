@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 
 import {Channel} from '@cdo/apps/lab2/types';
 import musicNoteProjectCardImage from '@cdo/static/music/music-note-project-card.png';
+import pythonlabProjectCardImage from '@cdo/static/pythonlab/pythonlab-project-card.png';
 
 export const publishedFeaturedProjectDataPropType = PropTypes.shape({
   channel: PropTypes.string.isRequired,
@@ -74,10 +75,12 @@ export const PROJECT_DEFAULT_CARD_IMAGE_OVERRIDE: {
   [projectType: string]: string;
 } = {
   music: musicNoteProjectCardImage,
+  pythonlab: pythonlabProjectCardImage,
 };
 
 export const PROJECT_DEFAULT_THUMBNAIL_IMAGE_OVERRIDE: {
   [projectType: string]: string;
 } = {
   music: '/shared/images/fill-70x70/courses/logo_music.png',
+  pythonlab: '/shared/images/fill-70x70/courses/logo_pythonlab.png',
 };

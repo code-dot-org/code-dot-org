@@ -1,0 +1,18 @@
+<Map>
+  <config><![CDATA[{
+  "game_id": 59,
+  "created_at": "2025-03-11T18:23:15.000Z",
+  "level_num": "custom",
+  "user_id": 106,
+  "properties": {
+    "instructions_important": "false",
+    "reference": "/docs/concepts/patterns/random-list-access/",
+    "parent_level_id": 17975,
+    "encrypted": "false",
+    "name_suffix": "_2025"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2025-03-11T18:23:15.133+00:00\",\"changed\":[\"cloned from \\\"Random List Access Pattern_2024\\\"\"],\"cloned_from\":\"Random List Access Pattern_2024\"}]"
+}]]></config>
+</Map>

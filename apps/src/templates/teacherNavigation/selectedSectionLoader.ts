@@ -1,12 +1,13 @@
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
-import {setScriptId, setUnitName} from '@cdo/apps/redux/unitSelectionRedux';
+import {setUnit} from '@cdo/apps/redux/unitSelectionRedux';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 
 import {
   setLoginType,
   setShowSharingColumn,
+  loadSectionStudentData,
 } from '../manageStudents/manageStudentsRedux';
 import {
   finishLoadingSectionData,
@@ -18,18 +19,23 @@ import {
   updateSelectedSection,
 } from '../teacherDashboard/teacherSectionsRedux';
 
-export const asyncLoadSelectedSection = async (sectionId: string) => {
+export const asyncLoadSelectedSection = async (
+  sectionId: string,
+  forceReload?: boolean
+) => {
   const state = getStore().getState().teacherSections;
 
   if (
-    state.selectedSectionId === parseInt(sectionId) ||
-    state.isLoadingSectionData
+    (state.selectedSectionId === parseInt(sectionId) ||
+      state.isLoadingSectionData) &&
+    !forceReload
   ) {
     return;
   }
 
   getStore().dispatch(startLoadingSectionData());
   getStore().dispatch(selectSection(sectionId));
+  getStore().dispatch(loadSectionStudentData(sectionId));
 
   const response = fetch(`/dashboardapi/section/${sectionId}`, {
     method: 'GET',
@@ -56,17 +62,17 @@ export const setSelectedSectionData = (sectionData: any) => {
   getStore().dispatch(
     setStudentsForCurrentSection(sectionData.id, sectionData.students)
   );
-  // Default the scriptId to the script assigned to the section
-  const defaultScriptId = sectionData.script ? sectionData.script.id : null;
-  if (defaultScriptId) {
-    getStore().dispatch(setScriptId(defaultScriptId));
+  // Default Unit assigned to the section
+  const defaultUnitId = sectionData.script ? sectionData.script.id : null;
+  const defaultCourseVersionId = sectionData.course_version_id;
+  if (defaultUnitId) {
+    getStore().dispatch(setUnit(defaultUnitId, defaultCourseVersionId));
   }
 
   if (!sectionData.sharing_disabled && sectionData.script.project_sharing) {
     getStore().dispatch(setShowSharingColumn(true));
   }
 
-  getStore().dispatch(setUnitName(sectionData.script.name));
   getStore().dispatch(setLoginType(sectionData.login_type));
   getStore().dispatch(setRosterProvider(sectionData.login_type));
   getStore().dispatch(setRosterProviderName(sectionData.login_type_name));

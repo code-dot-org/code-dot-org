@@ -1,0 +1,25 @@
+name 'PLStyleGuide_L1_Text5'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Style
+
+## Tone and Voice
+
+#### Professional learning content should be encouraging and friendly to users in its tone. Additionally, clear, concise writing always supports good communication and learning. Use the following guidelines when writing text.
+
+* #### The writing style is clear, concise, and direct.
+* #### Sentences and paragraphs are brief and to the point.
+* #### Avoid jargon, colloquialisms, clichés, and tired phrases.
+* #### Write out acronyms the first time they're used, noting the acronym in parentheses.
+* #### Use a supportive second-person conversational tone.
+* #### Instructions and requirements are stated simply, clearly, and logically.
+* #### Edit course material for language and grammar.
+
+## Using Emojis
+
+#### Emojis can be used to help set a friendly tone for the user, but be aware that too many emojis may be overwhelming. This is especially true in the case of a user with a screen reader, as it will read out the emoji description to them.
+
+#### Emojis can be used to bring the user's attention to key aspects of the page. They can also signify to do items, key vocabulary, and/or reflection questions. When using emojis as indicators, keep things consistent throughout the content.
+MARKDOWN

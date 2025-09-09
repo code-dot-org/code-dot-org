@@ -1,6 +1,12 @@
 import $ from 'jquery';
 
+import {
+  OPEN_ENDED_LEGACY_PROJECT_TYPES,
+  OPEN_ENDED_PROJECTS_YOUNG_AGE,
+} from '@cdo/apps/constants';
 import firehoseClient from '@cdo/apps/metrics/firehose';
+import {getGlobalEditionRegion} from '@cdo/apps/util/globalEdition';
+import HttpClient from '@cdo/apps/util/HttpClient';
 import {AbuseConstants} from '@cdo/generated-scripts/sharedConstants';
 import msg from '@cdo/locale';
 
@@ -45,7 +51,6 @@ var events = {
   // Fired when run state changes or we enter/exit design mode
   appModeChanged: 'appModeChanged',
   appInitialized: 'appInitialized',
-  workspaceChange: 'workspaceChange',
 };
 
 // Number of consecutive failed attempts to update the channel.
@@ -98,6 +103,7 @@ let newSourceVersionInterval = 15 * 60 * 1000; // 15 minutes
 var currentAbuseScore = 0;
 var sharingDisabled = false;
 var currentHasPrivacyProfanityViolation = false;
+var isTeacherOfProjectOwner = false;
 var currentShareFailureEnglish = '';
 var currentShareFailureIntl = '';
 var intlLanguage = false;
@@ -323,6 +329,12 @@ var projects = (module.exports = {
   },
 
   getSharingDisabled() {
+    // Return false if current user is a project validator and pageAction is 'view'.
+    if (this.showEvenIfPolicyViolatingOrAbusiveOrSharingDisabled()) {
+      return false;
+    }
+    // sharingDisabled is set to true if the project owner's sharing_disabled is true
+    // AND the current user is neither the owner nor the teacher of the owner.
     return sharingDisabled;
   },
 
@@ -342,53 +354,25 @@ var projects = (module.exports = {
     return currentSourceVersionId;
   },
 
-  disableAutoContentModeration() {
-    return new Promise((resolve, reject) => {
-      channels.update(
-        `${this.getCurrentId()}/disable-content-moderation`,
-        null,
-        err => {
-          err ? reject(err) : resolve();
-        }
-      );
-    });
-  },
-
-  enableAutoContentModeration() {
-    return new Promise((resolve, reject) => {
-      channels.update(
-        `${this.getCurrentId()}/enable-content-moderation`,
-        null,
-        err => {
-          err ? reject(err) : resolve();
-        }
-      );
-    });
-  },
-
   /**
-   * Sets abuse score, saves the project, and reloads the page
+   * Allows admin user to reset abuse score to 0 and then saves the project.
    */
-  adminResetAbuseScore(score = 0) {
-    var id = this.getCurrentId();
-    if (!id) {
+  adminResetAbuseScore() {
+    const channelId = this.getCurrentId();
+    if (!channelId) {
       return;
     }
-    channels.delete(id + '/abuse', function (err, result) {
+    HttpClient.post(`/v3/channels/${channelId}/abuse/delete`, '', true);
+    assets.patchAll(channelId, 'abuse_score=0', null, function (err, result) {
       if (err) {
         throw err;
       }
-      assets.patchAll(id, `abuse_score=${score}`, null, function (err, result) {
-        if (err) {
-          throw err;
-        }
-      });
-      files.patchAll(id, `abuse_score=${score}`, null, function (err, result) {
-        if (err) {
-          throw err;
-        }
-        $('.admin-abuse-score').text(score);
-      });
+    });
+    files.patchAll(channelId, 'abuse_score=0', null, function (err, result) {
+      if (err) {
+        throw err;
+      }
+      $('.admin-abuse-score').text(0);
     });
   },
 
@@ -412,6 +396,14 @@ var projects = (module.exports = {
    */
   isOwner() {
     return !!(current && current.isOwner);
+  },
+
+  /**
+   * @returns {boolean} true if the current user is a teacher of the owner of the project or
+   * a project validator.
+   */
+  canViewFlaggedProject() {
+    return !!isTeacherOfProjectOwner || appOptions.canResetAbuse;
   },
 
   isPublished() {
@@ -459,7 +451,7 @@ var projects = (module.exports = {
    *   of showing the project.
    */
   hideBecausePrivacyViolationOrProfane() {
-    if (this.showEvenIfPolicyViolatingOrAbusiveProject()) {
+    if (this.showEvenIfPolicyViolatingOrAbusiveOrSharingDisabled()) {
       return false;
     }
     return this.hasPrivacyProfanityViolation();
@@ -470,7 +462,7 @@ var projects = (module.exports = {
    *   the project.
    */
   hideBecauseAbusive() {
-    if (this.showEvenIfPolicyViolatingOrAbusiveProject()) {
+    if (this.showEvenIfPolicyViolatingOrAbusiveOrSharingDisabled()) {
       return false;
     }
     return this.exceedsAbuseThreshold();
@@ -478,9 +470,9 @@ var projects = (module.exports = {
 
   /**
    * @returns {boolean} true if we should show a project regardless of its
-   * profanity, policy violations or abuse rating level.
+   * profanity, policy violations, abuse rating level, or if sharing is disabled.
    */
-  showEvenIfPolicyViolatingOrAbusiveProject() {
+  showEvenIfPolicyViolatingOrAbusiveOrSharingDisabled() {
     if (appOptions.scriptId) {
       // Never want to hide when in the context of a script, as this will always
       // either be me or my teacher viewing my last submission
@@ -494,10 +486,13 @@ var projects = (module.exports = {
     // NOTE: appOptions.canResetAbuse is not a security setting as it can be
     // manipulated by the user. In this case that's okay, since all that does
     // is allow them to view a project that was marked as abusive.
-    const hasEditPermissions = this.isOwner() || appOptions.canResetAbuse;
+    // If current user is teacher of project's owner, then allow them to view as well.
+    const hasViewPermissions =
+      appOptions.canResetAbuse || isTeacherOfProjectOwner;
+
     const isEditOrViewPage = pageAction === 'edit' || pageAction === 'view';
 
-    return hasEditPermissions && isEditOrViewPage;
+    return (this.isOwner() || hasViewPermissions) && isEditOrViewPage;
   },
 
   channelNotFound() {
@@ -750,9 +745,6 @@ var projects = (module.exports = {
               });
           }.bind(this)
         );
-        $(window).on(events.workspaceChange, function () {
-          hasProjectChanged = true;
-        });
 
         if (!appOptions.level.skipAutosave) {
           // Autosave every AUTOSAVE_INTERVAL milliseconds
@@ -1509,8 +1501,9 @@ var projects = (module.exports = {
       callCallback();
       return;
     }
+
     // `getLevelSource()` is expensive for Blockly so only call
-    // after `workspaceChange` has fired
+    // if the project workspace has changed.
     if (!appOptions.droplet && !hasProjectChanged) {
       callCallback();
       return;
@@ -1601,11 +1594,9 @@ var projects = (module.exports = {
    * @param {string} newName
    * @param {Object} options Optional parameters.
    * @param {boolean} options.shouldNavigate Whether to navigate to the project URL.
-   * @param {boolean} options.shouldPublish Whether to publish the new project.
    * @returns {Promise} Promise which resolves when the operation is complete.
    */
   copy(newName, options = {}) {
-    const {shouldPublish} = options;
     current = current || {};
     const queryParams = current.id ? {parent: current.id} : null;
     delete current.id;
@@ -1613,9 +1604,6 @@ var projects = (module.exports = {
     delete current.libraryName;
     delete current.libraryDescription;
     current.projectType = this.getStandaloneApp();
-    if (shouldPublish) {
-      current.shouldPublish = true;
-    }
     this.setName(newName);
     return new Promise((resolve, reject) => {
       channels.create(
@@ -1974,15 +1962,28 @@ function fetchShareFailure(resolve) {
   });
 }
 
+function fetchIsTeacherOfProjectOwner(resolve) {
+  channels.fetch(current.id + '/is_teacher_of_project_owner', (err, data) => {
+    isTeacherOfProjectOwner =
+      (data && !!data.is_teacher_of_project_owner) || isTeacherOfProjectOwner;
+    resolve();
+    if (err) {
+      // Throw an error so that things like New Relic see this. This shouldn't
+      // affect anything else.
+      throw err;
+    }
+  });
+}
+
 function fetchPrivacyProfanityViolations(resolve) {
   channels.fetch(current.id + '/privacy-profanity', (err, data) => {
-    // data.has_violation is 0 or true, coerce to a boolean
+    // data.has_violation is 0 or true, coerce to a boolean.
     currentHasPrivacyProfanityViolation =
       (data && !!data.has_violation) || currentHasPrivacyProfanityViolation;
     resolve();
     if (err) {
       // Throw an error so that things like New Relic see this. This shouldn't
-      // affect anything else
+      // affect anything else.
       throw err;
     }
   });
@@ -1996,15 +1997,15 @@ function fetchAbuseScoreAndPrivacyViolations(project) {
   const promises = [
     new Promise(fetchAbuseScore),
     new Promise(fetchShareFailure),
+    new Promise(fetchIsTeacherOfProjectOwner),
   ];
 
-  if (project.getStandaloneApp() === 'playlab') {
+  if (OPEN_ENDED_PROJECTS_YOUNG_AGE.includes(project.getStandaloneApp())) {
     promises.push(new Promise(fetchPrivacyProfanityViolations));
-  } else if (
-    project.getStandaloneApp() === 'applab' ||
-    project.getStandaloneApp() === 'gamelab' ||
-    project.isWebLab()
-  ) {
+  }
+
+  // If open-ended project type, check if project owner's sharing is disabled.
+  if (OPEN_ENDED_LEGACY_PROJECT_TYPES.includes(project.getStandaloneApp())) {
     promises.push(new Promise(fetchSharingDisabled));
   }
   return Promise.all(promises);
@@ -2100,7 +2101,7 @@ function redirectEditView() {
 
 /**
  * Does a hard redirect if we end up with a hash based projects url. This can
- * happen on IE9, when we save a new project for hte first time.
+ * happen on IE9, when we save a new project for the first time.
  * @returns {boolean} True if we did an actual redirect
  */
 function redirectFromHashUrl() {
@@ -2120,6 +2121,11 @@ function redirectFromHashUrl() {
  */
 function parsePath() {
   var pathname = utils.currentLocation().pathname;
+
+  const geRegion = getGlobalEditionRegion();
+  if (geRegion) {
+    pathname = pathname.replace(`/global/${geRegion}/`, '/');
+  }
 
   // We have a hash based route. Replace the hash with a slash, and append to
   // our existing path

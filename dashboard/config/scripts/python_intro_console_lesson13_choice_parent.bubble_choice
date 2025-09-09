@@ -1,0 +1,12 @@
+name 'python-intro-console-lesson13-choice-parent'
+display_name 'Debugging Conditionals Choice Level'
+description 'Pick one of the levels below to keep practicing conditionals.'
+
+sublevels
+level 'python-intro-console-lesson10-debuggingA'
+level 'python-intro-console-lesson10-debuggingB'
+level 'python-intro-console-lesson10-debuggingC'
+level 'python-intro-console-lesson10-debuggingD'
+
+
+

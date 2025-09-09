@@ -18,7 +18,7 @@ describe I18n::Resources::Dashboard::Blocks::SyncUp do
 
     let(:expected_source_files) do
       [
-        CDO.dir('i18n/locales/source/dashboard/blocks.yml'),
+        CDO.dir('i18n/locales/source/dashboard/blocks.json'),
       ]
     end
 

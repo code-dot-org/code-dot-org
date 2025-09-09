@@ -14,17 +14,17 @@ const BlocklySourceResponseValidator: ResponseValidator<
   ProjectSources
 > = response => {
   const blocklyValidator = (responseToValidate: Record<string, unknown>) => {
-    // Blockly sources are always stringified JSON.
-    let blocklySource;
-    try {
-      blocklySource = JSON.parse(
-        responseToValidate.source as string
-      ) as BlocklySource;
-    } catch (e) {
-      throw new ValidationError('Error parsing JSON: ' + e);
+    // Blockly sources can be stringified or plain JSON.
+    let blocklySource = responseToValidate.source as BlocklySource;
+    if (typeof responseToValidate.source === 'string') {
+      try {
+        blocklySource = JSON.parse(responseToValidate.source as string);
+      } catch (e) {
+        throw new ValidationError('Error parsing JSON: ' + e);
+      }
     }
     if (blocklySource.blocks === undefined) {
-      throwMissingFieldError('blocks');
+      throw missingFieldError('blocks');
     }
   };
 
@@ -89,8 +89,11 @@ export const SourceResponseValidator: ResponseValidator<
 export const LevelPropertiesValidator: ResponseValidator<
   LevelProperties
 > = response => {
+  if (Array.isArray(response)) {
+    throw new Error('Level properties should be an object (received array).');
+  }
   if (!response.appName) {
-    throwMissingFieldError('appName');
+    throw missingFieldError('appName');
   }
 
   // Convert stringified booleans to actual booleans.
@@ -118,16 +121,19 @@ export class ValidationError extends Error {
 }
 
 function sourceValidatorHelper(
-  response: Record<string, unknown>,
+  response: Record<string, unknown> | unknown[],
   appSpecificValidator: (response: Record<string, unknown>) => void
 ): ProjectSources {
+  if (Array.isArray(response)) {
+    throw new Error('Source response should be an object (received array).');
+  }
   if (!response.source) {
-    throwMissingFieldError('source');
+    throw missingFieldError('source');
   }
   appSpecificValidator(response);
   return response as unknown as ProjectSources;
 }
 
-function throwMissingFieldError(fieldName: string) {
-  throw new ValidationError('Missing required field: ' + fieldName);
+function missingFieldError(fieldName: string) {
+  return new ValidationError('Missing required field: ' + fieldName);
 }

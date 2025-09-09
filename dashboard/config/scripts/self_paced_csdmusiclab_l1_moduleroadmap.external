@@ -1,0 +1,29 @@
+name 'self-paced-CSDMusicLab-L1-ModuleRoadmap'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Module Overview
+
+## What's included in this module?
+
+<img src="https://images.code.org/c765063843f1ff09196fc3a0faa38cb3-image-1744147396600.28.24 PM.png" style="float:right; width:20%; border-radius:10px; margin-left:15px; margin-right: 15px;">
+
+#### This professional learning module is made up of four sections.
+
+### ⭐️ **Introduction to Programming with Music Lab** (You're here!)
+#### This section will give you an overview of Programming with Music Lab. You'll review the unit's structure, pedagogical features, and coding environment.
+
+### 🔢 **Teaching Lessons 1 - 5: Sequencing**
+#### Explore how students are introduced to foundational programming concepts through music. This section helps you recognize how sequencing is taught, practiced, and applied in student projects.
+
+### 🔁 **Teaching Lessons 6 - 9: Loops**
+#### This section focuses on how repetition is introduced through loops. You'll gain insight into strategies for helping students identify patterns in their code, use loops to simplify repetition, and build musical patterns efficiently.
+
+### 🎶 **Teaching Lessons 10 - 13: Functions**
+#### Dig into how students develop more advanced thinking by using functions. This section covers how to guide students in recognizing reusable chunks of code and composing more complex songs using abstraction and function calls.
+
+___
+
+#### This professional learning module is designed to prepare you to teach each chunk of lessons in Programming with Music Lab. Feel free to use this module to prepare for a chunk of lessons one at a time - you can always pick up where you left off when you're ready.
+MARKDOWN

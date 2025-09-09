@@ -10,7 +10,7 @@ swapped_regex = %r{
   \|\s!\[\]\(.*image-1602689942798.png\)\s\|\s!\[\]\(.*image-1602689948477.png\)\s\|.*\|\n
 }x
 
-Dir['./dashboard/config/locales/long_instructions.*.json'].each do |path|
+Dir['./dashboard/config/locales/long_instructions/*.json'].each do |path|
   puts "Checking: #{path}"
   locale = path.match(/long_instructions\.(.*-.*)\.json/).captures[0]
 

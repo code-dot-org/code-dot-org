@@ -1,0 +1,25 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2025-03-23T23:58:10.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "title": "Assessment - Free Response",
+    "long_instructions": "What did you gain from using AI to develop your part of the campaign?",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "stay_on_level_after_submit": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-03-23T23:58:10.953+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson8-level7a\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson8-level7a\"},{\"changed_at\":\"2025-03-23 23:58:34 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

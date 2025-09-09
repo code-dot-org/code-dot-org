@@ -10,6 +10,14 @@ module Api::V1::Pd
       render json: report
     end
 
+    # GET /api/v1/pd/workshops/:id/foorm/workshop_survey_summary
+    def workshop_survey_summary
+      is_authorized, facilitator_id_filter = get_authorization_and_filter(current_user, params[:workshop_id])
+      return render json: {}, status: :unauthorized unless is_authorized
+      report = Pd::Foorm::SurveyReporter.get_workshop_survey_summary(params[:workshop_id], facilitator_id_filter)
+      render json: report
+    end
+
     # GET /api/v1/pd/workshops/:id/foorm/csv_survey_report
     def csv_survey_report
       return render json: {}, status: :unauthorized unless current_user&.workshop_admin?
@@ -17,6 +25,10 @@ module Api::V1::Pd
       form_version = params[:version]
       workshop_id = params[:workshop_id]
       ws_submissions = Pd::WorkshopSurveyFoormSubmission.where(pd_workshop_id: workshop_id)
+      user_submission_count = ws_submissions.distinct.count(:user_id)
+      if user_submission_count < Pd::SharedWorkshopConstants::MIN_SURVEY_RESPONSE_COUNT
+        return render json: {error: "There must be at least #{Pd::SharedWorkshopConstants::MIN_SURVEY_RESPONSE_COUNT} responses to generate a report."}, status: :unprocessable_entity
+      end
       submission_ids = ws_submissions.pluck(:foorm_submission_id)
       form = ::Foorm::Form.where(name: form_name, version: form_version).first
       foorm_submissions = submission_ids.empty? ?

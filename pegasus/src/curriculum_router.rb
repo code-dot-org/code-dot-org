@@ -17,11 +17,6 @@ def http_expires_in(seconds)
   http_expires_at(Time.now + seconds)
 end
 
-def http_host_and_port(host, port = 80)
-  return host if port == 80
-  "#{host}:#{port}"
-end
-
 def social_metadata(request, header = nil)
   metadata = {}
 

@@ -1,0 +1,12 @@
+name 'gen-ai-customizing-studentsurvey-premodule_2025'
+title 'Customizing Language Models Pre-Survey'
+submittable 'true'
+anonymous 'true'
+
+page
+text 'gen-ai-customizing-studentsurvey-premodule-preamble_2025'
+level 'gen-ai-foundations-studentsurvey-premodule-q1_copy1_2025'
+level 'gen-ai-foundations-studentsurvey-premodule-q2_copy1_2025'
+level 'gen-ai-foundations-studentsurvey-premodule-q3_copy1_2025'
+level 'gen-ai-foundations-studentsurvey-premodule-q4_copy1_2025'
+level 'gen-ai-foundations-studentsurvey-premodule-q5_copy1_2025'

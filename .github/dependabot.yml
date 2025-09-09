@@ -65,8 +65,6 @@ updates:
       codemirror:
         patterns:
         - "@codemirror/*"
-        - "codemirror"
-        - "codemirror-*"
       dnd-kit:
         patterns:
         - "@dnd-kit/*"
@@ -172,7 +170,6 @@ updates:
     directories: 
     - "/apps/eslint"
     - "/bin/i18n"
-    - "/tools/scripts/brokenLinkChecker"
     schedule:
       interval: "weekly"
       day: "sunday"
@@ -200,6 +197,7 @@ updates:
     directories:
     - "/aws/offsite/aurora-snapshots-fargate"
     - "/docker/dockerfiles"
+    - "/docker/developers"
     schedule:
       interval: "weekly"
       day: "sunday"

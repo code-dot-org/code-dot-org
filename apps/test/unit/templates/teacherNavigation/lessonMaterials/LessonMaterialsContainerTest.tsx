@@ -2,7 +2,6 @@ import {fireEvent, render, screen, within} from '@testing-library/react';
 import React from 'react';
 import {act} from 'react-dom/test-utils';
 import {Provider} from 'react-redux';
-import {useLoaderData} from 'react-router-dom';
 import {Store} from 'redux';
 
 import {
@@ -11,15 +10,17 @@ import {
   registerReducers,
   restoreRedux,
 } from '@cdo/apps/redux';
-import unitSelection, {setUnitName} from '@cdo/apps/redux/unitSelectionRedux';
+import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
 import teacherSections, {
   selectSection,
   setSections,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import LessonMaterialsContainer from '@cdo/apps/templates/teacherNavigation/lessonMaterials/LessonMaterialsContainer';
 import {RESOURCE_ICONS} from '@cdo/apps/templates/teacherNavigation/lessonMaterials/ResourceIconType';
+import HttpClient from '@cdo/apps/util/HttpClient';
 import * as utils from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
+
 const SECTIONS = [
   {
     id: 1,
@@ -27,6 +28,29 @@ const SECTIONS = [
     course_offering_id: 123,
     courseVersionId: 2023,
     unitName: 'csd1-2024',
+    unit_id: 100,
+    unitSelection: {
+      unitName: 'csd1-2024',
+    },
+  },
+  {
+    id: 2,
+    name: 'Period 2',
+    course_offering_id: 123,
+    courseVersionId: 2023,
+    unitName: 'csd1-2024',
+    unit_id: 300,
+    unitSelection: {
+      unitName: 'csd1-2024',
+    },
+  },
+  {
+    id: 3,
+    name: 'Period 2',
+    course_offering_id: 123,
+    courseVersionId: 2023,
+    unitName: 'csd1-2024',
+    unit_id: 400,
     unitSelection: {
       unitName: 'csd1-2024',
     },
@@ -53,42 +77,68 @@ const SECTIONS = [
     },
     course_display_name: 'CSD1-2020',
   },
+  {
+    id: 12,
+    name: 'Period 12',
+    course_offering_id: null,
+    courseVersionId: null,
+    courseVersionName: null,
+    unitName: null,
+    unitSelection: null,
+    course_display_name: null,
+  },
 ];
-jest.mock('react-router-dom', () => ({
-  ...jest.requireActual('react-router-dom'),
-  useLoaderData: jest.fn(),
-}));
 
-const renderDefault = async (showNoCurriculumAssigned = false) => {
-  const store = getStore();
-  await act(async () =>
-    render(
-      <Provider store={store}>
-        <LessonMaterialsContainer
-          showNoCurriculumAssigned={showNoCurriculumAssigned}
-        />
-      </Provider>
-    )
-  );
-};
+const COURSES_WITH_PROGRESS = [
+  {
+    id: 123,
+    display_name: 'CSD',
+    units: [
+      {
+        id: 1,
+        version_year: 2023,
+        key: 'csd1-2024',
+        name: 'CSD unit 1',
+        position: null,
+      },
+    ],
+  },
+  {
+    id: 1234,
+    display_name: 'CSD1-2020',
+    units: [
+      {
+        id: 2,
+        version_year: 2020,
+        key: 'csd1-2020',
+        name: 'CSD1-2020 unit 1',
+        position: null,
+      },
+    ],
+  },
+];
 
 describe('LessonMaterialsContainer', () => {
   let store: Store;
+  let fetchSpy: jest.SpyInstance;
 
   const mockLessonData = {
     title: 'Unit 3',
     unitNumber: 3,
     hasNumberedUnits: true,
     versionYear: 2023,
+    unitId: 1,
     lessons: [
       {
         name: 'First lesson',
         id: 1,
         position: 1,
-        lessonPlanHtmlUrl: '/s/unit/lessons/1',
+        lessonPlanHtmlUrl: '/courses/course/units/1/lessons/1',
         lessonPlanPdfUrl: 'https://lesson-plans.code.org/lesson-plan.pdf',
         standardsUrl: 'studio.code.org/standards',
         vocabularyUrl: 'studio.code.org/vocab',
+        hasLessonPlan: true,
+        isLockable: false,
         resources: {
           Teacher: [
             {
@@ -124,6 +174,8 @@ describe('LessonMaterialsContainer', () => {
         id: 2,
         position: 2,
         lessonPlanHtmlUrl: 'studio.code.org/lesson2',
+        hasLessonPlan: true,
+        isLockable: false,
         resources: {
           Teacher: [
             {
@@ -137,11 +189,73 @@ describe('LessonMaterialsContainer', () => {
           ],
         },
       },
+      {
+        name: 'Third lesson',
+        id: 3,
+        position: 3,
+        lessonPlanHtmlUrl: 'studio.code.org/lesson2',
+        hasLessonPlan: false,
+        isLockable: true,
+        resources: {
+          Teacher: [],
+          Student: [],
+        },
+      },
     ],
   };
 
+  const mockLessonDataNoLessonPlans = {
+    title: 'Unit 3',
+    unitNumber: 3,
+    hasNumberedUnits: true,
+    versionYear: 2023,
+    lessons: [
+      {
+        name: 'First lesson',
+        id: 1,
+        position: 1,
+        lessonPlanHtmlUrl: '/courses/course/units/1/lessons/1',
+        lessonPlanPdfUrl: 'https://lesson-plans.code.org/lesson-plan.pdf',
+        standardsUrl: 'studio.code.org/standards',
+        vocabularyUrl: 'studio.code.org/vocab',
+        hasLessonPlan: false,
+        isLockable: false,
+        resources: {
+          Teacher: [],
+          Student: [],
+        },
+      },
+      {
+        name: 'Second lesson',
+        id: 2,
+        position: 2,
+        lessonPlanHtmlUrl: 'studio.code.org/lesson2',
+        hasLessonPlan: false,
+        isLockable: false,
+        resources: {
+          Teacher: [],
+        },
+      },
+    ],
+  };
+
+  const renderDefault = async (
+    showNoCurriculumAssigned = false,
+    lessonData: object = mockLessonData
+  ) => {
+    mockSpy(lessonData);
+    await act(async () =>
+      render(
+        <Provider store={store}>
+          <LessonMaterialsContainer
+            showNoCurriculumAssigned={showNoCurriculumAssigned}
+          />
+        </Provider>
+      )
+    );
+  };
+
   beforeEach(() => {
-    (useLoaderData as jest.Mock).mockReturnValue(mockLessonData);
     stubRedux();
 
     registerReducers({
@@ -151,15 +265,36 @@ describe('LessonMaterialsContainer', () => {
 
     store = getStore();
 
-    store.dispatch(setUnitName('csd1-2024'));
     store.dispatch(setSections(SECTIONS));
     store.dispatch(selectSection(1));
+
+    fetchSpy = jest.spyOn(HttpClient, 'fetchJson');
+    mockSpy(mockLessonData);
   });
 
-  afterEach(() => {
+  afterEach(async () => {
+    jest.resetAllMocks();
     restoreRedux();
-    jest.clearAllMocks();
+    fetchSpy.mockReset();
   });
+
+  const mockSpy = (lessonData: object) => {
+    fetchSpy.mockReset();
+    fetchSpy.mockImplementation((path: string) => {
+      if (path.includes('lesson_materials')) {
+        return Promise.resolve({
+          value: lessonData,
+          response: new Response(),
+        });
+      }
+      if (path.includes('section_courses')) {
+        return Promise.resolve({
+          value: COURSES_WITH_PROGRESS,
+          response: new Response(),
+        });
+      }
+    });
+  };
 
   it('renders the component and dropdown with lessons', async () => {
     await renderDefault();
@@ -173,8 +308,11 @@ describe('LessonMaterialsContainer', () => {
       i18n.downloadUnitXHandouts({unitNumber: mockLessonData.unitNumber})
     );
 
+    // Check for unit selector
+    screen.getByRole('combobox', {name: 'Select a unit'});
+
     // Check for lesson dropdowns
-    screen.getByRole('combobox');
+    screen.getByRole('combobox', {name: 'Choose a lesson'});
     screen.getByRole('option', {name: 'Lesson 1 — First lesson'});
     screen.getByRole('option', {name: 'Lesson 2 — Second lesson'});
   });
@@ -207,13 +345,11 @@ describe('LessonMaterialsContainer', () => {
       hasNumberedUnits: false,
     };
 
-    (useLoaderData as jest.Mock).mockReturnValue(
-      lessonDataWithoutNumberedUnits
-    );
+    store.dispatch(selectSection(2));
 
-    await renderDefault();
+    await renderDefault(false, lessonDataWithoutNumberedUnits);
 
-    screen.getByText('Unit Standards');
+    await screen.findByText('Unit Standards');
     screen.getByText('Unit Vocabulary');
     screen.getByText(i18n.downloadUnitLessonPlans());
     screen.getByText(i18n.downloadUnitHandouts());
@@ -232,7 +368,9 @@ describe('LessonMaterialsContainer', () => {
     );
 
     // Check for lesson dropdowns
-    const lessonDropdown = screen.getByRole('combobox');
+    const lessonDropdown = screen.getByRole('combobox', {
+      name: 'Choose a lesson',
+    });
     screen.getByRole('option', {name: 'Lesson 1 — First lesson'});
     screen.getByRole('option', {name: 'Lesson 2 — Second lesson'});
 
@@ -245,9 +383,8 @@ describe('LessonMaterialsContainer', () => {
   });
 
   it('notifies users if no curriculum is assigned.', async () => {
-    await act(async () => {
-      renderDefault(true);
-    });
+    store.dispatch(selectSection(12));
+    await renderDefault(true);
 
     screen.getByAltText('blank screen');
     screen.getByText(i18n.emptySectionHeadline());
@@ -256,10 +393,7 @@ describe('LessonMaterialsContainer', () => {
   });
 
   it('tells users to select a unit when no unit assigned', async () => {
-    const mockNoUnitData = null;
-    (useLoaderData as jest.Mock).mockReturnValue(mockNoUnitData);
     store.dispatch(selectSection(10));
-    store.dispatch(setUnitName(null));
 
     await renderDefault();
 
@@ -272,9 +406,6 @@ describe('LessonMaterialsContainer', () => {
   });
 
   it('notifies users that the assigned curriculum is pre-2020', async () => {
-    const legacyData = {...mockLessonData, versionYear: 2020};
-    (useLoaderData as jest.Mock).mockReturnValue(legacyData);
-    store.dispatch(setUnitName('csd1-2020'));
     store.dispatch(selectSection(11));
 
     await renderDefault();
@@ -289,7 +420,9 @@ describe('LessonMaterialsContainer', () => {
   it('renders the resources for the new lesson when lesson is changed', async () => {
     await renderDefault();
 
-    const selectedLessonInput = screen.getAllByRole('combobox')[0];
+    const selectedLessonInput = screen.getByRole('combobox', {
+      name: 'Choose a lesson',
+    });
 
     fireEvent.change(selectedLessonInput, {target: {value: '2'}});
 
@@ -305,6 +438,25 @@ describe('LessonMaterialsContainer', () => {
       screen.queryAllByTestId('resource-icon-' + RESOURCE_ICONS.SLIDES.icon)
         .length === 0
     );
+  });
+
+  it('renders will render message when there is no lesson plan', async () => {
+    await renderDefault();
+
+    const selectedLessonInput = screen.getByRole('combobox', {
+      name: 'Choose a lesson',
+    });
+
+    fireEvent.change(selectedLessonInput, {target: {value: '3'}});
+
+    screen.getByText('No teacher resources available for this lesson');
+  });
+
+  it('renders empty state when there are no lesson plans in the whole unit', async () => {
+    store.dispatch(selectSection(3));
+    await renderDefault(false, mockLessonDataNoLessonPlans);
+
+    screen.getByText('There are no lesson materials for this unit.');
   });
 
   describe('resource links', () => {
@@ -343,7 +495,7 @@ describe('LessonMaterialsContainer', () => {
       await renderDefault();
       viewResource('Lesson Plan: First lesson', 'View');
       expect(windowOpenMock).toHaveBeenCalledWith(
-        '/s/unit/lessons/1',
+        '/courses/course/units/1/lessons/1',
         '_blank',
         'noopener,noreferrer'
       );

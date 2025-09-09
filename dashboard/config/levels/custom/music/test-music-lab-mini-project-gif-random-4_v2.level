@@ -1,0 +1,403 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-05-31T03:00:21.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "### Random Block\r\nYou can add entire sequences inside a `play random` block. In this example, every time the loop repeats, it will choose a new style of song to play (Electro, Pop, or Hip-Hop).\r\n\r\nAdd a fourth sequence to this code to play a Heavy Rock set of beats, bass, and lead. This requires:\r\n\r\n1) Adding a new `play together` block inside the `play random` block [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=flyout-id:play_together_toolbox---id:play_random_workspace)\r\n2) Adding 3 new `play` blocks and choosing 3 new tracks from the Heavy Metal pack\r\n\r\nPress the <code style=\"background-color: #fca401; color: white; border: none; box-shadow: inset -1px -1px 1px1 rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px\">Run</code> button! You should hear a different selection of beat, bass, and lead tracks as the song plays!",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "showSoundFilters": true,
+      "allowChangeStartingPlayheadPosition": true,
+      "packId": "default",
+      "sounds": {
+        "rock": [
+          "arena_beat",
+          "arena_alternate_beat",
+          "drum_kit_basement",
+          "drum_kit_can",
+          "drum_kit_crash",
+          "drum_kit_crusher",
+          "gutter_beat",
+          "drum_kit_hands",
+          "drum_kit_interlude",
+          "punk_beat",
+          "punk_alternate_beat",
+          "drum_kit_roll",
+          "amped_bass",
+          "bass_chonk",
+          "bass_down_steady_up",
+          "bass_freeze",
+          "bass_fuzz_climb",
+          "bass_fuzz_drop",
+          "bass_fuzz_slide",
+          "bass_fuzz_wave",
+          "bass_hook",
+          "bass_jam",
+          "bass_lifted_steady_up",
+          "amped_alternate_bass",
+          "ghost_choir",
+          "guitar_buzz_riff",
+          "riff_guitar",
+          "guitar_fast_chop",
+          "guitar_high_riff",
+          "power_guitar",
+          "guitar_punctuation",
+          "shredded_guitar",
+          "guitar_tag",
+          "organ_grind",
+          "piano_fuzz",
+          "synth_drive",
+          "synth_fuzz_blip",
+          "synth_screech"
+        ],
+        "electro": [
+          "drum_beat_shake",
+          "bass_synth_hammer",
+          "guitar_melody"
+        ],
+        "pop": [
+          "shake_beat",
+          "bass_raised_steady",
+          "piano_plink"
+        ],
+        "hiphop": [
+          "drum_beat_cuts",
+          "bass_sub_bathrobe",
+          "horns"
+        ]
+      },
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together",
+            "repeat_simple2"
+          ]
+        },
+        "type": "flyout"
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "next": {
+                "block": {
+                  "type": "repeat_simple2",
+                  "id": "repeat_toolbox",
+                  "movable": false,
+                  "editable": false,
+                  "extraState": {
+                    "disableNextConnection": true
+                  },
+                  "fields": {
+                    "times": 5
+                  },
+                  "inputs": {
+                    "code": {
+                      "block": {
+                        "type": "play_sounds_random",
+                        "id": "play_random_workspace",
+                        "movable": false,
+                        "editable": false,
+                        "extraState": {
+                          "disableNextConnection": true
+                        },
+                        "inputs": {
+                          "code": {
+                            "block": {
+                              "type": "play_sounds_together",
+                              "id": "play_sounds_together",
+                              "editable": false,
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
+                              "inputs": {
+                                "code": {
+                                  "block": {
+                                    "type": "play_sound_at_current_location_simple2",
+                                    "id": "play_sound_at_current_location_simple2",
+                                    "movable": false,
+                                    "editable": false,
+                                    "extraState": {
+                                      "disableNextConnection": false
+                                    },
+                                    "fields": {
+                                      "sound": "electro/drum_beat_shake"
+                                    },
+                                    "next": {
+                                      "block": {
+                                        "type": "play_sound_at_current_location_simple2",
+                                        "id": "2;6Qe6r5O1GxH|$Ot6QP",
+                                        "movable": false,
+                                        "editable": false,
+                                        "extraState": {
+                                          "disableNextConnection": false
+                                        },
+                                        "fields": {
+                                          "sound": "electro/bass_synth_hammer"
+                                        },
+                                        "next": {
+                                          "block": {
+                                            "type": "play_sound_at_current_location_simple2",
+                                            "id": "-[yZI!-``q$@=G`1v:/G",
+                                            "movable": false,
+                                            "editable": false,
+                                            "extraState": {
+                                              "disableNextConnection": true
+                                            },
+                                            "fields": {
+                                              "sound": "electro/guitar_melody"
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "play_sounds_together",
+                                  "id": "C#WWCvTlRlsQrl[[`JIm",
+                                  "movable": false,
+                                  "editable": false,
+                                  "extraState": {
+                                    "disableNextConnection": false
+                                  },
+                                  "inputs": {
+                                    "code": {
+                                      "block": {
+                                        "type": "play_sound_at_current_location_simple2",
+                                        "id": "X65D{sqmoX%PzH@?D59f",
+                                        "movable": false,
+                                        "editable": false,
+                                        "extraState": {
+                                          "disableNextConnection": false
+                                        },
+                                        "fields": {
+                                          "sound": "pop/shake_beat"
+                                        },
+                                        "next": {
+                                          "block": {
+                                            "type": "play_sound_at_current_location_simple2",
+                                            "id": "T8mwOOXO)3I1?d~4{6hD",
+                                            "movable": false,
+                                            "editable": false,
+                                            "extraState": {
+                                              "disableNextConnection": false
+                                            },
+                                            "fields": {
+                                              "sound": "pop/bass_raised_steady"
+                                            },
+                                            "next": {
+                                              "block": {
+                                                "type": "play_sound_at_current_location_simple2",
+                                                "id": "c+a3pdw)~NaM`Hgda8?u",
+                                                "movable": false,
+                                                "editable": false,
+                                                "extraState": {
+                                                  "disableNextConnection": true
+                                                },
+                                                "fields": {
+                                                  "sound": "pop/piano_plink"
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "next": {
+                                    "block": {
+                                      "type": "play_sounds_together",
+                                      "id": "``SdGy,Gr+l][tob%Xpk",
+                                      "movable": false,
+                                      "editable": false,
+                                      "extraState": {
+                                        "disableNextConnection": false
+                                      },
+                                      "inputs": {
+                                        "code": {
+                                          "block": {
+                                            "type": "play_sound_at_current_location_simple2",
+                                            "id": "rP+sGjQpa1/,AZPgBhC2",
+                                            "movable": false,
+                                            "editable": false,
+                                            "extraState": {
+                                              "disableNextConnection": false
+                                            },
+                                            "fields": {
+                                              "sound": "hiphop/drum_beat_cuts"
+                                            },
+                                            "next": {
+                                              "block": {
+                                                "type": "play_sound_at_current_location_simple2",
+                                                "id": "hJBSvXjj#u_x!*j@22C7",
+                                                "movable": false,
+                                                "editable": false,
+                                                "extraState": {
+                                                  "disableNextConnection": false
+                                                },
+                                                "fields": {
+                                                  "sound": "hiphop/bass_sub_bathrobe"
+                                                },
+                                                "next": {
+                                                  "block": {
+                                                    "type": "play_sound_at_current_location_simple2",
+                                                    "id": "JaXY#Z]Yv{*lC2i@Tp]}",
+                                                    "movable": false,
+                                                    "editable": false,
+                                                    "extraState": {
+                                                      "disableNextConnection": true
+                                                    },
+                                                    "fields": {
+                                                      "sound": "hiphop/horns"
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "validationTimeout": 1,
+      "sortUnrestrictedPacksByType": false,
+      "toolboxDefinition": {
+        "contents": [
+          {
+            "kind": "block",
+            "type": "play_sound_at_current_location_simple2",
+            "id": "play_sound_at_current_location_simple2",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "sound": "rock/arena_beat"
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_sounds_together",
+            "id": "play_together_toolbox",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "enabled": true
+          }
+        ],
+        "kind": "flyoutToolbox"
+      }
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
+    "validations": [
+      {
+        "key": "test-music-lab-mini-project-gif-random-4_74fb0de0-a270-41cf-871f-7c4c46b719aa",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot says \"You did it!\"",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "beat:4"
+          },
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "bass:4"
+          },
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "lead:4"
+          },
+          {
+            "name": "played_sounds_together",
+            "value": 12
+          },
+          {
+            "name": "played_sounds",
+            "value": 25
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-mini-project-gif-random-4_f85a8bc7-d04b-46c6-8ccd-d3bb679126c8",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is listening to your song...",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "beat:4"
+          },
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "bass:4"
+          },
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "lead:4"
+          },
+          {
+            "name": "played_sounds_together",
+            "value": 12
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-mini-project-gif-random-4_f0fb05b5-386b-48fc-805d-a1f7d3844872",
+        "message": "Not sure where to start? Get your new tracks to play together! [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=flyout-id:play_together_toolbox---id:play_random_workspace)",
+        "next": false,
+        "conditions": [
+
+        ],
+        "callout": "flyout-id:play_together_toolbox---id:play_random_workspace"
+      }
+    ],
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "encrypted_exemplar_sources": "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\n",
+    "name_suffix": "_v2",
+    "submittable": "false",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-05-31T03:00:21.439+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-mini-project-gif-random-4\\\"\"],\"cloned_from\":\"test-music-lab-mini-project-gif-random-4\"},{\"changed_at\":\"2025-07-08 13:33:50 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-07-08 13:37:02 +0000\",\"changed\":[\"long_instructions\",\"validations\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-07-10 21:19:14 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

@@ -83,8 +83,10 @@ export interface ProgressState {
   courseVersionId: number | undefined;
   unitDescription: string | undefined;
   unitStudentDescription: string | undefined;
+  unitHasUnnumberedLessons: boolean;
   changeFocusAreaPath: string | undefined;
   unitCompleted: boolean | undefined;
+  courseName: string | null;
 }
 
 export interface MilestoneReport extends OptionalMilestoneData {
@@ -146,8 +148,10 @@ const initialState: ProgressState = {
   courseVersionId: undefined,
   unitDescription: undefined,
   unitStudentDescription: undefined,
+  unitHasUnnumberedLessons: false,
   changeFocusAreaPath: undefined,
   unitCompleted: undefined,
+  courseName: null,
 };
 
 const progressSlice = createSlice({
@@ -176,12 +180,14 @@ const progressSlice = createSlice({
       state.unitTitle = action.payload.unitTitle;
       state.unitDescription = action.payload.unitDescription;
       state.unitStudentDescription = action.payload.unitStudentDescription;
+      state.unitHasUnnumberedLessons = action.payload.unitHasUnnumberedLessons;
       state.courseId = action.payload.courseId;
       state.courseVersionId = action.payload.courseVersionId;
       state.currentLessonId = currentLessonId;
       state.hasFullProgress = action.payload.isFullProgress;
       state.isLessonExtras = action.payload.isLessonExtras;
       state.currentPageNumber = action.payload.currentPageNumber;
+      state.courseName = action.payload.courseName;
     },
     setCurrentLevelId(state, action: PayloadAction<string>) {
       state.currentLevelId = action.payload;
@@ -330,6 +336,10 @@ export function navigateToLevelId(levelId: string): ProgressThunkAction {
     const currentLevel = getCurrentLevel(getState());
 
     if (canChangeLevelInPage(currentLevel, newLevel)) {
+      // If the requested level is the same as the current level, don't do anything.
+      if (state.currentLevelId === levelId) {
+        return;
+      }
       updateBrowserForLevelNavigation(state, newLevel.path, levelId);
       // Notify the Lab2 system that the level is changing.
       notifyLevelChange(currentLevel.id, levelId);
@@ -456,7 +466,12 @@ function sendReportHelper(
     ...extraData,
   };
 
-  return fetch(`/milestone/${userId}/${scriptLevelId}/${levelId}`, {
+  const courseId = state.courseId;
+  const url = courseId
+    ? `/milestone/${userId}/${scriptLevelId}/${levelId}?course_id=${courseId}`
+    : `/milestone/${userId}/${scriptLevelId}/${levelId}`;
+
+  return fetch(url, {
     method: 'POST',
     headers: {
       'content-type': 'application/json',

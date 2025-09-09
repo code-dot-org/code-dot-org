@@ -16,7 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const scriptData = getScriptData('json');
   const ltiProvider = scriptData['lti_provider'];
   const ltiProviderName = scriptData['lti_provider_name'];
-  const newAccountUrl = scriptData['new_account_url'];
+  const finishSignUpUrl = scriptData['finish_sign_up_url'];
+  const newAccountUrl = new URL(scriptData['new_account_url']);
   const existingAccountUrl = new URL(scriptData['existing_account_url']);
   const emailAddress = scriptData['email'];
   const newCtaType = scriptData['new_cta_type'];
@@ -27,6 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ltiProvider,
     ltiProviderName,
     newAccountUrl,
+    finishSignUpUrl,
     existingAccountUrl,
     emailAddress,
     newCtaType,

@@ -73,38 +73,40 @@
           "inputType": "number"
         },
         {
-          "type": "radiogroup",
+          "type": "checkbox",
           "name": "collection_cat",
           "visibleIf": "{teacher_account} = true",
-          "title": "Did you collect information from event participants about their interest in enrolling in a computer science class at your school next year, before and after your event?",
+          "title": "Did you collect information from event participants about their interest in enrolling in a computer science class at your school next year, at the start and end of your event?",
           "isRequired": true,
           "choices": [
             {
-              "value": "collected_all",
-              "text": "Yes, I collected this information before and after my event"
+              "value": "collected_start",
+              "text": "I collected this information at the start of my event"
             },
             {
-              "value": "collected_some",
-              "text": "Yes, but I only was able to collect it before or after, not both"
+              "value": "collected_end",
+              "text": "I collected this information at the end of my event"
             },
             {
-              "value": "collected_none",
-              "text": "No, but I will remember to collect it for my next event!"
+              "value": "did_not_collect",
+              "text": "I did not collect this information"
             }
           ]
         },
         {
           "type": "text",
           "name": "num_pre_enrollment",
-          "visibleIf": "{teacher_account} = true",
-          "title": "At the *start* of your event, how many students indicated interest in enrolling in a computer science class at your school next year? \n\nIf you forgot to collect this information, leave it blank. And don't forget to ask about this during your next event!",
+          "visibleIf": "{teacher_account} = true and {collection_cat} contains 'collected_start'",
+          "title": "At the *start* of your event, how many students indicated interest in enrolling in a computer science class at your school next year?",
+          "isRequired": true,
           "inputType": "number"
         },
         {
           "type": "text",
           "name": "num_post_enrollment",
-          "visibleIf": "{teacher_account} = true",
-          "title": "At the *end* of your event, how many students indicated interest in enrolling in a computer science class at your school next year? \n\nIf you forgot to collect this information, leave it blank. And don't forget to ask about this during your next event!",
+          "visibleIf": "{teacher_account} = true and {collection_cat} contains 'collected_end'",
+          "title": "At the *end* of your event, how many students indicated interest in enrolling in a computer science class at your school next year?",
+          "isRequired": true,
           "inputType": "number"
         },
         {

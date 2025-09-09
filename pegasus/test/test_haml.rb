@@ -10,6 +10,7 @@ class HamlTest < Minitest::Test
   end
 
   def test_resources_videos
+    skip unless CDO.has_pegasus_content
     path = '/educate/resources/videos'
     resp = get(path)
     assert_equal 200, resp.status, path

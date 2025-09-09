@@ -32,6 +32,11 @@ declare module '*.svg' {
   export = value;
 }
 
+declare module '*.gif' {
+  const value: string;
+  export = value;
+}
+
 // Modules without types
 declare module '@blockly/plugin-scroll-options';
 declare module '@blockly/keyboard-navigation';
@@ -39,3 +44,6 @@ declare module '@blockly/field-angle';
 declare module '@blockly/field-bitmap';
 declare module '@blockly/field-colour';
 declare module '@cdo/locale';
+declare module '@code-dot-org/maze';
+declare module 'eslint-linter-browserify';
+declare module '@replit/codemirror-css-color-picker';

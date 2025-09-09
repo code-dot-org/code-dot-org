@@ -1,18 +1,20 @@
 import classNames from 'classnames';
-import React, {useCallback, useContext} from 'react';
+import React, {memo, useCallback, useContext} from 'react';
 import {useSelector} from 'react-redux';
 
-import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
+import {useBlocklySettings} from '@cdo/apps/lab2/hooks/useBlocklySettings';
+import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
+import SettingsButton from '@cdo/apps/lab2/views/components/Settings/SettingsButton';
 import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {commonI18n} from '@cdo/apps/types/locale';
+import experiments from '@cdo/apps/util/experiments';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {getBaseAssetUrl} from '../appConfig';
 import {AnalyticsContext} from '../context';
 import musicI18n from '../locale';
 import MusicLibrary, {SoundFolder} from '../player/MusicLibrary';
-import {MusicState} from '../redux/musicRedux';
 
 import moduleStyles from './HeaderButtons.module.scss';
 
@@ -80,9 +82,8 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
   hideChaff,
 }) => {
   const readOnlyWorkspace: boolean = useSelector(isReadOnlyWorkspace);
-  const {canUndo, canRedo} = useSelector(
-    (state: {music: MusicState}) => state.music.undoStatus
-  );
+  const canUndo = useAppSelector(state => state.music.canUndo);
+  const canRedo = useAppSelector(state => state.music.canRedo);
   const currentPackId = useAppSelector(state => state.music.packId);
   const analyticsReporter = useContext(AnalyticsContext);
   const dialogControl = useDialogControl();
@@ -128,16 +129,6 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
     }
   }, [hideChaff, dialogControl, analyticsReporter, clearCode]);
 
-  const onFeedbackClicked = () => {
-    if (analyticsReporter) {
-      analyticsReporter.onButtonClicked('feedback');
-    }
-    window.open(
-      'https://docs.google.com/forms/d/e/1FAIpQLScnUgehPPNjhSNIcCpRMcHFgtE72TlfTOh6GkER6aJ-FtIwTQ/viewform?usp=sf_link',
-      '_blank'
-    );
-  };
-
   const onClickSkip = useCallback(() => {
     if (dialogControl) {
       dialogControl.showDialog({
@@ -151,26 +142,29 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
     }
   }, [dialogControl, skipUrl]);
 
+  const settings = useBlocklySettings();
+
   return (
     <div className={moduleStyles.container}>
-      {!readOnlyWorkspace && (
-        <div className={moduleStyles.subContainer}>
-          {!allowPackSelection && packFolder && (
-            <button
-              type="button"
-              className={classNames(
-                moduleStyles.button,
-                moduleStyles.buttonWide,
-                moduleStyles.buttonInteractionDisabled
-              )}
-              disabled={true}
-            >
-              <CurrentPack packFolder={packFolder} noRightPadding={true} />
-            </button>
+      {!allowPackSelection && packFolder && (
+        <button
+          type="button"
+          className={classNames(
+            moduleStyles.button,
+            moduleStyles.buttonWide,
+            moduleStyles.buttonInteractionDisabled
           )}
+          disabled={true}
+        >
+          <CurrentPack packFolder={packFolder} noRightPadding={true} />
+        </button>
+      )}
+      {!readOnlyWorkspace && (
+        <>
           <button
             onClick={onClickStartOver}
             type="button"
+            id="start-over-button"
             className={classNames(
               moduleStyles.button,
               allowPackSelection && packFolder && moduleStyles.buttonWide
@@ -185,6 +179,18 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
               className={'icon'}
             />
           </button>
+        </>
+      )}
+      {!experiments.isEnabledAllowingQueryString(
+        experiments.LAB2_RESOURCE_PANEL
+      ) ? (
+        <SettingsButton
+          settings={settings}
+          className={classNames(moduleStyles.button)}
+        />
+      ) : null}
+      {!readOnlyWorkspace && (
+        <>
           <button
             onClick={() => onClickUndoRedo('undo')}
             type="button"
@@ -215,26 +221,29 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
               className={'icon'}
             />
           </button>
-        </div>
+          {Blockly.showBlockHelp && (
+            <button
+              onClick={() => window.open('/docs/ide/music', '_blank')}
+              type="button"
+              id="documentation-button"
+              className={classNames(moduleStyles.button)}
+            >
+              <FontAwesome
+                title={musicI18n.documentation()}
+                icon="book"
+                className={'icon'}
+              />
+            </button>
+          )}
+        </>
       )}
-      <button
-        onClick={onFeedbackClicked}
-        type="button"
-        className={classNames(moduleStyles.button)}
-      >
-        <FontAwesome
-          title={musicI18n.feedback()}
-          icon="commenting"
-          className={'icon'}
-        />
-      </button>
       {skipUrl && (
         <button
           onClick={onClickSkip}
           type="button"
           className={classNames(moduleStyles.button, moduleStyles.buttonSkip)}
         >
-          {commonI18n.skipToProject()}
+          <span>{commonI18n.skipToProject()}</span>
           <FontAwesome
             title={commonI18n.skipToProject()}
             icon="arrow-right"
@@ -246,4 +255,4 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
   );
 };
 
-export default HeaderButtons;
+export default memo(HeaderButtons);

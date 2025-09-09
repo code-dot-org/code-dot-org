@@ -1,7 +1,10 @@
+import Popover from '@code-dot-org/component-library/popover';
 import cookies from 'js-cookie';
 import React from 'react';
 
-import SignInCallout from './SignInCallout';
+import i18n from '@cdo/locale';
+
+import styles from './sign-in-callout-wrapper.module.scss';
 
 const HideSignInCallout = 'hide_signin_callout';
 
@@ -43,7 +46,10 @@ export default class SignInCalloutWrapper extends React.Component {
     this.setState({hideCallout: true});
     cookies.set(HideSignInCallout, 'true', {expires: 1, path: '/'});
     sessionStorage.setItem(HideSignInCallout, 'true');
+    // Needed to prevent sending the user to the sign up page when dismissing the callout
     event.preventDefault();
+    // Needed to prevent triggering the Create Account Button Clicked analytics event firing
+    event.stopPropagation();
     this.signInElement &&
       this.signInElement.classList.remove('z_index_above_modal');
   }
@@ -55,7 +61,17 @@ export default class SignInCalloutWrapper extends React.Component {
     } else {
       return (
         <div className="uitest-signincallout">
-          <SignInCallout handleClose={this.closeCallout} />
+          <Popover
+            title={i18n.notSignedInHeader()}
+            icon={{
+              iconName: 'person-circle-question',
+              className: styles.calloutIcon,
+            }}
+            content={i18n.notSignedInBody()}
+            direction={'none'}
+            className={styles.popover}
+            onClose={this.closeCallout}
+          />
         </div>
       );
     }

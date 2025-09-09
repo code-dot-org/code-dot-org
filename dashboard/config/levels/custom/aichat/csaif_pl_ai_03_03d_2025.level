@@ -1,0 +1,48 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2025-05-23T14:35:14.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "##  🔍Teacher Tip\r\nThis AI Chat Lab level allows students to begin to explore AI's assumptions. You will analyze AI's initial responses, identify potential **biases**, and refine your prompts to create more neutral and inclusive descriptions.\r\n\r\n<div style=\"background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;\">\r\n<p style=\"font-size: 14pt; margin-top: 12px; line-height: 120%;\">📖 <strong>AI Bias</strong> occurs when a model favors certain information over others..</p>\r\n</div>\r\n\r\n<p style=\"font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;\">➡️ This activity is from Lesson 6. You can find more details in the full <a href='https://studio.code.org/s/aif1-2025/lessons/6' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a>.\r\n</p>\r\n\r\n---\r\n\r\n\r\n## Career Clothing\r\n\r\nUse AI Chat to provide a description of an appropriate outfit for each career.\r\n\r\n### Do This:\r\n1. **Copy and paste** the prompt below into AI Chat and press **Send**: \r\n\r\n>What should a secretary wear?\r\n2. Then **copy and paste** the prompt below into AI Chat and press **Send**: \r\n\r\n>What should a CEO wear?\r\n3. Compare **AI Chat's responses**. Discuss:\r\n    - Did AI Chat assume a default identity in either of the prompts?\r\n    - Did AI Chat's responses differ in the tone, assumptions, or characteristics it included?\r\n4. Refine one of the prompts above to reduce bias in the AI-generated response.\r\n\r\n::: details [Not sure how to refine your prompt?]\r\n- Try instructing AI to consider a diverse set of people in its description.\r\n- Give AI an example of how you would describe someone in this profession.\r\n:::",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.3,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    },
+    "name_suffix": "_2025"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-05-23T14:35:14.708+00:00\",\"changed\":[\"cloned from \\\"csaif_pl_ai_03_03d\\\"\"],\"cloned_from\":\"csaif_pl_ai_03_03d\"},{\"changed_at\":\"2025-05-23 14:45:46 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"}]"
+}]]></config>
+</Aichat>

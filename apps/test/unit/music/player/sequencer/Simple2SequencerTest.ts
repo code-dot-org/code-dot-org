@@ -244,13 +244,13 @@ describe('Simple2Sequencer', () => {
     sequencer.newSequence();
     sequencer.startFunctionContext('when_run');
     sequencer.setEffect('filter', 'low');
-    sequencer.playSound('id', 'blockId');
+    sequencer.playSound('id1', 'blockId1');
 
     const event = sequencer.getPlaybackEvents()[0];
     expect(event.effects?.filter).to.equal('low');
 
     sequencer.startFunctionContext('new function');
-    sequencer.playSound('id', 'blockId');
+    sequencer.playSound('id2', 'blockId2');
 
     const newFunctionEvent =
       sequencer.getOrderedFunctions()[1].playbackEvents[0];
@@ -270,7 +270,7 @@ describe('Simple2Sequencer', () => {
       // Override to play index 1.
       sequencer.startRandom(2, 1);
 
-        sequencer.playSound('id', 'blockId');
+        sequencer.playSound('id1', 'blockId1');
         assert.deepEqual(getLastEvent().skipContext, {
           insideRandom: true,
           skipSound: true,
@@ -278,7 +278,7 @@ describe('Simple2Sequencer', () => {
 
         sequencer.startRandom(2, 1);
 
-          sequencer.playSound('id', 'blockId');
+          sequencer.playSound('id2', 'blockId2');
           assert.deepEqual(getLastEvent().skipContext, {
             insideRandom: true,
             skipSound: true
@@ -286,7 +286,7 @@ describe('Simple2Sequencer', () => {
 
           sequencer.nextRandom();
 
-          sequencer.playSound('id', 'blockId');
+          sequencer.playSound('id3', 'blockId3');
           assert.deepEqual(getLastEvent().skipContext, {
             insideRandom: true,
             skipSound: true
@@ -298,7 +298,7 @@ describe('Simple2Sequencer', () => {
 
         // This context will be played.
 
-        sequencer.playSound('id', 'blockId');
+        sequencer.playSound('id4', 'blockI4d');
         assert.deepEqual(getLastEvent().skipContext, {
           insideRandom: true,
           skipSound: false
@@ -307,7 +307,7 @@ describe('Simple2Sequencer', () => {
         // Override to play index 1.
         sequencer.startRandom(2, 1);
 
-          sequencer.playSound('id', 'blockId');
+          sequencer.playSound('id5', 'blockId5');
           assert.deepEqual(getLastEvent().skipContext, {
             insideRandom: true,
             skipSound: true
@@ -317,7 +317,7 @@ describe('Simple2Sequencer', () => {
 
           // This context will be played.
 
-          sequencer.playSound('id', 'blockId');
+          sequencer.playSound('id6', 'blockId6');
           assert.deepEqual(getLastEvent().skipContext, {
             insideRandom: true,
             skipSound: false

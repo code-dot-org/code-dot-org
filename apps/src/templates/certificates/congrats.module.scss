@@ -1,6 +1,7 @@
-@import 'phase1-design-system';
-@import 'color', 'font', 'typography', 'breakpoints',
-  'barlow-semi-condensed-font';
+@import '2022-rebrand-update';
+@import 'color', 'breakpoints';
+@import '@code-dot-org/component-library-styles/font';
+@import '@code-dot-org/component-library-styles/typography.module';
 
 :root {
   --swiper-pagination-color: #{$light_primary_500};
@@ -22,6 +23,21 @@ h1.header {
   background-color: $neutral_light;
   padding: 15px;
   border-radius: 5px;
+}
+
+.userNameIsRequiredAlert {
+  margin-bottom: 2.5rem;
+
+  & > div > span {
+    width: 100%;
+    min-width: 0;
+    display: flex;
+    justify-content: space-between;
+
+    a {
+      padding-inline-end: 0.625rem;
+    }
+  }
 }
 
 .certificateContainer {
@@ -57,6 +73,7 @@ h1.mobileHeading {
 
 .desktopHalf {
   width: 50%;
+  height: 100%;
   float: left;
 }
 

@@ -1,0 +1,17 @@
+name 'programming-fundamentals-lesson7-level5-2024'
+title 'Check for Understanding'
+description 'Match each strategy to when you would use it.'
+height '100'
+
+question 'Code Tracing and Print Statements'
+answer 'When your program runs but does not behave as expected, and you need to track what is happening'
+
+question 'Error Message Clarifications'
+answer 'When your program produces errors and you need to analyze the traceback error message to find where the issue occurred'
+
+question 'AI Chatbot Assistance'
+answer 'When you are confused about an error message or need help understanding a problem in your code'
+
+question 'Validation Testing'
+answer 'When you need to check if your program produces the expected results'
+allow_multiple_attempts true

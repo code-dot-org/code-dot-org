@@ -8,6 +8,8 @@ export enum ConditionType {
   PASSED_ALL_TESTS = 'PASSED_ALL_TESTS',
 }
 
+const PASSED_STATUSES = ['PASS', 'EXPECTED_FAILURE'];
+
 export default class PythonValidator extends Validator {
   constructor(
     private readonly pythonValidationTracker: PythonValidationTracker
@@ -36,7 +38,8 @@ export default class PythonValidator extends Validator {
         }
         if (
           validationResults.some(
-            validationResult => validationResult.result !== 'PASS'
+            validationResult =>
+              !PASSED_STATUSES.includes(validationResult.result)
           )
         ) {
           return false;

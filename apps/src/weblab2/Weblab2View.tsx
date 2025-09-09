@@ -1,213 +1,108 @@
-// Making sure that css is first so that it is imported for other classes.
-// This might not be necessary.
-import './styles/Weblab2View.css';
-
 import {Codebridge} from '@codebridge/Codebridge';
-import {ConfigType, ProjectType} from '@codebridge/types';
+import {DEFAULT_START_HTML_FILE} from '@codebridge/FilePreview/constants';
+import {ConfigType} from '@codebridge/types';
 import {css} from '@codemirror/lang-css';
 import {html} from '@codemirror/lang-html';
+import {javascript} from '@codemirror/lang-javascript';
 import {LanguageSupport} from '@codemirror/language';
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 
-import {ProjectSources} from '@cdo/apps/lab2/types';
+import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
+import {LabProps, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 
 import {useSource} from '../codebridge/hooks/useSource';
+import {useAppDispatch, useAppSelector} from '../util/reduxHooks';
 
-import {Config} from './Config';
+import {WEBLAB2_EDITABLE_FILE_TYPES} from './constants';
+import FullScreenView from './layout/FullScreenView';
+import ShareView from './layout/ShareView';
+import VerticalLayout from './layout/VerticalLayout';
+import {setViewMode} from './redux';
+import {Weblab2LevelProperties, ViewMode} from './types';
 
-const weblabLangMapping: {[key: string]: LanguageSupport} = {
+import moduleStyles from './styles/weblab2-view.module.scss';
+
+const weblab2LangMapping: {[key: string]: LanguageSupport} = {
   html: html(),
   css: css(),
-};
-
-const labeledGridLayouts = {
-  horizontal: {
-    gridLayoutRows: '1fr',
-    gridLayoutColumns: '300px minmax(0, 1fr) 1fr',
-    gridLayout: `
-    "info-panel workspace preview-container"
-    `,
-  },
-  vertical: {
-    gridLayoutRows: '1fr 1fr',
-    gridLayoutColumns: '300px minmax(0, 1fr) 1fr',
-    gridLayout: `
-    "info-panel workspace workspace"
-    "info-panel preview-container preview-container"`,
-  },
+  js: javascript(),
 };
 
 const defaultConfig: ConfigType = {
-  activeLeftNav: 'Files',
-  languageMapping: weblabLangMapping,
-  editableFileTypes: ['html', 'css'],
-  leftNav: [
-    {
-      icon: 'fa-square-check',
-      component: 'Instructions',
-    },
-    {
-      icon: 'fa-file',
-      component: 'Files',
-    },
-    {
-      icon: 'fa-solid fa-magnifying-glass',
-      component: 'Search',
-    },
-  ],
-  sideBar: [
-    {
-      icon: 'fa-circle-question',
-      label: 'Help',
-      action: () => window.alert('Help is not currently implemented'),
-    },
-    {
-      icon: 'fa-folder',
-      label: 'Files',
-      action: () => window.alert('You are already on the file browser'),
-    },
-  ],
-
-  labeledGridLayouts,
-  activeGridLayout: 'horizontal',
-  showFileBrowser: true,
+  languageMapping: weblab2LangMapping,
+  editableFileTypes: WEBLAB2_EDITABLE_FILE_TYPES,
+  activeLayout: 'vertical',
+  layoutComponents: {
+    vertical: VerticalLayout,
+    widget: VerticalLayout,
+    share: ShareView,
+    fullScreen: FullScreenView,
+  },
 };
 
-const defaultSource: ProjectType = {
-  // folders: {},
-  folders: {
-    '1': {id: '1', name: 'foo', parentId: '0'},
-    '2': {id: '2', name: 'bar', parentId: '1'},
-    '3': {id: '3', name: 'baz', parentId: '0'},
-    '4': {id: '4', name: 'f1', parentId: '1'},
-    '5': {id: '5', name: 'f2', parentId: '1'},
-    '6': {id: '6', name: 'b1', parentId: '2'},
-  },
-
+const defaultSource: MultiFileSource = {
+  folders: {},
   files: {
     '1': {
       id: '1',
-      name: 'index.html',
+      name: DEFAULT_START_HTML_FILE,
       language: 'html',
-      contents: `<!DOCTYPE html><html>
-  <link rel="stylesheet" href="styles.css"/>
+      contents: `<!DOCTYPE html>
+<html>
   <body>
     Content goes here!
-    <div class="foo">[DEFAULT] Foo class!</div>
   </body>
 </html>
-`,
-      open: true,
+  `,
       active: true,
       folderId: '0',
     },
-    '2': {
-      id: '2',
-      name: 'styles.css',
-      language: 'css',
-      contents: '.foo { color : red}',
-      open: true,
-      folderId: '0',
-    },
-    '3': {
-      id: '3',
-      name: 'page.html',
-      language: 'html',
-      contents:
-        '<!DOCTYPE html><html><body>This is a separate html page</body></html>',
-      open: false,
-      folderId: '0',
-    },
-    '4': {
-      id: '4',
-      name: 'test4.html',
-      language: 'html',
-      contents:
-        '<!DOCTYPE html><html><body>This is a sub folder html page</body></html>',
-      open: false,
-      folderId: '2',
-    },
-    '5': {
-      id: '5',
-      name: 'test5.html',
-      language: 'html',
-      contents:
-        '<!DOCTYPE html><html><body>This is a sub folder html page</body></html>',
-      open: false,
-      folderId: '4',
-    },
-    '6': {
-      id: '6',
-      name: 'test6-1.html',
-      language: 'html',
-      contents:
-        '<!DOCTYPE html><html><body>This is a sub folder html page</body></html>',
-      open: false,
-      folderId: '1',
-    },
   },
+  openFiles: ['1'],
 };
 
 const defaultProject: ProjectSources = {source: defaultSource};
 
-const Weblab2View = () => {
+const Weblab2View: React.FC<
+  LabProps<Weblab2LevelProperties, ProjectSources>
+> = ({levelProperties, initialSources}) => {
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
-  const {source, setSource, startSource, projectVersion} =
-    useSource(defaultProject);
-  const [showConfig, setShowConfig] = useState<
-    'project' | 'config' | 'layout' | ''
-  >('');
+  const {startSources} = useSource(
+    defaultProject,
+    levelProperties,
+    initialSources
+  );
 
-  const configKey = {
-    project: source || defaultProject,
-    config: config,
-    layout: config,
-  };
+  const hasSource = useAppSelector(
+    state => !!state.lab2Project.projectSources?.source
+  );
+
+  // Since there's no run button in Weblab2, set it to true by default
+  // to enable the Submit button on edit on submittable levels.
+  // Set back to false on unmount in case we switch to a different level type.
+  const dispatch = useAppDispatch();
+  useEffect(() => {
+    dispatch(setHasRun(true));
+
+    return () => {
+      dispatch(setHasRun(false));
+    };
+  }, [dispatch]);
+
+  useEffect(() => {
+    dispatch(setViewMode(levelProperties?.initialViewMode || ViewMode.SPLIT));
+  }, [dispatch, levelProperties?.initialViewMode]);
 
   return (
-    <div className="app-wrapper">
-      <div className="app-wrapper-nav">
-        <button type="button" onClick={() => setShowConfig('project')}>
-          Edit project
-        </button>
-        <button type="button" onClick={() => setShowConfig('config')}>
-          Edit config
-        </button>
-        <button type="button" onClick={() => setShowConfig('layout')}>
-          Edit layout
-        </button>
-      </div>
-      <div className="app-ide">
-        {source && (
-          <Codebridge
-            project={source}
-            config={config}
-            setProject={setSource}
-            setConfig={setConfig}
-            startSource={startSource}
-            projectVersion={projectVersion}
-          />
-        )}
-
-        {showConfig && (
-          <Config
-            config={configKey[showConfig]}
-            setConfig={(
-              configName: string,
-              newConfig: ProjectType | ConfigType | string
-            ) => {
-              if (configName === 'project') {
-                setSource(newConfig as ProjectType);
-              } else if (configName === 'config' || configName === 'layout') {
-                setConfig(newConfig as ConfigType);
-              }
-              setShowConfig('');
-            }}
-            cancelConfig={() => setShowConfig('')}
-            configName={showConfig}
-          />
-        )}
-      </div>
+    <div className={moduleStyles.weblab2Container}>
+      {hasSource && (
+        <Codebridge
+          config={config}
+          setConfig={setConfig}
+          startSources={startSources}
+          levelProperties={levelProperties}
+        />
+      )}
     </div>
   );
 };

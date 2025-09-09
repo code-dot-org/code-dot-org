@@ -1,0 +1,21 @@
+[project]
+name = 'pythonlab_setup'
+version = '0.2.0'
+requires-python = '>=3.12'
+dependencies = [
+  'matplotlib >=3',
+  'requests >=2',
+  'neighborhood'
+]
+
+[dependency-groups]
+dev = [
+  'pytest >=8',
+]
+
+[tool.pytest.ini_options]
+testpaths = ['tests']
+
+[build-system]
+requires = ['hatchling']
+build-backend = 'hatchling.build'

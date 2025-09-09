@@ -6,6 +6,68 @@ module Pd::Foorm
     include Pd::WorkshopSurveyFoormConstants
     extend Helper
 
+    # **Currently this method only supports Build Your Own Workshop survey results**
+    # Creates a survey summary for a given workshop, filtered by an individual facilitator if they are viewing their
+    # own feedback. This method differs from get_workshop_report below, in that it categorizes the results and does
+    # some response processing to better shape the data for the new survey summary view in the workshop dashboard.
+    # It still relies on the existing form parser and answer summarizer, but uses an additional form parser that
+    # preserves the question `category` and `shortText` properties that have been added to the form json and are
+    # needed in the new summary view (see the build your own workshop surveys for an example).
+    def self.get_workshop_survey_summary(workshop_id, facilitator_id_filter = nil)
+      return unless workshop_id
+      ws_data = Pd::Workshop.find(workshop_id)
+
+      # Get raw data
+      ws_submissions, form_submissions, forms = get_raw_data_for_workshop(workshop_id, facilitator_id_filter)
+
+      follow_up_requested = get_follow_up_requested(form_submissions)
+
+      facilitators = get_formatted_facilitators_for_workshop(workshop_id, facilitator_id_filter)
+
+      # Legacy parser that does not preserve question categories but works with WorkshopSummarizer
+      parsed_forms = Pd::Foorm::FoormParser.parse_forms(forms)
+
+      summarized_answers = Pd::Foorm::WorkshopSummarizer.summarize_answers_by_survey(
+        form_submissions,
+        parsed_forms,
+        ws_submissions
+      )
+
+      # Parse forms with categories
+      parsed_forms_with_categories = Pd::Foorm::FoormParser.parse_forms_preserving_categories(forms)
+
+      # Process each survey separately
+      surveys = {}
+      summarized_answers.each do |survey_key, survey_data|
+        # Count general participants for this specific survey
+        survey_participant_count = survey_data.dig(:general, :response_count) || 0
+
+        # Create a single-survey summarized_answers structure for categorization
+        single_survey_answers = {survey_key => survey_data}
+
+        # Process data by category for this survey
+        categorized_report = Pd::Foorm::WorkshopCategorizer.categorize_survey_data(
+          parsed_forms_with_categories,
+          single_survey_answers,
+          facilitators
+        )
+
+        # BYO workshops only have pre and post surveys, so this will be either pre_workshop or post_workshop
+        surveys[survey_key.downcase.tr(' ', '_')] = {
+          total_responses: survey_participant_count,
+          categories: categorized_report
+        }
+      end
+
+      {
+        course: ws_data.course,
+        name: ws_data.name,
+        facilitators: facilitators,
+        surveys: surveys,
+        follow_up_requested: follow_up_requested
+      }
+    end
+
     # Calculates report for a given workshop id.
     # @param [Integer] workshop_id
     # @param [Integer] facilitator_id_filter. The user id
@@ -178,6 +240,42 @@ module Pd::Foorm
         facilitators_formatted[facilitator.id] = facilitator.name
       end
       facilitators_formatted
+    end
+
+    # extracts user name and provided follow up email from submissions
+    def self.get_follow_up_requested(form_submissions)
+      submissions_with_followup = form_submissions.filter_map do |submission|
+        answers = JSON.parse(submission.answers)
+        if answers['followup_requested'] == 'yes' && answers['followup_email'].present?
+          {
+            id: submission.id,
+            email: answers['followup_email']
+          }
+        end
+      end
+
+      submission_ids = submissions_with_followup.pluck(:id)
+
+      submission_users = Pd::WorkshopSurveyFoormSubmission.includes(:user).
+                                                          where(foorm_submission_id: submission_ids).
+                                                          index_by(&:foorm_submission_id)
+
+      results = []
+      submissions_with_followup.each do |submission_data|
+        submission_id = submission_data[:id]
+        email = submission_data[:email]
+
+        submission_user = submission_users[submission_id]
+
+        next if submission_user&.user.blank?
+
+        results << {
+          name: submission_user.user.full_name,
+          email: email
+        }
+      end
+
+      results
     end
   end
 end

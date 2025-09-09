@@ -68,7 +68,7 @@ describe('Certificate', () => {
       let image = wrapper.find('#uitest-certificate img');
       expect(image.prop('src')).to.include('/certificate_images/');
 
-      const printLink = wrapper.find('.social-print-link');
+      const printLink = wrapper.find('a.social-print-link').first();
       expect(printLink.prop('href')).to.match(/^\/print_certificates/);
 
       // the share link is used in the image thumbnail as well as the facebook
@@ -118,11 +118,11 @@ describe('Certificate', () => {
       certificateData: [
         {
           courseName: 'csd1-2023',
-          coursePath: '/s/csd1-2023',
+          coursePath: '/courses/csd-2023/units/1',
         },
         {
           courseName: 'csd2-2023',
-          coursePath: '/s/csd2-2023',
+          coursePath: '/courses/csd-2023/units/2',
         },
       ],
       certificateId: 'sessionId',
@@ -132,7 +132,7 @@ describe('Certificate', () => {
     expect(wrapper.find('swiper-slide').length).to.equal(2);
 
     expect(wrapper.find('LargeChevronLink').props().link).to.equal(
-      '/s/csd1-2023'
+      '/courses/csd-2023/units/1'
     );
   });
 
@@ -141,7 +141,7 @@ describe('Certificate', () => {
       certificateData: [
         {
           courseName: 'csd1-2023',
-          coursePath: '/s/csd1-2023',
+          coursePath: '/courses/csd-2023/units/1',
         },
       ],
       certificateId: 'sessionId',

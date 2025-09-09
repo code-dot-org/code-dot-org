@@ -1,7 +1,6 @@
-import {ProjectType, FileId, FolderId} from '@codebridge/types';
+import {FileId, FolderId} from '@codebridge/types';
 
 import {ProjectFileType} from '@cdo/apps/lab2/types';
-export type ReplaceProjectFunction = (project: ProjectType) => void;
 
 export type SaveFileFunction = (fileId: FileId, contents: string) => void;
 export type CloseFileFunction = (fileId: FileId) => void;
@@ -14,12 +13,11 @@ export type NewFolderFunction = (arg: {
 export type ToggleOpenFolderFunction = (folderId: FolderId) => void;
 export type DeleteFolderFunction = (folderId: FolderId) => void;
 export type OpenFileFunction = (fileId: FileId) => void;
-export type DeleteFileFunction = (fileId: FileId) => void;
+export type DeleteFileFunction = (arg: {fileId: FileId}) => void;
 export type NewFileFunction = (arg: {
   fileName: string;
   folderId?: FolderId;
   contents?: string;
-  validationFileId?: string;
 }) => void;
 export type RenameFileFunction = (fileId: FileId, newName: string) => void;
 export type RenameFolderFunction = (folderId: string, newName: string) => void;

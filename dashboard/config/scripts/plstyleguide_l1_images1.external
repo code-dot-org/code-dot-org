@@ -1,0 +1,51 @@
+name 'PLStyleGuide_L1_Images1'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Images
+
+#### Images are a great way to add variety to a page! They do not need to adhere to our color guidelines, but there are a few things to keep in mind.
+
+## Image Bank
+
+### **Internal Image Banks**
+
+* #### <a href="https://www.dropbox.com/scl/fo/6qsa7h6hsi9cotszi80uj/h?rlkey=58vtlywmcwmaxxoxfhoke9alj&dl=0" target="blank" rel="noopener noreferrer">Dropbox pics</a> - Use images from 2021 and after
+
+### **External Image Banks**
+
+* #### <a href="http://flaticon.com/g" target="blank" rel="noopener noreferrer">flaticon.com</a> - Use the `teachingandlearningteam@code.org` account for upgraded access
+* #### <a href="https://elements.envato.com/" target="blank" rel="noopener noreferrer">Envato</a> - See this <a href="https://codedotorg.slack.com/archives/C026S5P8QRM/p1736359196808589" target="blnak" rel="noopener noreferrer">Slack link with instructions for access</a>
+
+## Image Quality
+
+#### Photography is used across our site and marketing materials to reflect and encourage a world where anyone can learn CS, especially those from underrepresented groups.
+
+#### Use these guidelines for any internally-sourced, externally-sourced (from Shutterstock, etc.), or AI images.
+
+* #### **Resolution and quality** - Do not use small, blurry, or low quality images and be mindful of the lighting.
+* #### **Focused** - Select images with clear focal point/ background separation and watch out for distractions like clutter, logos, and hand gestures.
+* #### **Privacy and security** - Confirm that the image follows photo release guidelines and does not contain any identifying information.
+* #### **Emphasize diversity** - Be conscious of who is included and how.
+* #### **Storytelling** - Think about what story the picture is telling and look for positive emotions and excitement.
+
+## Image Types
+
+### **Code.org Assets**
+
+* #### Use high-quality versions of any Code.org assets, such as Dance Party Characters.
+* #### Request image files in the #design channel in Slack. 
+* #### Use a mix of Code.org character illustrations and photos for adult audiences to avoid making your modules seem student-facing.
+
+### **Gifs**
+
+* #### Use gifs only when necessary to demonstrate directions for the learner or coding examples. 
+	* #### Reduce the timing of the gif to ten seconds or fewer. 
+    * #### Ensure that the gif runs slowly enough to illustrate your point.
+* #### Use gifs for decorative purposes sparingly as they can distract the learner.
+
+## Pairing Images with Text
+
+#### The images you choose should match the tone and subject of the text to enhance overall comprehension. For the most part, images of students keep the focus on classrooms and are universally applicable for our context. Just be mindful to not include images that will cause an increased cognitive load because they are thematically different from the text.
+MARKDOWN

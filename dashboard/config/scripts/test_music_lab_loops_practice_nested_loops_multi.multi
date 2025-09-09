@@ -1,0 +1,21 @@
+name 'test-music-lab-loops-practice-nested-loops-multi'
+title 'Which timeline represents the code?'
+
+wrong '![](https://images.code.org/6baef8a506310538953789db2000036b-image-1741990175878.09.33 PM.png)'
+wrong '![](https://images.code.org/32a4d78cfed446cd28559a8dc1db12bb-image-1741990186761.09.44 PM.png)'
+right '![](https://images.code.org/eb542a2148a43199edcf6d841a8ca262-image-1741990164445.09.21 PM.png)'
+
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+**Which of the following timelines matches this code?**
+
+![](https://images.code.org/797f105b6700871b4ead46fdb09458f1-image-1741990105083.08.21 PM.png)
+MARKDOWN
+
+
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN

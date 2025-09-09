@@ -8,10 +8,10 @@ import getScriptData from '@cdo/apps/util/getScriptData';
 
 function prepareBlockly() {
   const customBlocksConfig = getScriptData('customBlocksConfig');
-  if (!customBlocksConfig) {
-    return;
-  }
-  prepareBlocklyForEmbedding(customBlocksConfig);
+  const programmingEnvironmentName = getScriptData(
+    'programmingEnvironment'
+  ).name;
+  prepareBlocklyForEmbedding(customBlocksConfig, programmingEnvironmentName);
 }
 
 $(document).ready(() => {

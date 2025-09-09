@@ -1,0 +1,24 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 54,
+  "created_at": "2025-04-06T19:54:20.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "video_key": "CSF_SpriteLab_SpritesInAction_v2",
+    "instructions_important": "false",
+    "display_name": "How to Make a Sprite",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 26922,
+    "name_suffix": "_2025",
+    "encrypted": "false",
+    "long_instructions": "#### Video from Course F - Lesson 4, Level 2:  Sprites in Action."
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2025-04-06T19:54:20.721+00:00\",\"changed\":[\"cloned from \\\"OPD-K5-VidSprites_2024\\\"\"],\"cloned_from\":\"OPD-K5-VidSprites_2024\"},{\"changed_at\":\"2025-05-07 16:51:18 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

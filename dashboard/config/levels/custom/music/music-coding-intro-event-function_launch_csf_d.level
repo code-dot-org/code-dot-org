@@ -1,0 +1,500 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-04-30T16:51:15.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "packId": "tinashe_gravity",
+      "toolbox": {
+        "blocks": {
+          "Functions": [
+
+          ],
+          "Control": [
+            "triggered_at_simple2"
+          ],
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ]
+        },
+        "type": "flyout",
+        "addFunctionDefinition": false,
+        "addFunctionCalls": true
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "next": {
+                "block": {
+                  "type": "repeat_simple2",
+                  "id": "repeat_simple2",
+                  "deletable": false,
+                  "movable": false,
+                  "editable": false,
+                  "extraState": {
+                    "disableNextConnection": true
+                  },
+                  "fields": {
+                    "times": 10
+                  },
+                  "inputs": {
+                    "code": {
+                      "block": {
+                        "type": "play_sound_at_current_location_simple2",
+                        "id": "play_sound_at_current_location_simple2",
+                        "deletable": false,
+                        "movable": false,
+                        "editable": false,
+                        "extraState": {
+                          "disableNextConnection": true
+                        },
+                        "fields": {
+                          "sound": "acoustic_arcade/bass_giant"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "triggered_at_simple2",
+              "id": "Trigger1",
+              "x": 50,
+              "y": 190,
+              "deletable": false,
+              "editable": false,
+              "fields": {
+                "trigger": "<field name=\"trigger\">trigger1</field>",
+                "trigger_start": "<field name=\"trigger_start\">next_measure</field>"
+              },
+              "next": {
+                "block": {
+                  "type": "play_sounds_together",
+                  "id": "iPeaFz}:QSiYnQf_dL$T",
+                  "deletable": false,
+                  "movable": false,
+                  "extraState": {
+                    "disableNextConnection": true
+                  },
+                  "inputs": {
+                    "code": {
+                      "block": {
+                        "type": "play_sound_at_current_location_simple2",
+                        "id": "QN`:xw7WWNJ-_:J;w]Eq",
+                        "deletable": false,
+                        "movable": false,
+                        "editable": false,
+                        "extraState": {
+                          "disableNextConnection": false
+                        },
+                        "fields": {
+                          "sound": "tinashe_gravity/vocals_adlib_1"
+                        },
+                        "next": {
+                          "block": {
+                            "type": "play_sound_at_current_location_simple2",
+                            "id": "7Zdo2f_Q-g5{7gY?u~1R",
+                            "deletable": false,
+                            "movable": false,
+                            "editable": false,
+                            "extraState": {
+                              "disableNextConnection": false
+                            },
+                            "fields": {
+                              "sound": "tinashe_gravity/floaty_piano_vocal"
+                            },
+                            "next": {
+                              "block": {
+                                "type": "play_sound_at_current_location_simple2",
+                                "id": "Z2hHszbo7kMyC38.9Vs@",
+                                "deletable": false,
+                                "movable": false,
+                                "editable": false,
+                                "extraState": {
+                                  "disableNextConnection": true
+                                },
+                                "fields": {
+                                  "sound": "tinashe_gravity/bass_synth_1"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "triggered_at_simple2",
+              "id": "Trigger2",
+              "x": 330,
+              "y": 190,
+              "deletable": false,
+              "editable": false,
+              "fields": {
+                "trigger": "<field name=\"trigger\">trigger2</field>",
+                "trigger_start": "<field name=\"trigger_start\">next_measure</field>"
+              },
+              "next": {
+                "block": {
+                  "type": "play_sounds_together",
+                  "id": "play_sounds_together",
+                  "deletable": false,
+                  "movable": false,
+                  "editable": false,
+                  "extraState": {
+                    "disableNextConnection": true
+                  },
+                  "inputs": {
+                    "code": {
+                      "block": {
+                        "type": "play_sound_at_current_location_simple2",
+                        "id": "y4Qkl)bIS-sb]*eUkT[T",
+                        "deletable": false,
+                        "movable": false,
+                        "editable": false,
+                        "extraState": {
+                          "disableNextConnection": false
+                        },
+                        "fields": {
+                          "sound": "rock/power_guitar"
+                        },
+                        "next": {
+                          "block": {
+                            "type": "play_sound_at_current_location_simple2",
+                            "id": "~o%Y=.xoM}]gOaq;2^}N",
+                            "deletable": false,
+                            "movable": false,
+                            "editable": false,
+                            "extraState": {
+                              "disableNextConnection": false
+                            },
+                            "fields": {
+                              "sound": "rock/bass_fuzz_drop"
+                            },
+                            "next": {
+                              "block": {
+                                "type": "play_sound_at_current_location_simple2",
+                                "id": "P!EN/bh:.ZPySGVDds]v",
+                                "deletable": false,
+                                "movable": false,
+                                "editable": false,
+                                "extraState": {
+                                  "disableNextConnection": true
+                                },
+                                "fields": {
+                                  "sound": "rock/drum_kit_can"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "triggered_at_simple2",
+              "id": "Trigger3",
+              "x": 50,
+              "y": 410,
+              "deletable": false,
+              "fields": {
+                "trigger": "<field name=\"trigger\">trigger3</field>",
+                "trigger_start": "<field name=\"trigger_start\">next_measure</field>"
+              }
+            }
+          ]
+        }
+      },
+      "sounds": {
+        "acoustic_arcade": [
+          "drum_beat_cabana",
+          "drum_beat_conga",
+          "drum_beat_hands",
+          "drum_beat_sweep",
+          "drum_beat_trees",
+          "drum_beat_wobble",
+          "bass_elevator",
+          "bass_float",
+          "bass_giant",
+          "bass_seesaw",
+          "bass_bounce",
+          "bass_stamp",
+          "synth_castle",
+          "synth_cloud",
+          "synth_cosmic",
+          "synth_round",
+          "synth_rubber",
+          "synth_tines",
+          "ukulele_knot",
+          "ukulele_shine",
+          "ukulele_slide",
+          "ukulele_knock",
+          "guitar_handle",
+          "guitar_path",
+          "guitar_window",
+          "guitar_flower",
+          "lead_zaps",
+          "lead_swoop",
+          "lead_violins",
+          "waterfall",
+          "bongo_roll",
+          "chimes",
+          "vibra_verb",
+          "sleigh_bells",
+          "wheel_spoke"
+        ],
+        "tinashe_gravity": [
+          "vocals_verse_1",
+          "vocals_verse_2",
+          "vocals_verse_3",
+          "vocals_verse_4",
+          "vocals_verse_5",
+          "vocals_verse_6",
+          "vocals_verse_7",
+          "vocals_chorus_1",
+          "vocals_chorus_2",
+          "vocals_chorus_3",
+          "vocals_chorus_4",
+          "vocals_adlib_1",
+          "vocals_adlib_2",
+          "vocals_adlib_3",
+          "vocals_adlib_4",
+          "vocals_adlib_5",
+          "vocals_adlib_6",
+          "vocals_adlib_7",
+          "kick_snare",
+          "percussion_1",
+          "percussion_2",
+          "bass_synth_1",
+          "bass_synth_2",
+          "flutter",
+          "floaty_piano_vocal",
+          "main_pad"
+        ],
+        "rock": [
+          "arena_beat",
+          "arena_alternate_beat",
+          "drum_kit_basement",
+          "drum_kit_can",
+          "drum_kit_crash",
+          "drum_kit_crusher",
+          "gutter_beat",
+          "drum_kit_hands",
+          "drum_kit_interlude",
+          "punk_beat",
+          "punk_alternate_beat",
+          "drum_kit_roll",
+          "amped_bass",
+          "bass_chonk",
+          "bass_down_steady_up",
+          "bass_freeze",
+          "bass_fuzz_climb",
+          "bass_fuzz_drop",
+          "bass_fuzz_slide",
+          "bass_fuzz_wave",
+          "bass_hook",
+          "bass_jam",
+          "bass_lifted_steady_up",
+          "amped_alternate_bass",
+          "ghost_choir",
+          "guitar_buzz_riff",
+          "riff_guitar",
+          "guitar_fast_chop",
+          "guitar_high_riff",
+          "power_guitar",
+          "guitar_punctuation",
+          "shredded_guitar",
+          "guitar_tag",
+          "organ_grind",
+          "piano_fuzz",
+          "synth_drive",
+          "synth_fuzz_blip",
+          "synth_screech",
+          "crash",
+          "feedback",
+          "gong",
+          "pick_scrape",
+          "stomp",
+          "stomp_short",
+          "trashy_crash"
+        ]
+      },
+      "toolboxDefinition": {
+        "contents": [
+          {
+            "kind": "block",
+            "type": "play_sound_at_current_location_simple2",
+            "id": "play_sound_at_current_location_simple2",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "sound": "tinashe_gravity/flutter"
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_rest_at_current_location_simple2",
+            "id": "play_rest_at_current_location_simple2",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "rest_duration": "<field name=\"rest_duration\">1</field>"
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "triggered_at_simple2",
+            "id": "triggered_at_simple2",
+            "fields": {
+              "trigger": "<field name=\"trigger\">trigger3</field>",
+              "trigger_start": "<field name=\"trigger_start\">next_measure</field>"
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_sounds_together",
+            "id": "play_sounds_together",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_sounds_sequential",
+            "id": "play_sounds_sequential",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_sounds_random",
+            "id": "play_sounds_random",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "repeat_simple2",
+            "id": "repeat_simple2",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "times": 1
+            },
+            "enabled": true
+          }
+        ],
+        "kind": "flyoutToolbox"
+      }
+    },
+    "long_instructions": "### <i class=\"fa-duotone fa-solid fa-masks-theater\"></i> Sound is also a feeling\r\n**Buttons 1 and 2 trigger different moods in a game.**\r\n\r\n1. **Try it first.** Press Run, then press 1 or 2.\r\n- Then, code the third event to set a new feeling. [<i class=\"fa-solid fa-lightbulb-on\"></i> Hint](#clickable=flyout-id:play---id:Trigger3)\r\n\r\n>What will you create?\r\n>- A celebration for winning?\r\n>- The background to an intense final battle?\r\n>- Music for a fun fast-paced level? \r\n",
+    "validations": [
+      {
+        "key": "music-coding-intro-event-function_launch_3fc14b1c-01e9-4af2-bfdc-4d7690260cec",
+        "message": "You triggered at least one new sound. Keep adding to it! \n\nWhen you created a mood you like, press Continue. ",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sound_triggered"
+          },
+          {
+            "name": "trigger_id_pressed",
+            "value": 3
+          }
+        ]
+      },
+      {
+        "key": "music-coding-intro-event-function_launch_a2495fc9-e277-4568-8b47-d2d4b89828c3",
+        "message": "You triggered button 3 but haven't programmed any sounds under the event yet.",
+        "next": false,
+        "conditions": [
+          {
+            "name": "trigger_id_pressed",
+            "value": 3
+          }
+        ],
+        "callout": "Trigger3"
+      },
+      {
+        "key": "music-coding-intro-event-function_launch_e167cd94-83e4-477d-84b6-63dabe7fe4db",
+        "message": "What mood does button 2 create? ",
+        "next": false,
+        "conditions": [
+          {
+            "name": "trigger_id_pressed",
+            "value": 2
+          }
+        ],
+        "callout": ""
+      },
+      {
+        "key": "music-coding-intro-event-function_6ac8d0df-d8f7-489a-9f29-b79b2e8fd1bc",
+        "message": "What mood does button 1 create? ",
+        "next": false,
+        "conditions": [
+          {
+            "name": "trigger_id_pressed",
+            "value": 1
+          }
+        ],
+        "callout": ""
+      },
+      {
+        "key": "music-coding-intro-event-function_e06b7012-d35a-4d33-acc5-a93539067450",
+        "message": "Nothing has been triggered yet. Press the 1 and 2 buttons to try it out. ",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "name_suffix": "_csf_d",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-04-30T16:51:15.317+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-event-function_launch\\\"\"],\"cloned_from\":\"music-coding-intro-event-function_launch\"},{\"changed_at\":\"2025-05-09 17:20:07 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-09 17:21:37 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

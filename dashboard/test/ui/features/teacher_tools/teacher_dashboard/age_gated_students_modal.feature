@@ -1,8 +1,11 @@
 Feature: Age Gated Students Modal and Banner
   @eyes
   Scenario: Age gated students banner and modal for Teachers
-    Given I create an authorized teacher-associated under-13 student in Colorado named "Sally"
-    Given I am assigned to unit "allthethings"
+    Given I am on "http://studio.code.org"
+    Given CPA all user lockout phase
+
+    Given I create an authorized teacher-associated under-13 student in Colorado named "Sally" after CAP start
+    Given I am assigned to course "allthethingscourse" unit 1
 
     When I sign in as "Teacher_Sally" and go home
     And I wait until element "a:contains('Untitled Section')" is visible
@@ -20,8 +23,11 @@ Feature: Age Gated Students Modal and Banner
     And I close my eyes
 
   Scenario: Teacher viewing a section with no at risk age gated students should not see age gated students banner
+    Given I am on "http://studio.code.org"
+    Given CPA all user lockout phase
+
     Given I create a teacher-associated under-13 student named "Sally"
-    Given I am assigned to unit "allthethings"
+    Given I am assigned to course "allthethingscourse" unit 1
 
     When I sign in as "Teacher_Sally" and go home
     And I wait until element "a:contains('Untitled Section')" is visible
@@ -30,8 +36,11 @@ Feature: Age Gated Students Modal and Banner
     And I wait until element "#uitest-age-gated-banner" is not visible
 
   Scenario: Teacher viewing a section with at risk age gated students should see age gated students banner and can click and see modal
-    Given I create an authorized teacher-associated under-13 student in Colorado named "Sally"
-    Given I am assigned to unit "allthethings"
+    Given I am on "http://studio.code.org"
+    Given CPA all user lockout phase
+
+    Given I create an authorized teacher-associated under-13 student in Colorado named "Sally" after CAP start
+    Given I am assigned to course "allthethingscourse" unit 1
 
     When I sign in as "Teacher_Sally" and go home
     And I wait until element "a:contains('Untitled Section')" is visible

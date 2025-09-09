@@ -329,7 +329,15 @@ exports.showDebugInfo = function (value) {
 };
 
 exports.setScoreText = function (id, text) {
-  Studio.queueCmd(id, 'setScoreText', {text: text});
+  if (typeof text === 'number') {
+    // Resetting the scoreText ensures the new score player score
+    // is used when displayScore updates the play area.
+    Studio.scoreText = null;
+    Studio.playerScore = text;
+  } else {
+    Studio.scoreText = text;
+  }
+  Studio.queueCmd(id, 'displayScore', {});
 };
 
 exports.showCoordinates = function (id) {

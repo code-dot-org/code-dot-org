@@ -1,25 +1,33 @@
+import Alert from '@code-dot-org/component-library/alert';
+import {Button, LinkButton} from '@code-dot-org/component-library/button';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import Modal from '@code-dot-org/component-library/modal';
+import Typography from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
 import QRCode from 'qrcode.react';
 import React, {useCallback, useState} from 'react';
 import FocusLock from 'react-focus-lock';
 
 import {hideShareDialog} from '@cdo/apps/code-studio/components/shareDialogRedux';
-import Alert from '@cdo/apps/componentLibrary/alert/Alert';
-import {Button, LinkButton} from '@cdo/apps/componentLibrary/button';
-import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
-import Typography from '@cdo/apps/componentLibrary/typography';
 import DCDO from '@cdo/apps/dcdo';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {ProjectType} from '@cdo/apps/lab2/types';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import {SubmissionStatusType} from '@cdo/apps/templates/projects/submitProjectDialog/submitProjectApi';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import trackEvent from '@cdo/apps/util/trackEvent';
 import {ProjectSubmissionStatus} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import moduleStyles from './share-dialog.module.scss';
+
+const TEACHER_FEEDBACK_LINK =
+  'https://docs.google.com/forms/d/e/1FAIpQLSflGeMmY_ff1QllJfpTsWGZdn_xv6dKpPba_evTMwfbvG3FTA/viewform';
+const STUDENT_FEEDBACK_LINK =
+  'https://docs.google.com/forms/d/e/1FAIpQLSeZGNgX4wDvA29stId_Q2toofJN-r12zSP8yBMZ-E9KW5XPWg/viewform';
 
 const CopyToClipboardButton: React.FunctionComponent<{
   shareUrl: string;
@@ -51,7 +59,7 @@ const CopyToClipboardButton: React.FunctionComponent<{
       ariaLabel={i18n.copyLinkToProject()}
       text={i18n.copyLinkToProject()}
       type="secondary"
-      color="white"
+      color="black"
       size="m"
       onClick={handleCopyToClipboard}
       className={moduleStyles.shareDialogButton}
@@ -79,7 +87,6 @@ const AfeCareerTourBlock: React.FunctionComponent = () => {
         href={careersUrl}
         text={i18n.careerTourAction()}
         type="primary"
-        color="white"
         size="m"
         target="_blank"
         iconRight={{
@@ -110,7 +117,7 @@ const SubmitButtonInfo: React.FunctionComponent<{
         iconLeft={{iconName: 'award'}}
         text={i18n.submitProjectGallery_header()}
         type="secondary"
-        color="white"
+        color="black"
         size="m"
         onClick={onSubmitClick}
         className={moduleStyles.shareDialogButton}
@@ -142,6 +149,7 @@ const ShareDialog: React.FunctionComponent<{
   onSubmitClick: () => void;
   submissionStatus: SubmissionStatusType | undefined;
   channelId: string;
+  userSharingDisabled: boolean | undefined;
 }> = ({
   dialogId,
   shareUrl,
@@ -150,8 +158,11 @@ const ShareDialog: React.FunctionComponent<{
   onSubmitClick,
   submissionStatus,
   channelId,
+  userSharingDisabled,
 }) => {
   const dispatch = useAppDispatch();
+  const sharingDisabled = () =>
+    userSharingDisabled && ['pythonlab', 'weblab2'].includes(projectType);
 
   const handleClose = useCallback(() => {
     dispatch(hideShareDialog());
@@ -165,9 +176,33 @@ const ShareDialog: React.FunctionComponent<{
     );
   }, [channelId, dispatch, projectType]);
 
-  return (
+  const feedbackLink = useAppSelector(state => {
+    const {userType, signInState} = state.currentUser;
+    if (signInState !== SignInState.SignedIn) return undefined;
+    return userType === 'teacher'
+      ? TEACHER_FEEDBACK_LINK
+      : STUDENT_FEEDBACK_LINK;
+  });
+
+  // We pull the theme from Lab2Registry because the ShareDialog is not wrapped by the lab's
+  // ThemeProvider (the header is in its own tree). We copy the lab theme to the registry
+  // in Lab2Wrapper.
+  const theme = Lab2Registry.getInstance().getTheme();
+
+  return sharingDisabled() ? (
+    <div data-theme={theme}>
+      <Modal
+        title={i18n.sharingDisabledTitle()}
+        description={i18n.sharingBlockedByTeacherOpenEndedProjects()}
+        primaryButtonProps={{
+          onClick: () => dispatch(hideShareDialog()),
+          text: i18n.ok(),
+        }}
+      />
+    </div>
+  ) : (
     <FocusLock>
-      <div className={moduleStyles.dialogContainer}>
+      <div className={moduleStyles.dialogContainer} data-theme={theme}>
         <div id="share-dialog" className={moduleStyles.shareDialog}>
           <Typography
             semanticTag="h1"
@@ -217,36 +252,47 @@ const ShareDialog: React.FunctionComponent<{
             )}
           </div>
           <div className={moduleStyles.bottom}>
-            {finishUrl ? (
-              <div className={moduleStyles.contents}>
+            {feedbackLink && finishUrl && (
+              <a
+                href={feedbackLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={moduleStyles.feedbackLink}
+                aria-label={i18n.feedbackHeader()}
+              >
+                {i18n.feedbackHeader()}
+              </a>
+            )}
+            <div className={moduleStyles.buttonGroup}>
+              {finishUrl ? (
+                <div className={moduleStyles.contents}>
+                  <Button
+                    ariaLabel={i18n.keepPlaying()}
+                    text={i18n.keepPlaying()}
+                    type="secondary"
+                    color="black"
+                    size="m"
+                    onClick={handleClose}
+                    className={moduleStyles.keepPlayingButton}
+                  />
+                  <LinkButton
+                    ariaLabel={i18n.finish()}
+                    href={finishUrl}
+                    text={i18n.finish()}
+                    type="primary"
+                    size="m"
+                  />
+                </div>
+              ) : (
                 <Button
-                  ariaLabel={i18n.keepPlaying()}
-                  text={i18n.keepPlaying()}
-                  type="secondary"
-                  color="white"
+                  ariaLabel={i18n.done()}
+                  text={i18n.done()}
+                  type="primary"
                   size="m"
                   onClick={handleClose}
-                  className={moduleStyles.keepPlayingButton}
                 />
-                <LinkButton
-                  ariaLabel={i18n.finish()}
-                  href={finishUrl}
-                  text={i18n.finish()}
-                  type="primary"
-                  color="white"
-                  size="m"
-                />
-              </div>
-            ) : (
-              <Button
-                ariaLabel={i18n.done()}
-                text={i18n.done()}
-                type="primary"
-                color="white"
-                size="m"
-                onClick={handleClose}
-              />
-            )}
+              )}
+            </div>
           </div>
           <button
             type="button"

@@ -4,7 +4,6 @@ import React from 'react';
 import {FileBrowserNameComponentType} from './types';
 
 import moduleStyles from '../styles/filebrowser.module.scss';
-import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
 
 /**
  * Renders the file name for a file row in the file browser, with an optional tooltip for long names.
@@ -19,7 +18,6 @@ export const FileRowName: FileBrowserNameComponentType = ({item}) => {
         tooltipId: `file-tooltip-${item.id}`,
         size: 's',
         direction: 'onBottom',
-        className: darkModeStyles.tooltipBottom,
       }}
       tooltipOverlayClassName={moduleStyles.nameContainer}
       className={moduleStyles.nameContainer}

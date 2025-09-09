@@ -13,7 +13,7 @@ require_relative '../state_abbr'
 module SharedConstants
   DEFAULT_LOCALE = 'en-US'.freeze
 
-  # Used to communicate different types of levels
+  # Used to communicate different types of levels.
   LEVEL_KIND = OpenStruct.new(
     {
       peer_review: "peer_review",
@@ -26,7 +26,7 @@ module SharedConstants
   ).freeze
 
   # Different possibilities for level.status, used to communicate how user has
-  # performed on a given level
+  # performed on a given level.
   LEVEL_STATUS = OpenStruct.new(
     {
       not_tried: "not_tried",
@@ -42,7 +42,20 @@ module SharedConstants
     }
   ).freeze
 
-  # The set of valid login types for a section
+  USER_LEVEL_INTERACTIONS = OpenStruct.new(
+    {
+      click_continue: "click_continue",
+      click_finish: "click_finish",
+      click_help_and_tips: "click_help_and_tips",
+      click_keep_working: "click_keep_working",
+      click_run: "click_run",
+      click_submit: "click_submit",
+      click_validate: "click_validate",
+      code_execution_error: "code_execution_error",
+    }
+  ).freeze
+
+  # The set of valid login types for a section.
   SECTION_LOGIN_TYPE = OpenStruct.new(
     {
       word: 'word',
@@ -58,14 +71,14 @@ module SharedConstants
 
   PL_GRADE_VALUE = 'pl'.freeze
 
-  # The set of artist autorun options
+  # The set of artist autorun options.
   ARTIST_AUTORUN_OPTIONS = OpenStruct.new(
     {
       full_auto_run: 'FULL_AUTO_RUN',
     }
   ).freeze
 
-  # Valid milestone post modes
+  # Valid milestone post modes.
   POST_MILESTONE_MODE = OpenStruct.new(
     {
       all: 'all',
@@ -108,7 +121,9 @@ module SharedConstants
     pythonlab
   ).freeze
 
-  # For privacy reasons, App Lab and Game Lab can only be shared if certain conditions are met. These project types can be shared if: the user is >= 13 years old and their teacher has NOT disabled sharing OR the user is < 13 and their teacher has enabled sharing.
+  # For privacy reasons, App Lab and Game Lab can only be shared if certain conditions are met.
+  # These project types can be shared if: the user is >= 13 years old and their teacher has NOT
+  # disabled sharing OR the user is < 13 and their teacher has enabled sharing.
   CONDITIONALLY_PUBLISHABLE_PROJECT_TYPES = %w(
     applab
     gamelab
@@ -131,7 +146,7 @@ module SharedConstants
 
   ALL_PROJECT_TYPES = ALL_PUBLISHABLE_PROJECT_TYPES + UNPUBLISHABLE_PROJECT_TYPES
 
-  # The status of a featured project based on it's `featured_at` and `unfeatured_at` properties
+  # The status of a featured project based on it's `featured_at` and `unfeatured_at` properties.
   FEATURED_PROJECT_STATUS = OpenStruct.new(
     {
       active: 'active',
@@ -622,33 +637,33 @@ module SharedConstants
     }
   ).freeze
 
-  # These reflect the 'status' of an AI rubric evaluation
+  # These reflect the 'status' of an AI rubric evaluation.
   RUBRIC_AI_EVALUATION_STATUS = {
-    # Queued as a job
+    # Queued as a job.
     QUEUED: 0,
-    # Job is running
+    # Job is running.
     RUNNING: 1,
-    # Succeeded
+    # Succeeded.
     SUCCESS: 2,
-    # General failure (along with anything larger)
+    # General failure (along with anything larger).
     FAILURE: 1000,
-    # PII Failure
+    # PII Failure.
     PII_VIOLATION: 1001,
-    # Profanity Failure
+    # Profanity Failure.
     PROFANITY_VIOLATION: 1002,
-    # Request Too Large
+    # Request Too Large.
     REQUEST_TOO_LARGE: 1003,
-    # Student exceeded max number of evaluations per project
+    # Student exceeded max number of evaluations per project.
     STUDENT_LIMIT_EXCEEDED: 1004,
-    # Teacher exceeded max number of evaluations per student per project
+    # Teacher exceeded max number of evaluations per student per project.
     TEACHER_LIMIT_EXCEEDED: 1005,
   }.freeze
 
   RUBRIC_AI_EVALUATION_LIMITS = {
-    # Maximum number of evaluations we will automatically run for a student per project
+    # Maximum number of evaluations we will automatically run for a student per project.
     STUDENT_LIMIT: 10,
 
-    # Maximum number of evaluations a teacher can request for a rubric per student
+    # Maximum number of evaluations a teacher can request for a rubric per student.
     TEACHER_LIMIT: 10
   }
 
@@ -698,9 +713,6 @@ module SharedConstants
       SHAPE: 100,
     },
   }.freeze
-  CENSUS_CONSTANTS = OpenStruct.new(
-    {CURRENT_CENSUS_SCHOOL_YEAR: 2024}
-  )
 
   CAP_LINKS = OpenStruct.new(
     PARENTAL_CONSENT_GUIDE_URL: 'https://support.code.org/hc/en-us/articles/15465423491085-How-do-I-obtain-parent-or-guardian-permission-for-student-accounts',
@@ -712,7 +724,7 @@ module SharedConstants
       INSTALL_INSTRUCTIONS_URL: 'https://support.code.org/hc/en-us/articles/23621907533965-Install-Code-org-Integrations-for-your-Learning-Management-System',
       ROSTER_SYNC_INSTRUCTIONS_URL: 'https://support.code.org/hc/en-us/articles/23621978654605-Sync-Rosters-with-your-Learning-Management-System',
       ADDITIONAL_FEEDBACK_URL: 'https://studio.code.org/form/lms_integration_modal_feedback',
-      # TODO(P20-873): Replace SUPPORTED_METHODS_URL with the link to the supported methods documentation
+      # TODO(P20-873): Replace SUPPORTED_METHODS_URL with the link to the supported methods documentation.
       SUPPORTED_METHODS_URL: 'https://github.com/code-dot-org/code-dot-org/blob/staging/docs/lti-integration.md#option-2-manual-entry',
     }
   ).freeze
@@ -720,12 +732,18 @@ module SharedConstants
   # Current song manifest file name for Dance Party. Note that different manifests
   # can be tested using query params (?manifest=...), but once this value is updated
   # the default manifest will change for all users.
-  DANCE_SONG_MANIFEST_FILENAME = 'songManifest2024_v4.json'
+  DANCE_SONG_MANIFEST_FILENAME = 'songManifest2025_v1.json'
 
   # We should always specify a version for the LLM so the results don't unexpectedly change.
-  # reference: https://platform.openai.com/docs/models/gpt-3-5
-  AI_TUTOR_CHAT_MODEL_VERISON = 'gpt-4o-2024-05-13'
-  AICHAT_SAFETY_MODEL_VERSION = 'gpt-4o-mini-2024-07-18'
+  # reference: https://platform.openai.com/docs/models/gpt-3-5.
+  AI_TUTOR_CHAT_MODEL_VERSION = 'gpt-4o-2024-05-13'
+  AICHAT_MODEL_VERSION = 'gpt-4o-mini-2024-07-18'
+  EVALUATE_STUDENT_LEARNING_MODEL_VERSION = 'gpt-4o-mini-2024-07-18'
+
+  AI_EVALUATION_TYPES = {
+    SINGLE_STUDENT: 'single_student',
+    SECTION_SUMMARY: 'section_summary',
+  }.freeze
 
   # These reflect the 'status' of an AI Interaction,
   # and are used in both AI Tutor and AI Chat.
@@ -734,6 +752,7 @@ module SharedConstants
     PII_VIOLATION: 'pii_violation',
     PROFANITY_VIOLATION: 'profanity_violation',
     USER_INPUT_TOO_LARGE: 'user_input_too_large',
+    MODEL_TIMEOUT: 'model_timeout',
     OK: 'ok',
     UNKNOWN: 'unknown',
   }.freeze
@@ -745,6 +764,7 @@ module SharedConstants
     VALIDATION: 'validation',
     GENERAL_CHAT: 'general_chat',
     COMPLETION: 'completion',
+    GENERIC_HELP: 'generic_help',
   }.freeze
 
   USER_TYPES = OpenStruct.new(
@@ -778,7 +798,23 @@ module SharedConstants
     # PII detected in the model's output.
     MODEL_PII: 1004,
     # The user input request exceeded the maximum token size allowed.
-    USER_INPUT_TOO_LARGE: 1005
+    USER_INPUT_TOO_LARGE: 1005,
+    # The model took too long to respond.
+    MODEL_TIMEOUT: 1006,
+  }
+
+  STUDENT_WORK_EVALUATION_STATUS = {
+    # The student submitted a blank free response or did not change the starter code.
+    NO_ATTEMPT: 'no_attempt',
+    # Profanity detected in the student's work.
+    STUDENT_PROFANITY: 'student_profanity',
+    # PII detected in the student's work.
+    STUDENT_PII: 'student_pii',
+    # Possible responses from AI when evaluating student work.
+    ALL_COMPLETE_CORRECT: 'all_complete_correct',
+    PARTIAL_COMPLETE_CORRECT: 'partial_complete_correct',
+    INCOMPLETE_INCORRECT: 'incomplete_incorrect',
+    NOT_EVALUATED: 'not_evaluated',
   }
 
   AI_CHAT_MODEL_IDS = {
@@ -786,10 +822,37 @@ module SharedConstants
     BIOMISTRAL: "gen-ai-biomistral-7b",
     MISTRAL: "gen-ai-mistral-7b-inst-v01",
     KAREN: "gen-ai-karen-creative-mistral-7b",
-    PIRATE: "gen-ai-mistral-pirate-7b"
+    PIRATE: "gen-ai-mistral-pirate-7b",
+    CHATGPT: "gpt-4o-mini",
+    LEARNLM: "learnlm-2.0-flash-experimental",
+    GEMINI_2_0_FLASH: "gemini-2.0-flash",
+    GEMINI_2_5_FLASH: "gemini-2.5-flash",
+    GEMINI_2_5_FLASH_LITE: "gemini-2.5-flash-lite",
+    GEMINI_2_5_PRO: "gemini-2.5-pro",
+  }
+
+  AI_CHAT_CLIENT_TYPES = {
+    AI_CHAT_LAB: 0,
+    AI_TUTOR: 1,
+    FLOW_LAB: 2,
+  }
+
+  AI_CHAT_READ_TIMEOUTS = {
+    AI_CHAT_CLIENT_TYPES[:AI_CHAT_LAB] => 30,
+    AI_CHAT_CLIENT_TYPES[:AI_TUTOR] => 30,
+    AI_CHAT_CLIENT_TYPES[:FLOW_LAB] => 60,
   }
 
   AICHAT_METRICS_NAMESPACE = 'GenAICurriculum'.freeze
+
+  AI_CHAT_TEACHER_FEEDBACK = {
+    # The teacher flagged a message that our system did not flag as inappropriate.
+    CLEAN_DISAGREE: 'clean_disagree',
+    # The teacher agreed with our system's flagging of a message as inappropriate.
+    PROFANITY_AGREE: 'profanity_agree',
+    # The teacher disagreed with our system's flagging of a message as inappropriate.
+    PROFANITY_DISAGREE: 'profanity_disagree',
+  }
 
   US_STATES = STATE_ABBR_WITH_DC_HASH.merge(DC: 'Washington, D.C.').sort_by(&:last).to_h.freeze
 
@@ -802,4 +865,39 @@ module SharedConstants
     OWNER_TOO_NEW: 'owner_too_new',
     PROJECT_TOO_NEW: 'project_too_new',
   }
+
+  EDUCATOR_ROLES = [
+    {value: "classroom_teacher", label: "Classroom Teacher", category: 'educator'},
+    {value: "stem_tech_teacher", label: "STEM/Technology Teacher", category: 'educator'},
+    {value: "subject_area_teacher", label: "Subject Area Teacher", category: 'educator'},
+    {value: "librarian_media_specialist", label: "Librarian/Media Specialist", category: 'educator'},
+    {value: "homeschool_teacher", label: "Homeschool Teacher", category: 'educator'},
+    {value: "school_admin", label: "School Administrator", category: "admin"},
+    {value: "district_admin", label: "District Administrator", category: "admin"},
+    {value: "parent", label: "Parent", category: 'other'},
+    {value: "other", label: "Other", category: 'other'}
+  ].freeze
+
+  AI_DIFF_CONTEXT = {
+    LESSON: "lesson",
+    UNIT: "unit",
+    COURSE: "course",
+    GENERAL: "general",
+    LEVEL: "level"
+  }.freeze
+
+  DISALLOWED_ROUTES = [
+    "/admin/",
+    "/api/",
+    "/blockly/",
+    "/dashboardapi/",
+    "/join/",
+    "/milestone/",
+    "/projects/",
+    "/sections/",
+    "/r/",
+    "/c/",
+    "/oauth_sign_out/",
+    "/certificates/"
+  ].freeze
 end

@@ -68,6 +68,7 @@ class LessonEditor extends Component {
       hasLessonPlan: this.props.initialLessonData.hasLessonPlan,
       creativeCommonsLicense:
         this.props.initialLessonData.creativeCommonsLicense || '',
+      background: this.props.initialLessonData.background || '',
       assessment: this.props.initialLessonData.assessment,
       purpose: this.props.initialLessonData.purpose || '',
       preparation: this.props.initialLessonData.preparation || '',
@@ -92,6 +93,7 @@ class LessonEditor extends Component {
         lockable: this.state.lockable,
         hasLessonPlan: this.state.hasLessonPlan,
         creativeCommonsLicense: this.state.creativeCommonsLicense,
+        background: this.state.background,
         assessment: this.state.assessment,
         unplugged: this.state.unplugged,
         overview: this.state.overview,
@@ -163,6 +165,7 @@ class LessonEditor extends Component {
       lockable,
       hasLessonPlan,
       creativeCommonsLicense,
+      background,
       assessment,
       purpose,
       preparation,
@@ -269,6 +272,24 @@ class LessonEditor extends Component {
             <HelpTip>
               <p>
                 Check this box if the lesson does not require use of a device.
+              </p>
+            </HelpTip>
+          </label>
+          <label>
+            Background
+            <select
+              style={styles.dropdown}
+              value={background}
+              onChange={e => this.setState({background: e.target.value})}
+            >
+              <option value="">(none)</option>
+              <option value="light">light</option>
+              <option value="dark">dark</option>
+            </select>
+            <HelpTip>
+              <p>
+                Choose a light or dark background for a lesson containing Lab2
+                levels.
               </p>
             </HelpTip>
           </label>
@@ -383,9 +404,7 @@ class LessonEditor extends Component {
                 />
               ) : (
                 <h4>
-                  A unit must be in a course version, i.e. a unit must belong to
-                  a course or have 'Is a Standalone Course' checked, in order to
-                  add resources.
+                  A unit must belong to a course in order to add resources.
                 </h4>
               )}
             </CollapsibleEditorSection>
@@ -401,9 +420,7 @@ class LessonEditor extends Component {
                 />
               ) : (
                 <h4>
-                  A unit must be in a course version, i.e. a unit must belong to
-                  a course or have 'Is a Standalone Course' checked, in order to
-                  add vocabulary.
+                  A unit must belong to a course in order to add vocabulary.
                 </h4>
               )}
             </CollapsibleEditorSection>
@@ -522,6 +539,10 @@ const styles = {
     border: '1px solid #ccc',
     borderRadius: 4,
     margin: 0,
+  },
+  shortInput: {
+    width: 200,
+    marginLeft: 7,
   },
   checkbox: {
     margin: '0 0 0 7px',

@@ -1,18 +1,18 @@
-import {TextLink} from '@dsco_/link';
-import PropTypes from 'prop-types';
-import React, {useEffect, useRef} from 'react';
-
 import {
   Button,
   buttonColors,
   LinkButton,
-} from '@cdo/apps/componentLibrary/button';
-import Link from '@cdo/apps/componentLibrary/link';
+} from '@code-dot-org/component-library/button';
+import Link from '@code-dot-org/component-library/link';
 import {
   BodyTwoText,
   Heading3,
   Heading4,
-} from '@cdo/apps/componentLibrary/typography';
+} from '@code-dot-org/component-library/typography';
+import {TextLink} from '@dsco_/link';
+import PropTypes from 'prop-types';
+import React, {useEffect, useRef} from 'react';
+
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';

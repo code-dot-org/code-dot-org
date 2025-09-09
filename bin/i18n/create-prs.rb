@@ -9,7 +9,7 @@ class CreateI18nPullRequests
 
     I18nScriptUtils.git_add_and_commit(
       [
-        "dashboard/config/locales/*.en.yml",
+        "dashboard/config/locales/*/en.yml",
         "i18n/locales/source/dashboard"
       ],
       "dashboard i18n sync"
@@ -100,8 +100,8 @@ class CreateI18nPullRequests
       next if locale == 'en-US'
       I18nScriptUtils.git_add_and_commit(
         [
-          "dashboard/config/locales/*#{locale}.json",
-          "dashboard/config/locales/*#{locale}.yml",
+          "dashboard/config/locales/*/#{locale}.json",
+          "dashboard/config/locales/*/#{locale}.yml",
           "i18n/locales/#{locale}/dashboard",
         ],
         "dashboard i18n updates - #{prop[:crowdin_name_s]}"

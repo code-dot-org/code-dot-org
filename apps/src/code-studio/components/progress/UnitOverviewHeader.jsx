@@ -15,7 +15,6 @@ import ParticipantFeedbackNotification from '@cdo/apps/templates/feedback/Partic
 import ProtectedStatefulDiv from '@cdo/apps/templates/ProtectedStatefulDiv';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {assignmentCourseVersionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
-import {isOnTeacherDashboard} from '@cdo/apps/templates/teacherNavigation/TeacherNavFlagUtils';
 import {
   dismissedRedirectWarning,
   onDismissRedirectWarning,
@@ -189,7 +188,7 @@ class UnitOverviewHeader extends Component {
               />
             )}
           </div>
-          {!isOnTeacherDashboard() && (
+          {!location.pathname.includes('teacher_dashboard') && (
             <ProtectedStatefulDiv ref={element => (this.protected = element)} />
           )}
         </div>

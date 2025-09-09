@@ -1,0 +1,56 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2025-05-31T02:57:20.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "### Triggers\n\nTriggers allow you to play sounds as your song plays.\n",
+        "imageUrl": "https://images.code.org/229a5ebf2b63431d178dc2be090821cc-trigger-1.png",
+        "key": "test-music-lab-sequences-practice-play-sequential-panel-c846fce5-8889-4bff-8a48-f717d5302c15",
+        "typing": false,
+        "fadeInOverPrevious": true,
+        "layout": "text-bottom-center"
+      },
+      {
+        "text": "### Triggers\n\nYou can activate triggers using buttons under the Run button.\n\nYou can also press the key on your keyboard\n",
+        "imageUrl": "https://images.code.org/24c4e7f2c95f8426b31ae79bebefc386-trigger-2.png",
+        "key": "music-lab-triggers-panel-3b7934d6-0a4f-4044-b9b8-7f75623de70f",
+        "layout": "text-bottom-center",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "### Triggers\n\nWhen you press a trigger, your tracks will play \"live\" as the rest of your song plays\n",
+        "imageUrl": "https://images.code.org/08d808fe3d529672ee81b5c58ea8e715-trigger-3.png",
+        "key": "music-lab-triggers-panel-4bf95691-3ba3-40f8-b7df-64bccf9a7122",
+        "fadeInOverPrevious": true,
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "### Triggers\n\nYou can adjust when the sound plays to change how your song plays\n",
+        "imageUrl": "https://images.code.org/2ab38d9a15a3f59687ee0592360d8956-trigger-5.png",
+        "key": "music-lab-triggers-panel-4e2f979d-91a9-4a4e-b05f-47937578f59d",
+        "fadeInOverPrevious": true,
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "Key takeaway: triggers add tracks to your song \"live\" when you press a button\n",
+        "imageUrl": "https://images.code.org/aa473f1fec259dcbfa96e7b2492eef88-trigger-6.png",
+        "key": "music-lab-triggers-panel-2a0be431-01b0-464e-86db-5a849c039be6",
+        "typing": true,
+        "fadeInOverPrevious": true,
+        "layout": "text-bottom-right"
+      }
+    ],
+    "bubble_choice_description": "Review how to use Play Sequential when creating songs",
+    "display_name": "Play Sequential",
+    "name_suffix": "_v2"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:57:20.198+00:00\",\"changed\":[\"cloned from \\\"music-lab-triggers-panel\\\"\"],\"cloned_from\":\"music-lab-triggers-panel\"}]"
+}]]></config>
+</Panels>

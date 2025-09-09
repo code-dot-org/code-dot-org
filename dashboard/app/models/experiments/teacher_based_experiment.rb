@@ -35,7 +35,7 @@ class TeacherBasedExperiment < Experiment
 
   # NOTE: The min_user_id value is inclusive, the max_user_id value is exclusive.
   def enabled?(user: nil)
-    return if user.nil?
+    return false if user.nil?
 
     sections = user.teacher? ? user.sections_instructed : user.sections_as_student
 

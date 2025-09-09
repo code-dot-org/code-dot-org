@@ -15,7 +15,7 @@ Dashboard::Application.configure do
 
   # Consider disabling full error reports for profiling/load-testing by setting
   # this flag to false, due to memory leak: https://github.com/rails/rails/issues/27273
-  config.consider_all_requests_local = true
+  config.consider_all_requests_local = ENV['STACK_NAME'] != 'bugcrowd'
 
   config.action_controller.perform_caching = true
   config.public_file_server.enabled = true

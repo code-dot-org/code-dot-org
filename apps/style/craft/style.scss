@@ -4,7 +4,7 @@ $root: "/blockly/media/craft/"; //TODO: Parameterize for asset pipeline
 
 @import "color.scss";
 @import "../responsive-visualization";
-@import "font";
+@import '@code-dot-org/component-library-styles/font';
 
 $darkest-gray: #333;
 $very-dark-gray: #3b3b3b;

@@ -28,7 +28,7 @@ const CourseCatalog = {
 const CreateAccount = {
   title: i18n.createAccount(),
   description: i18n.createAccountDesc(),
-  link: '/users/sign_up',
+  link: '/users/sign_up/account_type',
   image: 'create-account',
   buttonText: i18n.createAccount(),
 };
@@ -36,7 +36,7 @@ const CreateAccount = {
 const CreateAccountApplab = {
   title: i18n.createAccount(),
   description: i18n.createAccountApplabDesc(),
-  link: '/users/sign_up',
+  link: '/users/sign_up/account_type',
   image: 'create-account',
   buttonText: i18n.createAccount(),
 };

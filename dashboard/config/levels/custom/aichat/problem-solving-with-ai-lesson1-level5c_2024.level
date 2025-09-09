@@ -1,0 +1,50 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2025-03-25T13:12:43.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Plan Your Outfits\r\n\r\nUse AI Chat to help you plan your outfits for the week. \r\n\r\n### Do This:\r\n\r\n1. Start by entering a **generic prompt** and read AI Chat's response. For example:\r\n\r\n>Help me plan my outfits for the week.\r\n2. Revise your prompt and add specific examples, like **what outfits you like to wear** or **what type of shoes you own**. Read AI Chat's updated response.\r\n2. Finally, revise your last prompt by including an **uploaded image**.\r\n3. Press **Send** and read AI Chat's response.\r\n\r\n**Try it out!**",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.3,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are an outfit recommender. When given a prompt, answer with your recommendations.\n\nDo not answer any questions that are not related to outfit planning.",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    },
+    "bubble_choice_description": "Use AI Chat to help you plan your outfits. Come up with a prompt and select an image that matches.",
+    "display_name": "Plan Your Outfits",
+    "thumbnail_url": "https://images.code.org/2fc60afc7f37b9ba6660798d1d5d245f-clothes-rack.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-03-25T13:12:43.180+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson1-level6-choice3\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson1-level6-choice3\"},{\"changed_at\":\"2025-03-25 13:13:39 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Aichat>

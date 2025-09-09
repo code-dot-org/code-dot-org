@@ -1,0 +1,28 @@
+name 'emma-test-computational-thinking-python-loops-CFU-ai-tutor'
+title 'Check for Understanding'
+
+wrong '`move_to_end_of_row`'
+wrong '`collect_all_paint`'
+right '`paint_a_straight_line`'
+wrong '`paint_a_diagonal_line`'
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+What would be a good name for the mystery function?
+```
+from neighborhood import Painter
+
+susana = Painter()
+
+# Define mystery_function
+def mystery_function:
+  while susana.has_paint():
+    susana.paint("white")
+    susana.move()
+
+# Run your code
+while susana.is_on_bucket():
+     susana.take_paint()
+mystery_function()
+``` 
+MARKDOWN

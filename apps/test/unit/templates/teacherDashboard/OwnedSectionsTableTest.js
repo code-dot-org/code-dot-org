@@ -12,7 +12,6 @@ import {UnconnectedOwnedSectionsTable as OwnedSectionsTable} from '@cdo/apps/tem
 import teacherSections, {
   setSections,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import * as TeacherNavFlagUtils from '@cdo/apps/templates/teacherNavigation/TeacherNavFlagUtils.ts';
 import i18n from '@cdo/locale';
 
 const sectionRowData = [
@@ -30,8 +29,9 @@ const sectionRowData = [
     providerManaged: false,
     hidden: false,
     courseOfferingsAreLoaded: true,
+    isAssignedSingleUnitCourse: false,
     assignmentNames: ['CS Discoveries', 'Unit 1: Problem Solving'],
-    assignmentPaths: ['/courses/csd', '/s/csd1-2019'],
+    assignmentPaths: ['/courses/csd', '/courses/csd-2019/units/1'],
   },
   {
     id: 2,
@@ -44,6 +44,7 @@ const sectionRowData = [
     providerManaged: true,
     hidden: false,
     courseOfferingsAreLoaded: true,
+    isAssignedSingleUnitCourse: false,
     assignmentNames: ['CS Principles'],
     assignmentPaths: ['/courses/csp'],
   },
@@ -85,6 +86,24 @@ const sectionRowData = [
     assignmentNames: [],
     assignmentPaths: [],
   },
+  {
+    id: 6,
+    name: 'sectionF',
+    studentCount: 4,
+    code: 'PQR',
+    courseId: 10,
+    grades: ['10'],
+    loginType: 'email',
+    providerManaged: true,
+    hidden: false,
+    courseOfferingsAreLoaded: true,
+    isAssignedSingleUnitCourse: true,
+    assignmentNames: ['Single Unit Course 2025', 'Single Unit 2025'],
+    assignmentPaths: [
+      '/courses/single-unit-course-2025',
+      '/courses/single-unit-course-2025/units/1',
+    ],
+  },
 ];
 
 // Scramble these for the table to start un-ordered
@@ -94,6 +113,7 @@ const scrambledSections = [
   sectionRowData[4],
   sectionRowData[3],
   sectionRowData[1],
+  sectionRowData[5],
 ];
 
 describe('OwnedSectionsTable', () => {
@@ -111,7 +131,7 @@ describe('OwnedSectionsTable', () => {
   });
 
   const DEFAULT_PROPS = {
-    sectionIds: [1, 2, 3, 4, 5],
+    sectionIds: [1, 2, 3, 4, 5, 6],
     sectionRows: sectionRowData,
     onEdit: () => {},
   };
@@ -163,30 +183,20 @@ describe('OwnedSectionsTable', () => {
 
     // If section has 0 students, shows "Add students" button
     const noStudentsButton = screen.getByText('Add students').closest('a');
-    expect(
-      noStudentsButton.href.includes(
-        `/teacher_dashboard/sections/${sectionRowData[3].id}/manage_students`
-      )
-    ).toBeTruthy();
+    expect(noStudentsButton.href).toContain(
+      `/teacher_dashboard/sections/${sectionRowData[3].id}/roster`
+    );
 
     // If section has 1+ students, displays number of students
     const someStudentsButton = screen
       .getByText(`${sectionRowData[0].studentCount}`)
       .closest('a');
-    expect(
-      someStudentsButton.href.includes(
-        `/teacher_dashboard/sections/${sectionRowData[0].id}/manage_students`
-      )
-    ).toBeTruthy();
+    expect(someStudentsButton.href).toContain(
+      `/teacher_dashboard/sections/${sectionRowData[0].id}/roster`
+    );
   });
 
   it('studentsFormatter provides a link to teacher dashboard roster page when new teacher dashboard experiment is enabled', () => {
-    jest
-      .spyOn(TeacherNavFlagUtils, 'showV2TeacherDashboard')
-      .mockImplementation(() => {
-        return true;
-      });
-
     renderOwnedSectionsTable();
 
     // If section has 0 students, shows "Add students" button
@@ -206,7 +216,6 @@ describe('OwnedSectionsTable', () => {
         `/teacher_dashboard/sections/${sectionRowData[0].id}/roster`
       )
     ).toBeTruthy();
-    jest.restoreAllMocks();
   });
 
   it('loginInfoFormatter shows the section code for sections managed on Code.org', () => {
@@ -234,49 +243,7 @@ describe('OwnedSectionsTable', () => {
     ).toBeTruthy();
   });
 
-  it('courseLinkFormatter provides links to course information and section information', () => {
-    renderOwnedSectionsTable();
-
-    // For sections with no assignment paths, show button to the catalog page
-    const findCourseButton = screen.getByText('Find a course').closest('a');
-    expect(findCourseButton.href.includes('/catalog')).toBeTruthy();
-
-    // For sections with 1 assignment path, show course name
-    const oneAssignmentPathCourseName = screen
-      .getByText(sectionRowData[1].assignmentNames[0])
-      .closest('a');
-    expect(
-      oneAssignmentPathCourseName.href.includes(
-        sectionRowData[1].assignmentPaths[0]
-      )
-    ).toBeTruthy();
-
-    // For sections with 2 assignment paths, show course name and unit name
-    const twoAssignmentPathsCourseName = screen
-      .getByText(sectionRowData[0].assignmentNames[0])
-      .closest('a');
-    expect(
-      twoAssignmentPathsCourseName.href.includes(
-        sectionRowData[0].assignmentPaths[0]
-      )
-    ).toBeTruthy();
-    const twoAssignmentPathsUnitName = screen
-      .getByText(sectionRowData[0].assignmentNames[1])
-      .closest('a');
-    expect(
-      twoAssignmentPathsUnitName.href.includes(
-        sectionRowData[0].assignmentPaths[1]
-      )
-    ).toBeTruthy();
-  });
-
   it('courseLinkFormatter provides links to teacher dashboard course page if new teacher dashboard experiment is enabled', () => {
-    jest
-      .spyOn(TeacherNavFlagUtils, 'showV2TeacherDashboard')
-      .mockImplementation(() => {
-        return true;
-      });
-
     renderOwnedSectionsTable();
 
     // For sections with no assignment paths, show button to the catalog page
@@ -310,7 +277,6 @@ describe('OwnedSectionsTable', () => {
         sectionRowData[0].assignmentPaths[1].replace('/s/', '/unit/')
       )
     ).toBeTruthy();
-    jest.restoreAllMocks();
   });
 
   it('sectionLinkFormatter contains section link', () => {

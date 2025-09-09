@@ -1,3 +1,5 @@
+import Alert from '@code-dot-org/component-library/alert';
+import Link from '@code-dot-org/component-library/link';
 import classNames from 'classnames';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
@@ -5,12 +7,12 @@ import React, {useCallback, useEffect, useState} from 'react';
 import {connect} from 'react-redux';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
-import Link from '@cdo/apps/componentLibrary/link';
 import DCDO from '@cdo/apps/dcdo';
 import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {setShowProgressTableV2} from '@cdo/apps/templates/currentUserRedux';
+import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
 import experiments from '@cdo/apps/util/experiments';
 import i18n from '@cdo/locale';
 
@@ -22,6 +24,9 @@ import SectionProgressV2 from './SectionProgressV2';
 
 import styles from './progress-header.module.scss';
 
+const V2_SETTING_KEY = 'v2';
+const V1_SETTING_KEY = 'legacy';
+
 function SectionProgressSelector({
   showProgressTableV2,
   setShowProgressTableV2,
@@ -32,12 +37,31 @@ function SectionProgressSelector({
 }) {
   const [hasJustToggledViews, setHasJustToggledViews] = useState(false);
 
+  const params = queryParams('view');
+
+  const displayV2 = React.useMemo(() => {
+    // If the user has not selected manually the v1 or v2 table, show the DCDO defined default.
+    // If a user has selected manually, show that version.
+    const isPreferenceSet =
+      showProgressTableV2 === V2_SETTING_KEY ||
+      showProgressTableV2 === V1_SETTING_KEY;
+
+    // If there is a url pram, use that param to determine to show V2.
+    const displayV2FromUrl = params === 'v2';
+
+    return (
+      displayV2FromUrl ||
+      !isPreferenceSet ||
+      showProgressTableV2 === V2_SETTING_KEY
+    );
+  }, [showProgressTableV2, params]);
+
   useEffect(() => {
     const params = queryParams('view');
     if (params === 'v2') {
-      setShowProgressTableV2(true);
+      setShowProgressTableV2(V2_SETTING_KEY);
       setHasJustToggledViews(true);
-      new UserPreferences().setShowProgressTableV2(true);
+      new UserPreferences().setShowProgressTableV2(V2_SETTING_KEY);
     }
   }, [setShowProgressTableV2, setHasJustToggledViews]);
 
@@ -51,12 +75,12 @@ function SectionProgressSelector({
   };
 
   const onShowProgressTableV2Change = useCallback(() => {
-    const shouldShowV2 = !showProgressTableV2;
-    new UserPreferences().setShowProgressTableV2(shouldShowV2);
-    setShowProgressTableV2(shouldShowV2);
+    const shouldShowString = displayV2 ? V1_SETTING_KEY : V2_SETTING_KEY;
+    new UserPreferences().setShowProgressTableV2(shouldShowString);
+    setShowProgressTableV2(shouldShowString);
     setHasJustToggledViews(true);
 
-    if (shouldShowV2) {
+    if (shouldShowString === V2_SETTING_KEY) {
       analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_VIEW_NEW_PROGRESS, {
         sectionId: sectionId,
       });
@@ -66,7 +90,7 @@ function SectionProgressSelector({
       });
       removeQueryParams();
     }
-  }, [showProgressTableV2, setShowProgressTableV2, sectionId]);
+  }, [displayV2, setShowProgressTableV2, sectionId]);
 
   const debouncedOnShowProgressTableV2Change = _.debounce(
     onShowProgressTableV2Change,
@@ -99,21 +123,7 @@ function SectionProgressSelector({
     return <SectionProgress />;
   }
 
-  // If the user has not selected manually the v1 or v2 table, show the DCDO defined default.
-  // If a user has selected manually, show that version.
-  const isPreferenceSet = showProgressTableV2 !== undefined;
-  const params = queryParams('view');
-
-  // If there is a url pram, use that param to determine to show V2.
-  const displayV2FromUrl = params === 'v2';
-
-  const displayV2 =
-    displayV2FromUrl ||
-    (isPreferenceSet
-      ? showProgressTableV2
-      : DCDO.get('progress-table-v2-default-v2', false));
-
-  const toggleV1OrV2Link = () => (
+  const ProgressV1OrV2ToggleLink = () => (
     <div className={styles.toggleViews}>
       <Link
         type="primary"
@@ -122,8 +132,8 @@ function SectionProgressSelector({
         id="ui-test-toggle-progress-view"
       >
         {displayV2
-          ? i18n.switchToOldProgressView()
-          : i18n.switchToNewProgressView()}
+          ? i18n.switchToOldProgressViewDeprecation()
+          : i18n.switchToNewProgressViewDeprecation()}
       </Link>
     </div>
   );
@@ -150,11 +160,20 @@ function SectionProgressSelector({
         !isInV1Navigaton && styles.navView
       )}
     >
+      {!displayV2 && (
+        <Alert
+          text={i18n.progressDeprecationWarning()}
+          type="warning"
+          className={styles.deprecationBanner}
+        />
+      )}
       {displayV2 && (
         <ProgressBanners hasJustSwitchedToV2={hasJustToggledViews} />
       )}
-      {toggleV1OrV2Link()}
-
+      <GlobalEditionWrapper
+        component={ProgressV1OrV2ToggleLink}
+        componentId="ProgressV1OrV2ToggleLink"
+      />
       {displayV2 ? (
         <SectionProgressV2 hideTopHeading={!isInV1Navigaton} />
       ) : (
@@ -168,7 +187,7 @@ function SectionProgressSelector({
 }
 
 SectionProgressSelector.propTypes = {
-  showProgressTableV2: PropTypes.bool,
+  showProgressTableV2: PropTypes.string,
   progressTableV2ClosedBeta: PropTypes.bool,
   setShowProgressTableV2: PropTypes.func.isRequired,
   sectionId: PropTypes.number,

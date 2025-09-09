@@ -1,0 +1,250 @@
+name 'test-intro-to-programming-lesson2-level2'
+title 'Careers and Emerging Technologies'
+description 'description here'
+
+markdown <<MARKDOWN
+# Careers and Emerging Technologies
+
+##### Use the information below to match careers to different categories, interests and skills.
+
+## People, Things, and Ideas Career Categories
+
+<table style="border-collapse: collapse; width: 100%; text-align: center;">
+  <thead>
+    <tr style="background-color: #f2f2f2;">
+      <th style="border: 1px solid black; font-weight: bold; text-align: center;">People</th>
+      <th style="border: 1px solid black; font-weight: bold; text-align: center;">Things</th>
+      <th style="border: 1px solid black; font-weight: bold; text-align: center;">Ideas</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border: 1px solid black; text-align: center;">
+        Careers that focus on working with others, communication and collaboration
+        <br>
+        <img src="https://images.code.org/fb724faf1ea8e5a7745a8c498205b612-employee-engagement.png" alt="People category" style="border-radius:0px; height: 75px; margin: 10px 0;">
+      </td>
+      <td style="border: 1px solid black; text-align: center;">
+        Careers that focus on working with tools, machines, systems, or physical processes
+        <br>
+        <img src="https://images.code.org/4f245e227cb52dd6f6793497be3fb313-electrician.png" alt="Things category" style="border-radius:0px; height: 75px; margin: 10px 0;">
+      </td>
+      <td style="border: 1px solid black; text-align: center;">
+        Careers that focus on solving big problems, creativity, and critical thinking
+        <br>
+        <img src="https://images.code.org/d92eb2e909879bd991385cbc19657bcd-brain.png" alt="Ideas category" style="border-radius:0px; height: 75px; margin: 10px 0;">
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+## Careers in Computing
+
+<table style="border-collapse: collapse; width: 100%; text-align: center;">
+  <thead>
+    <tr style="background-color: #f2f2f2;">
+      <th style="border: 1px solid black; font-weight: bold; text-align: center;">People-Oriented Careers</th>
+      <th style="border: 1px solid black; font-weight: bold; text-align: center;">Description</th>
+      <th style="border: 1px solid black; font-weight: bold; text-align: center;">Skills/Interests</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border: 1px solid black; font-weight: bold; padding: 8px;">UX (User Experience) Designer</td>
+      <td style="border: 1px solid black; padding: 8px;">Designs digital products (websites, apps) that are easy and enjoyable for users to interact with</td>
+      <td style="border: 1px solid black; padding: 8px;">Creativity, Communication, Empathy, Problem-solving</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black; font-weight: bold; padding: 8px;">Educator (Computer Science Teacher)</td>
+      <td style="border: 1px solid black; padding: 8px;">Teaches programming and computer science concepts to help students develop technical skills</td>
+      <td style="border: 1px solid black; padding: 8px;">Communication, Collaboration, Leadership, Curiosity</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black; font-weight: bold; padding: 8px;">Team Manager</td>
+      <td style="border: 1px solid black; padding: 8px;">Leads teams of engineers or developers to deliver projects on time and ensure team success</td>
+      <td style="border: 1px solid black; padding: 8px;">Leadership, Collaboration, Problem-solving, Organization</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black; font-weight: bold; padding: 8px;">IT Support Specialist</td>
+      <td style="border: 1px solid black; padding: 8px;">Helps people troubleshoot computer issues and ensures systems are running smoothly</td>
+      <td style="border: 1px solid black; padding: 8px;">Communication, Patience, Logical thinking, Working with tools</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black; font-weight: bold; padding: 8px;">Journalist (Using AI Tools)</td>
+      <td style="border: 1px solid black; padding: 8px;">Uses AI transcription services and natural language processing tools to streamline reporting and storytelling</td>
+      <td style="border: 1px solid black; padding: 8px;">Communication, Adaptability, Critical thinking, Curiosity</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black; font-weight: bold; padding: 8px;">Healthcare Provider (Telemedicine)</td>
+      <td style="border: 1px solid black; padding: 8px;">Uses remote health monitoring devices and virtual consultation platforms to deliver care</td>
+      <td style="border: 1px solid black; padding: 8px;">Empathy, Communication, Technical literacy, Problem-solving</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black; font-weight: bold; padding: 8px;">Customer Experience Specialist</td>
+      <td style="border: 1px solid black; padding: 8px;">Analyzes customer data and uses CRM systems to improve client satisfaction and engagement</td>
+      <td style="border: 1px solid black; padding: 8px;">Collaboration, Communication, Data analysis, Empathy</td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<table style="border-collapse: collapse; width: 100%; text-align: center;">
+  <thead>
+    <tr style="background-color: #f2f2f2;">
+      <th style="border: 1px solid black; font-weight: bold; text-align: center;">Things-Oriented Careers</th>
+      <th style="border: 1px solid black; font-weight: bold; text-align: center;">Description</th>
+      <th style="border: 1px solid black; font-weight: bold; text-align: center;">Skills/Interests</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border: 1px solid black; font-weight: bold; padding: 8px;">Robotics Technician</td>
+      <td style="border: 1px solid black; padding: 8px;">Designs, builds, and maintains robots used for tasks like manufacturing or surgery</td>
+      <td style="border: 1px solid black; padding: 8px;">Precision, Problem-solving, Working with various tools, Curiosity</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black; font-weight: bold; padding: 8px;">Cybersecurity Specialist</td>
+      <td style="border: 1px solid black; padding: 8px;">Protects computer systems and networks from hackers and other security threats</td>
+      <td style="border: 1px solid black; padding: 8px;">Detail-oriented, Logical thinking, Persistence, Analytical skills</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black; font-weight: bold; padding: 8px;">Systems Architect</td>
+      <td style="border: 1px solid black; padding: 8px;">Designs the overall structure of computer systems to meet the needs of a company or project</td>
+      <td style="border: 1px solid black; padding: 8px;">Big-picture thinking, Problem-solving, Logical planning, Organization</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black; font-weight: bold; padding: 8px;">Automation Specialist</td>
+      <td style="border: 1px solid black; padding: 8px;">Programs machines or systems to perform repetitive tasks efficiently, like warehouse automation</td>
+      <td style="border: 1px solid black; padding: 8px;">Attention to detail, Problem-solving, Working with systems, Precision</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black; font-weight: bold; padding: 8px;">3D Modeler</td>
+      <td style="border: 1px solid black; padding: 8px;">Creates 3D designs for games, movies, or simulations using software tools.</td>
+      <td style="border: 1px solid black; padding: 8px;">Creativity, Technical skills, Detail-oriented, Problem-solving</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black; font-weight: bold; padding: 8px;">Surgeon (Using Nanotechnology)</td>
+      <td style="border: 1px solid black; padding: 8px;">Performs minimally invasive procedures with the help of advanced medical robotics and nanotechnology</td>
+      <td style="border: 1px solid black; padding: 8px;">Precision, Problem-solving, Working with tools, Critical thinking</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black; font-weight: bold; padding: 8px;">Farmer (Smart Agriculture)</td>
+      <td style="border: 1px solid black; padding: 8px;">Uses drones, IoT devices, and precision farming tools to increase crop yields efficiently</td>
+      <td style="border: 1px solid black; padding: 8px;">Technical literacy, Analytical skills, Curiosity, Problem-solving</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black; font-weight: bold; padding: 8px;">Manufacturing Engineer (IoT Systems)</td>
+      <td style="border: 1px solid black; padding: 8px;">Implements IoT-based systems to optimize factory operations and streamline production</td>
+      <td style="border: 1px solid black; padding: 8px;">Attention to detail, Logical thinking, Working with tools, Organization</td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<table style="border-collapse: collapse; width: 100%; text-align: center;">
+  <thead>
+    <tr style="background-color: #f2f2f2;">
+      <th style="border: 1px solid black; font-weight: bold; text-align: center;">Ideas-Oriented Careers</th>
+      <th style="border: 1px solid black; font-weight: bold; text-align: center;">Description</th>
+      <th style="border: 1px solid black; font-weight: bold; text-align: center;">Skills/Interests</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border: 1px solid black; font-weight: bold; padding: 8px;">AI Engineer</td>
+      <td style="border: 1px solid black; padding: 8px;">Develops systems that simulate human intelligence, such as recommendation engines and chatbots.</td>
+      <td style="border: 1px solid black; padding: 8px;">Problem-solving, Creativity, Logical thinking, Curiosity</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black; font-weight: bold; padding: 8px;">Data Scientist</td>
+      <td style="border: 1px solid black; padding: 8px;">Analyzes large amounts of data to find patterns, make predictions, and solve complex problems</td>
+      <td style="border: 1px solid black; padding: 8px;">Analytical skills, Critical thinking, Curiosity, Precision</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black; font-weight: bold; padding: 8px;">Game Developer</td>
+      <td style="border: 1px solid black; padding: 8px;">Creates video games, designing visuals, mechanics, and interactivity for players</td>
+      <td style="border: 1px solid black; padding: 8px;">Creativity, Problem-solving, Teamwork, Coding skills</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black; font-weight: bold; padding: 8px;">Environmental Scientist (Data-Driven)</td>
+      <td style="border: 1px solid black; padding: 8px;">Uses remote sensing and environmental modeling tools to analyze climate and ecological data</td>
+      <td style="border: 1px solid black; padding: 8px;">Analytical skills, Problem-solving, Curiosity, Data visualization</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black; font-weight: bold; padding: 8px;">Filmmaker (Visual Effects Technology)</td>
+      <td style="border: 1px solid black; padding: 8px;">Leverages advanced visual effects software and virtual production tools to create cinematic experiences</td>
+      <td style="border: 1px solid black; padding: 8px;">Creativity, Technical skills, Attention to detail, Collaboration</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black; font-weight: bold; padding: 8px;">Architect (Using 3D Visualization Tools)</td>
+      <td style="border: 1px solid black; padding: 8px;">Designs sustainable buildings and spaces with the help of advanced modeling and visualization software</td>
+      <td style="border: 1px solid black; padding: 8px;">Creativity, Critical thinking, Technical skills, Innovation</td>
+    </tr>
+  </tbody>
+</table>
+
+## Emerging Technologies
+
+<table style="border-collapse: collapse; width: 100%; text-align: center;">
+  <thead>
+    <tr style="background-color: #f2f2f2;">
+      <th style="border: 1px solid black; font-weight: bold; text-align: center;">Emerging Tech</th>
+      <th style="border: 1px solid black; font-weight: bold; text-align: center;">Description</th>
+      <th style="border: 1px solid black; font-weight: bold; text-align: center;">Real-World Application Examples</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border: 1px solid black; font-weight: bold; padding: 8px;">AI (Artificial Intelligence)</td>
+      <td style="border: 1px solid black; padding: 8px;">Simulates human intelligence to automate tasks, analyze data, and make decisions.</td>
+      <td style="border: 1px solid black; padding: 8px;">Recommendation engines, virtual assistants, fraud detection.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black; font-weight: bold; padding: 8px;">Robotics</td>
+      <td style="border: 1px solid black; padding: 8px;">Machines programmed to perform physical tasks.</td>
+      <td style="border: 1px solid black; padding: 8px;">Manufacturing robots, surgical robots, warehouse automation.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black; font-weight: bold; padding: 8px;">Autonomous Vehicles</td>
+      <td style="border: 1px solid black; padding: 8px;">Vehicles that operate without human control.</td>
+      <td style="border: 1px solid black; padding: 8px;">Self-driving cars, delivery drones, public transportation.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black; font-weight: bold; padding: 8px;">Generative AI</td>
+      <td style="border: 1px solid black; padding: 8px;">Tools that create new content, like art, music, text, or designs using machine learning models.</td>
+      <td style="border: 1px solid black; padding: 8px;">AI art generators, AI-written articles, content creation.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black; font-weight: bold; padding: 8px;">Augmented Reality (AR)</td>
+      <td style="border: 1px solid black; padding: 8px;">Adds digital elements to the real world through devices like smartphones or AR glasses.</td>
+      <td style="border: 1px solid black; padding: 8px;">Virtual furniture placement (IKEA app), AR games like Pokémon Go.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black; font-weight: bold; padding: 8px;">Virtual Reality (VR)</td>
+      <td style="border: 1px solid black; padding: 8px;">Fully immersive digital environments for training, gaming, or simulations.</td>
+      <td style="border: 1px solid black; padding: 8px;">VR surgical training, virtual classrooms, immersive gaming.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black; font-weight: bold; padding: 8px;">Internet of Things (IoT)</td>
+      <td style="border: 1px solid black; padding: 8px;">Connects devices and systems to the internet for data collection and automation.</td>
+      <td style="border: 1px solid black; padding: 8px;">Smart homes (e.g., thermostats, lights), fitness trackers.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black; font-weight: bold; padding: 8px;">Quantum Computing</td>
+      <td style="border: 1px solid black; padding: 8px;">Uses quantum mechanics to perform calculations much faster than traditional computers.</td>
+      <td style="border: 1px solid black; padding: 8px;">Drug discovery, complex simulations, cryptography.</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black; font-weight: bold; padding: 8px;">Automation</td>
+      <td style="border: 1px solid black; padding: 8px;">Programs machines or systems to perform repetitive or precise tasks automatically.</td>
+      <td style="border: 1px solid black; padding: 8px;">Factory line automation, chatbot customer support.</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+MARKDOWN

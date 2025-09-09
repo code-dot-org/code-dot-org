@@ -1,6 +1,6 @@
 import {BLOCK_TYPES} from '../constants';
 
-export function overrideHandleTouchMove(blocklyWrapper) {
+export function gestureOverrides(blocklyWrapper) {
   const cdoGesture = blocklyWrapper.Gesture.prototype;
 
   // Override handleTouchMove function
@@ -31,12 +31,13 @@ export function overrideHandleTouchMove(blocklyWrapper) {
    * Additionally, begin tracking shadow argument_report blocks for duplicateOnDrag.
    *
    * @param block The block the gesture started on.
-   * @internal
+   * @override Sets up duplication of shadow argument reporter blocks.
    */
   cdoGesture.setStartBlock = function (block) {
     // If the gesture already went through a bubble, don't set the start block.
     if (!this.startBlock && !this.startBubble) {
       this.startBlock = block;
+      Blockly.common.setSelected(this.startBlock);
 
       // Begin Customization
       // Set up duplication of shadow argument_reporter blocks.
@@ -54,9 +55,18 @@ export function overrideHandleTouchMove(blocklyWrapper) {
   };
 
   /**
-   * Custom method: Create a block dragger and start dragging the selected block.
+   * Update this gesture to record whether a block is being dragged from the
+   * flyout.
+   * This function should be called on a pointermove event the first time
+   * the drag radius is exceeded.  It should be called no more than once per
+   * gesture. If a block should be dragged from the flyout this function creates
+   * the new block on the main workspace and updates targetBlock_ and
+   * startWorkspace_.
+   *
+   * @returns True if a block is being dragged from the flyout.
+   * @override Initiates duplication of shadow argument reporter blocks.
    */
-  cdoGesture.startDraggingBlock = function () {
+  cdoGesture.updateIsDragging = function (e) {
     // Begin Customization
     // Create a new block and set it as the target block for the drag.
     if (this.shouldDuplicateOnDrag) {
@@ -64,18 +74,28 @@ export function overrideHandleTouchMove(blocklyWrapper) {
     }
     // End Customization
 
-    const BlockDraggerClass = Blockly.registry.getClassFromOptions(
-      Blockly.registry.Type.BLOCK_DRAGGER,
-      this.creatorWorkspace.options,
-      true
-    );
+    if (!this.startWorkspace_) {
+      throw new Error(
+        'Cannot update dragging because the start workspace is undefined'
+      );
+    }
+    if (this.calledUpdateIsDragging) {
+      throw Error('updateIsDragging_ should only be called once per gesture.');
+    }
 
-    this.blockDragger = new BlockDraggerClass(
-      this.targetBlock,
-      this.startWorkspace_
-    );
-    this.blockDragger.startDrag(this.currentDragDeltaXY, this.healStack);
-    this.blockDragger.drag(this.mostRecentEvent, this.currentDragDeltaXY);
+    this.calledUpdateIsDragging = true;
+    // If we drag a block out of the flyout, it updates `common.getSelected`
+    // to return the new block.
+    if (this.flyout) this.updateIsDraggingFromFlyout();
+    const selected = Blockly.common.getSelected();
+    if (selected && Blockly.isDraggable(selected) && selected.isMovable()) {
+      this.dragging = true;
+      this.dragger = this.createDragger(selected, this.startWorkspace_);
+      this.dragger.onDragStart(e);
+      this.dragger.onDrag(e, this.currentDragDeltaXY);
+    } else {
+      this.updateIsDraggingWorkspace();
+    }
   };
 
   /**
@@ -95,6 +115,9 @@ export function overrideHandleTouchMove(blocklyWrapper) {
       newBlock.initSvg();
       newBlock.render();
       newBlock.moveTo(xy);
+      // The dragger is created with the currently-selected block, and we want
+      // to drag the new block.
+      Blockly.common.setSelected(newBlock);
       this.setTargetBlock(newBlock);
     } finally {
       Blockly.Events.enable();

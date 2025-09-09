@@ -1,0 +1,28 @@
+name 'self-paced-equity-U2L2-closing'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Great Job! 🎉
+
+<img src="https://images.code.org/d0ef30c27a8ff13714b75ca0a863ae7b-image-1736139767127.02.44 PM.png" alt="A student smiles at the camera while they work on a laptop." style="border-radius:20px; float: right; padding-right: 10px; height: 200px; clear: both; margin: 20px 20px 20px 20px;">
+
+#### So far, you have:
+
+* #### Use a shared definition of unconscious bias and stereotype threat.
+* #### Identify and address your own implicit biases and assumptions about students.
+* #### Describe the impact of bias and stereotypes on student learning and engagement.
+
+## Up Next
+
+#### In the next section of this professional learning module, you will:
+
+* #### Implement inclusive teaching practices that support the learning of all students.
+* #### Use culturally responsive pedagogy to engage and motivate students from different backgrounds.
+* #### Adapt CS curriculum and activities to be more inclusive and accessible.
+
+
+<br>
+
+#### Click continue to keep going!
+MARKDOWN

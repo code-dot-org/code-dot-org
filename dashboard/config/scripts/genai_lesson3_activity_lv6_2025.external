@@ -1,0 +1,22 @@
+name 'genai-lesson3-activity-lv6_2025'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Identifying Bias
+
+## Overview
+
+#### Our new job is to identify potential sources of bias in these resources.
+
+<!-- Quote 1 (image left, bubble right) -->
+<div style="margin-top: 20px; display: flex; align-items: center; gap: 15px; margin-bottom: 30px;">
+  <img src="https://images.code.org/03656b09cc03a2d0eac5163f4fe6b367-image-1746464325512.png" alt="Teacher avatar" style="width: 70px; border-radius: 20%;">
+  <div style="background-color: #B7E0E5; padding: 15px; font-size: 17px; max-width: 600px; border-radius: 20px 20px 20px 0;">
+  Man vs Food is a TV food and travel show that visits diner restaurants in the US and leaves reviews. I found an archive of their food reviews and some of their recipes. I think we should include this in the RecipeBot training data!
+  </div>
+</div>
+
+## Discuss
+
+MARKDOWN

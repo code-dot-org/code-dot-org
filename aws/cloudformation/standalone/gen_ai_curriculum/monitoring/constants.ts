@@ -1,7 +1,7 @@
 export const ENDPOINT_VARIANT = 'AllTraffic';
 export const REGION = 'us-east-1';
 export const SNS_TOPIC =
-  'arn:aws:sns:us-east-1:475661607190:javabuilder-low-urgency'; // This will be updated to a team-based SNS topic.
+  'arn:aws:sns:us-east-1:475661607190:autoscale-prod-StudentLearningWorkdayUrgent-hd8WmLbmPdIU';
 
 export const commonGraphProps = {
   width: 6,
@@ -37,3 +37,8 @@ export const ERROR_COLOR = '#d62728';
 export const WARNING_COLOR = '#ff7f0e';
 
 export const DASHBOARD_NAME = 'GenAICurriculum';
+
+export const BROWSERS = ['Chrome', 'Firefox', 'Safari'];
+
+export const SL_HANDBOOK_LINK =
+    'https://docs.google.com/document/d/1T0Vwwg22isdgsf66mYiRtUZVKaSxHo1PW89HAnW_twk/edit?tab=t.0#heading=h.npwykn5tc2b4';

@@ -1,0 +1,29 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2025-04-30T16:39:49.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "long_instructions": "# Applying Our Knowledge of Identity and Bias\r\n\r\n---\r\n\r\n<img src=\"https://images.code.org/59c9b8a356ff4e56ec8c802ba5718b37-image-1684269154206.png\" alt=\"A clipboard with the words TO DO on it. This icon is used to signal an action item for participants.\" width=\"30px\" style=\"border-radius:10px; float:left; margin: 0px 10px 5px 0px;\">\r\n\r\n#### Answer the following questions about your reaction and response to the scenario. Include the question numbers in your response to help keep it organized.\r\n\r\n---\r\n\r\n#### 1. What do you notice in this scenario? For example if you had to describe the scene to someone else, what might you include?\r\n#### 2. What group norms and/or values do you see being developed in this interaction?\r\n#### 3. Would you intervene in this group as the teacher? If so, what would be your goal for intervening? If not, why not? What concerns do you have about intervening?\r\n",
+    "encrypted_solution": "91PmasBGuZSmiGilha6nfJBFpM/fLcNPv6bxFRQOYA1OUQ0fif5NhHu3bxd6\nHEfICfsLPxxBRByXZSVoJhO3KFX8fOFVKfkJapNkcNfDdPeA3NVW8FA//GBo\ni57MQLfPjvZHyoNws7Wumz/eXmqDk1xmrt/suahLk/DzjDZoLm4pV3Z0GZ/s\n4/k4fUN9TGCW1fmKxBOBjiyAK0YmcFI6byYvx4IcwhIyODWsS+c/oDupV7Gk\n5u6vhSdv4Wpecqb+VhB6YjooMn1Zxbh/lt1ZX5sD1rRgm1C41791ZWywR1l2\nU+bg0WHd+NUNrhm/voi5\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 19149,
+    "name_suffix": "_2025",
+    "encrypted": "false",
+    "instructions_important": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "stay_on_level_after_submit": "false"
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2025-04-30T16:39:49.341+00:00\",\"changed\":[\"cloned from \\\"U3L2 CSP CFU ID names_1_2025\\\"\"],\"cloned_from\":\"U3L2 CSP CFU ID names_1_2025\"},{\"changed_at\":\"2025-04-30 16:44:34 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"},{\"changed_at\":\"2025-04-30 16:45:01 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

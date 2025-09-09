@@ -1,0 +1,77 @@
+name 'ea-fac-csaif_pl_module_comp_think_L4_python'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Why Use Unplugged Activites to Teach Computational Thinking? 
+
+#### Unplugged activities provide a **hands-on, accessible** way for students to engage with computational thinking concepts before they start coding.
+
+#### By removing the complexity of syntax and technology, these activities help students focus on fundamental problem-solving skills in a way that is interactive and inclusive.
+
+## Benefits of Unplugged Activites: 
+
+<br>
+
+<div style="display: flex; flex-direction: column; gap: 20px; max-width: 900px; margin: auto;">
+
+  
+<div style="display: flex; align-items: center; gap: 15px;">
+        <img src="https://images.code.org/3d11b3154389d2caa405683ffda44ff6-image-1740592165845.png" alt="Thinking gear" style="width: 20%; max-width: 120px; height: auto;">
+        <div style="flex: 1; background: #f7f8fa; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt;">
+            <h3><b>Builds Conceptual Understanding</b></h3>
+                    <p style = "font-size: 14pt";>Helps students grasp key ideas like decomposition, abstraction, pattern recognition, and algorithms before applying them in code.
+
+</p>
+           </div>
+    </div>
+
+   
+<div style="display: flex; align-items: center; gap: 15px;">
+        <img src="https://images.code.org/4fb6f376cc7f6dc32cb3dfe1833fb302-image-1741020271499.png" alt="gear with check mark" style="width: 20%; max-width: 120px; height: auto;">
+        <div style="flex: 1; background: #f7f8fa; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); ">
+            <h3> <b>Reduces Cognitive Load</b></h3>
+           <p style = "font-size: 14pt";>Allows students to focus on problem-solving without worrying about programming syntax.
+</p>
+           </div>
+    </div>
+
+<div style="display: flex; align-items: center; gap: 15px;">
+        <img src="https://images.code.org/23f3b1dc10bc80e1af32d566dd325419-image-1741020349339.png" alt="hands putting together a puzzle piece" style="width: 20%; max-width: 120px; height: auto;">
+        <div style="flex: 1; background: #f7f8fa; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            <h3><b>Encourages Collaboration</b></h3>
+            <p style = "font-size: 14pt";>Many unplugged activities involve teamwork, fostering communication and critical thinking skills.
+</p>
+        </div>
+    </div>
+
+   
+<div style="display: flex; align-items: center; gap: 15px;">
+        <img src="https://images.code.org/1cce3a772673f494f79f1476d1740e27-image-1741020419379.png" alt="Lightbulb over an open book" style="width: 20%; max-width: 120px; height: auto;">
+        <div style="flex: 1; background: #f7f8fa; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            <h3><b>Makes Learning Engaging</b></h3>
+            <p style = "font-size: 14pt";> Hands-on activities turn abstract concepts into tangible experiences, increasing motivation and retention</p>
+        </div>
+    </div>
+
+    
+
+
+
+</div>
+
+
+
+
+
+---
+
+
+#### Using unplugged pedagogy ensures that all students have an entry point into computational thinking, making coding more approachable and effective.
+
+#### You will notice unplugged activities throughout the unit.
+
+## Let’s try one. 
+
+![]()
+MARKDOWN

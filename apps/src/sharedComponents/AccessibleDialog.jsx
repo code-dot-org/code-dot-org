@@ -1,9 +1,9 @@
+import CloseButton from '@code-dot-org/component-library/closeButton';
 import classnames from 'classnames';
 import FocusTrap from 'focus-trap-react';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import CloseButton from '@cdo/apps/componentLibrary/closeButton/CloseButton';
 import CloseOnEscape from '@cdo/apps/templates/CloseOnEscape';
 import i18n from '@cdo/locale';
 
@@ -20,18 +20,21 @@ function AccessibleDialog({
   initialFocus = true,
   closeOnClickBackdrop = false,
   onDeactivate = onClose,
+  noMC = false, // exclude MineCraft button styles
+  theme,
 }) {
   // If these styles are provided by the given stylesheet, use them
   const modalStyle = styles?.modal || defaultStyle.modal;
   const backdropStyle = styles?.modalBackdrop || defaultStyle.modalBackdrop;
-  const closeIconStyle = styles?.xCloseButton || defaultStyle.xCloseButton;
+  let closeIconStyle = styles?.xCloseButton || defaultStyle.xCloseButton;
+  closeIconStyle = noMC ? [closeIconStyle, 'no-mc'] : closeIconStyle;
 
   // This provides the option for there to be different behaviors between closing the dialog
   // and explicitly dismissing it, for example when the user has selected "remind me later".
   const xIconOnClick = onDismiss ? onDismiss : onClose;
 
   return (
-    <div>
+    <div data-theme={theme}>
       <div className={backdropStyle} />
       <CloseOnEscape handleClose={onClose}>
         <FocusTrap
@@ -74,6 +77,8 @@ AccessibleDialog.propTypes = {
   initialFocus: PropTypes.bool,
   closeOnClickBackdrop: PropTypes.bool,
   onDeactivate: PropTypes.func,
+  noMC: PropTypes.bool,
+  theme: PropTypes.string,
 };
 
 export default AccessibleDialog;

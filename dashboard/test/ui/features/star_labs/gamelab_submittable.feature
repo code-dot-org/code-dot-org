@@ -3,7 +3,7 @@
 Feature: Submittable GameLab
 
 Background:
-  Given I am on "http://studio.code.org/s/allthethings/lessons/19/levels/1?noautoplay=true"
+  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/19/levels/1?noautoplay=true"
   Then I wait to see "#runButton"
 
 Scenario: Submit anything, unsubmit, be able to resubmit.
@@ -11,7 +11,7 @@ Scenario: Submit anything, unsubmit, be able to resubmit.
   When I submit this gamelab level
 
   # Reload the page to see that unsubmit is the option.
-  Then I am on "http://studio.code.org/s/allthethings/lessons/19/levels/1?noautoplay=true"
+  Then I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/19/levels/1?noautoplay=true"
   And I wait to see "#unsubmitButton"
 
   # Unsubmit.
@@ -20,6 +20,6 @@ Scenario: Submit anything, unsubmit, be able to resubmit.
   And I press "confirm-button" to load a new page
 
   # Make sure that submit is the option after the page reloads.
-  Then I am on "http://studio.code.org/s/allthethings/lessons/19/levels/1?noautoplay=true"
+  Then I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/19/levels/1?noautoplay=true"
   And I press "runButton"
   And I wait to see "#submitButton"

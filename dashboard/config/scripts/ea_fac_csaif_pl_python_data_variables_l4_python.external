@@ -1,0 +1,96 @@
+name 'ea-fac-csaif-pl_Python-data-Variables-L4-Python'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Exploring Data Types
+
+<img src="https://images.code.org/be59c99d32b20fa2098483c9963e3114-image-1741196021063.png" alt="house with a garden and a tree" width="125px" style="border-radius:10px; float:left; margin: 0 20px 0px 0px;">
+
+#### Imagine you are the local community center organizer.
+#### You have received a set of data cards representing different types of neighborhood information: house numbers, resident names, street names, home prices, and whether a house has a garden. 
+#### **Your task?** Sort these cards and notice patterns in the data.
+
+<div style="clear:both;"></div>
+
+---
+## Data Cards
+
+#### Look at these sample data cards. What do you notice about them?
+
+<div style="display: flex; justify-content: center; gap: 20px; padding: 20px; width: 95%;">
+    <!-- First Row (3 Cards) -->
+    <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
+                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
+        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" 
+             alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
+        <p style="font-size:14pt;">102<br> 205<br> 311 <br><br><b> House Numbers</b></p>
+    </div>
+
+ <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
+                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
+        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" 
+             alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
+        <p style="font-size:14pt;">"Maple Street"<br> "Oak Avenue"<br> "Pine Drive" <br><br><b> Street Names</b></p>
+    </div>
+
+<div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
+                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
+        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" 
+             alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
+        <p style="font-size:14pt;">"Sam"<br> "Jordan"<br> "Maria" <br><br><b> Resident Names</b></p>
+    </div>
+</div>
+<div style="clear:both;"></div>
+<div style="display: flex; justify-content: center; gap: 20px; padding: 20px; width: 95%; margin-top: 20px;">
+    <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
+                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
+        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" 
+             alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
+        <p style="font-size:14pt;">True<br> False<br> True  <br><br><b> Has a Garden?</b></p>
+    </div>
+
+  <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; width: 30%; height: 220px; 
+                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
+        <img src="https://images.code.org/42d3da5f31cd30cb1a8327c5b95d84f3-image-1741114767729.png" 
+             alt="house Icon" style="width: 70px; height: 70px; margin-bottom: 10px;"><br>
+        <p style="font-size:14pt;">250,000.50<br> 187,500.75<br> 320,000.00 <br><br><b> House Price</b></p>
+    </div>
+</div>
+<div style="clear:both;"></div>
+
+---
+
+## How the Computer Sees Data
+
+#### Unlike humans, computers need to store and process data differently.
+
+<div style="background-color: #F5F7F8; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
+        <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">
+        <ul>
+    <li style="font-size: 14pt;"><b>Whole numbers</b> (integers) can be used for counting.<br></li><br>
+    <li style="font-size: 14pt;"><b>Text </b>(strings) stores names and addresses.<br></li><br>
+    <li style="font-size: 14pt;"><b>True/False values </b> (booleans) help make decisions.<br></li><br>
+    <li style="font-size: 14pt;"><b>Decimal numbers</b> (floats) store values that are not whole, like prices or measurements.<br></li>
+</ul>
+    </p>
+</div>
+
+
+#### A computer organizes these into different types because it processes them differently.
+
+## Introducing Variable Types 
+
+#### In Python, we store data in variables. But depending on the type of data, we choose different variable types:
+
+<img src="https://images.code.org/3f2339ba75b14b98c82b78281c4fda38-image-1741196296906.png" alt="design process graph of the cycle" width="450px" style="display: block; margin-left: auto; margin-right: auto;">
+
+#### Different variable types allow Python to handle data properly. Integers can be used for math, strings store text, booleans hold True/False values, and floats handle decimal numbers.
+
+<br>
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ This activity is from Lesson 4. You can find more details in the full <a href='https://studio.code.org/s/pf-aitutor-pilot-content-2024/lessons/4' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>lesson plan</a>.
+</p>
+
+
+MARKDOWN

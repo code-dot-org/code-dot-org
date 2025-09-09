@@ -1,7 +1,7 @@
+import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import React, {useContext} from 'react';
 
 import {AiCustomizations, Visibility} from '@cdo/apps/aichat/types';
-import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 
 import {UpdateContext} from './UpdateContext';
 

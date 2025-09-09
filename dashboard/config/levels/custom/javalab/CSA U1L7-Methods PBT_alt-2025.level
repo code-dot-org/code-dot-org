@@ -350,12 +350,12 @@
     ],
     "start_sources": {
       "NeighborhoodRunner.java": {
-        "text": "import org.code.neighborhood.*;\n\npublic class NeighborhoodRunner {\n  public static void main(String[] args) {\n\n    PainterPlus olivia = new PainterPlus();\n\n    olivia.move();\n\n    while (olivia.isOnBucket()) {\n      olivia.takePaint();\n    }\n\n    olivia.paintSquare();\n    \n  }\n}",
+        "text": "import org.code.neighborhood.*;\n\npublic class NeighborhoodRunner {\n  public static void main(String[] args) {\n\n    PainterPlus olivia = new PainterPlus();\n\n    olivia.move();\n\n    olivia.takePaint();\n    olivia.takePaint();\n    olivia.takePaint();\n    olivia.takePaint();\n\n    olivia.paintSquare();\n    \n  }\n}",
         "isVisible": true,
         "tabOrder": 0
       },
       "PainterPlus.java": {
-        "text": "import org.code.neighborhood.*;\n\npublic class PainterPlus extends Painter {\n\n  // Paints a square\n  public void paintSquare() {\n    while (hasPaint()) {\n      move();\n      paint(\"blue\");\n      turnLeft();\n      turnLeft();\n      turnLeft();\n    }\n  }\n  \n}",
+        "text": "import org.code.neighborhood.*;\n\npublic class PainterPlus extends Painter {\n\n  // Paints a square\n  public void paintSquare() {\n    move();\n    paint(\"blue\");\n    turnLeft();\n    turnLeft();\n    turnLeft();\n\n    move();\n    paint(\"blue\");\n    turnLeft();\n    turnLeft();\n    turnLeft();\n\n    move();\n    paint(\"blue\");\n    turnLeft();\n    turnLeft();\n    turnLeft();\n\n    move();\n    paint(\"blue\");\n    turnLeft();\n    turnLeft();\n    turnLeft();\n  }\n  \n}",
         "isVisible": true,
         "tabOrder": 1
       }
@@ -364,6 +364,6 @@
     "ai_tutor_available": true
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-08-02T22:13:47.252+00:00\",\"changed\":[\"cloned from \\\"CSA U1L7-Methods PBT_pilot-2025\\\"\"],\"cloned_from\":\"CSA U1L7-Methods PBT_pilot-2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-08-02T22:13:47.252+00:00\",\"changed\":[\"cloned from \\\"CSA U1L7-Methods PBT_pilot-2025\\\"\"],\"cloned_from\":\"CSA U1L7-Methods PBT_pilot-2025\"},{\"changed_at\":\"2025-03-24 03:42:10 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-03-24 03:43:56 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-03-24 03:44:07 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

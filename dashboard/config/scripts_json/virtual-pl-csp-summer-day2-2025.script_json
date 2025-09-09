@@ -1,0 +1,2562 @@
+{
+  "script": {
+    "name": "virtual-pl-csp-summer-day2-2025",
+    "wrapup_video_id": null,
+    "login_required": true,
+    "properties": {
+      "content_area": "pl_workshop_activities",
+      "curriculum_umbrella": "PD Workshop Activity CSP",
+      "has_unnumbered_lessons": true,
+      "is_migrated": true,
+      "tts": true,
+      "version_year": "2025"
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2025-05-09 18:46:31 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "virtual-pl-csp-summer-day2-2025"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Synchronous Part 1"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csp-summer-day2-2025"
+      }
+    },
+    {
+      "key": "lessonGroup-3",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Asynchronous Part 1"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csp-summer-day2-2025"
+      }
+    },
+    {
+      "key": "lessonGroup-4",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Synchronous Part 2"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csp-summer-day2-2025"
+      }
+    },
+    {
+      "key": "lessonGroup-5",
+      "user_facing": true,
+      "position": 4,
+      "properties": {
+        "display_name": "Asynchronous Part 2"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csp-summer-day2-2025"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Introduction",
+      "name": "Introduction",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+        "overview": "**Purpose:**\nThis activity is intended to welcome and orient participants to Module 2. During this activity, the theme of the day is introduced: The Role of the Teacher.\n\n**Objectives:**\n* Participants are oriented to the module.\n\n**Suggested Time:** 10 minutes",
+        "student_overview": "**You will:**\n* Get an orientation to the module."
+      },
+      "seeding_key": {
+        "lesson.key": "Introduction",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csp-summer-day2-2025"
+      }
+    },
+    {
+      "key": "TLO #1: U1L7 - Black and White Images",
+      "name": "TLO #1: U1L7 - Black and White Images",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "**Purpose:**\nTLOs are intended to help participants experience part of the curriculum as a learner and also practice teaching lessons from the curriculum. We use the debrief to discuss important aspects of teaching CS Principles in classrooms.\n\n**Objectives:**\n* Participants understand how to use widgets in the classroom to support understanding of computer science content\n\n**Suggested Time:** 65 minutes\n\n<a href=\"https://levelbuilder-studio.code.org/s/csp1-2025/lessons/7\" target=\"blank\" rel=\"noopener noreferrer\">Lessson Plan</a> \n\n**Lesson Overview:**\nStudents explore how black and white images are represented.  Students use the black and white pixelation widget to represent each pixel of an image with black or white light.  They learn how to sample an analog image using small squares of uniform size (each represented with a black or white value) and reflect on the pros and cons of choosing a smaller or larger square size when sampling.",
+        "preparation": "\n* Practice using the pixelation widget\n* Copies of [r activity_guide_-_black_and_white_images/virtual-pl-csp-summer/2025] for each pair of students\n* [KEY U1L7 Black and White Images](https://docs.google.com/document/d/1b02zxA27_uBJHDHkyBSyw56KiEPcgQRdwGekJmNs5Fk/edit?usp=sharing)\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-digital-information-lessons-1-11/36468) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/14ElmcZSzyt5mBh_GmBN_91lVf5WFMUgPjnFf0UYAbv4/edit?usp=sharing)",
+        "student_overview": "Learn how computers represent black and white images using bits.\n\n\n<a href=\"https://levelbuilder-studio.code.org/s/csp1-2025/lessons/7\" target=\"blank\" rel=\"noopener noreferrer\">Lessson Plan</a> \n\n**Lesson Overview:**\nStudents explore how black and white images are represented.  Students use the black and white pixelation widget to represent each pixel of an image with black or white light.  They learn how to sample an analog image using small squares of uniform size (each represented with a black or white value) and reflect on the pros and cons of choosing a smaller or larger square size when sampling."
+      },
+      "seeding_key": {
+        "lesson.key": "TLO #1: U1L7 - Black and White Images",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csp-summer-day2-2025"
+      }
+    },
+    {
+      "key": "Previously on… Unit 1 Lesson 8",
+      "name": "Previously on… Unit 1 Lesson 8",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+        "overview": "**Purpose:**\nSince this lesson uses the Pixelation Widget differently, we want to provide participants a space to see how the tool works and connects to the learning objectives. \n\n**Objectives:**\n* Participants can explain how RGB color works\n* Participants have experience with the Pixelation Widget in a different form than originally introduced\n* Participants can see the storyline develop from Lesson 7 to Lesson 9 in TLOs\n\n**Suggested Time:** 15 minutes",
+        "student_overview": "**You will:**\n* Explain how RGB color works\n* Have experience with the Pixelation Widget in a different form than originally introduced\n* See the storyline develop from Lesson 7 to Lesson 9 in TLOs"
+      },
+      "seeding_key": {
+        "lesson.key": "Previously on… Unit 1 Lesson 8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csp-summer-day2-2025"
+      }
+    },
+    {
+      "key": "TLO #2: U1L9 - Lossless Compression",
+      "name": "TLO #2: U1L9 - Lossless Compression",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "**Purpose:**\nTLOs are intended to help participants experience part of the curriculum as a learner and also practice teaching lessons from the curriculum. We use the debrief to discuss important aspects of teaching CS Principles in classrooms.\n\n**Objectives:**\n* Participants understand the role they play in managing student behavior and actions when using widgets to teach content.\n\n**Suggested Time:** 60 minutes\n\n<a href=\"https://levelbuilder-studio.code.org/s/csp1-2025/lessons/9\" target=\"blank\" rel=\"noopener noreferrer\">Lessson Plan</a> \n\n**Lesson Overview:**\nStudents use the Text Compression Widget to experiment with compressing songs and poems and try to find their ‘personal best’ compression. A video introduces important vocabulary for the lesson and demonstrates the full features of the widget. Students pick a text they think will be ‘easy’ to compress and one they think will be ‘difficult’, paying attention to why some texts might be more compressible than others. As a wrap-up, students discuss what factors make some texts more compressible than others. The widget is just one example of lossless compression and students aren’t expected to master specific compression strategies - instead, they should understand that lossless compression uses less data and still lets them re-create the original information.",
+        "preparation": "\n* Familiarize yourself with the Text Compression Widget\n* Open Unit 1 Slideshow to current lesson\n* Plan for how you will display the initial Pitter Patter Message & it's Compressed Message during the warm-up\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-digital-information-lessons-1-11/36468) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1T27X3QE0zjoakeRIRwdba-xKfTXb3-nC0cnb0Wtdgks/edit?usp=sharing)",
+        "student_overview": "Learn how computers can decrease the number of bits used to represent a piece of information.\n\n\n<a href=\"https://levelbuilder-studio.code.org/s/csp1-2025/lessons/9\" target=\"blank\" rel=\"noopener noreferrer\">Lessson Plan</a> \n\n**Lesson Overview:**\nStudents use the Text Compression Widget to experiment with compressing songs and poems and try to find their ‘personal best’ compression. A video introduces important vocabulary for the lesson and demonstrates the full features of the widget. Students pick a text they think will be ‘easy’ to compress and one they think will be ‘difficult’, paying attention to why some texts might be more compressible than others. As a wrap-up, students discuss what factors make some texts more compressible than others. The widget is just one example of lossless compression and students aren’t expected to master specific compression strategies - instead, they should understand that lossless compression uses less data and still lets them re-create the original information."
+      },
+      "seeding_key": {
+        "lesson.key": "TLO #2: U1L9 - Lossless Compression",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csp-summer-day2-2025"
+      }
+    },
+    {
+      "key": "Welcome to the Course and Exam Description",
+      "name": "Welcome to the Course and Exam Description",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+        "overview": "**Purpose:**\nDuring this activity, participants are introduced to the Course and Exam Description from the College Board. During the asynchronous Session 2, participants will further explore the CED.\n\n**Objectives:**\n* Participants can explain how the curriculum unit structure lends itself to the AP requirements.\n* Participants know how to navigate the CED binder and access it online.\n* Participants can explain how the curriculum framework is organized (i.e., big ideas, enduring understandings, learning objectives, essential knowledge, practices / skills)\n* Participants can describe the “big ideas” of the course (as provided by the College Board) and the Computational Thinking Practices and Skills of the course.\n* Participants have engaged in an activity to explore the exam section of the CED, and how students will be assessed on both content and skills.\n\n**Suggested Time:** 5 minutes",
+        "student_overview": "**You will:**\n* Explain how the curriculum unit structure lends itself to the AP requirements.\n* Know how to navigate the CED binder and access it online.\n* Explain how the curriculum framework is organized (i.e., big ideas, enduring understandings, learning objectives, essential knowledge, practices / skills)\n* Describe the “big ideas” of the course (as provided by the College Board) and the Computational Thinking Practices and Skills of the course.\n* Engage in an activity to explore the exam section of the CED, and how students will be assessed on both content and skills."
+      },
+      "seeding_key": {
+        "lesson.key": "Welcome to the Course and Exam Description",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csp-summer-day2-2025"
+      }
+    },
+    {
+      "key": "Asynchronous Part 1",
+      "name": "Asynchronous Part 1",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+        "overview": "**Purpose:**\nIn this activity, a facilitator goes over the \"answers\" to the scavenger hunt and connects the “Big Ideas” and “Computational Thinking Skills” from the CED to the Unit 1-10 plan of the curriculum..\n\n**Objectives:**\n* Participants can explain how the curriculum unit structure lends itself to the AP requirements.\n* Participants know how to navigate the CED binder and access it online.\n* Participants can explain how the curriculum framework is organized (i.e., big ideas, enduring understandings, learning objectives, essential knowledge, practices/skills).\n* Participants can describe the “big ideas” of the course (as provided by the College Board) and the Computational Thinking Practices and Skills of the course.\n* Participants have engaged in an activity to explore the exam section of the CED and how students will be assessed on both content and skills.\n\n**Suggested time:** 55 minutes",
+        "student_overview": "**You Will:**\n* Explain how the curriculum unit structure lends itself to the AP requirements.\n* Learn how to navigate the CED binder and access it online.\n* Explain how the curriculum framework is organized (i.e., big ideas, enduring understandings, learning objectives, essential knowledge, practices/skills).\n* Describe the “big ideas” of the course (as provided by the College Board) and the Computational Thinking Practices and Skills of the course.\n* Engage in an activity to explore the exam section of the CED and how students will be assessed on both content and skills."
+      },
+      "seeding_key": {
+        "lesson.key": "Asynchronous Part 1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csp-summer-day2-2025"
+      }
+    },
+    {
+      "key": "CED Scavenger Hunt Debrief",
+      "name": "CED Scavenger Hunt Debrief",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+        "overview": "**Purpose:**\nIn this activity, a facilitator goes over the \"answers\" to the scavenger hunt and connects the “Big Ideas” and “Computational Thinking Skills” from the CED to the Unit 1-10 plan of the curriculum..\n\n**Objectives:**\n* Participants can explain how the curriculum unit structure lends itself to the AP requirements.\n* Participants know how to navigate the CED binder and access it online.\n* Participants can explain how the curriculum framework is organized (i.e., big ideas, enduring understandings, learning objectives, essential knowledge, practices/skills).\n* Participants can describe the “big ideas” of the course (as provided by the College Board) and the Computational Thinking Practices and Skills of the course.\n* Participants have engaged in an activity to explore the exam section of the CED and how students will be assessed on both content and skills.\n\n**Suggested Time:** 15 minutes",
+        "student_overview": "**You will:**\n* Explain how the curriculum unit structure lends itself to the AP requirements.\n* Know how to navigate the CED binder and access it online.\n* Explain how the curriculum framework is organized (i.e., big ideas, enduring understandings, learning objectives, essential knowledge, practices/skills).\n* Describe the “big ideas” of the course (as provided by the College Board) and the Computational Thinking Practices and Skills of the course.\n* Engage in an activity to explore the exam section of the CED and how students will be assessed on both content and skills."
+      },
+      "seeding_key": {
+        "lesson.key": "CED Scavenger Hunt Debrief",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csp-summer-day2-2025"
+      }
+    },
+    {
+      "key": "TLO #3: U1L10 - Lossy Compression",
+      "name": "TLO #3: U1L10 - Lossy Compression",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
+      "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "**Purpose:**\nTLOs are intended to help participants experience part of the curriculum as a learner and also practice teaching lessons from the curriculum. We use the debrief to discuss important aspects of teaching CS Principles in classrooms.\n\n**Objectives:**\n* Participants understand how productive classroom discussions support students in being informed decision makers.\n\n**Suggested Time:** 60 minutes\n\n<a href=\"https://studio.code.org/s/csp1-2025/lessons/10\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a> \n\n**Lesson Overview:**\nStudents are introduced to lossy compression via the Lossy Text Compression widget. They apply this concept and their prior knowledge of sampling to create their own lossy compressions of image files using the Lossy Image Widget. A theme throughout the lesson is that lossy compression can greatly reduce the file size, but it can also greatly reduce the quality and it’s important to find that balance between quality and file size. The real challenge here is finding where that line is - how much can we compress but still keep it recognizable? Students then discuss several practical scenarios where they need to decide whether to use a lossy or lossless compression algorithm. The lesson ends with a discussion of the situations where lossless compression is important and the situations where lossy compression is important.",
+        "preparation": "* Explore each of the widgets for this lesson\n* Decide how you will let students share their lossy compressions with each other or the whole class\n* Have [r csp_unit_1_lesson_12_digital_dilemmas_part_1/virtual-pl-csp-summer/2025] ready for the discussion towards the end of the lesson\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-digital-information-lessons-1-11/36468) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1_sbw1zXbQa2_ZJkN20PrijCdIxLCxys_cYFPj1kYND0/edit?usp=sharing)",
+        "student_overview": "Learn how information is represented using fewer bits when it's OK for some of the information or details to be lost.\n\n<a href=\"https://studio.code.org/s/csp1-2025/lessons/10\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a> \n\n**Lesson Overview:**\nStudents are introduced to lossy compression via the Lossy Text Compression widget. They apply this concept and their prior knowledge of sampling to create their own lossy compressions of image files using the Lossy Image Widget. A theme throughout the lesson is that lossy compression can greatly reduce the file size, but it can also greatly reduce the quality and it’s important to find that balance between quality and file size. The real challenge here is finding where that line is - how much can we compress but still keep it recognizable? Students then discuss several practical scenarios where they need to decide whether to use a lossy or lossless compression algorithm. The lesson ends with a discussion of the situations where lossless compression is important and the situations where lossy compression is important."
+      },
+      "seeding_key": {
+        "lesson.key": "TLO #3: U1L10 - Lossy Compression",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csp-summer-day2-2025"
+      }
+    },
+    {
+      "key": "The Teacher's Role in Formative Assessment",
+      "name": "The Teacher's Role in Formative Assessment",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 9,
+      "properties": {
+        "overview": "**Purpose:**\nParticipants bring in previous experiences with teaching to the workshop. We want to leverage those experiences and help participants consider how they apply their teaching expertise to CSP. One way they can do that is by using the strategies they already use to formatively assess students. Participants who are new to computer science can easily get focused on teaching the content without thinking about who is learning the content in the room. Formative assessment can support teaching and learning.\nThis session also helps set the tone for the next lesson planning session, and how they will be formatively assessing throughout the lesson.\n\n**Objectives:**\n* Participants have a list of formative assessment strategies they can use in their classrooms and in their TLO lesson.\n\n**Suggested Time:** 20 minutes",
+        "student_overview": "**You will:**\n* Have a list of formative assessment strategies they can use in their classrooms and in their TLO lesson."
+      },
+      "seeding_key": {
+        "lesson.key": "The Teacher's Role in Formative Assessment",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csp-summer-day2-2025"
+      }
+    },
+    {
+      "key": "Asynchronous Part 2",
+      "name": "Asynchronous Part 2",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 10,
+      "properties": {
+        "overview": "**Purpose:**\nParticipants will explore data related to access to CS education. The activities in this asynchronous session will prepare participants to engage in the discussions in synchronous sessions.\n\n**Objectives:**\n\n* Participants define access, diversity, and inclusion.\n* Participants explore CS access data.\n* Participants complete any remaining challenges from the TLO.\n\n**Suggested time:** 65 minutes",
+        "student_overview": "**You Will:**\n* Define access, diversity, and inclusion.\n* Explore CS access data.\n* Complete any remaining challenges from the TLO."
+      },
+      "seeding_key": {
+        "lesson.key": "Asynchronous Part 2",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csp-summer-day2-2025"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "c13d7c8b-5d0b-455d-9928-9d31c0699ce2",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c13d7c8b-5d0b-455d-9928-9d31c0699ce2",
+        "lesson.key": "Introduction",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csp-summer-day2-2025"
+      }
+    },
+    {
+      "key": "9c8540aa-e30e-4e5d-aefe-97cf3016f430",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9c8540aa-e30e-4e5d-aefe-97cf3016f430",
+        "lesson.key": "TLO #1: U1L7 - Black and White Images",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csp-summer-day2-2025"
+      }
+    },
+    {
+      "key": "5fb597d8-4128-429c-b603-d6a125b0d07b",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5fb597d8-4128-429c-b603-d6a125b0d07b",
+        "lesson.key": "TLO #1: U1L7 - Black and White Images",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csp-summer-day2-2025"
+      }
+    },
+    {
+      "key": "14719311-447a-458c-822e-854009e700ad",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "14719311-447a-458c-822e-854009e700ad",
+        "lesson.key": "TLO #1: U1L7 - Black and White Images",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csp-summer-day2-2025"
+      }
+    },
+    {
+      "key": "56594c64-e7a3-4a29-973c-883431aa60e4",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "56594c64-e7a3-4a29-973c-883431aa60e4",
+        "lesson.key": "Previously on… Unit 1 Lesson 8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csp-summer-day2-2025"
+      }
+    },
+    {
+      "key": "4d109d94-c543-4101-927d-f3623c3f0e6d",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4d109d94-c543-4101-927d-f3623c3f0e6d",
+        "lesson.key": "TLO #2: U1L9 - Lossless Compression",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csp-summer-day2-2025"
+      }
+    },
+    {
+      "key": "30967768-c168-4ee8-bc28-5ba6db032430",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "30967768-c168-4ee8-bc28-5ba6db032430",
+        "lesson.key": "TLO #2: U1L9 - Lossless Compression",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csp-summer-day2-2025"
+      }
+    },
+    {
+      "key": "fc2fd6e0-d432-413a-8e37-bafe10203d2f",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fc2fd6e0-d432-413a-8e37-bafe10203d2f",
+        "lesson.key": "TLO #2: U1L9 - Lossless Compression",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csp-summer-day2-2025"
+      }
+    },
+    {
+      "key": "762a329f-fbc4-4cdf-8ff6-4a655154d7a2",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "762a329f-fbc4-4cdf-8ff6-4a655154d7a2",
+        "lesson.key": "Welcome to the Course and Exam Description",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csp-summer-day2-2025"
+      }
+    },
+    {
+      "key": "cf84e0f1-86ef-4740-a789-176f6509994f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "cf84e0f1-86ef-4740-a789-176f6509994f",
+        "lesson.key": "Asynchronous Part 1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csp-summer-day2-2025"
+      }
+    },
+    {
+      "key": "a5990278-489d-4285-b036-3bb00bfafab8",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a5990278-489d-4285-b036-3bb00bfafab8",
+        "lesson.key": "CED Scavenger Hunt Debrief",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csp-summer-day2-2025"
+      }
+    },
+    {
+      "key": "5e94d2b9-1810-4cb5-9068-3132d67de86c",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5e94d2b9-1810-4cb5-9068-3132d67de86c",
+        "lesson.key": "TLO #3: U1L10 - Lossy Compression",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csp-summer-day2-2025"
+      }
+    },
+    {
+      "key": "45334c7a-aa91-4ac8-a094-93bf761fab82",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "45334c7a-aa91-4ac8-a094-93bf761fab82",
+        "lesson.key": "TLO #3: U1L10 - Lossy Compression",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csp-summer-day2-2025"
+      }
+    },
+    {
+      "key": "a4d1cbb5-976a-4a44-8108-202ca52d0c21",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a4d1cbb5-976a-4a44-8108-202ca52d0c21",
+        "lesson.key": "TLO #3: U1L10 - Lossy Compression",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csp-summer-day2-2025"
+      }
+    },
+    {
+      "key": "d6e9a536-8288-4844-ae27-8706af84d7c4",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d6e9a536-8288-4844-ae27-8706af84d7c4",
+        "lesson.key": "The Teacher's Role in Formative Assessment",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csp-summer-day2-2025"
+      }
+    },
+    {
+      "key": "40ce0911-1be0-47f6-a73a-f1cfc3cbd734",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "40ce0911-1be0-47f6-a73a-f1cfc3cbd734",
+        "lesson.key": "Asynchronous Part 2",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csp-summer-day2-2025"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "a5729e9a-47e6-4c69-8f83-6b55906d80c7",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "a5729e9a-47e6-4c69-8f83-6b55906d80c7",
+        "lesson_activity.key": "c13d7c8b-5d0b-455d-9928-9d31c0699ce2"
+      }
+    },
+    {
+      "key": "fd084997-bc8d-4f8f-aa1b-3fadfec83e45",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:**  *You recently did some online shopping and are expecting a package to arrive in about a month.  The delivery service has a tracking system which reads the location of the package.*\n* *How often would you want the location read?  Every week?  Every day?  Every hour?  Every minute? Be ready to explain your answer.*\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "fd084997-bc8d-4f8f-aa1b-3fadfec83e45",
+        "lesson_activity.key": "9c8540aa-e30e-4e5d-aefe-97cf3016f430"
+      }
+    },
+    {
+      "key": "a27a9e54-ee00-4e2b-b4a5-1b2ecd4fccec",
+      "position": 2,
+      "properties": {
+        "description": "\n\nStudents should think for a minute, then share with a partner.  Once students have shared, call on a few students to explain their answers with the class.\n\n**Discussion Goal:** The goal here is for students to realize that, depending on the situation, we may want to take readings more frequently.  Later in the lesson, as students interact with the widget, you can help students make connections that the frequency of readings affects the digital representation that we obtain. ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use the **Retrieve-Pair-Share** strategy to facilitate this discussion by directing students to write down their thoughts and ideas first, then pair up students to compare their answers and expand their notes. This allows time for individual processing and idea generation before sharing thoughts with others. Ask students to share the ideas they discussed with their partners as a class.\n\nFor more ideas on how to adapt this strategy to fit the needs of your class, check out the [**CSP Guide to Classroom Discussions**](https://docs.google.com/document/d/1vTJpyZllcSG5T5aFfSuPs9CByoejkEMnh4U_MMMOr9g/edit?usp=sharing)"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "a27a9e54-ee00-4e2b-b4a5-1b2ecd4fccec",
+        "lesson_activity.key": "9c8540aa-e30e-4e5d-aefe-97cf3016f430"
+      }
+    },
+    {
+      "key": "36cfb586-eab1-4c0c-a700-ef1ca3132a89",
+      "position": 3,
+      "properties": {
+        "description": "Thank you for sharing your insights.  It seems to depend on the situation.  Sometimes we want to take a reading of the location more frequently.  Today, we’re actually learning about how images are represented in computers, but let’s keep in mind these ideas about how often to take a reading or measurement.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "36cfb586-eab1-4c0c-a700-ef1ca3132a89",
+        "lesson_activity.key": "9c8540aa-e30e-4e5d-aefe-97cf3016f430"
+      }
+    },
+    {
+      "key": "6a3a7266-158f-4b59-a8a3-85c8da1ce7cc",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Display:**  Watch the [pixelation widget video](https://www.youtube.com/watch?v=rJOa5Q5a1WM&feature=youtu.be).",
+        "duration": "10",
+        "name": "Intro to the Pixelation Widget",
+        "progression_name": "Video: Intro to Pixelation Encoding B&W",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Note:** The video displays an old version of the Pixelation Widget. In the version your students will use, they no longer need to set the width and height using binary numbers - they can use the slider at the top. They may also note that the width and height is not displayed in their work space in binary numbers.\n\nAlso, while the video uses the word \"metadata\" to describe this information, students do not need to leave this lesson understanding metadata. Metadata will be covered in a later lesson."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "6a3a7266-158f-4b59-a8a3-85c8da1ce7cc",
+        "lesson_activity.key": "5fb597d8-4128-429c-b603-d6a125b0d07b"
+      }
+    },
+    {
+      "key": "d3901b00-fd82-49da-a5ba-8955c63f89c4",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Level 1:**  Students will recreate the letter A using the black and white Pixelation Widget.  They must first enter the correct binary numbers to represent the width and height of the image.  Then, they will type the appropriate bit for each portion of the image (“0” for black, “1” for white).\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "d3901b00-fd82-49da-a5ba-8955c63f89c4",
+        "lesson_activity.key": "5fb597d8-4128-429c-b603-d6a125b0d07b"
+      }
+    },
+    {
+      "key": "6e8ffcdd-7c1e-45b0-946b-4c6a73bed28b",
+      "position": 3,
+      "properties": {
+        "description": "**Level 2:**  Students must find and delete the extra bit that is causing the image to be distorted.",
+        "progression_name": "Pixelation Widget: B&W"
+      },
+      "seeding_key": {
+        "activity_section.key": "6e8ffcdd-7c1e-45b0-946b-4c6a73bed28b",
+        "lesson_activity.key": "5fb597d8-4128-429c-b603-d6a125b0d07b"
+      }
+    },
+    {
+      "key": "dc8b8ce7-fafc-4b01-8f54-ddc535331fdf",
+      "position": 4,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Getting Familiar with the Pixelation Widget:** Once most of the class has finished levels 2 and 3, you can move on.  Encourage students who are finished to help those who haven’t.  The point of these two levels is to get students familiar with the tool and practice entering the bits.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "dc8b8ce7-fafc-4b01-8f54-ddc535331fdf",
+        "lesson_activity.key": "5fb597d8-4128-429c-b603-d6a125b0d07b"
+      }
+    },
+    {
+      "key": "0b28c67a-9bea-4e1c-9791-12881954838a",
+      "position": 5,
+      "properties": {
+        "description": "Now that you’ve had a chance to see how to set each pixel black or white, we are going to use the widget to represent an analog image using a process called sampling. \r\n\r\nWhat is an analog? It's a term used to mean something with continuous representation - such as a picture you draw on a piece of paper. Each pencil line smoothly connects to the next, no matter how much you zoomed in on the picture with a magnifying glass. \r\n\r\nWhen we represent an analog image digitally, we will have to make some choices on how to sample the image to get the smoothest representation possible while keeping in mind the number of bits it takes to build that image. \r\n\r\nWhat does it mean to sample? We are choosing how small to make section of the picture we look at when deciding whether to make it black or white. The smaller the sample, the more pixels required to represent that image. Larger samples require less pixels, but the image can become blurry. \r\n\r\nTry it out yourself!",
+        "duration": "20",
+        "name": "Sampling an Analog Image",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "0b28c67a-9bea-4e1c-9791-12881954838a",
+        "lesson_activity.key": "5fb597d8-4128-429c-b603-d6a125b0d07b"
+      }
+    },
+    {
+      "key": "fdcafa94-243c-4588-9734-5c1cd3113b5b",
+      "position": 6,
+      "properties": {
+        "description": " **Distribute:**  [r activity_guide_-_black_and_white_images/virtual-pl-csp-summer/2025]"
+      },
+      "seeding_key": {
+        "activity_section.key": "fdcafa94-243c-4588-9734-5c1cd3113b5b",
+        "lesson_activity.key": "5fb597d8-4128-429c-b603-d6a125b0d07b"
+      }
+    },
+    {
+      "key": "74f5f1a0-f4f4-48ea-8f3a-d14baadb8c21",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** \n\n* Read values from Challenge A (black or white for each square) and input the values into the widget.\n* After Challenge A, answer the questions on the activity guide\n* Repeat for Challenge B.\n* Answer the questions in the activity guide after each challenge.\n\n",
+        "name": "Challenges A & B\r",
+        "progression_name": "Sampling an Analog Image: Challenges A&B",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Questions to Ask as Your Circulate:** Having students work from paper copies of the Activity Guide will reinforce the concept of taking readings from an analog image and make it easier to transcribe the bits into the widget.  As students work, circulate the room and ask pairs of students questions about their process:\n\n* How are you deciding whether each square should be black or white?\n* Do you think this process will give a good representation of the image?  Why or why not?\n* What would you change about the sampling process to produce a better representation of the image?\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "74f5f1a0-f4f4-48ea-8f3a-d14baadb8c21",
+        "lesson_activity.key": "5fb597d8-4128-429c-b603-d6a125b0d07b"
+      }
+    },
+    {
+      "key": "11b22698-adcd-43e8-bdd7-91d37c9dbea4",
+      "position": 8,
+      "properties": {
+        "description": "**Regroup:** After students have finished Challenge A & Challenge B, discuss the challenges they encountered while completing the challenges. Have your students complete the Check For Understanding question and use that to discuss the concept of sampling.  Then direct students on to Challenge C.\n\n**Question:** Which of the following would result in a better digital approximation of an analog black and white image?",
+        "progression_name": "Check For Understanding",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Use this question to help formatively assess your students. You can use the flowchart below to help use the data you get from student responses to inform your instruction.\n\nFor more information, check out the [**CSP Guide to Assessment**](https://docs.google.com/document/d/17lrbpaNF3znb1rDuesBFcWp3zn7tQ_TTHaTr0AHPp34/edit#heading=h.fasyb3figrc0).\n\n\n![](https://images.code.org/c0c5b92541281d7901e7d2b9a5a33d49-CFU_Next_Steps_Flowchart_25percent.png)\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "11b22698-adcd-43e8-bdd7-91d37c9dbea4",
+        "lesson_activity.key": "5fb597d8-4128-429c-b603-d6a125b0d07b"
+      }
+    },
+    {
+      "key": "5295bd26-4ff8-4de4-873e-c1ad5c2addc1",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:**  \n\n* Select your favorite company logo.\n* Decide how you are going to sample this logo - use one of the grids in your Activity Guide. Draw the logo.\n* Recreate the logo in the Pixelation Widget on Level 5.\n* Show it to a classmate. Do they recognize the logo? Make adjustments if needed. For example: You may need to increase the sampling.",
+        "name": "Challenge C\r",
+        "progression_name": "Sampling an Analog Image: Challenge C",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "You may choose to adapt this activity to make it something more personal to your students. The [Unit 1 Journal](https://docs.google.com/presentation/d/1nCwU7a83mgtEIKId1Fw-JzsZkHicWN12WeCTDMJkw68/edit?usp=sharing) includes a template asking students to create a logo or symbol they might wear on the back of their cape if they were a super hero."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "5295bd26-4ff8-4de4-873e-c1ad5c2addc1",
+        "lesson_activity.key": "5fb597d8-4128-429c-b603-d6a125b0d07b"
+      }
+    },
+    {
+      "key": "b6a89f6b-e9d1-41b9-aca7-0e43bca6f52c",
+      "position": 1,
+      "properties": {
+        "description": "\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:**  *What are the pros and cons of sampling an image more frequently?*\n\nAllow students time to think, then have them share in pairs or groups of four.  Call on a few students to share with the whole class.\n\n**Discussion Goal:** We want students to start seeing that there are advantages and disadvantages as a result of decisions we make when we represent data digitally.  Some key points to draw out from students:\n\n* **Pros:**  We get a much more smooth/clearer/accurate representation of the analog image.  A little easier to decide whether to make a square black or white.\n* **Cons:**  More bits are needed.  Took longer to enter in the widget.  Still doesn’t look exactly like the analog image.  Still had many squares that contained both black and white, so decisions had to be made to choose one over the other.\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "b6a89f6b-e9d1-41b9-aca7-0e43bca6f52c",
+        "lesson_activity.key": "14719311-447a-458c-822e-854009e700ad"
+      }
+    },
+    {
+      "key": "b89a9acf-20b2-4b39-a8bd-302b9aa81b1f",
+      "position": 2,
+      "properties": {
+        "description": "Thank you for sharing.  It looks like there are several advantages and disadvantages when it comes to sampling more frequently by using smaller squares.  We get a better approximation of the analog image when we do more frequent sampling and it was a little easier to decide whether each square should be set to black or white.  However, it took longer and we needed a lot more bits.  We still got an image that didn’t represent the image accurately enough, though.\r\n\r\nFortunately, a computer does this process much more quickly than we can, and it can store thousands or even millions of bits to represent an analog image.\r\n\r\nBy this point, we've used bits to represent numbers, text, and images. The same sequence of bits can represent different types of data depending on the context. It all comes down to 0s and 1s!",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "b89a9acf-20b2-4b39-a8bd-302b9aa81b1f",
+        "lesson_activity.key": "14719311-447a-458c-822e-854009e700ad"
+      }
+    },
+    {
+      "key": "ba6d1b2e-ec5f-437f-af9c-acc98481c2cd",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal:** Have students add definitions to their journals for: analog data, digital data, and sampling. \r\n\r\n---"
+      },
+      "seeding_key": {
+        "activity_section.key": "ba6d1b2e-ec5f-437f-af9c-acc98481c2cd",
+        "lesson_activity.key": "14719311-447a-458c-822e-854009e700ad"
+      }
+    },
+    {
+      "key": "be7ff3f7-77fd-4137-b600-6e91c5531997",
+      "position": 4,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\n\n**Question:** Assume your friend just sent you 32 bits of pixel data (just the 0s and 1s for black and white pixels) that were encoded after sampling an image. Choose the two statements that are true. \n\n\n\n**Question:** Your computer science teacher asks you to sample a black and white image that is 4\"x6\". How would you sample the image to provide a good digital approximation using the pixelation widget? What sample size would you use? How would your decision affect the digital representation?",
+        "name": "Assessment: Check For Understanding\r",
+        "progression_name": "Check For Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "be7ff3f7-77fd-4137-b600-6e91c5531997",
+        "lesson_activity.key": "14719311-447a-458c-822e-854009e700ad"
+      }
+    },
+    {
+      "key": "3ce4924c-7164-41eb-b32d-d426e363b789",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "3ce4924c-7164-41eb-b32d-d426e363b789",
+        "lesson_activity.key": "56594c64-e7a3-4a29-973c-883431aa60e4"
+      }
+    },
+    {
+      "key": "8a2bf997-e2f2-448f-984c-13cede2a088b",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Have students list additional abbreviations they might use in their daily lives."
+      },
+      "seeding_key": {
+        "activity_section.key": "8a2bf997-e2f2-448f-984c-13cede2a088b",
+        "lesson_activity.key": "4d109d94-c543-4101-927d-f3623c3f0e6d"
+      }
+    },
+    {
+      "key": "de67927a-7169-4930-b594-9ca5ab9e3a1e",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Why might we use abbreviations when sending messages? What are the advantages?*\n\n**Discussion Goal:** There are many possible responses to this - to talk in code, to hide information, to be clever - but an important response to highlight is that abbreviations save time & space when communicating. If a student suggested an abbreviation that not everyone knew, this is a great moment to bring up that both the sender and the receiver need to understand what the abbreviation stands for in order for it to make sense. Both of these points foreshadow today’s activity on compression.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "de67927a-7169-4930-b594-9ca5ab9e3a1e",
+        "lesson_activity.key": "4d109d94-c543-4101-927d-f3623c3f0e6d"
+      }
+    },
+    {
+      "key": "d699819e-45d2-4565-a94d-1ee1cf22534a",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> I want to send this message to a friend, but their phone can only accept 80 characters of text at a time. I notice this pattern has some repetition in it, so rather than sending the whole message, I send this instead:",
+        "name": "Introduction to Compression (5 Minutes)\r",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "d699819e-45d2-4565-a94d-1ee1cf22534a",
+        "lesson_activity.key": "30967768-c168-4ee8-bc28-5ba6db032430"
+      }
+    },
+    {
+      "key": "ccd1a1f8-bb98-4731-b2d6-4771416eab6c",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click to show next slide with message highlighted in red."
+      },
+      "seeding_key": {
+        "activity_section.key": "ccd1a1f8-bb98-4731-b2d6-4771416eab6c",
+        "lesson_activity.key": "30967768-c168-4ee8-bc28-5ba6db032430"
+      }
+    },
+    {
+      "key": "b7b4182e-26bb-415b-8ae2-0b730dab66f3",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **DIscuss:** *How is this message the same as the first? What actually gets sent to my friend?*\n\n**Discussion Goal:** Students should notice that each symbol represents other snippets of text. By substituting each symbol for the text it represents, we can re-create the original message.\n\nStudents may need some guidance to see that the entire sent message is really two parts - the text with symbols and the key that shows what each symbol represents. Students should see that both need to be sent in order for the original message to be recreated - if only the text is sent, the receiver won’t know how what each symbol represents to recreate the message."
+      },
+      "seeding_key": {
+        "activity_section.key": "b7b4182e-26bb-415b-8ae2-0b730dab66f3",
+        "lesson_activity.key": "30967768-c168-4ee8-bc28-5ba6db032430"
+      }
+    },
+    {
+      "key": "1f81db99-e433-48e8-a9bd-cc194b513c8d",
+      "position": 4,
+      "properties": {
+        "description": "Using abbreviations and symbols is a form of **compression**, where we try to represent the same information with fewer characters. The original message had 93 characters, but the new message and key, also called a dictionary, have a total of 56 characters. We’re essentially sending the same information, but with fewer characters. Our goal today will be to create our own text compressions using similar methods.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "1f81db99-e433-48e8-a9bd-cc194b513c8d",
+        "lesson_activity.key": "30967768-c168-4ee8-bc28-5ba6db032430"
+      }
+    },
+    {
+      "key": "2aa86642-a729-4702-8f8b-254c7bdf20c2",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students log into Code Studio and open Level 1 of this lesson - the Text Compression Widget.",
+        "name": "Text Compression Widget (15 Minutes)\r",
+        "progression_name": "Widget: Text Compression"
+      },
+      "seeding_key": {
+        "activity_section.key": "2aa86642-a729-4702-8f8b-254c7bdf20c2",
+        "lesson_activity.key": "30967768-c168-4ee8-bc28-5ba6db032430"
+      }
+    },
+    {
+      "key": "4033d409-7eec-4cef-a42e-3f6ca5655462",
+      "position": 6,
+      "properties": {
+        "description": "This widget will let you use symbols to compress the text in the center of the screen. You can type in the dictionary on the right-side. As you do, the text on the left-side will update with your symbols. You have 4 minutes to try and compress this text as best you can.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "4033d409-7eec-4cef-a42e-3f6ca5655462",
+        "lesson_activity.key": "30967768-c168-4ee8-bc28-5ba6db032430"
+      }
+    },
+    {
+      "key": "698fea42-cb7f-4ece-b8cd-aab312405217",
+      "position": 7,
+      "properties": {
+        "description": "**Circulate:** Help students understand how this widget works so they can successfully compress text. Make note of students who have found successful strategies so they can be highlighted in the upcoming discussion."
+      },
+      "seeding_key": {
+        "activity_section.key": "698fea42-cb7f-4ece-b8cd-aab312405217",
+        "lesson_activity.key": "30967768-c168-4ee8-bc28-5ba6db032430"
+      }
+    },
+    {
+      "key": "2aa597cf-1c64-43a2-bf34-afe8d625ba54",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Regroup:** Gather the class back together. Emphasize the black box at the bottom of the widget, which has their current compression rating. Have students make a note of their current Compression Percentage at the bottom of the box"
+      },
+      "seeding_key": {
+        "activity_section.key": "2aa597cf-1c64-43a2-bf34-afe8d625ba54",
+        "lesson_activity.key": "30967768-c168-4ee8-bc28-5ba6db032430"
+      }
+    },
+    {
+      "key": "20e5ee15-a138-4145-99e7-e9652476afde",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What strategies are you using to compress your sample text? Which ones seem most successful?*\n\n**Discussion Goal:** Students will have encountered a variety of strategies, but there are a few worth emphasizing for the full class:\n\n* Look for repeated words, sentences, or even parts of words (like -ing or -th).\n* The widget lets you copy-and-paste to embed symbols within symbols. This was demonstrated in the pitter-patter example where some symbols were ‘unpacked’ to include other symbols.\n* The order of the dictionary matters and trying to rearrange the dictionary once it’s made can lead to problems\n\nIt’s okay if not all of these points are highlighted - the upcoming video will emphasize these same points for students.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use the **Retrieve-Pair-Share** strategy to facilitate this discussion by directing students to write down their thoughts and ideas first, then pair up students to compare their answers and expand their notes. This allows time for individual processing and idea generation before sharing thoughts with others. Ask students to share the ideas they discussed with their partners as a class.\n\nFor more ideas on how to adapt this strategy to fit the needs of your class, check out the [**CSP Guide to Classroom Discussions**](https://docs.google.com/document/d/1vTJpyZllcSG5T5aFfSuPs9CByoejkEMnh4U_MMMOr9g/edit?usp=sharing)\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "20e5ee15-a138-4145-99e7-e9652476afde",
+        "lesson_activity.key": "30967768-c168-4ee8-bc28-5ba6db032430"
+      }
+    },
+    {
+      "key": "3cd62f35-796a-4be1-9bbc-15a01f4dfe59",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show [r text_compression_widget_tutorial_/virtual-pl-csp-summer/2025] (feel free to skip from 2:30-5:00 if your students are comfortable with how the widget works, but don't miss 5:00+). After the video, be sure to emphasize two things: \n\n* The widget we are using is an example of **lossless compression**\n* The compression percentage at the bottom of the screen is calculated by comparing the number of **bytes** in the original message and the number of **bytes** in the compressed message.\n\n\n",
+        "progression_name": "Video: Text Compression Widget with Aloe Blacc",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Videos are used throughout the curriculum to spark discussions, supplement key concepts with additional explanations and examples, and expose students to the various roles and backgrounds of individuals in computer science.\n\nWhile interacting with the video, turn on closed captioning so students can also read along as they watch.\n\nTo encourage active engagement and reflection, use one or more of the strategies discussed in the [**Guide to Curriculum Videos**](https://docs.google.com/document/d/1f8IkB75jpoFHg48FAtC8Kz1pD-5P7DKIGOytJM6o2oM/edit?usp=sharing).\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "3cd62f35-796a-4be1-9bbc-15a01f4dfe59",
+        "lesson_activity.key": "30967768-c168-4ee8-bc28-5ba6db032430"
+      }
+    },
+    {
+      "key": "61838f37-f7ce-4b70-8998-57de4ccb77ae",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** Give students another 4 minutes to apply the strategies they’ve just seen to continue to raise their compression percentage."
+      },
+      "seeding_key": {
+        "activity_section.key": "61838f37-f7ce-4b70-8998-57de4ccb77ae",
+        "lesson_activity.key": "30967768-c168-4ee8-bc28-5ba6db032430"
+      }
+    },
+    {
+      "key": "df70f7f4-0fca-4458-8166-f9194c3c3e9e",
+      "position": 12,
+      "properties": {
+        "description": "**Circulate:** Check in with students on their strategies and their compression rates. Encourage students to continually try and reach a ‘personal best’ by looking at how their compression rates change when they add or remove items from the dictionary."
+      },
+      "seeding_key": {
+        "activity_section.key": "df70f7f4-0fca-4458-8166-f9194c3c3e9e",
+        "lesson_activity.key": "30967768-c168-4ee8-bc28-5ba6db032430"
+      }
+    },
+    {
+      "key": "fc46386a-ed58-41c5-acb1-74bb9c834898",
+      "position": 13,
+      "properties": {
+        "description": "We’re starting to reach the ‘limit’ for how much we can compress this particular message. But not every message can be compressed with a high rating. We’re going to investigate what makes some messages more compressible than others.",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Competitions:** You could incorporate a peer-to-peer competition (in small groups or as a full class) to get the ‘highest’ rating, but that can be isolating for students and suggests there is a single ‘best’ way to do this. An alternate strategy is: when students start for the second time, have them compete against themselves to beat their rating during the first 4 minutes. In this way, success is measured by personal growth and has a higher chance of letting every student feel successful.\n\n**Starting Over:** When solving computational problems, it can sometimes be helpful to restart completely from the beginning. This activity may be a good place to suggest this to students, especially those that feel particularly stuck or frustrated - sometimes restarting from the very beginning surfaces new ideas and strategies that we didn’t see before.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "fc46386a-ed58-41c5-acb1-74bb9c834898",
+        "lesson_activity.key": "30967768-c168-4ee8-bc28-5ba6db032430"
+      }
+    },
+    {
+      "key": "54e56a8c-5d93-476d-a942-212b1e70746d",
+      "position": 14,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Click the Drop-Down Menu to explore other texts to compress. Be looking for texts you predict will be ‘easy’ to compress and texts you predict will be ‘difficult’",
+        "name": "Comparing Compressions (10 Minutes)\r",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "54e56a8c-5d93-476d-a942-212b1e70746d",
+        "lesson_activity.key": "30967768-c168-4ee8-bc28-5ba6db032430"
+      }
+    },
+    {
+      "key": "1c2f8a56-658c-405e-874c-f6908da532c0",
+      "position": 15,
+      "properties": {
+        "description": "**Group:** Have students work with their neighbor for this activity. Place students in groups of 2 with at most one group of 3.\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students work together to compress an 'easy' text and a 'difficult' text."
+      },
+      "seeding_key": {
+        "activity_section.key": "1c2f8a56-658c-405e-874c-f6908da532c0",
+        "lesson_activity.key": "30967768-c168-4ee8-bc28-5ba6db032430"
+      }
+    },
+    {
+      "key": "a016bce3-7d34-40c9-b90d-886736fce1b4",
+      "position": 16,
+      "properties": {
+        "description": "**Circulate:** Give students several minutes to complete their compressions. Emphasize that students should work in pairs using two different computers so both examples can be referenced during the wrap-up discussion.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**“aaaa...aaa”:** Many groups will probably attempt the last option, all A’s, as their ‘easy’ text - it’s possible to get a compression rating into the mid-80’s with this text. This is fine, since it still emphasizes one of the big takeaways from this activity: information with high repetition is easier to compress. However, it is also reasonable to ask groups to do a second ‘easy’ text once they’re satisfied with this one\r\n\r\n**Priorities:** It’s not necessary for all groups to pick the same texts, nor is it important to find the very ‘best’ compressions. Instead, students should focus on the qualities that they think make some texts ‘easier’ or more ‘difficult’ than others. You can emphasize this with the questions you ask as you circulate to groups: “What made you pick this for your ‘easy’ text? What made you pick this for your ‘difficult’ text?”\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "a016bce3-7d34-40c9-b90d-886736fce1b4",
+        "lesson_activity.key": "30967768-c168-4ee8-bc28-5ba6db032430"
+      }
+    },
+    {
+      "key": "ad7a7ef0-bdf5-4ccb-b6d2-e384765c29a8",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What made some messages \"easier\" to compress than others? What made some messages more \"difficult\" to compress than others?*\n\n**Discussion Goal:**\n\n* ‘Easier’ texts usually had lots of repetition - repeated words or phrases or syllables. A useful strategy is to use this repetition to create the compression.\n* ‘Difficult’ texts usually have less repetition, making it less likely to apply this particular method of compression. Some strategies may actually make compression worse, which can be counter-intuitive\n\n\n",
+        "name": "Synthesis\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "ad7a7ef0-bdf5-4ccb-b6d2-e384765c29a8",
+        "lesson_activity.key": "fc2fd6e0-d432-413a-8e37-bafe10203d2f"
+      }
+    },
+    {
+      "key": "e83de712-50df-4534-b33d-6c25ce8a2da4",
+      "position": 2,
+      "properties": {
+        "description": "There are many strategies we can use when creating **lossless compressions** and there isn’t a single best way to do it. Instead, our compression rate usually depends on which strategy we choose and the patterns in the text we’re compressing. Most importantly, even though the number of **bytes** is getting smaller, we're never actually losing information - we can always perfectly recreate the original message using our dictionary key.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "e83de712-50df-4534-b33d-6c25ce8a2da4",
+        "lesson_activity.key": "fc2fd6e0-d432-413a-8e37-bafe10203d2f"
+      }
+    },
+    {
+      "key": "b448695c-748f-48a7-a323-763224e2bf9a",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal**: Have students add the definition of **lossless compression** to their journal\r\n\r\n---"
+      },
+      "seeding_key": {
+        "activity_section.key": "b448695c-748f-48a7-a323-763224e2bf9a",
+        "lesson_activity.key": "fc2fd6e0-d432-413a-8e37-bafe10203d2f"
+      }
+    },
+    {
+      "key": "0117e0d3-2e26-4d5e-aafd-ed06ff858b0c",
+      "position": 4,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** What is the most important quality of lossless compression?\r\n\r\n**Question:** An author is preparing to send their book to a publisher as an email attachment. The file on their computer is 1000 bytes. When they attach the file to their email, it shows as 750 bytes. The author gets very upset because they are concerned that part of their book has been deleted by the email address. If you could talk to this author, how would you explain what is happening to their book?",
+        "name": "Assessment: Check For Understanding\r",
+        "progression_name": "Check For Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "0117e0d3-2e26-4d5e-aafd-ed06ff858b0c",
+        "lesson_activity.key": "fc2fd6e0-d432-413a-8e37-bafe10203d2f"
+      }
+    },
+    {
+      "key": "18318c0d-22fa-46dd-9752-0e461056c895",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "18318c0d-22fa-46dd-9752-0e461056c895",
+        "lesson_activity.key": "762a329f-fbc4-4cdf-8ff6-4a655154d7a2"
+      }
+    },
+    {
+      "key": "db9a5d82-f8d0-4f5b-a78c-c395ffb2131d",
+      "position": 1,
+      "properties": {
+        "progression_name": "Asynchronous Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "db9a5d82-f8d0-4f5b-a78c-c395ffb2131d",
+        "lesson_activity.key": "cf84e0f1-86ef-4740-a789-176f6509994f"
+      }
+    },
+    {
+      "key": "ae66e27e-c16c-4ab2-9f34-bdcb96288bfb",
+      "position": 2,
+      "properties": {
+        "progression_name": "CED Scavenger Hunt"
+      },
+      "seeding_key": {
+        "activity_section.key": "ae66e27e-c16c-4ab2-9f34-bdcb96288bfb",
+        "lesson_activity.key": "cf84e0f1-86ef-4740-a789-176f6509994f"
+      }
+    },
+    {
+      "key": "bc9dbddd-0564-4492-a9c0-999b19e4de40",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "bc9dbddd-0564-4492-a9c0-999b19e4de40",
+        "lesson_activity.key": "a5990278-489d-4285-b036-3bb00bfafab8"
+      }
+    },
+    {
+      "key": "a202de70-b710-46b8-a99b-722320210bcd",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> This widget claims you can keep the first letter of a word then remove all of the vowels and the result will still be readable. Let’s test this out - what are some other sentences we should try with this widget?",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "a202de70-b710-46b8-a99b-722320210bcd",
+        "lesson_activity.key": "5e94d2b9-1810-4cb5-9068-3132d67de86c"
+      }
+    },
+    {
+      "key": "252ee340-5c06-4214-a3b8-c06402d55281",
+      "position": 2,
+      "properties": {
+        "description": "**Do This:** Navigate to the widget using the link in the slide and try out a few phrases before returning to the slide."
+      },
+      "seeding_key": {
+        "activity_section.key": "252ee340-5c06-4214-a3b8-c06402d55281",
+        "lesson_activity.key": "5e94d2b9-1810-4cb5-9068-3132d67de86c"
+      }
+    },
+    {
+      "key": "889d4116-8337-400a-a1cf-09a2eeb6792d",
+      "position": 3,
+      "properties": {
+        "description": "**Discuss:** *How is this widget similar to the widget we used yesterday? How is it different?*\n\n**Discussion Goal:** Students should identify that this widget is similar to yesterday’s text compression widget because it also shortens text, but it is different in that some of the information is permanently lost when it is shortened. You can emphasize this point by supplying some carefully chosen sample text and seeing that the results can be ambiguous:\n\n* “there are three tiers of tires at the shop”\n\nStudents may debate whether or not this really fits the definition of compression we saw yesterday, which is a great bridge to the next part of the lesson.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "889d4116-8337-400a-a1cf-09a2eeb6792d",
+        "lesson_activity.key": "5e94d2b9-1810-4cb5-9068-3132d67de86c"
+      }
+    },
+    {
+      "key": "bc123927-45d0-4ca5-96dd-a61eb30a9df3",
+      "position": 1,
+      "properties": {
+        "description": "Yesterday’s widget was an example of **lossless compression** because we could always reverse the process to recreate the original. This widget is an example of **lossy compression** because some information gets lost, making this process not reversible. In today’s lesson, we will investigate how lossy compression works with images.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "bc123927-45d0-4ca5-96dd-a61eb30a9df3",
+        "lesson_activity.key": "45334c7a-aa91-4ac8-a094-93bf761fab82"
+      }
+    },
+    {
+      "key": "01aaf4cd-9926-4578-81db-4b1420205b61",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students open Code Studio - they will use several widgets throughout today's lesson.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Video:** Students should have seen these definitions in the video at the end of yesterday’s class. However, it could be worthwhile to replay part of the video here as well to reinforce that vocabulary - specifically, just the section where Aloe Bloc discusses lossy & lossless compression.\n\n\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "01aaf4cd-9926-4578-81db-4b1420205b61",
+        "lesson_activity.key": "45334c7a-aa91-4ac8-a094-93bf761fab82"
+      }
+    },
+    {
+      "key": "afcbd1d8-b97a-4ef5-b4cd-37f0f7334edd",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Level 1:** Have students adjust the slider to see different lossy compressions.",
+        "name": "Lossy Image v1 (5 minutes)\r",
+        "progression_name": "Lossy Compression Widget"
+      },
+      "seeding_key": {
+        "activity_section.key": "afcbd1d8-b97a-4ef5-b4cd-37f0f7334edd",
+        "lesson_activity.key": "45334c7a-aa91-4ac8-a094-93bf761fab82"
+      }
+    },
+    {
+      "key": "6f601970-3cce-4d2a-ade7-b8d4b7d31675",
+      "position": 4,
+      "properties": {
+        "description": "**Prompt:** What do you notice about the quality of the image when you compress it? What do you notice about the compressed file size?",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "For the app to work, students need to click the \"Run\" button on the app before they can play with it. They may need to be reminded of this when starting. \n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "6f601970-3cce-4d2a-ade7-b8d4b7d31675",
+        "lesson_activity.key": "45334c7a-aa91-4ac8-a094-93bf761fab82"
+      }
+    },
+    {
+      "key": "45292d6a-c728-4d38-824e-f73a2ed0da0c",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 2:** Have students pick a new image. Encourage students to settle on a compression that they think still represents the original image while maintaining a high compression rate (low number of bytes).",
+        "name": "Lossy Image v2 (15 minutes)\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "45292d6a-c728-4d38-824e-f73a2ed0da0c",
+        "lesson_activity.key": "45334c7a-aa91-4ac8-a094-93bf761fab82"
+      }
+    },
+    {
+      "key": "a20245b7-9c8a-4209-8d4d-3c706908bd24",
+      "position": 6,
+      "properties": {
+        "description": "**Circulate:** Check in with students as they find images to compress. Emphasize that the goal is for us to eventually be able to identify the image while still keeping the image compressed."
+      },
+      "seeding_key": {
+        "activity_section.key": "a20245b7-9c8a-4209-8d4d-3c706908bd24",
+        "lesson_activity.key": "45334c7a-aa91-4ac8-a094-93bf761fab82"
+      }
+    },
+    {
+      "key": "888729de-6c63-4a9e-98a7-d901288f4119",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Share Out:** Have class share out the compressions they have made with students nearby. Encourage students to try and guess\n\n**Discussion Goal:** Guide the conversation towards these two observations:\n\n* The larger the sample size, the smaller the file size but the image looks worse\n* The smaller the sample size, the better the image looks but the file size is larger\n\nUltimately, students should be aware that there are tradeoffs with compression - highly compressed images may not look as good as lower compressed images, but will have a smaller file size.\n the image."
+      },
+      "seeding_key": {
+        "activity_section.key": "888729de-6c63-4a9e-98a7-d901288f4119",
+        "lesson_activity.key": "45334c7a-aa91-4ac8-a094-93bf761fab82"
+      }
+    },
+    {
+      "key": "57709146-92e5-405e-924c-0b4e45426035",
+      "position": 8,
+      "properties": {
+        "description": "We’ve now seen that lossy compression can greatly reduce the file size of our images, but we lose some information along the way. Let’s explore what this looks like with some common image compressions we use on the internet.",
+        "progression_name": "Lossy Compression Widget",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "57709146-92e5-405e-924c-0b4e45426035",
+        "lesson_activity.key": "45334c7a-aa91-4ac8-a094-93bf761fab82"
+      }
+    },
+    {
+      "key": "bfad6a3f-cf61-4bd8-af91-29fc6d2fd74f",
+      "position": 9,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This activity emphasizes that there is a balancing act between compressing an image while making sure it is still recognizable, and students are trying to find where this balance is for their particular image. Sharing results with the class is a way for students to see a wide variety of images and compressions before the next class discussion. There are many ways to structure this share-out, but here are a few options:\n\n**Gallery Walk:** Have students circulate around the room. On a post-it note, they should write down what they think the original image is and leave the note on each computer they visit\n\n**Screen Sharing:** If students have a way to share their screen with the rest of the class, students can volunteer to have their screen projected for the rest of the class.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "bfad6a3f-cf61-4bd8-af91-29fc6d2fd74f",
+        "lesson_activity.key": "45334c7a-aa91-4ac8-a094-93bf761fab82"
+      }
+    },
+    {
+      "key": "05ddbddb-9f77-4a20-a83d-61637111637f",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Prompt:** Let’s imagine we are trying to use this image for a particular purpose, and we need to decide which level of compression we want to use. We will look at a series of scenarios and we will vote on how much compression is appropriate.",
+        "name": "Compression Decisions (10 minutes)\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "05ddbddb-9f77-4a20-a83d-61637111637f",
+        "lesson_activity.key": "45334c7a-aa91-4ac8-a094-93bf761fab82"
+      }
+    },
+    {
+      "key": "236cf35f-5b35-4e92-8fd0-80e96089137d",
+      "position": 11,
+      "properties": {
+        "description": "* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Scenario 1:** You are sending this as a text message to a friend but you’ve almost run out of data on your phone plan\r\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Scenario 2:** You are a crime-scene photographer and this image is part of a crime-scene photo\r\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Scenario 3:** This image is part of a satellite imaging assignment for the military, being used for intelligence gathering\r\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Scenario 4:** You are a Social Media manager posting this to an Instagram story for an event happening right now\r\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Scenario 5:** This image will be part of a collage where 100 copies will be stitched together to make a larger image\r\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Scenario 6:** You are a professional photographer submitting to a design competition where your submission will be carefully judged for color & composition",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Voting can be done by students holding up the number of fingers for the option they would select. \n\nAfter voting, briefly discuss each scenario and come to a classroom consensus on the best option. \n\nNote that there is not necessarily one \"correct answer\" to these scenarios the goal here is to weigh the pros and cons and make an informed decision. \n\n\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "236cf35f-5b35-4e92-8fd0-80e96089137d",
+        "lesson_activity.key": "45334c7a-aa91-4ac8-a094-93bf761fab82"
+      }
+    },
+    {
+      "key": "f2bc439e-b920-49c1-8e22-6aea92a9c020",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:**\n\n1. *When is it a good idea to use lossless compression?* \n2. *When should you use lossy compression?* \n3. *What are the important factors in making that decision?*\n\n**Discussion Goal:** This discussion should draw out two key points:\n\n* Lossless compression is useful when the accuracy of the original item is most important\n\t* Examples: Bank records, text files, some images\n* Lossy compression is useful when file size is a concern or when it needs to be sent in a reasonable amount of time. \n\t* Examples: Multimedia - especially streaming media (images, video, audio)"
+      },
+      "seeding_key": {
+        "activity_section.key": "f2bc439e-b920-49c1-8e22-6aea92a9c020",
+        "lesson_activity.key": "a4d1cbb5-976a-4a44-8108-202ca52d0c21"
+      }
+    },
+    {
+      "key": "860c5ae5-7fb5-4dc8-91a9-4ed2e86c3760",
+      "position": 2,
+      "properties": {
+        "description": "We’ve seen today that lossy compression can greatly reduce file size, but can also reduce the quality of the image. Finding that balance is important, especially when the size of your file is a concern. But, if you need to recreate an exact copy of the original, then lossless compression is a better choice.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "860c5ae5-7fb5-4dc8-91a9-4ed2e86c3760",
+        "lesson_activity.key": "a4d1cbb5-976a-4a44-8108-202ca52d0c21"
+      }
+    },
+    {
+      "key": "ad285dc9-b2d2-4e55-b9e1-f948d0e19fb9",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal:** Have students take out their journals and add the definition for lossy compression.\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "ad285dc9-b2d2-4e55-b9e1-f948d0e19fb9",
+        "lesson_activity.key": "a4d1cbb5-976a-4a44-8108-202ca52d0c21"
+      }
+    },
+    {
+      "key": "27e3b957-3e26-4aec-a0eb-b0bd1f0f7f74",
+      "position": 4,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "27e3b957-3e26-4aec-a0eb-b0bd1f0f7f74",
+        "lesson_activity.key": "a4d1cbb5-976a-4a44-8108-202ca52d0c21"
+      }
+    },
+    {
+      "key": "cd45c037-35d4-4587-a9cc-0cba353bbfe1",
+      "position": 5,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\n\n**Question:** You’ve been given a new cell phone with a 2 gigabyte data plan. You plan to use your phone for text messages, images, video, and music. Which of these categories are best compressed using lossless compression? Which of these categories are best compressed using lossy compression? Why?",
+        "name": "Assessment: Check For Understanding\r",
+        "progression_name": "Check For Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "cd45c037-35d4-4587-a9cc-0cba353bbfe1",
+        "lesson_activity.key": "a4d1cbb5-976a-4a44-8108-202ca52d0c21"
+      }
+    },
+    {
+      "key": "b76a0054-b6ae-4eee-91ec-7e14c2b15d97",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b76a0054-b6ae-4eee-91ec-7e14c2b15d97",
+        "lesson_activity.key": "d6e9a536-8288-4844-ae27-8706af84d7c4"
+      }
+    },
+    {
+      "key": "0f5ff687-575c-4f5c-9b44-6b051bf2183a",
+      "position": 1,
+      "properties": {
+        "progression_name": "Asynchronous Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "0f5ff687-575c-4f5c-9b44-6b051bf2183a",
+        "lesson_activity.key": "40ce0911-1be0-47f6-a73a-f1cfc3cbd734"
+      }
+    },
+    {
+      "key": "4c93af89-c808-40f1-b663-7546fa0d38f0",
+      "position": 2,
+      "properties": {
+        "progression_name": "Unit 1 Connections and Conclusions"
+      },
+      "seeding_key": {
+        "activity_section.key": "4c93af89-c808-40f1-b663-7546fa0d38f0",
+        "lesson_activity.key": "40ce0911-1be0-47f6-a73a-f1cfc3cbd734"
+      }
+    },
+    {
+      "key": "62fe5c8b-8aa3-475a-befa-735560fd943b",
+      "position": 3,
+      "properties": {
+        "progression_name": "Previously, On...Unit 2"
+      },
+      "seeding_key": {
+        "activity_section.key": "62fe5c8b-8aa3-475a-befa-735560fd943b",
+        "lesson_activity.key": "40ce0911-1be0-47f6-a73a-f1cfc3cbd734"
+      }
+    },
+    {
+      "key": "829f4335-79e9-46b5-9473-2acd354e2bf3",
+      "position": 4,
+      "properties": {
+        "progression_name": "Understanding Self: Identity Map"
+      },
+      "seeding_key": {
+        "activity_section.key": "829f4335-79e9-46b5-9473-2acd354e2bf3",
+        "lesson_activity.key": "40ce0911-1be0-47f6-a73a-f1cfc3cbd734"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U1L9 Pixelation - Make the Letter A_2_2025"
+        ],
+        "progression": "Pixelation Widget: B&W"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L9 Pixelation - Make the Letter A_2_2025"
+        ],
+        "lesson.key": "TLO #1: U1L7 - Black and White Images",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csp-summer-day2-2025",
+        "activity_section.key": "6e8ffcdd-7c1e-45b0-946b-4c6a73bed28b"
+      },
+      "level_keys": [
+        "U1L9 Pixelation - Make the Letter A_2_2025"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U1L9 Pixelation Widget Fix bit offset_2_2025"
+        ],
+        "progression": "Pixelation Widget: B&W"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L9 Pixelation Widget Fix bit offset_2_2025"
+        ],
+        "lesson.key": "TLO #1: U1L7 - Black and White Images",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csp-summer-day2-2025",
+        "activity_section.key": "6e8ffcdd-7c1e-45b0-946b-4c6a73bed28b"
+      },
+      "level_keys": [
+        "U1L9 Pixelation Widget Fix bit offset_2_2025"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U1L9 Pixelation Widget challenge a_2_2025"
+        ],
+        "progression": "Sampling an Analog Image: Challenges A&B"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L9 Pixelation Widget challenge a_2_2025"
+        ],
+        "lesson.key": "TLO #1: U1L7 - Black and White Images",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csp-summer-day2-2025",
+        "activity_section.key": "74f5f1a0-f4f4-48ea-8f3a-d14baadb8c21"
+      },
+      "level_keys": [
+        "U1L9 Pixelation Widget challenge a_2_2025"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U1L9 Pixelation Widget challenge B_2_2025"
+        ],
+        "progression": "Sampling an Analog Image: Challenges A&B"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L9 Pixelation Widget challenge B_2_2025"
+        ],
+        "lesson.key": "TLO #1: U1L7 - Black and White Images",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csp-summer-day2-2025",
+        "activity_section.key": "74f5f1a0-f4f4-48ea-8f3a-d14baadb8c21"
+      },
+      "level_keys": [
+        "U1L9 Pixelation Widget challenge B_2_2025"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U1L9 Multiple Choice Digital Analog2022_2_2025"
+        ],
+        "progression": "Check For Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L9 Multiple Choice Digital Analog2022_2_2025"
+        ],
+        "lesson.key": "TLO #1: U1L7 - Black and White Images",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csp-summer-day2-2025",
+        "activity_section.key": "11b22698-adcd-43e8-bdd7-91d37c9dbea4"
+      },
+      "level_keys": [
+        "U1L9 Multiple Choice Digital Analog2022_2_2025"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U1L9 Pixelation Widget challenge C_2_2025"
+        ],
+        "progression": "Sampling an Analog Image: Challenge C"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L9 Pixelation Widget challenge C_2_2025"
+        ],
+        "lesson.key": "TLO #1: U1L7 - Black and White Images",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csp-summer-day2-2025",
+        "activity_section.key": "5295bd26-4ff8-4de4-873e-c1ad5c2addc1"
+      },
+      "level_keys": [
+        "U1L9 Pixelation Widget challenge C_2_2025"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U1L9 CFU pixel data2022_2_2025"
+        ],
+        "progression": "Check For Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L9 CFU pixel data2022_2_2025"
+        ],
+        "lesson.key": "TLO #1: U1L7 - Black and White Images",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csp-summer-day2-2025",
+        "activity_section.key": "be7ff3f7-77fd-4137-b600-6e91c5531997"
+      },
+      "level_keys": [
+        "U1L9 CFU pixel data2022_2_2025"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U1L9 CFU Sampling_2_2025"
+        ],
+        "progression": "Check For Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L9 CFU Sampling_2_2025"
+        ],
+        "lesson.key": "TLO #1: U1L7 - Black and White Images",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csp-summer-day2-2025",
+        "activity_section.key": "be7ff3f7-77fd-4137-b600-6e91c5531997"
+      },
+      "level_keys": [
+        "U1L9 CFU Sampling_2_2025"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U1L11 Widget: Text Compression_2_2025"
+        ],
+        "progression": "Widget: Text Compression"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L11 Widget: Text Compression_2_2025"
+        ],
+        "lesson.key": "TLO #2: U1L9 - Lossless Compression",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csp-summer-day2-2025",
+        "activity_section.key": "2aa86642-a729-4702-8f8b-254c7bdf20c2"
+      },
+      "level_keys": [
+        "U1L11 Widget: Text Compression_2_2025"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U1L11 Multiple Choice lossless compression2022_2_2025"
+        ],
+        "progression": "Check For Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L11 Multiple Choice lossless compression2022_2_2025"
+        ],
+        "lesson.key": "TLO #2: U1L9 - Lossless Compression",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csp-summer-day2-2025",
+        "activity_section.key": "0117e0d3-2e26-4d5e-aafd-ed06ff858b0c"
+      },
+      "level_keys": [
+        "U1L11 Multiple Choice lossless compression2022_2_2025"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U1L11 CFU Compression for Email_2_2025"
+        ],
+        "progression": "Check For Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L11 CFU Compression for Email_2_2025"
+        ],
+        "lesson.key": "TLO #2: U1L9 - Lossless Compression",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csp-summer-day2-2025",
+        "activity_section.key": "0117e0d3-2e26-4d5e-aafd-ed06ff858b0c"
+      },
+      "level_keys": [
+        "U1L11 CFU Compression for Email_2_2025"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "virtual-pl-csp-summer-day2-asynch1-01_2025"
+        ],
+        "progression": "Asynchronous Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "virtual-pl-csp-summer-day2-asynch1-01_2025"
+        ],
+        "lesson.key": "Asynchronous Part 1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csp-summer-day2-2025",
+        "activity_section.key": "db9a5d82-f8d0-4f5b-a78c-c395ffb2131d"
+      },
+      "level_keys": [
+        "virtual-pl-csp-summer-day2-asynch1-01_2025"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "virtual-pl-csp-summer-day2-asynch1-02_2025"
+        ],
+        "progression": "CED Scavenger Hunt"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "virtual-pl-csp-summer-day2-asynch1-02_2025"
+        ],
+        "lesson.key": "Asynchronous Part 1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csp-summer-day2-2025",
+        "activity_section.key": "ae66e27e-c16c-4ab2-9f34-bdcb96288bfb"
+      },
+      "level_keys": [
+        "virtual-pl-csp-summer-day2-asynch1-02_2025"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "virtual-pl-csp-summer-day2-asynch1-03_2025"
+        ],
+        "progression": "CED Scavenger Hunt"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "virtual-pl-csp-summer-day2-asynch1-03_2025"
+        ],
+        "lesson.key": "Asynchronous Part 1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csp-summer-day2-2025",
+        "activity_section.key": "ae66e27e-c16c-4ab2-9f34-bdcb96288bfb"
+      },
+      "level_keys": [
+        "virtual-pl-csp-summer-day2-asynch1-03_2025"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U1 Lossy Compression Widget v1_3_2025"
+        ],
+        "progression": "Lossy Compression Widget"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1 Lossy Compression Widget v1_3_2025"
+        ],
+        "lesson.key": "TLO #3: U1L10 - Lossy Compression",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csp-summer-day2-2025",
+        "activity_section.key": "57709146-92e5-405e-924c-0b4e45426035"
+      },
+      "level_keys": [
+        "U1 Lossy Compression Widget v1_3_2025"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U1 Lossy Compression Widget v2_3_2025"
+        ],
+        "progression": "Lossy Compression Widget"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1 Lossy Compression Widget v2_3_2025"
+        ],
+        "lesson.key": "TLO #3: U1L10 - Lossy Compression",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csp-summer-day2-2025",
+        "activity_section.key": "57709146-92e5-405e-924c-0b4e45426035"
+      },
+      "level_keys": [
+        "U1 Lossy Compression Widget v2_3_2025"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U1L11 CPS CFU Cell Phone_3_2025"
+        ],
+        "progression": "Check For Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L11 CPS CFU Cell Phone_3_2025"
+        ],
+        "lesson.key": "TLO #3: U1L10 - Lossy Compression",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csp-summer-day2-2025",
+        "activity_section.key": "cd45c037-35d4-4587-a9cc-0cba353bbfe1"
+      },
+      "level_keys": [
+        "U1L11 CPS CFU Cell Phone_3_2025"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "virtual-pl-csp-summer-day2-asynch2-01_2025"
+        ],
+        "progression": "Asynchronous Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "virtual-pl-csp-summer-day2-asynch2-01_2025"
+        ],
+        "lesson.key": "Asynchronous Part 2",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csp-summer-day2-2025",
+        "activity_section.key": "0f5ff687-575c-4f5c-9b44-6b051bf2183a"
+      },
+      "level_keys": [
+        "virtual-pl-csp-summer-day2-asynch2-01_2025"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "virtual-pl-csp-summer-day2-asynch2-02_2025"
+        ],
+        "progression": "Unit 1 Connections and Conclusions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "virtual-pl-csp-summer-day2-asynch2-02_2025"
+        ],
+        "lesson.key": "Asynchronous Part 2",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csp-summer-day2-2025",
+        "activity_section.key": "4c93af89-c808-40f1-b663-7546fa0d38f0"
+      },
+      "level_keys": [
+        "virtual-pl-csp-summer-day2-asynch2-02_2025"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "virtual-pl-csp-summer-day2-asynch2-03_2025"
+        ],
+        "progression": "Previously, On...Unit 2"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "virtual-pl-csp-summer-day2-asynch2-03_2025"
+        ],
+        "lesson.key": "Asynchronous Part 2",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csp-summer-day2-2025",
+        "activity_section.key": "62fe5c8b-8aa3-475a-befa-735560fd943b"
+      },
+      "level_keys": [
+        "virtual-pl-csp-summer-day2-asynch2-03_2025"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "virtual-pl-csp-summer-day2-asynch2-04_2025"
+        ],
+        "progression": "Understanding Self: Identity Map"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "virtual-pl-csp-summer-day2-asynch2-04_2025"
+        ],
+        "lesson.key": "Asynchronous Part 2",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csp-summer-day2-2025",
+        "activity_section.key": "829f4335-79e9-46b5-9473-2acd354e2bf3"
+      },
+      "level_keys": [
+        "virtual-pl-csp-summer-day2-asynch2-04_2025"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "U1L9 Pixelation - Make the Letter A_2_2025",
+        "script_level.level_keys": [
+          "U1L9 Pixelation - Make the Letter A_2_2025"
+        ],
+        "lesson.key": "TLO #1: U1L7 - Black and White Images",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csp-summer-day2-2025",
+        "activity_section.key": "6e8ffcdd-7c1e-45b0-946b-4c6a73bed28b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L9 Pixelation Widget Fix bit offset_2_2025",
+        "script_level.level_keys": [
+          "U1L9 Pixelation Widget Fix bit offset_2_2025"
+        ],
+        "lesson.key": "TLO #1: U1L7 - Black and White Images",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csp-summer-day2-2025",
+        "activity_section.key": "6e8ffcdd-7c1e-45b0-946b-4c6a73bed28b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L9 Pixelation Widget challenge a_2_2025",
+        "script_level.level_keys": [
+          "U1L9 Pixelation Widget challenge a_2_2025"
+        ],
+        "lesson.key": "TLO #1: U1L7 - Black and White Images",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csp-summer-day2-2025",
+        "activity_section.key": "74f5f1a0-f4f4-48ea-8f3a-d14baadb8c21"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L9 Pixelation Widget challenge B_2_2025",
+        "script_level.level_keys": [
+          "U1L9 Pixelation Widget challenge B_2_2025"
+        ],
+        "lesson.key": "TLO #1: U1L7 - Black and White Images",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csp-summer-day2-2025",
+        "activity_section.key": "74f5f1a0-f4f4-48ea-8f3a-d14baadb8c21"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L9 Multiple Choice Digital Analog2022_2_2025",
+        "script_level.level_keys": [
+          "U1L9 Multiple Choice Digital Analog2022_2_2025"
+        ],
+        "lesson.key": "TLO #1: U1L7 - Black and White Images",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csp-summer-day2-2025",
+        "activity_section.key": "11b22698-adcd-43e8-bdd7-91d37c9dbea4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L9 Pixelation Widget challenge C_2_2025",
+        "script_level.level_keys": [
+          "U1L9 Pixelation Widget challenge C_2_2025"
+        ],
+        "lesson.key": "TLO #1: U1L7 - Black and White Images",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csp-summer-day2-2025",
+        "activity_section.key": "5295bd26-4ff8-4de4-873e-c1ad5c2addc1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L9 CFU pixel data2022_2_2025",
+        "script_level.level_keys": [
+          "U1L9 CFU pixel data2022_2_2025"
+        ],
+        "lesson.key": "TLO #1: U1L7 - Black and White Images",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csp-summer-day2-2025",
+        "activity_section.key": "be7ff3f7-77fd-4137-b600-6e91c5531997"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L9 CFU Sampling_2_2025",
+        "script_level.level_keys": [
+          "U1L9 CFU Sampling_2_2025"
+        ],
+        "lesson.key": "TLO #1: U1L7 - Black and White Images",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csp-summer-day2-2025",
+        "activity_section.key": "be7ff3f7-77fd-4137-b600-6e91c5531997"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L11 Widget: Text Compression_2_2025",
+        "script_level.level_keys": [
+          "U1L11 Widget: Text Compression_2_2025"
+        ],
+        "lesson.key": "TLO #2: U1L9 - Lossless Compression",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csp-summer-day2-2025",
+        "activity_section.key": "2aa86642-a729-4702-8f8b-254c7bdf20c2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L11 Multiple Choice lossless compression2022_2_2025",
+        "script_level.level_keys": [
+          "U1L11 Multiple Choice lossless compression2022_2_2025"
+        ],
+        "lesson.key": "TLO #2: U1L9 - Lossless Compression",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csp-summer-day2-2025",
+        "activity_section.key": "0117e0d3-2e26-4d5e-aafd-ed06ff858b0c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L11 CFU Compression for Email_2_2025",
+        "script_level.level_keys": [
+          "U1L11 CFU Compression for Email_2_2025"
+        ],
+        "lesson.key": "TLO #2: U1L9 - Lossless Compression",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csp-summer-day2-2025",
+        "activity_section.key": "0117e0d3-2e26-4d5e-aafd-ed06ff858b0c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "virtual-pl-csp-summer-day2-asynch1-01_2025",
+        "script_level.level_keys": [
+          "virtual-pl-csp-summer-day2-asynch1-01_2025"
+        ],
+        "lesson.key": "Asynchronous Part 1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csp-summer-day2-2025",
+        "activity_section.key": "db9a5d82-f8d0-4f5b-a78c-c395ffb2131d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "virtual-pl-csp-summer-day2-asynch1-02_2025",
+        "script_level.level_keys": [
+          "virtual-pl-csp-summer-day2-asynch1-02_2025"
+        ],
+        "lesson.key": "Asynchronous Part 1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csp-summer-day2-2025",
+        "activity_section.key": "ae66e27e-c16c-4ab2-9f34-bdcb96288bfb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "virtual-pl-csp-summer-day2-asynch1-03_2025",
+        "script_level.level_keys": [
+          "virtual-pl-csp-summer-day2-asynch1-03_2025"
+        ],
+        "lesson.key": "Asynchronous Part 1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csp-summer-day2-2025",
+        "activity_section.key": "ae66e27e-c16c-4ab2-9f34-bdcb96288bfb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1 Lossy Compression Widget v1_3_2025",
+        "script_level.level_keys": [
+          "U1 Lossy Compression Widget v1_3_2025"
+        ],
+        "lesson.key": "TLO #3: U1L10 - Lossy Compression",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csp-summer-day2-2025",
+        "activity_section.key": "57709146-92e5-405e-924c-0b4e45426035"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1 Lossy Compression Widget v2_3_2025",
+        "script_level.level_keys": [
+          "U1 Lossy Compression Widget v2_3_2025"
+        ],
+        "lesson.key": "TLO #3: U1L10 - Lossy Compression",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csp-summer-day2-2025",
+        "activity_section.key": "57709146-92e5-405e-924c-0b4e45426035"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L11 CPS CFU Cell Phone_3_2025",
+        "script_level.level_keys": [
+          "U1L11 CPS CFU Cell Phone_3_2025"
+        ],
+        "lesson.key": "TLO #3: U1L10 - Lossy Compression",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csp-summer-day2-2025",
+        "activity_section.key": "cd45c037-35d4-4587-a9cc-0cba353bbfe1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "virtual-pl-csp-summer-day2-asynch2-01_2025",
+        "script_level.level_keys": [
+          "virtual-pl-csp-summer-day2-asynch2-01_2025"
+        ],
+        "lesson.key": "Asynchronous Part 2",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csp-summer-day2-2025",
+        "activity_section.key": "0f5ff687-575c-4f5c-9b44-6b051bf2183a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "virtual-pl-csp-summer-day2-asynch2-02_2025",
+        "script_level.level_keys": [
+          "virtual-pl-csp-summer-day2-asynch2-02_2025"
+        ],
+        "lesson.key": "Asynchronous Part 2",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csp-summer-day2-2025",
+        "activity_section.key": "4c93af89-c808-40f1-b663-7546fa0d38f0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "virtual-pl-csp-summer-day2-asynch2-03_2025",
+        "script_level.level_keys": [
+          "virtual-pl-csp-summer-day2-asynch2-03_2025"
+        ],
+        "lesson.key": "Asynchronous Part 2",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csp-summer-day2-2025",
+        "activity_section.key": "62fe5c8b-8aa3-475a-befa-735560fd943b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "virtual-pl-csp-summer-day2-asynch2-04_2025",
+        "script_level.level_keys": [
+          "virtual-pl-csp-summer-day2-asynch2-04_2025"
+        ],
+        "lesson.key": "Asynchronous Part 2",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csp-summer-day2-2025",
+        "activity_section.key": "829f4335-79e9-46b5-9473-2acd354e2bf3"
+      }
+    }
+  ],
+  "resources": [
+    {
+      "name": "2025 Virtual CSP Summer Workshop Agenda - Day 2",
+      "url": "https://docs.google.com/document/d/1SmfGrK9JCWdFIYAL_q-zUo3W6o-11rduf3iSygkExmE/edit?usp=drive_link",
+      "key": "2025_virtual_csp_summer_workshop_slides_-_day_2",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "2025_virtual_csp_summer_workshop_slides_-_day_2"
+      }
+    },
+    {
+      "name": "2025 Virtual CSP Summer Workshop Slides - Day 2",
+      "url": "https://docs.google.com/presentation/d/13jhhW7j2m4InRc33r0rk7lTv-wlWmyCpmfp4b_O8zfc/edit?usp=drive_link",
+      "key": "2025_virtual_csp_summer_workshop_slides_-_day_2_1",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "2025_virtual_csp_summer_workshop_slides_-_day_2_1"
+      }
+    },
+    {
+      "name": "Activity Guide - Black and White Images",
+      "url": "https://docs.google.com/document/d/1-W0LMRihs84dIlC6VwKowq3FcTE3hCZGes8Duda1TqM/edit?usp=sharing",
+      "key": "activity_guide_-_black_and_white_images",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "activity_guide_-_black_and_white_images"
+      }
+    },
+    {
+      "name": "B&W Pixelation Tutorial",
+      "url": "https://youtu.be/rJOa5Q5a1WM",
+      "key": "b_w_pixelation_tutorial",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://videos.code.org/2015/csp/pixelation_bw.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "b_w_pixelation_tutorial"
+      }
+    },
+    {
+      "name": "Black and White Images",
+      "url": "https://docs.google.com/presentation/d/1jvP-OPzI4Eiqk7Nm5CtokKfxPBVGDeuNutqKw2gzab8/",
+      "key": "black_and_white_images",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1jvP-OPzI4Eiqk7Nm5CtokKfxPBVGDeuNutqKw2gzab8/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "black_and_white_images"
+      }
+    },
+    {
+      "name": "KEY Black & White Images Activity Guide",
+      "url": "https://docs.google.com/document/d/1b02zxA27_uBJHDHkyBSyw56KiEPcgQRdwGekJmNs5Fk/edit?usp=sharing",
+      "key": "key_black_white_images_activity_guide",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "key_black_white_images_activity_guide"
+      }
+    },
+    {
+      "name": "Lossless Compression",
+      "url": "https://docs.google.com/presentation/d/1gYsjdeTaaOyoXSGZtyeABU9QPgZZIGnz9z4cyNXdkTY/",
+      "key": "lossless_compression",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1gYsjdeTaaOyoXSGZtyeABU9QPgZZIGnz9z4cyNXdkTY/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "lossless_compression"
+      }
+    },
+    {
+      "name": "Lossy Compression",
+      "url": "https://docs.google.com/presentation/d/1JJ-IX_dV6497KXmimsIOussZQoDOS9cV8udzeRaeJ-E/",
+      "key": "lossy_compression",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1JJ-IX_dV6497KXmimsIOussZQoDOS9cV8udzeRaeJ-E/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "lossy_compression"
+      }
+    },
+    {
+      "name": "Text Compression widget (tutorial)",
+      "url": "http://youtu.be/LCGkcn1f-ms",
+      "key": "text_compression_widget_tutorial_",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://videos.code.org/2015/csp/textcompression_blacc.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "text_compression_widget_tutorial_"
+      }
+    }
+  ],
+  "lessons_resources": [
+    {
+      "seeding_key": {
+        "lesson.key": "TLO #1: U1L7 - Black and White Images",
+        "resource.key": "activity_guide_-_black_and_white_images"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "TLO #1: U1L7 - Black and White Images",
+        "resource.key": "b_w_pixelation_tutorial"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "TLO #1: U1L7 - Black and White Images",
+        "resource.key": "black_and_white_images"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "TLO #1: U1L7 - Black and White Images",
+        "resource.key": "key_black_white_images_activity_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "TLO #2: U1L9 - Lossless Compression",
+        "resource.key": "lossless_compression"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "TLO #2: U1L9 - Lossless Compression",
+        "resource.key": "text_compression_widget_tutorial_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "TLO #3: U1L10 - Lossy Compression",
+        "resource.key": "lossy_compression"
+      }
+    }
+  ],
+  "scripts_resources": [
+    {
+      "seeding_key": {
+        "resource.key": "2025_virtual_csp_summer_workshop_slides_-_day_2",
+        "script.name": "virtual-pl-csp-summer-day2-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "2025_virtual_csp_summer_workshop_slides_-_day_2_1",
+        "script.name": "virtual-pl-csp-summer-day2-2025"
+      }
+    }
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+    {
+      "key": "analog_data",
+      "word": "Analog Data",
+      "definition": "Data with values that change continuously, or smoothly, over time. Some examples of analog data include music, colors of a painting, or position of a sprinter during a race.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "analog_data"
+      }
+    },
+    {
+      "key": "digital_data",
+      "word": "Digital Data",
+      "definition": "Data that changes discretely through a finite set of possible values",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "digital_data"
+      }
+    },
+    {
+      "key": "lossless_compression",
+      "word": "Lossless Compression",
+      "definition": "A process for reducing the number of bits needed to represent something without losing any information. This process is reversible.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "lossless_compression"
+      }
+    },
+    {
+      "key": "lossy_compression",
+      "word": "Lossy Compression",
+      "definition": "A process for reducing the number of bits needed to represent something in which some information is lost or thrown away. This process is not reversible.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "lossy_compression"
+      }
+    },
+    {
+      "key": "sampling",
+      "word": "Sampling",
+      "definition": "A process for creating a digital representation of analog data by measuring the analog data at regular intervals called samples.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "sampling"
+      }
+    }
+  ],
+  "lessons_vocabularies": [
+    {
+      "seeding_key": {
+        "lesson.key": "TLO #1: U1L7 - Black and White Images",
+        "vocabulary.key": "analog_data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "TLO #1: U1L7 - Black and White Images",
+        "vocabulary.key": "digital_data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "TLO #1: U1L7 - Black and White Images",
+        "vocabulary.key": "sampling"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "TLO #2: U1L9 - Lossless Compression",
+        "vocabulary.key": "lossless_compression"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "TLO #3: U1L10 - Lossy Compression",
+        "vocabulary.key": "lossy_compression"
+      }
+    }
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+    {
+      "key": "1b5d8423-2e43-4157-b3ac-f65c08a23b74",
+      "properties": {
+        "description": "Analyze patterns in data to determine compression strategies"
+      },
+      "seeding_key": {
+        "lesson.key": "TLO #2: U1L9 - Lossless Compression",
+        "objective.key": "1b5d8423-2e43-4157-b3ac-f65c08a23b74"
+      }
+    },
+    {
+      "key": "1dc6f5e7-9ee9-4305-959a-b89ed196f3d8",
+      "properties": {
+        "description": "Create lossless compressions of text files"
+      },
+      "seeding_key": {
+        "lesson.key": "TLO #2: U1L9 - Lossless Compression",
+        "objective.key": "1dc6f5e7-9ee9-4305-959a-b89ed196f3d8"
+      }
+    },
+    {
+      "key": "78dd695e-da00-4f36-b76d-a9b360a37d9f",
+      "properties": {
+        "description": "Explain how sampling is used to create a digital form of an analog image"
+      },
+      "seeding_key": {
+        "lesson.key": "TLO #1: U1L7 - Black and White Images",
+        "objective.key": "78dd695e-da00-4f36-b76d-a9b360a37d9f"
+      }
+    },
+    {
+      "key": "f5b1e14e-700a-4a39-8a89-56852861d81c",
+      "properties": {
+        "description": "Examine the effects of lossy compression on text & images"
+      },
+      "seeding_key": {
+        "lesson.key": "TLO #3: U1L10 - Lossy Compression",
+        "objective.key": "f5b1e14e-700a-4a39-8a89-56852861d81c"
+      }
+    },
+    {
+      "key": "f684bbd2-3fbc-42a6-85fc-26e3195511a3",
+      "properties": {
+        "description": "Explain how bits can be used to represent the individual pixels of a black and white image"
+      },
+      "seeding_key": {
+        "lesson.key": "TLO #1: U1L7 - Black and White Images",
+        "objective.key": "f684bbd2-3fbc-42a6-85fc-26e3195511a3"
+      }
+    },
+    {
+      "key": "ff31bac7-8787-481b-8be5-82dc58c37e01",
+      "properties": {
+        "description": "Given a piece of media, decide whether to use lossy or lossless compression based on the needs of a situation"
+      },
+      "seeding_key": {
+        "lesson.key": "TLO #3: U1L10 - Lossy Compression",
+        "objective.key": "ff31bac7-8787-481b-8be5-82dc58c37e01"
+      }
+    }
+  ],
+  "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "TLO #1: U1L7 - Black and White Images",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-1.A.10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "TLO #1: U1L7 - Black and White Images",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-1.A.7"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "TLO #1: U1L7 - Black and White Images",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-1.A.8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "TLO #1: U1L7 - Black and White Images",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-DA-07"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "TLO #1: U1L7 - Black and White Images",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-CS-02"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "TLO #1: U1L7 - Black and White Images",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-DA-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "TLO #2: U1L9 - Lossless Compression",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-1.D.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "TLO #2: U1L9 - Lossless Compression",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-1.D.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "TLO #2: U1L9 - Lossless Compression",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-1.D.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "TLO #2: U1L9 - Lossless Compression",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-1.D.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "TLO #2: U1L9 - Lossless Compression",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-DA-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "TLO #3: U1L10 - Lossy Compression",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-1.D.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "TLO #3: U1L10 - Lossy Compression",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-1.D.6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "TLO #3: U1L10 - Lossy Compression",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-1.D.7"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "TLO #3: U1L10 - Lossy Compression",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-1.D.8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "TLO #3: U1L10 - Lossy Compression",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-DA-10"
+      }
+    }
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

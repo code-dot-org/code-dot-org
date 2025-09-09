@@ -1,9 +1,0 @@
-{
-  "category": "",
-  "config": {
-    "name": "positionCenter",
-    "expression": "createVector(200, 200)",
-    "blockText": "center",
-    "returnType": "Location"
-  }
-}

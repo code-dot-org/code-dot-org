@@ -1,5 +1,5 @@
 !!! 5
-%html
+%html{lang: request.locale}
   %head
     = render inline: File.read(deploy_dir('shared/haml/onetrust_cookie_scripts.haml')), type: :haml, locals: {domain: 'code.org'}
 

@@ -1,6 +1,6 @@
+import {ActionDropdown} from '@code-dot-org/component-library/dropdown';
 import React, {useMemo} from 'react';
 
-import {ActionDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {
@@ -12,6 +12,8 @@ import {
 import {windowOpen} from '@cdo/apps/utils';
 
 import {Resource, computeMaterialType} from './LessonMaterialTypes';
+
+import styles from './lesson-materials.module.scss';
 
 type ResourceViewOptionsDropdownProps = {
   resource: Resource;
@@ -197,6 +199,7 @@ const ResourceViewOptionsDropdown: React.FC<
         options={dropdownOptions}
         size="s"
         menuPlacement="right"
+        className={styles.viewOptionsDropdown}
         triggerButtonProps={{
           color: 'black',
           type: 'tertiary',

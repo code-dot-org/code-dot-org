@@ -1,0 +1,23 @@
+{
+  "name": "@code-dot-org/changelogs",
+  "version": "0.0.0-alpha.0",
+  "files": [
+    "index.js"
+  ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "homepage": "https://github.com/code-dot-org/code-dot-org/blob/staging/frontend/packages/changelogs/#readme",
+  "license": "SEE LICENSE IN LICENSE",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/code-dot-org/code-dot-org.git",
+    "directory": "frontend/packages/changelogs"
+  },
+  "bugs": {
+    "url": "https://github.com/code-dot-org/code-dot-org/issues"
+  },
+  "devDependencies": {
+    "conventional-changelog-conventionalcommits": "^8.0.0"
+  }
+}

@@ -14,6 +14,7 @@ require_relative '../legacy/middleware/animation_library_api'
 require 'bootstrap-sass'
 require 'cdo/global_edition'
 require 'cdo/hash'
+require 'cdo/i18n'
 require 'cdo/i18n_backend'
 require 'cdo/shared_constants'
 
@@ -25,28 +26,29 @@ require 'cdo/pycall'
 # you've limited to :test, :development, or :production.
 Bundler.require(:default, Rails.env)
 
+require_relative '../engines/marketing/lib/marketing/engine'
+
 module Dashboard
   class Application < Rails::Application
     # Explicitly load appropriate defaults for this version of Rails.
     config.load_defaults 6.1
 
-    # Temporarily disable some default values that we aren't yet ready for.
-    # Right now, these changes to cookie functionality break projects
-    #
-    # TODO infra: Figure out why, fix, and reenable.
-    #
-    # added in Rails 5.2 (https://github.com/rails/rails/pull/28132)
-    config.action_dispatch.use_authenticated_cookie_encryption = false
-    # added in Rails 5.2 (https://github.com/rails/rails/pull/29263)
-    config.active_support.use_authenticated_message_encryption = false
-    # added in Rails 6.0 (https://github.com/rails/rails/pull/32937)
-    config.action_dispatch.use_cookies_with_metadata = false
+    # Manually configure some values to match defaults for the next version of
+    # Rails; see config/initializers/new_framework_defaults_7_0.rb for more.
+    # TODO infra: remove these values once we're loading defaults for 7.0 above
+    config.active_support.disable_to_s_conversion = true
 
     config.middleware.insert_before 0, Rack::Cors do
       allow do
         origins CDO.pegasus_site_host
         resource '/dashboardapi/*', headers: :any, methods: [:get]
       end
+    end
+
+    if CDO.use_cookie_dcdo
+      # Enables the setting of DCDO via cookies for testing purposes.
+      require 'cdo/rack/cookie_dcdo'
+      config.middleware.insert_before Rack::Cors, Rack::CookieDCDO
     end
 
     require 'cdo/rack/global_edition'
@@ -73,6 +75,13 @@ module Dashboard
       # Autoload mailer previews in development mode so changes are picked up without restarting the server.
       # autoload_paths is frozen by time it gets to development.rb, so it must be done here.
       config.autoload_paths << Rails.root.join('test/mailers/previews')
+
+      # Automatically load tools intended to make the local development
+      # environment behave more like production.
+      require 'cdo/local_development'
+      if CDO.aws_s3_emulated
+        config.autoload_paths << Rails.root.join('../lib/cdo/local_development/s3_emulation')
+      end
     end
 
     if CDO.image_optim
@@ -96,12 +105,6 @@ module Dashboard
     require 'cdo/rack/upgrade_insecure_requests'
     config.middleware.use ::Rack::UpgradeInsecureRequests
 
-    if CDO.use_cookie_dcdo
-      # Enables the setting of DCDO via cookies for testing purposes.
-      require 'cdo/rack/cookie_dcdo'
-      config.middleware.insert_after ActionDispatch::RequestId, Rack::CookieDCDO
-    end
-
     if CDO.use_geolocation_override
       # Apply the remote_addr middleware to allow pretending to be at a particular IP
       require 'cdo/rack/geolocation_override'
@@ -121,25 +124,23 @@ module Dashboard
 
     # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
     # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
-    # config.time_zone = 'Central Time (US & Canada)'
+    config.time_zone = 'UTC'
+    config.active_record.default_timezone = :utc
 
     # By default, config/locales/*.rb,yml are auto loaded.
-    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '*.json').to_s]
+    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '*', '*.{json,yml}').to_s]
     config.i18n.backend = CDO.i18n_backend
     config.i18n.enforce_available_locales = false
-    config.i18n.available_locales = [SharedConstants::DEFAULT_LOCALE]
-    config.i18n.fallbacks[:defaults] = [SharedConstants::DEFAULT_LOCALE]
-    config.i18n.default_locale = SharedConstants::DEFAULT_LOCALE
-    LOCALES = YAML.load_file("#{Rails.root}/config/locales.yml")
-    LOCALES.each do |locale, data|
-      next unless data.is_a? Hash
-      data.symbolize_keys!
-      unless data[:debug] && Rails.env.production?
-        config.i18n.available_locales << locale
-      end
-      if data[:fallback]
-        config.i18n.fallbacks[locale] = data[:fallback]
-      end
+    config.i18n.available_locales = [Cdo::I18n::DEFAULT_LOCALE]
+    config.i18n.fallbacks[:defaults] = [Cdo::I18n::DEFAULT_LOCALE]
+    config.i18n.default_locale = Cdo::I18n::DEFAULT_LOCALE
+    LOCALES = Cdo::I18n::LOCALE_CONFIGS
+    Cdo::I18n.available_languages.each do |language|
+      locale = language[:locale_s]
+      fallback_locale = Cdo::I18n::LOCALE_CONFIGS.dig(locale, :fallback)
+
+      config.i18n.available_locales << locale
+      config.i18n.fallbacks[locale] = fallback_locale if fallback_locale
     end
 
     config.after_initialize do
@@ -170,18 +171,21 @@ module Dashboard
       emulate-print-media.js
       jquery.handsontable.full.js
       video-js/*.css
-      font-awesome.css
     )
 
     # Support including code from directories outside of the normal Rails directory
     # structure. Specifically, include a couple of directories for misc library code, as
     # well as some subdirectories of the models dir that we use for organization.
 
-    config.autoload_paths << Rails.root.join('lib')
-    config.autoload_paths << Rails.root.join('app', 'models', 'experiments')
-    config.autoload_paths << Rails.root.join('app', 'models', 'levels')
-    config.autoload_paths << Rails.root.join('app', 'models', 'sections')
-    config.autoload_paths << Rails.root.join('../lib/cdo/shared_constants')
+    runtime_load_paths = [
+      Rails.root.join('lib'),
+      Rails.root.join('app', 'models', 'experiments'),
+      Rails.root.join('app', 'models', 'levels'),
+      Rails.root.join('app', 'models', 'sections'),
+      Rails.root.join('../lib/cdo/shared_constants')
+    ]
+
+    config.autoload_paths += runtime_load_paths
 
     # Make sure to explicitly cast all autoload paths to strings; the gem we use to
     # annotate model files with schema descriptions doesn't know how to deal with
@@ -192,16 +196,18 @@ module Dashboard
     # this line.
     config.autoload_paths.map!(&:to_s)
 
-    # Also make sure some of these directories are always loaded up front in production
+    # Also make sure these directories are always loaded up front in production
     # environments.
     #
     # These directories will also be treated as top-level directories by
     # Zeitwerk, rather than as subdirectories which require namspacing.
-    config.eager_load_paths += [
-      Rails.root.join('app', 'models', 'experiments'),
-      Rails.root.join('app', 'models', 'levels'),
-      Rails.root.join('app', 'models', 'sections')
-    ].map(&:to_s)
+    config.eager_load_paths += runtime_load_paths.map(&:to_s)
+
+    # Ignore certain directories for autoloading and eager loading
+    Rails.autoloaders.main.ignore(
+      Rails.root.join("lib", "tasks"),
+      Rails.root.join("lib", "assets")
+    )
 
     # use https://(*-)studio.code.org urls in mails
     config.action_mailer.default_url_options = {host: CDO.canonical_hostname('studio.code.org'), protocol: 'https'}

@@ -7,7 +7,7 @@ end
 
 Given /^I load the Dance Party free play level/i do
   individual_steps <<-STEPS
-    And I am on "http://studio.code.org/s/dance/lessons/1/levels/13?noautoplay=true"
+    And I am on "http://studio.code.org/courses/dance/units/1/lessons/1/levels/13?noautoplay=true"
     And I wait until I see selector "#runButton"
     And I bypass the age dialog
     And I close the instructions overlay if it exists

@@ -1,10 +1,10 @@
+import Button from '@code-dot-org/component-library/button';
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {Provider} from 'react-redux';
 import {combineReducers, createStore} from 'redux';
 
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
-import Button from '@cdo/apps/componentLibrary/button/Button';
 import TopCourse from '@cdo/apps/templates/studioHomepages/TopCourse';
 import i18n from '@cdo/locale';
 

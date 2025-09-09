@@ -20,16 +20,19 @@ HOME=/home/ubuntu
 
 # Run a CI Build to update the server from staging. We do this primarily to
 # make sure the server gets seeded with latest level content for the sync in.
+# - Scheduled for 4:00 AM PST (7:00 AM EST); run aproximately 4 hours after levelbuilder
+#   changes are committed to staging.
+# - Run it every day except Monday. So we don't conflict with the sync if it fails
+#   to commit changes, and we spend Monday verifiying the results of the full sync.
 # Note that the CI_ONLY_BUILD environment variable is necessary; the server is
 # not set up to actually serve a version of the website, and it will fail to
 # build correctly if not thus restricted.
-0 */4 * * * bash -l -c "cd /home/ubuntu/code-dot-org && CI_ONLY_BUILD=true bundle exec ./bin/cronjob ./aws/ci_build >>/tmp/cronlog 2>&1"
+0 12 * * SUN,TUE-SAT bash -l -c "cd /home/ubuntu/code-dot-org && git checkout -- . && CI_ONLY_BUILD=true bundle exec ./bin/cronjob ./aws/ci_build >>/tmp/cronlog 2>&1 && git checkout -- ."
 
 # Run the I18n Sync!
-# Sync is scheduled for 12:30 AM PST every Monday; run around midnight so the
-# sync is hopefully finished by start of day on Monday, offset by 30 minutes so
-# we don't conflict with the ci_build which runs on the hour.
-30 8 * * MON bash -l -c "(cd /home/ubuntu/code-dot-org && (bundle exec ./bin/i18n/sync-all.rb -yip | ./bin/i18n/slack_log) 2>&1 | ./bin/i18n/slack_error) >>/tmp/cronlog 2>&1"
+# Sync is scheduled for 12:00 AM PST (3:00 AM EST) every Monday; run at midnight so the
+# sync is finished by start of day on Monday.
+0 8 * * MON bash -l -c "(cd /home/ubuntu/code-dot-org && (bundle exec ./bin/i18n/sync-all.rb -yip | ./bin/i18n/slack_log) 2>&1 | ./bin/i18n/slack_error) >>/tmp/cronlog 2>&1"
 
 # Run the sync down periodically throughout the week. Specifically:
 # - Run it every 4 hours. This is a somewhat arbitrarily-chosen frequency

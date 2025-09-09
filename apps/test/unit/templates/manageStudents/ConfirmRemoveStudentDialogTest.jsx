@@ -1,141 +1,110 @@
-import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import {render, screen} from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import React from 'react';
 
-import Button from '@cdo/apps/legacySharedComponents/Button';
-import {
-  ADD_A_PERSONAL_LOGIN_HELP_URL,
-  RELEASE_OR_DELETE_RECORDS_EXPLANATION,
-} from '@cdo/apps/lib/util/urlHelpers';
-import {
-  Header,
-  ConfirmCancelFooter,
-} from '@cdo/apps/sharedComponents/SystemDialog/SystemDialog';
 import ConfirmRemoveStudentDialog, {
   MINIMUM_TEST_PROPS,
 } from '@cdo/apps/templates/manageStudents/ConfirmRemoveStudentDialog';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import i18n from '@cdo/locale';
 
-const studentName = MINIMUM_TEST_PROPS.studentName;
+const DEFAULT_PROPS = {
+  ...MINIMUM_TEST_PROPS,
+  onConfirm: jest.fn(),
+  onCancel: jest.fn(),
+};
+
+const studentName = DEFAULT_PROPS.studentName;
 
 describe('ConfirmRemoveStudentDialog', () => {
-  it('renders nothing if not open', () => {
-    const wrapper = mount(
-      <ConfirmRemoveStudentDialog {...MINIMUM_TEST_PROPS} isOpen={false} />
-    );
-    expect('<div></div>').toEqual(wrapper.html());
+  const renderComponent = (props = {}) => {
+    return render(<ConfirmRemoveStudentDialog {...DEFAULT_PROPS} {...props} />);
+  };
+
+  const getRemoveStudentButton = () =>
+    screen.getByRole('button', {name: RegExp(i18n.removeStudent(), 'i')});
+  const getCancelButton = () =>
+    screen.getByRole('button', {name: RegExp(i18n.cancel(), 'i')});
+
+  afterEach(() => {
+    jest.clearAllMocks();
   });
 
-  it('renders minimal content if student has never signed in', () => {
-    const wrapper = mount(
-      <ConfirmRemoveStudentDialog
-        {...MINIMUM_TEST_PROPS}
-        hasEverSignedIn={false}
-      />
+  describe('when the student has never signed in', () => {
+    i18n.removeStudentBody1 = jest.fn(
+      () => 'This will remove the student and their records.'
     );
-    expect(
-      wrapper.containsMatchingElement(
-        <div>
-          <Header text={i18n.removeUnusedStudentHeader({studentName})} />
-          <ConfirmCancelFooter
-            confirmText={i18n.removeStudent()}
-            confirmColor={Button.ButtonColor.red}
-            onConfirm={MINIMUM_TEST_PROPS.onConfirm}
-            onCancel={MINIMUM_TEST_PROPS.onCancel}
-            disableConfirm={false}
-            disableCancel={false}
-            tabIndex="1"
-          />
-        </div>
-      )
-    ).toBeTruthy();
+    it('renders the dialog with the correct header', () => {
+      renderComponent({hasEverSignedIn: false});
+
+      expect(
+        screen.getByText(i18n.removeUnusedStudentHeader({studentName}))
+      ).toBeInTheDocument();
+      expect(
+        screen.queryByText(i18n.removeStudentBody1())
+      ).not.toBeInTheDocument();
+    });
+
+    it('does not render the "learn more" link', () => {
+      renderComponent({hasEverSignedIn: false});
+
+      expect(screen.queryByText(i18n.learnMore())).not.toBeInTheDocument();
+    });
   });
 
-  it('renders warning text if student has ever signed in', () => {
-    const wrapper = mount(
-      <ConfirmRemoveStudentDialog
-        {...MINIMUM_TEST_PROPS}
-        hasEverSignedIn={true}
-      />
+  describe('when students has signed in', () => {
+    i18n.removeStudentBody1 = jest.fn(
+      () => 'This will remove the student and their records.'
     );
-    expect(
-      wrapper.containsMatchingElement(
-        <div>
-          <Header text={i18n.removeStudentAndRecordsHeader({studentName})} />
-          <div>
-            <SafeMarkdown markdown={i18n.removeStudentBody1()} />
-            <p>
-              <a
-                href={RELEASE_OR_DELETE_RECORDS_EXPLANATION}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {i18n.learnMore()}
-              </a>
-            </p>
-          </div>
-          <ConfirmCancelFooter
-            confirmText={i18n.removeStudent()}
-            confirmColor={Button.ButtonColor.red}
-            onConfirm={MINIMUM_TEST_PROPS.onConfirm}
-            onCancel={MINIMUM_TEST_PROPS.onCancel}
-            disableConfirm={false}
-            disableCancel={false}
-            tabIndex="1"
-          />
-        </div>
-      )
-    ).toBeTruthy();
-  });
+    it('renders the dialog with the correct header', () => {
+      renderComponent({hasEverSignedIn: true});
 
-  it('renders personal login help if student depends on this section for login', () => {
-    const wrapper = mount(
-      <ConfirmRemoveStudentDialog
-        {...MINIMUM_TEST_PROPS}
-        hasEverSignedIn={true}
-        dependsOnThisSectionForLogin={true}
-      />
-    );
-    expect(
-      wrapper.containsMatchingElement(
-        <div>
-          <Header text={i18n.removeStudentAndRecordsHeader({studentName})} />
-          <div>
-            <SafeMarkdown markdown={i18n.removeStudentBody1()} />
-            <p>
-              <a
-                href={RELEASE_OR_DELETE_RECORDS_EXPLANATION}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {i18n.learnMore()}
-              </a>
-            </p>
-            <div>
-              <p>{i18n.removeStudentBody2()}</p>
-              <Button
-                __useDeprecatedTag
-                text={i18n.removeStudentSendHomeInstructions()}
-                target="_blank"
-                rel="noopener noreferrer"
-                href={ADD_A_PERSONAL_LOGIN_HELP_URL}
-                color={Button.ButtonColor.blue}
-                size={Button.ButtonSize.large}
-                tabIndex="1"
-              />
-            </div>
-          </div>
-          <ConfirmCancelFooter
-            confirmText={i18n.removeStudent()}
-            confirmColor={Button.ButtonColor.red}
-            onConfirm={MINIMUM_TEST_PROPS.onConfirm}
-            onCancel={MINIMUM_TEST_PROPS.onCancel}
-            disableConfirm={false}
-            disableCancel={false}
-            tabIndex="1"
-          />
-        </div>
-      )
-    ).toBeTruthy();
+      expect(
+        screen.getByText(i18n.removeStudentAndRecordsHeader({studentName}))
+      ).toBeInTheDocument();
+      expect(screen.getByText(i18n.removeStudentBody1())).toBeInTheDocument();
+      expect(screen.getByText(i18n.learnMore())).toBeInTheDocument();
+    });
+
+    it('calls onConfirm when the confirm button is clicked', async () => {
+      const user = userEvent.setup();
+      renderComponent({hasEverSignedIn: true});
+      await user.click(getRemoveStudentButton());
+
+      expect(DEFAULT_PROPS.onConfirm).toHaveBeenCalled();
+    });
+
+    it('calls onCancel when the cancel button is clicked', async () => {
+      const user = userEvent.setup();
+      renderComponent({hasEverSignedIn: true});
+      await user.click(getCancelButton());
+
+      expect(DEFAULT_PROPS.onCancel).toHaveBeenCalled();
+    });
+
+    describe('when the student depends on this section for login', () => {
+      it('renders the "send home instructions" button', () => {
+        renderComponent({
+          hasEverSignedIn: true,
+          dependsOnThisSectionForLogin: true,
+        });
+
+        expect(screen.getByText(i18n.removeStudentBody2())).toBeInTheDocument();
+        expect(
+          screen.getByText(i18n.removeStudentSendHomeInstructions())
+        ).toBeInTheDocument();
+      });
+    });
+
+    describe('when the disable prop is true', () => {
+      it('disables the confirm and cancel buttons', () => {
+        renderComponent({
+          hasEverSignedIn: true,
+          disabled: true,
+        });
+
+        expect(getRemoveStudentButton()).toBeDisabled();
+        expect(getCancelButton()).toBeDisabled();
+      });
+    });
   });
 });

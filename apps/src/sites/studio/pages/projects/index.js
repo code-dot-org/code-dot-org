@@ -3,6 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
+import {displayDifferentiationChat} from '@cdo/apps/aiDifferentiation/aiDiffUtils';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import deleteDialogReducer from '@cdo/apps/templates/projects/deleteDialog/deleteProjectDialogRedux';
 import {Galleries} from '@cdo/apps/templates/projects/projectConstants';
@@ -14,14 +15,12 @@ import projects, {
   setPublicProjects,
   setCaptchaKey,
 } from '@cdo/apps/templates/projects/projectsRedux';
-import publishDialogReducer from '@cdo/apps/templates/projects/publishDialog/publishDialogRedux';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(() => {
   const projectsData = getScriptData('projects');
   registerReducers({
     projects,
-    publishDialog: publishDialogReducer,
     deleteDialog: deleteDialogReducer,
   });
   const store = getStore();
@@ -56,4 +55,5 @@ $(document).ready(() => {
     </Provider>,
     document.querySelector('#projects-page')
   );
+  displayDifferentiationChat();
 });

@@ -1,0 +1,20 @@
+name 'music-lab-loops-synthesis-scale_v2'
+title 'Career Interest'
+
+right '7 - Very interested'
+right '6 - Interested'
+right '5 - Somewhat interested'
+right '4 - Neutral'
+right '3 - Somewhat disinterested'
+right '2 - Disinterested'
+right '1 - Very disinterested'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+How interested are you in this career after today's lesson?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN

@@ -66,7 +66,7 @@ export default function initializeBlocklyXml(
       addNameToBlockFunctionDefinitionBlock(xmlChild);
       addMutationToProcedureDefBlocks(xmlChild);
       addMutationToMiniToolboxBlocks(xmlChild);
-      makeWhenRunUndeletable(xmlChild);
+      lockWhenRunBlock(xmlChild);
 
       const blockly_block = Blockly.Xml.domToBlock(xmlChild, workspace);
       const x = parseInt(xmlChild.getAttribute('x') || '0', 10);
@@ -177,11 +177,12 @@ export function addMutationToMiniToolboxBlocks(blockElement: Element) {
  *
  * @param {Element} blockElement - The XML element for a single block.
  */
-export function makeWhenRunUndeletable(blockElement: Element) {
+function lockWhenRunBlock(blockElement: Element) {
   if (blockElement.getAttribute('type') !== BLOCK_TYPES.whenRun) {
     return;
   }
   blockElement.setAttribute('deletable', 'false');
+  blockElement.setAttribute('movable', 'false');
 }
 
 /**
@@ -193,7 +194,7 @@ export function makeWhenRunUndeletable(blockElement: Element) {
  *
  * @param {Element} blockElement - The XML element for a single block.
  */
-export function addMutationToBehaviorBlocks(blockElement: Element) {
+function addMutationToBehaviorBlocks(blockElement: Element) {
   const blockType = blockElement.getAttribute('type');
   const behaviorTypes: string[] = [
     BLOCK_TYPES.behaviorDefinition,
@@ -240,7 +241,7 @@ export function addMutationToBehaviorBlocks(blockElement: Element) {
  *
  * @param {Element} blockElement - The XML element for a single block.
  */
-export function addMutationToProcedureDefBlocks(blockElement: Element) {
+function addMutationToProcedureDefBlocks(blockElement: Element) {
   if (blockElement.getAttribute('type') !== BLOCK_TYPES.procedureDefinition) {
     return;
   }
@@ -267,7 +268,7 @@ export function addMutationToProcedureDefBlocks(blockElement: Element) {
  *
  * @param {Element} blockElement - The XML element for a single block.
  */
-export function addMutationToInvisibleBlocks(blockElement: Element) {
+function addMutationToInvisibleBlocks(blockElement: Element) {
   const invisible = !readBooleanAttribute(
     blockElement,
     'uservisible',
@@ -290,7 +291,7 @@ export function addMutationToInvisibleBlocks(blockElement: Element) {
  * to the definition block's NAME field.
  * @param {Element} blockElement - The XML element for a single block.
  */
-export function addNameToBlockFunctionDefinitionBlock(blockElement: Element) {
+function addNameToBlockFunctionDefinitionBlock(blockElement: Element) {
   const blockType = blockElement.getAttribute('type');
   if (blockType !== BLOCK_TYPES.procedureDefinition) {
     return;
@@ -311,7 +312,7 @@ export function addNameToBlockFunctionDefinitionBlock(blockElement: Element) {
  *
  * @param {Element} blockElement - The XML element for a single block.
  */
-export function addNameToBlockFunctionCallBlock(blockElement: Element) {
+function addNameToBlockFunctionCallBlock(blockElement: Element) {
   const blockType = blockElement.getAttribute('type');
   if (blockType !== BLOCK_TYPES.procedureCall) {
     return;
@@ -369,7 +370,7 @@ function setIdFromTextContent(element: Element | null) {
  *
  * @param {Element} blockElement - The XML element for a single block.
  */
-export function addMutationToTextJoinBlock(blockElement: Element) {
+function addMutationToTextJoinBlock(blockElement: Element) {
   const blockType = blockElement.getAttribute('type');
   if (blockType && !['text_join', 'text_join_simple'].includes(blockType)) {
     return;
@@ -382,7 +383,9 @@ export function addMutationToTextJoinBlock(blockElement: Element) {
 
   // We need to keep track of the expected number of inputs in order to create them all.
   // Google Blockly expects this kind of extra state to be in a mutator.
-  const inputCount = blockElement.getAttribute('inputcount');
+  const inputCount =
+    mutationElement.getAttribute('items') ||
+    blockElement.getAttribute('inputcount');
   mutationElement.setAttribute('items', `${inputCount}`);
 }
 
@@ -450,7 +453,7 @@ function makeLockedBlockImmovable(block: Element) {
  * @param {Element} xml - The XML element containing block elements.
  * @returns {Element[]} An array of block elements or an empty array if no blocks are present.
  */
-export function getBlockElements(xml: Element) {
+function getBlockElements(xml: Element) {
   // Convert XML to an array of block elements
   return Array.from(xml.querySelectorAll('xml > block'));
 }

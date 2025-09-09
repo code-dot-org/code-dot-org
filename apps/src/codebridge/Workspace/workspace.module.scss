@@ -1,11 +1,6 @@
-@import 'color.scss';
-
 .workspace {
-  height: 100%;
-  grid-area: workspace;
-  color: $white;
-  overflow: visible;
-  z-index: 2;
+  color: var(--text-neutral-primary);
+  overflow: hidden;
 }
 
 .workspaceContainer {
@@ -15,7 +10,7 @@
 }
 
 .workspaceToggleButtonContainer {
-  background-color: $light_gray_900;
+  background-color: var(--background-neutral-tertiary);
   display: flex;
   align-items: center;
   padding-left: 4px;
@@ -29,6 +24,13 @@
   overflow: hidden;
   flex: 1;
   grid-column: span 2;
+
+  &:focus {
+    outline: var(--borders-brand-teal-primary) solid 2px;
+    outline-offset: 2px;
+    border-radius: 0.25rem;
+    z-index: 1;
+  }
 }
 
 .workplaceEditorWrapper.withFileBrowser {
@@ -38,7 +40,7 @@
 .workspaceWorkarea {
   display: grid;
   grid-template-columns: 34px auto;
-  grid-auto-rows: 32px 1fr auto;
+  grid-auto-rows: 40px 1fr auto;
   overflow: hidden;
   flex: 1;
 }
@@ -47,27 +49,27 @@
   grid-template-columns: 156px auto;
 }
 
-.workspaceAndConsole {
-  height: 100%;
-  grid-area: workspace-and-console;
-  background-color: $light_black;
-  color: $white;
-  overflow: hidden;
-}
-
 .workspaceWarningArea {
   grid-column: span 2;
 }
 
 .workspaceHeader {
-  border-bottom: 1px solid $light_gray_800;
-  margin-bottom: 0;
+  border-bottom: 1px solid var(--borders-neutral-primary);
+  height: 2rem;
+  min-height: 2rem;
 }
 
 .centerHeaderContent {
   display: flex;
   justify-content: center;
   gap: 4px;
+  overflow: hidden;
+
+  &Text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
 
 .lockedFilesBanner {
@@ -78,5 +80,15 @@
   display: flex;
   justify-content: flex-end;
   gap: 4px;
-  margin: 4px;
+}
+
+.buttonSkip {
+  flex-shrink: 1;
+  white-space: nowrap;
+  overflow: hidden;
+
+  span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }

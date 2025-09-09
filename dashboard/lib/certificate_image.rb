@@ -155,7 +155,7 @@ class CertificateImage
 
     template_file = certificate_template_for(course)
 
-    path = pegasus_dir('sites.v3', 'code.org', 'public', 'images', template_file)
+    path = dashboard_dir('app', 'assets', 'images', 'certificates', template_file)
     if prefilled_title_course?(course)
       # only need to fill in student name
       vertical_offset = course == '20-hour' ? -125 : -120
@@ -229,10 +229,10 @@ class CertificateImage
       apply_text(image, name, name_constants[:font_size], 'Helvetica bold', 'rgb(118,101,160)', name_constants[:x_offset], name_constants[:y_offset], name_constants[:width], name_constants[:height])
 
       # When we have a unit within a unit_group, we want to display both the unit and unit_group titles.
-      # When we have a standalone unit or the unit group, we only display the localized title of unit_or_unit_group.
-      if unit_or_unit_group.is_a?(Unit) && unit_or_unit_group.unit_group.present?
+      # When we have a unit group, we only display the localized title of unit_or_unit_group.
+      if unit_or_unit_group.is_a?(Unit) && unit_or_unit_group.get_original_unit_group.present?
         unit = unit_or_unit_group
-        unit_group = unit.unit_group
+        unit_group = unit.get_original_unit_group
 
         course_titles_constants = cert_text_constants[:two_titles]
 
@@ -349,6 +349,8 @@ class CertificateImage
       'MC_Hour_Of_Code_Certificate_mee_timecraft.png'
     elsif course == 'mee_estate'
       'MC_Hour_Of_Code_Certificate_mee_estate.png'
+    elsif course == ScriptConstants::MUSIC_JAM_2024
+      'music_hoc_certificate.png'
     elsif course == ScriptConstants::OCEANS_NAME
       'oceans_hoc_certificate.png'
     elsif accelerated_course?(course)

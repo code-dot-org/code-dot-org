@@ -1,0 +1,11 @@
+// Auto-import SASS generated CSS
+import './index.css';
+
+export type {TooltipProps, TooltipOverlayProps} from './_Tooltip';
+export {
+  default as default,
+  default as Tooltip,
+  TooltipOverlay,
+} from './_Tooltip';
+export type {WithTooltipProps, WithTooltipHandle} from './WithTooltip';
+export {default as WithTooltip} from './WithTooltip';

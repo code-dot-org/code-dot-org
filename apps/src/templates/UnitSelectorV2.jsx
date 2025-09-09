@@ -1,16 +1,20 @@
+import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {getStore} from '@cdo/apps/redux';
 import {
   asyncLoadCoursesWithProgress,
-  setScriptId,
+  setUnit,
+  getSelectedCourseId,
+  getSelectedUnitPosition,
 } from '@cdo/apps/redux/unitSelectionRedux';
 import {loadUnitProgress} from '@cdo/apps/templates/sectionProgress/sectionProgressLoader';
+import i18n from '@cdo/locale';
 
 import firehoseClient from '../metrics/firehose';
 
@@ -33,14 +37,19 @@ const recordEvent = (eventName, sectionId, dataJson = {}) => {
 };
 
 function UnitSelectorV2({
+  filterToSelectedCourse = false,
   sectionId,
-  scriptId,
+  unitId,
+  courseVersionId,
+  courseId,
+  unitPosition,
   coursesWithProgress,
   className,
-  setScriptId,
+  setUnit,
   asyncLoadCoursesWithProgress,
   isLoadingCourses,
   isLoadingSectionData,
+  selectedSectionCourse,
 }) {
   // Reload courses with progress when selected section changes.
   React.useEffect(() => {
@@ -49,12 +58,17 @@ function UnitSelectorV2({
     }
   }, [sectionId, asyncLoadCoursesWithProgress]);
 
-  const unitId = React.useMemo(() => scriptId, [scriptId]);
   const onSelectUnit = React.useCallback(
     e => {
-      const newUnitId = parseInt(e.target.value);
-      setScriptId(newUnitId);
-      loadUnitProgress(newUnitId, sectionId);
+      const value = e.target.value;
+      const [newCourseVersionId, newUnitId] = value
+        .split('-')
+        .map(id => parseInt(id));
+      setUnit(newUnitId, newCourseVersionId);
+      const currentState = getStore().getState();
+      const newCourseId = getSelectedCourseId(currentState);
+      const newUnitPosition = getSelectedUnitPosition(currentState);
+      loadUnitProgress(newUnitId, sectionId, newCourseId, newUnitPosition);
 
       recordEvent('change_script', sectionId, {
         old_script_id: unitId,
@@ -67,16 +81,26 @@ function UnitSelectorV2({
         unitId: newUnitId,
       });
     },
-    [unitId, setScriptId, sectionId]
+    [unitId, setUnit, sectionId]
   );
 
-  const itemGroups = coursesWithProgress.map(version => ({
-    label: version.display_name,
-    groupItems: version.units.map(unit => ({
-      value: unit.id,
-      text: unit.name,
-    })),
-  }));
+  const itemGroups = coursesWithProgress
+    .filter(
+      version =>
+        !filterToSelectedCourse ||
+        version.id === selectedSectionCourse ||
+        !version.id
+    )
+    .map(version => ({
+      label: version.display_name,
+      groupItems: version.units.map(unit => {
+        const itemValue = `${version.id}-${unit.id}`;
+        return {
+          value: itemValue,
+          text: unit.name,
+        };
+      }),
+    }));
 
   const loadingDropdown = () => (
     <div
@@ -87,15 +111,16 @@ function UnitSelectorV2({
     />
   );
 
-  return isLoadingSectionData ||
-    isLoadingCourses ||
-    !coursesWithProgress ||
-    coursesWithProgress.length === 0 ? (
-    loadingDropdown()
-  ) : (
+  if (isLoadingCourses || isLoadingSectionData) {
+    return loadingDropdown();
+  } else if (!coursesWithProgress || coursesWithProgress.length === 0) {
+    return null;
+  }
+
+  return (
     <SimpleDropdown
       itemGroups={itemGroups}
-      selectedValue={unitId}
+      selectedValue={`${courseVersionId}-${unitId}`}
       name="unitSelector"
       onChange={onSelectUnit}
       className={className}
@@ -104,34 +129,46 @@ function UnitSelectorV2({
       dropdownTextThickness="thin"
       id="unit-selector-v2"
       color="gray"
+      labelText={i18n.selectUnit()}
     />
   );
 }
 
 UnitSelectorV2.propTypes = {
-  scriptId: PropTypes.number,
+  filterToSelectedCourse: PropTypes.bool,
+  unitId: PropTypes.number,
+  courseVersionId: PropTypes.number,
+  courseId: PropTypes.number,
+  unitPosition: PropTypes.number,
   sectionId: PropTypes.number,
   coursesWithProgress: PropTypes.array.isRequired,
-  setScriptId: PropTypes.func.isRequired,
+  setUnit: PropTypes.func.isRequired,
   className: PropTypes.string,
   asyncLoadCoursesWithProgress: PropTypes.func.isRequired,
   isLoadingCourses: PropTypes.bool,
   isLoadingSectionData: PropTypes.bool.isRequired,
+  selectedSectionCourse: PropTypes.any,
 };
 
 export const UnconnectedUnitSelectorV2 = UnitSelectorV2;
 
 export default connect(
   state => ({
-    scriptId: state.unitSelection.scriptId,
+    unitId: state.unitSelection.scriptId,
+    courseVersionId: state.unitSelection.courseVersionId,
+    courseId: getSelectedCourseId(state),
+    unitPosition: getSelectedUnitPosition(state),
     sectionId: state.teacherSections.selectedSectionId,
     coursesWithProgress: state.unitSelection.coursesWithProgress,
     isLoadingCourses: state.unitSelection.isLoadingCoursesWithProgress,
     isLoadingSectionData: state.teacherSections.isLoadingSectionData,
+    selectedSectionCourse:
+      state.teacherSections.sections[state.teacherSections.selectedSectionId]
+        ?.courseVersionId,
   }),
   dispatch => ({
-    setScriptId(scriptId) {
-      dispatch(setScriptId(scriptId));
+    setUnit(unitId, courseVersionId) {
+      dispatch(setUnit(unitId, courseVersionId));
     },
     asyncLoadCoursesWithProgress() {
       dispatch(asyncLoadCoursesWithProgress());

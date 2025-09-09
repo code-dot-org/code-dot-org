@@ -1,0 +1,42 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2025-01-27T23:28:43.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "### Do This: \r\nThere is a new line of code called `return`. \r\n\r\n- Look at the code and predict what will happen when you run it.\r\n- What do you think the return statement do?\r\n- What do you think is the purpose of str() in the print statement? ",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": true,
+      "solution": "The add_numbers function has a parameters `a` and `b`. Functions can send back a value using the `return` keyword. The returned value can be stored in a variable or printed. \n\nprint() can only combine strings with strings. Putting the str in front of the `result` will convert the numbers to strings for printing.",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "def add_numbers(a, b):\n    return a + b\n\nresult = add_numbers(3, 5)\nprint(\"The sum is \" + str(result))",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        }
+      },
+      "folders": {
+      }
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2025-01-27T23:28:43.240+00:00\",\"changed\":[\"cloned from \\\"python-intro-console-lesson8-debugParam\\\"\"],\"cloned_from\":\"python-intro-console-lesson8-debugParam\"},{\"changed_at\":\"2025-01-27 23:33:52 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-27 23:34:08 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-28 17:13:13 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+</Pythonlab>

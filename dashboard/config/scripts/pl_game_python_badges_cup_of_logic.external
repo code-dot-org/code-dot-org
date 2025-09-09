@@ -1,0 +1,17 @@
+name 'pl-game-python-badges-cup-of-logic'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Congratulations, Navigator! 
+
+#### You’ve earned the **Cup of Logic**, a symbol of your growing mastery over Python’s foundational concepts.
+
+#### With each sip of knowledge, you’ve strengthened your understanding of syntax, structure, and problem-solving. 
+
+#### Your journey is just beginning—keep fueling your skills and guiding others on the path to coding success!
+
+<img src="https://images.code.org/7da016354c53cd6f35c1d42daab27a15-image-1749223270798.png" alt="spiral notebook with the cup of logic badge and blank spaces for 3 more badges" width="450px" style="display: block; margin-left: auto; margin-right: auto;">
+
+
+MARKDOWN

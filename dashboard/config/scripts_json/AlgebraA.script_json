@@ -17,19 +17,17 @@
       ],
       "curriculum_path": "https://curriculum.code.org/{LOCALE}/algebra/courseA/{LESSON}",
       "hideable_lessons": true,
-      "is_course": true,
+      "is_deprecated": true,
       "is_migrated": true,
-      "use_legacy_lesson_plans": true,
-      "version_year": "unversioned",
-      "is_deprecated": true
+      "use_legacy_lesson_plans": true
     },
     "new_name": null,
-    "family_name": "algebraa",
-    "serialized_at": "2023-04-28 19:14:05 UTC",
-    "published_state": "stable",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "family_name": null,
+    "serialized_at": "2025-03-28 09:28:19 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "AlgebraA"
     }
@@ -3528,6 +3526,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

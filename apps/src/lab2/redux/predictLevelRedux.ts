@@ -49,7 +49,29 @@ export const resetPredictProgress = createAsyncThunk<
   }
 });
 
+export const submitPredictResponse =
+  ({appType}: {appType: string}) =>
+  (dispatch: AppDispatch, getState: () => RootState) => {
+    const state = getState();
+    const isPredictLevel = Boolean(
+      state.lab.levelProperties?.predictSettings?.isPredictLevel
+    );
+    const predictAnswerLocked = isPredictAnswerLocked(state);
+
+    if (isPredictLevel && !predictAnswerLocked) {
+      const predictResponse = state.predictLevel.response;
+      dispatch(
+        sendPredictLevelReport({
+          appType,
+          predictResponse,
+        })
+      );
+    }
+  };
+
 // SELECTORS
+export const isPredictResponseSubmitted = (state: RootState) =>
+  state.predictLevel.hasSubmittedResponse;
 
 // The predict answer is locked if the level does not allow multiple predict attempts
 // and the user has already submitted a response.
@@ -57,7 +79,7 @@ export const isPredictAnswerLocked = createSelector(
   [
     (state: RootState) =>
       state.lab.levelProperties?.predictSettings?.allowMultipleAttempts,
-    (state: RootState) => state.predictLevel.hasSubmittedResponse,
+    isPredictResponseSubmitted,
   ],
   (allowMultipleAttempts, hasSubmittedResponse) => {
     return !allowMultipleAttempts && hasSubmittedResponse;
@@ -71,6 +93,10 @@ const predictSlice = createSlice({
   reducers: {
     setPredictResponse(state, action: PayloadAction<string>) {
       state.response = action.payload;
+    },
+    setHasSubmittedResponse(state, action: PayloadAction<boolean>) {
+      // Should only be used by unit tests.
+      state.hasSubmittedResponse = action.payload;
     },
   },
   extraReducers: builder => {
@@ -97,6 +123,7 @@ const predictSlice = createSlice({
   },
 });
 
-export const {setPredictResponse} = predictSlice.actions;
+export const {setPredictResponse, setHasSubmittedResponse} =
+  predictSlice.actions;
 
 export default predictSlice.reducer;

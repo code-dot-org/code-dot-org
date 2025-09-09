@@ -15,8 +15,6 @@ module Pd
       COURSE_CSP => CDO.code_org_url('/educate/csp'),
       COURSE_CSA => CDO.code_org_url('/educate/csa'),
       COURSE_CSD => CDO.code_org_url('/educate/csd'),
-      COURSE_CS_IN_S => CDO.code_org_url('/curriculum/science'),
-      COURSE_CS_IN_A => CDO.code_org_url('/educate/algebra'),
       COURSE_ECS => 'http://www.exploringcs.org/'
     }.freeze
 

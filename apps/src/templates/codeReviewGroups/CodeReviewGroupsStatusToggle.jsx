@@ -1,8 +1,8 @@
+import Toggle from '@code-dot-org/component-library/toggle';
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 import {connect} from 'react-redux';
 
-import Toggle from '@cdo/apps/componentLibrary/toggle/Toggle';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import {setSectionCodeReviewExpiresAt} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';

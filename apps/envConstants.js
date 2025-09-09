@@ -34,11 +34,12 @@ module.exports = {
   COVERAGE: getBoolEnv('COVERAGE'),
   // 'unit', 'integration', 'storybook', or 'entry'
   NODE_ENV: process.env.NODE_ENV,
-  CIRCLECI: process.env.CIRCLECI,
-  DRONE: process.env.DRONE,
-  CIRCLE_TEST_REPORTS: process.env.CIRCLE_TEST_REPORTS,
+  CI: process.env.CI,
+  CI_TEST_REPORTS: process.env.CI_TEST_REPORTS,
   // If set, run webpack dev server (with hot reloading)
   HOT: process.env.HOT === '1',
   // Include static assets when serving storybook locally
   STORYBOOK_STATIC_ASSETS: process.env.STORYBOOK_STATIC_ASSETS,
+  // set Statsig local_mode to false to send events to statsig during local development
+  STATSIG_LOCAL_MODE_OFF: process.env.STATSIG_LOCAL_MODE_OFF,
 };

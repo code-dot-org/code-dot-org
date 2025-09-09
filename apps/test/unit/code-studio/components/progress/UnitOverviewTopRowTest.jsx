@@ -1,12 +1,21 @@
+import {render, screen} from '@testing-library/react';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import {Provider} from 'react-redux';
 
 import BulkLessonVisibilityToggle from '@cdo/apps/code-studio/components/progress/BulkLessonVisibilityToggle';
 import UnitCalendarButton from '@cdo/apps/code-studio/components/progress/UnitCalendarButton';
 import {UnconnectedUnitOverviewTopRow as UnitOverviewTopRow} from '@cdo/apps/code-studio/components/progress/UnitOverviewTopRow';
+import progress, {initProgress} from '@cdo/apps/code-studio/progressRedux';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import Button from '@cdo/apps/legacySharedComponents/Button';
+import {getStore, registerReducers} from '@cdo/apps/redux';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
+import teacherSections, {
+  selectSection,
+  setSections,
+  setStudentsForCurrentSection,
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import i18n from '@cdo/locale';
 
 import {testLessons} from './unitCalendarTestData';
@@ -15,6 +24,7 @@ const defaultProps = {
   sectionsForDropdown: [],
   scriptId: 42,
   scriptName: 'test-script',
+  scriptPath: '/courses/test-course/units/1',
   unitTitle: 'Unit test script title',
   unitAllowsHiddenLessons: true,
   viewAs: ViewType.Participant,
@@ -28,7 +38,65 @@ const defaultProps = {
   isUnitWithLevels: true,
 };
 
+const SECTIONS = [
+  {
+    id: 11,
+    name: 'Period 1',
+    hidden: false,
+    course_id: 1,
+    course_offering_id: 11,
+    participant_type: 'student',
+    code: 'aaa',
+  },
+  {
+    id: 12,
+    name: 'Period 2',
+    hidden: false,
+    course_id: null,
+    course_offering_id: null,
+    participant_type: 'student',
+    code: 'bbb',
+  },
+];
+
+const STUDENTS = [
+  {
+    id: 1,
+    familyName: 'hill',
+    name: 'bobby',
+    userType: 'student',
+  },
+  {
+    id: 2,
+    familyName: 'morgendorffer',
+    name: 'daria',
+    userType: 'student',
+  },
+];
+
+const PROGRESS = {
+  currentLevelId: 1,
+  currentLessonId: 1,
+  lessons: [],
+  lessonGroups: [],
+};
+
 describe('UnitOverviewTopRow', () => {
+  let store;
+
+  beforeEach(() => {
+    store = getStore();
+    registerReducers({progress, teacherSections});
+    store.dispatch(setSections(SECTIONS));
+    store.dispatch(selectSection(11));
+    store.dispatch(setStudentsForCurrentSection(11, STUDENTS));
+    store.dispatch(initProgress(PROGRESS));
+  });
+
+  afterEach(() => {
+    jest.restoreAllMocks();
+  });
+
   it('renders "Try Now" for participant if not unitCompleted and not hasPerLevelResults', () => {
     const wrapper = shallow(
       <UnitOverviewTopRow
@@ -43,7 +111,7 @@ describe('UnitOverviewTopRow', () => {
         <div>
           <Button
             __useDeprecatedTag
-            href="/s/test-script/next"
+            href="/courses/test-course/units/1/next"
             text={i18n.tryNow()}
             size={Button.ButtonSize.large}
           />
@@ -69,7 +137,7 @@ describe('UnitOverviewTopRow', () => {
       wrapper.containsMatchingElement(
         <Button
           __useDeprecatedTag
-          href="/s/test-script/next"
+          href="/courses/test-course/units/1/next"
           text={i18n.tryNow()}
           size={Button.ButtonSize.large}
         />
@@ -91,7 +159,7 @@ describe('UnitOverviewTopRow', () => {
       wrapper.containsMatchingElement(
         <Button
           __useDeprecatedTag
-          href="/s/test-script/next"
+          href="/courses/test-course/units/1/next"
           text={i18n.continue()}
           size={Button.ButtonSize.large}
         />
@@ -112,7 +180,7 @@ describe('UnitOverviewTopRow', () => {
       wrapper.containsMatchingElement(
         <Button
           __useDeprecatedTag
-          href="/s/test-script/next"
+          href="/courses/test-course/units/1/next"
           text={i18n.printCertificate()}
           size={Button.ButtonSize.large}
         />
@@ -238,5 +306,20 @@ describe('UnitOverviewTopRow', () => {
       />
     );
     expect(wrapper.find(DropdownButton).length).toBe(0);
+  });
+
+  it('renders student select dropdown if user is teacher', () => {
+    render(
+      <Provider store={store}>
+        <UnitOverviewTopRow
+          {...defaultProps}
+          publishedState="in_development"
+          scriptOverviewPdfUrl="/link/to/script_overview.pdf"
+          scriptResourcesPdfUrl="/link/to/script_resources.pdf"
+          viewAs={ViewType.Instructor}
+        />
+      </Provider>
+    );
+    screen.getByLabelText(i18n.viewingProgressFor());
   });
 });

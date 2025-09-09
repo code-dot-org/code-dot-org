@@ -27,4 +27,5 @@ export const UpdateContext = createContext({
     additionalModelIds: ValueOf<typeof AiChatModelIds>[],
     selectedModelId: ValueOf<typeof AiChatModelIds>
   ) => {},
+  setMultimodalEnabled: (value: boolean) => {},
 });

@@ -2,16 +2,13 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
-import {PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import i18n from '@cdo/locale';
 
 import {beginEditingSection} from '../teacherDashboard/teacherSectionsRedux';
 
 import BorderedCallToAction from './BorderedCallToAction';
-
-// Amplitude analytics events.
-const STARTED_EVENT = 'Section Setup Started';
 
 class SetUpSections extends Component {
   static propTypes = {
@@ -29,7 +26,11 @@ class SetUpSections extends Component {
   };
 
   recordSectionSetupStartedEvent = () => {
-    analyticsReporter.sendEvent(STARTED_EVENT, {}, PLATFORMS.BOTH);
+    analyticsReporter.sendEvent(
+      EVENTS.SECTION_SETUP_STARTED,
+      {},
+      PLATFORMS.BOTH
+    );
   };
 
   render() {

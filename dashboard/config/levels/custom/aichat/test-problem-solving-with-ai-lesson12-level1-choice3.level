@@ -1,0 +1,56 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2025-03-24T19:37:43.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "multimodalEnabled": true
+    },
+    "display_name": "AI In Public Transportation",
+    "thumbnail_url": "https://images.code.org/4f71f8004793cde292dd34a4c3369d33-public-transport.png",
+    "starter_assets": {
+      "AI, Energy, and the Environment.pdf": "f746b9f1-abd9-4aaf-9222-96b4b9b19124.pdf",
+      "AI Takes Over the Transit System!.pdf": "f01490ca-5547-4d24-9d32-d6f8d457e4d1.pdf",
+      "AI Takes the Wheel_ How Public Transportation Is Getting Smarter.pdf": "bc9179df-28cf-43ce-88b9-f9d4c4231464.pdf",
+      "When AI Drives the Bus, Who’s Really in Control_.pdf": "a1ff17d7-324c-4602-be6c-588235bea8a3.pdf"
+    },
+    "long_instructions": "##AI in My Community: Helpful or Harmful?\r\n###Public Transportation\r\nYou're going to be working with news articles about Artificial Intelligence (AI). The text of each article is already attached within the assets section of the chatbot, so you can ask the AI questions directly about it.\r\n\r\n###Instructions\r\n* Click  **Upload** > **From Library**. Select the article(s) that you wish the chatbot to engage with.\r\n* Use the  chatbot to help you summarize the selected articles, find key points, and gain insights\r\n* Record outputs in your activity guide, focusing specifically on the following:\r\n\t* _Who in the community benefits most from this AI?_\r\n    * _Who is most harmed by it?_\r\n    * _Are there any negative effects or unintended consequences, such as environmental impact?_\r\n\r\nExperiment with different combinations of articles for different insights!\r\n"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-03-24T19:37:43.062+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson12-level1-choice2\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson12-level1-choice2\"},{\"changed_at\":\"2025-03-24 19:37:44 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-24 19:39:34 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-26 19:54:52 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-26 19:54:57 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-03-26 20:56:37 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Aichat>

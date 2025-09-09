@@ -1,7 +1,10 @@
+import Link from '@code-dot-org/component-library/link';
+import {
+  BodyThreeText,
+  Heading3,
+} from '@code-dot-org/component-library/typography';
 import React from 'react';
 
-import Link from '@cdo/apps/componentLibrary/link';
-import {BodyThreeText, Heading3} from '@cdo/apps/componentLibrary/typography';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
@@ -42,9 +45,9 @@ const CopyrightDialog: React.FC<CopyrightDialogProps> = ({
         <div className="modalBody">
           <SafeMarkdown
             markdown={i18n.copyright_thanks({
-              donors_link: pegasus('about/donors'),
-              partners_link: pegasus('about/partners'),
-              team_link: pegasus('about/team'),
+              donors_link: pegasus('/about/donors'),
+              partners_link: pegasus('/about/partners'),
+              team_link: pegasus('/about/team'),
             })}
           />
           <BodyThreeText>{i18n.copyright_specialRecognition()}</BodyThreeText>

@@ -1,6 +1,5 @@
 <Weblab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 58,
   "created_at": "2023-11-28T16:58:28.000Z",
   "level_num": "custom",
@@ -19,13 +18,11 @@
     "mini_rubric": "false",
     "validation_enabled": "true",
     "display_name": "Write a Poem",
-    "bubble_choice_description": "Use paragraph tags to write you own poetry, with each line separated by paragraph tags!",
-    "thumbnail_url": "https://images.code.org/f4fe6889cc77a1a01edb9b865d2c6931-image-1665178064418.png",
-    "encrypted_examples": [
-
-    ]
+    "bubble_choice_description": "Use paragraph tags to write your own poetry, with each line separated by paragraph tags!",
+    "thumbnail_url": "https://images.code.org/f4fe6889cc77a1a01edb9b865d2c6931-image-1665178064418.png"
   },
+  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-11-28T16:58:28.140+00:00\",\"changed\":[\"cloned from \\\"CSD U2L2 - ChalD_2023\\\"\"],\"cloned_from\":\"CSD U2L2 - ChalD_2023\"},{\"changed_at\":\"2024-01-10 18:14:49 +0000\",\"changed\":[\"hide_share_and_remix\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-06-25 16:06:51 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":17326,\"changed_by_email\":\"larsensn@yahoo.com\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-11-28T16:58:28.140+00:00\",\"changed\":[\"cloned from \\\"CSD U2L2 - ChalD_2023\\\"\"],\"cloned_from\":\"CSD U2L2 - ChalD_2023\"},{\"changed_at\":\"2024-01-10 18:14:49 +0000\",\"changed\":[\"hide_share_and_remix\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-06-25 16:06:51 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":17326,\"changed_by_email\":\"larsensn@yahoo.com\"},{\"changed_at\":\"2025-01-27 22:30:01 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab>

@@ -1,0 +1,6 @@
+@use '@fontsource-variable/noto-sans-jp/scss/mixins' as NotoSansJp;
+@include NotoSansJp.faces($family: 'Noto Sans JP');
+
+.className {
+  font-family: 'Noto Sans JP', sans-serif;
+}

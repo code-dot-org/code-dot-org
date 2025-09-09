@@ -49,7 +49,7 @@ describe('ProgrammingEnvironmentEditor', () => {
 
     const editorLanguageSelect = wrapper.find('select').at(0);
     expect(editorLanguageSelect.props().value).to.equal('blockly');
-    expect(editorLanguageSelect.find('option').length).to.equal(4);
+    expect(editorLanguageSelect.find('option').length).to.equal(5);
 
     const blockPoolInput = wrapper.find('input').at(3);
     expect(blockPoolInput.props().value).to.equal('GamelabJr');

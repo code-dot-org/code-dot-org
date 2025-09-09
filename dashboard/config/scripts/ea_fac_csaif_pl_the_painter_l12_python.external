@@ -1,0 +1,87 @@
+name 'ea-fac-csaif_pl_the-painter_L12_Python'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Meet the Painter 
+
+
+#### In the Neighborhood IDE, the object you will work with the **The Painter** object.
+
+#### Remember, objects have attributes and methods. 
+
+- #### An **attribute** is a characteristic the object has.
+- #### A **method** is an action that an object can perform.
+
+## The Painter Object
+
+<div style="display: flex; width: 80%; margin: auto; gap: 20px; align-items: flex-start;">
+        <div>
+            <img src="https://images.code.org/98110267b6c3ee2f93700b03b95d940b-image-1741026340788.png" alt="The painter" style="width: 100%; object-fit: cover; border-radius: 10px;">
+        </div>
+        <div style="flex: 1; display: flex; gap: 20px;">
+            <div style="background-color: #DECEEA; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); text-align: center; flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 200px;">
+                <p style="font-size: 14pt; font-weight: bold; margin: 0;">Attributes</p>
+                <ul style="list-style-type: none; padding: 0; text-align: center; margin: 10px 0;">
+                    <li style="font-size: 12pt; line-height: 1.5;">x_location = 0</li>
+                    <li style="font-size: 12pt; line-height: 1.5;">y_location = 0</li>
+                    <li style="font-size: 12pt; line-height: 1.5;">direction = "east"</li>
+                    <li style="font-size: 12pt; line-height: 1.5;">paint = 0</li>
+                </ul>
+            </div>
+            <div style="background-color: #DECEEA; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); text-align: center; flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 200px;">
+                <p style="font-size: 14pt; font-weight: bold; margin: 0;">Methods</p>
+                <ul style="list-style-type: none; padding: 0; text-align: center; margin: 10px 0;">
+                    <li style="font-size: 12pt; line-height: 1.5;">move()</li>
+                    <li style="font-size: 12pt; line-height: 1.5;">turn_left()</li>
+                    <li style="font-size: 12pt; line-height: 1.5;">take_paint()</li>
+                    <li style="font-size: 12pt; line-height: 1.5;">paint(color)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+---
+
+## Dot Notation
+
+<div style="background-color: #F5F7F8; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
+       <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">
+        Dot notation accesses an object's attributes or methods using a dot (.)
+    </p>
+    <ul>
+    <li style="font-size: 14pt; font-weight: bold;">painter.move()</li><br>
+    <li style="font-size: 14pt; font-weight: bold;">painter.turn_left()</li>
+    </ul>
+   
+</div>
+
+## Getting Started with Objects
+
+#### In simple terms, there are two steps to get starting with objects. 
+- #### 1. Create the object with a variable name. This is called **instantiating** an object.
+- #### 2. Tell the object what to do using methods.
+
+#### See what this looks like in code: 
+
+<table border="1" width="100%" cellpadding="10">
+        <tr>
+            <td width="33%">
+                <img src="https://images.code.org/7d0849ab4adda8a45784b7b4fd541339-image-1741277550544.png" alt="painter = Painter()" width="130%">
+            </td>
+            <td width="67%" style="font-size:14pt;">
+            First, <b>instantiate</b> the object by creating a new instance of the <code>Painter</code> class. <br><br> This is done by assigning the <code> Painter()</code> object to a variable.<br> <i>Here, the variable name is <span style="color:red;">painter</span>, but you can use any name.</i> 
+            </td>
+        </tr>
+        <tr>
+            <td width="33%">
+                <img src="https://images.code.org/069ae6b084ee5e4a0a89a6ad174df043-image-1741277578060.png" alt="painter.move()" width="100%">
+            </td>
+            <td width="67%" style="font-size:14pt;">
+                Now that new object has been <b>instantiated</b>, it has access to the methods defined by the <code>Painter</code>class. <br><br> You can use <b>dot notation</b> to call the methods, like <code>painter.move()</code> or <code>painter.turn_left()</code>
+            </td>
+        </tr>
+ </table>
+
+## Let's try! 
+MARKDOWN

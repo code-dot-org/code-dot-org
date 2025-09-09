@@ -25,6 +25,10 @@ const DEPRECATED_SONGS = [
   'occidentalview_francescogabbani',
   'oldtownroadremix_lilnasx',
   'oldtownroadremix_lilnasx_long',
+  'highhopes_panicatthedisco',
+  'starships_nickiminaj',
+  'sucker_jonasbrothers',
+  'calma_pedrocapo',
 ];
 
 /**

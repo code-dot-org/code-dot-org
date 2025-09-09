@@ -1,0 +1,23 @@
+{
+  "key": "teaching-problem-solving-with-ai",
+  "display_name": "Teaching Problem Solving with AI",
+  "is_featured": false,
+  "assignable": true,
+  "curriculum_type": "Professional Learning",
+  "marketing_initiative": "AIF",
+  "grade_levels": "9,10,11,12",
+  "header": "self_paced",
+  "image": "https://images.code.org/6d76b0c3a1156edcf4e5e52f07205342-problem-solving-with-ai.jpg",
+  "cs_topic": "artificial_intelligence",
+  "school_subject": null,
+  "device_compatibility": null,
+  "description": "This self-paced professional learning module provides educators with a comprehensive understanding of the curriculum, enabling them to effectively guide students through the AIF Problem Solving with AI Unit.",
+  "professional_learning_program": null,
+  "video": null,
+  "published_date": "2025-05-30 04:00:00 UTC",
+  "self_paced_pl_course_offering_key": "teaching-problem-solving-with-ai",
+  "ai_teaching_assistant_available": false,
+  "facilitator_course_permissions": [
+
+  ]
+}

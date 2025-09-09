@@ -1,0 +1,179 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-05-31T02:57:02.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "packId": "default",
+      "sounds": {
+        "electro": [
+          "drum_beat_cowbell",
+          "drum_beat_club",
+          "drum_beat_edm"
+        ],
+        "pop": [
+          "clap"
+        ]
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "next": {
+                "block": {
+                  "type": "set_effect_at_current_location_simple2",
+                  "id": "[D1MMru.60!tLi9?F^c_",
+                  "fields": {
+                    "effects_name": "<field name=\"effects_name\">volume</field>",
+                    "effects_value": "<field name=\"effects_value\">low</field>"
+                  },
+                  "next": {
+                    "block": {
+                      "type": "play_sound_at_current_location_simple2",
+                      "id": "play_sound_at_current_location_simple2",
+                      "extraState": {
+                        "disableNextConnection": false
+                      },
+                      "fields": {
+                        "sound": "pop/clap"
+                      },
+                      "next": {
+                        "block": {
+                          "type": "set_effect_at_current_location_simple2",
+                          "id": "6bw`c79?_DE6Dx6_e~J!",
+                          "fields": {
+                            "effects_name": "<field name=\"effects_name\">volume</field>",
+                            "effects_value": "<field name=\"effects_value\">medium</field>"
+                          },
+                          "next": {
+                            "block": {
+                              "type": "play_sound_at_current_location_simple2",
+                              "id": "Rbszx7Iu^K6f2[|)P+)0",
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
+                              "fields": {
+                                "sound": "pop/clap"
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "set_effect_at_current_location_simple2",
+                                  "id": "krj`]KUwMmoJf*sK[(Xs",
+                                  "fields": {
+                                    "effects_name": "<field name=\"effects_name\">volume</field>",
+                                    "effects_value": "<field name=\"effects_value\">normal</field>"
+                                  },
+                                  "next": {
+                                    "block": {
+                                      "type": "play_sound_at_current_location_simple2",
+                                      "id": "t#oJ30TI|.n0kN{)2;O9",
+                                      "extraState": {
+                                        "disableNextConnection": false
+                                      },
+                                      "fields": {
+                                        "sound": "pop/clap"
+                                      },
+                                      "next": {
+                                        "block": {
+                                          "type": "set_effect_at_current_location_simple2",
+                                          "id": "IJ+4bs=,J+BqmL:$5[.D",
+                                          "fields": {
+                                            "effects_name": "<field name=\"effects_name\">delay</field>",
+                                            "effects_value": "<field name=\"effects_value\">medium</field>"
+                                          },
+                                          "next": {
+                                            "block": {
+                                              "type": "play_sound_at_current_location_simple2",
+                                              "id": "h!fdb#0%5:/5xIR3OE0c",
+                                              "extraState": {
+                                                "disableNextConnection": false
+                                              },
+                                              "fields": {
+                                                "sound": "pop/clap"
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "toolbox": {
+        "blocks": {
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "validationTimeout": 1
+    },
+    "long_instructions": "### Predict\r\nThere are new blocks in this song! What do you think they're doing to the Clap effect? What do you think the song will sound like?",
+    "predict_settings": {
+      "isPredictLevel": true,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "freeResponseHeight": null,
+      "codeEditableAfterSubmit": false
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
+    "validations": [
+      {
+        "key": "test-music-lab-sequences-synthesize-filters-predict_ea81fa49-240f-4456-98c3-81496d72b5b8",
+        "message": "",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 4
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-sequences-synthesize-filters-predict_809a4097-6368-46ef-b3e7-68364c05e8b7",
+        "message": "Listen to how the effects change each track!",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "name_suffix": "_v2",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:57:02.526+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-synthesize-filters-predict\\\"\"],\"cloned_from\":\"test-music-lab-sequences-synthesize-filters-predict\"},{\"changed_at\":\"2025-06-09 23:05:02 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

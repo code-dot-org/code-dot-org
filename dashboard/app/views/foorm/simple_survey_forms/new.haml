@@ -18,7 +18,7 @@
     = f.label :form_key, 'Form to appear on page:'
     = select_tag :form_key,
       options_from_collection_for_select(Foorm::Form.where(published: true), 'key', 'key'),
-      style: 'width: 300px'
+      style: 'width: 80%'
   .field
     = f.label :kind, 'Survey identifier (optional, for analysis)'
     = f.text_field :kind

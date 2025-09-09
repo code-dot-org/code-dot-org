@@ -13,11 +13,7 @@ describe('buildSchoolData', () => {
       });
 
       expect(result).toEqual({
-        user: {
-          school_info_attributes: {
-            school_id: '12345',
-          },
-        },
+        school_id: '12345',
       });
     });
 
@@ -30,13 +26,9 @@ describe('buildSchoolData', () => {
       });
 
       expect(result).toEqual({
-        user: {
-          school_info_attributes: {
-            country: US_COUNTRY_CODE,
-            school_name: 'Test School',
-            zip: '54321',
-          },
-        },
+        country: US_COUNTRY_CODE,
+        school_name: 'Test School',
+        zip: '54321',
       });
     });
 
@@ -49,13 +41,9 @@ describe('buildSchoolData', () => {
       });
 
       expect(result).toEqual({
-        user: {
-          school_info_attributes: {
-            country: US_COUNTRY_CODE,
-            school_name: 'Test School',
-            zip: '54321',
-          },
-        },
+        country: US_COUNTRY_CODE,
+        school_name: 'Test School',
+        zip: '54321',
       });
     });
 
@@ -68,13 +56,9 @@ describe('buildSchoolData', () => {
       });
 
       expect(result).toEqual({
-        user: {
-          school_info_attributes: {
-            country: US_COUNTRY_CODE,
-            school_name: 'Test School',
-            zip: '54321',
-          },
-        },
+        country: US_COUNTRY_CODE,
+        school_name: 'Test School',
+        zip: '54321',
       });
     });
 
@@ -87,14 +71,32 @@ describe('buildSchoolData', () => {
       });
 
       expect(result).toEqual({
-        user: {
-          school_info_attributes: {
-            country: 'US',
-            school_type: NonSchoolOptions.NO_SCHOOL_SETTING,
-            zip: '54321',
-          },
-        },
+        country: 'US',
+        school_type: NonSchoolOptions.NO_SCHOOL_SETTING,
+        zip: '54321',
       });
+    });
+
+    it('should return undefined when schoolId is NO_SCHOOL_SETTING but no school zip', () => {
+      const result = buildSchoolData({
+        schoolId: NonSchoolOptions.NO_SCHOOL_SETTING,
+        country: 'US',
+        schoolName: 'Test School',
+        schoolZip: '',
+      });
+
+      expect(result).toBeUndefined();
+    });
+
+    it('should return undefined when country and zip is provided but no school name', () => {
+      const result = buildSchoolData({
+        schoolId: '',
+        country: 'US',
+        schoolName: '',
+        schoolZip: '12345',
+      });
+
+      expect(result).toBeUndefined();
     });
   });
 
@@ -108,12 +110,8 @@ describe('buildSchoolData', () => {
       });
 
       expect(result).toEqual({
-        user: {
-          school_info_attributes: {
-            country: 'CA',
-            school_name: 'Test School',
-          },
-        },
+        country: 'CA',
+        school_name: 'Test School',
       });
     });
 
@@ -129,12 +127,8 @@ describe('buildSchoolData', () => {
       });
 
       expect(result).toEqual({
-        user: {
-          school_info_attributes: {
-            country: 'CA',
-            school_name: 'Cool School',
-          },
-        },
+        country: 'CA',
+        school_name: 'Cool School',
       });
     });
   });
@@ -143,6 +137,17 @@ describe('buildSchoolData', () => {
     const result = buildSchoolData({
       schoolId: '',
       country: '',
+      schoolName: '',
+      schoolZip: '',
+    });
+
+    expect(result).toBeUndefined();
+  });
+
+  it('should return undefined when country is provided but no school name', () => {
+    const result = buildSchoolData({
+      schoolId: '',
+      country: 'UK',
       schoolName: '',
       schoolZip: '',
     });

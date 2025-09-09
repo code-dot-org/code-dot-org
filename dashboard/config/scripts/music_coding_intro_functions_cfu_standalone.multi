@@ -1,0 +1,16 @@
+name 'music-coding-intro-functions-cfu_standalone'
+title 'Functions make our code more ...'
+question '*Choose one to complete the sentence:*'
+wrong 'Slow'
+wrong 'Long'
+wrong 'Difficult'
+right 'Efficient'
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+<div style="text-align: center;">
+  <h2><strong>For example:</strong></h2>
+</div>
+
+![](https://images.code.org/db5e92654347bbbd1e42dbc72f9dda64-image-1745534414845.jpg)
+MARKDOWN

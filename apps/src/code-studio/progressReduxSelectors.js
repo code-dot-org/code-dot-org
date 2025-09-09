@@ -19,6 +19,9 @@ export const hasLockableLessons = state =>
 
 export const hasGroups = state => Object.keys(groupedLessons(state)).length > 1;
 
+export const getCurrentLesson = state =>
+  state.progress.lessons?.find(l => l.id === state.progress.currentLessonId);
+
 /**
  * Extract the relevant portions of a particular lesson from the store.
  * Note, that this does not include levels
@@ -41,6 +44,7 @@ const lessonFromLesson = lesson =>
     'lesson_plan_html_url',
     'lesson_feedback_url',
     'student_lesson_plan_html_url',
+    'title',
     'description_student',
     'description_teacher',
   ]);
@@ -121,12 +125,37 @@ export const getLevelPropertiesPath = state => {
       sublevelPosition = currentLevel.levelNumber;
     }
 
+    // TODO: TEACH-1864
+    // use /courses/:course_name/units/:unit_position/... instead of /s/
     return `/s/${scriptName}/lessons/${lessonPosition}/levels/${levelPosition}/${
       sublevelPosition === undefined ? '' : `sublevel/${sublevelPosition}/`
     }level_properties`;
   } else if (state.progress.currentLevelId !== null) {
     const levelId = state.progress.currentLevelId;
     return `/levels/${levelId}/level_properties`;
+  } else {
+    return undefined;
+  }
+};
+
+/**
+ * Returns the dashboard URL path to retrieve the user app options for a script level.
+ * If we don't have a current level, this returns undefined.
+ */
+export const getUserAppOptionsPath = state => {
+  if (state.progress.lessons) {
+    const scriptName = state.progress.scriptName;
+
+    const lessonPosition = state.progress.lessons?.find(
+      lesson => lesson.id === state.progress.currentLessonId
+    ).relative_position;
+
+    const currentLevel = getCurrentLevel(state);
+    const levelPosition = currentLevel.levelNumber;
+
+    const levelId = state.progress.currentLevelId;
+
+    return `/api/user_app_options/${scriptName}/${lessonPosition}/${levelPosition}/${levelId}`;
   } else {
     return undefined;
   }
@@ -164,7 +193,9 @@ const levelWithProgress = (
     status = levelProgress.status;
     locked = levelProgress.locked;
     teacherFeedbackReviewState = levelProgress.teacherFeedbackReviewState;
-  } else if (level.kind !== LevelKind.assessment) {
+  } else if (
+    !(level.kind === LevelKind.assessment && level.app === 'level_group')
+  ) {
     // if we don't have levelProgress, get the status from `levelResults`.
     // however, `levelResults` doesn't track per-page results for multi-page
     // assessments, so for assessments we leave default values.

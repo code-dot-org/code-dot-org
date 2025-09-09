@@ -1,3 +1,7 @@
+import {
+  BodyTwoText,
+  Heading3,
+} from '@code-dot-org/component-library/typography';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {useState, useCallback, useRef} from 'react';
@@ -5,11 +9,6 @@ import {Provider} from 'react-redux';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {showVideoDialog} from '@cdo/apps/code-studio/videos';
-import {
-  BodyTwoText,
-  Heading1,
-  Heading3,
-} from '@cdo/apps/componentLibrary/typography';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
@@ -18,8 +17,11 @@ import InfoHelpTip from '@cdo/apps/sharedComponents/InfoHelpTip';
 import Notification, {
   NotificationType,
 } from '@cdo/apps/sharedComponents/Notification';
+import Spinner from '@cdo/apps/sharedComponents/Spinner';
+import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
 import CoteacherSettings from '@cdo/apps/templates/sectionsRefresh/coteacherSettings/CoteacherSettings';
 import {navigateToHref} from '@cdo/apps/utils';
+import {CapLinks} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import AdvancedSettingToggles from './AdvancedSettingToggles';
@@ -34,24 +36,15 @@ const SECTIONS_API = '/api/v1/sections';
 const NEW = 'New';
 
 // Custom hook to update the list of sections to create
-// Currently, this hook returns two things:
+// Currently, this hook returns three things:
 //   - sections: list of objects that represent the sections to create
 //   - updateSection: function to update the section at the given index
+//   - batchUpdateSection: function to update multiple section properties at once
 const useSections = section => {
   // added "default properties" for any new section
   const [sections, setSections] = useState(
     section
-      ? [
-          {
-            ...Object.keys(section).reduce((acc, cur) => {
-              if (cur !== 'stageExtras') {
-                acc[cur] = section[cur];
-              }
-              return acc;
-            }, {}),
-            lessonExtras: section.stageExtras,
-          },
-        ]
+      ? [section]
       : [
           {
             pairingAllowed: true,
@@ -59,7 +52,7 @@ const useSections = section => {
             ttsAutoplayEnabled: false,
             lessonExtras: true,
             aiTutorEnabled: false,
-            course: {hasTextToSpeech: false, hasLessonExtras: false},
+            course: {textToSpeechEnabled: false, lessonExtrasAvailable: false},
           },
         ]
   );
@@ -75,10 +68,21 @@ const useSections = section => {
         return section;
       }
     });
+
     setSections(newSections);
   };
 
-  return [sections, updateSection];
+  const batchUpdateSection = (sectionIdx, updateList) => {
+    const newSections = sections.map((section, idx) => {
+      if (idx === sectionIdx) {
+        return {...section, ...updateList};
+      }
+    });
+
+    setSections(newSections);
+  };
+
+  return [sections, updateSection, batchUpdateSection];
 };
 
 export default function SectionsSetUpContainer({
@@ -87,8 +91,21 @@ export default function SectionsSetUpContainer({
   canEnableAITutor,
   userCountry,
   defaultRedirectUrl,
+  setIsEditInProgress = value => {},
+  isLoading = false,
 }) {
-  const [sections, updateSection] = useSections(sectionToBeEdited);
+  const [sections, updateSection, batchUpdateSection] =
+    useSections(sectionToBeEdited);
+  const updateSectionAndSetEditInProgress = (sectionIdx, keyToUpdate, val) => {
+    updateSection(sectionIdx, keyToUpdate, val);
+
+    setIsEditInProgress(true);
+  };
+
+  const batchUpdateSectionAndSetEditInProgress = (sectionIdx, updateList) => {
+    batchUpdateSection(sectionIdx, updateList);
+    setIsEditInProgress(true);
+  };
   const [isCoteacherOpen, setIsCoteacherOpen] = useState(false);
   const [advancedSettingsOpen, setAdvancedSettingsOpen] = useState(false);
   const [isSaveInProgress, setIsSaveInProgress] = useState(false);
@@ -179,6 +196,8 @@ export default function SectionsSetUpContainer({
   };
 
   const saveSection = (section, createAnotherSection, coteachersToAdd) => {
+    setIsEditInProgress(false);
+
     const shouldShowCelebrationDialogOnRedirect = !!isUsersFirstSection;
     // Determine data sources and save method based on new vs edit section
     const dataUrl = isNewSection
@@ -262,6 +281,7 @@ export default function SectionsSetUpContainer({
       })
       .catch(err => {
         setIsSaveInProgress(false);
+        setIsEditInProgress(true);
         console.error(err);
       });
   };
@@ -272,8 +292,8 @@ export default function SectionsSetUpContainer({
         courseOfferingId: sections[0].courseOfferingId,
         versionId: sections[0].courseVersionId,
         unitId: sections[0].unitId,
-        hasLessonExtras: sections[0].lessonExtras,
-        hasTextToSpeech: sections[0].ttsAutoplayEnabled,
+        lessonExtrasAvailable: sections[0].lessonExtras,
+        textToSpeechEnabled: sections[0].ttsAutoplayEnabled,
         displayName: sections[0].courseDisplayName,
       };
     } else {
@@ -309,7 +329,7 @@ export default function SectionsSetUpContainer({
             type={NotificationType.warning}
             notice=""
             details={i18n.childAccountPolicy_CreateSectionsWarning()}
-            detailsLink="https://support.code.org/hc/en-us/articles/15465423491085-How-do-I-obtain-parent-or-guardian-permission-for-student-accounts"
+            detailsLink={CapLinks.PARENTAL_CONSENT_GUIDE_URL}
             detailsLinkNewWindow={true}
             detailsLinkText={i18n.childAccountPolicy_LearnMore()}
             dismissible={false}
@@ -344,22 +364,28 @@ export default function SectionsSetUpContainer({
     );
   };
 
+  // TODO-AITUTOR: can we allow this for any course that has a unit with Unit.has_ai_tutor_level?
+  // TODO: This will probably eventually be a setting on the course similar to textToSpeechEnabled
+  // The ticket to track that work is https://codedotorg.atlassian.net/browse/CT-1063
+  const aiTutorAllowedForCourse = section =>
+    [
+      '[PILOT] Programming Fundamentals (AI Tutor)',
+      'Computer Science A',
+    ].includes(section?.course?.displayName);
+
   const renderAdvancedSettings = () => {
-    // TODO: this will probably eventually be a setting on the course similar to hasTextToSpeech
-    // currently we're working towards piloting in Javalab in CSA only.
     const aiTutorAvailable =
-      canEnableAITutor &&
-      sections[0].course.displayName === 'Computer Science A';
+      canEnableAITutor && aiTutorAllowedForCourse(sections[0]);
 
     return renderExpandableSection(
       'uitest-expandable-settings',
       () => i18n.advancedSettings(),
       () => (
         <AdvancedSettingToggles
-          updateSection={(key, val) => updateSection(0, key, val)}
+          updateSection={(key, val) =>
+            updateSectionAndSetEditInProgress(0, key, val)
+          }
           section={sections[0]}
-          hasLessonExtras={sections[0].course.hasLessonExtras}
-          hasTextToSpeech={sections[0].course.hasTextToSpeech}
           aiTutorAvailable={aiTutorAvailable}
           label={i18n.pairProgramming()}
         />
@@ -390,7 +416,10 @@ export default function SectionsSetUpContainer({
           sectionId={sections[0].id}
           sectionInstructors={sections[0].sectionInstructors}
           primaryTeacher={sections[0].primaryInstructor}
-          setCoteachersToAdd={setCoteachersToAdd}
+          setCoteachersToAdd={value => {
+            setCoteachersToAdd(value);
+            setIsEditInProgress(true);
+          }}
           coteachersToAdd={coteachersToAdd}
           sectionMetricInformation={getCoteacherMetricInfoFromSection(
             sections[0]
@@ -405,89 +434,105 @@ export default function SectionsSetUpContainer({
 
   return (
     <form id={FORM_ID}>
-      <div className={moduleStyles.containerWithMarginTop}>
-        <Heading1>
-          {isNewSection
-            ? i18n.setUpClassSectionsHeader()
-            : i18n.editSectionDetails()}
-        </Heading1>
-        {isNewSection && (
-          <>
-            <BodyTwoText className={moduleStyles.noMarginBottomParagraph}>
-              {i18n.setUpClassSectionsSubheader()}
-            </BodyTwoText>
-            <BodyTwoText>
-              <a onClick={onURLClick} className={moduleStyles.textPopUp}>
-                {i18n.setUpClassSectionsSubheaderLink()}
-              </a>
-            </BodyTwoText>
-          </>
-        )}
-      </div>
+      {isNewSection && (
+        <>
+          <BodyTwoText className={moduleStyles.noMarginBottomParagraph}>
+            {i18n.setUpClassSectionsSubheader()}
+          </BodyTwoText>
+          <BodyTwoText>
+            <a onClick={onURLClick} className={moduleStyles.textPopUp}>
+              {i18n.setUpClassSectionsSubheaderLink()}
+            </a>
+          </BodyTwoText>
+        </>
+      )}
 
       {renderChildAccountPolicyNotification()}
 
       <SingleSectionSetUp
         sectionNum={1}
         section={sections[0]}
-        updateSection={(key, val) => updateSection(0, key, val)}
+        updateSection={(key, val) =>
+          updateSectionAndSetEditInProgress(0, key, val)
+        }
+        batchUpdateSection={updateList =>
+          batchUpdateSectionAndSetEditInProgress(0, updateList)
+        }
         isNewSection={isNewSection}
+        isLoading={isLoading}
       />
 
-      <CurriculumQuickAssign
-        id="uitest-curriculum-quick-assign"
-        isNewSection={isNewSection}
-        updateSection={(key, val) => updateSection(0, key, val)}
-        sectionCourse={sections[0].course || consolidatedCourseData()}
-        initialParticipantType={sections[0].participantType}
-      />
-
-      <div
-        className={classnames(
-          moduleStyles.containerWithMarginTop,
-          moduleStyles.withBorderTop
-        )}
-      >
-        {renderCoteacherSection()}
-        {renderAdvancedSettings()}
-      </div>
-      <div
-        className={classnames(
-          moduleStyles.splitButtonsContainer,
-          moduleStyles.containerWithMarginTop
-        )}
-      >
-        {isNewSection && ( // Only show 'save and add another' button when creating a new section
-          <Button
-            className={moduleStyles.buttonLeft}
-            icon="plus"
-            text={i18n.addAnotherClassSection()}
-            color={Button.ButtonColor.neutralDark}
-            onClick={e => {
-              e.preventDefault();
-              saveSection(sections[0], true, coteachersToAdd);
+      {isLoading ? (
+        <>
+          <Heading3>{i18n.assignCurriculum()}</Heading3>
+          <div className={moduleStyles.loadingSpinner}>
+            <Spinner />
+          </div>
+        </>
+      ) : (
+        <>
+          {/* Allow the curriculum quick assign region to be configured per-region */}
+          <GlobalEditionWrapper
+            component={CurriculumQuickAssign}
+            componentId="CurriculumQuickAssign"
+            props={{
+              id: 'uitest-curriculum-quick-assign',
+              isNewSection: isNewSection,
+              updateSection: (key, val) => updateSection(0, key, val),
+              setIsEditInProgress: setIsEditInProgress,
+              sectionCourse: sections[0].course || consolidatedCourseData(),
+              initialParticipantType: sections[0].participantType,
             }}
           />
-        )}
-        <Button
-          className={moduleStyles.buttonRight}
-          id="uitest-save-section-changes"
-          text={
-            isSaveInProgress
-              ? i18n.saving()
-              : isNewSection
-              ? i18n.finishCreatingSections()
-              : i18n.save()
-          }
-          color={Button.ButtonColor.brandSecondaryDefault}
-          disabled={isSaveInProgress}
-          onClick={e => {
-            e.preventDefault();
-            setIsSaveInProgress(true);
-            saveSection(sections[0], false, coteachersToAdd);
-          }}
-        />
-      </div>
+
+          <div
+            className={classnames(
+              moduleStyles.containerWithMarginTop,
+              moduleStyles.withBorderTop
+            )}
+          >
+            {renderCoteacherSection()}
+            {renderAdvancedSettings()}
+          </div>
+          <div
+            className={classnames(
+              moduleStyles.splitButtonsContainer,
+              moduleStyles.containerWithMarginTop
+            )}
+          >
+            {isNewSection && ( // Only show 'save and add another' button when creating a new section
+              <Button
+                className={moduleStyles.buttonLeft}
+                icon="plus"
+                text={i18n.addAnotherClassSection()}
+                color={Button.ButtonColor.neutralDark}
+                onClick={e => {
+                  e.preventDefault();
+                  saveSection(sections[0], true, coteachersToAdd);
+                }}
+              />
+            )}
+            <Button
+              className={moduleStyles.buttonRight}
+              id="uitest-save-section-changes"
+              text={
+                isSaveInProgress
+                  ? i18n.saving()
+                  : isNewSection
+                  ? i18n.finishCreatingSections()
+                  : i18n.save()
+              }
+              color={Button.ButtonColor.brandSecondaryDefault}
+              disabled={isSaveInProgress}
+              onClick={e => {
+                e.preventDefault();
+                setIsSaveInProgress(true);
+                saveSection(sections[0], false, coteachersToAdd);
+              }}
+            />
+          </div>
+        </>
+      )}
     </form>
   );
 }
@@ -498,4 +543,6 @@ SectionsSetUpContainer.propTypes = {
   canEnableAITutor: PropTypes.bool,
   userCountry: PropTypes.string,
   defaultRedirectUrl: PropTypes.string.isRequired,
+  setIsEditInProgress: PropTypes.func,
+  isLoading: PropTypes.bool,
 };

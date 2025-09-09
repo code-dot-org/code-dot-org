@@ -1,0 +1,158 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-05-31T02:56:27.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "#### Predict\r\n\r\nThis program has some new blocks! Before we run our code, let's write down some thoughts on what we think might happen.\r\n\r\n1) Write down anything you **notice** about the code. _It's okay to write things that feel obvious, like \"the new block is a different color\"_\r\n2) Make a **prediction** - what do you think will happen when you press Run? _This is just a guess - it's okay to be unsure!_\r\n\r\nOnce you've answered the questions, Press <code style=\"background-color: #fca401; color: white; border: none; box-shadow: inset -1px -1px 1px1 rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px\">Run</code> and listen. Then wait for next steps from your teacher. [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=run-button)\r\n\r\n\r\n\r\n",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "sounds": {
+        "carly_rae_jepsen_call_me_maybe": [
+          "hey_i_just_met_you",
+          "chorus_instruments",
+          "strings_big",
+          "strings_small",
+          "muted_guitar",
+          "bass",
+          "drums_full",
+          "drums_intro",
+          "drums_prechorus",
+          "drums_steady",
+          "sweep",
+          "strings_flourish",
+          "strings_slowdown"
+        ]
+      },
+      "toolbox": {
+        "blocks": {
+        },
+        "type": "flyout"
+      },
+      "packId": "carly_rae_jepsen_call_me_maybe",
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "next": {
+                "block": {
+                  "type": "play_sounds_together",
+                  "id": "play_sounds_together",
+                  "deletable": false,
+                  "movable": false,
+                  "editable": false,
+                  "extraState": {
+                    "disableNextConnection": false
+                  },
+                  "inputs": {
+                    "code": {
+                      "block": {
+                        "type": "play_sound_at_current_location_simple2",
+                        "id": "play_sound_at_current_location_simple2",
+                        "deletable": false,
+                        "movable": false,
+                        "editable": false,
+                        "extraState": {
+                          "disableNextConnection": false
+                        },
+                        "fields": {
+                          "sound": "carly_rae_jepsen_call_me_maybe/hey_i_just_met_you"
+                        },
+                        "next": {
+                          "block": {
+                            "type": "play_sound_at_current_location_simple2",
+                            "id": "g?.Wt;h[;suX(UtaXH37",
+                            "deletable": false,
+                            "movable": false,
+                            "editable": false,
+                            "extraState": {
+                              "disableNextConnection": false
+                            },
+                            "fields": {
+                              "sound": "carly_rae_jepsen_call_me_maybe/strings_big"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "next": {
+                    "block": {
+                      "type": "play_sound_at_current_location_simple2",
+                      "id": "cC?h+(+L.;u#)]9H0OJ(",
+                      "deletable": false,
+                      "movable": false,
+                      "editable": false,
+                      "extraState": {
+                        "disableNextConnection": false
+                      },
+                      "fields": {
+                        "sound": "carly_rae_jepsen_call_me_maybe/bass"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
+    "predict_settings": {
+      "isPredictLevel": true,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "Answer (1) and (2) in here!",
+      "freeResponseHeight": null,
+      "codeEditableAfterSubmit": false
+    },
+    "validations": [
+      {
+        "key": "test-music-lab-sequences-explore-predict_c9c657d3-7cdf-4462-b2f1-862a3a0bd75f",
+        "message": "Continue to the next level to keep experimenting with this song!",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_different_sounds",
+            "value": 3
+          }
+        ],
+        "callout": ""
+      },
+      {
+        "key": "test-music-lab-sequences-explore-predict_d7ca51ab-1fc5-4974-bd5a-7f84c07b99d6",
+        "message": "Look at the timeline! Did it match your prediction?",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "name_suffix": "_v2",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:56:27.434+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-explore-predict\\\"\"],\"cloned_from\":\"test-music-lab-sequences-explore-predict\"},{\"changed_at\":\"2025-06-06 19:23:02 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

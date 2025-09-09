@@ -77,14 +77,12 @@ class ReportAbuseController < ApplicationController
 
   # DELETE /v3/channels/:channel_id/abuse
   # POST /v3/channels/:channel_id/abuse/delete
-  # Clear an abuse score. Requires project_validator permission
+  # Clear an abuse score, i.e., set abuse score to 0. Requires project_validator permission
   def reset_abuse
     return head :unauthorized unless can?(:destroy_abuse, nil)
 
-    channel_id = params[:channel_id]
-
     begin
-      value = Projects.new(get_storage_id).reset_abuse(channel_id)
+      value = Projects.new(get_storage_id).reset_abuse(params[:channel_id])
     rescue ArgumentError, OpenSSL::Cipher::CipherError
       raise ActionController::BadRequest.new, "Bad channel_id"
     end
@@ -100,6 +98,29 @@ class ReportAbuseController < ApplicationController
     render json: {abuse_score: value}
   end
 
+  # POST /v3/channels/:channel_id/abuse/image
+  # Update the project abuse score as a result of image moderation.
+  # If type is 'flag', then abuse score is incremented by 15 which will reach the abuse threshold.
+  # If type is 'unflag', then abuse score is decremented by 15.
+  # Otherwise, returns a 400 Bad Request error.
+  # params are: :type
+  def update_abuse_image_moderation
+    return head :unauthorized unless current_user
+    type = params[:type]
+
+    unless ['flag', 'unflag'].include?(type)
+      return render json: {error: "Invalid type parameter. Must be 'flag' or 'unflag'."}, status: :bad_request
+    end
+
+    amount = type == 'flag' ? 15 : -15
+    begin
+      value = Projects.new(get_storage_id).increment_abuse(params[:channel_id], amount, current_user&.project_validator?)
+    rescue ArgumentError, OpenSSL::Cipher::CipherError
+      raise ActionController::BadRequest.new, "Bad channel_id"
+    end
+    render json: {abuse_score: value}
+  end
+
   # Non-actions, public methods so they can be tested easier.
   # The methods below are in this controller because they depend on the
   # storage_id helper, which has dependencies on current_user.
@@ -110,20 +131,17 @@ class ReportAbuseController < ApplicationController
     # Reports of abuse from verified teachers are more reliable than reports
     # from students so we increase the abuse score enough to block the project
     # with only one report from a verified teacher.
-    #
-    # Temporarily ignore anonymous reports and only allow verified teachers
-    # and signed in users to report.
-    restrict_reporting_to_verified_users = DCDO.get('restrict-abuse-reporting-to-verified', true)
     amount =
-      if current_user&.verified_teacher?
+      if current_user&.verified_teacher? || current_user&.project_validator?
         20
-      elsif current_user && !restrict_reporting_to_verified_users
+      elsif current_user && !restrict_reporting_to_verified_teachers
         10
       else
         0
       end
     begin
-      value = Projects.new(get_storage_id).increment_abuse(channel_id, amount)
+      # Project validators can update the abuse score on frozen projects while other users cannot.
+      value = Projects.new(get_storage_id).increment_abuse(channel_id, amount, current_user&.project_validator?)
     rescue ArgumentError, OpenSSL::Cipher::CipherError
       raise ActionController::BadRequest.new, "Bad channel_id"
     end
@@ -148,6 +166,11 @@ class ReportAbuseController < ApplicationController
     end
 
     abuse_score
+  end
+
+  def restrict_reporting_to_verified_teachers
+    # If DCDO flag is set to true, only allow verified teacher users to report abuse.
+    DCDO.get('restrict-abuse-reporting-to-verified', false)
   end
 
   private def send_abuse_report(name, email, age, abuse_url, username)

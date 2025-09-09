@@ -1,13 +1,13 @@
-import {
-  getNextFileId,
-  getNextFolderId,
-} from '@codebridge/codebridgeContext/utils';
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import _ from 'lodash';
 import {PyodideInterface} from 'pyodide';
 
 import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
+import {
+  getNextFileId,
+  getNextFolderId,
+} from '@cdo/apps/lab2/utils/multiFileSourceUtils';
 
 import {PyodideMessage, PyodidePathContent} from '../types';
 
@@ -72,13 +72,17 @@ export function writeSource(
 // these are files such as validation that do not need to be saved to the user's project.
 export function getUpdatedSourceAndDeleteFiles(
   source: MultiFileSource,
-  id: number,
+  id: string,
   pyodide: PyodideInterface,
   sendMessage: (message: PyodideMessage) => void,
   skippedFilenames: string[] = []
 ) {
-  const workingDir = pyodide.FS.cwd();
-  const directoryData = pyodide.FS.lookupPath(workingDir, {}).node;
+  // We are setting pyodide.FS to any a few times in this file because of this issue:
+  // https://github.com/pyodide/pyodide/issues/5377
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const workingDir = (pyodide.FS as any).cwd();
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const directoryData = (pyodide.FS.lookupPath(workingDir, {}) as any).node;
   const directoryContents = Object.values(
     directoryData.contents
   ) as PyodidePathContent[];
@@ -101,7 +105,7 @@ function updateAndDeleteSourceWithContents(
   source: MultiFileSource,
   currentPath: string,
   folderId: string,
-  id: number,
+  id: string,
   pyodide: PyodideInterface,
   sendMessage: (message: PyodideMessage) => void,
   skippedFilenames: string[] = []
@@ -117,7 +121,8 @@ function updateAndDeleteSourceWithContents(
           f => f.name === content.name && f.folderId === folderId
         );
         try {
-          const newContents = pyodide.FS.readFile(fullPath, {
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          const newContents = (pyodide.FS as any).readFile(fullPath, {
             encoding: 'utf8',
           });
           if (!file) {
@@ -244,6 +249,7 @@ function createFolderIfNotExists(
   try {
     pyodide.FS.readdir(qualifiedFolderName);
   } catch (e) {
-    pyodide.FS.mkdir(qualifiedFolderName);
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    (pyodide.FS as any).mkdir(qualifiedFolderName);
   }
 }

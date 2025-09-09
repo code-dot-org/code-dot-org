@@ -1,0 +1,59 @@
+{
+  "name": "exploring-gen-ai-2025",
+  "script_names": [
+    "exploring-gen-ai1-2025",
+    "exploring-gen-ai2-2025"
+  ],
+  "original_script_names": [
+    "exploring-gen-ai1-2025",
+    "exploring-gen-ai2-2025"
+  ],
+  "published_state": "stable",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "exploring-gen-ai",
+    "has_verified_resources": true,
+    "numbered_units": "auto",
+    "version_year": "2025"
+  },
+  "resources": [
+    {
+      "name": "All Resources",
+      "url": "/courses/exploring-gen-ai-2025/resources",
+      "key": "all_resources_2",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_2"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/courses/exploring-gen-ai-2025/standards",
+      "key": "all_standards_1",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_1"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/courses/exploring-gen-ai-2025/vocab",
+      "key": "all_vocabulary_2",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_2"
+      }
+    }
+  ],
+  "student_resources": [
+
+  ]
+}

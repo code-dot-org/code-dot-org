@@ -5,7 +5,7 @@ describe I18n::Resources::Dashboard::DataContent::SyncIn do
   let(:described_class) {I18n::Resources::Dashboard::DataContent::SyncIn}
   let(:described_instance) {described_class.new}
 
-  let(:origin_i18n_file_path) {CDO.dir('dashboard/config/locales/data.en.yml')}
+  let(:origin_i18n_file_path) {CDO.dir('dashboard/config/locales/data/en.yml')}
   let(:i18n_source_file_path) {CDO.dir('i18n/locales/source/dashboard/data.yml')}
 
   around do |test|

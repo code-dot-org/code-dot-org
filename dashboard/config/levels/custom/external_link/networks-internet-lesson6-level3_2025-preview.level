@@ -1,0 +1,17 @@
+<ExternalLink>
+  <config><![CDATA[{
+  "game_id": 55,
+  "created_at": "2025-03-22T02:11:19.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## HTTP Cats for HTTP Requests Exploration\r\n\r\n### Do This:\r\n1. Click on the link to visit HTTP Cats.\r\n2. **Observe the different HTTP status codes** displayed on the site\r\n   - Each cat image represents a different HTTP response code (e.g., 200 OK, 404 Not Found)\r\n3. **Open the Developer Tools (Network Tab)** in your browser:\r\n   - **On Chrome:** Press `Ctrl + Shift + I` (Windows) or `Cmd + Option + I` (Mac), then go to the **Network** tab.\r\n   - **On Firefox:** Press `Ctrl + Shift + E (Windows)` or `Cmd + Option + E` (Mac).\r\n4. **Click on different HTTP status codes** on the site and observe how your browser sends requests and receives responses.\r\n5. **Look at the Network tab and find the request details:**\r\n   - **Status Code** - What response did the server send?\r\n   - **Headers** - What information was included in the request and response?\r\n   - **Timing** - How long did it take to load?\r\n6. **Explore different status codes** to see how servers communicate different types of responses.",
+    "link_title": "HTTP Cats",
+    "url": "https://http.cat/",
+    "name_suffix": "_2025-preview"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-03-22T02:11:19.725+00:00\",\"changed\":[\"cloned from \\\"networks-internet-lesson6-level3_2025\\\"\"],\"cloned_from\":\"networks-internet-lesson6-level3_2025\"}]"
+}]]></config>
+</ExternalLink>

@@ -1,0 +1,36 @@
+name 'CSA U8 Assessment q03_pilot_oo2025'
+
+wrong 'Insertion sort performs fewer comparisons and shifts when the array is in reverse order.'
+wrong 'Insertion sort is slower than selection sort on a nearly sorted array.'
+right 'Insertion sort may move an element multiple times as smaller elements are inserted before it.'
+wrong 'Insertion sort places each element in its final position in a single comparison and shift.'
+wrong 'Insertion sort always performs fewer comparisons than selection sort, regardless of input order.'
+
+markdown <<MARKDOWN
+Which of the following statements about the insertion sort algorithm is true?
+MARKDOWN
+
+allow_multiple_attempts true
+teacher_markdown <<MARKDOWN
+Let's review each answer choice:
+
+**A.** *Insertion sort performs fewer comparisons and shifts when the array is in reverse order.*  
+- **False.** A reverse sorted array is the **worst-case scenario** for insertion sort, requiring the **maximum number of comparisons and shifts**.
+
+**B.** *Insertion sort is slower than selection sort on a nearly sorted array.*  
+- **False.** Insertion sort is actually **faster** in this case, approaching linear time when the data is nearly sorted.
+
+**C.** *Insertion sort may move an element multiple times as smaller elements are inserted before it.*  
+- **True.** This is a defining characteristic of insertion sort. Larger elements can be shifted right multiple times as smaller ones are inserted before them.
+
+**D.** *Insertion sort places each element in its final position in a single comparison and shift.*  
+- **False.** It may require **multiple comparisons and shifts** per element in the average or worst case.
+
+**E.** *Insertion sort always performs fewer comparisons than selection sort, regardless of input order.*  
+- **False.** Insertion sort may perform fewer comparisons **in some cases**, but **not always**, particularly in reverse-sorted input where it may do more work.
+
+---
+
+### Final Answer: **C**
+
+MARKDOWN

@@ -24,7 +24,7 @@ import {
 
 const NUM_STUDENTS_PER_PAGE = 20;
 
-export function loadUnitProgress(scriptId, sectionId) {
+export function loadUnitProgress(scriptId, sectionId, courseId, unitPosition) {
   const state = getStore().getState().sectionProgress;
   const sectionData = getStore().getState().teacherSections.sections[sectionId];
   const students = getStore().getState().teacherSections.selectedStudents;
@@ -49,6 +49,7 @@ export function loadUnitProgress(scriptId, sectionId) {
     logToCloud.addPageAction(logToCloud.PageAction.LoadScriptProgressStarted, {
       sectionId,
       scriptId,
+      courseId,
     });
   }
 
@@ -59,10 +60,12 @@ export function loadUnitProgress(scriptId, sectionId) {
     studentLastUpdateByUnit: {},
   };
 
-  // Get the script data
-  const scriptRequest = fetch(`/dashboardapi/script_structure/${scriptId}`, {
-    credentials: 'include',
-  })
+  const scriptRequest = fetch(
+    `/dashboardapi/script_structure/courses/${courseId}/units/${unitPosition}`,
+    {
+      credentials: 'include',
+    }
+  )
     .then(response => response.json())
     .then(scriptData => {
       structureLatencyMs = new Date().getTime() - startTime;

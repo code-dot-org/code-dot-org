@@ -1,9 +1,10 @@
 require 'test_helper'
 
 class AiTutorInteractionsControllerTest < ActionController::TestCase
+  include LevelsHelper
   setup do
-    @student_with_ai_tutor_access = create :student_with_ai_tutor_access
-    @student = create :student
+    @student_with_ai_tutor_access = create(:student_with_ai_tutor_access)
+    @student = create(:student)
   end
 
   test "create AI Tutor Interaction with valid params" do
@@ -86,7 +87,7 @@ class AiTutorInteractionsControllerTest < ActionController::TestCase
     sign_in @student_with_ai_tutor_access
     @lesson = create(:lesson, :with_lesson_group)
     @level = create(:level)
-    @script_level = create :script_level, script: @lesson.script, lesson: @lesson, levels: [@level]
+    @script_level = create(:script_level, script: @lesson.script, lesson: @lesson, levels: [@level])
     @fake_ip = '127.0.0.1'
     fake_version_id = "fake-version-id"
     @storage_id = create_storage_id_for_user(@student_with_ai_tutor_access.id)
@@ -102,11 +103,11 @@ class AiTutorInteractionsControllerTest < ActionController::TestCase
     assert_creates(AiTutorInteraction) do
       post :create, params: {
         level_id: @script_level.levels.first.id,
-          script_id: @script_level.script.id,
-          type: SharedConstants::AI_TUTOR_TYPES[:VALIDATION],
-          prompt: "Why is my test failing?",
-          status: SharedConstants::AI_TUTOR_INTERACTION_STATUS[:OK],
-          ai_response: "Because your code is wrong.",
+        script_id: @script_level.script.id,
+        type: SharedConstants::AI_TUTOR_TYPES[:VALIDATION],
+        prompt: "Why is my test failing?",
+        status: SharedConstants::AI_TUTOR_INTERACTION_STATUS[:OK],
+        ai_response: "Because your code is wrong.",
       }
       created_ai_tutor_interaction = AiTutorInteraction.last
       assert created_ai_tutor_interaction.project_id == @project_id.to_s
@@ -121,7 +122,7 @@ class AiTutorInteractionsControllerTest < ActionController::TestCase
     section = @student_with_ai_tutor_access.sections_as_student.first
     num_ai_tutor_interactions = 3
     num_ai_tutor_interactions.times do
-      create :ai_tutor_interaction, user: @student_with_ai_tutor_access
+      create(:ai_tutor_interaction, user: @student_with_ai_tutor_access)
     end
     get :index, params: {
       sectionId: section.id,
@@ -137,7 +138,7 @@ class AiTutorInteractionsControllerTest < ActionController::TestCase
     teacher = @student_with_ai_tutor_access.teachers.first
     sign_in teacher
     User.any_instance.stubs(:can_view_student_ai_chat_messages?).returns(true)
-    random_section = create :section
+    random_section = create(:section)
     refute teacher.sections.include?(random_section)
 
     get :index, params: {sectionId: random_section.id}
@@ -169,7 +170,7 @@ class AiTutorInteractionsControllerTest < ActionController::TestCase
     sign_in @student_with_ai_tutor_access
     num_ai_tutor_interactions = 2
     num_ai_tutor_interactions.times do
-      create :ai_tutor_interaction, user: @student_with_ai_tutor_access
+      create(:ai_tutor_interaction, user: @student_with_ai_tutor_access)
     end
     get :index
     assert_response :success
@@ -180,10 +181,10 @@ class AiTutorInteractionsControllerTest < ActionController::TestCase
   end
 
   test 'index returns forbidden when student is not in teacher section' do
-    random_teacher = create :teacher
+    random_teacher = create(:teacher)
     sign_in random_teacher
     User.any_instance.stubs(:can_view_student_ai_chat_messages?).returns(true)
-    create :ai_tutor_interaction, user: @student_with_ai_tutor_access
+    create(:ai_tutor_interaction, user: @student_with_ai_tutor_access)
 
     get :index, params: {userId: @student_with_ai_tutor_access.id}
     assert_response :forbidden
@@ -193,7 +194,7 @@ class AiTutorInteractionsControllerTest < ActionController::TestCase
     teacher = @student_with_ai_tutor_access.teachers.first
     sign_in teacher
     User.any_instance.stubs(:can_view_student_ai_chat_messages?).returns(false)
-    create :ai_tutor_interaction, user: @student_with_ai_tutor_access
+    create(:ai_tutor_interaction, user: @student_with_ai_tutor_access)
     get :index, params: {
       userId: @student_with_ai_tutor_access.id,
     }
@@ -206,7 +207,7 @@ class AiTutorInteractionsControllerTest < ActionController::TestCase
     User.any_instance.stubs(:can_view_student_ai_chat_messages?).returns(true)
     num_ai_tutor_interactions = 3
     num_ai_tutor_interactions.times do
-      create :ai_tutor_interaction, user: @student_with_ai_tutor_access
+      create(:ai_tutor_interaction, user: @student_with_ai_tutor_access)
     end
     get :index, params: {
       userId: @student_with_ai_tutor_access.id,
@@ -247,7 +248,7 @@ class AiTutorInteractionsControllerTest < ActionController::TestCase
     end
 
     test 'returns project_id and version_id when all lookups succeed' do
-      result = @controller.find_project_and_version_id(@level.id, @script_id)
+      result = @controller.get_project_and_version_id(@level.id, @script_id)
       assert_equal({project_id: @project_id, version_id: @version_id}, result)
     end
 
@@ -255,40 +256,29 @@ class AiTutorInteractionsControllerTest < ActionController::TestCase
       @source_data = {status: 'NOT_FOUND'}
       SourceBucket.any_instance.stubs(:get).with(@channel, "main.json").returns(@source_data)
 
-      result = @controller.find_project_and_version_id(@level.id, @script_id)
+      result = @controller.get_project_and_version_id(@level.id, @script_id)
       assert_equal({project_id: @project_id, version_id: nil}, result)
     end
 
     test 'returns nil for project_id and version_id when channel token is not found' do
       ChannelToken.stubs(:find_channel_token).with(@level, @storage_id, @script_id).returns(nil)
 
-      result = @controller.find_project_and_version_id(@level.id, @script_id)
+      result = @controller.get_project_and_version_id(@level.id, @script_id)
       assert_equal({project_id: nil, version_id: nil}, result)
     end
 
     test 'returns nil for project_id and version_id when level is not found' do
       Level.stubs(:find).with(@level.id).returns(nil)
 
-      result = @controller.find_project_and_version_id(@level.id, @script_id)
+      result = @controller.get_project_and_version_id(@level.id, @script_id)
       assert_equal({project_id: nil, version_id: nil}, result)
     end
 
     test 'returns nil for project_id and version_id when user storage ID is not found' do
       @controller.stubs(:storage_id_for_user_id).with(@user.id).returns(nil)
 
-      result = @controller.find_project_and_version_id(@level.id, @script_id)
+      result = @controller.get_project_and_version_id(@level.id, @script_id)
       assert_equal({project_id: nil, version_id: nil}, result)
     end
-  end
-
-  private def stub_project_source_data(channel_id, code: 'fake-code', version_id: 'fake-version-id')
-    fake_main_json = {source: code}.to_json
-    fake_source_data = {
-      status: 'FOUND',
-      body: StringIO.new(fake_main_json),
-      version_id: version_id,
-      last_modified: DateTime.now
-    }
-    SourceBucket.any_instance.stubs(:get).with(channel_id, "main.json").returns(fake_source_data)
   end
 end

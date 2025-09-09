@@ -1,0 +1,13 @@
+name 'CSA-UserInput-L5_revised-2025'
+title 'Check for Understanding'
+
+wrong 'The `Scanner` class is used only for reading data from files.'
+wrong 'You must write your own class to get input from the console in Java.'
+wrong 'You should always call `nextDouble()` before calling `nextLine()` to get text.'
+right 'The `Scanner` class can be used to read input like numbers or strings from the console.'
+
+markdown <<MARKDOWN
+Which of the following is **true** about using the `Scanner` class in Java?
+MARKDOWN
+
+allow_multiple_attempts true

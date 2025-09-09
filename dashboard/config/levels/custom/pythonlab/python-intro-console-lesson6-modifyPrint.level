@@ -1,0 +1,49 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-01-22T18:28:55.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Modify the print() function \r\n\r\n✅ TO DO: Change the text inside the quatation marks to something other than <code style=\"background-color: #ececec; color: black; font-weight: bold;\">\"Hello, world!\"</code>",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "print(\"Hello, world!\")",
+          "folderId": "0",
+          "active": false,
+          "open": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "validation_file": {
+      "id": "1",
+      "name": "test_main.py",
+      "language": "py",
+      "contents": "import re\nimport subprocess\n\ndef test_main_file():\n    # File name of the student's script\n    student_file = \"main.py\"\n\n    try:\n        # Read the content of the student's file\n        with open(student_file, \"r\") as file:\n            code_content = file.read()\n\n        # Check if the original phrase \"Hello, world!\" is still in the file\n        if re.search(r'print\\([\"\\']Hello, world![\"\\']\\)', code_content):\n            print(\"❌ Test Failed: The `print(\\\"Hello, world!\\\")` statement was not modified.\")\n            return\n\n        # Run the student's code and capture its output\n        result = subprocess.run(\n            [\"python\", student_file],\n            capture_output=True,\n            text=True,\n            check=True\n        )\n        output = result.stdout.strip()\n\n        # Verify the output is not empty and has been changed\n        if not output:\n            print(\"❌ Test Failed: No output detected. Did you forget to use a `print()` statement?\")\n        else:\n            print(\"✅ Test Passed: The `print(\\\"Hello, world!\\\")` statement was successfully modified.\")\n            print(f\"Output: {output}\")\n\n    except FileNotFoundError:\n        print(\"❌ Test Failed: The file 'main.py' was not found.\")\n    except subprocess.CalledProcessError as e:\n        print(\"❌ Test Failed: An error occurred while running the student's code.\")\n        print(f\"Error: {e}\")\n    except Exception as e:\n        print(\"❌ Test Failed: An unexpected error occurred.\")\n        print(f\"Error: {e}\")\n\n# Run the test\nif __name__ == \"__main__\":\n    test_main_file()\n",
+      "folderId": "0",
+      "active": false,
+      "open": false,
+      "type": "validation"
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-01-22T18:28:55.661+00:00\",\"changed\":[\"cloned from \\\"python-intro-console-lesson6-helloworld\\\"\"],\"cloned_from\":\"python-intro-console-lesson6-helloworld\"},{\"changed_at\":\"2025-01-22 18:30:22 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-22 18:33:54 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-22 18:34:46 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-22 18:35:20 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-22 18:35:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-22 18:35:48 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-22 18:36:31 +0000\",\"changed\":[\"start_sources\",\"validation_file\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-22 18:38:16 +0000\",\"changed\":[\"validation_file\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-22 18:40:43 +0000\",\"changed\":[\"validation_file\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-22 18:43:57 +0000\",\"changed\":[\"validation_file\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+</Pythonlab>

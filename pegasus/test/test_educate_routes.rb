@@ -6,6 +6,7 @@ require_relative 'fixtures/mock_pegasus'
 class EducateRoutesTest < Minitest::Test
   describe 'Educate Routes' do
     before do
+      skip unless CDO.has_pegasus_content
       $log.level = Logger::ERROR # Pegasus spams debug logging otherwise
       @mock_session = Rack::MockSession.new(MockPegasus.new, 'code.org')
       @pegasus = Rack::Test::Session.new(@mock_session)

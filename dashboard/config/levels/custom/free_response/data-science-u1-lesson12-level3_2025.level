@@ -1,0 +1,26 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2025-03-21T21:34:57.000Z",
+  "level_num": "custom",
+  "user_id": 21093,
+  "properties": {
+    "encrypted": "false",
+    "title": "Writing Your Data Story",
+    "long_instructions": "## Do This:\r\nRecord your final response below.\r\n- Describe your data using the sentence starters from Day 4 of your project guide.\r\n- Answer your data question.\r\n- Support your answer by referring to the visualizations you uploaded in Level 2.\r\n- _Optional: You already uploaded your visualizations in Level 2, but if you want, you can upload the specific ones you're using as evidence for your data story again here._",
+    "allow_user_uploads": "true",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "name_suffix": "_2025",
+    "stay_on_level_after_submit": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-03-21T21:34:57.029+00:00\",\"changed\":[\"cloned from \\\"data-science-u1-lesson12-level3\\\"\"],\"cloned_from\":\"data-science-u1-lesson12-level3\"},{\"changed_at\":\"2025-04-18 20:03:31 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-06 16:45:57 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-07 17:37:08 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-07 17:53:20 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

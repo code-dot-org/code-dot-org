@@ -8,15 +8,16 @@
       "curriculum_umbrella": "CSP",
       "has_verified_resources": true,
       "hideable_lessons": true,
+      "is_deprecated": true,
       "is_migrated": true,
       "project_sharing": true,
       "student_detail_progress_view": true,
-      "use_legacy_lesson_plans": true,
-      "version_year": "2017"
+      "use_legacy_lesson_plans": true
     },
     "new_name": "csp2-2017",
     "family_name": "csp2",
-    "serialized_at": "2024-11-19 01:16:38 UTC",
+    "serialized_at": "2025-07-01 16:36:55 UTC",
+    "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3745,7 +3746,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "csp_affirmation_intervention_2",
+        "level.key": "csp_affirmation_control_2",
         "script_level.level_keys": [
           "csp_affirmation_control_2",
           "csp_affirmation_intervention_2"
@@ -3758,7 +3759,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "csp_affirmation_control_2",
+        "level.key": "csp_affirmation_intervention_2",
         "script_level.level_keys": [
           "csp_affirmation_control_2",
           "csp_affirmation_intervention_2"

@@ -1,0 +1,194 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-05-31T03:00:22.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "### Create Version 2\r\n\r\n**Do This**:\r\n- Choose the second mood you described in your Activity Guide for you GIF.\r\n- Create a sequence of sounds that go with that mood and put it underneath your first sequence\r\n  - **Your sounds must last at least 6 measures!**\r\n  - You can click the header of the timeline to \"skip ahead\" in your song to the second backing track.\r\n- Create a second trigger with a new sound effect to go with your new backing track. \r\n\r\nWhen you are finished, you should have two backing tracks that play sequentially underneath the `when run` block and two `trigger` blocks. Here is an example of what this could look like.\r\n\r\n![](https://images.code.org/3a6477583a3a3dfa7a74d7402e1ad5b4-image-1745528231537.png)",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "false",
+    "level_data": {
+      "library": "launch2024",
+      "allowChangeStartingPlayheadPosition": true,
+      "showSoundFilters": true,
+      "packId": "default",
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2",
+            "play_rest_at_current_location_simple2"
+          ],
+          "Control": [
+            "triggered_at_simple2",
+            "play_sounds_together",
+            "play_sounds_sequential",
+            "play_sounds_random",
+            "repeat_simple2"
+          ],
+          "Effects": [
+            "set_volume_effect_at_current_location_simple2",
+            "set_filter_effect_at_current_location_simple2",
+            "set_delay_effect_at_current_location_simple2"
+          ],
+          "Functions": [
+
+          ]
+        },
+        "type": "flyout"
+      },
+      "toolboxDefinition": {
+        "contents": [
+          {
+            "kind": "block",
+            "type": "play_sound_at_current_location_simple2",
+            "id": "play_sound_at_current_location_simple2",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "sound": "electro/drum_beat_cowbell"
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_rest_at_current_location_simple2",
+            "id": "play_rest_at_current_location_simple2",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "rest_duration": "<field name=\"rest_duration\">1</field>"
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_sounds_together",
+            "id": "play_sounds_together",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_sounds_sequential",
+            "id": "play_sounds_sequential",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_sounds_random",
+            "id": "play_sounds_random",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "repeat_simple2",
+            "id": "repeat_simple2",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "times": 1
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "set_effect_at_current_location_simple2",
+            "id": "set_effect_at_current_location_simple2",
+            "fields": {
+              "effects_name": "<field name=\"effects_name\">volume</field>",
+              "effects_value": "<field name=\"effects_value\">normal</field>"
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "triggered_at_simple2",
+            "id": "triggered_at_simple2",
+            "fields": {
+              "trigger": "<field name=\"trigger\">trigger1</field>",
+              "trigger_start": "<field name=\"trigger_start\">next_measure</field>"
+            },
+            "enabled": true
+          }
+        ],
+        "kind": "flyoutToolbox"
+      }
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
+    "project_template_level_name": "test-music-lab-mini-project-gif-template_v2",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "validations": [
+      {
+        "key": "test-music-lab-mini-project-gif-2_d230067c-5352-4a54-8612-e1e1fd4d5120",
+        "message": "Your code is on the right track - make sure it sounds good before continuing!",
+        "next": true,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "triggered_at_simple2:2"
+          },
+          {
+            "name": "block_count_by_type",
+            "value": "play_sound_at_current_location_simple2:6"
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-mini-project-gif-2_794584ce-913f-4c3a-b4e3-50d37e447fed",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is looking for...\n\n- ❌ at least 6 sound blocks\n- ✅ Two trigger blocks",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "triggered_at_simple2:2"
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-mini-project-gif-2_eea72c48-f4b3-4951-95f3-b7493c185de9",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is looking for...\n\n- ✅ at least 6 sound blocks\n- ❌ Two trigger blocks",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "play_sound_at_current_location_simple2:6"
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-mini-project-gif-2_71901673-a9b4-4b35-8bd5-9ed2f8d9e7fc",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is looking for...\n\n- ❌ at least 6 sound blocks\n- ❌ Two trigger blocks",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "name_suffix": "_v2",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-05-31T03:00:22.487+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-mini-project-gif-2\\\"\"],\"cloned_from\":\"test-music-lab-mini-project-gif-2\"},{\"changed_at\":\"2025-06-30 22:12:40 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

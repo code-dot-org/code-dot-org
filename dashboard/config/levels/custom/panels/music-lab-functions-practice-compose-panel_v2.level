@@ -1,0 +1,50 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2025-05-31T03:00:57.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "### Composing Functions\n\nIt's a good idea to use functions to separate code into smaller, easier to understand pieces",
+        "imageUrl": "https://images.code.org/fd211d4fb7f60c1c0bc547b67ab44089-composing-1.png",
+        "key": "music-lab-functions-practice-abstract-panel-3b135fec-37b5-421c-a078-8aa602a6b152",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "### Composing Functions\n\nYou can use functions again to separate those chunks of code into pieces\n",
+        "imageUrl": "https://images.code.org/f244cd70c4628c8a8dc49425caa570e1-composing-2.png",
+        "key": "music-lab-functions-practice-compose-panel-636e634c-7c46-470c-ac8b-24b79dc22516",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "### Composing Functions\n\nThis is called **composing functions** - when one function calls another.\n",
+        "imageUrl": "https://images.code.org/0bb54979fed486017f2f8cf97f29b41b-composing-3.png",
+        "key": "music-lab-functions-practice-compose-panel-634c2d2d-c259-4eb4-8a11-84cc687c3d0d",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "### Composing Functions\n\nYou could even take your whole song and put it in a function if you wanted!\n",
+        "imageUrl": "https://images.code.org/9757b000f5fd88a4045d032e11293a1d-composing-4.png",
+        "key": "music-lab-functions-practice-compose-panel-a10d5a5b-71df-441f-bf0c-1ebec366fe50",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "Key Takeaway: Compose functions is when you call one function from inside another. You can use multiple functions to make your code easier to understand",
+        "imageUrl": "https://images.code.org/54850455f4495c8c938452d83b97ae3e-composing-5.png",
+        "key": "music-lab-functions-practice-compose-panel-f864e26e-f3d5-4fb8-ad97-f93cc9e626fa",
+        "typing": true,
+        "fadeInOverPrevious": true
+      }
+    ],
+    "display_name": "Composing Functions",
+    "name_suffix": "_v2",
+    "thumbnail_url": "https://images.code.org/5c956be7df7ba95cf4dc917a5e68cd6e-Screenshot 2025-04-02 at 7.44.16 AM.png"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-05-31T03:00:56.999+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-practice-compose-panel\\\"\"],\"cloned_from\":\"music-lab-functions-practice-compose-panel\"},{\"changed_at\":\"2025-06-21 23:44:46 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

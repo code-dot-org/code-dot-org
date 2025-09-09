@@ -1,0 +1,23 @@
+{
+  "name": "jr-test",
+  "script_names": [
+    "jr-test"
+  ],
+  "original_script_names": [
+    "jr-test"
+  ],
+  "published_state": "beta",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "jr-test",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

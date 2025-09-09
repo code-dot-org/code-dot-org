@@ -4,6 +4,7 @@ import React, {Component} from 'react';
 import onClickOutside from 'react-onclickoutside';
 import {connect} from 'react-redux';
 
+import {BackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
 import CloseOnEscape from '@cdo/apps/templates/CloseOnEscape';
 import {PaneButton} from '@cdo/apps/templates/PaneHeader';
 import color from '@cdo/apps/util/color';
@@ -11,7 +12,6 @@ import {makeEnum} from '@cdo/apps/utils';
 import javalabMsg from '@cdo/javalab/locale';
 import msg from '@cdo/locale';
 
-import {BackpackAPIContext} from './BackpackAPIContext';
 import {DisplayTheme} from './DisplayTheme';
 import JavalabButton from './JavalabButton';
 import JavalabDialog from './JavalabDialog';

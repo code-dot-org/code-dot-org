@@ -1,0 +1,1141 @@
+{
+  "script": {
+    "name": "self-paced-pl-csp2-2025",
+    "wrapup_video_id": null,
+    "login_required": true,
+    "properties": {
+      "content_area": "self_paced_pl_9_12",
+      "curriculum_umbrella": "Self-paced PL - CSP",
+      "is_migrated": true,
+      "student_detail_progress_view": true,
+      "version_year": "2025"
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2025-04-01 01:44:56 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "self-paced-pl-csp2-2025"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csp2-2025"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Navigating the Code.org learning platform",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csp2-2025"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Navigating lesson plans and resources",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csp2-2025"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "Navigating support",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csp2-2025"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "dd4cd58f-82cc-430b-af67-1efdc172b82f",
+      "position": 1,
+      "properties": {
+        "duration": 30
+      },
+      "seeding_key": {
+        "lesson_activity.key": "dd4cd58f-82cc-430b-af67-1efdc172b82f",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csp2-2025"
+      }
+    },
+    {
+      "key": "ad5eb954-4d40-4468-94bd-a4825747a3e3",
+      "position": 1,
+      "properties": {
+        "duration": 25
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ad5eb954-4d40-4468-94bd-a4825747a3e3",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csp2-2025"
+      }
+    },
+    {
+      "key": "aaffa926-26b5-4467-96bd-4cc7428cff53",
+      "position": 1,
+      "properties": {
+        "duration": 15
+      },
+      "seeding_key": {
+        "lesson_activity.key": "aaffa926-26b5-4467-96bd-4cc7428cff53",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csp2-2025"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "2452f1a9-1195-4081-810b-79d87e42569b",
+      "position": 1,
+      "properties": {
+        "progression_name": "Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "2452f1a9-1195-4081-810b-79d87e42569b",
+        "lesson_activity.key": "dd4cd58f-82cc-430b-af67-1efdc172b82f"
+      }
+    },
+    {
+      "key": "c44d0575-5e3c-4a0b-994a-bc61b4a1796b",
+      "position": 2,
+      "properties": {
+        "progression_name": "Tour the Code.org learning platform"
+      },
+      "seeding_key": {
+        "activity_section.key": "c44d0575-5e3c-4a0b-994a-bc61b4a1796b",
+        "lesson_activity.key": "dd4cd58f-82cc-430b-af67-1efdc172b82f"
+      }
+    },
+    {
+      "key": "fe3392ec-1626-49af-b50f-e9b991f196b8",
+      "position": 3,
+      "properties": {
+        "progression_name": "Set up a class section"
+      },
+      "seeding_key": {
+        "activity_section.key": "fe3392ec-1626-49af-b50f-e9b991f196b8",
+        "lesson_activity.key": "dd4cd58f-82cc-430b-af67-1efdc172b82f"
+      }
+    },
+    {
+      "key": "95705a39-fc6d-44c4-a61b-985008a02fcb",
+      "position": 4,
+      "properties": {
+        "progression_name": "Explore the student view"
+      },
+      "seeding_key": {
+        "activity_section.key": "95705a39-fc6d-44c4-a61b-985008a02fcb",
+        "lesson_activity.key": "dd4cd58f-82cc-430b-af67-1efdc172b82f"
+      }
+    },
+    {
+      "key": "8abf0b7b-5ab8-4673-b1e4-71a5c40fddaf",
+      "position": 5,
+      "properties": {
+        "progression_name": "Track student progress and provide feedback"
+      },
+      "seeding_key": {
+        "activity_section.key": "8abf0b7b-5ab8-4673-b1e4-71a5c40fddaf",
+        "lesson_activity.key": "dd4cd58f-82cc-430b-af67-1efdc172b82f"
+      }
+    },
+    {
+      "key": "dffd2732-ac38-44b6-80b1-a93aec172650",
+      "position": 1,
+      "properties": {
+        "progression_name": "Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "dffd2732-ac38-44b6-80b1-a93aec172650",
+        "lesson_activity.key": "ad5eb954-4d40-4468-94bd-a4825747a3e3"
+      }
+    },
+    {
+      "key": "4f2089b2-1770-4c21-957a-f499e4a11e49",
+      "position": 2,
+      "properties": {
+        "progression_name": "Explore course lesson plans"
+      },
+      "seeding_key": {
+        "activity_section.key": "4f2089b2-1770-4c21-957a-f499e4a11e49",
+        "lesson_activity.key": "ad5eb954-4d40-4468-94bd-a4825747a3e3"
+      }
+    },
+    {
+      "key": "de65cdd7-975c-49bb-8d8d-930d9b5f60eb",
+      "position": 3,
+      "properties": {
+        "progression_name": "Explore additional teacher resources"
+      },
+      "seeding_key": {
+        "activity_section.key": "de65cdd7-975c-49bb-8d8d-930d9b5f60eb",
+        "lesson_activity.key": "ad5eb954-4d40-4468-94bd-a4825747a3e3"
+      }
+    },
+    {
+      "key": "eb730adc-88ae-45f0-a365-cfae3289f930",
+      "position": 1,
+      "properties": {
+        "progression_name": "Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "eb730adc-88ae-45f0-a365-cfae3289f930",
+        "lesson_activity.key": "aaffa926-26b5-4467-96bd-4cc7428cff53"
+      }
+    },
+    {
+      "key": "062f02bd-e72f-4372-b1a7-4aeedd38b601",
+      "position": 2,
+      "properties": {
+        "progression_name": "Additional support for the teachers"
+      },
+      "seeding_key": {
+        "activity_section.key": "062f02bd-e72f-4372-b1a7-4aeedd38b601",
+        "lesson_activity.key": "aaffa926-26b5-4467-96bd-4cc7428cff53"
+      }
+    },
+    {
+      "key": "7e226003-4438-44cd-8046-446b06aae785",
+      "position": 3,
+      "properties": {
+        "progression_name": "Wrap up"
+      },
+      "seeding_key": {
+        "activity_section.key": "7e226003-4438-44cd-8046-446b06aae785",
+        "lesson_activity.key": "aaffa926-26b5-4467-96bd-4cc7428cff53"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-Overview-WebsiteNavigation-CSP_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csp2-2025",
+        "activity_section.key": "2452f1a9-1195-4081-810b-79d87e42569b"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-Overview-WebsiteNavigation-CSP_2025"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Tour the Code.org learning platform"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-tour-vid_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csp2-2025",
+        "activity_section.key": "c44d0575-5e3c-4a0b-994a-bc61b4a1796b"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-tour-vid_2025"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Tour the Code.org learning platform"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-Task-VerifiedTeacher-CSP_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csp2-2025",
+        "activity_section.key": "c44d0575-5e3c-4a0b-994a-bc61b4a1796b"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-Task-VerifiedTeacher-CSP_2025"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Set up a class section"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-ClassSection-vid_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csp2-2025",
+        "activity_section.key": "fe3392ec-1626-49af-b50f-e9b991f196b8"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-ClassSection-vid_2025"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Set up a class section"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-LMSIntegrations-2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csp2-2025",
+        "activity_section.key": "fe3392ec-1626-49af-b50f-e9b991f196b8"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-LMSIntegrations-2025"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Set up a class section"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-Task-ClassSection_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csp2-2025",
+        "activity_section.key": "fe3392ec-1626-49af-b50f-e9b991f196b8"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-Task-ClassSection_2025"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Set up a class section"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL_21-mod2-MakeAPlan-StudentLogIn_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csp2-2025",
+        "activity_section.key": "fe3392ec-1626-49af-b50f-e9b991f196b8"
+      },
+      "level_keys": [
+        "SP-VPL_21-mod2-MakeAPlan-StudentLogIn_2025"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Explore the student view"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-StudentExperience-vid_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csp2-2025",
+        "activity_section.key": "95705a39-fc6d-44c4-a61b-985008a02fcb"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-StudentExperience-vid_2025"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Explore the student view"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-Task-StudentView-CSP_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csp2-2025",
+        "activity_section.key": "95705a39-fc6d-44c4-a61b-985008a02fcb"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-Task-StudentView-CSP_2025"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Track student progress and provide feedback"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-ProgessAndFeedback-vid_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csp2-2025",
+        "activity_section.key": "8abf0b7b-5ab8-4673-b1e4-71a5c40fddaf"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-ProgessAndFeedback-vid_2025"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Track student progress and provide feedback"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-progress-c4u_physical-computing_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csp2-2025",
+        "activity_section.key": "8abf0b7b-5ab8-4673-b1e4-71a5c40fddaf"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-progress-c4u_physical-computing_2025"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 12,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Track student progress and provide feedback"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-feedback-c4u_physical-computing_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csp2-2025",
+        "activity_section.key": "8abf0b7b-5ab8-4673-b1e4-71a5c40fddaf"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-feedback-c4u_physical-computing_2025"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-TeachersInClassrooms-CSP_2025"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csp2-2025",
+        "activity_section.key": "dffd2732-ac38-44b6-80b1-a93aec172650"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-TeachersInClassrooms-CSP_2025"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Explore course lesson plans"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-NavigatingLessonPlans-CSP_2025"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csp2-2025",
+        "activity_section.key": "4f2089b2-1770-4c21-957a-f499e4a11e49"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-NavigatingLessonPlans-CSP_2025"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Explore course lesson plans"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-ExploreLessonPlan-CSP_2025"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csp2-2025",
+        "activity_section.key": "4f2089b2-1770-4c21-957a-f499e4a11e49"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-ExploreLessonPlan-CSP_2025"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Explore course lesson plans"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL_21-mod2-MakeAPlan-LessonPlanning-CSP_2025"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csp2-2025",
+        "activity_section.key": "4f2089b2-1770-4c21-957a-f499e4a11e49"
+      },
+      "level_keys": [
+        "SP-VPL_21-mod2-MakeAPlan-LessonPlanning-CSP_2025"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Explore additional teacher resources"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-NavigatingTeacherResources-CSP_2025"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csp2-2025",
+        "activity_section.key": "de65cdd7-975c-49bb-8d8d-930d9b5f60eb"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-NavigatingTeacherResources-CSP_2025"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Explore additional teacher resources"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-UnitCalendar-CSP_2025"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csp2-2025",
+        "activity_section.key": "de65cdd7-975c-49bb-8d8d-930d9b5f60eb"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-UnitCalendar-CSP_2025"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-TaskResources-CSP_2025"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csp2-2025",
+        "activity_section.key": "eb730adc-88ae-45f0-a365-cfae3289f930"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-TaskResources-CSP_2025"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Additional support for the teachers"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-navigating support-CSP_2025"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csp2-2025",
+        "activity_section.key": "062f02bd-e72f-4372-b1a7-4aeedd38b601"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-navigating support-CSP_2025"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Additional support for the teachers"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-ReadSupportArticles_2025"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csp2-2025",
+        "activity_section.key": "062f02bd-e72f-4372-b1a7-4aeedd38b601"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-ReadSupportArticles_2025"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Additional support for the teachers"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-ReportAProblem_2025"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csp2-2025",
+        "activity_section.key": "062f02bd-e72f-4372-b1a7-4aeedd38b601"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-ReportAProblem_2025"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Additional support for the teachers"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-JoinTheTeacherCommunity-CSP_2025"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csp2-2025",
+        "activity_section.key": "062f02bd-e72f-4372-b1a7-4aeedd38b601"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-JoinTheTeacherCommunity-CSP_2025"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 6,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Additional support for the teachers"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-Support-c4u-CSP_2025"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csp2-2025",
+        "activity_section.key": "062f02bd-e72f-4372-b1a7-4aeedd38b601"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-Support-c4u-CSP_2025"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Wrap up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-CSP-21-Navigation-Mod2_2025"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csp2-2025",
+        "activity_section.key": "7e226003-4438-44cd-8046-446b06aae785"
+      },
+      "level_keys": [
+        "SP-VPL-CSP-21-Navigation-Mod2_2025"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-Overview-WebsiteNavigation-CSP_2025",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-Overview-WebsiteNavigation-CSP_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csp2-2025",
+        "activity_section.key": "2452f1a9-1195-4081-810b-79d87e42569b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-tour-vid_2025",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-tour-vid_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csp2-2025",
+        "activity_section.key": "c44d0575-5e3c-4a0b-994a-bc61b4a1796b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-Task-VerifiedTeacher-CSP_2025",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-Task-VerifiedTeacher-CSP_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csp2-2025",
+        "activity_section.key": "c44d0575-5e3c-4a0b-994a-bc61b4a1796b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-ClassSection-vid_2025",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-ClassSection-vid_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csp2-2025",
+        "activity_section.key": "fe3392ec-1626-49af-b50f-e9b991f196b8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-LMSIntegrations-2025",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-LMSIntegrations-2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csp2-2025",
+        "activity_section.key": "fe3392ec-1626-49af-b50f-e9b991f196b8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-Task-ClassSection_2025",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-Task-ClassSection_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csp2-2025",
+        "activity_section.key": "fe3392ec-1626-49af-b50f-e9b991f196b8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL_21-mod2-MakeAPlan-StudentLogIn_2025",
+        "script_level.level_keys": [
+          "SP-VPL_21-mod2-MakeAPlan-StudentLogIn_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csp2-2025",
+        "activity_section.key": "fe3392ec-1626-49af-b50f-e9b991f196b8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-StudentExperience-vid_2025",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-StudentExperience-vid_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csp2-2025",
+        "activity_section.key": "95705a39-fc6d-44c4-a61b-985008a02fcb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-Task-StudentView-CSP_2025",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-Task-StudentView-CSP_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csp2-2025",
+        "activity_section.key": "95705a39-fc6d-44c4-a61b-985008a02fcb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-ProgessAndFeedback-vid_2025",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-ProgessAndFeedback-vid_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csp2-2025",
+        "activity_section.key": "8abf0b7b-5ab8-4673-b1e4-71a5c40fddaf"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-progress-c4u_physical-computing_2025",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-progress-c4u_physical-computing_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csp2-2025",
+        "activity_section.key": "8abf0b7b-5ab8-4673-b1e4-71a5c40fddaf"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-feedback-c4u_physical-computing_2025",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-feedback-c4u_physical-computing_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csp2-2025",
+        "activity_section.key": "8abf0b7b-5ab8-4673-b1e4-71a5c40fddaf"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-TeachersInClassrooms-CSP_2025",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-TeachersInClassrooms-CSP_2025"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csp2-2025",
+        "activity_section.key": "dffd2732-ac38-44b6-80b1-a93aec172650"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-NavigatingLessonPlans-CSP_2025",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-NavigatingLessonPlans-CSP_2025"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csp2-2025",
+        "activity_section.key": "4f2089b2-1770-4c21-957a-f499e4a11e49"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-ExploreLessonPlan-CSP_2025",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-ExploreLessonPlan-CSP_2025"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csp2-2025",
+        "activity_section.key": "4f2089b2-1770-4c21-957a-f499e4a11e49"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL_21-mod2-MakeAPlan-LessonPlanning-CSP_2025",
+        "script_level.level_keys": [
+          "SP-VPL_21-mod2-MakeAPlan-LessonPlanning-CSP_2025"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csp2-2025",
+        "activity_section.key": "4f2089b2-1770-4c21-957a-f499e4a11e49"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-NavigatingTeacherResources-CSP_2025",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-NavigatingTeacherResources-CSP_2025"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csp2-2025",
+        "activity_section.key": "de65cdd7-975c-49bb-8d8d-930d9b5f60eb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-UnitCalendar-CSP_2025",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-UnitCalendar-CSP_2025"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csp2-2025",
+        "activity_section.key": "de65cdd7-975c-49bb-8d8d-930d9b5f60eb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-TaskResources-CSP_2025",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-TaskResources-CSP_2025"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csp2-2025",
+        "activity_section.key": "eb730adc-88ae-45f0-a365-cfae3289f930"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-navigating support-CSP_2025",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-navigating support-CSP_2025"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csp2-2025",
+        "activity_section.key": "062f02bd-e72f-4372-b1a7-4aeedd38b601"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-ReadSupportArticles_2025",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-ReadSupportArticles_2025"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csp2-2025",
+        "activity_section.key": "062f02bd-e72f-4372-b1a7-4aeedd38b601"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-ReportAProblem_2025",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-ReportAProblem_2025"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csp2-2025",
+        "activity_section.key": "062f02bd-e72f-4372-b1a7-4aeedd38b601"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-JoinTheTeacherCommunity-CSP_2025",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-JoinTheTeacherCommunity-CSP_2025"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csp2-2025",
+        "activity_section.key": "062f02bd-e72f-4372-b1a7-4aeedd38b601"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-Support-c4u-CSP_2025",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-Support-c4u-CSP_2025"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csp2-2025",
+        "activity_section.key": "062f02bd-e72f-4372-b1a7-4aeedd38b601"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-CSP-21-Navigation-Mod2_2025",
+        "script_level.level_keys": [
+          "SP-VPL-CSP-21-Navigation-Mod2_2025"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csp2-2025",
+        "activity_section.key": "7e226003-4438-44cd-8046-446b06aae785"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

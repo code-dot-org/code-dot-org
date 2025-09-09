@@ -1,9 +1,12 @@
+import {
+  BodyFourText,
+  StrongText,
+} from '@code-dot-org/component-library/typography';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {useCallback, useEffect, useMemo, useState} from 'react';
 import {connect} from 'react-redux';
 
-import {BodyFourText, StrongText} from '@cdo/apps/componentLibrary/typography';
 import ErrorBoundary from '@cdo/apps/lab2/ErrorBoundary';
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
@@ -75,8 +78,8 @@ function RubricFloatingActionButton({
   reportingData,
   aiEnabled,
   sectionId,
-  notificationsEnabled,
   canShowTaScoresAlert,
+  reloadOnStudentChange = true,
 }) {
   const sessionStorageKey = 'RubricFabOpenStateKey';
 
@@ -100,10 +103,7 @@ function RubricFloatingActionButton({
   const readyStudentCount = useAppSelector(selectReadyStudentCount);
   const hasLoadedStudentStatus = useAppSelector(selectHasLoadedStudentStatus);
   const showCountBubble =
-    onLevelForEvaluation &&
-    notificationsEnabled &&
-    hasLoadedStudentStatus &&
-    readyStudentCount > 0;
+    onLevelForEvaluation && hasLoadedStudentStatus && readyStudentCount > 0;
 
   const eventData = useMemo(() => {
     return {
@@ -285,6 +285,7 @@ function RubricFloatingActionButton({
           open={isOpen}
           closeRubric={handleClick}
           sectionId={sectionId}
+          reloadOnStudentChange={reloadOnStudentChange}
         />
       </ErrorBoundary>
     </div>
@@ -298,8 +299,8 @@ RubricFloatingActionButton.propTypes = {
   reportingData: reportingDataShape,
   aiEnabled: PropTypes.bool,
   sectionId: PropTypes.number,
-  notificationsEnabled: PropTypes.bool,
   canShowTaScoresAlert: PropTypes.bool,
+  reloadOnStudentChange: PropTypes.bool,
 };
 
 export const UnconnectedRubricFloatingActionButton = RubricFloatingActionButton;

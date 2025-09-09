@@ -17,7 +17,7 @@ theme: responsive
 
 ## Minimum Supported Browsers and Platforms
 
-Nibdew f'Lulju 2024, se naġġornaw il-verżjonijiet minimi meħtieġa għall-brawżers u s-sistemi operattivi. Filwaqt li l-verżjonijiet qodma jistgħu xorta jaħdmu, aħna se nkunu nistgħu nappoġġjaw talbiet għal bug fixes fil-verżjonijiet anzjani.
+Kull sena se naġġornaw il-verżjonijiet minimi meħtieġa għall-brawżers u s-sistemi operattivi. Filwaqt li l-verżjonijiet qodma jistgħu xorta jaħdmu, aħna se nkunu nistgħu nappoġġjaw talbiet għal bug fixes fil-verżjonijiet anzjani.
 
 <table>
   <tr>
@@ -25,28 +25,6 @@ Nibdew f'Lulju 2024, se naġġornaw il-verżjonijiet minimi meħtieġa għall-br
       <table>
         <th>
           Browser
-        </th>
-        <tr>
-          <td>Chrome 96.x</td>
-        </tr>
-        <tr>
-          <td>Safari 13.x</td>
-        </tr>
-        <tr>
-          <td>Mobile Safari 13.x</td>
-        </tr>
-        <tr>
-          <td>Edge 94.x</td>
-        </tr>
-        <tr>
-          <td>Firefox 91.x</td>
-        </tr>
-      </table>
-    </td>
-    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
-      <table>
-        <th>
-          Browser Lulju '24
         </th>
         <tr>
           <td>Krom 103.x</td>
@@ -71,28 +49,6 @@ Nibdew f'Lulju 2024, se naġġornaw il-verżjonijiet minimi meħtieġa għall-br
           Pjattaforma
         </th>
         <tr>
-          <td>macOS 10.13</td>
-        </tr>
-        <tr>
-          <td>iOS 11.x</td>
-        </tr>
-        <tr>
-          <td>Windows 7</td>
-        </tr>
-        <tr>
-          <td>Android 6</td>
-        </tr>
-        <tr>
-          <td>ChromeOS (Chromebooks)</td>
-        </tr>
-      </table>
-    </td>
-    <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
-      <table>
-        <th>
-          Pjattaforma ta' Lulju '24
-        </th>
-        <tr>
           <td>macOS 10.15</td>
         </tr>
         <tr>
@@ -103,6 +59,51 @@ Nibdew f'Lulju 2024, se naġġornaw il-verżjonijiet minimi meħtieġa għall-br
         </tr>
         <tr>
           <td>Android 8.x</td>
+        </tr>
+        <tr>
+          <td>ChromeOS (Chromebooks)</td>
+        </tr>
+      </table>
+    </td>
+    <!-- "coming soon" system requirements, to be updated and made live from March through July. -->
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+      <table>
+        <th>
+          Browser Lulju '25
+        </th>
+        <tr>
+          <td>Krom 109</td>
+        </tr>
+        <tr>
+          <td>Safari 16.6</td>
+        </tr>
+        <tr>
+          <td>Safari mobbli 16</td>
+        </tr>
+        <tr>
+          <td>Xifer 128</td>
+        </tr>
+        <tr>
+          <td>Firefox 115</td>
+        </tr>
+      </table>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+      <table>
+        <th>
+          Pjattaforma ta' Lulju '25
+        </th>
+        <tr>
+          <td>macOS 10.15</td>
+        </tr>
+        <tr>
+          <td>iOS 16.x</td>
+        </tr>
+        <tr>
+          <td>Windows 10</td>
+        </tr>
+        <tr>
+          <td>Android 8</td>
         </tr>
         <tr>
           <td>ChromeOS (Chromebooks)</td>
@@ -147,7 +148,6 @@ Aħna nużaw [YouTube](https://www.youtube.com) biex inkorporaw vidjows fil-Code
 ### Can you play this video?
 
 Qabel ma tibda l-korsijiet onlajn tal-Code.org, it-test daqq għall-vidjo hawn taħt biex tiżgura li int tajjeb biex tmur.
-
 
 <!--
 The following HTML is a copy of video_with_fallback.haml. once this file can be converted to

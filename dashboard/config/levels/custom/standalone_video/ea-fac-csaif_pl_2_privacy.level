@@ -1,0 +1,21 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2025-03-31T02:47:22.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "video_key": "convenience_v_privacy",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 28811,
+    "name_suffix": "_24",
+    "encrypted": "false",
+    "long_instructions": "#### There are privacy trade-offs inherent in many modern computing innovations. \r\n\r\n#### As you watch the video on facial recognition think about:\r\n- #### *What are the benefits of the technology? What does it make more convenient/fun?*\r\n- #### *What are the privacy concerns that arise?*\r\n- #### *Why would governments or businesses be interested in this technology?*\r\n\r\n<p style=\"font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;\">\r\n    ➡️ This activity is from Lesson 3. You can find more details in the full <a href='https://example.com/lesson1' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a>.\r\n</p>\r\n\r\n\r\n"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2025-03-31T02:47:22.846+00:00\",\"changed\":[\"cloned from \\\"csaif_pl_2_privacy\\\"\"],\"cloned_from\":\"csaif_pl_2_privacy\"}]"
+}]]></config>
+</StandaloneVideo>

@@ -23,6 +23,7 @@
 #  published_date                   :datetime
 #  self_paced_pl_course_offering_id :integer
 #  ai_teaching_assistant_available  :boolean          default(FALSE), not null
+#  facilitator_course_permissions   :json
 #
 # Indexes
 #
@@ -32,7 +33,7 @@
 class CourseOffering < ApplicationRecord
   include Curriculum::SharedCourseConstants
 
-  has_many :course_versions, -> {where(content_root_type: ['UnitGroup', 'Unit'])}
+  has_many :course_versions
   belongs_to :self_paced_pl_course_offering, class_name: 'CourseOffering', optional: true
 
   has_and_belongs_to_many :pd_workshops, class_name: 'Pd::Workshop', join_table: :course_offerings_pd_workshops, association_foreign_key: 'pd_workshop_id'
@@ -43,9 +44,9 @@ class CourseOffering < ApplicationRecord
 
   KEY_CHAR_RE = /[a-z0-9\-]/
   KEY_RE = /\A#{KEY_CHAR_RE}+\Z/
-  validates_format_of :key,
-    with: KEY_RE,
-    message: "must contain only lowercase alphabetic characters, numbers, and dashes; got \"%{value}\"."
+  validates :key,
+    format: {with: KEY_RE,
+    message: "must contain only lowercase alphabetic characters, numbers, and dashes; got \"%{value}\"."}
 
   ELEMENTARY_SCHOOL_GRADES = %w[K 1 2 3 4 5].freeze
   MIDDLE_SCHOOL_GRADES = %w[6 7 8].freeze
@@ -74,23 +75,21 @@ class CourseOffering < ApplicationRecord
     'Rubric'
   ]
   # Seeding method for creating / updating / deleting a CourseOffering and CourseVersion for the given
-  # potential content root, i.e. a Unit or UnitGroup.
+  # potential content root, i.e. a UnitGroup.
   #
   # Examples:
   #
-  # coursea-2019.script represents the content root for Course A, Version 2019.
-  # Therefore, it should contain "is_course true", which will cause this method to create the
-  # corresponding CourseOffering and CourseVersion objects.
-  #
   # csp1-2019.script does not represent a content root (the root for CSP, Version 2019 is a UnitGroup).
-  # Therefore, it does not contain "is_course true". so this method will not create any new objects.
+  # Therefore, this method will not create any new objects.
   #
   # This method will also delete CourseOfferings and/or CourseVersions that were previously associated with
   # the content_root, if appropriate. See CourseVersion#add_course_version for details.
   def self.add_course_offering(content_root)
-    if content_root.is_course?
-      raise "family_name must be set, since is_course is true, for: #{content_root.name}" if content_root.family_name.nil_or_empty?
+    unless content_root.is_a?(UnitGroup)
+      raise "cannot create CourseOffering for content root #{content_root.name} that is not a UnitGroup"
+    end
 
+    if content_root.is_course?
       offering = CourseOffering.find_or_create_by!(key: content_root.family_name) do |co|
         co.display_name = content_root.family_name if co.display_name.nil_or_empty?
       end
@@ -115,7 +114,7 @@ class CourseOffering < ApplicationRecord
   def latest_published_version(locale_code = 'en-us')
     locale_str = locale_code&.to_s
     unless locale_str&.start_with?('en')
-      latest_stable_version = any_version_is_unit? ? Unit.latest_stable_version(key, locale: locale_str) : UnitGroup.latest_stable_version(key, locale: locale_str)
+      latest_stable_version = UnitGroup.latest_stable_version(key, locale: locale_str)
       return latest_stable_version.course_version unless latest_stable_version.nil?
     end
 
@@ -135,17 +134,7 @@ class CourseOffering < ApplicationRecord
   end
 
   def course_id
-    return unless latest_published_version&.content_root_type == 'UnitGroup'
-    latest_published_version.content_root.id
-  end
-
-  def script_id
-    return unless latest_published_version&.content_root_type == 'Unit'
-    latest_published_version.content_root.id
-  end
-
-  def standalone_unit?
-    latest_published_version&.content_root_type == 'Unit'
+    latest_published_version&.content_root&.id
   end
 
   def self.should_cache?
@@ -187,9 +176,21 @@ class CourseOffering < ApplicationRecord
 
   def self.all_course_offerings
     if should_cache?
-      @@course_offerings ||= CourseOffering.all.includes(course_versions: :content_root)
+      @@course_offerings ||= CourseOffering.all.includes(
+        course_versions: {
+          content_root: {
+            default_unit_group_units: {}
+          }
+        }
+      )
     else
-      CourseOffering.all.includes(course_versions: :content_root)
+      CourseOffering.all.includes(
+        course_versions: {
+          content_root: {
+            default_unit_group_units: {}
+          }
+        }
+      )
     end
   end
 
@@ -209,8 +210,12 @@ class CourseOffering < ApplicationRecord
     assignable_course_offerings(user).map {|co| co.summarize_for_assignment_dropdown(user, locale_code)}.to_h
   end
 
-  def self.professional_learning_and_self_paced_course_offerings
-    all_course_offerings.select {|co| co.get_participant_audience == 'teacher' && co.instruction_type == 'self_paced'}.map do |co|
+  def self.self_paced_pl_course_offerings
+    all_course_offerings.select {|co| co.get_participant_audience == 'teacher' && co.instruction_type == 'self_paced'}
+  end
+
+  def self.self_paced_pl_course_offerings_basic_info
+    self_paced_pl_course_offerings.map do |co|
       {
         id: co.id,
         key: co.key,
@@ -219,8 +224,23 @@ class CourseOffering < ApplicationRecord
     end
   end
 
-  def self.single_unit_course_offerings_containing_units_info(unit_ids)
-    single_unit_course_offerings_containing_units(unit_ids).map {|co| co.summarize_for_unit_selector(unit_ids)}
+  def self.self_paced_course_offerings_for_catalog
+    all_course_offerings.select do |co|
+      co.get_participant_audience == 'teacher' &&
+        co.instruction_type == 'self_paced' &&
+        co.assignable? &&
+        co.any_version_is_in_published_state?
+    end.map(&:summarize_for_catalog)
+  end
+
+  def self.self_paced_pl_course_offerings_for_workshops
+    participant_audiences = ['teacher', 'facilitator']
+    all_course_offerings.select do |co|
+      participant_audiences.include?(co.get_participant_audience) &&
+        co.instruction_type == 'self_paced' &&
+        co.header.present? &&
+        co.any_version_is_in_published_state?
+    end&.map(&:summarize_self_paced_pl)
   end
 
   def summarize_for_unit_selector(unit_ids)
@@ -290,18 +310,27 @@ class CourseOffering < ApplicationRecord
     localized_name || display_name
   end
 
-  def duration
+  def duration_in_minutes
     return nil unless latest_published_version
     co_units = latest_published_version.units
-    co_duration_in_minutes = co_units.sum(&:duration_in_minutes)
-    DURATION_LABEL_TO_MINUTES_CAP.keys.find {|dur| co_duration_in_minutes <= DURATION_LABEL_TO_MINUTES_CAP[dur]}
+    co_units.sum(&:duration_in_minutes)
+  end
+
+  def duration_in_hours
+    return nil unless duration_in_minutes
+    duration_in_minutes > 60 ? duration_in_minutes / 60 : 1
+  end
+
+  def duration
+    return nil unless duration_in_minutes
+    DURATION_LABEL_TO_MINUTES_CAP.keys.find {|dur| duration_in_minutes <= DURATION_LABEL_TO_MINUTES_CAP[dur]}
   end
 
   def translated?(locale_code = 'en-us')
     locale_str = locale_code&.to_s
     return true if locale_str&.start_with?('en')
 
-    latest_stable_version = any_version_is_unit? ? Unit.latest_stable_version(key, locale: locale_str) : UnitGroup.latest_stable_version(key, locale: locale_str)
+    latest_stable_version = UnitGroup.latest_stable_version(key, locale: locale_str)
     !latest_stable_version.nil?
   end
 
@@ -325,6 +354,7 @@ class CourseOffering < ApplicationRecord
       published_date: published_date,
       self_paced_pl_course_offering_id: self_paced_pl_course_offering_id,
       ai_teaching_assistant_available: ai_teaching_assistant_available,
+      facilitator_course_permissions: facilitator_course_permissions || [],
     }
   end
 
@@ -336,6 +366,7 @@ class CourseOffering < ApplicationRecord
       marketing_initiative: marketing_initiative,
       grade_levels: grade_levels,
       duration: duration,
+      duration_in_hours: duration_in_hours,
       image: image,
       cs_topic: cs_topic,
       school_subject: school_subject,
@@ -344,8 +375,6 @@ class CourseOffering < ApplicationRecord
       course_version_id: latest_published_version(locale_code)&.id,
       course_id: course_id,
       course_offering_id: id,
-      script_id: script_id,
-      is_standalone_unit: standalone_unit?,
       is_translated: translated?(locale_code),
       description: description,
       professional_learning_program: professional_learning_program,
@@ -376,6 +405,7 @@ class CourseOffering < ApplicationRecord
       published_date: published_date,
       self_paced_pl_course_offering_key: self_paced_pl_course_offering&.key,
       ai_teaching_assistant_available: ai_teaching_assistant_available,
+      facilitator_course_permissions: facilitator_course_permissions
     }
   end
 
@@ -419,14 +449,6 @@ class CourseOffering < ApplicationRecord
 
   def units_included_in_any_version?(unit_ids)
     course_versions.any? {|cv| cv.included_in_units?(unit_ids)}
-  end
-
-  def any_version_is_unit?
-    course_versions.any? {|cv| cv.content_root_type == 'Unit'}
-  end
-
-  def self.single_unit_course_offerings_containing_units(unit_ids)
-    CourseOffering.all.select {|co| co.units_included_in_any_version?(unit_ids) && co.any_version_is_unit?}
   end
 
   def csd?
@@ -480,8 +502,9 @@ class CourseOffering < ApplicationRecord
 
   def get_available_resources(locale_code = 'en-us')
     latest_version = latest_published_version(locale_code)
-    units = latest_version&.units
-    lessons = units&.first&.lessons
+    unit = latest_version&.units&.first
+    unit_group_unit = unit&.unit_group_units&.first
+    lessons = unit&.lessons
 
     return nil unless lessons
     expanded_card_resources = {}
@@ -489,7 +512,7 @@ class CourseOffering < ApplicationRecord
     lessons.each do |lesson|
       break if expanded_card_resources.size >= 5
       if lesson.has_lesson_plan
-        expanded_card_resources["Lesson Plan"] ||= lesson.lesson_plan_html_url
+        expanded_card_resources["Lesson Plan"] ||= lesson.lesson_plan_html_url(unit_group_unit: unit_group_unit)
       end
       lesson.resources&.each do |resource|
         properties = resource.properties

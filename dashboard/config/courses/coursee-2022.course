@@ -1,0 +1,23 @@
+{
+  "name": "coursee-2022",
+  "script_names": [
+    "coursee-2022"
+  ],
+  "original_script_names": [
+    "coursee-2022"
+  ],
+  "published_state": "stable",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "coursee",
+    "version_year": "2022"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

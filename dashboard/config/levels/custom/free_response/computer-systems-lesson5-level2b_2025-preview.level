@@ -1,0 +1,24 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2025-03-22T02:21:19.000Z",
+  "level_num": "custom",
+  "user_id": 1574,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "When you’re trying to fix something on your computer or device, what’s the very first step you would take to figure out what’s wrong or fix the issue?\r\n\r\nWhy do you think this is a good first step?",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "name_suffix": "_2025-preview"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-03-22T02:21:19.006+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson5-level2b_2025\\\"\"],\"cloned_from\":\"computer-systems-lesson5-level2b_2025\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

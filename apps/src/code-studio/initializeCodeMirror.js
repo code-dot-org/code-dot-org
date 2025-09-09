@@ -20,6 +20,7 @@ import {JSHINT} from 'jshint';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import MainInstructionsPreview from '../lab2/views/components/Instructions/MainInstructionsPreview';
 import SafeMarkdown from '../templates/SafeMarkdown';
 
 window.JSHINT = JSHINT;
@@ -42,10 +43,17 @@ CodeMirrorSpellChecker({
  * @param {(string|Element)} [options.preview] - element or id of element to
  *        populate with a preview. If none specified, will look for an element
  *        by appending "_preview" to the id of the target element.
+ * @param {string} [options.game] optional game name, used to determine which preview to use.
  */
 function initializeCodeMirror(target, mode, options = {}) {
-  let {callback, attachments, onUpdateLinting, additionalAnnotations, preview} =
-    options;
+  let {
+    callback,
+    attachments,
+    onUpdateLinting,
+    additionalAnnotations,
+    preview,
+    game,
+  } = options;
   let updatePreview;
 
   // Code mirror parses html using xml mode
@@ -70,12 +78,30 @@ function initializeCodeMirror(target, mode, options = {}) {
     if (previewElement) {
       const originalCallback = callback;
       updatePreview = editor => {
-        ReactDOM.render(
-          React.createElement(SafeMarkdown, {
-            markdown: editor.getValue(),
-          }),
-          previewElement
-        );
+        if (game === 'Pythonlab' || game === 'Weblab2') {
+          ReactDOM.render(
+            React.createElement(MainInstructionsPreview, {
+              instructionsText: editor.getValue(),
+              theme: 'Dark',
+            }),
+            previewElement
+          );
+        } else if (game === 'Aichat' || game === 'Music') {
+          ReactDOM.render(
+            React.createElement(MainInstructionsPreview, {
+              instructionsText: editor.getValue(),
+              theme: 'Light',
+            }),
+            previewElement
+          );
+        } else {
+          ReactDOM.render(
+            React.createElement(SafeMarkdown, {
+              markdown: editor.getValue(),
+            }),
+            previewElement
+          );
+        }
       };
 
       callback = (editor, ...rest) => {

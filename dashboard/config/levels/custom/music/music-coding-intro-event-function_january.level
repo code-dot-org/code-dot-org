@@ -1,0 +1,231 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2025-01-23T23:12:24.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "false",
+    "level_data": {
+      "library": "launch2024",
+      "packId": "default",
+      "toolbox": {
+        "blocks": {
+          "Functions": [
+
+          ]
+        },
+        "type": "flyout",
+        "addFunctionDefinition": false,
+        "addFunctionCalls": true
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "next": {
+                "block": {
+                  "type": "repeat_simple2",
+                  "id": "repeat_simple2",
+                  "extraState": {
+                    "disableNextConnection": true
+                  },
+                  "fields": {
+                    "times": 10
+                  },
+                  "inputs": {
+                    "code": {
+                      "block": {
+                        "type": "play_sounds_together",
+                        "id": "play_sounds_together",
+                        "extraState": {
+                          "disableNextConnection": true
+                        },
+                        "inputs": {
+                          "code": {
+                            "block": {
+                              "type": "play_sound_at_current_location_simple2",
+                              "id": "play_sound_at_current_location_simple2",
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
+                              "fields": {
+                                "sound": "pop/bass_runner"
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "play_sound_at_current_location_simple2",
+                                  "id": "k-2oy8[e`@rx@nD[|Pzo",
+                                  "extraState": {
+                                    "disableNextConnection": true
+                                  },
+                                  "fields": {
+                                    "sound": "pop/drum_beat_relax"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "triggered_at_simple2",
+              "id": "trigger_1",
+              "x": 30,
+              "y": 250,
+              "fields": {
+                "trigger": "<field name=\"trigger\">trigger1</field>",
+                "trigger_start": "<field name=\"trigger_start\">next_measure</field>"
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "17J:G#.cywF:/+$9ZunD",
+              "x": 370,
+              "y": 70,
+              "extraState": {
+                "procedureId": "Okdr*n;XUAA(u}Y0N~-F",
+                "initialDeleteConfig": true,
+                "initialEditConfig": true,
+                "initialMoveConfig": true
+              },
+              "fields": {
+                "NAME": "power-up"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "repeat_simple2",
+                    "id": "mp5deKbx0Vt$DVOycb1e",
+                    "extraState": {
+                      "disableNextConnection": true
+                    },
+                    "fields": {
+                      "times": 2
+                    },
+                    "inputs": {
+                      "code": {
+                        "block": {
+                          "type": "play_sounds_together",
+                          "id": "}rW%jdZt-w-)(pBXyq=~",
+                          "extraState": {
+                            "disableNextConnection": true
+                          },
+                          "inputs": {
+                            "code": {
+                              "block": {
+                                "type": "play_sound_at_current_location_simple2",
+                                "id": "#)_B+XsTQ}w[V5a-?I`^",
+                                "extraState": {
+                                  "disableNextConnection": false
+                                },
+                                "fields": {
+                                  "sound": "electro/drum_beat_hyper"
+                                },
+                                "next": {
+                                  "block": {
+                                    "type": "play_sound_at_current_location_simple2",
+                                    "id": "|9}G0ltJPj6$sTc]@thU",
+                                    "extraState": {
+                                      "disableNextConnection": false
+                                    },
+                                    "fields": {
+                                      "sound": "pop/drum_beat_action"
+                                    },
+                                    "next": {
+                                      "block": {
+                                        "type": "play_sound_at_current_location_simple2",
+                                        "id": "M-DgO{3/8685,|Xre9js",
+                                        "extraState": {
+                                          "disableNextConnection": false
+                                        },
+                                        "fields": {
+                                          "sound": "electro/synth_sleek"
+                                        },
+                                        "next": {
+                                          "block": {
+                                            "type": "play_sound_at_current_location_simple2",
+                                            "id": "+]QgB^PdcXKU[yBJU#v!",
+                                            "extraState": {
+                                              "disableNextConnection": true
+                                            },
+                                            "fields": {
+                                              "sound": "groove/laser"
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "procedures": [
+          {
+            "id": "Okdr*n;XUAA(u}Y0N~-F",
+            "name": "power-up",
+            "returnTypes": null
+          }
+        ]
+      }
+    },
+    "long_instructions": "### <i class=\"fa-solid fa-bolt\"></i> Trigger the music for a power up! \r\n1. Add the [powerUp](#clickable=flyout-first-block) function under the [trigger](#clickable=id:trigger_1). \r\n2. Press [Run](#clickable=run-button) to start the background music.\r\n3. Press the [1](#clickable=trigger-button-1) trigger to start the Power Up music!",
+    "validations": [
+      {
+        "key": "music-coding-intro-event-function_6ac8d0df-d8f7-489a-9f29-b79b2e8fd1bc",
+        "message": "You're playing sounds live just like a DJ! ",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sound_triggered_multiple_times",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "key": "music-coding-intro-event-function_e06b7012-d35a-4d33-acc5-a93539067450",
+        "message": "Nothing has been triggered yet. Read the instructions to create your own trigger. ",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_different_sounds_together_multiple_times",
+            "value": 3
+          }
+        ]
+      }
+    ],
+    "name_suffix": "_january",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-01-23T23:12:24.051+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-event-function\\\"\"],\"cloned_from\":\"music-coding-intro-event-function\"}]"
+}]]></config>
+  <blocks/>
+</Music>

@@ -8,8 +8,7 @@
         "language": "py",
         "contents": "print('Hello start!!')",
         "folderId": "1",
-        "active": true,
-        "open": true
+        "active": true
       }
     },
     "folders": {
@@ -19,7 +18,8 @@
         "parentId": "0",
         "open": true
       }
-    }
+    },
+    "openFiles": ["0"]
   },
   "longInstructions": "## Submittable Level\r\nHere's a sample submittable level!",
   "hideShareAndRemix": true,
@@ -36,7 +36,7 @@
   "appName": "pythonlab",
   "useRestrictedSongs": false,
   "usesProjects": true,
-  "finishUrl": "/s/allthethings/lessons/51/levels/1",
+  "finishUrl": "/courses/allthethingscourse/units/1/lessons/51/levels/1",
   "exampleSolutions": [],
   "exemplarSources": null
 }

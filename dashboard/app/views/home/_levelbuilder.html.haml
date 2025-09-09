@@ -5,6 +5,7 @@
     %li
       = link_to 'Scripts', scripts_path
       = link_to '(Update all)', scripts_path(rake: '1'), data: { confirm: 'Are you sure want to re-seed script data?'}
+    %li= link_to 'Courses', all_courses_path
     %li= link_to t('builder.manage'), levels_path
     %li= link_to 'Block Pools', pools_path
     %li= link_to 'Shared Functions', shared_blockly_functions_path

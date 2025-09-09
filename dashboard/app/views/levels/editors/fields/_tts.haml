@@ -4,7 +4,7 @@
   #tts-error.alert.alert-error{style: "display: none"}
     #alert-content
   .row
-    - unless (@level.is_a?(Applab) || @level.instance_of?(Gamelab) || @level.is_a?(Weblab) || @level.is_a?(Javalab)) || @level.is_a?(Aichat)
+    - unless (@level.is_a?(Applab) || @level.instance_of?(Gamelab) || @level.is_a?(Weblab) || @level.is_a?(Javalab)) || @level.is_a?(Aichat) || @level.is_a?(Music)
       .span6
         %h5 Short Instructions
         = f.text_area :tts_short_instructions_override, placeholder: '', rows: 4, class:"input-block-level"
@@ -16,7 +16,8 @@
     %div
       %select#level_tts_voice
     %div
-      %button.tts#tts-short-instructions{type: 'button'} Hear Short Instructions
+      - unless (@level.is_a?(Applab) || @level.instance_of?(Gamelab) || @level.is_a?(Weblab) || @level.is_a?(Javalab)) || @level.is_a?(Aichat) || @level.is_a?(Music)
+        %button.tts#tts-short-instructions{type: 'button'} Hear Short Instructions
       %button.tts#tts-long-instructions{type: 'button'} Hear Long Instructions
     %div
       %audio#tts-audio

@@ -22,6 +22,7 @@
 #  index_levels_on_game_id    (game_id)
 #  index_levels_on_level_num  (level_num)
 #  index_levels_on_name       (name)
+#  index_levels_on_type       (type)
 #
 
 class Bounce < Grid
@@ -92,10 +93,6 @@ class Bounce < Grid
   def self.parse_maze(maze_json, _ = nil)
     maze_json = maze_json.to_json if maze_json.is_a? Array
     {'maze' => JSON.parse(maze_json).map {|row| row.map {|cell| Integer(cell['tileType'])}}.to_json}
-  end
-
-  def uses_google_blockly?
-    true
   end
 
   def project_type

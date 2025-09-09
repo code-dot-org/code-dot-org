@@ -1,6 +1,6 @@
 # This is the configuration for the main code.org/ root
 
-locale: en-US
+locales: [en-US]
 
 header:
   # The topbar (which is collapsed into the hamburger in certain contexts)
@@ -22,13 +22,13 @@ header:
         url: /promote
         domain: code.org
         id: header-stats
-      - title: help_us
-        url: /help
+      - title: donate
+        url: /donate
         domain: code.org
-        id: header-help
+        id: header-donate
       - title: incubator
         url: /incubator
-        domain: studio.code.org
+        domain: code.org
         id: header-incubator
       - title: about
         url: /about
@@ -50,7 +50,7 @@ header:
         id: header-student-projects
       - title: incubator
         url: /incubator
-        domain: studio.code.org
+        domain: code.org
         id: header-incubator
 
     teacher:
@@ -72,7 +72,7 @@ header:
         id: header-teacher-professional-learning
       - title: incubator
         url: /incubator
-        domain: studio.code.org
+        domain: code.org
         id: header-teacher-incubator
 
   # The three-bar "hamburger" menu
@@ -124,13 +124,13 @@ header:
         domain: code.org
         url: /promote
         id: stats
-      - title: help_us
+      - title: donate
         domain: code.org
-        url: /help
-        id: help-us
+        url: /donate
+        id: donate
       - title: incubator
         url: /incubator
-        domain: studio.code.org
+        domain: code.org
         id: incubator
       - title: about
         type: expander
@@ -225,13 +225,13 @@ header:
         domain: code.org
         url: /promote
         id: stats
-      - title: help_us
+      - title: donate
         domain: code.org
-        url: /help
-        id: help-us
+        url: /donate
+        id: donate
       - title: incubator
         url: /incubator
-        domain: studio.code.org
+        domain: code.org
         id: incubator
       - title: about
         type: expander
@@ -316,11 +316,6 @@ header:
       level: Weblab
       url: /docs/ide/weblab
       id: weblab-docs
-    - title: music_lab_documentation
-      domain: studio.code.org
-      level: Music
-      url: /docs/ide/music
-      id: musiclab-docs
     - title: help_support
       url: https://support.code.org
       id: support
@@ -338,6 +333,78 @@ header:
       url: https://forum.code.org
       id: teacher-community
 
+# The navigation region found at the bottom of each page
+footer:
+  links:
+    studio:
+      - title: privacy
+        url: /privacy
+        domain: code.org
+        style: "color: #ffa400;"
+      - title: cookie_notice
+        url: /cookies
+        domain: code.org
+      - title: translate
+        url: /translate
+        domain: code.org
+      - title: help_support
+        url: https://support.code.org
+        target: _blank
+        loc_prefix: landing.
+        id: support
+      - title: store
+        url: https://store.code.org
+      - title: tos_short
+        url: /tos
+        domain: code.org
+    code_org:
+      - title: privacy_policy
+        url: /privacy
+        domain: code.org
+        style: "color: #ffa400;"
+      - title: cookie_notice
+        url: /cookies
+        domain: code.org
+      - title: about
+        url: /about
+        domain: code.org
+      - title: partners
+        url: /partners
+        domain: code.org
+      - title: blog
+        url: https://medium.com/@codeorg
+        target: _blank
+      - title: donate
+        url: /donate
+        domain: code.org
+      - title: store
+        url: shop
+        domain: code.org
+      - title: support
+        url: http://support.code.org/
+        target: _blank
+      - title: terms
+        url: /tos
+        domain: code.org
+    hour_of_code:
+      - title: contact
+        url: http://support.code.org/hc/en-us/requests/new
+        target: _blank
+      - title: support
+        url: http://support.code.org
+        target: _blank
+      - title: terms
+        url: /tos
+        domain: code.org
+        target: _blank
+      - title: privacy
+        url: /privacy
+        domain: code.org
+        target: _blank
+      - title: cookie
+        domain: hourofcode.com
+        url: /cookies
+        target: _blank
 # These override specially wrapped components in particular pages.
 #
 # When we navigate to such a page that matches /global/:region<your mask>
@@ -366,7 +433,7 @@ header:
 #           id: farsi-announcement
 #           image: /shared/images/teacher-announcement/incubator-announcement.png
 #           title: foo
-#       
+#
 # When we navigate to the /global/foo/home page, any MarketingAnnouncement will
 # have its normal announcement replaced with the configured one. Whereas, on any
 # other page, the '/' would match, and the `false` indicates the component should

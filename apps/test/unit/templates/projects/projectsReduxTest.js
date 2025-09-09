@@ -11,8 +11,6 @@ import {stubFakePersonalProjectData} from '@cdo/apps/templates/projects/generate
 import projects, {
   setPersonalProjectsList,
   updatePersonalProjectData,
-  publishSuccess,
-  unpublishSuccess,
   deleteSuccess,
   startRenamingProject,
   updateProjectName,
@@ -58,47 +56,6 @@ describe('projectsRedux', () => {
     expect(nextNextState.personalProjectsList.projects).toEqual(
       expectedProjects
     );
-  });
-
-  describe('publishSuccess', () => {
-    it('sets the publishedAt field for the recently published project', () => {
-      const action = setPersonalProjectsList(stubFakePersonalProjectData);
-      const nextState = projects(initialState, action);
-      const nextAction = publishSuccess('2016-11-30T23:59:59.999-08:00', {
-        channel: 'abcd2',
-      });
-      const nextNextState = projects(nextState, nextAction);
-      expect(nextNextState.personalProjectsList.projects[1].channel).toEqual(
-        'abcd2'
-      );
-      expect(
-        nextNextState.personalProjectsList.projects[1].publishedAt
-      ).toEqual('2016-11-30T23:59:59.999-08:00');
-    });
-  });
-
-  describe('unpublishSuccess', () => {
-    it('sets the publishedAt field for the recently unpublished project to null', () => {
-      const action = setPersonalProjectsList(stubFakePersonalProjectData);
-      const nextState = projects(initialState, action);
-      expect(nextState.personalProjectsList.projects).toEqual(
-        stubFakePersonalProjectData
-      );
-      expect(nextState.personalProjectsList.projects[2].channel).toEqual(
-        'abcd3'
-      );
-      expect(nextState.personalProjectsList.projects[2].publishedAt).toEqual(
-        '2015-12-31T23:59:59.999-08:00'
-      );
-      const nextAction = unpublishSuccess('abcd3');
-      const nextNextState = projects(nextState, nextAction);
-      expect(nextNextState.personalProjectsList.projects[2].channel).toEqual(
-        'abcd3'
-      );
-      expect(
-        nextNextState.personalProjectsList.projects[2].publishedAt
-      ).toEqual(null);
-    });
   });
 
   describe('deleteSuccess', () => {

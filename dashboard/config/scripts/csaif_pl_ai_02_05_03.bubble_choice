@@ -1,0 +1,8 @@
+name 'csaif_pl_ai_02_05_03'
+display_name 'Providing Multiple Examples for Refinement'
+description 'Choose one career to explore how providing multiple examples affects AI responses.'
+
+sublevels
+level 'problem-solving-with-ai-lesson3-level3a_2024'
+level 'problem-solving-with-ai-lesson3-level3b_2024'
+level 'problem-solving-with-ai-lesson3-level3c_2024'

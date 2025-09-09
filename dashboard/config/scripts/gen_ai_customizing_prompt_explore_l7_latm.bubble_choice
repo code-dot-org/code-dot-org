@@ -1,0 +1,10 @@
+name 'gen-ai-customizing-prompt-explore-L7_latm'
+display_name 'You Try: Make'
+description 'Choose at least 1 level to complete fully, then try the others!'
+
+sublevels
+level 'gen-ai-customizing-prompt-explore-L7A_latm'
+level 'gen-ai-customizing-prompt-explore-L7B_latm'
+level 'gen-ai-customizing-prompt-explore-L7C_latm'
+level 'gen-ai-customizing-prompt-explore-L7D_latm'
+level 'gen-ai-customizing-prompt-explore-L7E_latm'

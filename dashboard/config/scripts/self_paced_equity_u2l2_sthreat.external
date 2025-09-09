@@ -1,0 +1,55 @@
+name 'self-paced-equity-U2L2-sthreat'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Stereotype Threat
+
+<div style="background-color: #C6E3E7; border-radius: 20px; color: #000000; width: 95%; padding: 10px 10px 10px 10px; margin: 20px 0px 20px 0px"> <p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px;">
+
+#### **Stereotype threat:** The risk of confirming negative stereotypes about an individual’s racial, ethnic, gender, or cultural group which can create high cognitive load and reduce academic focus and performance.</p></div>
+
+<img src="https://images.code.org/5183ce9a53fa465c3da5072200cb85ab-image-1736139460167.57.38 PM.png" alt="Three students look on two laptops. One is standing and leaning over the table." style="border-radius:20px; float: right; padding-right: 10px; height: 200px; clear: both; margin: 0px 20px 20px 20px;">
+
+#### Knowledge of implicit bias will help build your equitable teaching practices. It's *also* important to attend to **stereotype threat** in the computer science classroom, especially since students will likely have preexisting ideas about who does and doesn't belong in computer science.
+
+## What does stereotype threat look like?
+
+#### Stereotype threat can be a tricky concept - it's not just about perpetuating stereotypes, it's about the way stereotypes can affect students' performance and sense of belonging.
+
+#### Read the following excerpt from <ins>Whistling Vivaldi</ins>, by Claude Steele. In the excerpt, Steele and his researchers are presenting a test to a group of college students in a research environment. 
+
+#### **While you read, consider how Steele's findings resonate with you and your experiences in the classroom (as a student or teacher).**
+
+<div style="background-color: #F7F8FA; border-radius: 20px; color: #000000; width: 95%; padding: 8px 15px 15px 15px;"> <p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 20px; margin-bottom: 20px; font-size: 18px;">
+
+
+### **From Chapter 2: “A Mysterious Link Between Identity and Intellectual Performance"**
+
+#### We’d present the test in a way that made the cultural stereotype about women’s math ability irrelevant to their performance. We’d say something like this: “You may have heard that women don’t do as well as men on difficult standardized math tests, but that’s not true for the particular standardized math test; on this particular test, women always do as well as men.” (This is a close rendition of what was actually said in the real experiment.)
+#### It was a simple instruction. But presenting the test this way changed the meaning of any frustration women experienced. It made it not a sign of anything about being a woman, because this “particular test” couldn’t measure anything about being a woman, or about gender in general, for that matter. They were now in the same boat as men taking this test. Their frustration could confirm that they weren’t good at math as individuals, but it couldn’t confirm that they weren’t good at math because they were women.
+#### A change of instruction and a contingency of their gender identity that normally haunted them during difficult math would be gone.
+#### So we had a plan. We would do the experiment as before. We would recruit strong women and men math students at Michigan. We would give them all a difficult math test alone in a room. And for the group in which we didn’t want the women to experience the risk of stigma, we’d present the test as not showing gender differences.
+#### This would put in place all of the elements we needed to pit the two big ideas against each other in an empirical test. If women for whom stigma pressure was lowered performed as well as equally skilled men in this experiment, we’d know that stigma pressure had worsened their performance in the earlier studies. We’d know that this pressure could have a big effect on women’s math performance. But if lowering this pressure had no effect on women’s test performance—if the women still performed worse than equally-skilled men—then we’d know that this pressure wasn’t a factor in our earlier findings, that something else was. Perhaps something about how women are socialized…
+#### And the results were dramatic. They gave us a clear answer. Among participants who were told the test did show gender differences, where the women could still feel the threat of stigma confirmation, women did worse than equally skilled men…But among participants who were told the test did not show gender differences, where the women were free of confirming anything about being a woman, woman performed at the same high level as equally skilled men. Their underperformance was gone.<sup>4</sup>
+</p></div>
+
+<div style="display: flex; align-items: left; margin: 30px 0px 30px 0px">
+
+<img src="https://images.code.org/08d8da1158d67fd1ed7535c90b2b91bc-image-1731961007471.png" style="width: auto; height: 100px;"  alt="An open hand with an open book floating above it.">
+
+<div style="background-color: #009EB0; border-radius: 20px 20px 20px 20px; color: #000000; width: 80%; margin-left: 5%; margin-right: 5%; padding: 10px 10px 5px 10px;">
+
+<p style="color: white; line-height: 1.5; margin-left: 10px; margin-right: 10px; font-size: 18px"><b>Resource Suggestion</b></p>
+
+<p style="color: white; line-height: 1.2; margin-left: 10px; margin-right: 10px; font-size: 18px">Want to learn more about stereotype threat? Check out Claude Steele's book, <span style="background-color: LightCyan;"><a href="https://wwnorton.com/books/Whistling-Vivaldi/" target="blank" rel="noopener noreferrer"><span style="text-decoration: underline;">Whistling Vivaldi: How Stereotypes Affect Us and What We Can Do</span></a></span>.
+
+</p>
+
+</div>
+</div>
+
+___
+
+<sup>4</sup>Steele, Claude. Whistling Vivaldi: How Stereotypes Affect Us and What We Can Do. W.W. Norton & Company, 2011. 
+MARKDOWN

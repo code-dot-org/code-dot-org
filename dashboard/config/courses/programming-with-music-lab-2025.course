@@ -1,0 +1,56 @@
+{
+  "name": "programming-with-music-lab-2025",
+  "script_names": [
+    "programming-with-music-lab-2025"
+  ],
+  "original_script_names": [
+    "programming-with-music-lab-2025"
+  ],
+  "published_state": "stable",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "programming-with-music-lab",
+    "has_verified_resources": true,
+    "version_year": "2025"
+  },
+  "resources": [
+    {
+      "name": "All Code",
+      "url": "/courses/programming-with-music-lab-2025/code",
+      "key": "all_code_1",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_code_1"
+      }
+    },
+    {
+      "name": "All Resources",
+      "url": "/courses/programming-with-music-lab-2025/resources",
+      "key": "all_resources_1",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_1"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/courses/programming-with-music-lab-2025/standards",
+      "key": "all_standards_1",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_1"
+      }
+    }
+  ],
+  "student_resources": [
+
+  ]
+}

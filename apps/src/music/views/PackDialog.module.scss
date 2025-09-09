@@ -18,9 +18,10 @@
 %dialog {
   background-color: $neutral_light;
   border-radius: 5px;
-  padding: 20px 50px;
+  padding: 7px 20px;
   width: 80%;
-  max-height: 80%;
+  max-width: 800px;
+  max-height: calc(100% - 84px);
 }
 
 .focusLock {
@@ -40,13 +41,47 @@
     background-color: $neutral_dark90;
     color: $neutral_light;
     border: solid 1px $neutral_dark60;
+    top: -15px;
+
+    &FullWidth {
+      width: calc(100% - 120px);
+    }
 
     .heading {
       color: $neutral_light;
+      margin: 0;
     }
 
     .body {
-      margin-bottom: 14px;
+      display: flex;
+      align-items: end;
+      gap: 10px;
+      justify-content: space-between;
+      margin-bottom: 7px;
+
+      &Stacked {
+        justify-content: space-around;
+        margin-bottom: 7px;
+        flex-direction: column;
+        align-items: start;
+        gap: 7px;
+        margin-top: 4px;
+      }
+    }
+
+    .segmentedButtons {
+      flex-shrink: 0;
+
+      span {
+        user-select: none;
+      }
+    }
+
+    .footer {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-top: 7px;
     }
 
     .packsContainer {
@@ -58,32 +93,41 @@
       border: solid $neutral_dark 2px;
       box-sizing: border-box;
       border-radius: 5px;
-      padding: 16px;
 
       .packs {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, 232px);
-        grid-gap: 4px;
-        justify-content: space-around;
-
         .pack {
           box-sizing: border-box;
           cursor: pointer;
-          width: 232px;
-          padding: 16px;
+          width: 100%;
+          padding: 8px;
+          display: flex;
+          gap: 20px;
+          align-items: center;
+
+          &Alternate {
+            background-color: #31373d;
+          }
 
           &Selected {
-            background-color: $dark_black;
+            background-color: $light_primary_500;
             border-radius: 5px;
           }
 
+          &:hover {
+            .packImageContainer {
+              transform: scale(1.2, 1.2);
+              transition: 0.1s ease-in-out;
+            }
+          }
+
           &ImageContainer {
-            width: 100%;
+            width: 30px;
+            height: 30px;
             transform: scale(1, 1);
             transition: 0.1s ease-in-out;
 
             &:hover, &Selected {
-              transform: scale(1.03, 1.03);
+              transform: scale(1.2, 1.2);
               transition: 0.1s ease-in-out;
             }
           }
@@ -108,29 +152,24 @@
             }
           }
 
-          &Footer {
-            margin-top: 8px;
-            display: flex;
-            justify-content: space-between;
+          &Name {
+            flex: 1;
+            font-size: 16px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
 
-            &Name {
-              font-size: 18px;
-              font-weight: 600;
-              line-height: 1.3;
-            }
+          &Artist {
+            flex: 1;
+            font-size: 16px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
 
-            &Artist {
-              font-size: 11px;
-            }
-
-            &Preview {
-              margin: 3px 6px 0 3px;
-              font-size: 18px;
-
-              .preview {
-                color: $neutral_dark40;
-              }
-            }
+          &Bold {
+            font-weight: 600;
           }
         }
       }
@@ -141,6 +180,7 @@
 %button {
   border: 2px solid;
   transition: background-color 0.1s ease;
+  margin: 5px 0;
 
   &:hover, &:active {
     box-shadow: none;
@@ -151,15 +191,15 @@
 .buttonContainer {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  margin-top: 20px;
+  justify-content: end;
+  gap: 14px;
+  width: 100%;
 
   .skip {
     @extend %button;
     background-color: initial;
     color: $neutral_light;
     border-color: $neutral_light;
-    margin-left: auto;
 
     &:hover, &:active {
       background-color: $neutral_dark70;

@@ -1,32 +1,29 @@
+import Button from '@code-dot-org/component-library/button';
+import {
+  TooltipProps,
+  WithTooltip,
+} from '@code-dot-org/component-library/tooltip';
 import React, {useCallback} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
-import Button from '@cdo/apps/componentLibrary/button';
-import {TooltipProps} from '@cdo/apps/componentLibrary/tooltip';
-import WithTooltip from '@cdo/apps/componentLibrary/tooltip/WithTooltip';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {useCodebridgeContext} from '../codebridgeContext';
-
-import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
+import {setShowFileBrowser} from '../redux/workspaceRedux';
 
 /*
-  This component will look to the `showFileBrowser` boolean in the config and flip it back and forth.
+  This component will look to the `showFileBrowser` boolean in redux and flip it back and forth.
   If we're showing it, the icon is solid, and if not, the icon is regular.
-
-  If no `showFileBrowser` boolean is provided in the config, then this button will not render.
-
 */
 
 const ToggleFileBrowserButton: React.FunctionComponent = () => {
-  const {config, setConfig} = useCodebridgeContext();
+  const showFileBrowser = useAppSelector(
+    state => state.codebridgeWorkspace.showFileBrowser
+  );
+  const dispatch = useAppDispatch();
 
   const onClick = useCallback(
-    () =>
-      setConfig({
-        ...config,
-        showFileBrowser: !config.showFileBrowser,
-      }),
-    [config, setConfig]
+    () => dispatch(setShowFileBrowser(!showFileBrowser)),
+    [showFileBrowser, dispatch]
   );
 
   const tooltipProps: TooltipProps = {
@@ -34,7 +31,6 @@ const ToggleFileBrowserButton: React.FunctionComponent = () => {
     direction: 'onRight',
     tooltipId: 'toggle-file-browser-tooltip',
     size: 'xs',
-    className: darkModeStyles.tooltipRight,
   };
 
   return (
@@ -42,16 +38,16 @@ const ToggleFileBrowserButton: React.FunctionComponent = () => {
       <WithTooltip tooltipProps={tooltipProps}>
         <Button
           icon={{
-            iconStyle: config.showFileBrowser ? 'solid' : 'regular',
+            iconStyle: showFileBrowser ? 'solid' : 'regular',
             iconName: 'folder',
           }}
           isIconOnly
-          color={'white'}
           onClick={onClick}
           ariaLabel={codebridgeI18n.toggleFileBrowser()}
           size={'xs'}
           type={'tertiary'}
-          className={darkModeStyles.tertiaryButton}
+          aria-expanded={showFileBrowser}
+          color={'black'}
         />
       </WithTooltip>
     </span>

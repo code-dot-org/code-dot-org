@@ -64,7 +64,7 @@
     "design_mode_at_start": "false",
     "hide_design_mode": "false",
     "beginner_mode": "false",
-    "hide_view_data_button": "true",
+    "hide_view_data_button": "false",
     "show_debug_watch": "true",
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
@@ -76,10 +76,10 @@
     "display_name": "Playlist, Milestone 8",
     "bubble_choice_description": "Remove artists from the favorites list if the list is too long.",
     "thumbnail_url": "https://images.code.org/cf44b5dc50aff51cdf2982f3314480b8-Playlist.png",
-    "preload_asset_list": null,
-    "encrypted_examples": "LYF6P7CGK2+B0/bbMRY1uEFnoQZ+/f725YUjkfPH/COzwSbfYjP3Fa9MZLlo\n1VG0cIDZC9VK2IDEQvt/jUMKzg==\n"
+    "encrypted_examples": "LYF6P7CGK2+B0/bbMRY1uEFnoQZ+/f725YUjkfPH/COzwSbfYjP3Fa9MZLlo\n1VG0cIDZC9VK2IDEQvt/jUMKzg==\n",
+    "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-04-17T20:45:23.123+00:00\",\"changed\":[\"cloned from \\\"CSP Lists Practice Birds L8\\\"\"],\"cloned_from\":\"CSP Lists Practice Birds L8\"},{\"changed_at\":\"2024-04-17 20:49:07 +0000\",\"changed\":[\"code_functions\",\"project_template_level_name\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2024-04-19 18:57:24 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-27 21:56:22 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-04-17T20:45:23.123+00:00\",\"changed\":[\"cloned from \\\"CSP Lists Practice Birds L8\\\"\"],\"cloned_from\":\"CSP Lists Practice Birds L8\"},{\"changed_at\":\"2024-04-17 20:49:07 +0000\",\"changed\":[\"code_functions\",\"project_template_level_name\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2024-04-19 18:57:24 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-27 21:56:22 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-03-28 19:20:41 +0000\",\"changed\":[\"code_functions\",\"hide_view_data_button\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

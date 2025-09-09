@@ -1,0 +1,44 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2025-03-22T02:27:05.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "true",
+    "panels": [
+      {
+        "text": "# Maya\n**Age:** 16\n\n**Hobbies:** Solving puzzles\n\n**Favorite Subject:** Science\n\n**Favorite Movie:** Hidden Figures (inspired by data's role in solving big problems).",
+        "imageUrl": "https://images.code.org/4af9f83190f3aac9d1b57a2bedd95ec3-Screenshot 2025-01-23 131925.png",
+        "key": "undefined-1d5d3a7f-7f89-4eb3-853c-7aa5a400395f",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "**✨ Escaped with SECONDS to spare! 🔓💡 Cracking codes is my jam, but the real win? Teamwork. 👊 Who’s up for the next challenge?** #PuzzleMaster #EscapeRoomChampion #Teamwork",
+        "imageUrl": "https://images.code.org/8d37e3b0595f672376cea0232d1993c4-Screenshot 2025-01-14 104025.png",
+        "key": "IPP-careerPersonas-2c4164c6-d454-463c-8f56-a0c9eb04889c",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "**Piece by piece, the big picture comes to life.**  🧩✨ #BigThinker #PuzzleLife #MindsetMatters",
+        "imageUrl": "https://images.code.org/52ae9948c3dddf7799a514f6950e0f00-a83c0fc5-8fdb-469c-8630-697b4d2adced.jpg",
+        "key": "IPP-careerPersonas-08ed7eb5-0cc6-44c4-b533-d1aec83455c2",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "**When big ideas collide, magic happens. 💡🚀 Brainstorming sessions with this crew = my happy place.** 🌟 #IdeasInAction #TeamBrainstorm #BigDreamEnergy",
+        "imageUrl": "https://images.code.org/da9113fd8b538173da8e09469c12c656-Screenshot 2025-01-14 105133.png",
+        "key": "IPP-careerPersonas-515c9265-7186-4902-ae4e-967269f78611",
+        "layout": "text-bottom-right"
+      }
+    ],
+    "bubble_choice_description": "**Age:** 16\n\n**Hobbies:** Solving puzzles\n\n**Favorite Subject:** Science\n\n**Favorite Movie:** Hidden Figures (inspired by data's role in solving big problems).",
+    "display_name": "Maya",
+    "thumbnail_url": "https://images.code.org/3d47acc612046217f418e86566d2c71a-Screenshot 2025-01-23 125953.png",
+    "name_suffix": "_2025-preview"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-03-22T02:27:05.870+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson1-level1a_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson1-level1a_2025\"}]"
+}]]></config>
+</Panels>

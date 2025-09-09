@@ -1,0 +1,23 @@
+name 'SP-VPL-21-CSA-mod1-what-is-CSA1_2025'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# What is Computer Science A?
+
+<img src="https://images.code.org/dc4ee0c4f798b1468aeb6011b5b5db9b-image-1646755084450.png" alt="Engineer Graphic" style="border-radius:10px; float: right; height: 200px; clear: both; margin: 0 20px 20px 0; ">
+
+#### Code.org’s Computer Science A (CSA) curriculum is a full-year, rigorous curriculum that introduces students to software engineering and object-oriented programming and design using the Java programming language.
+
+#### **This curriculum covers a broad range of topics, including:**
+
+- #### The design of solutions to problems
+- #### The use of data structures to organize large sets of data
+- #### The development and implementation of algorithms to process data and discover new information
+- #### The analysis of potential solutions
+- #### The ethical and social implications of computing systems
+
+<br>
+
+#### You can get a better understanding of Code.org's CSA course by reading the <a href="https://docs.google.com/document/d/1rF-8Yi4aYaCPaWBJXvxyWFNcAnlLvvwq92zKzsiLL9E/view" target="_blank">course syllabus</a>.
+MARKDOWN

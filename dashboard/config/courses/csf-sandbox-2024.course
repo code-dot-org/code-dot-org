@@ -3,13 +3,16 @@
   "script_names": [
     "csf-sandbox"
   ],
+  "original_script_names": [
+    "csf-sandbox"
+  ],
   "published_state": "in_development",
   "instruction_type": "teacher_led",
   "participant_audience": "student",
   "instructor_audience": "teacher",
   "properties": {
     "family_name": "csf-sandbox",
-    "has_numbered_units": true,
+    "numbered_units": "auto",
     "version_year": "2024"
   },
   "resources": [

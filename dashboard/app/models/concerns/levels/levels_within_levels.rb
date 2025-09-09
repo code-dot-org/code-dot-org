@@ -77,30 +77,33 @@ module Levels
       # Create ParentLevelsChildLevel many-to-many relationships based on the
       # contents of the specified levels' `contained_level_names` or `project_template_level_name` properties.
       # Differentiated by child_level_kind (either ParentLevelsChildLevel::CONTAINED or ParentLevelsChildLevel::PROJECT_TEMPLATE)
-      def setup_child_levels_for(levels, child_level_kind)
+      def setup_child_levels_for(levels, child_level_kinds)
         outdated_levels_child_level_ids = []
         new_levels_child_levels = []
 
-        levels.each do |level|
-          # Determine which level names to use based on child_level_kind
-          child_level_names = child_level_kind == ParentLevelsChildLevel::CONTAINED ? level.contained_level_names : [level.project_template_level_name]
-          # Skip if the current level's child levels already match the names
-          next if level.child_levels.send(child_level_kind).map(&:name) == child_level_names
+        # This expects `level.levels_child_levels.child_level` to be preloaded.
+        child_level_kinds.each do |child_level_kind|
+          levels.each do |level|
+            # Determine which level names to use based on child_level_kind
+            child_level_names = child_level_kind == ParentLevelsChildLevel::CONTAINED ? level.contained_level_names : [level.project_template_level_name]
+            # Skip if the current level's child levels already match the names
+            next if level.levels_child_levels.map {|levels_child_level| levels_child_level.child_level.name} == child_level_names
 
-          # Collect outdated child levels' ids
-          outdated_levels_child_level_ids += level.levels_child_levels.send(child_level_kind).ids
+            # Don't access `level.child_levels` or `level.levels_child_levels.{kind}` here, because it will go to the database which is slow
+            outdated_levels_child_level_ids += level.levels_child_levels.filter {|parent_levels_child_level| parent_levels_child_level.kind == child_level_kind}.map(&:id)
 
-          next if child_level_names.blank?
+            next if child_level_names.blank?
 
-          # Create new relationships for matching names
-          Level.where(name: child_level_names).find_each do |child_level|
-            position = child_level_names.index(child_level.name) if child_level_kind == ParentLevelsChildLevel::CONTAINED
-            new_levels_child_levels << ParentLevelsChildLevel.new(
-              parent_level: level,
-              child_level: child_level,
-              kind: child_level_kind,
-              position: position
-            )
+            # Create new relationships for matching names
+            Level.where(name: child_level_names).find_each do |child_level|
+              position = child_level_names.index(child_level.name) if child_level_kind == ParentLevelsChildLevel::CONTAINED
+              new_levels_child_levels << ParentLevelsChildLevel.new(
+                parent_level: level,
+                child_level: child_level,
+                kind: child_level_kind,
+                position: position
+              )
+            end
           end
         end
 
@@ -187,11 +190,11 @@ module Levels
     end
 
     def setup_contained_levels
-      self.class.setup_child_levels_for([self], ParentLevelsChildLevel::CONTAINED)
+      self.class.setup_child_levels_for([self], [ParentLevelsChildLevel::CONTAINED])
     end
 
     def setup_project_template_level
-      self.class.setup_child_levels_for([self], ParentLevelsChildLevel::PROJECT_TEMPLATE)
+      self.class.setup_child_levels_for([self], [ParentLevelsChildLevel::PROJECT_TEMPLATE])
     end
   end
 end

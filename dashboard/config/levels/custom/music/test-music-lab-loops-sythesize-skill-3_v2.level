@@ -1,0 +1,139 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-05-31T03:00:04.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "packId": "default",
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2",
+            "play_rest_at_current_location_simple2"
+          ],
+          "Functions": [
+
+          ],
+          "Control": [
+            "play_sounds_together",
+            "play_sounds_sequential",
+            "repeat_simple2"
+          ]
+        },
+        "type": "flyout"
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false
+            }
+          ]
+        }
+      },
+      "toolboxDefinition": {
+        "contents": [
+          {
+            "kind": "block",
+            "type": "play_sound_at_current_location_simple2",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "sound": "electro/drum_beat_cowbell"
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_rest_at_current_location_simple2",
+            "fields": {
+              "rest_duration": "<field name=\"rest_duration\">1</field>"
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_sounds_together",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_sounds_sequential",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "repeat_simple2",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "times": 1
+            },
+            "enabled": true
+          }
+        ],
+        "kind": "flyoutToolbox"
+      },
+      "validationTimeout": 1
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
+    "project_template_level_name": "test-music-lab-loops-sythesize-skill-template_v2",
+    "long_instructions": "### Live Coding\r\n\r\nPart of live coding is preparation. Every performance has some element of planning and some element of improvisation. \r\n\r\n**Do this:** \r\n- **Prepare:** Drag out 3 new `play` blocks into an empty part of the workspace. Find at least three new sounds that you can layer into your backing track. \r\n- **Try:** While the song is playing, drag these tracks into your code. The timeline will update automatically to play your new track in real time! \r\n  - For example: drag in a new `lead` sound for a few measures, then remove it!\r\n- **Reflect:** As you listen, challenge yourself to break from the plan by adding that sound earlier or later than expected. Take mental notes on what felt good and you'll skip next time.\r\n\r\nListen and improvise in your song for at least 10 measures before continuing!\r\n\r\n*NOTE: Quickly close the sound picker dropdown menu so the sound preview doesn't overlap with your song.*",
+    "validations": [
+      {
+        "key": "test-music-lab-loops-sythesize-skill-3_62a03606-ff53-4043-993e-36d9c688b3d0",
+        "message": "",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_anything_in_same_loop",
+            "value": 5
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-loops-sythesize-skill-3_d698a0c6-056a-435d-bb98-0217e0e9274b",
+        "message": "Make your live edits as the song is playing!",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "name_suffix": "_v2",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-05-31T03:00:04.084+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-sythesize-skill-3\\\"\"],\"cloned_from\":\"test-music-lab-loops-sythesize-skill-3\"},{\"changed_at\":\"2025-06-13 16:52:10 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-26 18:40:24 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>
