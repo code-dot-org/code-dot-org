@@ -206,7 +206,8 @@ module Dashboard
     # Ignore certain directories for autoloading and eager loading
     Rails.autoloaders.main.ignore(
       Rails.root.join("lib", "tasks"),
-      Rails.root.join("lib", "assets")
+      Rails.root.join("lib", "assets"),
+      Rails.root.join("lib", "devtools"),
     )
 
     # use https://(*-)studio.code.org urls in mails
