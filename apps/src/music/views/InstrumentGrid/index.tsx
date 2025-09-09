@@ -202,6 +202,7 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
       keyColor,
       selectedColor,
       tabIndex,
+      showing,
     };
   };
 
@@ -223,6 +224,41 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
       -(firstVisibleRow * cellHeightWithGap - parseInt(peekHeight)),
     ];
   }, [editorType, scaleMode]);
+
+  const handleKeyDown = (
+    event: React.KeyboardEvent,
+    note: number,
+    tick?: number,
+    instrument?: string
+  ) => {
+    const {key} = event;
+
+    switch (key) {
+      case 'Enter': {
+        event.preventDefault();
+        if (tick !== undefined) {
+          onClickCell(note, tick);
+        } else if (instrument) {
+          MusicRegistry.player.previewNote(note, instrument);
+        }
+        break;
+      }
+      case 'Escape': {
+        event.preventDefault();
+        event.stopPropagation();
+        // Move focus back to the parent container
+        const parentContainer = event.currentTarget.closest('#instrument-grid');
+        (parentContainer as HTMLElement | null)?.focus();
+        break;
+      }
+      case 'Tab': {
+        event.stopPropagation();
+        break;
+      }
+      default:
+        break;
+    }
+  };
 
   return (
     <FocusLock>
@@ -280,6 +316,7 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
           )}
         </div>
         <EaseIntoView
+          id="instrument-grid"
           doEase={editorType !== 'drums'}
           frames={50}
           scrollStart={scrollStart}
@@ -296,6 +333,7 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
               keyColor,
               selectedColor,
               tabIndex,
+              showing,
             } = getRowInfo(name, note);
 
             return (
@@ -305,10 +343,20 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
               >
                 <button
                   type="button"
-                  className={styles['cell-outer']}
+                  className={`${styles['cell-outer']} ${
+                    showing ? 'showing' : ''
+                  }`}
                   onClick={() =>
                     MusicRegistry.player.previewNote(
                       note,
+                      currentValue.instrument
+                    )
+                  }
+                  onKeyDown={event =>
+                    handleKeyDown(
+                      event,
+                      note,
+                      undefined,
                       currentValue.instrument
                     )
                   }
@@ -327,10 +375,13 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
                     <Fragment key={tick}>
                       <button
                         type="button"
-                        className={styles[`cell-outer-${interfaceMode}`]}
+                        className={`${styles[`cell-outer-${interfaceMode}`]} ${
+                          showing ? 'showing' : ''
+                        }`}
                         key={tick}
                         onClick={() => onClickCell(note, tick)}
                         tabIndex={tabIndex}
+                        onKeyDown={event => handleKeyDown(event, note, tick)}
                       >
                         <div
                           className={classNames(

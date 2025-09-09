@@ -114,6 +114,35 @@ const EaseIntoView: React.FunctionComponent<EaseIntoViewProps> = ({
     }, 1000 / animationFramesPerSecond);
   }, [delayFrames, scrollStart, scrollEnd, doEase, frames]);
 
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
+    const container = containerRef.current;
+    if (!container) return;
+
+    const focusableChildren = Array.from(
+      container.querySelectorAll<HTMLElement>('.showing')
+    );
+
+    switch (event.key) {
+      case 'Enter':
+        event.preventDefault();
+        console.log(focusableChildren);
+        // Make all children focusable and focus the first child
+        focusableChildren.forEach(child => child.setAttribute('tabindex', '0'));
+        focusableChildren[0]?.focus();
+        break;
+
+      case 'Tab':
+        // Make all children unfocusable
+        focusableChildren.forEach(child =>
+          child.setAttribute('tabindex', '-1')
+        );
+        break;
+
+      default:
+        break;
+    }
+  };
+
   return (
     <div
       id={id}
@@ -122,6 +151,7 @@ const EaseIntoView: React.FunctionComponent<EaseIntoViewProps> = ({
       aria-label={ariaLabel}
       className={className}
       ref={containerRefCallback}
+      onKeyDown={handleKeyDown}
     >
       {children}
     </div>
