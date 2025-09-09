@@ -1,34 +1,22 @@
 import {MetricEvent} from '@cdo/apps/metrics/events';
 import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
-import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
+import HttpClient from '@cdo/apps/util/HttpClient';
 
 const docsCache: Map<string, Promise<string>> = new Map();
 
 // Fetch serialized JSON docs from programmingClassesController to use in tutor's context
-export const fetchDocsForClass = async (programmingClassKey: string) => {
+export const tryFetchDocsForClass = async (programmingClassKey: string) => {
   if (docsCache.has(programmingClassKey)) {
     return await docsCache.get(programmingClassKey);
   }
   docsCache.set(
     programmingClassKey,
-    new Promise((resolve, reject) => {
+    new Promise(resolve => {
       (async () => {
         try {
-          const response = await fetch(
-            `/docs/ide/pythonlab/classes/${programmingClassKey}/get_serialized`,
-            {
-              method: 'GET',
-              headers: {
-                'Content-Type': 'application/json',
-                'X-CSRF-Token': await getAuthenticityToken(), // do I need this?
-              },
-            }
-          );
-          if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
-          }
+          const url = `/docs/ide/pythonlab/classes/${programmingClassKey}/get_serialized`;
+          const response = await HttpClient.get(url);
           const classDocs = JSON.stringify(await response.json());
-
           resolve(classDocs);
         } catch (error) {
           console.error(
@@ -39,7 +27,7 @@ export const fetchDocsForClass = async (programmingClassKey: string) => {
             event: MetricEvent.AI_TUTOR_FETCH_DOCS_FOR_CLASS_FAIL,
             errorMessage: JSON.stringify(error),
           });
-          reject(error);
+          resolve('');
         }
       })();
     })

@@ -1,6 +1,6 @@
 import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
 
-import {fetchDocsForClass} from '../aiTutor/docContextApi';
+import {tryFetchDocsForClass} from '../aiTutor/docContextApi';
 import {AiTutorContext} from '../aiTutor/types.js';
 import {ProjectFile} from '../codebridge/types';
 
@@ -32,7 +32,7 @@ export const getAiTutorContextPromise = async (
 
   const documentation =
     miniAppName === 'neighborhood'
-      ? await fetchDocsForClass('painter')
+      ? await tryFetchDocsForClass('painter')
       : undefined;
 
   return {
