@@ -1,4 +1,4 @@
-module MailjetConstants
+module MailJetConstants
   MAILJET_RETRY_LIMIT = 5
 
   EMAILS = {
