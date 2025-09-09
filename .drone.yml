@@ -58,8 +58,9 @@ steps:
         from_secret: GITHUB_TOKEN
     commands:
       # Configure git to use the token for all GitHub operations
-      - git config --global credential.helper store
-      - echo "https://${GITHUB_TOKEN}:x-oauth-basic@github.com" > ~/.git-credentials
+      - git config credential.helper store
+      - echo "https://${GITHUB_TOKEN}:x-oauth-basic@github.com" > .git/git-credentials
+      - git config credential.helper 'store --file=.git/git-credentials'
       - git lfs install --skip-repo
       # Construct authenticated GitHub URL.
       # DRONE_REPO_OWNER = organization name (e.g., "code-dot-org")
@@ -203,8 +204,9 @@ steps:
         from_secret: GITHUB_TOKEN
     commands:
       # Configure git to use the token for all GitHub operations
-      - git config --global credential.helper store
-      - echo "https://${GITHUB_TOKEN}:x-oauth-basic@github.com" > ~/.git-credentials
+      - git config credential.helper store
+      - echo "https://${GITHUB_TOKEN}:x-oauth-basic@github.com" > .git/git-credentials
+      - git config credential.helper 'store --file=.git/git-credentials'
       - git lfs install --skip-repo
       # Construct authenticated URL.
       # DRONE_REPO_OWNER = organization name (e.g., "code-dot-org")
@@ -318,8 +320,9 @@ steps:
         from_secret: GITHUB_TOKEN
     commands:
       # Configure git to use the token for all GitHub operations
-      - git config --global credential.helper store
-      - echo "https://${GITHUB_TOKEN}:x-oauth-basic@github.com" > ~/.git-credentials
+      - git config credential.helper store
+      - echo "https://${GITHUB_TOKEN}:x-oauth-basic@github.com" > .git/git-credentials
+      - git config credential.helper 'store --file=.git/git-credentials'
       - git lfs install
       # Construct authenticated GitHub URL
       # DRONE_REPO_OWNER = organization name (e.g., "code-dot-org")
@@ -387,6 +390,6 @@ trigger:
     - push
 ---
 kind: signature
-hmac: 72a93f7f4b0f546c11da14256289517c006e0168db6519cd00b1b772fdabe3d9
+hmac: e6642808423995024818e0f2ca9ece08838bd5d74ce2449634c28a90b0548207
 
 ...
