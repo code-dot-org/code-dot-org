@@ -2,6 +2,8 @@ import {Box} from '@mui/material';
 import classNames from 'classnames';
 import React, {useMemo} from 'react';
 
+import {MinSurveyResponseCount} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
+
 import {
   isQuestionType,
   SurveyQuestions,
@@ -11,7 +13,7 @@ import {FollowUpRequestedCard} from '../../components/FollowUpRequestedCard';
 import {FreeResponseCard} from '../../components/FreeResponseCard';
 import {ScoreCard} from '../../components/ScoreCard';
 import {SelectCard} from '../../components/SelectCard';
-import {LIKERT_QUESTION_FOOTER, MIN_RESPONSE_COUNT} from '../../constants';
+import {LIKERT_QUESTION_FOOTER} from '../../constants';
 import {getQuestionDescription, prepLikertBreakdown} from '../../helpers';
 
 import styles from '../../../workshop.module.scss';
@@ -71,7 +73,7 @@ export const Implementation = () => {
               footer={LIKERT_QUESTION_FOOTER}
               score={question.results.weighted_score}
               responseCount={question.results.total_responses}
-              minResponseCount={MIN_RESPONSE_COUNT}
+              minResponseCount={MinSurveyResponseCount}
               breakdown={prepLikertBreakdown(question.results.breakdown)}
             />
           ) : null

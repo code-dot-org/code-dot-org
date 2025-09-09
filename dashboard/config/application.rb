@@ -177,11 +177,15 @@ module Dashboard
     # structure. Specifically, include a couple of directories for misc library code, as
     # well as some subdirectories of the models dir that we use for organization.
 
-    config.autoload_paths << Rails.root.join('lib')
-    config.autoload_paths << Rails.root.join('app', 'models', 'experiments')
-    config.autoload_paths << Rails.root.join('app', 'models', 'levels')
-    config.autoload_paths << Rails.root.join('app', 'models', 'sections')
-    config.autoload_paths << Rails.root.join('../lib/cdo/shared_constants')
+    runtime_load_paths = [
+      Rails.root.join('lib'),
+      Rails.root.join('app', 'models', 'experiments'),
+      Rails.root.join('app', 'models', 'levels'),
+      Rails.root.join('app', 'models', 'sections'),
+      Rails.root.join('../lib/cdo/shared_constants')
+    ]
+
+    config.autoload_paths += runtime_load_paths
 
     # Make sure to explicitly cast all autoload paths to strings; the gem we use to
     # annotate model files with schema descriptions doesn't know how to deal with
@@ -192,16 +196,18 @@ module Dashboard
     # this line.
     config.autoload_paths.map!(&:to_s)
 
-    # Also make sure some of these directories are always loaded up front in production
+    # Also make sure these directories are always loaded up front in production
     # environments.
     #
     # These directories will also be treated as top-level directories by
     # Zeitwerk, rather than as subdirectories which require namspacing.
-    config.eager_load_paths += [
-      Rails.root.join('app', 'models', 'experiments'),
-      Rails.root.join('app', 'models', 'levels'),
-      Rails.root.join('app', 'models', 'sections')
-    ].map(&:to_s)
+    config.eager_load_paths += runtime_load_paths.map(&:to_s)
+
+    # Ignore certain directories for autoloading and eager loading
+    Rails.autoloaders.main.ignore(
+      Rails.root.join("lib", "tasks"),
+      Rails.root.join("lib", "assets")
+    )
 
     # use https://(*-)studio.code.org urls in mails
     config.action_mailer.default_url_options = {host: CDO.canonical_hostname('studio.code.org'), protocol: 'https'}

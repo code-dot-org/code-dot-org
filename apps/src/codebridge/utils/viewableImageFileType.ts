@@ -1,4 +1,4 @@
-const defaultViewableImageFileTypesArray = ['png', 'jpg', 'gif'];
+import {WEBLAB2_IMAGE_FILE_TYPES} from '@cdo/apps/weblab2/constants';
 
 /**
  * Determines if a given file extension is a viewable image format.
@@ -9,7 +9,7 @@ const defaultViewableImageFileTypesArray = ['png', 'jpg', 'gif'];
  */
 export const viewableImageFileType = (
   extension: string,
-  viewableImageFileTypesArray = defaultViewableImageFileTypesArray
+  viewableImageFileTypesArray = WEBLAB2_IMAGE_FILE_TYPES
 ) => {
   const viewableImageFileTypes = new Set(viewableImageFileTypesArray);
   return viewableImageFileTypes.has(extension);
