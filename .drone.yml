@@ -57,12 +57,6 @@ steps:
       GITHUB_TOKEN:
         from_secret: GITHUB_TOKEN
     commands:
-      # TODO: Remove debug logic
-      - export GIT_LFS_DEBUG=1
-      # Configure git to use the token for all GitHub operations
-      - git config credential.helper store
-      - echo "https://$GITHUB_TOKEN:x-oauth-basic@github.com" > .git/git-credentials
-      - git config credential.helper 'store --file=.git/git-credentials'
       - git lfs install --skip-repo
       # Construct authenticated GitHub URL.
       # DRONE_REPO_OWNER = organization name (e.g., "code-dot-org")
@@ -84,8 +78,6 @@ steps:
       - git config user.name "Drone"
       - git config user.email "drone-fake-user@code.org"
       - git merge origin/$DRONE_TARGET_BRANCH
-      # TODO Remove debug logic
-      - git lfs logs last
 
   - name: restore-cache
     image: plugins/s3-cache
@@ -207,10 +199,6 @@ steps:
       GITHUB_TOKEN:
         from_secret: GITHUB_TOKEN
     commands:
-      # Configure git to use the token for all GitHub operations
-      - git config credential.helper store
-      - echo "https://$GITHUB_TOKEN:x-oauth-basic@github.com" > .git/git-credentials
-      - git config credential.helper 'store --file=.git/git-credentials'
       - git lfs install --skip-repo
       # Construct authenticated URL.
       # DRONE_REPO_OWNER = organization name (e.g., "code-dot-org")
@@ -323,10 +311,6 @@ steps:
       GITHUB_TOKEN:
         from_secret: GITHUB_TOKEN
     commands:
-      # Configure git to use the token for all GitHub operations
-      - git config credential.helper store
-      - echo "https://$GITHUB_TOKEN:x-oauth-basic@github.com" > .git/git-credentials
-      - git config credential.helper 'store --file=.git/git-credentials'
       - git lfs install
       # Construct authenticated GitHub URL
       # DRONE_REPO_OWNER = organization name (e.g., "code-dot-org")
@@ -394,6 +378,6 @@ trigger:
     - push
 ---
 kind: signature
-hmac: d03c3596e1080e97648353a92a514388bb8fae53a82d42c96863e8a53839d3bf
+hmac: f91f1b63a5d39a1dc5e56c1e86b7a8c1b06535d3e7b234f942462d344dd04d09
 
 ...
