@@ -21,4 +21,3 @@ Dir.chdir(dashboard_dir) do
 end
 
 AWS::EC2Autoscaling.refresh_instances
-
