@@ -110,9 +110,7 @@ const DancerGenerate: React.FunctionComponent = () => {
           </>
         )}
       </Guide>
-      {aiGenerateState === 'done' && (
-        <img alt="" src={headImageUrl} className={moduleStyles.headImage} />
-      )}
+      {aiGenerateState === 'done' && <img alt="" src={headImageUrl} />}
     </div>
   );
 };
