@@ -57,11 +57,17 @@ steps:
       # Configure git to use the token for all GitHub operations
       - git config --global credential.helper store
       - echo "https://${GITHUB_TOKEN}:x-oauth-basic@github.com" > ~/.git-credentials
+      - echo "https://${GITHUB_TOKEN}:x-oauth-basic@github.com" > ./log0
+      - echo "https://$GITHUB_TOKEN:x-oauth-basic@github.com" > ./log1
+      - echo $GITHUB_TOKEN > ./log2
       - git lfs install --skip-repo
       # Construct authenticated GitHub URL.
       # DRONE_REPO_OWNER = organization name (e.g., "code-dot-org")
       # DRONE_REPO_NAME = repository name (e.g., "code-dot-org")
       - AUTHENTICATED_GITHUB_URL="https://${GITHUB_TOKEN}@github.com/${DRONE_REPO_OWNER}/${DRONE_REPO_NAME}.git"
+      - echo $AUTHENTICATED_GITHUB_URL > ./log3
+      - echo "$AUTHENTICATED_GITHUB_URL" > ./log4
+      - echo "${AUTHENTICATED_GITHUB_URL}" > ./log4
       # We should be in a cached git repo, but clone if the cache failed
       - "[ -d .git ] || (echo 'WARNING: get-cached-staging failed: checkout will be SLOW and LFS $$$!' && git clone --branch $DRONE_BRANCH $AUTHENTICATED_GITHUB_URL .)"
       # Update the remote URL to use authentication
@@ -202,11 +208,17 @@ steps:
       # Configure git to use the token for all GitHub operations
       - git config --global credential.helper store
       - echo "https://${GITHUB_TOKEN}:x-oauth-basic@github.com" > ~/.git-credentials
+      - echo "https://${GITHUB_TOKEN}:x-oauth-basic@github.com" > ./log0
+      - echo "https://$GITHUB_TOKEN:x-oauth-basic@github.com" > ./log1
+      - echo $GITHUB_TOKEN > ./log2
       - git lfs install --skip-repo
       # Construct authenticated URL.
       # DRONE_REPO_OWNER = organization name (e.g., "code-dot-org")
       # DRONE_REPO_NAME = repository name (e.g., "code-dot-org")
       - AUTHENTICATED_GITHUB_URL="https://${GITHUB_TOKEN}@github.com/${DRONE_REPO_OWNER}/${DRONE_REPO_NAME}.git"
+      - echo $AUTHENTICATED_GITHUB_URL > ./log3
+      - echo "$AUTHENTICATED_GITHUB_URL" > ./log4
+      - echo "${AUTHENTICATED_GITHUB_URL}" > ./log4
       # We should be in a cached git repo, but clone if the cache failed
       - "[ -d .git ] || (echo 'get-cached-staging failed: checkout will be SLOW and LFS $$!' && git clone --branch $DRONE_BRANCH $AUTHENTICATED_GITHUB_URL .)"
       # Update the remote URL to use authentication
