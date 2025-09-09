@@ -5,6 +5,7 @@ import classNames from 'classnames';
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import {sendCodebridgeAnalyticsEvent} from '@cdo/apps/codebridge/utils/analyticsReporterHelper';
+import {INITIAL_VERSION_ID} from '@cdo/apps/lab2/constants';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import lab2I18n from '@cdo/apps/lab2/locale';
@@ -38,8 +39,6 @@ interface VersionHistoryPanelProps {
   appName: string;
   levelId: number;
 }
-
-const INITIAL_VERSION_ID = 'initial-version';
 
 const VersionHistoryPanel: React.FunctionComponent<
   VersionHistoryPanelProps

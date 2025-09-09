@@ -43,3 +43,5 @@ export enum FontSize {
   Large = 22,
   Huge = 27,
 }
+
+export const INITIAL_VERSION_ID = 'initial-version';
