@@ -307,7 +307,6 @@ def dotd_menu(dotd_name)
       menu.choice(:STP) do
         if run_on 'production_daemon', 'production/bin/seed-curriculum-content-from-staging-branch'
           puts 'Content from staging branch successfully seeded to production database'
-          puts 'Perform instance refresh (https://us-east-1.console.aws.amazon.com/ec2/home?region=us-east-1#AutoScalingGroupDetails:id=Frontends-autoscale-prod;view=instanceRefresh) to activate web application servers using this new content'
         else
           puts 'Content from staging branch was not successfully seeded to production database.'
         end
