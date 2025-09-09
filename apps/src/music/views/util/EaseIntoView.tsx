@@ -117,9 +117,9 @@ const EaseIntoView: React.FunctionComponent<EaseIntoViewProps> = ({
   }, [delayFrames, scrollStart, scrollEnd, doEase, frames]);
 
   // This works only if the (appropriate) children have the 'showing' class.
-  // This is necessary because sometimes hidden elements are passed into the
-  // grid, and we don't want to accidentally make those focusable. Currently,
-  // this component is only used for the InstrumentGrid.
+  // This is necessary because sometimes hidden elements are passed in as
+  // children, and we don't want to accidentally make those focusable. View
+  // instrumentGrid/index.tsx for the (only) example of this component in use.
   const handleKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
     const container = containerRef.current;
     if (!container) return;
