@@ -68,7 +68,8 @@ const preSurveyCategoryChildRoutes = [
     icon: 'gauge',
     component: ReadinessAndExpectations,
     path: 'readiness-and-expectations',
-    breadcrumbs: 'Workshops,Workshop,Temp,Surveys,Pre,ReadinessAndExpectations',
+    breadcrumbs:
+      'Workshops,Workshop,Temp,Surveys,Pre,Readiness and expectations',
   },
   {
     label: 'Cohort Profile',
