@@ -12,11 +12,7 @@ module Devise
       # Devise provides the timeout_in method. Override this functionality here
       # to set custom session timeout values for different users.
       def timeout_in
-        if Policies::Lti.restricted_user?(self)
-          return RESTRICTED_USER_TIMEOUT
-        end
-
-        self.class.timeout_in
+        Policies::Lti.restricted_user?(self) ? RESTRICTED_USER_TIMEOUT : super
       end
     end
   end
