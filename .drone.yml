@@ -58,9 +58,10 @@ steps:
         from_secret: GITHUB_TOKEN
     commands:
       - git lfs install --skip-repo
-      # Extract repo info from DRONE_GIT_HTTP_URL and construct authenticated URL
-      - REPO_URL=$(echo $DRONE_GIT_HTTP_URL | sed 's|https://||')
-      - AUTHENTICATED_GITHUB_URL="https://${GITHUB_TOKEN}@${REPO_URL}"
+      # Construct authenticated GitHub URL.
+      # DRONE_REPO_OWNER = organization name (e.g., "code-dot-org")
+      # DRONE_REPO_NAME = repository name (e.g., "code-dot-org")
+      - AUTHENTICATED_GITHUB_URL="https://${GITHUB_TOKEN}@github.com/${DRONE_REPO_OWNER}/${DRONE_REPO_NAME}.git"
       # We should be in a cached git repo, but clone if the cache failed
       - "[ -d .git ] || (echo 'WARNING: get-cached-staging failed: checkout will be SLOW and LFS $$$!' && git clone --branch $DRONE_BRANCH $AUTHENTICATED_GITHUB_URL .)"
       # Update the remote URL to use authentication
@@ -199,7 +200,7 @@ steps:
         from_secret: GITHUB_TOKEN
     commands:
       - git lfs install --skip-repo
-      # Construct authenticated URL using Drone's built-in environment variables
+      # Construct authenticated URL.
       # DRONE_REPO_OWNER = organization name (e.g., "code-dot-org")
       # DRONE_REPO_NAME = repository name (e.g., "code-dot-org")
       - AUTHENTICATED_GITHUB_URL="https://${GITHUB_TOKEN}@github.com/${DRONE_REPO_OWNER}/${DRONE_REPO_NAME}.git"
@@ -311,7 +312,7 @@ steps:
         from_secret: GITHUB_TOKEN
     commands:
       - git lfs install
-      # Construct authenticated URL using Drone's built-in environment variables
+      # Construct authenticated GitHub URL
       # DRONE_REPO_OWNER = organization name (e.g., "code-dot-org")
       # DRONE_REPO_NAME = repository name (e.g., "code-dot-org")
       - AUTHENTICATED_GITHUB_URL="https://${GITHUB_TOKEN}@github.com/${DRONE_REPO_OWNER}/${DRONE_REPO_NAME}.git"
@@ -377,6 +378,6 @@ trigger:
     - push
 ---
 kind: signature
-hmac: ea8bbcea3c513e2eb228029353f0ca38482ff725fbde89dbfb9aa864f5903e57
+hmac: b4f2db52f74f39157edd481e017b3c13b969af36028678c5ee0a6ab787438283
 
 ...
