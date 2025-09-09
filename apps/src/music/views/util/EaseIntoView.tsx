@@ -8,7 +8,9 @@ const animationFramesPerSecond = 60;
 
 // EaseIntoView: This component does an eased scroll of the container's content,
 // starting from a distance below the top, and scrolling to the top.  It's useful
-// to show the user that some new content is scrollable.
+// to show the user that some new content is scrollable. It also creates an enter/
+// escape paradigm for keyboard users to navigate into and out of the container and
+// access the children (marked with the 'showing' class) within.
 
 interface EaseIntoViewProps {
   id?: string;
@@ -114,10 +116,13 @@ const EaseIntoView: React.FunctionComponent<EaseIntoViewProps> = ({
     }, 1000 / animationFramesPerSecond);
   }, [delayFrames, scrollStart, scrollEnd, doEase, frames]);
 
+  // This works only if the (appropriate) children have the 'showing' class.
+  // This is necessary because sometimes hidden elements are passed into the
+  // grid, and we don't want to accidentally make those focusable. Currently,
+  // this component is only used for the InstrumentGrid.
   const handleKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
     const container = containerRef.current;
     if (!container) return;
-
     const focusableChildren = Array.from(
       container.querySelectorAll<HTMLElement>('.showing')
     );
@@ -125,8 +130,7 @@ const EaseIntoView: React.FunctionComponent<EaseIntoViewProps> = ({
     switch (event.key) {
       case 'Enter':
         event.preventDefault();
-        console.log(focusableChildren);
-        // Make all children focusable and focus the first child
+        // Make children that should be showing focusable and focus the first child
         focusableChildren.forEach(child => child.setAttribute('tabindex', '0'));
         focusableChildren[0]?.focus();
         break;
