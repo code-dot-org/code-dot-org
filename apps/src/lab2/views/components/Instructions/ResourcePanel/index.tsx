@@ -72,6 +72,7 @@ type ResourcePanelProps = InstructionsProps & {
   includeFooterSpacing?: boolean;
   settings?: Setting[];
   versionHistoryProps?: VersionHistoryProps;
+  systemPromptOverride?: string;
 };
 
 /**
@@ -85,6 +86,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   includeFooterSpacing = true,
   settings,
   versionHistoryProps,
+  systemPromptOverride,
   ...instructionsProps
 }) => {
   const {theme} = useTheme();
@@ -101,7 +103,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const isWidgetView = instructionsProps.levelProperties.widgetView || false;
 
   const levelId = instructionsProps.levelProperties.id;
-  const appName = instructionsProps.levelProperties.appName;
 
   // Build available tabs based on level information.
   const availableTabs = useMemo(() => {
@@ -128,12 +129,16 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     }
 
     if (
-      (appName === 'weblab2' ||
-        levelProperties.aiTutorAvailable ||
+      (levelProperties.aiTutorAvailable ||
         queryParams('show-ai-tutor2') === 'true') &&
       aiTutor2Context
     ) {
-      tabMap[Tabs.AiTutor] = <AiTutor2Chat hiddenContext={aiTutor2Context} />;
+      tabMap[Tabs.AiTutor] = (
+        <AiTutor2Chat
+          hiddenContext={aiTutor2Context}
+          systemPromptOverride={systemPromptOverride}
+        />
+      );
     }
 
     // The version history tab is hidden in read only mode with two exceptions:
@@ -163,7 +168,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   }, [
     instructionsProps,
     isUserTeacher,
-    appName,
     aiTutor2Context,
     isReadOnly,
     isViewingOldVersion,
@@ -171,6 +175,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     isWidgetView,
     versionHistoryProps,
     showRubric,
+    systemPromptOverride,
     selectedVersion,
     levelId,
   ]);

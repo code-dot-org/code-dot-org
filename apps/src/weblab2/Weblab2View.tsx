@@ -15,6 +15,7 @@ import {useAppDispatch, useAppSelector} from '../util/reduxHooks';
 
 import {WEBLAB2_EDITABLE_FILE_TYPES} from './constants';
 import getAiTutor2Context from './helpers/aiTutorHelper';
+import {PRODUCE_MODE} from './helpers/systemPrompts';
 import FullScreenView from './layout/FullScreenView';
 import ShareView from './layout/ShareView';
 import VerticalLayout from './layout/VerticalLayout';
@@ -121,6 +122,7 @@ const Weblab2View: React.FC<
           startSources={startSources}
           levelProperties={levelProperties}
           aiTutor2Context={aiTutor2Context}
+          systemPromptOverride={PRODUCE_MODE}
         />
       )}
     </div>

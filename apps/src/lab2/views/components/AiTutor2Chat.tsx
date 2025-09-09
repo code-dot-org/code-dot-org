@@ -107,11 +107,13 @@ const chatButtons = chatButtonData.map(
 );
 interface AiTutor2ChatProps {
   hiddenContext: string;
+  systemPromptOverride?: string;
 }
 
 // A free chat with lab-supplied context added to each question.
 const AiTutor2Chat: React.FunctionComponent<AiTutor2ChatProps> = ({
   hiddenContext,
+  systemPromptOverride,
 }) => {
   const dispatch = useAppDispatch();
 
@@ -130,10 +132,12 @@ const AiTutor2Chat: React.FunctionComponent<AiTutor2ChatProps> = ({
         .catch(() => {
           setSystemPrompt(defaultSystemPrompt);
         });
+    } else if (systemPromptOverride) {
+      setSystemPrompt(systemPromptOverride);
     } else {
       setSystemPrompt(defaultSystemPrompt);
     }
-  }, []);
+  }, [systemPromptOverride]);
 
   useEffect(() => {
     // Log which system prompt we end up using.
