@@ -175,10 +175,6 @@ class Pd::Enrollment < ApplicationRecord
     end
   end
 
-  def should_send_exit_survey?
-    !(workshop.fit_weekend? || workshop.course == Pd::Workshop::COURSE_ADMIN_COUNSELOR)
-  end
-
   def send_exit_survey
     # In case the workshop is reprocessed, do not send duplicate exit surveys.
     if survey_sent_at

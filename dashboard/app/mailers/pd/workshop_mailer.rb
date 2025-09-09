@@ -246,27 +246,6 @@ class Pd::WorkshopMailer < ApplicationMailer
       reply_to: email_address(@workshop.organizer.name, @workshop.organizer.email)
   end
 
-  # Exit survey email
-  # @param enrollment [Pd::Enrollment]
-  def exit_survey(enrollment, to_email = '')
-    @workshop = enrollment.workshop
-    workshop_title = @workshop.name.presence || @workshop.course
-    @teacher = enrollment.user
-    @enrollment = enrollment
-    @survey_url = enrollment.exit_survey_url
-
-    content_type = 'text/html'
-    if @workshop.course == Pd::Workshop::COURSE_CSF
-      attachments['certificate.jpg'] = generate_csf_certificate
-      content_type = 'multipart/mixed'
-    end
-
-    mail content_type: content_type,
-      from: from_survey,
-      subject: "Help us improve Code.org #{workshop_title} workshops!",
-      to: email_address(@enrollment.full_name, to_email.presence || @enrollment.email)
-  end
-
   def teacher_follow_up(enrollment)
     @enrollment = enrollment
     @workshop = enrollment.workshop
