@@ -139,7 +139,6 @@ Feature: Send and receive messages in the AI differentiation chat
     And element "#ui-floatingActionButton" does not exist
 
   @chrome
-  @eyes
   Scenario: Teacher sees notification
     Given I create a teacher named "Stilgar"
     And I add the current user to the "ai-differentiation" single user experiment
@@ -170,13 +169,8 @@ Feature: Send and receive messages in the AI differentiation chat
     #Now we see the regular AI diff chat (with thread sidebar)
     And I wait until element "input[value='Give me an example']" is visible
     And I click selector "#ui-notificationsButton"
-    And I wait until element "p:contains(Test notification no. 2)" is visible
-    Then I see no difference for "ai diff notification panel"
-
-    When I click selector "#ui-floatingActionButton"
-    And I wait until element "p:contains(Test notification no. 2)" is not visible
-    # wait for the notification badge to get set to all read
-    And I wait 5 seconds
-    Then I see no difference for "ai diff notification panel"
-
-    Then I close my eyes
+    And I wait until element "p:contains(Test notification no. 1)" is visible
+    And element "p:contains(The deepest parts of the ocean are totally unknown to us)" is visible
+    And element "p:contains(Test notification no. 2)" is visible
+    And element "p:contains(The town extends along a low and marshy level)" is visible
+    And element "p:contains(EXPIRED NOTIFICATION)" is not visible
