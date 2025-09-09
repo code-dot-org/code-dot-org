@@ -4,14 +4,14 @@ import React, {useMemo} from 'react';
 import {
   isQuestionType,
   SurveyQuestions,
-} from '../../../WorkshopFormTemplate/types';
-import {useWorkshopContext} from '../../WorkshopLayout';
-import {FreeResponseCard} from '../components/FreeResponseCard';
-import {ScoreCard} from '../components/ScoreCard';
-import {LIKERT_QUESTION_FOOTER, MIN_RESPONSE_COUNT} from '../constants';
-import {getQuestionDescription, prepLikertBreakdown} from '../helpers';
+} from '../../../../WorkshopFormTemplate/types';
+import {useWorkshopContext} from '../../../WorkshopLayout';
+import {FreeResponseCard} from '../../components/FreeResponseCard';
+import {ScoreCard} from '../../components/ScoreCard';
+import {LIKERT_QUESTION_FOOTER, MIN_RESPONSE_COUNT} from '../../constants';
+import {getQuestionDescription, prepLikertBreakdown} from '../../helpers';
 
-import styles from '../../workshop.module.scss';
+import styles from '../../../workshop.module.scss';
 
 const ReadinessAndExpectations = () => {
   const {surveys} = useWorkshopContext();
