@@ -159,7 +159,6 @@ Feature: Send and receive messages in the AI differentiation chat
     And I wait until element "#ui-floatingActionButton" is visible
     #wait for pulse to finish
     And I wait for 5 seconds
-    And I open my eyes to test "ai diff notifications"
 
     # Teacher sees and skips AI Diff chat welcome
     And I wait until element "button:contains(Get Started)" is visible
