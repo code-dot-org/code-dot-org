@@ -3,6 +3,7 @@ module Marketing
     isolate_namespace Marketing
 
     config.autoload_paths << config.root.join('lib').to_s
+    config.eager_load_paths << config.root.join('lib').to_s
 
     config.to_prepare do
       # Register the Contentful source for notifications in the Dashboard app
