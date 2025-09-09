@@ -73,24 +73,26 @@ p.text {
   }
 }
 
-a.hrefLink {
-  border: 1px solid var(--borders-neutral-strong);
-  border-radius: 4px;
-  padding: 0 8px;
-  font-size: 12px;
-  color: var(--text-neutral-black-fixed);
-  display: flex;
-  align-items: center;
-  height: 24px;
-  font-weight: 600;
-
-  &:hover {
-    text-decoration: none;
+li.hrefLink {
+  & a:link {
+    border: 1px solid var(--borders-neutral-strong);
+    border-radius: 4px;
+    padding: 0 8px;
+    font-size: 12px;
     color: var(--text-neutral-black-fixed);
-  }
+    display: flex;
+    align-items: center;
+    height: 24px;
+    font-weight: 600;
 
-  & i {
-    margin-inline-start: 4px;
+    &:hover {
+      text-decoration: none;
+      color: var(--text-neutral-black-fixed);
+    }
+
+    & i {
+      margin-inline-start: 4px;
+    }
   }
 }
 
