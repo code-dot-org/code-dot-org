@@ -337,7 +337,6 @@ const VersionHistoryPanel: React.FunctionComponent<
             {versionList.map(version => (
               <VersionHistoryRow
                 key={version.versionId}
-                version={version}
                 versionId={version.versionId}
                 label={parseDate(version.lastModified)}
                 isLatest={version.isLatest}
