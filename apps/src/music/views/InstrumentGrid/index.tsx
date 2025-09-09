@@ -235,6 +235,7 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
 
     switch (key) {
       case 'Enter': {
+        event.stopPropagation();
         event.preventDefault();
         if (tick !== undefined) {
           onClickCell(note, tick);
@@ -244,8 +245,8 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
         break;
       }
       case 'Escape': {
-        event.preventDefault();
         event.stopPropagation();
+        event.preventDefault();
         // Move focus back to the parent container
         const parentContainer = event.currentTarget.closest('#instrument-grid');
         (parentContainer as HTMLElement | null)?.focus();
