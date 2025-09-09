@@ -510,6 +510,11 @@ class User < ApplicationRecord
     end
   end
 
+  def friendly_name(ltr = true)
+    return name unless given_name && family_name
+    ltr ? "#{given_name} #{family_name}" : "#{family_name} #{given_name}"
+  end
+
   def email
     return read_attribute(:email) unless migrated?
     primary_contact_info.try(:email) || ''
@@ -797,7 +802,7 @@ class User < ApplicationRecord
     return false if sections_as_student.empty?
 
     # Can't hide a unit that isn't part of a course
-    unit_group = unit.try(:unit_group)
+    unit_group = unit.try(:get_original_unit_group)
     return false unless unit_group
 
     get_participant_hidden_ids(unit_group.id, false).include?(unit.id)
@@ -1029,7 +1034,9 @@ class User < ApplicationRecord
 
   def should_see_add_password_form?
     !can_create_personal_login? && # mutually exclusive with personal login UI
-      can_edit_password? && encrypted_password.blank?
+      can_edit_password? && # allowed to edit password (i.e. not sponsored)
+      encrypted_password.blank? && # no password exists
+      !Policies::Lti.restricted_user?(self) # not restricted by their school district
   end
 
   def should_disable_user_type?
@@ -1097,6 +1104,7 @@ class User < ApplicationRecord
   # continue to use our site without losing progress.
   def can_create_personal_login?
     return false unless student?
+    return false if Policies::Lti.restricted_user?(self)
     teacher_managed_account? || (migrated? && oauth_only?)
   end
 

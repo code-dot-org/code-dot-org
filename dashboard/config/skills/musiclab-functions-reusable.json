@@ -1,0 +1,6 @@
+{
+  "key": "musiclab-functions-reusable",
+  "concept": "musiclab_functions",
+  "description": "Create reusable functions",
+  "evaluation_criteria": "{\"all_complete_correct\":\"The workspace contains at least one function definition and a function is called at least twice in the code, and the function is called within a play_together block so it layers with other parts of the sond\\n\\nExample:\\n```\\nplay_together\\n  repeat 2\\n    beatBreakdown()\\n  play sequentual:\\n    play \\\"pack/vocal_verse_1\\\"\\n    play \\\"pack/vocal_verse_2\\\"\\nplay_together\\n  play \\\"pack/vocal_chorus_1\\\"\\n  play \\\"pack/drums_track_1\\\"\\nplay_together\\n  repeat 2\\n    beatBreakdown()\\n  play sequentual:\\n    play \\\"pack/vocal_verse_3\\\"\\n    play \\\"pack/vocal_verse_4\\\"\\n```\",\"partial_complete_correct\":\"The workspace contains at least one function definition and a function is called at least twice in the code, but the function does not play together with other tracks or functions\\n\\nExample:\\n```\\nbeatBreakdown()\\nplay \\\"pack/vocal_verse_1\\\"\\nplay \\\"pack/vocal_verse_2\\\"\\nbeatBreakdown()\\nplay \\\"pack/vocal_verse_3\\\"\\nplay \\\"pack/vocal_verse_4\\\"\\n```\",\"incomplete_incorrect\":\"The workspace contains at least one function definition, but each function is called exactly once under the `when run` block}"
+}

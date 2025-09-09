@@ -5,17 +5,32 @@ import React, {
   useCallback,
   useContext,
   useEffect,
+  useMemo,
   useState,
 } from 'react';
 
+import {toolboxToWorkspaceBlocks} from '@cdo/apps/blockly/utils/toolbox';
+import {START_SOURCES, TOOLBOX_BLOCKS} from '@cdo/apps/lab2/constants';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
-import {LabProps, ProjectSources} from '@cdo/apps/lab2/types';
+import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
+import {
+  BlocklyLevelProperties,
+  LabProps,
+  ProjectSources,
+} from '@cdo/apps/lab2/types';
+import StartOverDialog, {
+  MessageType,
+} from '@cdo/apps/lab2/views/dialogs/dsco/StartOverDialog';
 
 import getInitialSources from '../utils/getInitialSources';
+
+const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
+const isToolboxMode = getAppOptionsEditBlocks() === TOOLBOX_BLOCKS;
 
 interface SourcesContextType<T extends ProjectSources = ProjectSources> {
   currentSources: T;
   updateSources: (newSources: T, forceSave?: boolean) => void;
+  showStartOverDialog: (type: MessageType, message?: string) => void;
 }
 
 const SourcesContext = createContext<SourcesContextType | null>(null);
@@ -48,6 +63,21 @@ const SourcesContainer: React.FC<
     );
   }, [levelProperties, initialSources, defaultSources]);
 
+  // Sources to reset to when starting over. Depends on the level edit mode.
+  const startOverSources: ProjectSources = useMemo(() => {
+    const {templateSources, startSources} = levelProperties;
+    if (isToolboxMode) {
+      return {
+        source: toolboxToWorkspaceBlocks(
+          (levelProperties as BlocklyLevelProperties).toolboxDefinition
+        ),
+      };
+    }
+    return isStartMode
+      ? defaultSources
+      : ((templateSources || startSources || defaultSources) as ProjectSources);
+  }, [defaultSources, levelProperties]);
+
   const updateSources = useCallback(
     (newSources: ProjectSources, forceSave = false) => {
       setCurrentSources(prev => {
@@ -64,9 +94,35 @@ const SourcesContainer: React.FC<
     [setCurrentSources]
   );
 
+  const onStartOver = useCallback(() => {
+    updateSources(startOverSources as ProjectSources, true);
+    setStartOverProps(undefined);
+  }, [startOverSources, updateSources]);
+
+  const [startOverProps, setStartOverProps] = useState<{
+    type: MessageType;
+    message?: string;
+  }>();
+
+  const showStartOverDialog = useCallback(
+    (type: MessageType, message?: string) => {
+      setStartOverProps({type, message});
+    },
+    []
+  );
+
   return (
-    <SourcesContext.Provider value={{currentSources, updateSources}}>
+    <SourcesContext.Provider
+      value={{currentSources, updateSources, showStartOverDialog}}
+    >
       {children}
+      {startOverProps && (
+        <StartOverDialog
+          onConfirm={onStartOver}
+          onCancel={() => setStartOverProps(undefined)}
+          {...startOverProps}
+        />
+      )}
     </SourcesContext.Provider>
   );
 };

@@ -8,9 +8,13 @@ import {SkillsByConcept} from './types';
 
 interface SkillsByConceptTableProps {
   skills: SkillsByConcept;
+  canEditSkills: boolean;
 }
 
-const SkillsByConcept: React.FC<SkillsByConceptTableProps> = ({skills}) => {
+const SkillsByConcept: React.FC<SkillsByConceptTableProps> = ({
+  skills,
+  canEditSkills,
+}) => {
   const [selectedConcept, setSelectedConcept] = useState('');
   const concepts = Object.keys(skills)
     .sort((a, b) => a.localeCompare(b))
@@ -40,7 +44,7 @@ const SkillsByConcept: React.FC<SkillsByConceptTableProps> = ({skills}) => {
       {skillsToShow.length === 0 && (
         <h3>There are no skills for the selected concept.</h3>
       )}
-      <SkillsTable skills={skillsToShow} canModifySkill />
+      <SkillsTable skills={skillsToShow} canModifySkill={canEditSkills} />
     </div>
   );
 };
