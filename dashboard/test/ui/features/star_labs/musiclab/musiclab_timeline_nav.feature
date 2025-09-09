@@ -1,5 +1,3 @@
-# Temporarily skipping flaky test. Investigate and re-enable.
-@skip
 Feature: Musiclab timeline is keyboard navigable
 
 @no_mobile
@@ -13,7 +11,7 @@ Scenario: Ensure users can navigate into and out of timeline, and between elemen
   # Drag two "play sound" blocks and attach them to the "when run" block.
   Then I drag block "play_sound_at_current_location_simple2" to block "when-run-block"
   And I press the first ".blocklyTreeRow" element
-  Then I drag block "play_sound_at_current_location_simple2" to block "play_sound_at_current_location_simple2"
+  Then I drag block "play_chord_at_current_location_simple2" to block "play_sound_at_current_location_simple2"
   Then I move focus to "#timeline"
   And I press keys ":enter"
   # Check that the first timeline element has focus
