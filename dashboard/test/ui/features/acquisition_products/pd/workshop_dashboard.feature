@@ -43,10 +43,80 @@ Scenario: New workshop: BYOW
   And I see no difference for "new workshop details: BYO"
 
   And I click selector "button:contains('Publish')"
-  And I wait until element "span:contains('Workshop Information: ')" is visible
+  And I wait until element "h2:contains('Workshop Information')" is visible
 
   And I see no difference for "created workshop details: BYO"
   And I close my eyes
 
   And I get the workshop id from the current url
   And I clean up my records
+
+Scenario: Workshop Overview
+  Given I am an organizer with a completed course
+  And I am viewing a workshop in the workshop dashboard
+  And I open my eyes to test "Workshop Overview"
+  And I see no difference for "Workshop Overview"
+  And I close my eyes
+
+  And I clean up my records
+
+Scenario: Workshop Enrollment
+  Given I am an organizer with a completed course
+  And I am viewing a workshop in the workshop dashboard
+  And I click selector "button:contains('Enrollment')"
+  Then I wait until element "table[aria-label='Workshop enrollments']" is visible
+  Then I wait until element "button[aria-label='Refresh enrollment table data']" is visible
+  Then I wait until element "button[aria-label='Export all enrollment data as csv']" is visible
+
+  And I clean up my records
+
+Scenario: Workshop Attendance
+  Given I am an organizer with a completed course
+  And I am viewing a workshop in the workshop dashboard
+  And I click selector "button:contains('Attendance')"
+  Then I wait until element "h2" contains text "Take Attendance"
+  And I open my eyes to test "Workshop Attendance"
+  And I see no difference for "Workshop Attendance"
+  And I close my eyes
+
+  And I clean up my records
+
+Scenario: Workshop Post Survey
+  Given I am an organizer with a completed course
+  Then I submit post byo workshop surveys
+  And I am viewing a workshop in the workshop dashboard
+  And I click selector "button:contains('Surveys')"
+  And I select the "Post-workshop survey" option in dropdown named "'survey type selection'"
+
+  Then I wait until element "button" contains text "Implementation"
+  And I click selector "button:contains('Implementation')"
+  And I open my eyes to test "Workshop Post Survey Category: Implementation"
+  And I see no difference for "Workshop Post Survey Category: Implementation"
+  And I close my eyes
+
+  Then I wait until element "button" contains text "Engagement"
+  And I click selector "button:contains('Engagement')"
+  And I open my eyes to test "Workshop Post Survey Category: Engagement"
+  And I see no difference for "Workshop Post Survey Category: Engagement"
+  And I close my eyes
+
+  Then I wait until element "button" contains text "Logistics"
+  And I click selector "button:contains('Logistics')"
+  And I open my eyes to test "Workshop Post Survey Category: Logistics"
+  And I see no difference for "Workshop Post Survey Category: Logistics"
+  And I close my eyes
+
+  Then I wait until element "button" contains text "Facilitator Feedback"
+  And I click selector "button:contains('Facilitator Feedback')"
+  And I open my eyes to test "Workshop Post Survey Category: Facilitator Feedback"
+  And I see no difference for "Workshop Post Survey Category: Facilitator Feedback"
+  And I close my eyes
+
+  Then I wait until element "button" contains text "Other"
+  And I click selector "button:contains('Other')"
+  And I open my eyes to test "Workshop Post Survey Category: Other"
+  And I see no difference for "Workshop Post Survey Category: Other"
+  And I close my eyes
+
+  And I clean up my records
+  

@@ -1,6 +1,8 @@
 import {
+  Breakdown,
   isQuestionType,
   LikertResults,
+  PromoterResults,
   SurveyQuestion,
 } from '../../WorkshopFormTemplate/types';
 
@@ -26,11 +28,24 @@ export const getQuestionDescription = (question: SurveyQuestion) => {
   return '';
 };
 
-export const prepLikertBreakdown = (breakdown: LikertResults['breakdown']) =>
+export const prepLikertBreakdown = (
+  breakdown: LikertResults['breakdown']
+): Breakdown[] =>
   Object.entries(breakdown ?? {})
-    .map(([key, value]) => ({
-      ...value,
-      className:
-        Number(key) === 4 ? 'neutral' : Number(key) > 4 ? 'success' : 'error',
-    }))
+    .map(
+      ([key, value]): Breakdown => ({
+        ...value,
+        color:
+          Number(key) === 4 ? 'neutral' : Number(key) > 4 ? 'success' : 'error',
+      })
+    )
     .reverse();
+
+export const prepPromoterBreakdown = (
+  breakdown: PromoterResults['breakdown']
+): Breakdown[] =>
+  Object.entries(breakdown ?? {}).map(([key, value]) => ({
+    ...value,
+    label: value.label.replace(/\D+/, ''),
+    color: Number(key) > 8 ? 'success' : Number(key) > 6 ? 'warning' : 'error',
+  }));
