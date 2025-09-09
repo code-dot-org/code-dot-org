@@ -20,8 +20,10 @@ export const getAiTutorContextPromise = async (
             file.type !== ProjectFileType.VALIDATION &&
             file.type !== ProjectFileType.SYSTEM_SUPPORT
         )
-        .map(([_, file]) => file.contents)
-        .join('\n')
+        .map(([_, file]) => {
+          return [file.name, `\`\`\`${file.contents}\`\`\``].join('\n');
+        })
+        .join('\n\n')
     : undefined;
 
   const validationContents = validationFile?.contents;
