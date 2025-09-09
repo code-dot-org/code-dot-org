@@ -152,13 +152,6 @@ class Unit < ApplicationRecord
     }
 
   validates :link, presence: true
-  validate :deeper_learning_courses_cannot_be_launched
-
-  def deeper_learning_courses_cannot_be_launched
-    if old_professional_learning_course? && (launched? || pilot?)
-      errors.add('can never be pilot, preview or stable for a deeper learning course.')
-    end
-  end
 
   def prevent_new_duplicate_levels(old_dup_level_keys = [])
     new_dup_level_keys = duplicate_level_keys - old_dup_level_keys
@@ -214,7 +207,7 @@ class Unit < ApplicationRecord
       new_published_state = Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
       new_instruction_type = Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
       new_instructor_audience = Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer
-      new_participant_audience =  Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator
+      new_participant_audience = Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator
 
       if unit_group
         # Check if anything needs to be updated on the PL course
@@ -1493,9 +1486,9 @@ class Unit < ApplicationRecord
         course_id: unit_group_unit&.cached_unit_group&.id,
         hide_within_course: hide_within_course,
         publishedState: get_published_state,
-        instructionType: get_instruction_type,
-        instructorAudience: get_instructor_audience,
-        participantAudience: get_participant_audience,
+        instructionType: unit_group_unit&.cached_unit_group&.instruction_type,
+        instructorAudience: unit_group_unit&.cached_unit_group&.instructor_audience,
+        participantAudience: unit_group_unit&.cached_unit_group&.participant_audience,
         loginRequired: login_required,
         plc: old_professional_learning_course?,
         hideable_lessons: hideable_lessons?,
@@ -1880,25 +1873,8 @@ class Unit < ApplicationRecord
   # If a script is in a unit group, use that unit group's published state
   # Otherwise, default to in_development
   def get_published_state(unit_group: get_original_unit_group)
+    unit_group = UnitGroup.find_by_name(professional_learning_course) if old_professional_learning_course?
     unit_group&.published_state || Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development
-  end
-
-  # If a script is in a unit group, use that unit group's instruction type.
-  # Otherwise, default to teacher led
-  def get_instruction_type(unit_group: get_original_unit_group)
-    unit_group&.instruction_type || Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
-  end
-
-  # If a script is in a unit group, use that unit group's instructor_audience.
-  # Otherwise, default to instructed by teacher
-  def get_instructor_audience(unit_group: get_original_unit_group)
-    unit_group&.instructor_audience || Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher
-  end
-
-  # If a script is in a unit group, use that unit group's participant_audience.
-  # Otherwise, default to participated in by students
-  def get_participant_audience(unit_group: get_original_unit_group)
-    unit_group&.participant_audience || Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student
   end
 
   # Use the unit group's pilot_experiment if one exists

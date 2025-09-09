@@ -308,7 +308,6 @@ class AbilityTest < ActiveSupport::TestCase
 
     assert ability.can?(:read, Section)
 
-    # TODO: figure out plc!!
     assert ability.can?(:read, Unit.find_by_name('ECSPD'))
     assert ability.can?(:read, Unit.find_by_name('flappy'))
 

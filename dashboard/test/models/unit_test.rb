@@ -581,7 +581,7 @@ class UnitTest < ActiveSupport::TestCase
 
   test 'self.latest_stable_version returns latest stable version for user locale' do
     create(:script, :in_single_unit_course, name: 's-2017', family_name: 'fake-family', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, supported_locales: ["it-it"])
-    unit_2018 = create(:script, :in_single_unit_course,  name: 's-2018', family_name: 'fake-family', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, supported_locales: ["it-it"])
+    unit_2018 = create(:script, :in_single_unit_course, name: 's-2018', family_name: 'fake-family', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, supported_locales: ["it-it"])
 
     assert_equal unit_2018, Unit.latest_stable_version('fake-family', locale: 'it-it')
   end
@@ -2420,17 +2420,6 @@ class UnitTest < ActiveSupport::TestCase
         @single_unit.clone_migrated_unit('coursename2-2021', destination_unit_group_name: versionless_unit_group.name)
       end
     end
-  end
-
-  test 'should raise error if deeper learning course is being launched' do
-    unit = create(:unit, professional_learning_course: 'my-deeper-learning-course')
-
-    error = assert_raises do
-      unit.published_state = 'stable'
-      unit.save!
-    end
-
-    assert_includes error.message, 'Validation failed: Published state can never be pilot, preview or stable for a deeper learning course.'
   end
 
   test 'finish_url returns unit group finish url if in a unit group' do
