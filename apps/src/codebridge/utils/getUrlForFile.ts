@@ -5,7 +5,6 @@ export const getUrlForFile = (
   file: ProjectFile,
   externalFileTypes: string[]
 ): string => {
-  // TODO: handle other file types, like images
   let fileType = '';
   if (externalFileTypes.includes(file.language)) {
     return file?.url || '';
