@@ -120,7 +120,7 @@ export async function runAllTests(
       getTimestampMessage(RunType.VALIDATION)
     );
     // We do a bit of a hack around the progress manager system here.
-    // We reset validation to set all tests to pending, then updateProgress to propogate
+    // We reset validation to set all tests to pending, then updateProgress to propagate
     // the pending status into the progress state (only on updateProgress does the progress manager
     // check the validation state). After running we will update progress again to get the test results.
     // This makes it so we can show the test names with a pending status while the tests are running after the
