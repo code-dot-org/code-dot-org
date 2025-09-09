@@ -21,6 +21,10 @@ $space-xl: 10px;
   overflow-y: auto;
   flex: 1;
   min-height: 0;
+  position: relative;
+
+  /* Simple background line that runs underneath the radio buttons */
+  background: linear-gradient(to right, transparent 32px, var(--borders-neutral-primary) 32px, var(--borders-neutral-primary) 33px, transparent 33px);
 }
 
 .rowContainer {
@@ -33,7 +37,30 @@ $space-xl: 10px;
   border: 1px solid var(--borders-neutral-primary);
   background: var(--background-neutral-secondary);
   margin: 8px;
+  position: relative;
+  z-index: 1;
 }
+
+/* Mask the vertical line above the first row and below the last row */
+.rowContainer:first-child::before,
+.rowContainer:last-child::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 8px; /* Cover the margin area */
+  background: var(--background-neutral-primary);
+  z-index: -1;
+}
+
+.rowContainer:first-child::before {
+  top: -8px;
+}
+
+.rowContainer:last-child::after {
+  bottom: -8px;
+}
+
 
 .footer {
   flex-shrink: 0;
