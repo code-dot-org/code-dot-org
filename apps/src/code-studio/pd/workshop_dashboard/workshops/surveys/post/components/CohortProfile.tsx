@@ -1,6 +1,8 @@
 import {Box} from '@mui/material';
 import React, {useMemo} from 'react';
 
+import {MinSurveyResponseCount} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
+
 import {
   isQuestionType,
   SurveyQuestions,
@@ -10,7 +12,6 @@ import {FreeResponseCard} from '../../components/FreeResponseCard';
 import {ScoreCard} from '../../components/ScoreCard';
 import {
   LIKERT_QUESTION_FOOTER,
-  MIN_RESPONSE_COUNT,
   PROMOTER_QUESTION_FOOTER,
 } from '../../constants';
 import {getQuestionDescription, prepLikertBreakdown} from '../../helpers';
@@ -50,7 +51,7 @@ export const ReadinessAndExpectations = () => {
             footer={PROMOTER_QUESTION_FOOTER}
             score={likelyToRecommend.results.promoter_percentage}
             responseCount={likelyToRecommend.results.total_responses}
-            minResponseCount={MIN_RESPONSE_COUNT}
+            minResponseCount={MinSurveyResponseCount}
           />
         )}
         {likertQuestionRow.map(question =>
@@ -64,7 +65,7 @@ export const ReadinessAndExpectations = () => {
               footer={LIKERT_QUESTION_FOOTER}
               score={question.results.weighted_score}
               responseCount={question.results.total_responses}
-              minResponseCount={MIN_RESPONSE_COUNT}
+              minResponseCount={MinSurveyResponseCount}
               breakdown={prepLikertBreakdown(question.results.breakdown)}
             />
           ) : null
