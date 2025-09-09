@@ -53,9 +53,6 @@ steps:
 
   - name: checkout
     image: bitnamilegacy/git
-    environment:
-      GITHUB_TOKEN:
-        from_secret: GITHUB_TOKEN
     commands:
       # Configure git to use the token for all GitHub operations
       - git config --global credential.helper store
