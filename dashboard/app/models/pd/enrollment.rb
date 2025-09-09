@@ -175,43 +175,6 @@ class Pd::Enrollment < ApplicationRecord
     end
   end
 
-  def send_exit_survey
-    # In case the workshop is reprocessed, do not send duplicate exit surveys.
-    if survey_sent_at
-      CDO.log.warn "Skipping attempt to send a duplicate workshop survey email. Enrollment: #{id}"
-      return
-    end
-
-    return unless should_send_exit_survey?
-
-    # Don't send if there's no associated survey
-    return unless exit_survey_url
-
-    return unless (mailer = Pd::WorkshopMailer.exit_survey(self))
-
-    mailer.deliver_now
-
-    # Also send to the user's alternate summer email if they entered it in their application and
-    # it's for a summer workshop.
-    if workshop.subject == SUBJECT_SUMMER_WORKSHOP
-      alt_summer_email = user&.alternate_email
-      if alt_summer_email.present?
-        Pd::WorkshopMailer.exit_survey(self, alt_summer_email).deliver_now
-      end
-    end
-
-    update!(survey_sent_at: Time.zone.now)
-
-    begin
-      test_pd_mailjet_email = DCDO.get('test_pd_mailjet_email', false)
-      if test_pd_mailjet_email && test_pd_mailjet_email == user.email
-        Pd::WorkshopMailjetMailer.send_teacher_post_workshop_survey(self, user, false)
-      end
-    rescue => exception
-      CDO.log.warn "PD MailJet Error: #{exception.message}"
-    end
-  end
-
   # TODO: Once we're satisfied with the first/last name split data,
   # remove the name field entirely.
   def name=(value)
