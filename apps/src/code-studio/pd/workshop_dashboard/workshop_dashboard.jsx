@@ -49,7 +49,7 @@ import {FacilitatorFeedback} from './workshops/surveys/post/components/Facilitat
 import {Implementation} from './workshops/surveys/post/components/Implementation';
 import {Logistics} from './workshops/surveys/post/components/Logistics';
 import {Other} from './workshops/surveys/post/components/Other';
-import ReadinessAndExpectations from './workshops/surveys/post/components/ReadinessAndExpectations';
+import ReadinessAndExpectations from './workshops/surveys/pre/components/ReadinessAndExpectations';
 import {WorkshopLayout} from './workshops/WorkshopLayout';
 
 export const ROOT_PATH = '/pd/workshop_dashboard';
