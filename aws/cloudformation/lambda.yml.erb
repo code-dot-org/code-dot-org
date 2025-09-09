@@ -281,7 +281,7 @@ Resources:
       FunctionName: SQLUser
       Code: <%=package_node_lambda 'sql-user' %>
       Handler: index.handler
-      Runtime: nodejs18.x
+      Runtime: nodejs22.x
       MemorySize: 1024
       Timeout: 30
       Role: !GetAtt SQLUserLambdaRole.Arn
