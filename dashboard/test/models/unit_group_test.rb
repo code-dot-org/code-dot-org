@@ -82,7 +82,7 @@ class UnitGroupTest < ActiveSupport::TestCase
       unit_group.save!
     end
 
-    assert_includes error.message, 'Validation failed: Published state can never be pilot, preview or stable for a deeper learning course.'
+    assert_includes error.message, 'Validation failed: Published state can never be pilot, preview or stable for a pl course.'
   end
 
   test "should serialize to json" do
