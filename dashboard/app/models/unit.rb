@@ -528,19 +528,6 @@ class Unit < ApplicationRecord
     Unit.where(family_name: family_name).order(Arel.sql("properties -> '$.version_year' DESC"))
   end
 
-  # Returns all units within a family from the Rails cache.
-  # Populates the cache with units in that family upon cache miss.
-  # @param family_name [String] Family name for the desired units.
-  # @return [Array<Unit>] Scripts within the specified family.
-  def self.get_family_from_cache(family_name)
-    return Unit.get_family_without_cache(family_name) unless should_cache?
-
-    unit_family_cache.fetch(family_name) do
-      # Populate cache on miss.
-      unit_family_cache[family_name] = Unit.get_family_without_cache(family_name)
-    end
-  end
-
   def self.remove_from_cache(unit_name)
     script_cache&.delete(unit_name)
   end

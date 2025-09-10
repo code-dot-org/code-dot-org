@@ -30,21 +30,12 @@ module Curriculum::CourseTypes
     errors.add(:instruction_type, 'must be the same for all courses in a family.') if all_family_courses.map(&:instruction_type).any? {|type| type != instruction_type}
   end
 
-  # If course we are check is a unit_group.
-  # If the course is a unit that is not in a unit_group check the unit for the family_name
-  # If unit that is in a unit_group then family name should be nil and we should not need to check anything
   def get_family_courses
     return nil if family_name.nil_or_empty?
 
-    all_family_courses = nil
-
     if is_a?(UnitGroup)
-      all_family_courses = UnitGroup.all.select {|c| c.family_name == family_name}
-    elsif is_a?(Unit) && !get_original_unit_group
-      all_family_courses = Unit.get_family_from_cache(family_name)
+      UnitGroup.all.select {|c| c.family_name == family_name}
     end
-
-    all_family_courses
   end
 
   # Instructor and Participant Audience can not be equal unless they are nil

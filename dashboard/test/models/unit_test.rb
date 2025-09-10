@@ -171,16 +171,6 @@ class UnitTest < ActiveSupport::TestCase
     assert_equal frozen, Unit.get_from_cache(frozen_id)
   end
 
-  test 'get_family_from_cache uses unit_family_cache' do
-    family_scripts = Unit.where(family_name: 'family-cache-test')
-    assert_equal [@unit_2017.name, @unit_2018.name], family_scripts.map(&:name)
-
-    populate_cache_and_disconnect_db
-
-    cached_family_scripts = Unit.get_family_from_cache('family-cache-test')
-    assert_equal [@unit_2017.name, @unit_2018.name], cached_family_scripts.map(&:name).uniq
-  end
-
   test 'cache_find_script_level uses cache' do
     unit = create(:unit, :with_levels)
     script_level = unit.script_levels.first
