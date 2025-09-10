@@ -541,17 +541,6 @@ class Unit < ApplicationRecord
     end
   end
 
-  # Returns all units within a family ordered by version year
-  # @param family_name [String] Family name for the desired units.
-  # @return [Array<Unit>] Scripts within the specified family, ordered by
-  #   version year
-  def self.family_unit_versions(family_name)
-    # We usually expect version_year to be a string but it can be nil. To
-    # prevent sort_by from blowing up in that case, normalize all values to
-    # strings.
-    Unit.get_family_from_cache(family_name).sort_by {|u| u.version_year.to_s}
-  end
-
   def self.remove_from_cache(unit_name)
     script_cache&.delete(unit_name)
   end

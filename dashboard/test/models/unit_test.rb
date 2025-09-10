@@ -447,20 +447,6 @@ class UnitTest < ActiveSupport::TestCase
     end
   end
 
-  test 'family_unit_versions returns values sorted by version year' do
-    # create units out of order
-    second = create(:script, family_name: 'fake-family', version_year: '2017')
-    third = create(:script, family_name: 'fake-family', version_year: '2018')
-    first = create(:script, family_name: 'fake-family', version_year: '2016')
-    assert_equal [first, second, third], Unit.family_unit_versions('fake-family')
-  end
-
-  test 'family_unit_versions handles nil version year' do
-    actual_version = create(:script, family_name: 'fake-family', version_year: '2017')
-    missing_version = create(:script, family_name: 'fake-family')
-    assert_equal [missing_version, actual_version], Unit.family_unit_versions('fake-family')
-  end
-
   test 'has_other_versions? makes no queries when there is one other unit group version' do
     Unit.stubs(:should_cache?).returns true
 
