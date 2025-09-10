@@ -33,6 +33,7 @@ const VersionHistoryRow: React.FunctionComponent<VersionHistoryRowProps> = ({
   }
 
   let rowMarginStyle, ariaLabel;
+  let isBoldtype = true;
   if (versionId === INITIAL_VERSION_ID) {
     rowMarginStyle = moduleStyles.isInitialVersionRow;
   } else if (isLatest) {
@@ -43,6 +44,7 @@ const VersionHistoryRow: React.FunctionComponent<VersionHistoryRowProps> = ({
   } else {
     rowMarginStyle = moduleStyles.isRow;
     ariaLabel = lab2I18n.autosavedVersion();
+    isBoldtype = false;
   }
 
   return (
@@ -58,7 +60,8 @@ const VersionHistoryRow: React.FunctionComponent<VersionHistoryRowProps> = ({
             label={label}
             onChange={onChange}
             checked={isSelected}
-            aria-label={ariaLabel}
+            ariaLabel={ariaLabel}
+            textThickness={isBoldtype ? 'thick' : 'thin'}
           />
           {ariaLabel === lab2I18n.autosavedVersion() && (
             <WithTooltip
