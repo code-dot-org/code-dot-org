@@ -11,7 +11,7 @@ interface VersionHistoryRowProps {
   label: string;
   isLatest: boolean;
   isSelected: boolean;
-  commitDescription?: string;
+  comment?: string;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
@@ -20,7 +20,7 @@ const VersionHistoryRow: React.FunctionComponent<VersionHistoryRowProps> = ({
   label,
   isLatest,
   isSelected,
-  commitDescription,
+  comment,
   onChange,
 }) => {
   if (isLatest) {
@@ -37,9 +37,9 @@ const VersionHistoryRow: React.FunctionComponent<VersionHistoryRowProps> = ({
           onChange={onChange}
           checked={isSelected}
         />
-        {commitDescription && (
+        {comment && (
           <BodyFourText className={moduleStyles.commitDescription}>
-            {commitDescription}
+            {comment}
           </BodyFourText>
         )}
       </div>

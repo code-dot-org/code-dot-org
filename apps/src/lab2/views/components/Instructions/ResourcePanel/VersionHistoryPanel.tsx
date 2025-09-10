@@ -338,6 +338,7 @@ const VersionHistoryPanel: React.FunctionComponent<
                 key={version.versionId}
                 versionId={version.versionId}
                 label={parseDate(version.lastModified)}
+                comment={version.comment}
                 isLatest={version.isLatest}
                 isSelected={selectedVersion === version.versionId}
                 onChange={onVersionChange}
