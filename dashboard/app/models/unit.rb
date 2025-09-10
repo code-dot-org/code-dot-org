@@ -594,30 +594,11 @@ class Unit < ApplicationRecord
   def can_view_version?(user, locale: nil, unit_group: get_original_unit_group)
     return false unless Ability.new(user).can?(:read, self, unit_group)
 
-    # Users can view any course not in a family.
-    return true if family_name.nil? && !unit_group&.single_unit_course?
-
     if unit_group&.single_unit_course?
-      return unit_group&.can_view_version?(user, locale)
+      unit_group&.can_view_version?(user, locale)
+    else
+      true
     end
-
-    latest_stable_version = Unit.latest_stable_version(family_name)
-    latest_stable_version_in_locale = Unit.latest_stable_version(family_name, locale: locale)
-    is_latest = latest_stable_version == self || latest_stable_version_in_locale == self
-
-    # All users can see the latest unit version in English and in their locale.
-    return true if is_latest
-
-    # Restrictions only apply to participants and logged out users.
-    return false if user.nil?
-    return true if can_be_instructor?(user)
-
-    # A student can view the unit version if they have progress in it or the course it belongs to.
-    has_progress = user.scripts.include?(self) || unit_group&.has_progress?(user)
-    return true if has_progress
-
-    # A student can view the unit version if they are assigned to it.
-    user.assigned_script?(self)
   end
 
   # If this unit is in a unit group, returns the next unit in the unit group.
