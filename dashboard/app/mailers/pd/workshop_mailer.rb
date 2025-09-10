@@ -100,34 +100,6 @@ class Pd::WorkshopMailer < ApplicationMailer
       to: email_address(@workshop.organizer.name, @workshop.organizer.email)
   end
 
-  def teacher_enrollment_reminder(enrollment, options = nil, to_email = '')
-    @enrollment = enrollment
-    @workshop = enrollment.workshop
-    @organizer = @workshop.organizer
-    @regional_partner_name = @workshop.regional_partner&.name
-    @cancel_url = url_for controller: 'pd/workshop_enrollment', action: :cancel, code: enrollment.code
-    @is_reminder = true
-    @pre_workshop_survey_url = enrollment.pre_workshop_survey_url
-    @is_first_pre_survey_email = options.nil? ? true : options[:days_before] == INITIAL_PRE_SURVEY_DAYS_BEFORE
-
-    # Facilitator training workshops use a different email address
-    if @enrollment.workshop.course == Pd::Workshop::COURSE_FACILITATOR
-      from = from_facilitators
-      reply_to = from_facilitators
-    else
-      from = from_teacher
-      reply_to = email_address(@workshop.organizer.name, @workshop.organizer.email)
-    end
-
-    return if @workshop.suppress_reminders? || @workshop.suppress_email?
-
-    mail content_type: 'text/html',
-      from: from,
-      subject: teacher_enrollment_subject(@workshop),
-      to: email_address(@enrollment.full_name, to_email.presence || @enrollment.email),
-      reply_to: reply_to
-  end
-
   def teacher_pre_workshop_csa(enrollment, to_email = '')
     @enrollment = enrollment
     @workshop = enrollment.workshop

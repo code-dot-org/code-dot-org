@@ -533,16 +533,15 @@ class Pd::Workshop < ApplicationRecord
     # Collect errors, but do not stop batch. Rethrow all errors below.
     errors = []
     scheduled_start_in_days(days).each do |workshop|
+      next if workshop.suppress_reminders?
+
       workshop.enrollments.each do |enrollment|
-        email = Pd::WorkshopMailer.teacher_enrollment_reminder(enrollment, options: {days_before: days})
-        email.deliver_now
+        user = enrollment.user
+        Pd::WorkshopMailjetMailer.send_teacher_workshop_reminder(enrollment, user, false, days)
 
         # Also send to the user's alternate summer email if they entered it in their application and it's for a summer workshop.
-        if enrollment.workshop&.subject == SUBJECT_SUMMER_WORKSHOP
-          alt_summer_email = enrollment.user&.alternate_email
-          if alt_summer_email.present?
-            Pd::WorkshopMailer.teacher_enrollment_reminder(enrollment, options: {days_before: days}, to_email: alt_summer_email).deliver_now
-          end
+        if workshop.subject == SUBJECT_SUMMER_WORKSHOP && user.alternate_email.present?
+          Pd::WorkshopMailjetMailer.send_teacher_workshop_reminder(enrollment, user, true, days)
         end
       rescue => exception
         errors << "teacher enrollment #{enrollment.id} - #{exception.message}"
