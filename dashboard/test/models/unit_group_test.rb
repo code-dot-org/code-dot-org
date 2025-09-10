@@ -72,17 +72,17 @@ class UnitGroupTest < ActiveSupport::TestCase
     end
   end
 
-  test 'should raise error if deeper learning course is being launched' do
+  test 'should raise error if plc course is being launched' do
     unit_group = create(:unit_group, family_name: 'plc')
     unit_group.plc_course = Plc::Course.new(unit_group: unit_group)
-    unit_group.save
+    unit_group.save!
 
     error = assert_raises do
       unit_group.published_state = 'stable'
       unit_group.save!
     end
 
-    assert_includes error.message, 'Validation failed: Published state can never be pilot, preview or stable for a pl course.'
+    assert_includes error.message, 'Validation failed: Published state can never be pilot, preview or stable for a plc course.'
   end
 
   test "should serialize to json" do

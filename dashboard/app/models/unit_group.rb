@@ -75,11 +75,11 @@ class UnitGroup < ApplicationRecord
     end
   end
 
-  validate :pl_courses_cannot_be_launched
+  validate :plc_courses_cannot_be_launched
 
-  def pl_courses_cannot_be_launched
+  def plc_courses_cannot_be_launched
     if plc_course && (launched? || pilot?)
-      errors.add(:published_state, 'can never be pilot, preview or stable for a pl course.')
+      errors.add(:published_state, 'can never be pilot, preview or stable for a plc course.')
     end
   end
 
