@@ -13,37 +13,25 @@ export const getAiTutorContextPromise = async (
   longInstructions: string | undefined,
   miniAppName: string | undefined
 ): Promise<AiTutorContext> => {
-  const sourceFiles = source
+  const sourceCode = source
     ? Object.entries(source.files)
         .filter(
           ([_, file]) =>
-            file.type !== ProjectFileType.VALIDATION &&
-            file.type !== ProjectFileType.SYSTEM_SUPPORT &&
-            file.type !== ProjectFileType.SUPPORT
+            (file.type !== ProjectFileType.VALIDATION &&
+              file.type !== ProjectFileType.SYSTEM_SUPPORT &&
+              file.type !== ProjectFileType.SUPPORT) ||
+            (file.type === ProjectFileType.SUPPORT && file.contents)
         )
         .map(([_, file]) => {
-          return [file.name, `\`\`\`${file.contents}\`\`\``].join('\n');
-        })
-    : [];
+          let prefix = '';
+          if (file.type === ProjectFileType.SUPPORT) {
+            prefix = `${file.name} is not visible to the student: \n`;
+          }
 
-  // Support files are not likely to have contents in python lab curriculum levels.
-  // We'll include them if they do, with the caveat that they are not visible to the student.
-  const supportFiles = source
-    ? Object.entries(source.files)
-        .filter(
-          ([_, file]) => file.type === ProjectFileType.SUPPORT && file.contents
-        )
-        .map(([_, file]) => {
-          return [
-            `${file.name} is not visible to the student: `,
-            file.name,
-            `\`\`\`${file.contents}\`\`\``,
-          ].join('\n');
+          return `${prefix}filename: ${file.name}\n\`\`\`${file.contents}\`\`\``;
         })
-    : [];
-
-  const sourceCode =
-    [...sourceFiles, ...supportFiles].join('\n\n') || undefined;
+        .join('\n\n')
+    : undefined;
 
   const validationContents = validationFile?.contents;
 
