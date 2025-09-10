@@ -33,7 +33,6 @@ export interface RadioButtonProps
   ariaLabel?: string;
   /** Text thickness styling */
   textThickness?: 'thick' | 'thin';
-  g;
   /** Custom className */
   className?: string;
   /** Children (Radio Button custom content) */
