@@ -16,10 +16,10 @@ Scenario: Ensure users can navigate into and out of timeline, and between elemen
   Then I move focus to "#timeline"
   And I press keys ":enter"
   # Check that the first timeline element has focus
-  And element "[aria-label='drum_kit_disco']" has focus
+  And I wait until element "[aria-label='drum_kit_disco']" has focus
   And I press keys ":arrow_right"
   # Check that focus moves away from first element
-  And element "[aria-label='drum_kit_disco']" does not have focus
+  And I wait until element "[aria-label='drum_kit_disco']" does not have focus
   # Check that a user can escape out of timeline mode back to timeline container
   And I press keys ":escape"
-  And element "#timeline" has focus
+  And I wait until element "#timeline" has focus
