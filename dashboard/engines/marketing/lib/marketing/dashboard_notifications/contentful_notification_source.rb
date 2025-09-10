@@ -6,6 +6,10 @@ module Marketing
       CONTENTFUL_SOURCE_NAME = 'contentful'
       CACHE_EXPIRATION = 1.hour
 
+      def initialize(contentful_client = Marketing::ContentfulClient.instance)
+        @contentful_client = contentful_client
+      end
+
       def get(user_id:, locale:)
         contentful_entries = cached_contentful_entries(locale.to_s)
         contentful_result = contentful_entries.filter_map do |notification|
@@ -31,7 +35,7 @@ module Marketing
 
       private def cached_contentful_entries(locale)
         CDO.shared_cache.fetch("contentful-#{NOTIFICATION_CONTENTFUL_CONTENT_TYPE}:#{locale}", expires_in: CACHE_EXPIRATION) do
-          Marketing::ContentfulClient.entries(locale, NOTIFICATION_CONTENTFUL_CONTENT_TYPE)
+          @contentful_client.entries(locale, NOTIFICATION_CONTENTFUL_CONTENT_TYPE)
         end
       end
     end
