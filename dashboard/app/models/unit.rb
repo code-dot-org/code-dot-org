@@ -425,18 +425,6 @@ class Unit < ApplicationRecord
     end
   end
 
-  # Returns a cached map from family_name to units, or nil if caching is disabled.
-  def self.unit_family_cache
-    return nil unless should_cache?
-    @@unit_family_cache ||= {}.tap do |cache|
-      family_units = script_cache.values.group_by(&:family_name)
-      # Not all units have a family_name, and thus will be grouped as family_units[nil].
-      # We do not want to store this key-value pair in the cache.
-      family_units.delete(nil)
-      cache.merge!(family_units)
-    end
-  end
-
   # Find the script level with the given id from the cache, unless the level build mode
   # is enabled in which case it is always fetched from the database. If we need to fetch
   # the unit and we're not in level mode (for example because the unit was created after

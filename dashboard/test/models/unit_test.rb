@@ -64,7 +64,6 @@ class UnitTest < ActiveSupport::TestCase
     # Only need to populate cache once per test-suite run
     @@script_cached ||= Unit.unit_cache_to_cache
     Unit.script_cache
-    Unit.unit_family_cache
 
     # Also populate course_cache, as we call .link on them
     UnitGroup.stubs(:should_cache?).returns true
