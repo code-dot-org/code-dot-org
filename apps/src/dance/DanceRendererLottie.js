@@ -1,4 +1,3 @@
-// DanceRendererLottie.js
 import lottie from 'lottie-web';
 
 const DEFAULT_LAYOUT = {
@@ -61,6 +60,12 @@ export default class DanceRendererLottie {
     this.compW = this.compH = 0;
     this.durationFrames = null;
 
+    // Allow clearing the source (e.g., at reset)
+    if (!src || (!src.url && !src.data)) {
+      this._readyPromise = null;
+      return;
+    }
+
     this._readyPromise = new Promise((res, rej) => {
       this._readyResolve = res;
       this._readyReject = rej;
@@ -113,10 +118,6 @@ export default class DanceRendererLottie {
     return this.durationFrames;
   }
 
-  getCompSize() {
-    return this.compW && this.compH ? {w: this.compW, h: this.compH} : null;
-  }
-
   /**
    * Draw exactly one frame into the target context with layout handled here.
    * @param {number} frameIndex
@@ -132,42 +133,67 @@ export default class DanceRendererLottie {
     )
       return;
 
-    const cfg = {...DEFAULT_LAYOUT, ...layout};
-    const ctx = this.targetCtx;
-    const cw = ctx.canvas.width | 0;
-    const ch = ctx.canvas.height | 0;
+    const configuration = {...DEFAULT_LAYOUT, ...layout};
+    const canvasContext = this.targetCtx;
+    const canvasWidth = canvasContext.canvas.width | 0;
+    const canvasHeight = canvasContext.canvas.height | 0;
 
-    if (cfg.clearBeforeDraw) {
-      ctx.setTransform(1, 0, 0, 1, 0, 0);
-      ctx.clearRect(0, 0, cw, ch);
+    if (configuration.clearBeforeDraw) {
+      canvasContext.setTransform(1, 0, 0, 1, 0, 0);
+      canvasContext.clearRect(0, 0, canvasWidth, canvasHeight);
     }
 
     // Compute destination rect
-    let dw, dh;
-    if (cfg.mode === 'fit' || cfg.mode === 'cover') {
+    let destinationWidth, destinationHeight;
+    if (configuration.mode === 'fit' || configuration.mode === 'cover') {
       const s =
-        cfg.mode === 'cover'
-          ? Math.max(cw / this.compW, ch / this.compH)
-          : Math.min(cw / this.compW, ch / this.compH);
-      dw = Math.max(1, Math.round(this.compW * s * (cfg.scale || 1)));
-      dh = Math.max(1, Math.round(this.compH * s * (cfg.scale || 1)));
-    } else if (cfg.mode === 'stretch') {
-      dw = Math.max(1, Math.round(cw * (cfg.scale || 1)));
-      dh = Math.max(1, Math.round(ch * (cfg.scale || 1)));
+        configuration.mode === 'cover'
+          ? Math.max(canvasWidth / this.compW, canvasHeight / this.compH)
+          : Math.min(canvasWidth / this.compW, canvasHeight / this.compH);
+      destinationWidth = Math.max(
+        1,
+        Math.round(this.compW * s * (configuration.scale || 1))
+      );
+      destinationHeight = Math.max(
+        1,
+        Math.round(this.compH * s * (configuration.scale || 1))
+      );
+    } else if (configuration.mode === 'stretch') {
+      destinationWidth = Math.max(
+        1,
+        Math.round(canvasWidth * (configuration.scale || 1))
+      );
+      destinationHeight = Math.max(
+        1,
+        Math.round(canvasHeight * (configuration.scale || 1))
+      );
     } else {
-      const s = cfg.scale || 1;
-      dw = Math.max(1, Math.round(this.compW * s));
-      dh = Math.max(1, Math.round(this.compH * s));
+      const s = configuration.scale || 1;
+      destinationWidth = Math.max(1, Math.round(this.compW * s));
+      destinationHeight = Math.max(1, Math.round(this.compH * s));
     }
 
-    const ax = cfg.align?.x || 'center';
-    const ay = cfg.align?.y || 'center';
-    const dx = Math.round(alignOffset(cw, dw, ax) + (cfg.offset?.x || 0));
-    const dy = Math.round(alignOffset(ch, dh, ay) + (cfg.offset?.y || 0));
+    const alignX = configuration.align?.x || 'center';
+    const alignY = configuration.align?.y || 'center';
+    const destinationX = Math.round(
+      alignOffset(canvasWidth, destinationWidth, alignX) +
+        (configuration.offset?.x || 0)
+    );
+    const destinationY = Math.round(
+      alignOffset(canvasHeight, destinationHeight, alignY) +
+        (configuration.offset?.y || 0)
+    );
 
     // Apply transform that maps Lottie comp space → dest rect
-    ctx.save();
-    ctx.setTransform(dw / this.compW, 0, 0, dh / this.compH, dx, dy);
+    canvasContext.save();
+    canvasContext.setTransform(
+      destinationWidth / this.compW,
+      0,
+      0,
+      destinationHeight / this.compH,
+      destinationX,
+      destinationY
+    );
 
     // Paint the requested frame directly into target
     const idx =
@@ -175,7 +201,7 @@ export default class DanceRendererLottie {
       this.durationFrames;
     this.anim.goToAndStop(idx, true);
 
-    ctx.restore();
+    canvasContext.restore();
   }
 
   dispose() {
