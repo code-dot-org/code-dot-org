@@ -1,3 +1,4 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {RadioButton} from '@code-dot-org/component-library/radioButton';
 import {BodyFourText} from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
@@ -30,6 +31,7 @@ const VersionHistoryRow: React.FunctionComponent<VersionHistoryRowProps> = ({
   }
 
   let rowMarginStyle;
+  let isAutoSaved = false;
   if (versionId === INITIAL_VERSION_ID) {
     rowMarginStyle = moduleStyles.isInitialVersionRow;
   } else if (isLatest) {
@@ -38,6 +40,7 @@ const VersionHistoryRow: React.FunctionComponent<VersionHistoryRowProps> = ({
     rowMarginStyle = moduleStyles.isCommentRow;
   } else {
     rowMarginStyle = moduleStyles.isRow;
+    isAutoSaved = true;
   }
 
   return (
@@ -46,13 +49,18 @@ const VersionHistoryRow: React.FunctionComponent<VersionHistoryRowProps> = ({
       className={classNames(moduleStyles.rowContainer, rowMarginStyle)}
     >
       <div className={moduleStyles.versionContent}>
-        <RadioButton
-          name={versionId}
-          value={versionId}
-          label={label}
-          onChange={onChange}
-          checked={isSelected}
-        />
+        <div className={moduleStyles.versionHeader}>
+          <RadioButton
+            name={versionId}
+            value={versionId}
+            label={label}
+            onChange={onChange}
+            checked={isSelected}
+          />
+          {isAutoSaved && (
+            <FontAwesomeV6Icon iconName={'cloud-check'} iconStyle={'light'} />
+          )}
+        </div>
         {comment && (
           <BodyFourText className={moduleStyles.commitDescription}>
             {comment}

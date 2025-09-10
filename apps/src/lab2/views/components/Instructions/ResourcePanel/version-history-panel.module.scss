@@ -69,6 +69,13 @@ $space-xl: 10px;
   flex: 1;
 }
 
+.versionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
 .commitDescription {
   margin-left: 34px; // Align with radio button label
   color: var(--text-neutral-secondary);
