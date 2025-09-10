@@ -36,9 +36,30 @@ $space-xl: 10px;
   border-radius: var(--border-radius-br-s, 4px);
   border: 1px solid var(--borders-neutral-primary);
   background: var(--background-neutral-secondary);
-  margin: 8px;
+  margin-left: 8px;
+  margin-right: 8px;
   position: relative;
   z-index: 1;
+}
+
+.isRow {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.isCommentRow {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.isInitialVersionRow {
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+
+.isCurrentVersionRow {
+  margin-top: 8px;
+  margin-bottom: 16px;
 }
 
 .versionContent {

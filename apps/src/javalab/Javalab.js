@@ -517,6 +517,7 @@ Javalab.prototype.afterClearPuzzle = function () {
   project.autosave();
 };
 
+// This is called when the user commits code to the project.
 Javalab.prototype.onCommitCode = function (commitNotes, onSuccessCallback) {
   project.save(true).then(result => {
     fetch('/project_commits', {
