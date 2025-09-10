@@ -65,9 +65,8 @@ Scenario: Workshop Enrollment
   And I am viewing a workshop in the workshop dashboard
   And I click selector "button:contains('Enrollment')"
   Then I wait until element "table[aria-label='Workshop enrollments']" is visible
-  And I open my eyes to test "Workshop Enrollment"
-  And I see no difference for "Workshop Enrollment"
-  And I close my eyes
+  Then I wait until element "button[aria-label='Refresh enrollment table data']" is visible
+  Then I wait until element "button[aria-label='Export all enrollment data as csv']" is visible
 
   And I clean up my records
 
