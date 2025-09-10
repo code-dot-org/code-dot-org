@@ -78,6 +78,7 @@ $space-xl: 10px;
 
 .commitDescription {
   margin-left: 34px; // Align with radio button label
+  margin-bottom: 0; // Remove extra space below comment
   color: var(--text-neutral-secondary);
   font-size: 14px;
 }
