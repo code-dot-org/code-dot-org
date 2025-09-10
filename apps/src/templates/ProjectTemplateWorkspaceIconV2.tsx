@@ -31,7 +31,6 @@ const ProjectTemplateWorkspaceIconV2: React.FunctionComponent<
         tooltipId: 'project-template-workspace-icon-tooltip',
         size: 'xs',
       }}
-      tooltipOverlayClassName={styles.flexContainer}
     >
       {/* Wrap the icon in a button so that the tooltip is tabbable. */}
       <button type="button" className={styles.iconButton}>

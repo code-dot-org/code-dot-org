@@ -75,6 +75,14 @@ class UnitGroup < ApplicationRecord
     end
   end
 
+  validate :plc_courses_cannot_be_launched
+
+  def plc_courses_cannot_be_launched
+    if plc_course && (launched? || pilot?)
+      errors.add(:published_state, 'can never be pilot, preview or stable for a plc course.')
+    end
+  end
+
   def skip_name_format_validation
     !!plc_course
   end
@@ -245,7 +253,6 @@ class UnitGroup < ApplicationRecord
     new_units_objects.each_with_index do |unit, index|
       unit_group_unit = UnitGroupUnit.find_or_create_by!(unit_group: self, script: unit) do |ugu|
         ugu.position = index + 1
-        unit.update!(published_state: nil, instruction_type: nil, participant_audience: nil, instructor_audience: nil, pilot_experiment: nil, skip_name_format_validation: true)
         unit.update!(original_unit_group_id: id, skip_name_format_validation: true) if unit.original_unit_group.nil?
 
         unit.reload
@@ -256,14 +263,7 @@ class UnitGroup < ApplicationRecord
 
     units_to_remove.each do |unit|
       if unit.unit_group_units.count == 1
-        # Units that are not in a unit group need to have these fields set in order to determine course type and visibility of course
-        # If this is the last unit group unit, then we need to set those fields and set the original_unit_group_id to nil
-        unit.update!(
-          published_state: (unit.published_state ? unit.published_state : published_state),
-          instruction_type: instruction_type,
-          participant_audience: participant_audience,
-          instructor_audience: instructor_audience
-        )
+        # If this is the last unit group unit, then we need to set the original_unit_group_id to nil
         unit.update!(original_unit_group_id: nil, skip_name_format_validation: true)
       end
       UnitGroupUnit.where(unit_group: self, script: unit).destroy_all

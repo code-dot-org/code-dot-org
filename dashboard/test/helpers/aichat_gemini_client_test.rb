@@ -99,7 +99,7 @@ class AichatGeminiClientTest < AichatAiClientTest
       [
         {role: 'user', parts: [{text: 'hello from user'}]},
         {role: 'model', parts: [{text: 'assistant response'}]},
-        {role: 'user', parts: [{text: "new message from user\nextra text"}]}
+        {role: 'user', parts: [{text: "new message from user"}]}
       ]
     end
 
@@ -132,16 +132,8 @@ class AichatGeminiClientTest < AichatAiClientTest
         parts: [
           {text: "Be safe."},
           {text: "test prompt"},
-          {text: "test retrieval"}
-        ]
-      }
-    end
-
-    let(:system_instruction_with_assets_and_without_level_system_prompt) do
-      {
-        parts: [
-          {text: "test prompt"},
-          {text: "test retrieval"}
+          {text: "test retrieval"},
+          {text: "hidden context text"}
         ]
       }
     end
@@ -228,7 +220,7 @@ class AichatGeminiClientTest < AichatAiClientTest
           request_body_without_contents.merge(
             {
               contents: contents_with_assets_and_without_level_system_prompt,
-              system_instruction: system_instruction_with_assets_and_without_level_system_prompt
+              system_instruction: system_instruction_without_level_system_prompt
             }.deep_stringify_keys
           )
         end

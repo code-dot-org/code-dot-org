@@ -60,6 +60,7 @@ const CODE_STUDIO_ENTRIES = {
   'devise/registrations/finish_teacher_account': './src/sites/studio/pages/devise/registrations/finish_teacher_account.js',
   'devise/shared/_oauth_links': './src/sites/studio/pages/devise/shared/_oauth_links.js',
   'devise/registrations/edit': './src/sites/studio/pages/devise/registrations/edit.js',
+  'devise/registrations/personalization_information': './src/sites/studio/pages/devise/registrations/personalization_information.js',
   'devise/registrations/account_type': './src/sites/studio/pages/devise/registrations/account_type.js',
   'gates/logged_out': './src/sites/studio/pages/gates/logged_out.js',
   'gates/teacher_account_required': './src/sites/studio/pages/gates/teacher_account_required.js',
@@ -114,8 +115,6 @@ const CODE_STUDIO_ENTRIES = {
   'sections/show': './src/sites/studio/pages/sections/show.js',
   'shared/_school_info': './src/sites/studio/pages/shared/_school_info.js',
   'teacher_dashboard/show': './src/sites/studio/pages/teacher_dashboard/show.js',
-  'teacher_dashboard/parent_letter': './src/sites/studio/pages/teacher_dashboard/parent_letter.js',
-  'teacher_feedbacks/index': './src/sites/studio/pages/teacher_feedbacks/index.js',
   'vocabularies/edit': './src/sites/studio/pages/vocabularies/edit.js',
   'weblab_host/network_check': './src/sites/studio/pages/weblab_host/network_check.js',
 };
