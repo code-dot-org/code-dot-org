@@ -70,7 +70,7 @@ module Lti
         end
 
         begin
-          dynamic_registration_client = Clients::LtiDynamicRegistrationClient.new(registration_data[:registration_token], registration_data[:registration_endpoint])
+          dynamic_registration_client = LtiDynamicRegistrationClient.new(registration_data[:registration_token], registration_data[:registration_endpoint])
           registration_response = dynamic_registration_client.make_registration_request
         rescue => exception
           message = 'Error creating registration'
@@ -99,7 +99,7 @@ module Lti
 
       private def init_cache
         cache_namespace = 'lti_v1_dynamic_registration'
-        @cache = Clients::CacheClient.new(cache_namespace)
+        @cache = CacheClient.new(cache_namespace)
       end
 
       private def unauthorized_status
