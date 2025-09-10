@@ -1,12 +1,13 @@
+import {AiTutorContext} from '@cdo/apps/aiTutor/types';
 import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
 
 // Return additional context for AiTutor2.
-const getAiTutor2Context = (
+export const getAiTutorContextPromise = (
   source: MultiFileSource | undefined,
   longInstructions: string | undefined
-) => {
+): Promise<AiTutorContext> => {
   if (!source) {
-    return '';
+    return Promise.resolve({});
   }
 
   const sourceCode = Object.entries(source.files)
@@ -18,14 +19,8 @@ const getAiTutor2Context = (
     .map(([_, file]) => file.contents)
     .join('\n');
 
-  const context = [
-    'Here is my code:',
+  return Promise.resolve({
     sourceCode,
-    'And here are the instructions:',
     longInstructions,
-  ].join('\n\n');
-
-  return context;
+  });
 };
-
-export default getAiTutor2Context;
