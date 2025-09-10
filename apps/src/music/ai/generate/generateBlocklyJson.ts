@@ -1,5 +1,9 @@
 // NOTE: This is AI-generated code.  Search for HAND_CHANGE for any changes made by hand after that.
 
+import {JsonBlockConfig, WorkspaceSerialization} from '@cdo/apps/blockly/types';
+
+import {BlockTypes} from '../../blockly/blockTypes';
+
 /*
   Generate prompt:
 
@@ -33,47 +37,6 @@ And Here is some example Blockly code for our system.  In this case, we are gene
    structure.
  */
 
-// Define interfaces for Blockly JSON structure to ensure type safety
-interface BlocklyField {
-  [key: string]: string | number;
-}
-
-interface BlocklyInputBlock {
-  block: BlocklyBlock;
-}
-
-interface BlocklyInputs {
-  code?: BlocklyInputBlock; // Used by 'repeat' and 'play_sounds_together'
-  // Add other input types here if they are encountered in future Blockly structures
-}
-
-interface BlocklyExtraState {
-  disableNextConnection: boolean;
-  // Add other properties like 'collapsed' if needed
-}
-
-interface BlocklyBlock {
-  type: string;
-  id: string;
-  x?: number; // Only for top-level blocks like 'when_run_simple2'
-  y?: number; // Only for top-level blocks like 'when_run_simple2'
-  deletable?: boolean; // Only for top-level blocks
-  movable?: boolean; // Only for top-level blocks
-  extraState?: BlocklyExtraState; // Common for most executable blocks
-  fields?: BlocklyField; // For blocks with configurable values like 'sound' or 'times'
-  inputs?: BlocklyInputs; // For blocks that contain other blocks (e.g., 'code' input)
-  next?: BlocklyInputBlock; // For sequential blocks
-}
-
-interface BlocklyBlocksContainer {
-  languageVersion: number;
-  blocks: BlocklyBlock[];
-}
-
-interface BlocklyWorkspace {
-  blocks: BlocklyBlocksContainer;
-}
-
 /**
  * Generates Blockly JSON as a string from a pseudocode description of a song.
  *
@@ -95,8 +58,8 @@ export function generateBlocklyJson(pseudocode: string): string {
   const meaningfulLines = lines.filter(line => line.trim() !== '');
 
   // Initialize the root 'when_run_simple2' block
-  const rootBlock: BlocklyBlock = {
-    type: 'when_run_simple2',
+  const rootBlock: JsonBlockConfig = {
+    type: BlockTypes.WHEN_RUN_SIMPLE2,
     id: generateBlockId(),
     x: 30, // Standard starting X position
     y: 30, // Standard starting Y position
@@ -108,11 +71,11 @@ export function generateBlocklyJson(pseudocode: string): string {
   // `activeBlockChainEnd` points to the last block in the *current active 'next' sequence*.
   // If `scopeStack` is empty, it's the last block directly connected to `when_run` (or `when_run` itself).
   // If `scopeStack` is not empty, it's the last block connected within the `inputs.code` of the current scope parent.
-  let activeBlockChainEnd: BlocklyBlock = rootBlock;
+  let activeBlockChainEnd = rootBlock;
 
   // `scopeStack` stores blocks that are currently "open" for having child blocks added to their `inputs.code`.
   // Each entry includes the parent block and its indentation level.
-  const scopeStack: {block: BlocklyBlock; indentation: number}[] = [];
+  const scopeStack: {block: JsonBlockConfig; indentation: number}[] = [];
 
   // HAND_CHANGE: Commented out manually.
   // let previousIndentation: number = 0; // Tracks the indentation of the previous processed line
@@ -126,7 +89,7 @@ export function generateBlocklyJson(pseudocode: string): string {
     // Joins remaining parts as argument and removes quotes
     const arg = commandParts.slice(1).join(' ').replace(/"/g, '');
 
-    let newBlock: BlocklyBlock | undefined;
+    let newBlock: JsonBlockConfig | undefined;
     let isNewScopeParent: boolean = false; // True if the new block can contain other blocks (e.g., repeat, play_together)
 
     // Determine the type of the new Blockly block based on the pseudocode command
@@ -152,19 +115,16 @@ export function generateBlocklyJson(pseudocode: string): string {
           );
         }
         newBlock = {
-          type: 'play_sound_at_current_location_simple2',
+          type: BlockTypes.PLAY_SOUND_AT_CURRENT_LOCATION_SIMPLE2,
           id: generateBlockId(),
-          extraState: {disableNextConnection: false},
           fields: {sound: arg},
         };
         break;
 
       case 'play_together':
         newBlock = {
-          type: 'play_sounds_together',
+          type: BlockTypes.PLAY_SOUNDS_TOGETHER,
           id: generateBlockId(),
-          extraState: {disableNextConnection: false},
-          inputs: {code: undefined}, // 'code' input will be populated by child blocks
         };
         isNewScopeParent = true;
         break;
@@ -179,11 +139,9 @@ export function generateBlocklyJson(pseudocode: string): string {
           );
         }
         newBlock = {
-          type: 'repeat_simple2',
+          type: BlockTypes.REPEAT_SIMPLE2,
           id: generateBlockId(),
-          extraState: {disableNextConnection: false},
           fields: {times: times},
-          inputs: {code: undefined}, // 'code' input will be populated by child blocks
         };
         isNewScopeParent = true;
         break;
@@ -258,9 +216,8 @@ export function generateBlocklyJson(pseudocode: string): string {
   }
 
   // Construct the final Blockly workspace object
-  const blocklyWorkspace: BlocklyWorkspace = {
+  const blocklyWorkspace: WorkspaceSerialization = {
     blocks: {
-      languageVersion: 0,
       blocks: [rootBlock], // The entire structure hangs off the root block
     },
   };

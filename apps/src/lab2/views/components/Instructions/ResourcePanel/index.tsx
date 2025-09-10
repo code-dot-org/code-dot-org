@@ -24,6 +24,7 @@ import NavigationArea from '../NavigationArea';
 import CopyrightButton from './CopyrightButton';
 import ResourcePanelExtraLinks from './ResourcePanelExtraLinks';
 import SettingsPanel from './SettingsPanel';
+import ValidationPanel from './ValidationPanel';
 import VersionHistoryPanel from './VersionHistoryPanel';
 
 import styles from './styles.module.scss';
@@ -34,6 +35,7 @@ enum Tabs {
   TeachersOnly = 'teachersOnly',
   StudentRubric = 'studentRubric',
   VersionHistory = 'versionHistory',
+  Validation = 'validation',
 }
 
 export interface Setting {
@@ -62,6 +64,10 @@ const tabInfo: {[key in Tabs]: {title: string; icon: string}} = {
   [Tabs.VersionHistory]: {
     title: commonI18n.versionHistory_header(),
     icon: 'history',
+  },
+  [Tabs.Validation]: {
+    title: commonI18n.validation(),
+    icon: 'clipboard-check',
   },
 };
 
@@ -111,6 +117,12 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     if (levelProperties.longInstructions) {
       tabMap[Tabs.Instructions] = (
         <Instructions {...instructionsProps} hideNavigation />
+      );
+    }
+
+    if (instructionsProps.validationSettings) {
+      tabMap[Tabs.Validation] = (
+        <ValidationPanel {...instructionsProps.validationSettings} />
       );
     }
 
