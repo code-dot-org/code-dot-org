@@ -13,21 +13,19 @@ module Marketing
     def initialize
       @stubbed_entries = {}
       @stubbed_entries['dashboard-notification'] = [STUB_ENTRY_1, STUB_ENTRY_2, STUB_ENTRY_3]
-
-      # We currently only stub out the entries method for `dashboard-notification` content type.
-      # Everything else is passed through to the real Contentful client.
-      @real_client = Marketing::DashboardNotifications::ContentfulNotificationSource.new
     end
 
+    # Pass through to the real client.
     def entry(locale, id)
-      @real_client.entry(id, locale: locale)
+      Marketing::ContentfulClient.entry(id, locale: locale)
     end
 
+    # We currently only stub out the entries method for `dashboard-notification` content type.
     def entries(locale, content_type_id)
       if @stubbed_entries[content_type_id].present?
         @stubbed_entries[content_type_id] || []
       else
-        @real_client.entries(content_type: content_type_id, locale: locale)
+        Marketing::ContentfulClient.entries(content_type: content_type_id, locale: locale)
       end
     end
 
