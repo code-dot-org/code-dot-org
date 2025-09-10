@@ -122,13 +122,13 @@ class ScriptsControllerTest < ActionController::TestCase
     not_admin = create(:user)
     sign_in not_admin
     @migrated_unit.update!(login_required: true)
-    get :show, params: {course_course_name: @migrated_unit.unit_group.name, position: 1}
+    get :show, params: {course_course_name: @migrated_unit.get_original_unit_group.name, position: 1}
     assert_response :success
   end
 
   test "should get show if login required and not signed in" do
     @migrated_unit.update!(login_required: true)
-    get :show, params: {course_course_name: @migrated_unit.unit_group.name, position: 1}
+    get :show, params: {course_course_name: @migrated_unit.get_original_unit_group.name, position: 1}
     assert_response :success
   end
 
@@ -139,21 +139,21 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test "should get show if not signed in" do
-    get :show, params: {course_course_name: @migrated_unit.unit_group.name, position: 1}
+    get :show, params: {course_course_name: @migrated_unit.get_original_unit_group.name, position: 1}
     assert_response :success
   end
 
   test "should get show if not admin" do
     not_admin = create(:user)
     sign_in not_admin
-    get :show, params: {course_course_name: @migrated_unit.unit_group.name, position: 1}
+    get :show, params: {course_course_name: @migrated_unit.get_original_unit_group.name, position: 1}
     assert_response :success
   end
 
   test 'should not get show if admin' do
     admin = create(:admin)
     sign_in admin
-    get :show, params: {course_course_name: @migrated_unit.unit_group.name, position: 1}
+    get :show, params: {course_course_name: @migrated_unit.get_original_unit_group.name, position: 1}
     assert_response :forbidden
   end
 

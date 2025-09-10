@@ -44,14 +44,17 @@ const prefixes = {
 };
 
 const live = [
+  '/courses/3-5gamedesign-2024',
   '/courses/foundations-gen-ai-2024',
   '/courses/foundations-gen-ai-2025',
+  '/courses/foundations-generative-ai-unplugged',
   '/courses/k5-ai-data-2024',
 ];
 
-const experiments = JSON.parse(window.localStorage.experimentsList || '[]');
+const experiments =
+  JSON.parse(window.localStorage.experimentsList || '[]') || [];
 const inExperiment =
-  experiments.some(experiment =>
+  experiments?.some(experiment =>
     experiment ? experiment.key === 'localizejs' : false
   ) || window.location.search.includes('localizejs=');
 const projectKeys = Object.entries(prefixes).filter(([projectId, prefixes]) =>

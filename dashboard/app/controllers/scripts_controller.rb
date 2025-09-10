@@ -41,7 +41,7 @@ class ScriptsController < ApplicationController
         end
         return
       end
-      if current_user&.user_type == "teacher" && current_user.sections_instructed.any? {|s| s.script_id == @script.id || s.unit_group&.id == @course.id}
+      if current_user&.user_type == "teacher" && current_user.sections_instructed.any? {|s| s.script_id == @script.id || s.unit_group&.id == @course&.id}
         most_recent_section = current_user.sections_instructed.select {|s| s.script_id == @script.id || s.unit_group&.id == @course.id}.last
         section_id = params[:section_id]
         section_id ||= most_recent_section&.id
@@ -120,7 +120,7 @@ class ScriptsController < ApplicationController
     @page_title = "Unit: #{@script.localized_title}"
     @page_description = @script.localized_description.truncate(200, separator: '.', omission: '.')
 
-    if @script.unit_group&.single_unit_course?
+    if @script.get_original_unit_group&.single_unit_course?
       canonical_ug = UnitGroup.latest_stable_version(@course.family_name)&.name
       @canonical_url = CDO.studio_url("/courses/#{canonical_ug}/units/1") if canonical_ug
     end
@@ -340,12 +340,6 @@ class ScriptsController < ApplicationController
       Unit.get_from_cache(unit_name, raise_exceptions: false)
 
     return {script: script} if script
-
-    if Unit.family_names.include?(unit_name)
-      script = Unit.get_unit_family_redirect_for_user(unit_name, user: current_user, locale: request.locale)
-      Unit.log_redirect(unit_name, script.redirect_to, request, 'unversioned-script-redirect', current_user&.user_type) if script.present?
-      return {script: script}
-    end
 
     # Redirect to the latest version or the assigned version of a single-unit course
     if UnitGroup.family_names.include?(unit_name)

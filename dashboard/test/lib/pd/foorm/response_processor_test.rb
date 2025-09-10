@@ -228,6 +228,7 @@ module Pd::Foorm
                                                           'n/a',
                                                           'NA',
                                                           'Not applicable',
+                                                          'NOPE',
                                                           '',
                                                           'No',
                                                           'no',

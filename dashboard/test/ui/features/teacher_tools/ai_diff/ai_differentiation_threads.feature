@@ -5,7 +5,7 @@ Feature: Read and create AI diff threads
   @eyes
   @chrome
   @properties_encryption_key
-  Scenario: Teacher can see threads and create new threads in ai-diff-sidebar-experiment
+  Scenario: Teacher can see threads and create new threads
     Given I create a teacher named "Stilgar"
     And I add the current user to the "ai-differentiation" single user experiment
 
@@ -15,7 +15,7 @@ Feature: Read and create AI diff threads
     And I am on "http://studio.code.org/home"
     And I wait until element "#homepage-container" is visible
     And element "#sign_in_or_user" contains text "Stilgar"
-    And I am on "http://studio.code.org/courses/csp-2025/units/4?enableExperiments=ai-diff-sidebar"
+    And I am on "http://studio.code.org/courses/csp-2025/units/4"
     And I wait until element "#ui-floatingActionButton" is visible
 
     # Teacher sees and skips AI Diff chat welcome

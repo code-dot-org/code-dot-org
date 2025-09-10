@@ -302,6 +302,34 @@ module Api::V1::Pd
       end
     end
 
+    test 'returns an error when there are not enough submissions' do
+      sign_in @workshop_admin
+      workshop = create(:byo_workshop)
+      form_name = 'surveys/pd/build_your_own_workshop_teachers_post_survey_test'
+
+      # Create only 4 submissions (less than the required 5)
+      create_list(:build_your_own_workshop_foorm_submission, 4, :answers_low, pd_workshop_id: workshop.id)
+
+      get :csv_survey_report, params: {workshop_id: workshop.id, name: form_name, version: 0}
+      assert_response :unprocessable_entity
+
+      response = JSON.parse(@response.body, symbolize_names: true)
+      assert_equal "There must be at least #{Pd::SharedWorkshopConstants::MIN_SURVEY_RESPONSE_COUNT} responses to generate a report.", response[:error]
+    end
+
+    test 'succeeds when there are enough submissions' do
+      sign_in @workshop_admin
+      workshop = create(:byo_workshop)
+      form_name = 'surveys/pd/build_your_own_workshop_teachers_post_survey_test'
+
+      # Create 5 submissions (at least 5 are required for the download)
+      create_list(:build_your_own_workshop_foorm_submission, Pd::SharedWorkshopConstants::MIN_SURVEY_RESPONSE_COUNT, :answers_low, pd_workshop_id: workshop.id)
+
+      get :csv_survey_report, params: {workshop_id: workshop.id, name: form_name, version: 0}
+
+      assert_response :success
+    end
+
     # Creates sample survey responses for the given workshop with the given facilitator_ids.
     # Will generate both facilitator-specific responses and general responses.
     # @param csf_workshop
@@ -355,6 +383,7 @@ module Api::V1::Pd
       assert response.key?(:name), "Missing name"
       assert response.key?(:facilitators), "Missing facilitators"
       assert response.key?(:surveys), "Missing surveys"
+      assert response.key?(:follow_up_requested), "Missing follow up requests"
 
       # Verify surveys structure
       surveys = response[:surveys]
@@ -525,6 +554,38 @@ module Api::V1::Pd
       assert engagement_matrix_question[:results].key?(:weighted_score), "Matrix questions should have weighted scores"
       assert engagement_matrix_question[:results].key?(:agreement_count), "Matrix questions should have agreement count"
       assert engagement_matrix_question[:results].key?(:agreement_percentage), "Matrix questions should have agreement percentages"
+    end
+
+    test 'workshop survey summary returns user data for respondents who requested follow up' do
+      sign_in @workshop_admin
+      byo_workshop = create(:byo_workshop)
+
+      # answers_low includes a request for follow up
+      low_submission = create(:build_your_own_workshop_foorm_submission, :answers_low, pd_workshop_id: byo_workshop.id)
+
+      get :workshop_survey_summary, params: {workshop_id: byo_workshop.id}
+      assert_response :success
+      response = JSON.parse(@response.body, symbolize_names: true)
+
+      answers = JSON.parse(low_submission.foorm_submission.answers)
+      expected_follow_up = [{name: low_submission.user.full_name, email: answers['followup_email']}]
+      follow_up = response[:follow_up_requested]
+      assert_equal(expected_follow_up, follow_up, "Follow up request array should include user data")
+    end
+
+    test 'workshop survey summary returns an empty follow up array if no users requested follow up' do
+      sign_in @workshop_admin
+      byo_workshop = create(:byo_workshop)
+
+      # answers_high does not include a request for follow up
+      create(:build_your_own_workshop_foorm_submission, :answers_high, pd_workshop_id: byo_workshop.id)
+
+      get :workshop_survey_summary, params: {workshop_id: byo_workshop.id}
+      assert_response :success
+      response = JSON.parse(@response.body, symbolize_names: true)
+
+      follow_up = response[:follow_up_requested]
+      assert_equal([], follow_up, "Follow up request array should be empty")
     end
 
     test 'workshop survey summary handles workshop without survey responses' do

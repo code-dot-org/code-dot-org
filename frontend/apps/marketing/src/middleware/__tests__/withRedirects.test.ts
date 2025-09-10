@@ -195,13 +195,13 @@ describe('withRedirects middleware', () => {
       status: 404,
       json: async () => ({}),
     });
-    // CODE_DOT_ORG brand triggers a brand redirect for /es/engineering/all-the-things
-    const req = makeRequest('/es/engineering/all-the-things');
+    // CODE_DOT_ORG brand triggers a brand redirect for /es-LA/engineering/all-the-things
+    const req = makeRequest('/es-LA/engineering/all-the-things');
     const response = await withRedirects(next)(req, event);
     // Should return a redirect response (not call next) for this brand/path
     expect(response?.status).toBe(308);
     expect(response?.headers.get('Location')).toBe(
-      'http://localhost:3000/es-LA/engineering/all-the-things',
+      'http://localhost:3000/es/engineering/all-the-things',
     );
   });
 
@@ -210,11 +210,11 @@ describe('withRedirects middleware', () => {
       status: 200,
       json: async () => ({redirectEntry: null}),
     });
-    const req = makeRequest('/es/engineering/all-the-things');
+    const req = makeRequest('/es-LA/engineering/all-the-things');
     const response = await withRedirects(next)(req, event);
     expect(response?.status).toBe(308);
     expect(response?.headers.get('Location')).toBe(
-      'http://localhost:3000/es-LA/engineering/all-the-things',
+      'http://localhost:3000/es/engineering/all-the-things',
     );
   });
 
@@ -242,6 +242,21 @@ describe('withRedirects middleware', () => {
           ETag: 'mocked-etag',
         },
       }),
+    );
+  });
+
+  it('redirects zh-TW to zh-Hant on the corporate site', async () => {
+    (fetch as jest.Mock).mockResolvedValue({
+      status: 404,
+      json: async () => ({}),
+    });
+    // CODE_DOT_ORG brand triggers a brand redirect for /es-LA/engineering/all-the-things
+    const req = makeRequest('/zh-TW/engineering/all-the-things');
+    const response = await withRedirects(next)(req, event);
+    // Should return a redirect response (not call next) for this brand/path
+    expect(response?.status).toBe(308);
+    expect(response?.headers.get('Location')).toBe(
+      'http://localhost:3000/zh-Hant/engineering/all-the-things',
     );
   });
 });
