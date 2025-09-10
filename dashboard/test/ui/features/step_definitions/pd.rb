@@ -1,10 +1,3 @@
-Given(/^I am a workshop administrator with some applications of each type and status$/) do
-  steps <<~GHERKIN
-    And I am a workshop administrator
-    And I create some fake applications of each type and status
-  GHERKIN
-end
-
 Given(/^I am a workshop administrator$/) do
   random_name = "TestWorkshopAdmin" + SecureRandom.hex(10)
   steps <<~GHERKIN
@@ -59,22 +52,6 @@ Given(/^I have a regional partner named "([^"]*)" in the zip code "([^"]*)"$/) d
   regional_partner.mappings.find_or_create_by!(zip_code: zip_code.to_s)
 end
 
-Given(/^I have a regional partner with a teacher application$/) do
-  response = browser_request(url: '/api/test/create_teacher_application', method: 'POST')
-  data = JSON.parse(response)
-  @rp_id = data['rp_id']
-  @teacher_id = data['teacher_id']
-  @application_id = data['application_id']
-end
-
-Given(/^I delete the program manager, regional partner, teacher, and application$/) do
-  browser_request(
-    url: '/api/test/delete_rp_pm_teacher_application',
-    method: 'POST',
-    body: {pm_name: @pm_name, rp_id: @rp_id, teacher_id: @teacher_id, application_id: @application_id}
-  )
-end
-
 Given(/^I get the workshop id from the current url$/) do
   @workshop_id = @browser.current_url.split('/').last
   track_record_for_deletion('Pd::Workshop', @workshop_id)
@@ -126,6 +103,12 @@ Given /^I open the new workshop form$/ do
   GHERKIN
 end
 
+Given /^I am viewing a workshop in the workshop dashboard$/ do
+  steps <<~GHERKIN
+    Given I am on "http://studio.code.org/pd/workshop_dashboard/workshops/#{@workshop_id}"
+  GHERKIN
+end
+
 Given(/^I am a facilitator with started and completed courses$/) do
   random_name = "TestFacilitator" + SecureRandom.hex[0..9]
   steps <<~GHERKIN
@@ -148,12 +131,35 @@ Given(/^I am an organizer with started and completed courses$/) do
   GHERKIN
 end
 
+Given(/^I am an organizer with a completed course$/) do
+  random_name = "TestOrganizer" + SecureRandom.hex[0..9]
+  steps <<~GHERKIN
+    And I create a teacher named "#{random_name}"
+    And I make the teacher named "#{random_name}" a workshop organizer
+    And I create a workshop for course "Build Your Own Workshop" organized by "#{random_name}" with 5 people and end it
+  GHERKIN
+end
+
 Given(/^I am a program manager with a started course$/) do
   random_name = "TestProgramManager" + SecureRandom.hex[0..9]
   steps <<~GHERKIN
     And I am a program manager named "#{random_name}" for regional partner "Test Partner"
     And I create a workshop for course "Build Your Own Workshop" organized by "#{random_name}" with 5 people and start it
   GHERKIN
+end
+
+Given(/^I submit post byo workshop surveys$/) do
+  require_rails_env
+
+  form = Foorm::Form.find_by(name: 'surveys/pd/build_your_own_workshop_teachers_post_survey_test') || FactoryBot.create(:foorm_form_build_your_own_workshop_post_survey)
+  track_record_for_deletion('Foorm::Form', form.id)
+
+  low_submissions = FactoryBot.create_list(:build_your_own_workshop_foorm_submission, 2, :answers_low, pd_workshop_id: @workshop_id)
+  high_submissions = FactoryBot.create_list(:build_your_own_workshop_foorm_submission, 3, :answers_high, pd_workshop_id: @workshop_id)
+  all_submissions = low_submissions + high_submissions
+  all_submissions.each do |submission|
+    track_record_for_deletion('Pd::WorkshopSurveyFoormSubmission', submission.id)
+  end
 end
 
 Given(/^I am a teacher who has just followed a workshop certificate link$/) do
@@ -174,18 +180,6 @@ Given(/^I am a teacher who has just followed a workshop certificate link$/) do
   steps "And I am on \"http://studio.code.org/pd/generate_workshop_certificate/#{enrollment.code}\""
 end
 
-Given(/^I navigate to the principal approval page for "([^"]*)"$/) do |name|
-  require_rails_env
-
-  user = find_test_user_by_name(name)
-  application = Pd::Application::ActiveApplicationModels::TEACHER_APPLICATION_CLASS.find_by(user: user)
-
-  # TODO(Andrew) ensure regional partner in the original application, and remove this:
-  application.update!(regional_partner: RegionalPartner.first)
-
-  steps "And I am on \"http://studio.code.org/pd/application/principal_approval/#{application.application_guid}\""
-end
-
 And(/^I make the teacher named "([^"]*)" a facilitator for course "([^"]*)"$/) do |name, course|
   require_rails_env
 
@@ -203,75 +197,6 @@ end
 
 And(/^I make the teacher a workshop admin$/) do
   browser_request(url: '/api/test/workshop_admin_access', method: 'POST')
-end
-
-And(/^I complete Section 2 of the teacher PD application$/) do
-  steps <<~GHERKIN
-    Then I wait until element "h3" contains text "Section 2: Find Your Region"
-    And I press the first "input[name='country']" element
-    And I press keys "nonexistent" for element "#school input"
-    Then I wait until element ".VirtualizedSelectOption:contains('Other school not listed below')" is visible
-    And I press ".VirtualizedSelectOption:contains('Other school not listed below')" using jQuery
-    Then I wait until element "input#schoolName" is visible
-    And I press keys "Code.org" for element "input#schoolName"
-    And I press keys "Code.org District" for element "input#schoolDistrictName"
-    And I press keys "1501 4th Ave" for element "input#schoolAddress"
-    And I press keys "Seattle" for element "input#schoolCity"
-    And I select the "Washington" option in dropdown "schoolState"
-    And I press keys "98101" for element "input#schoolZipCode"
-    And I press the first "input[name='schoolType'][value='Other']" element
-  GHERKIN
-end
-
-And(/^I complete Section 3 of the teacher PD application$/) do
-  steps <<~GHERKIN
-    Then I wait until element "h3" contains text "Section 3: About You"
-    And I press the first "input[name='completingOnBehalfOfSomeoneElse'][value='No']" element
-    And I press keys "Severus" for element "input#firstName"
-    And I press keys "Snape" for element "input#lastName"
-    And I press keys "5558675309" for element "input#phone"
-    And I press keys "1501 4th Ave" for element "input#streetAddress"
-    And I press keys "Seattle" for element "input#city"
-    And I select the "Washington" option in dropdown "state"
-    And I press keys "98101" for element "input#zipCode"
-    And I press the first "input[name='howHeard']" element
-  GHERKIN
-end
-
-And(/^I complete Section 4 of the teacher PD application$/) do
-  steps <<~GHERKIN
-    Then I wait until element "h3" contains text "Section 4: Additional Demographic Information"
-    And I press the first "input[name='currentRole']" element
-    And I press the first "input[name='previousYearlongCdoPd']" element
-    And I press "input[name='genderIdentity']:first" using jQuery
-    And I press the first "input[name='race']" element
-  GHERKIN
-end
-
-And(/^I complete Section 5 of the teacher PD application$/) do
-  steps <<~GHERKIN
-    Then I wait until element "h3" contains text "Section 5: Administrator/School Leader Information"
-    And I press keys "Headmaster" for element "input#principalRole"
-    And I press keys "Albus" for element "input#principalFirstName"
-    And I press keys "Dumbledore" for element "input#principalLastName"
-    And I press keys "socks@hogwarts.edu" for element "input#principalEmail"
-    And I press keys "socks@hogwarts.edu" for element "input#principalConfirmEmail"
-    And I press keys "5555882300" for element "input#principalPhoneNumber"
-  GHERKIN
-end
-
-And(/^I complete Section 7 of the teacher PD application$/) do
-  steps <<~GHERKIN
-    Then I wait until element "h3" contains text "Section 7: Program Requirements and Submission"
-    Then I wait until element "input[name='committed']" is visible
-    And I press "input[name='committed']:first" using jQuery
-    And I click selector "input[name='payFee']" if I see it
-    And I press the first "input#agree" element
-  GHERKIN
-end
-
-And(/^I create some fake applications of each type and status$/) do
-  browser_request(url: '/api/test/create_applications', method: 'POST')
 end
 
 And(/^I am viewing a workshop with fake survey results$/) do
@@ -615,6 +540,8 @@ And(/^I create a workshop for course "([^"]*)" ([a-z]+) by "([^"]*)" with (\d+) 
       )
     end
 
+  track_record_for_deletion('User', organizer.id)
+
   workshop = Retryable.retryable(on: [ActiveRecord::RecordNotUnique, ActiveRecord::RecordInvalid], tries: 5) do
     FactoryBot.create(
       :workshop,
@@ -632,6 +559,8 @@ And(/^I create a workshop for course "([^"]*)" ([a-z]+) by "([^"]*)" with (\d+) 
     )
   end
 
+  track_record_for_deletion('Pd::Workshop', workshop.id)
+
   @workshop_id = workshop.id
 
   # Facilitators
@@ -644,6 +573,10 @@ And(/^I create a workshop for course "([^"]*)" ([a-z]+) by "([^"]*)" with (\d+) 
     workshop.facilitators << facilitator
   end
 
+  workshop.facilitators.each do |fac|
+    track_record_for_deletion('User', fac.id)
+  end
+
   # Attendees
   if number_type == 'people'
     number.to_i.times do
@@ -653,6 +586,10 @@ And(/^I create a workshop for course "([^"]*)" ([a-z]+) by "([^"]*)" with (\d+) 
     if role == 'attended'
       create_enrollment(workshop, name)
     end
+  end
+
+  workshop.enrollments.each do |enrollment|
+    track_record_for_deletion('Pd::Enrollment', enrollment.id)
   end
 
   if post_create_actions.include?('and end it')

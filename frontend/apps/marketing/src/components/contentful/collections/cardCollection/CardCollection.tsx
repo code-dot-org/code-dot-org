@@ -1,4 +1,3 @@
-import {useInMemoryEntities} from '@contentful/experiences-sdk-react';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
@@ -6,6 +5,7 @@ import {EntryFields} from 'contentful';
 import {useMemo, useId} from 'react';
 
 import Card from '@/components/contentful/card';
+import {resolveContentfulLink} from '@/contentful/resolveLink';
 import {EVENT} from '@/providers/statsig/statsigConstants';
 import {getAbsoluteImageUrl} from '@/selectors/contentful/getImage';
 import {LinkEntry} from '@/types/contentful/entries/Link';
@@ -49,8 +49,6 @@ const CardCollection: React.FC<CardCollectionProps> = ({
   sortOrder = 'alphabetical',
   className,
 }) => {
-  const inMemoryEntities = useInMemoryEntities();
-
   if (!cards) {
     return (
       <Typography variant="body3">
@@ -74,15 +72,11 @@ const CardCollection: React.FC<CardCollectionProps> = ({
         tutorialID,
       } = fields;
 
-      const resolvedImage = inMemoryEntities.maybeResolveLink(
-        image,
-      ) as ExperienceAsset;
-      const resolvedPrimaryLinkRef = inMemoryEntities.maybeResolveLink(
-        primaryLinkRef,
-      ) as LinkEntry;
-      const resolvedSecondaryLinkRef = inMemoryEntities.maybeResolveLink(
-        secondaryLinkRef,
-      ) as LinkEntry;
+      const resolvedImage = resolveContentfulLink<ExperienceAsset>(image);
+      const resolvedPrimaryLinkRef =
+        resolveContentfulLink<LinkEntry>(primaryLinkRef);
+      const resolvedSecondaryLinkRef =
+        resolveContentfulLink<LinkEntry>(secondaryLinkRef);
 
       return {
         id: title,

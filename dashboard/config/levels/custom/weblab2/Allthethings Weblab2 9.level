@@ -1,0 +1,31 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2025-09-05T21:44:45.000Z",
+  "level_num": "custom",
+  "user_id": 6959,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "### Assessment\r\n\r\nThis is a submittable level! Create a web page that shares an interest of yours.\r\n\r\n\r\n\r\nAdd an HTML and CSS file to your project.",
+    "hide_share_and_remix": "false",
+    "submittable": "true",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2025-09-05T21:44:45.972+00:00\",\"changed\":[\"cloned from \\\"Allthethings Weblab2 1\\\"\"],\"cloned_from\":\"Allthethings Weblab2 1\"},{\"changed_at\":\"2025-09-05 21:44:59 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-05 21:49:17 +0000\",\"changed\":[\"long_instructions\",\"submittable\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

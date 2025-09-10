@@ -361,10 +361,12 @@ export interface JsonBlockConfig {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   extraState?: any;
   type: string;
-  fields: {[key: string]: {name: string; type: string; id?: string}};
-  inputs: {[key: string]: {block: JsonBlockConfig}};
-  next: {block: JsonBlockConfig};
-  kind: string;
+  fields?: {
+    [key: string]: {name: string; type: string; id?: string} | string | number;
+  };
+  inputs?: {[key: string]: {block: JsonBlockConfig}};
+  next?: {block: JsonBlockConfig};
+  kind?: string;
 }
 
 export interface Collider {
@@ -508,7 +510,19 @@ export interface BlockJson<BlockType extends string = string> {
   helpUrl?: string;
 }
 
-export interface ArgumentJson {
+// Add more field/input definitions as needed
+type ArgumentJson = FieldJson | FieldInput | FieldDropdown;
+
+interface FieldJson {
   type: string;
   name: string;
+}
+
+interface FieldInput extends FieldJson {
+  type: 'field_input';
+}
+
+interface FieldDropdown extends FieldJson {
+  type: 'field_dropdown';
+  options: [string, string][];
 }

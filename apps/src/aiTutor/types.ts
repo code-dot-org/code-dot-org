@@ -43,3 +43,11 @@ export interface StudentAccessData {
   name: string;
   aiTutorAccessDenied: boolean;
 }
+
+export interface AiTutorContext {
+  sourceCode?: string;
+  validationContents?: string;
+  validationResults?: string;
+  longInstructions?: string;
+  documentation?: string;
+}

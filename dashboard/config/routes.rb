@@ -153,6 +153,7 @@ Dashboard::Application.routes.draw do
       resources :programming_classes, param: 'programming_class_key', constraints: {programming_class_key: /#{CurriculumHelper::KEY_CHAR_RE}+/o}, path: '/classes' do
         member do
           get :show, to: 'programming_classes#show_by_keys'
+          get :get_serialized, to: 'programming_classes#get_serialized'
         end
       end
     end
@@ -259,6 +260,7 @@ Dashboard::Application.routes.draw do
       get '/users/gdpr_check', to: 'registrations#gdpr_check'
       get '/users/sign_up/finish_student_account', to: 'registrations#finish_student_account'
       get '/users/sign_up/finish_teacher_account', to: 'registrations#finish_teacher_account'
+      get '/users/personalization_information', to: 'registrations#personalization_information'
       patch '/dashboardapi/users', to: 'registrations#update'
       patch '/users/upgrade', to: 'registrations#upgrade'
       patch '/users/set_student_information', to: 'registrations#set_student_information'
@@ -858,9 +860,6 @@ Dashboard::Application.routes.draw do
         post 'enrollments/move', action: 'move', controller: 'workshop_enrollments'
         get 'legacy_survey_summaries', action: :legacy_survey_summaries, controller: 'legacy_survey_summaries'
 
-        # persistent namespace for FiT Weekend registrations, can be updated/replaced each year
-        post 'fit_weekend_registrations', to: 'fit_weekend_registrations#create'
-
         post :pre_workshop_surveys, to: 'pre_workshop_surveys#create'
         post :teachercon_surveys, to: 'teachercon_surveys#create'
         post :regional_partner_mini_contacts, to: 'regional_partner_mini_contacts#create'
@@ -870,18 +869,6 @@ Dashboard::Application.routes.draw do
         get 'regional_partners/find', to: 'regional_partners#find'
 
         post 'foorm/workshop_survey_submission', action: :create, controller: 'workshop_survey_foorm_submissions'
-
-        namespace :application do
-          post :facilitator, to: 'facilitator_applications#create'
-
-          resources :teacher, controller: 'teacher_applications', only: [:create, :update] do
-            member do
-              post :send_principal_approval
-              post :change_principal_approval_requirement
-            end
-          end
-          post :principal_approval, to: 'principal_approval_applications#create'
-        end
 
         resources :applications, controller: 'applications', only: [:index, :show, :update, :destroy] do
           collection do
@@ -909,7 +896,6 @@ Dashboard::Application.routes.draw do
 
     get '/dashboardapi/v1/regional_partners/find', to: 'api/v1/regional_partners#find'
     get '/dashboardapi/v1/regional_partners/show/:partner_id', to: 'api/v1/regional_partners#show'
-    get '/dashboardapi/v1/pd/application/applications_closed', to: 'pd/professional_learning#applications_closed'
     get '/dashboardapi/v1/pd/workshops_as_facilitator_for_pl_page', to: 'pd/professional_learning#workshops_as_facilitator_for_pl_page'
     get '/dashboardapi/v1/pd/workshops_as_organizer_for_pl_page', to: 'pd/professional_learning#workshops_as_organizer_for_pl_page'
     get '/dashboardapi/v1/pd/workshops_as_program_manager_for_pl_page', to: 'pd/professional_learning#workshops_as_program_manager_for_pl_page'
@@ -929,7 +915,6 @@ Dashboard::Application.routes.draw do
     get 'professional-learning/facilitator/computer-science-principles', to: 'pd/professional_learning#csp'
     get 'professional-learning/facilitator/ai-fundamentals', to: 'pd/professional_learning#aif'
     get 'professional-learning/regional-partner/playbook', to: 'pd/professional_learning#rp_playbook'
-    get 'professional-learning/application/applications_closed', to: 'pd/professional_learning#applications_closed'
     get 'professional-learning/workshops_as_facilitator_for_pl_page', to: 'pd/professional_learning#workshops_as_facilitator_for_pl_page'
     get 'professional-learning/workshops_as_organizer_for_pl_page', to: 'pd/professional_learning#workshops_as_organizer_for_pl_page'
     get 'professional-learning/workshops_as_program_manager_for_pl_page', to: 'pd/professional_learning#workshops_as_program_manager_for_pl_page'
@@ -971,17 +956,6 @@ Dashboard::Application.routes.draw do
       get '/:workshop_subject/post/(*agenda)', to: 'workshop_daily_survey#new_ayw_post',
           constraints: {agenda: /(module\/[0-9_]+)|(in_person)/}
 
-      namespace :application do
-        get 'facilitator', to: 'facilitator_application#new'
-        get 'teacher', to: 'teacher_application#new'
-        get 'principal_approval/:application_guid', to: 'principal_approval_application#new', as: 'principal_approval'
-      end
-
-      # persistent namespace for Teachercon and FiT Weekend registrations, can be updated/replaced each year
-      get 'fit_weekend_registration/:application_guid', to: 'fit_weekend_registration#new'
-
-      delete 'fit_weekend_registration/:application_guid', to: 'fit_weekend_registration#destroy'
-
       get 'workshops/:workshop_id/enroll', to: redirect("/professional-learning/workshops/%{workshop_id}")
       get 'workshops/:workshop_id/join', action: 'join', controller: 'workshop_enrollment'
       get 'workshop_enrollment/:code', action: 'show', controller: 'workshop_enrollment'
@@ -1010,10 +984,6 @@ Dashboard::Application.routes.draw do
 
       get 'international_workshop', to: 'international_opt_in#new'
       get 'international_workshop/:contact_id/thanks', to: 'international_opt_in#thanks'
-
-      # React-router will handle sub-routes on the client.
-      get 'application_dashboard/*path', to: 'application_dashboard#index'
-      get 'application_dashboard', to: 'application_dashboard#index'
     end
 
     get '/dashboardapi/section/:section_id', to: 'api#section'

@@ -14,7 +14,7 @@ class AichatAiClientTest < ActionView::TestCase
       }.stringify_keys
     ]
     @new_message = {role: 'user', chatMessageText: 'new message from user'}.stringify_keys
-    @new_message_with_hidden_context = {role: 'user', chatMessageText: 'new message from user', hiddenContext: 'extra text'}.stringify_keys
+    @new_message_with_hidden_context = {role: 'user', chatMessageText: 'new message from user', hiddenContext: 'hidden context text'}.stringify_keys
     @new_message_with_assets = {role: 'user',
        chatMessageText: 'message with assets',
        assets: [
@@ -28,6 +28,7 @@ class AichatAiClientTest < ActionView::TestCase
     @encrypted_channel_id = 12345
     @user_id = 'test-user'
     @project_id = 'Aichat project'
+    @client_type = 0
     @response_text = "some response text"
     @specific_error_message = 'some specific error message'
 
@@ -59,7 +60,8 @@ class AichatAiClientTest < ActionView::TestCase
       level.id,
       @encrypted_channel_id,
       @user_id,
-      @project_id
+      @project_id,
+      @client_type
     )
 
     AichatAiClient.create_instance(model_id, usage_reporter).get_response_text(
