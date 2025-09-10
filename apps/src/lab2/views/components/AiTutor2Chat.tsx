@@ -107,21 +107,24 @@ const chatButtons = chatButtonData.map(
 );
 interface AiTutor2ChatProps {
   hiddenContext: string;
-  systemPromptOverride?: string;
+  systemPromptName?: string;
 }
 
 // A free chat with lab-supplied context added to each question.
 const AiTutor2Chat: React.FunctionComponent<AiTutor2ChatProps> = ({
   hiddenContext,
-  systemPromptOverride,
+  systemPromptName,
 }) => {
   const dispatch = useAppDispatch();
 
   const [systemPrompt, setSystemPrompt] = useState<string>();
 
   useEffect(() => {
-    if (customPromptName) {
-      fetchCustomPrompt(customPromptName)
+    if (systemPromptName || customPromptName) {
+      // Use the custom prompt name from query params if provided, otherwise use the systemPromptName
+      // passed in via props.
+      const promptToFetch = (customPromptName || systemPromptName) as string;
+      fetchCustomPrompt(promptToFetch)
         .then(prompt => {
           if (prompt) {
             setSystemPrompt(prompt);
@@ -132,21 +135,21 @@ const AiTutor2Chat: React.FunctionComponent<AiTutor2ChatProps> = ({
         .catch(() => {
           setSystemPrompt(defaultSystemPrompt);
         });
-    } else if (systemPromptOverride) {
-      setSystemPrompt(systemPromptOverride);
     } else {
       setSystemPrompt(defaultSystemPrompt);
     }
-  }, [systemPromptOverride]);
+  }, [systemPromptName]);
 
   useEffect(() => {
     // Log which system prompt we end up using.
     if (customPromptName) {
       console.log(`🤖: systemPrompt: ${customPromptName}`, systemPrompt);
+    } else if (systemPromptName) {
+      console.log(`🤖: systemPrompt: ${systemPromptName}`, systemPrompt);
     } else {
       console.log(`🤖: systemPrompt: default`);
     }
-  }, [systemPrompt]);
+  }, [systemPrompt, systemPromptName]);
 
   useEffect(() => {
     // We currently use query params to allow AI model selection but otherwise do not provide any user

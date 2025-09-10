@@ -28,7 +28,7 @@ export type CodebridgeContextType = {
     fileType: string,
     uploadFunction: () => Promise<void>
   ) => void;
-  systemPromptOverride?: string;
+  systemPromptName?: string;
 };
 
 export const CodebridgeContext = createContext<CodebridgeContextType | null>(
