@@ -1,4 +1,4 @@
-import {render, screen} from '@testing-library/react';
+import {act, render, screen, waitFor} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
 import '@testing-library/jest-dom';
@@ -11,6 +11,7 @@ const mockUseFetch = require('@cdo/apps/util/useFetch').useFetch as jest.Mock;
 
 describe('ExportSurveysButton', () => {
   const user = userEvent.setup();
+  const mockFetch = jest.fn();
 
   const renderDefault = () =>
     render(
@@ -31,10 +32,12 @@ describe('ExportSurveysButton', () => {
         {name: 'surveys/pd/form2', version: '2'},
       ],
     });
+    jest.spyOn(window, 'fetch').mockImplementation(mockFetch);
   });
 
   afterEach(() => {
     jest.clearAllMocks();
+    mockFetch.mockRestore();
   });
 
   it('renders the Export survey results button and opens the dialog on click', async () => {
@@ -55,25 +58,87 @@ describe('ExportSurveysButton', () => {
     expect(formItems).toHaveLength(2);
   });
 
-  it('triggers the correct download URL when clicking Download csv', async () => {
+  it('successful download: calls fetch and then window.open with the correct URL', async () => {
+    mockFetch.mockResolvedValueOnce({
+      ok: true,
+      json: async () => ({}),
+    } as Response);
+
     renderDefault();
 
-    const exportButton = screen.getByRole('button', {
-      name: 'Export survey results',
-    });
-    await user.click(exportButton);
+    await user.click(
+      screen.getByRole('button', {name: 'Export survey results'})
+    );
 
     const downloadButtons = screen.getAllByRole('button', {
       name: 'Download csv',
     });
-    expect(downloadButtons).toHaveLength(2);
 
     const openSpy = jest.spyOn(window, 'open').mockImplementation(() => null);
+
     await user.click(downloadButtons[0]);
 
-    expect(openSpy).toHaveBeenCalledWith(
-      '/api/v1/pd/workshops/42/foorm/csv_survey_report?name=surveys%2Fpd%2Fform1&version=1'
+    const expectedUrl =
+      '/api/v1/pd/workshops/42/foorm/csv_survey_report?name=surveys%2Fpd%2Fform1&version=1';
+
+    expect(mockFetch).toHaveBeenCalledWith(expectedUrl, {method: 'GET'});
+    expect(openSpy).toHaveBeenCalledWith(expectedUrl);
+
+    openSpy.mockRestore();
+  });
+
+  it('shows API error message when fetch returns ok=false with an error payload', async () => {
+    mockFetch.mockResolvedValueOnce({
+      ok: false,
+      json: async () => ({error: 'Failed to generate CSV.'}),
+    } as Response);
+
+    renderDefault();
+
+    await user.click(
+      screen.getByRole('button', {name: 'Export survey results'})
     );
+
+    const downloadButtons = screen.getAllByRole('button', {
+      name: 'Download csv',
+    });
+    await act(async () => {
+      await user.click(downloadButtons[0]);
+    });
+
+    await waitFor(() => {
+      expect(screen.getByText('Failed to generate CSV.')).toBeInTheDocument();
+    });
+
+    const openSpy = jest.spyOn(window, 'open').mockImplementation(() => null);
+    expect(openSpy).not.toHaveBeenCalled();
+    openSpy.mockRestore();
+  });
+
+  it('shows a generic error message when fetch throws (network error)', async () => {
+    mockFetch.mockRejectedValueOnce(new Error('Network down'));
+
+    renderDefault();
+
+    await user.click(
+      screen.getByRole('button', {name: 'Export survey results'})
+    );
+
+    const downloadButtons = screen.getAllByRole('button', {
+      name: 'Download csv',
+    });
+    await act(async () => {
+      await user.click(downloadButtons[0]);
+    });
+
+    await waitFor(() => {
+      expect(
+        screen.getByText('An unknown error occurred. Please try again.')
+      ).toBeInTheDocument();
+    });
+
+    const openSpy = jest.spyOn(window, 'open').mockImplementation(() => null);
+    expect(openSpy).not.toHaveBeenCalled();
     openSpy.mockRestore();
   });
 });

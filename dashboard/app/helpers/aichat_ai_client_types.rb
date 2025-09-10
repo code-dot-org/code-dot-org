@@ -83,11 +83,15 @@ module AichatAiClientTypes
 
   #     // Actual temperature passed to 3rd party AI API (e.g. 1.6)
   #     temperature: number;
+  #
+  #.    // Client type
+  #.    clientType: number
   # }
   AiConfig = Interface(
     :model, string,
     :systemInstructions, Optional(MessagePart[]),
-    :temperature, number
+    :temperature, number,
+    :clientType, number
   )
 
   # // Request array (required):

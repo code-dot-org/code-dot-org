@@ -102,7 +102,6 @@ function LandingPage({
   lastWorkshopSurveyUrl,
   lastWorkshopSurveyCourse,
   showDeeperLearning,
-  currentYearApplicationId,
   hasEnrolledInWorkshop,
   plCoursesStarted,
   userPermissions,
@@ -349,9 +348,7 @@ function LandingPage({
   // - else, render either nothing or an announcement banner
   const RenderBanner = () => {
     const showGettingStartedBanner =
-      !currentYearApplicationId &&
-      !hasEnrolledInWorkshop &&
-      plCoursesStarted?.length === 0;
+      !hasEnrolledInWorkshop && plCoursesStarted?.length === 0;
 
     if (showGettingStartedBanner) {
       return (
@@ -547,12 +544,6 @@ function LandingPage({
   const RenderRegionalPartnerResources = () => {
     const resources = [
       {
-        headingText: i18n.plSectionsRegionalPartnerApplicationTitle(),
-        descriptionText: i18n.plSectionsRegionalPartnerApplicationDesc(),
-        buttonText: i18n.plSectionsRegionalPartnerApplicationButton(),
-        buttonUrl: '/pd/application_dashboard',
-      },
-      {
         headingText: i18n.plSectionsWorkshopTitle(),
         descriptionText: i18n.plSectionsWorkshopDesc(),
         buttonText: i18n.plSectionsWorkshopButton(),
@@ -735,7 +726,6 @@ LandingPage.propTypes = {
   lastWorkshopSurveyUrl: PropTypes.string,
   lastWorkshopSurveyCourse: PropTypes.string,
   showDeeperLearning: PropTypes.bool,
-  currentYearApplicationId: PropTypes.number,
   hasEnrolledInWorkshop: PropTypes.bool,
   plCoursesInstructed: PropTypes.array,
   plCoursesStarted: PropTypes.array,

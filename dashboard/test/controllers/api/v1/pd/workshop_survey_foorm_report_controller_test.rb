@@ -302,6 +302,34 @@ module Api::V1::Pd
       end
     end
 
+    test 'returns an error when there are not enough submissions' do
+      sign_in @workshop_admin
+      workshop = create(:byo_workshop)
+      form_name = 'surveys/pd/build_your_own_workshop_teachers_post_survey_test'
+
+      # Create only 4 submissions (less than the required 5)
+      create_list(:build_your_own_workshop_foorm_submission, 4, :answers_low, pd_workshop_id: workshop.id)
+
+      get :csv_survey_report, params: {workshop_id: workshop.id, name: form_name, version: 0}
+      assert_response :unprocessable_entity
+
+      response = JSON.parse(@response.body, symbolize_names: true)
+      assert_equal "There must be at least #{Pd::SharedWorkshopConstants::MIN_SURVEY_RESPONSE_COUNT} responses to generate a report.", response[:error]
+    end
+
+    test 'succeeds when there are enough submissions' do
+      sign_in @workshop_admin
+      workshop = create(:byo_workshop)
+      form_name = 'surveys/pd/build_your_own_workshop_teachers_post_survey_test'
+
+      # Create 5 submissions (at least 5 are required for the download)
+      create_list(:build_your_own_workshop_foorm_submission, Pd::SharedWorkshopConstants::MIN_SURVEY_RESPONSE_COUNT, :answers_low, pd_workshop_id: workshop.id)
+
+      get :csv_survey_report, params: {workshop_id: workshop.id, name: form_name, version: 0}
+
+      assert_response :success
+    end
+
     # Creates sample survey responses for the given workshop with the given facilitator_ids.
     # Will generate both facilitator-specific responses and general responses.
     # @param csf_workshop
