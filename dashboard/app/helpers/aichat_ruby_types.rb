@@ -430,21 +430,5 @@ module AichatRubyTypes
     NullType.new
   end
 
-  #  # A symbol type.  Not used directly.  The symbol function returns an instance.
-  # class SymbolType < Type
-  #   def type_string
-  #     'symbol'
-  #   end
-
-  #   def value_is_type?(value)
-  #     value.is_a?(Symbol)
-  #   end
-  # end
-
-  # # The symbol function to return an instance of SymbolType.
-  # def symbol
-  #   SymbolType.new
-  # end
-
   module_function :string, :number, :boolean, :null, :key, :Optional, :Interface, :ForwardRef
 end
