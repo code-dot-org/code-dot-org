@@ -1,5 +1,6 @@
 import {Button} from '@code-dot-org/component-library/button';
-import React, {useCallback, useState} from 'react';
+import {useTheme} from '@code-dot-org/component-library/common/contexts';
+import React, {useCallback, useEffect, useState} from 'react';
 
 import {getGeneratedDancerAssets} from '@cdo/apps/lab2/utils/GeneratedDancer';
 import Adlib from '@cdo/apps/lab2/views/components/guide/Adlib';
@@ -27,6 +28,12 @@ const adlibs = {
 const DancerGenerate: React.FunctionComponent = () => {
   const adlibOption = 'basic';
 
+  const {setTheme} = useTheme();
+
+  useEffect(() => {
+    setTheme('Dark');
+  }, [setTheme]);
+
   const [adlibText, setAdlibText] = useState<string | undefined>(undefined);
   const [choices, setChoices] = useState<string[] | undefined>(undefined);
 
@@ -37,12 +44,6 @@ const DancerGenerate: React.FunctionComponent = () => {
   const [headImageUrl, setHeadImageUrl] = useState<string | undefined>(
     undefined
   );
-
-  const delay = (time: number) => {
-    return new Promise(res => {
-      setTimeout(res, time);
-    });
-  };
 
   const generateDancerCache = useCallback(async () => {
     const startTime = Date.now();
@@ -63,7 +64,7 @@ const DancerGenerate: React.FunctionComponent = () => {
     const elapsedTime = Date.now() - startTime;
     const delayDuration = 2000; // 2 seconds.
     const remainingDelayDuration = Math.max(delayDuration - elapsedTime, 0);
-    await delay(remainingDelayDuration);
+    await new Promise(res => setTimeout(res, remainingDelayDuration));
   }, [choices]);
 
   const generateDancer = useCallback(async () => {
