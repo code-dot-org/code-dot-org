@@ -264,6 +264,20 @@ class UnitTest < ActiveSupport::TestCase
     end
   end
 
+  test 'redirect_to_unit_url returns nil unless unit is in a single-unit course' do
+    student = create(:student)
+    unit = create(:unit_group, :with_units).first_unit
+
+    assert_nil unit.redirect_to_unit_url(student)
+  end
+
+  test 'redirect_to_unit_url returns nil unless user is a participant' do
+    teacher = create(:teacher)
+    unit = create(:unit_group, :with_units).first_unit
+
+    assert_nil unit.redirect_to_unit_url(teacher)
+  end
+
   test 'redirect_to_unit_url returns nil unless user can view unit version' do
     Unit.any_instance.stubs(:can_view_version?).returns(false)
     student = create(:student)

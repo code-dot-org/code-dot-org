@@ -80,9 +80,10 @@ module Curriculum::CourseTypes
   # instructor in the course then this will return false because we do not want
   # to treat them like a participant. Signed out users should be able to be participants
   # in student courses.
-  def can_be_participant?(user)
+  def can_be_participant?(user, unit_group: nil)
     # If unit is in a unit group then decide based on unit group audience
-    return get_original_unit_group.can_be_participant?(user) if is_a?(Unit) && get_original_unit_group
+    unit_group ||= get_original_unit_group if is_a?(Unit)
+    return unit_group.can_be_participant?(user) if unit_group
 
     # Signed out users can only use student facing courses
     return false if !user && participant_audience != 'student'

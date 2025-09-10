@@ -559,25 +559,25 @@ class Unit < ApplicationRecord
   # @param user [User]
   # @param locale [String] User or request locale. Optional.
   # @return [String|nil] URL to the unit overview page the user should be redirected to (if any).
-  def redirect_to_unit_url(user, locale: nil)
-    # No redirect unless unit belongs to a family.
-    return nil unless family_name
+  def redirect_to_unit_url(user, unit_group: get_original_unit_group, locale: nil)
+    # No redirect unless the unit is in a single-unit course.
+    return nil unless unit_group&.single_unit_course?
+
     # Only redirect participants.
-    return nil unless user && can_be_participant?(user)
+    return nil unless user && can_be_participant?(user, unit_group: unit_group)
+
     return nil unless has_other_versions?
     # No redirect unless user is allowed to view this unit version and they are not already assigned to this unit
     # or the course it belongs to.
-    return nil unless can_view_version?(user, locale: locale) && !user.assigned_script?(self)
-    # No redirect if unit or its course are not versioned.
-    current_version_year = version_year || get_original_unit_group&.version_year
-    return nil if current_version_year.blank?
+    return nil unless can_view_version?(user, unit_group: unit_group, locale: locale) && !user.assigned_script?(self, unit_group: unit_group)
 
-    # Redirect user to the latest assigned unit in this family,
+    current_version_year = unit_group.version_year
+    # Redirect user to the latest assigned unit group in this family,
     # if one exists and it is newer than the current unit.
-    latest_assigned_version = Unit.latest_assigned_version(family_name, user)
-    latest_assigned_version_year = latest_assigned_version&.version_year || latest_assigned_version&.get_original_unit_group&.version_year
+    latest_assigned_version = UnitGroup.latest_assigned_version(unit_group.family_name, user)
+    latest_assigned_version_year = latest_assigned_version&.version_year
     return nil unless latest_assigned_version_year && latest_assigned_version_year > current_version_year
-    latest_assigned_version.link
+    latest_assigned_version&.first_unit&.link
   end
 
   def link(unit_group_unit: nil)
@@ -591,8 +591,7 @@ class Unit < ApplicationRecord
   # @param user [User]
   # @param locale [String] User or request locale. Optional.
   # @return [Boolean] Whether the user can view the unit.
-  def can_view_version?(user, locale: nil, unit_group: nil)
-    unit_group ||= get_original_unit_group
+  def can_view_version?(user, locale: nil, unit_group: get_original_unit_group)
     return false unless Ability.new(user).can?(:read, self, unit_group)
 
     # Users can view any course not in a family.
