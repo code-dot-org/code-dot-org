@@ -4,6 +4,18 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "key": "938c16d9-13ea-475a-aa67-3d6b60c5cef9",
+          "notice": "AI-Powered Threats and Defenses Professional Development",
+          "details": "Before starting this unit, consider exploring our free online self-paced professional development module that introduces you to the key concepts, tools, and projects of this unit.",
+          "link": "https://studio.code.org/courses/teaching-ai-powered-theats-and-defenses-2025/units/1",
+          "type": "information",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "Let's Go!"
+        }
+      ],
       "content_area": "curriculum_9_12",
       "curriculum_umbrella": "AIF",
       "has_unnumbered_lessons": true,
@@ -19,7 +31,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-08-19 20:33:30 UTC",
+    "serialized_at": "2025-09-06 19:27:12 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -782,7 +794,7 @@
       "position": 1,
       "properties": {
         "duration": 5,
-        "name": "Warm UUp"
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "f54d6955-bd0d-481f-a1fe-1aaf432e7f0f",
@@ -2514,7 +2526,7 @@
       "key": "30d8b0a6-ac6a-488d-909f-2dfa83bd39b4",
       "position": 4,
       "properties": {
-        "description": "AAA stands for Authentication, Access Control, and Accounting. These are the tools systems use to figure out who you are, what you're allowed to do, and what you actually did. Whether you're logging into a game, checking your grades, or using a shared playlist, AAA tools help manage and protect that experience. Today's activities are going to dive into Authentication and Access Control. We will get a deeper look into Accounting in the next lesson.",
+        "description": "AAA stands for Authentication, Authorization, and Accounting. These are the tools systems use to figure out who you are, what you're allowed to do, and what you actually did. Whether you're logging into a game, checking your grades, or using a shared playlist, AAA tools help manage and protect that experience. Today's activities are going to dive into Authentication and Authorization. We will get a deeper look into Accounting in the next lesson.",
         "remarks": true
       },
       "seeding_key": {
@@ -2530,7 +2542,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Write \"Authentication\", \"Access Control\", and \"Accounting\" on the board as visible anchors for the rest of the lesson."
+            "markdown": "Write \"Authentication\", \"Authorization\", and \"Accounting\" on the board as visible anchors for the rest of the lesson."
           }
         ]
       },
@@ -2580,7 +2592,7 @@
       "key": "47d406e4-21a5-4f5b-a8c7-8f5d09f7d62f",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *Access Control*. Clarify that access control only matters once a system knows who you are; it's the next step after authentication.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the three most common access control types listed for students in their Unit Guide (RBAC, DAC, ABAC). Provide additional examples if needed.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *Authorization*. Clarify that access control only matters once a system knows who you are; it's the next step after authentication.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the three most common access control types listed for students in their Unit Guide (RBAC, DAC, ABAC). Provide additional examples if needed.",
         "tips": [
           {
             "type": "teachingTip",
@@ -4810,6 +4822,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-powered-threats-defenses-lesson2-level1_2025-pilot"
+        ],
         "progression": "Cybersecurity Attacks Demos"
       },
       "bonus": false,
@@ -4832,6 +4847,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-powered-threats-defenses-lesson2-level2_2025-pilot"
+        ],
         "progression": "Cybersecurity Attacks Demos"
       },
       "bonus": false,
@@ -4854,6 +4872,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-powered-threats-defenses-lesson2-level3_2025-pilot"
+        ],
         "progression": "Cybersecurity Attacks Demos"
       },
       "bonus": false,
@@ -4876,6 +4897,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-powered-threats-defenses-lesson2-level4_2025-pilot"
+        ],
         "progression": "Cybersecurity Attacks Demos"
       },
       "bonus": false,
@@ -4898,6 +4922,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-powered-threats-defenses-lesson2-level5_2025-pilot"
+        ],
         "progression": "Chat with a Cyber Expert"
       },
       "bonus": false,
@@ -4945,6 +4972,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-powered-threats-defenses-lesson3-level1_2025-pilot"
+        ],
         "progression": "Phishing Investigation"
       },
       "bonus": false,
@@ -4967,6 +4997,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-powered-threats-defenses-lesson3-level2_2025-pilot"
+        ],
         "progression": "Phishing Investigation"
       },
       "bonus": false,
@@ -4989,6 +5022,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-powered-threats-defenses-lesson3-level3_2025-pilot"
+        ],
         "progression": "Phishing Investigation"
       },
       "bonus": false,
@@ -5011,6 +5047,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-powered-threats-defenses-lesson3-level4_2025-pilot"
+        ],
         "progression": "Breach Reports"
       },
       "bonus": false,
@@ -5633,6 +5672,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-powered-threats-defenses-lesson10-level1_2025-pilot"
+        ],
         "progression": "AI Generate Password Guesses"
       },
       "bonus": false,
@@ -5655,6 +5697,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-powered-threats-defenses-lesson10-level2_2025-pilot"
+        ],
         "progression": "AI Metadata Analysis"
       },
       "bonus": false,
@@ -5677,6 +5722,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "ai-powered-threats-and-defenses-lesson10-level3_2025-pilot"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5724,6 +5772,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-powered-threats-defenses-lesson11-level1_2025-pilot"
+        ],
         "progression": "Analyze the Experience"
       },
       "bonus": false,
@@ -5771,6 +5822,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-powered-threats-defenses-lesson12-level1_2025-pilot"
+        ],
         "progression": "Exploring Apps"
       },
       "bonus": false,
@@ -5818,6 +5872,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-powered-threats-defenses-lesson13-level1_2025-pilot"
+        ],
         "progression": "Choose an App"
       },
       "bonus": false,
@@ -5840,6 +5897,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-powered-threats-defenses-lesson13-level2_2025-pilot"
+        ],
         "progression": "Explore Issues and Defenses"
       },
       "bonus": false,
@@ -5862,6 +5922,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-powered-threats-defenses-lesson13-level3_2025-pilot"
+        ],
         "progression": "Planning Your Creative Artifact"
       },
       "bonus": false,
@@ -5884,6 +5947,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-powered-threats-defenses-lesson13-survey-pilot_2025"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -7535,16 +7601,6 @@
       }
     },
     {
-      "key": "access_control",
-      "word": "access control",
-      "definition": "rules a system uses to decide what you’re allowed to do once you’re logged in",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "access_control"
-      }
-    },
-    {
       "key": "accounting",
       "word": "accounting",
       "definition": "when a system keeps track of what users do so suspicious activity can be detected and reviewed",
@@ -7582,6 +7638,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "authentication"
+      }
+    },
+    {
+      "key": "authorization",
+      "word": "authorization",
+      "definition": "rules a system uses to decide what you’re allowed to do once you’re logged in",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "authorization"
       }
     },
     {
@@ -7765,12 +7831,6 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-10",
-        "vocabulary.key": "access_control"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-10",
         "vocabulary.key": "accounting"
       }
     },
@@ -7778,6 +7838,12 @@
       "seeding_key": {
         "lesson.key": "lesson-10",
         "vocabulary.key": "authentication"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "vocabulary.key": "authorization"
       }
     },
     {
@@ -8237,7 +8303,328 @@
     }
   ],
   "lessons_standards": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-CS-01"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-NI-06"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-NI-07"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-NI-04"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-DA-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-DA-05"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-CS-01"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-NI-04"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-NI-07"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-DA-05"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-IC-25"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-21"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-25"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-NI-07"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-NI-06"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-NI-07"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-NI-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-NI-04"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-16",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-16",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-21"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-16",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-23"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-16",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-NI-06"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-16",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-NI-07"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-24"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-IC-25"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-NI-05"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-NI-06"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-30"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-NI-05"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-NI-04"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-NI-05"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-NI-06"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-NI-06"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-NI-05"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-NI-06"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-NI-07"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-18"
+      }
+    }
   ],
   "lessons_opportunity_standards": [
 

@@ -23,7 +23,10 @@ import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClien
 import FlaggedImageModal from '@cdo/apps/sharedComponents/FlaggedImageModal';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import {AiTutorContext} from '../aiTutor/types';
+
 import moduleStyles from './styles/codebridgeContainer.module.scss';
+
 import './styles/codebridge.scss';
 
 const RUN_BUTTON_ID = '#uitest-codebridge-run';
@@ -39,8 +42,7 @@ type CodebridgeProps = {
   sendConsoleInput?: SendConsoleInputFunction;
   levelProperties: CodebridgeLevelProperties;
   projectPickerSettings?: ProjectPickerSettings;
-  AiTutor2ResponseView?: React.ReactNode;
-  aiTutor2Context?: string;
+  aiTutorContextPromise?: Promise<AiTutorContext>;
 };
 
 export const Codebridge = React.memo(
@@ -53,13 +55,15 @@ export const Codebridge = React.memo(
     sendConsoleInput,
     levelProperties,
     projectPickerSettings,
-    AiTutor2ResponseView,
-    aiTutor2Context,
+    aiTutorContextPromise,
   }: CodebridgeProps) => {
     const isShareView = useAppSelector(state => state.lab.isShareView);
     const isWidgetView = !!levelProperties.widgetView;
     const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
     const appName = levelProperties.appName;
+    const isFullScreenView = useAppSelector(
+      state => state.lab.isFullScreenView
+    );
 
     // Adds keyboard shortcuts for Editor (1), Run (2), and Console (3)
     // which are preceded by Control (Windows/Linux) or Command (macOS).
@@ -120,6 +124,9 @@ export const Codebridge = React.memo(
       if (isWidgetView && config.layoutComponents.widget && !isStartMode) {
         return config.layoutComponents.widget;
       }
+      if (isFullScreenView && config.layoutComponents.fullScreen) {
+        return config.layoutComponents.fullScreen;
+      }
       let currentLayout = config.activeLayout;
       if (!currentLayout) {
         currentLayout = appName === 'pythonlab' ? 'horizontal' : 'vertical';
@@ -134,6 +141,7 @@ export const Codebridge = React.memo(
       appName,
       config.activeLayout,
       config.layoutComponents,
+      isFullScreenView,
       isShareView,
       isStartMode,
       isWidgetView,
@@ -172,8 +180,7 @@ export const Codebridge = React.memo(
           sendConsoleInput,
           levelProperties,
           projectPickerSettings,
-          AiTutor2ResponseView,
-          aiTutor2Context,
+          aiTutorContextPromise,
           onImageFlagged,
         }}
       >

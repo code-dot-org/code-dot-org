@@ -1,0 +1,60 @@
+$space-xs: 2px;
+$space-s: 4px;
+$space-m: 6px;
+$space-l: 8px;
+$space-xl: 10px;
+
+.versionHistoryPanel {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  background-color: var(--background-neutral-primary);
+  height: 100%;
+}
+
+.message {
+  margin: 20px;
+  font-size: 16px;
+}
+
+.list {
+  overflow-y: auto;
+  flex: 1;
+  min-height: 0;
+}
+
+.row {
+  padding: $space-l;
+}
+
+.row:has(input[type="radio"]:checked) {
+  background-color: var(--background-neutral-tertiary);
+}
+
+.row:hover {
+  background-color: var(--background-neutral-tertiary);
+}
+
+.footer {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: flex-end;
+  gap: $space-s;
+  padding: $space-m;
+  margin-bottom: $space-m;
+  margin-right: $space-xl;
+
+  .footerButton {
+    margin: $space-xs;
+  }
+}
+
+.loadingVersionSpinner {
+  font-size: 32px;
+  text-align: center;
+  margin-right: 12px;
+}
+
+.versionLoadError {
+  font-size: 14px;
+}

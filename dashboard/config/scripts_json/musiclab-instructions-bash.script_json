@@ -4,11 +4,16 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "is_migrated": true
+      "content_area": "curriculum_6_8",
+      "curriculum_umbrella": "6-8 Special topics",
+      "is_migrated": true,
+      "topic_tags": [
+        "music_lab"
+      ]
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-08-25 03:24:58 UTC",
+    "serialized_at": "2025-08-25 20:48:09 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -827,7 +832,7 @@
       "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **(Optional) Do This:** Students who finish their walk-up songs can participate in this Partner Game:\n- Tell your partners who your three characters are and describe the character's personalities.\n- Play one of your Walk-Up songs without saying which character it belongs to.\n- Allow your partner to match the song to a character.\n- Ask them to explain their choice.\n- If they guess wrong, listen to their explanation and adjust your code to make the song fit the character better.\n- Repeat with new partners until someone guesses all three correctly!",
-        "progression_name": "(Optional) Partner Game"
+        "progression_name": "Submit Your Project!"
       },
       "seeding_key": {
         "activity_section.key": "e03d75e9-acea-4833-8315-982eed96f282",
@@ -1715,7 +1720,7 @@
         "level_keys": [
           "test-music-lab-mini-project-walk-4_v2_bash"
         ],
-        "progression": "(Optional) Partner Game"
+        "progression": "Submit Your Project!"
       },
       "bonus": false,
       "seeding_key": {
@@ -2687,6 +2692,14 @@
   ],
   "rubrics": [
     {
+      "level_name": "test-music-lab-mini-project-walk-4_v2_bash",
+      "seeding_key": {
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash"
+      }
+    },
+    {
       "level_name": "test-music-lab-sequencing-practice-evaluative_v2_bash",
       "seeding_key": {
         "lesson.key": "Sequencing - Practice",
@@ -2696,6 +2709,32 @@
     }
   ],
   "learning_goals": [
+    {
+      "key": "32a44385-6ed1-4cb7-9e27-2a5a88fec726",
+      "position": 2,
+      "learning_goal": "Triggers",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "32a44385-6ed1-4cb7-9e27-2a5a88fec726",
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash"
+      }
+    },
+    {
+      "key": "613b8a0e-9c74-4dbb-88dc-0c19c4fbe285",
+      "position": 1,
+      "learning_goal": "Sequencing",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "613b8a0e-9c74-4dbb-88dc-0c19c4fbe285",
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash"
+      }
+    },
     {
       "key": "ec7878be-2d84-4743-bd67-af57f9e502c2",
       "position": 1,
@@ -2711,6 +2750,102 @@
     }
   ],
   "learning_goal_evidence_levels": [
+    {
+      "understanding": 0,
+      "teacher_description": "Trigger block in the workspace but nothing attached to it.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "32a44385-6ed1-4cb7-9e27-2a5a88fec726",
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "At least one code block is attached to an event.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "32a44385-6ed1-4cb7-9e27-2a5a88fec726",
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "At least two code blocks are attached to a events.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "32a44385-6ed1-4cb7-9e27-2a5a88fec726",
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Three different code blocks are attached to three different events. ",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "32a44385-6ed1-4cb7-9e27-2a5a88fec726",
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "The song does not have enough tracks or all of them start at the same time.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "613b8a0e-9c74-4dbb-88dc-0c19c4fbe285",
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "The song contains at least 4 tracks but several of them start at the same time.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "613b8a0e-9c74-4dbb-88dc-0c19c4fbe285",
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "The song contains at least 4 different tracks that start and stop at different times, but the song does not create a \"build\" effect based on how the tracks are sequenced.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "613b8a0e-9c74-4dbb-88dc-0c19c4fbe285",
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "The song contains at least 4 different tracks that are layered together to create a complex song that \"builds\". New tracks are introduced at different start times and all tracks end at the same time.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "613b8a0e-9c74-4dbb-88dc-0c19c4fbe285",
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "lesson_group.key": "",
+        "script.name": "musiclab-instructions-bash"
+      }
+    },
     {
       "understanding": 0,
       "teacher_description": "The song does not have enough tracks or all of them start at the same time.",

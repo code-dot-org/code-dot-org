@@ -35,12 +35,13 @@
         "ai",
         "music_lab"
       ],
-      "version_year": "2024",
+      "tts": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-30 17:05:11 UTC",
+    "serialized_at": "2025-08-26 18:09:20 UTC",
+    "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

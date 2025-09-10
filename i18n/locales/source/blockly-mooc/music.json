@@ -121,5 +121,6 @@
   "imageAttributionBodyCreativeCommons": "{artist} [photo]({srcUrl}) by {author} is licensed under [{licenseName}]({licenseUrl}).",
   "imageAttributionBodyCopyright": "{artist} photo &copy; {year} {author}.  All rights reserved.",
   "tuneKeyNotes": "Key Notes",
-  "tuneAllNotes": "All Notes"
+  "tuneAllNotes": "All Notes",
+  "keyPad": "Key Pad: Press enter to edit, escape to exit"
 }

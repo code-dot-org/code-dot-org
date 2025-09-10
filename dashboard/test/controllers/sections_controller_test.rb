@@ -16,7 +16,7 @@ class SectionsControllerTest < ActionController::TestCase
 
     @regular_section = create(:section, user: @teacher, login_type: 'email')
 
-    @flappy_section = create(:section, user: @teacher, login_type: 'word', script_id: Unit.flappy_unit.id)
+    @flappy_section = create(:section, user: @teacher, login_type: 'word', script_id: Unit.flappy_unit.id, course_id: Unit.flappy_unit.original_unit_group_id)
     @flappy_user_1 = create(:follower, section: @flappy_section).student_user
   end
 

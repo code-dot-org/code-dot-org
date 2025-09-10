@@ -37,8 +37,8 @@ const baseWorkshop = {
   state: 'Not Started',
   time_zone: 'America/Denver',
   name: 'Test Workshop',
-  course: 'CS Fundamentals',
-  subject: 'Intro',
+  course: 'Build Your Own Workshop',
+  subject: null,
   course_offering_names: 'CSF',
   sessions: [
     {
@@ -100,6 +100,11 @@ const baseEnrollments = [
 
 const surveysWithPost = {surveys: {post_workshop: true, pre_workshop: true}};
 const surveysWithoutPost = {surveys: {post_workshop: false}};
+const nonByoWorkshop = {
+  ...baseWorkshop,
+  course: 'CS Fundamentals',
+  subject: 'Intro',
+};
 
 const createMockUseFetchResults = (
   data: unknown,
@@ -267,6 +272,24 @@ describe('WorkshopLayout (accessible, correctly typed props)', () => {
     await screen.findByRole('main');
 
     expect(screen.getByText(/no.*survey.*responses/i)).toBeInTheDocument();
+  });
+
+  it('shows the legacy surveys link button when workshop course is not byo', async () => {
+    setupFetchData({
+      workshop: {data: nonByoWorkshop},
+    });
+    renderAt('/workshops/42/surveys');
+
+    await tick(1000);
+
+    await screen.findByRole('main');
+
+    const linkButton = screen.getByRole('link', {name: 'Survey results'});
+
+    expect(linkButton).toHaveAttribute(
+      'href',
+      '/pd/workshop_dashboard/workshop_daily_survey_results/42'
+    );
   });
 
   it('keeps showing loading past 1s while any fetch is still loading (no <main>)', async () => {

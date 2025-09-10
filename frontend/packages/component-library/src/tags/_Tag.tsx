@@ -1,15 +1,12 @@
 import React, {HTMLAttributes, memo, useCallback} from 'react';
 
 import CloseButton from '@/closeButton/CloseButton';
-import FontAwesomeV6Icon from '@/fontAwesomeV6Icon';
+import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
 import {WithTooltip} from '@/tooltip';
 
 import moduleStyles from './tags.module.scss';
 
-type TagIconProps = {
-  iconName: string;
-  iconStyle: 'light' | 'solid' | 'regular' | 'thin';
-  title: string;
+type TagIconProps = FontAwesomeV6IconProps & {
   placement: 'left' | 'right';
 };
 

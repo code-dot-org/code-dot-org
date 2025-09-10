@@ -2,11 +2,11 @@ import '@testing-library/jest-dom';
 import {render, screen} from '@testing-library/react';
 import React from 'react';
 
+import {ScoreCard} from '@cdo/apps/code-studio/pd/workshop_dashboard/workshops/surveys/components/ScoreCard';
 import {
-  ScoreCard,
   CRITICAL_CONCERN_LIMIT,
   NEEDS_ATTENTION_LIMIT,
-} from '@cdo/apps/code-studio/pd/workshop_dashboard/workshops/surveys/components/ScoreCard';
+} from '@cdo/apps/code-studio/pd/workshop_dashboard/workshops/surveys/constants';
 
 // Mock the FontAwesomeV6Icon component to make it testable.
 // It will render a span with the iconName as its text content.
@@ -20,7 +20,9 @@ jest.mock(
 describe('ScoreCard', () => {
   const defaultProps = {
     title: 'Test Score Card',
+    longTitle: 'Test Score Card Long',
     description: 'This is a test description',
+    questionType: 'likert' as const,
     footer: 'Test footer information',
     score: 85,
     responseCount: 10,
@@ -62,27 +64,6 @@ describe('ScoreCard', () => {
   });
 
   describe('when a placeholder icon is shown', () => {
-    it('shows a dash icon for no responses', () => {
-      renderComponent({responseCount: 0});
-
-      expect(screen.getByText('No responses received')).toBeInTheDocument();
-      const iconElement = screen.getByText('dash');
-      expect(iconElement).toBeInTheDocument();
-
-      const scoreBox = iconElement.closest('[data-status]');
-      expect(scoreBox).toHaveAttribute('data-status', 'insufficientData');
-    });
-
-    it('shows a question icon for a null score', () => {
-      renderComponent({score: null});
-
-      const iconElement = screen.getByText('question');
-      expect(iconElement).toBeInTheDocument();
-
-      const scoreBox = iconElement.closest('[data-status]');
-      expect(scoreBox).toHaveAttribute('data-status', 'insufficientData');
-    });
-
     it('shows a question icon for insufficient data', () => {
       renderComponent({responseCount: 3, minResponseCount: 5});
 
@@ -94,6 +75,14 @@ describe('ScoreCard', () => {
 
       const scoreBox = iconElement.closest('[data-status]');
       expect(scoreBox).toHaveAttribute('data-status', 'insufficientData');
+    });
+  });
+
+  describe('when there are no responses', () => {
+    it('does not render', () => {
+      const {container} = renderComponent({responseCount: 0});
+
+      expect(container.firstChild).toBeNull();
     });
   });
 });

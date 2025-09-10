@@ -9,7 +9,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-12 19:55:32 UTC",
+    "serialized_at": "2025-09-09 20:49:59 UTC",
+    "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -34,7 +35,7 @@
   "lessons": [
     {
       "key": "lesson-1",
-      "name": "Codechella 2025 AI Lesson",
+      "name": "Ctrl+Alt+Retreat 2025 AI Lesson",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
@@ -342,6 +343,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "codechella-2025-product-launch-ai-chat-judge"
+        ],
         "progression": "AI Chat Judge"
       },
       "bonus": false,

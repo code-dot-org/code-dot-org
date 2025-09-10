@@ -81,7 +81,7 @@ class Ability
       environment.published || user.levelbuilder?
     end
 
-    can [:read, :show_by_keys], ProgrammingClass do |programming_class|
+    can [:read, :show_by_keys, :get_serialized], ProgrammingClass do |programming_class|
       can? :read, programming_class.programming_environment
     end
 

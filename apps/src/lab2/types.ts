@@ -8,6 +8,7 @@
 // The library data should definitely live elsewhere.
 
 import {Theme} from '@code-dot-org/component-library/common/contexts';
+import type * as GoogleBlockly from 'blockly/core';
 import {ComponentType, LazyExoticComponent} from 'react';
 
 import {BlockDefinition} from '@cdo/apps/blockly/types';
@@ -61,8 +62,8 @@ export interface ProjectAndSources {
 
 // Represents the structure of the full project sources object (i.e. the main.json file)
 export interface ProjectSources {
-  // Source code can either be a string or a nested JSON object (for multi-file).
-  source: string | MultiFileSource;
+  // Source code can either be a string, Blockly JSON, or a nested JSON object (for multi-file).
+  source: string | Source;
   // Optional lab-specific configuration for this project
   labConfig?: LabConfig;
   // Add other properties (animations, html, etc) as needed.
@@ -86,28 +87,8 @@ export interface UpdateSourceOptions extends SaveSourceOptions {
 
 // -- BLOCKLY -- //
 
-export interface BlocklySource {
-  blocks: {
-    languageVersion: number;
-    blocks: BlocklyBlock[];
-  };
-  variables: BlocklyVariable[];
-}
-
-export interface BlocklyBlock {
-  type: string;
-  id: string;
-  x: number;
-  y: number;
-  next: {
-    block: BlocklyBlock;
-  };
-}
-
-export interface BlocklyVariable {
-  name: string;
-  id: string;
-}
+// Blockly JSON is currently typed as a generic object
+export type BlocklySource = {[key: string]: unknown};
 
 // -- MULTI-FILE -- //
 
@@ -186,10 +167,10 @@ export interface LevelProperties {
   edit_blocks?: string;
   isK1?: boolean;
   skin?: string;
-  toolboxBlocks?: string;
-  startSources?: MultiFileSource;
-  templateSources?: MultiFileSource;
-  sharedBlocks?: BlockDefinition[];
+  // Dance stores the full main.json source structure (ProjectSources) in start/template/exemplar sources,
+  // while PythonLab/Weblab2 stores just the source code (MultiFileSource). TODO: Can we reconcile these?
+  startSources?: ProjectSources | MultiFileSource;
+  templateSources?: ProjectSources | MultiFileSource;
   validations?: Validation[];
   baseAssetUrl?: string;
   // An optional URL that allows the user to skip the progression.
@@ -202,7 +183,7 @@ export interface LevelProperties {
   helpVideos?: VideoData[];
   // Exemplars
   exampleSolutions?: string[];
-  exemplarSources?: Source;
+  exemplarSources?: ProjectSources | MultiFileSource;
   exemplarSettings?: ExemplarSettings;
   // For Teachers Only value
   teacherMarkdown?: string;
@@ -230,6 +211,11 @@ export interface LevelProperties {
   showRubric?: boolean;
   customHelperLibrary?: string;
   validationCode?: string;
+}
+
+export interface BlocklyLevelProperties extends LevelProperties {
+  toolboxDefinition?: GoogleBlockly.utils.toolbox.ToolboxInfo;
+  sharedBlocks?: BlockDefinition[];
 }
 
 // Level configuration data used by project-backed labs that don't require

@@ -1,5 +1,7 @@
 import {Dispatch} from 'react';
 
+import {COLOR_MAP} from '../workshops/surveys/constants';
+
 import {Option} from './components/MultiSelectInput';
 
 export interface FieldOption {
@@ -332,11 +334,17 @@ export interface SurveySummary {
   name: string;
   facilitators: Record<string, string>;
   surveys: Record<string, SurveyTypeSummary>;
+  follow_up_requested: FollowUpRequestedItem[];
 }
 
 export interface SurveyTypeSummary {
   total_responses: number;
   categories: SurveyCategories;
+}
+
+export interface FollowUpRequestedItem {
+  name: string;
+  email: string;
 }
 
 export interface SurveyCategories {
@@ -366,7 +374,7 @@ type SurveyQuestionBase = {
 };
 
 type ResultsBase = {
-  total_responses: number;
+  total_responses?: number;
 };
 
 export type SurveyQuestion =
@@ -398,53 +406,44 @@ export const isQuestionType = <T extends SurveyQuestion['question_type']>(
   return !!question && question.question_type === type;
 };
 
-export interface LikertResults {
-  weighted_score: number;
-  agreement_count: number;
-  agreement_percentage: number;
-  breakdown: Record<string, LikertBreakdown>;
-}
+export type ColorMapKey = typeof COLOR_MAP extends Map<infer K, unknown>
+  ? K
+  : never;
 
-export interface LikertBreakdown {
+export interface Breakdown {
   count: number;
   percentage: number;
   label: string;
-  weighted_value: number;
+  color?: ColorMapKey;
+}
+
+export interface LikertResults {
+  weighted_score?: number;
+  agreement_count?: number;
+  agreement_percentage?: number;
+  breakdown?: Record<
+    string,
+    Breakdown & {
+      weighted_value: number;
+    }
+  >;
 }
 
 export interface PromoterResults {
-  promoter_percentage: number;
-  breakdown: Record<string, PromoterBreakdown>;
-}
-
-export interface PromoterBreakdown {
-  count: number;
-  percentage: number;
-  label: string;
+  promoter_percentage?: number;
+  breakdown?: Record<string, Breakdown>;
 }
 
 export interface TextResults {
-  responses: string[];
+  responses?: string[];
 }
 
 export interface SingleSelectResults {
-  breakdown: Record<string, SingleSelectBreakdown>;
+  breakdown?: Record<string, Breakdown>;
   other_answers?: string[];
 }
 
-export interface SingleSelectBreakdown {
-  count: number;
-  percentage: number;
-  label: string;
-}
-
 export interface MultiSelectResults {
-  breakdown: Record<string, MultiSelectBreakdown>;
-  total_respondents: number;
-}
-
-export interface MultiSelectBreakdown {
-  count: number;
-  percentage: number;
-  label: string;
+  breakdown?: Record<string, Breakdown>;
+  total_respondents?: number;
 }

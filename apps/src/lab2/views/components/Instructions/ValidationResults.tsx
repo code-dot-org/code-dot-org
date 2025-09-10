@@ -8,9 +8,9 @@ import classNames from 'classnames';
 import React from 'react';
 
 import lab2I18n from '@cdo/apps/lab2/locale';
-import {ValidationResult} from '@cdo/apps/lab2/progress/ProgressManager';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import {getStatusForResult, getTranslatedResult} from './validationHelpers';
 import ValidationStatusIcon from './ValidationStatusIcon';
 
 import moduleStyles from './validation-results.module.scss';
@@ -19,38 +19,7 @@ interface ValidationResultsProps {
   className?: string;
 }
 
-function getStatusForResult(result: ValidationResult) {
-  switch (result.result) {
-    case 'PASS':
-    case 'EXPECTED_FAILURE':
-      return 'passed';
-    case 'FAIL':
-    case 'UNEXPECTED_SUCCESS':
-      return 'failed';
-    case 'SKIP':
-      return 'caution';
-    case 'ERROR':
-      return 'error';
-  }
-}
-
-function getTranslatedResult(result: ValidationResult) {
-  switch (result.result) {
-    case 'PASS':
-      return lab2I18n.pass();
-    case 'FAIL':
-      return lab2I18n.fail();
-    case 'SKIP':
-      return lab2I18n.skip();
-    case 'EXPECTED_FAILURE':
-      return lab2I18n.expectedFailure();
-    case 'UNEXPECTED_SUCCESS':
-      return lab2I18n.unexpectedSuccess();
-    case 'ERROR':
-      return lab2I18n.error();
-  }
-}
-
+// TODO: When Python Lab uses the resource panel permanently, we can remove this component.
 const ValidationResults: React.FunctionComponent<ValidationResultsProps> = ({
   className,
 }) => {
