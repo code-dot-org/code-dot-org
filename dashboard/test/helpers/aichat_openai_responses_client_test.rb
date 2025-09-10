@@ -124,11 +124,12 @@ class AichatOpenaiResponsesClientTest < AichatAiClientTest
         {role: 'system', content: [
           {type: 'input_text', text: "Be safe."},
           {type: 'input_text', text: "test prompt"},
-          {type: 'input_text', text: "test retrieval"}
+          {type: 'input_text', text: "test retrieval"},
+          {type: 'input_text', text: "hidden context text"}
         ]},
         {role: 'user', content: [{type: 'input_text', text: 'hello from user'}]},
         {role: 'assistant', content: [{type: 'output_text', text: 'assistant response'}]},
-        {role: 'user', content: [{type: 'input_text', text: "new message from user\nextra text"}]}
+        {role: 'user', content: [{type: 'input_text', text: "new message from user"}]}
       ]
     end
 
