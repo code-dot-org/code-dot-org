@@ -8,6 +8,18 @@ require "ostruct"
 # will eliminate some things needed to get around rubocop settings in the helper directory.
 
 module AichatRubyTypes
+  # Notify if production or raise an exception otherwise.
+  def self.raise_or_notify_type_error(message)
+    if rack_env?(:production)
+      Honeybadger.notify(
+        error_class: AichatRubyTypesWarning,
+        error_message: message
+      )
+    else
+      raise StandardError.new(message)
+    end
+  end
+
   # Stringify the type of a value.
   def self.stringify_type(value)
     if value.nil?
@@ -42,12 +54,12 @@ module AichatRubyTypes
 
     # Helper to determint if a value is this type. Needs to be implemented in derived classes.
     def value_is_type?(value)
-      raise StandardError.new("not implmemented")
+      raise_or_notify_type_error("not implmemented")
     end
 
     # Assert whether a value is this type.  Relies on `value_is_type?` helper.
     def assert_value_is_type(value, key = nil)
-      raise StandardError.new("#{AichatRubyTypes.stringify_type(value)} does not match type: #{type_string}#{key.nil? ? "" : " for key=#{key}"}") unless value_is_type?(value)
+      raise_or_notify_type_error("#{AichatRubyTypes.stringify_type(value)} does not match type: #{type_string}#{key.nil? ? "" : " for key=#{key}"}") unless value_is_type?(value)
     end
   end
 
@@ -57,7 +69,7 @@ module AichatRubyTypes
     # so we use is_a?(Class to catch this case.
     if type.is_a?(Class)
       # If an interface, we check that the value is an instance of that stuct.
-      raise StandardError.new("#{AichatRubyTypes.stringify_type(value)} does not match type: #{type}#{key.nil? ? "" : " for key=#{key}"}") unless value.is_a?(type)
+      raise_or_notify_type_error("#{AichatRubyTypes.stringify_type(value)} does not match type: #{type}#{key.nil? ? "" : " for key=#{key}"}") unless value.is_a?(type)
 
     # For all instances of Type-derived classes, we call its assert_value_is_type
     # to do the assertion.
@@ -66,7 +78,7 @@ module AichatRubyTypes
       type.assert_value_is_type(value, key)
     else
       # Any other Type is unexpected.
-      raise StandardError.new("Tried to assert value is a type, with an unexpected type: #{type}")
+      raise_or_notify_type_error("Tried to assert value is a type, with an unexpected type: #{type}")
     end
   end
 
@@ -202,11 +214,11 @@ module AichatRubyTypes
       value_type = fields_and_types[1]
 
       if fields_and_types.length == 1
-        raise StandardError.new("interface is missing value for index signature key[#{key_type.type}],  missingOtherType")
+        raise_or_notify_type_error("interface is missing value for index signature key[#{key_type.type}],  missingOtherType")
       elsif fields_and_types.length > 2
-        raise StandardError.new("interface with index signature can not have further keys to be further constrained")
+        raise_or_notify_type_error("interface with index signature can not have further keys to be further constrained")
       elsif !key_type.type.is_a?(StringType)
-        raise StandardError.new("interface with index signature can only be set with key[string] (i.e. symbol in ruby)")
+        raise_or_notify_type_error("interface with index signature can only be set with key[string] (i.e. symbol in ruby)")
       end
 
       #TODO - move this index signature case and the normal case to functions!
@@ -243,7 +255,7 @@ module AichatRubyTypes
       # Iterate through them and build an array of field names and a hash of field name
       # to type.
       fields_and_types.each_slice(2) do |field, type|
-        raise StandardError.new("interface must be created with even number of properties and types") if type.nil?
+        raise_or_notify_type_error("interface must be created with even number of properties and types") if type.nil?
         fields << field
         types[field] = type
       end

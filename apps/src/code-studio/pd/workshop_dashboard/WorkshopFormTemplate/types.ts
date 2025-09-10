@@ -1,5 +1,7 @@
 import {Dispatch} from 'react';
 
+import {COLOR_MAP} from '../workshops/surveys/constants';
+
 import {Option} from './components/MultiSelectInput';
 
 export interface FieldOption {
@@ -404,11 +406,15 @@ export const isQuestionType = <T extends SurveyQuestion['question_type']>(
   return !!question && question.question_type === type;
 };
 
+export type ColorMapKey = typeof COLOR_MAP extends Map<infer K, unknown>
+  ? K
+  : never;
+
 export interface Breakdown {
   count: number;
   percentage: number;
   label: string;
-  status?: string;
+  color?: ColorMapKey;
 }
 
 export interface LikertResults {
