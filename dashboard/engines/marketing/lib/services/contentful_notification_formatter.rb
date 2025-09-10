@@ -59,14 +59,13 @@ module Services
           error: exception.message,
         }
       )
-      puts exception
       nil
     end
 
     private def parse_published_at(contentful_notification)
-      if contentful_notification.respond_to?(:first_published_at)
+      if contentful_notification.try(:first_published_at).present?
         Time.parse(contentful_notification.first_published_at)
-      elsif contentful_notification.respond_to?(:created_at)
+      elsif contentful_notification.try(:created_at).present?
         if contentful_notification.created_at.is_a?(DateTime)
           contentful_notification.created_at
         else
