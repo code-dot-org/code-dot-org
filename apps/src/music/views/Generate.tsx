@@ -39,7 +39,7 @@ const Generate: React.FunctionComponent = () => {
   const [text, setText] = useState(
     'Please generate a fun song.  Between 18-20 measures is enough duration.  Use layering of sounds to make it exciting.'
   );
-  const [joinedChoicesText, setJoinedChoicesText] = useState('');
+  const [choices, setChoices] = useState<string[] | undefined>(undefined);
 
   const useText = adlibOption ? adlibText : text;
 
@@ -71,22 +71,16 @@ const Generate: React.FunctionComponent = () => {
     if (result.length > 1 && result[1].status === AiInteractionStatus.OK) {
       console.log(result[1].chatMessageText);
       const psuedocode = result[1].chatMessageText.replaceAll('```', '');
-      const resultBlockly = generateBlocklyJson(psuedocode);
-      dispatch(setCodeToLoad(resultBlockly));
+      return psuedocode;
     } else {
       console.error('Error getting AI response.');
     }
-  }, [dispatch, contextGenerateMusicPsuedocodeFromDescription, useText]);
-
-  const delay = (time: number) => {
-    return new Promise(res => {
-      setTimeout(res, time);
-    });
-  };
+  }, [contextGenerateMusicPsuedocodeFromDescription, useText]);
 
   const generateSongCache = useCallback(async () => {
     const variant = getRandomInt(0, 2);
-    const cacheFilePath = `${baseAssetUrl}generate/music/${packId}-${adlibOption}-${joinedChoicesText}-${variant
+    const joinedChoices = choices?.join('-');
+    const cacheFilePath = `${baseAssetUrl}generate/music/${packId}-${adlibOption}-${joinedChoices}-${variant
       .toString()
       .padStart(2, '0')}.txt`;
     console.log(cacheFilePath);
@@ -94,28 +88,33 @@ const Generate: React.FunctionComponent = () => {
     const startTime = Date.now();
     try {
       const response = await HttpClient.get(cacheFilePath);
-      const responseText = await response.text();
+      const psuedocode = await response.text();
+
       const elapsedTime = Date.now() - startTime;
       const delayDuration = 2000; // 2 seconds.
       const remainingDelayDuration = Math.max(delayDuration - elapsedTime, 0);
-      await delay(remainingDelayDuration);
-      const resultBlockly = generateBlocklyJson(responseText);
-      dispatch(setCodeToLoad(resultBlockly));
+      await new Promise(res => setTimeout(res, remainingDelayDuration));
+
+      return psuedocode;
     } catch (error) {
       console.error('Error retrieving cached code.');
     }
-  }, [adlibOption, dispatch, joinedChoicesText, packId]);
+  }, [adlibOption, choices, packId]);
 
   const generateSong = useCallback(async () => {
     dispatch(setAiGenerateState('generating'));
-    if (useCache) {
-      await generateSongCache();
-    } else {
-      await generateSongAi();
+
+    const psuedocode = await (useCache
+      ? generateSongCache()
+      : generateSongAi());
+
+    if (psuedocode) {
+      const resultBlockly = generateBlocklyJson(psuedocode);
+      dispatch(setCodeToLoad(resultBlockly));
     }
+
     dispatch(setAiGenerateState('done'));
   }, [dispatch, generateSongAi, generateSongCache, useCache]);
-
   if (!packId) {
     return null;
   }
@@ -141,9 +140,9 @@ const Generate: React.FunctionComponent = () => {
             <Adlib
               template={adlibs[adlibOption].template}
               options={adlibs[adlibOption].options}
-              onChange={(adlibText, joinedChoicesText) => {
+              onChange={(adlibText, choices) => {
                 setAdlibText(adlibText);
-                setJoinedChoicesText(joinedChoicesText);
+                setChoices(choices);
               }}
               className={styles.textArea}
             />
