@@ -25,8 +25,10 @@ const adlibs = {
 // retrieved from an online cache.  Information about the generated dancer is written to local
 // storage.
 const DancerGenerate: React.FunctionComponent = () => {
+  const adlibOption = 'basic';
+
   const [adlibText, setAdlibText] = useState<string | undefined>(undefined);
-  const [joinedChoicesText, setJoinedChoicesText] = useState('');
+  const [choices, setChoices] = useState<string[] | undefined>(undefined);
 
   const [aiGenerateState, setAiGenerateState] = useState<
     'none' | 'generating' | 'done'
@@ -46,8 +48,8 @@ const DancerGenerate: React.FunctionComponent = () => {
     const startTime = Date.now();
     const variant = getRandomInt(0, 1);
     const {head} = await getGeneratedDancerAssets(
-      'basic',
-      joinedChoicesText,
+      adlibOption,
+      choices,
       variant
     );
 
@@ -55,14 +57,14 @@ const DancerGenerate: React.FunctionComponent = () => {
 
     trySetLocalStorage(
       'dancer-ai-generate',
-      JSON.stringify({adlibOption: 'basic', joinedChoicesText, variant})
+      JSON.stringify({adlibOption: 'basic', choices, variant})
     );
 
     const elapsedTime = Date.now() - startTime;
     const delayDuration = 2000; // 2 seconds.
     const remainingDelayDuration = Math.max(delayDuration - elapsedTime, 0);
     await delay(remainingDelayDuration);
-  }, [joinedChoicesText]);
+  }, [choices]);
 
   const generateDancer = useCallback(async () => {
     setAiGenerateState('generating');
@@ -81,9 +83,9 @@ const DancerGenerate: React.FunctionComponent = () => {
             <Adlib
               template={adlibs['basic'].template}
               options={adlibs['basic'].options}
-              onChange={(adlibText, joinedChoicesText) => {
+              onChange={(adlibText, choices) => {
                 setAdlibText(adlibText);
-                setJoinedChoicesText(joinedChoicesText);
+                setChoices(choices);
               }}
               className={moduleStyles.textArea}
             />
