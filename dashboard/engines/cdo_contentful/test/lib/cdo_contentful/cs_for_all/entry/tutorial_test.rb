@@ -3,8 +3,8 @@
 require 'test_helper'
 
 describe CdoContentful::CsForAll::Entry::Tutorial do
-  describe '.find_by_tutorial_id' do
-    subject {CdoContentful::CsForAll::Entry::Tutorial.find_by_tutorial_id(tutorial_id)}
+  describe '.find_by_code' do
+    subject {CdoContentful::CsForAll::Entry::Tutorial.find_by_code(tutorial_id)}
 
     let(:tutorial_id) {'poem_art'}
 

@@ -78,7 +78,7 @@ module HocLegacy
 
     private def assign_tutorial
       @tutorial = Rails.cache.fetch("hoc_legacy:tutorial:#{params[:code]}", expires_in: CACHE_TTL) do
-        CdoContentful::CsForAll::Entry::Tutorial.find_by_tutorial_id(params[:code])
+        CdoContentful::CsForAll::Entry::Tutorial.find_by_code(params[:code])
       end
     end
 

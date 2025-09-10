@@ -12,6 +12,7 @@ module CdoContentful
       # @param limit [Integer] maximum number of entries to return (default: 100, max: 1000)
       # @param skip [Integer] number of entries to skip, acting as an offset (default: 0)
       # @param fields [Hash] field-value pairs to filter entries by, e.g. `where(tutorialID: 'my-id')`
+      #
       # @return [Contentful::Array] of entries matching the given fields
       def where(limit: 100, skip: 0, **fields)
         entry_fields = fields.transform_keys {"fields.#{_1}"}
