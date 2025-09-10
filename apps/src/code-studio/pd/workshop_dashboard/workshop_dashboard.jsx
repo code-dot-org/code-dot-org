@@ -43,12 +43,12 @@ import {workshopLabel} from './WorkshopFormTemplate/utils';
 import {WorkshopAttendance} from './workshops/attendance/WorkshopAttendance';
 import {WorkshopEnrollments} from './workshops/enrollments/WorkshopEnrollments';
 import {WorkshopOverview} from './workshops/overview/WorkshopOverview';
-import CohortProfile from './workshops/surveys/post/components/CohortProfile';
 import {Engagement} from './workshops/surveys/post/components/Engagement';
 import {FacilitatorFeedback} from './workshops/surveys/post/components/FacilitatorFeedback';
 import {Implementation} from './workshops/surveys/post/components/Implementation';
 import {Logistics} from './workshops/surveys/post/components/Logistics';
 import {Other} from './workshops/surveys/post/components/Other';
+import CohortProfile from './workshops/surveys/pre/components/CohortProfile';
 import ReadinessAndExpectations from './workshops/surveys/pre/components/ReadinessAndExpectations';
 import {WorkshopLayout} from './workshops/WorkshopLayout';
 
@@ -76,7 +76,7 @@ const preSurveyCategoryChildRoutes = [
     icon: 'users',
     component: CohortProfile,
     path: 'cohort-profile',
-    breadcrumbs: 'Workshops,Workshop,Temp,Surveys,Pre,CohortProfile',
+    breadcrumbs: 'Workshops,Workshop,Temp,Surveys,Pre,Cohort profile',
   },
 ];
 
