@@ -35,14 +35,14 @@ const VersionHistoryRow: React.FunctionComponent<VersionHistoryRowProps> = ({
   let rowMarginStyle, ariaLabel;
   let isBoldtype = true;
   if (versionId === INITIAL_VERSION_ID) {
-    rowMarginStyle = moduleStyles.isInitialVersionRow;
+    rowMarginStyle = moduleStyles.initialVersionRow;
   } else if (isLatest) {
-    rowMarginStyle = moduleStyles.isCurrentVersionRow;
+    rowMarginStyle = moduleStyles.currentVersionRow;
   } else if (comment) {
-    rowMarginStyle = moduleStyles.isCommentRow;
+    rowMarginStyle = moduleStyles.commentRow;
     ariaLabel = lab2I18n.committedVersion();
   } else {
-    rowMarginStyle = moduleStyles.isRow;
+    rowMarginStyle = moduleStyles.row;
     ariaLabel = lab2I18n.autosavedVersion();
     isBoldtype = false;
   }
