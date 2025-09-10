@@ -1,10 +1,10 @@
 require 'test_helper'
-require 'cdo/delete_accounts_helper'
+#require 'cdo/delete_accounts_helper'
 
-class Services::User::InactiveUserDeletionJobTest < ActiveJob::TestCase
-  include Minitest::RSpecMocks
+class User::InactiveUserDeletionJobTest < ActiveJob::TestCase
+  #include Minitest::RSpecMocks
 
-  subject(:perform_later) {described_class.permorm_later}
+  subject(:perform_later) {User::InactiveUserDeletionJob.perform_later}
 
   let(:email) {Faker::Internet.unique.email}
   let(:student) {create(:student, current_sign_in_at: 54.months.ago - 1.day)}

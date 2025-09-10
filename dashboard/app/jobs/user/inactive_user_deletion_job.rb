@@ -11,6 +11,8 @@ class User
         inactive_since: 54.months.ago,
       )
       @inactive_users ||= inactive_query.call
+      puts @inactive_users.count
+      @inactive_users
     end
   end
 end
