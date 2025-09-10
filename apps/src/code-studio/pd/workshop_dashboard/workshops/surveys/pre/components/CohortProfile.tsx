@@ -15,8 +15,8 @@ function bucketizeYearsTeaching(value: string): string {
   if (isNaN(num)) return value;
 
   if (num <= 2) return '0–2';
-  if (num <= 7) return '3-7';
-  if (num <= 15) return '8-15';
+  if (num <= 7) return '3–7';
+  if (num <= 15) return '8–15';
   return '16+';
 }
 
