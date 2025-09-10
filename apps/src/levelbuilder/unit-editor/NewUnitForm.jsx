@@ -1,11 +1,10 @@
-import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 
 import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
 import HelpTip from '@cdo/apps/sharedComponents/HelpTip';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 
-export default function NewUnitForm(props) {
+export default function NewUnitForm() {
   const [submitDialogOpen, setSubmitDialogOpen] = useState(false);
 
   const savingDetailsAndButton = React.useCallback(
@@ -76,12 +75,6 @@ export default function NewUnitForm(props) {
     </form>
   );
 }
-
-NewUnitForm.propTypes = {
-  families: PropTypes.arrayOf(PropTypes.string).isRequired,
-  versionYearOptions: PropTypes.arrayOf(PropTypes.string).isRequired,
-  familiesCourseTypes: PropTypes.object.isRequired,
-};
 
 const styles = {
   dropdown: {

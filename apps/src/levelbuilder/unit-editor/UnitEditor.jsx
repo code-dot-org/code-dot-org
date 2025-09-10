@@ -76,7 +76,6 @@ class UnitEditor extends React.Component {
       ...Object.keys(CurriculumContentArea),
       '',
     ]),
-    unitFamilies: PropTypes.arrayOf(PropTypes.string).isRequired,
     isLevelbuilder: PropTypes.bool,
     initialTts: PropTypes.bool,
     hasCourse: PropTypes.bool,

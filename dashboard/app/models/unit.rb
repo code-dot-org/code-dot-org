@@ -317,12 +317,6 @@ class Unit < ApplicationRecord
       @@all_scripts ||= script_cache.values.uniq.compact.freeze
     end
 
-    def family_names
-      Rails.cache.fetch('script/family_names', force: !Unit.should_cache?) do
-        ScriptConstants::DEPRECATED_FAMILY_NAMES.sort
-      end
-    end
-
     private def visible_units
       @@visible_units ||= all_scripts.select(&:launched?).to_a.freeze
     end
@@ -524,7 +518,6 @@ class Unit < ApplicationRecord
       end
     return script if script
     if raise_exceptions
-      raise "Do not call Unit.get_from_cache with a family_name. Call Unit.get_unit_family_redirect_for_user instead.  Family: #{id_or_name}" if Unit.family_names.include?(id_or_name)
       raise ActiveRecord::RecordNotFound.new("Couldn't find Unit with id|name=#{id_or_name}")
     end
   end
