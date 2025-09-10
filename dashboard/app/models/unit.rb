@@ -556,53 +556,6 @@ class Unit < ApplicationRecord
     script_cache&.delete(unit_name)
   end
 
-  def self.get_unit_family_redirect_for_user(family_name, user: nil, locale: 'en-US')
-    return nil unless family_name
-
-    family_units = family_unit_versions(family_name).reverse
-
-    return nil unless family_units&.last&.can_be_instructor?(user) || family_units&.last&.can_be_participant?(user)
-
-    # Only signed in participants should be redirected based on unit progress and/or section assignments.
-    if user && family_units.last.can_be_participant?(user)
-      assigned_unit_ids = user.section_scripts.pluck(:id)
-      progress_unit_ids = user.user_levels.map(&:script_id)
-      unit_ids = assigned_unit_ids.concat(progress_unit_ids).compact.uniq
-      unit_name = family_units.select {|s| unit_ids.include?(s.id)}&.first&.name
-      if unit_name
-        # This creates a temporary script which is used to redirect the user. The audiences are set
-        # to allow the redirect to happen for any user
-        return Unit.new(
-          redirect_to: unit_name,
-        )
-      end
-    end
-
-    locale_str = locale&.to_s
-    latest_version = nil
-    family_units.each do |unit|
-      next unless unit.stable?
-      latest_version ||= unit
-
-      # All English-speaking locales are supported, so we check that the locale starts with 'en' rather
-      # than matching en-US specifically.
-      is_supported = unit.supported_locales&.include?(locale_str) || locale_str&.downcase&.start_with?('en')
-      if is_supported
-        latest_version = unit
-        break
-      end
-    end
-
-    unit_name = latest_version&.name
-
-    unit_name ?
-      # This creates a temporary script which is used to redirect the user. The audiences are set
-      # to allow the redirect to happen for any user
-      Unit.new(
-        redirect_to: unit_name,
-      ) : nil
-  end
-
   # @param user [User]
   # @param locale [String] User or request locale. Optional.
   # @return [String|nil] URL to the unit overview page the user should be redirected to (if any).

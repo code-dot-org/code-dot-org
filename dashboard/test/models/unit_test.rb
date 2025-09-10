@@ -171,13 +171,6 @@ class UnitTest < ActiveSupport::TestCase
     assert_equal frozen, Unit.get_from_cache(frozen_id)
   end
 
-  test 'get_from_cache raises if called with a family_name' do
-    error = assert_raises do
-      Unit.get_from_cache('csd2')
-    end
-    assert_equal 'Do not call Unit.get_from_cache with a family_name. Call Unit.get_unit_family_redirect_for_user instead.  Family: csd2', error.message
-  end
-
   test 'get_family_from_cache uses unit_family_cache' do
     family_scripts = Unit.where(family_name: 'family-cache-test')
     assert_equal [@unit_2017.name, @unit_2018.name], family_scripts.map(&:name)
@@ -269,124 +262,6 @@ class UnitTest < ActiveSupport::TestCase
     assert_raises(ActiveRecord::RecordNotFound) do
       Unit.get_from_cache(bad_id)
     end
-  end
-
-  test 'get_unit_family_redirect_for_user returns latest stable unit assigned or with progress if participant' do
-    pl_csp1_2017 = create(:script, name: 'pl-csp1-2017', family_name: 'pl-csp')
-    pl_csp1_2018 = create(:script, name: 'pl-csp1-2018', family_name: 'pl-csp')
-    create(:single_unit_course, :pl_course, unit: pl_csp1_2017, family_name: 'pl-csp', version_year: '2017')
-    create(:single_unit_course, :pl_course, unit: pl_csp1_2018, family_name: 'pl-csp', version_year: '2018')
-
-    # Assign participant to pl_csp1_2017.
-    section = create(:section, script: pl_csp1_2017)
-    participant = create(:teacher)
-    section.students << participant
-
-    redirect_unit = Unit.get_unit_family_redirect_for_user('pl-csp', user: participant)
-    assert_equal pl_csp1_2017.name, redirect_unit.redirect_to
-
-    # participant makes progress in csp1_2018.
-    create(:user_level, user: participant, script: pl_csp1_2018)
-    participant.reload
-
-    redirect_unit = Unit.get_unit_family_redirect_for_user('pl-csp', user: participant)
-    assert_equal pl_csp1_2018.name, redirect_unit.redirect_to
-  end
-
-  test 'get_unit_family_redirect_for_user returns nil if user can not be an instructor or participant' do
-    student = create(:student)
-    pl_csp1_2017 = create(:script, name: 'pl-csp1-2017', family_name: 'pl-csp')
-    pl_csp1_2018 = create(:script, name: 'pl-csp1-2018', family_name: 'pl-csp')
-    create(:single_unit_course, :pl_course, unit: pl_csp1_2017, family_name: 'pl-csp', version_year: '2017')
-    create(:single_unit_course, :pl_course, unit: pl_csp1_2018, family_name: 'pl-csp', version_year: '2018')
-
-    assert_nil Unit.get_unit_family_redirect_for_user('pl-csp', user: student)
-  end
-
-  test 'get_unit_family_redirect_for_user returns latest stable unit assigned or with progress if student' do
-    csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp1')
-    create(:single_unit_course, unit: csp1_2017, name: 'csp-2017', family_name: 'csp', version_year: '2017')
-    csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp1')
-    create(:single_unit_course, unit: csp1_2018, name: 'csp-2018', family_name: 'csp', version_year: '2018')
-
-    # Assign student to csp1_2017.
-    section = create(:section, script: csp1_2017)
-    student = create(:student)
-    section.students << student
-
-    redirect_unit = Unit.get_unit_family_redirect_for_user('csp1', user: student)
-    assert_equal csp1_2017.name, redirect_unit.redirect_to
-
-    # Student makes progress in csp1_2018.
-    create(:user_level, user: student, script: csp1_2018)
-    student.reload
-
-    redirect_unit = Unit.get_unit_family_redirect_for_user('csp1', user: student)
-    assert_equal csp1_2018.name, redirect_unit.redirect_to
-  end
-
-  test 'get_unit_family_redirect_for_user returns latest stable unit in family if instructor' do
-    facilitator = create(:facilitator)
-    pl_csp1_2017 = create(:script, name: 'pl-csp1-2017', family_name: 'pl-csp1')
-    create(:single_unit_course, :pl_course, unit: pl_csp1_2017, name: 'pl-csp-2017', family_name: 'pl-csp', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
-    pl_csp1_2018 = create(:script, name: 'pl-csp1-2018', family_name: 'pl-csp1')
-    create(:single_unit_course, :pl_course, unit: pl_csp1_2018, name: 'pl-csp-2018', family_name: 'pl-csp', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
-    pl_csp1_2019 = create(:script, name: 'pl-csp1-2019', family_name: 'pl-csp1')
-    create(:single_unit_course, :pl_course, unit: pl_csp1_2019, name: 'pl-csp-2019', family_name: 'pl-csp', version_year: '2019', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta)
-    create(:section, user: facilitator, script: pl_csp1_2017)
-
-    redirect_unit = Unit.get_unit_family_redirect_for_user('pl-csp1', user: facilitator)
-    assert_equal pl_csp1_2018.name, redirect_unit.redirect_to
-  end
-
-  test 'get_unit_family_redirect_for_user returns latest stable unit in family if teacher' do
-    teacher = create(:teacher)
-    csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp1')
-    create(:single_unit_course, unit: csp1_2017, name: 'csp-2017', family_name: 'csp', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
-    csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp1')
-    create(:single_unit_course, unit: csp1_2018, name: 'csp-2018', family_name: 'csp', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
-    csp1_2019 = create(:script, name: 'csp1-2019', family_name: 'csp', version_year: '2019')
-    create(:single_unit_course, unit: csp1_2019, name: 'csp-2019', family_name: 'csp', version_year: '2019', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta)
-    create(:section, user: teacher, script: csp1_2017)
-
-    redirect_unit = Unit.get_unit_family_redirect_for_user('csp1', user: teacher)
-    assert_equal csp1_2018.name, redirect_unit.redirect_to
-  end
-
-  test 'get_unit_family_redirect_for_user returns nil if no units in family are stable' do
-    csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp')
-    create(:single_unit_course, unit: csp1_2018, name: 'csp-2018', family_name: 'csp', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview)
-    assert_nil Unit.get_unit_family_redirect_for_user('csp')
-  end
-
-  test 'get_unit_family_redirect_for_user returns latest version supported in locale if available' do
-    csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp1', supported_locales: ['es-MX'])
-    create(:single_unit_course, unit: csp1_2017, name: 'csp-2017', family_name: 'csp', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
-    csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp1')
-    create(:single_unit_course, unit: csp1_2018, name: 'csp-2018', family_name: 'csp', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
-
-    redirect_unit = Unit.get_unit_family_redirect_for_user('csp1', locale: 'es-MX')
-    assert_equal csp1_2017.name, redirect_unit.redirect_to
-  end
-
-  test 'get_unit_family_redirect_for_user returns latest stable version if no user or locale' do
-    csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp1')
-    create(:single_unit_course, unit: csp1_2017, name: 'csp-2017', family_name: 'csp', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
-    csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp1')
-    create(:single_unit_course, unit: csp1_2018, name: 'csp-2018', family_name: 'csp', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
-
-    redirect_unit = Unit.get_unit_family_redirect_for_user('csp1')
-    assert_equal csp1_2018.name, redirect_unit.redirect_to
-  end
-
-  test 'get_unit_family_redirect_for_user returns latest stable version if no versions supported in locale' do
-    csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp1', supported_locales: ['es-MX'])
-    create(:single_unit_course, unit: csp1_2017, name: 'csp-2017', family_name: 'csp', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
-    csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp1')
-    create(:single_unit_course, unit: csp1_2018, name: 'csp-2018', family_name: 'csp', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
-
-    redirect_unit = Unit.get_unit_family_redirect_for_user('csp1', locale: 'it-IT')
-    assert_equal csp1_2018.name, redirect_unit.redirect_to
   end
 
   test 'redirect_to_unit_url returns nil unless user can view unit version' do
