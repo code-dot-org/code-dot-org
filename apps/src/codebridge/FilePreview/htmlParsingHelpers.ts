@@ -16,7 +16,7 @@ export const updateLinksToNonHtmlFiles = (
     const src = link.getAttribute('src');
 
     // Only update if the URL does not include a domain (eg, user project assets and starter assets)
-    if (src && !src.startsWith('http')) {
+    if (src && !(src.startsWith('http://') || src.startsWith('https://'))) {
       const filePath = findFilePathByRelativePath(src, fullFileName);
       const url = filesToUrls[filePath];
       link.setAttribute('src', `${parentOrigin}${url}`);
