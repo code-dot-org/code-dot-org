@@ -103,6 +103,12 @@ Given /^I open the new workshop form$/ do
   GHERKIN
 end
 
+Given /^I am viewing a workshop in the workshop dashboard$/ do
+  steps <<~GHERKIN
+    Given I am on "http://studio.code.org/pd/workshop_dashboard/workshops/#{@workshop_id}"
+  GHERKIN
+end
+
 Given(/^I am a facilitator with started and completed courses$/) do
   random_name = "TestFacilitator" + SecureRandom.hex[0..9]
   steps <<~GHERKIN
@@ -125,12 +131,35 @@ Given(/^I am an organizer with started and completed courses$/) do
   GHERKIN
 end
 
+Given(/^I am an organizer with a completed course$/) do
+  random_name = "TestOrganizer" + SecureRandom.hex[0..9]
+  steps <<~GHERKIN
+    And I create a teacher named "#{random_name}"
+    And I make the teacher named "#{random_name}" a workshop organizer
+    And I create a workshop for course "Build Your Own Workshop" organized by "#{random_name}" with 5 people and end it
+  GHERKIN
+end
+
 Given(/^I am a program manager with a started course$/) do
   random_name = "TestProgramManager" + SecureRandom.hex[0..9]
   steps <<~GHERKIN
     And I am a program manager named "#{random_name}" for regional partner "Test Partner"
     And I create a workshop for course "Build Your Own Workshop" organized by "#{random_name}" with 5 people and start it
   GHERKIN
+end
+
+Given(/^I submit post byo workshop surveys$/) do
+  require_rails_env
+
+  form = Foorm::Form.find_by(name: 'surveys/pd/build_your_own_workshop_teachers_post_survey_test') || FactoryBot.create(:foorm_form_build_your_own_workshop_post_survey)
+  track_record_for_deletion('Foorm::Form', form.id)
+
+  low_submissions = FactoryBot.create_list(:build_your_own_workshop_foorm_submission, 2, :answers_low, pd_workshop_id: @workshop_id)
+  high_submissions = FactoryBot.create_list(:build_your_own_workshop_foorm_submission, 3, :answers_high, pd_workshop_id: @workshop_id)
+  all_submissions = low_submissions + high_submissions
+  all_submissions.each do |submission|
+    track_record_for_deletion('Pd::WorkshopSurveyFoormSubmission', submission.id)
+  end
 end
 
 Given(/^I am a teacher who has just followed a workshop certificate link$/) do
@@ -511,6 +540,8 @@ And(/^I create a workshop for course "([^"]*)" ([a-z]+) by "([^"]*)" with (\d+) 
       )
     end
 
+  track_record_for_deletion('User', organizer.id)
+
   workshop = Retryable.retryable(on: [ActiveRecord::RecordNotUnique, ActiveRecord::RecordInvalid], tries: 5) do
     FactoryBot.create(
       :workshop,
@@ -528,6 +559,8 @@ And(/^I create a workshop for course "([^"]*)" ([a-z]+) by "([^"]*)" with (\d+) 
     )
   end
 
+  track_record_for_deletion('Pd::Workshop', workshop.id)
+
   @workshop_id = workshop.id
 
   # Facilitators
@@ -540,6 +573,10 @@ And(/^I create a workshop for course "([^"]*)" ([a-z]+) by "([^"]*)" with (\d+) 
     workshop.facilitators << facilitator
   end
 
+  workshop.facilitators.each do |fac|
+    track_record_for_deletion('User', fac.id)
+  end
+
   # Attendees
   if number_type == 'people'
     number.to_i.times do
@@ -549,6 +586,10 @@ And(/^I create a workshop for course "([^"]*)" ([a-z]+) by "([^"]*)" with (\d+) 
     if role == 'attended'
       create_enrollment(workshop, name)
     end
+  end
+
+  workshop.enrollments.each do |enrollment|
+    track_record_for_deletion('Pd::Enrollment', enrollment.id)
   end
 
   if post_create_actions.include?('and end it')
