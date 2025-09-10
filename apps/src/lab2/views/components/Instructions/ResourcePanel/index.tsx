@@ -108,6 +108,9 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const isWidgetView = instructionsProps.levelProperties.widgetView || false;
 
   const levelId = instructionsProps.levelProperties.id;
+  const hasValidationConditions = useAppSelector(
+    state => state.lab.validationState?.hasConditions
+  );
 
   // Build available tabs based on level information.
   const availableTabs = useMemo(() => {
@@ -120,7 +123,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       );
     }
 
-    if (instructionsProps.validationSettings) {
+    if (instructionsProps.validationSettings && hasValidationConditions) {
       tabMap[Tabs.Validation] = (
         <ValidationPanel {...instructionsProps.validationSettings} />
       );
@@ -175,6 +178,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     return tabMap;
   }, [
     instructionsProps,
+    hasValidationConditions,
     isUserTeacher,
     aiTutorContextPromise,
     isReadOnly,
