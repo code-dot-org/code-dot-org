@@ -42,7 +42,7 @@ type CodebridgeProps = {
   sendConsoleInput?: SendConsoleInputFunction;
   levelProperties: CodebridgeLevelProperties;
   projectPickerSettings?: ProjectPickerSettings;
-  systemPromptName?: string;
+  aiTutorSystemPromptName?: string;
   aiTutorContextPromise?: Promise<AiTutorContext>;
 };
 
@@ -56,7 +56,7 @@ export const Codebridge = React.memo(
     sendConsoleInput,
     levelProperties,
     projectPickerSettings,
-    systemPromptName,
+    aiTutorSystemPromptName,
     aiTutorContextPromise,
   }: CodebridgeProps) => {
     const isShareView = useAppSelector(state => state.lab.isShareView);
@@ -184,7 +184,7 @@ export const Codebridge = React.memo(
           projectPickerSettings,
           aiTutorContextPromise,
           onImageFlagged,
-          systemPromptName,
+          aiTutorSystemPromptName,
         }}
       >
         <BackpackAPIContext.Provider value={backpackApi}>

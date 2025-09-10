@@ -120,7 +120,7 @@ const Weblab2View: React.FC<
           startSources={startSources}
           levelProperties={levelProperties}
           aiTutorContextPromise={aiTutorContextPromise}
-          systemPromptName={'aif2-web-produce'}
+          aiTutorSystemPromptName={'aif2-web-produce'}
         />
       )}
     </div>
