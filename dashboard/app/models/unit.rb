@@ -612,30 +612,6 @@ class Unit < ApplicationRecord
   end
 
   # @param family_name [String] The family name for a unit family.
-  # @param version_year [String] Version year to return. Optional.
-  # @param locale [String] User or request locale. Optional.
-  # @return [Unit|nil] Returns the latest version in a unit family.
-  def self.latest_stable_version(family_name, version_year: nil, locale: 'en-us')
-    return nil if family_name.blank?
-
-    unit_versions = family_unit_versions(family_name).reverse
-
-    # Only select stable, supported units (ignore supported locales if locale is an English-speaking locale).
-    # Match on version year if one is supplied.
-    locale_str = locale&.to_s
-    supported_stable_units = unit_versions.select do |unit|
-      is_supported = unit.supported_locales&.include?(locale_str) || locale_str&.start_with?('en')
-      if version_year
-        unit.stable? && is_supported && unit.version_year == version_year
-      else
-        unit.stable? && is_supported
-      end
-    end
-
-    supported_stable_units&.first
-  end
-
-  # @param family_name [String] The family name for a unit family.
   # @param user [User]
   # @return [Unit|nil] Returns the latest unit version in a family that the user has progress in.
   def self.latest_version_with_progress(family_name, user)

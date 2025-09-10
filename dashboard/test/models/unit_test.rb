@@ -461,43 +461,6 @@ class UnitTest < ActiveSupport::TestCase
     assert_equal [missing_version, actual_version], Unit.family_unit_versions('fake-family')
   end
 
-  test 'self.latest_stable_version is nil if no unit versions in family are stable in locale' do
-    create(:script, name: 's-2017', family_name: 'fake-family', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, supported_locales: ["it-it"])
-    create(:script, name: 's-2018', family_name: 'fake-family', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, supported_locales: ["it-it"])
-
-    assert_nil Unit.latest_stable_version('fake-family', locale: 'es-mx')
-  end
-
-  test 'self.latest_stable_version returns latest stable version for user locale' do
-    create(:script, :in_single_unit_course, name: 's-2017', family_name: 'fake-family', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, supported_locales: ["it-it"])
-    unit_2018 = create(:script, :in_single_unit_course, name: 's-2018', family_name: 'fake-family', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, supported_locales: ["it-it"])
-
-    assert_equal unit_2018, Unit.latest_stable_version('fake-family', locale: 'it-it')
-  end
-
-  test 'self.latest_stable_version returns latest stable version for English locales' do
-    create(:script, :in_single_unit_course, name: 's-2017', family_name: 'fake-family', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
-    unit_2018 = create(:script, :in_single_unit_course, name: 's-2018', family_name: 'fake-family', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
-
-    assert_equal unit_2018, Unit.latest_stable_version('fake-family')
-    assert_equal unit_2018, Unit.latest_stable_version('fake-family', locale: 'en-ca')
-  end
-
-  test 'self.latest_stable_version returns correct unit version in family if version_year is supplied' do
-    unit_2017 = create(:script, :in_single_unit_course, name: 's-2017', family_name: 'fake-family', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
-    create(:script, :in_single_unit_course, name: 's-2018', family_name: 'fake-family', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
-
-    assert_equal unit_2017, Unit.latest_stable_version('fake-family', version_year: '2017')
-  end
-
-  test 'self.lastest_stable_version supports some family members having nil version_years' do
-    unit_2017 = create(:script, :in_single_unit_course, name: 's-2017', family_name: 'fake-family', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
-    create(:script, :in_single_unit_course, name: 's-unknown', family_name: 'fake-family', version_year: nil, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
-    create(:script, :in_single_unit_course, name: 's-2018', family_name: 'fake-family', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
-
-    assert_equal unit_2017, Unit.latest_stable_version('fake-family', version_year: '2017')
-  end
-
   test 'self.latest_version_with_progress returns nil if user made no progress in any version' do
     student = create(:student)
     family_name = 'fake-script-family'
