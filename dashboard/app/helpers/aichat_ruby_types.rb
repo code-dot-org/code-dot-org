@@ -119,7 +119,7 @@ module AichatRubyTypes
     end
   end
 
-  # Special helper to simultate TypeScript index signatures.  These are limited
+  # Special helper to simulate TypeScript index signatures.  These are limited
   # to the signature and a further key can not be defined to be more constrained.
   # Not used directly. The key function will return an instance.
   #
@@ -140,13 +140,13 @@ module AichatRubyTypes
     end
   end
 
-  # Returns an nstance of KeyType to be used like
+  # Returns an instance of KeyType to be used like
   # `key[string]` to emulate `[key: string]`.
   def key
     KeyType.new
   end
 
-  # We technically can't defined a type (really a constant)
+  # We technically can't define a type (really a constant)
   # after using it so this is a problem with any circular
   # references.  So we have to create a forward ref in these
   # cases.
@@ -171,7 +171,7 @@ module AichatRubyTypes
   end
 
   # The ForwardRef/ForwardRef() function to return an instance of ForwardRefType.
-  # We use a lambda to get around rubocops insistence that methods need to by snake-case.
+  # We use a lambda to get around rubocops insistence that methods need to be snake-case.
   define_method(
     :ForwardRef,
     lambda do |type = nil|
@@ -179,7 +179,7 @@ module AichatRubyTypes
         # If called with no type create a forward ref.
         ForwardRefType.new
       else
-        # Otherwise, wrap the ref to signal to Interface that is is implementing
+        # Otherwise, wrap the ref to signal to Interface that it is implementing
         # the forward ref and needs to add the type.  We'll check if the first
         # param to Interface is ForwardRefToImplement.
         ForwardRefToImplement.new(type)
@@ -187,9 +187,9 @@ module AichatRubyTypes
     end
   )
 
-  # Interface is a function that takes property names and types and creates a new "struct derived"
+  # Interface is a function that takes property names and types and creates a new "struct-derived"
   # class that will then automate type assertion whenever a new instance of the struct is created.
-  # We use a lambda to get around rubocops insistence that methods need to by snake-case.
+  # We use a lambda to get around rubocops insistence that methods need to be snake-case.
   define_method(
     :Interface,
   lambda do |*fields_and_types|
@@ -204,7 +204,7 @@ module AichatRubyTypes
     end
 
     # If we passed in a key[SomeType] then we have a special case of index signatures
-    # where we allow any number of key/value pairs as long as the key and type mactch
+    # where we allow any number of key/value pairs as long as the key and type match
     # e.g.
     # SimpleProperties = Interface(
     #   key[SomeType],  SomeOtherType
@@ -221,10 +221,7 @@ module AichatRubyTypes
         raise_or_notify_type_error("interface with index signature can only be set with key[string] (i.e. symbol in ruby)")
       end
 
-      #TODO - move this index signature case and the normal case to functions!
-      # we can pass the forward ref and set it there too
-
-      # Create and return the actual open struct derived class.
+      # Create and return the actual open struct-derived class.
       new_class = Class.new(OpenStruct) do
         include InterfaceMethods
         @value_type = value_type
@@ -233,7 +230,7 @@ module AichatRubyTypes
           attr_reader :value_type
         end
 
-        # Initialize the stuct based on keyword args, asserting that values for each of the
+        # Initialize the struct based on keyword args, asserting that values for each of the
         # args matches the type signature.
         def initialize(**kwargs)
           value_type = self.class.value_type
@@ -260,7 +257,7 @@ module AichatRubyTypes
         types[field] = type
       end
 
-      # Create and return the actual struct derived class.
+      # Create and return the actual struct-derived class.
       new_class = Class.new(Struct.new(*fields, keyword_init: true)) do
         include InterfaceMethods
         @types = types
