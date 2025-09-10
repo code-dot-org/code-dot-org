@@ -166,10 +166,7 @@ function removeLocalTypographyAndWrapperImports(j, root) {
       decl.specifiers = decl.specifiers.filter(s => {
         if (s.type !== 'ImportSpecifier') return true;
         const localName = s.local ? s.local.name : s.imported.name;
-        return !Object.prototype.hasOwnProperty.call(
-          WRAPPER_NAME_TO_DEFAULT,
-          localName
-        );
+        return !Object.hasOwn(WRAPPER_NAME_TO_DEFAULT, localName);
       });
       if (
         beforeLen !== decl.specifiers.length &&
@@ -217,7 +214,7 @@ function isDynamicVisualAppearance(visAttr) {
 }
 
 function addTodoComment(j, elementPath, label, payload) {
-  const text = ` TODO_${label}="${payload}" `;
+  const text = ` TODO_${label}: ${JSON.stringify(payload)} `;
   const empty = j.jsxEmptyExpression();
   empty.comments = [j.commentBlock(text, false, true)]; // {/* … */}
   const commentNode = j.jsxExpressionContainer(empty);
