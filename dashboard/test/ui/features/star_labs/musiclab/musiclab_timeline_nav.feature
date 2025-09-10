@@ -6,10 +6,11 @@ Scenario: Ensure users can navigate into and out of timeline, and between elemen
   Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/46/levels/4"
   And I rotate to landscape
   And I wait until element "[data-id='when-run-block']" is visible
+  And "when run" refers to block "when-run-block"
   # Open the first category.
   And I press the first ".blocklyTreeRow" element
-  # Drag two "play sound" blocks and attach them to the "when run" block.
-  Then I drag block "play_sound_at_current_location_simple2" to block "when-run-block"
+  # Drag play sound and play notes and attach them to the "when run" block.
+  Then I drag block "play_sound_at_current_location_simple2" to block "when run"
   And I press the first ".blocklyTreeRow" element
   Then I drag block "play_chord_at_current_location_simple2" to block "play_sound_at_current_location_simple2"
   Then I move focus to "#timeline"
