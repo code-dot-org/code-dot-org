@@ -22,9 +22,7 @@ export const updateLinksToNonHtmlFiles = (
     }
   });
 
-  const links = doc.querySelectorAll(
-    'link[rel="stylesheet"], script[src], img[src]'
-  );
+  const links = doc.querySelectorAll('link[rel="stylesheet"], script[src]');
   links.forEach(link => {
     const src = link.getAttribute('src') || link.getAttribute('href');
     if (src) {
