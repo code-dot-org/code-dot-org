@@ -99,7 +99,7 @@ class User::InactiveTeacherDeletionWarningJobTest < ActiveJob::TestCase
     end
   end
 
-  describe 'inactive_teachers' do
+  describe '#inactive_teachers' do
     let(:inactive_teachers) {described_class.new.send(:inactive_teachers)}
     let(:inactive_since) {42.months.ago}
     it 'returns inactive users who have not been sent deletion warning email' do
