@@ -1,3 +1,5 @@
+@import '../../../../../mixins.scss';
+
 $space-xs: 2px;
 $space-s: 4px;
 $space-m: 6px;
@@ -129,4 +131,9 @@ $space-xl: 10px;
 
 .autoSavedIcon {
   color: var(--text-neutral-placeholder);
+}
+
+.iconButton {
+  @include remove-button-styles;
+  font-size: 13px;
 }

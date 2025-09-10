@@ -6,6 +6,7 @@ import classNames from 'classnames';
 import React from 'react';
 
 import {INITIAL_VERSION_ID} from '@cdo/apps/lab2/constants';
+import lab2I18n from '@cdo/apps/lab2/locale';
 import {commonI18n} from '@cdo/apps/types/locale';
 
 import moduleStyles from './version-history-panel.module.scss';
@@ -61,16 +62,18 @@ const VersionHistoryRow: React.FunctionComponent<VersionHistoryRowProps> = ({
           {isAutoSaved && (
             <WithTooltip
               tooltipProps={{
-                text: 'Autosave version',
+                text: lab2I18n.autosaveVersion(),
                 size: 's',
                 tooltipId: `${versionId}-tooltip`,
                 direction: 'onBottom',
               }}
             >
-              <FontAwesomeV6Icon
-                iconName={'cloud-check'}
-                className={moduleStyles.autoSavedIcon}
-              />
+              <button type="button" className={moduleStyles.iconButton}>
+                <FontAwesomeV6Icon
+                  iconName={'cloud-check'}
+                  className={moduleStyles.autoSavedIcon}
+                />
+              </button>
             </WithTooltip>
           )}
         </div>
