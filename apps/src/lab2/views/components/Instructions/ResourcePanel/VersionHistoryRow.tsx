@@ -1,5 +1,6 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {RadioButton} from '@code-dot-org/component-library/radioButton';
+import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import {BodyFourText} from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
 import React from 'react';
@@ -58,7 +59,19 @@ const VersionHistoryRow: React.FunctionComponent<VersionHistoryRowProps> = ({
             checked={isSelected}
           />
           {isAutoSaved && (
-            <FontAwesomeV6Icon iconName={'cloud-check'} iconStyle={'light'} />
+            <WithTooltip
+              tooltipProps={{
+                text: 'Autosave version',
+                size: 's',
+                tooltipId: `${versionId}-tooltip`,
+                direction: 'onBottom',
+              }}
+            >
+              <FontAwesomeV6Icon
+                iconName={'cloud-check'}
+                className={moduleStyles.autoSavedIcon}
+              />
+            </WithTooltip>
           )}
         </div>
         {comment && (
