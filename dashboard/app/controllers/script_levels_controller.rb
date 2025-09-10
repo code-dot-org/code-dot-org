@@ -150,9 +150,15 @@ class ScriptLevelsController < ApplicationController
       # If user is allowed to see level but is assigned to a newer version of the level's script,
       # we will show a dialog for the user to choose whether they want to go to the newer version.
       @redirect_unit_url = @script_level&.script&.redirect_to_unit_url(current_user, locale: request.locale)
-    elsif !override_redirect && redirect_script = redirect_script(@script_level&.script, request.locale)
+    elsif !override_redirect && (redirect_info = get_redirect_info(@script_level&.script, request.locale, unit_group: @unit_group))
       # Redirect user to the proper script overview page if we think they ended up on the wrong level.
-      redirect_to script_path(redirect_script) + "?redirect_warning=true"
+      if redirect_info[:redirect_ugu]
+        redirect_to course_unit_path(redirect_info[:redirect_ugu].unit_group, redirect_info[:redirect_ugu].position) + "?redirect_warning=true"
+        return
+      elsif redirect_info[:redirect_unit]
+        redirect_to script_path(redirect_info[:redirect_unit]) + "?redirect_warning=true"
+        return
+      end
       return
     end
 
@@ -654,19 +660,22 @@ class ScriptLevelsController < ApplicationController
     raise ActiveRecord::RecordNotFound if is_id
   end
 
-  # TODO: TEACH-1557 Modularity support for version redirects. Currently redirects to /s/... missing course context
-  private def redirect_script(script, locale)
-    return nil unless script
+  private def get_redirect_info(unit, locale, unit_group: nil)
+    return nil unless unit
 
-    # Redirect the user to the latest assigned script in this family, or to the latest stable script in this family if
-    # none are assigned.
-    redirect_script = Unit.latest_assigned_version(script.family_name, current_user)
-    redirect_script ||= Unit.latest_stable_version(script.family_name, locale: locale)
+    unit_group ||= script.original_unit_group
 
-    # Do not redirect if we are already on the correct script.
-    return nil if redirect_script == script
+    if unit_group&.single_unit_course?
+      redirect_unit_group = UnitGroup.latest_assigned_version(unit_group.family_name, current_user)
+      redirect_unit_group ||= UnitGroup.latest_stable_version(unit_group.family_name, locale: locale)
+      redirect_unit = redirect_unit_group.units_for_user(current_user).first if redirect_unit_group&.single_unit_course?
+    end
 
-    redirect_script
+    # Do not redirect if we are already on the correct unit.
+    return nil if redirect_unit == unit
+
+    ugu = Queries::Courses.unit_group_unit(redirect_unit, redirect_unit_group)
+    {redirect_unit: redirect_unit, redirect_ugu: ugu}
   end
 
   private def redirect_to_canonical_path

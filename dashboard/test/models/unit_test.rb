@@ -498,40 +498,6 @@ class UnitTest < ActiveSupport::TestCase
     assert_equal unit_2017, Unit.latest_stable_version('fake-family', version_year: '2017')
   end
 
-  test 'self.latest_assigned_version returns nil if no units in family are assigned to user' do
-    unit1 = create(:script, name: 's-1', family_name: 'family-1')
-    student = create(:student)
-    student.scripts << unit1
-
-    assert_nil Unit.latest_assigned_version('family-2', student)
-  end
-
-  test 'self.latest_assigned_version returns latest assigned unit in family if unit is in course family' do
-    csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017')
-    csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp')
-    create(:unit_group_unit, unit_group: csp_2017, script: csp1_2017, position: 1)
-    csp_2018 = create(:unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018')
-    csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp')
-    create(:unit_group_unit, unit_group: csp_2018, script: csp1_2018, position: 1)
-
-    student = create(:student)
-    section = create(:section, unit_group: csp_2017)
-    section.students << student
-
-    assert_equal csp1_2017, Unit.latest_assigned_version('csp', student)
-  end
-
-  test 'self.latest_assigned_version returns latest assigned unit in family if unit is not in course family' do
-    student = create(:student)
-    courseg_2017 = create(:script, name: 'courseg-2017', family_name: 'courseg', version_year: '2017')
-    create(:single_unit_course, unit: courseg_2017, family_name: 'courseg', version_year: '2017')
-    create(:script, name: 'courseg-2018', family_name: 'courseg', version_year: '2018')
-    section = create(:section, script: courseg_2017)
-    section.students << student
-
-    assert_equal courseg_2017, Unit.latest_assigned_version('courseg', student)
-  end
-
   test 'self.latest_version_with_progress returns nil if user made no progress in any version' do
     student = create(:student)
     family_name = 'fake-script-family'

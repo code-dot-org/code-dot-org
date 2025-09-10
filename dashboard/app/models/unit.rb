@@ -637,25 +637,6 @@ class Unit < ApplicationRecord
 
   # @param family_name [String] The family name for a unit family.
   # @param user [User]
-  # @return [Unit|nil] Returns the latest version in a family that the user is assigned to.
-  def self.latest_assigned_version(family_name, user)
-    return nil unless family_name && user
-    assigned_unit_ids = user.section_scripts.pluck(:id)
-
-    Unit.
-      # select only units assigned to this user.
-      where(id: assigned_unit_ids).
-      # select only units in the same family.
-      where(family_name: family_name).
-      # order by version year descending.
-      # This SQL string is not at risk for injection vulnerabilites because
-      # it's just a hardcoded string, so it's safe to wrap in Arel.sql
-      order(Arel.sql("properties -> '$.version_year' DESC"))&.
-      first
-  end
-
-  # @param family_name [String] The family name for a unit family.
-  # @param user [User]
   # @return [Unit|nil] Returns the latest unit version in a family that the user has progress in.
   def self.latest_version_with_progress(family_name, user)
     return nil unless family_name && user

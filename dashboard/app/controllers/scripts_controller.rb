@@ -410,11 +410,6 @@ class ScriptsController < ApplicationController
     # Return nil if unit is nil or we know the user can view the version requested.
     return nil if !unit || unit.can_view_version?(current_user, locale: locale, unit_group: course)
 
-    # Redirect the user to the latest assigned unit in this family, or to the latest stable unit in this family if
-    # none are assigned.
-    redirect_unit = Unit.latest_assigned_version(unit.family_name, current_user)
-    redirect_unit ||= Unit.latest_stable_version(unit.family_name, locale: locale)
-
     if course&.single_unit_course?
       redirect_unit_group = UnitGroup.latest_assigned_version(course.family_name, current_user)
       redirect_unit_group ||= UnitGroup.latest_stable_version(course.family_name, locale: locale)
