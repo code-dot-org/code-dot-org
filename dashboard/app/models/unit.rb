@@ -522,12 +522,6 @@ class Unit < ApplicationRecord
     end
   end
 
-  def self.get_family_without_cache(family_name)
-    # This SQL string is not at risk for injection vulnerabilites because it's
-    # just a hardcoded string, so it's safe to wrap in Arel.sql
-    Unit.where(family_name: family_name).order(Arel.sql("properties -> '$.version_year' DESC"))
-  end
-
   def self.remove_from_cache(unit_name)
     script_cache&.delete(unit_name)
   end
