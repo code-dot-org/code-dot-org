@@ -23,12 +23,12 @@ class CoursesControllerTest < ActionController::TestCase
 
     @unit_group_regular = create(:unit_group, name: 'non-plc-course', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta)
 
-    @migrated_pl_unit = create(:script, is_migrated: true, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta)
+    @migrated_pl_unit = create(:script, is_migrated: true)
     @pl_unit_group_migrated = create(:unit_group, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
     create(:unit_group_unit, unit_group: @pl_unit_group_migrated, script: @migrated_pl_unit, position: 1)
     @migrated_pl_unit.reload
 
-    @unmigrated_unit = create(:script, is_migrated: false, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta)
+    @unmigrated_unit = create(:script, is_migrated: false)
     @unit_group_unmigrated = create(:unit_group, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta)
     create(:unit_group_unit, unit_group: @unit_group_unmigrated, script: @unmigrated_unit, position: 1)
   end
@@ -36,7 +36,7 @@ class CoursesControllerTest < ActionController::TestCase
   setup do
     sign_in @teacher
 
-    @migrated_unit = create(:script, is_migrated: true, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta)
+    @migrated_unit = create(:script, is_migrated: true)
     @unit_group_migrated = create(:unit_group, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta)
     create(:unit_group_unit, unit_group: @unit_group_migrated, script: @migrated_unit, position: 1)
 
