@@ -360,7 +360,8 @@ const DanceView: React.FunctionComponent<{
           // Use the specific channel if provided. Otherwise
           // just pass a dummy string as we expect to find a music
           // project in local storage.
-          (queryParams('music-channel') as string) || 'local-storage'
+          (queryParams('music-channel') as string) || 'local-storage',
+          queryParams('ai-generate') === 'true'
         )
         .then(() => setLoadedMusicProject(true));
     }

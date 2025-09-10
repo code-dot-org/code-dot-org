@@ -26,13 +26,14 @@ class ProjectPlayer {
   }
 
   // TODO: Support fetching by level + user ID?
-  async loadProject(channelId: string) {
+  async loadProject(channelId: string, useLocalStorage = false) {
     this.currentPlaybackEvents = null;
     this.eventMeasures = null;
     this.workspace.initHeadless();
 
     const {playbackEvents, packId, libraryName} = await this.loadMetadata(
-      channelId
+      channelId,
+      useLocalStorage
     );
 
     let library = MusicLibrary.getInstance();
@@ -76,11 +77,16 @@ class ProjectPlayer {
     return this.player.getBPM();
   }
 
-  private async loadMetadata(channelId: string): Promise<MusicMetadata> {
+  private async loadMetadata(
+    channelId: string,
+    useLocalStorage = false
+  ): Promise<MusicMetadata> {
     // Try to load from local storage if it exists
-    const metadataString = localStorage.getItem(cacheKey());
-    if (metadataString) {
-      return JSON.parse(metadataString) as MusicMetadata;
+    if (useLocalStorage) {
+      const metadataString = localStorage.getItem(cacheKey());
+      if (metadataString) {
+        return JSON.parse(metadataString) as MusicMetadata;
+      }
     }
 
     // Otherwise, load from server
