@@ -153,6 +153,7 @@ Dashboard::Application.routes.draw do
       resources :programming_classes, param: 'programming_class_key', constraints: {programming_class_key: /#{CurriculumHelper::KEY_CHAR_RE}+/o}, path: '/classes' do
         member do
           get :show, to: 'programming_classes#show_by_keys'
+          get :get_serialized, to: 'programming_classes#get_serialized'
         end
       end
     end
