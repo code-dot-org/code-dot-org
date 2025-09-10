@@ -49,7 +49,7 @@ class LtiV1Controller < ApplicationController
     begin
       write_cache(state_and_nonce[:state], state_and_nonce, 15.minutes)
     rescue => exception
-      Clients::LtiLogger.log_event('Error writing state and nonce to cache', {lti_integration_id: lti_integration[:id], exception: exception})
+      LtiLogger.log_event('Error writing state and nonce to cache', {lti_integration_id: lti_integration[:id], exception: exception})
       return render status: :internal_server_error
     end
 
@@ -101,7 +101,7 @@ class LtiV1Controller < ApplicationController
     begin
       cached_state_and_nonce = read_cache params[:state]
     rescue => exception
-      Clients::LtiLogger.log_event('Error reading state and nonce from cache', {exception: exception})
+      LtiLogger.log_event('Error reading state and nonce from cache', {exception: exception})
       return render status: :internal_server_error
     end
     if cached_state_and_nonce.nil? || (params[:state] != cached_state_and_nonce[:state]) || (decoded_jwt_no_auth[:nonce] != cached_state_and_nonce[:nonce])
@@ -251,7 +251,7 @@ class LtiV1Controller < ApplicationController
         details: message,
       }
     )
-    Clients::LtiLogger.log_event(
+    LtiLogger.log_event(
       message,
       {
         reason: reason,
@@ -324,7 +324,7 @@ class LtiV1Controller < ApplicationController
       nrps_url = params[:nrps_url]
     end
 
-    lti_advantage_client = Clients::LtiAdvantageClient.new(lti_integration.client_id, lti_integration.issuer)
+    lti_advantage_client = LtiAdvantageClient.new(lti_integration.client_id, lti_integration.issuer)
     begin
       nrps_response = lti_advantage_client.get_context_membership(nrps_url, resource_link_id)
     rescue
@@ -505,7 +505,7 @@ class LtiV1Controller < ApplicationController
   end
 
   private def log_unauthorized(event, attributes = {})
-    Clients::LtiLogger.log_event(event, attributes)
+    LtiLogger.log_event(event, attributes)
     unauthorized_status
   end
 

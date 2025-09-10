@@ -12,6 +12,23 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import moduleStylesFixed from '../AiTutor2ResponseFixed.module.scss';
 import moduleStylesShrink from '../AiTutor2ResponseShrink.module.scss';
 
+/** 
+ * We aren't currently using this but keeping this code around for now in case we want to put
+ * a similar hint UI somewhere else in the product in the near future.
+ * 
+ * added in PR #65737 
+ * 
+ * Usage looks like:
+ * 
+ *   const isAiTutor2HintEnabled = queryParams('show-ai-tutor2-hint') === 'true';
+ *   const [askAiTutor2, AiTutor2Response] = useAiTutor2(
+     isAiTutor2HintEnabled,
+     'hint'
+   );
+ 
+ * 
+ */
+
 export function useAiTutor2(
   isEnabled: boolean,
   type: AiTutor2MessageType,
