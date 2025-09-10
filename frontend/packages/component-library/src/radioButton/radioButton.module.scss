@@ -1,5 +1,6 @@
 @use '@code-dot-org/component-library-styles/mixins.scss' as mixins;
-@use '@code-dot-org/component-library-styles/typography.module.scss' as typography;
+@use '@code-dot-org/component-library-styles/typography.module.scss' as
+  typography;
 
 .radioButton {
   display: flex;
