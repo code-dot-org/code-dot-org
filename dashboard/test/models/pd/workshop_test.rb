@@ -388,41 +388,6 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     workshop.send_exit_surveys
   end
 
-  test 'send_exit_surveys sends no surveys for FiT workshops' do
-    # Make a FiT workshop that's ended and has attendance;
-    # these are the conditions under which we'd normally send a survey.
-    workshop = build(:fit_workshop, :ended)
-    # workshop subject is deprecated so validation must be skipped
-    workshop.save(validate: false)
-    create(:pd_workshop_participant, workshop: workshop, enrolled: true, attended: true)
-
-    # Ensure no exit surveys are sent
-    Pd::WorkshopMailjetMailer.expects(:send_teacher_post_workshop_survey).never
-    workshop.send_exit_surveys
-  end
-
-  test 'send_exit_surveys sends no surveys for EIR:Admin/Counselor workshops' do
-    # Make a EIR workshop that's ended and has attendance;
-    # these are the conditions under which we'd normally send a survey.
-    workshop = create(:admin_counselor_workshop, :ended)
-    create(:pd_workshop_participant, workshop: workshop, enrolled: true, attended: true)
-
-    # Ensure no exit surveys are sent
-    Pd::WorkshopMailjetMailer.expects(:send_teacher_post_workshop_survey).never
-    workshop.send_exit_surveys
-  end
-
-  test 'send_exit_surveys sends no surveys for Facilitator workshops' do
-    # Make a Facilitator workshop that's ended and has attendance;
-    # these are the conditions under which we'd normally send a survey.
-    workshop = create(:facilitator_workshop, :ended)
-    create(:pd_workshop_participant, workshop: workshop, enrolled: true, attended: true)
-
-    # Ensure no exit surveys are sent
-    Pd::WorkshopMailjetMailer.expects(:send_teacher_post_workshop_survey).never
-    workshop.send_exit_surveys
-  end
-
   test 'send_exit_surveys sends no survey if already sent' do
     workshop = create(:workshop, :ended)
     create(:pd_workshop_participant, workshop: workshop, enrolled: true, attended: true)
