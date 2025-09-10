@@ -105,7 +105,7 @@ end
 
 Given /^I am viewing a workshop in the workshop dashboard$/ do
   steps <<~GHERKIN
-    Given I am on "http://studio.code.org/pd/workshop_dashboard/workshops/#{@workshop_id}/temp"
+    Given I am on "http://studio.code.org/pd/workshop_dashboard/workshops/#{@workshop_id}"
   GHERKIN
 end
 

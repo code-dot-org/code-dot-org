@@ -153,6 +153,7 @@ Dashboard::Application.routes.draw do
       resources :programming_classes, param: 'programming_class_key', constraints: {programming_class_key: /#{CurriculumHelper::KEY_CHAR_RE}+/o}, path: '/classes' do
         member do
           get :show, to: 'programming_classes#show_by_keys'
+          get :get_serialized, to: 'programming_classes#get_serialized'
         end
       end
     end
@@ -259,6 +260,7 @@ Dashboard::Application.routes.draw do
       get '/users/gdpr_check', to: 'registrations#gdpr_check'
       get '/users/sign_up/finish_student_account', to: 'registrations#finish_student_account'
       get '/users/sign_up/finish_teacher_account', to: 'registrations#finish_teacher_account'
+      get '/users/personalization_information', to: 'registrations#personalization_information'
       patch '/dashboardapi/users', to: 'registrations#update'
       patch '/users/upgrade', to: 'registrations#upgrade'
       patch '/users/set_student_information', to: 'registrations#set_student_information'
