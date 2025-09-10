@@ -28,8 +28,8 @@ export interface RadioButtonProps
   size?: ComponentSizeXSToL;
   /** Optional aria-label for the radio input (consistency with Button) */
   ariaLabel?: string;
-  /** Label weight styling */
-  labelWeight?: 'thick' | 'thin';
+  /** Text thickness styling */
+  textThickness?: 'thick' | 'thin';g
   /** Custom className */
   className?: string;
   /** Children (Radio Button custom content) */
@@ -47,7 +47,7 @@ const RadioButton: React.FunctionComponent<RadioButtonProps> = ({
   className,
   children,
   ariaLabel,
-  labelWeight = 'thin',
+  textThickness = 'thin',
   ...HTMLAttributes
 }) => {
   const bodyTextSize = componentSizeToBodyTextSizeMap[size];
@@ -76,7 +76,7 @@ const RadioButton: React.FunctionComponent<RadioButtonProps> = ({
           semanticTag="span"
           className={classnames(
             moduleStyles.radioButtonLabel,
-            moduleStyles[`radioButtonLabel-${labelWeight}`],
+            moduleStyles[`radioButtonLabel-${textThickness}`],
           )}
           visualAppearance={bodyTextSize}
           noMargin
