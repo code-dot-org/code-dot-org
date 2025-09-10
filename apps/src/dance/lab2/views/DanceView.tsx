@@ -112,12 +112,12 @@ const DanceView: React.FunctionComponent<{
 
     return {
       analysis: [],
-      artist: 'AI Bot', // TODO: user's name? AI?
+      artist: 'A.I.', // TODO: user's name?
       bpm: musicProjectPlayer.current.getBpm().toString(),
       delay: '0',
       duration: 0, // Unused
       file: '', // Unused
-      title: 'My AI Remix', // TODO: what should this be?
+      title: 'My A.I. Remix', // TODO: what should this be?
       peaks: {},
     };
   }, [currentSongMetadata, loadedMusicProject]);
