@@ -8,7 +8,10 @@ import Typography from '@/typography';
 import moduleStyles from './radioButton.module.scss';
 
 export interface RadioButtonProps
-  extends Omit<InputHTMLAttributes<HTMLInputElement>, 'size' | 'type' | 'onChange' | 'checked' | 'name' | 'value'> {
+  extends Omit<
+    InputHTMLAttributes<HTMLInputElement>,
+    'size' | 'type' | 'onChange' | 'checked' | 'name' | 'value'
+  > {
   /** Radio Button checked state */
   checked: boolean;
   /** Radio Button onChange handler*/
@@ -29,7 +32,8 @@ export interface RadioButtonProps
   /** Optional aria-label for the radio input (consistency with Button) */
   ariaLabel?: string;
   /** Text thickness styling */
-  textThickness?: 'thick' | 'thin';g
+  textThickness?: 'thick' | 'thin';
+  g;
   /** Custom className */
   className?: string;
   /** Children (Radio Button custom content) */
