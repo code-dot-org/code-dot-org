@@ -1,4 +1,7 @@
-import Button from '@code-dot-org/component-library/button';
+import Button, {
+  ButtonColor,
+  ButtonType,
+} from '@code-dot-org/component-library/button';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -12,6 +15,8 @@ interface ValidationButtonProps {
   onStopValidation: () => void;
   isValidating: boolean;
   isValidateDisabled: boolean;
+  buttonColor?: ButtonColor;
+  buttonType?: ButtonType;
 }
 
 const ValidationButton: React.FunctionComponent<ValidationButtonProps> = ({
@@ -19,6 +24,8 @@ const ValidationButton: React.FunctionComponent<ValidationButtonProps> = ({
   onStopValidation,
   isValidating,
   isValidateDisabled = false,
+  buttonColor = 'black',
+  buttonType = 'secondary',
 }) => {
   const hasConditions = useAppSelector(
     state => state.lab.validationState?.hasConditions
@@ -43,14 +50,14 @@ const ValidationButton: React.FunctionComponent<ValidationButtonProps> = ({
     <Button
       text={codebridgeI18n.validate()}
       onClick={onValidate}
-      type={'secondary'}
+      type={buttonType}
       disabled={isValidateDisabled}
       iconLeft={{iconStyle: 'solid', iconName: 'clipboard-check'}}
       className={classNames(
         moduleStyles.buttonInstruction,
         moduleStyles.validationButton
       )}
-      color={'black'}
+      color={buttonColor}
       size={'s'}
       id={'uitest-validate-button'}
     />

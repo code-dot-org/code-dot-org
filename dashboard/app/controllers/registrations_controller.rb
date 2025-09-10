@@ -460,6 +460,14 @@ class RegistrationsController < Devise::RegistrationsController
     end
   end
 
+  #
+  # GET /users/personalization_information
+  #
+  def personalization_information
+    # Add in once data is ready
+    # @teacher_context = current_user.teacher_context || TeacherContext.new
+  end
+
   private def update_user_email
     return false if forbidden_change?(current_user, params)
 
