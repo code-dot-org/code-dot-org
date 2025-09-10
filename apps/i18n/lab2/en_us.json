@@ -1,5 +1,7 @@
 {
   "attach": "Attach",
+  "autosavedVersion": "Autosaved version",
+  "committedVersion": "Committed version",
   "cancel": "Cancel",
   "closeVersionHistory": "Close version history",
   "error": "Error",

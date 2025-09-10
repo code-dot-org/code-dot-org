@@ -6,6 +6,7 @@ import classNames from 'classnames';
 import React from 'react';
 
 import {INITIAL_VERSION_ID} from '@cdo/apps/lab2/constants';
+import lab2I18n from '@cdo/apps/lab2/locale';
 import {commonI18n} from '@cdo/apps/types/locale';
 
 import moduleStyles from './version-history-panel.module.scss';
@@ -31,17 +32,17 @@ const VersionHistoryRow: React.FunctionComponent<VersionHistoryRowProps> = ({
     label = commonI18n.currentVersion();
   }
 
-  let rowMarginStyle;
-  let isAutoSaved = false;
+  let rowMarginStyle, ariaLabel;
   if (versionId === INITIAL_VERSION_ID) {
     rowMarginStyle = moduleStyles.isInitialVersionRow;
   } else if (isLatest) {
     rowMarginStyle = moduleStyles.isCurrentVersionRow;
   } else if (comment) {
     rowMarginStyle = moduleStyles.isCommentRow;
+    ariaLabel = lab2I18n.committedVersion();
   } else {
     rowMarginStyle = moduleStyles.isRow;
-    isAutoSaved = true;
+    ariaLabel = lab2I18n.autosavedVersion();
   }
 
   return (
@@ -57,11 +58,12 @@ const VersionHistoryRow: React.FunctionComponent<VersionHistoryRowProps> = ({
             label={label}
             onChange={onChange}
             checked={isSelected}
+            aria-label={ariaLabel}
           />
-          {isAutoSaved && (
+          {ariaLabel === lab2I18n.autosavedVersion() && (
             <WithTooltip
               tooltipProps={{
-                text: 'Autosave version',
+                text: lab2I18n.autosavedVersion(),
                 size: 's',
                 tooltipId: `${versionId}-tooltip`,
                 direction: 'onBottom',
