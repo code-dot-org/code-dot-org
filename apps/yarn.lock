@@ -3897,11 +3897,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@code-dot-org/dance-party@portal:/Users/mike/dance-party::locator=blockly-mooc%40workspace%3A.":
-  version: 0.0.0-use.local
-  resolution: "@code-dot-org/dance-party@portal:/Users/mike/dance-party::locator=blockly-mooc%40workspace%3A."
+"@code-dot-org/dance-party@npm:2.0.0":
+  version: 2.0.0
+  resolution: "@code-dot-org/dance-party@npm:2.0.0"
+  checksum: 10/3c9f1bade0d4e7b859794de2227655c3d2c67d7ffc6c66376840de4dfa1ee6d79a1481ca85039704f4ce83a924b2918b2362253d62de5f5cf8b22a461ee63a99
   languageName: node
-  linkType: soft
+  linkType: hard
 
 "@code-dot-org/fonts@portal:../frontend/packages/fonts/::locator=blockly-mooc%40workspace%3A.":
   version: 0.0.0-use.local
