@@ -119,8 +119,8 @@ module AichatRubyTypes
     end
   end
 
-  # Special helper to simultate TypeScript index signatures.  Not these are limited
-  # To the signature and a further key can not be defined to be more constrained.
+  # Special helper to simultate TypeScript index signatures.  These are limited
+  # to the signature and a further key can not be defined to be more constrained.
   # Not used directly. The key function will return an instance.
   #
   # TypeScript:

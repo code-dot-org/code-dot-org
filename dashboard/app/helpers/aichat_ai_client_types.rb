@@ -188,7 +188,8 @@ module AichatAiClientTypes
   )
 
   # Recursivley validate a hash/struct to ensure that each JsonObjectSchema lists all its
-  # properties in the required array. This is currently a requirement for OpenAI.
+  # properties in the required array (i.e. can't have optional properties). This is
+  # currently a requirement for OpenAI.
   def self.validate_json_schema(obj, visited = Set.new)
     # Avoid infinite recursion with a visited set.
     return if visited.include?(obj.object_id)
@@ -197,7 +198,6 @@ module AichatAiClientTypes
     if obj.is_a?(JsonObjectSchema)
       property_names = obj[:properties].to_h.keys.map(&:to_s)
       property_names.each do |property_name|
-        # Note: You may want to check if obj[:required] is nil first
         unless obj[:required]&.include?(property_name)
           raise StandardError.new("JsonObjectSchema's 'required' array must include all properties but is missing '#{property_name}'")
         end
@@ -232,7 +232,7 @@ module AichatAiClientTypes
   #   systemInstructions?: MessagePart[];
 
   #   // Actual temperature passed to 3rd party AI API (e.g. 1.6)
-  #     temperature: number;
+  #   temperature: number;
 
   #   // Client type.
   #   clientType: number
