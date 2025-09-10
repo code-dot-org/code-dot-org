@@ -47,7 +47,7 @@ Feature: Header navigation bar
 
   Scenario: Teacher in Spanish should see 5 header links
     Given I create a teacher named "Pabla Profesora"
-    Given I am on "http://studio.code.org/teacher_dashboardhome/lang/es"
+    Given I am on "http://studio.code.org/teacher_dashboard/home/lang/es"
     Then check that I am on "http://studio.code.org/teacher_dashboard/home?lang=es"
     And I wait to see ".headerlinks"
     And I see "#header-teacher-home"
@@ -71,7 +71,7 @@ Feature: Header navigation bar
 
     # We click on each header link and see where we go
     And I press "header-teacher-home" to load a new page
-    Then check that I am on "http://studio.code.org/home"
+    Then check that I am on "http://studio.code.org/teacher_dashboard/home"
     And I press "header-teacher-courses" to load a new page
     Then check that I am on "http://studio.code.org/catalog"
     And I press "header-teacher-projects" to load a new page
