@@ -104,6 +104,15 @@ const theme = createTheme({
       lineHeight: 1.54,
       marginTop: '0.438rem', // 7px
     },
+    strong: {
+      fontWeight: 600,
+    },
+    extraStrong: {
+      fontWeight: 700,
+    },
+    em: {
+      fontStyle: 'italic',
+    },
   },
 });
 

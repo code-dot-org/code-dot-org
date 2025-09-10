@@ -9,6 +9,9 @@ export const TYPOGRAPHY_OVERRIDES: Components<Theme>['MuiTypography'] = {
       overline2: 'p',
       overline3: 'p',
       figcaption: 'figcaption',
+      em: 'em',
+      strong: 'strong',
+      extraStrong: 'strong',
     },
   },
   styleOverrides: {
