@@ -134,7 +134,11 @@ const InnerHTMLPreview = () => {
             file.folderId,
             source.folders
           );
-          files[fullFileName] = getUrlForFile(file, WEBLAB2_IMAGE_FILE_TYPES);
+          files[fullFileName] = getUrlForFile(
+            file,
+            parentOrigin,
+            WEBLAB2_IMAGE_FILE_TYPES
+          );
         }
       });
       // Handle HTML files. We do the following;
@@ -155,7 +159,7 @@ const InnerHTMLPreview = () => {
           source.folders
         );
 
-        updateLinksToNonHtmlFiles(doc, files, fullFileName, parentOrigin);
+        updateLinksToNonHtmlFiles(doc, files, fullFileName);
         updateLinksToHtmlFiles(doc, fullFileName);
         const updatedContents = doc.documentElement.outerHTML;
         const blob = new Blob([updatedContents], {type: 'text/html'});

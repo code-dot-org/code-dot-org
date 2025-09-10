@@ -8,8 +8,7 @@ import {IframeMessageType} from './constants';
 export const updateLinksToNonHtmlFiles = (
   doc: Document,
   filesToUrls: Record<string, string>,
-  fullFileName: string,
-  parentOrigin: string
+  fullFileName: string
 ) => {
   const imgLinks = doc.querySelectorAll('img[src]');
   imgLinks.forEach(link => {
@@ -19,7 +18,7 @@ export const updateLinksToNonHtmlFiles = (
     if (src && !(src.startsWith('http://') || src.startsWith('https://'))) {
       const filePath = findFilePathByRelativePath(src, fullFileName);
       const url = filesToUrls[filePath];
-      link.setAttribute('src', `${parentOrigin}${url}`);
+      link.setAttribute('src', url);
     }
   });
 
