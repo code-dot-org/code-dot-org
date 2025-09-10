@@ -518,29 +518,6 @@ class Services::LtiTest < ActiveSupport::TestCase
     assert_equal lti_section.followers.last, user_to_remove
   end
 
-  test 'should set lms_landing_opted_out to true when creating new users who are part of a restricted deployment' do
-    auth_id = "#{@lti_integration[:issuer]}|#{@lti_integration[:client_id]}|user-id-1"
-    user = create(:teacher)
-    create(:lti_authentication_option, user: user, authentication_id: auth_id)
-
-    section = create(:section, user: user)
-
-    lti_course = create(:lti_course, lti_integration: @lti_integration)
-    lti_section = create(:lti_section, lti_course: lti_course, section: section)
-    Policies::Lti.stubs(:issuer_accepts_resource_link?).returns(true)
-    parsed_response = Services::Lti.parse_nrps_response(@nrps_full_response, @id_token[:iss])
-    nrps_section = parsed_response[@lms_section_ids.first.to_s]
-
-    # Make the deployment restricted
-    LtiDeployment.any_instance.stubs(:restricted?).returns(true)
-
-    Services::Lti.sync_section_roster(@lti_integration, lti_section, nrps_section)
-
-    lti_section.followers.each do |follower|
-      assert_equal true, follower.student_user.lms_landing_opted_out
-    end
-  end
-
   test 'should update a user\'s name when syncing a section' do
     auth_id = "#{@lti_integration[:issuer]}|#{@lti_integration[:client_id]}|user-id-1"
     user = create(:teacher)

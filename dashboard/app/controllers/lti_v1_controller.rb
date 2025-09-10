@@ -221,18 +221,13 @@ class LtiV1Controller < ApplicationController
         redirect_to destination_url
       else
         user = Services::Lti.initialize_lti_user(decoded_jwt)
-        # If this is a restricted deployment, skip the account linking flow and
-        # immediately create the user and sign them in.
-        if deployment.restricted?
-          user.lms_landing_opted_out = true
-          user.save!
-          sign_in user
-          redirect_to destination_url and return
-        end
+
         # PartialRegistration removes the email address, so store it in a local variable first
         email_address = Services::Lti.get_claim(decoded_jwt, :email)
         Services::Lti.initialize_lms_landing_session(session, integration[:platform_name], 'new', user.user_type)
         PartialRegistration.persist_attributes(session, user)
+        # Store the deployment ID in the session, so we can check if it's a restricted deployment later
+        session[:deployment_id] = deployment.id
         publish_linking_page_visit(user, integration[:platform_name])
         render 'lti/v1/account_linking/landing', locals: {email: email_address} and return
       end

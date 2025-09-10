@@ -500,16 +500,6 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     # could confirm more things here
   end
 
-  test 'auth - create new user but skip account linking if user is part of restricted deployment' do
-    payload = get_valid_payload
-    jwt = create_jwt_and_stub(payload)
-    LtiDeployment.any_instance.stubs(:restricted?).returns(true)
-    post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
-    assert_response :redirect
-    user = LtiUserIdentity.find_by(subject: @subject).user
-    assert_equal true, user.lms_landing_opted_out
-  end
-
   test 'auth - given a deployment_id not in our system yet, create LtiDeployment' do
     payload = get_valid_payload
     jwt = create_jwt_and_stub(payload)

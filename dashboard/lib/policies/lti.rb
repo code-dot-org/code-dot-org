@@ -16,6 +16,7 @@ class Policies::Lti
 
   module DeploymentConfiguration
     RESTRICTED_DEPLOYMENTS = [
+      2, # TODO: Remove this after testing
       223 # LAUSD
     ]
   end

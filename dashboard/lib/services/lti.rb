@@ -212,11 +212,6 @@ module Services
             deployment.lti_user_identities << lti_user_identity
           end
 
-          # Check for restricted deployment here and set lms_landing_opted_out so the user isn't sent through the account linking flow
-          if deployment.restricted? && !user.lms_landing_opted_out
-            user.update!(lms_landing_opted_out: true) # will skip account linking
-          end
-
           Metrics::Events.log_event(
             user: user,
             event_name: 'lti_user_created',
