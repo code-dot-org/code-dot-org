@@ -46,3 +46,24 @@ end
     not_if {node['cdo-github-access'][file] == ''}
   end
 end
+
+# Use a Personal Access Token provisioned by the `deploy-code-org` user that has read permission to the `code-dot-org`
+# repository to authenticate the git clone/fetch/pull and git lfs pull operations carried out by the local build tasks.
+# The token is stored in an AWS Secret that is fetched by the UserData script and passed to the Chef client on first boot
+# `aws/cloudformation/bootstrap_chef_stack.sh.erb`
+if node['github_token'] && !node['github_token'].empty?
+  # Configure git credential helper for GitHub token
+  execute 'configure git credential helper for github token' do
+    command "git config --global credential.helper store"
+    user node[:current_user]
+    group node[:current_user]
+  end
+
+  file "#{node[:home]}/.git-credentials" do
+    content "https://#{node['github_token']}@github.com\n"
+    mode '0600'
+    user node[:current_user]
+    group node[:current_user]
+    sensitive true
+  end
+end
