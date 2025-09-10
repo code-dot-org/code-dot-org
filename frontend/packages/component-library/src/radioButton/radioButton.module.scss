@@ -1,3 +1,6 @@
+@use '@code-dot-org/component-library-styles/mixins.scss' as mixins;
+@use '@code-dot-org/component-library-styles/typography.module.scss' as typography;
+
 .radioButton {
   display: flex;
   gap: 10px;
@@ -47,6 +50,8 @@
     user-select: none;
     -webkit-user-select: none;
   }
+
+  // Label weights are defined per size below for consistency
 
   // Hover styles
   &:hover {
@@ -121,6 +126,15 @@
       height: 9.33px;
     }
   }
+
+  .radioButtonLabel-thick {
+    @include mixins.button-one-text;
+    margin-bottom: 0;
+  }
+  .radioButtonLabel-thin {
+    @include typography.body-one;
+    margin-bottom: 0;
+  }
 }
 
 .radioButton-m {
@@ -132,6 +146,15 @@
       width: 8px;
       height: 8px;
     }
+  }
+
+  .radioButtonLabel-thick {
+    @include mixins.button-two-text;
+    margin-bottom: 0;
+  }
+  .radioButtonLabel-thin {
+    @include typography.body-two;
+    margin-bottom: 0;
   }
 }
 
@@ -145,6 +168,15 @@
       height: 7.33px;
     }
   }
+
+  .radioButtonLabel-thick {
+    @include mixins.button-three-text;
+    margin-bottom: 0;
+  }
+  .radioButtonLabel-thin {
+    @include typography.body-three;
+    margin-bottom: 0;
+  }
 }
 
 .radioButton-xs {
@@ -156,5 +188,14 @@
       width: 6.67px;
       height: 6.67px;
     }
+  }
+
+  .radioButtonLabel-thick {
+    @include mixins.button-four-text;
+    margin-bottom: 0;
+  }
+  .radioButtonLabel-thin {
+    @include typography.body-four;
+    margin-bottom: 0;
   }
 }
