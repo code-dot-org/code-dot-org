@@ -26,7 +26,7 @@ class AichatOpenaiResponsesClient < AichatAiClient
 
   # Create request body.
   private def create_body(config, request, context = [])
-    if !config[:response].nil? && config[:response][:validation][:type] == 'jsonSchema'
+    if config.dig(:response, :validation, :type) == 'jsonSchema'
       response_json_schema = config[:response][:validation][:schema]
       text = {
         format: {
