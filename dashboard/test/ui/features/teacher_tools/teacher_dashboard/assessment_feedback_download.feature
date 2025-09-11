@@ -36,7 +36,7 @@ Feature: Using the assessments tab in the teacher dashboard to get feedback for 
   Scenario: Assessments tab does not have feedback download
    # Assign a unit without feedback
     When I sign in as "Teacher_Sally" and go home
-    Then I click selector "#section-options-dropdown-dropdown-button"
+    Then I click selector "#section-options-dropdown-dropdown-button" once I see it
     And I click selector "#ui-test-Section-settings" once I see it
     Then I wait until element "#uitest-section-name-setup" is visible
     And I press keys "testingSection" for element "#uitest-section-name-setup"
