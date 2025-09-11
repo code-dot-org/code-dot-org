@@ -39,6 +39,7 @@ npm-debug.log
 dashboard/brakeman_security_report.htm
 .rakeTasks
 /vendor/bundle
+/dashboard/engines/cdo_contentful/Gemfile.lock
 /dashboard/vendor/bundle
 /cookbooks/vendor/bundle
 
