@@ -51,16 +51,18 @@ end
 # repository to authenticate the git clone/fetch/pull and git lfs pull operations carried out by the local build tasks.
 # The token is stored in an AWS Secret that is fetched by the UserData script and passed to the Chef client on first boot
 # `aws/cloudformation/bootstrap_chef_stack.sh.erb`
-if node['github_token'] && !node['github_token'].empty?
+github_token = node['cdo-github-access']['github_token']
+unless github_token.empty?
   # Configure git credential helper for GitHub token
   execute 'configure git credential helper for github token' do
     command "git config --global credential.helper store"
     user node[:current_user]
     group node[:current_user]
+    not_if "git config --global --get credential.helper | grep -q store", user: node[:current_user]
   end
 
   file "#{node[:home]}/.git-credentials" do
-    content "https://#{node['github_token']}@github.com\n"
+    content "https://#{github_token}@github.com\n"
     mode '0600'
     user node[:current_user]
     group node[:current_user]
