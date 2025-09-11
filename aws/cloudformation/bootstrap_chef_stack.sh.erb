@@ -76,8 +76,9 @@ CHAIN=$(aws s3 cp $CURRENT/chain.pem - | replace_newline)
 KEY=$(aws s3 cp $CURRENT/key.pem - | replace_newline)
 <% end -%>
 
-<% if database && !rack_env?(:production) -%>
 apt-get install -y  jq
+
+<% if database && !rack_env?(:production) -%>
 DB_SECRET_NAME=${DatabaseSecretAdmin}
 DB_SECRET=$(aws --region $REGION secretsmanager get-secret-value --secret-id $DB_SECRET_NAME --version-stage AWSCURRENT | jq -r ".SecretString")
 DB_USERNAME=$(echo $DB_SECRET | jq -r ".username")
@@ -86,10 +87,6 @@ DB_PASSWORD=$(echo $DB_SECRET | jq -r ".password")
 
 # We're not using curly braces to expand ENVIRONMENT for complex reasons (this script is processed by CloudFormation !Sub).
 GITHUB_TOKEN=$(aws --region $REGION secretsmanager get-secret-value --secret-id "$ENVIRONMENT/cdo/github_token" --version-stage AWSCURRENT | jq -r ".SecretString")
-# TODO: remove debug
-echo "HelloJed"
-echo $GITHUB_TOKEN
-echo "ByeJed"
 
 # Customize Chef configuration.
 FIRST_BOOT=/etc/chef/first-boot.json
