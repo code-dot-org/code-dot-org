@@ -98,8 +98,9 @@ class AssignedCoursesAndScripts < ActiveSupport::TestCase
 
   describe 'assigned and section scripts' do
     let(:user) {create(:student)}
-    let(:single_script) {create(:script)}
-    let(:section_1) {create(:section, script: single_script, unit_group: unit_group)}
+    let(:single_unit_course) {create(:single_unit_course)}
+    let(:single_script) {single_unit_course.first_unit}
+    let(:section_1) {create(:section, script: single_script, unit_group: single_unit_course)}
     let(:section_2) {create(:section, unit_group: unit_group)}
     let(:unit_group_unit) {create(:script)}
     before do
@@ -119,7 +120,7 @@ class AssignedCoursesAndScripts < ActiveSupport::TestCase
       end
 
       context 'when the user is not assigned a script' do
-        let(:another_script) {create(:script)}
+        let(:another_script) {create(:single_unit_course).first_unit}
         subject(:assigned_script?) {user.assigned_script?(another_script)}
 
         it 'returns false' do
