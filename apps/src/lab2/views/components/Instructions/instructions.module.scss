@@ -62,7 +62,8 @@
   display: flex;
   flex-direction: column;
   min-height: 0;
-  border: 1px solid var(--borders-neutral-primary);
+  border-left: 1px solid var(--borders-neutral-primary);
+  border-top: 1px solid var(--borders-neutral-primary);
 
   h1, h2, h3, h4 {
     color: var(--text-neutral-primary);
