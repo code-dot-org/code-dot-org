@@ -11,9 +11,9 @@ test.describe('i18n', () => {
     await page.waitForURL('**/en-US/engineering/all-the-things**');
 
     // Wait until window.Localize is available and truthy
-    await page.waitForFunction(function () {
-      return !!window.Localize;
-    });
+    await expect
+      .poll(() => page.evaluate(() => !!window.Localize))
+      .toBeTruthy();
 
     const languageDropdown = page.locator(
       '[aria-label="Language selection dropdown"]',
