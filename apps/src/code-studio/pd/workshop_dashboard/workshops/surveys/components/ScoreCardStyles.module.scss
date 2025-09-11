@@ -92,9 +92,15 @@
 
   .breakdownBarGroup {
     min-width: 37.5rem;
+    position: relative;
+  }
+
+  .breakdownBarChartGroup {
+    display: flex;
+    justify-content: center;
   }
 }
 
-.breakdownCloseButton {
-  margin-left: auto;
+button.breakdownCloseButton {
+  align-self: flex-end;
 }

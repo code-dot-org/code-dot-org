@@ -35,13 +35,11 @@ const getRelativeTimeString = (date: Date): string => {
 };
 
 interface NotificationProps {
-  key: string;
   notification: AiDiffNotification | null;
   aiPromptClick?: (label: string, prompt: string) => void;
 }
 
 const Notification: React.FC<NotificationProps> = ({
-  key,
   notification,
   aiPromptClick,
 }) => {
@@ -60,7 +58,7 @@ const Notification: React.FC<NotificationProps> = ({
   };
 
   return (
-    <div className={styles.notification} key={key}>
+    <div className={styles.notification}>
       <FontAwesomeV6Icon
         iconName={notificationOrPlaceholder.iconName}
         iconStyle="solid"
@@ -74,24 +72,23 @@ const Notification: React.FC<NotificationProps> = ({
         data-testid={'icon-' + notificationOrPlaceholder.iconName}
       />
       <div className={styles.textAndLinks}>
-        <div
+        <BodyThreeText
+          noMargin
           className={classNames(
             styles.text,
             isLoading && skeletonizeContent.skeletonizeContent
           )}
         >
-          <BodyThreeText noMargin>
-            <StrongText>
-              {notificationOrPlaceholder.title}
-              {': '}
-            </StrongText>
-            {notificationOrPlaceholder.description}
-          </BodyThreeText>
-        </div>
+          <StrongText>
+            {notificationOrPlaceholder.title}
+            {': '}
+          </StrongText>
+          {notificationOrPlaceholder.description}
+        </BodyThreeText>
         <ol className={styles.links}>
           {notificationOrPlaceholder.hrefLinks?.length > 0 &&
-            notificationOrPlaceholder.hrefLinks.map(link => (
-              <li key={link.url}>
+            notificationOrPlaceholder.hrefLinks.map((link, index) => (
+              <li key={'url-' + index}>
                 <a
                   href={link.url}
                   target="_blank"
@@ -103,8 +100,8 @@ const Notification: React.FC<NotificationProps> = ({
               </li>
             ))}
           {notificationOrPlaceholder.aiPrompts?.length > 0 &&
-            notificationOrPlaceholder.aiPrompts.map(prompt => (
-              <li key={prompt.prompt}>
+            notificationOrPlaceholder.aiPrompts.map((prompt, index) => (
+              <li key={'ai-' + index}>
                 <button
                   onClick={() => {
                     if (aiPromptClick) {

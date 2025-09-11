@@ -35,12 +35,17 @@ class AichatGeminiClient < AichatAiClient
 
   # Create request body.
   private def create_body(config, request, context = [])
-    #TODO - Look at how model is accessed - it's available as config[:model].
+    if config.dig(:response, :validation, :type) == 'jsonSchema'
+      response_mime_type = config[:response][:mimeType]
+      response_json_schema = config[:response][:validation][:schema]
+    end
 
     body = {
       generationConfig: {
-        temperature: config[:temperature]
-      },
+        temperature: config[:temperature],
+        responseMimeType: response_mime_type,
+        responseJsonSchema: response_json_schema
+      }.compact, # Use compact to remove null responseMimeType / responseJsonSchema
       system_instruction: {
         parts: format_parts(config[:systemInstructions])
       },

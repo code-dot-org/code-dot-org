@@ -1,8 +1,9 @@
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
-import {createBlobUrlForFile, getFolderPath} from '@codebridge/utils';
+import {getUrlForFile, getFolderPath} from '@codebridge/utils';
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import {MultiFileSource} from '@cdo/apps/lab2/types';
+import {WEBLAB2_IMAGE_FILE_TYPES} from '@cdo/apps/weblab2/constants';
 
 import {IframeMessageType} from './constants';
 import {
@@ -133,7 +134,11 @@ const InnerHTMLPreview = () => {
             file.folderId,
             source.folders
           );
-          files[fullFileName] = createBlobUrlForFile(file);
+          files[fullFileName] = getUrlForFile(
+            file,
+            parentOrigin,
+            WEBLAB2_IMAGE_FILE_TYPES
+          );
         }
       });
       // Handle HTML files. We do the following;
