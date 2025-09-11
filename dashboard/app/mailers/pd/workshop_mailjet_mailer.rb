@@ -18,14 +18,7 @@ class Pd::WorkshopMailjetMailer
       organizer_email: organizer&.email || 'support@code.org',
       organizer_name: organizer&.name || 'Code.org',
       workshop_notes: workshop.notes || 'No additional information at this time.',
-      sessions: workshop.sessions.map do |session|
-        {
-          datetime: session.start_date_with_start_and_end_times_us_format,
-          format: session.session_format,
-          meeting_link: session.meeting_link || '',
-          location: session.formatted_location_details
-        }
-      end,
+      sessions: workshop.sessions.map(&:session_info_for_emails),
       workshop_subjects: workshop.course_offerings.present? ? workshop.course_offerings.map(&:display_name)&.join(', ') : workshop.subject,
       workshop_name: workshop.name.presence || "#{workshop.course} #{workshop.subject}",
       num_days: days
