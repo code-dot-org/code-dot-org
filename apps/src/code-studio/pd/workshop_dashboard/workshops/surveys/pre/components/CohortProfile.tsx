@@ -1,7 +1,10 @@
 import {Box} from '@mui/material';
 import React, {useMemo} from 'react';
 
-import {SurveyQuestions} from '../../../../WorkshopFormTemplate/types';
+import {
+  isQuestionType,
+  SurveyQuestions,
+} from '../../../../WorkshopFormTemplate/types';
 import {useWorkshopContext} from '../../../WorkshopLayout';
 import BarChartGroup, {
   BarChartGroupProps,
@@ -103,6 +106,11 @@ function buildBarCharts(questions: SurveyQuestions) {
         return acc;
       }, {});
 
+      // Filter out labels with no responses, and sort by our desired order
+      // Also, convert to short labels (e.g. "1st grade" -> "1")
+      // except for "N/A"
+      // If a label is missing from the results, assume 0 responses.
+      // (This ensures consistent x-axis across workshops.)
       const normalized = GRADE_LABELS_ORDER.filter(
         fullLabel => labelToCount[fullLabel]
       ).map(fullLabel => ({
@@ -134,7 +142,7 @@ function buildSelectCards(questions: SurveyQuestions) {
   for (const key of keys) {
     const q = questions[key];
 
-    if (!q || q.question_type !== 'singleSelect') continue;
+    if (!isQuestionType(q, 'singleSelect')) continue;
 
     const breakdown = q.results?.breakdown;
     if (!breakdown) continue;
