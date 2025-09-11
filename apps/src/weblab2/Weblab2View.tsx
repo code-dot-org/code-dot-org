@@ -5,7 +5,7 @@ import {css} from '@codemirror/lang-css';
 import {html} from '@codemirror/lang-html';
 import {javascript} from '@codemirror/lang-javascript';
 import {LanguageSupport} from '@codemirror/language';
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useMemo, useState} from 'react';
 
 import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
 import {LabProps, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
@@ -16,8 +16,10 @@ import {useAppDispatch, useAppSelector} from '../util/reduxHooks';
 
 import {WEBLAB2_EDITABLE_FILE_TYPES} from './constants';
 import {
+  DEFAULT_AI_TUTOR_MODE,
   getAiTutorContextPromise,
   getPromptNameFromMode,
+  getPromptOptionsFromModes,
 } from './helpers/aiTutorHelper';
 import FullScreenView from './layout/FullScreenView';
 import ShareView from './layout/ShareView';
@@ -78,7 +80,12 @@ const Weblab2View: React.FC<
       state.lab2Project.projectSources?.source as MultiFileSource | undefined
   );
   const [aiTutorSystemPromptName, setAiTutorSystemPromptName] =
-    useState<string>('weblab2-suggest');
+    useState<string>(() => {
+      const availableModes = levelProperties.availableAiTutorModes;
+      return getPromptNameFromMode(
+        availableModes ? availableModes[0] : undefined
+      );
+    });
 
   const {startSources} = useSource(
     defaultProject,
@@ -90,11 +97,16 @@ const Weblab2View: React.FC<
     state => !!state.lab2Project.projectSources?.source
   );
 
-  useEffect(() => {
-    setAiTutorSystemPromptName(
-      getPromptNameFromMode(levelProperties.availableAiTutorModes)
-    );
-  }, [levelProperties.availableAiTutorModes]);
+  const aiTutorSystemPromptSettings = useMemo(() => {
+    const availableModes = levelProperties.availableAiTutorModes || [
+      DEFAULT_AI_TUTOR_MODE,
+    ];
+    return {
+      systemPromptOptions: getPromptOptionsFromModes(availableModes),
+      selectedSystemPromptName: aiTutorSystemPromptName,
+      onSystemPromptChange: setAiTutorSystemPromptName,
+    };
+  }, [aiTutorSystemPromptName, levelProperties.availableAiTutorModes]);
 
   // Note: this causes Web Lab 2 to re-render when sources change.
   // Unfortunately, the way AI tutor is set up right now requires passing in a context
@@ -131,7 +143,7 @@ const Weblab2View: React.FC<
           startSources={startSources}
           levelProperties={levelProperties}
           aiTutorContextPromise={aiTutorContextPromise}
-          aiTutorSystemPromptName={aiTutorSystemPromptName}
+          aiTutorSystemPromptSettings={aiTutorSystemPromptSettings}
         />
       )}
     </div>

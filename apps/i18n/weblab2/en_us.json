@@ -1,13 +1,17 @@
 {
   "code": "Code",
   "desktop": "Desktop",
+  "guide": "Guide",
   "maximizePreview": "Maximize preview",
   "minimizePreview": "Minimize preview",
   "mobile": "Mobile",
   "navigateBack": "Navigate back",
   "navigateForward": "Navigate forward",
+  "outline": "Outline",
   "preview": "Preview",
+  "produce": "Produce",
   "refresh": "Refresh",
   "splitView": "Split View",
+  "suggest": "Suggest",
   "workspace": "Workspace"
 }

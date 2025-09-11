@@ -1,4 +1,5 @@
 import {Button} from '@code-dot-org/component-library/button';
+import {IconDropdown} from '@code-dot-org/component-library/dropdown';
 import {FontAwesomeV6IconProps} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Tabs, {TabsProps} from '@code-dot-org/component-library/tabs';
 import React, {useCallback, useEffect, useMemo, useState} from 'react';
@@ -51,6 +52,19 @@ interface ChatWorkspaceProps {
   channelId?: string;
   levelName?: string;
   hasStarterAssets?: boolean;
+
+  // Options for changing system prompt (used in Web Lab 2)
+  systemPromptSettings?: SystemPromptSettings;
+}
+
+export interface SystemPromptSettings {
+  systemPromptOptions: {
+    displayName: string;
+    icon: FontAwesomeV6IconProps;
+    promptName: string;
+  }[];
+  selectedSystemPromptName: string;
+  onSystemPromptChange: (promptName: string) => void;
 }
 
 enum WorkspaceTeacherViewTab {
@@ -75,6 +89,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   levelName,
   channelId,
   hasStarterAssets = false,
+  systemPromptSettings,
 }) => {
   if (multimodalEnabled && (!levelName || !channelId)) {
     console.warn(
@@ -255,6 +270,39 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     tabPanelsContainerClassName: moduleStyles.tabPanelsContainer,
   };
 
+  const availableModes = useMemo(() => {
+    if (!systemPromptSettings?.systemPromptOptions) {
+      return undefined;
+    }
+    return systemPromptSettings.systemPromptOptions.map(option => ({
+      value: option.promptName,
+      label: option.displayName,
+      icon: option.icon,
+    }));
+  }, [systemPromptSettings?.systemPromptOptions]);
+
+  const selectedMode = useMemo(() => {
+    if (!systemPromptSettings?.selectedSystemPromptName) {
+      return undefined;
+    } else {
+      const settingsForPrompt = systemPromptSettings.systemPromptOptions.find(
+        option =>
+          option.promptName === systemPromptSettings.selectedSystemPromptName
+      );
+      if (!settingsForPrompt) {
+        return undefined;
+      }
+      return {
+        value: systemPromptSettings.selectedSystemPromptName,
+        label: settingsForPrompt?.displayName,
+        icon: settingsForPrompt?.icon,
+      };
+    }
+  }, [
+    systemPromptSettings?.selectedSystemPromptName,
+    systemPromptSettings?.systemPromptOptions,
+  ]);
+
   return (
     <div id="chat-workspace-area" className={moduleStyles.chatWorkspace}>
       {selectedStudent ? (
@@ -278,6 +326,18 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
             chatButtons={chatButtons}
             hiddenContext={hiddenContext}
             multimodalAvailable={multimodalAvailable}
+          />
+        )}
+        {availableModes && selectedMode && (
+          <IconDropdown
+            onChange={option =>
+              systemPromptSettings?.onSystemPromptChange(option.value)
+            }
+            name={'chat-change-mode'}
+            options={availableModes}
+            selectedOption={selectedMode}
+            labelText={selectedMode.label}
+            size="xs"
           />
         )}
         <div className={moduleStyles.buttonRow}>
