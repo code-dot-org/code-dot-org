@@ -25,11 +25,6 @@ class UnitTest < ActiveSupport::TestCase
     @pl_unit_in_unit_group.reload
     @pl_unit_group.reload
 
-    @unit_2017 = create(:script, name: 'script-2017', family_name: 'family-cache-test')
-    create(:single_unit_course, unit: @unit_2017, family_name: 'family-cache-test', version_year: '2017')
-    @unit_2018 = create(:script, name: 'script-2018', family_name: 'family-cache-test')
-    create(:single_unit_course, unit: @unit_2018, family_name: 'family-cache-test', version_year: '2018')
-
     @csf_unit = create(:csf_script, :in_single_unit_course, name: 'csf1')
     @csd_unit = create(:csd_script, :in_single_unit_course, name: 'csd1')
     @csp_unit = create(:csp_script, :in_single_unit_course, name: 'csp1')
@@ -304,16 +299,13 @@ class UnitTest < ActiveSupport::TestCase
     assert_nil csp1_2018.redirect_to_unit_url(student)
   end
 
-  test 'redirect_to_unit_url returns unit url of latest assigned unit version in family for unit belonging to course family' do
+  test 'redirect_to_unit_url returns unit url of latest assigned unit version in family for unit belonging to single-unit course family' do
     Unit.any_instance.stubs(:can_view_version?).returns(true)
     student = create(:student)
-    csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017')
-    csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp')
-    create(:unit_group_unit, unit_group: csp_2017, script: csp1_2017, position: 1)
-    CourseOffering.add_course_offering(csp_2017)
-    csp_2018 = create(:unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018')
-    csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp')
-    create(:unit_group_unit, unit_group: csp_2018, script: csp1_2018, position: 1)
+    csp1_2017 = create(:single_unit_course, name: 'csp-2017', family_name: 'csp', version_year: '2017').first_unit
+    CourseOffering.add_course_offering(csp1_2017.original_unit_group)
+    csp_2018 = create(:single_unit_course, name: 'csp-2018', family_name: 'csp', version_year: '2018')
+    csp1_2018 = csp_2018.first_unit
     CourseOffering.add_course_offering(csp_2018)
     section = create(:section, unit_group: csp_2018)
     section.students << student
@@ -321,21 +313,6 @@ class UnitTest < ActiveSupport::TestCase
     csp1_2018.reload
     csp1_2017.reload
     assert_equal csp1_2018.link, csp1_2017.redirect_to_unit_url(student)
-  end
-
-  test 'redirect_to_unit_url returns unit url of latest assigned unit version in family for unit not belonging to course family' do
-    Unit.any_instance.stubs(:can_view_version?).returns(true)
-    student = create(:student)
-    courseg_2017 = create(:script, name: 'courseg-2017', family_name: 'courseg')
-    create(:single_unit_course, unit: courseg_2017, family_name: 'courseg', version_year: '2017')
-    CourseOffering.add_course_offering(courseg_2017.original_unit_group)
-    courseg_2018 = create(:script, name: 'courseg-2018', family_name: 'courseg')
-    create(:single_unit_course, unit: courseg_2018,  family_name: 'courseg', version_year: '2018')
-    CourseOffering.add_course_offering(courseg_2018.original_unit_group)
-    section = create(:section, script: courseg_2018)
-    section.students << student
-
-    assert_equal courseg_2018.link, courseg_2017.redirect_to_unit_url(student)
   end
 
   class CanViewVersion < ActiveSupport::TestCase
@@ -407,11 +384,11 @@ class UnitTest < ActiveSupport::TestCase
       assert @courseq_2017.can_view_version?(@student)
     end
 
-    test 'can_view_version? is true if student has progress in unit group unit belongs to' do
+    test 'can_view_version? is true if student has progress in unit group that unit belongs to' do
       unit_group = create(:unit_group, family_name: 'unit-fam')
-      unit1 = create(:script, name: 'unit1', family_name: 'unit-fam')
+      unit1 = create(:script, name: 'unit1')
       create(:unit_group_unit, unit_group: unit_group, script: unit1, position: 1)
-      unit2 = create(:script, name: 'unit2', family_name: 'unit-fam')
+      unit2 = create(:script, name: 'unit2')
       create(:unit_group_unit, unit_group: unit_group, script: unit2, position: 2)
       @student.scripts << unit1
       unit_group.reload
@@ -471,8 +448,8 @@ class UnitTest < ActiveSupport::TestCase
 
   test 'banner image' do
     assert_nil Unit.find_by_name('flappy').banner_image
-    course1_unit = create(:script, name: 'course1', family_name: 'course1')
-    course2_unit = create(:script, name: 'course2', family_name: 'course2')
+    course1_unit = create(:script, name: 'course1')
+    course2_unit = create(:script, name: 'course2')
     assert_equal 'banner_course1.jpg', course1_unit.banner_image
     assert_equal 'banner_course2.jpg', course2_unit.banner_image
     assert_nil Unit.find_by_name('csf1').banner_image
@@ -762,17 +739,13 @@ class UnitTest < ActiveSupport::TestCase
   end
 
   test 'summarize includes show_course_unit_version_warning' do
-    csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017')
-    csp1_2017 = create(:script, name: 'csp1-2017')
-    csp1_2017_ugu = create(:unit_group_unit, unit_group: csp_2017, script: csp1_2017, position: 1)
-    csp_2017.reload
-    csp1_2017.reload
+    csp_2017 = create(:unit_group, :with_units, name: 'csp-2017', family_name: 'csp', version_year: '2017')
+    csp1_2017 = csp_2017.first_unit
+    csp1_2017_ugu = csp_2017.default_unit_group_units.first
 
-    csp_2018 = create(:unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018')
-    csp1_2018 = create(:script, name: 'csp1-2018')
-    csp1_2018_ugu = create(:unit_group_unit, unit_group: csp_2018, script: csp1_2018, position: 1)
-    csp_2018.reload
-    csp1_2018.reload
+    csp_2018 = create(:unit_group, :with_units, name: 'csp-2018', family_name: 'csp', version_year: '2018')
+    csp1_2018 = csp_2018.first_unit
+    csp1_2018_ugu = csp_2018.default_unit_group_units.first
 
     refute csp1_2017.summarize(unit_group_unit: csp1_2017_ugu)[:show_course_unit_version_warning]
 
@@ -790,22 +763,15 @@ class UnitTest < ActiveSupport::TestCase
   end
 
   test 'summarize only shows one version warning' do
-    csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017')
-    csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp1', version_year: '2017')
-    create(:unit_group_unit, unit_group: csp_2017, script: csp1_2017, position: 1)
-    csp_2017.reload
-    csp1_2017.reload
-
-    csp_2018 = create(:unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018')
-    csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp1', version_year: '2018')
-    csp1_2018_ugu = create(:unit_group_unit, unit_group: csp_2018, script: csp1_2018, position: 1)
-    csp_2018.reload
-    csp1_2018.reload
+    csp1_2017 = create(:single_unit_course, name: 'csp-2017', family_name: 'csp', version_year: '2017').first_unit
+    csp_2018 = create(:single_unit_course, name: 'csp-2018', family_name: 'csp', version_year: '2018')
+    csp1_2018 = csp_2018.first_unit
+    csp1_2018_ugu = csp_2018.default_unit_group_units.first
 
     user = create(:student)
     create(:user_script, user: user, script: csp1_2017)
-    assert csp1_2018.summarize(true, user, unit_group_unit: csp1_2018_ugu)[:show_course_unit_version_warning]
-    refute csp1_2018.summarize(true, user, unit_group_unit: csp1_2018_ugu)[:show_script_version_warning]
+    refute csp1_2018.summarize(true, user, unit_group_unit: csp1_2018_ugu)[:show_course_unit_version_warning]
+    assert csp1_2018.summarize(true, user, unit_group_unit: csp1_2018_ugu)[:show_script_version_warning]
   end
 
   test 'summarize includes versions for single-unit course' do

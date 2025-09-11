@@ -79,7 +79,7 @@ class ScriptLevelsController < ApplicationController
     # Check if the script or current level is deprecated
     level_is_deprecated = @script_level&.level_deprecated?
     if @script.is_deprecated || level_is_deprecated
-      @deprecated_course_name = @script.name
+      @deprecated_curriculum_name = @script.name
       return render 'errors/deprecated_course'
     end
 
@@ -159,7 +159,6 @@ class ScriptLevelsController < ApplicationController
         redirect_to script_path(redirect_info[:redirect_unit]) + "?redirect_warning=true"
         return
       end
-      return
     end
 
     canonical_path = build_script_level_path(@script_level, unit_group_unit: @unit_group_unit, **@extra_params)
@@ -663,7 +662,7 @@ class ScriptLevelsController < ApplicationController
   private def get_redirect_info(unit, locale, unit_group: nil)
     return nil unless unit
 
-    unit_group ||= script.original_unit_group
+    unit_group ||= script.get_original_unit_group
 
     if unit_group&.single_unit_course?
       redirect_unit_group = UnitGroup.latest_assigned_version(unit_group.family_name, current_user)

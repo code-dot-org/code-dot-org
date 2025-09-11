@@ -110,10 +110,10 @@ class UnitOverviewHeader extends Component {
       !dismissedRedirectWarning(courseName || scriptName);
 
     let versionWarningDetails;
-    if (showScriptVersionWarning) {
-      versionWarningDetails = i18n.wrongCourseVersionWarningDetails();
-    } else if (showCourseUnitVersionWarning) {
+    if (showCourseUnitVersionWarning) {
       versionWarningDetails = i18n.wrongUnitVersionWarningDetails();
+    } else if (showScriptVersionWarning) {
+      versionWarningDetails = i18n.wrongCourseVersionWarningDetails();
     }
 
     return (

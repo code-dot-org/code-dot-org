@@ -1266,9 +1266,18 @@ class Unit < ApplicationRecord
         }
       end
 
-      has_older_course_progress = unit_group_unit&.cached_unit_group.try(:has_older_version_progress?, user)
-
       user_unit = user && user_scripts.find_by(user: user)
+
+      show_script_version_warning = false
+      show_course_unit_version_warning = false
+      has_older_course_progress = unit_group_unit&.cached_unit_group.try(:has_older_version_progress?, user)
+      if has_older_course_progress
+        if unit_group_unit.cached_unit_group&.single_unit_course?
+          show_script_version_warning = !user_unit&.version_warning_dismissed
+        else
+          show_course_unit_version_warning = !unit_group_unit.cached_unit_group&.has_dismissed_version_warning?(user)
+        end
+      end
 
       # If the current user is assigned to this unit, get the section
       # that assigned it.
@@ -1313,8 +1322,8 @@ class Unit < ApplicationRecord
         curriculum_path: curriculum_path,
         announcements: localized_announcements,
         age_13_required: logged_out_age_13_required?,
-        show_course_unit_version_warning: !unit_group_unit&.cached_unit_group&.has_dismissed_version_warning?(user) && has_older_course_progress,
-        show_script_version_warning: !user_unit&.version_warning_dismissed && has_older_course_progress && unit_group_unit&.cached_unit_group&.single_unit_course?,
+        show_course_unit_version_warning: show_course_unit_version_warning,
+        show_script_version_warning: show_script_version_warning,
         course_versions: summarize_course_versions(user, locale_code, unit_group: unit_group_unit&.cached_unit_group),
         supported_locales: supported_locales,
         section_hidden_unit_info: section_hidden_unit_info(user),
