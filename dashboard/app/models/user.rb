@@ -1761,7 +1761,8 @@ class User < ApplicationRecord
     end
 
     if new_level_completed && script_id
-      User.track_script_progress(user_id, script_id)
+      unit_group_id = script.get_original_unit_group&.id
+      User.track_script_progress(user_id, script_id, unit_group_id)
     end
 
     if new_csf_level_perfected && pairing_user_ids.blank? && !is_navigator
@@ -1799,9 +1800,9 @@ class User < ApplicationRecord
 
   # This method is meant to indicate a user has made progress (i.e. made a milestone
   # post on a particular level) in a script
-  def self.track_script_progress(user_id, script_id)
+  def self.track_script_progress(user_id, script_id, unit_group_id = nil)
     unit = Unit.get_from_cache(script_id)
-    unit_group_id = unit.get_original_unit_group&.id
+    unit_group_id ||= unit.get_original_unit_group&.id
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
       user_script = UserScript.where(user_id: user_id, script_id: script_id, unit_group_id: unit_group_id).first_or_create!
       time_now = Time.now
