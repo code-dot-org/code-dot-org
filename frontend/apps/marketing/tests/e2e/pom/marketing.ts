@@ -76,25 +76,24 @@ export class MarketingPage {
   }
 
   async goto(subPath: string) {
+    await this.loadFonts();
+
     const response = await this.page.goto(`${this.getBasePath()}${subPath}`);
 
-    await this.loadFonts();
+    await this.page.evaluate(() => window.__fontsLoadedPromise);
 
     return response;
   }
 
   async loadFonts() {
-    // Inject Font Loader to the browser context and wait for fonts to be loaded
-    await this.page.evaluate(
-      ({fn, fonts}) => {
-        const injectedLoadFonts = new Function(`return (${fn})`)();
-
-        return injectedLoadFonts(fonts).then(() =>
-          console.log('[Test Runner] all fonts loaded!'),
-        );
-      },
-      {fn: loadFonts.toString(), fonts: FONT_FAMILY_NAMES},
-    );
+    // Inject Font Loader script to the browser context and wait for fonts to be loaded
+    await this.page.addInitScript({
+      content: `
+      window.__fontsLoadedPromise = (${loadFonts.toString()})(${JSON.stringify(FONT_FAMILY_NAMES)}).then(() => {
+        console.log('[Test Runner] all fonts loaded!');
+      });
+      `,
+    });
   }
 
   async getMetatag(name: string) {

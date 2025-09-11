@@ -24,7 +24,6 @@ export default defineConfig<EyesFixture>({
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'retain-on-failure',
-    bypassCSP: true,
     eyesConfig: {
       appName: 'Marketing',
       matchLevel: 'Strict',
