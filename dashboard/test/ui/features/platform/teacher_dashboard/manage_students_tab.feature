@@ -6,7 +6,7 @@ Feature: Using the manage students tab of the teacher dashboard
 
     Given I create a teacher-associated under-13 student in Colorado named "Student" after CAP start
     And I sign in as "Teacher_Student" and go home
-    Then I click selector "#section-options-dropdown-dropdown-button"
+    Then I click selector "#section-options-dropdown-dropdown-button" once I see it
     And I click selector "#ui-test-Roster" once I see it
 
     # Test the US state Bulk Set modal
