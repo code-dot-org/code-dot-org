@@ -1,3 +1,5 @@
+require "ostruct"
+
 # Super-WIP module that implements a bespoke DSL (domain specific language) that I'm simply
 # calling RubyTypes.  This DSL was designed to mimic defining TypeScript types in a way that
 # will raise a runtime error when using a type incorrectly.  As the main goal of this code is
@@ -67,7 +69,7 @@ module AichatRubyTypes
     # so we use is_a?(Class to catch this case.
     if type.is_a?(Class)
       # If an interface, we check that the value is an instance of that stuct.
-      raise_or_notify_type_error("#{AichatRubyTypes.stringify_type_local.call(value)} does not match type: #{type}#{key.nil? ? "" : " for key=#{key}"}") unless value.is_a?(type)
+      raise_or_notify_type_error("#{AichatRubyTypes.stringify_type(value)} does not match type: #{type}#{key.nil? ? "" : " for key=#{key}"}") unless value.is_a?(type)
 
     # For all instances of Type-derived classes, we call its assert_value_is_type
     # to do the assertion.
@@ -80,10 +82,16 @@ module AichatRubyTypes
     end
   end
 
-  # These are the operators we need to add to Interface which is different
+  # These are the methods we need to add to Interface which is different
   # from Type.  Type-derived classes are compared to values as instances
   # (StringType, NumberType, OrType) but Interface is compared directly (not instantiated).
-  module InterfaceOperators
+  module InterfaceMethods
+    def as_json(*_args)
+      # Convert Struct/OpenStruct to a hash, removing nil values.
+      # I.e. Optional() becomes nil but should be removed from JSON)
+      to_h.compact
+    end
+
     # Add struct methods when creating an Interface.
     def self.included(base)
       base.extend(StructMethods)
@@ -111,14 +119,134 @@ module AichatRubyTypes
     end
   end
 
-  # Interace is a function that takes property names and types and creates a new "struct derived"
+  # Special helper to simulate TypeScript index signatures.  These are limited
+  # to the signature and a further key can not be defined to be more constrained.
+  # Not used directly. The key function will return an instance.
+  #
+  # TypeScript:
+  #  interface SimpleProperties {
+  #    [key: string]: SimplePropertySchema | SimpleArraySchema | SimpleObjectSchema;
+  #  }
+  # Ruby:
+  #   SimpleProperties = Interface(
+  #    key[string],  SimplePropertySchema | SimpleArraySchema | SimpleObjectSchema
+  #  )
+  class KeyType
+    attr_reader :type
+
+    def [](type)
+      @type = type
+      self
+    end
+  end
+
+  # Returns an instance of KeyType to be used like
+  # `key[string]` to emulate `[key: string]`.
+  def key
+    KeyType.new
+  end
+
+  # We technically can't define a type (really a constant)
+  # after using it so this is a problem with any circular
+  # references.  So we have to create a forward ref in these
+  # cases.
+  class ForwardRefType < Type
+    attr_accessor :type
+
+    def type_string
+      "#{@type.type_string}?"
+    end
+
+    def value_is_type?(value)
+      @type.value_is_type?(value)
+    end
+  end
+
+  class ForwardRefToImplement
+    attr_accessor :forward_ref
+
+    def initialize(forward_ref)
+      @forward_ref = forward_ref
+    end
+  end
+
+  # The ForwardRef/ForwardRef() function to return an instance of ForwardRefType.
+  # We use a lambda to get around rubocops insistence that methods need to be snake-case.
+  define_method(
+    :ForwardRef,
+    lambda do |type = nil|
+      if type.nil?
+        # If called with no type create a forward ref.
+        ForwardRefType.new
+      else
+        # Otherwise, wrap the ref to signal to Interface that it is implementing
+        # the forward ref and needs to add the type.  We'll check if the first
+        # param to Interface is ForwardRefToImplement.
+        ForwardRefToImplement.new(type)
+      end
+    end
+  )
+
+  # Interface is a function that takes property names and types and creates a new "struct-derived"
   # class that will then automate type assertion whenever a new instance of the struct is created.
-  # We use a lambda to get around rubocops insistence that methods need to by snake-case.
+  # We use a lambda to get around rubocops insistence that methods need to be snake-case.
   define_method(
     :Interface,
-    lambda do |*fields_and_types|
-      fields = []
-      types = {}
+  lambda do |*fields_and_types|
+    fields = []
+    types = {}
+
+    # Signal that we should complete the forward ref
+    if fields_and_types[0].is_a?(ForwardRefToImplement)
+      forward_ref = fields_and_types[0].forward_ref
+      # Remove the first item since the first value is the forward ref.
+      fields_and_types.shift
+    end
+
+    # If we passed in a key[SomeType] then we have a special case of index signatures
+    # where we allow any number of key/value pairs as long as the key and type match
+    # e.g.
+    # SimpleProperties = Interface(
+    #   key[SomeType],  SomeOtherType
+    # )
+    if fields_and_types[0].is_a?(KeyType)
+      key_type = fields_and_types[0]
+      value_type = fields_and_types[1]
+
+      if fields_and_types.length == 1
+        raise_or_notify_type_error("interface is missing value for index signature key[#{key_type.type}],  missingOtherType")
+      elsif fields_and_types.length > 2
+        raise_or_notify_type_error("interface with index signature can not have further keys to be further constrained")
+      elsif !key_type.type.is_a?(StringType)
+        raise_or_notify_type_error("interface with index signature can only be set with key[string] (i.e. symbol in ruby)")
+      end
+
+      # Create and return the actual open struct-derived class.
+      new_class = Class.new(OpenStruct) do
+        include InterfaceMethods
+        @value_type = value_type
+
+        class << self
+          attr_reader :value_type
+        end
+
+        # Initialize the struct based on keyword args, asserting that values for each of the
+        # args matches the type signature.
+        def initialize(**kwargs)
+          value_type = self.class.value_type
+
+          kwargs.each do |name, value|
+            AichatRubyTypes.assert_value_is_type(value, value_type, name)
+          end
+          super(**kwargs)
+        end
+      end
+
+      forward_ref.type = new_class if forward_ref
+
+      new_class
+
+    else
 
       # Every even parameter is the field (property) name, and every odd is the type.
       # Iterate through them and build an array of field names and a hash of field name
@@ -129,9 +257,9 @@ module AichatRubyTypes
         types[field] = type
       end
 
-      # Create and return the actual struct derived class.
-      Class.new(Struct.new(*fields, keyword_init: true)) do
-        include InterfaceOperators
+      # Create and return the actual struct-derived class.
+      new_class = Class.new(Struct.new(*fields, keyword_init: true)) do
+        include InterfaceMethods
         @types = types
 
         class << self
@@ -149,15 +277,21 @@ module AichatRubyTypes
           super(**kwargs)
         end
       end
+
+      forward_ref.type = new_class if forward_ref
+
+      new_class
+
     end
-  )
+  end
+)
 
   # An optional type. Not used directly.  The Optional() function returns an instance.
   class OptionalType < Type
     attr_accessor :type
 
     def type_string
-      "#{type.type_string}?"
+      "#{@type.type_string}?"
     end
 
     def initialize(type)
@@ -171,6 +305,7 @@ module AichatRubyTypes
 
   # The Optional() function to return an instance of OptionalType.
   # We use a lambda to get around rubocops insistence that methods need to by snake-case.
+  #TODO - make optional args with ? instead of Optional() e.g. arg?, number
   define_method(
     :Optional,
     lambda do |type|
@@ -255,5 +390,45 @@ module AichatRubyTypes
     NumberType.new
   end
 
-  module_function :string, :number, :Optional, :Interface
+  # A boolean type.  Can be initialized to accept either true or false (no parameter)
+  # or a given value (boolean as parameter). Not used directly.  The boolean
+  # function returns an instance.
+  class BooleanType < Type
+    attr_accessor :boolean_contents
+
+    def type_string
+      @boolean_contents.nil? ? 'boolean' : @boolean_contents.to_s
+    end
+
+    def initialize(boolean_contents = nil)
+      @boolean_contents = boolean_contents
+    end
+
+    def value_is_type?(value)
+      (value.is_a?(TrueClass) || value.is_a?(FalseClass)) && (@boolean_contents.nil? || @boolean_contents == value)
+    end
+  end
+
+  # The boolean function to return an instance of BooleanType.
+  def boolean(boolean_contents = nil)
+    BooleanType.new(boolean_contents)
+  end
+
+  # A null (nil) type.  Not used directly.  The null function returns an instance.
+  class NullType < Type
+    def type_string
+      'null'
+    end
+
+    def value_is_type?(value)
+      value.is_a?(NilClass)
+    end
+  end
+
+  # The null function to return an instance of NullType.
+  def null
+    NullType.new
+  end
+
+  module_function :string, :number, :boolean, :null, :key, :Optional, :Interface, :ForwardRef
 end
