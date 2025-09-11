@@ -1,6 +1,7 @@
 import Alert from '@code-dot-org/component-library/alert';
 import {Button} from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Heading2} from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
@@ -367,29 +368,45 @@ const VersionHistoryPanel: React.FunctionComponent<
                 <FontAwesomeV6Icon iconName="spinner" animationType="spin" />
               </div>
             )}
-            {!isLatestVersion(selectedVersion) && !viewAsUserId && (
+          </div>
+        </>
+      )}
+      {!isLatestVersion(selectedVersion) && (
+        <div className={moduleStyles.publishCurrentVersionPanel}>
+          <div className={moduleStyles.buttonContainer}>
+            <Button
+              text={commonI18n.cancel()}
+              size={'s'}
+              onClick={handleCancel}
+              disabled={versionLoading || latestVersion === selectedVersion}
+              className={moduleStyles.versionButton}
+              type={'secondary'}
+              color="black"
+            />
+            {!viewAsUserId && (
               <Button
                 text={commonI18n.restore()}
                 size={'s'}
                 onClick={restoreSelectedVersion}
                 disabled={versionLoading || latestVersion === selectedVersion}
-                className={moduleStyles.footerButton}
+                className={moduleStyles.versionButton}
                 type={'primary'}
               />
             )}
-            {!isLatestVersion(selectedVersion) && (
-              <Button
-                text={commonI18n.cancel()}
-                size={'s'}
-                onClick={handleCancel}
-                disabled={versionLoading || latestVersion === selectedVersion}
-                className={moduleStyles.footerButton}
-                type={'secondary'}
-                color="black"
-              />
-            )}
           </div>
-        </>
+        </div>
+      )}
+      {isLatestVersion(selectedVersion) && (
+        <div className={moduleStyles.publishCurrentVersionPanel}>
+          <div className={moduleStyles.publishCurrentVersionPanelHeader}>
+            <Heading2
+              className={moduleStyles.headerText}
+              visualAppearance={'body-three'}
+            >
+              Publish
+            </Heading2>
+          </div>
+        </div>
       )}
     </div>
   );

@@ -115,6 +115,8 @@ $space-xl: 10px;
 
   .footerButton {
     margin: $space-xs;
+    width: 100%;
+    height: 32px;
   }
 }
 
@@ -130,4 +132,46 @@ $space-xl: 10px;
 
 .autoSavedIcon {
   color: var(--text-neutral-placeholder);
+}
+
+.publishCurrentVersionPanel {
+  border-top: 1px solid var(--borders-neutral-primary);
+  border-left: 1px solid var(--borders-neutral-primary);
+  background: var(--background-neutral-primary);
+
+  .buttonContainer {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    gap: 8px;
+  }
+
+  .versionButton {
+    width: 100%;
+    height: 32px;
+  }
+
+  .leftButton {
+    margin-right: auto;
+  }
+
+  .rightButton {
+    margin-left: auto;
+  }
+}
+
+
+.publishCurrentVersionPanelHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 8px;
+  background: var(--background-neutral-primary);
+  border-bottom: 1px solid var(--borders-neutral-primary);
+}
+
+.headerText {
+  flex: 1;
+  text-align: center;
+  margin: 0;
 }
