@@ -226,7 +226,7 @@ class LtiV1Controller < ApplicationController
         Services::Lti.initialize_lms_landing_session(session, integration[:platform_name], 'new', user.user_type)
         PartialRegistration.persist_attributes(session, user)
         # Store the deployment ID in the session, so we can check if it's a restricted deployment later
-        session[:deployment_id] = deployment.id
+        session[:lti_deployment_id] = deployment.id
         publish_linking_page_visit(user, integration[:platform_name])
         render 'lti/v1/account_linking/landing', locals: {email: email_address} and return
       end

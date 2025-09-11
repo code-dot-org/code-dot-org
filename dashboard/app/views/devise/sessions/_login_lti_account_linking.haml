@@ -5,7 +5,7 @@
 %p#linking-page-description= t('lti.account_linking.linking_page_description')
 %div#flash-messages= show_flashes.html_safe
 
-- if Policies::Lti::DeploymentConfiguration::RESTRICTED_DEPLOYMENTS.include?(session[:deployment_id])
+- if Policies::Lti::DeploymentConfiguration::RESTRICTED_DEPLOYMENTS.include?(session[:lti_deployment_id])
   %div#link-account-restricted
     .flex-container
       #oauth-side-restricted.devise-links

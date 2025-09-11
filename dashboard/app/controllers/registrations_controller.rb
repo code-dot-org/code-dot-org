@@ -187,6 +187,11 @@ class RegistrationsController < Devise::RegistrationsController
       PartialRegistration.delete session
       if Policies::Lti.lti? current_user
         current_user.verify_teacher! if Policies::Lti.unverified_teacher?(current_user)
+        if session[:lti_deployment_id] && current_user.lti_user_identities.any?
+          deployment = LtiDeployment.find(session[:lti_deployment_id])
+          lti_identity = current_user.lti_user_identities.first
+          deployment.lti_user_identities << lti_identity if deployment && lti_identity
+        end
         lms_name = Queries::Lti.get_lms_name_from_user(current_user)
         metadata = {
           'user_type' => current_user.user_type,
