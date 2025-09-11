@@ -1258,7 +1258,9 @@ class User < ApplicationRecord
     hoc_level_ids = levels_in_script.map(&:host_level).map(&:id)
 
     unless (channel_level_ids & hoc_level_ids).empty?
-      User.track_script_progress(id, Unit.get_from_cache(script_name).id)
+      unit = Unit.get_from_cache(script_name)
+      User.track_script_progress(id, unit.id)
+      unit_group = unit.get_original_unit_group
 
       # Create user_level entries for the levels associated with channels. In the
       # case of template backed levels, a channel for the template level will result
@@ -1276,7 +1278,7 @@ class User < ApplicationRecord
             new_result: ActivityConstants::BEST_PASS_RESULT,
             submitted: false,
             level_source_id: nil,
-            unit_group: nil
+            unit_group: unit_group
           )
         end
       end
