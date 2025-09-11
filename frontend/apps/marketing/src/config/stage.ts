@@ -38,3 +38,7 @@ function getStageFromDomain(): Stage | undefined {
 export function getStage(): Stage {
   return getStageFromEnv() ?? getStageFromDomain() ?? 'development';
 }
+
+export function isDevelopmentStage(stage: Stage): boolean {
+  return stage !== 'production' && stage !== 'test';
+}

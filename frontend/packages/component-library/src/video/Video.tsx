@@ -45,7 +45,7 @@ const Video: React.FC<VideoProps> = ({
   const youtubeVideoUrl = `https://www.youtube-nocookie.com/watch?v=${youTubeId}`;
 
   const [renderState, setRenderState] = useState<RenderState>('facade');
-  const posterThumbnail = `//i.ytimg.com/vi/${youTubeId}/hqdefault.jpg`;
+  const posterThumbnail = `https://i.ytimg.com/vi/${youTubeId}/hqdefault.jpg`;
 
   const handleError = (
     error: Error | undefined,

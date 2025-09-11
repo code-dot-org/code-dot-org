@@ -1,5 +1,6 @@
 import {chainMiddleware} from '@/middleware/chainMiddleware';
 import {withBrand} from '@/middleware/withBrand';
+import {withCSP} from '@/middleware/withCSP';
 import {withLocale} from '@/middleware/withLocale';
 import {withRedirects} from '@/middleware/withRedirects';
 
@@ -18,4 +19,4 @@ export const config = {
   ],
 };
 
-export default chainMiddleware([withRedirects, withLocale, withBrand]);
+export default chainMiddleware([withRedirects, withLocale, withCSP, withBrand]);

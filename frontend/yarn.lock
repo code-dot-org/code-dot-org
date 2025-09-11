@@ -1533,6 +1533,7 @@ __metadata:
     "@types/react-dom": "npm:^18"
     "@vercel/otel": "npm:^1.12.0"
     axios: "npm:^1.12.0"
+    content-security-policy-builder: "npm:^2.3.0"
     contentful: "npm:^11.7.15"
     contentful-management: "npm:^11.54.4"
     cookies-next: "npm:^5.1.0"
@@ -11029,6 +11030,13 @@ __metadata:
   version: 3.2.3
   resolution: "consola@npm:3.2.3"
   checksum: 10c0/c606220524ec88a05bb1baf557e9e0e04a0c08a9c35d7a08652d99de195c4ddcb6572040a7df57a18ff38bbc13ce9880ad032d56630cef27bef72768ef0ac078
+  languageName: node
+  linkType: hard
+
+"content-security-policy-builder@npm:^2.3.0":
+  version: 2.3.0
+  resolution: "content-security-policy-builder@npm:2.3.0"
+  checksum: 10c0/ae49e89a48e56616428cfe3f95182fbee039eba53b6e70ea50d84cafff2f982ca1d28119b875f7c1310d1da1cd95a4167e4ab00b9d2aa13df0f3908572c5d3cb
   languageName: node
   linkType: hard
 
