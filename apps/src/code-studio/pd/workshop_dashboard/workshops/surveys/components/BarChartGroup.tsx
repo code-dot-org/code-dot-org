@@ -182,8 +182,8 @@ const SimpleBarChart: React.FC<SimpleBarChartProps> = ({
 };
 
 export type BarChartGroupProps = {
-  chartWidth?: number;
-  chartHeight?: number;
+  chartWidth?: number | string;
+  chartHeight?: number | string;
   title?: string;
   data: SimpleBarChartData[];
   xAxisLabel?: string;
