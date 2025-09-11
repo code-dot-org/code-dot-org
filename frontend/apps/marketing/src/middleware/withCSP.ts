@@ -6,14 +6,8 @@ import {getCSPHeader} from '@/middleware/csp';
 import {MiddlewareFactory} from './types';
 
 /**
- * This middleware detects the brand via the hostname of the request and injects it into the top level [brand]
- * param to enable multi-tenancy in this application.
- *
- * See: https://github.com/vercel/platforms
- *
- * This effectively routes requests as such:
- *
- * localhost.code.org:3001/en-US/home -> /localhost.code.org:3001/en-US/home
+ * This middleware adds a Content-Security-Policy header to all responses.
+ * The CSP is determined based on the current stage (development, staging, production).
  */
 
 export const withCSP: MiddlewareFactory = next => {
