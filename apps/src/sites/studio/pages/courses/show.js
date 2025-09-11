@@ -28,7 +28,6 @@ import {
   setPageType,
   setSections,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import experiments from '@cdo/apps/util/experiments';
 import {tooltipifyVocabulary} from '@cdo/apps/utils';
 import {AiDiffContext} from '@cdo/generated-scripts/sharedConstants';
 
@@ -119,7 +118,7 @@ function displayDifferentiationChat(scriptData) {
     'ai-differentiation-fab-mount-point'
   );
 
-  if (aiDiffFabMountPoint && experiments.isEnabled('ai-differentiation')) {
+  if (aiDiffFabMountPoint) {
     ReactDOM.render(
       <Provider store={getStore()}>
         <AiDiffFloatingActionButton
