@@ -86,6 +86,10 @@ DB_PASSWORD=$(echo $DB_SECRET | jq -r ".password")
 
 # We're not using curly braces to expand ENVIRONMENT for complex reasons (this script is processed by CloudFormation !Sub).
 GITHUB_TOKEN=$(aws --region $REGION secretsmanager get-secret-value --secret-id "$ENVIRONMENT/cdo/github_token" --version-stage AWSCURRENT | jq -r ".SecretString")
+# TODO: remove debug
+echo "HelloJed"
+echo $GITHUB_TOKEN
+echo "ByeJed"
 
 # Customize Chef configuration.
 FIRST_BOOT=/etc/chef/first-boot.json
