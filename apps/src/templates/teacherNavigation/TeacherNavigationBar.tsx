@@ -284,13 +284,12 @@ const TeacherNavigationBar: React.FC<{
         />
         {navbarComponents.map(component => component)}
       </div>
-      {aiDifferentiationEnabled &&
-        experiments.isEnabled('ai-differentiation') && (
-          <AiDiffFloatingActionButton
-            context={aiContext()}
-            scriptName={selectedSection?.courseVersionName}
-          />
-        )}
+      {aiDifferentiationEnabled && (
+        <AiDiffFloatingActionButton
+          context={aiContext()}
+          scriptName={selectedSection?.courseVersionName}
+        />
+      )}
     </nav>
   );
 };
