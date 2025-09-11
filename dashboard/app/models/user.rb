@@ -1798,8 +1798,10 @@ class User < ApplicationRecord
   # This method is meant to indicate a user has made progress (i.e. made a milestone
   # post on a particular level) in a script
   def self.track_script_progress(user_id, script_id)
+    unit = Unit.get_from_cache(script_id)
+    unit_group_id = unit.get_original_unit_group&.id
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
-      user_script = UserScript.where(user_id: user_id, script_id: script_id).first_or_create!
+      user_script = UserScript.where(user_id: user_id, script_id: script_id, unit_group_id: unit_group_id).first_or_create!
       time_now = Time.now
 
       user_script.started_at = time_now unless user_script.started_at
