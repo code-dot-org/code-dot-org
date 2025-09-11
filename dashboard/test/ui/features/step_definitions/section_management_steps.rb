@@ -181,13 +181,13 @@ end
 
 And /^I see that "([^"]*)" is assigned to "([^"]*)" in the section table$/ do |section_name, course_name|
   individual_steps <<~GHERKIN
-    And I wait until element "tr:contains(#{section_name}):contains(#{course_name})" is visible
+    And I wait until element "#course-content-dropdown-#{section_name.tr!(' ', '-')}:contains(#{course_name})" is visible
   GHERKIN
 end
 
 And /^I see that "([^"]*)" is not assigned to "([^"]*)" in the section table$/ do |section_name, course_name|
   individual_steps <<~GHERKIN
-    And I wait until element "tr:contains(#{section_name}):contains(#{course_name})" is not visible
+    And I wait until element "#course-content-dropdown-#{section_name.tr!(' ', '-')}:contains(#{course_name})" is not visible
   GHERKIN
 end
 
