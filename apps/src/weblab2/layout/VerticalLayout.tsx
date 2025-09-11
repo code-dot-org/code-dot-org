@@ -163,16 +163,16 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
             ) : (
               <SegmentedButtons {...viewModeButtonsProps} />
             )}
-            <div className={weblab2Styles.centerHeaderContent}></div>
-            <Typography
-              semanticTag="h2"
-              visualAppearance="overline-two"
-              noMargin
-              className={weblab2Styles.headerLabel}
-            >
-              {weblab2I18n.workspace()}
-            </Typography>
-            {projectTemplateLevel && <ProjectTemplateWorkspaceIconV2 />}
+            <div className={weblab2Styles.centerHeaderContent}>
+              <Typography
+                semanticTag="h2"
+                visualAppearance="overline-two"
+                noMargin
+                className={weblab2Styles.headerLabel}
+              >
+                {weblab2I18n.workspace()}
+              </Typography>
+              {projectTemplateLevel && <ProjectTemplateWorkspaceIconV2 />}
             </div>
             <HeaderButtons />
           </div>
