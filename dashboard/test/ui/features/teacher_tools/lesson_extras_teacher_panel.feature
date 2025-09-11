@@ -4,7 +4,7 @@ Feature: Lesson extras teacher panel
   Scenario: View student lesson extras progress
     Given I create an authorized teacher-associated student named "Sally"
     When I sign in as "Teacher_Sally" and go home
-    And I wait until element ".uitest-owned-sections" is visible
+    And I wait until element "#ui-test-section-list" is visible
     Then I save the section id from row 0 of the section table
 
     # Lesson extras overview page
