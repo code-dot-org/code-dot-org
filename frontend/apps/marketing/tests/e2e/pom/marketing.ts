@@ -1,6 +1,6 @@
 import {type Page} from '@playwright/test';
 
-import {loadFonts, FONT_FAMILY_NAMES} from '@code-dot-org/fonts';
+import {FONT_FAMILY_NAMES} from '@code-dot-org/fonts';
 
 export interface MarketingPageOptions {
   locale?: string;
@@ -84,17 +84,15 @@ export class MarketingPage {
   }
 
   async loadFonts() {
-    // Inject Font Loader to the browser context and wait for fonts to be loaded
-    await this.page.evaluate(
-      ({fn, fonts}) => {
-        const injectedLoadFonts = new Function(`return (${fn})`)();
+    await this.page.waitForFunction(async fonts => {
+      const fontsToLoad = fonts.map(font => `1rem ${font}`);
 
-        return injectedLoadFonts(fonts).then(() =>
-          console.log('[Test Runner] all fonts loaded!'),
-        );
-      },
-      {fn: loadFonts.toString(), fonts: FONT_FAMILY_NAMES},
-    );
+      return Promise.all([
+        // Load individual fonts
+        ...fontsToLoad.map(font => document.fonts.load(font)),
+        document.fonts.ready,
+      ]).then(() => console.log(`[Test Runner] All fonts loaded`));
+    }, FONT_FAMILY_NAMES);
   }
 
   async getMetatag(name: string) {
