@@ -1,7 +1,7 @@
 // jscodeshift codemod
 //
 // What it does:
-// - Rewrites <Typography semanticTag visualAppearance noMargin ...> to MUI <Typography component variant noMargin>
+// - Rewrites <Typography semanticTag visualAppearance ...> to MUI <Typography component variant gutterBottom>
 // - Rewrites wrapper components (Heading1, BodyTwoText, OverlineTwoText, etc.) to <Typography ...>
 // - Preserves id, className, style, children
 // - Rewrites imports: removes local Typography / wrapper imports; adds MUI Typography import
@@ -262,6 +262,11 @@ function toMuiTypography(j, path, inferred) {
     );
   }
 
+  // gutterBottom
+  if (inferred.gutterBottom) {
+    opening.attributes.push(j.jsxAttribute(j.jsxIdentifier('gutterBottom')));
+  }
+
   // Remove redundant component if it matches the variant’s default element
   const variantAttr = getJSXAttr(opening, 'variant');
   const componentAttr = getJSXAttr(opening, 'component');
@@ -313,9 +318,15 @@ function transformer(file, api) {
         addTodoComment(j, p, 'visualAppearance', visualAppearance);
       }
 
+      const noMargin = getJSXAttr(opening, 'noMargin');
+      if (!noMargin) {
+        inferred.gutterBottom = true;
+      }
+
       // Remove our props
       removeAttr(opening, 'semanticTag');
       removeAttr(opening, 'visualAppearance');
+      removeAttr(opening, 'noMargin');
 
       // Convert element name + add component/variant
       toMuiTypography(j, p, inferred);
@@ -352,10 +363,16 @@ function transformer(file, api) {
         addTodoComment(j, p, 'visualAppearance', visualAppearance);
       }
 
+      const noMargin = getJSXAttr(opening, 'noMargin');
+      if (!noMargin) {
+        inferred.gutterBottom = true;
+      }
+
       // Remove wrapper-only props we don’t need
       removeAttr(opening, 'visualAppearance');
+      removeAttr(opening, 'noMargin');
 
-      // Rename element and inject component/variant
+      // Rename element and inject component/variant/gutterBottom
       toMuiTypography(j, p, inferred);
       fileChanged = true;
     });
