@@ -69,9 +69,6 @@ registerReducers(reducers);
 
 const isToolboxMode = getAppOptionsEditBlocks() === TOOLBOX_BLOCKS;
 
-const mode =
-  queryParams('ai-generate-dancer') === 'true' ? 'ai-generate-dancer' : false;
-
 /**
  * Renders the Lab2 version of Dance Lab. This separate container
  * allows us to support both Lab2 and legacy Dance.
@@ -449,7 +446,8 @@ const DanceView: React.FunctionComponent<{
 
 export default (props: LabProps<DanceLevelProperties, DanceProjectSources>) => (
   <SourcesContainer {...props} defaultSources={defaultSources}>
-    {mode === 'ai-generate-dancer' ? (
+    {queryParams('ai-generate-dancer') === 'true' ||
+    props.levelProperties.aiGenerateDancer ? (
       <DancerGenerate />
     ) : (
       <DanceView levelProperties={props.levelProperties} />

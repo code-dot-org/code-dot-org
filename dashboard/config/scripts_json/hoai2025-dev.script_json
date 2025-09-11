@@ -1,0 +1,252 @@
+{
+  "script": {
+    "name": "hoai2025-dev",
+    "wrapup_video_id": null,
+    "login_required": true,
+    "properties": {
+      "is_migrated": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2025-09-10 22:48:21 UTC",
+    "hide_within_course": false,
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "hoai2025-dev"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "hoai2025-dev"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "hoai2025-dev-lesson",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "hoai2025-dev"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "1f600bab-aeda-40db-a55a-880a549be153",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1f600bab-aeda-40db-a55a-880a549be153",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "hoai2025-dev"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "433ca43c-27a9-4011-b6dd-b4d2e5616c95",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "433ca43c-27a9-4011-b6dd-b4d2e5616c95",
+        "lesson_activity.key": "1f600bab-aeda-40db-a55a-880a549be153"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hoai2025-dance-create-dancer"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "hoai2025-dev",
+        "activity_section.key": "433ca43c-27a9-4011-b6dd-b4d2e5616c95"
+      },
+      "level_keys": [
+        "hoai2025-dance-create-dancer"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hoai2025-music-adlib-1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "hoai2025-dev",
+        "activity_section.key": "433ca43c-27a9-4011-b6dd-b4d2e5616c95"
+      },
+      "level_keys": [
+        "hoai2025-music-adlib-1"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hoai2025-music-adlib-2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "hoai2025-dev",
+        "activity_section.key": "433ca43c-27a9-4011-b6dd-b4d2e5616c95"
+      },
+      "level_keys": [
+        "hoai2025-music-adlib-2"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hoai2025-dance-create"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "hoai2025-dev",
+        "activity_section.key": "433ca43c-27a9-4011-b6dd-b4d2e5616c95"
+      },
+      "level_keys": [
+        "hoai2025-dance-create"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "hoai2025-dance-create-dancer",
+        "script_level.level_keys": [
+          "hoai2025-dance-create-dancer"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "hoai2025-dev",
+        "activity_section.key": "433ca43c-27a9-4011-b6dd-b4d2e5616c95"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hoai2025-music-adlib-1",
+        "script_level.level_keys": [
+          "hoai2025-music-adlib-1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "hoai2025-dev",
+        "activity_section.key": "433ca43c-27a9-4011-b6dd-b4d2e5616c95"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hoai2025-music-adlib-2",
+        "script_level.level_keys": [
+          "hoai2025-music-adlib-2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "hoai2025-dev",
+        "activity_section.key": "433ca43c-27a9-4011-b6dd-b4d2e5616c95"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hoai2025-dance-create",
+        "script_level.level_keys": [
+          "hoai2025-dance-create"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "hoai2025-dev",
+        "activity_section.key": "433ca43c-27a9-4011-b6dd-b4d2e5616c95"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

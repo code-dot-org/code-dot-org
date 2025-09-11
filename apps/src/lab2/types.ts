@@ -167,6 +167,9 @@ export interface LevelProperties {
   edit_blocks?: string;
   isK1?: boolean;
   skin?: string;
+  // Music Lab specific properties
+  aiGenerate?: boolean;
+  adlib?: string;
   // Dance stores the full main.json source structure (ProjectSources) in start/template/exemplar sources,
   // while PythonLab/Weblab2 stores just the source code (MultiFileSource). TODO: Can we reconcile these?
   startSources?: ProjectSources | MultiFileSource;

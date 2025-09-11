@@ -31,7 +31,9 @@ const Generate: React.FunctionComponent = () => {
 
   const library = MusicLibrary.getInstance();
 
-  const adlibOption = appConfig.getValue('ai-generate-adlib') as string;
+  const adlibOption =
+    useAppSelector(state => state.lab.levelProperties?.adlib) ||
+    (appConfig.getValue('ai-generate-adlib') as string);
   const useCache = appConfig.getValue('ai-generate-cache') === 'true';
 
   const [adlibText, setAdlibText] = useState<string | undefined>(undefined);
