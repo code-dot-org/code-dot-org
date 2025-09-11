@@ -1,4 +1,7 @@
-import {useClientBootstrapInit} from '@statsig/react-bindings';
+import {
+  useStatsigClient,
+  useClientBootstrapInit,
+} from '@statsig/react-bindings';
 import {setCookie} from 'cookies-next';
 import {getCookie} from 'cookies-next/client';
 import {useContext} from 'react';
@@ -40,4 +43,30 @@ export function getClient(clientKey: string, stage: Stage, values: string) {
       plugins: stage === 'production' ? plugins : undefined,
     },
   );
+}
+
+// Log events in Statsig
+export function useStatsigLogger() {
+  const {client} = useStatsigClient();
+
+  const logEvent = (
+    eventName: string,
+    value: string,
+    metadata?: Record<string, string>,
+  ) => {
+    try {
+      if (client) {
+        client.logEvent(eventName, value, metadata);
+      } else {
+        console.debug(
+          'Statsig client not available, skipping event:',
+          eventName,
+        );
+      }
+    } catch (error) {
+      console.warn('Failed to log Statsig event:', error);
+    }
+  };
+
+  return {logEvent};
 }

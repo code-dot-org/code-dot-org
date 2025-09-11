@@ -16,7 +16,7 @@ interface PanelContainerProps {
 }
 
 /**
- * A container for a top-level panel with a header.  The content of the panel
+ * A container for a top-level panel, typically with a header.  The content of the panel
  * is provided as children.  Whether the header is shown is determined by an
  * external state value.  The panel container always occupies the full size of
  * its parent; this means that the main scene is responsible for allocating

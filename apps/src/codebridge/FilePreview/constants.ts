@@ -5,4 +5,12 @@ export enum IframeMessageType {
   SET_SOURCE = 'SET_SOURCE',
   FILE_UPDATED = 'FILE_UPDATED',
   SET_ALLOW_SCRIPTS = 'SET_ALLOW_SCRIPTS',
+  REFRESH = 'REFRESH',
 }
+
+export enum PreviewViewMode {
+  DESKTOP = 'desktop',
+  MOBILE = 'mobile',
+}
+
+export const DEFAULT_START_HTML_FILE = 'index.html';

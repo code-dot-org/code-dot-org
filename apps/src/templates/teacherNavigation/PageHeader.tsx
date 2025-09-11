@@ -33,7 +33,7 @@ const skeletonSectionName = (
   </Typography>
 );
 
-const PageHeader: React.FC = () => {
+const PageHeader: React.FC<{urlSectionId: string}> = ({urlSectionId}) => {
   const isLoadingSectionData = useAppSelector(
     state => state.teacherSections.isLoadingSectionData
   );
@@ -49,9 +49,11 @@ const PageHeader: React.FC = () => {
 
   const dispatch = useAppDispatch();
   useEffect(() => {
-    if (selectedSection?.id)
-      dispatch(loadSectionStudentData(selectedSection.id));
-  }, [dispatch, selectedSection?.id]);
+    if (urlSectionId) {
+      dispatch(loadSectionStudentData(urlSectionId));
+    }
+  }, [dispatch, urlSectionId]);
+
   const studentData = useAppSelector(
     state => state.manageStudents?.studentData
   );

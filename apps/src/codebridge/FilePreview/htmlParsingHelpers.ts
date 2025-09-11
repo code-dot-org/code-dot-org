@@ -2,47 +2,37 @@ import {findFilePathByRelativePath} from '../utils';
 
 import {IframeMessageType} from './constants';
 
-// Remove any existing content security policy from the document, and
-// add a new Content Security Policy to the document to allow for certain
-// HTTP requests.
-export const setContentSecurityPolicy = (doc: Document) => {
-  // Remove any existing CSP meta tags, as we need to set our own.
-  const existingCspTags = doc.querySelectorAll(
-    'meta[http-equiv="Content-Security-Policy"]'
-  );
-  existingCspTags.forEach(tag => tag.remove());
-
-  const metaTag = doc.createElement('meta');
-  metaTag.setAttribute('http-equiv', 'Content-Security-Policy');
-  // TODO: Improve the list of allowed origins.
-  // https://codedotorg.atlassian.net/browse/CT-579
-  metaTag.setAttribute('content', "connect-src 'self' http://numbersapi.com");
-
-  const head = doc.querySelector('head');
-  if (head) {
-    head.appendChild(metaTag);
-  }
-};
-
-// Replace links to non-html files (css and js) with their appropriate blob URLs.
-// We support <link> tags for CSS files and <script> tags for JavaScript files,
+// Replace links to non-html files (css and js) with their appropriate URLs (either blobs or external URLs).
+// We support <link> tags for CSS files, <script> tags for JavaScript files, and <img> tags for images,
 // and support both relative and absolute paths.
 export const updateLinksToNonHtmlFiles = (
   doc: Document,
-  filesToBlobs: Record<string, string>,
+  filesToUrls: Record<string, string>,
   fullFileName: string
 ) => {
+  const imgLinks = doc.querySelectorAll('img[src]');
+  imgLinks.forEach(link => {
+    const src = link.getAttribute('src');
+
+    // Only update if the URL does not include a domain (eg, user project assets and starter assets)
+    if (src && !(src.startsWith('http://') || src.startsWith('https://'))) {
+      const filePath = findFilePathByRelativePath(src, fullFileName);
+      const url = filesToUrls[filePath];
+      link.setAttribute('src', url);
+    }
+  });
+
   const links = doc.querySelectorAll('link[rel="stylesheet"], script[src]');
   links.forEach(link => {
     const src = link.getAttribute('src') || link.getAttribute('href');
     if (src) {
       const filePath = findFilePathByRelativePath(src, fullFileName);
-      const blobUrl = filesToBlobs[filePath];
-      if (blobUrl) {
+      const url = filesToUrls[filePath];
+      if (url) {
         if (link.tagName.toLowerCase() === 'link') {
-          link.setAttribute('href', blobUrl);
+          link.setAttribute('href', url);
         } else {
-          link.setAttribute('src', blobUrl);
+          link.setAttribute('src', url);
         }
       }
     }

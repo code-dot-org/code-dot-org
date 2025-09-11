@@ -1,7 +1,7 @@
 - content_for(:head) do
   = stylesheet_link_tag 'css/pd', media: 'all'
 
-%script{src: webpack_asset_path('js/pd/professional_learning/workshops/index.js'), data: {workshopInfo: @workshop_info.to_json,  userInfo: @user_info.to_json}}
+%script{src: webpack_asset_path('js/pd/professional_learning/workshops/index.js'), data: {workshopInfo: @workshop_info.to_json,  userInfo: @user_info.to_json, userEnrollment: @user_enrollment.to_json}}
 
 #workshop-container
   -# populated by React

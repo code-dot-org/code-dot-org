@@ -1245,6 +1245,13 @@ And /^I dismiss the hoc guide dialog$/ do
   GHERKIN
 end
 
+And /^I dismiss the match instructions dialog$/ do
+  steps <<~GHERKIN
+    And I click selector ".x-close" if I see it
+    And I wait until I don't see selector ".dash_modal"
+  GHERKIN
+end
+
 # Call `execute_async_script` on the provided `js` code.
 # Provides a workaround for Appium (mobile) which doesn't support execute_async_script on HTTPS.
 # For Appium, wrap `execute_script` with a polling wait on a window variable that records the result.

@@ -2,7 +2,10 @@ import {Button} from '@code-dot-org/component-library/button';
 import classNames from 'classnames';
 import React, {useEffect, useMemo, useRef} from 'react';
 
-import {nextLevelId} from '@cdo/apps/code-studio/progressReduxSelectors';
+import {
+  getCurrentLevel,
+  nextLevelId,
+} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
 import {isPredictResponseSubmitted} from '@cdo/apps/lab2/redux/predictLevelRedux';
@@ -10,6 +13,7 @@ import {LevelProperties} from '@cdo/apps/lab2/types';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import TextToSpeech from '../TextToSpeech';
 
@@ -62,6 +66,9 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
     state => nextLevelId(state) !== undefined
   );
   const predictResponseSubmitted = useAppSelector(isPredictResponseSubmitted);
+  const hasSubmitted = useAppSelector(
+    state => getCurrentLevel(state)?.status === LevelStatus.submitted
+  );
   const isPredictLevel = predictSettings?.isPredictLevel;
   const showSecondaryFinishButton =
     useSecondaryFinishButton ||
@@ -103,24 +110,28 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
     }
   }, [validationMessage, isRunning]);
 
-  const canCompleteLevel = useMemo(() => {
+  const canShowButton = useMemo(() => {
     if (isPredictLevel) {
       return predictResponseSubmitted;
+    } else if (submittable && hasSubmitted) {
+      return true;
     } else if (hasValidationConditions) {
       return validationSatisfied;
     } else {
-      return !requireRun || hasRun;
+      return submittable || !requireRun || hasRun;
     }
   }, [
     isPredictLevel,
     hasValidationConditions,
     predictResponseSubmitted,
     validationSatisfied,
+    submittable,
+    hasSubmitted,
     requireRun,
     hasRun,
   ]);
 
-  if (!submittable && !canCompleteLevel && !feedbackMessage) {
+  if (!submittable && !canShowButton && !feedbackMessage) {
     return null;
   }
 
@@ -143,17 +154,17 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
             />
           </div>
         )}
-        {submittable ? (
-          <SubmitButton
-            levelId={id}
-            appName={appName}
-            disableEditRunForSubmission={disableEditRunForSubmission}
-            hasRun={hasRun}
-            hasEdited={hasEdited}
-            className={moduleStyles.buttonInstruction}
-          />
-        ) : (
-          canCompleteLevel && (
+        {canShowButton &&
+          (submittable ? (
+            <SubmitButton
+              levelId={id}
+              appName={appName}
+              disableEditRunForSubmission={disableEditRunForSubmission}
+              hasRun={hasRun}
+              hasEdited={hasEdited}
+              className={moduleStyles.buttonInstruction}
+            />
+          ) : (
             <Button
               id="instructions-continue-button"
               size={'s'}
@@ -162,9 +173,8 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
               onClick={() => dispatch(continueOrFinishLesson())}
               {...{type, color, iconRight}}
             />
-          )
-        )}
-        {showTts && feedbackMessage && !canCompleteLevel && (
+          ))}
+        {showTts && feedbackMessage && !canShowButton && (
           <div className={moduleStyles.ttsContainer}>
             <TextToSpeech text={feedbackMessage} />
           </div>

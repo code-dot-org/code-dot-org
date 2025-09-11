@@ -12,12 +12,12 @@ class Pd::WorkshopMailjetMailer
       name: user.given_name || user.name,
       cancel_registration_link: CDO.studio_url("pd/workshop_enrollment/#{enrollment.code}/cancel", CDO.default_scheme),
       pre_survey_link: enrollment.pre_workshop_survey_url,
-      facilitator_name: workshop.facilitators&.map(&:name)&.join(', '),
-      rp_email: regional_partner&.contact_email_with_backup,
-      rp_name: regional_partner&.name,
-      organizer_email: organizer&.email,
-      organizer_name: organizer&.name,
-      workshop_notes: workshop.notes,
+      facilitator_name: workshop.facilitators&.map(&:name)&.join(', ') || 'None',
+      rp_email: regional_partner&.contact_email_with_backup || 'support@code.org',
+      rp_name: regional_partner&.name || 'Code.org',
+      organizer_email: organizer&.email || 'support@code.org',
+      organizer_name: organizer&.name || 'Code.org',
+      workshop_notes: workshop.notes || '',
       sessions: workshop.sessions.map(&:session_info_for_emails),
       workshop_subjects: workshop.course_offerings.present? ? workshop.course_offerings.map(&:display_name)&.join(', ') : workshop.subject,
       workshop_name: workshop.name.presence || "#{workshop.course} #{workshop.subject}",
@@ -61,10 +61,10 @@ class Pd::WorkshopMailjetMailer
       name: user.given_name || user.name,
       exit_survey_url: enrollment.exit_survey_url,
       download_certificate_url: CDO.studio_url("/pd/generate_workshop_certificate/#{enrollment.code}", CDO.default_scheme),
-      rp_email: regional_partner&.contact_email_with_backup,
-      rp_name: regional_partner&.name,
-      organizer_email: organizer&.email,
-      organizer_name: organizer&.name
+      rp_email: regional_partner&.contact_email_with_backup || 'support@code.org',
+      rp_name: regional_partner&.name || 'Code.org',
+      organizer_email: organizer&.email || 'support@code.org',
+      organizer_name: organizer&.name || 'Code.org'
     }
 
     retryable_send_email('teacher_post_workshop_survey', email, user.friendly_name, email_vars)

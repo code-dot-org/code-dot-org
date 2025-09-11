@@ -1,5 +1,5 @@
 import React from 'react';
-import {Outlet} from 'react-router-dom';
+import {Outlet, useParams} from 'react-router-dom';
 
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -11,10 +11,11 @@ import styles from './teacher-navigation.module.scss';
 
 const PageLayout: React.FC = () => {
   const selectedSection = useAppSelector(selectedSectionSelector);
+  const urlSectionId = useParams().sectionId || selectedSection?.id;
 
   return (
     <div className={styles.pageWithHeader}>
-      <PageHeader />
+      <PageHeader urlSectionId={urlSectionId} />
       {!!selectedSection && <Outlet />}
     </div>
   );

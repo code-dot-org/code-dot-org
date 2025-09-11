@@ -79,7 +79,7 @@ class ScriptLevelsController < ApplicationController
     # Check if the script or current level is deprecated
     level_is_deprecated = @script_level&.level_deprecated?
     if @script.is_deprecated || level_is_deprecated
-      @deprecated_course_name = @script.name
+      @deprecated_curriculum_name = @script.name
       return render 'errors/deprecated_course'
     end
 
@@ -94,10 +94,6 @@ class ScriptLevelsController < ApplicationController
     if @script.redirect_to?
       new_script = Unit.get_from_cache(@script.redirect_to)
       new_path = request.fullpath.sub(%r{^/s/#{params[:script_id]}/}, "/s/#{new_script.name}/")
-
-      if Unit.family_names.include?(params[:script_id])
-        Unit.log_redirect(params[:script_id], new_script.name, request, 'unversioned-script-level-redirect', current_user&.user_type)
-      end
 
       # avoid a redirect loop if the string substitution failed
       # TODO: TEACH-2050 Modularity support for redirects. This redirects to the current script. Redirect to the new script's

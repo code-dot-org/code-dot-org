@@ -93,6 +93,8 @@ export interface LabState {
   permissions: string[];
   // If current user is a teacher of the project owner.
   isTeacherOfProjectOwner: boolean | undefined;
+  // If this lab is in a full screen view.
+  isFullScreenView: boolean | undefined;
 }
 
 const initialState: LabState = {
@@ -111,6 +113,7 @@ const initialState: LabState = {
   overrideValidations: undefined,
   permissions: [],
   isTeacherOfProjectOwner: undefined,
+  isFullScreenView: undefined,
 };
 
 // Thunks
@@ -354,6 +357,12 @@ const labSlice = createSlice({
     setIsTeacherOfProjectOwner(state, action: PayloadAction<boolean>) {
       state.isTeacherOfProjectOwner = action.payload;
     },
+    setIsBlockedAbuse(state, action: PayloadAction<boolean>) {
+      state.isBlockedAbuse = action.payload;
+    },
+    setIsFullScreenView(state, action: PayloadAction<boolean>) {
+      state.isFullScreenView = action.payload;
+    },
   },
   extraReducers: builder => {
     builder.addCase(setUpWithLevel.fulfilled, state => {
@@ -547,6 +556,8 @@ export const {
   setPermissions,
   setChannel,
   setIsTeacherOfProjectOwner,
+  setIsBlockedAbuse,
+  setIsFullScreenView,
 } = labSlice.actions;
 
 export default labSlice.reducer;

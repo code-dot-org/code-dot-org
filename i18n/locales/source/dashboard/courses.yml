@@ -646,7 +646,7 @@ en:
           description_short: ''
           description_student: ''
           description_teacher: ''
-          version_title: ''
+          version_title: "'23-'24"
         vpl-csp-2024:
           title: CS Principles Virtual PL Workshop Course
           description_short: ''
@@ -923,7 +923,7 @@ en:
           description_short: "## Welcome! \n##### This professional learning module is designed to help you prepare to teach Code.org’s Exploring Generative AI course.\n\n##### Exploring Generative AI is designed as standalone coursework for grade 8-12 students that can be integrated seamlessly into any existing curriculum, offering teachers the flexibility to introduce it according to their schedule and educational needs. \n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Generative AI unit. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to the Exploring Generative AI Unit. "
           description_student: "## Welcome!\n\n##### This professional learning module is designed to help you prepare to teach Code.org’s Exploring Generative AI course.\n\n##### Exploring Generative AI is designed as standalone coursework for grade 8-12 students that can be integrated seamlessly into any existing curriculum, offering teachers the flexibility to introduce it according to their schedule and educational needs.\n\n### Find the learning that works for you\n\n-   **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n-   **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Generative AI unit. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to the Exploring Generative AI Unit. "
           description_teacher: "## Welcome!\n\n##### This professional learning module is designed to help you prepare to teach Code.org’s Exploring Generative AI course.\n\n##### Exploring Generative AI is designed as standalone coursework for 8-12 students that can be integrated seamlessly into any existing curriculum, offering teachers the flexibility to introduce it according to their schedule and educational needs.\n\n### Find the learning that works for you\n\n-   **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n-   **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Generative AI unit. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to the Exploring Generative AI Unit. "
-          version_title: ''
+          version_title: "'24-'25"
         self-paced-pl-equitymodule-2024:
           title: Equity in Computer Science
           description_short: ''
@@ -3234,7 +3234,7 @@ en:
           description_short: 'Welcome to Code.org’s free self-paced online educator course for getting started with Computer Science Fundamentals! '
           description_student: 'Welcome to Code.org’s free online educator course for CS Fundamentals! '
           description_teacher: 'Welcome to Code.org’s free self-paced online educator course for getting started with Computer Science Fundamentals! '
-          version_title: '2022'
+          version_title: "'22-'23"
         spritelab:
           title: Introduction to Sprite Lab (PILOT)
           description_short: This is a pilot course for Code.org's new Sprite Lab tool for Courses E and F
@@ -4693,7 +4693,7 @@ en:
           version_title: ''
         self-paced-pl-csd-2025:
           title: Teaching CS Discoveries
-          description_short: ''
+          description_short: After completing this online professional leanring module, you'll be ready to get started teaching Code.org's Computer Science Discoveries curriculum with your students.
           description_student: "## Welcome\n\nWelcome to Code.org's free self-paced online course for educators to get started teaching CS Discoveries! After completing this online course, **you'll be ready to get started teaching Code.org’s Computer Science Discoveries course** with your students.\n\n### Find the learning that works for you\n\n-   **Go at your own pace:** This self-paced course is designed to put you in the driver's seat, and give you control over your own learning. Suggested times are given for each module and lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n-   **Pick your content:** The content of this professional learning course is organized in the suggested progression for teachers new to both Code.org and CS Discoveries. However, you can **engage with the content in the order that best meets your needs.** We recommend all teachers **start with the short welcome unit** to learn more about this professional learning course before getting started."
           description_teacher: "## Welcome\n\nWelcome to Code.org's free self-paced online course for educators to get started teaching CS Discoveries! After completing this online course, **you'll be ready to get started teaching Code.org’s Computer Science Discoveries course** with your students.\n\n### Find the learning that works for you\n\n-   **Go at your own pace:** This self-paced course is designed to put you in the driver's seat, and give you control over your own learning. Suggested times are given for each module and lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n-   **Pick your content:** The content of this professional learning course is organized in the suggested progression for teachers new to both Code.org and CS Discoveries. However, you can **engage with the content in the order that best meets your needs.** We recommend all teachers **start with the short welcome unit** to learn more about this professional learning course before getting started."
           version_title: "'25 - '26"
@@ -5345,6 +5345,42 @@ en:
           description_student: Learn how chatbots and large-language models work behind the scenes!
           description_teacher: "This unit aims to build a foundational understanding of text-based generative AI models, focusing on core concepts over technical skills. Students will demystify generative AI models by exploring their internal structures through the familiar lens of input, storage, process, and output. They will gain insights into how these models represent language, the impact of training data on model performance, and the potential for bias. Using this knowledge they will be presented with scenarios throughout the unit where they can help educate individuals who feel powerless or lack agency in how AI is impacting their lives, or respond to individuals who have only read the hype headlines and offer feedback or criticism based on their knowledge of how these AI systems work.\n\nThis unit is the **fully unpluggedd** version of our Foundations of Generative AI unit. It is designed for classrooms where students do not have access to technology, but teachers are still expected to use technology to run slides, show videos, etc. To see the extended unit with additional lessons and on-device levels, [you can view the unit here][0].\n\n## Just Starting this Unit?\n\nWe recommend watching the [5-Part Exploring Generative AI Video Series][1] which introduces key concepts for generative AI. The entire video series takes ~15 minutes to watch.\n\n## Finished Teaching This Unit?\n\nAnswer this [**short survey**][2] to let the Code.org curriculum team know how the unit went."
           version_title: ''
+        ai-powered-threats-and-defenses-2025:
+          title: "[PILOT] AI-Powered Threats and Defenses"
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: "'25-'26"
+        musiclab-instructions-bash:
+          title: Musiclab Instructions Bash
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        teaching-ai-powered-theats-and-defenses-2025:
+          title: "[PILOT] Teaching AI-Powered Threats and Defenses"
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: "'25-'26"
+        csp3-research-mxghyt:
+          title: CSP Unit 3 - Intro to Programming (subgoals)
+          description_short: Learn the basics of programming in JavaScript through a top-down design approach using classic turtle drawing.
+          description_student: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
+          description_teacher: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
+          version_title: ''
+        sb-chardev-v1:
+          title: Story Board Character Development
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        joi-sandbox:
+          title: Joi's Sandbox Course
+          description_short: "Hi! This course is a personal testing ground for experimenting with lesson structures, activity designs, and course flow. It serves as a space to practice building modules, writing descriptions, setting objectives, and organizing content into levels or units. The course is not intended for learners but as a sandbox environment to refine ideas, test features, and prototype instructional approaches before applying them in real courses. \n\nIf you see something that you want to use, feel free to copy, clone, or shoot me a Slack message to learn more!"
+          description_student: "Hi! This course is a personal testing ground for experimenting with lesson structures, activity designs, and course flow. It serves as a space to practice building modules, writing descriptions, setting objectives, and organizing content into levels or units. The course is not intended for learners but as a sandbox environment to refine ideas, test features, and prototype instructional approaches before applying them in real courses. \n\nIf you see something that you want to use, feel free to copy, clone, or shoot me a Slack message to learn more!"
+          description_teacher: "Hi! This course is a personal testing ground for experimenting with lesson structures, activity designs, and course flow. It serves as a space to practice building modules, writing descriptions, setting objectives, and organizing content into levels or units. The course is not intended for learners but as a sandbox environment to refine ideas, test features, and prototype instructional approaches before applying them in real courses. \n\nIf you see something that you want to use, feel free to copy, clone, or shoot me a Slack message to learn more!"
+          version_title: "'25-26"
     resources:
       curriculum/csd/2017:
         name: Curriculum

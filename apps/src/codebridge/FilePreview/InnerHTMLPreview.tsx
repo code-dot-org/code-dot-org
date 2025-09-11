@@ -1,12 +1,12 @@
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
-import {createBlobUrlForFile, getFolderPath} from '@codebridge/utils';
+import {getUrlForFile, getFolderPath} from '@codebridge/utils';
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import {MultiFileSource} from '@cdo/apps/lab2/types';
+import {WEBLAB2_IMAGE_FILE_TYPES} from '@cdo/apps/weblab2/constants';
 
 import {IframeMessageType} from './constants';
 import {
-  setContentSecurityPolicy,
   updateLinksToHtmlFiles,
   updateLinksToNonHtmlFiles,
 } from './htmlParsingHelpers';
@@ -77,6 +77,8 @@ const InnerHTMLPreview = () => {
         // We don't need to update the parent, because they initiated this change.
       } else if (data.type === IframeMessageType.SET_ALLOW_SCRIPTS) {
         setAllowScripts(!!data.allow);
+      } else if (data.type === IframeMessageType.REFRESH) {
+        iframeRef.current?.contentWindow?.location.reload();
       }
     },
     [parentOrigin]
@@ -117,11 +119,10 @@ const InnerHTMLPreview = () => {
         setBlobUrl(NOT_FOUND_FILE);
       }
     }
-  }, [currentFile, filesToBlobs]);
+  }, [currentFile, filesToBlobs, parentOrigin]);
 
   // TODOs:
   // Support other file types (images, etc.): https://codedotorg.atlassian.net/browse/CT-1255
-  // Better regeneration logic: https://codedotorg.atlassian.net/browse/CT-1259
   useEffect(() => {
     if (source) {
       const files: Record<string, string> = {};
@@ -133,7 +134,11 @@ const InnerHTMLPreview = () => {
             file.folderId,
             source.folders
           );
-          files[fullFileName] = createBlobUrlForFile(file);
+          files[fullFileName] = getUrlForFile(
+            file,
+            parentOrigin,
+            WEBLAB2_IMAGE_FILE_TYPES
+          );
         }
       });
       // Handle HTML files. We do the following;
@@ -154,7 +159,6 @@ const InnerHTMLPreview = () => {
           source.folders
         );
 
-        setContentSecurityPolicy(doc);
         updateLinksToNonHtmlFiles(doc, files, fullFileName);
         updateLinksToHtmlFiles(doc, fullFileName);
         const updatedContents = doc.documentElement.outerHTML;
