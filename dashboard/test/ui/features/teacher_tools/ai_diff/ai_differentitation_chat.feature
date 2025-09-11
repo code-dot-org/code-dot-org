@@ -6,7 +6,6 @@ Feature: Send and receive messages in the AI differentiation chat
   @chrome
   Scenario: Teacher sees welcome screen for AI Differentiation
     Given I create a teacher named "Stilgar"
-    And I add the current user to the "ai-differentiation" single user experiment
 
     # Teacher views lesson page and floating action button
     When I sign in as "Stilgar"
@@ -70,7 +69,6 @@ Feature: Send and receive messages in the AI differentiation chat
   @properties_encryption_key
   Scenario: Teacher can type messages and leave feedback in AI Differentiation chat
     Given I create a teacher named "Stilgar"
-    And I add the current user to the "ai-differentiation" single user experiment
 
     # Teacher views lesson page and floating action button
     When I sign in as "Stilgar"
@@ -107,7 +105,6 @@ Feature: Send and receive messages in the AI differentiation chat
   @chrome
   Scenario: Teacher can disable AI chat feature
     Given I create a teacher named "Stilgar"
-    And I add the current user to the "ai-differentiation" single user experiment
 
     # Teacher views lesson page and floating action button
     When I sign in as "Stilgar"
