@@ -1,6 +1,7 @@
 import Alert from '@code-dot-org/component-library/alert';
 import {Button} from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import TextField from '@code-dot-org/component-library/textField';
 import {OverlineTwoText} from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
@@ -404,6 +405,25 @@ const VersionHistoryPanel: React.FunctionComponent<
                 Publish Current Version
               </OverlineTwoText>
             </div>
+          </div>
+          <div className={moduleStyles.publishCurrentVersionDescription}>
+            <div className={moduleStyles.publishCurrentVersionDescriptionInput}>
+              <TextField
+                onChange={e => console.log(e.target.value)}
+                name={'commit-description'}
+                placeholder="description of project updates"
+                label="Describe your changes"
+                color="gray"
+                className={moduleStyles.textField}
+              />
+            </div>
+            <Button
+              id="publish-version-button"
+              size={'s'}
+              className={moduleStyles.versionButton}
+              text="Publish"
+              onClick={() => console.log('publish')}
+            />
           </div>
         </div>
       )}

@@ -183,3 +183,24 @@ $space-xl: 10px;
     margin: 0; 
   }
 }
+
+.publishCurrentVersionDescription {
+  padding: 12px;
+  background-color: var(--background-neutral-secondary);
+  border-top: 1px solid var(--borders-neutral-primary);
+}
+
+.publishCurrentVersionDescriptionInput {
+  padding-bottom: 12px;
+}
+
+.textField {
+  // Override the min-width constraint from FormFieldWrapper to allow full extension
+  min-width: unset;
+  width: 100%;
+  
+  // Target the input element inside the TextField
+  input {
+    width: 100%;
+  }
+}
