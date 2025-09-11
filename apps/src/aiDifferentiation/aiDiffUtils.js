@@ -4,7 +4,6 @@ import {Provider} from 'react-redux';
 
 import AiDiffFloatingActionButton from '@cdo/apps/aiDifferentiation/AiDiffFloatingActionButton';
 import {getStore} from '@cdo/apps/redux';
-import experiments from '@cdo/apps/util/experiments';
 import {AiDiffContext} from '@cdo/generated-scripts/sharedConstants';
 
 export function displayDifferentiationChat() {
@@ -14,7 +13,7 @@ export function displayDifferentiationChat() {
 
   const context = {type: AiDiffContext.GENERAL};
 
-  if (aiDiffFabMountPoint && experiments.isEnabled('ai-differentiation')) {
+  if (aiDiffFabMountPoint) {
     ReactDOM.render(
       <Provider store={getStore()}>
         <AiDiffFloatingActionButton context={context} />
