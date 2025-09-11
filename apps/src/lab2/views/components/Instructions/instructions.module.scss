@@ -246,3 +246,7 @@
 .predictSummaryBubble {
   flex-shrink: 0; // Ensure the contents always fits in the bubble.
 }
+
+.bubble.bubbleNoBorderRadius {
+  border-radius: 0;
+}
