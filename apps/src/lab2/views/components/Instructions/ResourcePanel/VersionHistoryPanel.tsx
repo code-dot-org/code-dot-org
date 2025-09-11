@@ -332,7 +332,7 @@ const VersionHistoryPanel: React.FunctionComponent<
         </div>
       )}
       {showList && (
-        <>
+        <div className={moduleStyles.listContainer}>
           <div className={moduleStyles.list}>
             {versionList.map(version => (
               <VersionHistoryRow
@@ -369,7 +369,7 @@ const VersionHistoryPanel: React.FunctionComponent<
               </div>
             )}
           </div>
-        </>
+        </div>
       )}
       {!isLatestVersion(selectedVersion) && (
         <div className={moduleStyles.publishCurrentVersionPanel}>
@@ -381,7 +381,7 @@ const VersionHistoryPanel: React.FunctionComponent<
               disabled={versionLoading || latestVersion === selectedVersion}
               className={moduleStyles.versionButton}
               type={'secondary'}
-              color="black"
+              color="gray"
             />
             {!viewAsUserId && (
               <Button
