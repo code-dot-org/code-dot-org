@@ -15,7 +15,10 @@ import {useSource} from '../codebridge/hooks/useSource';
 import {useAppDispatch, useAppSelector} from '../util/reduxHooks';
 
 import {WEBLAB2_EDITABLE_FILE_TYPES} from './constants';
-import {getAiTutorContextPromise} from './helpers/aiTutorHelper';
+import {
+  getAiTutorContextPromise,
+  getPromptNameFromMode,
+} from './helpers/aiTutorHelper';
 import FullScreenView from './layout/FullScreenView';
 import ShareView from './layout/ShareView';
 import VerticalLayout from './layout/VerticalLayout';
@@ -74,6 +77,8 @@ const Weblab2View: React.FC<
     state =>
       state.lab2Project.projectSources?.source as MultiFileSource | undefined
   );
+  const [aiTutorSystemPromptName, setAiTutorSystemPromptName] =
+    useState<string>('weblab2-suggest');
 
   const {startSources} = useSource(
     defaultProject,
@@ -84,6 +89,12 @@ const Weblab2View: React.FC<
   const hasSource = useAppSelector(
     state => !!state.lab2Project.projectSources?.source
   );
+
+  useEffect(() => {
+    setAiTutorSystemPromptName(
+      getPromptNameFromMode(levelProperties.availableAiTutorModes)
+    );
+  }, [levelProperties.availableAiTutorModes]);
 
   // Note: this causes Web Lab 2 to re-render when sources change.
   // Unfortunately, the way AI tutor is set up right now requires passing in a context
@@ -120,7 +131,7 @@ const Weblab2View: React.FC<
           startSources={startSources}
           levelProperties={levelProperties}
           aiTutorContextPromise={aiTutorContextPromise}
-          aiTutorSystemPromptName={'aif2-web-produce'}
+          aiTutorSystemPromptName={aiTutorSystemPromptName}
         />
       )}
     </div>

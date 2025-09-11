@@ -24,3 +24,13 @@ export const getAiTutorContextPromise = (
     longInstructions,
   });
 };
+
+export const getPromptNameFromMode = (mode: string[] | undefined) => {
+  const prefix = 'weblab2-';
+  let suffix = 'suggest';
+  // TODO: support multiple modes
+  if (mode && mode.length > 0) {
+    suffix = mode[0];
+  }
+  return `${prefix}${suffix}`;
+};
