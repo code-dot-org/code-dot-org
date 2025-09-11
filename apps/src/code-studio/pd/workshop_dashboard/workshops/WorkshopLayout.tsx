@@ -122,11 +122,19 @@ export const WorkshopLayout: FC<WorkshopLayoutProps> = ({
     showSurveyElements && onFacilitatorPage && surveys?.surveys?.post_workshop;
 
   const showNoSurveyResponses = useMemo(() => {
-    if (onPostSurveyPage) {
+    if (onPreSurveyPage) {
+      return !surveysLoading && !surveys?.surveys?.pre_workshop;
+    } else if (onPostSurveyPage) {
       return !surveysLoading && !surveys?.surveys?.post_workshop;
     }
     return false;
-  }, [onPostSurveyPage, surveys?.surveys?.post_workshop, surveysLoading]);
+  }, [
+    onPreSurveyPage,
+    onPostSurveyPage,
+    surveys?.surveys?.pre_workshop,
+    surveys?.surveys?.post_workshop,
+    surveysLoading,
+  ]);
 
   const showLoading = useMemo(() => {
     return (
