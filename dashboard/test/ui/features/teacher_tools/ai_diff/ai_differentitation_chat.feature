@@ -147,7 +147,7 @@ Feature: Send and receive messages in the AI differentiation chat
     When I sign in as "Stilgar"
     And I get debug info for the current user
     And I am on "http://studio.code.org/teacher_dashboard/home"
-    And I wait until element "#homepage-container" is visible
+    And I wait until element "h2:contains(Welcome, Stilgar)" is visible
     And element "#sign_in_or_user" contains text "Stilgar"
     # Close the FAB
     And I wait until element "#ui-floatingActionButton" is visible
