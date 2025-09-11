@@ -19,8 +19,14 @@ export const TEACHER_GOAL_PROMPT = {
   order: 3,
   question:
     "What goals do you have for your own teaching practice while using Code.org's curriculum this year?",
-  subhead: 'Code.org’s teacher tools are designed to help you achieve them.',
+  subhead: "Code.org's teacher tools are designed to help you achieve them.",
   type: 'multi_select',
+  choices: [
+    'Become more confident in teaching new concepts',
+    'Develop effective assessment & instructional strategies',
+    'Support a variety of learners in my classroom',
+    'Improve student engagement and learning outcomes',
+  ],
 };
 
 export const CLASSROOM_VISION_PROMPT = {
@@ -28,7 +34,7 @@ export const CLASSROOM_VISION_PROMPT = {
   question:
     'What do you want your classroom to look like, feel like, sound like?',
   subhead:
-    'Code.org’s flexible course offerings offer a perfect fit for every classroom.',
+    "Code.org's flexible course offerings offer a perfect fit for every classroom.",
   type: 'free_response',
 };
 
@@ -43,7 +49,7 @@ export const SUPPORT_PREFERENCES_PROMPT = {
 export const CHALLENGE_PROMPT = {
   order: 6,
   question:
-    'What’s the biggest challenge you anticipate while teaching computer science this year?',
+    "What's the biggest challenge you anticipate while teaching computer science this year?",
   subhead:
     'Code.org offers resources, training, and a teacher community to support you through any challenge.',
   type: 'free_response',
