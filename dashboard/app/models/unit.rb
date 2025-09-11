@@ -820,26 +820,6 @@ class Unit < ApplicationRecord
     script_levels.any? {|script_level| script_level.levels.any?(&:age_13_required?)}
   end
 
-  # @param user [User]
-  # @return [Boolean] Whether the user has progress on another version of this unit.
-  def has_older_version_progress?(user)
-    return false unless user && family_name && version_year
-    return false unless has_other_versions?
-
-    user_unit_ids = user.user_scripts.pluck(:script_id)
-
-    Unit.
-      # select only units in the same unit family.
-      where(family_name: family_name).
-      # select only older versions.
-      where("properties -> '$.version_year' < ?", version_year).
-      # exclude the current unit.
-      where.not(id: id).
-      # select only units which the user has progress in.
-      where(id: user_unit_ids).
-      count > 0
-  end
-
   # When given an object from the unit cache, returns whether it has other
   # versions, without touching the database.
   def has_other_versions?
@@ -1288,7 +1268,7 @@ class Unit < ApplicationRecord
       end
 
       has_older_course_progress = unit_group_unit&.cached_unit_group.try(:has_older_version_progress?, user)
-      has_older_unit_progress = has_older_version_progress?(user)
+
       user_unit = user && user_scripts.find_by(user: user)
 
       # If the current user is assigned to this unit, get the section
@@ -1335,7 +1315,7 @@ class Unit < ApplicationRecord
         announcements: localized_announcements,
         age_13_required: logged_out_age_13_required?,
         show_course_unit_version_warning: !unit_group_unit&.cached_unit_group&.has_dismissed_version_warning?(user) && has_older_course_progress,
-        show_script_version_warning: !user_unit&.version_warning_dismissed && !has_older_course_progress && has_older_unit_progress,
+        show_script_version_warning: !user_unit&.version_warning_dismissed && has_older_course_progress && unit_group_unit&.cached_unit_group&.single_unit_course?,
         course_versions: summarize_course_versions(user, locale_code, unit_group: unit_group_unit&.cached_unit_group),
         supported_locales: supported_locales,
         section_hidden_unit_info: section_hidden_unit_info(user),
