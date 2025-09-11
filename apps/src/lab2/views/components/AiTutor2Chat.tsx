@@ -82,31 +82,29 @@ const chatButtonData: ChatButtonData[] = [
   },
 ] as const;
 
-const chatButtons = chatButtonData.map(
-  button =>
-    ({onClick}: {onClick: ChatButtonClickHandler}) =>
-      (
-        <Button
-          className={moduleStyles.chatButton}
-          key={button.label}
-          aria-label={button.label}
-          iconLeft={
-            {
-              ...button.icon,
-              className: classNames({
-                [moduleStyles['icon']]: true,
-                [moduleStyles[`icon-${button.icon?.iconName}`]]: button.icon,
-              }),
-            } as FontAwesomeV6IconProps
-          }
-          onClick={() => onClick(button.value, button.analyticsProperties)}
-          text={button.label}
-          size="s"
-          type="secondary"
-          color="black"
-        />
-      )
-);
+const chatButtons = chatButtonData.map(button => ({
+  ChatButton: ({onClick}: {onClick: ChatButtonClickHandler}) => (
+    <Button
+      className={moduleStyles.chatButton}
+      aria-label={button.label}
+      iconLeft={
+        {
+          ...button.icon,
+          className: classNames({
+            [moduleStyles['icon']]: true,
+            [moduleStyles[`icon-${button.icon?.iconName}`]]: button.icon,
+          }),
+        } as FontAwesomeV6IconProps
+      }
+      onClick={() => onClick(button.value, button.analyticsProperties)}
+      text={button.label}
+      size="s"
+      type="secondary"
+      color="black"
+    />
+  ),
+  key: button.label,
+}));
 interface AiTutor2ChatProps {
   aiTutorSystemPromptName?: string;
   aiTutorContextPromise: Promise<AiTutorContext>;
