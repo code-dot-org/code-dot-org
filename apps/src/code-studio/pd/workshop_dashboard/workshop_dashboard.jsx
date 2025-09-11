@@ -68,15 +68,14 @@ const preSurveyCategoryChildRoutes = [
     icon: 'gauge',
     component: ReadinessAndExpectations,
     path: 'readiness-and-expectations',
-    breadcrumbs:
-      'Workshops,Workshop,Temp,Surveys,Pre,Readiness and expectations',
+    breadcrumbs: 'Workshops,Workshop,Surveys,Pre,Readiness and expectations',
   },
   {
     label: 'Cohort Profile',
     icon: 'users',
     component: CohortProfile,
     path: 'cohort-profile',
-    breadcrumbs: 'Workshops,Workshop,Temp,Surveys,Pre,Cohort profile',
+    breadcrumbs: 'Workshops,Workshop,Surveys,Pre,Cohort profile',
   },
 ];
 
@@ -130,7 +129,7 @@ const surveyTypeChildRoutes = [
     label: 'Pre-workshop survey',
     path: 'pre',
     component: Outlet,
-    breadcrumbs: 'Workshops,Workshop,Temp,Surveys,Pre',
+    breadcrumbs: 'Workshops,Workshop,Surveys,Pre',
     childRoutes: [
       // this makes "readiness-and-expectations" the default
       {
@@ -183,7 +182,7 @@ const workshopChildRouteConfigs = [
       // this makes "post" the default
       {
         index: true,
-        component: () => <Navigate to="post" replace />,
+        component: () => <Navigate to="pre" replace />,
       },
       ...surveyTypeChildRoutes,
     ],
