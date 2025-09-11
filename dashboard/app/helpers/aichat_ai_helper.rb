@@ -13,18 +13,11 @@ module AichatAiHelper
     model_id == "gpt-4o-mini" ? SharedConstants::AICHAT_MODEL_VERSION : model_id
   end
 
-  # Get message text, including any hidden context
-  def self.get_message_text(message)
-    text = message['chatMessageText']
-    text = text + "\n" + message['hiddenContext'] if message['hiddenContext']
-    text
-  end
-
   def self.format_message_parts(message, encrypted_channel_id, level_name)
     parts = [
       AichatAiClientTypes::TextMessagePart.new(
         type: 'text',
-        content: get_message_text(message)
+        content: message['chatMessageText']
       )
     ]
 
@@ -51,7 +44,7 @@ module AichatAiHelper
   # "config" object and "request" and "context" arrays.
   #
   # See 'aichat_ai_client.rb' for typescript definitions of these objects.
-  def self.get_config_request_context(stored_messages, new_message, temperature, system_prompt, retrieval_contexts,  model_id, level_id, encrypted_channel_id, user_id, project_id)
+  def self.get_config_request_context(stored_messages, new_message, temperature, system_prompt, retrieval_contexts,  model_id, level_id, encrypted_channel_id, user_id, project_id, client_type)
     level = Level.find_by(id: level_id)
 
     # Level system prompt - string or nil.
@@ -67,6 +60,8 @@ module AichatAiHelper
       system_instructions << AichatAiClientTypes::TextMessagePart.new(type: 'text', content: retrieval_context)
     end
 
+    system_instructions <<  AichatAiClientTypes::TextMessagePart.new(type: 'text', content: new_message['hiddenContext']) if new_message['hiddenContext']
+
     temperature *= if model_id == "gpt-4o-mini"
                      # If OpenAI:
                      #   We expose a temperature scale of 0.1-1 to users, but OpenAI's API allows a scale of 0-2.
@@ -81,7 +76,8 @@ module AichatAiHelper
     config = AichatAiClientTypes::AiConfig.new(
       model: get_api_model(model_id),
       systemInstructions: system_instructions,
-      temperature: temperature
+      temperature: temperature,
+      clientType: client_type
     )
 
     request = format_message_parts(new_message, encrypted_channel_id, level_name)
@@ -107,6 +103,8 @@ module AichatAiHelper
 
     temperature = aichat_model_customizations['temperature'].to_f
 
+    client_type = aichat_model_customizations['clientType']
+
     # System prompt - string or nil.
     system_prompt = aichat_model_customizations['systemPrompt']
 
@@ -116,7 +114,7 @@ module AichatAiHelper
     usage_reporter = AichatAiUsageReporter.new(model_id, user_id, project_id, level_id)
     client = AichatAiClient.create_instance(model_id, usage_reporter)
 
-    config, request, context = get_config_request_context(stored_messages, new_message, temperature, system_prompt, retrieval_contexts,  model_id, level_id, encrypted_channel_id, user_id, project_id)
+    config, request, context = get_config_request_context(stored_messages, new_message, temperature, system_prompt, retrieval_contexts,  model_id, level_id, encrypted_channel_id, user_id, project_id, client_type)
 
     begin
       response = client.get_response_text(config, request, context)

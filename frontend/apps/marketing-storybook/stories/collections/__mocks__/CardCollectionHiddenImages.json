@@ -1,0 +1,516 @@
+{
+  "className": "",
+  "cards": [
+    {
+      "metadata": {
+        "tags": [],
+        "concepts": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "27jkibac934d"
+          }
+        },
+        "type": "Entry",
+        "id": "iPGduEO62tzaF8uKCmYMz",
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "curriculum"
+          }
+        },
+        "revision": 2,
+        "createdAt": "2025-07-16T17:04:34.313Z",
+        "updatedAt": "2025-07-16T17:38:02.908Z",
+        "publishedAt": "2025-07-16T17:38:02.908Z",
+        "firstPublishedAt": "2025-07-16T17:13:51.256Z",
+        "publishedVersion": 10,
+        "environment": {
+          "sys": {
+            "id": "development",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "Poem Art",
+        "company": "Code.org",
+        "actionBlockOverline": "Grades 2-8",
+        "shortDescription": "Illustrate the mood of a poem with code.",
+        "primaryLinkRef": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "7AaaHADstO4uKJPtkL0cZi"
+          }
+        },
+        "secondaryLinkRef": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "5ecZFpM6PKfEdUvmLrDmS2"
+          }
+        },
+        "image": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "12k0CmnqZa5KteOpORa7hA"
+          }
+        },
+        "classroomTechnology": "All modern browsers, Android tablet, iPad, Windows phone, Android phone, iPhone, Game console app, Screen reader",
+        "allTopics": "Art, Media, Music, Language Arts",
+        "accessibilityText": "Text-to-speech, Captions",
+        "languagesText": "Bulgarian, Corsican, Danish, Dutch, English, English (United Kingdom), Estonian, French, Georgian, German, Hungarian, Icelandic, Indonesian, Irish, Japanese, Korean, Nepali, no, Norwegian (Nynorsk), Pashto, Portuguese (Brazil), Portuguese (Portugal), Romanian, Serbian, Spanish, Spanish (Mexico), Turkish, Vietnamese",
+        "standards": "ELA CCSS\nCCSS.ELA-LITERACY.CCRA.R.4 Interpret words and phrases as they are used in a text, including determining technical, connotative, and figurative meanings, and analyze how specific word choices shape meaning or tone.\nCCSS.ELA-LITERACY.RL.3.4 Determine the meaning of words and phrases as they are used in a text, distinguishing literal from nonliteral language.\nCCSS.ELA-LITERACY.RL.5.4 Determine the meaning of words and phrases as they are used in a text, including figurative language such as metaphors and similes.\nCCSS.ELA-LITERACY.CCRA.R.7 Integrate and evaluate content presented in diverse media and formats, including visually and quantitatively, as well as in words.\nCCSS.ELA-LITERACY.RL.4.7 Make connections between the text of a story or drama and a visual or oral presentation of the text, identifying where each version reflects specific descriptions and directions in the text.\nCCSS.ELA-LITERACY.RL.5.7 Analyze how visual and multimedia elements contribute to the meaning, tone, or beauty of a text (e.g., graphic novel, multimedia presentation of fiction, folktale, myth, poem).\nCSTA \n1B-AP-10 3-5 Create programs that include sequences, events, loops, and conditionals.\n1B-AP-12 3-5 Modify, remix, or incorporate portions of an existing program into one's own work, to develop something new or add more advanced features.\n1B-AP-15 3-5 Test and debug (identify and fix errors) a program or algorithm to ensure it runs as intended.",
+        "tutorialId": "poem_art"
+      }
+    },
+    {
+      "metadata": {
+        "tags": [],
+        "concepts": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "27jkibac934d"
+          }
+        },
+        "type": "Entry",
+        "id": "13G0KnqSstCd9W1nCGuuA0",
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "curriculum"
+          }
+        },
+        "revision": 4,
+        "createdAt": "2025-07-16T16:23:59.581Z",
+        "updatedAt": "2025-07-16T17:36:48.616Z",
+        "publishedAt": "2025-07-16T17:36:48.616Z",
+        "firstPublishedAt": "2025-07-16T16:55:52.880Z",
+        "publishedVersion": 22,
+        "environment": {
+          "sys": {
+            "id": "development",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "Music Lab: Jam Session",
+        "company": "Code.org",
+        "actionBlockOverline": "Grades 3-12",
+        "programmingLanguage": "Blocks",
+        "shortDescription": "Make music and learn to code with Music Lab: Jam Session! Students remix tracks from artists like Sabrina Carpenter, Lady Gaga, and Shakira while mastering coding basics such as sequencing, functions, and exploring AI-driven beat creation.",
+        "longDescription": "Make music and learn to code with Music Lab: Jam Session! In this self-guided, one-hour activity, students remix tracks from artists like Sabrina Carpenter, Lady Gaga, and Shakira while mastering coding basics such as sequencing, functions, and exploring AI-driven beat creation. This hands-on interactive experience sparks creativity and boosts confidence—leaving students proud of their custom track and the coding skills they've gained.",
+        "primaryLinkRef": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "45PiB70JllFFDuIsUhYKez"
+          }
+        },
+        "secondaryLinkRef": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "4GGhqMyJsxnS3hGoJNHfp3"
+          }
+        },
+        "image": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "4gJcj1Ns6tctlsNgViToqP"
+          }
+        },
+        "classroomTechnology": "All modern browsers, Android tablet, iPad",
+        "allTopics": "Art, Media, Music, Artificial Intelligence",
+        "accessibilityText": "Captions, High-contrast, Text-to-speech",
+        "languagesText": "Arabic, Chinese (Traditional), French, German, Hebrew, Hindi, Indonesian, Italian, Japanese, Korean, Persian, Polish, Portuguese (Brazil), Portuguese (Portugal), English, Spanish, Spanish (Mexico), Romanian, Slovak, Filipino, Thai, Turkish",
+        "standards": "CSTA K-12 Computer Science Standards (2017)\nAP - Algorithms & Programming\n1B-AP-10 - Create programs that include sequences, events, loops, and conditionals.\n1B-AP-11 - Decompose (break down) problems into smaller, manageable subproblems to facilitate the program development process.\n1B-AP-12 - Modify, remix or incorporate portions of an existing program into one's own work, to develop something new or add more advanced features.",
+        "publishedDate": "2024-11-13T00:00-04:00",
+        "tutorialId": "music-jam-2024"
+      }
+    },
+    {
+      "metadata": {
+        "tags": [],
+        "concepts": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "27jkibac934d"
+          }
+        },
+        "type": "Entry",
+        "id": "2DyUex4uM2nDN2UaD9n0JA",
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "curriculum"
+          }
+        },
+        "revision": 3,
+        "createdAt": "2025-07-16T17:00:19.468Z",
+        "updatedAt": "2025-07-16T17:36:58.873Z",
+        "publishedAt": "2025-07-16T17:36:58.873Z",
+        "firstPublishedAt": "2025-07-16T17:15:24.421Z",
+        "publishedVersion": 18,
+        "environment": {
+          "sys": {
+            "id": "development",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "The Show Must Go On",
+        "company": "Minecraft Education",
+        "actionBlockOverline": "Grades 2-12",
+        "programmingLanguage": "Blocks, Python",
+        "shortDescription": "Use problem-solving and computational thinking to code through fun challenges, unlock surprises, and bring the show to life. Compose a song, choreograph a dance, craft a costume and save the show—all while learning key coding skills in blocks or Python.",
+        "longDescription": "\nWelcome to The Show Must Go On, where your creativity and coding skills take center stage! The big show is in chaos—the Agent has vanished! Use problem-solving and computational thinking to code through fun challenges, unlock surprises, and bring the show to life. Compose a song, choreograph a dance, craft a costume and save the show—all while learning key coding skills in blocks or Python.",
+        "primaryLinkRef": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "7xJXCldAvzDVqSpGHOceOp"
+          }
+        },
+        "secondaryLinkRef": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "4MfbKcRQJpHNXAuYysaE26"
+          }
+        },
+        "image": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "3l4TcL3a0m3jJIt2Q7TFJi"
+          }
+        },
+        "classroomTechnology": "All modern browsers, Android tablet, iPad, Windows phone, Android phone, iPhone",
+        "allTopics": "Art, Media, Music",
+        "accessibilityText": "High-contrast, Keyboard navigation, Screen reader, Text-to-speech",
+        "languagesText": "Bulgarian, Chinese (Simplified), Chinese (Traditional), Czech, Danish, Dutch, English, Finnish, French, German, Greek, Hungarian, Indonesian, Italian, Japanese, Korean, nb, Polish, Portuguese (Brazil), Portuguese (Portugal), Russian, Spanish, Spanish (Mexico), Swedish, Turkish, Ukrainian",
+        "standards": "CSTA Standards:\n1B-AP-08, 1B-AP-10, 1B-AP-11, 1B-AP-12, 1B-AP-13, 1B-AP-15, 1B-IC-18, 2-AP-10, 2-AP-12, 2-AP-13, 2-AP-17, 2-IC-20\n\nNGSS (Next Generation Science Standards):\nMS-ETS1-2, MS-ETS1-1, ETS1.B, MS-ETS1-4, HS-ETS1-4\n\nCommon Core (Mathematics and ELA):\nMP1, 6.EE.B.7, MP4, RST.6-8.7\n\nAustralia (Digital Technologies Curriculum):\nACTDIP025, ACTDIP019, ACTDIP019, ACTDIP025, ACTDIP025, ACTDIP019\n\nDigital Technologies: Examine how computing has changed the world and its cultural impacts.\nACTDIP025, ACTDIP019, ACTDIP025\n\nCanada (Ontario and British Columbia):\nOntario Digital Literacy – Grades 1-8: Evaluate and refine coding solutions by comparing different approaches.\nOntario Curriculum – Grades 1-8: Create and test simple algorithms with loops, sequences, and events.\nOntario Science and Technology: Decompose complex tasks into manageable parts for easier problem-solving.\nBritish Columbia ADST: Remix code as part of iterative programming tasks.\nBritish Columbia ADST: Design solutions through iterative processes considering user needs.\nOntario Digital Literacy: Systematically test and debug coding solutions to ensure accuracy.\nBritish Columbia ADST: Analyze the societal and cultural impacts of digital technologies.\nOntario Digital Literacy: Use flowcharts or visual diagrams to address complex problems.\nBritish Columbia ADST: Iteratively develop programs with control structures, including loops and conditionals.\nBritish Columbia ADST: Test programs systematically using various test cases to refine the solution.\nBritish Columbia ADST: Evaluate trade-offs of computing technologies in people's lives and career choices.\n\nUK (Key Stage 2 and Key Stage 3):\nKey Stage 3: Understand key algorithms and use logical reasoning to compare alternative algorithms for the same problem.\nKey Stage 2: Design and debug simple programs with sequences and loops.\nKey Stage 2: Decompose problems into smaller parts for easier debugging and implementation.",
+        "publishedDate": "2024-12-01T00:00-04:00",
+        "tutorialId": "show-must-go-on"
+      }
+    },
+    {
+      "metadata": {
+        "tags": [],
+        "concepts": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "27jkibac934d"
+          }
+        },
+        "type": "Entry",
+        "id": "6SxO4PuAgoLsFbwbTCDCJ5",
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "curriculum"
+          }
+        },
+        "revision": 4,
+        "createdAt": "2025-07-16T16:58:25.358Z",
+        "updatedAt": "2025-07-16T17:37:09.397Z",
+        "publishedAt": "2025-07-16T17:37:09.397Z",
+        "firstPublishedAt": "2025-07-16T17:00:02.656Z",
+        "publishedVersion": 15,
+        "environment": {
+          "sys": {
+            "id": "development",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "Hello World",
+        "company": "Code.org",
+        "actionBlockOverline": "Grades 2-12",
+        "programmingLanguage": "Blocks",
+        "shortDescription": "Learn the basics of computer science by programming in Sprite Lab. You will create and animate sprites, and make your own interactive scenes.",
+        "primaryLinkRef": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "3lgjAQKQeNDnK6B8D7FwEp"
+          }
+        },
+        "secondaryLinkRef": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "4ZKLMFCtaiZ5rqkn02XGiX"
+          }
+        },
+        "image": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "7wR5qDQr1HuBAHKCrSNmWf"
+          }
+        },
+        "classroomTechnology": "All modern browsers, Android tablet, iPad, Windows phone, Android phone, iPhone",
+        "allTopics": "Language Arts, Math, Science",
+        "accessibilityText": "Text-to-speech, Captions",
+        "languagesText": "Bulgarian, Corsican, Danish, Dutch, English, English (United Kingdom), Estonian, French, Georgian, German, Hungarian, Icelandic, Indonesian, Irish, Japanese, Korean, Nepali, no, Norwegian (Nynorsk), Pashto, Portuguese (Portugal), Romanian, Serbian, Spanish, Spanish (Mexico), Turkish, Vietnamese",
+        "standards": "Hello World:\n1A-IC-17 - Work respectfully and responsibly with others online.\n1A-AP-11 - Decompose (break down) the steps needed to solve a problem into a precise sequence of instructions.\n1B-AP-10 - Create programs that include sequences, events, loops, and conditionals.\n1B-AP-12 - Modify, remix or incorporate portions of an existing program into one's own work, to develop something new or add more advanced features.\nOpen-Ended Projects:\n1A-AP-12 - Develop plans that describe a program's sequence of events, goals, and expected outcomes.\n1B-AP-10 - Create programs that include sequences, events, loops, and conditionals.\n1B-AP-12 - Modify, remix or incorporate portions of an existing program into one's own work, to develop something new or add more advanced features.\n1B-AP-13 - Use an iterative process to plan the development of a program by including others' perspectives and considering user preferences.\n3-LS1-1.        Develop models to describe that organisms have unique and diverse life cycles but all have in common birth, growth, reproduction, and death.\n5-LS2-1 Develop a model to describe the movement of matter among plants, animals, decomposers, and the environment.\nCCSS.ELA-LITERACY.RL.2.3 Describe how characters in a story respond to major events and challenges.\nCCSS.ELA-LITERACY.RL.3.3 Describe characters in a story (e.g., their traits, motivations, or feelings) and explain how their actions contribute to the sequence of events\nCCSS.ELA-LITERACY.RL.4.3 Describe in depth a character, setting, or event in a story or drama, drawing on specific details in the text (e.g., a character's thoughts, words, or actions).\nCCSS.ELA-LITERACY.CCRA.R.2 Determine central ideas or themes of a text and analyze their development; summarize the key supporting details and ideas.\nCCSS.ELA-LITERACY.RL.2.2 Recount stories, including fables and folktales from diverse cultures, and determine their central message, lesson, or moral.\nCCSS.ELA-LITERACY.RL.3.2 Recount stories, including fables, folktales, and myths from diverse cultures; determine the central message, lesson, or moral and explain how it is conveyed through key details in the text.\nCCSS.ELA-LITERACY.RL.4.2 Determine a theme of a story, drama, or poem from details in the text; summarize the text.\nCCSS.ELA-LITERACY.RL.5.2 Determine a theme of a story, drama, or poem from details in the text, including how characters in a story or drama respond to challenges or how the speaker in a poem reflects upon a topic; summarize the text.",
+        "publishedDate": "2022-12-01T00:00-04:00",
+        "tutorialId": "hello-world"
+      }
+    },
+    {
+      "metadata": {
+        "tags": [],
+        "concepts": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "27jkibac934d"
+          }
+        },
+        "type": "Entry",
+        "id": "2sUmCbwKlzs6NUka6RdZUo",
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "curriculum"
+          }
+        },
+        "revision": 4,
+        "createdAt": "2025-07-16T16:56:10.495Z",
+        "updatedAt": "2025-07-16T17:37:21.352Z",
+        "publishedAt": "2025-07-16T17:37:21.352Z",
+        "firstPublishedAt": "2025-07-16T16:58:15.363Z",
+        "publishedVersion": 17,
+        "environment": {
+          "sys": {
+            "id": "development",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "Dance Party",
+        "company": "Code.org",
+        "actionBlockOverline": "Grades 2-12",
+        "programmingLanguage": "Blocks",
+        "shortDescription": "Code a Dance Party to share with your friends. Featuring Beyoncé, Lizzo, Harry Styles, Lil Nas X, Selena Gomez, music from Disney's 'Encanto', and more!",
+        "primaryLinkRef": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "190BXaOdx7GTufbeMsFFG9"
+          }
+        },
+        "secondaryLinkRef": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "1Mwe4umfBlks5s6JMOFC2E"
+          }
+        },
+        "image": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "5W1rvF8JANN8FoIHxolvmt"
+          }
+        },
+        "classroomTechnology": "All modern browsers, Android tablet, iPad, Unplugged",
+        "allTopics": "Computer Science only",
+        "accessibilityText": "Captions",
+        "languagesText": "Arabic, Chinese (Traditional), Czech, Danish, Dutch, English, English (United Kingdom), Finnish, French, German, Greek, Hindi, Hungarian, Indonesian, Italian, Japanese, Korean, Malay, Polish, Portuguese (Portugal), Portuguese (Brazil), Romanian, Russian, Spanish, Spanish (Mexico), Swedish, Filipino, Thai, Turkish, Ukrainian, Urdu (Pakistan), Vietnamese",
+        "publishedDate": "2023-12-01T00:00-04:00",
+        "tutorialId": "dance-2019"
+      }
+    },
+    {
+      "metadata": {
+        "tags": [],
+        "concepts": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "27jkibac934d"
+          }
+        },
+        "type": "Entry",
+        "id": "5zbdtrO7vJ5mNAniX07DXj",
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "curriculum"
+          }
+        },
+        "revision": 3,
+        "createdAt": "2025-07-16T17:22:31.711Z",
+        "updatedAt": "2025-07-16T17:37:34.585Z",
+        "publishedAt": "2025-07-16T17:37:34.585Z",
+        "firstPublishedAt": "2025-07-16T17:25:55.184Z",
+        "publishedVersion": 14,
+        "environment": {
+          "sys": {
+            "id": "development",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "Generation AI",
+        "company": "Minecraft Education",
+        "actionBlockOverline": "Grades 2-12",
+        "programmingLanguage": "Blocks, Python",
+        "shortDescription": "Venture through time to create your AI-powered inventions in the new Minecraft Hour of Code: Generation AI. Use problem solving, creativity, and computational thinking with the principles of Responsible AI.",
+        "longDescription": "Venture through time to create your AI-powered inventions in the new Minecraft Hour of Code: Generation AI. Use problem solving, creativity, and computational thinking with the principles of Responsible AI. With coding in blocks or Python, Hour of Code allows anyone to learn the basics of coding and how to build a better AI for all.",
+        "primaryLinkRef": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "41112V3jFcR3dHLp7HZSCr"
+          }
+        },
+        "secondaryLinkRef": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "67E64qbmOT0YxpbpBBi2gk"
+          }
+        },
+        "image": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "5SuBAE9JXePWZAWGpLIfJ4"
+          }
+        },
+        "classroomTechnology": "Android tablet, iPad, Windows phone, Android phone, iPhone",
+        "allTopics": "Computer Science only, Artificial Intelligence",
+        "accessibilityText": "None",
+        "languagesText": "Bulgarian, Chinese (Simplified), Chinese (Traditional), Czech, Danish, Dutch, English, English (United Kingdom), Finnish, French, German, Greek, Hungarian, Indonesian, Italian, Japanese, Korean, no, Polish, Portuguese (Brazil), Portuguese (Portugal), Russian, Spanish, Spanish (Mexico), Swedish, Turkish, Ukrainian",
+        "standards": "CSTA 1A-AP-08, CSTA 1A-AP-10, CSTA 1A-AP-14, CSTA 1A-IC-16, CSTA 1B-AP-10, CSTA 1B-AP-08, CSTA 1B-AP-15, CSTA 1B-IC-20, CSTA 2-AP-10, CSTA 2-AP-12, CSTA 2-AP-13\nCSTA 2-IC-21, CSTA 1B-IC-19, CSTA 1A-CS-03",
+        "tutorialId": "generation-ai"
+      }
+    },
+    {
+      "metadata": {
+        "tags": [],
+        "concepts": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "27jkibac934d"
+          }
+        },
+        "type": "Entry",
+        "id": "2By28WZKeSTGblG6zupnMI",
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "curriculum"
+          }
+        },
+        "revision": 2,
+        "createdAt": "2025-07-16T17:03:14.008Z",
+        "updatedAt": "2025-07-16T17:37:49.069Z",
+        "publishedAt": "2025-07-16T17:37:49.069Z",
+        "firstPublishedAt": "2025-07-16T17:14:50.616Z",
+        "publishedVersion": 11,
+        "environment": {
+          "sys": {
+            "id": "development",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "AI for Oceans",
+        "company": "Code.org",
+        "actionBlockOverline": "Grades 3-12",
+        "shortDescription": "Computer science is about so much more than coding! Learn about AI, machine learning, training data, and bias, while exploring ethical issues and how AI can be used to address world problems.",
+        "primaryLinkRef": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "52EQj9axJDocNmY3bJOwEB"
+          }
+        },
+        "secondaryLinkRef": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "1QkGMelFx43mM35th7jkkH"
+          }
+        },
+        "image": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "3HGqIPlNknJPhDp1ky4PKI"
+          }
+        },
+        "classroomTechnology": "All modern browsers, modern Android tablets, iPads, modern Android phones, iPhones",
+        "allTopics": "Computer Science only, Artificial Intelligence",
+        "accessibilityText": "Captions",
+        "languagesText": "Arabic, Czech, Chinese (Simplified), Chinese (Traditional), Danish, Dutch, English (United Kingdom), English, Finnish, French, German, Greek, Hindi, Croatian, Hungarian, Indonesian, Italian, Japanese, Korean, Malay, Marathi, Polish, Portuguese (Brazil), Portuguese (Portugal), Romanian, Russian, Slovak, Spanish, Spanish (Mexico), Swedish, Tagalog, Tamil, Telugu, Thai, Turkish, Ukrainian, Urdu (India), Urdu (Pakistan), Vietnamese",
+        "tutorialId": "oceans"
+      }
+    }
+  ],
+  "sortOrder": "alphabetical",
+  "hideImages": true,
+  "hideSecondaryButton": false,
+  "children": null
+}

@@ -40,18 +40,18 @@ class AbilityTest < ActiveSupport::TestCase
       end
     end
 
-    @pilot_course = create(:unit, pilot_experiment: 'my-experiment').tap do |script|
+    @pilot_course = create(:unit).tap do |script|
       create(:single_unit_course, unit: script, pilot_experiment: 'my-experiment', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot)
       @pilot_course_script_level = create(:script_level, script: script)
     end
 
-    @pl_pilot_course = create(:unit, pilot_experiment: 'my-experiment').tap do |script|
+    @pl_pilot_course = create(:unit).tap do |script|
       create(:single_unit_course, unit: script, pilot_experiment: 'my-experiment', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer)
       @pl_pilot_course_script_level = create(:script_level, script: script)
     end
 
     @in_development_unit_group = create(:unit_group, published_state: 'in_development')
-    @in_development_script = create(:script, published_state: 'in_development').tap do |script|
+    @in_development_script = create(:script).tap do |script|
       @in_development_lesson = create(:lesson, script: script, has_lesson_plan: true)
       @in_development_script_level = create(:script_level, script: script)
     end
@@ -714,6 +714,7 @@ class AbilityTest < ActiveSupport::TestCase
   test 'student of verified teacher in CSA section can access main javabuilder' do
     teacher = create(:authorized_teacher)
     csa_script = create(:csa_script)
+    create(:single_unit_course, unit: csa_script)
     section = create(:section, user: teacher, login_type: 'word', script: csa_script)
     student = create(:follower, section: section).student_user
 

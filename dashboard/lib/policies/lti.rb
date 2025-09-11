@@ -14,6 +14,12 @@ class Policies::Lti
     ].freeze
   end
 
+  module DeploymentConfiguration
+    RESTRICTED_DEPLOYMENTS = [
+      223 # LAUSD
+    ]
+  end
+
   ALL_SCOPES = AccessTokenScopes.constants.map do |scope|
     AccessTokenScopes.const_get(scope)
   end
@@ -214,5 +220,12 @@ class Policies::Lti
 
   def self.account_linking?(session, user)
     session[:lms_landing].present? && only_lti_auth?(user) && !user.lms_landing_opted_out
+  end
+
+  # Check if the user is part of a deployment with special restrictions
+  def self.restricted_user?(user)
+    user.lti_user_identities.any? do |identity|
+      identity.lti_deployments.any?(&:restricted?)
+    end
   end
 end

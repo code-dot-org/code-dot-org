@@ -6,10 +6,10 @@
   "original_script_names": [
     "facilitator-training"
   ],
-  "published_state": "in_development",
+  "published_state": "stable",
   "instruction_type": "self_paced",
-  "participant_audience": "teacher",
-  "instructor_audience": "facilitator",
+  "participant_audience": "facilitator",
+  "instructor_audience": "universal_instructor",
   "properties": {
     "family_name": "facilitator-training",
     "has_numbered_units": true,

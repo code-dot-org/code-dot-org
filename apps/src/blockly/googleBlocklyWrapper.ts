@@ -51,7 +51,10 @@ import CdoFieldToggle from './addons/cdoFieldToggle';
 import CdoFieldVariable from './addons/cdoFieldVariable';
 import initializeGenerator from './addons/cdoGenerator';
 import {gestureOverrides} from './addons/cdoGesture';
-import {initializeKeyboardNavigation} from './addons/cdoKeyboardNavigation';
+import {
+  initializeKeyboardNavigation,
+  preInjectRegistrations,
+} from './addons/cdoKeyboardNavigation';
 import CdoMetricsManager from './addons/cdoMetricsManager';
 import CdoRendererGeras from './addons/cdoRendererGeras';
 import CdoRendererThrasos from './addons/cdoRendererThrasos';
@@ -127,13 +130,13 @@ import {
   setThemeAndRenderBlocks,
 } from './utils';
 
-const options = {
+const options: {contextMenu: true; shortcut: true} = {
   contextMenu: true,
   shortcut: true,
 };
 
-const plugin = new CrossTabCopyPaste();
-plugin.init(options);
+const crossTabCopyPastePlugin = new CrossTabCopyPaste();
+crossTabCopyPastePlugin.init(options);
 
 const MAX_GET_CODE_RETRIES = 2;
 const RETRY_GET_CODE_INTERVAL_MS = 500;
@@ -203,6 +206,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   registerIfMutator();
   registerLogicCompareMutator();
   registerTextJoinMutator();
+  preInjectRegistrations();
   // TODO: can we avoid using any here by converting BlocklyWrapper to a class?
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const blocklyWrapper = new (BlocklyWrapper as any)(
