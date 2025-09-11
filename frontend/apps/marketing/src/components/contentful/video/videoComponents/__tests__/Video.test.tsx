@@ -242,7 +242,7 @@ describe('Video Component', () => {
         '@type': 'VideoObject',
         name: defaultProps.videoTitle,
         description: videoDesc,
-        thumbnailUrl: `//i.ytimg.com/vi/${youTubeId}/hqdefault.jpg`,
+        thumbnailUrl: `https://i.ytimg.com/vi/${youTubeId}/hqdefault.jpg`,
         uploadDate: uploadDate,
         embedUrl: `https://www.youtube-nocookie.com/watch?v=${youTubeId}`,
         contentUrl: defaultProps.videoFallback,
