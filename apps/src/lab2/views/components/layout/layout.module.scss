@@ -35,8 +35,9 @@
   display: grid;
   grid-template-rows: 1fr 56px;
   grid-template-columns: 1fr;
-  grid-template-areas: "content"
-                       "footer";
+  grid-template-areas:
+    'content'
+    'footer';
   height: 100%;
 }
 
@@ -66,8 +67,13 @@
   height: 40px;
   padding: 4px 8px;
   box-sizing: border-box;
-  border-bottom: 1px solid var(--borders-neutral-primary);
-  background-color: var(--background-neutral-secondary);
+  border-bottom: 1px solid var(--borders-neutral-quaternary);
+  background-color: var(--background-neutral-primary);
+}
+
+.headerLabel {
+  color: var(--text-neutral-quaternary);
+  font-size: 0.75rem; // 12px
 }
 
 .editorAndPreviewContainer {

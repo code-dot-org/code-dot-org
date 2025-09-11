@@ -1,7 +1,7 @@
 import SegmentedButtons, {
   SegmentedButtonsProps,
 } from '@code-dot-org/component-library/segmentedButtons';
-import {OverlineTwoText} from '@code-dot-org/component-library/typography';
+import Typography from '@code-dot-org/component-library/typography';
 import {InfoPanel} from '@codebridge/InfoPanel/InfoPanel';
 import {LayoutProps} from '@codebridge/types';
 import HeaderButtons from '@codebridge/Workspace/HeaderButtons';
@@ -159,9 +159,14 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
             ) : (
               <SegmentedButtons {...viewModeButtonsProps} />
             )}
-            <OverlineTwoText noMargin>
+            <Typography
+              semanticTag="h2"
+              visualAppearance="overline-two"
+              noMargin
+              className={moduleStyles.headerLabel}
+            >
               {weblab2I18n.workspace()}
-            </OverlineTwoText>
+            </Typography>
             <HeaderButtons />
           </div>
           <div className={moduleStyles.editorAndPreviewContainer}>
