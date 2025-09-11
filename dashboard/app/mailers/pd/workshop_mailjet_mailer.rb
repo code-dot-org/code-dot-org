@@ -12,18 +12,18 @@ class Pd::WorkshopMailjetMailer
       name: user.given_name || user.name,
       cancel_registration_link: CDO.studio_url("pd/workshop_enrollment/#{enrollment.code}/cancel", CDO.default_scheme),
       pre_survey_link: enrollment.pre_workshop_survey_url,
-      facilitator_name: workshop.facilitators&.map(&:name)&.join(', ') || 'None',
+      facilitator_name: workshop.facilitators&.map(&:name)&.join(', ').presence || 'None',
       rp_email: regional_partner&.contact_email_with_backup || 'support@code.org',
       rp_name: regional_partner&.name || 'Code.org',
       organizer_email: organizer&.email || 'support@code.org',
       organizer_name: organizer&.name || 'Code.org',
-      workshop_notes: workshop.notes || '',
+      workshop_notes: workshop.notes || 'No additional information at this time.',
       sessions: workshop.sessions.map do |session|
         {
           datetime: session.start_date_with_start_and_end_times_us_format,
           format: session.session_format,
           meeting_link: session.meeting_link || '',
-          location: session.formatted_location_details || ''
+          location: session.formatted_location_details
         }
       end,
       workshop_subjects: workshop.course_offerings.present? ? workshop.course_offerings.map(&:display_name)&.join(', ') : workshop.subject,
