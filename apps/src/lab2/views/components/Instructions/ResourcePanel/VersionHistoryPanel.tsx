@@ -1,7 +1,7 @@
 import Alert from '@code-dot-org/component-library/alert';
 import {Button} from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Heading2} from '@code-dot-org/component-library/typography';
+import {OverlineTwoText} from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
@@ -353,7 +353,7 @@ const VersionHistoryPanel: React.FunctionComponent<
               onChange={onVersionChange}
             />
           </div>
-          <div className={moduleStyles.footer}>
+          <div className={moduleStyles.listFooter}>
             {versionLoadError && (
               <div className={classNames(moduleStyles.versionLoadError)}>
                 <Alert
@@ -372,7 +372,7 @@ const VersionHistoryPanel: React.FunctionComponent<
         </div>
       )}
       {!isLatestVersion(selectedVersion) && (
-        <div className={moduleStyles.publishCurrentVersionPanel}>
+        <div className={moduleStyles.footerPanel}>
           <div className={moduleStyles.buttonContainer}>
             <Button
               text={commonI18n.cancel()}
@@ -397,14 +397,13 @@ const VersionHistoryPanel: React.FunctionComponent<
         </div>
       )}
       {isLatestVersion(selectedVersion) && (
-        <div className={moduleStyles.publishCurrentVersionPanel}>
-          <div className={moduleStyles.publishCurrentVersionPanelHeader}>
-            <Heading2
-              className={moduleStyles.headerText}
-              visualAppearance={'body-three'}
-            >
-              Publish
-            </Heading2>
+        <div className={moduleStyles.footerPanel}>
+          <div className={moduleStyles.publishCurrentVersionHeader}>
+            <div className={moduleStyles.publishCurrentVersionHeaderText}>
+              <OverlineTwoText className={moduleStyles.overlineTwoText}>
+                Publish Current Version
+              </OverlineTwoText>
+            </div>
           </div>
         </div>
       )}

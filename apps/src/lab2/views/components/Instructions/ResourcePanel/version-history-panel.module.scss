@@ -111,8 +111,7 @@ $space-xl: 10px;
   bottom: -9px;
 }
 
-
-.footer {
+.listFooter {
   flex-shrink: 0;
   display: flex;
   justify-content: flex-end;
@@ -120,12 +119,6 @@ $space-xl: 10px;
   padding: $space-m;
   margin-bottom: $space-m;
   margin-right: $space-xl;
-
-  .footerButton {
-    margin: $space-xs;
-    width: 100%;
-    height: 32px;
-  }
 }
 
 .loadingVersionSpinner {
@@ -142,45 +135,53 @@ $space-xl: 10px;
   color: var(--text-neutral-placeholder);
 }
 
-.publishCurrentVersionPanel {
+.footerPanel {
   border-top: 1px solid var(--borders-neutral-primary);
   border-left: 1px solid var(--borders-neutral-primary);
-  background-color: var(--background-neutral-secondary);
-
-  .buttonContainer {
-    display: flex;
-    justify-content: space-between;
-    padding: 12px;
-    gap: 8px;
-    background-color: var(--background-neutral-secondary);
-  }
-
-  .versionButton {
-    width: 100%;
-    height: 32px;
-  }
-
-  .leftButton {
-    margin-right: auto;
-  }
-
-  .rightButton {
-    margin-left: auto;
-  }
+  // background-color: var(--background-neutral-secondary);
 }
 
-
-.publishCurrentVersionPanelHeader {
+.buttonContainer {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 4px 8px;
-  background: var(--background-neutral-primary);
+  padding: 12px;
+  gap: 8px;
+  background-color: var(--background-neutral-secondary);
+}
+
+.versionButton {
+  width: 100%;
+  height: 32px;
+}
+
+.leftButton {
+  margin-right: auto;
+}
+
+.rightButton {
+  margin-left: auto;
+}
+
+.publishCurrentVersionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  background: var(--background-neutral-secondary);
   border-bottom: 1px solid var(--borders-neutral-primary);
 }
 
-.headerText {
+.publishCurrentVersionHeaderText {
   flex: 1;
   text-align: center;
   margin: 0;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 8px;
+  
+  // Override built-in spacing from the typography component
+  .overlineTwoText {
+    margin: 0; 
+  }
 }
