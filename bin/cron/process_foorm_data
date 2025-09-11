@@ -72,7 +72,6 @@ def write_forms_to_redshift(client, arn)
       form_version            int,
       item_type               varchar,
       item_name               varchar,
-      item_category           varchar,
       item_text               varchar(max),
       matrix_item_name        varchar,
       matrix_item_header      varchar(max),
