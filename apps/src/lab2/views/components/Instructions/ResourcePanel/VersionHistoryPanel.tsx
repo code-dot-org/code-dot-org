@@ -367,7 +367,7 @@ const VersionHistoryPanel: React.FunctionComponent<
                 <FontAwesomeV6Icon iconName="spinner" animationType="spin" />
               </div>
             )}
-            {!viewAsUserId && (
+            {!isLatestVersion(selectedVersion) && !viewAsUserId && (
               <Button
                 text={commonI18n.restore()}
                 size={'s'}
@@ -377,15 +377,17 @@ const VersionHistoryPanel: React.FunctionComponent<
                 type={'primary'}
               />
             )}
-            <Button
-              text={commonI18n.cancel()}
-              size={'s'}
-              onClick={handleCancel}
-              disabled={versionLoading || latestVersion === selectedVersion}
-              className={moduleStyles.footerButton}
-              type={'secondary'}
-              color="black"
-            />
+            {!isLatestVersion(selectedVersion) && (
+              <Button
+                text={commonI18n.cancel()}
+                size={'s'}
+                onClick={handleCancel}
+                disabled={versionLoading || latestVersion === selectedVersion}
+                className={moduleStyles.footerButton}
+                type={'secondary'}
+                color="black"
+              />
+            )}
           </div>
         </>
       )}
