@@ -58,7 +58,10 @@ unless github_token.empty?
     command "git config --global credential.helper store"
     user node[:current_user]
     group node[:current_user]
-    not_if "git config --global --get credential.helper | grep -q store", user: node[:current_user]
+    environment('HOME' => node[:home])
+    not_if "git config --global --get credential.helper | grep -q store",
+           user: node[:current_user],
+           environment: {'HOME' => node[:home]}
   end
 
   file "#{node[:home]}/.git-credentials" do
