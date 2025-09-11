@@ -46,6 +46,30 @@ module TestRunUtils
     end
   end
 
+  def self.run_dashboard_cdo_contentful_engine_tests
+    Dir.chdir(dashboard_engines_dir('cdo_contentful')) do
+      ChatClient.wrap('dashboard cdo_contentful engine tests') do
+        RakeUtils.rake_stream_output 'test', env: {'BUNDLE_GEMFILE' => dashboard_dir('Gemfile')}
+      end
+    end
+  end
+
+  def self.run_dashboard_hoc_legacy_engine_tests
+    Dir.chdir(dashboard_dir) do
+      ChatClient.wrap('dashboard hoc_legacy engine tests') do
+        RakeUtils.system_stream_output "RAILS_ENV=#{rack_env}", "RACK_ENV=#{rack_env}", 'bundle', 'exec', 'rails', 'test', dashboard_engines_dir('hoc_legacy', 'test')
+      end
+    end
+  end
+
+  def self.run_dashboard_marketing_engine_tests
+    Dir.chdir(dashboard_dir) do
+      ChatClient.wrap('dashboard marketing engine tests') do
+        RakeUtils.system_stream_output "RAILS_ENV=#{rack_env}", "RACK_ENV=#{rack_env}", 'bundle', 'exec', 'rails', 'test', dashboard_engines_dir('marketing', 'test')
+      end
+    end
+  end
+
   def self.run_pegasus_tests
     Dir.chdir(pegasus_dir) do
       ChatClient.wrap('pegasus tests') do

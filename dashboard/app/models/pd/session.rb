@@ -112,6 +112,15 @@ class Pd::Session < ApplicationRecord
     }
   end
 
+  def session_info_for_emails
+    {
+      datetime: start_date_with_start_and_end_times_us_format,
+      format: session_format,
+      meeting_link: meeting_link || '',
+      location: formatted_location_details
+    }
+  end
+
   def local?
     workshop.time_zone.blank?
   end

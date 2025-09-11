@@ -46,7 +46,7 @@ class Marketing::Teacher::PromotionsControllerTest < ActionDispatch::Integration
     end
 
     before do
-      Marketing::ContentfulClient.any_instance.expects(:entry).with(locale, entry_id).returns(entry)
+      Marketing::ContentfulClient.expects(:entry).with(locale, entry_id).returns(entry)
     end
 
     it 'returns teacher sidebar json' do

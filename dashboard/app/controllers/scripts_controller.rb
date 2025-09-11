@@ -19,7 +19,7 @@ class ScriptsController < ApplicationController
 
   def show
     if @script.is_deprecated
-      @deprecated_course_name = @script.name
+      @deprecated_curriculum_name = @script.name
       return render 'errors/deprecated_course'
     end
     #TODO: TEACH-2050 Modularity support redirect to property. Currently this redirects to the script path, which
@@ -151,41 +151,16 @@ class ScriptsController < ApplicationController
 
       unit = first_cv.content_root
       next unless unit
-      @unit_families_course_types << [cf, {instruction_type: unit.instruction_type, instructor_audience: unit.instructor_audience, participant_audience: unit.participant_audience}]
+      @unit_families_course_types << [cf]
     end
 
-    @unit_families_course_types = @unit_families_course_types.compact.to_h
+    @unit_families_course_types = @unit_families_course_types.compact
   end
 
   def create
     return head :bad_request unless general_params[:is_migrated]
-
-    # These fields should be set unless a unit is in a unit group.
-    # When creating a unit it is not yet in a unit group so we
-    # set default values here
-    #
-    # Setting default values for the columns would not work because those
-    # are not used when you call new() just when you call create
-    updated_unit_params = unit_params.merge(
-      {
-        published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development,
-        instructor_audience: general_params[:instructor_audience] ? general_params[:instructor_audience] : Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher,
-        participant_audience: general_params[:participant_audience] ? general_params[:participant_audience] : Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
-        instruction_type: general_params[:instruction_type] ? general_params[:instruction_type] : Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
-      }
-    )
-
-    updated_general_params = general_params.merge(
-      {
-        published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development,
-        instructor_audience: general_params[:instructor_audience] ? general_params[:instructor_audience] : Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher,
-        participant_audience: general_params[:participant_audience] ? general_params[:participant_audience] : Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
-        instruction_type: general_params[:instruction_type] ? general_params[:instruction_type] : Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
-      }
-    )
-
-    @script = Unit.new(updated_unit_params)
-    if @script.save && @script.update_text(unit_params, i18n_params, updated_general_params)
+    @script = Unit.new(unit_params)
+    if @script.save && @script.update_text(unit_params, i18n_params, general_params)
       redirect_to edit_script_url(@script), notice: I18n.t('crud.created', model: Unit.model_name.human)
     else
       render json: @script.errors
@@ -215,7 +190,7 @@ class ScriptsController < ApplicationController
   def edit
     # Deprecated scripts should not be edited.
     if @script.is_deprecated
-      @deprecated_course_name = @script.name
+      @deprecated_curriculum_name = @script.name
       return render 'errors/deprecated_course'
     end
     raise "The new unit editor does not support level variants with experiments" if @script.is_migrated && @script.script_levels.any?(&:has_experiment?)
@@ -392,9 +367,6 @@ class ScriptsController < ApplicationController
   private def general_params
     h = params.permit(
       :hide_within_course,
-      :instruction_type,
-      :instructor_audience,
-      :participant_audience,
       :deprecated,
       :curriculum_umbrella,
       :family_name,
@@ -417,7 +389,6 @@ class ScriptsController < ApplicationController
       :weekly_instructional_minutes,
       :is_migrated,
       :announcements,
-      :pilot_experiment,
       :editor_experiment,
       :include_student_lesson_plans,
       :use_legacy_lesson_plans,

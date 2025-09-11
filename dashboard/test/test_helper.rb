@@ -58,6 +58,7 @@ require 'testing/transactional_test_case'
 require 'testing/spec_syntax'
 require 'testing/capture_queries'
 require 'testing/rspec_mocks'
+require 'testing/vcr_cassettes'
 
 require 'parallel_tests/test/runtime_logger'
 

@@ -751,14 +751,6 @@ class LevelsControllerTest < ActionController::TestCase
     assert_includes @response.body, level.name
     assert_includes @response.body, 'level cannot be renamed'
 
-    script.pilot_experiment = 'platformization-partners'
-    script.published_state = 'pilot'
-    script.save!
-    get :edit, params: {id: level.id}
-    assert_response :success
-    assert_includes @response.body, level.name
-    assert_includes @response.body, 'level cannot be renamed'
-
     script_level.destroy!
     get :edit, params: {id: level.id}
     assert_response :success

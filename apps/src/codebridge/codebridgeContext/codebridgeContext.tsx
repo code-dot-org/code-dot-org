@@ -1,5 +1,6 @@
 import React, {createContext, useContext} from 'react';
 
+import {AiTutorContext} from '@cdo/apps/aiTutor/types';
 import {ProjectSources} from '@cdo/apps/lab2/types';
 
 import {
@@ -21,13 +22,14 @@ export type CodebridgeContextType = {
   sendConsoleInput?: SendConsoleInputFunction;
   levelProperties: CodebridgeLevelProperties;
   projectPickerSettings?: ProjectPickerSettings;
-  aiTutor2Context?: string;
+  aiTutorContextPromise?: Promise<AiTutorContext>;
   AiTutor2ResponseView?: React.ReactNode;
   onImageFlagged?: (
     file: File,
     fileType: string,
     uploadFunction: () => Promise<void>
   ) => void;
+  aiTutorSystemPromptName?: string;
 };
 
 export const CodebridgeContext = createContext<CodebridgeContextType | null>(
