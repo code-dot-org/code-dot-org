@@ -45,7 +45,7 @@ Feature: Age Gated Students Modal and Banner
     Then I click selector "#section-options-dropdown-dropdown-button" once I see it
     Then I click selector "#ui-test-Section-settings" once I see it
     Then I click selector "a:contains(Progress)" once I see it
-    And I wait until element "#uitest-age-gated-banner" is not visible
+    And I wait until element "#uitest-age-gated-banner" is visible
     And I wait until element "h3" contains text "It's a bit empty here..."
 
     # Click on Age Gated Banner Students button to view Age Gated Students Modal
