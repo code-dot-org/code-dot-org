@@ -647,8 +647,8 @@ class Unit < ApplicationRecord
     Unit.where("properties -> '$.curriculum_umbrella' = ?", curriculum_umbrella).pluck(:name)
   end
 
-  def has_standards_associations?
-    curriculum_umbrella == 'CSF' && ((version_year && version_year >= '2019') || (get_original_unit_group&.version_year && get_original_unit_group.version_year >= '2019'))
+  def has_standards_associations?(unit_group: get_original_unit_group)
+    curriculum_umbrella == 'CSF' && (unit_group&.version_year && unit_group.version_year >= '2019')
   end
 
   def standards
@@ -1098,7 +1098,6 @@ class Unit < ApplicationRecord
           name: unit_name,
           login_required: general_params[:login_required].nil? ? false : general_params[:login_required], # default false
           wrapup_video: general_params[:wrapup_video],
-          family_name: general_params[:family_name].presence ? general_params[:family_name] : nil, # default nil
           hide_within_course: general_params[:hide_within_course].nil? ? false : general_params[:hide_within_course], # default false
           properties: Unit.build_property_hash(general_params)
         },
@@ -1324,8 +1323,7 @@ class Unit < ApplicationRecord
         show_assign_button: unit_group_unit&.unit_group&.course_assignable?(user),
         project_sharing: project_sharing,
         curriculum_umbrella: curriculum_umbrella,
-        family_name: family_name,
-        version_year: unit_group_unit&.cached_unit_group&.version_year || version_year,
+        version_year: unit_group_unit&.cached_unit_group&.version_year,
         assigned_section_id: assigned_section_id,
         hasStandards: has_standards_associations?,
         tts: tts?,
@@ -1367,11 +1365,11 @@ class Unit < ApplicationRecord
     if unit_group_unit
       unit_position = unit_group_unit.position
       numbered_units = unit_group_unit.unit_group.numbered_units
-      course_version_year = unit_group_unit.unit_group.version_year || version_year
+      course_version_year = unit_group_unit.unit_group.version_year
     else
       unit_position = unit_number
       numbered_units = original_unit_group&.numbered_units
-      course_version_year = original_unit_group&.version_year || version_year
+      course_version_year = original_unit_group&.version_year
     end
     summary = {
       unitId: id,
@@ -1624,7 +1622,6 @@ class Unit < ApplicationRecord
       :lesson_extras_available,
       :curriculum_path,
       :announcements,
-      :version_year,
       :supported_locales,
       :editor_experiment,
       :curriculum_umbrella,
@@ -1686,10 +1683,6 @@ class Unit < ApplicationRecord
     unit_group&.pilot_experiment
   end
 
-  def unversioned?
-    version_year.blank? || version_year == CourseVersion::UNVERSIONED
-  end
-
   def included_in_units?(unit_ids)
     unit_ids.include? id
   end
@@ -1700,7 +1693,6 @@ class Unit < ApplicationRecord
       id: id,
       course_id: unit_group_unit&.course_id,
       key: name,
-      version_year: version_year,
       name: launched? ? localized_title : localized_title + " *",
       position: unit_group_unit&.position,
       description: localized_description ? Services::MarkdownPreprocessor.process(localized_description) : nil,
@@ -1827,10 +1819,6 @@ class Unit < ApplicationRecord
   # they are a platformization partner who owns this unit.
   def has_editor_experiment?(user)
     user.has_pilot_experiment?(editor_experiment)
-  end
-
-  def self.get_version_year_options
-    UnitGroup.get_version_year_options
   end
 
   def all_descendant_levels
