@@ -5,7 +5,7 @@ import {AllTheThingsPage} from './pom/all-the-things';
 import {isDeployedStage} from './utils/stage';
 
 test.describe('Security Tests', () => {
-  test('should have HSTS headers', async ({page, browserName}) => {
+  test('should have security headers', async ({page, browserName}) => {
     test.skip(browserName !== 'chromium', 'Only runs in Chromium');
     test.skip(!isDeployedStage(), 'Only runs in deployed mode');
 
@@ -15,6 +15,7 @@ test.describe('Security Tests', () => {
     expect(response?.headers()['strict-transport-security']).toBe(
       'max-age=31536000',
     );
+    expect(response?.headers()['content-security-policy']).toBeDefined();
   });
 
   test('should redirect http to https', async ({page, browserName}) => {
