@@ -420,9 +420,10 @@ class TestController < ApplicationController
 
   def complete_unit
     course_name = params.require(:course_name)
-    unit_group = UnitGroup.find_by_name!(course_name)
     unit_position = params.require(:unit_position).to_i
-    unit_group_unit = unit_group.default_unit_group_units.where(position: unit_position).first
+    course_context = Queries::Courses.get_unit_context(course_name, unit_position)
+    unit_group = course_context[:unit_group]
+    unit_group_unit = course_context[:unit_group_unit]
     raise "Unit not found for course #{unit_group.name} at position #{unit_position}" unless unit_group_unit
     UserScript.create!(
       user: current_user,
