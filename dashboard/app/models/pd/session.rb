@@ -90,7 +90,7 @@ class Pd::Session < ApplicationRecord
 
   def formatted_location_details
     if in_person?
-      location_parts = [location_name, location_address].compact
+      location_parts = [location_name.presence, location_address.presence].compact
       location_parts.any? ? location_parts.join(', ') : "N/A"
     else
       meeting_link ? "Virtual meeting: #{meeting_link}" : "N/A"

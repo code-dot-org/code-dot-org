@@ -61,7 +61,7 @@
       "upButton",
       "downButton"
     ],
-    "thumbnail_url": "https://code.org/shared/images/courses/logo_gamelab_square.png",
+    "thumbnail_url": "/shared/images/courses/logo_gamelab_square.png",
     "mini_toolbox": "true",
     "validation_enabled": "false",
     "hide_pause_button": "false",

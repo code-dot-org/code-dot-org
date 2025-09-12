@@ -183,10 +183,6 @@ class PdWorkshopMailerPreview < ActionMailer::Preview
     mail :organizer_detail_change_notification, Pd::Workshop::COURSE_CSF, target: :workshop
   end
 
-  def detail_change_notification__admin
-    mail :detail_change_notification, Pd::Workshop::COURSE_ADMIN_COUNSELOR, Pd::Workshop::SUBJECT_ADMIN_COUNSELOR_SLP_CALL1
-  end
-
   private def mail(method, course = nil, subject = nil, options: nil, target: :enrollment, workshop_params: {})
     unless course
       course = DEFAULT_COURSE
