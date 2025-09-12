@@ -154,7 +154,8 @@ Feature: Send and receive messages in the AI differentiation chat
     # Teacher sees and skips AI Diff chat welcome
     And I wait until element "button:contains(Get Started)" is visible
     And I click selector "button:contains(Get Started)"
-    And I click selector "a:contains('Skip the tutorial')" once I see it
+    And I wait until element "button:contains(Create)" is visible
+    And I click selector "a:contains('Skip the tutorial')"
 
     #Now we see the regular AI diff chat (with thread sidebar)
     And I wait until element "input[value='Give me an example']" is visible

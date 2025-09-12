@@ -14,7 +14,7 @@ class ContentfulNotificationSourceTest < ActionDispatch::IntegrationTest
   let(:later) {2.days.from_now}
   let(:user) {create(:user)}
   let(:other_user) {create(:user)}
-  let!(:contentful_source) {Marketing::DashboardNotifications::ContentfulNotificationSource.new}
+  let!(:contentful_source) {Marketing::DashboardNotifications::ContentfulNotificationSource.new(Marketing::StubbedContentfulClient.instance)}
 
   let(:entry_1) do
     TestEntry.new(
