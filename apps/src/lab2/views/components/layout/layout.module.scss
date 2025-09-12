@@ -50,7 +50,7 @@
 
 .rightmostColumn {
   background-color: var(--neutral-base-black);
-  border-left: variables.$default-border;
+  border-inline-start: variables.$default-border;
 
   .inside {
     height: calc(100% - 30px);

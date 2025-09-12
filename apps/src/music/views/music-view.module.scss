@@ -52,7 +52,7 @@ $default-spacing: 2px;
     width: 220px;
     height: 100%;
     border: variables.$default-border;
-    border-left: none;
+    border-inline-start: none;
   }
 
   .timelineArea {
@@ -69,7 +69,7 @@ $default-spacing: 2px;
   border-radius: $default-border-radius;
   padding: 0;
   box-sizing: border-box;
-  border-right: variables.$default-border;
+  border-inline-end: variables.$default-border;
 
   &.instructionsTop {
     flex-direction: row;
