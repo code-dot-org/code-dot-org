@@ -34,6 +34,15 @@ async function loadPyodideAndPackages() {
   });
   pyodide.setStdout(getStreamHandlerOptions('sysout'));
   pyodide.setStderr(getStreamHandlerOptions('syserr'));
+  // Freeze the module object and its properties
+  Object.freeze(pythonlabInputModule);
+  Object.defineProperty(pythonlabInputModule.getInput, 'constructor', {
+    writable: false,
+    configurable: false,
+    enumerable: false,
+  });
+  Object.freeze(pythonlabInputModule.getInput);
+
   pyodide.registerJsModule('pythonlab_input', pythonlabInputModule);
 
   // Pre-load our custom packages (unittest_runner and pythonlab_setup), as well as
