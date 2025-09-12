@@ -157,7 +157,7 @@ $space-xl: 10px;
   display: flex;
   justify-content: space-between;
   align-items: stretch;
-  background: var(--background-neutral-primary);
+  background: var(--background-neutral-secondary);
 }
 
 .publishCurrentVersionHeaderText {
@@ -179,7 +179,7 @@ $space-xl: 10px;
 
 .publishCurrentVersionDescription {
   padding: 12px;
-  background-color: var(--background-neutral-primary);
+  background-color: var(--background-neutral-secondary);
   border-top: 1px solid var(--borders-neutral-primary);
 }
 
