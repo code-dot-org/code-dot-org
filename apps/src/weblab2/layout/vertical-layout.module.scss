@@ -1,3 +1,4 @@
+@use '../../lab2/views/components/layout/variables.scss' as variables;
 @import '../../mixins.scss';
 
 .headerContainer {
@@ -7,7 +8,7 @@
   height: 40px;
   padding: 4px 8px;
   box-sizing: border-box;
-  border-bottom: 1px solid var(--borders-neutral-quaternary);
+  border-bottom: variables.$default-border;
   background-color: var(--background-neutral-primary);
 }
 

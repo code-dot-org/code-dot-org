@@ -1,3 +1,4 @@
+@use './layout/variables.scss' as variables;
 @import 'color.scss';
 
 .panelContainer {
@@ -18,6 +19,7 @@
     flex-shrink: 0;
     background-color: var(--background-neutral-primary);
     color: var(--text-neutral-quaternary);
+    border-bottom: variables.$default-border;
 
     &Item {
       display: flex;

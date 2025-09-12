@@ -1,3 +1,5 @@
+@use 'variables.scss' as variables;
+
 .layoutContainer {
   grid-area: content;
   display: flex;
@@ -48,7 +50,7 @@
 
 .rightmostColumn {
   background-color: var(--neutral-base-black);
-  border-left: solid 1px var(--neutral-gray-80);
+  border-left: variables.$default-border;
 
   .inside {
     height: calc(100% - 30px);
