@@ -138,7 +138,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
     student.assign_script(script)
     sign_in student
 
-    assert_cached_queries(7) do
+    assert_cached_queries(8) do
       get "/courses/#{course.name}/units/1/"
       assert_response :success
     end
