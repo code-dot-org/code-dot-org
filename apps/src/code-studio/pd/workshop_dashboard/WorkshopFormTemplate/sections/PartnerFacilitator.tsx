@@ -15,17 +15,31 @@ import {CourseBuildYourOwn} from '@cdo/apps/generated/pd/sharedWorkshopConstants
 import {useDebounce} from '@cdo/apps/util/hooks/useDebounce';
 import {useFetch} from '@cdo/apps/util/useFetch';
 
-import {MultiSelectInput, Option} from '../components/MultiSelectInput';
 import {
-  Facilitator,
-  PartnerFacilitatorProps,
   PotentialOrganizer,
+  Facilitator,
   RegionalPartner,
-} from '../types';
+  SectionProps,
+  WorkshopErrors,
+  WorkshopFormState,
+} from '../../workshops/types';
+import {MultiSelectInput, Option} from '../components/MultiSelectInput';
 
 import commonStyles from '../styles.module.scss';
 
 export const COURSE_OFFERINGS_FETCH_DEBOUNCE = 1000;
+
+type PartnerFacilitatorKeys =
+  | 'facilitators'
+  | 'regionalPartnerId'
+  | 'organizerId'
+  | 'courseOfferings';
+
+export interface PartnerFacilitatorProps
+  extends SectionProps,
+    Pick<WorkshopFormState, PartnerFacilitatorKeys> {
+  errors: WorkshopErrors;
+}
 
 export const PartnerFacilitator: FC<PartnerFacilitatorProps> = ({
   config: {fields, label},

@@ -2,8 +2,8 @@ import '@testing-library/jest-dom';
 import {render, screen, waitFor} from '@testing-library/react';
 import React from 'react';
 
-import {Breakdown} from '@cdo/apps/code-studio/pd/workshop_dashboard/WorkshopFormTemplate/types';
 import {SelectCard} from '@cdo/apps/code-studio/pd/workshop_dashboard/workshops/surveys/components/SelectCard';
+import {Breakdown} from '@cdo/apps/code-studio/pd/workshop_dashboard/workshops/types';
 
 describe('SelectCard', () => {
   const defaultItems: Breakdown[] = [

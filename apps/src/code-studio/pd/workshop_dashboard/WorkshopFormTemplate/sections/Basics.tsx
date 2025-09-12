@@ -12,9 +12,30 @@ import React, {ChangeEvent, FC, memo, useCallback, useMemo} from 'react';
 import {WorkshopGradeLevels} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import {useFetch} from '@cdo/apps/util/useFetch';
 
-import {BasicsProps, CourseOffering} from '../types';
+import {
+  CourseOffering,
+  SectionProps,
+  WorkshopErrors,
+  WorkshopFormState,
+} from '../../workshops/types';
 
 import commonStyles from '../styles.module.scss';
+
+type BasicsKeys =
+  | 'name'
+  | 'grades'
+  | 'subject'
+  | 'prereq'
+  | 'hasPrereq'
+  | 'capacity'
+  | 'description'
+  | 'courseOfferings';
+
+export interface BasicsProps
+  extends SectionProps,
+    Pick<WorkshopFormState, BasicsKeys> {
+  errors: WorkshopErrors;
+}
 
 export const Basics: FC<BasicsProps> = ({
   config: {fields},

@@ -4,11 +4,11 @@ import React, {Dispatch, FC, memo, useCallback} from 'react';
 
 import {DATE_FORMAT, TIME_FORMAT} from '../../../workshopConstants';
 import {
-  SessionAction,
-  SessionErrors,
-  SessionFields,
   SessionFormState,
-} from '../../types';
+  SessionFields,
+  SessionErrors,
+  SessionAction,
+} from '../../../workshops/types';
 
 import SessionPart from './components/SessionPart';
 

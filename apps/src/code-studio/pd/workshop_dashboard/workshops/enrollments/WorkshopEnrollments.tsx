@@ -35,7 +35,7 @@ import React, {
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import {EducatorRoles} from '@cdo/generated-scripts/sharedConstants';
 
-import {EnrollmentData} from '../../WorkshopFormTemplate/types';
+import {EnrollmentData} from '../types';
 import {useWorkshopContext} from '../WorkshopLayout';
 
 import styles from '../workshop.module.scss';

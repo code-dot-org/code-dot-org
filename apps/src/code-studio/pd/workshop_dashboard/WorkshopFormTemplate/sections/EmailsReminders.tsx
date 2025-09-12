@@ -7,9 +7,15 @@ import {
 } from '@code-dot-org/component-library/typography';
 import React, {FC, memo, useCallback} from 'react';
 
-import {EmailsRemindersProps} from '../types';
+import {SectionProps, WorkshopFormState} from '../../workshops/types';
 
 import commonStyles from '../styles.module.scss';
+
+type EmailsRemindersKeys = 'suppressEmail';
+
+export interface EmailsRemindersProps
+  extends SectionProps,
+    Pick<WorkshopFormState, EmailsRemindersKeys> {}
 
 export const PreviewEmailLink: FC<{href?: string}> = ({href}) => {
   if (!href) return null;

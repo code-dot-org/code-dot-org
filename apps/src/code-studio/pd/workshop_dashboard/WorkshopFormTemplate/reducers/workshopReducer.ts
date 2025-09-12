@@ -1,4 +1,4 @@
-import {WorkshopFormState, WorkshopAction} from '../types';
+import {WorkshopAction, WorkshopFormState} from '../../workshops/types';
 
 export const workshopReducer = (
   state: WorkshopFormState,

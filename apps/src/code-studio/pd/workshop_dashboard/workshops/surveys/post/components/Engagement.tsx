@@ -3,10 +3,7 @@ import React, {useMemo} from 'react';
 
 import {MinSurveyResponseCount} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
-import {
-  isQuestionType,
-  SurveyQuestions,
-} from '../../../../WorkshopFormTemplate/types';
+import {SurveyQuestions} from '../../../types';
 import {useWorkshopContext} from '../../../WorkshopLayout';
 import {FreeResponseCard} from '../../components/FreeResponseCard';
 import {ScoreCard} from '../../components/ScoreCard';
@@ -16,9 +13,10 @@ import {
 } from '../../constants';
 import {
   getQuestionDescription,
+  isQuestionType,
   prepLikertBreakdown,
   prepPromoterBreakdown,
-} from '../../helpers';
+} from '../../utils';
 
 import styles from '../../../workshop.module.scss';
 

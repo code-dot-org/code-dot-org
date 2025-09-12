@@ -1,8 +1,8 @@
 import {sessionsReducer} from '@cdo/apps/code-studio/pd/workshop_dashboard/WorkshopFormTemplate/reducers/sessionsReducer';
 import {
-  SessionFormState,
   SessionAction,
-} from '@cdo/apps/code-studio/pd/workshop_dashboard/WorkshopFormTemplate/types';
+  SessionFormState,
+} from '@cdo/apps/code-studio/pd/workshop_dashboard/workshops/types';
 
 describe('sessionsReducer', () => {
   const initialState: SessionFormState[] = [

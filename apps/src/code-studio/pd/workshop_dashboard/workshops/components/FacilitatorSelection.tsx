@@ -2,12 +2,12 @@ import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import React, {ChangeEvent, FC, useEffect, useMemo} from 'react';
 import {useNavigate, useParams} from 'react-router-dom';
 
-import {WorkshopFacilitator} from '../types';
+import {Facilitator} from '../types';
 
 import styles from '../workshop.module.scss';
 
 export const FacilitatorSelection: FC<{
-  facilitators?: WorkshopFacilitator[];
+  facilitators?: Facilitator[];
 }> = ({facilitators}) => {
   const {facilitatorId} = useParams();
   const navigate = useNavigate();

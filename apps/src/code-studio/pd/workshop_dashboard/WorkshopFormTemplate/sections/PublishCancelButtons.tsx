@@ -2,9 +2,13 @@ import {Button} from '@code-dot-org/component-library/button';
 import classNames from 'classnames';
 import React, {FC, memo} from 'react';
 
-import {PublishCancelButtonsProps} from '../types';
-
 import commonStyles from '../styles.module.scss';
+
+export interface PublishCancelButtonsProps {
+  publish: () => void;
+  cancel: () => void;
+  loading: boolean;
+}
 
 export const PublishCancelButtons: FC<PublishCancelButtonsProps> = ({
   publish,

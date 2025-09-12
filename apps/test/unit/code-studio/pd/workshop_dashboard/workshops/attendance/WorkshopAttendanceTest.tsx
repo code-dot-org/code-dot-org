@@ -3,10 +3,8 @@ import '@testing-library/jest-dom';
 import React from 'react';
 
 import {WorkshopAttendance} from '@cdo/apps/code-studio/pd/workshop_dashboard/workshops/attendance/WorkshopAttendance';
-import {
-  WorkshopContextValue,
-  WorkshopData,
-} from '@cdo/apps/code-studio/pd/workshop_dashboard/workshops/types';
+import {WorkshopData} from '@cdo/apps/code-studio/pd/workshop_dashboard/workshops/types';
+import {WorkshopContextValue} from '@cdo/apps/code-studio/pd/workshop_dashboard/workshops/WorkshopLayout';
 
 // Mock useWorkshopContext
 const mockUseWorkshopContext = jest.fn();

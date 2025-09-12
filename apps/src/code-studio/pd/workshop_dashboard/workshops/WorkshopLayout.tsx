@@ -1,5 +1,6 @@
 import Alert from '@code-dot-org/component-library/alert';
 import {LinkButton} from '@code-dot-org/component-library/button';
+import {SegmentedButtonsProps} from '@code-dot-org/component-library/segmentedButtons';
 import React, {
   FC,
   useMemo,
@@ -11,28 +12,45 @@ import React, {
 import {Outlet, useLocation, useParams} from 'react-router-dom';
 
 import {CourseBuildYourOwn} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
-import {useFetch} from '@cdo/apps/util/useFetch';
-
-import {
-  Enrollment,
-  SurveySummary,
-  Workshop,
-} from '../WorkshopFormTemplate/types';
-import {
-  enrollmentDataToProps,
-  workshopDataToProps,
-} from '../WorkshopFormTemplate/utils';
+import {useFetch, UseFetchResult} from '@cdo/apps/util/useFetch';
 
 import {FacilitatorSelection} from './components/FacilitatorSelection';
 import {Loading} from './components/Loading';
 import {SurveyCategorySelection} from './components/SurveyCategorySelection';
-import {SurveyTypeSelection} from './components/SurveyTypeSelection';
-import {WorkshopTabs} from './components/WorkshopTabs';
+import {
+  SurveyTypeSelection,
+  SurveyTypeSelectionProps,
+} from './components/SurveyTypeSelection';
+import {WorkshopTabs, WorkshopTabsProps} from './components/WorkshopTabs';
 import {ExportSurveysButton} from './surveys/components/ExportSurveysButton';
 import {NoSurveyResponses} from './surveys/components/NoSurveyResponses';
-import {WorkshopLayoutProps, WorkshopContextValue} from './types';
+import {
+  Enrollment,
+  EnrollmentData,
+  SurveySummary,
+  Workshop,
+  WorkshopData,
+} from './types';
+import {enrollmentDataToProps, workshopDataToProps} from './utils';
 
 import styles from './workshop.module.scss';
+
+export type WorkshopLayoutProps = WorkshopTabsProps &
+  SurveyTypeSelectionProps & {
+    questionCategoryButtons: {
+      preWorkshopSurvey: SegmentedButtonsProps['buttons'];
+      postWorkshopSurvey: SegmentedButtonsProps['buttons'];
+    };
+  };
+
+export interface WorkshopContextValue {
+  workshop: WorkshopData | null;
+  refetchWorkshop: UseFetchResult<Workshop>['refetch'];
+  enrollments: EnrollmentData[];
+  enrollmentsLoading: UseFetchResult<EnrollmentData[]>['loading'];
+  refetchEnrollments: UseFetchResult<EnrollmentData[]>['refetch'];
+  surveys: SurveySummary | null;
+}
 
 const WorkshopContext = createContext<WorkshopContextValue | undefined>(
   undefined

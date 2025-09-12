@@ -5,10 +5,8 @@ import React from 'react';
 import '@testing-library/jest-dom';
 import {MemoryRouter, Route, Routes} from 'react-router-dom';
 
-import {
-  SurveyOption,
-  TabConfig,
-} from '@cdo/apps/code-studio/pd/workshop_dashboard/workshops/types';
+import {SurveyOption} from '@cdo/apps/code-studio/pd/workshop_dashboard/workshops/components/SurveyTypeSelection';
+import {TabConfig} from '@cdo/apps/code-studio/pd/workshop_dashboard/workshops/components/WorkshopTabs';
 import {WorkshopLayout} from '@cdo/apps/code-studio/pd/workshop_dashboard/workshops/WorkshopLayout';
 
 // mock data fetching so we can control loading/error states.

@@ -1,10 +1,16 @@
 import {
-  Breakdown,
-  isQuestionType,
   LikertResults,
+  Breakdown,
   PromoterResults,
   SurveyQuestion,
-} from '../../WorkshopFormTemplate/types';
+} from '../types';
+
+export const isQuestionType = <T extends SurveyQuestion['question_type']>(
+  question: SurveyQuestion | undefined,
+  type: T
+): question is Extract<SurveyQuestion, {question_type: T}> => {
+  return !!question && question.question_type === type;
+};
 
 export const getQuestionDescription = (question: SurveyQuestion) => {
   if (

@@ -5,7 +5,7 @@ import {BodyThreeText} from '@code-dot-org/component-library/typography';
 import moment from 'moment-timezone';
 import React, {FC, memo, useState} from 'react';
 
-import {WorkshopCourseConfig} from '../../types';
+import {WorkshopCourseConfig} from '../../../workshops/types';
 
 import styles from './styles.module.scss';
 

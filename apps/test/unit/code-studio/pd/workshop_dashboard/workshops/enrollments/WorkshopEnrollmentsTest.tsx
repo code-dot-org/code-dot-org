@@ -4,12 +4,12 @@ import '@testing-library/jest-dom';
 import React from 'react';
 import {MemoryRouter} from 'react-router-dom';
 
-import {EnrollmentData} from '@cdo/apps/code-studio/pd/workshop_dashboard/WorkshopFormTemplate/types';
 import {WorkshopEnrollments} from '@cdo/apps/code-studio/pd/workshop_dashboard/workshops/enrollments/WorkshopEnrollments';
 import {
-  WorkshopContextValue,
+  EnrollmentData,
   WorkshopData,
 } from '@cdo/apps/code-studio/pd/workshop_dashboard/workshops/types';
+import {WorkshopContextValue} from '@cdo/apps/code-studio/pd/workshop_dashboard/workshops/WorkshopLayout';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 
 // Mock the authenticity token utility

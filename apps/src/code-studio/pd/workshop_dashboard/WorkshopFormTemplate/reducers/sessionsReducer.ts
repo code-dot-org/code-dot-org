@@ -1,5 +1,5 @@
+import {SessionAction, SessionFormState} from '../../workshops/types';
 import {generateNewSession} from '../components/SessionsEditor';
-import {SessionFormState, SessionAction} from '../types';
 
 export const sessionsReducer = (
   state: SessionFormState[],
