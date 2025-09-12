@@ -419,6 +419,7 @@ const VersionHistoryPanel: React.FunctionComponent<
             <Button
               id="publish-version-button"
               size={'s'}
+              type={'secondary'}
               className={moduleStyles.versionButton}
               text="Publish"
               onClick={() => console.log('publish')}
