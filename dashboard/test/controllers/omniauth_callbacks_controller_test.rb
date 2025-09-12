@@ -444,7 +444,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
       user_type: 'teacher'
     @request.env['omniauth.auth'] = auth
     @request.env['omniauth.params'] = {}
-    
+
     get :clever
     partial_user = User.new_from_partial_registration(session)
     assert_equal auth[:credentials][:token], partial_user.oauth_token
