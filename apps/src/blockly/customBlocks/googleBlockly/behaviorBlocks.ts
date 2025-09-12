@@ -288,8 +288,8 @@ export function flyoutCategory(
 const getNewBehaviorButtonWithCallback = (
   workspace: GoogleBlockly.WorkspaceSvg
 ) => {
-  const callbackKey = 'newBehaviorCallback';
-  workspace.registerButtonCallback(callbackKey, () => {
+  const callbackkey = 'newBehaviorCallback';
+  workspace.registerButtonCallback(callbackkey, () => {
     workspace.hideChaff();
     Blockly.functionEditor.newProcedureCallback(BLOCK_TYPES.behaviorDefinition);
   });
@@ -297,7 +297,7 @@ const getNewBehaviorButtonWithCallback = (
   return {
     kind: 'button',
     text: commonI18n.createBlocklyBehavior(),
-    callbackKey,
+    callbackkey,
   };
 };
 
