@@ -1189,7 +1189,7 @@ class LevelTest < ActiveSupport::TestCase
       "GamelabJr", "Javalab", "Karel", "LevelGroup", "Map", "Match", "Maze", "Multi", "Music", "NetSim",
       "Odometer", "Panels", "Pixelation", "Poetry", "PublicKeyCryptography", "Pythonlab", "StandaloneVideo",
       "StarWarsGrid", "Studio", "TextCompression", "TextMatch", "Unplugged",
-      "Vigenere", "Weblab", "Weblab2"
+      "Vigenere", "Weblab", "Weblab2", "Whiteboard"
     ]
     scripts = [
       "All scripts", "20-hour", "algebra", "artist", "flappy",

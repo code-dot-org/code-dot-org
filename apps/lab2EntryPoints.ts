@@ -16,6 +16,7 @@ import {PanelsEntryPoint} from '@cdo/apps/panels/entrypoint';
 import {PythonlabEntryPoint} from '@cdo/apps/pythonlab/entrypoint';
 import {StandaloneVideoEntryPoint} from '@cdo/apps/standaloneVideo/entrypoint';
 import {Weblab2EntryPoint} from '@cdo/apps/weblab2/entrypoint';
+import {WhiteboardEntryPoint} from '@cdo/apps/whiteboard/entrypoint';
 
 export const lab2EntryPoints = {
   aichat: AIChatEntryPoint,
@@ -26,4 +27,5 @@ export const lab2EntryPoints = {
   pythonlab: PythonlabEntryPoint,
   standalone_video: StandaloneVideoEntryPoint,
   weblab2: Weblab2EntryPoint,
+  whiteboard: WhiteboardEntryPoint,
 } as const satisfies Record<string, Lab2EntryPoint>;

@@ -58,7 +58,8 @@ class LevelsController < ApplicationController
     Unplugged,
     Vigenere,
     Weblab,
-    Weblab2
+    Weblab2,
+    Whiteboard
   ]
 
   # GET /levels

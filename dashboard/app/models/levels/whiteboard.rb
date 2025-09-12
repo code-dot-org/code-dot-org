@@ -23,16 +23,8 @@
 #  index_levels_on_level_num  (level_num)
 #  index_levels_on_name       (name)
 #  index_levels_on_type       (type)
-#
-class Whiteboard < Level
-  serialized_attrs %w(
-    hide_share_and_remix
-    is_project_level
-    submittable
-    start_sources
-    initial_drawing_data
-  )
 
+class Whiteboard < Level
   def self.create_from_level_builder(params, level_params)
     create!(
       level_params.merge(
@@ -44,10 +36,6 @@ class Whiteboard < Level
   end
 
   def uses_lab2?
-    true
-  end
-
-  def add_starter_asset!(_, _)
     true
   end
 end
