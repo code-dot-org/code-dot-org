@@ -144,17 +144,15 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     @request.env['omniauth.auth'] = auth
     @request.env['omniauth.params'] = {}
 
-    assert_creates(User) do
+    assert_does_not_create(User) do
       get :clever
     end
 
-    user = User.last
-    assert_equal 'clever', user.primary_contact_info.credential_type
-    assert_equal 'Hat Cat', user.name
-    assert_equal User::TYPE_TEACHER, user.user_type
-    assert_equal "21+", user.age # we know you're an adult if you are a teacher on clever
-    assert_nil user.gender
-    assert_equal user.id, signed_in_user_id
+    assert_equal 200, @response.status
+    assert_template 'omniauth/redirect'
+    partial_user = User.new_from_partial_registration(session)
+    assert_equal AuthenticationOption::CLEVER, partial_user.provider
+    assert_equal auth.uid, partial_user.uid
   end
 
   test "login: authorizing with unknown clever district admin account creates teacher" do
@@ -256,35 +254,6 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal "21+", user.age
     assert_equal 'm', user.gender
     assert_equal 'M', user.gender_third_party_input
-    assert_equal user.id, signed_in_user_id
-  end
-
-  # NOTE: Though this test really tests the User model, specifically the
-  # before_save action hide_email_and_full_address_for_students, we include this
-  # test here as there was concern authentication through clever could be a
-  # workflow where we persist student email addresses.
-  test "login: authorizing with unknown clever student account does not save email" do
-    auth = OmniAuth::AuthHash.new(
-      uid: '111133',
-      provider: 'clever',
-      info: {
-        nickname: '',
-        name: {'first' => 'Hat', 'last' => 'Cat'},
-        email: 'hat.cat@example.com',
-        user_type: 'student',
-        dob: Time.zone.today - 10.years,
-        gender: 'f'
-      },
-    )
-    @request.env['omniauth.auth'] = auth
-    @request.env['omniauth.params'] = {}
-
-    assert_creates(User) do
-      get :clever
-    end
-
-    user = User.last
-    assert_equal '', user.email
     assert_equal user.id, signed_in_user_id
   end
 
@@ -1055,18 +1024,16 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     email = 'test@foo.xyz'
     uid = '654321'
     user = create(:student, email: email)
-    auth = generate_auth_user_hash(provider: 'clever', uid: uid, user_type: User::TYPE_STUDENT, email: email)
+    auth = generate_auth_user_hash(provider: AuthenticationOption::CLEVER, uid: uid, user_type: User::TYPE_STUDENT, email: email)
     @request.env['omniauth.auth'] = auth
     @request.env['omniauth.params'] = {}
-    assert_creates(User) do
+    refute_creates(User) do
       get :clever
     end
     user.reload
     assert_equal 'migrated', user.provider
     found_clever = user.authentication_options.any? {|auth_option| auth_option.credential_type == AuthenticationOption::CLEVER}
     refute found_clever
-    assert_equal 'clever', User.last.authentication_options.last.credential_type
-    assert_equal User.last.id, signed_in_user_id
   end
 
   test 'sign_up_clever: email conflict redirect if any users are already using your email address' do
@@ -1833,11 +1800,12 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
       end
 
       it 'creates a new user and redirects to complete registration' do
-        # This test asserts must_change instead of wont_change because sign_up_clever calls User.from_omniauth,
-        # which creates a user. sign_up_google_oauth2 instead calls User.initialize_new_oauth_user, which calls
-        # new but does not save the user.
-        _(-> {get :clever}).must_change -> {User.count}
-        assert_redirected_to home_path
+        _(-> {get :clever}).wont_change -> {User.count}
+        _(@response.status).must_equal 200
+        assert_template 'omniauth/redirect'
+        partial_user = User.new_from_partial_registration(session)
+        _(partial_user.provider).must_equal provider_exceptions.first
+        _(partial_user.uid).must_equal auth.uid
       end
     end
 
