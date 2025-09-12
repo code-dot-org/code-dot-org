@@ -1,3 +1,4 @@
+@use '../../lab2/views/components/layout/variables.scss' as variables;
 @import 'color.scss';
 @import '../../mixins.scss';
 @import './aichat-common.module.scss';
@@ -85,7 +86,7 @@ $tabs-default-spacing: 4px;
   flex-direction: column;
   gap: 2px;
   padding: 16px 6px;
-  border-top: 1px solid var(--borders-neutral-primary);
+  border-top: variables.$default-border;
 }
 
 .alertLink {
