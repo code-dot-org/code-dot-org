@@ -1,4 +1,5 @@
 require_relative './test_helper'
+require 'minitest/around'
 require 'minitest/autorun'
 require 'rack/test'
 require 'mocha/mini_test'
@@ -334,6 +335,75 @@ class HocRoutesTest < Minitest::Test
         after_end_row = get_session_hoc_activity_entry
         assert_nil after_end_row
         assert_equal 'HOC_UNSAMPLED', @mock_session.cookie_jar['hour_of_code']
+      end
+    end
+
+    context 'when DCDO hoc_apis_in_dashboard is true' do
+      around do |test|
+        DB.transaction(rollback: :always) {test.call}
+      end
+
+      before do
+        DCDO.set('hoc_apis_in_dashboard', true)
+      end
+
+      after do
+        DCDO.clear
+      end
+
+      it 'redirects to studio when starting tutorial' do
+        api_request_path = '/api/hour/begin/mc?test_param=1'
+
+        @pegasus.expects(:launch_tutorial).never
+
+        @pegasus.get api_request_path
+
+        _(@pegasus.last_response.status).must_equal 301
+        _(@pegasus.last_response['Location']).must_equal CDO.studio_url(api_request_path, CDO.default_scheme)
+      end
+
+      it 'redirects to studio when ending tutorial' do
+        api_request_path = '/api/hour/finish/mc'
+
+        @pegasus.expects(:complete_tutorial).never
+
+        @pegasus.get api_request_path
+
+        _(@pegasus.last_response.status).must_equal 301
+        _(@pegasus.last_response['Location']).must_equal CDO.studio_url(api_request_path, CDO.default_scheme)
+      end
+
+      it 'redirects to studio when ending current tutorial session' do
+        api_request_path = '/api/hour/finish'
+
+        @pegasus.expects(:complete_tutorial).never
+
+        @pegasus.get api_request_path
+
+        _(@pegasus.last_response.status).must_equal 301
+        _(@pegasus.last_response['Location']).must_equal CDO.studio_url(api_request_path, CDO.default_scheme)
+      end
+
+      it 'redirects to studio when starting tutorial with png image' do
+        api_request_path = '/api/hour/begin_mc.png'
+
+        @pegasus.expects(:launch_tutorial_pixel).never
+
+        @pegasus.get api_request_path
+
+        _(@pegasus.last_response.status).must_equal 301
+        _(@pegasus.last_response['Location']).must_equal CDO.studio_url(api_request_path, CDO.default_scheme)
+      end
+
+      it 'redirects to studio when ending tutorial with png image' do
+        api_request_path = '/api/hour/finish_mc.png'
+
+        @pegasus.expects(:complete_tutorial_pixel).never
+
+        @pegasus.get api_request_path
+
+        _(@pegasus.last_response.status).must_equal 301
+        _(@pegasus.last_response['Location']).must_equal CDO.studio_url(api_request_path, CDO.default_scheme)
       end
     end
 

@@ -79,6 +79,7 @@ type ResourcePanelProps = InstructionsProps & {
   includeFooterSpacing?: boolean;
   settings?: Setting[];
   versionHistoryProps?: VersionHistoryProps;
+  aiTutorSystemPromptName?: string;
 };
 
 /**
@@ -92,6 +93,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   includeFooterSpacing = true,
   settings,
   versionHistoryProps,
+  aiTutorSystemPromptName,
   ...instructionsProps
 }) => {
   const {theme} = useTheme();
@@ -108,6 +110,9 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const isWidgetView = instructionsProps.levelProperties.widgetView || false;
 
   const levelId = instructionsProps.levelProperties.id;
+  const hasValidationConditions = useAppSelector(
+    state => state.lab.validationState?.hasConditions
+  );
 
   // Build available tabs based on level information.
   const availableTabs = useMemo(() => {
@@ -120,7 +125,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       );
     }
 
-    if (instructionsProps.validationSettings) {
+    if (instructionsProps.validationSettings && hasValidationConditions) {
       tabMap[Tabs.Validation] = (
         <ValidationPanel {...instructionsProps.validationSettings} />
       );
@@ -145,7 +150,10 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       aiTutorContextPromise
     ) {
       tabMap[Tabs.AiTutor] = (
-        <AiTutor2Chat aiTutorContextPromise={aiTutorContextPromise} />
+        <AiTutor2Chat
+          aiTutorContextPromise={aiTutorContextPromise}
+          aiTutorSystemPromptName={aiTutorSystemPromptName}
+        />
       );
     }
 
@@ -175,6 +183,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     return tabMap;
   }, [
     instructionsProps,
+    hasValidationConditions,
     isUserTeacher,
     aiTutorContextPromise,
     isReadOnly,
@@ -183,6 +192,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     isWidgetView,
     versionHistoryProps,
     showRubric,
+    aiTutorSystemPromptName,
     selectedVersion,
     levelId,
   ]);
@@ -236,6 +246,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
         </div>
         <div className={classNames(styles.bottomTabs)}>
           <ResourcePanelExtraLinks levelId={levelId} theme={theme} />
+          <CopyrightButton theme={theme} />
           <WithTooltip
             tooltipProps={{
               text: commonI18n.settings(),
@@ -256,7 +267,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
               type={'tertiary'}
             />
           </WithTooltip>
-          <CopyrightButton theme={theme} />
         </div>
       </div>
       <div className={styles.panels}>

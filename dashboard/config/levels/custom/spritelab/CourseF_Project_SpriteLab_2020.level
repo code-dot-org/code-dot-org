@@ -60,7 +60,7 @@
       "downButton",
       "upButton"
     ],
-    "thumbnail_url": "https://code.org/shared/images/courses/logo_gamelab_square.png",
+    "thumbnail_url": "/shared/images/courses/logo_gamelab_square.png",
     "mini_toolbox": "true",
     "preload_asset_list": null
   },
