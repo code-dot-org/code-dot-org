@@ -555,6 +555,34 @@ class RegistrationsControllerTest < ActionController::TestCase
     refute assigns(:user).verified_teacher?
   end
 
+  test 'adds LtiUserIdentity to LtiDeployment if LTI user' do
+    integration = create(:lti_integration, issuer: 'test', client_id: '123456')
+    deployment = create(:lti_deployment, deployment_id: '1234', lti_integration: integration)
+    assert_equal 0, deployment.lti_user_identities.count
+
+    lti_auth_id = "#{integration.issuer}|#{integration.client_id}|#{SecureRandom.uuid}"
+    auth_option = AuthenticationOption.new(
+      authentication_id: lti_auth_id,
+      credential_type: AuthenticationOption::LTI_V1,
+      email: @default_params[:email],
+    )
+
+    session[:lti_deployment_id] = deployment.id
+
+    @user = User.new
+    lti_student_params = @default_params.update(provider: User::PROVIDER_MIGRATED, authentication_options: [auth_option])
+    @user.assign_attributes(lti_student_params)
+
+    PartialRegistration.persist_attributes(session, @user)
+
+    post :create, params: {user: lti_student_params}
+
+    student = User.last
+    assert student.lti_user_identities.any?, 'Expected LTI user identity to be created'
+    assert_equal 1, student.lti_user_identities.first.lti_deployments.count
+    assert_equal deployment.lti_user_identities.first, student.lti_user_identities.first
+  end
+
   test 'redirects signed-in user to home if they attempt to access account_type url' do
     # Create a new user and sign them in
     picture_student = create(:student_in_picture_section)

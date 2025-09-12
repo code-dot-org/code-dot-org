@@ -533,17 +533,6 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     assert deployment.name
   end
 
-  test 'auth - link lti_user_identity with lti_deployment' do
-    payload = get_valid_payload
-    jwt = create_jwt_and_stub(payload)
-    user = create_preexisting_user(payload)
-    deployment = create(:lti_deployment, deployment_id: @deployment_id, lti_integration: @integration)
-    assert_equal deployment.lti_user_identities.count, 0
-    post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
-    assert_equal deployment.lti_user_identities.count, 1
-    assert_equal deployment.lti_user_identities.first, user.lti_user_identities.first
-  end
-
   test 'auth - do not link lti_user_identity with lti_deployment if already linked' do
     payload = get_valid_payload
     jwt = create_jwt_and_stub(payload)
