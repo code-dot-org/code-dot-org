@@ -58,13 +58,15 @@ interface ChatWorkspaceProps {
 }
 
 export interface SystemPromptSettings {
-  systemPromptOptions: {
-    displayName: string;
-    icon: FontAwesomeV6IconProps;
-    promptName: string;
-  }[];
+  systemPromptOptions: SystemPromptOptions[];
   selectedSystemPromptName: string;
   onSystemPromptChange: (promptName: string) => void;
+}
+
+export interface SystemPromptOptions {
+  displayName: string;
+  icon: FontAwesomeV6IconProps;
+  promptName: string;
 }
 
 enum WorkspaceTeacherViewTab {

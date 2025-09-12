@@ -10,6 +10,7 @@ import React, {useEffect, useMemo, useState} from 'react';
 import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
 import {LabProps, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 
+import {SystemPromptOptions} from '../aichat/views/ChatWorkspace';
 import {AiTutorContext} from '../aiTutor/types';
 import {useSource} from '../codebridge/hooks/useSource';
 import {useAppDispatch, useAppSelector} from '../util/reduxHooks';
@@ -86,6 +87,9 @@ const Weblab2View: React.FC<
         availableModes ? availableModes[0] : undefined
       );
     });
+  const [systemPromptOptions, setSystemPromptOptions] = useState<
+    SystemPromptOptions[] | undefined
+  >(undefined);
 
   const {startSources} = useSource(
     defaultProject,
@@ -97,16 +101,27 @@ const Weblab2View: React.FC<
     state => !!state.lab2Project.projectSources?.source
   );
 
-  const aiTutorSystemPromptSettings = useMemo(() => {
+  useEffect(() => {
     const availableModes = levelProperties.availableAiTutorModes || [
       DEFAULT_AI_TUTOR_MODE,
     ];
+    const systemPromptName = getPromptNameFromMode(
+      availableModes ? availableModes[0] : undefined
+    );
+    setAiTutorSystemPromptName(systemPromptName);
+    setSystemPromptOptions(getPromptOptionsFromModes(availableModes));
+  }, [levelProperties.availableAiTutorModes]);
+
+  const aiTutorSystemPromptSettings = useMemo(() => {
+    if (!systemPromptOptions || !aiTutorSystemPromptName) {
+      return undefined;
+    }
     return {
-      systemPromptOptions: getPromptOptionsFromModes(availableModes),
+      systemPromptOptions,
       selectedSystemPromptName: aiTutorSystemPromptName,
       onSystemPromptChange: setAiTutorSystemPromptName,
     };
-  }, [aiTutorSystemPromptName, levelProperties.availableAiTutorModes]);
+  }, [aiTutorSystemPromptName, systemPromptOptions]);
 
   // Note: this causes Web Lab 2 to re-render when sources change.
   // Unfortunately, the way AI tutor is set up right now requires passing in a context
