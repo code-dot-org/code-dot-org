@@ -39,6 +39,7 @@ import aichatI18n from '../locale';
 import {
   addChatEvent,
   clearChatMessages,
+  clearChatMessagesByUser,
   onSaveComplete,
   onSaveFail,
   onSaveNoop,
@@ -283,18 +284,7 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
   }, [dialogControl, resetProject]);
 
   const onClear = useCallback(() => {
-    dispatch(clearChatMessages());
-    dispatch(
-      addChatEvent({
-        timestamp: Date.now(),
-        descriptionKey: 'CLEAR_CHAT',
-      })
-    );
-    dispatch(
-      sendAnalytics(EVENTS.CHAT_ACTION, {
-        action: 'Clear chat history',
-      })
-    );
+    dispatch(clearChatMessagesByUser());
   }, [dispatch]);
 
   useLifecycleNotifier(LifecycleEvent.LevelLoadStarted, () => {
