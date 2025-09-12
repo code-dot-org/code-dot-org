@@ -338,6 +338,8 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
             selectedOption={selectedMode}
             labelText={selectedMode.label}
             size="xs"
+            className={moduleStyles.modeDropdown}
+            readOnly={availableModes.length <= 1}
           />
         )}
         <div className={moduleStyles.buttonRow}>
