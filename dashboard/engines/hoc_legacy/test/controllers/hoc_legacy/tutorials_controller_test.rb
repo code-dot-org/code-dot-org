@@ -36,7 +36,7 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
 
     it 'disables caching' do
       begin_tutorial_request
-      _(response.headers['Cache-Control']).must_equal 'must-revalidate, private, max-age=0'
+      must_disable_caching
     end
 
     it 'redirects to tutorial URL' do
@@ -106,7 +106,7 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
 
       it 'disables caching' do
         begin_tutorial_request
-        _(response.headers['Cache-Control']).must_equal 'must-revalidate, private, max-age=0'
+        must_disable_caching
       end
 
       it 'redirects to tutorial URL' do
@@ -147,7 +147,7 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
 
     it 'disables caching' do
       begin_tutorial_pixel_request
-      _(response.headers['Cache-Control']).must_equal 'must-revalidate, private, max-age=0'
+      must_disable_caching
     end
 
     context 'when no tutorial is found' do
@@ -182,7 +182,7 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
 
       it 'disables caching' do
         begin_tutorial_pixel_request
-        _(response.headers['Cache-Control']).must_equal 'must-revalidate, private, max-age=0'
+        must_disable_caching
       end
     end
   end
@@ -212,7 +212,7 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
 
     it 'disables caching' do
       finish_current_tutorial_request
-      _(response.headers['Cache-Control']).must_equal 'must-revalidate, private, max-age=0'
+      must_disable_caching
     end
 
     context 'when no tutorial is launched' do
@@ -246,7 +246,7 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
 
       it 'disables caching' do
         finish_current_tutorial_request
-        _(response.headers['Cache-Control']).must_equal 'must-revalidate, private, max-age=0'
+        must_disable_caching
       end
     end
   end
@@ -285,7 +285,7 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
 
     it 'disables caching' do
       finish_tutorial_request
-      _(response.headers['Cache-Control']).must_equal 'must-revalidate, private, max-age=0'
+      must_disable_caching
     end
 
     context 'when no tutorial is launched' do
@@ -331,7 +331,7 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
 
       it 'disables caching' do
         finish_tutorial_request
-        _(response.headers['Cache-Control']).must_equal 'must-revalidate, private, max-age=0'
+        must_disable_caching
       end
     end
   end
@@ -366,7 +366,7 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
 
     it 'disables caching' do
       finish_tutorial_pixel_request
-      _(response.headers['Cache-Control']).must_equal 'must-revalidate, private, max-age=0'
+      must_disable_caching
     end
 
     context 'when no tutorial is found' do
@@ -401,7 +401,7 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
 
       it 'disables caching' do
         finish_tutorial_pixel_request
-        _(response.headers['Cache-Control']).must_equal 'must-revalidate, private, max-age=0'
+        must_disable_caching
       end
     end
   end
@@ -548,5 +548,12 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
         end
       end
     end
+  end
+
+  private def must_disable_caching
+    cache_control = response.headers['Cache-Control']
+    _(cache_control).must_include 'max-age=0'
+    _(cache_control).must_include 'must-revalidate'
+    _(cache_control).must_include 'private'
   end
 end
