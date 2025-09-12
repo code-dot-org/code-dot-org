@@ -62,7 +62,7 @@ $space-xl: 10px;
 
 .initialVersionRow {
   margin-top: 16px;
-  margin-bottom: 8px;
+  margin-bottom: 0;
 }
 
 .currentVersionRow {
@@ -91,9 +91,8 @@ $space-xl: 10px;
   font-size: 14px;
 }
 
-/* Mask the vertical line above the first row and below the last row */
-.rowContainer:first-child::before,
-.rowContainer:last-child::after {
+/* Mask the vertical line above the first row */
+.rowContainer:first-child::before {
   content: '';
   position: absolute;
   left: 0;
@@ -101,14 +100,7 @@ $space-xl: 10px;
   height: 8px; /* Cover the margin area */
   background: var(--background-neutral-primary);
   z-index: -1;
-}
-
-.rowContainer:first-child::before {
   top: -9px;
-}
-
-.rowContainer:last-child::after {
-  bottom: -9px;
 }
 
 .listFooter {
@@ -117,7 +109,6 @@ $space-xl: 10px;
   justify-content: flex-end;
   gap: $space-s;
   padding: $space-m;
-  margin-bottom: $space-m;
   margin-right: $space-xl;
 }
 
@@ -145,7 +136,7 @@ $space-xl: 10px;
   justify-content: space-between;
   padding: 12px;
   gap: 8px;
-  background-color: var(--background-neutral-secondary);
+  background-color: var(--background-neutral-primary);
 }
 
 .versionButton {
@@ -181,7 +172,8 @@ $space-xl: 10px;
   
   // Override built-in spacing from the typography component
   .overlineTwoText {
-    margin: 0; 
+    margin: 0;
+    color: var(--text-neutral-quaternary);
   }
 }
 
