@@ -35,6 +35,7 @@ export const Playground: Story = {
     // @ts-expect-error
     component: 'p',
     variant: 'body2',
+    gutterBottom: true,
     children: 'This is a dynamic MuiTypography Component.',
   },
 };
@@ -45,55 +46,55 @@ export const AllTypographyElements: Story = {
       <MuiTypography gutterBottom component="h1" variant="h1">
         This is a Typography Component. (H1)
       </MuiTypography>
-      <MuiTypography component="h2" variant="h2">
+      <MuiTypography gutterBottom component="h2" variant="h2">
         This is a Typography Component. (H2)
       </MuiTypography>
-      <MuiTypography component="h3" variant="h3">
+      <MuiTypography gutterBottom component="h3" variant="h3">
         This is a Typography Component. (H3)
       </MuiTypography>
-      <MuiTypography component="h4" variant="h4">
+      <MuiTypography gutterBottom component="h4" variant="h4">
         This is a Typography Component. (H4)
       </MuiTypography>
-      <MuiTypography component="h5" variant="h5">
+      <MuiTypography gutterBottom component="h5" variant="h5">
         This is a Typography Component. (H5)
       </MuiTypography>
-      <MuiTypography component="h6" variant="h6">
+      <MuiTypography gutterBottom component="h6" variant="h6">
         This is a Typography Component. (H6)
       </MuiTypography>
-      <MuiTypography variant="body1">
+      <MuiTypography gutterBottom variant="body1">
         This is a Typography Component. (body-one)
       </MuiTypography>
-      <MuiTypography variant="body2">
+      <MuiTypography gutterBottom variant="body2">
         This is a Typography Component. (body-two)
       </MuiTypography>
-      <MuiTypography variant="body3">
+      <MuiTypography gutterBottom variant="body3">
         This is a Typography Component. (body-three)
       </MuiTypography>
-      <MuiTypography variant="body4">
+      <MuiTypography gutterBottom variant="body4">
         This is a Typography Component. (body-four)
       </MuiTypography>
-      <MuiTypography variant="overline1">
+      <MuiTypography gutterBottom variant="overline1">
         This is a Typography Component. (overline-one)
       </MuiTypography>
-      <MuiTypography variant="overline2">
+      <MuiTypography gutterBottom variant="overline2">
         This is a Typography Component. (overline-two)
       </MuiTypography>
-      <MuiTypography variant="overline3">
+      <MuiTypography gutterBottom variant="overline3">
         This is a Typography Component. (overline-three)
       </MuiTypography>
-      <MuiTypography variant="body2">
+      <MuiTypography gutterBottom variant="body2">
         <em>This is a Typography Component. (em)</em>
       </MuiTypography>
-      <MuiTypography variant="body2">
+      <MuiTypography gutterBottom variant="body2">
         <strong>This is a Typography Component. (strong)</strong>
       </MuiTypography>
-      <MuiTypography variant="body2">
+      <MuiTypography gutterBottom variant="body2">
         <strong>This is a Typography Component. (extra-strong)</strong>
       </MuiTypography>
-      <MuiTypography component="figcaption" variant="figcaption">
+      <MuiTypography gutterBottom component="figcaption" variant="figcaption">
         This is a Typography Component. (figcaption)
       </MuiTypography>
-      <MuiTypography component="div" variant="body2">
+      <MuiTypography gutterBottom component="div" variant="body2">
         <p>
           This is a Typography Component that wraps text elements. (div)
           <br />
@@ -118,22 +119,22 @@ export const AllTypographyElements: Story = {
 export const Headings: Story = {
   render: () => (
     <>
-      <MuiTypography variant="h1">
+      <MuiTypography gutterBottom variant="h1">
         This is a Typography Component. (H1)
       </MuiTypography>
-      <MuiTypography variant="h2">
+      <MuiTypography gutterBottom variant="h2">
         This is a Typography Component. (H2)
       </MuiTypography>
-      <MuiTypography variant="h3">
+      <MuiTypography gutterBottom variant="h3">
         This is a Typography Component. (H3)
       </MuiTypography>
-      <MuiTypography variant="h4">
+      <MuiTypography gutterBottom variant="h4">
         This is a Typography Component. (H4)
       </MuiTypography>
-      <MuiTypography variant="h5">
+      <MuiTypography gutterBottom variant="h5">
         This is a Typography Component. (H5)
       </MuiTypography>
-      <MuiTypography variant="h6">
+      <MuiTypography gutterBottom variant="h6">
         This is a Typography Component. (H6)
       </MuiTypography>
     </>
@@ -143,16 +144,16 @@ export const Headings: Story = {
 export const BodyTexts: Story = {
   render: () => (
     <>
-      <MuiTypography variant="body1">
+      <MuiTypography gutterBottom variant="body1">
         This is a Typography Component. (body-one)
       </MuiTypography>
-      <MuiTypography variant="body2">
+      <MuiTypography gutterBottom variant="body2">
         This is a Typography Component. (body-two)
       </MuiTypography>
-      <MuiTypography variant="body3">
+      <MuiTypography gutterBottom variant="body3">
         This is a Typography Component. (body-three)
       </MuiTypography>
-      <MuiTypography variant="body4">
+      <MuiTypography gutterBottom variant="body4">
         This is a Typography Component. (body-four)
       </MuiTypography>
     </>
@@ -162,13 +163,13 @@ export const BodyTexts: Story = {
 export const OverlineTexts: Story = {
   render: () => (
     <>
-      <MuiTypography variant="overline1">
+      <MuiTypography gutterBottom variant="overline1">
         This is a Typography Component. (overline-one)
       </MuiTypography>
-      <MuiTypography variant="overline2">
+      <MuiTypography gutterBottom variant="overline2">
         This is a Typography Component. (overline-two)
       </MuiTypography>
-      <MuiTypography variant="overline3">
+      <MuiTypography gutterBottom variant="overline3">
         This is a Typography Component. (overline-three)
       </MuiTypography>
     </>
@@ -178,16 +179,16 @@ export const OverlineTexts: Story = {
 export const OtherTexts: Story = {
   render: () => (
     <>
-      <MuiTypography variant="body2">
+      <MuiTypography gutterBottom variant="body2">
         <em>This is a Typography Component. (em)</em>
       </MuiTypography>
-      <MuiTypography variant="body2">
+      <MuiTypography gutterBottom variant="body2">
         <strong>This is a Typography Component. (strong)</strong>
       </MuiTypography>
-      <MuiTypography variant="body2">
+      <MuiTypography gutterBottom variant="body2">
         <strong>This is a Typography Component. (extra-strong)</strong>
       </MuiTypography>
-      <MuiTypography component="figcaption" variant="figcaption">
+      <MuiTypography gutterBottom component="figcaption" variant="figcaption">
         This is a Typography Component. (figcaption)
       </MuiTypography>
     </>
@@ -197,17 +198,17 @@ export const OtherTexts: Story = {
 export const TextWrapper: Story = {
   render: () => (
     <>
-      <MuiTypography component="div" variant="h3">
+      <MuiTypography gutterBottom component="div" variant="h3">
         <h1>h1 child styled as an h3</h1>
       </MuiTypography>
-      <MuiTypography component="div" variant="body1">
+      <MuiTypography gutterBottom component="div" variant="body1">
         <p>paragraph element child, styled as body-one</p>
         <ul>
           <li>child list items</li>
           <li>are also styled as body-one</li>
         </ul>
       </MuiTypography>
-      <MuiTypography component="div" variant="subtitle1">
+      <MuiTypography gutterBottom component="div" variant="subtitle1">
         <p>
           paragraph element child here containing <strong>bold</strong> and{' '}
           <em>emphasized</em> inline elements, styled as body-three
@@ -220,14 +221,14 @@ export const TextWrapper: Story = {
 export const CustomUsageExamples: Story = {
   render: () => (
     <>
-      <MuiTypography component="h1" variant="h3">
+      <MuiTypography gutterBottom component="h1" variant="h3">
         (Heading1 as Heading3) This is a Typography Component. (H1 as H3)
       </MuiTypography>
-      <MuiTypography component="h2" variant="body1">
+      <MuiTypography gutterBottom component="h2" variant="body1">
         (Heading2 as body-one) This is a Typography Component. (H2 as
         p.body-one)
       </MuiTypography>
-      <MuiTypography component="h3" variant="h5">
+      <MuiTypography gutterBottom component="h3" variant="h5">
         (Heading3 as Heading5) This is a Typography Component. (H3 as H5)
       </MuiTypography>
     </>
@@ -237,40 +238,40 @@ export const CustomUsageExamples: Story = {
 export const RichTextExamples: Story = {
   render: () => (
     <>
-      <MuiTypography variant="body2">
+      <MuiTypography gutterBottom variant="body2">
         <em>This is a body-two em text</em>
       </MuiTypography>
-      <MuiTypography variant="body2">
+      <MuiTypography gutterBottom variant="body2">
         <strong>This is a body-two strong text</strong>
       </MuiTypography>
-      <MuiTypography variant="body2">
+      <MuiTypography gutterBottom variant="body2">
         <strong>This is a body-two extra-strong text</strong>
       </MuiTypography>
-      <MuiTypography variant="body2">
+      <MuiTypography gutterBottom variant="body2">
         <strong>
           <em>This is a body-two strong em text</em>
         </strong>
       </MuiTypography>
-      <MuiTypography variant="body2">
+      <MuiTypography gutterBottom variant="body2">
         <strong>
           <em>This is a body-two extra-strong em text</em>
         </strong>
       </MuiTypography>
-      <MuiTypography variant="body2">
+      <MuiTypography gutterBottom variant="body2">
         <em>This is an em text</em>
       </MuiTypography>
-      <MuiTypography variant="body2">
+      <MuiTypography gutterBottom variant="body2">
         <strong>This is a strong text</strong>
       </MuiTypography>
-      <MuiTypography variant="body2">
+      <MuiTypography gutterBottom variant="body2">
         <strong>This is an extra-strong text</strong>
       </MuiTypography>
-      <MuiTypography variant="body2">
+      <MuiTypography gutterBottom variant="body2">
         <em>
           <strong>This is a strong em text</strong>
         </em>
       </MuiTypography>
-      <MuiTypography variant="body2">
+      <MuiTypography gutterBottom variant="body2">
         <strong>
           <em>This is an extra-strong em text</em>
         </strong>
