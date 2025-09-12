@@ -40,7 +40,6 @@ const MODE_MAP = {
 export const getPromptNameFromMode = (mode: string | undefined) => {
   const prefix = 'weblab2-';
   let suffix = 'suggest';
-  // TODO: support multiple modes
   if (mode && Object.keys(MODE_MAP).includes(mode)) {
     suffix = mode;
   }
