@@ -5,7 +5,6 @@ require_relative '../../../../lib/cdo/mailjet'
 class User
   class InactiveTeacherDeletionWarningJob < ApplicationJob
     EVENT_NAME = 'inactive_teacher_deletion_warning_sent'
-    MAILJET_RETRY_LIMIT = 5
 
     rescue_from StandardError, with: :report_exception
 
@@ -39,7 +38,7 @@ class User
     private def send_warning_email(user)
       Retryable.retryable(
         on: RestClient::TooManyRequests,
-        tries: MAILJET_RETRY_LIMIT,
+        tries: MailJet::MAILJET_RETRY_LIMIT,
         sleep: ->(n) {2 ** n}
       ) do
         MailJet.send_email(
