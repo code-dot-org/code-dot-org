@@ -168,7 +168,10 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
                 semanticTag="h2"
                 visualAppearance="overline-two"
                 noMargin
-                className={weblab2Styles.headerLabel}
+                className={classNames(
+                  weblab2Styles.headerLabel,
+                  weblab2Styles.centerHeaderContentText
+                )}
               >
                 {weblab2I18n.workspace()}
               </Typography>
