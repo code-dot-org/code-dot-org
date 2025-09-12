@@ -254,6 +254,9 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     params[:user_type] = cookies['sign_up_user_type'] unless params[:user_type]
     user = User.new.tap do |u|
       User.initialize_new_oauth_user(u, auth_hash, params)
+      u.oauth_token = auth_hash.credentials&.token
+      u.oauth_token_expiration = auth_hash.credentials&.expires_at
+      u.oauth_refresh_token = auth_hash.credentials&.refresh_token
       prepare_locale_cookie u
     end
 

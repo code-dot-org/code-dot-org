@@ -155,64 +155,6 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal auth.uid, partial_user.uid
   end
 
-  test "login: authorizing with unknown clever district admin account creates teacher" do
-    auth = OmniAuth::AuthHash.new(
-      uid: '1111',
-      provider: 'clever',
-      info: {
-        nickname: '',
-        name: {'first' => 'Hat', 'last' => 'Cat'},
-        email: 'first_last@clever-district-admin.xx',
-        user_type: 'district_admin',
-        dob: nil,
-        gender: nil
-      },
-    )
-    @request.env['omniauth.auth'] = auth
-    @request.env['omniauth.params'] = {}
-
-    assert_creates(User) do
-      get :clever
-    end
-
-    user = User.last
-    assert_equal 'clever', user.primary_contact_info.credential_type
-    assert_equal 'Hat Cat', user.name
-    assert_equal User::TYPE_TEACHER, user.user_type
-    assert_equal "21+", user.age # we know you're an adult if you are a teacher on clever
-    assert_nil user.gender
-    assert_equal user.id, signed_in_user_id
-  end
-
-  test "login: authorizing with unknown clever school admin account creates teacher" do
-    auth = OmniAuth::AuthHash.new(
-      uid: '1111',
-      provider: 'clever',
-      info: {
-        nickname: '',
-        name: {'first' => 'Hat', 'last' => 'Cat'},
-        email: 'first_last@clever-school-admin.xx',
-        user_type: 'school_admin',
-        dob: nil,
-        gender: nil
-      },
-    )
-    @request.env['omniauth.auth'] = auth
-    @request.env['omniauth.params'] = {}
-
-    assert_creates(User) do
-      get :clever
-    end
-
-    user = User.last
-    assert_equal 'clever', user.primary_contact_info.credential_type
-    assert_equal 'Hat Cat', user.name
-    assert_equal User::TYPE_TEACHER, user.user_type
-    assert_equal "21+", user.age # we know you're an adult if you are a teacher on clever
-    assert_nil user.gender
-    assert_equal user.id, signed_in_user_id
-  end
-
   test "login: authorizing with unknown clever teacher account needs additional information" do
     auth = OmniAuth::AuthHash.new(
       uid: '1111',
@@ -243,18 +185,16 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     @request.env['omniauth.auth'] = TEST_CLEVER_STUDENT_DATA
     @request.env['omniauth.params'] = {}
 
-    assert_creates(User) do
+    assert_does_not_create(User) do
       get :clever
     end
 
-    user = User.last
-    assert_equal 'clever', user.primary_contact_info.credential_type
-    assert_equal 'Elizabeth Smith', user.name
-    assert_equal User::TYPE_STUDENT, user.user_type
-    assert_equal "21+", user.age
-    assert_equal 'm', user.gender
-    assert_equal 'M', user.gender_third_party_input
-    assert_equal user.id, signed_in_user_id
+    assert_equal 200, @response.status
+    assert_template 'omniauth/redirect'
+    partial_user = User.new_from_partial_registration(session)
+    assert_equal AuthenticationOption::CLEVER, partial_user.provider
+    assert_equal TEST_CLEVER_STUDENT_DATA.uid, partial_user.uid
+    assert partial_user.student?
   end
 
   test "login: authorizing with known clever student account does not alter email or hashed email" do
@@ -471,7 +411,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal user.primary_contact_info.data_hash[:oauth_token_expiration], auth[:credentials][:expires_at]
   end
 
-  test 'clever: creates user if user is not found by credentials' do
+  test 'clever: redirects to omniauth/redirect if user is not found by credentials' do
     # Given I do not have a Code.org account
     uid = "nonexistent-clever"
 
@@ -482,45 +422,15 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
       user_type: 'teacher'
     @request.env['omniauth.auth'] = auth
     @request.env['omniauth.params'] = {}
-    assert_creates User do
+    assert_does_not_create(User) do
       get :clever
     end
 
-    # Then my account is created
-    # And I'm signed in
-    # And I go to my dashboard
-    user = User.find_by_credential(
-      type: AuthenticationOption::CLEVER,
-      id: uid
-    )
-    assert_redirected_to 'http://test-studio.code.org/home'
-    assert_equal user.id, signed_in_user_id
-  end
-
-  test 'clever: does not direct user to finish sign-up (new_sign_up_experience)' do
-    # Given I do not have a Code.org account
-    uid = "nonexistent-clever"
-
-    # When I hit the clever oauth callback
-    auth = generate_auth_user_hash \
-      provider: AuthenticationOption::CLEVER,
-      uid: uid,
-      user_type: 'teacher'
-    @request.env['omniauth.auth'] = auth
-    @request.env['omniauth.params'] = {}
-    assert_creates User do
-      get :clever
-    end
-
-    # Then my account is created
-    # And I'm signed in
-    # And I go to my dashboard
-    user = User.find_by_credential(
-      type: AuthenticationOption::CLEVER,
-      id: uid
-    )
-    assert_redirected_to 'http://test-studio.code.org/home'
-    assert_equal user.id, signed_in_user_id
+    assert_response :ok
+    assert_template 'omniauth/redirect'
+    partial_user = User.new_from_partial_registration(session)
+    assert_equal partial_user.provider, AuthenticationOption::CLEVER
+    assert_equal partial_user.uid, uid
   end
 
   test 'clever: sets tokens on new user' do
@@ -534,15 +444,12 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
       user_type: 'teacher'
     @request.env['omniauth.auth'] = auth
     @request.env['omniauth.params'] = {}
+    
     get :clever
-
-    # Then I go to the registration page to finish signing up
-    user = User.find_by_credential(
-      type: AuthenticationOption::CLEVER,
-      id: uid
-    )
-    assert_equal user.primary_contact_info.data_hash[:oauth_token], auth[:credentials][:token]
-    assert_equal user.primary_contact_info.data_hash[:oauth_token_expiration], auth[:credentials][:expires_at]
+    partial_user = User.new_from_partial_registration(session)
+    assert_equal auth[:credentials][:token], partial_user.oauth_token
+    assert_equal auth[:credentials][:expires_at], partial_user.oauth_token_expiration
+    assert_equal auth[:credentials][:refresh_token], partial_user.oauth_refresh_token
   end
 
   test 'google_oauth2: signs in user if user is found by credentials' do
