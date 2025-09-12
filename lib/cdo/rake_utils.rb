@@ -1,6 +1,7 @@
 require 'os'
 require 'open-uri'
 require 'pathname'
+require 'shellwords'
 require 'cdo/aws/s3'
 require 'cdo/chat_client'
 require 'digest'
@@ -63,8 +64,14 @@ module RakeUtils
 
   # Alternate version of RakeUtils.rake which always streams $stdout to the shell
   # during execution.
-  def self.rake_stream_output(*args, &block)
-    system_stream_output "RAILS_ENV=#{rack_env}", "RACK_ENV=#{rack_env}", 'bundle', 'exec', 'rake', *args, &block
+  def self.rake_stream_output(*args, env: {}, &block)
+    system_stream_output(
+      "RAILS_ENV=#{rack_env}",
+      "RACK_ENV=#{rack_env}",
+      *env.map {|k, v| "#{k}=#{Shellwords.escape(v.to_s)}"},
+      'bundle', 'exec', 'rake', *args,
+      &block
+    )
   end
 
   # Alternate version of RakeUtils.system which always streams $stdout to the

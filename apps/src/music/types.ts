@@ -1,6 +1,6 @@
 import * as GoogleBlockly from 'blockly/core';
 
-import {ExemplarSettings, ProjectLevelData} from '../lab2/types';
+import {ExemplarSettings, LabConfig, ProjectLevelData} from '../lab2/types';
 import {ValueOf} from '../types/utils';
 
 import {ToolboxData} from './blockly/toolbox/types';
@@ -41,3 +41,11 @@ export type SoundLoadCallbacks = {
   onLoadFinished?: LoadFinishedCallback;
   updateLoadProgress?: UpdateLoadProgressCallback;
 };
+
+export interface MusicLabConfig extends LabConfig {
+  music: {
+    blockMode: ValueOf<typeof BlockMode>;
+    packId?: string;
+    library?: string;
+  };
+}

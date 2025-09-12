@@ -858,7 +858,6 @@ class UnconnectedMusicView extends React.Component {
       saveGeneratedSongMetadata(
         Lab2Registry.getInstance().getProjectManager().getChannelId(),
         this.props.packId,
-        this.library.getBPM(),
         this.props.playbackEvents
       );
     }

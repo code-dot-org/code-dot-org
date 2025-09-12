@@ -436,7 +436,7 @@ class User < ApplicationRecord
   # Include default Devise modules. Others available are:
   # :token_authenticatable, :confirmable
   devise :invitable, :database_authenticatable, :registerable, :omniauthable,
-    :recoverable, :rememberable, :trackable, :lockable
+    :recoverable, :rememberable, :trackable, :lockable, :timeoutable
 
   # Make sure to include these Concerns after we include the default Devise
   # modules, since it's trying to extend some methods added by those modules
