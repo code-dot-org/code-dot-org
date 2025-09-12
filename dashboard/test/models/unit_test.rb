@@ -315,6 +315,25 @@ class UnitTest < ActiveSupport::TestCase
     assert_equal csp1_2018.link, csp1_2017.redirect_to_unit_url(student)
   end
 
+  test 'redirect_to_unit_url returns unit url of latest assigned unit version in family for unit belonging to modular single-unit course family' do
+    Unit.any_instance.stubs(:can_view_version?).returns(true)
+    student = create(:student)
+    csp1_2017 = create(:single_unit_course, name: 'csp-2017', family_name: 'csp', version_year: '2017').first_unit
+    CourseOffering.add_course_offering(csp1_2017.original_unit_group)
+    csp1_2018 = create(:single_unit_course, name: 'csp-2018', family_name: 'csp', version_year: '2018').first_unit
+    CourseOffering.add_course_offering(csp1_2018.original_unit_group)
+
+    modular_2017 = create(:single_unit_course, unit: csp1_2017, family_name: 'mod-fam', version_year: '2017')
+    modular_2018 = create(:single_unit_course, unit: csp1_2018, family_name: 'mod-fam', version_year: '2018')
+
+    section = create(:section, unit_group: modular_2018)
+    section.students << student
+    csp1_2017.reload
+    csp1_2018.reload
+
+    assert_equal "/courses/#{modular_2018.name}/units/1", csp1_2017.redirect_to_unit_url(student, unit_group: modular_2017)
+  end
+
   class CanViewVersion < ActiveSupport::TestCase
     setup do
       @student = create(:student)

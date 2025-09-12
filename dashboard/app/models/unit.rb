@@ -535,7 +535,9 @@ class Unit < ApplicationRecord
     latest_assigned_version = UnitGroup.latest_assigned_version(unit_group.family_name, user)
     latest_assigned_version_year = latest_assigned_version&.version_year
     return nil unless latest_assigned_version_year && latest_assigned_version_year > current_version_year
-    latest_assigned_version&.first_unit&.link
+    latest_assigned_version_unit = latest_assigned_version&.first_unit
+    ugu = Queries::Courses.unit_group_unit(latest_assigned_version_unit, latest_assigned_version)
+    latest_assigned_version_unit&.link(unit_group_unit: ugu)
   end
 
   def link(unit_group_unit: nil)

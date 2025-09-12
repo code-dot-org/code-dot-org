@@ -88,7 +88,7 @@ class ScriptsController < ApplicationController
 
     # Lastly, if user is assigned to newer version of this unit, we will
     # ask if they want to be redirected to the newer version.
-    @redirect_unit_url = @script.redirect_to_unit_url(current_user, locale: request.locale)
+    @redirect_unit_url = @script.redirect_to_unit_url(current_user, unit_group: @course, locale: request.locale)
 
     @show_redirect_warning = params[:redirect_warning] == 'true'
     unless current_user&.student?

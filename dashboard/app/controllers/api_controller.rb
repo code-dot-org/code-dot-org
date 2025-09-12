@@ -497,7 +497,7 @@ class ApiController < ApplicationController
     end
     return render json: {error: "Can't find Unit params=#{params}"}, status: :bad_request unless unit
 
-    redirect_unit_url = unit.redirect_to_unit_url(current_user, locale: request.locale)
+    redirect_unit_url = unit.redirect_to_unit_url(current_user, unit_group: unit_group, locale: request.locale)
 
     additional_script_data = {
       is_instructor: unit.can_be_instructor?(current_user),
