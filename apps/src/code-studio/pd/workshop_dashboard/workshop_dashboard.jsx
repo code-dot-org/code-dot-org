@@ -179,7 +179,7 @@ const workshopChildRouteConfigs = [
     component: Outlet,
     breadcrumbs: 'Workshops,Workshop,Surveys',
     childRoutes: [
-      // this makes "post" the default
+      // this makes "pre" the default
       {
         index: true,
         component: () => <Navigate to="pre" replace />,
