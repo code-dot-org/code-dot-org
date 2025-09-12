@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  background-color: var(--background-neutral-tertiary);
+  border: 1px solid var(--borders-neutral-primary);
+  padding: 4px;
+  gap: 8px;
+  margin: 4px 0;
+  align-items: center;
+
+  > img {
+    height: 50px;
+  }
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  > p {
+    margin: 0;
+  }
+}

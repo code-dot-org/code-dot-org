@@ -589,6 +589,9 @@ const EVENTS = {
   TEACHER_NAV_COURSE_OVERVIEW_FAILED:
     'Teacher Nav Course Overview Load Failure',
 
+  DEPRECATED_CURRICULUM_ERROR_PAGE_VISITED:
+    'Deprecated Curriculum Error Page Visited',
+
   // Lab2
   SKIP_TO_PROJECT: 'User Skipped To Project From Tutorial Level',
 

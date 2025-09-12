@@ -61,9 +61,7 @@ export const WorkshopLayout: FC<WorkshopLayoutProps> = ({
     const timeout = setTimeout(() => {
       setDefaultLoading(false);
     }, 1000);
-    return () => {
-      clearTimeout(timeout);
-    };
+    return () => clearTimeout(timeout);
   }, []);
 
   const {
@@ -105,6 +103,7 @@ export const WorkshopLayout: FC<WorkshopLayoutProps> = ({
   );
 
   const onSurveysPage = pathname.includes('/surveys');
+  const onPreSurveyPage = pathname.includes('/surveys/pre');
   const onPostSurveyPage = pathname.includes('/surveys/post');
   const onFacilitatorPage = pathname.includes('/surveys/post/facilitators');
   const onEditPage = pathname.includes('/edit');
@@ -116,19 +115,23 @@ export const WorkshopLayout: FC<WorkshopLayoutProps> = ({
 
   const showSurveyElements = onSurveysPage && !showLegacySurveyLinkButton;
 
-  const showPostSurveyCategorySelection =
-    showSurveyElements && onPostSurveyPage;
+  const showSurveyCategorySelection =
+    showSurveyElements && (onPreSurveyPage || onPostSurveyPage);
 
   const showFacilitatorSelection =
     showSurveyElements && onFacilitatorPage && surveys?.surveys?.post_workshop;
 
   const showNoSurveyResponses = useMemo(() => {
-    if (showPostSurveyCategorySelection) {
+    if (onPreSurveyPage) {
+      return !surveysLoading && !surveys?.surveys?.pre_workshop;
+    } else if (onPostSurveyPage) {
       return !surveysLoading && !surveys?.surveys?.post_workshop;
     }
     return false;
   }, [
-    showPostSurveyCategorySelection,
+    onPreSurveyPage,
+    onPostSurveyPage,
+    surveys?.surveys?.pre_workshop,
     surveys?.surveys?.post_workshop,
     surveysLoading,
   ]);
@@ -148,6 +151,17 @@ export const WorkshopLayout: FC<WorkshopLayoutProps> = ({
     surveysLoading,
     workshop,
     workshopLoading,
+  ]);
+
+  const activeSurveyCategoryButtons = useMemo(() => {
+    if (onPreSurveyPage) return questionCategoryButtons.preWorkshopSurvey;
+    if (onPostSurveyPage) return questionCategoryButtons.postWorkshopSurvey;
+    return [];
+  }, [
+    onPostSurveyPage,
+    onPreSurveyPage,
+    questionCategoryButtons.postWorkshopSurvey,
+    questionCategoryButtons.preWorkshopSurvey,
   ]);
 
   const contextValue: WorkshopContextValue = {
@@ -187,11 +201,11 @@ export const WorkshopLayout: FC<WorkshopLayoutProps> = ({
               text="Survey results"
             />
           )}
-          {showPostSurveyCategorySelection && (
+          {showSurveyCategorySelection && (
             <>
               <div className={styles.divider} />
               <SurveyCategorySelection
-                questionCategoryButtons={questionCategoryButtons}
+                questionCategoryButtons={activeSurveyCategoryButtons}
               />
             </>
           )}

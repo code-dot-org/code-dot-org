@@ -17,11 +17,20 @@ export const getAiTutorContextPromise = async (
     ? Object.entries(source.files)
         .filter(
           ([_, file]) =>
-            file.type !== ProjectFileType.VALIDATION &&
-            file.type !== ProjectFileType.SYSTEM_SUPPORT
+            (file.type !== ProjectFileType.VALIDATION &&
+              file.type !== ProjectFileType.SYSTEM_SUPPORT &&
+              file.type !== ProjectFileType.SUPPORT) ||
+            (file.type === ProjectFileType.SUPPORT && file.contents)
         )
-        .map(([_, file]) => file.contents)
-        .join('\n')
+        .map(([_, file]) => {
+          let prefix = '';
+          if (file.type === ProjectFileType.SUPPORT) {
+            prefix = `${file.name} is not visible to the student: \n`;
+          }
+
+          return `${prefix}filename: ${file.name}\n\`\`\`${file.contents}\`\`\``;
+        })
+        .join('\n\n')
     : undefined;
 
   const validationContents = validationFile?.contents;
@@ -55,7 +64,7 @@ export const buildHiddenContextString = (context: AiTutorContext) => {
 
   const hiddenContextString = [
     "Here is the student's current code:",
-    `\`\`\`${sourceCode}\`\`\``,
+    sourceCode,
     ...(validationContents
       ? ['Here is the validation code:', `\`\`\`${validationContents}\`\`\``]
       : []),
