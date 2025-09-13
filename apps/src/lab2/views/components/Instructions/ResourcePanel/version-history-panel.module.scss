@@ -178,15 +178,23 @@ $space-xl: 10px;
 }
 
 .publishCurrentVersionDescription {
-  padding: 12px;
+  padding: 6px 12px 12px 12px;
   background-color: var(--background-neutral-secondary);
   border-top: 1px solid var(--borders-neutral-primary);
 }
 
 .publishCurrentVersionDescriptionInput {
-  padding-bottom: 6px;
   width: 100%;
   box-sizing: border-box;
+}
+
+.label {
+  color: var(--text-neutral-primary, #292F36);
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-family: var(--font-family-body, Figtree);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: var(--font-line-height-body-xs, 19.68px);
 }
 
 .textArea {

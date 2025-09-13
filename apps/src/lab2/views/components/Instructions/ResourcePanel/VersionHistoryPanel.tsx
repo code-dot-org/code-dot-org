@@ -408,10 +408,10 @@ const VersionHistoryPanel: React.FunctionComponent<
           </div>
           <div className={moduleStyles.publishCurrentVersionDescription}>
             <div className={moduleStyles.publishCurrentVersionDescriptionInput}>
+              <div className={moduleStyles.label}>Describe your changes</div>
               <textarea
                 onChange={e => setCommitDescription(e.target.value)}
                 value={commitDescription}
-                placeholder="Describe your changes"
                 color="gray"
                 className={moduleStyles.textArea}
               />
