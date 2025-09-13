@@ -70,6 +70,12 @@ const VersionHistoryPanel: React.FunctionComponent<
     state => state.lab2Project.viewingOldVersion
   );
 
+  const projectSources = useAppSelector(
+    state => state.lab2Project.projectSources
+  );
+  console.log('projectSources', projectSources);
+  const channelId = useAppSelector(state => state.lab.channel?.id);
+  console.log('channelId', channelId);
   const dialogControl = useDialogControl();
 
   const dateFormatter = useMemo(() => {
@@ -309,6 +315,15 @@ const VersionHistoryPanel: React.FunctionComponent<
     setSelectedVersion,
   ]);
 
+  const onPublishVersion = useCallback(async () => {
+    console.log('publish');
+    // Save project
+    if (projectSources) {
+      dispatch(setAndSaveProjectSources(projectSources, true, true));
+      successfulRestoreCleanUp(projectSources); // Not sure if this is needed.
+    }
+  }, [dispatch, successfulRestoreCleanUp, projectSources]);
+
   const showList = listLoaded && !listLoading && !listLoadError;
 
   return (
@@ -421,7 +436,7 @@ const VersionHistoryPanel: React.FunctionComponent<
               size={'s'}
               className={moduleStyles.versionButton}
               text="Publish"
-              onClick={() => console.log('publish')}
+              onClick={onPublishVersion}
             />
           </div>
         </div>
