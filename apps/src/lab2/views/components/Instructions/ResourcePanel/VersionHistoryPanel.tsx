@@ -319,7 +319,7 @@ const VersionHistoryPanel: React.FunctionComponent<
     // Save project
     if (projectSources) {
       dispatch(setAndSaveProjectSources(projectSources, true, true));
-      successfulRestoreCleanUp(projectSources); // Not sure if this is needed.
+      dispatch(setViewingOldVersion(false));
     }
     // Save the commit description to the latest version before forcing a new version row.
     const payload = {
@@ -327,18 +327,36 @@ const VersionHistoryPanel: React.FunctionComponent<
       version_id: latestVersion,
       comment: commitDescription,
     };
-    await HttpClient.post('/project_commits', JSON.stringify(payload), true, {
-      'Content-Type': 'application/json; charset=UTF-8',
-    });
-    // Clear the commit description text area.
-    setCommitDescription('');
+
+    try {
+      await HttpClient.post('/project_commits', JSON.stringify(payload), true, {
+        'Content-Type': 'application/json; charset=UTF-8',
+      });
+
+      // Update the local version list to show the new comment without refetching
+      setVersionList(prevVersions =>
+        prevVersions.map(version =>
+          version.versionId === latestVersion
+            ? {...version, comment: commitDescription}
+            : version
+        )
+      );
+
+      // Clear the commit description text area.
+      setCommitDescription('');
+    } catch (error) {
+      console.error('Failed to save commit comment:', error);
+      // If saving the comment fails, fall back to refetching the version list
+      // to ensure UI state is consistent with backend
+      loadVersionList(false);
+    }
   }, [
     projectSources,
     channelId,
     latestVersion,
     commitDescription,
     dispatch,
-    successfulRestoreCleanUp,
+    loadVersionList,
   ]);
 
   const showList = listLoaded && !listLoading && !listLoadError;
