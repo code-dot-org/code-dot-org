@@ -27,6 +27,7 @@ import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {commonI18n} from '@cdo/apps/types/locale';
 import currentLocale from '@cdo/apps/util/currentLocale';
+import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import VersionHistoryRow from './VersionHistoryRow';
@@ -73,9 +74,7 @@ const VersionHistoryPanel: React.FunctionComponent<
   const projectSources = useAppSelector(
     state => state.lab2Project.projectSources
   );
-  console.log('projectSources', projectSources);
   const channelId = useAppSelector(state => state.lab.channel?.id);
-  console.log('channelId', channelId);
   const dialogControl = useDialogControl();
 
   const dateFormatter = useMemo(() => {
@@ -322,7 +321,25 @@ const VersionHistoryPanel: React.FunctionComponent<
       dispatch(setAndSaveProjectSources(projectSources, true, true));
       successfulRestoreCleanUp(projectSources); // Not sure if this is needed.
     }
-  }, [dispatch, successfulRestoreCleanUp, projectSources]);
+    // Save the commit description to the latest version before forcing a new version row.
+    const payload = {
+      storage_id: channelId,
+      version_id: latestVersion,
+      comment: commitDescription,
+    };
+    await HttpClient.post('/project_commits', JSON.stringify(payload), true, {
+      'Content-Type': 'application/json; charset=UTF-8',
+    });
+    // Clear the commit description text area.
+    setCommitDescription('');
+  }, [
+    projectSources,
+    channelId,
+    latestVersion,
+    commitDescription,
+    dispatch,
+    successfulRestoreCleanUp,
+  ]);
 
   const showList = listLoaded && !listLoading && !listLoadError;
 

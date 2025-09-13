@@ -40,7 +40,7 @@ export async function update(
 export async function getVersionList(
   channelId: string
 ): Promise<GetResponse<ProjectVersion[]>> {
-  const requestUrl = rootUrl(channelId) + '/versions';
+  const requestUrl = rootUrl(channelId) + '/versions?with_comments=true';
   return HttpClient.fetchJson<ProjectVersion[]>(requestUrl);
 }
 
