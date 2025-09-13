@@ -2981,7 +2981,11 @@
     "long_instructions": "This level shares a project with the next level in the progression."
   },
   "https://studio.code.org/s/allthethings/lessons/46/levels/7": {
-    "long_instructions": "This level shares a project with the previous level in the progression."
+    "long_instructions": "This level shares a project with the previous level in the progression.\n\nThis is a template-backed submittable level with validation.",
+    "validations": {
+      "Music Project Level 2_9b072f97-fd3a-496d-966e-1e82ddc3ad7a": "You played one sound!",
+      "Music Project Level 2_add0a56d-b34f-4d66-9159-b386e97cb8c1": "Please play one sound."
+    }
   },
   "https://studio.code.org/s/allthethings/lessons/46/levels/8": {
     "long_instructions": "## Predict and Run\n\n**What do you think this program does?**\n\nTake a look at the code in this program. Write down what you think this program will do. There are no wrong answers!"
@@ -2993,7 +2997,11 @@
     "long_instructions": "### Assessment\n\nCreate a song using multiple sounds! Each part of your song should include a different type of sound.\n\nExperiment and have fun!\n\n_Tips_:\n\n-   Try using blocks from different packs.\n-   Try using the Play Together and repeat blocks.\n-   Try factoring your song using functions."
   },
   "https://studio.code.org/s/allthethings/lessons/46/levels/11": {
-    "long_instructions": "### Assessment 2\n\n> This level does **not** require you to edit and run your code before submitting. Good luck!\n\nCreate a song using multiple sounds! Each part of your song should include a different type of sound.\n\nExperiment and have fun!\n\n_Tips_:\n\n-   Try using blocks from different packs.\n-   Try using the Play Together and repeat blocks.\n-   Try factoring your song using functions."
+    "long_instructions": "### Assessment 2\n\n-   _This level does **not** require you to edit and run your code before submitting._\n-   _This level does have validation._\n\nCreate a song using multiple sounds! Each part of your song should include a different type of sound.\n\nExperiment and have fun!\n\n_Tips_:\n\n-   Try using blocks from different packs.\n-   Try using the Play Together and repeat blocks.\n-   Try factoring your song using functions.",
+    "validations": {
+      "Submittable Music Level 2_2b74745f-e210-45fa-9a07-4f6698b68850": "You played one sound!",
+      "Submittable Music Level 2_5594a84f-c061-4811-af8d-e380c7cb0345": "Please play a sound."
+    }
   },
   "https://studio.code.org/s/allthethings/lessons/47/levels/1": {
     "long_instructions": "## Sample Instructions\n\nThis is a chat bot which allows you to talk to historical figures.\n\n### Do This\n\nType in a question and press the <code style=\"color:white; background-color:#7435b2\">Continue</code> button. What can you learn about Ada Lovelace?"
@@ -3089,7 +3097,7 @@
     "long_instructions": "## Web Lab 2 Lab Widget View\n\nThis is an example of widget view without toggle to view/hide code so workspace is always hidden."
   },
   "https://studio.code.org/s/allthethings/lessons/51/levels/6": {
-    "long_instructions": "## Web Lab 2 Lab Widget View\n\nThis is an example of widget view WITH toggle to view/hide code."
+    "long_instructions": "## Web Lab 2 with Initial View Mode Set to Preview\n\nThis is an example of setting the initial \"view mode\" to preview, with the option to switch to see code."
   },
   "https://studio.code.org/s/allthethings/lessons/51/levels/7": {
     "long_instructions": "## Web Lab 2 Predict Level\n\nThis is an example of a predict level with free response.\n\nWhat will happen when you click on the 'Click me' button? Submit your answer and then try it out!"

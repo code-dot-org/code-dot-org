@@ -21,19 +21,88 @@ $space-xl: 10px;
   overflow-y: auto;
   flex: 1;
   min-height: 0;
+  position: relative;
+
+  /* Simple background line that runs underneath the radio buttons */
+  background: linear-gradient(to right, transparent 32px, var(--borders-neutral-primary) 32px, var(--borders-neutral-primary) 33px, transparent 33px);
+}
+
+.rowContainer {
+  display: flex;
+  padding: var(--padding-p-xxs, 8px) 12px;
+  align-items: flex-start;
+  gap: 10px;
+  align-self: stretch;
+  border-radius: var(--border-radius-br-s, 4px);
+  border: 1px solid var(--borders-neutral-primary);
+  background: var(--background-neutral-secondary);
+  margin-left: 8px;
+  margin-right: 8px;
+  position: relative;
+  z-index: 1;
 }
 
 .row {
-  padding: $space-l;
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
 
-.row:has(input[type="radio"]:checked) {
-  background-color: var(--background-neutral-tertiary);
+.commentRow {
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
 
-.row:hover {
-  background-color: var(--background-neutral-tertiary);
+.initialVersionRow {
+  margin-top: 16px;
+  margin-bottom: 8px;
 }
+
+.currentVersionRow {
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+
+.versionContent {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.versionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.commitDescription {
+  margin-left: 34px; // Align with radio button label
+  margin-bottom: 0; // Remove extra space below comment
+  color: var(--text-neutral-secondary);
+  font-size: 14px;
+}
+
+/* Mask the vertical line above the first row and below the last row */
+.rowContainer:first-child::before,
+.rowContainer:last-child::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 8px; /* Cover the margin area */
+  background: var(--background-neutral-primary);
+  z-index: -1;
+}
+
+.rowContainer:first-child::before {
+  top: -8px;
+}
+
+.rowContainer:last-child::after {
+  bottom: -8px;
+}
+
 
 .footer {
   flex-shrink: 0;
@@ -57,4 +126,8 @@ $space-xl: 10px;
 
 .versionLoadError {
   font-size: 14px;
+}
+
+.autoSavedIcon {
+  color: var(--text-neutral-placeholder);
 }

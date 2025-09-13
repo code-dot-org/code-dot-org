@@ -6,7 +6,7 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {submitChatContents} from '../redux';
 import {
   AiChatClientType,
-  ChatButtonComponent,
+  ChatButtonAndKey,
   ModelParameters,
   AnalyticsProperties,
 } from '../types';
@@ -17,7 +17,7 @@ interface UserChatMessageEditorProps {
   modelParameters: ModelParameters;
   clientType: AiChatClientType;
   editorContainerClassName?: string;
-  chatButtons?: ChatButtonComponent[];
+  chatButtons?: ChatButtonAndKey[];
   hiddenContext?: string;
   multimodalAvailable?: boolean;
 }
@@ -93,8 +93,8 @@ const UserChatMessageEditor: React.FunctionComponent<
     <>
       {chatButtons && (
         <div className={moduleStyles.chatButtonsContainer}>
-          {chatButtons.map(ChatButton => (
-            <ChatButton onClick={handleSubmit} />
+          {chatButtons.map(({ChatButton, key}) => (
+            <ChatButton key={key} onClick={handleSubmit} />
           ))}
         </div>
       )}

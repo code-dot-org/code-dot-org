@@ -1,6 +1,5 @@
 <Dancelab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 63,
   "created_at": "2025-08-26T19:58:20.000Z",
   "level_num": "custom",
@@ -24,7 +23,7 @@
     "disable_param_editing": "true",
     "use_modal_function_editor": "false",
     "disable_if_else_editing": "false",
-    "free_play": "false",
+    "free_play": "true",
     "show_debug_watch": "false",
     "expand_debugger": "false",
     "debugger_disabled": "false",
@@ -51,12 +50,86 @@
         }
       }
     },
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "toolbox_definition": {
+      "contents": [
+        {
+          "kind": "block",
+          "type": "Dancelab_setBackgroundEffect",
+          "id": "M2.upAzcSnc*E*_BWBVm",
+          "fields": {
+            "EFFECT": "<field name=\"EFFECT\">\"none\"</field>",
+            "PALETTE": "<field name=\"PALETTE\">\"rave\"</field>"
+          },
+          "enabled": true
+        },
+        {
+          "kind": "block",
+          "type": "Dancelab_changeMoveEachLR",
+          "id": "_yWy(B3`W02UJT,d+8bR",
+          "fields": {
+            "GROUP": "<field name=\"GROUP\">sprites</field>",
+            "MOVE": "<field name=\"MOVE\">\"next\"</field>",
+            "DIR": "<field name=\"DIR\">-1</field>"
+          },
+          "enabled": true
+        },
+        {
+          "kind": "block",
+          "type": "Dancelab_atTimestamp",
+          "id": "Sz{~{/HJhhvMqOt_1mO1",
+          "fields": {
+            "TIMESTAMP": 0,
+            "UNIT": "<field name=\"UNIT\">\"measures\"</field>"
+          },
+          "enabled": true
+        },
+        {
+          "kind": "block",
+          "type": "Dancelab_makeAnonymousDanceSprite",
+          "id": "4yPRCSh^P8DLK%=um7zJ",
+          "fields": {
+            "COSTUME": "<field name=\"COSTUME\">\"ALIEN\"</field>",
+            "LOCATION": "<field name=\"LOCATION\">{x: 200, y: 100}</field>"
+          },
+          "enabled": true
+        },
+        {
+          "kind": "block",
+          "type": "Dancelab_makeNewDanceSpriteGroup",
+          "id": "by2`a_YHZ.i$/,(:Q^Dl",
+          "fields": {
+            "N": "<field name=\"N\">2</field>",
+            "COSTUME": "<field name=\"COSTUME\">\"ALIEN\"</field>",
+            "LAYOUT": "<field name=\"LAYOUT\">\"border\"</field>"
+          },
+          "enabled": true
+        },
+        {
+          "kind": "block",
+          "type": "Dancelab_whenKey",
+          "id": "Qmd;|524p^F@,fZ4SHq5",
+          "fields": {
+            "KEY": "<field name=\"KEY\">\"up\"</field>"
+          },
+          "enabled": true
+        },
+        {
+          "kind": "block",
+          "type": "Dancelab_everySeconds",
+          "id": "27qik3jQ[b7g|GJ%wh$!",
+          "fields": {
+            "N": 0.1,
+            "UNIT": "<field name=\"UNIT\">\"measures\"</field>"
+          },
+          "enabled": true
+        }
+      ],
+      "kind": "flyoutToolbox"
+    },
+    "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-08-28 21:07:50 +0000\",\"changed\":[\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-28 21:14:13 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-29 15:38:30 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-29 20:51:03 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-29 21:23:20 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-08-28 21:07:50 +0000\",\"changed\":[\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-28 21:14:13 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-29 15:38:30 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-29 20:51:03 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-29 21:23:20 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-11 17:55:54 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-11 20:53:31 +0000\",\"changed\":[\"toolbox_definition\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-11 21:50:38 +0000\",\"changed\":[\"toolbox_definition\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-11 22:12:31 +0000\",\"changed\":[\"free_play\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-11 22:16:47 +0000\",\"changed\":[\"toolbox_definition\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

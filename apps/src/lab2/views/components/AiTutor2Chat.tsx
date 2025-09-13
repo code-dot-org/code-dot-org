@@ -82,37 +82,37 @@ const chatButtonData: ChatButtonData[] = [
   },
 ] as const;
 
-const chatButtons = chatButtonData.map(
-  button =>
-    ({onClick}: {onClick: ChatButtonClickHandler}) =>
-      (
-        <Button
-          className={moduleStyles.chatButton}
-          key={button.label}
-          aria-label={button.label}
-          iconLeft={
-            {
-              ...button.icon,
-              className: classNames({
-                [moduleStyles['icon']]: true,
-                [moduleStyles[`icon-${button.icon?.iconName}`]]: button.icon,
-              }),
-            } as FontAwesomeV6IconProps
-          }
-          onClick={() => onClick(button.value, button.analyticsProperties)}
-          text={button.label}
-          size="s"
-          type="secondary"
-          color="black"
-        />
-      )
-);
+const chatButtons = chatButtonData.map(button => ({
+  ChatButton: ({onClick}: {onClick: ChatButtonClickHandler}) => (
+    <Button
+      className={moduleStyles.chatButton}
+      aria-label={button.label}
+      iconLeft={
+        {
+          ...button.icon,
+          className: classNames({
+            [moduleStyles['icon']]: true,
+            [moduleStyles[`icon-${button.icon?.iconName}`]]: button.icon,
+          }),
+        } as FontAwesomeV6IconProps
+      }
+      onClick={() => onClick(button.value, button.analyticsProperties)}
+      text={button.label}
+      size="s"
+      type="secondary"
+      color="black"
+    />
+  ),
+  key: button.label,
+}));
 interface AiTutor2ChatProps {
+  aiTutorSystemPromptName?: string;
   aiTutorContextPromise: Promise<AiTutorContext>;
 }
 
 // A free chat with lab-supplied context added to each question.
 const AiTutor2Chat: React.FunctionComponent<AiTutor2ChatProps> = ({
+  aiTutorSystemPromptName,
   aiTutorContextPromise,
 }) => {
   const dispatch = useAppDispatch();
@@ -121,8 +121,12 @@ const AiTutor2Chat: React.FunctionComponent<AiTutor2ChatProps> = ({
   const [hiddenContextString, setHiddenContextString] = useState<string>();
 
   useEffect(() => {
-    if (customPromptName) {
-      fetchCustomPrompt(customPromptName)
+    if (aiTutorSystemPromptName || customPromptName) {
+      // Use the custom prompt name from query params if provided, otherwise use the systemPromptName
+      // passed in via props.
+      const promptToFetch = (customPromptName ||
+        aiTutorSystemPromptName) as string;
+      fetchCustomPrompt(promptToFetch)
         .then(prompt => {
           if (prompt) {
             setSystemPrompt(prompt);
@@ -136,16 +140,18 @@ const AiTutor2Chat: React.FunctionComponent<AiTutor2ChatProps> = ({
     } else {
       setSystemPrompt(defaultSystemPrompt);
     }
-  }, []);
+  }, [aiTutorSystemPromptName]);
 
   useEffect(() => {
     // Log which system prompt we end up using.
     if (customPromptName) {
       console.log(`🤖: systemPrompt: ${customPromptName}`, systemPrompt);
+    } else if (aiTutorSystemPromptName) {
+      console.log(`🤖: systemPrompt: ${aiTutorSystemPromptName}`, systemPrompt);
     } else {
       console.log(`🤖: systemPrompt: default`);
     }
-  }, [systemPrompt]);
+  }, [systemPrompt, aiTutorSystemPromptName]);
 
   useEffect(() => {
     // We currently use query params to allow AI model selection but otherwise do not provide any user
