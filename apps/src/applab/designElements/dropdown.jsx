@@ -1,10 +1,10 @@
 import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
-import RGBColor from 'rgbcolor';
 
 import applabMsg from '@cdo/applab/locale';
 
+import RGBColor from '../../lib/util/rgbcolor.js';
 import designMode from '../designMode';
 import themeValues, {CLASSIC_DROPDOWN_PADDING} from '../themeValues';
 

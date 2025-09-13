@@ -7,7 +7,6 @@ import objectFitImages from 'object-fit-images';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
-import RGBColor from 'rgbcolor';
 
 import autogenerateML from '@cdo/apps/applab/ai';
 import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
@@ -16,6 +15,7 @@ import * as assetPrefix from '../assetManagement/assetPrefix';
 import {ImageMode} from '../code-studio/components/AssetManager';
 import project from '../code-studio/initApp/project';
 import {KeyCodes, NOTIFICATION_ALERT_TYPE} from '../constants';
+import RGBColor from '../lib/util/rgbcolor.js';
 import logToCloud from '../logToCloud';
 import firehoseClient from '../metrics/firehose';
 import {getStore} from '../redux';

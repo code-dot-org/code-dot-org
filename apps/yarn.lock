@@ -11195,7 +11195,6 @@ __metadata:
     rehype-sanitize: "npm:^4.0.0"
     remark-parse: "npm:~8.0.3"
     remark-rehype: "npm:8.1.0"
-    rgbcolor: "npm:0.0.4"
     sanitize-html: "npm:^1.11.3"
     sass: "npm:^1.51.0"
     sass-loader: "npm:^12.1.0"
