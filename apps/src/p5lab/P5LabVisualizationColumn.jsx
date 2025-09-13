@@ -1,7 +1,6 @@
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
-import Pointable from 'react-pointable';
 import {connect} from 'react-redux';
 
 import ArrowButtons from '@cdo/apps/templates/ArrowButtons';
@@ -170,13 +169,15 @@ class P5LabVisualizationColumn extends React.Component {
       <div>
         <div style={{position: 'relative'}}>
           <ProtectedVisualizationDiv>
-            <Pointable
+            <div
               id="divGameLab"
+              ref={this.divGameLab}
               style={divGameLabStyle}
-              tabIndex="1"
+              // TODO: verify if the tabindex is needed
+              // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
+              tabIndex={1}
               onPointerMove={this.pickerPointerMove}
               onPointerUp={this.pickerPointerUp}
-              elementRef={el => (this.divGameLab = el)}
               onMouseUp={this.pickerPointerUp}
             />
             <VisualizationOverlay

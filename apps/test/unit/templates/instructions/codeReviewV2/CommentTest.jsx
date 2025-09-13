@@ -1,12 +1,12 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {Factory} from 'rosie';
 
-import './CodeReviewTestHelper';
 import {UnconnectedComment as Comment} from '@cdo/apps/templates/instructions/codeReviewV2/Comment';
 import color from '@cdo/apps/util/color';
 
-const DEFAULT_COMMENT = Factory.build('CodeReviewV2Comment');
+import {codeReviewV2CommentFactory} from './CodeReviewTestHelper';
+
+const DEFAULT_COMMENT = codeReviewV2CommentFactory.build();
 const DEFAULT_PROPS = {
   comment: DEFAULT_COMMENT,
   onResolveStateToggle: () => {},
