@@ -97,7 +97,7 @@ const VersionHistoryPanel: React.FunctionComponent<
       }
       setListLoading(true);
       projectManager
-        .getVersionList()
+        .getVersionList(true) // include comments.
         .then(versionList => {
           setVersionList(versionList);
           setListLoaded(true);

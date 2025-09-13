@@ -316,8 +316,11 @@ export default class ProjectManager {
     this.publishHelper(false);
   }
 
-  async getVersionList() {
-    return await this.sourcesStore.getVersionList(this.channelId);
+  async getVersionList(includeComments: boolean = false) {
+    return await this.sourcesStore.getVersionList(
+      this.channelId,
+      includeComments
+    );
   }
 
   addSaveSuccessListener(listener: (channel: Channel) => void) {

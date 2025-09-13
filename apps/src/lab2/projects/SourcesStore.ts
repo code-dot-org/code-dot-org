@@ -71,8 +71,11 @@ export class SourcesStore {
     return response;
   }
 
-  async getVersionList(channelId: string) {
-    const response = await sourcesApi.getVersionList(channelId);
+  async getVersionList(channelId: string, includeComments: boolean = false) {
+    const response = await sourcesApi.getVersionList(
+      channelId,
+      includeComments
+    );
     return response.value || [];
   }
 
