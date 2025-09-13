@@ -7,10 +7,10 @@
   "properties": {
     "preload_asset_list": null,
     "level_data": {
-      "library": "launch2024"
-    },
-    "ai_generate": "true",
-    "adlib": "length"
+      "library": "launch2024",
+      "aiCodeGenerate": "true",
+      "aiCodeGenerateAdlib": "length"
+    }
   },
   "published": true
 }]]></config>

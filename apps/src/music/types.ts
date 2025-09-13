@@ -22,6 +22,8 @@ export interface MusicLevelData extends ProjectLevelData {
   allowChangeStartingPlayheadPosition?: boolean;
   toolboxDefinition?: GoogleBlockly.utils.toolbox.ToolboxInfo;
   validationTimeout?: number;
+  aiCodeGenerate?: boolean;
+  aiCodeGenerateAdlib?: string;
 }
 
 export type ExemplarValidationMode = 'default' | 'type';

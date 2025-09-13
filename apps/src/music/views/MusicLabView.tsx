@@ -429,7 +429,9 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
 
         <div id="blockly-area" className={moduleStyles.blocklyArea}>
           {(AppConfig.getValue('ai-generate') === 'true' ||
-            levelProperties.aiGenerate) && <Generate />}
+            (levelProperties.levelData as MusicLevelData).aiCodeGenerate) && (
+            <Generate />
+          )}
 
           <PanelContainer
             id="workspace-panel"

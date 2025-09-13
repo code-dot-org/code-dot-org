@@ -510,7 +510,7 @@ const DanceView: React.FunctionComponent<{
 export default (props: LabProps<DanceLevelProperties, DanceProjectSources>) => (
   <SourcesContainer {...props} defaultSources={defaultSources}>
     {queryParams('ai-generate-dancer') === 'true' ||
-    props.levelProperties.aiGenerateDancer ? (
+    props.levelProperties.generateDanceMode ? (
       <DancerGenerate />
     ) : (
       <DanceView levelProperties={props.levelProperties} />

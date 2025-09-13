@@ -36,7 +36,7 @@
     "hide_pause_button": "false",
     "default_song": "introtoshamstep_47SOUL",
     "uses_lab2": "true",
-    "ai_generate_dancer": "true"
+    "generate_dance_mode": "true"
   },
   "audit_log": "[{\"changed_at\":\"2025-09-10 22:43:07 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {

@@ -16,6 +16,7 @@ import appConfig from '../appConfig';
 import {baseAssetUrl} from '../constants';
 import MusicLibrary from '../player/MusicLibrary';
 import {setCodeToLoad, setAiGenerateState} from '../redux/musicRedux';
+import {MusicLevelData} from '../types';
 
 import styles from './Generate.module.scss';
 
@@ -32,8 +33,11 @@ const Generate: React.FunctionComponent = () => {
   const library = MusicLibrary.getInstance();
 
   const adlibOption =
-    useAppSelector(state => state.lab.levelProperties?.adlib) ||
-    (appConfig.getValue('ai-generate-adlib') as string);
+    useAppSelector(
+      state =>
+        (state.lab.levelProperties?.levelData as MusicLevelData)
+          .aiCodeGenerateAdlib
+    ) || (appConfig.getValue('ai-generate-adlib') as string);
   const useCache = appConfig.getValue('ai-generate-cache') === 'true';
 
   const [adlibText, setAdlibText] = useState<string | undefined>(undefined);
