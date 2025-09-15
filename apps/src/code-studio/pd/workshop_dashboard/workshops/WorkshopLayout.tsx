@@ -224,12 +224,7 @@ export const WorkshopLayout: FC<WorkshopLayoutProps> = ({
           {showSurveyElements && (
             <SurveyTypeSelection surveyTypeOptions={surveyTypeOptions} />
           )}
-          {showLegacySurveyLinkButton && (
-            <LinkButton
-              href={`/pd/workshop_dashboard/workshop_daily_survey_results/${workshopId}`}
-              text="Survey results"
-            />
-          )}
+
           {showSurveyCategorySelection && (
             <>
               <div className={styles.divider} />
@@ -245,8 +240,17 @@ export const WorkshopLayout: FC<WorkshopLayoutProps> = ({
         )}
       </nav>
       <main>
-        {showNoSurveyResponses && <NoSurveyResponses />}
-        <Outlet />
+        {showLegacySurveyLinkButton ? (
+          <LinkButton
+            href={`/pd/workshop_dashboard/workshop_daily_survey_results/${workshopId}`}
+            text="Survey results"
+          />
+        ) : (
+          <>
+            {showNoSurveyResponses && <NoSurveyResponses />}
+            <Outlet />
+          </>
+        )}
       </main>
     </WorkshopContext.Provider>
   );
