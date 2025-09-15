@@ -13,7 +13,7 @@ threads 1, 5
 
 directory deploy_dir('dashboard')
 
-unless CDO.rack_env == :development
+unless CDO.rack_env?(:development)
   drain_on_shutdown
 
   # nginx already buffers/queues requests so disable Puma's own queue.
