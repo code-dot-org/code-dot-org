@@ -192,10 +192,10 @@ const VersionHistoryPanel: React.FunctionComponent<
     [dispatch, loadVersionList]
   );
 
-  const startOver = useCallback(() => {
+  const startOver = useCallback(async () => {
     // We force a new version on start over so the user doesn't lose their recent edits.
     // We also force the save to occur immediately to avoid confusion.
-    dispatch(
+    await dispatch(
       setAndSaveProjectSources(
         startSources,
         /* forceSave */ true,
@@ -323,11 +323,14 @@ const VersionHistoryPanel: React.FunctionComponent<
       }
 
       try {
-        // Save project first and wait for completion so we can access the new version ID.
-        await projectManager.save(projectSources, true, true);
-
-        // Update Redux state.
-        dispatch(setProjectSource(projectSources));
+        // Save project and update Redux state
+        await dispatch(
+          setAndSaveProjectSources(
+            projectSources,
+            /* forceSave */ true,
+            /* forceNewVersion */ true
+          )
+        );
 
         // Get the most recent version ID.
         const newVersionId = projectManager.getCurrentVersionId();
