@@ -1,5 +1,4 @@
 import {Button} from '@code-dot-org/component-library/button';
-import {IconDropdown} from '@code-dot-org/component-library/dropdown';
 import {FontAwesomeV6IconProps} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Tabs, {TabsProps} from '@code-dot-org/component-library/tabs';
 import React, {useCallback, useEffect, useMemo, useState} from 'react';
@@ -36,6 +35,7 @@ import {getAssetUrl, getShortName} from '../utils';
 import StagedFilesPreview from './assets/StagedFilesPreview';
 import UploadButton from './assets/UploadButton';
 import ChatEventsList from './ChatEventsList';
+import ChatModeDropdown from './ChatModeDropdown';
 import CopyChatHistoryButton from './CopyChatHistoryButton';
 import UserChatMessageEditor from './UserChatMessageEditor';
 
@@ -261,42 +261,6 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     tabPanelsContainerClassName: moduleStyles.tabPanelsContainer,
   };
 
-  // availableModes and selectedMode are used for the system prompt dropdown (if provided).
-  // systemPromptSettings is provided in a display-agnostic way, so we convert it here to the
-  // format needed by IconDropdown.
-  const availableModes = useMemo(() => {
-    if (!systemPromptSettings?.systemPromptOptions) {
-      return undefined;
-    }
-    return systemPromptSettings.systemPromptOptions.map(option => ({
-      value: option.promptName,
-      label: option.displayName,
-      icon: option.icon,
-    }));
-  }, [systemPromptSettings?.systemPromptOptions]);
-
-  const selectedMode = useMemo(() => {
-    if (!systemPromptSettings?.selectedSystemPromptName) {
-      return undefined;
-    } else {
-      const settingsForPrompt = systemPromptSettings.systemPromptOptions.find(
-        option =>
-          option.promptName === systemPromptSettings.selectedSystemPromptName
-      );
-      if (!settingsForPrompt) {
-        return undefined;
-      }
-      return {
-        value: systemPromptSettings.selectedSystemPromptName,
-        label: settingsForPrompt?.displayName,
-        icon: settingsForPrompt?.icon,
-      };
-    }
-  }, [
-    systemPromptSettings?.selectedSystemPromptName,
-    systemPromptSettings?.systemPromptOptions,
-  ]);
-
   return (
     <div id="chat-workspace-area" className={moduleStyles.chatWorkspace}>
       {selectedStudent ? (
@@ -312,20 +276,10 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
         {multimodalAvailable && (
           <StagedFilesPreview buildAssetUrl={buildAssetUrl} />
         )}
-        {availableModes && selectedMode && (
-          <IconDropdown
-            onChange={option =>
-              systemPromptSettings?.onSystemPromptChange(option.value)
-            }
-            name={'chat-change-mode'}
-            options={availableModes}
-            selectedOption={selectedMode}
-            labelText={selectedMode.label}
-            size="xs"
-            className={moduleStyles.modeDropdown}
-            readOnly={availableModes.length <= 1}
-          />
-        )}
+        <ChatModeDropdown
+          className={moduleStyles.modeDropdown}
+          systemPromptSettings={systemPromptSettings}
+        />
         {canChatWithModel && (
           <UserChatMessageEditor
             clientType={clientType}
