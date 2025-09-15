@@ -5,7 +5,7 @@ import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import classNames from 'classnames';
 import React, {useEffect, useMemo, useState} from 'react';
 
-import {SystemPromptSettings} from '@cdo/apps/aichat/views/ChatWorkspace';
+import {SystemPromptSettings} from '@cdo/apps/aichat/types';
 import {AiTutorContext} from '@cdo/apps/aiTutor/types';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';

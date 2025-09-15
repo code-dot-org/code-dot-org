@@ -8,10 +8,9 @@ import {
   ModelParameters,
   ChatButtonClickHandler,
   ChatButtonData,
-} from '@cdo/apps/aichat/types';
-import ChatWorkspace, {
   SystemPromptSettings,
-} from '@cdo/apps/aichat/views/ChatWorkspace';
+} from '@cdo/apps/aichat/types';
+import ChatWorkspace from '@cdo/apps/aichat/views/ChatWorkspace';
 import {AiTutorContext} from '@cdo/apps/aiTutor/types';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {buildHiddenContextString} from '@cdo/apps/pythonlab/aiTutorHelper';

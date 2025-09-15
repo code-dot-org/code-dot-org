@@ -7,10 +7,10 @@ import {javascript} from '@codemirror/lang-javascript';
 import {LanguageSupport} from '@codemirror/language';
 import React, {useEffect, useMemo, useState} from 'react';
 
+import {SystemPromptOption} from '@cdo/apps/aichat/types';
 import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
 import {LabProps, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 
-import {SystemPromptOptions} from '../aichat/views/ChatWorkspace';
 import {AiTutorContext} from '../aiTutor/types';
 import {useSource} from '../codebridge/hooks/useSource';
 import {useAppDispatch, useAppSelector} from '../util/reduxHooks';
@@ -88,7 +88,7 @@ const Weblab2View: React.FC<
       );
     });
   const [systemPromptOptions, setSystemPromptOptions] = useState<
-    SystemPromptOptions[] | undefined
+    SystemPromptOption[] | undefined
   >(undefined);
 
   const {startSources} = useSource(
@@ -101,6 +101,7 @@ const Weblab2View: React.FC<
     state => !!state.lab2Project.projectSources?.source
   );
 
+  // Set up AI Tutor system prompt options based on available modes in level properties.
   useEffect(() => {
     const availableModes = levelProperties.availableAiTutorModes || [
       DEFAULT_AI_TUTOR_MODE,

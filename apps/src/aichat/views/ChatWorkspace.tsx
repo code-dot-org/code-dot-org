@@ -5,6 +5,7 @@ import Tabs, {TabsProps} from '@code-dot-org/component-library/tabs';
 import React, {useCallback, useEffect, useMemo, useState} from 'react';
 import {useSelector} from 'react-redux';
 
+import {SystemPromptSettings} from '@cdo/apps/aichat/types';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import usePrevious from '@cdo/apps/util/usePrevious';
 
@@ -55,18 +56,6 @@ interface ChatWorkspaceProps {
 
   // Options for changing system prompt (used in Web Lab 2)
   systemPromptSettings?: SystemPromptSettings;
-}
-
-export interface SystemPromptSettings {
-  systemPromptOptions: SystemPromptOptions[];
-  selectedSystemPromptName: string;
-  onSystemPromptChange: (promptName: string) => void;
-}
-
-export interface SystemPromptOptions {
-  displayName: string;
-  icon: FontAwesomeV6IconProps;
-  promptName: string;
 }
 
 enum WorkspaceTeacherViewTab {
@@ -272,6 +261,9 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     tabPanelsContainerClassName: moduleStyles.tabPanelsContainer,
   };
 
+  // availableModes and selectedMode are used for the system prompt dropdown (if provided).
+  // systemPromptSettings is provided in a display-agnostic way, so we convert it here to the
+  // format needed by IconDropdown.
   const availableModes = useMemo(() => {
     if (!systemPromptSettings?.systemPromptOptions) {
       return undefined;

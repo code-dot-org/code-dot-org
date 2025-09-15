@@ -13,7 +13,7 @@ import {
 import classNames from 'classnames';
 import React, {useEffect, useMemo} from 'react';
 
-import {SystemPromptSettings} from '@cdo/apps/aichat/views/ChatWorkspace';
+import {SystemPromptSettings} from '@cdo/apps/aichat/types';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';

@@ -37,6 +37,8 @@ const MODE_MAP = {
   produce: {displayName: weblab2I18n.produce(), iconName: 'hammer'},
 };
 
+// Given a mode, return the corresponding prompt name. If the mode is not
+// a possible mode, return the default prompt name.
 export const getPromptNameFromMode = (mode: string | undefined) => {
   const prefix = 'weblab2-';
   let suffix = 'suggest';
@@ -46,6 +48,8 @@ export const getPromptNameFromMode = (mode: string | undefined) => {
   return `${prefix}${suffix}`;
 };
 
+// Given a list of modes, return the corresponding system prompt options.
+// Any mode in the list that is not a valid mode will be ignored.
 export const getPromptOptionsFromModes = (modes: string[]) => {
   const possibleModes = Object.keys(MODE_MAP);
   const options = modes.map(mode => {
