@@ -104,7 +104,7 @@ Feature: Using the teacher homepage sections feature
     And I wait until element "h1:contains(Progress)" is visible
     Given I am on "http://studio.code.org/home"
     And I wait until element "#classroom-sections" is visible
-    And I wait until element ".uitest-owned-sections" is visible
+    And I wait until element "#ui-test-section-list" is visible
     And the section table row at index 0 has primary assignment path "/courses/coursea-2019"
 
   Scenario: Navigate to course pages with course versions enabled

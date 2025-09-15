@@ -8,7 +8,7 @@ Feature: Age Gated Sections Modal and Banner
     Given I am assigned to course "allthethingscourse" unit 1
 
     When I sign in as "Teacher_Sally" and go home
-    And I wait until element "ui-test-section-list" is visible
+    And I wait until element "#ui-test-section-list" is visible
 
     # Click on Age Gated Banner Sections button to view Age Gated Sections Modal
     When I open my eyes to test "Age Gated Sections Banner and Modal"
