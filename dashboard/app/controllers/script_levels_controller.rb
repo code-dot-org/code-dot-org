@@ -79,7 +79,7 @@ class ScriptLevelsController < ApplicationController
     # Check if the script or current level is deprecated
     level_is_deprecated = @script_level&.level_deprecated?
     if @script.is_deprecated || level_is_deprecated
-      @deprecated_course_name = @script.name
+      @deprecated_curriculum_name = @script.name
       return render 'errors/deprecated_course'
     end
 

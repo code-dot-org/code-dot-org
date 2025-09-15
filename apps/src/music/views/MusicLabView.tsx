@@ -311,9 +311,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
       <div className={moduleStyles.centerHeaderContentText}>
         {musicI18n.panelHeaderWorkspace()}
       </div>
-      {projectTemplateLevel && (
-        <ProjectTemplateWorkspaceIconV2 darkMode={true} />
-      )}
+      {projectTemplateLevel && <ProjectTemplateWorkspaceIconV2 />}
     </div>
   );
 

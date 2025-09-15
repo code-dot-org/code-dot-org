@@ -1,4 +1,4 @@
-module MailjetConstants
+module MailJetConstants
   MAILJET_RETRY_LIMIT = 5
 
   EMAILS = {
@@ -42,6 +42,15 @@ module MailjetConstants
         },
         development: {
           default: 7_208_545,
+        }
+      },
+      from_address: 'noreply@code.org',
+      from_name: 'Code.org',
+    },
+    teacher_workshop_detail_change_notification: {
+      template_id: {
+        production: {
+          default: 7_192_319,
         }
       },
       from_address: 'noreply@code.org',

@@ -119,3 +119,21 @@ p.date {
   width: 8px;
   line-height: var(--font-line-height-body-xxs, 17.6px);
 }
+
+.emptyNotificationListContainer {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .emptyNotificationList {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 32px;
+  }
+}

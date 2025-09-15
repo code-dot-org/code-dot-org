@@ -48,6 +48,8 @@ import {FacilitatorFeedback} from './workshops/surveys/post/components/Facilitat
 import {Implementation} from './workshops/surveys/post/components/Implementation';
 import {Logistics} from './workshops/surveys/post/components/Logistics';
 import {Other} from './workshops/surveys/post/components/Other';
+import CohortProfile from './workshops/surveys/pre/components/CohortProfile';
+import ReadinessAndExpectations from './workshops/surveys/pre/components/ReadinessAndExpectations';
 import {WorkshopLayout} from './workshops/WorkshopLayout';
 
 export const ROOT_PATH = '/pd/workshop_dashboard';
@@ -59,6 +61,23 @@ const store = createStore(
     mapbox: mapboxReducer,
   })
 );
+
+const preSurveyCategoryChildRoutes = [
+  {
+    label: 'Readiness & Expectations',
+    icon: 'gauge',
+    component: ReadinessAndExpectations,
+    path: 'readiness-and-expectations',
+    breadcrumbs: 'Workshops,Workshop,Surveys,Pre,Readiness and expectations',
+  },
+  {
+    label: 'Cohort Profile',
+    icon: 'users',
+    component: CohortProfile,
+    path: 'cohort-profile',
+    breadcrumbs: 'Workshops,Workshop,Surveys,Pre,Cohort profile',
+  },
+];
 
 const postSurveyCategoryChildRoutes = [
   {
@@ -109,9 +128,16 @@ const surveyTypeChildRoutes = [
   {
     label: 'Pre-workshop survey',
     path: 'pre',
-    component: () => <div>Coming soon!</div>,
+    component: Outlet,
     breadcrumbs: 'Workshops,Workshop,Surveys,Pre',
-    disabled: true,
+    childRoutes: [
+      // this makes "readiness-and-expectations" the default
+      {
+        index: true,
+        component: () => <Navigate to="readiness-and-expectations" replace />,
+      },
+      ...preSurveyCategoryChildRoutes,
+    ],
   },
   {
     label: 'Post-workshop survey',
@@ -156,7 +182,7 @@ const workshopChildRouteConfigs = [
       // this makes "post" the default
       {
         index: true,
-        component: () => <Navigate to="post" replace />,
+        component: () => <Navigate to="pre" replace />,
       },
       ...surveyTypeChildRoutes,
     ],
@@ -197,20 +223,26 @@ const routeConfigs = [
         label,
         path,
       })),
-      surveyTypeOptions: surveyTypeChildRoutes.map(
-        ({label, path, disabled}) => ({
-          text: label,
-          value: `surveys/${path}`,
-          disabled,
-        })
-      ),
-      questionCategoryButtons: postSurveyCategoryChildRoutes.map(
-        ({label, path, icon}) => ({
-          label,
-          value: `surveys/post/${path}`,
-          iconLeft: {iconName: icon},
-        })
-      ),
+      surveyTypeOptions: surveyTypeChildRoutes.map(({label, path}) => ({
+        text: label,
+        value: `surveys/${path}`,
+      })),
+      questionCategoryButtons: {
+        preWorkshopSurvey: preSurveyCategoryChildRoutes.map(
+          ({label, path, icon}) => ({
+            label,
+            value: `surveys/pre/${path}`,
+            iconLeft: {iconName: icon},
+          })
+        ),
+        postWorkshopSurvey: postSurveyCategoryChildRoutes.map(
+          ({label, path, icon}) => ({
+            label,
+            value: `surveys/post/${path}`,
+            iconLeft: {iconName: icon},
+          })
+        ),
+      },
     },
     childRoutes: [
       ...workshopChildRouteConfigs,

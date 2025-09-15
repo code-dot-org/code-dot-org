@@ -19,14 +19,14 @@ const ValidationStatusIcon: React.FunctionComponent<ValidationIconProps> = ({
     const isDuotone = status !== 'pending';
     const names = isDuotone
       ? classNames(moduleStyles.duotone, 'fa-duotone fa-solid')
-      : 'fa-regular';
+      : 'fa-solid';
     switch (status) {
       case 'passed':
         return classNames(names, 'fa-circle-check', moduleStyles.green);
       case 'failed':
         return classNames(names, 'fa-circle-xmark', moduleStyles.red);
       case 'pending':
-        return classNames(names, 'fa-circle', moduleStyles.green);
+        return classNames(names, 'fa-spinner fa-spin', moduleStyles.gray);
       case 'caution':
         return classNames(names, 'fa-circle-minus', moduleStyles.yellow);
       case 'error':

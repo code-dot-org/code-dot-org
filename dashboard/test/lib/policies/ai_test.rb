@@ -162,7 +162,7 @@ class Policies::AiTest < ActiveSupport::TestCase
 
     context 'the unit is an actual unit' do
       context 'the unit name is stable' do
-        let(:unit) {build(:unit, name: unit_name, published_state: 'stable')}
+        let(:unit) {create(:unit, :in_single_unit_course, name: unit_name, published_state: 'stable')}
         it 'returns true' do
           _(ai_differentiation_enabled_for_unit?).must_equal true
         end
@@ -201,7 +201,7 @@ class Policies::AiTest < ActiveSupport::TestCase
     let(:lesson) {build(:lesson, script: unit)}
 
     context 'the unit of the lesson is stable' do
-      let(:unit) {build(:unit, name: unit_name, published_state: 'stable')}
+      let(:unit) {create(:unit, :in_single_unit_course, name: unit_name, published_state: 'stable')}
       it 'returns true' do
         _(ai_differentiation_enabled_for_lesson?).must_equal true
       end
@@ -216,7 +216,7 @@ class Policies::AiTest < ActiveSupport::TestCase
     context 'the lesson belongs to a real unit we are specifically allowing' do
       ['csd3-2023'].each do |real_unit_name|
         context(real_unit_name) do
-          let(:unit) {build(:unit, name: real_unit_name, published_state: 'stable')}
+          let(:unit) {create(:unit, :in_single_unit_course, name: real_unit_name, published_state: 'stable')}
 
           it 'returns true' do
             _(ai_differentiation_enabled_for_lesson?).must_equal true

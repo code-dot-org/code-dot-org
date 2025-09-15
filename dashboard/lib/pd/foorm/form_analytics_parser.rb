@@ -13,6 +13,7 @@ module Pd::Foorm
       form_version
       item_type
       item_name
+      item_category
       item_text
       matrix_item_name
       matrix_item_header

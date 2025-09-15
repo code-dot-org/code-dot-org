@@ -19,3 +19,8 @@ export type ChatButtonProps = {
 };
 
 export type ChatButtonComponent = React.ComponentType<ChatButtonProps>;
+
+export interface ChatButtonAndKey {
+  ChatButton: ChatButtonComponent;
+  key: string;
+}

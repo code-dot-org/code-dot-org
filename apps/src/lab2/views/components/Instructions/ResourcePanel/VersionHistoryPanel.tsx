@@ -1,12 +1,11 @@
 import Alert from '@code-dot-org/component-library/alert';
 import {Button} from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {RadioButton} from '@code-dot-org/component-library/radioButton';
-import Tags from '@code-dot-org/component-library/tags';
 import classNames from 'classnames';
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import {sendCodebridgeAnalyticsEvent} from '@cdo/apps/codebridge/utils/analyticsReporterHelper';
+import {INITIAL_VERSION_ID} from '@cdo/apps/lab2/constants';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import lab2I18n from '@cdo/apps/lab2/locale';
@@ -29,6 +28,8 @@ import {commonI18n} from '@cdo/apps/types/locale';
 import currentLocale from '@cdo/apps/util/currentLocale';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import VersionHistoryRow from './VersionHistoryRow';
+
 import moduleStyles from './version-history-panel.module.scss';
 
 interface VersionHistoryPanelProps {
@@ -38,8 +39,6 @@ interface VersionHistoryPanelProps {
   appName: string;
   levelId: number;
 }
-
-const INITIAL_VERSION_ID = 'initial-version';
 
 const VersionHistoryPanel: React.FunctionComponent<
   VersionHistoryPanelProps
@@ -308,28 +307,6 @@ const VersionHistoryPanel: React.FunctionComponent<
     setSelectedVersion,
   ]);
 
-  const renderLatestTag = () => {
-    return (
-      <Tags
-        tagsList={[
-          {
-            label: commonI18n.current(),
-            icon: {
-              iconName: 'check',
-              iconStyle: 'regular',
-              title: 'check',
-              placement: 'left',
-            },
-            tooltipContent: commonI18n.current(),
-            tooltipId: 'current-version-tag',
-            ariaLabel: commonI18n.current(),
-          },
-        ]}
-        size="s"
-      />
-    );
-  };
-
   const showList = listLoaded && !listLoading && !listLoadError;
 
   return (
@@ -357,31 +334,23 @@ const VersionHistoryPanel: React.FunctionComponent<
         <>
           <div className={moduleStyles.list}>
             {versionList.map(version => (
-              <div id={version.versionId} key={version.versionId}>
-                <RadioButton
-                  name={version.versionId}
-                  value={version.versionId}
-                  label={parseDate(version.lastModified)}
-                  onChange={onVersionChange}
-                  checked={selectedVersion === version.versionId}
-                  className={moduleStyles.row}
-                >
-                  {version.isLatest && renderLatestTag()}
-                </RadioButton>
-              </div>
-            ))}
-            <div id={INITIAL_VERSION_ID}>
-              <RadioButton
-                name={INITIAL_VERSION_ID}
-                value={INITIAL_VERSION_ID}
-                label={lab2I18n.initialVersion()}
+              <VersionHistoryRow
+                key={version.versionId}
+                versionId={version.versionId}
+                label={parseDate(version.lastModified)}
+                comment={version.comment}
+                isLatest={version.isLatest}
+                isSelected={selectedVersion === version.versionId}
                 onChange={onVersionChange}
-                checked={selectedVersion === INITIAL_VERSION_ID}
-                className={moduleStyles.row}
-              >
-                {latestVersion === INITIAL_VERSION_ID && renderLatestTag()}
-              </RadioButton>
-            </div>
+              />
+            ))}
+            <VersionHistoryRow
+              versionId={INITIAL_VERSION_ID}
+              label={lab2I18n.initialVersion()}
+              isLatest={latestVersion === INITIAL_VERSION_ID}
+              isSelected={selectedVersion === INITIAL_VERSION_ID}
+              onChange={onVersionChange}
+            />
           </div>
           <div className={moduleStyles.footer}>
             {versionLoadError && (

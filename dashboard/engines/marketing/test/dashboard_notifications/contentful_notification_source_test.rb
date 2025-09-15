@@ -14,6 +14,7 @@ class ContentfulNotificationSourceTest < ActionDispatch::IntegrationTest
   let(:later) {2.days.from_now}
   let(:user) {create(:user)}
   let(:other_user) {create(:user)}
+  let(:marketing_contentful_client_mock) {stub(:marketing_contentful_client)}
   let!(:contentful_source) {Marketing::DashboardNotifications::ContentfulNotificationSource.new}
 
   let(:entry_1) do
@@ -51,6 +52,7 @@ class ContentfulNotificationSourceTest < ActionDispatch::IntegrationTest
   end
 
   before do
+    Marketing::ContentfulClient.stubs(:instance).returns(marketing_contentful_client_mock)
     CDO.shared_cache.clear
     sign_in user
   end
@@ -58,7 +60,7 @@ class ContentfulNotificationSourceTest < ActionDispatch::IntegrationTest
   describe 'get_contentful_notifications_for_user' do
     context 'with contentful data' do
       it 'returns user external notifications' do
-        Marketing::ContentfulClient.any_instance.expects(:entries).with('en-US', 'dashboard-notification').returns([entry_1, entry_2]).once
+        Marketing::ContentfulClient.expects(:entries).with('en-US', 'dashboard-notification').returns([entry_1, entry_2]).once
 
         results = contentful_source.get(user_id: user.id, locale: 'en-US')
 
@@ -79,7 +81,7 @@ class ContentfulNotificationSourceTest < ActionDispatch::IntegrationTest
 
       it 'only returns active external notifications' do
         create_external_notification(user, external_id: entry_id_2, is_dismissed: true)
-        Marketing::ContentfulClient.any_instance.expects(:entries).with('other-locale', 'dashboard-notification').returns([entry_1, entry_2]).once
+        Marketing::ContentfulClient.expects(:entries).with('other-locale', 'dashboard-notification').returns([entry_1, entry_2]).once
 
         results = contentful_source.get(user_id: user.id, locale: 'other-locale')
 
@@ -88,7 +90,7 @@ class ContentfulNotificationSourceTest < ActionDispatch::IntegrationTest
       end
 
       it 'adds read_at timestamps' do
-        Marketing::ContentfulClient.any_instance.expects(:entries).with('en-US', 'dashboard-notification').returns([entry_1, entry_2]).once
+        Marketing::ContentfulClient.expects(:entries).with('en-US', 'dashboard-notification').returns([entry_1, entry_2]).once
 
         create_external_notification(user, external_id: entry_id_1, read_at: tomorrow)
         create_external_notification(user, external_id: entry_id_2, read_at: later)
@@ -117,7 +119,7 @@ class ContentfulNotificationSourceTest < ActionDispatch::IntegrationTest
           },
           )
 
-        Marketing::ContentfulClient.any_instance.expects(:entries).with('en-US', 'dashboard-notification').returns([expired_entry]).once
+        Marketing::ContentfulClient.expects(:entries).with('en-US', 'dashboard-notification').returns([expired_entry]).once
 
         results = contentful_source.get(user_id: user.id, locale: 'en-US')
 
@@ -125,7 +127,7 @@ class ContentfulNotificationSourceTest < ActionDispatch::IntegrationTest
       end
 
       it 'caches contentful entries for 2 hours per locale' do
-        Marketing::ContentfulClient.any_instance.expects(:entries).with('en-US', 'dashboard-notification').returns([entry_1]).once
+        Marketing::ContentfulClient.expects(:entries).with('en-US', 'dashboard-notification').returns([entry_1]).once
 
         results1 = contentful_source.get(user_id: user.id, locale: 'en-US')
         _(results1.length).must_equal 1
@@ -135,8 +137,8 @@ class ContentfulNotificationSourceTest < ActionDispatch::IntegrationTest
       end
 
       it 'uses separate cache keys for different locales' do
-        Marketing::ContentfulClient.any_instance.expects(:entries).with('en-US', 'dashboard-notification').returns([entry_1]).once
-        Marketing::ContentfulClient.any_instance.expects(:entries).with('es-ES', 'dashboard-notification').returns([entry_2]).once
+        Marketing::ContentfulClient.expects(:entries).with('en-US', 'dashboard-notification').returns([entry_1]).once
+        Marketing::ContentfulClient.expects(:entries).with('es-ES', 'dashboard-notification').returns([entry_2]).once
 
         results_en = contentful_source.get(user_id: user.id, locale: 'en-US')
         results_es = contentful_source.get(user_id: user.id, locale: 'es-ES')
@@ -148,12 +150,12 @@ class ContentfulNotificationSourceTest < ActionDispatch::IntegrationTest
       end
 
       it 'cache expires after 1 hour' do
-        Marketing::ContentfulClient.any_instance.expects(:entries).with('en-US', 'dashboard-notification').returns([entry_1]).once
+        Marketing::ContentfulClient.expects(:entries).with('en-US', 'dashboard-notification').returns([entry_1]).once
         results1 = contentful_source.get(user_id: user.id, locale: 'en-US')
         _(results1.length).must_equal 1
 
         travel 2.hours do
-          Marketing::ContentfulClient.any_instance.expects(:entries).with('en-US', 'dashboard-notification').returns([entry_2]).once
+          Marketing::ContentfulClient.expects(:entries).with('en-US', 'dashboard-notification').returns([entry_2]).once
           results2 = contentful_source.get(user_id: user.id, locale: 'en-US')
           _(results2.length).must_equal 1
           _(results2[0][:external_id]).must_equal entry_id_2

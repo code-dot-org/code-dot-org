@@ -80,5 +80,9 @@ export interface SurveyCategorySelectionProps {
 }
 
 export type WorkshopLayoutProps = WorkshopTabsProps &
-  SurveyTypeSelectionProps &
-  SurveyCategorySelectionProps;
+  SurveyTypeSelectionProps & {
+    questionCategoryButtons: {
+      preWorkshopSurvey: SegmentedButtonsProps['buttons'];
+      postWorkshopSurvey: SegmentedButtonsProps['buttons'];
+    };
+  };

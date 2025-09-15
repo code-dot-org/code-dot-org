@@ -353,6 +353,8 @@ export interface SurveyCategories {
   logistics?: SurveyCategory;
   other?: SurveyCategory;
   facilitators?: Record<string, FacilitatorCategory>;
+  readiness_expectations?: SurveyCategory;
+  cohort_profile?: SurveyCategory;
 }
 
 export interface SurveyCategory {

@@ -1,8 +1,8 @@
+include FactoryBot::Syntax::Methods
+
 require 'json'
 
 class TestSection
-  include FactoryBot::Syntax::Methods
-
   @@rng = nil
 
   # Returns a seeded random number generator for consistent test data
