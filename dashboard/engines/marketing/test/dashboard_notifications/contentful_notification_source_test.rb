@@ -15,7 +15,7 @@ class ContentfulNotificationSourceTest < ActionDispatch::IntegrationTest
   let(:user) {create(:user)}
   let(:other_user) {create(:user)}
   let(:marketing_contentful_client_mock) {stub(:marketing_contentful_client)}
-  let!(:contentful_source) {Marketing::DashboardNotifications::ContentfulNotificationSource.new(Marketing::StubbedContentfulClient.instance)}
+  let!(:contentful_source) {Marketing::DashboardNotifications::ContentfulNotificationSource.new(Marketing::ContentfulClient.instance)}
 
   let(:entry_1) do
     TestEntry.new(

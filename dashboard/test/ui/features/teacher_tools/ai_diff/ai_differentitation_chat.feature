@@ -158,7 +158,7 @@ Feature: Send and receive messages in the AI differentiation chat
     And I click selector "a:contains('Skip the tutorial')"
 
     #Now we see the regular AI diff chat (with thread sidebar)
-    And I wait until element "input[value='Give me an example']" is visible
+    And I wait until element "button:contains(Suggest prompts)" is visible
     And I click selector "#ui-notificationsButton"
     And I wait until element "p:contains(Test notification no. 1)" is visible
     And element "p:contains(The deepest parts of the ocean are totally unknown to us)" is visible
