@@ -6,6 +6,7 @@
   min-width: 190px;
   max-width: calc(100vw - 270px);
   justify-content: end;
+  gap: 2px;
 }
 
 .button {
@@ -39,7 +40,7 @@
     overflow: hidden;
     flex-shrink: 1;
 
-    html[dir="rtl"] & {
+    html[dir='rtl'] & {
       padding: 0 2px 0 6px;
     }
 
@@ -54,7 +55,7 @@
       overflow: hidden;
       text-overflow: ellipsis;
 
-      html[dir="rtl"] & {
+      html[dir='rtl'] & {
         padding: 0 8px 0 16px;
       }
 

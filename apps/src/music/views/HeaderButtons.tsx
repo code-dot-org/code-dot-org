@@ -247,18 +247,14 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
         </>
       )}
       {skipUrl && (
-        <button
+        <Button
+          text={commonI18n.skipToProject()}
+          size="xs"
           onClick={onClickSkip}
-          type="button"
-          className={classNames(moduleStyles.button, moduleStyles.buttonSkip)}
-        >
-          <span>{commonI18n.skipToProject()}</span>
-          <FontAwesome
-            title={commonI18n.skipToProject()}
-            icon="arrow-right"
-            className={'icon'}
-          />
-        </button>
+          type="tertiary"
+          color={'black'}
+          iconRight={{iconStyle: 'solid', iconName: 'arrow-right'}}
+        />
       )}
     </div>
   );
