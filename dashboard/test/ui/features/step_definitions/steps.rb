@@ -1624,9 +1624,8 @@ When /^I set up code review for teacher "([^"]*)" with (\d+(?:\.\d*)?) students 
   steps <<~GHERKIN
     Given I create a teacher named "#{teacher_name}"
     And I give user "#{teacher_name}" authorized teacher permission
-    And I create a new student section assigned to course "ui-test-csa-family-script" unit 1
+    And I create a new student section assigned to course "ui-test-csa-family-script" unit 1 and save the section
     And I sign in as "#{teacher_name}" and go home
-    And I save the student section url
     And I save the section id from row 0 of the section table
     #{add_student_step_list.join("\n")}
     And I wait to see ".alert-success"
