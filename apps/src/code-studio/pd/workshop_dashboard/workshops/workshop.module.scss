@@ -406,6 +406,16 @@ div.card {
           background: var(--background-warning-light);
         }
       }
+
+      &.flexTextCardContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        .textCard {
+          flex: 0;
+        }
+      }
     }
 
     // Medium Screens: Switch to 2 columns
@@ -452,6 +462,12 @@ div.card {
 .customDialog {
   border-radius: 4px;
   padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+
+  button {
+    align-self: flex-start;
+  }
 
   .customDialogContent {
     display: flex;
@@ -469,6 +485,10 @@ div.card {
           padding-right: 0;
         }
       }
+    }
+
+    .customDialogError {
+      margin-bottom: 1rem;
     }
   }
 }

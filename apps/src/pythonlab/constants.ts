@@ -71,4 +71,6 @@ export const STANDALONE_NEIGHBORHOOD_PROJECT: ProjectSources = {
   },
 };
 
-export const PYTHONLAB_VALID_FILE_TYPES = ['py', 'csv', 'txt'];
+export const PYTHONLAB_EDITABLE_FILE_TYPES = ['py', 'csv', 'txt'];
+
+export const PYTHONLAB_SUPPORTED_FILE_TYPES = PYTHONLAB_EDITABLE_FILE_TYPES;

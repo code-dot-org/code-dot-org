@@ -1,15 +1,18 @@
 import {Box} from '@mui/material';
 import React, {useMemo} from 'react';
 
-import {
-  isQuestionType,
-  SurveyQuestions,
-} from '../../../../WorkshopFormTemplate/types';
+import {MinSurveyResponseCount} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
+
+import {SurveyQuestions} from '../../../types';
 import {useWorkshopContext} from '../../../WorkshopLayout';
 import {FreeResponseCard} from '../../components/FreeResponseCard';
 import {ScoreCard} from '../../components/ScoreCard';
-import {LIKERT_QUESTION_FOOTER, MIN_RESPONSE_COUNT} from '../../constants';
-import {getQuestionDescription, prepLikertBreakdown} from '../../helpers';
+import {LIKERT_QUESTION_FOOTER} from '../../constants';
+import {
+  getQuestionDescription,
+  isQuestionType,
+  prepLikertBreakdown,
+} from '../../utils';
 
 import styles from '../../../workshop.module.scss';
 
@@ -48,7 +51,7 @@ export const Logistics = () => {
               footer={LIKERT_QUESTION_FOOTER}
               score={question.results.weighted_score}
               responseCount={question.results.total_responses}
-              minResponseCount={MIN_RESPONSE_COUNT}
+              minResponseCount={MinSurveyResponseCount}
               breakdown={prepLikertBreakdown(question.results.breakdown)}
             />
           ) : null

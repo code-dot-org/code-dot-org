@@ -11,14 +11,17 @@ import React, {useEffect} from 'react';
 
 import {HTMLPreview} from '@cdo/apps/codebridge/FilePreview/HTMLPreview';
 import {useVerticalLayout} from '@cdo/apps/lab2/hooks/useVerticalLayout';
+import {isProjectTemplateLevel} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
+import ProjectTemplateWorkspaceIconV2 from '@cdo/apps/templates/ProjectTemplateWorkspaceIconV2';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import weblab2I18n from '@cdo/apps/weblab2/locale';
 
 import {setViewMode} from '../redux';
 import {ViewMode} from '../types';
 
-import moduleStyles from '@cdo/apps/lab2/views/components/layout/layout.module.scss';
+import lab2Styles from '@cdo/apps/lab2/views/components/layout/layout.module.scss';
+import weblab2Styles from '@cdo/apps/weblab2/layout/vertical-layout.module.scss';
 
 const MIN_INFO_PANEL_WIDTH = 150;
 const INITIAL_INFO_PANEL_WIDTH = 300;
@@ -33,6 +36,7 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
   isWidgetView,
 }) => {
   const viewMode = useAppSelector(state => state.weblab2.viewMode);
+  const projectTemplateLevel = useAppSelector(isProjectTemplateLevel);
   const dispatch = useAppDispatch();
 
   const infoPanelInitialWidth = isProjectLevel
@@ -129,16 +133,16 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
     <div
       className={
         isProjectLevel
-          ? moduleStyles.containerWithFooter
-          : moduleStyles.defaultContainer
+          ? lab2Styles.containerWithFooter
+          : lab2Styles.defaultContainer
       }
     >
-      <div className={moduleStyles.layoutContainer}>
+      <div className={lab2Styles.layoutContainer}>
         {!isProjectLevel && (
           <>
             <InfoPanel
               style={{width: leftPanelWidth}}
-              className={classNames(moduleStyles.flexShrink0, panelClassName)}
+              className={classNames(lab2Styles.flexShrink0, panelClassName)}
             />
             <ResizeBar
               isVertical={true}
@@ -149,28 +153,34 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
         )}
         <div
           className={classNames(
-            moduleStyles.flexColumn,
-            moduleStyles.shrinkAndGrow
+            lab2Styles.flexColumn,
+            lab2Styles.shrinkAndGrow
           )}
         >
-          <div className={moduleStyles.headerContainer}>
+          <div className={weblab2Styles.headerContainer}>
             {isWidgetView ? (
               <span />
             ) : (
               <SegmentedButtons {...viewModeButtonsProps} />
             )}
-            <OverlineTwoText noMargin>
-              {weblab2I18n.workspace()}
-            </OverlineTwoText>
+            <div className={weblab2Styles.centerHeaderContent}>
+              <OverlineTwoText
+                className={weblab2Styles.centerHeaderContentText}
+                noMargin
+              >
+                {weblab2I18n.workspace()}
+              </OverlineTwoText>
+              {projectTemplateLevel && <ProjectTemplateWorkspaceIconV2 />}
+            </div>
             <HeaderButtons />
           </div>
-          <div className={moduleStyles.editorAndPreviewContainer}>
+          <div className={weblab2Styles.editorAndPreviewContainer}>
             {!isWidgetView && viewMode !== ViewMode.PREVIEW && (
               <>
                 <Workspace
                   style={{width: middlePanelWidth}}
                   className={classNames(
-                    moduleStyles.shrinkAndGrow,
+                    lab2Styles.shrinkAndGrow,
                     panelClassName
                   )}
                   hideHeaders
@@ -185,10 +195,7 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
             {viewMode !== ViewMode.CODE && (
               <div
                 style={{width: rightPanelWidth}}
-                className={classNames(
-                  moduleStyles.shrinkAndGrow,
-                  panelClassName
-                )}
+                className={classNames(lab2Styles.shrinkAndGrow, panelClassName)}
               >
                 <HTMLPreview />
               </div>
@@ -196,7 +203,7 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
           </div>
         </div>
       </div>
-      {isProjectLevel && <div className={moduleStyles.footerArea} />}
+      {isProjectLevel && <div className={lab2Styles.footerArea} />}
     </div>
   );
 };

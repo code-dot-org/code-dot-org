@@ -100,22 +100,7 @@ $url-bar-content-height: calc($url-bar-height - $vertical-padding-offset);
   
   // Target all buttons within segmented buttons container
   :global(button) {
-    border: 1px solid var(--borders-neutral-strong) !important;
     height: $url-bar-height; // Match the input bar height including borders
     box-sizing: border-box;
-    
-    &:hover {
-      // Using secondary instead of tertiary because the preview header already uses background-neutral-tertiary color.
-      background-color: var(--background-neutral-secondary) !important;
-    }
-  }
-  
-  // Override for selected buttons to keep their original styling
-  :global(button[class*="selectedSegmentedButton"]) {
-    border: 1px solid transparent !important;
-    
-    &:hover {
-      background-color: var(--background-brand-teal-primary) !important;
-    }
   }
 }

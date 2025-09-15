@@ -6,6 +6,7 @@ import TextField from '@code-dot-org/component-library/textField';
 import classNames from 'classnames';
 import React from 'react';
 
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import weblab2I18n from '@cdo/apps/weblab2/locale';
 
 import {PreviewViewMode} from './constants';
@@ -21,6 +22,7 @@ interface HTMLPreviewHeaderProps {
   onNavigateBack: () => void;
   onNavigateForward: () => void;
   onRefresh: () => void;
+  onToggleFullScreen: () => void;
   previewViewMode: PreviewViewMode;
   setPreviewViewMode: (previewViewMode: PreviewViewMode) => void;
 }
@@ -34,15 +36,18 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
   onNavigateBack,
   onNavigateForward,
   onRefresh,
+  onToggleFullScreen,
   previewViewMode,
   setPreviewViewMode,
 }) => {
+  const isFullScreenView = useAppSelector(state => state.lab.isFullScreenView);
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter') {
       onSubmit(value);
     }
   };
   const previewViewModeButtonsProps: SegmentedButtonsProps = {
+    color: 'strong',
     buttons: [
       {
         label: weblab2I18n.desktop(),
@@ -129,6 +134,37 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
         {...previewViewModeButtonsProps}
         className={moduleStyles.customSegmentedButtons}
       />
+      <ToggleFullScreenButton
+        isFullScreenView={isFullScreenView}
+        onToggleFullScreen={onToggleFullScreen}
+      />
     </div>
+  );
+};
+
+interface ToggleFullScreenButtonProps {
+  isFullScreenView: boolean | undefined;
+  onToggleFullScreen: () => void;
+}
+
+const ToggleFullScreenButton: React.FC<ToggleFullScreenButtonProps> = ({
+  isFullScreenView,
+  onToggleFullScreen,
+}) => {
+  return (
+    <Button
+      onClick={onToggleFullScreen}
+      aria-label={
+        isFullScreenView
+          ? weblab2I18n.minimizePreview()
+          : weblab2I18n.maximizePreview()
+      }
+      size="xs"
+      type="tertiary"
+      color="gray"
+      isIconOnly={true}
+      icon={{iconName: isFullScreenView ? 'compress' : 'expand'}}
+      className={moduleStyles.urlButton}
+    />
   );
 };

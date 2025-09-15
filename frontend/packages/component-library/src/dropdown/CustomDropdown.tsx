@@ -36,6 +36,9 @@ export interface CustomDropdownOption {
   isOptionDisabled?: boolean;
 }
 
+export type CustomDropdownMenuPlacement = 'left' | 'right';
+export type CustomDropdownMenuVerticalPlacement = 'top' | 'bottom';
+
 export interface CustomDropdownProps extends AriaAttributes {
   /** CustomDropdown name.
    * Name of the dropdown, used as unique identifier of the dropdown's HTML element */
@@ -47,7 +50,9 @@ export interface CustomDropdownProps extends AriaAttributes {
   /** CustomDropdown size */
   size: ComponentSizeXSToL;
   /** CustomDropdown menu placement */
-  menuPlacement?: 'left' | 'right';
+  menuPlacement?: CustomDropdownMenuPlacement;
+  /** CustomDropdown vertical menu placement */
+  menuVerticalPlacement?: CustomDropdownMenuVerticalPlacement;
   /** CustomDropdown disabled state */
   disabled?: boolean;
   /** CustomDropdown readOnly state */
@@ -105,6 +110,7 @@ const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
   color = dropdownColors.black,
   size = 'm',
   menuPlacement = 'left',
+  menuVerticalPlacement = 'bottom',
   useDSCOButtonAsTrigger = false,
   triggerButtonProps = {},
   helperMessage,
@@ -192,6 +198,9 @@ const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
         },
         moduleStyles.dropdownContainer,
         moduleStyles[`dropdownContainer-${menuPlacement}-menuPlacement`],
+        moduleStyles[
+          `dropdownContainer-${menuVerticalPlacement}-menuVerticalPlacement`
+        ],
         moduleStyles[`dropdownContainer-${color}`],
         moduleStyles[`dropdownContainer-${size}`],
         className,

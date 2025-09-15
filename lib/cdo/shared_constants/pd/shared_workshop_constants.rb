@@ -476,5 +476,7 @@ module Pd
         fields: COMMON_COURSE_FIELDS.merge(subject: {required: true, stateKey: 'subject', label: 'Subject', options: SUBJECTS[COURSE_CSA].map {|s| {value: s, label: s}}})
       }
     ].freeze
+
+    MIN_SURVEY_RESPONSE_COUNT = 5
   end
 end

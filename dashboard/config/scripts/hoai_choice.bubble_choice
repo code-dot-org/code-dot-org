@@ -1,0 +1,9 @@
+name 'HoAI_choice'
+display_name 'Challenge'
+description 'You get to choose the order you work on each part. After you finish one, come back here to pick up the next part.'
+
+sublevels
+level 'musiclab_intro'
+level 'dancelab_intro'
+level 'music-lab-loops-explore-practice-e_v2'
+uses_lab2

@@ -58,6 +58,7 @@ require 'testing/transactional_test_case'
 require 'testing/spec_syntax'
 require 'testing/capture_queries'
 require 'testing/rspec_mocks'
+require 'testing/vcr_cassettes'
 
 require 'parallel_tests/test/runtime_logger'
 
@@ -650,7 +651,7 @@ def json_response
 end
 
 # helper method for mailers to test whether urls in an email are partial paths
-# first parameter is an email, ex: Pd::WorkshopMailer.detail_change_notification(enrollment)
+# first parameter is an email, ex: Pd::WorkshopMailer.organizer_detail_change_notification(enrollment)
 # allowed_urls is an optional array of strings that are not complete urls to allow anyway
 def links_are_complete_urls?(email, allowed_urls: nil)
   html = Nokogiri::HTML(email.body.to_s)

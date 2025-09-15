@@ -21,22 +21,11 @@
     overflow: hidden;
 
     .indicator {
-      background: var(--background-brand-teal-primary);
       position: absolute;
       left: 0;
       top: 0;
       bottom: 0;
       transition: width 0.6s ease-out;
-
-      &.neutral {
-        background: var(--background-neutral-septenary);
-      }
-      &.agree {
-        background: var(--background-success-primary);
-      }
-      &.disagree {
-        background: var(--background-error-primary);
-      }
     }
   }
 }

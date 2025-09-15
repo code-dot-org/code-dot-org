@@ -1,10 +1,10 @@
 Feature: Playing multi levels 3
 
   Scenario: Rendering in another language
-    Given I am on "http://studio.code.org/courses/course1/units/1/lessons/2/levels/2/lang/es-MX"
+    Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/9/levels/1/lang/es-MX"
     Then I wait to see ".submitButton"
     And element ".submitButton" is visible
-    Then element ".multi h1" has "es-MX" text from key "data.dsls.2-3 Algorithms Multi 1.title"
+    Then element ".multi h1" has "es-MX" text from key "data.dsls.K-1 Happy Maps Multi 1.title"
 
   Scenario: Does not scroll horizontally
     Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/9/levels/2?noautoplay=true"

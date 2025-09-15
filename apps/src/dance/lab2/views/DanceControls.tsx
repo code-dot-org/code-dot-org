@@ -8,6 +8,7 @@ import moduleStyles from './dance-view.module.scss';
 interface DanceControlsProps {
   onRun: () => void;
   onReset: () => void;
+  disabled?: boolean;
 }
 
 /**
@@ -17,11 +18,13 @@ interface DanceControlsProps {
 const DanceControls: React.FunctionComponent<DanceControlsProps> = ({
   onRun,
   onReset,
+  disabled,
 }) => {
   const isRunning = useAppSelector(state => state.dance.isRunning);
-  const disabled = useAppSelector(
-    state => state.dance.isLoading || state.dance.runIsStarting
-  );
+  const isDisabled =
+    useAppSelector(
+      state => state.dance.isLoading || state.dance.runIsStarting
+    ) || disabled;
 
   const props = isRunning
     ? {
@@ -33,7 +36,7 @@ const DanceControls: React.FunctionComponent<DanceControlsProps> = ({
 
   return (
     <div className={moduleStyles.controlsContainer}>
-      <Button {...props} disabled={disabled} />
+      <Button {...props} disabled={isDisabled} />
     </div>
   );
 };

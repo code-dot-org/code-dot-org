@@ -10,30 +10,34 @@ import React, {useEffect, useState} from 'react';
 import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
 import {LabProps, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 
+import {AiTutorContext} from '../aiTutor/types';
 import {useSource} from '../codebridge/hooks/useSource';
 import {useAppDispatch, useAppSelector} from '../util/reduxHooks';
 
+import {WEBLAB2_EDITABLE_FILE_TYPES} from './constants';
+import {getAiTutorContextPromise} from './helpers/aiTutorHelper';
+import FullScreenView from './layout/FullScreenView';
 import ShareView from './layout/ShareView';
 import VerticalLayout from './layout/VerticalLayout';
 import {setViewMode} from './redux';
 import {Weblab2LevelProperties, ViewMode} from './types';
 
 import moduleStyles from './styles/weblab2-view.module.scss';
-
-const weblabLangMapping: {[key: string]: LanguageSupport} = {
+const weblab2LangMapping: {[key: string]: LanguageSupport} = {
   html: html(),
   css: css(),
   js: javascript(),
 };
 
 const defaultConfig: ConfigType = {
-  languageMapping: weblabLangMapping,
-  editableFileTypes: ['html', 'css', 'js'],
+  languageMapping: weblab2LangMapping,
+  editableFileTypes: WEBLAB2_EDITABLE_FILE_TYPES,
   activeLayout: 'vertical',
   layoutComponents: {
     vertical: VerticalLayout,
     widget: VerticalLayout,
     share: ShareView,
+    fullScreen: FullScreenView,
   },
 };
 
@@ -64,6 +68,13 @@ const Weblab2View: React.FC<
   LabProps<Weblab2LevelProperties, ProjectSources>
 > = ({levelProperties, initialSources}) => {
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
+  const [aiTutorContextPromise, setAiTutorContextPromise] =
+    useState<Promise<AiTutorContext>>();
+  const sources = useAppSelector(
+    state =>
+      state.lab2Project.projectSources?.source as MultiFileSource | undefined
+  );
+
   const {startSources} = useSource(
     defaultProject,
     levelProperties,
@@ -73,6 +84,16 @@ const Weblab2View: React.FC<
   const hasSource = useAppSelector(
     state => !!state.lab2Project.projectSources?.source
   );
+
+  // Note: this causes Web Lab 2 to re-render when sources change.
+  // Unfortunately, the way AI tutor is set up right now requires passing in a context
+  // rather than a callback for the context. In the future, we should consider refactoring AI
+  // Tutor so we don't have to re-render the entire lab when sources change (this is also the case for Python Lab).
+  useEffect(() => {
+    setAiTutorContextPromise(
+      getAiTutorContextPromise(sources, levelProperties.longInstructions)
+    );
+  }, [sources, levelProperties.longInstructions]);
 
   // Since there's no run button in Weblab2, set it to true by default
   // to enable the Submit button on edit on submittable levels.
@@ -98,6 +119,8 @@ const Weblab2View: React.FC<
           setConfig={setConfig}
           startSources={startSources}
           levelProperties={levelProperties}
+          aiTutorContextPromise={aiTutorContextPromise}
+          aiTutorSystemPromptName={'aif2-web-produce'}
         />
       )}
     </div>

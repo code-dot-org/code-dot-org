@@ -153,8 +153,13 @@ const Timeline: React.FunctionComponent<TimelineProps> = ({
       }
     }
     if (event.key === 'Tab') {
-      // If tab is pressed, we know they are moving on to the next tabbable object
-      (event.currentTarget as HTMLElement).blur();
+      if (event.shiftKey) {
+        // Allows browser to handle Shift + Tab as expected
+        return;
+      } else {
+        // If (only) Tab is pressed, they are moving to the next focusable item
+        (event.currentTarget as HTMLElement).blur();
+      }
     }
   };
 

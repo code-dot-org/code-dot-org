@@ -95,7 +95,7 @@ describe('AiDiffNotificationList', () => {
     render(<AiDiffNotificationList />);
 
     await waitFor(() => {
-      screen.getByText('no notifications');
+      screen.getByText(/You don't have any new notifications/);
     });
 
     expect(screen.queryByText('Loading...')).not.toBeInTheDocument();
@@ -122,7 +122,7 @@ describe('AiDiffNotificationList', () => {
       render(<AiDiffNotificationList />);
 
       await waitFor(() => {
-        screen.getByText('no notifications');
+        screen.getByText(/You don't have any new notifications/);
       });
     });
   });
