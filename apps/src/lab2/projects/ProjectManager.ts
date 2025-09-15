@@ -339,6 +339,10 @@ export default class ProjectManager {
     this.saveStartListeners.push(listener);
   }
 
+  getCurrentVersionId(): string | null {
+    return this.sourcesStore.getCurrentVersionId();
+  }
+
   isForceReloading(): boolean {
     return this.forceReloading;
   }

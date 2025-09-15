@@ -97,4 +97,8 @@ export class SourcesStore {
     // (the last new version time plus the interval is greater than the current time).
     return this.lastNewVersionTime + this.newVersionInterval > Date.now();
   }
+
+  getCurrentVersionId(): string | null {
+    return this.currentVersionId;
+  }
 }

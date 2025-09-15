@@ -315,48 +315,75 @@ const VersionHistoryPanel: React.FunctionComponent<
   ]);
 
   const onPublishVersion = useCallback(async () => {
-    console.log('publish');
+    console.log('lastestVersion', latestVersion);
     // Save project
     if (projectSources) {
+      const projectManager = Lab2Registry.getInstance().getProjectManager();
+      if (!projectManager) {
+        console.error('Project manager not available');
+        return;
+      }
+
+      // Trigger the save with force new version
       dispatch(setAndSaveProjectSources(projectSources, true, true));
-      dispatch(setViewingOldVersion(false));
-    }
-    // Save the commit description to the latest version before forcing a new version row.
-    const payload = {
-      storage_id: channelId,
-      version_id: latestVersion,
-      comment: commitDescription,
-    };
 
-    try {
-      await HttpClient.post('/project_commits', JSON.stringify(payload), true, {
-        'Content-Type': 'application/json; charset=UTF-8',
-      });
+      // Wait for the save to complete and get the new version ID
+      const waitForNewVersionId = async (
+        retries = 10
+      ): Promise<string | null> => {
+        for (let i = 0; i < retries; i++) {
+          console.log('waiting for new version id', i);
+          await new Promise(resolve => setTimeout(resolve, 100)); // Wait 100ms
+          const currentVersionId = projectManager.getCurrentVersionId();
+          if (currentVersionId && currentVersionId !== latestVersion) {
+            return currentVersionId;
+          }
+        }
+        return null;
+      };
 
-      // Update the local version list to show the new comment without refetching
-      setVersionList(prevVersions =>
-        prevVersions.map(version =>
-          version.versionId === latestVersion
-            ? {...version, comment: commitDescription}
-            : version
-        )
-      );
+      try {
+        const newVersionId = await waitForNewVersionId();
 
-      // Clear the commit description text area.
-      setCommitDescription('');
-    } catch (error) {
-      console.error('Failed to save commit comment:', error);
-      // If saving the comment fails, fall back to refetching the version list
-      // to ensure UI state is consistent with backend
-      loadVersionList(false);
+        if (newVersionId && commitDescription.trim()) {
+          const payload = {
+            storage_id: channelId,
+            version_id: newVersionId,
+            comment: commitDescription,
+          };
+
+          try {
+            await HttpClient.post(
+              '/project_commits',
+              JSON.stringify(payload),
+              true,
+              {
+                'Content-Type': 'application/json; charset=UTF-8',
+              }
+            );
+
+            // Clear the commit description text area.
+            setCommitDescription('');
+          } catch (error) {
+            console.error('Failed to save commit comment:', error);
+            // If saving the comment fails, fall back to refetching the version list
+            // to ensure UI state is consistent with backend
+          }
+        }
+
+        successfulRestoreCleanUp(projectSources);
+      } catch (error) {
+        console.error('Failed to get new version ID after save:', error);
+        successfulRestoreCleanUp(projectSources);
+      }
     }
   }, [
     projectSources,
+    dispatch,
     channelId,
     latestVersion,
     commitDescription,
-    dispatch,
-    loadVersionList,
+    successfulRestoreCleanUp,
   ]);
 
   const showList = listLoaded && !listLoading && !listLoadError;
