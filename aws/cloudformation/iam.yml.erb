@@ -365,9 +365,17 @@ roles = {
     RoleName: 'ProductManager_FullAccess',
     GoogleIdsSSMParameter: 'ProductGoogleIDs',
     ManagedPolicyArns: [
+      'arn:aws:iam::aws:policy/ReadOnlyAccess',
       'arn:aws:iam::aws:policy/AWSBillingReadOnlyAccess',
       '!Ref BedrockKnowledgeBaseInvocationPolicy',
       '!Ref CloudwatchDashboardViewerPolicy',
+      '!Ref PromptLibraryS3ReadWritePolicy'
+    ]
+  },
+  CurriculumFullAccessRole: {
+    RoleName: 'Curriculum_FullAccess',
+    ManagedPolicyArns: [
+      'arn:aws:iam::aws:policy/ReadOnlyAccess',
       '!Ref PromptLibraryS3ReadWritePolicy'
     ]
   }
