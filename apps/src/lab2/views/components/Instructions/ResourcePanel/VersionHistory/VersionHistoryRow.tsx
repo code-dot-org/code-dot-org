@@ -9,7 +9,7 @@ import {INITIAL_VERSION_ID} from '@cdo/apps/lab2/constants';
 import lab2I18n from '@cdo/apps/lab2/locale';
 import {commonI18n} from '@cdo/apps/types/locale';
 
-import moduleStyles from './version-history-panel.module.scss';
+import moduleStyles from './version-history-row.module.scss';
 
 interface VersionHistoryRowProps {
   versionId: string;

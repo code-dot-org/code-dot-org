@@ -11,7 +11,7 @@ import {commonI18n} from '@cdo/apps/types/locale';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import moduleStyles from './version-history-panel.module.scss';
+import moduleStyles from './publish-version-panel.module.scss';
 
 interface PublishVersionPanelProps {
   projectSources: ProjectSources | undefined;

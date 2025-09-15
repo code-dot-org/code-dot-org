@@ -25,7 +25,7 @@ import CopyrightButton from './CopyrightButton';
 import ResourcePanelExtraLinks from './ResourcePanelExtraLinks';
 import SettingsPanel from './SettingsPanel';
 import ValidationPanel from './ValidationPanel';
-import VersionHistoryPanel from './VersionHistoryPanel';
+import {VersionHistoryPanel} from './VersionHistory';
 
 import styles from './styles.module.scss';
 
