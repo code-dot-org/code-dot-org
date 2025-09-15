@@ -37,6 +37,8 @@ const VersionHistoryRow: React.FunctionComponent<VersionHistoryRowProps> = ({
   if (versionId === INITIAL_VERSION_ID) {
     rowMarginStyle = moduleStyles.initialVersionRow;
   } else if (isLatest) {
+    // Note that the latest or most current version can also include a comment.
+    // This styling adds the appropriate margin to a given row.
     rowMarginStyle = moduleStyles.currentVersionRow;
   } else if (comment) {
     rowMarginStyle = moduleStyles.commentRow;
