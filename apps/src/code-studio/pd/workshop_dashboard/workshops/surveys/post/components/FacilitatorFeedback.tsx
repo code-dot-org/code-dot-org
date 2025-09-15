@@ -94,6 +94,7 @@ export const FacilitatorFeedback = () => {
             } Submitted`}
             statusColor="success"
             size="s"
+            useFlexTextCardContainer
           />
         )}
         {isQuestionType(facilitatorCouldImprove, 'text') && (
@@ -108,6 +109,7 @@ export const FacilitatorFeedback = () => {
             } Submitted`}
             statusColor="warning"
             size="s"
+            useFlexTextCardContainer
           />
         )}
       </Box>

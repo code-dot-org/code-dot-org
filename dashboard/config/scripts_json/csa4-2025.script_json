@@ -15,12 +15,11 @@
       "show_calendar": true,
       "student_detail_progress_view": true,
       "tts": true,
-      "version_year": "2025",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-08-05 22:02:50 UTC",
+    "serialized_at": "2025-09-12 14:09:04 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -8142,11 +8141,9 @@
     },
     {
       "name": "CSA Unit 4 Slides",
-      "url": "https://docs.google.com/presentation/d/1fQ5U_CHAs_Mbgc47Cf9CdH-HU12llSLl9N7_fiSSJWg/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1EPxB2wKxmKYke_25Tl19mKZjhgRulai31SewGi-1VgM/edit?usp=sharing",
       "key": "csa_unit_4_slides",
       "properties": {
-        "audience": "Verified Teacher",
-        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "csa_unit_4_slides"

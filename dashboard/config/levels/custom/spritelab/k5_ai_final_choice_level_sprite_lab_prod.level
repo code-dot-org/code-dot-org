@@ -51,7 +51,7 @@
     "name_suffix": "_prod",
     "encrypted": "false",
     "mini_rubric": "false",
-    "thumbnail_url": "https://code.org/shared/images/courses/logo_gamelab_square.png",
+    "thumbnail_url": "/shared/images/courses/logo_gamelab_square.png",
     "mini_toolbox": "true",
     "soft_buttons": [
       "leftButton",

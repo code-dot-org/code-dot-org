@@ -32,7 +32,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-08-25 18:25:37 UTC",
+    "serialized_at": "2025-09-12 14:15:02 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -3262,11 +3262,9 @@
     },
     {
       "name": "CSA Unit 9 Slides",
-      "url": "https://docs.google.com/presentation/d/1Lhz4LAKSbeJ1Ef8CJR_GG2u06rQpUa05uBVynYUUXeM/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1iC55LoVfmtgBXzzO9ATwLJuzyU7XwX8w5So-s0KwmyI/edit?usp=sharing",
       "key": "csa_unit_9_slides",
       "properties": {
-        "audience": "Verified Teacher",
-        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "csa_unit_9_slides"

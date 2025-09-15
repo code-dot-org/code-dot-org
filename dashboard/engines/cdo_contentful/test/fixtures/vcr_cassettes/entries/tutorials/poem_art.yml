@@ -1,0 +1,80 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://preview.contentful.com/spaces/27jkibac934d/environments/master/entries?content_type=curriculum&fields.tutorialID=poem_art&limit=1&skip=0
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      X-Contentful-User-Agent:
+      - sdk contentful.rb/2.18.0; platform ruby/3.1.0; os macOS/24;
+      Authorization:
+      - Bearer dnVyQ99x_U7o8ZTUK-4tM-__EENnjBB_nJ7uWCCSL-Q
+      Content-Type:
+      - application/vnd.contentful.delivery.v1+json
+      Accept-Encoding:
+      - gzip
+      Connection:
+      - close
+      Host:
+      - preview.contentful.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - close
+      Content-Type:
+      - application/vnd.contentful.delivery.v1+json
+      Cf-Space-Id:
+      - 27jkibac934d
+      Cf-Environment-Id:
+      - master
+      Cf-Environment-Uuid:
+      - 45a004b5-cb62-4f60-afce-02706585f713
+      Cf-Organization-Id:
+      - 2yiy0qEwjW5xQJ6poYTwaj
+      X-Contentful-Route:
+      - "/spaces/:space/environments/:environment/entries"
+      Etag:
+      - W/"13035400929091511103"
+      Strict-Transport-Security:
+      - max-age=15768000
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - Contentful
+      Contentful-Api:
+      - cpa
+      Contentful-Upstream:
+      - content-api
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Accept,Accept-Language,Authorization,Cache-Control,Content-Length,Content-Range,Content-Type,DNT,Destination,Expires,If-Match,If-Modified-Since,If-None-Match,Keep-Alive,Last-Modified,Origin,Pragma,Range,User-Agent,X-Http-Method-Override,X-Mx-ReqToken,X-Requested-With,X-Contentful-Version,X-Contentful-Content-Type,X-Contentful-Organization,X-Contentful-Skip-Transformation,X-Contentful-User-Agent,X-Contentful-Enable-Alpha-Feature,X-Contentful-Resource-Resolution
+      Access-Control-Expose-Headers:
+      - Etag
+      Access-Control-Allow-Methods:
+      - GET,HEAD,OPTIONS
+      Access-Control-Max-Age:
+      - '1728000'
+      Content-Encoding:
+      - gzip
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Tue, 26 Aug 2025 17:05:45 GMT
+      X-Contentful-Request-Id:
+      - 7874ee31-e7fd-45a5-a5d0-ee0f7edc17ea
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        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
+  recorded_at: Tue, 26 Aug 2025 17:05:45 GMT
+recorded_with: VCR 6.2.0

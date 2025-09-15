@@ -1,5 +1,7 @@
 {
   "attach": "Attach",
+  "autosavedVersion": "Autosaved version",
+  "committedVersion": "Committed version",
   "cancel": "Cancel",
   "closeVersionHistory": "Close version history",
   "error": "Error",
@@ -16,6 +18,7 @@
   "result": "Result",
   "skip": "Skip",
   "stopValidation": "Stop validation",
+  "test": "Test",
   "testName": "Test Name",
   "unexpectedSuccess": "Unexpected success",
   "validate": "Validate",

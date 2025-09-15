@@ -6,7 +6,7 @@
   "user_id": 0,
   "properties": {
     "short_instructions": "Use 0s and 1s to recreate the letter A.",
-    "long_instructions": "<img style=\"float:right; margin:0 20px\" src=\"https://code.org/images/cspunit1/letterA.png\" width=\"150\">\r\n\r\n# Make the letter 'A'\r\n\r\nUse 0's and 1's to create the letter A.\r\n\r\n",
+    "long_instructions": "<img style=\"float:right; margin:0 20px\" src=\"/blockly/media/cspunit1/letterA.png\" width=\"150\">\r\n\r\n# Make the letter 'A'\r\n\r\nUse 0's and 1's to create the letter A.\r\n\r\n",
     "version": "1",
     "href": "pixelation/pixelation.html",
     "skip_dialog": true,
@@ -21,7 +21,7 @@
     "v1_initial_height": "5",
     "display_name": "Black & White Pixelation Widget: The letter A",
     "bubble_choice_description": "Use 0's and 1's to create the letter A. ",
-    "thumbnail_url": "https://code.org/images/cspunit1/letterA.png"
+    "thumbnail_url": "/blockly/media/cspunit1/letterA.png"
   },
   "published": true,
   "notes": "",

@@ -3,7 +3,7 @@ import {NextRequest} from 'next/server';
 
 import {STALE_WHILE_REVALIDATE_ONE_HOUR} from '@/cache/constants';
 import {getRedirectEntry} from '@/cache/redirects/getRedirectEntry';
-import {Brand} from '@/config/brand';
+import {getBrandFromString} from '@/config/brand';
 import {getLocalhostDomain} from '@/config/host';
 
 /**
@@ -13,7 +13,7 @@ import {getLocalhostDomain} from '@/config/host';
 
 export async function GET(
   request: NextRequest,
-  {params}: {params: Promise<{brand: Brand; pathname: string}>},
+  {params}: {params: Promise<{brand: string; pathname: string}>},
 ) {
   const host = request.headers.get('host');
   const {brand, pathname} = await params;
@@ -37,7 +37,10 @@ export async function GET(
     return new Response('Missing required parameter brand', {status: 400});
   }
 
-  const redirectEntry = await getRedirectEntry(pathname, brand);
+  const redirectEntry = await getRedirectEntry(
+    pathname,
+    getBrandFromString(brand),
+  );
 
   const response = {
     redirectEntry: redirectEntry ?? null,

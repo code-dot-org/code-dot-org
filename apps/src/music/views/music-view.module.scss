@@ -1,4 +1,5 @@
 @import 'color.scss';
+@import '../../mixins.scss';
 
 // Constants
 $timeline-area-height: 200px;
@@ -117,14 +118,5 @@ $default-spacing: 2px;
 }
 
 .centerHeaderContent {
-  display: flex;
-  justify-content: center;
-  gap: 4px;
-  overflow: hidden;
-
-  &Text {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
+  @include center-header-content(true);
 }

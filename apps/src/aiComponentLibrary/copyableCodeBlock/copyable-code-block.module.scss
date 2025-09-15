@@ -22,6 +22,8 @@
     position: relative;
     width: 100%;
     display: inline-block;
+    max-height: 400px;
+    overflow: auto;
 
     >.codeContent {
       margin: 0;

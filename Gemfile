@@ -77,6 +77,7 @@ group :development do
   # Bootsnap pre-caches Ruby require paths + bytecode and speeds up boot time significantly.
   # We only use it in development atm to get a feel for it, and the benefit is greatest here.
   gem 'bootsnap', '>= 1.14.0', require: false
+  gem 'localhost'
 end
 
 # Rack::Cache middleware used in development/test;
@@ -390,6 +391,6 @@ gem "webrick", "~> 1.9"
 gem 'rubyzip'
 
 # Automatically include all rails engines
-Dir[Bundler.root.join('**/engines/*/*.gemspec')].each do |gemspec_path|
-  gem File.basename(gemspec_path, '.gemspec'), path: Bundler.root, glob: gemspec_path.sub(%r{^.*/engines/}, '**/engines/')
+Dir[Bundler.root.join('**/engines/*/*.gemspec')].sort.each do |gemspec_path|
+  gem File.basename(gemspec_path, '.gemspec'), path: '.', glob: '**/engines/*/*.gemspec'
 end
