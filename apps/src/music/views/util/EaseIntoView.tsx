@@ -130,13 +130,13 @@ const EaseIntoView: React.FunctionComponent<EaseIntoViewProps> = ({
     switch (event.key) {
       case 'Enter':
         event.preventDefault();
-        // Make children that should be showing focusable and focus the first child
+        // Make children that should be showing focusable and focus the first child.
         focusableChildren.forEach(child => child.setAttribute('tabindex', '0'));
         focusableChildren[0]?.focus();
         break;
 
       case 'Tab':
-        // Make all children unfocusable
+        // Make all children unfocusable.
         focusableChildren.forEach(child =>
           child.setAttribute('tabindex', '-1')
         );

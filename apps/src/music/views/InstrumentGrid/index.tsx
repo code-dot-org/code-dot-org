@@ -225,6 +225,12 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
     ];
   }, [editorType, scaleMode]);
 
+  // This handles keyboard interactions for the cells. If an instrument is sent
+  // in, we are focused on the label, which means we play a preview of the note.
+  // Otherwise, we are focused on a selectable cell, which means we call the
+  // corresponding click event. Escape exits the grid, moving focus back to the
+  // parent container. StopPropagation is called on Tab events to keep the focus
+  // from moving beyond the parent container when focus is inside it.
   const handleKeyDown = (
     event: React.KeyboardEvent,
     note: number,
