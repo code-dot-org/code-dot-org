@@ -320,16 +320,6 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
         {multimodalAvailable && (
           <StagedFilesPreview buildAssetUrl={buildAssetUrl} />
         )}
-        {canChatWithModel && (
-          <UserChatMessageEditor
-            clientType={clientType}
-            modelParameters={modelParameters}
-            editorContainerClassName={moduleStyles.messageEditorContainer}
-            chatButtons={chatButtons}
-            hiddenContext={hiddenContext}
-            multimodalAvailable={multimodalAvailable}
-          />
-        )}
         {availableModes && selectedMode && (
           <IconDropdown
             onChange={option =>
@@ -342,6 +332,16 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
             size="xs"
             className={moduleStyles.modeDropdown}
             readOnly={availableModes.length <= 1}
+          />
+        )}
+        {canChatWithModel && (
+          <UserChatMessageEditor
+            clientType={clientType}
+            modelParameters={modelParameters}
+            editorContainerClassName={moduleStyles.messageEditorContainer}
+            chatButtons={chatButtons}
+            hiddenContext={hiddenContext}
+            multimodalAvailable={multimodalAvailable}
           />
         )}
         <div className={moduleStyles.buttonRow}>
