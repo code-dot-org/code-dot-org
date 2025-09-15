@@ -1,5 +1,10 @@
+import {Button} from '@code-dot-org/component-library/button';
+import {
+  WithTooltip,
+  WithTooltipHandle,
+} from '@code-dot-org/component-library/tooltip';
 import classNames from 'classnames';
-import React, {memo, useCallback, useContext} from 'react';
+import React, {memo, useCallback, useContext, useRef} from 'react';
 import {useSelector} from 'react-redux';
 
 import {useBlocklySettings} from '@cdo/apps/lab2/hooks/useBlocklySettings';
@@ -87,6 +92,7 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
   const currentPackId = useAppSelector(state => state.music.packId);
   const analyticsReporter = useContext(AnalyticsContext);
   const dialogControl = useDialogControl();
+  const tooltipRef = useRef<WithTooltipHandle>(null);
 
   const library = MusicLibrary.getInstance();
 
@@ -144,6 +150,39 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
 
   const settings = useBlocklySettings();
 
+  const getIconButton = (
+    i18nLabel: string,
+    title: string,
+    icon: string,
+    disabled: boolean = true,
+    onClick: () => void
+  ) => {
+    return (
+      <WithTooltip
+        tooltipProps={{
+          text: i18nLabel,
+          direction: 'onBottom',
+          tooltipId: `${title}-tooltip`,
+          size: 'xs',
+          hideTail: true,
+        }}
+        ref={tooltipRef}
+      >
+        <Button
+          id={`${title}-button`}
+          isIconOnly
+          icon={{iconStyle: 'solid', iconName: icon}}
+          size="xs"
+          onClick={onClick}
+          type="tertiary"
+          ariaLabel={i18nLabel}
+          color={'black'}
+          disabled={disabled}
+        />
+      </WithTooltip>
+    );
+  };
+
   return (
     <div className={moduleStyles.container}>
       {!allowPackSelection && packFolder && (
@@ -184,57 +223,27 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
       {!experiments.isEnabledAllowingQueryString(
         experiments.LAB2_RESOURCE_PANEL
       ) ? (
-        <SettingsButton
-          settings={settings}
-          className={classNames(moduleStyles.button)}
-        />
+        <SettingsButton settings={settings} />
       ) : null}
       {!readOnlyWorkspace && (
         <>
-          <button
-            onClick={() => onClickUndoRedo('undo')}
-            type="button"
-            className={classNames(
-              moduleStyles.button,
-              !canUndo && moduleStyles.buttonDisabled
-            )}
-            disabled={!canUndo}
-          >
-            <FontAwesome
-              title={musicI18n.undo()}
-              icon="undo"
-              className={'icon'}
-            />
-          </button>
-          <button
-            onClick={() => onClickUndoRedo('redo')}
-            type="button"
-            className={classNames(
-              moduleStyles.button,
-              !canRedo && moduleStyles.buttonDisabled
-            )}
-            disabled={!canRedo}
-          >
-            <FontAwesome
-              title={musicI18n.redo()}
-              icon="redo"
-              className={'icon'}
-            />
-          </button>
-          {Blockly.showBlockHelp && (
-            <button
-              onClick={() => window.open('/docs/ide/music', '_blank')}
-              type="button"
-              id="documentation-button"
-              className={classNames(moduleStyles.button)}
-            >
-              <FontAwesome
-                title={musicI18n.documentation()}
-                icon="book"
-                className={'icon'}
-              />
-            </button>
+          {/* Undo Button */}
+          {getIconButton(musicI18n.undo(), 'undo', 'undo', !canUndo, () =>
+            onClickUndoRedo('undo')
           )}
+          {/* Redo Button */}
+          {getIconButton(musicI18n.redo(), 'redo', 'redo', !canRedo, () =>
+            onClickUndoRedo('redo')
+          )}
+          {/* Documentation Button */}
+          {Blockly.showBlockHelp &&
+            getIconButton(
+              commonI18n.documentation(),
+              'documentation',
+              'book',
+              false,
+              () => window.open('/docs/ide/music', '_blank')
+            )}
         </>
       )}
       {skipUrl && (
