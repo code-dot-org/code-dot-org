@@ -16,3 +16,8 @@
       %strong Code only:
       Shows code editor only.
   %p Students can switch between modes using buttons in the header.
+
+  .field
+    = f.label :level_system_prompt, 'Level System Prompt'
+    %p Optional addition to the system prompt for AI Tutor.
+    = f.text_area :level_system_prompt, placeholder: 'Level system prompt', rows: 4, style: 'width: 50%', value: @level.level_system_prompt

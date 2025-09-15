@@ -36,6 +36,7 @@ class Weblab2 < Level
     initial_view_mode
     disable_edit_run_for_submission
     predict_settings
+    level_system_prompt
   )
 
   def self.create_from_level_builder(params, level_params)
