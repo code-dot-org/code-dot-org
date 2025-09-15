@@ -105,7 +105,6 @@ export default class ProjectManager {
     }
 
     this.lastChannel = channel;
-    // Initialize comment flag based on actual current version state
     await this.initializeCurrentVersionCommentState();
     const abuseScore = await this.channelsStore.getAbuseScore(channel);
     const sharingDisabled = await this.channelsStore.getSharingDisabled(
@@ -196,7 +195,7 @@ export default class ProjectManager {
    * If a save is already enqueued, update this.sourceToSave with the given source.
    * @param sources ProjectSources: the source to save.
    * @param forceSave boolean: if the save should happen immediately
-   * @param forceNewVersion boolean: if the save should create a new version
+   * @param forceNewVersion boolean: if the save should create a new version initiatedby the user
    * @returns a promise that resolves to a Response. If the save is successful, the response
    * will be empty, otherwise it will contain failure information.
    */
@@ -357,8 +356,7 @@ export default class ProjectManager {
   }
 
   /**
-   * Set whether the current version has a comment. This should be called
-   * when a comment is published or when the current version changes.
+   * Set whether the current version has a comment.
    * @param hasComment whether the current version has a comment
    */
   setCurrentVersionHasComment(hasComment: boolean): void {
@@ -366,8 +364,7 @@ export default class ProjectManager {
   }
 
   /**
-   * Initialize the comment state cache by checking if the current version
-   * actually has a comment. This should be called once when loading a project.
+   * Initialize the comment state by checking if the current version has a comment.
    */
   private async initializeCurrentVersionCommentState(): Promise<void> {
     const currentVersionId = this.getCurrentVersionId();
@@ -383,16 +380,10 @@ export default class ProjectManager {
       );
       const hasComment = !!currentVersion?.comment?.trim();
       this.setCurrentVersionHasComment(hasComment);
-
-      if (hasComment) {
-        this.metricsReporter.logInfo(
-          'Initialized comment cache: current version has comment'
-        );
-      }
     } catch (error) {
-      // If we can't fetch version list, err on the side of caution and assume no comment
+      // If we can't fetch version list, assume no comment.
       this.metricsReporter.logWarning(
-        `Failed to initialize comment state: ${error}`
+        `Failed to initialize comment state because we couldn't fetch the version list: ${error}`
       );
       this.setCurrentVersionHasComment(false);
     }
@@ -439,7 +430,7 @@ export default class ProjectManager {
    * Only if the source save succeeds do we update the channel, as the
    * channel is metadata about the project and we don't want to save it unless the source
    * save succeeded.
-   * @param forceNewVersion boolean: If the save should create a new version.
+   * @param forceNewVersion boolean: If the save should create a new version initiated by the user.
    * @returns a Promise<void> that resolves when the save is complete or when the save fails.
    * Listeners are notified of save status throughout the process.
    */
@@ -472,20 +463,15 @@ export default class ProjectManager {
     }
     // Only save the source if it has changed.
     if (this.sourcesToSave && sourceChanged) {
-      // Check if we need to force a new version to preserve a commented version
-      // This is particularly important for Javalab where autosave could overwrite
-      // a version that has a comment, breaking the connection between the comment
-      // and the version.
+      // forceNewVersion is true if the user published the version or restored a version to initial state.
       let shouldForceNewVersion = forceNewVersion;
+      // Check if we need to force a new version to preserve a commented version.
       if (
         !forceNewVersion &&
         sourceChanged &&
         this.getCurrentVersionHasComment()
       ) {
         shouldForceNewVersion = true;
-        this.metricsReporter.logInfo(
-          'Forcing new version during autosave to preserve commented version'
-        );
       }
 
       try {
@@ -511,8 +497,9 @@ export default class ProjectManager {
       }
       this.lastSource = JSON.stringify(this.sourcesToSave);
 
-      // If we created a new version (not replacing existing), the new version won't have a comment
-      if (shouldForceNewVersion) {
+      // If we created a new version (not replacing existing) and the new version was not initiated by the user,
+      // i.e., it was created by autosave, then the new version won't have a comment.
+      if (shouldForceNewVersion && !forceNewVersion) {
         this.setCurrentVersionHasComment(false);
       }
     }
