@@ -76,6 +76,7 @@ $tabs-default-spacing: 4px;
 
 .buttonRow {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
   padding: 0 10px;
 }
