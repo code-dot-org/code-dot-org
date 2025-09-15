@@ -1,3 +1,4 @@
+@use '../../lab2/views/components/layout/variables.scss' as variables;
 @import 'color.scss';
 @import '../../mixins.scss';
 
@@ -39,7 +40,7 @@
     overflow: hidden;
     flex-shrink: 1;
 
-    html[dir="rtl"] & {
+    html[dir='rtl'] & {
       padding: 0 2px 0 6px;
     }
 
@@ -54,7 +55,7 @@
       overflow: hidden;
       text-overflow: ellipsis;
 
-      html[dir="rtl"] & {
+      html[dir='rtl'] & {
         padding: 0 8px 0 16px;
       }
 
@@ -80,5 +81,10 @@
       overflow: hidden;
       text-overflow: ellipsis;
     }
+  }
+
+  &HasBorder,
+  &HasBorder:active {
+    border: variables.$default-border !important; // This is overriding the remove-button-styles mixin !important tag
   }
 }
