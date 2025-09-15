@@ -164,6 +164,17 @@ export const WorkshopLayout: FC<WorkshopLayoutProps> = ({
     questionCategoryButtons.preWorkshopSurvey,
   ]);
 
+  const facilitators = useMemo(() => {
+    if (!surveys?.facilitators) {
+      return [];
+    }
+    return Object.entries(surveys.facilitators).map(([id, name]) => ({
+      id: Number(id),
+      name,
+      email: '',
+    }));
+  }, [surveys?.facilitators]);
+
   const contextValue: WorkshopContextValue = {
     workshop,
     refetchWorkshop,
@@ -212,7 +223,7 @@ export const WorkshopLayout: FC<WorkshopLayoutProps> = ({
           {showSurveyElements && <ExportSurveysButton />}
         </div>
         {showFacilitatorSelection && (
-          <FacilitatorSelection facilitators={workshop?.facilitators} />
+          <FacilitatorSelection facilitators={facilitators} />
         )}
       </nav>
       <main>
