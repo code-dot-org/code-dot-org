@@ -16,7 +16,7 @@ import {WorkshopCourseConfigs} from '@cdo/apps/generated/pd/sharedWorkshopConsta
 import {TIME_FORMAT} from '../../../workshopConstants';
 import {WorkshopData} from '../../types';
 
-import styles from '../../workshop.module.scss';
+import styles from '../../WorkshopLayout.module.scss';
 
 interface WorkshopInformationSectionProps {
   workshop: WorkshopData;

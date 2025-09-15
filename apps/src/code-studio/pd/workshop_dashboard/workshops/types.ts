@@ -1,6 +1,6 @@
 import {Dispatch} from 'react';
 
-import {Option} from '../WorkshopFormTemplate/components/MultiSelectInput';
+import {Option} from '../workshop_form/components/MultiSelectInput';
 
 import {ColorMapKey} from './surveys/constants';
 

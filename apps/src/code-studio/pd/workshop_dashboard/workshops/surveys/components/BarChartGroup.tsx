@@ -21,7 +21,7 @@ import {
 
 import {COLOR_MAP, ColorMapKey} from '../constants';
 
-import moduleStyles from './barChartGroupStyles.module.scss';
+import moduleStyles from './BarChartGroup.module.scss';
 
 export const barColors = [
   COLOR_MAP.get('green'),
