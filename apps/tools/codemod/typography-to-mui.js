@@ -1,17 +1,19 @@
-// jscodeshift codemod
-//
+// jscodeshift codemod typography-to-mui
+
 // What it does:
-// - Rewrites <Typography semanticTag visualAppearance ...> to MUI <Typography component variant gutterBottom>
+// - Rewrites DSCO <Typography semanticTag visualAppearance ...> to MUI <Typography component variant gutterBottom>
 // - Rewrites wrapper components (Heading1, BodyTwoText, OverlineTwoText, etc.) to <Typography ...>
-// - Preserves id, className, style, children
-// - Rewrites imports: removes local Typography / wrapper imports; adds MUI Typography import
-//
+// - Preserves attributes like id, className, style, children, etc
+// - Rewrites imports: removes DSCO Typography / wrapper imports; adds MUI Typography import
+
 // Run:
-//   npx jscodeshift -t ./typography-to-mui.js "src/**/*.{ts,tsx,js,jsx}" --parser=tsx --extensions=tsx,ts,jsx,js
-//
+//   npx jscodeshift -t ./apps/tools/codemod/typography-to-mui.js "src/**/*.{ts,tsx,js,jsx}" --parser=tsx --extensions=tsx,ts,jsx,js
+
 // Tips:
 //   - Add --dry --print to preview changes
 //   - REMEMBER to wrap the component entrypoint with mui ThemeProvider or the theme styles will not be applied
+
+// TODO: Delete this script when all DSCO Typography components have been replaced with MUI Typography
 
 const VARIANT_TO_DEFAULT_TAG = {
   // built-in
