@@ -315,8 +315,6 @@ const VersionHistoryPanel: React.FunctionComponent<
   ]);
 
   const onPublishVersion = useCallback(async () => {
-    console.log('lastestVersion', latestVersion);
-    // Save project following Javalab pattern
     if (projectSources) {
       const projectManager = Lab2Registry.getInstance().getProjectManager();
       if (!projectManager) {
@@ -334,6 +332,7 @@ const VersionHistoryPanel: React.FunctionComponent<
         // Get the most recent version ID.
         const newVersionId = projectManager.getCurrentVersionId();
 
+        // Add comment to the new version.
         if (newVersionId && commitDescription.trim()) {
           const payload = {
             storage_id: channelId,
@@ -372,7 +371,6 @@ const VersionHistoryPanel: React.FunctionComponent<
     projectSources,
     dispatch,
     channelId,
-    latestVersion,
     commitDescription,
     successfulRestoreCleanUp,
   ]);
@@ -480,6 +478,7 @@ const VersionHistoryPanel: React.FunctionComponent<
               <textarea
                 onChange={e => setCommitDescription(e.target.value)}
                 value={commitDescription}
+                placeholder="Include a description of your changes and then click Publish to save this current version."
                 color="gray"
                 className={moduleStyles.textArea}
               />
@@ -490,6 +489,7 @@ const VersionHistoryPanel: React.FunctionComponent<
               className={moduleStyles.versionButton}
               text="Publish"
               onClick={onPublishVersion}
+              disabled={versionLoading || commitDescription.trim() === ''}
             />
           </div>
         </div>
