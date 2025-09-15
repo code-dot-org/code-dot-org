@@ -97,7 +97,6 @@ module AichatAiHelper
 
     # Level system prompt - string or nil.
     level_system_prompt = level&.properties&.dig('aichat_settings', 'levelSystemPrompt') || level&.properties&.[]("level_system_prompt")
-    puts "level system prompt: #{level_system_prompt}"
 
     # Level name - string.
     level_name = level&.name
