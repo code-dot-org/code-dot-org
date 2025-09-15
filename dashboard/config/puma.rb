@@ -17,7 +17,11 @@ queue_requests false
 
 pidfile "#{File.expand_path(__FILE__)}.pid"
 preload_app!
-stdout_redirect dashboard_dir('log', 'puma_stdout.log'), dashboard_dir('log', 'puma_stderr.log'), true
+
+unless CDO.rack_env?(:development)
+  stdout_redirect dashboard_dir('log', 'puma_stdout.log'), dashboard_dir('log', 'puma_stderr.log'), true
+end
+
 directory deploy_dir('dashboard')
 
 require 'cdo/app_server_hooks'
