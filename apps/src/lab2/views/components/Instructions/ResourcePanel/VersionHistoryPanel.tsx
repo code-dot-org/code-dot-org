@@ -184,9 +184,9 @@ const VersionHistoryPanel: React.FunctionComponent<
   ]);
 
   const successfulRestoreCleanUp = useCallback(
-    (sources: ProjectSources) => {
+    (published = false) => {
       dispatch(setViewingOldVersion(false));
-      dispatch(setRestoredOldVersion(true));
+      dispatch(setRestoredOldVersion(!published));
       loadVersionList(true);
     },
     [dispatch, loadVersionList]
@@ -202,7 +202,7 @@ const VersionHistoryPanel: React.FunctionComponent<
         /* forceNewVersion */ true
       )
     );
-    successfulRestoreCleanUp(startSources);
+    successfulRestoreCleanUp();
   }, [dispatch, startSources, successfulRestoreCleanUp]);
 
   const confirmStartOver = useCallback(() => {
@@ -234,7 +234,7 @@ const VersionHistoryPanel: React.FunctionComponent<
         .then(sources => {
           if (sources) {
             dispatch(setProjectSource(sources));
-            successfulRestoreCleanUp(sources);
+            successfulRestoreCleanUp();
           } else {
             setVersionLoadError(true);
           }
@@ -316,7 +316,7 @@ const VersionHistoryPanel: React.FunctionComponent<
 
   const onPublishVersion = useCallback(async () => {
     console.log('lastestVersion', latestVersion);
-    // Save project
+    // Save project following Javalab pattern
     if (projectSources) {
       const projectManager = Lab2Registry.getInstance().getProjectManager();
       if (!projectManager) {
@@ -324,26 +324,15 @@ const VersionHistoryPanel: React.FunctionComponent<
         return;
       }
 
-      // Trigger the save with force new version
-      dispatch(setAndSaveProjectSources(projectSources, true, true));
-
-      // Wait for the save to complete and get the new version ID
-      const waitForNewVersionId = async (
-        retries = 10
-      ): Promise<string | null> => {
-        for (let i = 0; i < retries; i++) {
-          console.log('waiting for new version id', i);
-          await new Promise(resolve => setTimeout(resolve, 100)); // Wait 100ms
-          const currentVersionId = projectManager.getCurrentVersionId();
-          if (currentVersionId && currentVersionId !== latestVersion) {
-            return currentVersionId;
-          }
-        }
-        return null;
-      };
-
       try {
-        const newVersionId = await waitForNewVersionId();
+        // Save project first and wait for completion so we can access the new version ID.
+        await projectManager.save(projectSources, true, true);
+
+        // Update Redux state.
+        dispatch(setProjectSource(projectSources));
+
+        // Get the most recent version ID.
+        const newVersionId = projectManager.getCurrentVersionId();
 
         if (newVersionId && commitDescription.trim()) {
           const payload = {
@@ -371,10 +360,9 @@ const VersionHistoryPanel: React.FunctionComponent<
           }
         }
 
-        successfulRestoreCleanUp(projectSources);
+        successfulRestoreCleanUp(true);
       } catch (error) {
-        console.error('Failed to get new version ID after save:', error);
-        successfulRestoreCleanUp(projectSources);
+        console.error('Failed to save project:', error);
       }
     }
   }, [
