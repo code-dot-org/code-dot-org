@@ -1,5 +1,6 @@
 require 'rmagick'
 require 'dynamic_config/gatekeeper'
+require 'uri'
 
 UNSAMPLED_SESSION_ID = 'HOC_UNSAMPLED'.freeze
 
@@ -207,4 +208,14 @@ def launch_tutorial_pixel(tutorial)
 
   dont_cache
   send_file pegasus_dir('sites.v3/code.org/public/images/1x1.png'), type: 'image/png'
+end
+
+def redirect_to_studio(path, path_params = {})
+  dashboard_uri = URI(CDO.studio_url(path, CDO.default_scheme))
+
+  redirect_params = URI.decode_www_form(dashboard_uri.query.to_s).to_h
+  redirect_params.merge!(path_params)
+  dashboard_uri.query = URI.encode_www_form(redirect_params) if redirect_params.present?
+
+  redirect dashboard_uri.to_s, 301
 end

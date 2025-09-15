@@ -27,10 +27,19 @@ const surveyTypeOptions: SurveyOption[] = [
   {text: 'Post', value: 'post'},
 ];
 
-const categoryButtons: SegmentedButtonsProps['buttons'] = [
-  {label: 'Overall', value: 'overall'},
-  {label: 'Facilitators', value: 'facilitators'},
-];
+const categoryButtons: {
+  preWorkshopSurvey: SegmentedButtonsProps['buttons'];
+  postWorkshopSurvey: SegmentedButtonsProps['buttons'];
+} = {
+  preWorkshopSurvey: [
+    {label: 'Overall', value: 'overall'},
+    {label: 'Facilitators', value: 'facilitators'},
+  ],
+  postWorkshopSurvey: [
+    {label: 'Overall', value: 'overall'},
+    {label: 'Facilitators', value: 'facilitators'},
+  ],
+};
 
 const baseWorkshop = {
   id: 42,

@@ -435,7 +435,7 @@
   },
   "https://studio.code.org/s/allthethings/lessons/17/levels/1": {
     "short_instructions": "Make a 3x5 letter 'A'. The widget is setup with the incorrect dimensions. Your first task is to set the second byte to the 8-bit binary code for 5: 0000 0101. Then start entering pixel data.",
-    "long_instructions": "<img style=\"float:right; margin:0 20px\" src=\"https://code.org/images/cspunit1/letterA.png\" width=\"150\">\n            # Task 1: Make a 3x5 letter 'A'\n            Start by trying to recreate the 3x5 letter \"A\" depicted (at right) using the pixelation widget. \n          \n            The image is intially setup with the *incorrect* dimensions. Your first task is to set the second byte to the 8-bit binary code for 5: 0000 0101. Then you can start entering pixel data to make the A.\n            "
+    "long_instructions": "<img style=\"float:right; margin:0 20px\" src=\"/blockly/media/cspunit1/letterA.png\" width=\"150\">\n            # Task 1: Make a 3x5 letter 'A'\n            Start by trying to recreate the 3x5 letter \"A\" depicted (at right) using the pixelation widget. \n          \n            The image is intially setup with the *incorrect* dimensions. Your first task is to set the second byte to the 8-bit binary code for 5: 0000 0101. Then you can start entering pixel data to make the A.\n            "
   },
   "https://studio.code.org/s/allthethings/lessons/17/levels/2": {
     "short_instructions": "We start you with the 4x2 image Maddie was creating, but we've left out the last two squares. Finish off the image by figuring out which two colors are missing and encode them.",
@@ -443,7 +443,7 @@
   },
   "https://studio.code.org/s/allthethings/lessons/17/levels/3": {
     "short_instructions": "We start you out with the 4x4 image Maddie created in the video. Your task is to fill a 4x4 grid with colors using 12-bits per pixel. Here are the requirements: Row 1 - fill with shades of red. Row 2 - shades of green. Row 3 - shades of blue. Row 4 - shades of gray.",
-    "long_instructions": "# Pixelation: Task 3\n\n<img src = \"https://code.org/images/cspunit1/ColorTask3.png\" style=\"float:right; margin:0 20px\" width=200>\n**Directions:**\nWe start you out with the 4x4 image Maddie created in the video.\n\nYour task is to fill a 4x4 grid with colors using _12-bits per pixel_. The result should look something like (but not exactly) the image shown at right.  \n\nHere are the requirements:\n\n-   Row 1 - fill with shades of red. \n-   Row 2 - shades of green. \n-   Row 3 - shades of blue. \n-   Row 4 - shades of gray."
+    "long_instructions": "# Pixelation: Task 3\n\n<img src = \"/blockly/media/cspunit1/ColorTask3.png\" style=\"float:right; margin:0 20px\" width=200>\n**Directions:**\nWe start you out with the 4x4 image Maddie created in the video.\n\nYour task is to fill a 4x4 grid with colors using _12-bits per pixel_. The result should look something like (but not exactly) the image shown at right.  \n\nHere are the requirements:\n\n-   Row 1 - fill with shades of red. \n-   Row 2 - shades of green. \n-   Row 3 - shades of blue. \n-   Row 4 - shades of gray."
   },
   "https://studio.code.org/s/allthethings/lessons/17/levels/4": {
     "short_instructions": "This pixelation level demonstrates the use of the `hide_encoding_controls` option.  Notice that the level displays the image data in hexadecimal and does not let you change it back to binary.",
@@ -2981,7 +2981,11 @@
     "long_instructions": "This level shares a project with the next level in the progression."
   },
   "https://studio.code.org/s/allthethings/lessons/46/levels/7": {
-    "long_instructions": "This level shares a project with the previous level in the progression."
+    "long_instructions": "This level shares a project with the previous level in the progression.\n\nThis is a template-backed submittable level with validation.",
+    "validations": {
+      "Music Project Level 2_9b072f97-fd3a-496d-966e-1e82ddc3ad7a": "You played one sound!",
+      "Music Project Level 2_add0a56d-b34f-4d66-9159-b386e97cb8c1": "Please play one sound."
+    }
   },
   "https://studio.code.org/s/allthethings/lessons/46/levels/8": {
     "long_instructions": "## Predict and Run\n\n**What do you think this program does?**\n\nTake a look at the code in this program. Write down what you think this program will do. There are no wrong answers!"
@@ -2993,7 +2997,11 @@
     "long_instructions": "### Assessment\n\nCreate a song using multiple sounds! Each part of your song should include a different type of sound.\n\nExperiment and have fun!\n\n_Tips_:\n\n-   Try using blocks from different packs.\n-   Try using the Play Together and repeat blocks.\n-   Try factoring your song using functions."
   },
   "https://studio.code.org/s/allthethings/lessons/46/levels/11": {
-    "long_instructions": "### Assessment 2\n\n> This level does **not** require you to edit and run your code before submitting. Good luck!\n\nCreate a song using multiple sounds! Each part of your song should include a different type of sound.\n\nExperiment and have fun!\n\n_Tips_:\n\n-   Try using blocks from different packs.\n-   Try using the Play Together and repeat blocks.\n-   Try factoring your song using functions."
+    "long_instructions": "### Assessment 2\n\n-   _This level does **not** require you to edit and run your code before submitting._\n-   _This level does have validation._\n\nCreate a song using multiple sounds! Each part of your song should include a different type of sound.\n\nExperiment and have fun!\n\n_Tips_:\n\n-   Try using blocks from different packs.\n-   Try using the Play Together and repeat blocks.\n-   Try factoring your song using functions.",
+    "validations": {
+      "Submittable Music Level 2_2b74745f-e210-45fa-9a07-4f6698b68850": "You played one sound!",
+      "Submittable Music Level 2_5594a84f-c061-4811-af8d-e380c7cb0345": "Please play a sound."
+    }
   },
   "https://studio.code.org/s/allthethings/lessons/47/levels/1": {
     "long_instructions": "## Sample Instructions\n\nThis is a chat bot which allows you to talk to historical figures.\n\n### Do This\n\nType in a question and press the <code style=\"color:white; background-color:#7435b2\">Continue</code> button. What can you learn about Ada Lovelace?"
@@ -3089,13 +3097,16 @@
     "long_instructions": "## Web Lab 2 Lab Widget View\n\nThis is an example of widget view without toggle to view/hide code so workspace is always hidden."
   },
   "https://studio.code.org/s/allthethings/lessons/51/levels/6": {
-    "long_instructions": "## Web Lab 2 Lab Widget View\n\nThis is an example of widget view WITH toggle to view/hide code."
+    "long_instructions": "## Web Lab 2 with Initial View Mode Set to Preview\n\nThis is an example of setting the initial \"view mode\" to preview, with the option to switch to see code."
   },
   "https://studio.code.org/s/allthethings/lessons/51/levels/7": {
     "long_instructions": "## Web Lab 2 Predict Level\n\nThis is an example of a predict level with free response.\n\nWhat will happen when you click on the 'Click me' button? Submit your answer and then try it out!"
   },
   "https://studio.code.org/s/allthethings/lessons/51/levels/8": {
     "long_instructions": "## Web Lab 2 Predict Level\n\nThis is an example of a predict level with multiple choice options.\n\nWhat will happen when you click on the 'Click me' button? Submit your answer and then try it out!"
+  },
+  "https://studio.code.org/s/allthethings/lessons/51/levels/9": {
+    "long_instructions": "### Assessment\n\nThis is a submittable level! Create a web page that shares an interest of yours.\n\nAdd an HTML and CSS file to your project."
   },
   "https://studio.code.org/s/allthethings/lessons/52/levels/1": {
     "long_instructions": "Try everything!"

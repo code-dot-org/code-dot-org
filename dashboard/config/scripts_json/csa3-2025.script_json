@@ -15,12 +15,11 @@
       "show_calendar": true,
       "student_detail_progress_view": true,
       "tts": true,
-      "version_year": "2025",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-08-05 22:01:52 UTC",
+    "serialized_at": "2025-09-12 14:08:06 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -8981,11 +8980,9 @@
     },
     {
       "name": "CSA Unit 3 Slides",
-      "url": "https://docs.google.com/presentation/d/1qqv3Hc7KndBVGlT0HVH2oaLzftqFhUvxSwMOlhJ1mlU/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1zrq9GCi48HTojPFg-KEx1jxZaAaCxi-xwnMe3M7O1aU",
       "key": "csa_unit_3_slides",
       "properties": {
-        "audience": "Verified Teacher",
-        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "csa_unit_3_slides"

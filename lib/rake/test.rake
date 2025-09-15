@@ -213,6 +213,24 @@ namespace :test do
     ENV.delete 'USE_PEGASUS_UNITTEST_DB'
   end
 
+  timed_task_with_logging :dashboard_hoc_legacy_engine_ci do
+    # isolate unit tests from the pegasus_test DB
+    ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
+    ENV['TEST_ENV_NUMBER'] = '1'
+    TestRunUtils.run_dashboard_hoc_legacy_engine_tests
+    ENV.delete 'TEST_ENV_NUMBER'
+    ENV.delete 'USE_PEGASUS_UNITTEST_DB'
+  end
+
+  timed_task_with_logging :dashboard_marketing_engine_ci do
+    # isolate unit tests from the pegasus_test DB
+    ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
+    ENV['TEST_ENV_NUMBER'] = '1'
+    TestRunUtils.run_dashboard_marketing_engine_tests
+    ENV.delete 'TEST_ENV_NUMBER'
+    ENV.delete 'USE_PEGASUS_UNITTEST_DB'
+  end
+
   timed_task_with_logging :shared_ci do
     # isolate unit tests from the pegasus_test DB
     ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
@@ -254,6 +272,8 @@ namespace :test do
     :pegasus_ci,
     :dashboard_ci,
     :dashboard_legacy_ci,
+    :dashboard_hoc_legacy_engine_ci,
+    :dashboard_marketing_engine_ci,
     :lib_ci,
     :bin_ci,
     :ui_live
@@ -354,6 +374,52 @@ namespace :test do
       end
     end
 
+    desc 'Runs dashboard cdo_contentful engine tests'
+    timed_task_with_logging :dashboard_cdo_contentful_engine do
+      run_tests_if_changed(
+        'dashboard cdo_contentful engine',
+        %w[Gemfile Gemfile.lock dashboard/engines/cdo_contentful/**/*],
+      ) do
+        TestRunUtils.run_dashboard_cdo_contentful_engine_tests
+      end
+    end
+
+    desc 'Runs dashboard hoc_legacy engine tests if dashboard might have changed from staging.'
+    timed_task_with_logging :dashboard_hoc_legacy_engine do
+      run_tests_if_changed(
+        'dashboard hoc_legacy engine',
+        [
+          'Gemfile',
+          'Gemfile.lock',
+          'deployment.rb',
+          'dashboard/**/*',
+          'lib/**/*',
+          'shared/**/*'
+        ],
+        ignore: ['dashboard/test/ui/**/*', 'dashboard/db/schema_cache.yml']
+      ) do
+        TestRunUtils.run_dashboard_hoc_legacy_engine_tests
+      end
+    end
+
+    desc 'Runs dashboard marketing engine tests if dashboard might have changed from staging.'
+    timed_task_with_logging :dashboard_marketing_engine do
+      run_tests_if_changed(
+        'dashboard marketing engine',
+        [
+          'Gemfile',
+          'Gemfile.lock',
+          'deployment.rb',
+          'dashboard/**/*',
+          'lib/**/*',
+          'shared/**/*'
+        ],
+        ignore: ['dashboard/test/ui/**/*', 'dashboard/db/schema_cache.yml']
+      ) do
+        TestRunUtils.run_dashboard_marketing_engine_tests
+      end
+    end
+
     desc 'Runs pegasus tests if pegasus might have changed from staging.'
     timed_task_with_logging :pegasus do
       run_tests_if_changed(
@@ -447,6 +513,9 @@ namespace :test do
       # :interpreter,
       :dashboard,
       :dashboard_legacy,
+      :dashboard_cdo_contentful_engine,
+      :dashboard_hoc_legacy_engine,
+      :dashboard_marketing_engine,
       :pegasus,
       :shared,
       :lib,
@@ -461,7 +530,19 @@ namespace :test do
 
   timed_task_with_logging changed: ['changed:all']
 
-  timed_task_with_logging all: [:frontend, :apps, :dashboard, :dashboard_legacy, :pegasus, :shared, :lib, :bin]
+  timed_task_with_logging all: [
+    :frontend,
+    :apps,
+    :dashboard,
+    :dashboard_legacy,
+    :dashboard_cdo_contentful_engine,
+    :dashboard_hoc_legacy_engine,
+    :dashboard_marketing_engine,
+    :pegasus,
+    :shared,
+    :lib,
+    :bin,
+  ]
 end
 timed_task_with_logging test: ['test:changed']
 

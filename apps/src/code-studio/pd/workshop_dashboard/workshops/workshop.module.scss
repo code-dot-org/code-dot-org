@@ -406,6 +406,16 @@ div.card {
           background: var(--background-warning-light);
         }
       }
+
+      &.flexTextCardContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        .textCard {
+          flex: 0;
+        }
+      }
     }
 
     // Medium Screens: Switch to 2 columns
