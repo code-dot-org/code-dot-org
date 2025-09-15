@@ -1,7 +1,6 @@
 import Alert from '@code-dot-org/component-library/alert';
 import {Button} from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {OverlineTwoText} from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
@@ -27,9 +26,9 @@ import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {commonI18n} from '@cdo/apps/types/locale';
 import currentLocale from '@cdo/apps/util/currentLocale';
-import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import PublishVersionPanel from './PublishVersionPanel';
 import VersionHistoryRow from './VersionHistoryRow';
 
 import moduleStyles from './version-history-panel.module.scss';
@@ -51,7 +50,6 @@ const VersionHistoryPanel: React.FunctionComponent<
   const [listLoadError, setListLoadError] = useState(false);
   const [versionLoadError, setVersionLoadError] = useState(false);
   const [versionLoading, setVersionLoading] = useState(false);
-  const [commitDescription, setCommitDescription] = useState<string>('');
   const locale = currentLocale();
   const latestVersion = useMemo(
     () => versionList?.find(v => v.isLatest)?.versionId || INITIAL_VERSION_ID,
@@ -74,7 +72,6 @@ const VersionHistoryPanel: React.FunctionComponent<
   const projectSources = useAppSelector(
     state => state.lab2Project.projectSources
   );
-  const channelId = useAppSelector(state => state.lab.channel?.id);
   const dialogControl = useDialogControl();
 
   const dateFormatter = useMemo(() => {
@@ -314,70 +311,6 @@ const VersionHistoryPanel: React.FunctionComponent<
     setSelectedVersion,
   ]);
 
-  const onPublishVersion = useCallback(async () => {
-    if (projectSources) {
-      const projectManager = Lab2Registry.getInstance().getProjectManager();
-      if (!projectManager) {
-        console.error('Project manager not available');
-        return;
-      }
-
-      try {
-        // Save project and update Redux state
-        await dispatch(
-          setAndSaveProjectSources(
-            projectSources,
-            /* forceSave */ true,
-            /* forceNewVersion */ true
-          )
-        );
-
-        // Get the most recent version ID.
-        const newVersionId = projectManager.getCurrentVersionId();
-
-        // Add comment to the new version.
-        if (newVersionId && commitDescription.trim()) {
-          const payload = {
-            storage_id: channelId,
-            version_id: newVersionId,
-            comment: commitDescription,
-          };
-
-          try {
-            await HttpClient.post(
-              '/project_commits',
-              JSON.stringify(payload),
-              true,
-              {
-                'Content-Type': 'application/json; charset=UTF-8',
-              }
-            );
-
-            // Mark that the current version now has a comment to prevent autosave from overwriting it
-            projectManager.setCurrentVersionHasComment(true);
-
-            // Clear the commit description text area.
-            setCommitDescription('');
-          } catch (error) {
-            console.error('Failed to save commit comment:', error);
-            // If saving the comment fails, fall back to refetching the version list
-            // to ensure UI state is consistent with backend
-          }
-        }
-
-        successfulRestoreCleanUp(true);
-      } catch (error) {
-        console.error('Failed to save project:', error);
-      }
-    }
-  }, [
-    projectSources,
-    dispatch,
-    channelId,
-    commitDescription,
-    successfulRestoreCleanUp,
-  ]);
-
   const showList = listLoaded && !listLoading && !listLoadError;
 
   return (
@@ -467,35 +400,11 @@ const VersionHistoryPanel: React.FunctionComponent<
         </div>
       )}
       {isLatestVersion(selectedVersion) && (
-        <div className={moduleStyles.footerPanel}>
-          <div className={moduleStyles.publishCurrentVersionHeader}>
-            <div className={moduleStyles.publishCurrentVersionHeaderText}>
-              <OverlineTwoText className={moduleStyles.overlineTwoText}>
-                Publish Current Version
-              </OverlineTwoText>
-            </div>
-          </div>
-          <div className={moduleStyles.publishCurrentVersionDescription}>
-            <div className={moduleStyles.publishCurrentVersionDescriptionInput}>
-              <div className={moduleStyles.label}>Describe your changes</div>
-              <textarea
-                onChange={e => setCommitDescription(e.target.value)}
-                value={commitDescription}
-                placeholder="Include a description of your changes and then click Publish to save this current version."
-                color="gray"
-                className={moduleStyles.textArea}
-              />
-            </div>
-            <Button
-              id="publish-version-button"
-              size={'s'}
-              className={moduleStyles.versionButton}
-              text="Publish"
-              onClick={onPublishVersion}
-              disabled={versionLoading || commitDescription.trim() === ''}
-            />
-          </div>
-        </div>
+        <PublishVersionPanel
+          projectSources={projectSources}
+          onSuccess={() => successfulRestoreCleanUp(true)}
+          versionLoading={versionLoading}
+        />
       )}
     </div>
   );

@@ -195,7 +195,7 @@ export default class ProjectManager {
    * If a save is already enqueued, update this.sourceToSave with the given source.
    * @param sources ProjectSources: the source to save.
    * @param forceSave boolean: if the save should happen immediately
-   * @param forceNewVersion boolean: if the save should create a new version initiatedby the user
+   * @param forceNewVersion boolean: if the save should create a new version initiated by the user
    * @returns a promise that resolves to a Response. If the save is successful, the response
    * will be empty, otherwise it will contain failure information.
    */
