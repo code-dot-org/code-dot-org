@@ -57,6 +57,7 @@ export default class ProjectManager {
   private isShareView: boolean | undefined;
   private thumbnailUrl: string | undefined;
   private thumbnailPngBlob: Blob | undefined;
+  private currentVersionHasComment: boolean = false;
 
   constructor({
     sourcesStore,
@@ -104,6 +105,8 @@ export default class ProjectManager {
     }
 
     this.lastChannel = channel;
+    // Initialize comment flag based on actual current version state
+    await this.initializeCurrentVersionCommentState();
     const abuseScore = await this.channelsStore.getAbuseScore(channel);
     const sharingDisabled = await this.channelsStore.getSharingDisabled(
       channel
@@ -343,6 +346,58 @@ export default class ProjectManager {
     return this.sourcesStore.getCurrentVersionId();
   }
 
+  /**
+   * Check if the current version has a comment associated with it.
+   * This is used to determine if we should force a new version during autosave
+   * to prevent overwriting a version that has a comment.
+   * @returns boolean true if current version has a comment
+   */
+  getCurrentVersionHasComment(): boolean {
+    return this.currentVersionHasComment;
+  }
+
+  /**
+   * Set whether the current version has a comment. This should be called
+   * when a comment is published or when the current version changes.
+   * @param hasComment whether the current version has a comment
+   */
+  setCurrentVersionHasComment(hasComment: boolean): void {
+    this.currentVersionHasComment = hasComment;
+  }
+
+  /**
+   * Initialize the comment state cache by checking if the current version
+   * actually has a comment. This should be called once when loading a project.
+   */
+  private async initializeCurrentVersionCommentState(): Promise<void> {
+    const currentVersionId = this.getCurrentVersionId();
+    if (!currentVersionId) {
+      this.setCurrentVersionHasComment(false);
+      return;
+    }
+
+    try {
+      const versionList = await this.getVersionList(true); // include comments
+      const currentVersion = versionList.find(
+        v => v.versionId === currentVersionId
+      );
+      const hasComment = !!currentVersion?.comment?.trim();
+      this.setCurrentVersionHasComment(hasComment);
+
+      if (hasComment) {
+        this.metricsReporter.logInfo(
+          'Initialized comment cache: current version has comment'
+        );
+      }
+    } catch (error) {
+      // If we can't fetch version list, err on the side of caution and assume no comment
+      this.metricsReporter.logWarning(
+        `Failed to initialize comment state: ${error}`
+      );
+      this.setCurrentVersionHasComment(false);
+    }
+  }
+
   isForceReloading(): boolean {
     return this.forceReloading;
   }
@@ -417,12 +472,28 @@ export default class ProjectManager {
     }
     // Only save the source if it has changed.
     if (this.sourcesToSave && sourceChanged) {
+      // Check if we need to force a new version to preserve a commented version
+      // This is particularly important for Javalab where autosave could overwrite
+      // a version that has a comment, breaking the connection between the comment
+      // and the version.
+      let shouldForceNewVersion = forceNewVersion;
+      if (
+        !forceNewVersion &&
+        sourceChanged &&
+        this.getCurrentVersionHasComment()
+      ) {
+        shouldForceNewVersion = true;
+        this.metricsReporter.logInfo(
+          'Forcing new version during autosave to preserve commented version'
+        );
+      }
+
       try {
         await this.sourcesStore.save(
           this.channelId,
           this.sourcesToSave,
           this.lastChannel.projectType,
-          forceNewVersion
+          shouldForceNewVersion
         );
         if (this.thumbnailPngBlob) {
           await this.saveThumbnail();
@@ -439,6 +510,11 @@ export default class ProjectManager {
         return;
       }
       this.lastSource = JSON.stringify(this.sourcesToSave);
+
+      // If we created a new version (not replacing existing), the new version won't have a comment
+      if (shouldForceNewVersion) {
+        this.setCurrentVersionHasComment(false);
+      }
     }
 
     // Normally, reduceChannelUpdates is false and we update the channel

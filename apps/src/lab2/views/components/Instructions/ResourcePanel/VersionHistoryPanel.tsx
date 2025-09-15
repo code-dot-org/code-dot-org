@@ -351,6 +351,9 @@ const VersionHistoryPanel: React.FunctionComponent<
               }
             );
 
+            // Mark that the current version now has a comment to prevent autosave from overwriting it
+            projectManager.setCurrentVersionHasComment(true);
+
             // Clear the commit description text area.
             setCommitDescription('');
           } catch (error) {
