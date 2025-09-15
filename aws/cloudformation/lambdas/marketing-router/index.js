@@ -782,6 +782,7 @@ const marketingPaths = {
   "/back-to-school-for-district": true,
   "/india": true,
   "/global/cuantrix": true,
+  "/news/why-ai-education-is-the-key-to-global-competitiveness": true,
 }
 
 const pathPatterns = [

@@ -259,6 +259,7 @@ Dashboard::Application.routes.draw do
       get '/users/gdpr_check', to: 'registrations#gdpr_check'
       get '/users/sign_up/finish_student_account', to: 'registrations#finish_student_account'
       get '/users/sign_up/finish_teacher_account', to: 'registrations#finish_teacher_account'
+      get '/users/personalization_information', to: 'registrations#personalization_information'
       patch '/dashboardapi/users', to: 'registrations#update'
       patch '/users/upgrade', to: 'registrations#upgrade'
       patch '/users/set_student_information', to: 'registrations#set_student_information'

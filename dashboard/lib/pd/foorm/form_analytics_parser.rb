@@ -52,8 +52,15 @@ module Pd::Foorm
         form_version: form.version
       }
 
-      parsed_form_questions = FoormParser.parse_form_questions(form.questions)
-      reshaped_form_questions = reshape_form_questions(parsed_form_questions)
+      parsed_form_with_categories = FoormParser.parse_forms_preserving_categories([form])
+      form_key = get_form_key(form.name, form.version)
+
+      general_questions = parsed_form_with_categories.dig(:general, form_key)
+      facilitator_questions = parsed_form_with_categories.dig(:facilitator, form_key)
+
+      all_questions = {general: general_questions || {}, facilitator: facilitator_questions || {}}
+
+      reshaped_form_questions = reshape_form_questions(all_questions)
 
       reshaped_form_questions.each do |reshaped_form_question|
         reshaped_form_questions_with_metadata << form_metadata.merge(reshaped_form_question)
@@ -75,6 +82,7 @@ module Pd::Foorm
             item_name: question_name,
             item_text: fill_question_placeholders(question_details[:title]),
             item_type: question_details[:type],
+            item_category: question_details[:category],
             is_facilitator_specific:  section == :facilitator ? 1 : 0
           }
 
@@ -94,7 +102,7 @@ module Pd::Foorm
           when ANSWER_MATRIX
             readable_response_options = question_details[:columns].values
 
-            question_details[:rows].each do |matrix_item_name, matrix_item_text|
+            question_details[:matrix_rows].each do |matrix_item_name, matrix_item_details|
               reshaped_matrix_item = reshaped_form_question.clone
 
               # For matrix questions, put the question name and text (generally a preamble) in their own attributes.
@@ -104,7 +112,8 @@ module Pd::Foorm
 
               additional_attributes = {
                 item_name: matrix_item_name,
-                item_text: matrix_item_text,
+                item_text: matrix_item_details[:text],
+                item_category: matrix_item_details[:category],
                 response_options: readable_response_options,
                 num_response_options: readable_response_options.length
               }

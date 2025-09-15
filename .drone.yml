@@ -53,10 +53,22 @@ steps:
 
   - name: checkout
     image: bitnamilegacy/git
+    environment:
+      GITHUB_TOKEN:
+        from_secret: GITHUB_TOKEN
     commands:
+      # Configure git to use the token for all GitHub operations
+      - git config --global credential.helper store
+      - echo "https://${GITHUB_TOKEN}:x-oauth-basic@github.com" > ~/.git-credentials
       - git lfs install --skip-repo
+      # Construct authenticated GitHub URL.
+      # DRONE_REPO_OWNER = organization name (e.g., "code-dot-org")
+      # DRONE_REPO_NAME = repository name (e.g., "code-dot-org")
+      - AUTHENTICATED_GITHUB_URL="https://${GITHUB_TOKEN}@github.com/${DRONE_REPO_OWNER}/${DRONE_REPO_NAME}.git"
       # We should be in a cached git repo, but clone if the cache failed
-      - "[ -d .git ] || (echo 'WARNING: get-cached-staging failed: checkout will be SLOW and LFS $$$!' && git clone --branch $DRONE_BRANCH $DRONE_GIT_HTTP_URL .)"
+      - "[ -d .git ] || (echo 'WARNING: get-cached-staging failed: checkout will be SLOW and LFS $$$!' && git clone --branch $DRONE_BRANCH $AUTHENTICATED_GITHUB_URL .)"
+      # Update the remote URL to use authentication
+      - git remote set-url origin $AUTHENTICATED_GITHUB_URL
       # Checkout our source branch (=the PR)
       - git fetch origin $DRONE_SOURCE_BRANCH
       - git checkout $DRONE_SOURCE_BRANCH
@@ -186,10 +198,22 @@ steps:
 
   - name: checkout
     image: bitnamilegacy/git
+    environment:
+      GITHUB_TOKEN:
+        from_secret: GITHUB_TOKEN
     commands:
+      # Configure git to use the token for all GitHub operations
+      - git config --global credential.helper store
+      - echo "https://${GITHUB_TOKEN}:x-oauth-basic@github.com" > ~/.git-credentials
       - git lfs install --skip-repo
+      # Construct authenticated URL.
+      # DRONE_REPO_OWNER = organization name (e.g., "code-dot-org")
+      # DRONE_REPO_NAME = repository name (e.g., "code-dot-org")
+      - AUTHENTICATED_GITHUB_URL="https://${GITHUB_TOKEN}@github.com/${DRONE_REPO_OWNER}/${DRONE_REPO_NAME}.git"
       # We should be in a cached git repo, but clone if the cache failed
-      - "[ -d .git ] || (echo 'get-cached-staging failed: checkout will be SLOW and LFS $$$!' && git clone --branch $DRONE_BRANCH $DRONE_GIT_HTTP_URL .)"
+      - "[ -d .git ] || (echo 'get-cached-staging failed: checkout will be SLOW and LFS $$!' && git clone --branch $DRONE_BRANCH $AUTHENTICATED_GITHUB_URL .)"
+      # Update the remote URL to use authentication
+      - git remote set-url origin $AUTHENTICATED_GITHUB_URL
       # Checkout our source branch (the PR's branch).
       - git fetch origin $DRONE_SOURCE_BRANCH
       - git checkout $DRONE_SOURCE_BRANCH
@@ -289,9 +313,19 @@ clone:
 steps:
   - name: clone
     image: bitnamilegacy/git
+    environment:
+      GITHUB_TOKEN:
+        from_secret: GITHUB_TOKEN
     commands:
+      # Configure git to use the token for all GitHub operations
+      - git config --global credential.helper store
+      - echo "https://${GITHUB_TOKEN}:x-oauth-basic@github.com" > ~/.git-credentials
       - git lfs install
-      - git clone --branch $DRONE_BRANCH $DRONE_GIT_HTTP_URL . 
+      # Construct authenticated GitHub URL
+      # DRONE_REPO_OWNER = organization name (e.g., "code-dot-org")
+      # DRONE_REPO_NAME = repository name (e.g., "code-dot-org")
+      - AUTHENTICATED_GITHUB_URL="https://${GITHUB_TOKEN}@github.com/${DRONE_REPO_OWNER}/${DRONE_REPO_NAME}.git"
+      - git clone --branch $DRONE_BRANCH $AUTHENTICATED_GITHUB_URL .
 
   - name: cache-staging-clone
     image: plugins/s3-cache
@@ -353,6 +387,6 @@ trigger:
     - push
 ---
 kind: signature
-hmac: 00ca47ae7662acfdeaa0032ce47719f2f003245624d2da2ba08753165ca57af0
+hmac: 72a93f7f4b0f546c11da14256289517c006e0168db6519cd00b1b772fdabe3d9
 
 ...

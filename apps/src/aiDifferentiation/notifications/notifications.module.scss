@@ -55,16 +55,10 @@
 }
 
 p.text {
-  font-size: 14px;
-  font-weight: 600;
   margin-inline-end: 16px;
-  margin-bottom: 0;
+  margin-bottom: 4px;
   flex-grow: 1;
   height: fit-content;
-
-  p {
-    color: inherit;
-  }
 }
 
 .links {
@@ -89,6 +83,11 @@ p.text {
   align-items: center;
   height: 24px;
   font-weight: 600;
+
+  &:hover {
+    text-decoration: none;
+    color: var(--text-neutral-black-fixed);
+  }
 
   & i {
     margin-inline-start: 4px;
