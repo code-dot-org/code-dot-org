@@ -82,6 +82,7 @@ const Section: React.FC<SectionProps> = ({
   id,
   className,
   children,
+  ...experienceProps
 }: SectionProps) => {
   // This is used for the Corporate Site only to determine
   // if the section has a hardcoded pattern.
@@ -116,6 +117,7 @@ const Section: React.FC<SectionProps> = ({
             }
           : {}),
       }}
+      {...experienceProps}
     >
       <Container
         className={classNames(

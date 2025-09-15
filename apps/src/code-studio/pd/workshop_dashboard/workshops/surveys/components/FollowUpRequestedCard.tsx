@@ -9,8 +9,8 @@ import React, {FC} from 'react';
 
 import noResponsesEmail from '@cdo/static/pd/no-responses-email.png';
 
-import {FollowUpRequestedItem} from '../../../WorkshopFormTemplate/types';
 import {CopyButton} from '../../components/CopyButton';
+import {FollowUpRequestedItem} from '../../types';
 
 import {EmptyState} from './EmptyState';
 

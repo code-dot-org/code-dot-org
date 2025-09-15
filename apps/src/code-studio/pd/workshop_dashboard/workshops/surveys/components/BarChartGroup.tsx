@@ -19,8 +19,7 @@ import {
   ReferenceLine,
 } from 'recharts';
 
-import {ColorMapKey} from '../../../WorkshopFormTemplate/types';
-import {COLOR_MAP} from '../constants';
+import {COLOR_MAP, ColorMapKey} from '../constants';
 
 import moduleStyles from './barChartGroupStyles.module.scss';
 

@@ -435,7 +435,7 @@
   },
   "https://studio.code.org/s/allthethings/lessons/17/levels/1": {
     "short_instructions": "Make a 3x5 letter 'A'. The widget is setup with the incorrect dimensions. Your first task is to set the second byte to the 8-bit binary code for 5: 0000 0101. Then start entering pixel data.",
-    "long_instructions": "<img style=\"float:right; margin:0 20px\" src=\"https://code.org/images/cspunit1/letterA.png\" width=\"150\">\n            # Task 1: Make a 3x5 letter 'A'\n            Start by trying to recreate the 3x5 letter \"A\" depicted (at right) using the pixelation widget. \n          \n            The image is intially setup with the *incorrect* dimensions. Your first task is to set the second byte to the 8-bit binary code for 5: 0000 0101. Then you can start entering pixel data to make the A.\n            "
+    "long_instructions": "<img style=\"float:right; margin:0 20px\" src=\"/blockly/media/cspunit1/letterA.png\" width=\"150\">\n            # Task 1: Make a 3x5 letter 'A'\n            Start by trying to recreate the 3x5 letter \"A\" depicted (at right) using the pixelation widget. \n          \n            The image is intially setup with the *incorrect* dimensions. Your first task is to set the second byte to the 8-bit binary code for 5: 0000 0101. Then you can start entering pixel data to make the A.\n            "
   },
   "https://studio.code.org/s/allthethings/lessons/17/levels/2": {
     "short_instructions": "We start you with the 4x2 image Maddie was creating, but we've left out the last two squares. Finish off the image by figuring out which two colors are missing and encode them.",
@@ -443,7 +443,7 @@
   },
   "https://studio.code.org/s/allthethings/lessons/17/levels/3": {
     "short_instructions": "We start you out with the 4x4 image Maddie created in the video. Your task is to fill a 4x4 grid with colors using 12-bits per pixel. Here are the requirements: Row 1 - fill with shades of red. Row 2 - shades of green. Row 3 - shades of blue. Row 4 - shades of gray.",
-    "long_instructions": "# Pixelation: Task 3\n\n<img src = \"https://code.org/images/cspunit1/ColorTask3.png\" style=\"float:right; margin:0 20px\" width=200>\n**Directions:**\nWe start you out with the 4x4 image Maddie created in the video.\n\nYour task is to fill a 4x4 grid with colors using _12-bits per pixel_. The result should look something like (but not exactly) the image shown at right.  \n\nHere are the requirements:\n\n-   Row 1 - fill with shades of red. \n-   Row 2 - shades of green. \n-   Row 3 - shades of blue. \n-   Row 4 - shades of gray."
+    "long_instructions": "# Pixelation: Task 3\n\n<img src = \"/blockly/media/cspunit1/ColorTask3.png\" style=\"float:right; margin:0 20px\" width=200>\n**Directions:**\nWe start you out with the 4x4 image Maddie created in the video.\n\nYour task is to fill a 4x4 grid with colors using _12-bits per pixel_. The result should look something like (but not exactly) the image shown at right.  \n\nHere are the requirements:\n\n-   Row 1 - fill with shades of red. \n-   Row 2 - shades of green. \n-   Row 3 - shades of blue. \n-   Row 4 - shades of gray."
   },
   "https://studio.code.org/s/allthethings/lessons/17/levels/4": {
     "short_instructions": "This pixelation level demonstrates the use of the `hide_encoding_controls` option.  Notice that the level displays the image data in hexadecimal and does not let you change it back to binary.",
@@ -3104,6 +3104,9 @@
   },
   "https://studio.code.org/s/allthethings/lessons/51/levels/8": {
     "long_instructions": "## Web Lab 2 Predict Level\n\nThis is an example of a predict level with multiple choice options.\n\nWhat will happen when you click on the 'Click me' button? Submit your answer and then try it out!"
+  },
+  "https://studio.code.org/s/allthethings/lessons/51/levels/9": {
+    "long_instructions": "### Assessment\n\nThis is a submittable level! Create a web page that shares an interest of yours.\n\nAdd an HTML and CSS file to your project."
   },
   "https://studio.code.org/s/allthethings/lessons/52/levels/1": {
     "long_instructions": "Try everything!"

@@ -1,8 +1,8 @@
 import {workshopReducer} from '@cdo/apps/code-studio/pd/workshop_dashboard/WorkshopFormTemplate/reducers/workshopReducer';
 import {
-  WorkshopFormState,
   WorkshopAction,
-} from '@cdo/apps/code-studio/pd/workshop_dashboard/WorkshopFormTemplate/types';
+  WorkshopFormState,
+} from '@cdo/apps/code-studio/pd/workshop_dashboard/workshops/types';
 
 describe('workshopReducer', () => {
   const initialState: WorkshopFormState = {

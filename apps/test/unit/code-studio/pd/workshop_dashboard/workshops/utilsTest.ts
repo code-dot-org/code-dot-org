@@ -1,18 +1,18 @@
 import {Option} from '@cdo/apps/code-studio/pd/workshop_dashboard/WorkshopFormTemplate/components/MultiSelectInput';
 import {
-  Organizer,
   Session,
-  SessionFormState,
   Workshop,
+  Organizer,
+  SessionFormState,
   WorkshopFormState,
-} from '@cdo/apps/code-studio/pd/workshop_dashboard/WorkshopFormTemplate/types';
+} from '@cdo/apps/code-studio/pd/workshop_dashboard/workshops/types';
 import {
-  emptyValue,
   sessionDataToState,
-  sessionStateToApi,
   workshopDataToState,
+  sessionStateToApi,
   workshopStateToApi,
-} from '@cdo/apps/code-studio/pd/workshop_dashboard/WorkshopFormTemplate/utils';
+  emptyValue,
+} from '@cdo/apps/code-studio/pd/workshop_dashboard/workshops/utils';
 
 describe('sessionDataToState', () => {
   it('should convert session data to state with timezone', () => {
