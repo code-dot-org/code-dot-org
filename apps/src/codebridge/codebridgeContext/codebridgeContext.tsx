@@ -30,6 +30,7 @@ export type CodebridgeContextType = {
     uploadFunction: () => Promise<void>
   ) => void;
   aiTutorSystemPromptName?: string;
+  aiTutorMultimodalEnabled?: boolean;
 };
 
 export const CodebridgeContext = createContext<CodebridgeContextType | null>(

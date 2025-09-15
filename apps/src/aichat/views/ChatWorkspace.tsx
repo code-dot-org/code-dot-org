@@ -76,6 +76,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   channelId,
   hasStarterAssets = false,
 }) => {
+  console.log(`multimodalEnabled: ${multimodalEnabled}`);
   if (multimodalEnabled && (!levelName || !channelId)) {
     console.warn(
       'Multimodal support requires level name and channel ID. Multimodal features will not be available.'
@@ -111,6 +112,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
 
   const multimodalAvailable =
     multimodalSupported && multimodalEnabled && !!levelName && !!channelId;
+  console.log({multimodalEnabled, multimodalSupported, multimodalAvailable});
 
   const buildAssetUrl = useCallback(
     (asset: ChatAsset) => {

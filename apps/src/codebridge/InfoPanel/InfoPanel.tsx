@@ -58,6 +58,7 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
     aiTutorContextPromise,
     startSources,
     aiTutorSystemPromptName,
+    aiTutorMultimodalEnabled,
   } = useCodebridgeContext();
   const {
     mapReference,
@@ -212,6 +213,7 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
           settings={settings}
           versionHistoryProps={{startSources}}
           aiTutorSystemPromptName={aiTutorSystemPromptName}
+          aiTutorMultimodalEnabled={aiTutorMultimodalEnabled}
         />
       </div>
     );

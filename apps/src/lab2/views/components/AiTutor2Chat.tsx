@@ -108,12 +108,18 @@ const chatButtons = chatButtonData.map(button => ({
 interface AiTutor2ChatProps {
   aiTutorSystemPromptName?: string;
   aiTutorContextPromise: Promise<AiTutorContext>;
+  aiTutorMultimodalEnabled?: boolean;
+  levelName?: string;
+  channelId?: string;
 }
 
 // A free chat with lab-supplied context added to each question.
 const AiTutor2Chat: React.FunctionComponent<AiTutor2ChatProps> = ({
   aiTutorSystemPromptName,
   aiTutorContextPromise,
+  aiTutorMultimodalEnabled = false,
+  levelName,
+  channelId,
 }) => {
   const dispatch = useAppDispatch();
 
@@ -189,6 +195,9 @@ const AiTutor2Chat: React.FunctionComponent<AiTutor2ChatProps> = ({
         onClear={() => {
           dispatch(clearChatMessages());
         }}
+        multimodalEnabled={aiTutorMultimodalEnabled}
+        levelName={levelName}
+        channelId={channelId}
       />
     </div>
   ) : (
