@@ -9,7 +9,11 @@ import {
   DropdownFormFieldRelatedProps,
 } from '@/common/types';
 
-import CustomDropdown, {CustomDropdownOption} from '../CustomDropdown';
+import CustomDropdown, {
+  CustomDropdownMenuPlacement,
+  CustomDropdownMenuVerticalPlacement,
+  CustomDropdownOption,
+} from '../CustomDropdown';
 
 import moduleStyles from './../customDropdown.module.scss';
 
@@ -42,6 +46,10 @@ interface BaseCheckboxDropdownProps
   checkedOptions: string[];
   /** CheckboxDropdown onChange handler */
   onChange: (args: React.ChangeEvent<HTMLInputElement>) => void;
+  /** CheckboxDropdown menu placement */
+  menuPlacement?: CustomDropdownMenuPlacement;
+  /** CheckboxDropdown menu vertical placement */
+  menuVerticalPlacement?: CustomDropdownMenuVerticalPlacement;
 }
 
 interface CheckboxDropdownWithoutControlProps
@@ -98,6 +106,8 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
   helperIcon,
   errorMessage,
   styleAsFormField = false,
+  menuPlacement = 'left',
+  menuVerticalPlacement = 'bottom',
   ...rest
 }) => {
   return (
@@ -118,6 +128,8 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
       selectedValueText={checkedOptions
         ?.map(str => allOptions.find(opt => opt.value === str)?.label)
         .join(', ')}
+      menuPlacement={menuPlacement}
+      menuVerticalPlacement={menuVerticalPlacement}
       {...rest}
     >
       <ul>
