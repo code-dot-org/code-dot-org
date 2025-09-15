@@ -3,6 +3,9 @@
 
 dashboard_enable_pegasus: true
 
+# In local dev, start Puma in single mode (no workers) rather than cluster mode:
+dashboard_workers: 0
+
 db_cluster_id: localhost
 db_endpoint_writer: localhost
 db_endpoint_writer_port: 3306

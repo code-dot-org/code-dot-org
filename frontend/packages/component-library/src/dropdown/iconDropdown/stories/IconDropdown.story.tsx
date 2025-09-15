@@ -542,3 +542,225 @@ GroupOfSizesOfIconDropdown.args = {
     },
   ],
 };
+
+export const GroupOfMenuPlacementOptions = MultipleTemplate.bind({});
+GroupOfMenuPlacementOptions.args = {
+  components: [
+    {
+      name: 'menu-placement-left',
+      options: [
+        {
+          value: 'option-1',
+          label: 'Option 1',
+          icon: {iconName: 'check', iconStyle: 'solid'},
+        },
+        {
+          value: 'option-2',
+          label: 'Option 2',
+          icon: {iconName: 'xmark', iconStyle: 'solid'},
+        },
+      ],
+      selectedOption: {
+        value: 'option-1',
+        label: 'Option 1',
+        icon: {iconName: 'check', iconStyle: 'solid'},
+      },
+      labelText: 'Placement Left',
+      onChange: () => null,
+      menuPlacement: 'left',
+      size: 'm',
+      color: dropdownColors.black,
+    },
+    {
+      name: 'menu-placement-right',
+      options: [
+        {
+          value: 'option-1',
+          label: 'Option 1',
+          icon: {iconName: 'check', iconStyle: 'solid'},
+        },
+        {
+          value: 'option-2',
+          label: 'Option 2',
+          icon: {iconName: 'xmark', iconStyle: 'solid'},
+        },
+      ],
+      selectedOption: {
+        value: 'option-1',
+        label: 'Option 1',
+        icon: {iconName: 'check', iconStyle: 'solid'},
+      },
+      labelText: 'Placement Right',
+      onChange: () => null,
+      menuPlacement: 'right',
+      size: 'm',
+      color: dropdownColors.black,
+    },
+  ],
+};
+
+export const GroupOfMenuVerticalPlacementOptions = MultipleTemplate.bind({});
+GroupOfMenuVerticalPlacementOptions.args = {
+  components: [
+    {
+      name: 'menu-vertical-top',
+      options: [
+        {
+          value: 'option-1',
+          label: 'Option 1',
+          icon: {iconName: 'check', iconStyle: 'solid'},
+        },
+        {
+          value: 'option-2',
+          label: 'Option 2',
+          icon: {iconName: 'xmark', iconStyle: 'solid'},
+        },
+      ],
+      selectedOption: {
+        value: 'option-1',
+        label: 'Option 1',
+        icon: {iconName: 'check', iconStyle: 'solid'},
+      },
+      labelText: 'Vertical Top',
+      onChange: () => null,
+      menuVerticalPlacement: 'top',
+      size: 'm',
+      color: dropdownColors.black,
+    },
+    {
+      name: 'menu-vertical-bottom',
+      options: [
+        {
+          value: 'option-1',
+          label: 'Option 1',
+          icon: {iconName: 'check', iconStyle: 'solid'},
+        },
+        {
+          value: 'option-2',
+          label: 'Option 2',
+          icon: {iconName: 'xmark', iconStyle: 'solid'},
+        },
+      ],
+      selectedOption: {
+        value: 'option-1',
+        label: 'Option 1',
+        icon: {iconName: 'check', iconStyle: 'solid'},
+      },
+      labelText: 'Vertical Bottom',
+      onChange: () => null,
+      menuVerticalPlacement: 'bottom',
+      size: 'm',
+      color: dropdownColors.black,
+    },
+  ],
+};
+
+export const GroupOfAllPlacements = MultipleTemplate.bind({});
+GroupOfAllPlacements.args = {
+  components: [
+    {
+      name: 'placement-left-bottom',
+      labelText: 'Left + Bottom',
+      menuPlacement: 'left',
+      menuVerticalPlacement: 'bottom',
+      size: 'm',
+      color: dropdownColors.black,
+      options: [
+        {
+          value: 'option-1',
+          label: 'Option 1',
+          icon: {iconName: 'check', iconStyle: 'solid'},
+        },
+        {
+          value: 'option-2',
+          label: 'Option 2',
+          icon: {iconName: 'xmark', iconStyle: 'solid'},
+        },
+      ],
+      selectedOption: {
+        value: 'option-1',
+        label: 'Option 1',
+        icon: {iconName: 'check', iconStyle: 'solid'},
+      },
+      onChange: () => null,
+    },
+    {
+      name: 'placement-right-bottom',
+      labelText: 'Right + Bottom',
+      menuPlacement: 'right',
+      menuVerticalPlacement: 'bottom',
+      size: 'm',
+      color: dropdownColors.black,
+      options: [
+        {
+          value: 'option-1',
+          label: 'Option 1',
+          icon: {iconName: 'check', iconStyle: 'solid'},
+        },
+        {
+          value: 'option-2',
+          label: 'Option 2',
+          icon: {iconName: 'xmark', iconStyle: 'solid'},
+        },
+      ],
+      selectedOption: {
+        value: 'option-1',
+        label: 'Option 1',
+        icon: {iconName: 'check', iconStyle: 'solid'},
+      },
+      onChange: () => null,
+    },
+    {
+      name: 'placement-left-top',
+      labelText: 'Left + Top',
+      menuPlacement: 'left',
+      menuVerticalPlacement: 'top',
+      size: 'm',
+      color: dropdownColors.black,
+      options: [
+        {
+          value: 'option-1',
+          label: 'Option 1',
+          icon: {iconName: 'check', iconStyle: 'solid'},
+        },
+        {
+          value: 'option-2',
+          label: 'Option 2',
+          icon: {iconName: 'xmark', iconStyle: 'solid'},
+        },
+      ],
+      selectedOption: {
+        value: 'option-1',
+        label: 'Option 1',
+        icon: {iconName: 'check', iconStyle: 'solid'},
+      },
+      onChange: () => null,
+    },
+    {
+      name: 'placement-right-top',
+      labelText: 'Right + Top',
+      menuPlacement: 'right',
+      menuVerticalPlacement: 'top',
+      size: 'm',
+      color: dropdownColors.black,
+      options: [
+        {
+          value: 'option-1',
+          label: 'Option 1',
+          icon: {iconName: 'check', iconStyle: 'solid'},
+        },
+        {
+          value: 'option-2',
+          label: 'Option 2',
+          icon: {iconName: 'xmark', iconStyle: 'solid'},
+        },
+      ],
+      selectedOption: {
+        value: 'option-1',
+        label: 'Option 1',
+        icon: {iconName: 'check', iconStyle: 'solid'},
+      },
+      onChange: () => null,
+    },
+  ],
+};
