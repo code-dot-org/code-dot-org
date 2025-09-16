@@ -54,7 +54,7 @@ Feature: Using the V2 teacher dashboard local navigation - Eyes
     Given I sign in as "Teacher_Sally" and go home
     And I get levelbuilder access
 
-    When I click selector "#task-button-View-progress-New-Section" once I see it to load a new page
+    When I click selector "#task-button-View-progress-New-Section" once I see it
     Given I wait until element "#ui-test-teacher-sidebar" is visible
     Given I click selector "#ui-test-teacher-sidebar a:contains('Course')" once I see it
     And I wait until element "h1:contains('All the Things!')" is visible
