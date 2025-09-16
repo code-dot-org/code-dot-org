@@ -88,6 +88,7 @@ li.hrefLink {
     &:hover {
       text-decoration: none;
       color: var(--text-neutral-black-fixed);
+      background-color: var(--background-neutral-tertiary);
     }
 
     & i {
@@ -104,6 +105,10 @@ li.hrefLink {
   border: 1px solid var(--borders-neutral-solid);
   border-radius: 100px;
   font-weight: 600;
+
+  &:hover {
+    background-color: var(--background-neutral-tertiary);
+  }
 }
 
 p.date {

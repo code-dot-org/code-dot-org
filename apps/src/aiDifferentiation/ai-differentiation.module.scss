@@ -405,12 +405,18 @@ $fab-height: 60;
   min-height: 32px;
   border-radius: 0;
 
+  & span {
+    flex-grow: 1;
+    text-align: start;
+  }
+
   &.selected {
     border-left: 4px solid var(--borders-brand-teal-primary);
     background-color: var(--background-neutral-quaternary);
     padding-left: 12px;
     text-decoration: none;
     color: var(--text-neutral-primary);
+    font-weight: 600;
   }
 
   &:active {
@@ -426,5 +432,14 @@ $fab-height: 60;
   &:hover {
     background-color: var(--background-neutral-tertiary);
     text-decoration: none;
+  }
+
+  .readAt {
+    color: var(--background-error-primary);
+    font-size: 8px;
+    min-width: 8px;
+    margin-inline-start: 8px;
+    width: 8px;
+    line-height: var(--font-line-height-body-xxs, 17.6px);
   }
 }
