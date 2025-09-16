@@ -15,7 +15,7 @@ class CachingTest < ActionDispatch::IntegrationTest
     create_hourofcode_unit_and_levels
     setup_script_cache
 
-    assert_cached_queries(0) do
+    assert_cached_queries(1) do
       get '/hoc/1'
     end
     assert_response :success

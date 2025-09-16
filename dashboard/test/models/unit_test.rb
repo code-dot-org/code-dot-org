@@ -312,7 +312,7 @@ class UnitTest < ActiveSupport::TestCase
 
     csp1_2018.reload
     csp1_2017.reload
-    assert_equal csp1_2018.link, csp1_2017.redirect_to_unit_url(student)
+    assert_equal "/courses/#{csp_2018.name}/units/1", csp1_2017.redirect_to_unit_url(student)
   end
 
   test 'redirect_to_unit_url returns unit url of latest assigned unit version in family for unit belonging to modular single-unit course family' do
