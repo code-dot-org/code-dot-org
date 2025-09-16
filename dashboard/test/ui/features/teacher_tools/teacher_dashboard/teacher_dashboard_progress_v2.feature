@@ -137,7 +137,7 @@ Scenario: Teacher can open lesson data, refresh the page, and lesson data will s
 @eyes
 Scenario: Teacher can view lesson progress for when students have completed a lesson and when they have started a lesson but not finished
   Given I create an authorized teacher-associated student named "Sally"
-  Given I am assigned to course "allthethingscourse" unit 1
+  Given I am assigned to course "allthethingscourse" with teacher "Teacher_Sally" in a section named "Test Section"
   # Student completes one of many levels in lesson 2
   And I complete the level on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/2/levels/1"
 
@@ -152,7 +152,7 @@ Scenario: Teacher can view lesson progress for when students have completed a le
 
   When I sign in as "Teacher_Sally" and go home
   And I get levelbuilder access
-  And I navigate to the V2 progress dashboard for "Untitled Section"
+  And I navigate to the V2 progress dashboard for "Test Section"
   And I wait until element "#uitest-circle" is visible
 
   And I open my eyes to test "V2 progress dashboard"
