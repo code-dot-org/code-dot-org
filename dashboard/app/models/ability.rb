@@ -525,10 +525,6 @@ class Ability
         user.has_ai_tutor_access?
       end
 
-      can :chat_completion, :openai_chat do
-        user.has_ai_tutor_access?
-      end
-
       can :find_toxicity, :aichat do
         user.teacher_can_access_ai_chat? || user.student_can_access_ai_chat?
       end
