@@ -275,7 +275,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     # do all the logging
     @controller.expects :log_milestone
 
-    UserScript.create(user: @user, script: @script_level.script)
+    UserScript.create(user: @user, script: @script, unit_group: @script.get_original_unit_group)
     UserLevel.create(level: @script_level.level, user: @user, script: @script_level.script)
 
     assert_creates(LevelSource) do
