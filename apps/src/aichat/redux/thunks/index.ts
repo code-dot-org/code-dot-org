@@ -6,7 +6,6 @@ export {onSaveNoop} from './onSaveNoop';
 export {publishModelCard} from './publishModelCard';
 export {saveModelCard} from './saveModelCard';
 export {sendAnalytics} from './sendAnalytics';
-export {clearChatMessagesByUser} from './clearChatMessagesByUser';
 export {submitChatContents} from './submitChatContents';
 export {submitTeacherFeedback} from './submitTeacherFeedback';
 export {updateAiCustomization} from './updateAiCustomization';

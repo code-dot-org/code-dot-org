@@ -1,9 +1,8 @@
 import {Button} from '@code-dot-org/component-library/button';
 import {FontAwesomeV6IconProps} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
-import React, {useState, useEffect, useCallback} from 'react';
+import React, {useState, useEffect} from 'react';
 
-import {clearChatMessagesByUser} from '@cdo/apps/aichat/redux';
 import {
   ModelParameters,
   ChatButtonClickHandler,
@@ -16,7 +15,6 @@ import {queryParams} from '@cdo/apps/code-studio/utils';
 import {buildHiddenContextString} from '@cdo/apps/pythonlab/aiTutorHelper';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import HttpClient from '@cdo/apps/util/HttpClient';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import {shouldShowCopyCode} from '../../ai/ai-should-show-copy-code';
@@ -116,8 +114,6 @@ const AiTutor2Chat: React.FunctionComponent<AiTutor2ChatProps> = ({
   aiTutorContextPromise,
   aiTutorSystemPromptSettings,
 }) => {
-  const dispatch = useAppDispatch();
-
   const [systemPrompt, setSystemPrompt] = useState<string>();
   const [hiddenContextString, setHiddenContextString] = useState<string>();
 
@@ -185,10 +181,6 @@ const AiTutor2Chat: React.FunctionComponent<AiTutor2ChatProps> = ({
     };
   }, [aiTutorContextPromise]);
 
-  const onClear = useCallback(() => {
-    dispatch(clearChatMessagesByUser());
-  }, [dispatch]);
-
   return systemPrompt && hiddenContextString !== undefined ? (
     <div className={moduleStyles.container}>
       <ChatWorkspace
@@ -197,7 +189,6 @@ const AiTutor2Chat: React.FunctionComponent<AiTutor2ChatProps> = ({
         chatButtons={chatButtons}
         hiddenContext={hiddenContextString}
         systemPromptSettings={aiTutorSystemPromptSettings}
-        onClear={onClear}
       />
     </div>
   ) : (
