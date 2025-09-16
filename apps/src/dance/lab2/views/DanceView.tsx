@@ -79,8 +79,6 @@ const BLOCKLY_DIV_ID = 'dance-blockly-div';
 registerReducers(reducers);
 
 const isToolboxMode = getAppOptionsEditBlocks() === TOOLBOX_BLOCKS;
-const aiGenerateMode = queryParams('ai-generate') === 'true';
-const usingMusicProject = queryParams('music-channel') || aiGenerateMode;
 
 /**
  * Renders the Lab2 version of Dance Lab. This separate container
@@ -112,12 +110,16 @@ const DanceView: React.FunctionComponent<{
   const [loadedMusicProject, setLoadedMusicProject] = useState(false);
   const [generatedAiDance, setGeneratedAiDance] = useState(false);
 
+  const aiGenerateMode =
+    queryParams('ai-generate') === 'true' || levelProperties.aiCodeGenerate;
+  const usingMusicProject = queryParams('music-channel') || aiGenerateMode;
+
   const {setTheme} = useTheme();
   useEffect(() => {
     if (aiGenerateMode) {
       setTheme('Dark');
     }
-  }, [setTheme]);
+  }, [aiGenerateMode, setTheme]);
 
   const metadataToUse: SongMetadata | undefined = useMemo(() => {
     if (!musicProjectPlayer.current || !loadedMusicProject) {
@@ -319,7 +321,7 @@ const DanceView: React.FunctionComponent<{
     } as BlocklyOptions);
 
     return () => workspace.current?.dispose();
-  }, [dispatch, readonlyWorkspace, levelProperties]);
+  }, [dispatch, readonlyWorkspace, levelProperties, aiGenerateMode]);
 
   useEffect(() => {
     if (!workspace.current) {
@@ -380,7 +382,7 @@ const DanceView: React.FunctionComponent<{
         )
         .then(() => setLoadedMusicProject(true));
     }
-  }, []);
+  }, [aiGenerateMode, usingMusicProject]);
 
   // Set up the ProgramExecutor
   useEffect(() => {
@@ -449,10 +451,11 @@ const DanceView: React.FunctionComponent<{
     });
     setGeneratedAiDance(true);
   }, [
-    currentSources,
-    updateSources,
+    usingMusicProject,
     loadedMusicProject,
     levelProperties.sharedBlocks,
+    updateSources,
+    currentSources,
   ]);
 
   const settings = useBlocklySettings();
