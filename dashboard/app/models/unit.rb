@@ -649,8 +649,8 @@ class Unit < ApplicationRecord
     Unit.where("properties -> '$.curriculum_umbrella' = ?", curriculum_umbrella).pluck(:name)
   end
 
-  def has_standards_associations?(unit_group: get_original_unit_group)
-    curriculum_umbrella == 'CSF' && (unit_group&.version_year && unit_group.version_year >= '2019')
+  def has_standards_associations?
+    curriculum_umbrella == 'CSF' && (get_original_unit_group&.version_year && get_original_unit_group.version_year >= '2019')
   end
 
   def standards
