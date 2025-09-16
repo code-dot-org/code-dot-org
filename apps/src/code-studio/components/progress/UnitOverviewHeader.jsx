@@ -40,6 +40,7 @@ class UnitOverviewHeader extends Component {
     showRedirectWarning: PropTypes.bool,
     showHiddenUnitWarning: PropTypes.bool,
     courseName: PropTypes.string,
+    courseId: PropTypes.number,
     versions: PropTypes.objectOf(assignmentCourseVersionShape).isRequired,
     userId: PropTypes.number,
 
@@ -70,9 +71,13 @@ class UnitOverviewHeader extends Component {
   onDismissVersionWarning = () => {
     // Fire and forget. If this fails, we'll have another chance to
     // succeed the next time the warning is dismissed.
+    const {scriptId, courseId} = this.props;
+    const url = courseId
+      ? `/api/v1/user_scripts/course/${courseId}/unit/${scriptId}`
+      : `/api/v1/user_scripts/${scriptId}`;
     $.ajax({
       method: 'PATCH',
-      url: `/api/v1/user_scripts/${this.props.scriptId}`,
+      url,
       type: 'json',
       contentType: 'application/json;charset=UTF-8',
       data: JSON.stringify({version_warning_dismissed: true}),
