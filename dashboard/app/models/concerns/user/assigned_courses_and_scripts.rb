@@ -21,9 +21,8 @@ module User::AssignedCoursesAndScripts
     scripts.map(&:cached).select {|s| [Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview].include?(s.get_published_state)}
   end
 
-  def assigned_script?(script, unit_group: nil)
-    unit_group ||= script&.get_original_unit_group
-    section_scripts.include?(script) || section_courses.include?(unit_group)
+  def assigned_script?(script)
+    section_scripts.include?(script) || section_courses.include?(script&.get_original_unit_group)
   end
 
   # Checks if there are any launched scripts assigned to the user.

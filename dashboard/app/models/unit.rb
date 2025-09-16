@@ -527,7 +527,7 @@ class Unit < ApplicationRecord
     return nil unless has_other_versions?
     # No redirect unless user is allowed to view this unit version and they are not already assigned to this unit
     # or the course it belongs to.
-    return nil unless can_view_version?(user, unit_group: unit_group, locale: locale) && !user.assigned_script?(self, unit_group: unit_group)
+    return nil unless can_view_version?(user, unit_group: unit_group, locale: locale) && !user.assigned_script?(self)
 
     current_version_year = unit_group.version_year
     # Redirect user to the latest assigned unit group in this family,
