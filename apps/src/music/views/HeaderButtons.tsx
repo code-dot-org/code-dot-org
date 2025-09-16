@@ -1,11 +1,8 @@
 import {Button} from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {
-  WithTooltip,
-  WithTooltipHandle,
-} from '@code-dot-org/component-library/tooltip';
+import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import Typography from '@code-dot-org/component-library/typography';
-import React, {memo, useCallback, useContext, useRef} from 'react';
+import React, {memo, useCallback, useContext} from 'react';
 import {useSelector} from 'react-redux';
 
 import {useBlocklySettings} from '@cdo/apps/lab2/hooks/useBlocklySettings';
@@ -85,7 +82,6 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
   const currentPackId = useAppSelector(state => state.music.packId);
   const analyticsReporter = useContext(AnalyticsContext);
   const dialogControl = useDialogControl();
-  const tooltipRef = useRef<WithTooltipHandle>(null);
 
   const library = MusicLibrary.getInstance();
 
@@ -164,7 +160,6 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
             size: 'xs',
             hideTail: true,
           }}
-          ref={tooltipRef}
         >
           <Button
             id={`${id}-button`}
@@ -180,7 +175,7 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
         </WithTooltip>
       );
     },
-    [tooltipRef]
+    []
   );
 
   return (
