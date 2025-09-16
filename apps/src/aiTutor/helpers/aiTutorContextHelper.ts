@@ -6,7 +6,9 @@ import {AiTutorContext} from '../types';
  * consistency.
  */
 export abstract class AiTutorContextHelper<T extends object> {
-  protected abstract getAiTutorContext(): Promise<AiTutorContext>;
+  protected abstract getAiTutorContext():
+    | Promise<AiTutorContext>
+    | AiTutorContext;
 
   protected abstract setAiTutorContext(params: T): void;
 
