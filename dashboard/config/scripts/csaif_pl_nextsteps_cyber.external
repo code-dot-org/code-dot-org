@@ -12,7 +12,7 @@ markdown <<MARKDOWN
 <p style="font-size: 24pt; font-weight: bold; margin: 0; text-align: center; margin-top: 15px;">Congratulations!</p>
 
 <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;text-align: center;">
-You have completed the Cybersecurity and Global Impacts Module!
+You have completed the AI-Powered Threats and Defenses Module!
     </p>
 </div>
 
@@ -22,7 +22,7 @@ You have completed the Cybersecurity and Global Impacts Module!
     <h2 style="text-align: center">Help Us Make this Module Better!</h2>
     <p style="list-style-type: disc; padding-left: 20px; font-size: 14pt"> Code.org values and is responsive to feedback. Please fill out this short survey to provide your feedback on this module.</p>
     <p style="text-align: center;">
-<a class="btn btn-large btn-primary" href="https://studio.code.org/form/exploring_generative_ai_selfpaced_pl_pre_survey" target="blank" rel="noopener noreferrer">Take the Survey</a>
+<a class="btn btn-large btn-primary" href="https://studio.code.org" target="blank" rel="noopener noreferrer">Take the Survey - Not Available for Pilot</a>
 </p>
 
 </div>

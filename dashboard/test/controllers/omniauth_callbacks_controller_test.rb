@@ -3,6 +3,7 @@ require 'test_helper'
 class OmniauthCallbacksControllerTest < ActionController::TestCase
   include Mocha::API
   include UsersHelper
+  include Minitest::RSpecMocks
   STUB_ENCRYPTION_KEY = SecureRandom.base64(Encryption::KEY_LENGTH / 8)
 
   # This is a sample AuthHash provided by omniauth-clever plugin
@@ -1775,6 +1776,85 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
           assert_equal I18n.t('lti.account_linking.admin_not_allowed'), flash[:alert]
           assert_redirected_to user_session_path
         end
+      end
+    end
+  end
+
+  describe '#register_new_user' do
+    let(:disallowed_domains) {['testdomain.com']}
+
+    before do
+      stub_const('Policies::Devise::EmailDomains::DISALLOWED_DOMAINS', disallowed_domains)
+    end
+
+    context 'when a user has an email domain that is disallowed' do
+      let(:email) {"user@#{disallowed_domains.first}"}
+      let(:auth) {generate_auth_user_hash(provider: AuthenticationOption::GOOGLE, uid: 'some-uid', email: email)}
+
+      before do
+        @request.env['omniauth.auth'] = auth
+        @request.env['omniauth.params'] = {}
+      end
+
+      it 'does not create a new user and redirects to the sign in page with an alert' do
+        _(-> {post :google_oauth2, params: {omniauth: auth}}).wont_change -> {User.count}
+        assert_redirected_to user_session_path
+        _(flash[:alert]).must_equal I18n.t('devise.registrations.disallowed_domain', domain: disallowed_domains.first)
+      end
+    end
+
+    context 'when a user has an email domain that is allowed' do
+      let(:allowed_email) {"user@alloweddomain.com"}
+      let(:auth) {generate_auth_user_hash(provider: AuthenticationOption::GOOGLE, uid: 'other-uid', email: allowed_email)}
+
+      before do
+        @request.env['omniauth.auth'] = auth
+        @request.env['omniauth.params'] = {}
+      end
+
+      it 'creates a new user and redirects to complete registration' do
+        _(-> {get :google_oauth2}).wont_change -> {User.count}
+        _(@response.status).must_equal 200
+        assert_template 'omniauth/redirect'
+        partial_user = User.new_from_partial_registration(session)
+        _(partial_user.provider).must_equal AuthenticationOption::GOOGLE
+        _(partial_user.uid).must_equal 'other-uid'
+      end
+    end
+
+    context 'when a user has an empty email' do
+      let(:auth) {generate_auth_user_hash(provider: AuthenticationOption::GOOGLE, uid: 'other-uid', email: nil)}
+
+      before do
+        @request.env['omniauth.auth'] = auth
+        @request.env['omniauth.params'] = {}
+      end
+
+      it 'creates a new user and redirects to complete registration' do
+        _(-> {get :google_oauth2}).wont_change -> {User.count}
+        _(@response.status).must_equal 200
+        assert_template 'omniauth/redirect'
+        partial_user = User.new_from_partial_registration(session)
+        _(partial_user.provider).must_equal AuthenticationOption::GOOGLE
+        _(partial_user.uid).must_equal 'other-uid'
+      end
+    end
+
+    context 'when a user has an invalid email' do
+      let(:auth) {generate_auth_user_hash(provider: AuthenticationOption::GOOGLE, uid: 'other-uid', email: 'email-without-at-sign')}
+
+      before do
+        @request.env['omniauth.auth'] = auth
+        @request.env['omniauth.params'] = {}
+      end
+
+      it 'creates a new user and redirects to complete registration' do
+        _(-> {get :google_oauth2}).wont_change -> {User.count}
+        _(@response.status).must_equal 200
+        assert_template 'omniauth/redirect'
+        partial_user = User.new_from_partial_registration(session)
+        _(partial_user.provider).must_equal AuthenticationOption::GOOGLE
+        _(partial_user.uid).must_equal 'other-uid'
       end
     end
   end

@@ -28,7 +28,7 @@ Feature: Certificate page features
     And I wait until element "#uitest-certificate" is visible
     And element "#uitest-certificate" is visible
     And I wait until element ".fa-facebook" is visible
-    And I wait until element ".fa-twitter" is visible
+    And I wait until element ".fa-x-twitter" is visible
     And the href of selector ".social-print-link" contains "/print_certificates/"
 
   @eyes

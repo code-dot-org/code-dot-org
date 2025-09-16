@@ -466,7 +466,12 @@ function sendReportHelper(
     ...extraData,
   };
 
-  return fetch(`/milestone/${userId}/${scriptLevelId}/${levelId}`, {
+  const courseId = state.courseId;
+  const url = courseId
+    ? `/milestone/${userId}/${scriptLevelId}/${levelId}?course_id=${courseId}`
+    : `/milestone/${userId}/${scriptLevelId}/${levelId}`;
+
+  return fetch(url, {
     method: 'POST',
     headers: {
       'content-type': 'application/json',

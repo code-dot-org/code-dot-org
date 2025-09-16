@@ -7,12 +7,14 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import {hasQueryParam, queryParams} from '@cdo/apps/code-studio/utils';
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import {pegasus, studio} from '@cdo/apps/lib/util/urlHelpers';
 import GraduateToNextLevel from '@cdo/apps/templates/certificates/GraduateToNextLevel';
 import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
 import i18n from '@cdo/locale';
+import aiCurriculumHowItWorksImg from '@cdo/static/ai/ai-curriculum-how-ai-works.png';
 import facilitatorLedPlBanner from '@cdo/static/facilitatorLedPlBanner.png';
 import selfPacedPlBanner from '@cdo/static/selfPacedPlBanner.png';
+import teachPageTopImg from '@cdo/static/teach-page-top.png';
 
 import Certificate from './Certificate';
 import SuggestedAssignableCourses from './SuggestedAssignableCourses';
@@ -113,6 +115,7 @@ export default function Congrats(props) {
     tutorial,
     certificateId,
     userType,
+    userName,
     under13,
     language,
     randomDonorTwitter,
@@ -171,7 +174,7 @@ export default function Congrats(props) {
         oldestGrade: '12',
       }),
       title: i18n.howAiWorks(),
-      image: 'https://code.org/images/ai/ai-curriculum-how-ai-works.png',
+      image: aiCurriculumHowItWorksImg,
       buttonText: i18n.exploreLessons(),
       description: i18n.howAiWorksDescription(),
       link: 'http://code.org/ai/how-ai-works',
@@ -236,14 +239,14 @@ export default function Congrats(props) {
       title: i18n.teachWithCodeOrg(),
       description: i18n.teachWithCodeOrgDescription(),
       buttonText: i18n.teachWithCodeOrg(),
-      image: 'https://code.org/images/teach-page-top.png',
+      image: teachPageTopImg,
       link: 'https://code.org/teach',
     },
     {
       title: i18n.courseOfferingSelfPacedPl(),
       description: i18n.selfPacedPlDescription(),
       buttonText: i18n.exploreProfessionalLearning(),
-      image: 'https://code.org/shared/images/banners/self-paced-pl-hero.png',
+      image: studio('/shared/images/banners/self-paced-pl-hero.png'),
       link: 'https://code.org/educate/professional-development-online',
     },
   ];
@@ -444,6 +447,7 @@ export default function Congrats(props) {
               isHocTutorial={isHocTutorial}
               isPlCourse={isPlCourse}
               userType={userType}
+              userName={userName}
             >
               {renderExtraCertificateLinks(language, tutorial, currentDate)}
             </Certificate>
@@ -474,6 +478,7 @@ Congrats.propTypes = {
   certificateId: PropTypes.string,
   tutorial: PropTypes.string,
   userType: PropTypes.oneOf(['signedOut', 'teacher', 'student']).isRequired,
+  userName: PropTypes.string,
   under13: PropTypes.bool,
   language: PropTypes.string.isRequired,
   randomDonorTwitter: PropTypes.string,

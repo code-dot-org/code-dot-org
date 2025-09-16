@@ -7,6 +7,7 @@ import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
 import {AnimationProps} from '@cdo/apps/p5lab/shapes';
+import FlaggedImageModal from '@cdo/apps/sharedComponents/FlaggedImageModal';
 import StylizedBaseDialog from '@cdo/apps/sharedComponents/StylizedBaseDialog';
 import BaseDialog from '@cdo/apps/templates/BaseDialog.jsx';
 import HttpClient from '@cdo/apps/util/HttpClient';
@@ -20,10 +21,10 @@ import {
   handleUploadComplete,
   handleUploadError,
   saveSelectedAnimations,
+  setUploadsEnabled,
 } from '../redux/animationPicker';
 
 import AnimationPickerBody from './AnimationPickerBody.jsx';
-import FlaggedImageModal from './FlaggedImageModal';
 import styles from './styles';
 
 var msg = require('@cdo/locale');
@@ -82,6 +83,7 @@ class AnimationPicker extends React.Component {
     onAnimationSelectionComplete: PropTypes.func.isRequired,
     uploadWarningShowing: PropTypes.bool.isRequired,
     uploadsEnabled: PropTypes.bool.isRequired,
+    disableUploads: PropTypes.func.isRequired,
   };
 
   state = {
@@ -276,6 +278,7 @@ class AnimationPicker extends React.Component {
           showFlaggedModal: false,
           pendingUploadData: null,
         });
+        this.props.disableUploads();
         analyticsReporter.sendEvent(
           EVENTS.ACCEPT_FLAGGED_CUSTOM_IMAGE,
           {
@@ -339,7 +342,6 @@ class AnimationPicker extends React.Component {
         />
         {this.state.showFlaggedModal && (
           <FlaggedImageModal
-            isOpen
             onAccept={this.handleAcceptFlaggedImage}
             onCancel={this.handleCancelFlaggedImage}
             errorMessage={this.state.flaggedModalError}
@@ -363,6 +365,7 @@ export default connect(
     playAnimations: !state.pageConstants.allAnimationsSingleFrame,
     selectedAnimations: Object.values(state.animationPicker.selectedAnimations),
     uploadWarningShowing: state.animationPicker.uploadWarningShowing,
+    uploadsEnabled: state.animationPicker.uploadsEnabled,
   }),
   dispatch => ({
     onClose() {
@@ -386,6 +389,9 @@ export default connect(
     },
     onAnimationSelectionComplete() {
       dispatch(saveSelectedAnimations());
+    },
+    disableUploads() {
+      dispatch(setUploadsEnabled(false));
     },
   })
 )(AnimationPicker);

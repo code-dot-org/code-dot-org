@@ -19,7 +19,6 @@ export interface CourseOffering {
   course_version_id?: number;
   course_id?: number;
   script_id?: number;
-  is_standalone_unit?: boolean;
   self_paced_pl_course_offering_path?: string;
   available_resources?: Record<string, string>;
 }

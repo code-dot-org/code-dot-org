@@ -184,7 +184,8 @@ class ActivitiesController < ApplicationController
         level_source_id: @level_source.try(:id),
         pairing_user_ids: pairing_user_ids,
         locale: locale,
-        time_spent: time_since_last_milestone
+        time_spent: time_since_last_milestone,
+        unit_group: @unit_group
       )
 
       is_sublevel = @script_level.levels.exclude?(@level)
@@ -204,7 +205,8 @@ class ActivitiesController < ApplicationController
           level_source_id: nil,
           pairing_user_ids: pairing_user_ids,
           locale: locale,
-          time_spent: time_since_last_milestone
+          time_spent: time_since_last_milestone,
+          unit_group: @unit_group
         )
       end
 

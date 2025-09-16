@@ -88,6 +88,7 @@
   "https://studio.code.org/s/k5-ai-data-2024/lessons/1/levels/5": {
     "short_instructions": "Click Run and drag each item into a box.",
     "long_instructions": "**Now these items are sorted in a new way! Can you figure it out?**\n\nClick <code style=\"color:black; background-color:#FFBD46\">Run</code>. Then click and drag each item into a box.",
+    "teacher_markdown": "The shapes are sorted by the color of their outline.\n\n[][0]",
     "callouts": {
       "ai_data_run_button": "Click here!"
     }

@@ -1,17 +1,19 @@
 import Alert from '@code-dot-org/component-library/alert';
-import Button from '@code-dot-org/component-library/button';
+import {Button} from '@code-dot-org/component-library/button';
 import CloseButton from '@code-dot-org/component-library/closeButton';
 import {
-  BodyTwoText,
-  Heading2,
+  BodyThreeText,
+  Heading3,
 } from '@code-dot-org/component-library/typography';
 import Drawer from '@mui/material/Drawer';
 import React from 'react';
 
+import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {useSchoolInfo} from '@cdo/apps/schoolInfo/hooks/useSchoolInfo';
 import {updateSchoolInfo} from '@cdo/apps/schoolInfo/utils/updateSchoolInfo';
+import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 
@@ -28,6 +30,7 @@ interface TeacherHomepageDrawerProps {
   existingSchoolInfo?: SchoolInfo;
   schoolInfoInterstitialOpenInitially: boolean;
   schoolInfoConfirmationOpenInitially: boolean;
+  afeOpenInitially: boolean;
   onCloseCallback: () => void;
 }
 
@@ -35,6 +38,7 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
   existingSchoolInfo,
   schoolInfoInterstitialOpenInitially,
   schoolInfoConfirmationOpenInitially,
+  afeOpenInitially,
   onCloseCallback,
 }) => {
   const [schoolInfoInterstitialOpen, setSchoolInfoInterstitialOpen] =
@@ -42,8 +46,24 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
   const [schoolInfoConfirmationOpen, setSchoolInfoConfirmationOpen] =
     React.useState(schoolInfoConfirmationOpenInitially);
   const [success, setSuccess] = React.useState(false);
+  const [AFEDrawerOpen, setAFEDrawerOpen] = React.useState(afeOpenInitially);
+  const [AFEParticipate, setAFEParticipate] = React.useState(false);
   const [showSchoolInfoUnknownError, setShowSchoolInfoUnknownError] =
     React.useState(false);
+
+  const isOpen = React.useMemo<boolean>(
+    () =>
+      schoolInfoInterstitialOpen ||
+      schoolInfoConfirmationOpen ||
+      success ||
+      AFEDrawerOpen,
+    [
+      schoolInfoInterstitialOpen,
+      schoolInfoConfirmationOpen,
+      success,
+      AFEDrawerOpen,
+    ]
+  );
 
   const inUSA = useAppSelector(state => state.currentUser.inUSA);
   const schoolInfo = useSchoolInfo({
@@ -55,24 +75,130 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
     schoolType: existingSchoolInfo?.school_type,
   });
 
-  React.useEffect(() => {
-    if (schoolInfoInterstitialOpen) {
-      analyticsReporter.sendEvent(
-        EVENTS.SCHOOL_INTERSTITIAL_SHOW,
-        {},
-        PLATFORMS.BOTH
-      );
-    } else if (schoolInfoConfirmationOpen) {
-      analyticsReporter.sendEvent(
-        EVENTS.UPDATE_SCHOOL_INFO_DIALOG_SHOWN,
-        {},
-        PLATFORMS.BOTH
-      );
-    }
-  }, [schoolInfoInterstitialOpen, schoolInfoConfirmationOpen]);
-
   const existingSchoolName =
     existingSchoolInfo?.school_name || i18n.schoolInfoDialogDescriptionNoName();
+
+  const headerText: () => string = () => {
+    if (schoolInfoInterstitialOpen) {
+      return i18n.censusHeading();
+    } else if (schoolInfoConfirmationOpen) {
+      return i18n.reviewSchoolInfo();
+    } else if (success) {
+      return i18n.thankYouForUpdatingYourSchool();
+    } else if (AFEDrawerOpen) {
+      return i18n.afeDrawerHeader();
+    }
+  };
+
+  const bodyText: () => string = () => {
+    if (schoolInfoInterstitialOpen) {
+      return i18n.schoolInfoInterstitialTitle();
+    } else if (schoolInfoConfirmationOpen) {
+      return `${i18n.schoolInfoDialogDescription()}${i18n.schoolInfoDialogDescriptionSchoolName(
+        {schoolName: existingSchoolName}
+      )}`;
+    } else if (success) {
+      return i18n.schoolInfoDrawerSuccess();
+    } else if (AFEDrawerOpen) {
+      return i18n.afeBannerParagraph();
+    }
+  };
+
+  const interactiveContent: () => React.ReactNode = () => {
+    if (schoolInfoInterstitialOpen) {
+      return (
+        <div className={styles.drawerContent}>
+          {showSchoolInfoUnknownError && (
+            <Alert
+              type={'danger'}
+              size={'s'}
+              text={i18n.schoolInfoInterstitialUnknownError()}
+            />
+          )}
+          <SchoolDataInputs {...schoolInfo} includeHeaders={false} />
+        </div>
+      );
+    } else if (schoolInfoConfirmationOpen || success || AFEDrawerOpen) {
+      return null;
+    }
+  };
+
+  const primaryButton: () => React.ReactNode = () => {
+    if (schoolInfoInterstitialOpen) {
+      return (
+        <Button
+          type={'primary'}
+          size={'m'}
+          text={i18n.save()}
+          onClick={handlePrimaryButtonClick}
+        />
+      );
+    } else if (schoolInfoConfirmationOpen) {
+      return (
+        <Button
+          type={'primary'}
+          size={'m'}
+          text={i18n.imAtaNewSchool()}
+          onClick={handlePrimaryButtonClick}
+        />
+      );
+    } else if (success) {
+      return (
+        <Button
+          type={'primary'}
+          size={'m'}
+          text={i18n.closeDialog()}
+          onClick={handlePrimaryButtonClick}
+        />
+      );
+    } else if (AFEDrawerOpen) {
+      return (
+        <Button
+          type={'primary'}
+          size={'m'}
+          iconRight={{iconName: 'up-right-from-square'}}
+          text={i18n.learnMore()}
+          onClick={handlePrimaryButtonClick}
+        />
+      );
+    }
+  };
+
+  const secondaryButton: () => React.ReactNode = () => {
+    if (schoolInfoConfirmationOpen) {
+      return (
+        <Button
+          type={'secondary'}
+          size={'m'}
+          color={'gray'}
+          text={i18n.imStillTeachingHere()}
+          onClick={onDrawerClose}
+        />
+      );
+    } else if (success) {
+      return null;
+    } else if (AFEDrawerOpen) {
+      return (
+        <Button
+          type={'secondary'}
+          size={'m'}
+          color={'gray'}
+          text={i18n.notInterested()}
+          onClick={onDrawerClose}
+        />
+      );
+    } else {
+      return (
+        <Button
+          type={'secondary'}
+          size={'m'}
+          color={'gray'}
+          text={i18n.dismiss()}
+          onClick={onDrawerClose}
+        />
+      );
+    }
+  };
 
   const tryUpdateSchoolInfo = async () => {
     const hasNcesId =
@@ -140,6 +266,15 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
     } else if (schoolInfoInterstitialOpen) {
       // If the interstitial is open, we want to submit the school info.
       tryUpdateSchoolInfo();
+    } else if (AFEDrawerOpen) {
+      analyticsReporter.sendEvent(
+        EVENTS.AFE_HOMEPAGE_BANNER_SUBMIT,
+        {},
+        PLATFORMS.BOTH
+      );
+
+      setAFEParticipate(true);
+      onDrawerClose();
     }
   };
 
@@ -156,10 +291,34 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
         {},
         PLATFORMS.BOTH
       );
+    } else if (AFEDrawerOpen) {
+      analyticsReporter.sendEvent(
+        EVENTS.AFE_HOMEPAGE_BANNER_SUBMIT,
+        {},
+        PLATFORMS.BOTH
+      );
+
+      HttpClient.post(
+        '/dashboardapi/v1/users/me/dismiss_donor_teacher_banner',
+        JSON.stringify({
+          participate: AFEParticipate,
+          source: 'teacher_home',
+        }),
+        true,
+        {
+          'Content-Type': 'application/json',
+        }
+      ).catch(error => console.log(error));
+
+      // redirect to form on amazon-future-engineer page if user accepted
+      if (AFEParticipate) {
+        window.location.assign(pegasus('/amazon-future-engineer#eligibility'));
+      }
     }
     setSchoolInfoInterstitialOpen(false);
     setSchoolInfoConfirmationOpen(false);
     setSuccess(false);
+    setAFEDrawerOpen(false);
     onCloseCallback();
   };
 
@@ -167,12 +326,12 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
     <Drawer
       className={styles.drawer}
       anchor={'bottom'}
-      open={schoolInfoInterstitialOpen || schoolInfoConfirmationOpen || success}
+      open={isOpen}
       variant={'persistent'}
     >
       <div className={styles.toolbar}>
         <CloseButton
-          aria-label={''}
+          aria-label={'close button'}
           onClick={onDrawerClose}
           color={'light'}
           size="l"
@@ -184,64 +343,18 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
           <img
             className={styles.drawerImage}
             src={drawerConfirmationImage}
-            alt=""
-          />
-        )}
-        <Heading2>
-          {schoolInfoConfirmationOpen
-            ? i18n.reviewSchoolInfo()
-            : success
-            ? i18n.thankYouForUpdatingYourSchool()
-            : i18n.censusHeading()}
-        </Heading2>
-        <BodyTwoText>
-          {schoolInfoConfirmationOpen
-            ? `${i18n.schoolInfoDialogDescription()}${i18n.schoolInfoDialogDescriptionSchoolName(
-                {schoolName: existingSchoolName}
-              )}`
-            : success
-            ? i18n.schoolInfoDrawerSuccess()
-            : i18n.schoolInfoInterstitialTitle()}
-        </BodyTwoText>
-      </div>
-      {schoolInfoInterstitialOpen && (
-        <div className={styles.drawerContent}>
-          {showSchoolInfoUnknownError && (
-            <Alert
-              type={'danger'}
-              size={'s'}
-              text={i18n.schoolInfoInterstitialUnknownError()}
-            />
-          )}
-          <SchoolDataInputs {...schoolInfo} includeHeaders={false} />
-        </div>
-      )}
-      <div className={styles.drawerFooter}>
-        {!success && (
-          <Button
-            type={'secondary'}
-            size={'m'}
-            color={'gray'}
-            text={
-              schoolInfoConfirmationOpen
-                ? i18n.imStillTeachingHere()
-                : i18n.dismiss()
+            alt={
+              'green circle with a checkmark inside and streamers floating around it'
             }
-            onClick={onDrawerClose}
           />
         )}
-        <Button
-          type={'primary'}
-          size={'m'}
-          text={
-            schoolInfoConfirmationOpen
-              ? i18n.imAtaNewSchool()
-              : success
-              ? i18n.closeDialog()
-              : i18n.save()
-          }
-          onClick={handlePrimaryButtonClick}
-        />
+        <Heading3>{headerText()}</Heading3>
+        <BodyThreeText>{bodyText()}</BodyThreeText>
+      </div>
+      {interactiveContent()}
+      <div className={styles.drawerFooter}>
+        {secondaryButton()}
+        {primaryButton()}
       </div>
     </Drawer>
   );

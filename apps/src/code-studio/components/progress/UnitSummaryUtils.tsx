@@ -154,7 +154,6 @@ interface UnitData {
   hasStandards: boolean;
   tts: boolean;
   deprecated: boolean;
-  is_course: boolean;
   is_migrated: boolean;
   scriptPath: string | null;
   showCalendar: boolean;

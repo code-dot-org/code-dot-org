@@ -210,12 +210,12 @@ class CourseOffering < ApplicationRecord
     assignable_course_offerings(user).map {|co| co.summarize_for_assignment_dropdown(user, locale_code)}.to_h
   end
 
-  def self.professional_learning_and_self_paced_course_offerings
+  def self.self_paced_pl_course_offerings
     all_course_offerings.select {|co| co.get_participant_audience == 'teacher' && co.instruction_type == 'self_paced'}
   end
 
-  def self.professional_learning_and_self_paced_course_offerings_basic_info
-    professional_learning_and_self_paced_course_offerings.map do |co|
+  def self.self_paced_pl_course_offerings_basic_info
+    self_paced_pl_course_offerings.map do |co|
       {
         id: co.id,
         key: co.key,
@@ -231,6 +231,16 @@ class CourseOffering < ApplicationRecord
         co.assignable? &&
         co.any_version_is_in_published_state?
     end.map(&:summarize_for_catalog)
+  end
+
+  def self.self_paced_pl_course_offerings_for_workshops
+    participant_audiences = ['teacher', 'facilitator']
+    all_course_offerings.select do |co|
+      participant_audiences.include?(co.get_participant_audience) &&
+        co.instruction_type == 'self_paced' &&
+        co.header.present? &&
+        co.any_version_is_in_published_state?
+    end&.map(&:summarize_self_paced_pl)
   end
 
   def summarize_for_unit_selector(unit_ids)

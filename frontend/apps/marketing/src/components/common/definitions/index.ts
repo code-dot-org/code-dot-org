@@ -167,6 +167,7 @@ export const sectionPaddingDefinition: Record<
       in: [
         {value: 'm', displayName: 'Medium'},
         {value: 'l', displayName: 'Large'},
+        {value: 'none', displayName: 'None'},
       ],
     },
   },

@@ -81,7 +81,7 @@ class SectionsController < ApplicationController
               script_lesson_path(unit, lesson)
             end
           {
-            text: 'Lesson ' + lesson.relative_position.to_s + ': ' + lesson.localized_name,
+            text: lesson.localized_title,
             value: path,
           }
         end

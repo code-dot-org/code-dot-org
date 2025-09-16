@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-08-15T18:44:29.000Z",
   "level_num": "custom",
@@ -103,10 +104,12 @@
       }
     ],
     "name_suffix": "_bash",
+    "teacher_markdown": "### **🧾 What to Prepare:**\r\n\r\n* #### Print copies of the <a href=\"https://docs.google.com/document/d/1YDGmbxZSHZhvMWVPzoawNm0ceKRoPffgt1kc0HQDWhk/view\" target=\"blank\" rel=\"noopener noreferrer\">Client Stories Activity Guide</a> for each student.\r\n* #### Preview the <a href=\"https://studio.code.org/courses/programming-with-music-lab-2025/units/1/lessons/1/levels/1\" target=\"blank\" rel=\"noopener noreferrer\">song prototypes</a> in Code Studio so you're familiar with what students will hear.\r\n* #### Make a copy of the <a href=\"https://docs.google.com/presentation/d/14X814gR4KUxcZKEkbqhOSR03pg-8XKWZZMhIn7AJo4w/template/preview\" target=\"blank\" rel=\"noopener noreferrer\">lesson plan slides</a> and adjust for your teaching context as necessary. \r\n* #### Have a plan for how you’ll group students in pairs - this activity is most effective with discussion.\r\n* #### Print or copy our <a href=\"https://docs.google.com/presentation/d/12R4e0xxMFBbkyu4gaXbXfwyLba-OjivpRNggZlw8hiE/edit?usp=sharing\" target=\"blank\" rel=\"noopener noreferrer\">Musical Terms Anchor Charts</a> onto chart paper to provide students with a shared vocabulary and support meaningful collaboration.\r\n\r\n### **💡 Tips for Teaching:**\r\n* #### Focus on student reasoning, not just answers. There may be multiple \"right\" matches between clients and songs. Encourage students to explain their thinking and listen to others' perspectives.\r\n* #### Model how to explore the Example Player. This is the first time students will interact with Music Lab’s embedded players, so take a moment to show how it works and where to listen for differences.\r\n* #### Encourage creative exploration. Especially during the sound library portion, let students experiment and have fun. \r\n* #### Use the reflection to reinforce empathy. Ask students how their song design choices might change if they had to create music for a different client. This builds empathy and expands their creative lens.",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-08-15T18:44:29.963+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-explore-investigate_v2\\\"\"],\"cloned_from\":\"test-music-lab-sequences-explore-investigate_v2\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-08-15T18:44:29.963+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-explore-investigate_v2\\\"\"],\"cloned_from\":\"test-music-lab-sequences-explore-investigate_v2\"},{\"changed_at\":\"2025-08-24 23:21:55 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-08-25 01:53:42 +0000\",\"changed\":[\"predict_settings\",\"teacher_markdown\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

@@ -113,7 +113,6 @@ export const reviewersMap = {
     'rgbcolor': 'student-labs',
     'rosie': 'code-tools',
     'sanitize-html': 'student-labs',
-    'save-csv': 'code-tools',
     'seedrandom': 'student-labs',
     'slate-react': 'code-tools',
     'slate': 'code-tools',

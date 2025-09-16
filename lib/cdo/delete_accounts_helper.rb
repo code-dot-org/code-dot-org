@@ -130,13 +130,31 @@ class DeleteAccountsHelper
     application_ids = Pd::Application::ApplicationBase.with_deleted.where(user_id: user_id).pluck(:id)
     pd_enrollment_ids = Pd::Enrollment.with_deleted.where(user_id: user_id).pluck(:id)
 
-    # Two different paths to anonymizing attendance records
+    anonymize_pd_attendance(user_id)
+    anonymize_regional_partner_contacts(user_id)
+    anonymize_legacy_pd_tables(user_id, application_ids)
+    anonymize_peer_reviews(user_id)
+    delete_survey_submissions(user_id)
+    anonymize_pd_applications(user_id, user_email)
+    anonymize_workshop_surveys(pd_enrollment_ids)
+    anonymize_pd_enrollments(pd_enrollment_ids)
+  end
+
+  # Anonymizes the user's PD attendance records. Includes attendance where either teacher_id or
+  # marked_by_user_id matches the user_id.
+  def anonymize_pd_attendance(user_id)
     Pd::Attendance.with_deleted.where(teacher_id: user_id).update_all(teacher_id: nil, deleted_at: Time.now)
     Pd::Attendance.with_deleted.where(marked_by_user_id: user_id).update_all(marked_by_user_id: nil)
+  end
 
+  # Anonymizes regional partner contact information. This includes legacy (non-mini) and current (mini) contacts.
+  def anonymize_regional_partner_contacts(user_id)
     Pd::RegionalPartnerContact.where(user_id: user_id).update_all(form_data: '{}')
     Pd::RegionalPartnerMiniContact.where(user_id: user_id).update_all(form_data: '{}')
+  end
 
+  # Anonymizes data in deprecated PD tables that no longer have a corresponding ActiveRecord model.
+  def anonymize_legacy_pd_tables(user_id, application_ids)
     # SQL query to anonymize Pd::Teachercon1819Registration because the model no longer exists
     ActiveRecord::Base.connection.exec_query(
       sql_query_to_anonymize_field(
@@ -173,49 +191,54 @@ class DeleteAccountsHelper
       )
     )
 
-    # Peer reviews might be associated with a purged submitter or viewer
-    PeerReview.where(submitter_id: user_id).update_all(submitter_id: nil, audit_trail: nil)
-    PeerReview.where(reviewer_id: user_id).update_all(reviewer_id: nil, data: nil, audit_trail: nil)
+    application_ids.each do |app_id|
+      # SQL query to anonymize Pd::FitWeekend1819Registration because the model no longer exists
+      ActiveRecord::Base.connection.exec_query(
+        sql_query_to_anonymize_field(
+          "pd_fit_weekend1819_registrations",
+          {'form_data' => '""'},
+          {'pd_application_id' => app_id}
+        )
+      )
 
-    # Delete survey submissions
+      # SQL query to anonymize Pd::FitWeekendRegistrationBase because the model no longer exists
+      ActiveRecord::Base.connection.exec_query(
+        sql_query_to_anonymize_field(
+          "pd_fit_weekend_registrations",
+          {'form_data' => '""'},
+          {'pd_application_id' => app_id}
+        )
+      )
+    end
+  end
+
+  def delete_survey_submissions(user_id)
     SurveyResult.where(user_id: user_id).destroy_all
     Pd::MiscSurvey.where(user_id: user_id).destroy_all
     Foorm::SimpleSurveySubmission.where(user_id: user_id).each do |simple_submission|
       simple_submission.foorm_submission.destroy
       simple_submission.destroy
     end
+  end
 
-    # Delete email history
-    Pd::Application::Email.where(to: user_email).destroy_all if user_email.present?
+  # Anonymizes peer reviews that might be associated with a purged submitter or viewer
+  def anonymize_peer_reviews(user_id)
+    PeerReview.where(submitter_id: user_id).update_all(submitter_id: nil, audit_trail: nil)
+    PeerReview.where(reviewer_id: user_id).update_all(reviewer_id: nil, data: nil, audit_trail: nil)
+  end
 
-    unless application_ids.empty?
-      application_ids.each do |app_id|
-        # SQL query to anonymize Pd::FitWeekend1819Registration because the model no longer exists
-        ActiveRecord::Base.connection.exec_query(
-          sql_query_to_anonymize_field(
-            "pd_fit_weekend1819_registrations",
-            {'form_data' => '""'},
-            {'pd_application_id' => app_id}
-          )
-        )
+  def anonymize_pd_applications(user_id, email)
+    Pd::Application::Email.where(to: email).destroy_all if email.present?
+    Pd::Application::ApplicationBase.with_deleted.where(user_id: user_id).update_all(form_data: '{}', notes: nil)
+  end
 
-        # SQL query to anonymize Pd::FitWeekendRegistrationBase because the model no longer exists
-        ActiveRecord::Base.connection.exec_query(
-          sql_query_to_anonymize_field(
-            "pd_fit_weekend_registrations",
-            {'form_data' => '""'},
-            {'pd_application_id' => app_id}
-          )
-        )
-      end
-      Pd::Application::ApplicationBase.with_deleted.where(id: application_ids).update_all(form_data: '{}', notes: nil)
-    end
+  def anonymize_workshop_surveys(pd_enrollment_ids)
+    Pd::PreWorkshopSurvey.where(pd_enrollment_id: pd_enrollment_ids).update_all(form_data: '{}')
+    Pd::TeacherconSurvey.where(pd_enrollment_id: pd_enrollment_ids).update_all(form_data: '{}')
+  end
 
-    unless pd_enrollment_ids.empty?
-      Pd::PreWorkshopSurvey.where(pd_enrollment_id: pd_enrollment_ids).update_all(form_data: '{}')
-      Pd::TeacherconSurvey.where(pd_enrollment_id: pd_enrollment_ids).update_all(form_data: '{}')
-      Pd::Enrollment.with_deleted.where(id: pd_enrollment_ids).each(&:clear_data)
-    end
+  def anonymize_pd_enrollments(pd_enrollment_ids)
+    Pd::Enrollment.with_deleted.where(id: pd_enrollment_ids).each(&:clear_data) unless pd_enrollment_ids.empty?
   end
 
   # Anonymizes the user by deleting various pieces of PII and PPII

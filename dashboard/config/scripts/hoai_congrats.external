@@ -1,0 +1,14 @@
+name 'HoAI_congrats'
+title 'Review'
+description 'description here'
+
+markdown <<MARKDOWN
+<h1 style="text-align: center;"><i class="fa-solid fa-party-horn"></i> Congrats! You used AI to code music and a dancer image <i class="fa-solid fa-party-horn"></i></h1>
+
+##VIDEO PLACEHOLDER LEVEL
+
+**Main Messages in the video:** 
+
+- Humans guide AI and make the decisions
+- Use AI to support your own creativity
+MARKDOWN

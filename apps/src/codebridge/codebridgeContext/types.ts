@@ -13,7 +13,7 @@ export type NewFolderFunction = (arg: {
 export type ToggleOpenFolderFunction = (folderId: FolderId) => void;
 export type DeleteFolderFunction = (folderId: FolderId) => void;
 export type OpenFileFunction = (fileId: FileId) => void;
-export type DeleteFileFunction = (fileId: FileId) => void;
+export type DeleteFileFunction = (arg: {fileId: FileId}) => void;
 export type NewFileFunction = (arg: {
   fileName: string;
   folderId?: FolderId;

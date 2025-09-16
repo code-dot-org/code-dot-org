@@ -111,6 +111,7 @@ const WorkshopJoin: React.FunctionComponent<WorkshopJoinProps> = ({
             givenName={userInfo.givenName}
             familyName={userInfo.familyName}
             email={userInfo.email}
+            educatorRole={userInfo.educatorRole}
             schoolName={userInfo.schoolInfo?.schoolName}
             schoolType={userInfo.schoolInfo?.schoolType}
             returnToHref={`/pd/workshops/${workshopInfo.id}/join`}

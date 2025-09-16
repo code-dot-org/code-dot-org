@@ -68,7 +68,7 @@ describe('Certificate', () => {
       let image = wrapper.find('#uitest-certificate img');
       expect(image.prop('src')).to.include('/certificate_images/');
 
-      const printLink = wrapper.find('.social-print-link');
+      const printLink = wrapper.find('a.social-print-link').first();
       expect(printLink.prop('href')).to.match(/^\/print_certificates/);
 
       // the share link is used in the image thumbnail as well as the facebook

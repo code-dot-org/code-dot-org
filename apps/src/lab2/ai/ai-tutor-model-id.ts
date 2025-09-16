@@ -8,9 +8,9 @@ const modelQueryParam = queryParams('aitutor2-model');
 export type AiChatModelIdType = ValueOf<typeof AiChatModelIds>;
 
 // Only use modelQueryParam as modelId if it is a valid id, otherwise set to default
-// of Gemini 2.0 Flash.
+// of Gemini 2.5 Flash.
 export const aiTutorModelId = Object.values(AiChatModelIds).includes(
   modelQueryParam as AiChatModelIdType
 )
   ? (modelQueryParam as AiChatModelIdType)
-  : AiChatModelIds.GEMINI_2_0_FLASH;
+  : AiChatModelIds.GEMINI_2_5_FLASH;

@@ -32,6 +32,11 @@ declare module '*.svg' {
   export = value;
 }
 
+declare module '*.gif' {
+  const value: string;
+  export = value;
+}
+
 // Modules without types
 declare module '@blockly/plugin-scroll-options';
 declare module '@blockly/keyboard-navigation';

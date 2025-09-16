@@ -157,6 +157,8 @@ export function useCodebridgeSettings(): Setting[] {
   ];
 
   const hasConsole = codebridgeLabsWithConsole.includes(appName);
+  const hasBothLayouts =
+    config.layoutComponents.horizontal && config.layoutComponents.vertical;
 
   return [
     {
@@ -184,7 +186,7 @@ export function useCodebridgeSettings(): Setting[] {
       selectedValue: theme,
       onChange: handleThemeChange,
     },
-    ...(!widgetView
+    ...(!widgetView && hasBothLayouts
       ? [
           {
             id: 'layout',

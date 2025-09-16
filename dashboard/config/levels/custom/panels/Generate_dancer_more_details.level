@@ -1,0 +1,26 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-08-29T21:02:15.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "###Dancer glow up!\n\nPrompt AI to add some fun details to your dancer before the big party!",
+        "imageUrl": "https://images.code.org/f8e122edd37efa7c61541cd84806d16b-panel accessories.jpg",
+        "key": "Generate_dancer_info-e349bed8-89d6-4efc-8a0e-29b8a1e5afb1"
+      },
+      {
+        "text": "***To come...\nInfo that explains how the dance generation tool works.***",
+        "imageUrl": "",
+        "key": "Generate_dancer_info-8ecdd906-47ef-4f42-b3cd-b9874b884c51"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2025-08-29T21:02:15.864+00:00\",\"changed\":[\"cloned from \\\"Generate_dancer_info\\\"\"],\"cloned_from\":\"Generate_dancer_info\"},{\"changed_at\":\"2025-08-29 21:08:04 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

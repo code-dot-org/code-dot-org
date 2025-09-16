@@ -1,6 +1,8 @@
+import {Badge} from '@mui/material';
 import classNames from 'classnames';
 import React, {useEffect, useState} from 'react';
 
+import experiments from '@cdo/apps/util/experiments';
 import {
   tryGetSessionStorage,
   trySetSessionStorage,
@@ -8,6 +10,7 @@ import {
   trySetLocalStorage,
 } from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
+import aiFabWithoutText from '@cdo/static/ai-bot-ta-no-text.png';
 import aiFabWithIcon from '@cdo/static/ai-bot-ta.png';
 
 import {EVENTS, PLATFORMS} from '../metrics/AnalyticsConstants';
@@ -15,6 +18,7 @@ import analyticsReporter from '../metrics/AnalyticsReporter';
 import HttpClient from '../util/HttpClient';
 
 import AiDiffContainer from './AiDiffContainer';
+import {AiDiffNotification} from './notifications/types';
 import {Context} from './types';
 
 import style from './ai-differentiation.module.scss';
@@ -61,6 +65,10 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
       tryGetLocalStorage(LOCAL_STORAGE_CLOSED_KEY, false.toString())
     ) || false;
 
+  const [unreadNotificationCount, setUnreadNotificationCount] = useState<
+    number | 'loading'
+  >('loading');
+
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   React.useEffect(() => {
@@ -82,6 +90,22 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
       );
     }
   }, [canStartOpen, hasOpened, hasClosed, canDefaultOpen]);
+
+  const updateUnreadNotificationCount = React.useCallback(() => {
+    HttpClient.fetchJson<AiDiffNotification[]>('/notifications')
+      .then(response => {
+        const unreadNotificationCount =
+          response?.value?.filter(n => n.readAt === null).length || 0;
+        setUnreadNotificationCount(unreadNotificationCount);
+      })
+      .catch(error => {
+        console.error('Error fetching notifications:', error);
+      });
+  }, []);
+
+  React.useEffect(() => {
+    updateUnreadNotificationCount();
+  }, [updateUnreadNotificationCount]);
 
   const [curriculumCourses, setCurriculumCourses] = useState<string[]>();
 
@@ -125,6 +149,7 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
     }
     setIsOpen(!isOpen);
     trySetSessionStorage(SESSION_STORAGE_KEY, (!isOpen).toString());
+    updateUnreadNotificationCount();
   };
 
   return (
@@ -136,11 +161,57 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
         onClick={handleClick}
         type="button"
       >
-        <img
-          alt="AI bot"
-          src={aiFabWithIcon}
-          onLoad={() => !isFabImageLoaded && setIsFabImageLoaded(true)}
-        />
+        {experiments.isEnabled('teacher-notifications') ? (
+          <Badge
+            badgeContent={
+              unreadNotificationCount === 'loading'
+                ? 0
+                : unreadNotificationCount > 0
+                ? unreadNotificationCount
+                : 'TA'
+            }
+            color="error"
+            overlap="circular"
+            aria-label={
+              unreadNotificationCount &&
+              i18n.unreadNotificationsCount({
+                unreadCount: unreadNotificationCount,
+              })
+            }
+            sx={{
+              height: '48px',
+              width: '48px',
+              '& .MuiBadge-badge': {
+                backgroundColor:
+                  unreadNotificationCount === 'loading' ||
+                  unreadNotificationCount > 0
+                    ? 'var(--background-error-primary)'
+                    : '#3CFFF8',
+                color:
+                  unreadNotificationCount === 'loading' ||
+                  unreadNotificationCount > 0
+                    ? 'var(--text-neutral-white-fixed)'
+                    : 'var(--text-neutral-black-fixed)',
+                top: '5%',
+                right: '5%',
+              },
+            }}
+            className={style.badge}
+          >
+            <img
+              alt="AI bot - unread notifications"
+              src={aiFabWithoutText}
+              onLoad={() => !isFabImageLoaded && setIsFabImageLoaded(true)}
+              className={style.fabImageWithBadge}
+            />
+          </Badge>
+        ) : (
+          <img
+            alt="AI bot"
+            src={aiFabWithIcon}
+            onLoad={() => !isFabImageLoaded && setIsFabImageLoaded(true)}
+          />
+        )}
       </button>
       <AiDiffContainer
         open={isOpen}

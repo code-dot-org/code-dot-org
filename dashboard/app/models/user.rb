@@ -302,6 +302,9 @@ class User < ApplicationRecord
 
   has_many :pd_workshops_organized, class_name: 'Pd::Workshop', foreign_key: :organizer_id
   has_and_belongs_to_many :pd_workshops_facilitated, class_name: 'Pd::Workshop', join_table: 'pd_workshops_facilitators', association_foreign_key: 'pd_workshop_id'
+  has_many :misc_surveys, class_name: 'Pd::MiscSurvey'
+  has_many :simple_survey_submissions, class_name: 'Foorm::SimpleSurveySubmission'
+  has_many :pd_enrollments, class_name: 'Pd::Enrollment'
 
   has_many :authentication_options, dependent: :destroy
   accepts_nested_attributes_for :authentication_options
@@ -431,15 +434,16 @@ class User < ApplicationRecord
 
   scope :ignore_deleted_at_index, -> {from 'users IGNORE INDEX(index_users_on_deleted_at)'}
   # Include default Devise modules. Others available are:
-  # :token_authenticatable, :confirmable, :timeoutable
+  # :token_authenticatable, :confirmable
   devise :invitable, :database_authenticatable, :registerable, :omniauthable,
-    :recoverable, :rememberable, :trackable, :lockable
+    :recoverable, :rememberable, :trackable, :lockable, :timeoutable
 
   # Make sure to include these Concerns after we include the default Devise
   # modules, since it's trying to extend some methods added by those modules
   # that would be overridden by them if we included it before.
   include Devise::Models::ManualSessionExpiration
   include Devise::DatabaseAuthenticationOverrides
+  include Devise::Models::CustomTimeoutable
 
   acts_as_paranoid # use deleted_at column instead of deleting rows
 
@@ -504,6 +508,11 @@ class User < ApplicationRecord
       errors.add(:admin, 'must be a teacher') unless teacher?
       errors.add(:admin, 'cannot be a followed') unless sections_as_student.empty?
     end
+  end
+
+  def friendly_name(ltr = true)
+    return name unless given_name && family_name
+    ltr ? "#{given_name} #{family_name}" : "#{family_name} #{given_name}"
   end
 
   def email
@@ -793,7 +802,7 @@ class User < ApplicationRecord
     return false if sections_as_student.empty?
 
     # Can't hide a unit that isn't part of a course
-    unit_group = unit.try(:unit_group)
+    unit_group = unit.try(:get_original_unit_group)
     return false unless unit_group
 
     get_participant_hidden_ids(unit_group.id, false).include?(unit.id)
@@ -1000,6 +1009,7 @@ class User < ApplicationRecord
       display_name: name,
       given_name: given_name,
       family_name: family_name,
+      educator_role: educator_role ? SharedConstants::EDUCATOR_ROLES.find {|role| role[:value] == educator_role}&.dig(:label) : nil,
       school_info: Queries::SchoolInfo.current_school(self),
     }
   end
@@ -1024,7 +1034,9 @@ class User < ApplicationRecord
 
   def should_see_add_password_form?
     !can_create_personal_login? && # mutually exclusive with personal login UI
-      can_edit_password? && encrypted_password.blank?
+      can_edit_password? && # allowed to edit password (i.e. not sponsored)
+      encrypted_password.blank? && # no password exists
+      !Policies::Lti.restricted_user?(self) # not restricted by their school district
   end
 
   def should_disable_user_type?
@@ -1092,6 +1104,7 @@ class User < ApplicationRecord
   # continue to use our site without losing progress.
   def can_create_personal_login?
     return false unless student?
+    return false if Policies::Lti.restricted_user?(self)
     teacher_managed_account? || (migrated? && oauth_only?)
   end
 
@@ -1255,7 +1268,8 @@ class User < ApplicationRecord
             script_id: script_level.script_id,
             new_result: ActivityConstants::BEST_PASS_RESULT,
             submitted: false,
-            level_source_id: nil
+            level_source_id: nil,
+            unit_group: nil
           )
         end
       end
@@ -1653,7 +1667,8 @@ class User < ApplicationRecord
     pairing_user_ids: nil,
     is_navigator: false,
     time_spent: nil,
-    locale: nil
+    locale: nil,
+    unit_group: nil
   )
     new_level_completed = false
     new_csf_level_perfected = false
@@ -1705,6 +1720,10 @@ class User < ApplicationRecord
         user_level.locale_supported = script.supported_locale?(locale)
       end
 
+      if unit_group && user_level.new_record?
+        user_level.unit_group_id = unit_group.id
+      end
+
       user_level.atomic_save!
     end
 
@@ -1720,7 +1739,8 @@ class User < ApplicationRecord
           pairing_user_ids: nil,
           is_navigator: true,
           locale: locale,
-          time_spent: time_spent
+          time_spent: time_spent,
+          unit_group: unit_group
         )
         Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
           PairedUserLevel.find_or_create_by(

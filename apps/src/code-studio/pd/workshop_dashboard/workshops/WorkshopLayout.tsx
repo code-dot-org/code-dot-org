@@ -1,26 +1,56 @@
-import {Button} from '@code-dot-org/component-library/button';
-import React, {FC, useMemo, createContext, useContext} from 'react';
+import Alert from '@code-dot-org/component-library/alert';
+import {LinkButton} from '@code-dot-org/component-library/button';
+import {SegmentedButtonsProps} from '@code-dot-org/component-library/segmentedButtons';
+import React, {
+  FC,
+  useMemo,
+  createContext,
+  useContext,
+  useState,
+  useEffect,
+} from 'react';
 import {Outlet, useLocation, useParams} from 'react-router-dom';
 
-import {useFetch} from '@cdo/apps/util/useFetch';
-
-import {
-  Enrollment,
-  SurveySummary,
-  Workshop,
-} from '../WorkshopFormTemplate/types';
-import {
-  enrollmentDataToProps,
-  workshopDataToProps,
-} from '../WorkshopFormTemplate/utils';
+import {CourseBuildYourOwn} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
+import {useFetch, UseFetchResult} from '@cdo/apps/util/useFetch';
 
 import {FacilitatorSelection} from './components/FacilitatorSelection';
+import {Loading} from './components/Loading';
 import {SurveyCategorySelection} from './components/SurveyCategorySelection';
-import {SurveyTypeSelection} from './components/SurveyTypeSelection';
-import {WorkshopTabs} from './components/WorkshopTabs';
-import {WorkshopLayoutProps, WorkshopContextValue} from './types';
+import {
+  SurveyTypeSelection,
+  SurveyTypeSelectionProps,
+} from './components/SurveyTypeSelection';
+import {WorkshopTabs, WorkshopTabsProps} from './components/WorkshopTabs';
+import {ExportSurveysButton} from './surveys/components/ExportSurveysButton';
+import {NoSurveyResponses} from './surveys/components/NoSurveyResponses';
+import {
+  Enrollment,
+  EnrollmentData,
+  SurveySummary,
+  Workshop,
+  WorkshopData,
+} from './types';
+import {enrollmentDataToProps, workshopDataToProps} from './utils';
 
 import styles from './workshop.module.scss';
+
+export type WorkshopLayoutProps = WorkshopTabsProps &
+  SurveyTypeSelectionProps & {
+    questionCategoryButtons: {
+      preWorkshopSurvey: SegmentedButtonsProps['buttons'];
+      postWorkshopSurvey: SegmentedButtonsProps['buttons'];
+    };
+  };
+
+export interface WorkshopContextValue {
+  workshop: WorkshopData | null;
+  refetchWorkshop: UseFetchResult<Workshop>['refetch'];
+  enrollments: EnrollmentData[];
+  enrollmentsLoading: UseFetchResult<EnrollmentData[]>['loading'];
+  refetchEnrollments: UseFetchResult<EnrollmentData[]>['refetch'];
+  surveys: SurveySummary | null;
+}
 
 const WorkshopContext = createContext<WorkshopContextValue | undefined>(
   undefined
@@ -42,8 +72,18 @@ export const WorkshopLayout: FC<WorkshopLayoutProps> = ({
   const {pathname} = useLocation();
   const {workshopId} = useParams<{workshopId: string}>();
 
+  const [defaultLoading, setDefaultLoading] = useState(true);
+
+  // prevent flash of loading indicator on fast connections
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setDefaultLoading(false);
+    }, 1000);
+    return () => clearTimeout(timeout);
+  }, []);
+
   const {
-    data: workshopData,
+    data: workshopResponse,
     loading: workshopLoading,
     error: workshopError,
     refetch: refetchWorkshop,
@@ -52,7 +92,7 @@ export const WorkshopLayout: FC<WorkshopLayoutProps> = ({
   );
 
   const {
-    data: enrollmentData,
+    data: enrollmentResponse,
     loading: enrollmentsLoading,
     error: enrollmentsError,
     refetch: refetchEnrollments,
@@ -64,7 +104,6 @@ export const WorkshopLayout: FC<WorkshopLayoutProps> = ({
     data: surveys,
     loading: surveysLoading,
     error: surveysError,
-    refetch: refetchSurveys,
   } = useFetch<SurveySummary | null>(
     workshopId
       ? `/api/v1/pd/workshops/${workshopId}/foorm/workshop_survey_summary`
@@ -72,39 +111,110 @@ export const WorkshopLayout: FC<WorkshopLayoutProps> = ({
   );
 
   const workshop = useMemo(
-    () => (workshopData ? workshopDataToProps(workshopData) : null),
-    [workshopData]
+    () => (workshopResponse ? workshopDataToProps(workshopResponse) : null),
+    [workshopResponse]
   );
 
   const enrollments = useMemo(
-    () => (enrollmentData ? enrollmentDataToProps(enrollmentData) : []),
-    [enrollmentData]
+    () => (enrollmentResponse ? enrollmentDataToProps(enrollmentResponse) : []),
+    [enrollmentResponse]
   );
 
-  const showTabs = !pathname.includes('/edit');
-  const showSurveyElements = pathname.includes('/surveys');
-  const showPostSurveyCategorySelection = pathname.includes('/surveys/post');
-  const showFacilitatorSelection = pathname.includes(
-    '/surveys/post/facilitators'
-  );
+  const onSurveysPage = pathname.includes('/surveys');
+  const onPreSurveyPage = pathname.includes('/surveys/pre');
+  const onPostSurveyPage = pathname.includes('/surveys/post');
+  const onFacilitatorPage = pathname.includes('/surveys/post/facilitators');
+  const onEditPage = pathname.includes('/edit');
 
-  // TODO: https://codedotorg.atlassian.net/browse/ACQ-3438
-  const handleDownload = () => {};
+  const showTabs = !onEditPage;
+
+  const showLegacySurveyLinkButton =
+    onSurveysPage && workshop?.course && workshop.course !== CourseBuildYourOwn;
+
+  const showSurveyElements = onSurveysPage && !showLegacySurveyLinkButton;
+
+  const showSurveyCategorySelection =
+    showSurveyElements && (onPreSurveyPage || onPostSurveyPage);
+
+  const showFacilitatorSelection =
+    showSurveyElements && onFacilitatorPage && surveys?.surveys?.post_workshop;
+
+  const showNoSurveyResponses = useMemo(() => {
+    if (onPreSurveyPage) {
+      return !surveysLoading && !surveys?.surveys?.pre_workshop;
+    } else if (onPostSurveyPage) {
+      return !surveysLoading && !surveys?.surveys?.post_workshop;
+    }
+    return false;
+  }, [
+    onPreSurveyPage,
+    onPostSurveyPage,
+    surveys?.surveys?.pre_workshop,
+    surveys?.surveys?.post_workshop,
+    surveysLoading,
+  ]);
+
+  const showLoading = useMemo(() => {
+    return (
+      defaultLoading ||
+      (!workshop && workshopLoading) ||
+      (!enrollments && enrollmentsLoading) ||
+      (!surveys && surveysLoading)
+    );
+  }, [
+    defaultLoading,
+    enrollments,
+    enrollmentsLoading,
+    surveys,
+    surveysLoading,
+    workshop,
+    workshopLoading,
+  ]);
+
+  const activeSurveyCategoryButtons = useMemo(() => {
+    if (onPreSurveyPage) return questionCategoryButtons.preWorkshopSurvey;
+    if (onPostSurveyPage) return questionCategoryButtons.postWorkshopSurvey;
+    return [];
+  }, [
+    onPostSurveyPage,
+    onPreSurveyPage,
+    questionCategoryButtons.postWorkshopSurvey,
+    questionCategoryButtons.preWorkshopSurvey,
+  ]);
+
+  const facilitators = useMemo(() => {
+    if (!surveys?.facilitators) {
+      return [];
+    }
+    return Object.entries(surveys.facilitators).map(([id, name]) => ({
+      id: Number(id),
+      name,
+      email: '',
+    }));
+  }, [surveys?.facilitators]);
 
   const contextValue: WorkshopContextValue = {
     workshop,
-    workshopLoading,
-    workshopError,
     refetchWorkshop,
     enrollments,
     enrollmentsLoading,
-    enrollmentsError,
     refetchEnrollments,
     surveys,
-    surveysLoading,
-    surveysError,
-    refetchSurveys,
   };
+
+  if (showLoading) {
+    return <Loading />;
+  }
+
+  if (workshopError || enrollmentsError || surveysError) {
+    return (
+      <Alert
+        size="m"
+        text="Something went wrong, please refresh the page."
+        type="danger"
+      />
+    );
+  }
 
   return (
     <WorkshopContext.Provider value={contextValue}>
@@ -114,28 +224,33 @@ export const WorkshopLayout: FC<WorkshopLayoutProps> = ({
           {showSurveyElements && (
             <SurveyTypeSelection surveyTypeOptions={surveyTypeOptions} />
           )}
-          {showPostSurveyCategorySelection && (
+
+          {showSurveyCategorySelection && (
             <>
               <div className={styles.divider} />
               <SurveyCategorySelection
-                questionCategoryButtons={questionCategoryButtons}
+                questionCategoryButtons={activeSurveyCategoryButtons}
               />
             </>
           )}
-          {showSurveyElements && (
-            <Button
-              className={styles.exportButton}
-              iconLeft={{iconName: 'download'}}
-              onClick={handleDownload}
-              text="Export survey results"
-              size="s"
-            />
-          )}
+          {showSurveyElements && <ExportSurveysButton />}
         </div>
-        {showFacilitatorSelection && <FacilitatorSelection />}
+        {showFacilitatorSelection && (
+          <FacilitatorSelection facilitators={facilitators} />
+        )}
       </nav>
       <main>
-        <Outlet />
+        {showLegacySurveyLinkButton ? (
+          <LinkButton
+            href={`/pd/workshop_dashboard/workshop_daily_survey_results/${workshopId}`}
+            text="Survey results"
+          />
+        ) : (
+          <>
+            {showNoSurveyResponses && <NoSurveyResponses />}
+            <Outlet />
+          </>
+        )}
       </main>
     </WorkshopContext.Provider>
   );

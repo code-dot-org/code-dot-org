@@ -19,7 +19,7 @@ markdown <<MARKDOWN
   <div style="flex: 3; background-color: #b2dee3; border-radius: 40px 40px 5px 40px; padding: 20px; color: #000000; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
     <p style="font-size: 50px; margin: 0px 0 0 0; opacity: 0.5;">&ldquo;</p>
     <p style="line-height: 1.5; font-size: 16px; margin: 0 0 10px 0;"> 
-      What I love about this unit is how it connects real-world issues with student learning. The curriculum doesn't just teach concepts—it helps students see why cybersecurity matters in their daily lives.
+      ""
     </p>
     <p style="font-size: 50px; text-align: right; opacity: 0.5; margin: 0;">&rdquo;</p>
   </div>
@@ -35,7 +35,7 @@ markdown <<MARKDOWN
   <div style="flex: 3; background-color: #ffd199; border-radius: 40px 40px 5px 40px; padding: 20px; color: #000000; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
     <p style="font-size: 50px; margin: 0px 0 0 0; opacity: 0.5;">&ldquo;</p>
     <p style="line-height: 1.5; font-size: 16px; margin: 0 0 10px 0;"> 
-      The built-in resources made teaching cybersecurity easy [...] everything from lesson plans to videos was clear, organized, and ready to go.
+     ""
     </p>
     <p style="font-size: 50px; text-align: right; opacity: 0.5; margin: 0;">&rdquo;</p>
   </div>
@@ -51,7 +51,7 @@ markdown <<MARKDOWN
   <div style="flex: 3; background-color: #f6a6a6; border-radius: 40px 40px 5px 40px; padding: 20px; color: #000000; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
     <p style="font-size: 50px; margin: 0px 0 0 0; opacity: 0.5;">&ldquo;</p>
     <p style="line-height: 1.5; font-size: 16px; margin: 0 0 10px 0;"> 
-      My students were so engaged, especially during the innovation simulation. They took ownership of their ideas and really got into the role-playing.
+      ""
     </p>
     <p style="font-size: 50px; text-align: right; opacity: 0.5; margin: 0;">&rdquo;</p>
   </div>

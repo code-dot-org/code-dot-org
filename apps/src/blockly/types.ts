@@ -26,6 +26,7 @@ import WorkspaceSvgFrame from './addons/workspaceSvgFrame';
 import {
   BLOCK_TYPES,
   BlocklyVersion,
+  BlockStyles,
   Themes,
   WORKSPACE_EVENTS,
 } from './constants';
@@ -49,6 +50,7 @@ export interface BlockConfig {
 export interface arg {
   customInput: string;
   name: string;
+  options?: [string, string][];
 }
 
 export interface SerializedFields {
@@ -360,10 +362,12 @@ export interface JsonBlockConfig {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   extraState?: any;
   type: string;
-  fields: {[key: string]: {name: string; type: string; id?: string}};
-  inputs: {[key: string]: {block: JsonBlockConfig}};
-  next: {block: JsonBlockConfig};
-  kind: string;
+  fields?: {
+    [key: string]: {name: string; type: string; id?: string} | string | number;
+  };
+  inputs?: {[key: string]: {block: JsonBlockConfig}};
+  next?: {block: JsonBlockConfig};
+  kind?: string;
 }
 
 export interface Collider {
@@ -481,16 +485,45 @@ export type PointerMetadataMap = {
 
 export type BlockColor = [number, number, number];
 
+export type GeneratorFunction = (
+  block: GoogleBlockly.Block,
+  generator: GoogleBlockly.CodeGenerator
+) => string | [string, number] | null;
+
 export type JavascriptGeneratorType = typeof javascriptGenerator;
 export interface ExtendedJavascriptGenerator
   extends ExtendedCodeGenerator,
     JavascriptGeneratorType {
   nameDB_: GoogleBlockly.Names | undefined;
-  forBlock: Record<
-    string,
-    (
-      block: GoogleBlockly.Block,
-      generator: GoogleBlockly.CodeGenerator
-    ) => string | [string, number] | null
-  >;
+  forBlock: Record<string, GeneratorFunction>;
+}
+
+export interface BlockJson<BlockType extends string = string> {
+  type: BlockType;
+  [key: `message${number}`]: string;
+  [key: `args${number}`]: ArgumentJson[];
+  style?: BlockStyles;
+  inputsInline?: boolean;
+  previousStatement?: string | string[] | null;
+  nextStatement?: string | string[] | null;
+  output?: string | string[] | null;
+  tooltip?: string;
+  helpUrl?: string;
+}
+
+// Add more field/input definitions as needed
+type ArgumentJson = FieldJson | FieldInput | FieldDropdown;
+
+interface FieldJson {
+  type: string;
+  name: string;
+}
+
+interface FieldInput extends FieldJson {
+  type: 'field_input';
+}
+
+interface FieldDropdown extends FieldJson {
+  type: 'field_dropdown';
+  options: [string, string][];
 }

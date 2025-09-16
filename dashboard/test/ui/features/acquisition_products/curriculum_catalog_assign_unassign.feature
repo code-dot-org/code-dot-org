@@ -3,7 +3,7 @@ Feature: Curriculum Catalog Assign and Unassign
   Scenario: Signed-in teacher with sections assigns and unassigns offerings to sections
     Given I am a teacher with student sections named Section 1 and Section 2
 
-    # Assign a standalone unit
+    # Assign a single-unit course
     And I am on "http://studio.code.org/catalog"
     Then I wait until element "h4:contains(AI for Oceans)" is visible
     And I click selector "[aria-label='Assign AI for Oceans to your classroom']"
@@ -36,7 +36,7 @@ Feature: Curriculum Catalog Assign and Unassign
     And I see that "Section 1" is assigned to "AI for Oceans" in the section table
     And I see that "Section 2" is assigned to "Computer Science Principles" in the section table
 
-    # Unassign standalone unit
+    # Unassign a single-unit course
     Then I am on "http://studio.code.org/catalog"
     And I wait until element "h4:contains(AI for Oceans)" is visible
     And I click selector "[aria-label='Assign AI for Oceans to your classroom']"
@@ -72,7 +72,7 @@ Feature: Curriculum Catalog Assign and Unassign
   Scenario: On expanded card, Signed-in teacher with sections assigns and unassigns offerings to sections
     Given I am a teacher with student sections named Section 1 and Section 2
 
-    # Assign a standalone unit
+    # Assign a single-unit course
     And I am on "http://studio.code.org/catalog"
     Then I wait until element "h4:contains(AI for Oceans)" is visible
     And I click selector "[aria-label='View details about AI for Oceans']"
@@ -108,7 +108,7 @@ Feature: Curriculum Catalog Assign and Unassign
     And I see that "Section 1" is assigned to "AI for Oceans" in the section table
     And I see that "Section 2" is assigned to "Computer Science Principles" in the section table
 
-    # Unassign standalone unit
+    # Unassign a single-unit course
     Then I am on "http://studio.code.org/catalog"
     And I wait until element "h4:contains(AI for Oceans)" is visible
     And I click selector "[aria-label='View details about AI for Oceans']"

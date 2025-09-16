@@ -77,7 +77,49 @@ describe('fileUtils', () => {
         name: 'test.txt',
         type: ProjectFileType.STARTER,
       })
-    ).toEqual({iconName: 'file', iconStyle: 'regular'});
+    ).toEqual({iconName: 'file-lines', iconStyle: 'solid', isBrand: false});
+    expect(
+      getFileIconNameAndStyle({
+        ...defaultFile,
+        name: 'test.html',
+        type: ProjectFileType.STARTER,
+      })
+    ).toEqual({iconName: 'file-code', iconStyle: 'solid', isBrand: false});
+    expect(
+      getFileIconNameAndStyle({
+        ...defaultFile,
+        name: 'test.css',
+        type: ProjectFileType.STARTER,
+      })
+    ).toEqual({iconName: 'css', iconStyle: 'regular', isBrand: true});
+    expect(
+      getFileIconNameAndStyle({
+        ...defaultFile,
+        name: 'test.jpg',
+        type: ProjectFileType.STARTER,
+      })
+    ).toEqual({iconName: 'image', iconStyle: 'solid', isBrand: false});
+    expect(
+      getFileIconNameAndStyle({
+        ...defaultFile,
+        name: 'test.png',
+        type: ProjectFileType.STARTER,
+      })
+    ).toEqual({iconName: 'image', iconStyle: 'solid', isBrand: false});
+    expect(
+      getFileIconNameAndStyle({
+        ...defaultFile,
+        name: 'test.jpeg',
+        type: ProjectFileType.STARTER,
+      })
+    ).toEqual({iconName: 'image', iconStyle: 'solid', isBrand: false});
+    expect(
+      getFileIconNameAndStyle({
+        ...defaultFile,
+        name: 'test.csv',
+        type: ProjectFileType.STARTER,
+      })
+    ).toEqual({iconName: 'file-csv', iconStyle: 'solid', isBrand: false});
   });
 
   it('shows levelbuilder icons in start mode', () => {

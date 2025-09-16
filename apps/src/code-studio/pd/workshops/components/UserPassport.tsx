@@ -1,5 +1,6 @@
 import {LinkButton} from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import Tags from '@code-dot-org/component-library/tags';
 import {
   BodyThreeText,
   OverlineThreeText,
@@ -21,6 +22,7 @@ export const isMissingUserInfo = (
     !userInfo.givenName ||
     !userInfo.familyName ||
     !userInfo.email ||
+    !userInfo.educatorRole ||
     (!userInfo.schoolInfo?.schoolName && !userInfo.schoolInfo?.schoolType)
   );
 };
@@ -30,18 +32,22 @@ const UserPassport: React.FunctionComponent<{
   givenName?: string;
   familyName?: string;
   email: string;
+  educatorRole?: string;
   schoolName?: string;
   schoolType?: string;
   returnToHref: string;
   className?: string;
+  isUserEnrolled?: boolean;
 }> = ({
   displayName,
   givenName,
   familyName,
   email,
+  educatorRole,
   schoolName,
   schoolType,
   returnToHref,
+  isUserEnrolled = false,
   className = '',
 }) => {
   const listedSchoolName =
@@ -63,7 +69,7 @@ const UserPassport: React.FunctionComponent<{
       returnToHref
     )}`;
 
-    if (!givenName || !familyName) {
+    if (!givenName || !familyName || !educatorRole) {
       editLink += `&${AccountSettingsSectionUrlParams.AccountInformation}=true`;
     }
     if (!schoolName && !schoolType) {
@@ -75,47 +81,73 @@ const UserPassport: React.FunctionComponent<{
 
   return (
     <div className={classNames(style.userInfoContainer, className)}>
-      <span className={style.userInfoHeader}>
+      <span
+        className={classNames(
+          style.userInfoHeader,
+          isUserEnrolled && style.enrolledUserInfoHeader
+        )}
+      >
         <div className={style.displayName}>
           <FontAwesomeV6Icon iconName="user-circle" iconStyle="solid" />
           <BodyThreeText>{displayName}</BodyThreeText>
         </div>
-        <LinkButton
-          text="Edit"
-          size="xs"
-          iconLeft={{iconName: 'pencil', iconStyle: 'solid'}}
-          className={style.editButton}
-          href={buildEditLink()}
-        />
+        {isUserEnrolled ? (
+          <Tags
+            className={style.enrolledTag}
+            tagsList={[
+              {label: 'Enrolled', icon: {iconName: 'check', placement: 'left'}},
+            ]}
+          />
+        ) : (
+          <LinkButton
+            text="Edit"
+            size="xs"
+            iconLeft={{iconName: 'pencil', iconStyle: 'solid'}}
+            className={style.editButton}
+            href={buildEditLink()}
+          />
+        )}
       </span>
-      <div className={style.userInfoContent}>
-        <div className={style.userInfoRow}>
-          <OverlineThreeText className={style.userInfoLabel}>
-            Full name
-          </OverlineThreeText>
-          {givenName && familyName ? (
-            <BodyThreeText>{`${givenName} ${familyName}`}</BodyThreeText>
-          ) : (
-            RenderErrorMessage('Add your full name')
-          )}
+      {!isUserEnrolled && (
+        <div className={style.userInfoContent}>
+          <div className={style.userInfoRow}>
+            <OverlineThreeText className={style.userInfoLabel}>
+              Full name
+            </OverlineThreeText>
+            {givenName && familyName ? (
+              <BodyThreeText>{`${givenName} ${familyName}`}</BodyThreeText>
+            ) : (
+              RenderErrorMessage('Add your full name')
+            )}
+          </div>
+          <div className={style.userInfoRow}>
+            <OverlineThreeText className={style.userInfoLabel}>
+              Email
+            </OverlineThreeText>
+            <BodyThreeText>{email}</BodyThreeText>
+          </div>
+          <div className={style.userInfoRow}>
+            <OverlineThreeText className={style.userInfoLabel}>
+              Role
+            </OverlineThreeText>
+            {educatorRole ? (
+              <BodyThreeText>{educatorRole}</BodyThreeText>
+            ) : (
+              RenderErrorMessage('Add your role')
+            )}
+          </div>
+          <div className={style.userInfoRow}>
+            <OverlineThreeText className={style.userInfoLabel}>
+              School
+            </OverlineThreeText>
+            {schoolName || schoolType ? (
+              <BodyThreeText>{listedSchoolName}</BodyThreeText>
+            ) : (
+              RenderErrorMessage('Add your school')
+            )}
+          </div>
         </div>
-        <div className={style.userInfoRow}>
-          <OverlineThreeText className={style.userInfoLabel}>
-            Email
-          </OverlineThreeText>
-          <BodyThreeText>{email}</BodyThreeText>
-        </div>
-        <div className={style.userInfoRow}>
-          <OverlineThreeText className={style.userInfoLabel}>
-            School
-          </OverlineThreeText>
-          {schoolName || schoolType ? (
-            <BodyThreeText>{listedSchoolName}</BodyThreeText>
-          ) : (
-            RenderErrorMessage('Add your school')
-          )}
-        </div>
-      </div>
+      )}
     </div>
   );
 };

@@ -1017,7 +1017,6 @@ export const assignToSection = (
   return (dispatch, getState) => {
     const section = getState().teacherSections.sections[sectionId];
     // Only log if the assignment is changing.
-    // We need an OR here because unitId will be null for standalone units
     if (
       (courseOfferingId && section.courseOfferingId !== courseOfferingId) ||
       (courseVersionId && section.courseVersionId !== courseVersionId) ||

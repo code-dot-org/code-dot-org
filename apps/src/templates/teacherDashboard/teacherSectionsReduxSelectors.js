@@ -153,7 +153,6 @@ export const sectionFromServerSection = serverSection => ({
     ? serverSection.script.name
     : serverSection.unitName,
   unitPosition: serverSection.unitPosition,
-  isAssignedStandaloneCourse: serverSection.isAssignedStandaloneCourse,
   isAssignedSingleUnitCourse: serverSection.is_assigned_single_unit_course,
   createdAt: serverSection.createdAt,
   loginType: serverSection.login_type,
@@ -272,7 +271,6 @@ export function newSectionData(participantType) {
     unitId: null,
     unitName: null,
     unitPosition: null,
-    isAssignedStandaloneCourse: false,
     hidden: false,
     restrictSection: false,
     aiTutorEnabled: false,

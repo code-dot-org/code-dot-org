@@ -2,7 +2,7 @@ import {render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
 
-import {SessionFormat} from '@cdo/apps/code-studio/pd/workshop_dashboard/WorkshopFormTemplate/types';
+import {SessionFormat} from '@cdo/apps/code-studio/pd/workshop_dashboard/workshops/types';
 import EnrollInWorkshop from '@cdo/apps/code-studio/pd/workshops/components/EnrollInWorkshop';
 
 const baseUserInfo = {
@@ -12,6 +12,7 @@ const baseUserInfo = {
   displayName: 'Mr. Doe',
   givenName: 'John',
   familyName: 'Doe',
+  educatorRole: 'Homeschool Teacher',
   schoolInfo: {
     schoolId: 1,
     country: 'United States',

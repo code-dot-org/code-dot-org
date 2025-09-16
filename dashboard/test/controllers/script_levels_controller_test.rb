@@ -68,7 +68,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     @pilot_script_level = create(:script_level, script: pilot_script, lesson: pilot_lesson)
     @pilot_teacher = create(:teacher, pilot_experiment: 'pilot-experiment')
     @pilot_section_owner = create(:teacher, pilot_experiment: 'pilot-experiment')
-    pilot_section = create(:section, user: @pilot_section_owner, script: pilot_script)
+    pilot_section = create(:section, user: @pilot_section_owner, script: pilot_script, course_id: pilot_script.original_unit_group_id)
     create(:section_instructor, instructor: @pilot_teacher, section: pilot_section)
     @pilot_student = create(:follower, section: pilot_section).student_user
 
@@ -78,7 +78,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     @pilot_pl_script_level = create(:script_level, script: pilot_pl_script, lesson: pilot_pl_lesson)
     @pilot_instructor = create(:facilitator, pilot_experiment: 'pl-pilot-experiment')
     @pilot_section_owner = create(:facilitator, pilot_experiment: 'pl-pilot-experiment')
-    pilot_pl_section = create(:section, user: @pilot_section_owner, script: pilot_pl_script)
+    pilot_pl_section = create(:section, user: @pilot_section_owner, script: pilot_pl_script, course_id: pilot_pl_script.original_unit_group_id)
     create(:section_instructor, instructor: @pilot_instructor, section: pilot_pl_section)
     @pilot_participant = create(:teacher)
     create(:follower, section: pilot_pl_section, student_user: @pilot_participant)
@@ -1921,7 +1921,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   def  put_participant_in_section(student, teacher, script)
-    section = create(:section, user_id: teacher.id, script_id: script.id)
+    section = create(:section, user_id: teacher.id, script_id: script.id, course_id: script.original_unit_group_id)
     Follower.create!(section_id: section.id, student_user_id: student.id, user: teacher)
     section
   end

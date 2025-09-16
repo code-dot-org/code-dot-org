@@ -1,6 +1,8 @@
 import {FileId, FolderId} from '@codebridge/types';
 import {PayloadAction, createSlice} from '@reduxjs/toolkit';
 
+import {START_SOURCES} from '@cdo/apps/lab2/constants';
+import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {
   LabConfig,
   MultiFileSource,
@@ -79,12 +81,12 @@ const projectSlice = createSlice({
       if (state.projectSources?.source) {
         state.projectSources = {
           ...state.projectSources,
-          source: createNewFileHelper(
-            state.projectSources?.source as MultiFileSource,
-            action.payload.fileName,
-            action.payload.folderId,
-            action.payload.contents
-          ),
+          source: createNewFileHelper({
+            source: state.projectSources?.source as MultiFileSource,
+            fileName: action.payload.fileName,
+            folderId: action.payload.folderId,
+            contents: action.payload.contents,
+          }),
         };
         state.hasEdited = true;
       }
@@ -95,20 +97,23 @@ const projectSlice = createSlice({
         fileName: string;
         url: string;
         folderId?: FolderId;
+        flagged?: boolean;
       }>
     ) {
       if (state.projectSources?.source) {
+        const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
         const source = state.projectSources.source as MultiFileSource;
-        const newFileId = createNewFileHelper(
+        const newSource = createNewFileHelper({
           source,
-          action.payload.fileName,
-          action.payload.folderId,
-          undefined,
-          action.payload.url
-        );
+          fileName: action.payload.fileName,
+          folderId: action.payload.folderId,
+          url: action.payload.url,
+          isStartMode: isStartMode,
+          flagged: action.payload.flagged,
+        });
         state.projectSources = {
           ...state.projectSources,
-          source: newFileId,
+          source: newSource,
         };
         state.hasEdited = true;
       }
@@ -224,16 +229,23 @@ const projectSlice = createSlice({
         };
       }
     },
-    deleteFile(state, action: PayloadAction<FileId>) {
+    deleteFile(
+      state,
+      action: PayloadAction<{fileId: FileId; isBlockedAbuse?: boolean}>
+    ) {
       if (state.projectSources?.source) {
         const source = state.projectSources.source as MultiFileSource;
-        if (!source.files[action.payload]) {
+        if (!source.files[action.payload.fileId]) {
           // No-op if the file does not exist.
           return;
         }
+        const deleteResult = deleteFileHelper({
+          source,
+          fileId: action.payload.fileId,
+        });
         state.projectSources = {
           ...state.projectSources,
-          source: deleteFileHelper(source, action.payload),
+          source: deleteResult.newSource,
         };
         state.hasEdited = true;
       }
@@ -345,9 +357,14 @@ const projectSlice = createSlice({
           // No-op if the folder does not exist.
           return;
         }
+
+        const deleteResult = deleteFolderHelper({
+          source,
+          folderId: action.payload,
+        });
         state.projectSources = {
           ...state.projectSources,
-          source: deleteFolderHelper(source, action.payload),
+          source: deleteResult.newSource,
         };
         state.hasEdited = true;
       }

@@ -52,34 +52,41 @@ const StudentRubricView: React.FC = () => {
     return null;
   }
 
+  // Sort from highest to lowest understanding level
+  const sortedEvidenceLevels = currentLearningGoal.evidenceLevels?.sort(
+    (a, b) => b!.understanding - a!.understanding
+  );
+
   return (
     <div className={styles.rubricContainer}>
-      <div className={styles.goalSwitcher}>
-        <button
-          className={styles.goalSwitcherButton}
-          type="button"
-          onClick={() => switchGoal(-1)}
-        >
-          <FontAwesomeV6Icon iconName="angle-left" />
-        </button>
-        <ProgressRing
-          className={styles.progressRing}
-          learningGoals={learningGoals}
-          currentLearningGoal={currentGoalIndex}
-          understandingLevels={teacherEvaluations?.map(evaluation =>
-            evaluation.understanding === null ? -1 : evaluation.understanding
-          )}
-          radius={30}
-          stroke={4}
-        />
-        <button
-          className={styles.goalSwitcherButton}
-          type="button"
-          onClick={() => switchGoal(1)}
-        >
-          <FontAwesomeV6Icon iconName="angle-right" />
-        </button>
-      </div>
+      {learningGoals.length > 1 && (
+        <div className={styles.goalSwitcher}>
+          <button
+            className={styles.goalSwitcherButton}
+            type="button"
+            onClick={() => switchGoal(-1)}
+          >
+            <FontAwesomeV6Icon iconName="angle-left" />
+          </button>
+          <ProgressRing
+            className={styles.progressRing}
+            learningGoals={learningGoals}
+            currentLearningGoal={currentGoalIndex}
+            understandingLevels={teacherEvaluations?.map(evaluation =>
+              evaluation.understanding === null ? -1 : evaluation.understanding
+            )}
+            radius={30}
+            stroke={4}
+          />
+          <button
+            className={styles.goalSwitcherButton}
+            type="button"
+            onClick={() => switchGoal(1)}
+          >
+            <FontAwesomeV6Icon iconName="angle-right" />
+          </button>
+        </div>
+      )}
       <BodyTwoText className={styles.learningGoalHeader}>
         {currentLearningGoal.learningGoal}
       </BodyTwoText>
@@ -99,15 +106,19 @@ const StudentRubricView: React.FC = () => {
           )}
         </div>
         <div className={styles.evidenceLevelsContainer}>
-          {currentLearningGoal.evidenceLevels?.map((evidenceLevel, index) => {
+          {sortedEvidenceLevels?.map((evidenceLevel, index) => {
             // InferProps allows evidenceLevel to be null, but if the array is defined
             // we can assume evidenceLevel is not null.
             const el = evidenceLevel as EvidenceLevel;
+            const selected =
+              currentEvaluation?.understanding === el.understanding;
             return (
               <EvidenceLevelView
                 key={index}
                 {...el}
-                selected={currentEvaluation?.understanding === el.understanding}
+                selected={selected}
+                // If a teacher evaluation exists, only expand the corresponding evidence level. Otherwise show all by default.
+                startExpanded={!currentEvaluation || selected}
               />
             );
           })}
@@ -119,18 +130,20 @@ const StudentRubricView: React.FC = () => {
 
 interface EvidenceLevelViewProps extends EvidenceLevel {
   selected: boolean;
+  startExpanded: boolean;
 }
 
 const EvidenceLevelView: React.FC<EvidenceLevelViewProps> = ({
   understanding,
   teacherDescription,
   selected,
+  startExpanded,
 }) => {
-  const [collapsed, setCollapsed] = useState(!selected);
+  const [collapsed, setCollapsed] = useState(!startExpanded);
 
   useEffect(() => {
-    setCollapsed(!selected);
-  }, [selected]);
+    setCollapsed(!startExpanded);
+  }, [startExpanded]);
 
   return (
     <div

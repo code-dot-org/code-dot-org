@@ -485,6 +485,7 @@ export default function manageStudents(state = initialState, action) {
             ...blankAddRow,
             loginType: action.loginType,
           },
+          ...state.studentData,
         },
         editingData: {
           [addRowId]: {
@@ -494,11 +495,19 @@ export default function manageStudents(state = initialState, action) {
         },
       };
     }
-    return {
+
+    let reduxState = {
       ...state,
       loginType: action.loginType,
       ...addRowInitialization,
     };
+
+    if (reduxState.studentData) {
+      Object.keys(reduxState.studentData).forEach(studentId => {
+        reduxState.studentData[studentId].loginType = action.loginType;
+      });
+    }
+    return reduxState;
   }
   if (action.type === SET_STUDENTS) {
     let studentData = {

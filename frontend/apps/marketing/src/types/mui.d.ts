@@ -32,7 +32,7 @@ declare module '@mui/material/styles' {
   // Custom components definitions
   interface ComponentNameToClassKey {
     MuiImage: 'root' | 'imageElement';
-    MuiFooter: 'root' | 'grid' | 'links' | 'link' | 'copyright';
+    MuiFooter: 'root' | 'grid' | 'links' | 'link' | 'imageLink' | 'copyright';
     MuiVideo:
       | 'root'
       | 'wrapper'

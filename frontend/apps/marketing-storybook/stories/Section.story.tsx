@@ -27,7 +27,7 @@ const backgrounds = [
   'patternPrimary',
   'transparent',
 ] as const;
-const paddings = ['m', 'l'] as const;
+const paddings = ['m', 'l', 'none'] as const;
 const themes = ['Light', 'Dark'] as const;
 const dividers = ['none', 'primary', 'strong'] as const;
 

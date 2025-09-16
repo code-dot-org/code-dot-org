@@ -406,7 +406,7 @@ describe('lab2ProjectRedux', () => {
         projectSources: initialProjectSources,
       };
 
-      const state = reducer(initialStateWithSources, deleteFile('1'));
+      const state = reducer(initialStateWithSources, deleteFile({fileId: '1'}));
 
       const newSource = state.projectSources!.source as MultiFileSource;
       expect(newSource.files['1']).toBeUndefined();
@@ -422,13 +422,16 @@ describe('lab2ProjectRedux', () => {
         projectSources: initialProjectSources,
       };
 
-      const state = reducer(initialStateWithSources, deleteFile('nonexistent'));
+      const state = reducer(
+        initialStateWithSources,
+        deleteFile({fileId: 'nonexistent'})
+      );
 
       expect(state).toEqual(initialStateWithSources);
     });
 
     it('should not delete when project sources is undefined', () => {
-      const state = reducer(initialState, deleteFile('1'));
+      const state = reducer(initialState, deleteFile({fileId: '1'}));
       expect(state).toEqual(initialState);
     });
   });

@@ -3,8 +3,7 @@ import {AppRouterCacheProvider} from '@mui/material-nextjs/v15-appRouter';
 import {GoogleAnalytics} from '@next/third-parties/google';
 import {draftMode} from 'next/headers';
 
-import Footer from '@/components/footer';
-import FooterCSforAll from '@/components/footerMui/FooterCSforAll';
+import {getFooter} from '@/components/footer/Footer';
 import {getHeader} from '@/components/header/Header';
 import {Brand} from '@/config/brand';
 import {getGoogleAnalyticsMeasurementId} from '@/config/ga4';
@@ -37,15 +36,6 @@ export default async function Layout({
   const localeConfig = SUPPORTED_LOCALES_MAP.get(locale);
   const theme = getMuiTheme(brand);
   const isDraftModeEnabled = (await draftMode()).isEnabled;
-  // Get Footer component based on brand
-  const getFooter = () => {
-    switch (brand) {
-      case Brand.CS_FOR_ALL:
-        return <FooterCSforAll locale={locale} />;
-      case Brand.CODE_DOT_ORG:
-        return <Footer locale={locale} />;
-    }
-  };
 
   return (
     <html lang={locale} dir={localeConfig?.isRTL ? 'rtl' : 'ltr'}>
@@ -72,7 +62,7 @@ export default async function Layout({
               >
                 {getHeader(brand)}
                 {children}
-                {getFooter()}
+                {await getFooter(brand, locale)}
               </StatsigProvider>
             </OneTrustProvider>
 

@@ -3,6 +3,7 @@ require 'honeybadger/ruby'
 require 'services/lti'
 require 'policies/lti'
 require 'metrics/events'
+require 'policies/devise/email_domains'
 
 class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   include UsersHelper
@@ -294,6 +295,12 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   end
 
   private def register_new_user(user, provider)
+    # Disallow sign up with email addresses from disallowed domains
+    domain = user.email&.split('@', 2)&.last
+    if Policies::Devise::EmailDomains::DISALLOWED_DOMAINS.include?(domain)
+      flash.alert = I18n.t('devise.registrations.disallowed_domain', domain: domain)
+      return redirect_to user_session_path
+    end
     PartialRegistration.persist_attributes(session, user)
 
     @form_data = {

@@ -8,7 +8,7 @@
 #slack_bot_token: localoverride
 #pardot_private_key: localoverride
 #openai_student_learning_api_key: localoverride
-
+#openai_measures_of_learning_api_key: localoverride
 
 # Causes dashboard-server to run pegasus as middleware, starting both in a
 # single command.  This is preferred (and default) in development mode.

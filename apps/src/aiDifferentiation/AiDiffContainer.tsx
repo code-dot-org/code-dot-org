@@ -2,8 +2,6 @@ import React, {useEffect, useState} from 'react';
 import Draggable, {DraggableEventHandler} from 'react-draggable';
 import FocusLock from 'react-focus-lock';
 
-import experiments from '@cdo/apps/util/experiments';
-
 import {useAppSelector} from '../util/reduxHooks';
 import {tryGetSessionStorage, trySetSessionStorage} from '../utils';
 
@@ -42,6 +40,8 @@ const minY = isNaN(originY)
   ? 0
   : originY - document.documentElement.clientHeight + boxHeight;
 const maxY = isNaN(originY) ? 1000 : originY + boxHeight - MIN_VISIBLE;
+
+const AI_DIFF_CLOSE_BUTTON_CLASSNAME = 'ai_diff_close_button';
 
 const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
   closeTutor,
@@ -100,28 +100,29 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
     setPositionY(data.y);
   };
 
-  const showSidebar = experiments.isEnabled(experiments.AI_DIFF_SIDEBAR);
-
   return (
     <Draggable
       handle=".ai_diff_handle"
       position={{x: positionX, y: positionY}}
       onStop={onStopHandler}
+      cancel={`.${AI_DIFF_CLOSE_BUTTON_CLASSNAME}`}
     >
       <div
         // eslint-disable-next-line react/forbid-dom-props
         data-testid="draggable-test-id"
         id="draggable-id"
         className={
-          showSidebar &&
-          !(!hasCompletedAiDifferentiationWelcome && showWelcomeExperience) //don't use wide container for welcome
-            ? style.aiDiffContainerWide
-            : style.aiDiffContainer
+          !hasCompletedAiDifferentiationWelcome && showWelcomeExperience //don't use wide container for welcome
+            ? style.aiDiffContainer
+            : style.aiDiffContainerWide
         }
         style={open ? undefined : {display: 'none'}}
       >
         <FocusLock>
-          <AiDiffHeader closeTutor={closeTutor} />
+          <AiDiffHeader
+            closeTutor={closeTutor}
+            closeButtonClassName={AI_DIFF_CLOSE_BUTTON_CLASSNAME}
+          />
           <div className={style.fabBackground}>
             {!hasCompletedAiDifferentiationWelcome && showWelcomeExperience
               ? curriculumCourses && (
@@ -137,7 +138,6 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
                     context={context}
                     scriptName={scriptName}
                     curriculumCourses={curriculumCourses}
-                    showSidebar={showSidebar}
                   />
                 )}
           </div>

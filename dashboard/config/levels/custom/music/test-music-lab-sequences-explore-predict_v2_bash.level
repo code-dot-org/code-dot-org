@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-08-15T18:44:30.000Z",
   "level_num": "custom",
@@ -149,10 +150,12 @@
       }
     ],
     "name_suffix": "_bash",
+    "teacher_markdown": "##### By the way - you can look at your students' answers to these prediction questions during your lesson by using our <a href=\"https://support.code.org/hc/en-us/articles/14544890300301-Can-I-see-a-summary-of-all-my-students-responses-for-question-based-levels#:~:text=From%20the%20dropdown%20menu%20in,the%20top%20of%20the%20instructions.\" Target=\"blank\" rel=\"noopener noreferrrer\">\"View Student Responses\" feature</a>.",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-08-15T18:44:30.623+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-explore-predict_v2\\\"\"],\"cloned_from\":\"test-music-lab-sequences-explore-predict_v2\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-08-15T18:44:30.623+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-explore-predict_v2\\\"\"],\"cloned_from\":\"test-music-lab-sequences-explore-predict_v2\"},{\"changed_at\":\"2025-08-25 01:49:15 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

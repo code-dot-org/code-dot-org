@@ -4,11 +4,9 @@ module Marketing
 
     config.autoload_paths << config.root.join('lib').to_s
 
-    initializer "marketing.include_helpers" do
-      ActiveSupport.on_load(:action_controller) do
-        require_dependency File.join(Marketing::Engine.root, 'app', 'helpers', 'external_notifications_helper')
-        include ExternalNotificationsHelper
-      end
+    config.to_prepare do
+      # Register the Contentful source for notifications in the Dashboard app
+      ::Notifications.register(Marketing::DashboardNotifications::ContentfulNotificationSource.new)
     end
   end
 end

@@ -66,9 +66,10 @@ export const usePrompts = () => {
     [dispatch]
   );
 
-  const deleteFile = (fileId: string) => dispatch(deleteFileThunk(fileId));
+  const deleteFile = (arg: {fileId: string}) =>
+    dispatch(deleteFileThunk({fileId: arg.fileId}));
   const deleteFolder = (folderId: string) =>
-    dispatch(deleteFolderThunk(folderId));
+    dispatch(deleteFolderThunk({folderId}));
   const newFolder = (arg: {folderName: string; parentId?: FolderId}) =>
     dispatch(
       createNewFolderThunk({folderName: arg.folderName, parentId: arg.parentId})

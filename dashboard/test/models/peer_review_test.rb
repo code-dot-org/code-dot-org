@@ -24,6 +24,7 @@ class PeerReviewTest < ActiveSupport::TestCase
 
     @script_level = create(:script_level, levels: [@level], script: @learning_module.plc_course_unit.script, lesson: @learning_module.lesson)
     @script = @script_level.script
+    @unit_group = create(:unit_group, :with_unit, unit: @script)
 
     @user = create(:user)
 
@@ -533,7 +534,8 @@ class PeerReviewTest < ActiveSupport::TestCase
       new_result: Activity::UNREVIEWED_SUBMISSION_RESULT,
       submitted: true,
       level_source_id: level_source_id,
-      pairing_user_ids: nil
+      pairing_user_ids: nil,
+      unit_group: @unit_group
     )
   end
 

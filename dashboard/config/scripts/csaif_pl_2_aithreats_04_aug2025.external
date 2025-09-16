@@ -1,0 +1,40 @@
+name 'csaif_pl_2_aithreats_04_aug2025'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# The Day Everything Broke
+
+## 📝 To Do
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #B7E0E5; display: inline-block;"><i class="fa-solid fa-user-graduate"></i> Career Journeys
+</p>
+
+#### For the failure scenario from the comic, choose one of the four cyber professionals who could have helped fix the problem. Reflect on, *how that person might solve the issue*.
+
+<div style="background-color: #e3f2fd; padding: 10px; border-left: 5px solid #2196f3; margin-bottom: 20px; font-size: 16px">
+      <strong>💡 IT Support Specialist</strong><br>
+      Helps people when they can't log in, reset passwords, or connect to school systems. 
+      Often the first person called when something breaks on a student or teacher's device.
+</div>
+
+<div style="background-color: #f3e5f5; padding: 10px; border-left: 5px solid #9c27b0; margin-bottom: 20px; font-size: 16px">
+      <strong>⚙️ System Administrator</strong><br>
+      Sets up and manages the systems that run the school's technology like email, learning platforms, 
+      and user accounts. Makes sure systems are updated, secure, and working properly for everyone.
+</div>
+
+<div style="background-color: #e3f2fd; padding: 10px; border-left: 5px solid #2196f3; margin-bottom: 20px; font-size: 16px">
+      <strong>🌐 Network Engineer</strong><br>
+      Keeps the school Wi-Fi, internet, and network connections fast and stable. 
+      Prevents crashes or slowdowns, especially during high-traffic times like online testing.
+</div>
+
+<div style="background-color: #f3e5f5; padding: 10px; border-left: 5px solid #9c27b0; margin-bottom: 20px; font-size: 16px">
+      <strong>🔒 Access Control Manager</strong><br>
+      Controls who gets access to what files, folders, and data. 
+      Makes sure private information stays private, and only the right people can view or edit it.
+</div>
+
+
+MARKDOWN

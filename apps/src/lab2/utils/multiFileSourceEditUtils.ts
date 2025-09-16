@@ -1,14 +1,13 @@
 import {DEFAULT_FOLDER_ID} from '@cdo/apps/codebridge/constants';
 import {getOpenFileIds} from '@cdo/apps/codebridge/utils';
-import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {getActiveFileForSource} from '@cdo/apps/lab2/projects/utils';
 import {
   FileId,
   FolderId,
   MultiFileSource,
   ProjectFile,
+  ProjectFileType,
 } from '@cdo/apps/lab2/types';
-import HttpClient from '@cdo/apps/util/HttpClient';
 
 import {
   getNextFileId,
@@ -19,16 +18,54 @@ import {
 
 // Helper functions for editing multi-file sources in lab2.
 
+interface CreateNewFileHelperArgs {
+  source: MultiFileSource;
+  fileName: string;
+  folderId?: FolderId;
+  contents?: string;
+  url?: string;
+  isStartMode?: boolean;
+  flagged?: boolean;
+}
+
+interface DeleteFileHelperArgs {
+  source: MultiFileSource;
+  fileId: FileId;
+}
+
+interface DeleteFolderHelperArgs {
+  source: MultiFileSource;
+  folderId: FolderId;
+}
+
+interface DeletedFileAsset {
+  channelId: string;
+  url: string;
+  flagged?: boolean;
+}
+
+interface DeleteFileResult {
+  newSource: MultiFileSource;
+  deletedFileAsset?: DeletedFileAsset;
+}
+
+interface DeleteFolderResult {
+  newSource: MultiFileSource;
+  deletedFilesAssets?: DeletedFileAsset[];
+}
+
 /**
  * Create a new file.
  */
-export const createNewFileHelper = (
-  source: MultiFileSource,
-  fileName: string,
-  folderId: FolderId = DEFAULT_FOLDER_ID,
-  contents: string = '',
-  url?: string
-): MultiFileSource => {
+export const createNewFileHelper = ({
+  source,
+  fileName,
+  folderId = DEFAULT_FOLDER_ID,
+  contents = '',
+  url,
+  isStartMode,
+  flagged,
+}: CreateNewFileHelperArgs): MultiFileSource => {
   const fileId = getNextFileId(Object.values(source.files));
   const newSource = {...source, files: {...source.files}};
   const [, extension] = fileName.split('.');
@@ -46,10 +83,19 @@ export const createNewFileHelper = (
     file.url = url;
   }
 
+  if (isStartMode) {
+    file.type = ProjectFileType.STARTER;
+  }
+
+  if (flagged) {
+    file.flagged = flagged;
+  }
+
   newSource.files[fileId] = file;
 
   return activateFileHelper(newSource, fileId);
 };
+
 /**
  * Activate a file (make active).
  */
@@ -118,12 +164,16 @@ export const closeFileHelper = (
 };
 
 /**
- * Delete a file.
+ * Deletes a file from the given MultiFileSource.
+ * - Removes the file from the files list and from the list of open files.
+ * - Updates the active file if the deleted file was active, activating a new file if possible.
+ * - Returns the updated MultiFileSource and, if the file was an uploaded asset (has a URL),
+ *     details about the deleted file.
  */
-export const deleteFileHelper = (
-  source: MultiFileSource,
-  fileId: FileId
-): MultiFileSource => {
+export const deleteFileHelper = ({
+  source,
+  fileId,
+}: DeleteFileHelperArgs): DeleteFileResult => {
   const openFileIds = getOpenFileIds(source);
   const newOpenFileIds = openFileIds.find(openFileId => openFileId === fileId)
     ? openFileIds.filter(openFileId => openFileId !== fileId)
@@ -139,17 +189,7 @@ export const deleteFileHelper = (
   const fileToBeDeleted = newSource.files[fileId];
   delete newSource.files[fileId];
 
-  if (fileToBeDeleted.url) {
-    try {
-      // We don't wait for the deletion to complete because a user's project doesn't depend on the completion of the operation.
-      // In the case of a failure, we just end up with an orphaned file in S3.
-      HttpClient.delete(fileToBeDeleted.url);
-    } catch (error) {
-      Lab2Registry.getInstance()
-        .getMetricsReporter()
-        .logError('Error deleting project asset from S3', error as Error);
-    }
-  }
+  const deletedStudentFileAsset = getStudentFileAssetInfo(fileToBeDeleted);
 
   const newActiveFileId = getNewActiveFileId(source, fileToBeDeleted);
   if (newActiveFileId) {
@@ -159,7 +199,10 @@ export const deleteFileHelper = (
     };
   }
 
-  return newSource;
+  return {
+    newSource,
+    deletedFileAsset: deletedStudentFileAsset,
+  };
 };
 
 /**
@@ -183,12 +226,20 @@ export const createNewFolderHelper = (
 };
 
 /**
- * Delete a folder and all of its contents.
+ * Deletes a folder from the given MultiFileSource.
+ * - Removes the folder from the folders list.
+ * - Removes all child folders from the folders list.
+ * - Removes all files housed within this or any child folder from the files list.
+ * - Updates the active file if necessary.
+ * - Returns the updated MultiFileSource and, if the folder contains flagged files,
+ *     details about the deleted files.
  */
-export const deleteFolderHelper = (
-  source: MultiFileSource,
-  folderId: FolderId
-): MultiFileSource => {
+export const deleteFolderHelper = ({
+  source,
+  folderId,
+}: DeleteFolderHelperArgs): DeleteFolderResult => {
+  const deletedFilesAssets: DeletedFileAsset[] = [];
+
   const newSource = {
     ...source,
     folders: {
@@ -222,19 +273,10 @@ export const deleteFolderHelper = (
       .filter(f => files.has(f.id))
       .forEach(f => {
         delete newSource.files[f.id];
-        if (f.url) {
-          try {
-            // We don't wait for the deletion to complete because a user's project doesn't depend on the completion of the operation.
-            // In the case of a failure, we just end up with an orphaned file in S3.
-            HttpClient.delete(f.url);
-          } catch (error) {
-            Lab2Registry.getInstance()
-              .getMetricsReporter()
-              .logError(
-                'Error deleting project asset (as part of folder deletion) from S3',
-                error as Error
-              );
-          }
+
+        const deletedStudentFileAsset = getStudentFileAssetInfo(f);
+        if (deletedStudentFileAsset) {
+          deletedFilesAssets.push(deletedStudentFileAsset);
         }
       });
     if (newSource.openFiles) {
@@ -258,7 +300,10 @@ export const deleteFolderHelper = (
     }
   }
 
-  return newSource;
+  return {
+    newSource,
+    deletedFilesAssets,
+  };
 };
 
 // If we either close or delete a file, we may need to update the active file.
@@ -290,6 +335,23 @@ const getNewActiveFileId = (
     }
 
     return newActiveFileId;
+  }
+  return undefined;
+};
+
+// Helper function to extract file asset info to be deleted from S3 if the file is owned by a student
+// (i.e., not a level starter asset).
+const getStudentFileAssetInfo = (file: ProjectFile) => {
+  if (
+    file.url &&
+    !Object.values(ProjectFileType).includes(file?.type as ProjectFileType)
+  ) {
+    // Extract channelId from asset url.
+    const match = file.url.match(/\/assets\/([^/]+)/);
+    const channelId = match ? match[1] : null;
+    if (channelId) {
+      return {channelId, url: file.url, flagged: file.flagged};
+    }
   }
   return undefined;
 };

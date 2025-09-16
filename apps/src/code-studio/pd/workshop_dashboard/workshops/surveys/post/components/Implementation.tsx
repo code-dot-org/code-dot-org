@@ -1,18 +1,23 @@
 import {Box} from '@mui/material';
+import classNames from 'classnames';
 import React, {useMemo} from 'react';
 
-import {
-  isQuestionType,
-  SurveyQuestion,
-  SurveyQuestions,
-} from '../../../../WorkshopFormTemplate/types';
+import {MinSurveyResponseCount} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
+
+import {SurveyQuestions} from '../../../types';
 import {useWorkshopContext} from '../../../WorkshopLayout';
-import {MultiSelectCard} from '../../components/MultiSelectCard';
+import {FollowUpRequestedCard} from '../../components/FollowUpRequestedCard';
+import {FreeResponseCard} from '../../components/FreeResponseCard';
 import {ScoreCard} from '../../components/ScoreCard';
+import {SelectCard} from '../../components/SelectCard';
+import {LIKERT_QUESTION_FOOTER} from '../../constants';
+import {
+  getQuestionDescription,
+  isQuestionType,
+  prepLikertBreakdown,
+} from '../../utils';
 
 import styles from '../../../workshop.module.scss';
-
-export const MIN_RESPONSE_COUNT = 5;
 
 export const Implementation = () => {
   const {surveys} = useWorkshopContext();
@@ -36,31 +41,22 @@ export const Implementation = () => {
     [questions]
   );
 
+  const otherQuestionsImplementation = useMemo(
+    () => (questions ? questions.other_questions_implementation : undefined),
+    [questions]
+  );
+
   // remove "none" option from barriers items since we only care about barriers, not that there weren't any
   const barriersItems = useMemo(() => {
     if (!isQuestionType(barriersToImplementation, 'multiSelect')) {
       return [];
     }
-    return Object.entries(barriersToImplementation.results.breakdown)
+    return Object.entries(barriersToImplementation.results.breakdown ?? {})
       .filter(([key]) => key !== 'none')
       .map(([_, value]) => value);
   }, [barriersToImplementation]);
 
-  const getDescription = (question: SurveyQuestion) => {
-    if (isQuestionType(question, 'likert')) {
-      return `${question.results.agreement_count} of ${question.results.total_responses} respondents`;
-    }
-    if (
-      isQuestionType(question, 'multiSelect') &&
-      question.question_name === 'barriers_implementation_curriculum'
-    ) {
-      const numWithBarriers =
-        (question.results.total_respondents ?? 0) -
-        (question.results.breakdown?.none?.count ?? 0);
-      return `${numWithBarriers} teachers reported at least 1 or more barriers to implementation`;
-    }
-    return '';
-  };
+  const followUpRequestedItems = surveys?.follow_up_requested ?? [];
 
   if (!questions) return null;
 
@@ -72,27 +68,56 @@ export const Implementation = () => {
             <ScoreCard
               key={question.question_name}
               title={question.question_short_text ?? question.question_text}
-              description={getDescription(question)}
-              footer={question.question_sub_text}
+              longTitle={question.question_text}
+              description={getQuestionDescription(question)}
+              questionType={question.question_type}
+              footer={LIKERT_QUESTION_FOOTER}
               score={question.results.weighted_score}
               responseCount={question.results.total_responses}
-              minResponseCount={MIN_RESPONSE_COUNT}
+              minResponseCount={MinSurveyResponseCount}
+              breakdown={prepLikertBreakdown(question.results.breakdown)}
             />
           ) : null
         )}
       </Box>
 
-      <Box className={styles.cardRow}>
+      <Box className={classNames(styles.cardRow, styles.scrollContainerRow)}>
         {isQuestionType(barriersToImplementation, 'multiSelect') && (
-          <MultiSelectCard
-            key={barriersToImplementation.question_name}
+          <SelectCard
             title={
               barriersToImplementation.question_short_text ??
               barriersToImplementation.question_text
             }
-            description={getDescription(barriersToImplementation)}
+            description={getQuestionDescription(barriersToImplementation)}
+            totalRespondents={
+              barriersToImplementation.results.total_respondents
+            }
             items={barriersItems}
             barLabel="Teachers"
+          />
+        )}
+        <FollowUpRequestedCard
+          items={followUpRequestedItems}
+          title="Follow-up requested"
+          description={
+            followUpRequestedItems.length
+              ? `${followUpRequestedItems.length} teachers requested additional support with implementation.`
+              : ''
+          }
+        />
+      </Box>
+
+      <Box className={styles.cardRow}>
+        {isQuestionType(otherQuestionsImplementation, 'text') && (
+          <FreeResponseCard
+            title={
+              otherQuestionsImplementation.question_short_text ??
+              otherQuestionsImplementation.question_text
+            }
+            items={otherQuestionsImplementation.results.responses ?? []}
+            tagText={`${
+              otherQuestionsImplementation.results.total_responses ?? 0
+            } Submitted`}
           />
         )}
       </Box>

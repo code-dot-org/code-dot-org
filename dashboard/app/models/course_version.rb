@@ -110,8 +110,7 @@ class CourseVersion < ApplicationRecord
 
     # Destroy the previously associated CourseVersion and CourseOffering if appropriate. This can happen if either:
     #   - family_name or version_year was changed
-    #   - is_course? changed from true to false, such as if "is_course true" was removed from a .script file, or
-    #     family_name or version_year was removed from a .course file.
+    #   - is_course? changed from true to false, such as if family_name or version_year was removed from a .course file.
     content_root.course_version&.destroy_and_destroy_parent_if_empty if content_root.course_version != course_version
     content_root.course_version = course_version
 

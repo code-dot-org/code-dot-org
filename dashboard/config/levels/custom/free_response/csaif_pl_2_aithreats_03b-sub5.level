@@ -1,0 +1,25 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2025-08-20T14:20:55.000Z",
+  "level_num": "custom",
+  "user_id": 21093,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "#### **Feel**\r\n#### How does Jordan feel?\r\n\r\n",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "name_suffix": "_2025",
+    "stay_on_level_after_submit": "true"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-08-20T14:20:55.422+00:00\",\"changed\":[\"cloned from \\\"csaif_pl_2_aithreats_03b-sub4\\\"\"],\"cloned_from\":\"csaif_pl_2_aithreats_03b-sub4\"},{\"changed_at\":\"2025-08-20 14:21:11 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

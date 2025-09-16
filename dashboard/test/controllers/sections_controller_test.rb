@@ -16,7 +16,7 @@ class SectionsControllerTest < ActionController::TestCase
 
     @regular_section = create(:section, user: @teacher, login_type: 'email')
 
-    @flappy_section = create(:section, user: @teacher, login_type: 'word', script_id: Unit.flappy_unit.id)
+    @flappy_section = create(:section, user: @teacher, login_type: 'word', script_id: Unit.flappy_unit.id, course_id: Unit.flappy_unit.original_unit_group_id)
     @flappy_user_1 = create(:follower, section: @flappy_section).student_user
   end
 
@@ -297,7 +297,7 @@ class SectionsControllerTest < ActionController::TestCase
     get :retrieve_lessons_for_dropdown, params: {id: @flappy_section.id}
     assert_response :success
     response_json = JSON.parse(@response.body)
-    assert_equal response_json, [{"text"=>"Flappy Code", "value"=>"/courses/flappy/units/1"}, {"text"=>"Lesson 1: Flappy Code", "value"=>"/courses/flappy/units/1/lessons/1/levels/1"}]
+    assert_equal response_json, [{"text"=>"Flappy Code", "value"=>"/courses/flappy/units/1"}, {"text"=>"Flappy Code", "value"=>"/courses/flappy/units/1/lessons/1/levels/1"}]
   end
 
   describe '#retrieve_lessons_for_dropdown' do
@@ -335,7 +335,7 @@ class SectionsControllerTest < ActionController::TestCase
     end
 
     it 'returns lesson name' do
-      _(response_lesson[:text]).must_equal "Lesson #{lesson.relative_position}: #{lesson.localized_name}"
+      _(response_lesson[:text]).must_equal lesson.localized_title
     end
 
     it 'returns lesson path' do

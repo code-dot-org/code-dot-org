@@ -1,5 +1,5 @@
 import {CodebridgeContextProvider} from '@codebridge/codebridgeContext';
-import {useZoomTracker} from '@codebridge/hooks';
+import {useFlaggedImage, useZoomTracker} from '@codebridge/hooks';
 import {setWidgetViewShowCode} from '@codebridge/redux/workspaceRedux';
 import {
   ConfigType,
@@ -8,6 +8,7 @@ import {
   SendConsoleInputFunction,
   CodebridgeLevelProperties,
   ProjectPickerSettings,
+  LayoutProps,
 } from '@codebridge/types';
 import classNames from 'classnames';
 import React, {useEffect, useMemo} from 'react';
@@ -19,9 +20,13 @@ import {ProjectSources} from '@cdo/apps/lab2/types';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import {BackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
+import FlaggedImageModal from '@cdo/apps/sharedComponents/FlaggedImageModal';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import {AiTutorContext} from '../aiTutor/types';
+
 import moduleStyles from './styles/codebridgeContainer.module.scss';
+
 import './styles/codebridge.scss';
 
 const RUN_BUTTON_ID = '#uitest-codebridge-run';
@@ -37,8 +42,8 @@ type CodebridgeProps = {
   sendConsoleInput?: SendConsoleInputFunction;
   levelProperties: CodebridgeLevelProperties;
   projectPickerSettings?: ProjectPickerSettings;
-  AiTutor2ResponseView?: React.ReactNode;
-  aiTutor2Context?: string;
+  aiTutorSystemPromptName?: string;
+  aiTutorContextPromise?: Promise<AiTutorContext>;
 };
 
 export const Codebridge = React.memo(
@@ -51,12 +56,16 @@ export const Codebridge = React.memo(
     sendConsoleInput,
     levelProperties,
     projectPickerSettings,
-    AiTutor2ResponseView,
-    aiTutor2Context,
+    aiTutorSystemPromptName,
+    aiTutorContextPromise,
   }: CodebridgeProps) => {
     const isShareView = useAppSelector(state => state.lab.isShareView);
     const isWidgetView = !!levelProperties.widgetView;
     const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
+    const appName = levelProperties.appName;
+    const isFullScreenView = useAppSelector(
+      state => state.lab.isFullScreenView
+    );
 
     // Adds keyboard shortcuts for Editor (1), Run (2), and Console (3)
     // which are preceded by Control (Windows/Linux) or Command (macOS).
@@ -110,27 +119,35 @@ export const Codebridge = React.memo(
       };
     }, []);
 
-    const InnerLayout = useMemo(() => {
+    const InnerLayout = useMemo((): React.FunctionComponent<LayoutProps> => {
       if (isShareView && config.layoutComponents.share) {
         return config.layoutComponents.share;
       }
       if (isWidgetView && config.layoutComponents.widget && !isStartMode) {
         return config.layoutComponents.widget;
       }
+      if (isFullScreenView && config.layoutComponents.fullScreen) {
+        return config.layoutComponents.fullScreen;
+      }
       let currentLayout = config.activeLayout;
       if (!currentLayout) {
-        currentLayout = 'horizontal';
+        currentLayout = appName === 'pythonlab' ? 'horizontal' : 'vertical';
       }
-      return config.layoutComponents[currentLayout];
+      // Since 'horizontal' is an optional layout (not all labs have it),
+      // we need to add a fallback to 'vertical' to avoid type errors.
+      return (
+        config.layoutComponents[currentLayout] ||
+        config.layoutComponents.vertical
+      );
     }, [
+      appName,
       config.activeLayout,
       config.layoutComponents,
+      isFullScreenView,
       isShareView,
       isStartMode,
       isWidgetView,
     ]);
-
-    const appName = levelProperties.appName;
 
     const backpackApi = useMemo(
       () => new BackpackClientApi(appName, null),
@@ -147,6 +164,13 @@ export const Codebridge = React.memo(
       dispatch(setWidgetViewShowCode(false));
     });
 
+    const {
+      flaggedImageData,
+      onImageFlagged,
+      handleAcceptFlaggedImage,
+      handleCancelFlaggedImage,
+    } = useFlaggedImage();
+
     return (
       <CodebridgeContextProvider
         value={{
@@ -158,12 +182,19 @@ export const Codebridge = React.memo(
           sendConsoleInput,
           levelProperties,
           projectPickerSettings,
-          AiTutor2ResponseView,
-          aiTutor2Context,
+          aiTutorContextPromise,
+          onImageFlagged,
+          aiTutorSystemPromptName,
         }}
       >
         <BackpackAPIContext.Provider value={backpackApi}>
           <div className={classNames(moduleStyles.codebridgeContainer)}>
+            {flaggedImageData && (
+              <FlaggedImageModal
+                onAccept={handleAcceptFlaggedImage}
+                onCancel={handleCancelFlaggedImage}
+              />
+            )}
             <InnerLayout
               isProjectLevel={levelProperties.isProjectLevel}
               isWidgetView={levelProperties.widgetView}

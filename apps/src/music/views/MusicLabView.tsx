@@ -3,12 +3,15 @@ import classNames from 'classnames';
 import React, {memo, useCallback, useContext, useEffect} from 'react';
 import {useSelector} from 'react-redux';
 
+import {WorkspaceSerialization} from '@cdo/apps/blockly/types';
+import {applyBlockIdOverrides} from '@cdo/apps/blockly/utils';
 import header from '@cdo/apps/code-studio/header';
 import {
   START_SOURCES,
   TOOLBOX_BLOCKS,
   WARNING_BANNER_MESSAGES,
 } from '@cdo/apps/lab2/constants';
+import {useBlocklySettings} from '@cdo/apps/lab2/hooks/useBlocklySettings';
 import {ProgressManagerContext} from '@cdo/apps/lab2/progress/ProgressContainer';
 import {
   getAppOptionsEditBlocks,
@@ -29,10 +32,7 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import AnalyticsReporter from '../analytics/AnalyticsReporter';
 import AppConfig from '../appConfig';
-import {
-  applyBlockIdOverrides,
-  installFunctionBlocks,
-} from '../blockly/blockUtils';
+import {installFunctionBlocks} from '../blockly/blockUtils';
 import MusicBlocklyWorkspace from '../blockly/MusicBlocklyWorkspace';
 import {Trigger} from '../constants';
 import musicI18n from '../locale';
@@ -51,6 +51,7 @@ import {MusicExemplarSettings, MusicLevelData} from '../types';
 import AdvancedControls from './AdvancedControls';
 import Controls from './Controls';
 import ExemplarPlayerView from './ExemplarPlayerView';
+import Generate from './Generate';
 import HeaderButtons from './HeaderButtons';
 import usePlaybackUpdate from './hooks/usePlaybackUpdate';
 import useUpdateAnalytics from './hooks/useUpdateAnalytics';
@@ -137,6 +138,9 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   const validationStateCallout = useAppSelector(
     state => state.lab.validationState.callout
   );
+  const aiCodeGenerateAdlibOption =
+    (levelData as MusicLevelData).aiCodeGenerateAdlib ||
+    (AppConfig.getValue('ai-generate-adlib') as string);
 
   const progressManager = useContext(ProgressManagerContext);
 
@@ -167,7 +171,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
         const workspaceSerialization = blocklyWorkspace.getCode();
         if (Blockly.blockIdOverrides) {
           applyBlockIdOverrides(
-            workspaceSerialization,
+            workspaceSerialization as WorkspaceSerialization,
             Blockly.blockIdOverrides
           );
         }
@@ -299,6 +303,8 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
     AppConfig.getValue('player') === 'tonejs' &&
     AppConfig.getValue('advanced-controls-enabled') === 'true';
 
+  const settings = useBlocklySettings();
+
   if (isPlayView) {
     return <MusicPlayView setPlaying={setPlaying} />;
   }
@@ -308,9 +314,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
       <div className={moduleStyles.centerHeaderContentText}>
         {musicI18n.panelHeaderWorkspace()}
       </div>
-      {projectTemplateLevel && (
-        <ProjectTemplateWorkspaceIconV2 darkMode={true} />
-      )}
+      {projectTemplateLevel && <ProjectTemplateWorkspaceIconV2 />}
     </div>
   );
 
@@ -364,6 +368,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
                 includeFooterSpacing={false}
                 levelProperties={levelProperties}
                 headerClassName={moduleStyles.headerWithBorder}
+                settings={settings}
               />
             ) : (
               <PanelContainer
@@ -426,6 +431,11 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
         )}
 
         <div id="blockly-area" className={moduleStyles.blocklyArea}>
+          {(AppConfig.getValue('ai-generate') === 'true' ||
+            (levelProperties.levelData as MusicLevelData).aiCodeGenerate) && (
+            <Generate adlibOption={aiCodeGenerateAdlibOption} />
+          )}
+
           <PanelContainer
             id="workspace-panel"
             headerContent={headerContent}

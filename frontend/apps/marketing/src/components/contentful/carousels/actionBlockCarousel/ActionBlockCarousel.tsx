@@ -1,6 +1,5 @@
 'use client';
 
-import {useInMemoryEntities} from '@contentful/experiences-sdk-react';
 import {EntryFields} from 'contentful';
 import React, {useMemo} from 'react';
 
@@ -11,6 +10,7 @@ import DSCOCarousel from '@code-dot-org/component-library/carousel';
 
 import {externalLinkIconProps} from '@/components/common/constants';
 import {showNewTag} from '@/components/contentful/actionBlocks/helpers';
+import {resolveContentfulLink} from '@/contentful/resolveLink';
 import {getAbsoluteImageUrl} from '@/selectors/contentful/getImage';
 import {LinkEntry} from '@/types/contentful/entries/Link';
 import {Entry} from '@/types/contentful/Entry';
@@ -51,8 +51,6 @@ const ActionBlockCarousel: React.FC<ActionBlockCarouselProps> = ({
     );
   }
 
-  const inMemoryEntities = useInMemoryEntities();
-
   const slidesData = useMemo(
     () =>
       slides.filter(Boolean).map(({sys, fields}) => {
@@ -67,15 +65,11 @@ const ActionBlockCarousel: React.FC<ActionBlockCarouselProps> = ({
           publishedDate,
         } = fields;
 
-        const resolvedImage = inMemoryEntities.maybeResolveLink(
-          image,
-        ) as ExperienceAsset;
-        const resolvedPrimaryLinkRef = inMemoryEntities.maybeResolveLink(
-          primaryLinkRef,
-        ) as LinkEntry;
-        const resolvedSecondaryLinkRef = inMemoryEntities.maybeResolveLink(
-          secondaryLinkRef,
-        ) as LinkEntry;
+        const resolvedImage = resolveContentfulLink<ExperienceAsset>(image);
+        const resolvedPrimaryLinkRef =
+          resolveContentfulLink<LinkEntry>(primaryLinkRef);
+        const resolvedSecondaryLinkRef =
+          resolveContentfulLink<LinkEntry>(secondaryLinkRef);
 
         return {
           id: title,

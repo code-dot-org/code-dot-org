@@ -30,12 +30,11 @@
         "ai"
       ],
       "tts": true,
-      "version_year": "2025",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-08-19 19:06:34 UTC",
+    "serialized_at": "2025-08-25 15:11:47 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -7393,7 +7392,7 @@
   "resources": [
     {
       "name": "[EXEMPLAR] Unit Guide",
-      "url": "\thttps://docs.google.com/document/d/1TATwQ6ToVOpQlF6YqTOHxfYZSL2X9Kqg5eMfjcbq_2Q/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1kFQVLdkVUXUg5jhqNM8wnODXfWTy2IyGAvrVeuiApfI/edit?usp=sharing",
       "key": "_exemplar_unit_guide",
       "properties": {
       },
@@ -7937,11 +7936,9 @@
     },
     {
       "name": "Unit Guide",
-      "url": "https://docs.google.com/document/d/1dEUX5WrIRv_CRxKhk8o3RBHNhetgjnc0Aq2jAQ_0YQc/edit?tab=t.0",
+      "url": "https://docs.google.com/document/d/1a57BJiBmJaU_gTddB_IyAbjiU_8HDfcK3hGluNkuDXg/edit?usp=sharing",
       "key": "unit_guide_2",
       "properties": {
-        "audience": "Student",
-        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "unit_guide_2"

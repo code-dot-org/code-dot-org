@@ -170,62 +170,6 @@ Async do
       end
     end
   end
-
-  # Export resources from standalone units
-  Unit.all.filter(&:is_course?).filter(&:stable?).each do |unit|
-    unit_metadata = {
-      course: unit.name,
-      unit_fullname: unit.name,
-      unit: 'U01'
-    }
-    puts "standalone unit: #{unit.name}"
-    prefix = "standalone-#{unit.name}"
-
-    # Unit-level resources: request them all concurrently and wait for the
-    # slowest before moving on
-    barrier = Async::Barrier.new
-    unit.resources.filter(&:google_docs?).each_with_index do |resource, i|
-      download_google_file(
-        url: resource.google_pdf_download_url,
-        path: "#{prefix}-#{i}.pdf",
-        metadata: unit_metadata.merge(
-          {
-            lesson: 'all',
-            url: resource.url,
-            verified_teacher: resource.audience == 'Verified Teacher'
-          }
-        ),
-        barrier: barrier
-      )
-    end
-    barrier.wait
-    puts ''
-
-    unit.lessons.each do |lesson|
-      lesson_metadata = unit_metadata.merge({lesson: format("L%02d", lesson.absolute_position)})
-      puts "L#{lesson.absolute_position} - #{lesson.name}"
-      prefix = "standalone-#{unit.name}-L#{lesson.absolute_position}"
-
-      # Lesson-level resources: request them all concurrently and wait for the
-      # slowest before moving on
-      barrier = Async::Barrier.new
-      lesson.resources.filter(&:google_docs?).each_with_index do |resource, i|
-        download_google_file(
-          url: resource.google_pdf_download_url,
-          path: "#{prefix}-#{i}.pdf",
-          metadata: lesson_metadata.merge(
-            {
-              url: resource.url,
-              verified_teacher: resource.audience == 'Verified Teacher'
-            }
-          ),
-          barrier: barrier
-        )
-      end
-      barrier.wait
-      puts ''
-    end
-  end
 end
 
 # Uploading to S3 in the Async seems not to work. We'll do it here.

@@ -9,13 +9,15 @@ require 'cdo/firehose'
 # BucketHelper
 #
 class BucketHelper
-  cattr_accessor :s3
+  cattr_accessor :s3_client
+
+  def s3
+    self.s3_client ||= AWS::S3.create_client
+  end
 
   def initialize(bucket, base_dir)
     @bucket = bucket
     @base_dir = base_dir
-
-    self.s3 ||= AWS::S3.create_client
   end
 
   def allowed_file_name?(_filename)

@@ -12,9 +12,14 @@ markdown <<MARKDOWN
   <div>
     <h4 style="margin-top: 0; font-weight: bold;">Students will:</h4>
     <ul style="list-style-type: disc; padding-left: 10px; font-size: 14pt">
-      <li>TBD</li>
-      <li>TBD</li>
-      <li>TBD</li>
+      <li>Explain how different types of cybersecurity attacks work.</li>
+      <li>Describe how AI is used in cybersecurity tools.</li>
+      <li>Analyze cybersecurity scenarios.</li>
+      <li>Apply computational thinking strategies to examine cybersecurity threats, vulnerabilities, and defenses.</li>
+      <li>Evaluate tradeoffs between usability and security in the design of digital systems.</li>
+      <li>Propose security design improvements that consider both human-centered design principles and their impact on diverse users and communities.
+</li>
+<li>Describe cybersecurity career roles and how professionals use AI tools in their work.</li>
     </ul>
   </div>
   <div>
@@ -40,11 +45,11 @@ markdown <<MARKDOWN
 <div style="clear:both;"></div>
 
 <p align="center">
-<img src="" alt="calendar of lesson overview" width="700px" style="border-radius:10px; ">
+<img src="https://images.code.org/f423269fd552d79874d354c922be5c80-Screenshot 2025-08-26 at 12.36.06 PM.png" alt="calendar of lesson overview" width="700px" style="border-radius:10px; ">
 </p>
 
 <p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
-    ➡️ Preview the full <a href='https://studio.code.org/s/aif5-2025' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'> Unit</a>.
+    ➡️ Preview the full <a href='https://studio.code.org/courses/ai-powered-threats-and-defenses-2025/units/1' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'> Unit</a>.
 </p>
 
 MARKDOWN

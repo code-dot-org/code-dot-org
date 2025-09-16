@@ -16,6 +16,7 @@ apps/i18n/** filter=lfs diff=lfs merge=lfs -text
 apps/static/** filter=lfs diff=lfs merge=lfs -text
 dashboard/app/assets/** filter=lfs diff=lfs merge=lfs -text
 dashboard/config/locales/** filter=lfs diff=lfs merge=lfs -text
+dashboard/config/datablock_storage/** filter=lfs diff=lfs merge=lfs -text
 dashboard/public/** filter=lfs diff=lfs merge=lfs -text
 dashboard/test/fixtures/** filter=lfs diff=lfs merge=lfs -text
 i18n/locales/** filter=lfs diff=lfs merge=lfs -text

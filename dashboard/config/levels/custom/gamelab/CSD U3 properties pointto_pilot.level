@@ -91,7 +91,7 @@
     "start_blocks": "var ship = createSprite(200, 200);\r\nship.setAnimation(\"playerShip3\");\r\nship.pointTo(0, 100);\r\ndrawSprites();\r\n",
     "display_name": "New Block : Point To",
     "thumbnail_url": "https://images.code.org/78b6eb71df859b3e222c58458981f950-image-1567806072924.PNG",
-    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"f13dffbf-7ded-4760-9b9d-bbc1ae2ded3d\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"f13dffbf-7ded-4760-9b9d-bbc1ae2ded3d\": {\r\n      \"name\": \"playerShip3\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/api/v1/animation-library/Ec2D.8ALRdEyVoRZw9YHb4CclcyLpSsX/category_vehicles/playerShip3_red.png\",\r\n      \"frameSize\": {\r\n        \"x\": 98,\r\n        \"y\": 75\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"Ec2D.8ALRdEyVoRZw9YHb4CclcyLpSsX\"\r\n    }\r\n  }\r\n}",
+    "start_animations": "{\n  \"orderedKeys\": [\n    \"f13dffbf-7ded-4760-9b9d-bbc1ae2ded3d\"\n  ],\n  \"propsByKey\": {\n    \"f13dffbf-7ded-4760-9b9d-bbc1ae2ded3d\": {\n      \"name\": \"playerShip3\",\n      \"sourceUrl\": \"/api/v1/animation-library/Ec2D.8ALRdEyVoRZw9YHb4CclcyLpSsX/category_vehicles/playerShip3_red.png\",\n      \"frameSize\": {\n        \"x\": 98,\n        \"y\": 75\n      },\n      \"frameCount\": 1,\n      \"looping\": true,\n      \"frameDelay\": 2,\n      \"version\": \"Ec2D.8ALRdEyVoRZw9YHb4CclcyLpSsX\"\n    }\n  }\n}",
     "encrypted_examples": "lPBzOuO2aFHwOrQG/ylOCecmwrA1BwVi4vhdXwCSJTHvEfKgVxCFwPCTBdk0\nCT0OPdRzozI8P5XpofocnDjzGg==\n",
     "libraries_enabled": "false",
     "reference_links": [
@@ -104,8 +104,8 @@
       "/docs/concepts/game-lab/shapes-and-parameters/",
       "/docs/concepts/game-lab/sprites/sprite-interactions/"
     ],
-    "preload_asset_list": null,
-    "bubble_choice_description": "Make your sprite automatically rotate towards a point on screen."
+    "bubble_choice_description": "Make your sprite automatically rotate towards a point on screen.",
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",

@@ -53,7 +53,6 @@ describe('AgeGatedStudentsModal', () => {
     studentCount: 1,
     students: Object.values(fakeStudents),
     hidden: false,
-    isAssignedStandaloneCourse: false,
   };
   beforeEach(() => {
     const store = getStore();

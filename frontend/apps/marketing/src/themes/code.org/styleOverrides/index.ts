@@ -8,6 +8,7 @@ import {
 import {BUTTON_OVERRIDES} from './button';
 import {CONTAINER_OVERRIDES} from './container';
 import {DIVIDER_OVERRIDES} from './divider';
+import {FOOTER_OVERRIDES} from './footer';
 import {IMAGE_OVERRIDES} from './image';
 import {LINK_OVERRIDES} from './link';
 import {LIST_ITEM_OVERRIDES, LIST_OVERRIDES} from './list';
@@ -28,6 +29,7 @@ export const STYLE_OVERRIDES: Components<Theme> = {
   MuiAccordionSummary: ACCORDION_SUMMARY_OVERRIDES,
   MuiContainer: CONTAINER_OVERRIDES,
   MuiDivider: DIVIDER_OVERRIDES,
+  MuiFooter: FOOTER_OVERRIDES,
   MuiSvgIcon: SVG_ICON_OVERRIDES,
   MuiImage: IMAGE_OVERRIDES,
   MuiLink: LINK_OVERRIDES,
