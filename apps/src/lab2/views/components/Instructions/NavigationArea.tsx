@@ -144,7 +144,13 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
         showSecondaryFinishButton && moduleStyles.feedbackBottom
       )}
     >
-      <div id="instructions-feedback-message" className={moduleStyles.bubble}>
+      <div
+        id="instructions-feedback-message"
+        className={classNames(
+          moduleStyles.bubble,
+          moduleStyles.bubbleNoBorderRadius
+        )}
+      >
         {feedbackMessage && (
           <div ref={feedbackRef} tabIndex={-1}>
             <EnhancedSafeMarkdown
