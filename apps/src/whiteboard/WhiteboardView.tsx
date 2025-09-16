@@ -1,4 +1,3 @@
-// Weblab2 view
 import React from 'react';
 
 const WhiteboardView: React.FunctionComponent = () => {
