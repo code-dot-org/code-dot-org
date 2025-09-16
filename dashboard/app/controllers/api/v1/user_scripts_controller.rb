@@ -14,17 +14,16 @@ class Api::V1::UserScriptsController < ApplicationController
 
   private def set_user_script
     script = nil
-    context = nil
+    unit_group = nil
 
     if params[:script_id].present?
       script = Unit.get_from_cache(params[:script_id])
     else
       course_name = params[:course_name]
       unit_position = params[:unit_position]&.to_i
-      if course_name.present? && unit_position.present?
-        context = Queries::Courses.get_unit_context(course_name, unit_position)
-        script = context && context[:unit]
-      end
+      context = Queries::Courses.get_unit_context(course_name, unit_position)
+      script = context && context[:unit]
+      unit_group = context && context[:unit_group]
     end
 
     unless script
@@ -32,14 +31,6 @@ class Api::V1::UserScriptsController < ApplicationController
       return
     end
 
-    # When we have course context, set unit_group_id on creation to associate with the Course.
-    existing = UserScript.find_by(user: current_user, script: script)
-    if existing
-      @user_script = existing
-    else
-      attrs = {user: current_user, script: script}
-      attrs[:unit_group] = context[:unit_group] if context && context[:unit_group]
-      @user_script = UserScript.create!(attrs)
-    end
+    @user_script = UserScript.find_or_create_by!(user: current_user, script: script, unit_group: unit_group)
   end
 end

@@ -39,10 +39,11 @@ class Api::V1::UserScriptsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "student can dismiss version warning via course_name and unit_position" do
-    user_script = create(:user_script)
+    unit_group = create(:single_unit_course, :stable)
+    unit = unit_group.first_unit
+    user_script = create(:user_script, script: unit, unit_group: unit_group)
     sign_in user_script.user
-    course_name = user_script.script.get_original_unit_group.name
-    patch "/api/v1//user_scripts/courses/#{course_name}/units/1", params: {
+    patch "/api/v1//user_scripts/courses/#{unit_group.name}/units/1", params: {
       version_warning_dismissed: true
     }
     assert_response :success
