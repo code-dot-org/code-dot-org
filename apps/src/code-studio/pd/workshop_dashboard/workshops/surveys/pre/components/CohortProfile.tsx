@@ -1,15 +1,13 @@
 import {Box} from '@mui/material';
 import React, {useMemo} from 'react';
 
-import {
-  isQuestionType,
-  SurveyQuestions,
-} from '../../../../WorkshopFormTemplate/types';
+import {SurveyQuestions} from '../../../types';
 import {useWorkshopContext} from '../../../WorkshopLayout';
 import BarChartGroup, {
   BarChartGroupProps,
 } from '../../components/BarChartGroup';
 import {SelectCard} from '../../components/SelectCard';
+import {isQuestionType} from '../../utils';
 
 import styles from '../../../workshop.module.scss';
 

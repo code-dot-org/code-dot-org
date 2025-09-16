@@ -29,6 +29,7 @@ import {
 import {hiddenPlSectionIds} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import i18n from '@cdo/locale';
+import teacherImg from '@cdo/static/misc/teacher-540x300.png';
 import plAdminsPageImg from '@cdo/static/professional-learning/admins-page-pl-448x280.png';
 import plPageEducatorSupportImg from '@cdo/static/professional-learning/pl-page-educator-support.png';
 import plSuperheroGirlCropImg from '@cdo/static/professional-learning/pl-superhero-girl-crop-540x300.png';
@@ -330,7 +331,7 @@ function LandingPage({
 
   const RenderLastWorkshopSurveyBanner = () => (
     <TwoColumnActionBlock
-      imageUrl={pegasus('/shared/images/fill-540x300/misc/teacher.png')}
+      imageUrl={teacherImg}
       subHeading={i18n.plLandingSubheading()}
       description={i18n.plLandingDescription({
         course: lastWorkshopSurveyCourse,

@@ -1,5 +1,6 @@
 import React, {createContext, useContext} from 'react';
 
+import {SystemPromptSettings} from '@cdo/apps/aichat/types';
 import {AiTutorContext} from '@cdo/apps/aiTutor/types';
 import {ProjectSources} from '@cdo/apps/lab2/types';
 
@@ -29,7 +30,7 @@ export type CodebridgeContextType = {
     fileType: string,
     uploadFunction: () => Promise<void>
   ) => void;
-  aiTutorSystemPromptName?: string;
+  aiTutorSystemPromptSettings?: SystemPromptSettings;
 };
 
 export const CodebridgeContext = createContext<CodebridgeContextType | null>(

@@ -2,9 +2,15 @@ import Tabs from '@code-dot-org/component-library/tabs';
 import React, {FC, useMemo} from 'react';
 import {useLocation, useNavigate} from 'react-router-dom';
 
-import {WorkshopTabsProps} from '../types';
-
 import styles from '../workshop.module.scss';
+
+export interface TabConfig {
+  label: string;
+  path?: string;
+}
+export interface WorkshopTabsProps {
+  tabList: TabConfig[];
+}
 
 export const WorkshopTabs: FC<WorkshopTabsProps> = ({tabList}) => {
   const {pathname} = useLocation();
