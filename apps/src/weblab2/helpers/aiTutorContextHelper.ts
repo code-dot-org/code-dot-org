@@ -15,18 +15,16 @@ export class AiTutorWebLab2ContextHelper extends AiTutorContextHelper<AiTutorWeb
   }
 
   setAiTutorContext({source, longInstructions}: AiTutorWebLab2Params) {
-    if (!source) {
-      return Promise.resolve({});
-    }
-
-    const sourceCode = Object.values(source.files)
-      .filter(
-        file =>
-          file.type !== ProjectFileType.VALIDATION &&
-          file.type !== ProjectFileType.SYSTEM_SUPPORT
-      )
-      .map(file => file.contents)
-      .join('\n');
+    const sourceCode = source
+      ? Object.values(source.files)
+          .filter(
+            file =>
+              file.type !== ProjectFileType.VALIDATION &&
+              file.type !== ProjectFileType.SYSTEM_SUPPORT
+          )
+          .map(file => file.contents)
+          .join('\n')
+      : undefined;
 
     this.aiTutorContent = {
       sourceCode,
