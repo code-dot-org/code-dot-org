@@ -30,15 +30,15 @@ export class AiTutorPythonLabContextHelper extends AiTutorContextHelper<AiTutorP
     miniAppName,
   }: AiTutorPythonLabParams) {
     const sourceCode = source
-      ? Object.entries(source.files)
+      ? Object.values(source.files)
           .filter(
-            ([_, file]) =>
+            file =>
               (file.type !== ProjectFileType.VALIDATION &&
                 file.type !== ProjectFileType.SYSTEM_SUPPORT &&
                 file.type !== ProjectFileType.SUPPORT) ||
               (file.type === ProjectFileType.SUPPORT && file.contents)
           )
-          .map(([_, file]) => {
+          .map(file => {
             let prefix = '';
             if (file.type === ProjectFileType.SUPPORT) {
               prefix = `${file.name} is not visible to the student: \n`;

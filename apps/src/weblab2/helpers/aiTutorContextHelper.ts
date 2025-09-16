@@ -19,13 +19,13 @@ export class AiTutorWebLab2ContextHelper extends AiTutorContextHelper<AiTutorWeb
       return Promise.resolve({});
     }
 
-    const sourceCode = Object.entries(source.files)
+    const sourceCode = Object.values(source.files)
       .filter(
-        ([_, file]) =>
+        file =>
           file.type !== ProjectFileType.VALIDATION &&
           file.type !== ProjectFileType.SYSTEM_SUPPORT
       )
-      .map(([_, file]) => file.contents)
+      .map(file => file.contents)
       .join('\n');
 
     this.aiTutorContent = {
