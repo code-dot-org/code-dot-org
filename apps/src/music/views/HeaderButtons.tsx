@@ -1,9 +1,10 @@
 import {Button} from '@code-dot-org/component-library/button';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {
   WithTooltip,
   WithTooltipHandle,
 } from '@code-dot-org/component-library/tooltip';
-import classNames from 'classnames';
+import Typography from '@code-dot-org/component-library/typography';
 import React, {memo, useCallback, useContext, useRef} from 'react';
 import {useSelector} from 'react-redux';
 
@@ -11,7 +12,6 @@ import {useBlocklySettings} from '@cdo/apps/lab2/hooks/useBlocklySettings';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import SettingsButton from '@cdo/apps/lab2/views/components/Settings/SettingsButton';
 import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
-import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {commonI18n} from '@cdo/apps/types/locale';
 import experiments from '@cdo/apps/util/experiments';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -25,12 +25,10 @@ import moduleStyles from './HeaderButtons.module.scss';
 
 interface CurrentPackProps {
   packFolder: SoundFolder;
-  noRightPadding: boolean;
 }
 
 const CurrentPack: React.FunctionComponent<CurrentPackProps> = ({
   packFolder,
-  noRightPadding,
 }) => {
   const library = MusicLibrary.getInstance();
 
@@ -46,7 +44,7 @@ const CurrentPack: React.FunctionComponent<CurrentPackProps> = ({
   }
 
   return (
-    <span className={moduleStyles.currentPack}>
+    <div className={moduleStyles.currentPack}>
       {packImageSrc && (
         <img
           src={packImageSrc}
@@ -54,15 +52,10 @@ const CurrentPack: React.FunctionComponent<CurrentPackProps> = ({
           alt=""
         />
       )}
-      <span
-        className={classNames(
-          moduleStyles.buttonWideContent,
-          noRightPadding && moduleStyles.buttonWideContentNoRightPadding
-        )}
-      >
+      <Typography semanticTag="p" visualAppearance="body-four" noMargin>
         {packFolder.name} &bull; {packFolder.artist}
-      </span>
-    </span>
+      </Typography>
+    </div>
   );
 };
 
@@ -151,8 +144,8 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
   const settings = useBlocklySettings();
 
   const getIconButton = (
+    id: string,
     i18nLabel: string,
-    title: string,
     icon: string,
     disabled: boolean = true,
     onClick: () => void
@@ -160,24 +153,24 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
     return (
       <WithTooltip
         tooltipProps={{
+          tooltipId: `${id}-tooltip`,
           text: i18nLabel,
           direction: 'onBottom',
-          tooltipId: `${title}-tooltip`,
           size: 'xs',
           hideTail: true,
         }}
         ref={tooltipRef}
       >
         <Button
-          id={`${title}-button`}
+          id={`${id}-button`}
+          ariaLabel={i18nLabel}
+          type="tertiary"
+          color={'black'}
+          size="xs"
           isIconOnly
           icon={{iconStyle: 'solid', iconName: icon}}
-          size="xs"
-          onClick={onClick}
-          type="tertiary"
-          ariaLabel={i18nLabel}
-          color={'black'}
           disabled={disabled}
+          onClick={onClick}
         />
       </WithTooltip>
     );
@@ -185,39 +178,33 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
 
   return (
     <div className={moduleStyles.container}>
+      {/* Show static pack info; clickable Start Over button */}
       {!allowPackSelection && packFolder && (
-        <button
-          type="button"
-          className={classNames(
-            moduleStyles.button,
-            moduleStyles.buttonWide,
-            moduleStyles.buttonInteractionDisabled
+        <>
+          <CurrentPack packFolder={packFolder} />
+          {/* Start Over Button */}
+          {getIconButton(
+            'startOver',
+            musicI18n.startOver(),
+            'refresh',
+            false,
+            onClickStartOver
           )}
-          disabled={true}
-        >
-          <CurrentPack packFolder={packFolder} noRightPadding={true} />
-        </button>
+        </>
       )}
-      {!readOnlyWorkspace && (
+      {/* Show clickable pack info with Start Over icon */}
+      {!readOnlyWorkspace && allowPackSelection && (
         <>
           <button
             onClick={onClickStartOver}
             type="button"
             id="start-over-button"
-            className={classNames(
-              moduleStyles.button,
-              allowPackSelection && packFolder && moduleStyles.buttonWide,
-              allowPackSelection && packFolder && moduleStyles.buttonHasBorder
-            )}
+            className={moduleStyles.buttonWithPack}
           >
             {allowPackSelection && packFolder && (
-              <CurrentPack packFolder={packFolder} noRightPadding={false} />
+              <CurrentPack packFolder={packFolder} />
             )}
-            <FontAwesome
-              title={musicI18n.startOver()}
-              icon="refresh"
-              className={'icon'}
-            />
+            <FontAwesomeV6Icon iconName="refresh" iconStyle="solid" />
           </button>
         </>
       )}
@@ -230,18 +217,18 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
       {!readOnlyWorkspace && (
         <>
           {/* Undo Button */}
-          {getIconButton(musicI18n.undo(), 'undo', 'undo', !canUndo, () =>
+          {getIconButton('undo', musicI18n.undo(), 'undo', !canUndo, () =>
             onClickUndoRedo('undo')
           )}
           {/* Redo Button */}
-          {getIconButton(musicI18n.redo(), 'redo', 'redo', !canRedo, () =>
+          {getIconButton('redo', musicI18n.redo(), 'redo', !canRedo, () =>
             onClickUndoRedo('redo')
           )}
           {/* Documentation Button */}
           {Blockly.showBlockHelp &&
             getIconButton(
-              commonI18n.documentation(),
               'documentation',
+              commonI18n.documentation(),
               'book',
               false,
               () => window.open('/docs/ide/music', '_blank')
@@ -252,11 +239,11 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
       {skipUrl && (
         <Button
           text={commonI18n.skipToProject()}
-          size="xs"
-          onClick={onClickSkip}
           type="tertiary"
           color={'black'}
+          size="xs"
           iconRight={{iconStyle: 'solid', iconName: 'arrow-right'}}
+          onClick={onClickSkip}
         />
       )}
     </div>
