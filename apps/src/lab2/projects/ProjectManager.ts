@@ -430,7 +430,7 @@ export default class ProjectManager {
    * Only if the source save succeeds do we update the channel, as the
    * channel is metadata about the project and we don't want to save it unless the source
    * save succeeded.
-   * @param forceNewVersion boolean: If the save should create a new version
+   * @param forceNewVersion boolean: If the save should create a new version.
    * @returns a Promise<void> that resolves when the save is complete or when the save fails.
    * Listeners are notified of save status throughout the process.
    */
