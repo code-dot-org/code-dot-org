@@ -1,0 +1,38 @@
+#!/usr/bin/env ruby
+require_relative '../deployment'
+
+def main
+  dirs = [deploy_dir('lib'), deploy_dir('shared/middleware'), deploy_dir('dashboard/legacy')]
+  dirs += [pegasus_dir] if CDO.dashboard_enable_pegasus
+  rerun = ['rerun']
+  rerun << "-p '**/*.{rb,ru,yml}'"
+  rerun << "-d '#{dirs.join(',')}'"
+  rerun << "-i '**/migrations/*.rb'"
+  rerun << "-i 'test/**/*.rb'"
+  rerun << "-i '**/public/fonts'"
+  rerun << "#{ARGV.join(' ')} --"
+  rerun = rerun.join(' ')
+
+  unless CDO.use_my_apps
+    # Note: This will report "apps-watcher Launch Failed" because it expects something
+    # that continues to run.
+    pids.push spawn("rerun -x -d #{apps_dir}/src --background -n apps-watcher -- rake package:apps")
+  end
+
+  rails_server_args = if CDO.rack_env == :development && CDO.https_development
+                        "-b ssl://#{CDO.dashboard_host} -p #{CDO.dashboard_port}"
+                      else
+                        "-b #{CDO.dashboard_host} -p #{CDO.dashboard_port}"
+                      end
+
+  Dir.chdir(dashboard_dir) do
+    system "RAILS_ENV=#{CDO.rack_env} bundle exec #{rerun} rails server #{rails_server_args}"
+  end
+
+  pids.each do |pid|
+    puts "Stopping watcher #{pid}"
+    Process.kill(:TERM, pid)
+    Process.wait(pid)
+  end
+end
+main

@@ -6,8 +6,8 @@ import {Box} from '@mui/material';
 import classNames from 'classnames';
 import React, {FC, useEffect, useState} from 'react';
 
-import {Breakdown, ColorMapKey} from '../../../WorkshopFormTemplate/types';
-import {COLOR_MAP} from '../constants';
+import {Breakdown} from '../../types';
+import {COLOR_MAP, ColorMapKey} from '../constants';
 
 import styles from './PercentageBarGroupStyles.module.scss';
 import commonStyles from '../../workshop.module.scss';
