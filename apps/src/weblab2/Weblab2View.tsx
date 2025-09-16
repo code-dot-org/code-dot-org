@@ -70,8 +70,7 @@ const Weblab2View: React.FC<
   LabProps<Weblab2LevelProperties, ProjectSources>
 > = ({levelProperties, initialSources}) => {
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
-  const [hiddenContextCallback, setHiddenContextStringCallback] =
-    useState<() => Promise<string>>();
+
   const source = useAppSelector(
     state =>
       state.lab2Project.projectSources?.source as MultiFileSource | undefined
@@ -86,12 +85,6 @@ const Weblab2View: React.FC<
   const hasSource = useAppSelector(
     state => !!state.lab2Project.projectSources?.source
   );
-
-  useEffect(() => {
-    setHiddenContextStringCallback(() =>
-      aiTutorHelper.getHiddenContextCallback()
-    );
-  }, []);
 
   useEffect(() => {
     aiTutorHelper.setAiTutorContext({
@@ -118,13 +111,13 @@ const Weblab2View: React.FC<
 
   return (
     <div className={moduleStyles.weblab2Container}>
-      {hasSource && hiddenContextCallback && (
+      {hasSource && (
         <Codebridge
           config={config}
           setConfig={setConfig}
           startSources={startSources}
           levelProperties={levelProperties}
-          hiddenContextCallback={hiddenContextCallback}
+          hiddenContextCallback={aiTutorHelper.getHiddenContextCallback()}
           aiTutorSystemPromptName={'aif2-web-produce'}
         />
       )}

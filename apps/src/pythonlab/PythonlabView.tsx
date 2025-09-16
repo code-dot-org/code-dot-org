@@ -113,9 +113,6 @@ const PythonlabView: React.FunctionComponent<
     );
   }, [levelProperties.aiTutorAvailable]);
 
-  const [hiddenContextCallback, setHiddenContextStringCallback] =
-    useState<() => Promise<string>>();
-
   const dispatch = useAppDispatch();
 
   const currentProjectType = useMemo(() => {
@@ -191,12 +188,6 @@ const PythonlabView: React.FunctionComponent<
   );
 
   useEffect(() => {
-    setHiddenContextStringCallback(() =>
-      aiTutorHelper.getHiddenContextCallback()
-    );
-  }, []);
-
-  useEffect(() => {
     if (isAiTutor2Enabled) {
       aiTutorHelper.setAiTutorContext({
         source,
@@ -246,7 +237,7 @@ const PythonlabView: React.FunctionComponent<
 
   return (
     <div className={moduleStyles.pythonlab}>
-      {hasSource && hiddenContextCallback && (
+      {hasSource && (
         <Codebridge
           config={config}
           setConfig={setConfig}
@@ -256,7 +247,7 @@ const PythonlabView: React.FunctionComponent<
           sendConsoleInput={sendInput}
           levelProperties={levelProperties}
           projectPickerSettings={projectPickerSettings}
-          hiddenContextCallback={hiddenContextCallback}
+          hiddenContextCallback={aiTutorHelper.getHiddenContextCallback()}
         />
       )}
       {showProjectPickerModal && (
