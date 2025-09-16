@@ -7,6 +7,8 @@
 
 import {get, set} from 'js-cookie';
 
+import {tryGetLocalStorage} from '../utils';
+
 /**
  * The current course listing and a mapping between them and Localize project
  * keys. This is a temporary measure for now.
@@ -51,7 +53,9 @@ const live = [
   '/courses/k5-ai-data-2024',
 ];
 
-const experiments = JSON.parse(window.localStorage.experimentsList || '[]');
+const experiments = JSON.parse(
+  tryGetLocalStorage('experimentsList', '[]') || '[]'
+);
 const inExperiment =
   experiments.some(experiment =>
     experiment ? experiment.key === 'localizejs' : false
