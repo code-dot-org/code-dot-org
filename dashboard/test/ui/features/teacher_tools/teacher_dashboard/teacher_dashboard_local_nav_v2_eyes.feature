@@ -28,7 +28,7 @@ Feature: Using the V2 teacher dashboard local navigation - Eyes
 
     When I sign in as "Teacher_Sally" and go home
 
-    When I click selector "#task-button-View-progress-Untitled-Section" once I see it
+    When I click selector "#task-button-View-progress-New-Section" once I see it
     Then I wait until element "#ui-test-teacher-sidebar" is visible
     And I wait until element "h6:contains(Icon Key)" is visible
     And I wait until element "#ui-test-progress-table-v2" is visible
