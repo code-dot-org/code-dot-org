@@ -5,13 +5,13 @@ class User::FacilitatorInfoTest < ActiveSupport::TestCase
     subject(:user_facilitator_info) {build(:user_facilitator_info, user: user, bio: bio)}
 
     let(:user) {create(:facilitator)}
-    let(:bio) do
-      Faker::Lorem.
-        paragraph(sentence_count: User::FacilitatorInfo::BIO_MIN_LENGTH).
-        truncate(User::FacilitatorInfo::BIO_MAX_LENGTH)
-    end
+    let(:bio) {Faker::Lorem.paragraph_by_chars(number: User::FacilitatorInfo::BIO_MAX_LENGTH)}
 
     let(:error_messages) {user_facilitator_info.errors.full_messages}
+
+    before do
+      ProfanityFilter.stubs(:find_potential_profanity)
+    end
 
     it 'is valid' do
       _user_facilitator_info.must_be :valid?
@@ -41,7 +41,7 @@ class User::FacilitatorInfoTest < ActiveSupport::TestCase
     end
 
     context 'when bio is too long' do
-      let(:bio) {Faker::Lorem.paragraph(sentence_count: User::FacilitatorInfo::BIO_MAX_LENGTH.next)}
+      let(:bio) {Faker::Lorem.paragraph_by_chars(number: User::FacilitatorInfo::BIO_MAX_LENGTH.next)}
 
       it 'contains bio too long error' do
         _user_facilitator_info.wont_be :valid?

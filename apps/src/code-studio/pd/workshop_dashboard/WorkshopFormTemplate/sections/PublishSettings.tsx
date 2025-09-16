@@ -5,9 +5,21 @@ import {Heading2} from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
 import React, {ChangeEvent, FC, memo} from 'react';
 
-import {PublishSettingsProps} from '../types';
+import {
+  SectionProps,
+  WorkshopFormState,
+  WorkshopErrors,
+} from '../../workshops/types';
 
 import commonStyles from '../styles.module.scss';
+
+type PublishSettingsKeys = 'registrationLink' | 'hidden';
+
+export interface PublishSettingsProps
+  extends SectionProps,
+    Pick<WorkshopFormState, PublishSettingsKeys> {
+  errors: WorkshopErrors;
+}
 
 export const PublishSettings: FC<PublishSettingsProps> = ({
   config: {fields},

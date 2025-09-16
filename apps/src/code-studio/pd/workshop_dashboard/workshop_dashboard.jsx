@@ -39,7 +39,6 @@ import ReportView from './reports/report_view';
 import WorkshopFilter from './workshop_filter';
 import WorkshopIndex from './workshop_index';
 import {WorkshopFormTemplate} from './WorkshopFormTemplate';
-import {workshopLabel} from './WorkshopFormTemplate/utils';
 import {WorkshopAttendance} from './workshops/attendance/WorkshopAttendance';
 import {WorkshopEnrollments} from './workshops/enrollments/WorkshopEnrollments';
 import {WorkshopOverview} from './workshops/overview/WorkshopOverview';
@@ -50,6 +49,7 @@ import {Logistics} from './workshops/surveys/post/components/Logistics';
 import {Other} from './workshops/surveys/post/components/Other';
 import CohortProfile from './workshops/surveys/pre/components/CohortProfile';
 import ReadinessAndExpectations from './workshops/surveys/pre/components/ReadinessAndExpectations';
+import {workshopLabel} from './workshops/utils';
 import {WorkshopLayout} from './workshops/WorkshopLayout';
 
 export const ROOT_PATH = '/pd/workshop_dashboard';
@@ -179,7 +179,7 @@ const workshopChildRouteConfigs = [
     component: Outlet,
     breadcrumbs: 'Workshops,Workshop,Surveys',
     childRoutes: [
-      // this makes "post" the default
+      // this makes "pre" the default
       {
         index: true,
         component: () => <Navigate to="pre" replace />,
