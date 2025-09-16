@@ -162,6 +162,7 @@ const Weblab2View: React.FC<
           levelProperties={levelProperties}
           hiddenContextCallback={aiTutorHelper.getHiddenContextCallback()}
           aiTutorSystemPromptSettings={aiTutorSystemPromptSettings}
+          aiTutorMultimodalEnabled={true}
         />
       )}
     </div>

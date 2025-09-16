@@ -43,6 +43,7 @@ type CodebridgeProps = {
   projectPickerSettings?: ProjectPickerSettings;
   hiddenContextCallback?: () => Promise<string>;
   aiTutorSystemPromptSettings?: SystemPromptSettings;
+  aiTutorMultimodalEnabled?: boolean;
 };
 
 export const Codebridge = React.memo(
@@ -57,6 +58,7 @@ export const Codebridge = React.memo(
     projectPickerSettings,
     hiddenContextCallback,
     aiTutorSystemPromptSettings,
+    aiTutorMultimodalEnabled,
   }: CodebridgeProps) => {
     const isShareView = useAppSelector(state => state.lab.isShareView);
     const isWidgetView = !!levelProperties.widgetView;
@@ -184,6 +186,7 @@ export const Codebridge = React.memo(
           hiddenContextCallback,
           onImageFlagged,
           aiTutorSystemPromptSettings,
+          aiTutorMultimodalEnabled,
         }}
       >
         <BackpackAPIContext.Provider value={backpackApi}>

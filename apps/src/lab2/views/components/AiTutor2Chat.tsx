@@ -105,12 +105,18 @@ const chatButtons = chatButtonData.map(button => ({
 interface AiTutor2ChatProps {
   hiddenContextCallback: () => Promise<string>;
   aiTutorSystemPromptSettings?: SystemPromptSettings;
+  aiTutorMultimodalEnabled?: boolean;
+  levelName?: string;
+  channelId?: string;
 }
 
 // A free chat with lab-supplied context added to each question.
 const AiTutor2Chat: React.FunctionComponent<AiTutor2ChatProps> = ({
   hiddenContextCallback,
   aiTutorSystemPromptSettings,
+  aiTutorMultimodalEnabled = false,
+  levelName,
+  channelId,
 }) => {
   const [systemPrompt, setSystemPrompt] = useState<string>();
 
@@ -170,6 +176,9 @@ const AiTutor2Chat: React.FunctionComponent<AiTutor2ChatProps> = ({
         chatButtons={chatButtons}
         hiddenContextCallback={hiddenContextCallback}
         systemPromptSettings={aiTutorSystemPromptSettings}
+        multimodalEnabled={aiTutorMultimodalEnabled}
+        levelName={levelName}
+        channelId={channelId}
       />
     </div>
   ) : (
