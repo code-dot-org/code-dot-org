@@ -128,6 +128,10 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
     }
   }, [hideChaff, dialogControl, analyticsReporter, clearCode]);
 
+  const onClickDocumentation = useCallback(() => {
+    window.open('/docs/ide/music', '_blank');
+  }, []);
+
   const onClickSkip = useCallback(() => {
     if (dialogControl) {
       dialogControl.showDialog({
@@ -143,38 +147,41 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
 
   const settings = useBlocklySettings();
 
-  const getIconButton = (
-    id: string,
-    i18nLabel: string,
-    icon: string,
-    disabled: boolean = true,
-    onClick: () => void
-  ) => {
-    return (
-      <WithTooltip
-        tooltipProps={{
-          tooltipId: `${id}-tooltip`,
-          text: i18nLabel,
-          direction: 'onBottom',
-          size: 'xs',
-          hideTail: true,
-        }}
-        ref={tooltipRef}
-      >
-        <Button
-          id={`${id}-button`}
-          ariaLabel={i18nLabel}
-          type="tertiary"
-          color={'black'}
-          size="xs"
-          isIconOnly
-          icon={{iconStyle: 'solid', iconName: icon}}
-          disabled={disabled}
-          onClick={onClick}
-        />
-      </WithTooltip>
-    );
-  };
+  const getIconButton = useCallback(
+    (
+      id: string,
+      i18nLabel: string,
+      icon: string,
+      disabled: boolean = false,
+      onClick: () => void
+    ) => {
+      return (
+        <WithTooltip
+          tooltipProps={{
+            tooltipId: `${id}-tooltip`,
+            text: i18nLabel,
+            direction: 'onBottom',
+            size: 'xs',
+            hideTail: true,
+          }}
+          ref={tooltipRef}
+        >
+          <Button
+            id={`${id}-button`}
+            ariaLabel={i18nLabel}
+            type="tertiary"
+            color={'black'}
+            size="xs"
+            isIconOnly
+            icon={{iconStyle: 'solid', iconName: icon}}
+            disabled={disabled}
+            onClick={onClick}
+          />
+        </WithTooltip>
+      );
+    },
+    [tooltipRef]
+  );
 
   return (
     <div className={moduleStyles.container}>
@@ -201,9 +208,7 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
             id="start-over-button"
             className={moduleStyles.buttonWithPack}
           >
-            {allowPackSelection && packFolder && (
-              <CurrentPack packFolder={packFolder} />
-            )}
+            {packFolder && <CurrentPack packFolder={packFolder} />}
             <FontAwesomeV6Icon iconName="refresh" iconStyle="solid" />
           </button>
         </>
@@ -231,7 +236,7 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
               commonI18n.documentation(),
               'book',
               false,
-              () => window.open('/docs/ide/music', '_blank')
+              onClickDocumentation
             )}
         </>
       )}
