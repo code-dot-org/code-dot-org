@@ -22,8 +22,8 @@ export class AiTutorWebLab2ContextHelper extends AiTutorContextHelper<AiTutorWeb
               file.type !== ProjectFileType.VALIDATION &&
               file.type !== ProjectFileType.SYSTEM_SUPPORT
           )
-          .map(file => file.contents)
-          .join('\n')
+          .map(file => `filename: ${file.name}\n\`\`\`${file.contents}\`\`\``)
+          .join('\n\n')
       : undefined;
 
     this.aiTutorContent = {
