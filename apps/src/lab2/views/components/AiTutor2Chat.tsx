@@ -109,12 +109,14 @@ const chatButtons = chatButtonData.map(button => ({
 interface AiTutor2ChatProps {
   aiTutorContextPromise: Promise<AiTutorContext>;
   aiTutorSystemPromptSettings?: SystemPromptSettings;
+  aiTutorShowChatButtons?: boolean;
 }
 
 // A free chat with lab-supplied context added to each question.
 const AiTutor2Chat: React.FunctionComponent<AiTutor2ChatProps> = ({
   aiTutorContextPromise,
   aiTutorSystemPromptSettings,
+  aiTutorShowChatButtons = true,
 }) => {
   const dispatch = useAppDispatch();
 
@@ -190,7 +192,7 @@ const AiTutor2Chat: React.FunctionComponent<AiTutor2ChatProps> = ({
       <ChatWorkspace
         clientType={AiChatClientTypes.AI_TUTOR}
         modelParameters={{...modelParameters, systemPrompt}}
-        chatButtons={chatButtons}
+        chatButtons={aiTutorShowChatButtons ? chatButtons : undefined}
         hiddenContext={hiddenContextString}
         onClear={() => {
           dispatch(clearChatMessages());
