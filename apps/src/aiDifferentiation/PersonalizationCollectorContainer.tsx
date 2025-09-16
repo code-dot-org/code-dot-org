@@ -17,8 +17,8 @@ import {PERSONALIZATION_PROMPTS} from './personalizationQuestions';
 import style from './personalization-information.module.scss';
 
 interface PersonalizationData {
-  selectedGoals: number[];
-  selectedSupports: number[];
+  selectedGoals: string[];
+  selectedSupports: string[];
   otherSupportText: string;
   otherGoalText: string;
   selectedConfidence: number;
@@ -86,7 +86,7 @@ const PersonalizationCollectorContainer: React.FC = () => {
         return (
           <GoalsAnswer
             selectedGoals={personalizationData.selectedGoals}
-            setSelectedGoals={(goals: number[]) =>
+            setSelectedGoals={(goals: string[]) =>
               setPersonalizationData(prev => ({...prev, selectedGoals: goals}))
             }
             otherGoalText={personalizationData.otherGoalText}
@@ -111,7 +111,7 @@ const PersonalizationCollectorContainer: React.FC = () => {
         return (
           <SupportAnswer
             selectedSupports={personalizationData.selectedSupports}
-            setSelectedSupports={(supports: number[]) =>
+            setSelectedSupports={(supports: string[]) =>
               setPersonalizationData(prev => ({
                 ...prev,
                 selectedSupports: supports,

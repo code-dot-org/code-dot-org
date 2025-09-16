@@ -201,8 +201,8 @@ export const ConfidenceAnswer: React.FC<ConfidenceAnswerProps> = ({
 };
 
 interface GoalsAnswerProps {
-  selectedGoals: number[];
-  setSelectedGoals: (goals: number[]) => void;
+  selectedGoals: string[];
+  setSelectedGoals: (goals: string[]) => void;
   otherGoalText: string;
   setOtherGoalText: (text: string) => void;
 }
@@ -213,11 +213,11 @@ export const GoalsAnswer: React.FC<GoalsAnswerProps> = ({
   otherGoalText,
   setOtherGoalText,
 }) => {
-  const handleGoalToggle = (index: number) => {
-    if (selectedGoals.includes(index)) {
-      setSelectedGoals(selectedGoals.filter(i => i !== index));
+  const handleGoalToggle = (choice: string) => {
+    if (selectedGoals.includes(choice)) {
+      setSelectedGoals(selectedGoals.filter(goal => goal !== choice));
     } else {
-      setSelectedGoals([...selectedGoals, index]);
+      setSelectedGoals([...selectedGoals, choice]);
     }
   };
 
@@ -227,10 +227,7 @@ export const GoalsAnswer: React.FC<GoalsAnswerProps> = ({
     setOtherGoalText(event.target.value);
   };
 
-  const otherIndex = TEACHER_GOAL_PROMPT.choices.findIndex(
-    choice => choice === 'Other'
-  );
-  const isOtherSelected = selectedGoals.includes(otherIndex);
+  const isOtherSelected = selectedGoals.includes('Other');
 
   return (
     <div className={style.multiSelectContainer}>
@@ -238,8 +235,8 @@ export const GoalsAnswer: React.FC<GoalsAnswerProps> = ({
         <Checkbox
           key={index}
           label={choice}
-          checked={selectedGoals.includes(index)}
-          onChange={() => handleGoalToggle(index)}
+          checked={selectedGoals.includes(choice)}
+          onChange={() => handleGoalToggle(choice)}
           name={`goal-${index}`}
         />
       ))}
@@ -259,15 +256,15 @@ export const GoalsAnswer: React.FC<GoalsAnswerProps> = ({
 
       {/* Debug info - remove this later */}
       <div style={{marginTop: '10px', fontSize: '12px', color: '#666'}}>
-        Selected goal indices: {selectedGoals.join(', ')}
+        Selected goals: {selectedGoals.join(', ')}
       </div>
     </div>
   );
 };
 
 interface SupportAnswerProps {
-  selectedSupports: number[];
-  setSelectedSupports: (supports: number[]) => void;
+  selectedSupports: string[];
+  setSelectedSupports: (supports: string[]) => void;
   otherSupportText: string;
   setOtherSupportText: (text: string) => void;
 }
@@ -278,11 +275,13 @@ export const SupportAnswer: React.FC<SupportAnswerProps> = ({
   otherSupportText,
   setOtherSupportText,
 }) => {
-  const handleSupportToggle = (index: number) => {
-    if (selectedSupports.includes(index)) {
-      setSelectedSupports(selectedSupports.filter(i => i !== index));
+  const handleSupportToggle = (choice: string) => {
+    if (selectedSupports.includes(choice)) {
+      setSelectedSupports(
+        selectedSupports.filter(support => support !== choice)
+      );
     } else {
-      setSelectedSupports([...selectedSupports, index]);
+      setSelectedSupports([...selectedSupports, choice]);
     }
   };
 
@@ -292,10 +291,7 @@ export const SupportAnswer: React.FC<SupportAnswerProps> = ({
     setOtherSupportText(event.target.value);
   };
 
-  const otherIndex = SUPPORT_PREFERENCES_PROMPT.choices.findIndex(
-    choice => choice === 'Other'
-  );
-  const isOtherSelected = selectedSupports.includes(otherIndex);
+  const isOtherSelected = selectedSupports.includes('Other');
 
   return (
     <div className={style.multiSelectContainer}>
@@ -303,8 +299,8 @@ export const SupportAnswer: React.FC<SupportAnswerProps> = ({
         <Checkbox
           key={index}
           label={choice}
-          checked={selectedSupports.includes(index)}
-          onChange={() => handleSupportToggle(index)}
+          checked={selectedSupports.includes(choice)}
+          onChange={() => handleSupportToggle(choice)}
           name={`support-${index}`}
         />
       ))}
@@ -325,7 +321,7 @@ export const SupportAnswer: React.FC<SupportAnswerProps> = ({
 
       {/* Debug info - remove this later */}
       <div style={{marginTop: '10px', fontSize: '12px', color: '#666'}}>
-        Selected support indices: {selectedSupports.join(', ')}
+        Selected supports: {selectedSupports.join(', ')}
         {otherSupportText && <div>Other text: "{otherSupportText}"</div>}
       </div>
     </div>
