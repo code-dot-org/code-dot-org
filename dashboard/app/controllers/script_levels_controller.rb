@@ -662,7 +662,7 @@ class ScriptLevelsController < ApplicationController
   private def get_redirect_info(unit, locale, unit_group: nil)
     return nil unless unit
 
-    unit_group ||= script.get_original_unit_group
+    unit_group ||= unit.get_original_unit_group
 
     if unit_group&.single_unit_course?
       redirect_unit_group = UnitGroup.latest_assigned_version(unit_group.family_name, current_user)
