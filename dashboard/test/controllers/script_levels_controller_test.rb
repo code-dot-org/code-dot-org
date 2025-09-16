@@ -783,6 +783,41 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_response :ok
   end
 
+  test "show: redirect to latest assigned modular script version in family for student if one exists" do
+    sign_in @student
+
+    courseg1_2017 = create(:unit)
+    courseg1_2018 = create(:unit)
+
+    courseg_2017_lesson_group_1 = create(:lesson_group, script: courseg1_2017)
+    courseg_2017_lesson_1 = create(:lesson, script: courseg1_2017, lesson_group: courseg_2017_lesson_group_1, name: 'Course G Lesson 1', absolute_position: 1, relative_position: '1')
+    courseg_2017_lesson_1_script_level = create(:script_level, script: courseg1_2017, lesson: courseg_2017_lesson_1, position: 1)
+
+    create(:single_unit_course, unit: courseg1_2017, family_name: 'courseg', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    create(:single_unit_course, unit: courseg1_2018, family_name: 'courseg', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+
+    modular_courseg_2017 = create(:single_unit_course, unit: courseg1_2017, family_name: 'modular-courseg', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    modular_courseg_2018 = create(:single_unit_course, unit: courseg1_2018, family_name: 'modular-courseg', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+
+    get :show, params: {
+      course_course_name: modular_courseg_2017.name,
+      unit_position: 1,
+      lesson_position: courseg_2017_lesson_1.relative_position,
+      id: courseg_2017_lesson_1_script_level.position,
+    }
+    assert_redirected_to "/courses/#{modular_courseg_2018.name}/units/1?redirect_warning=true"
+
+    # Does not redirect if no_redirect query param is provided.
+    get :show, params: {
+      course_course_name: modular_courseg_2017.name,
+      unit_position: 1,
+      lesson_position: courseg_2017_lesson_1.relative_position,
+      id: courseg_2017_lesson_1_script_level.position,
+      no_redirect: "true"
+    }
+    assert_response :ok
+  end
+
   test "show: redirect to latest assigned script version in family for participant if one exists" do
     sign_in @student
 
