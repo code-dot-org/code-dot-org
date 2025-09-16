@@ -2,9 +2,16 @@ import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import React, {ChangeEvent, FC, useMemo} from 'react';
 import {useLocation, useNavigate} from 'react-router-dom';
 
-import {SurveyTypeSelectionProps} from '../types';
-
 import styles from '../workshop.module.scss';
+
+export interface SurveyOption {
+  text: string;
+  value: string;
+}
+
+export interface SurveyTypeSelectionProps {
+  surveyTypeOptions: SurveyOption[];
+}
 
 export const SurveyTypeSelection: FC<SurveyTypeSelectionProps> = ({
   surveyTypeOptions,

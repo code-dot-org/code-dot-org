@@ -22,10 +22,10 @@ import {PdSessionFormats} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import {TIME_FORMAT} from '../../../../workshopConstants';
 import {
   SessionFormState,
-  SessionAction,
   SessionFields,
-  Errors,
-} from '../../../types';
+  SessionAction,
+  SessionError,
+} from '../../../../workshops/types';
 import {AutocompleteInput} from '../../AutocompleteInput';
 
 import commonStyles from '../../../styles.module.scss';
@@ -42,7 +42,7 @@ export const SessionPart: FC<{
   meetingLink: SessionFormState['meetingLink'];
   deleteDisabled: boolean;
   fields: SessionFields;
-  errors?: Errors<keyof SessionFormState>;
+  errors?: SessionError;
   dispatchSessions: Dispatch<SessionAction>;
 }> = ({
   id,
