@@ -4,6 +4,7 @@ import Tabs, {TabsProps} from '@code-dot-org/component-library/tabs';
 import React, {useCallback, useEffect, useMemo, useState} from 'react';
 import {useSelector} from 'react-redux';
 
+import {SystemPromptSettings} from '@cdo/apps/aichat/types';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import usePrevious from '@cdo/apps/util/usePrevious';
 
@@ -34,6 +35,7 @@ import {getAssetUrl, getShortName} from '../utils';
 import StagedFilesPreview from './assets/StagedFilesPreview';
 import UploadButton from './assets/UploadButton';
 import ChatEventsList from './ChatEventsList';
+import ChatModeDropdown from './ChatModeDropdown';
 import CopyChatHistoryButton from './CopyChatHistoryButton';
 import UserChatMessageEditor from './UserChatMessageEditor';
 
@@ -51,6 +53,9 @@ interface ChatWorkspaceProps {
   channelId?: string;
   levelName?: string;
   hasStarterAssets?: boolean;
+
+  // Options for changing system prompt (used in Web Lab 2)
+  systemPromptSettings?: SystemPromptSettings;
 }
 
 enum WorkspaceTeacherViewTab {
@@ -75,6 +80,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   levelName,
   channelId,
   hasStarterAssets = false,
+  systemPromptSettings,
 }) => {
   if (multimodalEnabled && (!levelName || !channelId)) {
     console.warn(
@@ -270,6 +276,10 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
         {multimodalAvailable && (
           <StagedFilesPreview buildAssetUrl={buildAssetUrl} />
         )}
+        <ChatModeDropdown
+          className={moduleStyles.modeDropdown}
+          systemPromptSettings={systemPromptSettings}
+        />
         {canChatWithModel && (
           <UserChatMessageEditor
             clientType={clientType}

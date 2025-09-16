@@ -1,3 +1,4 @@
+@use '../../lab2/views/components/layout/variables.scss' as variables;
 @import 'color.scss';
 @import './music-view.module.scss';
 
@@ -25,8 +26,8 @@
 
   .measuresBackground {
     background-color: $light_gray_950;
-    height: 24px;
-    border-bottom: solid $default-spacing $dark_black;
+    height: 26px;
+    border-bottom: variables.$default-border;
 
     &Clickable {
       cursor: pointer;
@@ -56,8 +57,8 @@
 
     .barLine {
       position: absolute;
-      top: 32px;
-      bottom: 6px;
+      top: 27px;
+      bottom: 0;
       border-left: 1px $neutral_dark50 solid;
 
       &Current {

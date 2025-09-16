@@ -32,6 +32,8 @@ class Dancelab < GamelabJr
     uses_lab2
     uses_preview
     exemplar_sources
+    generate_dancer_mode
+    ai_code_generate
   )
 
   def self.skins

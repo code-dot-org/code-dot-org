@@ -5,6 +5,7 @@ import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import classNames from 'classnames';
 import React, {useEffect, useMemo, useState} from 'react';
 
+import {SystemPromptSettings} from '@cdo/apps/aichat/types';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {ProjectSources} from '@cdo/apps/lab2/types';
@@ -78,7 +79,7 @@ type ResourcePanelProps = InstructionsProps & {
   includeFooterSpacing?: boolean;
   settings?: Setting[];
   versionHistoryProps?: VersionHistoryProps;
-  aiTutorSystemPromptName?: string;
+  aiTutorSystemPromptSettings?: SystemPromptSettings;
 };
 
 /**
@@ -92,7 +93,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   includeFooterSpacing = true,
   settings,
   versionHistoryProps,
-  aiTutorSystemPromptName,
+  aiTutorSystemPromptSettings,
   ...instructionsProps
 }) => {
   const {theme} = useTheme();
@@ -151,7 +152,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       tabMap[Tabs.AiTutor] = (
         <AiTutor2Chat
           hiddenContextCallback={hiddenContextCallback}
-          aiTutorSystemPromptName={aiTutorSystemPromptName}
+          aiTutorSystemPromptSettings={aiTutorSystemPromptSettings}
         />
       );
     }
@@ -191,7 +192,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     isWidgetView,
     versionHistoryProps,
     showRubric,
-    aiTutorSystemPromptName,
+    aiTutorSystemPromptSettings,
     selectedVersion,
     levelId,
   ]);

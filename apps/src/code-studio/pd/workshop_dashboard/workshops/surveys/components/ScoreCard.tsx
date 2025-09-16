@@ -12,7 +12,7 @@ import {Card, CardContent, Box} from '@mui/material';
 import classNames from 'classnames';
 import React, {FC, useMemo, useState} from 'react';
 
-import {Breakdown} from '../../../WorkshopFormTemplate/types';
+import {Breakdown} from '../../types';
 import {CRITICAL_CONCERN_LIMIT, NEEDS_ATTENTION_LIMIT} from '../constants';
 
 import {SimpleBarChart} from './BarChartGroup';

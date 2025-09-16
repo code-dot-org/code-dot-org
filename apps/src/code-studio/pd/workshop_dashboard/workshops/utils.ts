@@ -1,19 +1,22 @@
 import moment from 'moment-timezone';
 
 import {DATE_FORMAT, DATETIME_FORMAT, TIME_FORMAT} from '../workshopConstants';
-import {WorkshopData} from '../workshops/types';
-
-import {isOption, Option} from './components/MultiSelectInput';
 import {
-  Workshop,
-  WorkshopFormState,
-  Session,
-  SessionFormState,
+  isOption,
+  Option,
+} from '../WorkshopFormTemplate/components/MultiSelectInput';
+
+import {
   DestroyedSession,
-  SessionRequest,
-  WorkshopRequest,
   Enrollment,
   EnrollmentData,
+  Session,
+  SessionFormState,
+  SessionRequest,
+  Workshop,
+  WorkshopData,
+  WorkshopFormState,
+  WorkshopRequest,
 } from './types';
 
 export const workshopLabel = (label: string): string =>

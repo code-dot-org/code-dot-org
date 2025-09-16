@@ -167,7 +167,8 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
             id="start-over-button"
             className={classNames(
               moduleStyles.button,
-              allowPackSelection && packFolder && moduleStyles.buttonWide
+              allowPackSelection && packFolder && moduleStyles.buttonWide,
+              allowPackSelection && packFolder && moduleStyles.buttonHasBorder
             )}
           >
             {allowPackSelection && packFolder && (
