@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: course_offerings
@@ -32,6 +34,33 @@
 
 class CourseOffering < ApplicationRecord
   include Curriculum::SharedCourseConstants
+  include Localizable
+
+  ACCEPTABLE_RESOURCE_TYPES = [
+    'Answer Key',
+    'Activity Guide',
+    'Slides',
+    'Exemplar',
+    'Slide Deck',
+    'Rubric'
+  ]
+  DURATION_LABEL_TO_MINUTES_CAP = {
+    lesson: 90,
+    week: 250,
+    month: 950,
+    quarter: 2_500,
+    semester: 5_000,
+    school_year: 525_600,
+  }
+  ELEMENTARY_SCHOOL_GRADES = %w[K 1 2 3 4 5].freeze
+  HIGH_SCHOOL_GRADES = %w[9 10 11 12].freeze
+  KEY_CHAR_RE = /[a-z0-9\-]/
+  KEY_RE = /\A#{KEY_CHAR_RE}+\Z/
+  MIDDLE_SCHOOL_GRADES = %w[6 7 8].freeze
+  PROFESSIONAL_LEARNING_PROGRAM_PATHS = {
+    'K5 Workshops': 'https://code.org/professional-development-workshops',
+    '6-12 Workshops': 'https://code.org/apply',
+  }
 
   has_many :course_versions
   belongs_to :self_paced_pl_course_offering, class_name: 'CourseOffering', optional: true
@@ -42,38 +71,14 @@ class CourseOffering < ApplicationRecord
   validates :marketing_initiative, acceptance: {accept: Curriculum::SharedCourseConstants::COURSE_OFFERING_MARKETING_INITIATIVES.to_h.values, message: "must be one of the course offering marketing initiatives. Expected one of: #{Curriculum::SharedCourseConstants::COURSE_OFFERING_MARKETING_INITIATIVES.to_h.values}. Got: \"%{value}\"."}, allow_nil: true
   validate :grade_levels_format
 
-  KEY_CHAR_RE = /[a-z0-9\-]/
-  KEY_RE = /\A#{KEY_CHAR_RE}+\Z/
   validates :key,
     format: {with: KEY_RE,
     message: "must contain only lowercase alphabetic characters, numbers, and dashes; got \"%{value}\"."}
 
-  ELEMENTARY_SCHOOL_GRADES = %w[K 1 2 3 4 5].freeze
-  MIDDLE_SCHOOL_GRADES = %w[6 7 8].freeze
-  HIGH_SCHOOL_GRADES = %w[9 10 11 12].freeze
-  PROFESSIONAL_LEARNING_PROGRAM_PATHS = {
-    'K5 Workshops': 'https://code.org/professional-development-workshops',
-    '6-12 Workshops': 'https://code.org/apply',
-  }
   validates :professional_learning_program, acceptance: {accept: PROFESSIONAL_LEARNING_PROGRAM_PATHS.values, message: "must be one of the professional learning program path. Expected one of: #{PROFESSIONAL_LEARNING_PROGRAM_PATHS.values}. Got:  \"%{value}\"."}, allow_nil: true
 
-  DURATION_LABEL_TO_MINUTES_CAP = {
-    lesson: 90,
-    week: 250,
-    month: 950,
-    quarter: 2500,
-    semester: 5000,
-    school_year: 525600,
-  }
+  self.localizable_attributes = :display_name, :description
 
-  ACCEPTABLE_RESOURCE_TYPES = [
-    'Answer Key',
-    'Activity Guide',
-    'Slides',
-    'Exemplar',
-    'Slide Deck',
-    'Rubric'
-  ]
   # Seeding method for creating / updating / deleting a CourseOffering and CourseVersion for the given
   # potential content root, i.e. a UnitGroup.
   #
@@ -301,15 +306,6 @@ class CourseOffering < ApplicationRecord
     }
   end
 
-  def localized_display_name
-    localized_name = I18n.t(
-      key,
-      scope: [:data, :course_offerings],
-      default: nil
-    )
-    localized_name || display_name
-  end
-
   def duration_in_minutes
     return nil unless latest_published_version
     co_units = latest_published_version.units
@@ -376,7 +372,7 @@ class CourseOffering < ApplicationRecord
       course_id: course_id,
       course_offering_id: id,
       is_translated: translated?(locale_code),
-      description: description,
+      description: localized_description,
       professional_learning_program: professional_learning_program,
       video: video,
       published_date: published_date,

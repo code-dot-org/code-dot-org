@@ -160,6 +160,7 @@ const Weblab2View: React.FC<
           levelProperties={levelProperties}
           aiTutorContextPromise={aiTutorContextPromise}
           aiTutorSystemPromptSettings={aiTutorSystemPromptSettings}
+          aiTutorMultimodalEnabled={true}
         />
       )}
     </div>

@@ -4,6 +4,7 @@ import Tabs, {TabsProps} from '@code-dot-org/component-library/tabs';
 import React, {useCallback, useEffect, useMemo, useState} from 'react';
 
 import {isModelUpdate, SystemPromptSettings} from '@cdo/apps/aichat/types';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import usePrevious from '@cdo/apps/util/usePrevious';
 
@@ -19,6 +20,7 @@ import {
   clearStagedFiles,
   fetchUserChatHistory,
   selectAllVisibleMessages,
+  sendAnalytics,
   setClientType,
   setNewChatSession,
 } from '../redux';
@@ -45,7 +47,6 @@ interface ChatWorkspaceProps {
   clientType: AiChatClientType;
   chatButtons?: ChatButtonAndKey[];
   hiddenContext?: string;
-  onClear: () => void;
   hideModelChangeMessage?: boolean;
 
   // Multimodal support
@@ -75,7 +76,6 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   clientType,
   chatButtons,
   hiddenContext,
-  onClear,
   multimodalEnabled = false,
   levelName,
   channelId,
@@ -269,6 +269,21 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     tabsContainerClassName: moduleStyles.tabsContainer,
     tabPanelsContainerClassName: moduleStyles.tabPanelsContainer,
   };
+
+  const onClear = useCallback(() => {
+    dispatch(clearChatMessages());
+    dispatch(
+      addChatEvent({
+        timestamp: Date.now(),
+        descriptionKey: 'CLEAR_CHAT',
+      })
+    );
+    dispatch(
+      sendAnalytics(EVENTS.CHAT_ACTION, {
+        action: 'Clear chat history',
+      })
+    );
+  }, [dispatch]);
 
   return (
     <div id="chat-workspace-area" className={moduleStyles.chatWorkspace}>

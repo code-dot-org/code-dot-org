@@ -81,6 +81,7 @@ type ResourcePanelProps = InstructionsProps & {
   settings?: Setting[];
   versionHistoryProps?: VersionHistoryProps;
   aiTutorSystemPromptSettings?: SystemPromptSettings;
+  aiTutorMultimodalEnabled?: boolean;
 };
 
 /**
@@ -95,6 +96,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   settings,
   versionHistoryProps,
   aiTutorSystemPromptSettings,
+  aiTutorMultimodalEnabled,
   ...instructionsProps
 }) => {
   const {theme} = useTheme();
@@ -114,6 +116,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const hasValidationConditions = useAppSelector(
     state => state.lab.validationState?.hasConditions
   );
+  const levelName = instructionsProps.levelProperties.name;
+  const channelId = useAppSelector(state => state.lab.channel?.id);
 
   // Build available tabs based on level information.
   const availableTabs = useMemo(() => {
@@ -154,6 +158,9 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
         <AiTutor2Chat
           aiTutorContextPromise={aiTutorContextPromise}
           aiTutorSystemPromptSettings={aiTutorSystemPromptSettings}
+          aiTutorMultimodalEnabled={aiTutorMultimodalEnabled}
+          levelName={levelName}
+          channelId={channelId}
         />
       );
     }
@@ -193,6 +200,9 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     isWidgetView,
     versionHistoryProps,
     showRubric,
+    aiTutorMultimodalEnabled,
+    levelName,
+    channelId,
     aiTutorSystemPromptSettings,
     selectedVersion,
     levelId,
