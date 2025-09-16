@@ -79,6 +79,7 @@ type ResourcePanelProps = InstructionsProps & {
   includeFooterSpacing?: boolean;
   settings?: Setting[];
   versionHistoryProps?: VersionHistoryProps;
+  aiTutorSystemPromptName?: string;
 };
 
 /**
@@ -92,6 +93,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   includeFooterSpacing = true,
   settings,
   versionHistoryProps,
+  aiTutorSystemPromptName,
   ...instructionsProps
 }) => {
   const {theme} = useTheme();
@@ -148,7 +150,10 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       aiTutorContextPromise
     ) {
       tabMap[Tabs.AiTutor] = (
-        <AiTutor2Chat aiTutorContextPromise={aiTutorContextPromise} />
+        <AiTutor2Chat
+          aiTutorContextPromise={aiTutorContextPromise}
+          aiTutorSystemPromptName={aiTutorSystemPromptName}
+        />
       );
     }
 
@@ -187,6 +192,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     isWidgetView,
     versionHistoryProps,
     showRubric,
+    aiTutorSystemPromptName,
     selectedVersion,
     levelId,
   ]);

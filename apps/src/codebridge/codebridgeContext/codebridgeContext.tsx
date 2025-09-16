@@ -29,6 +29,7 @@ export type CodebridgeContextType = {
     fileType: string,
     uploadFunction: () => Promise<void>
   ) => void;
+  aiTutorSystemPromptName?: string;
 };
 
 export const CodebridgeContext = createContext<CodebridgeContextType | null>(

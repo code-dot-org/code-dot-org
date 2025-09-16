@@ -117,3 +117,12 @@ WithDSCOButtonTriggerCustomDropdown.args = {
   },
   size: 'm',
 };
+
+export const WithMenuPlacementCustomDropdown = SingleTemplate.bind({});
+WithMenuPlacementCustomDropdown.args = {
+  name: 'with-menu-placement-dropdown',
+  labelText: 'Dropdown with Menu Placement',
+  menuPlacement: 'right',
+  menuVerticalPlacement: 'bottom',
+  size: 'm',
+};

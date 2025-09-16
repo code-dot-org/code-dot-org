@@ -116,3 +116,23 @@ SizesOfRadioButton.args = {
     {name: 'test-l', value: 'test-l', label: 'Label - L', size: 'l'},
   ],
 };
+
+export const LabelWeights = MultipleTemplate.bind({});
+LabelWeights.args = {
+  radioButtons: [
+    {
+      name: 'lw-thin',
+      value: 'lw-thin',
+      label: 'Thin label',
+      textThickness: 'thin',
+      size: 'm',
+    },
+    {
+      name: 'lw-thick',
+      value: 'lw-thick',
+      label: 'Thick label',
+      textThickness: 'thick',
+      size: 'm',
+    },
+  ],
+};

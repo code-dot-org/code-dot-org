@@ -380,6 +380,7 @@ export interface ProjectVersion {
   versionId: string;
   lastModified: string;
   isLatest: boolean;
+  comment?: string;
 }
 
 export interface ScriptLevelPathLink {
