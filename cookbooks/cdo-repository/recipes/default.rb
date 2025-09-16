@@ -47,6 +47,12 @@ git git_path do
 
   user node[:user]
   group node[:user]
+
+  # Ensure proper environment for credential helper
+  environment(
+    'HOME' => home_path,
+    'USER' => node[:user]
+  )
 end
 
 # The staging server requires a special worktree at a hardcoded location in
@@ -60,6 +66,7 @@ if node.chef_environment == 'staging'
     cwd git_path
     user node[:user]
     group node[:user]
+    environment('HOME' => home_path)
     not_if {File.exist? worktree_path}
   end
 end
@@ -74,6 +81,7 @@ if node['cdo-apps']['daemon'] && %w[production].include?(node.chef_environment)
     cwd git_path
     user node[:user]
     group node[:user]
+    environment('HOME' => home_path)
     not_if {File.exist? worktree_path}
   end
 
