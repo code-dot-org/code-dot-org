@@ -195,7 +195,7 @@ Scenario: Teacher can view student work, ask student to keep working, on rubric 
 
   # Teacher can see feedback given icon
   Given I am on "http://studio.code.org/"
-  When I click selector "a:contains(Untitled Section)" once I see it to load a new page
+  And I navigate to the V2 progress dashboard for "Untitled Section"
   And I wait until element "#ui-test-lesson-header-39" is visible
   And I scroll to "#ui-test-lesson-header-39"
   And I see no difference for "feedback given icon is displayed"
@@ -222,7 +222,7 @@ Scenario: Teacher can view choice levels
   And I open my eyes to test "V2 Progress - Choice Levels"
 
   Given I create an authorized teacher-associated student named "Sally"
-  Given I am assigned to course "allthethingscourse" unit 1
+  Given I am assigned to course "allthethingscourse" with teacher "Teacher_Sally" in a section named "Test Section"
 
   # Student submits choice level
   Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/40/levels/1/sublevel/2?noautoplay=true"
@@ -233,7 +233,7 @@ Scenario: Teacher can view choice levels
 
   When I sign in as "Teacher_Sally" and go home
   And I get levelbuilder access
-  And I navigate to the V2 progress dashboard for "Untitled Section"
+  And I navigate to the V2 progress dashboard for "Test Section"
 
   # View unexpanded choice level
   And I wait until element "#ui-test-lesson-header-1" is visible
