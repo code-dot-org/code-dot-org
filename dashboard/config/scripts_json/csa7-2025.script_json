@@ -15,12 +15,11 @@
       "show_calendar": true,
       "student_detail_progress_view": true,
       "tts": true,
-      "version_year": "2025",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-08-05 22:06:08 UTC",
+    "serialized_at": "2025-09-12 14:13:14 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -5522,11 +5521,9 @@
     },
     {
       "name": "CSA Unit 7 Slides",
-      "url": "https://docs.google.com/presentation/d/1qAgDU-g-Uf5Mx-rQKRfgsaGyf3DlTgkTHuEMATBWs6o/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/19U_VRhA01opZ63EirbY4jMNMNrLMk5vNyGV7yuvxwQg/edit?usp=sharing",
       "key": "csa_unit_7_slides",
       "properties": {
-        "audience": "Verified Teacher",
-        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "csa_unit_7_slides"

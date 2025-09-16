@@ -35,7 +35,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-08-20 19:42:40 UTC",
+    "serialized_at": "2025-09-04 21:55:39 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -1252,7 +1252,7 @@
       "key": "bc947f08-a6b2-4949-b6a6-a4a17a6b919a",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students look at each image, guess what it is and then determine if it’s an input or output device. Once they know what the item is and whether it’s an input or output device, have them write it in the Venn diagram below in their activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Students will discuss the essential components a computer needs to function beyond input and output devices.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show the zoomed in image on screen and give students 30 seconds to figure out what it is. Have students share out what they think the image is.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students talk with their partner to decide if this is input, output, or both. Have them write down the item in the corresponding category in the Venn Diagram. Explain that speakers are an example of output, they produce sound that the hardware user can hear.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show the zoomed in image on screen and give students 30 seconds to figure out what it is. Have students share out what they think the image is.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students talk with their partner to decide if this is input, output, or both. Have them write down the item in the corresponding category in the Venn Diagram. Explain that a controller is example of output, they have buttons that the user can press to control different things.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show the zoomed in image on screen and give students 30 seconds to figure out what it is. Have students share out what they think the image is.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students talk with their partner to decide if this is input, output, or both. Have them write down the item in the corresponding category in the Venn Diagram. Then have them fill out the Venn Diagram with any other input and output devices they can think of. Explain that a headset is an example of both input and out, they produce sound that the hardware user can hear and have a microphone to capture the user speaking.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:**  *Besides input and output devices, what other components does a computer need to work?*\n- Round Robin Sharing: Invite students to share one insight about a crucial internal component that makes a computer function (e.g., CPU, RAM, storage, power supply). If time allows, go around the room or ask for volunteers.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This discussion aims to help students recognize that a computer is more than just peripherals—it requires processing power, memory, and storage to operate. By identifying these key components, students will build a foundation for understanding how computers process and store information.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Introduce the Question of the Day."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students look at each image, guess what it is and then determine if it’s an input or output device. Once they know what the item is and whether it’s an input or output device, have them write it in the Venn diagram below in their activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Students will discuss the essential components a computer needs to function beyond input and output devices.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show the zoomed in image on screen and give students 30 seconds to figure out what it is. Have students share out what they think the image is.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students talk with their partner to decide if this is input, output, or both. Have them write down the item in the corresponding category in the Venn Diagram. Explain that speakers are an example of output, they produce sound that the hardware user can hear.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show the zoomed in image on screen and give students 30 seconds to figure out what it is. Have students share out what they think the image is.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students talk with their partner to decide if this is input, output, or both. Have them write down the item in the corresponding category in the Venn Diagram. Explain that a controller is example of input, they have buttons that the user can press to control different things.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show the zoomed in image on screen and give students 30 seconds to figure out what it is. Have students share out what they think the image is.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students talk with their partner to decide if this is input, output, or both. Have them write down the item in the corresponding category in the Venn Diagram. Then have them fill out the Venn Diagram with any other input and output devices they can think of. Explain that a headset is an example of both input and output, they produce sound that the hardware user can hear and have a microphone to capture the user speaking.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:**  *Besides input and output devices, what other components does a computer need to work?*\n- Round Robin Sharing: Invite students to share one insight about a crucial internal component that makes a computer function (e.g., CPU, RAM, storage, power supply). If time allows, go around the room or ask for volunteers.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This discussion aims to help students recognize that a computer is more than just peripherals—it requires processing power, memory, and storage to operate. By identifying these key components, students will build a foundation for understanding how computers process and store information.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Introduce the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "bc947f08-a6b2-4949-b6a6-a4a17a6b919a",
@@ -7478,6 +7478,16 @@
   ],
   "vocabularies": [
     {
+      "key": "aggregate",
+      "word": "Aggregate",
+      "definition": "Combining data to show a summary, like totals or averages",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "aggregate"
+      }
+    },
+    {
       "key": "application_specific_integrated_circuit_asic_",
       "word": "Application-Specific Integrated Circuit (ASIC)",
       "definition": "a processor made for one specific task",
@@ -7510,7 +7520,7 @@
     {
       "key": "data",
       "word": "data",
-      "definition": "any form of organized information, such as words, numbers, pictures, etc.",
+      "definition": "Information that is collected, stored, and used to understand and solve problems",
       "properties": {
       },
       "seeding_key": {
@@ -7545,6 +7555,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "field_programmable_gate_array_fpga_"
+      }
+    },
+    {
+      "key": "filter",
+      "word": "filter",
+      "definition": "a tool or process used to select specific data points from a larger set based on certain criteria or conditions",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "filter"
       }
     },
     {
@@ -7625,6 +7645,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "sensor"
+      }
+    },
+    {
+      "key": "sort",
+      "word": "Sort",
+      "definition": "Organizing data in a specific order, like A to Z or biggest to smallest",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "sort"
       }
     },
     {
@@ -7747,6 +7777,24 @@
       "seeding_key": {
         "lesson.key": "Just Because We Can, Should We?",
         "vocabulary.key": "ethics"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Processing Data in a System",
+        "vocabulary.key": "aggregate"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Processing Data in a System",
+        "vocabulary.key": "filter"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Processing Data in a System",
+        "vocabulary.key": "sort"
       }
     },
     {

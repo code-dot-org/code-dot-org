@@ -17,17 +17,19 @@ import styles from '../../workshop.module.scss';
 interface FreeResponseCardProps {
   title: string;
   tagText?: string;
-  items: string[];
+  items?: string[];
   statusColor?: 'success' | 'warning';
   size?: 's' | 'l';
+  useFlexTextCardContainer?: boolean;
 }
 
 export const FreeResponseCard: FC<FreeResponseCardProps> = ({
   title,
   tagText,
-  items,
+  items = [],
   statusColor,
   size = 'l',
+  useFlexTextCardContainer = false,
 }) => {
   return (
     <Card
@@ -62,6 +64,7 @@ export const FreeResponseCard: FC<FreeResponseCardProps> = ({
           <Box
             className={classNames(styles.textCardContainer, {
               [styles.small]: size === 's',
+              [styles.flexTextCardContainer]: useFlexTextCardContainer,
             })}
           >
             {items.map((item, i) => (

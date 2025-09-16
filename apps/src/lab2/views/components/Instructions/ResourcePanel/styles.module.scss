@@ -10,7 +10,7 @@
   justify-content: space-between;
 
   .tabs {
-    margin-top: 2rem;
+    margin-top: 2.5rem;
     display: flex;
     flex-direction: column;
   }
@@ -44,7 +44,6 @@
     padding: 8px 0;
   }
 
-
   // Doubling class name to increase specificity and override default button styles.
   .bottomButton.bottomButton {
     height: 2rem;
@@ -62,6 +61,7 @@
   opacity: 1;
   flex-direction: column;
   flex: 1;
+  min-width: 0;
 }
 
 .panelContent {

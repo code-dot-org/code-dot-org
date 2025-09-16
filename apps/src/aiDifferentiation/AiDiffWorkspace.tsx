@@ -13,6 +13,7 @@ import {
   chatThreadValidator,
   chatThreadMessagesValidator,
   Context,
+  ChatPrompt,
 } from './types';
 
 import style from './ai-differentiation.module.scss';
@@ -32,6 +33,8 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
   const [threadMessages, setThreadMessages] = useState<ChatItem[]>();
   const [threadId, setThreadId] = useState<number>(0);
   const [keyId, setKeyId] = useState<number>(0);
+  const [initialThreadPrompt, setInitialThreadPrompt] =
+    useState<ChatPrompt | null>(null);
 
   const [showNotifications, setShowNotifications] = useState<boolean>(false);
 
@@ -92,6 +95,18 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
     [setThreadMessages, keyId]
   );
 
+  const aiPromptOutsideChatClicked = useCallback(
+    (label: string, prompt: string) => {
+      setShowNotifications(false);
+      setInitialThreadPrompt({
+        label: label,
+        prompt: prompt,
+      });
+      fetchThreadMessages(0);
+    },
+    [fetchThreadMessages]
+  );
+
   return (
     <div className={style.aiDiffWorkspace}>
       <AiDiffSidebar
@@ -102,7 +117,7 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
         showNotifications={showNotifications}
       />
       {showNotifications && experiments.isEnabled('teacher-notifications') ? (
-        <AiDiffNotificationList />
+        <AiDiffNotificationList aiPromptClick={aiPromptOutsideChatClicked} />
       ) : (
         <AiDiffChat
           context={context}
@@ -113,6 +128,8 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
           key={keyId}
           threadId={threadId}
           setThreadId={setThreadId}
+          initialThreadPrompt={initialThreadPrompt}
+          setInitialThreadPrompt={setInitialThreadPrompt}
         />
       )}
     </div>

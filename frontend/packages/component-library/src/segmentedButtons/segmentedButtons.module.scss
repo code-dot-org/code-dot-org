@@ -17,7 +17,7 @@
       color 0.15s ease-in-out,
       background-color 0.15s ease-in-out;
 
-    background-color: transparent;
+    background-color: var(--background-neutral-primary);
     border: 1px solid transparent;
     color: var(--text-neutral-primary);
 
@@ -45,17 +45,18 @@
     &:focus-visible {
       outline: none;
       background-color: var(--background-brand-teal-light);
+      border-color: var(--borders-brand-teal-primary);
     }
 
     // Pressed styles
     &:active {
-      color: var(--text-neutral-primary);
+      color: var(--text-neutral-secondary);
     }
 
     // Disabled styles
     &:disabled {
       border-color: var(--borders-neutral-disabled);
-      background-color: transparent;
+      background-color: var(--background-neutral-primary);
       color: var(--text-neutral-disabled);
       cursor: not-allowed;
     }
@@ -77,15 +78,13 @@
 
     // Focus styles
     &:focus-visible {
-      background-color: var(--background-brand-teal-light);
-      color: var(--text-neutral-primary);
+      background-color: var(--background-brand-teal-primary);
+      color: var(--text-neutral-white-fixed);
     }
 
     // Pressed styles
     &:active {
-      background-color: var(--background-brand-teal-primary);
-      border-color: var(--borders-brand-teal-primary);
-      color: var(--text-neutral-white-fixed);
+      background-color: var(--background-brand-teal-strong);
     }
   }
 }
@@ -101,23 +100,9 @@
       border-color: var(--borders-neutral-primary);
     }
 
-    // Focus styles
-    &:focus-visible {
-      border-color: var(--borders-neutral-primary);
-    }
-
     // Pressed styles
     &:active {
       background-color: var(--background-neutral-tertiary);
-      border-color: var(--borders-neutral-primary);
-      color: var(--text-neutral-secondary);
-    }
-  }
-
-  // Selected styles
-  .selectedSegmentedButton.segmentedButton {
-    // Focus styles
-    &:focus-visible {
       border-color: var(--borders-neutral-primary);
     }
   }
@@ -133,23 +118,9 @@
       border-color: var(--borders-neutral-strong);
     }
 
-    // Focus styles
-    &:focus-visible {
-      border-color: var(--borders-neutral-strong);
-    }
-
     // Pressed styles
     &:active {
       background-color: var(--background-neutral-quaternary);
-      border-color: var(--borders-neutral-strong);
-      color: var(--text-neutral-secondary);
-    }
-  }
-
-  // Selected styles
-  .selectedSegmentedButton.segmentedButton {
-    // Focus styles
-    &:focus-visible {
       border-color: var(--borders-neutral-strong);
     }
   }

@@ -18,18 +18,20 @@ const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
 const isToolboxMode = getAppOptionsEditBlocks() === TOOLBOX_BLOCKS;
 const isEditingExemplar = getAppOptionsEditingExemplar();
 
-export type GetUpdatedProperties = (mode: 'start' | 'exemplar' | 'toolbox') => {
-  [key in keyof LevelProperties]?: LevelProperties[keyof LevelProperties];
+export type GetUpdatedProperties<T extends LevelProperties> = (
+  mode: 'start' | 'exemplar' | 'toolbox'
+) => {
+  [key: string]: T[keyof T];
 };
 
 /**
  * Hook that displays the save button for levelbuilder workspaces editing and
  * returns a workspace alert if a workspace edit mode is active.
  */
-export default function (
+export default function <T extends LevelProperties>(
   levelId: number,
   isProjectTemplateLevel: boolean,
-  getUpdatedProperties: GetUpdatedProperties
+  getUpdatedProperties: GetUpdatedProperties<T>
 ) {
   useEffect(() => {
     if (isStartMode) {

@@ -19,6 +19,9 @@ module Pd::Foorm
 
       # Get raw data
       ws_submissions, form_submissions, forms = get_raw_data_for_workshop(workshop_id, facilitator_id_filter)
+
+      follow_up_requested = get_follow_up_requested(form_submissions)
+
       facilitators = get_formatted_facilitators_for_workshop(workshop_id, facilitator_id_filter)
 
       # Legacy parser that does not preserve question categories but works with WorkshopSummarizer
@@ -60,7 +63,8 @@ module Pd::Foorm
         course: ws_data.course,
         name: ws_data.name,
         facilitators: facilitators,
-        surveys: surveys
+        surveys: surveys,
+        follow_up_requested: follow_up_requested
       }
     end
 
@@ -236,6 +240,42 @@ module Pd::Foorm
         facilitators_formatted[facilitator.id] = facilitator.name
       end
       facilitators_formatted
+    end
+
+    # extracts user name and provided follow up email from submissions
+    def self.get_follow_up_requested(form_submissions)
+      submissions_with_followup = form_submissions.filter_map do |submission|
+        answers = JSON.parse(submission.answers)
+        if answers['followup_requested'] == 'yes' && answers['followup_email'].present?
+          {
+            id: submission.id,
+            email: answers['followup_email']
+          }
+        end
+      end
+
+      submission_ids = submissions_with_followup.pluck(:id)
+
+      submission_users = Pd::WorkshopSurveyFoormSubmission.includes(:user).
+                                                          where(foorm_submission_id: submission_ids).
+                                                          index_by(&:foorm_submission_id)
+
+      results = []
+      submissions_with_followup.each do |submission_data|
+        submission_id = submission_data[:id]
+        email = submission_data[:email]
+
+        submission_user = submission_users[submission_id]
+
+        next if submission_user&.user.blank?
+
+        results << {
+          name: submission_user.user.full_name,
+          email: email
+        }
+      end
+
+      results
     end
   end
 end

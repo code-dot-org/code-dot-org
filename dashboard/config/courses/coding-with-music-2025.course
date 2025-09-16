@@ -12,7 +12,6 @@
   "instructor_audience": "teacher",
   "properties": {
     "family_name": "coding-with-music",
-    "numbered_units": "auto",
     "version_year": "2025"
   },
   "resources": [

@@ -6,7 +6,11 @@ import {useDropdownContext} from '@/common/contexts/DropdownContext';
 import {ComponentSizeXSToL} from '@/common/types';
 import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
 
-import CustomDropdown, {CustomDropdownOption} from '../CustomDropdown';
+import CustomDropdown, {
+  CustomDropdownMenuPlacement,
+  CustomDropdownMenuVerticalPlacement,
+  CustomDropdownOption,
+} from '../CustomDropdown';
 
 import moduleStyles from './../customDropdown.module.scss';
 
@@ -25,7 +29,9 @@ export interface ActionDropdownProps extends AriaAttributes {
   /** ActionDropdown size */
   size?: ComponentSizeXSToL;
   /** ActionDropdown Menu placement */
-  menuPlacement?: 'left' | 'right';
+  menuPlacement?: CustomDropdownMenuPlacement;
+  /** ActionDropdown menu vertical placement */
+  menuVerticalPlacement?: CustomDropdownMenuVerticalPlacement;
   /** ActionDropdown disabled state */
   disabled?: boolean;
   /** ActionDropdown label
@@ -57,6 +63,7 @@ const ActionDropdown: React.FunctionComponent<ActionDropdownProps> = ({
   options,
   disabled = false,
   menuPlacement = 'left',
+  menuVerticalPlacement = 'bottom',
   size = 'm',
   triggerButtonProps,
   ...rest
@@ -79,6 +86,7 @@ const ActionDropdown: React.FunctionComponent<ActionDropdownProps> = ({
       labelText={labelText}
       disabled={disabled}
       menuPlacement={menuPlacement}
+      menuVerticalPlacement={menuVerticalPlacement}
       size={size}
       {...rest}
       useDSCOButtonAsTrigger

@@ -7,7 +7,11 @@ import EnrollInWorkshop from './components/EnrollInWorkshop';
 import OrganizerInformation from './components/OrganizerInformation';
 import WorkshopDetails from './components/WorkshopDetails';
 import WorkshopEventJsonLdData from './components/WorkshopEventJsonLdData';
-import {UserInfoForWorkshop, WorkshopInfo} from './types';
+import {
+  UserInfoForWorkshop,
+  UserWorkshopEnrollment,
+  WorkshopInfo,
+} from './types';
 
 import moduleStyles from './workshopMarketingPage.module.scss';
 
@@ -22,9 +26,9 @@ const workshopMarketingBreadcrumbs: LinkWithText[] = [
   },
 ];
 
-interface WorkshopMarketingPageProps
-  extends WorkshopInfo,
-    UserInfoForWorkshop {}
+interface WorkshopMarketingPageProps extends WorkshopInfo, UserInfoForWorkshop {
+  userEnrollment?: UserWorkshopEnrollment;
+}
 
 const WorkshopMarketingPage: React.FunctionComponent<
   WorkshopMarketingPageProps
@@ -49,7 +53,10 @@ const WorkshopMarketingPage: React.FunctionComponent<
     organizer,
     facilitators,
     userInfo,
+    userEnrollment,
   } = props;
+
+  const isUserEnrolled = !!userEnrollment;
 
   return (
     <div className={moduleStyles.workshopMarketingPage}>
@@ -62,11 +69,14 @@ const WorkshopMarketingPage: React.FunctionComponent<
           breadcrumbs={workshopMarketingBreadcrumbs}
           className={moduleStyles.headerBreadcrumbs}
         />
-        <Heading1>Register for a workshop</Heading1>
+        <Heading1>
+          {isUserEnrolled ? 'Workshop information' : 'Register for a workshop'}
+        </Heading1>
       </section>
       <div className={moduleStyles.bodyWrapper}>
         <div className={moduleStyles.bodyContainer}>
           <WorkshopDetails
+            isUserEnrolled={isUserEnrolled}
             name={name}
             gradeLevels={gradeLevels}
             sessions={sessions}
@@ -91,6 +101,8 @@ const WorkshopMarketingPage: React.FunctionComponent<
               name={name}
               format={format}
               sessions={sessions}
+              isUserEnrolled={isUserEnrolled}
+              userEnrollment={userEnrollment}
             />
 
             <OrganizerInformation

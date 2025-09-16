@@ -2,12 +2,19 @@ import React from 'react';
 
 import HttpClient from '@cdo/apps/util/HttpClient';
 
+import EmptyNotificationList from './EmptyNotificationList';
 import Notification from './Notification';
 import {AiDiffNotification} from './types';
 
 import styles from './notifications.module.scss';
 
-const AiDiffNotificationList: React.FC = () => {
+interface AiDiffNotificationListProps {
+  aiPromptClick: (label: string, prompt: string) => void;
+}
+
+const AiDiffNotificationList: React.FC<AiDiffNotificationListProps> = ({
+  aiPromptClick,
+}) => {
   const [loading, setLoading] = React.useState<boolean>(true);
   const [notifications, setNotifications] = React.useState<
     AiDiffNotification[]
@@ -17,7 +24,7 @@ const AiDiffNotificationList: React.FC = () => {
     HttpClient.fetchJson<AiDiffNotification[]>('/notifications', {}, undefined)
       .then(response => {
         setLoading(false);
-        const loadedNotifications = response.value.map(n => ({
+        const loadedNotifications = response?.value?.map(n => ({
           ...n,
           publishedAt: new Date(n.publishedAt),
           readAt: n.readAt ? new Date(n.readAt) : null,
@@ -51,8 +58,7 @@ const AiDiffNotificationList: React.FC = () => {
   }, [notifications]);
 
   if (!loading && (!notifications || notifications.length === 0)) {
-    // TODO(lfm): add empty state design
-    return <div className={styles.listContainer}>{'no notifications'}</div>;
+    return <EmptyNotificationList />;
   }
 
   return (
@@ -60,13 +66,17 @@ const AiDiffNotificationList: React.FC = () => {
       <div className={styles.list}>
         {loading ? (
           <>
-            <Notification notification={null} key={1} />
-            <Notification notification={null} key={2} />
-            <Notification notification={null} key={3} />
+            <Notification notification={null} key={'1'} />
+            <Notification notification={null} key={'2'} />
+            <Notification notification={null} key={'3'} />
           </>
         ) : (
           notifications.map(notification => (
-            <Notification notification={notification} key={notification.id} />
+            <Notification
+              notification={notification}
+              key={notification.externalId}
+              aiPromptClick={aiPromptClick}
+            />
           ))
         )}
       </div>

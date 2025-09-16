@@ -52,7 +52,7 @@ rescue Octokit::Unauthorized
   puts <<~EOS
 
     Your CDO.github_access_token is out of date. Please update your
-    personal access token at github.com, put the new value in locals.yml,
+    personal access token at https://github.com/settings/tokens, put the new value in locals.yml,
     and rerun this script.
 
   EOS

@@ -466,7 +466,7 @@
         {
           "type": "radiogroup",
           "name": "can_contact",
-          "title": "Would you be open to participate in a follow-up discussion to provide direct feedback about Computer Science professional learning?",
+          "title": "Would you be open to participate in a follow-up discussion to provide direct feedback about Computer Science professional learning to the Code.org team?",
           "choices": [
             {
               "value": "yes",
@@ -483,6 +483,30 @@
           "name": "contact_email",
           "visibleIf": "{can_contact} = 'yes'",
           "title": "Please enter the email address where we can contact you to gather additional feedback about Computer Science professional learning."
+        },
+        {
+          "category": "implementation",
+          "type": "radiogroup",
+          "name": "followup_requested",
+          "title": "Would you like someone from the Regional Partner team to contact you with further resources or support for teaching this curriculum? If you choose yes, we will share your contact information (but not your survey responses) with the Regional Partner team so they can follow up.",
+          "shortText": "Follow-up requested",
+          "choices": [
+            {
+              "value": "yes",
+              "text": "Yes, I'd appreciate support"
+            },
+            {
+              "value": "no",
+              "text": "No, I'm all set"
+            }
+          ]
+        },
+        {
+          "category": "implementation",
+          "type": "text",
+          "name": "followup_email",
+          "visibleIf": "{followup_requested} = 'yes'",
+          "title": "Please enter the email address where you would want the Regional Partner team to contact you with further resources and support for teaching."
         },
         {
           "type": "html",

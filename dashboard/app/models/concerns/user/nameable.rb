@@ -35,6 +35,11 @@ module User::Nameable
     self.family_name = family_name.strip if family_name && will_save_change_to_properties?
   end
 
+  def full_name
+    return "#{given_name} #{family_name}" if given_name && family_name
+    name || username || ""
+  end
+
   def sort_by_family_name?
     !!sort_by_family_name
   end

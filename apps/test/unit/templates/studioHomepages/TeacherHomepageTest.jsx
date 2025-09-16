@@ -215,16 +215,6 @@ describe('TeacherHomepage', () => {
     expect(screen.queryByTestId('test-NpsSurveyBlock')).toBeInTheDocument;
   });
 
-  it('renders a Finish Application call to action if showFinishTeacherApplication is true', () => {
-    realize({showFinishTeacherApplication: true});
-    expect(screen.getByText('Finish Application')).toBeInTheDocument;
-  });
-
-  it('renders a Return to Application call to action if showReturnToReopenedTeacherApplication is true', () => {
-    realize({showReturnToReopenedTeacherApplication: true});
-    expect(screen.getByText('Return to Application')).toBeInTheDocument;
-  });
-
   it('renders a MarketingAnnouncementBanner if specialAnnouncement exists', () => {
     const specialAnnouncement = {
       title: 'An announcement',

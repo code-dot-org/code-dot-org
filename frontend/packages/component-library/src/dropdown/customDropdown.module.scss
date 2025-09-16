@@ -230,7 +230,7 @@
   }
 }
 
-// Dropdrown Menu placements
+// Dropdown Menu placements
 
 .dropdownContainer-left-menuPlacement {
   .dropdownMenuContainer {
@@ -241,6 +241,20 @@
 .dropdownContainer-right-menuPlacement {
   .dropdownMenuContainer {
     inset-inline-end: 0;
+  }
+}
+
+// Dropdown Menu Vertical placements
+
+.dropdownContainer-bottom-menuVerticalPlacement {
+  .dropdownMenuContainer {
+    inset-block-start: 100%;
+  }
+}
+
+.dropdownContainer-top-menuVerticalPlacement {
+  .dropdownMenuContainer {
+    inset-block-end: 100%;
   }
 }
 

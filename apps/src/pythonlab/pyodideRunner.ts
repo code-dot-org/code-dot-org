@@ -119,7 +119,14 @@ export async function runAllTests(
     consoleManager?.writeConsoleMessage(
       getTimestampMessage(RunType.VALIDATION)
     );
+    // We do a bit of a hack around the progress manager system here.
+    // We reset validation to set all tests to pending, then updateProgress to propagate
+    // the pending status into the progress state (only on updateProgress does the progress manager
+    // check the validation state). After running we will update progress again to get the test results.
+    // This makes it so we can show the test names with a pending status while the tests are running after the
+    // first run for a level, which is a cleaner UI than wiping the tests completely.
     progressManager?.resetValidation();
+    progressManager?.updateProgress();
     // We only send the separate validation file, because otherwise the
     // source already has the validation file.
     const result = await runPythonCode(

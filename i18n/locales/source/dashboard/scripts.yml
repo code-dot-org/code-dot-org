@@ -23326,5 +23326,48 @@ en:
           title: "[PILOT] Teaching AI-Powered Threats and Defenses"
           description_audience: ''
           description_short: ''
+          description: "## Welcome!\n\n#### This professional learning module is designed to help you prepare to teach Code.org’s AI-Powered Threats and Defenses Unit.\n\n#### The AI-Powered Threats and Defenses unit is part of the **_AI Foundations_** curriculum but can also stand alone for grades 9-12. Designed for flexibility, it can be seamlessly integrated into any existing curriculum, allowing teachers to introduce it at their own pace and align it with their educational goals.\n\n#### **Find the learning that works for you**\n\n#### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.\n\n#### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the AI-Powered Threats and Defenses unit. However, you can engage with the content in the order that best meets your needs."
+          student_description: "#### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.\n\n#### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Cybersecurity and Global Impacts unit. However, you can engage with the content in the order that best meets your needs."
+        hoai-dance-pilot1:
+          lessons:
+            lesson-1:
+              name: Hour of AI Dance Party Pilot 1a
+          lesson_groups: {}
+          name: hoai-dance-pilot1
+          title: Hour of AI Dance Party Pilot 1
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        sandbox-jit-pl-prompting-basics:
+          lessons:
+            lesson-1:
+              name: 'Prompting Power-Up: Critical Thinking'
+          lesson_groups: {}
+          name: sandbox-jit-pl-prompting-basics
+          title: 'Prompt Power-Up: Critical Thinking '
+          description_audience: ''
+          description_short: ''
+          description: "## Welcome to this quick PD Pocket!\n\n#### Designed to take 5 minutes or less, this microlearning will keep you confident and ready to teach in no time.\n\n#### **In this mini-lesson, you will:**\n\n-   #### Recognize the difference between prompts that produce quick fixes vs. prompts that model deeper reasoning.\n\n-   #### Practice reframing prompts so they encourage explanation and critical thinking.\n\n#### **Suggested Time:** 10 minutes"
+          student_description: "## Welcome to this quick PD Pocket!\n\n#### Designed to take 5 minutes or less, this microlearning will keep you confident and ready to teach in no time.\n\n#### **In this mini-lesson, you will:**\n\n-   #### Recognize the difference between prompts that produce quick fixes vs. prompts that model deeper reasoning.\n\n-   #### Practice reframing prompts so they encourage explanation and critical thinking.\n\n#### **Suggested Time:** 10 minutes"
+        jois-sandbox-unit1:
+          lessons:
+            lesson-1:
+              name: Unit 1 Ideas
+            lesson-2:
+              name: Unit 2 Ideas
+            lesson-3:
+              name: Unit 3 Ideas
+            lesson-4:
+              name: Unit 4 Ideas
+            lesson-5:
+              name: Unit 5 Ideas
+            lesson-6:
+              name: Unit 6 Ideas
+          lesson_groups: {}
+          name: jois-sandbox-unit1
+          title: AIF Semester 2 Demos
+          description_audience: ''
+          description_short: ''
           description: ''
           student_description: ''

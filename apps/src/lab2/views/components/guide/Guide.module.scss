@@ -1,0 +1,19 @@
+.guide {
+  gap: 20px;
+  width: 40%;
+  top: 60px;
+  right: 80px;
+  border-radius: 20px;
+  padding: 20px;
+  border: solid 2px black;
+  filter: drop-shadow(0 0 0.75rem black);
+  position: absolute;
+  z-index: 71;
+  background: #4802AA;
+  background: linear-gradient(49deg, rgba(72 2 170 / 1) 0%, rgba(176 14 229 / 1) 52%, rgba(77 202 239 / 1) 100%);
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+}

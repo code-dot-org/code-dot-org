@@ -62,13 +62,13 @@ def generate_multiple_constants(shared_const_names, **options)
   end.join("\n\n")
 end
 
-# @param raw [Hash|Array|OpenStruct|String] A hash, array, OpenStruct, or
+# @param raw [Hash|Array|OpenStruct|String|Integer] A hash, array, OpenStruct, integer, or
 # JSON-encoded string representing an object or array.
 # @returns [Hash|Array] A hash or array representation of the input.
 def parse_raw(raw)
   if raw.is_a?(OpenStruct)
     raw.marshal_dump
-  elsif raw.is_a?(Hash) || raw.is_a?(Array)
+  elsif raw.is_a?(Hash) || raw.is_a?(Array) || raw.is_a?(Integer)
     raw
   elsif raw.is_a?(String)
     JSON.parse(raw)
@@ -109,6 +109,7 @@ def main
       STUDENT_WORK_EVALUATION_STATUS
       AI_CHAT_MODEL_IDS
       AI_CHAT_CLIENT_TYPES
+      AI_CHAT_READ_TIMEOUTS
       AI_CHAT_TEACHER_FEEDBACK
       FEATURED_PROJECT_STATUS
       FEATURED_PROJECT_CONSTANTS
@@ -188,6 +189,7 @@ def main
         WORKSHOP_FORMATS
         WORKSHOP_COURSE_CONFIGS
         COURSE_BUILD_YOUR_OWN
+        MIN_SURVEY_RESPONSE_COUNT
       ),
       source_module: Pd::SharedWorkshopConstants,
       transform_keys: false

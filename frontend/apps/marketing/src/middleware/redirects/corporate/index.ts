@@ -9,11 +9,23 @@ export function getRedirects(request: NextRequest) {
 
   const maybeLocale = pathParts[0];
 
-  // Permanently redirect /es to /es-LA
+  // Permanently redirect /es-LA to /es
   // Code may be removed after January 2026 (to allow time for SEO crawlers to update)
-  if (maybeLocale === 'es') {
+  if (maybeLocale === 'es-LA') {
     const restOfPath = pathParts.slice(1).join('/');
-    const redirectUrl = new URL(`/es-LA/${restOfPath}`, request.nextUrl.origin);
+    const redirectUrl = new URL(`/es/${restOfPath}`, request.nextUrl.origin);
+
+    return getCachedRedirectResponse(redirectUrl, {status: 308});
+  }
+
+  // Permanently redirect /zh-TW to /zh-Hant
+  // Code may be removed after January 2026 (to allow time for SEO crawlers to update)
+  if (maybeLocale === 'zh-TW') {
+    const restOfPath = pathParts.slice(1).join('/');
+    const redirectUrl = new URL(
+      `/zh-Hant/${restOfPath}`,
+      request.nextUrl.origin,
+    );
 
     return getCachedRedirectResponse(redirectUrl, {status: 308});
   }

@@ -2,15 +2,18 @@ import {Box} from '@mui/material';
 import React, {useMemo} from 'react';
 import {useParams} from 'react-router-dom';
 
-import {
-  isQuestionType,
-  SurveyQuestions,
-} from '../../../../WorkshopFormTemplate/types';
+import {MinSurveyResponseCount} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
+
+import {SurveyQuestions} from '../../../types';
 import {useWorkshopContext} from '../../../WorkshopLayout';
 import {FreeResponseCard} from '../../components/FreeResponseCard';
 import {ScoreCard} from '../../components/ScoreCard';
-import {LIKERT_QUESTION_FOOTER, MIN_RESPONSE_COUNT} from '../../constants';
-import {getQuestionDescription, prepLikertBreakdown} from '../../helpers';
+import {LIKERT_QUESTION_FOOTER} from '../../constants';
+import {
+  getQuestionDescription,
+  isQuestionType,
+  prepLikertBreakdown,
+} from '../../utils';
 
 import styles from '../../../workshop.module.scss';
 
@@ -71,7 +74,7 @@ export const FacilitatorFeedback = () => {
                 footer={LIKERT_QUESTION_FOOTER}
                 score={question.results.weighted_score}
                 responseCount={question.results.total_responses}
-                minResponseCount={MIN_RESPONSE_COUNT}
+                minResponseCount={MinSurveyResponseCount}
                 breakdown={prepLikertBreakdown(question.results.breakdown)}
               />
             ) : null
@@ -87,9 +90,12 @@ export const FacilitatorFeedback = () => {
               facilitatorDidWell.question_text
             }
             items={facilitatorDidWell.results.responses}
-            tagText={`${facilitatorDidWell.results.total_responses} Submitted`}
+            tagText={`${
+              facilitatorDidWell.results.total_responses ?? 0
+            } Submitted`}
             statusColor="success"
             size="s"
+            useFlexTextCardContainer
           />
         )}
         {isQuestionType(facilitatorCouldImprove, 'text') && (
@@ -99,9 +105,12 @@ export const FacilitatorFeedback = () => {
               facilitatorCouldImprove.question_text
             }
             items={facilitatorCouldImprove.results.responses}
-            tagText={`${facilitatorCouldImprove.results.total_responses} Submitted`}
+            tagText={`${
+              facilitatorCouldImprove.results.total_responses ?? 0
+            } Submitted`}
             statusColor="warning"
             size="s"
+            useFlexTextCardContainer
           />
         )}
       </Box>

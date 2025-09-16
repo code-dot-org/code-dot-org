@@ -4,17 +4,18 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import {
   BodyFourText,
   BodyThreeText,
+  Heading2,
   Heading3,
-  OverlineTwoText,
   StrongText,
 } from '@code-dot-org/component-library/typography';
 import {Card, CardContent, Box} from '@mui/material';
 import classNames from 'classnames';
 import React, {FC, useMemo, useState} from 'react';
 
-import {Breakdown} from '../../../WorkshopFormTemplate/types';
+import {Breakdown} from '../../types';
 import {CRITICAL_CONCERN_LIMIT, NEEDS_ATTENTION_LIMIT} from '../constants';
 
+import {SimpleBarChart} from './BarChartGroup';
 import {PercentageBarGroup} from './PercentageBarGroup';
 
 import styles from './ScoreCardStyles.module.scss';
@@ -26,9 +27,9 @@ interface ScoreCardProps {
   description: string;
   footer: string | null;
   questionType: 'likert' | 'promoter';
-  score?: number | null;
+  score?: number;
   responseCount?: number;
-  minResponseCount?: number;
+  minResponseCount: number;
   breakdown?: Breakdown[];
 }
 
@@ -38,58 +39,34 @@ export const ScoreCard: FC<ScoreCardProps> = ({
   description,
   footer,
   questionType,
-  score,
-  responseCount,
+  score = 0,
+  responseCount = 0,
   minResponseCount,
   breakdown,
 }) => {
   const [showBreakdown, setShowBreakdown] = useState(false);
-  const insufficientData = useMemo(
-    () =>
-      (typeof responseCount === 'number' &&
-        typeof minResponseCount === 'number' &&
-        responseCount < minResponseCount) ||
-      score === null ||
-      score === undefined,
-    [responseCount, minResponseCount, score]
-  );
+  const insufficientData = responseCount < minResponseCount;
 
-  const responseBasedDescription = useMemo(() => {
-    if (!responseCount) {
-      return 'No responses received';
-    }
-    if (insufficientData) {
-      return `Insufficient data (<${minResponseCount} responses)`;
-    }
-    return description;
-  }, [description, insufficientData, minResponseCount, responseCount]);
-
-  const responseBasedScore = useMemo(() => {
-    if (!responseCount) {
-      return <FontAwesomeV6Icon iconName="dash" />;
-    }
-    if (insufficientData) {
-      return <FontAwesomeV6Icon iconName="question" />;
-    }
-    return (
-      <BodyThreeText noMargin visualAppearance="heading-lg">
-        {score}
-      </BodyThreeText>
-    );
-  }, [insufficientData, responseCount, score]);
+  const responseBasedDescription = insufficientData
+    ? `Insufficient data (<${minResponseCount} responses)`
+    : description;
 
   const status = useMemo(() => {
-    if (!responseCount || insufficientData) {
+    if (insufficientData) {
       return 'insufficientData';
     }
-    if ((score ?? 0) < CRITICAL_CONCERN_LIMIT) {
+    if (score < CRITICAL_CONCERN_LIMIT) {
       return 'criticalConcern';
     }
-    if ((score ?? 0) < NEEDS_ATTENTION_LIMIT) {
+    if (score < NEEDS_ATTENTION_LIMIT) {
       return 'needsAttention';
     }
     return 'good';
-  }, [score, responseCount, insufficientData]);
+  }, [insufficientData, score]);
+
+  if (!responseCount) {
+    return null;
+  }
 
   return (
     <>
@@ -98,9 +75,9 @@ export const ScoreCard: FC<ScoreCardProps> = ({
       >
         <CardContent className={commonStyles.cardContent}>
           <Box>
-            <OverlineTwoText noMargin>
+            <Heading2 visualAppearance="overline-two" noMargin>
               <StrongText>{title}</StrongText>
-            </OverlineTwoText>
+            </Heading2>
             <BodyFourText className={commonStyles.description} noMargin>
               {responseBasedDescription}
             </BodyFourText>
@@ -110,7 +87,13 @@ export const ScoreCard: FC<ScoreCardProps> = ({
             className={classNames(styles.scoreBox, styles[status])}
             data-status={status}
           >
-            {responseBasedScore}
+            {insufficientData ? (
+              <FontAwesomeV6Icon iconName="question" />
+            ) : (
+              <BodyThreeText noMargin visualAppearance="heading-lg">
+                {score}
+              </BodyThreeText>
+            )}
           </Box>
         </CardContent>
         <Box className={styles.scoreCardFooter}>
@@ -156,6 +139,23 @@ export const ScoreCard: FC<ScoreCardProps> = ({
                 items={breakdown}
                 barLabel="Teachers"
               />
+            )}
+            {questionType === 'promoter' && (
+              <Box className={styles.breakdownBarChartGroup}>
+                <SimpleBarChart
+                  data={breakdown.map(({count, label, color}) => ({
+                    value: count,
+                    label,
+                    color,
+                  }))}
+                  xAxisLabel="NPS SCALE"
+                  yAxisLabel="RESPONSES"
+                  width={620}
+                  height={250}
+                  barSize={20}
+                  animate={true}
+                />
+              </Box>
             )}
           </Box>
           <Button

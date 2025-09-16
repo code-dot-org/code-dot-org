@@ -18,6 +18,8 @@ export type ButtonProps = {
   ariaLabel?: EntryFields.Text;
   /** Custom classname */
   className?: string;
+  /** Click handler */
+  onClick?: () => void;
 };
 
 const Button: React.FunctionComponent<ButtonProps> = ({
@@ -28,6 +30,7 @@ const Button: React.FunctionComponent<ButtonProps> = ({
   isLinkExternal = false,
   ariaLabel,
   className,
+  onClick,
 }) => {
   const containedButtons = ['emphasized', 'primary', 'white'];
 
@@ -43,6 +46,7 @@ const Button: React.FunctionComponent<ButtonProps> = ({
       endIcon={isLinkExternal ? <OpenInNew /> : undefined}
       disableElevation
       disableRipple
+      onClick={onClick}
     >
       {text}
     </MuiButton>

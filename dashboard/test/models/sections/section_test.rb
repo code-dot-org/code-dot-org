@@ -199,6 +199,24 @@ class SectionTest < ActiveSupport::TestCase
     assert_equal ['Name is required'], section.errors.full_messages
   end
 
+  test 'course_id is required if script_id is set' do
+    script = create(:script)
+    section = Section.new(name: 'test section', script_id: script.id, course_id: nil, user: @teacher)
+    refute section.valid?
+    assert_equal ['Course is required'], section.errors.full_messages
+  end
+
+  test 'course_id is not required if script_id is not set' do
+    section = Section.new(name: 'test section', script_id: nil, course_id: nil, user: @teacher)
+    assert section.valid?
+  end
+
+  test 'script_id is not required if course_id is set' do
+    course = create(:unit_group)
+    section = Section.new(name: 'test section', script_id: nil, course_id: course.id, user: @teacher)
+    assert section.valid?
+  end
+
   test 'emoji is dropped from section name' do
     section = create(:section, name: "\u{1F600} Test Section A \u{1F600}")
     assert_equal 'Test Section A', section.name
@@ -422,12 +440,6 @@ class SectionTest < ActiveSupport::TestCase
     assert_nil section.default_script
   end
 
-  test 'default_script: script assigned, no course assigned' do
-    script = create(:script, :in_single_unit_course)
-    section = create(:section, script: script)
-    assert_equal script, section.default_script
-  end
-
   test 'default_script: script and course assigned' do
     script1 = create(:script)
     script2 = create(:script)
@@ -500,61 +512,12 @@ class SectionTest < ActiveSupport::TestCase
     end
   end
 
-  test 'concise_summarize: deprecated section with a script assigned but no course' do
-    unit_group = create(:single_unit_course, name: 'somecourse', version_year: '1991', family_name: 'some-family')
-    unit = unit_group.first_unit
-    CourseOffering.add_course_offering(unit_group)
-
-    Timecop.freeze(Time.zone.now) do
-      section = create(:section, script: unit, unit_group: nil)
-
-      expected = {
-        id: section.id,
-        name: section.name,
-        courseVersionName: 'somecourse',
-        unitName: unit.name,
-        unitPosition: 1,
-        login_type: "email",
-        grades: nil,
-        providerManaged: false,
-        lesson_extras: false,
-        pairing_allowed: true,
-        tts_autoplay_enabled: false,
-        sharing_disabled: false,
-        studentCount: 0,
-        code: section.code,
-        course_display_name: unit_group.course_version.localized_title,
-        course_offering_id: unit_group.course_version.course_offering.id,
-        course_version_id: unit_group.course_version.id,
-        unit_id: unit.id,
-        course_id: unit_group.id,
-        hidden: false,
-        restrict_section: false,
-        post_milestone_disabled: false,
-        code_review_expires_at: nil,
-        is_assigned_csa: false,
-        participant_type: 'student',
-        sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}],
-        sync_enabled: nil,
-        ai_tutor_enabled: false,
-        avatar_color: nil,
-        avatar_emoji: nil,
-        at_risk_age_gated_date: nil,
-        at_risk_age_gated_us_state: nil
-      }
-      # Compare created_at separately because the object's created_at microseconds
-      # don't match Time.zone.now's microseconds (different levels of precision)
-      assert_equal Time.zone.now.change(sec: 0), section.created_at.change(sec: 0)
-      assert_equal expected, section.concise_summarize.except!(:createdAt)
-    end
-  end
-
   test 'concise_summarize: section with a single-unit course assigned' do
     # Use an existing script so that it has a translation
     script = Unit.find_by_name('jigsaw')
 
     Timecop.freeze(Time.zone.now) do
-      section = create(:section, script: script, unit_group: script.unit_group)
+      section = create(:section, script: script, unit_group: script.get_original_unit_group)
 
       expected = {
         id: section.id,
@@ -571,11 +534,11 @@ class SectionTest < ActiveSupport::TestCase
         sharing_disabled: false,
         studentCount: 0,
         code: section.code,
-        course_display_name: script.unit_group.course_version.localized_title,
-        course_offering_id: script.unit_group.course_version.course_offering.id,
-        course_version_id: script.unit_group.course_version.id,
+        course_display_name: script.get_original_unit_group.course_version.localized_title,
+        course_offering_id: script.get_original_unit_group.course_version.course_offering.id,
+        course_version_id: script.get_original_unit_group.course_version.id,
         unit_id: script.id,
-        course_id: script.unit_group.id,
+        course_id: script.get_original_unit_group.id,
         hidden: false,
         restrict_section: false,
         post_milestone_disabled: false,
@@ -771,7 +734,7 @@ class SectionTest < ActiveSupport::TestCase
 
   test 'concise_summarize: section with sharing disabled and script with project sharing' do
     script = create(:script, :in_single_unit_course, project_sharing: true)
-    section = create(:section, sharing_disabled: true, script: script, unit_group: nil)
+    section = create(:section, sharing_disabled: true, script: script, unit_group: script.original_unit_group)
     summarized_section = section.concise_summarize
 
     assert summarized_section[:sharing_disabled]
@@ -815,7 +778,7 @@ class SectionTest < ActiveSupport::TestCase
     script = Unit.find_by_name('jigsaw')
 
     Timecop.freeze(Time.zone.now) do
-      section = create(:section, script: script, unit_group: script.unit_group)
+      section = create(:section, script: script, unit_group: script.get_original_unit_group)
 
       expected = {
         id: section.id,
@@ -826,8 +789,8 @@ class SectionTest < ActiveSupport::TestCase
         any_student_has_progress: false,
         is_assigned_single_unit_course: true,
         course: {
-          course_offering_id: script.unit_group.course_version.course_offering.id,
-          version_id: script.unit_group.course_version.id,
+          course_offering_id: script.get_original_unit_group.course_version.course_offering.id,
+          version_id: script.get_original_unit_group.course_version.id,
           lesson_extras_available: script.lesson_extras_available,
           text_to_speech_enabled: script.text_to_speech_enabled?,
           unit_id: section.unit_group ? section.script_id : nil,
@@ -847,24 +810,6 @@ class SectionTest < ActiveSupport::TestCase
     single_unit_course = create(:single_unit_course)
     single_unit = single_unit_course.first_unit
     section = create(:section, unit_group: single_unit_course)
-    CourseOffering.add_course_offering(single_unit_course)
-
-    summarized_section = section.selected_section_summarize
-    expected_script_info = {
-      id: single_unit.id,
-      name: single_unit.name,
-      project_sharing: single_unit.project_sharing
-    }
-
-    assert_equal single_unit_course.course_version.course_offering.id, summarized_section[:course][:course_offering_id]
-    assert_equal expected_script_info, summarized_section[:script]
-    assert_equal true, summarized_section[:is_assigned_single_unit_course]
-  end
-
-  test 'selected_section_summarize: deprecated section with a script assigned but no course' do
-    single_unit_course = create(:single_unit_course)
-    single_unit = single_unit_course.first_unit
-    section = create(:section, script: single_unit)
     CourseOffering.add_course_offering(single_unit_course)
 
     summarized_section = section.selected_section_summarize
@@ -903,7 +848,7 @@ class SectionTest < ActiveSupport::TestCase
 
   test 'selected_section_summarize: section with sharing disabled and script with project sharing' do
     script = create(:script, :in_single_unit_course, project_sharing: true)
-    section = create(:section, sharing_disabled: true, script: script, unit_group: nil)
+    section = create(:section, sharing_disabled: true, script: script, unit_group: script.original_unit_group)
     summarized_section = section.selected_section_summarize
 
     assert summarized_section[:script][:project_sharing]
@@ -992,73 +937,12 @@ class SectionTest < ActiveSupport::TestCase
     end
   end
 
-  test 'summarize: deprecated section with a script assigned but no course' do
-    unit_group = create(:single_unit_course, name: 'somecourse', version_year: '1991', family_name: 'some-family')
-    unit = unit_group.first_unit
-    CourseOffering.add_course_offering(unit_group)
-
-    Timecop.freeze(Time.zone.now) do
-      section = create(:section, script: unit, unit_group: nil)
-
-      expected = {
-        id: section.id,
-        name: section.name,
-        teacherName: section.teacher.name,
-        linkToProgress: "//test-studio.code.org/teacher_dashboard/sections/#{section.id}/progress",
-        assignedTitle: 'somecourse',
-        linkToAssigned: '/courses/somecourse',
-        currentUnitTitle: unit.name,
-        linkToCurrentUnit: "/courses/somecourse/units/1",
-        courseVersionName: 'somecourse',
-        numberOfStudents: 0,
-        linkToStudents: "//test-studio.code.org/teacher_dashboard/sections/#{section.id}/manage_students",
-        code: section.code,
-        lesson_extras: false,
-        pairing_allowed: true,
-        tts_autoplay_enabled: false,
-        sharing_disabled: false,
-        login_type: "email",
-        login_type_name: "Email",
-        participant_type: 'student',
-        course_display_name: unit_group.course_version.localized_title,
-        course_offering_id: unit_group.course_version.course_offering.id,
-        course_version_id: unit_group.course_version.id,
-        unit_id: unit.id,
-        unitPosition: 1,
-        course_id: unit_group.id,
-        script: {id: unit.id, name: unit.name, project_sharing: nil},
-        studentCount: 0,
-        grades: nil,
-        providerManaged: false,
-        hidden: false,
-        students: [],
-        restrict_section: false,
-        is_assigned_csa: false,
-        is_assigned_single_unit_course: true,
-        post_milestone_disabled: false,
-        code_review_expires_at: nil,
-        sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}],
-        primaryInstructor: {email: section.teacher.email, name: section.teacher.name, ltiRosterSyncEnabled: nil},
-        sync_enabled: nil,
-        ai_tutor_enabled: false,
-        at_risk_age_gated_date: nil,
-        at_risk_age_gated_us_state: nil,
-        avatar_color: nil,
-        avatar_emoji: nil,
-      }
-      # Compare created_at separately because the object's created_at microseconds
-      # don't match Time.zone.now's microseconds (different levels of precision)
-      assert_equal Time.zone.now.change(sec: 0), section.created_at.change(sec: 0)
-      assert_equal expected, section.summarize.except!(:createdAt)
-    end
-  end
-
   test 'summarize: section with a script assigned' do
     # Use an existing script so that it has a translation
     script = Unit.find_by_name('jigsaw')
 
     Timecop.freeze(Time.zone.now) do
-      section = create(:section, script: script, unit_group: script.unit_group)
+      section = create(:section, script: script, unit_group: script.get_original_unit_group)
 
       expected = {
         id: section.id,
@@ -1080,12 +964,12 @@ class SectionTest < ActiveSupport::TestCase
         login_type: "email",
         login_type_name: "Email",
         participant_type: 'student',
-        course_display_name: script.unit_group.course_version.localized_title,
-        course_offering_id: script.unit_group.course_version.course_offering.id,
-        course_version_id: script.unit_group.course_version.id,
+        course_display_name: script.get_original_unit_group.course_version.localized_title,
+        course_offering_id: script.get_original_unit_group.course_version.course_offering.id,
+        course_version_id: script.get_original_unit_group.course_version.id,
         unit_id: script.id,
         unitPosition: 1,
-        course_id: script.unit_group.id,
+        course_id: script.get_original_unit_group.id,
         script: {id: script.id, name: script.name, project_sharing: nil},
         studentCount: 0,
         grades: nil,
@@ -1329,7 +1213,7 @@ class SectionTest < ActiveSupport::TestCase
 
   test 'summarize: section with sharing disabled and script with project sharing' do
     script = create(:script, :in_single_unit_course, project_sharing: true)
-    section = create(:section, sharing_disabled: true, script: script, unit_group: nil)
+    section = create(:section, sharing_disabled: true, script: script, unit_group: script.original_unit_group)
     summarized_section = section.summarize
 
     assert summarized_section[:script][:project_sharing]

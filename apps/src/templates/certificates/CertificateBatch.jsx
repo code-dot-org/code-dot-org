@@ -7,8 +7,11 @@ import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 
 import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
+import {studio} from '@cdo/apps/lib/util/urlHelpers';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import i18n from '@cdo/locale';
+import aiCurriculumHowItWorksImg from '@cdo/static/ai/ai-curriculum-how-ai-works.png';
+import teachPageTopImg from '@cdo/static/teach-page-top.png';
 
 import style from './certificate_batch.module.scss';
 
@@ -45,7 +48,7 @@ const curriculaData = [
       oldestGrade: '12',
     }),
     title: i18n.howAiWorks(),
-    image: 'https://code.org/images/ai/ai-curriculum-how-ai-works.png',
+    image: aiCurriculumHowItWorksImg,
     buttonText: i18n.exploreLessons(),
     description: i18n.howAiWorksDescription(),
     link: 'http://code.org/ai/how-ai-works',
@@ -65,14 +68,14 @@ const professionalLearning = [
     title: i18n.teachWithCodeOrg(),
     description: i18n.teachWithCodeOrgDescription(),
     buttonText: i18n.teachWithCodeOrg(),
-    image: 'https://code.org/images/teach-page-top.png',
+    image: teachPageTopImg,
     link: 'https://code.org/teach',
   },
   {
     title: i18n.courseOfferingSelfPacedPl(),
     description: i18n.selfPacedPlDescription(),
     buttonText: i18n.exploreProfessionalLearning(),
-    image: 'https://code.org/shared/images/banners/self-paced-pl-hero.png',
+    image: studio('/shared/images/banners/self-paced-pl-hero.png'),
     link: 'https://code.org/educate/professional-development-online',
   },
 ];

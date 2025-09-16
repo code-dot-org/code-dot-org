@@ -161,14 +161,12 @@ describe('NavigationButton', () => {
       hasRun?: boolean;
       hasEdited?: boolean;
       className?: string;
-      requireRun?: boolean;
     } = {}
   ) {
     const mergedProps = {
       levelProperties: defaultLevelProperties,
       hasRun: false,
       hasEdited: false,
-      requireRun: false,
       ...props,
     };
 
@@ -261,32 +259,6 @@ describe('NavigationButton', () => {
         hasRun: true,
       });
       screen.getByRole('button', {name: 'Finish'});
-    });
-
-    it('is hidden when requireRun is true but hasRun is false', () => {
-      renderNavigationButton({
-        hasRun: false,
-        requireRun: true,
-      });
-      expect(
-        screen.queryByRole('button', {name: 'Continue'})
-      ).not.toBeInTheDocument();
-    });
-
-    it('is shown when requireRun is true and hasRun is true', () => {
-      renderNavigationButton({
-        hasRun: true,
-        requireRun: true,
-      });
-      screen.getByRole('button', {name: 'Continue'});
-    });
-
-    it('is shown when requireRun is false regardless of hasRun', () => {
-      renderNavigationButton({
-        hasRun: false,
-        requireRun: false,
-      });
-      screen.getByRole('button', {name: 'Continue'});
     });
 
     it('is hidden when validation conditions exist but are not satisfied', () => {

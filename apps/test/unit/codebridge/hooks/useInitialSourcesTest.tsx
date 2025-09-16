@@ -216,7 +216,7 @@ describe('useInitialSources', () => {
       '1'
     );
     const expectedTemplateSources = getExpectedMazeSources(
-      levelProperties.templateSources,
+      levelProperties.templateSources as MultiFileSource,
       levelProperties.serializedMaze!,
       '1'
     );
