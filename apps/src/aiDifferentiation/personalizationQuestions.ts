@@ -26,6 +26,7 @@ export const TEACHER_GOAL_PROMPT = {
     'Develop effective assessment & instructional strategies',
     'Support a variety of learners in my classroom',
     'Improve student engagement and learning outcomes',
+    'Other',
   ],
 };
 
@@ -44,6 +45,13 @@ export const SUPPORT_PREFERENCES_PROMPT = {
   subhead:
     'Code.org offers tools and resources to support professional learning for every educator.',
   type: 'multi_select',
+  choices: [
+    'Interactive examples or practice activities (hands-on)',
+    'Quick reference guides (text-based, concise)',
+    'Short videos with explanations or examples (visual)',
+    'Articles or tutorials (More detailed, text-based)',
+    'Other',
+  ],
 };
 
 export const CHALLENGE_PROMPT = {
