@@ -161,6 +161,7 @@ const Weblab2View: React.FC<
           aiTutorContextPromise={aiTutorContextPromise}
           aiTutorSystemPromptSettings={aiTutorSystemPromptSettings}
           aiTutorMultimodalEnabled={true}
+          aiTutorChatButtonData={[]}
         />
       )}
     </div>

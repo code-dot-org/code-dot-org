@@ -13,7 +13,7 @@ import {
 import classNames from 'classnames';
 import React, {useEffect, useMemo} from 'react';
 
-import {SystemPromptSettings} from '@cdo/apps/aichat/types';
+import {ChatButtonData, SystemPromptSettings} from '@cdo/apps/aichat/types';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
@@ -46,6 +46,7 @@ type CodebridgeProps = {
   aiTutorSystemPromptSettings?: SystemPromptSettings;
   aiTutorContextPromise?: Promise<AiTutorContext>;
   aiTutorMultimodalEnabled?: boolean;
+  aiTutorChatButtonData?: ChatButtonData[];
 };
 
 export const Codebridge = React.memo(
@@ -61,6 +62,7 @@ export const Codebridge = React.memo(
     aiTutorSystemPromptSettings,
     aiTutorContextPromise,
     aiTutorMultimodalEnabled,
+    aiTutorChatButtonData,
   }: CodebridgeProps) => {
     const isShareView = useAppSelector(state => state.lab.isShareView);
     const isWidgetView = !!levelProperties.widgetView;
@@ -189,6 +191,7 @@ export const Codebridge = React.memo(
           onImageFlagged,
           aiTutorSystemPromptSettings,
           aiTutorMultimodalEnabled,
+          aiTutorChatButtonData,
         }}
       >
         <BackpackAPIContext.Provider value={backpackApi}>

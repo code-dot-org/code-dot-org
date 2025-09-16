@@ -1,7 +1,7 @@
 import {Button} from '@code-dot-org/component-library/button';
 import {FontAwesomeV6IconProps} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useMemo} from 'react';
 
 import {
   ModelParameters,
@@ -81,36 +81,13 @@ const chatButtonData: ChatButtonData[] = [
   },
 ] as const;
 
-const chatButtons = chatButtonData.map(button => ({
-  ChatButton: ({onClick}: {onClick: ChatButtonClickHandler}) => (
-    <Button
-      className={moduleStyles.chatButton}
-      aria-label={button.label}
-      iconLeft={
-        {
-          ...button.icon,
-          className: classNames({
-            [moduleStyles['icon']]: true,
-            [moduleStyles[`icon-${button.icon?.iconName}`]]: button.icon,
-          }),
-        } as FontAwesomeV6IconProps
-      }
-      onClick={() => onClick(button.value, button.analyticsProperties)}
-      text={button.label}
-      size="s"
-      type="secondary"
-      color="black"
-    />
-  ),
-  key: button.label,
-}));
 interface AiTutor2ChatProps {
   aiTutorContextPromise: Promise<AiTutorContext>;
   aiTutorSystemPromptSettings?: SystemPromptSettings;
   aiTutorMultimodalEnabled?: boolean;
   levelName?: string;
   channelId?: string;
-  aiTutorShowChatButtons?: boolean;
+  aiTutorChatButtonData?: ChatButtonData[];
 }
 
 // A free chat with lab-supplied context added to each question.
@@ -120,7 +97,7 @@ const AiTutor2Chat: React.FunctionComponent<AiTutor2ChatProps> = ({
   aiTutorMultimodalEnabled = false,
   levelName,
   channelId,
-  aiTutorShowChatButtons = true,
+  aiTutorChatButtonData,
 }) => {
   const [systemPrompt, setSystemPrompt] = useState<string>();
   const [hiddenContextString, setHiddenContextString] = useState<string>();
@@ -189,12 +166,39 @@ const AiTutor2Chat: React.FunctionComponent<AiTutor2ChatProps> = ({
     };
   }, [aiTutorContextPromise]);
 
+  const chatButtons = useMemo(() => {
+    const chatButtonDataToUse = aiTutorChatButtonData || chatButtonData;
+    return chatButtonDataToUse.map(button => ({
+      ChatButton: ({onClick}: {onClick: ChatButtonClickHandler}) => (
+        <Button
+          className={moduleStyles.chatButton}
+          aria-label={button.label}
+          iconLeft={
+            {
+              ...button.icon,
+              className: classNames({
+                [moduleStyles['icon']]: true,
+                [moduleStyles[`icon-${button.icon?.iconName}`]]: button.icon,
+              }),
+            } as FontAwesomeV6IconProps
+          }
+          onClick={() => onClick(button.value, button.analyticsProperties)}
+          text={button.label}
+          size="s"
+          type="secondary"
+          color="black"
+        />
+      ),
+      key: button.label,
+    }));
+  }, [aiTutorChatButtonData]);
+
   return systemPrompt && hiddenContextString !== undefined ? (
     <div className={moduleStyles.container}>
       <ChatWorkspace
         clientType={AiChatClientTypes.AI_TUTOR}
         modelParameters={{...modelParameters, systemPrompt}}
-        chatButtons={aiTutorShowChatButtons ? chatButtons : undefined}
+        chatButtons={chatButtons}
         hiddenContext={hiddenContextString}
         systemPromptSettings={aiTutorSystemPromptSettings}
         multimodalEnabled={aiTutorMultimodalEnabled}
