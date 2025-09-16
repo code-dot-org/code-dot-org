@@ -13,6 +13,7 @@ import {
 import classNames from 'classnames';
 import React, {useEffect, useMemo} from 'react';
 
+import {SystemPromptSettings} from '@cdo/apps/aichat/types';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
@@ -42,7 +43,7 @@ type CodebridgeProps = {
   sendConsoleInput?: SendConsoleInputFunction;
   levelProperties: CodebridgeLevelProperties;
   projectPickerSettings?: ProjectPickerSettings;
-  aiTutorSystemPromptName?: string;
+  aiTutorSystemPromptSettings?: SystemPromptSettings;
   aiTutorContextPromise?: Promise<AiTutorContext>;
   aiTutorMultimodalEnabled?: boolean;
 };
@@ -57,7 +58,7 @@ export const Codebridge = React.memo(
     sendConsoleInput,
     levelProperties,
     projectPickerSettings,
-    aiTutorSystemPromptName,
+    aiTutorSystemPromptSettings,
     aiTutorContextPromise,
     aiTutorMultimodalEnabled,
   }: CodebridgeProps) => {
@@ -186,7 +187,7 @@ export const Codebridge = React.memo(
           projectPickerSettings,
           aiTutorContextPromise,
           onImageFlagged,
-          aiTutorSystemPromptName,
+          aiTutorSystemPromptSettings,
           aiTutorMultimodalEnabled,
         }}
       >

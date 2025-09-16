@@ -23,7 +23,11 @@ const adlibs = adlibsUntyped as {
   [key: string]: {template: string; options: {[key: string]: string[]}};
 };
 
-const Generate: React.FunctionComponent = () => {
+interface GenerateProps {
+  adlibOption?: string;
+}
+
+const Generate: React.FunctionComponent<GenerateProps> = ({adlibOption}) => {
   const dispatch = useAppDispatch();
 
   const packId = useAppSelector(state => state.music.packId) || '';
@@ -31,7 +35,6 @@ const Generate: React.FunctionComponent = () => {
 
   const library = MusicLibrary.getInstance();
 
-  const adlibOption = appConfig.getValue('ai-generate-adlib') as string;
   const useCache = appConfig.getValue('ai-generate-cache') === 'true';
 
   const [adlibText, setAdlibText] = useState<string | undefined>(undefined);

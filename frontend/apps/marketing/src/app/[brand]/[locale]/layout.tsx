@@ -5,7 +5,7 @@ import {draftMode} from 'next/headers';
 
 import {getFooter} from '@/components/footer/Footer';
 import {getHeader} from '@/components/header/Header';
-import {getBrandFromString} from '@/config/brand';
+import {Brand} from '@/config/brand';
 import {getGoogleAnalyticsMeasurementId} from '@/config/ga4';
 import OrganizationJsonLd from '@/config/jsonLd/OrganizationJsonLd';
 import {SUPPORTED_LOCALES_MAP, SupportedLocale} from '@/config/locale';
@@ -24,12 +24,10 @@ export default async function Layout({
   params,
 }: Readonly<{
   children: React.ReactNode;
-  params: Promise<{brand: string; locale: string}>;
+  params: Promise<{brand: Brand; locale: SupportedLocale}>;
 }>) {
   const syncParams = await params;
-  const brandString = syncParams.brand;
-  const brand = getBrandFromString(brandString);
-  const locale = syncParams.locale as SupportedLocale;
+  const {brand, locale} = syncParams;
 
   await getCriticalFonts(brand);
   const googleAnalyticsMeasurementId = getGoogleAnalyticsMeasurementId(brand);

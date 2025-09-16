@@ -50,6 +50,7 @@ export interface BlockConfig {
 export interface arg {
   customInput: string;
   name: string;
+  options?: [string, string][];
 }
 
 export interface SerializedFields {

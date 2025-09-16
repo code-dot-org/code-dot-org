@@ -9,11 +9,25 @@ export const TYPOGRAPHY_OVERRIDES: Components<Theme>['MuiTypography'] = {
       overline2: 'p',
       overline3: 'p',
       figcaption: 'figcaption',
+      em: 'em',
+      strong: 'strong',
+      extraStrong: 'strong',
     },
   },
   styleOverrides: {
     root: ({theme}) => ({
       color: 'var(--text-neutral-primary)',
+
+      // when Typography is used as a wrapper (component="div")
+      '&:where(div)': {
+        '& :is(p, ul, ol, li, h1, h2, h3, h4, h5, h6, span)': {
+          font: 'inherit',
+          fontSize: 'inherit',
+          fontWeight: 'inherit',
+          lineHeight: 'inherit',
+          color: 'inherit',
+        },
+      },
     }),
     gutterBottom: ({theme}) => ({
       '&.MuiTypography-h1': {

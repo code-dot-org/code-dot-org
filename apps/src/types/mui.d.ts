@@ -11,6 +11,9 @@ declare module '@mui/material/styles' {
     overline2: React.CSSProperties;
     overline3: React.CSSProperties;
     figcaption: React.CSSProperties;
+    strong: React.CSSProperties;
+    extraStrong: React.CSSProperties;
+    em: React.CSSProperties;
   }
 
   interface TypographyVariantsOptions {
@@ -20,6 +23,9 @@ declare module '@mui/material/styles' {
     overline2?: React.CSSProperties;
     overline3?: React.CSSProperties;
     figcaption?: React.CSSProperties;
+    strong?: React.CSSProperties;
+    extraStrong?: React.CSSProperties;
+    em?: React.CSSProperties;
   }
 }
 
@@ -33,6 +39,9 @@ declare module '@mui/material/Typography' {
     overline3: true;
     caption: false; // disable the default caption
     figcaption: true; // add figcaption variant to match DSCO naming pattern
+    strong: true;
+    extraStrong: true;
+    em: true;
   }
 }
 
