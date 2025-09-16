@@ -10,9 +10,7 @@
 }
 
 .visualization {
-  // TODO: support resizing
-  width: 400px;
-  height: 400px;
+  width: 100%;
   background-color: var(--background-neutral-secondary);
   position: relative;
   border: 1px solid var(--borders-neutral-primary);
@@ -32,6 +30,16 @@
 .visualizationArea {
   flex: 0;
   background-color: var(--background-neutral-primary);
+  
+  &.jumbo {
+    flex: initial;
+    width: min(50vw, calc(100vh - 240px));
+    
+    canvas {
+      width: 100% !important;
+      height: 100% !important;
+    }
+  }
 }
 
 .workspaceArea {

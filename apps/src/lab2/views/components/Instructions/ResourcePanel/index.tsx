@@ -5,6 +5,7 @@ import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import classNames from 'classnames';
 import React, {useEffect, useMemo, useState} from 'react';
 
+import {SystemPromptSettings} from '@cdo/apps/aichat/types';
 import {AiTutorContext} from '@cdo/apps/aiTutor/types';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
@@ -25,7 +26,7 @@ import CopyrightButton from './CopyrightButton';
 import ResourcePanelExtraLinks from './ResourcePanelExtraLinks';
 import SettingsPanel from './SettingsPanel';
 import ValidationPanel from './ValidationPanel';
-import VersionHistoryPanel from './VersionHistoryPanel';
+import {VersionHistoryPanel} from './VersionHistory';
 
 import styles from './styles.module.scss';
 
@@ -79,7 +80,8 @@ type ResourcePanelProps = InstructionsProps & {
   includeFooterSpacing?: boolean;
   settings?: Setting[];
   versionHistoryProps?: VersionHistoryProps;
-  aiTutorSystemPromptName?: string;
+  aiTutorSystemPromptSettings?: SystemPromptSettings;
+  aiTutorMultimodalEnabled?: boolean;
 };
 
 /**
@@ -93,7 +95,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   includeFooterSpacing = true,
   settings,
   versionHistoryProps,
-  aiTutorSystemPromptName,
+  aiTutorSystemPromptSettings,
+  aiTutorMultimodalEnabled,
   ...instructionsProps
 }) => {
   const {theme} = useTheme();
@@ -113,6 +116,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const hasValidationConditions = useAppSelector(
     state => state.lab.validationState?.hasConditions
   );
+  const levelName = instructionsProps.levelProperties.name;
+  const channelId = useAppSelector(state => state.lab.channel?.id);
 
   // Build available tabs based on level information.
   const availableTabs = useMemo(() => {
@@ -152,7 +157,10 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       tabMap[Tabs.AiTutor] = (
         <AiTutor2Chat
           aiTutorContextPromise={aiTutorContextPromise}
-          aiTutorSystemPromptName={aiTutorSystemPromptName}
+          aiTutorSystemPromptSettings={aiTutorSystemPromptSettings}
+          aiTutorMultimodalEnabled={aiTutorMultimodalEnabled}
+          levelName={levelName}
+          channelId={channelId}
         />
       );
     }
@@ -192,7 +200,10 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     isWidgetView,
     versionHistoryProps,
     showRubric,
-    aiTutorSystemPromptName,
+    aiTutorMultimodalEnabled,
+    levelName,
+    channelId,
+    aiTutorSystemPromptSettings,
     selectedVersion,
     levelId,
   ]);

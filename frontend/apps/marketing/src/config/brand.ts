@@ -72,20 +72,3 @@ export function getBrandFromHostname(hostname: string | null) {
     Brand.CODE_DOT_ORG
   );
 }
-
-/**
- * Returns the Brand enum value corresponding to the given brand string.
- * @param brand - The brand string to convert to a Brand enum.
- * @returns
- */
-export function getBrandFromString(brand: string): Brand {
-  switch (brand) {
-    default:
-    case Brand.CODE_DOT_ORG:
-      return Brand.CODE_DOT_ORG;
-    case Brand.HOUR_OF_CODE:
-      return Brand.HOUR_OF_CODE;
-    case Brand.CS_FOR_ALL:
-      return Brand.CS_FOR_ALL;
-  }
-}

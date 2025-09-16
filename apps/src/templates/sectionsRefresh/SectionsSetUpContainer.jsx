@@ -21,7 +21,10 @@ import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
 import CoteacherSettings from '@cdo/apps/templates/sectionsRefresh/coteacherSettings/CoteacherSettings';
 import {navigateToHref} from '@cdo/apps/utils';
-import {CapLinks} from '@cdo/generated-scripts/sharedConstants';
+import {
+  CapLinks,
+  SectionLoginType,
+} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import AdvancedSettingToggles from './AdvancedSettingToggles';
@@ -398,7 +401,7 @@ export default function SectionsSetUpContainer({
   const renderCoteacherSection = () => {
     const isCoTeacherManagementDisabled =
       sections[0].primaryInstructor?.ltiRosterSyncEnabled === true &&
-      sections[0].loginType === 'ltiV1';
+      sections[0].loginType === SectionLoginType.lti_v1;
 
     return renderExpandableSection(
       'uitest-expandable-coteacher',
