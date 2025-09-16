@@ -9,14 +9,6 @@ const getInitialData = () => {
   return savedData ? JSON.parse(savedData) : null;
 };
 
-// IMMINENT TO DO: make sure we're on latest release.
-
-// TO DO: Excalidraw's hamburger dropdown menu never shows up because
-// it has a class "dropdown-menu", which is hidden by our global stylesheet.
-// TO DO: hook storage into Project system.
-// TO DO: add Instructions panel, render inside Workspace.
-// TO DO: noticed font intermittently not read from local storage correctly?
-// TO DO: add levelbuilder instructions support
 const WhiteboardView: React.FunctionComponent = () => {
   const [excalidrawApi, setExcalidrawApi] =
     useState<ExcalidrawImperativeAPI | null>(null);
@@ -48,12 +40,10 @@ const WhiteboardView: React.FunctionComponent = () => {
 
   return (
     <div className={moduleStyles.whiteboardContainer}>
-      <div className={moduleStyles.whiteboardCanvas}>
-        <Excalidraw
-          excalidrawAPI={api => setExcalidrawApi(api)}
-          initialData={getInitialData()}
-        />
-      </div>
+      <Excalidraw
+        excalidrawAPI={api => setExcalidrawApi(api)}
+        initialData={getInitialData()}
+      />
     </div>
   );
 };
