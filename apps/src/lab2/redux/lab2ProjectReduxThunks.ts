@@ -56,12 +56,12 @@ export const setAndSaveProjectSources = (
   projectSources: ProjectSources,
   forceSave: boolean = false,
   forceNewVersion: boolean = false
-): ThunkAction<Promise<void>, RootState, undefined, AnyAction> => {
-  return async dispatch => {
+): ThunkAction<void, RootState, undefined, AnyAction> => {
+  return dispatch => {
     dispatch(setProjectSource(projectSources));
     dispatch(setLastSavedLabConfig(projectSources.labConfig));
     if (Lab2Registry.getInstance().getProjectManager()) {
-      await Lab2Registry.getInstance()
+      Lab2Registry.getInstance()
         .getProjectManager()
         ?.save(projectSources, forceSave, forceNewVersion);
     }

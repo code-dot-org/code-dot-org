@@ -28,7 +28,6 @@ import {commonI18n} from '@cdo/apps/types/locale';
 import currentLocale from '@cdo/apps/util/currentLocale';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import SaveVersionPanel from './SaveVersionPanel';
 import VersionHistoryRow from './VersionHistoryRow';
 
 import moduleStyles from './version-history-panel.module.scss';
@@ -69,9 +68,6 @@ const VersionHistoryPanel: React.FunctionComponent<
     state => state.lab2Project.viewingOldVersion
   );
 
-  const projectSources = useAppSelector(
-    state => state.lab2Project.projectSources
-  );
   const dialogControl = useDialogControl();
 
   const dateFormatter = useMemo(() => {
@@ -94,7 +90,7 @@ const VersionHistoryPanel: React.FunctionComponent<
       }
       setListLoading(true);
       projectManager
-        .getVersionList(true) // include comments.
+        .getVersionList()
         .then(versionList => {
           setVersionList(versionList);
           setListLoaded(true);
@@ -180,27 +176,27 @@ const VersionHistoryPanel: React.FunctionComponent<
     listLoaded,
   ]);
 
-  const successfulProjectResetCleanUp = useCallback(
-    (published = false) => {
+  const successfulRestoreCleanUp = useCallback(
+    (sources: ProjectSources) => {
       dispatch(setViewingOldVersion(false));
-      dispatch(setRestoredOldVersion(!published));
+      dispatch(setRestoredOldVersion(true));
       loadVersionList(true);
     },
     [dispatch, loadVersionList]
   );
 
-  const startOver = useCallback(async () => {
+  const startOver = useCallback(() => {
     // We force a new version on start over so the user doesn't lose their recent edits.
     // We also force the save to occur immediately to avoid confusion.
-    await dispatch(
+    dispatch(
       setAndSaveProjectSources(
         startSources,
         /* forceSave */ true,
         /* forceNewVersion */ true
       )
     );
-    successfulProjectResetCleanUp();
-  }, [dispatch, startSources, successfulProjectResetCleanUp]);
+    successfulRestoreCleanUp(startSources);
+  }, [dispatch, startSources, successfulRestoreCleanUp]);
 
   const confirmStartOver = useCallback(() => {
     dialogControl?.showDialog({
@@ -231,7 +227,7 @@ const VersionHistoryPanel: React.FunctionComponent<
         .then(sources => {
           if (sources) {
             dispatch(setProjectSource(sources));
-            successfulProjectResetCleanUp();
+            successfulRestoreCleanUp(sources);
           } else {
             setVersionLoadError(true);
           }
@@ -247,7 +243,7 @@ const VersionHistoryPanel: React.FunctionComponent<
     appName,
     confirmStartOver,
     dispatch,
-    successfulProjectResetCleanUp,
+    successfulRestoreCleanUp,
   ]);
 
   const isLatestVersion = useCallback(
@@ -335,7 +331,7 @@ const VersionHistoryPanel: React.FunctionComponent<
         </div>
       )}
       {showList && (
-        <div className={moduleStyles.listContainer}>
+        <>
           <div className={moduleStyles.list}>
             {versionList.map(version => (
               <VersionHistoryRow
@@ -356,7 +352,7 @@ const VersionHistoryPanel: React.FunctionComponent<
               onChange={onVersionChange}
             />
           </div>
-          <div className={moduleStyles.listFooter}>
+          <div className={moduleStyles.footer}>
             {versionLoadError && (
               <div className={classNames(moduleStyles.versionLoadError)}>
                 <Alert
@@ -371,40 +367,27 @@ const VersionHistoryPanel: React.FunctionComponent<
                 <FontAwesomeV6Icon iconName="spinner" animationType="spin" />
               </div>
             )}
-          </div>
-        </div>
-      )}
-      {!isLatestVersion(selectedVersion) && (
-        <div className={moduleStyles.footerPanel}>
-          <div className={moduleStyles.buttonContainer}>
-            <Button
-              text={commonI18n.cancel()}
-              size={'s'}
-              onClick={handleCancel}
-              disabled={versionLoading || latestVersion === selectedVersion}
-              className={moduleStyles.versionButton}
-              type={'secondary'}
-              color="gray"
-            />
             {!viewAsUserId && (
               <Button
                 text={commonI18n.restore()}
                 size={'s'}
                 onClick={restoreSelectedVersion}
                 disabled={versionLoading || latestVersion === selectedVersion}
-                className={moduleStyles.versionButton}
+                className={moduleStyles.footerButton}
                 type={'primary'}
               />
             )}
+            <Button
+              text={commonI18n.cancel()}
+              size={'s'}
+              onClick={handleCancel}
+              disabled={versionLoading || latestVersion === selectedVersion}
+              className={moduleStyles.footerButton}
+              type={'secondary'}
+              color="black"
+            />
           </div>
-        </div>
-      )}
-      {isLatestVersion(selectedVersion) && (
-        <SaveVersionPanel
-          projectSources={projectSources}
-          onSuccess={() => successfulProjectResetCleanUp(true)}
-          versionLoading={versionLoading}
-        />
+        </>
       )}
     </div>
   );
