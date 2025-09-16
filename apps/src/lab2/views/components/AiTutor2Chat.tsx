@@ -196,6 +196,7 @@ const AiTutor2Chat: React.FunctionComponent<AiTutor2ChatProps> = ({
           dispatch(clearChatMessages());
         }}
         systemPromptSettings={aiTutorSystemPromptSettings}
+        hideModelChangeMessage={true}
       />
     </div>
   ) : (
