@@ -79,8 +79,6 @@ const BLOCKLY_DIV_ID = 'dance-blockly-div';
 registerReducers(reducers);
 
 const isToolboxMode = getAppOptionsEditBlocks() === TOOLBOX_BLOCKS;
-const aiGenerateMode = queryParams('ai-generate') === 'true';
-const usingMusicProject = queryParams('music-channel') || aiGenerateMode;
 
 /**
  * Renders the Lab2 version of Dance Lab. This separate container
@@ -112,12 +110,16 @@ const DanceView: React.FunctionComponent<{
   const [loadedMusicProject, setLoadedMusicProject] = useState(false);
   const [generatedAiDance, setGeneratedAiDance] = useState(false);
 
+  const aiGenerateMode =
+    levelProperties.aiCodeGenerate || queryParams('ai-generate') === 'true';
+  const usingMusicProject = queryParams('music-channel') || aiGenerateMode;
+
   const {setTheme} = useTheme();
   useEffect(() => {
     if (aiGenerateMode) {
       setTheme('Dark');
     }
-  }, [setTheme]);
+  }, [setTheme, aiGenerateMode]);
 
   const metadataToUse: SongMetadata | undefined = useMemo(() => {
     if (!musicProjectPlayer.current || !loadedMusicProject) {
@@ -319,7 +321,7 @@ const DanceView: React.FunctionComponent<{
     } as BlocklyOptions);
 
     return () => workspace.current?.dispose();
-  }, [dispatch, readonlyWorkspace, levelProperties]);
+  }, [dispatch, readonlyWorkspace, levelProperties, aiGenerateMode]);
 
   useEffect(() => {
     if (!workspace.current) {
@@ -380,7 +382,7 @@ const DanceView: React.FunctionComponent<{
         )
         .then(() => setLoadedMusicProject(true));
     }
-  }, []);
+  }, [usingMusicProject, aiGenerateMode]);
 
   // Set up the ProgramExecutor
   useEffect(() => {
@@ -403,14 +405,14 @@ const DanceView: React.FunctionComponent<{
       onEventsChanged,
       playSound: musicProjectPlayer.current
         ? (_url, callback) => {
-            console.log('play called at ', Date.now());
-            musicProjectPlayer.current?.play();
+            musicProjectPlayer.current?.play(resetProgram);
             callback(true);
           }
         : undefined,
       stopSound: musicProjectPlayer.current
         ? () => musicProjectPlayer.current?.stop()
         : undefined,
+      onSoundEnded: resetProgram,
     });
 
     if (recordReplayLog) {
@@ -453,6 +455,7 @@ const DanceView: React.FunctionComponent<{
     updateSources,
     loadedMusicProject,
     levelProperties.sharedBlocks,
+    usingMusicProject,
   ]);
 
   const settings = useBlocklySettings();
