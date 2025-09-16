@@ -5,11 +5,13 @@ Feature: Age Gated Students Modal and Banner
     Given CPA all user lockout phase
 
     Given I create an authorized teacher-associated under-13 student in Colorado named "Sally" after CAP start
-    Given I am assigned to course "allthethingscourse" with teacher "Teacher_Sally" in a section named "CAP Section"
+    Given I am assigned to course "allthethingscourse" unit 1 with teacher "Teacher_Sally"
 
     When I sign in as "Teacher_Sally" and go home
     And I wait until element "#ui-test-section-list" is visible
-    Then I click selector "#task-button-View-progress-CAP-Section" once I see it
+    Then I click selector "#section-options-dropdown-dropdown-button" once I see it
+    And I click selector "#ui-test-Section-settings" once I see it
+    Then I click selector "a:contains(Progress)" once I see it
 
     # Click on Age Gated Banner Students button to view Age Gated Students Modal
     When I open my eyes to test "Age Gated Students Banner and Modal"
