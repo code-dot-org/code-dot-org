@@ -49,9 +49,8 @@
     background-color: var(--background-neutral-tertiary);
   }
 
-  &:focus-visible {
-    @include mixins.focus-styles;
-  }
+  // Add focus-visible styles
+  @include mixins.focus-styles;
 
   p {
     cursor: pointer;
