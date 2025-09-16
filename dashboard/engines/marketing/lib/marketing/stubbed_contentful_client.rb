@@ -17,7 +17,7 @@ module Marketing
 
     # Pass through to the real client.
     def entry(locale, id)
-      Marketing::ContentfulClient.entry(id, locale: locale)
+      Marketing::ContentfulClient.entry(locale, id)
     end
 
     # We currently only stub out the entries method for `dashboard-notification` content type.
