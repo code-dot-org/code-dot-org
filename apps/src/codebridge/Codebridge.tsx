@@ -23,8 +23,6 @@ import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClien
 import FlaggedImageModal from '@cdo/apps/sharedComponents/FlaggedImageModal';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {AiTutorContext} from '../aiTutor/types';
-
 import moduleStyles from './styles/codebridgeContainer.module.scss';
 
 import './styles/codebridge.scss';
@@ -43,7 +41,7 @@ type CodebridgeProps = {
   levelProperties: CodebridgeLevelProperties;
   projectPickerSettings?: ProjectPickerSettings;
   aiTutorSystemPromptName?: string;
-  aiTutorContextPromise?: Promise<AiTutorContext>;
+  hiddenContextCallback?: () => Promise<string>;
 };
 
 export const Codebridge = React.memo(
@@ -57,7 +55,7 @@ export const Codebridge = React.memo(
     levelProperties,
     projectPickerSettings,
     aiTutorSystemPromptName,
-    aiTutorContextPromise,
+    hiddenContextCallback,
   }: CodebridgeProps) => {
     const isShareView = useAppSelector(state => state.lab.isShareView);
     const isWidgetView = !!levelProperties.widgetView;
@@ -182,7 +180,7 @@ export const Codebridge = React.memo(
           sendConsoleInput,
           levelProperties,
           projectPickerSettings,
-          aiTutorContextPromise,
+          hiddenContextCallback,
           onImageFlagged,
           aiTutorSystemPromptName,
         }}

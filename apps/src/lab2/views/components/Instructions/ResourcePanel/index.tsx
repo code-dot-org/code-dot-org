@@ -5,7 +5,6 @@ import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import classNames from 'classnames';
 import React, {useEffect, useMemo, useState} from 'react';
 
-import {AiTutorContext} from '@cdo/apps/aiTutor/types';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {ProjectSources} from '@cdo/apps/lab2/types';
@@ -74,7 +73,7 @@ const tabInfo: {[key in Tabs]: {title: string; icon: string}} = {
 type ResourcePanelProps = InstructionsProps & {
   className?: string;
   headerClassName?: string;
-  aiTutorContextPromise?: Promise<AiTutorContext>;
+  hiddenContextCallback?: () => Promise<string>;
   rightHeaderContent?: React.ReactNode;
   includeFooterSpacing?: boolean;
   settings?: Setting[];
@@ -88,7 +87,7 @@ type ResourcePanelProps = InstructionsProps & {
 const ResourcePanel: React.FC<ResourcePanelProps> = ({
   className,
   headerClassName,
-  aiTutorContextPromise,
+  hiddenContextCallback,
   rightHeaderContent,
   includeFooterSpacing = true,
   settings,
@@ -147,11 +146,11 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     if (
       (levelProperties.aiTutorAvailable ||
         queryParams('show-ai-tutor2') === 'true') &&
-      aiTutorContextPromise
+      hiddenContextCallback
     ) {
       tabMap[Tabs.AiTutor] = (
         <AiTutor2Chat
-          aiTutorContextPromise={aiTutorContextPromise}
+          hiddenContextCallback={hiddenContextCallback}
           aiTutorSystemPromptName={aiTutorSystemPromptName}
         />
       );
@@ -185,7 +184,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     instructionsProps,
     hasValidationConditions,
     isUserTeacher,
-    aiTutorContextPromise,
+    hiddenContextCallback,
     isReadOnly,
     isViewingOldVersion,
     viewAsUserId,

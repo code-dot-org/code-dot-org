@@ -43,7 +43,7 @@ interface ChatWorkspaceProps {
   modelParameters: ModelParameters;
   clientType: AiChatClientType;
   chatButtons?: ChatButtonAndKey[];
-  hiddenContext?: string;
+  hiddenContextCallback?: () => Promise<string>;
   onClear: () => void;
 
   // Multimodal support
@@ -69,7 +69,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   modelParameters,
   clientType,
   chatButtons,
-  hiddenContext,
+  hiddenContextCallback,
   onClear,
   multimodalEnabled = false,
   levelName,
@@ -276,7 +276,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
             modelParameters={modelParameters}
             editorContainerClassName={moduleStyles.messageEditorContainer}
             chatButtons={chatButtons}
-            hiddenContext={hiddenContext}
+            hiddenContextCallback={hiddenContextCallback}
             multimodalAvailable={multimodalAvailable}
           />
         )}

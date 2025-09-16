@@ -10,9 +10,7 @@ import {
   ChatButtonData,
 } from '@cdo/apps/aichat/types';
 import ChatWorkspace from '@cdo/apps/aichat/views/ChatWorkspace';
-import {AiTutorContext} from '@cdo/apps/aiTutor/types';
 import {queryParams} from '@cdo/apps/code-studio/utils';
-import {buildHiddenContextString} from '@cdo/apps/pythonlab/aiTutorHelper';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
@@ -107,18 +105,17 @@ const chatButtons = chatButtonData.map(button => ({
 }));
 interface AiTutor2ChatProps {
   aiTutorSystemPromptName?: string;
-  aiTutorContextPromise: Promise<AiTutorContext>;
+  hiddenContextCallback: () => Promise<string>;
 }
 
 // A free chat with lab-supplied context added to each question.
 const AiTutor2Chat: React.FunctionComponent<AiTutor2ChatProps> = ({
   aiTutorSystemPromptName,
-  aiTutorContextPromise,
+  hiddenContextCallback,
 }) => {
   const dispatch = useAppDispatch();
 
   const [systemPrompt, setSystemPrompt] = useState<string>();
-  const [hiddenContextString, setHiddenContextString] = useState<string>();
 
   useEffect(() => {
     if (aiTutorSystemPromptName || customPromptName) {
@@ -163,29 +160,13 @@ const AiTutor2Chat: React.FunctionComponent<AiTutor2ChatProps> = ({
     console.log('🤖: aiTutorModelId:', aiTutorModelId);
   }, []);
 
-  useEffect(() => {
-    let isMounted = true;
-
-    aiTutorContextPromise.then(context => {
-      if (isMounted) {
-        setHiddenContextString(buildHiddenContextString(context));
-      }
-    });
-
-    // we need this cleanup function to avoid a race condition
-    // if the component rerenders before the promise resolves
-    return () => {
-      isMounted = false;
-    };
-  }, [aiTutorContextPromise]);
-
-  return systemPrompt && hiddenContextString !== undefined ? (
+  return systemPrompt ? (
     <div className={moduleStyles.container}>
       <ChatWorkspace
         clientType={AiChatClientTypes.AI_TUTOR}
         modelParameters={{...modelParameters, systemPrompt}}
         chatButtons={chatButtons}
-        hiddenContext={hiddenContextString}
+        hiddenContextCallback={hiddenContextCallback}
         onClear={() => {
           dispatch(clearChatMessages());
         }}

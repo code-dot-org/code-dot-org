@@ -10,12 +10,11 @@ import React, {useEffect, useState} from 'react';
 import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
 import {LabProps, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 
-import {AiTutorContext} from '../aiTutor/types';
 import {useSource} from '../codebridge/hooks/useSource';
 import {useAppDispatch, useAppSelector} from '../util/reduxHooks';
 
 import {WEBLAB2_EDITABLE_FILE_TYPES} from './constants';
-import {getAiTutorContextPromise} from './helpers/aiTutorHelper';
+import {AiTutorWebLab2ContextHelper} from './helpers/aiTutorContextHelper';
 import FullScreenView from './layout/FullScreenView';
 import ShareView from './layout/ShareView';
 import VerticalLayout from './layout/VerticalLayout';
@@ -23,6 +22,9 @@ import {setViewMode} from './redux';
 import {Weblab2LevelProperties, ViewMode} from './types';
 
 import moduleStyles from './styles/weblab2-view.module.scss';
+
+const aiTutorHelper = new AiTutorWebLab2ContextHelper();
+
 const weblab2LangMapping: {[key: string]: LanguageSupport} = {
   html: html(),
   css: css(),
@@ -68,9 +70,9 @@ const Weblab2View: React.FC<
   LabProps<Weblab2LevelProperties, ProjectSources>
 > = ({levelProperties, initialSources}) => {
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
-  const [aiTutorContextPromise, setAiTutorContextPromise] =
-    useState<Promise<AiTutorContext>>();
-  const sources = useAppSelector(
+  const [hiddenContextCallback, setHiddenContextStringCallback] =
+    useState<() => Promise<string>>();
+  const source = useAppSelector(
     state =>
       state.lab2Project.projectSources?.source as MultiFileSource | undefined
   );
@@ -85,15 +87,18 @@ const Weblab2View: React.FC<
     state => !!state.lab2Project.projectSources?.source
   );
 
-  // Note: this causes Web Lab 2 to re-render when sources change.
-  // Unfortunately, the way AI tutor is set up right now requires passing in a context
-  // rather than a callback for the context. In the future, we should consider refactoring AI
-  // Tutor so we don't have to re-render the entire lab when sources change (this is also the case for Python Lab).
   useEffect(() => {
-    setAiTutorContextPromise(
-      getAiTutorContextPromise(sources, levelProperties.longInstructions)
+    setHiddenContextStringCallback(() =>
+      aiTutorHelper.getHiddenContextCallback()
     );
-  }, [sources, levelProperties.longInstructions]);
+  }, []);
+
+  useEffect(() => {
+    aiTutorHelper.setAiTutorContext({
+      source,
+      longInstructions: levelProperties.longInstructions,
+    });
+  }, [source, levelProperties.longInstructions]);
 
   // Since there's no run button in Weblab2, set it to true by default
   // to enable the Submit button on edit on submittable levels.
@@ -113,13 +118,13 @@ const Weblab2View: React.FC<
 
   return (
     <div className={moduleStyles.weblab2Container}>
-      {hasSource && (
+      {hasSource && hiddenContextCallback && (
         <Codebridge
           config={config}
           setConfig={setConfig}
           startSources={startSources}
           levelProperties={levelProperties}
-          aiTutorContextPromise={aiTutorContextPromise}
+          hiddenContextCallback={hiddenContextCallback}
           aiTutorSystemPromptName={'aif2-web-produce'}
         />
       )}
