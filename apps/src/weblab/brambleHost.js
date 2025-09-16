@@ -22,7 +22,7 @@ if (parent.getWebLab) {
 
 function load(Bramble) {
   // Remember experiments since Bramble will clear localStorage
-  const experiments = tryGetLocalStorage('experimentsList', '[]');
+  const experiments = tryGetLocalStorage('experimentsList', '[]') || '[]';
   const api = webLab_.brambleApi();
   const cdoBramble = new CdoBramble(
     Bramble,
@@ -37,7 +37,7 @@ function load(Bramble) {
     .on('ready', () => {
       // Reset the experiments list after Bramble loads which should restore
       // the experiment list that existed when the level page loaded.
-      trySetLocalStorage('experimentsList', experiments);
+      trySetLocalStorage('experimentsList', experiments || '[]');
       api.onBrambleReady();
     })
     .on('projectChange', api.onProjectChanged)
