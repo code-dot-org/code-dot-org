@@ -209,7 +209,7 @@ Scenario: Teacher can view student work, ask student to keep working, on rubric 
 
   # Teacher can see keep working icon
   Given I am on "http://studio.code.org/"
-  When I click selector "a:contains(Untitled Section)" once I see it to load a new page
+  And I navigate to the V2 progress dashboard for "Untitled Section"
   And I wait until element "#ui-test-lesson-header-39" is visible
   And I scroll to "#ui-test-lesson-header-39"
   And I see no difference for "keep working icon is displayed"
