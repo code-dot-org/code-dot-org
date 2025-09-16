@@ -31,7 +31,10 @@ const donor_prefixes = [
   '/courses/elem-game-design-2024',
 ];
 
-const aif_prefixes = ['/courses/artificial-intelligence-foundations-2025'];
+const aif_prefixes = [
+  '/courses/artificial-intelligence-foundations-2025',
+  '/courses/teaching-ai-foundations-2025',
+];
 
 const dashboard_prefixes = ['/home', '/users', '/teacher_dashboard'];
 
