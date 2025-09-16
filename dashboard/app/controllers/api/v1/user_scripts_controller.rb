@@ -3,7 +3,7 @@ class Api::V1::UserScriptsController < ApplicationController
   before_action :set_user_script, only: :update
 
   # PATCH /user_scripts/:script_id
-  # Also supports: PATCH /api/v1/user_scripts/courses/:course_name/units/:unit_position
+  # PATCH /api/v1/user_scripts/courses/:course_name/units/:unit_position
   def update
     if @user_script.update(params.permit(:version_warning_dismissed))
       head :no_content
@@ -14,6 +14,8 @@ class Api::V1::UserScriptsController < ApplicationController
 
   private def set_user_script
     script = nil
+    context = nil
+
     if params[:script_id].present?
       script = Unit.get_from_cache(params[:script_id])
     else
@@ -30,6 +32,14 @@ class Api::V1::UserScriptsController < ApplicationController
       return
     end
 
-    @user_script = UserScript.find_or_create_by!(user: current_user, script: script)
+    # When we have course context, set unit_group_id on creation to associate with the Course.
+    existing = UserScript.find_by(user: current_user, script: script)
+    if existing
+      @user_script = existing
+    else
+      attrs = {user: current_user, script: script}
+      attrs[:unit_group] = context[:unit_group] if context && context[:unit_group]
+      @user_script = UserScript.create!(attrs)
+    end
   end
 end

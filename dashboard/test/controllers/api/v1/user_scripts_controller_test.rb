@@ -22,6 +22,7 @@ class Api::V1::UserScriptsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
     user_script = UserScript.find_by(user: user, script: script)
     refute_nil user_script
+    assert_nil user_script.unit_group_id
     assert_equal "true", user_script.version_warning_dismissed
   end
 
@@ -60,6 +61,7 @@ class Api::V1::UserScriptsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
     user_script = UserScript.find_by(user: user, script: script)
     refute_nil user_script
+    assert_equal script.get_original_unit_group.id, user_script.unit_group_id
     assert_equal "true", user_script.version_warning_dismissed
   end
 
