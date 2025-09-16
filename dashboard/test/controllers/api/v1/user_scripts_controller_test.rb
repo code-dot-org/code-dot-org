@@ -33,17 +33,17 @@ class Api::V1::UserScriptsControllerTest < ActionDispatch::IntegrationTest
     patch "/api/v1//user_scripts/#{bogus_script_id}", params: {
       version_warning_dismissed: true
     }
-    assert_response :missing
+    assert_response :not_found
     user_script = UserScript.find_by(user: user, script: bogus_script_id)
     assert_nil user_script
   end
 
-  test "student can dismiss version warning via course_name and unit_position" do
+  test "student can dismiss version warning via course_id and script_id" do
     unit_group = create(:single_unit_course, :stable)
     unit = unit_group.first_unit
     user_script = create(:user_script, script: unit, unit_group: unit_group)
     sign_in user_script.user
-    patch "/api/v1//user_scripts/courses/#{unit_group.name}/units/1", params: {
+    patch "/api/v1//user_scripts/course/#{unit_group.id}/unit/#{unit.id}", params: {
       version_warning_dismissed: true
     }
     assert_response :success
@@ -51,12 +51,12 @@ class Api::V1::UserScriptsControllerTest < ActionDispatch::IntegrationTest
     assert_equal "true", user_script.version_warning_dismissed
   end
 
-  test "student without user_script can dismiss via course_name and unit_position" do
+  test "student without user_script can dismiss via course_id and script_id" do
     user = create(:user)
     script = create(:unit, :in_single_unit_course)
     sign_in user
-    course_name = script.get_original_unit_group.name
-    patch "/api/v1//user_scripts/courses/#{course_name}/units/1", params: {
+    course_id = script.get_original_unit_group.id
+    patch "/api/v1//user_scripts/course/#{course_id}/unit/#{script.id}", params: {
       version_warning_dismissed: true
     }
     assert_response :success
@@ -66,12 +66,12 @@ class Api::V1::UserScriptsControllerTest < ActionDispatch::IntegrationTest
     assert_equal "true", user_script.version_warning_dismissed
   end
 
-  test "raises for nonexistent course/unit" do
+  test "raises for nonexistent course or unit" do
     user = create(:user)
     sign_in user
-    patch "/api/v1//user_scripts/courses/nonexistent-course/units/99", params: {
+    patch "/api/v1//user_scripts/course/999999/unit/999999", params: {
       version_warning_dismissed: true
     }
-    assert_response :missing
+    assert_response :not_found
   end
 end
