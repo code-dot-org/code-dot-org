@@ -1,32 +1,45 @@
-import Button, {buttonColors} from '@code-dot-org/component-library/button';
-import Checkbox from '@code-dot-org/component-library/checkbox';
-import TextField from '@code-dot-org/component-library/textField';
-import {
-  StrongText,
-  BodyOneText,
-  BodyThreeText,
-} from '@code-dot-org/component-library/typography';
+import Button from '@code-dot-org/component-library/button';
 import React from 'react';
 
 import i18n from '@cdo/locale';
 
-import PersonalizationQuestion from './PersonalizationQuestion';
 import {
-  PERSONALIZATION_PROMPTS,
-  TEACHER_GOAL_PROMPT,
-  SUPPORT_PREFERENCES_PROMPT,
-} from './personalizationQuestions';
+  NumberOfYearsTeachingAnswer,
+  ClassroomVisionAnswer,
+  ChallengeAnswer,
+  ConfidenceAnswer,
+  GoalsAnswer,
+  SupportAnswer,
+} from './PersonalizationAnswers';
+import PersonalizationQuestion from './PersonalizationQuestion';
+import {PERSONALIZATION_PROMPTS} from './personalizationQuestions';
 
 import style from './personalization-information.module.scss';
 
+interface PersonalizationData {
+  selectedGoals: number[];
+  selectedSupports: number[];
+  otherSupportText: string;
+  otherGoalText: string;
+  selectedConfidence: number;
+  yearsTeaching: number;
+  classroomVision: string;
+  challenge: string;
+}
+
 const PersonalizationCollectorContainer: React.FC = () => {
   const [questionsNumber, setQuestionsNumber] = React.useState(0);
-  const [selectedGoals, setSelectedGoals] = React.useState<number[]>([]);
-  const [selectedSupports, setSelectedSupports] = React.useState<number[]>([]);
-  const [otherSupportText, setOtherSupportText] = React.useState('');
-  const [otherGoalText, setOtherGoalText] = React.useState('');
-  const [selectedConfidence, setSelectedConfidence] =
-    React.useState<number>(-1);
+  const [personalizationData, setPersonalizationData] =
+    React.useState<PersonalizationData>({
+      selectedGoals: [],
+      selectedSupports: [],
+      otherSupportText: '',
+      otherGoalText: '',
+      selectedConfidence: -1,
+      yearsTeaching: 0,
+      classroomVision: '',
+      challenge: '',
+    });
 
   const NEXT = 1;
   const BACK = -1;
@@ -42,289 +55,93 @@ const PersonalizationCollectorContainer: React.FC = () => {
     setQuestionsNumber(questionsNumber + direction);
   };
 
-  const numberOfYearsTeachingAnswer = React.useCallback(() => {
-    return (
-      <div className={style.numberOfYearsArea}>
-        <BodyOneText className={style.bodyText}>
-          I've been teaching for
-        </BodyOneText>
-        <input
-          type="number"
-          name="years-teaching"
-          className={style.answer}
-          onChange={() => {
-            console.log('change'); // some sort of "save to object function needed"
-          }}
-        />
-        <BodyOneText className={style.bodyText}>years!</BodyOneText>
-      </div>
-    );
-  }, []);
-
-  const classroomVisionAnswer = React.useCallback(() => {
-    return (
-      <div>
-        <StrongText>Describe your ideal classroom environment:</StrongText>
-        <textarea
-          name="classroom-vision"
-          onChange={() => {
-            console.log('change'); // some sort of "save to object function needed"
-          }}
-          className={style.freeResponseBox}
-          rows={4}
-        />
-        For example, you could say, “A collaborative learning community” or “A
-        creative, engaging space”
-      </div>
-    );
-  }, []);
-
-  const challengeAnswer = React.useCallback(() => {
-    return (
-      <div>
-        <StrongText>Describe your challenge</StrongText>
-        <textarea
-          name="classroom-challenge"
-          onChange={() => {
-            console.log('change'); // some sort of "save to object function needed"
-          }}
-          className={style.freeResponseBox}
-          rows={4}
-        />
-      </div>
-    );
-  }, []);
-
-  const confidenceAnswer = React.useCallback(() => {
-    const handleButtonClick = (index: number) => {
-      setSelectedConfidence(index);
-    };
-
-    const determineColor = (index: number) => {
-      if (selectedConfidence === index) {
-        return buttonColors.purple;
-      } else {
-        return buttonColors.white;
-      }
-    };
-
-    return (
-      <div>
-        <div className={style.confidenceButtons}>
-          <Button
-            type={'primary'}
-            color={determineColor(0)}
-            text="0"
-            onClick={() => handleButtonClick(0)}
-          />
-          <Button
-            type={'primary'}
-            color={determineColor(1)}
-            text="1"
-            onClick={() => handleButtonClick(1)}
-          />
-          <Button
-            type={'primary'}
-            color={determineColor(2)}
-            text="2"
-            onClick={() => handleButtonClick(2)}
-          />
-          <Button
-            type={'primary'}
-            color={determineColor(3)}
-            text="3"
-            onClick={() => handleButtonClick(3)}
-          />
-          <Button
-            type={'primary'}
-            color={determineColor(4)}
-            text="4"
-            onClick={() => handleButtonClick(4)}
-          />
-          <Button
-            type={'primary'}
-            color={determineColor(5)}
-            text="5"
-            onClick={() => handleButtonClick(5)}
-          />
-          <Button
-            type={'primary'}
-            color={determineColor(6)}
-            text="6"
-            onClick={() => handleButtonClick(6)}
-          />
-          <Button
-            type={'primary'}
-            color={determineColor(7)}
-            text="7"
-            onClick={() => handleButtonClick(7)}
-          />
-          <Button
-            type={'primary'}
-            color={determineColor(8)}
-            text="8"
-            onClick={() => handleButtonClick(8)}
-          />
-          <Button
-            type={'primary'}
-            color={determineColor(9)}
-            text="9"
-            onClick={() => handleButtonClick(9)}
-          />
-          <Button
-            type={'primary'}
-            color={determineColor(10)}
-            text="10"
-            onClick={() => handleButtonClick(10)}
-          />
-        </div>
-        <div className={style.confidenceContinuum}>
-          <BodyThreeText>Not confident at all</BodyThreeText>
-          <BodyThreeText>Extremely confident</BodyThreeText>
-        </div>
-      </div>
-    );
-  }, [selectedConfidence]);
-
-  const goalsAnswer = React.useCallback(() => {
-    const handleGoalToggle = (index: number) => {
-      setSelectedGoals(prev => {
-        if (prev.includes(index)) {
-          return prev.filter(i => i !== index);
-        } else {
-          return [...prev, index];
-        }
-      });
-    };
-
-    const handleOtherTextChange = (
-      event: React.ChangeEvent<HTMLInputElement>
-    ) => {
-      setOtherGoalText(event.target.value);
-    };
-
-    const otherIndex = TEACHER_GOAL_PROMPT.choices.findIndex(
-      choice => choice === 'Other'
-    );
-    const isOtherSelected = selectedGoals.includes(otherIndex);
-
-    return (
-      <div className={style.multiSelectContainer}>
-        {TEACHER_GOAL_PROMPT.choices.map((choice, index) => (
-          <Checkbox
-            key={index}
-            label={choice}
-            checked={selectedGoals.includes(index)}
-            onChange={() => handleGoalToggle(index)}
-            name={`goal-${index}`}
-          />
-        ))}
-
-        {isOtherSelected && (
-          <div style={{marginTop: '10px'}}>
-            <TextField
-              size="m"
-              name="other-goal-text"
-              placeholder="Please describe your other goal..."
-              onChange={handleOtherTextChange}
-              value={otherGoalText}
-              inputType="text"
-            />
-          </div>
-        )}
-
-        {/* Debug info - remove this later */}
-        <div style={{marginTop: '10px', fontSize: '12px', color: '#666'}}>
-          Selected goal indices: {selectedGoals.join(', ')}
-        </div>
-      </div>
-    );
-  }, [otherGoalText, selectedGoals]);
-
-  const supportAnswer = React.useCallback(() => {
-    const handleSupportToggle = (index: number) => {
-      setSelectedSupports(prev => {
-        if (prev.includes(index)) {
-          return prev.filter(i => i !== index);
-        } else {
-          return [...prev, index];
-        }
-      });
-    };
-
-    const handleOtherTextChange = (
-      event: React.ChangeEvent<HTMLInputElement>
-    ) => {
-      setOtherSupportText(event.target.value);
-    };
-
-    const otherIndex = SUPPORT_PREFERENCES_PROMPT.choices.findIndex(
-      choice => choice === 'Other'
-    );
-    const isOtherSelected = selectedSupports.includes(otherIndex);
-
-    return (
-      <div className={style.multiSelectContainer}>
-        {SUPPORT_PREFERENCES_PROMPT.choices.map((choice, index) => (
-          <Checkbox
-            key={index}
-            label={choice}
-            checked={selectedSupports.includes(index)}
-            onChange={() => handleSupportToggle(index)}
-            name={`support-${index}`}
-          />
-        ))}
-
-        {/* Show text area when "Other" is selected */}
-        {isOtherSelected && (
-          <div style={{marginTop: '10px'}}>
-            <TextField
-              size="m"
-              name="other-support-text"
-              placeholder="Please describe your other support preference..."
-              onChange={handleOtherTextChange}
-              value={otherSupportText}
-              inputType="text"
-            />
-          </div>
-        )}
-
-        {/* Debug info - remove this later */}
-        <div style={{marginTop: '10px', fontSize: '12px', color: '#666'}}>
-          Selected support indices: {selectedSupports.join(', ')}
-          {otherSupportText && <div>Other text: "{otherSupportText}"</div>}
-        </div>
-      </div>
-    );
-  }, [selectedSupports, otherSupportText]);
-
   const determineAnswerType = React.useCallback(() => {
     const currentQuestion = PERSONALIZATION_PROMPTS[questionsNumber];
     switch (currentQuestion.order) {
       case 1:
-        return numberOfYearsTeachingAnswer();
+        return (
+          <NumberOfYearsTeachingAnswer
+            yearsTeaching={personalizationData.yearsTeaching}
+            setYearsTeaching={(years: number) =>
+              setPersonalizationData(prev => ({
+                ...prev,
+                yearsTeaching: years,
+              }))
+            }
+          />
+        );
       case 2:
-        return confidenceAnswer();
+        return (
+          <ConfidenceAnswer
+            selectedConfidence={personalizationData.selectedConfidence}
+            setSelectedConfidence={(confidence: number) =>
+              setPersonalizationData(prev => ({
+                ...prev,
+                selectedConfidence: confidence,
+              }))
+            }
+          />
+        );
       case 3:
-        return goalsAnswer();
+        return (
+          <GoalsAnswer
+            selectedGoals={personalizationData.selectedGoals}
+            setSelectedGoals={(goals: number[]) =>
+              setPersonalizationData(prev => ({...prev, selectedGoals: goals}))
+            }
+            otherGoalText={personalizationData.otherGoalText}
+            setOtherGoalText={(text: string) =>
+              setPersonalizationData(prev => ({...prev, otherGoalText: text}))
+            }
+          />
+        );
       case 4:
-        return classroomVisionAnswer();
+        return (
+          <ClassroomVisionAnswer
+            classroomVision={personalizationData.classroomVision}
+            setClassroomVision={(vision: string) =>
+              setPersonalizationData(prev => ({
+                ...prev,
+                classroomVision: vision,
+              }))
+            }
+          />
+        );
       case 5:
-        return supportAnswer();
+        return (
+          <SupportAnswer
+            selectedSupports={personalizationData.selectedSupports}
+            setSelectedSupports={(supports: number[]) =>
+              setPersonalizationData(prev => ({
+                ...prev,
+                selectedSupports: supports,
+              }))
+            }
+            otherSupportText={personalizationData.otherSupportText}
+            setOtherSupportText={(text: string) =>
+              setPersonalizationData(prev => ({
+                ...prev,
+                otherSupportText: text,
+              }))
+            }
+          />
+        );
       case 6:
-        return challengeAnswer();
+        return (
+          <ChallengeAnswer
+            challenge={personalizationData.challenge}
+            setChallenge={(challenge: string) =>
+              setPersonalizationData(prev => ({
+                ...prev,
+                challenge: challenge,
+              }))
+            }
+          />
+        );
       default:
         return <div>Error: question not found</div>;
     }
-  }, [
-    challengeAnswer,
-    classroomVisionAnswer,
-    confidenceAnswer,
-    goalsAnswer,
-    numberOfYearsTeachingAnswer,
-    questionsNumber,
-    supportAnswer,
-  ]);
+  }, [questionsNumber, personalizationData]);
 
   return (
     <div className={style.carouselContainer}>
