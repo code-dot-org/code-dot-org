@@ -32,10 +32,7 @@ module Curriculum::CourseTypes
 
   def get_family_courses
     return nil if family_name.nil_or_empty?
-
-    if is_a?(UnitGroup)
-      UnitGroup.all.select {|c| c.family_name == family_name}
-    end
+    UnitGroup.all.select {|c| c.family_name == family_name}
   end
 
   # Instructor and Participant Audience can not be equal unless they are nil
@@ -48,9 +45,6 @@ module Curriculum::CourseTypes
   # of any course.
   def can_be_instructor?(user)
     return false unless user
-
-    # If unit is in a unit group then decide based on unit group audience
-    return get_original_unit_group.can_be_instructor?(user) if is_a?(Unit) && get_original_unit_group
 
     return false if user.student?
     return true if user.permission?(UserPermission::UNIVERSAL_INSTRUCTOR) || user.permission?(UserPermission::LEVELBUILDER)
@@ -71,11 +65,7 @@ module Curriculum::CourseTypes
   # instructor in the course then this will return false because we do not want
   # to treat them like a participant. Signed out users should be able to be participants
   # in student courses.
-  def can_be_participant?(user, unit_group: nil)
-    # If unit is in a unit group then decide based on unit group audience
-    unit_group ||= get_original_unit_group if is_a?(Unit)
-    return unit_group.can_be_participant?(user) if unit_group
-
+  def can_be_participant?(user)
     # Signed out users can only use student facing courses
     return false if !user && participant_audience != 'student'
     return false if can_be_instructor?(user)
@@ -98,9 +88,6 @@ module Curriculum::CourseTypes
   # This is different than courses that use the professional learning course models
   # those can be checked for using old_professional_learning_course?
   def pl_course?
-    # If unit is in a unit group then decide based on unit group
-    return get_original_unit_group.pl_course? if is_a?(Unit) && get_original_unit_group
-
     participant_audience != 'student'
   end
 end

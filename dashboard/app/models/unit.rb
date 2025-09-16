@@ -45,7 +45,6 @@ class Unit < ApplicationRecord
   include ScriptConstants
   include Curriculum::SharedCourseConstants
   include SharedConstants
-  include Curriculum::CourseTypes
   include Curriculum::AssignableCourse
   include Rails.application.routes.url_helpers
   include Unit::TextToSpeech
@@ -522,7 +521,7 @@ class Unit < ApplicationRecord
     return nil unless unit_group&.single_unit_course?
 
     # Only redirect participants.
-    return nil unless user && can_be_participant?(user, unit_group: unit_group)
+    return nil unless user && unit_group.can_be_participant?(user)
 
     return nil unless has_other_versions?
     # No redirect unless user is allowed to view this unit version and they are not already assigned to this unit
@@ -1328,7 +1327,7 @@ class Unit < ApplicationRecord
         show_script_version_warning: show_script_version_warning,
         course_versions: summarize_course_versions(user, locale_code, unit_group: unit_group_unit&.cached_unit_group),
         supported_locales: supported_locales,
-        section_hidden_unit_info: section_hidden_unit_info(user),
+        section_hidden_unit_info: section_hidden_unit_info(user, unit_group: unit_group_unit&.cached_unit_group),
         pilot_experiment: get_pilot_experiment,
         editor_experiment: editor_experiment,
         show_assign_button: unit_group_unit&.unit_group&.course_assignable?(user),
@@ -1345,12 +1344,12 @@ class Unit < ApplicationRecord
         weeklyInstructionalMinutes: weekly_instructional_minutes,
         includeStudentLessonPlans: is_migrated ? include_student_lesson_plans : false,
         useLegacyLessonPlans: is_migrated && use_legacy_lesson_plans,
-        courseVersionId: unit_group_unit&.unit_group&.course_version&.id,
-        courseOfferingId: unit_group_unit&.unit_group&.course_version&.course_offering&.id,
+        courseVersionId: unit_group_unit&.cached_unit_group&.course_version&.id,
+        courseOfferingId: unit_group_unit&.cached_unit_group&.course_version&.course_offering&.id,
         scriptOverviewPdfUrl: get_unit_overview_pdf_url,
         scriptResourcesPdfUrl: get_unit_resources_pdf_url,
         updated_at: updated_at.to_s,
-        isPlCourse: pl_course?,
+        isPlCourse: unit_group_unit&.cached_unit_group&.pl_course?,
         showAiAssessmentsAnnouncement: show_ai_assessments_announcement?(user),
         content_area: content_area,
         topic_tags: topic_tags,
@@ -1451,8 +1450,8 @@ class Unit < ApplicationRecord
   #   is the current script id. This mirrors the output format of
   #   User#get_hidden_unit_ids, and satisfies the input format of
   #   initializeHiddenScripts in hiddenLessonRedux.js.
-  def section_hidden_unit_info(user)
-    return {} unless user && can_be_instructor?(user)
+  def section_hidden_unit_info(user, unit_group: get_original_unit_group)
+    return {} unless user && unit_group&.can_be_instructor?(user)
     hidden_section_ids = SectionHiddenScript.where(script_id: id, section: user.sections_instructed).pluck(:section_id)
     hidden_section_ids.index_with([id])
   end
