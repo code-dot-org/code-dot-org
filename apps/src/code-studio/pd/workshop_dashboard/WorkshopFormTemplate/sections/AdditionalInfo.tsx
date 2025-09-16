@@ -5,9 +5,21 @@ import {Heading2} from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
 import React, {ChangeEvent, FC, memo, useMemo} from 'react';
 
-import {AdditionalInfoProps} from '../types';
+import {
+  SectionProps,
+  WorkshopFormState,
+  WorkshopErrors,
+} from '../../workshops/types';
 
 import commonStyles from '../styles.module.scss';
+
+type AdditionalInfoKeys = 'fee' | 'participantGroupType' | 'notes';
+
+export interface AdditionalInfoProps
+  extends SectionProps,
+    Pick<WorkshopFormState, AdditionalInfoKeys> {
+  errors: WorkshopErrors;
+}
 
 export const AdditionalInfo: FC<AdditionalInfoProps> = ({
   config: {fields},

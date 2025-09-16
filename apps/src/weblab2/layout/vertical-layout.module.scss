@@ -1,14 +1,20 @@
+@use '../../lab2/views/components/layout/variables.scss' as variables;
 @import '../../mixins.scss';
 
 .headerContainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 40px;
-  padding: 4px 8px;
+  height: 41px;
+  padding-inline: 0.5rem;
   box-sizing: border-box;
-  border-bottom: 1px solid var(--borders-neutral-primary);
-  background-color: var(--background-neutral-secondary);
+  border-bottom: variables.$default-border;
+  background-color: var(--background-neutral-primary);
+}
+
+.headerLabel {
+  color: var(--text-neutral-quaternary);
+  font-size: 0.75rem; // 12px
 }
 
 .editorAndPreviewContainer {

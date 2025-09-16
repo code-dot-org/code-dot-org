@@ -62,7 +62,7 @@
     "hint_prompt_attempts_threshold": "1",
     "display_name": "Retro Theme",
     "bubble_choice_description": "Create an interactive program with lots of sprites.",
-    "thumbnail_url": "https://code.org/images/csc/helloworld/helloworldretrotheme.png",
+    "thumbnail_url": "/blockly/media/csc/helloworld/helloworldretrotheme.png",
     "soft_buttons": [
       "leftButton",
       "rightButton",

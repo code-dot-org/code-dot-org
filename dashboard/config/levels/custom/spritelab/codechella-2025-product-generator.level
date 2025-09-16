@@ -43,7 +43,7 @@
     "preload_asset_list": null
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-08T16:00:26.796+00:00\",\"changed\":[\"cloned from \\\"game_jam_theme_generator_independent\\\"\"],\"cloned_from\":\"game_jam_theme_generator_independent\"},{\"changed_at\":\"2025-05-08 16:02:29 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-08 16:19:55 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2025-05-08T16:00:26.796+00:00\",\"changed\":[\"cloned from \\\"game_jam_theme_generator_independent\\\"\"],\"cloned_from\":\"game_jam_theme_generator_independent\"},{\"changed_at\":\"2025-05-08 16:02:29 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-08 16:19:55 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-15 19:29:16 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -51,10 +51,10 @@
     <start_blocks>
       <xml xmlns="https://developers.google.com/blockly/xml">
         <variables>
+          <variable id="y.k{y^@L5/J4KC8JOUSO">Die1</variable>
           <variable id="2l356B?RW,)`H50jHAJ4">cabbageClicked</variable>
           <variable id=")2Jx}$.ni|m5d/BInFie">hamburgerClicked</variable>
           <variable id="]Si3({hy[g/eACL0uF(.">bowlClicked</variable>
-          <variable id="y.k{y^@L5/J4KC8JOUSO">Die1</variable>
           <variable id="*bwUIgam]yqliB@J}i=(">Die2</variable>
           <variable id="o%Gf]w6X~I1cV0-KtV+5">Die3</variable>
           <variable id="fJ=JTldFL5I=dWWsSn}J">rollNoun</variable>
@@ -90,119 +90,117 @@
                         </block>
                       </value>
                       <next>
-                        <block type="gamelab_createNewSprite">
-                          <field name="NAME" id="y.k{y^@L5/J4KC8JOUSO">Die1</field>
-                          <field name="COSTUME">"dieRed1"</field>
-                          <value name="LOCATION">
-                            <block type="gamelab_location_picker">
-                              <field name="LOCATION">{"x":110,"y":120}</field>
+                        <block type="variables_set">
+                          <field name="VAR" id="]Si3({hy[g/eACL0uF(.">bowlClicked</field>
+                          <value name="VALUE">
+                            <block type="logic_boolean">
+                              <field name="BOOL">FALSE</field>
                             </block>
                           </value>
                           <next>
-                            <block type="gamelab_createNewSprite">
-                              <field name="NAME" id="*bwUIgam]yqliB@J}i=(">Die2</field>
-                              <field name="COSTUME">"dieRed1"</field>
-                              <value name="LOCATION">
-                                <block type="gamelab_location_picker">
-                                  <field name="LOCATION">{"x":260,"y":197}</field>
+                            <block type="variables_set">
+                              <field name="VAR" id="2l356B?RW,)`H50jHAJ4">cabbageClicked</field>
+                              <value name="VALUE">
+                                <block type="logic_boolean">
+                                  <field name="BOOL">FALSE</field>
                                 </block>
                               </value>
                               <next>
-                                <block type="gamelab_createNewSprite">
-                                  <field name="NAME" id="o%Gf]w6X~I1cV0-KtV+5">Die3</field>
-                                  <field name="COSTUME">"dieRed1"</field>
-                                  <value name="LOCATION">
-                                    <block type="gamelab_location_picker">
-                                      <field name="LOCATION">{"x":273,"y":289}</field>
+                                <block type="variables_set">
+                                  <field name="VAR" id=")2Jx}$.ni|m5d/BInFie">hamburgerClicked</field>
+                                  <value name="VALUE">
+                                    <block type="logic_boolean">
+                                      <field name="BOOL">FALSE</field>
                                     </block>
                                   </value>
                                   <next>
-                                    <block type="gamelab_setProp">
-                                      <field name="PROPERTY">"scale"</field>
-                                      <value name="SPRITE">
-                                        <block type="sprite_variables_get">
-                                          <field name="VAR" id="y.k{y^@L5/J4KC8JOUSO">Die1</field>
+                                    <block type="gamelab_makeNewSpriteAnon">
+                                      <field name="ANIMATION_NAME">"face_avocado"</field>
+                                      <value name="LOCATION">
+                                        <block type="gamelab_location_picker">
+                                          <field name="LOCATION">{"x":39,"y":396}</field>
                                         </block>
                                       </value>
-                                      <value name="VAL">
-                                        <block type="math_number">
-                                          <field name="NUM">75</field>
-                                        </block>
-                                      </value>
-                                      <next>
-                                        <block type="gamelab_setProp">
-                                          <field name="PROPERTY">"scale"</field>
-                                          <value name="SPRITE">
-                                            <block type="sprite_variables_get">
-                                              <field name="VAR" id="*bwUIgam]yqliB@J}i=(">Die2</field>
-                                            </block>
-                                          </value>
-                                          <value name="VAL">
-                                            <block type="math_number">
-                                              <field name="NUM">75</field>
-                                            </block>
-                                          </value>
-                                          <next>
-                                            <block type="gamelab_setProp">
-                                              <field name="PROPERTY">"scale"</field>
-                                              <value name="SPRITE">
-                                                <block type="sprite_variables_get">
-                                                  <field name="VAR" id="o%Gf]w6X~I1cV0-KtV+5">Die3</field>
-                                                </block>
-                                              </value>
-                                              <value name="VAL">
-                                                <block type="math_number">
-                                                  <field name="NUM">75</field>
-                                                </block>
-                                              </value>
-                                              <next>
-                                                <block type="gamelab_makeNewSpriteAnon">
-                                                  <field name="ANIMATION_NAME">"face_avocado"</field>
-                                                  <value name="LOCATION">
-                                                    <block type="gamelab_location_picker">
-                                                      <field name="LOCATION">{"x":39,"y":396}</field>
-                                                    </block>
-                                                  </value>
-                                                  <next>
-                                                    <block type="variables_set">
-                                                      <field name="VAR" id="]Si3({hy[g/eACL0uF(.">bowlClicked</field>
-                                                      <value name="VALUE">
-                                                        <block type="logic_boolean">
-                                                          <field name="BOOL">FALSE</field>
-                                                        </block>
-                                                      </value>
-                                                      <next>
-                                                        <block type="variables_set">
-                                                          <field name="VAR" id="2l356B?RW,)`H50jHAJ4">cabbageClicked</field>
-                                                          <value name="VALUE">
-                                                            <block type="logic_boolean">
-                                                            <field name="BOOL">FALSE</field>
-                                                            </block>
-                                                          </value>
-                                                          <next>
-                                                            <block type="variables_set">
-                                                            <field name="VAR" id=")2Jx}$.ni|m5d/BInFie">hamburgerClicked</field>
-                                                            <value name="VALUE">
-                                                            <block type="logic_boolean">
-                                                            <field name="BOOL">FALSE</field>
-                                                            </block>
-                                                            </value>
-                                                            </block>
-                                                          </next>
-                                                        </block>
-                                                      </next>
-                                                    </block>
-                                                  </next>
-                                                </block>
-                                              </next>
-                                            </block>
-                                          </next>
-                                        </block>
-                                      </next>
                                     </block>
                                   </next>
                                 </block>
                               </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_createNewSprite" disabled-reasons="ORPHANED" x="533" y="197">
+          <field name="NAME" id="y.k{y^@L5/J4KC8JOUSO">Die1</field>
+          <field name="COSTUME">"dieRed1"</field>
+          <value name="LOCATION">
+            <block type="gamelab_location_picker">
+              <field name="LOCATION">{"x":110,"y":120}</field>
+            </block>
+          </value>
+          <next>
+            <block type="gamelab_createNewSprite" disabled-reasons="ORPHANED">
+              <field name="NAME" id="*bwUIgam]yqliB@J}i=(">Die2</field>
+              <field name="COSTUME">"dieRed1"</field>
+              <value name="LOCATION">
+                <block type="gamelab_location_picker">
+                  <field name="LOCATION">{"x":260,"y":197}</field>
+                </block>
+              </value>
+              <next>
+                <block type="gamelab_createNewSprite" disabled-reasons="ORPHANED">
+                  <field name="NAME" id="o%Gf]w6X~I1cV0-KtV+5">Die3</field>
+                  <field name="COSTUME">"dieRed1"</field>
+                  <value name="LOCATION">
+                    <block type="gamelab_location_picker">
+                      <field name="LOCATION">{"x":273,"y":289}</field>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="gamelab_setProp" disabled-reasons="ORPHANED">
+                      <field name="PROPERTY">"scale"</field>
+                      <value name="SPRITE">
+                        <block type="sprite_variables_get">
+                          <field name="VAR" id="y.k{y^@L5/J4KC8JOUSO">Die1</field>
+                        </block>
+                      </value>
+                      <value name="VAL">
+                        <block type="math_number">
+                          <field name="NUM">75</field>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="gamelab_setProp" disabled-reasons="ORPHANED">
+                          <field name="PROPERTY">"scale"</field>
+                          <value name="SPRITE">
+                            <block type="sprite_variables_get">
+                              <field name="VAR" id="*bwUIgam]yqliB@J}i=(">Die2</field>
+                            </block>
+                          </value>
+                          <value name="VAL">
+                            <block type="math_number">
+                              <field name="NUM">75</field>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="gamelab_setProp" disabled-reasons="ORPHANED">
+                              <field name="PROPERTY">"scale"</field>
+                              <value name="SPRITE">
+                                <block type="sprite_variables_get">
+                                  <field name="VAR" id="o%Gf]w6X~I1cV0-KtV+5">Die3</field>
+                                </block>
+                              </value>
+                              <value name="VAL">
+                                <block type="math_number">
+                                  <field name="NUM">75</field>
+                                </block>
+                              </value>
                             </block>
                           </next>
                         </block>
@@ -1588,25 +1586,25 @@
             </block>
           </next>
         </block>
-        <block type="gamelab_location_picker" disabled-reasons="MANUALLY_DISABLED" x="1217" y="1044">
+        <block type="gamelab_location_picker" disabled-reasons="MANUALLY_DISABLED,ORPHANED" x="1636" y="2181">
           <field name="LOCATION">{"x":169,"y":245}</field>
         </block>
-        <block type="gamelab_location_picker" disabled-reasons="MANUALLY_DISABLED" x="1381" y="1080">
+        <block type="gamelab_location_picker" disabled-reasons="MANUALLY_DISABLED,ORPHANED" x="1636" y="2219">
           <field name="LOCATION">{"x":234,"y":358}</field>
         </block>
-        <block type="gamelab_location_picker" disabled-reasons="MANUALLY_DISABLED" x="1370" y="1086">
+        <block type="gamelab_location_picker" disabled-reasons="MANUALLY_DISABLED,ORPHANED" x="1636" y="2257">
           <field name="LOCATION">{"x":234,"y":358}</field>
         </block>
-        <block type="gamelab_location_picker" disabled-reasons="MANUALLY_DISABLED" x="1382" y="1113">
+        <block type="gamelab_location_picker" disabled-reasons="MANUALLY_DISABLED,ORPHANED" x="1636" y="2295">
           <field name="LOCATION">{"x":234,"y":358}</field>
         </block>
-        <block type="gamelab_location_picker" disabled-reasons="MANUALLY_DISABLED" x="1385" y="1171">
+        <block type="gamelab_location_picker" disabled-reasons="MANUALLY_DISABLED,ORPHANED" x="1636" y="2333">
           <field name="LOCATION">{"x":234,"y":358}</field>
         </block>
-        <block type="gamelab_location_picker" disabled-reasons="MANUALLY_DISABLED" x="1268" y="1761">
+        <block type="gamelab_location_picker" disabled-reasons="MANUALLY_DISABLED,ORPHANED" x="1636" y="2371">
           <field name="LOCATION">{"x":246,"y":207}</field>
         </block>
-        <block type="gamelab_location_picker" disabled-reasons="MANUALLY_DISABLED" x="1276" y="1763">
+        <block type="gamelab_location_picker" disabled-reasons="MANUALLY_DISABLED,ORPHANED" x="1636" y="2409">
           <field name="LOCATION">{"x":234,"y":358}</field>
         </block>
       </xml>

@@ -36,6 +36,7 @@ class Weblab2 < Level
     initial_view_mode
     disable_edit_run_for_submission
     predict_settings
+    available_ai_tutor_modes
     level_system_prompt
   )
 
@@ -51,6 +52,10 @@ class Weblab2 < Level
 
   def self.view_modes
     [['Code + Preview (default)', 'split'], ['Preview only', 'preview'], ['Code only', 'code']]
+  end
+
+  def self.ai_tutor_modes
+    [['Suggest', 'suggest'], ['Outline', 'outline'], ['Guide', 'guide'], ['Produce', 'produce']]
   end
 
   def uses_lab2?
