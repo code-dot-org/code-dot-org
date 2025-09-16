@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-07-23 18:17:49 UTC",
+    "serialized_at": "2025-09-15 23:25:36 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -5602,12 +5602,6 @@
       "seeding_key": {
         "lesson.key": "Safety in My Online Neighborhood",
         "resource.key": "safety_in_my_online_neighborhood_safety_it_rules_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sequencing with Scrat",
-        "resource.key": "20_20_20_rule"
       }
     },
     {
