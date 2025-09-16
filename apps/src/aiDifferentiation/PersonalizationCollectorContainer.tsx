@@ -56,7 +56,7 @@ const PersonalizationCollectorContainer: React.FC = () => {
             console.log('change'); // some sort of "save to object function needed"
           }}
         />
-        <BodyOneText>years!</BodyOneText>
+        <BodyOneText className={style.bodyText}>years!</BodyOneText>
       </div>
     );
   }, []);
@@ -98,7 +98,6 @@ const PersonalizationCollectorContainer: React.FC = () => {
   const confidenceAnswer = React.useCallback(() => {
     const handleButtonClick = (index: number) => {
       setSelectedConfidence(index);
-      console.log('Selected confidence:', index);
     };
 
     const determineColor = (index: number) => {
@@ -191,10 +190,8 @@ const PersonalizationCollectorContainer: React.FC = () => {
     const handleGoalToggle = (index: number) => {
       setSelectedGoals(prev => {
         if (prev.includes(index)) {
-          // Remove the index if it's already selected
           return prev.filter(i => i !== index);
         } else {
-          // Add the index if it's not selected
           return [...prev, index];
         }
       });
@@ -206,7 +203,6 @@ const PersonalizationCollectorContainer: React.FC = () => {
       setOtherGoalText(event.target.value);
     };
 
-    // Find the index of "Other" option
     const otherIndex = TEACHER_GOAL_PROMPT.choices.findIndex(
       choice => choice === 'Other'
     );
@@ -249,10 +245,8 @@ const PersonalizationCollectorContainer: React.FC = () => {
     const handleSupportToggle = (index: number) => {
       setSelectedSupports(prev => {
         if (prev.includes(index)) {
-          // Remove the index if it's already selected
           return prev.filter(i => i !== index);
         } else {
-          // Add the index if it's not selected
           return [...prev, index];
         }
       });
@@ -264,7 +258,6 @@ const PersonalizationCollectorContainer: React.FC = () => {
       setOtherSupportText(event.target.value);
     };
 
-    // Find the index of "Other" option
     const otherIndex = SUPPORT_PREFERENCES_PROMPT.choices.findIndex(
       choice => choice === 'Other'
     );
