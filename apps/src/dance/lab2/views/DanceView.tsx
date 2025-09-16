@@ -114,12 +114,7 @@ const DanceView: React.FunctionComponent<{
     levelProperties.aiCodeGenerate || queryParams('ai-generate') === 'true';
   const usingMusicProject = queryParams('music-channel') || aiGenerateMode;
 
-  const {setTheme} = useTheme();
-  useEffect(() => {
-    if (aiGenerateMode) {
-      setTheme('Dark');
-    }
-  }, [setTheme, aiGenerateMode]);
+  const {theme} = useTheme();
 
   const metadataToUse: SongMetadata | undefined = useMemo(() => {
     if (!musicProjectPlayer.current || !loadedMusicProject) {
@@ -315,13 +310,13 @@ const DanceView: React.FunctionComponent<{
 
     workspace.current = Blockly.inject(blocklyDiv, {
       toolbox: aiGenerateMode ? undefined : toolbox,
-      theme: aiGenerateMode ? cdoDark : cdoTheme,
+      theme: theme === 'Dark' ? cdoDark : cdoTheme,
       readOnly: readonlyWorkspace,
       editBlocks: getAppOptionsEditBlocks(),
     } as BlocklyOptions);
 
     return () => workspace.current?.dispose();
-  }, [dispatch, readonlyWorkspace, levelProperties, aiGenerateMode]);
+  }, [dispatch, readonlyWorkspace, levelProperties, aiGenerateMode, theme]);
 
   useEffect(() => {
     if (!workspace.current) {
