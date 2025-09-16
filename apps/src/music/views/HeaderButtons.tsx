@@ -221,6 +221,7 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
           </button>
         </>
       )}
+      {/* Settings Button */}
       {!experiments.isEnabledAllowingQueryString(
         experiments.LAB2_RESOURCE_PANEL
       ) ? (
@@ -247,6 +248,7 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
             )}
         </>
       )}
+      {/* Skip to Project Button */}
       {skipUrl && (
         <Button
           text={commonI18n.skipToProject()}
