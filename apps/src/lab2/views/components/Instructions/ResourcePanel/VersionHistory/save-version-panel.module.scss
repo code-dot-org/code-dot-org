@@ -3,14 +3,14 @@
   border-left: 1px solid var(--borders-neutral-primary);
 }
 
-.publishCurrentVersionHeader {
+.saveCurrentVersionHeader {
   display: flex;
   justify-content: space-between;
   align-items: stretch;
   background: var(--background-neutral-secondary);
 }
 
-.publishCurrentVersionHeaderText {
+.saveCurrentVersionHeaderText {
   flex: 1;
   text-align: center;
   margin: 0;
@@ -27,13 +27,13 @@
   }
 }
 
-.publishCurrentVersionDescription {
+.saveCurrentVersionDescription {
   padding: 6px 12px 12px 12px;
   background-color: var(--background-neutral-secondary);
   border-top: 1px solid var(--borders-neutral-primary);
 }
 
-.publishCurrentVersionDescriptionInput {
+.saveCurrentVersionDescriptionInput {
   width: 100%;
   box-sizing: border-box;
 }

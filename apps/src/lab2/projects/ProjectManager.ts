@@ -486,8 +486,9 @@ export default class ProjectManager {
       }
       this.lastSource = JSON.stringify(this.sourcesToSave);
 
-      // If we created a new version (not replacing existing), then the new version won't have a comment.
-      // For context, a comment is added to the new version after the project is saved (see PublishVersionPanel.tsx).
+      // If we created a new version (not replacing existing), then we reset the new version to not yet have a comment.
+      // If the user manually saves the version, then the comment is added after the project is saved.
+      // See SaveVersionPanel.tsx.
       if (forceNewVersion || this.getCurrentVersionHasComment()) {
         this.setCurrentVersionHasComment(false);
       }

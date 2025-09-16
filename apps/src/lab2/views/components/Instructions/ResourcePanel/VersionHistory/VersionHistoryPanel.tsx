@@ -28,7 +28,7 @@ import {commonI18n} from '@cdo/apps/types/locale';
 import currentLocale from '@cdo/apps/util/currentLocale';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import PublishVersionPanel from './PublishVersionPanel';
+import SaveVersionPanel from './SaveVersionPanel';
 import VersionHistoryRow from './VersionHistoryRow';
 
 import moduleStyles from './version-history-panel.module.scss';
@@ -400,7 +400,7 @@ const VersionHistoryPanel: React.FunctionComponent<
         </div>
       )}
       {isLatestVersion(selectedVersion) && (
-        <PublishVersionPanel
+        <SaveVersionPanel
           projectSources={projectSources}
           onSuccess={() => successfulProjectResetCleanUp(true)}
           versionLoading={versionLoading}

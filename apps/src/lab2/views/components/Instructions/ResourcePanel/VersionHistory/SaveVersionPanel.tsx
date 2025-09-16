@@ -1,4 +1,3 @@
-// PublishVersionPanel.tsx
 import {Button} from '@code-dot-org/component-library/button';
 import {OverlineTwoText} from '@code-dot-org/component-library/typography';
 import React, {useCallback, useState} from 'react';
@@ -7,19 +6,18 @@ import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import lab2I18n from '@cdo/apps/lab2/locale';
 import {setAndSaveProjectSources} from '@cdo/apps/lab2/redux/lab2ProjectReduxThunks';
 import {ProjectSources} from '@cdo/apps/lab2/types';
-import {commonI18n} from '@cdo/apps/types/locale';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import moduleStyles from './publish-version-panel.module.scss';
+import moduleStyles from './save-version-panel.module.scss';
 
-interface PublishVersionPanelProps {
+interface SaveVersionPanelProps {
   projectSources: ProjectSources | undefined;
   onSuccess: () => void;
   versionLoading: boolean;
 }
 
-const PublishVersionPanel: React.FC<PublishVersionPanelProps> = ({
+const SaveVersionPanel: React.FC<SaveVersionPanelProps> = ({
   projectSources,
   onSuccess,
   versionLoading,
@@ -28,7 +26,7 @@ const PublishVersionPanel: React.FC<PublishVersionPanelProps> = ({
   const channelId = useAppSelector(state => state.lab.channel?.id);
   const dispatch = useAppDispatch();
 
-  const onPublishVersion = useCallback(async () => {
+  const onSaveVersion = useCallback(async () => {
     if (!projectSources) return;
     const projectManager = Lab2Registry.getInstance().getProjectManager();
     if (!projectManager) {
@@ -78,15 +76,15 @@ const PublishVersionPanel: React.FC<PublishVersionPanelProps> = ({
 
   return (
     <div className={moduleStyles.footerPanel}>
-      <div className={moduleStyles.publishCurrentVersionHeader}>
-        <div className={moduleStyles.publishCurrentVersionHeaderText}>
+      <div className={moduleStyles.saveCurrentVersionHeader}>
+        <div className={moduleStyles.saveCurrentVersionHeaderText}>
           <OverlineTwoText className={moduleStyles.overlineTwoText}>
-            {lab2I18n.publishCurrentVersion()}
+            {lab2I18n.saveCurrentVersion()}
           </OverlineTwoText>
         </div>
       </div>
-      <div className={moduleStyles.publishCurrentVersionDescription}>
-        <div className={moduleStyles.publishCurrentVersionDescriptionInput}>
+      <div className={moduleStyles.saveCurrentVersionDescription}>
+        <div className={moduleStyles.saveCurrentVersionDescriptionInput}>
           <div className={moduleStyles.label}>
             {lab2I18n.describeYourChanges()}
           </div>
@@ -97,11 +95,11 @@ const PublishVersionPanel: React.FC<PublishVersionPanelProps> = ({
           />
         </div>
         <Button
-          id="publish-version-button"
+          id="save-version-button"
           size="s"
           className={moduleStyles.versionButton}
-          text={commonI18n.publish()}
-          onClick={onPublishVersion}
+          text={lab2I18n.saveVersion()}
+          onClick={onSaveVersion}
           disabled={versionLoading || commitDescription.trim() === ''}
         />
       </div>
@@ -109,4 +107,4 @@ const PublishVersionPanel: React.FC<PublishVersionPanelProps> = ({
   );
 };
 
-export default PublishVersionPanel;
+export default SaveVersionPanel;
