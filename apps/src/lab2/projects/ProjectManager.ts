@@ -195,7 +195,7 @@ export default class ProjectManager {
    * If a save is already enqueued, update this.sourceToSave with the given source.
    * @param sources ProjectSources: the source to save.
    * @param forceSave boolean: if the save should happen immediately
-   * @param forceNewVersion boolean: if the save should create a new version initiated by the user
+   * @param forceNewVersion boolean: if the save should create a new version
    * @returns a promise that resolves to a Response. If the save is successful, the response
    * will be empty, otherwise it will contain failure information.
    */
@@ -430,7 +430,7 @@ export default class ProjectManager {
    * Only if the source save succeeds do we update the channel, as the
    * channel is metadata about the project and we don't want to save it unless the source
    * save succeeded.
-   * @param forceNewVersion boolean: If the save should create a new version initiated by the user.
+   * @param forceNewVersion boolean: If the save should create a new version
    * @returns a Promise<void> that resolves when the save is complete or when the save fails.
    * Listeners are notified of save status throughout the process.
    */
@@ -463,23 +463,12 @@ export default class ProjectManager {
     }
     // Only save the source if it has changed.
     if (this.sourcesToSave && sourceChanged) {
-      // forceNewVersion is true if the user published the version or restored a version to initial state.
-      let shouldForceNewVersion = forceNewVersion;
-      // Check if we need to force a new version to preserve a commented version.
-      if (
-        !forceNewVersion &&
-        sourceChanged &&
-        this.getCurrentVersionHasComment()
-      ) {
-        shouldForceNewVersion = true;
-      }
-
       try {
         await this.sourcesStore.save(
           this.channelId,
           this.sourcesToSave,
           this.lastChannel.projectType,
-          shouldForceNewVersion
+          forceNewVersion || this.getCurrentVersionHasComment() // Force new version if the last saved version has a comment and sources have changed.
         );
         if (this.thumbnailPngBlob) {
           await this.saveThumbnail();
@@ -497,9 +486,9 @@ export default class ProjectManager {
       }
       this.lastSource = JSON.stringify(this.sourcesToSave);
 
-      // If we created a new version (not replacing existing) and the new version was not initiated by the user,
-      // i.e., it was created by autosave, then the new version won't have a comment.
-      if (shouldForceNewVersion && !forceNewVersion) {
+      // If we created a new version (not replacing existing), then the new version won't have a comment.
+      // For context, a comment is added to the new version after the project is saved (see PublishVersionPanel.tsx).
+      if (forceNewVersion || this.getCurrentVersionHasComment()) {
         this.setCurrentVersionHasComment(false);
       }
     }

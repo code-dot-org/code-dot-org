@@ -180,7 +180,7 @@ const VersionHistoryPanel: React.FunctionComponent<
     listLoaded,
   ]);
 
-  const successfulRestoreCleanUp = useCallback(
+  const successfulProjectResetCleanUp = useCallback(
     (published = false) => {
       dispatch(setViewingOldVersion(false));
       dispatch(setRestoredOldVersion(!published));
@@ -199,8 +199,8 @@ const VersionHistoryPanel: React.FunctionComponent<
         /* forceNewVersion */ true
       )
     );
-    successfulRestoreCleanUp();
-  }, [dispatch, startSources, successfulRestoreCleanUp]);
+    successfulProjectResetCleanUp();
+  }, [dispatch, startSources, successfulProjectResetCleanUp]);
 
   const confirmStartOver = useCallback(() => {
     dialogControl?.showDialog({
@@ -231,7 +231,7 @@ const VersionHistoryPanel: React.FunctionComponent<
         .then(sources => {
           if (sources) {
             dispatch(setProjectSource(sources));
-            successfulRestoreCleanUp();
+            successfulProjectResetCleanUp();
           } else {
             setVersionLoadError(true);
           }
@@ -247,7 +247,7 @@ const VersionHistoryPanel: React.FunctionComponent<
     appName,
     confirmStartOver,
     dispatch,
-    successfulRestoreCleanUp,
+    successfulProjectResetCleanUp,
   ]);
 
   const isLatestVersion = useCallback(
@@ -402,7 +402,7 @@ const VersionHistoryPanel: React.FunctionComponent<
       {isLatestVersion(selectedVersion) && (
         <PublishVersionPanel
           projectSources={projectSources}
-          onSuccess={() => successfulRestoreCleanUp(true)}
+          onSuccess={() => successfulProjectResetCleanUp(true)}
           versionLoading={versionLoading}
         />
       )}
