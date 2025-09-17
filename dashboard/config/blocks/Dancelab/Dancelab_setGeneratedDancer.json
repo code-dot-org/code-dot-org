@@ -11,12 +11,52 @@
         "name": "NAME",
         "options": [
           [
-            "Double Down",
-            "\"dancer-moose-rightscale\""
+            "Body Roll",
+            "\"roll\""
           ],
           [
-            "Double Down (wrong scale)",
-            "\"dancer-moose-wrongscale\""
+            "Clap High",
+            "\"clap_high\""
+          ],
+          [
+            "Dab",
+            "\"dab\""
+          ],
+          [
+            "Double Down",
+            "\"double_jam\""
+          ],
+          [
+            "Drop",
+            "\"drop\""
+          ],
+          [
+            "Floss",
+            "\"floss\""
+          ],
+          [
+            "Fresh",
+            "\"fresh\""
+          ],
+          [
+            "Gangnam",
+            "\"clown\""
+          ],
+          [
+            "Star",
+            "\"kick\""
+          ],
+          [
+            "This or That",
+            "\"this_or_that\""
+          ],
+          [
+            "Zombie",
+            "\"thriller\""
+          ],
+          [
+            "None",
+            "\"rest\""
           ]
         ]
       }
