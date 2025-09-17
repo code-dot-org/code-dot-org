@@ -1,5 +1,7 @@
 import React, {useCallback, useEffect, useState} from 'react';
 
+import experiments from '@cdo/apps/util/experiments';
+
 import HttpClient from '../util/HttpClient';
 
 import AiDiffChat from './AiDiffChat';
@@ -117,7 +119,7 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
         showNotifications={showNotifications}
         unreadNotificationCount={unreadNotificationCount}
       />
-      {showNotifications ? (
+      {showNotifications && experiments.isEnabled('teacher-notifications') ? (
         <AiDiffNotificationList aiPromptClick={aiPromptOutsideChatClicked} />
       ) : (
         <AiDiffChat
