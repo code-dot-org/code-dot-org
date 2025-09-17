@@ -859,6 +859,42 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_equal 0, @teacher.scripts.size
   end
 
+  test 'creating a section creates a UserScript for the teacher' do
+    sign_in @teacher
+    assert_equal 0, @teacher.user_scripts.count
+
+    post :create, params: {
+      login_type: Section::LOGIN_TYPE_EMAIL,
+      participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+      course_version_id: @preview_course.course_version.id,
+      unit_id: @script.id,
+    }
+    assert_response :success
+    assert_equal 1, @teacher.user_scripts.count
+    user_script = @teacher.user_scripts.first
+    assert_equal @script, user_script.script
+    assert_equal @preview_course, user_script.unit_group
+  end
+
+  test 'creating a section in modular course creates a UserScript for the teacher' do
+    sign_in @teacher
+    assert_equal 0, @teacher.user_scripts.count
+    other_course = create(:single_unit_course, :stable, unit: @script)
+    CourseOffering.add_course_offering(other_course)
+
+    post :create, params: {
+      login_type: Section::LOGIN_TYPE_EMAIL,
+      participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+      course_version_id: other_course.course_version.id,
+      unit_id: @script.id,
+    }
+    assert_response :success
+    assert_equal 1, @teacher.user_scripts.count
+    user_script = @teacher.user_scripts.first
+    assert_equal @script, user_script.script
+    assert_equal other_course, user_script.unit_group
+  end
+
   test "update: can update section you own" do
     UnitGroup.stubs(:course_assignable?).returns(true)
 
@@ -1128,14 +1164,31 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     section = create(:section, user: @teacher, script_id: @csp_script.id)
     student = create(:follower, section: section).student_user
 
-    assert_nil UserScript.find_by(script: @script, user: student)
+    assert_nil UserScript.find_by(user: student, script: @script)
 
     post :update, params: {
       id: section.id,
       course_version_id: @preview_course.course_version.id
     }
 
-    refute_nil UserScript.find_by(script: @script, user: student)
+    refute_nil UserScript.find_by(user: student, script: @script, unit_group: @preview_course)
+  end
+
+  test "update: creates UserScript with modular course for students" do
+    sign_in @teacher
+    section = create(:section, user: @teacher, script_id: @csp_script.id)
+    student = create(:follower, section: section).student_user
+    other_course = create(:single_unit_course, :stable, unit: @script)
+    CourseOffering.add_course_offering(other_course)
+
+    assert_nil UserScript.find_by(user: student, script: @script)
+
+    post :update, params: {
+      id: section.id,
+      course_version_id: other_course.course_version.id
+    }
+
+    refute_nil UserScript.find_by(user: student, script: @script, unit_group: other_course)
   end
 
   test 'logged out cannot delete a section' do
