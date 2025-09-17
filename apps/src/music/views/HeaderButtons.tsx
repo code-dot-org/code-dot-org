@@ -75,7 +75,8 @@ const IconButton: React.FunctionComponent<IconButtonProps> = memo(
       ) => {
         onClick();
         // Adding this to prevent focus from jumping to the next button
-        // when a button is disabled after click (e.g. undo/redo)
+        // and showing its tooltip when a button is disabled after click.
+        // This moves focus to the container div instead.
         setTimeout(() => {
           if (containerRef.current) {
             containerRef.current.focus();
