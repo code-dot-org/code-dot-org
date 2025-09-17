@@ -2390,6 +2390,70 @@ class UserTest < ActiveSupport::TestCase
     assert_equal 100, user_level.best_result
   end
 
+  test 'track_level_progress creates UserScript object with implicit unit group' do
+    user = create(:user)
+    script_level = create(:script_level)
+    unit = script_level.script
+
+    assert_difference('UserScript.count', 1) do
+      User.track_level_progress(
+        user_id: user.id,
+        level_id: script_level.level_id,
+        script_id: script_level.script_id,
+        new_result: 100,
+        submitted: false,
+        level_source_id: nil,
+        unit_group: nil
+      )
+    end
+
+    user_script = UserScript.find_by!(user: user, script: unit)
+    assert_equal unit.original_unit_group.id, user_script.unit_group_id
+  end
+
+  test 'track_level_progress creates UserScript object with original unit group' do
+    user = create(:user)
+    script_level = create(:script_level)
+    unit = script_level.script
+
+    assert_difference('UserScript.count', 1) do
+      User.track_level_progress(
+        user_id: user.id,
+        level_id: script_level.level_id,
+        script_id: script_level.script_id,
+        new_result: 100,
+        submitted: false,
+        level_source_id: nil,
+        unit_group: unit.original_unit_group
+      )
+    end
+
+    user_script = UserScript.find_by!(user: user, script: unit)
+    assert_equal unit.original_unit_group.id, user_script.unit_group_id
+  end
+
+  test 'track_level_progress creates UserScript object with other unit group' do
+    user = create(:user)
+    script_level = create(:script_level)
+    unit = script_level.script
+    other_unit_group = create(:single_unit_course, unit: unit)
+
+    assert_difference('UserScript.count', 1) do
+      User.track_level_progress(
+        user_id: user.id,
+        level_id: script_level.level_id,
+        script_id: script_level.script_id,
+        new_result: 100,
+        submitted: false,
+        level_source_id: nil,
+        unit_group: other_unit_group
+      )
+    end
+
+    user_script = UserScript.find_by!(user: user, script: unit)
+    assert_equal other_unit_group.id, user_script.unit_group_id
+  end
+
   test 'student and teacher relationships' do
     teacher = create(:teacher)
     student = create(:student)

@@ -1761,8 +1761,8 @@ class User < ApplicationRecord
     end
 
     if new_level_completed && script_id
-      unit_group_id = script.get_original_unit_group&.id
-      User.track_script_progress(user_id, script_id, unit_group_id)
+      unit_group ||= script.get_original_unit_group
+      User.track_script_progress(user_id, script_id, unit_group&.id)
     end
 
     if new_csf_level_perfected && pairing_user_ids.blank? && !is_navigator
