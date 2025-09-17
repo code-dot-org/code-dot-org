@@ -321,16 +321,12 @@ class Ability
       if unit_group
         can?(:read, unit_group)
       else
-        if script.can_be_participant?(user) || script.can_be_instructor?(user)
-          if script.in_development?
-            user.levelbuilder?
-          elsif script.pilot?
-            script.has_pilot_access?(user)
-          else
-            true
-          end
+        if script.in_development?
+          user.levelbuilder?
+        elsif script.pilot?
+          script.has_pilot_access?(user)
         else
-          false
+          true
         end
       end
     end

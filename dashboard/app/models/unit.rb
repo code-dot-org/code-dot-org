@@ -1681,10 +1681,14 @@ class Unit < ApplicationRecord
     get_original_unit_group&.course_version
   end
 
+  def get_professional_learning_course
+    UnitGroup.find_by_name(professional_learning_course)
+  end
+
   # If a script is in a unit group, use that unit group's published state
   # Otherwise, default to in_development
   def get_published_state(unit_group: get_original_unit_group)
-    unit_group = UnitGroup.find_by_name(professional_learning_course) if old_professional_learning_course?
+    unit_group ||= get_professional_learning_course if old_professional_learning_course?
     unit_group&.published_state || Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development
   end
 
@@ -1815,6 +1819,21 @@ class Unit < ApplicationRecord
   # Whether this particular user has the pilot experiment enabled.
   def has_pilot_experiment?(user)
     user.has_pilot_experiment?(get_pilot_experiment)
+  end
+
+  def can_be_instructor?(user, unit_group: get_original_unit_group)
+    unit_group ||= get_professional_learning_course if old_professional_learning_course?
+    unit_group&.can_be_instructor?(user)
+  end
+
+  def can_be_participant?(user, unit_group: get_original_unit_group)
+    unit_group ||= get_professional_learning_course if old_professional_learning_course?
+    unit_group&.can_be_participant?(user)
+  end
+
+  def pl_course?(unit_group: get_original_unit_group)
+    unit_group ||= get_professional_learning_course if old_professional_learning_course?
+    unit_group&.pl_course?
   end
 
   # returns true if the user is a levelbuilder, or a teacher with any pilot
