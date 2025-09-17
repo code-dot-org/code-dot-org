@@ -88,9 +88,9 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
     );
 
     if (result.length > 1 && result[1].status === AiInteractionStatus.OK) {
-      const psuedocode = result[1].chatMessageText.replaceAll('```', '');
+      const pseudocode = result[1].chatMessageText.replaceAll('```', '');
       console.log('AI code generated.');
-      return psuedocode;
+      return pseudocode;
     } else {
       console.error('Error getting AI response.');
     }
@@ -110,14 +110,14 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
     const startTime = Date.now();
     try {
       const response = await HttpClient.get(cacheFilePath);
-      const psuedocode = await response.text();
+      const pseudocode = await response.text();
 
       const elapsedTime = Date.now() - startTime;
       const delayDuration = 2000; // 2 seconds.
       const remainingDelayDuration = Math.max(delayDuration - elapsedTime, 0);
       await new Promise(res => setTimeout(res, remainingDelayDuration));
 
-      return psuedocode;
+      return pseudocode;
     } catch (error) {
       console.error('Error retrieving cached code.');
     }
@@ -126,12 +126,12 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
   const generateSong = useCallback(async () => {
     dispatch(setAiGenerateState('generating'));
 
-    const psuedocode = await (useCache
+    const pseudocode = await (useCache
       ? generateSongCache()
       : generateSongAi());
 
-    if (psuedocode) {
-      const resultBlockly = generateBlocklyJson(psuedocode);
+    if (pseudocode) {
+      const resultBlockly = generateBlocklyJson(pseudocode);
       dispatch(setCodeToLoad(resultBlockly));
     }
 
