@@ -32,7 +32,7 @@ Scenario: School Info Confirmation Dialog
   And I press keys "31513" for element "#uitest-school-zip"
   Then I wait until element "#uitest-school-dropdown" contains text "Appling County High School"
   And I select the "Appling County High School" option in dropdown "uitest-school-dropdown"
-  Then I press "#save-button" using jQuery
+  Then I click selector "button:contains(Save)"
   And I wait until element "#ui-test-drawer-toolbar" is gone
 
   # One week later, the teacher does not see the prompt
@@ -44,7 +44,7 @@ Scenario: School Info Confirmation Dialog
   And one year passes for user "Teacher_Chuba"
   Then I reload the page
   And element "#ui-test-drawer-toolbar" is visible
-  Then I press "#yes-button" using jQuery
+  Then I click selector "button:contains(I'm still teaching here)"
   And I wait until element "#ui-test-drawer-toolbar" is gone
 
   # One week later, the teacher does not see the prompt
