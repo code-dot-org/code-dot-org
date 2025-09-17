@@ -6,7 +6,6 @@ import classNames from 'classnames';
 import React, {useEffect, useMemo, useState} from 'react';
 
 import {ChatButtonData, SystemPromptSettings} from '@cdo/apps/aichat/types';
-import {AiTutorContext} from '@cdo/apps/aiTutor/types';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {ProjectSources} from '@cdo/apps/lab2/types';
@@ -26,7 +25,7 @@ import CopyrightButton from './CopyrightButton';
 import ResourcePanelExtraLinks from './ResourcePanelExtraLinks';
 import SettingsPanel from './SettingsPanel';
 import ValidationPanel from './ValidationPanel';
-import {VersionHistoryPanel} from './VersionHistory';
+import VersionHistoryPanel from './VersionHistoryPanel';
 
 import styles from './styles.module.scss';
 
@@ -75,7 +74,7 @@ const tabInfo: {[key in Tabs]: {title: string; icon: string}} = {
 type ResourcePanelProps = InstructionsProps & {
   className?: string;
   headerClassName?: string;
-  aiTutorContextPromise?: Promise<AiTutorContext>;
+  hiddenContextCallback?: () => Promise<string>;
   rightHeaderContent?: React.ReactNode;
   includeFooterSpacing?: boolean;
   settings?: Setting[];
@@ -91,7 +90,7 @@ type ResourcePanelProps = InstructionsProps & {
 const ResourcePanel: React.FC<ResourcePanelProps> = ({
   className,
   headerClassName,
-  aiTutorContextPromise,
+  hiddenContextCallback,
   rightHeaderContent,
   includeFooterSpacing = true,
   settings,
@@ -154,11 +153,11 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     if (
       (levelProperties.aiTutorAvailable ||
         queryParams('show-ai-tutor2') === 'true') &&
-      aiTutorContextPromise
+      hiddenContextCallback
     ) {
       tabMap[Tabs.AiTutor] = (
         <AiTutor2Chat
-          aiTutorContextPromise={aiTutorContextPromise}
+          hiddenContextCallback={hiddenContextCallback}
           aiTutorSystemPromptSettings={aiTutorSystemPromptSettings}
           aiTutorMultimodalEnabled={aiTutorMultimodalEnabled}
           levelName={levelName}
@@ -196,7 +195,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     instructionsProps,
     hasValidationConditions,
     isUserTeacher,
-    aiTutorContextPromise,
+    hiddenContextCallback,
     isReadOnly,
     isViewingOldVersion,
     viewAsUserId,

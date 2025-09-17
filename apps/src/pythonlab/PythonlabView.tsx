@@ -31,10 +31,8 @@ import {
 } from '@cdo/apps/util/reduxHooks';
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
-import {AiTutorContext} from '../aiTutor/types';
 import CodebridgeRegistry from '../codebridge/CodebridgeRegistry';
 
-import getAiTutorContextPromise from './aiTutorHelper';
 import ProjectTypePicker from './components/ProjectTypePicker';
 import {
   DEFAULT_PROJECT,
@@ -42,6 +40,7 @@ import {
   STANDALONE_NEIGHBORHOOD_PROJECT,
   PYTHONLAB_EDITABLE_FILE_TYPES,
 } from './constants';
+import {AiTutorPythonLabContextHelper} from './helpers/aiTutorContextHelper';
 import HorizontalLayout from './layout/HorizontalLayout';
 import ShareView from './layout/ShareView';
 import VerticalLayout from './layout/VerticalLayout';
@@ -50,6 +49,8 @@ import PythonValidator from './progress/PythonValidator';
 import {handleRunClick, stopPythonCode} from './pyodideRunner';
 
 import moduleStyles from './pythonlab-view.module.scss';
+
+const aiTutorHelper = new AiTutorPythonLabContextHelper();
 
 const pythonlabLangMapping: {[key: string]: LanguageSupport} = {
   py: python(),
@@ -111,9 +112,6 @@ const PythonlabView: React.FunctionComponent<
       queryParams('show-ai-tutor2') === 'true'
     );
   }, [levelProperties.aiTutorAvailable]);
-
-  const [aiTutorContextPromise, setAiTutorContextPromise] =
-    useState<Promise<AiTutorContext>>();
 
   const dispatch = useAppDispatch();
 
@@ -190,21 +188,13 @@ const PythonlabView: React.FunctionComponent<
   );
 
   useEffect(() => {
-    // TODO: This log is a bit chatty, but useful while we're working on this feature.
-    // remove once tutor context is more stable, or if it gets annoying.
-    console.log(`🤖: Tutor context updated:`, aiTutorContextPromise);
-  }, [aiTutorContextPromise]);
-
-  useEffect(() => {
     if (isAiTutor2Enabled) {
-      setAiTutorContextPromise(
-        getAiTutorContextPromise(
-          source,
-          validationFile,
-          levelProperties.longInstructions,
-          miniAppName
-        )
-      );
+      aiTutorHelper.setAiTutorContext({
+        source,
+        miniAppName,
+        validationFile,
+        longInstructions: levelProperties.longInstructions,
+      });
     }
   }, [
     levelProperties.longInstructions,
@@ -257,7 +247,7 @@ const PythonlabView: React.FunctionComponent<
           sendConsoleInput={sendInput}
           levelProperties={levelProperties}
           projectPickerSettings={projectPickerSettings}
-          aiTutorContextPromise={aiTutorContextPromise}
+          hiddenContextCallback={aiTutorHelper.getHiddenContextCallback()}
         />
       )}
       {showProjectPickerModal && (

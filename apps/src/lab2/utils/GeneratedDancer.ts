@@ -7,7 +7,7 @@ const getGeneratedDancerAssets = async (
   variant: number
 ) => {
   const joinedChoices = choices?.join('-');
-  const cacheFilePath = `${baseAssetUrl}generate/dancer/${adlibOption}-${joinedChoices}-${variant
+  const cacheFilePath = `${baseAssetUrl}generate/dancer/${adlibOption}/${joinedChoices}-${variant
     .toString()
     .padStart(2, '0')}.png`;
 

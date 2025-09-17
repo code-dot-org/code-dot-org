@@ -2,3 +2,10 @@
 
 // Default border style
 $default-border: 1px solid var(--borders-neutral-primary);
+
+/** z-indices */
+
+// UI elements that float above main content but below overlays
+$z-index-floating-ui: 60;
+// Full screen overlays (e.g. loading screen)
+$z-index-overlay: 70;

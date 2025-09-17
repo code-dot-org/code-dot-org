@@ -62,8 +62,6 @@
   display: flex;
   flex-direction: column;
   min-height: 0;
-  border-left: 1px solid var(--borders-neutral-primary);
-  border-top: 1px solid var(--borders-neutral-primary);
 
   h1, h2, h3, h4 {
     color: var(--text-neutral-primary);
@@ -246,8 +244,4 @@
 
 .predictSummaryBubble {
   flex-shrink: 0; // Ensure the contents always fits in the bubble.
-}
-
-.bubble.bubbleNoBorderRadius {
-  border-radius: 0;
 }

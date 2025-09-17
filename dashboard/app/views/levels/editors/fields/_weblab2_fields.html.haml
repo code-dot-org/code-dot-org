@@ -35,3 +35,8 @@
         %strong Guide
       %li
         %strong Produce
+
+  .field
+    = f.label :level_system_prompt, 'Level System Prompt'
+    %p Optional addition to the system prompt for AI Tutor.
+    = f.text_area :level_system_prompt, placeholder: 'Level system prompt', rows: 4, style: 'width: 50%', value: @level.level_system_prompt

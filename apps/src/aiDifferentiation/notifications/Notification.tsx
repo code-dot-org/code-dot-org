@@ -88,13 +88,8 @@ const Notification: React.FC<NotificationProps> = ({
         <ol className={styles.links}>
           {notificationOrPlaceholder.hrefLinks?.length > 0 &&
             notificationOrPlaceholder.hrefLinks.map((link, index) => (
-              <li key={'url-' + index}>
-                <a
-                  href={link.url}
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  className={styles.hrefLink}
-                >
+              <li key={'url-' + index} className={styles.hrefLink}>
+                <a href={link.url} target="_blank" rel="noreferrer noopener">
                   {link.text}
                 </a>
               </li>

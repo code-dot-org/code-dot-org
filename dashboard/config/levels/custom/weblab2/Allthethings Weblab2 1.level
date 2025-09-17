@@ -7,7 +7,7 @@
   "user_id": 6959,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "Add **html** pages and preview them in the right pane.\r\n\r\nAdd **css** pages (and link them to your html).\r\n\r\nUse the file browser to add/rename/delete files, or to add/rename/delete folders (including hierarchically!)\r\n\r\nThis level uses AI Tutor \"Outline\" mode.",
+    "long_instructions": "Add **html** pages and preview them in the right pane.\r\n\r\nAdd **css** pages (and link them to your html).\r\n\r\nUse the file browser to add/rename/delete files, or to add/rename/delete folders (including hierarchically!)\r\n\r\nThis level uses AI Tutor \"Outline\" mode and is configured to end all responses with \"Have a good day!\"",
     "hide_share_and_remix": "false",
     "ai_tutor_available": true,
     "available_ai_tutor_modes": [
@@ -28,8 +28,9 @@
       ],
       "freeResponseHeight": 50,
       "codeEditableAfterSubmit": false
-    }
+    },
+    "level_system_prompt": "End all your responses with \"Have a good day!\""
   },
-  "audit_log": "[{\"changed_at\":\"2025-07-31 13:47:44 -0700\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"ben+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-11 12:30:41 -0700\",\"changed\":[\"long_instructions\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-07-31 13:47:44 -0700\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"ben+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-11 12:30:41 -0700\",\"changed\":[\"long_instructions\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-15 11:04:16 -0700\",\"changed\":[],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-16 13:54:36 -0700\",\"changed\":[\"long_instructions\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab2>

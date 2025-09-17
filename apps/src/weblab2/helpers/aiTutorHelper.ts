@@ -1,32 +1,6 @@
 import {FontAwesomeV6IconProps} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 
-import {AiTutorContext} from '@cdo/apps/aiTutor/types';
-import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
 import weblab2I18n from '@cdo/apps/weblab2/locale';
-
-// Return additional context for AiTutor2.
-export const getAiTutorContextPromise = (
-  source: MultiFileSource | undefined,
-  longInstructions: string | undefined
-): Promise<AiTutorContext> => {
-  if (!source) {
-    return Promise.resolve({});
-  }
-
-  const sourceCode = Object.entries(source.files)
-    .filter(
-      ([_, file]) =>
-        file.type !== ProjectFileType.VALIDATION &&
-        file.type !== ProjectFileType.SYSTEM_SUPPORT
-    )
-    .map(([_, file]) => file.contents)
-    .join('\n');
-
-  return Promise.resolve({
-    sourceCode,
-    longInstructions,
-  });
-};
 
 export const DEFAULT_AI_TUTOR_MODE = 'suggest';
 

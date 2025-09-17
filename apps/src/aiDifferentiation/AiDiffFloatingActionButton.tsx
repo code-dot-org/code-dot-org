@@ -10,8 +10,9 @@ import {
   trySetLocalStorage,
 } from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
+import aiFabWithIconBase from '@cdo/static/ai-bot-ta-base.png';
 import aiFabWithoutText from '@cdo/static/ai-bot-ta-no-text.png';
-import aiFabWithIcon from '@cdo/static/ai-bot-ta.png';
+import aiFabWithIconTag from '@cdo/static/ai-bot-ta-tag-cyan.png';
 
 import {EVENTS, PLATFORMS} from '../metrics/AnalyticsConstants';
 import analyticsReporter from '../metrics/AnalyticsReporter';
@@ -99,7 +100,8 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
         setUnreadNotificationCount(unreadNotificationCount);
       })
       .catch(error => {
-        console.error('Error fetching notifications:', error);
+        console.error('Error fetching notifications for count:', error);
+        setUnreadNotificationCount(0);
       });
   }, []);
 
@@ -206,11 +208,19 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
             />
           </Badge>
         ) : (
-          <img
-            alt="AI bot"
-            src={aiFabWithIcon}
-            onLoad={() => !isFabImageLoaded && setIsFabImageLoaded(true)}
-          />
+          <div>
+            <img
+              alt="AI bot"
+              src={aiFabWithIconBase}
+              onLoad={() => !isFabImageLoaded && setIsFabImageLoaded(true)}
+            />
+            <img
+              alt="TA tag"
+              src={aiFabWithIconTag}
+              className={style.floatingActionButtonTag}
+              onLoad={() => !isFabImageLoaded && setIsFabImageLoaded(true)}
+            />
+          </div>
         )}
       </button>
       <AiDiffContainer

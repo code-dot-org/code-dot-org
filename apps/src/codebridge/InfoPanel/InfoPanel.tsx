@@ -55,7 +55,7 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
     onRun,
     onStop,
     AiTutor2ResponseView,
-    aiTutorContextPromise,
+    hiddenContextCallback,
     startSources,
     aiTutorSystemPromptSettings,
     aiTutorMultimodalEnabled,
@@ -210,7 +210,7 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
           headerClassName={moduleStyles.infoPanelHeader}
           levelProperties={levelProperties}
           requireRun={true}
-          aiTutorContextPromise={aiTutorContextPromise}
+          hiddenContextCallback={hiddenContextCallback}
           settings={settings}
           versionHistoryProps={{startSources}}
           aiTutorSystemPromptSettings={aiTutorSystemPromptSettings}
