@@ -9,7 +9,7 @@ import {INITIAL_VERSION_ID} from '@cdo/apps/lab2/constants';
 import lab2I18n from '@cdo/apps/lab2/locale';
 import {commonI18n} from '@cdo/apps/types/locale';
 
-import moduleStyles from './version-history-panel.module.scss';
+import moduleStyles from './version-history-row.module.scss';
 
 interface VersionHistoryRowProps {
   versionId: string;
@@ -37,6 +37,8 @@ const VersionHistoryRow: React.FunctionComponent<VersionHistoryRowProps> = ({
   if (versionId === INITIAL_VERSION_ID) {
     rowMarginStyle = moduleStyles.initialVersionRow;
   } else if (isLatest) {
+    // Note that the latest or most current version can also include a comment.
+    // This styling adds the appropriate margin to a given row.
     rowMarginStyle = moduleStyles.currentVersionRow;
   } else if (comment) {
     rowMarginStyle = moduleStyles.commentRow;
