@@ -35,7 +35,7 @@ class InactiveUserDeleter
     raise ArgumentError.new('dry_run must be boolean') unless [true, false].include? @dry_run
 
     # Accounts inactive since this time will be considered for deletion
-    @inactive_since = inactive_since || InactiveUserDeleter::INACTIVE_USER_TTL.ago
+    @inactive_since = inactive_since || INACTIVE_USER_TTL.ago
     raise ArgumentError.new('inactive_since must be Time') unless @inactive_since.is_a? Time
 
     # Maximum number of accounts to delete in a single run.
