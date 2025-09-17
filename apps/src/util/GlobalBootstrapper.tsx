@@ -13,7 +13,7 @@ import theme from '@cdo/apps/themes/code.org';
  * @param component - The React component to render
  * @param container - The container element or selector to render into
  */
-export function bootstrap(
+export function createReactRoot(
   component: ReactElement,
   container: Element | string
 ): void {
@@ -27,11 +27,9 @@ export function bootstrap(
       `GlobalBootstrapper: Could not find container element: ${container}`
     );
   }
-  const wrappedComponent = (
-    <MuiThemeProvider theme={theme}>{component}</MuiThemeProvider>
+
+  ReactDOM.render(
+    <MuiThemeProvider theme={theme}>{component}</MuiThemeProvider>,
+    containerElement
   );
-
-  ReactDOM.render(wrappedComponent, containerElement);
 }
-
-export default bootstrap;
