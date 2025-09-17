@@ -5,6 +5,8 @@ import {Box, List, ListItem, ListItemButton, ListItemText} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
 
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {commonI18n} from '@cdo/apps/types/locale';
 import i18n from '@cdo/locale';
 
@@ -111,7 +113,13 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
           className={styles.sidebarButton}
         />
         <button
-          onClick={() => setShowNotifications(true)}
+          onClick={() => {
+            setShowNotifications(true);
+
+            analyticsReporter.sendEvent(EVENTS.AI_DIFF_NOTIFICATIONS_OPENED, {
+              unreadNotificationCount: unreadNotificationCount,
+            });
+          }}
           className={classNames(styles.notificationsButton, {
             [styles.selected]: showNotifications,
           })}

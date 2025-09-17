@@ -318,6 +318,12 @@ const EVENTS = {
   AI_DIFF_101: 'AI Teaching Assistant AI 101 CTA',
   AI_DIFF_SKIP_WELCOME: 'AI Teaching Assistant Skip Welcome',
 
+  AI_DIFF_NOTIFICATIONS_OPENED: 'AI Differentiation Notifications Opened',
+  AI_DIFF_NOTIFICATION_URL_CLICKED:
+    'AI Differentiation Notification URL Clicked',
+  AI_DIFF_NOTIFICATION_AI_PROMPT_CLICKED:
+    'AI Differentiation Notification AI Prompt Clicked',
+
   // AI Tutor
   AI_TUTOR_DISABLED: 'Teacher disabled AI Tutor for a section',
   AI_TUTOR_ENABLED: 'Teacher enabled AI Tutor for a section',
