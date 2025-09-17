@@ -4,9 +4,18 @@ import reactStringReplace from 'react-string-replace';
 
 import styles from './Adlib.module.scss';
 
-interface AdlibProps {
+export type AdlibType = {
   template: string;
   options: {[key: string]: string[]};
+  variantCount: number;
+};
+
+export type AdlibsType = {
+  [key: string]: AdlibType;
+};
+
+interface AdlibProps {
+  adlib: AdlibType;
   onChange: (value: string, choices: string[]) => void;
   className?: string;
 }
@@ -16,12 +25,12 @@ interface AdlibProps {
 // dropdowns to select the options.  When the selected options change, it calls
 // onChange with the filled-in text.
 const Adlib: React.FunctionComponent<AdlibProps> = ({
-  template,
-  options,
+  adlib,
   onChange,
   className,
 }) => {
   const [adlibOptions, setAdlibOptions] = useState<{[key: string]: string}>({});
+  const {template, options} = adlib;
 
   // Initialize defaults.
   useEffect(() => {

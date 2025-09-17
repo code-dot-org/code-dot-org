@@ -576,7 +576,9 @@ export default (props: LabProps<DanceLevelProperties, DanceProjectSources>) => (
   <SourcesContainer {...props} defaultSources={defaultSources}>
     {queryParams('ai-generate-dancer') === 'true' ||
     props.levelProperties.generateDancerMode ? (
-      <DancerGenerate />
+      <DancerGenerate
+        adlibOption={(queryParams('ai-generate-adlib') as string) || 'basic2'}
+      />
     ) : (
       <DanceView levelProperties={props.levelProperties} />
     )}
