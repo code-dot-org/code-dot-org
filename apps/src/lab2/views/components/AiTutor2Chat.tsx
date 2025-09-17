@@ -46,7 +46,7 @@ const modelParameters: ModelParameters = {
 } as const;
 
 // Some pre-canned chat buttons.
-const chatButtonData: ChatButtonData[] = [
+const defaultChatButtonData: ChatButtonData[] = [
   {
     label: 'Give an example',
     value: 'Can you give me an example?',
@@ -148,7 +148,7 @@ const AiTutor2Chat: React.FunctionComponent<AiTutor2ChatProps> = ({
   }, []);
 
   const chatButtons = useMemo(() => {
-    const chatButtonDataToUse = aiTutorChatButtonData || chatButtonData;
+    const chatButtonDataToUse = aiTutorChatButtonData || defaultChatButtonData;
     return chatButtonDataToUse.map(button => ({
       ChatButton: ({onClick}: {onClick: ChatButtonClickHandler}) => (
         <Button
