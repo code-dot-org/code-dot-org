@@ -18,6 +18,7 @@ interface AiDiffSidebarProps {
   threadSelectCallback?: (thread: number) => void;
   setShowNotifications: (show: boolean) => void;
   showNotifications: boolean;
+  unreadNotificationCount: number;
 }
 
 const now = new Date();
@@ -64,6 +65,7 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
   threadSelectCallback = () => {},
   setShowNotifications,
   showNotifications,
+  unreadNotificationCount,
 }) => {
   const handleListItemClick = (chatId: number) => {
     setShowNotifications(false);
@@ -118,12 +120,15 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
         >
           <FontAwesomeV6Icon iconName="bell" />
           <span>{commonI18n.notifications()}</span>
-          <FontAwesomeV6Icon
-            iconName="circle"
-            iconStyle="solid"
-            className={styles.readAt}
-            aria-label={i18n.unread()}
-          />
+
+          {unreadNotificationCount > 0 && (
+            <FontAwesomeV6Icon
+              iconName="circle"
+              iconStyle="solid"
+              className={styles.readAt}
+              aria-label={i18n.unread()}
+            />
+          )}
         </button>
         <div className={styles.sidebarContent}>
           <List disablePadding={true}>

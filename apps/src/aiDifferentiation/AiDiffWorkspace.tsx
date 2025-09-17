@@ -20,12 +20,14 @@ interface AiDiffWorkSpaceProps {
   context: Context;
   scriptName?: string;
   curriculumCourses?: string[];
+  unreadNotificationCount: number;
 }
 
 const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
   context,
   scriptName,
   curriculumCourses,
+  unreadNotificationCount,
 }) => {
   const [threads, setThreads] = useState<ChatThread[]>();
   const [threadMessages, setThreadMessages] = useState<ChatItem[]>();
@@ -113,6 +115,7 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
         threadSelectCallback={fetchThreadMessages}
         setShowNotifications={setShowNotifications}
         showNotifications={showNotifications}
+        unreadNotificationCount={unreadNotificationCount}
       />
       {showNotifications ? (
         <AiDiffNotificationList aiPromptClick={aiPromptOutsideChatClicked} />
