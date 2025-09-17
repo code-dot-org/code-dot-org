@@ -11,6 +11,10 @@
   margin-bottom: 0;
 }
 
+.infoPanelHeader.resourcePanelInfoPanelHeader {
+  border-left: 1px solid var(--borders-neutral-primary);
+}
+
 .instructionsContainer {
   margin-bottom: 45px; // space for copyright footer
 }

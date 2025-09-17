@@ -1,4 +1,5 @@
 import Button from '@code-dot-org/component-library/button';
+import classNames from 'classnames';
 import React, {useEffect, useState} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
@@ -206,7 +207,10 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
           }}
           AiTutor2ResponseView={AiTutor2ResponseView}
           className={moduleStyles.instructionsContainer}
-          headerClassName={moduleStyles.infoPanelHeader}
+          headerClassName={classNames(
+            moduleStyles.infoPanelHeader,
+            moduleStyles.resourcePanelInfoPanelHeader
+          )}
           levelProperties={levelProperties}
           requireRun={true}
           hiddenContextCallback={hiddenContextCallback}
