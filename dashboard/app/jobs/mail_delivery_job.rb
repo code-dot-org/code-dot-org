@@ -13,4 +13,8 @@ class MailDeliveryJob < ActionMailer::MailDeliveryJob
   include ActiveJobReporting
 
   rescue_from StandardError, with: :report_exception
+
+  def destroy_failed_jobs?
+    false
+  end
 end

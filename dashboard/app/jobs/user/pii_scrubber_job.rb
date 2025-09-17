@@ -5,4 +5,8 @@ class User::PiiScrubberJob < ApplicationJob
   def perform(dry_run: false, deleted_since: nil, limit: nil)
     ExpiredDeletedAccountPiiScrubber.new(dry_run:, deleted_since:, limit:).call
   end
+
+  def destroy_failed_jobs?
+    false
+  end
 end

@@ -1,6 +1,6 @@
 # Prevents auto-deletion of failed jobs.
 # The failed jobs will be marked with non-null `failed_at`.
-Delayed::Worker.destroy_failed_jobs = false
+Delayed::Worker.destroy_failed_jobs = true
 
 # Turn off "delayed_job" retry behavior, relying only on ActiveJob's own retry
 # behavior. When you're using delayed_job as a backend to ActiveJob, you end up

@@ -20,4 +20,8 @@ class MailjetDeliveryJob < ApplicationJob
   def perform(...)
     MailJet.send_email(...)
   end
+
+  def destroy_failed_jobs?
+    false
+  end
 end
