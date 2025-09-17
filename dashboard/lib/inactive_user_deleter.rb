@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'stringio'
 require 'cdo/aws/metrics'
 require 'cdo/aws/s3'
