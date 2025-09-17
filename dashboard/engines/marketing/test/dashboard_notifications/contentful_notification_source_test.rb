@@ -52,9 +52,12 @@ class ContentfulNotificationSourceTest < ActionDispatch::IntegrationTest
   end
 
   before do
-    Marketing::ContentfulClient.stubs(:instance).returns(marketing_contentful_client_mock)
     CDO.shared_cache.clear
     sign_in user
+  end
+
+  after do
+    CDO.shared_cache.clear
   end
 
   describe 'get_contentful_notifications_for_user' do
