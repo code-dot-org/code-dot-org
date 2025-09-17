@@ -8,10 +8,10 @@ interface AiTutorWebLab2Params {
 }
 
 export class AiTutorWebLab2ContextHelper extends AiTutorContextHelper<AiTutorWebLab2Params> {
-  private aiTutorContent: AiTutorContext = {};
+  private aiTutorContext: AiTutorContext = {};
 
   protected getAiTutorContext(): AiTutorContext {
-    return this.aiTutorContent;
+    return this.aiTutorContext;
   }
 
   setAiTutorContext({source, longInstructions}: AiTutorWebLab2Params) {
@@ -26,7 +26,7 @@ export class AiTutorWebLab2ContextHelper extends AiTutorContextHelper<AiTutorWeb
           .join('\n\n')
       : undefined;
 
-    this.aiTutorContent = {
+    this.aiTutorContext = {
       sourceCode,
       longInstructions,
     };

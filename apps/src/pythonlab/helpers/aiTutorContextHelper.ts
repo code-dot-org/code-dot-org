@@ -14,11 +14,11 @@ interface AiTutorPythonLabParams {
 }
 export class AiTutorPythonLabContextHelper extends AiTutorContextHelper<AiTutorPythonLabParams> {
   private documentationPromise?: Promise<string | undefined>;
-  private aiTutorContent: AiTutorContext = {};
+  private aiTutorContext: AiTutorContext = {};
 
   protected async getAiTutorContext(): Promise<AiTutorContext> {
     return {
-      ...this.aiTutorContent,
+      ...this.aiTutorContext,
       documentation: await this.documentationPromise,
     };
   }
@@ -60,7 +60,7 @@ export class AiTutorPythonLabContextHelper extends AiTutorContextHelper<AiTutorP
         ? tryFetchDocsForClass('painter')
         : undefined;
 
-    this.aiTutorContent = {
+    this.aiTutorContext = {
       sourceCode,
       validationContents,
       validationResults,
