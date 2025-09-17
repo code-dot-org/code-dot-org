@@ -56,6 +56,61 @@ const CurrentPack: React.FunctionComponent<CurrentPackProps> = ({
   );
 };
 
+interface IconButtonProps {
+  id: string;
+  i18nLabel: string;
+  icon: string;
+  disabled?: boolean;
+  onClick: () => void;
+  containerRef: React.RefObject<HTMLDivElement>;
+}
+
+const IconButton: React.FunctionComponent<IconButtonProps> = memo(
+  ({id, i18nLabel, icon, disabled = false, onClick, containerRef}) => {
+    const handleClick = useCallback(
+      (
+        e:
+          | React.MouseEvent<HTMLButtonElement, MouseEvent>
+          | React.MouseEvent<HTMLAnchorElement, MouseEvent>
+      ) => {
+        onClick();
+        // Adding this to prevent focus from jumping to the next button
+        // when a button is disabled after click (e.g. undo/redo)
+        setTimeout(() => {
+          if (containerRef.current) {
+            containerRef.current.focus();
+          }
+        }, 0);
+      },
+      [onClick, containerRef]
+    );
+
+    return (
+      <WithTooltip
+        tooltipProps={{
+          tooltipId: `${id}-tooltip`,
+          text: i18nLabel,
+          direction: 'onBottom',
+          size: 'xs',
+          hideTail: true,
+        }}
+      >
+        <Button
+          id={`${id}-button`}
+          ariaLabel={i18nLabel}
+          type="tertiary"
+          color="black"
+          size="xs"
+          isIconOnly
+          icon={{iconStyle: 'solid', iconName: icon}}
+          disabled={disabled}
+          onClick={handleClick}
+        />
+      </WithTooltip>
+    );
+  }
+);
+
 interface HeaderButtonsProps {
   onClickUndo: () => void;
   onClickRedo: () => void;
@@ -82,6 +137,7 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
   const currentPackId = useAppSelector(state => state.music.packId);
   const analyticsReporter = useContext(AnalyticsContext);
   const dialogControl = useDialogControl();
+  const containerRef = React.useRef<HTMLDivElement>(null);
 
   const library = MusicLibrary.getInstance();
 
@@ -143,68 +199,20 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
 
   const settings = useBlocklySettings();
 
-  const getIconButton = useCallback(
-    (
-      id: string,
-      i18nLabel: string,
-      icon: string,
-      disabled: boolean = false,
-      onClick: () => void
-    ) => {
-      return (
-        <WithTooltip
-          tooltipProps={{
-            tooltipId: `${id}-tooltip`,
-            text: i18nLabel,
-            direction: 'onBottom',
-            size: 'xs',
-            hideTail: true,
-          }}
-        >
-          <Button
-            id={`${id}-button`}
-            ariaLabel={i18nLabel}
-            type="tertiary"
-            color={'black'}
-            size="xs"
-            isIconOnly
-            icon={{iconStyle: 'solid', iconName: icon}}
-            disabled={disabled}
-            onClick={e => {
-              onClick();
-              // Adding this to prevent focus from jumping to the next button
-              // when a button is disabled after click (e.g. undo/redo)
-              setTimeout(() => {
-                // Moves focus to the container after click
-                const container = document.querySelector(
-                  `.${moduleStyles.container}`
-                );
-                if (container instanceof HTMLElement) {
-                  container.focus();
-                }
-              }, 0);
-            }}
-          />
-        </WithTooltip>
-      );
-    },
-    []
-  );
-
   return (
-    <div className={moduleStyles.container} tabIndex={-1}>
+    <div className={moduleStyles.container} ref={containerRef} tabIndex={-1}>
       {/* Show static pack info; clickable Start Over button */}
       {!allowPackSelection && packFolder && (
         <>
           <CurrentPack packFolder={packFolder} />
           {/* Start Over Button */}
-          {getIconButton(
-            'startOver',
-            musicI18n.startOver(),
-            'refresh',
-            false,
-            onClickStartOver
-          )}
+          <IconButton
+            id="start-over"
+            i18nLabel={musicI18n.startOver()}
+            icon="refresh"
+            onClick={onClickStartOver}
+            containerRef={containerRef}
+          />
         </>
       )}
       {/* Show clickable pack info with Start Over icon */}
@@ -230,22 +238,33 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
       {!readOnlyWorkspace && (
         <>
           {/* Undo Button */}
-          {getIconButton('undo', musicI18n.undo(), 'undo', !canUndo, () =>
-            onClickUndoRedo('undo')
-          )}
+          <IconButton
+            id="undo"
+            i18nLabel={musicI18n.undo()}
+            icon="undo"
+            disabled={!canUndo}
+            onClick={() => onClickUndoRedo('undo')}
+            containerRef={containerRef}
+          />
           {/* Redo Button */}
-          {getIconButton('redo', musicI18n.redo(), 'redo', !canRedo, () =>
-            onClickUndoRedo('redo')
-          )}
+          <IconButton
+            id="redo"
+            i18nLabel={musicI18n.redo()}
+            icon="redo"
+            disabled={!canRedo}
+            onClick={() => onClickUndoRedo('redo')}
+            containerRef={containerRef}
+          />
           {/* Documentation Button */}
-          {Blockly.showBlockHelp &&
-            getIconButton(
-              'documentation',
-              commonI18n.documentation(),
-              'book',
-              false,
-              onClickDocumentation
-            )}
+          {Blockly.showBlockHelp && (
+            <IconButton
+              id="documentation"
+              i18nLabel={musicI18n.documentation()}
+              icon="book"
+              onClick={onClickDocumentation}
+              containerRef={containerRef}
+            />
+          )}
         </>
       )}
       {/* Skip to Project Button */}
