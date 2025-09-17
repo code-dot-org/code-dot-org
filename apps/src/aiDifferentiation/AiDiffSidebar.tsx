@@ -6,7 +6,6 @@ import classNames from 'classnames';
 import React from 'react';
 
 import {commonI18n} from '@cdo/apps/types/locale';
-import experiments from '@cdo/apps/util/experiments';
 import i18n from '@cdo/locale';
 
 import {ChatThread} from './types';
@@ -109,25 +108,23 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
           text={commonI18n.aiDifferentiation_new_chat()}
           className={styles.sidebarButton}
         />
-        {experiments.isEnabled('teacher-notifications') && (
-          <button
-            onClick={() => setShowNotifications(true)}
-            className={classNames(styles.notificationsButton, {
-              [styles.selected]: showNotifications,
-            })}
-            id="ui-notificationsButton"
-            type="button"
-          >
-            <FontAwesomeV6Icon iconName="bell" />
-            <span>{commonI18n.notifications()}</span>
-            <FontAwesomeV6Icon
-              iconName="circle"
-              iconStyle="solid"
-              className={styles.readAt}
-              aria-label={i18n.unread()}
-            />
-          </button>
-        )}
+        <button
+          onClick={() => setShowNotifications(true)}
+          className={classNames(styles.notificationsButton, {
+            [styles.selected]: showNotifications,
+          })}
+          id="ui-notificationsButton"
+          type="button"
+        >
+          <FontAwesomeV6Icon iconName="bell" />
+          <span>{commonI18n.notifications()}</span>
+          <FontAwesomeV6Icon
+            iconName="circle"
+            iconStyle="solid"
+            className={styles.readAt}
+            aria-label={i18n.unread()}
+          />
+        </button>
         <div className={styles.sidebarContent}>
           <List disablePadding={true}>
             {todayChats.length > 0 && (
