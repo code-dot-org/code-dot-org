@@ -20,9 +20,9 @@
 $container-width: 512;
 $header-height: 40;
 $body-height: 612;
-$fab-left: 10;
-$fab-bottom: 33;
-$fab-height: 60;
+$fab-left: 11;
+$fab-bottom: 35;
+$fab-height: 48;
 
 :export {
   containerHeight: $header-height + $body-height;
@@ -272,15 +272,23 @@ $fab-height: 60;
   bottom: $fab-bottom * 1px;
 
   height: $fab-height * 1px;
-  width: 60px;
+  width: 48px;
   background-size: 60px;
   padding: 0;
   background-color: transparent;
 
   border-width: 0;
+  border-radius: 50%;
 
   img {
     opacity: 1;
+  }
+
+  .floatingActionButtonTag {
+    position: absolute;
+    width: 25px;
+    left: 33px;
+    top: -8px;
   }
 }
 

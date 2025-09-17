@@ -11,6 +11,7 @@ import {
   workshopDataToState,
   sessionStateToApi,
   workshopStateToApi,
+  madeImportantDetailChange,
   emptyValue,
 } from '@cdo/apps/code-studio/pd/workshop_dashboard/workshops/utils';
 
@@ -605,5 +606,141 @@ describe('emptyValue', () => {
     expect(emptyValue([{id: 1, label: 'option 1', searchText: []}])).toBe(
       false
     );
+  });
+});
+
+describe('madeImportantDetailChange', () => {
+  const originalSession: Session = {
+    id: 1,
+    start: '2024-01-01T09:00:00.000Z',
+    end: '2024-01-01T17:00:00.000Z',
+    location_address: '123 Main St',
+    location_name: 'Test Location',
+    meeting_link: null,
+    session_format: 'in_person',
+    code: 'abc',
+    'show_link?': null,
+    attendance_count: null,
+    is_local: null,
+  };
+
+  const originalWorkshop: Workshop = {
+    id: 1,
+    course: 'Test Course',
+    capacity: 10,
+    description: 'Test Description',
+    facilitators: [
+      {
+        id: 1,
+        name: 'Facilitator 1',
+        email: 'facilitator1@mail.com',
+      },
+      {
+        id: 2,
+        name: 'Facilitator 2',
+        email: 'facilitator2@mail.com',
+      },
+    ],
+    fee: '100',
+    grades: ['K', '1'],
+    hidden: false,
+    name: 'Test Workshop',
+    notes: 'Test Notes',
+    organizer: {id: 1} as Organizer,
+    prereq: 'Test Prereq',
+    regional_partner_id: 1,
+    registration_link: 'https://test.com',
+    subject: 'Test Subject',
+    suppress_email: false,
+    course_offerings: [1, 2],
+    participant_group_type: 'Test Group',
+    time_zone: 'America/Denver',
+    state: 'Not Started',
+    enrolled_teacher_count: 0,
+    'ready_to_close?': null,
+    'account_required_for_attendance?': null,
+    regional_partner_name: null,
+    course_offering_names: null,
+    created_at: 'timestamp',
+    sessions: [originalSession],
+  };
+
+  it('should return false if no workshop is present', () => {
+    expect(
+      madeImportantDetailChange(
+        null,
+        workshopDataToState(originalWorkshop),
+        sessionDataToState([originalSession], originalWorkshop.time_zone)
+      )
+    ).toBe(false);
+  });
+
+  it('should return false if only ignored fields are changed', () => {
+    const workshopStateWithIgnoredChanges = {
+      ...workshopDataToState(originalWorkshop),
+      hidden: true,
+      suppressEmail: true,
+      registrationLink: 'https://different-test.com',
+    };
+    expect(
+      madeImportantDetailChange(
+        originalWorkshop,
+        workshopStateWithIgnoredChanges,
+        sessionDataToState([originalSession], originalWorkshop.time_zone)
+      )
+    ).toBe(false);
+  });
+
+  it('should return true if important workshop field changed', () => {
+    const workshopStateWithImportantChange = {
+      ...workshopDataToState(originalWorkshop),
+      name: 'New Workshop Name!',
+    };
+    expect(
+      madeImportantDetailChange(
+        originalWorkshop,
+        workshopStateWithImportantChange,
+        sessionDataToState([originalSession], originalWorkshop.time_zone)
+      )
+    ).toBe(true);
+  });
+
+  it('should return true if session was added or deleted', () => {
+    const sessionStateWithNewSession: SessionFormState[] = [
+      ...sessionDataToState([originalSession], originalWorkshop.time_zone),
+      {
+        id: '2',
+        date: '2024-01-02',
+        start: '10:00am',
+        end: '7:00pm',
+        locationAddress: '',
+        locationName: '',
+        meetingLink: 'https://zoom.link.us',
+        format: 'virtual',
+      },
+    ];
+    expect(
+      madeImportantDetailChange(
+        originalWorkshop,
+        workshopDataToState(originalWorkshop),
+        sessionStateWithNewSession
+      )
+    ).toBe(true);
+  });
+
+  it('should return true if session was updated', () => {
+    const sessionStateWithChange: SessionFormState[] = [
+      {
+        ...sessionDataToState([originalSession], originalWorkshop.time_zone)[0],
+        locationAddress: 'New Address Elsewhere',
+      },
+    ];
+    expect(
+      madeImportantDetailChange(
+        originalWorkshop,
+        workshopDataToState(originalWorkshop),
+        sessionStateWithChange
+      )
+    ).toBe(true);
   });
 });

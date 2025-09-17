@@ -51,3 +51,19 @@ Scenario: New workshop: BYOW
   And I get the workshop id from the current url
   And I clean up my records
 
+Scenario: Edit workshop: BYOW
+  Given I am an organizer with a started course
+  And I am viewing a workshop in the workshop dashboard
+  And I wait until element "strong:contains('Workshop Information')" is visible
+
+  Then I click selector "button:contains('Edit')"
+  And I wait until element "h1:contains('Edit Build Your Own Workshop')" is visible
+  Then I press keys " with Test Change" for element "input[name='name']"
+  And I click selector "button:contains('Publish')"
+  And I wait until element "h2:contains('Workshop Detail Change')" is visible
+  Then I click selector "button:contains('Notify')"
+  And I wait until element "h2:contains('Workshop Detail Change')" is not visible
+  And I wait until element "strong:contains('Workshop Information')" is visible
+
+  And I get the workshop id from the current url
+  And I clean up my records
