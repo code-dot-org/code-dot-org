@@ -28,6 +28,7 @@ interface NavigationAreaProps {
   hasRun: boolean;
   hasEdited: boolean;
   requireRun?: boolean;
+  isResourcePanel?: boolean;
 }
 
 /**
@@ -40,6 +41,7 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
   hasEdited,
   requireRun,
   handleInstructionsTextClick,
+  isResourcePanel,
 }) => {
   const {
     id,
@@ -144,7 +146,13 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
         showSecondaryFinishButton && moduleStyles.feedbackBottom
       )}
     >
-      <div id="instructions-feedback-message" className={moduleStyles.bubble}>
+      <div
+        id="instructions-feedback-message"
+        className={classNames(
+          moduleStyles.bubble,
+          isResourcePanel && moduleStyles.resourcePanelNavigationAreaBubble
+        )}
+      >
         {feedbackMessage && (
           <div ref={feedbackRef} tabIndex={-1}>
             <EnhancedSafeMarkdown

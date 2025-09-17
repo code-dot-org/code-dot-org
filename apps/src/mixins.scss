@@ -57,3 +57,19 @@
     color: $active-color;
   }
 }
+
+// Mixin for centering header content with consistent styling
+@mixin center-header-content($include-text-styles) {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  overflow: hidden;
+
+  @if $include-text-styles {
+    &Text {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}

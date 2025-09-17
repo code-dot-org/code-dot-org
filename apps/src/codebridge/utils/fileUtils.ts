@@ -4,6 +4,18 @@ import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
 
 import {ProjectFile} from '../types';
 
+const FILE_TYPE_ICON_MAP = {
+  py: {iconName: 'python', iconStyle: 'regular' as const, isBrand: true},
+  csv: {iconName: 'file-csv', iconStyle: 'solid' as const, isBrand: false},
+  txt: {iconName: 'file-lines', iconStyle: 'solid' as const, isBrand: false},
+  html: {iconName: 'file-code', iconStyle: 'solid' as const, isBrand: false},
+  js: {iconName: 'js', iconStyle: 'regular' as const, isBrand: true},
+  css: {iconName: 'css', iconStyle: 'regular' as const, isBrand: true},
+  jpg: {iconName: 'image', iconStyle: 'solid' as const, isBrand: false},
+  png: {iconName: 'image', iconStyle: 'solid' as const, isBrand: false},
+  jpeg: {iconName: 'image', iconStyle: 'solid' as const, isBrand: false},
+} as const;
+
 export function shouldShowFile(file?: ProjectFile) {
   // We could have an undefined file if the file referenced is a validation file.
   if (!file) {
@@ -28,8 +40,11 @@ export function getFileIconNameAndStyle(file: ProjectFile): {
 } {
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
   if (!isStartMode) {
-    if (file.name.endsWith('.py')) {
-      return {iconName: 'python', iconStyle: 'regular', isBrand: true};
+    const [, fileType] = file.name.split('.');
+    const iconConfig =
+      FILE_TYPE_ICON_MAP[fileType as keyof typeof FILE_TYPE_ICON_MAP];
+    if (iconConfig) {
+      return iconConfig;
     }
     return {iconName: 'file', iconStyle: 'regular'};
   }

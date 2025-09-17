@@ -5,6 +5,7 @@ import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import classNames from 'classnames';
 import React, {useEffect, useMemo, useState} from 'react';
 
+import {SystemPromptSettings} from '@cdo/apps/aichat/types';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {ProjectSources} from '@cdo/apps/lab2/types';
@@ -23,7 +24,8 @@ import NavigationArea from '../NavigationArea';
 import CopyrightButton from './CopyrightButton';
 import ResourcePanelExtraLinks from './ResourcePanelExtraLinks';
 import SettingsPanel from './SettingsPanel';
-import VersionHistoryPanel from './VersionHistoryPanel';
+import ValidationPanel from './ValidationPanel';
+import {VersionHistoryPanel} from './VersionHistory';
 
 import styles from './styles.module.scss';
 
@@ -33,6 +35,7 @@ enum Tabs {
   TeachersOnly = 'teachersOnly',
   StudentRubric = 'studentRubric',
   VersionHistory = 'versionHistory',
+  Validation = 'validation',
 }
 
 export interface Setting {
@@ -62,16 +65,22 @@ const tabInfo: {[key in Tabs]: {title: string; icon: string}} = {
     title: commonI18n.versionHistory_header(),
     icon: 'history',
   },
+  [Tabs.Validation]: {
+    title: commonI18n.validation(),
+    icon: 'clipboard-check',
+  },
 };
 
 type ResourcePanelProps = InstructionsProps & {
   className?: string;
   headerClassName?: string;
-  aiTutor2Context?: string;
+  hiddenContextCallback?: () => Promise<string>;
   rightHeaderContent?: React.ReactNode;
   includeFooterSpacing?: boolean;
   settings?: Setting[];
   versionHistoryProps?: VersionHistoryProps;
+  aiTutorSystemPromptSettings?: SystemPromptSettings;
+  aiTutorMultimodalEnabled?: boolean;
 };
 
 /**
@@ -80,11 +89,13 @@ type ResourcePanelProps = InstructionsProps & {
 const ResourcePanel: React.FC<ResourcePanelProps> = ({
   className,
   headerClassName,
-  aiTutor2Context,
+  hiddenContextCallback,
   rightHeaderContent,
   includeFooterSpacing = true,
   settings,
   versionHistoryProps,
+  aiTutorSystemPromptSettings,
+  aiTutorMultimodalEnabled,
   ...instructionsProps
 }) => {
   const {theme} = useTheme();
@@ -101,6 +112,11 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const isWidgetView = instructionsProps.levelProperties.widgetView || false;
 
   const levelId = instructionsProps.levelProperties.id;
+  const hasValidationConditions = useAppSelector(
+    state => state.lab.validationState?.hasConditions
+  );
+  const levelName = instructionsProps.levelProperties.name;
+  const channelId = useAppSelector(state => state.lab.channel?.id);
 
   // Build available tabs based on level information.
   const availableTabs = useMemo(() => {
@@ -110,6 +126,12 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     if (levelProperties.longInstructions) {
       tabMap[Tabs.Instructions] = (
         <Instructions {...instructionsProps} hideNavigation />
+      );
+    }
+
+    if (instructionsProps.validationSettings && hasValidationConditions) {
+      tabMap[Tabs.Validation] = (
+        <ValidationPanel {...instructionsProps.validationSettings} />
       );
     }
 
@@ -129,9 +151,17 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     if (
       (levelProperties.aiTutorAvailable ||
         queryParams('show-ai-tutor2') === 'true') &&
-      aiTutor2Context
+      hiddenContextCallback
     ) {
-      tabMap[Tabs.AiTutor] = <AiTutor2Chat hiddenContext={aiTutor2Context} />;
+      tabMap[Tabs.AiTutor] = (
+        <AiTutor2Chat
+          hiddenContextCallback={hiddenContextCallback}
+          aiTutorSystemPromptSettings={aiTutorSystemPromptSettings}
+          aiTutorMultimodalEnabled={aiTutorMultimodalEnabled}
+          levelName={levelName}
+          channelId={channelId}
+        />
+      );
     }
 
     // The version history tab is hidden in read only mode with two exceptions:
@@ -160,14 +190,19 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     return tabMap;
   }, [
     instructionsProps,
+    hasValidationConditions,
     isUserTeacher,
-    aiTutor2Context,
+    hiddenContextCallback,
     isReadOnly,
     isViewingOldVersion,
     viewAsUserId,
     isWidgetView,
     versionHistoryProps,
     showRubric,
+    aiTutorMultimodalEnabled,
+    levelName,
+    channelId,
+    aiTutorSystemPromptSettings,
     selectedVersion,
     levelId,
   ]);
@@ -221,6 +256,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
         </div>
         <div className={classNames(styles.bottomTabs)}>
           <ResourcePanelExtraLinks levelId={levelId} theme={theme} />
+          <CopyrightButton theme={theme} />
           <WithTooltip
             tooltipProps={{
               text: commonI18n.settings(),
@@ -241,7 +277,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
               type={'tertiary'}
             />
           </WithTooltip>
-          <CopyrightButton theme={theme} />
         </div>
       </div>
       <div className={styles.panels}>
@@ -252,7 +287,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
           rightHeaderContent={rightHeaderContent}
         >
           {availableTabs[currentTab]}
-          <NavigationArea {...instructionsProps} />
+          <NavigationArea isResourcePanel={true} {...instructionsProps} />
           {isSettingsOpen && (
             <SettingsPanel
               settings={settings || []}

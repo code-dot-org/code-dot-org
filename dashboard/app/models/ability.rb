@@ -81,7 +81,7 @@ class Ability
       environment.published || user.levelbuilder?
     end
 
-    can [:read, :show_by_keys], ProgrammingClass do |programming_class|
+    can [:read, :show_by_keys, :get_serialized], ProgrammingClass do |programming_class|
       can? :read, programming_class.programming_environment
     end
 
@@ -318,20 +318,11 @@ class Ability
 
     can :read, Unit do |script, context_unit_group|
       unit_group = context_unit_group || script.original_unit_group
+      unit_group ||= script.get_professional_learning_course if script.old_professional_learning_course?
       if unit_group
         can?(:read, unit_group)
       else
-        if script.can_be_participant?(user) || script.can_be_instructor?(user)
-          if script.in_development?
-            user.levelbuilder?
-          elsif script.pilot?
-            script.has_pilot_access?(user)
-          else
-            true
-          end
-        else
-          false
-        end
+        user.levelbuilder?
       end
     end
 
@@ -522,10 +513,6 @@ class Ability
       end
 
       can :create, AiTutorInteraction do
-        user.has_ai_tutor_access?
-      end
-
-      can :chat_completion, :openai_chat do
         user.has_ai_tutor_access?
       end
 

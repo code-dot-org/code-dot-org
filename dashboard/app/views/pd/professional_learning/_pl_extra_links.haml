@@ -2,7 +2,6 @@
 
 
 - if current_user.workshop_admin? || current_user.admin?
-  - extra_links << {text: 'Manage Applications', url: pd_application_dashboard_path} if can?(:read, Pd::Application::ApplicationBase)
   - extra_links << {text: 'Manage PD Workshops', url: pd_workshop_dashboard_path} if can?(:read, Pd::Workshop)
   - extra_links << {text: 'Directory for Workshop Admins', url: pd_workshop_admins_path} if current_user.workshop_admin?
   - extra_links << {text: 'See all Regional Partners', url: regional_partners_path} if can?(:index, RegionalPartner)

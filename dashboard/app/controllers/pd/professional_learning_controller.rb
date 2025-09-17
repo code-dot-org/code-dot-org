@@ -20,7 +20,6 @@ class Pd::ProfessionalLearningController < ApplicationController
       last_workshop_survey_url: last_enrollment_with_pending_survey.try(:exit_survey_url),
       last_workshop_survey_course: last_enrollment_with_pending_survey.try(:workshop).try(:course),
       show_deeper_learning: show_deeper_learning,
-      current_year_application_id: Pd::Application::TeacherApplication.find_by(user: current_user, application_year: Pd::SharedApplicationConstants::APPLICATION_CURRENT_YEAR)&.id,
       has_enrolled_in_workshop: Pd::Enrollment.for_user(current_user).any?,
       pl_courses_started: current_user.pl_units_started,
       user_permissions: current_user.permissions.map(&:permission),

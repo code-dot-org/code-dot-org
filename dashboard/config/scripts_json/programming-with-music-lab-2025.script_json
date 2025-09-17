@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-07-31 16:37:09 UTC",
+    "serialized_at": "2025-09-05 21:12:33 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -9198,12 +9198,423 @@
 
   ],
   "rubrics": [
-
+    {
+      "level_name": "music-lab-functions-explore-evaluative_v2",
+      "seeding_key": {
+        "lesson.key": "Functions - Explore",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "level_name": "music-lab-functions-practice-evaluative2_v2",
+      "seeding_key": {
+        "lesson.key": "Functions - Practice",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "level_name": "music-lab-loops-explore-practice-a_v2",
+      "seeding_key": {
+        "lesson.key": "Loops - Explore",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "level_name": "test-music-lab-loops-practice-summative_v2",
+      "seeding_key": {
+        "lesson.key": "Loops - Practice",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "level_name": "test-music-lab-sequence-explore-evaluative_v2",
+      "seeding_key": {
+        "lesson.key": "Sequencing - Explore",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "level_name": "test-music-lab-sequencing-practice-evaluative_v2",
+      "seeding_key": {
+        "lesson.key": "Sequencing - Practice",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    }
   ],
   "learning_goals": [
-
+    {
+      "key": "1620ba34-df1e-4135-890c-4b62d85fa569",
+      "position": 1,
+      "learning_goal": "Sequencing",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "1620ba34-df1e-4135-890c-4b62d85fa569",
+        "lesson.key": "Sequencing - Explore",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "key": "322f5c88-57f0-4843-a4c3-7c8468d3238f",
+      "position": 1,
+      "learning_goal": "Loops",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "322f5c88-57f0-4843-a4c3-7c8468d3238f",
+        "lesson.key": "Loops - Explore",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "key": "3c9c138e-d595-4210-9440-cd2954432d3f",
+      "position": 1,
+      "learning_goal": "Functions",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "3c9c138e-d595-4210-9440-cd2954432d3f",
+        "lesson.key": "Functions - Practice",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "key": "5234bdb7-0b1a-4f86-859e-a9c03e08750d",
+      "position": 1,
+      "learning_goal": "Functions",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "5234bdb7-0b1a-4f86-859e-a9c03e08750d",
+        "lesson.key": "Functions - Explore",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "key": "5ae0a1b0-78e3-4ed1-b7c5-3c2fdab4510b",
+      "position": 1,
+      "learning_goal": "Loops",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "5ae0a1b0-78e3-4ed1-b7c5-3c2fdab4510b",
+        "lesson.key": "Loops - Practice",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "key": "cb94a8ad-ecc8-4640-b52b-36587e67d252",
+      "position": 1,
+      "learning_goal": "Sequencing",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "cb94a8ad-ecc8-4640-b52b-36587e67d252",
+        "lesson.key": "Sequencing - Practice",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    }
   ],
   "learning_goal_evidence_levels": [
-
+    {
+      "understanding": 0,
+      "teacher_description": "There are no play together blocks.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "1620ba34-df1e-4135-890c-4b62d85fa569",
+        "lesson.key": "Sequencing - Explore",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "The song does not have three play together blocks, but does have one or two.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "1620ba34-df1e-4135-890c-4b62d85fa569",
+        "lesson.key": "Sequencing - Explore",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "The song has three play together blocks, but they do not contain bass, lead, and vocal tracks.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "1620ba34-df1e-4135-890c-4b62d85fa569",
+        "lesson.key": "Sequencing - Explore",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "The song has three play together blocks. Each play together block has at least 3 play blocks with bass, lead, and vocals.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "1620ba34-df1e-4135-890c-4b62d85fa569",
+        "lesson.key": "Sequencing - Explore",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "The song doesn't use any loops",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "322f5c88-57f0-4843-a4c3-7c8468d3238f",
+        "lesson.key": "Loops - Explore",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "The song uses loops, but does not match the original song",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "322f5c88-57f0-4843-a4c3-7c8468d3238f",
+        "lesson.key": "Loops - Explore",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "The song uses loops and matches the original song, but the song can be completed with less blocks",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "322f5c88-57f0-4843-a4c3-7c8468d3238f",
+        "lesson.key": "Loops - Explore",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "The song uses one loop per track and matches the original song",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "322f5c88-57f0-4843-a4c3-7c8468d3238f",
+        "lesson.key": "Loops - Explore",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "There are no functions",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "3c9c138e-d595-4210-9440-cd2954432d3f",
+        "lesson.key": "Functions - Practice",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "The song does not contain 3 functions or functions are not used exclusively under when run",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "3c9c138e-d595-4210-9440-cd2954432d3f",
+        "lesson.key": "Functions - Practice",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "The song contains at least 3 functions that separate the song into individual intro, verse, and chorus parts. The functions themselves may be simplistic or the tracks chosen appear disparate or random.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "3c9c138e-d595-4210-9440-cd2954432d3f",
+        "lesson.key": "Functions - Practice",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "The song contains at least 3 functions that separate the song into individual intro, verse, and chorus parts. Each function layers several tracks that have been intentionally chosen to compliment the vocals in creative ways.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "3c9c138e-d595-4210-9440-cd2954432d3f",
+        "lesson.key": "Functions - Practice",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "The song does not use any functions",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "5234bdb7-0b1a-4f86-859e-a9c03e08750d",
+        "lesson.key": "Functions - Explore",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "The song contains one or two functions, but not all three.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "5234bdb7-0b1a-4f86-859e-a9c03e08750d",
+        "lesson.key": "Functions - Explore",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "The song uses three functions, but not all of the blocks have been moved into the functions. The code under \"when run\" contains both function calls and other blocks.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "5234bdb7-0b1a-4f86-859e-a9c03e08750d",
+        "lesson.key": "Functions - Explore",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "The song uses three functions and the code under \"when run\" contains only function calls.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "5234bdb7-0b1a-4f86-859e-a9c03e08750d",
+        "lesson.key": "Functions - Explore",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "The song does not contain loops or does not contain rests.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "5ae0a1b0-78e3-4ed1-b7c5-3c2fdab4510b",
+        "lesson.key": "Loops - Practice",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "The song does not use at least 4 tracks or the majority of the tracks start and stop at the same time.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "5ae0a1b0-78e3-4ed1-b7c5-3c2fdab4510b",
+        "lesson.key": "Loops - Practice",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "The song contains at least 4 different tracks that are looped and layered together, but some tracks stop and start at the same time.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "5ae0a1b0-78e3-4ed1-b7c5-3c2fdab4510b",
+        "lesson.key": "Loops - Practice",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "The song contains at least 4 different tracks that are looped and layered together to create a complex song. All tracks stop and start at different times on the timeline.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "5ae0a1b0-78e3-4ed1-b7c5-3c2fdab4510b",
+        "lesson.key": "Loops - Practice",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "The song does not have enough tracks or all of them start at the same time.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "cb94a8ad-ecc8-4640-b52b-36587e67d252",
+        "lesson.key": "Sequencing - Practice",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "The song contains at least 4 tracks but several of them start at the same time",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "cb94a8ad-ecc8-4640-b52b-36587e67d252",
+        "lesson.key": "Sequencing - Practice",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "The song contains at least 4 different tracks that start and stop at different times, but the song does not create a \"build\" effect based on how the tracks are sequenced.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "cb94a8ad-ecc8-4640-b52b-36587e67d252",
+        "lesson.key": "Sequencing - Practice",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "The song contains at least 4 different tracks that are layered together to create a complex song that \"builds\". New tracks are introduced at different start times and all tracks end at the same time.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "cb94a8ad-ecc8-4640-b52b-36587e67d252",
+        "lesson.key": "Sequencing - Practice",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    }
   ]
 }

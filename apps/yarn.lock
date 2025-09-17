@@ -3804,21 +3804,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@blockly/keyboard-navigation@npm:~2.0.0":
-  version: 2.0.0
-  resolution: "@blockly/keyboard-navigation@npm:2.0.0"
+"@blockly/keyboard-navigation@npm:3.0.1":
+  version: 3.0.1
+  resolution: "@blockly/keyboard-navigation@npm:3.0.1"
   peerDependencies:
-    blockly: ^12.2.0
-  checksum: 10/a3f9282dc4db15eb64a3faf4a9159163911420e8b757bb9e147a972e431b7e421edfc40f9dcab85e1211aa6bf7c1fb9698b10f964f30c4ca7966b5ebed5791c5
+    blockly: ^12.3.0
+  checksum: 10/daf79c093e969496749d3dda14c5783fef07c9c351dd614bdf6b5c56cb6cf2a686d36a4efb140ab1cf5f0750023828555355a46f31ec116d5b21dcd39e102cd9
   languageName: node
   linkType: hard
 
-"@blockly/plugin-cross-tab-copy-paste@npm:^7.0.0":
-  version: 7.0.0
-  resolution: "@blockly/plugin-cross-tab-copy-paste@npm:7.0.0"
+"@blockly/plugin-cross-tab-copy-paste@npm:^8.0.1":
+  version: 8.0.1
+  resolution: "@blockly/plugin-cross-tab-copy-paste@npm:8.0.1"
   peerDependencies:
-    blockly: ^12.0.0
-  checksum: 10/ee932fa221c4ea2c32c37c76cc4337e94ae4ef0b498f6164443fe6d7c9c49b278eebac2159dea377e398d27ffbaeaa14c4d40a3d4c0ff2599917809336779545
+    blockly: ^12.1.0
+  checksum: 10/d73694968932257c546eea94d7e4e241cec61c6b4fb5de94bb10de69ce7303f46ab3baa7185ffb4dfdf53ffbea71ba7e4dd978a5ad21c5d29bf4bce3dc85b6a7
   languageName: node
   linkType: hard
 
@@ -10920,8 +10920,8 @@ __metadata:
     "@blockly/field-bitmap": "npm:^6.0.0"
     "@blockly/field-colour": "npm:^6.0.0"
     "@blockly/field-grid-dropdown": "npm:^6.0.0"
-    "@blockly/keyboard-navigation": "npm:~2.0.0"
-    "@blockly/plugin-cross-tab-copy-paste": "npm:^7.0.0"
+    "@blockly/keyboard-navigation": "npm:3.0.1"
+    "@blockly/plugin-cross-tab-copy-paste": "npm:^8.0.1"
     "@blockly/plugin-scroll-options": "npm:^7.0.0"
     "@blockly/theme-dark": "npm:^8.0.0"
     "@blockly/theme-highcontrast": "npm:^7.0.0"
@@ -11023,7 +11023,7 @@ __metadata:
     babel-plugin-add-module-exports: "npm:^1.0.4"
     babel-plugin-dynamic-import-node: "npm:^2.3.3"
     babel-plugin-syntax-async-functions: "npm:^6.13.0"
-    blockly: "npm:12.2.0"
+    blockly: "npm:12.3.0"
     bootstrap-sass: "npm:^3.4.1"
     browser-process-hrtime: "npm:0.1.2"
     buffer: "npm:^6.0.3"
@@ -11175,6 +11175,7 @@ __metadata:
     react-select: "npm:^1.2.1"
     react-select-5: "npm:react-select@5"
     react-sticky: "npm:^6.0.3"
+    react-string-replace: "npm:^1.1.1"
     react-tether: "npm:^1.0.4"
     react-tooltip: "npm:^3.2.7"
     react-transition-group: "npm:2.9.0"
@@ -11201,7 +11202,6 @@ __metadata:
     sanitize-html: "npm:^1.11.3"
     sass: "npm:^1.51.0"
     sass-loader: "npm:^12.1.0"
-    save-csv: "npm:^4.0.6"
     schema-dts: "npm:^1.1.5"
     script-loader: "npm:^0.7.2"
     seedrandom: "npm:2.4.2"
@@ -11248,12 +11248,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"blockly@npm:12.2.0":
-  version: 12.2.0
-  resolution: "blockly@npm:12.2.0"
+"blockly@npm:12.3.0":
+  version: 12.3.0
+  resolution: "blockly@npm:12.3.0"
   dependencies:
     jsdom: "npm:26.1.0"
-  checksum: 10/207b3d0f0a89ff7f74ea3cffba65f41cf6afd29d4b13eede794ed88b209a2f221dd5394efa19344a50389c2ceedeee0113f173b50c2a07b2dfa7c974c4067387
+  checksum: 10/054175be88fd5d3a05492fccf50959cf7214ffc0255d8b731af022f784666bcb68bec238aa84663a68fb5dd81f58cbf4d9195e3fa82f430944384f669a8bd14f
   languageName: node
   linkType: hard
 
@@ -25561,6 +25561,13 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
+"react-string-replace@npm:^1.1.1":
+  version: 1.1.1
+  resolution: "react-string-replace@npm:1.1.1"
+  checksum: 10/75cedb24ae7f37ec3e3adbf393cc65842609ff5901ec3423048bb60a90681783544e6feeca276c8954e1136e3b1560a9535325878ec3bddd75b80b9220980648
+  languageName: node
+  linkType: hard
+
 "react-style-singleton@npm:^2.2.1":
   version: 2.2.1
   resolution: "react-style-singleton@npm:2.2.1"
@@ -27081,13 +27088,6 @@ canvg@gabelerner/canvg:
   bin:
     sass: sass.js
   checksum: 10/ff8640745449932d72c54fb00d6913ba9c5f27021949b2008cdc76476a177dcd661eb9990fcca94d20d6dbf4010159de5b222ce7125569053e953d5fed076313
-  languageName: node
-  linkType: hard
-
-"save-csv@npm:^4.0.6":
-  version: 4.0.6
-  resolution: "save-csv@npm:4.0.6"
-  checksum: 10/2a35dbf8d38846d19511239c70fd8af007318f9c6631f82af6f7561e96494055ad3c044b049a0fcb0b70b1a488acc3abae90b6c38e5fc9770ed3bb5ea444b282
   languageName: node
   linkType: hard
 

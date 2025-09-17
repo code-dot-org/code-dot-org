@@ -2,6 +2,7 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 import {
   AiInteractionStatus,
   AiRequestExecutionStatus,
+  AiChatReadTimeouts,
 } from '@cdo/generated-scripts/sharedConstants';
 
 import {Role} from '../aiComponentLibrary/chatMessage/types';
@@ -35,7 +36,6 @@ const paths = {
   FIND_TOXICITY_URL: `${ROOT_GENERAL_URL}/find_toxicity`,
 };
 
-const MAX_POLLING_TIME_MS = 45000;
 const MIN_POLLING_INTERVAL_MS = 1000;
 const DEFAULT_BACKOFF_RATE = 1;
 
@@ -158,7 +158,7 @@ export async function postAichatCompletionMessage(
   storedMessages: CompletedChatMessage[],
   modelParameters: ModelParameters,
   aichatContext: AichatContext,
-  maxPollingTimeMs = MAX_POLLING_TIME_MS
+  maxPollingTimeMs?: number
 ): Promise<CompletedChatMessage[]> {
   const payload = {
     newMessage,
@@ -166,6 +166,9 @@ export async function postAichatCompletionMessage(
     modelParameters,
     aichatContext,
   };
+
+  maxPollingTimeMs =
+    maxPollingTimeMs || AiChatReadTimeouts[aichatContext.clientType] * 1500;
 
   const response = await HttpClient.post(
     paths.START_CHAT_COMPLETION_URL,

@@ -284,6 +284,13 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
 
   React.useEffect(() => {
     if (initialThreadPrompt && threadMessages.length === 0 && threadId === 0) {
+      const newUserMessage = {
+        role: Role.USER,
+        chatMessageText: initialThreadPrompt.prompt,
+        status: Status.OK,
+      };
+
+      setMessageHistory(prevMessages => [...prevMessages, newUserMessage]);
       onPromptSelect(initialThreadPrompt);
       setInitialThreadPrompt(null);
     }

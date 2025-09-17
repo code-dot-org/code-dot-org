@@ -1,7 +1,6 @@
 import classNames from 'classnames';
 import React from 'react';
 
-import {shouldShowCopyCode} from '@cdo/apps/lab2/ai/ai-should-show-copy-code';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {commonI18n} from '@cdo/apps/types/locale';
 import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
@@ -23,13 +22,12 @@ interface ChatMessageProps {
 
 /*
  * A rehype component map used to map between `pre` tags and `CopyableCodeBlock` components.
- * If copy code is not enabled, setting this to undefined will not do any mapping.
  *
  * For performance reasons, it is the `SafeMarkdown` consumer's responsibility to create the
  * rehypeMap outside  of the component function or to define the mapping in an ES module and
  * import it, if used in multiple components. See `SafeMarkdown` for more info.
  **/
-const rehypeMap = shouldShowCopyCode ? {pre: CopyableCodeBlock} : undefined;
+const rehypeMap = {pre: CopyableCodeBlock};
 
 const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
   text,

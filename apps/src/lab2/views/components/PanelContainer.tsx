@@ -1,4 +1,4 @@
-import {Heading2} from '@code-dot-org/component-library/typography';
+import Typography from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -58,21 +58,21 @@ const PanelContainer: React.FunctionComponent<PanelContainerProps> = ({
           >
             {leftHeaderContent}
           </div>
-
-          <Heading2
+          <Typography
+            semanticTag="h2"
+            visualAppearance="overline-two"
             className={classNames(
               'panelContainerHeaderItemText',
               moduleStyles.panelContainerHeaderItem,
               moduleStyles.panelContainerHeaderItemCenter
             )}
-            visualAppearance={'body-three'}
           >
             <span
               className={classNames(moduleStyles.panelContainerHeaderItemText)}
             >
               {headerContent}
             </span>
-          </Heading2>
+          </Typography>
           <div
             className={classNames(
               'panelContainerHeaderItemRight',

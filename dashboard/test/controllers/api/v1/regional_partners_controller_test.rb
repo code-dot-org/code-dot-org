@@ -71,6 +71,32 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
     assert_includes(response, {'id' => regional_partner.id, 'name' => regional_partner.name})
   end
 
+  test 'index gets all regional partners for workshop organizers not associated with a regional partner' do
+    regional_partner_1 = create(:regional_partner, name: 'First regional partner')
+    regional_partner_2 = create(:regional_partner, name: 'Second regional partner')
+    sign_in(create(:workshop_organizer))
+
+    get :index
+    response = JSON.parse(@response.body)
+    assert_equal RegionalPartner.count, response.length
+    assert_includes(response, {'id' => regional_partner_1.id, 'name' => regional_partner_1.name})
+    assert_includes(response, {'id' => regional_partner_2.id, 'name' => regional_partner_2.name})
+  end
+
+  test 'index gets only associated regional partners for workshop organizers that are associated with a regional partner' do
+    regional_partner_1 = create(:regional_partner, name: 'First regional partner')
+    regional_partner_2 = create(:regional_partner, name: 'Second regional partner')
+    organizer = create(:workshop_organizer)
+    organizer.regional_partners << regional_partner_1
+    sign_in(organizer)
+
+    get :index
+    response = JSON.parse(@response.body)
+    assert_equal 1, response.length
+    assert_includes(response, {'id' => regional_partner_1.id, 'name' => regional_partner_1.name})
+    refute_includes(response, {'id' => regional_partner_2.id, 'name' => regional_partner_2.name})
+  end
+
   test 'capacity as a workshop organizer returns regional partner cohort capacity for teacher applications' do
     time = Date.new(2017, 3, 15)
 

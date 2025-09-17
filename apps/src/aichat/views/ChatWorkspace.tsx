@@ -4,6 +4,8 @@ import Tabs, {TabsProps} from '@code-dot-org/component-library/tabs';
 import React, {useCallback, useEffect, useMemo, useState} from 'react';
 import {useSelector} from 'react-redux';
 
+import {SystemPromptSettings} from '@cdo/apps/aichat/types';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import usePrevious from '@cdo/apps/util/usePrevious';
 
@@ -19,6 +21,7 @@ import {
   clearStagedFiles,
   fetchUserChatHistory,
   selectAllVisibleMessages,
+  sendAnalytics,
   setClientType,
   setNewChatSession,
 } from '../redux';
@@ -26,7 +29,7 @@ import {findChangedProperties, getNewRemoveId} from '../redux/utils';
 import {
   AiChatClientType,
   ChatAsset,
-  ChatButtonComponent,
+  ChatButtonAndKey,
   ModelParameters,
 } from '../types';
 import {getAssetUrl, getShortName} from '../utils';
@@ -34,6 +37,7 @@ import {getAssetUrl, getShortName} from '../utils';
 import StagedFilesPreview from './assets/StagedFilesPreview';
 import UploadButton from './assets/UploadButton';
 import ChatEventsList from './ChatEventsList';
+import ChatModeDropdown from './ChatModeDropdown';
 import CopyChatHistoryButton from './CopyChatHistoryButton';
 import UserChatMessageEditor from './UserChatMessageEditor';
 
@@ -42,15 +46,17 @@ import moduleStyles from './chatWorkspace.module.scss';
 interface ChatWorkspaceProps {
   modelParameters: ModelParameters;
   clientType: AiChatClientType;
-  chatButtons?: ChatButtonComponent[];
-  hiddenContext?: string;
-  onClear: () => void;
+  chatButtons?: ChatButtonAndKey[];
+  hiddenContextCallback?: () => Promise<string>;
 
   // Multimodal support
   multimodalEnabled?: boolean;
   channelId?: string;
   levelName?: string;
   hasStarterAssets?: boolean;
+
+  // Options for changing system prompt (used in Web Lab 2)
+  systemPromptSettings?: SystemPromptSettings;
 }
 
 enum WorkspaceTeacherViewTab {
@@ -69,12 +75,12 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   modelParameters,
   clientType,
   chatButtons,
-  hiddenContext,
-  onClear,
+  hiddenContextCallback,
   multimodalEnabled = false,
   levelName,
   channelId,
   hasStarterAssets = false,
+  systemPromptSettings,
 }) => {
   if (multimodalEnabled && (!levelName || !channelId)) {
     console.warn(
@@ -255,6 +261,21 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     tabPanelsContainerClassName: moduleStyles.tabPanelsContainer,
   };
 
+  const onClear = useCallback(() => {
+    dispatch(clearChatMessages());
+    dispatch(
+      addChatEvent({
+        timestamp: Date.now(),
+        descriptionKey: 'CLEAR_CHAT',
+      })
+    );
+    dispatch(
+      sendAnalytics(EVENTS.CHAT_ACTION, {
+        action: 'Clear chat history',
+      })
+    );
+  }, [dispatch]);
+
   return (
     <div id="chat-workspace-area" className={moduleStyles.chatWorkspace}>
       {selectedStudent ? (
@@ -270,13 +291,17 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
         {multimodalAvailable && (
           <StagedFilesPreview buildAssetUrl={buildAssetUrl} />
         )}
+        <ChatModeDropdown
+          className={moduleStyles.modeDropdown}
+          systemPromptSettings={systemPromptSettings}
+        />
         {canChatWithModel && (
           <UserChatMessageEditor
             clientType={clientType}
             modelParameters={modelParameters}
             editorContainerClassName={moduleStyles.messageEditorContainer}
             chatButtons={chatButtons}
-            hiddenContext={hiddenContext}
+            hiddenContextCallback={hiddenContextCallback}
             multimodalAvailable={multimodalAvailable}
           />
         )}
