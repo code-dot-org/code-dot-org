@@ -40,8 +40,8 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
   const aiGenerateState = useAppSelector(state => state.music.aiGenerateState);
 
   const useCache = appConfig.getValue('ai-generate-cache') === 'true';
-  const showFullPrompt =
-    appConfig.getValue('ai-generate-full-prompt') === 'true';
+  const showFullContext =
+    appConfig.getValue('ai-generate-full-context') === 'true';
 
   // The array of user choices in the adlib.
   const [choices, setChoices] = useState<string[] | undefined>(undefined);
@@ -143,7 +143,7 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
 
   return (
     <Guide id="generate-panel">
-      {showFullPrompt && (
+      {showFullContext && aiGenerateState === 'none' && (
         <textarea
           id="generate-context"
           onChange={evt => setContextText(evt.target.value)}
