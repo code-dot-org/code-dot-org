@@ -19,7 +19,7 @@ And /^I've initialized the workspace with losing artist blocks$/ do
 end
 
 And /^I've initialized the workspace with bee blocks$/ do
-  load_json_blocks('{"blocks":{"languageVersion":0,"blocks":[{"type":"when_run","x":16,"y":16,"next":{"block":{"type":"controls_repeat","id":"repeat","fields":{"TIMES":2},"inputs":{"DO":{"block":{"type":"maze_moveForward","next":{"block":{"type":"maze_moveForward","next":{"block":{"type":"bee_ifFlower","fields":{"LOC":"<field name=\"LOC\">atHoneycomb</field>"},"inputs":{"DO":{"block":{"type":"maze_honey"}}},"next":{"block":{"type":"maze_turn","fields":{"DIR":"<field name=\"DIR\">turnLeft</field>"}}}}}}}}}}}}}]}}')
+  load_json_blocks('{"blocks":{"languageVersion":0,"blocks":[{"type":"when_run","id":"AP;28]6Q8Q{IuPRO!Et@","x":16,"y":16,"deletable":false,"movable":false,"extraState":{},"next":{"block":{"type":"controls_repeat_dropdown","id":"B,oYg{6VhYF3_.B2Fx6D","fields":{"TIMES":"<field name=\\"TIMES\\" config=\\"3-10\\">3</field>"},"inputs":{"DO":{"block":{"type":"maze_moveForward","id":"is`0CmOudl^S_O!ubIdB"}}},"next":{"block":{"type":"bee_ifNectarAmount","id":"ifNectar","fields":{"ARG1":"<field name=\\"ARG1\\">nectarRemaining</field>","OP":"<field name=\\"OP\\">==</field>","ARG2":"1"},"inputs":{"DO":{"block":{"type":"maze_nectar","id":"getNectar"}}}}}}}}]}}')
 end
 
 And /^I've initialized the workspace with level 1 bounce blocks$/ do
