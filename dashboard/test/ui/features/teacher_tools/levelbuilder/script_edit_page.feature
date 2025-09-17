@@ -9,7 +9,7 @@ Scenario: View the unit edit page
   And I view the temp unit edit page
   And I delete the temp unit with lessons
 
-# Have not added toasts to new homepage
+# Update when toasts are added to the new homepage: https://codedotorg.atlassian.net/browse/TEACH-2134
 @skip
 Scenario: View the unit edit page in locale besides en-US
   Given I am on "http://studio.code.org/home/lang/es"
