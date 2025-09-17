@@ -3,20 +3,14 @@ import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import React, {useCallback, useEffect, useState} from 'react';
 
 import {getGeneratedDancerAssets} from '@cdo/apps/lab2/utils/GeneratedDancer';
-import Adlib from '@cdo/apps/lab2/views/components/guide/Adlib';
+import Adlib, {AdlibsType} from '@cdo/apps/lab2/views/components/guide/Adlib';
 import Guide from '@cdo/apps/lab2/views/components/guide/Guide';
 import getRandomInt from '@cdo/apps/util/getRandomInt';
 import {trySetLocalStorage} from '@cdo/apps/utils';
 
 import moduleStyles from './dancer-generate.module.scss';
 
-const adlibs: {
-  [key: string]: {
-    template: string;
-    options: {[key: string]: string[]};
-    variantCount: number;
-  };
-} = {
+const adlibs: AdlibsType = {
   basic: {
     template:
       'Please generate a dancer.  It should look like a {animal} with {appearance}.',
@@ -111,8 +105,7 @@ const DancerGenerate: React.FunctionComponent<DancerGenerateProps> = ({
         {aiGenerateState === 'none' && (
           <>
             <Adlib
-              template={adlibs[adlibOption].template}
-              options={adlibs[adlibOption].options}
+              adlib={adlibs[adlibOption]}
               onChange={(adlibText, choices) => {
                 setAdlibText(adlibText);
                 setChoices(choices);
