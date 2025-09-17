@@ -23,6 +23,7 @@ interface PersonalizationData {
   otherGoalText: string;
   selectedConfidence: number;
   yearsTeaching: number;
+  dateYearsTeachingSet: Date | null;
   classroomVision: string;
   challenge: string;
 }
@@ -37,6 +38,7 @@ const PersonalizationCollectorContainer: React.FC = () => {
       otherGoalText: '',
       selectedConfidence: -1,
       yearsTeaching: 0,
+      dateYearsTeachingSet: null,
       classroomVision: '',
       challenge: '',
     });
@@ -45,6 +47,13 @@ const PersonalizationCollectorContainer: React.FC = () => {
   const BACK = -1;
 
   const onCarouselPress = (direction: number) => {
+    if (direction === NEXT && questionsNumber === 0) {
+      setPersonalizationData(prev => ({
+        ...prev,
+        dateYearsTeachingSet: new Date(),
+      }));
+    }
+
     if (
       (direction === BACK && questionsNumber === 0) ||
       (direction === NEXT &&

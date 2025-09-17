@@ -14,7 +14,6 @@
 .questionContainer {
   display: flex;
   flex-direction: column;
-  align-items: center !important;
   padding: 0;
   gap: 8px;
   width: 100%;
@@ -24,7 +23,6 @@
 .multiSelectContainer {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   gap: 12px;
 }
 
@@ -35,12 +33,10 @@
   align-items: center;
   gap: 8px;
   flex: 1 0 0;
-  align-self: stretch;
 
   .answer {
     width: 36px;
     height: 40px;
-    display: flex;
     padding: 8px 12px;
   }
 
@@ -97,5 +93,4 @@
 .confidenceButtons {
   display: flex;
   gap: 8px;
-  flex-wrap: wrap;
 }
