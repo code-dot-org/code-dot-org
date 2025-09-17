@@ -106,7 +106,7 @@ class AichatEventsController < ApplicationController
   end
 
   private def can_log_aichat_events?(level_id)
-    current_user.has_aichat_access? || current_user.can_access_ai_tutor2?(level_id)
+    current_user.has_aichat_access? || current_user.can_access_ai_tutor?(level_id)
   end
 
   private def can_view_chat_history?(user_id)

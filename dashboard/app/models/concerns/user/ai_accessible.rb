@@ -49,9 +49,9 @@ module User::AiAccessible
     teacher_can_access_ai_chat? || student_can_access_ai_chat?
   end
 
-  def can_access_ai_tutor2?(level_id)
+  def can_access_ai_tutor?(level_id)
     # If the request is coming from a python lab level, trust the client to decide
-    # if it can access AiTutor2. This allows easy testing of AiTutor2 using a url param.
+    # if it can access AiTutor. This allows easy testing of AiTutor using a url param.
     return false if level_id.nil?
     Level.find(level_id).is_a? Pythonlab
   end
