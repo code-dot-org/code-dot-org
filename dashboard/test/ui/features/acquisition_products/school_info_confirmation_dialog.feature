@@ -33,6 +33,7 @@ Scenario: School Info Confirmation Dialog
   Then I wait until element "#uitest-school-dropdown" contains text "Appling County High School"
   And I select the "Appling County High School" option in dropdown "uitest-school-dropdown"
   Then I click selector "button:contains(Save)"
+  Then I click selector "button:contains(Close)"
   And I wait until element "#ui-test-drawer-toolbar" is gone
 
   # One week later, the teacher does not see the prompt
