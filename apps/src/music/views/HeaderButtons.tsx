@@ -170,7 +170,20 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
             isIconOnly
             icon={{iconStyle: 'solid', iconName: icon}}
             disabled={disabled}
-            onClick={onClick}
+            onClick={e => {
+              onClick();
+              // Adding this to prevent focus from jumping to the next button
+              // when a button is disabled after click (e.g. undo/redo)
+              setTimeout(() => {
+                // Moves focus to the container after click
+                const container = document.querySelector(
+                  `.${moduleStyles.container}`
+                );
+                if (container instanceof HTMLElement) {
+                  container.focus();
+                }
+              }, 0);
+            }}
           />
         </WithTooltip>
       );
@@ -179,7 +192,7 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
   );
 
   return (
-    <div className={moduleStyles.container}>
+    <div className={moduleStyles.container} tabIndex={-1}>
       {/* Show static pack info; clickable Start Over button */}
       {!allowPackSelection && packFolder && (
         <>
