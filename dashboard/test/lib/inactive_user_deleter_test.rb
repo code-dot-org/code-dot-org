@@ -33,12 +33,27 @@ class User::InactiveUserDeleterTest < ActiveJob::TestCase
     end
 
     it 'soft deletes all inactive users' do
-      #User.any_instance.expects(:destroy!).twice
       delete_inactive_users
       student.reload
       teacher.reload
-      _(student.deleted_at).wont_be_nil
-      _(teacher.deleted_at).wont_be_nil
+      _(student.deleted?).must_equal true
+      _(teacher.deleted?).must_equal true
+    end
+
+    it 'soft deletes inactive user that never signed in' do
+      user = create(:user, current_sign_in_at: nil, created_at: 42.months.ago)
+      delete_inactive_users
+      user.reload
+      _(user.deleted?).must_equal true
+    end
+
+    it 'does not process already soft-deleted users' do
+      soft_deleted_user = create(:student)
+      soft_deleted_user.destroy!
+
+      delete_inactive_users
+
+      refute described_instance.processed_user_ids.include?(soft_deleted_user.id)
     end
 
     it 'does not delete active users' do
@@ -47,17 +62,7 @@ class User::InactiveUserDeleterTest < ActiveJob::TestCase
       delete_inactive_users
       active_user.reload
 
-      _(active_user.deleted_at).must_be_nil
-    end
-
-    it 'does not delete already soft-deleted user' do
-      soft_deleted_user = create(:user, deleted_at: 1.day.ago)
-
-      delete_inactive_users
-      soft_deleted_user.reload
-
-      _(soft_deleted_user.deleted_at).wont_be_nil
-      _(soft_deleted_user.deleted_at.to_date).must_equal 1.day.ago.to_date
+      _(active_user.deleted?).must_equal false
     end
 
     it 'increments num_accounts_scrubbed' do

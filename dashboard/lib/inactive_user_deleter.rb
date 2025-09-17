@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 require 'stringio'
 require 'cdo/aws/metrics'
 require 'cdo/aws/s3'
@@ -35,7 +33,7 @@ class InactiveUserDeleter
     raise ArgumentError.new('dry_run must be boolean') unless [true, false].include? @dry_run
 
     # Accounts inactive since this time will be considered for deletion
-    @inactive_since = inactive_since || ::User::SOFT_DELETED_RECORD_TTL.ago
+    @inactive_since = inactive_since || InactiveUserDeleter::INACTIVE_USER_TTL.ago
     raise ArgumentError.new('inactive_since must be Time') unless @inactive_since.is_a? Time
 
     # Maximum number of accounts to delete in a single run.
@@ -87,10 +85,7 @@ class InactiveUserDeleter
   end
 
   def inactive_users
-    inactive_query = Queries::User::Inactive.new(
-      inactive_since: 42.months.ago,
-    )
-    inactive_query.call.where.not(id: processed_user_ids)
+    Queries::User::Inactive.call(inactive_since: 42.months.ago).where.not(id: processed_user_ids)
   end
 
   def summary
