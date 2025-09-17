@@ -137,3 +137,31 @@ Feature: Send and receive messages in the AI differentiation chat
     When I am on "http://studio.code.org/home"
     And I wait until element "#homepage-container" is visible
     And element "#ui-floatingActionButton" does not exist
+
+  @chrome
+  Scenario: Teacher sees notification
+    Given I create a teacher named "Stilgar"
+    And I add the current user to the "ai-differentiation" single user experiment
+
+    # Teacher views lesson page and floating action button
+    When I sign in as "Stilgar"
+    And I get debug info for the current user
+    And I am on "http://studio.code.org/teacher_dashboard/home?enableExperiments=teacher-notifications"
+    And I wait until element "h2:contains(Welcome, Stilgar)" is visible
+    And element "#sign_in_or_user" contains text "Stilgar"
+    And I wait until element "#ui-floatingActionButton" is visible
+
+    # Teacher sees and skips AI Diff chat welcome
+    And I wait until element "button:contains(Get Started)" is visible
+    And I click selector "button:contains(Get Started)"
+    And I wait until element "button:contains(Create)" is visible
+    And I click selector "a:contains('Skip the tutorial')"
+
+    #Now we see the regular AI diff chat (with thread sidebar)
+    And I wait until element "button:contains(Suggest prompts)" is visible
+    And I click selector "#ui-notificationsButton"
+    And I wait until element "p:contains(Test notification no. 1)" is visible
+    And element "p:contains(The deepest parts of the ocean are totally unknown to us)" is visible
+    And element "p:contains(Test notification no. 2)" is visible
+    And element "p:contains(The town extends along a low and marshy level)" is visible
+    And element "p:contains(EXPIRED NOTIFICATION)" is not visible

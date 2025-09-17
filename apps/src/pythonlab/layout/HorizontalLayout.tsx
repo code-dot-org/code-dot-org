@@ -36,7 +36,7 @@ const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
   const widgetViewShowCode = useAppSelector(
     state => state.codebridgeWorkspace.widgetViewShowCode
   );
-  const {aiTutorContextPromise, levelProperties} = useCodebridgeContext();
+  const {hiddenContextCallback, levelProperties} = useCodebridgeContext();
 
   // AI Tutor 2 is shown in the resource panel if enabled.
   const showAiTutor2 =
@@ -129,7 +129,7 @@ const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
             className={panelClassName}
           />
         </div>
-        {showAiTutor2 && aiTutorContextPromise && (
+        {showAiTutor2 && hiddenContextCallback && (
           <div style={{width: rightmostPanelWidth}}>
             <PanelContainer
               id="aitutor2"
@@ -137,7 +137,7 @@ const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
               className={moduleStyles.rightmostColumn}
             >
               <div className={moduleStyles.inside}>
-                <AiTutor2Chat aiTutorContextPromise={aiTutorContextPromise} />
+                <AiTutor2Chat hiddenContextCallback={hiddenContextCallback} />
               </div>
             </PanelContainer>
           </div>

@@ -7,6 +7,7 @@ import React from 'react';
 
 import {commonI18n} from '@cdo/apps/types/locale';
 import experiments from '@cdo/apps/util/experiments';
+import i18n from '@cdo/locale';
 
 import {ChatThread} from './types';
 
@@ -114,10 +115,17 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
             className={classNames(styles.notificationsButton, {
               [styles.selected]: showNotifications,
             })}
+            id="ui-notificationsButton"
             type="button"
           >
             <FontAwesomeV6Icon iconName="bell" />
             <span>{commonI18n.notifications()}</span>
+            <FontAwesomeV6Icon
+              iconName="circle"
+              iconStyle="solid"
+              className={styles.readAt}
+              aria-label={i18n.unread()}
+            />
           </button>
         )}
         <div className={styles.sidebarContent}>

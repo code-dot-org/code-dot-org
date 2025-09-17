@@ -1,669 +1,2134 @@
 {
-  "20-hour": "Accelerated Intro to CS Course",
-  "2018hoc-ab": "2018hoc-ab",
-  "2021-cs-discoveries-deeper-learning-": "2021-cs-discoveries-deeper-learning-",
-  "2021-cs-principles-deeper-learning": "2021-cs-principles-deeper-learning",
-  "2021drafting": "Planning script for CI and CSF 2021",
-  "2021drafting-1": "2021drafting-1",
-  "3-5gamedesign": "Teaching Elementary Game Design",
-  "6-12-dev-playground": "6-12-dev-playground",
-  "ai-and-the-systems-that-power-it": "AI and the Systems that Power It",
-  "ai-classroom-test": "ai-classroom-test",
-  "ai-ethics": "Our AI Code of Ethics",
-  "ai-lab": "ai-lab",
-  "ai-powered-threats-and-defenses": "AIF AI-Powered Threats and Defenses 2025 Pilot",
-  "ai-temp": "ai-temp",
-  "ai-tutor-test": "ai-tutor-test",
-  "ai-unit-pilot": "ai-unit-pilot",
-  "aichat": "aichat",
-  "aif-testing-modularity": "aif-testing-modularity",
-  "aiml": "AI and Machine Learning",
-  "algebra": "Computer Science in Algebra",
-  "algebraa": "Computer Science in Algebra: Course A",
-  "algebrab": "Computer Science in Algebra: Course B",
-  "algebrademo": "algebrademo",
-  "all-the-plc-things": "all-the-plc-things",
-  "alloftheplaygrounds": "alloftheplaygrounds",
-  "alltheblocklythings": "alltheblocklythings",
-  "allthelessonplans": "allthelessonplans",
-  "alltheselfpacedplthings": "All the Self Paced PL Things",
-  "allthesurveys": "allthesurveys",
-  "allthethingscourse": "allthethingscourse",
-  "allthettsthings": "allthettsthings",
-  "allthevalidation": "allthevalidation",
-  "amy-playground": "amy-playground",
-  "amys-playground": "amys-playground",
-  "andrea-test": "andrea-test",
-  "andrea-test-dlp": "andrea-test-dlp",
-  "angelina-playground": "angelina-playground",
-  "applab-1hour": "applab-1hour",
-  "applab-2hour": "applab-2hour",
-  "applab-intro": "Intro to App Lab",
-  "applab-intro-staging": "applab-intro-staging",
-  "apps-for-good": "apps-for-good",
-  "aquatic": "Minecraft: Voyage Aquatic",
-  "artificial-intelligence-foundations": "AI Foundations",
-  "artist": "Artist",
-  "artist-and-bb8": "artist-and-bb8",
-  "artistexemplar": "artistexemplar",
-  "aryanna-sandbox": "aryanna-sandbox",
-  "asunplugged": "asunplugged",
-  "aws-demo": "aws-demo",
-  "baruch-pilot-v1": "baruch-pilot-v1",
-  "basketball": "Choose Your Team and Make a Basketball Game",
-  "bingo": "bingo",
-  "blockchain": "Blockchain",
-  "career-journey-pilot-a": "career-journey-pilot-a",
-  "career-journey-pilot-b": "career-journey-pilot-b",
-  "career-journeys-for-elementary": "Career Journeys for Elementary ",
-  "code-break": "Code Break",
-  "code-break-staging": "code-break-staging",
-  "code-break-younger": "Code Break for Younger Students",
-  "code-break-younger-staging": "code-break-younger-staging",
-  "codebridge-ascii": "codebridge-ascii",
-  "codechella2025": "codechella2025",
-  "codestudiopuzzlechallenge": "codestudiopuzzlechallenge",
-  "coding-with-ai": "Coding with AI",
-  "coding-with-music": "Coding with Music",
-  "colehoc17": "colehoc17",
-  "colehoc2017": "colehoc2017",
-  "computer-science-and-artificial-intelligence-foundations": "computer-science-and-artificial-intelligence-foundations",
-  "computer-systems-and-devices": "[PILOT] Computer Systems and Devices",
-  "computer-systems-and-devices-no-device": "computer-systems-and-devices-no-device",
-  "computer-systems-nondevice-playground": "computer-systems-nondevice-playground",
-  "computer-systems-playground": "computer-systems-playground",
-  "computer-vision": "Computer Vision",
-  "computer-vision-pilot": "computer-vision-pilot",
-  "computing-foundations-for-a-digital-age": "Computing Foundations for a Digital Age: Indiana (AI Foundations)",
-  "contagion-guided-practice": "Contagion Guided Practice [Teacher only]",
-  "contagion-guided-practice-1": "contagion-guided-practice-1",
-  "contagion-pilot": "Contagion Simulator",
-  "contagion-pilot-1": "contagion-pilot-1",
-  "counting-csc": "Counting Activity",
-  "course-e-2018": "course-e-2018",
-  "course-f-2018": "course-f-2018",
-  "course1": "Course 1",
-  "course2": "Course 2",
-  "course3": "Course 3",
-  "course4": "Course 4",
-  "course4pre": "course4pre",
-  "coursea": "CS Fundamentals: Course A",
-  "coursea-draft": "coursea-draft",
-  "courseb": "CS Fundamentals: Course B",
-  "courseb-draft": "courseb-draft",
-  "coursec": "CS Fundamentals: Course C",
-  "coursec-draft": "coursec-draft",
-  "coursec-maker": "coursec-maker",
-  "coursec-maker-2024-pilot": "coursec-maker-2024-pilot",
-  "coursec-maker-pilot": "coursec-maker-pilot",
-  "coursed": "CS Fundamentals: Course D",
-  "coursed-draft": "coursed-draft",
-  "coursed-maker": "coursed-maker",
-  "coursed-maker-2024-pilot": "coursed-maker-2024-pilot",
-  "coursed-maker-pilot": "coursed-maker-pilot",
-  "coursed-ramp": "coursed-ramp",
-  "coursee": "CS Fundamentals: Course E",
-  "coursee-draft": "coursee-draft",
-  "coursee-maker": "coursee-maker",
-  "coursee-ramp": "coursee-ramp",
-  "coursef": "CS Fundamentals: Course F",
-  "coursef-2022-pilot": "coursef-2022-pilot",
-  "coursef-draft": "coursef-draft",
-  "coursef-maker": "coursef-maker",
-  "coursef-ramp": "coursef-ramp",
-  "craft17": "craft17",
-  "craft17-kiki": "craft17-kiki",
-  "craft18": "craft18",
-  "creativity-with-ai": "creativity-with-ai",
-  "creativity-with-ai-playground": "creativity-with-ai-playground",
-  "cs-discoveries-deeper-learning-2019---2020": "cs-discoveries-deeper-learning-2019---2020",
-  "cs-discoveries-deeper-learning-2021": "cs-discoveries-deeper-learning-2021",
-  "cs-discoveries-facilitator-in-training": "cs-discoveries-facilitator-in-training",
-  "cs-discoveries-facilitator-in-training-2018-2019": "cs-discoveries-facilitator-in-training-2018-2019",
-  "cs-discoveries-facilitators-in-training-2018-2019": "cs-discoveries-facilitators-in-training-2018-2019",
-  "cs-discoveries-teachercon-novice": "cs-discoveries-teachercon-novice",
-  "cs-discoviers-teachercon-novice": "cs-discoviers-teachercon-novice",
-  "cs-in-algebra-legacy": "cs-in-algebra-legacy",
-  "cs-in-algebra-support": "cs-in-algebra-support",
-  "cs-in-science": "cs-in-science",
-  "cs-in-science-legacy": "cs-in-science-legacy",
-  "cs-in-science-support": "cs-in-science-support",
-  "cs-principles-curriculum-training-for-facilitators": "cs-principles-curriculum-training-for-facilitators",
-  "cs-principles-deeper-learning-2019---2020": "cs-principles-deeper-learning-2019---2020",
-  "cs-principles-deeper-learning-2021": "cs-principles-deeper-learning-2021",
-  "cs-principles-facilitator-in-training": "cs-principles-facilitator-in-training",
-  "cs-principles-facilitator-in-training-2018-2019": "cs-principles-facilitator-in-training-2018-2019",
-  "cs-principles-facilitators-in-training-2018-2019": "cs-principles-facilitators-in-training-2018-2019",
-  "cs-principles-support": "cs-principles-support",
-  "cs-principles-teachercon-novice": "cs-principles-teachercon-novice",
-  "cs4all-invasive-species": "cs4all-invasive-species",
-  "csa": "Computer Science A - Objects First",
-  "csa-alt": "Computer Science A - CED Aligned",
-  "csa-async": "Getting Started Modules CSA",
-  "csa-backpack-2022": "csa-backpack-2022",
-  "csa-celebrity-lab": "CSA Consumer Review Lab",
-  "csa-collegeboard-labs": "CSA Magpie Lab",
-  "csa-data-lab": "CSA Data Lab",
-  "csa-draft-pl": "csa-draft-pl",
-  "csa-examples-21": "csa-examples-21",
-  "csa-examples-22": "csa-examples-22",
-  "csa-frq-practice": "csa-frq-practice",
-  "csa-frq-practice-2019": "csa-frq-practice-2019",
-  "csa-frq-practice-2021": "csa-frq-practice-2021",
-  "csa-frq-practice-2022": "csa-frq-practice-2022",
-  "csa-frq-practice-2023": "csa-frq-practice-2023",
-  "csa-frq-practice-pre2019": "csa-frq-practice-pre2019",
-  "csa-labs": "csa-labs",
-  "csa-pilot": "CSA 24-25 Pilot",
-  "csa-pilot-extra": "csa-pilot-extra",
-  "csa-pilot-facilitator": "CSA Pilot Facilitators",
-  "csa-pl-standalone-code-2022": "csa-pl-standalone-code-2022",
-  "csa-preview": "csa-preview",
-  "csa-self-paced-pl": "Navigating Code.org for CSA Pilot Teachers",
-  "csa-software-engineering": "Software Engineering and Computer Vision",
-  "csa-u6-dev": "csa-u6-dev",
-  "csa-u7-dev": "csa-u7-dev",
-  "csa-u8-dev": "csa-u8-dev",
-  "csa-validation-pilot": "CSA Validation Pilot",
-  "csa-videos": "csa-videos",
-  "csa1-2022-exemplars": "csa1-2022-exemplars",
-  "csa1-exemplars": "csa1-exemplars",
-  "csa2-2022-exemplars": "csa2-2022-exemplars",
-  "csa2-exemplars": "csa2-exemplars",
-  "csa3-exemplars": "csa3-exemplars",
-  "csa4-exemplars": "csa4-exemplars",
-  "csa5-exemplars": "csa5-exemplars",
-  "csa6-exemplars": "csa6-exemplars",
-  "csa7-exemplars": "csa7-exemplars",
-  "csa8-exemplars": "csa8-exemplars",
-  "csaif-preview": "csaif-preview",
-  "csc-adaptations": "Modeling Animal Adaptations",
-  "csc-bookcover": "csc-bookcover",
-  "csc-bookcovers": "Coding Book Covers",
-  "csc-ecosystems": "Simulating a Marine Ecosystem",
-  "csc-ecosystems-1": "csc-ecosystems-1",
-  "csc-fables": "Storytelling Module",
-  "csc-function-machines-pilot": "csc-function-machines-pilot",
-  "csc-landmarks-pilot": "csc-landmarks-pilot",
-  "csc-mappinglandmarks": "Coding Interactive Maps",
-  "csc-particles": "csc-particles",
-  "csc-pilot-2022-ecosystems": "csc-pilot-2022-ecosystems",
-  "csc-pilot-2022-fables": "csc-pilot-2022-fables",
-  "csc-pilot-2022-starquilts": "csc-pilot-2022-starquilts",
-  "csc-pilot-2022-timecapsule": "csc-pilot-2022-timecapsule",
-  "csc-pilot-fa2022-ecosystem": "csc-pilot-fa2022-ecosystem",
-  "csc-pilot-fa2022-particles": "csc-pilot-fa2022-particles",
-  "csc-pilot-fa2022-timecapsule": "csc-pilot-fa2022-timecapsule",
-  "csc-starquilts": "Coding a Geometric Star Quilt",
-  "csc-timecapsule": "Coding a Time Capsule",
-  "csd": "Computer Science Discoveries",
-  "csd-ayw1-debugging": "csd-ayw1-debugging",
-  "csd-bugs": "csd-bugs",
-  "csd-playground": "csd-playground",
-  "csd-post-survey": "CSD Student Post-Course Survey ('18-'19)",
-  "csd-programming-with-music-lab-2025-pilot": "[PILOT] Programming with Music Lab",
-  "csd-sample-online": "csd-sample-online",
-  "csd-summer-puertorico-2024": "CSD Summer Workshop - Puerto Rico only",
-  "csd-test-saving-state": "csd-test-saving-state",
-  "csd-tests": "csd-tests",
-  "csd-videos": "csd-videos",
-  "csd-web-dev-beta-2024": "csd-web-dev-beta-2024",
-  "csd1": "csd1",
-  "csd1-old": "csd1-old",
-  "csd2": "csd2",
-  "csd2-old": "csd2-old",
-  "csd2-projects-temp": "csd2-projects-temp",
-  "csd2-virtual": "csd2-virtual",
-  "csd3": "csd3",
-  "csd3-1819draft": "csd3-1819draft",
-  "csd3-old": "csd3-old",
-  "csd3-virtual": "Self Paced Introduction to Game Lab",
-  "csd4": "csd4",
-  "csd4-draft": "csd4-draft",
-  "csd4-old": "csd4-old",
-  "csd4-preview-2021": "CSD Unit 4 - The Design Process ('21-'22 Beta Preview)",
-  "csd4-preview-2021-1": "csd4-preview-2021-1",
-  "csd5": "csd5",
-  "csd5-draft": "csd5-draft",
-  "csd5-old": "csd5-old",
-  "csd5-preview-2021": "CSD Unit 5 - Data and Society ('21-'22 Beta Preview)",
-  "csd5-preview-2021-1": "csd5-preview-2021-1",
-  "csd6": "csd6",
-  "csd6-draft": "csd6-draft",
-  "csd6-old": "csd6-old",
-  "csd6-pilot": "Physical Computing Pilot (2022)",
-  "csd6-projects": "csd6-projects",
-  "csd7": "csd7",
-  "csdgraveyard": "csdgraveyard",
-  "csf-2021-pilot": "CS Fundamentals 2021 Pilot",
-  "csf-2021-pilot-1": "csf-2021-pilot-1",
-  "csf-pilot": "csf-pilot",
-  "csf-sandbox": "csf-sandbox",
-  "csf-secret-sample": "csf-secret-sample",
-  "csf-secret-sample-story": "csf-secret-sample-story",
-  "csf2harvey": "csf2harvey",
-  "csl-vn": "csl-vn",
-  "csp": "Computer Science Principles",
-  "csp-ap": "csp-ap",
-  "csp-ca-a": "csp-ca-a",
-  "csp-exam": "csp-exam",
-  "csp-mid-survey": "CSP Student Mid-year Survey",
-  "csp-online-test": "csp-online-test",
-  "csp-playground": "csp-playground",
-  "csp-pre-survey": "csp-pre-survey",
-  "csp-support": "csp-support",
-  "csp3-recovery": "csp3-recovery",
-  "csp3-research-mxghyt": "csp3-research-mxghyt",
-  "csp3-staging": "csp3-staging",
-  "csp3-virtual": "Self Paced Introduction to Turtle Programming In App Lab",
-  "csp5-virtual": "Event-Driven Programming in App Lab",
-  "csp5-virtual-part2": "csp5-virtual-part2",
-  "csp6": "csp6",
-  "cspassessment": "cspassessment",
-  "cspexam1-mwu7ildym9": "cspexam1-mwu7ildym9",
-  "cspexam2-akwgah1ac5": "cspexam2-akwgah1ac5",
-  "csplessonsamples": "csplessonsamples",
-  "cspoptional": "cspoptional",
-  "cspunit1": "cspunit1",
-  "cspunit1-support": "cspunit1-support",
-  "cspunit1-support-test": "cspunit1-support-test",
-  "cspunit2": "cspunit2",
-  "cspunit3": "cspunit3",
-  "cspunit3temp": "cspunit3temp",
-  "cspunit4": "cspunit4",
-  "cspunit4draft": "cspunit4draft",
-  "cspunit5": "cspunit5",
-  "cspunit6": "cspunit6",
-  "cspunit6draft": "cspunit6draft",
-  "curriculum-sandbox-levels": "curriculum-sandbox-levels",
-  "customizing-llms": "Customizing Language Models",
-  "customizing-llms-latm-pilot": "customizing-llms-latm-pilot",
-  "cybersecurity-and-global-impacts": "Cybersecurity and Global Impacts",
-  "dan-test": "dan-test",
-  "dance": "Dance Party (2018)",
-  "dance-2019": "Dance Party (2019)",
-  "dance-ai": "Dance Party: AI Edition",
-  "dance-draft": "dance-draft",
-  "dance-extras": "Keep On Dancing (2018)",
-  "dance-extras-2019": "Keep On Dancing (2019)",
-  "dance-extras-gallery": "dance-extras-gallery",
-  "dance-low": "dance-low",
-  "dance-unplugged": "Dance Party Unplugged",
-  "dani-june-2020-test": "dani-june-2020-test",
-  "data-science": "Data Science",
-  "data-science-2024-pilot": "data-science-2024-pilot",
-  "data-science-beta": "data-science-beta",
-  "data-science-playground": "data-science-playground",
-  "data-science-with-python-pilot": "Data Science with Python 2025 Pilot",
-  "data-society": "Data and Society",
-  "deepdive-debugging": "Debugging Lessons for Educators",
-  "default": "default",
-  "denny-science": "denny-science",
-  "denny-science-8": "denny-science-8",
-  "denny-science-copy": "denny-science-copy",
-  "design-process": "The Design Process",
-  "devices": "Creating Apps with Devices (Circuit Playground)",
-  "dlp-core": "dlp-core",
-  "dlp-csd-mod4": "dlp-csd-mod4",
-  "dlp-csp-mod4": "dlp-csp-mod4",
-  "draft-hoc-dp": "draft-hoc-dp",
-  "draft-hoc-dp-2": "draft-hoc-dp-2",
-  "draft-hoc-dp-2-": "draft-hoc-dp-2-",
-  "draft-hoc-dp-2-a": "draft-hoc-dp-2-a",
-  "draft-hoc-dp-2-b": "draft-hoc-dp-2-b",
-  "drafting": "drafting",
-  "duino": "duino",
-  "e-f-ramp": "e-f-ramp",
-  "ecs-support": "ecs-support",
-  "ecs-support-legacy": "ecs-support-legacy",
-  "edit-code": "Edit Code",
-  "edit-code-1": "edit-code-1",
-  "elem-game-design": "Elementary Game Design",
-  "elementaryai": "How AI Makes Decisions",
-  "emma": "emma",
-  "emmas-playground": "emmas-playground",
-  "equity-support": "equity-support",
-  "events": "events",
-  "explore-data-1": "Data Activity",
-  "exploring-gen-ai": "Exploring Generative AI",
-  "express": "CS Fundamentals: Express Course",
-  "ey-ecosystems": "ey-ecosystems",
-  "faciliators-ea-pl-python": "faciliators-ea-pl-python",
-  "facilitator-access-2-csaif": "facilitator-access-2-csaif",
-  "facilitator-access-csaif": "facilitator-access-csaif",
-  "facilitator-onboarding": "Facilitator Onboarding",
-  "facilitator-training": "facilitator-training",
-  "facilitators-in-training-summer-2019": "facilitators-in-training-summer-2019",
-  "facilitators-in-training-summer-reflections-2019": "facilitators-in-training-summer-reflections-2019",
-  "fancygeometry-pilot": "fancygeometry-pilot",
-  "fit-weekend-in-person": "fit-weekend-in-person",
-  "fit2019-apprentice": "Apprentice Reflections for Summer Workshop 2019",
-  "fit2019-apprentice-1": "fit2019-apprentice-1",
-  "fit2019-apprentice-old": "fit2019-apprentice-old",
-  "flappy": "Flappy Code",
-  "flappy-impact-study": "flappy-impact-study",
-  "fmscsd3preview": "fmscsd3preview",
-  "focus-on-coding": "Focus on Coding (CS Discoveries)",
-  "focus-on-creativity": "Focus on Creativity (CS Discoveries)",
-  "focus-on-data": "Focus on Data (CS Discoveries)",
-  "focus-on-design-with-purpose": "Focus on Design with Purpose (CS Discoveries)",
-  "focus-on-hardware": "Focus on Hardware (CS Discoveries)",
-  "focus-on-impact-in-society": "Focus on Impact in Society (CS Discoveries)",
-  "for-screenshots-only": "for-screenshots-only",
-  "foundations-gen-ai": "Foundations of Generative AI",
-  "foundations-generative-ai-unplugged": "Foundations of Generative AI (Unplugged)",
-  "foundations-of-ai-programming": "Foundations of AI Programming",
-  "foundations-of-cs-beta": "Foundations of Computer Science (Beta)",
-  "frequency-analysis": "frequency-analysis",
-  "frozen": "Code with Anna and Elsa",
-  "frozen-2018": "frozen-2018",
-  "frozen-2018-test": "frozen-2018-test",
-  "frozen-2018-test-b": "frozen-2018-test-b",
-  "gamelab": "gamelab",
-  "gamelab-demo": "gamelab-demo",
-  "gamelab-hackathon": "gamelab-hackathon",
-  "gamelabprojects": "gamelabprojects",
-  "gen-ai-customizing-draft": "gen-ai-customizing-draft",
-  "gen-ai-customizing-pilot-v1": "[Pilot] Customizing Language Models",
-  "gen-ai-customizing-pilot-v2": "[Create and Learn] Customizing Language Models",
-  "gen-ai-foudations-pilot-v1": "[Pilot] Foundations of Generative AI",
-  "gen-ai-foundations-draft": "gen-ai-foundations-draft",
-  "gen-ai-humanities": "Generative AI for Humanities",
-  "gen-ai-spanish-test-a": "gen-ai-spanish-test-a",
-  "gen-ai-staging": "gen-ai-staging",
-  "gen-ai-standalone": "gen-ai-standalone",
-  "genai-temp": "genai-temp",
-  "getting-started": "Getting Started with Code.org",
-  "gettingstarted-k5": "gettingstarted-k5",
-  "glj-behavior-test": "glj-behavior-test",
-  "grade2-maker": "micro:bit Maker - Grade 2",
-  "grade3-maker": "micro:bit Maker - Grade 3",
-  "grade4-maker": "micro:bit Maker - Grade 4",
-  "grade5": "grade5",
-  "grade5-maker": "micro:bit Maker - Grade 5",
-  "gumball": "Gumball Play Lab",
-  "haikubot-pilot": "haikubot-pilot",
-  "halloween": "halloween",
-  "hello-world-animals": "Hello World: Animals",
-  "hello-world-batman": "hello-world-batman",
-  "hello-world-csc": "hello-world-csc",
-  "hello-world-emoji": "Hello World: Emoji",
-  "hello-world-food": "Hello World: Food",
-  "hello-world-retro": "Hello World: Retro",
-  "hello-world-soccer": "Hello World: Soccer",
-  "hello-world-space": "Hello World: Space",
-  "hello-world-transformers-one": "Hello World Transformers One",
-  "hero": "Minecraft: Hero's Journey",
-  "hoc-amazon-poc": "hoc-amazon-poc",
-  "hoc-dp-oct-beta": "hoc-dp-oct-beta",
-  "hoc-dp-oct-beta-b": "hoc-dp-oct-beta-b",
-  "hoc-encryption": "Hour of Code: Simple Encryption",
-  "hoc-impact-study": "hoc-impact-study",
-  "hoc-music-ai-pilot": "hoc-music-ai-pilot",
-  "hoc-music-ai-pilot-1": "hoc-music-ai-pilot-1",
-  "hoc-music-ai-pilot-2": "hoc-music-ai-pilot-2",
-  "hoc-music-ai-pilot-3": "hoc-music-ai-pilot-3",
-  "hoc-music-ai-pilot-4": "hoc-music-ai-pilot-4",
-  "hour-of-code": "hour-of-code",
-  "hourofcode": "Classic Maze",
-  "how-ai-works": "How AI Works",
-  "iceage": "Ice Age Play Lab",
-  "idaho-digital-literacy": "Idaho Digital Literacy",
-  "infinity": "Disney Infinity Play Lab",
-  "insights-from-data-and-ai": "Insights from Data and AI",
-  "interactive-games-animations": "Interactive Animations and Games",
-  "intro-to-programming-playground": "intro-to-programming-playground",
-  "intro-to-programming-python": "intro-to-programming-python",
-  "introduction-to-programming-in-music-lab-for-elementary": "introduction-to-programming-in-music-lab-for-elementary",
-  "jamila-sandbox": "jamila-sandbox",
-  "jess-test-script": "jess-test-script",
-  "jess-test-script-1": "jess-test-script-1",
-  "jigsaw": "Jigsaw",
-  "joi-sandbox": "joi-sandbox",
-  "jr-test": "jr-test",
-  "k1hoc2017": "k1hoc2017",
-  "k5-ai-data": "How AI Makes Decisions",
-  "k5-maker-pilot": "K-5 Maker Self-Paced Professional Learning",
-  "k5-onlinepd": "Teaching Computer Science Fundamentals",
-  "k5-support": "k5-support",
-  "k5-unplugged": "CS Fundamentals Unplugged",
-  "k5aisandbox": "k5aisandbox",
-  "k5concepts": "k5concepts",
-  "k5gamedesignsandbox": "k5gamedesignsandbox",
-  "kaitie-test-script": "kaitie-test-script",
-  "katie-practice": "katie-practice",
-  "katies-playground": "katies-playground",
-  "kindertest": "kindertest",
-  "kodea-pd-2021": "Enseñando Fundamentos de la Computación",
-  "kt-test-1": "kt-test-1",
-  "lesson-plan-feedback-v1": "lesson-plan-feedback-v1",
-  "lori-sandbox": "lori-sandbox",
-  "lorisandbox": "lorisandbox",
-  "mc": "Minecraft Adventurer",
-  "melissa-cloning-sandbox": "melissa-cloning-sandbox",
-  "melissasandbox": "melissasandbox",
-  "microbit": "Creating Apps with Devices (micro:bit)",
-  "microbit-temp": "microbit-temp",
-  "microbitmakermodule": "Teaching Maker with micro:bit",
-  "mike-test": "mike-test",
-  "minecraft": "Minecraft Designer",
-  "ml-playground": "ml-playground",
-  "moneppo-1": "moneppo-1",
-  "mt-playground": "mt-playground",
-  "music-accessibility": "music-accessibility",
-  "music-ai-2024": "music-ai-2024",
-  "music-extras": "music-extras",
-  "music-intro": "music-intro",
-  "music-intro-elementary": "[Pilot] Music Lab - Elementary ",
-  "music-jam": "Music Lab: Jam Session",
-  "music-keyboard-accessibility": "music-keyboard-accessibility",
-  "music-keyboard-navigation-onboarding": "music-keyboard-navigation-onboarding",
-  "music-lab-advanced-model-sandbox": "music-lab-advanced-model-sandbox",
-  "music-onboard": "music-onboard",
-  "music-pilot-gj": "music-pilot-gj",
-  "music-tutorial-2024": "Music Lab Tutorial",
-  "musiclab": "musiclab",
-  "musiclab-instructions-bash": "musiclab-instructions-bash",
-  "musiclab-pdx-test": "musiclab-pdx-test",
-  "musiclab-pilot": "musiclab-pilot",
-  "net-int": "net-int",
-  "netsim": "netsim",
-  "networks-and-internet-playground": "networks-and-internet-playground",
-  "networks-and-the-internet": "[PILOT] Networks and the Internet",
-  "nevada-standards-aligned-fifth-grade": "Nevada Standards Aligned: CSF 5th Grade",
-  "nevada-standards-aligned-fifth-grade-2023": "nevada-standards-aligned-fifth-grade-2023",
-  "nevada-standards-aligned-first-grade": "Nevada Standards Aligned: CSF 1st Grade",
-  "nevada-standards-aligned-fourth-grade": "Nevada Standards Aligned: CSF 4th Grade",
-  "nevada-standards-aligned-kindergarten": "Nevada Standards Aligned: CSF Kindergarten",
-  "nevada-standards-aligned-second-grade": "Nevada Standards Aligned: CSF 2nd Grade",
-  "nevada-standards-aligned-third-grade": "Nevada Standards Aligned: CSF 3rd Grade",
-  "new-d": "new-d",
-  "new-e": "new-e",
-  "new-express": "new-express",
-  "new-f": "new-f",
-  "new-stages-sept-2017": "new-stages-sept-2017",
-  "none-none": "none-none",
-  "novice-view": "novice-view",
-  "oceans": "AI for Oceans",
-  "odometer": "odometer",
-  "original-allthelessonplans-course": "original-allthelessonplans-course",
-  "original-alltheselfpacedplthings-course": "original-alltheselfpacedplthings-course",
-  "original-allthethings-course": "original-allthethings-course",
-  "original-allthettsthings-course": "original-allthettsthings-course",
-  "other-plc-course": "other-plc-course",
-  "outbreak": "Outbreak Simulator",
-  "outbreak-csc": "Outbreak",
-  "outbreak-module": "outbreak-module",
-  "outbreakmodule": "outbreakmodule",
-  "peru": "peru",
-  "petgame": "petgame",
-  "physcomp-temp": "physcomp-temp",
-  "pilot-coursec-maker-2024": "[Pilot] Course C Maker with micro:bit",
-  "pilot-coursed-maker-2024": "[Pilot] Course D Maker with micro:bit",
-  "pilot-coursee-maker-2024": "[Pilot] Course E Maker with micro:bit",
-  "pilot-coursef-maker-2024": "[Pilot] Course F Maker with micro:bit",
-  "pilot-elem-music-lab": "Intro to Programming w Music Lab",
-  "pilot-k5-ai": "[Pilot] Elementary AI Module",
-  "pilot-k5-game-design": "[Pilot] Game Design",
-  "pilot-pl-teaching-k5-music-lab": "pilot-pl-teaching-k5-music-lab",
-  "pixelation": "Pixelation",
-  "pl-csd-bugs": "pl-csd-bugs",
-  "pl-csd-summer": "'25 - '26 CSD In-Person PL Workshop Course",
-  "pl-playground": "pl-playground",
-  "pl-team-design-guide": "pl-team-design-guide",
-  "playground": "playground",
-  "playlab": "Play Lab",
-  "plc-bugbash-course": "plc-bugbash-course",
-  "pluralsight": "pluralsight",
-  "poem-art": "Poem Art",
-  "poembot": "Poembot",
-  "poembot-hoc": "poembot-hoc",
-  "poembot-springforum21": "poembot-springforum21",
-  "poemmaker": "poemmaker",
-  "poetry": "Coding with Poetry",
-  "poetry-hoc3": "poetry-hoc3",
-  "poster": "poster",
-  "poster-1": "poster-1",
-  "poster-draft": "poster-draft",
-  "poster-experiment": "poster-experiment",
-  "pre-express": "CS Fundamentals: Pre-reader Express",
-  "problem-solving-computing": "Problem Solving and Computing",
-  "problem-solving-with-ai": "Problem Solving with AI",
-  "programming-fundamentals": "Programming Fundamentals 2025 Pilot",
-  "programming-fundamentals-aitutor": "[PILOT] Programming Fundamentals (AI Tutor)",
-  "programming-with-music-lab": "Programming with Music Lab",
-  "programming-with-music-lab-playground": "programming-with-music-lab-playground",
-  "public-key-cryptography": "public-key-cryptography",
-  "pwc": "pwc",
-  "python-adlibs": "python-adlibs",
-  "python-madlibs": "python-madlibs",
-  "rbo-reference": "rbo-reference",
-  "removed19": "removed19",
-  "sandbox-coding-with-ai": "sandbox-coding-with-ai",
-  "sandbox-csaif-pl": "sandbox-csaif-pl",
-  "sandbox-csf": "sandbox-csf",
-  "sandbox-data-science-pl": "sandbox-data-science-pl",
-  "sandbox-java-pl": "sandbox-java-pl",
-  "sandbox-pl-cv": "sandbox-pl-cv",
-  "sb-chardev-v1": "sb-chardev-v1",
-  "sb-pt-cont": "sb-pt-cont",
-  "sb-pt-exp": "sb-pt-exp",
-  "sconyers": "sconyers",
-  "seesaw-adaptations": "seesaw-adaptations",
-  "self-paced-exploring-gen-ai": "Teaching Exploring Generative AI",
-  "self-paced-foundations-cs": "CS and AI Foundations",
-  "self-paced-gen-ai": "self-paced-gen-ai",
-  "self-paced-pl-ai-101": "AI 101 Self Paced Professional Learning for Educators",
-  "self-paced-pl-ai-districts": "AI 101 Professional Learning for Districts",
-  "self-paced-pl-ai-foundations": "self-paced-pl-ai-foundations",
-  "self-paced-pl-aiml": "Teaching AI and Machine Learning",
-  "self-paced-pl-coding-with-ai": "Teaching Coding with AI",
-  "self-paced-pl-computer-vision": "Teaching Computer Vision",
-  "self-paced-pl-computer-vision-2024": "self-paced-pl-computer-vision-2024",
-  "self-paced-pl-csa": "CSA Getting Started Modules",
-  "self-paced-pl-csc": "Teaching CS Connections",
-  "self-paced-pl-csd": "Teaching CS Discoveries",
-  "self-paced-pl-csd-2021": "Teaching CS Discoveries 22-23",
-  "self-paced-pl-csd-unit1": "Teaching Problem Solving and Computing",
-  "self-paced-pl-csd-unit2": "Teaching Web Development",
-  "self-paced-pl-csd-unit3": "Teaching Interactive Animations and Games",
-  "self-paced-pl-csd-unit4": "Teaching The Design Process",
-  "self-paced-pl-csd-unit5": "Teaching Data and Society",
-  "self-paced-pl-csd5": "Teaching AI and Machine Learning (2022)",
-  "self-paced-pl-csd6-2021": "Teaching AI and Machine Learning (2021)",
-  "self-paced-pl-csd7-2021": "self-paced-pl-csd7-2021",
-  "self-paced-pl-csd8-2021": "self-paced-pl-csd8-2021",
-  "self-paced-pl-csp": "Teaching CS Principles",
-  "self-paced-pl-csp-2021": "Teaching CS Principles (2021)",
-  "self-paced-pl-equitymodule": "Equity in Computer Science",
-  "self-paced-pl-k5": "Computer Science Basics for K-5 Teachers",
-  "self-paced-pl-microbit": "Teaching Creating Apps with Devices (micro:bit)",
-  "self-paced-pl-physical-computing": "Teaching Creating Apps with Devices (Circuit Playground)",
-  "self-paced-pl-teaching-computer-science-discoveries-music-lab": "Teaching Programming with Music Lab",
-  "soccer": "soccer",
-  "special-fun": "special-fun",
-  "specialseries": "specialseries",
-  "spelling-bee": "Spelling Activity",
-  "sports": "Code Your Own Sports Game",
-  "spritelab": "spritelab",
-  "spritelab-ee": "spritelab-ee",
-  "spritelab-simple": "spritelab-simple",
-  "spritelab-validated": "spritelab-validated",
-  "starwars": "Star Wars: Building a Galaxy With Code (JavaScript)",
-  "starwarsblocks": "Star Wars: Building a Galaxy With Code (Blockly)",
-  "step": "step",
-  "subgoal-labels-opt-in": "subgoal-labels-opt-in",
-  "subgoals-assessment-staging": "subgoals-assessment-staging",
-  "teachercon": "teachercon",
-  "teaching-ai-foundations": "Teaching AI Foundations",
-  "teaching-ai-powered-theats-and-defenses": "teaching-ai-powered-theats-and-defenses",
-  "teaching-ai-systems-that-power-it": "Teaching AI and the Systems that Power It",
-  "teaching-coding-with-music": "Teaching Coding with Music",
-  "teaching-csd-aiml": "Teaching AI and Machine Learning",
-  "teaching-csd-microbit": "Teaching Creating Apps for Devices (micro:bit)",
-  "teaching-csd-physical-computing": "Teaching Creating Apps for Devices (Circuit Playground)",
-  "teaching-csd-unit1": "Teaching Problem Solving and Computing",
-  "teaching-csd-unit2": "Teaching Web Development",
-  "teaching-csd-unit3": "Teaching Interactive Animations and Games",
-  "teaching-csd-unit4": "Teaching The Design Process",
-  "teaching-csd-unit5": "Teaching Data and Society",
-  "teaching-csf": "Teaching Computer Science Fundamentals",
-  "teaching-cyber-and-global-impacts": "Teaching Cybersecurity and Global Impacts",
-  "teaching-data-science-pilot": "teaching-data-science-pilot",
-  "teaching-exp-gen-ai": "Teaching Exploring Generative AI",
-  "teaching-fabric-of-internet": "Teaching the Fabric of the Internet",
-  "teaching-foundations-ai-programming": "Teaching Foundations of AI Programming",
-  "teaching-insights-from-data-and-ai": "Teaching Insights from Data and AI",
-  "teaching-intro-java": "Introduction to Java for Teachers",
-  "teaching-k5-music-lab": "teaching-k5-music-lab",
-  "teaching-problem-solving-with-ai": "Teaching Problem Solving with AI",
-  "tess-modular": "tess-modular",
-  "tess-modularity": "tess-modularity",
-  "tess-test-course": "tess-test-course",
-  "tess-testing-coding-with-music": "tess-testing-coding-with-music",
-  "tess-testing-focus-on-creativity": "tess-testing-focus-on-creativity",
-  "tess-testing-problem-solving": "tess-testing-problem-solving",
-  "tesselementaryai": "tesselementaryai",
-  "tessnew": "tessnew",
-  "tesspltest23": "tesspltest23",
-  "tesstest921": "tesstest921",
-  "tesstesting": "tesstesting",
-  "test--csp-online-teacher-support": "test--csp-online-teacher-support",
-  "test-nv-coursea": "test-nv-coursea",
-  "test-teaching-ap-cs-unit-1": "test-teaching-ap-cs-unit-1",
-  "test-wednesday": "test-wednesday",
-  "testing": "testing",
-  "testing-digital-information": "testing-digital-information",
-  "testing-modular": "testing-modular",
-  "teststandard": "teststandard",
-  "testtess": "testtess",
-  "text-compression": "Text Compression",
-  "textbook": "textbook",
-  "the-fabric-of-the-internet-and-ai": "The Fabric of the Internet and AI",
-  "time4cs-control": "time4cs-control",
-  "time4cs-experiment": "time4cs-experiment",
-  "time4csdemo": "time4csdemo",
-  "transferring-over": "transferring-over",
-  "tutorial-video---code-studio-puzzle-challenge": "tutorial-video---code-studio-puzzle-challenge",
-  "ui-test-versioned-script": "ui-test-versioned-script",
-  "usability": "usability",
-  "valentine": "valentine",
-  "vigenere": "vigenere",
-  "virtual-holding-place": "virtual-holding-place",
-  "virtual-pl-csa-summer": " '25 - '26 CS A Virtual PL Workshop Course",
-  "virtual-pl-csd-summer": "'25 - '26 CSD Virtual PL Workshop Course",
-  "virtual-pl-csp-summer": "'25 - '26 CSP Virtual PL Workshop Course",
-  "virtual-pl-csp-summer-day1": "virtual-pl-csp-summer-day1",
-  "virustest": "virustest",
-  "vpl-csa": "CSA Virtual Professional Learning 24-25",
-  "vpl-csd": "CS Discoveries Virtual Professional Learning 24-25",
-  "vpl-csd-ayw-pilot": "CS Discoveries Academic Year Workshops ",
-  "vpl-csd-summer-ci": "CS Discoveries Curriculum Investigation 2023",
-  "vpl-csd-summer-pilot": "CS Discoveries Virtual Summer Workshop",
-  "vpl-csd-summer-pilot-ci": "CS Discoveries Curriculum Investigation",
-  "vpl-csp": "CS Principles Virtual Professional Learning 24-25",
-  "web-development": "Web Development",
-  "workshop-gamelab": "workshop-gamelab",
-  "workshop-maker": "workshop-maker",
-  "yaddayadda": "yaddayadda"
+  "20-hour": {
+    "display_name": "Accelerated Intro to CS Course",
+    "description": "Let's go! This accelerated course covers core computer science and programming concepts."
+  },
+  "2018hoc-ab": {
+    "display_name": "2018hoc-ab"
+  },
+  "2021-cs-discoveries-deeper-learning-": {
+    "display_name": "2021-cs-discoveries-deeper-learning-"
+  },
+  "2021-cs-principles-deeper-learning": {
+    "display_name": "2021-cs-principles-deeper-learning"
+  },
+  "2021drafting": {
+    "display_name": "Planning script for CI and CSF 2021"
+  },
+  "2021drafting-1": {
+    "display_name": "2021drafting-1"
+  },
+  "3-5gamedesign": {
+    "display_name": "Elementary Game Design",
+    "description": "After completing this self-paced professional learning module, you'll be comfortable with basic game design concepts for elementary school students."
+  },
+  "6-12-dev-playground": {
+    "display_name": "6-12-dev-playground"
+  },
+  "ai-and-the-systems-that-power-it": {
+    "display_name": "AI and the Systems that Power It",
+    "description": "Explore how AI connects with computing systems, IoT, and robotics while designing and troubleshooting real-world solutions with a focus on ethics, equity, and impact."
+  },
+  "ai-classroom-test": {
+    "display_name": "ai-classroom-test"
+  },
+  "ai-ethics": {
+    "display_name": "Our AI Code of Ethics",
+    "description": "Explore the societal impacts of artificial intelligence on society, both the intentional solutions that can be beneficial to society and the unintended consequences that may be harmful to society."
+  },
+  "ai-lab": {
+    "display_name": "ai-lab"
+  },
+  "ai-powered-threats-and-defenses": {
+    "display_name": "ai-powered-threats-and-defenses"
+  },
+  "ai-temp": {
+    "display_name": "ai-temp"
+  },
+  "ai-tutor-test": {
+    "display_name": "ai-tutor-test"
+  },
+  "ai-unit-pilot": {
+    "display_name": "ai-unit-pilot"
+  },
+  "aichat": {
+    "display_name": "aichat"
+  },
+  "aif-testing-modularity": {
+    "display_name": "aif-testing-modularity"
+  },
+  "aiml": {
+    "display_name": "AI and Machine Learning",
+    "description": "Explore how computers learn from data to make decisions, then develop projects around real-world data and design an app to solve a personally relevant problem."
+  },
+  "algebra": {
+    "display_name": "Computer Science in Algebra"
+  },
+  "algebraa": {
+    "display_name": "Computer Science in Algebra: Course A"
+  },
+  "algebrab": {
+    "display_name": "Computer Science in Algebra: Course B"
+  },
+  "algebrademo": {
+    "display_name": "algebrademo"
+  },
+  "all-the-plc-things": {
+    "display_name": "all-the-plc-things"
+  },
+  "alloftheplaygrounds": {
+    "display_name": "alloftheplaygrounds"
+  },
+  "alltheblocklythings": {
+    "display_name": "alltheblocklythings"
+  },
+  "allthelessonplans": {
+    "display_name": "allthelessonplans"
+  },
+  "alltheselfpacedplthings": {
+    "display_name": "All the Self Paced PL Things"
+  },
+  "allthesurveys": {
+    "display_name": "allthesurveys"
+  },
+  "allthethingscourse": {
+    "display_name": "allthethingscourse"
+  },
+  "allthettsthings": {
+    "display_name": "allthettsthings"
+  },
+  "allthevalidation": {
+    "display_name": "allthevalidation"
+  },
+  "amy-playground": {
+    "display_name": "amy-playground"
+  },
+  "amys-playground": {
+    "display_name": "amys-playground"
+  },
+  "andrea-test": {
+    "display_name": "andrea-test"
+  },
+  "andrea-test-dlp": {
+    "display_name": "andrea-test-dlp"
+  },
+  "angelina-playground": {
+    "display_name": "angelina-playground"
+  },
+  "applab-1hour": {
+    "display_name": "applab-1hour"
+  },
+  "applab-2hour": {
+    "display_name": "applab-2hour"
+  },
+  "applab-intro": {
+    "display_name": "Intro to App Lab",
+    "description": "Welcome to AppLab! Create your own app in JavaScript using either block-based programming or text."
+  },
+  "applab-intro-staging": {
+    "display_name": "applab-intro-staging"
+  },
+  "apps-for-good": {
+    "display_name": "apps-for-good"
+  },
+  "aquatic": {
+    "display_name": "Minecraft: Voyage Aquatic",
+    "description": "Build and explore with Minecraft! Use your creativity and problem solving skills to explore and build underwater worlds with code."
+  },
+  "artificial-intelligence-foundations": {
+    "display_name": "AI Foundations",
+    "description": "Learn how to code, think critically about AI, and use technology to solve real-world problems."
+  },
+  "artist": {
+    "display_name": "Artist",
+    "description": "In this activity, students use programming blocks to create images of increasing complexity."
+  },
+  "artist-and-bb8": {
+    "display_name": "artist-and-bb8"
+  },
+  "artistexemplar": {
+    "display_name": "artistexemplar"
+  },
+  "aryanna-sandbox": {
+    "display_name": "aryanna-sandbox"
+  },
+  "asunplugged": {
+    "display_name": "asunplugged"
+  },
+  "aws-demo": {
+    "display_name": "aws-demo"
+  },
+  "baruch-pilot-v1": {
+    "display_name": "baruch-pilot-v1"
+  },
+  "basketball": {
+    "display_name": "Choose Your Team and Make a Basketball Game",
+    "description": "Learn what \"events\" are and how computers use them in programs like video games! Students work through puzzles and customize their games with speed and sound."
+  },
+  "bingo": {
+    "display_name": "bingo"
+  },
+  "blockchain": {
+    "display_name": "Blockchain",
+    "description": "Dive into Blockchain by pairing these lessons with the How Blockchain Works video series! Students engage in an activity and then reflect to understand Blockchain and its users."
+  },
+  "career-journey-pilot-a": {
+    "display_name": "career-journey-pilot-a"
+  },
+  "career-journey-pilot-b": {
+    "display_name": "career-journey-pilot-b"
+  },
+  "career-journeys-for-elementary": {
+    "display_name": "Career Journeys for Elementary ",
+    "description": "In this lesson, students explore CS and AI careers and create a personalized project in Sprite Lab that shows how technology is used in a job they care about."
+  },
+  "code-break": {
+    "display_name": "Code Break",
+    "description": "Code Break brings the classroom to you. Interactive fun, challenges, and learning for students of all abilities, even without a computer. "
+  },
+  "code-break-staging": {
+    "display_name": "code-break-staging"
+  },
+  "code-break-younger": {
+    "display_name": "Code Break for Younger Students",
+    "description": "Code Break brings the classroom to you. Interactive fun, challenges, and learning for younger students of all abilities, even without a computer. "
+  },
+  "code-break-younger-staging": {
+    "display_name": "code-break-younger-staging"
+  },
+  "codebridge-ascii": {
+    "display_name": "codebridge-ascii"
+  },
+  "codechella2025": {
+    "display_name": "codechella2025"
+  },
+  "codestudiopuzzlechallenge": {
+    "display_name": "codestudiopuzzlechallenge"
+  },
+  "coding-with-ai": {
+    "display_name": "Coding with AI",
+    "description": "This unit empowers students to become confident, ethical coders. Students learn how to leverage generative AI tools to help explain code, tackle problems, and even generate code."
+  },
+  "coding-with-music": {
+    "display_name": "Coding with Music",
+    "description": "This engaging module for grades 3–5 uses music to introduce core computer science concepts—sequencing, functions, and events—through creative lessons featuring real-world professionals from the music and tech industries."
+  },
+  "colehoc17": {
+    "display_name": "colehoc17"
+  },
+  "colehoc2017": {
+    "display_name": "colehoc2017"
+  },
+  "computer-science-and-artificial-intelligence-foundations": {
+    "display_name": "computer-science-and-artificial-intelligence-foundations"
+  },
+  "computer-systems-and-devices": {
+    "display_name": "[PILOT] Computer Systems and Devices"
+  },
+  "computer-systems-and-devices-no-device": {
+    "display_name": "computer-systems-and-devices-no-device"
+  },
+  "computer-systems-nondevice-playground": {
+    "display_name": "computer-systems-nondevice-playground"
+  },
+  "computer-systems-playground": {
+    "display_name": "computer-systems-playground"
+  },
+  "computer-vision": {
+    "display_name": "Computer Vision",
+    "description": "This unit introduces students to the fundamentals, applications, and ethical implications of computer vision technologies."
+  },
+  "computer-vision-pilot": {
+    "display_name": "computer-vision-pilot"
+  },
+  "computing-foundations-for-a-digital-age": {
+    "display_name": "Computing Foundations for a Digital Age: Indiana (AI Foundations)",
+    "description": "Learn how to code, think critically about AI, and use technology to solve real-world problems."
+  },
+  "contagion-guided-practice": {
+    "display_name": "Contagion Guided Practice [Teacher only]"
+  },
+  "contagion-guided-practice-1": {
+    "display_name": "contagion-guided-practice-1"
+  },
+  "contagion-pilot": {
+    "display_name": "Contagion Simulator"
+  },
+  "contagion-pilot-1": {
+    "display_name": "contagion-pilot-1"
+  },
+  "counting-csc": {
+    "display_name": "Counting Activity",
+    "description": "Count, add, and loop your way through a maze as you collect treasures and master coding commands. Let's guide Laurel to glittering victory!"
+  },
+  "course-e-2018": {
+    "display_name": "course-e-2018"
+  },
+  "course-f-2018": {
+    "display_name": "course-f-2018"
+  },
+  "course1": {
+    "display_name": "Course 1",
+    "description": "There's no I in Team! In this course, students create programs that help them learn to collaborate with others and persist through difficult tasks."
+  },
+  "course2": {
+    "display_name": "Course 2",
+    "description": "In this course, students create programs to solve problems, as well as interactive games or stories to share."
+  },
+  "course3": {
+    "display_name": "Course 3",
+    "description": "Students dive deeper into programming topics introduced in previous courses to create flexible solutions to more complex problems."
+  },
+  "course4": {
+    "display_name": "Course 4",
+    "description": "In this course, students learn to tackle increasingly complex puzzles and combine several concepts when solving challenges. "
+  },
+  "course4pre": {
+    "display_name": "course4pre"
+  },
+  "coursea": {
+    "display_name": "CS Fundamentals: Course A",
+    "description": "In this course, students work with others, investigate problem-solving techniques, and learn to program using commands like loops and events."
+  },
+  "coursea-draft": {
+    "display_name": "coursea-draft"
+  },
+  "courseb": {
+    "display_name": "CS Fundamentals: Course B",
+    "description": "Students continue learning programming basics, as well as persistence and critical thinking. At the end of the course, students can create games in Play Lab!"
+  },
+  "courseb-draft": {
+    "display_name": "courseb-draft"
+  },
+  "coursec": {
+    "display_name": "CS Fundamentals: Course C",
+    "description": "In this course, students create programs with sequencing, loops, and events. They also investigate problem-solving techniques and build interactive games."
+  },
+  "coursec-draft": {
+    "display_name": "coursec-draft"
+  },
+  "coursec-maker": {
+    "display_name": "coursec-maker"
+  },
+  "coursec-maker-2024-pilot": {
+    "display_name": "coursec-maker-2024-pilot"
+  },
+  "coursec-maker-pilot": {
+    "display_name": "coursec-maker-pilot"
+  },
+  "coursed": {
+    "display_name": "CS Fundamentals: Course D",
+    "description": "This course covers concepts like loops and events from earlier courses, before moving on to algorithms, conditionals, and more."
+  },
+  "coursed-draft": {
+    "display_name": "coursed-draft"
+  },
+  "coursed-maker": {
+    "display_name": "coursed-maker"
+  },
+  "coursed-maker-2024-pilot": {
+    "display_name": "coursed-maker-2024-pilot"
+  },
+  "coursed-maker-pilot": {
+    "display_name": "coursed-maker-pilot"
+  },
+  "coursed-ramp": {
+    "display_name": "coursed-ramp"
+  },
+  "coursee": {
+    "display_name": "CS Fundamentals: Course E",
+    "description": "Get to know the Sprite Lab programming environment in this course! By the end, students will use code to create a game or drawing."
+  },
+  "coursee-draft": {
+    "display_name": "coursee-draft"
+  },
+  "coursee-maker": {
+    "display_name": "coursee-maker"
+  },
+  "coursee-ramp": {
+    "display_name": "coursee-ramp"
+  },
+  "coursef": {
+    "display_name": "CS Fundamentals: Course F",
+    "description": "Decisions, decisions! This course teaches students about variables, as they're given greater autonomy and choices while creating an interactive project. "
+  },
+  "coursef-2022-pilot": {
+    "display_name": "coursef-2022-pilot"
+  },
+  "coursef-draft": {
+    "display_name": "coursef-draft"
+  },
+  "coursef-maker": {
+    "display_name": "coursef-maker"
+  },
+  "coursef-ramp": {
+    "display_name": "coursef-ramp"
+  },
+  "craft17": {
+    "display_name": "craft17"
+  },
+  "craft17-kiki": {
+    "display_name": "craft17-kiki"
+  },
+  "craft18": {
+    "display_name": "craft18"
+  },
+  "creativity-with-ai": {
+    "display_name": "creativity-with-ai"
+  },
+  "creativity-with-ai-playground": {
+    "display_name": "creativity-with-ai-playground"
+  },
+  "cs-discoveries-deeper-learning-2019---2020": {
+    "display_name": "cs-discoveries-deeper-learning-2019---2020"
+  },
+  "cs-discoveries-deeper-learning-2021": {
+    "display_name": "cs-discoveries-deeper-learning-2021"
+  },
+  "cs-discoveries-facilitator-in-training": {
+    "display_name": "cs-discoveries-facilitator-in-training"
+  },
+  "cs-discoveries-facilitator-in-training-2018-2019": {
+    "display_name": "cs-discoveries-facilitator-in-training-2018-2019"
+  },
+  "cs-discoveries-facilitators-in-training-2018-2019": {
+    "display_name": "cs-discoveries-facilitators-in-training-2018-2019"
+  },
+  "cs-discoveries-teachercon-novice": {
+    "display_name": "cs-discoveries-teachercon-novice"
+  },
+  "cs-discoviers-teachercon-novice": {
+    "display_name": "cs-discoviers-teachercon-novice"
+  },
+  "cs-in-algebra-legacy": {
+    "display_name": "cs-in-algebra-legacy"
+  },
+  "cs-in-algebra-support": {
+    "display_name": "cs-in-algebra-support"
+  },
+  "cs-in-science": {
+    "display_name": "cs-in-science"
+  },
+  "cs-in-science-legacy": {
+    "display_name": "cs-in-science-legacy"
+  },
+  "cs-in-science-support": {
+    "display_name": "cs-in-science-support"
+  },
+  "cs-principles-curriculum-training-for-facilitators": {
+    "display_name": "cs-principles-curriculum-training-for-facilitators"
+  },
+  "cs-principles-deeper-learning-2019---2020": {
+    "display_name": "cs-principles-deeper-learning-2019---2020"
+  },
+  "cs-principles-deeper-learning-2021": {
+    "display_name": "cs-principles-deeper-learning-2021"
+  },
+  "cs-principles-facilitator-in-training": {
+    "display_name": "cs-principles-facilitator-in-training"
+  },
+  "cs-principles-facilitator-in-training-2018-2019": {
+    "display_name": "cs-principles-facilitator-in-training-2018-2019"
+  },
+  "cs-principles-facilitators-in-training-2018-2019": {
+    "display_name": "cs-principles-facilitators-in-training-2018-2019"
+  },
+  "cs-principles-support": {
+    "display_name": "cs-principles-support"
+  },
+  "cs-principles-teachercon-novice": {
+    "display_name": "cs-principles-teachercon-novice"
+  },
+  "cs4all-invasive-species": {
+    "display_name": "cs4all-invasive-species"
+  },
+  "csa": {
+    "display_name": "Computer Science A - Objects First",
+    "description": "Introduce students to software engineering and design as they learn the Java programming language in this free curriculum for AP® Computer Science A (AP® CSA). This curriculum incorporates our recommended objects first approach."
+  },
+  "csa-alt": {
+    "display_name": "Computer Science A - CED Aligned",
+    "description": "Introduce students to software engineering and design as they learn the Java programming language in this free curriculum for AP® Computer Science A (AP® CSA). This curriculum follows the order outlined in the College Board CED documentation."
+  },
+  "csa-async": {
+    "display_name": "Getting Started Modules CSA"
+  },
+  "csa-backpack-2022": {
+    "display_name": "csa-backpack-2022"
+  },
+  "csa-celebrity-lab": {
+    "display_name": "CSA Consumer Review Lab",
+    "description": "Practice for the big exam with this lab, which focuses on calling methods and building strings in an interesting and engaging way."
+  },
+  "csa-collegeboard-labs": {
+    "display_name": "CSA Magpie Lab",
+    "description": "\"Hey Siri, what's natural language processing?\" The answer may be complicated, but this lab makes it easy to create a program that responds to your sentences."
+  },
+  "csa-data-lab": {
+    "display_name": "CSA Data Lab",
+    "description": "Is this real life? Yes! Incorporate real-world data sets into hands-on programming assignments with this lab."
+  },
+  "csa-draft-pl": {
+    "display_name": "csa-draft-pl"
+  },
+  "csa-examples-21": {
+    "display_name": "csa-examples-21"
+  },
+  "csa-examples-22": {
+    "display_name": "csa-examples-22"
+  },
+  "csa-frq-practice": {
+    "display_name": "csa-frq-practice"
+  },
+  "csa-frq-practice-2019": {
+    "display_name": "csa-frq-practice-2019"
+  },
+  "csa-frq-practice-2021": {
+    "display_name": "csa-frq-practice-2021"
+  },
+  "csa-frq-practice-2022": {
+    "display_name": "csa-frq-practice-2022"
+  },
+  "csa-frq-practice-2023": {
+    "display_name": "csa-frq-practice-2023"
+  },
+  "csa-frq-practice-pre2019": {
+    "display_name": "csa-frq-practice-pre2019"
+  },
+  "csa-labs": {
+    "display_name": "csa-labs"
+  },
+  "csa-pilot": {
+    "display_name": "CSA 24-25 Pilot"
+  },
+  "csa-pilot-extra": {
+    "display_name": "csa-pilot-extra"
+  },
+  "csa-pilot-facilitator": {
+    "display_name": "CSA Pilot Facilitators"
+  },
+  "csa-pl-standalone-code-2022": {
+    "display_name": "csa-pl-standalone-code-2022"
+  },
+  "csa-preview": {
+    "display_name": "csa-preview"
+  },
+  "csa-self-paced-pl": {
+    "display_name": "Navigating Code.org for CSA Pilot Teachers"
+  },
+  "csa-software-engineering": {
+    "display_name": "Software Engineering and Computer Vision",
+    "description": "Offers students hands-on experience with professional software development tools and imparts them with the real-world skills to develop a computer vision program. "
+  },
+  "csa-u6-dev": {
+    "display_name": "csa-u6-dev"
+  },
+  "csa-u7-dev": {
+    "display_name": "csa-u7-dev"
+  },
+  "csa-u8-dev": {
+    "display_name": "csa-u8-dev"
+  },
+  "csa-validation-pilot": {
+    "display_name": "CSA Validation Pilot"
+  },
+  "csa-videos": {
+    "display_name": "csa-videos"
+  },
+  "csa1-2022-exemplars": {
+    "display_name": "csa1-2022-exemplars"
+  },
+  "csa1-exemplars": {
+    "display_name": "csa1-exemplars"
+  },
+  "csa2-2022-exemplars": {
+    "display_name": "csa2-2022-exemplars"
+  },
+  "csa2-exemplars": {
+    "display_name": "csa2-exemplars"
+  },
+  "csa3-exemplars": {
+    "display_name": "csa3-exemplars"
+  },
+  "csa4-exemplars": {
+    "display_name": "csa4-exemplars"
+  },
+  "csa5-exemplars": {
+    "display_name": "csa5-exemplars"
+  },
+  "csa6-exemplars": {
+    "display_name": "csa6-exemplars"
+  },
+  "csa7-exemplars": {
+    "display_name": "csa7-exemplars"
+  },
+  "csa8-exemplars": {
+    "display_name": "csa8-exemplars"
+  },
+  "csaif-preview": {
+    "display_name": "csaif-preview"
+  },
+  "csc-adaptations": {
+    "display_name": "Modeling Animal Adaptations",
+    "description": "Use code to model animal adaptations, deepening your understanding of how different species have evolved to survive in their environments."
+  },
+  "csc-bookcover": {
+    "display_name": "csc-bookcover"
+  },
+  "csc-bookcovers": {
+    "display_name": "Coding Book Covers",
+    "description": "Use code to create an interactive cover of a book, using sprites and text to convey characters, setting, and more."
+  },
+  "csc-ecosystems": {
+    "display_name": "Simulating a Marine Ecosystem",
+    "description": "Code a marine ecosystem simulation to discover the delicate balance of organisms' interdependencies, then explore sustainable solutions to human impact."
+  },
+  "csc-ecosystems-1": {
+    "display_name": "csc-ecosystems-1"
+  },
+  "csc-fables": {
+    "display_name": "Storytelling Module"
+  },
+  "csc-function-machines-pilot": {
+    "display_name": "csc-function-machines-pilot"
+  },
+  "csc-landmarks-pilot": {
+    "display_name": "csc-landmarks-pilot"
+  },
+  "csc-mappinglandmarks": {
+    "display_name": "Coding Interactive Maps",
+    "description": "Use coding to develop a map that tells a story, allowing you to explore geographic information in an engaging and interactive way."
+  },
+  "csc-particles": {
+    "display_name": "csc-particles"
+  },
+  "csc-pilot-2022-ecosystems": {
+    "display_name": "csc-pilot-2022-ecosystems"
+  },
+  "csc-pilot-2022-fables": {
+    "display_name": "csc-pilot-2022-fables"
+  },
+  "csc-pilot-2022-starquilts": {
+    "display_name": "csc-pilot-2022-starquilts"
+  },
+  "csc-pilot-2022-timecapsule": {
+    "display_name": "csc-pilot-2022-timecapsule"
+  },
+  "csc-pilot-fa2022-ecosystem": {
+    "display_name": "csc-pilot-fa2022-ecosystem"
+  },
+  "csc-pilot-fa2022-particles": {
+    "display_name": "csc-pilot-fa2022-particles"
+  },
+  "csc-pilot-fa2022-timecapsule": {
+    "display_name": "csc-pilot-fa2022-timecapsule"
+  },
+  "csc-starquilts": {
+    "display_name": "Coding a Geometric Star Quilt",
+    "description": "Learn code to create geometric patterns in stunning star quilts, blending mathematical concepts with creative expression."
+  },
+  "csc-timecapsule": {
+    "display_name": "Coding a Time Capsule",
+    "description": "Create a digital time capsule poem to capture a moment in time to share with the future."
+  },
+  "csd": {
+    "display_name": "Computer Science Discoveries",
+    "description": "An introductory course that empowers students to engage with computer science as a medium for creativity, communication, problem solving, and fun."
+  },
+  "csd-ayw1-debugging": {
+    "display_name": "csd-ayw1-debugging"
+  },
+  "csd-bugs": {
+    "display_name": "csd-bugs"
+  },
+  "csd-playground": {
+    "display_name": "csd-playground"
+  },
+  "csd-post-survey": {
+    "display_name": "CSD Student Post-Course Survey ('18-'19)"
+  },
+  "csd-programming-with-music-lab-2025-pilot": {
+    "display_name": "[PILOT] Programming with Music Lab"
+  },
+  "csd-sample-online": {
+    "display_name": "csd-sample-online"
+  },
+  "csd-summer-puertorico-2024": {
+    "display_name": "CSD Summer Workshop - Puerto Rico only"
+  },
+  "csd-test-saving-state": {
+    "display_name": "csd-test-saving-state"
+  },
+  "csd-tests": {
+    "display_name": "csd-tests"
+  },
+  "csd-videos": {
+    "display_name": "csd-videos"
+  },
+  "csd-web-dev-beta-2024": {
+    "display_name": "csd-web-dev-beta-2024"
+  },
+  "csd1": {
+    "display_name": "csd1"
+  },
+  "csd1-old": {
+    "display_name": "csd1-old"
+  },
+  "csd2": {
+    "display_name": "csd2"
+  },
+  "csd2-old": {
+    "display_name": "csd2-old"
+  },
+  "csd2-projects-temp": {
+    "display_name": "csd2-projects-temp"
+  },
+  "csd2-virtual": {
+    "display_name": "csd2-virtual"
+  },
+  "csd3": {
+    "display_name": "csd3"
+  },
+  "csd3-1819draft": {
+    "display_name": "csd3-1819draft"
+  },
+  "csd3-old": {
+    "display_name": "csd3-old"
+  },
+  "csd3-virtual": {
+    "display_name": "Self Paced Introduction to Game Lab",
+    "description": "Move at your own pace in this introduction to our Game Lab environment as you program animations, interactive art, and games."
+  },
+  "csd4": {
+    "display_name": "csd4"
+  },
+  "csd4-draft": {
+    "display_name": "csd4-draft"
+  },
+  "csd4-old": {
+    "display_name": "csd4-old"
+  },
+  "csd4-preview-2021": {
+    "display_name": "CSD Unit 4 - The Design Process ('21-'22 Beta Preview)"
+  },
+  "csd4-preview-2021-1": {
+    "display_name": "csd4-preview-2021-1"
+  },
+  "csd5": {
+    "display_name": "csd5"
+  },
+  "csd5-draft": {
+    "display_name": "csd5-draft"
+  },
+  "csd5-old": {
+    "display_name": "csd5-old"
+  },
+  "csd5-preview-2021": {
+    "display_name": "CSD Unit 5 - Data and Society ('21-'22 Beta Preview)"
+  },
+  "csd5-preview-2021-1": {
+    "display_name": "csd5-preview-2021-1"
+  },
+  "csd6": {
+    "display_name": "csd6"
+  },
+  "csd6-draft": {
+    "display_name": "csd6-draft"
+  },
+  "csd6-old": {
+    "display_name": "csd6-old"
+  },
+  "csd6-pilot": {
+    "display_name": "Physical Computing Pilot (2022)"
+  },
+  "csd6-projects": {
+    "display_name": "csd6-projects"
+  },
+  "csd7": {
+    "display_name": "csd7"
+  },
+  "csdgraveyard": {
+    "display_name": "csdgraveyard"
+  },
+  "csf-2021-pilot": {
+    "display_name": "CS Fundamentals 2021 Pilot"
+  },
+  "csf-2021-pilot-1": {
+    "display_name": "csf-2021-pilot-1"
+  },
+  "csf-pilot": {
+    "display_name": "csf-pilot"
+  },
+  "csf-sandbox": {
+    "display_name": "csf-sandbox"
+  },
+  "csf-secret-sample": {
+    "display_name": "csf-secret-sample"
+  },
+  "csf-secret-sample-story": {
+    "display_name": "csf-secret-sample-story"
+  },
+  "csf2harvey": {
+    "display_name": "csf2harvey"
+  },
+  "csl-vn": {
+    "display_name": "csl-vn"
+  },
+  "csp": {
+    "display_name": "Computer Science Principles",
+    "description": "Taught as an intro or AP course, this curriculum introduces students to computer science and challenges them to explore how technology can impact the world. "
+  },
+  "csp-ap": {
+    "display_name": "csp-ap"
+  },
+  "csp-ca-a": {
+    "display_name": "csp-ca-a"
+  },
+  "csp-exam": {
+    "display_name": "csp-exam"
+  },
+  "csp-mid-survey": {
+    "display_name": "CSP Student Mid-year Survey"
+  },
+  "csp-online-test": {
+    "display_name": "csp-online-test"
+  },
+  "csp-playground": {
+    "display_name": "csp-playground"
+  },
+  "csp-pre-survey": {
+    "display_name": "csp-pre-survey"
+  },
+  "csp-support": {
+    "display_name": "csp-support"
+  },
+  "csp3-recovery": {
+    "display_name": "csp3-recovery"
+  },
+  "csp3-staging": {
+    "display_name": "csp3-staging"
+  },
+  "csp3-virtual": {
+    "display_name": "Self Paced Introduction to Turtle Programming In App Lab",
+    "description": "Unlock the ability to make rich, interactive apps with JavaScript in the App Lab!"
+  },
+  "csp5-virtual": {
+    "display_name": "Event-Driven Programming in App Lab",
+    "description": "Go at your own pace with this introduction to the App Lab programming environment, in which students use JavaScript to create interactive apps."
+  },
+  "csp5-virtual-part2": {
+    "display_name": "csp5-virtual-part2"
+  },
+  "csp6": {
+    "display_name": "csp6"
+  },
+  "cspassessment": {
+    "display_name": "cspassessment"
+  },
+  "cspexam1-mwu7ildym9": {
+    "display_name": "cspexam1-mwu7ildym9"
+  },
+  "cspexam2-akwgah1ac5": {
+    "display_name": "cspexam2-akwgah1ac5"
+  },
+  "csplessonsamples": {
+    "display_name": "csplessonsamples"
+  },
+  "cspoptional": {
+    "display_name": "cspoptional"
+  },
+  "cspunit1": {
+    "display_name": "cspunit1"
+  },
+  "cspunit1-support": {
+    "display_name": "cspunit1-support"
+  },
+  "cspunit1-support-test": {
+    "display_name": "cspunit1-support-test"
+  },
+  "cspunit2": {
+    "display_name": "cspunit2"
+  },
+  "cspunit3": {
+    "display_name": "cspunit3"
+  },
+  "cspunit3temp": {
+    "display_name": "cspunit3temp"
+  },
+  "cspunit4": {
+    "display_name": "cspunit4"
+  },
+  "cspunit4draft": {
+    "display_name": "cspunit4draft"
+  },
+  "cspunit5": {
+    "display_name": "cspunit5"
+  },
+  "cspunit6": {
+    "display_name": "cspunit6"
+  },
+  "cspunit6draft": {
+    "display_name": "cspunit6draft"
+  },
+  "curriculum-sandbox-levels": {
+    "display_name": "curriculum-sandbox-levels"
+  },
+  "customizing-llms": {
+    "display_name": "Customizing Language Models",
+    "description": "Learn to customize chatbots using AI Chat Lab"
+  },
+  "customizing-llms-latm-pilot": {
+    "display_name": "customizing-llms-latm-pilot"
+  },
+  "cybersecurity-and-global-impacts": {
+    "display_name": "Cybersecurity and Global Impacts",
+    "description": "Investigate how computing innovations impact privacy and security, then propose ethical tech solutions to improve school life in a “school of the future” project."
+  },
+  "dan-test": {
+    "display_name": "dan-test"
+  },
+  "dance": {
+    "display_name": "Dance Party (2018)",
+    "description": "One of our most popular lessons! Get creative when you use code to make animated characters bust a move in this introductory activity. Requires sound, reading."
+  },
+  "dance-2019": {
+    "display_name": "Dance Party (2019)",
+    "description": "One of our most popular lessons! Get creative when you use code to make animated characters bust a move in this introductory activity. Requires sound, reading."
+  },
+  "dance-ai": {
+    "display_name": "Dance Party: AI Edition",
+    "description": "In this activity, learners of all ages get an introductory experience with coding and artificial intelligence in a safe and creative environment. "
+  },
+  "dance-draft": {
+    "display_name": "dance-draft"
+  },
+  "dance-extras": {
+    "display_name": "Keep On Dancing (2018)",
+    "description": "One of our most popular lessons! Get creative when you use code to make animated characters bust a move in this introductory activity. Requires sound, reading."
+  },
+  "dance-extras-2019": {
+    "display_name": "Keep On Dancing (2019)",
+    "description": "One of our most popular lessons! Get creative when you use code to make animated characters bust a move in this introductory activity. Requires sound, reading."
+  },
+  "dance-extras-gallery": {
+    "display_name": "dance-extras-gallery"
+  },
+  "dance-low": {
+    "display_name": "dance-low"
+  },
+  "dance-unplugged": {
+    "display_name": "Dance Party Unplugged",
+    "description": "Get your groove on—offline! Learn how to jazz up your program with events. Events can control actions and even make multiple things act in sync."
+  },
+  "dani-june-2020-test": {
+    "display_name": "dani-june-2020-test"
+  },
+  "data-science": {
+    "display_name": "Data Science",
+    "description": "Explore the world of data science using data visualization tools to analyze and interpret real-world phenomena."
+  },
+  "data-science-2024-pilot": {
+    "display_name": "data-science-2024-pilot"
+  },
+  "data-science-beta": {
+    "display_name": "data-science-beta"
+  },
+  "data-science-playground": {
+    "display_name": "data-science-playground"
+  },
+  "data-science-with-python-pilot": {
+    "display_name": "Data Science with Python 2025 Pilot"
+  },
+  "data-society": {
+    "display_name": "Data and Society",
+    "description": "In this unit, students learn about the importance of using data to solve problems and understand how computers can help in this process. "
+  },
+  "deepdive-debugging": {
+    "display_name": "Debugging Lessons for Educators"
+  },
+  "default": {
+    "display_name": "default"
+  },
+  "denny-science": {
+    "display_name": "denny-science"
+  },
+  "denny-science-8": {
+    "display_name": "denny-science-8"
+  },
+  "denny-science-copy": {
+    "display_name": "denny-science-copy"
+  },
+  "design-process": {
+    "display_name": "The Design Process",
+    "description": "Through design challenges, a team project, and building an app prototype, this unit prompts students to consider the broader social impacts of computer science."
+  },
+  "devices": {
+    "display_name": "Creating Apps with Devices (Circuit Playground)",
+    "description": "In this unit, students use App Lab and Adafruit's Circuit Playground to develop programs that use the same hardware inputs and outputs found in smart devices."
+  },
+  "dlp-core": {
+    "display_name": "dlp-core"
+  },
+  "dlp-csd-mod4": {
+    "display_name": "dlp-csd-mod4"
+  },
+  "dlp-csp-mod4": {
+    "display_name": "dlp-csp-mod4"
+  },
+  "draft-hoc-dp": {
+    "display_name": "draft-hoc-dp"
+  },
+  "draft-hoc-dp-2": {
+    "display_name": "draft-hoc-dp-2"
+  },
+  "draft-hoc-dp-2-": {
+    "display_name": "draft-hoc-dp-2-"
+  },
+  "draft-hoc-dp-2-a": {
+    "display_name": "draft-hoc-dp-2-a"
+  },
+  "draft-hoc-dp-2-b": {
+    "display_name": "draft-hoc-dp-2-b"
+  },
+  "drafting": {
+    "display_name": "drafting"
+  },
+  "duino": {
+    "display_name": "duino"
+  },
+  "e-f-ramp": {
+    "display_name": "e-f-ramp"
+  },
+  "ecs-support": {
+    "display_name": "ecs-support"
+  },
+  "ecs-support-legacy": {
+    "display_name": "ecs-support-legacy"
+  },
+  "edit-code": {
+    "display_name": "Edit Code"
+  },
+  "edit-code-1": {
+    "display_name": "edit-code-1"
+  },
+  "elem-game-design": {
+    "display_name": "Elementary Game Design"
+  },
+  "elementaryai": {
+    "display_name": "How AI Makes Decisions",
+    "description": "This professional learning module equips educators to teach Code.org's How AI Makes Decisions module, where students (grades 3-5) explore AI concepts through engaging activities, data exploration, and decision making."
+  },
+  "emma": {
+    "display_name": "emma"
+  },
+  "emmas-playground": {
+    "display_name": "emmas-playground"
+  },
+  "equity-support": {
+    "display_name": "equity-support"
+  },
+  "events": {
+    "display_name": "events"
+  },
+  "explore-data-1": {
+    "display_name": "Data Activity",
+    "description": "Learn more about how you can explore data in bar charts and histograms. Code, create, and decode data magic using App Lab. Let's visualize and conquer!"
+  },
+  "exploring-gen-ai": {
+    "display_name": "Exploring Generative AI",
+    "description": "Prepare your students for the future with an engaging curriculum that demystifies generative AI. Through hands-on projects and ethical discussions, students gain the skills to become creators and critical thinkers in an AI-powered world."
+  },
+  "express": {
+    "display_name": "CS Fundamentals: Express Course",
+    "description": "Let your students learn computer science at their own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges."
+  },
+  "ey-ecosystems": {
+    "display_name": "ey-ecosystems"
+  },
+  "faciliators-ea-pl-python": {
+    "display_name": "faciliators-ea-pl-python"
+  },
+  "facilitator-access-2-csaif": {
+    "display_name": "facilitator-access-2-csaif"
+  },
+  "facilitator-access-csaif": {
+    "display_name": "facilitator-access-csaif"
+  },
+  "facilitator-onboarding": {
+    "display_name": "Facilitator Onboarding"
+  },
+  "facilitator-training": {
+    "display_name": "facilitator-training",
+    "description": "This placeholder course represents facilitator training sessions outside of onboarding and enables selection in the PL Topics drop-down. It does not contain content; details about specific workshops will be shared separately."
+  },
+  "facilitators-in-training-summer-2019": {
+    "display_name": "facilitators-in-training-summer-2019"
+  },
+  "facilitators-in-training-summer-reflections-2019": {
+    "display_name": "facilitators-in-training-summer-reflections-2019"
+  },
+  "fancygeometry-pilot": {
+    "display_name": "fancygeometry-pilot"
+  },
+  "fit-weekend-in-person": {
+    "display_name": "fit-weekend-in-person"
+  },
+  "fit2019-apprentice": {
+    "display_name": "Apprentice Reflections for Summer Workshop 2019"
+  },
+  "fit2019-apprentice-1": {
+    "display_name": "fit2019-apprentice-1"
+  },
+  "flappy": {
+    "display_name": "Flappy Code",
+    "description": "Create a game using basic block code in this introductory computer science activity."
+  },
+  "flappy-impact-study": {
+    "display_name": "flappy-impact-study"
+  },
+  "fmscsd3preview": {
+    "display_name": "fmscsd3preview"
+  },
+  "focus-on-coding": {
+    "display_name": "Focus on Coding (CS Discoveries)",
+    "description": "Are you ready to code? This unit empowers students to strengthen their programming skills in web development, app development, and more."
+  },
+  "focus-on-creativity": {
+    "display_name": "Focus on Creativity (CS Discoveries)",
+    "description": "What will you create? This unit empowers students to be creative as they make websites, animations, games, and apps for devices. "
+  },
+  "focus-on-data": {
+    "display_name": "Focus on Data (CS Discoveries)",
+    "description": "This unit empowers students to use data to solve problems by engaging with computer science as a medium for creativity, communication, problem-solving, and fun."
+  },
+  "focus-on-design-with-purpose": {
+    "display_name": "Focus on Design with Purpose (CS Discoveries)",
+    "description": "In this unit, students are challenged to think about user needs when it comes to designing websites and apps."
+  },
+  "focus-on-hardware": {
+    "display_name": "Focus on Hardware (CS Discoveries)",
+    "description": "Let's talk hardware! This unit helps students learn how to use physical devices to solve problems."
+  },
+  "focus-on-impact-in-society": {
+    "display_name": "Focus on Impact in Society (CS Discoveries)",
+    "description": "How does code impact the world around us? In this unit, students are challenged to consider the broader social impacts of various aspects of computer science."
+  },
+  "for-screenshots-only": {
+    "display_name": "for-screenshots-only"
+  },
+  "foundations-gen-ai": {
+    "display_name": "Foundations of Generative AI",
+    "description": "Students will demystify generative AI models by exploring their internal structures through the familiar lens of input, storage, process, and output."
+  },
+  "foundations-generative-ai-unplugged": {
+    "display_name": "Foundations of Generative AI (Unplugged)",
+    "description": "An \"unplugged\" version of our Foundations of Generative AI course, designed for classrooms where students do not have reliable access to devices."
+  },
+  "foundations-of-ai-programming": {
+    "display_name": "Foundations of AI Programming",
+    "description": "Build your Python programming skills while exploring how ethics, inclusivity, and human-centered design shape real-world computing and career pathways."
+  },
+  "foundations-of-cs-beta": {
+    "display_name": "Foundations of Computer Science (Beta)",
+    "description": "Foundations of Computer Science is a comprehensive course aimed to align with CSTA and state standards and to fulfill graduation requirements. The beta version of this one-semester curriculum integrates key aspects of AP CSP and CSD."
+  },
+  "frequency-analysis": {
+    "display_name": "frequency-analysis"
+  },
+  "frozen": {
+    "display_name": "Code with Anna and Elsa",
+    "description": "Join Anna and Elsa as they explore the magic and beauty of ice with code! Create snowflakes and patterns as you ice-skate and make a winter wonderland."
+  },
+  "frozen-2018": {
+    "display_name": "frozen-2018"
+  },
+  "frozen-2018-test": {
+    "display_name": "frozen-2018-test"
+  },
+  "frozen-2018-test-b": {
+    "display_name": "frozen-2018-test-b"
+  },
+  "gamelab": {
+    "display_name": "gamelab"
+  },
+  "gamelab-demo": {
+    "display_name": "gamelab-demo"
+  },
+  "gamelab-hackathon": {
+    "display_name": "gamelab-hackathon"
+  },
+  "gamelabprojects": {
+    "display_name": "gamelabprojects"
+  },
+  "gen-ai-customizing-draft": {
+    "display_name": "gen-ai-customizing-draft"
+  },
+  "gen-ai-customizing-pilot-v1": {
+    "display_name": "[Pilot] Customizing Language Models"
+  },
+  "gen-ai-customizing-pilot-v2": {
+    "display_name": "[Create and Learn] Customizing Language Models"
+  },
+  "gen-ai-foudations-pilot-v1": {
+    "display_name": "[Pilot] Foundations of Generative AI",
+    "description": "Foundations of Generative AI Course"
+  },
+  "gen-ai-foundations-draft": {
+    "display_name": "gen-ai-foundations-draft"
+  },
+  "gen-ai-humanities": {
+    "display_name": "Generative AI for Humanities",
+    "description": "This unit consists of two standalone lessons to be used in humanities classes, to help demystify ethical and effective use of chatbots in humanities subject areas."
+  },
+  "gen-ai-spanish-test-a": {
+    "display_name": "gen-ai-spanish-test-a"
+  },
+  "gen-ai-staging": {
+    "display_name": "gen-ai-staging"
+  },
+  "gen-ai-standalone": {
+    "display_name": "gen-ai-standalone"
+  },
+  "genai-temp": {
+    "display_name": "genai-temp"
+  },
+  "getting-started": {
+    "display_name": "Getting Started with Code.org",
+    "description": "This self-paced module is designed to introduce educators to Code.org as a teaching tool, focusing on foundational aspects of the platform and its features."
+  },
+  "gettingstarted-k5": {
+    "display_name": "gettingstarted-k5"
+  },
+  "glj-behavior-test": {
+    "display_name": "glj-behavior-test"
+  },
+  "grade2-maker": {
+    "display_name": "micro:bit Maker - Grade 2"
+  },
+  "grade3-maker": {
+    "display_name": "micro:bit Maker - Grade 3"
+  },
+  "grade4-maker": {
+    "display_name": "micro:bit Maker - Grade 4"
+  },
+  "grade5": {
+    "display_name": "grade5"
+  },
+  "grade5-maker": {
+    "display_name": "micro:bit Maker - Grade 5"
+  },
+  "gumball": {
+    "display_name": "Gumball Play Lab",
+    "description": "Ever wanted to create your own game with characters you design? Use code to make them interact, score points, throw things, or vanish each other—it's up to you!"
+  },
+  "haikubot-pilot": {
+    "display_name": "haikubot-pilot"
+  },
+  "halloween": {
+    "display_name": "halloween"
+  },
+  "hello-world-animals": {
+    "display_name": "Hello World: Animals",
+    "description": "Lions and tigers and bears, oh my! In this animal-themed intro to Sprite Lab, students learn computer science basics by building fun, interactive projects."
+  },
+  "hello-world-batman": {
+    "display_name": "hello-world-batman"
+  },
+  "hello-world-csc": {
+    "display_name": "hello-world-csc"
+  },
+  "hello-world-emoji": {
+    "display_name": "Hello World: Emoji",
+    "description": "In this emoji-themed intro to Sprite Lab, students learn computer science basics by building fun, interactive projects."
+  },
+  "hello-world-food": {
+    "display_name": "Hello World: Food",
+    "description": "Let's see what's on the menu! In this food-themed intro to Sprite Lab, students learn computer science basics by building fun, interactive projects."
+  },
+  "hello-world-retro": {
+    "display_name": "Hello World: Retro",
+    "description": "Go old school! In this retro-themed intro to Sprite Lab, students learn computer science basics by building fun, interactive projects"
+  },
+  "hello-world-soccer": {
+    "display_name": "Hello World: Soccer",
+    "description": "Goooooal! In this soccer-themed introduction to our Sprite Lab, students learn the basics of computer science by building fun, interactive projects."
+  },
+  "hello-world-space": {
+    "display_name": "Hello World: Space",
+    "description": "3, 2, 1... blast off! In this space-themed introduction to our Sprite Lab, students learn the basics of computer science by building fun, interactive projects."
+  },
+  "hello-world-transformers-one": {
+    "display_name": "Hello World Transformers One"
+  },
+  "hero": {
+    "display_name": "Minecraft: Hero's Journey",
+    "description": "Build and explore with Minecraft! Players write code that instructs the Agent to execute their commands and overcome in-game obstacles. "
+  },
+  "hoc-amazon-poc": {
+    "display_name": "hoc-amazon-poc"
+  },
+  "hoc-dp-oct-beta": {
+    "display_name": "hoc-dp-oct-beta"
+  },
+  "hoc-dp-oct-beta-b": {
+    "display_name": "hoc-dp-oct-beta-b"
+  },
+  "hoc-encryption": {
+    "display_name": "Hour of Code: Simple Encryption",
+    "description": "Psssst! Got a secret? Learn about the need for encryption and simple techniques for cracking secret messages in this Hour of Code activity."
+  },
+  "hoc-impact-study": {
+    "display_name": "hoc-impact-study"
+  },
+  "hoc-music-ai-pilot": {
+    "display_name": "hoc-music-ai-pilot"
+  },
+  "hoc-music-ai-pilot-1": {
+    "display_name": "hoc-music-ai-pilot-1"
+  },
+  "hoc-music-ai-pilot-2": {
+    "display_name": "hoc-music-ai-pilot-2"
+  },
+  "hoc-music-ai-pilot-3": {
+    "display_name": "hoc-music-ai-pilot-3"
+  },
+  "hoc-music-ai-pilot-4": {
+    "display_name": "hoc-music-ai-pilot-4"
+  },
+  "hour-of-code": {
+    "display_name": "hour-of-code"
+  },
+  "hourofcode": {
+    "display_name": "Classic Maze",
+    "description": "Try the basics of computer science with characters from Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!"
+  },
+  "how-ai-works": {
+    "display_name": "How AI Works",
+    "description": "These lessons supplement the video series. Each lesson is paired with a single video from the series, diving-deeper into the concepts introduced in the videos. "
+  },
+  "iceage": {
+    "display_name": "Ice Age Play Lab",
+    "description": "Join Sid and Scrat from \"Ice Age\" for a fun introduction to computer science as you use basic block code to create a game."
+  },
+  "idaho-digital-literacy": {
+    "display_name": "Idaho Digital Literacy",
+    "description": "Learn how to code, think critically about AI, and use technology to solve real-world problems."
+  },
+  "infinity": {
+    "display_name": "Disney Infinity Play Lab",
+    "description": "Join Disney Infinity characters like Elsa and Baymax for a fun introduction to computer science as you use basic block code to create a game."
+  },
+  "insights-from-data-and-ai": {
+    "display_name": "Insights from Data and AI",
+    "description": "Learn how to clean, analyze, and visualize data to uncover insights, then tell a data-driven story using ethical and effective communication techniques."
+  },
+  "interactive-games-animations": {
+    "display_name": "Interactive Animations and Games",
+    "description": "Engaging the same design process that computer scientists use, students learn programming concepts and develop images, animations, interactive art, and games."
+  },
+  "intro-to-programming-playground": {
+    "display_name": "intro-to-programming-playground"
+  },
+  "intro-to-programming-python": {
+    "display_name": "intro-to-programming-python"
+  },
+  "introduction-to-programming-in-music-lab-for-elementary": {
+    "display_name": "introduction-to-programming-in-music-lab-for-elementary"
+  },
+  "jamila-sandbox": {
+    "display_name": "jamila-sandbox"
+  },
+  "jess-test-script": {
+    "display_name": "jess-test-script"
+  },
+  "jess-test-script-1": {
+    "display_name": "jess-test-script-1"
+  },
+  "jigsaw": {
+    "display_name": "Jigsaw",
+    "description": "Give students an idea of what to expect — mouse skills, lab manners, completing puzzles, and more — when they head to the computer lab."
+  },
+  "jr-test": {
+    "display_name": "jr-test"
+  },
+  "k1hoc2017": {
+    "display_name": "k1hoc2017"
+  },
+  "k5-ai-data": {
+    "display_name": "How AI Makes Decisions"
+  },
+  "k5-maker-pilot": {
+    "display_name": "K-5 Maker Self-Paced Professional Learning"
+  },
+  "k5-onlinepd": {
+    "display_name": "Teaching Computer Science Fundamentals",
+    "description": "This self-paced online professional learning module will help prepare you to teach the Computer Science Fundamentals curriculum!"
+  },
+  "k5-support": {
+    "display_name": "k5-support"
+  },
+  "k5-unplugged": {
+    "display_name": "CS Fundamentals Unplugged"
+  },
+  "k5aisandbox": {
+    "display_name": "k5aisandbox"
+  },
+  "k5concepts": {
+    "display_name": "k5concepts"
+  },
+  "k5gamedesignsandbox": {
+    "display_name": "k5gamedesignsandbox"
+  },
+  "kaitie-test-script": {
+    "display_name": "kaitie-test-script"
+  },
+  "katie-practice": {
+    "display_name": "katie-practice"
+  },
+  "katies-playground": {
+    "display_name": "katies-playground"
+  },
+  "kindertest": {
+    "display_name": "kindertest"
+  },
+  "kodea-pd-2021": {
+    "display_name": "Enseñando Fundamentos de la Computación"
+  },
+  "kt-test-1": {
+    "display_name": "kt-test-1"
+  },
+  "lesson-plan-feedback-v1": {
+    "display_name": "lesson-plan-feedback-v1"
+  },
+  "lori-sandbox": {
+    "display_name": "lori-sandbox"
+  },
+  "lorisandbox": {
+    "display_name": "lorisandbox"
+  },
+  "mc": {
+    "display_name": "Minecraft Adventurer",
+    "description": "Learn the basics of computer science by programming Alex or Steve to move through a simulated piece of a Minecraft world."
+  },
+  "melissa-cloning-sandbox": {
+    "display_name": "melissa-cloning-sandbox"
+  },
+  "melissasandbox": {
+    "display_name": "melissasandbox"
+  },
+  "microbit": {
+    "display_name": "Creating Apps with Devices (micro:bit)",
+    "description": "In this unit, students use App Lab and the BBC micro:bit to develop programs that use the same hardware inputs and outputs found in smart devices."
+  },
+  "microbit-temp": {
+    "display_name": "microbit-temp"
+  },
+  "microbitmakermodule": {
+    "display_name": "Teaching Maker with micro:bit",
+    "description": "After completing this professional learning experience, you'll be comfortable with basic coding and maker concepts."
+  },
+  "mike-test": {
+    "display_name": "mike-test"
+  },
+  "minecraft": {
+    "display_name": "Minecraft Designer",
+    "description": "YOU make the rules in this activity, where you can learn basic computer science skills to create your own Minecraft game to share with others! "
+  },
+  "ml-playground": {
+    "display_name": "ml-playground"
+  },
+  "moneppo-1": {
+    "display_name": "moneppo-1"
+  },
+  "mt-playground": {
+    "display_name": "mt-playground"
+  },
+  "music-accessibility": {
+    "display_name": "music-accessibility"
+  },
+  "music-ai-2024": {
+    "display_name": "music-ai-2024"
+  },
+  "music-extras": {
+    "display_name": "music-extras"
+  },
+  "music-intro": {
+    "display_name": "music-intro"
+  },
+  "music-intro-elementary": {
+    "display_name": "[Pilot] Music Lab - Elementary "
+  },
+  "music-jam": {
+    "display_name": "Music Lab: Jam Session",
+    "description": "Bring music and coding together with Music Lab: Jam Session! In this self-guided Hour of Code activity, students will remix tracks from artists like Sabrina Carpenter, Lady Gaga, and Shakira while learning coding basics and exploring AI-powered beats."
+  },
+  "music-keyboard-accessibility": {
+    "display_name": "music-keyboard-accessibility"
+  },
+  "music-keyboard-navigation-onboarding": {
+    "display_name": "music-keyboard-navigation-onboarding"
+  },
+  "music-lab-advanced-model-sandbox": {
+    "display_name": "music-lab-advanced-model-sandbox"
+  },
+  "music-onboard": {
+    "display_name": "music-onboard"
+  },
+  "music-pilot-gj": {
+    "display_name": "music-pilot-gj"
+  },
+  "music-tutorial-2024": {
+    "display_name": "Music Lab Tutorial",
+    "description": "In this engaging lesson, students use Music Lab to develop coding skills, compose songs, and connect technology with creativity."
+  },
+  "musiclab": {
+    "display_name": "musiclab"
+  },
+  "musiclab-pdx-test": {
+    "display_name": "musiclab-pdx-test"
+  },
+  "musiclab-pilot": {
+    "display_name": "musiclab-pilot"
+  },
+  "net-int": {
+    "display_name": "net-int"
+  },
+  "netsim": {
+    "display_name": "netsim"
+  },
+  "networks-and-internet-playground": {
+    "display_name": "networks-and-internet-playground"
+  },
+  "networks-and-the-internet": {
+    "display_name": "[PILOT] Networks and the Internet"
+  },
+  "nevada-standards-aligned-fifth-grade": {
+    "display_name": "Nevada Standards Aligned: CSF 5th Grade"
+  },
+  "nevada-standards-aligned-fifth-grade-2023": {
+    "display_name": "nevada-standards-aligned-fifth-grade-2023"
+  },
+  "nevada-standards-aligned-first-grade": {
+    "display_name": "Nevada Standards Aligned: CSF 1st Grade"
+  },
+  "nevada-standards-aligned-fourth-grade": {
+    "display_name": "Nevada Standards Aligned: CSF 4th Grade"
+  },
+  "nevada-standards-aligned-kindergarten": {
+    "display_name": "Nevada Standards Aligned: CSF Kindergarten"
+  },
+  "nevada-standards-aligned-second-grade": {
+    "display_name": "Nevada Standards Aligned: CSF 2nd Grade"
+  },
+  "nevada-standards-aligned-third-grade": {
+    "display_name": "Nevada Standards Aligned: CSF 3rd Grade"
+  },
+  "new-d": {
+    "display_name": "new-d"
+  },
+  "new-e": {
+    "display_name": "new-e"
+  },
+  "new-express": {
+    "display_name": "new-express"
+  },
+  "new-f": {
+    "display_name": "new-f"
+  },
+  "new-stages-sept-2017": {
+    "display_name": "new-stages-sept-2017"
+  },
+  "none-none": {
+    "display_name": "none-none"
+  },
+  "novice-view": {
+    "display_name": "novice-view"
+  },
+  "oceans": {
+    "display_name": "AI for Oceans",
+    "description": "In this fun introduction to artificial intelligence, you train a real machine learning model to identify sea creatures and trash in the ocean. "
+  },
+  "odometer": {
+    "display_name": "odometer"
+  },
+  "original-allthelessonplans-course": {
+    "display_name": "original-allthelessonplans-course"
+  },
+  "original-alltheselfpacedplthings-course": {
+    "display_name": "original-alltheselfpacedplthings-course"
+  },
+  "original-allthethings-course": {
+    "display_name": "original-allthethings-course"
+  },
+  "original-allthettsthings-course": {
+    "display_name": "original-allthettsthings-course"
+  },
+  "other-plc-course": {
+    "display_name": "other-plc-course"
+  },
+  "outbreak": {
+    "display_name": "Outbreak Simulator",
+    "description": "In this engaging introduction to computer science, you create a simulation to understand how quickly a virus can spread and what can be done to slow it down."
+  },
+  "outbreak-csc": {
+    "display_name": "Outbreak"
+  },
+  "outbreak-module": {
+    "display_name": "outbreak-module"
+  },
+  "outbreakmodule": {
+    "display_name": "outbreakmodule"
+  },
+  "peru": {
+    "display_name": "peru"
+  },
+  "petgame": {
+    "display_name": "petgame"
+  },
+  "physcomp-temp": {
+    "display_name": "physcomp-temp"
+  },
+  "pilot-coursec-maker-2024": {
+    "display_name": "[Pilot] Course C Maker with micro:bit"
+  },
+  "pilot-coursed-maker-2024": {
+    "display_name": "[Pilot] Course D Maker with micro:bit"
+  },
+  "pilot-coursee-maker-2024": {
+    "display_name": "[Pilot] Course E Maker with micro:bit"
+  },
+  "pilot-coursef-maker-2024": {
+    "display_name": "[Pilot] Course F Maker with micro:bit"
+  },
+  "pilot-elem-music-lab": {
+    "display_name": "Intro to Programming w Music Lab"
+  },
+  "pilot-k5-ai": {
+    "display_name": "[Pilot] Elementary AI Module"
+  },
+  "pilot-k5-game-design": {
+    "display_name": "[Pilot] Game Design"
+  },
+  "pilot-pl-teaching-k5-music-lab": {
+    "display_name": "pilot-pl-teaching-k5-music-lab"
+  },
+  "pixelation": {
+    "display_name": "Pixelation",
+    "description": "Encode images with bits and bytes! Type out the binary yourself to create your own pixel masterpiece."
+  },
+  "pl-csd-bugs": {
+    "display_name": "pl-csd-bugs"
+  },
+  "pl-csd-summer": {
+    "display_name": "'25 - '26 CSD In-Person PL Workshop Course"
+  },
+  "pl-playground": {
+    "display_name": "pl-playground"
+  },
+  "pl-team-design-guide": {
+    "display_name": "pl-team-design-guide"
+  },
+  "playground": {
+    "display_name": "playground"
+  },
+  "playlab": {
+    "display_name": "Play Lab",
+    "description": "Make your own stories and games with basic block code. Add speech bubbles and backgrounds, score points, and more—let's play and learn!"
+  },
+  "plc-bugbash-course": {
+    "display_name": "plc-bugbash-course"
+  },
+  "pluralsight": {
+    "display_name": "pluralsight"
+  },
+  "poem-art": {
+    "display_name": "Poem Art",
+    "description": "Roses are red, violets are blue, animate your poem, and learn computer science too! This lesson integrates ELA and CS by using code to convey a poem's mood."
+  },
+  "poembot": {
+    "display_name": "Poembot"
+  },
+  "poembot-hoc": {
+    "display_name": "poembot-hoc"
+  },
+  "poembot-springforum21": {
+    "display_name": "poembot-springforum21"
+  },
+  "poemmaker": {
+    "display_name": "poemmaker"
+  },
+  "poetry": {
+    "display_name": "Coding with Poetry",
+    "description": "Explore the intersection of coding and language arts by creating interactive poems, illustrating the mood and tone with code."
+  },
+  "poetry-hoc3": {
+    "display_name": "poetry-hoc3"
+  },
+  "poster": {
+    "display_name": "poster"
+  },
+  "poster-1": {
+    "display_name": "poster-1"
+  },
+  "poster-draft": {
+    "display_name": "poster-draft"
+  },
+  "poster-experiment": {
+    "display_name": "poster-experiment"
+  },
+  "pre-express": {
+    "display_name": "CS Fundamentals: Pre-reader Express",
+    "description": "Let your pre-reader students learn computer science at their own pace! Learn to create computer programs, solve problems, and work through fun challenges."
+  },
+  "problem-solving-computing": {
+    "display_name": "Problem Solving and Computing",
+    "description": "Framed within the broader pursuit of problem solving, this unit is an introduction to computer science featuring a series of puzzles, challenges, and more."
+  },
+  "problem-solving-with-ai": {
+    "display_name": "Problem Solving with AI",
+    "description": "Learn how to use AI as a collaborative problem-solving tool by testing, refining, and evaluating AI-generated content through hands-on experimentation and ethical analysis."
+  },
+  "programming-fundamentals": {
+    "display_name": "Programming Fundamentals 2025 Pilot"
+  },
+  "programming-fundamentals-aitutor": {
+    "display_name": "[PILOT] Programming Fundamentals (AI Tutor)"
+  },
+  "programming-with-music-lab": {
+    "display_name": "Programming with Music Lab",
+    "description": "An engaging, hands-on dive into the worlds of computer science, music, and problem solving. Introduce core programming concepts through music, using code to build, remix, and perform original songs."
+  },
+  "programming-with-music-lab-playground": {
+    "display_name": "programming-with-music-lab-playground"
+  },
+  "public-key-cryptography": {
+    "display_name": "public-key-cryptography"
+  },
+  "pwc": {
+    "display_name": "pwc"
+  },
+  "python-adlibs": {
+    "display_name": "python-adlibs"
+  },
+  "python-madlibs": {
+    "display_name": "python-madlibs"
+  },
+  "rbo-reference": {
+    "display_name": "rbo-reference"
+  },
+  "removed19": {
+    "display_name": "removed19"
+  },
+  "sandbox-coding-with-ai": {
+    "display_name": "sandbox-coding-with-ai"
+  },
+  "sandbox-csaif-pl": {
+    "display_name": "sandbox-csaif-pl"
+  },
+  "sandbox-csf": {
+    "display_name": "sandbox-csf"
+  },
+  "sandbox-data-science-pl": {
+    "display_name": "sandbox-data-science-pl"
+  },
+  "sandbox-java-pl": {
+    "display_name": "sandbox-java-pl"
+  },
+  "sandbox-pl-cv": {
+    "display_name": "sandbox-pl-cv"
+  },
+  "sb-pt-cont": {
+    "display_name": "sb-pt-cont"
+  },
+  "sb-pt-exp": {
+    "display_name": "sb-pt-exp"
+  },
+  "sconyers": {
+    "display_name": "sconyers"
+  },
+  "seesaw-adaptations": {
+    "display_name": "seesaw-adaptations"
+  },
+  "self-paced-exploring-gen-ai": {
+    "display_name": "Teaching Exploring Generative AI",
+    "description": "This professional learning module is designed to help you prepare to teach Code.org’s Exploring Generative AI course."
+  },
+  "self-paced-foundations-cs": {
+    "display_name": "CS and AI Foundations"
+  },
+  "self-paced-gen-ai": {
+    "display_name": "self-paced-gen-ai"
+  },
+  "self-paced-pl-ai-101": {
+    "display_name": "AI 101 Self Paced Professional Learning for Educators",
+    "description": "Foundational online learning series for any teacher or educator interested in the groundbreaking world of artificial intelligence (AI) and its transformative potential in education."
+  },
+  "self-paced-pl-ai-districts": {
+    "display_name": "AI 101 Professional Learning for Districts"
+  },
+  "self-paced-pl-ai-foundations": {
+    "display_name": "self-paced-pl-ai-foundations"
+  },
+  "self-paced-pl-aiml": {
+    "display_name": "Teaching AI and Machine Learning",
+    "description": "After completing this professional learning module, you'll be ready to get started teaching Code.org's CSD Unit 7 - AI and Machine Learning - with your students."
+  },
+  "self-paced-pl-coding-with-ai": {
+    "display_name": "Teaching Coding with AI",
+    "description": "This self-paced professional learning module prepares teachers to guide students through Code.org's Coding with AI unit, where students leverage LLMs to write more powerful code while exploring ethical considerations and responsible AI use."
+  },
+  "self-paced-pl-computer-vision": {
+    "display_name": "Teaching Computer Vision",
+    "description": "This professional learning module equips educators to teach Code.org's Computer Vision curriculum."
+  },
+  "self-paced-pl-computer-vision-2024": {
+    "display_name": "self-paced-pl-computer-vision-2024"
+  },
+  "self-paced-pl-csa": {
+    "display_name": "CSA Getting Started Modules"
+  },
+  "self-paced-pl-csc": {
+    "display_name": "Teaching CS Connections",
+    "description": "This professional learning module is designed to help you prepare to teach Code.org's CS Connections curriculum."
+  },
+  "self-paced-pl-csd": {
+    "display_name": "Teaching CS Discoveries",
+    "description": "After completing this online professional learning module, you'll be ready to get started teaching Code.org's Computer Science Discoveries curriculum with your students."
+  },
+  "self-paced-pl-csd-2021": {
+    "display_name": "Teaching CS Discoveries 22-23"
+  },
+  "self-paced-pl-csd-unit1": {
+    "display_name": "Teaching Problem Solving and Computing"
+  },
+  "self-paced-pl-csd-unit2": {
+    "display_name": "Teaching Web Development"
+  },
+  "self-paced-pl-csd-unit3": {
+    "display_name": "Teaching Interactive Animations and Games"
+  },
+  "self-paced-pl-csd-unit4": {
+    "display_name": "Teaching The Design Process"
+  },
+  "self-paced-pl-csd-unit5": {
+    "display_name": "Teaching Data and Society"
+  },
+  "self-paced-pl-csd5": {
+    "display_name": "Teaching AI and Machine Learning (2022)"
+  },
+  "self-paced-pl-csd6-2021": {
+    "display_name": "Teaching AI and Machine Learning (2021)"
+  },
+  "self-paced-pl-csd7-2021": {
+    "display_name": "self-paced-pl-csd7-2021"
+  },
+  "self-paced-pl-csd8-2021": {
+    "display_name": "self-paced-pl-csd8-2021"
+  },
+  "self-paced-pl-csp": {
+    "display_name": "Teaching CS Principles",
+    "description": "Welcome to Code.org's free self-paced online modules for educators to get started teaching CS Principles! After completing these online modules, you'll be ready to get started teaching Code.org’s Computer Science Principles course with your students."
+  },
+  "self-paced-pl-csp-2021": {
+    "display_name": "Teaching CS Principles (2021)"
+  },
+  "self-paced-pl-equitymodule": {
+    "display_name": "Equity in Computer Science",
+    "description": "This self-paced professional learning module is designed to empower educators to create equitable and inclusive computer science classrooms. It focuses on foundational concepts of equity and provides practical strategies for implementation."
+  },
+  "self-paced-pl-k5": {
+    "display_name": "Computer Science Basics for K-5 Teachers",
+    "description": "After completing this professional learning experience, you'll be comfortable with basic K-5 grade coding concepts."
+  },
+  "self-paced-pl-microbit": {
+    "display_name": "Teaching Creating Apps with Devices (micro:bit)"
+  },
+  "self-paced-pl-physical-computing": {
+    "display_name": "Teaching Creating Apps with Devices (Circuit Playground)"
+  },
+  "self-paced-pl-teaching-computer-science-discoveries-music-lab": {
+    "display_name": "Teaching Programming with Music Lab",
+    "description": "This professional learning module is designed to prepare you to teach Code.org's Programming with Music Lab curriculum. This curriculum is an engaging, hands-on dive into the worlds of computer science, music, and problem solving."
+  },
+  "soccer": {
+    "display_name": "soccer"
+  },
+  "special-fun": {
+    "display_name": "special-fun"
+  },
+  "specialseries": {
+    "display_name": "specialseries"
+  },
+  "spelling-bee": {
+    "display_name": "Spelling Activity",
+    "description": "Learn sequencing and word magic with buzzing adventure! Guide the bee to spell like a pro with your own series of coding commands."
+  },
+  "sports": {
+    "display_name": "Code Your Own Sports Game",
+    "description": "Score big with a sports game coded by you! Learn all about events in programming, work through puzzles, and customize the fun. Let's play and code like champs!"
+  },
+  "spritelab": {
+    "display_name": "spritelab"
+  },
+  "spritelab-ee": {
+    "display_name": "spritelab-ee"
+  },
+  "spritelab-simple": {
+    "display_name": "spritelab-simple"
+  },
+  "spritelab-validated": {
+    "display_name": "spritelab-validated"
+  },
+  "starwars": {
+    "display_name": "Star Wars: Building a Galaxy With Code (JavaScript)",
+    "description": "Use JavaScript to learn to program droids, and create your own Star Wars game in a galaxy far, far away."
+  },
+  "starwarsblocks": {
+    "display_name": "Star Wars: Building a Galaxy With Code (Blockly)",
+    "description": "Use block coding to learn to program droids, and create your own Star Wars game in a galaxy far, far away."
+  },
+  "step": {
+    "display_name": "step"
+  },
+  "subgoal-labels-opt-in": {
+    "display_name": "subgoal-labels-opt-in"
+  },
+  "subgoals-assessment-staging": {
+    "display_name": "subgoals-assessment-staging"
+  },
+  "teachercon": {
+    "display_name": "teachercon"
+  },
+  "teaching-ai-foundations": {
+    "display_name": "Teaching AI Foundations",
+    "description": "This self-paced professional learning module provides educators with a comprehensive understanding of the curriculum, enabling them to effectively guide students through essential CS concepts & understand the transformative role of AI."
+  },
+  "teaching-ai-systems-that-power-it": {
+    "display_name": "Teaching AI and the Systems that Power It",
+    "description": "This professional learning module is designed to help you prepare to teach Code.org’s AI and the Systems that Power It unit."
+  },
+  "teaching-coding-with-music": {
+    "display_name": "Teaching Coding with Music",
+    "description": "Empowers educators to confidently implement Music Lab for teaching fundamental coding concepts through captivating music-based activities, while discovering how coding drives innovation in the music industry and other careers."
+  },
+  "teaching-csd-aiml": {
+    "display_name": "Teaching AI and Machine Learning",
+    "description": "After completing this professional learning experience, you'll be ready to get started teaching Code.org's CSD Unit 4 - AI and Machine Learning with your students."
+  },
+  "teaching-csd-microbit": {
+    "display_name": "Teaching Creating Apps for Devices (micro:bit)",
+    "description": "After completing this professional learning module, you'll be ready to get started teaching Code.org's CSD Unit 6 - Creating Apps with Devices (micro:bit) with your students."
+  },
+  "teaching-csd-physical-computing": {
+    "display_name": "Teaching Creating Apps for Devices (Circuit Playground)",
+    "description": "After completing this professional learning experience, you'll be ready to get started teaching Code.org's CSD Unit 6 - Creating Apps with Devices (Circuit Playground) with your students."
+  },
+  "teaching-csd-unit1": {
+    "display_name": "Teaching Problem Solving and Computing",
+    "description": "After completing this professional learning module, you'll be ready to get started teaching Code.org's CSD Unit 1 - Problem Solving and Computing with your students."
+  },
+  "teaching-csd-unit2": {
+    "display_name": "Teaching Web Development",
+    "description": "After completing this professional learning experience, you'll be ready to get started teaching Code.org's CSD Unit 2 - Web Development - with your students."
+  },
+  "teaching-csd-unit3": {
+    "display_name": "Teaching Interactive Animations and Games",
+    "description": "After completing this professional learning module, you'll be ready to get started teaching Code.org's CS Discoveries Unit 3 - Interactive Animations and Games with your students."
+  },
+  "teaching-csd-unit4": {
+    "display_name": "Teaching The Design Process",
+    "description": "After completing this professional learning module, you'll be ready to get started teaching Code.org's CSD Unit 4 - The Design Process - with your students."
+  },
+  "teaching-csd-unit5": {
+    "display_name": "Teaching Data and Society",
+    "description": "After completing this professional learning module, you'll be ready to get started teaching Code.org's CSD Unit 5 - Data and Society with your students."
+  },
+  "teaching-csf": {
+    "display_name": "Teaching Computer Science Fundamentals",
+    "description": "Free self-paced online course for educators for getting started with Computer Science Fundamentals!"
+  },
+  "teaching-cyber-and-global-impacts": {
+    "display_name": "Teaching Cybersecurity and Global Impacts",
+    "description": "This self-paced professional learning module provides educators with a comprehensive understanding of the curriculum, enabling them to effectively guide students through the AIF Cybersecurity and Global Impact Unit."
+  },
+  "teaching-data-science-pilot": {
+    "display_name": "teaching-data-science-pilot"
+  },
+  "teaching-exp-gen-ai": {
+    "display_name": "Teaching Exploring Generative AI",
+    "description": "This self-paced professional learning module prepares teachers to guide 9-12 grade students through Code.org's Exploring Generative AI units."
+  },
+  "teaching-fabric-of-internet": {
+    "display_name": "Teaching the Fabric of the Internet",
+    "description": "This professional learning module is designed to help you prepare to teach Code.org's Fabric of the Internet and AI unit. This is a part of the AI Foundations curriculum."
+  },
+  "teaching-foundations-ai-programming": {
+    "display_name": "Teaching Foundations of AI Programming",
+    "description": "This professional learning module is designed to help you prepare to teach Code.org’s Foundations of AI Programming unit.\nThe Foundations of AI Programming unit is part of the AI Foundations curriculum but can also stand alone for grades 9-12. "
+  },
+  "teaching-insights-from-data-and-ai": {
+    "display_name": "Teaching Insights from Data and AI",
+    "description": "This professional learning module is designed to help you prepare to teach Code.org’s Insights from Data and AI Unit."
+  },
+  "teaching-intro-java": {
+    "display_name": "Introduction to Java for Teachers",
+    "description": "This professional learning module is designed to introduce you to basic Java concepts."
+  },
+  "teaching-k5-music-lab": {
+    "display_name": "teaching-k5-music-lab"
+  },
+  "teaching-problem-solving-with-ai": {
+    "display_name": "Teaching Problem Solving with AI",
+    "description": "This self-paced professional learning module provides educators with a comprehensive understanding of the curriculum, enabling them to effectively guide students through the AIF Problem Solving with AI Unit."
+  },
+  "tess-modular": {
+    "display_name": "tess-modular"
+  },
+  "tess-modularity": {
+    "display_name": "tess-modularity"
+  },
+  "tess-test-course": {
+    "display_name": "tess-test-course"
+  },
+  "tess-testing-coding-with-music": {
+    "display_name": "tess-testing-coding-with-music"
+  },
+  "tess-testing-focus-on-creativity": {
+    "display_name": "tess-testing-focus-on-creativity"
+  },
+  "tess-testing-problem-solving": {
+    "display_name": "tess-testing-problem-solving"
+  },
+  "tesselementaryai": {
+    "display_name": "tesselementaryai"
+  },
+  "tessnew": {
+    "display_name": "tessnew"
+  },
+  "tesspltest23": {
+    "display_name": "tesspltest23"
+  },
+  "tesstest921": {
+    "display_name": "tesstest921"
+  },
+  "tesstesting": {
+    "display_name": "tesstesting"
+  },
+  "test--csp-online-teacher-support": {
+    "display_name": "test--csp-online-teacher-support"
+  },
+  "test-nv-coursea": {
+    "display_name": "test-nv-coursea"
+  },
+  "test-teaching-ap-cs-unit-1": {
+    "display_name": "test-teaching-ap-cs-unit-1"
+  },
+  "test-wednesday": {
+    "display_name": "test-wednesday"
+  },
+  "testing": {
+    "display_name": "testing"
+  },
+  "testing-digital-information": {
+    "display_name": "testing-digital-information"
+  },
+  "testing-modular": {
+    "display_name": "testing-modular"
+  },
+  "teststandard": {
+    "display_name": "teststandard"
+  },
+  "testtess": {
+    "display_name": "testtess"
+  },
+  "text-compression": {
+    "display_name": "Text Compression",
+    "description": "Decode the compression puzzle! Shrink data, swap symbols, and uncover the secrets of lightning-fast info transfer. Let's compress and conquer!"
+  },
+  "textbook": {
+    "display_name": "textbook"
+  },
+  "the-fabric-of-the-internet-and-ai": {
+    "display_name": "The Fabric of the Internet and AI",
+    "description": "Explore how the Internet works, how AI supports cybersecurity, and how global access and ethical issues shape our connected world."
+  },
+  "time4cs-control": {
+    "display_name": "time4cs-control"
+  },
+  "time4cs-experiment": {
+    "display_name": "time4cs-experiment"
+  },
+  "time4csdemo": {
+    "display_name": "time4csdemo"
+  },
+  "transferring-over": {
+    "display_name": "transferring-over"
+  },
+  "tutorial-video---code-studio-puzzle-challenge": {
+    "display_name": "tutorial-video---code-studio-puzzle-challenge"
+  },
+  "ui-test-versioned-script": {
+    "display_name": "ui-test-versioned-script"
+  },
+  "usability": {
+    "display_name": "usability"
+  },
+  "valentine": {
+    "display_name": "valentine"
+  },
+  "vigenere": {
+    "display_name": "vigenere"
+  },
+  "virtual-holding-place": {
+    "display_name": "virtual-holding-place"
+  },
+  "virtual-pl-csa-summer": {
+    "display_name": " '25 - '26 CS A Virtual PL Workshop Course"
+  },
+  "virtual-pl-csd-summer": {
+    "display_name": "'25 - '26 CSD Virtual PL Workshop Course"
+  },
+  "virtual-pl-csp-summer": {
+    "display_name": "'25 - '26 CSP Virtual PL Workshop Course"
+  },
+  "virtual-pl-csp-summer-day1": {
+    "display_name": "virtual-pl-csp-summer-day1"
+  },
+  "virustest": {
+    "display_name": "virustest"
+  },
+  "vpl-csa": {
+    "display_name": "CSA Virtual Professional Learning 24-25"
+  },
+  "vpl-csd": {
+    "display_name": "CS Discoveries Virtual Professional Learning 24-25"
+  },
+  "vpl-csd-ayw-pilot": {
+    "display_name": "CS Discoveries Academic Year Workshops "
+  },
+  "vpl-csd-summer-ci": {
+    "display_name": "CS Discoveries Curriculum Investigation 2023"
+  },
+  "vpl-csd-summer-pilot": {
+    "display_name": "CS Discoveries Virtual Summer Workshop"
+  },
+  "vpl-csd-summer-pilot-ci": {
+    "display_name": "CS Discoveries Curriculum Investigation"
+  },
+  "vpl-csp": {
+    "display_name": "CS Principles Virtual Professional Learning 24-25"
+  },
+  "web-development": {
+    "display_name": "Web Development",
+    "description": "Students learn problem solving, creative expression, and teamwork as they work to create and share content on their very own web pages."
+  },
+  "workshop-gamelab": {
+    "display_name": "workshop-gamelab"
+  },
+  "workshop-maker": {
+    "display_name": "workshop-maker"
+  },
+  "yaddayadda": {
+    "display_name": "yaddayadda"
+  }
 }

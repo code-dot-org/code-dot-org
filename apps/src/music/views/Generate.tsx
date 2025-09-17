@@ -1,7 +1,7 @@
 import {Button} from '@code-dot-org/component-library/button';
 import React, {useCallback, useState} from 'react';
 
-import Adlib from '@cdo/apps/lab2/views/components/guide/Adlib';
+import Adlib, {AdlibsType} from '@cdo/apps/lab2/views/components/guide/Adlib';
 import Guide from '@cdo/apps/lab2/views/components/guide/Guide';
 import getRandomInt from '@cdo/apps/util/getRandomInt';
 import HttpClient from '@cdo/apps/util/HttpClient';
@@ -19,9 +19,7 @@ import {setCodeToLoad, setAiGenerateState} from '../redux/musicRedux';
 
 import styles from './Generate.module.scss';
 
-const adlibs = adlibsUntyped as {
-  [key: string]: {template: string; options: {[key: string]: string[]}};
-};
+const adlibs = adlibsUntyped as AdlibsType;
 
 interface GenerateProps {
   adlibOption?: string;
@@ -81,7 +79,10 @@ const Generate: React.FunctionComponent<GenerateProps> = ({adlibOption}) => {
   }, [contextGenerateMusicPsuedocodeFromDescription, useText]);
 
   const generateSongCache = useCallback(async () => {
-    const variant = getRandomInt(0, 2);
+    const variant = getRandomInt(
+      0,
+      adlibs[adlibOption || 'complex'].variantCount - 1
+    );
     const joinedChoices = choices?.join('-');
     const cacheFilePath = `${baseAssetUrl}generate/music/${packId}-${adlibOption}-${joinedChoices}-${variant
       .toString()
@@ -141,8 +142,7 @@ const Generate: React.FunctionComponent<GenerateProps> = ({adlibOption}) => {
           )}
           {adlibOption && (
             <Adlib
-              template={adlibs[adlibOption].template}
-              options={adlibs[adlibOption].options}
+              adlib={adlibs[adlibOption]}
               onChange={(adlibText, choices) => {
                 setAdlibText(adlibText);
                 setChoices(choices);

@@ -9,6 +9,7 @@ export const cacheKey = () => `music-ai-generate`;
 
 export interface MusicMetadata {
   playbackEvents: PlaybackEvent[];
+  lastMeasure: number;
   packId?: string;
   libraryName?: string;
 }
@@ -17,12 +18,14 @@ export interface MusicMetadata {
 export const saveGeneratedSongMetadata = (
   channelId: string,
   packId: string,
-  events: PlaybackEvent[]
+  events: PlaybackEvent[],
+  lastMeasure: number
 ) => {
   trySetLocalStorage(
     cacheKey(),
     JSON.stringify({
       playbackEvents: events,
+      lastMeasure,
       packId,
       libraryName: MusicLibrary.getInstance()?.name,
     })
