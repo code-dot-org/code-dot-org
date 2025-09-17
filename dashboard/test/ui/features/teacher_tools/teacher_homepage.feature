@@ -1,4 +1,4 @@
-# This is being deprecated due to the new teacher homepage roll out.
+# Deprecated - remove after confirming coverage on new homepage: https://codedotorg.atlassian.net/browse/TEACH-2165
 @skip
 @as_teacher
 @no_mobile
