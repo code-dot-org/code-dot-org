@@ -273,7 +273,7 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
         <Button
           text={commonI18n.skipToProject()}
           type="tertiary"
-          color={'black'}
+          color="black"
           size="xs"
           iconRight={{iconStyle: 'solid', iconName: 'arrow-right'}}
           onClick={onClickSkip}
