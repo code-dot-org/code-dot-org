@@ -287,7 +287,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
           rightHeaderContent={rightHeaderContent}
         >
           {availableTabs[currentTab]}
-          <NavigationArea {...instructionsProps} />
+          <NavigationArea isResourcePanel={true} {...instructionsProps} />
           {isSettingsOpen && (
             <SettingsPanel
               settings={settings || []}

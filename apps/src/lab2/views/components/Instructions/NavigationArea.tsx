@@ -28,6 +28,7 @@ interface NavigationAreaProps {
   hasRun: boolean;
   hasEdited: boolean;
   requireRun?: boolean;
+  isResourcePanel?: boolean;
 }
 
 /**
@@ -40,6 +41,7 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
   hasEdited,
   requireRun,
   handleInstructionsTextClick,
+  isResourcePanel,
 }) => {
   const {
     id,
@@ -148,7 +150,7 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
         id="instructions-feedback-message"
         className={classNames(
           moduleStyles.bubble,
-          moduleStyles.bubbleNoBorderRadius
+          isResourcePanel && moduleStyles.resourcePanelNavigationAreaBubble
         )}
       >
         {feedbackMessage && (
