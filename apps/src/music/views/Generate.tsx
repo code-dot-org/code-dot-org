@@ -51,15 +51,29 @@ const Generate: React.FunctionComponent<GenerateProps> = ({adlibOption}) => {
       ?.getFolderForFolderId(packId || 'indie')
       ?.sounds?.map(sound => {
         if (sound.type !== 'preview') {
-          return `${sound.src} (${sound.length} measures)`;
+          return `${packId}/${sound.src} (${sound.length} measures)`;
         }
       })
       .filter(sound => sound !== undefined)
       .join('", "') || '';
 
+  const drumSounds =
+    library
+      ?.getAvailableSounds()
+      .filter(folder => folder.id !== packId)
+      .map(folder =>
+        folder.sounds
+          .filter(sound => sound.type === 'beat')
+          .map(sound => {
+            return `${folder.id}/${sound.src} (${sound.length} measures)`;
+          })
+      )
+      .flat()
+      .join('", ') || '';
+
   const contextGenerateMusicPsuedocodeFromDescription = GenerateContext(
     sounds,
-    packId
+    drumSounds
   );
 
   const generateSongAi = useCallback(async () => {

@@ -1,4 +1,4 @@
-const GenerateContext = (sounds: string, packId: string) => {
+const GenerateContext = (sounds: string, drumSounds: string) => {
   return `Your job will be to generate psuedocode for a system that plays a song.  You'll be given a description of what to play, and then you should output code that generates the song to be played.  The psuedocode looks something like this:
 
 when_run
@@ -15,9 +15,9 @@ Indenting is important.  In this example, when the code is run, it plays "hiphop
 
 Don't include any comments in the generated psuedocode.
 
-Note that each sound is actually 2 measures long.
+The valid sounds to use are: "${sounds}".  (The length of each sound is in parentheses.)  You can use any of these sounds in your psuedocode.
 
-The valid sounds to use are: "${sounds}".  (The length of each sound is in parentheses.)  You can use any of these sounds in your psuedocode.  Each sound name gets the "${packId}/" prefix, so for example, "indie/drum_beat_808".
+You can also use any of the following additional drum sounds: "${drumSounds}".
 `;
 };
 
