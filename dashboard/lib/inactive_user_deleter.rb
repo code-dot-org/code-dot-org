@@ -87,7 +87,7 @@ class InactiveUserDeleter
   end
 
   def inactive_users
-    Queries::User::Inactive.call(inactive_since: 42.months.ago).where.not(id: processed_user_ids)
+    Queries::User::Inactive.call(inactive_since: inactive_since).where.not(id: processed_user_ids)
   end
 
   def summary

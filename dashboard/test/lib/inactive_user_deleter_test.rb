@@ -11,8 +11,8 @@ class User::InactiveUserDeleterTest < ActiveJob::TestCase
   let(:limit) {described_class::ACCOUNT_DELETION_LIMIT}
 
   let(:email) {Faker::Internet.unique.email}
-  let!(:student) {create(:student, current_sign_in_at: 42.months.ago - 1.day)}
-  let!(:teacher) {create(:teacher, current_sign_in_at: 42.months.ago - 1.day)}
+  let!(:student) {create(:student, current_sign_in_at: inactive_since - 1.day)}
+  let!(:teacher) {create(:teacher, current_sign_in_at: inactive_since - 1.day)}
 
   let(:expect_event_logging) do
     Metrics::Events.expects(:log_event).with(
@@ -41,10 +41,19 @@ class User::InactiveUserDeleterTest < ActiveJob::TestCase
     end
 
     it 'soft deletes inactive user that never signed in' do
-      user = create(:user, current_sign_in_at: nil, created_at: 42.months.ago)
+      user = create(:user, current_sign_in_at: nil, created_at: inactive_since)
+
       delete_inactive_users
       user.reload
       _(user.deleted?).must_equal true
+    end
+
+    it 'does not soft delete active user that never signed in' do
+      user = create(:user, current_sign_in_at: nil, created_at: inactive_since + 1.day)
+
+      delete_inactive_users
+      user.reload
+      _(user.deleted?).must_equal false
     end
 
     it 'does not process already soft-deleted users' do
@@ -53,7 +62,7 @@ class User::InactiveUserDeleterTest < ActiveJob::TestCase
 
       delete_inactive_users
 
-      refute described_instance.processed_user_ids.include?(soft_deleted_user.id)
+      _(described_instance.processed_user_ids).wont_include soft_deleted_user.id
     end
 
     it 'does not delete active users' do
