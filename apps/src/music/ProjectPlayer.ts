@@ -4,7 +4,6 @@ import {SourcesStore} from '../lab2/projects/SourcesStore';
 
 import MusicBlocklyWorkspace from './blockly/MusicBlocklyWorkspace';
 import {setUpBlocklyForMusicLab} from './blockly/setup';
-import {PlaybackEvent} from './player/interfaces/PlaybackEvent';
 import MusicLibrary from './player/MusicLibrary';
 import MusicPlayer from './player/MusicPlayer';
 import {MusicLabConfig} from './types';
@@ -14,8 +13,9 @@ import {cacheKey, computeEventMeasures, MusicMetadata} from './utils/Generate';
  * Given information about a student project, manages loading code and playing the project song.
  */
 class ProjectPlayer {
-  private currentPlaybackEvents: PlaybackEvent[] | null = null;
+  private currentMetadata: MusicMetadata | null = null;
   private eventMeasures: number[] | null = null;
+  private stopIntervalId: number | null = null;
 
   constructor(
     private readonly player = new MusicPlayer(),
@@ -27,14 +27,12 @@ class ProjectPlayer {
 
   // TODO: Support fetching by level + user ID?
   async loadProject(channelId: string, useLocalStorage = false) {
-    this.currentPlaybackEvents = null;
+    this.currentMetadata = null;
     this.eventMeasures = null;
     this.workspace.initHeadless();
 
-    const {playbackEvents, packId, libraryName} = await this.loadMetadata(
-      channelId,
-      useLocalStorage
-    );
+    this.currentMetadata = await this.loadMetadata(channelId, useLocalStorage);
+    const {libraryName, packId, playbackEvents} = this.currentMetadata;
 
     let library = MusicLibrary.getInstance();
     if (!library) {
@@ -46,21 +44,35 @@ class ProjectPlayer {
     }
 
     this.player.updateConfiguration(library.getBPM(), library.getKey());
-    this.currentPlaybackEvents = playbackEvents;
     this.eventMeasures = computeEventMeasures(playbackEvents);
 
     await this.player.preloadSounds(playbackEvents);
   }
 
-  play() {
-    if (this.currentPlaybackEvents === null) {
+  play(onEnded?: () => void) {
+    if (this.currentMetadata === null) {
       throw new Error('No project loaded!');
     }
-    this.player.playSong(this.currentPlaybackEvents);
+    const {playbackEvents, lastMeasure} = this.currentMetadata;
+    this.player.playSong(playbackEvents);
+
+    // Stop the song after the last measure.
+    this.stopIntervalId = window.setInterval(() => {
+      if (
+        this.stopIntervalId &&
+        this.player.getCurrentPlayheadPosition() >= lastMeasure
+      ) {
+        onEnded?.();
+        this.stop();
+      }
+    }, (60 / this.player.getBPM()) * 1000);
   }
 
   stop() {
     this.player.stopSong();
+    if (this.stopIntervalId) {
+      clearInterval(this.stopIntervalId);
+    }
   }
 
   getEventMeasures() {
@@ -71,7 +83,7 @@ class ProjectPlayer {
   }
 
   getBpm() {
-    if (this.currentPlaybackEvents === null) {
+    if (this.currentMetadata === null) {
       throw new Error('No project loaded!');
     }
     return this.player.getBPM();
@@ -94,10 +106,11 @@ class ProjectPlayer {
     const labConfig = sources.labConfig as MusicLabConfig;
     this.workspace.loadCode(JSON.parse(sources.source as string));
     this.workspace.compileSong(labConfig.music.blockMode);
-    const playbackEvents = this.workspace.executeCompiledSong().playbackEvents;
+    const {playbackEvents, lastMeasure} = this.workspace.executeCompiledSong();
 
     return {
       playbackEvents,
+      lastMeasure,
       packId: labConfig.music.packId,
       libraryName: labConfig.music.library,
     };

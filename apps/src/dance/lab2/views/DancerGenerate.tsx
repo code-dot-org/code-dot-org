@@ -3,14 +3,14 @@ import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import React, {useCallback, useEffect, useState} from 'react';
 
 import {getGeneratedDancerAssets} from '@cdo/apps/lab2/utils/GeneratedDancer';
-import Adlib from '@cdo/apps/lab2/views/components/guide/Adlib';
+import Adlib, {AdlibsType} from '@cdo/apps/lab2/views/components/guide/Adlib';
 import Guide from '@cdo/apps/lab2/views/components/guide/Guide';
 import getRandomInt from '@cdo/apps/util/getRandomInt';
 import {trySetLocalStorage} from '@cdo/apps/utils';
 
 import moduleStyles from './dancer-generate.module.scss';
 
-const adlibs = {
+const adlibs: AdlibsType = {
   basic: {
     template:
       'Please generate a dancer.  It should look like a {animal} with {appearance}.',
@@ -18,16 +18,39 @@ const adlibs = {
       animal: ['frog', 'moose'],
       appearance: ['hair', 'glasses'],
     },
+    variantCount: 2,
+  },
+  basic2: {
+    template:
+      'Please generate a dancer.  It should look like a {adjective} {animal} wearing a {attire}.',
+    options: {
+      adjective: ['basic', 'goth'],
+      animal: ['frog', 'moose', 'wolf'],
+      attire: [
+        'headphones',
+        'sunglasses',
+        'crown',
+        'headscarf',
+        'baseball-cap',
+        'beanie',
+        'headband',
+      ],
+    },
+    variantCount: 3,
   },
 };
+
+interface DancerGenerateProps {
+  adlibOption: string;
+}
 
 // This UI takes over the entire lab area and allows the user to generate a dancer using
 // a Guide UI component containing an Adlib UI component.  Pre-generated dancer assets are
 // retrieved from an online cache.  Information about the generated dancer is written to local
 // storage.
-const DancerGenerate: React.FunctionComponent = () => {
-  const adlibOption = 'basic';
-
+const DancerGenerate: React.FunctionComponent<DancerGenerateProps> = ({
+  adlibOption,
+}) => {
   const {setTheme} = useTheme();
 
   useEffect(() => {
@@ -47,7 +70,7 @@ const DancerGenerate: React.FunctionComponent = () => {
 
   const generateDancerCache = useCallback(async () => {
     const startTime = Date.now();
-    const variant = getRandomInt(0, 1);
+    const variant = getRandomInt(0, adlibs[adlibOption].variantCount - 1);
     const {head} = await getGeneratedDancerAssets(
       adlibOption,
       choices,
@@ -58,14 +81,14 @@ const DancerGenerate: React.FunctionComponent = () => {
 
     trySetLocalStorage(
       'dancer-ai-generate',
-      JSON.stringify({adlibOption: 'basic', choices, variant})
+      JSON.stringify({adlibOption, choices, variant})
     );
 
     const elapsedTime = Date.now() - startTime;
     const delayDuration = 2000; // 2 seconds.
     const remainingDelayDuration = Math.max(delayDuration - elapsedTime, 0);
     await new Promise(res => setTimeout(res, remainingDelayDuration));
-  }, [choices]);
+  }, [adlibOption, choices]);
 
   const generateDancer = useCallback(async () => {
     setAiGenerateState('generating');
@@ -82,8 +105,7 @@ const DancerGenerate: React.FunctionComponent = () => {
         {aiGenerateState === 'none' && (
           <>
             <Adlib
-              template={adlibs['basic'].template}
-              options={adlibs['basic'].options}
+              adlib={adlibs[adlibOption]}
               onChange={(adlibText, choices) => {
                 setAdlibText(adlibText);
                 setChoices(choices);

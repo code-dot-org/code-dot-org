@@ -11,14 +11,13 @@ import {SystemPromptOption} from '@cdo/apps/aichat/types';
 import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
 import {LabProps, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 
-import {AiTutorContext} from '../aiTutor/types';
 import {useSource} from '../codebridge/hooks/useSource';
 import {useAppDispatch, useAppSelector} from '../util/reduxHooks';
 
 import {WEBLAB2_EDITABLE_FILE_TYPES} from './constants';
+import {AiTutorWebLab2ContextHelper} from './helpers/aiTutorContextHelper';
 import {
   DEFAULT_AI_TUTOR_MODE,
-  getAiTutorContextPromise,
   getPromptNameFromMode,
   getPromptOptionsFromModes,
 } from './helpers/aiTutorHelper';
@@ -29,6 +28,9 @@ import {setViewMode} from './redux';
 import {Weblab2LevelProperties, ViewMode} from './types';
 
 import moduleStyles from './styles/weblab2-view.module.scss';
+
+const aiTutorHelper = new AiTutorWebLab2ContextHelper();
+
 const weblab2LangMapping: {[key: string]: LanguageSupport} = {
   html: html(),
   css: css(),
@@ -74,9 +76,8 @@ const Weblab2View: React.FC<
   LabProps<Weblab2LevelProperties, ProjectSources>
 > = ({levelProperties, initialSources}) => {
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
-  const [aiTutorContextPromise, setAiTutorContextPromise] =
-    useState<Promise<AiTutorContext>>();
-  const sources = useAppSelector(
+
+  const source = useAppSelector(
     state =>
       state.lab2Project.projectSources?.source as MultiFileSource | undefined
   );
@@ -129,10 +130,11 @@ const Weblab2View: React.FC<
   // rather than a callback for the context. In the future, we should consider refactoring AI
   // Tutor so we don't have to re-render the entire lab when sources change (this is also the case for Python Lab).
   useEffect(() => {
-    setAiTutorContextPromise(
-      getAiTutorContextPromise(sources, levelProperties.longInstructions)
-    );
-  }, [sources, levelProperties.longInstructions]);
+    aiTutorHelper.setAiTutorContext({
+      source,
+      longInstructions: levelProperties.longInstructions,
+    });
+  }, [source, levelProperties.longInstructions]);
 
   // Since there's no run button in Weblab2, set it to true by default
   // to enable the Submit button on edit on submittable levels.
@@ -158,7 +160,7 @@ const Weblab2View: React.FC<
           setConfig={setConfig}
           startSources={startSources}
           levelProperties={levelProperties}
-          aiTutorContextPromise={aiTutorContextPromise}
+          hiddenContextCallback={aiTutorHelper.getHiddenContextCallback()}
           aiTutorSystemPromptSettings={aiTutorSystemPromptSettings}
           aiTutorMultimodalEnabled={true}
         />

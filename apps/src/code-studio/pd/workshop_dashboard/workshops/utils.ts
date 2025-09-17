@@ -1,3 +1,4 @@
+import {isEqual} from 'lodash';
 import moment from 'moment-timezone';
 
 import {DATE_FORMAT, DATETIME_FORMAT, TIME_FORMAT} from '../workshopConstants';
@@ -240,3 +241,40 @@ export const enrollmentDataToProps = (
     attendances: apiData.attendances,
     enrolledDate: apiData.enrolled_date,
   }));
+
+// Returns if the workshop editor has made a change of one of the fields that
+// could trigger a Detail Change Notification email if the editor desired.
+export const madeImportantDetailChange = (
+  workshop: Workshop | null,
+  workshopFormState: WorkshopFormState,
+  sessionFormState: SessionFormState[]
+): boolean => {
+  if (!workshop) return false;
+
+  // Ignore 'hidden', 'registration_link', and 'suppress_email' when checking for
+  // detail changes as already-enrolled users would be aware of these.
+  const workshopOldWithImportantFields = Object.fromEntries(
+    Object.entries(workshopDataToState(workshop)).filter(
+      ([key]) => !['hidden', 'registrationLink', 'suppressEmail'].includes(key)
+    )
+  );
+  const workshopNewWithImportantFields = Object.fromEntries(
+    Object.entries(workshopFormState).filter(
+      ([key]) => !['hidden', 'registrationLink', 'suppressEmail'].includes(key)
+    )
+  );
+  if (
+    !isEqual(workshopOldWithImportantFields, workshopNewWithImportantFields)
+  ) {
+    return true;
+  }
+
+  const sessionsOld = sessionDataToState(
+    workshop.sessions,
+    workshop.time_zone || ''
+  );
+  if (sessionsOld.length !== sessionFormState.length) return true;
+  return sessionsOld.some(
+    (session, index) => !isEqual(session, sessionFormState[index])
+  );
+};

@@ -32,7 +32,9 @@ const AiDiffNotificationList: React.FC<AiDiffNotificationListProps> = ({
         setNotifications(loadedNotifications);
       })
       .catch(error => {
-        console.error('Error fetching notifications:', error);
+        console.error('Error fetching notifications for list:', error);
+        setNotifications([]);
+        setLoading(false);
       });
   }, []);
 

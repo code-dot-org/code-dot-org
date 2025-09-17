@@ -37,6 +37,7 @@ class Weblab2 < Level
     disable_edit_run_for_submission
     predict_settings
     available_ai_tutor_modes
+    level_system_prompt
   )
 
   def self.create_from_level_builder(params, level_params)
