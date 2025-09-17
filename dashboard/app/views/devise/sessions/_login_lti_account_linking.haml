@@ -2,7 +2,11 @@
 %link{href: "/shared/css/2022-rebrand-update.css", rel: "stylesheet"}
 
 %h2#linking-page-header= t('lti.account_linking.linking_page_header', provider: params[:lms_name])
-%p#linking-page-description= t('lti.account_linking.linking_page_description')
+- if Policies::Lti::DeploymentConfiguration::RESTRICTED_DEPLOYMENTS.include?(session[:lti_deployment_id])
+  - msg = t('lti.account_linking.linking_page_description_restricted')
+- else
+  - msg = t('lti.account_linking.linking_page_description')
+%p#linking-page-description= msg
 %div#flash-messages= show_flashes.html_safe
 
 - if Policies::Lti::DeploymentConfiguration::RESTRICTED_DEPLOYMENTS.include?(session[:lti_deployment_id])
@@ -10,7 +14,7 @@
     .flex-container
       #oauth-side-restricted.devise-links
         %h3= t('lti.account_linking.connect_with')
-        = button_to omniauth_authorize_path(resource_name, 'clever'), id: "clever-sign-in", class: "oauth-sign-in with-clever" do
+        = button_to omniauth_authorize_path(resource_name, 'clever'), id: "clever-sign-in", class: "oauth-sign-in with-clever restricted" do
           = image_tag("oauth/clever.svg")
           = t('lti.account_linking.connect_button', provider: t("auth.clever"))
 
