@@ -45,7 +45,6 @@ class Unit < ApplicationRecord
   include ScriptConstants
   include Curriculum::SharedCourseConstants
   include SharedConstants
-  include Curriculum::AssignableCourse
   include Rails.application.routes.url_helpers
   include Unit::TextToSpeech
 

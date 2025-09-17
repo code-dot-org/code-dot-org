@@ -318,16 +318,11 @@ class Ability
 
     can :read, Unit do |script, context_unit_group|
       unit_group = context_unit_group || script.original_unit_group
+      unit_group ||= script.get_professional_learning_course if script.old_professional_learning_course?
       if unit_group
         can?(:read, unit_group)
       else
-        if script.in_development?
-          user.levelbuilder?
-        elsif script.pilot?
-          script.has_pilot_access?(user)
-        else
-          true
-        end
+        user.levelbuilder?
       end
     end
 
