@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-09-05 21:50:58 UTC",
+    "serialized_at": "2025-09-17 18:48:09 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -877,6 +877,21 @@
         "lesson_group.key": "",
         "script.name": "allthethings"
       }
+    },
+    {
+      "key": "lesson-57",
+      "name": "Whiteboard Lab",
+      "absolute_position": 57,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 54,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-57",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
     }
   ],
   "lesson_activities": [
@@ -1597,6 +1612,18 @@
         "lesson_group.key": "",
         "script.name": "allthethings"
       }
+    },
+    {
+      "key": "bbfcac1e-3ad2-4d36-aa54-9b37c09c32fd",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "bbfcac1e-3ad2-4d36-aa54-9b37c09c32fd",
+        "lesson.key": "lesson-57",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
     }
   ],
   "activity_sections": [
@@ -2158,6 +2185,16 @@
       "seeding_key": {
         "activity_section.key": "781a45ef-23bb-4d6c-905a-a421acc0752b",
         "lesson_activity.key": "e109ba15-02bd-458f-9adf-31f75dc9d531"
+      }
+    },
+    {
+      "key": "0d6c71d5-263f-4a5b-9dbd-ece4c10652c6",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "0d6c71d5-263f-4a5b-9dbd-ece4c10652c6",
+        "lesson_activity.key": "bbfcac1e-3ad2-4d36-aa54-9b37c09c32fd"
       }
     }
   ],
@@ -7090,6 +7127,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Allthethings Weblab2 5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -7111,6 +7151,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Allthethings Weblab2 6"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -7132,6 +7175,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Allthethings Weblab2 7"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -7153,6 +7199,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Allthethings Weblab2 8"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -7170,27 +7219,6 @@
     },
     {
       "chapter": 207,
-      "position": 9,
-      "activity_section_position": 9,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Allthethings Weblab2 9"
-        ],
-        "lesson.key": "lesson-54",
-        "lesson_group.key": "",
-        "script.name": "allthethings",
-        "activity_section.key": "b26e8309-b1a7-486a-9490-96d4ddd8b9aa"
-      },
-      "level_keys": [
-        "Allthethings Weblab2 9"
-      ]
-    },
-    {
-      "chapter": 208,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7214,7 +7242,7 @@
       ]
     },
     {
-      "chapter": 209,
+      "chapter": 208,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -7238,7 +7266,7 @@
       ]
     },
     {
-      "chapter": 210,
+      "chapter": 209,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -7262,7 +7290,7 @@
       ]
     },
     {
-      "chapter": 211,
+      "chapter": 210,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -7286,7 +7314,7 @@
       ]
     },
     {
-      "chapter": 212,
+      "chapter": 211,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -7310,7 +7338,7 @@
       ]
     },
     {
-      "chapter": 213,
+      "chapter": 212,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -7334,7 +7362,7 @@
       ]
     },
     {
-      "chapter": 214,
+      "chapter": 213,
       "position": 7,
       "activity_section_position": 7,
       "assessment": false,
@@ -7358,7 +7386,7 @@
       ]
     },
     {
-      "chapter": 215,
+      "chapter": 214,
       "position": 8,
       "activity_section_position": 8,
       "assessment": false,
@@ -7382,7 +7410,7 @@
       ]
     },
     {
-      "chapter": 216,
+      "chapter": 215,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7406,7 +7434,7 @@
       ]
     },
     {
-      "chapter": 217,
+      "chapter": 216,
       "position": 2,
       "activity_section_position": 2,
       "assessment": true,
@@ -7427,6 +7455,27 @@
       },
       "level_keys": [
         "test-levelgroup-activityguide-2"
+      ]
+    },
+    {
+      "chapter": 217,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "allthethings whiteboard 1"
+        ],
+        "lesson.key": "lesson-57",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "0d6c71d5-263f-4a5b-9dbd-ece4c10652c6"
+      },
+      "level_keys": [
+        "allthethings whiteboard 1"
       ]
     }
   ],
@@ -10031,18 +10080,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "Allthethings Weblab2 9",
-        "script_level.level_keys": [
-          "Allthethings Weblab2 9"
-        ],
-        "lesson.key": "lesson-54",
-        "lesson_group.key": "",
-        "script.name": "allthethings",
-        "activity_section.key": "b26e8309-b1a7-486a-9490-96d4ddd8b9aa"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "Music Lab2 Showcase",
         "script_level.level_keys": [
           "Music Lab2 Showcase"
@@ -10160,6 +10197,18 @@
         "script.name": "allthethings",
         "activity_section.key": "781a45ef-23bb-4d6c-905a-a421acc0752b"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "allthethings whiteboard 1",
+        "script_level.level_keys": [
+          "allthethings whiteboard 1"
+        ],
+        "lesson.key": "lesson-57",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "0d6c71d5-263f-4a5b-9dbd-ece4c10652c6"
+      }
     }
   ],
   "resources": [
@@ -10205,14 +10254,6 @@
       "level_name": "CSD U3 Sprites scene challenge_allthethings",
       "seeding_key": {
         "lesson.key": "lesson-51",
-        "lesson_group.key": "",
-        "script.name": "allthethings"
-      }
-    },
-    {
-      "level_name": "Allthethings Weblab2 9",
-      "seeding_key": {
-        "lesson.key": "lesson-54",
         "lesson_group.key": "",
         "script.name": "allthethings"
       }
@@ -10267,19 +10308,6 @@
       "seeding_key": {
         "learning_goal.key": "a19cc1ca-a845-4dfa-85fc-b6fcebc3da83",
         "lesson.key": "lesson-51",
-        "lesson_group.key": "",
-        "script.name": "allthethings"
-      }
-    },
-    {
-      "key": "ab10eb99-89ed-4a2d-a0a1-3cebb3d2d25a",
-      "position": 1,
-      "learning_goal": "Web design",
-      "ai_enabled": false,
-      "tips": null,
-      "seeding_key": {
-        "learning_goal.key": "ab10eb99-89ed-4a2d-a0a1-3cebb3d2d25a",
-        "lesson.key": "lesson-54",
         "lesson_group.key": "",
         "script.name": "allthethings"
       }
@@ -10474,54 +10502,6 @@
         "understanding": 3,
         "learning_goal.key": "a19cc1ca-a845-4dfa-85fc-b6fcebc3da83",
         "lesson.key": "lesson-51",
-        "lesson_group.key": "",
-        "script.name": "allthethings"
-      }
-    },
-    {
-      "understanding": 0,
-      "teacher_description": "4",
-      "ai_prompt": "",
-      "seeding_key": {
-        "understanding": 0,
-        "learning_goal.key": "ab10eb99-89ed-4a2d-a0a1-3cebb3d2d25a",
-        "lesson.key": "lesson-54",
-        "lesson_group.key": "",
-        "script.name": "allthethings"
-      }
-    },
-    {
-      "understanding": 1,
-      "teacher_description": "3",
-      "ai_prompt": "",
-      "seeding_key": {
-        "understanding": 1,
-        "learning_goal.key": "ab10eb99-89ed-4a2d-a0a1-3cebb3d2d25a",
-        "lesson.key": "lesson-54",
-        "lesson_group.key": "",
-        "script.name": "allthethings"
-      }
-    },
-    {
-      "understanding": 2,
-      "teacher_description": "2",
-      "ai_prompt": "",
-      "seeding_key": {
-        "understanding": 2,
-        "learning_goal.key": "ab10eb99-89ed-4a2d-a0a1-3cebb3d2d25a",
-        "lesson.key": "lesson-54",
-        "lesson_group.key": "",
-        "script.name": "allthethings"
-      }
-    },
-    {
-      "understanding": 3,
-      "teacher_description": "1",
-      "ai_prompt": "",
-      "seeding_key": {
-        "understanding": 3,
-        "learning_goal.key": "ab10eb99-89ed-4a2d-a0a1-3cebb3d2d25a",
-        "lesson.key": "lesson-54",
         "lesson_group.key": "",
         "script.name": "allthethings"
       }
