@@ -74,6 +74,8 @@ class UserTest < ActiveSupport::TestCase
     @csf_lesson_group = create(:lesson_group, script: @csf_script)
     @csf_lesson = create(:lesson, script: @csf_script, lesson_group: @csf_lesson_group)
     @csf_script_level = create(:script_level, script: @csf_script)
+    @csf_unit_group = @csf_script.original_unit_group
+    @other_csf_unit_group = create(:single_unit_course, unit: @csf_script)
 
     @admin = create(:admin)
     @user = create(:user)
@@ -2803,8 +2805,16 @@ class UserTest < ActiveSupport::TestCase
     assert_creates(UserScript) do
       user_script = @student.assign_script(@csf_script)
       assert_equal @csf_script.id, user_script.script_id
+      assert_equal @csf_unit_group, user_script.unit_group
       refute_nil user_script.assigned_at
     end
+  end
+
+  test 'assign_script creates UserScript if necessary with modular course' do
+    user_script = @student.assign_script(@csf_script, @other_csf_unit_group)
+    assert_equal @csf_script.id, user_script.script_id
+    assert_equal @other_csf_unit_group, user_script.unit_group
+    refute_nil user_script.assigned_at
   end
 
   test 'assign_script reuses UserScript if available' do
@@ -2817,6 +2827,21 @@ class UserTest < ActiveSupport::TestCase
     end
     assert_does_not_create(UserScript) do
       user_script = @student.assign_script(@csf_script)
+      assert_equal @csf_script.id, user_script.script_id
+      refute_nil user_script.assigned_at
+    end
+  end
+
+  test 'assign_script reuses UserScript if available with modular course' do
+    Timecop.travel(2017, 1, 2, 12, 0, 0) do
+      UserScript.create!(
+        user: @student,
+        script: @csf_script,
+        unit_group: @other_csf_unit_group
+      )
+    end
+    assert_does_not_create(UserScript) do
+      user_script = @student.assign_script(@csf_script, @other_csf_unit_group)
       assert_equal @csf_script.id, user_script.script_id
       refute_nil user_script.assigned_at
     end
