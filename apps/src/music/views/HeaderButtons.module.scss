@@ -1,3 +1,4 @@
+@use '../../lab2/views/components/layout/variables.scss' as variables;
 @import 'color.scss';
 @import '../../mixins.scss';
 
@@ -35,13 +36,10 @@
 
   &Wide {
     width: initial;
-    padding: 0 6px 0 2px;
+    padding-block: 0;
+    padding-inline: 2px 6px;
     overflow: hidden;
     flex-shrink: 1;
-
-    html[dir="rtl"] & {
-      padding: 0 2px 0 6px;
-    }
 
     &Image {
       height: 22px;
@@ -49,17 +47,14 @@
     }
 
     &Content {
-      padding: 0 16px 0 8px;
+      padding-block: 0;
+      padding-inline: 8px 16px;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
 
-      html[dir="rtl"] & {
-        padding: 0 8px 0 16px;
-      }
-
       &NoRightPadding {
-        padding-right: 0;
+        padding-inline-end: 0;
       }
     }
   }
@@ -80,5 +75,11 @@
       overflow: hidden;
       text-overflow: ellipsis;
     }
+  }
+
+  &HasBorder,
+  &HasBorder:active {
+    border: variables.$default-border !important; // This is overriding the remove-button-styles mixin !important tag
+    padding-inline-start: 0;
   }
 }

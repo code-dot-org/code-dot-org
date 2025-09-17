@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-08-22 16:12:48 UTC",
+    "serialized_at": "2025-09-16 17:27:34 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -1001,7 +1001,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": " - Use calm bodies in the lab\n - Remember not to chew gum or candy\n - Sanitize your hands\n- Keep your log in information and password private\n - Sit with your partner at one computer\n - Make sure that the first \"driver\" can reach the mouse\n - When you get frustrated, don't hit or shake the computer or monitor\n - Follow the ***20/20/20 Rule** - How to Prevent Eye Strain\n - How to deal with the ***Wiggles** every 20-30 minutes (requires a free login on GoNoodle). \n - Ask your partner before you ask the teacher\n- Work respectfully and responsibly with others online.\n - Keep volume down so everyone else can hear their partners\n - Use your journal for keeping track of feelings and solutions\n- Remember to log out when you're done using the computer\n\n"
+            "markdown": " - Use calm bodies in the lab\n - Remember not to chew gum or candy\n - Sanitize your hands\n- Keep your log in information and password private\n - Sit with your partner at one computer\n - Make sure that the first \"driver\" can reach the mouse\n - When you get frustrated, don't hit or shake the computer or monitor\n - How to deal with the ***Wiggles** every 20-30 minutes (requires a free login on GoNoodle). \n - Ask your partner before you ask the teacher\n- Work respectfully and responsibly with others online.\n - Keep volume down so everyone else can hear their partners\n - Use your journal for keeping track of feelings and solutions\n- Remember to log out when you're done using the computer\n\n"
           }
         ]
       },
@@ -7811,20 +7811,8 @@
   ],
   "resources": [
     {
-      "name": "20/20/20 Rule",
-      "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35",
-      "key": "20_20_20_rule",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "20_20_20_rule"
-      }
-    },
-    {
       "name": "All Resources",
-      "url": "/s/pre-express-2024/resources",
+      "url": "/s/pre-express-2025/resources",
       "key": "all_resources",
       "properties": {
         "is_rollup": true
@@ -7835,7 +7823,7 @@
     },
     {
       "name": "All Standards",
-      "url": "/s/pre-express-2024/standards",
+      "url": "/s/pre-express-2025/standards",
       "key": "all_standards",
       "properties": {
         "is_rollup": true
@@ -7846,7 +7834,7 @@
     },
     {
       "name": "All Vocabulary",
-      "url": "/s/pre-express-2024/vocab",
+      "url": "/s/pre-express-2025/vocab",
       "key": "all_vocabulary",
       "properties": {
         "is_rollup": true
@@ -8163,12 +8151,6 @@
       "seeding_key": {
         "lesson.key": "Drawing Gardens with Loops",
         "resource.key": "pause_and_think_online"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Learn to Drag and Drop",
-        "resource.key": "20_20_20_rule"
       }
     },
     {

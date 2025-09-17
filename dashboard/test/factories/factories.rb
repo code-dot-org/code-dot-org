@@ -1163,12 +1163,22 @@ FactoryBot.define do
     published_state {nil}
 
     trait :in_single_unit_course do
-      published_state {nil}
-      instruction_type {nil}
-      participant_audience {nil}
-      instructor_audience {nil}
-      after(:create) do |unit|
-        create(:single_unit_course, unit: unit)
+      transient do
+        published_state {nil}
+        instruction_type {nil}
+        participant_audience {nil}
+        instructor_audience {nil}
+        pilot_experiment {nil}
+      end
+      after(:create) do |unit, evaluator|
+        attributes = {
+          published_state: evaluator.published_state,
+          instruction_type: evaluator.instruction_type,
+          participant_audience: evaluator.participant_audience,
+          instructor_audience: evaluator.instructor_audience,
+          pilot_experiment: evaluator.pilot_experiment
+        }.compact
+        create(:single_unit_course, unit: unit, **attributes)
       end
     end
 

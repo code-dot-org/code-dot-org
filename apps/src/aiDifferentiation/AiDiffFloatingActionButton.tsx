@@ -99,7 +99,8 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
         setUnreadNotificationCount(unreadNotificationCount);
       })
       .catch(error => {
-        console.error('Error fetching notifications:', error);
+        console.error('Error fetching notifications for count:', error);
+        setUnreadNotificationCount(0);
       });
   }, []);
 

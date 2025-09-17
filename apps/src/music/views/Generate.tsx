@@ -1,8 +1,10 @@
 import {Button} from '@code-dot-org/component-library/button';
 import React, {useCallback, useState} from 'react';
 
-import Adlib from '@cdo/apps/lab2/views/components/guide/Adlib';
+import Adlib, {AdlibsType} from '@cdo/apps/lab2/views/components/guide/Adlib';
 import Guide from '@cdo/apps/lab2/views/components/guide/Guide';
+import getRandomInt from '@cdo/apps/util/getRandomInt';
+import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {AiInteractionStatus} from '@cdo/generated-scripts/sharedConstants';
 
@@ -11,16 +13,19 @@ import adlibsUntyped from '../ai/generate/GenerateAdlibs.json';
 import {generateBlocklyJson} from '../ai/generate/generateBlocklyJson';
 import GenerateContext from '../ai/generate/GenerateContext';
 import appConfig from '../appConfig';
+import {baseAssetUrl} from '../constants';
 import MusicLibrary from '../player/MusicLibrary';
 import {setCodeToLoad, setAiGenerateState} from '../redux/musicRedux';
 
 import styles from './Generate.module.scss';
 
-const adlibs = adlibsUntyped as {
-  [key: string]: {template: string; options: {[key: string]: string[]}};
-};
+const adlibs = adlibsUntyped as AdlibsType;
 
-const Generate: React.FunctionComponent = () => {
+interface GenerateProps {
+  adlibOption?: string;
+}
+
+const Generate: React.FunctionComponent<GenerateProps> = ({adlibOption}) => {
   const dispatch = useAppDispatch();
 
   const packId = useAppSelector(state => state.music.packId) || '';
@@ -28,12 +33,14 @@ const Generate: React.FunctionComponent = () => {
 
   const library = MusicLibrary.getInstance();
 
-  const adlibOption = appConfig.getValue('ai-generate-adlib') as string;
+  const useCache = appConfig.getValue('ai-generate-cache') === 'true';
+
   const [adlibText, setAdlibText] = useState<string | undefined>(undefined);
 
   const [text, setText] = useState(
     'Please generate a fun song.  Between 18-20 measures is enough duration.  Use layering of sounds to make it exciting.'
   );
+  const [choices, setChoices] = useState<string[] | undefined>(undefined);
 
   const useText = adlibOption ? adlibText : text;
 
@@ -53,29 +60,65 @@ const Generate: React.FunctionComponent = () => {
     packId
   );
 
-  const generateSong = useCallback(() => {
+  const generateSongAi = useCallback(async () => {
     console.log('starting ask');
-    dispatch(setAiGenerateState('generating'));
-    askAi(
+    const result = await askAi(
       `Here is the context:
   ${contextGenerateMusicPsuedocodeFromDescription}
 
   And here is the request:
   ${useText}`
-    ).then(result => {
-      if (result.length > 1 && result[1].status === AiInteractionStatus.OK) {
-        console.log(result[1].chatMessageText);
-        const psuedocode = result[1].chatMessageText.replaceAll('```', '');
-        const resultBlockly = generateBlocklyJson(psuedocode);
-        dispatch(setCodeToLoad(resultBlockly));
-      } else {
-        console.error('Error getting AI response.');
-      }
+    );
+    if (result.length > 1 && result[1].status === AiInteractionStatus.OK) {
+      console.log(result[1].chatMessageText);
+      const psuedocode = result[1].chatMessageText.replaceAll('```', '');
+      return psuedocode;
+    } else {
+      console.error('Error getting AI response.');
+    }
+  }, [contextGenerateMusicPsuedocodeFromDescription, useText]);
 
-      dispatch(setAiGenerateState('done'));
-    });
-  }, [dispatch, contextGenerateMusicPsuedocodeFromDescription, useText]);
+  const generateSongCache = useCallback(async () => {
+    const variant = getRandomInt(
+      0,
+      adlibs[adlibOption || 'complex'].variantCount - 1
+    );
+    const joinedChoices = choices?.join('-');
+    const cacheFilePath = `${baseAssetUrl}generate/music/${packId}-${adlibOption}-${joinedChoices}-${variant
+      .toString()
+      .padStart(2, '0')}.txt`;
+    console.log(cacheFilePath);
 
+    const startTime = Date.now();
+    try {
+      const response = await HttpClient.get(cacheFilePath);
+      const psuedocode = await response.text();
+
+      const elapsedTime = Date.now() - startTime;
+      const delayDuration = 2000; // 2 seconds.
+      const remainingDelayDuration = Math.max(delayDuration - elapsedTime, 0);
+      await new Promise(res => setTimeout(res, remainingDelayDuration));
+
+      return psuedocode;
+    } catch (error) {
+      console.error('Error retrieving cached code.');
+    }
+  }, [adlibOption, choices, packId]);
+
+  const generateSong = useCallback(async () => {
+    dispatch(setAiGenerateState('generating'));
+
+    const psuedocode = await (useCache
+      ? generateSongCache()
+      : generateSongAi());
+
+    if (psuedocode) {
+      const resultBlockly = generateBlocklyJson(psuedocode);
+      dispatch(setCodeToLoad(resultBlockly));
+    }
+
+    dispatch(setAiGenerateState('done'));
+  }, [dispatch, generateSongAi, generateSongCache, useCache]);
   if (!packId) {
     return null;
   }
@@ -99,9 +142,11 @@ const Generate: React.FunctionComponent = () => {
           )}
           {adlibOption && (
             <Adlib
-              template={adlibs[adlibOption].template}
-              options={adlibs[adlibOption].options}
-              onChange={setAdlibText}
+              adlib={adlibs[adlibOption]}
+              onChange={(adlibText, choices) => {
+                setAdlibText(adlibText);
+                setChoices(choices);
+              }}
               className={styles.textArea}
             />
           )}

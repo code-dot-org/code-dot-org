@@ -138,6 +138,9 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   const validationStateCallout = useAppSelector(
     state => state.lab.validationState.callout
   );
+  const aiCodeGenerateAdlibOption =
+    (levelData as MusicLevelData).aiCodeGenerateAdlib ||
+    (AppConfig.getValue('ai-generate-adlib') as string);
 
   const progressManager = useContext(ProgressManagerContext);
 
@@ -311,9 +314,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
       <div className={moduleStyles.centerHeaderContentText}>
         {musicI18n.panelHeaderWorkspace()}
       </div>
-      {projectTemplateLevel && (
-        <ProjectTemplateWorkspaceIconV2 darkMode={true} />
-      )}
+      {projectTemplateLevel && <ProjectTemplateWorkspaceIconV2 />}
     </div>
   );
 
@@ -430,7 +431,10 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
         )}
 
         <div id="blockly-area" className={moduleStyles.blocklyArea}>
-          {AppConfig.getValue('ai-generate') === 'true' && <Generate />}
+          {(AppConfig.getValue('ai-generate') === 'true' ||
+            (levelProperties.levelData as MusicLevelData).aiCodeGenerate) && (
+            <Generate adlibOption={aiCodeGenerateAdlibOption} />
+          )}
 
           <PanelContainer
             id="workspace-panel"

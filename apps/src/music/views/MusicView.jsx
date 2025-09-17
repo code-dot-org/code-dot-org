@@ -854,12 +854,15 @@ class UnconnectedMusicView extends React.Component {
       ?.save(sourcesToSave, forceSave);
 
     // If we are AI generating, then save metadata for Dance Party.
-    if (AppConfig.getValue('ai-generate') === 'true') {
+    if (
+      AppConfig.getValue('ai-generate') === 'true' ||
+      this.props.levelProperties.levelData.aiCodeGenerate
+    ) {
       saveGeneratedSongMetadata(
         Lab2Registry.getInstance().getProjectManager().getChannelId(),
         this.props.packId,
-        this.library.getBPM(),
-        this.props.playbackEvents
+        this.props.playbackEvents,
+        this.props.lastMeasure
       );
     }
   };

@@ -1,9 +1,9 @@
 @use '@code-dot-org/component-library-styles/colors';
+@use '@code-dot-org/component-library-styles/typography.module' as typography;
 
 .barChartGroupContainer {
   display: flex;
   height: 16.5rem;
-  overflow: hidden;
   flex-direction: column;
   align-items: flex-start;
   flex: 1 0 0;
@@ -38,4 +38,8 @@
   gap: 0.25rem;
   flex: 1 0 0;
   align-self: stretch;
+
+  .axisLabel {
+    @include typography.overline-three;
+  }
 }

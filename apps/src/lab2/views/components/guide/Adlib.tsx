@@ -4,10 +4,19 @@ import reactStringReplace from 'react-string-replace';
 
 import styles from './Adlib.module.scss';
 
-interface AdlibProps {
+export type AdlibType = {
   template: string;
   options: {[key: string]: string[]};
-  onChange: (value: string) => void;
+  variantCount: number;
+};
+
+export type AdlibsType = {
+  [key: string]: AdlibType;
+};
+
+interface AdlibProps {
+  adlib: AdlibType;
+  onChange: (value: string, choices: string[]) => void;
   className?: string;
 }
 
@@ -16,12 +25,12 @@ interface AdlibProps {
 // dropdowns to select the options.  When the selected options change, it calls
 // onChange with the filled-in text.
 const Adlib: React.FunctionComponent<AdlibProps> = ({
-  template,
-  options,
+  adlib,
   onChange,
   className,
 }) => {
   const [adlibOptions, setAdlibOptions] = useState<{[key: string]: string}>({});
+  const {template, options} = adlib;
 
   // Initialize defaults.
   useEffect(() => {
@@ -30,7 +39,7 @@ const Adlib: React.FunctionComponent<AdlibProps> = ({
       initialOptions[key] = sample(options[key]) || '';
     });
     setAdlibOptions(initialOptions);
-  }, [onChange, options]);
+  }, [options]);
 
   // Compute filled text.
   const filledAdlibText = useMemo(() => {
@@ -40,6 +49,14 @@ const Adlib: React.FunctionComponent<AdlibProps> = ({
     });
     return output;
   }, [adlibOptions, options, template]);
+
+  // Compute joined choices text.
+  const choices = useMemo(() => {
+    const output = Object.keys(options).map(key => {
+      return adlibOptions[key];
+    });
+    return output;
+  }, [adlibOptions, options]);
 
   // Compute HTML.
   const adlibHtml = useMemo(() => {
@@ -72,10 +89,10 @@ const Adlib: React.FunctionComponent<AdlibProps> = ({
     return output;
   }, [adlibOptions, options, template]);
 
-  // Notify parent when filled text changes.
+  // Notify parent when choices change.
   useEffect(() => {
-    onChange(filledAdlibText);
-  }, [filledAdlibText, onChange]);
+    onChange(filledAdlibText, choices);
+  }, [adlibOptions, choices, filledAdlibText, onChange]);
 
   return <div className={className}>{adlibHtml}</div>;
 };

@@ -34,15 +34,13 @@ class CourseVersionTest < ActiveSupport::TestCase
     CourseOffering.add_course_offering(@unit_group)
 
     @pilot_teacher = create(:teacher, pilot_experiment: 'my-experiment')
-    @pilot_unit = create(:script, pilot_experiment: 'my-experiment')
-    create(:single_unit_course, :with_course_offering, unit: @pilot_unit, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot, version_year: '1991', family_name: 'family-42', pilot_experiment: 'my-experiment')
+    @pilot_unit = create(:single_unit_course, :with_course_offering, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot, version_year: '1991', family_name: 'family-42', pilot_experiment: 'my-experiment').first_unit
 
     @pilot_instructor = create(:facilitator, pilot_experiment: 'my-pl-experiment')
-    @pilot_pl_unit = create(:script, pilot_experiment: 'my-pl-experiment')
-    create(:single_unit_course, :with_course_offering, :pl_course, unit: @pilot_pl_unit, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot, version_year: '1991', family_name: 'family-52', pilot_experiment: 'my-pl-experiment')
+    @pilot_pl_unit = create(:single_unit_course, :with_course_offering, :pl_course, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot, version_year: '1991', family_name: 'family-52', pilot_experiment: 'my-pl-experiment').first_unit
 
     @partner = create(:teacher, pilot_experiment: 'my-editor-experiment', editor_experiment: 'ed-experiment')
-    @partner_unit = create(:script, pilot_experiment: 'my-editor-experiment', editor_experiment: 'ed-experiment')
+    @partner_unit = create(:script, editor_experiment: 'ed-experiment')
     create(:single_unit_course, :with_course_offering, unit: @partner_unit, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot, version_year: '1991', family_name: 'family-112', pilot_experiment: 'my-editor-experiment')
   end
 

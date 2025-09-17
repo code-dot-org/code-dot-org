@@ -8,7 +8,7 @@ import {
   REQUIRED_ERROR,
   WorkshopFormTemplate,
 } from '@cdo/apps/code-studio/pd/workshop_dashboard/WorkshopFormTemplate';
-import {workshopLabel} from '@cdo/apps/code-studio/pd/workshop_dashboard/WorkshopFormTemplate/utils';
+import {workshopLabel} from '@cdo/apps/code-studio/pd/workshop_dashboard/workshops/utils';
 import {WorkshopCourseConfigs} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import {useFetch} from '@cdo/apps/util/useFetch';
 

@@ -1,3 +1,5 @@
+@import '../../mixins.scss';
+
 .workspace {
   color: var(--text-neutral-primary);
   overflow: hidden;
@@ -60,16 +62,7 @@
 }
 
 .centerHeaderContent {
-  display: flex;
-  justify-content: center;
-  gap: 4px;
-  overflow: hidden;
-
-  &Text {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
+  @include center-header-content(true);
 }
 
 .lockedFilesBanner {
