@@ -17,7 +17,7 @@ import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import TextToSpeech from '../TextToSpeech';
 
-import {SubmitButton} from './NavigationButton';
+import {SubmitButton, ContinueButtonActionNeeded} from './NavigationButton';
 
 import moduleStyles from './instructions.module.scss';
 
@@ -110,7 +110,9 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
     }
   }, [validationMessage, isRunning]);
 
-  const canShowButton = useMemo(() => {
+  // For music lab levels, we want to hide the navigation button until the user validates or runs their code.
+  // For other labs, we want to always show the navigation button.
+  const musicCanShowButton = useMemo(() => {
     if (isPredictLevel) {
       return predictResponseSubmitted;
     } else if (submittable && hasSubmitted) {
@@ -131,7 +133,70 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
     hasRun,
   ]);
 
-  if (!submittable && !canShowButton && !feedbackMessage) {
+  const continueActionNeededButtonIsEnabled = useMemo(() => {
+    if (isPredictLevel) {
+      return predictResponseSubmitted;
+    } else if (hasValidationConditions) {
+      return validationSatisfied;
+    } else if (requireRun) {
+      return hasRun;
+    } else {
+      return true;
+    }
+  }, [
+    isPredictLevel,
+    predictResponseSubmitted,
+    hasValidationConditions,
+    validationSatisfied,
+    requireRun,
+    hasRun,
+  ]);
+
+  const continueTooltipMessage = useMemo(() => {
+    if (submittable) {
+      return undefined;
+    }
+    const action = hasNextLevel ? 'continue' : 'finish';
+    if (isPredictLevel) {
+      return `To ${action}, submit your prediction`;
+    } else if (hasValidationConditions && !validationSatisfied) {
+      return `To ${action}, validate your code`;
+    } else if (requireRun && !hasRun) {
+      return `To ${action}, run your code`;
+    }
+    return undefined;
+  }, [
+    submittable,
+    hasNextLevel,
+    isPredictLevel,
+    hasValidationConditions,
+    validationSatisfied,
+    requireRun,
+    hasRun,
+  ]);
+
+  console.log('continueTooltipMessage', continueTooltipMessage);
+  const submitButtonEnabled =
+    disableEditRunForSubmission || hasSubmitted || (hasRun && hasEdited);
+  console.log('submitButtonEnabled', submitButtonEnabled);
+  const submitTooltipMessage = useMemo(() => {
+    if (submittable && !submitButtonEnabled) {
+      if (requireRun) {
+        return `To submit, edit and run your code.`;
+      } else {
+        return `To submit, edit your code.`;
+      }
+    }
+    return undefined;
+  }, [requireRun, submitButtonEnabled, submittable]);
+  console.log('submitTooltipMessage', submitTooltipMessage);
+
+  if (
+    appName === 'music' &&
+    !submittable &&
+    !musicCanShowButton &&
+    !feedbackMessage
+  ) {
     return null;
   }
 
@@ -154,7 +219,8 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
             />
           </div>
         )}
-        {canShowButton &&
+        {appName === 'music' &&
+          musicCanShowButton &&
           (submittable ? (
             <SubmitButton
               levelId={id}
@@ -174,7 +240,34 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
               {...{type, color, iconRight}}
             />
           ))}
-        {showTts && feedbackMessage && !canShowButton && (
+        {appName !== 'music' &&
+          (submittable ? (
+            <SubmitButton
+              levelId={id}
+              appName={appName}
+              disableEditRunForSubmission={disableEditRunForSubmission}
+              hasRun={hasRun}
+              hasEdited={hasEdited}
+              className={moduleStyles.buttonInstruction}
+            />
+          ) : (
+            <ContinueButtonActionNeeded
+              isDisabled={!continueActionNeededButtonIsEnabled}
+              type={type}
+              color={color}
+              iconRight={iconRight}
+              text={hasNextLevel ? commonI18n.continue() : commonI18n.finish()}
+            />
+            // <Button
+            //   id="instructions-continue-button"
+            //   size={'s'}
+            //   className={moduleStyles.buttonInstruction}
+            //   text={hasNextLevel ? commonI18n.continue() : commonI18n.finish()}
+            //   onClick={() => dispatch(continueOrFinishLesson())}
+            //   {...{type, color, iconRight}}
+            // />
+          ))}
+        {showTts && feedbackMessage && !musicCanShowButton && (
           <div className={moduleStyles.ttsContainer}>
             <TextToSpeech text={feedbackMessage} />
           </div>

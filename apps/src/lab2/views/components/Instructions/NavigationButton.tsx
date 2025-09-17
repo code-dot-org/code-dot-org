@@ -1,4 +1,8 @@
-import {Button} from '@code-dot-org/component-library/button';
+import {
+  Button,
+  ButtonType,
+  ButtonColor,
+} from '@code-dot-org/component-library/button';
 import {ComponentSizeXSToL} from '@code-dot-org/component-library/common/types';
 import {FontAwesomeV6IconProps} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import React, {useMemo} from 'react';
@@ -202,6 +206,32 @@ export const SubmitButton: React.FC<SubmitButtonProps> = ({
       onClick={onSubmit}
       className={className}
       disabled={!enabled}
+    />
+  );
+};
+
+interface ContinueButtonActionNeededProps {
+  isDisabled: boolean;
+  type: ButtonType;
+  color: ButtonColor;
+  iconRight: FontAwesomeV6IconProps | undefined;
+  text: string;
+}
+
+/**
+ * Displays the "Submit" or "Unsubmit" button that submits or unsubmits the project on a submittable level.
+ */
+export const ContinueButtonActionNeeded: React.FC<
+  ContinueButtonActionNeededProps
+> = ({isDisabled, type, color, iconRight, text}) => {
+  const dispatch = useAppDispatch();
+
+  return (
+    <Button
+      id="instructions-continue-action-needed-button"
+      onClick={() => dispatch(continueOrFinishLesson())}
+      disabled={isDisabled}
+      {...{text, type, color, iconRight}}
     />
   );
 };
