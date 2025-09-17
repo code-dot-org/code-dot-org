@@ -1,8 +1,17 @@
 class AichatEventsController < ApplicationController
   authorize_resource class: false
 
-  # params are newChatEvent: ChatEvent, aichatContext: {currentLevelId: number; scriptId: number; channelId: string;}
   # POST /aichat_events/log_chat_event
+  # ----------------------------------
+  # params are:
+  #   newChatEvent: ChatEvent
+  #   aichatContext: {
+  #     clientType: AiChatClientType;
+  #     currentLevelId: number | null;
+  #     scriptId: number | null;
+  #     channelId: string | undefined;
+  #  }
+
   def log_chat_event
     begin
       params.require([:newChatEvent, :aichatContext])

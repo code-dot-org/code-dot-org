@@ -23,7 +23,13 @@ class AichatRequestsController < ApplicationController
   #   storedMessages: Array of {role: <'user', 'system', or 'assistant'>; chatMessageText: string; status: string}
   #     - does not include user's new message
   #   modelParameters: {temperature: number; retrievalContexts: string[]; systemPrompt: string;}
-  #.  aichatContext: {currentLevelId: number; scriptId: number; channelId: string;}
+  #   aichatContext: {
+  #     clientType: AiChatClientType;
+  #     currentLevelId: number | null;
+  #     scriptId: number | null;
+  #     channelId: string | undefined;
+  #   }
+
   def start_chat_completion
     unless chat_completion_has_required_params?
       return render status: :bad_request, json: {}
