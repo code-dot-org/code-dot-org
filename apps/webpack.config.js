@@ -237,6 +237,7 @@ const WEBPACK_BASE_CONFIG = {
     // Run TypeScript type checking in parallel with the build
     new ForkTsCheckerWebpackPlugin({
       // tsconfig.build.json only type-checks TypeScript files.
+      // We manually set a memoryLimit here to avoid a JavaScript heap out of memory error in yarn start.
       typescript: {configFile: 'tsconfig.build.json', memoryLimit: 2560},
     }),
   ],
