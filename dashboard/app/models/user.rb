@@ -1802,9 +1802,10 @@ class User < ApplicationRecord
   # post on a particular level) in a script
   def self.track_script_progress(user_id, script_id, unit_group_id = nil)
     unit = Unit.get_from_cache(script_id)
-    unit_group_id ||= unit.get_original_unit_group&.id
+    unit_group = unit_group_id ? UnitGroup.get_from_cache(unit_group_id) : nil
+    unit_group ||= unit.get_original_unit_group
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
-      user_script = UserScript.where(user_id: user_id, script_id: script_id, unit_group_id: unit_group_id).first_or_create!
+      user_script = UserScript.find_and_migrate_or_create_by!(user_id: user_id, unit: unit, unit_group: unit_group)
       time_now = Time.now
 
       user_script.started_at = time_now unless user_script.started_at
