@@ -4,7 +4,6 @@ import {kitIcons} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import classNames from 'classnames';
 import React, {useEffect, useMemo, useState} from 'react';
-import undefined from 'react-with-context';
 
 import {ChatButtonData, SystemPromptSettings} from '@cdo/apps/aichat/types';
 import {queryParams} from '@cdo/apps/code-studio/utils';
@@ -295,10 +294,10 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
             {getTypedKeys(availableTabs).map(tab => (
               <div
                 key={tab}
-                className={styles.tabContent}
-                style={{
-                  visibility: tab === currentTab ? 'visible' : 'hidden',
-                }}
+                className={classNames(
+                  styles.tabContent,
+                  tab !== currentTab && styles.tabContentHidden
+                )}
               >
                 {availableTabs[tab]}
               </div>

@@ -29,7 +29,7 @@
       background-color: var(--background-neutral-primary);
       position: relative;
       z-index: 2;
-      
+
       // Extend the background to cover the border between selected tab and resource panel.
       &::after {
         content: '';
@@ -94,5 +94,10 @@
     left: 0;
     width: 100%;
     height: 100%;
+
+    &Hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
   }
 }
