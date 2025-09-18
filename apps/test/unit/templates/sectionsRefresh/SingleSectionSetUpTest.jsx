@@ -5,6 +5,7 @@ import React from 'react';
 
 import {ParticipantAudience} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import SingleSectionSetUp from '@cdo/apps/templates/sectionsRefresh/SingleSectionSetUp';
+import experiments from '@cdo/apps/util/experiments';
 
 describe('SingleSectionSetUp', () => {
   const renderComponent = (
@@ -103,12 +104,14 @@ describe('SingleSectionSetUp', () => {
   });
 
   it('renders section avatar and button when teacher-homepage-v2 experiment is enabled', () => {
+    experiments.setEnabled('teacher-homepage-v2', true);
     renderComponent();
     screen.getByText('Avatar');
     screen.getByText('Edit avatar');
   });
 
   it('displays avatar edit dialog when Edit Avatar is clicked', () => {
+    experiments.setEnabled('teacher-homepage-v2', true);
     renderComponent();
     const dialogButton = screen.getByText('Edit avatar');
     fireEvent.click(dialogButton);
@@ -117,6 +120,7 @@ describe('SingleSectionSetUp', () => {
   });
 
   it('calls batchUpdateSection when avatar is updated', () => {
+    experiments.setEnabled('teacher-homepage-v2', true);
     renderComponent(updateSectionSpy, batchUpdateSectionSpy);
     const dialogButton = screen.getByText('Edit avatar');
     fireEvent.click(dialogButton);

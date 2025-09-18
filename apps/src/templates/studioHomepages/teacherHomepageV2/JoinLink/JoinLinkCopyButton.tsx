@@ -110,7 +110,6 @@ const JoinLinkCopyButton: React.FC<JoinLinkCopyButtonProps> = ({
               >
                 <OverlineOneText>
                   <button
-                    id={'ui-test-section-code-button'}
                     className={styles.sectionCode}
                     onClick={handleCopySectionCode}
                     type="button"

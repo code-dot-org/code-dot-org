@@ -49,7 +49,7 @@ export const Header: React.FC<HeaderProps> = ({
   };
 
   return (
-    <div id="teacher-home-header">
+    <div>
       <Heading4>{i18n.classSections()}</Heading4>
       <div className={styles.headerButtonRow}>
         <SegmentedButtons
