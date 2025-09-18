@@ -23,7 +23,8 @@ import {getSessionDate} from '@cdo/apps/code-studio/pd/sessionDateUtils';
 import {DATE_FORMAT, US_DATE_FORMAT} from '../../workshopConstants';
 import {useWorkshopContext} from '../WorkshopLayout';
 
-import styles from '../workshop.module.scss';
+import styles from './WorkshopAttendance.module.scss';
+import commonStyles from '../WorkshopLayout.module.scss';
 
 export const WorkshopAttendance: FC = () => {
   const {workshop} = useWorkshopContext();
@@ -33,20 +34,20 @@ export const WorkshopAttendance: FC = () => {
   }
 
   return (
-    <Card className={styles.card}>
+    <Card className={commonStyles.card}>
       <CardHeader
-        className={styles.cardHeader}
+        className={commonStyles.cardHeader}
         title={
-          <Box className={styles.cardHeaderContainer}>
+          <Box className={commonStyles.cardHeaderContainer}>
             <Heading2 visualAppearance="body-two" noMargin>
               <StrongText>Take Attendance</StrongText>
             </Heading2>
           </Box>
         }
       />
-      <CardContent className={styles.cardContent}>
-        <Box className={styles.sectionContainer}>
-          <Box className={styles.column}>
+      <CardContent className={commonStyles.cardContent}>
+        <Box className={commonStyles.sectionContainer}>
+          <Box className={commonStyles.column}>
             <BodyFourText noMargin>
               There is a unique attendance URL for each day of your workshop. On
               each day of your workshop, your participants must visit that day's

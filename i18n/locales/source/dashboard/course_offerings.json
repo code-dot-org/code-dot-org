@@ -19,7 +19,7 @@
     "display_name": "2021drafting-1"
   },
   "3-5gamedesign": {
-    "display_name": "Elementary Game Design",
+    "display_name": "Teaching Elementary Game Design",
     "description": "After completing this self-paced professional learning module, you'll be comfortable with basic game design concepts for elementary school students."
   },
   "6-12-dev-playground": {
@@ -40,7 +40,7 @@
     "display_name": "ai-lab"
   },
   "ai-powered-threats-and-defenses": {
-    "display_name": "ai-powered-threats-and-defenses"
+    "display_name": "AIF AI-Powered Threats and Defenses 2025 Pilot"
   },
   "ai-temp": {
     "display_name": "ai-temp"
@@ -805,6 +805,9 @@
   "csp3-recovery": {
     "display_name": "csp3-recovery"
   },
+  "csp3-research-mxghyt": {
+    "display_name": "csp3-research-mxghyt"
+  },
   "csp3-staging": {
     "display_name": "csp3-staging"
   },
@@ -1079,6 +1082,9 @@
   "fit2019-apprentice-1": {
     "display_name": "fit2019-apprentice-1"
   },
+  "fit2019-apprentice-old": {
+    "display_name": "fit2019-apprentice-old"
+  },
   "flappy": {
     "display_name": "Flappy Code",
     "description": "Create a game using basic block code in this introductory computer science activity."
@@ -1264,6 +1270,9 @@
     "display_name": "Minecraft: Hero's Journey",
     "description": "Build and explore with Minecraft! Players write code that instructs the Agent to execute their commands and overcome in-game obstacles. "
   },
+  "hoai2025-dev": {
+    "display_name": "hoai2025-dev"
+  },
   "hoc-amazon-poc": {
     "display_name": "hoc-amazon-poc"
   },
@@ -1347,6 +1356,9 @@
   "jigsaw": {
     "display_name": "Jigsaw",
     "description": "Give students an idea of what to expect — mouse skills, lab manners, completing puzzles, and more — when they head to the computer lab."
+  },
+  "joi-sandbox": {
+    "display_name": "joi-sandbox"
   },
   "jr-test": {
     "display_name": "jr-test"
@@ -1483,6 +1495,9 @@
   },
   "musiclab": {
     "display_name": "musiclab"
+  },
+  "musiclab-instructions-bash": {
+    "display_name": "musiclab-instructions-bash"
   },
   "musiclab-pdx-test": {
     "display_name": "musiclab-pdx-test"
@@ -1737,6 +1752,9 @@
   "sandbox-pl-cv": {
     "display_name": "sandbox-pl-cv"
   },
+  "sb-chardev-v1": {
+    "display_name": "sb-chardev-v1"
+  },
   "sb-pt-cont": {
     "display_name": "sb-pt-cont"
   },
@@ -1764,7 +1782,8 @@
     "description": "Foundational online learning series for any teacher or educator interested in the groundbreaking world of artificial intelligence (AI) and its transformative potential in education."
   },
   "self-paced-pl-ai-districts": {
-    "display_name": "AI 101 Professional Learning for Districts"
+    "display_name": "AI 101 Professional Learning for Districts",
+    "description": "This professional learning module is designed to introduce you to AI and its impact on your role as a district leader. "
   },
   "self-paced-pl-ai-foundations": {
     "display_name": "self-paced-pl-ai-foundations"
@@ -1902,6 +1921,9 @@
   "teaching-ai-foundations": {
     "display_name": "Teaching AI Foundations",
     "description": "This self-paced professional learning module provides educators with a comprehensive understanding of the curriculum, enabling them to effectively guide students through essential CS concepts & understand the transformative role of AI."
+  },
+  "teaching-ai-powered-theats-and-defenses": {
+    "display_name": "teaching-ai-powered-theats-and-defenses"
   },
   "teaching-ai-systems-that-power-it": {
     "display_name": "Teaching AI and the Systems that Power It",
@@ -2116,7 +2138,7 @@
     "display_name": "CS Discoveries Curriculum Investigation"
   },
   "vpl-csp": {
-    "display_name": "CS Principles Virtual Professional Learning 24-25"
+    "display_name": "CS Principles Virtual Professional Learning 25-26"
   },
   "web-development": {
     "display_name": "Web Development",

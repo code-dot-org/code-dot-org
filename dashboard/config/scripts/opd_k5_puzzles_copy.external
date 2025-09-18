@@ -7,26 +7,26 @@ In the stages that follow, you're going to be using Code.org to learn the basics
 
 ## Sample Maze Puzzles
 
-![](//code.org/images/mockup_birds.png)
-![](//code.org/images/pvz.png)
+![](/blockly/media/mockup_birds.png)
+![](/blockly/media/pvz.png)
 
 You'll need to get the angry bird to the pig, and you'll need to get the zombie to the sunflower.
 
 ## Sample Artist Puzzle
 
-![](//code.org/images/artist.png)
+![](/blockly/media/artist.png)
 
 You have to make the artist draw over the grey lines by moving him around the canvas. He'll draw a line behind him wherever he goes.
 
 ## Sample Bee Puzzle
 
-![](//code.org/images/bee.png)
+![](/blockly/media/bee.png)
 
 You'll need to move the bee around to collect all the nectar and make all the honey. The units of nectar and honey needed for each puzzle are written in the lower right-hand corner of each flower or honeycomb.
 
 ## Play Lab
 
-![](//code.org/images/playlab.png)
+![](/blockly/media/playlab/guide.png)
 
 In Play Lab, you'll create games and stories based on different goals.
 
@@ -39,7 +39,7 @@ The puzzles leading up to the game creation help you learn pieces of code you'll
 
 ## Bounce
 
-![](//code.org/images/bounce.png)
+![](/blockly/media/bounce/guide.png)
 
 In Bounce, you get to create your own game. 
 Just like in Flappy, the puzzles leading up to the game creation help you learn pieces of code you'll need for your game.

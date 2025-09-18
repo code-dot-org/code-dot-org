@@ -9,8 +9,8 @@ import React, {FC, useEffect, useState} from 'react';
 import {Breakdown} from '../../types';
 import {COLOR_MAP, ColorMapKey} from '../constants';
 
-import styles from './PercentageBarGroupStyles.module.scss';
-import commonStyles from '../../workshop.module.scss';
+import styles from './PercentageBarGroup.module.scss';
+import commonStyles from '../../WorkshopLayout.module.scss';
 
 interface PercentageBarGroupProps {
   items: Breakdown[];

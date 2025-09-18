@@ -6,6 +6,8 @@ import {
 import classNames from 'classnames';
 import React from 'react';
 
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import i18n from '@cdo/locale';
 
 import {AiDiffNotification, IconColor} from './types';
@@ -89,7 +91,20 @@ const Notification: React.FC<NotificationProps> = ({
           {notificationOrPlaceholder.hrefLinks?.length > 0 &&
             notificationOrPlaceholder.hrefLinks.map((link, index) => (
               <li key={'url-' + index} className={styles.hrefLink}>
-                <a href={link.url} target="_blank" rel="noreferrer noopener">
+                <a
+                  href={link.url}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  onClick={() => {
+                    analyticsReporter.sendEvent(
+                      EVENTS.AI_DIFF_NOTIFICATION_URL_CLICKED,
+                      {
+                        notificationId: notificationOrPlaceholder.id,
+                        externalId: notificationOrPlaceholder.externalId,
+                      }
+                    );
+                  }}
+                >
                   {link.text}
                 </a>
               </li>
@@ -101,6 +116,14 @@ const Notification: React.FC<NotificationProps> = ({
                   onClick={() => {
                     if (aiPromptClick) {
                       aiPromptClick(prompt.text, prompt.prompt);
+
+                      analyticsReporter.sendEvent(
+                        EVENTS.AI_DIFF_NOTIFICATION_AI_PROMPT_CLICKED,
+                        {
+                          notificationId: notificationOrPlaceholder.id,
+                          externalId: notificationOrPlaceholder.externalId,
+                        }
+                      );
                     }
                   }}
                   className={styles.aiButton}
@@ -123,7 +146,7 @@ const Notification: React.FC<NotificationProps> = ({
           notificationOrPlaceholder.publishedAt
         ).toLocaleUpperCase()}
       </BodyThreeText>
-      {notificationOrPlaceholder.readAt === null && notification !== null ? (
+      {!notificationOrPlaceholder.readAt && notification !== null ? (
         <FontAwesomeV6Icon
           iconName="circle"
           iconStyle="solid"

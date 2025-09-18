@@ -553,7 +553,7 @@
   },
   "https://studio.code.org/s/allthethings/lessons/20/levels/1": {
     "dsls": {
-      "markdown": "## Welcome!\n\n<img style=\"float:left; margin:0 20px\" src=\"//code.org/images/edquote1.png\" height=\"910\" width=\"400\">\n\n<p><strong>Welcome to Code.org&#39;s K-5 Intro to Computer Science Online Professional Development Course.</strong> </p>\n\n<p>Code.org&#39;s professional development program prepares you to integrate computer science into your classroom and supports your growth as a teacher. This online course may be sufficient for some teachers to start using our materials in their classrooms, but if you are looking for further professional development, please see our workshops hosted in the United States for K-5 Educators. These are high-quality workshops taught by seasoned computer science educators. </p>\n\n<p><a href=\"http://code.org/professional-development-workshops\">Sign up for a workshop here</a>.</p>\n\n<p>During this online course, you&#39;ll watch videos, read articles, do online activities, and discuss with other teachers about the basics of computer science and how to use Code.org&#39;s online learning system. We want to let you explore writing computer programs on your own so that you can experience the excitement of teaching computer science.</p>\n\n<p>During the PD program and anytime afterward, Code.org and our community of engaged educators will always be around for support at <a href=\"http://support.code.org\">http://support.code.org</a>.</p>\n\n</br>\n\n\n"
+      "markdown": "## Welcome!\n\n<img style=\"float:left; margin:0 20px\" src=\"/blockly/media/edquote1.png\" height=\"910\" width=\"400\">\n\n<p><strong>Welcome to Code.org&#39;s K-5 Intro to Computer Science Online Professional Development Course.</strong> </p>\n\n<p>Code.org&#39;s professional development program prepares you to integrate computer science into your classroom and supports your growth as a teacher. This online course may be sufficient for some teachers to start using our materials in their classrooms, but if you are looking for further professional development, please see our workshops hosted in the United States for K-5 Educators. These are high-quality workshops taught by seasoned computer science educators. </p>\n\n<p><a href=\"http://code.org/professional-development-workshops\">Sign up for a workshop here</a>.</p>\n\n<p>During this online course, you&#39;ll watch videos, read articles, do online activities, and discuss with other teachers about the basics of computer science and how to use Code.org&#39;s online learning system. We want to let you explore writing computer programs on your own so that you can experience the excitement of teaching computer science.</p>\n\n<p>During the PD program and anytime afterward, Code.org and our community of engaged educators will always be around for support at <a href=\"http://support.code.org\">http://support.code.org</a>.</p>\n\n</br>\n\n\n"
     }
   },
   "https://studio.code.org/s/allthethings/lessons/20/levels/2": {
@@ -3082,16 +3082,16 @@
     "teacher_markdown": "Teachers should see this extra info."
   },
   "https://studio.code.org/s/allthethings/lessons/51/levels/1": {
-    "long_instructions": "Add **html** pages and preview them in the right pane.\n\nAdd **css** pages (and link them to your html).\n\nUse the file browser to add/rename/delete files, or to add/rename/delete folders (including hierarchically!)"
+    "long_instructions": "Add **html** pages and preview them in the right pane.\n\nAdd **css** pages (and link them to your html).\n\nUse the file browser to add/rename/delete files, or to add/rename/delete folders (including hierarchically!)\n\nThis level uses AI Tutor \"Outline\" mode and is configured to end all responses with \"Have a good day!\""
   },
   "https://studio.code.org/s/allthethings/lessons/51/levels/2": {
-    "long_instructions": "## Web Lab 2 Basics\n\nCreate your own web page!"
+    "long_instructions": "## Web Lab 2 Basics\n\nCreate your own web page!\n\nThis uses AI Tutor \"Produce\" mode."
   },
   "https://studio.code.org/s/allthethings/lessons/51/levels/3": {
-    "long_instructions": "This level shares a template level with Level 4 in this script."
+    "long_instructions": "This level shares a template level with Level 4 in this script. It uses AI Tutor \"Suggest\" mode."
   },
   "https://studio.code.org/s/allthethings/lessons/51/levels/4": {
-    "long_instructions": "This level shares a template level with Level 3 in this script."
+    "long_instructions": "This level shares a template level with Level 3 in this script. It lets you pick from all AI Tutor modes."
   },
   "https://studio.code.org/s/allthethings/lessons/51/levels/5": {
     "long_instructions": "## Web Lab 2 Lab Widget View\n\nThis is an example of widget view without toggle to view/hide code so workspace is always hidden."

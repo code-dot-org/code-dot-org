@@ -11,7 +11,6 @@ if File.basename($0) != 'rake' &&
   Unit.script_cache
   Unit.script_level_cache
   Unit.level_cache
-  Unit.unit_family_cache
   UnitGroup.course_cache_to_cache unless Rails.cache.is_a?(ActiveSupport::Cache::MemoryStore)
   UnitGroup.course_cache
 end
