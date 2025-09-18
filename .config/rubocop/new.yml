@@ -12,6 +12,8 @@ Lint/MixedCaseRange: # new in 1.53
   Enabled: true
 Lint/RedundantRegexpQuantifiers: # new in 1.53
   Enabled: true
+FactoryBot/AssociationStyle:
+  Enabled: true
 FactoryBot/ConsistentParenthesesStyle:
   Enabled: true
 FactoryBot/ExcessiveCreateList: # new in 2.25

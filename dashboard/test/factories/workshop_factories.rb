@@ -29,7 +29,7 @@ FactoryBot.define do
       assign_session_code {false}
     end
 
-    association :organizer, factory: :workshop_organizer
+    organizer factory: %i[workshop_organizer]
     course {Pd::Workshop::COURSE_CSP}
     subject {Pd::Workshop::SUBJECTS[course].try(&:second)}
     capacity {10}
