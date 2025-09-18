@@ -24,12 +24,12 @@
 #  index_levels_on_name       (name)
 #  index_levels_on_type       (type)
 
-class Sketch < Level
+class Sketchlab < Level
   def self.create_from_level_builder(params, level_params)
     create!(
       level_params.merge(
         user: params[:user],
-        game: Game.sketch,
+        game: Game.sketchlab,
         level_num: 'custom',
       )
     )

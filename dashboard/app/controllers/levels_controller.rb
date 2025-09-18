@@ -50,7 +50,7 @@ class LevelsController < ApplicationController
     Poetry,
     PublicKeyCryptography,
     Pythonlab,
-    Sketch,
+    Sketchlab,
     StandaloneVideo,
     StarWarsGrid,
     Studio,
