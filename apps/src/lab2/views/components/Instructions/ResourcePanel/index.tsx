@@ -199,6 +199,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     hasValidationConditions,
     isUserTeacher,
     hiddenContextCallback,
+    appName,
     isReadOnly,
     isViewingOldVersion,
     viewAsUserId,
