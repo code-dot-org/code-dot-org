@@ -1,8 +1,9 @@
 require 'test_helper'
 
 class Api::V1::UserScriptsControllerTest < ActionDispatch::IntegrationTest
-  test "student can dismiss version warning" do
+  test "student with deprecated user script can dismiss version warning" do
     user_script = create(:user_script)
+    user_script.update!(unit_group: nil)
     sign_in user_script.user
     patch "/api/v1//user_scripts/#{user_script.script.id}", params: {
       version_warning_dismissed: true
