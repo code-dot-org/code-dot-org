@@ -30,9 +30,11 @@ class User
         scope: ::Teacher.all,
         inactive_since: inactive_since,
       )
-      result = inactive_query.call.left_outer_joins(:user_data_retention_status)
-      @inactive_teachers ||= result.where(user_data_retention_status: {deletion_warning_email_sent_at: nil}).
-        or(result.where(user_data_retention_status: {deletion_warning_email_sent_at: ..inactive_since}))
+      ActiveRecord::Base.connected_to(role: :reporting) do
+        result = inactive_query.call.left_outer_joins(:user_data_retention_status)
+        @inactive_teachers ||= result.where(user_data_retention_status: {deletion_warning_email_sent_at: nil}).
+          or(result.where(user_data_retention_status: {deletion_warning_email_sent_at: ..inactive_since}))
+      end
     end
 
     private def send_warning_email(user)
