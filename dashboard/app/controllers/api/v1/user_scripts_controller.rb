@@ -16,16 +16,16 @@ class Api::V1::UserScriptsController < ApplicationController
 
   private def set_user_script
     script_id = params.require(:script_id)
-    script = Unit.get_from_cache(script_id)
+    unit = Unit.get_from_cache(script_id)
     # TODO: remove script-only route. Once '/api/v1/user_scripts/:script_id' is removed from
     # routes.rb, require :course_id here and remove the presence check.
     unit_group = UnitGroup.get_from_cache(params[:course_id]) if params[:course_id].present?
 
-    unless script
+    unless unit
       head :not_found
       return
     end
 
-    @user_script = UserScript.find_or_create_by!(user: current_user, script: script, unit_group: unit_group)
+    @user_script = UserScript.find_and_migrate_or_create_by!(user: current_user, unit: unit, unit_group: unit_group)
   end
 end

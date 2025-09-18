@@ -16,6 +16,7 @@ class Api::V1::UserScriptsControllerTest < ActionDispatch::IntegrationTest
   test "student without user_script can dismiss version warning" do
     user = create(:user)
     script = create(:unit, :in_single_unit_course)
+    unit_group = script.get_original_unit_group
     sign_in user
     patch "/api/v1//user_scripts/#{script.id}", params: {
       version_warning_dismissed: true
@@ -23,7 +24,7 @@ class Api::V1::UserScriptsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
     user_script = UserScript.find_by(user: user, script: script)
     refute_nil user_script
-    assert_nil user_script.unit_group_id
+    assert_equal unit_group.id, user_script.unit_group_id
     assert_equal "true", user_script.version_warning_dismissed
   end
 
