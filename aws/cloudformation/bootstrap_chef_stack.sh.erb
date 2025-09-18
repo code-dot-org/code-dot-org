@@ -85,11 +85,11 @@ DB_USERNAME=$(echo $DB_SECRET | jq -r ".username")
 DB_PASSWORD=$(echo $DB_SECRET | jq -r ".password")
 <% end -%>
 
-<% if rack_env?(:adhoc) -%>
-# Chef managed environments (staging, test, levelbuilder, production) authenticate to GitHub with an SSH key.
-# We're not using curly braces to expand ENVIRONMENT for complex reasons (this script is processed by CloudFormation !Sub).
-GITHUB_TOKEN=$(aws --region $REGION secretsmanager get-secret-value --secret-id "$ENVIRONMENT/cdo/github_token" --version-stage AWSCURRENT | jq -r ".SecretString")
-<% end -%>
+
+# Only adhocs have a GitHub token AWS Secret provisioned. Chef Managed environments (staging/test/levelbuilder/production)
+# use an SSH key configured in a Chef Attribute (cdo-github-access.id_rsa, cdo-github-access.id_rsa.pub) that they use to
+# authenticate to GitHub. Adhocs provisioned with `CHEF_MANAGED=true` also have the SSH Chef Attributes.
+GITHUB_TOKEN=$(aws --region ${!REGION} secretsmanager get-secret-value --secret-id "${!ENVIRONMENT}/cdo/github_token" --version-stage AWSCURRENT | jq -r ".SecretString")
 
 # Customize Chef configuration.
 FIRST_BOOT=/etc/chef/first-boot.json
@@ -111,11 +111,9 @@ cat <<JSON > $FIRST_BOOT
     "dashboard_hostname": "$DASHBOARD_DOMAIN_NAME",
     "pegasus_hostname": "$PEGASUS_DOMAIN_NAME"
   },
-<% if rack_env?(:adhoc) -%>
   "cdo-github-access": {
     "github_token": "$GITHUB_TOKEN"
   },
-<% end -%>
   "cdo-repository": {
     <% if commit %>
       "revision": "<%=commit%>",

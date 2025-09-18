@@ -156,12 +156,6 @@ git git_path do
 
   user node[:user]
   group node[:user]
-
-  # Ensure proper environment for credential helper
-  environment(
-    'HOME' => home_path,
-    'USER' => node[:user]
-  )
 end
 
 # ===== ADDITIONAL DIAGNOSTICS POST-GIT =====
