@@ -459,6 +459,10 @@ class CourseOffering < ApplicationRecord
     marketing_initiative == Curriculum::SharedCourseConstants::COURSE_OFFERING_MARKETING_INITIATIVES.hoai
   end
 
+  def hoc_or_hoai?
+    hoc? || hoai?
+  end
+
   def pl_course?
     !!course_versions&.first&.pl_course?
   end
