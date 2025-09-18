@@ -27,7 +27,7 @@ const adlibs: AdlibsType = {
     },
     variantCount: 3,
   },
-  'animal-accessory': {
+  'animal-attire': {
     template:
       'Please generate a dancer.  It should look like a {animal} wearing a {attire}.',
     options: {
@@ -44,7 +44,7 @@ const adlibs: AdlibsType = {
     },
     variantCount: 3,
   },
-  'adjective-animal-accessory': {
+  'adjective-animal-attire': {
     template:
       'Please generate a dancer.  It should look like a {adjective} {animal} wearing a {attire}.',
     options: {
