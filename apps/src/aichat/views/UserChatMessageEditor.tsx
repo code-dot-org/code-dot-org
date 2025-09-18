@@ -20,6 +20,7 @@ interface UserChatMessageEditorProps {
   chatButtons?: ChatButtonAndKey[];
   hiddenContextCallback?: () => Promise<string>;
   multimodalAvailable?: boolean;
+  disabled?: boolean;
 }
 
 /**
@@ -34,6 +35,7 @@ const UserChatMessageEditor: React.FunctionComponent<
   chatButtons,
   hiddenContextCallback,
   multimodalAvailable,
+  disabled = false,
 }) => {
   const isWaitingForChatResponse = useAppSelector(
     state => !!state.aichat.chatMessagePending
@@ -53,11 +55,12 @@ const UserChatMessageEditor: React.FunctionComponent<
 
   const inputRef = useRef<HTMLTextAreaElement>(null);
 
-  const disabled = isWaitingForChatResponse || saveInProgress || uploadsPending;
+  const chatDisabled =
+    isWaitingForChatResponse || saveInProgress || uploadsPending || disabled;
 
   const handleSubmit = useCallback(
     async (userMessage: string, analyticsProperties?: AnalyticsProperties) => {
-      if (!disabled) {
+      if (!chatDisabled) {
         const hiddenContext = await hiddenContextCallback?.();
         dispatch(
           submitChatContents({
@@ -79,9 +82,9 @@ const UserChatMessageEditor: React.FunctionComponent<
       }
     },
     [
-      disabled,
-      hiddenContextCallback,
+      chatDisabled,
       dispatch,
+      hiddenContextCallback,
       modelParameters,
       clientType,
       multimodalAvailable,
@@ -91,16 +94,16 @@ const UserChatMessageEditor: React.FunctionComponent<
   );
 
   useEffect(() => {
-    if (!disabled) {
+    if (!chatDisabled) {
       // Return focus to user input textarea after user submits chat message and response displayed
       // or after user updates model customizations.
       inputRef.current?.focus();
     }
-  }, [disabled]);
+  }, [chatDisabled]);
 
   return (
     <>
-      {chatButtons && (
+      {chatButtons && !disabled && (
         <div className={moduleStyles.chatButtonsContainer}>
           {chatButtons.map(({ChatButton, key}) => (
             <ChatButton key={key} onClick={handleSubmit} />
@@ -109,7 +112,7 @@ const UserChatMessageEditor: React.FunctionComponent<
       )}
       <UserMessageEditor
         onSubmit={handleSubmit}
-        disabled={disabled}
+        disabled={chatDisabled}
         editorContainerClassName={editorContainerClassName}
         ref={inputRef}
       />
