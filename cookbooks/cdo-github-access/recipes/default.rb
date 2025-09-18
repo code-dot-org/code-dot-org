@@ -54,9 +54,10 @@ directory "#{node[:home]}/.ssh" do
   group node[:current_user]
 end
 
-# Chef managed instances (staging, test, levelbuilder, production) have
-# the SSH key `ubuntu@code.org` Attribute from the Chef `baseline` Role. In rare cases, an adhoc can be provisioned
-# to be "Chef Managed" and will have the `id_rsa` and `id_rsa.pub` Chef Attributes.
+# Chef Managed environments (staging/test/levelbuilder/production) use an SSH key configured in Chef Attributes
+# (cdo-github-access.id_rsa, cdo-github-access.id_rsa.pub) that they use to authenticate to GitHub particularly to commit
+# and push content. Adhocs provisioned with `CHEF_MANAGED=true` also have these SSH Chef Attributes in addition to the
+# read-only GitHub token provisioned above.
 %w[config id_rsa id_rsa.pub].each do |file|
   template "#{node[:home]}/.ssh/#{file}" do
     source 'file.erb'
