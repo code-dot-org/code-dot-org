@@ -3,7 +3,11 @@ import {ExcalidrawImperativeAPI} from '@excalidraw/excalidraw/types/types';
 import React, {useEffect, useState} from 'react';
 
 import {useTwoColumnLayout} from '@cdo/apps/lab2/hooks/useTwoColumnLayout';
+import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
+import {LabProps, LevelProperties} from '@cdo/apps/lab2/types';
+import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import moduleStyles from './styles/sketchlab-view.module.scss';
 
@@ -12,9 +16,13 @@ const getInitialData = () => {
   return savedData ? JSON.parse(savedData) : null;
 };
 
-const SketchlabView: React.FunctionComponent = () => {
+const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
+  levelProperties,
+}) => {
   const [excalidrawApi, setExcalidrawApi] =
     useState<ExcalidrawImperativeAPI | null>(null);
+
+  const hasRun = useAppSelector(state => state.lab2System.hasRun);
 
   const {
     leftPanelWidth,
@@ -53,10 +61,27 @@ const SketchlabView: React.FunctionComponent = () => {
     };
   }, [excalidrawApi]);
 
+  // Since there's no run button in Sketch Lab, set it to true by default
+  // to enable the Submit button on edit on submittable levels.
+  // Set back to false on unmount in case we switch to a different level type.
+  const dispatch = useAppDispatch();
+  useEffect(() => {
+    dispatch(setHasRun(true));
+
+    return () => {
+      dispatch(setHasRun(false));
+    };
+  }, [dispatch]);
+
   return (
     <div className={moduleStyles.sketchlabContainer}>
       <div style={{width: leftPanelWidth}} className={panelClassName}>
-        instructions
+        <ResourcePanel
+          levelProperties={levelProperties}
+          isRunning={false}
+          hasRun={hasRun}
+          hasEdited={false}
+        />
       </div>
       <ResizeBar
         isVertical={true}
