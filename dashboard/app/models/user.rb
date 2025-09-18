@@ -961,7 +961,7 @@ class User < ApplicationRecord
     end
 
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
-      user_script = UserScript.where(user: self, script: script, unit_group: unit_group).first_or_create
+      user_script = UserScript.find_and_migrate_or_create_by!(user: self, unit: script, unit_group: unit_group)
       user_script.update!(assigned_at: Time.now)
       return user_script
     end

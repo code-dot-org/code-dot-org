@@ -977,7 +977,8 @@ class UserTest < ActiveSupport::TestCase
     level = create(:level, :with_script)
     script_level = level.script_levels.first
     script = script_level.script
-    unit_group = create(:unit_group, :with_unit, unit: script_level.script)
+    unit_group = script.original_unit_group
+    assert unit_group
 
     track_progress(user.id, script_level, 100, unit_group, pairings: [partner.id])
 
@@ -2191,7 +2192,8 @@ class UserTest < ActiveSupport::TestCase
     user = create(:user)
     level = create(:level, :with_script)
     script_level = level.script_levels.first
-    unit_group = create(:unit_group, :with_unit, unit: script_level.script)
+    unit_group = script_level.script.original_unit_group
+    assert unit_group
 
     ul = UserLevel.create!(
       user: user,
@@ -2224,7 +2226,9 @@ class UserTest < ActiveSupport::TestCase
     student = create(:student)
     level_source = create(:level_source, data: 'sample answer')
 
-    unit_group = create(:unit_group, :with_unit, unit: script_level.script)
+    unit_group = script_level.script.original_unit_group
+    assert unit_group
+
     User.track_level_progress(
       user_id: student.id,
       level_id: script_level.level_id,
@@ -2268,7 +2272,9 @@ class UserTest < ActiveSupport::TestCase
       level_source_id: level_source.id
     )
 
-    unit_group = create(:unit_group, :with_unit, unit: script_level.script)
+    unit_group = script_level.script.original_unit_group
+    assert unit_group
+
     User.track_level_progress(
       user_id: user.id,
       script_id: script_level.script_id,
@@ -2300,7 +2306,9 @@ class UserTest < ActiveSupport::TestCase
       submitted: false,
     }
 
-    unit_group = create(:unit_group, :with_unit, unit: @csf_script_level.script)
+    unit_group = @csf_script_level.script.original_unit_group
+    assert unit_group
+
     User.track_level_progress(**level_progress_params, unit_group: unit_group)
     refute_nil user_level = UserLevel.find_by(user_level_params)
     assert_nil user_level.locale
@@ -2320,7 +2328,8 @@ class UserTest < ActiveSupport::TestCase
   test 'track_level_progress stores unit_group_id when unit_group is provided' do
     user = create(:user)
     script_level = create(:script_level)
-    unit_group = create(:unit_group, :with_unit, unit: script_level.script)
+    unit_group = script_level.script.original_unit_group
+    assert unit_group
 
     User.track_level_progress(
       user_id: user.id,
@@ -2369,8 +2378,7 @@ class UserTest < ActiveSupport::TestCase
     assert_equal unit_group1.id, user_level.unit_group_id
 
     # Create second unit_group and track progress again for same script/level
-    unit_group2 = create(:unit_group)
-    create(:unit_group_unit, unit_group: unit_group2, script: script_level.script, position: 1)
+    unit_group2 = create(:single_unit_course, unit: script_level.script)
 
     User.track_level_progress(
       user_id: user.id,
