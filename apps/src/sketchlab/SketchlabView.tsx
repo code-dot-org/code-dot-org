@@ -5,7 +5,7 @@ import React, {useEffect, useState} from 'react';
 import styles from './styles/sketchlab-view.module.scss';
 
 const getInitialData = () => {
-  const savedData = localStorage.getItem('whiteboard-data');
+  const savedData = localStorage.getItem('sketch-data');
   return savedData ? JSON.parse(savedData) : null;
 };
 
@@ -25,7 +25,7 @@ const SketchlabView: React.FunctionComponent = () => {
           excalidrawApi.getFiles(),
           'local'
         );
-        localStorage.setItem('whiteboard-data', serializedData);
+        localStorage.setItem('sketch-data', serializedData);
       }
     };
 
