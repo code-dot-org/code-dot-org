@@ -227,7 +227,7 @@ export default function Congrats(props) {
     userType === 'student' ? studentCourses : teacherCourses;
 
   const curriculumCatalogImages = [
-    'https://code.org/images/ai/ai-curriclum-machine-learning.png',
+    'https://studio.code.org/blockly/media/ai/ai-curriclum-machine-learning.png',
     'https://images.code.org/11d83ab1d397cafda327782812e8988c-Book%20Covers.png',
     '/../../../../shared/images/courses/logo_csa.jpg',
     '/../../../../shared/images/courses/logo_mobile.jpg',

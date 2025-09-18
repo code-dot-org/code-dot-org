@@ -349,13 +349,6 @@ class DeleteAccountsHelper
     @log.puts "Cleared #{as_student_count} TeacherFeedback" if as_student_count > 0
   end
 
-  def delete_ai_tutor_interactions(user_id)
-    chat_messages_to_delete = AiTutorInteraction.where(user_id: user_id)
-    count = chat_messages_to_delete.count
-    chat_messages_to_delete.in_batches.destroy_all
-    @log.puts "Deleted #{count} AI Tutor Interactions" if count > 0
-  end
-
   def delete_rubric_ai_evaluations(user_id)
     # This finds all RubricAiEvaluation records which evalute this user's work,
     # whether they were implicitly requested by the student when they submitted
@@ -505,7 +498,6 @@ class DeleteAccountsHelper
     clean_level_source_backed_progress(user.id)
     clean_pegasus_forms_for_user(user)
     remove_pii_from_projects(user)
-    delete_ai_tutor_interactions(user.id)
     delete_rubric_ai_evaluations(user.id)
     delete_learning_goal_teacher_evaluations(user.id)
     clean_and_destroy_pd_content(user.id, user_email)

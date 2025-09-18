@@ -1,4 +1,5 @@
 import {Button} from '@code-dot-org/component-library/button';
+import classNames from 'classnames';
 import React, {useCallback, useState} from 'react';
 
 import Adlib, {AdlibsType} from '@cdo/apps/lab2/views/components/guide/Adlib';
@@ -11,72 +12,89 @@ import {AiInteractionStatus} from '@cdo/generated-scripts/sharedConstants';
 import askAi from '../ai/generate/askAi';
 import adlibsUntyped from '../ai/generate/GenerateAdlibs.json';
 import {generateBlocklyJson} from '../ai/generate/generateBlocklyJson';
-import GenerateContext from '../ai/generate/GenerateContext';
+import {
+  DefaultContext,
+  DefaultPrompt,
+  GenerateContext,
+} from '../ai/generate/GenerateContent';
 import appConfig from '../appConfig';
 import {baseAssetUrl} from '../constants';
 import MusicLibrary from '../player/MusicLibrary';
 import {setCodeToLoad, setAiGenerateState} from '../redux/musicRedux';
 
-import styles from './Generate.module.scss';
+import styles from './GenerateCode.module.scss';
 
 const adlibs = adlibsUntyped as AdlibsType;
 
-interface GenerateProps {
+interface GenerateCodeProps {
   adlibOption?: string;
 }
 
-const Generate: React.FunctionComponent<GenerateProps> = ({adlibOption}) => {
+const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
+  adlibOption,
+}) => {
   const dispatch = useAppDispatch();
 
+  const library = MusicLibrary.getInstance();
   const packId = useAppSelector(state => state.music.packId) || '';
   const aiGenerateState = useAppSelector(state => state.music.aiGenerateState);
 
-  const library = MusicLibrary.getInstance();
-
   const useCache = appConfig.getValue('ai-generate-cache') === 'true';
+  const showFullContext =
+    appConfig.getValue('ai-generate-full-context') === 'true';
 
-  const [adlibText, setAdlibText] = useState<string | undefined>(undefined);
-
-  const [text, setText] = useState(
-    'Please generate a fun song.  Between 18-20 measures is enough duration.  Use layering of sounds to make it exciting.'
-  );
+  // The array of user choices in the adlib.
   const [choices, setChoices] = useState<string[] | undefined>(undefined);
 
-  const useText = adlibOption ? adlibText : text;
+  const [contextText, setContextText] = useState(DefaultContext);
 
-  const sounds =
-    library
-      ?.getFolderForFolderId(packId || 'indie')
-      ?.sounds?.map(sound => {
-        if (sound.type !== 'preview') {
-          return `${sound.src} (${sound.length} measures)`;
-        }
-      })
-      .filter(sound => sound !== undefined)
-      .join('", "') || '';
-
-  const contextGenerateMusicPsuedocodeFromDescription = GenerateContext(
-    sounds,
-    packId
+  const [promptText, setPromptText] = useState(
+    adlibOption ? undefined : DefaultPrompt
   );
 
   const generateSongAi = useCallback(async () => {
-    console.log('starting ask');
-    const result = await askAi(
-      `Here is the context:
-  ${contextGenerateMusicPsuedocodeFromDescription}
+    const sounds =
+      library
+        ?.getFolderForFolderId(packId || 'indie')
+        ?.sounds?.map(sound => {
+          if (sound.type !== 'preview') {
+            return `${packId}/${sound.src} (${sound.length} measures)`;
+          }
+        })
+        .filter(sound => sound !== undefined)
+        .join('", "') || '';
 
-  And here is the request:
-  ${useText}`
+    const drumSounds =
+      library
+        ?.getAvailableSounds()
+        .filter(folder => folder.id !== packId)
+        .map(folder =>
+          folder.sounds
+            .filter(sound => sound.type === 'beat')
+            .map(sound => {
+              return `${folder.id}/${sound.src} (${sound.length} measures)`;
+            })
+        )
+        .flat()
+        .join('", ') || '';
+
+    console.log('Starting AI ask...');
+
+    const result = await askAi(
+      'Here is the context: \n\n' +
+        GenerateContext(contextText, sounds, drumSounds) +
+        '\n\n And here is the request: \n\n' +
+        promptText
     );
+
     if (result.length > 1 && result[1].status === AiInteractionStatus.OK) {
-      console.log(result[1].chatMessageText);
-      const psuedocode = result[1].chatMessageText.replaceAll('```', '');
-      return psuedocode;
+      const pseudocode = result[1].chatMessageText.replaceAll('```', '');
+      console.log('AI code generated.');
+      return pseudocode;
     } else {
       console.error('Error getting AI response.');
     }
-  }, [contextGenerateMusicPsuedocodeFromDescription, useText]);
+  }, [contextText, library, packId, promptText]);
 
   const generateSongCache = useCallback(async () => {
     const variant = getRandomInt(
@@ -92,14 +110,14 @@ const Generate: React.FunctionComponent<GenerateProps> = ({adlibOption}) => {
     const startTime = Date.now();
     try {
       const response = await HttpClient.get(cacheFilePath);
-      const psuedocode = await response.text();
+      const pseudocode = await response.text();
 
       const elapsedTime = Date.now() - startTime;
       const delayDuration = 2000; // 2 seconds.
       const remainingDelayDuration = Math.max(delayDuration - elapsedTime, 0);
       await new Promise(res => setTimeout(res, remainingDelayDuration));
 
-      return psuedocode;
+      return pseudocode;
     } catch (error) {
       console.error('Error retrieving cached code.');
     }
@@ -108,12 +126,12 @@ const Generate: React.FunctionComponent<GenerateProps> = ({adlibOption}) => {
   const generateSong = useCallback(async () => {
     dispatch(setAiGenerateState('generating'));
 
-    const psuedocode = await (useCache
+    const pseudocode = await (useCache
       ? generateSongCache()
       : generateSongAi());
 
-    if (psuedocode) {
-      const resultBlockly = generateBlocklyJson(psuedocode);
+    if (pseudocode) {
+      const resultBlockly = generateBlocklyJson(pseudocode);
       dispatch(setCodeToLoad(resultBlockly));
     }
 
@@ -125,8 +143,17 @@ const Generate: React.FunctionComponent<GenerateProps> = ({adlibOption}) => {
 
   return (
     <Guide id="generate-panel">
+      {showFullContext && aiGenerateState === 'none' && (
+        <textarea
+          id="generate-context"
+          onChange={evt => setContextText(evt.target.value)}
+          value={contextText}
+          rows={6}
+          className={classNames(styles.textArea, styles.textAreaSmall)}
+        />
+      )}
       {(aiGenerateState === 'generating' || aiGenerateState === 'done') && (
-        <div className={styles.textArea}>{useText}</div>
+        <div className={styles.textArea}>{promptText}</div>
       )}
 
       {aiGenerateState === 'none' && (
@@ -134,8 +161,8 @@ const Generate: React.FunctionComponent<GenerateProps> = ({adlibOption}) => {
           {!adlibOption && (
             <textarea
               id="generate-description"
-              onChange={evt => setText(evt.target.value)}
-              value={text}
+              onChange={evt => setPromptText(evt.target.value)}
+              value={promptText}
               rows={4}
               className={styles.textArea}
             />
@@ -143,8 +170,8 @@ const Generate: React.FunctionComponent<GenerateProps> = ({adlibOption}) => {
           {adlibOption && (
             <Adlib
               adlib={adlibs[adlibOption]}
-              onChange={(adlibText, choices) => {
-                setAdlibText(adlibText);
+              onChange={(text, choices) => {
+                setPromptText(text);
                 setChoices(choices);
               }}
               className={styles.textArea}
@@ -168,9 +195,7 @@ const Generate: React.FunctionComponent<GenerateProps> = ({adlibOption}) => {
 
       {aiGenerateState === 'done' && (
         <>
-          <div className={styles.info}>
-            Here is the code that was generated.
-          </div>
+          <div>Here is the code that was generated.</div>
 
           <Button
             ariaLabel={'Generate again'}
@@ -195,4 +220,4 @@ const Generate: React.FunctionComponent<GenerateProps> = ({adlibOption}) => {
   );
 };
 
-export default Generate;
+export default GenerateCode;

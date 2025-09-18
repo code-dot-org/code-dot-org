@@ -874,8 +874,6 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_nil unit.curriculum_umbrella
     assert_nil unit.content_area
     assert_nil unit.topic_tags
-    assert_nil unit.family_name
-    assert_nil unit.version_year
 
     post :update, params: {
       id: unit.id,
@@ -885,8 +883,6 @@ class ScriptsControllerTest < ActionController::TestCase
       project_sharing: 'on',
       curriculum_umbrella: 'CSF',
       content_area: '6-12',
-      family_name: 'my-fam',
-      version_year: '2017',
       topic_tags: ['ai', 'maker']
     }
     unit.reload
@@ -894,8 +890,6 @@ class ScriptsControllerTest < ActionController::TestCase
     assert unit.project_sharing
     assert_equal 'CSF', unit.curriculum_umbrella
     assert_equal '6-12', unit.content_area
-    assert_equal 'my-fam', unit.family_name
-    assert_equal '2017', unit.version_year
     assert_equal ['ai', 'maker'], unit.topic_tags
   end
 
@@ -904,7 +898,7 @@ class ScriptsControllerTest < ActionController::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
     unit = create(:script)
-    stub_file_writes(unit.name, family_name: 'fake-family-z')
+    stub_file_writes(unit.name)
 
     # Set most of the properties.
     # omitted: professional_learning_course, announcements because
@@ -919,8 +913,6 @@ class ScriptsControllerTest < ActionController::TestCase
       project_sharing: 'on',
       peer_reviews_to_complete: 1,
       curriculum_path: 'fake_curriculum_path',
-      family_name: 'fake-family-z',
-      version_year: '2020',
       editor_experiment: 'fake-editor-experiment',
       curriculum_umbrella: 'CSF',
       content_area: 'k-5',
@@ -1758,8 +1750,8 @@ class ScriptsControllerTest < ActionController::TestCase
     end
   end
 
-  def stub_file_writes(unit_name, family_name: nil)
-    filenames_to_stub = ["#{Rails.root}/config/scripts/#{unit_name}.script", "#{Rails.root}/config/scripts_json/#{unit_name}.script_json",  "#{Rails.root}/config/course_offerings/#{family_name || unit_name}.json"]
+  def stub_file_writes(unit_name)
+    filenames_to_stub = ["#{Rails.root}/config/scripts/#{unit_name}.script", "#{Rails.root}/config/scripts_json/#{unit_name}.script_json",  "#{Rails.root}/config/course_offerings/#{unit_name}.json"]
     File.stubs(:write).with do |filename, _|
       filenames_to_stub.include?(filename) || filename.to_s.end_with?('scripts/en.yml')
     end
