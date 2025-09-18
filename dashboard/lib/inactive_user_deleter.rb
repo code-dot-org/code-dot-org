@@ -87,7 +87,9 @@ class InactiveUserDeleter
   end
 
   def inactive_users
-    Queries::User::Inactive.call(inactive_since: inactive_since).where.not(id: processed_user_ids)
+    ActiveRecord::Base.connected_to(role: :reporting) do
+      Queries::User::Inactive.call(inactive_since: inactive_since).where.not(id: processed_user_ids)
+    end
   end
 
   def summary
