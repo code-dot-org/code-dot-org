@@ -43,6 +43,7 @@ Scenario: School Info Confirmation Dialog
 
   # One year later, the teacher sees the school info confirmation dialog and confirms at the same school
   And one year passes for user "Teacher_Chuba"
+  And I clear session storage
   Then I reload the page
   And I wait to see "#ui-test-drawer-toolbar"
   Then I click selector "button:contains(I'm still teaching here)"

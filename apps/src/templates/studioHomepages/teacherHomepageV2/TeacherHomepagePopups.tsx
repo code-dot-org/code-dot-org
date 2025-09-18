@@ -114,8 +114,7 @@ const TeacherHomepagePopups: React.FC<TeacherHomepagePopupsProps> = () => {
   ]);
 
   const popup = React.useMemo(() => {
-    if (isLoading) {
-      //|| hasSeenPopupInLastDay || hasSeenPopup
+    if (isLoading || hasSeenPopupInLastDay || hasSeenPopup) {
       return null;
     } else if (
       schoolInfoInterstitialOpen ||
