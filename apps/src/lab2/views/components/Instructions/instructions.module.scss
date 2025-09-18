@@ -112,11 +112,30 @@
 .buttonInstructionTooltipOverlay {
   width: 100%;
   
+  // Let TooltipOverlay maintain its natural positioning
+  > div {
+    width: 100%;
+  }
+  
   // Ensure the button inside takes full width
   button {
     width: 100%;
     height: 32px;
   }
+}
+
+.buttonInstructionWrapper {
+  width: 100%;
+  height: 32px;
+  
+  button {
+    width: 100%;
+    height: 32px;
+  }
+}
+
+.hiddenIcon {
+  display: none !important;
 }
 
 .markdownText {

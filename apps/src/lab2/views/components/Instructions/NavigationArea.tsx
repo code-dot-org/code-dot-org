@@ -201,6 +201,7 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
         iconRight={iconRight}
         text={hasNextLevel ? commonI18n.continue() : commonI18n.finish()}
         className={moduleStyles.buttonInstructionTooltipOverlay}
+        tooltipMessage={continueTooltipMessage}
       />
     );
   }, [
@@ -211,6 +212,7 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
     iconRight,
     hasNextLevel,
     dispatch,
+    continueTooltipMessage,
   ]);
 
   console.log('continueTooltipMessage', continueTooltipMessage);

@@ -5,7 +5,6 @@ import {
 } from '@code-dot-org/component-library/button';
 import {ComponentSizeXSToL} from '@code-dot-org/component-library/common/types';
 import {FontAwesomeV6IconProps} from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import React, {useMemo} from 'react';
 
 import {sendSubmitReport} from '@cdo/apps/code-studio/progressRedux';
@@ -14,6 +13,7 @@ import {
   nextLevelId,
 } from '@cdo/apps/code-studio/progressReduxSelectors';
 import {queryParams} from '@cdo/apps/code-studio/utils';
+import WithConditionalTooltip from '@cdo/apps/codebridge/components/WithConditionalTooltip';
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
 import {isPredictResponseSubmitted} from '@cdo/apps/lab2/redux/predictLevelRedux';
 import {LevelProperties} from '@cdo/apps/lab2/types';
@@ -25,6 +25,8 @@ import {
   LevelStatus,
   UserLevelInteractions,
 } from '@cdo/generated-scripts/sharedConstants';
+
+import moduleStyles from './instructions.module.scss';
 
 interface NavigationButtonProps {
   levelProperties: LevelProperties;
@@ -218,6 +220,7 @@ interface ContinueButtonActionNeededProps {
   iconRight: FontAwesomeV6IconProps | undefined;
   text: string;
   className?: string;
+  tooltipMessage?: string;
 }
 
 /**
@@ -225,26 +228,33 @@ interface ContinueButtonActionNeededProps {
  */
 export const ContinueButtonActionNeeded: React.FC<
   ContinueButtonActionNeededProps
-> = ({isDisabled, type, color, iconRight, text, className}) => {
+> = ({isDisabled, type, color, iconRight, text, className, tooltipMessage}) => {
   const dispatch = useAppDispatch();
 
+  // Show tooltip when button is disabled AND we have a message
+  const shouldShowTooltip = isDisabled && !!tooltipMessage;
+
   return (
-    <WithTooltip
-      tooltipOverlayClassName={className}
-      tooltipProps={{
-        text: 'msg',
-        direction: 'onTop',
-        tooltipId: 'continue-button-tooltip',
-        size: 'xs',
-      }}
-    >
-      <Button
-        id="instructions-continue-action-needed-button"
-        onClick={() => dispatch(continueOrFinishLesson())}
-        disabled={isDisabled}
-        {...{text, type, color, iconRight}}
-      />
-    </WithTooltip>
+    <div className={className}>
+      <WithConditionalTooltip
+        showTooltip={shouldShowTooltip}
+        iconName="fa-question-circle-o"
+        iconClassName={moduleStyles.hiddenIcon}
+        tooltipProps={{
+          text: tooltipMessage || '',
+          direction: 'onTop',
+          tooltipId: 'continue-button-tooltip',
+          size: 'xs',
+        }}
+      >
+        <Button
+          id="instructions-continue-action-needed-button"
+          onClick={() => dispatch(continueOrFinishLesson())}
+          disabled={isDisabled}
+          {...{text, type, color, iconRight}}
+        />
+      </WithConditionalTooltip>
+    </div>
   );
 };
 
