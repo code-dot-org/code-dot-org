@@ -1655,13 +1655,12 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   end
 
   describe '#register_new_user' do
-    let(:disallowed_domains) {['testdomain.com']}
-    let(:provider_exceptions) {['clever']}
-    let(:email) {Faker::Internet.email(domain: disallowed_domains.first)}
+    let(:domain) {'testdomain.com'}
+    let(:disallowed_domains) {{domain => {provider_exceptions: ['clever']}}}
+    let(:email) {Faker::Internet.email(domain: disallowed_domains.keys.first)}
 
     before do
       stub_const('Policies::Devise::EmailDomains::DISALLOWED_DOMAINS', disallowed_domains)
-      stub_const('Policies::Devise::EmailDomains::PROVIDER_EXCEPTIONS', provider_exceptions)
     end
 
     context 'when a user has an email domain that is disallowed' do
@@ -1675,7 +1674,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
       it 'does not create a new user and redirects to the sign in page with an alert' do
         _(-> {post :google_oauth2, params: {omniauth: auth}}).wont_change -> {User.count}
         assert_redirected_to user_session_path
-        _(flash[:alert]).must_equal I18n.t('devise.registrations.disallowed_domain', domain: disallowed_domains.first)
+        _(flash[:alert]).must_equal I18n.t('devise.registrations.disallowed_domain', domain: domain)
       end
     end
 
@@ -1699,7 +1698,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     end
 
     context 'when email is disallowed but provider is on the exceptions list' do
-      let(:auth) {generate_auth_user_hash(provider: provider_exceptions.first, uid: 'some-uid', email: email)}
+      let(:auth) {generate_auth_user_hash(provider: disallowed_domains[domain][:provider_exceptions].first, uid: 'some-uid', email: email)}
 
       before do
         @request.env['omniauth.auth'] = auth
@@ -1711,7 +1710,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
         _(@response.status).must_equal 200
         assert_template 'omniauth/redirect'
         partial_user = User.new_from_partial_registration(session)
-        _(partial_user.provider).must_equal provider_exceptions.first
+        _(partial_user.provider).must_equal disallowed_domains[domain][:provider_exceptions].first
         _(partial_user.uid).must_equal auth.uid
       end
     end
