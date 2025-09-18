@@ -114,10 +114,6 @@ execute 'git authentication diagnostics' do
 
   user node[:user]
   group node[:user]
-  environment(
-    'HOME' => home_path,
-    'USER' => node[:user]
-  )
 
   # Always run diagnostics for debugging
   action :run
@@ -178,10 +174,6 @@ execute 'post-git diagnostics' do
 
   user node[:user]
   group node[:user]
-  environment(
-    'HOME' => home_path,
-    'USER' => node[:user]
-  )
 
   # Only run if git resource was successful
   subscribes :run, "git[#{git_path}]", :immediately
@@ -200,7 +192,6 @@ if node.chef_environment == 'staging'
     cwd git_path
     user node[:user]
     group node[:user]
-    environment('HOME' => home_path)
     not_if {File.exist? worktree_path}
   end
 end
@@ -215,7 +206,6 @@ if node['cdo-apps']['daemon'] && %w[production].include?(node.chef_environment)
     cwd git_path
     user node[:user]
     group node[:user]
-    environment('HOME' => home_path)
     not_if {File.exist? worktree_path}
   end
 
