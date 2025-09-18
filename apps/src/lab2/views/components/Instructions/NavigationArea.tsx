@@ -96,9 +96,13 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
       ? (['secondary', 'black'] as const)
       : (['primary', 'purple'] as const);
 
-  const iconRight = hasNextLevel
-    ? ({iconName: 'arrow-right', iconStyle: 'solid'} as const)
-    : undefined;
+  const iconRight = useMemo(
+    () =>
+      hasNextLevel
+        ? ({iconName: 'arrow-right', iconStyle: 'solid'} as const)
+        : undefined,
+    [hasNextLevel]
+  );
 
   const feedbackRef = useRef<HTMLDivElement>(null);
 
@@ -114,15 +118,15 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
 
   // For music lab levels, we want to hide the navigation button until the user validates or runs their code.
   // For other labs, we want to always show the navigation button.
-  const musicCanShowButton = useMemo(() => {
+  const musicCanShowContinueButton = useMemo(() => {
     if (isPredictLevel) {
       return predictResponseSubmitted;
-    } else if (submittable && hasSubmitted) {
+    } else if (submittable) {
       return true;
     } else if (hasValidationConditions) {
       return validationSatisfied;
     } else {
-      return submittable || !requireRun || hasRun;
+      return !requireRun || hasRun;
     }
   }, [
     isPredictLevel,
@@ -130,7 +134,6 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
     predictResponseSubmitted,
     validationSatisfied,
     submittable,
-    hasSubmitted,
     requireRun,
     hasRun,
   ]);
@@ -177,6 +180,38 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
     hasRun,
   ]);
 
+  const ContinueButton = useMemo(() => {
+    if (appName === 'music') {
+      return (
+        <Button
+          id="instructions-continue-button"
+          size={'s'}
+          className={moduleStyles.buttonInstruction}
+          text={hasNextLevel ? commonI18n.continue() : commonI18n.finish()}
+          onClick={() => dispatch(continueOrFinishLesson())}
+          {...{type, color, iconRight}}
+        />
+      );
+    }
+    return (
+      <ContinueButtonActionNeeded
+        isDisabled={!continueActionNeededButtonIsEnabled}
+        type={type}
+        color={color}
+        iconRight={iconRight}
+        text={hasNextLevel ? commonI18n.continue() : commonI18n.finish()}
+      />
+    );
+  }, [
+    appName,
+    continueActionNeededButtonIsEnabled,
+    type,
+    color,
+    iconRight,
+    hasNextLevel,
+    dispatch,
+  ]);
+
   console.log('continueTooltipMessage', continueTooltipMessage);
   const submitButtonEnabled =
     disableEditRunForSubmission || hasSubmitted || (hasRun && hasEdited);
@@ -193,12 +228,7 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
   }, [requireRun, submitButtonEnabled, submittable]);
   console.log('submitTooltipMessage', submitTooltipMessage);
 
-  if (
-    appName === 'music' &&
-    !submittable &&
-    !musicCanShowButton &&
-    !feedbackMessage
-  ) {
+  if (appName === 'music' && !musicCanShowContinueButton && !feedbackMessage) {
     return null;
   }
 
@@ -227,55 +257,20 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
             />
           </div>
         )}
-        {appName === 'music' &&
-          musicCanShowButton &&
-          (submittable ? (
-            <SubmitButton
-              levelId={id}
-              appName={appName}
-              disableEditRunForSubmission={disableEditRunForSubmission}
-              hasRun={hasRun}
-              hasEdited={hasEdited}
-              className={moduleStyles.buttonInstruction}
-            />
-          ) : (
-            <Button
-              id="instructions-continue-button"
-              size={'s'}
-              className={moduleStyles.buttonInstruction}
-              text={hasNextLevel ? commonI18n.continue() : commonI18n.finish()}
-              onClick={() => dispatch(continueOrFinishLesson())}
-              {...{type, color, iconRight}}
-            />
-          ))}
-        {appName !== 'music' &&
-          (submittable ? (
-            <SubmitButton
-              levelId={id}
-              appName={appName}
-              disableEditRunForSubmission={disableEditRunForSubmission}
-              hasRun={hasRun}
-              hasEdited={hasEdited}
-              className={moduleStyles.buttonInstruction}
-            />
-          ) : (
-            <ContinueButtonActionNeeded
-              isDisabled={!continueActionNeededButtonIsEnabled}
-              type={type}
-              color={color}
-              iconRight={iconRight}
-              text={hasNextLevel ? commonI18n.continue() : commonI18n.finish()}
-            />
-            // <Button
-            //   id="instructions-continue-button"
-            //   size={'s'}
-            //   className={moduleStyles.buttonInstruction}
-            //   text={hasNextLevel ? commonI18n.continue() : commonI18n.finish()}
-            //   onClick={() => dispatch(continueOrFinishLesson())}
-            //   {...{type, color, iconRight}}
-            // />
-          ))}
-        {showTts && feedbackMessage && !musicCanShowButton && (
+        {submittable ? (
+          <SubmitButton
+            levelId={id}
+            appName={appName}
+            disableEditRunForSubmission={disableEditRunForSubmission}
+            hasRun={hasRun}
+            hasEdited={hasEdited}
+            className={moduleStyles.buttonInstruction}
+          />
+        ) : (
+          ContinueButton
+        )}
+
+        {showTts && feedbackMessage && !musicCanShowContinueButton && (
           <div className={moduleStyles.ttsContainer}>
             <TextToSpeech text={feedbackMessage} />
           </div>
