@@ -188,9 +188,11 @@ class RegistrationsController < Devise::RegistrationsController
       if Policies::Lti.lti? current_user
         current_user.verify_teacher! if Policies::Lti.unverified_teacher?(current_user)
         if session[:lti_deployment_id] && current_user.lti_user_identities.any?
-          deployment = LtiDeployment.find(session[:lti_deployment_id])
-          lti_identity = current_user.lti_user_identities.first
-          deployment.lti_user_identities << lti_identity if deployment && lti_identity
+          deployment = LtiDeployment.find_by(id: session[:lti_deployment_id])
+          lti_identity = current_user.lti_user_identities.find_by(lti_integration_id: deployment.lti_integration_id)
+          if deployment && lti_identity && !deployment.lti_user_identities.exists?(lti_identity.id)
+            deployment.lti_user_identities << lti_identity
+          end
         end
         lms_name = Queries::Lti.get_lms_name_from_user(current_user)
         metadata = {
