@@ -2,14 +2,14 @@ import {Excalidraw, serializeAsJSON} from '@excalidraw/excalidraw';
 import {ExcalidrawImperativeAPI} from '@excalidraw/excalidraw/types/types';
 import React, {useEffect, useState} from 'react';
 
-import moduleStyles from './styles/whiteboard-view.module.scss';
+import styles from './styles/sketch-view.module.scss';
 
 const getInitialData = () => {
   const savedData = localStorage.getItem('whiteboard-data');
   return savedData ? JSON.parse(savedData) : null;
 };
 
-const WhiteboardView: React.FunctionComponent = () => {
+const SketchView: React.FunctionComponent = () => {
   const [excalidrawApi, setExcalidrawApi] =
     useState<ExcalidrawImperativeAPI | null>(null);
 
@@ -39,7 +39,7 @@ const WhiteboardView: React.FunctionComponent = () => {
   }, [excalidrawApi]);
 
   return (
-    <div className={moduleStyles.whiteboardContainer}>
+    <div className={styles.whiteboardContainer}>
       <Excalidraw
         excalidrawAPI={api => setExcalidrawApi(api)}
         initialData={getInitialData()}
@@ -48,4 +48,4 @@ const WhiteboardView: React.FunctionComponent = () => {
   );
 };
 
-export default WhiteboardView;
+export default SketchView;
