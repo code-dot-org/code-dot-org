@@ -5,6 +5,7 @@ import {
 } from '@code-dot-org/component-library/button';
 import {ComponentSizeXSToL} from '@code-dot-org/component-library/common/types';
 import {FontAwesomeV6IconProps} from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import React, {useMemo} from 'react';
 
 import {sendSubmitReport} from '@cdo/apps/code-studio/progressRedux';
@@ -216,6 +217,7 @@ interface ContinueButtonActionNeededProps {
   color: ButtonColor;
   iconRight: FontAwesomeV6IconProps | undefined;
   text: string;
+  className?: string;
 }
 
 /**
@@ -223,16 +225,26 @@ interface ContinueButtonActionNeededProps {
  */
 export const ContinueButtonActionNeeded: React.FC<
   ContinueButtonActionNeededProps
-> = ({isDisabled, type, color, iconRight, text}) => {
+> = ({isDisabled, type, color, iconRight, text, className}) => {
   const dispatch = useAppDispatch();
 
   return (
-    <Button
-      id="instructions-continue-action-needed-button"
-      onClick={() => dispatch(continueOrFinishLesson())}
-      disabled={isDisabled}
-      {...{text, type, color, iconRight}}
-    />
+    <WithTooltip
+      tooltipOverlayClassName={className}
+      tooltipProps={{
+        text: 'msg',
+        direction: 'onTop',
+        tooltipId: 'continue-button-tooltip',
+        size: 'xs',
+      }}
+    >
+      <Button
+        id="instructions-continue-action-needed-button"
+        onClick={() => dispatch(continueOrFinishLesson())}
+        disabled={isDisabled}
+        {...{text, type, color, iconRight}}
+      />
+    </WithTooltip>
   );
 };
 

@@ -109,6 +109,16 @@
   height: 32px;
 }
 
+.buttonInstructionTooltipOverlay {
+  width: 100%;
+  
+  // Ensure the button inside takes full width
+  button {
+    width: 100%;
+    height: 32px;
+  }
+}
+
 .markdownText {
   line-height: 0;
   user-select: auto;

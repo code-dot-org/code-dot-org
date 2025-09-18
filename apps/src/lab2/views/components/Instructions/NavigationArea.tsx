@@ -200,6 +200,7 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
         color={color}
         iconRight={iconRight}
         text={hasNextLevel ? commonI18n.continue() : commonI18n.finish()}
+        className={moduleStyles.buttonInstructionTooltipOverlay}
       />
     );
   }, [
