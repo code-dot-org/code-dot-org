@@ -130,6 +130,7 @@ class FishView extends React.Component {
       <StudioAppWrapper>
         <CodeWorkspaceContainer>
           <div
+            data-notranslate
             id="oceans-container"
             style={{
               ...styles.container,

@@ -19,7 +19,7 @@ import React from 'react';
 import {CopyButton} from '../../components/CopyButton';
 import {WorkshopData} from '../../types';
 
-import styles from '../../workshop.module.scss';
+import styles from '../../WorkshopLayout.module.scss';
 
 interface WorkshopLinksSectionProps {
   workshop: WorkshopData;
