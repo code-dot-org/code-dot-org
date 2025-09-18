@@ -2,7 +2,7 @@ import Tabs from '@code-dot-org/component-library/tabs';
 import React, {FC, useMemo} from 'react';
 import {useLocation, useNavigate} from 'react-router-dom';
 
-import styles from '../workshop.module.scss';
+import styles from './WorkshopTabs.module.scss';
 
 export interface TabConfig {
   label: string;

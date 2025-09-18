@@ -1,4 +1,4 @@
-import {Option} from '@cdo/apps/code-studio/pd/workshop_dashboard/WorkshopFormTemplate/components/MultiSelectInput';
+import {Option} from '@cdo/apps/code-studio/pd/workshop_dashboard/workshop_form/components/MultiSelectInput';
 import {
   Session,
   Workshop,

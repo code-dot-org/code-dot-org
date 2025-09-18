@@ -33,7 +33,7 @@ import {
 } from './types';
 import {enrollmentDataToProps, workshopDataToProps} from './utils';
 
-import styles from './workshop.module.scss';
+import styles from './WorkshopLayout.module.scss';
 
 export type WorkshopLayoutProps = WorkshopTabsProps &
   SurveyTypeSelectionProps & {
