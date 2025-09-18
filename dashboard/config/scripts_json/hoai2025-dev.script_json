@@ -81,6 +81,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "hoai2025-dance-create-dancer"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -102,6 +105,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "hoai2025-music-adlib-1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -123,6 +129,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "hoai2025-music-adlib-2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -144,6 +153,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "hoai2025-dance-create"
+        ]
       },
       "bonus": false,
       "seeding_key": {
