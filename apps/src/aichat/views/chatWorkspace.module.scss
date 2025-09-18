@@ -30,6 +30,7 @@ $tabs-default-spacing: 4px;
 
 .scrollToBottomButton {
   border-radius: 50%;
+  pointer-events: auto;
 }
 
 .messageArea {
@@ -49,6 +50,7 @@ $tabs-default-spacing: 4px;
   display: flex;
   justify-content: center;
   width: 100%;
+  pointer-events: none;
 }
 
 .tabsContainer {
