@@ -39,7 +39,7 @@ const SketchView: React.FunctionComponent = () => {
   }, [excalidrawApi]);
 
   return (
-    <div className={styles.whiteboardContainer}>
+    <div className={styles.sketchContainer}>
       <Excalidraw
         excalidrawAPI={api => setExcalidrawApi(api)}
         initialData={getInitialData()}
