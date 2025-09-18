@@ -27,5 +27,5 @@ export const lab2EntryPoints = {
   pythonlab: PythonlabEntryPoint,
   standalone_video: StandaloneVideoEntryPoint,
   weblab2: Weblab2EntryPoint,
-  whiteboard: SketchEntryPoint,
+  sketch: SketchEntryPoint,
 } as const satisfies Record<string, Lab2EntryPoint>;
