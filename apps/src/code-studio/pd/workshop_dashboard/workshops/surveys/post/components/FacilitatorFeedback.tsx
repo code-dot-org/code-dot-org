@@ -5,17 +5,17 @@ import {useParams} from 'react-router-dom';
 import {MinSurveyResponseCount} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
 import {SurveyQuestions} from '../../../types';
-import {useWorkshopContext} from '../../../WorkshopLayout';
-import {FreeResponseCard} from '../../components/FreeResponseCard';
-import {ScoreCard} from '../../components/ScoreCard';
-import {LIKERT_QUESTION_FOOTER} from '../../constants';
 import {
   getQuestionDescription,
   isQuestionType,
   prepLikertBreakdown,
-} from '../../utils';
+} from '../../../utils';
+import {useWorkshopContext} from '../../../WorkshopLayout';
+import {FreeResponseCard} from '../../components/FreeResponseCard';
+import {ScoreCard} from '../../components/ScoreCard';
+import {LIKERT_QUESTION_FOOTER} from '../../constants';
 
-import styles from '../../../workshop.module.scss';
+import styles from '../../../WorkshopLayout.module.scss';
 
 export const FacilitatorFeedback = () => {
   const {facilitatorId} = useParams();

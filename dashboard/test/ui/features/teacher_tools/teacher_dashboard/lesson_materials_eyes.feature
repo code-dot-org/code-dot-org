@@ -11,7 +11,7 @@ Feature: Lesson materials page - Eyes
     And I get levelbuilder access
     Given I use a cookie to mock the DCDO key "progress-table-v2-enabled" as "true"
 
-    When I click selector "a:contains(New Section)" once I see it to load a new page
+    When I click selector "#task-button-View-progress-New-Section" once I see it
 
     Then I wait until element "#ui-test-teacher-sidebar" is visible
 

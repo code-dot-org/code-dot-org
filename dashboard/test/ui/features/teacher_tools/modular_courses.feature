@@ -88,7 +88,7 @@ Feature: Using Modular Courses
     When I sign out
     And I sign in as "Teacher_Sally" and go home
 
-    And I click selector "a:contains(Course 2017)" once I see it to load a new page
+    And I navigate to the V2 progress dashboard for "Course 2017"
     And I wait until element "#ui-test-progress-table-v2" is visible
     And I wait until element "#unit-selector-v2" is visible
     # TODO: https://codedotorg.atlassian.net/browse/TEACH-2123 remove `*` from the option text
