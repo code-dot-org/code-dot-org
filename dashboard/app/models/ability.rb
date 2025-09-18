@@ -508,14 +508,6 @@ class Ability
         user.verified_instructor? || user.sections_as_student.any? {|s| s.assigned_csa? && s.teacher&.verified_instructor?}
       end
 
-      can :index, AiTutorInteraction do
-        user.can_view_student_ai_chat_messages? || user.has_ai_tutor_access?
-      end
-
-      can :create, AiTutorInteraction do
-        user.has_ai_tutor_access?
-      end
-
       can :find_toxicity, :aichat do
         user.teacher_can_access_ai_chat? || user.student_can_access_ai_chat?
       end

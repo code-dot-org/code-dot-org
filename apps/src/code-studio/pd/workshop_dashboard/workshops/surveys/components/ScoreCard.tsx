@@ -18,8 +18,8 @@ import {CRITICAL_CONCERN_LIMIT, NEEDS_ATTENTION_LIMIT} from '../constants';
 import {SimpleBarChart} from './BarChartGroup';
 import {PercentageBarGroup} from './PercentageBarGroup';
 
-import styles from './ScoreCardStyles.module.scss';
-import commonStyles from '../../workshop.module.scss';
+import styles from './ScoreCard.module.scss';
+import commonStyles from '../../WorkshopLayout.module.scss';
 
 interface ScoreCardProps {
   title: string;

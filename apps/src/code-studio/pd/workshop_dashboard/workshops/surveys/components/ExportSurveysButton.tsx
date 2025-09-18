@@ -10,7 +10,8 @@ import {useParams} from 'react-router-dom';
 
 import {useFetch} from '@cdo/apps/util/useFetch';
 
-import styles from '../../workshop.module.scss';
+import styles from './ExportSurveysButton.module.scss';
+import commonStyles from '../../WorkshopLayout.module.scss';
 
 export const ExportSurveysButton = () => {
   const {workshopId} = useParams<{workshopId: string}>();
@@ -68,13 +69,13 @@ export const ExportSurveysButton = () => {
       />
       {formsDialogOpen && (
         <CustomDialog
-          className={styles.customDialog}
+          className={commonStyles.customDialog}
           onClose={handleClose}
           aria-labelledby="export-survey-dialog-title"
         >
           <div
             id="dsco-dialog-description"
-            className={styles.customDialogContent}
+            className={commonStyles.customDialogContent}
           >
             <BodyOneText
               id="export-survey-dialog-title"
@@ -116,7 +117,7 @@ export const ExportSurveysButton = () => {
               <Alert
                 type="danger"
                 text={error}
-                className={styles.customDialogError}
+                className={commonStyles.customDialogError}
               />
             )}
           </div>

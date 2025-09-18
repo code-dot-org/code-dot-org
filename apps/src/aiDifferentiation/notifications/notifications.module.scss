@@ -74,7 +74,7 @@ p.text {
 }
 
 li.hrefLink {
-  & a:link {
+  & a {
     border: 1px solid var(--borders-neutral-strong);
     border-radius: 4px;
     padding: 0 8px;
