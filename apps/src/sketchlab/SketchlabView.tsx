@@ -7,6 +7,7 @@ import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
 import {LabProps, LevelProperties} from '@cdo/apps/lab2/types';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
+import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import moduleStyles from './styles/sketchlab-view.module.scss';
@@ -73,6 +74,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
     };
   }, [dispatch]);
 
+  // To do: make PanelContainer accept style prop?
   return (
     <div className={moduleStyles.sketchlabContainer}>
       <div style={{width: leftPanelWidth}} className={panelClassName}>
@@ -88,11 +90,17 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
         separatorProps={leftPanelSeparatorProps}
         isDragging={isDragging}
       />
-      <div style={{width: rightPanelWidth}} className={panelClassName}>
-        <Excalidraw
-          excalidrawAPI={api => setExcalidrawApi(api)}
-          initialData={getInitialData()}
-        />
+      <div style={{width: rightPanelWidth}}>
+        <PanelContainer
+          id="workspace"
+          className={panelClassName}
+          headerContent={'Workspace'}
+        >
+          <Excalidraw
+            excalidrawAPI={api => setExcalidrawApi(api)}
+            initialData={getInitialData()}
+          />
+        </PanelContainer>
       </div>
     </div>
   );
