@@ -99,6 +99,9 @@ const AiTutor2Chat: React.FunctionComponent<AiTutor2ChatProps> = ({
 }) => {
   const [systemPrompt, setSystemPrompt] = useState<string>();
 
+  // Temporarily use query param to disable ai chat
+  const disableAiChat = queryParams('disable-ai-chat');
+
   const fetchPrompt = (promptName: string) => {
     fetchCustomPrompt(promptName)
       .then(prompt => {
@@ -186,6 +189,7 @@ const AiTutor2Chat: React.FunctionComponent<AiTutor2ChatProps> = ({
         levelName={levelName}
         channelId={channelId}
         hideModelChangeMessage={true}
+        disabled={!!disableAiChat}
       />
     </div>
   ) : (
