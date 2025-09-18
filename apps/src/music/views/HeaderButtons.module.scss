@@ -1,85 +1,62 @@
 @use '../../lab2/views/components/layout/variables.scss' as variables;
-@import 'color.scss';
-@import '../../mixins.scss';
+@use '../../mixins.scss' as mixins;
 
 .container {
   display: flex;
   min-width: 190px;
   max-width: calc(100vw - 270px);
+  margin-top: 1px;
   justify-content: end;
+  align-items: center;
+  gap: 0.125rem;
 }
 
-.button {
-  @include remove-button-styles;
-  background-color: $neutral_dark;
-  color: $neutral_light;
+.currentPack {
   display: flex;
-  height: 24px;
-  width: 24px;
-  font-size: 13px;
-  justify-content: center;
-  align-items: center;
-  border-radius: 3px;
-  margin: 2px;
-  transition: opacity 0.2s ease;
-  flex-shrink: 0;
+  flex-direction: row;
+  gap: 0.5rem;
+  margin-inline-end: 0.5rem;
 
-  &Disabled {
-    opacity: 50%;
-    cursor: default;
+  img {
+    height: 21px;
+    border-radius: 0.125rem;
   }
 
-  &InteractionDisabled {
-    cursor: default;
-    background-color: $neutral_dark90;
-  }
-
-  &Wide {
-    width: initial;
-    padding-block: 0;
-    padding-inline: 2px 6px;
-    overflow: hidden;
-    flex-shrink: 1;
-
-    &Image {
-      height: 22px;
-      border-radius: 2px;
-    }
-
-    &Content {
-      padding-block: 0;
-      padding-inline: 8px 16px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-
-      &NoRightPadding {
-        padding-inline-end: 0;
-      }
-    }
-  }
-
-  .currentPack {
-    display: contents;
-  }
-
-  &Skip {
-    width: initial;
-    padding: 0 11px;
-    gap: 9px;
-    flex-shrink: 1;
+  p {
     white-space: nowrap;
     overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: default;
+  }
+}
 
-    span {
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
+.buttonWithPack {
+  background-color: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.125rem;
+  height: 26.25px;
+  padding-block: 0.1875rem;
+  padding-inline: 0.125rem 0.5rem;
+  border: variables.$default-border;
+  border-color: var(--borders-neutral-strong);
+  border-radius: 0.25rem;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background-color: var(--background-neutral-tertiary);
   }
 
-  &HasBorder,
-  &HasBorder:active {
-    border: variables.$default-border !important; // This is overriding the remove-button-styles mixin !important tag
-    padding-inline-start: 0;
+  // Add focus-visible styles
+  @include mixins.focus-styles;
+
+  p {
+    cursor: pointer;
+  }
+
+  i {
+    font-size: 0.8125rem;
   }
 }

@@ -5,7 +5,7 @@ import noResponsesText from '@cdo/static/pd/no-responses-text.png';
 
 import {EmptyState} from './EmptyState';
 
-import styles from '../../workshop.module.scss';
+import styles from '../../WorkshopLayout.module.scss';
 
 export const NoSurveyResponses = () => {
   return (

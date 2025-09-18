@@ -11,7 +11,7 @@ import {Breakdown} from '../../types';
 
 import {PercentageBarGroup} from './PercentageBarGroup';
 
-import styles from '../../workshop.module.scss';
+import styles from '../../WorkshopLayout.module.scss';
 
 interface SelectCardProps {
   title: string;

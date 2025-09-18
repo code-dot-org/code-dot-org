@@ -5,6 +5,7 @@ import {Provider} from 'react-redux';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {TestResults} from '@cdo/apps/constants';
+import localization from '@cdo/apps/localization';
 
 import {getStore} from '../redux';
 
@@ -129,6 +130,12 @@ Fish.prototype.initMLActivities = function () {
 
   const {initAll} = require('@code-dot-org/ml-activities');
 
+  // Localize
+  const msg = Object.entries(fishMsg).reduce((acc, [key, msgFunction]) => {
+    acc[key] = (...args) => localization.translate(msgFunction(...args));
+    return acc;
+  }, {});
+
   // Set initial state for UI elements.
   initAll({
     canvas,
@@ -139,7 +146,7 @@ Fish.prototype.initMLActivities = function () {
     onContinue,
     registerSound: this.studioApp_.registerAudio.bind(this.studioApp_),
     playSound: this.studioApp_.playAudio.bind(this.studioApp_),
-    i18n: fishMsg,
+    i18n: msg,
   });
 };
 

@@ -4,6 +4,7 @@ import {ConfigType} from '@codebridge/types';
 import {css} from '@codemirror/lang-css';
 import {html} from '@codemirror/lang-html';
 import {javascript} from '@codemirror/lang-javascript';
+import {markdown} from '@codemirror/lang-markdown';
 import {LanguageSupport} from '@codemirror/language';
 import React, {useEffect, useMemo, useState} from 'react';
 
@@ -35,6 +36,7 @@ const weblab2LangMapping: {[key: string]: LanguageSupport} = {
   html: html(),
   css: css(),
   js: javascript(),
+  md: markdown(),
 };
 
 const defaultConfig: ConfigType = {
@@ -163,6 +165,7 @@ const Weblab2View: React.FC<
           hiddenContextCallback={aiTutorHelper.getHiddenContextCallback()}
           aiTutorSystemPromptSettings={aiTutorSystemPromptSettings}
           aiTutorMultimodalEnabled={true}
+          aiTutorChatButtonData={[]}
         />
       )}
     </div>

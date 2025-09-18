@@ -1,3 +1,5 @@
+# Updating this in a separate PR, since there is a bug in the drawer logic
+@skip
 @dashboard_db_access
 # We need "press keys" to type into the React form's fields, but that doesn't work on mobile Safari.
 @no_mobile

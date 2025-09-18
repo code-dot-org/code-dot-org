@@ -1,4 +1,11 @@
-export const WEBLAB2_EDITABLE_FILE_TYPES = ['html', 'css', 'js'];
+export const WEBLAB2_EDITABLE_FILE_TYPES = [
+  'html',
+  'css',
+  'js',
+  'md',
+  'txt',
+  'csv',
+];
 
 export const WEBLAB2_IMAGE_FILE_TYPES = ['jpg', 'jpeg', 'png'];
 
