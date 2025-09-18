@@ -17,7 +17,7 @@
     {
       "name": "",
       "description": "",
-      "code": "```\n// Display the URL of the Code.org logo.\r\nimage(\"logo\", \"http://code.org/images/logo.png\");\r\nwrite(getImageURL(\"logo\"));\r\n\n```",
+      "code": "```\n// Display the URL of the Code.org logo.\r\nimage(\"logo\", \"https://studio.code.org/blockly/media/logo.png\");\r\nwrite(getImageURL(\"logo\"));\r\n\n```",
       "app": "",
       "image": null,
       "app_display_type": "codeFromCodeField",
@@ -38,5 +38,5 @@
   "return_value": "Returns a string containing image url for the provided id.",
   "short_description": "Gets the URL for the provided image element id.",
   "syntax": "getImageURL(id)",
-  "tips": "- The string returned contains the image URL. For example  http:// code.org/images/logo.png is returned as https:// studio.code.org/media?u=http%3A%2F%2Fcode.org%2Fimages%2Flogo.png\n"
+  "tips": "- The string returned contains the image URL. For example  https://studio.code.org/blockly/media/logo.png is returned as https:// studio.code.org/media?u=http%3A%2F%2Fcode.org%2Fimages%2Flogo.png\n"
 }

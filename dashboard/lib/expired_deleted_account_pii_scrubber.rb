@@ -88,8 +88,13 @@ class ExpiredDeletedAccountPiiScrubber
     log_to_slack(summary, SLACK_CHANNEL_FOR_ERRORS) if num_errors.positive?
   end
 
+  # This query sometimes exceeds the timeout for the prod database. The reporting database is only seconds
+  # behind the prod database, and the default timeframe for expired accounts is 28 days, so we can use it here without much risk.
+  # This helps avoid timeouts and reduces load on the production database.
   def accounts_to_scrub
-    Queries::User::ExpiredDeletedAccounts.call(deleted_before: deleted_since).where.not(id: processed_user_ids)
+    ActiveRecord::Base.connected_to(role: :reporting) do
+      Queries::User::ExpiredDeletedAccounts.call(deleted_before: deleted_since).where.not(id: processed_user_ids)
+    end
   end
 
   def summary

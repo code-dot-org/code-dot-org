@@ -176,6 +176,10 @@ class ActiveSupport::TestCase
     UnitGroup.find_by_name(unit_name)&.destroy
     CourseOffering.find_by_key(unit_name)&.destroy
 
+    # clear the unit cache to ensure we don't have a stale reference to the
+    # deleted unit and unit group
+    UnitGroup.clear_cache
+
     # create placeholder hourofcode CourseOffering, UnitGroup, Unit and Levels.
     unit = create(:script, :with_levels, levels_count: 10, name: unit_name)
     create(:hoc_course, unit: unit, name: unit_name, family_name: unit_name, published_state: PUBLISHED_STATE.stable)
