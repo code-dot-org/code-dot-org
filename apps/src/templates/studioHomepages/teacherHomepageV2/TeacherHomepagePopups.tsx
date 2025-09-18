@@ -39,7 +39,7 @@ const TeacherHomepagePopups: React.FC<TeacherHomepagePopupsProps> = () => {
   const [existingSchoolInfo, setExistingSchoolInfo] = React.useState<
     SchoolInfo | undefined
   >(undefined);
-  const [AFEDrawerOpen, setAFEDrawerOpen] = React.useState(true); //TODO: set to false
+  const [AFEDrawerOpen, setAFEDrawerOpen] = React.useState(false);
 
   const [hasSeenPopup, setHasSeenPopup] = React.useState(false);
 
@@ -109,10 +109,13 @@ const TeacherHomepagePopups: React.FC<TeacherHomepagePopupsProps> = () => {
     setExistingSchoolInfo,
     setSchoolInfoInterstitialOpen,
     setSchoolInfoConfirmationOpen,
+    setAFEDrawerOpen,
+    setIsLoading,
   ]);
 
   const popup = React.useMemo(() => {
-    if (isLoading || hasSeenPopupInLastDay || hasSeenPopup) {
+    if (isLoading) {
+      //|| hasSeenPopupInLastDay || hasSeenPopup
       return null;
     } else if (
       schoolInfoInterstitialOpen ||

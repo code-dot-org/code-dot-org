@@ -64,8 +64,11 @@ class TeacherDashboardController < ApplicationController
       afe_eligible = current_user&.school_info&.school&.afe_high_needs?
     end
 
-    SchoolInfoInterstitialHelper.update_last_seen_timestamp(current_user)
+    if show_school_info_interstitial
+      SchoolInfoInterstitialHelper.update_last_seen_timestamp(current_user)
+    end
 
+    puts show_school_info_interstitial, show_school_info_confirmation, afe_eligible
     render json: {
       showSchoolInfoInterstitial: show_school_info_interstitial,
       showSchoolInfoConfirmation: show_school_info_confirmation,

@@ -30,10 +30,10 @@ Scenario: School Info Confirmation Dialog
   # Teacher completes school info interstitial
   And I select the "United States" option in dropdown "uitest-country-dropdown"
   And I press keys "31513" for element "#uitest-school-zip"
-  Then I wait until element "#uitest-school-dropdown" contains text "Appling County High School"
-  And I select the "Appling County High School" option in dropdown "uitest-school-dropdown"
+  Then I wait until element "#uitest-school-dropdown" contains text "Appling Christian Academy"
+  And I select the "Appling Christian Academy" option in dropdown "uitest-school-dropdown"
   Then I click selector "button:contains(Save)"
-  Then I click selector "button:contains(Close)"
+  Then I click selector "button:contains(Close)" once I see it
   And I wait until element "#ui-test-drawer-toolbar" is gone
 
   # One week later, the teacher does not see the prompt
