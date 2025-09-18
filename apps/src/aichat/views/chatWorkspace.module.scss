@@ -53,6 +53,22 @@ $tabs-default-spacing: 4px;
   pointer-events: none;
 }
 
+.chatDisabledContainer {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+
+  p {
+    color: var(--text-neutral-quaternary);
+  }
+
+  .chatDisabledIcon {
+    width: 2rem;
+  }
+}
+
 .tabsContainer {
   background-color: var(--background-neutral-secondary);
   padding: $tabs-default-spacing $tabs-default-spacing 0 $tabs-default-spacing;
