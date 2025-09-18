@@ -26,8 +26,6 @@ import {
   UserLevelInteractions,
 } from '@cdo/generated-scripts/sharedConstants';
 
-import moduleStyles from './instructions.module.scss';
-
 interface NavigationButtonProps {
   levelProperties: LevelProperties;
   hasRun: boolean;
@@ -238,8 +236,6 @@ export const ContinueButtonActionNeeded: React.FC<
     <div className={className}>
       <WithConditionalTooltip
         showTooltip={shouldShowTooltip}
-        iconName="fa-question-circle-o"
-        iconClassName={moduleStyles.hiddenIcon}
         tooltipProps={{
           text: tooltipMessage || '',
           direction: 'onTop',
