@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2025_08_28_171244) do
+ActiveRecord::Schema.define(version: 2025_09_18_164923) do
 
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -2018,21 +2018,11 @@ ActiveRecord::Schema.define(version: 2025_08_28_171244) do
     t.boolean "login_required", default: false, null: false
     t.text "properties"
     t.string "new_name"
-    t.string "family_name"
-    t.string "published_state", default: "in_development"
-    t.string "instruction_type"
-    t.string "instructor_audience"
-    t.string "participant_audience"
     t.integer "original_unit_group_id"
     t.boolean "hide_within_course", default: false
-    t.index ["family_name"], name: "index_scripts_on_family_name"
-    t.index ["instruction_type"], name: "index_scripts_on_instruction_type"
-    t.index ["instructor_audience"], name: "index_scripts_on_instructor_audience"
     t.index ["name"], name: "index_scripts_on_name", unique: true
     t.index ["new_name"], name: "index_scripts_on_new_name", unique: true
     t.index ["original_unit_group_id"], name: "index_scripts_on_original_unit_group_id"
-    t.index ["participant_audience"], name: "index_scripts_on_participant_audience"
-    t.index ["published_state"], name: "index_scripts_on_published_state"
     t.index ["wrapup_video_id"], name: "index_scripts_on_wrapup_video_id"
   end
 
