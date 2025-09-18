@@ -335,6 +335,7 @@ class Level < ApplicationRecord
     'PublicKeyCryptography', # widget
     'Pythonlab', # no ideal solution
     'ScriptCompletion', # unknown
+    'Sketch', # no ideal solution
     'StandaloneVideo', # no user submitted content
     'TextCompression', # widget
     'TextMatch', # dsl defined, covered in dsl
@@ -342,7 +343,6 @@ class Level < ApplicationRecord
     'Vigenere', # widget
     'Weblab', # no ideal solution
     'Weblab2', # no ideal solution
-    'Whiteboard', # no ideal solution
     'Widget', # widget
   ].freeze
   TYPES_WITH_IDEAL_LEVEL_SOURCE = %w(

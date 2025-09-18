@@ -50,6 +50,7 @@ class LevelsController < ApplicationController
     Poetry,
     PublicKeyCryptography,
     Pythonlab,
+    Sketch,
     StandaloneVideo,
     StarWarsGrid,
     Studio,
@@ -58,8 +59,7 @@ class LevelsController < ApplicationController
     Unplugged,
     Vigenere,
     Weblab,
-    Weblab2,
-    Whiteboard
+    Weblab2
   ]
 
   # GET /levels
