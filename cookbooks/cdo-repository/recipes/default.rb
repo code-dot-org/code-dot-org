@@ -3,9 +3,10 @@
 # Recipe:: default
 #
 
-# Sync repo via SSH if key is provided. Chef managed instances (staging, test, levelbuilder, production) have
-# the SSH key `ubuntu@code.org` provisioned from the Chef `baseline` Role. Adhocs (unless they've explicitly been
-# configured to be Chef-managed) use a read-only GitHub personal access token instead.
+# Chef Managed environments (staging/test/levelbuilder/production) use an SSH key configured in Chef Attributes
+# (cdo-github-access.id_rsa, cdo-github-access.id_rsa.pub) that they use to authenticate to GitHub particularly to commit
+# and push content. Adhocs provisioned with `CHEF_MANAGED=true` (rare) also have these SSH Chef Attributes in addition to a
+# read-only GitHub token that is provisioned on all adhocs from an AWS Secret.
 include_recipe 'cdo-github-access'
 has_ssh_key = node['cdo-github-access'] && node['cdo-github-access']['id_rsa'] != ''
 if has_ssh_key
