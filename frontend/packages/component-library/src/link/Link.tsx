@@ -109,44 +109,30 @@ const Link: React.FunctionComponent<LinkProps> = ({
  */
 const ABSOLUTE_URL_REGEX = /^(?:[a-z][a-z0-9+.-]*:|\/\/)/i;
 
-/**
- * Checks if a given URL is external
- *
- * Taken from https://github.com/remix-run/react-router/blob/20d8307d4a51c219f6e13e0b66461e7162d944e4/packages/react-router/lib/dom/lib.tsx#L1292-L1322
- *
- * Note: this currently only works client-side (because it uses window.location.href)
- */
+const INTERNAL_URL_REGEX_LIST = [
+  // Matches "https://code.org", "https://studio.code.org", "http://localhost-studio.code.org:3000/"
+  /^(?:https?:\/\/)?(?:[a-z0-9-]+\.)?code\.org(:\d+)?/i,
+  // Storybooks
+  /^(?:https?:\/\/)?localhost(:\d+)?/i,
+  // dev-code.org
+  /^(?:https?:\/\/)?dev-code.org(:\d+)?/i,
+  // hourofcode.com
+  /^(?:https?:\/\/)?hourofcode.com(:\d+)?/i,
+  // csedweek.org
+  /^(?:https?:\/\/)?csedweek.org(:\d+)?/i,
+];
+
 const isExternalUrl = (href: string) => {
   const isAbsolute = ABSOLUTE_URL_REGEX.test(href);
 
-  if (typeof href !== 'string' || !isAbsolute) {
+  if (!isAbsolute) {
     return false;
   }
 
-  const isBrowser =
-    typeof window !== 'undefined' &&
-    typeof window.document !== 'undefined' &&
-    typeof window.document.createElement !== 'undefined';
+  // Tests the absolute URL (e.g. "https://example.com") against our list of internal URLs
+  const isInternal = INTERNAL_URL_REGEX_LIST.some(regex => regex.test(href));
 
-  if (!isBrowser) {
-    return false;
-  }
-
-  // Only check for external origins client-side
-  try {
-    const currentUrl = new URL(window.location.href);
-    const targetUrl = /^\/\//.test(href)
-      ? new URL(currentUrl.protocol + href)
-      : new URL(href);
-
-    if (targetUrl.origin !== currentUrl.origin) {
-      return true;
-    }
-  } catch {
-    // invalid URL
-  }
-
-  return false;
+  return !isInternal;
 };
 
 export default Link;

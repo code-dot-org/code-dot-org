@@ -1,4 +1,4 @@
-import {render, screen} from '@testing-library/react';
+import {render, screen, cleanup} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
 
@@ -85,25 +85,6 @@ describe('Design System - Link', () => {
   });
 
   describe('automatic external link detection', () => {
-    const originalWindow = window;
-
-    beforeEach(() => {
-      Object.defineProperty(window, 'location', {
-        value: {
-          origin: 'https://studio.code.org',
-          href: 'https://studio.code.org/home',
-        },
-        writable: true,
-      });
-    });
-
-    afterEach(() => {
-      Object.defineProperty(window, 'location', {
-        value: originalWindow.location,
-        writable: true,
-      });
-    });
-
     it('automatically detects external links and shows external icon', () => {
       render(<Link href="https://google.com">External Link</Link>);
 
@@ -142,16 +123,32 @@ describe('Design System - Link', () => {
       ).not.toBeInTheDocument();
     });
 
-    it('treats same-origin links as internal', () => {
-      render(
-        <Link href="https://studio.code.org/different-path">Same Origin</Link>,
-      );
+    it('treats internal links correctly', () => {
+      const paths = [
+        'https://code.org',
+        'https://studio.code.org',
+        'https://studio.code.org/teacher_dashboard/home',
+        'https://localhost-studio.code.org:3000',
+        'https://localhost-studio.code.org:3000/teacher_dashboard/home',
+        'https://localhost',
+        'https://localhost:3000',
+        'http://localhost:6006/?path=/story/designsystem-link--external-link-auto-detected',
+        'https://dev-code.org',
+        'https://hourofcode.com',
+        'https://csedweek.org',
+      ];
 
-      const link = screen.getByRole('link', {name: 'Same Origin'});
-      expect(link).not.toHaveAttribute('rel');
-      expect(
-        screen.queryByTestId('font-awesome-v6-icon'),
-      ).not.toBeInTheDocument();
+      for (const path of paths) {
+        render(<Link href={path}>{path}</Link>);
+
+        const link = screen.getByRole('link', {name: path});
+        expect(link).not.toHaveAttribute('rel');
+        expect(
+          screen.queryByTestId('font-awesome-v6-icon'),
+        ).not.toBeInTheDocument();
+
+        cleanup();
+      }
     });
 
     it('allows external prop to override automatic detection (external=true)', () => {
