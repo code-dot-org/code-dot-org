@@ -49,6 +49,7 @@ interface ChatWorkspaceProps {
   modelParameters: ModelParameters;
   clientType: AiChatClientType;
   chatButtons?: ChatButtonAndKey[];
+  disabled?: boolean;
   hiddenContextCallback?: () => Promise<string>;
   hideModelChangeMessage?: boolean;
 
@@ -69,6 +70,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   modelParameters,
   clientType,
   chatButtons,
+  disabled = false,
   hiddenContextCallback,
   multimodalEnabled = false,
   levelName,
@@ -270,6 +272,8 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     tabPanelsContainerClassName: moduleStyles.tabPanelsContainer,
   };
 
+  const uploadDisabled = !canChatWithModel || !!selectedStudent || disabled;
+
   return (
     <div id="chat-workspace-area" className={moduleStyles.chatWorkspace}>
       {selectedStudent ? (
@@ -278,6 +282,8 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
         <ChatEventsList
           events={visibleItems}
           buildAssetUrl={multimodalAvailable ? buildAssetUrl : undefined}
+          clientType={clientType}
+          disabled={disabled}
         />
       )}
 
@@ -298,12 +304,13 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
             chatButtons={chatButtons}
             hiddenContextCallback={hiddenContextCallback}
             multimodalAvailable={multimodalAvailable}
+            disabled={disabled}
           />
         )}
         <div className={moduleStyles.buttonRow}>
           {multimodalAvailable && (
             <UploadButton
-              isDisabled={!canChatWithModel || !!selectedStudent}
+              isDisabled={uploadDisabled}
               levelName={levelName}
               hasStarterAssets={hasStarterAssets}
               buildAssetUrl={buildAssetUrl}
