@@ -72,10 +72,8 @@ class UserScript < ApplicationRecord
 
     # If we found a UserScript with no unit group, and the unit's original unit group is not nil,
     # migrate the UserScript to have that unit group.
-    if user_script.unit_group.nil? && original_unit_group
-      user_script.update!(unit_group: original_unit_group)
-    end
-
+    user_script.unit_group = original_unit_group
+    user_script.save! if user_script.unit_group_id_changed?
     user_script
   end
 
