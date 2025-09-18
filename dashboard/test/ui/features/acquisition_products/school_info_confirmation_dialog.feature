@@ -44,7 +44,7 @@ Scenario: School Info Confirmation Dialog
   # One year later, the teacher sees the school info confirmation dialog and confirms at the same school
   And one year passes for user "Teacher_Chuba"
   Then I reload the page
-  And I wait to see "#ui-test-drawer-toolbar"
+  And element "#ui-test-drawer-toolbar" is visible
   Then I click selector "button:contains(I'm still teaching here)"
   And I wait until element "#ui-test-drawer-toolbar" is gone
 
