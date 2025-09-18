@@ -303,7 +303,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
               </div>
             ))}
           </div>
-          {/*availableTabs[currentTab]*/}
           <NavigationArea isResourcePanel={true} {...instructionsProps} />
           {isSettingsOpen && (
             <SettingsPanel
