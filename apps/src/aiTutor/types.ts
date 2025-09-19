@@ -17,3 +17,10 @@ export interface AiTutorContext {
   longInstructions?: string;
   documentation?: string;
 }
+
+export interface UserAddedContext {
+  sourceCode: string;
+  filename: string;
+  lineReference?: {start: number; end: number};
+  id: string;
+}

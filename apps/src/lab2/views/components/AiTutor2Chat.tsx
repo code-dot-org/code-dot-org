@@ -10,6 +10,7 @@ import {
   SystemPromptSettings,
 } from '@cdo/apps/aichat/types';
 import ChatWorkspace from '@cdo/apps/aichat/views/ChatWorkspace';
+import {AiTutorContextHelper} from '@cdo/apps/aiTutor/helpers/aiTutorContextHelper';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import HttpClient from '@cdo/apps/util/HttpClient';
@@ -86,6 +87,7 @@ interface AiTutor2ChatProps {
   levelName?: string;
   channelId?: string;
   aiTutorChatButtonData?: ChatButtonData[];
+  aiTutorContextHelper?: AiTutorContextHelper<object>;
 }
 
 // A free chat with lab-supplied context added to each question.
@@ -96,6 +98,7 @@ const AiTutor2Chat: React.FunctionComponent<AiTutor2ChatProps> = ({
   levelName,
   channelId,
   aiTutorChatButtonData,
+  aiTutorContextHelper,
 }) => {
   const [systemPrompt, setSystemPrompt] = useState<string>();
 

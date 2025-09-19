@@ -47,6 +47,7 @@ export const useFileRowOptions = (
   const {
     config: {editableFileTypes},
     levelProperties,
+    aiTutorContextHelper,
   } = useCodebridgeContext();
   const {files: projectFiles, folders: projectFolders} = useAppSelector(
     state => state.lab2Project.projectSources?.source as MultiFileSource
@@ -108,8 +109,21 @@ export const useFileRowOptions = (
         labelText: codebridgeI18n.saveToBackpackTitle(),
         clickHandler: () => openSaveToBackpackPrompt({file, backpackApi}),
       },
+      {
+        condition: aiTutorContextHelper !== undefined,
+        iconName: 'paperclip-vertical',
+        labelText: codebridgeI18n.addToAiTutorContext(),
+        clickHandler: () => {
+          aiTutorContextHelper?.addToUserAddedContext(
+            file.contents,
+            file.name,
+            undefined
+          );
+        },
+      },
     ],
     [
+      aiTutorContextHelper,
       appName,
       backpackApi,
       editableFileTypes,

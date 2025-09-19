@@ -1,4 +1,5 @@
 {
+  "addToAiTutorContext": "Add as AI Tutor context",
   "addSubFolder": "Add sub-folder",
   "areYouSure": "Are you sure?",
   "cannotEditFile": "Cannot currently edit files of type {language}",
