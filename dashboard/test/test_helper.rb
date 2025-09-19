@@ -57,6 +57,7 @@ require 'testing/lock_thread'
 require 'testing/transactional_test_case'
 require 'testing/spec_syntax'
 require 'testing/capture_queries'
+require 'testing/cdo_contentful'
 require 'testing/rspec_mocks'
 require 'testing/vcr_cassettes'
 

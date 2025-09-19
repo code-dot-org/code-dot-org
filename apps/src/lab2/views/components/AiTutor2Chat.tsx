@@ -1,7 +1,7 @@
 import {Button} from '@code-dot-org/component-library/button';
 import {FontAwesomeV6IconProps} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useMemo} from 'react';
 
 import {
   ModelParameters,
@@ -46,7 +46,7 @@ const modelParameters: ModelParameters = {
 } as const;
 
 // Some pre-canned chat buttons.
-const chatButtonData: ChatButtonData[] = [
+const defaultChatButtonData: ChatButtonData[] = [
   {
     label: 'Give an example',
     value: 'Can you give me an example?',
@@ -79,35 +79,13 @@ const chatButtonData: ChatButtonData[] = [
   },
 ] as const;
 
-const chatButtons = chatButtonData.map(button => ({
-  ChatButton: ({onClick}: {onClick: ChatButtonClickHandler}) => (
-    <Button
-      className={moduleStyles.chatButton}
-      aria-label={button.label}
-      iconLeft={
-        {
-          ...button.icon,
-          className: classNames({
-            [moduleStyles['icon']]: true,
-            [moduleStyles[`icon-${button.icon?.iconName}`]]: button.icon,
-          }),
-        } as FontAwesomeV6IconProps
-      }
-      onClick={() => onClick(button.value, button.analyticsProperties)}
-      text={button.label}
-      size="s"
-      type="secondary"
-      color="black"
-    />
-  ),
-  key: button.label,
-}));
 interface AiTutor2ChatProps {
   hiddenContextCallback: () => Promise<string>;
   aiTutorSystemPromptSettings?: SystemPromptSettings;
   aiTutorMultimodalEnabled?: boolean;
   levelName?: string;
   channelId?: string;
+  aiTutorChatButtonData?: ChatButtonData[];
 }
 
 // A free chat with lab-supplied context added to each question.
@@ -117,6 +95,7 @@ const AiTutor2Chat: React.FunctionComponent<AiTutor2ChatProps> = ({
   aiTutorMultimodalEnabled = false,
   levelName,
   channelId,
+  aiTutorChatButtonData,
 }) => {
   const [systemPrompt, setSystemPrompt] = useState<string>();
 
@@ -168,6 +147,33 @@ const AiTutor2Chat: React.FunctionComponent<AiTutor2ChatProps> = ({
     console.log('🤖: aiTutorModelId:', aiTutorModelId);
   }, []);
 
+  const chatButtons = useMemo(() => {
+    const chatButtonDataToUse = aiTutorChatButtonData || defaultChatButtonData;
+    return chatButtonDataToUse.map(button => ({
+      ChatButton: ({onClick}: {onClick: ChatButtonClickHandler}) => (
+        <Button
+          className={moduleStyles.chatButton}
+          aria-label={button.label}
+          iconLeft={
+            {
+              ...button.icon,
+              className: classNames({
+                [moduleStyles['icon']]: true,
+                [moduleStyles[`icon-${button.icon?.iconName}`]]: button.icon,
+              }),
+            } as FontAwesomeV6IconProps
+          }
+          onClick={() => onClick(button.value, button.analyticsProperties)}
+          text={button.label}
+          size="s"
+          type="secondary"
+          color="black"
+        />
+      ),
+      key: button.label,
+    }));
+  }, [aiTutorChatButtonData]);
+
   return systemPrompt ? (
     <div className={moduleStyles.container}>
       <ChatWorkspace
@@ -179,6 +185,7 @@ const AiTutor2Chat: React.FunctionComponent<AiTutor2ChatProps> = ({
         multimodalEnabled={aiTutorMultimodalEnabled}
         levelName={levelName}
         channelId={channelId}
+        hideModelChangeMessage={true}
       />
     </div>
   ) : (

@@ -11,8 +11,7 @@ Feature: Send and receive messages in the AI differentiation chat
     # Teacher views lesson page and floating action button
     When I sign in as "Stilgar"
     And I get debug info for the current user
-    And I am on "http://studio.code.org/home"
-    And I wait until element "#homepage-container" is visible
+    And I am on "http://studio.code.org/teacher_dashboard/home"
     And element "#sign_in_or_user" contains text "Stilgar"
     # Close the FAB
     And I wait until element "#ui-floatingActionButton" is visible
@@ -75,8 +74,7 @@ Feature: Send and receive messages in the AI differentiation chat
     # Teacher views lesson page and floating action button
     When I sign in as "Stilgar"
     And I get debug info for the current user
-    And I am on "http://studio.code.org/home"
-    And I wait until element "#homepage-container" is visible
+    And I am on "http://studio.code.org/teacher_dashboard/home"
     And element "#sign_in_or_user" contains text "Stilgar"
     And I am on "http://studio.code.org/courses/csp-2025/units/4"
     And I wait until element "#ui-floatingActionButton" is visible
@@ -112,8 +110,7 @@ Feature: Send and receive messages in the AI differentiation chat
     # Teacher views lesson page and floating action button
     When I sign in as "Stilgar"
     And I get debug info for the current user
-    And I am on "http://studio.code.org/home"
-    And I wait until element "#homepage-container" is visible
+    And I am on "http://studio.code.org/teacher_dashboard/home"
     And element "#sign_in_or_user" contains text "Stilgar"
     And element "#ui-floatingActionButton" is visible
 
@@ -134,8 +131,8 @@ Feature: Send and receive messages in the AI differentiation chat
     When I am on "http://studio.code.org/users/edit"
     And I click selector "input[name='aiTeacherDiffToggle']" once I see it
 
-    When I am on "http://studio.code.org/home"
-    And I wait until element "#homepage-container" is visible
+    When I am on "http://studio.code.org/teacher_dashboard/home"
+    And I wait until element "#teacher-home-header" is visible
     And element "#ui-floatingActionButton" does not exist
 
   @chrome

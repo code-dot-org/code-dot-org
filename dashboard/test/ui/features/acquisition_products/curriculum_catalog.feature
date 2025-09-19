@@ -25,7 +25,7 @@ Feature: Curriculum Catalog Page
     Then I click selector "a:contains(Create Section)"
     And I wait until current URL contains "/home"
     And I wait for jquery to load
-    And I wait until element "h3:contains(Create a new section)" is visible
+    And I wait until element "button:contains(New class section)" is visible
 
   #Expanded card scenarios
   @no_mobile
@@ -111,7 +111,7 @@ Feature: Curriculum Catalog Page
     Then I click selector "a:contains(Create Section)"
     And I wait until current URL contains "/home"
     And I wait for jquery to load
-    And I wait until element "h3:contains(Create a new section)" is visible
+    And I wait until element "button:contains(New class section)" is visible
 
   @only_mobile
   Scenario: On mobile, Signed-out User sees the Learn More button on Catalog Cards
