@@ -1,15 +1,14 @@
 # frozen_string_literal: true
 
 module CdoContentful
-  module CsForAll
+  module Marketing
     mattr_accessor :config
 
     self.config = ActiveSupport::OrderedOptions.new.tap do |config|
       config.client = ActiveSupport::OrderedOptions.new.tap do |client|
-        client.space = '27jkibac934d'
+        client.space = '90t6bu6vlf76'
         client.access_token = nil
-        client.api_url = 'preview.contentful.com'
-        client.namespace = 'master'
+        client.api_url = 'cdn.contentful.com'
       end
     end.freeze
 

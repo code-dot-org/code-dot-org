@@ -7,6 +7,8 @@ class ContentfulNotificationSourceTest < ActionDispatch::IntegrationTest
 
   TestEntry = Struct.new(:id, :content_type, :first_published_at, :fields, keyword_init: true)
 
+  subject(:contentful_source) {Marketing::DashboardNotifications::ContentfulNotificationSource.new}
+
   let(:entry_id_1) {SecureRandom.hex(10)}
   let(:entry_id_2) {SecureRandom.hex(10)}
   let(:yesterday) {1.day.ago}
@@ -14,8 +16,6 @@ class ContentfulNotificationSourceTest < ActionDispatch::IntegrationTest
   let(:later) {2.days.from_now}
   let(:user) {create(:user)}
   let(:other_user) {create(:user)}
-  let(:marketing_contentful_client_mock) {stub(:marketing_contentful_client)}
-  let!(:contentful_source) {Marketing::DashboardNotifications::ContentfulNotificationSource.new(marketing_contentful_client_mock)}
 
   let(:entry_1) do
     TestEntry.new(
@@ -52,6 +52,7 @@ class ContentfulNotificationSourceTest < ActionDispatch::IntegrationTest
   end
 
   before do
+    CdoContentful::Marketing::Entry::DashboardNotification.stubs(:find_each)
     CDO.shared_cache.clear
     sign_in user
   end
@@ -61,11 +62,13 @@ class ContentfulNotificationSourceTest < ActionDispatch::IntegrationTest
   end
 
   describe 'get_contentful_notifications_for_user' do
+    let(:locale) {'es-ES'}
+
     context 'with contentful data' do
       it 'returns user external notifications' do
-        marketing_contentful_client_mock.expects(:entries).with('en-US', 'dashboard-notification').returns([entry_1, entry_2]).once
+        CdoContentful::Marketing::Entry::DashboardNotification.expects(:find_each).with(locale:).multiple_yields([entry_1], [entry_2])
 
-        results = contentful_source.get(user_id: user.id, locale: 'en-US')
+        results = contentful_source.get(user_id: user.id, locale:)
 
         _(results.length).must_equal 2
 
@@ -84,21 +87,21 @@ class ContentfulNotificationSourceTest < ActionDispatch::IntegrationTest
 
       it 'only returns active external notifications' do
         create_external_notification(user, external_id: entry_id_2, is_dismissed: true)
-        marketing_contentful_client_mock.expects(:entries).with('other-locale', 'dashboard-notification').returns([entry_1, entry_2]).once
+        CdoContentful::Marketing::Entry::DashboardNotification.expects(:find_each).with(locale:).multiple_yields([entry_1], [entry_2])
 
-        results = contentful_source.get(user_id: user.id, locale: 'other-locale')
+        results = contentful_source.get(user_id: user.id, locale:)
 
         _(results.length).must_equal 1
         _(results[0][:external_id]).must_equal entry_id_1
       end
 
       it 'adds read_at timestamps' do
-        marketing_contentful_client_mock.expects(:entries).with('en-US', 'dashboard-notification').returns([entry_1, entry_2]).once
+        CdoContentful::Marketing::Entry::DashboardNotification.expects(:find_each).with(locale:).multiple_yields([entry_1], [entry_2])
 
         create_external_notification(user, external_id: entry_id_1, read_at: tomorrow)
         create_external_notification(user, external_id: entry_id_2, read_at: later)
 
-        results = contentful_source.get(user_id: user.id, locale: 'en-US')
+        results = contentful_source.get(user_id: user.id, locale:)
 
         _(results.length).must_equal 2
         _(results[0][:external_id]).must_equal entry_id_1
@@ -122,29 +125,29 @@ class ContentfulNotificationSourceTest < ActionDispatch::IntegrationTest
           },
           )
 
-        marketing_contentful_client_mock.expects(:entries).with('en-US', 'dashboard-notification').returns([expired_entry]).once
+        CdoContentful::Marketing::Entry::DashboardNotification.expects(:find_each).with(locale:).yields(expired_entry)
 
-        results = contentful_source.get(user_id: user.id, locale: 'en-US')
+        results = contentful_source.get(user_id: user.id, locale:)
 
         _(results.length).must_equal 0
       end
 
       it 'caches contentful entries for 2 hours per locale' do
-        marketing_contentful_client_mock.expects(:entries).with('en-US', 'dashboard-notification').returns([entry_1]).once
+        CdoContentful::Marketing::Entry::DashboardNotification.expects(:find_each).with(locale:).yields(entry_1)
 
-        results1 = contentful_source.get(user_id: user.id, locale: 'en-US')
+        results1 = contentful_source.get(user_id: user.id, locale:)
         _(results1.length).must_equal 1
 
-        results2 = contentful_source.get(user_id: user.id, locale: 'en-US')
+        results2 = contentful_source.get(user_id: user.id, locale:)
         _(results2.length).must_equal 1
       end
 
       it 'uses separate cache keys for different locales' do
-        marketing_contentful_client_mock.expects(:entries).with('en-US', 'dashboard-notification').returns([entry_1]).once
-        marketing_contentful_client_mock.expects(:entries).with('es-ES', 'dashboard-notification').returns([entry_2]).once
+        CdoContentful::Marketing::Entry::DashboardNotification.expects(:find_each).with(locale: 'en-US').yields(entry_1)
+        CdoContentful::Marketing::Entry::DashboardNotification.expects(:find_each).with(locale:).yields(entry_2)
 
         results_en = contentful_source.get(user_id: user.id, locale: 'en-US')
-        results_es = contentful_source.get(user_id: user.id, locale: 'es-ES')
+        results_es = contentful_source.get(user_id: user.id, locale:)
 
         _(results_en.length).must_equal 1
         _(results_es.length).must_equal 1
@@ -153,13 +156,13 @@ class ContentfulNotificationSourceTest < ActionDispatch::IntegrationTest
       end
 
       it 'cache expires after 1 hour' do
-        marketing_contentful_client_mock.expects(:entries).with('en-US', 'dashboard-notification').returns([entry_1]).once
-        results1 = contentful_source.get(user_id: user.id, locale: 'en-US')
+        CdoContentful::Marketing::Entry::DashboardNotification.expects(:find_each).with(locale:).yields(entry_1)
+        results1 = contentful_source.get(user_id: user.id, locale:)
         _(results1.length).must_equal 1
 
         travel 2.hours do
-          marketing_contentful_client_mock.expects(:entries).with('en-US', 'dashboard-notification').returns([entry_2]).once
-          results2 = contentful_source.get(user_id: user.id, locale: 'en-US')
+          CdoContentful::Marketing::Entry::DashboardNotification.expects(:find_each).with(locale:).yields(entry_2)
+          results2 = contentful_source.get(user_id: user.id, locale:)
           _(results2.length).must_equal 1
           _(results2[0][:external_id]).must_equal entry_id_2
         end

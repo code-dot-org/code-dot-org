@@ -595,7 +595,7 @@ GEM
       ruby-progressbar
     minitest-spec-context (0.0.5)
     minitest-stub-const (0.6)
-    mocha (1.1.0)
+    mocha (1.2.1)
       metaclass (~> 0.0.1)
     msgpack (1.7.0)
     multi_json (1.15.0)
@@ -1080,7 +1080,7 @@ DEPENDENCIES
   minitest-reporters (~> 1.2.0.beta3)
   minitest-spec-context (~> 0.0.3)
   minitest-stub-const (~> 0.6)
-  mocha
+  mocha (~> 1.2.1)
   mutex_m
   mysql2 (>= 0.4.1)
   nakayoshi_fork
