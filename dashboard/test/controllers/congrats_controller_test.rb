@@ -26,7 +26,7 @@ class CongratsControllerTest < ActionController::TestCase
   end
 
   test "cached query test for hoc course" do
-    hoc_course = create(:hoc_course, published_state: 'stable')
+    hoc_course = create(:hoc_course)
 
     setup_script_cache
     UnitGroup.stubs(:should_cache?).returns true
