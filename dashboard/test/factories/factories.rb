@@ -1160,7 +1160,6 @@ FactoryBot.define do
   factory :unit, aliases: [:script] do
     sequence(:name) {|n| "bogus-script-#{n}"}
     is_migrated {true}
-    published_state {nil}
 
     trait :in_single_unit_course do
       transient do
