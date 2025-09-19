@@ -901,6 +901,9 @@ Dashboard::Application.routes.draw do
     get '/dashboardapi/v1/pd/workshops_as_program_manager_for_pl_page', to: 'pd/professional_learning#workshops_as_program_manager_for_pl_page'
     post '/dashboardapi/v1/pd/regional_partner_mini_contacts', to: 'api/v1/pd/regional_partner_mini_contacts#create'
     post '/dashboardapi/v1/amazon_future_engineer_submit', to: 'api/v1/amazon_future_engineer#submit'
+    get '/dashboardapi/v1/teaching_profile_data', to: 'api/v1/teaching_profile_data#show'
+    post '/dashboardapi/v1/teaching_profile_data', to: 'api/v1/teaching_profile_data#create'
+    patch '/dashboardapi/v1/teaching_profile_data', to: 'api/v1/teaching_profile_data#update'
 
     post '/dashboardapi/v1/foorm/simple_survey_submission', action: :create, controller: 'api/v1/foorm_simple_survey_submissions'
 

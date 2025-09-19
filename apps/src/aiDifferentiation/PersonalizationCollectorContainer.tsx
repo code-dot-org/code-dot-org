@@ -13,6 +13,7 @@ import {
 } from './PersonalizationAnswers';
 import PersonalizationQuestion from './PersonalizationQuestion';
 import {PERSONALIZATION_PROMPTS} from './personalizationQuestions';
+import {saveTeachingProfileData} from './teachingProfileApi';
 
 import style from './personalization-information.module.scss';
 
@@ -30,6 +31,7 @@ interface PersonalizationData {
 
 const PersonalizationCollectorContainer: React.FC = () => {
   const [questionsNumber, setQuestionsNumber] = React.useState(0);
+  const [isSaving, setIsSaving] = React.useState(false);
   const [personalizationData, setPersonalizationData] =
     React.useState<PersonalizationData>({
       selectedGoals: [],
@@ -46,7 +48,7 @@ const PersonalizationCollectorContainer: React.FC = () => {
   const NEXT = 1;
   const BACK = -1;
 
-  const onCarouselPress = (direction: number) => {
+  const onCarouselPress = async (direction: number) => {
     if (direction === NEXT && questionsNumber === 0) {
       setPersonalizationData(prev => ({
         ...prev,
@@ -54,13 +56,38 @@ const PersonalizationCollectorContainer: React.FC = () => {
       }));
     }
 
-    if (
-      (direction === BACK && questionsNumber === 0) ||
-      (direction === NEXT &&
-        questionsNumber === PERSONALIZATION_PROMPTS.length - 1)
-    ) {
+    if (direction === NEXT) {
+      setIsSaving(true);
+      try {
+        await saveTeachingProfileData(personalizationData);
+      } catch (error) {
+        console.error('Failed to save teaching profile data:', error);
+      } finally {
+        setIsSaving(false);
+      }
+    }
+
+    if (direction === BACK && questionsNumber === 0) {
       return;
     }
+
+    if (
+      direction === NEXT &&
+      questionsNumber === PERSONALIZATION_PROMPTS.length - 1
+    ) {
+      if (!isSaving) {
+        setIsSaving(true);
+        try {
+          await saveTeachingProfileData(personalizationData);
+        } catch (error) {
+          console.error('Failed to save final teaching profile data:', error);
+        } finally {
+          setIsSaving(false);
+        }
+      }
+      return;
+    }
+
     setQuestionsNumber(questionsNumber + direction);
   };
 
@@ -169,11 +196,12 @@ const PersonalizationCollectorContainer: React.FC = () => {
         />
         <Button
           id={'next-button'}
-          text={i18n.next()}
+          text={isSaving ? i18n.saving() : i18n.next()}
           type="primary"
           size="m"
           onClick={() => onCarouselPress(NEXT)}
-          iconRight={{iconName: 'angle-right'}}
+          disabled={isSaving}
+          iconRight={isSaving ? undefined : {iconName: 'angle-right'}}
         />
       </div>
     </div>
