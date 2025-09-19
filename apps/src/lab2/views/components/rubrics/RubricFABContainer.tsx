@@ -62,26 +62,15 @@ const RubricFABContainer: React.FC = () => {
     [unitName, courseName, currentLevelName]
   );
 
-  const canShow = useMemo(() => {
-    return (
-      appName &&
-      isTeacher &&
-      showRubric &&
-      !labLoading &&
-      !isLoadingRubric &&
-      rubricData &&
-      // Only show the rubric FAB is the resource panel is enabled
-      isUsingResourcePanel(appName, isProjectLevel || false)
-    );
-  }, [
-    appName,
-    isTeacher,
-    showRubric,
-    labLoading,
-    isLoadingRubric,
-    rubricData,
-    isProjectLevel,
-  ]);
+  const canShow =
+    appName &&
+    isTeacher &&
+    showRubric &&
+    !labLoading &&
+    !isLoadingRubric &&
+    rubricData &&
+    // Only show the rubric FAB is the resource panel is enabled
+    isUsingResourcePanel(appName, isProjectLevel || false);
 
   // Temporary hack: show/hide the AI Differentiation FAB based on if the Rubric FAB is showing.
   // Note that currently, the AI Diff FAB will be out of date on Lab2 levels since it relies on
