@@ -7,13 +7,14 @@ import {
   nextLevelId,
 } from '@cdo/apps/code-studio/progressReduxSelectors';
 import {queryParams} from '@cdo/apps/code-studio/utils';
+import lab2I18n from '@cdo/apps/lab2/locale';
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
 import {isPredictResponseSubmitted} from '@cdo/apps/lab2/redux/predictLevelRedux';
 import {LevelProperties} from '@cdo/apps/lab2/types';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
-import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
+import commonI18n from '@cdo/locale';
 
 import TextToSpeech from '../TextToSpeech';
 
@@ -161,13 +162,16 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
     if (submittable) {
       return undefined;
     }
-    const action = hasNextLevel ? 'continue' : 'finish';
     if (isPredictLevel) {
-      return `To ${action}, submit your prediction`;
+      return hasNextLevel
+        ? lab2I18n.toContinueSubmitPrediction()
+        : lab2I18n.toFinishSubmitPrediction();
     } else if (hasValidationConditions && !validationSatisfied) {
-      return `To ${action}, validate your code`;
+      return hasNextLevel
+        ? lab2I18n.toContinueValidate()
+        : lab2I18n.toFinishValidate();
     } else if (requireRun && !hasRun) {
-      return `To ${action}, run your code`;
+      return hasNextLevel ? lab2I18n.toContinueRun() : lab2I18n.toFinishRun();
     }
     return undefined;
   }, [
@@ -219,9 +223,9 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
   const submitTooltipMessage = useMemo(() => {
     if (submittable && !submitButtonEnabled) {
       if (requireRun || !hasRun) {
-        return `To submit, edit and run your code`;
+        return lab2I18n.toSubmitEditRun();
       } else {
-        return `To submit, edit your code`;
+        return lab2I18n.toSubmitEdit();
       }
     }
     return undefined;
