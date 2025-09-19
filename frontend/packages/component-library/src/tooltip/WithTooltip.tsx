@@ -12,6 +12,7 @@ import {
 } from 'react';
 import {createPortal} from 'react-dom';
 
+import {useTooltipContext} from '@/common/contexts';
 import {updatePositionedElementStyles} from '@/common/helpers';
 import {ComponentPlacementDirection} from '@/common/types';
 
@@ -36,8 +37,18 @@ export interface WithTooltipProps {
   tooltipProps: TooltipProps;
 }
 
+let tooltipCounter = 0;
+function getTooltipId() {
+  return `tooltip-${++tooltipCounter}`;
+}
+
 const WithTooltip = forwardRef<WithTooltipHandle, WithTooltipProps>(
   ({children, tooltipOverlayClassName, tooltipProps}, ref) => {
+    const {openTooltipId, setOpenTooltipId} = useTooltipContext(); // || {openTooltipId: '', setOpenTooltipId: () => {}};
+    const [tooltipId] = useState(getTooltipId);
+
+    const isOpen = openTooltipId === tooltipId;
+
     const [nodePosition, setNodePosition] = useState<HTMLElement | null>(null);
     const [showTooltip, setShowTooltip] = useState<boolean>(false);
     const [actualDirection, setActualDirection] =
@@ -67,18 +78,21 @@ const WithTooltip = forwardRef<WithTooltipHandle, WithTooltipProps>(
         suppressNextFocusRef.current = false;
         return;
       }
-      setShowTooltip(show);
-      clearHideTimeout();
-      if (!isTooltip) {
-        setNodePosition(show ? (event.target as HTMLElement) : null);
+      if (show) {
+        setOpenTooltipId(tooltipId);
+        clearHideTimeout();
+        if (!isTooltip) setNodePosition(event.target as HTMLElement);
+      } else {
+        setOpenTooltipId(null);
+        setNodePosition(null);
       }
     };
 
     const handleHideTooltip = () => {
       hideTimeoutRef.current = window.setTimeout(() => {
-        setShowTooltip(false);
+        setOpenTooltipId(null);
         setNodePosition(null);
-      }, 100); // Allows for small but visible close delay
+      }, 100);
     };
 
     // Use useImperativeHandle hook to let the parent control visibility in certain cases
@@ -152,7 +166,7 @@ const WithTooltip = forwardRef<WithTooltipHandle, WithTooltipProps>(
     }, [showTooltip]);
 
     const tooltipStyleProps: React.CSSProperties = {
-      visibility: showTooltip ? 'visible' : 'hidden',
+      visibility: isOpen ? 'visible' : 'hidden',
       ...tooltipStyles,
       ...tooltipProps.style,
     };
@@ -184,7 +198,7 @@ const WithTooltip = forwardRef<WithTooltipHandle, WithTooltipProps>(
     return (
       <TooltipOverlay className={tooltipOverlayClassName}>
         {componentToWrap}
-        {showTooltip &&
+        {isOpen &&
           createPortal(
             <Tooltip
               {...tooltipProps}
@@ -194,7 +208,7 @@ const WithTooltip = forwardRef<WithTooltipHandle, WithTooltipProps>(
               onMouseEnter={event => handleShowTooltip(true, event, true)}
               onMouseLeave={handleHideTooltip}
             />,
-            document.body,
+            document.getElementById('portal-root') || document.body,
           )}
       </TooltipOverlay>
     );

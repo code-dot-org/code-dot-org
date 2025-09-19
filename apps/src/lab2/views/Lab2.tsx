@@ -3,7 +3,10 @@
  *
  * The top-level component that houses all Lab2 framework components.
  */
-import {ThemeProvider} from '@code-dot-org/component-library/common/contexts';
+import {
+  ThemeProvider,
+  TooltipProvider,
+} from '@code-dot-org/component-library/common/contexts';
 import React from 'react';
 import {Provider} from 'react-redux';
 
@@ -26,15 +29,18 @@ const Lab2: React.FunctionComponent = () => {
       <BrowserTextToSpeechWrapper>
         <RubricWrapper>
           <ThemeProvider>
-            <Lab2Wrapper>
-              <DialogManager>
-                <MetricsAdapter />
-                <ProjectContainer channelId={getStandaloneProjectId()}>
-                  <LabViewsRenderer />
-                </ProjectContainer>
-                <RubricFABContainer />
-              </DialogManager>
-            </Lab2Wrapper>
+            <TooltipProvider>
+              <Lab2Wrapper>
+                <DialogManager>
+                  <MetricsAdapter />
+                  <ProjectContainer channelId={getStandaloneProjectId()}>
+                    <LabViewsRenderer />
+                  </ProjectContainer>
+                  <RubricFABContainer />
+                </DialogManager>
+              </Lab2Wrapper>
+              <div id="portal-root" />
+            </TooltipProvider>
           </ThemeProvider>
         </RubricWrapper>
       </BrowserTextToSpeechWrapper>
