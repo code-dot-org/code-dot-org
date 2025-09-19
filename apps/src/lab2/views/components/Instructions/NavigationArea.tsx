@@ -127,7 +127,7 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
     } else if (hasValidationConditions) {
       return validationSatisfied;
     } else {
-      return hasRun; // music does not have requireRun
+      return hasRun; // music does not use requireRun
     }
   }, [
     isPredictLevel,
@@ -218,14 +218,14 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
     disableEditRunForSubmission || hasSubmitted || (hasRun && hasEdited);
   const submitTooltipMessage = useMemo(() => {
     if (submittable && !submitButtonEnabled) {
-      if (requireRun) {
-        return `To submit, edit and run your code.`;
+      if (requireRun || !hasRun) {
+        return `To submit, edit and run your code`;
       } else {
-        return `To submit, edit your code.`;
+        return `To submit, edit your code`;
       }
     }
     return undefined;
-  }, [requireRun, submitButtonEnabled, submittable]);
+  }, [hasRun, requireRun, submitButtonEnabled, submittable]);
 
   if (appName === 'music' && !musicCanShowContinueButton && !feedbackMessage) {
     return null;
