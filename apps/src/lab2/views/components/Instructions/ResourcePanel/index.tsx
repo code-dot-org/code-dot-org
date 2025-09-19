@@ -6,8 +6,7 @@ import classNames from 'classnames';
 import React, {useEffect, useMemo, useState} from 'react';
 
 import {ChatButtonData, SystemPromptSettings} from '@cdo/apps/aichat/types';
-import {queryParams} from '@cdo/apps/code-studio/utils';
-import {LABS_ALWAYS_USING_AI_TUTOR} from '@cdo/apps/lab2/ai/aiTutorConstants';
+import {shouldShowAiTutor} from '@cdo/apps/lab2/ai/shouldShowAiTutor';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {ProjectSources} from '@cdo/apps/lab2/types';
 import AiTutor2Chat from '@cdo/apps/lab2/views/components/AiTutor2Chat';
@@ -154,9 +153,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
 
     if (
       hiddenContextCallback &&
-      (LABS_ALWAYS_USING_AI_TUTOR.includes(appName) ||
-        levelProperties.aiTutorAvailable ||
-        queryParams('show-ai-tutor2') === 'true')
+      shouldShowAiTutor(appName, levelProperties.aiTutorAvailable)
     ) {
       tabMap[Tabs.AiTutor] = (
         <AiTutor2Chat
