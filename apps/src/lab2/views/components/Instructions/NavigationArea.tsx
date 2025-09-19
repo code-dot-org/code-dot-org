@@ -150,7 +150,6 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
         id="instructions-feedback-message"
         className={classNames(
           moduleStyles.bubble,
-          moduleStyles.bubbleNoScrollingContent,
           isResourcePanel && moduleStyles.resourcePanelNavigationAreaBubble
         )}
       >

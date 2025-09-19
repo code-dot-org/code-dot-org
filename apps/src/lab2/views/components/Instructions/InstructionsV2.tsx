@@ -128,11 +128,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
         <div
           key={longInstructions}
           id="instructions-text"
-          className={classNames(
-            moduleStyles.bubble,
-            moduleStyles.bubbleScrollingContent,
-            moduleStyles.textContent
-          )}
+          className={classNames(moduleStyles.bubble, moduleStyles.textContent)}
         >
           <div className={moduleStyles.scrollingContent}>
             <MainInstructionsContent
@@ -161,12 +157,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
           )}
         </div>
         {includeValidation && validationResults && (
-          <div
-            className={classNames(
-              moduleStyles.bubble,
-              moduleStyles.bubbleScrollingContent
-            )}
-          >
+          <div className={moduleStyles.bubble}>
             <div className={moduleStyles.textContent}>
               <div className={moduleStyles.scrollingContent}>
                 <ValidationResults />
@@ -181,7 +172,6 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
               <div
                 className={classNames(
                   moduleStyles.bubble,
-                  moduleStyles.bubbleNoScrollingContent,
                   moduleStyles.predictSummaryBubble
                 )}
               >

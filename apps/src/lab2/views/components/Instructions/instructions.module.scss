@@ -64,12 +64,12 @@
 
   /* If there is scrolling content, it will provide horizontal padding.
      Doing this allows the scrollbar to use that padding area. */
-  &ScrollingContent {
+  &:has(.scrollingContent) {
     padding: 12px 0;
   }
 
   /* If there is no scrolling content, we will provide horizontal padding. */
-  &NoScrollingContent {
+  &:not(:has(.scrollingContent)) {
     padding: 12px;
   }
 
@@ -239,15 +239,11 @@
   }
 }
 
-%scrolling-content {
+.scrollingContent {
   flex: 1;
   overflow-y: auto;
   min-height: 70px;
   padding: 0 12px;
-}
-
-.scrollingContent {
-  @extend %scrolling-content;
 }
 
 .bottomComponent {
