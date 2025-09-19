@@ -9,7 +9,7 @@ Feature: Views the pages on the teacher dashboard that are untested elsewhere
   Scenario: Viewing teacher dashboard pages
     Given I am on "http://studio.code.org"
     Given I create an authorized teacher-associated student named "Sally"
-    Given I am assigned to course "allthethingscourse" unit 1
+    Given I am assigned to course "allthethingscourse" with teacher "Teacher_Sally" in a section named "Test Section"
     And I complete the level on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/2/levels/1"
     And I complete the free response on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/27/levels/1"
     And I submit the assessment on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/33/levels/1"
@@ -17,9 +17,8 @@ Feature: Views the pages on the teacher dashboard that are untested elsewhere
     # Progress tab
     When I sign in as "Teacher_Sally" and go home
     And I get levelbuilder access
-    And I wait until element "a:contains('Untitled Section')" is visible
-    And I save the section id from row 0 of the section table
-    Then I navigate to teacher dashboard for the section I saved
+    And I wait until element "#ui-test-section-list" is visible
+    Then I click selector "#task-button-View-progress-Test-Section" once I see it
     And I wait until element "h6:contains(Icon Key)" is visible
     And I wait until element "#ui-test-progress-table-v2" is visible
     Then I click selector "#ui-test-toggle-progress-view"
