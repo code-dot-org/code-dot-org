@@ -27,15 +27,13 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
 
   const {
     leftPanelWidth,
-    middlePanelWidth,
+    rightPanelWidth,
     leftPanelSeparatorProps: panelSeparatorProps,
     leftPanelDragging: isDragging,
-    setRightPanelSize,
     panelClassName,
   } = useVerticalLayout({
     leftPanel: {minWidth: 200, initialWidth: 200, name: 'instructions'},
-    middlePanel: {minWidth: 400, initialWidth: 600, name: 'workspace'},
-    rightPanel: {minWidth: 0, initialWidth: 0, name: 'unused panel'},
+    rightPanel: {minWidth: 400, initialWidth: 600, name: 'workspace'},
     appName: 'sketchlab',
   });
 
@@ -64,10 +62,6 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
     };
   }, [excalidrawApi]);
 
-  useEffect(() => {
-    setRightPanelSize(0);
-  }, [setRightPanelSize]);
-
   // Since there's no run button in Sketch Lab, set it to true by default
   // to enable the Submit button on edit on submittable levels.
   // Set back to false on unmount in case we switch to a different level type.
@@ -80,8 +74,6 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
     };
   }, [dispatch]);
 
-  console.log(levelProperties);
-  // To do: make PanelContainer accept style prop?
   return (
     <div className={moduleStyles.sketchlabContainer}>
       <div style={{width: leftPanelWidth}} className={panelClassName}>
@@ -97,7 +89,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
         separatorProps={panelSeparatorProps}
         isDragging={isDragging}
       />
-      <div style={{width: middlePanelWidth}}>
+      <div style={{width: rightPanelWidth}}>
         <PanelContainer
           id="workspace"
           className={panelClassName}
