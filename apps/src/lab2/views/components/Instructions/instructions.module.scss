@@ -54,7 +54,7 @@
 
 .bubble {
   position: relative;
-  padding: 12px;
+  padding: 12px 0;
   border-radius: 4px;
   animation: slidein 0.5s;
   background-color: var(--background-neutral-secondary);
@@ -98,6 +98,7 @@
 .ttsContainer {
   display: flex;
   justify-content: flex-end;
+  padding-right: 12px;
 }
 
 .bubbleNoSlide {
@@ -232,6 +233,7 @@
   flex: 1;
   overflow-y: auto;
   min-height: 70px;
+  padding: 0 12px;
 }
 
 .scrollingContent {
