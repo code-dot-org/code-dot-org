@@ -39,6 +39,7 @@ interface InstructionsProps {
 /**
  * Lab2 instructions component. This can be used by any Lab2 lab, and will retrieve
  * all necessary data from the Lab2 redux store.
+ * Currently it is only used by Music Lab.
  *
  * Note that currently, this component solely renders instructions, and does not include any features
  * present on the legacy instructions panel, such as Help & Tips, Documentation, Code Review,

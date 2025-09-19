@@ -1,32 +1,21 @@
-import {
-  Button,
-  ButtonType,
-  ButtonColor,
-} from '@code-dot-org/component-library/button';
+import {Button} from '@code-dot-org/component-library/button';
 import {ComponentSizeXSToL} from '@code-dot-org/component-library/common/types';
 import {FontAwesomeV6IconProps} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import React, {useMemo} from 'react';
 
-import {sendSubmitReport} from '@cdo/apps/code-studio/progressRedux';
 import {
   getCurrentLevel,
   nextLevelId,
 } from '@cdo/apps/code-studio/progressReduxSelectors';
 import {queryParams} from '@cdo/apps/code-studio/utils';
-import WithConditionalTooltip from '@cdo/apps/codebridge/components/WithConditionalTooltip';
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
 import {isPredictResponseSubmitted} from '@cdo/apps/lab2/redux/predictLevelRedux';
 import {LevelProperties} from '@cdo/apps/lab2/types';
-import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
 import {commonI18n} from '@cdo/apps/types/locale';
-import {logUserLevelInteraction} from '@cdo/apps/userLevelInteractionsLogger/userLevelInteractionsApi';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {
-  LevelStatus,
-  UserLevelInteractions,
-} from '@cdo/generated-scripts/sharedConstants';
+import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
-import moduleStyles from './instructions.module.scss';
+import SubmitButton from './SubmitButton';
 interface NavigationButtonProps {
   levelProperties: LevelProperties;
   hasRun: boolean;
@@ -35,6 +24,7 @@ interface NavigationButtonProps {
   size?: ComponentSizeXSToL;
 }
 
+// Currently, NavigationButton is only in Instructions.tsx by Music Lab.
 const NavigationButton: React.FC<NavigationButtonProps> = ({
   levelProperties,
   hasRun,
@@ -132,139 +122,6 @@ const ContinueButton: React.FC<ContinueButtonProps> = ({className, size}) => {
       onClick={() => dispatch(continueOrFinishLesson())}
       iconRight={iconRight}
     />
-  );
-};
-
-interface SubmitButtonProps {
-  levelId: number;
-  appName: string;
-  hasRun: boolean;
-  hasEdited: boolean;
-  disableEditRunForSubmission?: boolean;
-  className?: string;
-  tooltipMessage?: string;
-}
-
-/**
- * Displays the "Submit" or "Unsubmit" button that submits or unsubmits the project on a submittable level.
- */
-export const SubmitButton: React.FC<SubmitButtonProps> = ({
-  levelId,
-  appName,
-  hasRun,
-  hasEdited,
-  disableEditRunForSubmission = false,
-  className,
-  tooltipMessage,
-}) => {
-  const hasSubmitted = useAppSelector(
-    state => getCurrentLevel(state)?.status === LevelStatus.submitted
-  );
-  const scriptId = useAppSelector(
-    state => state.progress.scriptId || undefined
-  );
-
-  const enabled =
-    disableEditRunForSubmission || hasSubmitted || (hasRun && hasEdited);
-  const buttonText = hasSubmitted ? commonI18n.unsubmit() : commonI18n.submit();
-
-  const dialogControl = useDialogControl();
-  const dispatch = useAppDispatch();
-
-  const handleSubmit = async () => {
-    // We either submit or unsubmit the project, depending on the current state.
-    const submit = !hasSubmitted;
-    await dispatch(
-      sendSubmitReport({appType: appName || '', submitted: submit})
-    );
-    // If we just submitted, continue or finish the lesson.
-    if (submit) {
-      logUserLevelInteraction({
-        levelId: levelId,
-        scriptId: scriptId,
-        interaction: UserLevelInteractions.click_submit,
-      });
-      dispatch(continueOrFinishLesson());
-    }
-  };
-
-  const onSubmit = () => {
-    const dialogTitle = hasSubmitted
-      ? commonI18n.unsubmitYourProject()
-      : commonI18n.submitYourProject();
-    const dialogMessage = hasSubmitted
-      ? commonI18n.unsubmitYourProjectConfirm()
-      : commonI18n.submitYourProjectConfirm();
-    dialogControl?.showDialog({
-      type: DialogType.GenericConfirmation,
-      handleConfirm: handleSubmit,
-      title: dialogTitle,
-      message: dialogMessage,
-    });
-  };
-
-  return (
-    <div className={moduleStyles.buttonInstructionTooltipOverlay}>
-      <WithConditionalTooltip
-        showTooltip={!enabled && !!tooltipMessage}
-        tooltipProps={{
-          text: tooltipMessage || '',
-          direction: 'onTop',
-          tooltipId: 'submit-button-tooltip',
-          size: 'xs',
-        }}
-      >
-        <Button
-          id="instructions-submit-button"
-          text={buttonText}
-          onClick={onSubmit}
-          className={className}
-          disabled={!enabled}
-        />
-      </WithConditionalTooltip>
-    </div>
-  );
-};
-
-interface ContinueButtonActionNeededProps {
-  isDisabled: boolean;
-  type: ButtonType;
-  color: ButtonColor;
-  iconRight: FontAwesomeV6IconProps | undefined;
-  text: string;
-  tooltipMessage?: string;
-}
-
-/**
- * Displays the "Submit" or "Unsubmit" button that submits or unsubmits the project on a submittable level.
- */
-export const ContinueButtonActionNeeded: React.FC<
-  ContinueButtonActionNeededProps
-> = ({isDisabled, type, color, iconRight, text, tooltipMessage}) => {
-  const dispatch = useAppDispatch();
-
-  // Show tooltip when button is disabled AND we have a message
-  const shouldShowTooltip = isDisabled && !!tooltipMessage;
-
-  return (
-    <div className={moduleStyles.buttonInstructionTooltipOverlay}>
-      <WithConditionalTooltip
-        showTooltip={shouldShowTooltip}
-        tooltipProps={{
-          text: tooltipMessage || '',
-          direction: 'onTop',
-          tooltipId: 'continue-button-tooltip',
-          size: 'xs',
-        }}
-      >
-        <Button
-          id="instructions-continue-action-needed-button"
-          onClick={() => dispatch(continueOrFinishLesson())}
-          disabled={isDisabled}
-          {...{text, type, color, iconRight}}
-        />
-      </WithConditionalTooltip>
-    </div>
   );
 };
 

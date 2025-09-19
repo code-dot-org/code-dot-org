@@ -17,7 +17,8 @@ import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import TextToSpeech from '../TextToSpeech';
 
-import {SubmitButton, ContinueButtonActionNeeded} from './NavigationButton';
+import ContinueButtonActionNeeded from './ContinueButtonActionNeeded';
+import SubmitButton from './SubmitButton';
 
 import moduleStyles from './instructions.module.scss';
 
@@ -32,7 +33,7 @@ interface NavigationAreaProps {
 }
 
 /**
- * Displays the feedback message and the navigation button.
+ * Displays the feedback message and the Continue/Finish or Submit button.
  */
 const NavigationArea: React.FC<NavigationAreaProps> = ({
   levelProperties,
