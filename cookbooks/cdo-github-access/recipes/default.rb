@@ -2,6 +2,21 @@
 # Cookbook Name:: cdo-github-access
 # Recipe:: default
 #
+# Provision a GitHub Personal Access Token and/or an SSH key to authenticate git requests to GitHub.
+#
+# * Adhoc Environments - GitHub rate limits unauthenticated read requests (clone/fetch/pull) particularly for Git LFS
+#   reads. Adhoc environments utilize a GitHub Personal Access Token named `code-dot-org-read-only-cicd` provisioned by
+#   the `deploy-code-org` user that has read permission to the `code-dot-org` repository. The token is fetched from an
+#   AWS Secret during execution of the UserData script (aws/cloudformation/bootstrap_chef_stack.sh.erb). It expires every
+#   366 days and GitHub sends email warnings in advance of the expiration.
+#
+# * Chef Managed Environments (staging, test, levelbuilder, production) - Chef Managed environments sometimes commit
+#   and push content to GitHub. They authenticate with an SSH key pair configured on the GitHub user `deploy-code-org`.
+#   The contents of these keys are stored in the Chef baseline Role Attributes `cdo-github-access.id_rsa` and
+#   `cdo-github-access.id_rsa.pub`.
+#   Note that in the rare cases that an engineer provisions an adhoc with the `CHEF_MANAGED=true` setting, the adhoc will
+#   have both the token and the SSH key.
+
 apt_package 'gnupg'
 
 apt_repository 'git-core' do
@@ -19,11 +34,6 @@ end
 
 apt_package 'git-lfs'
 
-# Adhocs (unless they have been configured to be CHEF_MANAGED) use a Personal Access Token provisioned by the
-# `deploy-code-org` user that has read permission to the `code-dot-org`
-# repository to authenticate the git clone/fetch/pull and git lfs pull operations carried out by the local build tasks.
-# The token is stored in an AWS Secret that is fetched by the UserData script and passed to the Chef client on first boot
-# `aws/cloudformation/bootstrap_chef_stack.sh.erb`
 github_token = node['cdo-github-access']['github_token']
 
 template "#{node[:home]}/.gitconfig" do
@@ -36,8 +46,6 @@ template "#{node[:home]}/.gitconfig" do
   )
 end
 
-# Create git credentials file if GitHub token is provided. Adhocs (unless they've explicitly been
-# configured to be Chef-managed) use a read-only GitHub personal access token fetched from an AWS Secret.
 unless github_token.empty?
   file "#{node[:home]}/.git-credentials" do
     content "https://#{github_token}@github.com\n"
@@ -54,10 +62,6 @@ directory "#{node[:home]}/.ssh" do
   group node[:current_user]
 end
 
-# Chef Managed environments (staging/test/levelbuilder/production) use an SSH key configured in Chef Attributes
-# (cdo-github-access.id_rsa, cdo-github-access.id_rsa.pub) that they use to authenticate to GitHub particularly to commit
-# and push content. Adhocs provisioned with `CHEF_MANAGED=true` also have these SSH Chef Attributes in addition to the
-# read-only GitHub token provisioned above.
 %w[config id_rsa id_rsa.pub].each do |file|
   template "#{node[:home]}/.ssh/#{file}" do
     source 'file.erb'

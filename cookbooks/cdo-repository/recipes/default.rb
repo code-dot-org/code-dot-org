@@ -3,10 +3,7 @@
 # Recipe:: default
 #
 
-# Chef Managed environments (staging/test/levelbuilder/production) use an SSH key configured in Chef Attributes
-# (cdo-github-access.id_rsa, cdo-github-access.id_rsa.pub) that they use to authenticate to GitHub particularly to commit
-# and push content. Adhocs provisioned with `CHEF_MANAGED=true` (rare) also have these SSH Chef Attributes in addition to a
-# read-only GitHub token that is provisioned on all adhocs from an AWS Secret.
+# Chef Managed environments (staging/test/levelbuilder/production) use SSH to authenticate as the user `deploy-code-org` to GitHub.
 include_recipe 'cdo-github-access'
 has_ssh_key = node['cdo-github-access'] && node['cdo-github-access']['id_rsa'] != ''
 if has_ssh_key

@@ -85,11 +85,8 @@ DB_USERNAME=$(echo $DB_SECRET | jq -r ".username")
 DB_PASSWORD=$(echo $DB_SECRET | jq -r ".password")
 <% end -%>
 
-
-# Only adhocs have a GitHub token AWS Secret provisioned. Chef Managed environments (staging/test/levelbuilder/production)
-# use an SSH key configured in a Chef Attribute (cdo-github-access.id_rsa, cdo-github-access.id_rsa.pub) that they use to
-# authenticate to GitHub. Adhocs provisioned with `CHEF_MANAGED=true` also have the SSH Chef Attributes.
-GITHUB_TOKEN=$(aws --region ${!REGION} secretsmanager get-secret-value --secret-id "${!ENVIRONMENT}/cdo/github_token" --version-stage AWSCURRENT | jq -r ".SecretString")
+# This AWS Secret is only provisioned for adhocs, which use it to authenticate read operations (clone/fetch/pull) from GitHub.
+GITHUB_TOKEN=$(aws --region $REGION secretsmanager get-secret-value --secret-id "$ENVIRONMENT/cdo/github_token" --version-stage AWSCURRENT | jq -r ".SecretString")
 
 # Customize Chef configuration.
 FIRST_BOOT=/etc/chef/first-boot.json
