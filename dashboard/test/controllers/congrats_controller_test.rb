@@ -26,9 +26,12 @@ class CongratsControllerTest < ActionController::TestCase
   end
 
   test "cached query test for hoc course" do
-    hoc_course = create(:hoc_course)
+    hoc_course = create(:hoc_course, published_state: 'stable')
 
     setup_script_cache
+    UnitGroup.stubs(:should_cache?).returns true
+    @@course_cache ||= UnitGroup.course_cache_to_cache
+    UnitGroup.course_cache
 
     assert_cached_queries(0) do
       # Reset @view_options before each request to avoid FrozenError on retries
