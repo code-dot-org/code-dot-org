@@ -6,6 +6,7 @@ import classNames from 'classnames';
 import React, {useEffect, useMemo, useState} from 'react';
 
 import {ChatButtonData, SystemPromptSettings} from '@cdo/apps/aichat/types';
+import {UserAddedContextType} from '@cdo/apps/aiTutor/types';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {ProjectSources} from '@cdo/apps/lab2/types';
@@ -82,6 +83,10 @@ type ResourcePanelProps = InstructionsProps & {
   aiTutorSystemPromptSettings?: SystemPromptSettings;
   aiTutorMultimodalEnabled?: boolean;
   aiTutorChatButtonData?: ChatButtonData[];
+  aiTutorAddedContextData?: {
+    userAddedContext: UserAddedContextType[] | undefined;
+    removeFromUserAddedContext: (id: string) => void;
+  };
 };
 
 /**
@@ -98,6 +103,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   aiTutorSystemPromptSettings,
   aiTutorMultimodalEnabled,
   aiTutorChatButtonData,
+  aiTutorAddedContextData,
   ...instructionsProps
 }) => {
   const {theme} = useTheme();
@@ -163,6 +169,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
           levelName={levelName}
           channelId={channelId}
           aiTutorChatButtonData={aiTutorChatButtonData}
+          aiTutorAddedContextData={aiTutorAddedContextData}
         />
       );
     }
@@ -207,6 +214,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     levelName,
     channelId,
     aiTutorChatButtonData,
+    aiTutorAddedContextData,
     selectedVersion,
     levelId,
   ]);

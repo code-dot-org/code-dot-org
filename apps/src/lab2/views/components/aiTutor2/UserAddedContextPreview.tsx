@@ -1,10 +1,10 @@
 import React from 'react';
 
 import FilePreview from '@cdo/apps/aichat/views/assets/FilePreview';
-import {UserAddedContext} from '@cdo/apps/aiTutor/types';
+import {UserAddedContextType} from '@cdo/apps/aiTutor/types';
 
 interface UserAddedContextPreviewProps {
-  addedContext: UserAddedContext[];
+  addedContext: UserAddedContextType[];
   onRemoveContext: (id: string) => void;
 }
 

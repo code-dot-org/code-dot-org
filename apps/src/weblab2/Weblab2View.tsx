@@ -13,6 +13,8 @@ import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
 import {LabProps, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 
 import {useSource} from '../codebridge/hooks/useSource';
+import {AiTutorAddedContextProvider} from '../lab2/ai/AiTutorAddedContext';
+import {useAddedContext} from '../lab2/ai/useAddedContext';
 import {useAppDispatch, useAppSelector} from '../util/reduxHooks';
 
 import {WEBLAB2_EDITABLE_FILE_TYPES} from './constants';
@@ -78,6 +80,12 @@ const Weblab2View: React.FC<
   LabProps<Weblab2LevelProperties, ProjectSources>
 > = ({levelProperties, initialSources}) => {
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
+  const {
+    userAddedContext,
+    setUserAddedContext,
+    removeFromUserAddedContext,
+    addToUserAddedContext,
+  } = useAddedContext();
 
   const source = useAppSelector(
     state =>
@@ -135,8 +143,9 @@ const Weblab2View: React.FC<
     aiTutorHelper.setAiTutorContext({
       source,
       longInstructions: levelProperties.longInstructions,
+      userAddedContext,
     });
-  }, [source, levelProperties.longInstructions]);
+  }, [source, levelProperties.longInstructions, userAddedContext]);
 
   // Since there's no run button in Weblab2, set it to true by default
   // to enable the Submit button on edit on submittable levels.
@@ -157,17 +166,26 @@ const Weblab2View: React.FC<
   return (
     <div className={moduleStyles.weblab2Container}>
       {hasSource && (
-        <Codebridge
-          config={config}
-          setConfig={setConfig}
-          startSources={startSources}
-          levelProperties={levelProperties}
-          hiddenContextCallback={aiTutorHelper.getHiddenContextCallback()}
-          aiTutorSystemPromptSettings={aiTutorSystemPromptSettings}
-          aiTutorMultimodalEnabled={true}
-          aiTutorChatButtonData={[]}
-          aiTutorContextHelper={aiTutorHelper}
-        />
+        <AiTutorAddedContextProvider
+          value={{
+            userAddedContext,
+            setUserAddedContext,
+            removeFromUserAddedContext,
+            addToUserAddedContext,
+          }}
+        >
+          <Codebridge
+            config={config}
+            setConfig={setConfig}
+            startSources={startSources}
+            levelProperties={levelProperties}
+            hiddenContextCallback={aiTutorHelper.getHiddenContextCallback()}
+            aiTutorSystemPromptSettings={aiTutorSystemPromptSettings}
+            aiTutorMultimodalEnabled={true}
+            aiTutorChatButtonData={[]}
+            aiTutorContextHelper={aiTutorHelper}
+          />
+        </AiTutorAddedContextProvider>
       )}
     </div>
   );

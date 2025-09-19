@@ -1,7 +1,8 @@
 import Button from '@code-dot-org/component-library/button';
-import React, {useEffect, useState} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
+import {AiTutorAddedContext} from '@cdo/apps/lab2/ai/AiTutorAddedContext';
 import lab2I18n from '@cdo/apps/lab2/locale';
 import {
   setIsValidating,
@@ -98,6 +99,14 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
     isProjectLevel || false
   );
   const settings = useCodebridgeSettings();
+  const aiTutorAddedContext = useContext(AiTutorAddedContext);
+  const aiTutorAddedContextData = aiTutorAddedContext
+    ? {
+        userAddedContext: aiTutorAddedContext.userAddedContext,
+        removeFromUserAddedContext:
+          aiTutorAddedContext.removeFromUserAddedContext,
+      }
+    : undefined;
 
   useEffect(() => {
     // For now, always include Instructions panel.
@@ -216,6 +225,7 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
           aiTutorSystemPromptSettings={aiTutorSystemPromptSettings}
           aiTutorMultimodalEnabled={aiTutorMultimodalEnabled}
           aiTutorChatButtonData={aiTutorChatButtonData}
+          aiTutorAddedContextData={aiTutorAddedContextData}
         />
       </div>
     );

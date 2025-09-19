@@ -58,7 +58,7 @@ interface ChatWorkspaceProps {
   // Options for changing system prompt (used in Web Lab 2)
   systemPromptSettings?: SystemPromptSettings;
 
-  AdditionalContext?: React.ReactNode;
+  additionalContext?: React.ReactNode;
 }
 
 enum WorkspaceTeacherViewTab {
@@ -84,7 +84,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   hasStarterAssets = false,
   systemPromptSettings,
   hideModelChangeMessage = false,
-  AdditionalContext,
+  additionalContext,
 }) => {
   if (multimodalEnabled && (!levelName || !channelId)) {
     console.warn(
@@ -92,6 +92,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     );
     multimodalEnabled = false;
   }
+  console.log({additionalContext});
 
   const [selectedTab, setSelectedTab] =
     useState<WorkspaceTeacherViewTab | null>(null);
@@ -303,7 +304,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
         {multimodalAvailable && (
           <StagedFilesPreview buildAssetUrl={buildAssetUrl} />
         )}
-        {AdditionalContext && AdditionalContext}
+        {additionalContext}
         <ChatModeDropdown
           className={moduleStyles.modeDropdown}
           systemPromptSettings={systemPromptSettings}

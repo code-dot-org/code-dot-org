@@ -6,9 +6,10 @@ import {
   sendCodebridgeAnalyticsEvent,
 } from '@codebridge/utils';
 import fileDownload from 'js-file-download';
-import {useMemo} from 'react';
+import {useContext, useMemo} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
+import {AiTutorAddedContext} from '@cdo/apps/lab2/ai/AiTutorAddedContext';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
@@ -47,8 +48,8 @@ export const useFileRowOptions = (
   const {
     config: {editableFileTypes},
     levelProperties,
-    aiTutorContextHelper,
   } = useCodebridgeContext();
+  const aiTutorAddedContext = useContext(AiTutorAddedContext);
   const {files: projectFiles, folders: projectFolders} = useAppSelector(
     state => state.lab2Project.projectSources?.source as MultiFileSource
   );
@@ -110,20 +111,19 @@ export const useFileRowOptions = (
         clickHandler: () => openSaveToBackpackPrompt({file, backpackApi}),
       },
       {
-        condition: aiTutorContextHelper !== undefined,
+        condition: aiTutorAddedContext !== undefined,
         iconName: 'paperclip-vertical',
         labelText: codebridgeI18n.addToAiTutorContext(),
         clickHandler: () => {
-          aiTutorContextHelper?.addToUserAddedContext(
-            file.contents,
-            file.name,
-            undefined
-          );
+          aiTutorAddedContext?.addToUserAddedContext({
+            sourceCode: file.contents,
+            filename: file.name,
+          });
         },
       },
     ],
     [
-      aiTutorContextHelper,
+      aiTutorAddedContext,
       appName,
       backpackApi,
       editableFileTypes,

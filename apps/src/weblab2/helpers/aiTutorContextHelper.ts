@@ -1,10 +1,11 @@
 import {AiTutorContextHelper} from '@cdo/apps/aiTutor/helpers/aiTutorContextHelper';
-import {AiTutorContext} from '@cdo/apps/aiTutor/types';
+import {AiTutorContext, UserAddedContextType} from '@cdo/apps/aiTutor/types';
 import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
 
 interface AiTutorWebLab2Params {
   source: MultiFileSource | undefined;
   longInstructions: string | undefined;
+  userAddedContext: UserAddedContextType[] | undefined;
 }
 
 export class AiTutorWebLab2ContextHelper extends AiTutorContextHelper<AiTutorWebLab2Params> {
@@ -14,7 +15,11 @@ export class AiTutorWebLab2ContextHelper extends AiTutorContextHelper<AiTutorWeb
     return this.aiTutorContext;
   }
 
-  setAiTutorContext({source, longInstructions}: AiTutorWebLab2Params) {
+  setAiTutorContext({
+    source,
+    longInstructions,
+    userAddedContext,
+  }: AiTutorWebLab2Params) {
     const sourceCode = source
       ? Object.values(source.files)
           .filter(
@@ -26,9 +31,18 @@ export class AiTutorWebLab2ContextHelper extends AiTutorContextHelper<AiTutorWeb
           .join('\n\n')
       : undefined;
 
+    const userAddedContextString = userAddedContext
+      ? userAddedContext
+          .map(
+            item => `Filename: ${item.filename}\n\`\`\`${item.sourceCode}\`\`\``
+          )
+          .join('\n\n')
+      : undefined;
+
     this.aiTutorContext = {
       sourceCode,
       longInstructions,
+      userAddedContext: userAddedContextString,
     };
   }
 }

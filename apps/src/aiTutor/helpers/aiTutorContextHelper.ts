@@ -1,4 +1,4 @@
-import {AiTutorContext, UserAddedContext} from '../types';
+import {AiTutorContext} from '../types';
 
 /*
  * Abstract base class used to provide lab specific context to AI Tutor.  Each lab will inherit from and
@@ -6,8 +6,6 @@ import {AiTutorContext, UserAddedContext} from '../types';
  * consistency.
  */
 export abstract class AiTutorContextHelper<T extends object> {
-  private userAddedContext: UserAddedContext[] | undefined;
-  private nextUserAddedContextId = 1;
   protected abstract getAiTutorContext():
     | Promise<AiTutorContext>
     | AiTutorContext;
@@ -21,20 +19,16 @@ export abstract class AiTutorContextHelper<T extends object> {
       validationResults,
       longInstructions,
       documentation,
+      userAddedContext,
     } = await this.getAiTutorContext();
 
     const hiddenContextString = [
       "Here is the student's current code:",
       sourceCode,
-      ...(this.userAddedContext && this.userAddedContext.length > 0
+      ...(userAddedContext && userAddedContext.length > 0
         ? [
             'The student would like to focus on this subset of their current code:',
-            this.userAddedContext
-              .map(
-                item =>
-                  `Filename: ${item.filename}n\`\`\`${item.sourceCode}\`\`\``
-              )
-              .join('\n\n'),
+            userAddedContext,
           ]
         : []),
       ...(validationContents
@@ -65,38 +59,5 @@ export abstract class AiTutorContextHelper<T extends object> {
 
   getHiddenContextCallback() {
     return this.getHiddenContextString.bind(this);
-  }
-
-  getUserAddedContext() {
-    return this.userAddedContext;
-  }
-
-  setUserAddedContext(userAddedContext: UserAddedContext[] | undefined) {
-    this.userAddedContext = userAddedContext;
-  }
-
-  removeFromUserAddedContext(id: string) {
-    if (!this.userAddedContext) {
-      return;
-    }
-    this.userAddedContext = this.userAddedContext.filter(
-      item => item.id !== id
-    );
-  }
-
-  addToUserAddedContext(
-    sourceCode: string,
-    filename: string,
-    lineReference?: {start: number; end: number}
-  ) {
-    if (!this.userAddedContext) {
-      this.userAddedContext = [];
-    }
-    this.userAddedContext.push({
-      sourceCode,
-      filename,
-      lineReference,
-      id: `${this.nextUserAddedContextId++}`,
-    });
   }
 }
