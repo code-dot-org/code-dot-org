@@ -19,6 +19,8 @@ import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 import {shouldShowCopyCode} from '../../ai/ai-should-show-copy-code';
 import {aiTutorModelId} from '../../ai/ai-tutor-model-id';
 
+import UserAddedContextPreview from './aiTutor2/UserAddedContextPreview';
+
 import moduleStyles from './AiTutor2Chat.module.scss';
 
 export const fetchCustomPrompt = async (promptName: string) => {
@@ -176,6 +178,22 @@ const AiTutor2Chat: React.FunctionComponent<AiTutor2ChatProps> = ({
       key: button.label,
     }));
   }, [aiTutorChatButtonData]);
+
+  // this won't re-render when the context changes I think...
+  const UserAddedContext = useMemo(() => {
+    if (
+      !aiTutorContextHelper ||
+      !aiTutorContextHelper.getUserAddedContext()?.length
+    ) {
+      return undefined;
+    }
+    return (
+      <UserAddedContextPreview
+        addedContext={aiTutorContextHelper.getUserAddedContext()!}
+        onRemoveContext={aiTutorContextHelper.removeFromUserAddedContext}
+      />
+    );
+  }, [aiTutorContextHelper]);
 
   return systemPrompt ? (
     <div className={moduleStyles.container}>
