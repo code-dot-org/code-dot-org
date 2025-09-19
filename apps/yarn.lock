@@ -4924,6 +4924,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@excalidraw/excalidraw@npm:^0.17.6":
+  version: 0.17.6
+  resolution: "@excalidraw/excalidraw@npm:0.17.6"
+  peerDependencies:
+    react: ^17.0.2 || ^18.2.0
+    react-dom: ^17.0.2 || ^18.2.0
+  checksum: 10/5d0664f6f1e9eccaa0c0b404b2317e486d1508545f3e63a852124fd76d2b46682e684cf8878c31a05c0222b2c34a856d963d62a53c3d327e035205c07a8bd076
+  languageName: node
+  linkType: hard
+
 "@fal-works/esbuild-plugin-global-externals@npm:^2.1.2":
   version: 2.1.2
   resolution: "@fal-works/esbuild-plugin-global-externals@npm:2.1.2"
@@ -10989,6 +10999,7 @@ __metadata:
     "@emotion/react": "npm:^11.14.0"
     "@emotion/styled": "npm:^11.14.0"
     "@eslint/js": "npm:^9.31.0"
+    "@excalidraw/excalidraw": "npm:^0.17.6"
     "@lezer/highlight": "npm:^1.2.0"
     "@magenta/music": "npm:^1.23.1"
     "@mapbox/search-js-react": "npm:^1.0.0"
