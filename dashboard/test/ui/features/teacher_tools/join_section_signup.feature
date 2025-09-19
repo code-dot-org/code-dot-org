@@ -16,4 +16,4 @@ Feature: Using the join section page while not signed in
     Given I sign out
     Given I am a student
     And I join the section
-    Then I wait until I am on "http://localhost-studio.code.org:3000/courses/allthethingscourse/units/1"
+    Then I wait until I am on "http://studio.code.org/courses/allthethingscourse/units/1"
