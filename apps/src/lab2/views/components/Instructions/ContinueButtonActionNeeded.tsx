@@ -10,7 +10,7 @@ import WithConditionalTooltip from '@cdo/apps/codebridge/components/WithConditio
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
-import moduleStyles from '@cdo/apps/lab2/views/components/Instructions/Instructions.module.scss';
+import moduleStyles from '@cdo/apps/lab2/views/components/Instructions/instructions.module.scss';
 
 interface ContinueButtonActionNeededProps {
   isDisabled: boolean;

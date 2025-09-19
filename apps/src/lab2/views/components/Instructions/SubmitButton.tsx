@@ -1,20 +1,20 @@
 import {Button} from '@code-dot-org/component-library/button';
-import {
-  useDialogControl,
-  DialogType,
-} from '@code-dot-org/component-library/dialog';
 import React from 'react';
 
+import {sendSubmitReport} from '@cdo/apps/code-studio/progressRedux';
+import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
 import WithConditionalTooltip from '@cdo/apps/codebridge/components/WithConditionalTooltip';
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
-import {getCurrentLevel} from '@cdo/apps/lab2/progress/getCurrentLevel';
-import {LevelStatus} from '@cdo/apps/lab2/progress/LevelStatus';
-import {logUserLevelInteraction} from '@cdo/apps/lab2/progress/logUserLevelInteraction';
-import {sendSubmitReport} from '@cdo/apps/lab2/progress/sendSubmitReport';
-import {UserLevelInteractions} from '@cdo/apps/lab2/progress/UserLevelInteractions';
+import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
+import {commonI18n} from '@cdo/apps/types/locale';
+import {logUserLevelInteraction} from '@cdo/apps/userLevelInteractionsLogger/userLevelInteractionsApi';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {
+  LevelStatus,
+  UserLevelInteractions,
+} from '@cdo/generated-scripts/sharedConstants';
 
-import moduleStyles from '@cdo/apps/lab2/views/components/Instructions/Instructions.module.scss';
+import moduleStyles from '@cdo/apps/lab2/views/components/Instructions/instructions.module.scss';
 
 interface SubmitButtonProps {
   levelId: number;
