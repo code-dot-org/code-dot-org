@@ -26,6 +26,7 @@ import {
   UserLevelInteractions,
 } from '@cdo/generated-scripts/sharedConstants';
 
+import moduleStyles from './instructions.module.scss';
 interface NavigationButtonProps {
   levelProperties: LevelProperties;
   hasRun: boolean;
@@ -141,6 +142,7 @@ interface SubmitButtonProps {
   hasEdited: boolean;
   disableEditRunForSubmission?: boolean;
   className?: string;
+  tooltipMessage?: string;
 }
 
 /**
@@ -153,6 +155,7 @@ export const SubmitButton: React.FC<SubmitButtonProps> = ({
   hasEdited,
   disableEditRunForSubmission = false,
   className,
+  tooltipMessage,
 }) => {
   const hasSubmitted = useAppSelector(
     state => getCurrentLevel(state)?.status === LevelStatus.submitted
@@ -201,13 +204,25 @@ export const SubmitButton: React.FC<SubmitButtonProps> = ({
   };
 
   return (
-    <Button
-      id="instructions-submit-button"
-      text={buttonText}
-      onClick={onSubmit}
-      className={className}
-      disabled={!enabled}
-    />
+    <div className={moduleStyles.buttonInstructionTooltipOverlay}>
+      <WithConditionalTooltip
+        showTooltip={!enabled && !!tooltipMessage}
+        tooltipProps={{
+          text: tooltipMessage || '',
+          direction: 'onTop',
+          tooltipId: 'submit-button-tooltip',
+          size: 'xs',
+        }}
+      >
+        <Button
+          id="instructions-submit-button"
+          text={buttonText}
+          onClick={onSubmit}
+          className={className}
+          disabled={!enabled}
+        />
+      </WithConditionalTooltip>
+    </div>
   );
 };
 
@@ -217,7 +232,6 @@ interface ContinueButtonActionNeededProps {
   color: ButtonColor;
   iconRight: FontAwesomeV6IconProps | undefined;
   text: string;
-  className?: string;
   tooltipMessage?: string;
 }
 
@@ -226,14 +240,14 @@ interface ContinueButtonActionNeededProps {
  */
 export const ContinueButtonActionNeeded: React.FC<
   ContinueButtonActionNeededProps
-> = ({isDisabled, type, color, iconRight, text, className, tooltipMessage}) => {
+> = ({isDisabled, type, color, iconRight, text, tooltipMessage}) => {
   const dispatch = useAppDispatch();
 
   // Show tooltip when button is disabled AND we have a message
   const shouldShowTooltip = isDisabled && !!tooltipMessage;
 
   return (
-    <div className={className}>
+    <div className={moduleStyles.buttonInstructionTooltipOverlay}>
       <WithConditionalTooltip
         showTooltip={shouldShowTooltip}
         tooltipProps={{

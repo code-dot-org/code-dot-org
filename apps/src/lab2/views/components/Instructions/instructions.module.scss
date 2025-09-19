@@ -109,14 +109,14 @@
   height: 32px;
 }
 
-// This is used to ensure the tooltip overlay is the same width as the button.
+// Ensure the TooltipOverlay wrapper div matches the button width
+// without changing TooltipOverlay's calculated position.
 .buttonInstructionTooltipOverlay { 
-  // Let TooltipOverlay maintain its natural positioning
   > div {
     width: 100%;
   }
   
-  // Ensure the button inside takes full width
+  // Contained button takes full width.
   button {
     width: 100%;
     height: 32px;

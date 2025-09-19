@@ -200,7 +200,6 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
         color={color}
         iconRight={iconRight}
         text={hasNextLevel ? commonI18n.continue() : commonI18n.finish()}
-        className={moduleStyles.buttonInstructionTooltipOverlay}
         tooltipMessage={continueTooltipMessage}
       />
     );
@@ -268,6 +267,7 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
             hasRun={hasRun}
             hasEdited={hasEdited}
             className={moduleStyles.buttonInstruction}
+            tooltipMessage={submitTooltipMessage}
           />
         ) : (
           ContinueButton
