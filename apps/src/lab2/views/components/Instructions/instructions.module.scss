@@ -54,14 +54,24 @@
 
 .bubble {
   position: relative;
-  padding: 12px 0;
   border-radius: 4px;
   animation: slidein 0.5s;
   background-color: var(--background-neutral-secondary);
   color: var(--text-neutral-primary);
   display: flex;
   flex-direction: column;
-  min-height: 0; 
+  min-height: 0;
+
+  /* If there is scrolling content, it will provide horizontal padding.
+     Doing this allows the scrollbar to use that padding area. */
+  &ScrollingContent {
+    padding: 12px 0;
+  }
+
+  /* If there is no scrolling content, we will provide horizontal padding. */
+  &NoScrollingContent {
+    padding: 12px;
+  }
 
   h1, h2, h3, h4 {
     color: var(--text-neutral-primary);
