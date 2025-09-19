@@ -2,7 +2,7 @@ import {Excalidraw, serializeAsJSON} from '@excalidraw/excalidraw';
 import {ExcalidrawImperativeAPI} from '@excalidraw/excalidraw/types/types';
 import React, {useEffect, useState} from 'react';
 
-import {useTwoColumnLayout} from '@cdo/apps/lab2/hooks/useTwoColumnLayout';
+import {useVerticalLayout} from '@cdo/apps/lab2/hooks/useVerticalLayout';
 import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
 import {LabProps, LevelProperties} from '@cdo/apps/lab2/types';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
@@ -27,13 +27,15 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
 
   const {
     leftPanelWidth,
-    rightPanelWidth,
-    leftPanelSeparatorProps,
-    isDragging,
+    middlePanelWidth,
+    leftPanelSeparatorProps: panelSeparatorProps,
+    leftPanelDragging: isDragging,
+    setRightPanelSize,
     panelClassName,
-  } = useTwoColumnLayout({
+  } = useVerticalLayout({
     leftPanel: {minWidth: 200, initialWidth: 200, name: 'instructions'},
-    rightPanel: {minWidth: 400, initialWidth: 600, name: 'workspace'},
+    middlePanel: {minWidth: 400, initialWidth: 600, name: 'workspace'},
+    rightPanel: {minWidth: 0, initialWidth: 0, name: 'unused panel'},
     appName: 'sketchlab',
   });
 
@@ -62,6 +64,10 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
     };
   }, [excalidrawApi]);
 
+  useEffect(() => {
+    setRightPanelSize(0);
+  }, [setRightPanelSize]);
+
   // Since there's no run button in Sketch Lab, set it to true by default
   // to enable the Submit button on edit on submittable levels.
   // Set back to false on unmount in case we switch to a different level type.
@@ -74,6 +80,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
     };
   }, [dispatch]);
 
+  console.log(levelProperties);
   // To do: make PanelContainer accept style prop?
   return (
     <div className={moduleStyles.sketchlabContainer}>
@@ -87,10 +94,10 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
       </div>
       <ResizeBar
         isVertical={true}
-        separatorProps={leftPanelSeparatorProps}
+        separatorProps={panelSeparatorProps}
         isDragging={isDragging}
       />
-      <div style={{width: rightPanelWidth}}>
+      <div style={{width: middlePanelWidth}}>
         <PanelContainer
           id="workspace"
           className={panelClassName}
