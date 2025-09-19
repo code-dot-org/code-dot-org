@@ -38,7 +38,7 @@ class RegistrationsController < Devise::RegistrationsController
   #
   def begin_sign_up
     domain = params[:user][:email].split('@')[1] if params[:user][:email].present?
-    if Policies::Devise::EmailDomains::DISALLOWED_DOMAINS.keys.include?(domain)
+    if Policies::Devise::EmailDomains::DISALLOWED_DOMAINS.key?(domain)
       render json: {
         error: I18n.t('devise.registrations.disallowed_domain', domain: domain)
       }, status: :forbidden
