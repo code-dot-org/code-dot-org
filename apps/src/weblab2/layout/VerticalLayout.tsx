@@ -24,11 +24,11 @@ import lab2Styles from '@cdo/apps/lab2/views/components/layout/layout.module.scs
 import weblab2Styles from '@cdo/apps/weblab2/layout/vertical-layout.module.scss';
 
 const MIN_INFO_PANEL_WIDTH = 150;
-const INITIAL_INFO_PANEL_WIDTH = 300;
+const INITIAL_INFO_PANEL_WIDTH = 400;
 const INITIAL_INFO_PANEL_WIDTH_WIDGET = 500;
 const MIN_EDITOR_WIDTH = 300;
 const MIN_PREVIEW_WIDTH = 200;
-const INITIAL_PREVIEW_WIDTH = 600;
+const INITIAL_PREVIEW_WIDTH = 400;
 const INITIAL_PREVIEW_WIDTH_WIDGET = 900;
 
 const VerticalLayout: React.FunctionComponent<LayoutProps> = ({

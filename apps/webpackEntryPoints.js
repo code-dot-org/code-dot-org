@@ -116,6 +116,8 @@ const CODE_STUDIO_ENTRIES = {
   'sections/show': './src/sites/studio/pages/sections/show.js',
   'shared/_school_info': './src/sites/studio/pages/shared/_school_info.js',
   'teacher_dashboard/show': './src/sites/studio/pages/teacher_dashboard/show.js',
+  'teacher_dashboard/parent_letter': './src/sites/studio/pages/teacher_dashboard/parent_letter.js',
+  'teacher_feedbacks/index': './src/sites/studio/pages/teacher_feedbacks/index.js',
   'vocabularies/edit': './src/sites/studio/pages/vocabularies/edit.js',
   'weblab_host/network_check': './src/sites/studio/pages/weblab_host/network_check.js',
 };

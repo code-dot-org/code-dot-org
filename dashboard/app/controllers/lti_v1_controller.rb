@@ -194,12 +194,6 @@ class LtiV1Controller < ApplicationController
           metadata: metadata,
         )
 
-        # Add user's lti_user_identity to deployment if it doesn't exist
-        lti_user_identity = Queries::Lti.lti_user_identity(user, integration)
-        unless deployment.lti_user_identities.include?(lti_user_identity)
-          deployment.lti_user_identities << lti_user_identity
-        end
-
         # If this is the user's first login, send them into the account linking flow
         unless user.lms_landing_opted_out
           Services::Lti.initialize_lms_landing_session(session, integration[:platform_name], 'continue', user.user_type)
@@ -225,6 +219,8 @@ class LtiV1Controller < ApplicationController
         email_address = Services::Lti.get_claim(decoded_jwt, :email)
         Services::Lti.initialize_lms_landing_session(session, integration[:platform_name], 'new', user.user_type)
         PartialRegistration.persist_attributes(session, user)
+        # Store the deployment ID in the session, so we can check if it's a restricted deployment later
+        session[:lti_deployment_id] = deployment.id
         publish_linking_page_visit(user, integration[:platform_name])
         render 'lti/v1/account_linking/landing', locals: {email: email_address} and return
       end

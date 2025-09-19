@@ -37,15 +37,15 @@
   $hover-background-color,
   $selected-color,
   $active-color
-  ) {
-
-   background-color: $default-background-color;
+) {
+  background-color: $default-background-color;
 
   i {
     color: var(--text-neutral-tertiary);
   }
 
-  &.selected i, &:hover i {
+  &.selected i,
+  &:hover i {
     color: $selected-color;
   }
 
@@ -71,5 +71,16 @@
       overflow: hidden;
       text-overflow: ellipsis;
     }
+  }
+}
+
+// Mixin for applying consistent focus-visible styles
+@mixin focus-styles(
+  $outline-color: var(--borders-brand-teal-primary),
+  $outline-offset: 2px
+) {
+  &:focus-visible {
+    outline: 2px solid $outline-color;
+    outline-offset: $outline-offset;
   }
 }

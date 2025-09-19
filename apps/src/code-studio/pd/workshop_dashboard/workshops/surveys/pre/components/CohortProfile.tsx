@@ -2,14 +2,14 @@ import {Box} from '@mui/material';
 import React, {useMemo} from 'react';
 
 import {SurveyQuestions} from '../../../types';
+import {isQuestionType} from '../../../utils';
 import {useWorkshopContext} from '../../../WorkshopLayout';
 import BarChartGroup, {
   BarChartGroupProps,
 } from '../../components/BarChartGroup';
 import {SelectCard} from '../../components/SelectCard';
-import {isQuestionType} from '../../utils';
 
-import styles from '../../../workshop.module.scss';
+import styles from '../../../WorkshopLayout.module.scss';
 
 function bucketizeYearsTeaching(value: string): string {
   const num = parseInt(value, 10);

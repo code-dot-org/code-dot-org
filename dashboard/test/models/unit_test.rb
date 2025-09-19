@@ -25,11 +25,6 @@ class UnitTest < ActiveSupport::TestCase
     @pl_unit_in_unit_group.reload
     @pl_unit_group.reload
 
-    @unit_2017 = create(:script, name: 'script-2017', family_name: 'family-cache-test')
-    create(:single_unit_course, unit: @unit_2017, family_name: 'family-cache-test', version_year: '2017')
-    @unit_2018 = create(:script, name: 'script-2018', family_name: 'family-cache-test')
-    create(:single_unit_course, unit: @unit_2018, family_name: 'family-cache-test', version_year: '2018')
-
     @csf_unit = create(:csf_script, :in_single_unit_course, name: 'csf1')
     @csd_unit = create(:csd_script, :in_single_unit_course, name: 'csd1')
     @csp_unit = create(:csp_script, :in_single_unit_course, name: 'csp1')
@@ -64,7 +59,6 @@ class UnitTest < ActiveSupport::TestCase
     # Only need to populate cache once per test-suite run
     @@script_cached ||= Unit.unit_cache_to_cache
     Unit.script_cache
-    Unit.unit_family_cache
 
     # Also populate course_cache, as we call .link on them
     UnitGroup.stubs(:should_cache?).returns true
@@ -171,23 +165,6 @@ class UnitTest < ActiveSupport::TestCase
     assert_equal frozen, Unit.get_from_cache(frozen_id)
   end
 
-  test 'get_from_cache raises if called with a family_name' do
-    error = assert_raises do
-      Unit.get_from_cache('csd2')
-    end
-    assert_equal 'Do not call Unit.get_from_cache with a family_name. Call Unit.get_unit_family_redirect_for_user instead.  Family: csd2', error.message
-  end
-
-  test 'get_family_from_cache uses unit_family_cache' do
-    family_scripts = Unit.where(family_name: 'family-cache-test')
-    assert_equal [@unit_2017.name, @unit_2018.name], family_scripts.map(&:name)
-
-    populate_cache_and_disconnect_db
-
-    cached_family_scripts = Unit.get_family_from_cache('family-cache-test')
-    assert_equal [@unit_2017.name, @unit_2018.name], cached_family_scripts.map(&:name).uniq
-  end
-
   test 'cache_find_script_level uses cache' do
     unit = create(:unit, :with_levels)
     script_level = unit.script_levels.first
@@ -271,122 +248,18 @@ class UnitTest < ActiveSupport::TestCase
     end
   end
 
-  test 'get_unit_family_redirect_for_user returns latest stable unit assigned or with progress if participant' do
-    pl_csp1_2017 = create(:script, name: 'pl-csp1-2017', family_name: 'pl-csp')
-    pl_csp1_2018 = create(:script, name: 'pl-csp1-2018', family_name: 'pl-csp')
-    create(:single_unit_course, :pl_course, unit: pl_csp1_2017, family_name: 'pl-csp', version_year: '2017')
-    create(:single_unit_course, :pl_course, unit: pl_csp1_2018, family_name: 'pl-csp', version_year: '2018')
-
-    # Assign participant to pl_csp1_2017.
-    section = create(:section, script: pl_csp1_2017)
-    participant = create(:teacher)
-    section.students << participant
-
-    redirect_unit = Unit.get_unit_family_redirect_for_user('pl-csp', user: participant)
-    assert_equal pl_csp1_2017.name, redirect_unit.redirect_to
-
-    # participant makes progress in csp1_2018.
-    create(:user_level, user: participant, script: pl_csp1_2018)
-    participant.reload
-
-    redirect_unit = Unit.get_unit_family_redirect_for_user('pl-csp', user: participant)
-    assert_equal pl_csp1_2018.name, redirect_unit.redirect_to
-  end
-
-  test 'get_unit_family_redirect_for_user returns nil if user can not be an instructor or participant' do
+  test 'redirect_to_unit_url returns nil unless unit is in a single-unit course' do
     student = create(:student)
-    pl_csp1_2017 = create(:script, name: 'pl-csp1-2017', family_name: 'pl-csp')
-    pl_csp1_2018 = create(:script, name: 'pl-csp1-2018', family_name: 'pl-csp')
-    create(:single_unit_course, :pl_course, unit: pl_csp1_2017, family_name: 'pl-csp', version_year: '2017')
-    create(:single_unit_course, :pl_course, unit: pl_csp1_2018, family_name: 'pl-csp', version_year: '2018')
+    unit = create(:unit_group, :with_units).first_unit
 
-    assert_nil Unit.get_unit_family_redirect_for_user('pl-csp', user: student)
+    assert_nil unit.redirect_to_unit_url(student)
   end
 
-  test 'get_unit_family_redirect_for_user returns latest stable unit assigned or with progress if student' do
-    csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp1')
-    create(:single_unit_course, unit: csp1_2017, name: 'csp-2017', family_name: 'csp', version_year: '2017')
-    csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp1')
-    create(:single_unit_course, unit: csp1_2018, name: 'csp-2018', family_name: 'csp', version_year: '2018')
-
-    # Assign student to csp1_2017.
-    section = create(:section, script: csp1_2017)
-    student = create(:student)
-    section.students << student
-
-    redirect_unit = Unit.get_unit_family_redirect_for_user('csp1', user: student)
-    assert_equal csp1_2017.name, redirect_unit.redirect_to
-
-    # Student makes progress in csp1_2018.
-    create(:user_level, user: student, script: csp1_2018)
-    student.reload
-
-    redirect_unit = Unit.get_unit_family_redirect_for_user('csp1', user: student)
-    assert_equal csp1_2018.name, redirect_unit.redirect_to
-  end
-
-  test 'get_unit_family_redirect_for_user returns latest stable unit in family if instructor' do
-    facilitator = create(:facilitator)
-    pl_csp1_2017 = create(:script, name: 'pl-csp1-2017', family_name: 'pl-csp1')
-    create(:single_unit_course, :pl_course, unit: pl_csp1_2017, name: 'pl-csp-2017', family_name: 'pl-csp', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
-    pl_csp1_2018 = create(:script, name: 'pl-csp1-2018', family_name: 'pl-csp1')
-    create(:single_unit_course, :pl_course, unit: pl_csp1_2018, name: 'pl-csp-2018', family_name: 'pl-csp', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
-    pl_csp1_2019 = create(:script, name: 'pl-csp1-2019', family_name: 'pl-csp1')
-    create(:single_unit_course, :pl_course, unit: pl_csp1_2019, name: 'pl-csp-2019', family_name: 'pl-csp', version_year: '2019', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta)
-    create(:section, user: facilitator, script: pl_csp1_2017)
-
-    redirect_unit = Unit.get_unit_family_redirect_for_user('pl-csp1', user: facilitator)
-    assert_equal pl_csp1_2018.name, redirect_unit.redirect_to
-  end
-
-  test 'get_unit_family_redirect_for_user returns latest stable unit in family if teacher' do
+  test 'redirect_to_unit_url returns nil unless user is a participant' do
     teacher = create(:teacher)
-    csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp1')
-    create(:single_unit_course, unit: csp1_2017, name: 'csp-2017', family_name: 'csp', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
-    csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp1')
-    create(:single_unit_course, unit: csp1_2018, name: 'csp-2018', family_name: 'csp', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
-    csp1_2019 = create(:script, name: 'csp1-2019', family_name: 'csp', version_year: '2019')
-    create(:single_unit_course, unit: csp1_2019, name: 'csp-2019', family_name: 'csp', version_year: '2019', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta)
-    create(:section, user: teacher, script: csp1_2017)
+    unit = create(:unit_group, :with_units).first_unit
 
-    redirect_unit = Unit.get_unit_family_redirect_for_user('csp1', user: teacher)
-    assert_equal csp1_2018.name, redirect_unit.redirect_to
-  end
-
-  test 'get_unit_family_redirect_for_user returns nil if no units in family are stable' do
-    csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp')
-    create(:single_unit_course, unit: csp1_2018, name: 'csp-2018', family_name: 'csp', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview)
-    assert_nil Unit.get_unit_family_redirect_for_user('csp')
-  end
-
-  test 'get_unit_family_redirect_for_user returns latest version supported in locale if available' do
-    csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp1', supported_locales: ['es-MX'])
-    create(:single_unit_course, unit: csp1_2017, name: 'csp-2017', family_name: 'csp', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
-    csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp1')
-    create(:single_unit_course, unit: csp1_2018, name: 'csp-2018', family_name: 'csp', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
-
-    redirect_unit = Unit.get_unit_family_redirect_for_user('csp1', locale: 'es-MX')
-    assert_equal csp1_2017.name, redirect_unit.redirect_to
-  end
-
-  test 'get_unit_family_redirect_for_user returns latest stable version if no user or locale' do
-    csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp1')
-    create(:single_unit_course, unit: csp1_2017, name: 'csp-2017', family_name: 'csp', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
-    csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp1')
-    create(:single_unit_course, unit: csp1_2018, name: 'csp-2018', family_name: 'csp', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
-
-    redirect_unit = Unit.get_unit_family_redirect_for_user('csp1')
-    assert_equal csp1_2018.name, redirect_unit.redirect_to
-  end
-
-  test 'get_unit_family_redirect_for_user returns latest stable version if no versions supported in locale' do
-    csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp1', supported_locales: ['es-MX'])
-    create(:single_unit_course, unit: csp1_2017, name: 'csp-2017', family_name: 'csp', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
-    csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp1')
-    create(:single_unit_course, unit: csp1_2018, name: 'csp-2018', family_name: 'csp', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
-
-    redirect_unit = Unit.get_unit_family_redirect_for_user('csp1', locale: 'it-IT')
-    assert_equal csp1_2018.name, redirect_unit.redirect_to
+    assert_nil unit.redirect_to_unit_url(teacher)
   end
 
   test 'redirect_to_unit_url returns nil unless user can view unit version' do
@@ -426,38 +299,39 @@ class UnitTest < ActiveSupport::TestCase
     assert_nil csp1_2018.redirect_to_unit_url(student)
   end
 
-  test 'redirect_to_unit_url returns unit url of latest assigned unit version in family for unit belonging to course family' do
+  test 'redirect_to_unit_url returns unit url of latest assigned unit version in family for unit belonging to single-unit course family' do
     Unit.any_instance.stubs(:can_view_version?).returns(true)
     student = create(:student)
-    csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017')
-    csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp')
-    create(:unit_group_unit, unit_group: csp_2017, script: csp1_2017, position: 1)
-    CourseOffering.add_course_offering(csp_2017)
-    csp_2018 = create(:unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018')
-    csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp')
-    create(:unit_group_unit, unit_group: csp_2018, script: csp1_2018, position: 1)
+    csp1_2017 = create(:single_unit_course, name: 'csp-2017', family_name: 'csp', version_year: '2017').first_unit
+    CourseOffering.add_course_offering(csp1_2017.original_unit_group)
+    csp_2018 = create(:single_unit_course, name: 'csp-2018', family_name: 'csp', version_year: '2018')
+    csp1_2018 = csp_2018.first_unit
     CourseOffering.add_course_offering(csp_2018)
     section = create(:section, unit_group: csp_2018)
     section.students << student
 
     csp1_2018.reload
     csp1_2017.reload
-    assert_equal csp1_2018.link, csp1_2017.redirect_to_unit_url(student)
+    assert_equal "/courses/#{csp_2018.name}/units/1", csp1_2017.redirect_to_unit_url(student)
   end
 
-  test 'redirect_to_unit_url returns unit url of latest assigned unit version in family for unit not belonging to course family' do
+  test 'redirect_to_unit_url returns unit url of latest assigned unit version in family for unit belonging to modular single-unit course family' do
     Unit.any_instance.stubs(:can_view_version?).returns(true)
     student = create(:student)
-    courseg_2017 = create(:script, name: 'courseg-2017', family_name: 'courseg')
-    create(:single_unit_course, unit: courseg_2017, family_name: 'courseg', version_year: '2017')
-    CourseOffering.add_course_offering(courseg_2017.original_unit_group)
-    courseg_2018 = create(:script, name: 'courseg-2018', family_name: 'courseg')
-    create(:single_unit_course, unit: courseg_2018,  family_name: 'courseg', version_year: '2018')
-    CourseOffering.add_course_offering(courseg_2018.original_unit_group)
-    section = create(:section, script: courseg_2018)
-    section.students << student
+    csp1_2017 = create(:single_unit_course, name: 'csp-2017', family_name: 'csp', version_year: '2017').first_unit
+    CourseOffering.add_course_offering(csp1_2017.original_unit_group)
+    csp1_2018 = create(:single_unit_course, name: 'csp-2018', family_name: 'csp', version_year: '2018').first_unit
+    CourseOffering.add_course_offering(csp1_2018.original_unit_group)
 
-    assert_equal courseg_2018.link, courseg_2017.redirect_to_unit_url(student)
+    modular_2017 = create(:single_unit_course, unit: csp1_2017, family_name: 'mod-fam', version_year: '2017')
+    modular_2018 = create(:single_unit_course, unit: csp1_2018, family_name: 'mod-fam', version_year: '2018')
+
+    section = create(:section, unit_group: modular_2018)
+    section.students << student
+    csp1_2017.reload
+    csp1_2018.reload
+
+    assert_equal "/courses/#{modular_2018.name}/units/1", csp1_2017.redirect_to_unit_url(student, unit_group: modular_2017)
   end
 
   class CanViewVersion < ActiveSupport::TestCase
@@ -529,11 +403,11 @@ class UnitTest < ActiveSupport::TestCase
       assert @courseq_2017.can_view_version?(@student)
     end
 
-    test 'can_view_version? is true if student has progress in unit group unit belongs to' do
+    test 'can_view_version? is true if student has progress in unit group that unit belongs to' do
       unit_group = create(:unit_group, family_name: 'unit-fam')
-      unit1 = create(:script, name: 'unit1', family_name: 'unit-fam')
+      unit1 = create(:script, name: 'unit1')
       create(:unit_group_unit, unit_group: unit_group, script: unit1, position: 1)
-      unit2 = create(:script, name: 'unit2', family_name: 'unit-fam')
+      unit2 = create(:script, name: 'unit2')
       create(:unit_group_unit, unit_group: unit_group, script: unit2, position: 2)
       @student.scripts << unit1
       unit_group.reload
@@ -556,130 +430,6 @@ class UnitTest < ActiveSupport::TestCase
       @single_unit_2023.reload
       assert @single_unit_2023.can_view_version?(@student)
     end
-  end
-
-  test 'family_unit_versions returns values sorted by version year' do
-    # create units out of order
-    second = create(:script, family_name: 'fake-family', version_year: '2017')
-    third = create(:script, family_name: 'fake-family', version_year: '2018')
-    first = create(:script, family_name: 'fake-family', version_year: '2016')
-    assert_equal [first, second, third], Unit.family_unit_versions('fake-family')
-  end
-
-  test 'family_unit_versions handles nil version year' do
-    actual_version = create(:script, family_name: 'fake-family', version_year: '2017')
-    missing_version = create(:script, family_name: 'fake-family')
-    assert_equal [missing_version, actual_version], Unit.family_unit_versions('fake-family')
-  end
-
-  test 'self.latest_stable_version is nil if no unit versions in family are stable in locale' do
-    create(:script, name: 's-2017', family_name: 'fake-family', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, supported_locales: ["it-it"])
-    create(:script, name: 's-2018', family_name: 'fake-family', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, supported_locales: ["it-it"])
-
-    assert_nil Unit.latest_stable_version('fake-family', locale: 'es-mx')
-  end
-
-  test 'self.latest_stable_version returns latest stable version for user locale' do
-    create(:script, :in_single_unit_course, name: 's-2017', family_name: 'fake-family', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, supported_locales: ["it-it"])
-    unit_2018 = create(:script, :in_single_unit_course, name: 's-2018', family_name: 'fake-family', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, supported_locales: ["it-it"])
-
-    assert_equal unit_2018, Unit.latest_stable_version('fake-family', locale: 'it-it')
-  end
-
-  test 'self.latest_stable_version returns latest stable version for English locales' do
-    create(:script, :in_single_unit_course, name: 's-2017', family_name: 'fake-family', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
-    unit_2018 = create(:script, :in_single_unit_course, name: 's-2018', family_name: 'fake-family', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
-
-    assert_equal unit_2018, Unit.latest_stable_version('fake-family')
-    assert_equal unit_2018, Unit.latest_stable_version('fake-family', locale: 'en-ca')
-  end
-
-  test 'self.latest_stable_version returns correct unit version in family if version_year is supplied' do
-    unit_2017 = create(:script, :in_single_unit_course, name: 's-2017', family_name: 'fake-family', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
-    create(:script, :in_single_unit_course, name: 's-2018', family_name: 'fake-family', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
-
-    assert_equal unit_2017, Unit.latest_stable_version('fake-family', version_year: '2017')
-  end
-
-  test 'self.lastest_stable_version supports some family members having nil version_years' do
-    unit_2017 = create(:script, :in_single_unit_course, name: 's-2017', family_name: 'fake-family', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
-    create(:script, :in_single_unit_course, name: 's-unknown', family_name: 'fake-family', version_year: nil, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
-    create(:script, :in_single_unit_course, name: 's-2018', family_name: 'fake-family', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
-
-    assert_equal unit_2017, Unit.latest_stable_version('fake-family', version_year: '2017')
-  end
-
-  test 'self.latest_assigned_version returns nil if no units in family are assigned to user' do
-    unit1 = create(:script, name: 's-1', family_name: 'family-1')
-    student = create(:student)
-    student.scripts << unit1
-
-    assert_nil Unit.latest_assigned_version('family-2', student)
-  end
-
-  test 'self.latest_assigned_version returns latest assigned unit in family if unit is in course family' do
-    csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017')
-    csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp')
-    create(:unit_group_unit, unit_group: csp_2017, script: csp1_2017, position: 1)
-    csp_2018 = create(:unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018')
-    csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp')
-    create(:unit_group_unit, unit_group: csp_2018, script: csp1_2018, position: 1)
-
-    student = create(:student)
-    section = create(:section, unit_group: csp_2017)
-    section.students << student
-
-    assert_equal csp1_2017, Unit.latest_assigned_version('csp', student)
-  end
-
-  test 'self.latest_assigned_version returns latest assigned unit in family if unit is not in course family' do
-    student = create(:student)
-    courseg_2017 = create(:script, name: 'courseg-2017', family_name: 'courseg', version_year: '2017')
-    create(:single_unit_course, unit: courseg_2017, family_name: 'courseg', version_year: '2017')
-    create(:script, name: 'courseg-2018', family_name: 'courseg', version_year: '2018')
-    section = create(:section, script: courseg_2017)
-    section.students << student
-
-    assert_equal courseg_2017, Unit.latest_assigned_version('courseg', student)
-  end
-
-  test 'self.latest_version_with_progress returns nil if user made no progress in any version' do
-    student = create(:student)
-    family_name = 'fake-script-family'
-    create(:script, name: 'fake-script-family-2023', family_name: family_name, version_year: '2023')
-
-    assert_nil Unit.latest_version_with_progress(family_name, student)
-  end
-
-  test 'self.latest_version_with_progress returns version user made progress in if they made progress in one' do
-    student = create(:student)
-    family_name = 'fake-script-family'
-    fake_script_2023 = create(:script, name: 'sample-script-family-2023', family_name: family_name, version_year: '2023')
-    create(:user_script, user: student, script: fake_script_2023, last_progress_at: Time.now)
-
-    assert_equal fake_script_2023, Unit.latest_version_with_progress(family_name, student)
-  end
-
-  test 'self.latest_version_with_progress returns latest version of unit user made progress in' do
-    student = create(:student)
-    family_name = 'fake-script-family'
-    fake_script_2022 = create(:script, name: 'sample-script-family-2022', family_name: family_name, version_year: '2022')
-    fake_script_2023 = create(:script, name: 'sample-script-family-2023', family_name: family_name, version_year: '2023')
-    create(:user_script, user: student, script: fake_script_2022, last_progress_at: Time.now)
-    create(:user_script, user: student, script: fake_script_2023, last_progress_at: Time.now)
-
-    assert_equal fake_script_2023, Unit.latest_version_with_progress(family_name, student)
-  end
-
-  test 'self.latest_version_with_progress returns latest version of unit user made progress in even if most recent progress not in most recent version' do
-    student = create(:student)
-    family_name = 'fake-script-family'
-    fake_script_2022 = create(:script, name: 'sample-script-family-2022', family_name: family_name, version_year: '2022')
-    fake_script_2023 = create(:script, name: 'sample-script-family-2023', family_name: family_name, version_year: '2023')
-    create(:user_script, user: student, script: fake_script_2022, last_progress_at: Time.now)
-    create(:user_script, user: student, script: fake_script_2023, last_progress_at: Time.now - 1.day)
-
-    assert_equal fake_script_2023, Unit.latest_version_with_progress(family_name, student)
   end
 
   test 'has_other_versions? makes no queries when there is one other unit group version' do
@@ -717,8 +467,8 @@ class UnitTest < ActiveSupport::TestCase
 
   test 'banner image' do
     assert_nil Unit.find_by_name('flappy').banner_image
-    course1_unit = create(:script, name: 'course1', family_name: 'course1')
-    course2_unit = create(:script, name: 'course2', family_name: 'course2')
+    course1_unit = create(:script, name: 'course1')
+    course2_unit = create(:script, name: 'course2')
     assert_equal 'banner_course1.jpg', course1_unit.banner_image
     assert_equal 'banner_course2.jpg', course2_unit.banner_image
     assert_nil Unit.find_by_name('csf1').banner_image
@@ -1008,17 +758,13 @@ class UnitTest < ActiveSupport::TestCase
   end
 
   test 'summarize includes show_course_unit_version_warning' do
-    csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017')
-    csp1_2017 = create(:script, name: 'csp1-2017')
-    csp1_2017_ugu = create(:unit_group_unit, unit_group: csp_2017, script: csp1_2017, position: 1)
-    csp_2017.reload
-    csp1_2017.reload
+    csp_2017 = create(:unit_group, :with_units, name: 'csp-2017', family_name: 'csp', version_year: '2017')
+    csp1_2017 = csp_2017.first_unit
+    csp1_2017_ugu = csp_2017.default_unit_group_units.first
 
-    csp_2018 = create(:unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018')
-    csp1_2018 = create(:script, name: 'csp1-2018')
-    csp1_2018_ugu = create(:unit_group_unit, unit_group: csp_2018, script: csp1_2018, position: 1)
-    csp_2018.reload
-    csp1_2018.reload
+    csp_2018 = create(:unit_group, :with_units, name: 'csp-2018', family_name: 'csp', version_year: '2018')
+    csp1_2018 = csp_2018.first_unit
+    csp1_2018_ugu = csp_2018.default_unit_group_units.first
 
     refute csp1_2017.summarize(unit_group_unit: csp1_2017_ugu)[:show_course_unit_version_warning]
 
@@ -1036,22 +782,15 @@ class UnitTest < ActiveSupport::TestCase
   end
 
   test 'summarize only shows one version warning' do
-    csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017')
-    csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp1', version_year: '2017')
-    create(:unit_group_unit, unit_group: csp_2017, script: csp1_2017, position: 1)
-    csp_2017.reload
-    csp1_2017.reload
-
-    csp_2018 = create(:unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018')
-    csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp1', version_year: '2018')
-    csp1_2018_ugu = create(:unit_group_unit, unit_group: csp_2018, script: csp1_2018, position: 1)
-    csp_2018.reload
-    csp1_2018.reload
+    csp1_2017 = create(:single_unit_course, name: 'csp-2017', family_name: 'csp', version_year: '2017').first_unit
+    csp_2018 = create(:single_unit_course, name: 'csp-2018', family_name: 'csp', version_year: '2018')
+    csp1_2018 = csp_2018.first_unit
+    csp1_2018_ugu = csp_2018.default_unit_group_units.first
 
     user = create(:student)
     create(:user_script, user: user, script: csp1_2017)
-    assert csp1_2018.summarize(true, user, unit_group_unit: csp1_2018_ugu)[:show_course_unit_version_warning]
-    refute csp1_2018.summarize(true, user, unit_group_unit: csp1_2018_ugu)[:show_script_version_warning]
+    refute csp1_2018.summarize(true, user, unit_group_unit: csp1_2018_ugu)[:show_course_unit_version_warning]
+    assert csp1_2018.summarize(true, user, unit_group_unit: csp1_2018_ugu)[:show_script_version_warning]
   end
 
   test 'summarize includes versions for single-unit course' do

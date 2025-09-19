@@ -2,9 +2,8 @@ import {Button} from '@code-dot-org/component-library/button';
 import {FontAwesomeV6IconProps} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Tabs, {TabsProps} from '@code-dot-org/component-library/tabs';
 import React, {useCallback, useEffect, useMemo, useState} from 'react';
-import {useSelector} from 'react-redux';
 
-import {SystemPromptSettings} from '@cdo/apps/aichat/types';
+import {isModelUpdate, SystemPromptSettings} from '@cdo/apps/aichat/types';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import usePrevious from '@cdo/apps/util/usePrevious';
@@ -48,6 +47,7 @@ interface ChatWorkspaceProps {
   clientType: AiChatClientType;
   chatButtons?: ChatButtonAndKey[];
   hiddenContextCallback?: () => Promise<string>;
+  hideModelChangeMessage?: boolean;
 
   // Multimodal support
   multimodalEnabled?: boolean;
@@ -81,6 +81,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   channelId,
   hasStarterAssets = false,
   systemPromptSettings,
+  hideModelChangeMessage = false,
 }) => {
   if (multimodalEnabled && (!levelName || !channelId)) {
     console.warn(
@@ -97,7 +98,15 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   );
   const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
   const scriptId = useAppSelector(state => state.progress.scriptId);
-  const visibleItems = useSelector(selectAllVisibleMessages);
+  const visibleItems = useAppSelector(state => {
+    if (hideModelChangeMessage) {
+      return selectAllVisibleMessages(state).filter(
+        message => !isModelUpdate(message)
+      );
+    } else {
+      return selectAllVisibleMessages(state);
+    }
+  });
   const currentUserId = useAppSelector(state => state.currentUser.userId);
 
   const selectedStudent = useAppSelector(({teacherSections, progress}) => {

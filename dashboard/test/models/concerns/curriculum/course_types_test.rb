@@ -48,18 +48,6 @@ class CourseTypesTests < ActiveSupport::TestCase
     assert_equal "Validation failed: Instructor audience should be different from participant audiences.", e.message
   end
 
-  test 'unit in course should check course for if it is a pl course' do
-    assert_equal @unit_group.pl_course?, @unit_in_course.pl_course?
-    refute @unit_in_course.pl_course?
-  end
-
-  test 'pl_course? returns true for any unit that does not have students as participants' do
-    refute @unit_teacher_to_students.pl_course?
-    assert @unit_facilitator_to_teacher.pl_course?
-    assert @unit_universal_instructor_to_teacher.pl_course?
-    assert @unit_plc_reviewer_to_facilitator.pl_course?
-  end
-
   test 'pl_course? returns true for any course that does not have students as participants' do
     refute @course_teacher_to_students.pl_course?
     assert @course_facilitator_to_teacher.pl_course?
@@ -69,84 +57,6 @@ class CourseTypesTests < ActiveSupport::TestCase
 
   test 'a signed out user can not be an instructor' do
     refute @unit_group.can_be_instructor?(nil)
-    refute @unit_teacher_to_students.can_be_instructor?(nil)
-  end
-
-  test 'unit in course should check course for participant and instructor audience' do
-    assert_equal @unit_group.can_be_instructor?(@teacher), @unit_in_course.can_be_instructor?(@teacher)
-    assert @unit_in_course.can_be_instructor?(@teacher)
-
-    assert_equal @unit_group.can_be_participant?(@teacher), @unit_in_course.can_be_participant?(@teacher)
-    assert @unit_in_course.can_be_participant?(@student)
-  end
-
-  test 'universal instructor should be able to instruct any unit' do
-    assert @unit_teacher_to_students.can_be_instructor?(@universal_instructor)
-    assert @unit_facilitator_to_teacher.can_be_instructor?(@universal_instructor)
-    assert @unit_universal_instructor_to_teacher.can_be_instructor?(@universal_instructor)
-    assert @unit_plc_reviewer_to_facilitator.can_be_instructor?(@universal_instructor)
-  end
-
-  test 'levelbuilder should be able to see instructor view for any unit' do
-    assert @unit_teacher_to_students.can_be_instructor?(@levelbuilder)
-    assert @unit_facilitator_to_teacher.can_be_instructor?(@levelbuilder)
-    assert @unit_universal_instructor_to_teacher.can_be_instructor?(@levelbuilder)
-    assert @unit_plc_reviewer_to_facilitator.can_be_instructor?(@levelbuilder)
-  end
-
-  test 'plc reviewer should be able to instruct units with plc_reviewer as instructor audience ' do
-    # Since the plc reviewer is a teacher account it will also be able to teach any teacher course
-    assert @unit_teacher_to_students.can_be_instructor?(@plc_reviewer)
-    refute @unit_facilitator_to_teacher.can_be_instructor?(@plc_reviewer)
-    refute @unit_universal_instructor_to_teacher.can_be_instructor?(@plc_reviewer)
-    assert @unit_plc_reviewer_to_facilitator.can_be_instructor?(@plc_reviewer)
-  end
-
-  test 'facilitator should be able to instruct units with facilitator as instructor audience ' do
-    # Since the facilitator is a teacher account it will also be able to teach any teacher course
-    assert @unit_teacher_to_students.can_be_instructor?(@facilitator)
-    assert @unit_facilitator_to_teacher.can_be_instructor?(@facilitator)
-    refute @unit_universal_instructor_to_teacher.can_be_instructor?(@facilitator)
-    refute @unit_plc_reviewer_to_facilitator.can_be_instructor?(@facilitator)
-  end
-
-  test 'teachers should be able to instruct units with teacher as instructor audience ' do
-    assert @unit_teacher_to_students.can_be_instructor?(@teacher)
-    refute @unit_facilitator_to_teacher.can_be_instructor?(@teacher)
-    refute @unit_universal_instructor_to_teacher.can_be_instructor?(@teacher)
-    refute @unit_plc_reviewer_to_facilitator.can_be_instructor?(@teacher)
-  end
-
-  test 'students can not instruct units' do
-    refute @unit_teacher_to_students.can_be_instructor?(@student)
-    refute @unit_facilitator_to_teacher.can_be_instructor?(@student)
-    refute @unit_universal_instructor_to_teacher.can_be_instructor?(@student)
-    refute @unit_plc_reviewer_to_facilitator.can_be_instructor?(@student)
-  end
-
-  test 'facilitator should be able to participate in units with facilitator as participant audience' do
-    refute @unit_teacher_to_students.can_be_participant?(@facilitator)
-    refute @unit_facilitator_to_teacher.can_be_participant?(@facilitator)
-
-    assert @unit_universal_instructor_to_teacher.can_be_participant?(@facilitator)
-    assert @unit_plc_reviewer_to_facilitator.can_be_participant?(@facilitator)
-  end
-
-  test 'teacher should be able to participate in units with teacher as participant audience' do
-    refute @unit_teacher_to_students.can_be_participant?(@teacher)
-
-    assert @unit_facilitator_to_teacher.can_be_participant?(@teacher)
-    assert @unit_universal_instructor_to_teacher.can_be_participant?(@teacher)
-
-    refute @unit_plc_reviewer_to_facilitator.can_be_participant?(@teacher)
-  end
-
-  test 'student should be able to participate in units with student as participant audience' do
-    assert @unit_teacher_to_students.can_be_participant?(@student)
-
-    refute @unit_facilitator_to_teacher.can_be_participant?(@student)
-    refute @unit_universal_instructor_to_teacher.can_be_participant?(@student)
-    refute @unit_plc_reviewer_to_facilitator.can_be_participant?(@student)
   end
 
   test 'universal instructor should be able to instruct any course' do
@@ -228,11 +138,6 @@ class CourseTypesTests < ActiveSupport::TestCase
 
   test 'get_family_courses should get all UnitGroups with the same family name if called for UnitGroup' do
     assert_equal @unit_group_2.get_family_courses.map(&:name).sort!, ['course-instructed-by-teacher', 'course-instructed-by-teacher-2', 'course-teacher-to-student']
-  end
-
-  test 'get_family_courses should return nil if there is no family name' do
-    unit_without_family_name = create(:script, :in_single_unit_course, name: 'no-family-name')
-    assert_nil unit_without_family_name.get_family_courses
   end
 
   # (Dani) Commenting out while we turn the validation off to update the audience on some courses

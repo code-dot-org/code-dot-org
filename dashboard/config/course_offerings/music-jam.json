@@ -8,7 +8,7 @@
   "grade_levels": "2,3,4,5,6,7,8,9,10,11,12",
   "header": "favorites",
   "image": "https://images.code.org/5aac6d5fbe2340096ef52dd6301bbbff-image (48).png",
-  "cs_topic": "art_and_design,artificial_intelligence,programming",
+  "cs_topic": "art_and_design,artificial_intelligence,music,programming",
   "school_subject": null,
   "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"ideal\",\"mobile\":\"not_recommended\",\"no_device\":\"incompatible\"}",
   "description": "Bring music and coding together with Music Lab: Jam Session! In this self-guided Hour of Code activity, students will remix tracks from artists like Sabrina Carpenter, Lady Gaga, and Shakira while learning coding basics and exploring AI-powered beats.",
@@ -17,5 +17,7 @@
   "published_date": "2024-11-13 08:00:00 UTC",
   "self_paced_pl_course_offering_key": null,
   "ai_teaching_assistant_available": false,
-  "facilitator_course_permissions": null
+  "facilitator_course_permissions": [
+
+  ]
 }

@@ -40,7 +40,7 @@ Scenario: Complete Level 5
   And element ".congrats" has text "Congratulations! You completed Puzzle 5."
 
 Scenario: Complete Bounce freeplay level
-  Given I am on "http://studio.code.org/courses/course3/units/1/lessons/15/levels/10?noautoplay=true"
+  Given I am on "http://studio.code.org/courses/events/units/1/lessons/1/levels/10?noautoplay=true"
   And I wait for the lab page to fully load
   And I dismiss the login reminder
   And element "#finishButton" is not visible

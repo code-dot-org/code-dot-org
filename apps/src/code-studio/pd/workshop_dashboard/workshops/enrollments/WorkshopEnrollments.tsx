@@ -38,7 +38,8 @@ import {EducatorRoles} from '@cdo/generated-scripts/sharedConstants';
 import {EnrollmentData} from '../types';
 import {useWorkshopContext} from '../WorkshopLayout';
 
-import styles from '../workshop.module.scss';
+import styles from './WorkshopEnrollments.module.scss';
+import commonStyles from '../WorkshopLayout.module.scss';
 
 const pluralize = (length: number): string => (length > 1 ? 's' : '');
 
@@ -305,7 +306,7 @@ export const WorkshopEnrollments: FC = () => {
           </>
         )}
       </Box>
-      <Card className={styles.card}>
+      <Card className={commonStyles.card}>
         <TableContainer>
           <Table
             aria-label="Workshop enrollments"

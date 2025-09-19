@@ -23,7 +23,7 @@ Scenario: Teacher can create a school associated account in the sign up flow
   And I select the "Classroom Teacher" option in dropdown "uitest-educator-role"
   And I see no difference for "Finish Sign Up Teacher"
   And I press the last button with text "Go to my account" to load a new page
-  And I wait until I see selector "#uitest-accept-section-creation"
+  And I wait until I see selector "#teacher-home-header"
   And I close my eyes
 
 Scenario: Student can create an account in the sign up flow
