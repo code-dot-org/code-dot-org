@@ -151,10 +151,9 @@ And(/^I create a(n authorized)? teacher-associated( under-13)?( sponsored)? stud
 end
 
 And(/^I save the student section url$/) do
-  wait_short_until {steps 'Then I should see the student section table'}
   section_code = @browser.execute_script <<-SCRIPT
     return document
-      .querySelector('.uitest-owned-sections tbody tr:last-of-type td:nth-child(6)')
+      .querySelector('#ui-test-section-code-button')
       .textContent
       .trim();
   SCRIPT
@@ -182,13 +181,13 @@ end
 
 And /^I see that "([^"]*)" is assigned to "([^"]*)" in the section table$/ do |section_name, course_name|
   individual_steps <<~GHERKIN
-    And I wait until element "tr:contains(#{section_name}):contains(#{course_name})" is visible
+    And I wait until element "#course-content-dropdown-#{section_name.tr!(' ', '-')}:contains(#{course_name})" is visible
   GHERKIN
 end
 
 And /^I see that "([^"]*)" is not assigned to "([^"]*)" in the section table$/ do |section_name, course_name|
   individual_steps <<~GHERKIN
-    And I wait until element "tr:contains(#{section_name}):contains(#{course_name})" is not visible
+    And I wait until element "#course-content-dropdown-#{section_name.tr!(' ', '-')}:contains(#{course_name})" is not visible
   GHERKIN
 end
 
@@ -287,9 +286,19 @@ Then /^the section table row at index (\d+) has (primary|secondary) assignment p
   expect(actual_path).to include(expected_path)
 end
 
-Then /^I save the section id from row (\d+) of the section table$/ do |row_index|
-  wait_short_until {steps 'Then I should see the student section table'}
-  @section_id = get_section_id_from_table(row_index)
+Then /^I save the section id from row (\d+) of the section table$/ do |section_index|
+  wait_short_until {steps 'Then I wait until element "#section-options-dropdown-dropdown" is visible'}
+  href = nil
+  wait_until do
+    href = @browser.execute_script(
+      "return $('#ui-test-section-list ol li:eq(#{section_index}) #ui-test-Section-settings').attr('href')"
+    )
+    !href.nil?
+  end
+
+  @section_id = href.split('/')[-2].to_i
+  expect(@section_id).to be > 0
+  @section_id
 end
 
 Then /^the url contains the section id$/ do
@@ -425,10 +434,9 @@ end
 
 And /^I navigate to the V2 progress dashboard for "([^"]+)"$/ do |section_name|
   steps <<-GHERKIN
-    Given I am on "http://studio.code.org"
-    When I use a cookie to mock the DCDO key "progress-table-v2-enabled" as "true"
-    When I click selector "a:contains(#{section_name})" once I see it to load a new page
-    And I wait until element "#ui-test-teacher-sidebar" is visible
+    Given I am on "http://studio.code.org/teacher_dashboard/home"
+    When I click "#task-button-View-progress-#{section_name.tr!(' ', '-')}" once it exists
+    Then I wait until element "#ui-test-teacher-sidebar" is visible
     And check that the URL contains "/teacher_dashboard/sections/"
     And element "#ui-test-progress-table-v2" is visible
   GHERKIN

@@ -38,8 +38,8 @@ Feature: Using the assessments tab in the teacher dashboard
     # Assign a unit with an unlocked survey
     When I sign in as "Teacher_Sally" and go home
     And I get levelbuilder access
-    And I click selector ".ui-test-section-dropdown" once I see it
-    And I click selector ".edit-section-details-link"
+    And I click selector "#section-options-dropdown-dropdown-button" once I see it
+    And I click selector "#ui-test-Section-settings"
     And I press the first "input[name='grades[]']" element
     And I wait until element "button:contains(High School)" is visible
     And I click selector "button:contains(High School)"

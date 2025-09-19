@@ -13,7 +13,7 @@ Feature: Read and create AI diff threads
     When I sign in as "Stilgar"
     And I get debug info for the current user
     And I am on "http://studio.code.org/home"
-    And I wait until element "#homepage-container" is visible
+    And I wait until element "#teacher-home-header" is visible
     And element "#sign_in_or_user" contains text "Stilgar"
     And I am on "http://studio.code.org/courses/csp-2025/units/4"
     And I wait until element "#ui-floatingActionButton" is visible
