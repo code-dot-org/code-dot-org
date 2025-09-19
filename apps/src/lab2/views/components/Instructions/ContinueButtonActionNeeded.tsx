@@ -50,7 +50,7 @@ const ContinueButtonActionNeeded: React.FC<ContinueButtonActionNeededProps> = ({
         }}
       >
         <Button
-          id="instructions-continue-action-needed-button"
+          id="instructions-continue-button"
           onClick={() => dispatch(continueOrFinishLesson())}
           disabled={isDisabled}
           {...{text, type, color, iconRight}}
