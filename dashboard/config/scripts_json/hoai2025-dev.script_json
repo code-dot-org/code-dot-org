@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-09-18 05:47:38 UTC",
+    "serialized_at": "2025-09-17 09:58:01 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -88,7 +88,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "hoai2025-dancer-adlib1"
+          "hoai2025-dance-create-dancer"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -96,7 +96,7 @@
         "activity_section.key": "433ca43c-27a9-4011-b6dd-b4d2e5616c95"
       },
       "level_keys": [
-        "hoai2025-dancer-adlib1"
+        "hoai2025-dance-create-dancer"
       ]
     },
     {
@@ -107,54 +107,6 @@
       "properties": {
         "level_keys": [
           "hoai2025-music-adlib-1"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "hoai2025-dancer-adlib2"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "hoai2025-dev",
-        "activity_section.key": "433ca43c-27a9-4011-b6dd-b4d2e5616c95"
-      },
-      "level_keys": [
-        "hoai2025-dancer-adlib2"
-      ]
-    },
-    {
-      "chapter": 3,
-      "position": 3,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "hoai2025-music-adlib-2"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "hoai2025-dancer-adlib3"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "hoai2025-dev",
-        "activity_section.key": "433ca43c-27a9-4011-b6dd-b4d2e5616c95"
-      },
-      "level_keys": [
-        "hoai2025-dancer-adlib3"
-      ]
-    },
-    {
-      "chapter": 4,
-      "position": 4,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "hoai2025-dance-create"
         ]
       },
       "bonus": false,
@@ -172,11 +124,14 @@
       ]
     },
     {
-      "chapter": 5,
-      "position": 5,
-      "activity_section_position": 5,
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "hoai2025-music-adlib-2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -193,11 +148,14 @@
       ]
     },
     {
-      "chapter": 6,
-      "position": 6,
-      "activity_section_position": 6,
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "hoai2025-dance-create"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -217,33 +175,9 @@
   "levels_script_levels": [
     {
       "seeding_key": {
-        "level.key": "hoai2025-dancer-adlib1",
+        "level.key": "hoai2025-dance-create-dancer",
         "script_level.level_keys": [
-          "hoai2025-dancer-adlib1"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "hoai2025-dev",
-        "activity_section.key": "433ca43c-27a9-4011-b6dd-b4d2e5616c95"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "hoai2025-dancer-adlib2",
-        "script_level.level_keys": [
-          "hoai2025-dancer-adlib2"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "hoai2025-dev",
-        "activity_section.key": "433ca43c-27a9-4011-b6dd-b4d2e5616c95"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "hoai2025-dancer-adlib3",
-        "script_level.level_keys": [
-          "hoai2025-dancer-adlib3"
+          "hoai2025-dance-create-dancer"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",

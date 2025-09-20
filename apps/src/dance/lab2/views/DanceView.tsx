@@ -577,11 +577,7 @@ export default (props: LabProps<DanceLevelProperties, DanceProjectSources>) => (
     {queryParams('ai-generate-dancer') === 'true' ||
     props.levelProperties.generateDancerMode ? (
       <DancerGenerate
-        adlibOption={
-          (queryParams('ai-generate-adlib') as string) ||
-          props.levelProperties.aiDancerGenerateAdlib ||
-          'adjective-animal-accessory'
-        }
+        adlibOption={(queryParams('ai-generate-adlib') as string) || 'basic2'}
       />
     ) : (
       <DanceView levelProperties={props.levelProperties} />
