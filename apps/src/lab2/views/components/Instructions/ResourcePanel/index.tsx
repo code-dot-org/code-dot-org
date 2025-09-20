@@ -3,6 +3,7 @@ import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {kitIcons} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import classNames from 'classnames';
+import {Steps} from 'intro.js-react';
 import React, {useEffect, useMemo, useState} from 'react';
 
 import {ChatButtonData, SystemPromptSettings} from '@cdo/apps/aichat/types';
@@ -12,6 +13,10 @@ import {ProjectSources} from '@cdo/apps/lab2/types';
 import AiTutor2Chat from '@cdo/apps/lab2/views/components/AiTutor2Chat';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import StudentRubricView from '@cdo/apps/lab2/views/components/rubrics/StudentRubricView';
+import {
+  INITIAL_STEP,
+  STEPS,
+} from '@cdo/apps/pythonlab/resourcePanelTourHelpers';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {getTypedKeys} from '@cdo/apps/types/utils';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -100,6 +105,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   aiTutorChatButtonData,
   ...instructionsProps
 }) => {
+  console.log('INITIAL_STEP', INITIAL_STEP);
+  console.log('STEPS', STEPS);
   const {theme} = useTheme();
   const {showRubric} = useRubric();
   const [currentTab, setCurrentTab] = useState<Tabs>(Tabs.Instructions);
@@ -119,6 +126,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   );
   const levelName = instructionsProps.levelProperties.name;
   const channelId = useAppSelector(state => state.lab.channel?.id);
+  const isPythonLab = instructionsProps.levelProperties.appName === 'pythonlab';
+  console.log('isPythonLab', isPythonLab);
 
   // Build available tabs based on level information.
   const availableTabs = useMemo(() => {
@@ -223,8 +232,31 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     setCurrentTab(Tabs.Instructions);
   }, [levelId, viewAsUserId]);
 
+  const resourcePanelTourEnabled = true;
+
   return (
     <div className={classNames(styles.resourcePanel, className)}>
+      {isPythonLab && (
+        <Steps
+          enabled={resourcePanelTourEnabled}
+          initialStep={INITIAL_STEP}
+          steps={STEPS}
+          onExit={() => {}}
+          onChange={() => {}}
+          onBeforeChange={() => {}}
+          onComplete={() => {}}
+          options={{
+            scrollToElement: false,
+            exitOnOverlayClick: false,
+            hidePrev: true,
+            nextLabel: 'Next',
+            prevLabel: 'Back',
+            doneLabel: 'Done',
+            showBullets: false,
+            showStepNumbers: true,
+          }}
+        />
+      )}
       <div className={styles.sidebar}>
         <div className={styles.tabs}>
           {getTypedKeys(availableTabs).map(tab => (
