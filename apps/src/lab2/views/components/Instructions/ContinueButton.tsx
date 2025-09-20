@@ -3,6 +3,7 @@ import {
   ButtonType,
   ButtonColor,
 } from '@code-dot-org/component-library/button';
+import {ComponentSizeXSToL} from '@code-dot-org/component-library/common/types';
 import {FontAwesomeV6IconProps} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import React from 'react';
 
@@ -21,6 +22,8 @@ interface ContinueButtonProps {
   tooltipMessage?: string;
   isLabHidesContinueButton?: boolean;
   showContinueButton?: boolean;
+  size?: ComponentSizeXSToL;
+  className?: string;
 }
 
 /**
@@ -37,6 +40,8 @@ const ContinueButton: React.FC<ContinueButtonProps> = ({
   tooltipMessage,
   isLabHidesContinueButton,
   showContinueButton,
+  size,
+  className,
 }) => {
   const dispatch = useAppDispatch();
 
@@ -62,7 +67,7 @@ const ContinueButton: React.FC<ContinueButtonProps> = ({
           id="instructions-continue-button"
           onClick={() => dispatch(continueOrFinishLesson())}
           disabled={isDisabled}
-          {...{text, type, color, iconRight}}
+          {...{text, type, color, iconRight, size, className}}
         />
       </WithConditionalTooltip>
     </div>
