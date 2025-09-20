@@ -202,7 +202,11 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
     }
     return undefined;
   }, [hasRun, requireRun, submitButtonEnabled, submittable]);
-  console.log('feedbackMessage', feedbackMessage);
+
+  if (isLabHidesContinueButton && !showContinueButton && !feedbackMessage) {
+    return null;
+  }
+
   return (
     <div
       key={useMessageIndex + ' - ' + feedbackMessage}
