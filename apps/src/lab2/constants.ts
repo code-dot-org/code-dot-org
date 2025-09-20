@@ -45,3 +45,5 @@ export enum FontSize {
 }
 
 export const INITIAL_VERSION_ID = 'initial-version';
+
+export const LABS_HIDE_CONTINUE_BUTTON_RESOURCE_PANEL = ['music'];

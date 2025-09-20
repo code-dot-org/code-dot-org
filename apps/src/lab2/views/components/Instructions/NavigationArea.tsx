@@ -1,4 +1,3 @@
-import {Button} from '@code-dot-org/component-library/button';
 import classNames from 'classnames';
 import React, {useEffect, useMemo, useRef} from 'react';
 
@@ -7,18 +6,18 @@ import {
   nextLevelId,
 } from '@cdo/apps/code-studio/progressReduxSelectors';
 import {queryParams} from '@cdo/apps/code-studio/utils';
+import {LABS_HIDE_CONTINUE_BUTTON_RESOURCE_PANEL} from '@cdo/apps/lab2/constants';
 import lab2I18n from '@cdo/apps/lab2/locale';
-import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
 import {isPredictResponseSubmitted} from '@cdo/apps/lab2/redux/predictLevelRedux';
 import {LevelProperties} from '@cdo/apps/lab2/types';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
-import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 import commonI18n from '@cdo/locale';
 
 import TextToSpeech from '../TextToSpeech';
 
-import ContinueButtonActionNeeded from './ContinueButtonActionNeeded';
+import ContinueButton from './ContinueButton';
 import SubmitButton from './SubmitButton';
 
 import moduleStyles from './instructions.module.scss';
@@ -91,8 +90,6 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
     ? undefined
     : validationIndex;
 
-  const dispatch = useAppDispatch();
-
   const [type, color] =
     showSecondaryFinishButton && !hasNextLevel
       ? (['secondary', 'black'] as const)
@@ -118,28 +115,36 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
     }
   }, [validationMessage, isRunning]);
 
-  // For music lab levels, we want to hide the navigation button until the user validates or runs their code.
-  // For other labs, we want to always show the navigation button.
-  const musicCanShowContinueButton = useMemo(() => {
-    if (isPredictLevel) {
-      return predictResponseSubmitted;
-    } else if (submittable) {
-      return true;
-    } else if (hasValidationConditions) {
-      return validationSatisfied;
-    } else {
-      return hasRun; // music does not use requireRun
+  const isLabHidesContinueButton = useMemo(() => {
+    return LABS_HIDE_CONTINUE_BUTTON_RESOURCE_PANEL.includes(appName); // Currently, music lab is the only lab that does not always show the continue button so that alwaysShowContinueButton
+  }, [appName]);
+
+  const showContinueButton = useMemo(() => {
+    let showContinueButton = true;
+    if (isLabHidesContinueButton) {
+      if (isPredictLevel) {
+        showContinueButton = predictResponseSubmitted;
+      } else if (hasValidationConditions) {
+        showContinueButton = validationSatisfied;
+      } else {
+        showContinueButton = hasRun; // We are assuming that the lab does not use requireRun as in the case of music lab.
+      }
     }
+    return showContinueButton;
   }, [
+    isLabHidesContinueButton,
     isPredictLevel,
-    hasValidationConditions,
     predictResponseSubmitted,
+    hasValidationConditions,
     validationSatisfied,
-    submittable,
     hasRun,
   ]);
+  console.log('showContinueButton', showContinueButton);
 
-  const continueActionNeededButtonIsEnabled = useMemo(() => {
+  const continueButtonIsEnabled = useMemo(() => {
+    if (isLabHidesContinueButton) {
+      return true;
+    }
     if (isPredictLevel) {
       return predictResponseSubmitted;
     } else if (hasValidationConditions) {
@@ -156,6 +161,7 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
     validationSatisfied,
     requireRun,
     hasRun,
+    isLabHidesContinueButton,
   ]);
 
   const continueTooltipMessage = useMemo(() => {
@@ -184,40 +190,6 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
     hasRun,
   ]);
 
-  const ContinueButton = useMemo(() => {
-    if (appName === 'music') {
-      return (
-        <Button
-          id="instructions-continue-button"
-          size={'s'}
-          className={moduleStyles.buttonInstruction}
-          text={hasNextLevel ? commonI18n.continue() : commonI18n.finish()}
-          onClick={() => dispatch(continueOrFinishLesson())}
-          {...{type, color, iconRight}}
-        />
-      );
-    }
-    return (
-      <ContinueButtonActionNeeded
-        isDisabled={!continueActionNeededButtonIsEnabled}
-        type={type}
-        color={color}
-        iconRight={iconRight}
-        text={hasNextLevel ? commonI18n.continue() : commonI18n.finish()}
-        tooltipMessage={continueTooltipMessage}
-      />
-    );
-  }, [
-    appName,
-    continueActionNeededButtonIsEnabled,
-    type,
-    color,
-    iconRight,
-    hasNextLevel,
-    dispatch,
-    continueTooltipMessage,
-  ]);
-
   const submitButtonEnabled =
     disableEditRunForSubmission || hasSubmitted || (hasRun && hasEdited);
   const submitTooltipMessage = useMemo(() => {
@@ -230,11 +202,7 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
     }
     return undefined;
   }, [hasRun, requireRun, submitButtonEnabled, submittable]);
-
-  if (appName === 'music' && !musicCanShowContinueButton && !feedbackMessage) {
-    return null;
-  }
-
+  console.log('feedbackMessage', feedbackMessage);
   return (
     <div
       key={useMessageIndex + ' - ' + feedbackMessage}
@@ -271,10 +239,19 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
             tooltipMessage={submitTooltipMessage}
           />
         ) : (
-          ContinueButton
+          <ContinueButton
+            isDisabled={!continueButtonIsEnabled}
+            type={type}
+            color={color}
+            iconRight={iconRight}
+            text={hasNextLevel ? commonI18n.continue() : commonI18n.finish()}
+            tooltipMessage={continueTooltipMessage}
+            isLabHidesContinueButton={isLabHidesContinueButton}
+            showContinueButton={showContinueButton}
+          />
         )}
 
-        {showTts && feedbackMessage && !musicCanShowContinueButton && (
+        {showTts && feedbackMessage && !showContinueButton && (
           <div className={moduleStyles.ttsContainer}>
             <TextToSpeech text={feedbackMessage} />
           </div>
