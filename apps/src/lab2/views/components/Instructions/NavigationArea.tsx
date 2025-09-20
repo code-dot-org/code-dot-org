@@ -122,7 +122,7 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
   }, [appName]);
 
   // For labs that hide the continue button, we show the button if the user has met the conditions for the next level.
-  // For labs that always shows the continue button, this boolean is always true.
+  // For labs that always show the continue button, this boolean is always true.
   const showContinueButton = useMemo(() => {
     let showContinueButton = true;
     if (isLabHidesContinueButton) {
