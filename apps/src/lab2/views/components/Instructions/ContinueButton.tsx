@@ -25,7 +25,8 @@ interface ContinueButtonProps {
 
 /**
  * Displays the 'Continue' or 'Finish' button that advances to the next level or finishes the progression.
- * This button is always displayed, but is disabled if the user has not met the conditions for the next level.
+ * If the button is always displayed, it is disabled if the user has not met the conditions for the next level.
+ * If isLabHidesContinueButton is true, the button is hidden until user has met the conditions for the next level.
  */
 const ContinueButton: React.FC<ContinueButtonProps> = ({
   isDisabled,
@@ -37,15 +38,10 @@ const ContinueButton: React.FC<ContinueButtonProps> = ({
   isLabHidesContinueButton,
   showContinueButton,
 }) => {
-  // Currently, music lab is only lab that does not always show the continue button so that alwaysShowContinueButton
-  // is false for music lab and we need condition logic to know when to return button and when to return null.
   const dispatch = useAppDispatch();
 
-  // Show tooltip when button is disabled AND we have a message
+  // Show tooltip when button is disabled AND we have a message.
   const shouldShowTooltip = isDisabled && !!tooltipMessage;
-  console.log('inside ContinueButton');
-  console.log('isLabHidesContinueButton', isLabHidesContinueButton);
-  console.log('showContinueButton', showContinueButton);
 
   if (isLabHidesContinueButton && !showContinueButton) {
     return null;

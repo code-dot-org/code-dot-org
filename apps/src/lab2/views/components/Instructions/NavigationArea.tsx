@@ -115,10 +115,14 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
     }
   }, [validationMessage, isRunning]);
 
+  // Certain labs hide the continue button until the user has met the conditions for the next level.
+  // Example: Music lab.
   const isLabHidesContinueButton = useMemo(() => {
-    return LABS_HIDE_CONTINUE_BUTTON_RESOURCE_PANEL.includes(appName); // Currently, music lab is the only lab that does not always show the continue button so that alwaysShowContinueButton
+    return LABS_HIDE_CONTINUE_BUTTON_RESOURCE_PANEL.includes(appName);
   }, [appName]);
 
+  // For labs that hide the continue button, we show the button if the user has met the conditions for the next level.
+  // For labs that always shows the continue button, this boolean is always true.
   const showContinueButton = useMemo(() => {
     let showContinueButton = true;
     if (isLabHidesContinueButton) {
@@ -139,8 +143,9 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
     validationSatisfied,
     hasRun,
   ]);
-  console.log('showContinueButton', showContinueButton);
 
+  // For labs that always show the continue button, the button is enabled if the user has met the conditions for the next level.
+  // For labs that hide the continue button, this boolean is always true.
   const continueButtonIsEnabled = useMemo(() => {
     if (isLabHidesContinueButton) {
       return true;
