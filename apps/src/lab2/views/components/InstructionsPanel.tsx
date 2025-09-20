@@ -102,7 +102,6 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
       feedbackRef.current?.focus();
     }
   }, [message, isRunning]);
-  console.log('inside InstructionsPanel');
 
   return (
     <div
