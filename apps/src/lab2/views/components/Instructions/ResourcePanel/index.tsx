@@ -240,6 +240,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                 'data-theme': theme,
               }}
               hideDelay={hideTooltipDelay}
+              hideOnFirstLeave={true}
               key={`tooltip-${tab}`}
             >
               <Button
@@ -274,6 +275,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
               'data-theme': theme,
             }}
             hideDelay={hideTooltipDelay}
+            hideOnFirstLeave={true}
           >
             <Button
               className={styles.bottomButton}

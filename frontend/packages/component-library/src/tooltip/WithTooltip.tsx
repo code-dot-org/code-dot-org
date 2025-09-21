@@ -35,10 +35,20 @@ export interface WithTooltipProps {
   tooltipOverlayClassName?: string;
   tooltipProps: TooltipProps;
   hideDelay?: number;
+  hideOnFirstLeave?: boolean;
 }
 
 const WithTooltip = forwardRef<WithTooltipHandle, WithTooltipProps>(
-  ({children, tooltipOverlayClassName, tooltipProps, hideDelay}, ref) => {
+  (
+    {
+      children,
+      tooltipOverlayClassName,
+      tooltipProps,
+      hideDelay,
+      hideOnFirstLeave,
+    },
+    ref,
+  ) => {
     const [nodePosition, setNodePosition] = useState<HTMLElement | null>(null);
     const [showTooltip, setShowTooltip] = useState<boolean>(false);
     const [actualDirection, setActualDirection] =
@@ -192,7 +202,9 @@ const WithTooltip = forwardRef<WithTooltipHandle, WithTooltipProps>(
               direction={actualDirection}
               ref={tooltipRef}
               style={tooltipStyleProps}
-              onMouseEnter={event => handleShowTooltip(true, event, true)}
+              onMouseEnter={event =>
+                !hideOnFirstLeave && handleShowTooltip(true, event, true)
+              }
               onMouseLeave={handleHideTooltip}
             />,
             document.body,

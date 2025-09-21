@@ -36,6 +36,7 @@ const ButtonWithDialog: React.FunctionComponent<ButtonWithDialogProps> = ({
           'data-theme': theme,
         }}
         hideDelay={hideTooltipDelay}
+        hideOnFirstLeave={true}
       >
         <Button
           className={styles.bottomButton}
