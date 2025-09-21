@@ -120,6 +120,9 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const levelName = instructionsProps.levelProperties.name;
   const channelId = useAppSelector(state => state.lab.channel?.id);
 
+  // Tooltip should disappear quickly.
+  const hideTooltipDelay = 10;
+
   // Build available tabs based on level information.
   const availableTabs = useMemo(() => {
     const tabMap: {[key in Tabs]?: React.ReactNode} = {};
@@ -236,6 +239,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                 size: 'xs',
                 'data-theme': theme,
               }}
+              hideDelay={hideTooltipDelay}
               key={`tooltip-${tab}`}
             >
               <Button
@@ -269,6 +273,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
               size: 'xs',
               'data-theme': theme,
             }}
+            hideDelay={hideTooltipDelay}
           >
             <Button
               className={styles.bottomButton}
