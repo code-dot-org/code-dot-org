@@ -1,9 +1,12 @@
 import {Button} from '@code-dot-org/component-library/button';
+import {Heading5} from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
 import React, {useCallback, useState} from 'react';
 
+import {LevelProperties} from '@cdo/apps/lab2/types';
 import Adlib, {AdlibsType} from '@cdo/apps/lab2/views/components/guide/Adlib';
 import Guide from '@cdo/apps/lab2/views/components/guide/Guide';
+import NavigationButton from '@cdo/apps/lab2/views/components/Instructions/NavigationButton';
 import getRandomInt from '@cdo/apps/util/getRandomInt';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -28,10 +31,12 @@ const adlibs = adlibsUntyped as AdlibsType;
 
 interface GenerateCodeProps {
   adlibOption?: string;
+  levelProperties: LevelProperties;
 }
 
 const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
   adlibOption,
+  levelProperties,
 }) => {
   const dispatch = useAppDispatch();
 
@@ -58,11 +63,11 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
         ?.getFolderForFolderId(packId || 'indie')
         ?.sounds?.map(sound => {
           if (sound.type !== 'preview') {
-            return `${packId}/${sound.src} (${sound.length} measures)`;
+            return `"${packId}/${sound.src}" (${sound.length} measures)`;
           }
         })
         .filter(sound => sound !== undefined)
-        .join('", "') || '';
+        .join(', ') || '';
 
     const drumSounds =
       library
@@ -72,11 +77,11 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
           folder.sounds
             .filter(sound => sound.type === 'beat')
             .map(sound => {
-              return `${folder.id}/${sound.src} (${sound.length} measures)`;
+              return `"${folder.id}/${sound.src}" (${sound.length} measures)`;
             })
         )
         .flat()
-        .join('", ') || '';
+        .join(', ') || '';
 
     console.log('Starting AI ask...');
 
@@ -143,6 +148,8 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
 
   return (
     <Guide id="generate-panel">
+      <Heading5 className={styles.heading}> Use AI</Heading5>
+
       {showFullContext && aiGenerateState === 'none' && (
         <textarea
           id="generate-context"
@@ -189,6 +196,7 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
           type="primary"
           color="purple"
           size="s"
+          iconLeft={{iconName: 'sparkles'}}
           onClick={generateSong}
         />
       )}
@@ -203,6 +211,7 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
             type="primary"
             color="purple"
             size="s"
+            iconLeft={{iconName: 'sparkles'}}
             onClick={generateSong}
           />
 
@@ -213,6 +222,13 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
             color="purple"
             size="s"
             onClick={() => dispatch(setAiGenerateState('none'))}
+          />
+
+          <NavigationButton
+            levelProperties={levelProperties}
+            hasRun={true}
+            hasEdited={false}
+            className={styles.navigationButton}
           />
         </>
       )}

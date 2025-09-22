@@ -547,7 +547,7 @@ const DanceView: React.FunctionComponent<{
         <div id={BLOCKLY_DIV_ID} />
       </PanelContainer>
       {aiGenerateMode && (
-        <Guide id="generate-panel">
+        <Guide id="generate-panel" width="narrow">
           {
             <>
               <div>
@@ -578,6 +578,7 @@ export default (props: LabProps<DanceLevelProperties, DanceProjectSources>) => (
     props.levelProperties.generateDancerMode ? (
       <DancerGenerate
         adlibOption={(queryParams('ai-generate-adlib') as string) || 'basic2'}
+        levelProperties={props.levelProperties}
       />
     ) : (
       <DanceView levelProperties={props.levelProperties} />
