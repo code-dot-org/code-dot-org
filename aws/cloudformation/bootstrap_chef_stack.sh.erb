@@ -85,7 +85,7 @@ DB_USERNAME=$(echo $DB_SECRET | jq -r ".username")
 DB_PASSWORD=$(echo $DB_SECRET | jq -r ".password")
 <% end -%>
 
-# We're not using curly braces to expand ENVIRONMENT for complex reasons (this script is processed by CloudFormation !Sub).
+# This AWS Secret is only provisioned for adhocs, which use it to authenticate read operations (clone/fetch/pull) from GitHub.
 GITHUB_TOKEN=$(aws --region $REGION secretsmanager get-secret-value --secret-id "$ENVIRONMENT/cdo/github_token" --version-stage AWSCURRENT | jq -r ".SecretString")
 
 # Customize Chef configuration.
