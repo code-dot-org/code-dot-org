@@ -207,6 +207,9 @@ module Dashboard
     Rails.autoloaders.main.ignore(
       Rails.root.join("lib", "tasks"),
       Rails.root.join("lib", "assets"),
+      # Tools which are designed for development / test environments should not be eager-loaded
+      # because they may depend on gems which are not available in production. Unfortunately this
+      # means they will not be autoloaded either, and must be explicitly required.
       Rails.root.join("lib", "devtools"),
     )
 

@@ -33,6 +33,7 @@ class TestSection
       pp 'Only creates a new teacher if :teacher_id is not provided and only on adhoc or development.'
       pp ''
       pp 'Example usage:'
+      pp '  require_relative "lib/devtools/test_section"'
       pp '  TestSection.seed({})'
       pp '  TestSection.seed({preset_name: "random", teacher_id: 456, section_name: "Random Section", num_students: 15})'
       return
