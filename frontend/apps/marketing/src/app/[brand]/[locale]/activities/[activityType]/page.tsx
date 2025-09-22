@@ -1,18 +1,18 @@
-import {Results, search} from '@orama/orama';
-import {persist} from '@orama/plugin-data-persistence';
-import {notFound} from 'next/navigation';
-import {Suspense} from 'react';
+import { Results, search } from '@orama/orama';
+import { persist } from '@orama/plugin-data-persistence';
+import { notFound } from 'next/navigation';
 
 import ActivityCatalog from '@/components/contentful/activityCatalog';
-import {Brand} from '@/config/brand';
-import {getContentfulActivities} from '@/modules/activityCatalog/contentful/getContentfulActivities';
-import {createDatabase} from '@/modules/activityCatalog/orama/createDatabase';
-import {Activity} from '@/modules/activityCatalog/types/Activity';
-import {Entry} from '@/types/contentful/Entry';
+import { Brand } from '@/config/brand';
+import { getContentfulActivities } from '@/modules/activityCatalog/contentful/getContentfulActivities';
+import { createDatabase } from '@/modules/activityCatalog/orama/createDatabase';
+import { Activity } from '@/modules/activityCatalog/types/Activity';
+import { Entry } from '@/types/contentful/Entry';
 
 export const revalidate = 3600;
 
 export async function generateStaticParams() {
+  // If you’re not prebuilding anything yet, returning [] is fine.
   return [];
 }
 
@@ -21,26 +21,21 @@ enum ActivityType {
   HOUR_OF_CODE = 'hour-of-code',
 }
 
-const ValidActivityTypes = new Set(Object.values(ActivityType));
+const ValidActivityTypes = new Set<string>(Object.values(ActivityType));
 
 /**
- * Server-side rendered Activities Page.
- * Fetches activities from Contentful and then creates an Orama database,
- * and passes serialized data to the client-side ActivityCatalog component.
+ * Server-rendered Activities Page
+ * - Fetches activities from Contentful
+ * - Builds an Orama DB
+ * - Passes serialized DB + facets + all activities to the client component
  */
 export default async function ActivitiesPage({
-  params,
+  params: { brand, locale, activityType },
 }: {
-  params: Promise<{brand: string; locale: string; activityType: string}>;
+  params: { brand: string; locale: string; activityType: string };
 }) {
-  const {brand, activityType} = await params;
-
   // This page is only available for CS For All brand
-  // Ideally this would be accomplished using App Router file system structure instead.
-  if (
-    brand !== Brand.CS_FOR_ALL ||
-    !ValidActivityTypes.has(activityType as ActivityType)
-  ) {
+  if (brand !== Brand.CS_FOR_ALL || !ValidActivityTypes.has(activityType)) {
     return notFound();
   }
 
@@ -49,19 +44,15 @@ export default async function ActivitiesPage({
 
   // Create Orama database from Contentful activities
   const db = createDatabase(
-    contentfulActivities as unknown as Entry<Activity>[],
+    contentfulActivities as unknown as Entry<Activity>[]
   );
 
-  /**
-   * Serializes the Orama database for client-side use
-   */
+  /** Serializes the Orama database for client-side use */
   const getSerializedOramaDatabase = async () => {
     return await persist(db, 'json');
   };
 
-  /**
-   * Finds all unique values for each facet in the Orama database.
-   */
+  /** Finds all unique values for each facet in the Orama database */
   const getSearchFacets = async () => {
     const facetResults: Results<Activity> = await search(db, {
       facets: {
@@ -74,28 +65,22 @@ export default async function ActivitiesPage({
         technologyClassroom: {},
       },
     });
-
     return facetResults.facets;
   };
 
-  /**
-   * Fetches all activities from the Orama database.
-   */
+  /** Fetches all activities from the Orama database */
   const getAllActivities = async () => {
-    const allActivityResults = await search(db, {term: ''});
-
+    const allActivityResults = await search(db, { term: '' });
     return allActivityResults.hits.map(hit => hit.document);
   };
 
   return (
-    <section style={{display: 'flex'}}>
-      <Suspense>
-        <ActivityCatalog
-          serializedOramaDb={await getSerializedOramaDatabase()}
-          activities={await getAllActivities()}
-          facets={await getSearchFacets()}
-        />
-      </Suspense>
+    <section style={{ display: 'flex' }}>
+      <ActivityCatalog
+        serializedOramaDb={await getSerializedOramaDatabase()}
+        activities={await getAllActivities()}
+        facets={await getSearchFacets()}
+      />
     </section>
   );
 }
