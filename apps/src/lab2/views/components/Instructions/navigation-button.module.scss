@@ -1,0 +1,11 @@
+// Ensure the TooltipOverlay wrapper div matches the button width
+// without changing TooltipOverlay's calculated position.
+.buttonInstructionTooltipOverlay { 
+  > div {
+    width: 100%;
+  }
+   // Contained button takes full width.
+  button {
+    width: 100%;
+  }
+}
