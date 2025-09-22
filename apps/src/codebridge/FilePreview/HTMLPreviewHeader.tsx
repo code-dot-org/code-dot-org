@@ -3,7 +3,6 @@ import SegmentedButtons, {
   SegmentedButtonsProps,
 } from '@code-dot-org/component-library/segmentedButtons';
 import TextField from '@code-dot-org/component-library/textField';
-import classNames from 'classnames';
 import React from 'react';
 
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -75,12 +74,7 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
   return (
     <div className={moduleStyles.previewHeaderContainer}>
       <div className={moduleStyles.urlBarContent}>
-        <div
-          className={classNames(
-            moduleStyles.urlButtonsWrapper,
-            moduleStyles.navButtonsWrapper
-          )}
-        >
+        <div className={moduleStyles.navButtonsWrapper}>
           <Button
             onClick={onNavigateBack}
             aria-label={weblab2I18n.navigateBack()}
@@ -89,8 +83,8 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
             color="gray"
             isIconOnly={true}
             icon={{iconName: 'chevron-left'}}
-            className={moduleStyles.urlButton}
             disabled={!canNavigateBack}
+            className={moduleStyles.iconButton}
           />
           <Button
             onClick={onNavigateForward}
@@ -100,8 +94,8 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
             color="gray"
             isIconOnly={true}
             icon={{iconName: 'chevron-right'}}
-            className={moduleStyles.urlButton}
             disabled={!canNavigateForward}
+            className={moduleStyles.iconButton}
           />
         </div>
         <TextField
@@ -112,28 +106,18 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
           size={'s'}
           className={moduleStyles.urlBarInput}
         />
-        <div
-          className={classNames(
-            moduleStyles.urlButtonsWrapper,
-            moduleStyles.refreshButtonWrapper
-          )}
-        >
-          <Button
-            onClick={onRefresh}
-            aria-label={weblab2I18n.refresh()}
-            size="xs"
-            type="tertiary"
-            color="gray"
-            isIconOnly={true}
-            icon={{iconName: 'refresh'}}
-            className={moduleStyles.urlButton}
-          />
-        </div>
+        <Button
+          onClick={onRefresh}
+          aria-label={weblab2I18n.refresh()}
+          size="xs"
+          type="tertiary"
+          color="gray"
+          isIconOnly={true}
+          icon={{iconName: 'refresh'}}
+          className={moduleStyles.iconButton}
+        />
       </div>
-      <SegmentedButtons
-        {...previewViewModeButtonsProps}
-        className={moduleStyles.customSegmentedButtons}
-      />
+      <SegmentedButtons {...previewViewModeButtonsProps} />
       <ToggleFullScreenButton
         isFullScreenView={isFullScreenView}
         onToggleFullScreen={onToggleFullScreen}
@@ -164,7 +148,6 @@ const ToggleFullScreenButton: React.FC<ToggleFullScreenButtonProps> = ({
       color="gray"
       isIconOnly={true}
       icon={{iconName: isFullScreenView ? 'compress' : 'expand'}}
-      className={moduleStyles.urlButton}
     />
   );
 };
