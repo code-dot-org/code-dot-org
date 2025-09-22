@@ -106,6 +106,8 @@ class PythonLocalizer extends Localizer {
           ? localizedRaw?.substring(token.type.length + 3) || content
           : content;
 
+        console.log('PYTHONLAB LOCALIZATION', localizedRaw, localizedContent);
+
         if (
           localizedRaw !== undefined &&
           !(localizedRaw || '').startsWith(`[${token.type}] `)

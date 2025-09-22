@@ -40,7 +40,7 @@ export const useInitialSources = (
   defaultSources: ProjectSources,
   levelProperties: CodebridgeLevelProperties,
   initialServerSource?: ProjectSources,
-  localizer?: Localizer
+  localizers?: Localizer[]
 ) => {
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
   const exemplarSources = levelProperties.exemplarSources as MultiFileSource;
@@ -102,7 +102,10 @@ export const useInitialSources = (
 
             const projectFile = file as ProjectFile;
 
-            return [key, localizer?.localize(projectFile) || projectFile];
+            return [
+              key,
+              (localizers || []).reduce((a, b) => b.localize(a), projectFile),
+            ];
           })
         ),
       };
@@ -115,7 +118,7 @@ export const useInitialSources = (
 
       return {source, labConfig};
     },
-    [isStartMode, miniApp, serializedMaze, validationFile, localizer]
+    [isStartMode, miniApp, serializedMaze, validationFile, localizers]
   );
 
   // We memoize these objects so that they don't cause an unexpected re-render.

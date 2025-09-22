@@ -25,7 +25,7 @@ export const useSource = (
   defaultSources: ProjectSources,
   levelProperties: CodebridgeLevelProperties,
   initialServerSources?: ProjectSources,
-  localizer?: Localizer
+  localizers?: Localizer[]
 ) => {
   const dispatch = useAppDispatch();
   const source = useAppSelector(
@@ -42,7 +42,7 @@ export const useSource = (
     defaultSources,
     levelProperties,
     initialServerSources,
-    localizer
+    localizers
   );
   const previousLevelIdRef = useRef<number | null>(null);
   const previousInitialSources = useRef<ProjectSources | null>(null);

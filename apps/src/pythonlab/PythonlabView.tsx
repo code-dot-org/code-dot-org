@@ -89,7 +89,7 @@ const PythonlabView: React.FunctionComponent<
     DEFAULT_PROJECT,
     levelProperties,
     initialSources,
-    localizer
+    [localizer]
   );
   const validationFile = levelProperties.validationFile;
   const isPredictLevel = levelProperties.predictSettings?.isPredictLevel;
