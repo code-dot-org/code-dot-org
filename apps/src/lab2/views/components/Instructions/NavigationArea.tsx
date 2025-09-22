@@ -1,17 +1,13 @@
 import classNames from 'classnames';
 import React, {useEffect, useMemo, useRef} from 'react';
 
-import {
-  getCurrentLevel,
-  nextLevelId,
-} from '@cdo/apps/code-studio/progressReduxSelectors';
+import {nextLevelId} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import lab2I18n from '@cdo/apps/lab2/locale';
 import {isPredictResponseSubmitted} from '@cdo/apps/lab2/redux/predictLevelRedux';
 import {LevelProperties} from '@cdo/apps/lab2/types';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 import commonI18n from '@cdo/locale';
 
 import TextToSpeech from '../TextToSpeech';
@@ -70,9 +66,6 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
     state => nextLevelId(state) !== undefined
   );
   const predictResponseSubmitted = useAppSelector(isPredictResponseSubmitted);
-  const hasSubmitted = useAppSelector(
-    state => getCurrentLevel(state)?.status === LevelStatus.submitted
-  );
   const isPredictLevel = predictSettings?.isPredictLevel;
   const showSecondaryFinishButton =
     useSecondaryFinishButton ||
@@ -161,19 +154,6 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
     hasRun,
   ]);
 
-  const submitButtonEnabled =
-    disableEditRunForSubmission || hasSubmitted || (hasRun && hasEdited);
-  const submitTooltipMessage = useMemo(() => {
-    if (submittable && !submitButtonEnabled) {
-      if (requireRun || !hasRun) {
-        return lab2I18n.toSubmitEditRun();
-      } else {
-        return lab2I18n.toSubmitEdit();
-      }
-    }
-    return undefined;
-  }, [hasRun, requireRun, submitButtonEnabled, submittable]);
-
   if (hideContinueIfDisabled && !continueButtonIsEnabled && !feedbackMessage) {
     return null;
   }
@@ -208,10 +188,10 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
             levelId={id}
             appName={appName}
             disableEditRunForSubmission={disableEditRunForSubmission}
+            requireRun={requireRun}
             hasRun={hasRun}
             hasEdited={hasEdited}
             className={moduleStyles.buttonInstruction}
-            tooltipMessage={submitTooltipMessage}
           />
         ) : (
           <ContinueButton

@@ -1,9 +1,10 @@
 import {Button} from '@code-dot-org/component-library/button';
-import React from 'react';
+import React, {useMemo} from 'react';
 
 import {sendSubmitReport} from '@cdo/apps/code-studio/progressRedux';
 import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
 import WithConditionalTooltip from '@cdo/apps/codebridge/components/WithConditionalTooltip';
+import lab2I18n from '@cdo/apps/lab2/locale';
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
 import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
 import {commonI18n} from '@cdo/apps/types/locale';
@@ -23,7 +24,7 @@ interface SubmitButtonProps {
   hasEdited: boolean;
   disableEditRunForSubmission?: boolean;
   className?: string;
-  tooltipMessage?: string;
+  requireRun?: boolean;
 }
 
 /**
@@ -37,7 +38,7 @@ export const SubmitButton: React.FC<SubmitButtonProps> = ({
   hasEdited,
   disableEditRunForSubmission = false,
   className,
-  tooltipMessage,
+  requireRun = false,
 }) => {
   const hasSubmitted = useAppSelector(
     state => getCurrentLevel(state)?.status === LevelStatus.submitted
@@ -52,6 +53,17 @@ export const SubmitButton: React.FC<SubmitButtonProps> = ({
 
   const dialogControl = useDialogControl();
   const dispatch = useAppDispatch();
+
+  const tooltipMessage = useMemo(() => {
+    if (!enabled) {
+      if (requireRun || !hasRun) {
+        return lab2I18n.toSubmitEditRun();
+      } else {
+        return lab2I18n.toSubmitEdit();
+      }
+    }
+    return undefined;
+  }, [enabled, hasRun, requireRun]);
 
   const handleSubmit = async () => {
     // We either submit or unsubmit the project, depending on the current state.
