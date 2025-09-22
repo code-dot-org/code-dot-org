@@ -210,4 +210,23 @@ class UserScriptFindAndMigrateMethodsTest < ActiveSupport::TestCase
     assert_equal @original_unit_group, result.unit_group
     assert_equal @user, result.user
   end
+
+  test "find_and_migrate_or_create_by! allows PLC unit group for PLC course unit" do
+    # Create a PLC course unit (old professional learning course) using the PLC factories
+    plc_course_unit = create(:plc_course_unit)
+    plc_unit = plc_course_unit.script
+    assert plc_unit.old_professional_learning_course?
+
+    # Obtain the PLC unit group, which does not directly contain the PLC unit
+    plc_unit_group = plc_course_unit.plc_course.unit_group
+    refute plc_unit.unit_groups.include?(plc_unit_group)
+
+    # Should not raise even though the unit_group is not one of the unit's unit groups,
+    # because old_professional_learning_course? bypasses the membership validation.
+    result = UserScript.find_and_migrate_or_create_by!(user_id: @user.id, unit: plc_unit, unit_group: plc_unit_group)
+
+    assert_equal @user, result.user
+    assert_equal plc_unit, result.script
+    assert_equal plc_unit_group, result.unit_group
+  end
 end
