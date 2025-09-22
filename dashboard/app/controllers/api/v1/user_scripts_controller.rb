@@ -26,6 +26,6 @@ class Api::V1::UserScriptsController < ApplicationController
       return
     end
 
-    @user_script = UserScript.find_and_migrate_or_create_by!(user: current_user, unit: unit, unit_group: unit_group)
+    @user_script = UserScript.find_and_migrate_or_create_by!(user_id: current_user.id, unit: unit, unit_group: unit_group)
   end
 end
