@@ -63,11 +63,11 @@ class UserScript < ApplicationRecord
   # Find a UserScript for the given user and unit, ignoring any with non-original unit groups.
   # If the found row has no Unit Group, migrate it to have the unit's original Unit Group.
   #
-  # @param user [User] the user
+  # @param user_id [Integer] the user id
   # @param unit [Unit] the unit
-  def self.find_and_migrate_by(user:, unit:)
+  def self.find_and_migrate_by(user_id:, unit:)
     original_unit_group = unit.get_original_unit_group
-    user_script = find_by(user: user, script: unit, unit_group: [nil, original_unit_group])
+    user_script = find_by(user_id: user_id, script: unit, unit_group: [nil, original_unit_group])
     return nil unless user_script
 
     # If we found a UserScript with no unit group, and the unit's original unit group is not nil,
@@ -77,7 +77,7 @@ class UserScript < ApplicationRecord
     user_script
   end
 
-  def self.find_and_migrate_or_create_by!(user:, unit:, unit_group: nil)
+  def self.find_and_migrate_or_create_by!(user_id:, unit:, unit_group: nil)
     unless unit_group.nil? || unit.cached.unit_groups.include?(unit_group)
       raise "Unit #{unit.name} must belong to Unit Group #{unit_group&.name}"
     end
@@ -87,15 +87,15 @@ class UserScript < ApplicationRecord
     # if the unit has no original unit group.
     has_non_original_unit_group = unit_group && unit_group != original_unit_group
     if has_non_original_unit_group || original_unit_group.nil?
-      return find_or_create_by!(user: user, script: unit, unit_group: unit_group)
+      return find_or_create_by!(user_id: user_id, script: unit, unit_group: unit_group)
     end
 
     # the unit has an original unit group, and we're looking for a UserScript with the original
     # unit group or no unit group.
-    user_script = find_and_migrate_by(user: user, unit: unit)
+    user_script = find_and_migrate_by(user_id: user_id, unit: unit)
     return user_script if user_script
 
     # No existing UserScript found, so create one with the original unit group.
-    create!(user: user, script: unit, unit_group: original_unit_group)
+    create!(user_id: user_id, script: unit, unit_group: original_unit_group)
   end
 end

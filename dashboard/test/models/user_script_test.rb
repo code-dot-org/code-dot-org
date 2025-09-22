@@ -114,7 +114,7 @@ class UserScriptFindAndMigrateMethodsTest < ActiveSupport::TestCase
     us = UserScript.create!(user: @user, script: @unit_in_course, unit_group: nil)
     refute us.unit_group
 
-    result = UserScript.find_and_migrate_by(user: @user, unit: @unit_in_course)
+    result = UserScript.find_and_migrate_by(user_id: @user.id, unit: @unit_in_course)
 
     assert_equal us.id, result.id
     assert_equal @original_unit_group, result.unit_group
@@ -124,7 +124,7 @@ class UserScriptFindAndMigrateMethodsTest < ActiveSupport::TestCase
   test "find_and_migrate_by returns existing original unit_group without change" do
     us = UserScript.create!(user: @user, script: @unit_in_course, unit_group: @original_unit_group)
 
-    result = UserScript.find_and_migrate_by(user: @user, unit: @unit_in_course)
+    result = UserScript.find_and_migrate_by(user_id: @user.id, unit: @unit_in_course)
 
     assert_equal us, result
     assert_equal @original_unit_group, result.unit_group
@@ -133,20 +133,20 @@ class UserScriptFindAndMigrateMethodsTest < ActiveSupport::TestCase
   test "find_and_migrate_by ignores records with non-original unit_group" do
     us = UserScript.create!(user: @user, script: @unit_in_course, unit_group: @other_unit_group)
 
-    result = UserScript.find_and_migrate_by(user: @user, unit: @unit_in_course)
+    result = UserScript.find_and_migrate_by(user_id: @user.id, unit: @unit_in_course)
 
     assert_nil result
     assert_equal @other_unit_group, us.reload.unit_group
   end
 
   test "find_and_migrate_by returns nil when no matching user_script exists" do
-    assert_nil UserScript.find_and_migrate_by(user: @user, unit: @unit_in_course)
+    assert_nil UserScript.find_and_migrate_by(user_id: @user.id, unit: @unit_in_course)
   end
 
   test "find_and_migrate_by does not migrate when unit has no original unit_group" do
     us = UserScript.create!(user: @user, script: @unit_without_course, unit_group: nil)
 
-    result = UserScript.find_and_migrate_by(user: @user, unit: @unit_without_course)
+    result = UserScript.find_and_migrate_by(user_id: @user.id, unit: @unit_without_course)
 
     assert_equal us, result
     assert_nil result.unit_group
@@ -158,21 +158,21 @@ class UserScriptFindAndMigrateMethodsTest < ActiveSupport::TestCase
     bogus_unit_group = create(:unit_group)
 
     error = assert_raises RuntimeError do
-      UserScript.find_and_migrate_or_create_by!(user: @user, unit: @unit_in_course, unit_group: bogus_unit_group)
+      UserScript.find_and_migrate_or_create_by!(user_id: @user.id, unit: @unit_in_course, unit_group: bogus_unit_group)
     end
     assert_match(/Unit .* must belong to Unit Group .*/, error.message)
   end
 
   test "find_and_migrate_or_create_by! finds or creates for non-original unit_group without migration" do
-    result = UserScript.find_and_migrate_or_create_by!(user: @user, unit: @unit_in_course, unit_group: @other_unit_group)
+    result = UserScript.find_and_migrate_or_create_by!(user_id: @user.id, unit: @unit_in_course, unit_group: @other_unit_group)
     assert_equal @other_unit_group, result.unit_group
 
-    result2 = UserScript.find_and_migrate_or_create_by!(user: @user, unit: @unit_in_course, unit_group: @other_unit_group)
+    result2 = UserScript.find_and_migrate_or_create_by!(user_id: @user.id, unit: @unit_in_course, unit_group: @other_unit_group)
     assert_equal result.id, result2.id
   end
 
   test "find_and_migrate_or_create_by! creates with nil unit_group when unit has no original unit_group" do
-    result = UserScript.find_and_migrate_or_create_by!(user: @user, unit: @unit_without_course, unit_group: nil)
+    result = UserScript.find_and_migrate_or_create_by!(user_id: @user.id, unit: @unit_without_course, unit_group: nil)
 
     assert_nil result.unit_group
     assert_equal @unit_without_course, result.script
@@ -182,7 +182,7 @@ class UserScriptFindAndMigrateMethodsTest < ActiveSupport::TestCase
   test "find_and_migrate_or_create_by! migrates when no unit group is given" do
     us = UserScript.create!(user: @user, script: @unit_in_course, unit_group: nil)
 
-    result = UserScript.find_and_migrate_or_create_by!(user: @user, unit: @unit_in_course)
+    result = UserScript.find_and_migrate_or_create_by!(user_id: @user.id, unit: @unit_in_course)
 
     assert_equal us.id, result.id
     assert_equal @original_unit_group, result.unit_group
@@ -191,21 +191,21 @@ class UserScriptFindAndMigrateMethodsTest < ActiveSupport::TestCase
   test "find_and_migrate_or_create_by! migrates when original unit group is given" do
     us = UserScript.create!(user: @user, script: @unit_in_course, unit_group: nil)
 
-    result = UserScript.find_and_migrate_or_create_by!(user: @user, unit: @unit_in_course, unit_group: @original_unit_group)
+    result = UserScript.find_and_migrate_or_create_by!(user_id: @user.id, unit: @unit_in_course, unit_group: @original_unit_group)
 
     assert_equal us.id, result.id
     assert_equal @original_unit_group, result.unit_group
   end
 
   test "find_and_migrate_or_create_by! creates when no unit group is given" do
-    result = UserScript.find_and_migrate_or_create_by!(user: @user, unit: @unit_in_course)
+    result = UserScript.find_and_migrate_or_create_by!(user_id: @user.id, unit: @unit_in_course)
 
     assert_equal @original_unit_group, result.unit_group
     assert_equal @user, result.user
   end
 
   test "find_and_migrate_or_create_by! creates when original unit group is given" do
-    result = UserScript.find_and_migrate_or_create_by!(user: @user, unit: @unit_in_course, unit_group: @original_unit_group)
+    result = UserScript.find_and_migrate_or_create_by!(user_id: @user.id, unit: @unit_in_course, unit_group: @original_unit_group)
 
     assert_equal @original_unit_group, result.unit_group
     assert_equal @user, result.user
