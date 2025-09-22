@@ -55,6 +55,9 @@ import {BlocklySource, LabProps} from '@cdo/apps/lab2/types';
 import Guide from '@cdo/apps/lab2/views/components/guide/Guide';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
+import SourcesContainer, {
+  useSources,
+} from '@cdo/apps/lab2/views/SourcesContainer';
 import ProjectPlayer from '@cdo/apps/music/ProjectPlayer';
 import MusicProjectBar from '@cdo/apps/music/views/MusicProjectBar';
 import {registerReducers} from '@cdo/apps/redux';
@@ -69,7 +72,6 @@ import ProgramExecutor from '../ProgramExecutor';
 
 import DanceControls from './DanceControls';
 import DancerGenerate from './DancerGenerate';
-import SourcesContainer, {useSources} from './SourcesContainer';
 
 import moduleStyles from './dance-view.module.scss';
 
