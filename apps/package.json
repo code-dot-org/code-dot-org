@@ -257,7 +257,7 @@
     "@xterm/xterm": "^5.5.0",
     "@xyflow/react": "^12.8.1",
     "aws-sdk": "2.1231.0",
-    "blockly": "12.3.0",
+    "blockly": "12.3.1",
     "bootstrap-sass": "^3.4.1",
     "buffer": "^6.0.3",
     "canvg": "gabelerner/canvg",
