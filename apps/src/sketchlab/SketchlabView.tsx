@@ -3,15 +3,15 @@ import {ExcalidrawElement} from '@excalidraw/excalidraw/types/element/types';
 import {AppState, BinaryFiles} from '@excalidraw/excalidraw/types/types';
 import React, {useEffect} from 'react';
 
-import SourcesContainer, {
-  useSources,
-} from '@cdo/apps/dance/lab2/views/SourcesContainer';
 import {useVerticalLayout} from '@cdo/apps/lab2/hooks/useVerticalLayout';
 import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
 import {LabProps, LevelProperties, ProjectSources} from '@cdo/apps/lab2/types';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
+import SourcesContainer, {
+  useSources,
+} from '@cdo/apps/lab2/views/SourcesContainer';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import moduleStyles from './styles/sketchlab-view.module.scss';
@@ -53,7 +53,6 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
     state: AppState,
     files: BinaryFiles
   ) => {
-    console.log('onchange');
     const serializedData = serializeAsJSON(elements, state, files, 'local');
     updateSources({source: serializedData});
   };
