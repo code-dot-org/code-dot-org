@@ -1,4 +1,6 @@
 import {Excalidraw, serializeAsJSON} from '@excalidraw/excalidraw';
+import {ExcalidrawElement} from '@excalidraw/excalidraw/types/element/types';
+import {AppState, BinaryFiles} from '@excalidraw/excalidraw/types/types';
 import React, {useEffect} from 'react';
 
 import SourcesContainer, {
@@ -46,6 +48,16 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
     appName: 'sketchlab',
   });
 
+  const serializeAndSaveWorkspace = (
+    elements: readonly ExcalidrawElement[],
+    state: AppState,
+    files: BinaryFiles
+  ) => {
+    console.log('onchange');
+    const serializedData = serializeAsJSON(elements, state, files, 'local');
+    updateSources({source: serializedData});
+  };
+
   // Since there's no run button in Sketch Lab, set it to true by default
   // to enable the Submit button on edit on submittable levels.
   // Set back to false on unmount in case we switch to a different level type.
@@ -81,15 +93,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
         >
           <Excalidraw
             initialData={JSON.parse(currentSources.source as string)}
-            onChange={(elements, state, files) => {
-              const serializedData = serializeAsJSON(
-                elements,
-                state,
-                files,
-                'local'
-              );
-              updateSources({source: serializedData});
-            }}
+            onChange={serializeAndSaveWorkspace}
           />
         </PanelContainer>
       </div>
