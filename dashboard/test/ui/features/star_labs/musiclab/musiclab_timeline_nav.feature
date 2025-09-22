@@ -13,6 +13,8 @@ Scenario: Ensure users can navigate into and out of timeline, and between elemen
   Then I drag block "play_sound_at_current_location_simple2" to block "when run"
   And I press the first ".blocklyTreeRow" element
   Then I drag block "play_chord_at_current_location_simple2" to block "play_sound_at_current_location_simple2"
+  ## In case the block couldn't find when run the first time, drag it over from the middle of the workspace
+  Then I drag block "play_sound_at_current_location_simple2" to block "when run"
   Then I move focus to "#timeline"
   And I press keys ":enter"
   # Check that the first timeline element has focus
