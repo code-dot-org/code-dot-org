@@ -6,7 +6,6 @@ import {
   nextLevelId,
 } from '@cdo/apps/code-studio/progressReduxSelectors';
 import {queryParams} from '@cdo/apps/code-studio/utils';
-import {LABS_HIDE_CONTINUE_BUTTON_RESOURCE_PANEL} from '@cdo/apps/lab2/constants';
 import lab2I18n from '@cdo/apps/lab2/locale';
 import {isPredictResponseSubmitted} from '@cdo/apps/lab2/redux/predictLevelRedux';
 import {LevelProperties} from '@cdo/apps/lab2/types';
@@ -30,6 +29,7 @@ interface NavigationAreaProps {
   hasEdited: boolean;
   requireRun?: boolean;
   isResourcePanel?: boolean;
+  hideContinueIfDisabled?: boolean;
 }
 
 /**
@@ -43,6 +43,7 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
   requireRun,
   handleInstructionsTextClick,
   isResourcePanel,
+  hideContinueIfDisabled,
 }) => {
   const {
     id,
@@ -115,40 +116,7 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
     }
   }, [validationMessage, isRunning]);
 
-  // Certain labs hide the continue button until the user has met the conditions for the next level. Example: Music lab.
-  const isLabHidesContinueButton = useMemo(() => {
-    return LABS_HIDE_CONTINUE_BUTTON_RESOURCE_PANEL.includes(appName);
-  }, [appName]);
-
-  // For labs that hide the continue button, we show the button if the user has met the conditions for the next level.
-  // For labs that always show the continue button, this boolean is always true.
-  const showContinueButton = useMemo(() => {
-    let showContinueButton = true;
-    if (isLabHidesContinueButton) {
-      if (isPredictLevel) {
-        showContinueButton = predictResponseSubmitted;
-      } else if (hasValidationConditions) {
-        showContinueButton = validationSatisfied;
-      } else {
-        showContinueButton = hasRun; // We are assuming that the lab does not use requireRun as in the case of music lab.
-      }
-    }
-    return showContinueButton;
-  }, [
-    isLabHidesContinueButton,
-    isPredictLevel,
-    predictResponseSubmitted,
-    hasValidationConditions,
-    validationSatisfied,
-    hasRun,
-  ]);
-
-  // For labs that always show the continue button, the button is enabled if the user has met the conditions for the next level.
-  // For labs that hide the continue button, this boolean is always true.
   const continueButtonIsEnabled = useMemo(() => {
-    if (isLabHidesContinueButton) {
-      return true;
-    }
     if (isPredictLevel) {
       return predictResponseSubmitted;
     } else if (hasValidationConditions) {
@@ -165,7 +133,6 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
     validationSatisfied,
     requireRun,
     hasRun,
-    isLabHidesContinueButton,
   ]);
 
   const continueTooltipMessage = useMemo(() => {
@@ -207,7 +174,7 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
     return undefined;
   }, [hasRun, requireRun, submitButtonEnabled, submittable]);
 
-  if (isLabHidesContinueButton && !showContinueButton && !feedbackMessage) {
+  if (hideContinueIfDisabled && !continueButtonIsEnabled && !feedbackMessage) {
     return null;
   }
 
@@ -248,18 +215,17 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
           />
         ) : (
           <ContinueButton
-            isDisabled={!continueButtonIsEnabled}
+            disabled={!continueButtonIsEnabled}
             type={type}
             color={color}
             iconRight={iconRight}
             text={hasNextLevel ? commonI18n.continue() : commonI18n.finish()}
             tooltipMessage={continueTooltipMessage}
-            isLabHidesContinueButton={isLabHidesContinueButton}
-            showContinueButton={showContinueButton}
+            hide={hideContinueIfDisabled && !continueButtonIsEnabled}
           />
         )}
 
-        {showTts && feedbackMessage && !showContinueButton && (
+        {showTts && feedbackMessage && !hideContinueIfDisabled && (
           <div className={moduleStyles.ttsContainer}>
             <TextToSpeech text={feedbackMessage} />
           </div>

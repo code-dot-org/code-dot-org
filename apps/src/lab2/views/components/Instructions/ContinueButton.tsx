@@ -14,14 +14,13 @@ import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import moduleStyles from '@cdo/apps/lab2/views/components/Instructions/instructions.module.scss';
 
 interface ContinueButtonProps {
-  isDisabled: boolean;
+  disabled: boolean;
   type: ButtonType;
   color: ButtonColor;
   iconRight: FontAwesomeV6IconProps | undefined;
   text: string;
   tooltipMessage?: string;
-  isLabHidesContinueButton?: boolean;
-  showContinueButton?: boolean;
+  hide?: boolean;
   size?: ComponentSizeXSToL;
   className?: string;
 }
@@ -32,23 +31,22 @@ interface ContinueButtonProps {
  * If isLabHidesContinueButton is true, the button is hidden until user has met the conditions for the next level.
  */
 const ContinueButton: React.FC<ContinueButtonProps> = ({
-  isDisabled,
+  disabled,
   type,
   color,
   iconRight,
   text,
   tooltipMessage,
-  isLabHidesContinueButton,
-  showContinueButton,
+  hide,
   size,
   className,
 }) => {
   const dispatch = useAppDispatch();
 
   // Show tooltip when button is disabled AND we have a message.
-  const shouldShowTooltip = isDisabled && !!tooltipMessage;
+  const shouldShowTooltip = disabled && !!tooltipMessage;
 
-  if (isLabHidesContinueButton && !showContinueButton) {
+  if (hide) {
     return null;
   }
 
@@ -66,8 +64,7 @@ const ContinueButton: React.FC<ContinueButtonProps> = ({
         <Button
           id="instructions-continue-button"
           onClick={() => dispatch(continueOrFinishLesson())}
-          disabled={isDisabled}
-          {...{text, type, color, iconRight, size, className}}
+          {...{disabled, text, type, color, iconRight, size, className}}
         />
       </WithConditionalTooltip>
     </div>
