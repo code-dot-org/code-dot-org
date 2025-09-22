@@ -69,13 +69,12 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
         },
         PLATFORMS.BOTH
       );
-    } else {
-      analyticsReporter.sendEvent(
-        EVENTS.NEW_TEACHER_HOMEPAGE_VISITED,
-        {},
-        PLATFORMS.BOTH
-      );
     }
+    analyticsReporter.sendEvent(
+      EVENTS.NEW_TEACHER_HOMEPAGE_VISITED,
+      {},
+      PLATFORMS.BOTH
+    );
   }, [teacherId]);
 
   const [selectedArchiveToggle, setSelectedArchiveToggle] =
