@@ -13,6 +13,7 @@ import {
 } from './PersonalizationAnswers';
 import PersonalizationQuestion from './PersonalizationQuestion';
 import {PERSONALIZATION_PROMPTS} from './personalizationQuestions';
+import PersonalizationResults from './PersonalizationResults';
 import {saveTeachingProfileData} from './teachingProfileApi';
 
 import style from './personalization-information.module.scss';
@@ -44,6 +45,7 @@ interface PersonalizationData {
 const PersonalizationCollectorContainer: React.FC = () => {
   const [questionsNumber, setQuestionsNumber] = React.useState(0);
   const [isSaving, setIsSaving] = React.useState(false);
+  const [showResults, setShowResults] = React.useState(false);
   const [personalizationData, setPersonalizationData] =
     React.useState<PersonalizationData>({
       selectedGoals: [],
@@ -91,6 +93,7 @@ const PersonalizationCollectorContainer: React.FC = () => {
         setIsSaving(true);
         try {
           await saveTeachingProfileData(personalizationData);
+          setShowResults(true);
         } catch (error) {
           console.error('Failed to save final teaching profile data:', error);
         } finally {
@@ -193,29 +196,35 @@ const PersonalizationCollectorContainer: React.FC = () => {
 
   return (
     <div className={style.carouselContainer}>
-      <PersonalizationQuestion questionNumber={questionsNumber} />
-      <div className={style.answerContainer}>{determineAnswerType()}</div>
+      {showResults ? (
+        <PersonalizationResults persona="mentor" />
+      ) : (
+        <>
+          <PersonalizationQuestion questionNumber={questionsNumber} />
+          <div className={style.answerContainer}>{determineAnswerType()}</div>
 
-      <div className={style.navigationButtons}>
-        <Button
-          id={'back-button'}
-          text={i18n.back()}
-          type="secondary"
-          color="gray"
-          size="m"
-          onClick={() => onCarouselPress(BACK)}
-          iconLeft={{iconName: 'angle-left'}}
-        />
-        <Button
-          id={'next-button'}
-          text={isSaving ? i18n.saving() : i18n.next()}
-          type="primary"
-          size="m"
-          onClick={() => onCarouselPress(NEXT)}
-          disabled={isSaving}
-          iconRight={isSaving ? undefined : {iconName: 'angle-right'}}
-        />
-      </div>
+          <div className={style.navigationButtons}>
+            <Button
+              id={'back-button'}
+              text={i18n.back()}
+              type="secondary"
+              color="gray"
+              size="m"
+              onClick={() => onCarouselPress(BACK)}
+              iconLeft={{iconName: 'angle-left'}}
+            />
+            <Button
+              id={'next-button'}
+              text={isSaving ? i18n.saving() : i18n.next()}
+              type="primary"
+              size="m"
+              onClick={() => onCarouselPress(NEXT)}
+              disabled={isSaving}
+              iconRight={isSaving ? undefined : {iconName: 'angle-right'}}
+            />
+          </div>
+        </>
+      )}
     </div>
   );
 };
