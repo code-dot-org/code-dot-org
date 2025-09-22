@@ -92,6 +92,9 @@ const Weblab2View: React.FC<
   const [systemPromptOptions, setSystemPromptOptions] = useState<
     SystemPromptOption[] | undefined
   >(undefined);
+  const userAddedContext = useAppSelector(
+    state => state.aichat.userAddedContext
+  );
 
   const {startSources} = useSource(
     defaultProject,
@@ -134,7 +137,6 @@ const Weblab2View: React.FC<
     aiTutorHelper.setAiTutorContext({
       source,
       longInstructions: levelProperties.longInstructions,
-      userAddedContext: undefined,
     });
   }, [source, levelProperties.longInstructions]);
 
@@ -162,7 +164,9 @@ const Weblab2View: React.FC<
           setConfig={setConfig}
           startSources={startSources}
           levelProperties={levelProperties}
-          hiddenContextCallback={aiTutorHelper.getHiddenContextCallback()}
+          hiddenContextCallback={aiTutorHelper.getHiddenContextCallbackWebLab2(
+            userAddedContext
+          )}
           aiTutorSystemPromptSettings={aiTutorSystemPromptSettings}
           aiTutorMultimodalEnabled={true}
           aiTutorChatButtonData={[]}

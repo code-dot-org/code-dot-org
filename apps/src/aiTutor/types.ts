@@ -16,7 +16,6 @@ export interface AiTutorContext {
   validationResults?: string;
   longInstructions?: string;
   documentation?: string;
-  userAddedContext?: string;
 }
 
 export interface UserAddedContextType {
