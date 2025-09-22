@@ -77,7 +77,6 @@ export const useVerticalLayout = ({
 
     if (middlePanel) {
       // Middle panel takes priority in terms of available space in a 3 panel layout.
-      // In two panels,
       const adjustedMiddleWidth = Math.max(
         window.innerWidth -
           rawLeftPanelWidth -
