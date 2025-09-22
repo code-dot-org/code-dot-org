@@ -1,13 +1,17 @@
 import classNames from 'classnames';
 import React, {useEffect, useMemo, useRef} from 'react';
 
-import {nextLevelId} from '@cdo/apps/code-studio/progressReduxSelectors';
+import {
+  getCurrentLevel,
+  nextLevelId,
+} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import lab2I18n from '@cdo/apps/lab2/locale';
 import {isPredictResponseSubmitted} from '@cdo/apps/lab2/redux/predictLevelRedux';
 import {LevelProperties} from '@cdo/apps/lab2/types';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 import commonI18n from '@cdo/locale';
 
 import TextToSpeech from '../TextToSpeech';
@@ -77,6 +81,9 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
       : validationMessage;
 
   const showTts = offerBrowserTts || queryParams('show-tts') === 'true';
+  const hasSubmitted = useAppSelector(
+    state => getCurrentLevel(state)?.status === LevelStatus.submitted
+  );
 
   // The secondary finish button avoids a reappearance animation by not using
   // the unique index.
@@ -116,15 +123,19 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
       return validationSatisfied;
     } else if (requireRun) {
       return hasRun;
+    } else if (submittable && hasSubmitted) {
+      return true;
     } else {
       return true;
     }
   }, [
     isPredictLevel,
-    predictResponseSubmitted,
     hasValidationConditions,
-    validationSatisfied,
     requireRun,
+    submittable,
+    hasSubmitted,
+    predictResponseSubmitted,
+    validationSatisfied,
     hasRun,
   ]);
 
@@ -201,7 +212,7 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
             iconRight={iconRight}
             text={hasNextLevel ? commonI18n.continue() : commonI18n.finish()}
             tooltipMessage={continueTooltipMessage}
-            hidden={hideContinueIfDisabled && !continueButtonIsEnabled}
+            hideIfDisabled={hideContinueIfDisabled}
           />
         )}
 

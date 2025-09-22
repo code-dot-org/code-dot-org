@@ -1,10 +1,4 @@
-import {
-  Button,
-  ButtonType,
-  ButtonColor,
-} from '@code-dot-org/component-library/button';
-import {ComponentSizeXSToL} from '@code-dot-org/component-library/common/types';
-import {FontAwesomeV6IconProps} from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button, ButtonProps} from '@code-dot-org/component-library/button';
 import React from 'react';
 
 import WithConditionalTooltip from '@cdo/apps/codebridge/components/WithConditionalTooltip';
@@ -13,16 +7,9 @@ import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import moduleStyles from '@cdo/apps/lab2/views/components/Instructions/instructions.module.scss';
 
-interface ContinueButtonProps {
-  disabled: boolean;
-  type: ButtonType;
-  color: ButtonColor;
-  iconRight: FontAwesomeV6IconProps | undefined;
-  text: string;
+interface ContinueButtonProps extends ButtonProps {
   tooltipMessage?: string;
-  hidden?: boolean;
-  size?: ComponentSizeXSToL;
-  className?: string;
+  hideIfDisabled?: boolean;
 }
 
 /**
@@ -30,22 +17,17 @@ interface ContinueButtonProps {
  * hidden is true.
  */
 const ContinueButton: React.FC<ContinueButtonProps> = ({
-  disabled,
-  type,
-  color,
-  iconRight,
-  text,
   tooltipMessage,
-  hidden,
-  size,
-  className,
+  hideIfDisabled,
+  disabled,
+  ...buttonProps
 }) => {
   const dispatch = useAppDispatch();
 
   // Show tooltip when button is disabled AND we have a message.
-  const shouldShowTooltip = disabled && !!tooltipMessage;
+  const shouldShowTooltip = !!disabled && !!tooltipMessage;
 
-  if (hidden) {
+  if (hideIfDisabled && disabled) {
     return null;
   }
 
@@ -63,7 +45,8 @@ const ContinueButton: React.FC<ContinueButtonProps> = ({
         <Button
           id="instructions-continue-button"
           onClick={() => dispatch(continueOrFinishLesson())}
-          {...{disabled, text, type, color, iconRight, size, className}}
+          disabled={disabled}
+          {...buttonProps}
         />
       </WithConditionalTooltip>
     </div>
