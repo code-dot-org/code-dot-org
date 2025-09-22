@@ -57,4 +57,5 @@ export interface AichatState {
   saveError: SaveError | undefined;
   // If the model customizations were just reset to the default level values.
   showResetMessage: boolean;
+  userAddedContext: {[key: string]: string};
 }

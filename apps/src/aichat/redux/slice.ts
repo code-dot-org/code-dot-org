@@ -24,6 +24,7 @@ import {
   ChatAsset,
   SaveError,
   AiChatClientType,
+  UserAddedContextItem,
 } from '../types';
 import {
   DEFAULT_VISIBILITIES,
@@ -55,6 +56,7 @@ const initialState: AichatState = {
   saveError: undefined,
   showResetMessage: false,
   hasSetStartingCustomizations: false,
+  userAddedContext: {},
 };
 
 const aichatSlice = createSlice({
@@ -328,6 +330,19 @@ const aichatSlice = createSlice({
     setSaveError(state, action: PayloadAction<SaveError | undefined>) {
       state.saveError = action.payload;
     },
+    addItemToUserAddedContext(
+      state,
+      action: PayloadAction<UserAddedContextItem>
+    ) {
+      state.userAddedContext[action.payload.displayName] = action.payload.text;
+    },
+    removeItemFromUserAddedContext(state, action: PayloadAction<string>) {
+      state.userAddedContext[action.payload] &&
+        delete state.userAddedContext[action.payload];
+    },
+    clearUserAddedContext(state) {
+      state.userAddedContext = {};
+    },
   },
 });
 
@@ -386,4 +401,7 @@ export const {
   clearStagedFilesAlert,
   setSaveError,
   clearHasSetStartingCustomizations,
+  addItemToUserAddedContext,
+  removeItemFromUserAddedContext,
+  clearUserAddedContext,
 } = aichatSlice.actions;
