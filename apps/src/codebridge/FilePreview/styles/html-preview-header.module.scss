@@ -8,6 +8,18 @@
   min-width: 0; // Allow container to shrink
   container: previewHeaderContainer / inline-size;
 
+  // Hide Segmented Desktop/Mobile button labels when the header is narrow
+  @container previewHeaderContainer (width < 375px) {
+    .previewViewModeButtons > button {
+      height: 26px;
+      align-items: center;
+
+      & > span {
+        display: none;
+      }
+    }
+  }
+
   .urlBarContent {
     display: flex;
     flex: 1;
@@ -56,18 +68,6 @@
 
       &:focus-visible {
         outline-offset: 0; // Update focus outline so that it fits within the URL bar
-      }
-    }
-  }
-
-  // Hide Segmented Desktop/Mobile button labels when the header is narrow
-  @container previewHeaderContainer (width < 375px) {
-    .previewViewModeButtons > button {
-      height: 26px;
-      align-items: center;
-
-      & > span {
-        display: none;
       }
     }
   }
