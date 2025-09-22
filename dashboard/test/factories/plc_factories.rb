@@ -12,6 +12,11 @@ FactoryBot.define do
     unit_name {"MyString"}
     unit_description {"MyString"}
     unit_order {1}
+
+    after(:build) do |course_unit|
+      course_unit.script.update!(professional_learning_course: course_unit.plc_course.unit_group.name)
+      raise "script is not a plc course" unless course_unit.script.old_professional_learning_course?
+    end
   end
 
   factory :plc_enrollment_module_assignment, class: 'Plc::EnrollmentModuleAssignment' do
