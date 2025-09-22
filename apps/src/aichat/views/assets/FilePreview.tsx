@@ -46,9 +46,10 @@ const FilePreview: React.FC<{
       imageElement.removeEventListener('error', handleError);
     };
   }, [url, onLoadError]);
+  const previewType = type === 'image' ? 'image' : 'file';
 
   return (
-    <div className={styles[`preview-${type}`]} title={filename}>
+    <div className={styles[`preview-${previewType}`]} title={filename}>
       {onRemove ? (
         isUploading || (type === 'image' && !imageLoaded) ? (
           <FontAwesomeV6Icon

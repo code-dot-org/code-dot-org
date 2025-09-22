@@ -12,7 +12,7 @@ export abstract class AiTutorContextHelper<T extends object> {
 
   protected abstract setAiTutorContext(params: T): void;
 
-  private async getHiddenContextString() {
+  protected async getHiddenContextString() {
     const {
       sourceCode,
       validationContents,

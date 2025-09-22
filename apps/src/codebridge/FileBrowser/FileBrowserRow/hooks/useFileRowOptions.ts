@@ -2,20 +2,21 @@ import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import {usePrompts} from '@codebridge/FileBrowser/hooks';
 import {ProjectFile} from '@codebridge/types';
 import {
+  enableUserAddedContext,
   getPossibleDestinationFoldersForFile,
   sendCodebridgeAnalyticsEvent,
 } from '@codebridge/utils';
 import fileDownload from 'js-file-download';
-import {useContext, useMemo} from 'react';
+import {useMemo} from 'react';
 
+import {addItemToUserAddedContext} from '@cdo/apps/aichat/redux/slice';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
-import {AiTutorAddedContext} from '@cdo/apps/lab2/ai/AiTutorAddedContext';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useBackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {useStartModeFileRowOptions} from './useStartModeFileRowOptions';
 
@@ -49,10 +50,10 @@ export const useFileRowOptions = (
     config: {editableFileTypes},
     levelProperties,
   } = useCodebridgeContext();
-  const aiTutorAddedContext = useContext(AiTutorAddedContext);
   const {files: projectFiles, folders: projectFolders} = useAppSelector(
     state => state.lab2Project.projectSources?.source as MultiFileSource
   );
+  const dispatch = useAppDispatch();
 
   const backpackApi = useBackpackAPIContext();
 
@@ -111,21 +112,22 @@ export const useFileRowOptions = (
         clickHandler: () => openSaveToBackpackPrompt({file, backpackApi}),
       },
       {
-        condition: aiTutorAddedContext !== undefined,
+        condition: enableUserAddedContext(appName),
         iconName: 'paperclip-vertical',
         labelText: codebridgeI18n.addToAiTutorContext(),
-        clickHandler: () => {
-          aiTutorAddedContext?.addToUserAddedContext({
-            sourceCode: file.contents,
-            filename: file.name,
-          });
-        },
+        clickHandler: () =>
+          dispatch(
+            addItemToUserAddedContext({
+              displayName: file.name, // TODO: include folder path
+              text: file.contents,
+            })
+          ),
       },
     ],
     [
-      aiTutorAddedContext,
       appName,
       backpackApi,
+      dispatch,
       editableFileTypes,
       file,
       isLocked,

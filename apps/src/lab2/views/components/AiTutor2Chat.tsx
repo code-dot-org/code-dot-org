@@ -10,7 +10,6 @@ import {
   SystemPromptSettings,
 } from '@cdo/apps/aichat/types';
 import ChatWorkspace from '@cdo/apps/aichat/views/ChatWorkspace';
-import {UserAddedContextType} from '@cdo/apps/aiTutor/types';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import HttpClient from '@cdo/apps/util/HttpClient';
@@ -18,8 +17,6 @@ import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import {shouldShowCopyCode} from '../../ai/ai-should-show-copy-code';
 import {aiTutorModelId} from '../../ai/ai-tutor-model-id';
-
-import UserAddedContextPreview from './aiTutor2/UserAddedContextPreview';
 
 import moduleStyles from './AiTutor2Chat.module.scss';
 
@@ -89,10 +86,6 @@ interface AiTutor2ChatProps {
   levelName?: string;
   channelId?: string;
   aiTutorChatButtonData?: ChatButtonData[];
-  aiTutorAddedContextData?: {
-    userAddedContext: UserAddedContextType[] | undefined;
-    removeFromUserAddedContext: (id: string) => void;
-  };
 }
 
 // A free chat with lab-supplied context added to each question.
@@ -103,7 +96,6 @@ const AiTutor2Chat: React.FunctionComponent<AiTutor2ChatProps> = ({
   levelName,
   channelId,
   aiTutorChatButtonData,
-  aiTutorAddedContextData,
 }) => {
   const [systemPrompt, setSystemPrompt] = useState<string>();
 
@@ -182,23 +174,6 @@ const AiTutor2Chat: React.FunctionComponent<AiTutor2ChatProps> = ({
     }));
   }, [aiTutorChatButtonData]);
 
-  const addedContextComponent = useMemo(() => {
-    if (!aiTutorAddedContextData) {
-      return undefined;
-    }
-    const {userAddedContext, removeFromUserAddedContext} =
-      aiTutorAddedContextData;
-    if (!userAddedContext) {
-      return undefined;
-    }
-    return (
-      <UserAddedContextPreview
-        addedContext={userAddedContext}
-        onRemoveContext={removeFromUserAddedContext}
-      />
-    );
-  }, [aiTutorAddedContextData]);
-
   return systemPrompt ? (
     <div className={moduleStyles.container}>
       <ChatWorkspace
@@ -211,7 +186,6 @@ const AiTutor2Chat: React.FunctionComponent<AiTutor2ChatProps> = ({
         levelName={levelName}
         channelId={channelId}
         hideModelChangeMessage={true}
-        additionalContext={addedContextComponent}
       />
     </div>
   ) : (

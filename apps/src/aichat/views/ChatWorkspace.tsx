@@ -35,6 +35,7 @@ import {getAssetUrl, getShortName} from '../utils';
 
 import StagedFilesPreview from './assets/StagedFilesPreview';
 import UploadButton from './assets/UploadButton';
+import UserAddedContextPreview from './assets/UserAddedContextPreview';
 import ChatEventsList from './ChatEventsList';
 import ChatModeDropdown from './ChatModeDropdown';
 import CopyChatHistoryButton from './CopyChatHistoryButton';
@@ -57,8 +58,6 @@ interface ChatWorkspaceProps {
 
   // Options for changing system prompt (used in Web Lab 2)
   systemPromptSettings?: SystemPromptSettings;
-
-  additionalContext?: React.ReactNode;
 }
 
 enum WorkspaceTeacherViewTab {
@@ -84,7 +83,6 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   hasStarterAssets = false,
   systemPromptSettings,
   hideModelChangeMessage = false,
-  additionalContext,
 }) => {
   if (multimodalEnabled && (!levelName || !channelId)) {
     console.warn(
@@ -92,7 +90,6 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     );
     multimodalEnabled = false;
   }
-  console.log({additionalContext});
 
   const [selectedTab, setSelectedTab] =
     useState<WorkspaceTeacherViewTab | null>(null);
@@ -304,7 +301,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
         {multimodalAvailable && (
           <StagedFilesPreview buildAssetUrl={buildAssetUrl} />
         )}
-        {additionalContext}
+        <UserAddedContextPreview />
         <ChatModeDropdown
           className={moduleStyles.modeDropdown}
           systemPromptSettings={systemPromptSettings}
