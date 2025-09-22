@@ -1,10 +1,12 @@
 import {Excalidraw, serializeAsJSON} from '@excalidraw/excalidraw';
-import {ExcalidrawImperativeAPI} from '@excalidraw/excalidraw/types/types';
-import React, {useEffect, useState} from 'react';
+import React, {useEffect} from 'react';
 
+import SourcesContainer, {
+  useSources,
+} from '@cdo/apps/dance/lab2/views/SourcesContainer';
 import {useVerticalLayout} from '@cdo/apps/lab2/hooks/useVerticalLayout';
 import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
-import {LabProps, LevelProperties} from '@cdo/apps/lab2/types';
+import {LabProps, LevelProperties, ProjectSources} from '@cdo/apps/lab2/types';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
@@ -17,16 +19,10 @@ const INITIAL_INFO_PANEL_WIDTH = 400;
 const MIN_WORKSPACE_WIDTH = 400;
 const INITIAL_WORKSPACE_WIDTH = 800;
 
-const getInitialData = () => {
-  const savedData = localStorage.getItem('sketch-data');
-  return savedData ? JSON.parse(savedData) : null;
-};
-
 const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
   levelProperties,
 }) => {
-  const [excalidrawApi, setExcalidrawApi] =
-    useState<ExcalidrawImperativeAPI | null>(null);
+  const {currentSources, updateSources} = useSources<ProjectSources>();
 
   const hasRun = useAppSelector(state => state.lab2System.hasRun);
 
@@ -49,31 +45,6 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
     },
     appName: 'sketchlab',
   });
-
-  // Serialize Excalidraw canvas to localStorage when navigating away
-  useEffect(() => {
-    const handleBeforeUnload = async () => {
-      if (excalidrawApi) {
-        const elements = excalidrawApi.getSceneElements();
-        const appState = excalidrawApi.getAppState();
-        const serializedData = serializeAsJSON(
-          elements,
-          appState,
-          excalidrawApi.getFiles(),
-          'local'
-        );
-        localStorage.setItem('sketch-data', serializedData);
-      }
-    };
-
-    window.addEventListener('beforeunload', handleBeforeUnload);
-    const autoSaveInterval = setInterval(handleBeforeUnload, 30000);
-
-    return () => {
-      window.removeEventListener('beforeunload', handleBeforeUnload);
-      clearInterval(autoSaveInterval);
-    };
-  }, [excalidrawApi]);
 
   // Since there's no run button in Sketch Lab, set it to true by default
   // to enable the Submit button on edit on submittable levels.
@@ -109,8 +80,16 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
           headerContent="Workspace"
         >
           <Excalidraw
-            excalidrawAPI={api => setExcalidrawApi(api)}
-            initialData={getInitialData()}
+            initialData={JSON.parse(currentSources.source as string)}
+            onChange={(elements, state, files) => {
+              const serializedData = serializeAsJSON(
+                elements,
+                state,
+                files,
+                'local'
+              );
+              updateSources({source: serializedData});
+            }}
           />
         </PanelContainer>
       </div>
@@ -118,4 +97,8 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
   );
 };
 
-export default SketchlabView;
+export default (props: LabProps<LevelProperties>) => (
+  <SourcesContainer {...props} defaultSources={{source: ''}}>
+    <SketchlabView levelProperties={props.levelProperties} />
+  </SourcesContainer>
+);
