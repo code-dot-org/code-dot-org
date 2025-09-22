@@ -20,7 +20,8 @@ interface UseVerticalLayoutProps {
  * The resize bars are used to adjust the width of the left and right panels,
  * and the middle panel takes up the remaining space, but won't go below its minimum width.
  * To be used in conjunction with the ResizeBar component.
- * See pythonlab/layout/VerticalLayout for a usage example.
+ * See pythonlab/layout/VerticalLayout for a 3 panel usage example,
+ * or SketchlabView for a 2 panel usage example.
  */
 export const useVerticalLayout = ({
   leftPanel,

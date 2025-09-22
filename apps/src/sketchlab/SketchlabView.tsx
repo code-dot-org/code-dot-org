@@ -12,6 +12,11 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import moduleStyles from './styles/sketchlab-view.module.scss';
 
+const MIN_INFO_PANEL_WIDTH = 150;
+const INITIAL_INFO_PANEL_WIDTH = 400;
+const MIN_WORKSPACE_WIDTH = 200;
+const INITIAL_WORKSPACE_WIDTH = 800;
+
 const getInitialData = () => {
   const savedData = localStorage.getItem('sketch-data');
   return savedData ? JSON.parse(savedData) : null;
@@ -32,8 +37,16 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
     leftPanelDragging: isDragging,
     panelClassName,
   } = useVerticalLayout({
-    leftPanel: {minWidth: 200, initialWidth: 200, name: 'instructions'},
-    rightPanel: {minWidth: 400, initialWidth: 600, name: 'workspace'},
+    leftPanel: {
+      minWidth: MIN_INFO_PANEL_WIDTH,
+      initialWidth: INITIAL_INFO_PANEL_WIDTH,
+      name: 'instructions',
+    },
+    rightPanel: {
+      minWidth: MIN_WORKSPACE_WIDTH,
+      initialWidth: INITIAL_WORKSPACE_WIDTH,
+      name: 'workspace',
+    },
     appName: 'sketchlab',
   });
 
@@ -93,7 +106,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
         <PanelContainer
           id="workspace"
           className={panelClassName}
-          headerContent={'Workspace'}
+          headerContent="Workspace"
         >
           <Excalidraw
             excalidrawAPI={api => setExcalidrawApi(api)}
