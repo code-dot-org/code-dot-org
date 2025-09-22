@@ -6,6 +6,7 @@
   align-items: center;
   gap: 0.5rem;
   min-width: 0; // Allow container to shrink
+  container: previewHeaderContainer / inline-size;
 
   .urlBarContent {
     display: flex;
@@ -18,13 +19,6 @@
     box-sizing: border-box;
     align-items: center;
     container: urlBarContainer / inline-size;
-  }
-
-  // Hide icon buttons when the URL bar is too small
-  @container urlBarContainer (width < 100px) {
-    .iconButton {
-      display: none;
-    }
   }
 
   .iconButton {
@@ -62,6 +56,18 @@
 
       &:focus-visible {
         outline-offset: 0; // Update focus outline so that it fits within the URL bar
+      }
+    }
+  }
+
+  // Hide Segmented Desktop/Mobile button labels when the header is narrow
+  @container previewHeaderContainer (width < 375px) {
+    .previewViewModeButtons > button {
+      height: 26px;
+      align-items: center;
+
+      & > span {
+        display: none;
       }
     }
   }
