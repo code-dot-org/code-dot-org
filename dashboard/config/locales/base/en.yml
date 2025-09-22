@@ -1491,6 +1491,7 @@ en:
       launch_from_lms: "Please launch from your LMS to link your account."
       linking_page_header: "Link your %{provider} account to your existing Code.org account"
       linking_page_description: "Choose the sign-in method you normally use to access Code.org"
+      linking_page_description_restricted: "Choose the sign-in method allowed by your school"
       sign_in_and_connect: "Sign in and connect"
       successfully_linked: "You have successfully linked your Code.org account!"
       successfully_unlinked: "You have successfully unlinked your Code.org account."

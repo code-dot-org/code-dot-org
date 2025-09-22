@@ -23,12 +23,18 @@ class AichatRequestsController < ApplicationController
   #   storedMessages: Array of {role: <'user', 'system', or 'assistant'>; chatMessageText: string; status: string}
   #     - does not include user's new message
   #   modelParameters: {temperature: number; retrievalContexts: string[]; systemPrompt: string;}
-  #.  aichatContext: {currentLevelId: number; scriptId: number; channelId: string;}
+  #   aichatContext: {
+  #     clientType: AiChatClientType;
+  #     currentLevelId: number | null;
+  #     scriptId: number | null;
+  #     channelId: string | undefined;
+  #   }
+
   def start_chat_completion
     unless chat_completion_has_required_params?
       return render status: :bad_request, json: {}
     end
-    unless can_access_aichat_chat_completion? || can_access_ai_tutor2_chat_completion?(params[:aichatContext][:currentLevelId])
+    unless can_access_aichat_chat_completion? || can_access_ai_tutor_chat_completion?(params[:aichatContext][:clientType])
       return render status: :forbidden, json: {user_type: current_user.user_type}
     end
     return head :too_many_requests if should_throttle_request_count?
@@ -95,9 +101,9 @@ class AichatRequestsController < ApplicationController
     render(status: :ok, json: response_body)
   end
 
-  private def can_access_ai_tutor2_chat_completion?(level_id)
-    return false if DCDO.get("block_ai_tutor2_chat_completion", false)
-    current_user.can_access_ai_tutor2?(level_id)
+  private def can_access_ai_tutor_chat_completion?(client_type)
+    return false if DCDO.get("block_ai_tutor_chat_completion", false)
+    current_user.can_access_ai_tutor?(client_type)
   end
 
   private def can_access_aichat_chat_completion?
