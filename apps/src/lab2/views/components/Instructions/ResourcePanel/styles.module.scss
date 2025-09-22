@@ -27,6 +27,19 @@
 
     &.selected {
       background-color: var(--background-neutral-primary);
+      position: relative;
+      z-index: 2;
+      
+      // Extend the background to cover the border between selected tab and resource panel.
+      &::after {
+        content: '';
+        position: absolute;
+        right: -1px;
+        top: 0;
+        height: 100%;
+        width: 1px;
+        background-color: var(--background-neutral-primary);
+      }
     }
 
     i {
@@ -62,6 +75,7 @@
   flex-direction: column;
   flex: 1;
   min-width: 0;
+  border-left: 1px solid var(--borders-neutral-primary);
 }
 
 .panelContent {

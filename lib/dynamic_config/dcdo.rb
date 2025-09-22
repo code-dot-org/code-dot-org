@@ -50,7 +50,6 @@ class DCDOBase < DynamicConfigBase
       'music-lab-existing-projects-default-sounds': DCDO.get('music-lab-existing-projects-default-sounds', true),
       'cfu-pin-hide-enabled': DCDO.get('cfu-pin-hide-enabled', false),
       'teacher-local-nav-v2': DCDO.get('teacher-local-nav-v2', true),
-      'teacher-homepage-v2': DCDO.get('teacher-homepage-v2', false),
       'teacher-homepage-v2-announcement': DCDO.get('teacher-homepage-v2-announcement', false),
       'best-of-stem-2024': DCDO.get('best-of-stem-2024', false),
       # Enabled locales for browser text to speech. Set to an empty array to disable all languages, or true to enable all.

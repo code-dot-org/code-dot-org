@@ -30,6 +30,7 @@ $tabs-default-spacing: 4px;
 
 .scrollToBottomButton {
   border-radius: 50%;
+  pointer-events: auto;
 }
 
 .messageArea {
@@ -49,6 +50,7 @@ $tabs-default-spacing: 4px;
   display: flex;
   justify-content: center;
   width: 100%;
+  pointer-events: none;
 }
 
 .tabsContainer {
@@ -77,6 +79,7 @@ $tabs-default-spacing: 4px;
 
 .buttonRow {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
   padding: 0 10px;
 }
@@ -110,4 +113,9 @@ $tabs-default-spacing: 4px;
   @include remove-button-styles;
   align-self: end;
   font-size: 13px;
+}
+
+.modeDropdown {
+  margin-inline-start: 10px;
+  width: fit-content;
 }

@@ -45,8 +45,6 @@ class Unit < ApplicationRecord
   include ScriptConstants
   include Curriculum::SharedCourseConstants
   include SharedConstants
-  include Curriculum::CourseTypes
-  include Curriculum::AssignableCourse
   include Rails.application.routes.url_helpers
   include Unit::TextToSpeech
 
@@ -317,12 +315,6 @@ class Unit < ApplicationRecord
       @@all_scripts ||= script_cache.values.uniq.compact.freeze
     end
 
-    def family_names
-      Rails.cache.fetch('script/family_names', force: !Unit.should_cache?) do
-        ScriptConstants::DEPRECATED_FAMILY_NAMES.sort
-      end
-    end
-
     private def visible_units
       @@visible_units ||= all_scripts.select(&:launched?).to_a.freeze
     end
@@ -431,18 +423,6 @@ class Unit < ApplicationRecord
     end
   end
 
-  # Returns a cached map from family_name to units, or nil if caching is disabled.
-  def self.unit_family_cache
-    return nil unless should_cache?
-    @@unit_family_cache ||= {}.tap do |cache|
-      family_units = script_cache.values.group_by(&:family_name)
-      # Not all units have a family_name, and thus will be grouped as family_units[nil].
-      # We do not want to store this key-value pair in the cache.
-      family_units.delete(nil)
-      cache.merge!(family_units)
-    end
-  end
-
   # Find the script level with the given id from the cache, unless the level build mode
   # is enabled in which case it is always fetched from the database. If we need to fetch
   # the unit and we're not in level mode (for example because the unit was created after
@@ -524,114 +504,38 @@ class Unit < ApplicationRecord
       end
     return script if script
     if raise_exceptions
-      raise "Do not call Unit.get_from_cache with a family_name. Call Unit.get_unit_family_redirect_for_user instead.  Family: #{id_or_name}" if Unit.family_names.include?(id_or_name)
       raise ActiveRecord::RecordNotFound.new("Couldn't find Unit with id|name=#{id_or_name}")
     end
-  end
-
-  def self.get_family_without_cache(family_name)
-    # This SQL string is not at risk for injection vulnerabilites because it's
-    # just a hardcoded string, so it's safe to wrap in Arel.sql
-    Unit.where(family_name: family_name).order(Arel.sql("properties -> '$.version_year' DESC"))
-  end
-
-  # Returns all units within a family from the Rails cache.
-  # Populates the cache with units in that family upon cache miss.
-  # @param family_name [String] Family name for the desired units.
-  # @return [Array<Unit>] Scripts within the specified family.
-  def self.get_family_from_cache(family_name)
-    return Unit.get_family_without_cache(family_name) unless should_cache?
-
-    unit_family_cache.fetch(family_name) do
-      # Populate cache on miss.
-      unit_family_cache[family_name] = Unit.get_family_without_cache(family_name)
-    end
-  end
-
-  # Returns all units within a family ordered by version year
-  # @param family_name [String] Family name for the desired units.
-  # @return [Array<Unit>] Scripts within the specified family, ordered by
-  #   version year
-  def self.family_unit_versions(family_name)
-    # We usually expect version_year to be a string but it can be nil. To
-    # prevent sort_by from blowing up in that case, normalize all values to
-    # strings.
-    Unit.get_family_from_cache(family_name).sort_by {|u| u.version_year.to_s}
   end
 
   def self.remove_from_cache(unit_name)
     script_cache&.delete(unit_name)
   end
 
-  def self.get_unit_family_redirect_for_user(family_name, user: nil, locale: 'en-US')
-    return nil unless family_name
-
-    family_units = family_unit_versions(family_name).reverse
-
-    return nil unless family_units&.last&.can_be_instructor?(user) || family_units&.last&.can_be_participant?(user)
-
-    # Only signed in participants should be redirected based on unit progress and/or section assignments.
-    if user && family_units.last.can_be_participant?(user)
-      assigned_unit_ids = user.section_scripts.pluck(:id)
-      progress_unit_ids = user.user_levels.map(&:script_id)
-      unit_ids = assigned_unit_ids.concat(progress_unit_ids).compact.uniq
-      unit_name = family_units.select {|s| unit_ids.include?(s.id)}&.first&.name
-      if unit_name
-        # This creates a temporary script which is used to redirect the user. The audiences are set
-        # to allow the redirect to happen for any user
-        return Unit.new(
-          redirect_to: unit_name,
-        )
-      end
-    end
-
-    locale_str = locale&.to_s
-    latest_version = nil
-    family_units.each do |unit|
-      next unless unit.stable?
-      latest_version ||= unit
-
-      # All English-speaking locales are supported, so we check that the locale starts with 'en' rather
-      # than matching en-US specifically.
-      is_supported = unit.supported_locales&.include?(locale_str) || locale_str&.downcase&.start_with?('en')
-      if is_supported
-        latest_version = unit
-        break
-      end
-    end
-
-    unit_name = latest_version&.name
-
-    unit_name ?
-      # This creates a temporary script which is used to redirect the user. The audiences are set
-      # to allow the redirect to happen for any user
-      Unit.new(
-        redirect_to: unit_name,
-      ) : nil
-  end
-
   # @param user [User]
   # @param locale [String] User or request locale. Optional.
   # @return [String|nil] URL to the unit overview page the user should be redirected to (if any).
-  def redirect_to_unit_url(user, locale: nil)
-    # No redirect unless unit belongs to a family.
-    return nil unless family_name
+  def redirect_to_unit_url(user, unit_group: get_original_unit_group, locale: nil)
+    # No redirect unless the unit is in a single-unit course.
+    return nil unless unit_group&.single_unit_course?
+
     # Only redirect participants.
-    return nil unless user && can_be_participant?(user)
+    return nil unless user && unit_group.can_be_participant?(user)
+
     return nil unless has_other_versions?
     # No redirect unless user is allowed to view this unit version and they are not already assigned to this unit
     # or the course it belongs to.
-    return nil unless can_view_version?(user, locale: locale) && !user.assigned_script?(self)
-    # No redirect if unit or its course are not versioned.
-    current_version_year = version_year || get_original_unit_group&.version_year
-    return nil if current_version_year.blank?
+    return nil unless can_view_version?(user, unit_group: unit_group, locale: locale) && !user.assigned_script?(self)
 
-    # Redirect user to the latest assigned unit in this family,
+    current_version_year = unit_group.version_year
+    # Redirect user to the latest assigned unit group in this family,
     # if one exists and it is newer than the current unit.
-    latest_assigned_version = Unit.latest_assigned_version(family_name, user)
-    latest_assigned_version_year = latest_assigned_version&.version_year || latest_assigned_version&.get_original_unit_group&.version_year
+    latest_assigned_version = UnitGroup.latest_assigned_version(unit_group.family_name, user)
+    latest_assigned_version_year = latest_assigned_version&.version_year
     return nil unless latest_assigned_version_year && latest_assigned_version_year > current_version_year
-    latest_assigned_version.link
+    latest_assigned_version_unit = latest_assigned_version&.first_unit
+    ugu = Queries::Courses.unit_group_unit(latest_assigned_version_unit, latest_assigned_version)
+    latest_assigned_version_unit&.link(unit_group_unit: ugu)
   end
 
   def link(unit_group_unit: nil)
@@ -645,34 +549,14 @@ class Unit < ApplicationRecord
   # @param user [User]
   # @param locale [String] User or request locale. Optional.
   # @return [Boolean] Whether the user can view the unit.
-  def can_view_version?(user, locale: nil, unit_group: nil)
-    unit_group ||= get_original_unit_group
+  def can_view_version?(user, locale: nil, unit_group: get_original_unit_group)
     return false unless Ability.new(user).can?(:read, self, unit_group)
 
-    # Users can view any course not in a family.
-    return true if family_name.nil? && !unit_group&.single_unit_course?
-
     if unit_group&.single_unit_course?
-      return unit_group&.can_view_version?(user, locale)
+      unit_group&.can_view_version?(user, locale)
+    else
+      true
     end
-
-    latest_stable_version = Unit.latest_stable_version(family_name)
-    latest_stable_version_in_locale = Unit.latest_stable_version(family_name, locale: locale)
-    is_latest = latest_stable_version == self || latest_stable_version_in_locale == self
-
-    # All users can see the latest unit version in English and in their locale.
-    return true if is_latest
-
-    # Restrictions only apply to participants and logged out users.
-    return false if user.nil?
-    return true if can_be_instructor?(user)
-
-    # A student can view the unit version if they have progress in it or the course it belongs to.
-    has_progress = user.scripts.include?(self) || unit_group&.has_progress?(user)
-    return true if has_progress
-
-    # A student can view the unit version if they are assigned to it.
-    user.assigned_script?(self)
   end
 
   # If this unit is in a unit group, returns the next unit in the unit group.
@@ -683,66 +567,6 @@ class Unit < ApplicationRecord
     other_units = get_original_unit_group.units_for_user(user)
     self_index = other_units.index {|u| u.id == id}
     other_units[self_index + 1] if self_index
-  end
-
-  # @param family_name [String] The family name for a unit family.
-  # @param version_year [String] Version year to return. Optional.
-  # @param locale [String] User or request locale. Optional.
-  # @return [Unit|nil] Returns the latest version in a unit family.
-  def self.latest_stable_version(family_name, version_year: nil, locale: 'en-us')
-    return nil if family_name.blank?
-
-    unit_versions = family_unit_versions(family_name).reverse
-
-    # Only select stable, supported units (ignore supported locales if locale is an English-speaking locale).
-    # Match on version year if one is supplied.
-    locale_str = locale&.to_s
-    supported_stable_units = unit_versions.select do |unit|
-      is_supported = unit.supported_locales&.include?(locale_str) || locale_str&.start_with?('en')
-      if version_year
-        unit.stable? && is_supported && unit.version_year == version_year
-      else
-        unit.stable? && is_supported
-      end
-    end
-
-    supported_stable_units&.first
-  end
-
-  # @param family_name [String] The family name for a unit family.
-  # @param user [User]
-  # @return [Unit|nil] Returns the latest version in a family that the user is assigned to.
-  def self.latest_assigned_version(family_name, user)
-    return nil unless family_name && user
-    assigned_unit_ids = user.section_scripts.pluck(:id)
-
-    Unit.
-      # select only units assigned to this user.
-      where(id: assigned_unit_ids).
-      # select only units in the same family.
-      where(family_name: family_name).
-      # order by version year descending.
-      # This SQL string is not at risk for injection vulnerabilites because
-      # it's just a hardcoded string, so it's safe to wrap in Arel.sql
-      order(Arel.sql("properties -> '$.version_year' DESC"))&.
-      first
-  end
-
-  # @param family_name [String] The family name for a unit family.
-  # @param user [User]
-  # @return [Unit|nil] Returns the latest unit version in a family that the user has progress in.
-  def self.latest_version_with_progress(family_name, user)
-    return nil unless family_name && user
-
-    family_units = family_unit_versions(family_name).freeze
-    family_unit_names = family_units.map(&:name)
-    progress = UserScript.lookup_hash(user, family_unit_names)
-
-    latest_version_with_progress = nil
-    family_units.each do |version|
-      latest_version_with_progress = version if progress[version.name]
-    end
-    latest_version_with_progress
   end
 
   def text_response_levels
@@ -824,7 +648,7 @@ class Unit < ApplicationRecord
   end
 
   def has_standards_associations?
-    curriculum_umbrella == 'CSF' && ((version_year && version_year >= '2019') || (get_original_unit_group&.version_year && get_original_unit_group.version_year >= '2019'))
+    curriculum_umbrella == 'CSF' && (get_original_unit_group&.version_year && get_original_unit_group.version_year >= '2019')
   end
 
   def standards
@@ -994,26 +818,6 @@ class Unit < ApplicationRecord
     return false if %w(allthethings allthettsthings).include?(name)
 
     script_levels.any? {|script_level| script_level.levels.any?(&:age_13_required?)}
-  end
-
-  # @param user [User]
-  # @return [Boolean] Whether the user has progress on another version of this unit.
-  def has_older_version_progress?(user)
-    return false unless user && family_name && version_year
-    return false unless has_other_versions?
-
-    user_unit_ids = user.user_scripts.pluck(:script_id)
-
-    Unit.
-      # select only units in the same unit family.
-      where(family_name: family_name).
-      # select only older versions.
-      where("properties -> '$.version_year' < ?", version_year).
-      # exclude the current unit.
-      where.not(id: id).
-      # select only units which the user has progress in.
-      where(id: user_unit_ids).
-      count > 0
   end
 
   # When given an object from the unit cache, returns whether it has other
@@ -1294,7 +1098,6 @@ class Unit < ApplicationRecord
           name: unit_name,
           login_required: general_params[:login_required].nil? ? false : general_params[:login_required], # default false
           wrapup_video: general_params[:wrapup_video],
-          family_name: general_params[:family_name].presence ? general_params[:family_name] : nil, # default nil
           hide_within_course: general_params[:hide_within_course].nil? ? false : general_params[:hide_within_course], # default false
           properties: Unit.build_property_hash(general_params)
         },
@@ -1463,9 +1266,18 @@ class Unit < ApplicationRecord
         }
       end
 
-      has_older_course_progress = unit_group_unit&.cached_unit_group.try(:has_older_version_progress?, user)
-      has_older_unit_progress = has_older_version_progress?(user)
       user_unit = user && user_scripts.find_by(user: user)
+
+      show_script_version_warning = false
+      show_course_unit_version_warning = false
+      has_older_course_progress = unit_group_unit&.cached_unit_group.try(:has_older_version_progress?, user)
+      if has_older_course_progress
+        if unit_group_unit.cached_unit_group&.single_unit_course?
+          show_script_version_warning = !user_unit&.version_warning_dismissed
+        else
+          show_course_unit_version_warning = !unit_group_unit.cached_unit_group&.has_dismissed_version_warning?(user)
+        end
+      end
 
       # If the current user is assigned to this unit, get the section
       # that assigned it.
@@ -1510,18 +1322,17 @@ class Unit < ApplicationRecord
         curriculum_path: curriculum_path,
         announcements: localized_announcements,
         age_13_required: logged_out_age_13_required?,
-        show_course_unit_version_warning: !unit_group_unit&.cached_unit_group&.has_dismissed_version_warning?(user) && has_older_course_progress,
-        show_script_version_warning: !user_unit&.version_warning_dismissed && !has_older_course_progress && has_older_unit_progress,
+        show_course_unit_version_warning: show_course_unit_version_warning,
+        show_script_version_warning: show_script_version_warning,
         course_versions: summarize_course_versions(user, locale_code, unit_group: unit_group_unit&.cached_unit_group),
         supported_locales: supported_locales,
-        section_hidden_unit_info: section_hidden_unit_info(user),
+        section_hidden_unit_info: section_hidden_unit_info(user, unit_group: unit_group_unit&.cached_unit_group),
         pilot_experiment: get_pilot_experiment,
         editor_experiment: editor_experiment,
         show_assign_button: unit_group_unit&.unit_group&.course_assignable?(user),
         project_sharing: project_sharing,
         curriculum_umbrella: curriculum_umbrella,
-        family_name: family_name,
-        version_year: unit_group_unit&.cached_unit_group&.version_year || version_year,
+        version_year: unit_group_unit&.cached_unit_group&.version_year,
         assigned_section_id: assigned_section_id,
         hasStandards: has_standards_associations?,
         tts: tts?,
@@ -1532,12 +1343,12 @@ class Unit < ApplicationRecord
         weeklyInstructionalMinutes: weekly_instructional_minutes,
         includeStudentLessonPlans: is_migrated ? include_student_lesson_plans : false,
         useLegacyLessonPlans: is_migrated && use_legacy_lesson_plans,
-        courseVersionId: unit_group_unit&.unit_group&.course_version&.id,
-        courseOfferingId: unit_group_unit&.unit_group&.course_version&.course_offering&.id,
+        courseVersionId: unit_group_unit&.cached_unit_group&.course_version&.id,
+        courseOfferingId: unit_group_unit&.cached_unit_group&.course_version&.course_offering&.id,
         scriptOverviewPdfUrl: get_unit_overview_pdf_url,
         scriptResourcesPdfUrl: get_unit_resources_pdf_url,
         updated_at: updated_at.to_s,
-        isPlCourse: pl_course?,
+        isPlCourse: unit_group_unit&.cached_unit_group&.pl_course?,
         showAiAssessmentsAnnouncement: show_ai_assessments_announcement?(user),
         content_area: content_area,
         topic_tags: topic_tags,
@@ -1563,11 +1374,11 @@ class Unit < ApplicationRecord
     if unit_group_unit
       unit_position = unit_group_unit.position
       numbered_units = unit_group_unit.unit_group.numbered_units
-      course_version_year = unit_group_unit.unit_group.version_year || version_year
+      course_version_year = unit_group_unit.unit_group.version_year
     else
       unit_position = unit_number
       numbered_units = original_unit_group&.numbered_units
-      course_version_year = original_unit_group&.version_year || version_year
+      course_version_year = original_unit_group&.version_year
     end
     summary = {
       unitId: id,
@@ -1638,8 +1449,8 @@ class Unit < ApplicationRecord
   #   is the current script id. This mirrors the output format of
   #   User#get_hidden_unit_ids, and satisfies the input format of
   #   initializeHiddenScripts in hiddenLessonRedux.js.
-  def section_hidden_unit_info(user)
-    return {} unless user && can_be_instructor?(user)
+  def section_hidden_unit_info(user, unit_group: get_original_unit_group)
+    return {} unless user && unit_group&.can_be_instructor?(user)
     hidden_section_ids = SectionHiddenScript.where(script_id: id, section: user.sections_instructed).pluck(:section_id)
     hidden_section_ids.index_with([id])
   end
@@ -1820,7 +1631,6 @@ class Unit < ApplicationRecord
       :lesson_extras_available,
       :curriculum_path,
       :announcements,
-      :version_year,
       :supported_locales,
       :editor_experiment,
       :curriculum_umbrella,
@@ -1870,20 +1680,20 @@ class Unit < ApplicationRecord
     get_original_unit_group&.course_version
   end
 
+  def get_professional_learning_course
+    UnitGroup.find_by_name(professional_learning_course)
+  end
+
   # If a script is in a unit group, use that unit group's published state
   # Otherwise, default to in_development
   def get_published_state(unit_group: get_original_unit_group)
-    unit_group = UnitGroup.find_by_name(professional_learning_course) if old_professional_learning_course?
+    unit_group ||= get_professional_learning_course if old_professional_learning_course?
     unit_group&.published_state || Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development
   end
 
   # Use the unit group's pilot_experiment if one exists
   def get_pilot_experiment(unit_group: get_original_unit_group)
     unit_group&.pilot_experiment
-  end
-
-  def unversioned?
-    version_year.blank? || version_year == CourseVersion::UNVERSIONED
   end
 
   def included_in_units?(unit_ids)
@@ -1896,7 +1706,6 @@ class Unit < ApplicationRecord
       id: id,
       course_id: unit_group_unit&.course_id,
       key: name,
-      version_year: version_year,
       name: launched? ? localized_title : localized_title + " *",
       position: unit_group_unit&.position,
       description: localized_description ? Services::MarkdownPreprocessor.process(localized_description) : nil,
@@ -2011,6 +1820,21 @@ class Unit < ApplicationRecord
     user.has_pilot_experiment?(get_pilot_experiment)
   end
 
+  def can_be_instructor?(user, unit_group: get_original_unit_group)
+    unit_group ||= get_professional_learning_course if old_professional_learning_course?
+    unit_group&.can_be_instructor?(user)
+  end
+
+  def can_be_participant?(user, unit_group: get_original_unit_group)
+    unit_group ||= get_professional_learning_course if old_professional_learning_course?
+    unit_group&.can_be_participant?(user)
+  end
+
+  def pl_course?(unit_group: get_original_unit_group)
+    unit_group ||= get_professional_learning_course if old_professional_learning_course?
+    unit_group&.pl_course?
+  end
+
   # returns true if the user is a levelbuilder, or a teacher with any pilot
   # unit experiments enabled.
   def self.has_any_pilot_access?(user = nil)
@@ -2023,10 +1847,6 @@ class Unit < ApplicationRecord
   # they are a platformization partner who owns this unit.
   def has_editor_experiment?(user)
     user.has_pilot_experiment?(editor_experiment)
-  end
-
-  def self.get_version_year_options
-    UnitGroup.get_version_year_options
   end
 
   def all_descendant_levels

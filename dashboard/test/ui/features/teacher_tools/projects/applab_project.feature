@@ -10,7 +10,7 @@ Scenario: Applab Flow
   And I wait for the lab page to fully load
   Then evaluate JavaScript expression "localStorage.setItem('is13Plus', 'true'), true"
   And I switch to text mode
-  And I add code "image('id', 'https://code.org/images/logo.png')" to ace editor
+  And I add code "image('id', 'https://studio.code.org/blockly/media/logo.png')" to ace editor
   And element ".project_updated_at" eventually contains text "Saved"
   And I click selector ".project_edit"
   And I type "Code Ninja" into "input.project_name"

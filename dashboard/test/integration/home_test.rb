@@ -27,12 +27,10 @@ class HomeTest < ActionDispatch::IntegrationTest
 
   test 'teacher homepage does not contain secret words' do
     sign_in @teacher
-    get '/home'
-    assert_select 'script[data-homepage]' do |elements|
-      data = elements.first['data-homepage']
-      assert_includes data, 'teacherName'
-      refute_includes data, 'numberOfStudents'
-      refute_includes data, 'secret_words'
+    get '/teacher_dashboard/home'
+    assert_select 'script[data-dashboard]' do |elements|
+      data = JSON.parse(elements.first['data-dashboard'])
+      assert_nil data['section']['secret_words']
     end
   end
 end

@@ -79,26 +79,6 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
     end
   end
 
-  describe '#can_view_student_ai_chat_messages?' do
-    subject(:can_view_student_ai_chat_messages?) {user.can_view_student_ai_chat_messages?}
-
-    let(:ai_unit_group) {create(:unit_group, name: 'programming-fundamentals-aitutor-2024')}
-    let(:ai_section) {create(:section, unit_group: ai_unit_group)}
-
-    it 'returns true if student is in correct course and experiment is enabled' do
-      allow(user).to receive(:sections).and_return([ai_section])
-      allow(SingleUserExperiment).to receive(:enabled?).with(user: user, experiment_name: 'ai-tutor').and_return(true)
-      _can_view_student_ai_chat_messages?.must_equal true
-    end
-
-    it 'returns false for unrelated courses' do
-      unrelated_group = create(:unit_group, name: 'other-course')
-      section.update!(unit_group: unrelated_group)
-      allow(user).to receive(:sections).and_return([section])
-      _can_view_student_ai_chat_messages?.must_equal false
-    end
-  end
-
   describe '#teacher_can_access_ai_chat?' do
     subject(:teacher_can_access_ai_chat?) {user.teacher_can_access_ai_chat?}
 

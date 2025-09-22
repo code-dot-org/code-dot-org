@@ -29,6 +29,18 @@ interface PersonalizationData {
   challenge: string;
 }
 
+interface PersonalizationData {
+  selectedGoals: string[];
+  selectedSupports: string[];
+  otherSupportText: string;
+  otherGoalText: string;
+  selectedConfidence: number;
+  yearsTeaching: number;
+  dateYearsTeachingSet: Date | null;
+  classroomVision: string;
+  challenge: string;
+}
+
 const PersonalizationCollectorContainer: React.FC = () => {
   const [questionsNumber, setQuestionsNumber] = React.useState(0);
   const [isSaving, setIsSaving] = React.useState(false);

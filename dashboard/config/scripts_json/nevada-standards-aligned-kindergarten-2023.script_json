@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-09-15 23:25:36 UTC",
+    "serialized_at": "2025-09-16 16:56:12 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -1288,7 +1288,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Some possible things to cover:**\n\n- Use calm bodies in the lab.\n - Remember not to chew gum or candy.\n - Sanitize your hands.\n - Sit with your partner at one computer.\n - Make sure that the first \"driver\" can reach the mouse.\n - When you get frustrated, don't hit or shake the computer or monitor.\n - Follow the ***20/20/20 Rule**\n - How to deal with the ***Wiggles** every 20-30 minutes (requires a free login on GoNoodle).\n - Ask your partner before you ask the teacher.\n - Keep volume down so everyone else can hear their partners.\n - Use your journal for keeping track of feelings and solutions.\n\n"
+            "markdown": "**Some possible things to cover:**\n\n- Use calm bodies in the lab.\n - Remember not to chew gum or candy.\n - Sanitize your hands.\n - Sit with your partner at one computer.\n - Make sure that the first \"driver\" can reach the mouse.\n - When you get frustrated, don't hit or shake the computer or monitor.\n - Follow the **20/20/20 Rule** (Prevent eye strain by taking a 20 second break every 20 minutes to look at something 20 feet away.)\n - How to deal with the **Wiggles** every 20-30 minutes (requires a free login on GoNoodle).\n - Ask your partner before you ask the teacher.\n - Keep volume down so everyone else can hear their partners.\n - Use your journal for keeping track of feelings and solutions.\n\n"
           }
         ]
       },

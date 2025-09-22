@@ -26,7 +26,8 @@ class AichatEventsControllerTest < ActionController::TestCase
       aichatContext: {
         currentLevelId: @level.id,
         scriptId: @script.id,
-        channelId: "test"
+        channelId: "test",
+        clientType: SharedConstants::AI_CHAT_CLIENT_TYPES[:AI_CHAT_LAB]
       }
     }
 
@@ -62,11 +63,11 @@ class AichatEventsControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
-  test 'unauthorized users can access log_chat_event from python lab levels' do
+  test 'unauthorized users can access log_chat_event from ai tutor levels' do
     sign_in(@unauthorized_student)
-    python_lab_level = create(:pythonlab)
-    params_with_python_level = @valid_params_log_chat_event.merge(aichatContext: @valid_params_log_chat_event[:aichatContext].merge(currentLevelId: python_lab_level.id))
-    post :log_chat_event, params: params_with_python_level, as: :json
+    ai_tutor_client_type = SharedConstants::AI_CHAT_CLIENT_TYPES[:AI_TUTOR]
+    params_with_ai_tutor_client_type = @valid_params_log_chat_event.merge(aichatContext: @valid_params_log_chat_event[:aichatContext].merge(clientType: ai_tutor_client_type))
+    post :log_chat_event, params: params_with_ai_tutor_client_type, as: :json
     assert_response :success
   end
 

@@ -1292,7 +1292,6 @@ Dashboard::Application.routes.draw do
 
     get '/get_token', to: 'authenticity_token#get_token'
 
-    post '/openai/chat_completion', to: 'openai_chat#chat_completion'
     post '/openai/evaluate', to: 'openai_evaluate#evaluate'
     post '/openai/evaluate_section', to: 'openai_evaluate#evaluate_section'
 
@@ -1305,10 +1304,6 @@ Dashboard::Application.routes.draw do
 
     get '/aichat/user_has_access', to: 'aichat#user_has_access'
     post '/aichat/find_toxicity', to: 'aichat#find_toxicity'
-
-    resources :ai_tutor_interactions, only: [:create, :index] do
-      resources :feedbacks, controller: 'ai_tutor_interaction_feedbacks', only: [:create]
-    end
 
     resources :ai_interaction_feedback, only: [:create]
 

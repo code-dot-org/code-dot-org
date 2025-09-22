@@ -3,7 +3,11 @@ display_name 'Time to Party!'
 description 'You get to choose the order you work on each part. After you finish one, come back here to pick up the next part.'
 
 sublevels
-level 'musiclab_intro'
-level 'dancelab_intro'
+
 level 'music-lab-loops-explore-practice-e_v2'
+
+level 'Generate_music_shareout'
+
+level 'dancelab_intro'
+
 uses_lab2
