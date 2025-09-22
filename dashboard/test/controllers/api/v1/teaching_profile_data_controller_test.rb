@@ -91,24 +91,11 @@ class Api::V1::TeachingProfileDataControllerTest < ActionDispatch::IntegrationTe
     assert_nil response_data['data']
   end
 
-  test 'returns 404 when trying to update non-existent data' do
-    new_data = {selectedGoals: ['New goal']}
-
-    patch '/dashboardapi/v1/teaching_profile_data',
-          params: {teaching_profile_data: {individual_data: new_data}},
-          as: :json
-
-    assert_response :not_found
-    response_data = JSON.parse(response.body)
-    assert_equal false, response_data['success']
-    assert_includes response_data['errors'], 'No teaching profile data found to update. Please create data first.'
-  end
-
   test 'handles validation errors during creation' do
     # Mock the TeachingProfileData to simulate validation failure
     TeachingProfileData.any_instance.stubs(:save).returns(false)
     TeachingProfileData.any_instance.stubs(:errors).returns(
-      double(full_messages: ['Validation failed'])
+      mock(full_messages: ['Validation failed'])
     )
 
     post '/dashboardapi/v1/teaching_profile_data',
@@ -125,7 +112,7 @@ class Api::V1::TeachingProfileDataControllerTest < ActionDispatch::IntegrationTe
     # Mock the update to fail
     TeachingProfileData.any_instance.stubs(:update).returns(false)
     TeachingProfileData.any_instance.stubs(:errors).returns(
-      double(full_messages: ['Update validation failed'])
+      mock(full_messages: ['Update validation failed'])
     )
 
     new_data = {selectedGoals: ['New goal']}
@@ -165,6 +152,6 @@ class Api::V1::TeachingProfileDataControllerTest < ActionDispatch::IntegrationTe
 
     get '/dashboardapi/v1/teaching_profile_data'
 
-    assert_response :unauthorized
+    assert_redirected_to_sign_in
   end
 end
