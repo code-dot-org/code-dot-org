@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-09-18 05:47:38 UTC",
+    "serialized_at": "2025-09-22 01:32:39 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -81,9 +81,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "hoai2025-dance-create-dancer"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -105,9 +102,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "hoai2025-music-adlib-1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -129,9 +123,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "hoai2025-music-adlib-2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -154,7 +145,7 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "hoai2025-dance-create"
+          "hoai2025-music-adlib-1"
         ]
       },
       "bonus": false,
@@ -177,6 +168,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "hoai2025-music-adlib-2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -198,6 +192,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "hoai2025-dance-create"
+        ]
       },
       "bonus": false,
       "seeding_key": {
