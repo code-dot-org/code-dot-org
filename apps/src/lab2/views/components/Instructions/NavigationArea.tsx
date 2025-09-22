@@ -201,7 +201,7 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
             iconRight={iconRight}
             text={hasNextLevel ? commonI18n.continue() : commonI18n.finish()}
             tooltipMessage={continueTooltipMessage}
-            hide={hideContinueIfDisabled && !continueButtonIsEnabled}
+            hidden={hideContinueIfDisabled && !continueButtonIsEnabled}
           />
         )}
 

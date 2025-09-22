@@ -20,15 +20,14 @@ interface ContinueButtonProps {
   iconRight: FontAwesomeV6IconProps | undefined;
   text: string;
   tooltipMessage?: string;
-  hide?: boolean;
+  hidden?: boolean;
   size?: ComponentSizeXSToL;
   className?: string;
 }
 
 /**
- * Displays the 'Continue' or 'Finish' button that advances to the next level or finishes the progression.
- * If the button is always displayed, it is disabled if the user has not met the conditions for the next level.
- * If isLabHidesContinueButton is true, the button is hidden until user has met the conditions for the next level.
+ * Displays the 'Continue' or 'Finish' button that advances to the next level or finishes the progression unless
+ * hidden is true.
  */
 const ContinueButton: React.FC<ContinueButtonProps> = ({
   disabled,
@@ -37,7 +36,7 @@ const ContinueButton: React.FC<ContinueButtonProps> = ({
   iconRight,
   text,
   tooltipMessage,
-  hide,
+  hidden,
   size,
   className,
 }) => {
@@ -46,7 +45,7 @@ const ContinueButton: React.FC<ContinueButtonProps> = ({
   // Show tooltip when button is disabled AND we have a message.
   const shouldShowTooltip = disabled && !!tooltipMessage;
 
-  if (hide) {
+  if (hidden) {
     return null;
   }
 
