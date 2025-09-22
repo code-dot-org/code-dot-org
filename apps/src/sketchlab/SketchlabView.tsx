@@ -14,7 +14,7 @@ import moduleStyles from './styles/sketchlab-view.module.scss';
 
 const MIN_INFO_PANEL_WIDTH = 150;
 const INITIAL_INFO_PANEL_WIDTH = 400;
-const MIN_WORKSPACE_WIDTH = 200;
+const MIN_WORKSPACE_WIDTH = 400;
 const INITIAL_WORKSPACE_WIDTH = 800;
 
 const getInitialData = () => {
