@@ -143,12 +143,14 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
             </div>
           )}
           {includeValidation && (
-            <ValidationButton
-              onValidate={validationSettings.onValidate}
-              onStopValidation={validationSettings.onStopValidation}
-              isValidating={validationSettings.isValidating}
-              isValidateDisabled={validationSettings.isValidateDisabled}
-            />
+            <div className={moduleStyles.nonScrollingSubContent}>
+              <ValidationButton
+                onValidate={validationSettings.onValidate}
+                onStopValidation={validationSettings.onStopValidation}
+                isValidating={validationSettings.isValidating}
+                isValidateDisabled={validationSettings.isValidateDisabled}
+              />
+            </div>
           )}
           {bottomComponent && (
             <div className={moduleStyles.bottomComponent}>
