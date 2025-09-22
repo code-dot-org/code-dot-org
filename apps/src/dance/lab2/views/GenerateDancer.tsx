@@ -12,7 +12,7 @@ import getRandomInt from '@cdo/apps/util/getRandomInt';
 import {trySetLocalStorage} from '@cdo/apps/utils';
 import dancerEmptyHeadShoulders from '@cdo/static/dance/dancer-empty-head-shoulders.png';
 
-import moduleStyles from './dancer-generate.module.scss';
+import moduleStyles from './generate-dancer.module.scss';
 
 const adlibs: AdlibsType = {
   basic: {
@@ -53,7 +53,7 @@ interface DancerGenerateProps {
 // a Guide UI component containing an Adlib UI component.  Pre-generated dancer assets are
 // retrieved from an online cache.  Information about the generated dancer is written to local
 // storage.
-const DancerGenerate: React.FunctionComponent<DancerGenerateProps> = ({
+const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
   adlibOption,
   levelProperties,
 }) => {
@@ -176,4 +176,4 @@ const DancerGenerate: React.FunctionComponent<DancerGenerateProps> = ({
   );
 };
 
-export default DancerGenerate;
+export default GenerateDancer;
