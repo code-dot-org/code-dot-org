@@ -49,7 +49,7 @@ export class AiTutorWebLab2ContextHelper extends AiTutorContextHelper<AiTutorWeb
         'The student would like to focus on this subset of their current code:',
         ...userAddedContextData,
       ].join('\n\n');
-      const combinedString = [baseString, userAddedContextString].join('\n\n');
+      const combinedString = [userAddedContextString, baseString].join('\n\n');
       console.log(`🤖: Tutor context with user added context:`, combinedString);
       return combinedString;
     }

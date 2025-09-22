@@ -3,6 +3,7 @@ import {createAsyncThunk} from '@reduxjs/toolkit';
 import {
   clearChatMessagePending,
   clearStagedFiles,
+  clearUserAddedContext,
   setChatMessagePending,
 } from '@cdo/apps/aichat/redux/slice';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
@@ -63,6 +64,8 @@ export const submitChatContents = createAsyncThunk(
 
     // Clear any staged files if present (used with multimodal models)
     thunkAPI.dispatch(clearStagedFiles());
+    // Clear any user added context if present.
+    thunkAPI.dispatch(clearUserAddedContext());
 
     const aichatContext: AichatContext = {
       clientType,
