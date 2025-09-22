@@ -7,8 +7,10 @@ class User
     EVENT_NAME = 'inactive_teacher_deletion_warning_sent'
 
     rescue_from StandardError, with: :report_exception
+    attr_reader :processed_teacher_ids
 
     def perform
+      @processed_teacher_ids = []
       inactive_teachers.find_each do |teacher|
         next if teacher.email.blank?
         send_warning_email(teacher)
@@ -21,6 +23,8 @@ class User
             teacher_id: teacher.id,
           }
         )
+      ensure
+        processed_teacher_ids << teacher.id
       end
     end
 
@@ -33,7 +37,8 @@ class User
       ActiveRecord::Base.connected_to(role: :reporting) do
         result = inactive_query.call.left_outer_joins(:user_data_retention_status)
         @inactive_teachers ||= result.where(user_data_retention_status: {deletion_warning_email_sent_at: nil}).
-          or(result.where(user_data_retention_status: {deletion_warning_email_sent_at: ..inactive_since}))
+          or(result.where(user_data_retention_status: {deletion_warning_email_sent_at: ..inactive_since})).
+          where.not(id: processed_teacher_ids)
       end
     end
 
