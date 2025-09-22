@@ -1,7 +1,7 @@
 import {Excalidraw, serializeAsJSON} from '@excalidraw/excalidraw';
 import {ExcalidrawElement} from '@excalidraw/excalidraw/types/element/types';
 import {AppState, BinaryFiles} from '@excalidraw/excalidraw/types/types';
-import React, {useEffect} from 'react';
+import React, {useEffect, useMemo, useRef} from 'react';
 
 import {useVerticalLayout} from '@cdo/apps/lab2/hooks/useVerticalLayout';
 import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
@@ -21,10 +21,13 @@ const INITIAL_INFO_PANEL_WIDTH = 400;
 const MIN_WORKSPACE_WIDTH = 400;
 const INITIAL_WORKSPACE_WIDTH = 800;
 
+const DEBOUNCED_WORKSPACE_SERIALIZATION_MS = 500;
+
 const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
   levelProperties,
 }) => {
   const {currentSources, updateSources} = useSources<ProjectSources>();
+  const saveSourcesTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const hasRun = useAppSelector(state => state.lab2System.hasRun);
 
@@ -48,14 +51,41 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
     appName: 'sketchlab',
   });
 
-  const serializeAndSaveWorkspace = (
-    elements: readonly ExcalidrawElement[],
-    state: AppState,
-    files: BinaryFiles
-  ) => {
-    const serializedData = serializeAsJSON(elements, state, files, 'local');
-    updateSources({source: serializedData});
-  };
+  // Excalidraw runs its onChange every time the cursor moves,
+  // so we debounce actually serializing the workspace to JSON.
+  const serializeAndSaveWorkspace = useMemo(
+    () =>
+      (
+        elements: readonly ExcalidrawElement[],
+        state: AppState,
+        files: BinaryFiles
+      ) => {
+        if (saveSourcesTimeoutRef.current) {
+          clearTimeout(saveSourcesTimeoutRef.current);
+          saveSourcesTimeoutRef.current = null;
+        }
+
+        saveSourcesTimeoutRef.current = setTimeout(() => {
+          console.log('debounced!');
+          const serializedData = serializeAsJSON(
+            elements,
+            state,
+            files,
+            'local'
+          );
+          updateSources({source: serializedData});
+        }, DEBOUNCED_WORKSPACE_SERIALIZATION_MS);
+      },
+    [updateSources]
+  );
+
+  useEffect(() => {
+    return () => {
+      if (saveSourcesTimeoutRef.current) {
+        clearTimeout(saveSourcesTimeoutRef.current);
+      }
+    };
+  }, []);
 
   // Since there's no run button in Sketch Lab, set it to true by default
   // to enable the Submit button on edit on submittable levels.
