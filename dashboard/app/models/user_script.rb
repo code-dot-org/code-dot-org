@@ -80,7 +80,7 @@ class UserScript < ApplicationRecord
   # TODO: TEACH-2168 once unit_group_id is a required field, remove this helper and call
   # find_or_create_by! instead.
   def self.find_and_migrate_or_create_by!(user_id:, unit:, unit_group: nil)
-    unless unit_group.nil? || unit.cached.unit_groups.include?(unit_group)
+    unless unit_group.nil? || unit.old_professional_learning_course? || unit.cached.unit_groups.include?(unit_group)
       raise "Unit #{unit.name} must belong to Unit Group #{unit_group&.name}"
     end
     original_unit_group = unit.get_original_unit_group
