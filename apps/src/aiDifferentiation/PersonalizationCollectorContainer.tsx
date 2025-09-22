@@ -32,12 +32,48 @@ interface PersonalizationData {
 const PersonalizationCollectorContainer: React.FC = () => {
   const [questionsNumber, setQuestionsNumber] = React.useState(0);
   const [isSaving, setIsSaving] = React.useState(false);
+  const [isLoading, setIsLoading] = React.useState(true);
   const [personalizationData, setPersonalizationData] = React.useState<
     Partial<PersonalizationData>
   >({});
 
   const NEXT = 1;
   const BACK = -1;
+
+  React.useEffect(() => {
+    const loadExistingData = async () => {
+      try {
+        const response = await fetch('/dashboardapi/v1/teaching_profile_data', {
+          method: 'GET',
+          headers: {
+            'X-CSRF-Token':
+              document
+                .querySelector('meta[name="csrf-token"]')
+                ?.getAttribute('content') || '',
+          },
+        });
+
+        if (response.ok) {
+          const result = await response.json();
+          if (result.exists && result.data) {
+            const existingData = {...result.data};
+            if (existingData.dateYearsTeachingSet) {
+              existingData.dateYearsTeachingSet = new Date(
+                existingData.dateYearsTeachingSet
+              );
+            }
+            setPersonalizationData(existingData);
+          }
+        }
+      } catch (error) {
+        console.error('Failed to load existing teaching profile data:', error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    loadExistingData();
+  }, []);
 
   const onCarouselPress = async (direction: number) => {
     if (direction === NEXT) {
@@ -166,29 +202,35 @@ const PersonalizationCollectorContainer: React.FC = () => {
 
   return (
     <div className={style.carouselContainer}>
-      <PersonalizationQuestion questionNumber={questionsNumber} />
-      <div className={style.answerContainer}>{determineAnswerType()}</div>
+      {isLoading ? (
+        <div>Loading...</div>
+      ) : (
+        <>
+          <PersonalizationQuestion questionNumber={questionsNumber} />
+          <div className={style.answerContainer}>{determineAnswerType()}</div>
 
-      <div className={style.navigationButtons}>
-        <Button
-          id={'back-button'}
-          text={i18n.back()}
-          type="secondary"
-          color="gray"
-          size="m"
-          onClick={() => onCarouselPress(BACK)}
-          iconLeft={{iconName: 'angle-left'}}
-        />
-        <Button
-          id={'next-button'}
-          text={isSaving ? i18n.saving() : i18n.next()}
-          type="primary"
-          size="m"
-          onClick={() => onCarouselPress(NEXT)}
-          disabled={isSaving}
-          iconRight={isSaving ? undefined : {iconName: 'angle-right'}}
-        />
-      </div>
+          <div className={style.navigationButtons}>
+            <Button
+              id={'back-button'}
+              text={i18n.back()}
+              type="secondary"
+              color="gray"
+              size="m"
+              onClick={() => onCarouselPress(BACK)}
+              iconLeft={{iconName: 'angle-left'}}
+            />
+            <Button
+              id={'next-button'}
+              text={isSaving ? i18n.saving() : i18n.next()}
+              type="primary"
+              size="m"
+              onClick={() => onCarouselPress(NEXT)}
+              disabled={isSaving}
+              iconRight={isSaving ? undefined : {iconName: 'angle-right'}}
+            />
+          </div>
+        </>
+      )}
     </div>
   );
 };
