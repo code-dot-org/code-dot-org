@@ -29,8 +29,7 @@ export const STEPS = [
       "Here is where you'll find links to documentation and lab settings including light/dark and font size",
   },
   {
-    element: '#resource-panel-continue-button',
-    title: 'Resource Panel Continue Button',
+    title: 'Resource Panel Button',
     intro:
       'The Continue button can always be found at the bottom of the resource area. It will be disabled if you need to do more work to complete the level.',
   },

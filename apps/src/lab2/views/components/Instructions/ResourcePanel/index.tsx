@@ -32,7 +32,7 @@ import styles from './styles.module.scss';
 // Onboarding Tour for PythonLab
 /* eslint-disable import/order */
 // Disabling import/order rule for grouped onboarding tour imports.
-import './introjs.css';
+import './introjs.scss';
 import {Steps} from 'intro.js-react';
 import {
   INITIAL_STEP,
@@ -125,6 +125,14 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
   const isReadOnly = useAppSelector(isReadOnlyWorkspace);
   const isWidgetView = instructionsProps.levelProperties.widgetView || false;
+  const submittable = instructionsProps.levelProperties.submittable || false;
+  const navigationID = submittable
+    ? '#instructions-submit-button'
+    : '#instructions-continue-button';
+  const TOUR_STEPS = [...STEPS];
+  const continueButtonStep = STEPS[3];
+  continueButtonStep.element = navigationID;
+  TOUR_STEPS[3] = continueButtonStep;
 
   const levelId = instructionsProps.levelProperties.id;
   const hasValidationConditions = useAppSelector(
@@ -250,7 +258,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
         <Steps
           enabled={resourcePanelTourEnabled}
           initialStep={INITIAL_STEP}
-          steps={STEPS}
+          steps={TOUR_STEPS}
           onExit={() => {}}
           onChange={() => {}}
           onBeforeChange={() => {}}

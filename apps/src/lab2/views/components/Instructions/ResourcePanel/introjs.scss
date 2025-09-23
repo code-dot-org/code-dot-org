@@ -82,9 +82,7 @@ tr.introjs-showElement > th {
 
 /* Arrow */
 .introjs-arrow {
-  border: 5px solid transparent;
-  content: "";
-  position: absolute;
+  display: none !important;
 }
 
 .introjs-arrow.top {
@@ -156,7 +154,7 @@ tr.introjs-showElement > th {
   visibility: visible;
   background-color: #fff;
   min-width: 250px;
-  max-width: 300px;
+  max-width: 350px;
   border-radius: 5px;
   box-shadow: 0 3px 30px rgba(33, 33, 33, .3);
   transition: opacity .1s ease-out;
@@ -164,6 +162,11 @@ tr.introjs-showElement > th {
 
 .introjs-tooltiptext {
   padding: 20px;
+  color: #576575;
+  font-family: Figtree, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
 }
 
 /* Don't Show Again */
