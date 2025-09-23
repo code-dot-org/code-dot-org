@@ -10,6 +10,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   skip_before_action :clear_sign_up_session_vars
 
+  before_action :redirect_if_no_auth_params
   before_action :check_account_linking_lock
 
   # Note: We can probably remove these once we've broken out all providers
@@ -516,6 +517,12 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     return false unless user
 
     account_linking_lock_reason(user)
+  end
+
+  private def redirect_if_no_auth_params
+    return if auth_params
+
+    redirect_to new_user_session_path
   end
 
   # If we are trying to connect a new provider to an existing account and the
