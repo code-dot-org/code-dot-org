@@ -3,6 +3,7 @@ import {usePrompts} from '@codebridge/FileBrowser/hooks';
 import {ProjectFile} from '@codebridge/types';
 import {
   enableUserAddedContext,
+  getFolderPath,
   getPossibleDestinationFoldersForFile,
   sendCodebridgeAnalyticsEvent,
 } from '@codebridge/utils';
@@ -115,13 +116,20 @@ export const useFileRowOptions = (
         condition: enableUserAddedContext(appName),
         iconName: 'paperclip-vertical',
         labelText: codebridgeI18n.addToAiTutorContext(),
-        clickHandler: () =>
+        clickHandler: () => {
+          const folderPath = getFolderPath(file.folderId, projectFolders);
+          let fullFilename = file.name;
+          if (folderPath !== '/') {
+            fullFilename = (folderPath + '/' + file.name).substring(1); // remove leading slash
+          }
           dispatch(
             addItemToUserAddedContext({
-              displayName: file.name, // TODO: include folder path
-              text: file.contents,
+              displayName: fullFilename,
+              sourceCode: file.contents,
+              filename: fullFilename,
             })
-          ),
+          );
+        },
       },
     ],
     [

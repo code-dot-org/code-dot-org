@@ -41,8 +41,9 @@ export class AiTutorWebLab2ContextHelper extends AiTutorContextHelper<AiTutorWeb
     userAddedContext: UserAddedContext
   ) {
     const baseString = await super.getHiddenContextString();
-    const userAddedContextData = Object.entries(userAddedContext).map(
-      ([displayName, text]) => `Filename: ${displayName}\n\`\`\`${text}}\`\`\``
+    const userAddedContextData = Object.values(userAddedContext).map(
+      context =>
+        `Filename: ${context.filename}\n\`\`\`${context.sourceCode}}\`\`\``
     );
     if (userAddedContextData.length > 0) {
       const userAddedContextString = [

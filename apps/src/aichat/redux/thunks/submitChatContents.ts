@@ -65,6 +65,7 @@ export const submitChatContents = createAsyncThunk(
     // Clear any staged files if present (used with multimodal models)
     thunkAPI.dispatch(clearStagedFiles());
     // Clear any user added context if present.
+    // TODO: we need a way to get the user added context into the chat event history...
     thunkAPI.dispatch(clearUserAddedContext());
 
     const aichatContext: AichatContext = {

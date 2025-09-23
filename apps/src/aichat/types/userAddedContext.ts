@@ -1,6 +1,8 @@
 export interface UserAddedContextItem {
-  text: string;
+  sourceCode: string;
+  filename: string;
+  lineReference?: {start: number; end: number};
   displayName: string;
 }
 
-export type UserAddedContext = {[key: string]: string};
+export type UserAddedContext = {[key: string]: UserAddedContextItem};

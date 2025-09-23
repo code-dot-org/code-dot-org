@@ -334,7 +334,7 @@ const aichatSlice = createSlice({
       state,
       action: PayloadAction<UserAddedContextItem>
     ) {
-      state.userAddedContext[action.payload.displayName] = action.payload.text;
+      state.userAddedContext[action.payload.displayName] = action.payload;
     },
     removeItemFromUserAddedContext(state, action: PayloadAction<string>) {
       state.userAddedContext[action.payload] &&
