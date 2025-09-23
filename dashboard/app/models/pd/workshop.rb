@@ -493,7 +493,10 @@ class Pd::Workshop < ApplicationRecord
       # processed before the workshop ended.
       next unless !workshop.processed_at || workshop.processed_at < workshop.ended_at
       workshop.send_exit_surveys
-      workshop.send_facilitator_post_surveys
+      workshop.facilitators&.each do |facilitator|
+        next unless facilitator.email
+        Pd::WorkshopMailjetMailer.send_facilitator_post_workshop_survey(workshop, facilitator)
+      end
       # using update_attribute to skip validation
       workshop.update_attribute(:processed_at, Time.zone.now)
     end
@@ -650,17 +653,6 @@ class Pd::Workshop < ApplicationRecord
       enrollment.update!(survey_sent_at: Time.zone.now)
     rescue => exception
       raise "teacher enrollment #{enrollment.id} - #{exception.message}"
-    end
-  end
-
-  # Send Post-surveys to facilitators of CSD and CSP workshops
-  def send_facilitator_post_surveys
-    if course == COURSE_CSD || course == COURSE_CSP || course == COURSE_CSA || course == COURSE_CSF || course == COURSE_BUILD_YOUR_OWN
-      facilitators.each do |facilitator|
-        next unless facilitator.email
-
-        Pd::WorkshopMailer.facilitator_post_workshop(facilitator, self).deliver_now
-      end
     end
   end
 

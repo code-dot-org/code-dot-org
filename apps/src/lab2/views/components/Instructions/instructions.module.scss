@@ -109,6 +109,20 @@
   height: 32px;
 }
 
+// Ensure the TooltipOverlay wrapper div matches the button width
+// without changing TooltipOverlay's calculated position.
+.buttonInstructionTooltipOverlay { 
+  > div {
+    width: 100%;
+  }
+  
+  // Contained button takes full width.
+  button {
+    width: 100%;
+    height: 32px;
+  }
+}
+
 .markdownText {
   line-height: 0;
   user-select: auto;
