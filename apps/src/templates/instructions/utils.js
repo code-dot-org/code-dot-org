@@ -144,6 +144,8 @@ export function convertXmlToBlockly(xmlContainer, isRtl) {
     // create a container and insert the blockspace into it
     const blockSpaceContainer = document.createElement(inline ? 'span' : 'div');
     blockSpaceContainer.classList.add('readonly-block-space-container');
+    // We do not translate the blockly workspaces
+    blockSpaceContainer.classList.add('notranslate');
     if (inline) {
       // SVGs don't play nicely if they're rendered into purely inline elements,
       // so if our container is a span it should be inline-block
