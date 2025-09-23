@@ -64,27 +64,6 @@ describe('ScoreCard', () => {
   });
 
   describe('when a placeholder icon is shown', () => {
-    it('shows a dash icon for no responses', () => {
-      renderComponent({responseCount: 0});
-
-      expect(screen.getByText('No responses received')).toBeInTheDocument();
-      const iconElement = screen.getByText('dash');
-      expect(iconElement).toBeInTheDocument();
-
-      const scoreBox = iconElement.closest('[data-status]');
-      expect(scoreBox).toHaveAttribute('data-status', 'insufficientData');
-    });
-
-    it('shows a question icon for a null score', () => {
-      renderComponent({score: null});
-
-      const iconElement = screen.getByText('question');
-      expect(iconElement).toBeInTheDocument();
-
-      const scoreBox = iconElement.closest('[data-status]');
-      expect(scoreBox).toHaveAttribute('data-status', 'insufficientData');
-    });
-
     it('shows a question icon for insufficient data', () => {
       renderComponent({responseCount: 3, minResponseCount: 5});
 
@@ -96,6 +75,14 @@ describe('ScoreCard', () => {
 
       const scoreBox = iconElement.closest('[data-status]');
       expect(scoreBox).toHaveAttribute('data-status', 'insufficientData');
+    });
+  });
+
+  describe('when there are no responses', () => {
+    it('does not render', () => {
+      const {container} = renderComponent({responseCount: 0});
+
+      expect(container.firstChild).toBeNull();
     });
   });
 });

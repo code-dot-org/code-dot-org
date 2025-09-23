@@ -85,7 +85,7 @@ export const fetchStudents = async (sectionId: number) => {
     return studentData.map(formatServerData);
   } catch (error) {
     MetricsReporter.logError({
-      event: MetricEvent.AI_TUTOR_CHAT_FETCH_FAIL,
+      event: MetricEvent.AI_TUTOR_STUDENTS_FETCH_FAIL,
       errorMessage: JSON.stringify(error),
     });
     throw error;

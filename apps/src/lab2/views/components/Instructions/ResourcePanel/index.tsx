@@ -5,7 +5,10 @@ import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import classNames from 'classnames';
 import React, {useEffect, useMemo, useState} from 'react';
 
-import {queryParams} from '@cdo/apps/code-studio/utils';
+import {ChatButtonData, SystemPromptSettings} from '@cdo/apps/aichat/types';
+import {shouldShowAiTutor} from '@cdo/apps/lab2/ai/shouldShowAiTutor';
+import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
+import {ProjectSources} from '@cdo/apps/lab2/types';
 import AiTutor2Chat from '@cdo/apps/lab2/views/components/AiTutor2Chat';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import StudentRubricView from '@cdo/apps/lab2/views/components/rubrics/StudentRubricView';
@@ -21,6 +24,8 @@ import NavigationArea from '../NavigationArea';
 import CopyrightButton from './CopyrightButton';
 import ResourcePanelExtraLinks from './ResourcePanelExtraLinks';
 import SettingsPanel from './SettingsPanel';
+import ValidationPanel from './ValidationPanel';
+import {VersionHistoryPanel} from './VersionHistory';
 
 import styles from './styles.module.scss';
 
@@ -29,6 +34,8 @@ enum Tabs {
   AiTutor = 'aiTutor',
   TeachersOnly = 'teachersOnly',
   StudentRubric = 'studentRubric',
+  VersionHistory = 'versionHistory',
+  Validation = 'validation',
 }
 
 export interface Setting {
@@ -37,6 +44,10 @@ export interface Setting {
   options: {value: string; text: string}[];
   selectedValue: string | undefined;
   onChange: (value: string) => void;
+}
+
+interface VersionHistoryProps {
+  startSources: ProjectSources;
 }
 
 const tabInfo: {[key in Tabs]: {title: string; icon: string}} = {
@@ -50,15 +61,27 @@ const tabInfo: {[key in Tabs]: {title: string; icon: string}} = {
     title: commonI18n.rubric(),
     icon: 'clipboard-list',
   },
+  [Tabs.VersionHistory]: {
+    title: commonI18n.versionHistory_header(),
+    icon: 'history',
+  },
+  [Tabs.Validation]: {
+    title: commonI18n.validation(),
+    icon: 'clipboard-check',
+  },
 };
 
 type ResourcePanelProps = InstructionsProps & {
   className?: string;
   headerClassName?: string;
-  aiTutor2Context?: string;
+  hiddenContextCallback?: () => Promise<string>;
   rightHeaderContent?: React.ReactNode;
   includeFooterSpacing?: boolean;
   settings?: Setting[];
+  versionHistoryProps?: VersionHistoryProps;
+  aiTutorSystemPromptSettings?: SystemPromptSettings;
+  aiTutorMultimodalEnabled?: boolean;
+  aiTutorChatButtonData?: ChatButtonData[];
 };
 
 /**
@@ -67,10 +90,14 @@ type ResourcePanelProps = InstructionsProps & {
 const ResourcePanel: React.FC<ResourcePanelProps> = ({
   className,
   headerClassName,
-  aiTutor2Context,
+  hiddenContextCallback,
   rightHeaderContent,
   includeFooterSpacing = true,
   settings,
+  versionHistoryProps,
+  aiTutorSystemPromptSettings,
+  aiTutorMultimodalEnabled,
+  aiTutorChatButtonData,
   ...instructionsProps
 }) => {
   const {theme} = useTheme();
@@ -78,8 +105,21 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const [currentTab, setCurrentTab] = useState<Tabs>(Tabs.Instructions);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const isUserTeacher = useAppSelector(state => state.currentUser.isTeacher);
+  const [selectedVersion, setSelectedVersion] = useState<string>('');
+  const isViewingOldVersion = useAppSelector(
+    state => state.lab2Project.viewingOldVersion
+  );
+  const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
+  const isReadOnly = useAppSelector(isReadOnlyWorkspace);
+  const isWidgetView = instructionsProps.levelProperties.widgetView || false;
 
   const levelId = instructionsProps.levelProperties.id;
+  const hasValidationConditions = useAppSelector(
+    state => state.lab.validationState?.hasConditions
+  );
+  const levelName = instructionsProps.levelProperties.name;
+  const channelId = useAppSelector(state => state.lab.channel?.id);
+  const appName = instructionsProps.levelProperties.appName;
 
   // Build available tabs based on level information.
   const availableTabs = useMemo(() => {
@@ -89,6 +129,12 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     if (levelProperties.longInstructions) {
       tabMap[Tabs.Instructions] = (
         <Instructions {...instructionsProps} hideNavigation />
+      );
+    }
+
+    if (instructionsProps.validationSettings && hasValidationConditions) {
+      tabMap[Tabs.Validation] = (
+        <ValidationPanel {...instructionsProps.validationSettings} />
       );
     }
 
@@ -106,11 +152,38 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     }
 
     if (
-      (levelProperties.aiTutorAvailable ||
-        queryParams('show-ai-tutor2') === 'true') &&
-      aiTutor2Context
+      hiddenContextCallback &&
+      shouldShowAiTutor(appName, levelProperties.aiTutorAvailable)
     ) {
-      tabMap[Tabs.AiTutor] = <AiTutor2Chat hiddenContext={aiTutor2Context} />;
+      tabMap[Tabs.AiTutor] = (
+        <AiTutor2Chat
+          hiddenContextCallback={hiddenContextCallback}
+          aiTutorSystemPromptSettings={aiTutorSystemPromptSettings}
+          aiTutorMultimodalEnabled={aiTutorMultimodalEnabled}
+          levelName={levelName}
+          channelId={channelId}
+          aiTutorChatButtonData={aiTutorChatButtonData}
+        />
+      );
+    }
+
+    // The version history tab is hidden in read only mode with two exceptions:
+    // if the user is viewing an old version of the project, or if this is a teacher viewing
+    // a student's project (in which case they can view old versions, but not restore them).
+    // We never show the version history tab in widget view, as widget view is always read-only
+    // and therefore can never have version history.
+    const versionHistoryHidden =
+      (isReadOnly && !isViewingOldVersion && !viewAsUserId) || isWidgetView;
+    if (versionHistoryProps && !versionHistoryHidden) {
+      tabMap[Tabs.VersionHistory] = (
+        <VersionHistoryPanel
+          selectedVersion={selectedVersion}
+          setSelectedVersion={setSelectedVersion}
+          startSources={versionHistoryProps.startSources}
+          appName={levelProperties.appName}
+          levelId={levelId}
+        />
+      );
     }
 
     if (showRubric) {
@@ -118,7 +191,26 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     }
 
     return tabMap;
-  }, [instructionsProps, isUserTeacher, aiTutor2Context, showRubric]);
+  }, [
+    instructionsProps,
+    hasValidationConditions,
+    isUserTeacher,
+    hiddenContextCallback,
+    appName,
+    isReadOnly,
+    isViewingOldVersion,
+    viewAsUserId,
+    isWidgetView,
+    versionHistoryProps,
+    showRubric,
+    aiTutorSystemPromptSettings,
+    aiTutorMultimodalEnabled,
+    levelName,
+    channelId,
+    aiTutorChatButtonData,
+    selectedVersion,
+    levelId,
+  ]);
 
   useEffect(() => {
     if (!(currentTab in availableTabs)) {
@@ -126,6 +218,11 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       setCurrentTab(getTypedKeys(availableTabs)[0] || Tabs.Instructions);
     }
   }, [currentTab, availableTabs]);
+
+  useEffect(() => {
+    // Reset current tab to instructions when switching levels or viewAsUserId
+    setCurrentTab(Tabs.Instructions);
+  }, [levelId, viewAsUserId]);
 
   return (
     <div className={classNames(styles.resourcePanel, className)}>
@@ -164,6 +261,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
         </div>
         <div className={classNames(styles.bottomTabs)}>
           <ResourcePanelExtraLinks levelId={levelId} theme={theme} />
+          <CopyrightButton theme={theme} />
           <WithTooltip
             tooltipProps={{
               text: commonI18n.settings(),
@@ -184,7 +282,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
               type={'tertiary'}
             />
           </WithTooltip>
-          <CopyrightButton theme={theme} />
         </div>
       </div>
       <div className={styles.panels}>
@@ -195,7 +292,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
           rightHeaderContent={rightHeaderContent}
         >
           {availableTabs[currentTab]}
-          <NavigationArea {...instructionsProps} />
+          <NavigationArea isResourcePanel={true} {...instructionsProps} />
           {isSettingsOpen && (
             <SettingsPanel
               settings={settings || []}

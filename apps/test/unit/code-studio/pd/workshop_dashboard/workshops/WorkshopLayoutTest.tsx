@@ -5,10 +5,8 @@ import React from 'react';
 import '@testing-library/jest-dom';
 import {MemoryRouter, Route, Routes} from 'react-router-dom';
 
-import {
-  SurveyOption,
-  TabConfig,
-} from '@cdo/apps/code-studio/pd/workshop_dashboard/workshops/types';
+import {SurveyOption} from '@cdo/apps/code-studio/pd/workshop_dashboard/workshops/components/SurveyTypeSelection';
+import {TabConfig} from '@cdo/apps/code-studio/pd/workshop_dashboard/workshops/components/WorkshopTabs';
 import {WorkshopLayout} from '@cdo/apps/code-studio/pd/workshop_dashboard/workshops/WorkshopLayout';
 
 // mock data fetching so we can control loading/error states.
@@ -27,10 +25,19 @@ const surveyTypeOptions: SurveyOption[] = [
   {text: 'Post', value: 'post'},
 ];
 
-const categoryButtons: SegmentedButtonsProps['buttons'] = [
-  {label: 'Overall', value: 'overall'},
-  {label: 'Facilitators', value: 'facilitators'},
-];
+const categoryButtons: {
+  preWorkshopSurvey: SegmentedButtonsProps['buttons'];
+  postWorkshopSurvey: SegmentedButtonsProps['buttons'];
+} = {
+  preWorkshopSurvey: [
+    {label: 'Overall', value: 'overall'},
+    {label: 'Facilitators', value: 'facilitators'},
+  ],
+  postWorkshopSurvey: [
+    {label: 'Overall', value: 'overall'},
+    {label: 'Facilitators', value: 'facilitators'},
+  ],
+};
 
 const baseWorkshop = {
   id: 42,

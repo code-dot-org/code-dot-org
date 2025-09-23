@@ -92,7 +92,7 @@ module Services
     # a particular machine.
     test 'seed script not yet in unit group' do
       script = create_script_tree
-      assert script.unit_group.course_version
+      assert script.get_original_unit_group.course_version
 
       # Capture the json while resources are still present. This test checks
       # that these resources do not get added back during the seed process.
@@ -102,14 +102,14 @@ module Services
       script.resources.destroy_all
       script.student_resources.destroy_all
       script.freeze
-      script.unit_group.course_version.resources.destroy_all
-      script.unit_group.course_version.vocabularies.destroy_all
+      script.get_original_unit_group.course_version.resources.destroy_all
+      script.get_original_unit_group.course_version.vocabularies.destroy_all
       expected_counts = get_counts
 
       # destroy the script and its unit group, so that no course version will
       # be available during seed.
       script_to_destroy = Unit.find(script.id)
-      unit_group_to_destroy = script_to_destroy.unit_group
+      unit_group_to_destroy = script_to_destroy.get_original_unit_group
       script_to_destroy.original_unit_group.course_version.destroy!
       script_to_destroy.destroy!
       unit_group_to_destroy.destroy!
@@ -1155,21 +1155,6 @@ module Services
         ScriptSeed.seed_from_json(json)
       end
       assert_equal 'Validation failed: Module type is not included in the list', e.message
-    end
-
-    test 'published state set to pilot when pilot_experiment is present' do
-      unit = create(:script)
-      assert_nil unit.pilot_experiment
-      assert_equal Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development, unit.get_published_state
-
-      json = ScriptSeed.serialize_seeding_json(unit)
-      unit_data = JSON.parse(json)
-      unit_data['script']['properties']['pilot_experiment'] = 'my-experiment'
-
-      ScriptSeed.seed_from_json(unit_data.to_json)
-      unit.reload
-      assert_equal 'my-experiment', unit.pilot_experiment
-      assert_equal 'pilot', unit.get_published_state
     end
 
     def get_script_and_json_with_change_and_rollback(script, &db_write_block)

@@ -52,6 +52,7 @@ FactoryBot.define do
                   "type":"checkbox",
                   "name":"not_members_spice_girls",
                   "title":"Which of the following are NOT names of members of the Spice Girls?",
+                  "category": "not_members_spice_girls_category",
                   "choices":[
                     {
                       "value":"sporty",
@@ -919,7 +920,8 @@ FactoryBot.define do
               "rows": [
               {
                 "value": "more_prepared",
-                "text": "I feel more prepared to teach the material covered in this workshop than before I came."
+                "text": "I feel more prepared to teach the material covered in this workshop than before I came.",
+                "category": "more_prepared_category"
               },
               {
                 "value": "where_to_go",
@@ -995,6 +997,7 @@ FactoryBot.define do
             {
               "type": "comment",
               "name": "supported",
+              "category": "supported_category",
               "title": "What supported your learning the most today and why?"
             },{
              "type": "paneldynamic",
@@ -1047,7 +1050,8 @@ FactoryBot.define do
                    },
                    {
                      "value": "on_track",
-                     "text": "Kept the workshop and participants on track."
+                     "text": "Kept the workshop and participants on track.",
+                     "category": "on_track_category"
                    },
                    {
                      "value": "productive_discussions",
@@ -1082,6 +1086,7 @@ FactoryBot.define do
            },{
              "type": "radiogroup",
              "name": "permission",
+             "category": "permission_category",
              "title": "I give the workshop organizer permission to quote my written feedback from today for use on social media, promotional materials, and other communications.",
              "isRequired": true,
              "choices": [
@@ -1286,7 +1291,9 @@ FactoryBot.define do
             "modality_met_needs": "1"
           },
           "barriers_implementation_curriculum":["needs_more_preparation","lack_admin_support"],
-          "other_feedback": "Overall experience was okay"
+          "other_feedback": "Overall experience was okay",
+          "followup_requested":"yes",
+          "followup_email":"struggling_teacher@mail.com"
         }'
       end
     end
@@ -1306,7 +1313,8 @@ FactoryBot.define do
             "modality_met_needs": "7"
           },
           "barriers_implementation_curriculum":["none"],
-          "other_feedback": "Amazing workshop experience!"
+          "other_feedback": "Amazing workshop experience!",
+          "followup_requested":"no"
         }'
       end
     end

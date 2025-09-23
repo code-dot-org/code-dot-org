@@ -32,9 +32,6 @@
     "typecheck": "turbo typecheck"
   },
   "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
-  "resolutions": {
-    "@contentful/experiences-core@npm:2.0.1": "patch:@contentful/experiences-core@npm%3A2.0.1#~/apps/marketing/patches/@contentful-experiences-core-npm-2.0.1-c20f8b5e11.patch"
-  },
   "devDependencies": {
     "@axe-core/playwright": "^4.10.1",
     "lint-staged": "^15.4.3",

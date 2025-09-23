@@ -6,6 +6,8 @@ import {
 import classNames from 'classnames';
 import React from 'react';
 
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import i18n from '@cdo/locale';
 
 import {AiDiffNotification, IconColor} from './types';
@@ -34,9 +36,15 @@ const getRelativeTimeString = (date: Date): string => {
   }
 };
 
-const Notification: React.FC<{
+interface NotificationProps {
   notification: AiDiffNotification | null;
-}> = ({notification}) => {
+  aiPromptClick?: (label: string, prompt: string) => void;
+}
+
+const Notification: React.FC<NotificationProps> = ({
+  notification,
+  aiPromptClick,
+}) => {
   const isLoading = notification === null;
   const notificationOrPlaceholder: AiDiffNotification = notification || {
     id: 'placeholder',
@@ -47,6 +55,8 @@ const Notification: React.FC<{
     iconName: 'spinner',
     iconColor: IconColor.Gray,
     publishedAt: new Date(),
+    aiPrompts: [],
+    hrefLinks: [],
   };
 
   return (
@@ -59,21 +69,72 @@ const Notification: React.FC<{
           styles[`icon${notificationOrPlaceholder.iconColor}`],
           isLoading && skeletonizeContent.skeletonizeContent
         )}
+        // This icon is decorative and does not need to be read by screen readers
+        // eslint-disable-next-line react/forbid-component-props
+        data-testid={'icon-' + notificationOrPlaceholder.iconName}
       />
-      <p
-        className={classNames(
-          styles.text,
-          isLoading && skeletonizeContent.skeletonizeContent
-        )}
-      >
-        <BodyThreeText noMargin>
+      <div className={styles.textAndLinks}>
+        <BodyThreeText
+          noMargin
+          className={classNames(
+            styles.text,
+            isLoading && skeletonizeContent.skeletonizeContent
+          )}
+        >
           <StrongText>
             {notificationOrPlaceholder.title}
             {': '}
           </StrongText>
           {notificationOrPlaceholder.description}
         </BodyThreeText>
-      </p>
+        <ol className={styles.links}>
+          {notificationOrPlaceholder.hrefLinks?.length > 0 &&
+            notificationOrPlaceholder.hrefLinks.map((link, index) => (
+              <li key={'url-' + index} className={styles.hrefLink}>
+                <a
+                  href={link.url}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  onClick={() => {
+                    analyticsReporter.sendEvent(
+                      EVENTS.AI_DIFF_NOTIFICATION_URL_CLICKED,
+                      {
+                        notificationId: notificationOrPlaceholder.id,
+                        externalId: notificationOrPlaceholder.externalId,
+                      }
+                    );
+                  }}
+                >
+                  {link.text}
+                </a>
+              </li>
+            ))}
+          {notificationOrPlaceholder.aiPrompts?.length > 0 &&
+            notificationOrPlaceholder.aiPrompts.map((prompt, index) => (
+              <li key={'ai-' + index}>
+                <button
+                  onClick={() => {
+                    if (aiPromptClick) {
+                      aiPromptClick(prompt.text, prompt.prompt);
+
+                      analyticsReporter.sendEvent(
+                        EVENTS.AI_DIFF_NOTIFICATION_AI_PROMPT_CLICKED,
+                        {
+                          notificationId: notificationOrPlaceholder.id,
+                          externalId: notificationOrPlaceholder.externalId,
+                        }
+                      );
+                    }
+                  }}
+                  className={styles.aiButton}
+                  type="button"
+                >
+                  {prompt.text}
+                </button>
+              </li>
+            ))}
+        </ol>
+      </div>
       <BodyThreeText
         className={classNames(
           styles.date,
@@ -85,11 +146,12 @@ const Notification: React.FC<{
           notificationOrPlaceholder.publishedAt
         ).toLocaleUpperCase()}
       </BodyThreeText>
-      {notificationOrPlaceholder.readAt === null ? (
+      {!notificationOrPlaceholder.readAt && notification !== null ? (
         <FontAwesomeV6Icon
           iconName="circle"
           iconStyle="solid"
           className={styles.readAt}
+          aria-label={i18n.unread()}
         />
       ) : (
         <div className={styles.readAt} />

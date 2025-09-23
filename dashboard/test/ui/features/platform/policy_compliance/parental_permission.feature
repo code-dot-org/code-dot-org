@@ -12,7 +12,7 @@ Feature: Policy Compliance and Parental Permission
     Then I wait until element "#permission-status" contains text "Not Submitted"
     And element ".lockout-panel h2" contains text "Just one more thing!"
     And element "#lockout-panel-form > p:nth-child(1)" contains text "We need your parent or guardian to approve your account before you can get started. Please supply us with your parent or guardian's email address so they can grant you permission."
-    And element "#lockout-panel-form > p:nth-child(2)" contains text "Note: Your account will be deleted if we do not receive your parent or guardian's permission by "
+    And element "#lockout-panel-form > p:nth-child(2)" contains text "Note: Your account will be deleted if we do not receive your parent or guardian's permission by:"
 
     # Type in the email do re-enable the button
     And I press keys "parent@example.com" for element "#parent-email"
@@ -23,7 +23,7 @@ Feature: Policy Compliance and Parental Permission
     Then I wait until element "#permission-status" contains text "Pending"
     And element ".lockout-panel h2" contains text "Thanks! We've contacted your parent/guardian."
     And element "#lockout-panel-form > p:nth-child(1)" contains text "We sent an email to parent@example.com. Didn't receive anything? Update your parent or guardian's email below or send another request."
-    And element "#lockout-panel-form > p:nth-child(2)" contains text "Note: Your account will be deleted if we do not receive your parent or guardian's permission by "
+    And element "#lockout-panel-form > p:nth-child(2)" contains text "Note: Your account will be deleted if we do not receive your parent or guardian's permission by:"
 
   Scenario: New under 13 account should be able to provide state and see lockout page to send parental request.
     Given I am on "http://studio.code.org"

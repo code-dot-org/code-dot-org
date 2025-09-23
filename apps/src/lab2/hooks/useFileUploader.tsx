@@ -4,6 +4,7 @@ import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import UploadsDisabledModal from '@cdo/apps/sharedComponents/UploadsDisabledModal';
 import HttpClient from '@cdo/apps/util/HttpClient';
+import {WEBLAB2_IMAGE_FILE_TYPES} from '@cdo/apps/weblab2/constants';
 
 export const enum analyticsEvents {
   UPLOAD_FAILED = 'UPLOAD_FAILED',
@@ -77,7 +78,7 @@ const moderateImage = async (
   ext: string,
   appName?: string
 ): Promise<'ok' | 'flagged' | 'skipped'> => {
-  if (appName !== 'weblab2' || !['png', 'jpg', 'jpeg'].includes(ext)) {
+  if (appName !== 'weblab2' || !WEBLAB2_IMAGE_FILE_TYPES.includes(ext)) {
     return 'skipped';
   }
   const response = await HttpClient.post(`/v3/images/moderate`, file, true, {

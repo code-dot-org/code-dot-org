@@ -1,13 +1,13 @@
 'use client';
 
 import '@code-dot-org/component-library/carousel/index.css';
-import {useInMemoryEntities} from '@contentful/experiences-sdk-react';
 import {EntryFields} from 'contentful';
 import React, {useMemo} from 'react';
 
 import DSCOCarousel from '@code-dot-org/component-library/carousel';
 
 import Video from '@/components/contentful/video';
+import {resolveContentfulLink} from '@/contentful/resolveLink';
 import {Entry} from '@/types/contentful/Entry';
 import {ExperienceAsset} from '@/types/contentful/ExperienceAsset';
 
@@ -37,16 +37,13 @@ const VideoCarousel: React.FC<VideoCarouselProps> = ({slides}) => {
     );
   }
 
-  const inMemoryEntities = useInMemoryEntities();
-
   const slidesData = useMemo(
     () =>
       slides.filter(Boolean).map(({fields}) => {
         const {videoTitle, youTubeId, videoFallbackFile} = fields;
 
-        const resolvedVideoFallbackFile = inMemoryEntities.maybeResolveLink(
-          videoFallbackFile,
-        ) as ExperienceAsset;
+        const resolvedVideoFallbackFile =
+          resolveContentfulLink<ExperienceAsset>(videoFallbackFile);
 
         return {
           id: youTubeId,

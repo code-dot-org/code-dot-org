@@ -8,6 +8,16 @@ export enum IconColor {
   Orange = 'Orange',
 }
 
+interface AiPrompt {
+  text: string;
+  prompt: string;
+}
+
+interface HrefLink {
+  text: string;
+  url: string;
+}
+
 export interface AiDiffNotification {
   id: string;
   externalId: string;
@@ -17,4 +27,6 @@ export interface AiDiffNotification {
   iconName: string;
   iconColor: IconColor;
   publishedAt: Date;
+  aiPrompts: AiPrompt[];
+  hrefLinks: HrefLink[];
 }

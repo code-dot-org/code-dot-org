@@ -47,10 +47,11 @@ export const validateFileName = ({
   }
 
   if (validFileTypes && !validFileTypes.includes(extension)) {
+    const validFileTypesString = validFileTypes.join(', ');
     return `${codebridgeI18n.invalidFileType({
       fileType: extension,
     })} ${codebridgeI18n.validFileTypesInfo({
-      validFileTypes: validFileTypes.toString(),
+      validFileTypes: validFileTypesString,
     })}`;
   }
 

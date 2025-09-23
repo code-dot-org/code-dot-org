@@ -14,9 +14,11 @@
           "placeHolder": "enter a number"
         },
         {
+          "category": "cohort_profile",
           "type": "radiogroup",
           "name": "cdo_teaching_experience",
           "title": "Which of the following options best captures your previous experience using Code.org in the classroom?",
+          "shortText": "Previous experience with Code.org in the classroom",
           "choices": [
             {
               "value": "cs_teaching",
@@ -64,9 +66,11 @@
           ]
         },
         {
+          "category": "cohort_profile",
           "type": "checkbox",
           "name": "grade",
           "title": "What grade levels do you currently support or work with?",
+          "shortText": "Grade levels currently teaching",
           "description": " (Select all that apply)",
           "choices": [
             {
@@ -132,9 +136,11 @@
           ]
         },
         {
+          "category": "cohort_profile",
           "type": "radiogroup",
           "name": "highest_level_cs_education",
           "title": "Which most accurately describes the highest level of formal computer science education you have completed? ",
+          "shortText": "Highest level of formal computer science education",
           "otherPlaceHolder": "Other CS Education",
           "choices": [
             {
@@ -209,17 +215,21 @@
           ]
         },
         {
+          "category": "cohort_profile",
           "type": "text",
           "name": "years_teaching",
           "title": "How many years have you taught at the K-12 level (any subject)?",
+          "shortText": "Years teaching at K-12 level (any subject)",
           "description": "Please enter a whole number. If you are about to start your first year teaching, enter 0.",
           "inputType": "number",
           "min": 0
         },
         {
+          "category": "cohort_profile",
           "type": "text",
           "name": "years_teaching_cs",
           "title": "How many years have you taught COMPUTER SCIENCE at the K-12 level?",
+          "shortText": "Years teaching at K-12 level (CS only)",
           "description": "Please enter a whole number. Enter 0 if it's your first year teaching computer science.",
           "inputType": "number",
           "min": 0

@@ -3,7 +3,7 @@ import {NextFetchEvent, NextRequest} from 'next/server';
 
 import {getBrandFromHostname} from '@/config/brand';
 import {
-  getLocalizeJsLocaleFromDashboardLocale,
+  getSupportedLocaleFromDashboardLocale,
   SUPPORTED_LOCALE_CODES,
   SUPPORTED_LOCALES_SET,
   SupportedLocale,
@@ -16,7 +16,7 @@ import {getCachedRedirectResponse} from '@/middleware/utils/getCachedRedirectRes
 import {MiddlewareFactory} from './types';
 
 function getLanguageFromCookie(request: NextRequest) {
-  const cookieLocale = getLocalizeJsLocaleFromDashboardLocale(
+  const cookieLocale = getSupportedLocaleFromDashboardLocale(
     request.cookies.get('language_')?.value,
   );
   return cookieLocale !== undefined && SUPPORTED_LOCALES_SET.has(cookieLocale)

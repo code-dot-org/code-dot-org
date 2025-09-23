@@ -164,6 +164,7 @@ module Curriculum
       games_and_animations
       hardware
       internet
+      music
       physical_computing
       web_design
       programming

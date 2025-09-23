@@ -8,7 +8,7 @@ import {Box} from '@mui/material';
 import classNames from 'classnames';
 import React, {FC} from 'react';
 
-import styles from '../../workshop.module.scss';
+import styles from './EmptyState.module.scss';
 
 export interface EmptyStateProps {
   imageProps: ImageProps;

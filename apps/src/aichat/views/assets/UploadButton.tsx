@@ -1,6 +1,5 @@
 import {Button, ButtonProps} from '@code-dot-org/component-library/button';
 import {ActionDropdown} from '@code-dot-org/component-library/dropdown';
-import classNames from 'classnames';
 import React, {ChangeEvent, useState} from 'react';
 
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
@@ -25,8 +24,6 @@ import {
   stagedFileUploadFinished,
 } from '../../redux';
 import {AssetSource, ChatAsset} from '../../types';
-
-import styles from './upload-button.module.scss';
 
 interface UploadButtonProps {
   isDisabled: boolean;
@@ -186,7 +183,7 @@ const UploadButton: React.FC<UploadButtonProps> = ({
       name="uploadDropdown"
       labelText={aichatI18n.upload()}
       triggerButtonProps={buttonProps}
-      className={classNames(styles.upload, styles.dropdown)}
+      menuVerticalPlacement="top"
       options={[
         {
           value: 'fromLibrary',

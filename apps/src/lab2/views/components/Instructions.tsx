@@ -1,8 +1,11 @@
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
-import React, {useCallback} from 'react';
+import React, {useCallback, useMemo} from 'react';
 import {useSelector} from 'react-redux';
 
-import {nextLevelId} from '@cdo/apps/code-studio/progressReduxSelectors';
+import {
+  getCurrentLevel,
+  nextLevelId,
+} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {
   isPredictAnswerLocked,
@@ -10,6 +13,7 @@ import {
   setPredictResponse,
 } from '@cdo/apps/lab2/redux/predictLevelRedux';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import InstructionsPanel from './InstructionsPanel';
 
@@ -26,8 +30,6 @@ interface InstructionsProps {
    * A callback when the user clicks on clickable text.
    */
   handleInstructionsTextClick?: (id: string) => void;
-  /** Whether the instructions panel should show lesson navigation buttons (Continue & Finish) */
-  manageNavigation?: boolean;
   /** Optional classname for the container */
   className?: string;
   /** Optional component to render at the bottom of the main instructions. */
@@ -49,23 +51,16 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
   layout,
   handleInstructionsTextClick,
   className,
-  manageNavigation = true,
   bottomComponent,
 }) => {
   const levelProperties = useAppSelector(state => state.lab.levelProperties);
   const hasNextLevel = useSelector(state => nextLevelId(state) !== undefined);
   const message = useAppSelector(state => state.lab.validationState.message);
   const messageIndex = useAppSelector(state => state.lab.validationState.index);
-  const passingValidation = useAppSelector(
-    state =>
-      !state.lab.validationState.hasConditions ||
-      state.lab.validationState.satisfied
-  );
   const predictSettings = useAppSelector(
     state => state.lab.levelProperties?.predictSettings
   );
   const predictResponse = useAppSelector(state => state.predictLevel.response);
-  const predictResponseSubmitted = useAppSelector(isPredictResponseSubmitted);
   const predictAnswerLocked = useAppSelector(isPredictAnswerLocked);
 
   const offerBrowserTts =
@@ -88,6 +83,37 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
 
   const {theme} = useTheme();
 
+  const hasSubmittedPredictResponse = useAppSelector(
+    isPredictResponseSubmitted
+  );
+  const hasConditions = useAppSelector(
+    state => state.lab.validationState.hasConditions
+  );
+  const validationSatisfied = useAppSelector(
+    state => state.lab.validationState.satisfied
+  );
+  const hasSubmitted = useAppSelector(
+    state => getCurrentLevel(state)?.status === LevelStatus.submitted
+  );
+  const canShowNextButton = useMemo(() => {
+    if (predictSettings?.isPredictLevel) {
+      return hasSubmittedPredictResponse;
+    } else if (levelProperties?.submittable && hasSubmitted) {
+      return true;
+    } else if (hasConditions) {
+      return validationSatisfied;
+    } else {
+      return true;
+    }
+  }, [
+    hasConditions,
+    predictSettings?.isPredictLevel,
+    hasSubmittedPredictResponse,
+    validationSatisfied,
+    levelProperties?.submittable,
+    hasSubmitted,
+  ]);
+
   // Don't render anything if we don't have any instructions.
   if (
     levelProperties === undefined ||
@@ -95,11 +121,6 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
   ) {
     return null;
   }
-
-  const canShowNextButton =
-    manageNavigation &&
-    passingValidation &&
-    (!predictSettings?.isPredictLevel || predictResponseSubmitted);
 
   return (
     <InstructionsPanel

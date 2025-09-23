@@ -1,3 +1,5 @@
+# Deprecated - remove after confirming coverage on new homepage: https://codedotorg.atlassian.net/browse/TEACH-2165
+@skip
 @no_mobile
 Feature: Using the teacher dashboard homepage (v1)
 

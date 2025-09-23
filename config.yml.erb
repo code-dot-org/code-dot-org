@@ -424,6 +424,9 @@ dashboard_sock:
 # single command.  This is preferred (and default) in development mode.
 dashboard_enable_pegasus: false
 
+# Session timeout in days. Controls both the Devise timeout and the Rails session store (Redis) TTL.
+dashboard_session_ttl_days: 40
+
 # Pegasus
 override_pegasus:
 pegasus_host:
@@ -680,3 +683,9 @@ aiproxy_api_key: !Secret
 contentful_space_id: "90t6bu6vlf76"
 contentful_api_key: !Secret
 contentful_hostname: cdn.contentful.com
+
+# CDO Contentful engine configs
+contentful_cs_for_all_access_token: !Secret
+contentful_cs_for_all_space: 27jkibac934d
+contentful_cs_for_all_namespace: master
+contentful_cs_for_all_api_url: preview.contentful.com

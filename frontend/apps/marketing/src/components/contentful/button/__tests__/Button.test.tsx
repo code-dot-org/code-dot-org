@@ -98,4 +98,20 @@ describe('Button', () => {
     );
     expect(container).toBeEmptyDOMElement();
   });
+
+  it('calls onClick handler when clicked', () => {
+    const handleClick = jest.fn();
+    render(
+      <Button
+        text="Button with onClick"
+        type="primary"
+        size="medium"
+        href="https://example.com"
+        onClick={handleClick}
+      />,
+    );
+    const button = screen.getByRole('link', {name: /button with onclick/i});
+    button.click();
+    expect(handleClick).toHaveBeenCalledTimes(1);
+  });
 });
