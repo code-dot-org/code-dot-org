@@ -831,11 +831,12 @@ Resources:
   # ---------------------------------------------
 <%=  component 'database'%>
 
+<% if cdn_enabled -%>
   # ---------------------------------------------
   # Codeprojects Resources
   # ---------------------------------------------
 <%= resource_component 'codeprojects_resources' %>
-
+<% end -%>
   # ---------------------------------------------
   # Custom Chef Configuration Secret
   #
