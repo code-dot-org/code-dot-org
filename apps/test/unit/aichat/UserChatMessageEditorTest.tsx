@@ -3,6 +3,7 @@ import userEvent from '@testing-library/user-event';
 import React from 'react';
 import '@testing-library/jest-dom';
 
+import {AiChatDisabledProvider} from '@cdo/apps/aichat/context/aiChatDisabledContext';
 import {AichatState} from '@cdo/apps/aichat/redux';
 import {
   AssetSource,
@@ -60,8 +61,12 @@ describe('UserChatMessageEditor', () => {
     };
   });
 
-  it('disables editor when disabled prop is true', async () => {
-    render(<UserChatMessageEditor {...baseProps} disabled />);
+  it('disables editor when disabled via context', async () => {
+    render(
+      <AiChatDisabledProvider chatDisabled>
+        <UserChatMessageEditor {...baseProps} />
+      </AiChatDisabledProvider>
+    );
 
     const textarea = screen.getByPlaceholderText(
       commonI18n.aiUserMessagePlaceholder()

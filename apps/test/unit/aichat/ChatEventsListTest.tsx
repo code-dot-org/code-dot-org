@@ -2,15 +2,13 @@ import {render, screen, waitFor} from '@testing-library/react';
 import React from 'react';
 
 import '@testing-library/jest-dom';
+import {AiChatDisabledProvider} from '@cdo/apps/aichat/context/aiChatDisabledContext';
 import aichatI18n from '@cdo/apps/aichat/locale';
 import {CompletedChatMessage} from '@cdo/apps/aichat/types';
 import ChatEventsList from '@cdo/apps/aichat/views/ChatEventsList';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {commonI18n} from '@cdo/apps/types/locale';
-import {
-  AiChatClientTypes,
-  AiInteractionStatus,
-} from '@cdo/generated-scripts/sharedConstants';
+import {AiInteractionStatus} from '@cdo/generated-scripts/sharedConstants';
 
 const mockWaitingText = 'Waiting...';
 
@@ -31,16 +29,14 @@ jest.mock('@cdo/apps/util/reduxHooks', () => ({
 }));
 
 describe('ChatEventsList', () => {
-  it('renders disabled state message for ai tutor client type when disabled', () => {
+  it('renders general disabled state message when disabled', () => {
     render(
-      <ChatEventsList
-        events={[]}
-        clientType={AiChatClientTypes.AI_TUTOR}
-        disabled={true}
-      />
+      <AiChatDisabledProvider chatDisabled>
+        <ChatEventsList events={[]} />
+      </AiChatDisabledProvider>
     );
 
-    expect(screen.getByText(aichatI18n.aiTutorDisabled())).toBeInTheDocument();
+    expect(screen.getByText(aichatI18n.aiChatDisabled())).toBeInTheDocument();
 
     // No chat messages or waiting animation should render
     expect(screen.queryByLabelText(commonI18n.aiChatMessageUser())).toBeNull();
@@ -48,16 +44,18 @@ describe('ChatEventsList', () => {
     expect(screen.queryByText(mockWaitingText)).not.toBeInTheDocument();
   });
 
-  it('renders general disabled state message for other client types when disabled', () => {
+  it('renders a custom disabled state message when provided', () => {
+    const customMessage = 'Ai chat is disabled for this student';
     render(
-      <ChatEventsList
-        events={[]}
-        clientType={AiChatClientTypes.AI_CHAT_LAB}
-        disabled={true}
-      />
+      <AiChatDisabledProvider chatDisabled chatDisabledMessage={customMessage}>
+        <ChatEventsList events={[]} />
+      </AiChatDisabledProvider>
     );
 
-    expect(screen.getByText(aichatI18n.aiChatDisabled())).toBeInTheDocument();
+    expect(screen.getByText(customMessage)).toBeInTheDocument();
+    expect(
+      screen.queryByText(aichatI18n.aiChatDisabled())
+    ).not.toBeInTheDocument();
 
     // No chat messages or waiting animation should render
     expect(screen.queryByLabelText(commonI18n.aiChatMessageUser())).toBeNull();
@@ -83,12 +81,7 @@ describe('ChatEventsList', () => {
       },
     ];
 
-    render(
-      <ChatEventsList
-        events={events}
-        clientType={AiChatClientTypes.AI_CHAT_LAB}
-      />
-    );
+    render(<ChatEventsList events={events} />);
 
     // Messages render with aria-labels from common strings
     expect(
@@ -110,24 +103,14 @@ describe('ChatEventsList', () => {
       },
     ];
 
-    const {rerender} = render(
-      <ChatEventsList
-        events={events}
-        clientType={AiChatClientTypes.AI_CHAT_LAB}
-      />
-    );
+    const {rerender} = render(<ChatEventsList events={events} />);
 
     // Initially, waiting animation should not be present
     expect(screen.queryByText(mockWaitingText)).not.toBeInTheDocument();
 
     // Simulate a pending message via mocked selector and re-render
     mockPending = true;
-    rerender(
-      <ChatEventsList
-        events={events}
-        clientType={AiChatClientTypes.AI_CHAT_LAB}
-      />
-    );
+    rerender(<ChatEventsList events={events} />);
 
     await waitFor(() => {
       expect(screen.getByText(mockWaitingText)).toBeInTheDocument();
