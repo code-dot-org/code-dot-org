@@ -641,11 +641,12 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     assert_response :bad_request
   end
 
-  test 'sync - should not sync when launching from wrong context' do
+  test 'sync - should redirect to homepage when context or nrps_url is missing' do
     user = create(:teacher, :with_lti_auth)
     sign_in user
-    LtiV1Controller.any_instance.expects(:render_sync_course_error).with('Attempting to sync a course or section from the wrong place.', :bad_request, 'wrong_context')
     get '/lti/v1/sync_course', params: {lti_integration_id: 'foo', deployment_id: 'bar', context_id: nil, rlid: 'qux', nrps_url: nil}
+    assert_response :redirect
+    assert_equal '/home', '/' + @response.redirect_url.split('/').last
   end
 
   test 'sync - should not sync and render sync course error when missing a param' do
