@@ -1,6 +1,8 @@
+@use '../../layout/variables.scss' as variables;
+
 .resourcePanel {
   display: flex;
-  background-color: var(--background-neutral-secondary);
+  background-color: var(--background-neutral-primary);
   height: 100%;
 }
 
@@ -13,28 +15,33 @@
     margin-top: 2.5rem;
     display: flex;
     flex-direction: column;
+    border-top: variables.$default-border;
   }
 
   // Doubling class name to increase specificity and override default button styles.
   .tabButton.tabButton {
-    height: 2rem;
-    width: 2rem;
+    height: 3.5rem;
+    width: 3.5rem;
     min-width: 2rem;
-    margin-left: 5px;
-    border: 1px solid var(--borders-neutral-primary);
-    border-right: none;
-    border-radius: 4px 0 0 4px;
+    border-bottom: variables.$default-border;
+    border-inline: none;
+    border-radius: 0;
+    background: var(--background-neutral-secondary);
 
     &.selected {
       background-color: var(--background-neutral-primary);
       position: relative;
       z-index: 2;
-      
+
+      i {
+        color: var(--background-brand-teal-primary);
+      }
+
       // Extend the background to cover the border between selected tab and resource panel.
       &::after {
         content: '';
         position: absolute;
-        right: -1px;
+        inset-inline-end: -1px;
         top: 0;
         height: 100%;
         width: 1px;
@@ -43,8 +50,16 @@
     }
 
     i {
-      color: var(--text-neutral-secondary);
-      font-size: 14px;
+      color: var(--text-neutral-quaternary);
+      font-size: 1.25rem;
+    }
+
+    &:hover {
+      background-color: var(--background-neutral-primary);
+
+      i {
+        color: var(--text-neutral-tertiary);
+      }
     }
   }
 
@@ -75,7 +90,7 @@
   flex-direction: column;
   flex: 1;
   min-width: 0;
-  border-left: 1px solid var(--borders-neutral-primary);
+  border-inline-start: variables.$default-border;
 }
 
 .panelContent {
