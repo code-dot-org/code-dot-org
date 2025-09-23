@@ -33,7 +33,7 @@
   .courseblock-span6.courseblock-wide-large
     = link_to script_url(Unit::TWENTY_HOUR_NAME) do
       .courseblock-span2.imgspan
-        %img{src: CDO.code_org_url('/images/fit-150x100/code20hr.jpg')}
+        %img{src: image_url('code20hr-150x100.jpg')}
       .courseblock-span4.heading
         %h3= t('upsell.20-hour.title')
         %h4= data_t_suffix('script.name', '20-hour', 'description_audience')
@@ -45,7 +45,7 @@
   .courseblock-span6.courseblock-wide-small
     = link_to script_url(Unit::TWENTY_HOUR_NAME) do
       .courseblock-span2.imgspan
-        %img{src: CDO.code_org_url('/images/fit-150x100/code20hr.jpg')}
+        %img{src: image_url('code20hr-150x100.jpg')}
       .courseblock-span4.heading
         %h3= t('upsell.20-hour.title')
         %h4= data_t_suffix('script.name', id, 'description_audience')
@@ -56,7 +56,7 @@
   .courseblock-span6.courseblock-wide-large
     = link_to url do
       .courseblock-span2.imgspan
-        %img{src: CDO.code_org_url('/images/fit-150x100/unplugged.png')}
+        %img{src: image_url('unplugged-150x100.png')}
       .courseblock-span4.heading
         %h3= t("upsell.#{id}.title")
         %h4= t("upsell.#{id}.audience")
@@ -67,7 +67,7 @@
   .courseblock-span6.courseblock-wide-small{style: "min-height: 120px;"}
     = link_to url do
       .courseblock-span2.imgspan
-        %img{src: CDO.code_org_url('/images/fit-150x100/unplugged.png')}
+        %img{src: image_url('unplugged-150x100.png')}
       .courseblock-span4.heading
         %h3= t("upsell.#{id}.title")
         %h4= t("upsell.#{id}.audience")
@@ -80,7 +80,7 @@
   .courseblock-span6.courseblock-wide-small{style: "min-height: 100px;"}
     = link_to url do
       .courseblock-span2.imgspan
-        %img{src: CDO.code_org_url("/shared/images/courses/fill-150x110/logo_tall_#{id}.jpg")}
+        %img{src: CDO.studio_url("/shared/images/courses/logo_tall_#{id}.jpg"), style: 'object-fit: cover; width: 150px; height: 110px;'}
       .courseblock-span4.heading
         %h3= title
         .smalltext= body
@@ -89,8 +89,8 @@
   .courseblock-span6.courseblock-wide-small
     = link_to script_url(id)  do
       .courseblock-span2.imgspan
-        - image = family_name.nil? ? "logo_tall_#{id}.jpg" : "logo_tall_#{family_name}.jpg"
-        %img{src: CDO.code_org_url("/shared/images/courses/fill-150x110/#{image}")}
+        - image = try(:family_name).nil? ? "logo_tall_#{id}.jpg" : "logo_tall_#{family_name}.jpg"
+        %img{src: CDO.studio_url("/shared/images/courses/#{image}"), style: 'object-fit: cover; width: 150px; height: 110px;'}
       .courseblock-span4.heading
         %h3= data_t_suffix('script.name', id, 'title')
         %h4= data_t_suffix('script.name', id, 'description_audience')
@@ -111,8 +111,8 @@
   .courseblock-span6.courseblock-wide-small
     = link_to script_url(id)  do
       .courseblock-span2.imgspan
-        - image = family_name.nil? ? "logo_tall_#{id}.jpg" : "logo_tall_#{family_name}.jpg"
-        %img{src: CDO.code_org_url("/shared/images/courses/fill-150x110/#{image}")}
+        - image = try(:family_name).nil? ? "logo_tall_#{id}.jpg" : "logo_tall_#{family_name}.jpg"
+        %img{src: CDO.studio_url("/shared/images/courses/#{image}"), style: 'object-fit: cover; width: 150px; height: 110px;'}
       .courseblock-span4.heading
         %h3= data_t_suffix('script.name', id, 'title')
         .smalltext= data_t_suffix('script.name', id, 'description_short')

@@ -282,21 +282,6 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
     }
   }, [dialogControl, resetProject]);
 
-  const onClear = useCallback(() => {
-    dispatch(clearChatMessages());
-    dispatch(
-      addChatEvent({
-        timestamp: Date.now(),
-        descriptionKey: 'CLEAR_CHAT',
-      })
-    );
-    dispatch(
-      sendAnalytics(EVENTS.CHAT_ACTION, {
-        action: 'Clear chat history',
-      })
-    );
-  }, [dispatch]);
-
   useLifecycleNotifier(LifecycleEvent.LevelLoadStarted, () => {
     dispatch(clearHasSetStartingCustomizations());
   });
@@ -433,7 +418,6 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
                 <ChatWorkspace
                   modelParameters={modelParameters}
                   clientType={AiChatClientTypes.AI_CHAT_LAB}
-                  onClear={onClear}
                   levelName={levelName}
                   channelId={channelId}
                   hasStarterAssets={

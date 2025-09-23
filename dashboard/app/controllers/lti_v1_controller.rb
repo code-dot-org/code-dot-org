@@ -49,7 +49,7 @@ class LtiV1Controller < ApplicationController
     begin
       write_cache(state_and_nonce[:state], state_and_nonce, 15.minutes)
     rescue => exception
-      Clients::LtiLogger.log_event('Error writing state and nonce to cache', {lti_integration_id: lti_integration[:id], exception: exception})
+      LtiLogger.log_event('Error writing state and nonce to cache', {lti_integration_id: lti_integration[:id], exception: exception})
       return render status: :internal_server_error
     end
 
@@ -101,7 +101,7 @@ class LtiV1Controller < ApplicationController
     begin
       cached_state_and_nonce = read_cache params[:state]
     rescue => exception
-      Clients::LtiLogger.log_event('Error reading state and nonce from cache', {exception: exception})
+      LtiLogger.log_event('Error reading state and nonce from cache', {exception: exception})
       return render status: :internal_server_error
     end
     if cached_state_and_nonce.nil? || (params[:state] != cached_state_and_nonce[:state]) || (decoded_jwt_no_auth[:nonce] != cached_state_and_nonce[:nonce])
@@ -194,12 +194,6 @@ class LtiV1Controller < ApplicationController
           metadata: metadata,
         )
 
-        # Add user's lti_user_identity to deployment if it doesn't exist
-        lti_user_identity = Queries::Lti.lti_user_identity(user, integration)
-        unless deployment.lti_user_identities.include?(lti_user_identity)
-          deployment.lti_user_identities << lti_user_identity
-        end
-
         # If this is the user's first login, send them into the account linking flow
         unless user.lms_landing_opted_out
           Services::Lti.initialize_lms_landing_session(session, integration[:platform_name], 'continue', user.user_type)
@@ -225,6 +219,8 @@ class LtiV1Controller < ApplicationController
         email_address = Services::Lti.get_claim(decoded_jwt, :email)
         Services::Lti.initialize_lms_landing_session(session, integration[:platform_name], 'new', user.user_type)
         PartialRegistration.persist_attributes(session, user)
+        # Store the deployment ID in the session, so we can check if it's a restricted deployment later
+        session[:lti_deployment_id] = deployment.id
         publish_linking_page_visit(user, integration[:platform_name])
         render 'lti/v1/account_linking/landing', locals: {email: email_address} and return
       end
@@ -251,7 +247,7 @@ class LtiV1Controller < ApplicationController
         details: message,
       }
     )
-    Clients::LtiLogger.log_event(
+    LtiLogger.log_event(
       message,
       {
         reason: reason,
@@ -324,7 +320,7 @@ class LtiV1Controller < ApplicationController
       nrps_url = params[:nrps_url]
     end
 
-    lti_advantage_client = Clients::LtiAdvantageClient.new(lti_integration.client_id, lti_integration.issuer)
+    lti_advantage_client = LtiAdvantageClient.new(lti_integration.client_id, lti_integration.issuer)
     begin
       nrps_response = lti_advantage_client.get_context_membership(nrps_url, resource_link_id)
     rescue
@@ -505,7 +501,7 @@ class LtiV1Controller < ApplicationController
   end
 
   private def log_unauthorized(event, attributes = {})
-    Clients::LtiLogger.log_event(event, attributes)
+    LtiLogger.log_event(event, attributes)
     unauthorized_status
   end
 

@@ -153,6 +153,7 @@ Dashboard::Application.routes.draw do
       resources :programming_classes, param: 'programming_class_key', constraints: {programming_class_key: /#{CurriculumHelper::KEY_CHAR_RE}+/o}, path: '/classes' do
         member do
           get :show, to: 'programming_classes#show_by_keys'
+          get :get_serialized, to: 'programming_classes#get_serialized'
         end
       end
     end
@@ -1288,7 +1289,6 @@ Dashboard::Application.routes.draw do
 
     get '/get_token', to: 'authenticity_token#get_token'
 
-    post '/openai/chat_completion', to: 'openai_chat#chat_completion'
     post '/openai/evaluate', to: 'openai_evaluate#evaluate'
     post '/openai/evaluate_section', to: 'openai_evaluate#evaluate_section'
 
@@ -1301,10 +1301,6 @@ Dashboard::Application.routes.draw do
 
     get '/aichat/user_has_access', to: 'aichat#user_has_access'
     post '/aichat/find_toxicity', to: 'aichat#find_toxicity'
-
-    resources :ai_tutor_interactions, only: [:create, :index] do
-      resources :feedbacks, controller: 'ai_tutor_interaction_feedbacks', only: [:create]
-    end
 
     resources :ai_interaction_feedback, only: [:create]
 

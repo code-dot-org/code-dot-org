@@ -37,6 +37,8 @@ describe('BarChartGroup', () => {
         {...props}
         xAxisLabel="YEARS TAUGHT"
         yAxisLabel="RESPONSES"
+        chartWidth={100}
+        chartHeight={100}
       />
     );
 

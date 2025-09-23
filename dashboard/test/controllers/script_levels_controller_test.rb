@@ -735,52 +735,81 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "show: redirect to latest stable script version in family for logged out user if one exists" do
-    courseg_2017 = create(:script, name: 'courseg-2017', family_name: 'courseg')
-    create(:single_unit_course, unit: courseg_2017, family_name: 'courseg', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
-    courseg_2018 = create(:script, name: 'courseg-2018', family_name: 'courseg')
-    create(:single_unit_course, unit: courseg_2018, family_name: 'courseg', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
-    courseg_2019 = create(:script, name: 'courseg-2019', family_name: 'courseg')
-    create(:single_unit_course, unit: courseg_2019, family_name: 'courseg', version_year: '2019', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta)
+    courseg_2017 = create(:single_unit_course, family_name: 'courseg', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    courseg_2018 = create(:single_unit_course, family_name: 'courseg', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    create(:single_unit_course, family_name: 'courseg', version_year: '2019', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta)
 
-    courseg_2017_lesson_group_1 = create(:lesson_group, script: courseg_2017)
-    courseg_2017_lesson_1 = create(:lesson, script: courseg_2017, lesson_group: courseg_2017_lesson_group_1, name: 'Course G Lesson 1', absolute_position: 1, relative_position: '1')
-    courseg_2017_lesson_1_script_level = create(:script_level, script: courseg_2017, lesson: courseg_2017_lesson_1, position: 1)
+    courseg_2017_lesson_group_1 = create(:lesson_group, script: courseg_2017.first_unit)
+    courseg_2017_lesson_1 = create(:lesson, script: courseg_2017.first_unit, lesson_group: courseg_2017_lesson_group_1, name: 'Course G Lesson 1', absolute_position: 1, relative_position: '1')
+    courseg_2017_lesson_1_script_level = create(:script_level, script: courseg_2017.first_unit, lesson: courseg_2017_lesson_1, position: 1)
 
     get :show, params: {
-      course_course_name: courseg_2017.original_unit_group.name,
+      course_course_name: courseg_2017.name,
       unit_position: 1,
       lesson_position: courseg_2017_lesson_1.relative_position,
       id: courseg_2017_lesson_1_script_level.position,
     }
 
-    assert_redirected_to '/s/courseg-2018?redirect_warning=true'
+    assert_redirected_to "/courses/#{courseg_2018.name}/units/1?redirect_warning=true"
   end
 
   test "show: redirect to latest assigned script version in family for student if one exists" do
     sign_in @student
 
-    courseg_2017 = create(:script, name: 'courseg-2017', family_name: 'courseg')
-    create(:single_unit_course, unit: courseg_2017, family_name: 'courseg', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
-    courseg_2018 = create(:script, name: 'courseg-2018', family_name: 'courseg')
-    create(:single_unit_course, unit: courseg_2018, family_name: 'courseg', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
-    courseg_2019 = create(:script, name: 'courseg-2019', family_name: 'courseg')
-    create(:single_unit_course, unit: courseg_2019, family_name: 'courseg', version_year: '2019', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta)
+    courseg_2017 = create(:single_unit_course, family_name: 'courseg', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    courseg_2018 = create(:single_unit_course, family_name: 'courseg', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    create(:single_unit_course, family_name: 'courseg', version_year: '2019', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta)
 
-    courseg_2017_lesson_group_1 = create(:lesson_group, script: courseg_2017)
-    courseg_2017_lesson_1 = create(:lesson, script: courseg_2017, lesson_group: courseg_2017_lesson_group_1, name: 'Course G Lesson 1', absolute_position: 1, relative_position: '1')
-    courseg_2017_lesson_1_script_level = create(:script_level, script: courseg_2017, lesson: courseg_2017_lesson_1, position: 1)
+    courseg_2017_lesson_group_1 = create(:lesson_group, script: courseg_2017.first_unit)
+    courseg_2017_lesson_1 = create(:lesson, script: courseg_2017.first_unit, lesson_group: courseg_2017_lesson_group_1, name: 'Course G Lesson 1', absolute_position: 1, relative_position: '1')
+    courseg_2017_lesson_1_script_level = create(:script_level, script: courseg_2017.first_unit, lesson: courseg_2017_lesson_1, position: 1)
 
     get :show, params: {
-      course_course_name: courseg_2017.original_unit_group.name,
+      course_course_name: courseg_2017.name,
       unit_position: 1,
       lesson_position: courseg_2017_lesson_1.relative_position,
       id: courseg_2017_lesson_1_script_level.position,
     }
-    assert_redirected_to '/s/courseg-2018?redirect_warning=true'
+    assert_redirected_to "/courses/#{courseg_2018.name}/units/1?redirect_warning=true"
 
     # Does not redirect if no_redirect query param is provided.
     get :show, params: {
-      course_course_name: courseg_2017.original_unit_group.name,
+      course_course_name: courseg_2017.name,
+      unit_position: 1,
+      lesson_position: courseg_2017_lesson_1.relative_position,
+      id: courseg_2017_lesson_1_script_level.position,
+      no_redirect: "true"
+    }
+    assert_response :ok
+  end
+
+  test "show: redirect to latest assigned modular script version in family for student if one exists" do
+    sign_in @student
+
+    courseg1_2017 = create(:unit)
+    courseg1_2018 = create(:unit)
+
+    courseg_2017_lesson_group_1 = create(:lesson_group, script: courseg1_2017)
+    courseg_2017_lesson_1 = create(:lesson, script: courseg1_2017, lesson_group: courseg_2017_lesson_group_1, name: 'Course G Lesson 1', absolute_position: 1, relative_position: '1')
+    courseg_2017_lesson_1_script_level = create(:script_level, script: courseg1_2017, lesson: courseg_2017_lesson_1, position: 1)
+
+    create(:single_unit_course, unit: courseg1_2017, family_name: 'courseg', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    create(:single_unit_course, unit: courseg1_2018, family_name: 'courseg', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+
+    modular_courseg_2017 = create(:single_unit_course, unit: courseg1_2017, family_name: 'modular-courseg', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    modular_courseg_2018 = create(:single_unit_course, unit: courseg1_2018, family_name: 'modular-courseg', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+
+    get :show, params: {
+      course_course_name: modular_courseg_2017.name,
+      unit_position: 1,
+      lesson_position: courseg_2017_lesson_1.relative_position,
+      id: courseg_2017_lesson_1_script_level.position,
+    }
+    assert_redirected_to "/courses/#{modular_courseg_2018.name}/units/1?redirect_warning=true"
+
+    # Does not redirect if no_redirect query param is provided.
+    get :show, params: {
+      course_course_name: modular_courseg_2017.name,
       unit_position: 1,
       lesson_position: courseg_2017_lesson_1.relative_position,
       id: courseg_2017_lesson_1_script_level.position,
@@ -792,28 +821,25 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   test "show: redirect to latest assigned script version in family for participant if one exists" do
     sign_in @student
 
-    pl_courseg_2017 = create(:script, name: 'pl-courseg-2017', family_name: 'pl-courseg')
-    create(:single_unit_course, unit: pl_courseg_2017, family_name: 'pl-courseg', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
-    pl_courseg_2018 = create(:script,  name: 'pl-courseg-2018', family_name: 'pl-courseg')
-    create(:single_unit_course, unit: pl_courseg_2018, family_name: 'pl-courseg', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
-    pl_courseg_2019 = create(:script, name: 'pl-courseg-2019', family_name: 'pl-courseg')
-    create(:single_unit_course, unit: pl_courseg_2019, family_name: 'pl-courseg', version_year: '2019', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta)
+    pl_courseg_2017 = create(:single_unit_course, family_name: 'pl-courseg', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    pl_courseg_2018 = create(:single_unit_course, family_name: 'pl-courseg', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    create(:single_unit_course, family_name: 'pl-courseg', version_year: '2019', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta).first_unit
 
-    pl_courseg_2017_lesson_group_1 = create(:lesson_group, script: pl_courseg_2017)
-    pl_courseg_2017_lesson_1 = create(:lesson, script: pl_courseg_2017, lesson_group: pl_courseg_2017_lesson_group_1, name: 'PL Course G Lesson 1', absolute_position: 1, relative_position: '1')
-    pl_courseg_2017_lesson_1_script_level = create(:script_level, script: pl_courseg_2017, lesson: pl_courseg_2017_lesson_1, position: 1)
+    pl_courseg_2017_lesson_group_1 = create(:lesson_group, script: pl_courseg_2017.first_unit)
+    pl_courseg_2017_lesson_1 = create(:lesson, script: pl_courseg_2017.first_unit, lesson_group: pl_courseg_2017_lesson_group_1, name: 'PL Course G Lesson 1', absolute_position: 1, relative_position: '1')
+    pl_courseg_2017_lesson_1_script_level = create(:script_level, script: pl_courseg_2017.first_unit, lesson: pl_courseg_2017_lesson_1, position: 1)
 
     get :show, params: {
-      course_course_name: pl_courseg_2017.original_unit_group.name,
+      course_course_name: pl_courseg_2017.name,
       unit_position: 1,
       lesson_position: pl_courseg_2017_lesson_1.relative_position,
       id: pl_courseg_2017_lesson_1_script_level.position,
     }
-    assert_redirected_to '/s/pl-courseg-2018?redirect_warning=true'
+    assert_redirected_to "/courses/#{pl_courseg_2018.name}/units/1?redirect_warning=true"
 
     # Does not redirect if no_redirect query param is provided.
     get :show, params: {
-      course_course_name: pl_courseg_2017.original_unit_group.name,
+      course_course_name: pl_courseg_2017.name,
       unit_position: 1,
       lesson_position: pl_courseg_2017_lesson_1.relative_position,
       id: pl_courseg_2017_lesson_1_script_level.position,
@@ -2083,31 +2109,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       id: '2'
     }
     assert_redirected_to "/courses/#{new_script.original_unit_group.name}/units/1/lessons/1/levels/1"
-  end
-
-  test 'should redirect to 2017 version in script family' do
-    cats1 = create(:script, :with_levels, name: 'cats1', family_name: 'cats', version_year: '2017')
-    cats1_course = create(:single_unit_course, unit: cats1, name: 'cats1', family_name: 'cats', version_year: '2017')
-    CourseOffering.add_course_offering(cats1_course)
-    Unit.stubs(:family_names).returns(['cats'])
-
-    assert_raises ActiveRecord::RecordNotFound do
-      get :show, params: {script_id: 'cats', lesson_position: 1, id: 1}
-    end
-
-    cats1_course.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
-    get :show, params: {script_id: 'cats', lesson_position: 1, id: 1}
-    assert_redirected_to "/s/cats1/lessons/1/levels/1"
-
-    cats2 = create(:script, :with_levels, name: 'cats2', family_name: 'cats', version_year: '2018')
-    cats2_course = create(:single_unit_course, unit: cats2, family_name: 'cats', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
-    CourseOffering.add_course_offering(cats2_course)
-    get :show, params: {script_id: 'cats', lesson_position: 1, id: 1}
-    assert_redirected_to "/s/cats2/lessons/1/levels/1"
-
-    # next redirects to latest version in a script family
-    get :next, params: {script_id: 'cats'}
-    assert_redirected_to "/s/cats2/next"
   end
 
   test "should indicate challenge levels as challenge levels" do

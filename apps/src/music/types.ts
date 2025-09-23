@@ -1,6 +1,6 @@
 import * as GoogleBlockly from 'blockly/core';
 
-import {ExemplarSettings, ProjectLevelData} from '../lab2/types';
+import {ExemplarSettings, LabConfig, ProjectLevelData} from '../lab2/types';
 import {ValueOf} from '../types/utils';
 
 import {ToolboxData} from './blockly/toolbox/types';
@@ -22,6 +22,8 @@ export interface MusicLevelData extends ProjectLevelData {
   allowChangeStartingPlayheadPosition?: boolean;
   toolboxDefinition?: GoogleBlockly.utils.toolbox.ToolboxInfo;
   validationTimeout?: number;
+  aiCodeGenerate?: boolean;
+  aiCodeGenerateAdlib?: string;
 }
 
 export type ExemplarValidationMode = 'default' | 'type';
@@ -41,3 +43,11 @@ export type SoundLoadCallbacks = {
   onLoadFinished?: LoadFinishedCallback;
   updateLoadProgress?: UpdateLoadProgressCallback;
 };
+
+export interface MusicLabConfig extends LabConfig {
+  music: {
+    blockMode: ValueOf<typeof BlockMode>;
+    packId?: string;
+    library?: string;
+  };
+}

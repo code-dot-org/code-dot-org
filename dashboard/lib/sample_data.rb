@@ -1,6 +1,6 @@
-class SampleData
-  include FactoryBot::Syntax::Methods
+include FactoryBot::Syntax::Methods
 
+class SampleData
   SAMPLE_TEACHER_EMAIL = 'testteacher@code.org'.freeze
   SAMPLE_TEACHER_PASSWORD = '00secret'.freeze
   SAMPLE_TEACHER_NAME = 'TestTeacher Codeberg'.freeze

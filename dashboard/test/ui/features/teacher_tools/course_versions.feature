@@ -90,16 +90,6 @@ Scenario: Versions warning announcement on script overview page
   And element "#uitest-version-selector" is visible
   Then element ".announcement-notification:contains(newer version)" is not visible
 
-  # Generate progress in course 2
-  When I am on "http://studio.code.org/courses/course2/units/1/lessons/1/levels/1"
-  And I click selector ".next-lesson" once I see it
-  And I wait until current URL contains "/courses/course2/units/1/lessons/1/levels/2"
-
-  When I am on "http://studio.code.org/courses/course1/units/1"
-  And I wait until element "#script-title" is visible
-  And element "#uitest-version-selector" is not visible
-  Then element ".announcement-notification:contains(newer version)" is not visible
-
 @as_student
 @no_mobile
 Scenario: Switch versions using dropdown on script overview page

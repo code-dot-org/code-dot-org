@@ -65,6 +65,7 @@ const CODE_STUDIO_ENTRIES = {
   'gates/logged_out': './src/sites/studio/pages/gates/logged_out.js',
   'gates/teacher_account_required': './src/sites/studio/pages/gates/teacher_account_required.js',
   'essential': './src/sites/studio/pages/essential.js',
+  'errors/deprecated_course': './src/sites/studio/pages/errors/deprecated_course.js',
   'home/_homepage': './src/sites/studio/pages/home/_homepage.js',
   'layouts/_parent_email_banner': './src/sites/studio/pages/layouts/_parent_email_banner.js',
   'layouts/_race_interstitial': './src/sites/studio/pages/layouts/_race_interstitial.js',
@@ -115,6 +116,8 @@ const CODE_STUDIO_ENTRIES = {
   'sections/show': './src/sites/studio/pages/sections/show.js',
   'shared/_school_info': './src/sites/studio/pages/shared/_school_info.js',
   'teacher_dashboard/show': './src/sites/studio/pages/teacher_dashboard/show.js',
+  'teacher_dashboard/parent_letter': './src/sites/studio/pages/teacher_dashboard/parent_letter.js',
+  'teacher_feedbacks/index': './src/sites/studio/pages/teacher_feedbacks/index.js',
   'vocabularies/edit': './src/sites/studio/pages/vocabularies/edit.js',
   'weblab_host/network_check': './src/sites/studio/pages/weblab_host/network_check.js',
 };

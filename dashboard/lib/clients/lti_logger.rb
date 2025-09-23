@@ -1,4 +1,4 @@
-class Clients::LtiLogger
+class LtiLogger
   NAMESPACE = 'LTI'.freeze
 
   def self.log_event(event, attributes = {})

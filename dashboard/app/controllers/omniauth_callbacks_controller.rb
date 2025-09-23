@@ -240,23 +240,26 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     session[:sign_up_type] = AuthenticationOption::CLEVER
 
     auth_hash = inject_clever_data(auth_hash())
+    # If the user's creds match an existing Clever account, they should have been signed
+    # in already. If not, check for a non-Clever account with a matching email. If it exists,
+    # display an interim page prompting the user to either log in to that account or create a new one
+    # with a different email.
+    email = auth_hash.info&.email
+    if email.present?
+      email_already_exists = User.find_by_email_or_hashed_email(email).present?
+      return redirect_to users_existing_account_path({provider: auth_hash.provider, email: email}) if email_already_exists
+    end
+
     params = auth_params.presence || {}
     params[:user_type] = cookies['sign_up_user_type'] unless params[:user_type]
-    user = User.from_omniauth(auth_hash, params, request)
-    prepare_locale_cookie user
+    user = User.new.tap do |u|
+      User.initialize_new_oauth_user(u, auth_hash, params)
+      u.oauth_token = auth_hash.credentials&.token
+      u.oauth_token_expiration = auth_hash.credentials&.expires_at
+      u.oauth_refresh_token = auth_hash.credentials&.refresh_token
+      prepare_locale_cookie u
+    end
 
-    # if the registration credentials identify us as an existing user, simply
-    # sign in as that user.
-    return sign_in_user user if user.persisted?
-
-    # if a user account with the same email (that could not be authenticated
-    # with the given registration credentals) exists, display an interim page
-    # prompting the user to either log in to that account or create a new one
-    # with a manually-provided email.
-    existing_account = User.find_by_email_or_hashed_email(user.email).present?
-    return redirect_to users_existing_account_path({provider: auth_hash.provider, email: user.email}) if existing_account
-
-    # otherwise, this is a new registration
     register_new_user(user, AuthenticationOption::CLEVER)
   end
 
@@ -297,7 +300,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   private def register_new_user(user, provider)
     # Disallow sign up with email addresses from disallowed domains
     domain = user.email&.split('@', 2)&.last
-    if Policies::Devise::EmailDomains::DISALLOWED_DOMAINS.include?(domain)
+    if Policies::Devise::EmailDomains.disallowed_login?(domain: domain, provider: provider)
       flash.alert = I18n.t('devise.registrations.disallowed_domain', domain: domain)
       return redirect_to user_session_path
     end

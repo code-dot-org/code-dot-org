@@ -6,17 +6,18 @@ module Marketing
       CONTENTFUL_SOURCE_NAME = 'contentful'
       CACHE_EXPIRATION = 1.hour
 
+      def initialize(contentful_client = Marketing::ContentfulClient.instance)
+        @contentful_client = contentful_client
+      end
+
       def get(user_id:, locale:)
         contentful_entries = cached_contentful_entries(locale.to_s)
-        contentful_result = contentful_entries.filter_map do |notification|
-          Services::ContentfulNotificationFormatter.call(notification)
-        end
 
-        contentful_ids = contentful_result.pluck(:external_id)
+        contentful_ids = contentful_entries.pluck(:external_id)
 
         rails_external_notifications = ExternalNotification.where(external_id: contentful_ids, user_id: user_id)
 
-        contentful_result.filter_map do |notification|
+        contentful_entries.filter_map do |notification|
           rails_notification = rails_external_notifications.find {|n| n.external_id == notification[:external_id]}
 
           next nil if rails_notification&.is_dismissed
@@ -31,7 +32,10 @@ module Marketing
 
       private def cached_contentful_entries(locale)
         CDO.shared_cache.fetch("contentful-#{NOTIFICATION_CONTENTFUL_CONTENT_TYPE}:#{locale}", expires_in: CACHE_EXPIRATION) do
-          Marketing::ContentfulClient.entries(locale, NOTIFICATION_CONTENTFUL_CONTENT_TYPE)
+          contentful_entries = @contentful_client.entries(locale, NOTIFICATION_CONTENTFUL_CONTENT_TYPE)
+          contentful_entries.filter_map do |notification|
+            Services::ContentfulNotificationFormatter.call(notification)
+          end
         end
       end
     end

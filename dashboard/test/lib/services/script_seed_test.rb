@@ -1157,21 +1157,6 @@ module Services
       assert_equal 'Validation failed: Module type is not included in the list', e.message
     end
 
-    test 'published state set to pilot when pilot_experiment is present' do
-      unit = create(:script)
-      assert_nil unit.pilot_experiment
-      assert_equal Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development, unit.get_published_state
-
-      json = ScriptSeed.serialize_seeding_json(unit)
-      unit_data = JSON.parse(json)
-      unit_data['script']['properties']['pilot_experiment'] = 'my-experiment'
-
-      ScriptSeed.seed_from_json(unit_data.to_json)
-      unit.reload
-      assert_equal 'my-experiment', unit.pilot_experiment
-      assert_equal 'pilot', unit.get_published_state
-    end
-
     def get_script_and_json_with_change_and_rollback(script, &db_write_block)
       script_with_change = json = nil
       Unit.transaction do

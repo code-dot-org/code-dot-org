@@ -72,6 +72,19 @@ class UnitGroupTest < ActiveSupport::TestCase
     end
   end
 
+  test 'should raise error if plc course is being launched' do
+    unit_group = create(:unit_group, family_name: 'plc')
+    unit_group.plc_course = Plc::Course.new(unit_group: unit_group)
+    unit_group.save!
+
+    error = assert_raises do
+      unit_group.published_state = 'stable'
+      unit_group.save!
+    end
+
+    assert_includes error.message, 'Validation failed: Published state can never be pilot, preview or stable for a plc course.'
+  end
+
   test "should serialize to json" do
     unit_group = create(:unit_group, name: 'my-unit-group', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, instruction_type: Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.teacher_led)
     create(:unit_group_unit, unit_group: unit_group, position: 1, script: create(:script, name: "unit1", published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable))
@@ -110,9 +123,9 @@ class UnitGroupTest < ActiveSupport::TestCase
 
   test "can seed unit group from hash" do
     unit_group = create(:unit_group, name: 'my-unit-group', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, instruction_type: Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.self_paced, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator)
-    create(:unit_group_unit, unit_group: unit_group, position: 1, script: create(:script, name: "unit1", published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable))
-    create(:unit_group_unit, unit_group: unit_group, position: 2, script: create(:script, name: "unit2", published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable))
-    create(:unit_group_unit, unit_group: unit_group, position: 3, script: create(:script, name: "unit3", published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable))
+    create(:unit_group_unit, unit_group: unit_group, position: 1, script: create(:script, name: "unit1"))
+    create(:unit_group_unit, unit_group: unit_group, position: 2, script: create(:script, name: "unit2"))
+    create(:unit_group_unit, unit_group: unit_group, position: 3, script: create(:script, name: "unit3"))
 
     serialization = unit_group.serialize
     unit_group.original_units.each {|u| u.update!(original_unit_group: nil)}
@@ -404,88 +417,6 @@ class UnitGroupTest < ActiveSupport::TestCase
       assert_equal unit_group1, unit1.original_unit_group
     end
 
-    test "set pilot experiment to nil for new UnitGroupUnits" do
-      unit_group = create(:unit_group)
-
-      unit1 = create(:script, name: 'unit1', published_state: 'pilot', pilot_experiment: 'unit-going-to-unit-group-pilot')
-
-      unit_group.update_scripts(['unit1'])
-
-      unit1.reload
-      assert_nil unit1.published_state
-      assert_nil unit1.pilot_experiment
-    end
-
-    test "set published state to nil for new UnitGroupUnits" do
-      unit_group = create(:unit_group)
-
-      unit1 = create(:script, name: 'unit1')
-      unit2 = create(:script, name: 'unit2')
-
-      unit_group.update_scripts(['unit1'])
-
-      unit1.reload
-      unit2.reload
-      assert_nil unit1.published_state
-
-      unit1.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview)
-      unit2.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview)
-
-      unit_group.update_scripts(['unit1', 'unit2'])
-
-      unit1.reload
-      unit2.reload
-      assert_equal Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview, unit1.published_state
-      assert_nil unit2.published_state
-    end
-
-    test "set instructor and participant audience to nil for new UnitGroupUnits" do
-      unit_group = create(:unit_group)
-
-      unit1 = create(:script, name: 'unit1')
-      unit2 = create(:script, name: 'unit2')
-
-      unit_group.update_scripts(['unit1'])
-
-      unit1.reload
-      unit2.reload
-      assert_nil unit1.instructor_audience
-      assert_nil unit1.participant_audience
-
-      unit2.update!(instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
-
-      unit_group.update_scripts(['unit1', 'unit2'])
-
-      unit1.reload
-      unit2.reload
-      assert_nil unit1.instructor_audience
-      assert_nil unit1.participant_audience
-      assert_nil unit2.instructor_audience
-      assert_nil unit2.participant_audience
-    end
-
-    test "set instruction type to nil for new UnitGroupUnits" do
-      unit_group = create(:unit_group)
-
-      unit1 = create(:script, name: 'unit1')
-      unit2 = create(:script, name: 'unit2')
-
-      unit_group.update_scripts(['unit1'])
-
-      unit1.reload
-      unit2.reload
-      assert_nil unit1.instruction_type
-
-      unit2.update!(instruction_type: Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.teacher_led)
-
-      unit_group.update_scripts(['unit1', 'unit2'])
-
-      unit1.reload
-      unit2.reload
-      assert_nil unit1.instruction_type
-      assert_nil unit2.instruction_type
-    end
-
     test "cannot remove UnitGroupUnits from their original course that cannot change course version" do
       course_version = create(:course_version)
       unit_group = create(:unit_group, course_version: course_version)
@@ -518,24 +449,11 @@ class UnitGroupTest < ActiveSupport::TestCase
         instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher,
         participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student
       )
-      unit1 = create(
-        :script,
-        name: 'unit1',
-        published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development,
-        instruction_type: Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.teacher_led,
-        instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher,
-        participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
-      )
+      unit1 = create(:script, name: 'unit1')
       create(:script, name: 'unit2')
 
       unit_group.update_scripts(['unit1', 'unit2'])
-
-      unit1.reload
-
-      assert_nil unit1.published_state
-      assert_nil unit1.instruction_type
-      assert_nil unit1.instructor_audience
-      assert_nil unit1.participant_audience
+      assert_equal 2, unit_group.default_unit_group_units.length
 
       unit_group.update_scripts(['unit2'])
 
@@ -545,10 +463,7 @@ class UnitGroupTest < ActiveSupport::TestCase
       assert_equal 1, unit_group.default_unit_group_units.length
       assert_equal 1, unit_group.default_unit_group_units[0].position
       assert_equal 'unit2', unit_group.default_unit_group_units[0].script.name
-      assert_equal unit1.published_state, Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development
-      assert_equal unit1.instruction_type, Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
-      assert_equal unit1.instructor_audience, Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher
-      assert_equal unit1.participant_audience, Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student
+      assert_empty unit1.unit_groups
     end
 
     test "remove UnitGroupUnits from original unit group" do
@@ -606,89 +521,6 @@ class UnitGroupTest < ActiveSupport::TestCase
 
       new_unit_group.update_scripts([])
       assert_equal 0, new_unit_group.default_unit_group_units.length
-    end
-
-    test "removed units have their published state instruction type participant audience and instructor audience reset" do
-      unit_group = create(:unit_group)
-      unit1 = create(:script, name: 'unit1')
-      unit2 = create(:script, name: 'unit2')
-
-      unit_group.update_scripts(['unit1', 'unit2'])
-
-      unit_group.reload
-      unit1.reload
-      unit2.reload
-
-      assert_nil unit1.published_state
-      assert_nil unit1.instruction_type
-      assert_nil unit1.instructor_audience
-      assert_nil unit1.participant_audience
-
-      assert_nil unit2.published_state
-      assert_nil unit2.instruction_type
-      assert_nil unit2.instructor_audience
-      assert_nil unit2.participant_audience
-
-      unit_group.update_scripts(['unit2'])
-
-      unit_group.reload
-      unit1.reload
-      unit2.reload
-
-      assert_equal unit_group.published_state, unit1.published_state
-      refute_nil unit1.published_state
-      assert_equal unit_group.instruction_type, unit1.instruction_type
-      refute_nil unit1.instruction_type
-      assert_equal unit_group.instructor_audience, unit1.instructor_audience
-      refute_nil unit1.instructor_audience
-      assert_equal unit_group.participant_audience, unit1.participant_audience
-      refute_nil unit1.participant_audience
-
-      assert_nil unit2.published_state
-      assert_nil unit2.instruction_type
-      assert_nil unit2.instructor_audience
-      assert_nil unit2.participant_audience
-    end
-
-    test "units with published state set independent of the unit group maintain that published state when removed" do
-      unit_group = create(:unit_group)
-      unit1 = create(:script, name: 'unit1')
-      unit2 = create(:script, name: 'unit2')
-
-      unit_group.update_scripts(['unit1', 'unit2'])
-
-      unit_group.reload
-      unit1.reload
-      unit2.reload
-
-      assert_nil unit1.published_state
-      assert_nil unit1.instruction_type
-      assert_nil unit1.instructor_audience
-      assert_nil unit1.participant_audience
-
-      assert_nil unit2.published_state
-      assert_nil unit2.instruction_type
-      assert_nil unit2.instructor_audience
-      assert_nil unit2.participant_audience
-
-      unit2.published_state = Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development
-      unit2.save!
-
-      assert_equal Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development, unit2.published_state
-
-      unit_group.update_scripts(['unit1'])
-
-      unit_group.reload
-      unit2.reload
-
-      refute_equal unit_group.published_state, unit2.published_state
-      assert_equal Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development, unit2.published_state
-      assert_equal unit_group.instruction_type, unit2.instruction_type
-      refute_nil unit2.instruction_type
-      assert_equal unit_group.instructor_audience, unit2.instructor_audience
-      refute_nil unit2.instructor_audience
-      assert_equal unit_group.participant_audience, unit2.participant_audience
-      refute_nil unit2.participant_audience
     end
   end
 

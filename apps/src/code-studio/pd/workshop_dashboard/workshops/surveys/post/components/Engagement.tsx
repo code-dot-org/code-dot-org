@@ -3,10 +3,13 @@ import React, {useMemo} from 'react';
 
 import {MinSurveyResponseCount} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
+import {SurveyQuestions} from '../../../types';
 import {
+  getQuestionDescription,
   isQuestionType,
-  SurveyQuestions,
-} from '../../../../WorkshopFormTemplate/types';
+  prepLikertBreakdown,
+  prepPromoterBreakdown,
+} from '../../../utils';
 import {useWorkshopContext} from '../../../WorkshopLayout';
 import {FreeResponseCard} from '../../components/FreeResponseCard';
 import {ScoreCard} from '../../components/ScoreCard';
@@ -14,13 +17,8 @@ import {
   LIKERT_QUESTION_FOOTER,
   PROMOTER_QUESTION_FOOTER,
 } from '../../constants';
-import {
-  getQuestionDescription,
-  prepLikertBreakdown,
-  prepPromoterBreakdown,
-} from '../../helpers';
 
-import styles from '../../../workshop.module.scss';
+import styles from '../../../WorkshopLayout.module.scss';
 
 export const Engagement = () => {
   const {surveys} = useWorkshopContext();

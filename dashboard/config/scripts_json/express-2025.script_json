@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-08-26 19:10:41 UTC",
+    "serialized_at": "2025-09-11 16:58:45 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -20685,7 +20685,7 @@
     },
     {
       "name": "All Resources",
-      "url": "/s/express-2024/resources",
+      "url": "/s/express-2025/resources",
       "key": "all_resources",
       "properties": {
         "is_rollup": true
@@ -20696,7 +20696,7 @@
     },
     {
       "name": "All Standards",
-      "url": "/s/express-2024/standards",
+      "url": "/s/express-2025/standards",
       "key": "all_standards",
       "properties": {
         "is_rollup": true
@@ -20707,7 +20707,7 @@
     },
     {
       "name": "All Vocabulary",
-      "url": "/s/express-2024/vocab",
+      "url": "/s/express-2025/vocab",
       "key": "all_vocabulary",
       "properties": {
         "is_rollup": true
@@ -20780,13 +20780,15 @@
       }
     },
     {
-      "name": "CSF Change Log 2024-25",
-      "url": "https://docs.google.com/document/d/1Xbo3W7uLcrOtl3qPWcuAaJuBu4cFa1ukldDAwJBLFAE/template/preview",
-      "key": "csf_change_log_2024-25",
+      "name": "CSF Change Log 2025-26",
+      "url": "\thttps://docs.google.com/document/d/1WGwamsReVGP7vUPISG9ivX3RHNBjlHa5GmU28abHNHo/edit?usp=sharing",
+      "key": "csf_change_log_2025-26",
       "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
-        "resource.key": "csf_change_log_2024-25"
+        "resource.key": "csf_change_log_2025-26"
       }
     },
     {
@@ -21429,7 +21431,7 @@
     },
     {
       "seeding_key": {
-        "resource.key": "csf_change_log_2024-25",
+        "resource.key": "csf_change_log_2025-26",
         "script.name": "express-2025"
       }
     },

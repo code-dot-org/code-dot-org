@@ -318,6 +318,12 @@ const EVENTS = {
   AI_DIFF_101: 'AI Teaching Assistant AI 101 CTA',
   AI_DIFF_SKIP_WELCOME: 'AI Teaching Assistant Skip Welcome',
 
+  AI_DIFF_NOTIFICATIONS_OPENED: 'AI Differentiation Notifications Opened',
+  AI_DIFF_NOTIFICATION_URL_CLICKED:
+    'AI Differentiation Notification URL Clicked',
+  AI_DIFF_NOTIFICATION_AI_PROMPT_CLICKED:
+    'AI Differentiation Notification AI Prompt Clicked',
+
   // AI Tutor
   AI_TUTOR_DISABLED: 'Teacher disabled AI Tutor for a section',
   AI_TUTOR_ENABLED: 'Teacher enabled AI Tutor for a section',
@@ -588,6 +594,9 @@ const EVENTS = {
     'Teacher Nav Course Overview Page Viewed',
   TEACHER_NAV_COURSE_OVERVIEW_FAILED:
     'Teacher Nav Course Overview Load Failure',
+
+  DEPRECATED_CURRICULUM_ERROR_PAGE_VISITED:
+    'Deprecated Curriculum Error Page Visited',
 
   // Lab2
   SKIP_TO_PROJECT: 'User Skipped To Project From Tutorial Level',

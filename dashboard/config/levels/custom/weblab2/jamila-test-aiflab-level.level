@@ -1,6 +1,5 @@
 <Weblab2>
   <config><![CDATA[{
-  "published": true,
   "game_id": 74,
   "created_at": "2025-09-04T11:11:42.000Z",
   "level_num": "custom",
@@ -25,8 +24,44 @@
       ],
       "freeResponseHeight": 50,
       "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Button Click Example</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n\n  <h1>Click the Button!</h1>\n  <button id=\"clickButton\">Click Me</button>\n  <p id=\"message\"></p>\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "body {\n  font-family: Arial, sans-serif;\n  text-align: center;\n  margin-top: 50px;\n}\n\nbutton {\n  padding: 10px 20px;\n  font-size: 16px;\n  cursor: pointer;\n}\n\n#message {\n  margin-top: 20px;\n  font-size: 18px;\n  color: darkblue;\n}\n",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "language": "js",
+          "contents": "document.getElementById(\"clickButton\").addEventListener(\"click\", function() {\n  document.getElementById(\"message\").textContent = \"button clicked!\";\n});\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3"
+      ]
     }
   },
-  "audit_log": "[{\"changed_at\":\"2025-09-04 11:11:46 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-09-08 16:29:24 +0000\",\"changed\":[\"initial_view_mode\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-09-08 16:30:05 +0000\",\"changed\":[\"initial_view_mode\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-04 11:11:46 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-09-08 16:29:24 +0000\",\"changed\":[\"initial_view_mode\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-09-08 16:30:05 +0000\",\"changed\":[\"initial_view_mode\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-09-19 19:05:45 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Weblab2>
