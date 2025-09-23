@@ -11,6 +11,7 @@ interface ButtonWithDialogProps {
   theme: Theme;
   Dialog: React.ReactNode;
   iconName: string;
+  ariaLabel?: string;
   setIsDialogOpen: (isOpen: boolean) => void;
 }
 
@@ -20,6 +21,7 @@ const ButtonWithDialog: React.FunctionComponent<ButtonWithDialogProps> = ({
   theme,
   Dialog,
   iconName,
+  ariaLabel,
   setIsDialogOpen,
 }) => {
   return (
@@ -41,6 +43,7 @@ const ButtonWithDialog: React.FunctionComponent<ButtonWithDialogProps> = ({
           icon={{iconName: iconName}}
           color={'gray'}
           type={'tertiary'}
+          aria-label={ariaLabel}
         />
       </WithTooltip>
       {Dialog}

@@ -33,6 +33,7 @@ const CopyrightButton: React.FunctionComponent<CopyrightButtonProps> = ({
       Dialog={innerDialog}
       iconName={'copyright'}
       setIsDialogOpen={setIsCopyrightOpen}
+      ariaLabel={commonI18n.copyright()}
     />
   );
 };
