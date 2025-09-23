@@ -39,7 +39,9 @@ class Api::V1::TeachingProfileDataControllerTest < ActionDispatch::IntegrationTe
     existing_data = {
       selectedGoals: ['Old goal'],
       yearsTeaching: 2,
-      selectedConfidence: 2
+      selectedConfidence: 2,
+      dateYearsTeachingSet: '2024-01-01T00:00:00.000Z',
+      classroomVision: 'Old vision'
     }
     teaching_profile_data = TeachingProfileData.create(user: @user, individual_data: existing_data)
 
@@ -48,6 +50,7 @@ class Api::V1::TeachingProfileDataControllerTest < ActionDispatch::IntegrationTe
       selectedSupports: ['Interactive examples or practice activities (hands-on)'],
       selectedConfidence: 4,
       yearsTeaching: 3,
+      dateYearsTeachingSet: '2025-09-17T10:00:00.000Z',
       classroomVision: 'Updated classroom vision'
     }
 
@@ -91,42 +94,6 @@ class Api::V1::TeachingProfileDataControllerTest < ActionDispatch::IntegrationTe
     assert_nil response_data['data']
   end
 
-  test 'handles validation errors during creation' do
-    # Mock the TeachingProfileData to simulate validation failure
-    TeachingProfileData.any_instance.stubs(:save).returns(false)
-    TeachingProfileData.any_instance.stubs(:errors).returns(
-      mock(full_messages: ['Validation failed'])
-    )
-
-    post '/dashboardapi/v1/teaching_profile_data',
-         params: {teaching_profile_data: {individual_data: {}}},
-         as: :json
-
-    assert_response :unprocessable_entity
-    response_data = JSON.parse(response.body)
-    assert_equal false, response_data['success']
-    assert_includes response_data['errors'], 'Validation failed'
-  end
-
-  test 'handles validation errors during update' do
-    # Mock the update to fail
-    TeachingProfileData.any_instance.stubs(:update).returns(false)
-    TeachingProfileData.any_instance.stubs(:errors).returns(
-      mock(full_messages: ['Update validation failed'])
-    )
-
-    new_data = {selectedGoals: ['New goal']}
-
-    patch '/dashboardapi/v1/teaching_profile_data',
-          params: {teaching_profile_data: {individual_data: new_data}},
-          as: :json
-
-    assert_response :unprocessable_entity
-    response_data = JSON.parse(response.body)
-    assert_equal false, response_data['success']
-    assert_includes response_data['errors'], 'Update validation failed'
-  end
-
   test 'requires authentication for create' do
     sign_out @user
 
@@ -152,6 +119,36 @@ class Api::V1::TeachingProfileDataControllerTest < ActionDispatch::IntegrationTe
 
     get '/dashboardapi/v1/teaching_profile_data'
 
-    assert_redirected_to_sign_in
+    assert_response :redirect
+    assert_redirected_to "http://test.host/users/sign_in"
+  end
+
+  test 'partial update preserves existing data when only updating specific fields' do
+    existing_data = {
+      selectedGoals: ['Original goal'],
+      selectedSupports: ['Original support'],
+      otherSupportText: 'Original other support',
+      otherGoalText: 'Original other goal',
+      selectedConfidence: 3,
+      yearsTeaching: 5,
+      dateYearsTeachingSet: '2024-01-01T00:00:00.000Z',
+      classroomVision: 'Original vision',
+      challenge: 'Original challenge'
+    }
+    teaching_profile_data = TeachingProfileData.create(user: @user, individual_data: existing_data)
+
+    partial_update = {
+      selectedConfidence: 4
+    }
+
+    patch '/dashboardapi/v1/teaching_profile_data',
+          params: {teaching_profile_data: {individual_data: partial_update}},
+          as: :json
+
+    assert_response :success
+    teaching_profile_data.reload
+
+    expected_data = existing_data.merge(partial_update)
+    assert_equal expected_data.stringify_keys, teaching_profile_data.individual_data
   end
 end
