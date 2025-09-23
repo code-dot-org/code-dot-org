@@ -369,6 +369,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
                 levelProperties={levelProperties}
                 headerClassName={moduleStyles.headerWithBorder}
                 settings={settings}
+                hideContinueIfDisabled={true}
               />
             ) : (
               <PanelContainer
@@ -397,6 +398,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
                     fixedDarkBackground={true}
                     overrideTheme={'Light'}
                     levelProperties={levelProperties}
+                    hideContinueIfDisabled={true}
                   />
                 ) : (
                   <Instructions

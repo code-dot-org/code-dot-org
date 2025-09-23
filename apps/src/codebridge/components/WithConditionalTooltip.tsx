@@ -10,8 +10,8 @@ interface WithConditionalTooltipProps {
   tooltipOverlayClassName?: string;
   tooltipProps: TooltipProps;
   showTooltip: boolean;
-  iconName: string;
-  iconClassName: string;
+  iconName?: string;
+  iconClassName?: string;
 }
 
 // Component that wraps children with a tooltip is showTooltip is true,
@@ -33,10 +33,12 @@ const WithConditionalTooltip: React.FunctionComponent<
     >
       <div>
         {children}
-        <i
-          className={classNames('fa', iconName, iconClassName)}
-          aria-describedby={tooltipProps.tooltipId}
-        />
+        {iconName && (
+          <i
+            className={classNames('fa', iconName, iconClassName)}
+            aria-describedby={tooltipProps.tooltipId}
+          />
+        )}
       </div>
     </WithTooltip>
   ) : (
