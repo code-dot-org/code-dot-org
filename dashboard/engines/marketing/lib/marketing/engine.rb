@@ -6,7 +6,7 @@ module Marketing
 
     config.to_prepare do
       # Register the Contentful source for notifications in the Dashboard app
-      contentful_client = if (Rails.application.config.respond_to?(:stub_contentful_notifications) && Rails.application.config.stub_contentful_notifications) || [:development, :test, :adhoc].include?(rack_env)
+      contentful_client = if (Rails.application.config.respond_to?(:stub_contentful_notifications) && Rails.application.config.stub_contentful_notifications) || [:development, :test].include?(rack_env)
                             Marketing::StubbedContentfulClient.instance
                           else
                             Marketing::ContentfulClient.instance
