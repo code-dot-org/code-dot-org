@@ -34,7 +34,7 @@ export function installSharedBlocks(sharedBlocks: BlockDefinition[]): {
   // @ts-expect-error needed to handle CommonJS export. Eventually this may be replaced by using Blockly JSON directly
   return blockUtils.installCustomBlocks({
     blockly: Blockly,
-    blockDefinitions: sharedBlocks,
+    blockDefinitions: sharedBlocks || [],
     customInputTypes: danceBlocks.customInputTypes,
   });
 }
