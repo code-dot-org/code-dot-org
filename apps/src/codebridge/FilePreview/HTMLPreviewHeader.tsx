@@ -117,7 +117,10 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
           className={moduleStyles.iconButton}
         />
       </div>
-      <SegmentedButtons {...previewViewModeButtonsProps} />
+      <SegmentedButtons
+        className={moduleStyles.previewViewModeButtons}
+        {...previewViewModeButtonsProps}
+      />
       <ToggleFullScreenButton
         isFullScreenView={isFullScreenView}
         onToggleFullScreen={onToggleFullScreen}
