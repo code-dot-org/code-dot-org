@@ -7,7 +7,7 @@ import {Steps} from 'intro.js-react';
 import React, {useEffect, useMemo, useState} from 'react';
 
 import {ChatButtonData, SystemPromptSettings} from '@cdo/apps/aichat/types';
-import {queryParams} from '@cdo/apps/code-studio/utils';
+import {shouldShowAiTutor} from '@cdo/apps/lab2/ai/shouldShowAiTutor';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {ProjectSources} from '@cdo/apps/lab2/types';
 import AiTutor2Chat from '@cdo/apps/lab2/views/components/AiTutor2Chat';
@@ -126,7 +126,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   );
   const levelName = instructionsProps.levelProperties.name;
   const channelId = useAppSelector(state => state.lab.channel?.id);
-  const isPythonLab = instructionsProps.levelProperties.appName === 'pythonlab';
+  const appName = instructionsProps.levelProperties.appName;
+  const isPythonLab = appName === 'pythonlab';
   console.log('isPythonLab', isPythonLab);
 
   // Build available tabs based on level information.
@@ -160,9 +161,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     }
 
     if (
-      (levelProperties.aiTutorAvailable ||
-        queryParams('show-ai-tutor2') === 'true') &&
-      hiddenContextCallback
+      hiddenContextCallback &&
+      shouldShowAiTutor(appName, levelProperties.aiTutorAvailable)
     ) {
       tabMap[Tabs.AiTutor] = (
         <AiTutor2Chat
@@ -205,6 +205,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     hasValidationConditions,
     isUserTeacher,
     hiddenContextCallback,
+    appName,
     isReadOnly,
     isViewingOldVersion,
     viewAsUserId,

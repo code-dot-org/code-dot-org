@@ -1,4 +1,5 @@
 import Button from '@code-dot-org/component-library/button';
+import Checkbox from '@code-dot-org/component-library/checkbox';
 import Link from '@code-dot-org/component-library/link';
 import Papa from 'papaparse';
 import React, {useState} from 'react';
@@ -37,7 +38,8 @@ type ExampleAnswer = {
 
 const AccuracyCheck: React.FC<{
   levelId: number;
-}> = ({levelId}) => {
+  hasSkills: boolean;
+}> = ({levelId, hasSkills}) => {
   const [csvFile, setCsvFile] = useState<File | null>(null);
   const [studentAnswers, setStudentAnswers] = useState<ExampleAnswer[]>([]);
   const [evaluationPending, setEvaluationPending] = useState<boolean>(false);
@@ -48,6 +50,7 @@ const AccuracyCheck: React.FC<{
   const datasetName = csvFile
     ? `${csvFile.name}-ai-evaluations.csv`
     : 'ai-evaluations.csv';
+  const [evaluateSkills, setEvaluateSkills] = useState<boolean>(false);
 
   function renderStudentWorkEvaluationStatusCodes() {
     return (
@@ -99,7 +102,8 @@ const AccuracyCheck: React.FC<{
     const aiResponse = await evaluationFromOpenAI(
       example.studentWork,
       levelId,
-      AiEvaluationTypes.SINGLE_STUDENT
+      AiEvaluationTypes.SINGLE_STUDENT,
+      evaluateSkills
     );
     const parsedResponse = JSON.parse(aiResponse?.content || '{}');
     const evaluation: EvaluatedExample = {
@@ -221,6 +225,19 @@ const AccuracyCheck: React.FC<{
           isPending={evaluationPending}
         />
       </div>
+      <br />
+      {hasSkills && (
+        <Checkbox
+          label={
+            'Evaluate skills (if not checked, you will get an overall evaluation based on completeness of the level instructions)'
+          }
+          name={'evaluateSkills'}
+          checked={evaluateSkills}
+          size="s"
+          onChange={e => setEvaluateSkills(e.target.checked)}
+        />
+      )}
+      <br />
       <br />
       <div>
         <Button
