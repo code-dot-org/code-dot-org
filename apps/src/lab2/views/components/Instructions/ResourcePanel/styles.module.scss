@@ -1,4 +1,5 @@
 @use '../../layout/variables.scss' as variables;
+@use '../../../../../mixins.scss' as mixins;
 
 .resourcePanel {
   display: flex;
@@ -24,9 +25,10 @@
     width: 3.5rem;
     min-width: 2rem;
     border-bottom: variables.$default-border;
-    border-inline: none;
+    border-top: 0;
+    border-inline: 0;
     border-radius: 0;
-    background: var(--background-neutral-secondary);
+    background-color: var(--background-neutral-secondary);
 
     &.selected {
       background-color: var(--background-neutral-primary);
@@ -54,13 +56,22 @@
       font-size: 1.25rem;
     }
 
-    &:hover {
+    &:hover:not(.selected) {
       background-color: var(--background-neutral-primary);
 
       i {
         color: var(--text-neutral-tertiary);
       }
     }
+
+    // Override default active state borders to prevent jumping when clicking a tab
+    &:active {
+      border-bottom: variables.$default-border !important;
+      border-top: none !important;
+      border-inline: none !important;
+    }
+
+    @include mixins.focus-styles(var(--borders-brand-teal-primary), -2px);
   }
 
   .bottomTabs {
