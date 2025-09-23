@@ -52,7 +52,7 @@ class User
           :inactive_teacher_deletion_warning,
           user.email,
           user.name,
-          vars: {first_name: user.given_name || user.name},
+          vars: {first_name: user.given_name.presence || user.name.presence || "Code.org user"},
         )
       end
     end
