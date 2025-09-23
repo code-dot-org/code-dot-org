@@ -2,6 +2,7 @@ import {FontAwesomeV6IconProps} from '@code-dot-org/component-library/fontAwesom
 import Tabs, {TabsProps} from '@code-dot-org/component-library/tabs';
 import React, {useCallback, useEffect, useMemo} from 'react';
 
+import {useAiChatDisabled} from '@cdo/apps/aichat/context/aiChatDisabledContext';
 import {
   isModelUpdate,
   SystemPromptSettings,
@@ -49,7 +50,6 @@ interface ChatWorkspaceProps {
   modelParameters: ModelParameters;
   clientType: AiChatClientType;
   chatButtons?: ChatButtonAndKey[];
-  disabled?: boolean;
   hiddenContextCallback?: () => Promise<string>;
   hideModelChangeMessage?: boolean;
 
@@ -70,7 +70,6 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   modelParameters,
   clientType,
   chatButtons,
-  disabled = false,
   hiddenContextCallback,
   multimodalEnabled = false,
   levelName,
@@ -79,6 +78,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   systemPromptSettings,
   hideModelChangeMessage = false,
 }) => {
+  const {chatDisabled} = useAiChatDisabled();
   if (multimodalEnabled && (!levelName || !channelId)) {
     console.warn(
       'Multimodal support requires level name and channel ID. Multimodal features will not be available.'
@@ -272,7 +272,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     tabPanelsContainerClassName: moduleStyles.tabPanelsContainer,
   };
 
-  const uploadDisabled = !canChatWithModel || !!selectedStudent || disabled;
+  const uploadDisabled = !canChatWithModel || !!selectedStudent || chatDisabled;
 
   return (
     <div id="chat-workspace-area" className={moduleStyles.chatWorkspace}>
@@ -282,8 +282,6 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
         <ChatEventsList
           events={visibleItems}
           buildAssetUrl={multimodalAvailable ? buildAssetUrl : undefined}
-          clientType={clientType}
-          disabled={disabled}
         />
       )}
 
@@ -304,7 +302,6 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
             chatButtons={chatButtons}
             hiddenContextCallback={hiddenContextCallback}
             multimodalAvailable={multimodalAvailable}
-            disabled={disabled}
           />
         )}
         <div className={moduleStyles.buttonRow}>

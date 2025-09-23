@@ -2,11 +2,10 @@ import Button from '@code-dot-org/component-library/button';
 import classNames from 'classnames';
 import React, {useEffect, useRef, useState} from 'react';
 
+import {useAiChatDisabled} from '@cdo/apps/aichat/context/aiChatDisabledContext';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
-import aichatI18n from '../locale';
-import {AiChatClientType, ChatAsset, ChatEvent} from '../types';
+import {ChatAsset, ChatEvent} from '../types';
 
 import {ChatDisabled} from './ChatDisabled';
 import ChatEventView from './ChatEventView';
@@ -17,8 +16,6 @@ import moduleStyles from './chatWorkspace.module.scss';
 interface ChatEventsListProps {
   events: ChatEvent[];
   isTeacherView?: boolean;
-  disabled?: boolean;
-  clientType?: AiChatClientType;
   buildAssetUrl?: (asset: ChatAsset) => string;
 }
 
@@ -28,10 +25,9 @@ interface ChatEventsListProps {
 const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
   events,
   isTeacherView,
-  disabled = false,
-  clientType,
   buildAssetUrl,
 }) => {
+  const {chatDisabled, chatDisabledMessage} = useAiChatDisabled();
   const [inProgrammaticScroll, setInProgrammaticScroll] = useState(false);
   const [showScrollToBottom, setShowScrollToBottom] = useState(true);
   const isWaitingForChatResponse = useAppSelector(
@@ -100,11 +96,6 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
 
   useEffect(scrollToBottom, [events.length, isWaitingForChatResponse]);
 
-  const disabledMessage =
-    clientType === AiChatClientTypes.AI_TUTOR
-      ? aichatI18n.aiTutorDisabled()
-      : aichatI18n.aiChatDisabled();
-
   return (
     <div
       id="chat-workspace-conversation"
@@ -114,8 +105,8 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
       )}
     >
       <div className={moduleStyles.messageArea} ref={conversationContainerRef}>
-        {disabled ? (
-          <ChatDisabled text={disabledMessage} />
+        {chatDisabled ? (
+          <ChatDisabled message={chatDisabledMessage} />
         ) : (
           <>
             {events.map(event => (

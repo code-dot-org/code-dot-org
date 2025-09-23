@@ -1,5 +1,6 @@
 import React, {useCallback, useEffect, useRef} from 'react';
 
+import {useAiChatDisabled} from '@cdo/apps/aichat/context/aiChatDisabledContext';
 import UserMessageEditor from '@cdo/apps/aiComponentLibrary/userMessageEditor/UserMessageEditor';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -20,7 +21,6 @@ interface UserChatMessageEditorProps {
   chatButtons?: ChatButtonAndKey[];
   hiddenContextCallback?: () => Promise<string>;
   multimodalAvailable?: boolean;
-  disabled?: boolean;
 }
 
 /**
@@ -35,8 +35,8 @@ const UserChatMessageEditor: React.FunctionComponent<
   chatButtons,
   hiddenContextCallback,
   multimodalAvailable,
-  disabled = false,
 }) => {
+  const {chatDisabled} = useAiChatDisabled();
   const isWaitingForChatResponse = useAppSelector(
     state => !!state.aichat.chatMessagePending
   );
@@ -55,12 +55,15 @@ const UserChatMessageEditor: React.FunctionComponent<
 
   const inputRef = useRef<HTMLTextAreaElement>(null);
 
-  const chatDisabled =
-    isWaitingForChatResponse || saveInProgress || uploadsPending || disabled;
+  const disabled =
+    isWaitingForChatResponse ||
+    saveInProgress ||
+    uploadsPending ||
+    chatDisabled;
 
   const handleSubmit = useCallback(
     async (userMessage: string, analyticsProperties?: AnalyticsProperties) => {
-      if (!chatDisabled) {
+      if (!disabled) {
         const hiddenContext = await hiddenContextCallback?.();
         dispatch(
           submitChatContents({
@@ -82,7 +85,7 @@ const UserChatMessageEditor: React.FunctionComponent<
       }
     },
     [
-      chatDisabled,
+      disabled,
       dispatch,
       hiddenContextCallback,
       modelParameters,
@@ -94,16 +97,16 @@ const UserChatMessageEditor: React.FunctionComponent<
   );
 
   useEffect(() => {
-    if (!chatDisabled) {
+    if (!disabled) {
       // Return focus to user input textarea after user submits chat message and response displayed
       // or after user updates model customizations.
       inputRef.current?.focus();
     }
-  }, [chatDisabled]);
+  }, [disabled]);
 
   return (
     <>
-      {chatButtons && !disabled && (
+      {chatButtons && !chatDisabled && (
         <div className={moduleStyles.chatButtonsContainer}>
           {chatButtons.map(({ChatButton, key}) => (
             <ChatButton key={key} onClick={handleSubmit} />
@@ -112,7 +115,7 @@ const UserChatMessageEditor: React.FunctionComponent<
       )}
       <UserMessageEditor
         onSubmit={handleSubmit}
-        disabled={chatDisabled}
+        disabled={disabled}
         editorContainerClassName={editorContainerClassName}
         ref={inputRef}
       />
