@@ -9,13 +9,13 @@ import React, {FC} from 'react';
 
 import noResponsesEmail from '@cdo/static/pd/no-responses-email.png';
 
-import {FollowUpRequestedItem} from '../../../WorkshopFormTemplate/types';
 import {CopyButton} from '../../components/CopyButton';
+import {FollowUpRequestedItem} from '../../types';
 
 import {EmptyState} from './EmptyState';
 
-import styles from './FollowUpRequestedCardStyles.module.scss';
-import commonStyles from '../../workshop.module.scss';
+import styles from './FollowUpRequestedCard.module.scss';
+import commonStyles from '../../WorkshopLayout.module.scss';
 
 interface FollowUpRequestedCardProps {
   title: string;

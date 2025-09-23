@@ -7,7 +7,9 @@ class LibraryBucket < BucketHelper
   end
 
   def allowed_file_types
-    %w(.json .java .py .csv .txt .js)
+    # The Library bucket is used by App Lab (json), Java Lab (java, csv, txt),
+    # Python Lab (py, csv, txt), and Web Lab 2 (html, css, js, md).
+    %w(.json .java .py .csv .txt .js .html .css .md)
   end
 
   def cache_duration_seconds

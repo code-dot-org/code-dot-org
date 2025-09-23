@@ -335,6 +335,7 @@ class Level < ApplicationRecord
     'PublicKeyCryptography', # widget
     'Pythonlab', # no ideal solution
     'ScriptCompletion', # unknown
+    'Sketchlab', # no ideal solution
     'StandaloneVideo', # no user submitted content
     'TextCompression', # widget
     'TextMatch', # dsl defined, covered in dsl
@@ -398,7 +399,7 @@ class Level < ApplicationRecord
   def channel_backed?
     return false if try(:is_project_level)
     free_response_upload = is_a?(FreeResponse) && allow_user_uploads
-    dance_party_free_play = is_a?(Dancelab) && try(:free_play?)
+    dance_party_free_play = is_a?(Dancelab) && (try(:free_play?) || try(:uses_lab2?))
     project_template_level || free_response_upload || game.channel_backed? || dance_party_free_play
   end
 

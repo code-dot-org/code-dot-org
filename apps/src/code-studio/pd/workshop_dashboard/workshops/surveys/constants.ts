@@ -4,6 +4,10 @@ export const PROMOTER_QUESTION_FOOTER = 'Based on a 10-point rating';
 export const CRITICAL_CONCERN_LIMIT = 50;
 export const NEEDS_ATTENTION_LIMIT = 70;
 
+export type ColorMapKey = typeof COLOR_MAP extends Map<infer K, unknown>
+  ? K
+  : never;
+
 export const COLOR_MAP = new Map([
   ['success', 'var(--background-success-primary, #3EA33E)'],
   ['warning', 'var(--background-warning-primary, #F9CB28)'],

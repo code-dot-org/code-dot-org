@@ -100,34 +100,6 @@ class Pd::WorkshopMailer < ApplicationMailer
       to: email_address(@workshop.organizer.name, @workshop.organizer.email)
   end
 
-  def teacher_enrollment_reminder(enrollment, options = nil, to_email = '')
-    @enrollment = enrollment
-    @workshop = enrollment.workshop
-    @organizer = @workshop.organizer
-    @regional_partner_name = @workshop.regional_partner&.name
-    @cancel_url = url_for controller: 'pd/workshop_enrollment', action: :cancel, code: enrollment.code
-    @is_reminder = true
-    @pre_workshop_survey_url = enrollment.pre_workshop_survey_url
-    @is_first_pre_survey_email = options.nil? ? true : options[:days_before] == INITIAL_PRE_SURVEY_DAYS_BEFORE
-
-    # Facilitator training workshops use a different email address
-    if @enrollment.workshop.course == Pd::Workshop::COURSE_FACILITATOR
-      from = from_facilitators
-      reply_to = from_facilitators
-    else
-      from = from_teacher
-      reply_to = email_address(@workshop.organizer.name, @workshop.organizer.email)
-    end
-
-    return if @workshop.suppress_reminders? || @workshop.suppress_email?
-
-    mail content_type: 'text/html',
-      from: from,
-      subject: teacher_enrollment_subject(@workshop),
-      to: email_address(@enrollment.full_name, to_email.presence || @enrollment.email),
-      reply_to: reply_to
-  end
-
   def teacher_pre_workshop_csa(enrollment, to_email = '')
     @enrollment = enrollment
     @workshop = enrollment.workshop
@@ -199,18 +171,6 @@ class Pd::WorkshopMailer < ApplicationMailer
          reply_to: email_address(@workshop.organizer.name, @workshop.organizer.email)
   end
 
-  def detail_change_notification(enrollment, to_email = '')
-    @enrollment = enrollment
-    @workshop = enrollment.workshop
-    @cancel_url = url_for controller: 'pd/workshop_enrollment', action: :cancel, code: enrollment.code
-
-    mail content_type: 'text/html',
-      from: from_teacher,
-      subject: detail_change_notification_subject(@workshop),
-      to: email_address(@enrollment.full_name, to_email.presence || @enrollment.email),
-      reply_to: email_address(@workshop.organizer.name, @workshop.organizer.email)
-  end
-
   def facilitator_detail_change_notification(user, workshop)
     @user = user
     @workshop = workshop
@@ -244,27 +204,6 @@ class Pd::WorkshopMailer < ApplicationMailer
       subject: 'Please complete the survey before your workshop!',
       to: email_address(@enrollment.full_name, @enrollment.email),
       reply_to: email_address(@workshop.organizer.name, @workshop.organizer.email)
-  end
-
-  # Exit survey email
-  # @param enrollment [Pd::Enrollment]
-  def exit_survey(enrollment, to_email = '')
-    @workshop = enrollment.workshop
-    workshop_title = @workshop.name.presence || @workshop.course
-    @teacher = enrollment.user
-    @enrollment = enrollment
-    @survey_url = enrollment.exit_survey_url
-
-    content_type = 'text/html'
-    if @workshop.course == Pd::Workshop::COURSE_CSF
-      attachments['certificate.jpg'] = generate_csf_certificate
-      content_type = 'multipart/mixed'
-    end
-
-    mail content_type: content_type,
-      from: from_survey,
-      subject: "Help us improve Code.org #{workshop_title} workshops!",
-      to: email_address(@enrollment.full_name, to_email.presence || @enrollment.email)
   end
 
   def teacher_follow_up(enrollment)

@@ -1,3 +1,5 @@
+@use 'variables.scss' as variables;
+
 .layoutContainer {
   grid-area: content;
   display: flex;
@@ -35,8 +37,9 @@
   display: grid;
   grid-template-rows: 1fr 56px;
   grid-template-columns: 1fr;
-  grid-template-areas: "content"
-                       "footer";
+  grid-template-areas:
+    'content'
+    'footer';
   height: 100%;
 }
 
@@ -47,7 +50,7 @@
 
 .rightmostColumn {
   background-color: var(--neutral-base-black);
-  border-left: solid 1px var(--neutral-gray-80);
+  border-inline-start: variables.$default-border;
 
   .inside {
     height: calc(100% - 30px);
@@ -57,21 +60,4 @@
 .resizingPanel {
   pointer-events: none;
   user-select: none;
-}
-
-.headerContainer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 40px;
-  padding: 4px 8px;
-  box-sizing: border-box;
-  border-bottom: 1px solid var(--borders-neutral-primary);
-  background-color: var(--background-neutral-secondary);
-}
-
-.editorAndPreviewContainer {
-  display: flex;
-  flex-grow: 1;
-  overflow: hidden;
 }

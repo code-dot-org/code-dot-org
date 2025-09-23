@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-08-29 21:45:21 UTC",
+    "serialized_at": "2025-09-23 03:14:50 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -81,6 +81,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "HoAI_intro"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -102,6 +105,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Generate_dancer_info"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -124,13 +130,13 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "MusicLab_Intro"
+          "pilot_generate_dancer"
         ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "MusicLab_Intro"
+          "pilot_generate_dancer"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -138,7 +144,7 @@
         "activity_section.key": "f2514c01-ab09-4c55-b94b-c3e4ec6b7ae0"
       },
       "level_keys": [
-        "MusicLab_Intro"
+        "pilot_generate_dancer"
       ]
     },
     {
@@ -148,74 +154,8 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "Generate_music_2"
+          "Generate_dancer_more_details"
         ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Generate_music_2"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "hoai-dance-pilot1",
-        "activity_section.key": "f2514c01-ab09-4c55-b94b-c3e4ec6b7ae0"
-      },
-      "level_keys": [
-        "Generate_music_2"
-      ]
-    },
-    {
-      "chapter": 5,
-      "position": 5,
-      "activity_section_position": 5,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Generate_music_loop"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "hoai-dance-pilot1",
-        "activity_section.key": "f2514c01-ab09-4c55-b94b-c3e4ec6b7ae0"
-      },
-      "level_keys": [
-        "Generate_music_loop"
-      ]
-    },
-    {
-      "chapter": 6,
-      "position": 6,
-      "activity_section_position": 6,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "Generate_music_3"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Generate_music_3"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "hoai-dance-pilot1",
-        "activity_section.key": "f2514c01-ab09-4c55-b94b-c3e4ec6b7ae0"
-      },
-      "level_keys": [
-        "Generate_music_3"
-      ]
-    },
-    {
-      "chapter": 7,
-      "position": 7,
-      "activity_section_position": 7,
-      "assessment": false,
-      "properties": {
       },
       "bonus": false,
       "seeding_key": {
@@ -232,19 +172,19 @@
       ]
     },
     {
-      "chapter": 8,
-      "position": 8,
-      "activity_section_position": 8,
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "DanceLab_Intro"
+          "simple_prompt"
         ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "DanceLab_Intro"
+          "simple_prompt"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -252,7 +192,76 @@
         "activity_section.key": "f2514c01-ab09-4c55-b94b-c3e4ec6b7ae0"
       },
       "level_keys": [
-        "DanceLab_Intro"
+        "simple_prompt"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "layers_prompt"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "layers_prompt"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "hoai-dance-pilot1",
+        "activity_section.key": "f2514c01-ab09-4c55-b94b-c3e4ec6b7ae0"
+      },
+      "level_keys": [
+        "layers_prompt"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "length_prompt"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "length_prompt"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "hoai-dance-pilot1",
+        "activity_section.key": "f2514c01-ab09-4c55-b94b-c3e4ec6b7ae0"
+      },
+      "level_keys": [
+        "length_prompt"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "length_modify2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "hoai-dance-pilot1",
+        "activity_section.key": "f2514c01-ab09-4c55-b94b-c3e4ec6b7ae0"
+      },
+      "level_keys": [
+        "length_modify2"
       ]
     },
     {
@@ -261,6 +270,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "HoAI_congrats"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -282,11 +294,14 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "dance_moves"
+        ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "Generate_music_shareout"
+          "dance_moves"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -294,7 +309,31 @@
         "activity_section.key": "f2514c01-ab09-4c55-b94b-c3e4ec6b7ae0"
       },
       "level_keys": [
-        "Generate_music_shareout"
+        "dance_moves"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": 11,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "HoAI_choice"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "HoAI_choice"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "hoai-dance-pilot1",
+        "activity_section.key": "f2514c01-ab09-4c55-b94b-c3e4ec6b7ae0"
+      },
+      "level_keys": [
+        "HoAI_choice"
       ]
     }
   ],
@@ -325,45 +364,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "MusicLab_Intro",
+        "level.key": "pilot_generate_dancer",
         "script_level.level_keys": [
-          "MusicLab_Intro"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "hoai-dance-pilot1",
-        "activity_section.key": "f2514c01-ab09-4c55-b94b-c3e4ec6b7ae0"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "Generate_music_2",
-        "script_level.level_keys": [
-          "Generate_music_2"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "hoai-dance-pilot1",
-        "activity_section.key": "f2514c01-ab09-4c55-b94b-c3e4ec6b7ae0"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "Generate_music_loop",
-        "script_level.level_keys": [
-          "Generate_music_loop"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "hoai-dance-pilot1",
-        "activity_section.key": "f2514c01-ab09-4c55-b94b-c3e4ec6b7ae0"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "Generate_music_3",
-        "script_level.level_keys": [
-          "Generate_music_3"
+          "pilot_generate_dancer"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -385,9 +388,45 @@
     },
     {
       "seeding_key": {
-        "level.key": "DanceLab_Intro",
+        "level.key": "simple_prompt",
         "script_level.level_keys": [
-          "DanceLab_Intro"
+          "simple_prompt"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "hoai-dance-pilot1",
+        "activity_section.key": "f2514c01-ab09-4c55-b94b-c3e4ec6b7ae0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "layers_prompt",
+        "script_level.level_keys": [
+          "layers_prompt"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "hoai-dance-pilot1",
+        "activity_section.key": "f2514c01-ab09-4c55-b94b-c3e4ec6b7ae0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "length_prompt",
+        "script_level.level_keys": [
+          "length_prompt"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "hoai-dance-pilot1",
+        "activity_section.key": "f2514c01-ab09-4c55-b94b-c3e4ec6b7ae0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "length_modify2",
+        "script_level.level_keys": [
+          "length_modify2"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -409,9 +448,21 @@
     },
     {
       "seeding_key": {
-        "level.key": "Generate_music_shareout",
+        "level.key": "dance_moves",
         "script_level.level_keys": [
-          "Generate_music_shareout"
+          "dance_moves"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "hoai-dance-pilot1",
+        "activity_section.key": "f2514c01-ab09-4c55-b94b-c3e4ec6b7ae0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "HoAI_choice",
+        "script_level.level_keys": [
+          "HoAI_choice"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
