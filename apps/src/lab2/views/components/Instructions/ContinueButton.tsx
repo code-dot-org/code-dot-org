@@ -46,6 +46,7 @@ const ContinueButton: React.FC<ContinueButtonProps> = ({
           id="instructions-continue-button"
           onClick={() => dispatch(continueOrFinishLesson())}
           disabled={disabled}
+          size={'s'}
           {...buttonProps}
         />
       </WithConditionalTooltip>
