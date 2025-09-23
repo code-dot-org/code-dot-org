@@ -3,7 +3,6 @@ import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {kitIcons} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import classNames from 'classnames';
-import {Steps} from 'intro.js-react';
 import React, {useEffect, useMemo, useState} from 'react';
 
 import {ChatButtonData, SystemPromptSettings} from '@cdo/apps/aichat/types';
@@ -13,10 +12,6 @@ import {ProjectSources} from '@cdo/apps/lab2/types';
 import AiTutor2Chat from '@cdo/apps/lab2/views/components/AiTutor2Chat';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import StudentRubricView from '@cdo/apps/lab2/views/components/rubrics/StudentRubricView';
-import {
-  INITIAL_STEP,
-  STEPS,
-} from '@cdo/apps/pythonlab/resourcePanelTourHelpers';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {getTypedKeys} from '@cdo/apps/types/utils';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -33,6 +28,16 @@ import ValidationPanel from './ValidationPanel';
 import {VersionHistoryPanel} from './VersionHistory';
 
 import styles from './styles.module.scss';
+
+// Onboarding Tour for PythonLab
+/* eslint-disable import/order */
+// Disabling import/order rule for grouped onboarding tour imports.
+import {Steps} from 'intro.js-react';
+import {
+  INITIAL_STEP,
+  STEPS,
+} from '@cdo/apps/pythonlab/resourcePanelTourHelpers';
+/* eslint-enable import/order */
 
 enum Tabs {
   Instructions = 'instructions',
@@ -236,7 +241,10 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const resourcePanelTourEnabled = true;
 
   return (
-    <div className={classNames(styles.resourcePanel, className)}>
+    <div
+      id="resource-panel-instructions"
+      className={classNames(styles.resourcePanel, className)}
+    >
       {isPythonLab && (
         <Steps
           enabled={resourcePanelTourEnabled}
@@ -259,7 +267,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
         />
       )}
       <div className={styles.sidebar}>
-        <div className={styles.tabs}>
+        <div id="resource-panel-tabs" className={styles.tabs}>
           {getTypedKeys(availableTabs).map(tab => (
             <WithTooltip
               tooltipProps={{
@@ -291,7 +299,10 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
             </WithTooltip>
           ))}
         </div>
-        <div className={classNames(styles.bottomTabs)}>
+        <div
+          id="resource-panel-links"
+          className={classNames(styles.bottomTabs)}
+        >
           <ResourcePanelExtraLinks levelId={levelId} theme={theme} />
           <CopyrightButton theme={theme} />
           <WithTooltip
