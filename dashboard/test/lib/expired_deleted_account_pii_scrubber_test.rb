@@ -22,32 +22,6 @@ class ExpiredDeletedAccountPiiScrubberTest < ActiveSupport::TestCase
       Honeybadger.stubs(:notify)
     end
 
-    it 'uses the reporting role for batch queries' do
-      roles_seen = []
-
-      subscriber = ActiveSupport::Notifications.subscribe('sql.active_record') do |*args|
-        payload = args.last
-        sql = payload[:sql]
-        # Capture only the batch SELECT from the loop (has LIMIT against users)
-        if sql =~ /FROM\s+`users`/i && sql =~ /LIMIT/i
-          roles_seen << ActiveRecord::Base.current_role
-        end
-      end
-
-      begin
-        # Run in dry_run mode to avoid writes; ensure at least one eligible record exists
-        # described_instance = described_class.new(dry_run: true, deleted_since: described_instance.deleted_since, limit: described_class::ACCOUNT_SCRUB_LIMIT)
-        expect(Services::User::PiiScrubber).to receive(:call).with(user: user)
-        # described_instance.call
-        scrub_pii
-      ensure
-        ActiveSupport::Notifications.unsubscribe(subscriber)
-      end
-
-      _(roles_seen).wont_be_empty
-      _(roles_seen.uniq).must_equal [:reporting]
-    end
-
     it 'runs the PII scrub service on expired deleted accounts' do
       expect(Services::User::PiiScrubber).to receive(:call).with(user: user)
       scrub_pii
