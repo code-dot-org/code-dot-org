@@ -12,6 +12,7 @@ class Api::V1::UserScriptsController < ApplicationController
   end
 
   private def set_user_script
-    @user_script = UserScript.find_or_create_by!(user: current_user, script_id: params[:script_id])
+    unit = Unit.get_from_cache(params[:script_id])
+    @user_script = UserScript.find_and_migrate_or_create_by!(user_id: current_user.id, unit: unit)
   end
 end

@@ -954,7 +954,7 @@ class User < ApplicationRecord
   # @return [UserScript] The UserScript, new or existing, with assigned_at set.
   def assign_script(script)
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
-      user_script = UserScript.where(user: self, script: script).first_or_create
+      user_script = UserScript.find_and_migrate_or_create_by!(user_id: id, unit: script)
       user_script.update!(assigned_at: Time.now)
       return user_script
     end
@@ -1791,8 +1791,9 @@ class User < ApplicationRecord
   # This method is meant to indicate a user has made progress (i.e. made a milestone
   # post on a particular level) in a script
   def self.track_script_progress(user_id, script_id)
+    unit = Unit.get_from_cache(script_id)
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
-      user_script = UserScript.where(user_id: user_id, script_id: script_id).first_or_create!
+      user_script = UserScript.find_and_migrate_or_create_by!(user_id: user_id, unit: unit)
       time_now = Time.now
 
       user_script.started_at = time_now unless user_script.started_at
