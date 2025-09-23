@@ -27,6 +27,7 @@ import teacherSections, {
 import {serverSectionFromSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {TEACHER_NAVIGATION_PATHS} from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
 import HttpClient from '@cdo/apps/util/HttpClient';
+import {trySetSessionStorage} from '@cdo/apps/utils';
 
 const INITIAL_ROUTE = '/teacher_dashboard/home';
 
@@ -182,7 +183,20 @@ describe('TeacherHomepage', () => {
     );
   }
 
-  it('sends analytics event when visiting the page', async () => {
+  it('sends analytics event when logging in', async () => {
+    renderComponent();
+    await act(async () => await new Promise(process.nextTick));
+    expect(sendEventSpy).toHaveBeenCalledWith(
+      EVENTS.TEACHER_LOGIN_EVENT,
+      {
+        'user id': 1,
+      },
+      PLATFORMS.BOTH
+    );
+  });
+
+  it('sends analytics event when visiting page after login', async () => {
+    trySetSessionStorage('logged_teacher_session', 'true');
     renderComponent();
     await act(async () => await new Promise(process.nextTick));
     expect(sendEventSpy).toHaveBeenCalledWith(
