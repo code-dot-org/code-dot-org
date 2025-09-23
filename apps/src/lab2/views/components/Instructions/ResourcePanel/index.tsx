@@ -32,6 +32,7 @@ import styles from './styles.module.scss';
 // Onboarding Tour for PythonLab
 /* eslint-disable import/order */
 // Disabling import/order rule for grouped onboarding tour imports.
+import './introjs.css';
 import {Steps} from 'intro.js-react';
 import {
   INITIAL_STEP,
