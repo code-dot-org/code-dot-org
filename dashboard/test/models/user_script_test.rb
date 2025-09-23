@@ -213,7 +213,7 @@ class UserScriptFindAndMigrateMethodsTest < ActiveSupport::TestCase
 
   test "find_and_migrate_or_create_by! allows PLC unit group for PLC course unit" do
     # Create a PLC course unit (old professional learning course) using the PLC factories
-    plc_course_unit = create(:plc_course_unit)
+    plc_course_unit = create(:plc_course_unit, :with_course_name)
     plc_unit = plc_course_unit.script
     assert plc_unit.old_professional_learning_course?
 

@@ -13,9 +13,14 @@ FactoryBot.define do
     unit_description {"MyString"}
     unit_order {1}
 
-    after(:build) do |course_unit|
-      course_unit.script.update!(professional_learning_course: course_unit.plc_course.unit_group.name)
-      raise "script is not a plc course" unless course_unit.script.old_professional_learning_course?
+    # Simulates production behavior by setting script.professional_learning_course to
+    # the name of the associated plc_course's unit_group.
+    trait :with_course_name do
+      after(:build) do |course_unit|
+        if course_unit.script.professional_learning_course.blank?
+          course_unit.script.update!(professional_learning_course: course_unit.plc_course.unit_group.name)
+        end
+      end
     end
   end
 
