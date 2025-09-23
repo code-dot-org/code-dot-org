@@ -1,7 +1,7 @@
 import {Excalidraw, serializeAsJSON} from '@excalidraw/excalidraw';
 import {ExcalidrawElement} from '@excalidraw/excalidraw/types/element/types';
 import {AppState, BinaryFiles} from '@excalidraw/excalidraw/types/types';
-import React, {useEffect, useMemo, useRef} from 'react';
+import React, {useEffect, useCallback, useRef} from 'react';
 
 import {useVerticalLayout} from '@cdo/apps/lab2/hooks/useVerticalLayout';
 import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
@@ -58,25 +58,24 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
 
   // Excalidraw runs its onChange every time the cursor moves,
   // so we debounce actually serializing the workspace to stringified JSON.
-  const debouncedSerializeAndSaveWorkspace = useMemo(
-    () =>
-      (
-        elements: readonly ExcalidrawElement[],
-        state: AppState,
-        files: BinaryFiles
-      ) => {
-        if (saveSourcesTimeoutRef.current) {
-          clearTimeout(saveSourcesTimeoutRef.current);
-          saveSourcesTimeoutRef.current = null;
-        }
+  const debouncedSerializeAndSaveWorkspace = useCallback(
+    (
+      elements: readonly ExcalidrawElement[],
+      state: AppState,
+      files: BinaryFiles
+    ) => {
+      if (saveSourcesTimeoutRef.current) {
+        clearTimeout(saveSourcesTimeoutRef.current);
+        saveSourcesTimeoutRef.current = null;
+      }
 
-        saveSourcesTimeoutRef.current = setTimeout(() => {
-          const serializedData = JSON.parse(
-            serializeAsJSON(elements, state, files, 'local')
-          );
-          updateSources({source: serializedData});
-        }, DEBOUNCED_WORKSPACE_SERIALIZATION_MS);
-      },
+      saveSourcesTimeoutRef.current = setTimeout(() => {
+        const serializedData = JSON.parse(
+          serializeAsJSON(elements, state, files, 'local')
+        );
+        updateSources({source: serializedData});
+      }, DEBOUNCED_WORKSPACE_SERIALIZATION_MS);
+    },
     [updateSources]
   );
 
