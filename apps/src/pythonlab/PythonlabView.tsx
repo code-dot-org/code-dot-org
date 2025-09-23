@@ -6,6 +6,7 @@ import {python} from '@codemirror/lang-python';
 import {LanguageSupport} from '@codemirror/language';
 import React, {useContext, useEffect, useMemo, useState} from 'react';
 
+import {AiChatDisabledProvider} from '@cdo/apps/aichat/context/aiChatDisabledContext';
 import {sendProgressReport} from '@cdo/apps/code-studio/progressRedux';
 import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {queryParams} from '@cdo/apps/code-studio/utils';
@@ -236,32 +237,34 @@ const PythonlabView: React.FunctionComponent<
   };
 
   return (
-    <div className={moduleStyles.pythonlab}>
-      {hasSource && (
-        <Codebridge
-          config={config}
-          setConfig={setConfig}
-          startSources={levelStartSources}
-          onRun={onRun}
-          onStop={stopPythonCode}
-          sendConsoleInput={sendInput}
-          levelProperties={levelProperties}
-          projectPickerSettings={projectPickerSettings}
-          hiddenContextCallback={aiTutorHelper.getHiddenContextCallback()}
-        />
-      )}
-      {showProjectPickerModal && (
-        <ProjectTypePicker
-          setProjectCallback={handleProjectTypeChange}
-          currentProjectType={
-            initialSources || labConfig?.standaloneSettings?.projectType
-              ? currentProjectType
-              : undefined
-          }
-          closeDialog={() => setShowProjectPicker(false)}
-        />
-      )}
-    </div>
+    <AiChatDisabledProvider>
+      <div className={moduleStyles.pythonlab}>
+        {hasSource && (
+          <Codebridge
+            config={config}
+            setConfig={setConfig}
+            startSources={levelStartSources}
+            onRun={onRun}
+            onStop={stopPythonCode}
+            sendConsoleInput={sendInput}
+            levelProperties={levelProperties}
+            projectPickerSettings={projectPickerSettings}
+            hiddenContextCallback={aiTutorHelper.getHiddenContextCallback()}
+          />
+        )}
+        {showProjectPickerModal && (
+          <ProjectTypePicker
+            setProjectCallback={handleProjectTypeChange}
+            currentProjectType={
+              initialSources || labConfig?.standaloneSettings?.projectType
+                ? currentProjectType
+                : undefined
+            }
+            closeDialog={() => setShowProjectPicker(false)}
+          />
+        )}
+      </div>
+    </AiChatDisabledProvider>
   );
 };
 

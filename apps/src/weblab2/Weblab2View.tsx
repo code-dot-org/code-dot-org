@@ -8,6 +8,7 @@ import {markdown} from '@codemirror/lang-markdown';
 import {LanguageSupport} from '@codemirror/language';
 import React, {useEffect, useMemo, useState} from 'react';
 
+import {AiChatDisabledProvider} from '@cdo/apps/aichat/context/aiChatDisabledContext';
 import {SystemPromptOption} from '@cdo/apps/aichat/types';
 import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
 import {LabProps, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
@@ -159,21 +160,23 @@ const Weblab2View: React.FC<
   }, [dispatch, levelProperties?.initialViewMode]);
 
   return (
-    <div className={moduleStyles.weblab2Container}>
-      {hasSource && (
-        <Codebridge
-          config={config}
-          setConfig={setConfig}
-          startSources={startSources}
-          levelProperties={levelProperties}
-          hiddenContextCallback={aiTutorHelper.getHiddenContextCallback()}
-          aiTutorSystemPromptSettings={aiTutorSystemPromptSettings}
-          aiTutorMultimodalEnabled={true}
-          aiTutorChatButtonData={[]}
-          aiTutorContextHelper={aiTutorHelper}
-        />
-      )}
-    </div>
+    <AiChatDisabledProvider>
+      <div className={moduleStyles.weblab2Container}>
+        {hasSource && (
+          <Codebridge
+            config={config}
+            setConfig={setConfig}
+            startSources={startSources}
+            levelProperties={levelProperties}
+            hiddenContextCallback={aiTutorHelper.getHiddenContextCallback()}
+            aiTutorSystemPromptSettings={aiTutorSystemPromptSettings}
+            aiTutorMultimodalEnabled={true}
+            aiTutorChatButtonData={[]}
+            aiTutorContextHelper={aiTutorHelper}
+          />
+        )}
+      </div>
+    </AiChatDisabledProvider>
   );
 };
 

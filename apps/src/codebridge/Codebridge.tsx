@@ -13,7 +13,6 @@ import {
 import classNames from 'classnames';
 import React, {useEffect, useMemo} from 'react';
 
-import {AiChatDisabledProvider} from '@cdo/apps/aichat/context/aiChatDisabledContext';
 import {ChatButtonData, SystemPromptSettings} from '@cdo/apps/aichat/types';
 import {AiTutorContextHelper} from '@cdo/apps/aiTutor/helpers/aiTutorContextHelper';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
@@ -198,20 +197,18 @@ export const Codebridge = React.memo(
         }}
       >
         <BackpackAPIContext.Provider value={backpackApi}>
-          <AiChatDisabledProvider>
-            <div className={classNames(moduleStyles.codebridgeContainer)}>
-              {flaggedImageData && (
-                <FlaggedImageModal
-                  onAccept={handleAcceptFlaggedImage}
-                  onCancel={handleCancelFlaggedImage}
-                />
-              )}
-              <InnerLayout
-                isProjectLevel={levelProperties.isProjectLevel}
-                isWidgetView={levelProperties.widgetView}
+          <div className={classNames(moduleStyles.codebridgeContainer)}>
+            {flaggedImageData && (
+              <FlaggedImageModal
+                onAccept={handleAcceptFlaggedImage}
+                onCancel={handleCancelFlaggedImage}
               />
-            </div>
-          </AiChatDisabledProvider>
+            )}
+            <InnerLayout
+              isProjectLevel={levelProperties.isProjectLevel}
+              isWidgetView={levelProperties.widgetView}
+            />
+          </div>
         </BackpackAPIContext.Provider>
       </CodebridgeContextProvider>
     );
