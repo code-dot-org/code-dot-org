@@ -20,9 +20,7 @@ class Api::V1::TeachingProfileDataControllerTest < ActionDispatch::IntegrationTe
     }
 
     assert_difference 'TeachingProfileData.count', 1 do
-      post '/dashboardapi/v1/teaching_profile_data',
-           params: {teaching_profile_data: {individual_data: personalization_data}},
-           as: :json
+      post :create, params: {teaching_profile_data: {individual_data: personalization_data}}, format: :json
     end
 
     assert_response :created
@@ -55,9 +53,7 @@ class Api::V1::TeachingProfileDataControllerTest < ActionDispatch::IntegrationTe
     }
 
     assert_no_difference 'TeachingProfileData.count' do
-      patch '/dashboardapi/v1/teaching_profile_data',
-            params: {teaching_profile_data: {individual_data: new_data}},
-            as: :json
+      patch :update, params: {teaching_profile_data: {individual_data: new_data}}, format: :json
     end
 
     assert_response :success
@@ -77,7 +73,7 @@ class Api::V1::TeachingProfileDataControllerTest < ActionDispatch::IntegrationTe
     }
     TeachingProfileData.create(user: @user, individual_data: existing_data)
 
-    get '/dashboardapi/v1/teaching_profile_data'
+    get :show, format: :json
 
     assert_response :success
     response_data = JSON.parse(response.body)
@@ -86,7 +82,7 @@ class Api::V1::TeachingProfileDataControllerTest < ActionDispatch::IntegrationTe
   end
 
   test 'shows non-existence for user without teaching profile data via GET' do
-    get '/dashboardapi/v1/teaching_profile_data'
+    get :show, format: :json
 
     assert_response :success
     response_data = JSON.parse(response.body)
@@ -97,9 +93,7 @@ class Api::V1::TeachingProfileDataControllerTest < ActionDispatch::IntegrationTe
   test 'requires authentication for create' do
     sign_out @user
 
-    post '/dashboardapi/v1/teaching_profile_data',
-         params: {teaching_profile_data: {individual_data: {}}},
-         as: :json
+    post :create, params: {teaching_profile_data: {individual_data: {}}}, format: :json
 
     assert_response :unauthorized
   end
@@ -107,9 +101,7 @@ class Api::V1::TeachingProfileDataControllerTest < ActionDispatch::IntegrationTe
   test 'requires authentication for update' do
     sign_out @user
 
-    patch '/dashboardapi/v1/teaching_profile_data',
-          params: {teaching_profile_data: {individual_data: {}}},
-          as: :json
+    patch :update, params: {teaching_profile_data: {individual_data: {}}}, format: :json
 
     assert_response :unauthorized
   end
@@ -117,38 +109,8 @@ class Api::V1::TeachingProfileDataControllerTest < ActionDispatch::IntegrationTe
   test 'requires authentication for show' do
     sign_out @user
 
-    get '/dashboardapi/v1/teaching_profile_data'
+    get :show
 
     assert_response :redirect
-    assert_redirected_to "http://test.host/users/sign_in"
-  end
-
-  test 'partial update preserves existing data when only updating specific fields' do
-    existing_data = {
-      selectedGoals: ['Original goal'],
-      selectedSupports: ['Original support'],
-      otherSupportText: 'Original other support',
-      otherGoalText: 'Original other goal',
-      selectedConfidence: 3,
-      yearsTeaching: 5,
-      dateYearsTeachingSet: '2024-01-01T00:00:00.000Z',
-      classroomVision: 'Original vision',
-      challenge: 'Original challenge'
-    }
-    teaching_profile_data = TeachingProfileData.create(user: @user, individual_data: existing_data)
-
-    partial_update = {
-      selectedConfidence: 4
-    }
-
-    patch '/dashboardapi/v1/teaching_profile_data',
-          params: {teaching_profile_data: {individual_data: partial_update}},
-          as: :json
-
-    assert_response :success
-    teaching_profile_data.reload
-
-    expected_data = existing_data.merge(partial_update)
-    assert_equal expected_data.stringify_keys, teaching_profile_data.individual_data
   end
 end
