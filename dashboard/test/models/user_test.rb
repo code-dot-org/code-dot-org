@@ -4410,7 +4410,7 @@ class UserTest < ActiveSupport::TestCase
       let(:teacher) {create(:authorized_teacher)}
       let(:section) {create(:section, teacher: teacher, unit_group: unit_group)}
       let(:student) {create(:student)}
-      let(:folower) {create(:follower, section: section, student_user: student, user: teacher)}
+      let!(:follower) {create(:follower, section: section, student_user: student, user: teacher)}
 
       it 'can access AI Chat' do
         _(student.student_can_access_ai_chat?).must_equal true
@@ -4421,7 +4421,7 @@ class UserTest < ActiveSupport::TestCase
       let(:teacher) {create(:authorized_teacher)}
       let(:section) {create(:section, teacher: teacher)}
       let(:student) {create(:student)}
-      let(:folower) {create(:follower, section: section, student_user: student, user: teacher)}
+      let!(:follower) {create(:follower, section: section, student_user: student, user: teacher)}
 
       it 'cannot access AI Chat' do
         _(student.student_can_access_ai_chat?).must_equal false
@@ -4432,7 +4432,7 @@ class UserTest < ActiveSupport::TestCase
       let(:teacher) {create(:teacher)}
       let(:section) {create(:section, teacher: teacher)}
       let(:student) {create(:student)}
-      let(:follower) {create(:follower, section: section, student_user: student, user: teacher)}
+      let!(:follower) {create(:follower, section: section, student_user: student, user: teacher)}
 
       it 'does not have access' do
         _(student.student_can_access_ai_chat?).must_equal false
