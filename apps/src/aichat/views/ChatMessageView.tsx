@@ -32,7 +32,9 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
   buildAssetUrl,
 }) => {
   const [showProfaneUserMessage, setShowProfaneUserMessage] = useState(false);
-  const {status, role, chatMessageText, assets} = chatMessage;
+  const {status, role, chatMessageText, assets, userAddedContext} = chatMessage;
+  const hasAssets = assets && buildAssetUrl;
+  const hasUserAddedContext = !!userAddedContext?.length;
 
   const displayText = getChatMessageDisplayText(
     status,
@@ -88,27 +90,32 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
   }
 
   let header;
-  if (!isAssistant && assets && buildAssetUrl) {
+  if (!isAssistant && (hasAssets || hasUserAddedContext)) {
     header = (
       <div className={styles.assetCol}>
-        {assets.map(asset => {
-          const filename = asset.filename;
-          const url = buildAssetUrl(asset);
-          return (
-            <button
-              key={filename}
-              type="button"
-              className={styles.assetButton}
-              onClick={() => window.open(url, '_blank')}
-            >
-              {filename.endsWith('.pdf') ? (
-                <FilePreview type="pdf" filename={filename} url={url} />
-              ) : (
-                <img alt="" className={styles.imagePreview} src={url} />
-              )}
-            </button>
-          );
-        })}
+        {hasAssets &&
+          assets.map(asset => {
+            const filename = asset.filename;
+            const url = buildAssetUrl(asset);
+            return (
+              <button
+                key={filename}
+                type="button"
+                className={styles.assetButton}
+                onClick={() => window.open(url, '_blank')}
+              >
+                {filename.endsWith('.pdf') ? (
+                  <FilePreview type="pdf" filename={filename} url={url} />
+                ) : (
+                  <img alt="" className={styles.imagePreview} src={url} />
+                )}
+              </button>
+            );
+          })}
+        {hasUserAddedContext &&
+          userAddedContext.map(contextItem => (
+            <FilePreview type="text" filename={contextItem.displayName} />
+          ))}
       </div>
     );
   }

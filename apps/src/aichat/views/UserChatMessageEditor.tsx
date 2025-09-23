@@ -46,6 +46,9 @@ const UserChatMessageEditor: React.FunctionComponent<
   const uploadsPending = useAppSelector(state =>
     state.aichat.stagedFiles.some(file => file.status === 'uploading')
   );
+  const userAddedContext = useAppSelector(
+    state => state.aichat.userAddedContext
+  );
   const dispatch = useAppDispatch();
 
   const inputRef = useRef<HTMLTextAreaElement>(null);
@@ -67,18 +70,23 @@ const UserChatMessageEditor: React.FunctionComponent<
               multimodalAvailable && chatAssets.length > 0
                 ? chatAssets
                 : undefined,
+            userAddedContext:
+              Object.keys(userAddedContext).length > 0
+                ? Object.values(userAddedContext)
+                : undefined,
           })
         );
       }
     },
     [
       disabled,
-      dispatch,
       hiddenContextCallback,
-      multimodalAvailable,
-      chatAssets,
+      dispatch,
       modelParameters,
       clientType,
+      multimodalAvailable,
+      chatAssets,
+      userAddedContext,
     ]
   );
 
