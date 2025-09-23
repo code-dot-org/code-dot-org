@@ -227,7 +227,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   return (
     <div className={classNames(styles.resourcePanel, className)}>
       <div className={styles.sidebar}>
-        <div className={styles.tabs}>
+        <nav className={styles.tabs}>
           {getTypedKeys(availableTabs).map(tab => (
             <WithTooltip
               tooltipProps={{
@@ -255,10 +255,11 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                     ? 'kit'
                     : undefined,
                 }}
+                aria-label={tabInfo[tab].title}
               />
             </WithTooltip>
           ))}
-        </div>
+        </nav>
         <div className={classNames(styles.bottomTabs)}>
           <ResourcePanelExtraLinks levelId={levelId} theme={theme} />
           <CopyrightButton theme={theme} />
@@ -280,6 +281,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
               icon={{iconName: 'gear'}}
               color={'gray'}
               type={'tertiary'}
+              aria-label={commonI18n.settings()}
             />
           </WithTooltip>
         </div>
