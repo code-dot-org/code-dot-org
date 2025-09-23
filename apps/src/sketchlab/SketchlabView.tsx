@@ -5,7 +5,12 @@ import React, {useEffect, useMemo, useRef} from 'react';
 
 import {useVerticalLayout} from '@cdo/apps/lab2/hooks/useVerticalLayout';
 import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
-import {LabProps, LevelProperties, ProjectSources} from '@cdo/apps/lab2/types';
+import {
+  LabProps,
+  LevelProperties,
+  ProjectSources,
+  SketchlabSource,
+} from '@cdo/apps/lab2/types';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
@@ -52,8 +57,8 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
   });
 
   // Excalidraw runs its onChange every time the cursor moves,
-  // so we debounce actually serializing the workspace to JSON.
-  const serializeAndSaveWorkspace = useMemo(
+  // so we debounce actually serializing the workspace to stringified JSON.
+  const debouncedSerializeAndSaveWorkspace = useMemo(
     () =>
       (
         elements: readonly ExcalidrawElement[],
@@ -66,12 +71,8 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
         }
 
         saveSourcesTimeoutRef.current = setTimeout(() => {
-          console.log('debounced!');
-          const serializedData = serializeAsJSON(
-            elements,
-            state,
-            files,
-            'local'
+          const serializedData = JSON.parse(
+            serializeAsJSON(elements, state, files, 'local')
           );
           updateSources({source: serializedData});
         }, DEBOUNCED_WORKSPACE_SERIALIZATION_MS);
@@ -121,8 +122,8 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
           headerContent="Workspace"
         >
           <Excalidraw
-            initialData={JSON.parse(currentSources.source as string)}
-            onChange={serializeAndSaveWorkspace}
+            initialData={currentSources.source as SketchlabSource}
+            onChange={debouncedSerializeAndSaveWorkspace}
           />
         </PanelContainer>
       </div>
