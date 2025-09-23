@@ -48,6 +48,7 @@ module Curriculum
         CSP: 'CSP',
         CSA: 'CSA',
         HOC: 'HOC',
+        HOAI: 'HOAI',
         foundations_of_cs: 'AIF',
         foundations_of_programming: 'Foundations of Programming',
         CSC_K_5: 'CSC K-5',
@@ -144,6 +145,7 @@ module Curriculum
     COURSE_OFFERING_MARKETING_INITIATIVES = OpenStruct.new(
       {
         hoc: 'HOC',
+        hoai: 'HOAI',
         csc: 'CSC',
         csf: 'CSF',
         csa: 'CSA',

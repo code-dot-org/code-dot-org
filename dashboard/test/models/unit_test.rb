@@ -1717,8 +1717,11 @@ class UnitTest < ActiveSupport::TestCase
     assert @csa_unit.csa?
     assert @hoc_unit.under_curriculum_umbrella?(Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.HOC)
     assert @hoc_unit.hoc?
+    assert @hoc_unit.hoc_or_hoai?
     refute @csf_unit.hoc?
+    refute @csf_unit.hoc_or_hoai?
     refute @csd_unit.hoc?
+    refute @csd_unit.hoc_or_hoai?
   end
 
   test "show_unit_overview_between_lessons" do
