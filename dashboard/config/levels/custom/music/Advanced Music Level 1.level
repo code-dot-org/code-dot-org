@@ -15,16 +15,6 @@
         "type": "category"
       },
       "startSources": {
-        "variables": [
-          {
-            "name": "currentTime",
-            "id": "u(-hrJtc2:$c;57l#EEO"
-          },
-          {
-            "name": "i",
-            "id": "`kM1|hGzR9j==qAbU0[,"
-          }
-        ],
         "blocks": {
           "languageVersion": 0,
           "blocks": [
@@ -78,7 +68,15 @@
               }
             }
           ]
-        }
+        },
+        "variables": [
+          {
+            "name": "currentTime"
+          },
+          {
+            "name": "i"
+          }
+        ]
       },
       "library": "launch2024",
       "packId": "default"
@@ -96,7 +94,7 @@
     },
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-09-18T15:27:29.312-04:00\",\"changed\":[\"cloned from \\\"local music\\\"\"],\"cloned_from\":\"local music\"},{\"changed_at\":\"2024-09-18 15:30:48 -0400\",\"changed\":[\"level_data\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2025-01-14 17:02:54 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2025-09-24 07:05:46 -0700\",\"changed\":[\"level_data\"],\"changed_by_id\":4,\"changed_by_email\":\"hannah.bergam+lb@code.org\"},{\"changed_at\":\"2025-09-24 11:13:15 -0700\",\"changed\":[\"level_data\"],\"changed_by_id\":4,\"changed_by_email\":\"hannah.bergam+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-09-18T15:27:29.312-04:00\",\"changed\":[\"cloned from \\\"local music\\\"\"],\"cloned_from\":\"local music\"},{\"changed_at\":\"2024-09-18 15:30:48 -0400\",\"changed\":[\"level_data\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2025-01-14 17:02:54 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2025-09-24 07:05:46 -0700\",\"changed\":[\"level_data\"],\"changed_by_id\":4,\"changed_by_email\":\"hannah.bergam+lb@code.org\"},{\"changed_at\":\"2025-09-24 11:13:15 -0700\",\"changed\":[\"level_data\"],\"changed_by_id\":4,\"changed_by_email\":\"hannah.bergam+lb@code.org\"},{\"changed_at\":\"2025-09-24 11:16:05 -0700\",\"changed\":[\"predict_settings\"],\"changed_by_id\":4,\"changed_by_email\":\"hannah.bergam+lb@code.org\"},{\"changed_at\":\"2025-09-24 11:17:07 -0700\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":4,\"changed_by_email\":\"hannah.bergam+lb@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>
