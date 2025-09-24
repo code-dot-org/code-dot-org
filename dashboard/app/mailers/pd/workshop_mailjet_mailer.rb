@@ -20,7 +20,7 @@ class Pd::WorkshopMailjetMailer
       workshop_notes: workshop.notes || 'No additional information at this time.',
       sessions: workshop.sessions.map(&:session_info_for_emails),
       workshop_subjects: workshop.course_offerings.present? ? workshop.course_offerings.map(&:display_name)&.join(', ') : workshop.subject,
-      workshop_name: workshop.name.presence || "#{workshop.course} #{workshop.subject}",
+      workshop_name: workshop_name_with_fallback(workshop),
       num_days: days
     }
 
@@ -35,7 +35,7 @@ class Pd::WorkshopMailjetMailer
     email_vars = {
       email_to: email,
       name: user.given_name || user.name,
-      workshop_name: workshop.name || "#{workshop.course} #{workshop.subject}",
+      workshop_name: workshop_name_with_fallback(workshop),
       cancel_registration_link: CDO.studio_url("pd/workshop_enrollment/#{enrollment.code}/cancel", CDO.default_scheme),
       facilitator_name: workshop_facilitator_names(workshop),
       rp_email: contact_email_with_fallback(regional_partner&.contact_email_with_backup),
@@ -70,6 +70,20 @@ class Pd::WorkshopMailjetMailer
     retryable_send_email('teacher_post_workshop_survey', email, user.friendly_name, email_vars)
   end
 
+  def self.send_facilitator_post_workshop_survey(workshop, facilitator)
+    regional_partner = workshop.regional_partner
+    email_vars = {
+      email_to: facilitator.email,
+      name: facilitator.given_name || facilitator.name,
+      workshop_name: workshop_name_with_fallback(workshop),
+      rp_name: contact_name_with_fallback(regional_partner&.name),
+      survey_deadline: (Time.zone.today + 10.days).strftime('%B %-d'),
+      exit_survey_url: CDO.studio_url("form/professional_learning_facilitator_post_workshop_survey", CDO.default_scheme)
+    }
+
+    retryable_send_email('facilitator_post_workshop_survey', facilitator.email, facilitator.friendly_name, email_vars)
+  end
+
   private_class_method def self.retryable_send_email(email_name, email, name, vars)
     Retryable.retryable(
       on: RestClient::TooManyRequests,
@@ -83,6 +97,10 @@ class Pd::WorkshopMailjetMailer
         vars: vars
       )
     end
+  end
+
+  private_class_method def self.workshop_name_with_fallback(workshop)
+    workshop.name.presence || "#{workshop.course} #{workshop.subject}"
   end
 
   private_class_method def self.workshop_facilitator_names(workshop)

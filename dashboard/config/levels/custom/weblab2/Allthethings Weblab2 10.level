@@ -1,0 +1,38 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2025-09-18T20:00:34.000Z",
+  "level_num": "custom",
+  "user_id": 6959,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Add **html** pages and preview them in the right pane.\r\n\r\nAdd **css** pages (and link them to your html).\r\n\r\nUse the file browser to add/rename/delete files, or to add/rename/delete folders (including hierarchically!)\r\n\r\nThis level uses all of AI Tutor modes. For now, it is the last level of the progression. ",
+    "hide_share_and_remix": "false",
+    "ai_tutor_available": true,
+    "available_ai_tutor_modes": [
+      "suggest",
+      "outline",
+      "guide",
+      "produce"
+    ],
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2025-09-18T20:00:34.748+00:00\",\"changed\":[\"cloned from \\\"Allthethings Weblab2 1\\\"\"],\"cloned_from\":\"Allthethings Weblab2 1\"},{\"changed_at\":\"2025-09-18 20:07:45 +0000\",\"changed\":[\"long_instructions\",\"available_ai_tutor_modes\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

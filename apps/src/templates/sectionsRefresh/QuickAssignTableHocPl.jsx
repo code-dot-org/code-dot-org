@@ -90,6 +90,9 @@ export default function QuickAssignTableHocPl({
       {marketingAudience === MARKETING_AUDIENCE.HOC && (
         <div>{allTables(i18n.teacherCourseHoc())}</div>
       )}
+      {marketingAudience === MARKETING_AUDIENCE.HOAI && (
+        <div>{allTables(i18n.marketingInitiativeHOAI())}</div>
+      )}
       {marketingAudience === MARKETING_AUDIENCE.PL && (
         <div>{allTables(i18n.professionalLearning())}</div>
       )}
