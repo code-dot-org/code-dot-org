@@ -335,6 +335,7 @@ class Level < ApplicationRecord
     'PublicKeyCryptography', # widget
     'Pythonlab', # no ideal solution
     'ScriptCompletion', # unknown
+    'Sketchlab', # no ideal solution
     'StandaloneVideo', # no user submitted content
     'TextCompression', # widget
     'TextMatch', # dsl defined, covered in dsl

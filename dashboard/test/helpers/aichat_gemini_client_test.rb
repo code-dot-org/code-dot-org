@@ -10,7 +10,10 @@ class AichatGeminiClientTest < AichatAiClientTest
 
   let(:generation_config) do
     {
-      temperature: 1.0
+      temperature: 1.0,
+      thinkingConfig: {
+        thinkingBudget: 0
+      }
     }
   end
 

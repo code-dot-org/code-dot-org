@@ -206,4 +206,12 @@ class CourseVersion < ApplicationRecord
   def hoc?
     !!course_offering&.hoc?
   end
+
+  def hoai?
+    !!course_offering&.hoai?
+  end
+
+  def hoc_or_hoai?
+    hoc? || hoai?
+  end
 end

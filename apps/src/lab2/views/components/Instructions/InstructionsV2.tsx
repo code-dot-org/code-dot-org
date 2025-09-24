@@ -49,6 +49,8 @@ export interface InstructionsProps {
   requireRun?: boolean;
   /** If the navigation area should be hidden. */
   hideNavigation?: boolean;
+  /** If the continue button should be hidden if disabled. */
+  hideContinueIfDisabled?: boolean;
 }
 
 export interface ValidationSettings {
@@ -77,6 +79,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
   AiTutor2ResponseView,
   overrideTheme,
   hideNavigation = false,
+  hideContinueIfDisabled = false,
   ...feedbackProps
 }) => {
   const validationResults = useAppSelector(
@@ -186,6 +189,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
             {...feedbackProps}
             levelProperties={levelProperties}
             handleInstructionsTextClick={handleInstructionsTextClick}
+            hideContinueIfDisabled={hideContinueIfDisabled}
           />
         )}
       </div>

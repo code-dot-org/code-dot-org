@@ -2,7 +2,6 @@
 
 .guide {
   gap: 20px;
-  width: 40%;
   top: 60px;
   right: 80px;
   border-radius: 20px;
@@ -18,4 +17,12 @@
   justify-content: center;
   align-items: center;
   font-size: 16px;
+
+  &Normal {
+    width: 40%;
+  }
+
+  &Narrow {
+    width: 20%;
+  }
 }

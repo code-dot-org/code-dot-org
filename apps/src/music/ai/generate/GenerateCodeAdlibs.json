@@ -64,5 +64,28 @@
       ]
     },
     "variantCount": 3
+  },
+  "layers-length": {
+    "template": "Please make a song that layers {type1} and {type2} together. Around {length} measures in duration is good.",
+    "options": {
+      "type1": [
+        "bass",
+        "leads",
+        "beats",
+        "vocals"
+      ],
+      "type2": [
+        "bass",
+        "leads",
+        "beats",
+        "vocals"
+      ],
+      "length": [
+        "20",
+        "30",
+        "40"
+      ]
+    },
+    "variantCount": 3
   }
 }
