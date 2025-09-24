@@ -1,8 +1,7 @@
 <Music>
   <config><![CDATA[{
-  "published": true,
   "game_id": 70,
-  "created_at": "2024-09-23T09:34:46.000Z",
+  "created_at": "2025-01-15T20:24:45.000Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
@@ -15,32 +14,86 @@
         "type": "category"
       },
       "startSources": {
+        "variables": [
+          {
+            "name": "currentTime",
+            "id": "u(-hrJtc2:$c;57l#EEO"
+          },
+          {
+            "name": "i",
+            "id": "`kM1|hGzR9j==qAbU0[,"
+          }
+        ],
         "blocks": {
           "languageVersion": 0,
           "blocks": [
             {
               "type": "when_run",
+              "id": "?4UjBg:#75Wp2mX+)ttk",
               "x": 30,
-              "y": 30
+              "y": 30,
+              "deletable": false,
+              "next": {
+                "block": {
+                  "type": "play_sound",
+                  "id": "K!Iq7+#mTnqx,-H*AMz}",
+                  "fields": {
+                    "sound": "electro/drum_beat_cowbell"
+                  },
+                  "inputs": {
+                    "measure": {
+                      "shadow": {
+                        "type": "math_number",
+                        "id": ",sXrhp%Qy!l`^HFm0;/+",
+                        "fields": {
+                          "NUM": 1
+                        }
+                      }
+                    }
+                  },
+                  "next": {
+                    "block": {
+                      "type": "play_chord_at_measure",
+                      "id": "p_C*WDYEy+`#%pnSX}NC",
+                      "fields": {
+                        "chord": {
+                          "instrument": "piano",
+                          "notes": [
+
+                          ],
+                          "playStyle": "arpeggio-up"
+                        }
+                      },
+                      "inputs": {
+                        "measure": {
+                          "shadow": {
+                            "type": "math_number",
+                            "id": "+Zp$gT):ers{,u[!H_:$",
+                            "fields": {
+                              "NUM": 1
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
             },
             {
               "type": "triggered_at",
+              "id": "@yhaSR$Fp.d^|:X6sZaE",
               "x": 425,
               "y": 30,
               "fields": {
-                "trigger": "trigger1"
+                "trigger": "<field name=\"trigger\">trigger1</field>",
+                "var": {
+                  "id": "u(-hrJtc2:$c;57l#EEO"
+                }
               }
             }
           ]
-        },
-        "variables": [
-          {
-            "name": "currentTime"
-          },
-          {
-            "name": "i"
-          }
-        ]
+        }
       },
       "library": "launch2024",
       "packId": "default"
@@ -49,7 +102,8 @@
     "use_secondary_finish_button": "false",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-09-18T15:27:29.312-04:00\",\"changed\":[\"cloned from \\\"local music\\\"\"],\"cloned_from\":\"local music\"},{\"changed_at\":\"2024-09-18 15:30:48 -0400\",\"changed\":[\"level_data\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2025-01-14 17:02:54 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-09-18T15:27:29.312-04:00\",\"changed\":[\"cloned from \\\"local music\\\"\"],\"cloned_from\":\"local music\"},{\"changed_at\":\"2024-09-18 15:30:48 -0400\",\"changed\":[\"level_data\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2025-01-14 17:02:54 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2025-09-24 07:05:46 -0700\",\"changed\":[\"level_data\"],\"changed_by_id\":4,\"changed_by_email\":\"hannah.bergam+lb@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>
