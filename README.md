@@ -1,5 +1,7 @@
 # Code.org
 
+Test commit to make a change.
+
 Welcome! You've found the source code for [the Code.org website](https://code.org/) and [the Code Studio platform](https://studio.code.org/). Code.org is a non-profit dedicated to expanding access to computer science education. You can read more about our efforts at [code.org/about](https://code.org/about).
 
 ## Quick start
