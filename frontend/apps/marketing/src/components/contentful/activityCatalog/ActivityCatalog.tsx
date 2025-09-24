@@ -1,17 +1,15 @@
 'use client';
-
-import { Box } from '@mui/material';
-import { FacetResult, InternalTypedDocument, Orama, search } from '@orama/orama';
-import { restore } from '@orama/plugin-data-persistence';
-import { useRouter, useSearchParams } from 'next/navigation';
-import { useEffect, useMemo, useRef, useState } from 'react';
+import {Box} from '@mui/material';
+import {FacetResult, InternalTypedDocument, Orama, search} from '@orama/orama';
+import {restore} from '@orama/plugin-data-persistence';
+import {useRouter, useSearchParams} from 'next/navigation';
+import {useEffect, useMemo, useRef, useState} from 'react';
 
 import FilterBar from '@/components/contentful/ActivityCatalog/FilterBar/filterBar';
 import Section from '@/components/contentful/section';
 import ActivityCollection from '@/components/csforall/activityCollection/ActivityCollection';
-import { ActivitySchema } from '@/modules/activityCatalog/orama/schema/ActivitySchema';
-import { Activity } from '@/modules/activityCatalog/types/Activity';
-
+import {ActivitySchema} from '@/modules/activityCatalog/orama/schema/ActivitySchema';
+import {Activity} from '@/modules/activityCatalog/types/Activity';
 
 interface ActivityCatalogProps {
   serializedOramaDb: string | ArrayBuffer | Buffer<ArrayBufferLike>;
@@ -26,13 +24,17 @@ const ActivityCatalog = ({
 }: ActivityCatalogProps) => {
   const allowedFacetSet = useMemo(
     () => new Set(facets ? Object.keys(facets) : []),
-    [facets]
+    [facets],
   );
 
   const [results, setResults] =
     useState<InternalTypedDocument<Activity>[]>(activities);
-  const [db, setDb] = useState<Orama<typeof ActivitySchema> | undefined>(undefined);
-  const [selectedFacets, setSelectedFacets] = useState<Record<string, Set<string>>>({});
+  const [db, setDb] = useState<Orama<typeof ActivitySchema> | undefined>(
+    undefined,
+  );
+  const [selectedFacets, setSelectedFacets] = useState<
+    Record<string, Set<string>>
+  >({});
   const [searchTerm, setSearchTerm] = useState<string>('');
 
   const router = useRouter();
@@ -40,19 +42,20 @@ const ActivityCatalog = ({
   const skipNextUrlSyncRef = useRef(false);
 
   useEffect(() => {
-    restore<Orama<typeof ActivitySchema>>('json', serializedOramaDb).then(restoredDb => {
-      setDb(restoredDb);
-      hydrateFromUrl();            
-      skipNextUrlSyncRef.current = true; 
-    });
+    restore<Orama<typeof ActivitySchema>>('json', serializedOramaDb).then(
+      restoredDb => {
+        setDb(restoredDb);
+        hydrateFromUrl();
+        skipNextUrlSyncRef.current = true;
+      },
+    );
   }, []);
 
   useEffect(() => {
     if (db) {
       hydrateFromUrl();
-      skipNextUrlSyncRef.current = true; 
+      skipNextUrlSyncRef.current = true;
     }
- 
   }, [db, searchParams]);
 
   const buildQueryFromState = (
@@ -98,14 +101,17 @@ const ActivityCatalog = ({
 
     // Run search
     (async () => {
-      const where = Object.entries(selectedFacets).reduce((acc, [k, set]) => {
-        if (set && set.size > 0) acc[k] = Array.from(set);
-        return acc;
-      }, Object.create(null) as Record<string, string[]>);
+      const where = Object.entries(selectedFacets).reduce(
+        (acc, [k, set]) => {
+          if (set && set.size > 0) acc[k] = Array.from(set);
+          return acc;
+        },
+        Object.create(null) as Record<string, string[]>,
+      );
 
       const res = await search(db, {
         term: searchTerm,
-        properties: ['title'],
+        properties: ['title', 'languagesText'],
         where,
       });
       setResults(res.hits.map(h => h.document));
@@ -118,7 +124,7 @@ const ActivityCatalog = ({
     }
     const nextHref = buildQueryFromState(searchTerm, selectedFacets);
     // Use replace to avoid spamming history; do NOT call in render.
-    router.replace(nextHref, { scroll: false });
+    router.replace(nextHref, {scroll: false});
   }, [db, searchTerm, selectedFacets]);
 
   /** Handlers (no router navigation here) */
@@ -144,10 +150,9 @@ const ActivityCatalog = ({
     });
   };
 
-
   return (
     <Section>
-      <Box sx={{ display: 'grid', gap: 3 }}>
+      <Box sx={{display: 'grid', gap: 3}}>
         <FilterBar
           facets={facets}
           selectedFacets={selectedFacets}
