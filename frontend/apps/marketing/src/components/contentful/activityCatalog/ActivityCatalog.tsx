@@ -5,7 +5,7 @@ import {restore} from '@orama/plugin-data-persistence';
 import {useRouter, useSearchParams} from 'next/navigation';
 import {useEffect, useMemo, useRef, useState} from 'react';
 
-import FilterBar from '@/components/contentful/ActivityCatalog/FilterBar/filterBar';
+import FilterBar from '@/components/contentful/ActivityCatalog/FilterBar/FilterBar';
 import Section from '@/components/contentful/section';
 import ActivityCollection from '@/components/csforall/activityCollection/ActivityCollection';
 import {ActivitySchema} from '@/modules/activityCatalog/orama/schema/ActivitySchema';

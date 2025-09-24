@@ -4,7 +4,7 @@ import {persist} from '@orama/plugin-data-persistence';
 import {notFound} from 'next/navigation';
 
 import ActivityCatalog from '@/components/contentful/ActivityCatalog';
-import ActivitiesHero from '@/components/contentful/ActivityCatalog/activitiesHero';
+import ActivitiesHero from '@/components/contentful/ActivityCatalog/ActivitiesHero';
 import {Brand} from '@/config/brand';
 import {getContentfulActivities} from '@/modules/activityCatalog/contentful/getContentfulActivities';
 import {createDatabase} from '@/modules/activityCatalog/orama/createDatabase';
