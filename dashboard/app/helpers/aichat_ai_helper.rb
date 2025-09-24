@@ -161,7 +161,7 @@ module AichatAiHelper
     else
       # We assume AI Chat if not tutor - todo: rename FLOW_LAB to EXPERIMENTS and create a key for it.
       api_key = client_type == SharedConstants::AI_CHAT_CLIENT_TYPES[:AI_TUTOR] ?
-        CDO.google_gemini_ai_tutor_api_key : CDO.google_gemini_ai_chat_api_key
+        CDO.google_gemini_ai_tutor_api_key : CDO.google_gemini_ai_chat_lab_api_key
       return AichatGeminiClient.new(api_key, model_id, usage_reporter)
     end
   end
