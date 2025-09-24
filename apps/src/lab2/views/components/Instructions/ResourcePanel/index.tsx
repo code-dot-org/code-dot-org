@@ -29,15 +29,12 @@ import {VersionHistoryPanel} from './VersionHistory';
 
 import styles from './styles.module.scss';
 
-// Onboarding Tour for PythonLab
+// Onboarding Tour for Python Lab Resource Panel
 /* eslint-disable import/order */
 // Disabling import/order rule for grouped onboarding tour imports.
-import './introjs.scss';
+import './resource-panel-introjs.scss';
 import {Steps} from 'intro.js-react';
-import {
-  INITIAL_STEP,
-  STEPS,
-} from '@cdo/apps/pythonlab/resourcePanelTourHelpers';
+import {INITIAL_STEP, STEPS} from './resourcePanelTourHelpers';
 /* eslint-enable import/order */
 
 enum Tabs {
