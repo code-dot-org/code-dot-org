@@ -37,8 +37,8 @@ import FoormDailySurveyResultsLoader from './reports/foorm/results_loader';
 import DailySurveyResultsLoader from './reports/local_summer_workshop_daily_survey/results_loader';
 import ReportView from './reports/report_view';
 import WorkshopFilter from './workshop_filter';
+import {WorkshopForm} from './workshop_form/WorkshopForm';
 import WorkshopIndex from './workshop_index';
-import {WorkshopFormTemplate} from './WorkshopFormTemplate';
 import {WorkshopAttendance} from './workshops/attendance/WorkshopAttendance';
 import {WorkshopEnrollments} from './workshops/enrollments/WorkshopEnrollments';
 import {WorkshopOverview} from './workshops/overview/WorkshopOverview';
@@ -211,7 +211,7 @@ const routeConfigs = [
   ...WorkshopCourseConfigs.map(config => ({
     path: `workshops/new/${config.slug}`,
     breadcrumbs: `Workshops,${workshopLabel(`New ${config.label}`)}`,
-    component: WorkshopFormTemplate,
+    component: WorkshopForm,
     props: {config},
   })),
   {
@@ -249,7 +249,7 @@ const routeConfigs = [
       {
         path: 'edit',
         breadcrumbs: 'Workshops,Workshop,Edit',
-        component: WorkshopFormTemplate,
+        component: WorkshopForm,
       },
     ],
   },

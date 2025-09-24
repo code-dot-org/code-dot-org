@@ -4,7 +4,7 @@ import SegmentedButtons, {
 import React, {FC, useMemo} from 'react';
 import {useLocation, useNavigate} from 'react-router-dom';
 
-import styles from '../workshop.module.scss';
+import styles from './SurveyCategorySelection.module.scss';
 
 export interface SurveyCategorySelectionProps {
   questionCategoryButtons: SegmentedButtonsProps['buttons'];

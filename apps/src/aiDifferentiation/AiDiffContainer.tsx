@@ -20,6 +20,7 @@ interface AiDiffContainerProps {
   open: boolean;
   scriptName?: string;
   curriculumCourses?: string[];
+  unreadNotificationCount: number;
 }
 
 const MIN_VISIBLE = 40;
@@ -49,6 +50,7 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
   open,
   scriptName,
   curriculumCourses,
+  unreadNotificationCount,
 }) => {
   const [showWelcomeExperience, setShowWelcomeExperience] = useState(true);
 
@@ -138,6 +140,7 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
                     context={context}
                     scriptName={scriptName}
                     curriculumCourses={curriculumCourses}
+                    unreadNotificationCount={unreadNotificationCount}
                   />
                 )}
           </div>

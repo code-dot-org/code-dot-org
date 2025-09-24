@@ -5,8 +5,8 @@ import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import classNames from 'classnames';
 import React, {useEffect, useMemo, useState} from 'react';
 
-import {SystemPromptSettings} from '@cdo/apps/aichat/types';
-import {queryParams} from '@cdo/apps/code-studio/utils';
+import {ChatButtonData, SystemPromptSettings} from '@cdo/apps/aichat/types';
+import {shouldShowAiTutor} from '@cdo/apps/lab2/ai/shouldShowAiTutor';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {ProjectSources} from '@cdo/apps/lab2/types';
 import AiTutor2Chat from '@cdo/apps/lab2/views/components/AiTutor2Chat';
@@ -25,7 +25,7 @@ import CopyrightButton from './CopyrightButton';
 import ResourcePanelExtraLinks from './ResourcePanelExtraLinks';
 import SettingsPanel from './SettingsPanel';
 import ValidationPanel from './ValidationPanel';
-import VersionHistoryPanel from './VersionHistoryPanel';
+import {VersionHistoryPanel} from './VersionHistory';
 
 import styles from './styles.module.scss';
 
@@ -81,6 +81,7 @@ type ResourcePanelProps = InstructionsProps & {
   versionHistoryProps?: VersionHistoryProps;
   aiTutorSystemPromptSettings?: SystemPromptSettings;
   aiTutorMultimodalEnabled?: boolean;
+  aiTutorChatButtonData?: ChatButtonData[];
 };
 
 /**
@@ -96,6 +97,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   versionHistoryProps,
   aiTutorSystemPromptSettings,
   aiTutorMultimodalEnabled,
+  aiTutorChatButtonData,
   ...instructionsProps
 }) => {
   const {theme} = useTheme();
@@ -117,6 +119,10 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   );
   const levelName = instructionsProps.levelProperties.name;
   const channelId = useAppSelector(state => state.lab.channel?.id);
+  const appName = instructionsProps.levelProperties.appName;
+
+  // Tooltip should disappear quickly.
+  const hideTooltipDelayMs = 10;
 
   // Build available tabs based on level information.
   const availableTabs = useMemo(() => {
@@ -149,9 +155,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     }
 
     if (
-      (levelProperties.aiTutorAvailable ||
-        queryParams('show-ai-tutor2') === 'true') &&
-      hiddenContextCallback
+      hiddenContextCallback &&
+      shouldShowAiTutor(appName, levelProperties.aiTutorAvailable)
     ) {
       tabMap[Tabs.AiTutor] = (
         <AiTutor2Chat
@@ -160,6 +165,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
           aiTutorMultimodalEnabled={aiTutorMultimodalEnabled}
           levelName={levelName}
           channelId={channelId}
+          aiTutorChatButtonData={aiTutorChatButtonData}
         />
       );
     }
@@ -193,16 +199,18 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     hasValidationConditions,
     isUserTeacher,
     hiddenContextCallback,
+    appName,
     isReadOnly,
     isViewingOldVersion,
     viewAsUserId,
     isWidgetView,
     versionHistoryProps,
     showRubric,
+    aiTutorSystemPromptSettings,
     aiTutorMultimodalEnabled,
     levelName,
     channelId,
-    aiTutorSystemPromptSettings,
+    aiTutorChatButtonData,
     selectedVersion,
     levelId,
   ]);
@@ -222,7 +230,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   return (
     <div className={classNames(styles.resourcePanel, className)}>
       <div className={styles.sidebar}>
-        <div className={styles.tabs}>
+        <nav className={styles.tabs}>
           {getTypedKeys(availableTabs).map(tab => (
             <WithTooltip
               tooltipProps={{
@@ -232,6 +240,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                 size: 'xs',
                 'data-theme': theme,
               }}
+              hideDelayMs={hideTooltipDelayMs}
+              hideOnFirstLeave={true}
               key={`tooltip-${tab}`}
             >
               <Button
@@ -250,10 +260,11 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                     ? 'kit'
                     : undefined,
                 }}
+                aria-label={tabInfo[tab].title}
               />
             </WithTooltip>
           ))}
-        </div>
+        </nav>
         <div className={classNames(styles.bottomTabs)}>
           <ResourcePanelExtraLinks levelId={levelId} theme={theme} />
           <CopyrightButton theme={theme} />
@@ -265,6 +276,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
               size: 'xs',
               'data-theme': theme,
             }}
+            hideDelayMs={hideTooltipDelayMs}
+            hideOnFirstLeave={true}
           >
             <Button
               className={styles.bottomButton}
@@ -275,6 +288,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
               icon={{iconName: 'gear'}}
               color={'gray'}
               type={'tertiary'}
+              aria-label={commonI18n.settings()}
             />
           </WithTooltip>
         </div>
@@ -287,7 +301,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
           rightHeaderContent={rightHeaderContent}
         >
           {availableTabs[currentTab]}
-          <NavigationArea {...instructionsProps} />
+          <NavigationArea isResourcePanel={true} {...instructionsProps} />
           {isSettingsOpen && (
             <SettingsPanel
               settings={settings || []}

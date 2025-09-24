@@ -162,7 +162,7 @@ module AiDiffBedrockHelper
     }
   end
 
-  def self.filter_for_context(lesson_number, unit_num, course_names, section_contexts)
+  def self.filter_for_context(lesson_number, unit_num, course_names, section_contexts, labs = [])
     filter_config = {}
     and_all_filters = []
     or_all_filters = []
@@ -170,25 +170,39 @@ module AiDiffBedrockHelper
       and_all_filters.push(
         or_all: [
           {equals: {key: "lesson", value: format("L%02d", lesson_number)}},
-          {equals: {key: "lesson", value: "all"}}
-        ]
+          {equals: {key: "lesson", value: "all"}},
+          labs.empty? ? nil : {in: {key: 'lab', value: labs}}
+        ].compact
       )
     end
     unless unit_num.nil?
       and_all_filters.push(
         or_all: [
           {equals: {key: "unit", value: format("U%02d", unit_num)}},
-          {equals: {key: "unit", value: "all"}}
-        ]
+          {equals: {key: "unit", value: "all"}},
+          labs.empty? ? nil : {in: {key: 'lab', value: labs}}
+        ].compact
       )
     end
-    and_all_filters.push({in: {key: "course", value: course_names}}) unless course_names.nil?
+    unless course_names.nil?
+      if labs.empty?
+        and_all_filters.push({in: {key: "course", value: course_names}})
+      else
+        and_all_filters.push(
+          or_all: [
+            {in: {key: "course", value: course_names}},
+            {in: {key: 'lab', value: labs}}
+          ]
+        )
+      end
+    end
 
     if lesson_number.nil? && unit_num.nil? && course_names.nil?
       or_all_filters.push({equals: {key: "scope", value: "general"}})
       section_contexts&.each do |section_context|
         or_all_filters.push({in: {key: "course", value: section_context[:course_names]}})
       end
+      or_all_filters.push({in: {key: 'lab', value: labs}}) unless labs.empty?
     end
 
     #can't use "and_all" if there is only 1 expression to filter on, only 2+
@@ -201,6 +215,12 @@ module AiDiffBedrockHelper
                         end
     or_all_filters.push(curriculum_filter) unless curriculum_filter.nil?
 
+    # Ideally we'd be able to include the code docs this way instead of tacking
+    # them onto each of the and_all_filters above, but that causes us to exceed
+    # AWS's two-level nesting limit for filter conditions
+    # TODO: revisit this if/when the filter depth limit changes.
+    # or_all_filters.push({in: {key: 'lab', value: labs}}) unless labs.empty?
+
     #can't use "or_all" if there is only 1 expression to filter on, only 2+
     if or_all_filters.length > 1
       filter_config = {
@@ -212,10 +232,10 @@ module AiDiffBedrockHelper
     filter_config
   end
 
-  def self.request_bedrock_rag_chat(input, prompt, lesson_number, unit_num, course_name, session_id, section_contexts)
+  def self.request_bedrock_rag_chat(input, prompt, lesson_number, unit_num, course_name, session_id, section_contexts, labs = [])
     config = format_inputs_for_bedrock_request(input, prompt)
     config[:session_id] = session_id unless session_id.nil?
-    filter_config = filter_for_context(lesson_number, unit_num, course_name, section_contexts)
+    filter_config = filter_for_context(lesson_number, unit_num, course_name, section_contexts, labs)
     config[:retrieve_and_generate_configuration][:knowledge_base_configuration][:retrieval_configuration][:vector_search_configuration][:filter] = filter_config
 
     response = create_bedrock_client.retrieve_and_generate(

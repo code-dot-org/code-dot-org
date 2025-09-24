@@ -229,6 +229,9 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
         closeTutor={handleClick}
         scriptName={scriptName}
         curriculumCourses={curriculumCourses}
+        unreadNotificationCount={
+          unreadNotificationCount === 'loading' ? 0 : unreadNotificationCount
+        }
       />
     </div>
   );

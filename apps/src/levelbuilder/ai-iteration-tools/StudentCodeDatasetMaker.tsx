@@ -1,28 +1,36 @@
 import Button from '@code-dot-org/component-library/button';
+import Checkbox from '@code-dot-org/component-library/checkbox';
 import TextField from '@code-dot-org/component-library/textField';
 import Papa from 'papaparse';
 import React, {useState} from 'react';
 
 import {
   AIResponse,
-  evaluateStudentWork,
+  evaluateStudentWorkOverall,
+  evaluateStudentWorkSkills,
   StudentAnswer,
 } from '@cdo/apps/aiEvaluation/aiEvaluationApi';
 
 import {fetchStudentCodeSamples} from './StudentWorkSamplesApi';
 
-type EvaluatedCodeSample = StudentAnswer &
-  AIResponse & {
-    [key in `skill-${string}${
-      | 'evaluationCriteria'
-      | 'aiEvaluation'
-      | 'aiReasoning'}`]?: string;
-  };
+type EvaluatedCodeSample =
+  | OverallEvaluatedCodeSample
+  | SkillsEvaluatedCodeSample;
+
+type OverallEvaluatedCodeSample = StudentAnswer & AIResponse;
+
+type SkillsEvaluatedCodeSample = StudentAnswer & {
+  [key in `skill-${string}${
+    | 'evaluationCriteria'
+    | 'aiEvaluation'
+    | 'aiReasoning'}`]?: string;
+};
 
 const StudentCodeDatasetMaker: React.FC = () => {
   const [datasetName, setDatasetName] = useState<string>('');
   const [levelId, setLevelId] = useState<string>('');
   const [unitId, setUnitId] = useState<string>('');
+  const [evaluateSkills, setEvaluateSkills] = useState<boolean>(false);
   const [studentIds, setStudentIds] = useState<string>('');
   const [pending, setPending] = useState<boolean>(false);
   const [fetchedSamples, setFetchedSamples] = useState<StudentAnswer[]>([]);
@@ -64,7 +72,7 @@ const StudentCodeDatasetMaker: React.FC = () => {
       levelId: Number(levelId),
     };
     const codeSamples = await fetchStudentCodeSamples(studentWorkRequest);
-    if (!codeSamples) {
+    if (codeSamples?.length === 0) {
       alert('No samples found for the given parameters.');
     } else {
       const fetchedCodeSamples = codeSamples as unknown as StudentAnswer[];
@@ -84,26 +92,34 @@ const StudentCodeDatasetMaker: React.FC = () => {
         studentDisplayName: studentResponse.studentDisplayName,
         studentWork: studentResponse.studentWork,
       };
-      return evaluateStudentResponse(studentWorkToEvaluate as StudentAnswer);
+      return evaluateStudentCode(studentWorkToEvaluate as StudentAnswer);
     });
     await Promise.allSettled(responsePromises);
     setEvaluationPending(false);
   };
 
-  const evaluateStudentResponse = async (studentAnswer: StudentAnswer) => {
-    const aiResponse = await evaluateStudentWork(
-      studentAnswer,
-      parseInt(levelId),
-      parseInt(unitId)
-    );
-    const evaluation: EvaluatedCodeSample = {
-      ...studentAnswer,
-      aiEvaluation: aiResponse.aiEvaluation,
-      aiReasoning: aiResponse.aiReasoning,
-      evaluationCriteria: aiResponse.evaluationCriteria,
-      id: aiResponse.id,
-    };
+  const evaluateStudentCode = async (studentAnswer: StudentAnswer) => {
+    let aiResponse;
+    if (evaluateSkills) {
+      aiResponse = await evaluateStudentWorkSkills(
+        studentAnswer,
+        parseInt(levelId),
+        parseInt(unitId)
+      );
+    } else {
+      aiResponse = await evaluateStudentWorkOverall(
+        studentAnswer,
+        parseInt(levelId),
+        parseInt(unitId)
+      );
+    }
+
+    let evaluation: EvaluatedCodeSample;
+
     if (aiResponse.skillEvaluations) {
+      evaluation = {
+        ...studentAnswer,
+      };
       for (let i = 0; i < aiResponse.skillEvaluations.length; i++) {
         const skillEvaluation = aiResponse.skillEvaluations[i];
         const skillKey = skillEvaluation.skillKey;
@@ -114,6 +130,13 @@ const StudentCodeDatasetMaker: React.FC = () => {
         evaluation[`skill-${skillKey}-aiReasoning`] =
           skillEvaluation.aiReasoning;
       }
+    } else {
+      evaluation = {
+        ...studentAnswer,
+        evaluationCriteria: aiResponse.evaluationCriteria,
+        aiEvaluation: aiResponse.aiEvaluation,
+        aiReasoning: aiResponse.aiReasoning,
+      };
     }
     setEvaluatedSamples(prevSamples => [...prevSamples, evaluation]);
   };
@@ -164,6 +187,15 @@ const StudentCodeDatasetMaker: React.FC = () => {
             isPending={pending}
           />
         </div>
+        <br />
+        <Checkbox
+          label={'Evaluate skills (if any) associated with the level'}
+          name={'evaluateSkills'}
+          checked={evaluateSkills}
+          size="s"
+          onChange={e => setEvaluateSkills(e.target.checked)}
+        />
+        <br />
         <br />
         <div>
           <Button

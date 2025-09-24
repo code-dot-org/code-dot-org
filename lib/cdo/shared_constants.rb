@@ -736,7 +736,6 @@ module SharedConstants
 
   # We should always specify a version for the LLM so the results don't unexpectedly change.
   # reference: https://platform.openai.com/docs/models/gpt-3-5.
-  AI_TUTOR_CHAT_MODEL_VERSION = 'gpt-4o-2024-05-13'
   AICHAT_MODEL_VERSION = 'gpt-4o-mini-2024-07-18'
   EVALUATE_STUDENT_LEARNING_MODEL_VERSION = 'gpt-4o-mini-2024-07-18'
 
@@ -757,6 +756,7 @@ module SharedConstants
     UNKNOWN: 'unknown',
   }.freeze
 
+  # TODO-AITUTOR: Remove these once ai_tutor_interaction model is removed.
   AI_TUTOR_INTERACTION_STATUS = AI_INTERACTION_STATUS
 
   AI_TUTOR_TYPES = {

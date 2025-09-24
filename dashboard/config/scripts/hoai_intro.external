@@ -5,10 +5,27 @@ description 'description here'
 markdown <<MARKDOWN
 <h1 style="text-align: center;"><i class="fa-solid fa-music"></i> Welcome to Music Lab: AI Session! <i class="fa-solid fa-music"></i></h1>
 
-##VIDEO PLACEHOLDER LEVEL
+##
 
-**Main Messages in the video:** 
-- Hour of AI Hype
-- AI as a creative helper
-- Humans guide AI and make the decisions
+<h2 style="text-align: center;"> Let's get this party started!</h2>
+
+
+
+<div style="display: flex; justify-content: space-between; width: 90%; margin: 20px auto;">
+  <div style="background: #ffffff; width: 30%; padding: 15px; box-sizing: border-box; border-radius: 5px">    <h4 style="text-align: center;"><b>Step 1</b></h4>
+  
+    <img src="https://images.code.org/11f954c433fe840b93cf0c4b633862da-Group 87 (4).png" alt="" style="width: 160px; height: 160px; display: block; margin: 0 auto 10px;">    
+ <h4 style="text-align: center;">Generate a <b>new dance character</b> for the party!
+  </div>
+  <div style="background: #ffffff; width: 30%; padding: 15px; box-sizing: border-box; border-radius: 5px">
+  <h4 style="text-align: center;"><b>Step 2</b></h4>
+<img src="https://images.code.org/2f01cde29eb924a61783dbbdcec0cde1-botmusic.jpg" alt="" style="width: 170px; height: 140px; display: block; margin: 0 auto 10px;">  <h4 style="text-align: center;">Learn how to generate <b>code for the music!</b>
+</div>
+  <div style="background: #ffffff; width: 30%; padding: 15px; box-sizing: border-box; border-radius: 5px">
+    <h4 style="text-align: center;"><b>Step 3</b></h4>
+<img src="https://images.code.org/c523776dcc674080b11cde5a45d01679-Untitled 9.jpg" alt="" style="width: 170px; height: 140px; display: block; margin: 0 auto 10px;">
+    <h4 style="text-align: center;">Generate <b>code for dance moves</b> during the party.
+  </div>
+</div>
+
 MARKDOWN

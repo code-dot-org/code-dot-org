@@ -230,7 +230,6 @@ class I18n::Resources::Dashboard::CourseContent::SyncInTest < Minitest::Test
     I18nScriptUtils.expects(:get_level_url_key).with(script, level).never.returns('expected_level_url')
     sync_in_instance.expects(:get_i18n_strings).with(level).never.returns(expected_level_i18n_strings)
     script.expects(:in_initiative?).with('HOC').never.returns(false)
-    script.expects(:unversioned?).never.returns(false)
     I18nScriptUtils.expects(:unit_directory_change?).with(expected_i18n_source_dir_path, expected_i18n_source_file_path).never.returns(false)
     I18nScriptUtils.expects(:write_json_file).with(expected_i18n_source_file_path, {'expected_level_url' => {'expected_script_string_key' => 'expected_script_string_value'}}).never
     sync_in_instance.expects(:redact_json_file).with(expected_i18n_source_file_path).never

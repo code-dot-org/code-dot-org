@@ -138,25 +138,6 @@ class Pd::WorkshopMailer < ApplicationMailer
          reply_to: from_facilitators
   end
 
-  def facilitator_post_workshop(user, workshop)
-    @user = user
-    @workshop = workshop
-    survey_params = "workshop_id=#{workshop.id}"
-    @survey_url = CDO.studio_url "pd/workshop_survey/new_facilitator_post?#{survey_params}", CDO.default_scheme
-
-    @regional_partner_name = @workshop.regional_partner&.name
-    @deadline = (Time.now + 10.days).strftime('%B %-d, %Y').strip
-    @workshop_date = @workshop.sessions.size == 1 ?
-                       @workshop.sessions.first.start.strftime('%B %-d, %Y').strip :
-                       @workshop.friendly_date_range
-
-    mail content_type: 'text/html',
-         from: from_facilitators,
-         subject: 'How did your workshop go?',
-         to: email_address(@user.name, @user.email),
-         reply_to: from_facilitators
-  end
-
   def organizer_enrollment_reminder(workshop)
     @workshop = workshop
     @cancel_url = '#'

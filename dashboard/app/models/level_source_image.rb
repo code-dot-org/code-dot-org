@@ -87,12 +87,12 @@ class LevelSourceImage < ApplicationRecord
   end
 
   def s3_url
-    return "http://code.org/images/logo.png" if CDO.disable_s3_image_uploads
+    return CDO.studio_url('/blockly/media/logo.png', CDO.default_scheme) if CDO.disable_s3_image_uploads
     S3_URL + s3_filename
   end
 
   def s3_framed_url
-    return "http://code.org/images/logo.png" if CDO.disable_s3_image_uploads
+    return CDO.studio_url('/blockly/media/logo.png', CDO.default_scheme) if CDO.disable_s3_image_uploads
     S3_URL + s3_framed_filename
   end
 end

@@ -59,6 +59,7 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
     startSources,
     aiTutorSystemPromptSettings,
     aiTutorMultimodalEnabled,
+    aiTutorChatButtonData,
   } = useCodebridgeContext();
   const {
     mapReference,
@@ -208,12 +209,13 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
           className={moduleStyles.instructionsContainer}
           headerClassName={moduleStyles.infoPanelHeader}
           levelProperties={levelProperties}
-          requireRun={true}
+          requireRun={appName === 'pythonlab'}
           hiddenContextCallback={hiddenContextCallback}
           settings={settings}
           versionHistoryProps={{startSources}}
           aiTutorSystemPromptSettings={aiTutorSystemPromptSettings}
           aiTutorMultimodalEnabled={aiTutorMultimodalEnabled}
+          aiTutorChatButtonData={aiTutorChatButtonData}
         />
       </div>
     );
@@ -260,7 +262,7 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
             AiTutor2ResponseView={AiTutor2ResponseView}
             className={moduleStyles.instructionsContainer}
             levelProperties={levelProperties}
-            requireRun={true}
+            requireRun={appName === 'pythonlab'}
           />
         ) : (
           <ForTeachersOnly levelProperties={levelProperties} />
