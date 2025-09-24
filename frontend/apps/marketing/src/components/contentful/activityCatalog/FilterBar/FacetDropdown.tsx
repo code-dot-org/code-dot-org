@@ -12,7 +12,7 @@ type Props = {
   selected: Set<string> | undefined;
   onChange: (facetKey: string, next: Set<string>) => void;
   onOpenChange?: (open: boolean) => void;
-  /** desktop/tablet = 'menu' (default), mobile drawer = 'inline' */
+  
   variant?: 'menu' | 'inline';
 };
 
@@ -46,6 +46,8 @@ export default function FacetDropdown({
     cancelLeave();
     leaveTimer.current = setTimeout(cb, 120);
   };
+  const PURPLE = '#2c089f';
+  const PURPLE_HOVER = '#24087f';
 
   /* Mobile */
   const [openInline, setOpenInline] = React.useState(false);
@@ -74,13 +76,18 @@ export default function FacetDropdown({
             textTransform: 'none',
             px: 2,
             height: 44,
-            backgroundColor: '#e9faff',
+
             ...(isActive
               ? {
-                  color: t => t.palette.primary.contrastText,
+                  backgroundColor: PURPLE,
+                  color: '#fff',
                   '& .MuiButton-endIcon > *': {color: 'inherit'},
+                  '&:hover': {
+                    backgroundColor: PURPLE_HOVER,
+                  },
                 }
               : {
+                  backgroundColor: '#e9faff',
                   borderColor: 'primary.main',
                   color: 'text.primary',
                   '& .MuiButton-endIcon > *': {color: 'inherit'},
