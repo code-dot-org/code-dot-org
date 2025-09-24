@@ -50,6 +50,29 @@ const ORDER_ROW2 = [
   'accessibilitys',
 ];
 
+/* ----------------------- Sorting & overrides ----------------------- */
+// Always include specific facet values even if dataset has 0 hits for them
+const FACET_VALUE_OVERRIDES: Record<string, string[]> = {
+  ages: ['5 and under'],
+};
+
+// Natural (alphanumeric) sort: numbers compared numerically, text A→Z
+const NATURAL = new Intl.Collator(undefined, {
+  numeric: true,
+  sensitivity: 'base',
+});
+const sortOptions = (values: string[]) => [...values].sort(NATURAL.compare);
+
+const buildOptions = (facetKey: string, facets: FacetResult) => {
+  const details = facets[facetKey];
+  if (!details) return null;
+  const base = Object.keys(details.values ?? {});
+  const extra = FACET_VALUE_OVERRIDES[facetKey] ?? [];
+  const merged = Array.from(new Set([...extra, ...base]));
+  return sortOptions(merged);
+};
+/* ------------------------------------------------------------------ */
+
 export default function FilterBar({
   facets,
   selectedFacets,
@@ -103,9 +126,8 @@ export default function FilterBar({
   };
 
   const makeDropdown = (facetKey: string) => {
-    const details = facets[facetKey];
-    if (!details) return null;
-    const options = Object.keys(details.values);
+    const options = buildOptions(facetKey, facets);
+    if (!options) return null;
     return (
       <FacetDropdown
         key={facetKey}
@@ -120,11 +142,9 @@ export default function FilterBar({
   };
 
   const makeMobileDropdown = (facetKey: string) => {
-    const details = facets[facetKey];
-    if (!details) return null;
-    const options = Object.keys(details.values);
+    const options = buildOptions(facetKey, facets);
+    if (!options) return null;
     const selected = draftSelected[facetKey];
-
     return (
       <FacetDropdown
         key={facetKey}
@@ -169,8 +189,8 @@ export default function FilterBar({
               px: 2,
               height: 40,
               color: '#fff',
-              bgcolor: '#ff2aa0',
-              '&:hover': {bgcolor: '#e21b8f'},
+              bgcolor: '#ca01e4',
+              '&:hover': {bgcolor: '#ca01e4'},
               textTransform: 'none',
               fontWeight: 600,
             }}
@@ -289,8 +309,8 @@ export default function FilterBar({
                   px: 3,
                   height: 40,
                   color: '#fff',
-                  bgcolor: '#ff2aa0',
-                  '&:hover': {bgcolor: '#e21b8f'},
+                  bgcolor: '#ca01e4',
+                  '&:hover': {bgcolor: '#ca01e4'},
                   textTransform: 'none',
                   fontWeight: 700,
                   boxShadow: 'none',
@@ -305,21 +325,21 @@ export default function FilterBar({
     );
   }
 
-  //DESKTOP / TABLET
+  // DESKTOP / TABLET
   return (
     <Box
       sx={{
         display: 'grid',
         gap: 1,
-        mt: {xs: 0, sm: -2}, // pull closer to the two buttons on larger screens
+        mt: {xs: 0, sm: -2},
         mb:
           !isMobile && anyDropdownOpen
             ? showMore
-              ? 28
-              : 22
+              ? 16
+              : 10
             : showMore
-              ? 4
-              : 2,
+              ? 10
+              : 6,
         transition: t =>
           t.transitions.create('margin-bottom', {
             duration: t.transitions.duration.shortest,
@@ -404,9 +424,9 @@ export default function FilterBar({
               ml: 0.5,
               cursor: 'pointer',
               color: 'primary.main',
-              fontWeight: 500,
+              fontWeight: 300,
               lineHeight: 1.2,
-              fontSize: 8,
+              fontSize: 6,
               '&:hover': {textDecoration: 'underline'},
             }}
             onClick={onClearAll}
