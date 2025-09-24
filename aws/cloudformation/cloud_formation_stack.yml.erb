@@ -261,7 +261,7 @@ Resources:
   subnets: subnets(azs(AVAILABILITY_ZONES - ['us-east-1e'])), # us-east-1e doesn't support m5 instance types.
   frontend_policies: [{Ref: 'CDOPolicy'}, {'Fn::ImportValue': 'IAM-SessionPermissions'}],
   frontend_properties: {TargetGroupARNs: [Ref: 'ALBTargetGroup']},
-  frontend_volume_size: 128,
+  frontend_volume_size: 64,
   ami_timeout: 'PT120M',
   build_ami: erb_file(BOOTSTRAP_CHEF,
     resource_id: "AMICreate#{commit_hash}",

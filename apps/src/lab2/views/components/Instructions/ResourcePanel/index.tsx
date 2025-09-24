@@ -121,6 +121,9 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const channelId = useAppSelector(state => state.lab.channel?.id);
   const appName = instructionsProps.levelProperties.appName;
 
+  // Tooltip should disappear quickly.
+  const hideTooltipDelayMs = 10;
+
   // Build available tabs based on level information.
   const availableTabs = useMemo(() => {
     const tabMap: {[key in Tabs]?: React.ReactNode} = {};
@@ -227,7 +230,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   return (
     <div className={classNames(styles.resourcePanel, className)}>
       <div className={styles.sidebar}>
-        <div className={styles.tabs}>
+        <nav className={styles.tabs}>
           {getTypedKeys(availableTabs).map(tab => (
             <WithTooltip
               tooltipProps={{
@@ -237,6 +240,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                 size: 'xs',
                 'data-theme': theme,
               }}
+              hideDelayMs={hideTooltipDelayMs}
+              hideOnFirstLeave={true}
               key={`tooltip-${tab}`}
             >
               <Button
@@ -255,10 +260,11 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                     ? 'kit'
                     : undefined,
                 }}
+                aria-label={tabInfo[tab].title}
               />
             </WithTooltip>
           ))}
-        </div>
+        </nav>
         <div className={classNames(styles.bottomTabs)}>
           <ResourcePanelExtraLinks levelId={levelId} theme={theme} />
           <CopyrightButton theme={theme} />
@@ -270,6 +276,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
               size: 'xs',
               'data-theme': theme,
             }}
+            hideDelayMs={hideTooltipDelayMs}
+            hideOnFirstLeave={true}
           >
             <Button
               className={styles.bottomButton}
@@ -280,6 +288,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
               icon={{iconName: 'gear'}}
               color={'gray'}
               type={'tertiary'}
+              aria-label={commonI18n.settings()}
             />
           </WithTooltip>
         </div>

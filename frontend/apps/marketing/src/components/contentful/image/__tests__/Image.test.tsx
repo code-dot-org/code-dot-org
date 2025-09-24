@@ -2,6 +2,11 @@ import {render, screen} from '@testing-library/react';
 
 import Image from '../Image';
 
+jest.mock('@/selectors/contentful/getImage', () => ({
+  getAbsoluteImageUrl: (src: string) =>
+    src ? `https://cdn.example.com/${src}` : undefined,
+}));
+
 describe('Image Component', () => {
   it('renders Image component', () => {
     render(<Image src="test.jpg" altText={'This is an image'} />);

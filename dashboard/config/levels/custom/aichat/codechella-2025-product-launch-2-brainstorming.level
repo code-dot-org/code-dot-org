@@ -7,7 +7,7 @@
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Brainstorming Initial Ideas Chat\r\n\r\nUse AI Chat to help you come up with early ideas for your product launch.\r\n\r\nFocus on ideas that connect to your assigned role (e.g., name + slogan, visuals, script, or jingle).\r\n\r\n### Do This:\r\n1. Use AI Chat to brainstorm creative possibilities for your product or campaign.\r\n    - What could this product include or do?\r\n    - What are some possible names, taglines, looks, sounds, or messages?\r\n    - How might this appeal to students to solve a real problem?\r\n    - What images or documents can you provide to AI Chat?\r\n2. In your Activity Guide under Stage 2: Brainstorming Initial Ideas, write:\r\n\t- The question or prompt you gave to AI\r\n\t- A summary of what the AI told you\r\n3. Want better results? Try asking AI to give you options in different styles—like playful, futuristic, sleek, or tech-savvy.",
+    "long_instructions": "## Brainstorming Initial Ideas Chat\r\n\r\nUse AI Chat to help you come up with early ideas for your product launch. Think creatively about features, branding, and messages that would connect with adults working from home.\r\n\r\nFocus on ideas that connect to your assigned role (e.g., name + slogan, visuals, script, or jingle).\r\n\r\n### Do This:\r\n1. Use AI Chat to brainstorm creative possibilities for your product or campaign.\r\n    - What could this product include or do to support people working from home?\r\n    - What are some possible names, taglines, looks, sounds, or messages?\r\n    - How might this product solve everyday challenges remote workers face?\r\n    - What images, examples, or documents could you share with AI to inspire fresh ideas?\r\n2. As you brainstorm, start filling in the creative role sections of your group slide deck (logo + slogan, jingle, or script, depending on your role).\r\n3. Want better results? Ask AI to give you options in different styles—for example: professional, playful, minimalist, futuristic, or quirky.",
     "aichat_settings": {
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
@@ -35,7 +35,7 @@
         "retrievalContexts": "hidden",
         "modelCardInfo": "hidden"
       },
-      "levelSystemPrompt": "",
+      "levelSystemPrompt": "You are helping a creative team brainstorm fresh ideas for a product that supports adults working from home. Share multiple creative options for names, slogans, looks, sounds, or messages.",
       "hidePresentationPanel": true,
       "availableModelIds": [
         "gpt-4o-mini"
@@ -44,8 +44,11 @@
     },
     "bubble_choice_description": "Use AI Chat to help you come up with early ideas for your product launch.",
     "display_name": "Brainstorming Chat",
-    "thumbnail_url": "https://images.code.org/5e9ac4c059e55fbfc9adf798ca42e7b4-brainstorm.png"
+    "thumbnail_url": "https://images.code.org/5e9ac4c059e55fbfc9adf798ca42e7b4-brainstorm.png",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false"
   },
-  "audit_log": "[{\"changed_at\":\"2025-05-08T15:53:26.671+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson9-level1b_2024\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson9-level1b_2024\"},{\"changed_at\":\"2025-05-08 15:54:01 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-08T15:53:26.671+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson9-level1b_2024\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson9-level1b_2024\"},{\"changed_at\":\"2025-05-08 15:54:01 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-22 20:31:35 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-22 20:41:46 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>
