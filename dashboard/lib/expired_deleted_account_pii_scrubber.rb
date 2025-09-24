@@ -63,9 +63,15 @@ class ExpiredDeletedAccountPiiScrubber
     # an order by id, causing an inefficient scan on the id index. Order does not matter
     # for this operation, so we can use a simple limit approach.
     loop do
-      account_batch = accounts_to_scrub.limit(BATCH_SIZE)
+      # Execute batch selection on the reporting replica and materialize results.
+      account_batch = ActiveRecord::Base.connected_to(role: :reporting) do
+        accounts_to_scrub.limit(BATCH_SIZE).to_a
+      end
+
       account_batch.each do |user|
-        scrub_user(user)
+        ActiveRecord::Base.connected_to(role: :writing) do
+          scrub_user(user)
+        end
         self.num_accounts_scrubbed += 1
       rescue StandardError => exception
         self.num_errors += 1
@@ -74,6 +80,7 @@ class ExpiredDeletedAccountPiiScrubber
       ensure
         processed_user_ids << user.id
       end
+
       break if account_batch.size < BATCH_SIZE
     end
 
@@ -88,13 +95,8 @@ class ExpiredDeletedAccountPiiScrubber
     log_to_slack(summary, SLACK_CHANNEL_FOR_ERRORS) if num_errors.positive?
   end
 
-  # This query sometimes exceeds the timeout for the prod database. The reporting database is only seconds
-  # behind the prod database, and the default timeframe for expired accounts is 28 days, so we can use it here without much risk.
-  # This helps avoid timeouts and reduces load on the production database.
   def accounts_to_scrub
-    ActiveRecord::Base.connected_to(role: :reporting) do
-      Queries::User::ExpiredDeletedAccounts.call(deleted_before: deleted_since).where.not(id: processed_user_ids)
-    end
+    Queries::User::ExpiredDeletedAccounts.call(deleted_before: deleted_since).where.not(id: processed_user_ids)
   end
 
   def summary

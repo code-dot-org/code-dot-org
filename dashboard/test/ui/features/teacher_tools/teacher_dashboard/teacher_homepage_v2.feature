@@ -38,7 +38,7 @@ Feature: Using the teacher homepage
     # Open the print certificates page from the section options dropdown
     Given I am on "http://studio.code.org/teacher_dashboard/home"
     And I click "#section-options-dropdown-dropdown-button" once it exists
-    And I click "#ui-test-print-certificates" once it exists
+    And I click "#ui-test-print-certificates" once it exists to load a new page
     Then I wait until element "#certificate-batch" is visible
 
   Scenario: Teacher can archive and restore sections from the section options dropdown

@@ -258,7 +258,12 @@ export const HTMLPreview: React.FC = () => {
       headerContent={codebridgeI18n.preview()}
       hideHeaders
     >
-      <div className={moduleStyles.previewContainer}>
+      <div
+        className={classNames(
+          moduleStyles.previewContainer,
+          isFullScreenView && moduleStyles.fullScreenPreviewContainer
+        )}
+      >
         <HTMLPreviewHeader
           value={inputValue}
           onChange={setInputValue}

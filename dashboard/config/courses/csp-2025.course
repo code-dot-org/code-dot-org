@@ -24,7 +24,7 @@
     "csp9-2025",
     "csp10-2025"
   ],
-  "published_state": "stable",
+  "published_state": "in_development",
   "instruction_type": "teacher_led",
   "participant_audience": "student",
   "instructor_audience": "teacher",
