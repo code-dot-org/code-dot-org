@@ -11,7 +11,7 @@ module CdoContentful
         client.space = '27jkibac934d'
         client.namespace = 'master'
       end
-    end
+    end.freeze
 
     private_class_method :config=
   end

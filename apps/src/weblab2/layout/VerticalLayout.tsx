@@ -1,7 +1,7 @@
 import SegmentedButtons, {
   SegmentedButtonsProps,
 } from '@code-dot-org/component-library/segmentedButtons';
-import {OverlineTwoText} from '@code-dot-org/component-library/typography';
+import Typography from '@code-dot-org/component-library/typography';
 import {InfoPanel} from '@codebridge/InfoPanel/InfoPanel';
 import {LayoutProps} from '@codebridge/types';
 import HeaderButtons from '@codebridge/Workspace/HeaderButtons';
@@ -24,11 +24,11 @@ import lab2Styles from '@cdo/apps/lab2/views/components/layout/layout.module.scs
 import weblab2Styles from '@cdo/apps/weblab2/layout/vertical-layout.module.scss';
 
 const MIN_INFO_PANEL_WIDTH = 150;
-const INITIAL_INFO_PANEL_WIDTH = 300;
+const INITIAL_INFO_PANEL_WIDTH = 400;
 const INITIAL_INFO_PANEL_WIDTH_WIDGET = 500;
 const MIN_EDITOR_WIDTH = 300;
-const MIN_PREVIEW_WIDTH = 200;
-const INITIAL_PREVIEW_WIDTH = 600;
+const MIN_PREVIEW_WIDTH = 320;
+const INITIAL_PREVIEW_WIDTH = 400;
 const INITIAL_PREVIEW_WIDTH_WIDGET = 900;
 
 const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
@@ -164,12 +164,17 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
               <SegmentedButtons {...viewModeButtonsProps} />
             )}
             <div className={weblab2Styles.centerHeaderContent}>
-              <OverlineTwoText
-                className={weblab2Styles.centerHeaderContentText}
+              <Typography
+                semanticTag="h2"
+                visualAppearance="overline-two"
                 noMargin
+                className={classNames(
+                  weblab2Styles.headerLabel,
+                  weblab2Styles.centerHeaderContentText
+                )}
               >
                 {weblab2I18n.workspace()}
-              </OverlineTwoText>
+              </Typography>
               {projectTemplateLevel && <ProjectTemplateWorkspaceIconV2 />}
             </div>
             <HeaderButtons />

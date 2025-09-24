@@ -2,8 +2,9 @@ import {Button} from '@code-dot-org/component-library/button';
 import {FontAwesomeV6IconProps} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Tabs, {TabsProps} from '@code-dot-org/component-library/tabs';
 import React, {useCallback, useEffect, useMemo, useState} from 'react';
-import {useSelector} from 'react-redux';
 
+import {isModelUpdate, SystemPromptSettings} from '@cdo/apps/aichat/types';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import usePrevious from '@cdo/apps/util/usePrevious';
 
@@ -19,6 +20,7 @@ import {
   clearStagedFiles,
   fetchUserChatHistory,
   selectAllVisibleMessages,
+  sendAnalytics,
   setClientType,
   setNewChatSession,
 } from '../redux';
@@ -34,6 +36,7 @@ import {getAssetUrl, getShortName} from '../utils';
 import StagedFilesPreview from './assets/StagedFilesPreview';
 import UploadButton from './assets/UploadButton';
 import ChatEventsList from './ChatEventsList';
+import ChatModeDropdown from './ChatModeDropdown';
 import CopyChatHistoryButton from './CopyChatHistoryButton';
 import UserChatMessageEditor from './UserChatMessageEditor';
 
@@ -43,14 +46,17 @@ interface ChatWorkspaceProps {
   modelParameters: ModelParameters;
   clientType: AiChatClientType;
   chatButtons?: ChatButtonAndKey[];
-  hiddenContext?: string;
-  onClear: () => void;
+  hiddenContextCallback?: () => Promise<string>;
+  hideModelChangeMessage?: boolean;
 
   // Multimodal support
   multimodalEnabled?: boolean;
   channelId?: string;
   levelName?: string;
   hasStarterAssets?: boolean;
+
+  // Options for changing system prompt (used in Web Lab 2)
+  systemPromptSettings?: SystemPromptSettings;
 }
 
 enum WorkspaceTeacherViewTab {
@@ -69,12 +75,13 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   modelParameters,
   clientType,
   chatButtons,
-  hiddenContext,
-  onClear,
+  hiddenContextCallback,
   multimodalEnabled = false,
   levelName,
   channelId,
   hasStarterAssets = false,
+  systemPromptSettings,
+  hideModelChangeMessage = false,
 }) => {
   if (multimodalEnabled && (!levelName || !channelId)) {
     console.warn(
@@ -91,7 +98,15 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   );
   const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
   const scriptId = useAppSelector(state => state.progress.scriptId);
-  const visibleItems = useSelector(selectAllVisibleMessages);
+  const visibleItems = useAppSelector(state => {
+    if (hideModelChangeMessage) {
+      return selectAllVisibleMessages(state).filter(
+        message => !isModelUpdate(message)
+      );
+    } else {
+      return selectAllVisibleMessages(state);
+    }
+  });
   const currentUserId = useAppSelector(state => state.currentUser.userId);
 
   const selectedStudent = useAppSelector(({teacherSections, progress}) => {
@@ -255,6 +270,21 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     tabPanelsContainerClassName: moduleStyles.tabPanelsContainer,
   };
 
+  const onClear = useCallback(() => {
+    dispatch(clearChatMessages());
+    dispatch(
+      addChatEvent({
+        timestamp: Date.now(),
+        descriptionKey: 'CLEAR_CHAT',
+      })
+    );
+    dispatch(
+      sendAnalytics(EVENTS.CHAT_ACTION, {
+        action: 'Clear chat history',
+      })
+    );
+  }, [dispatch]);
+
   return (
     <div id="chat-workspace-area" className={moduleStyles.chatWorkspace}>
       {selectedStudent ? (
@@ -270,13 +300,17 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
         {multimodalAvailable && (
           <StagedFilesPreview buildAssetUrl={buildAssetUrl} />
         )}
+        <ChatModeDropdown
+          className={moduleStyles.modeDropdown}
+          systemPromptSettings={systemPromptSettings}
+        />
         {canChatWithModel && (
           <UserChatMessageEditor
             clientType={clientType}
             modelParameters={modelParameters}
             editorContainerClassName={moduleStyles.messageEditorContainer}
             chatButtons={chatButtons}
-            hiddenContext={hiddenContext}
+            hiddenContextCallback={hiddenContextCallback}
             multimodalAvailable={multimodalAvailable}
           />
         )}

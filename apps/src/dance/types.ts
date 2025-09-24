@@ -35,4 +35,6 @@ export interface DanceLevelProperties extends BlocklyLevelProperties {
   defaultSong?: string;
   useRestrictedSongs?: boolean;
   songSelection?: string[];
+  generateDancerMode?: boolean;
+  aiCodeGenerate?: boolean;
 }

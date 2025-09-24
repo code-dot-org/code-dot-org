@@ -787,7 +787,7 @@ const marketingPaths = {
 
 const pathPatterns = [
   /^\/_next\/static\//, // Next.js static assets
-  /^\/_next\/image\//,  // Next.js dynamic images
+  /^\/_next\/image/,  // Next.js dynamic images, /_next/image*
   /^\/forms\//,         // /forms/*
   /^\/schools\//,       // /schools/*
   /^\/applab\/docs\//,  // /applab/docs/*

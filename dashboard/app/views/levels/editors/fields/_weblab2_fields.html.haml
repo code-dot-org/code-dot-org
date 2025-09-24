@@ -2,17 +2,41 @@
   Web Lab 2 Fields
 
 #weblab2_fields.in.collapse
-  = f.label :initial_view_mode, 'Initial View Mode'
-  = f.select :initial_view_mode, options_for_select(@level.class.view_modes, @level.initial_view_mode)
-  %p Allows setting the initial view mode when the level is loaded, which can be:
-  %ul
-    %li
-      %strong Split mode (default):
-      shows both code editing and HTML preview in a split view.
-    %li
-      %strong Preview only:
-      Shows HTML preview only.
-    %li
-      %strong Code only:
-      Shows code editor only.
-  %p Students can switch between modes using buttons in the header.
+  .field
+    = f.label :initial_view_mode, 'Initial View Mode'
+    = f.select :initial_view_mode, options_for_select(@level.class.view_modes, @level.initial_view_mode)
+    %p Allows setting the initial view mode when the level is loaded, which can be:
+    %ul
+      %li
+        %strong Split mode (default):
+        shows both code editing and HTML preview in a split view.
+      %li
+        %strong Preview only:
+        Shows HTML preview only.
+      %li
+        %strong Code only:
+        Shows code editor only.
+    %p Students can switch between modes using buttons in the header.
+
+  .field
+    = f.label :available_ai_tutor_modes, 'AI Tutor Mode'
+
+    - available_ai_tutor_modes = @level.available_ai_tutor_modes ? (@level.available_ai_tutor_modes.is_a?(String) ? JSON.parse(@level.available_ai_tutor_modes) : @level.available_ai_tutor_modes) : ['suggest']
+    = f.select :available_ai_tutor_modes, options_for_select(@level.class.ai_tutor_modes, available_ai_tutor_modes), {}, {multiple: true, class: "selectize"}
+    %p Set the available AI Tutor modes for the level. The default mode is "Suggest". Use shift-click, ctrl-click, or cmd-click to select multiple options.
+    If multiple modes are available, students can switch between modes in the AI Tutor panel, and the default mode will
+    be the most restrictive mode. The order of modes from most to least restrictive is:
+    %ol
+      %li
+        %strong Suggest
+      %li
+        %strong Outline
+      %li
+        %strong Guide
+      %li
+        %strong Produce
+
+  .field
+    = f.label :level_system_prompt, 'Level System Prompt'
+    %p Optional addition to the system prompt for AI Tutor.
+    = f.text_area :level_system_prompt, placeholder: 'Level system prompt', rows: 4, style: 'width: 50%', value: @level.level_system_prompt

@@ -57,6 +57,7 @@ require 'testing/lock_thread'
 require 'testing/transactional_test_case'
 require 'testing/spec_syntax'
 require 'testing/capture_queries'
+require 'testing/cdo_contentful'
 require 'testing/rspec_mocks'
 require 'testing/vcr_cassettes'
 
@@ -175,6 +176,10 @@ class ActiveSupport::TestCase
     Unit.find_by_name(unit_name)&.destroy
     UnitGroup.find_by_name(unit_name)&.destroy
     CourseOffering.find_by_key(unit_name)&.destroy
+
+    # clear the unit cache to ensure we don't have a stale reference to the
+    # deleted unit and unit group
+    UnitGroup.clear_cache
 
     # create placeholder hourofcode CourseOffering, UnitGroup, Unit and Levels.
     unit = create(:script, :with_levels, levels_count: 10, name: unit_name)

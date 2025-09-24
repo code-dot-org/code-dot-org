@@ -315,7 +315,7 @@ class CertificateImage
 
     unit_or_unit_group = CurriculumHelper.find_matching_unit_or_unit_group(course_name)
     course_version = unit_or_unit_group&.get_course_version
-    return CERTIFICATE_COURSE_TYPES[:HOC] if course_version&.hoc?
+    return CERTIFICATE_COURSE_TYPES[:HOC] if course_version&.hoc_or_hoai?
     return CERTIFICATE_COURSE_TYPES[:PL] if course_version&.pl_course?
     return CERTIFICATE_COURSE_TYPES[:OTHER] if course_version
     CERTIFICATE_COURSE_TYPES[:HOC]

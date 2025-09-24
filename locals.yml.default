@@ -164,3 +164,10 @@ use_my_apps: true
 #contentful_space_id: "90t6bu6vlf76"
 #contentful_api_key: ""
 #contentful_hostname: "preview.contentful.com"
+
+# CDO Contentful engine configs. For local development, use the preview endpoint.
+# The preview key can be found in the Contentful UI under settings -> API keys -> CSforAll Local Development.
+#contentful_cs_for_all_access_token:
+#contentful_cs_for_all_space: 27jkibac934d
+#contentful_cs_for_all_api_url: preview.contentful.com
+#contentful_cs_for_all_namespace: master

@@ -1,21 +1,18 @@
 import {Button} from '@code-dot-org/component-library/button';
 import {FontAwesomeV6IconProps} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useMemo} from 'react';
 
-import {clearChatMessages} from '@cdo/apps/aichat/redux';
 import {
   ModelParameters,
   ChatButtonClickHandler,
   ChatButtonData,
+  SystemPromptSettings,
 } from '@cdo/apps/aichat/types';
 import ChatWorkspace from '@cdo/apps/aichat/views/ChatWorkspace';
-import {AiTutorContext} from '@cdo/apps/aiTutor/types';
 import {queryParams} from '@cdo/apps/code-studio/utils';
-import {buildHiddenContextString} from '@cdo/apps/pythonlab/aiTutorHelper';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import HttpClient from '@cdo/apps/util/HttpClient';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import {shouldShowCopyCode} from '../../ai/ai-should-show-copy-code';
@@ -49,7 +46,7 @@ const modelParameters: ModelParameters = {
 } as const;
 
 // Some pre-canned chat buttons.
-const chatButtonData: ChatButtonData[] = [
+const defaultChatButtonData: ChatButtonData[] = [
   {
     label: 'Give an example',
     value: 'Can you give me an example?',
@@ -82,76 +79,63 @@ const chatButtonData: ChatButtonData[] = [
   },
 ] as const;
 
-const chatButtons = chatButtonData.map(button => ({
-  ChatButton: ({onClick}: {onClick: ChatButtonClickHandler}) => (
-    <Button
-      className={moduleStyles.chatButton}
-      aria-label={button.label}
-      iconLeft={
-        {
-          ...button.icon,
-          className: classNames({
-            [moduleStyles['icon']]: true,
-            [moduleStyles[`icon-${button.icon?.iconName}`]]: button.icon,
-          }),
-        } as FontAwesomeV6IconProps
-      }
-      onClick={() => onClick(button.value, button.analyticsProperties)}
-      text={button.label}
-      size="s"
-      type="secondary"
-      color="black"
-    />
-  ),
-  key: button.label,
-}));
 interface AiTutor2ChatProps {
-  aiTutorSystemPromptName?: string;
-  aiTutorContextPromise: Promise<AiTutorContext>;
+  hiddenContextCallback: () => Promise<string>;
+  aiTutorSystemPromptSettings?: SystemPromptSettings;
+  aiTutorMultimodalEnabled?: boolean;
+  levelName?: string;
+  channelId?: string;
+  aiTutorChatButtonData?: ChatButtonData[];
 }
 
 // A free chat with lab-supplied context added to each question.
 const AiTutor2Chat: React.FunctionComponent<AiTutor2ChatProps> = ({
-  aiTutorSystemPromptName,
-  aiTutorContextPromise,
+  hiddenContextCallback,
+  aiTutorSystemPromptSettings,
+  aiTutorMultimodalEnabled = false,
+  levelName,
+  channelId,
+  aiTutorChatButtonData,
 }) => {
-  const dispatch = useAppDispatch();
-
   const [systemPrompt, setSystemPrompt] = useState<string>();
-  const [hiddenContextString, setHiddenContextString] = useState<string>();
+
+  const fetchPrompt = (promptName: string) => {
+    fetchCustomPrompt(promptName)
+      .then(prompt => {
+        if (prompt) {
+          setSystemPrompt(prompt);
+        } else {
+          setSystemPrompt(defaultSystemPrompt);
+        }
+      })
+      .catch(() => {
+        setSystemPrompt(defaultSystemPrompt);
+      });
+  };
 
   useEffect(() => {
-    if (aiTutorSystemPromptName || customPromptName) {
-      // Use the custom prompt name from query params if provided, otherwise use the systemPromptName
-      // passed in via props.
-      const promptToFetch = (customPromptName ||
-        aiTutorSystemPromptName) as string;
-      fetchCustomPrompt(promptToFetch)
-        .then(prompt => {
-          if (prompt) {
-            setSystemPrompt(prompt);
-          } else {
-            setSystemPrompt(defaultSystemPrompt);
-          }
-        })
-        .catch(() => {
-          setSystemPrompt(defaultSystemPrompt);
-        });
+    if (customPromptName) {
+      fetchPrompt(customPromptName);
+    } else if (aiTutorSystemPromptSettings?.selectedSystemPromptName) {
+      fetchPrompt(aiTutorSystemPromptSettings.selectedSystemPromptName);
     } else {
       setSystemPrompt(defaultSystemPrompt);
     }
-  }, [aiTutorSystemPromptName]);
+  }, [aiTutorSystemPromptSettings?.selectedSystemPromptName]);
 
   useEffect(() => {
     // Log which system prompt we end up using.
     if (customPromptName) {
       console.log(`🤖: systemPrompt: ${customPromptName}`, systemPrompt);
-    } else if (aiTutorSystemPromptName) {
-      console.log(`🤖: systemPrompt: ${aiTutorSystemPromptName}`, systemPrompt);
+    } else if (aiTutorSystemPromptSettings?.selectedSystemPromptName) {
+      console.log(
+        `🤖: systemPrompt: ${aiTutorSystemPromptSettings?.selectedSystemPromptName}`,
+        systemPrompt
+      );
     } else {
       console.log(`🤖: systemPrompt: default`);
     }
-  }, [systemPrompt, aiTutorSystemPromptName]);
+  }, [systemPrompt, aiTutorSystemPromptSettings?.selectedSystemPromptName]);
 
   useEffect(() => {
     // We currently use query params to allow AI model selection but otherwise do not provide any user
@@ -163,32 +147,45 @@ const AiTutor2Chat: React.FunctionComponent<AiTutor2ChatProps> = ({
     console.log('🤖: aiTutorModelId:', aiTutorModelId);
   }, []);
 
-  useEffect(() => {
-    let isMounted = true;
+  const chatButtons = useMemo(() => {
+    const chatButtonDataToUse = aiTutorChatButtonData || defaultChatButtonData;
+    return chatButtonDataToUse.map(button => ({
+      ChatButton: ({onClick}: {onClick: ChatButtonClickHandler}) => (
+        <Button
+          className={moduleStyles.chatButton}
+          aria-label={button.label}
+          iconLeft={
+            {
+              ...button.icon,
+              className: classNames({
+                [moduleStyles['icon']]: true,
+                [moduleStyles[`icon-${button.icon?.iconName}`]]: button.icon,
+              }),
+            } as FontAwesomeV6IconProps
+          }
+          onClick={() => onClick(button.value, button.analyticsProperties)}
+          text={button.label}
+          size="s"
+          type="secondary"
+          color="black"
+        />
+      ),
+      key: button.label,
+    }));
+  }, [aiTutorChatButtonData]);
 
-    aiTutorContextPromise.then(context => {
-      if (isMounted) {
-        setHiddenContextString(buildHiddenContextString(context));
-      }
-    });
-
-    // we need this cleanup function to avoid a race condition
-    // if the component rerenders before the promise resolves
-    return () => {
-      isMounted = false;
-    };
-  }, [aiTutorContextPromise]);
-
-  return systemPrompt && hiddenContextString !== undefined ? (
+  return systemPrompt ? (
     <div className={moduleStyles.container}>
       <ChatWorkspace
         clientType={AiChatClientTypes.AI_TUTOR}
         modelParameters={{...modelParameters, systemPrompt}}
         chatButtons={chatButtons}
-        hiddenContext={hiddenContextString}
-        onClear={() => {
-          dispatch(clearChatMessages());
-        }}
+        hiddenContextCallback={hiddenContextCallback}
+        systemPromptSettings={aiTutorSystemPromptSettings}
+        multimodalEnabled={aiTutorMultimodalEnabled}
+        levelName={levelName}
+        channelId={channelId}
+        hideModelChangeMessage={true}
       />
     </div>
   ) : (

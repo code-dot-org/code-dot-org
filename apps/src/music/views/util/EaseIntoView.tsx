@@ -8,7 +8,9 @@ const animationFramesPerSecond = 60;
 
 // EaseIntoView: This component does an eased scroll of the container's content,
 // starting from a distance below the top, and scrolling to the top.  It's useful
-// to show the user that some new content is scrollable.
+// to show the user that some new content is scrollable. It also creates an enter/
+// escape paradigm for keyboard users to navigate into and out of the container and
+// access the children (marked with the 'showing' class) within.
 
 interface EaseIntoViewProps {
   id?: string;
@@ -114,6 +116,37 @@ const EaseIntoView: React.FunctionComponent<EaseIntoViewProps> = ({
     }, 1000 / animationFramesPerSecond);
   }, [delayFrames, scrollStart, scrollEnd, doEase, frames]);
 
+  // This works only if the (appropriate) children have the 'showing' class.
+  // This is necessary because sometimes hidden elements are passed in as
+  // children, and we don't want to accidentally make those focusable. View
+  // instrumentGrid/index.tsx for the (only) example of this component in use.
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
+    const container = containerRef.current;
+    if (!container) return;
+    const focusableChildren = Array.from(
+      container.querySelectorAll<HTMLElement>('.showing')
+    );
+
+    switch (event.key) {
+      case 'Enter':
+        event.preventDefault();
+        // Make children that should be showing focusable and focus the first child.
+        focusableChildren.forEach(child => child.setAttribute('tabindex', '0'));
+        focusableChildren[0]?.focus();
+        break;
+
+      case 'Tab':
+        // Make all children unfocusable.
+        focusableChildren.forEach(child =>
+          child.setAttribute('tabindex', '-1')
+        );
+        break;
+
+      default:
+        break;
+    }
+  };
+
   return (
     <div
       id={id}
@@ -122,6 +155,7 @@ const EaseIntoView: React.FunctionComponent<EaseIntoViewProps> = ({
       aria-label={ariaLabel}
       className={className}
       ref={containerRefCallback}
+      onKeyDown={handleKeyDown}
     >
       {children}
     </div>

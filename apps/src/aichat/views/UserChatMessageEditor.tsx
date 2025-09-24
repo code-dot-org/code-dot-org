@@ -18,7 +18,7 @@ interface UserChatMessageEditorProps {
   clientType: AiChatClientType;
   editorContainerClassName?: string;
   chatButtons?: ChatButtonAndKey[];
-  hiddenContext?: string;
+  hiddenContextCallback?: () => Promise<string>;
   multimodalAvailable?: boolean;
 }
 
@@ -32,7 +32,7 @@ const UserChatMessageEditor: React.FunctionComponent<
   clientType,
   editorContainerClassName,
   chatButtons,
-  hiddenContext,
+  hiddenContextCallback,
   multimodalAvailable,
 }) => {
   const isWaitingForChatResponse = useAppSelector(
@@ -53,8 +53,9 @@ const UserChatMessageEditor: React.FunctionComponent<
   const disabled = isWaitingForChatResponse || saveInProgress || uploadsPending;
 
   const handleSubmit = useCallback(
-    (userMessage: string, analyticsProperties?: AnalyticsProperties) => {
+    async (userMessage: string, analyticsProperties?: AnalyticsProperties) => {
       if (!disabled) {
+        const hiddenContext = await hiddenContextCallback?.();
         dispatch(
           submitChatContents({
             text: userMessage,
@@ -73,7 +74,7 @@ const UserChatMessageEditor: React.FunctionComponent<
     [
       disabled,
       dispatch,
-      hiddenContext,
+      hiddenContextCallback,
       multimodalAvailable,
       chatAssets,
       modelParameters,

@@ -8,7 +8,7 @@
     {
       "name": "Example Add a Logo",
       "description": "",
-      "code": "```\n// add the Code.org logo to the screen from the url\r\nimage(\"logo\", \"http://code.org/images/logo.png\");\n```",
+      "code": "```\n// add the Code.org logo to the screen from the url\r\nimage(\"logo\", \"https://studio.code.org/blockly/media/logo.png\");\n```",
       "app": "",
       "image": null,
       "app_display_type": "codeFromCodeField",

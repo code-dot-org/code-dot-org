@@ -64,6 +64,24 @@ module MailJetConstants
       },
       from_address: 'noreply@code.org',
       from_name: 'Code.org',
+    },
+    facilitator_post_workshop_survey: {
+      template_id: {
+        production: {
+          default: 7_243_888,
+        }
+      },
+      from_address: 'noreply@code.org',
+      from_name: 'Code.org',
+    },
+    inactive_teacher_deletion_warning: {
+      template_id: {
+        production: {
+          default: 7_237_548,
+        }
+      },
+      from_address: 'noreply@code.org',
+      from_name: 'Code.org',
     }
   }.freeze
 
