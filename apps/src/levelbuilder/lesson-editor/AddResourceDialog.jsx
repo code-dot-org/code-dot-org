@@ -23,10 +23,38 @@ const TYPE_OPTIONS = [
 
 const AUDIENCE_OPTIONS = ['Student', 'Teacher', 'Verified Teacher'];
 
+const EMBEDDABILITY_TYPES = [
+  {
+    key: 'embed_and_resource_dropdown',
+    displayText: 'Both embedding and resource dropdown',
+  },
+  {
+    key: 'embed_only',
+    displayText: 'Embedding only',
+  },
+  {
+    key: 'resource_dropdown_only',
+    displayText: 'Resource dropdown only',
+  },
+];
+
+const CURRICULUM_CATEGORIES = [
+  {
+    key: 'curriculum',
+    displayText: 'Curriculum',
+  },
+  {
+    key: 'professional_learning',
+    displayText: 'Professional Learning',
+  },
+];
+
 const initialState = {
   name: '',
   type: '',
   audience: '',
+  embeddabilityType: EMBEDDABILITY_TYPES[0].key,
+  curriculumCategory: '',
   includeInPdf: false,
   assessment: false,
   url: '',
@@ -51,6 +79,8 @@ export default class AddResourceDialog extends Component {
         name: props.existingResource.name,
         type: props.existingResource.type,
         audience: props.existingResource.audience,
+        embeddabilityType: props.existingResource.embeddabilityType,
+        curriculumCategory: props.existingResource.curriculumCategory,
         includeInPdf: props.existingResource.includeInPdf,
         assessment: props.existingResource.assessment,
         url: props.existingResource.url,
@@ -183,6 +213,39 @@ export default class AddResourceDialog extends Component {
                   {AUDIENCE_OPTIONS.map(option => (
                     <option value={option} key={option}>
                       {option}
+                    </option>
+                  ))}
+                </select>
+              </label>
+            </div>
+            <div style={styles.dropdownRow}>
+              <label style={styles.selectAndLabel}>
+                <span>Embeddability type:</span>
+                <select
+                  name="embeddabilityType"
+                  style={styles.selectInput}
+                  value={this.state.embeddabilityType}
+                  onChange={this.handleInputChange}
+                >
+                  {EMBEDDABILITY_TYPES.map(option => (
+                    <option value={option.key} key={option.key}>
+                      {option.displayText}
+                    </option>
+                  ))}
+                </select>
+              </label>
+              <label style={styles.selectAndLabel}>
+                Curriculum category:
+                <select
+                  name="curriculumCategory"
+                  style={styles.selectInput}
+                  value={this.state.curriculumCategory}
+                  onChange={this.handleInputChange}
+                >
+                  <option value={''}>{''}</option>
+                  {CURRICULUM_CATEGORIES.map(option => (
+                    <option value={option.key} key={option.key}>
+                      {option.displayText}
                     </option>
                   ))}
                 </select>

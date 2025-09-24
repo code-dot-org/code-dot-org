@@ -21,7 +21,7 @@ describe('AddResourceDialog', () => {
     const wrapper = shallow(<AddResourceDialog {...defaultProps} />);
     expect(wrapper.contains('Add Resource')).toBe(true);
     expect(wrapper.find('input').length).toBe(6);
-    expect(wrapper.find('select').length).toBe(2);
+    expect(wrapper.find('select').length).toBe(4);
   });
 
   it('has an extra input with course version id if one is provided', () => {
@@ -30,7 +30,7 @@ describe('AddResourceDialog', () => {
     );
     expect(wrapper.contains('Add Resource')).toBe(true);
     expect(wrapper.find('input').length).toBe(7);
-    expect(wrapper.find('select').length).toBe(2);
+    expect(wrapper.find('select').length).toBe(4);
   });
 
   it('validates key, name, and url on submit', () => {
@@ -47,6 +47,8 @@ describe('AddResourceDialog', () => {
     instance.setState({
       name: 'my resource name',
       url: 'code.org',
+      embeddabilityType: 'embed_only',
+      curriculumCategory: 'curriculum',
     });
     const saveResourceSpy = jest
       .spyOn(instance, 'saveResource')
@@ -68,6 +70,8 @@ describe('AddResourceDialog', () => {
       downloadUrl: '',
       type: 'Handout',
       audience: 'Teacher',
+      embeddabilityType: 'embed_and_resource_dropdown',
+      curriculumCategory: '',
     };
     const wrapper = mount(
       <AddResourceDialog
@@ -82,5 +86,9 @@ describe('AddResourceDialog', () => {
     expect(wrapper.find('[name="includeInPdf"]').props().checked).toBe(true);
     expect(wrapper.find('[name="type"]').props().value).toBe('Handout');
     expect(wrapper.find('[name="audience"]').props().value).toBe('Teacher');
+    expect(wrapper.find('[name="embeddabilityType"]').props().value).toBe(
+      'embed_and_resource_dropdown'
+    );
+    expect(wrapper.find('[name="curriculumCategory"]').props().value).toBe('');
   });
 });

@@ -27,6 +27,8 @@
 # @attr [String] audience - who this resource is targeted toward (eg teacher, student, etc)
 # @attr [String] download_url - URL that can download the file
 # @attr [Boolean] include_in_pdf - indicates whether the file will be included in a PDF handout
+# @attr [String] embeddability_type - what has access to this resource (embedded and able to be scraped, user-facing in resource dropdown, or both)
+# @attr [String] curriculum_category - corresponds with 'type' section of embeddings metadata (can be null, 'curriculum', or 'professional_learning')
 class Resource < ApplicationRecord
   include SerializedProperties
 
@@ -50,6 +52,8 @@ class Resource < ApplicationRecord
     download_url
     include_in_pdf
     is_rollup
+    embeddability_type
+    curriculum_category
   )
 
   def generate_key
