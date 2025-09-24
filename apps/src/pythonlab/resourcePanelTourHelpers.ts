@@ -21,22 +21,19 @@ export const STEPS = [
     title: 'Resource Panel Tabs',
     intro:
       'There are tabs for each of the resources you need while working on a level including Instructions, Validation and Version History.',
+    position: 'right',
   },
   {
     element: '#resource-panel-links',
     title: 'Resource Panel Links',
     intro:
       "Here is where you'll find links to documentation and lab settings including light/dark and font size",
+    position: 'top-right',
   },
   {
-    title: 'Resource Panel Button',
+    element: '#resource-panel-navigation-button',
+    title: 'Resource Panel Navigation Button',
     intro:
-      'The Continue button can always be found at the bottom of the resource area. It will be disabled if you need to do more work to complete the level.',
-  },
-  {
-    element: '#resource-panel-validation',
-    title: 'Resource Panel Validation',
-    intro:
-      'For most levels, you will need to run validation after completing the steps in the instructions. This tab is where you go to test your code and see the results.',
+      'The button that allows you to move to the next level can always be found at the bottom of the resource area. It will be disabled if you need to do more work to complete the level.',
   },
 ];

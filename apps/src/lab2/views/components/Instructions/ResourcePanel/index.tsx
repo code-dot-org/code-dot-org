@@ -125,14 +125,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
   const isReadOnly = useAppSelector(isReadOnlyWorkspace);
   const isWidgetView = instructionsProps.levelProperties.widgetView || false;
-  const submittable = instructionsProps.levelProperties.submittable || false;
-  const navigationID = submittable
-    ? '#instructions-submit-button'
-    : '#instructions-continue-button';
-  const TOUR_STEPS = [...STEPS];
-  const continueButtonStep = STEPS[3];
-  continueButtonStep.element = navigationID;
-  TOUR_STEPS[3] = continueButtonStep;
 
   const levelId = instructionsProps.levelProperties.id;
   const hasValidationConditions = useAppSelector(
@@ -258,7 +250,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
         <Steps
           enabled={resourcePanelTourEnabled}
           initialStep={INITIAL_STEP}
-          steps={TOUR_STEPS}
+          steps={STEPS}
           onExit={() => {}}
           onChange={() => {}}
           onBeforeChange={() => {}}
