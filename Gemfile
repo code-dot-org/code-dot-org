@@ -224,7 +224,7 @@ gem 'execjs'
 # support the same version of mini_racer, or remove this dependency entirely
 # once node is installed in production. For more details, see
 # https://codedotorg.atlassian.net/browse/INF-708
-gem 'mini_racer', group: [:staging, :test, :production, :levelbuilder]
+gem 'mini_racer', group: [:staging, :test, :production, :levelbuilder, :adhoc]
 
 gem 'jwt', '~> 2.7.0'
 
