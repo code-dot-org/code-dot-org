@@ -17,8 +17,6 @@ class NotificationsController < ApplicationController
   def mark_as_read
     external_notification_ids = (params[:external_notification_ids] || []).compact_blank
 
-    # TODO: Our contentful setup only supports `en-US` for now.
-
     if external_notification_ids.empty?
       render json: {status: 'error', message: 'No notification IDs provided'}, status: :bad_request
       return
