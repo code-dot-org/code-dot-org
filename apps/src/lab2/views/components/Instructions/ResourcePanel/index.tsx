@@ -82,6 +82,7 @@ type ResourcePanelProps = InstructionsProps & {
   aiTutorSystemPromptSettings?: SystemPromptSettings;
   aiTutorMultimodalEnabled?: boolean;
   aiTutorChatButtonData?: ChatButtonData[];
+  navigationBubble?: boolean;
 };
 
 /**
@@ -98,6 +99,9 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   aiTutorSystemPromptSettings,
   aiTutorMultimodalEnabled,
   aiTutorChatButtonData,
+  // Default hideNavigation to true since most labs pin the navigation area to bottom.
+  hideNavigation: hideInstructionsNavigation = true,
+  navigationBubble = false,
   ...instructionsProps
 }) => {
   const {theme} = useTheme();
@@ -131,7 +135,10 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
 
     if (levelProperties.longInstructions) {
       tabMap[Tabs.Instructions] = (
-        <Instructions {...instructionsProps} hideNavigation />
+        <Instructions
+          {...instructionsProps}
+          hideNavigation={hideInstructionsNavigation}
+        />
       );
     }
 
@@ -213,6 +220,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     aiTutorChatButtonData,
     selectedVersion,
     levelId,
+    hideInstructionsNavigation,
   ]);
 
   useEffect(() => {
@@ -301,7 +309,13 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
           rightHeaderContent={rightHeaderContent}
         >
           {availableTabs[currentTab]}
-          <NavigationArea isResourcePanel={true} {...instructionsProps} />
+          {(hideInstructionsNavigation || currentTab !== Tabs.Instructions) && (
+            <NavigationArea
+              {...instructionsProps}
+              bubble={navigationBubble}
+              className={styles.navigationFooter}
+            />
+          )}
           {isSettingsOpen && (
             <SettingsPanel
               settings={settings || []}

@@ -29,6 +29,7 @@
   "toFinishRun": "To finish, run your code",
   "toSubmitEditRun": "To submit, edit and run your code",
   "toSubmitEdit": "To submit, edit your code",
+  "toSubmitValidate": "To submit, validate your code",
   "test": "Test",
   "testName": "Test Name",
   "unexpectedSuccess": "Unexpected success",
