@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-01-15T20:24:45.000Z",
   "level_num": "custom",
@@ -29,14 +30,13 @@
           "blocks": [
             {
               "type": "when_run",
-              "id": "?4UjBg:#75Wp2mX+)ttk",
+              "id": "when-run-block",
               "x": 30,
               "y": 30,
               "deletable": false,
               "next": {
                 "block": {
                   "type": "play_sound",
-                  "id": "K!Iq7+#mTnqx,-H*AMz}",
                   "fields": {
                     "sound": "electro/drum_beat_cowbell"
                   },
@@ -44,7 +44,6 @@
                     "measure": {
                       "shadow": {
                         "type": "math_number",
-                        "id": ",sXrhp%Qy!l`^HFm0;/+",
                         "fields": {
                           "NUM": 1
                         }
@@ -54,7 +53,6 @@
                   "next": {
                     "block": {
                       "type": "play_chord_at_measure",
-                      "id": "p_C*WDYEy+`#%pnSX}NC",
                       "fields": {
                         "chord": {
                           "instrument": "piano",
@@ -68,7 +66,6 @@
                         "measure": {
                           "shadow": {
                             "type": "math_number",
-                            "id": "+Zp$gT):ers{,u[!H_:$",
                             "fields": {
                               "NUM": 1
                             }
@@ -77,18 +74,6 @@
                       }
                     }
                   }
-                }
-              }
-            },
-            {
-              "type": "triggered_at",
-              "id": "@yhaSR$Fp.d^|:X6sZaE",
-              "x": 425,
-              "y": 30,
-              "fields": {
-                "trigger": "<field name=\"trigger\">trigger1</field>",
-                "var": {
-                  "id": "u(-hrJtc2:$c;57l#EEO"
                 }
               }
             }
@@ -100,10 +85,18 @@
     },
     "offer_browser_tts": "false",
     "use_secondary_finish_button": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-09-18T15:27:29.312-04:00\",\"changed\":[\"cloned from \\\"local music\\\"\"],\"cloned_from\":\"local music\"},{\"changed_at\":\"2024-09-18 15:30:48 -0400\",\"changed\":[\"level_data\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2025-01-14 17:02:54 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2025-09-24 07:05:46 -0700\",\"changed\":[\"level_data\"],\"changed_by_id\":4,\"changed_by_email\":\"hannah.bergam+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-09-18T15:27:29.312-04:00\",\"changed\":[\"cloned from \\\"local music\\\"\"],\"cloned_from\":\"local music\"},{\"changed_at\":\"2024-09-18 15:30:48 -0400\",\"changed\":[\"level_data\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2025-01-14 17:02:54 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2025-09-24 07:05:46 -0700\",\"changed\":[\"level_data\"],\"changed_by_id\":4,\"changed_by_email\":\"hannah.bergam+lb@code.org\"},{\"changed_at\":\"2025-09-24 11:13:15 -0700\",\"changed\":[\"level_data\"],\"changed_by_id\":4,\"changed_by_email\":\"hannah.bergam+lb@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>
