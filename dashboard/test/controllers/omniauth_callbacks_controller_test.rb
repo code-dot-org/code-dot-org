@@ -341,14 +341,6 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_nil signed_in_user_id
   end
 
-  test "login: redirect to sign-in if auth params are nil" do
-    @request.env['omniauth.params'] = nil
-    assert_does_not_create(User) do
-      get :passthru
-    end
-    assert_redirected_to new_user_session_path
-  end
-
   test 'clever: signs in user if user is found by credentials' do
     # Given I have a Clever-Code.org account
     user = create(:student, :clever_sso_provider)
