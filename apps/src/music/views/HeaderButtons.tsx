@@ -153,8 +153,14 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
           {/* Start Over Button */}
           <IconButtonWithTooltip
             id="start-over"
-            i18nLabel={musicI18n.startOver()}
-            icon="refresh"
+            label={musicI18n.startOver()}
+            icon={{iconName: 'refresh', iconStyle: 'solid'}}
+            type="tertiary"
+            color="black"
+            buttonSize="xs"
+            tooltipSize="xs"
+            tooltipDirection="onBottom"
+            hideTooltipTail={true}
             onClick={onClickStartOver}
             containerRef={containerRef}
           />
@@ -185,8 +191,14 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
           {/* Undo Button */}
           <IconButtonWithTooltip
             id="undo"
-            i18nLabel={musicI18n.undo()}
-            icon="undo"
+            label={musicI18n.undo()}
+            icon={{iconName: 'undo', iconStyle: 'solid'}}
+            type="tertiary"
+            color="black"
+            buttonSize="xs"
+            tooltipSize="xs"
+            tooltipDirection="onBottom"
+            hideTooltipTail={true}
             disabled={!canUndo}
             onClick={() => onClickUndoRedo('undo')}
             containerRef={containerRef}
@@ -194,8 +206,14 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
           {/* Redo Button */}
           <IconButtonWithTooltip
             id="redo"
-            i18nLabel={musicI18n.redo()}
-            icon="redo"
+            label={musicI18n.redo()}
+            icon={{iconName: 'redo', iconStyle: 'solid'}}
+            type="tertiary"
+            color="black"
+            buttonSize="xs"
+            tooltipSize="xs"
+            tooltipDirection="onBottom"
+            hideTooltipTail={true}
             disabled={!canRedo}
             onClick={() => onClickUndoRedo('redo')}
             containerRef={containerRef}
@@ -204,8 +222,14 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
           {Blockly.showBlockHelp && (
             <IconButtonWithTooltip
               id="documentation"
-              i18nLabel={musicI18n.documentation()}
-              icon="book"
+              label={musicI18n.documentation()}
+              icon={{iconName: 'book', iconStyle: 'solid'}}
+              type="tertiary"
+              color="black"
+              buttonSize="xs"
+              tooltipDirection="onBottom"
+              tooltipSize="xs"
+              hideTooltipTail={true}
               onClick={onClickDocumentation}
               containerRef={containerRef}
             />
