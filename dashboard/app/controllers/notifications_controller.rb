@@ -1,13 +1,15 @@
 class NotificationsController < ApplicationController
   before_action :authenticate_user!
 
+  # TODO: Our contentful setup only supports `en-US` for now.
+  # We should use request.locale if we switch to more locale support.
+  # Decision thread: https://codedotorg.slack.com/archives/C08AMQ869QX/p1758749785732599
+  # contentful docs: https://www.contentful.com/developers/docs/tutorials/general/setting-locales/
+  LOCALE = I18n.default_locale
+
   # Returns a list of contentful notifications for the user that have not expired or been dismissed
   def index
-    # TODO: Contentful needs to support full list of locales. For now, we only use the default, 'en-US'.
-    # We should use request.locale when that happens.
-    # contentful docs: https://www.contentful.com/developers/docs/tutorials/general/setting-locales/
-    locale =  I18n.default_locale
-    results = Notifications.get_all(current_user.id, locale)
+    results = Notifications.get_all(current_user.id, LOCALE)
 
     render json: results.as_json.map {|notification| notification.deep_transform_keys {|key| key.to_s.camelize(:lower)}}, status: :ok
   end
@@ -15,17 +17,14 @@ class NotificationsController < ApplicationController
   def mark_as_read
     external_notification_ids = (params[:external_notification_ids] || []).compact_blank
 
-    # TODO: Contentful needs to support full list of locales. For now, we only use the default, 'en-US'.
-    # We should use request.locale when that happens.
-    # contentful docs: https://www.contentful.com/developers/docs/tutorials/general/setting-locales/
-    locale = I18n.default_locale
+    # TODO: Our contentful setup only supports `en-US` for now.
 
     if external_notification_ids.empty?
       render json: {status: 'error', message: 'No notification IDs provided'}, status: :bad_request
       return
     end
 
-    valid_external_ids = filter_to_existing_ids(external_notification_ids, locale)
+    valid_external_ids = filter_to_existing_ids(external_notification_ids, LOCALE)
     found_external_notifications = current_user.external_notifications.where(external_id: valid_external_ids)
 
     found_external_notifications.where(read_at: nil).update_all(read_at: Time.current)
