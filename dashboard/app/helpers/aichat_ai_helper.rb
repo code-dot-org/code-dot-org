@@ -161,7 +161,7 @@ module AichatAiHelper
     else
       # We use separate keys per-client for Gemini so that we can more easily allocate donated credits appropriately.
       # In the longer term, we should consider adding per-client keys for OpenAI as well in order to more easily differentiate between use cases.
-      # Also note that we assume AI Chat Lab if not AI Tutor here, which is not strictly true because of Flow Lab. We could add an EXPERIMENT client type and add an explicit key to handle those use cases (eg, Flow Lab). 
+      # Also note that we assume AI Chat Lab if not AI Tutor here, which is not strictly true because of Flow Lab. We could add an EXPERIMENT client type and add an explicit key to handle those use cases (eg, Flow Lab).
       api_key = client_type == SharedConstants::AI_CHAT_CLIENT_TYPES[:AI_TUTOR] ?
         CDO.google_gemini_ai_tutor_api_key : CDO.google_gemini_ai_chat_lab_api_key
       return AichatGeminiClient.new(api_key, model_id, usage_reporter)
