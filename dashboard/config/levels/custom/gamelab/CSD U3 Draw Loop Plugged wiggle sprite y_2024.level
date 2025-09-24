@@ -1,5 +1,6 @@
 <Gamelab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 50,
   "created_at": "2023-11-28T21:11:46.000Z",
   "level_num": "custom",
@@ -58,7 +59,7 @@
     "all_animations_single_frame": "true",
     "pause_animations_by_default": "false",
     "long_instructions": "<img src=\"https://images.code.org/1e22fb89bcdf99168aee6324d17137ee-image-1493138232702.gif\" style=\"float:right;height:150px\">\r\n\r\n# Updating Properties\r\n\r\nThis level is very similar to the last, but this time, you'll add in the draw loop yourself.\r\n\r\n# Do This\r\n1) Add the draw loop block to the bottom of this program.\r\n2) Move any blocks that need to be inside the draw loop.\r\n3) Move on when your program looks like the picture to the right.\r\n",
-    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"201b0c8d-0348-40d8-98f8-83588f984c6f\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"201b0c8d-0348-40d8-98f8-83588f984c6f\": {\r\n      \"name\": \"salt\",\r\n      \"sourceUrl\": \"https://studio.code.org/v3/animations/xyAOiTsxBiOZtG_MThCJwI_b2FnAnQD0huf40bSHPz0/201b0c8d-0348-40d8-98f8-83588f984c6f.png?version=WS9NEPuqMtXGyLkogmpAU9FOkLxTbxo3\",\r\n      \"frameSize\": {\r\n        \"x\": 48,\r\n        \"y\": 95\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"WS9NEPuqMtXGyLkogmpAU9FOkLxTbxo3\"\r\n    }\r\n  }\r\n}",
+    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"948963ee-a17a-4904-a3fd-ca5d8726618c\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"948963ee-a17a-4904-a3fd-ca5d8726618c\": {\r\n      \"name\": \"salt\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/level_animations/px3DpHxUYNolMfs5X8790Ln.jJpcy9ls/lb-salt-inverted.png\",\r\n      \"frameSize\": {\r\n        \"x\": 46,\r\n        \"y\": 95\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"88C3XyZA2K0RtHZqKOFo_wfOFzh9OmvX\",\r\n      \"categories\": [\r\n        \"tools\"\r\n      ]\r\n    }\r\n  }\r\n}",
     "encrypted_examples": "tzdsLy8qz7r5qBFyFIsmJ3vdZB0dl2UwoPRgHVcbeSM52Fcw9Q0DqkLBLc3g\npIMcJ02yVl88tBGrkfYUNohGYQ==\n",
     "parent_level_id": 20716,
     "name_suffix": "_2024",
@@ -88,9 +89,8 @@
     "rubric_performance_level_4": "The sprite does not animate.",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-11-28T21:11:46.224+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Draw Loop Plugged wiggle sprite y_2023\\\"\"],\"cloned_from\":\"CSD U3 Draw Loop Plugged wiggle sprite y_2023\"},{\"changed_at\":\"2024-02-14 16:35:40 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-14 16:58:49 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-11-28T21:11:46.224+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Draw Loop Plugged wiggle sprite y_2023\\\"\"],\"cloned_from\":\"CSD U3 Draw Loop Plugged wiggle sprite y_2023\"},{\"changed_at\":\"2024-02-14 16:35:40 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-14 16:58:49 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-23 20:57:30 +0000\",\"changed\":[\"code_functions\",\"start_animations\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":20970,\"changed_by_email\":\"cassi.brenci-levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

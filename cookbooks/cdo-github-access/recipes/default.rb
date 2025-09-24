@@ -34,7 +34,7 @@ end
 
 apt_package 'git-lfs'
 
-github_token = node['cdo-github-access']['github_token']
+github_token = node['cdo-github-access']['github_token'].to_s
 
 template "#{node[:home]}/.gitconfig" do
   source 'gitconfig.erb'

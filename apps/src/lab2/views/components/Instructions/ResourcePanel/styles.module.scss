@@ -1,6 +1,9 @@
+@use '../../layout/variables.scss' as variables;
+@use '../../../../../mixins.scss' as mixins;
+
 .resourcePanel {
   display: flex;
-  background-color: var(--background-neutral-secondary);
+  background-color: var(--background-neutral-primary);
   height: 100%;
 }
 
@@ -13,28 +16,34 @@
     margin-top: 2.5rem;
     display: flex;
     flex-direction: column;
+    border-top: variables.$default-border;
   }
 
   // Doubling class name to increase specificity and override default button styles.
   .tabButton.tabButton {
-    height: 2rem;
-    width: 2rem;
+    height: 3.5rem;
+    width: 3.5rem;
     min-width: 2rem;
-    margin-left: 5px;
-    border: 1px solid var(--borders-neutral-primary);
-    border-right: none;
-    border-radius: 4px 0 0 4px;
+    border-bottom: variables.$default-border;
+    border-top: 0;
+    border-inline: 0;
+    border-radius: 0;
+    background-color: var(--background-neutral-secondary);
 
     &.selected {
       background-color: var(--background-neutral-primary);
       position: relative;
       z-index: 2;
-      
+
+      i {
+        color: var(--text-brand-teal-primary);
+      }
+
       // Extend the background to cover the border between selected tab and resource panel.
       &::after {
         content: '';
         position: absolute;
-        right: -1px;
+        inset-inline-end: -1px;
         top: 0;
         height: 100%;
         width: 1px;
@@ -43,9 +52,26 @@
     }
 
     i {
-      color: var(--text-neutral-secondary);
-      font-size: 14px;
+      color: var(--text-neutral-quaternary);
+      font-size: 1.25rem;
     }
+
+    &:hover:not(.selected) {
+      background-color: var(--background-neutral-primary);
+
+      i {
+        color: var(--text-neutral-tertiary);
+      }
+    }
+
+    // Override default active state borders to prevent jumping when clicking a tab
+    &:active {
+      border-bottom: variables.$default-border !important;
+      border-top: none !important;
+      border-inline: none !important;
+    }
+
+    @include mixins.focus-styles(var(--borders-brand-teal-primary), -2px);
   }
 
   .bottomTabs {
@@ -75,7 +101,7 @@
   flex-direction: column;
   flex: 1;
   min-width: 0;
-  border-left: 1px solid var(--borders-neutral-primary);
+  border-inline-start: variables.$default-border;
 }
 
 .panelContent {

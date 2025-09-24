@@ -68,7 +68,7 @@ import danceI18n from '../locale';
 import ProgramExecutor from '../ProgramExecutor';
 
 import DanceControls from './DanceControls';
-import DancerGenerate from './DancerGenerate';
+import GenerateDancer from './GenerateDancer';
 import SourcesContainer, {useSources} from './SourcesContainer';
 
 import moduleStyles from './dance-view.module.scss';
@@ -547,7 +547,7 @@ const DanceView: React.FunctionComponent<{
         <div id={BLOCKLY_DIV_ID} />
       </PanelContainer>
       {aiGenerateMode && (
-        <Guide id="generate-panel">
+        <Guide id="generate-panel" width="narrow">
           {
             <>
               <div>
@@ -576,8 +576,9 @@ export default (props: LabProps<DanceLevelProperties, DanceProjectSources>) => (
   <SourcesContainer {...props} defaultSources={defaultSources}>
     {queryParams('ai-generate-dancer') === 'true' ||
     props.levelProperties.generateDancerMode ? (
-      <DancerGenerate
+      <GenerateDancer
         adlibOption={(queryParams('ai-generate-adlib') as string) || 'basic2'}
+        levelProperties={props.levelProperties}
       />
     ) : (
       <DanceView levelProperties={props.levelProperties} />

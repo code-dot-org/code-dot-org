@@ -14,7 +14,7 @@ Indenting is important.  In this example, when the code is run, it plays "hiphop
 
 Don't include any comments in the generated pseudocode.
 
-The valid sounds to use are: "{sounds}".  (The length of each sound is in parentheses.)  You can use any of these sounds in your pseudocode.
+The valid sounds to use are: {sounds}.  (The length of each sound is in parentheses.)  You can use any of these sounds in your pseudocode.
 `;
 
 export const DefaultPrompt =

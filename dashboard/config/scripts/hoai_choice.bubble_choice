@@ -4,10 +4,10 @@ description 'You get to choose the order you work on each part. After you finish
 
 sublevels
 
-level 'music-lab-loops-explore-practice-e_v2'
+level 'pilot_generate_dancer'
 
-level 'Generate_music_shareout'
+level 'length_prompt'
 
-level 'dancelab_intro'
+level 'dance_moves'
 
 uses_lab2
