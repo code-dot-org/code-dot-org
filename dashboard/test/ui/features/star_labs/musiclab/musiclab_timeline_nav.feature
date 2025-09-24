@@ -1,5 +1,3 @@
-# Temporarily skipping flaky test. Investigate and re-enable.
-@skip
 Feature: Musiclab timeline is keyboard navigable
 
 @no_mobile
