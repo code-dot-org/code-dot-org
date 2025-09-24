@@ -35,7 +35,9 @@ export default async function ActivitiesPage({
     return notFound();
   }
 
-  const contentfulActivities = await getContentfulActivities();
+  const contentfulActivities = await getContentfulActivities(
+    activityType as ActivityType,
+  );
   const db = createDatabase(
     contentfulActivities as unknown as Entry<Activity>[],
   );
@@ -53,6 +55,7 @@ export default async function ActivitiesPage({
       length: {},
       accessibilitys: {},
       technologyClassroom: {},
+      languagesText: {},
     },
   });
 

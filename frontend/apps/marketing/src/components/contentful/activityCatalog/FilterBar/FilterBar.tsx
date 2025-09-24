@@ -21,7 +21,6 @@ import {
 import type {FacetResult} from '@orama/orama';
 import * as React from 'react';
 
-// eslint-disable-next-line import-x/no-unresolved
 import FacetDropdown from './facetDropdown';
 
 type Props = {
