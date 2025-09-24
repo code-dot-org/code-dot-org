@@ -36,7 +36,7 @@ class AichatRequestsControllerTest < ActionController::TestCase
 
   setup do
     @controller.stubs(:storage_decrypt_channel_id).returns([123, @project_id])
-    DCDO.stubs(:get).with('block_ai_tutor2_chat_completion', anything).returns(false)
+    DCDO.stubs(:get).with('block_ai_tutor_chat_completion', anything).returns(false)
     DCDO.stubs(:get).with('block_aichat_chat_completion', anything).returns(false)
     DCDO.stubs(:get).with('aichat_request_limit_per_min', anything).returns(AichatRequestsController::DEFAULT_REQUEST_LIMIT_PER_MIN)
     DCDO.stubs(:get).with('aichat_polling_interval_ms', anything).returns(AichatRequestsController::DEFAULT_POLLING_INTERVAL_MS)
@@ -62,40 +62,40 @@ class AichatRequestsControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
-  test 'unauthorized users can access start_chat_completion from python lab levels' do
+  test 'unauthorized users can access start_chat_completion from ai tutor levels' do
     sign_in(@unauthorized_student)
-    python_lab_level = create(:pythonlab)
-    params_with_python_level = @valid_params_chat_completion.merge(aichatContext: @default_aichat_context.merge(currentLevelId: python_lab_level.id))
-    post :start_chat_completion, params: params_with_python_level, as: :json
+    ai_tutor_client_type = SharedConstants::AI_CHAT_CLIENT_TYPES[:AI_TUTOR]
+    params_with_ai_tutor_client_type = @valid_params_chat_completion.merge(aichatContext: @default_aichat_context.merge(clientType: ai_tutor_client_type))
+    post :start_chat_completion, params: params_with_ai_tutor_client_type, as: :json
     assert_response :success
   end
 
-  test 'ai_tutor2 DCDO flag blocks access to start_chat_completion from python lab levels' do
+  test 'ai_tutor DCDO flag blocks access to start_chat_completion from ai tutor levels' do
     sign_in(@unauthorized_student)
-    DCDO.stubs(:get).with('block_ai_tutor2_chat_completion', anything).returns(true)
-    python_lab_level = create(:pythonlab)
-    params_with_python_level = @valid_params_chat_completion.merge(aichatContext: @default_aichat_context.merge(currentLevelId: python_lab_level.id))
-    post :start_chat_completion, params: params_with_python_level, as: :json
+    DCDO.stubs(:get).with('block_ai_tutor_chat_completion', anything).returns(true)
+    ai_tutor_client_type = SharedConstants::AI_CHAT_CLIENT_TYPES[:AI_TUTOR]
+    params_with_ai_tutor_client_type = @valid_params_chat_completion.merge(aichatContext: @default_aichat_context.merge(clientType: ai_tutor_client_type))
+    post :start_chat_completion, params: params_with_ai_tutor_client_type, as: :json
     assert_response :forbidden
   end
 
-  test 'ai_tutor2 DCDO flag does not block start_chat_completion from non python lab levels' do
+  test 'ai_tutor DCDO flag does not block start_chat_completion from ai chat levels' do
     sign_in(@authorized_teacher1)
-    DCDO.stubs(:get).with('block_ai_tutor2_chat_completion', anything).returns(true)
+    DCDO.stubs(:get).with('block_ai_tutor_chat_completion', anything).returns(true)
     post :start_chat_completion, params: @valid_params_chat_completion, as: :json
     assert_response :success
   end
 
-  test 'aichat DCDO flag does not block access to start_chat_completion from python lab levels' do
+  test 'aichat DCDO flag does not block access to start_chat_completion from ai tutor levels' do
     sign_in(@unauthorized_student)
     DCDO.stubs(:get).with('block_aichat_chat_completion', anything).returns(true)
-    python_lab_level = create(:pythonlab)
-    params_with_python_level = @valid_params_chat_completion.merge(aichatContext: @default_aichat_context.merge(currentLevelId: python_lab_level.id))
-    post :start_chat_completion, params: params_with_python_level, as: :json
+    ai_tutor_client_type = SharedConstants::AI_CHAT_CLIENT_TYPES[:AI_TUTOR]
+    params_with_ai_tutor_client_type = @valid_params_chat_completion.merge(aichatContext: @default_aichat_context.merge(clientType: ai_tutor_client_type))
+    post :start_chat_completion, params: params_with_ai_tutor_client_type, as: :json
     assert_response :success
   end
 
-  test 'aichat DCDO flag blocks start_chat_completion from non python lab levels' do
+  test 'aichat DCDO flag blocks start_chat_completion from ai chat levels' do
     sign_in(@authorized_teacher1)
     DCDO.stubs(:get).with('block_aichat_chat_completion', anything).returns(true)
     post :start_chat_completion, params: @valid_params_chat_completion, as: :json

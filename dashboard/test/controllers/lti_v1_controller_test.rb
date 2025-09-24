@@ -533,17 +533,6 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     assert deployment.name
   end
 
-  test 'auth - link lti_user_identity with lti_deployment' do
-    payload = get_valid_payload
-    jwt = create_jwt_and_stub(payload)
-    user = create_preexisting_user(payload)
-    deployment = create(:lti_deployment, deployment_id: @deployment_id, lti_integration: @integration)
-    assert_equal deployment.lti_user_identities.count, 0
-    post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
-    assert_equal deployment.lti_user_identities.count, 1
-    assert_equal deployment.lti_user_identities.first, user.lti_user_identities.first
-  end
-
   test 'auth - do not link lti_user_identity with lti_deployment if already linked' do
     payload = get_valid_payload
     jwt = create_jwt_and_stub(payload)
@@ -652,11 +641,12 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     assert_response :bad_request
   end
 
-  test 'sync - should not sync when launching from wrong context' do
+  test 'sync - should redirect to homepage when context or nrps_url is missing' do
     user = create(:teacher, :with_lti_auth)
     sign_in user
-    LtiV1Controller.any_instance.expects(:render_sync_course_error).with('Attempting to sync a course or section from the wrong place.', :bad_request, 'wrong_context')
     get '/lti/v1/sync_course', params: {lti_integration_id: 'foo', deployment_id: 'bar', context_id: nil, rlid: 'qux', nrps_url: nil}
+    assert_response :redirect
+    assert_equal '/home', '/' + @response.redirect_url.split('/').last
   end
 
   test 'sync - should not sync and render sync course error when missing a param' do

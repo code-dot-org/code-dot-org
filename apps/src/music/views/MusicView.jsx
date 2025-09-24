@@ -28,6 +28,7 @@ import {setExtraCopyrightContent} from '@cdo/apps/sharedComponents/footer/Copyri
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
+import {saveGeneratedSongMetadata} from '../ai/generate/GenerateCode';
 import AppConfig from '../appConfig';
 import {TRIGGER_FIELD} from '../blockly/constants';
 import MusicBlocklyWorkspace from '../blockly/MusicBlocklyWorkspace';
@@ -71,7 +72,6 @@ import {
   addPlaybackEvents,
   setCodeToLoad,
 } from '../redux/musicRedux';
-import {saveGeneratedSongMetadata} from '../utils/Generate';
 import {Key} from '../utils/Notes';
 import SoundUploader from '../utils/SoundUploader';
 

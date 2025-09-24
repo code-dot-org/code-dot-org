@@ -1,14 +1,18 @@
 import {Button} from '@code-dot-org/component-library/button';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
+import {Heading5} from '@code-dot-org/component-library/typography';
 import React, {useCallback, useEffect, useState} from 'react';
 
+import {LevelProperties} from '@cdo/apps/lab2/types';
 import {getGeneratedDancerAssets} from '@cdo/apps/lab2/utils/GeneratedDancer';
 import Adlib, {AdlibsType} from '@cdo/apps/lab2/views/components/guide/Adlib';
 import Guide from '@cdo/apps/lab2/views/components/guide/Guide';
+import NavigationButton from '@cdo/apps/lab2/views/components/Instructions/NavigationButton';
 import getRandomInt from '@cdo/apps/util/getRandomInt';
 import {trySetLocalStorage} from '@cdo/apps/utils';
+import dancerEmptyHeadShoulders from '@cdo/static/dance/dancer-empty-head-shoulders.png';
 
-import moduleStyles from './dancer-generate.module.scss';
+import moduleStyles from './generate-dancer.module.scss';
 
 const adlibs: AdlibsType = {
   basic: {
@@ -42,14 +46,16 @@ const adlibs: AdlibsType = {
 
 interface DancerGenerateProps {
   adlibOption: string;
+  levelProperties: LevelProperties;
 }
 
 // This UI takes over the entire lab area and allows the user to generate a dancer using
 // a Guide UI component containing an Adlib UI component.  Pre-generated dancer assets are
 // retrieved from an online cache.  Information about the generated dancer is written to local
 // storage.
-const DancerGenerate: React.FunctionComponent<DancerGenerateProps> = ({
+const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
   adlibOption,
+  levelProperties,
 }) => {
   const {setTheme} = useTheme();
 
@@ -99,6 +105,7 @@ const DancerGenerate: React.FunctionComponent<DancerGenerateProps> = ({
   return (
     <div id="dance-lab" className={moduleStyles.dancerGenerate}>
       <Guide id="generate-panel">
+        <Heading5 className={moduleStyles.heading}> Use AI</Heading5>
         {(aiGenerateState === 'generating' || aiGenerateState === 'done') && (
           <div className={moduleStyles.textArea}>{adlibText}</div>
         )}
@@ -118,6 +125,7 @@ const DancerGenerate: React.FunctionComponent<DancerGenerateProps> = ({
               type="primary"
               color="purple"
               size="s"
+              iconLeft={{iconName: 'sparkles'}}
               onClick={generateDancer}
             />
           </>
@@ -133,6 +141,7 @@ const DancerGenerate: React.FunctionComponent<DancerGenerateProps> = ({
               type="primary"
               color="purple"
               size="s"
+              iconLeft={{iconName: 'sparkles'}}
               onClick={generateDancer}
             />
 
@@ -144,12 +153,27 @@ const DancerGenerate: React.FunctionComponent<DancerGenerateProps> = ({
               size="s"
               onClick={() => setAiGenerateState('none')}
             />
+
+            <NavigationButton
+              levelProperties={levelProperties}
+              hasRun={true}
+              hasEdited={false}
+              className={moduleStyles.navigationButton}
+            />
           </>
         )}
       </Guide>
-      {aiGenerateState === 'done' && <img alt="" src={headImageUrl} />}
+
+      <div className={moduleStyles.dancerContainer}>
+        <img
+          alt=""
+          src={
+            aiGenerateState === 'done' ? headImageUrl : dancerEmptyHeadShoulders
+          }
+        />
+      </div>
     </div>
   );
 };
 
-export default DancerGenerate;
+export default GenerateDancer;
