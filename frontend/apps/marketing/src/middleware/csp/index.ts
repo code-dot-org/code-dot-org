@@ -49,6 +49,22 @@ export const THIRD_PARTY_CSP = {
     imgSrc: ['https://global.localizecdn.com'],
     connectSrc: ['https://global.localizecdn.com'],
   },
+  // Statsig
+  // https://docs.statsig.com/client/javascript-sdk/#recommended-csp-configuration
+  statsig: {
+    connectSrc: [
+      'api.statsig.com',
+      'featuregates.org',
+      'statsigapi.net',
+      'events.statsigapi.net',
+      'api.statsigcdn.com',
+      'featureassets.org',
+      'assetsconfigcdn.org',
+      'prodregistryv2.org',
+      'cloudflare-dns.com',
+      'beyondwickedmapping.org',
+    ],
+  },
   // YouTube
   youtube: {
     scriptSrc: ['https://www.youtube.com'],
