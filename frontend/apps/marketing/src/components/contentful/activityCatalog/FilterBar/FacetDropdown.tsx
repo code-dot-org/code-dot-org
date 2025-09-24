@@ -1,4 +1,5 @@
 'use client';
+
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import {Box, Button, Chip, Collapse, Menu} from '@mui/material';
@@ -11,6 +12,7 @@ type Props = {
   selected: Set<string> | undefined;
   onChange: (facetKey: string, next: Set<string>) => void;
   onOpenChange?: (open: boolean) => void;
+  /** desktop/tablet = 'menu' (default), mobile drawer = 'inline' */
   variant?: 'menu' | 'inline';
 };
 
@@ -28,11 +30,8 @@ export default function FacetDropdown({
 
   const toggleValue = (value: string) => {
     const next = new Set(sel);
-    if (next.has(value)) {
-      next.delete(value);
-    } else {
-      next.add(value);
-    }
+    if (next.has(value)) next.delete(value);
+    else next.add(value);
     onChange(facetKey, next);
   };
 
@@ -48,7 +47,7 @@ export default function FacetDropdown({
     leaveTimer.current = setTimeout(cb, 120);
   };
 
-  /* mobile */
+  /* Mobile */
   const [openInline, setOpenInline] = React.useState(false);
 
   if (variant === 'inline') {
@@ -75,6 +74,7 @@ export default function FacetDropdown({
             textTransform: 'none',
             px: 2,
             height: 44,
+            backgroundColor: '#e9faff',
             ...(isActive
               ? {
                   color: t => t.palette.primary.contrastText,
@@ -103,8 +103,7 @@ export default function FacetDropdown({
               mt: 0,
               p: 1.25,
               width: '100%',
-              bgcolor: '#fff',
-              borderRadius: 12,
+              border: 'none',
             }}
           >
             <Box
@@ -141,6 +140,15 @@ export default function FacetDropdown({
                         whiteSpace: 'nowrap',
                       },
                       '& .MuiChip-deleteIcon': {color: 'inherit'},
+
+                      // 🔽 when selected, make text & X white on hover
+                      ...(selected && {
+                        '&:hover': {
+                          bgcolor: 'primary.dark',
+                          color: '#fff',
+                          '& .MuiChip-deleteIcon': {color: 'inherit'},
+                        },
+                      }),
                     }}
                   />
                 );
@@ -152,7 +160,7 @@ export default function FacetDropdown({
     );
   }
 
-  /* desktop/tablet */
+  /* Desktop / Tablet */
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const [anchorWidth, setAnchorWidth] = React.useState<number | undefined>(
     undefined,
@@ -214,11 +222,13 @@ export default function FacetDropdown({
               mt: 0,
               minWidth: (anchorWidth ?? 0) + 2,
               maxWidth: 400,
-              bgcolor: '#fff',
-              border: '1px solid rgba(0,0,0,0.12)',
-              borderRadius: 0.5,
-              p: 1.25,
-              boxShadow: 'none',
+              bgcolor: '#e9faff',
+              border: 'none',
+              borderRadius: 0.4,
+              py: 1.25,
+              pr: 1.25,
+              pl: 0,
+              boxShadow: '0 1px 2px rgba(0,0,0,0.14)',
             },
             onMouseEnter: cancelLeave,
             onMouseLeave: () =>
@@ -263,6 +273,23 @@ export default function FacetDropdown({
                     whiteSpace: 'nowrap',
                   },
                   '& .MuiChip-deleteIcon': {color: 'inherit'},
+
+                  // Unselected look
+                  ...(selected
+                    ? {
+                        bgcolor: 'primary.main',
+                        color: '#fff',
+                        '&:hover': {
+                          bgcolor: 'primary.dark',
+                          color: '#fff',
+                          '& .MuiChip-deleteIcon': {color: 'inherit'},
+                        },
+                      }
+                    : {
+                        bgcolor: '#ffffff',
+                        color: '#000000',
+                        '&:hover': {bgcolor: '#f5f5f5'},
+                      }),
                 }}
               />
             );

@@ -55,7 +55,7 @@ export default async function ActivitiesPage({
       length: {},
       accessibilitys: {},
       technologyClassroom: {},
-      languagesText: {},
+      // languagesText: {},
     },
   });
 
