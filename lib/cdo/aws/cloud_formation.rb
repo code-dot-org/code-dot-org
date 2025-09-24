@@ -171,7 +171,17 @@ module AWS
           stack_options[:stack_policy_body] = stack_policy
           stack_options[:stack_policy_during_update_body] = stack_policy if action == :update
         end
-        stack_options[:on_failure] = 'DO_NOTHING' if action == :create
+        # Setting `on_failure` to 'DO_NOTHING' leaves the stack in a half-created state, but
+        # doesn't allow retry or resuming creation after fiddling. If you try to retry or update you get:
+        # > Aws::CloudFormation::Errors::ValidationError: This stack cannot be updated from [CREATE_FAILED]
+        # > state because it contains [on-failure: DO_NOTHING]. Please use disable-rollback option instead
+        # > during stack creation.
+        # stack_options[:on_failure] = 'DO_NOTHING' if action == :create
+
+        # Experimenting with using disable-rollback instead of DO_NOTHING, it should also leave the resources
+        # when a stack create fails, but additionally I believe you can retry creation or even update the stack
+        # yml and start from there?
+        stack_options[:disable_rollback] = true if action == :create
 
         stack_action(action, stack_options)
       else
