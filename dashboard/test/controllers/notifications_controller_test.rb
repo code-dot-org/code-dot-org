@@ -81,6 +81,29 @@ class NotificationsControllerTest < ActionDispatch::IntegrationTest
 
         _(response_data[1]["externalId"]).must_equal entry_id_2
       end
+
+      it 'returns user external notifications - es-ES' do
+        Notifications.stubs(:get_all).with(user.id, 'es-ES').returns([entry_1, entry_2])
+        get '/notifications', params: {locale: 'es-ES'}
+
+        assert_response :success
+
+        response_data = JSON.parse(@response.body)
+        _(response_data.length).must_equal 2
+
+        _(response_data[0]["externalId"]).must_equal entry_id_1
+        _(response_data[0]["title"]).must_equal 'Notification 1'
+        _(response_data[0]["description"]).must_equal 'Description 1'
+        _(response_data[0]["iconName"]).must_equal 'icon1'
+        _(response_data[0]["hrefLinks"]).must_equal [{'url' => 'https://example.com/1', 'text' => 'Link 1'}]
+        _(response_data[0]["aiPrompts"]).must_equal [{'text' => 'Prompt 1', 'prompt' => 'Prompt 1 text'}]
+        _(response_data[0]["priority"]).must_equal 0
+        _(response_data[0]["publishedAt"]).must_equal yesterday
+        _(response_data[0]["expiresAt"]).must_equal tomorrow
+        _(response_data[0]["readAt"]).must_equal today
+
+        _(response_data[1]["externalId"]).must_equal entry_id_2
+      end
     end
   end
 
@@ -162,6 +185,19 @@ class NotificationsControllerTest < ActionDispatch::IntegrationTest
 
         _(external_notification1.read_at.to_i).must_equal yesterday.to_i
         _(ExternalNotification.find_by(external_id: entry_2.external_id, user: user)&.read_at).wont_be_nil
+      end
+
+      it 'marks notifications as read with es-ES locale' do
+        Notifications.stubs(:get_all).with(user.id, 'es-ES').returns([entry_1, entry_2])
+
+        post '/notifications/mark_as_read', params: {external_notification_ids: [entry_1.external_id], locale: 'es-ES'}
+        assert_response :ok
+
+        response_data = JSON.parse(@response.body)
+        _(response_data["status"]).must_equal "success"
+        _(response_data["marked_count"]).must_equal 1
+
+        _(ExternalNotification.find_by(external_id: entry_1.external_id, user: user)&.read_at).wont_be_nil
       end
     end
 

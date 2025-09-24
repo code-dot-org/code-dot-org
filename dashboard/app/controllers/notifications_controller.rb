@@ -13,12 +13,14 @@ class NotificationsController < ApplicationController
   def mark_as_read
     external_notification_ids = (params[:external_notification_ids] || []).compact_blank
 
+    locale = params[:locale] || I18n.default_locale
+
     if external_notification_ids.empty?
       render json: {status: 'error', message: 'No notification IDs provided'}, status: :bad_request
       return
     end
 
-    valid_external_ids = filter_to_existing_ids(external_notification_ids)
+    valid_external_ids = filter_to_existing_ids(external_notification_ids, locale)
     found_external_notifications = current_user.external_notifications.where(external_id: valid_external_ids)
 
     found_external_notifications.where(read_at: nil).update_all(read_at: Time.current)
@@ -37,7 +39,7 @@ class NotificationsController < ApplicationController
     render json: response_data, status: :ok
   end
 
-  private def filter_to_existing_ids(external_notification_ids)
+  private def filter_to_existing_ids(external_notification_ids, locale)
     valid_external_ids = Notifications.get_all(current_user.id, locale).map(&:external_id)
     external_notification_ids.select {|id| valid_external_ids.include?(id)}
   end
