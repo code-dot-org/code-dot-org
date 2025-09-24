@@ -24,7 +24,7 @@ export function createReactRoot(
 
   if (!containerElement) {
     throw new Error(
-      `GlobalBootstrapper: Could not find container element: ${container}`
+      `createReactRoot: Could not find container element: ${container}`
     );
   }
 
