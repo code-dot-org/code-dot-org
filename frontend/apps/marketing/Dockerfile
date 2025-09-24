@@ -1,4 +1,4 @@
-# syntax=docker.io/docker/dockerfile:1.4
+# syntax=ghcr.io/docker/dockerfile:1.7.0
 
 ###################################################################################
 # This Dockerfile is used to produce a minial production executable image for the #
