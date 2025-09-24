@@ -1,5 +1,7 @@
 import React from 'react';
 
+import style from './personalization-information.module.scss';
+
 interface PersonalizationInformationBoxProps {
   information: string;
 }
@@ -7,18 +9,7 @@ interface PersonalizationInformationBoxProps {
 const PersonalizationInformationBox: React.FC<
   PersonalizationInformationBoxProps
 > = ({information}) => {
-  return (
-    <div
-      style={{
-        backgroundColor: 'white',
-        alignSelf: 'stretch',
-        padding: '12px',
-        margin: '4px 0',
-      }}
-    >
-      {information}
-    </div>
-  );
+  return <div className={style.informationBox}>{information}</div>;
 };
 
 export default PersonalizationInformationBox;

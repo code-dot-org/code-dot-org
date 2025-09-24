@@ -1,39 +1,36 @@
 import React from 'react';
 
-import PersonalizationResultsColumn from './PersonalizationResultsColumn';
+import PersonalizationResultsColumnAiHelp from './PersonalizationResultsColumnAiHelp';
+import PersonalizationResultsColumnSuperpowers from './PersonalizationResultsColumnSuperpowers';
+import PersonalizationRevealHeader from './PersonalizationRevealHeader';
+import PersonalizationRevealInfoBox from './PersonalizationRevealInfoBox';
 
-interface HeaderBoxProps {
-  persona: string;
+import style from './personalization-information.module.scss';
+
+// should this be somewhere else?
+export interface TeachingStyle {
+  name: string;
+  emoji: string;
+  tagline: string;
+  teachingSuperpowers: string[];
 }
-
-const HeaderBox: React.FC<HeaderBoxProps> = ({persona}) => {
-  return (
-    <div className="header-box">
-      <div className="teaching-style-text">Your teaching style is</div>
-      <div className="persona-text">{persona}</div>
-      <div className="potential-text">
-        <span className="icon">✨</span>
-        you see potential in every student and nurture it
-      </div>
-    </div>
-  );
-};
-
 interface PersonalizationResultsProps {
-  persona: string;
+  teachingStyle: TeachingStyle;
 }
 
 const PersonalizationResults: React.FC<PersonalizationResultsProps> = ({
-  persona,
+  teachingStyle,
 }) => {
   return (
-    <div className="personalization-results">
-      <HeaderBox persona={persona} />
-      <PersonalizationResultsColumn isTeachingSuperPowers={true} />
-      <PersonalizationResultsColumn isTeachingSuperPowers={false} />
-      {/* Placeholder for the other 2 components */}
-      <div className="component-placeholder">Component 3 - Coming Soon</div>
-      <div className="component-placeholder">Component 4 - Coming Soon</div>
+    <div className={style.revealContainer}>
+      <PersonalizationRevealHeader teachingStyle={teachingStyle} />
+      <div className={style.revealDetailsContainer}>
+        <PersonalizationResultsColumnSuperpowers
+          superpowers={teachingStyle.teachingSuperpowers}
+        />
+        <PersonalizationResultsColumnAiHelp aiHelpSuggestions={[]} />
+      </div>
+      <PersonalizationRevealInfoBox />
     </div>
   );
 };

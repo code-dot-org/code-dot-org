@@ -14,6 +14,7 @@ import {
 import PersonalizationQuestion from './PersonalizationQuestion';
 import {PERSONALIZATION_PROMPTS} from './personalizationQuestions';
 import PersonalizationResults from './PersonalizationResults';
+import {TEACHING_STYLES} from './PersonalizationRevealPersonas';
 import {saveTeachingProfileData} from './teachingProfileApi';
 
 import style from './personalization-information.module.scss';
@@ -63,6 +64,12 @@ const PersonalizationCollectorContainer: React.FC = () => {
   const BACK = -1;
 
   const onCarouselPress = async (direction: number) => {
+    {
+      console.log(TEACHING_STYLES[0]);
+    }
+    {
+      console.log(TEACHING_STYLES[0].name);
+    }
     if (direction === NEXT && questionsNumber === 0) {
       setPersonalizationData(prev => ({
         ...prev,
@@ -197,7 +204,7 @@ const PersonalizationCollectorContainer: React.FC = () => {
   return (
     <div className={style.carouselContainer}>
       {showResults ? (
-        <PersonalizationResults persona="mentor" />
+        <PersonalizationResults teachingStyle={TEACHING_STYLES[0]} />
       ) : (
         <>
           <PersonalizationQuestion questionNumber={questionsNumber} />
