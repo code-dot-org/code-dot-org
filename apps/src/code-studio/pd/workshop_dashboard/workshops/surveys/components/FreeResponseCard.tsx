@@ -12,7 +12,8 @@ import noResponsesText from '@cdo/static/pd/no-responses-text.png';
 
 import {EmptyState} from './EmptyState';
 
-import styles from '../../workshop.module.scss';
+import styles from './FreeResponseCard.module.scss';
+import commonStyles from '../../WorkshopLayout.module.scss';
 
 interface FreeResponseCardProps {
   title: string;
@@ -32,15 +33,9 @@ export const FreeResponseCard: FC<FreeResponseCardProps> = ({
   useFlexTextCardContainer = false,
 }) => {
   return (
-    <Card
-      className={classNames(
-        styles.card,
-        styles.questionCard,
-        styles.freeResponse
-      )}
-    >
+    <Card className={classNames(commonStyles.card, styles.freeResponse)}>
       <CardHeader
-        className={styles.cardHeader}
+        className={commonStyles.cardHeader}
         title={
           <Box className={styles.cardHeaderRow}>
             <Heading2
@@ -53,7 +48,10 @@ export const FreeResponseCard: FC<FreeResponseCardProps> = ({
               <Tags
                 size="s"
                 tagsList={[{label: tagText}]}
-                className={classNames(styles.workshopTag, styles.questionTag)}
+                className={classNames(
+                  commonStyles.workshopTag,
+                  commonStyles.questionTag
+                )}
               />
             )}
           </Box>

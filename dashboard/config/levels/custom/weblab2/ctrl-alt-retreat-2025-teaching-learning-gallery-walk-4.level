@@ -1,0 +1,33 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2025-09-23T21:21:45.000Z",
+  "level_num": "custom",
+  "user_id": 18762,
+  "properties": {
+    "encrypted": "false",
+    "available_ai_tutor_modes": [
+      "produce"
+    ],
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2025-09-23T21:21:45.808+00:00\",\"changed\":[\"cloned from \\\"ctrl-alt-retreat-2025-teaching-learning-gallery-walk-3\\\"\"],\"cloned_from\":\"ctrl-alt-retreat-2025-teaching-learning-gallery-walk-3\"},{\"changed_at\":\"2025-09-23 21:21:49 +0000\",\"changed\":[\"available_ai_tutor_modes\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

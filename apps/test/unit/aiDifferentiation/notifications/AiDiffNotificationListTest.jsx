@@ -110,7 +110,7 @@ describe('AiDiffNotificationList', () => {
 
       await waitFor(() => {
         expect(console.error).toHaveBeenCalledWith(
-          'Error fetching notifications:',
+          'Error fetching notifications for list:',
           mockError
         );
       });

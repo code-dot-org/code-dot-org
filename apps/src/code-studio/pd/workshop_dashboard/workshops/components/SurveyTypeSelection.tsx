@@ -2,7 +2,7 @@ import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import React, {ChangeEvent, FC, useMemo} from 'react';
 import {useLocation, useNavigate} from 'react-router-dom';
 
-import styles from '../workshop.module.scss';
+import styles from '../WorkshopLayout.module.scss';
 
 export interface SurveyOption {
   text: string;

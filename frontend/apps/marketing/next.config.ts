@@ -17,6 +17,15 @@ const nextConfig: NextConfig = {
     '@contentful/experiences-core',
     'lodash-es',
   ],
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'contentful-images.code.org',
+      },
+    ],
+    formats: ['image/avif', 'image/webp'],
+  },
 };
 
 export default nextConfig;

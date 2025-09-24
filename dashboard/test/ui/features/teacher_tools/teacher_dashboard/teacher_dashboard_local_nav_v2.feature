@@ -7,12 +7,12 @@ Feature: Using the V2 teacher dashboard local navigation
 
   Scenario: Modifying settings on the teacher dashboard
     Given I create an authorized teacher-associated student named "Sally"
-    Given I am assigned to course "allthethingscourse" unit 1
+    Given I am assigned to course "allthethingscourse" with teacher "Teacher_Sally" in a section named "All the Things Section"
 
     When I sign in as "Teacher_Sally" and go home
     And I get levelbuilder access
 
-    When I click selector "a:contains(Untitled Section)" once I see it to load a new page
+    When I click selector "#task-button-View-progress-All-the-Things-Section" once I see it
 
     Then I wait until element "#ui-test-teacher-sidebar" is visible
 
@@ -36,17 +36,17 @@ Feature: Using the V2 teacher dashboard local navigation
 
     And I wait until element "#ui-test-skeleton-progress-column" is not visible
 
-    And I wait until element "#unit-selector-v2" contains text "Interactive Animations and Games ('24-'25)"
+    And I wait until element "#unit-selector-v2" contains text "Interactive Animations and Games"
     Then element "#uitest-sidebar-section-dropdown" contains text "Sally's Super Section"
-    Then element "#uitest-sidebar-section-dropdown" does not contain text "Untitled Section"
+    Then element "#uitest-sidebar-section-dropdown" does not contain text "All the Things Section"
 
   Scenario: Single-unit course overview
     Given I create an authorized teacher-associated student named "Sally"
-    Given I am assigned to course "ui-test-single-unit-course-2025" unit 1 with teacher "Teacher_Sally"
+    Given I am assigned to course "ui-test-single-unit-course-2025" with teacher "Teacher_Sally" in a section named "Single Unit Section"
 
     Given I sign in as "Teacher_Sally" and go home
 
-    When I click selector "a:contains(New Section)" once I see it to load a new page
+    When I click selector "#task-button-View-progress-Single-Unit-Section" once I see it
 
     Then I wait until element "#ui-test-teacher-sidebar" is visible
 

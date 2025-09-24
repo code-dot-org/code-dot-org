@@ -5,6 +5,7 @@ import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {atRiskAgeGatedSections} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
 import {AgeGatedSectionsBanner} from '../../policy_compliance/AgeGatedSectionsModal/AgeGatedSectionsBanner';
@@ -24,12 +25,15 @@ import styles from './teacherHomepage.module.scss';
 
 export type ArchivedToggleOption = 'teaching' | 'archived';
 
+const LOGGED_TEACHER_SESSION = 'logged_teacher_session';
+
 interface TeacherHomepageProps {
   studioUrlPrefix: string;
 }
 
 const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
   const teacherName = useAppSelector(state => state.currentUser.displayName);
+  const teacherId = useAppSelector(state => state.currentUser.userId);
 
   const dispatch = useAppDispatch();
 
@@ -50,12 +54,28 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
   }, [dispatch]);
 
   React.useEffect(() => {
+    // Send one analytics event when a teacher logs in. Use session storage to determine
+    // whether they've just logged in.
+    if (
+      !!teacherId &&
+      tryGetSessionStorage(LOGGED_TEACHER_SESSION, 'false') !== 'true'
+    ) {
+      trySetSessionStorage(LOGGED_TEACHER_SESSION, 'true');
+
+      analyticsReporter.sendEvent(
+        EVENTS.TEACHER_LOGIN_EVENT,
+        {
+          'user id': teacherId,
+        },
+        PLATFORMS.BOTH
+      );
+    }
     analyticsReporter.sendEvent(
       EVENTS.NEW_TEACHER_HOMEPAGE_VISITED,
       {},
       PLATFORMS.BOTH
     );
-  }, []);
+  }, [teacherId]);
 
   const [selectedArchiveToggle, setSelectedArchiveToggle] =
     React.useState<ArchivedToggleOption>('teaching');

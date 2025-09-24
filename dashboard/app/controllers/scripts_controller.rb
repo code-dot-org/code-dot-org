@@ -88,7 +88,7 @@ class ScriptsController < ApplicationController
 
     # Lastly, if user is assigned to newer version of this unit, we will
     # ask if they want to be redirected to the newer version.
-    @redirect_unit_url = @script.redirect_to_unit_url(current_user, locale: request.locale)
+    @redirect_unit_url = @script.redirect_to_unit_url(current_user, unit_group: @course, locale: request.locale)
 
     @show_redirect_warning = params[:redirect_warning] == 'true'
     unless current_user&.student?
@@ -138,23 +138,6 @@ class ScriptsController < ApplicationController
   end
 
   def new
-    @versioned_unit_families = []
-    @unit_families_course_types = []
-    Unit.family_names.map do |cf|
-      co = CourseOffering.find_by(key: cf)
-
-      # There are some old family names for connecting between units in a course which will not be a course offering
-      next unless co
-      first_cv = co.course_versions.first
-      next unless first_cv
-      @versioned_unit_families << cf unless first_cv.key == 'unversioned'
-
-      unit = first_cv.content_root
-      next unless unit
-      @unit_families_course_types << [cf]
-    end
-
-    @unit_families_course_types = @unit_families_course_types.compact
   end
 
   def create
@@ -199,8 +182,6 @@ class ScriptsController < ApplicationController
       has_course: @script&.unit_groups&.any?,
       i18n: @script ? @script.summarize_i18n_for_edit : {},
       locales: Cdo::I18n.locale_options,
-      script_families: Unit.family_names,
-      version_year_options: Unit.get_version_year_options,
       is_levelbuilder: current_user.levelbuilder?
     }
   end
@@ -428,11 +409,6 @@ class ScriptsController < ApplicationController
   private def get_redirect_info(unit, locale, course)
     # Return nil if unit is nil or we know the user can view the version requested.
     return nil if !unit || unit.can_view_version?(current_user, locale: locale, unit_group: course)
-
-    # Redirect the user to the latest assigned unit in this family, or to the latest stable unit in this family if
-    # none are assigned.
-    redirect_unit = Unit.latest_assigned_version(unit.family_name, current_user)
-    redirect_unit ||= Unit.latest_stable_version(unit.family_name, locale: locale)
 
     if course&.single_unit_course?
       redirect_unit_group = UnitGroup.latest_assigned_version(course.family_name, current_user)

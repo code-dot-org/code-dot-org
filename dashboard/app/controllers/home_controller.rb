@@ -83,7 +83,7 @@ class HomeController < ApplicationController
   def home
     authenticate_user!
 
-    if current_user.teacher? && (Experiment.enabled?(user: current_user, experiment_name: 'teacher-homepage-v2') || DCDO.get('teacher-homepage-v2', false))
+    if current_user.teacher?
       redirect_to '/teacher_dashboard/home'
       return
     end

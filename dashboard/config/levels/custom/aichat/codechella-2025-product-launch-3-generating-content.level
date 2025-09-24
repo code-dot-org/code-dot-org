@@ -7,7 +7,7 @@
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Generating Content Chat\r\n\r\nUse AI Chat to generate content you could actually use in your product launch.\r\n\r\nFocus on content that connect to your assigned role (e.g., name + slogan, visuals, script, or jingle).\r\n\r\n### Do This:\r\n1. Use AI Chat to turn your best idea from brainstorming into real content.\r\n    - What do you want AI to help you write or describe?\r\n    - What should it sound or feel like?\r\n    - What should it include?\r\n    - Are there images or documents you can provide to AI Chat?\r\n2. In your Activity Guide under Stage 3: Generating Content, write:\r\n\t- The question or prompt you gave to AI\r\n\t- A summary of what the AI told you\r\n3. Want better results? Use specific language in your prompt—like the tone you want, key phrases to include, or the audience you’re trying to reach.",
+    "long_instructions": "## Generating Content Chat\r\n\r\nUse AI Chat to turn your best brainstorming idea into real content for your product launch.\r\n\r\nFocus on producing something concrete that matches your role—like a name and slogan, a logo description, a commercial script, or a jingle.\r\n\r\n### Do This:\r\n1. Use AI Chat to develop your strongest idea into polished content. You might ask:\r\n    - What do I want AI to help me write, design, or describe? \r\n    - What should it sound, look, or feel like?\r\n    - What key details should it include?\r\n    - Are there examples or references I can provide to get better results?\r\n2. As you generate content, add it directly to your group slide deck in the section for your role (name + slogan, visuals, script, or jingle).\r\n3. Want better results? Use specific language in your prompt—like the tone you want, key phrases to include, or the audience you’re trying to reach.",
     "aichat_settings": {
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
@@ -35,7 +35,7 @@
         "retrievalContexts": "hidden",
         "modelCardInfo": "hidden"
       },
-      "levelSystemPrompt": "",
+      "levelSystemPrompt": "You are helping a creative team generate usable content for a work-from-home product launch. Produce clear, polished drafts that match different roles—like slogans, scripts, jingles, or logo descriptions.",
       "hidePresentationPanel": true,
       "availableModelIds": [
         "gpt-4o-mini"
@@ -44,8 +44,11 @@
     },
     "bubble_choice_description": "Use AI Chat to generate content you could actually use in your product launch.",
     "display_name": "Generating Content Chat",
-    "thumbnail_url": "https://images.code.org/e8f951fa1c73f0f1cb12c03b8fb76f1c-content-creation.png"
+    "thumbnail_url": "https://images.code.org/e8f951fa1c73f0f1cb12c03b8fb76f1c-content-creation.png",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false"
   },
-  "audit_log": "[{\"changed_at\":\"2025-05-08T15:53:40.994+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson9-level1c_2024\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson9-level1c_2024\"},{\"changed_at\":\"2025-05-08 15:54:03 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-08T15:53:40.994+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson9-level1c_2024\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson9-level1c_2024\"},{\"changed_at\":\"2025-05-08 15:54:03 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-22 20:35:29 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-22 20:42:11 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>
