@@ -23,7 +23,7 @@ const ButtonWithDialog: React.FunctionComponent<ButtonWithDialogProps> = ({
   setIsDialogOpen,
 }) => {
   // Tooltip should disappear quickly.
-  const hideTooltipDelay = 10;
+  const hideTooltipDelayMs = 10;
 
   return (
     <>
@@ -35,7 +35,7 @@ const ButtonWithDialog: React.FunctionComponent<ButtonWithDialogProps> = ({
           size: 'xs',
           'data-theme': theme,
         }}
-        hideDelay={hideTooltipDelay}
+        hideDelayMs={hideTooltipDelayMs}
         hideOnFirstLeave={true}
       >
         <Button

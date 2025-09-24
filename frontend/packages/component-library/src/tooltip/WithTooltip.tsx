@@ -34,7 +34,7 @@ export interface WithTooltipProps {
   children: ReactNode;
   tooltipOverlayClassName?: string;
   tooltipProps: TooltipProps;
-  hideDelay?: number;
+  hideDelayMs?: number;
   hideOnFirstLeave?: boolean;
 }
 
@@ -44,7 +44,7 @@ const WithTooltip = forwardRef<WithTooltipHandle, WithTooltipProps>(
       children,
       tooltipOverlayClassName,
       tooltipProps,
-      hideDelay,
+      hideDelayMs,
       hideOnFirstLeave,
     },
     ref,
@@ -89,7 +89,7 @@ const WithTooltip = forwardRef<WithTooltipHandle, WithTooltipProps>(
       hideTimeoutRef.current = window.setTimeout(() => {
         setShowTooltip(false);
         setNodePosition(null);
-      }, hideDelay || 100); // Allows for small but visible close delay.
+      }, hideDelayMs || 100); // Allows for small but visible close delay.
     };
 
     // Use useImperativeHandle hook to let the parent control visibility in certain cases
