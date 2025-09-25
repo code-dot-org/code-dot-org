@@ -225,7 +225,7 @@ Resources:
           INVENTORY_BUCKET: !Ref InventoryBucket
           LOG_LEVEL: 'DEBUG'
           # Removed DEST_KMS_KEY since we're using S3-managed encryption
-      Code: {"S3Bucket":"cdo-ci-artifacts","S3Key":"test_s3_backup/batch-replication.20250902.zip"}
+      Code: {"S3Bucket":"cdo-ci-artifacts","S3Key":"test_s3_backup/batch-replication.202509252312.zip"}
       Description: "Inventory-based batch replication Lambda"
 
   # EventBridge rule to trigger Lambda daily at 00:00 UTC

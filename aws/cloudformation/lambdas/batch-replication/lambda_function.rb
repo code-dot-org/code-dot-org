@@ -476,9 +476,7 @@ def process_inventory_files(s3_client, inventory_bucket, inventory_files, invent
   total_checked = 0
   files_processed = 0
 
-  # Parse the inventory timestamp to get the date this inventory was taken
-  inventory_date = Time.parse(inventory_timestamp.tr('T', ' ').tr('-', ':'))
-
+  inventory_date = Time.strptime(inventory_timestamp, '%Y-%m-%dT%H-%MZ')
   log(
     :info,
     'processing_inventory',
@@ -513,24 +511,46 @@ def process_inventory_files(s3_client, inventory_bucket, inventory_files, invent
     matches_in_file = 0
 
     # Parse CSV and collect all objects that need replication
+    # S3 Inventory Report CSV Column Structure:
+    # When IncludedObjectVersions: 'All' is configured, the CSV contains the following columns:
+    #
+    # Column 0: Bucket (String) - Name of the S3 bucket containing the object
+    # Column 1: Key (String) - Object key (file path/name within the bucket)
+    # Column 2: VersionId (String) - Unique version identifier for the object version
+    # Column 3: IsLatest (Boolean as String) - "true" if this is the latest version, "false" otherwise
+    # Column 4: IsDeleteMarker (Boolean as String) - "true" if this version is a delete marker, "false" otherwise
+    # Column 5: Size (Integer as String) - Size of the object in bytes
+    # Column 6: LastModifiedDate (ISO 8601 String) - Timestamp when object was last modified (e.g., "2025-07-30T00:15:59.000Z")
+    # Column 7: ETag (String) - Entity tag (hash) of the object for integrity checking
+    # Column 8: StorageClass (String) - S3 storage class (e.g., "STANDARD", "IA", "GLACIER")
+    # Column 9: IsMultipartUploaded (Boolean as String) - "true" if uploaded using multipart, "false" otherwise
+    # Column 10: ReplicationStatus (String) - Cross-region replication status ("COMPLETED", "PENDING", "FAILED", or empty)
     CSV.parse(content, headers: false) do |row|
       total_checked += 1
       rows_in_file += 1
-      next if row.length < 4  # Skip malformed rows
 
-      bucket_name = row[0]
-      object_key = row[1]
-      version_id = row[2] && row[2].empty? ? nil : row[2]
-      last_modified_str = row[3]
+      # Skip malformed rows - expect at least 11 columns for complete inventory data
+      next if row.length < 11
 
-      next unless last_modified_str
+      # Extract core object identification fields
+      bucket_name = row[0]                                              # String: S3 bucket name
+      object_key = row[1]                                               # String: Object key/path
+      version_id = row[2] && !row[2].empty? ? row[2] : nil              # String or nil: Version ID (nil if empty)
 
-      # Parse last modified timestamp
-      begin
-        last_modified = Time.parse(last_modified_str)
-      rescue
-        next  # Skip if we can't parse the timestamp
-      end
+      # Extract version metadata
+      is_latest = row[3] == 'true'                                      # Boolean: Is this the current/latest version?
+      is_delete_marker = row[4] == 'true'                               # Boolean: Is this a delete marker?
+
+      # Extract object properties
+      object_size = row[5].to_i                                         # Integer: Object size in bytes
+      last_modified = Time.strptime(row[6], '%Y-%m-%dT%H:%M:%S.%LZ')    # String: ISO 8601 timestamp
+      # etag = row[7]                                                   # String: Object ETag
+      storage_class = row[8]                                            # String: Storage class
+      # is_multipart = row[9] == 'true'                                 # Boolean: Multipart upload flag
+      replication_status = row[10].empty? ? nil : row[10]               # String or nil: Replication status
+
+      # Skip delete markers as they don't represent actual objects to replicate
+      next if is_delete_marker
 
       # Include all objects modified up to 15 minutes before current time
       # This ensures we don't miss objects that might still be replicating
@@ -538,7 +558,12 @@ def process_inventory_files(s3_client, inventory_bucket, inventory_files, invent
         objects_to_replicate << {
           bucket: bucket_name,
           key: object_key,
-          version_id: version_id
+          version_id: version_id,
+          size: object_size,
+          last_modified: last_modified,
+          is_latest: is_latest,
+          storage_class: storage_class,
+          replication_status: replication_status
         }
         matches_in_file += 1
       end
@@ -547,12 +572,14 @@ def process_inventory_files(s3_client, inventory_bucket, inventory_files, invent
       break if total_checked >= 10_000_000
     end
 
-    log(:debug, 'inventory_file_complete', {
-          file: File.basename(inventory_key),
-      rows: rows_in_file,
-      matches: matches_in_file
-        }
-)
+    log(
+      :debug, 'inventory_file_complete',
+      {
+        file: File.basename(inventory_key),
+        rows: rows_in_file,
+        matches: matches_in_file
+      }
+    )
 
     break if total_checked >= 10_000_000
   end
