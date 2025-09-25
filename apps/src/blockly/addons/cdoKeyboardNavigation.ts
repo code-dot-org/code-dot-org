@@ -2,6 +2,12 @@ import {KeyboardNavigation} from '@blockly/keyboard-navigation';
 import * as GoogleBlockly from 'blockly/core';
 import './shortcutMenuStyles.scss';
 
+import {
+  overrideOptionWeight as overrideContextMenuOptionWeight,
+  unregisterCrossTabPluginOptions,
+  WeightOptions as ContextMenuWeightOptions,
+} from './contextMenu';
+
 // This is a Monkey patch while Blockly fixes issue #713. Once merged and
 // bumped, we can replace this class and the manual registry of
 // NavigationDeferringToolbox below with one line function.
@@ -27,9 +33,13 @@ export function initializeKeyboardNavigation(
   if (Blockly.KeyboardNavigation) {
     Blockly.KeyboardNavigation.dispose();
   }
+  unregisterCrossTabPluginOptions();
   createShortcutsModalContainer();
-  Blockly.KeyboardNavigation = new KeyboardNavigation(workspace);
-
+  Blockly.KeyboardNavigation = new KeyboardNavigation(workspace, {
+    allowCrossWorkspacePaste: true,
+  });
+  // Re-register context menu options with our custom weights.
+  reorderContextMenu();
   enableShortcutModalEscape();
 }
 
@@ -61,5 +71,19 @@ function enableShortcutModalEscape() {
         }
       }
     });
+  }
+}
+
+function reorderContextMenu() {
+  const menuWeightMap: Record<string, ContextMenuWeightOptions> = {
+    blockCutFromContextMenu: ContextMenuWeightOptions.CUT,
+    blockCopyFromContextMenu: ContextMenuWeightOptions.COPY,
+    blockPasteFromContextMenu: ContextMenuWeightOptions.PASTE,
+    move: ContextMenuWeightOptions.MOVE,
+    edit: ContextMenuWeightOptions.EDIT,
+    move_comment: ContextMenuWeightOptions.MOVE_COMMENT,
+  };
+  for (const [option, weight] of Object.entries(menuWeightMap)) {
+    overrideContextMenuOptionWeight(option, weight);
   }
 }
