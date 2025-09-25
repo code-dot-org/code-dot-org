@@ -6,7 +6,6 @@ import SegmentedButtons, {
 } from '@code-dot-org/component-library/segmentedButtons';
 import React, {useCallback, useEffect, useMemo} from 'react';
 
-import {AiChatDisabledProvider} from '@cdo/apps/aichat/context/aiChatDisabledContext';
 import TeacherOnboardingModal from '@cdo/apps/aichat/views/TeacherOnboardingModal';
 import ChatWarningModal from '@cdo/apps/aiComponentLibrary/warningModal/ChatWarningModal';
 import {queryParams} from '@cdo/apps/code-studio/utils';
@@ -309,133 +308,130 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
 
   return (
     <LevelPropertiesContext.Provider value={levelProperties}>
-      <AiChatDisabledProvider>
-        <div id="aichat-lab" className={moduleStyles.aichatLab}>
-          {ChatModal && <ChatModal onClose={onCloseModal} />}
-          {showPresentationToggle() && (
-            <div
-              id="uitest-view-mode-toggle-container"
-              className={moduleStyles.viewModeButtons}
-            >
-              <SegmentedButtons {...viewModeButtonsProps} />
-            </div>
-          )}
-          <div className={moduleStyles.labCoreContainer}>
-            {viewMode === ViewMode.EDIT && (
-              <>
-                <div className={moduleStyles.instructionsArea}>
-                  {experiments.isEnabledAllowingQueryString(
-                    experiments.LAB2_RESOURCE_PANEL
-                  ) ? (
-                    <ResourcePanel
-                      className={moduleStyles.panelContainer}
-                      headerClassName={moduleStyles.panelHeader}
+      <div id="aichat-lab" className={moduleStyles.aichatLab}>
+        {ChatModal && <ChatModal onClose={onCloseModal} />}
+        {showPresentationToggle() && (
+          <div
+            id="uitest-view-mode-toggle-container"
+            className={moduleStyles.viewModeButtons}
+          >
+            <SegmentedButtons {...viewModeButtonsProps} />
+          </div>
+        )}
+        <div className={moduleStyles.labCoreContainer}>
+          {viewMode === ViewMode.EDIT && (
+            <>
+              <div className={moduleStyles.instructionsArea}>
+                {experiments.isEnabledAllowingQueryString(
+                  experiments.LAB2_RESOURCE_PANEL
+                ) ? (
+                  <ResourcePanel
+                    className={moduleStyles.panelContainer}
+                    headerClassName={moduleStyles.panelHeader}
+                    /** AI Chat doesn't have a traditional "run" state, so this is always false. */
+                    isRunning={false}
+                    hasRun={hasSentMessage}
+                    hasEdited={hasUpdatedCustomizations}
+                    levelProperties={levelProperties}
+                    rightHeaderContent={renderInstructionsHeaderRight(
+                      isUserTeacher,
+                      () => {
+                        dispatch(
+                          setShowModalType(ModalTypes.TEACHER_ONBOARDING)
+                        );
+                      }
+                    )}
+                  />
+                ) : (
+                  <PanelContainer
+                    id="aichat-instructions-panel"
+                    headerContent={commonI18n.instructions()}
+                    className={moduleStyles.panelContainer}
+                    headerClassName={moduleStyles.panelHeader}
+                    rightHeaderContent={renderInstructionsHeaderRight(
+                      isUserTeacher,
+                      () => {
+                        dispatch(
+                          setShowModalType(ModalTypes.TEACHER_ONBOARDING)
+                        );
+                      }
+                    )}
+                  >
+                    <InstructionsV2
+                      className={moduleStyles.instructions}
                       /** AI Chat doesn't have a traditional "run" state, so this is always false. */
                       isRunning={false}
                       hasRun={hasSentMessage}
                       hasEdited={hasUpdatedCustomizations}
                       levelProperties={levelProperties}
-                      rightHeaderContent={renderInstructionsHeaderRight(
-                        isUserTeacher,
-                        () => {
-                          dispatch(
-                            setShowModalType(ModalTypes.TEACHER_ONBOARDING)
-                          );
-                        }
-                      )}
                     />
-                  ) : (
-                    <PanelContainer
-                      id="aichat-instructions-panel"
-                      headerContent={commonI18n.instructions()}
-                      className={moduleStyles.panelContainer}
-                      headerClassName={moduleStyles.panelHeader}
-                      rightHeaderContent={renderInstructionsHeaderRight(
-                        isUserTeacher,
-                        () => {
-                          dispatch(
-                            setShowModalType(ModalTypes.TEACHER_ONBOARDING)
-                          );
-                        }
-                      )}
-                    >
-                      <InstructionsV2
-                        className={moduleStyles.instructions}
-                        /** AI Chat doesn't have a traditional "run" state, so this is always false. */
-                        isRunning={false}
-                        hasRun={hasSentMessage}
-                        hasEdited={hasUpdatedCustomizations}
-                        levelProperties={levelProperties}
-                      />
-                    </PanelContainer>
-                  )}
-                </div>
-                {!allFieldsHidden && (
-                  <div className={moduleStyles.customizationArea}>
-                    <PanelContainer
-                      id="aichat-model-customization-panel"
-                      headerContent={aichatI18n.modelCustomizationHeader()}
-                      className={moduleStyles.panelContainer}
-                      headerClassName={moduleStyles.panelHeader}
-                      rightHeaderContent={
-                        !viewAsUserId &&
-                        renderModelCustomizationHeaderRight(() => {
-                          onClickStartOver();
-                          dispatch(
-                            sendAnalytics(EVENTS.AICHAT_START_OVER, {
-                              levelPath: window.location.pathname,
-                            })
-                          );
-                        })
-                      }
-                    >
-                      <ModelCustomizationWorkspace />
-                    </PanelContainer>
-                  </div>
+                  </PanelContainer>
                 )}
-              </>
-            )}
-            {viewMode === ViewMode.PRESENTATION && (
-              <div
-                id="uitest-presentation-view-container"
-                className={moduleStyles.presentationArea}
-              >
-                <PanelContainer
-                  id="aichat-presentation-panel"
-                  headerContent={aichatI18n.modelCardPanelHeader()}
-                  className={moduleStyles.panelContainer}
-                  headerClassName={moduleStyles.panelHeader}
-                >
-                  <PresentationView />
-                </PanelContainer>
               </div>
-            )}
-
-            <div className={moduleStyles.chatWorkspaceArea}>
+              {!allFieldsHidden && (
+                <div className={moduleStyles.customizationArea}>
+                  <PanelContainer
+                    id="aichat-model-customization-panel"
+                    headerContent={aichatI18n.modelCustomizationHeader()}
+                    className={moduleStyles.panelContainer}
+                    headerClassName={moduleStyles.panelHeader}
+                    rightHeaderContent={
+                      !viewAsUserId &&
+                      renderModelCustomizationHeaderRight(() => {
+                        onClickStartOver();
+                        dispatch(
+                          sendAnalytics(EVENTS.AICHAT_START_OVER, {
+                            levelPath: window.location.pathname,
+                          })
+                        );
+                      })
+                    }
+                  >
+                    <ModelCustomizationWorkspace />
+                  </PanelContainer>
+                </div>
+              )}
+            </>
+          )}
+          {viewMode === ViewMode.PRESENTATION && (
+            <div
+              id="uitest-presentation-view-container"
+              className={moduleStyles.presentationArea}
+            >
               <PanelContainer
-                id="aichat-workspace-panel"
-                headerContent={chatWorkspaceHeader}
+                id="aichat-presentation-panel"
+                headerContent={aichatI18n.modelCardPanelHeader()}
                 className={moduleStyles.panelContainer}
                 headerClassName={moduleStyles.panelHeader}
                 rightHeaderContent={<AiChatHeaderButtons />}
               >
-                {hasSetStartingCustomizations && (
-                  <ChatWorkspace
-                    modelParameters={modelParameters}
-                    clientType={AiChatClientTypes.AI_CHAT_LAB}
-                    levelName={levelName}
-                    channelId={channelId}
-                    hasStarterAssets={
-                      starterAssets && Object.keys(starterAssets).length > 0
-                    }
-                    multimodalEnabled={levelAichatSettings?.multimodalEnabled}
-                  />
-                )}
+                <PresentationView />
               </PanelContainer>
             </div>
+          )}
+          <div className={moduleStyles.chatWorkspaceArea}>
+            <PanelContainer
+              id="aichat-workspace-panel"
+              headerContent={chatWorkspaceHeader}
+              className={moduleStyles.panelContainer}
+              headerClassName={moduleStyles.panelHeader}
+            >
+              {hasSetStartingCustomizations && (
+                <ChatWorkspace
+                  modelParameters={modelParameters}
+                  clientType={AiChatClientTypes.AI_CHAT_LAB}
+                  levelName={levelName}
+                  channelId={channelId}
+                  hasStarterAssets={
+                    starterAssets && Object.keys(starterAssets).length > 0
+                  }
+                  multimodalEnabled={levelAichatSettings?.multimodalEnabled}
+                />
+              )}
+            </PanelContainer>
           </div>
         </div>
-      </AiChatDisabledProvider>
+      </div>
     </LevelPropertiesContext.Provider>
   );
 };
