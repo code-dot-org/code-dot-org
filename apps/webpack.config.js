@@ -291,7 +291,7 @@ const WEBPACK_BASE_CONFIG = {
 
       {test: /\.interpreted.js$/, type: 'asset/source'},
       {
-        test: /\.(png|jpg|jpeg|gif|svg|ico)$/,
+        test: /\.(png|jpg|jpeg|gif|svg)$/,
         include: [
           p('static'),
           p('src'),

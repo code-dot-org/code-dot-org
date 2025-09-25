@@ -12,7 +12,7 @@ const jestAliases = {
   uuid: require.resolve('uuid'),
   // Pin react to use the apps version of react when used in conjunction with linked npm packages
   '^react$': require.resolve('react'),
-  '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga|ico)$':
+  '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
     'jest-transform-stub',
   '\\.(css)$': 'identity-obj-proxy',
   '^firmata$': 'mock-firmata/mock-firmata',
