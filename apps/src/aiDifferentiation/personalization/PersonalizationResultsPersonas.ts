@@ -10,6 +10,11 @@ export const TEACHING_STYLES = [
       i18n.teachingStyleInnovatorSuperpower2(),
       i18n.teachingStyleInnovatorSuperpower3(),
     ],
+    howAiHelps: [
+      i18n.teachingStyleInnovatorAiHelp1(),
+      i18n.teachingStyleInnovatorAiHelp2(),
+      i18n.teachingStyleInnovatorAiHelp3(),
+    ],
   },
   {
     name: i18n.teachingStyleCodeWhispererName(),
@@ -19,6 +24,11 @@ export const TEACHING_STYLES = [
       i18n.teachingStyleCodeWhispererSuperpower1(),
       i18n.teachingStyleCodeWhispererSuperpower2(),
       i18n.teachingStyleCodeWhispererSuperpower3(),
+    ],
+    howAiHelps: [
+      i18n.teachingStyleCodeWhispererAiHelp1(),
+      i18n.teachingStyleCodeWhispererAiHelp2(),
+      i18n.teachingStyleCodeWhispererAiHelp3(),
     ],
   },
   {

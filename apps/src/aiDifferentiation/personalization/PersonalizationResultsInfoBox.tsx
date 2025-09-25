@@ -5,7 +5,7 @@ import i18n from '@cdo/locale';
 
 import style from './personalization-information.module.scss';
 
-const PersonalizationRevealInfoBox: React.FC = () => {
+const PersonalizationResultsInfoBox: React.FC = () => {
   return (
     <div className={style.revealInfoBox}>
       <BodyThreeText>
@@ -16,4 +16,4 @@ const PersonalizationRevealInfoBox: React.FC = () => {
   );
 };
 
-export default PersonalizationRevealInfoBox;
+export default PersonalizationResultsInfoBox;

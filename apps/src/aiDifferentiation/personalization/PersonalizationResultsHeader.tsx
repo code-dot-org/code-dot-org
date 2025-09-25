@@ -9,12 +9,12 @@ import {TeachingStyle} from './PersonalizationResults';
 
 import style from './personalization-information.module.scss';
 
-interface PersonalizationRevealHeaderProps {
+interface PersonalizationResultsHeaderProps {
   teachingStyle: TeachingStyle;
 }
 
-const PersonalizationRevealHeader: React.FC<
-  PersonalizationRevealHeaderProps
+const PersonalizationResultsHeader: React.FC<
+  PersonalizationResultsHeaderProps
 > = ({teachingStyle}) => {
   return (
     <div className={style.revealHeader}>
@@ -28,4 +28,4 @@ const PersonalizationRevealHeader: React.FC<
   );
 };
 
-export default PersonalizationRevealHeader;
+export default PersonalizationResultsHeader;

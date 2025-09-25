@@ -16,12 +16,16 @@ const PersonalizationResultsColumnSuperpowers: React.FC<
   PersonalizationResultsColumnSuperpowersProps
 > = ({superpowers}) => {
   return (
-    <div className={style.personaColumn}>
+    <div className={classNames(style.personaColumn, style.personaColumnYellow)}>
       <Heading5 className={classNames(style.headerBlack, style.header)}>
-        {i18n.teachingStyleSuperpowers}
+        {i18n.teachingStyleSuperpowers()}
       </Heading5>
       {superpowers.map((superpower, index) => (
-        <PersonalizationInformationBox key={index} information={superpower} />
+        <PersonalizationInformationBox
+          key={index}
+          information={superpower}
+          type={'formatted'}
+        />
       ))}
     </div>
   );

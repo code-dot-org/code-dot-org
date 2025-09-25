@@ -100,7 +100,6 @@
   justify-content: center;
   flex-direction: column;
   gap: 20px;
-  padding: 30px;
 }
 
 .revealHeader {
@@ -112,7 +111,7 @@
 .revealDetailsContainer {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  gap: 12px;
 }
 
 .revealInfoBox {
@@ -125,26 +124,42 @@
   text-align: center;
 }
 
+.arrowColumn {
+  width: 15px !important;
+  background-color: transparent !important;
+  padding: 16px 0 !important;
+}
+
+.personaColumnYellow {
+  background-color: #ffdfa1;
+}
+
+.personaColumnBlack {
+  background-color: var(--background-neutral-black-fixed);
+}
+
 .personaColumn {
   width: 350px;
   height: 432px;
   padding: 16px;
   display: flex;
   flex-direction: column;
-  background-color: green;
 
   .header {
     margin: 0 0 16px 0;
+    width: 350px;
+  }
+
+  .arrowHeader {
+    height: 44px;
   }
 
   .headerBlack {
-    margin: 0 0 16px 0;
-    color: black;
+    color: var(--text-neutral-primary, #292f36);
   }
 
   .headerWhite {
-    margin: 0 0 16px 0;
-    color: white;
+    color: var(--text-neutral-white-fixed, #fff);
   }
 
   .informationBox {
@@ -152,6 +167,21 @@
     align-self: stretch;
     padding: 12px;
     margin: 4px 0;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    height: 95px;
+
+    .boldedInformationBox {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  }
+
+  .arrowBox {
+    background-color: white;
+    align-self: stretch;
     flex-grow: 1;
     display: flex;
     align-items: center;

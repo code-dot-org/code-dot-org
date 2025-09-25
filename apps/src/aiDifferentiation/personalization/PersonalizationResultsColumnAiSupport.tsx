@@ -1,4 +1,5 @@
 import {Heading5} from '@code-dot-org/component-library/typography';
+import classnames from 'classnames';
 import React from 'react';
 
 import i18n from '@cdo/locale';
@@ -15,13 +16,13 @@ const PersonalizationResultsColumnAiHelp: React.FC<
   PersonalizationResultsColumnAiHelpProps
 > = ({aiHelpSuggestions}) => {
   return (
-    <div className={style.header}>
-      <Heading5 className={style.headerWhite}>
-        {i18n.teachingStyleHowAiHelps}
+    <div className={classnames(style.personaColumn, style.personaColumnBlack)}>
+      <Heading5 className={classnames(style.headerWhite, style.header)}>
+        {i18n.teachingStyleHowAiHelps()}
       </Heading5>
-      <PersonalizationInformationBox information="Information Box 1" />
-      <PersonalizationInformationBox information="Information Box 2" />
-      <PersonalizationInformationBox information="Information Box 3" />
+      {aiHelpSuggestions.map((suggestion, index) => (
+        <PersonalizationInformationBox key={index} information={suggestion} />
+      ))}
     </div>
   );
 };

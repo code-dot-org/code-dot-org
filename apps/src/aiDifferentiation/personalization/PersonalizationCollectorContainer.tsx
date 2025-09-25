@@ -14,7 +14,7 @@ import {
 import PersonalizationQuestion from './PersonalizationQuestion';
 import {PERSONALIZATION_PROMPTS} from './personalizationQuestions';
 import PersonalizationResults from './PersonalizationResults';
-import {TEACHING_STYLES} from './PersonalizationRevealPersonas';
+import {TEACHING_STYLES} from './PersonalizationResultsPersonas';
 import {saveTeachingProfileData} from './teachingProfileApi';
 
 import style from './personalization-information.module.scss';

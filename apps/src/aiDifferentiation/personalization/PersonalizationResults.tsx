@@ -1,9 +1,10 @@
 import React from 'react';
 
-import PersonalizationResultsColumnAiHelp from './PersonalizationResultsColumnAiHelp';
+import PersonalizationResultsColumnAiHelp from './PersonalizationResultsColumnAiSupport';
+import PersonalizationResultsColumnArrows from './PersonalizationResultsColumnArrows';
 import PersonalizationResultsColumnSuperpowers from './PersonalizationResultsColumnSuperpowers';
-import PersonalizationRevealHeader from './PersonalizationRevealHeader';
-import PersonalizationRevealInfoBox from './PersonalizationRevealInfoBox';
+import PersonalizationResultsHeader from './PersonalizationResultsHeader';
+import PersonalizationResultsInfoBox from './PersonalizationResultsInfoBox';
 
 import style from './personalization-information.module.scss';
 
@@ -13,6 +14,7 @@ export interface TeachingStyle {
   emoji: string;
   tagline: string;
   teachingSuperpowers: string[];
+  howAiHelps?: string[];
 }
 interface PersonalizationResultsProps {
   teachingStyle: TeachingStyle;
@@ -23,14 +25,19 @@ const PersonalizationResults: React.FC<PersonalizationResultsProps> = ({
 }) => {
   return (
     <div className={style.revealContainer}>
-      <PersonalizationRevealHeader teachingStyle={teachingStyle} />
+      <PersonalizationResultsHeader teachingStyle={teachingStyle} />
       <div className={style.revealDetailsContainer}>
         <PersonalizationResultsColumnSuperpowers
           superpowers={teachingStyle.teachingSuperpowers}
         />
-        <PersonalizationResultsColumnAiHelp aiHelpSuggestions={[]} />
+        <PersonalizationResultsColumnArrows />
+        <PersonalizationResultsColumnAiHelp
+          aiHelpSuggestions={
+            teachingStyle.howAiHelps ? teachingStyle.howAiHelps : []
+          }
+        />
       </div>
-      <PersonalizationRevealInfoBox />
+      <PersonalizationResultsInfoBox />
     </div>
   );
 };
