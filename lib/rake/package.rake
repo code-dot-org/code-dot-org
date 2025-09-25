@@ -48,7 +48,9 @@ namespace :package do
       # upload to s3
       package = packager.create_package('/build/package', expected_commit_hash: expected_commit_hash)
 
-      unless rack_env?(:adhoc)
+      # If we're running on a regular adhoc (=not a fullstack adhoc), don't upload to s3.
+      standalone_adhoc = rack_env?(:adhoc) && !CDO.daemon
+      unless standalone_adhoc
         packager.upload_package_to_s3(package)
         ChatClient.log "Uploaded apps package to S3: #{packager.commit_hash}"
         apps_packager.log_bundle_size
