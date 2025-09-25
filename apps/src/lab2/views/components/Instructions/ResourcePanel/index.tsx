@@ -260,9 +260,9 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
             scrollToElement: false,
             exitOnOverlayClick: false,
             hidePrev: true,
-            nextLabel: 'Next',
-            prevLabel: 'Back',
-            doneLabel: 'Done',
+            nextLabel: commonI18n.next(),
+            prevLabel: commonI18n.back(),
+            doneLabel: commonI18n.done(),
             showBullets: false,
             showStepNumbers: true,
           }}
