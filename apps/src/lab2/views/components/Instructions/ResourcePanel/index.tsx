@@ -300,7 +300,19 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
           headerClassName={headerClassName}
           rightHeaderContent={rightHeaderContent}
         >
-          {availableTabs[currentTab]}
+          <div className={styles.tabContentContainer}>
+            {getTypedKeys(availableTabs).map(tab => (
+              <div
+                key={tab}
+                className={classNames(
+                  styles.tabContent,
+                  tab !== currentTab && styles.tabContentHidden
+                )}
+              >
+                {availableTabs[tab]}
+              </div>
+            ))}
+          </div>
           <NavigationArea isResourcePanel={true} {...instructionsProps} />
           {isSettingsOpen && (
             <SettingsPanel
