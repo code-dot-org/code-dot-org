@@ -8,7 +8,6 @@ import {
 import Drawer from '@mui/material/Drawer';
 import React from 'react';
 
-//import Foorm from '@cdo/apps/code-studio/pd/foorm/Foorm';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
@@ -19,6 +18,7 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 
 import SchoolDataInputs from '../../SchoolDataInputs';
+import NpsSurveyBlock from '../NpsSurveyBlock';
 
 import drawerConfirmationImage from './images/drawer-confirmation-image.png';
 import {SchoolInfo} from './TeacherHomepageConstants';
@@ -54,19 +54,20 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
   const [AFEDrawerOpen, setAFEDrawerOpen] = React.useState(afeOpenInitially);
   const [AFEParticipate, setAFEParticipate] = React.useState(false);
   const [NPSOpen, setNPSOpen] = React.useState(npsOpenInitially);
-  // const [NPSData, setNPSData] = React.useState(null);
 
   const isOpen = React.useMemo<boolean>(
     () =>
       schoolInfoInterstitialOpen ||
       schoolInfoConfirmationOpen ||
       success ||
-      AFEDrawerOpen,
+      AFEDrawerOpen ||
+      NPSOpen,
     [
       schoolInfoInterstitialOpen,
       schoolInfoConfirmationOpen,
       success,
       AFEDrawerOpen,
+      NPSOpen,
     ]
   );
 
@@ -83,18 +84,6 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
   const existingSchoolName =
     existingSchoolInfo?.school_name || i18n.schoolInfoDialogDescriptionNoName();
 
-  React.useEffect(() => {
-    if (NPSOpen) {
-      HttpClient.get('/form/nps_survey/configuration').then(result => {
-        if (result) {
-          console.log();
-          //setNPSData(result.value);
-        }
-      });
-    }
-    setNPSOpen(false); //TODO: remove
-  }, [NPSOpen]);
-
   const headerText: () => string = () => {
     if (schoolInfoInterstitialOpen) {
       return i18n.censusHeading();
@@ -104,6 +93,8 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
       return i18n.thankYouForUpdatingYourSchool();
     } else if (AFEDrawerOpen) {
       return i18n.afeDrawerHeader();
+    } else if (NPSOpen) {
+      return i18n.helpUsImprove();
     }
   };
 
@@ -135,10 +126,14 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
           <SchoolDataInputs {...schoolInfo} includeHeaders={false} />
         </div>
       );
+    } else if (NPSOpen) {
+      return (
+        <div className={styles.drawerContent}>
+          <NpsSurveyBlock />
+        </div>
+      );
     } else if (schoolInfoConfirmationOpen || success || AFEDrawerOpen) {
       return null;
-    } else if (NPSOpen) {
-      //<Foorm {...NPSData} />;
     }
   };
 
@@ -338,6 +333,7 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
     setSchoolInfoConfirmationOpen(false);
     setSuccess(false);
     setAFEDrawerOpen(false);
+    setNPSOpen(false);
     onCloseCallback();
   };
 
