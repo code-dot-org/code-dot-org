@@ -5,11 +5,18 @@ import CopyChatHistoryButton from './CopyChatHistoryButton';
 
 import moduleStyles from './aiChatHeaderButtons.module.scss';
 
-const AiChatHeaderButtons: React.FunctionComponent = () => {
+interface AiChatHeaderButtonsProps {
+  isCopyChatDisabled: boolean;
+  isClearChatDisabled: boolean;
+}
+
+const AiChatHeaderButtons: React.FunctionComponent<
+  AiChatHeaderButtonsProps
+> = ({isCopyChatDisabled, isClearChatDisabled}) => {
   return (
     <div className={moduleStyles.aiChatHeaderButtons}>
-      <CopyChatHistoryButton isDisabled={false} />
-      <ClearChatButton isDisabled={false} />
+      <CopyChatHistoryButton isDisabled={isCopyChatDisabled} />
+      <ClearChatButton isDisabled={isClearChatDisabled} />
     </div>
   );
 };

@@ -38,7 +38,7 @@ const ClearChatButton: React.FunctionComponent<{
       tooltipSize="xs"
       tooltipDirection="onBottom"
       hideTooltipTail={true}
-      disabled={false}
+      disabled={isDisabled}
       onClick={onClear}
     />
   );

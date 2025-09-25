@@ -136,7 +136,12 @@ const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
               id="aitutor2"
               headerContent="AI Tutor"
               className={moduleStyles.rightmostColumn}
-              rightHeaderContent={<AiChatHeaderButtons />}
+              rightHeaderContent={
+                <AiChatHeaderButtons
+                  isCopyChatDisabled={false}
+                  isClearChatDisabled={false}
+                />
+              }
             >
               <div className={moduleStyles.inside}>
                 <AiTutor2Chat hiddenContextCallback={hiddenContextCallback} />
