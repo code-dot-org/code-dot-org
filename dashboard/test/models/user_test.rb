@@ -4376,7 +4376,7 @@ class UserTest < ActiveSupport::TestCase
     context 'when user is a teacher with LTI account' do
       let(:teacher) {create(:teacher, :with_lti_auth)}
 
-      it 'can access AI Chat ' do
+      it 'can access AI Chat' do
         _(teacher.teacher_can_access_ai_chat?).must_equal true
       end
     end
