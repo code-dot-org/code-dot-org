@@ -10,10 +10,9 @@ class Marketing::Teacher::PromotionsControllerTest < ActionDispatch::Integration
   describe '#show' do
     let(:locale) {'en-US'}
     let(:entry_id) {SecureRandom.hex(10)}
-    let(:content_type) {TestContentType.new(id: 'teacherHomepageSidebar')}
     let(:entry) do
       TestEntry.new(
-        content_type: content_type,
+        content_type: 'teacherHomepageSidebar',
         fields: {
           sidebar_ads: [
             TestEntry.new(
@@ -46,7 +45,7 @@ class Marketing::Teacher::PromotionsControllerTest < ActionDispatch::Integration
     end
 
     before do
-      Marketing::ContentfulClient.expects(:entry).with(locale, entry_id).returns(entry)
+      CdoContentful::Marketing::Entry::TeacherHomepageSidebar.stubs(:find).with(entry_id).returns(entry)
     end
 
     it 'returns teacher sidebar json' do
@@ -57,15 +56,6 @@ class Marketing::Teacher::PromotionsControllerTest < ActionDispatch::Integration
 
     context 'when the entry does not exist' do
       let(:entry) {nil}
-
-      it 'returns a 404' do
-        get "/marketing/teacher/promotions/#{entry_id}"
-        assert_response :not_found
-      end
-    end
-
-    context 'when entry is the wrong content type' do
-      let(:content_type) {TestContentType.new(id: 'wrongContentType')}
 
       it 'returns a 404' do
         get "/marketing/teacher/promotions/#{entry_id}"

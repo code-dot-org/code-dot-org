@@ -6,8 +6,10 @@ module Marketing
       CONTENTFUL_SOURCE_NAME = 'contentful'
       CACHE_EXPIRATION = 1.hour
 
-      def initialize(contentful_client = Marketing::ContentfulClient.instance)
-        @contentful_client = contentful_client
+      attr_reader :entry_interface
+
+      def initialize(entry_interface = CdoContentful::Marketing::Entry::DashboardNotification)
+        @entry_interface = entry_interface
       end
 
       def get(user_id:, locale:)
@@ -31,11 +33,15 @@ module Marketing
       end
 
       private def cached_contentful_entries(locale)
-        CDO.shared_cache.fetch("contentful-#{NOTIFICATION_CONTENTFUL_CONTENT_TYPE}:#{locale}", expires_in: CACHE_EXPIRATION) do
-          contentful_entries = @contentful_client.entries(locale, NOTIFICATION_CONTENTFUL_CONTENT_TYPE)
-          contentful_entries.filter_map do |notification|
-            Services::ContentfulNotificationFormatter.call(notification)
+        CDO.shared_cache.fetch("contentful-#{NOTIFICATION_CONTENTFUL_CONTENT_TYPE}:#{locale}:v2", expires_in: CACHE_EXPIRATION) do
+          formatted_entries = []
+
+          entry_interface.find_each(locale:) do |entry|
+            formatted_entry = Services::ContentfulNotificationFormatter.call(entry)
+            formatted_entries << formatted_entry if formatted_entry
           end
+
+          formatted_entries
         end
       end
     end
