@@ -1,15 +1,16 @@
-import {Box} from '@mui/material';
-import {Results, search} from '@orama/orama';
-import {persist} from '@orama/plugin-data-persistence';
-import {notFound} from 'next/navigation';
+// frontend/apps/marketing/src/app/[brand]/[locale]/activities/[activityType]/page.tsx
+import { Box } from '@mui/material';
+import { Results, search } from '@orama/orama';
+import { persist } from '@orama/plugin-data-persistence';
+import { notFound } from 'next/navigation';
 
 import ActivityCatalog from '@/components/contentful/ActivityCatalog';
 import ActivitiesHero from '@/components/contentful/ActivityCatalog/ActivitiesHero';
-import {Brand} from '@/config/brand';
-import {getContentfulActivities} from '@/modules/activityCatalog/contentful/getContentfulActivities';
-import {createDatabase} from '@/modules/activityCatalog/orama/createDatabase';
-import {Activity} from '@/modules/activityCatalog/types/Activity';
-import {Entry} from '@/types/contentful/Entry';
+import { Brand } from '@/config/brand';
+import { getContentfulActivities } from '@/modules/activityCatalog/contentful/getContentfulActivities';
+import { createDatabase } from '@/modules/activityCatalog/orama/createDatabase';
+import { Activity } from '@/modules/activityCatalog/types/Activity';
+import { Entry } from '@/types/contentful/Entry';
 
 export const revalidate = 3600;
 
@@ -27,24 +28,24 @@ const ValidActivityTypes = new Set<string>(Object.values(ActivityType));
 export default async function ActivitiesPage({
   params,
 }: {
-  params: Promise<{brand: string; activityType: string}>;
+  params: { brand: string; activityType: string };
 }) {
-  const {brand, activityType} = await params;
+  const { brand, activityType } = params;
 
   if (brand !== Brand.CS_FOR_ALL || !ValidActivityTypes.has(activityType)) {
     return notFound();
   }
 
   const contentfulActivities = await getContentfulActivities(
-    activityType as ActivityType,
+    activityType as ActivityType
   );
+
   const db = createDatabase(
-    contentfulActivities as unknown as Entry<Activity>[],
+    contentfulActivities as unknown as Entry<Activity>[]
   );
-  const serializedOramaDb = (await persist(db, 'json')) as
-    | string
-    | ArrayBuffer
-    | Buffer<ArrayBufferLike>;
+
+  // If your ActivityCatalog expects a string, cast to string here.
+  const serializedOramaDb = (await persist(db, 'json')) as string | ArrayBuffer;
 
   const facetResults: Results<Activity> = await search(db, {
     facets: {
@@ -59,7 +60,7 @@ export default async function ActivitiesPage({
     },
   });
 
-  const allActivityResults = await search(db, {term: ''});
+  const allActivityResults = await search(db, { term: '' });
   const allActivities = allActivityResults.hits.map(h => h.document);
 
   return (
@@ -69,8 +70,8 @@ export default async function ActivitiesPage({
         sx={{
           maxWidth: 1200,
           mx: 'auto',
-          px: {xs: 2, md: 4},
-          pb: {xs: 2, md: 8},
+          px: { xs: 2, md: 4 },
+          pb: { xs: 2, md: 8 },
         }}
       >
         <ActivityCatalog
