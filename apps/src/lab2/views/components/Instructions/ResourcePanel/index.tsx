@@ -238,36 +238,30 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     setCurrentTab(Tabs.Instructions);
   }, [levelId, viewAsUserId]);
 
-  const resourcePanelTourEnabled = true;
-
   return (
     <div
       id="resource-panel-instructions"
       className={classNames(styles.resourcePanel, className)}
     >
-      {isPythonLab && pythonLabOnboardingTourSeen !== 'yes' && (
-        <Steps
-          enabled={resourcePanelTourEnabled}
-          initialStep={INITIAL_STEP}
-          steps={STEPS}
-          onExit={() => {
-            trySetLocalStorage(
-              'pythonlabResourcePanelOnboardingTourSeen',
-              'yes'
-            );
-          }}
-          options={{
-            scrollToElement: false,
-            exitOnOverlayClick: false,
-            hidePrev: true,
-            nextLabel: commonI18n.next(),
-            prevLabel: commonI18n.back(),
-            doneLabel: commonI18n.done(),
-            showBullets: false,
-            showStepNumbers: true,
-          }}
-        />
-      )}
+      <Steps
+        enabled={isPythonLab && pythonLabOnboardingTourSeen !== 'yes'}
+        initialStep={INITIAL_STEP}
+        steps={STEPS}
+        onExit={() => {
+          trySetLocalStorage('pythonlabResourcePanelOnboardingTourSeen', 'yes');
+        }}
+        options={{
+          scrollToElement: false,
+          exitOnOverlayClick: false,
+          hidePrev: true,
+          nextLabel: commonI18n.next(),
+          prevLabel: commonI18n.back(),
+          doneLabel: commonI18n.done(),
+          showBullets: false,
+          showStepNumbers: true,
+        }}
+      />
+
       <div className={styles.sidebar}>
         <div id="resource-panel-tabs" className={styles.tabs}>
           {getTypedKeys(availableTabs).map(tab => (
