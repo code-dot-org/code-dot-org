@@ -450,7 +450,11 @@ class FilesApi < Sinatra::Base
       source = body_json["source"]
       html = body_json["html"]
 
-      source_is_valid = source && has_valid_encoding?(source)
+      # Excalidraw is the third-party package we use in Sketch Lab for an interactive canvas.
+      # We serialize the state of the canvas as the source on these level types.
+      is_sketchlab = source["type"] == 'excalidraw'
+
+      source_is_valid = is_sketchlab || (source && has_valid_encoding?(source))
       # HTML only exists for AppLab projects
       html_is_valid = html ? source.force_encoding("UTF-8").valid_encoding? : true
 
@@ -500,7 +504,14 @@ class FilesApi < Sinatra::Base
           # Nested file source structure for lab2 labs such as Python Lab and Web Lab 2 is
           # {files: {filename: {contents: "...<code here>...",...}}, folders: {id: {id: <id>, name: <folder_name>,...}}}
           source[key].each_key do |file|
-            return false unless source[key][file]["contents"]&.force_encoding("UTF-8")&.valid_encoding?
+            contents = source[key][file]["contents"]
+
+            # Sketch Lab sources are managed by a third party (Excalidraw)
+            # but also have a "files" attribute (with a different property structure),
+            # so we skip encoding checks there.
+            if contents && !contents&.force_encoding("UTF-8")&.valid_encoding?
+              return false
+            end
           end
         end
         # TODO: do we need to validate folders?
