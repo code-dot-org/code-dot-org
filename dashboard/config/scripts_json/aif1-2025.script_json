@@ -34,7 +34,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-08-25 15:11:47 UTC",
+    "serialized_at": "2025-09-17 20:33:05 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -7520,6 +7520,18 @@
       }
     },
     {
+      "name": "AI In Grocery Stores - 1 ",
+      "url": "https://drive.google.com/file/d/1-MykYtR1K7qzncS7F7v34_2kCkJCa7DN/view",
+      "key": "ai_in_grocery_stores_-_1",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "ai_in_grocery_stores_-_1"
+      }
+    },
+    {
       "name": "AI in the Community",
       "url": "https://docs.google.com/document/d/1swk3Ytu52zPLdffHXsKMbNDrTTI87NIX9nZzSHQtBag/edit?usp=drivesdk",
       "key": "ai_in_the_community",
@@ -8035,6 +8047,12 @@
       "seeding_key": {
         "lesson.key": "AI's Role in Society",
         "resource.key": "_key_problem_solving_with_ai_unit_guide_exemplar"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "AI's Role in Society",
+        "resource.key": "ai_in_grocery_stores_-_1"
       }
     },
     {

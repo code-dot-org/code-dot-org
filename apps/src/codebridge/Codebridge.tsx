@@ -13,6 +13,7 @@ import {
 import classNames from 'classnames';
 import React, {useEffect, useMemo} from 'react';
 
+import {ChatButtonData, SystemPromptSettings} from '@cdo/apps/aichat/types';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
@@ -24,6 +25,7 @@ import FlaggedImageModal from '@cdo/apps/sharedComponents/FlaggedImageModal';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import moduleStyles from './styles/codebridgeContainer.module.scss';
+
 import './styles/codebridge.scss';
 
 const RUN_BUTTON_ID = '#uitest-codebridge-run';
@@ -39,8 +41,10 @@ type CodebridgeProps = {
   sendConsoleInput?: SendConsoleInputFunction;
   levelProperties: CodebridgeLevelProperties;
   projectPickerSettings?: ProjectPickerSettings;
-  AiTutor2ResponseView?: React.ReactNode;
-  aiTutor2Context?: string;
+  hiddenContextCallback?: () => Promise<string>;
+  aiTutorSystemPromptSettings?: SystemPromptSettings;
+  aiTutorMultimodalEnabled?: boolean;
+  aiTutorChatButtonData?: ChatButtonData[];
 };
 
 export const Codebridge = React.memo(
@@ -53,8 +57,10 @@ export const Codebridge = React.memo(
     sendConsoleInput,
     levelProperties,
     projectPickerSettings,
-    AiTutor2ResponseView,
-    aiTutor2Context,
+    hiddenContextCallback,
+    aiTutorSystemPromptSettings,
+    aiTutorMultimodalEnabled,
+    aiTutorChatButtonData,
   }: CodebridgeProps) => {
     const isShareView = useAppSelector(state => state.lab.isShareView);
     const isWidgetView = !!levelProperties.widgetView;
@@ -179,9 +185,11 @@ export const Codebridge = React.memo(
           sendConsoleInput,
           levelProperties,
           projectPickerSettings,
-          AiTutor2ResponseView,
-          aiTutor2Context,
+          hiddenContextCallback,
           onImageFlagged,
+          aiTutorSystemPromptSettings,
+          aiTutorMultimodalEnabled,
+          aiTutorChatButtonData,
         }}
       >
         <BackpackAPIContext.Provider value={backpackApi}>

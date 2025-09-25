@@ -533,17 +533,6 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     assert deployment.name
   end
 
-  test 'auth - link lti_user_identity with lti_deployment' do
-    payload = get_valid_payload
-    jwt = create_jwt_and_stub(payload)
-    user = create_preexisting_user(payload)
-    deployment = create(:lti_deployment, deployment_id: @deployment_id, lti_integration: @integration)
-    assert_equal deployment.lti_user_identities.count, 0
-    post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
-    assert_equal deployment.lti_user_identities.count, 1
-    assert_equal deployment.lti_user_identities.first, user.lti_user_identities.first
-  end
-
   test 'auth - do not link lti_user_identity with lti_deployment if already linked' do
     payload = get_valid_payload
     jwt = create_jwt_and_stub(payload)
@@ -652,11 +641,12 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     assert_response :bad_request
   end
 
-  test 'sync - should not sync when launching from wrong context' do
+  test 'sync - should redirect to homepage when context or nrps_url is missing' do
     user = create(:teacher, :with_lti_auth)
     sign_in user
-    LtiV1Controller.any_instance.expects(:render_sync_course_error).with('Attempting to sync a course or section from the wrong place.', :bad_request, 'wrong_context')
     get '/lti/v1/sync_course', params: {lti_integration_id: 'foo', deployment_id: 'bar', context_id: nil, rlid: 'qux', nrps_url: nil}
+    assert_response :redirect
+    assert_equal '/home', '/' + @response.redirect_url.split('/').last
   end
 
   test 'sync - should not sync and render sync course error when missing a param' do
@@ -671,7 +661,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     sign_in user
     lti_integration = create(:lti_integration)
     lti_course = create(:lti_course, lti_integration: lti_integration, context_id: SecureRandom.uuid, resource_link_id: SecureRandom.uuid, nrps_url: 'https://example.com/nrps')
-    Clients::LtiAdvantageClient.any_instance.expects(:get_context_membership).with(lti_course.nrps_url, lti_course.resource_link_id).returns({})
+    LtiAdvantageClient.any_instance.expects(:get_context_membership).with(lti_course.nrps_url, lti_course.resource_link_id).returns({})
     Services::Lti.expects(:parse_nrps_response).returns(@parsed_nrps_sections)
     Services::Lti.expects(:sync_course_roster).returns(@sync_course_result_with_changes)
 
@@ -685,7 +675,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     lti_integration = create(:lti_integration)
     lti_course = create(:lti_course, lti_integration: lti_integration, context_id: SecureRandom.uuid, resource_link_id: SecureRandom.uuid, nrps_url: 'https://example.com/nrps')
     new_resource_id = SecureRandom.uuid
-    Clients::LtiAdvantageClient.any_instance.expects(:get_context_membership).with(lti_course.nrps_url, new_resource_id).returns({})
+    LtiAdvantageClient.any_instance.expects(:get_context_membership).with(lti_course.nrps_url, new_resource_id).returns({})
     Services::Lti.expects(:parse_nrps_response).returns(@parsed_nrps_sections)
     Services::Lti.expects(:sync_course_roster).returns(@sync_course_result_with_changes)
 
@@ -711,7 +701,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
       nrps_url: lti_course_nrps_url
     )
 
-    Clients::LtiAdvantageClient.any_instance.expects(:get_context_membership).with(lti_course_nrps_url, lti_course_resource_link_id).returns({})
+    LtiAdvantageClient.any_instance.expects(:get_context_membership).with(lti_course_nrps_url, lti_course_resource_link_id).returns({})
     Services::Lti.expects(:parse_nrps_response).returns(@parsed_nrps_sections)
     Services::Lti.expects(:sync_course_roster).returns(@sync_course_result_no_changes)
 
@@ -742,7 +732,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     user = create(:teacher, :with_lti_auth)
     lti_integration = create(:lti_integration)
 
-    Clients::LtiAdvantageClient.
+    LtiAdvantageClient.
       any_instance.
       expects(:get_context_membership).
       with(lti_course_nrps_url, lti_course_resource_link_id).
@@ -787,7 +777,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     user = create(:teacher, :with_lti_auth)
     lti_integration = create(:lti_integration)
 
-    Clients::LtiAdvantageClient.any_instance.expects(:get_context_membership).with(lti_course_nrps_url, lti_course_resource_link_id).returns({})
+    LtiAdvantageClient.any_instance.expects(:get_context_membership).with(lti_course_nrps_url, lti_course_resource_link_id).returns({})
     Policies::Lti.expects(:issuer_accepts_resource_link?).with(lti_integration.issuer).returns(false)
     Services::Lti::NRPSResponseValidator.expects(:call).never
     Services::Lti.expects(:parse_nrps_response).returns(@parsed_nrps_sections)
@@ -813,7 +803,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     sign_in user
     lti_integration = create(:lti_integration)
     lti_course = create(:lti_course, lti_integration: lti_integration, context_id: SecureRandom.uuid, resource_link_id: SecureRandom.uuid, nrps_url: 'https://example.com/nrps')
-    Clients::LtiAdvantageClient.any_instance.expects(:get_context_membership).with(lti_course.nrps_url, lti_course.resource_link_id).returns({})
+    LtiAdvantageClient.any_instance.expects(:get_context_membership).with(lti_course.nrps_url, lti_course.resource_link_id).returns({})
     Services::Lti.expects(:parse_nrps_response).returns(@parsed_nrps_sections)
     Services::Lti.expects(:sync_course_roster).returns(@sync_course_result_no_changes)
 
@@ -827,7 +817,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     lti_integration = create(:lti_integration)
     lti_course = create(:lti_course, lti_integration: lti_integration, context_id: SecureRandom.uuid, resource_link_id: SecureRandom.uuid, nrps_url: 'https://example.com/nrps')
     lti_section = create(:lti_section, lti_course: lti_course)
-    Clients::LtiAdvantageClient.any_instance.expects(:get_context_membership).with(lti_course.nrps_url, lti_course.resource_link_id).returns({})
+    LtiAdvantageClient.any_instance.expects(:get_context_membership).with(lti_course.nrps_url, lti_course.resource_link_id).returns({})
     Services::Lti.expects(:parse_nrps_response).returns(@parsed_nrps_sections)
     Services::Lti.expects(:sync_course_roster).returns(@sync_course_result_with_changes)
 
@@ -842,7 +832,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     lti_course = create(:lti_course, lti_integration: lti_integration, context_id: SecureRandom.uuid, resource_link_id: SecureRandom.uuid, nrps_url: 'https://example.com/nrps')
     create(:lti_user_identity, lti_integration: lti_integration, user: user, subject: 'f2a16942-ed81-4c98-96dc-5cac16e354ec')
 
-    Clients::LtiAdvantageClient.any_instance.expects(:get_context_membership).with(lti_course.nrps_url, lti_course.resource_link_id)
+    LtiAdvantageClient.any_instance.expects(:get_context_membership).with(lti_course.nrps_url, lti_course.resource_link_id)
     Services::Lti.expects(:parse_nrps_response).returns(@parsed_nrps_sections)
 
     # Set up a situation where a sync has partially progressed, including saving some objects, but then
@@ -958,7 +948,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     sign_in user
     lti_integration = create(:lti_integration)
     lti_course = create(:lti_course, lti_integration: lti_integration, context_id: SecureRandom.uuid, resource_link_id: SecureRandom.uuid, nrps_url: 'https://example.com/nrps')
-    Clients::LtiAdvantageClient.any_instance.expects(:get_context_membership).never
+    LtiAdvantageClient.any_instance.expects(:get_context_membership).never
     Services::Lti.expects(:parse_nrps_response).never
     Services::Lti.expects(:sync_course_roster).never
 

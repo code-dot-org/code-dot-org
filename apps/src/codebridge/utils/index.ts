@@ -1,6 +1,6 @@
 export * from './analyticsReporterHelper';
 export * from './editableFileType';
-export * from './createBlobUrlForFile';
+export * from './getUrlForFile';
 export * from './isDuplicateFileName';
 export * from './isDuplicateFolderName';
 export * from './isValidFileName';

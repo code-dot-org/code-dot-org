@@ -2,6 +2,7 @@ import React from 'react';
 
 import HttpClient from '@cdo/apps/util/HttpClient';
 
+import EmptyNotificationList from './EmptyNotificationList';
 import Notification from './Notification';
 import {AiDiffNotification} from './types';
 
@@ -31,7 +32,9 @@ const AiDiffNotificationList: React.FC<AiDiffNotificationListProps> = ({
         setNotifications(loadedNotifications);
       })
       .catch(error => {
-        console.error('Error fetching notifications:', error);
+        console.error('Error fetching notifications for list:', error);
+        setNotifications([]);
+        setLoading(false);
       });
   }, []);
 
@@ -57,8 +60,7 @@ const AiDiffNotificationList: React.FC<AiDiffNotificationListProps> = ({
   }, [notifications]);
 
   if (!loading && (!notifications || notifications.length === 0)) {
-    // TODO(lfm): add empty state design
-    return <div className={styles.listContainer}>{'no notifications'}</div>;
+    return <EmptyNotificationList />;
   }
 
   return (

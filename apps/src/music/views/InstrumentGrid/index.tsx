@@ -178,7 +178,7 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
 
   const getRowInfo = (name: string, note: number) => {
     if (interfaceMode === 'drums') {
-      return {style: styles.textLabel, label: name};
+      return {style: styles.textLabel, label: name, tabIndex: 0, showing: true};
     }
 
     const {textColor, keyColor, selectedColor} = getNoteColorInfo(
@@ -202,6 +202,7 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
       keyColor,
       selectedColor,
       tabIndex,
+      showing,
     };
   };
 
@@ -223,6 +224,48 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
       -(firstVisibleRow * cellHeightWithGap - parseInt(peekHeight)),
     ];
   }, [editorType, scaleMode]);
+
+  // This handles keyboard interactions for the cells. If an instrument is sent
+  // in, we are focused on the label, which means we play a preview of the note.
+  // Otherwise, we are focused on a selectable cell, which means we call the
+  // corresponding click event. Escape exits the grid, moving focus back to the
+  // parent container. StopPropagation is called on Tab events to keep the focus
+  // from moving beyond the parent container when focus is inside it.
+  const handleKeyDown = (
+    event: React.KeyboardEvent,
+    note: number,
+    tick?: number,
+    instrument?: string
+  ) => {
+    const {key} = event;
+
+    switch (key) {
+      case 'Enter': {
+        event.stopPropagation();
+        event.preventDefault();
+        if (tick !== undefined) {
+          onClickCell(note, tick);
+        } else if (instrument) {
+          MusicRegistry.player.previewNote(note, instrument);
+        }
+        break;
+      }
+      case 'Escape': {
+        event.stopPropagation();
+        event.preventDefault();
+        // Move focus back to the parent container
+        const parentContainer = event.currentTarget.closest('#instrument-grid');
+        (parentContainer as HTMLElement | null)?.focus();
+        break;
+      }
+      case 'Tab': {
+        event.stopPropagation();
+        break;
+      }
+      default:
+        break;
+    }
+  };
 
   return (
     <FocusLock>
@@ -280,6 +323,7 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
           )}
         </div>
         <EaseIntoView
+          id="instrument-grid"
           doEase={editorType !== 'drums'}
           frames={50}
           scrollStart={scrollStart}
@@ -296,6 +340,7 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
               keyColor,
               selectedColor,
               tabIndex,
+              showing,
             } = getRowInfo(name, note);
 
             return (
@@ -305,10 +350,20 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
               >
                 <button
                   type="button"
-                  className={styles['cell-outer']}
+                  className={`${styles['cell-outer']} ${
+                    showing ? 'showing' : ''
+                  }`}
                   onClick={() =>
                     MusicRegistry.player.previewNote(
                       note,
+                      currentValue.instrument
+                    )
+                  }
+                  onKeyDown={event =>
+                    handleKeyDown(
+                      event,
+                      note,
+                      undefined,
                       currentValue.instrument
                     )
                   }
@@ -327,10 +382,13 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
                     <Fragment key={tick}>
                       <button
                         type="button"
-                        className={styles[`cell-outer-${interfaceMode}`]}
+                        className={`${styles[`cell-outer-${interfaceMode}`]} ${
+                          showing ? 'showing' : ''
+                        }`}
                         key={tick}
                         onClick={() => onClickCell(note, tick)}
                         tabIndex={tabIndex}
+                        onKeyDown={event => handleKeyDown(event, note, tick)}
                       >
                         <div
                           className={classNames(

@@ -61,9 +61,7 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
       <div className={moduleStyles.centerHeaderContentText}>
         {commonI18n.workspaceHeaderShort()}
       </div>
-      {projectTemplateLevel && (
-        <ProjectTemplateWorkspaceIconV2 darkMode={true} />
-      )}
+      {projectTemplateLevel && <ProjectTemplateWorkspaceIconV2 />}
     </div>
   );
 

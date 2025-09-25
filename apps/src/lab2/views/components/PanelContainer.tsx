@@ -1,4 +1,4 @@
-import {OverlineTwoText} from '@code-dot-org/component-library/typography';
+import Typography from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -58,8 +58,9 @@ const PanelContainer: React.FunctionComponent<PanelContainerProps> = ({
           >
             {leftHeaderContent}
           </div>
-
-          <OverlineTwoText
+          <Typography
+            semanticTag="h2"
+            visualAppearance="overline-two"
             className={classNames(
               'panelContainerHeaderItemText',
               moduleStyles.panelContainerHeaderItem,
@@ -71,7 +72,7 @@ const PanelContainer: React.FunctionComponent<PanelContainerProps> = ({
             >
               {headerContent}
             </span>
-          </OverlineTwoText>
+          </Typography>
           <div
             className={classNames(
               'panelContainerHeaderItemRight',

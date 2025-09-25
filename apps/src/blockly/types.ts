@@ -50,6 +50,7 @@ export interface BlockConfig {
 export interface arg {
   customInput: string;
   name: string;
+  options?: [string, string][];
 }
 
 export interface SerializedFields {
@@ -361,10 +362,12 @@ export interface JsonBlockConfig {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   extraState?: any;
   type: string;
-  fields: {[key: string]: {name: string; type: string; id?: string} | string};
-  inputs: {[key: string]: {block: JsonBlockConfig}};
-  next: {block: JsonBlockConfig};
-  kind: string;
+  fields?: {
+    [key: string]: {name: string; type: string; id?: string} | string | number;
+  };
+  inputs?: {[key: string]: {block: JsonBlockConfig}};
+  next?: {block: JsonBlockConfig};
+  kind?: string;
 }
 
 export interface Collider {

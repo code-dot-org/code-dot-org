@@ -26,6 +26,17 @@ class AichatOpenaiResponsesClient < AichatAiClient
 
   # Create request body.
   private def create_body(config, request, context = [])
+    if config.dig(:response, :validation, :type) == 'jsonSchema'
+      response_json_schema = config[:response][:validation][:schema]
+      text = {
+        format: {
+          type: 'json_schema',
+            name: 'response_schema',
+            schema: response_json_schema
+        }
+      }
+    end
+
     input = [
       # Add systemInstructions if not nil.
       *(config[:systemInstructions] ? [format_message(config[:systemInstructions], 'system')] : []),
@@ -40,8 +51,9 @@ class AichatOpenaiResponsesClient < AichatAiClient
     body = {
       model: config[:model],
       temperature: config[:temperature],
+      text: text,
       input: input
-    }
+    }.compact # Use compact to remove null text
 
     body
   end

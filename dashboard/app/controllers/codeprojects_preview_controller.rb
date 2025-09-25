@@ -53,7 +53,7 @@ class CodeprojectsPreviewController < ApplicationController
     # Security Control: Restrict image loading sources (overrides default-src for images)
     # Goal: Allow student images while preventing external image injection
     # Remaining Risk: Data URLs could contain malicious content (mitigated by iframe sandbox)
-    img_src = "'self' https: data: blob: https://*.code.org"
+    img_src = "'self' https: data: blob: #{code_studio_url}"
 
     # Security Control: Restrict which sites can embed this page in iframes
     # Goal: Prevent clickjacking attacks by controlling frame embedding

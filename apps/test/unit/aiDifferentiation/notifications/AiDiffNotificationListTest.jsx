@@ -95,7 +95,7 @@ describe('AiDiffNotificationList', () => {
     render(<AiDiffNotificationList />);
 
     await waitFor(() => {
-      screen.getByText('no notifications');
+      screen.getByText(/You don't have any new notifications/);
     });
 
     expect(screen.queryByText('Loading...')).not.toBeInTheDocument();
@@ -110,7 +110,7 @@ describe('AiDiffNotificationList', () => {
 
       await waitFor(() => {
         expect(console.error).toHaveBeenCalledWith(
-          'Error fetching notifications:',
+          'Error fetching notifications for list:',
           mockError
         );
       });
@@ -122,7 +122,7 @@ describe('AiDiffNotificationList', () => {
       render(<AiDiffNotificationList />);
 
       await waitFor(() => {
-        screen.getByText('no notifications');
+        screen.getByText(/You don't have any new notifications/);
       });
     });
   });

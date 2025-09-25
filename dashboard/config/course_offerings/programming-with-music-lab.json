@@ -8,7 +8,7 @@
   "grade_levels": "6,7,8,9,10,11,12",
   "header": "teacher_led",
   "image": "https://images.code.org/d171dc7f41941e2b3c2dcb5fb6583a89-programming-with-music-lab.jpg",
-  "cs_topic": "art_and_design,programming",
+  "cs_topic": "art_and_design,music,programming",
   "school_subject": null,
   "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"ideal\",\"mobile\":\"not_recommended\",\"no_device\":\"incompatible\"}",
   "description": "An engaging, hands-on dive into the worlds of computer science, music, and problem solving. Introduce core programming concepts through music, using code to build, remix, and perform original songs.",

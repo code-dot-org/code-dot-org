@@ -493,7 +493,10 @@ class Pd::Workshop < ApplicationRecord
       # processed before the workshop ended.
       next unless !workshop.processed_at || workshop.processed_at < workshop.ended_at
       workshop.send_exit_surveys
-      workshop.send_facilitator_post_surveys
+      workshop.facilitators&.each do |facilitator|
+        next unless facilitator.email
+        Pd::WorkshopMailjetMailer.send_facilitator_post_workshop_survey(workshop, facilitator)
+      end
       # using update_attribute to skip validation
       workshop.update_attribute(:processed_at, Time.zone.now)
     end
@@ -533,16 +536,15 @@ class Pd::Workshop < ApplicationRecord
     # Collect errors, but do not stop batch. Rethrow all errors below.
     errors = []
     scheduled_start_in_days(days).each do |workshop|
+      next if workshop.suppress_reminders?
+
       workshop.enrollments.each do |enrollment|
-        email = Pd::WorkshopMailer.teacher_enrollment_reminder(enrollment, options: {days_before: days})
-        email.deliver_now
+        user = enrollment.user
+        Pd::WorkshopMailjetMailer.send_teacher_workshop_reminder(enrollment, user, false, days)
 
         # Also send to the user's alternate summer email if they entered it in their application and it's for a summer workshop.
-        if enrollment.workshop&.subject == SUBJECT_SUMMER_WORKSHOP
-          alt_summer_email = enrollment.user&.alternate_email
-          if alt_summer_email.present?
-            Pd::WorkshopMailer.teacher_enrollment_reminder(enrollment, options: {days_before: days}, to_email: alt_summer_email).deliver_now
-          end
+        if workshop.subject == SUBJECT_SUMMER_WORKSHOP && user.alternate_email.present?
+          Pd::WorkshopMailjetMailer.send_teacher_workshop_reminder(enrollment, user, true, days)
         end
       rescue => exception
         errors << "teacher enrollment #{enrollment.id} - #{exception.message}"
@@ -625,34 +627,32 @@ class Pd::Workshop < ApplicationRecord
   end
 
   # Called at the very end of the async close-workshop workflow, to actually send exit
-  # surveys to attended teachers.  Note that logic here is more-or-less independent
+  # surveys to attended teachers. Note that logic here is more-or-less independent
   # from other logic deciding whether a workshop should have exit surveys.
   def send_exit_surveys
-    # FiT workshops should not send exit surveys
-    return if subject == SUBJECT_FIT || course == COURSE_FACILITATOR || course == COURSE_ADMIN_COUNSELOR
-
     resolve_enrolled_users
 
     # Send the emails
     enrollments.each do |enrollment|
-      if account_required_for_attendance?
-        next unless enrollment.user
+      user = enrollment.user
 
-        next unless attending_teachers.include?(enrollment.user)
+      if enrollment.survey_sent_at
+        CDO.log.warn "Skipping attempt to send a duplicate workshop survey email. Enrollment: #{id}"
+        next
+      end
+      next unless user
+      next unless attending_teachers.include?(enrollment.user)
+
+      Pd::WorkshopMailjetMailer.send_teacher_post_workshop_survey(enrollment, user, false)
+
+      # Also send to the user's alternate summer email if they entered it in their application and it's for a summer workshop.
+      if enrollment.workshop.subject == SUBJECT_SUMMER_WORKSHOP && user.alternate_email.present?
+        Pd::WorkshopMailjetMailer.send_teacher_post_workshop_survey(enrollment, user, true)
       end
 
-      enrollment.send_exit_survey
-    end
-  end
-
-  # Send Post-surveys to facilitators of CSD and CSP workshops
-  def send_facilitator_post_surveys
-    if course == COURSE_CSD || course == COURSE_CSP || course == COURSE_CSA || course == COURSE_CSF || course == COURSE_BUILD_YOUR_OWN
-      facilitators.each do |facilitator|
-        next unless facilitator.email
-
-        Pd::WorkshopMailer.facilitator_post_workshop(facilitator, self).deliver_now
-      end
+      enrollment.update!(survey_sent_at: Time.zone.now)
+    rescue => exception
+      raise "teacher enrollment #{enrollment.id} - #{exception.message}"
     end
   end
 

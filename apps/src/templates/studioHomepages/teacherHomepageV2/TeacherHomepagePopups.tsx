@@ -84,7 +84,6 @@ const TeacherHomepagePopups: React.FC<TeacherHomepagePopupsProps> = () => {
   React.useEffect(() => {
     HttpClient.fetchJson<DrawerData>('/teacher_dashboard/get_drawer_data')
       .then(data => {
-        console.log(data.value);
         setExistingSchoolInfo(data.value.existingSchoolInfo);
         setSchoolInfoInterstitialOpen(data.value.showSchoolInfoInterstitial);
         setSchoolInfoConfirmationOpen(data.value.showSchoolInfoConfirmation);

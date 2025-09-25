@@ -335,6 +335,7 @@ class Level < ApplicationRecord
     'PublicKeyCryptography', # widget
     'Pythonlab', # no ideal solution
     'ScriptCompletion', # unknown
+    'Sketchlab', # no ideal solution
     'StandaloneVideo', # no user submitted content
     'TextCompression', # widget
     'TextMatch', # dsl defined, covered in dsl
@@ -398,7 +399,7 @@ class Level < ApplicationRecord
   def channel_backed?
     return false if try(:is_project_level)
     free_response_upload = is_a?(FreeResponse) && allow_user_uploads
-    dance_party_free_play = is_a?(Dancelab) && try(:free_play?)
+    dance_party_free_play = is_a?(Dancelab) && (try(:free_play?) || try(:uses_lab2?))
     project_template_level || free_response_upload || game.channel_backed? || dance_party_free_play
   end
 
@@ -905,7 +906,6 @@ class Level < ApplicationRecord
     properties_camelized[:finishUrl] = script_level.next_level_or_redirect_path_for_user(current_user, unit_group_unit: unit_group_unit) if script_level
     properties_camelized[:baseAssetUrl] = Blockly.base_url
     properties_camelized[:isAssessment] = script_level&.assessment
-    properties_camelized[:progressionType] = script_level&.primm_progression_type
     properties_camelized[:enableBlocklyKeyboardNavigation] = script&.enable_blockly_keyboard_navigation
     # Enable browser TTS if the script has TTS enabled, or if the level itself has it enabled.
     properties_camelized[:offerBrowserTts] = offer_browser_tts || script&.tts

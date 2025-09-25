@@ -4,17 +4,18 @@ import {useParams} from 'react-router-dom';
 
 import {MinSurveyResponseCount} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
+import {SurveyQuestions} from '../../../types';
 import {
+  getQuestionDescription,
   isQuestionType,
-  SurveyQuestions,
-} from '../../../../WorkshopFormTemplate/types';
+  prepLikertBreakdown,
+} from '../../../utils';
 import {useWorkshopContext} from '../../../WorkshopLayout';
 import {FreeResponseCard} from '../../components/FreeResponseCard';
 import {ScoreCard} from '../../components/ScoreCard';
 import {LIKERT_QUESTION_FOOTER} from '../../constants';
-import {getQuestionDescription, prepLikertBreakdown} from '../../helpers';
 
-import styles from '../../../workshop.module.scss';
+import styles from '../../../WorkshopLayout.module.scss';
 
 export const FacilitatorFeedback = () => {
   const {facilitatorId} = useParams();
@@ -94,6 +95,7 @@ export const FacilitatorFeedback = () => {
             } Submitted`}
             statusColor="success"
             size="s"
+            useFlexTextCardContainer
           />
         )}
         {isQuestionType(facilitatorCouldImprove, 'text') && (
@@ -108,6 +110,7 @@ export const FacilitatorFeedback = () => {
             } Submitted`}
             statusColor="warning"
             size="s"
+            useFlexTextCardContainer
           />
         )}
       </Box>

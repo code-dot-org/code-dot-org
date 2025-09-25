@@ -29,6 +29,11 @@ import {
 import {hiddenPlSectionIds} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import i18n from '@cdo/locale';
+import teacherImg from '@cdo/static/misc/teacher-540x300.png';
+import plAdminsPageImg from '@cdo/static/professional-learning/admins-page-pl-448x280.png';
+import plBannerBooksWithBackgroundImg from '@cdo/static/professional-learning/banner-books-with-background-540x300.png';
+import plPageEducatorSupportImg from '@cdo/static/professional-learning/pl-page-educator-support.png';
+import plSuperheroGirlCropImg from '@cdo/static/professional-learning/pl-superhero-girl-crop-540x300.png';
 
 import {
   COURSE_CSF,
@@ -327,7 +332,7 @@ function LandingPage({
 
   const RenderLastWorkshopSurveyBanner = () => (
     <TwoColumnActionBlock
-      imageUrl={pegasus('/shared/images/fill-540x300/misc/teacher.png')}
+      imageUrl={teacherImg}
       subHeading={i18n.plLandingSubheading()}
       description={i18n.plLandingDescription({
         course: lastWorkshopSurveyCourse,
@@ -353,9 +358,7 @@ function LandingPage({
     if (showGettingStartedBanner) {
       return (
         <TwoColumnActionBlock
-          imageUrl={pegasus(
-            '/images/fill-540x300/professional-learning/pl-superhero-girl-crop.png'
-          )}
+          imageUrl={plSuperheroGirlCropImg}
           heading={i18n.plLandingGettingStartedHeading()}
           subHeading={i18n.plLandingGettingStartedSubHeading()}
           description={i18n.plLandingGettingStartedDescription()}
@@ -373,9 +376,7 @@ function LandingPage({
       // TODO(ACQ-1998): Remove this block after the 2024 curriculum launch
       return (
         <TwoColumnActionBlock
-          imageUrl={pegasus(
-            '/images/fill-540x300/professional-learning/banner-books-with-background.png'
-          )}
+          imageUrl={plBannerBooksWithBackgroundImg}
           subHeading={i18n.plLandingCurriculumLaunchBannerSubHeading()}
           description={i18n.plLandingCurriculumLaunchBannerDescription()}
           buttons={[
@@ -405,7 +406,7 @@ function LandingPage({
     if (!hideMyPLStaticRecommendedPLMidHighBlock) {
       actionBlocks.push({
         overline: i18n.plLandingStaticPLMidHighOverline(),
-        imageUrl: pegasus('/images/pl-page-educator-support.png'),
+        imageUrl: plPageEducatorSupportImg,
         heading: i18n.plLandingStaticPLMidHighHeading(),
         description: i18n.plLandingStaticPLMidHighDesc(),
         buttons: [
@@ -421,7 +422,7 @@ function LandingPage({
     if (!hideMyPLStaticRecommendedPLSelfPacedBlock) {
       actionBlocks.push({
         overline: i18n.plLandingStaticPLSelfPacedOverline(),
-        imageUrl: pegasus('/images/fill-448x280/admins-page-pl.png'),
+        imageUrl: plAdminsPageImg,
         heading: i18n.plLandingStaticPLSelfPacedHeading(),
         description: i18n.plLandingStaticPLSelfPacedDesc(),
         buttons: [

@@ -7,11 +7,11 @@ import {Card, CardContent, CardHeader} from '@mui/material';
 import classNames from 'classnames';
 import React, {FC} from 'react';
 
-import {Breakdown} from '../../../WorkshopFormTemplate/types';
+import {Breakdown} from '../../types';
 
 import {PercentageBarGroup} from './PercentageBarGroup';
 
-import styles from '../../workshop.module.scss';
+import styles from '../../WorkshopLayout.module.scss';
 
 interface SelectCardProps {
   title: string;

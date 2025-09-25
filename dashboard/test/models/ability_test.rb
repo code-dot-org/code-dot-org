@@ -40,18 +40,18 @@ class AbilityTest < ActiveSupport::TestCase
       end
     end
 
-    @pilot_course = create(:unit, pilot_experiment: 'my-experiment').tap do |script|
+    @pilot_course = create(:unit).tap do |script|
       create(:single_unit_course, unit: script, pilot_experiment: 'my-experiment', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot)
       @pilot_course_script_level = create(:script_level, script: script)
     end
 
-    @pl_pilot_course = create(:unit, pilot_experiment: 'my-experiment').tap do |script|
+    @pl_pilot_course = create(:unit).tap do |script|
       create(:single_unit_course, unit: script, pilot_experiment: 'my-experiment', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer)
       @pl_pilot_course_script_level = create(:script_level, script: script)
     end
 
     @in_development_unit_group = create(:unit_group, published_state: 'in_development')
-    @in_development_script = create(:script, published_state: 'in_development').tap do |script|
+    @in_development_script = create(:script).tap do |script|
       @in_development_lesson = create(:lesson, script: script, has_lesson_plan: true)
       @in_development_script_level = create(:script_level, script: script)
     end
@@ -995,21 +995,6 @@ class AbilityTest < ActiveSupport::TestCase
     refute Ability.new(program_manager).can? :show, incomplete_application
     refute Ability.new(program_manager).can? :update, incomplete_application
     refute Ability.new(program_manager).can? :destroy, incomplete_application
-  end
-
-  test 'users with AI_TUTOR_ACCESS permission can access Open AI chat completion endpoint' do
-    ai_tutor_access_user = create(:ai_tutor_access)
-    assert Ability.new(ai_tutor_access_user).can? :chat_completion, :openai_chat
-  end
-
-  test 'users with ai tutor access through section enablement can access Open AI chat completion endpoint' do
-    student = create(:student_with_ai_tutor_access)
-    assert Ability.new(student).can? :chat_completion, :openai_chat
-  end
-
-  test 'user without ai tutor access cannot access Open AI chat completion endpoint' do
-    student = create(:student_without_ai_tutor_access)
-    refute Ability.new(student).can? :chat_completion, :openai_chat
   end
 
   # other :aichat_request and aichat_event actions are tested via respective controller tests.

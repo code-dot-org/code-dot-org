@@ -1,19 +1,18 @@
 import {Button} from '@code-dot-org/component-library/button';
 import {FontAwesomeV6IconProps} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useMemo} from 'react';
 
-import {clearChatMessages} from '@cdo/apps/aichat/redux';
 import {
   ModelParameters,
   ChatButtonClickHandler,
   ChatButtonData,
+  SystemPromptSettings,
 } from '@cdo/apps/aichat/types';
 import ChatWorkspace from '@cdo/apps/aichat/views/ChatWorkspace';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import HttpClient from '@cdo/apps/util/HttpClient';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import {shouldShowCopyCode} from '../../ai/ai-should-show-copy-code';
@@ -47,7 +46,7 @@ const modelParameters: ModelParameters = {
 } as const;
 
 // Some pre-canned chat buttons.
-const chatButtonData: ChatButtonData[] = [
+const defaultChatButtonData: ChatButtonData[] = [
   {
     label: 'Give an example',
     value: 'Can you give me an example?',
@@ -80,13 +79,80 @@ const chatButtonData: ChatButtonData[] = [
   },
 ] as const;
 
-const chatButtons = chatButtonData.map(
-  button =>
-    ({onClick}: {onClick: ChatButtonClickHandler}) =>
-      (
+interface AiTutor2ChatProps {
+  hiddenContextCallback: () => Promise<string>;
+  aiTutorSystemPromptSettings?: SystemPromptSettings;
+  aiTutorMultimodalEnabled?: boolean;
+  levelName?: string;
+  channelId?: string;
+  aiTutorChatButtonData?: ChatButtonData[];
+}
+
+// A free chat with lab-supplied context added to each question.
+const AiTutor2Chat: React.FunctionComponent<AiTutor2ChatProps> = ({
+  hiddenContextCallback,
+  aiTutorSystemPromptSettings,
+  aiTutorMultimodalEnabled = false,
+  levelName,
+  channelId,
+  aiTutorChatButtonData,
+}) => {
+  const [systemPrompt, setSystemPrompt] = useState<string>();
+
+  const fetchPrompt = (promptName: string) => {
+    fetchCustomPrompt(promptName)
+      .then(prompt => {
+        if (prompt) {
+          setSystemPrompt(prompt);
+        } else {
+          setSystemPrompt(defaultSystemPrompt);
+        }
+      })
+      .catch(() => {
+        setSystemPrompt(defaultSystemPrompt);
+      });
+  };
+
+  useEffect(() => {
+    if (customPromptName) {
+      fetchPrompt(customPromptName);
+    } else if (aiTutorSystemPromptSettings?.selectedSystemPromptName) {
+      fetchPrompt(aiTutorSystemPromptSettings.selectedSystemPromptName);
+    } else {
+      setSystemPrompt(defaultSystemPrompt);
+    }
+  }, [aiTutorSystemPromptSettings?.selectedSystemPromptName]);
+
+  useEffect(() => {
+    // Log which system prompt we end up using.
+    if (customPromptName) {
+      console.log(`🤖: systemPrompt: ${customPromptName}`, systemPrompt);
+    } else if (aiTutorSystemPromptSettings?.selectedSystemPromptName) {
+      console.log(
+        `🤖: systemPrompt: ${aiTutorSystemPromptSettings?.selectedSystemPromptName}`,
+        systemPrompt
+      );
+    } else {
+      console.log(`🤖: systemPrompt: default`);
+    }
+  }, [systemPrompt, aiTutorSystemPromptSettings?.selectedSystemPromptName]);
+
+  useEffect(() => {
+    // We currently use query params to allow AI model selection but otherwise do not provide any user
+    // interface to select or see the selected model. This console log was added to give users (testers)
+    // feedback as to which model was actually selected (e.g. if the query param is entered incorrectly or
+    // an unavailable model is selected, it will use the default model). It's in a useEffect (on first
+    // render) rather than in `ai/AiTutorModelId.ts` as that module is apparently imported even if AI Tutor
+    // isn't enabled, leading to a confusing console log message.
+    console.log('🤖: aiTutorModelId:', aiTutorModelId);
+  }, []);
+
+  const chatButtons = useMemo(() => {
+    const chatButtonDataToUse = aiTutorChatButtonData || defaultChatButtonData;
+    return chatButtonDataToUse.map(button => ({
+      ChatButton: ({onClick}: {onClick: ChatButtonClickHandler}) => (
         <Button
           className={moduleStyles.chatButton}
-          key={button.label}
           aria-label={button.label}
           iconLeft={
             {
@@ -103,56 +169,10 @@ const chatButtons = chatButtonData.map(
           type="secondary"
           color="black"
         />
-      )
-);
-interface AiTutor2ChatProps {
-  hiddenContext: string;
-}
-
-// A free chat with lab-supplied context added to each question.
-const AiTutor2Chat: React.FunctionComponent<AiTutor2ChatProps> = ({
-  hiddenContext,
-}) => {
-  const dispatch = useAppDispatch();
-
-  const [systemPrompt, setSystemPrompt] = useState<string>();
-
-  useEffect(() => {
-    if (customPromptName) {
-      fetchCustomPrompt(customPromptName)
-        .then(prompt => {
-          if (prompt) {
-            setSystemPrompt(prompt);
-          } else {
-            setSystemPrompt(defaultSystemPrompt);
-          }
-        })
-        .catch(() => {
-          setSystemPrompt(defaultSystemPrompt);
-        });
-    } else {
-      setSystemPrompt(defaultSystemPrompt);
-    }
-  }, []);
-
-  useEffect(() => {
-    // Log which system prompt we end up using.
-    if (customPromptName) {
-      console.log(`🤖: systemPrompt: ${customPromptName}`, systemPrompt);
-    } else {
-      console.log(`🤖: systemPrompt: default`);
-    }
-  }, [systemPrompt]);
-
-  useEffect(() => {
-    // We currently use query params to allow AI model selection but otherwise do not provide any user
-    // interface to select or see the selected model. This console log was added to give users (testers)
-    // feedback as to which model was actually selected (e.g. if the query param is entered incorrectly or
-    // an unavailable model is selected, it will use the default model). It's in a useEffect (on first
-    // render) rather than in `ai/AiTutorModelId.ts` as that module is apparently imported even if AI Tutor
-    // isn't enabled, leading to a confusing console log message.
-    console.log('🤖: aiTutorModelId:', aiTutorModelId);
-  }, []);
+      ),
+      key: button.label,
+    }));
+  }, [aiTutorChatButtonData]);
 
   return systemPrompt ? (
     <div className={moduleStyles.container}>
@@ -160,10 +180,12 @@ const AiTutor2Chat: React.FunctionComponent<AiTutor2ChatProps> = ({
         clientType={AiChatClientTypes.AI_TUTOR}
         modelParameters={{...modelParameters, systemPrompt}}
         chatButtons={chatButtons}
-        hiddenContext={hiddenContext}
-        onClear={() => {
-          dispatch(clearChatMessages());
-        }}
+        hiddenContextCallback={hiddenContextCallback}
+        systemPromptSettings={aiTutorSystemPromptSettings}
+        multimodalEnabled={aiTutorMultimodalEnabled}
+        levelName={levelName}
+        channelId={channelId}
+        hideModelChangeMessage={true}
       />
     </div>
   ) : (

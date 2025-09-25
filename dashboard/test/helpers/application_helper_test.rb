@@ -194,21 +194,21 @@ class ApplicationHelperTest < ActionView::TestCase
   end
 
   test 'meta_image_url for level' do
-    assert_equal '/sharing_drawing.png', meta_image_url(level: create(:artist))
-    assert_equal '/studio_sharing_drawing.png', meta_image_url(level: create(:playlab))
-    assert_equal '/bounce_sharing_drawing.png', meta_image_url(level: create(:bounce))
+    assert_equal CDO.studio_url('/sharing_drawing.png', CDO.default_scheme), meta_image_url(level: create(:artist))
+    assert_equal CDO.studio_url('/studio_sharing_drawing.png', CDO.default_scheme), meta_image_url(level: create(:playlab))
+    assert_equal CDO.studio_url('/bounce_sharing_drawing.png', CDO.default_scheme), meta_image_url(level: create(:bounce))
     level = create(:level, game: Game.find_by_app('Flappy'))
     level_source = create(:level_source, level: level)
-    assert_equal '/flappy_sharing_drawing.png', meta_image_url(level_source: level_source)
+    assert_equal CDO.studio_url('/flappy_sharing_drawing.png', CDO.default_scheme), meta_image_url(level_source: level_source)
   end
 
   test 'meta_image_url for level_source without image' do
-    assert_equal '/sharing_drawing.png', meta_image_url(level_source: create(:level_source, level: create(:artist)))
-    assert_equal '/studio_sharing_drawing.png', meta_image_url(level_source: create(:level_source, level: create(:playlab)))
-    assert_equal '/bounce_sharing_drawing.png', meta_image_url(level_source: create(:level_source, level: create(:bounce)))
+    assert_equal CDO.studio_url('/sharing_drawing.png', CDO.default_scheme), meta_image_url(level_source: create(:level_source, level: create(:artist)))
+    assert_equal CDO.studio_url('/studio_sharing_drawing.png', CDO.default_scheme), meta_image_url(level_source: create(:level_source, level: create(:playlab)))
+    assert_equal CDO.studio_url('/bounce_sharing_drawing.png', CDO.default_scheme), meta_image_url(level_source: create(:level_source, level: create(:bounce)))
     level = create(:level, game: Game.find_by_app('Flappy'))
     level_source = create(:level_source, level: level)
-    assert_equal '/flappy_sharing_drawing.png', meta_image_url(level_source: level_source)
+    assert_equal CDO.studio_url('/flappy_sharing_drawing.png', CDO.default_scheme), meta_image_url(level_source: level_source)
   end
 
   test 'meta_image_url for level_source with image' do
@@ -223,7 +223,7 @@ class ApplicationHelperTest < ActionView::TestCase
 
   test 'meta_image_url for level_source with image with s3 disabled' do
     CDO.stubs(:disable_s3_image_uploads).returns true
-    assert_equal 'http://code.org/images/logo.png', meta_image_url(level_source: create(:level_source_image).level_source)
+    assert_equal CDO.studio_url('/blockly/media/logo.png', CDO.default_scheme), meta_image_url(level_source: create(:level_source_image).level_source)
   end
 
   test 'best_activity_css_class returns "not started" for no activity' do

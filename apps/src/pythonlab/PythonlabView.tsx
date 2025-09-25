@@ -32,9 +32,7 @@ import {
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import CodebridgeRegistry from '../codebridge/CodebridgeRegistry';
-import {useAiTutor2} from '../lab2/views/components/aiTutor2/useAiTutor2';
 
-import getAiTutor2Context from './aiTutorHelper';
 import ProjectTypePicker from './components/ProjectTypePicker';
 import {
   DEFAULT_PROJECT,
@@ -42,6 +40,7 @@ import {
   STANDALONE_NEIGHBORHOOD_PROJECT,
   PYTHONLAB_EDITABLE_FILE_TYPES,
 } from './constants';
+import {AiTutorPythonLabContextHelper} from './helpers/aiTutorContextHelper';
 import HorizontalLayout from './layout/HorizontalLayout';
 import ShareView from './layout/ShareView';
 import VerticalLayout from './layout/VerticalLayout';
@@ -50,6 +49,8 @@ import PythonValidator from './progress/PythonValidator';
 import {handleRunClick, stopPythonCode} from './pyodideRunner';
 
 import moduleStyles from './pythonlab-view.module.scss';
+
+const aiTutorHelper = new AiTutorPythonLabContextHelper();
 
 const pythonlabLangMapping: {[key: string]: LanguageSupport} = {
   py: python(),
@@ -100,16 +101,17 @@ const PythonlabView: React.FunctionComponent<
   const labConfig = useAppSelector(
     state => state.lab2Project.projectSources?.labConfig
   );
-  const hasSource = !!source;
-  const isAiTutor2Enabled =
-    levelProperties.aiTutorAvailable ||
-    queryParams('show-ai-tutor2') === 'true';
-
-  const isAiTutor2HintEnabled = queryParams('show-ai-tutor2-hint') === 'true';
-
-  const [aiTutor2Context, setAiTutor2Context] = useState<string | undefined>(
-    undefined
+  const miniAppName = useAppSelector(
+    state => state.lab2Project.projectSources?.labConfig?.miniApp?.name
   );
+
+  const hasSource = !!source;
+  const isAiTutor2Enabled = useMemo(() => {
+    return (
+      levelProperties.aiTutorAvailable ||
+      queryParams('show-ai-tutor2') === 'true'
+    );
+  }, [levelProperties.aiTutorAvailable]);
 
   const dispatch = useAppDispatch();
 
@@ -186,19 +188,21 @@ const PythonlabView: React.FunctionComponent<
   );
 
   useEffect(() => {
-    setAiTutor2Context(
-      getAiTutor2Context(
+    if (isAiTutor2Enabled) {
+      aiTutorHelper.setAiTutorContext({
         source,
+        miniAppName,
         validationFile,
-        levelProperties.longInstructions
-      )
-    );
-  }, [levelProperties.longInstructions, source, validationFile]);
-
-  const [askAiTutor2, AiTutor2Response] = useAiTutor2(
-    isAiTutor2HintEnabled,
-    'hint'
-  );
+        longInstructions: levelProperties.longInstructions,
+      });
+    }
+  }, [
+    levelProperties.longInstructions,
+    source,
+    validationFile,
+    miniAppName,
+    isAiTutor2Enabled,
+  ]);
 
   const onRun = async (
     runTests: boolean,
@@ -229,14 +233,6 @@ const PythonlabView: React.FunctionComponent<
       );
     }
     dispatch(submitPredictResponse({appType: 'pythonlab'}));
-
-    if (isAiTutor2Enabled) {
-      // Ask a question to AITutor2.
-      askAiTutor2(
-        "What's wrong with my code, if anything?",
-        aiTutor2Context || ''
-      );
-    }
   };
 
   return (
@@ -251,8 +247,7 @@ const PythonlabView: React.FunctionComponent<
           sendConsoleInput={sendInput}
           levelProperties={levelProperties}
           projectPickerSettings={projectPickerSettings}
-          aiTutor2Context={aiTutor2Context}
-          AiTutor2ResponseView={AiTutor2Response}
+          hiddenContextCallback={aiTutorHelper.getHiddenContextCallback()}
         />
       )}
       {showProjectPickerModal && (
