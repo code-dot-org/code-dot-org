@@ -155,3 +155,5 @@ export default function (app, levels, options) {
   logToCloud.setCustomAttribute('appType', options && options.app);
   logToCloud.setCustomAttribute('locale', options && options.locale);
 }
+
+// Trivial change to force a new build of the apps dir
