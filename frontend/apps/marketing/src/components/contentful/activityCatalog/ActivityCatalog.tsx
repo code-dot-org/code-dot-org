@@ -114,6 +114,7 @@ const ActivityCatalog = ({
         term: searchTerm,
         properties: ['title', 'languagesText'],
         where,
+        
       });
       setResults(res.hits.map(h => h.document));
     })();
@@ -169,3 +170,4 @@ const ActivityCatalog = ({
 };
 
 export default ActivityCatalog;
+
