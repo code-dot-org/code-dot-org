@@ -135,6 +135,9 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     'no'
   );
 
+  // Tooltip should disappear quickly.
+  const hideTooltipDelayMs = 10;
+
   // Build available tabs based on level information.
   const availableTabs = useMemo(() => {
     const tabMap: {[key in Tabs]?: React.ReactNode} = {};
@@ -263,7 +266,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       />
 
       <div className={styles.sidebar}>
-        <div id="resource-panel-tabs" className={styles.tabs}>
+        <nav id="resource-panel-tabs" className={styles.tabs}>
           {getTypedKeys(availableTabs).map(tab => (
             <WithTooltip
               tooltipProps={{
@@ -273,6 +276,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                 size: 'xs',
                 'data-theme': theme,
               }}
+              hideDelayMs={hideTooltipDelayMs}
+              hideOnFirstLeave={true}
               key={`tooltip-${tab}`}
             >
               <Button
@@ -291,14 +296,12 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                     ? 'kit'
                     : undefined,
                 }}
+                aria-label={tabInfo[tab].title}
               />
             </WithTooltip>
           ))}
-        </div>
-        <div
-          id="resource-panel-links"
-          className={classNames(styles.bottomTabs)}
-        >
+        </nav>
+        <div className={classNames(styles.bottomTabs)}>
           <ResourcePanelExtraLinks levelId={levelId} theme={theme} />
           <CopyrightButton theme={theme} />
           <WithTooltip
@@ -309,6 +312,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
               size: 'xs',
               'data-theme': theme,
             }}
+            hideDelayMs={hideTooltipDelayMs}
+            hideOnFirstLeave={true}
           >
             <Button
               className={styles.bottomButton}
@@ -319,6 +324,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
               icon={{iconName: 'gear'}}
               color={'gray'}
               type={'tertiary'}
+              aria-label={commonI18n.settings()}
             />
           </WithTooltip>
         </div>
@@ -330,7 +336,19 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
           headerClassName={headerClassName}
           rightHeaderContent={rightHeaderContent}
         >
-          {availableTabs[currentTab]}
+          <div className={styles.tabContentContainer}>
+            {getTypedKeys(availableTabs).map(tab => (
+              <div
+                key={tab}
+                className={classNames(
+                  styles.tabContent,
+                  tab !== currentTab && styles.tabContentHidden
+                )}
+              >
+                {availableTabs[tab]}
+              </div>
+            ))}
+          </div>
           <NavigationArea isResourcePanel={true} {...instructionsProps} />
           {isSettingsOpen && (
             <SettingsPanel

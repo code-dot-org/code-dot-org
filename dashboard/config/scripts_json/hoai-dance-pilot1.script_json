@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-09-23 03:14:50 UTC",
+    "serialized_at": "2025-09-25 03:31:27 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -105,6 +105,48 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pilot_generate_dancer1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "hoai-dance-pilot1",
+        "activity_section.key": "f2514c01-ab09-4c55-b94b-c3e4ec6b7ae0"
+      },
+      "level_keys": [
+        "pilot_generate_dancer1"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pilot_generate_dancer2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "hoai-dance-pilot1",
+        "activity_section.key": "f2514c01-ab09-4c55-b94b-c3e4ec6b7ae0"
+      },
+      "level_keys": [
+        "pilot_generate_dancer2"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "Generate_dancer_info"
         ]
@@ -124,9 +166,9 @@
       ]
     },
     {
-      "chapter": 3,
-      "position": 3,
-      "activity_section_position": 3,
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -148,9 +190,9 @@
       ]
     },
     {
-      "chapter": 4,
-      "position": 4,
-      "activity_section_position": 4,
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -172,9 +214,9 @@
       ]
     },
     {
-      "chapter": 5,
-      "position": 5,
-      "activity_section_position": 5,
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -196,9 +238,9 @@
       ]
     },
     {
-      "chapter": 6,
-      "position": 6,
-      "activity_section_position": 6,
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -220,9 +262,9 @@
       ]
     },
     {
-      "chapter": 7,
-      "position": 7,
-      "activity_section_position": 7,
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -244,11 +286,14 @@
       ]
     },
     {
-      "chapter": 8,
-      "position": 8,
-      "activity_section_position": 8,
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "length_modify2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -265,9 +310,9 @@
       ]
     },
     {
-      "chapter": 9,
-      "position": 9,
-      "activity_section_position": 9,
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -289,9 +334,9 @@
       ]
     },
     {
-      "chapter": 10,
-      "position": 10,
-      "activity_section_position": 10,
+      "chapter": 12,
+      "position": 12,
+      "activity_section_position": 12,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -313,19 +358,19 @@
       ]
     },
     {
-      "chapter": 11,
-      "position": 11,
-      "activity_section_position": 11,
+      "chapter": 13,
+      "position": 13,
+      "activity_section_position": 13,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "HoAI_choice"
+          "HoAI_choice_template_backed"
         ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "HoAI_choice"
+          "HoAI_choice_template_backed"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -333,7 +378,7 @@
         "activity_section.key": "f2514c01-ab09-4c55-b94b-c3e4ec6b7ae0"
       },
       "level_keys": [
-        "HoAI_choice"
+        "HoAI_choice_template_backed"
       ]
     }
   ],
@@ -343,6 +388,30 @@
         "level.key": "HoAI_intro",
         "script_level.level_keys": [
           "HoAI_intro"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "hoai-dance-pilot1",
+        "activity_section.key": "f2514c01-ab09-4c55-b94b-c3e4ec6b7ae0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pilot_generate_dancer1",
+        "script_level.level_keys": [
+          "pilot_generate_dancer1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "hoai-dance-pilot1",
+        "activity_section.key": "f2514c01-ab09-4c55-b94b-c3e4ec6b7ae0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pilot_generate_dancer2",
+        "script_level.level_keys": [
+          "pilot_generate_dancer2"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -460,9 +529,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "HoAI_choice",
+        "level.key": "HoAI_choice_template_backed",
         "script_level.level_keys": [
-          "HoAI_choice"
+          "HoAI_choice_template_backed"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",

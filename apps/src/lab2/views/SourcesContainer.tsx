@@ -47,8 +47,7 @@ export function useSources<T extends ProjectSources = ProjectSources>() {
 }
 
 /**
- * Manages sources for a Lab. Currently used by Dance Lab2, but is intentionally
- * designed to be lab-agnostic so that it can be used by other labs in the future.
+ * Manages sources for a Lab.
  */
 const SourcesContainer: React.FC<
   LabProps & {children: ReactNode; defaultSources: ProjectSources}

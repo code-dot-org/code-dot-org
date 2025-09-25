@@ -15,28 +15,28 @@ class CachingTest < ActionDispatch::IntegrationTest
     create_hourofcode_unit_and_levels
     setup_script_cache
 
-    assert_cached_queries(1) do
+    assert_cached_queries(0) do
       get '/hoc/1'
     end
     assert_response :success
   end
 
   test "should get other hoc course unit overview" do
-    assert_cached_queries(1) do
+    assert_cached_queries(0) do
       get "/courses/#{@other_hoc_course.name}/units/1"
     end
     assert_response :success
   end
-  #TODO: Figure out if we can bring single_unit_course? down to 0 queries again
+
   test "should get show of other hoc course level 1" do
-    assert_cached_queries(1) do
+    assert_cached_queries(0) do
       get "/courses/#{@other_hoc_course.name}/units/1/lessons/1/levels/1"
     end
     assert_response :success
   end
 
   test "should get show of other hoc course level 10 twice" do
-    assert_cached_queries(1) do
+    assert_cached_queries(0) do
       get "/courses/#{@other_hoc_course.name}/units/1/lessons/1/levels/10"
     end
     assert_response :success
@@ -46,7 +46,7 @@ class CachingTest < ActionDispatch::IntegrationTest
     get "/courses/#{@other_hoc_course.name}/units/1/lessons/1/levels/1"
     assert_response :success
 
-    assert_cached_queries(1) do
+    assert_cached_queries(0) do
       get "/courses/#{@other_hoc_course.name}/units/1/lessons/1/levels/10"
     end
     assert_response :success
@@ -79,14 +79,14 @@ class CachingTest < ActionDispatch::IntegrationTest
   # end
 
   test "should get show of lesson 3 level 1 twice" do
-    assert_cached_queries(1) do
+    assert_cached_queries(0) do
       get "/courses/#{@multi_lesson_unit_group.name}/units/1/lessons/3/levels/1"
     end
     assert_response :success
   end
 
   test "should get show of lesson 3 level 1 and then level 10" do
-    assert_cached_queries(1) do
+    assert_cached_queries(0) do
       get "/courses/#{@multi_lesson_unit_group.name}/units/1/lessons/3/levels/10"
     end
     assert_response :success

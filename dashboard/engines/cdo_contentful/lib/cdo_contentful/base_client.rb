@@ -25,7 +25,7 @@ module CdoContentful
     def initialize
       raise ConfigError, "Missing #{self.class.name} configuration" if self.class.config.blank?
 
-      @contentful_client = Contentful::Client.new(self.class.config)
+      @contentful_client = Contentful::Client.new(self.class.config.deep_symbolize_keys)
     end
   end
 end
