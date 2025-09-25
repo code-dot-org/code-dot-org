@@ -1,0 +1,121 @@
+
+
+
+:root {
+  --facet-purple: #2c089f;
+  --facet-purple-hover: #24087f;
+  --facet-bg: #e9faff;
+}
+
+/* Button styles */
+.btnBase {
+  border-radius: 0; 
+  text-transform: none;
+  padding-left: 16px;
+  padding-right: 16px;
+  height: 44px;
+
+  /* style the MUI end icon color to match text */
+  :global(.MuiButton-endIcon > *) {
+    color: inherit;
+  }
+}
+
+.btnActiveInline {
+  background-color: var(--facet-purple);
+  color: #fff;
+
+  &:hover {
+    background-color: var(--facet-purple-hover);
+  }
+}
+
+.btnInactiveInline {
+  background-color: var(--facet-bg);
+  color: var(--mui-palette-text-primary, #000);
+  border-color: var(--mui-palette-primary-main, #1976d2);
+}
+
+/* menu  */
+.btnPill {
+  border-radius: 999px;
+}
+
+/* .btnActiveMenu styles are handled via theme contrast in TS using sx prop when needed */
+
+.btnInactiveMenu {
+  color: var(--mui-palette-text-primary, #000);
+  border-color: var(--mui-palette-primary-main, #1976d2);
+}
+
+/* Inline panel */
+.inlinePanel {
+  margin-top: 0;
+  padding: 10px;
+  width: 100%;
+  border: none;
+}
+
+/*  Grid list of chips */
+.gridList {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 6px;
+  justify-items: start;
+}
+
+/* Chip styles */
+.chip {
+  border-radius: 999px;
+  height: 34px;
+
+  :global(.MuiChip-label) {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 13px;
+    line-height: 20px;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  :global(.MuiChip-deleteIcon) {
+    color: inherit;
+  }
+}
+
+.chipSelected {
+  background-color: var(--mui-palette-primary-main, #1976d2);
+  color: #fff;
+
+  &:hover {
+    background-color: var(--mui-palette-primary-dark, #115293);
+    color: #fff;
+
+    :global(.MuiChip-deleteIcon) {
+      color: inherit;
+    }
+  }
+}
+
+.chipUnselected {
+  background-color: #fff;
+  color: #000;
+
+  &:hover {
+    background-color: #f5f5f5;
+  }
+}
+
+/* Menu paper */
+.menuPaper {
+  margin-top: 0;
+  max-width: 400px;
+  background-color: var(--facet-bg);
+  border: none;
+  border-radius: 5px;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-left: 0;
+  padding-bottom: 10px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.14);
+}
