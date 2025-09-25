@@ -17,7 +17,6 @@ export const STEPS = [
     element: '#resource-panel-links',
     title: lab2I18n.resourcePanelOnboarding_linksTitle(),
     intro: lab2I18n.resourcePanelOnboarding_linksText(),
-    position: 'top-right',
   },
   {
     element: '#resource-panel-navigation-button',

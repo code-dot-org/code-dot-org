@@ -15,6 +15,7 @@ import StudentRubricView from '@cdo/apps/lab2/views/components/rubrics/StudentRu
 import {commonI18n} from '@cdo/apps/types/locale';
 import {getTypedKeys} from '@cdo/apps/types/utils';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 
 import {useRubric} from '../../rubrics/RubricWrapper';
 import ForTeachersOnly from '../ForTeachersOnly';
@@ -108,8 +109,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   aiTutorChatButtonData,
   ...instructionsProps
 }) => {
-  console.log('INITIAL_STEP', INITIAL_STEP);
-  console.log('STEPS', STEPS);
   const {theme} = useTheme();
   const {showRubric} = useRubric();
   const [currentTab, setCurrentTab] = useState<Tabs>(Tabs.Instructions);
@@ -131,7 +130,10 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const channelId = useAppSelector(state => state.lab.channel?.id);
   const appName = instructionsProps.levelProperties.appName;
   const isPythonLab = appName === 'pythonlab';
-  console.log('isPythonLab', isPythonLab);
+  const pythonLabOnboardingTourSeen = tryGetLocalStorage(
+    'pythonlabResourcePanelOnboardingTourSeen',
+    'no'
+  );
 
   // Build available tabs based on level information.
   const availableTabs = useMemo(() => {
@@ -243,7 +245,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       id="resource-panel-instructions"
       className={classNames(styles.resourcePanel, className)}
     >
-      {isPythonLab && (
+      {/* {isPythonLab && ( */}
+      {isPythonLab && pythonLabOnboardingTourSeen !== 'yes' && (
         <Steps
           enabled={resourcePanelTourEnabled}
           initialStep={INITIAL_STEP}
@@ -251,7 +254,12 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
           onExit={() => {}}
           onChange={() => {}}
           onBeforeChange={() => {}}
-          onComplete={() => {}}
+          onComplete={() => {
+            trySetLocalStorage(
+              'pythonlabResourcePanelOnboardingTourSeen',
+              'yes'
+            );
+          }}
           options={{
             scrollToElement: false,
             exitOnOverlayClick: false,
