@@ -1,12 +1,10 @@
-'use client';
 
- 
+'use client';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { Box, Button, Chip, Collapse, Menu } from '@mui/material';
 import ClickAwayListener from '@mui/material/ClickAwayListener';
-// eslint-disable-next-line import-x/no-named-as-default
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import * as React from 'react';
 
 import styles from './facetDropdown.module.scss';
@@ -144,10 +142,10 @@ export default function FacetDropdown({
         variant={isActive ? 'contained' : 'outlined'}
         color={isActive ? 'primary' : 'inherit'}
         className={clsx(
-          styles.btnBase,
-          styles.btnPill,
-          isActive ? styles.btnActiveMenu : styles.btnInactiveMenu
-        )}
+  styles.btnBase,
+  styles.btnPill,
+  styles.btnInactiveMenu
+)}
       >
         {label}
       </Button>
