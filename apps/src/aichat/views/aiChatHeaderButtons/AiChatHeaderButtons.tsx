@@ -8,14 +8,15 @@ import moduleStyles from './aiChatHeaderButtons.module.scss';
 interface AiChatHeaderButtonsProps {
   isCopyChatDisabled: boolean;
   isClearChatDisabled: boolean;
+  getSelectedTab?: () => string | null;
 }
 
 const AiChatHeaderButtons: React.FunctionComponent<
   AiChatHeaderButtonsProps
-> = ({isCopyChatDisabled, isClearChatDisabled}) => {
+> = ({isCopyChatDisabled, isClearChatDisabled, getSelectedTab}) => {
   return (
     <div className={moduleStyles.aiChatHeaderButtons}>
-      <CopyChatHistoryButton isDisabled={isCopyChatDisabled} />
+      <CopyChatHistoryButton />
       <ClearChatButton isDisabled={isClearChatDisabled} />
     </div>
   );

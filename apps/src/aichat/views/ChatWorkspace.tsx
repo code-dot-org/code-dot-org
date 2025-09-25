@@ -53,6 +53,9 @@ interface ChatWorkspaceProps {
 
   // Options for changing system prompt (used in Web Lab 2)
   systemPromptSettings?: SystemPromptSettings;
+
+  // Callback for when selected tab changes
+  onSelectedTabChange?: (tab: string | null) => void;
 }
 
 enum WorkspaceTeacherViewTab {
@@ -74,6 +77,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   hasStarterAssets = false,
   systemPromptSettings,
   hideModelChangeMessage = false,
+  onSelectedTabChange,
 }) => {
   if (multimodalEnabled && (!levelName || !channelId)) {
     console.warn(
@@ -84,6 +88,15 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
 
   const [selectedTab, setSelectedTab] =
     useState<WorkspaceTeacherViewTab | null>(null);
+
+  // Enhanced setSelectedTab that calls the callback if provided
+  const handleSetSelectedTab = useCallback(
+    (tab: WorkspaceTeacherViewTab | null) => {
+      setSelectedTab(tab);
+      onSelectedTabChange?.(tab);
+    },
+    [onSelectedTabChange]
+  );
 
   const studentChatHistory = useAppSelector(
     state => state.aichat.studentChatHistory
@@ -172,11 +185,11 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   useEffect(() => {
     // If we are viewing as a student, default to the student chat history tab if tab is not yet selected.
     if (selectedStudent && !selectedTab) {
-      setSelectedTab(WorkspaceTeacherViewTab.STUDENT_CHAT_HISTORY);
+      handleSetSelectedTab(WorkspaceTeacherViewTab.STUDENT_CHAT_HISTORY);
     } else if (!selectedStudent) {
-      setSelectedTab(null);
+      handleSetSelectedTab(null);
     }
-  }, [selectedStudent, selectedTab]);
+  }, [selectedStudent, selectedTab, handleSetSelectedTab]);
 
   // Whenever model parameters change, 1) reset the chat session if necessary,
   // and 2) log the changed properties to the chat history.
@@ -247,9 +260,9 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
 
   const handleOnChange = useCallback(
     (value: string) => {
-      setSelectedTab(value as WorkspaceTeacherViewTab);
+      handleSetSelectedTab(value as WorkspaceTeacherViewTab);
     },
-    [setSelectedTab]
+    [handleSetSelectedTab]
   );
 
   const tabArgs: TabsProps = {

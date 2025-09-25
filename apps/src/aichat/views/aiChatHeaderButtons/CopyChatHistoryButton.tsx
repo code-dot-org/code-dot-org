@@ -18,9 +18,7 @@ import {
 } from '../../types';
 import {AI_CUSTOMIZATIONS_LABELS} from '../modelCustomization/constants';
 
-const CopyChatHistoryButton: React.FunctionComponent<{
-  isDisabled: boolean;
-}> = ({isDisabled}) => {
+const CopyChatHistoryButton: React.FunctionComponent = () => {
   const messages = useSelector(selectAllVisibleMessages);
   const dispatch = useAppDispatch();
 
@@ -51,7 +49,6 @@ const CopyChatHistoryButton: React.FunctionComponent<{
       tooltipSize="xs"
       tooltipDirection="onBottom"
       hideTooltipTail={true}
-      disabled={isDisabled}
       onClick={handleCopy}
     />
   );

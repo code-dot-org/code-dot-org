@@ -4,7 +4,7 @@ import ActionDropdown from '@code-dot-org/component-library/dropdown/actionDropd
 import SegmentedButtons, {
   SegmentedButtonsProps,
 } from '@code-dot-org/component-library/segmentedButtons';
-import React, {useCallback, useEffect, useMemo} from 'react';
+import React, {useCallback, useEffect, useMemo, useRef} from 'react';
 
 import TeacherOnboardingModal from '@cdo/apps/aichat/views/TeacherOnboardingModal';
 import ChatWarningModal from '@cdo/apps/aiComponentLibrary/warningModal/ChatWarningModal';
@@ -67,6 +67,14 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
   initialSources,
 }) => {
   const dispatch = useAppDispatch();
+
+  // Store the current selected tab without causing re-renders
+  const selectedTabRef = useRef<string | null>(null);
+
+  // Callback to handle tab changes from ChatWorkspace
+  const handleTabChange = useCallback((tab: string | null) => {
+    selectedTabRef.current = tab;
+  }, []);
 
   const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
   const isUserTeacher = useAppSelector(state => state.currentUser.isTeacher);
@@ -418,6 +426,7 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
                 <AiChatHeaderButtons
                   isCopyChatDisabled={false}
                   isClearChatDisabled={false}
+                  getSelectedTab={() => selectedTabRef.current}
                 />
               }
             >
@@ -431,6 +440,7 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
                     starterAssets && Object.keys(starterAssets).length > 0
                   }
                   multimodalEnabled={levelAichatSettings?.multimodalEnabled}
+                  onSelectedTabChange={handleTabChange}
                 />
               )}
             </PanelContainer>
