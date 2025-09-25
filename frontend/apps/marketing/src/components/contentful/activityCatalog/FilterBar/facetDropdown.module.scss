@@ -1,7 +1,4 @@
-
-
-
-:root {
+:global(:root) {
   --facet-purple: #2c089f;
   --facet-purple-hover: #24087f;
   --facet-bg: #e9faff;
@@ -27,6 +24,7 @@
 
   &:hover {
     background-color: var(--facet-purple-hover);
+    
   }
 }
 
@@ -112,7 +110,7 @@
   max-width: 400px;
   background-color: var(--facet-bg);
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   padding-top: 10px;
   padding-right: 10px;
   padding-left: 0;
