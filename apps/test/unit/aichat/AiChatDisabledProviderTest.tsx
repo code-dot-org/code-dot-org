@@ -34,6 +34,7 @@ const UpdaterComponent: React.FC = () => {
     chatDisabledMessage,
     setChatDisabled,
     setChatDisabledMessage,
+    setChatDisabledState,
   } = useAiChatDisabled();
   return (
     <div>
@@ -42,8 +43,22 @@ const UpdaterComponent: React.FC = () => {
       <button type="button" onClick={() => setChatDisabled(!chatDisabled)}>
         toggle disabled
       </button>
-      <button type="button" onClick={() => setChatDisabledMessage('custom')}>
+      <button
+        type="button"
+        onClick={() => setChatDisabledMessage('custom message')}
+      >
         set message
+      </button>
+      <button
+        type="button"
+        onClick={() =>
+          setChatDisabledState({
+            chatDisabled: true,
+            chatDisabledMessage: 'both disabled and custom message',
+          })
+        }
+      >
+        set message and state
       </button>
     </div>
   );
@@ -65,18 +80,34 @@ describe('AiChatDisabledContext', () => {
 
   it('uses provided values from provider and allows updating via setters', () => {
     const {getByText, getByLabelText} = render(
-      <AiChatDisabledProvider chatDisabled={true} chatDisabledMessage="hello">
+      <AiChatDisabledProvider
+        chatDisabled={true}
+        chatDisabledMessage="default message"
+      >
         <UpdaterComponent />
       </AiChatDisabledProvider>
     );
 
-    expect(getByLabelText('chat disabled')).toHaveTextContent('true');
-    expect(getByLabelText('chat disabled message')).toHaveTextContent('hello');
+    expect(getByLabelText('chat disabled')).toHaveTextContent(/true/);
+    expect(getByLabelText('chat disabled message')).toHaveTextContent(
+      /default message/
+    );
 
+    // setChatDisabled
     getByText('toggle disabled').click();
-    expect(getByLabelText('chat disabled')).toHaveTextContent('false');
+    expect(getByLabelText('chat disabled')).toHaveTextContent(/false/);
 
+    // setChatDisabledMessage
     getByText('set message').click();
-    expect(getByLabelText('chat disabled message')).toHaveTextContent('custom');
+    expect(getByLabelText('chat disabled message')).toHaveTextContent(
+      /custom message/
+    );
+
+    // setChatDisabledState
+    getByText('set message and state').click();
+    expect(getByLabelText('chat disabled')).toHaveTextContent('true');
+    expect(getByLabelText('chat disabled message')).toHaveTextContent(
+      /both disabled and custom message/
+    );
   });
 });
