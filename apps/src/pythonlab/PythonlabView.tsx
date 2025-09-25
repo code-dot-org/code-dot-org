@@ -237,34 +237,32 @@ const PythonlabView: React.FunctionComponent<
   };
 
   return (
-    <AiChatDisabledProvider>
-      <div className={moduleStyles.pythonlab}>
-        {hasSource && (
-          <Codebridge
-            config={config}
-            setConfig={setConfig}
-            startSources={levelStartSources}
-            onRun={onRun}
-            onStop={stopPythonCode}
-            sendConsoleInput={sendInput}
-            levelProperties={levelProperties}
-            projectPickerSettings={projectPickerSettings}
-            hiddenContextCallback={aiTutorHelper.getHiddenContextCallback()}
-          />
-        )}
-        {showProjectPickerModal && (
-          <ProjectTypePicker
-            setProjectCallback={handleProjectTypeChange}
-            currentProjectType={
-              initialSources || labConfig?.standaloneSettings?.projectType
-                ? currentProjectType
-                : undefined
-            }
-            closeDialog={() => setShowProjectPicker(false)}
-          />
-        )}
-      </div>
-    </AiChatDisabledProvider>
+    <div className={moduleStyles.pythonlab}>
+      {hasSource && (
+        <Codebridge
+          config={config}
+          setConfig={setConfig}
+          startSources={levelStartSources}
+          onRun={onRun}
+          onStop={stopPythonCode}
+          sendConsoleInput={sendInput}
+          levelProperties={levelProperties}
+          projectPickerSettings={projectPickerSettings}
+          hiddenContextCallback={aiTutorHelper.getHiddenContextCallback()}
+        />
+      )}
+      {showProjectPickerModal && (
+        <ProjectTypePicker
+          setProjectCallback={handleProjectTypeChange}
+          currentProjectType={
+            initialSources || labConfig?.standaloneSettings?.projectType
+              ? currentProjectType
+              : undefined
+          }
+          closeDialog={() => setShowProjectPicker(false)}
+        />
+      )}
+    </div>
   );
 };
 
