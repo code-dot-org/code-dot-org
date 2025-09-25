@@ -329,7 +329,7 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
       open={isOpen}
       variant={'persistent'}
     >
-      <div className={styles.toolbar}>
+      <div id={'ui-test-drawer-toolbar'} className={styles.toolbar}>
         <CloseButton
           aria-label={'close button'}
           onClick={onDrawerClose}

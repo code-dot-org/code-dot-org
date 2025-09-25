@@ -20,9 +20,9 @@
 $container-width: 512;
 $header-height: 40;
 $body-height: 612;
-$fab-left: 10;
-$fab-bottom: 33;
-$fab-height: 60;
+$fab-left: 11;
+$fab-bottom: 35;
+$fab-height: 48;
 
 :export {
   containerHeight: $header-height + $body-height;
@@ -272,15 +272,23 @@ $fab-height: 60;
   bottom: $fab-bottom * 1px;
 
   height: $fab-height * 1px;
-  width: 60px;
+  width: 48px;
   background-size: 60px;
   padding: 0;
   background-color: transparent;
 
   border-width: 0;
+  border-radius: 50%;
 
   img {
     opacity: 1;
+  }
+
+  .floatingActionButtonTag {
+    position: absolute;
+    width: 25px;
+    left: 33px;
+    top: -8px;
   }
 }
 
@@ -405,12 +413,18 @@ $fab-height: 60;
   min-height: 32px;
   border-radius: 0;
 
+  & span {
+    flex-grow: 1;
+    text-align: start;
+  }
+
   &.selected {
     border-left: 4px solid var(--borders-brand-teal-primary);
     background-color: var(--background-neutral-quaternary);
     padding-left: 12px;
     text-decoration: none;
     color: var(--text-neutral-primary);
+    font-weight: 600;
   }
 
   &:active {
@@ -426,5 +440,14 @@ $fab-height: 60;
   &:hover {
     background-color: var(--background-neutral-tertiary);
     text-decoration: none;
+  }
+
+  .readAt {
+    color: var(--background-error-primary);
+    font-size: 8px;
+    min-width: 8px;
+    margin-inline-start: 8px;
+    width: 8px;
+    line-height: var(--font-line-height-body-xxs, 17.6px);
   }
 }

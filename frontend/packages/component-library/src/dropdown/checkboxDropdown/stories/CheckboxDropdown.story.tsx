@@ -488,3 +488,165 @@ GroupOfSizesOfCheckboxDropdown.args = {
     },
   ],
 };
+
+export const GroupOfMenuPlacementOptions = MultipleTemplate.bind({});
+GroupOfMenuPlacementOptions.args = {
+  components: [
+    {
+      name: 'menu-placement-left',
+      allOptions: [
+        {value: 'option-1', label: 'Option 1'},
+        {value: 'option-2', label: 'Option 2'},
+      ],
+      checkedOptions: ['option-1'],
+      labelText: 'Placement Left',
+      onChange: () => null,
+      onSelectAll: () => null,
+      onClearAll: () => null,
+      selectAllText: 'Select All',
+      clearAllText: 'Clear All',
+      size: 'm',
+      color: dropdownColors.black,
+      disabled: false,
+      menuPlacement: 'left',
+    },
+    {
+      name: 'menu-placement-right',
+      allOptions: [
+        {value: 'option-1', label: 'Option 1'},
+        {value: 'option-2', label: 'Option 2'},
+      ],
+      checkedOptions: ['option-1'],
+      labelText: 'Placement Right',
+      onChange: () => null,
+      onSelectAll: () => null,
+      onClearAll: () => null,
+      selectAllText: 'Select All',
+      clearAllText: 'Clear All',
+      size: 'm',
+      color: dropdownColors.black,
+      disabled: false,
+      menuPlacement: 'right',
+    },
+  ],
+};
+
+export const GroupOfMenuVerticalPlacementOptions = MultipleTemplate.bind({});
+GroupOfMenuVerticalPlacementOptions.args = {
+  components: [
+    {
+      name: 'menu-vertical-top',
+      allOptions: [
+        {value: 'option-1', label: 'Option 1'},
+        {value: 'option-2', label: 'Option 2'},
+      ],
+      checkedOptions: ['option-1'],
+      labelText: 'Vertical Top',
+      onChange: () => null,
+      onSelectAll: () => null,
+      onClearAll: () => null,
+      selectAllText: 'Select All',
+      clearAllText: 'Clear All',
+      size: 'm',
+      color: dropdownColors.black,
+      disabled: false,
+      menuVerticalPlacement: 'top',
+    },
+    {
+      name: 'menu-vertical-bottom',
+      allOptions: [
+        {value: 'option-1', label: 'Option 1'},
+        {value: 'option-2', label: 'Option 2'},
+      ],
+      checkedOptions: ['option-1'],
+      labelText: 'Vertical Bottom',
+      onChange: () => null,
+      onSelectAll: () => null,
+      onClearAll: () => null,
+      selectAllText: 'Select All',
+      clearAllText: 'Clear All',
+      size: 'm',
+      color: dropdownColors.black,
+      disabled: false,
+      menuVerticalPlacement: 'bottom',
+    },
+  ],
+};
+
+export const GroupOfAllPlacements = MultipleTemplate.bind({});
+GroupOfAllPlacements.args = {
+  components: [
+    {
+      name: 'placement-left-bottom',
+      allOptions: [
+        {value: 'option-1', label: 'Option 1'},
+        {value: 'option-2', label: 'Option 2'},
+      ],
+      checkedOptions: ['option-1'],
+      labelText: 'Left + Bottom',
+      onChange: () => null,
+      onSelectAll: () => null,
+      onClearAll: () => null,
+      selectAllText: 'Select All',
+      clearAllText: 'Clear All',
+      size: 'm',
+      color: dropdownColors.black,
+      menuPlacement: 'left',
+      menuVerticalPlacement: 'bottom',
+    },
+    {
+      name: 'placement-right-bottom',
+      allOptions: [
+        {value: 'option-1', label: 'Option 1'},
+        {value: 'option-2', label: 'Option 2'},
+      ],
+      checkedOptions: ['option-1'],
+      labelText: 'Right + Bottom',
+      onChange: () => null,
+      onSelectAll: () => null,
+      onClearAll: () => null,
+      selectAllText: 'Select All',
+      clearAllText: 'Clear All',
+      size: 'm',
+      color: dropdownColors.black,
+      menuPlacement: 'right',
+      menuVerticalPlacement: 'bottom',
+    },
+    {
+      name: 'placement-left-top',
+      allOptions: [
+        {value: 'option-1', label: 'Option 1'},
+        {value: 'option-2', label: 'Option 2'},
+      ],
+      checkedOptions: ['option-1'],
+      labelText: 'Left + Top',
+      onChange: () => null,
+      onSelectAll: () => null,
+      onClearAll: () => null,
+      selectAllText: 'Select All',
+      clearAllText: 'Clear All',
+      size: 'm',
+      color: dropdownColors.black,
+      menuPlacement: 'left',
+      menuVerticalPlacement: 'top',
+    },
+    {
+      name: 'placement-right-top',
+      allOptions: [
+        {value: 'option-1', label: 'Option 1'},
+        {value: 'option-2', label: 'Option 2'},
+      ],
+      checkedOptions: ['option-1'],
+      labelText: 'Right + Top',
+      onChange: () => null,
+      onSelectAll: () => null,
+      onClearAll: () => null,
+      selectAllText: 'Select All',
+      clearAllText: 'Clear All',
+      size: 'm',
+      color: dropdownColors.black,
+      menuPlacement: 'right',
+      menuVerticalPlacement: 'top',
+    },
+  ],
+};

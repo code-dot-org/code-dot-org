@@ -61,7 +61,7 @@
   color: var(--text-neutral-primary);
   display: flex;
   flex-direction: column;
-  min-height: 0;
+  min-height: 0; 
 
   h1, h2, h3, h4 {
     color: var(--text-neutral-primary);
@@ -107,6 +107,20 @@
 .buttonInstruction {
   width: 100%;
   height: 32px;
+}
+
+// Ensure the TooltipOverlay wrapper div matches the button width
+// without changing TooltipOverlay's calculated position.
+.buttonInstructionTooltipOverlay { 
+  > div {
+    width: 100%;
+  }
+  
+  // Contained button takes full width.
+  button {
+    width: 100%;
+    height: 32px;
+  }
 }
 
 .markdownText {
@@ -244,4 +258,9 @@
 
 .predictSummaryBubble {
   flex-shrink: 0; // Ensure the contents always fits in the bubble.
+}
+
+.bubble.resourcePanelNavigationAreaBubble {
+  border-radius: 0;
+  border-top: 1px solid var(--borders-neutral-primary);
 }

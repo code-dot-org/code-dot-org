@@ -1,12 +1,14 @@
-import classNames from 'classnames';
+import {Button} from '@code-dot-org/component-library/button';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import Typography from '@code-dot-org/component-library/typography';
 import React, {memo, useCallback, useContext} from 'react';
 import {useSelector} from 'react-redux';
 
 import {useBlocklySettings} from '@cdo/apps/lab2/hooks/useBlocklySettings';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
+import IconButtonWithTooltip from '@cdo/apps/lab2/views/components/IconButtonWithTooltip';
 import SettingsButton from '@cdo/apps/lab2/views/components/Settings/SettingsButton';
 import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
-import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {commonI18n} from '@cdo/apps/types/locale';
 import experiments from '@cdo/apps/util/experiments';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -20,12 +22,10 @@ import moduleStyles from './HeaderButtons.module.scss';
 
 interface CurrentPackProps {
   packFolder: SoundFolder;
-  noRightPadding: boolean;
 }
 
 const CurrentPack: React.FunctionComponent<CurrentPackProps> = ({
   packFolder,
-  noRightPadding,
 }) => {
   const library = MusicLibrary.getInstance();
 
@@ -41,7 +41,7 @@ const CurrentPack: React.FunctionComponent<CurrentPackProps> = ({
   }
 
   return (
-    <span className={moduleStyles.currentPack}>
+    <div className={moduleStyles.currentPack}>
       {packImageSrc && (
         <img
           src={packImageSrc}
@@ -49,15 +49,10 @@ const CurrentPack: React.FunctionComponent<CurrentPackProps> = ({
           alt=""
         />
       )}
-      <span
-        className={classNames(
-          moduleStyles.buttonWideContent,
-          noRightPadding && moduleStyles.buttonWideContentNoRightPadding
-        )}
-      >
+      <Typography semanticTag="p" visualAppearance="body-four" noMargin>
         {packFolder.name} &bull; {packFolder.artist}
-      </span>
-    </span>
+      </Typography>
+    </div>
   );
 };
 
@@ -87,6 +82,7 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
   const currentPackId = useAppSelector(state => state.music.packId);
   const analyticsReporter = useContext(AnalyticsContext);
   const dialogControl = useDialogControl();
+  const containerRef = React.useRef<HTMLDivElement>(null);
 
   const library = MusicLibrary.getInstance();
 
@@ -129,6 +125,10 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
     }
   }, [hideChaff, dialogControl, analyticsReporter, clearCode]);
 
+  const onClickDocumentation = useCallback(() => {
+    window.open('/docs/ide/music', '_blank');
+  }, []);
+
   const onClickSkip = useCallback(() => {
     if (dialogControl) {
       dialogControl.showDialog({
@@ -145,111 +145,107 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
   const settings = useBlocklySettings();
 
   return (
-    <div className={moduleStyles.container}>
+    <div className={moduleStyles.container} ref={containerRef} tabIndex={-1}>
+      {/* Show static pack info; clickable Start Over button */}
       {!allowPackSelection && packFolder && (
-        <button
-          type="button"
-          className={classNames(
-            moduleStyles.button,
-            moduleStyles.buttonWide,
-            moduleStyles.buttonInteractionDisabled
-          )}
-          disabled={true}
-        >
-          <CurrentPack packFolder={packFolder} noRightPadding={true} />
-        </button>
+        <>
+          <CurrentPack packFolder={packFolder} />
+          {/* Start Over Button */}
+          <IconButtonWithTooltip
+            id="start-over"
+            label={musicI18n.startOver()}
+            icon={{iconName: 'refresh', iconStyle: 'solid'}}
+            type="tertiary"
+            color="black"
+            buttonSize="xs"
+            tooltipSize="xs"
+            tooltipDirection="onBottom"
+            hideTooltipTail={true}
+            onClick={onClickStartOver}
+            containerRef={containerRef}
+          />
+        </>
       )}
-      {!readOnlyWorkspace && (
+      {/* Show clickable pack info with Start Over icon */}
+      {!readOnlyWorkspace && allowPackSelection && (
         <>
           <button
             onClick={onClickStartOver}
             type="button"
             id="start-over-button"
-            className={classNames(
-              moduleStyles.button,
-              allowPackSelection && packFolder && moduleStyles.buttonWide
-            )}
+            className={moduleStyles.buttonWithPack}
           >
-            {allowPackSelection && packFolder && (
-              <CurrentPack packFolder={packFolder} noRightPadding={false} />
-            )}
-            <FontAwesome
-              title={musicI18n.startOver()}
-              icon="refresh"
-              className={'icon'}
-            />
+            {packFolder && <CurrentPack packFolder={packFolder} />}
+            <FontAwesomeV6Icon iconName="refresh" iconStyle="solid" />
           </button>
         </>
       )}
+      {/* Settings Button */}
       {!experiments.isEnabledAllowingQueryString(
         experiments.LAB2_RESOURCE_PANEL
       ) ? (
-        <SettingsButton
-          settings={settings}
-          className={classNames(moduleStyles.button)}
-        />
+        <SettingsButton settings={settings} />
       ) : null}
       {!readOnlyWorkspace && (
         <>
-          <button
-            onClick={() => onClickUndoRedo('undo')}
-            type="button"
-            className={classNames(
-              moduleStyles.button,
-              !canUndo && moduleStyles.buttonDisabled
-            )}
+          {/* Undo Button */}
+          <IconButtonWithTooltip
+            id="undo"
+            label={musicI18n.undo()}
+            icon={{iconName: 'undo', iconStyle: 'solid'}}
+            type="tertiary"
+            color="black"
+            buttonSize="xs"
+            tooltipSize="xs"
+            tooltipDirection="onBottom"
+            hideTooltipTail={true}
             disabled={!canUndo}
-          >
-            <FontAwesome
-              title={musicI18n.undo()}
-              icon="undo"
-              className={'icon'}
-            />
-          </button>
-          <button
-            onClick={() => onClickUndoRedo('redo')}
-            type="button"
-            className={classNames(
-              moduleStyles.button,
-              !canRedo && moduleStyles.buttonDisabled
-            )}
+            onClick={() => onClickUndoRedo('undo')}
+            containerRef={containerRef}
+          />
+          {/* Redo Button */}
+          <IconButtonWithTooltip
+            id="redo"
+            label={musicI18n.redo()}
+            icon={{iconName: 'redo', iconStyle: 'solid'}}
+            type="tertiary"
+            color="black"
+            buttonSize="xs"
+            tooltipSize="xs"
+            tooltipDirection="onBottom"
+            hideTooltipTail={true}
             disabled={!canRedo}
-          >
-            <FontAwesome
-              title={musicI18n.redo()}
-              icon="redo"
-              className={'icon'}
-            />
-          </button>
+            onClick={() => onClickUndoRedo('redo')}
+            containerRef={containerRef}
+          />
+          {/* Documentation Button */}
           {Blockly.showBlockHelp && (
-            <button
-              onClick={() => window.open('/docs/ide/music', '_blank')}
-              type="button"
-              id="documentation-button"
-              className={classNames(moduleStyles.button)}
-            >
-              <FontAwesome
-                title={musicI18n.documentation()}
-                icon="book"
-                className={'icon'}
-              />
-            </button>
+            <IconButtonWithTooltip
+              id="documentation"
+              label={musicI18n.documentation()}
+              icon={{iconName: 'book', iconStyle: 'solid'}}
+              type="tertiary"
+              color="black"
+              buttonSize="xs"
+              tooltipSize="xs"
+              tooltipDirection="onBottom"
+              hideTooltipTail={true}
+              onClick={onClickDocumentation}
+              containerRef={containerRef}
+            />
           )}
         </>
       )}
+      {/* Skip to Project Button */}
       {skipUrl && (
-        <button
+        <Button
+          text={commonI18n.skipToProject()}
+          type="tertiary"
+          color="black"
+          size="xs"
+          iconRight={{iconStyle: 'solid', iconName: 'arrow-right'}}
           onClick={onClickSkip}
-          type="button"
-          className={classNames(moduleStyles.button, moduleStyles.buttonSkip)}
-        >
-          <span>{commonI18n.skipToProject()}</span>
-          <FontAwesome
-            title={commonI18n.skipToProject()}
-            icon="arrow-right"
-            className={'icon'}
-          />
-        </button>
+        />
       )}
     </div>
   );

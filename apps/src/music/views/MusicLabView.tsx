@@ -51,7 +51,7 @@ import {MusicExemplarSettings, MusicLevelData} from '../types';
 import AdvancedControls from './AdvancedControls';
 import Controls from './Controls';
 import ExemplarPlayerView from './ExemplarPlayerView';
-import Generate from './Generate';
+import GenerateCode from './GenerateCode';
 import HeaderButtons from './HeaderButtons';
 import usePlaybackUpdate from './hooks/usePlaybackUpdate';
 import useUpdateAnalytics from './hooks/useUpdateAnalytics';
@@ -138,6 +138,9 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   const validationStateCallout = useAppSelector(
     state => state.lab.validationState.callout
   );
+  const aiCodeGenerateAdlibOption =
+    (levelData as MusicLevelData).aiCodeGenerateAdlib ||
+    (AppConfig.getValue('ai-generate-adlib') as string);
 
   const progressManager = useContext(ProgressManagerContext);
 
@@ -366,6 +369,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
                 levelProperties={levelProperties}
                 headerClassName={moduleStyles.headerWithBorder}
                 settings={settings}
+                hideContinueIfDisabled={true}
               />
             ) : (
               <PanelContainer
@@ -394,6 +398,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
                     fixedDarkBackground={true}
                     overrideTheme={'Light'}
                     levelProperties={levelProperties}
+                    hideContinueIfDisabled={true}
                   />
                 ) : (
                   <Instructions
@@ -428,7 +433,13 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
         )}
 
         <div id="blockly-area" className={moduleStyles.blocklyArea}>
-          {AppConfig.getValue('ai-generate') === 'true' && <Generate />}
+          {(AppConfig.getValue('ai-generate') === 'true' ||
+            (levelProperties.levelData as MusicLevelData).aiCodeGenerate) && (
+            <GenerateCode
+              adlibOption={aiCodeGenerateAdlibOption}
+              levelProperties={levelProperties}
+            />
+          )}
 
           <PanelContainer
             id="workspace-panel"

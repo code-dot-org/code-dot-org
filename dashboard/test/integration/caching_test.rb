@@ -15,14 +15,14 @@ class CachingTest < ActionDispatch::IntegrationTest
     create_hourofcode_unit_and_levels
     setup_script_cache
 
-    assert_cached_queries(1) do
+    assert_cached_queries(0) do
       get '/hoc/1'
     end
     assert_response :success
   end
 
   test "should get other hoc course unit overview" do
-    assert_cached_queries(1) do
+    assert_cached_queries(0) do
       get "/courses/#{@other_hoc_course.name}/units/1"
     end
     assert_response :success

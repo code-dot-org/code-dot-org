@@ -4,9 +4,8 @@ require 'time'
 class HomeControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
 
-  test "teacher in teacher-homepage-v2 experiment redirected to teacher_dashboard/home" do
+  test "teacher redirected to teacher_dashboard/home" do
     teacher = create(:teacher)
-    SingleUserExperiment.find_or_create_by!(min_user_id: teacher.id, name: 'teacher-homepage-v2')
     sign_in teacher
     get :home
 
@@ -435,17 +434,6 @@ class HomeControllerTest < ActionController::TestCase
     get :index
 
     assert_select '#student-information-modal', false
-  end
-
-  test "teacher visiting homepage gets expected cookies set" do
-    teacher = create(:teacher)
-    sign_in teacher
-    get :home
-
-    cookie_header = @response.header['Set-Cookie']
-    assert_includes(cookie_header, "teacher_account_age_in_years")
-    assert_includes(cookie_header, "teacher_within_us")
-    assert_includes(cookie_header, "teacher_has_attended_pd")
   end
 
   # This exception is actually annoying to handle because it never gets to

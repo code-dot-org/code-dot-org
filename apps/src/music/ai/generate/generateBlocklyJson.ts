@@ -7,9 +7,9 @@ import {BlockTypes} from '../../blockly/blockTypes';
 /*
   Generate prompt:
 
-  Your job will be to generate a TypeScript function that generates Blockly JSON, as a string, from psuedocode which describes how to play a song.  Never use the "any" type, and double-check your work to make sure that there are no errors.
+  Your job will be to generate a TypeScript function that generates Blockly JSON, as a string, from pseudocode which describes how to play a song.  Never use the "any" type, and double-check your work to make sure that there are no errors.
 
-The psuedocode looks something like this:
+The pseudocode looks something like this:
 
 when_run
   play "hiphop/drum_beat_808"

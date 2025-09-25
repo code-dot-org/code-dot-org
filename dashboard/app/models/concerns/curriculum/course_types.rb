@@ -30,21 +30,9 @@ module Curriculum::CourseTypes
     errors.add(:instruction_type, 'must be the same for all courses in a family.') if all_family_courses.map(&:instruction_type).any? {|type| type != instruction_type}
   end
 
-  # If course we are check is a unit_group.
-  # If the course is a unit that is not in a unit_group check the unit for the family_name
-  # If unit that is in a unit_group then family name should be nil and we should not need to check anything
   def get_family_courses
     return nil if family_name.nil_or_empty?
-
-    all_family_courses = nil
-
-    if is_a?(UnitGroup)
-      all_family_courses = UnitGroup.all.select {|c| c.family_name == family_name}
-    elsif is_a?(Unit) && !get_original_unit_group
-      all_family_courses = Unit.get_family_from_cache(family_name)
-    end
-
-    all_family_courses
+    UnitGroup.all.select {|c| c.family_name == family_name}
   end
 
   # Instructor and Participant Audience can not be equal unless they are nil
@@ -57,9 +45,6 @@ module Curriculum::CourseTypes
   # of any course.
   def can_be_instructor?(user)
     return false unless user
-
-    # If unit is in a unit group then decide based on unit group audience
-    return get_original_unit_group.can_be_instructor?(user) if is_a?(Unit) && get_original_unit_group
 
     return false if user.student?
     return true if user.permission?(UserPermission::UNIVERSAL_INSTRUCTOR) || user.permission?(UserPermission::LEVELBUILDER)
@@ -81,9 +66,6 @@ module Curriculum::CourseTypes
   # to treat them like a participant. Signed out users should be able to be participants
   # in student courses.
   def can_be_participant?(user)
-    # If unit is in a unit group then decide based on unit group audience
-    return get_original_unit_group.can_be_participant?(user) if is_a?(Unit) && get_original_unit_group
-
     # Signed out users can only use student facing courses
     return false if !user && participant_audience != 'student'
     return false if can_be_instructor?(user)
@@ -106,9 +88,6 @@ module Curriculum::CourseTypes
   # This is different than courses that use the professional learning course models
   # those can be checked for using old_professional_learning_course?
   def pl_course?
-    # If unit is in a unit group then decide based on unit group
-    return get_original_unit_group.pl_course? if is_a?(Unit) && get_original_unit_group
-
     participant_audience != 'student'
   end
 end

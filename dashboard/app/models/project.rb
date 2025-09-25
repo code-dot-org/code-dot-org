@@ -61,7 +61,7 @@ class Project < ApplicationRecord
     # 2) admin who has project validator permissions
     # 3) user teaches a section with followers added within the past year
     # 4) user is in a section, and was added within past year
-    return false if channel_token&.script&.hoc?
+    return false if channel_token&.script&.hoc_or_hoai?
     return false if owner&.permission?(UserPermission::PROJECT_VALIDATOR)
     return false if owner&.followers&.any? {|follower| follower.created_at > Time.now - 1.year}
     return false if owner&.followeds&.any? {|followed| followed.created_at > Time.now - 1.year}

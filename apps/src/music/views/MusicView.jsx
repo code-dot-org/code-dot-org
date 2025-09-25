@@ -9,6 +9,9 @@ import {connect} from 'react-redux';
 import './small-footer-music-overrides.scss';
 
 import {validateBlockCategories} from '@cdo/apps/blockly/utils';
+import {sendProgressReport} from '@cdo/apps/code-studio/progressRedux';
+import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
+import {TestResults} from '@cdo/apps/constants';
 import DCDO from '@cdo/apps/dcdo';
 import {START_SOURCES, TOOLBOX_BLOCKS} from '@cdo/apps/lab2/constants';
 import {setIsLoading, setPageError} from '@cdo/apps/lab2/lab2Redux';
@@ -23,7 +26,9 @@ import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import AnalyticsReporter from '@cdo/apps/music/analytics/AnalyticsReporter';
 import {setExtraCopyrightContent} from '@cdo/apps/sharedComponents/footer/CopyrightDialog/index';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
+import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
+import {saveGeneratedSongMetadata} from '../ai/generate/GenerateCode';
 import AppConfig from '../appConfig';
 import {TRIGGER_FIELD} from '../blockly/constants';
 import MusicBlocklyWorkspace from '../blockly/MusicBlocklyWorkspace';
@@ -67,7 +72,6 @@ import {
   addPlaybackEvents,
   setCodeToLoad,
 } from '../redux/musicRedux';
-import {saveGeneratedSongMetadata} from '../utils/Generate';
 import {Key} from '../utils/Notes';
 import SoundUploader from '../utils/SoundUploader';
 
@@ -127,6 +131,8 @@ class UnconnectedMusicView extends React.Component {
     canRedo: PropTypes.bool,
     codeToLoad: PropTypes.string,
     clearCodeToLoad: PropTypes.func,
+    sendAttemptReport: PropTypes.func,
+    isFirstAttempt: PropTypes.bool,
   };
 
   constructor(props) {
@@ -854,11 +860,15 @@ class UnconnectedMusicView extends React.Component {
       ?.save(sourcesToSave, forceSave);
 
     // If we are AI generating, then save metadata for Dance Party.
-    if (AppConfig.getValue('ai-generate') === 'true') {
+    if (
+      AppConfig.getValue('ai-generate') === 'true' ||
+      this.props.levelProperties.levelData.aiCodeGenerate
+    ) {
       saveGeneratedSongMetadata(
         Lab2Registry.getInstance().getProjectManager().getChannelId(),
         this.props.packId,
-        this.props.playbackEvents
+        this.props.playbackEvents,
+        this.props.lastMeasure
       );
     }
   };
@@ -872,6 +882,9 @@ class UnconnectedMusicView extends React.Component {
     this.setState({
       hasRun: true,
     });
+    if (this.props.isFirstAttempt) {
+      this.props.sendAttemptReport();
+    }
     this.player.stopSong();
     this.playingTriggers = [];
 
@@ -1001,6 +1014,7 @@ const MusicView = connect(
     canUndo: state.music.canUndo,
     canRedo: state.music.canRedo,
     codeToLoad: state.music.codeToLoad,
+    isFirstAttempt: getCurrentLevel(state)?.status === LevelStatus.not_tried,
   }),
   dispatch => ({
     setPackId: packId => dispatch(setPackId(packId)),
@@ -1037,6 +1051,8 @@ const MusicView = connect(
       dispatch(setLastMeasure(data.lastMeasure));
     },
     clearCodeToLoad: () => dispatch(setCodeToLoad(undefined)),
+    sendAttemptReport: () =>
+      dispatch(sendProgressReport('music', TestResults.LEVEL_STARTED)),
   })
 )(UnconnectedMusicView);
 

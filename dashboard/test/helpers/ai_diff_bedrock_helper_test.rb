@@ -525,6 +525,66 @@ The courses that this teacher may ask you about are:
     assert_equal filter, expected_filter
   end
 
+  test 'Testing context filtering for lesson with labs' do
+    input = "Hello there!"
+    prompt = "prompt text"
+    course_names = ["test_course"]
+    unit_num = 2
+    lesson_number = 3
+    section_contexts = nil
+    formatted_input = AiDiffBedrockHelper.format_inputs_for_bedrock_request(input, prompt)
+    expected_input = {
+      input: {
+        text: "Hello there!"
+      },
+      retrieve_and_generate_configuration: {
+        type: 'KNOWLEDGE_BASE',
+        knowledge_base_configuration: {
+          knowledge_base_id: AiDiffBedrockHelper::KB_ID,
+          model_arn: 'arn:aws:bedrock:us-east-1::foundation-model/anthropic.claude-3-sonnet-20240229-v1:0',
+          generation_configuration: {
+            prompt_template: {
+              text_prompt_template: "prompt text"
+            },
+            inference_config: {
+              text_inference_config: {
+                max_tokens: 1500,
+                temperature: 0.5,
+              }
+            },
+          },
+          retrieval_configuration: {
+            vector_search_configuration: {
+              filter: {},
+              number_of_results: 10,
+            }
+          }
+        }
+      }
+    }
+    expected_filter = {
+      and_all: [
+        {or_all: [
+          {equals: {key: "lesson", value: "L03"}},
+          {equals: {key: "lesson", value: "all"}},
+          {in: {key: 'lab', value: ['weblab', 'gamelab']}}
+        ]},
+        {or_all: [
+          {equals: {key: "unit", value: "U02"}},
+          {equals: {key: "unit", value: "all"}},
+          {in: {key: 'lab', value: ['weblab', 'gamelab']}}
+        ]},
+        {or_all: [
+          {in: {key: "course", value: ["test_course"]}},
+          {in: {key: 'lab', value: ['weblab', 'gamelab']}}
+        ]}
+      ]
+    }
+    assert_equal formatted_input, expected_input
+    filter = AiDiffBedrockHelper.filter_for_context(lesson_number, unit_num, course_names, section_contexts, ['weblab', 'gamelab'])
+    assert_equal filter, expected_filter
+  end
+
   test 'Testing context filtering for unit' do
     input = "Hello there!"
     prompt = "prompt text"
@@ -684,6 +744,7 @@ The courses that this teacher may ask you about are:
         course_names: ["fake_b"]
       }
     ]
+    labs = ['javalab', 'pythonlab']
     formatted_input = AiDiffBedrockHelper.format_inputs_for_bedrock_request(input, prompt)
     expected_input = {
       input: {
@@ -718,11 +779,12 @@ The courses that this teacher may ask you about are:
       or_all: [
         {equals: {key: "scope", value: "general"}},
         {in: {key: "course", value: ["fake_a"]}},
-        {in: {key: "course", value: ["fake_b"]}}
+        {in: {key: "course", value: ["fake_b"]}},
+        {in: {key: 'lab', value: ['javalab', 'pythonlab']}}
       ]
     }
     assert_equal formatted_input, expected_input
-    filter = AiDiffBedrockHelper.filter_for_context(lesson_number, unit_num, course_names, section_contexts)
+    filter = AiDiffBedrockHelper.filter_for_context(lesson_number, unit_num, course_names, section_contexts, labs)
     assert_equal filter, expected_filter
   end
 

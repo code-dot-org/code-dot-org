@@ -349,7 +349,7 @@ class Lesson < ApplicationRecord
         end
       end
 
-      if script.hoc?
+      if script.hoc_or_hoai?
         lesson_data[:finishLink] = script.hoc_finish_url
         lesson_data[:finishText] = I18n.t('nav.header.finished_hoc')
       end

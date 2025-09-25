@@ -113,7 +113,6 @@
       cronjob at:'0 2 * * *', do:deploy_dir('bin', 'cron', 'hoc_student_name_cleanup')
       cronjob at:'0 0 * * *', do:deploy_dir('bin', 'cron', 'send_permission_email_reminders')
       cronjob at:'*/5 * * * *', do:deploy_dir('bin', 'cron', 'monitor_projects')
-      cronjob at:'0 4 * * *', do:deploy_dir('bin', 'cron', 'cleanup_mvp_ai_tutor_interactions')
       cronjob at:'0 4 * * *', do:deploy_dir('bin', 'cron', 'delete_old_ai_chat_data')
       cronjob at:'0 * * * *', do:deploy_dir('bin', 'cron', 'openai_pdf_processing_availability_check')
 

@@ -407,6 +407,8 @@ en:
               name: Lab2 Showcase
             lesson-56:
               name: Activity Guide Levelgroup
+            lesson-57:
+              name: Sketch Lab
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
@@ -23369,5 +23371,16 @@ en:
           title: AIF Semester 2 Demos
           description_audience: ''
           description_short: ''
+          description: ''
+          student_description: ''
+        hoai2025-dev:
+          lessons:
+            lesson-1:
+              name: hoai2025-dev-lesson
+          lesson_groups: {}
+          name: hoai2025-dev
+          title: hoai2025-dev
+          description_audience: ''
+          description_short: Hour of AI 2025 dev
           description: ''
           student_description: ''

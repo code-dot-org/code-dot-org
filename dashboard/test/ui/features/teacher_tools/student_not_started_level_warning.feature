@@ -7,7 +7,7 @@ Feature: Student Has Not Started Level Warning
 Scenario: Game lab level where student has not started
   When I open my eyes to test "game lab student has not started"
   When I sign in as "Teacher_Sally" and go home
-  And I wait until element ".uitest-owned-sections" is visible
+  And I wait until element "#ui-test-section-list" is visible
 
   And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/38/levels/3"
   And I wait for the lab page to fully load
@@ -25,7 +25,7 @@ Scenario: Game lab level where student has not started
 Scenario: Maze level where student has not started
   When I open my eyes to test "maze student has not started"
   When I sign in as "Teacher_Sally" and go home
-  And I wait until element ".uitest-owned-sections" is visible
+  And I wait until element "#ui-test-section-list" is visible
 
   And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/4/levels/2"
   And I wait for the lab page to fully load
@@ -42,7 +42,7 @@ Scenario: Maze level where student has not started
 Scenario: Contained level
   When I open my eyes to test "contained level"
   When I sign in as "Teacher_Sally" and go home
-  And I wait until element ".uitest-owned-sections" is visible
+  And I wait until element "#ui-test-section-list" is visible
 
   And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/41/levels/1"
   And I wait for the lab page to fully load

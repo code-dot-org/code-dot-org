@@ -131,12 +131,12 @@ Given(/^I am an organizer with started and completed courses$/) do
   GHERKIN
 end
 
-Given(/^I am an organizer with a completed course$/) do
+Given(/^I am an organizer with a (started|completed) course$/) do |workshop_state|
   random_name = "TestOrganizer" + SecureRandom.hex[0..9]
   steps <<~GHERKIN
     And I create a teacher named "#{random_name}"
     And I make the teacher named "#{random_name}" a workshop organizer
-    And I create a workshop for course "Build Your Own Workshop" organized by "#{random_name}" with 5 people and end it
+    And I create a workshop for course "Build Your Own Workshop" organized by "#{random_name}" with 5 people and "#{workshop_state == "started" ? 'start' : 'end'}" it
   GHERKIN
 end
 
