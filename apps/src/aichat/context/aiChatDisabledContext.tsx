@@ -3,11 +3,10 @@ import React, {
   FC,
   PropsWithChildren,
   useContext,
+  useCallback,
   useMemo,
   useState,
 } from 'react';
-
-import {queryParams} from '@cdo/apps/code-studio/utils';
 
 export interface AiChatDisabledContextValue {
   chatDisabled: boolean;
@@ -51,34 +50,51 @@ export const AiChatDisabledProvider: FC<AiChatDisabledProviderProps> = ({
   chatDisabledMessage,
   children,
 }) => {
-  // TODO: remove disabling chat via query param
-  const chatDisabledParam = !!queryParams('disable-ai-chat');
-  const chatDisabledMessageParam = queryParams('disable-ai-chat-message') as
-    | string
-    | undefined;
-
   const [state, setState] = useState<{
     chatDisabled: boolean;
     chatDisabledMessage?: string;
   }>(() => ({
-    chatDisabled: chatDisabled || chatDisabledParam,
-    chatDisabledMessage: chatDisabledMessage ?? chatDisabledMessageParam,
+    chatDisabled,
+    chatDisabledMessage,
   }));
+
+  const setChatDisabled = useCallback((chatDisabled: boolean) => {
+    setState(prevState =>
+      prevState.chatDisabled === chatDisabled
+        ? prevState
+        : {...prevState, chatDisabled}
+    );
+  }, []);
+
+  const setChatDisabledMessage = useCallback((chatDisabledMessage?: string) => {
+    setState(prevState =>
+      prevState.chatDisabledMessage === chatDisabledMessage
+        ? prevState
+        : {...prevState, chatDisabledMessage}
+    );
+  }, []);
+
+  const setChatDisabledState = useCallback(
+    (newState: {chatDisabled: boolean; chatDisabledMessage?: string}) => {
+      setState(prevState =>
+        prevState.chatDisabled === newState.chatDisabled &&
+        prevState.chatDisabledMessage === newState.chatDisabledMessage
+          ? prevState
+          : newState
+      );
+    },
+    []
+  );
 
   const value = useMemo<AiChatDisabledContextValue>(
     () => ({
       chatDisabled: state.chatDisabled,
       chatDisabledMessage: state.chatDisabledMessage,
-      setChatDisabled: (chatDisabled: boolean) =>
-        setState(prevState => ({...prevState, chatDisabled})),
-      setChatDisabledMessage: (chatDisabledMessage?: string) =>
-        setState(prevState => ({...prevState, chatDisabledMessage})),
-      setChatDisabledState: (newState: {
-        chatDisabled: boolean;
-        chatDisabledMessage?: string;
-      }) => setState(newState),
+      setChatDisabled,
+      setChatDisabledMessage,
+      setChatDisabledState,
     }),
-    [state]
+    [state, setChatDisabled, setChatDisabledMessage, setChatDisabledState]
   );
 
   return (
