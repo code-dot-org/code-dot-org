@@ -1161,7 +1161,7 @@ en:
 
             ## Curriculum Structure
 
-            This version of the Code.org CSA curriculum follows an **object-first approach** and does not use the unit structure outlined in the AP Computer Science A Course and Exam Description (CED). **All required course content is still covered**, but topics are introduced in an order that prioritizes early engagement with object-oriented programming. You can read more about this approach [**here**](https://docs.google.com/document/d/1t7RbyhrgNM7xXNPiCq1g-lXSJvR2qbEA1fURYxfZ9N8/edit?usp=sharing).
+            This version of the Code.org CSA curriculum follows an **object-first sequence** and does not use the unit structure outlined in the AP Computer Science A Course and Exam Description (CED). **All required course content is still covered and aligned to the CED**, but topics are introduced in an order that prioritizes early engagement with object-oriented programming. You can read more about this approach [**here**](https://docs.google.com/document/d/1t7RbyhrgNM7xXNPiCq1g-lXSJvR2qbEA1fURYxfZ9N8/edit?usp=sharing).
 
             If you prefer a version of the curriculum organized using the same structure as the CED (including unit titles and themes), check out our [**CED-aligned version of the CSA curriculum**](https://studio.code.org/courses/csa-alt-2025).
 
@@ -5528,7 +5528,7 @@ en:
           description_teacher: ''
           version_title: "'25 - '26"
         codechella2025:
-          title: Codechella 2025
+          title: Ctrl-Alt-Retreat 2025
           description_short: ''
           description_student: ''
           description_teacher: ''
@@ -6319,6 +6319,12 @@ en:
           version_title: "'25-26"
         hoai2025-dev:
           title: hoai2025-dev
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        hoai-dance-pilot1:
+          title: hoai-dance-pilot1
           description_short: ''
           description_student: ''
           description_teacher: ''

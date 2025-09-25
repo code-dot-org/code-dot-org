@@ -181,7 +181,7 @@ class AichatAiClientTest < ActionView::TestCase
       json_schema
     )
 
-    AichatAiClient.create_instance(model_id, usage_reporter).get_response(
+    AichatAiHelper.create_ai_client_instance(@client_type, model_id, usage_reporter).get_response(
       config, request, context
     )
   end

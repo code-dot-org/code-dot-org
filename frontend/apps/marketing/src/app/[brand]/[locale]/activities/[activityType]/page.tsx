@@ -1,0 +1,101 @@
+import {Results, search} from '@orama/orama';
+import {persist} from '@orama/plugin-data-persistence';
+import {notFound} from 'next/navigation';
+import {Suspense} from 'react';
+
+import ActivityCatalog from '@/components/contentful/activityCatalog';
+import {Brand} from '@/config/brand';
+import {getContentfulActivities} from '@/modules/activityCatalog/contentful/getContentfulActivities';
+import {createDatabase} from '@/modules/activityCatalog/orama/createDatabase';
+import {Activity} from '@/modules/activityCatalog/types/Activity';
+import {Entry} from '@/types/contentful/Entry';
+
+export const revalidate = 3600;
+
+export async function generateStaticParams() {
+  return [];
+}
+
+enum ActivityType {
+  HOUR_OF_AI = 'hour-of-ai',
+  HOUR_OF_CODE = 'hour-of-code',
+}
+
+const ValidActivityTypes = new Set(Object.values(ActivityType));
+
+/**
+ * Server-side rendered Activities Page.
+ * Fetches activities from Contentful and then creates an Orama database,
+ * and passes serialized data to the client-side ActivityCatalog component.
+ */
+export default async function ActivitiesPage({
+  params,
+}: {
+  params: Promise<{brand: string; locale: string; activityType: string}>;
+}) {
+  const {brand, activityType} = await params;
+
+  // This page is only available for CS For All brand
+  // Ideally this would be accomplished using App Router file system structure instead.
+  if (
+    brand !== Brand.CS_FOR_ALL ||
+    !ValidActivityTypes.has(activityType as ActivityType)
+  ) {
+    return notFound();
+  }
+
+  // Fetch activities from Contentful
+  const contentfulActivities = await getContentfulActivities();
+
+  // Create Orama database from Contentful activities
+  const db = createDatabase(
+    contentfulActivities as unknown as Entry<Activity>[],
+  );
+
+  /**
+   * Serializes the Orama database for client-side use
+   */
+  const getSerializedOramaDatabase = async () => {
+    return await persist(db, 'json');
+  };
+
+  /**
+   * Finds all unique values for each facet in the Orama database.
+   */
+  const getSearchFacets = async () => {
+    const facetResults: Results<Activity> = await search(db, {
+      facets: {
+        ages: {},
+        topic: {},
+        activityType: {},
+        languageProgramming: {},
+        length: {},
+        accessibilitys: {},
+        technologyClassroom: {},
+      },
+    });
+
+    return facetResults.facets;
+  };
+
+  /**
+   * Fetches all activities from the Orama database.
+   */
+  const getAllActivities = async () => {
+    const allActivityResults = await search(db, {term: ''});
+
+    return allActivityResults.hits.map(hit => hit.document);
+  };
+
+  return (
+    <section style={{display: 'flex'}}>
+      <Suspense>
+        <ActivityCatalog
+          serializedOramaDb={await getSerializedOramaDatabase()}
+          activities={await getAllActivities()}
+          facets={await getSearchFacets()}
+        />
+      </Suspense>
+    </section>
+  );
+}
