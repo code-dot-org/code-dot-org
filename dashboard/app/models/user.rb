@@ -151,7 +151,6 @@ class User < ApplicationRecord
   #     is a school-managed account.
   #   educator_role: Indicates the role of the educator, e.g. 'teacher', 'school_admin', 'district_admin', etc.
   #   signup_sources_tracking: Array of user selections for what brought them to sign up for Code.org.
-  #   pythonlab_resource_panel_onboarding_seen: Tracks whether user has viewed the Python Lab Resource Panel onboarding tour.
 
   CLEVER_ADMIN_USER_TYPES = ['district_admin', 'school_admin'].freeze
 
@@ -221,7 +220,6 @@ class User < ApplicationRecord
     roster_synced
     educator_role
     signup_sources_tracking
-    pythonlab_resource_panel_onboarding_seen
   )
 
   attr_accessor(
