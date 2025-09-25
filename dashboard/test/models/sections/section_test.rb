@@ -370,6 +370,7 @@ class SectionTest < ActiveSupport::TestCase
     end
 
     restricted_lti_section = create(:section, restrict_section: true, login_type: Section::LOGIN_TYPE_LTI_V1)
+    Policies::Lti.stubs(:roster_sync_enabled?).returns(true)
     student = create(:student, :with_lti_authentication_option)
     assert_creates(Follower) do
       add_student_return = restricted_lti_section.add_student student
