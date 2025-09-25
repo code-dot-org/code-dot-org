@@ -328,7 +328,7 @@ class Section < ApplicationRecord
     # OAUTH login section (Google Classroom / clever).
     # added_by is passed only from the sections_students_controller, used by teachers to
     # manager their rosters.
-    if !(added_by&.id == user_id || (LOGIN_TYPES_OAUTH.include? login_type)) && (restrict_section == true && (!follower || follower.deleted?))
+    if !(added_by&.id == user_id || ([LOGIN_TYPE_LTI_V1, *LOGIN_TYPES_OAUTH].include? login_type)) && (restrict_section == true && (!follower || follower.deleted?))
       return ADD_STUDENT_RESTRICTED
     end
 
