@@ -450,11 +450,7 @@ class FilesApi < Sinatra::Base
       source = body_json["source"]
       html = body_json["html"]
 
-      # Excalidraw is the third-party package we use in Sketch Lab for an interactive canvas.
-      # We serialize the state of the canvas as the source on these level types.
-      is_sketchlab = source["type"] == 'excalidraw'
-
-      source_is_valid = is_sketchlab || (source && has_valid_encoding?(source))
+      source_is_valid = source && has_valid_encoding?(source)
       # HTML only exists for AppLab projects
       html_is_valid = html ? source.force_encoding("UTF-8").valid_encoding? : true
 
