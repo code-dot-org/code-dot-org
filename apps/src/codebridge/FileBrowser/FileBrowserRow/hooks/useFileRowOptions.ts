@@ -95,6 +95,25 @@ export const useFileRowOptions = (
         clickHandler: () => openRenameFilePrompt({fileId: file.id}),
       },
       {
+        condition: enableUserAddedContext(appName, file),
+        iconName: 'message-code',
+        labelText: codebridgeI18n.addToAiTutorContext(),
+        clickHandler: () => {
+          const folderPath = getFolderPath(file.folderId, projectFolders);
+          let fullFilename = file.name;
+          if (folderPath !== '/') {
+            fullFilename = (folderPath + '/' + file.name).substring(1); // remove leading slash
+          }
+          dispatch(
+            addItemToUserAddedContext({
+              displayName: fullFilename,
+              sourceCode: file.contents,
+              filename: fullFilename,
+            })
+          );
+        },
+      },
+      {
         condition: editableFileTypes.includes(file.language),
         iconName: 'download',
         labelText: codebridgeI18n.downloadFile(),
@@ -111,25 +130,6 @@ export const useFileRowOptions = (
         iconName: 'backpack',
         labelText: codebridgeI18n.saveToBackpackTitle(),
         clickHandler: () => openSaveToBackpackPrompt({file, backpackApi}),
-      },
-      {
-        condition: enableUserAddedContext(appName),
-        iconName: 'paperclip-vertical',
-        labelText: codebridgeI18n.addToAiTutorContext(),
-        clickHandler: () => {
-          const folderPath = getFolderPath(file.folderId, projectFolders);
-          let fullFilename = file.name;
-          if (folderPath !== '/') {
-            fullFilename = (folderPath + '/' + file.name).substring(1); // remove leading slash
-          }
-          dispatch(
-            addItemToUserAddedContext({
-              displayName: fullFilename,
-              sourceCode: file.contents,
-              filename: fullFilename,
-            })
-          );
-        },
       },
     ],
     [
