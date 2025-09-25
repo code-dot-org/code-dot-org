@@ -245,16 +245,12 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       id="resource-panel-instructions"
       className={classNames(styles.resourcePanel, className)}
     >
-      {/* {isPythonLab && ( */}
       {isPythonLab && pythonLabOnboardingTourSeen !== 'yes' && (
         <Steps
           enabled={resourcePanelTourEnabled}
           initialStep={INITIAL_STEP}
           steps={STEPS}
-          onExit={() => {}}
-          onChange={() => {}}
-          onBeforeChange={() => {}}
-          onComplete={() => {
+          onExit={() => {
             trySetLocalStorage(
               'pythonlabResourcePanelOnboardingTourSeen',
               'yes'
