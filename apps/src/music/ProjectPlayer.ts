@@ -2,12 +2,16 @@
 
 import {SourcesStore} from '../lab2/projects/SourcesStore';
 
+import {
+  cacheKey,
+  computeEventMeasures,
+  MusicMetadata,
+} from './ai/generate/GenerateCode';
 import MusicBlocklyWorkspace from './blockly/MusicBlocklyWorkspace';
 import {setUpBlocklyForMusicLab} from './blockly/setup';
 import MusicLibrary from './player/MusicLibrary';
 import MusicPlayer from './player/MusicPlayer';
 import {MusicLabConfig} from './types';
-import {cacheKey, computeEventMeasures, MusicMetadata} from './utils/Generate';
 
 /**
  * Given information about a student project, manages loading code and playing the project song.

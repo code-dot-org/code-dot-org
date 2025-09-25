@@ -1,5 +1,6 @@
 [push]
 	default = simple
+
 [user]
 	name = Continuous Integration
 	email = dev@code.org
@@ -16,3 +17,8 @@
     smudge = git-lfs smudge -- %f
     process = git-lfs filter-process
     required = true
+
+<% if @enable_credential_helper %>
+[credential]
+    helper = store
+<% end %>
