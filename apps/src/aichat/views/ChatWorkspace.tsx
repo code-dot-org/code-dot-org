@@ -1,10 +1,8 @@
-import {Button} from '@code-dot-org/component-library/button';
 import {FontAwesomeV6IconProps} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Tabs, {TabsProps} from '@code-dot-org/component-library/tabs';
 import React, {useCallback, useEffect, useMemo, useState} from 'react';
 
 import {isModelUpdate, SystemPromptSettings} from '@cdo/apps/aichat/types';
-import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import usePrevious from '@cdo/apps/util/usePrevious';
 
@@ -20,7 +18,6 @@ import {
   clearStagedFiles,
   fetchUserChatHistory,
   selectAllVisibleMessages,
-  sendAnalytics,
   setClientType,
   setNewChatSession,
 } from '../redux';
@@ -37,7 +34,6 @@ import StagedFilesPreview from './assets/StagedFilesPreview';
 import UploadButton from './assets/UploadButton';
 import ChatEventsList from './ChatEventsList';
 import ChatModeDropdown from './ChatModeDropdown';
-import CopyChatHistoryButton from './CopyChatHistoryButton';
 import UserChatMessageEditor from './UserChatMessageEditor';
 
 import moduleStyles from './chatWorkspace.module.scss';
@@ -63,10 +59,6 @@ enum WorkspaceTeacherViewTab {
   STUDENT_CHAT_HISTORY = 'viewStudentChatHistory',
   TEST_STUDENT_MODEL = 'testStudentModel',
 }
-
-const eraserIcon: FontAwesomeV6IconProps = {
-  iconName: 'eraser',
-};
 
 /**
  * Renders the AI Chat Lab main chat workspace component.
@@ -270,21 +262,6 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     tabPanelsContainerClassName: moduleStyles.tabPanelsContainer,
   };
 
-  const onClear = useCallback(() => {
-    dispatch(clearChatMessages());
-    dispatch(
-      addChatEvent({
-        timestamp: Date.now(),
-        descriptionKey: 'CLEAR_CHAT',
-      })
-    );
-    dispatch(
-      sendAnalytics(EVENTS.CHAT_ACTION, {
-        action: 'Clear chat history',
-      })
-    );
-  }, [dispatch]);
-
   return (
     <div id="chat-workspace-area" className={moduleStyles.chatWorkspace}>
       {selectedStudent ? (
@@ -323,16 +300,6 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
               buildAssetUrl={buildAssetUrl}
             />
           )}
-          <Button
-            text={aichatI18n.clearChatButtonText()}
-            disabled={!canChatWithModel}
-            iconLeft={eraserIcon}
-            size="s"
-            type="secondary"
-            color="gray"
-            onClick={onClear}
-          />
-          <CopyChatHistoryButton isDisabled={!canChatWithModel} />
         </div>
       </div>
     </div>
