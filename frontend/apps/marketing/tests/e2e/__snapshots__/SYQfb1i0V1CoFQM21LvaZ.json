@@ -1,0 +1,25 @@
+{
+  "entryContent": {
+    "fields": {
+      "name": {
+        "en-US": "❌ [ENG] A Person"
+      },
+      "image": {
+        "en-US": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "6fdNRFZbNXpiXQd6v7fHen"
+          }
+        }
+      },
+      "title": {
+        "en-US": "A Person Title"
+      },
+      "bio": {
+        "en-US": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa semper aliquam quis mattis quam."
+      }
+    }
+  },
+  "contentType": "person"
+}

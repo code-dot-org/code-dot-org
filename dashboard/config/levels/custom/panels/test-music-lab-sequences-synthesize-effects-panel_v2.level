@@ -1,0 +1,55 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-05-31T02:57:02.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "### Effects\n\n**Effects** are a way for record producers to change how a track sounds",
+        "imageUrl": "https://images.code.org/e86c2910cd1d5b6a08d1b8837fb0685a-Slide15.PNG",
+        "key": "test-music-lab-sequences-synthesize-effects-panel-7e5c491e-8f2d-458f-bd0d-931757763830",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "### Effects\n\nYou can use them with different tracks to change how a song sounds or feels.\n\nIn this example, the backing tracks will be at a lower volume than the main chorus",
+        "imageUrl": "https://images.code.org/fd999fa77181492711f25bfa9c2aa3fc-Slide16.PNG",
+        "key": "test-music-lab-sequences-synthesize-effects-panel-dd8d2de9-1cb7-4261-9f69-12853bc8e8a3",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "### Effects\n\n**Sequencing is important with effects!** \n\nOnce you set an effect, it applies to every block that comes after it unless you change it",
+        "imageUrl": "https://images.code.org/1f4f0e954d2111144407297e412834a3-Slide18.PNG",
+        "key": "test-music-lab-sequences-synthesize-effects-panel-45513791-722a-4ac8-a8c3-d313b8f2ece6",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "### Effects\n\nYou can also set multiple effects and they will all apply together",
+        "imageUrl": "https://images.code.org/2af203c568e7aed8fc39baaa7e3dbfe4-Slide20.PNG",
+        "key": "test-music-lab-sequences-synthesize-effects-panel-acacf059-9690-455c-b595-62395ff70216",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "### Effects\n\nThere are three types of effects available in Music Lab: volume, filter, and delay.\n\n<i class=\"fa-solid fa-pencil\"></i> **Volume**: Changes the loudness of the function\n\n<i class=\"fa-solid fa-pencil\"></i> **Filter**: Changes the tone of the function, making the sounds muted or muffled\n\n<i class=\"fa-solid fa-pencil\"></i> **Delay**: Adds an echo to the sounds",
+        "imageUrl": "https://images.code.org/98982b27525bcfa8b6a42d01ba55242a-Slide21.PNG",
+        "key": "test-music-lab-sequences-synthesize-effects-panel-8a25ec76-0628-4559-969a-75bb36410c9c",
+        "fadeInOverPrevious": true,
+        "layout": "text-bottom-center"
+      },
+      {
+        "text": "Key Takeaway: Effect blocks change how a song sounds and feels. They affect all of the blocks that come after them. ",
+        "imageUrl": "https://images.code.org/853122ec8b06b4cb461810f1d798fd9a-Slide22.PNG",
+        "key": "test-music-lab-sequences-synthesize-effects-panel-ea91d99a-914c-4c48-8336-818e8e7feba8",
+        "fadeInOverPrevious": true,
+        "typing": true
+      }
+    ],
+    "name_suffix": "_v2"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:57:02.757+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-synthesize-effects-panel\\\"\"],\"cloned_from\":\"test-music-lab-sequences-synthesize-effects-panel\"},{\"changed_at\":\"2025-07-03 16:49:45 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-03 20:11:19 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-03 20:11:59 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

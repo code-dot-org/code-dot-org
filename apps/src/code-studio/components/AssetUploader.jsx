@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import i18n from '@cdo/locale';
 
 import {assetButtonStyles} from './AddAssetButtonRow';
@@ -19,13 +21,21 @@ export default class AssetUploader extends React.Component {
     allowedExtensions: PropTypes.string,
     uploadsEnabled: PropTypes.bool.isRequired,
     api: PropTypes.object.isRequired,
+    projectType: PropTypes.string.isRequired,
   };
 
   /**
    * We've hidden the <input type="file"/> and replaced it with a big button.
    * Forward clicks on the button to the hidden file input.
    */
-  fileUploadClicked = () => this.refs.uploader.openFileChooser();
+  fileUploadClicked = () => {
+    this.refs.uploader.openFileChooser();
+    analyticsReporter.sendEvent(
+      EVENTS.UPLOAD_CUSTOM_IMAGE,
+      {UploaderType: 'Asset Uploader', ProjectType: this.props.projectType},
+      PLATFORMS.STATSIG
+    );
+  };
 
   render() {
     const {api} = this.props;

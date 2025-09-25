@@ -28,7 +28,7 @@
   "instructor_audience": "teacher",
   "properties": {
     "family_name": "csa-pilot-facilitator",
-    "has_numbered_units": true,
+    "numbered_units": "auto",
     "pilot_experiment": "deprecated",
     "version_year": "2021"
   },

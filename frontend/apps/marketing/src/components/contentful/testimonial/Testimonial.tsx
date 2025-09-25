@@ -4,7 +4,7 @@ import Testimonial, {
 } from '@code-dot-org/component-library/cms/testimonial';
 
 // Import the background image used in the pattern backgrounds on Contentful
-import bgPatternImage from '@public/images/bg-pattern-lines.png';
+import bgPatternImage from '@public/images/bg-pattern-lines.webp';
 
 export enum TESTIMONIAL_CONTENTFUL_BACKGROUNDS {
   PATTERN_DARK = 'Pattern Dark',

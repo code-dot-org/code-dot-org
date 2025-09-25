@@ -19,7 +19,7 @@ class StudentWorkSampleControllerTest < ActionController::TestCase
   name: "no_user_no_access_test",
   user: nil,
   method: :get,
-  params: {level_id: 123, unit_id: 456, num_samples: 7},
+  params: {level_id: 123, unit_id: 456},
   response: :redirect
 
   # Student cannot fetch student code samples
@@ -27,7 +27,7 @@ class StudentWorkSampleControllerTest < ActionController::TestCase
   name: "student_no_access_test",
   user: :student,
   method: :get,
-  params: {level_id: 123, unit_id: 456, num_samples: 7},
+  params: {level_id: 123, unit_id: 456},
   response: :forbidden
 
   # Teacher cannot fetch student code samples
@@ -35,7 +35,7 @@ class StudentWorkSampleControllerTest < ActionController::TestCase
   name: "teacher_no_access_test",
   user: :teacher,
   method: :get,
-  params: {level_id: 123, unit_id: 456, num_samples: 7},
+  params: {level_id: 123, unit_id: 456},
   response: :forbidden
 
   # Levelbuiilder cannot fetch student code samples
@@ -43,7 +43,7 @@ class StudentWorkSampleControllerTest < ActionController::TestCase
   name: "levelbuilder_no_access_test",
   user: :levelbuilder,
   method: :get,
-  params: {level_id: 123, unit_id: 456, num_samples: 7},
+  params: {level_id: 123, unit_id: 456},
   response: :forbidden
 
   # AI Tutor Access cannot fetch student code samples
@@ -51,7 +51,7 @@ class StudentWorkSampleControllerTest < ActionController::TestCase
   name: "ai_tutor_permissions_no_access_test",
   user: :ai_tutor_access,
   method: :get,
-  params: {level_id: 123, unit_id: 456, num_samples: 7},
+  params: {level_id: 123, unit_id: 456},
   response: :forbidden
 
   # Can fetch student code samples with student_work_access permission
@@ -60,7 +60,7 @@ class StudentWorkSampleControllerTest < ActionController::TestCase
   name: "student_work_dataset_maker_can_access_bogus_params",
   user: :student_work_dataset_maker,
   method: :get,
-  params: {level_id: 123, unit_id: 456, num_samples: 7},
+  params: {level_id: 123, unit_id: 456},
   response: :not_found
 
   # Can fetch student code samples with student_work_access permission
@@ -69,8 +69,8 @@ class StudentWorkSampleControllerTest < ActionController::TestCase
     user = create(:student_work_dataset_maker)
     sign_in(user)
     level = create(:level)
-    unit = create(:script)
-    get :fetch_student_code_samples, params: {level_id: level.id, unit_id: unit.id, num_samples: 0}
+    unit = create(:script, :in_single_unit_course)
+    get :fetch_student_code_samples, params: {level_id: level.id, unit_id: unit.id, student_ids: []}
     assert_response :ok
   end
 
@@ -78,11 +78,11 @@ class StudentWorkSampleControllerTest < ActionController::TestCase
   test 'can fetch code sample' do
     dataset_maker = create(:student_work_dataset_maker)
     sign_in(dataset_maker)
-    unit = create(:script)
+    unit = create(:script, :in_single_unit_course)
     level = create(:level)
     student = create(:student)
     create(:user_level, user: student, level: level, script: unit)
-    get :fetch_student_code_samples, params: {level_id: level.id, unit_id: unit.id, num_samples: 1}
+    get :fetch_student_code_samples, params: {level_id: level.id, unit_id: unit.id, student_ids: [student.id]}
     assert_response :ok
     response_json = JSON.parse(response.body)
     assert response_json.first["studentWork"], 'console.log("Hello World")'

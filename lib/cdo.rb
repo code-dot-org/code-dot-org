@@ -14,6 +14,23 @@ module Cdo
     # Match CDO_*, plus RACK_ENV and RAILS_ENV.
     ENV_PREFIX = /^(CDO|(RACK|RAILS)(?=_ENV))_/
 
+    MARKETING_SITES_HOSTS = [
+      # Contentful localhost
+      'http://localhost:3001',
+      'http://localhost.code.org:3001',
+      'http://code.marketing-sites.localhost:3001',
+      'http://preview-code.marketing-sites.localhost:3001',
+      # Contentful development
+      'https://code.marketing-sites.dev-code.org',
+      'https://preview-code.marketing-sites.dev-code.org',
+      # Contentful test
+      'https://code.marketing-sites.test-code.org',
+      'https://preview-code.marketing-sites.test-code.org',
+      # Contentful production
+      'https://code.marketing-sites.code.org',
+      'https://preview-code.marketing-sites.code.org',
+    ].freeze
+
     def initialize
       super
       root = File.expand_path('..', __dir__)
@@ -93,17 +110,19 @@ module Cdo
     end
 
     def codeprojects_hostname
-      canonical_hostname('codeprojects.org')
+      return 'codeprojects.org' if rack_env?(:production)
+      return "localhost.codeprojects.org" if rack_env?(:development) || ci_webserver?
+      return "#{stack_name}.codeprojects.org"
+    end
+
+    def preview_codeprojects_hostname
+      "preview.#{codeprojects_hostname}"
     end
 
     def hostedzone_id(domain)
       hosted_zone = Aws::Route53::Client.new.list_hosted_zones_by_name(dns_name: domain).hosted_zones.first
       raise "Could not find #{domain} in hosted zones" unless hosted_zone.name.delete_suffix('.') == domain
       return hosted_zone.id.delete_prefix("/hostedzone/")
-    end
-
-    def codeprojects_hostedzone_id
-      hostedzone_id('codeprojects.org')
     end
 
     def site_host(domain)
@@ -122,6 +141,10 @@ module Cdo
 
     def pegasus_site_host
       site_host('code.org')
+    end
+
+    def marketing_sites_hosts
+      MARKETING_SITES_HOSTS
     end
 
     def site_url(domain, path = '', scheme = '', ge_region: nil)

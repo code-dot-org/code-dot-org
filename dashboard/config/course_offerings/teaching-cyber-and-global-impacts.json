@@ -4,17 +4,20 @@
   "is_featured": false,
   "assignable": true,
   "curriculum_type": "Professional Learning",
-  "marketing_initiative": null,
-  "grade_levels": null,
-  "header": null,
-  "image": null,
-  "cs_topic": null,
+  "marketing_initiative": "AIF",
+  "grade_levels": "9,10,11,12",
+  "header": "self_paced",
+  "image": "https://images.code.org/93f15eceb93ad9c58db8f1dce6e27b9a-cyber.png",
+  "cs_topic": "artificial_intelligence,cybersecurity",
   "school_subject": null,
   "device_compatibility": null,
-  "description": null,
+  "description": "This self-paced professional learning module provides educators with a comprehensive understanding of the curriculum, enabling them to effectively guide students through the AIF Cybersecurity and Global Impact Unit.",
   "professional_learning_program": null,
   "video": null,
-  "published_date": null,
+  "published_date": "2025-05-30 04:00:00 UTC",
   "self_paced_pl_course_offering_key": null,
-  "ai_teaching_assistant_available": false
+  "ai_teaching_assistant_available": false,
+  "facilitator_course_permissions": [
+
+  ]
 }

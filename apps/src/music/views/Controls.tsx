@@ -1,10 +1,10 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
-import React, {useCallback} from 'react';
+import React, {memo, useCallback} from 'react';
 import {useDispatch} from 'react-redux';
 
 import {submitPredictResponse} from '@cdo/apps/lab2/redux/predictLevelRedux';
-import {Triggers} from '@cdo/apps/music/constants';
+import {Trigger} from '@cdo/apps/music/constants';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -14,12 +14,11 @@ import {
 } from '../redux/musicRedux';
 
 import BeatPad from './BeatPad';
-import {useMusicSelector} from './types';
 
 import moduleStyles from './controls.module.scss';
 
 const LoadingProgress: React.FunctionComponent = () => {
-  const progressValue = useMusicSelector(
+  const progressValue = useAppSelector(
     state => state.music.soundLoadingProgress
   );
 
@@ -47,7 +46,7 @@ const LoadingProgress: React.FunctionComponent = () => {
 };
 
 const SkipControls: React.FunctionComponent = () => {
-  const isPlaying = useMusicSelector(state => state.music.isPlaying);
+  const isPlaying = useAppSelector(state => state.music.isPlaying);
   const dispatch = useDispatch();
 
   const onClickSkip = useCallback(
@@ -104,7 +103,8 @@ const SkipControls: React.FunctionComponent = () => {
 interface ControlsProps {
   setPlaying: (value: boolean) => void;
   playTrigger: (id: string) => void;
-  hasTrigger: (id: string) => boolean;
+  triggers: Trigger[];
+  isPredictLevel?: boolean;
   enableSkipControls?: boolean;
 }
 
@@ -115,13 +115,13 @@ interface ControlsProps {
 const Controls: React.FunctionComponent<ControlsProps> = ({
   setPlaying,
   playTrigger,
-  hasTrigger,
+  triggers,
+  isPredictLevel,
   enableSkipControls = false,
 }) => {
   const dispatch = useAppDispatch();
-  const isPlaying = useMusicSelector(state => state.music.isPlaying);
-  const disableRun = useAppSelector(({lab, predictLevel, music}) => {
-    const isPredictLevel = lab.levelProperties?.predictSettings?.isPredictLevel;
+  const isPlaying = useAppSelector(state => state.music.isPlaying);
+  const disableRun = useAppSelector(({predictLevel, music}) => {
     const hasPredictResponse = !!predictLevel.response;
     const isLoading = music.soundLoadingProgress < 1;
     return isLoading || (isPredictLevel && !hasPredictResponse);
@@ -153,13 +153,10 @@ const Controls: React.FunctionComponent<ControlsProps> = ({
         </button>
         {enableSkipControls && <SkipControls />}
       </div>
-      <BeatPad
-        triggers={Triggers.filter(trigger => hasTrigger(trigger.id))}
-        playTrigger={playTrigger}
-      />
+      <BeatPad triggers={triggers} playTrigger={playTrigger} />
       <LoadingProgress />
     </div>
   );
 };
 
-export default Controls;
+export default memo(Controls);

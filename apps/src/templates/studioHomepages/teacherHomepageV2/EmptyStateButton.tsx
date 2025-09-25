@@ -36,6 +36,7 @@ export const EmptyStateButton: React.FC<EmptyStateButtonProps> = ({
   );
   return inDashboard ? (
     <NavLink
+      id={`ui-test-empty-state-button-${buttonText.replaceAll(' ', '-')}`}
       className={styles.emptyStateButton}
       to={`${TEACHER_NAVIGATION_SECTIONS_URL}/${sectionId}/${path}`}
     >
@@ -54,7 +55,11 @@ export const EmptyStateButton: React.FC<EmptyStateButtonProps> = ({
       />
     </NavLink>
   ) : (
-    <a className={styles.emptyStateButton} href={path}>
+    <a
+      id={`ui-test-empty-state-button-${buttonText.replaceAll(' ', '-')}`}
+      className={styles.emptyStateButton}
+      href={path}
+    >
       <div className={styles.taskButtonLeft}>
         <FontAwesomeV6Icon
           className={styles.emptyStateButtonIcon}

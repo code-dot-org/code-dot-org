@@ -3,7 +3,6 @@ import {
   ObservableParameterModel,
 } from '@blockly/block-shareable-procedures';
 import {installAllBlocks as installFieldColourBlocks} from '@blockly/field-colour';
-import {KeyboardNavigation} from '@blockly/keyboard-experiment';
 import {CrossTabCopyPaste} from '@blockly/plugin-cross-tab-copy-paste';
 import {
   ScrollBlockDragger,
@@ -52,6 +51,10 @@ import CdoFieldToggle from './addons/cdoFieldToggle';
 import CdoFieldVariable from './addons/cdoFieldVariable';
 import initializeGenerator from './addons/cdoGenerator';
 import {gestureOverrides} from './addons/cdoGesture';
+import {
+  initializeKeyboardNavigation,
+  preInjectRegistrations,
+} from './addons/cdoKeyboardNavigation';
 import CdoMetricsManager from './addons/cdoMetricsManager';
 import CdoRendererGeras from './addons/cdoRendererGeras';
 import CdoRendererThrasos from './addons/cdoRendererThrasos';
@@ -124,15 +127,16 @@ import {
   strip,
   interpolateMsg,
   isDarkTheme,
+  setThemeAndRenderBlocks,
 } from './utils';
 
-const options = {
+const options: {contextMenu: true; shortcut: true} = {
   contextMenu: true,
   shortcut: true,
 };
 
-const plugin = new CrossTabCopyPaste();
-plugin.init(options);
+const crossTabCopyPastePlugin = new CrossTabCopyPaste();
+crossTabCopyPastePlugin.init(options);
 
 const MAX_GET_CODE_RETRIES = 2;
 const RETRY_GET_CODE_INTERVAL_MS = 500;
@@ -185,8 +189,8 @@ const BlocklyWrapper = function (
       const fieldClass = override[2];
 
       // Force Google Blockly to use our custom versions of fields
-      this.blockly_.fieldRegistry.unregister(fieldRegistryName);
-      this.blockly_.fieldRegistry.register(fieldRegistryName, fieldClass);
+      this.fieldRegistry.unregister(fieldRegistryName);
+      this.fieldRegistry.register(fieldRegistryName, fieldClass);
 
       // Add each field for when our wrapper is accessed in /apps code
       // This method helps us avoid duplicated boilerplate, but we would
@@ -202,6 +206,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   registerIfMutator();
   registerLogicCompareMutator();
   registerTextJoinMutator();
+  preInjectRegistrations();
   // TODO: can we avoid using any here by converting BlocklyWrapper to a class?
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const blocklyWrapper = new (BlocklyWrapper as any)(
@@ -301,13 +306,9 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   ];
   blocklyWrapper.overrideFields(fieldOverrides);
 
-  // Overrides applied directly to core blockly
-  // TODO: Can we remove this assignment?
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  (blocklyWrapper.blockly_ as any).FunctionEditor = FunctionEditor;
   // TODO: Can/should we make CdoTrashcan have the same type as Trashcan?
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  blocklyWrapper.blockly_.Trashcan = CdoTrashcan as any;
+  blocklyWrapper.Trashcan = CdoTrashcan as any;
 
   // Code.org custom fields
   blocklyWrapper.AngleHelper = CdoAngleHelper;
@@ -321,53 +322,53 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   blocklyWrapper.FieldAngleDropdown = CdoFieldAngleDropdown;
   blocklyWrapper.FieldAngleTextInput = CdoFieldAngleTextInput;
 
-  blocklyWrapper.blockly_.registry.register(
-    blocklyWrapper.blockly_.registry.Type.FLYOUTS_VERTICAL_TOOLBOX,
-    blocklyWrapper.blockly_.registry.DEFAULT,
+  blocklyWrapper.registry.register(
+    blocklyWrapper.registry.Type.FLYOUTS_VERTICAL_TOOLBOX,
+    blocklyWrapper.registry.DEFAULT,
     CdoVerticalFlyout,
     true /* opt_allowOverrides */
   );
 
-  blocklyWrapper.blockly_.registry.register(
-    blocklyWrapper.blockly_.registry.Type.RENDERER,
+  blocklyWrapper.registry.register(
+    blocklyWrapper.registry.Type.RENDERER,
     Renderers.GERAS,
     CdoRendererGeras,
     true /* opt_allowOverrides */
   );
-  blocklyWrapper.blockly_.registry.register(
-    blocklyWrapper.blockly_.registry.Type.RENDERER,
+  blocklyWrapper.registry.register(
+    blocklyWrapper.registry.Type.RENDERER,
     Renderers.THRASOS,
     CdoRendererThrasos,
     true /* opt_allowOverrides */
   );
-  blocklyWrapper.blockly_.registry.register(
-    blocklyWrapper.blockly_.registry.Type.RENDERER,
+  blocklyWrapper.registry.register(
+    blocklyWrapper.registry.Type.RENDERER,
     Renderers.ZELOS,
     CdoRendererZelos,
     true /* opt_allowOverrides */
   );
-  blocklyWrapper.blockly_.registry.register(
-    blocklyWrapper.blockly_.registry.Type.CONNECTION_CHECKER,
+  blocklyWrapper.registry.register(
+    blocklyWrapper.registry.Type.CONNECTION_CHECKER,
     'cdo_connection_checker',
     CdoConnectionChecker,
     true /* opt_allowOverrides */
   );
-  blocklyWrapper.blockly_.serialization.registry.unregister('blocks');
-  blocklyWrapper.blockly_.serialization.registry.register(
+  blocklyWrapper.serialization.registry.unregister('blocks');
+  blocklyWrapper.serialization.registry.register(
     'blocks',
     new CdoBlockSerializer()
   );
 
   const procedureSerializer =
-    new blocklyWrapper.blockly_.serialization.procedures.ProcedureSerializer(
+    new blocklyWrapper.serialization.procedures.ProcedureSerializer(
       ObservableProcedureModel,
       ObservableParameterModel
     );
 
   blocklyWrapper.procedureSerializer = procedureSerializer;
   // Register the shareable procedures serializer, used for the modal function editor.
-  blocklyWrapper.blockly_.serialization.registry.unregister('procedures');
-  blocklyWrapper.blockly_.serialization.registry.register(
+  blocklyWrapper.serialization.registry.unregister('procedures');
+  blocklyWrapper.serialization.registry.register(
     'procedures',
     procedureSerializer
   );
@@ -526,6 +527,22 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     }
   };
 
+  const originalToCopyData = blocklyWrapper.BlockSvg.prototype.toCopyData;
+  extendedBlockSvg.toCopyData = function () {
+    const blockCopyData = originalToCopyData.call(this);
+    if (blockCopyData) {
+      blockCopyData.blockState = GoogleBlockly.serialization.blocks.save(this, {
+        addCoordinates: true,
+        addNextBlocks: false,
+        // We intentionally do not save IDs, because this can break student code
+        // on the hidden procedure definition workspace.
+        // https://github.com/google/blockly/issues/9226
+        saveIds: false,
+      })!;
+    }
+    return blockCopyData;
+  };
+
   const extendedInput = blocklyWrapper.Input.prototype as ExtendedInput;
   const extendedConnection = blocklyWrapper.Connection
     .prototype as ExtendedConnection;
@@ -623,10 +640,6 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     return this.getAllBlocks().filter(
       block => block.isEnabled() && block.getRootBlock().isEnabled()
     );
-  };
-
-  extendedWorkspaceSvg.isReadOnly = function () {
-    return blocklyWrapper.readOnly || this.options.readOnly;
   };
 
   // Used in levels when starting over or resetting Version History
@@ -731,10 +744,10 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     xml,
     options = {}
   ) {
-    const theme = cdoUtils.getUserTheme(options.theme as GoogleBlockly.Theme);
+    const theme = options.theme || CdoTheme;
     const workspace = new Blockly.WorkspaceSvg({
       readOnly: true,
-      theme: theme,
+      theme,
       plugins: {},
       RTL: options.rtl,
       renderer: options.renderer || Renderers.DEFAULT,
@@ -759,6 +772,8 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     container.style.display = 'inline-block';
     container.appendChild(svg);
     svg.appendChild(workspace.createDom());
+
+    workspace.setTheme(theme as GoogleBlockly.Theme);
     // We do not include hidden definitions in embedded workspaces
     // because embedded workspaces are only used for displaying blocks.
     const includeHiddenDefinitions = false;
@@ -767,7 +782,6 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
       Blockly.Xml.domToText(xml),
       includeHiddenDefinitions
     );
-
     // Loop through all the parent blocks and remove vertical translation value
     // This makes the output more condensed and readable, while preserving
     // horizontal translation values for RTL rendering.
@@ -779,13 +793,13 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
         const svgTransform = svgTransformList.getItem(0);
         const svgTranslationX = svgTransform.matrix.e;
         svgTransform.setTranslate(svgTranslationX, 0);
+        block.render();
       });
 
     // Shrink SVG to size of the block
     const bbox = (svg as SVGGraphicsElement).getBBox();
     svg.setAttribute('height', `${bbox.height + bbox.y}`);
     svg.setAttribute('width', `${bbox.width + bbox.x}`);
-    workspace.setTheme(theme);
     return workspace;
   };
 
@@ -800,9 +814,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     blocklyWrapper.isJigsaw = optOptionsExtended.isJigsaw;
     const options = {
       ...optOptionsExtended,
-      theme: cdoUtils.getUserTheme(
-        optOptionsExtended.theme as GoogleBlockly.Theme
-      ),
+      theme: optOptionsExtended.theme || CdoTheme,
       trashcan: false, // Don't use default trashcan.
       move: {
         wheel: true,
@@ -865,7 +877,9 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     blocklyWrapper.toolboxBlocks = options.toolbox;
     blocklyWrapper.showUnusedBlocks = options.showUnusedBlocks;
     blocklyWrapper.blockLimitMap = cdoUtils.createBlockLimitMap();
-    blocklyWrapper.isDarkTheme = isDarkTheme(options.theme);
+    blocklyWrapper.isDarkTheme = isDarkTheme(
+      options.theme as GoogleBlockly.Theme | undefined
+    );
 
     // Only allow toggling disabled blocks in start mode.
     // This is also important for ensuring that Blockly does not
@@ -876,7 +890,15 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
       container,
       options
     ) as ExtendedWorkspaceSvg;
-
+    Blockly.cdoUtils
+      .getUserTheme(workspace.getTheme())
+      .then((theme: GoogleBlockly.Theme) => {
+        setThemeAndRenderBlocks(
+          workspace,
+          theme,
+          options.theme as GoogleBlockly.Theme
+        );
+      });
     workspace.defs = Blockly.createSvgElement(
       'defs',
       {id: 'blocklySvgDefs'},
@@ -887,7 +909,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
       !!options.grayOutUndeletableBlocks;
     blocklyWrapper.topLevelProcedureAutopopulate =
       !!options.topLevelProcedureAutopopulate;
-    blocklyWrapper.readOnly = !!opt_options.readOnly;
+    blocklyWrapper.showBlockHelp = !!optOptionsExtended.showBlockHelp;
 
     if (options.noFunctionBlockFrame) {
       workspace.noFunctionBlockFrame = options.noFunctionBlockFrame;
@@ -899,25 +921,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
         experiments.BLOCKLY_KEYBOARD_NAVIGATION
       )
     ) {
-      Blockly.blockly_.ShortcutRegistry.registry.unregister('undo');
-      Blockly.blockly_.ShortcutRegistry.registry.unregister('redo');
-      if (blocklyWrapper.KeyboardNavigation) {
-        Blockly.blockly_.ShortcutRegistry.registry.unregister('undo');
-        Blockly.blockly_.ShortcutRegistry.registry.unregister('redo');
-        blocklyWrapper.KeyboardNavigation.dispose();
-      }
-      // Add the shortcuts div prior to keyboard navigation initialization
-      // so the dialog has a place to land.
-      if (!document.getElementById('shortcuts')) {
-        const shortcutDialog = document.createElement('div');
-        shortcutDialog.id = 'shortcuts';
-        document.body.appendChild(shortcutDialog);
-      }
-
-      blocklyWrapper.KeyboardNavigation = new KeyboardNavigation(workspace);
-      // Rerun user theme after Keyboard Experiment bug introduces incorrect theme
-      const theme = cdoUtils.getUserTheme(options.theme as GoogleBlockly.Theme);
-      workspace.setTheme(theme);
+      initializeKeyboardNavigation(workspace);
     }
 
     // Typically, we need to handle disabling blocks that are not connected to an

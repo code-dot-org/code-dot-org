@@ -6,24 +6,24 @@ import {
 import React, {useCallback} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {useCodebridgeContext} from '../codebridgeContext';
+import {setShowFileBrowser} from '../redux/workspaceRedux';
 
 /*
-  This component will look to the `showFileBrowser` boolean in the config and flip it back and forth.
+  This component will look to the `showFileBrowser` boolean in redux and flip it back and forth.
   If we're showing it, the icon is solid, and if not, the icon is regular.
 */
 
 const ToggleFileBrowserButton: React.FunctionComponent = () => {
-  const {config, setConfig} = useCodebridgeContext();
+  const showFileBrowser = useAppSelector(
+    state => state.codebridgeWorkspace.showFileBrowser
+  );
+  const dispatch = useAppDispatch();
 
   const onClick = useCallback(
-    () =>
-      setConfig({
-        ...config,
-        showFileBrowser: !config.showFileBrowser,
-      }),
-    [config, setConfig]
+    () => dispatch(setShowFileBrowser(!showFileBrowser)),
+    [showFileBrowser, dispatch]
   );
 
   const tooltipProps: TooltipProps = {
@@ -38,7 +38,7 @@ const ToggleFileBrowserButton: React.FunctionComponent = () => {
       <WithTooltip tooltipProps={tooltipProps}>
         <Button
           icon={{
-            iconStyle: config.showFileBrowser ? 'solid' : 'regular',
+            iconStyle: showFileBrowser ? 'solid' : 'regular',
             iconName: 'folder',
           }}
           isIconOnly
@@ -46,7 +46,7 @@ const ToggleFileBrowserButton: React.FunctionComponent = () => {
           ariaLabel={codebridgeI18n.toggleFileBrowser()}
           size={'xs'}
           type={'tertiary'}
-          aria-expanded={config.showFileBrowser}
+          aria-expanded={showFileBrowser}
           color={'black'}
         />
       </WithTooltip>

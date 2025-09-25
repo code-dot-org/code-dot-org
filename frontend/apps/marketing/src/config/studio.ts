@@ -1,6 +1,13 @@
 import {getStage} from './stage';
 
 export function getStudioBaseUrl() {
+  if (
+    typeof window !== 'undefined' &&
+    window.location.hostname === 'levelbuilder.code.org'
+  ) {
+    return 'https://levelbuilder-studio.code.org';
+  }
+
   switch (getStage()) {
     case 'development':
     case 'pr':

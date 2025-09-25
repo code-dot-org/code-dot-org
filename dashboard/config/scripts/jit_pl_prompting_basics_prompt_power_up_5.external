@@ -1,0 +1,64 @@
+name 'jit-pl-prompting-basics-prompt-power-up-5'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Prompt Power-Ups
+
+#### With the prompts below, your task is to transform each solution-seeking prompt into a critical thinking prompt. 
+
+## 📝 To Do
+
+- #### Read the example prompt.
+- #### Rewrite it so it encourages explanation, reasoning, or comparison.
+- #### Jot down your version (or think it through)
+- #### When ready, check your answer by opening the dropdown to see an example improved prompt.
+
+<div style="background-color: #e3f2fd; padding: 10px; border-left: 5px solid #2196f3; margin-bottom: 20px; font-size: 16px">
+      <strong>Solution-seeking → </strong><br>
+     "What’s the right answer to this math function?”.<br> <br>
+      <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1em; font-weight: bold;">🧐 Critical-thinking →
+</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
+    <p style="font-size: 16px">
+     “Explain how this function works step by step, and point out where the mistake is in my calculation.”
+</p></div>
+</details>
+</div>
+
+<div style="background-color: #f3e5f5; padding: 10px; border-left: 5px solid #9c27b0; margin-bottom: 20px; font-size: 16px">
+      <strong>Solution-seeking → </strong><br>
+      “Write the function that reverses this string.”<br> <br>
+      <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1em; font-weight: bold;">🧐 ACritical-thinking →
+</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
+    <p style="font-size: 16px">
+ “Show me two different ways to reverse a string in JavaScript and explain the pros and cons of each approach.”
+</p></div>
+</details>
+</div>
+
+<div style="background-color: #e3f2fd; padding: 10px; border-left: 5px solid #2196f3; margin-bottom: 20px; font-size: 16px">
+      <strong>Solution-seeking → </strong><br>
+      “Give me the CSS to center this box.”<br> <br>
+      <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1em; font-weight: bold;">🧐 Critical-thinking →
+</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
+    <p style="font-size: 16px">
+“Write CSS to center this box, and explain what each property does so I can understand how the alignment works.”
+</p></div>
+</details>
+</div>
+
+
+## Next up
+
+#### Practice debugging code with AI. 
+
+
+
+
+MARKDOWN

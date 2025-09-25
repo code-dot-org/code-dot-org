@@ -1,0 +1,23 @@
+name 'music-lab-612-pre-q2'
+
+question '**Which code will make the Chorus vocals volume start low and then get louder and louder?**'
+height '200'
+right '![](https://images.code.org/f8c936f63890862715b8d983c7da311b-image-1750876436475.png)'
+wrong '![](https://images.code.org/e00a3db207844580a0f7289149e9c046-image-1750876442037.png)'
+wrong '![](https://images.code.org/89e706a7f4b330e122d70343aaa9b28f-image-1750876445878.png)'
+wrong '![](https://images.code.org/597421b3f73a119911fc2eca71767ae9-image-1750876449340.png)'
+
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Topic: Sequencing
+
+Skill: Modify the volume, delay, or filter settings for a song by correctly sequencing effect blocks
+
+Appears in Lesson: Sequencing - Synthesis
+MARKDOWN
+
+markdown <<MARKDOWN
+Luca is working on the chorus vocals of a new song. He wants it to sound like the vocals are building up by getting louder, so he adjusts the volume in his code to begin low then play the Big Chorus at full volume.
+MARKDOWN

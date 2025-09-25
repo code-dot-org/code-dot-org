@@ -3,19 +3,19 @@ require 'test_helper'
 class PairedUserLevelTest < ActiveSupport::TestCase
   self.use_transactional_test_case = true
   setup_all do
-    @user_1 = create :user
-    @user_2 = create :user
-    @user_3 = create :user
-    @user_4 = create :user
+    @user_1 = create(:user)
+    @user_2 = create(:user)
+    @user_3 = create(:user)
+    @user_4 = create(:user)
 
-    @level_source_1 = create :level_source
+    @level_source_1 = create(:level_source)
 
-    @nav_level_1 = create :user_level, user: @user_1
-    @driver_level_1 = create :user_level, user: @user_2, level_source: @level_source_1
-    @nav_level_2 = create :user_level, user: @user_2
-    @driver_level_2 = create :user_level, user: @user_3
-    @nonpaired_level_3 = create :user_level, user: @user_1
-    @nonpaired_level_4 = create :user_level, user: @user_2
+    @nav_level_1 = create(:user_level, user: @user_1)
+    @driver_level_1 = create(:user_level, user: @user_2, level_source: @level_source_1)
+    @nav_level_2 = create(:user_level, user: @user_2)
+    @driver_level_2 = create(:user_level, user: @user_3)
+    @nonpaired_level_3 = create(:user_level, user: @user_1)
+    @nonpaired_level_4 = create(:user_level, user: @user_2)
 
     @paired_user_level_1 = PairedUserLevel.create driver_user_level: @driver_level_1,
       navigator_user_level: @nav_level_1
@@ -93,14 +93,14 @@ class PairedUserLevelTest < ActiveSupport::TestCase
 
   test 'navigators_names returns correct values' do
     # Create records simulating a pairing group of 4 students with @user_1 as the driver
-    user_level_1 = create :user_level, user: @user_1
-    user_level_2 = create :user_level, user: @user_2
-    user_level_3 = create :user_level, user: @user_3
-    user_level_4 = create :user_level, user: @user_4
+    user_level_1 = create(:user_level, user: @user_1)
+    user_level_2 = create(:user_level, user: @user_2)
+    user_level_3 = create(:user_level, user: @user_3)
+    user_level_4 = create(:user_level, user: @user_4)
 
-    paired_user_level_1_2 = create :paired_user_level, driver_user_level: user_level_1, navigator_user_level: user_level_2
-    paired_user_level_1_3 = create :paired_user_level, driver_user_level: user_level_1, navigator_user_level: user_level_3
-    paired_user_level_1_4 = create :paired_user_level, driver_user_level: user_level_1, navigator_user_level: user_level_4
+    paired_user_level_1_2 = create(:paired_user_level, driver_user_level: user_level_1, navigator_user_level: user_level_2)
+    paired_user_level_1_3 = create(:paired_user_level, driver_user_level: user_level_1, navigator_user_level: user_level_3)
+    paired_user_level_1_4 = create(:paired_user_level, driver_user_level: user_level_1, navigator_user_level: user_level_4)
 
     assert_equal [@user_4.name, @user_3.name, @user_2.name], paired_user_level_1_2.navigators_names
     assert_equal [@user_4.name, @user_3.name],               paired_user_level_1_2.navigators_names(exclude_self: true)
@@ -122,14 +122,14 @@ class PairedUserLevelTest < ActiveSupport::TestCase
 
   test 'navigator_count returns correct value' do
     # Create records simulating a pairing group of 4 students with @user_1 as the driver
-    user_level_1 = create :user_level, user: @user_1
-    user_level_2 = create :user_level, user: @user_2
-    user_level_3 = create :user_level, user: @user_3
-    user_level_4 = create :user_level, user: @user_4
+    user_level_1 = create(:user_level, user: @user_1)
+    user_level_2 = create(:user_level, user: @user_2)
+    user_level_3 = create(:user_level, user: @user_3)
+    user_level_4 = create(:user_level, user: @user_4)
 
-    paired_user_level_1_2 = create :paired_user_level, driver_user_level: user_level_1, navigator_user_level: user_level_2
-    paired_user_level_1_3 = create :paired_user_level, driver_user_level: user_level_1, navigator_user_level: user_level_3
-    paired_user_level_1_4 = create :paired_user_level, driver_user_level: user_level_1, navigator_user_level: user_level_4
+    paired_user_level_1_2 = create(:paired_user_level, driver_user_level: user_level_1, navigator_user_level: user_level_2)
+    paired_user_level_1_3 = create(:paired_user_level, driver_user_level: user_level_1, navigator_user_level: user_level_3)
+    paired_user_level_1_4 = create(:paired_user_level, driver_user_level: user_level_1, navigator_user_level: user_level_4)
 
     assert_equal 3, paired_user_level_1_2.navigator_count
     assert_equal 3, paired_user_level_1_3.navigator_count

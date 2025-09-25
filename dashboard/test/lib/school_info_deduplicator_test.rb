@@ -161,7 +161,7 @@ class SchoolInfoDeduplicatorTest < ActiveSupport::TestCase
 
   test 'dedupe with school, ignoring other attrs' do
     deduplicator = MockSchoolInfoDeduplicator.new
-    school_info = create :school_info_with_public_school_only
+    school_info = create(:school_info_with_public_school_only)
     deduped = deduplicator.deduplicate_school_info({school_id: school_info.school_id, validation_type: SchoolInfo::VALIDATION_NONE, state: "FAKE"}, deduplicator)
     assert deduped, "Expected to dedupe on school id"
     assert_equal school_info.id, deduplicator.school_info.id
@@ -169,7 +169,7 @@ class SchoolInfoDeduplicatorTest < ActiveSupport::TestCase
 
   test 'missing or blank fields do not match none-null values' do
     deduplicator = MockSchoolInfoDeduplicator.new
-    existing = create :school_info_us_private, validation_type: SchoolInfo::VALIDATION_NONE
+    existing = create(:school_info_us_private, validation_type: SchoolInfo::VALIDATION_NONE)
     new_attrs = {
       country: existing.country,
       validation_type: SchoolInfo::VALIDATION_NONE,
@@ -180,7 +180,7 @@ class SchoolInfoDeduplicatorTest < ActiveSupport::TestCase
 
   test 'missing or blank fields with defaults do match' do
     deduplicator = MockSchoolInfoDeduplicator.new
-    existing = create :school_info_us_private
+    existing = create(:school_info_us_private)
     new_attrs = {
       country: existing.country,
       school_type: existing.school_type,

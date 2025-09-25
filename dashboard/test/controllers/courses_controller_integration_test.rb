@@ -7,7 +7,7 @@ class CoursesControllerIntegrationTest < ActionDispatch::IntegrationTest
     sign_in create :teacher
     # Note: We intentionally use a complex-ish course name here, similar to what
     # our real PLC course names look like.
-    plc_course = create :plc_course, name: "CS Discoveries Deeper Learning 2119 - 2120"
+    plc_course = create(:plc_course, name: "CS Discoveries Deeper Learning 2119 - 2120")
     get course_path(plc_course.unit_group)
     assert_template 'plc/user_course_enrollments/index'
   end

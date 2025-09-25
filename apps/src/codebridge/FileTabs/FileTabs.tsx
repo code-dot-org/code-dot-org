@@ -1,4 +1,3 @@
-import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import {getOpenFiles} from '@codebridge/utils';
 import {
   dragAndDropKeyboardCodes,
@@ -27,6 +26,13 @@ import {
 import React, {useState} from 'react';
 
 import i18n from '@cdo/apps/codebridge/locale';
+import {
+  closeFileThunk,
+  rearrangeFilesThunk,
+  setActiveFileThunk,
+} from '@cdo/apps/lab2/redux/lab2ProjectReduxThunks';
+import {MultiFileSource} from '@cdo/apps/lab2/types';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import FileTab from './FileTab';
 import Sortable from './Sortable';
@@ -34,10 +40,11 @@ import Sortable from './Sortable';
 import moduleStyles from './styles/fileTabs.module.scss';
 
 export const FileTabs = React.memo(() => {
-  const {source, rearrangeFiles, setActiveFile, closeFile} =
-    useCodebridgeContext();
-
+  const source = useAppSelector(
+    state => state.lab2Project.projectSources?.source as MultiFileSource
+  );
   const files = getOpenFiles(source);
+  const dispatch = useAppDispatch();
 
   const sensors = useSensors(
     useSensor(PointerSensor, {
@@ -60,7 +67,11 @@ export const FileTabs = React.memo(() => {
       const oldIndex = files.indexOf(files.find(f => f.id === active.id)!);
       const newIndex = files.indexOf(files.find(f => f.id === over!.id)!);
 
-      rearrangeFiles(arrayMove(files, oldIndex, newIndex).map(file => file.id));
+      dispatch(
+        rearrangeFilesThunk(
+          arrayMove(files, oldIndex, newIndex).map(file => file.id)
+        )
+      );
     }
   }
 
@@ -72,19 +83,19 @@ export const FileTabs = React.memo(() => {
     // Handle drag start only if the file is in the list of open files.
     // This can get called when the close button is clicked, and we want to ignore
     // it in this case.
-    if (source.files[event.active.id as string].open) {
+    if (source.openFiles?.includes(event.active.id as string)) {
       setDraggingFileId(event.active.id as string);
-      setActiveFile(event.active.id as string);
+      dispatch(setActiveFileThunk(event.active.id as string));
     }
   }
 
   function handleTabActivation(event: React.KeyboardEvent, fileId: string) {
     if (event.key === 'Enter' || event.key === ' ') {
       // We don't stop event propagation here because we want the close button to work.
-      setActiveFile(fileId);
+      dispatch(setActiveFileThunk(fileId));
     }
     if (event.key === 'Backspace' || event.key === 'Delete') {
-      closeFile(fileId);
+      dispatch(closeFileThunk(fileId));
     }
   }
 

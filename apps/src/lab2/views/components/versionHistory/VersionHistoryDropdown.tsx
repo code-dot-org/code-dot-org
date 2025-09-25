@@ -17,13 +17,15 @@ import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import lab2I18n from '@cdo/apps/lab2/locale';
 import {
   setProjectSource,
-  setAndSaveProjectSources,
-  loadVersion,
-  resetToCurrentVersion,
   setViewingOldVersion,
   setRestoredOldVersion,
-  previewStartSources,
 } from '@cdo/apps/lab2/redux/lab2ProjectRedux';
+import {
+  loadVersion,
+  previewStartSources,
+  resetToCurrentVersion,
+  setAndSaveProjectSources,
+} from '@cdo/apps/lab2/redux/lab2ProjectReduxThunks';
 import {ProjectSources, ProjectVersion} from '@cdo/apps/lab2/types';
 import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';

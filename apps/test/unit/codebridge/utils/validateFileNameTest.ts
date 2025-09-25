@@ -104,6 +104,7 @@ describe('validateFileName', function () {
     );
 
     const validFileTypes = ['py', 'csv', 'txt'];
+    const validFileTypesString = validFileTypes.join(', ');
     // Invalid file type returns error string.
     expect(
       validateFileName({
@@ -118,7 +119,7 @@ describe('validateFileName', function () {
       `${codebridgeI18n.invalidFileType({
         fileType: 'js',
       })} ${codebridgeI18n.validFileTypesInfo({
-        validFileTypes: validFileTypes.toString(),
+        validFileTypes: validFileTypesString,
       })}`
     );
 

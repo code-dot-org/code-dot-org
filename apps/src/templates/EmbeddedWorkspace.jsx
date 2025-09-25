@@ -32,6 +32,7 @@ export default class EmbeddedWorkspace extends React.Component {
       {
         noScrolling: true,
         rtl: this.props.isRtl,
+        theme: Blockly.getMainWorkspace().getTheme(),
       }
     );
 

@@ -3,18 +3,18 @@ require 'testing/includes_metrics'
 
 class EvaluateRubricJobTest < ActiveJob::TestCase
   setup do
-    @student = create :student
-    @teacher = create :teacher
-    @script_level = create :script_level
+    @student = create(:student)
+    @teacher = create(:teacher)
+    @script_level = create(:script_level)
     assert_equal @script_level.script, @script_level.lesson.script
 
     @fake_ip = '127.0.0.1'
     @storage_id = create_storage_id_for_user(@student.id)
 
-    @rubric = create :rubric, level: @script_level.level, lesson: @script_level.lesson
-    create :learning_goal, rubric: @rubric, learning_goal: 'learning-goal-1'
-    create :learning_goal, rubric: @rubric, learning_goal: 'learning-goal-2'
-    create :learning_goal, rubric: @rubric, learning_goal: 'learning-goal-3'
+    @rubric = create(:rubric, level: @script_level.level, lesson: @script_level.lesson)
+    create(:learning_goal, rubric: @rubric, learning_goal: 'learning-goal-1')
+    create(:learning_goal, rubric: @rubric, learning_goal: 'learning-goal-2')
+    create(:learning_goal, rubric: @rubric, learning_goal: 'learning-goal-3')
     assert_equal 3, @rubric.learning_goals.count
 
     # Don't actually talk to S3 when running SourceBucket.new

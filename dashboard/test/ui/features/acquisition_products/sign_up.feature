@@ -12,14 +12,18 @@ Scenario: Teacher can create a school associated account in the sign up flow
   And I press keys "password" for element "#uitest-confirm-password"
   And I see no difference for "Login Type Selection Page"
   And I press the last button with text "Create my account" to load a new page
+  And I press keys "myFirstName" for element "#uitest-given-name"
+  And I press keys "myLastName" for element "#uitest-family-name"
   And I press keys "myDisplayName" for element "#uitest-display-name"
+  And I click selector "span:contains(Select all that apply)"
+  And I click selector "span:contains(Found on search)"
   And I select the "United States" option in dropdown "uitest-country-dropdown"
   And I press keys "31513" for element "#uitest-school-zip"
   And I select the "Appling County High School" option in dropdown "uitest-school-dropdown"
   And I select the "Classroom Teacher" option in dropdown "uitest-educator-role"
   And I see no difference for "Finish Sign Up Teacher"
   And I press the last button with text "Go to my account" to load a new page
-  And I wait until I see selector "#uitest-accept-section-creation"
+  And I wait until I see selector "#teacher-home-header"
   And I close my eyes
 
 Scenario: Student can create an account in the sign up flow

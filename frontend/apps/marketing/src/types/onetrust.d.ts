@@ -1,5 +1,7 @@
 interface OneTrust {
   OnConsentChanged: (callback: () => void) => void;
+  IsAlertBoxClosedAndValid: () => boolean;
+  ToggleInfoDisplay: () => void;
 }
 
 declare global {

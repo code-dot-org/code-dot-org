@@ -3,49 +3,84 @@ import React, {useCallback, useEffect, useRef} from 'react';
 import UserMessageEditor from '@cdo/apps/aiComponentLibrary/userMessageEditor/UserMessageEditor';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {selectMultimodalEnabled, submitChatContents} from '../redux';
+import {submitChatContents} from '../redux';
+import {
+  AiChatClientType,
+  ChatButtonAndKey,
+  ModelParameters,
+  AnalyticsProperties,
+} from '../types';
+
+import moduleStyles from './UserChatMessageEditor.module.scss';
+
+interface UserChatMessageEditorProps {
+  modelParameters: ModelParameters;
+  clientType: AiChatClientType;
+  editorContainerClassName?: string;
+  chatButtons?: ChatButtonAndKey[];
+  hiddenContextCallback?: () => Promise<string>;
+  multimodalAvailable?: boolean;
+}
 
 /**
  * Renders the AI Chat Lab user chat message editor component.
  */
-const UserChatMessageEditor: React.FunctionComponent<{
-  editorContainerClassName?: string;
-}> = ({editorContainerClassName}) => {
+const UserChatMessageEditor: React.FunctionComponent<
+  UserChatMessageEditorProps
+> = ({
+  modelParameters,
+  clientType,
+  editorContainerClassName,
+  chatButtons,
+  hiddenContextCallback,
+  multimodalAvailable,
+}) => {
   const isWaitingForChatResponse = useAppSelector(
     state => !!state.aichat.chatMessagePending
   );
 
   const saveInProgress = useAppSelector(state => state.aichat.saveInProgress);
-  const multimodalEnabled = useAppSelector(selectMultimodalEnabled);
   const chatAssets = useAppSelector(state =>
     state.aichat.stagedFiles.map(file => file.asset)
   );
   const uploadsPending = useAppSelector(state =>
     state.aichat.stagedFiles.some(file => file.status === 'uploading')
   );
-
   const dispatch = useAppDispatch();
 
   const inputRef = useRef<HTMLTextAreaElement>(null);
 
+  const disabled = isWaitingForChatResponse || saveInProgress || uploadsPending;
+
   const handleSubmit = useCallback(
-    (userMessage: string) => {
-      if (!isWaitingForChatResponse) {
+    async (userMessage: string, analyticsProperties?: AnalyticsProperties) => {
+      if (!disabled) {
+        const hiddenContext = await hiddenContextCallback?.();
         dispatch(
           submitChatContents({
             text: userMessage,
+            modelParameters,
+            clientType,
+            hiddenContext,
+            analyticsProperties,
             assets:
-              multimodalEnabled && chatAssets.length > 0
+              multimodalAvailable && chatAssets.length > 0
                 ? chatAssets
                 : undefined,
           })
         );
       }
     },
-    [isWaitingForChatResponse, multimodalEnabled, chatAssets, dispatch]
+    [
+      disabled,
+      dispatch,
+      hiddenContextCallback,
+      multimodalAvailable,
+      chatAssets,
+      modelParameters,
+      clientType,
+    ]
   );
-
-  const disabled = isWaitingForChatResponse || saveInProgress || uploadsPending;
 
   useEffect(() => {
     if (!disabled) {
@@ -56,12 +91,21 @@ const UserChatMessageEditor: React.FunctionComponent<{
   }, [disabled]);
 
   return (
-    <UserMessageEditor
-      onSubmit={handleSubmit}
-      disabled={disabled}
-      editorContainerClassName={editorContainerClassName}
-      ref={inputRef}
-    />
+    <>
+      {chatButtons && (
+        <div className={moduleStyles.chatButtonsContainer}>
+          {chatButtons.map(({ChatButton, key}) => (
+            <ChatButton key={key} onClick={handleSubmit} />
+          ))}
+        </div>
+      )}
+      <UserMessageEditor
+        onSubmit={handleSubmit}
+        disabled={disabled}
+        editorContainerClassName={editorContainerClassName}
+        ref={inputRef}
+      />
+    </>
   );
 };
 

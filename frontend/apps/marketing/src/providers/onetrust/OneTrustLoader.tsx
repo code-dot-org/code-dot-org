@@ -27,7 +27,7 @@ const OneTrustLoader = ({brand}: {brand: Brand}) => {
 
       {/* OneTrust SDK script. */}
       <Script
-        src={getOnetrustStubScriptPath(brand)}
+        src={getOnetrustStubScriptPath()}
         data-domain-script={getOneTrustDomainId(brand)}
         strategy={'beforeInteractive'}
       />

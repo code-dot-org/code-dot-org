@@ -1,3 +1,4 @@
+@use '../../lab2/views/components/layout/variables.scss' as variables;
 @import 'color.scss';
 @import '../../mixins.scss';
 @import './aichat-common.module.scss';
@@ -10,7 +11,7 @@ $tabs-default-spacing: 4px;
   height: 100%;
   display: flex;
   flex-direction: column;
-  background-color: $light_white;
+  background-color: var(--background-neutral-primary);
   overflow: hidden;
 }
 
@@ -29,6 +30,7 @@ $tabs-default-spacing: 4px;
 
 .scrollToBottomButton {
   border-radius: 50%;
+  pointer-events: auto;
 }
 
 .messageArea {
@@ -48,6 +50,7 @@ $tabs-default-spacing: 4px;
   display: flex;
   justify-content: center;
   width: 100%;
+  pointer-events: none;
 }
 
 .tabsContainer {
@@ -55,7 +58,7 @@ $tabs-default-spacing: 4px;
   padding: $tabs-default-spacing $tabs-default-spacing 0 $tabs-default-spacing;
 
   ul {
-    li > button[role="tab"] {
+    li > button[role='tab'] {
       max-width: 300px;
     }
   }
@@ -74,12 +77,9 @@ $tabs-default-spacing: 4px;
   }
 }
 
-.waitingForResponse {
-  width: 50px;
-}
-
 .buttonRow {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
   padding: 0 10px;
 }
@@ -89,7 +89,7 @@ $tabs-default-spacing: 4px;
   flex-direction: column;
   gap: 2px;
   padding: 16px 6px;
-  border-top: 1px solid $light_gray_200;
+  border-top: variables.$default-border;
 }
 
 .alertLink {
@@ -113,4 +113,9 @@ $tabs-default-spacing: 4px;
   @include remove-button-styles;
   align-self: end;
   font-size: 13px;
+}
+
+.modeDropdown {
+  margin-inline-start: 10px;
+  width: fit-content;
 }

@@ -1,9 +1,9 @@
 import codeOrgLogo from '@public/images/code-org-logo.png';
 import customBackgroundImage from '@public/images/hero-banner-custom-bg-example.png';
 import imageFile from '@public/images/image-component.png';
-import {MINIMAL_VIEWPORTS} from '@storybook/addon-viewport';
-import {Meta, StoryObj} from '@storybook/react';
-import {within, expect} from '@storybook/test';
+import {Meta, StoryObj} from '@storybook/react-webpack5';
+import {within, expect} from 'storybook/test';
+import {MINIMAL_VIEWPORTS} from 'storybook/viewport';
 
 import Video from '@/video';
 
@@ -29,10 +29,6 @@ export const Default: Story = {
   },
   parameters: {
     layout: 'fullscreen',
-  },
-  play: async ({canvasElement}) => {
-    const canvas = within(canvasElement);
-    await expect(canvas.getByRole('banner')).toBeInTheDocument();
   },
 };
 
@@ -199,26 +195,6 @@ export const WithBackgroundImage: Story = {
     await expect(styles.backgroundImage).toMatch(
       /hero-banner-custom-bg-example.*\.png/,
     );
-  },
-};
-
-export const WithoutBackground: Story = {
-  args: {
-    heading: 'No Background Example',
-    subHeading: 'This hero has no background color or image',
-    description:
-      'The content should be clearly visible without any background distractions.',
-    removeBackground: true,
-    VideoComponent: Video,
-  },
-  parameters: {
-    layout: 'fullscreen',
-  },
-  play: async ({canvasElement}) => {
-    const canvas = within(canvasElement);
-    const banner = canvas.getByRole('banner');
-    const styles = window.getComputedStyle(banner);
-    await expect(styles.backgroundImage).toBe('none');
   },
 };
 

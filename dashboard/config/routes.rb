@@ -24,20 +24,20 @@ Dashboard::Application.routes.draw do
   get '/teacher_dashboard/sections/first_section/*location', to: "teacher_dashboard#redirect_to_newest_section"
   get '/teacher_dashboard/sections/first_section_progress', to: "teacher_dashboard#redirect_to_newest_section_progress"
 
-  # Redirect enable and disable experiments to most recent section
-  get '/teacher_dashboard/sections/enable_experiments', to: "teacher_dashboard#enable_experiments"
-  get '/teacher_dashboard/sections/disable_experiments', to: "teacher_dashboard#disable_experiments"
-
   constraints host: CDO.codeprojects_hostname do
     # Routes needed for the footer on weblab share links on codeprojects
     get '/weblab/footer', to: 'projects#weblab_footer'
   end
 
+  constraints host: CDO.preview_codeprojects_hostname do
+    get '/', to: 'codeprojects_preview#show'
+  end
   # This matches any host that is not the codeprojects hostname
-  constraints host: /^(?!#{CDO.codeprojects_hostname})/ do
+  constraints host: /^(?!#{CDO.codeprojects_hostname}|#{CDO.preview_codeprojects_hostname})/ do
     # React-router will handle sub-routes on the client.
     resource :teacher_dashboard, only: [] do
       get :home, controller: :teacher_dashboard, action: :show
+      get :get_drawer_data, controller: :teacher_dashboard, action: :get_drawer_data
       resources :sections, only: %i[show], param: :section_id, controller: :teacher_dashboard do
         member do
           get :parent_letter
@@ -45,6 +45,12 @@ Dashboard::Application.routes.draw do
           get :unit, params: :unitName, action: :show
           get '*path', action: :show, via: :all, as: :subpath
         end
+      end
+    end
+
+    resources :notifications, only: [:index] do
+      collection do
+        post '/mark_as_read', controller: :notifications, action: :mark_as_read
       end
     end
 
@@ -64,11 +70,21 @@ Dashboard::Application.routes.draw do
     get '/user_levels/level_source/:script_id/:level_id', to: 'user_levels#get_level_source'
     get '/user_levels/section_summary/:section_id/:level_id', to: 'user_levels#get_section_response_summary'
 
-    resources :student_work_evaluations, only: [:create]
+    resources :student_work_evaluations, only: [:create] do
+      collection do
+        get ':user_id/:level_id/:unit_id', to: 'student_work_evaluations#get_most_recent_user_level_evaluation'
+      end
+    end
 
     resources :student_work_evaluation_summaries, only: [:create]
 
     resources :user_level_interactions, only: [:create]
+
+    resources :skills, only: [:create, :index, :update, :destroy] do
+      collection do
+        get 'section/:section_id/unit/:unit_name', to: 'skills#section_skills'
+      end
+    end
 
     patch '/api/v1/user_scripts/:script_id', to: 'api/v1/user_scripts#update'
 
@@ -81,7 +97,7 @@ Dashboard::Application.routes.draw do
 
     get "/congrats", to: "congrats#index"
 
-    get "/incubator", to: "incubator#index"
+    get "/incubator", to: redirect(CDO.code_org_url("/incubator"))
     get "/musiclab", to: redirect(CDO.code_org_url("/music"))
     get "/projectbeats", to: redirect(CDO.code_org_url("/music"))
     get "/musiclab/menu", to: "musiclab#menu"
@@ -137,6 +153,7 @@ Dashboard::Application.routes.draw do
       resources :programming_classes, param: 'programming_class_key', constraints: {programming_class_key: /#{CurriculumHelper::KEY_CHAR_RE}+/o}, path: '/classes' do
         member do
           get :show, to: 'programming_classes#show_by_keys'
+          get :get_serialized, to: 'programming_classes#get_serialized'
         end
       end
     end
@@ -243,6 +260,7 @@ Dashboard::Application.routes.draw do
       get '/users/gdpr_check', to: 'registrations#gdpr_check'
       get '/users/sign_up/finish_student_account', to: 'registrations#finish_student_account'
       get '/users/sign_up/finish_teacher_account', to: 'registrations#finish_teacher_account'
+      get '/users/personalization_information', to: 'registrations#personalization_information'
       patch '/dashboardapi/users', to: 'registrations#update'
       patch '/users/upgrade', to: 'registrations#upgrade'
       patch '/users/set_student_information', to: 'registrations#set_student_information'
@@ -393,6 +411,8 @@ Dashboard::Application.routes.draw do
         get 'level_properties'
         get 'extra_links'
         patch 'update_bubble_choice_settings'
+        post 'add_skill'
+        post 'remove_skill'
       end
     end
 
@@ -403,6 +423,9 @@ Dashboard::Application.routes.draw do
         get '/:filename', to: 'level_starter_assets#file', format: true
         post '', to: 'level_starter_assets#upload'
         delete '/:filename', to: 'level_starter_assets#destroy', format: true
+
+        get '/uuid/:uuid', to: 'level_starter_assets#file_by_uuid', format: true
+        post '/uuid/:uuid', to: 'level_starter_assets#upload_by_uuid'
       end
     end
 
@@ -412,7 +435,7 @@ Dashboard::Application.routes.draw do
       end
     end
 
-    get 'course_offerings/self_paced_pl_course_offerings', to: 'course_offerings#self_paced_pl_course_offerings'
+    get 'course_offerings/self_paced_pl_course_offerings_for_workshops', to: 'course_offerings#self_paced_pl_course_offerings_for_workshops'
     get '/course/:course_name', to: redirect('/courses/%{course_name}')
     get '/courses/:course_name/vocab/edit', to: 'vocabularies#edit'
     # these routes use course_course_name to match generated routes below that are nested within courses
@@ -490,7 +513,6 @@ Dashboard::Application.routes.draw do
     end
 
     resources :potential_teachers, only: [:create]
-    get '/potential_teachers/:id', param: :id, to: 'potential_teachers#show'
 
     # CSP 20-21 lockable lessons with lesson plan redirects
     get '/s/csp1-2020/lockable/2(*all)', to: redirect(path: '/s/csp1-2020/lessons/14%{all}')
@@ -502,6 +524,21 @@ Dashboard::Application.routes.draw do
     get '/s/csp7-2020/lockable/1(*all)', to: redirect(path: '/s/csp7-2020/lessons/11%{all}')
     get '/s/csp9-2020/lockable/1(*all)', to: redirect(path: '/s/csp9-2020/lessons/9%{all}')
     get '/s/csp10-2020/lockable/1(*all)', to: redirect(path: '/s/csp10-2020/lessons/14%{all}')
+
+    # Hardcoded redirects for old courses that used unit family names
+    get '/s/csd:unit', to: redirect('/courses/csd-2019/units/%{unit}'), constraints: {unit: /[1-6]/}
+    get '/s/csd:unit/(*all)', to: redirect('/courses/csd-2019/units/%{unit}/%{all}'), constraints: {unit: /[1-6]/}
+
+    get '/s/csp:unit', to: redirect('/courses/csp-2019/units/%{unit}'), constraints: {unit: /[1-4]/}
+    get '/s/csp:unit/(*all)', to: redirect('/courses/csp-2019/units/%{unit}/%{all}'), constraints: {unit: /[1-4]/}
+    get '/s/csp-explore', to: redirect('/courses/csp-2019/units/5')
+    get '/s/csp-explore/(*all)', to: redirect('/courses/csp-2019/units/5/%{all}')
+    get '/s/csp5', to: redirect('/courses/csp-2019/units/6')
+    get '/s/csp5/(*all)', to: redirect('/courses/csp-2019/units/6/%{all}')
+    get '/s/csp-create', to: redirect('/courses/csp-2019/units/7')
+    get '/s/csp-create/(*all)', to: redirect('/courses/csp-2019/units/7/%{all}')
+    get '/s/csppostap', to: redirect('/courses/csp-2019/units/8')
+    get '/s/csppostap/(*all)', to: redirect('/courses/csp-2019/units/8/%{all}')
 
     resources :data_docs, param: :key do
       collection do
@@ -608,6 +645,9 @@ Dashboard::Application.routes.draw do
 
     get '/join(/:section_code)', to: 'followers#student_user_new', as: 'student_user_new'
     post '/join(/:section_code)', to: 'followers#student_register', as: 'student_register'
+
+    get '/logged_out', to: 'gates#logged_out'
+    get '/teacher_account_required', to: 'gates#teacher_account_required'
 
     post '/milestone/:user_id/level/:level_id', to: 'activities#milestone', as: 'milestone_level'
     post '/milestone/:user_id/:script_level_id', to: 'activities#milestone', as: 'milestone'
@@ -744,6 +784,7 @@ Dashboard::Application.routes.draw do
         get    'channels/:channel_id/abuse', action: :show_abuse
         delete 'channels/:channel_id/abuse', action: :reset_abuse
         post   'channels/:channel_id/abuse/delete', action: :reset_abuse
+        post   'channels/:channel_id/abuse/image', action: :update_abuse_image_moderation
         patch  '(:endpoint)/:encrypted_channel_id', action: :update_file_abuse,
                constraints: {endpoint: /(animations|assets|sources|files|libraries)/}
       end
@@ -809,6 +850,7 @@ Dashboard::Application.routes.draw do
           get :workshop_organizer_survey_report, action: :workshop_organizer_survey_report, controller: 'workshop_organizer_survey_report'
 
           get 'foorm/generic_survey_report', action: :generic_survey_report, controller: 'workshop_survey_foorm_report'
+          get 'foorm/workshop_survey_summary', action: :workshop_survey_summary, controller: 'workshop_survey_foorm_report'
           get 'foorm/csv_survey_report', action: :csv_survey_report, controller: 'workshop_survey_foorm_report'
           get 'foorm/forms_for_workshop', action: :forms_for_workshop, controller: 'workshop_survey_foorm_report'
         end
@@ -820,11 +862,7 @@ Dashboard::Application.routes.draw do
         delete 'enrollments/:enrollment_code', action: 'cancel', controller: 'workshop_enrollments'
         post 'enrollment/:enrollment_id/scholarship_info', action: 'update_scholarship_info', controller: 'workshop_enrollments'
         post 'enrollments/move', action: 'move', controller: 'workshop_enrollments'
-        post 'enrollment/:id/edit', action: 'edit', controller: 'workshop_enrollments'
         get 'legacy_survey_summaries', action: :legacy_survey_summaries, controller: 'legacy_survey_summaries'
-
-        # persistent namespace for FiT Weekend registrations, can be updated/replaced each year
-        post 'fit_weekend_registrations', to: 'fit_weekend_registrations#create'
 
         post :pre_workshop_surveys, to: 'pre_workshop_surveys#create'
         post :teachercon_surveys, to: 'teachercon_surveys#create'
@@ -835,18 +873,6 @@ Dashboard::Application.routes.draw do
         get 'regional_partners/find', to: 'regional_partners#find'
 
         post 'foorm/workshop_survey_submission', action: :create, controller: 'workshop_survey_foorm_submissions'
-
-        namespace :application do
-          post :facilitator, to: 'facilitator_applications#create'
-
-          resources :teacher, controller: 'teacher_applications', only: [:create, :update] do
-            member do
-              post :send_principal_approval
-              post :change_principal_approval_requirement
-            end
-          end
-          post :principal_approval, to: 'principal_approval_applications#create'
-        end
 
         resources :applications, controller: 'applications', only: [:index, :show, :update, :destroy] do
           collection do
@@ -874,7 +900,6 @@ Dashboard::Application.routes.draw do
 
     get '/dashboardapi/v1/regional_partners/find', to: 'api/v1/regional_partners#find'
     get '/dashboardapi/v1/regional_partners/show/:partner_id', to: 'api/v1/regional_partners#show'
-    get '/dashboardapi/v1/pd/application/applications_closed', to: 'pd/professional_learning#applications_closed'
     get '/dashboardapi/v1/pd/workshops_as_facilitator_for_pl_page', to: 'pd/professional_learning#workshops_as_facilitator_for_pl_page'
     get '/dashboardapi/v1/pd/workshops_as_organizer_for_pl_page', to: 'pd/professional_learning#workshops_as_organizer_for_pl_page'
     get '/dashboardapi/v1/pd/workshops_as_program_manager_for_pl_page', to: 'pd/professional_learning#workshops_as_program_manager_for_pl_page'
@@ -884,7 +909,9 @@ Dashboard::Application.routes.draw do
     post '/dashboardapi/v1/foorm/simple_survey_submission', action: :create, controller: 'api/v1/foorm_simple_survey_submissions'
 
     get 'my-professional-learning', to: 'pd/professional_learning#index', as: 'professional_learning'
+    get 'professional-learning/courses', to: 'pd/professional_learning#courses'
     get 'professional-learning/workshops', to: 'pd/professional_learning#workshops'
+    get 'professional-learning/workshops/:workshop_id', to: 'pd/professional_learning#workshop_marketing_page'
     get 'professional-learning/contact-regional-partner', to: 'pd/professional_learning#contact_regional_partner'
     get 'professional-learning/facilitator/computer-science-a', to: 'pd/professional_learning#csa'
     get 'professional-learning/facilitator/computer-science-discoveries', to: 'pd/professional_learning#csd'
@@ -892,7 +919,6 @@ Dashboard::Application.routes.draw do
     get 'professional-learning/facilitator/computer-science-principles', to: 'pd/professional_learning#csp'
     get 'professional-learning/facilitator/ai-fundamentals', to: 'pd/professional_learning#aif'
     get 'professional-learning/regional-partner/playbook', to: 'pd/professional_learning#rp_playbook'
-    get 'professional-learning/application/applications_closed', to: 'pd/professional_learning#applications_closed'
     get 'professional-learning/workshops_as_facilitator_for_pl_page', to: 'pd/professional_learning#workshops_as_facilitator_for_pl_page'
     get 'professional-learning/workshops_as_organizer_for_pl_page', to: 'pd/professional_learning#workshops_as_organizer_for_pl_page'
     get 'professional-learning/workshops_as_program_manager_for_pl_page', to: 'pd/professional_learning#workshops_as_program_manager_for_pl_page'
@@ -902,8 +928,6 @@ Dashboard::Application.routes.draw do
       # React-router will handle sub-routes on the client.
       get 'workshop_dashboard/*path', to: 'workshop_dashboard#index'
       get 'workshop_dashboard', to: 'workshop_dashboard#index'
-
-      get 'workshops/:workshop_id', to: 'workshops#index'
 
       get 'misc_survey/thanks', to: 'misc_survey#thanks'
       get 'misc_survey/:form_tag', to: 'misc_survey#new'
@@ -936,18 +960,8 @@ Dashboard::Application.routes.draw do
       get '/:workshop_subject/post/(*agenda)', to: 'workshop_daily_survey#new_ayw_post',
           constraints: {agenda: /(module\/[0-9_]+)|(in_person)/}
 
-      namespace :application do
-        get 'facilitator', to: 'facilitator_application#new'
-        get 'teacher', to: 'teacher_application#new'
-        get 'principal_approval/:application_guid', to: 'principal_approval_application#new', as: 'principal_approval'
-      end
-
-      # persistent namespace for Teachercon and FiT Weekend registrations, can be updated/replaced each year
-      get 'fit_weekend_registration/:application_guid', to: 'fit_weekend_registration#new'
-
-      delete 'fit_weekend_registration/:application_guid', to: 'fit_weekend_registration#destroy'
-
-      get 'workshops/:workshop_id/enroll', action: 'new', controller: 'workshop_enrollment'
+      get 'workshops/:workshop_id/enroll', to: redirect("/professional-learning/workshops/%{workshop_id}")
+      get 'workshops/:workshop_id/join', action: 'join', controller: 'workshop_enrollment'
       get 'workshop_enrollment/:code', action: 'show', controller: 'workshop_enrollment'
       get 'workshop_enrollment/:code/cancel', action: 'cancel', controller: 'workshop_enrollment'
 
@@ -974,10 +988,6 @@ Dashboard::Application.routes.draw do
 
       get 'international_workshop', to: 'international_opt_in#new'
       get 'international_workshop/:contact_id/thanks', to: 'international_opt_in#thanks'
-
-      # React-router will handle sub-routes on the client.
-      get 'application_dashboard/*path', to: 'application_dashboard#index'
-      get 'application_dashboard', to: 'application_dashboard#index'
     end
 
     get '/dashboardapi/section/:section_id', to: 'api#section'
@@ -1006,7 +1016,6 @@ Dashboard::Application.routes.draw do
         get action, action: action
       end
     end
-    get '/dashboardapi/v1/pd/k5workshops', to: 'api/v1/pd/workshops#k5_public_map_index'
     get '/api/v1/pd/workshops_user_enrolled_in', to: 'api/v1/pd/workshops#workshops_user_enrolled_in'
 
     post '/api/lock_status', to: 'api#update_lockable_state'
@@ -1055,6 +1064,7 @@ Dashboard::Application.routes.draw do
         post 'users/show_progress_table_v2', to: 'users#post_show_progress_table_v2'
         post 'users/date_progress_table_invitation_last_delayed', to: 'users#post_date_progress_table_invitation_last_delayed'
         post 'users/has_seen_progress_table_v2_invitation', to: 'users#post_has_seen_progress_table_v2_invitation'
+        post 'users/has_seen_homepage_welcome', to: 'users#post_has_seen_homepage_welcome'
         post 'users/ai_rubrics_disabled', to: 'users#post_ai_rubrics_disabled'
         post 'users/ai_differentiation_enabled', to: 'users#post_ai_differentiation_enabled'
         post 'users/has_seen_ai_assessments_announcement', to: 'users#post_has_seen_ai_assessments_announcement'
@@ -1244,7 +1254,7 @@ Dashboard::Application.routes.draw do
 
     resources :code_review_comments, only: [:create, :update, :destroy]
 
-    resources :rubrics, only: [:create, :edit, :new, :update] do
+    resources :rubrics, only: [:create, :edit, :new, :update, :show] do
       member do
         get 'get_ai_evaluations'
         get 'get_teacher_evaluations'
@@ -1283,8 +1293,8 @@ Dashboard::Application.routes.draw do
 
     get '/get_token', to: 'authenticity_token#get_token'
 
-    post '/openai/chat_completion', to: 'openai_chat#chat_completion'
     post '/openai/evaluate', to: 'openai_evaluate#evaluate'
+    post '/openai/evaluate_section', to: 'openai_evaluate#evaluate_section'
 
     post '/aichat_request/start_chat_completion', to: 'aichat_requests#start_chat_completion'
     get '/aichat_request/chat_request/:id', to: 'aichat_requests#chat_request'
@@ -1296,15 +1306,22 @@ Dashboard::Application.routes.draw do
     get '/aichat/user_has_access', to: 'aichat#user_has_access'
     post '/aichat/find_toxicity', to: 'aichat#find_toxicity'
 
-    post 'ai_diff/chat_completion', to: 'ai_diff#chat_completion'
-    post 'ai_diff/curriculum_courses', to: 'ai_diff#curriculum_courses'
-    post 'aidiff_messages/:aidiff_message_id/submit_feedback', to: 'aidiff_messages#submit_feedback'
+    resources :ai_interaction_feedback, only: [:create]
 
-    resources :ai_tutor_interactions, only: [:create, :index] do
-      resources :feedbacks, controller: 'ai_tutor_interaction_feedbacks', only: [:create]
+    resources :aidiff_threads, only: [:create, :index, :show] do
+      collection do
+        post :curriculum_courses
+      end
+      member do
+        post :chat_completion
+      end
     end
 
-    resources :ai_interaction_feedback, only: [:create]
+    resources :aidiff_messages, only: [] do
+      member do
+        post :submit_feedback
+      end
+    end
 
     # Policy Compliance
     namespace :policy_compliance do
@@ -1350,7 +1367,6 @@ Dashboard::Application.routes.draw do
 
         # Datablock Storage: Library Manifest API (=shared table metadata)
         get :get_library_manifest
-        put :set_library_manifest
 
         # Datablock Storage: Project API
         get :project_has_data

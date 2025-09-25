@@ -1,6 +1,7 @@
 @skip
 @eyes
 @single_session
+@pegasus_content
 Feature: Looking at tutorial landing pages on Pegasus part Three
 
 Scenario Outline: Simple page view

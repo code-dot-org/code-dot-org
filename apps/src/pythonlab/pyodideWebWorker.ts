@@ -28,9 +28,21 @@ async function loadPyodideAndPackages() {
     env: {
       HOME: `/${HOME_FOLDER}/`,
     },
+    // Remove all JS globals so Python can’t call browser APIs (like fetch) unless we
+    // explicitly add them.
+    jsglobals: {},
   });
   pyodide.setStdout(getStreamHandlerOptions('sysout'));
   pyodide.setStderr(getStreamHandlerOptions('syserr'));
+  // Freeze the module object and its properties
+  Object.freeze(pythonlabInputModule);
+  Object.defineProperty(pythonlabInputModule.getInput, 'constructor', {
+    writable: false,
+    configurable: false,
+    enumerable: false,
+  });
+  Object.freeze(pythonlabInputModule.getInput);
+
   pyodide.registerJsModule('pythonlab_input', pythonlabInputModule);
 
   // Pre-load our custom packages (unittest_runner and pythonlab_setup), as well as

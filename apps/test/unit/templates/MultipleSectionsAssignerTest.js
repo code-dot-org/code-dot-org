@@ -14,8 +14,8 @@ import {
 import {expect} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('MultipleSectionsAssigner', () => {
-  const assigedStandaloneUnitSection = fakeTeacherSectionsForDropdown[3];
-  const assigedCourseButNOTUnitSection = fakeTeacherSectionsForDropdown[4];
+  const assignedSingleUnitCourseSection = fakeTeacherSectionsForDropdown[3];
+  const assignedCourseButNOTUnitSection = fakeTeacherSectionsForDropdown[4];
   const assignedCourseANDUnitSection = fakeTeacherSectionsForDropdown[5];
   const unassignedSection = fakeTeacherSectionsForDropdown[2];
   const assignedSection = fakeTeacherSectionsForDropdown[1];
@@ -39,7 +39,7 @@ describe('MultipleSectionsAssigner', () => {
     const wrapper = setUp({
       isAssigningCourseOnly: false,
       courseId: assignedCourseANDUnitSection.courseId,
-      isAssigningUnitOnly: false,
+      isSingleUnitCourse: false,
       scriptId: assignedCourseANDUnitSection.unitId,
     });
 
@@ -56,7 +56,7 @@ describe('MultipleSectionsAssigner', () => {
     expect(
       wrapper
         .find('Checkbox')
-        .filterWhere(n => n.props().name === assigedCourseButNOTUnitSection.id)
+        .filterWhere(n => n.props().name === assignedCourseButNOTUnitSection.id)
         .first()
         .props().checked
     ).to.be.false;
@@ -66,7 +66,7 @@ describe('MultipleSectionsAssigner', () => {
     const wrapper = setUp({
       isAssigningCourseOnly: true,
       courseId: assignedCourseANDUnitSection.courseId,
-      isAssigningUnitOnly: false,
+      isSingleUnitCourse: false,
       scriptId: assignedCourseANDUnitSection.unitId,
     });
 
@@ -83,7 +83,7 @@ describe('MultipleSectionsAssigner', () => {
     expect(
       wrapper
         .find('Checkbox')
-        .filterWhere(n => n.props().name === assigedCourseButNOTUnitSection.id)
+        .filterWhere(n => n.props().name === assignedCourseButNOTUnitSection.id)
         .first()
         .props().checked
     ).to.be.true;
@@ -107,39 +107,11 @@ describe('MultipleSectionsAssigner', () => {
     ).to.be.false;
   });
 
-  it('renders checked and unchecked checkboxes for sections on a STAND ALONE landing page', () => {
-    const wrapper = setUp({
-      isAssigningCourseOnly: false,
-      courseId: assigedStandaloneUnitSection.courseId,
-      isAssigningUnitOnly: true,
-      scriptId: assigedStandaloneUnitSection.unitId,
-      courseVersionId: assigedStandaloneUnitSection.courseVersionId,
-    });
-
-    // Checks that an assigned section is checked
-    expect(
-      wrapper
-        .find('Checkbox')
-        .filterWhere(n => n.props().name === assigedStandaloneUnitSection.id)
-        .first()
-        .props().checked
-    ).to.be.true;
-
-    // Checks that a section assiged the course but not the unit is NOT checked
-    expect(
-      wrapper
-        .find('Checkbox')
-        .filterWhere(n => n.props().name === assignedSection.id)
-        .first()
-        .props().checked
-    ).to.be.false;
-  });
-
   it('renders all student sections for a student course', () => {
     const wrapper = setUp({
       isAssigningCourseOnly: true,
       courseId: assignedCourseANDUnitSection.courseId,
-      isAssigningUnitOnly: false,
+      isSingleUnitCourse: false,
       scriptId: assignedCourseANDUnitSection.unitId,
       courseOfferingId: assignedCourseANDUnitSection.courseOfferingId,
       courseVersionId: assignedCourseANDUnitSection.courseVersionId,
@@ -172,7 +144,7 @@ describe('MultipleSectionsAssigner', () => {
     const wrapper = setUp({
       isAssigningCourseOnly: true,
       courseId: assignedCourseANDUnitSection.courseId,
-      isAssigningUnitOnly: false,
+      isSingleUnitCourse: false,
       scriptId: assignedCourseANDUnitSection.unitId,
       courseOfferingId: assignedCourseANDUnitSection.courseOfferingId,
       courseVersionId: assignedCourseANDUnitSection.courseVersionId,
@@ -209,7 +181,7 @@ describe('MultipleSectionsAssigner', () => {
     const wrapper = setUp({
       isAssigningCourseOnly: false,
       courseId: assignedCourseANDUnitSection.courseId,
-      isAssigningUnitOnly: false,
+      isSingleUnitCourse: false,
       scriptId: assignedCourseANDUnitSection.unitId,
       assignToSection,
       reassignConfirm,
@@ -243,21 +215,21 @@ describe('MultipleSectionsAssigner', () => {
     );
   });
 
-  it('assigns a unit on the unit landing page of STANDALONE course when checkbox is checked', () => {
+  it('assigns a unit on the unit landing page of SINGLE-UNIT course when checkbox is checked', () => {
     let assignToSection = sinon.fake();
     let reassignConfirm = sinon.fake();
     let updateHiddenScript = sinon.fake();
 
     const wrapper = setUp({
       isAssigningCourseOnly: false,
-      courseId: assigedStandaloneUnitSection.courseId,
-      isAssigningUnitOnly: true,
-      scriptId: assigedStandaloneUnitSection.unitId,
+      courseId: assignedSingleUnitCourseSection.courseId,
+      isSingleUnitCourse: true,
+      scriptId: assignedSingleUnitCourseSection.unitId,
       assignToSection,
       reassignConfirm,
       updateHiddenScript,
-      courseOfferingId: assigedStandaloneUnitSection.courseOfferingId,
-      courseVersionId: assigedStandaloneUnitSection.courseVersionId,
+      courseOfferingId: assignedSingleUnitCourseSection.courseOfferingId,
+      courseVersionId: assignedSingleUnitCourseSection.courseVersionId,
     });
 
     wrapper
@@ -280,38 +252,38 @@ describe('MultipleSectionsAssigner', () => {
     expect(assignToSection).to.have.been.calledOnce;
     expect(assignToSection).to.have.been.calledWith(
       unassignedSection.id,
-      assigedStandaloneUnitSection.courseId,
-      assigedStandaloneUnitSection.courseOfferingId,
-      assigedStandaloneUnitSection.courseVersionId,
-      assigedStandaloneUnitSection.unitId
+      assignedSingleUnitCourseSection.courseId,
+      assignedSingleUnitCourseSection.courseOfferingId,
+      assignedSingleUnitCourseSection.courseVersionId,
+      assignedSingleUnitCourseSection.unitId
     );
   });
 
-  it('unassigns a unit on the unit landing page of STANDALONE course when checkbox is unchecked', () => {
+  it('unassigns a unit on the unit landing page of SINGLE-UNIT course when checkbox is unchecked', () => {
     let unassignSection = sinon.fake();
     let reassignConfirm = sinon.fake();
 
     const wrapper = setUp({
       isAssigningCourseOnly: false,
-      courseId: assigedStandaloneUnitSection.courseId,
-      isAssigningUnitOnly: true,
-      scriptId: assigedStandaloneUnitSection.unitId,
+      courseId: assignedSingleUnitCourseSection.courseId,
+      isSingleUnitCourse: true,
+      scriptId: assignedSingleUnitCourseSection.unitId,
       unassignSection,
       reassignConfirm,
-      courseOfferingId: assigedStandaloneUnitSection.courseOfferingId,
-      courseVersionId: assigedStandaloneUnitSection.courseVersionId,
+      courseOfferingId: assignedSingleUnitCourseSection.courseOfferingId,
+      courseVersionId: assignedSingleUnitCourseSection.courseVersionId,
     });
 
     wrapper
       .find('Checkbox')
-      .filterWhere(n => n.props().name === assigedStandaloneUnitSection.id)
+      .filterWhere(n => n.props().name === assignedSingleUnitCourseSection.id)
       .first()
       .simulate('change');
 
     expect(
       wrapper
         .find('Checkbox')
-        .filterWhere(n => n.props().name === assigedStandaloneUnitSection.id)
+        .filterWhere(n => n.props().name === assignedSingleUnitCourseSection.id)
         .first()
         .props().checked
     ).to.be.false;
@@ -321,7 +293,7 @@ describe('MultipleSectionsAssigner', () => {
     expect(unassignSection).to.have.been.calledOnce;
     expect(reassignConfirm).to.have.been.calledOnce;
     expect(unassignSection).to.have.been.calledWith(
-      assigedStandaloneUnitSection.id
+      assignedSingleUnitCourseSection.id
     );
   });
 
@@ -333,7 +305,7 @@ describe('MultipleSectionsAssigner', () => {
     const wrapper = setUp({
       isAssigningCourseOnly: false,
       courseId: assignedCourseANDUnitSection.courseId,
-      isAssigningUnitOnly: false,
+      isSingleUnitCourse: false,
       scriptId: assignedCourseANDUnitSection.unitId,
       reassignConfirm,
       assignToSection,
@@ -377,7 +349,7 @@ describe('MultipleSectionsAssigner', () => {
     const wrapper = setUp({
       isAssigningCourseOnly: true,
       courseId: assignedCourseANDUnitSection.courseId,
-      isAssigningUnitOnly: false,
+      isSingleUnitCourse: false,
       scriptId: assignedCourseANDUnitSection.unitId,
       unassignSection,
       reassignConfirm,
@@ -416,7 +388,7 @@ describe('MultipleSectionsAssigner', () => {
     const wrapper = setUp({
       isAssigningCourseOnly: true,
       courseId: assignedCourseANDUnitSection.courseId,
-      isAssigningUnitOnly: false,
+      isSingleUnitCourse: false,
       scriptId: assignedCourseANDUnitSection.unitId,
       assignToSection,
       reassignConfirm,
@@ -455,7 +427,7 @@ describe('MultipleSectionsAssigner', () => {
     const wrapper = setUp({
       isAssigningCourseOnly: false,
       courseId: assignedCourseANDUnitSection.courseId,
-      isAssigningUnitOnly: false,
+      isSingleUnitCourse: false,
       scriptId: assignedCourseANDUnitSection.unitId,
     });
 

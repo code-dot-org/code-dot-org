@@ -1,0 +1,17 @@
+name 'pl-game-python-badges-7'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Milestone Badges
+
+## Navigators, your journey through the neighborhood begins now! 
+
+#### As you explore the streets of The Neighborhood, you’ll earn meaningful milestone badges each representing a key discovery in your quest to master coding and teaching. 
+
+#### These achievements mark your progress and prove your readiness to guide students on their own Python journeys.
+
+<img src="https://images.code.org/595c678abdb229150106070a65b43b33-image-1749155584357.png" alt="spiral notebook with blank spaces for 4 badges" width="450px" style="display: block; margin-left: auto; margin-right: auto;">
+
+
+MARKDOWN

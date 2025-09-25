@@ -6,7 +6,13 @@ import cdoReactConfig from '@code-dot-org/lint-config/eslint/react.mjs';
 /** @type {import('eslint').Linter.Config[]} */
 export default [
   {
-    ignores: ['.next/*', 'playwright-report', 'test-results', 'public/**'],
+    ignores: [
+      '.next/*',
+      'playwright-report',
+      'test-results',
+      'public/**',
+      'next-env.d.ts',
+    ],
   },
   {
     // TODO: Remove this once the following Github Issue is resolved:
@@ -18,6 +24,22 @@ export default [
         ...nextPlugin.configs.recommended.rules,
         ...nextPlugin.configs['core-web-vitals'].rules,
       },
+    },
+  },
+  {
+    rules: {
+      'no-restricted-imports': [
+        'error',
+        {
+          patterns: [
+            {
+              group: ['**/*.png', '**/*.jpg', '**/*.jpeg'],
+              message:
+                'Use modern web formats: Please convert to lossless webp',
+            },
+          ],
+        },
+      ],
     },
   },
   ...cdoReactConfig,

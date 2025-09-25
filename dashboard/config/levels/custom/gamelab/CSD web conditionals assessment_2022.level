@@ -1,5 +1,9 @@
 <Gamelab>
   <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2022-03-30T23:40:12.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "properties": {
     "skin": "gamelab",
     "edit_code": true,
@@ -113,13 +117,9 @@
     "rubric_performance_level_4": "There are no conditionals in the draw loop.",
     "libraries_enabled": "false",
     "start_blocks": "var backdrop = createSprite(200,200);\r\nbackdrop.setAnimation(\"sci_fi\");\r\nvar dinosaur = createSprite(200, 350);\r\ndinosaur.scale = 0.2;\r\ndinosaur.setAnimation(\"tyrannosaurus\");\r\n\r\nfunction draw() {\r\n  //move the dinosaur up\r\n  dinosaur.y = dinosaur.y - 5;\r\n\r\n  //if it gets to the sky, turn it into a pterodactyl\r\n\r\n  //draw everything\r\n  drawSprites();\r\n}\r\n",
-    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"4dcde3f9-46e1-4bbe-bd1c-4fe1c4ba94b5\",\r\n    \"e301c398-4f5f-4a18-b876-70fd6f3f17e4\",\r\n    \"f76bda92-9458-4f06-b5f3-19b60de3a367\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"4dcde3f9-46e1-4bbe-bd1c-4fe1c4ba94b5\": {\r\n      \"name\": \"tyrannosaurus\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/gamelab/AdAtNcT4HtjRs6_JBE8hjyvhfkvJ69o0/category_animals/tyrannosaurus.png\",\r\n      \"frameSize\": {\r\n        \"x\": 345,\r\n        \"y\": 364\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"AdAtNcT4HtjRs6_JBE8hjyvhfkvJ69o0\"\r\n    },\r\n    \"e301c398-4f5f-4a18-b876-70fd6f3f17e4\": {\r\n      \"name\": \"pterodactyl\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/gamelab/T82VGzsfgoMACn2kSWURSeh98Vjj_sHH/category_animals/pterodactyl.png\",\r\n      \"frameSize\": {\r\n        \"x\": 300,\r\n        \"y\": 229\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"T82VGzsfgoMACn2kSWURSeh98Vjj_sHH\"\r\n    },\r\n    \"f76bda92-9458-4f06-b5f3-19b60de3a367\": {\r\n      \"name\": \"sci_fi\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/gamelab/6R1r6_thyaqHGORcm3JlEVMzjsWX0mFI/category_backgrounds/background_scifi.png\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"6R1r6_thyaqHGORcm3JlEVMzjsWX0mFI\"\r\n    }\r\n  }\r\n}",
+    "start_animations": "{\n  \"orderedKeys\": [\n    \"4dcde3f9-46e1-4bbe-bd1c-4fe1c4ba94b5\",\n    \"e301c398-4f5f-4a18-b876-70fd6f3f17e4\",\n    \"f76bda92-9458-4f06-b5f3-19b60de3a367\"\n  ],\n  \"propsByKey\": {\n    \"4dcde3f9-46e1-4bbe-bd1c-4fe1c4ba94b5\": {\n      \"name\": \"tyrannosaurus\",\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/AdAtNcT4HtjRs6_JBE8hjyvhfkvJ69o0/category_animals/tyrannosaurus.png\",\n      \"frameSize\": {\n        \"x\": 345,\n        \"y\": 364\n      },\n      \"frameCount\": 1,\n      \"looping\": true,\n      \"frameDelay\": 2,\n      \"version\": \"AdAtNcT4HtjRs6_JBE8hjyvhfkvJ69o0\"\n    },\n    \"e301c398-4f5f-4a18-b876-70fd6f3f17e4\": {\n      \"name\": \"pterodactyl\",\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/T82VGzsfgoMACn2kSWURSeh98Vjj_sHH/category_animals/pterodactyl.png\",\n      \"frameSize\": {\n        \"x\": 300,\n        \"y\": 229\n      },\n      \"frameCount\": 1,\n      \"looping\": true,\n      \"frameDelay\": 2,\n      \"version\": \"T82VGzsfgoMACn2kSWURSeh98Vjj_sHH\"\n    },\n    \"f76bda92-9458-4f06-b5f3-19b60de3a367\": {\n      \"name\": \"sci_fi\",\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/6R1r6_thyaqHGORcm3JlEVMzjsWX0mFI/category_backgrounds/background_scifi.png\",\n      \"frameSize\": {\n        \"x\": 400,\n        \"y\": 400\n      },\n      \"frameCount\": 1,\n      \"looping\": true,\n      \"frameDelay\": 2,\n      \"version\": \"6R1r6_thyaqHGORcm3JlEVMzjsWX0mFI\"\n    }\n  }\n}",
     "preload_asset_list": null
   },
-  "level_num": "custom",
-  "game_id": 50,
-  "created_at": "2022-03-30T23:40:12.000Z",
-  "user_id": 1,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-30T23:40:12.019+00:00\",\"changed\":[\"cloned from \\\"CSD web conditionals assessment_2021\\\"\"],\"cloned_from\":\"CSD web conditionals assessment_2021\"}]"

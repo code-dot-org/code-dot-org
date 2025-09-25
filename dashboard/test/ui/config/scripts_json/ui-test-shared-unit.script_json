@@ -8,7 +8,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-08 22:52:04 UTC",
+    "serialized_at": "2025-05-29 14:49:45 UTC",
+    "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -19,59 +20,94 @@
   },
   "lesson_groups": [
     {
-      "key": "lg_1",
-      "user_facing": true,
+      "key": "",
+      "user_facing": false,
       "position": 1,
       "properties": {
-        "display_name": "Content"
       },
       "seeding_key": {
-        "lesson_group.key": "lg_1",
+        "lesson_group.key": "",
         "script.name": "ui-test-shared-unit"
       }
     }
   ],
   "lessons": [
     {
-      "key": "Lesson",
-      "name": "Lesson",
+      "key": "lesson-1",
+      "name": "Lesson 1",
       "absolute_position": 1,
       "lockable": false,
-      "has_lesson_plan": false,
+      "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
       },
       "seeding_key": {
-        "lesson.key": "Lesson",
-        "lesson_group.key": "lg_1",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "ui-test-shared-unit"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Lesson 2",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
         "script.name": "ui-test-shared-unit"
       }
     }
   ],
   "lesson_activities": [
     {
-      "key": "452fd021-800d-4072-97c6-81446c4adaa6",
+      "key": "02a3c450-06fa-4369-b0eb-83b2039a49e0",
       "position": 1,
       "properties": {
-        "name": "Levels"
       },
       "seeding_key": {
-        "lesson_activity.key": "452fd021-800d-4072-97c6-81446c4adaa6",
-        "lesson.key": "Lesson",
-        "lesson_group.key": "lg_1",
+        "lesson_activity.key": "02a3c450-06fa-4369-b0eb-83b2039a49e0",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "ui-test-shared-unit"
+      }
+    },
+    {
+      "key": "ab836ef8-ac21-4dc7-8480-400f5ba9d4ee",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ab836ef8-ac21-4dc7-8480-400f5ba9d4ee",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
         "script.name": "ui-test-shared-unit"
       }
     }
   ],
   "activity_sections": [
     {
-      "key": "1b9c2aae-7014-467b-beb2-901d8ee78346",
+      "key": "d91a3a7c-2208-4e4c-8d56-eae5e0d1858c",
       "position": 1,
       "properties": {
       },
       "seeding_key": {
-        "activity_section.key": "1b9c2aae-7014-467b-beb2-901d8ee78346",
-        "lesson_activity.key": "452fd021-800d-4072-97c6-81446c4adaa6"
+        "activity_section.key": "d91a3a7c-2208-4e4c-8d56-eae5e0d1858c",
+        "lesson_activity.key": "02a3c450-06fa-4369-b0eb-83b2039a49e0"
+      }
+    },
+    {
+      "key": "a71da6c8-35ea-4498-a75e-1663498a9c56",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "a71da6c8-35ea-4498-a75e-1663498a9c56",
+        "lesson_activity.key": "ab836ef8-ac21-4dc7-8480-400f5ba9d4ee"
       }
     }
   ],
@@ -86,29 +122,62 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "U1L1 Student Lesson Introduction"
+          "Sample Free Response"
         ],
-        "lesson.key": "Lesson",
-        "lesson_group.key": "lg_1",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
         "script.name": "ui-test-shared-unit",
-        "activity_section.key": "1b9c2aae-7014-467b-beb2-901d8ee78346"
+        "activity_section.key": "d91a3a7c-2208-4e4c-8d56-eae5e0d1858c"
       },
       "level_keys": [
-        "U1L1 Student Lesson Introduction"
+        "Sample Free Response"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Test longassessment levelgroup new"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "ui-test-shared-unit",
+        "activity_section.key": "a71da6c8-35ea-4498-a75e-1663498a9c56"
+      },
+      "level_keys": [
+        "Test longassessment levelgroup new"
       ]
     }
   ],
   "levels_script_levels": [
     {
       "seeding_key": {
-        "level.key": "U1L1 Student Lesson Introduction",
+        "level.key": "Sample Free Response",
         "script_level.level_keys": [
-          "U1L1 Student Lesson Introduction"
+          "Sample Free Response"
         ],
-        "lesson.key": "Lesson",
-        "lesson_group.key": "lg_1",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
         "script.name": "ui-test-shared-unit",
-        "activity_section.key": "1b9c2aae-7014-467b-beb2-901d8ee78346"
+        "activity_section.key": "d91a3a7c-2208-4e4c-8d56-eae5e0d1858c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Test longassessment levelgroup new",
+        "script_level.level_keys": [
+          "Test longassessment levelgroup new"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "ui-test-shared-unit",
+        "activity_section.key": "a71da6c8-35ea-4498-a75e-1663498a9c56"
       }
     }
   ],
@@ -140,6 +209,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

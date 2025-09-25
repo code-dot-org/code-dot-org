@@ -3,7 +3,6 @@ import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import ChatEventLogger from '../../chatEventLogger';
 import {
-  AichatContext,
   ChatEvent,
   isModelUpdate,
   isNotification,
@@ -47,12 +46,5 @@ export const addChatEvent =
       };
     }
 
-    const state = getState() as RootState;
-    const aichatContext: AichatContext = {
-      currentLevelId: parseInt(state.progress.currentLevelId || ''),
-      scriptId: state.progress.scriptId,
-      channelId: state.lab.channel?.id,
-    };
-
-    ChatEventLogger.getInstance().logChatEvent(chatEvent, aichatContext);
+    ChatEventLogger.getInstance().logChatEvent(chatEvent);
   };

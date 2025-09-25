@@ -29,6 +29,10 @@ import {
 import {hiddenPlSectionIds} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import i18n from '@cdo/locale';
+import teacherImg from '@cdo/static/misc/teacher-540x300.png';
+import plAdminsPageImg from '@cdo/static/professional-learning/admins-page-pl-448x280.png';
+import plPageEducatorSupportImg from '@cdo/static/professional-learning/pl-page-educator-support.png';
+import plSuperheroGirlCropImg from '@cdo/static/professional-learning/pl-superhero-girl-crop-540x300.png';
 
 import {
   COURSE_CSF,
@@ -102,7 +106,6 @@ function LandingPage({
   lastWorkshopSurveyUrl,
   lastWorkshopSurveyCourse,
   showDeeperLearning,
-  currentYearApplicationId,
   hasEnrolledInWorkshop,
   plCoursesStarted,
   userPermissions,
@@ -306,13 +309,17 @@ function LandingPage({
 
     analyticsReporter.sendEvent(EVENTS.WORKSHOP_ENROLLMENT_COMPLETED_EVENT, {
       'regional partner': sessionStorage.getItem('rpName', null),
+      'workshop id': sessionStorage.getItem('workshopId', null),
       'workshop course': workshopCourse,
       'workshop subject': sessionStorage.getItem('workshopSubject', null),
+      'workshop format': sessionStorage.getItem('workshopFormat', null),
     });
     [
+      'workshopId',
       'workshopCourse',
       'workshopSubject',
       'workshopName',
+      'workshopFormat',
       'sessionTimeInfo',
       'rpName',
     ].forEach(sessionKey => sessionStorage.removeItem(sessionKey));
@@ -324,7 +331,7 @@ function LandingPage({
 
   const RenderLastWorkshopSurveyBanner = () => (
     <TwoColumnActionBlock
-      imageUrl={pegasus('/shared/images/fill-540x300/misc/teacher.png')}
+      imageUrl={teacherImg}
       subHeading={i18n.plLandingSubheading()}
       description={i18n.plLandingDescription({
         course: lastWorkshopSurveyCourse,
@@ -345,16 +352,12 @@ function LandingPage({
   // - else, render either nothing or an announcement banner
   const RenderBanner = () => {
     const showGettingStartedBanner =
-      !currentYearApplicationId &&
-      !hasEnrolledInWorkshop &&
-      plCoursesStarted?.length === 0;
+      !hasEnrolledInWorkshop && plCoursesStarted?.length === 0;
 
     if (showGettingStartedBanner) {
       return (
         <TwoColumnActionBlock
-          imageUrl={pegasus(
-            '/images/fill-540x300/professional-learning/pl-superhero-girl-crop.png'
-          )}
+          imageUrl={plSuperheroGirlCropImg}
           heading={i18n.plLandingGettingStartedHeading()}
           subHeading={i18n.plLandingGettingStartedSubHeading()}
           description={i18n.plLandingGettingStartedDescription()}
@@ -404,13 +407,13 @@ function LandingPage({
     if (!hideMyPLStaticRecommendedPLMidHighBlock) {
       actionBlocks.push({
         overline: i18n.plLandingStaticPLMidHighOverline(),
-        imageUrl: pegasus('/images/pl-page-educator-support.png'),
+        imageUrl: plPageEducatorSupportImg,
         heading: i18n.plLandingStaticPLMidHighHeading(),
         description: i18n.plLandingStaticPLMidHighDesc(),
         buttons: [
           {
             color: 'purple',
-            url: pegasus('/educate/professional-learning/middle-high'),
+            url: '/professional-learning/workshops',
             text: i18n.plLandingStaticPLMidHighButton(),
           },
         ],
@@ -420,7 +423,7 @@ function LandingPage({
     if (!hideMyPLStaticRecommendedPLSelfPacedBlock) {
       actionBlocks.push({
         overline: i18n.plLandingStaticPLSelfPacedOverline(),
-        imageUrl: pegasus('/images/fill-448x280/admins-page-pl.png'),
+        imageUrl: plAdminsPageImg,
         heading: i18n.plLandingStaticPLSelfPacedHeading(),
         description: i18n.plLandingStaticPLSelfPacedDesc(),
         buttons: [
@@ -542,12 +545,6 @@ function LandingPage({
 
   const RenderRegionalPartnerResources = () => {
     const resources = [
-      {
-        headingText: i18n.plSectionsRegionalPartnerApplicationTitle(),
-        descriptionText: i18n.plSectionsRegionalPartnerApplicationDesc(),
-        buttonText: i18n.plSectionsRegionalPartnerApplicationButton(),
-        buttonUrl: '/pd/application_dashboard',
-      },
       {
         headingText: i18n.plSectionsWorkshopTitle(),
         descriptionText: i18n.plSectionsWorkshopDesc(),
@@ -731,13 +728,12 @@ LandingPage.propTypes = {
   lastWorkshopSurveyUrl: PropTypes.string,
   lastWorkshopSurveyCourse: PropTypes.string,
   showDeeperLearning: PropTypes.bool,
-  currentYearApplicationId: PropTypes.number,
   hasEnrolledInWorkshop: PropTypes.bool,
   plCoursesInstructed: PropTypes.array,
   plCoursesStarted: PropTypes.array,
   userPermissions: PropTypes.arrayOf(PropTypes.string),
-  joinedStudentSections: shapes.sections,
-  joinedPlSections: shapes.sections,
+  joinedStudentSections: shapes.participantSections,
+  joinedPlSections: shapes.participantSections,
   coursesAsFacilitator: PropTypes.arrayOf(PropTypes.string),
   plSectionIds: PropTypes.arrayOf(PropTypes.number),
   hiddenPlSectionIds: PropTypes.arrayOf(PropTypes.number),

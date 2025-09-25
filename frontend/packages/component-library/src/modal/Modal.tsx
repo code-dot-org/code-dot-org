@@ -23,7 +23,7 @@ export interface ModalProps extends HTMLAttributes<HTMLDivElement> {
   primaryButtonProps: ButtonProps;
   /** Modal secondary button props */
   secondaryButtonProps?: ButtonProps;
-  /** Modal color mode */
+  /** @deprecated Modal color mode - use theme provider instead. This prop will be removed in a future version. */
   mode?: 'light' | 'dark';
   /** Custom class name */
   className?: string;
@@ -51,13 +51,17 @@ export interface ModalProps extends HTMLAttributes<HTMLDivElement> {
  *
  * Design System: Modal Component.
  * Renders Modal window that user should interact with.
+ *
+ * ## Deprecation Notice
+ * The `mode` prop is deprecated and will be removed in a future version.
+ * Use the theme provider instead for consistent theming across your application.
  */
 const Modal: React.FunctionComponent<ModalProps> = ({
   title,
   description,
   primaryButtonProps,
   secondaryButtonProps,
-  mode = 'light',
+  mode,
   className,
   customContent,
   customBottomContent,
@@ -68,12 +72,20 @@ const Modal: React.FunctionComponent<ModalProps> = ({
   imagePlacement = 'top',
   ...HTMLAttributes
 }) => {
+  // Deprecation warning for mode prop
+  if (mode) {
+    console.warn(
+      `Modal: The 'mode' prop is deprecated and will be removed in a future version. ` +
+        `Use the theme provider instead. Current usage: mode="${mode}"`,
+    );
+  }
+
   return (
     <CustomDialog
       role="dialog"
       className={classnames(
         moduleStyles.modal,
-        moduleStyles[`modal-${mode}`],
+        mode && moduleStyles[`modal-${mode}`],
         className,
       )}
       onClose={onClose}
@@ -107,13 +119,13 @@ const Modal: React.FunctionComponent<ModalProps> = ({
         {secondaryButtonProps && (
           <Button
             type="secondary"
-            color={mode === 'light' ? 'black' : 'white'}
+            color={mode === 'dark' ? 'white' : 'black'}
             {...secondaryButtonProps}
           />
         )}
         <Button
           type="primary"
-          color={mode === 'light' ? 'purple' : 'white'}
+          color={mode === 'dark' ? 'white' : 'purple'}
           {...primaryButtonProps}
         />
       </div>

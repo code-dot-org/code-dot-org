@@ -1,0 +1,10 @@
+name 'test-music-lab-loops-practice-choice_v2'
+display_name 'Practice'
+description 'Choose an option below to try to recreate with code.'
+
+sublevels
+level 'test-music-lab-loops-practice-choice-a_v2'
+level 'music-lab-loops-practice-practice-3_v2'
+level 'music-lab-loops-practice-practice-5_v2'
+level 'music-lab-loops-synthesis-summative_v2'
+uses_lab2

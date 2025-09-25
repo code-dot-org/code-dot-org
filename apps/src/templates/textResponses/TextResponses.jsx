@@ -5,10 +5,7 @@ import {CSVLink} from 'react-csv';
 import {connect} from 'react-redux';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import {
-  setScriptId,
-  getSelectedUnitName,
-} from '@cdo/apps/redux/unitSelectionRedux';
+import {setUnit, getSelectedUnitName} from '@cdo/apps/redux/unitSelectionRedux';
 import UnitSelector from '@cdo/apps/templates/sectionProgress/UnitSelector';
 import {loadTextResponsesFromServer} from '@cdo/apps/templates/textResponses/textReponsesDataApi';
 import TextResponsesLessonSelector from '@cdo/apps/templates/textResponses/TextResponsesLessonSelector';
@@ -28,7 +25,7 @@ const CSV_HEADERS = [
 ];
 const PADDING = 8;
 
-function TextResponses({sectionId, scriptId, scriptName, setScriptId}) {
+function TextResponses({sectionId, scriptId, scriptName, setUnit}) {
   const [textResponsesByScript, setTextResponsesByScript] = useState({});
   const [isLoadingResponses, setIsLoadingResponses] = useState(false);
   const [filterByLessonName, setFilterByLessonName] = useState(null);
@@ -76,8 +73,8 @@ function TextResponses({sectionId, scriptId, scriptName, setScriptId}) {
     [textResponsesByScript]
   );
 
-  const onChangeScript = scriptId => {
-    setScriptId(scriptId);
+  const onChangeScript = (scriptId, courseVersionId) => {
+    setUnit(scriptId, courseVersionId);
     setFilterByLessonName(null);
   };
 
@@ -137,7 +134,7 @@ TextResponses.propTypes = {
   sectionId: PropTypes.number.isRequired,
   scriptId: PropTypes.number,
   scriptName: PropTypes.string,
-  setScriptId: PropTypes.func.isRequired,
+  setUnit: PropTypes.func.isRequired,
 };
 
 const styles = {
@@ -171,11 +168,12 @@ export default connect(
   state => ({
     sectionId: state.teacherSections.selectedSectionId,
     scriptId: state.unitSelection.scriptId,
+    courseVersionId: state.unitSelection.courseVersionId,
     scriptName: getSelectedUnitName(state),
   }),
   dispatch => ({
-    setScriptId(scriptId) {
-      dispatch(setScriptId(scriptId));
+    setUnit(scriptId, courseVersionId) {
+      dispatch(setUnit(scriptId, courseVersionId));
     },
   })
 )(TextResponses);

@@ -26,16 +26,15 @@ describe('IconHighlight component', () => {
 
   it('renders card', () => {
     renderCardContainer();
-    expect(screen.getByRole('complementary')).toBeVisible();
+    expect(
+      screen.getByRole('heading', {name: heading}).closest('div'),
+    ).toBeVisible();
   });
 
   it('renders card icon', () => {
     renderCardContainer();
 
-    const cardIcon = screen.getByRole('complementary')?.firstElementChild;
-
-    expect(cardIcon).toBeVisible();
-    expect(cardIcon).toHaveRole('presentation');
+    expect(screen.getByTestId('font-awesome-v6-icon')).toBeVisible();
   });
 
   it('renders card heading', () => {

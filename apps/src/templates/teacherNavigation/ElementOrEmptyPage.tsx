@@ -15,7 +15,6 @@ import i18n from '@cdo/locale';
 import {TEACHER_NAVIGATION_PATHS} from './TeacherNavigationPaths';
 
 import styles from './teacher-navigation.module.scss';
-import dashboardStyles from '@cdo/apps/templates/teacherDashboard/teacher-dashboard.module.scss';
 
 interface ElementOrEmptyPageProps {
   showNoStudents: boolean;
@@ -97,10 +96,8 @@ const ElementOrEmptyPage: React.FC<ElementOrEmptyPageProps> = ({
     return element;
   } else {
     return (
-      <div className={dashboardStyles.emptyClassroomDiv}>
-        <div className={dashboardStyles.emptyClassroomImage}>
-          {displayedImage()}
-        </div>
+      <div className={styles.emptyClassroomDiv}>
+        <div className={styles.emptyClassroomImage}>{displayedImage()}</div>
         <Heading3 className={styles.topPadding}>{heading}</Heading3>
         <BodyTwoText>{textDescription()}</BodyTwoText>
         {link()}

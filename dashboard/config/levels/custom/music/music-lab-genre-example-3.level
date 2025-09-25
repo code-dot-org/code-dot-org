@@ -1,0 +1,1549 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-06-03T23:23:48.000Z",
+  "level_num": "custom",
+  "user_id": 14639,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "#### Twinkle Twinkle\r\n\r\nThis remix of Twinkle Twinkle Little Star turns a simple melody into a lo-fi, layered experience. Listen for soft beats, filtered melodies, and how the parts repeat. Each section is built using functions to keep the code clean and easy to change.\r\n\r\n**Note from the creator:**\r\n> I wanted to turn Twinkle Twinkle into a mellow lo-fi track you could zone out to. I made functions like `build`, `middle`, and `outro` to break the song into sections. I also used a `bassleads` function to bring in smooth bass, and vocals for the main melody with low filters. Repeat blocks helped keep everything steady without dragging out the code.",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "level_data": {
+      "library": "launch2024",
+      "packId": "twinkle_twinkle",
+      "toolbox": {
+        "blocks": {
+        }
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "next": {
+                "block": {
+                  "type": "procedures_callnoreturn",
+                  "id": "{,c4`;N)#lYgD.v^DbM`",
+                  "deletable": false,
+                  "movable": false,
+                  "editable": false,
+                  "extraState": {
+                    "name": "build"
+                  },
+                  "next": {
+                    "block": {
+                      "type": "procedures_callnoreturn",
+                      "id": "ZaHq_v[@IjJm@8](wRh/",
+                      "deletable": false,
+                      "movable": false,
+                      "editable": false,
+                      "extraState": {
+                        "name": "middle"
+                      },
+                      "next": {
+                        "block": {
+                          "type": "procedures_callnoreturn",
+                          "id": "ng4j2}37k$EhkkSJSz!1",
+                          "deletable": false,
+                          "movable": false,
+                          "editable": false,
+                          "extraState": {
+                            "name": "chorus2"
+                          },
+                          "next": {
+                            "block": {
+                              "type": "procedures_callnoreturn",
+                              "id": "5yYOh|Nc|TWrWP{pP;O#",
+                              "deletable": false,
+                              "movable": false,
+                              "editable": false,
+                              "extraState": {
+                                "name": "outro"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": ".WYjz8q2RDoAwxwTTVct",
+              "x": 382,
+              "y": 2665,
+              "disabledReasons": [
+                "MANUALLY_DISABLED",
+                "ORPHANED"
+              ],
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "sound": "twinkle_twinkle/drums"
+              }
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": "Uw4K3O8VX3D_k`_D[$t+",
+              "x": 348,
+              "y": 2703,
+              "disabledReasons": [
+                "MANUALLY_DISABLED",
+                "ORPHANED"
+              ],
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "sound": "twinkle_twinkle/drums"
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "KwGPL=jQDO?$@Ix(v$8o",
+              "x": 910,
+              "y": 90,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "extraState": {
+                "procedureId": "g%wA=gXti|CZpX57-1,g",
+                "initialDeleteConfig": false,
+                "initialEditConfig": false,
+                "initialMoveConfig": false
+              },
+              "fields": {
+                "NAME": "build"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "play_sounds_together",
+                    "id": "play_sounds_together",
+                    "deletable": false,
+                    "movable": false,
+                    "editable": false,
+                    "extraState": {
+                      "disableNextConnection": false
+                    },
+                    "inputs": {
+                      "code": {
+                        "block": {
+                          "type": "repeat_simple2",
+                          "id": "ml#X;L{=z)krUhu@M@*L",
+                          "deletable": false,
+                          "movable": false,
+                          "editable": false,
+                          "extraState": {
+                            "disableNextConnection": false
+                          },
+                          "fields": {
+                            "times": 4
+                          },
+                          "inputs": {
+                            "code": {
+                              "block": {
+                                "type": "play_sound_at_current_location_simple2",
+                                "id": "7S`eTo`TYy:[lX=_bA8/",
+                                "deletable": false,
+                                "movable": false,
+                                "editable": false,
+                                "extraState": {
+                                  "disableNextConnection": false
+                                },
+                                "fields": {
+                                  "sound": "groove/drum_beat_plexi"
+                                }
+                              }
+                            }
+                          },
+                          "next": {
+                            "block": {
+                              "type": "play_sounds_sequential",
+                              "id": ",?)T-44_g)M5R9So/7Zr",
+                              "deletable": false,
+                              "movable": false,
+                              "editable": false,
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
+                              "inputs": {
+                                "code": {
+                                  "block": {
+                                    "type": "play_rest_at_current_location_simple2",
+                                    "id": "3o{LLrKs{dS8g#:66;B)",
+                                    "deletable": false,
+                                    "movable": false,
+                                    "editable": false,
+                                    "extraState": {
+                                      "disableNextConnection": false
+                                    },
+                                    "fields": {
+                                      "rest_duration": "<field name=\"rest_duration\">2</field>"
+                                    },
+                                    "next": {
+                                      "block": {
+                                        "type": "procedures_callnoreturn",
+                                        "id": "uHZltN!#_78(F%#wgzVq",
+                                        "deletable": false,
+                                        "movable": false,
+                                        "editable": false,
+                                        "extraState": {
+                                          "name": "vocals"
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "repeat_simple2",
+                                  "id": "repeat_simple2",
+                                  "deletable": false,
+                                  "movable": false,
+                                  "editable": false,
+                                  "extraState": {
+                                    "disableNextConnection": false
+                                  },
+                                  "fields": {
+                                    "times": 6
+                                  },
+                                  "inputs": {
+                                    "code": {
+                                      "block": {
+                                        "type": "procedures_callnoreturn",
+                                        "id": "K93d#9=b^c,Ujd#;.*f-",
+                                        "deletable": false,
+                                        "movable": false,
+                                        "editable": false,
+                                        "extraState": {
+                                          "name": "bassleads"
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "next": {
+                                    "block": {
+                                      "type": "play_sounds_sequential",
+                                      "id": "play_sounds_sequential",
+                                      "deletable": false,
+                                      "movable": false,
+                                      "editable": false,
+                                      "extraState": {
+                                        "disableNextConnection": false
+                                      },
+                                      "inputs": {
+                                        "code": {
+                                          "block": {
+                                            "type": "play_rest_at_current_location_simple2",
+                                            "id": "play_rest_at_current_location_simple2",
+                                            "deletable": false,
+                                            "movable": false,
+                                            "editable": false,
+                                            "extraState": {
+                                              "disableNextConnection": false
+                                            },
+                                            "fields": {
+                                              "rest_duration": "<field name=\"rest_duration\">3</field>"
+                                            },
+                                            "next": {
+                                              "block": {
+                                                "type": "play_rest_at_current_location_simple2",
+                                                "id": "8KY}]hA)r([Mv27=QX18",
+                                                "deletable": false,
+                                                "movable": false,
+                                                "editable": false,
+                                                "extraState": {
+                                                  "disableNextConnection": false
+                                                },
+                                                "fields": {
+                                                  "rest_duration": "<field name=\"rest_duration\">1</field>"
+                                                },
+                                                "next": {
+                                                  "block": {
+                                                    "type": "repeat_simple2",
+                                                    "id": "{9y4_*d#6AFUyDk,oaZ*",
+                                                    "deletable": false,
+                                                    "movable": false,
+                                                    "editable": false,
+                                                    "extraState": {
+                                                      "disableNextConnection": false
+                                                    },
+                                                    "fields": {
+                                                      "times": 4
+                                                    },
+                                                    "inputs": {
+                                                      "code": {
+                                                        "block": {
+                                                          "type": "play_sound_at_current_location_simple2",
+                                                          "id": "n;}IA=6(usLz}8D@^wi5",
+                                                          "deletable": false,
+                                                          "movable": false,
+                                                          "editable": false,
+                                                          "extraState": {
+                                                            "disableNextConnection": false
+                                                          },
+                                                          "fields": {
+                                                            "sound": "hiphop/drum_beat_lofi"
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "next": {
+                                        "block": {
+                                          "type": "play_sounds_sequential",
+                                          "id": "*Xze[Aowt=1,aAlTo3sL",
+                                          "deletable": false,
+                                          "movable": false,
+                                          "editable": false,
+                                          "extraState": {
+                                            "disableNextConnection": false
+                                          },
+                                          "inputs": {
+                                            "code": {
+                                              "block": {
+                                                "type": "play_rest_at_current_location_simple2",
+                                                "id": "1FF48Yj%jby.GHaZ}n:d",
+                                                "deletable": false,
+                                                "movable": false,
+                                                "editable": false,
+                                                "extraState": {
+                                                  "disableNextConnection": false
+                                                },
+                                                "fields": {
+                                                  "rest_duration": "<field name=\"rest_duration\">3</field>"
+                                                },
+                                                "next": {
+                                                  "block": {
+                                                    "type": "play_rest_at_current_location_simple2",
+                                                    "id": "^moNfGdk1!Eu!j)kLAXK",
+                                                    "deletable": false,
+                                                    "movable": false,
+                                                    "editable": false,
+                                                    "extraState": {
+                                                      "disableNextConnection": false
+                                                    },
+                                                    "fields": {
+                                                      "rest_duration": "<field name=\"rest_duration\">3</field>"
+                                                    },
+                                                    "next": {
+                                                      "block": {
+                                                        "type": "play_rest_at_current_location_simple2",
+                                                        "id": "z#LwLwOyN4+wD+k@$QG#",
+                                                        "deletable": false,
+                                                        "movable": false,
+                                                        "editable": false,
+                                                        "extraState": {
+                                                          "disableNextConnection": false
+                                                        },
+                                                        "fields": {
+                                                          "rest_duration": "<field name=\"rest_duration\">2</field>"
+                                                        },
+                                                        "next": {
+                                                          "block": {
+                                                            "type": "repeat_simple2",
+                                                            "id": "($VFdEPrAGA[K(NVM|hi",
+                                                            "deletable": false,
+                                                            "movable": false,
+                                                            "editable": false,
+                                                            "extraState": {
+                                                              "disableNextConnection": false
+                                                            },
+                                                            "fields": {
+                                                              "times": 2
+                                                            },
+                                                            "inputs": {
+                                                              "code": {
+                                                                "block": {
+                                                                  "type": "play_sounds_together",
+                                                                  "id": "pQf_ngd|0+{[L5:c8iOl",
+                                                                  "deletable": false,
+                                                                  "movable": false,
+                                                                  "editable": false,
+                                                                  "extraState": {
+                                                                    "disableNextConnection": false
+                                                                  },
+                                                                  "inputs": {
+                                                                    "code": {
+                                                                      "block": {
+                                                                        "type": "set_effect_at_current_location_simple2",
+                                                                        "id": "-%@8l~uTvJ4k_(pH@nH/",
+                                                                        "deletable": false,
+                                                                        "movable": false,
+                                                                        "editable": false,
+                                                                        "fields": {
+                                                                          "effects_name": "<field name=\"effects_name\">filter</field>",
+                                                                          "effects_value": "<field name=\"effects_value\">normal</field>"
+                                                                        },
+                                                                        "next": {
+                                                                          "block": {
+                                                                            "type": "play_sound_at_current_location_simple2",
+                                                                            "id": ";!D`od0(VxG|z:#!h{Jx",
+                                                                            "deletable": false,
+                                                                            "movable": false,
+                                                                            "editable": false,
+                                                                            "extraState": {
+                                                                              "disableNextConnection": false
+                                                                            },
+                                                                            "fields": {
+                                                                              "sound": "indie/rhythm_guitar"
+                                                                            },
+                                                                            "next": {
+                                                                              "block": {
+                                                                                "type": "play_sound_at_current_location_simple2",
+                                                                                "id": "pJ?r]LoWF|oNd9-W`}-i",
+                                                                                "deletable": false,
+                                                                                "movable": false,
+                                                                                "editable": false,
+                                                                                "extraState": {
+                                                                                  "disableNextConnection": false
+                                                                                },
+                                                                                "fields": {
+                                                                                  "sound": "groove/rhodes_surprise"
+                                                                                },
+                                                                                "next": {
+                                                                                  "block": {
+                                                                                    "type": "play_sound_at_current_location_simple2",
+                                                                                    "id": "6zA_o^r0,]k]Qj|ga42g",
+                                                                                    "deletable": false,
+                                                                                    "movable": false,
+                                                                                    "editable": false,
+                                                                                    "extraState": {
+                                                                                      "disableNextConnection": false
+                                                                                    },
+                                                                                    "fields": {
+                                                                                      "sound": "pop/sub_bass_wave"
+                                                                                    }
+                                                                                  }
+                                                                                }
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          },
+                                          "next": {
+                                            "block": {
+                                              "type": "play_sounds_sequential",
+                                              "id": "jos=E30|9}b;#NDGtq88",
+                                              "deletable": false,
+                                              "movable": false,
+                                              "editable": false,
+                                              "extraState": {
+                                                "disableNextConnection": false
+                                              },
+                                              "inputs": {
+                                                "code": {
+                                                  "block": {
+                                                    "type": "play_rest_at_current_location_simple2",
+                                                    "id": "obDGz*yS88-Cs-kg(}f`",
+                                                    "deletable": false,
+                                                    "movable": false,
+                                                    "editable": false,
+                                                    "extraState": {
+                                                      "disableNextConnection": false
+                                                    },
+                                                    "fields": {
+                                                      "rest_duration": "<field name=\"rest_duration\">3</field>"
+                                                    },
+                                                    "next": {
+                                                      "block": {
+                                                        "type": "play_rest_at_current_location_simple2",
+                                                        "id": "N#WEE;a3K9IxOF`hw6uZ",
+                                                        "deletable": false,
+                                                        "movable": false,
+                                                        "editable": false,
+                                                        "extraState": {
+                                                          "disableNextConnection": false
+                                                        },
+                                                        "fields": {
+                                                          "rest_duration": "<field name=\"rest_duration\">3</field>"
+                                                        },
+                                                        "next": {
+                                                          "block": {
+                                                            "type": "repeat_simple2",
+                                                            "id": "d[Q#JOjuz,;rCCq2,`D6",
+                                                            "deletable": false,
+                                                            "movable": false,
+                                                            "editable": false,
+                                                            "extraState": {
+                                                              "disableNextConnection": false
+                                                            },
+                                                            "fields": {
+                                                              "times": 3
+                                                            },
+                                                            "inputs": {
+                                                              "code": {
+                                                                "block": {
+                                                                  "type": "play_sound_at_current_location_simple2",
+                                                                  "id": "+hRG:L^nk,Q:9I6dq.-Y",
+                                                                  "deletable": false,
+                                                                  "movable": false,
+                                                                  "editable": false,
+                                                                  "extraState": {
+                                                                    "disableNextConnection": false
+                                                                  },
+                                                                  "fields": {
+                                                                    "sound": "hiphop/guitar_pocket"
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              },
+                                              "next": {
+                                                "block": {
+                                                  "type": "play_sounds_sequential",
+                                                  "id": "*_C^|CxnE}[)U}`t~$5n",
+                                                  "deletable": false,
+                                                  "movable": false,
+                                                  "editable": false,
+                                                  "extraState": {
+                                                    "disableNextConnection": false
+                                                  },
+                                                  "inputs": {
+                                                    "code": {
+                                                      "block": {
+                                                        "type": "play_rest_at_current_location_simple2",
+                                                        "id": "LN0M?^t7-Aj8]M_X!0!q",
+                                                        "deletable": false,
+                                                        "movable": false,
+                                                        "editable": false,
+                                                        "extraState": {
+                                                          "disableNextConnection": false
+                                                        },
+                                                        "fields": {
+                                                          "rest_duration": "<field name=\"rest_duration\">3</field>"
+                                                        },
+                                                        "next": {
+                                                          "block": {
+                                                            "type": "play_rest_at_current_location_simple2",
+                                                            "id": "8`f1R{uLioln)g7)I|n.",
+                                                            "deletable": false,
+                                                            "movable": false,
+                                                            "editable": false,
+                                                            "extraState": {
+                                                              "disableNextConnection": false
+                                                            },
+                                                            "fields": {
+                                                              "rest_duration": "<field name=\"rest_duration\">3</field>"
+                                                            },
+                                                            "next": {
+                                                              "block": {
+                                                                "type": "play_rest_at_current_location_simple2",
+                                                                "id": "Yr[d$8rC)rCQT?/UP]Nw",
+                                                                "deletable": false,
+                                                                "movable": false,
+                                                                "editable": false,
+                                                                "extraState": {
+                                                                  "disableNextConnection": false
+                                                                },
+                                                                "fields": {
+                                                                  "rest_duration": "<field name=\"rest_duration\">3</field>"
+                                                                },
+                                                                "next": {
+                                                                  "block": {
+                                                                    "type": "play_rest_at_current_location_simple2",
+                                                                    "id": "]aQ_OtX)iT*Z..t={FJ{",
+                                                                    "deletable": false,
+                                                                    "movable": false,
+                                                                    "editable": false,
+                                                                    "extraState": {
+                                                                      "disableNextConnection": false
+                                                                    },
+                                                                    "fields": {
+                                                                      "rest_duration": "<field name=\"rest_duration\">1</field>"
+                                                                    },
+                                                                    "next": {
+                                                                      "block": {
+                                                                        "type": "repeat_simple2",
+                                                                        "id": "Jhrrfb#/!YNb9{4)(-Gx",
+                                                                        "deletable": false,
+                                                                        "movable": false,
+                                                                        "editable": false,
+                                                                        "extraState": {
+                                                                          "disableNextConnection": false
+                                                                        },
+                                                                        "fields": {
+                                                                          "times": 1
+                                                                        },
+                                                                        "inputs": {
+                                                                          "code": {
+                                                                            "block": {
+                                                                              "type": "play_sounds_together",
+                                                                              "id": "6]Vcw0/qv]a2v7Y_`XzX",
+                                                                              "deletable": false,
+                                                                              "movable": false,
+                                                                              "editable": false,
+                                                                              "extraState": {
+                                                                                "disableNextConnection": false
+                                                                              },
+                                                                              "inputs": {
+                                                                                "code": {
+                                                                                  "block": {
+                                                                                    "type": "play_sound_at_current_location_simple2",
+                                                                                    "id": "k9DnbXL)IL5tk{q8^q-R",
+                                                                                    "deletable": false,
+                                                                                    "movable": false,
+                                                                                    "editable": false,
+                                                                                    "extraState": {
+                                                                                      "disableNextConnection": false
+                                                                                    },
+                                                                                    "fields": {
+                                                                                      "sound": "rock/drum_kit_basement"
+                                                                                    },
+                                                                                    "next": {
+                                                                                      "block": {
+                                                                                        "type": "play_sound_at_current_location_simple2",
+                                                                                        "id": "d2QUH@liGg@FYwnb9fUy",
+                                                                                        "deletable": false,
+                                                                                        "movable": false,
+                                                                                        "editable": false,
+                                                                                        "extraState": {
+                                                                                          "disableNextConnection": false
+                                                                                        },
+                                                                                        "fields": {
+                                                                                          "sound": "rock/drum_kit_hands"
+                                                                                        }
+                                                                                      }
+                                                                                    }
+                                                                                  }
+                                                                                }
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "rAc]p5$,hL4:]-jWX2Jb",
+              "x": 590,
+              "y": 50,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "extraState": {
+                "procedureId": ")Aw+,gx,E:+016_;qVTp",
+                "initialDeleteConfig": false,
+                "initialEditConfig": false,
+                "initialMoveConfig": false
+              },
+              "fields": {
+                "NAME": "middle"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "play_sounds_together",
+                    "id": "e|,231pTdaG.*c;=M`C:",
+                    "deletable": false,
+                    "movable": false,
+                    "editable": false,
+                    "extraState": {
+                      "disableNextConnection": false
+                    },
+                    "inputs": {
+                      "code": {
+                        "block": {
+                          "type": "repeat_simple2",
+                          "id": "}nI4zP7%1@h`TP`x7?qD",
+                          "deletable": false,
+                          "movable": false,
+                          "editable": false,
+                          "extraState": {
+                            "disableNextConnection": false
+                          },
+                          "fields": {
+                            "times": 2
+                          },
+                          "inputs": {
+                            "code": {
+                              "block": {
+                                "type": "play_sounds_together",
+                                "id": "4@plNWVC.7T}RY9V3=4|",
+                                "deletable": false,
+                                "movable": false,
+                                "editable": false,
+                                "extraState": {
+                                  "disableNextConnection": false
+                                },
+                                "inputs": {
+                                  "code": {
+                                    "block": {
+                                      "type": "play_sound_at_current_location_simple2",
+                                      "id": "4}wL]@c!{ANBIAH`bA~E",
+                                      "deletable": false,
+                                      "movable": false,
+                                      "editable": false,
+                                      "extraState": {
+                                        "disableNextConnection": false
+                                      },
+                                      "fields": {
+                                        "sound": "groove/drum_beat_plexi"
+                                      },
+                                      "next": {
+                                        "block": {
+                                          "type": "play_sound_at_current_location_simple2",
+                                          "id": "wMVeJ8/b|lSoq#b3X_~Q",
+                                          "deletable": false,
+                                          "movable": false,
+                                          "editable": false,
+                                          "extraState": {
+                                            "disableNextConnection": false
+                                          },
+                                          "fields": {
+                                            "sound": "hiphop/drum_beat_lofi"
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "next": {
+                            "block": {
+                              "type": "repeat_simple2",
+                              "id": "]?~zfCPM!k*-f^M:kRlO",
+                              "deletable": false,
+                              "movable": false,
+                              "editable": false,
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
+                              "fields": {
+                                "times": 2
+                              },
+                              "inputs": {
+                                "code": {
+                                  "block": {
+                                    "type": "play_sounds_together",
+                                    "id": "`.rL_o6pE*#-LXPF61ai",
+                                    "deletable": false,
+                                    "movable": false,
+                                    "editable": false,
+                                    "extraState": {
+                                      "disableNextConnection": false
+                                    },
+                                    "inputs": {
+                                      "code": {
+                                        "block": {
+                                          "type": "set_effect_at_current_location_simple2",
+                                          "id": "@=a*{*]flPSYN^#PSiJ!",
+                                          "deletable": false,
+                                          "movable": false,
+                                          "editable": false,
+                                          "fields": {
+                                            "effects_name": "<field name=\"effects_name\">filter</field>",
+                                            "effects_value": "<field name=\"effects_value\">normal</field>"
+                                          },
+                                          "next": {
+                                            "block": {
+                                              "type": "play_sound_at_current_location_simple2",
+                                              "id": "OqOACmefsU`)b[cjLRay",
+                                              "deletable": false,
+                                              "movable": false,
+                                              "editable": false,
+                                              "extraState": {
+                                                "disableNextConnection": false
+                                              },
+                                              "fields": {
+                                                "sound": "indie/rhythm_guitar"
+                                              },
+                                              "next": {
+                                                "block": {
+                                                  "type": "play_sound_at_current_location_simple2",
+                                                  "id": ".RK!S477}B[IqX~g6mM^",
+                                                  "deletable": false,
+                                                  "movable": false,
+                                                  "editable": false,
+                                                  "extraState": {
+                                                    "disableNextConnection": false
+                                                  },
+                                                  "fields": {
+                                                    "sound": "groove/rhodes_surprise"
+                                                  },
+                                                  "next": {
+                                                    "block": {
+                                                      "type": "play_sound_at_current_location_simple2",
+                                                      "id": "q=%t?tTFi;cM)+;u2wO{",
+                                                      "deletable": false,
+                                                      "movable": false,
+                                                      "editable": false,
+                                                      "extraState": {
+                                                        "disableNextConnection": false
+                                                      },
+                                                      "fields": {
+                                                        "sound": "pop/sub_bass_wave"
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "repeat_simple2",
+                                  "id": "BW2OeE93j8*%!;1.Q)@c",
+                                  "deletable": false,
+                                  "movable": false,
+                                  "editable": false,
+                                  "extraState": {
+                                    "disableNextConnection": false
+                                  },
+                                  "fields": {
+                                    "times": 2
+                                  },
+                                  "inputs": {
+                                    "code": {
+                                      "block": {
+                                        "type": "procedures_callnoreturn",
+                                        "id": "k)XIeV._W9$[B5~U+X8W",
+                                        "deletable": false,
+                                        "movable": false,
+                                        "editable": false,
+                                        "extraState": {
+                                          "name": "bassleads"
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "w]#dO{($}FAS94=$RomP",
+              "x": 230,
+              "y": 50,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "extraState": {
+                "procedureId": "Yu$]IP[x(lSZWI/R.!~j",
+                "initialDeleteConfig": false,
+                "initialEditConfig": false,
+                "initialMoveConfig": false
+              },
+              "fields": {
+                "NAME": "chorus2"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "play_sounds_together",
+                    "id": "zA4P?R~hjOBMO]2YW{_2",
+                    "deletable": false,
+                    "movable": false,
+                    "editable": false,
+                    "extraState": {
+                      "disableNextConnection": false
+                    },
+                    "inputs": {
+                      "code": {
+                        "block": {
+                          "type": "procedures_callnoreturn",
+                          "id": "%yRjOXZY{32cSg]OI}V1",
+                          "deletable": false,
+                          "movable": false,
+                          "editable": false,
+                          "extraState": {
+                            "name": "vocals"
+                          },
+                          "next": {
+                            "block": {
+                              "type": "repeat_simple2",
+                              "id": "Adv!|}q!2ieJiE9.s1YS",
+                              "deletable": false,
+                              "movable": false,
+                              "editable": false,
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
+                              "fields": {
+                                "times": 4
+                              },
+                              "inputs": {
+                                "code": {
+                                  "block": {
+                                    "type": "procedures_callnoreturn",
+                                    "id": "Vyu3)07wp}[yX0b9]-:w",
+                                    "deletable": false,
+                                    "movable": false,
+                                    "editable": false,
+                                    "extraState": {
+                                      "name": "bassleads"
+                                    }
+                                  }
+                                }
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "play_sounds_sequential",
+                                  "id": "}Y^n9/L3hAjiuUQAXb#B",
+                                  "deletable": false,
+                                  "movable": false,
+                                  "editable": false,
+                                  "extraState": {
+                                    "disableNextConnection": false
+                                  },
+                                  "inputs": {
+                                    "code": {
+                                      "block": {
+                                        "type": "set_effect_at_current_location_simple2",
+                                        "id": ",Rc*m=2jI/G-r8i;gjcu",
+                                        "deletable": false,
+                                        "movable": false,
+                                        "editable": false,
+                                        "fields": {
+                                          "effects_name": "<field name=\"effects_name\">filter</field>",
+                                          "effects_value": "<field name=\"effects_value\">low</field>"
+                                        },
+                                        "next": {
+                                          "block": {
+                                            "type": "set_effect_at_current_location_simple2",
+                                            "id": "cjW5W4^~6)b4_KX.,1)W",
+                                            "deletable": false,
+                                            "movable": false,
+                                            "editable": false,
+                                            "fields": {
+                                              "effects_name": "<field name=\"effects_name\">volume</field>",
+                                              "effects_value": "<field name=\"effects_value\">low</field>"
+                                            },
+                                            "next": {
+                                              "block": {
+                                                "type": "play_sound_at_current_location_simple2",
+                                                "id": "1PS9hS{ZKnoPw8v[LS~j",
+                                                "deletable": false,
+                                                "movable": false,
+                                                "editable": false,
+                                                "extraState": {
+                                                  "disableNextConnection": false
+                                                },
+                                                "fields": {
+                                                  "sound": "twinkle_twinkle/guitar_pick_verse_1"
+                                                },
+                                                "next": {
+                                                  "block": {
+                                                    "type": "play_sound_at_current_location_simple2",
+                                                    "id": "v37;BTUvlVcEG*}K?[py",
+                                                    "deletable": false,
+                                                    "movable": false,
+                                                    "editable": false,
+                                                    "extraState": {
+                                                      "disableNextConnection": false
+                                                    },
+                                                    "fields": {
+                                                      "sound": "twinkle_twinkle/guitar_pick_verse_1"
+                                                    },
+                                                    "next": {
+                                                      "block": {
+                                                        "type": "play_sound_at_current_location_simple2",
+                                                        "id": "uVpwV;4Snge%X;OB/(?(",
+                                                        "deletable": false,
+                                                        "movable": false,
+                                                        "editable": false,
+                                                        "extraState": {
+                                                          "disableNextConnection": false
+                                                        },
+                                                        "fields": {
+                                                          "sound": "twinkle_twinkle/guitar_pick_verse_2"
+                                                        },
+                                                        "next": {
+                                                          "block": {
+                                                            "type": "play_sound_at_current_location_simple2",
+                                                            "id": "j%,;JISJ%7?X5(K?{lsc",
+                                                            "deletable": false,
+                                                            "movable": false,
+                                                            "editable": false,
+                                                            "extraState": {
+                                                              "disableNextConnection": false
+                                                            },
+                                                            "fields": {
+                                                              "sound": "twinkle_twinkle/guitar_pick_verse_2"
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "jhU;V|C4yC`.:nZmq#DT",
+              "x": 210,
+              "y": 710,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "extraState": {
+                "procedureId": "REWz7$y4^!W;f-og7DR}",
+                "initialDeleteConfig": false,
+                "initialEditConfig": false,
+                "initialMoveConfig": false
+              },
+              "fields": {
+                "NAME": "outro"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "play_sounds_together",
+                    "id": "mft3j/=)8.a+Q|e1qz1]",
+                    "deletable": false,
+                    "movable": false,
+                    "editable": false,
+                    "extraState": {
+                      "disableNextConnection": false
+                    },
+                    "inputs": {
+                      "code": {
+                        "block": {
+                          "type": "repeat_simple2",
+                          "id": "ARyAE5Vc]ch-wv%p^iaJ",
+                          "deletable": false,
+                          "movable": false,
+                          "editable": false,
+                          "extraState": {
+                            "disableNextConnection": false
+                          },
+                          "fields": {
+                            "times": 2
+                          },
+                          "inputs": {
+                            "code": {
+                              "block": {
+                                "type": "set_effect_at_current_location_simple2",
+                                "id": "80,dHMslGo`Ru}y{RXE1",
+                                "deletable": false,
+                                "movable": false,
+                                "editable": false,
+                                "fields": {
+                                  "effects_name": "<field name=\"effects_name\">filter</field>",
+                                  "effects_value": "<field name=\"effects_value\">normal</field>"
+                                },
+                                "next": {
+                                  "block": {
+                                    "type": "play_sound_at_current_location_simple2",
+                                    "id": "F+for9ropEa3ayV,Cp=d",
+                                    "deletable": false,
+                                    "movable": false,
+                                    "editable": false,
+                                    "extraState": {
+                                      "disableNextConnection": false
+                                    },
+                                    "fields": {
+                                      "sound": "groove/drum_beat_plexi"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "next": {
+                            "block": {
+                              "type": "play_sounds_sequential",
+                              "id": "+@PIEE2|RZ]KJH!/(dl}",
+                              "deletable": false,
+                              "movable": false,
+                              "editable": false,
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
+                              "inputs": {
+                                "code": {
+                                  "block": {
+                                    "type": "set_effect_at_current_location_simple2",
+                                    "id": "D:5iNOoVPl7z7pYQx@mc",
+                                    "deletable": false,
+                                    "movable": false,
+                                    "editable": false,
+                                    "fields": {
+                                      "effects_name": "<field name=\"effects_name\">volume</field>",
+                                      "effects_value": "<field name=\"effects_value\">low</field>"
+                                    },
+                                    "next": {
+                                      "block": {
+                                        "type": "set_effect_at_current_location_simple2",
+                                        "id": "W{.Y6rx#Lq~pyMF.A;r[",
+                                        "deletable": false,
+                                        "movable": false,
+                                        "editable": false,
+                                        "fields": {
+                                          "effects_name": "<field name=\"effects_name\">filter</field>",
+                                          "effects_value": "<field name=\"effects_value\">low</field>"
+                                        },
+                                        "next": {
+                                          "block": {
+                                            "type": "play_sound_at_current_location_simple2",
+                                            "id": "Ilo/QY;,[6R~*b`p8{+Z",
+                                            "deletable": false,
+                                            "movable": false,
+                                            "editable": false,
+                                            "extraState": {
+                                              "disableNextConnection": false
+                                            },
+                                            "fields": {
+                                              "sound": "twinkle_twinkle/pluck_hi_chorus_1"
+                                            },
+                                            "next": {
+                                              "block": {
+                                                "type": "play_sound_at_current_location_simple2",
+                                                "id": "F-j_KyyW:b0F24cK2EIN",
+                                                "deletable": false,
+                                                "movable": false,
+                                                "editable": false,
+                                                "extraState": {
+                                                  "disableNextConnection": false
+                                                },
+                                                "fields": {
+                                                  "sound": "twinkle_twinkle/pluck_hi_verse_2"
+                                                },
+                                                "next": {
+                                                  "block": {
+                                                    "type": "play_sound_at_current_location_simple2",
+                                                    "id": "$U^!I6)L-aa]DqWoXQNf",
+                                                    "deletable": false,
+                                                    "movable": false,
+                                                    "editable": false,
+                                                    "extraState": {
+                                                      "disableNextConnection": false
+                                                    },
+                                                    "fields": {
+                                                      "sound": "twinkle_twinkle/wash"
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "repeat_simple2",
+                                  "id": "r{E98#8p]cij,%B,DhM?",
+                                  "deletable": false,
+                                  "movable": false,
+                                  "editable": false,
+                                  "extraState": {
+                                    "disableNextConnection": false
+                                  },
+                                  "fields": {
+                                    "times": 2
+                                  },
+                                  "inputs": {
+                                    "code": {
+                                      "block": {
+                                        "type": "procedures_callnoreturn",
+                                        "id": "yQGZ8VCq}4W+L_=P2jwu",
+                                        "deletable": false,
+                                        "movable": false,
+                                        "editable": false,
+                                        "extraState": {
+                                          "name": "bassleads"
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "W9a%7Ito-{x/CS588Y/q",
+              "x": 1230,
+              "y": 50,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "extraState": {
+                "procedureId": "TTU:87YTxKv#:i(piO5N",
+                "initialDeleteConfig": false,
+                "initialEditConfig": false,
+                "initialMoveConfig": false
+              },
+              "fields": {
+                "NAME": "bassleads"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "play_sounds_together",
+                    "id": "0A.L(Q3@GrY!`[9rYE/w",
+                    "deletable": false,
+                    "movable": false,
+                    "editable": false,
+                    "extraState": {
+                      "disableNextConnection": false
+                    },
+                    "inputs": {
+                      "code": {
+                        "block": {
+                          "type": "set_effect_at_current_location_simple2",
+                          "id": ";e#@JuRDIF$[=,T?Djj!",
+                          "deletable": false,
+                          "movable": false,
+                          "editable": false,
+                          "fields": {
+                            "effects_name": "<field name=\"effects_name\">volume</field>",
+                            "effects_value": "<field name=\"effects_value\">normal</field>"
+                          },
+                          "next": {
+                            "block": {
+                              "type": "set_effect_at_current_location_simple2",
+                              "id": "[q8P6i8a)NS?NnHwMS19",
+                              "deletable": false,
+                              "movable": false,
+                              "editable": false,
+                              "fields": {
+                                "effects_name": "<field name=\"effects_name\">filter</field>",
+                                "effects_value": "<field name=\"effects_value\">normal</field>"
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "play_sound_at_current_location_simple2",
+                                  "id": "lZMyHxR}`tMAD+$sk~58",
+                                  "deletable": false,
+                                  "movable": false,
+                                  "editable": false,
+                                  "extraState": {
+                                    "disableNextConnection": false
+                                  },
+                                  "fields": {
+                                    "sound": "twinkle_twinkle/pluck_lo_chorus_1"
+                                  },
+                                  "next": {
+                                    "block": {
+                                      "type": "play_sound_at_current_location_simple2",
+                                      "id": "jttLuhl*jx`4hjhCFcZ/",
+                                      "deletable": false,
+                                      "movable": false,
+                                      "editable": false,
+                                      "extraState": {
+                                        "disableNextConnection": false
+                                      },
+                                      "fields": {
+                                        "sound": "twinkle_twinkle/bass_chorus_2"
+                                      },
+                                      "next": {
+                                        "block": {
+                                          "type": "play_sound_at_current_location_simple2",
+                                          "id": "8G[xUe,eU^H.t,IbFf}S",
+                                          "deletable": false,
+                                          "movable": false,
+                                          "editable": false,
+                                          "extraState": {
+                                            "disableNextConnection": false
+                                          },
+                                          "fields": {
+                                            "sound": "twinkle_twinkle/bass_chorus_1"
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "hT9~eeM{k{Q1A?%/,_3(",
+              "x": 1250,
+              "y": 330,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "extraState": {
+                "procedureId": "gNGj5/wz,O+iJkh1;I=O",
+                "initialDeleteConfig": false,
+                "initialEditConfig": false,
+                "initialMoveConfig": false
+              },
+              "fields": {
+                "NAME": "vocals"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "set_effect_at_current_location_simple2",
+                    "id": "{(^;w.|pFTNU)J:od_(%",
+                    "deletable": false,
+                    "movable": false,
+                    "editable": false,
+                    "fields": {
+                      "effects_name": "<field name=\"effects_name\">filter</field>",
+                      "effects_value": "<field name=\"effects_value\">low</field>"
+                    },
+                    "next": {
+                      "block": {
+                        "type": "set_effect_at_current_location_simple2",
+                        "id": "FV}_[.PQ`#K^8P$TzE5J",
+                        "deletable": false,
+                        "movable": false,
+                        "editable": false,
+                        "fields": {
+                          "effects_name": "<field name=\"effects_name\">volume</field>",
+                          "effects_value": "<field name=\"effects_value\">low</field>"
+                        },
+                        "next": {
+                          "block": {
+                            "type": "play_sound_at_current_location_simple2",
+                            "id": "%_iBV;te0_p8o_3a3KYn",
+                            "deletable": false,
+                            "movable": false,
+                            "editable": false,
+                            "extraState": {
+                              "disableNextConnection": false
+                            },
+                            "fields": {
+                              "sound": "twinkle_twinkle/vocals_chorus_1"
+                            },
+                            "next": {
+                              "block": {
+                                "type": "play_sound_at_current_location_simple2",
+                                "id": ")R59]2^R/qfLS!^9sdWk",
+                                "deletable": false,
+                                "movable": false,
+                                "editable": false,
+                                "extraState": {
+                                  "disableNextConnection": false
+                                },
+                                "fields": {
+                                  "sound": "twinkle_twinkle/vocals_chorus_2"
+                                },
+                                "next": {
+                                  "block": {
+                                    "type": "play_sound_at_current_location_simple2",
+                                    "id": "1G#Ht3:e)xc~g?3R}-72",
+                                    "deletable": false,
+                                    "movable": false,
+                                    "editable": false,
+                                    "extraState": {
+                                      "disableNextConnection": false
+                                    },
+                                    "fields": {
+                                      "sound": "twinkle_twinkle/vocals_verse_1"
+                                    },
+                                    "next": {
+                                      "block": {
+                                        "type": "play_sound_at_current_location_simple2",
+                                        "id": "916y5Ix%Bb%]L~8Ub,#q",
+                                        "deletable": false,
+                                        "movable": false,
+                                        "editable": false,
+                                        "extraState": {
+                                          "disableNextConnection": false
+                                        },
+                                        "fields": {
+                                          "sound": "twinkle_twinkle/vocals_verse_2"
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "procedures": [
+          {
+            "id": "g%wA=gXti|CZpX57-1,g",
+            "name": "build",
+            "returnTypes": null
+          },
+          {
+            "id": ")Aw+,gx,E:+016_;qVTp",
+            "name": "middle",
+            "returnTypes": null
+          },
+          {
+            "id": "Yu$]IP[x(lSZWI/R.!~j",
+            "name": "chorus2",
+            "returnTypes": null
+          },
+          {
+            "id": "REWz7$y4^!W;f-og7DR}",
+            "name": "outro",
+            "returnTypes": null
+          },
+          {
+            "id": "TTU:87YTxKv#:i(piO5N",
+            "name": "bassleads",
+            "returnTypes": null
+          },
+          {
+            "id": "gNGj5/wz,O+iJkh1;I=O",
+            "name": "vocals",
+            "returnTypes": null
+          }
+        ]
+      },
+      "allowChangeStartingPlayheadPosition": true
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
+    "display_name": "Twinkle Twinkle",
+    "bubble_choice_description": "Twinkle Twinkle Little Star as a lowfi effects-heavy track. It's a vibe.",
+    "thumbnail_url": "\thttps://curriculum.code.org/media/musiclab/library-launch2024/packs/twinkle_twinkle/twinkle_twinkle.png",
+    "submittable": "false",
+    "validations": [
+      {
+        "key": "music-lab-genre-example-3_d12de3ae-3ec5-4e51-b022-650e3fe3fb82",
+        "message": "",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 10
+          }
+        ]
+      }
+    ],
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-06-03T23:23:48.483+00:00\",\"changed\":[\"cloned from \\\"music-lab-genre-example-2\\\"\"],\"cloned_from\":\"music-lab-genre-example-2\"},{\"changed_at\":\"2025-06-03 23:24:01 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-03 23:25:06 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-04 19:18:24 +0000\",\"changed\":[\"hide_share_and_remix\",\"predict_settings\",\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-04 19:21:01 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-28 00:15:12 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-28 00:20:50 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-30 17:29:18 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-30 17:31:22 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-03 20:38:16 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-07-18 13:49:23 +0000\",\"changed\":[\"hide_share_and_remix\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-07-18 13:51:39 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

@@ -1,0 +1,630 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-05-31T03:00:57.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "toolbox": {
+        "type": "flyout",
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2",
+            "play_rest_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together",
+            "play_sounds_sequential",
+            "repeat_simple2"
+          ]
+        },
+        "addFunctionDefinition": true,
+        "addFunctionCalls": true
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "next": {
+                "block": {
+                  "type": "play_sounds_together",
+                  "id": "play_sounds_together",
+                  "deletable": false,
+                  "movable": false,
+                  "editable": false,
+                  "extraState": {
+                    "disableNextConnection": false
+                  },
+                  "inputs": {
+                    "code": {
+                      "block": {
+                        "type": "play_sounds_sequential",
+                        "id": "play_sounds_sequential",
+                        "deletable": false,
+                        "editable": false,
+                        "extraState": {
+                          "disableNextConnection": false
+                        },
+                        "inputs": {
+                          "code": {
+                            "block": {
+                              "type": "repeat_simple2",
+                              "id": "repeat_simple2",
+                              "deletable": false,
+                              "movable": false,
+                              "editable": false,
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
+                              "fields": {
+                                "times": 4
+                              },
+                              "inputs": {
+                                "code": {
+                                  "block": {
+                                    "type": "play_rest_at_current_location_simple2",
+                                    "id": "play_rest_at_current_location_simple2",
+                                    "deletable": false,
+                                    "movable": false,
+                                    "editable": false,
+                                    "extraState": {
+                                      "disableNextConnection": true
+                                    },
+                                    "fields": {
+                                      "rest_duration": "<field name=\"rest_duration\">1</field>"
+                                    }
+                                  }
+                                }
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "play_sound_at_current_location_simple2",
+                                  "id": "play_sound_at_current_location_simple2",
+                                  "deletable": false,
+                                  "movable": false,
+                                  "editable": false,
+                                  "extraState": {
+                                    "disableNextConnection": true
+                                  },
+                                  "fields": {
+                                    "sound": "alessia_cara_scars_to_your_beautiful/vocals_no_better_you"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "next": {
+                    "block": {
+                      "type": "play_sounds_together",
+                      "id": "p9#)(O:052^r(/:,O97`",
+                      "deletable": false,
+                      "movable": false,
+                      "editable": false,
+                      "extraState": {
+                        "disableNextConnection": false
+                      },
+                      "inputs": {
+                        "code": {
+                          "block": {
+                            "type": "play_sounds_sequential",
+                            "id": "qV8F]Myq*t)l~X/nC%FE",
+                            "deletable": false,
+                            "editable": false,
+                            "extraState": {
+                              "disableNextConnection": false
+                            },
+                            "inputs": {
+                              "code": {
+                                "block": {
+                                  "type": "repeat_simple2",
+                                  "id": "m[zin@:%}gkK5)Hfeg?8",
+                                  "deletable": false,
+                                  "movable": false,
+                                  "editable": false,
+                                  "extraState": {
+                                    "disableNextConnection": false
+                                  },
+                                  "fields": {
+                                    "times": 4
+                                  },
+                                  "inputs": {
+                                    "code": {
+                                      "block": {
+                                        "type": "play_rest_at_current_location_simple2",
+                                        "id": "+GRHpz:lT^=2cRW6p(rz",
+                                        "deletable": false,
+                                        "movable": false,
+                                        "editable": false,
+                                        "extraState": {
+                                          "disableNextConnection": true
+                                        },
+                                        "fields": {
+                                          "rest_duration": "<field name=\"rest_duration\">1</field>"
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "next": {
+                                    "block": {
+                                      "type": "play_sound_at_current_location_simple2",
+                                      "id": "AC:,xG5V.QOb(h#aji`U",
+                                      "deletable": false,
+                                      "movable": false,
+                                      "editable": false,
+                                      "extraState": {
+                                        "disableNextConnection": true
+                                      },
+                                      "fields": {
+                                        "sound": "alessia_cara_scars_to_your_beautiful/vocals_no_better_life"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "next": {
+                        "block": {
+                          "type": "play_sounds_together",
+                          "id": "c`*5AAqnV`Pc)`e=L,Yz",
+                          "deletable": false,
+                          "movable": false,
+                          "editable": false,
+                          "extraState": {
+                            "disableNextConnection": false
+                          },
+                          "inputs": {
+                            "code": {
+                              "block": {
+                                "type": "play_sounds_sequential",
+                                "id": "XA8VgzM/B|VVMovc5s)C",
+                                "deletable": false,
+                                "editable": false,
+                                "extraState": {
+                                  "disableNextConnection": false
+                                },
+                                "inputs": {
+                                  "code": {
+                                    "block": {
+                                      "type": "repeat_simple2",
+                                      "id": "@D9{=8$?)97m9$.S|ZKv",
+                                      "deletable": false,
+                                      "movable": false,
+                                      "editable": false,
+                                      "extraState": {
+                                        "disableNextConnection": false
+                                      },
+                                      "fields": {
+                                        "times": 4
+                                      },
+                                      "inputs": {
+                                        "code": {
+                                          "block": {
+                                            "type": "play_rest_at_current_location_simple2",
+                                            "id": "#dQKw_J30AZjUwnoA%,-",
+                                            "deletable": false,
+                                            "movable": false,
+                                            "editable": false,
+                                            "extraState": {
+                                              "disableNextConnection": true
+                                            },
+                                            "fields": {
+                                              "rest_duration": "<field name=\"rest_duration\">1</field>"
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "next": {
+                                        "block": {
+                                          "type": "play_sound_at_current_location_simple2",
+                                          "id": "j9)L,9Q*MBT,yJno^2D:",
+                                          "deletable": false,
+                                          "movable": false,
+                                          "editable": false,
+                                          "extraState": {
+                                            "disableNextConnection": true
+                                          },
+                                          "fields": {
+                                            "sound": "alessia_cara_scars_to_your_beautiful/vocals_no_better_time"
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "showSoundFilters": true,
+      "packId": "alessia_cara_scars_to_your_beautiful",
+      "sounds": {
+        "alessia_cara_scars_to_your_beautiful": [
+          "vocals_no_better_you",
+          "vocals_no_better_life",
+          "vocals_no_better_time"
+        ],
+        "electro": [
+          "drum_beat_cowbell",
+          "drum_beat_club",
+          "drum_beat_edm",
+          "drum_beat_hyper",
+          "drum_beat_fashion",
+          "drum_beat_noise",
+          "drum_beat_pause",
+          "drum_beat_shake",
+          "drum_beat_sharp",
+          "drum_beat_strobe",
+          "drum_beat_swirl",
+          "drum_beat_sync",
+          "drum_beat_tom",
+          "bass_synth_blocks",
+          "bass_synth_candy",
+          "bass_synth_chips",
+          "bass_synth_duct_tape",
+          "bass_synth_foam",
+          "bass_synth_glitter",
+          "bass_synth_hammer",
+          "bass_synth_nails",
+          "bass_synth_pop_rocks",
+          "bass_synth_sand",
+          "bass_synth_soda_pop",
+          "synth_airhorn",
+          "synth_cave",
+          "synth_sleek",
+          "synth_wiggle",
+          "guitar_code",
+          "guitar_melody",
+          "guitar_moment",
+          "guitar_reveal",
+          "guitar_shimmy",
+          "guitar_shine",
+          "alien",
+          "boom_impact",
+          "crackle",
+          "spring_lift",
+          "whua",
+          "whua_short",
+          "wormhole"
+        ],
+        "groove": [
+          "drum_beat_congas",
+          "drum_beat_flam",
+          "drum_beat_machine",
+          "drum_beat_patter",
+          "drum_beat_plexi",
+          "drum_kit_disco",
+          "groovy_beat",
+          "groovy_alternate_beat",
+          "drum_beat_knock",
+          "reggaeton_beat",
+          "reggaeton_alternate_beat",
+          "syncopated_beat",
+          "boom_bass",
+          "funky_bass",
+          "reggaeton_bass",
+          "reggaeton_alternate_bass",
+          "bass_sub_bike",
+          "bass_sub_boat",
+          "bass_sub_bus",
+          "bass_sub_compact",
+          "bass_sub_pogo",
+          "bass_sub_saunter",
+          "bass_sub_snowshoe",
+          "bass_sub_stroll",
+          "clav_bounce",
+          "guitar_bird",
+          "guitar_cloud",
+          "guitar_funnel",
+          "guitar_high_riff",
+          "guitar_rainbow",
+          "guitar_thread",
+          "organ_walker",
+          "rhodes_bounce",
+          "rhodes_chipper",
+          "rhodes_startup",
+          "rhodes_surprise",
+          "synth_funk",
+          "blart",
+          "crash_reverse",
+          "laser",
+          "sidechain_crash",
+          "reverse_blip",
+          "strings",
+          "strings_short"
+        ],
+        "indie": [
+          "drum_beat_fan",
+          "drum_beat_jangle",
+          "drum_beat_lid",
+          "drum_beat_nod",
+          "drum_beat_ping",
+          "drum_beat_straight",
+          "drum_beat_swish",
+          "drum_beat_tap",
+          "bold_beat",
+          "bold_alternate_beat",
+          "drum_kit_indie",
+          "drum_kit_northern",
+          "acoustic_bass",
+          "acoustic_alternate_bass",
+          "bass_home_coast",
+          "bass_home_sway_down",
+          "bass_lifted_coast_down",
+          "guitar_chord_change",
+          "guitar_clean_arp",
+          "guitar_clean_phrase",
+          "guitar_clean_strum",
+          "guitar_indie_riff",
+          "guitar_lick",
+          "guitar_low_riff",
+          "guitar_octave_line",
+          "guitar_slap_line",
+          "guitar_tremolo_line",
+          "rhythm_guitar",
+          "synth_call",
+          "synth_faucet",
+          "synth_hook",
+          "synth_hope",
+          "synth_story",
+          "synth_theme",
+          "crash_build",
+          "crunch",
+          "hey",
+          "hey_short",
+          "rustle",
+          "scratch",
+          "swipe",
+          "swipe_short"
+        ],
+        "pop": [
+          "drum_beat_action",
+          "drum_beat_cosmos",
+          "drum_kit_dizzy",
+          "drum_kit_jumpy",
+          "drum_beat_pump",
+          "drum_beat_relax",
+          "drum_beat_salt",
+          "drum_kit_pop",
+          "shake_beat",
+          "sugar_beat",
+          "drum_kit_surf",
+          "sugar_alternate_beat",
+          "bass_eel",
+          "bass_flounder",
+          "bass_glider",
+          "bass_home_steady",
+          "bass_jelly",
+          "bass_lifted_steady_1",
+          "bass_lifted_steady_2",
+          "bass_raised_steady",
+          "bass_runner",
+          "bass_shake",
+          "bass_whale",
+          "sub_bass_wave",
+          "guitar_clean_line",
+          "guitar_drive_line",
+          "guitar_funky_wah",
+          "guitar_plastic_line",
+          "guitar_short_phrase",
+          "guitar_slap_phrase",
+          "guitar_stabs",
+          "piano_announcement",
+          "piano_ascot",
+          "piano_darts",
+          "piano_greeting",
+          "piano_plink",
+          "piano_run",
+          "blip",
+          "clap",
+          "clap_short",
+          "clunk",
+          "phase_elevator",
+          "rainstick",
+          "swoosh"
+        ],
+        "hiphop": [
+          "drum_beat_808",
+          "drum_beat_bounce",
+          "relaxed_alternate_beat",
+          "drum_beat_cuts",
+          "hats_beat",
+          "drum_beat_knock",
+          "drum_beat_lofi",
+          "relaxed_beat",
+          "drum_beat_slow",
+          "sub_beat",
+          "drum_beat_trap",
+          "vinyl_beat",
+          "bass_flow",
+          "bass_fly",
+          "bass_stress",
+          "bass_sub_bathrobe",
+          "bass_sub_bracelet",
+          "bass_sub_button_down",
+          "bass_sub_hoodie",
+          "bass_sub_jacket",
+          "bass_sub_jogger",
+          "bass_sub_jumpsuit",
+          "bass_sub_tank",
+          "bass_trip",
+          "guitar_fit",
+          "guitar_pocket",
+          "horns",
+          "piano_chords",
+          "piano_clout",
+          "piano_fresh",
+          "piano_round",
+          "piano_slice",
+          "piano_warble",
+          "string_burst",
+          "synth_brass",
+          "synth_whistle",
+          "brass",
+          "brass_short",
+          "dark_sweep_crash",
+          "dive",
+          "kick_impact",
+          "bubble",
+          "vibraslap"
+        ],
+        "rock": [
+          "arena_beat",
+          "arena_alternate_beat",
+          "drum_kit_basement",
+          "drum_kit_can",
+          "drum_kit_crash",
+          "drum_kit_crusher",
+          "gutter_beat",
+          "drum_kit_hands",
+          "drum_kit_interlude",
+          "punk_beat",
+          "punk_alternate_beat",
+          "drum_kit_roll",
+          "amped_bass",
+          "bass_chonk",
+          "bass_down_steady_up",
+          "bass_freeze",
+          "bass_fuzz_climb",
+          "bass_fuzz_drop",
+          "bass_fuzz_slide",
+          "bass_fuzz_wave",
+          "bass_hook",
+          "bass_jam",
+          "bass_lifted_steady_up",
+          "amped_alternate_bass",
+          "ghost_choir",
+          "guitar_buzz_riff",
+          "riff_guitar",
+          "guitar_fast_chop",
+          "guitar_high_riff",
+          "power_guitar",
+          "guitar_punctuation",
+          "shredded_guitar",
+          "guitar_tag",
+          "organ_grind",
+          "piano_fuzz",
+          "synth_drive",
+          "synth_fuzz_blip",
+          "synth_screech",
+          "crash",
+          "feedback",
+          "gong",
+          "pick_scrape",
+          "stomp",
+          "stomp_short",
+          "trashy_crash"
+        ]
+      }
+    },
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": false,
+      "playerTitle": "Example"
+    },
+    "encrypted_exemplar_sources": "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\nUZFcf4qx0tGwSlIPMN/Pv2QWi2QTtn4=\n",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "display_name": "Scars to your Beautiful",
+    "long_instructions": "### No Better Life\r\n\r\n**Define:** A remix artist has asked you to create backing beats for the vocals in *Scars to Your Beautiful*. The vocals come in every 4 measures, and the backing track should sound the same each time. Your job is to write reusable code using a function to keep everything organized.\r\n\r\n**Prepare:** Think about how to build a short backing track that fits within 4 measures with the vocals coming in at the end. Listen to the example below for what this could sound like! You'll write this once, then reuse it throughout the song using a function.\r\n\r\n![](https://images.code.org/b924c130b701a7694b6f0c9ece0c95b3-image-1744949088288.png)\r\n\r\n**Try:** Write a function that includes your 4-measure backing track. Then, call your function 3 different times so that the backing plays each time a new vocal section begins.\r\n<div style=\"background:#ebe8f1; border: 0; border-radius: 10px; clear:both; padding: 5px\">\r\n\r\nNeed some help? Try the [<i class=\"fa-solid fa-book\"></i> Docs](#clickable=documentation-button) in the upper-right corner!\r\n\r\n</div>\r\n\r\n**Reflect:** Did each vocal track line up with the same backing track? How did using a function make your code easier to manage? In order to complete this level, your remix must include:\r\n\r\n- One function that defines the backing track\r\n- The function called 3 different times in your code\r\n- Vocals that come in every 4 measures",
+    "bubble_choice_description": "A remix artist has asked you to create your own backing beats to go with the vocals for Scars to your Beautiful.",
+    "validations": [
+      {
+        "key": "music-lab-functions-practice-practiceA_9a54edbb-b098-4e80-857a-1f99a6eaaef8",
+        "message": "It looks like you've defined too many functions! You only need 1 function in your code!",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "procedures_defnoreturn:2"
+          }
+        ]
+      },
+      {
+        "key": "music-lab-functions-practice-practiceA_550ed0f7-ec9c-415e-bbae-c486096585a9",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot says: \"You Did It!\"",
+        "next": true,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "procedures_callnoreturn:3"
+          },
+          {
+            "name": "played_anything_in_same_function",
+            "value": 3
+          }
+        ]
+      },
+      {
+        "key": "music-lab-functions-practice-practiceA_20bff387-4c4e-483f-817d-8808097abd99",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is listening to your song...",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "procedures_callnoreturn:3"
+          }
+        ]
+      },
+      {
+        "key": "music-lab-functions-practice-practiceA_e1672ede-b992-4964-9197-a445687e2e56",
+        "message": "You need to call the same function 3 times!",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "procedures_callnoreturn:1"
+          }
+        ]
+      },
+      {
+        "key": "music-lab-functions-practice-practiceA_80b47b98-74b5-44ac-82ac-9c647ff1f0b5",
+        "message": "Make sure you call a function!",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "name_suffix": "_v2",
+    "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/alessia_cara_scars_to_your_beautiful/alessia_cara_scars_to_your_beautiful.jpg",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-05-31T03:00:57.837+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-practice-practiceA\\\"\"],\"cloned_from\":\"music-lab-functions-practice-practiceA\"},{\"changed_at\":\"2025-06-12 21:10:02 +0000\",\"changed\":[\"predict_settings\",\"display_name\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-25 18:53:25 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-30 16:47:48 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

@@ -1,6 +1,8 @@
 import Modal from '@code-dot-org/component-library/modal';
 import React, {useState} from 'react';
 
+import lab2I18n from '@cdo/apps/lab2/locale';
+
 import FileIcon from './FileIcon';
 import {DialogAlert, Loading} from './shared';
 import {AssetData, CommonProps, DialogProps} from './types';
@@ -41,13 +43,13 @@ const SelectAssetsDialog: React.FC<DialogProps & SelectProps> = ({
     <Modal
       id="starter-assets-dialog"
       onClose={onClose}
-      title={'Library'}
+      title={lab2I18n.library()}
       primaryButtonProps={{
-        text: 'Open',
+        text: lab2I18n.attach(),
         onClick: primaryOnClick,
         disabled: selectedFiles.length === 0,
       }}
-      secondaryButtonProps={{text: 'Cancel', onClick: onClose}}
+      secondaryButtonProps={{text: lab2I18n.cancel(), onClick: onClose}}
       customContent={
         loading ? (
           <Loading />

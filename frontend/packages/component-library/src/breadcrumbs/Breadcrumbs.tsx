@@ -3,13 +3,13 @@ import {Fragment} from 'react';
 
 import {ComponentSizeXSToL} from '@/common/types';
 import FontAwesomeV6Icon from '@/fontAwesomeV6Icon';
-import Link, {LinkWithText} from '@/link';
+import Link, {LinkProps} from '@/link';
 
 import moduleStyles from './breadcrumbs.module.scss';
 
 export interface BreadcrumbsProps {
   /** List of Breadcrumbs to render */
-  breadcrumbs: LinkWithText[];
+  breadcrumbs: LinkProps[];
   /** Breadcrumbs name */
   name: string;
   /** Size of Breadcrumbs */
@@ -18,6 +18,8 @@ export interface BreadcrumbsProps {
   className?: string;
   /** Whether to show the home icon at the start */
   showHomeIcon?: boolean;
+  /** Home icon link */
+  homeIconHref?: string;
 }
 
 /**
@@ -28,10 +30,10 @@ export interface BreadcrumbsProps {
  * * (see ./__tests__/Breadcrumbs.test.tsx)
  * * (?) passes accessibility checks;
  *
- * ###  Status: ```Ready for dev```
+ * ### Status: ```Ready for dev```
  *
  * Design System: Breadcrumbs Component.
- * Can be used to render Breadcrumbs or as a part of bigger/more complex components (e.g. forms).
+ * It Can be used to render Breadcrumbs or as a part of bigger/more complex components (e.g. forms).
  */
 const Breadcrumbs: React.FunctionComponent<BreadcrumbsProps> = ({
   breadcrumbs,
@@ -39,6 +41,7 @@ const Breadcrumbs: React.FunctionComponent<BreadcrumbsProps> = ({
   size = 'm',
   className,
   showHomeIcon = false,
+  homeIconHref = '/',
 }) => {
   return (
     <div
@@ -47,13 +50,11 @@ const Breadcrumbs: React.FunctionComponent<BreadcrumbsProps> = ({
         moduleStyles[`breadcrumbs-${size}`],
         className,
       )}
-      // TODO [Design2-197] - Create a visual test for this case instead of checking for class name
-
       data-testid={`breadcrumbs-${name}`}
     >
       {showHomeIcon && (
         <>
-          <Link href="/" className={moduleStyles.breadcrumb}>
+          <Link href={homeIconHref} className={moduleStyles.breadcrumb}>
             <FontAwesomeV6Icon
               iconName="house"
               className={moduleStyles.homeIcon}
@@ -63,11 +64,10 @@ const Breadcrumbs: React.FunctionComponent<BreadcrumbsProps> = ({
           <FontAwesomeV6Icon iconName="chevron-right" />
         </>
       )}
-      {breadcrumbs.map(({text, href, ...rest}, i) => (
-        <Fragment key={`${text}-${href}`}>
+      {breadcrumbs.map(({href, ...rest}, i) => (
+        <Fragment key={href}>
           <Link
             {...rest}
-            text={text}
             href={href}
             className={classNames(moduleStyles.breadcrumb, rest.className)}
             disabled={i === breadcrumbs.length - 1}

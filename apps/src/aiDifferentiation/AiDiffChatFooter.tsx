@@ -16,6 +16,7 @@ interface AiDiffChatFooterProps {
   messages: ChatItem[];
   waiting: boolean;
   disableEndButtons: boolean;
+  userMessageEditorRef?: React.RefObject<HTMLTextAreaElement>;
 }
 
 const AiDiffChatFooter: React.FC<AiDiffChatFooterProps> = ({
@@ -24,10 +25,12 @@ const AiDiffChatFooter: React.FC<AiDiffChatFooterProps> = ({
   messages,
   waiting,
   disableEndButtons,
+  userMessageEditorRef,
 }) => {
   return (
     <div className={style.chatFooter}>
       <UserMessageEditor
+        ref={userMessageEditorRef}
         onSubmit={onSubmit}
         disabled={waiting}
         customPlaceholder={commonI18n.aiDifferentiation_write_message()}

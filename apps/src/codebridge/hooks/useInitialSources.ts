@@ -1,7 +1,10 @@
-import {getNextFileId} from '@codebridge/codebridgeContext';
 import {DEFAULT_FOLDER_ID, MAZE_FILE_NAME} from '@codebridge/constants';
 import {CodebridgeLevelProperties, MazeCell} from '@codebridge/types';
-import {combineStartSourcesAndValidation, findFile} from '@codebridge/utils';
+import {
+  combineStartSourcesAndValidation,
+  findFile,
+  repairOpenFiles,
+} from '@codebridge/utils';
 import {useCallback, useMemo} from 'react';
 
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
@@ -15,6 +18,7 @@ import {
   ProjectFileType,
   ProjectSources,
 } from '@cdo/apps/lab2/types';
+import {getNextFileId} from '@cdo/apps/lab2/utils/multiFileSourceUtils';
 /**
  * Custom hook that determines the initial sources for the current level.
  * It selects various sources including from the student's project, the start sources
@@ -37,14 +41,10 @@ export const useInitialSources = (
 ) => {
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
   const exemplarSources = levelProperties.exemplarSources as MultiFileSource;
-  const {
-    serializedMaze,
-    miniApp,
-    validationFile,
-    startSources,
-    templateSources,
-    predictSettings,
-  } = levelProperties;
+  const startSources = levelProperties.startSources as MultiFileSource;
+  const templateSources = levelProperties.templateSources as MultiFileSource;
+  const {serializedMaze, miniApp, validationFile, predictSettings} =
+    levelProperties;
 
   const generateMazeFile = (mazeContents: MazeCell[][], fileId: string) => {
     return {
@@ -56,6 +56,19 @@ export const useInitialSources = (
       folderId: DEFAULT_FOLDER_ID,
     };
   };
+
+  const repairedServerSource = useMemo(() => {
+    // We have some old sources that may have an "active" file that is not in the list
+    // of open files, due to duplication of the open property between the file and the openFiles array.
+    // We repair this by ensuring the open files list contains the active file.
+    if (initialServerSource) {
+      return {
+        ...initialServerSource,
+        source: repairOpenFiles(initialServerSource.source as MultiFileSource),
+      };
+    }
+    return initialServerSource;
+  }, [initialServerSource]);
 
   const generateProjectSourceFromStartSource = useCallback(
     (startCode: MultiFileSource) => {
@@ -73,6 +86,7 @@ export const useInitialSources = (
           },
         };
       }
+      startCode = repairOpenFiles(startCode);
 
       const source = isStartMode
         ? combineStartSourcesAndValidation(startCode, validationFile)
@@ -164,7 +178,7 @@ export const useInitialSources = (
       return templateSources || startSources;
     }
 
-    const projectSources = initialServerSource;
+    const projectSources = repairedServerSource;
     return projectSources || templateSources || startSources;
   }, [
     levelStartSources,
@@ -175,7 +189,7 @@ export const useInitialSources = (
     predictSettings?.codeEditableAfterSubmit,
     isEditingExemplar,
     isViewingExemplar,
-    initialServerSource,
+    repairedServerSource,
     exemplarSources,
     serializedMaze,
   ]);

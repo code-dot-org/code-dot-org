@@ -1,0 +1,204 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2025-07-08T18:21:21.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "### Create an Offbeat Song\r\n\r\nUse what you know about loops and rests to recreate this timeline using the sounds you are given. \r\n\r\n![](https://images.code.org/51754e7878d3a9bff3359312e0b66c4b-image-1743906449049.png)\r\n\r\n::: details [**Want an additional hint? Click here**]\r\n\r\nHere is what the final code could look like:\r\n\r\n![](https://images.code.org/0672612609baedb9ff71d75e7298015f-image-1750959110412.png)\r\n:::\r\n\r\n\r\n",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "packId": "default",
+      "sounds": {
+        "pop": [
+          "drum_kit_pop",
+          "clap_short"
+        ]
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "toolbox": {
+        "type": "flyout",
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2",
+            "play_rest_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together",
+            "repeat_simple2"
+          ]
+        }
+      },
+      "toolboxDefinition": {
+        "contents": [
+          {
+            "kind": "block",
+            "type": "play_sound_at_current_location_simple2",
+            "id": "play_sound_at_current_location_simple2",
+            "editable": false,
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "sound": "pop/clap_short"
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_rest_at_current_location_simple2",
+            "id": "play_rest_at_current_location_simple2",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "rest_duration": "<field name=\"rest_duration\">1</field>"
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "repeat_simple2",
+            "id": "repeat_simple2",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "times": 1
+            },
+            "enabled": true
+          }
+        ],
+        "kind": "flyoutToolbox"
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "next": {
+                "block": {
+                  "type": "repeat_simple2",
+                  "id": "repeat_simple2",
+                  "deletable": false,
+                  "movable": false,
+                  "editable": false,
+                  "extraState": {
+                    "disableNextConnection": true
+                  },
+                  "fields": {
+                    "times": 4
+                  },
+                  "inputs": {
+                    "code": {
+                      "block": {
+                        "type": "play_sounds_together",
+                        "id": "play_sounds_together",
+                        "deletable": false,
+                        "movable": false,
+                        "editable": false,
+                        "extraState": {
+                          "disableNextConnection": true
+                        },
+                        "inputs": {
+                          "code": {
+                            "block": {
+                              "type": "play_sound_at_current_location_simple2",
+                              "id": "play_sound_at_current_location_simple2",
+                              "deletable": false,
+                              "movable": false,
+                              "editable": false,
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
+                              "fields": {
+                                "sound": "pop/drum_kit_pop"
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "play_sounds_sequential",
+                                  "id": "play_sounds_sequential",
+                                  "deletable": false,
+                                  "movable": false,
+                                  "editable": false,
+                                  "extraState": {
+                                    "disableNextConnection": true
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": true,
+      "playerTitle": "Offbeat Song #1",
+      "validationSuccessMessage": "You did it! The song matches the example!",
+      "validationFailureMessage": "Something's not quite right! Try listening to the example again!"
+    },
+    "encrypted_exemplar_sources": "UGYNk6iye9eaFwUY05FzzO/7y8j7ObxryFbKvBPuF528qP4MtsSFqDeG//aJ\nl0T6lfe2BzN4biKVeTvfD80/YL+3G5Bj3YmNK3/UM/xNlM4UFpxqaM8r0Ju1\nAECRzcycDraxxDvwhRR3E1WGqwBVYl2igtUE+clNUhMch5zn39NedMm86QQD\nSNE/vqliphrufSGnbbJ7q2y+Nx6eM5RXJ+lZZk4sqapSH+vKD0pDXXdgOc+W\nOubeIkjQXgAlbS41Zryd0OBtFrr6KBsLWVi2pLZ9R0PHF6uouw5wEQ4idvxT\nstwijAETSaEcWfWjkRPFumWet/GOrR1SZBOOeznO+LdKDxuyh/X2eWcVj87F\nXuNtwdCXmZa2o93vBezp/KCM0TuXqsa16iLteHfBcEHIrDyH2VHgz3MDnjk7\nLxVja+Wsc1AzfNjyP2WYgGQGbNjL1oPrbuNwaTh2E1qusnGe8d8NEDm/UdTu\n7IOR/JAQRGUVMYWDZgKC7rGYBKSq88i3xPHYdUGeJzl/r0ZrGoL3wehilk8Q\nGuWGpWkCgGKpehguEFoqRGqlSaht7Y3h/BxJ4sch0fYkzuoDpd2UyI3JDuoX\nHgrXqGdIlV0/hxb0LTK8Eyf7TGiARiVQxibWkVqiWfbT7Uv1HwoPp2/LhTWp\nuDuLqUQmij/tKc2QgXIar3ECFFZ/+FpPYEuMIXAL9DYqREIkgwhZxl8sphfB\ntQKF3GnVJT0sQAUMWV4EJjwEVB/j4+JnPn4xCxLN+BQiO9Alv8JJb4U2MI8B\n+ZRM6IrwlnGf0Ms61LosQEMmssLluC4eaXyJvxtlrjfWcdupdoulOJG1RKV+\nCFUfzCC5N8mivrYyeI21WLMl6/7SN5SCWcPx68TaFkQhogQWWX5lvukPb6e2\nLEcr3ODhejkn4ieudS9rH0Yxi2+rIQN7I746AFfVu41p4fVAgx3I60KvtkA0\n70ZKy0W1XyD1/F0nJP1cXvV1OrLllxOLjQv4advP9RFlD1oviRSLYmVi/IUW\nNZbxUZqMJ+DnHGMSqwqehLFBQy64fj5mYA7vi7qxh2Y/eyWomhJ9hSkN0An4\nc6x7Q6H2OnbeJ7b7IacjybfQOj8S9WWQTzHmtwWwHTpAS4vqKHxIrZaYL4c9\nrkeyItH779e/ymdP72/9yDSV00zfOT+jpZANUBLsAAhCmItnrurN2Pg6DeXM\nbEIHYxqIsDLBFzvfuYT0oKNYznjXvxduscfCAcWfwk2GftBkfzWYGqjUmHFE\nrg7SLEA0zdodId17PB24dT88KjXB+S7pHLCA+bDh+vv+Je9t3M2jtlEhuDn1\n2tRT9VYV8AhGdkG5HSueH05aOD9hO6uz/lbXh+TNPGNjYIu2b+zvmwWWiA1Z\nXL8K9CQL+cAuQrXsi3aXszxbWLjEfiYITcRWSkt2dgw7LMHE4n9L+4WneiFE\n8ikre9Y6qs4=\n",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "validations": [
+      {
+        "key": "test-music-lab-loops-practice-offbeat-1_aa8084ec-7e2f-4117-b45e-04ed753451ac",
+        "message": "[check for 2nd repeat loop]",
+        "next": true,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "repeat_simple2:2"
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-loops-practice-offbeat-1_2854e143-e82c-4665-b3a0-0256070d8fa6",
+        "message": "Instead of using multiple rest blocks, use a loop!",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "play_rest_at_current_location_simple2:2"
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-loops-practice-offbeat-1_60743eed-92a7-4dea-bc3a-8be8a79570b8",
+        "message": "Make sure to use a total of 2 repeat blocks in your code!",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "name_suffix": "_v2",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-07-08T18:21:21.257+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-practice-offbeat-1_v2\\\"\"],\"cloned_from\":\"test-music-lab-loops-practice-offbeat-1_v2\"}]"
+}]]></config>
+  <blocks/>
+</Music>

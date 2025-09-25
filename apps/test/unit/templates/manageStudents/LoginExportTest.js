@@ -1,7 +1,6 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import LoginExport from '@cdo/apps/templates/manageStudents/LoginExport';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 
@@ -53,10 +52,10 @@ describe('LoginExport', () => {
 
   it('outputs login information for secret picture sections', () => {
     const studentData = [
-      {id: 1, name: 'studentb', secretPicturePath: 'wizard.png'},
-      {id: 3, name: 'studenta', secretPicturePath: 'ghost.png'},
-      {id: 0, name: '', secretPicturePath: ''},
-      {id: 2, name: 'studentf', secretPicturePath: 'robot.png'},
+      {id: 1, name: 'studentb', secretPictureUrl: '/wizard.png'},
+      {id: 3, name: 'studenta', secretPictureUrl: '/ghost.png'},
+      {id: 0, name: '', secretPictureUrl: ''},
+      {id: 2, name: 'studentf', secretPictureUrl: '/robot.png'},
     ];
 
     const wrapper = shallow(
@@ -74,19 +73,19 @@ describe('LoginExport', () => {
         ...DEFAULT_PROPS,
         sectionLoginType: 'picture',
         studentName: 'studentb',
-        studentLoginSecret: pegasus('/images/wizard.png'),
+        studentLoginSecret: '/wizard.png',
       },
       {
         ...DEFAULT_PROPS,
         sectionLoginType: 'picture',
         studentName: 'studenta',
-        studentLoginSecret: pegasus('/images/ghost.png'),
+        studentLoginSecret: '/ghost.png',
       },
       {
         ...DEFAULT_PROPS,
         sectionLoginType: 'picture',
         studentName: 'studentf',
-        studentLoginSecret: pegasus('/images/robot.png'),
+        studentLoginSecret: '/robot.png',
       },
     ]);
   });

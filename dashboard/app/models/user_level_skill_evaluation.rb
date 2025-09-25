@@ -33,7 +33,7 @@ class UserLevelSkillEvaluation < StudentWorkEvaluation
   validates :student_id, presence: true
   validates :level_id, presence: true
   validates :unit_id, presence: true
-  # TODO: Add validation for skill_id
+  validates :skill_id, presence: true
 
   has_one :student_work_evaluation_summary,
            foreign_key: :student_work_evaluation_id,

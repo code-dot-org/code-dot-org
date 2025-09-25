@@ -1,24 +1,167 @@
-@import '@code-dot-org/component-library-styles/primitiveColors';
+@use '@code-dot-org/component-library-styles/colors';
 
-.workshopCatalog {
+@mixin inline-detail-p {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.38rem;
+  align-items: baseline;
+  margin: 0;
+}
+
+$max-width: 60rem;
+$tablet-breakpoint: 1023px;
+$mobile-padding: 4rem 1.5rem;
+
+.workshopMarketingPage {
   background-color: var(--background-neutral-secondary);
-
-  section {
-    padding-block: 4rem;
-  }
   
-  .headerContainer {
-    max-width: 60em;
+  .header {
+    max-width: $max-width;
     margin: 0 auto;
+    padding-block: 4rem;
+
+    .headerBreadcrumbs {
+      flex-wrap: wrap;
+      margin-bottom: 0.5rem;
+    }
+
+    h1 {
+      margin: 0;
+    }
   }
 
-  .bodyContainer {
-    background-color: var(--neutral-base-white);
-    border-top: 1px solid var(--neutral-gray-20);
+  .bodyWrapper {
+    background-color: var(--background-neutral-primary);
+    border-top: 1px solid var(--borders-neutral-primary);
 
-    .workshopInfoContainer {
-      max-width: 60em;
+    .bodyContainer {
+      max-width: $max-width;
       margin: 0 auto;
+      display: flex;
+      gap: 2.5rem;
+      padding-block: 4rem;
+
+      h2, h3, p {
+        margin: 0;
+      }
+
+      .workshopDetails {
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+
+        .workshopUnderHeadingDetails {
+          display: flex;
+          align-items: flex-start;
+          align-content: flex-start;
+          gap: 0.5rem 1rem;
+          align-self: stretch;
+          flex-wrap: wrap;
+
+          p {
+            @include inline-detail-p;
+          }
+        }
+
+        hr {
+          width: 100%;
+          margin: 0;
+          border-color: var(--borders-neutral-primary);
+        }
+
+        .workshopDetailsItem {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 0.5rem;
+          align-self: stretch;
+
+          &:first-child {
+            gap: 1.12rem;
+          }
+
+          .plTopicsTags {
+            flex-wrap: wrap;
+            gap: 0.375rem;
+
+            & > div {
+              max-width: unset;
+            }
+          }
+
+          li {
+            margin: 0;
+          }
+        }
+      }
+
+      .sidebar {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 1rem;
+
+        .card {
+          display: flex;
+          padding: 1.25rem;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 0.75rem;
+          align-self: stretch;
+          border-radius: 0.25rem;
+          border: 1px solid var(--borders-neutral-primary);
+          background: var(--background-neutral-secondary);
+
+          .internalEnrollButton {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+
+            .userPassport {
+              width: 100%;
+
+              > div {
+                background-color: var(--neutral-base-white);
+              }
+            }
+          }
+
+          .underCardHeadingDetails {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.5rem;
+            align-self: stretch;
+
+            p {
+              @include inline-detail-p;
+            }
+          }
+        }
+
+        .fullWidthButton {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    .header, .bodyContainer {
+      padding: $mobile-padding;
+    }
+
+    .bodyContainer {
+      flex-direction: column;
+    }
+
+    .sidebar {
+      width: 100%;
     }
   }
 }

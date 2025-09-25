@@ -8,6 +8,10 @@
       "curriculum_umbrella": "CSF",
       "is_migrated": true,
       "show_calendar": true,
+      "supported_locales": [
+        "es-MX",
+        "es-ES"
+      ],
       "topic_tags": [
         "ai",
         "data_science"
@@ -17,7 +21,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-03 01:05:47 UTC",
+    "serialized_at": "2025-08-14 16:18:31 UTC",
+    "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

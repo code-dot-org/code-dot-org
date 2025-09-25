@@ -25,8 +25,8 @@ class TransfersControllerTest < ActionController::TestCase
       stay_enrolled_in_current_section: true
     }
 
-    @other_teacher = create :teacher
-    @other_teacher_section = create :section, user: @other_teacher, login_type: 'word'
+    @other_teacher = create(:teacher)
+    @other_teacher_section = create(:section, user: @other_teacher, login_type: 'word')
 
     @pl_email_section = create(:section, :teacher_participants, user: @facilitator)
   end

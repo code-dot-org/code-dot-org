@@ -1,0 +1,58 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-07-02T14:15:27.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "### Music Lab\n\nMusic Lab has 2 key areas for making songs:\n- **Toolbox:** these are the blocks you can use to complete a level\n- **Workspace:** This is where the code for your song goes!\n\nYou create music by dragging blocks from the toolbox into the workspace!\n",
+        "imageUrl": "https://images.code.org/7650cc7d736cb6c7605a8018fe28f980-overview-1c.png",
+        "key": "test-music-lab-sequences-practice-play-sequential-panel-77c61549-a2c5-4165-a211-283d47d9b82a",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "### Selecting Sounds\n\nThe `play` block lets you choose sounds to use in your song:\n\n<span style=\"padding: 2px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 2px; white-space: nowrap;\"> <i class=\"fa-solid fa-drum\" style=\"color: #E565F5; margin-right: 2px\"></i> Beat </span> - the pulse of the music that makes you want to tap your foot or nod your head.\n\n<span style=\"padding: 2px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 2px; white-space: nowrap;\"> <i class=\"fa-solid fa-boombox\" style=\"color: #58BEF9; margin-right: 2px\"></i> Bass </span> - the low, deep sounds in a song that makes the music feel full and powerful.\n\n<span style=\"padding: 2px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 2px; white-space: nowrap;\"> <i class=\"fa-solid fa-guitars\" style=\"color: #64D25A; margin-right: 2px\"></i> Lead </span> - the main tune of the song that you'd most likely hum along to, often played by guitars or synths.\n\n<span style=\"padding: 2px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 2px; white-space: nowrap;\"> <i class=\"fa-solid fa-waveform\" style=\"color: #F3DF55; margin-right: 2px\"></i> Effect </span> - a special sound for extra flavor, excitement, or to create a specific mood.\n\n<span style=\"padding: 2px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 2px; white-space: nowrap;\"> <i class=\"fa-solid fa-microphone-stand\" style=\"color: #F99258; margin-right: 2px\"></i> Vocal </span> - the part of the song that is sung by a person.\n\n",
+        "imageUrl": "https://images.code.org/d89f0682b08cbb4541a2dee5ea5fb9f6-overview-2c.png",
+        "key": "test-music-lab-sequences-practice-play-sequential-panel-44ddc497-1a7a-4252-a306-a19ab550d8cf",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "### Tracks\n\nAfter you pick a sound, it will appear in the timeline as its own **track**. The color of the sounds match the colors of your tracks.\n\n---\n\n<i class=\"fa-solid fa-pencil\"></i> A **track** is a single layer of sound in a song. When you add a play block to your code, a new track is created for the sound.",
+        "imageUrl": "https://images.code.org/a644f740017c0412f1f4e52b41bb00eb-overview-4d.png",
+        "key": "test-music-lab-sequences-explore-play-sequential-overviewpanel_v2-7a8a8c6f-7428-456d-b4a8-1463a42d1f1a",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "### Timing\n\nYou can also see how many **measures** the sound is. This helps you plan how sounds will fit together in the **timeline** on the bottom of the screen\n\n---\n\n<i class=\"fa-solid fa-pencil\"></i> A **measure** is a small segment of music that contains a specific number of beats, usually 4 in pop music.",
+        "imageUrl": "https://images.code.org/0464105b260714c73073d22ade8823c2-overview-4e.png",
+        "key": "test-music-lab-sequences-practice-play-sequential-panel-08943d00-a581-4880-acd6-de0970d8529d",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "### Adjust The Workspace\n\nYou can use the Zoom In / Zoom Out features of your browser to adjust how Music Lab fits on your screen. This can make it easier to see your code or read the instructions. \n",
+        "imageUrl": "https://images.code.org/a08216a92e0f72af87fd1b669c9ef855-zoom.gif",
+        "key": "test-music-lab-sequences-practice-play-sequential-panel-bf0bbc9c-45a8-4461-b394-d279f7547c56",
+        "fadeInOverPrevious": true,
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "Key Takeaway: Use play blocks to build your song with different sounds. Each sound has a different length, which determines how long the track appears on the timeline.",
+        "imageUrl": "https://images.code.org/04a5b1fa7c381840319958686116fb20-overview-6.png",
+        "key": "test-music-lab-sequences-practice-play-sequential-panel-c846fce5-8889-4bff-8a48-f717d5302c15",
+        "typing": true,
+        "fadeInOverPrevious": true
+      }
+    ],
+    "bubble_choice_description": "Review how to use Play Sequential when creating songs",
+    "display_name": "Play Sequential",
+    "name_suffix": "_v2",
+    "thumbnail_url": "https://images.code.org/7b4d46640230aa16863cc2819604d75e-Screenshot 2025-04-02 at 7.41.41 AM.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-07-02T14:15:27.688+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-practice-play-sequential-panel_v2\\\"\"],\"cloned_from\":\"test-music-lab-sequences-practice-play-sequential-panel_v2\"},{\"changed_at\":\"2025-07-02 14:21:03 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-07-02 14:27:18 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-07-02 14:58:41 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-07-02 18:03:36 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-07-02 18:06:34 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-07-02 18:10:59 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-07-02 18:11:47 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-07-02 19:03:47 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-07-02 19:04:23 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-07-02 19:27:04 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-07-02 19:35:23 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-07-02 19:36:35 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-07-02 19:40:10 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-07-02 20:39:00 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-07-02 21:55:38 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+</Panels>

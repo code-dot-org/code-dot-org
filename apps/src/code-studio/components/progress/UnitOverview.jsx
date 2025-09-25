@@ -152,6 +152,7 @@ class UnitOverview extends React.Component {
       courseVersionId,
       courseId,
       isProfessionalLearningCourse,
+      isSingleUnitCourse,
       publishedState,
       participantAudience,
       showAiAssessmentsAnnouncement,
@@ -202,6 +203,7 @@ class UnitOverview extends React.Component {
               viewAs={viewAs}
               showAssignButton={showAssignButton}
               courseOfferingId={courseOfferingId}
+              isSingleUnitCourse={isSingleUnitCourse}
               currentCourseId={courseId}
               scriptId={scriptId}
               participantAudience={participantAudience}
@@ -224,7 +226,6 @@ class UnitOverview extends React.Component {
           <UnitOverviewTopRow
             teacherResources={teacherResources}
             studentResources={studentResources}
-            showAssignButton={showAssignButton}
             assignedSectionId={assignedSectionId}
             showCalendar={showCalendar}
             weeklyInstructionalMinutes={weeklyInstructionalMinutes}
@@ -232,8 +233,6 @@ class UnitOverview extends React.Component {
             isMigrated={isMigrated}
             scriptOverviewPdfUrl={scriptOverviewPdfUrl}
             scriptResourcesPdfUrl={scriptResourcesPdfUrl}
-            courseOfferingId={courseOfferingId}
-            courseVersionId={courseVersionId}
             isProfessionalLearningCourse={isProfessionalLearningCourse}
             courseLink={this.props.courseLink}
             publishedState={publishedState}

@@ -11,7 +11,8 @@ type SemanticTag =
   | 'strong'
   | 'em'
   | 'figcaption'
-  | 'span';
+  | 'span'
+  | 'div';
 
 type VisualAppearance =
   | 'heading-xxl'
@@ -42,6 +43,8 @@ interface TypographyElementProps {
   // Text or other elements to render inside the typography element
   children: React.ReactNode;
   id?: string;
+  // Removes the typography element margins
+  noMargin?: boolean;
 }
 
 export {SemanticTag, VisualAppearance, TypographyElementProps};

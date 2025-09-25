@@ -1,5 +1,4 @@
-import {useTheme} from '@code-dot-org/component-library/common/contexts';
-import {Heading2} from '@code-dot-org/component-library/typography';
+import Typography from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -17,7 +16,7 @@ interface PanelContainerProps {
 }
 
 /**
- * A container for a top-level panel with a header.  The content of the panel
+ * A container for a top-level panel, typically with a header.  The content of the panel
  * is provided as children.  Whether the header is shown is determined by an
  * external state value.  The panel container always occupies the full size of
  * its parent; this means that the main scene is responsible for allocating
@@ -33,8 +32,6 @@ const PanelContainer: React.FunctionComponent<PanelContainerProps> = ({
   className,
   headerClassName,
 }) => {
-  const {theme} = useTheme();
-
   return (
     <div
       className={classNames(
@@ -49,7 +46,6 @@ const PanelContainer: React.FunctionComponent<PanelContainerProps> = ({
           className={classNames(
             'panelContainerHeader',
             moduleStyles.panelContainerHeader,
-            moduleStyles[`panelContainerHeader${theme}`],
             headerClassName
           )}
         >
@@ -62,24 +58,21 @@ const PanelContainer: React.FunctionComponent<PanelContainerProps> = ({
           >
             {leftHeaderContent}
           </div>
-
-          <Heading2
+          <Typography
+            semanticTag="h2"
+            visualAppearance="overline-two"
             className={classNames(
               'panelContainerHeaderItemText',
               moduleStyles.panelContainerHeaderItem,
               moduleStyles.panelContainerHeaderItemCenter
             )}
-            visualAppearance={'body-three'}
           >
             <span
-              className={classNames(
-                moduleStyles.panelContainerHeaderItemText,
-                moduleStyles[`panelContainerHeaderItemText${theme}`]
-              )}
+              className={classNames(moduleStyles.panelContainerHeaderItemText)}
             >
               {headerContent}
             </span>
-          </Heading2>
+          </Typography>
           <div
             className={classNames(
               'panelContainerHeaderItemRight',

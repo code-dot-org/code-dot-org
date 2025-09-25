@@ -1,0 +1,76 @@
+@use '@code-dot-org/component-library-styles/colors';
+@use '@code-dot-org/component-library-styles/mixins' as mixins;
+
+$tablet-breakpoint: 1023px;
+
+.workshopFacilitatorsList {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  .workshopFacilitatorItem {
+    display: flex;
+    padding: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+    border-radius: 0.25rem;
+    border: 1px solid var(--borders-neutral-primary);
+    background: var(--background-neutral-secondary);
+
+    .workshopFacilitatorItemHeader {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      align-self: stretch;
+
+      .workshopFacilitatorContactImage {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 2.625rem;
+        height: 2.625rem;
+        background: var(--background-neutral-quaternary);
+        border-radius: 50%;
+
+        figure {
+          border-radius: 50%;
+        }
+      }
+
+      .workshopFacilitatorContactInfo {
+        flex: 1;
+        overflow: hidden;
+
+        p {
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+
+    .workshopFacilitatorItemBio {
+      @include mixins.transition-all;
+      margin-top: 0.75rem;
+      margin-inline-start: 3.375rem;
+      height: auto;
+      opacity: 1;
+
+      &.hidden {
+        margin-top: 0;
+        height: 0;
+        opacity: 0;
+        overflow: hidden;
+      }
+    }
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    .showBioButton {
+      span {
+        display: none;
+      }
+    }
+  }
+}

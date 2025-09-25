@@ -12,6 +12,7 @@ markdown <<MARKDOWN
 * #### **Option B** is best if you are not limited on time, teach multiple grades, or do not know which course you will teach.
 
 
+
 ## Option A
 #### Use the table below to go on to the next lesson and computer science concept that is part of the course you plan to teach.  Click the next lesson listed in the table for the course of your choice.
 
@@ -48,53 +49,53 @@ markdown <<MARKDOWN
   <tr>
     <td style="background-color:#f9cb9c; color:black; border-style:none; vertical-align: text-top;"">
       <ul style="font-style:italic;">
-        <li> <a href="https://studio.code.org/s/k5-onlinepd-2025/lessons/4/levels/1" target="blank" > Lesson 4: Sequencing </a> </li>
-        <li><a href="https://studio.code.org/s/k5-onlinepd-2025/lessons/6/levels/1" target="blank" >Lesson 6: Loops </a></li>
-        <li><a href="https://studio.code.org/s/k5-onlinepd-2025/lessons/7/levels/1" target="blank" >Lesson 7: Events </a></li>
-        <li><a href="https://studio.code.org/s/k5-onlinepd-2025/lessons/11/levels/1" target="blank" >Lesson 11: End of Course Projects</a> </li>
+        <li> <a href="https://studio.code.org/courses/teaching-csf-2025/units/1/lessons/4/levels/1" target="blank" > Lesson 4: Sequencing </a> </li>
+        <li><a href="https://studio.code.org/courses/teaching-csf-2025/units/1/lessons/6/levels/1" target="blank" >Lesson 6: Loops </a></li>
+        <li><a href="https://studio.code.org/courses/teaching-csf-2025/units/1/lessons/7/levels/1" target="blank" >Lesson 7: Events </a></li>
+        <li><a href="https://studio.code.org/courses/teaching-csf-2025/units/1/lessons/11/levels/1" target="blank" >Lesson 11: End of Course Projects</a> </li>
       </ul>
     </td>
     <td style="background-color:#ffe599; color:black; border-style:none; vertical-align: text-top;"">
       <ul style="font-style:italic;">
-        <li><a href="https://studio.code.org/s/k5-onlinepd-2025/lessons/4/levels/1" target="blank" > Lesson 4: Sequencing </a></li>
-        <li><a href="https://studio.code.org/s/k5-onlinepd-2025/lessons/6/levels/1" target="blank" >Lesson 6: Loops </a></li>
-        <li><a href="https://studio.code.org/s/k5-onlinepd-2025/lessons/7/levels/1" target="blank" >Lesson 7: Events </a></li>
-        <li><a href="https://studio.code.org/s/k5-onlinepd-2025/lessons/11/levels/1" target="blank" >Lesson 11: End of Course Projects</a> </li>
+        <li><a href="https://studio.code.org/courses/teaching-csf-2025/units/1/lessons/4/levels/1" target="blank" > Lesson 4: Sequencing </a></li>
+        <li><a href="https://studio.code.org/courses/teaching-csf-2025/units/1/lessons/6/levels/1" target="blank" >Lesson 6: Loops </a></li>
+        <li><a href="https://studio.code.org/courses/teaching-csf-2025/units/1/lessons/7/levels/1" target="blank" >Lesson 7: Events </a></li>
+        <li><a href="https://studio.code.org/courses/teaching-csf-2025/units/1/lessons/11/levels/1" target="blank" >Lesson 11: End of Course Projects</a> </li>
       </ul>
     </td>
     <td style="background-color:#d2da0e; color:black; border-style:none; vertical-align: text-top;"">
       <ul style="font-style:italic;">
-        <li><a href="https://studio.code.org/s/k5-onlinepd-2025/lessons/4/levels/1" target="blank" > Lesson 4: Sequencing </a></li>
-        <li><a href="https://studio.code.org/s/k5-onlinepd-2025/lessons/6/levels/1" target="blank" >Lesson 6: Loops </a></li>
-        <li><a href="https://studio.code.org/s/k5-onlinepd-2025/lessons/7/levels/1" target="blank" >Lesson 7: Events </a></li>
-       <li><a href="https://studio.code.org/s/k5-onlinepd-2025/lessons/11/levels/1" target="blank" >Lesson 11: End of Course Projects</a> </li>
+        <li><a href="https://studio.code.org/courses/teaching-csf-2025/units/1/lessons/4/levels/1" target="blank" > Lesson 4: Sequencing </a></li>
+        <li><a href="https://studio.code.org/courses/teaching-csf-2025/units/1/lessons/6/levels/1" target="blank" >Lesson 6: Loops </a></li>
+        <li><a href="https://studio.code.org/courses/teaching-csf-2025/units/1/lessons/7/levels/1" target="blank" >Lesson 7: Events </a></li>
+       <li><a href="https://studio.code.org/courses/teaching-csf-2025/units/1/lessons/11/levels/1" target="blank" >Lesson 11: End of Course Projects</a> </li>
       </ul>
     </td>
     <td style="background-color:#68ebf5; color:black; border-style:none; vertical-align: text-top;"">
       <ul style="font-style:italic;">
-        <li><a href="https://studio.code.org/s/k5-onlinepd-2025/lessons/4/levels/1" target="blank" > Lesson 4: Sequencing </a></li>
-        <li><a href="https://studio.code.org/s/k5-onlinepd-2025/lessons/6/levels/1" target="blank" >Lesson 6: Loops </a></li>
-        <li><a href="https://studio.code.org/s/k5-onlinepd-2025/lessons/7/levels/1" target="blank" >Lesson 7: Events </a></li>
-        <li><a href="https://studio.code.org/s/k5-onlinepd-2025/lessons/8/levels/1" target="blank" >Lesson 8: Conditionals</a></li>
-       <li><a href="https://studio.code.org/s/k5-onlinepd-2025/lessons/11/levels/1" target="blank" >Lesson 11: End of Course Projects</a> </li>
+        <li><a href="https://studio.code.org/courses/teaching-csf-2025/units/1/lessons/4/levels/1" target="blank" > Lesson 4: Sequencing </a></li>
+        <li><a href="https://studio.code.org/courses/teaching-csf-2025/units/1/lessons/6/levels/1" target="blank" >Lesson 6: Loops </a></li>
+        <li><a href="https://studio.code.org/courses/teaching-csf-2025/units/1/lessons/7/levels/1" target="blank" >Lesson 7: Events </a></li>
+        <li><a href="https://studio.code.org/courses/teaching-csf-2025/units/1/lessons/8/levels/1" target="blank" >Lesson 8: Conditionals</a></li>
+       <li><a href="https://studio.code.org/courses/teaching-csf-2025/units/1/lessons/11/levels/1" target="blank" >Lesson 11: End of Course Projects</a> </li>
       </ul>
     </td>
     <td style="background-color:#9ed7ed; color:black; border-style:none; vertical-align: text-top;"">
       <ul style="font-style:italic;">
-        <li><a href="https://studio.code.org/s/k5-onlinepd-2025/lessons/5/levels/1" target="blank" >Lesson 5: Sequencing with Sprites </a></li>
-        <li><a href="https://studio.code.org/s/k5-onlinepd-2025/lessons/6/levels/1" target="blank" >Lesson 6: Loops </a></li>
-         <li><a href="https://studio.code.org/s/k5-onlinepd-2025/lessons/8/levels/1" target="blank" >Lesson 8: Conditionals </a></li>
-        <li><a href="https://studio.code.org/s/k5-onlinepd-2025/lessons/9/levels/1" target="blank" >Lesson 9: Functions  </a></li>
+        <li><a href="https://studio.code.org/courses/teaching-csf-2025/units/1/lessons/5/levels/1" target="blank" >Lesson 5: Sequencing with Sprites </a></li>
+        <li><a href="https://studio.code.org/courses/teaching-csf-2025/units/1/lessons/6/levels/1" target="blank" >Lesson 6: Loops </a></li>
+         <li><a href="https://studio.code.org/courses/teaching-csf-2025/units/1/lessons/8/levels/1" target="blank" >Lesson 8: Conditionals </a></li>
+        <li><a href="https://studio.code.org/courses/teaching-csf-2025/units/1/lessons/9/levels/1" target="blank" >Lesson 9: Functions  </a></li>
 
-<li><a href="https://studio.code.org/s/k5-onlinepd-2025/lessons/11/levels/1" target="blank" >Lesson 11: End of Course 
+<li><a href="https://studio.code.org/courses/teaching-csf-2025/units/1/lessons/11/levels/1" target="blank" >Lesson 11: End of Course 
  Projects</a> </li>
       </ul>
     </td>
     <td style="background-color:#c9c1e9; color:black; border-style:none; vertical-align: text-top;"">
       <ul style="font-style:italic;">
-         <li><a href="https://studio.code.org/s/k5-onlinepd-2025/lessons/5/levels/1" target="blank" >Lesson 5: Sequencing with Sprites </a></li>
-        <li> <a href="https://studio.code.org/s/k5-onlinepd-2025/lessons/10/levels/1" target="blank" >Lesson 10: Variables</a> </li>
-        <li><a href="https://studio.code.org/s/k5-onlinepd-2025/lessons/11/levels/1" target="blank" >Lesson 11: End of Course Projects</a> </li>
+         <li><a href="https://studio.code.org/courses/teaching-csf-2025/units/1/lessons/5/levels/1" target="blank" >Lesson 5: Sequencing with Sprites </a></li>
+        <li> <a href="https://studio.code.org/courses/teaching-csf-2025/units/1/lessons/10/levels/1" target="blank" >Lesson 10: Variables</a> </li>
+        <li><a href="https://studio.code.org/courses/teaching-csf-2025/units/1/lessons/11/levels/1" target="blank" >Lesson 11: End of Course Projects</a> </li>
         </ul>
     </td>
 </table>
@@ -102,5 +103,7 @@ markdown <<MARKDOWN
 
 ## Option B
 
-#### Go lesson by lesson for all concepts included in Computer Science Fundamentals courses.  Click "Continue" to go on to Lesson 6: Loops.
+#### Go lesson by lesson for all concepts included in Computer Science Fundamentals courses.  Click "Continue" to go on to the next lesson.
+
+
 MARKDOWN

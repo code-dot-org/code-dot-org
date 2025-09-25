@@ -16,7 +16,7 @@ class SectionsControllerTest < ActionController::TestCase
 
     @regular_section = create(:section, user: @teacher, login_type: 'email')
 
-    @flappy_section = create(:section, user: @teacher, login_type: 'word', script_id: Unit.flappy_unit.id)
+    @flappy_section = create(:section, user: @teacher, login_type: 'word', script_id: Unit.flappy_unit.id, course_id: Unit.flappy_unit.original_unit_group_id)
     @flappy_user_1 = create(:follower, section: @flappy_section).student_user
   end
 
@@ -27,9 +27,8 @@ class SectionsControllerTest < ActionController::TestCase
 
     # place in setup instead of setup_all otherwise course ends up being serialized
     # to a file if levelbuilder_mode is true
-    @unit_group = create(:unit_group)
-    @script_in_course = create(:script)
-    create(:unit_group_unit, script: @script_in_course, unit_group: @unit_group, position: 1)
+    @unit_group = create(:single_unit_course)
+    @script_in_course = @unit_group.first_unit
     @section_with_course = create(:section, user: @teacher, login_type: 'word', course_id: @unit_group.id)
     @section_with_course_user_1 = create(:follower, section: @section_with_course).student_user
 
@@ -159,7 +158,7 @@ class SectionsControllerTest < ActionController::TestCase
       secret_words: @flappy_user_1.secret_words
     }
 
-    assert_redirected_to '/s/flappy'
+    assert_redirected_to '/courses/flappy/units/1'
   end
 
   test "login to section with a course redirects to course" do
@@ -172,6 +171,20 @@ class SectionsControllerTest < ActionController::TestCase
     assert_redirected_to "/courses/#{@section_with_course.unit_group.name}"
   end
 
+  test "login to section with a modular script redirects to modular course" do
+    modular_course = create(:single_unit_course, unit: @script_in_course)
+    section_with_modular_script = create(:section, user: @teacher, login_type: 'word', course_id: modular_course.id, script_id: @script_in_course.id)
+    section_with_modular_script_user_1 = create(:follower, section: section_with_modular_script).student_user
+
+    post :log_in, params: {
+      id: section_with_modular_script.code,
+      user_id: section_with_modular_script_user_1.id,
+      secret_words: section_with_modular_script_user_1.secret_words
+    }
+
+    assert_redirected_to "/courses/#{modular_course.name}/units/1"
+  end
+
   test "login with show_pairing_dialog shows pairing dialog" do
     post :log_in, params: {
       id: @flappy_section.code,
@@ -180,7 +193,7 @@ class SectionsControllerTest < ActionController::TestCase
       show_pairing_dialog: '1'
     }
 
-    assert_redirected_to '/s/flappy'
+    assert_redirected_to '/courses/flappy/units/1'
 
     assert session[:show_pairing_dialog]
   end
@@ -192,7 +205,7 @@ class SectionsControllerTest < ActionController::TestCase
       secret_words: @flappy_user_1.secret_words
     }
 
-    assert_redirected_to '/s/flappy'
+    assert_redirected_to '/courses/flappy/units/1'
 
     refute session[:show_pairing_dialog]
   end
@@ -215,7 +228,7 @@ class SectionsControllerTest < ActionController::TestCase
   test_user_gets_response_for :new, params: {loginType: 'picture', participantType: 'student'}, user: :admin, response: :success
 
   test "new redirects to home if loginType and participantType are not present" do
-    user = create :admin
+    user = create(:admin)
     sign_in user
 
     get :new
@@ -231,26 +244,16 @@ class SectionsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test 'edit has successful response' do
+  test 'redirect to teacher_dashboard from edit ' do
     sign_in @teacher
-
-    get :edit, params: {id: @word_section.id}
-    assert_response :success
-  end
-
-  test 'redirect to teacher_dashboard from edit if DCDO enabled' do
-    sign_in @teacher
-    DCDO.set('teacher-local-nav-v2', true)
 
     get :edit, params: {id: @word_section.id}
     assert_redirected_to "/teacher_dashboard/sections/#{@word_section.id}/settings"
-
-    DCDO.set('teacher-local-nav-v2', nil)
   end
 
   test 'returns forbidden if requested edit section does not belong to teacher' do
     sign_in @teacher
-    other_teacher_section = create :section
+    other_teacher_section = create(:section)
     get :edit, params: {id: other_teacher_section.id}
     assert_response :forbidden
   end
@@ -273,7 +276,7 @@ class SectionsControllerTest < ActionController::TestCase
     section_owner = create(:teacher)
 
     coteacher_section = create(:section, user: section_owner, login_type: 'picture')
-    create :section_instructor, section: coteacher_section, instructor: @teacher, status: :active
+    create(:section_instructor, section: coteacher_section, instructor: @teacher, status: :active)
 
     post :archive_all
 
@@ -294,17 +297,17 @@ class SectionsControllerTest < ActionController::TestCase
     get :retrieve_lessons_for_dropdown, params: {id: @flappy_section.id}
     assert_response :success
     response_json = JSON.parse(@response.body)
-    assert_equal response_json, [{"text"=>"Flappy Code", "value"=>"/s/flappy"}, {"text"=>"Lesson 1: Flappy Code", "value"=>"/s/flappy/lessons/1/levels/1"}]
+    assert_equal response_json, [{"text"=>"Flappy Code", "value"=>"/courses/flappy/units/1"}, {"text"=>"Flappy Code", "value"=>"/courses/flappy/units/1/lessons/1/levels/1"}]
   end
 
   describe '#retrieve_lessons_for_dropdown' do
-    let(:teacher) {create :teacher}
-    let(:unit_group) {create :unit_group, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable}
-    let(:unit) {create :unit, :with_levels, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable}
+    let(:teacher) {create(:teacher)}
+    let(:unit_group) {create(:unit_group, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)}
+    let(:unit) {create(:unit, :with_levels)}
     let(:unit_position) {1}
-    let!(:unit_group_unit) {create :unit_group_unit, unit_group: unit_group, script: unit, position: unit_position}
+    let!(:unit_group_unit) {create(:unit_group_unit, unit_group: unit_group, script: unit, position: unit_position)}
     let(:lesson) {unit.lessons.first}
-    let(:section) {create :section, user: teacher, script: unit, unit_group: unit_group, login_type: 'email'}
+    let(:section) {create(:section, user: teacher, script: unit, unit_group: unit_group, login_type: 'email')}
     let(:response) {JSON.parse(@response.body, symbolize_names: true)}
     let(:response_unit) {response.first}
     let(:response_lesson) {response.second}
@@ -332,7 +335,7 @@ class SectionsControllerTest < ActionController::TestCase
     end
 
     it 'returns lesson name' do
-      _(response_lesson[:text]).must_equal "Lesson #{lesson.relative_position}: #{lesson.localized_name}"
+      _(response_lesson[:text]).must_equal lesson.localized_title
     end
 
     it 'returns lesson path' do

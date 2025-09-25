@@ -11,6 +11,8 @@ function getOneTrustDomainIdByBrand(brand: Brand) {
       return '27cca70a-7db3-4852-9ef0-a6660fd0977d';
     case Brand.HOUR_OF_CODE:
       return '7c79c547-a2fc-4998-9b21-0c7a5e67e345';
+    case Brand.CS_FOR_ALL:
+      return '01988b25-e2ce-7cd6-89f3-e806bc7be5e5';
     default:
       return undefined;
   }
@@ -19,14 +21,12 @@ function getOneTrustDomainIdByBrand(brand: Brand) {
 /**
  * Returns the OneTrust asset base path. For production, it is self-hosted. For pre-production, it is sourced from the
  * OneTrust CDN so that it enables live testing without having to upload new self-hosted files.
- * @param brand Code.org brand
  */
-function getOneTrustAssetBasePath(brand: Brand) {
+function getOneTrustAssetBasePath() {
   const stage = getStage();
 
   switch (stage) {
-    case 'production':
-      return `/onetrust/${brand}`;
+    // Always use cdn.cookielaw.org until OneTrust fixes self-hosting on a relative path
     default:
       return `https://cdn.cookielaw.org`;
   }
@@ -54,13 +54,12 @@ export function getOneTrustDomainId(brand: Brand) {
  * @param brand Code.org brand
  */
 export function getOnetrustAutoBlockScriptPath(brand: Brand) {
-  return `${getOneTrustAssetBasePath(brand)}/consent/${getOneTrustDomainId(brand)}/OtAutoBlock.js`;
+  return `${getOneTrustAssetBasePath()}/consent/${getOneTrustDomainId(brand)}/OtAutoBlock.js`;
 }
 
 /**
  * Returns the OneTrust SDK script path
- * @param brand Code.org brand
  */
-export function getOnetrustStubScriptPath(brand: Brand) {
-  return `${getOneTrustAssetBasePath(brand)}/scripttemplates/otSDKStub.js`;
+export function getOnetrustStubScriptPath() {
+  return `${getOneTrustAssetBasePath()}/scripttemplates/otSDKStub.js`;
 }

@@ -312,11 +312,19 @@
     },
     "./formFieldWrapper": {
       "types": {
-        "import": "./dist/esm/formFieldWrapper/index.d.mts",
+        "import": "./dist/esm/formFieldWrapper/index.d.ts",
         "require": "./dist/cjs/formFieldWrapper/index.d.ts"
       },
       "import": "./dist/esm/formFieldWrapper/index.mjs",
       "require": "./dist/cjs/formFieldWrapper/index.js"
+    },
+    "./heroBanner": {
+      "types": {
+        "import": "./dist/esm/heroBanner/index.d.ts",
+        "require": "./dist/cjs/heroBanner/index.d.ts"
+      },
+      "import": "./dist/esm/heroBanner/index.mjs",
+      "require": "./dist/cjs/heroBanner/index.js"
     },
     "./image": {
       "types": {
@@ -476,6 +484,7 @@
     "extends": "@code-dot-org/lint-config/stylelint/index.mjs"
   },
   "dependencies": {
+    "@mui/material": "^7.3.2",
     "lodash": "^4.17.21",
     "react-player": "^3.0.0-canary.4",
     "react-schemaorg": "^2.0.0"
@@ -503,7 +512,7 @@
     "eslint": "^9.15.0",
     "eslint-plugin-jest": "^28.9.0",
     "eslint-plugin-react": "^7.37.2",
-    "eslint-plugin-storybook": "^0.11.1",
+    "eslint-plugin-storybook": "^9.0.18",
     "glob": "^11.0.0",
     "globals": "^15.12.0",
     "identity-obj-proxy": "^3.0.0",

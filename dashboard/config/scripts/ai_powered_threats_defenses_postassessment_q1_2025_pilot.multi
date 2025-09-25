@@ -1,0 +1,14 @@
+name 'ai-powered-threats-defenses-postassessment-q1_2025-pilot'
+
+question ‘Which of the following best explains why cybersecurity is relevant to everyday life?’
+
+wrong ‘It only affects government systems and large corporations’
+wrong ‘It protects people\’s devices from viruses and malware’
+right ‘It keeps digital systems working reliably for people who need them’
+wrong ‘It prevents AI from replacing human jobs’
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 1: Intro to Cybersecurity
+MARKDOWN

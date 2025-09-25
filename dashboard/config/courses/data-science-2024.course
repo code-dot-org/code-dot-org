@@ -14,8 +14,8 @@
   "instructor_audience": "teacher",
   "properties": {
     "family_name": "data-science",
-    "has_numbered_units": true,
     "has_verified_resources": true,
+    "numbered_units": "auto",
     "pilot_experiment": "data-science-pilot-2024",
     "version_year": "2024"
   },

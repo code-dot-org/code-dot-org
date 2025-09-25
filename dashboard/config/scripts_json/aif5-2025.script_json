@@ -35,7 +35,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-27 16:10:24 UTC",
+    "serialized_at": "2025-07-18 19:07:42 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -3224,7 +3224,7 @@
     },
     {
       "name": "Project: Innovation Simulation Part 1",
-      "url": "https://docs.google.com/presentation/d/1TUH2-fchOMWGG5EF9a0YBx2hHHIOkH0t0UDIPIS8mxI/view",
+      "url": "https://docs.google.com/presentation/d/1R1-JtPEV8YoZGdpfTn1UkR1gFnUn3qo5yW65fWGKu8Q/view",
       "key": "csp_unit_8_-_lesson_1_-_project_innovation_simulation_part_1",
       "properties": {
         "audience": "Teacher",
@@ -3236,7 +3236,7 @@
     },
     {
       "name": "Data Policies and Privacy",
-      "url": "https://docs.google.com/presentation/d/1R1-JtPEV8YoZGdpfTn1UkR1gFnUn3qo5yW65fWGKu8Q/view",
+      "url": "https://docs.google.com/presentation/d/1TUH2-fchOMWGG5EF9a0YBx2hHHIOkH0t0UDIPIS8mxI/edit?usp=sharing",
       "key": "csp_unit_8_-_lesson_2_-_data_policies_and_privacy",
       "properties": {
         "audience": "Teacher",

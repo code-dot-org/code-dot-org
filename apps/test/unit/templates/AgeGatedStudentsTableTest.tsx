@@ -114,7 +114,6 @@ describe('AgeGatedStudentsTable', () => {
     studentCount: 5,
     students: Object.values(fakeStudents),
     hidden: false,
-    isAssignedStandaloneCourse: false,
   };
 
   beforeEach(() => {

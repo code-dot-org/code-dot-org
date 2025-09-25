@@ -1,0 +1,48 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-08-13T15:32:06.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "##Would You Believe This?\n\nImagine getting a **video message** from your principal, your favorite celebrity—or even your mom.\n\nThey ask for help, or money, or login info.\n\nBut it's not really them.\n\nIt's a **deepfake.**",
+        "imageUrl": "https://images.code.org/688693a138ca8c1a0366e06083742eac-Panel Level Play Space.png",
+        "key": "test-ai-powered-threats-defenses-lesson3-level3-6ea9678a-ce7e-41b9-abb2-d878eb87ac30",
+        "typing": false,
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "##What Is a Deepfake?\n\nA **deepfake** is a video (or audio) that uses AI to make someone look or sound like they’re saying or doing something they never did.\n\nIt can be convincing—even to trained professionals.\n\nMost are created with free tools and just a few photos or clips.",
+        "imageUrl": "https://images.code.org/f1f9621c0d1c1e520378e47116969eff-Panel Level Play Space (1).png",
+        "key": "test-ai-powered-threats-defenses-lesson3-level3-91f6e938-059e-4b97-b572-350b4fa8bbb8",
+        "fadeInOverPrevious": true,
+        "layout": "text-bottom-left"
+      },
+      {
+        "text": "##Deepfakes in Impersonation Scams\n\nScammers use deepfakes to pretend to be bosses, government officials, or even family members.\nThese videos can be used to trick people into:\n* Sending money\n* Sharing private data\n* Downloading malware",
+        "imageUrl": "https://images.code.org/2f7076de7a9d71f063acff760810ec56-Panel Level Play Space (2).png",
+        "key": "test-ai-powered-threats-defenses-lesson3-level3-79557c5a-46fd-42a9-8bcd-652ea77a7ed0",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "##AI Makes It Easier and Scarier\n\nAI has made deepfakes easier than ever to create.\n\nYou don’t need a Hollywood studio—just a computer and some clips from social media.\n\nThese tools make scams faster, cheaper, and harder to detect.",
+        "imageUrl": "https://images.code.org/2f7076de7a9d71f063acff760810ec56-Panel Level Play Space (2).png",
+        "key": "test-ai-powered-threats-defenses-lesson3-level3-10f16dff-0ead-45fb-8aaf-e7607fe82cca",
+        "layout": "text-top-left",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "##Real-Life Example\n\nTime to investigate! Open a new tab and do a quick search: “Recent video deepfake impersonation scam”\n\nFind a real-world example that looks interesting and answer:\n* Who was impersonated?\n* What was the goal of the scam?\n* How was AI used to pull it off?\n",
+        "imageUrl": "https://images.code.org/a0616edc8cdb02aef4b881aad730e209-Panel Level Play Space (3).png",
+        "key": "test-ai-powered-threats-defenses-lesson4-level3-53d0b6b9-67d0-46e9-b015-38e105be9b4f"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2025-08-13T15:32:06.242+00:00\",\"changed\":[\"cloned from \\\"test-ai-powered-threats-defenses-lesson4-level3\\\"\"],\"cloned_from\":\"test-ai-powered-threats-defenses-lesson4-level3\"},{\"changed_at\":\"2025-08-13 15:32:37 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Panels>

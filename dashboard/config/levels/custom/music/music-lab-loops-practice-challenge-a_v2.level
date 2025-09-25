@@ -1,0 +1,603 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-05-31T02:59:49.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "#### Feather with Drums\r\n\r\nThere is a video series on Youtube from **Drumeo** where drummers from famous bands re-create the drum section for songs they've never heard before. For example, [this video](https://www.youtube.com/watch?v=tbUYVcaF_l0) features Dirk Verbeuren hearing the song Mr Brightside for the first time and creating a new drum track. Dirk uses **decomposition** and **pattern recognition** to create his track:\r\n\r\n> When you listen to a song the first time, just count, you know, name the parts, count the bars, and then at least if anything you have a structure\r\n\r\n**You Try:** Create your own drum track to the song Feather by Sabrina Carpenter. The rest of the song is already in the workspace - you only need to provide the drum track [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=id:rest_workspace)\r\n\r\n<div style=\"background:#ebe8f1; border: 0; border-radius: 10px; clear:both; padding: 5px\">\r\n\r\nNeed some help? Try the [<i class=\"fa-solid fa-book\"></i> Docs](#clickable=documentation-button) in the upper-right corner!\r\n\r\n</div>\r\n\r\nTo pass this level, you must have at least 2 different Beat tracks that loop throughout the entire song.",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "packId": "sabrina_carpenter_feather",
+      "toolbox": {
+        "type": "flyout",
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2",
+            "play_rest_at_current_location_simple2"
+          ],
+          "Functions": [
+
+          ],
+          "Control": [
+            "play_sounds_together",
+            "play_sounds_sequential",
+            "repeat_simple2"
+          ]
+        }
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "next": {
+                "block": {
+                  "type": "play_sounds_together",
+                  "id": "play_sounds_together",
+                  "deletable": false,
+                  "movable": false,
+                  "editable": false,
+                  "extraState": {
+                    "disableNextConnection": true
+                  },
+                  "inputs": {
+                    "code": {
+                      "block": {
+                        "type": "play_sounds_sequential",
+                        "id": ";Fd^%Y:J,t]DY^;6j{x1",
+                        "deletable": false,
+                        "movable": false,
+                        "editable": false,
+                        "extraState": {
+                          "disableNextConnection": false
+                        },
+                        "inputs": {
+                          "code": {
+                            "block": {
+                              "type": "play_rest_at_current_location_simple2",
+                              "id": "rest_workspace",
+                              "deletable": false,
+                              "movable": false,
+                              "editable": false,
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
+                              "fields": {
+                                "rest_duration": "<field name=\"rest_duration\">1</field>"
+                              }
+                            }
+                          }
+                        },
+                        "next": {
+                          "block": {
+                            "type": "play_sounds_sequential",
+                            "id": "play_sounds_sequential",
+                            "deletable": false,
+                            "movable": false,
+                            "editable": false,
+                            "extraState": {
+                              "disableNextConnection": false
+                            },
+                            "inputs": {
+                              "code": {
+                                "block": {
+                                  "type": "play_sound_at_current_location_simple2",
+                                  "id": "play_sound_at_current_location_simple2",
+                                  "deletable": false,
+                                  "movable": false,
+                                  "editable": false,
+                                  "extraState": {
+                                    "disableNextConnection": false
+                                  },
+                                  "fields": {
+                                    "sound": "sabrina_carpenter_feather/vocals_verse_1"
+                                  },
+                                  "next": {
+                                    "block": {
+                                      "type": "play_sound_at_current_location_simple2",
+                                      "id": "RB_udoE%I-KMj/c/D1be",
+                                      "deletable": false,
+                                      "movable": false,
+                                      "editable": false,
+                                      "extraState": {
+                                        "disableNextConnection": false
+                                      },
+                                      "fields": {
+                                        "sound": "sabrina_carpenter_feather/vocals_verse_2"
+                                      },
+                                      "next": {
+                                        "block": {
+                                          "type": "play_sound_at_current_location_simple2",
+                                          "id": "/o[~QOlW[~]pZ1XYr3up",
+                                          "deletable": false,
+                                          "movable": false,
+                                          "editable": false,
+                                          "extraState": {
+                                            "disableNextConnection": false
+                                          },
+                                          "fields": {
+                                            "sound": "sabrina_carpenter_feather/vocals_verse_3"
+                                          },
+                                          "next": {
+                                            "block": {
+                                              "type": "play_sound_at_current_location_simple2",
+                                              "id": "r;VRlH]M2{G3+2WFWpKp",
+                                              "deletable": false,
+                                              "movable": false,
+                                              "editable": false,
+                                              "extraState": {
+                                                "disableNextConnection": false
+                                              },
+                                              "fields": {
+                                                "sound": "sabrina_carpenter_feather/vocals_verse_4"
+                                              },
+                                              "next": {
+                                                "block": {
+                                                  "type": "play_sound_at_current_location_simple2",
+                                                  "id": "tMF.N4R|g$ZVR29^T*Uf",
+                                                  "deletable": false,
+                                                  "movable": false,
+                                                  "editable": false,
+                                                  "extraState": {
+                                                    "disableNextConnection": false
+                                                  },
+                                                  "fields": {
+                                                    "sound": "sabrina_carpenter_feather/vocals_chorus_1"
+                                                  },
+                                                  "next": {
+                                                    "block": {
+                                                      "type": "play_sound_at_current_location_simple2",
+                                                      "id": "sz_fPXbLYVN8K__=,2I}",
+                                                      "deletable": false,
+                                                      "movable": false,
+                                                      "editable": false,
+                                                      "extraState": {
+                                                        "disableNextConnection": false
+                                                      },
+                                                      "fields": {
+                                                        "sound": "sabrina_carpenter_feather/vocals_chorus_2"
+                                                      },
+                                                      "next": {
+                                                        "block": {
+                                                          "type": "play_sound_at_current_location_simple2",
+                                                          "id": "*dz9[@K7DBTqrxKj#B-v",
+                                                          "deletable": false,
+                                                          "movable": false,
+                                                          "editable": false,
+                                                          "extraState": {
+                                                            "disableNextConnection": false
+                                                          },
+                                                          "fields": {
+                                                            "sound": "sabrina_carpenter_feather/vocals_chorus_3"
+                                                          },
+                                                          "next": {
+                                                            "block": {
+                                                              "type": "play_sound_at_current_location_simple2",
+                                                              "id": "g.ag/Ayze_xoKX[urQ=i",
+                                                              "deletable": false,
+                                                              "movable": false,
+                                                              "editable": false,
+                                                              "extraState": {
+                                                                "disableNextConnection": false
+                                                              },
+                                                              "fields": {
+                                                                "sound": "sabrina_carpenter_feather/vocals_chorus_4"
+                                                              },
+                                                              "next": {
+                                                                "block": {
+                                                                  "type": "play_sound_at_current_location_simple2",
+                                                                  "id": "M;;)maaZMd4=RzwRM$x}",
+                                                                  "deletable": false,
+                                                                  "movable": false,
+                                                                  "editable": false,
+                                                                  "extraState": {
+                                                                    "disableNextConnection": true
+                                                                  },
+                                                                  "fields": {
+                                                                    "sound": "sabrina_carpenter_feather/vocals_chorus_5"
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "next": {
+                              "block": {
+                                "type": "play_sounds_sequential",
+                                "id": "q6*7oAWnLs3tdADv-N06",
+                                "deletable": false,
+                                "movable": false,
+                                "editable": false,
+                                "extraState": {
+                                  "disableNextConnection": false
+                                },
+                                "inputs": {
+                                  "code": {
+                                    "block": {
+                                      "type": "play_rest_at_current_location_simple2",
+                                      "id": "play_rest_at_current_location_simple2",
+                                      "deletable": false,
+                                      "movable": false,
+                                      "editable": false,
+                                      "extraState": {
+                                        "disableNextConnection": false
+                                      },
+                                      "fields": {
+                                        "rest_duration": "<field name=\"rest_duration\">1</field>"
+                                      },
+                                      "next": {
+                                        "block": {
+                                          "type": "repeat_simple2",
+                                          "id": "repeat_simple2",
+                                          "deletable": false,
+                                          "movable": false,
+                                          "editable": false,
+                                          "extraState": {
+                                            "disableNextConnection": true
+                                          },
+                                          "fields": {
+                                            "times": 8
+                                          },
+                                          "inputs": {
+                                            "code": {
+                                              "block": {
+                                                "type": "play_sound_at_current_location_simple2",
+                                                "id": ",f5){yUjk=fM=v:bAwuC",
+                                                "deletable": false,
+                                                "movable": false,
+                                                "editable": false,
+                                                "extraState": {
+                                                  "disableNextConnection": true
+                                                },
+                                                "fields": {
+                                                  "sound": "sabrina_carpenter_feather/bass"
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                },
+                                "next": {
+                                  "block": {
+                                    "type": "play_sounds_sequential",
+                                    "id": "B8:YSogaN,1]]xnc$5+c",
+                                    "deletable": false,
+                                    "movable": false,
+                                    "editable": false,
+                                    "extraState": {
+                                      "disableNextConnection": true
+                                    },
+                                    "inputs": {
+                                      "code": {
+                                        "block": {
+                                          "type": "play_rest_at_current_location_simple2",
+                                          "id": "U4xf!u[PSxSojBe,F^V:",
+                                          "deletable": false,
+                                          "movable": false,
+                                          "editable": false,
+                                          "extraState": {
+                                            "disableNextConnection": false
+                                          },
+                                          "fields": {
+                                            "rest_duration": "<field name=\"rest_duration\">1</field>"
+                                          },
+                                          "next": {
+                                            "block": {
+                                              "type": "repeat_simple2",
+                                              "id": "../lJzS]_anxn8rj)Dy0",
+                                              "deletable": false,
+                                              "movable": false,
+                                              "editable": false,
+                                              "extraState": {
+                                                "disableNextConnection": true
+                                              },
+                                              "fields": {
+                                                "times": 8
+                                              },
+                                              "inputs": {
+                                                "code": {
+                                                  "block": {
+                                                    "type": "play_sound_at_current_location_simple2",
+                                                    "id": ";B{CYvtp$*c!$q5-Xy;[",
+                                                    "deletable": false,
+                                                    "movable": false,
+                                                    "editable": false,
+                                                    "extraState": {
+                                                      "disableNextConnection": true
+                                                    },
+                                                    "fields": {
+                                                      "sound": "sabrina_carpenter_feather/synth_chords"
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "sounds": {
+        "sabrina_carpenter_feather": [
+          "synth_chords",
+          "bass",
+          "vocals_verse_1",
+          "vocals_verse_2",
+          "vocals_verse_3",
+          "vocals_verse_4",
+          "vocals_chorus_1",
+          "vocals_chorus_2",
+          "vocals_chorus_3",
+          "vocals_chorus_4",
+          "vocals_chorus_5"
+        ],
+        "electro": [
+          "drum_beat_cowbell",
+          "drum_beat_club",
+          "drum_beat_edm",
+          "drum_beat_hyper",
+          "drum_beat_fashion",
+          "drum_beat_noise",
+          "drum_beat_pause",
+          "drum_beat_shake",
+          "drum_beat_sharp",
+          "drum_beat_strobe",
+          "drum_beat_swirl",
+          "drum_beat_sync",
+          "drum_beat_tom"
+        ],
+        "groove": [
+          "drum_beat_congas",
+          "drum_beat_flam",
+          "drum_beat_machine",
+          "drum_beat_patter",
+          "drum_beat_plexi",
+          "drum_kit_disco",
+          "groovy_beat",
+          "groovy_alternate_beat",
+          "drum_beat_knock",
+          "reggaeton_beat",
+          "reggaeton_alternate_beat",
+          "syncopated_beat"
+        ],
+        "indie": [
+          "drum_beat_fan",
+          "drum_beat_jangle",
+          "drum_beat_lid",
+          "drum_beat_nod",
+          "drum_beat_ping",
+          "drum_beat_straight",
+          "drum_beat_swish",
+          "drum_beat_tap",
+          "bold_beat",
+          "bold_alternate_beat",
+          "drum_kit_indie",
+          "drum_kit_northern"
+        ],
+        "pop": [
+          "drum_beat_action",
+          "drum_beat_cosmos",
+          "drum_kit_dizzy",
+          "drum_kit_jumpy",
+          "drum_beat_pump",
+          "drum_beat_relax",
+          "drum_beat_salt",
+          "drum_kit_pop",
+          "shake_beat",
+          "sugar_beat",
+          "drum_kit_surf",
+          "sugar_alternate_beat"
+        ],
+        "hiphop": [
+          "drum_beat_808",
+          "drum_beat_bounce",
+          "relaxed_alternate_beat",
+          "drum_beat_cuts",
+          "hats_beat",
+          "drum_beat_knock",
+          "drum_beat_lofi",
+          "relaxed_beat",
+          "drum_beat_slow",
+          "sub_beat",
+          "drum_beat_trap",
+          "vinyl_beat"
+        ],
+        "rock": [
+          "arena_beat",
+          "arena_alternate_beat",
+          "drum_kit_basement",
+          "drum_kit_can",
+          "drum_kit_crash",
+          "drum_kit_crusher",
+          "gutter_beat",
+          "drum_kit_hands",
+          "drum_kit_interlude",
+          "punk_beat",
+          "punk_alternate_beat",
+          "drum_kit_roll"
+        ]
+      },
+      "showSoundFilters": true,
+      "toolboxDefinition": {
+        "contents": [
+          {
+            "kind": "block",
+            "type": "play_sound_at_current_location_simple2",
+            "id": "play_sound_at_current_location_simple2",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "sound": "electro/drum_beat_cowbell"
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_rest_at_current_location_simple2",
+            "id": "play_rest_at_current_location_simple2",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "rest_duration": "<field name=\"rest_duration\">1</field>"
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_sounds_together",
+            "id": "play_sounds_together",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_sounds_sequential",
+            "id": "play_sounds_sequential",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "repeat_simple2",
+            "id": "repeat_simple2",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "times": 1
+            },
+            "enabled": true
+          }
+        ],
+        "kind": "flyoutToolbox"
+      }
+    },
+    "display_name": "Feather with Drums",
+    "encrypted_exemplar_sources": "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\nzH1hNccX7jpz9cvy7mJFJcSAn/fkaPGTtvbIVC8=\n",
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": true,
+      "playerTitle": "Example",
+      "validationMode": "type",
+      "validationSuccessMessage": "You did it! The song matches the example!",
+      "validationFailureMessage": "Something's not quite right! Try listening to the example again!"
+    },
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "bubble_choice_description": "Add your own drum track to Feather by Sabrina Carpenter",
+    "validations": [
+      {
+        "key": "music-lab-loops-practice-challenge-a_99f354df-24a1-425f-8313-4081437ee911",
+        "message": "[exemplar]",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sound_type",
+            "value": "beat"
+          },
+          {
+            "name": "block_count_by_type",
+            "value": "play_sound_at_current_location_simple2:13"
+          },
+          {
+            "name": "block_count_by_type",
+            "value": "repeat_simple2:3"
+          }
+        ]
+      },
+      {
+        "key": "music-lab-loops-practice-challenge-a_aac55f49-ef3d-4e6b-ba80-259b7255ced1",
+        "message": "Make sure you use loops for your beats!",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sound_type",
+            "value": "beat"
+          },
+          {
+            "name": "block_count_by_type",
+            "value": "play_sound_at_current_location_simple2:13"
+          }
+        ]
+      },
+      {
+        "key": "music-lab-loops-practice-challenge-a_9152e011-12f5-4e73-9011-955644db3be7",
+        "message": "Make sure you have at least 2 different beats!",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sound_type",
+            "value": "beat"
+          }
+        ]
+      },
+      {
+        "key": "music-lab-loops-practice-challenge-a_c2da7a9c-993c-4332-b646-2574c8d319da",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot hasn't heard a beat yet....",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "name_suffix": "_v2",
+    "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/sabrina_carpenter_feather/sabrina_carpenter_feather.jpg",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:59:49.564+00:00\",\"changed\":[\"cloned from \\\"music-lab-loops-practice-challenge-a\\\"\"],\"cloned_from\":\"music-lab-loops-practice-challenge-a\"},{\"changed_at\":\"2025-06-12 20:32:37 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-30 16:50:23 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

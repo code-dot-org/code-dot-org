@@ -1,6 +1,12 @@
 name: "Install & Setup Frontend Directory"
 description: "Setup for the frontend directory"
 
+inputs:
+  INSTALL_DEPENDENCIES:
+    description: "Whether to install dependencies. Defaults to true"
+    default: "true"
+    required: false
+
 runs:
   using: composite
   steps:
@@ -12,12 +18,14 @@ runs:
       uses: rharkor/caching-for-turbo@a1c4079258ae08389be75b57d4d7a70f23c1c66d # v1.8
 
     - uses: actions/setup-node@v4
+      if: inputs.INSTALL_DEPENDENCIES == 'true'
       with:
         node-version-file: ".nvmrc"
         cache: "yarn"
         cache-dependency-path: 'frontend/yarn.lock'
 
     - name: Install dependencies
+      if: inputs.INSTALL_DEPENDENCIES == 'true'
       shell: bash
       run: yarn install
       working-directory: ./frontend

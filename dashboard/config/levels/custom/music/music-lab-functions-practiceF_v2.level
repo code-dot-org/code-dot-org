@@ -1,0 +1,443 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-05-31T03:00:40.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "toolbox": {
+        "type": "flyout",
+        "blocks": {
+        },
+        "addFunctionDefinition": true,
+        "addFunctionCalls": true
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "next": {
+                "block": {
+                  "type": "play_sounds_together",
+                  "id": "play_sounds_together",
+                  "deletable": false,
+                  "editable": false,
+                  "extraState": {
+                    "disableNextConnection": false
+                  },
+                  "inputs": {
+                    "code": {
+                      "block": {
+                        "type": "procedures_callnoreturn",
+                        "id": "]jfNsL{t^qcZ6ePTq*GD",
+                        "deletable": false,
+                        "editable": false,
+                        "extraState": {
+                          "name": "chorus"
+                        },
+                        "next": {
+                          "block": {
+                            "type": "procedures_callnoreturn",
+                            "id": "k$LY*k|n[rqI~}K%%RQd",
+                            "deletable": false,
+                            "editable": false,
+                            "extraState": {
+                              "name": "bass"
+                            },
+                            "next": {
+                              "block": {
+                                "type": "procedures_callnoreturn",
+                                "id": "UO]b9H4e$)fU*.W@`4s~",
+                                "deletable": false,
+                                "editable": false,
+                                "extraState": {
+                                  "name": "backups"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "(tb2Horfg_*9++R3A7fQ",
+              "x": 450,
+              "y": 50,
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "procedureId": "ei7RiuAz]i(],*e6;xXI",
+                "initialDeleteConfig": false,
+                "initialEditConfig": false,
+                "initialMoveConfig": true
+              },
+              "fields": {
+                "NAME": "chorus"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "play_sound_at_current_location_simple2",
+                    "id": "play_sound_at_current_location_simple2",
+                    "deletable": false,
+                    "movable": false,
+                    "editable": false,
+                    "extraState": {
+                      "disableNextConnection": false
+                    },
+                    "fields": {
+                      "sound": "benson_boone_in_the_stars/vocals_chorus_1"
+                    },
+                    "next": {
+                      "block": {
+                        "type": "play_sound_at_current_location_simple2",
+                        "id": "1*w,^,|9aoK|q))z:sc+",
+                        "deletable": false,
+                        "movable": false,
+                        "editable": false,
+                        "extraState": {
+                          "disableNextConnection": false
+                        },
+                        "fields": {
+                          "sound": "benson_boone_in_the_stars/vocals_chorus_2"
+                        },
+                        "next": {
+                          "block": {
+                            "type": "play_sound_at_current_location_simple2",
+                            "id": "-XxL*|13/Iv_1~}S7@$O",
+                            "deletable": false,
+                            "movable": false,
+                            "editable": false,
+                            "extraState": {
+                              "disableNextConnection": false
+                            },
+                            "fields": {
+                              "sound": "benson_boone_in_the_stars/vocals_chorus_3"
+                            },
+                            "next": {
+                              "block": {
+                                "type": "play_sound_at_current_location_simple2",
+                                "id": "U(55S|C.5#{#+JUaE7t|",
+                                "deletable": false,
+                                "movable": false,
+                                "editable": false,
+                                "extraState": {
+                                  "disableNextConnection": true
+                                },
+                                "fields": {
+                                  "sound": "benson_boone_in_the_stars/vocals_chorus_4"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": ";R|HJEeugmdTz$D{cbUa",
+              "x": 450,
+              "y": 250,
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "procedureId": "~m_3;I9f%g24ud0Z6ufK",
+                "initialDeleteConfig": false,
+                "initialEditConfig": false,
+                "initialMoveConfig": true
+              },
+              "fields": {
+                "NAME": "bass"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "play_sound_at_current_location_simple2",
+                    "id": "k:$8d2u)@H1P{zyk}OQJ",
+                    "deletable": false,
+                    "movable": false,
+                    "editable": false,
+                    "extraState": {
+                      "disableNextConnection": false
+                    },
+                    "fields": {
+                      "sound": "benson_boone_in_the_stars/bass_chorus_1"
+                    },
+                    "next": {
+                      "block": {
+                        "type": "play_sound_at_current_location_simple2",
+                        "id": "Jhs7gSv?o6HkROclN?zb",
+                        "deletable": false,
+                        "movable": false,
+                        "editable": false,
+                        "extraState": {
+                          "disableNextConnection": false
+                        },
+                        "fields": {
+                          "sound": "benson_boone_in_the_stars/bass_chorus_2"
+                        },
+                        "next": {
+                          "block": {
+                            "type": "play_sound_at_current_location_simple2",
+                            "id": "=Mk{ja0@j=U;BpM(Ex}`",
+                            "deletable": false,
+                            "movable": false,
+                            "editable": false,
+                            "extraState": {
+                              "disableNextConnection": false
+                            },
+                            "fields": {
+                              "sound": "benson_boone_in_the_stars/bass_chorus_3"
+                            },
+                            "next": {
+                              "block": {
+                                "type": "play_sound_at_current_location_simple2",
+                                "id": "_@6^7l1rEP?xN7h:d-Jd",
+                                "deletable": false,
+                                "movable": false,
+                                "editable": false,
+                                "extraState": {
+                                  "disableNextConnection": true
+                                },
+                                "fields": {
+                                  "sound": "benson_boone_in_the_stars/bass_chorus_4"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "A}NT.:#_Z#6_Ek61TbXL",
+              "x": 450,
+              "y": 450,
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "procedureId": "4kOvG*ZSsO?67qZlfvVF",
+                "initialDeleteConfig": false,
+                "initialEditConfig": false,
+                "initialMoveConfig": true
+              },
+              "fields": {
+                "NAME": "backups"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "play_sound_at_current_location_simple2",
+                    "id": "IQz[lYq!ifJ?jRuJ`;MJ",
+                    "deletable": false,
+                    "movable": false,
+                    "editable": false,
+                    "extraState": {
+                      "disableNextConnection": false
+                    },
+                    "fields": {
+                      "sound": "benson_boone_in_the_stars/vocals_chorus_backups_1"
+                    },
+                    "next": {
+                      "block": {
+                        "type": "play_sound_at_current_location_simple2",
+                        "id": "lOPuRX{sj@TPg_lmkQ7X",
+                        "deletable": false,
+                        "movable": false,
+                        "editable": false,
+                        "extraState": {
+                          "disableNextConnection": false
+                        },
+                        "fields": {
+                          "sound": "benson_boone_in_the_stars/vocals_chorus_backups_2"
+                        },
+                        "next": {
+                          "block": {
+                            "type": "play_sound_at_current_location_simple2",
+                            "id": "H(Pk6hcNGNscHK0At@Mp",
+                            "deletable": false,
+                            "movable": false,
+                            "editable": false,
+                            "extraState": {
+                              "disableNextConnection": false
+                            },
+                            "fields": {
+                              "sound": "benson_boone_in_the_stars/vocals_chorus_backups_3"
+                            },
+                            "next": {
+                              "block": {
+                                "type": "play_sound_at_current_location_simple2",
+                                "id": "A[:$!8N=}Ut,.feS0yai",
+                                "deletable": false,
+                                "movable": false,
+                                "editable": false,
+                                "extraState": {
+                                  "disableNextConnection": true
+                                },
+                                "fields": {
+                                  "sound": "benson_boone_in_the_stars/vocals_chorus_backups_4"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": "3jS+-@N!1n5tFpPE5/Jy",
+              "x": 210,
+              "y": 250,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "sound": "benson_boone_in_the_stars/piano_chorus_1"
+              }
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": ";#2^Ry1ts/V_H^tx0{9I",
+              "x": 210,
+              "y": 330,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "sound": "benson_boone_in_the_stars/piano_chorus_3"
+              }
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": "hGmIDBtKq%S5P.g^IK(|",
+              "x": 210,
+              "y": 90,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "sound": "benson_boone_in_the_stars/piano_chorus_4"
+              }
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": "kK]X7L1dh:wmvr9!OFGY",
+              "x": 210,
+              "y": 170,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "sound": "benson_boone_in_the_stars/piano_chorus_2"
+              }
+            }
+          ]
+        },
+        "procedures": [
+          {
+            "id": "ei7RiuAz]i(],*e6;xXI",
+            "name": "chorus",
+            "returnTypes": null
+          },
+          {
+            "id": "~m_3;I9f%g24ud0Z6ufK",
+            "name": "bass",
+            "returnTypes": null
+          },
+          {
+            "id": "4kOvG*ZSsO?67qZlfvVF",
+            "name": "backups",
+            "returnTypes": null
+          }
+        ]
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "showSoundFilters": true,
+      "packId": "benson_boone_in_the_stars"
+    },
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": true,
+      "playerTitle": "Hawa's Song",
+      "validationSuccessMessage": "You did it! The song matches the example!",
+      "validationFailureMessage": "Something's not quite right! Try listening to the example again!"
+    },
+    "encrypted_exemplar_sources": "H+oUXYiIOIhlul2DSMMWrRA5tNRmQfWlki7tDNJx5FaNuumHipdy9Ib4ZV0G\nh7/sUdBLaNDnKdfjJT9GECIJWJMyLdrHKEVVXvwz3xJOJVpX8ouI8PdKvz4K\nNPetkE3z8VmPUfIpPPqYNVQ9hqzV5VceIZjNMmb3NxprTp1UM5mgGWjl9mpl\nnP6DU2/TlA4ttbDnQGTlMUCv+lEsdbZ2qXGtYct1YmAEu7/5QjjVLLvXoSec\nPKzBNsZFuLjdGleZZ9FV1T8mcjRxS5XqP1XJJewoQ2h9QRsTU9kpxqTcX5WY\nFPThun7Z6J23Tip9GjKyOgzsfM+z3EBrWqRHYXFzXbktEu27nU7uqfDiQt7l\nnxjQdfW63MjOACBKz89U0os/y40Odkh+D8KyapyoyYGXsOzcsF9MOsgqY2pS\nY0MFHgAI/rTYlGCoNl1P30LBTjvqSH/4u2GHChz8LRn6w1o6afxWIqcPTVgV\n+d5z2+cNIf/F56RsEgFWnMDfY708TwNFt3Kn1dNJsrKyisAllnca8ADiygBO\ntQQSgJlbAtO0PcIVWH9oce0xnElH1DBQNUbuM578UEfJZJnpkwiM/BxFbjBi\nenXAt9l8P4/y70eFzJuVILxq25YF71el1q3yq/CSh/185WD/HBV4zdAPNcp5\nhEAzYdXRIz5bDJ/91bAMFNvUxXs1VWgLpayW1GeFYFCes5uU7Bab5HrzvbNj\nJS+W9B0S9DwqsLyWoV/4IyOxOuWdXcIoVuTCme2ORXbIjuBnXojvAGdmACIt\ni0afqm++PQ7WO30uIEVYfENOgy/sODZHUW0acbZCxXPSWFvoJ5a9JkB1q+th\nKfj0WwsAEpHA461kvxoKTGYE90gDYaxOOUjBI3VDuicGCNTW6OWfFvaZUsP8\nInM9k+2O+s4anRfHZqApZ9UJx+c0HB6F+UEkWl7Nmkw4lLsIlE8Rw4nCFkFp\nE/3T4CzAGsNukBVD+6TSZVEWdp38ctEQ5ZUks+mjHOSinXfeibGmfSSpbeHX\niEX6qqEzCGRUAv7yIU94nZQrG8WVR8/J9CTm45Ad5qtDWtEv20SGeX8Hdcd2\n4A3ylPUN3cTM+9MbfwvbJ1UegGD/A5lIXJ/hP6JHfO4DTukzJ+QNqTyhFcfk\nSXxZV5s+x8FJvDmx/OVtnUp4++U9K/PAaVQeI75h6Bi4Pl+KJ4OGjLWbq1Xg\nTrTfvYE53aoiXv8dp4jowT0MXMUD+ieZiFUdDLRQOmmQ3ZqT1q3xDLaTC297\nbR2DSzuUTsoZxSKiDntv9RDIrrAKq/4nxxp+mCPynvnzzT48tZytePdBQSDW\nbJK+doENnB2ihLsFgZcRN1niikYqqV4PW6NAabCObKv0Q5qSczQg20YYqFk4\njmj84bbffteZTuWxSXgBSnGjpl7Fhda6jnkitGKy720uWRTIHiME8ECB8s5Y\npubMKHgC6hDkqFFcFiTKuZM6ZxQV8qIHSgfieYNfQ0L5y0FvTFFoaD7+FM/W\nV4Zmyh8lpxG4AWSERVvr/ahLPtxT4DWuwlRgCXdatHLmxVOcvO7rOLT4HwR5\nypPjwKJ9Wy8FIt6r08fTRQ7FtnL/XCA0igHbuZev9ZL8s/yiEG/Ilj4vGC4+\n/vXHVQz2QaTieNHmb3mYGdcqK1/6VqC/pJDJR5EosZgO/cveS9jUNFjjUG1s\newslLHoy1SYE9gboPMO4IU2Mw6e0SseCfcnlcS1s36s6DyEjayTS4UDID8Xp\n6CCn4tsfP7vY7FXJrdnwLhFFCEFUnTl+tZ6eLTah+nol2n2KSWmokPGLByAb\nocidXqYWrZBtG1ve6dVuElDW7WuPQ6e3ZVen3ySYzXJy729ilzuO54jZELxt\n4/VAxeRbGHtKHpq33n+Uukri7Ln9jwYfZrSwF+Gq6n9fcMVa9gDvwDJt7OTn\nPatgELSzXVphXpR0zmYbLDJq2KEufMGujDnE1R9XWJDiol6GBngWBGDGPE/k\nzmqK8QtmB3d446QAEWn/OKYWzvibtP9CLfPelepNRaFoRBZR5f+4IwJEihQG\nwj6MB6Lz+CjzpNBzvwtgpslpnLXDjrdwMyLo1Gw29QdWz+9IWrBn/rw/KQee\npmVL7Y4pJ/QEfX1j68h+SHRFe0FPHpPxI6fm9rXDPKUe4wBkH9WGKXZQwFyr\nWkoE+5n1yzChZ9dnLEvrDKr2rxNXLfpoCnnoNN4QjCNViEf4d5VxGSUG9cUH\nCrtgw+fJqPSb0QIxSoW7J2oa3OdWPUBtS+R9fzTR9tFiVmppjIgcsCT/eKVc\nIC+gViR6qnuMSIq3IHQN1XEYpEws6hEHUpUjV+Rm4azWAXRPokL7GlpOmQZM\nZP0QAxcLaiB4H8SJPGjwBFW+lYVJBvUrWXJaeqziwXpISyjdYVXo5RGUxYw7\n/+gBH/nGtKvWB8Lj9270GESwVJV279fIfjJ4MxNtaSeruDHe7n11tL14Hait\nTT2fCeQdyc+xPB0Sa+SvgG1l5NkTT+iSMLd95BF3siDOAEgZvnpBQkQJJm/V\nT+JWH82p9ap9BT6OmDJEzJ57IAcWzzeOHmD6e8pvQWnDzlndbeiuo0kFfWPR\naFZK//TSjCZkpyFGFTDx1iRRz2w+JvEqVi0+n6bgmaw6WKGdT6W2LbLx7/oc\nT1f/lEackM/8URRBzRH4JhFFK2VX0HD12+82lJDwa+8X9S3BOp0L3JdDNZqk\nWiBUTJHtwuTRBh3tRtkRMZh2fvVGqPgsw01o/T8tDEtV4MSm6X8QCeNhXkJ0\n7S6+qkqxlpc27ODR37xTiDMdyAVdwMzXDuLikLLh7LHRt9tfGlB9W0PCXTZG\n1pBe363ABLEaDozwfLvb1mvlRoDNVJ8ICkQ+PgixBIFiLjEOgYA4VJYV/Etv\nfZldgmaT+g5C67UIoYe5RRPsa9ED/ki12EUM/M8Sp4KP8vCpRYsBBPhpo8Qv\n0fz9LMoH4ZcMGvKYRL4tPiEvKyAKEjh2MNDinAV5ggbOBHgPehSNPQGinHIQ\nYH9YzDc9PFYDsA3nVf+xAmhYFhUQwvQqKCBmT9dmnD0+M/HpyvKjJfm5GbYt\n8xHo9Yr0grCC+WF1JjJR8aR0xhytn3UyLc5Y/EtlT9o3B6Bo22vS4T+Dn8+u\noJjOVJ/ZDp30LnQvWgheQFRhPslOnT1j8ZCnx/j0UHsZCOt1z/d7zjNlwXOt\ntUCLYGlnk0TPo7gIRHXE4Mhfjr7ZA8eayDL9MdajPsX0YGo4JNsLg9EDkIdg\n3shcbPV7bijdAtgIk7MWhgwdiMvvNz/q+QvlnUxliwSblG9zX+vLer1qCvKw\nYDnVRMT+TQxm0mYxEB/JjTOP1OLNA2lmXwnoy5aYjgR/5gH6SaipuIzmsKZa\nRTOqRqCdzYlwWdK8gHGIekywVlfFSStrWAwU0Z1rLN4/uJrCXNzhJENDLmSr\nIiGcSmN3o2MlTuaaOPpgEHCHo1A0zdxMsEV59fB7utez6j9A7sNFhHPUjIv6\nPA2L/JCui0BMOUy88q984oAyvgmaA0V2/Jwjcb5btakwpoJROKhlhVD/JUoX\nTtci7GGBn3Anol0to1eC7cMcWp4NCKPQ+jnrP8D4ZA4EkSVRWFO5ItewY+OX\nPks9xN0kWJ3gGLruMCQGGxB+nwjYIHi+cfdQCwHA9QbSs4LjASuBFcwHvWZ4\n/fKRFdRP8il69Iaydubru9VBinqTsJiGkeDOO8+uUc/1d2ZrSGjUvMg/FFFG\nnSWaiI9WR+mFJ6MHpW7bV+wEps6IndDxzcwC7M8514kUjE6a+RO/8v4udqky\nM+/8fDF3LuNxyMI3f91C+lA57mZ5/UNuBZTd7sLyWoDfySIfYycTgVJ4EZW0\nayizB5fB1/2Iby6ROi4WJk/+E0jk+XBndLrL2E4YQSthMqpAfg3XBZ3yw7lM\nvepcS476DylRkm9cm5Jl1+pqzkuU2Wwm/NC9by9d8XbKVzaxZqqX9StOokNi\nKHknj/JKEQtPgOooH7rcGTdZgKqnr7I37a5+gHQbuvnDa8SbIavJskgOpsep\nxlzcvTf1mTo5pS++09+hvdEBOIhkkbAox7vt6zn9H+Z0Mj4HbeZr4dTkzUsT\ntH9aFJLT1fMcXVI2+neaCGzzKQ2w4NZQX17KKsGun7U3YyioE/Wd/e0XOy6I\nZu5oWC6tLWyNCwtL9cmBYwJ5u2PW52tQgPxqJyrfmYmDb3asc62phR00nNEo\nIJC4x60OKZ/NFV6GLnKeXIjriAWWMnfhqH0v0Pz+3rZUctBcjeid4ReZCq1g\n8KhD2Lyl0UYG3myTmLGWoPBbtbNoL7QdIiiwWkqEwE/YERcqh2gAQWEgOY2g\nYE+/1RHxo5v3c7UC0cCXd04T2GY2cVQ+c2Oc/JklI+r1WiSs+Z4YSoxQF4yY\n0PV0/649ykOL0f3CVWbVW+foSziLbT9pFvEE2jMuPBLCbrMv+ETjplNk4auO\nE5iwRVobPbSgMmBYk41prukOOR8zmEZAMkBAUN6li/guHE1GZipjotCZylPd\nLh9pP5ghXkHpB4eTTptXhEagAIh75VjmaeoGJoedOpYCUoiSzhCYbHItSNfl\nmNiPTRSIzYWSQ5eX96kiM90zT5uhXoyowgFjAo/pEUKM/DoBlzUJ1eNtEJ7G\nxk3d1trnn9XhIGQuEKpR8U87gLJ9oR4K85cccvQBIBa3MyevtJv8YAxcVb1w\nUHm1KnkvI8O9VJZYzEXAnNuRvbjkJIqkCkowoonf/hhsI2Zr3Py6QQR0LRSd\nEgsCCEZlKLI2R5Cvq8vDjKcWWttMvIPPnARIX8Dv9Q95bqUMsb0AEnQxJztc\ng1ouySzFDxYH5nEVosZp+e+hw7Xb04yFWS7QVCV3Q963YizTEHOh6LoAPxm1\n+Fnt04wCDx/vFELym9OdyQsr1LGVd/X3XPogrx0lqnbh7fWnzjbo8F/lqw0y\nsLzy7CIDsqdQTChXljrgfDgXy5+YoXpVT4tcHDM8HHPnrdqNPYaNXs42rLgW\nkcGV/2gx6Iow1L1ct8ov1ozWTmVOM1br0laRSyYkKbSsG+TdPcWkIfuaF6wS\n03uY5ivHj493LECFr/sJD794JfDsXEOFc5wA+TVJbENXj218cMeTc0wX096j\nyrXQhg+eM8iiRDVr6y+x5j4mgAnK15SWpJjfjfo0zIvcBJOqsd9KtoKSpcdo\noWPILS7u+srGLnpb3LPz4dMxIwNuTfQpKsGa58SD5epQFbA6rW8UnCY+XVIN\ngzGrGK5yzLBXKH47Jrc3Zqv+qyuPf5LVLE8LflzrF7To958FTLYRBkYIhE7a\nuz58IToPoNz9jcHsZSQghHwJcTgzDVH6W1A2nJqUtcD02Ma9KzGYyfUqz4ec\nXNdETzyljU/Az75K5kXPc+SYmbp5NxwaejoOpnnP2uuaB3xLNDAU1ICPQtFi\nM7gNBpRsrpqNOpyBIVyd6h3KuDULO8WOc/iZLAeXpCAhKLQyDAeVt8CKzgRW\nzOJKWRlOdHjywbI3oHWHjMTmKT55FxgyP5bDGF1ehMAWhttY8AXXOsTJHJQP\nVAbLiA==\n",
+    "long_instructions": "### Debugging with Hawa\r\n\r\nHawa was working on a mix of \"In the Stars\", but then her file got corrupted and the mix got messed up. Now when she opens it, the piano part is missing even though the tracks are still in the workspace.\r\n\r\nCan you help her create a function for the piano tracks and call it with the rest of the song?",
+    "bubble_choice_description": "Help Hawa recreate her song after the file was corrupted.",
+    "display_name": "Hawa Needs Help",
+    "validations": [
+      {
+        "key": "music-lab-functions-practiceF_5914f9a7-6bdc-4672-aa11-af911bc2a333",
+        "message": "(check for 4 functions)",
+        "next": true,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "name_suffix": "_v2",
+    "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/benson_boone_beautiful_things/benson_boone_beautiful_things.jpg",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-05-31T03:00:40.112+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-practiceF\\\"\"],\"cloned_from\":\"music-lab-functions-practiceF\"},{\"changed_at\":\"2025-06-12 21:08:05 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

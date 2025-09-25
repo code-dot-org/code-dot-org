@@ -3,11 +3,18 @@
 
 dashboard_enable_pegasus: true
 
+# In local dev, start Puma in single mode (no workers) rather than cluster mode:
+dashboard_workers: 0
+
 db_cluster_id: localhost
 db_endpoint_writer: localhost
+db_endpoint_writer_port: 3306
 db_endpoint_proxy_writer: localhost
+db_endpoint_proxy_writer_port: 3306
 db_endpoint_proxy_reader: localhost
+db_endpoint_proxy_reader_port: 3306
 db_endpoint_proxy_reporting: localhost
+db_endpoint_proxy_reporting_port: 3306
 
 db_credential_admin: {"username":"root", "password":""}
 db_credential_writer: {"username":"root", "password":""}
@@ -66,8 +73,7 @@ openai_evaluate_rubric_api_key:
 openai_student_learning_api_key: !Secret
 openai_measures_of_learning_api_key: !Secret
 
-# Mapbox
-mapbox_upload_tileset:    'censustiles-dev'
+google_gemini_student_learning_api_key: !Secret
 
 # Enables DCDO settings via cookies
 use_cookie_dcdo: true

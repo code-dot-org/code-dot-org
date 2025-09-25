@@ -9,7 +9,7 @@ import {getDialogAlertMock, getAnalyticsMock} from '../../test_utils';
 
 const getDeleteFileMock = (): [ProjectFile, DeleteFileFunction] => {
   const deleteFileData = {} as ProjectFile;
-  const mock: DeleteFileFunction = fileId => {
+  const mock: DeleteFileFunction = ({fileId}) => {
     deleteFileData.id = fileId;
   };
 

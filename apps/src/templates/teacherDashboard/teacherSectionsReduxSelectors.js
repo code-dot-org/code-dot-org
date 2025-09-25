@@ -153,7 +153,6 @@ export const sectionFromServerSection = serverSection => ({
     ? serverSection.script.name
     : serverSection.unitName,
   unitPosition: serverSection.unitPosition,
-  isAssignedStandaloneCourse: serverSection.isAssignedStandaloneCourse,
   isAssignedSingleUnitCourse: serverSection.is_assigned_single_unit_course,
   createdAt: serverSection.createdAt,
   loginType: serverSection.login_type,
@@ -218,7 +217,7 @@ export const studentFromServerStudent = (serverStudent, sectionId) => ({
   name: serverStudent.name,
   familyName: serverStudent.family_name,
   sharingDisabled: serverStudent.sharing_disabled,
-  secretPicturePath: serverStudent.secret_picture_path,
+  secretPictureUrl: serverStudent.secret_picture_url,
   secretPictureName: serverStudent.secret_picture_name,
   secretWords: serverStudent.secret_words,
   userType: serverStudent.user_type,
@@ -272,7 +271,6 @@ export function newSectionData(participantType) {
     unitId: null,
     unitName: null,
     unitPosition: null,
-    isAssignedStandaloneCourse: false,
     hidden: false,
     restrictSection: false,
     aiTutorEnabled: false,
@@ -288,7 +286,7 @@ const assignmentsForSection = (courseOfferings, section) => {
       ];
     if (courseVersion) {
       assignments.push(courseVersion);
-      if (section.unitId && courseVersion.type === 'UnitGroup') {
+      if (section.unitId) {
         if (courseVersion.units[section.unitId]) {
           assignments.push(courseVersion.units[section.unitId]);
         }
@@ -414,7 +412,7 @@ export const studentShape = PropTypes.shape({
   name: PropTypes.string.isRequired,
   familyName: PropTypes.string,
   sharingDisabled: PropTypes.bool,
-  secretPicturePath: PropTypes.string,
+  secretPictureUrl: PropTypes.string,
   secretWords: PropTypes.string,
 });
 

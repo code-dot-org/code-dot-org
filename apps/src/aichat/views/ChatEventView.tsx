@@ -4,7 +4,7 @@ import React, {memo} from 'react';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
-import {modelDescriptions} from '../constants';
+import {FAQ_LINK, modelDescriptions} from '../constants';
 import aichatI18n from '../locale';
 import {removeUpdateMessage} from '../redux';
 import {timestampToLocalTime} from '../redux/utils';
@@ -15,6 +15,7 @@ import {
   isNotification,
   isModelUpdate,
   ChatEventDescriptionKey,
+  ChatAsset,
 } from '../types';
 
 import ChatMessageView from './ChatMessageView';
@@ -35,6 +36,7 @@ const chatEventDescriptionsStudent = {
 interface ChatEventViewProps {
   event: ChatEvent;
   isTeacherView?: boolean;
+  buildAssetUrl?: (asset: ChatAsset) => string;
 }
 
 function formatModelUpdateText(update: ModelUpdate): string {
@@ -71,6 +73,7 @@ function formatModelUpdateText(update: ModelUpdate): string {
 const ChatEventView: React.FunctionComponent<ChatEventViewProps> = ({
   event,
   isTeacherView,
+  buildAssetUrl,
 }) => {
   const dispatch = useAppDispatch();
 
@@ -83,6 +86,7 @@ const ChatEventView: React.FunctionComponent<ChatEventViewProps> = ({
       <ChatMessageView
         chatMessage={event}
         isChatHistoryView={isTeacherView || false}
+        buildAssetUrl={buildAssetUrl}
       />
     );
   }
@@ -105,7 +109,7 @@ const ChatEventView: React.FunctionComponent<ChatEventViewProps> = ({
         link={
           notificationType === 'permissionsError'
             ? {
-                href: 'https://support.code.org/hc/en-us/articles/30162711193741-AI-Chat-Lab-FAQ',
+                href: FAQ_LINK,
                 text: commonI18n.learnMore(),
                 className: styles.alertLink,
               }

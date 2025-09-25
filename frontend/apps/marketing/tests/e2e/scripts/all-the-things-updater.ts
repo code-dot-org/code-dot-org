@@ -1,6 +1,6 @@
 #!/usr/bin/env tsx
 
-import {createClient, Entry} from 'contentful-management';
+import {createClient, Entry, ClientAPI} from 'contentful-management';
 import {config} from 'dotenv';
 import yargs from 'yargs';
 import {hideBin} from 'yargs/helpers';
@@ -11,16 +11,21 @@ import {updateSnapshot} from './commands/update-snapshot';
 import {ALL_THE_THINGS_ENTRY_ID, ROOT_DIR} from './config';
 import {CreateOrUpdateEntryInputProps, Environment} from './types';
 
-console.log(`Using ${ROOT_DIR}/.env`);
-config({path: `${ROOT_DIR}/.env`});
+let client: ClientAPI | undefined;
 
-const SPACE_ID = process.env.CONTENTFUL_SPACE_ID!;
-const ACCESS_TOKEN = process.env.CONTENTFUL_MANAGEMENT_TOKEN!;
-
-const client = createClient({accessToken: ACCESS_TOKEN});
+function getContentfulClient() {
+  if (!client) {
+    client = createClient({
+      accessToken: process.env.CONTENTFUL_MANAGEMENT_TOKEN!,
+    });
+  }
+  return client;
+}
 
 async function getEnvironment(environmentId: Environment) {
-  const space = await client.getSpace(SPACE_ID);
+  const space = await getContentfulClient().getSpace(
+    process.env.CONTENTFUL_SPACE_ID!,
+  );
   return space.getEnvironment(environmentId);
 }
 
@@ -83,6 +88,11 @@ async function createOrUpdateEntry({
 
 async function main() {
   const argv = await yargs(hideBin(process.argv))
+    .option('env', {
+      type: 'string',
+      describe: 'Path to .env file',
+      default: '.env',
+    })
     .command(
       'update-snapshot',
       'Updates the source control version of All The Things',
@@ -109,9 +119,16 @@ async function main() {
     .help()
     .parse();
 
+  console.log(`Using ${ROOT_DIR}/${argv.env}`); // Log the path to the .env file
+  config({path: `${ROOT_DIR}/${argv.env}`}); // Load environment variables from the specified .env file
+
   const command = argv._[0];
 
   if (command === 'update-snapshot') {
+    if (!client) {
+      throw new Error(`Contentful client is not initialized.`);
+    }
+
     await updateSnapshot(
       client,
       argv.environment as Environment,

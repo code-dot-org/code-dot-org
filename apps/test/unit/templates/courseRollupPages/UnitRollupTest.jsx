@@ -18,7 +18,7 @@ describe('UnitRollup', () => {
     const wrapper = mount(<UnitRollup {...defaultProps} />);
 
     const navLink = wrapper.find('a').at(0);
-    expect(navLink.props().href).toContain('/s/unit-1');
+    expect(navLink.props().href).toContain('/courses/course/units/1');
     expect(navLink.contains('< Unit 1 - Unit One')).toBe(true);
   });
 

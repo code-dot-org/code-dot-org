@@ -7,7 +7,7 @@ Feature: Teacher viewing student chat history in AI Chat Lab
 Background:
   Given I create a teacher named "Simone"
   And I give user "Simone" authorized teacher permission
-  And I create a new student section assigned to "customizing-llms-2024" and save the section
+  And I create a new student section assigned to course "customizing-llms-2024" unit 1 and save the section
 
   Given I create a student named "Hermione"
   And I join the section

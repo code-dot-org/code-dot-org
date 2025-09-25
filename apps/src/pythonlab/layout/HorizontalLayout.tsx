@@ -2,6 +2,7 @@ import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import {InfoPanel} from '@codebridge/InfoPanel/InfoPanel';
 import {LayoutProps} from '@codebridge/types';
 import Workspace from '@codebridge/Workspace/Workspace';
+import classNames from 'classnames';
 import React from 'react';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
@@ -10,6 +11,7 @@ import {useHorizontalLayout} from '@cdo/apps/lab2/hooks/useHorizontalLayout';
 import AiTutor2Chat from '@cdo/apps/lab2/views/components/AiTutor2Chat';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
+import experiments from '@cdo/apps/util/experiments';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import moduleStyles from '@cdo/apps/lab2/views/components/layout/layout.module.scss';
@@ -18,7 +20,11 @@ const MIN_RIGHT_PANEL_WIDTH = 300;
 const MIN_LEFT_PANEL_WIDTH = 150;
 const MIN_OUTPUT_HEIGHT = 120;
 const MIN_EDITOR_HEIGHT = 200;
-const INITIAL_INFO_PANEL_WIDTH = 300;
+const INITIAL_INFO_PANEL_WIDTH = experiments.isEnabledAllowingQueryString(
+  experiments.LAB2_RESOURCE_PANEL
+)
+  ? 330
+  : 300;
 const INITIAL_OUTPUT_HEIGHT = 300;
 const INITIAL_OUTPUT_HEIGHT_WIDGET = 800;
 const PROJECT_FOOTER_HEIGHT = 56;
@@ -30,13 +36,15 @@ const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
   const widgetViewShowCode = useAppSelector(
     state => state.codebridgeWorkspace.widgetViewShowCode
   );
-  const {
-    getAiTutor2FullPrompt,
-    levelProperties: {aiTutor2Available},
-  } = useCodebridgeContext();
+  const {hiddenContextCallback, levelProperties} = useCodebridgeContext();
 
+  // AI Tutor 2 is shown in the resource panel if enabled.
   const showAiTutor2 =
-    aiTutor2Available || queryParams('show-ai-tutor2') === 'true';
+    !experiments.isEnabledAllowingQueryString(
+      experiments.LAB2_RESOURCE_PANEL
+    ) &&
+    (levelProperties.aiTutorAvailable ||
+      queryParams('show-ai-tutor2') === 'true');
 
   const {
     leftPanelWidth,
@@ -49,6 +57,7 @@ const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
     rightBottomPanelDragging,
     setRightBottomPanelSize,
     rightmostPanelWidth,
+    panelClassName,
   } = useHorizontalLayout({
     leftPanel: {
       initialWidth: isProjectLevel ? 0 : INITIAL_INFO_PANEL_WIDTH,
@@ -86,7 +95,7 @@ const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
           <>
             <InfoPanel
               style={{width: leftPanelWidth}}
-              className={moduleStyles.flexShrink0}
+              className={classNames(moduleStyles.flexShrink0, panelClassName)}
             />
             <ResizeBar
               isVertical={true}
@@ -104,6 +113,7 @@ const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
               <Workspace
                 style={{height: rightTopPanelHeight}}
                 isWidgetView={isWidgetView}
+                className={panelClassName}
               />
               <ResizeBar
                 isVertical={false}
@@ -116,9 +126,10 @@ const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
             height={rightBottomPanelHeight || INITIAL_OUTPUT_HEIGHT}
             width={rightPanelWidth}
             setOutputHeight={setRightBottomPanelSize}
+            className={panelClassName}
           />
         </div>
-        {showAiTutor2 && getAiTutor2FullPrompt && (
+        {showAiTutor2 && hiddenContextCallback && (
           <div style={{width: rightmostPanelWidth}}>
             <PanelContainer
               id="aitutor2"
@@ -126,10 +137,7 @@ const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
               className={moduleStyles.rightmostColumn}
             >
               <div className={moduleStyles.inside}>
-                <AiTutor2Chat
-                  type="user"
-                  getFullPrompt={getAiTutor2FullPrompt}
-                />
+                <AiTutor2Chat hiddenContextCallback={hiddenContextCallback} />
               </div>
             </PanelContainer>
           </div>

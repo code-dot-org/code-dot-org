@@ -22,13 +22,6 @@ class Projects
     @table = Projects.table
   end
 
-  #### NOTE: This references the Rails model (Project, singular)
-  #### rather than this middleware class (Projects, plural)
-  #### such that we can make use of model associations managed by Rails.
-  def get_rails_project(project_id)
-    Project.find(project_id)
-  end
-
   def create(value, ip:, type: nil, published_at: nil, remix_parent_id: nil, standalone: true, level: nil)
     validate_thumbnail_url(nil, value['thumbnailUrl'])
 
@@ -135,18 +128,7 @@ class Projects
     project_query_result = @table.where(id: project_id).exclude(state: 'deleted')
     raise NotFound, "channel `#{channel_id}` not found" if project_query_result.empty?
 
-    rails_project = get_rails_project(project_id)
-    raise PublishError, "User too new to publish channel `#{channel_id}`" unless rails_project.owner_existed_long_enough_to_publish?
-    raise PublishError, "Project too new to publish channel `#{channel_id}`" unless rails_project.existed_long_enough_to_publish?
-
     project_query_result.update(row)
-
-    project = @table.where(id: project_id).first
-    Projects.get_published_project_data(project, channel_id).merge(
-      # For privacy reasons, include only the first initial of the student's name.
-      studentName: user && UserHelpers.initial(user[:name]),
-      studentAgeRange: user && UserHelpers.age_range_from_birthday(user[:birthday]),
-    )
   end
 
   def get_active_projects
@@ -186,20 +168,6 @@ class Projects
       update(state: 'active', updated_at: Time.now)
   end
 
-  # extracts published project data from a project (aka projects table row).
-  def self.get_published_project_data(project, channel_id)
-    project_value = JSON.parse(project[:value])
-    {
-      channel: channel_id,
-      name: project_value['name'],
-      thumbnailUrl: Projects.make_thumbnail_url_cacheable(project_value['thumbnailUrl']),
-      # Note that we are using the new :project_type field rather than extracting
-      # it from :value. :project_type might not be present in unpublished projects.
-      type: project[:project_type],
-      publishedAt: project[:published_at],
-    }
-  end
-
   # This method can be removed once thumbnails are being served with s3 version ids.
   def self.make_thumbnail_url_cacheable(url)
     url&.sub('/v3/files/', '/v3/files-public/')
@@ -235,6 +203,13 @@ class Projects
   # Default to sharing disabled if there is an error
   rescue ArgumentError, OpenSSL::Cipher::CipherError
     true
+  end
+
+  # Determine if the current user is teacher of project owner.
+  def get_is_teacher_of_project_owner(channel_id, current_user_id)
+    owner_storage_id, __ = storage_decrypt_channel_id(channel_id)
+    owner_user_id = user_id_for_storage_id(owner_storage_id)
+    teaches_student?(owner_user_id, current_user_id)
   end
 
   def users_paired_on_level?(project_id, current_user_id, owner_user_id, owner_storage_id)
@@ -288,35 +263,6 @@ class Projects
     raise NotFound, "channel `#{channel_id}` not found" if update_count == 0
 
     0
-  end
-
-  def content_moderation_disabled?(channel_id)
-    _owner, project_id = storage_decrypt_channel_id(channel_id)
-
-    row = @table.where(id: project_id).exclude(state: 'deleted').first
-    return false unless row
-
-    row[:skip_content_moderation]
-  end
-
-  #
-  # Disables or enables automated content moderation for this project by
-  # altering the value for content_moderation_disabled.
-  # @param [String] channel_id - an encrypted channel id
-  # @param [Boolean] disable, whether the content moderation should be
-  # skipped or not for this project.
-  # @raise [NotFound] if the channel does not exist or already has the desired
-  # value for content_moderation_disabled.
-  #
-  def set_content_moderation(channel_id, disable)
-    _owner, project_id = storage_decrypt_channel_id(channel_id)
-    rows_changed = @table.
-      where(id: project_id).
-      exclude(state: 'deleted').
-      update({skip_content_moderation: disable})
-    raise NotFound, "channel `#{channel_id}` not found" unless rows_changed > 0
-
-    disable
   end
 
   def to_a

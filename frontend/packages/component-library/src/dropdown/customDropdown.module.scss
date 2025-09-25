@@ -1,4 +1,3 @@
-@use '@code-dot-org/component-library-styles/primitiveColors.scss';
 @use '@code-dot-org/component-library-styles/variables.scss' as variables;
 @use '@code-dot-org/component-library-styles/mixins.scss' as mixins;
 @use '@code-dot-org/component-library-styles/typography.module.scss' as
@@ -231,7 +230,7 @@
   }
 }
 
-// Dropdrown Menu placements
+// Dropdown Menu placements
 
 .dropdownContainer-left-menuPlacement {
   .dropdownMenuContainer {
@@ -242,6 +241,20 @@
 .dropdownContainer-right-menuPlacement {
   .dropdownMenuContainer {
     inset-inline-end: 0;
+  }
+}
+
+// Dropdown Menu Vertical placements
+
+.dropdownContainer-bottom-menuVerticalPlacement {
+  .dropdownMenuContainer {
+    inset-block-start: 100%;
+  }
+}
+
+.dropdownContainer-top-menuVerticalPlacement {
+  .dropdownMenuContainer {
+    inset-block-end: 100%;
   }
 }
 

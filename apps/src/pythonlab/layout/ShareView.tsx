@@ -11,7 +11,7 @@ import commonI18n from '@cdo/locale';
 import ConsoleAndPreviewShare from './ConsoleAndPreviewShare';
 import ConsoleShare from './ConsoleShare';
 
-import moduleStyles from './share-view.module.scss';
+import moduleStyles from '@cdo/apps/lab2/views/components/layout/share-layout.module.scss';
 
 const SIDEBAR_WIDTH = 150;
 const MIN_PREVIEW_WIDTH = 200;

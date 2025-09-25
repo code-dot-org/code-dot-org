@@ -14,30 +14,6 @@ $container-width: 309px;
   grid-gap: 1em;
 }
 
-.catalogContentNoResults {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 70%;
-  margin: 3em auto;
-  text-align: justify;
-
-  img {
-    display: block;
-    margin: auto;
-    width: 5em;
-  }
-
-  h5 {
-    color: color.$teal;
-    margin: 1em 0 0 0;
-  }
-
-  p {
-    margin: 1em;
-  }
-}
-
 .assignSuccessMessageContainer {
   display: flex;
   min-width: 250px;

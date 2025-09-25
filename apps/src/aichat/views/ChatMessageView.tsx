@@ -5,15 +5,14 @@ import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import CopyButton from '@cdo/apps/aiComponentLibrary/copyButton/CopyButton';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {ValueOf} from '@cdo/apps/types/utils';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 
 import {
+  ChatAsset,
   type ChatMessage as ChatMessageType,
   isCompletedChatMessage,
   isServerChatEvent,
 } from '../types';
-import {getAssetUrl} from '../utils';
 
 import FilePreview from './assets/FilePreview';
 import CleanFeedbackFooter from './teacherFeedback/CleanFeedbackFooter';
@@ -24,16 +23,16 @@ import styles from './chatWorkspace.module.scss';
 interface ChatMessageViewProps {
   chatMessage: ChatMessageType;
   isChatHistoryView: boolean;
+  buildAssetUrl?: (asset: ChatAsset) => string;
 }
 
 const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
   chatMessage,
   isChatHistoryView,
+  buildAssetUrl,
 }) => {
   const [showProfaneUserMessage, setShowProfaneUserMessage] = useState(false);
   const {status, role, chatMessageText, assets} = chatMessage;
-  const currentChannelId = useAppSelector(state => state.lab.channel?.id);
-  const levelName = useAppSelector(state => state.lab.levelProperties?.name);
 
   const displayText = getChatMessageDisplayText(
     status,
@@ -89,12 +88,12 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
   }
 
   let header;
-  if (!isAssistant && assets && currentChannelId) {
+  if (!isAssistant && assets && buildAssetUrl) {
     header = (
       <div className={styles.assetCol}>
         {assets.map(asset => {
           const filename = asset.filename;
-          const url = getAssetUrl(asset, currentChannelId, levelName);
+          const url = buildAssetUrl(asset);
           return (
             <button
               key={filename}

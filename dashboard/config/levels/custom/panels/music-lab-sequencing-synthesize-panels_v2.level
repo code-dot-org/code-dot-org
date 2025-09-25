@@ -1,0 +1,70 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2025-05-31T02:57:02.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "### Record Producer\n\nThis is Henny. He's a record producer",
+        "imageUrl": "https://images.code.org/4df9a2d18f4f132f4e3f4520e1198440-henny0.png",
+        "key": "test-music-lab-loops-sythesize-project-panels-25e9b5d9-07a8-4064-9fb2-75fa8d2262e3",
+        "layout": "text-bottom-left"
+      },
+      {
+        "text": "### Record Producer\n\nHe's worked with artists like Jay-Z, Kendrick Lamar, and the Black Eyed Peas",
+        "imageUrl": "https://images.code.org/a88129e144aed6a6178f02a211842de8-henny1.png",
+        "key": "test-music-lab-loops-sythesize-project-panels-0b5eb9b2-25d6-472d-9f49-a3c50f1a0b1a",
+        "fadeInOverPrevious": true,
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "\"A record producer is someone who brings the singers, the songwriters, the engineers, the musicians together...\"",
+        "imageUrl": "https://images.code.org/44a62b97aa3c1e884c86a84c1e1d836c-henny2.png",
+        "key": "test-music-lab-loops-sythesize-project-panels-d145b67c-8a93-4174-92c5-f1215a77cb2b",
+        "layout": "text-top-left",
+        "fadeInOverPrevious": true,
+        "typing": true
+      },
+      {
+        "text": "\"... to create a song from start to finish\"\n\n",
+        "imageUrl": "https://images.code.org/a65a27ab61b4e0b488081da2515ea5c9-henny3.png",
+        "key": "test-music-lab-loops-sythesize-project-panels-fb2f98b1-b7e5-4636-a99b-1450c3ccae64",
+        "layout": "text-top-left",
+        "fadeInOverPrevious": true,
+        "typing": true
+      },
+      {
+        "text": "### Record Producer\n\nHenny contributes to a song by adding Effects to individual tracks",
+        "imageUrl": "https://images.code.org/ae7d384783a186472ba910c43206e6e2-henny4.png",
+        "key": "test-music-lab-loops-sythesize-project-panels-0e55f57b-3524-4334-b2fc-6cc466c0e847",
+        "layout": "text-bottom-center",
+        "fadeInOverPrevious": true,
+        "typing": false
+      },
+      {
+        "text": "### Record Producer\n\nIn this lesson, we're going to add Effects to our songs in Music Lab!",
+        "imageUrl": "https://images.code.org/1d9484804795b6793199833abe685b67-effects2.gif",
+        "key": "test-music-lab-loops-sythesize-project-panels-177676fb-e459-49fb-9aa9-4dbc047d67f3",
+        "layout": "text-top-right",
+        "fadeInOverPrevious": true,
+        "typing": false
+      },
+      {
+        "text": "\"Behind the scenes, there's a world of people waiting to connect you to music through technology!\"",
+        "imageUrl": "https://images.code.org/28f439ac434780fdac62465964f8ffd3-henny5.png",
+        "key": "test-music-lab-loops-sythesize-project-panels-0a63e0c0-3e78-48a6-8222-48a8750ff79a",
+        "fadeInOverPrevious": true,
+        "typing": true,
+        "layout": "text-bottom-center"
+      }
+    ],
+    "name_suffix": "_v2"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:57:02.338+00:00\",\"changed\":[\"cloned from \\\"music-lab-sequencing-synthesize-panels\\\"\"],\"cloned_from\":\"music-lab-sequencing-synthesize-panels\"}]"
+}]]></config>
+</Panels>

@@ -15,7 +15,9 @@ module Cdo
     def self.clone_cluster(
       source_cluster_id: CDO.db_cluster_id,
       clone_cluster_id: "#{source_cluster_id}-clone",
-      instance_type: 'db.r5.large',
+      # We currently standardize on the `r7i` family. The `xlarge` instance type is likely the smallest that can operate on
+      # a clone of the production cluster, which is the most common usage of this method.
+      instance_type: 'db.r7i.xlarge',
       max_attempts: 30,  # It takes ~15 minutes to clone the production cluster, so default to 30 minutes.
       delay: 60
     )

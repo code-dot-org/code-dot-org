@@ -1,0 +1,58 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2025-07-31T15:49:39.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## AI Fraud Detection\r\n\r\nExamine how well an AI system detects fraud compared to your own analysis.\r\n\r\n### Do This:\r\n\r\nLoad the same user artifacts that you looked at to AI and compare:\r\n1. Did the AI flag the same thing?\r\n2. Did it miss anything?\r\n3. Did it catch something a human wouldn't?\r\n\r\n\r\n**Try it out!** \r\n\r\n:::details [<i class=\"fa fa-briefcase\" aria-hidden=\"true\"></i> **Need a starting prompt?**]\r\n>Please review this user's background, login log, and transaction history. What behavior seems suspicious or possibly fraudulent, and why?\r\n:::\r\n&nbsp\r\n\r\n\r\n::: details [<i class=\"fa fa-file-image-o\" aria-hidden=\"true\"></i> **How do I add a user profile and audit logs?**]\r\n- Click the button labeled **Add** below your chat input.\r\n- Choose **From Library**\r\n- Then browse the existing files.\r\n- When you find your user's file to upload, click the checkbox next to it to select it and then click **Attach**.\r\n- You should see the file get added to the message being sent to AI Chat.\r\n:::\r\n",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are a simulated AI fraud detection assistant trained to analyze user login activity, location history, and transaction data.\n\nWhen given a user persona with background information and recent digital activity logs, your task is to detect anything that appears unusual or potentially fraudulent.\n\nUse the user's profile details (such as location, tech habits, spending patterns, and security behaviors) as context for interpreting the data. Your analysis should consider both:\n\n    Obvious anomalies (e.g., logins from distant locations, large or out-of-character transactions)\n\n    Subtle patterns (e.g., slight shifts in behavior, mismatched timing, or device inconsistencies that require cross-referencing)\n\nExplain your reasoning clearly in plain language. You may include uncertainty or note possible false positives. Your goal is to simulate how an AI system might flag suspicious activity while acknowledging that not all anomalies mean fraud.",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "multimodalEnabled": true
+    },
+    "name_suffix": "_2025",
+    "starter_assets": {
+      "Jordan P. Audit Logs.pdf": "de645a8d-7536-4b75-821c-486057f26876.pdf",
+      "Sana R. Audit Logs.pdf": "501a6341-25b4-4300-9d2a-9480b19f349d.pdf",
+      "Diego M. Audit Logs.pdf": "0abf3fa4-8388-42ff-a9c7-c1866bddc89f.pdf",
+      "Amara T. Audit Logs.pdf": "5492e19e-7c29-498f-b366-ca7885ad1dad.pdf"
+    },
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-07-31T15:49:39.500+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson1-level4_2025\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson1-level4_2025\"},{\"changed_at\":\"2025-07-31 15:52:15 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-31 16:05:07 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-31 17:50:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Aichat>

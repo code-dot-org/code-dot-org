@@ -58,6 +58,7 @@ export default class AddAssetButtonRow extends React.Component {
     statusMessage: PropTypes.string,
     recordDisabled: PropTypes.bool,
     hideAudioRecording: PropTypes.bool,
+    projectType: PropTypes.string.isRequired,
   };
 
   render() {
@@ -74,6 +75,7 @@ export default class AddAssetButtonRow extends React.Component {
           onUploadStart={this.props.onUploadStart}
           onUploadDone={this.props.onUploadDone}
           onUploadError={this.props.onUploadError}
+          projectType={this.props.projectType}
         />
         {shouldShowRecordButton && (
           <RecordButton

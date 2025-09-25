@@ -1,0 +1,61 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2025-05-31T02:56:04.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "### Choice H\r\n\r\nFind the example music player that says \"Choice H\" below these instructions. Press the Play button on the player to hear the song.\r\n\r\nRefer to your activity guide to see if it would work for any client's needs.\r\n\r\nOnce you're done, press Continue to return back to your choices and pick a different song.\r\n\r\n",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "packId": "default",
+      "toolbox": {
+        "type": "flyout",
+        "blocks": {
+        }
+      },
+      "showSoundFilters": true,
+      "showSoundsPanelInSoundsMode": true,
+      "sortUnrestrictedPacksByType": true,
+      "allowChangeStartingPlayheadPosition": true,
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false
+            }
+          ]
+        }
+      }
+    },
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": false,
+      "validationMode": "default",
+      "playerTitle": "Choice H"
+    },
+    "display_name": "Choice H",
+    "thumbnail_url": "https://images.code.org/965f2e5f46e56baf8cc9a91a90606f78-Screenshot 2025-04-02 at 7.41.54 AM.png",
+    "encrypted_exemplar_sources": "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\nCp2bsdVzNv4XfUtP8awyW6JsWcRddLlLfakXadD0hpVgKwIg93+AWsd/8Uh+\nna8N8ISx/szh1V0iehAKwxzOziaY92T//O8r/tHoOXzrBHvCH1XN1l2KyJfb\nVSMzZ1XzK6o3IKjfbt4ySFQV0ZgPGrUZVYBKuVTG3Df+WOLZetSEMD3NYH3K\nmTJUPR5QJYb/Q+vQ+/17GFl+IeOywIlVTM0wa3ePAxpK8FmEWSSf1m6FVmHk\ngvK5y4JVdYogeFincOe3zvpzleXt06fqF20ApPDzhYg6R8T72l1JypWCCs5R\ndGd+T8ob0yWGCe2NxtbYAUVKiNFgIeq6aodLPmHQN21DUqg0f7cCXRFhnYhf\nzSpbPxoFFo0NR+vDedHbY2P/pOp1eWV+AKeMtjNyxROKUZVzkIWt5K4OrZAj\nd54yIcAPq8/2S8PmKRuTqFh4QxylAwuSzADFVwgmAULDIUMUMWkJZzLbHlS7\nPn3th5sat1M+IPXccJVDMf+Ix04n9XS9W59r/Ldmp5V/sDt7n3GXppSeVQgl\nzySSmz1zQ5oO5L6zH4x42EbKbVw3u4z/zpfjupM/hAdj1bIDUvmUy8crV7JC\nsETbTcqeq4q0Lf6SgCkrOD2ti8AhEjQ9QNOq5h0TKSGJWSdR/N3t9fqSiiDM\nxiIzXnJafmbKxbxd1hmRsajELD14L1ifI8igTJKccj2NpKM4f1NhYVr5cvsi\nK5Jw8m2yIR5VCYcPmVrFC7CBB8Yty4kgzKuAwvCKCRUexVqaOJlx3/Owmxdp\ngjngeboHEGGYFTmm76xQP+2LL4ziLF4PmARCZ0wg79ZA9hgA0SGabpub79uv\nCUyzuTausAO4X5zj9FgLU7t5BBWq0x5ASvo0BRla0K2IPVy7x5uT7X/P83kz\nNNfIXrtXCT67cV9LPIn7nGpQ+wACsXTEhY7ahPW1doJWm8qLM1ZrdrE265DL\n7luHDiUf1ACmLSLKpm0rBAhPYJWt0Qd3gtbw353PiYxki9cSWGElCgQp54vk\nUHZBMPkARfYjAtQdVVMRha8csq44wqo/hDTS680Wt9nm+CETOWIPK47KH0BX\n4YmD/ZxLTA8HnSdWhSqOLaOM4zRkwr4p/Q3PzeFGWDogBg5MHJ/NTjiNpFgd\nMlz1Rh59jI+XGKx+3z2hGoAvdHLn9dY2zPp9uge5hfNTDdsgSYR24hm9KVCX\n3mY4jP5S8h0Um9EHBoZs+6vQOUVerPaUpsgBdgA0ADnPgMuy04MUF44o68Ml\na6LfGbqDmSx/lLuXV3gMFkPIB+NVwpvUZ3mD7fGxEyvDZxQ8qhrRLsWESQ3P\nPeu3+vLsTnp3DB6Hn0kijDwikoLqjhE+P76z6xkn79M+ZgywEjAE80q6YeQO\n/wffwD+woF+7PI9IIYQAGbjzcZvUB2qmwgwYLzSeSayPIIyeuYVZlWE1jldA\nHFFsMBNkdAsUnbExwyTqYo1LTapQVvPwy05NIeQ1sRiKNhGV4cd5veQYQyUy\nax7li3LqgcTcN9rcEROpBfXAoiJz+ekMPGOKObVqKUHycMnxjPuNBBrBIdfq\nBqYqzGhAVuiPgngnZ5FBdm8hSQ3PWXbr6tnSwvW6lsZUK/Ed0ZWZd2Uq0nGM\n79Dx8mmFTboaGs9WXaAsDvZQ5e+kVydn+ab3Pioh6mNxaaXIIHZZvq8+VNQB\n+7X0UActZ1JxcwUzVcnp24TCjatVyYHW9emicNJiZFi4+B7dtmsbQw63vdr+\nMyIlsYQaSjQyGNVFPj+bASsOK9n+mOLGuJC22xTGtLtoN753qPtHCZ0C2oT/\nj7ubofW3JyLpiviEWQv/XDGgXLr4/rpA4EPMiqIGvv2VwlUbpxpmmy0wFYHv\nDtfpjh586RhViW9Ta2D9HxTAW8kw96gTwtHJhakey3FBkZ/K1ACyQS+DweSk\nJExwqwVqDGxgrzwYgM4q8EYizB7w0Yc87yL9vlf3uuT8snSMoWVErOrVYwts\n+BiyVs/eU8qUnEcT4wuJIngtxVsNx73CPCj2e19oLx5RYwf4gaQDbeS6jj48\nXA9V3h3eYaQaBkpuRBgJ1BTC/bVhsdyflsqNugVNFnD0EeQoMJ8HtubQ1ryg\nhwpYDkvX9IGNNACgsSEw867bdm7XiBP3EImPbUG2mVm0pBOGuUeALVun0Cok\nRM9Y/XemOAnxfcxi/jzryzAzS/k=\n",
+    "bubble_choice_description": "Click this option to hear a song with a **\"playful adventurous beat\"** from your Song Portfolio. After listening to the song, you can decide if it would meet the needs of one of your clients",
+    "name_suffix": "_v2",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:56:04.143+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-intro-choice-h\\\"\"],\"cloned_from\":\"test-music-lab-intro-choice-h\"}]"
+}]]></config>
+  <blocks/>
+</Music>

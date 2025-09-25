@@ -6,7 +6,7 @@ module Marketing
     include Singleton
 
     class << self
-      delegate :entry, to: :instance
+      delegate :entry, :entries, to: :instance
     end
 
     def initialize
@@ -19,6 +19,10 @@ module Marketing
 
     def entry(locale, id)
       @client.entry(id, locale: locale)
+    end
+
+    def entries(locale, content_type_id)
+      @client.entries(content_type: content_type_id, locale: locale)
     end
   end
 end

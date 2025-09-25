@@ -41,7 +41,7 @@
       }
     ],
     "family_name": "csp",
-    "has_numbered_units": true,
+    "numbered_units": "auto",
     "version_year": "2021"
   },
   "resources": [

@@ -39,12 +39,6 @@ export const HeroBannerContentfulComponentDefinition: ComponentDefinition = {
         ],
       },
     },
-    removeBackground: {
-      displayName: 'Remove background',
-      type: 'Boolean',
-      defaultValue: false,
-      group: 'style',
-    },
     sectionVideoShowCaption: {
       displayName: 'Show video caption',
       type: 'Boolean',

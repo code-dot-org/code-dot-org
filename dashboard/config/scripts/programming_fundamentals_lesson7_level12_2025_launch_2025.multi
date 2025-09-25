@@ -1,7 +1,7 @@
 name 'programming-fundamentals-lesson7-level12_2025-launch_2025'
 title 'Check Your Understanding'
 
-right 'Use `custom.paint_dot(kai)` after importing `custom`.'
+right 'Use `paint_dot(kai)` after importing the function with `from custom import paint_dot`.'
 wrong 'Just type `paint_dot(kai)` — Python will automatically find the function.'
 wrong 'Call `this_painter.paint("SkyBlue")` directly in `main.py`.'
 wrong 'Redefine the `paint_dot()` function in `main.py` before calling it.'

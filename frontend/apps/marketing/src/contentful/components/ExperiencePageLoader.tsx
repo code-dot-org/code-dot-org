@@ -1,11 +1,13 @@
 'use client';
-// Register custom components client-side
-import '@/contentful/register-custom-components';
 import {ExperienceRoot} from '@contentful/experiences-sdk-react';
+
+import {Brand} from '@/config/brand';
+import {registerContentfulComponents} from '@/contentful/registration';
 
 type ExperiencePageLoaderProps = {
   experienceJSON: string | null;
   locale: string;
+  brand: Brand;
 };
 
 /**
@@ -16,6 +18,8 @@ type ExperiencePageLoaderProps = {
 export default function ExperiencePageLoader({
   experienceJSON,
   locale,
+  brand,
 }: ExperiencePageLoaderProps) {
+  registerContentfulComponents(brand);
   return <ExperienceRoot experience={experienceJSON} locale={locale} />;
 }

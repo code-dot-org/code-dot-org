@@ -1,0 +1,61 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2025-05-31T02:56:03.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "### Choice F\r\n\r\nFind the example music player that says \"Choice F\" below these instructions. Press the Play button on the player to hear the song.\r\n\r\nRefer to your activity guide to see if it would work for any client's needs.\r\n\r\nOnce you're done, press Continue to return back to your choices and pick a different song.\r\n\r\n",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "packId": "shakira_maluma_chantaje",
+      "toolbox": {
+        "type": "flyout",
+        "blocks": {
+        }
+      },
+      "showSoundFilters": true,
+      "showSoundsPanelInSoundsMode": true,
+      "sortUnrestrictedPacksByType": true,
+      "allowChangeStartingPlayheadPosition": true,
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false
+            }
+          ]
+        }
+      }
+    },
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": false,
+      "validationMode": "default",
+      "playerTitle": "Choice F"
+    },
+    "display_name": "Choice F",
+    "thumbnail_url": "https://images.code.org/795c4ae0ee55d7e8dd1e85e8d789a92a-Screenshot 2025-04-02 at 7.42.08 AM.png",
+    "encrypted_exemplar_sources": "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\nfdL5ZCyH8OE=\n",
+    "bubble_choice_description": "Click this option to hear a song with a **\"bouncy guitar-led remix of Shakira\"** from your Song Portfolio. After listening to the song, you can decide if it would meet the needs of one of your clients",
+    "name_suffix": "_v2",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:56:03.680+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-intro-choice-f\\\"\"],\"cloned_from\":\"test-music-lab-intro-choice-f\"}]"
+}]]></config>
+  <blocks/>
+</Music>

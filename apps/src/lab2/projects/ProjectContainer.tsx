@@ -15,13 +15,13 @@ import {
   getUserAppOptionsPath,
 } from '@cdo/apps/code-studio/progressReduxSelectors';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
-import {
-  isReadOnlyWorkspace,
-  setUpWithLevel,
-  shouldHideShareAndRemix,
-} from '@cdo/apps/lab2/lab2Redux';
+import {setUpWithLevel} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {resetProjectMetadata} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
+import {
+  isReadOnlyWorkspace,
+  shouldHideShareAndRemix,
+} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {AppName} from '@cdo/apps/lab2/types';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';

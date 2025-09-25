@@ -534,18 +534,10 @@ export function cleanUp(
     block.moveTo(new Blockly.utils.Coordinate(x, y));
     let collider = getCollider(block);
 
-    const {viewWidth} = workspace.getMetrics();
-    const maximumX = viewWidth - WORKSPACE_PADDING;
-    const blockOutOfBounds = workspace.RTL
-      ? collider.x - collider.width < 0
-      : collider.x + collider.width > maximumX;
-    if (blockOutOfBounds) {
-      x = workspace.RTL
-        ? Math.min(collider.width, maximumX)
-        : Math.max(maximumX - collider.width, WORKSPACE_PADDING);
-      block.moveTo(new Blockly.utils.Coordinate(x, y));
-      collider = getCollider(block);
-    }
+    // We constrain horizontal positioning to the width of the view area or block content,
+    // whichever is greater. This prevents blocks from being pushed too far to the right.
+    const {viewWidth, contentWidth} = workspace.getMetrics();
+    const maximumX = Math.max(viewWidth, contentWidth) - WORKSPACE_PADDING;
 
     orderedColliders.forEach(orderedCollider => {
       if (isOverlapping(collider, orderedCollider)) {
@@ -569,7 +561,7 @@ export function cleanUp(
             // If the workspace is RTL, we need to check if we can move left
             const potentialNewRight = orderedCollider.x - SPACE_BETWEEN_BLOCKS;
             const potentialNewLeft = potentialNewRight - collider.width;
-            // The block must be able to fit to the left without leaving the view area.
+            // The block must be able to fit to the left without pushing further out of the view area.
             if (potentialNewLeft >= 0) {
               canMoveHorizontally = true;
               candidateX = potentialNewRight;
@@ -578,7 +570,7 @@ export function cleanUp(
             const potentialNewLeft =
               orderedCollider.x + orderedCollider.width + SPACE_BETWEEN_BLOCKS;
             const potentialNewRight = potentialNewLeft + collider.width;
-            // The block must be able to fit to the right without leaving the view area.
+            // The block must be able to fit to the right without pushing further out of the view area.
             if (potentialNewRight < maximumX) {
               canMoveHorizontally = true;
               candidateX = potentialNewLeft;

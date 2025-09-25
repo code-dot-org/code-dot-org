@@ -11,7 +11,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-15 18:43:01 UTC",
+    "serialized_at": "2025-06-09 19:37:27 UTC",
+    "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -216,6 +217,21 @@
         "lesson_group.key": "",
         "script.name": "emmas-playground"
       }
+    },
+    {
+      "key": "lesson-13",
+      "name": "EscA.I.pe Room",
+      "absolute_position": 13,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 13,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground"
+      }
     }
   ],
   "lesson_activities": [
@@ -402,6 +418,18 @@
       "seeding_key": {
         "lesson_activity.key": "3ff7f875-07cb-4086-a618-1d9fb75b00d4",
         "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground"
+      }
+    },
+    {
+      "key": "704b1c3b-93a2-4b6c-afb5-ea289b4c8ed7",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "704b1c3b-93a2-4b6c-afb5-ea289b4c8ed7",
+        "lesson.key": "lesson-13",
         "lesson_group.key": "",
         "script.name": "emmas-playground"
       }
@@ -810,6 +838,27 @@
       "seeding_key": {
         "activity_section.key": "c261d286-8780-4385-8a7e-402a34a2aa33",
         "lesson_activity.key": "3ff7f875-07cb-4086-a618-1d9fb75b00d4"
+      }
+    },
+    {
+      "key": "0cb1f6ff-a37e-44a6-8130-fdd70841f280",
+      "position": 1,
+      "properties": {
+        "progression_name": "Artist Lab"
+      },
+      "seeding_key": {
+        "activity_section.key": "0cb1f6ff-a37e-44a6-8130-fdd70841f280",
+        "lesson_activity.key": "704b1c3b-93a2-4b6c-afb5-ea289b4c8ed7"
+      }
+    },
+    {
+      "key": "16a94d5a-bc21-48f7-897f-0e4069a2b59d",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "16a94d5a-bc21-48f7-897f-0e4069a2b59d",
+        "lesson_activity.key": "704b1c3b-93a2-4b6c-afb5-ea289b4c8ed7"
       }
     }
   ],
@@ -2392,6 +2441,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "emma-histogram-panel-data-science-lesson7-_2025_launch"
+        ],
         "progression": "Histogram Panel"
       },
       "bonus": false,
@@ -2414,6 +2466,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "emma-scatter-plot-panel-data-science-lesson7-_2025_launch"
+        ],
         "progression": "Scatter Plot Panel"
       },
       "bonus": false,
@@ -2528,6 +2583,28 @@
       },
       "level_keys": [
         "emma3-data-science-ch1-lesson10-level7_2025"
+      ]
+    },
+    {
+      "chapter": 71,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Artist Lab"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "emmas-test-escape-room-ai"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "0cb1f6ff-a37e-44a6-8130-fdd70841f280"
+      },
+      "level_keys": [
+        "emmas-test-escape-room-ai"
       ]
     }
   ],
@@ -3370,6 +3447,18 @@
         "lesson_group.key": "",
         "script.name": "emmas-playground",
         "activity_section.key": "c261d286-8780-4385-8a7e-402a34a2aa33"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "emmas-test-escape-room-ai",
+        "script_level.level_keys": [
+          "emmas-test-escape-room-ai"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "0cb1f6ff-a37e-44a6-8130-fdd70841f280"
       }
     }
   ],

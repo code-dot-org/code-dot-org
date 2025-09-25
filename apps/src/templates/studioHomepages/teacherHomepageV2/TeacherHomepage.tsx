@@ -1,43 +1,52 @@
-import Alert from '@code-dot-org/component-library/alert';
 import {Heading2} from '@code-dot-org/component-library/typography';
 import React from 'react';
 
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {atRiskAgeGatedSections} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
+import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
+import {AgeGatedSectionsBanner} from '../../policy_compliance/AgeGatedSectionsModal/AgeGatedSectionsBanner';
 import {
   asyncLoadTeacherHomepageSectionData,
   asyncLoadCoteacherInvite,
 } from '../../teacherDashboard/teacherSectionsRedux';
+import CoteacherInviteNotification from '../CoteacherInviteNotification';
 
 import {EmptyHomepage} from './EmptyHomepage';
 import {Header} from './Header';
 import {SectionList} from './SectionList';
+import TeacherHomepagePopups from './TeacherHomepagePopups';
 import TeacherPromotions from './TeacherPromotions';
 
 import styles from './teacherHomepage.module.scss';
 
 export type ArchivedToggleOption = 'teaching' | 'archived';
 
+const LOGGED_TEACHER_SESSION = 'logged_teacher_session';
+
 interface TeacherHomepageProps {
   studioUrlPrefix: string;
 }
 
-const LOCAL_STORAGE_KEY = 'teacher_homepage_feedback_closed';
-
-export const TeacherHomepage: React.FC<TeacherHomepageProps> = ({
-  studioUrlPrefix,
-}) => {
+const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
   const teacherName = useAppSelector(state => state.currentUser.displayName);
+  const teacherId = useAppSelector(state => state.currentUser.userId);
 
   const dispatch = useAppDispatch();
 
-  const [isFeedbackAlertClosed, setIsFeedbackAlertClosed] = React.useState(
-    () => tryGetLocalStorage(LOCAL_STORAGE_KEY, '') === 'true'
-  );
+  const [CAPmodalOpen, setCAPModalOpen] = React.useState(false);
+  const toggleCAPModal = () => {
+    setCAPModalOpen(!CAPmodalOpen);
+  };
+
+  const ageGatedSections = useAppSelector(atRiskAgeGatedSections);
+
+  const shouldDisplayAtRiskAgeGatedWarning = () => {
+    return ageGatedSections?.length > 0;
+  };
 
   React.useEffect(() => {
     dispatch(asyncLoadTeacherHomepageSectionData());
@@ -45,12 +54,28 @@ export const TeacherHomepage: React.FC<TeacherHomepageProps> = ({
   }, [dispatch]);
 
   React.useEffect(() => {
+    // Send one analytics event when a teacher logs in. Use session storage to determine
+    // whether they've just logged in.
+    if (
+      !!teacherId &&
+      tryGetSessionStorage(LOGGED_TEACHER_SESSION, 'false') !== 'true'
+    ) {
+      trySetSessionStorage(LOGGED_TEACHER_SESSION, 'true');
+
+      analyticsReporter.sendEvent(
+        EVENTS.TEACHER_LOGIN_EVENT,
+        {
+          'user id': teacherId,
+        },
+        PLATFORMS.BOTH
+      );
+    }
     analyticsReporter.sendEvent(
       EVENTS.NEW_TEACHER_HOMEPAGE_VISITED,
       {},
       PLATFORMS.BOTH
     );
-  }, []);
+  }, [teacherId]);
 
   const [selectedArchiveToggle, setSelectedArchiveToggle] =
     React.useState<ArchivedToggleOption>('teaching');
@@ -85,27 +110,6 @@ export const TeacherHomepage: React.FC<TeacherHomepageProps> = ({
             ? i18n.welcome({teacherName: teacherName})
             : i18n.welcomeWithoutName()}
         </Heading2>
-        {!isFeedbackAlertClosed && (
-          <Alert
-            className={styles.feedbackAlert}
-            size={'s'}
-            text={i18n.teacherHomePageFeedback()}
-            type="primary"
-            showIcon={true}
-            icon={{iconName: 'hand-wave'}}
-            isImmediateImportance={false}
-            link={{
-              text: i18n.feedbackHeader(),
-              href: 'https://usabi.li/do/a9ksz7qfbspy/iwhhup',
-              openInNewTab: true,
-              external: true,
-            }}
-            onClose={() => {
-              setIsFeedbackAlertClosed(true);
-              trySetLocalStorage(LOCAL_STORAGE_KEY, 'true');
-            }}
-          />
-        )}
         <div className={styles.teacherHomepageContent}>
           <div className={styles.teacherHomepageLeftContent}>
             <Header
@@ -113,6 +117,18 @@ export const TeacherHomepage: React.FC<TeacherHomepageProps> = ({
               setSelectedArchiveToggle={onArchiveToggleChange}
             />
 
+            {shouldDisplayAtRiskAgeGatedWarning() && (
+              <AgeGatedSectionsBanner
+                toggleModal={toggleCAPModal}
+                modalOpen={CAPmodalOpen}
+                ageGatedSections={ageGatedSections}
+              />
+            )}
+
+            <CoteacherInviteNotification
+              isForPl={false}
+              destructiveLoad={true}
+            />
             {numSections === 0 ? (
               <EmptyHomepage showHiddenOnly={showHiddenOnly} />
             ) : (
@@ -125,6 +141,9 @@ export const TeacherHomepage: React.FC<TeacherHomepageProps> = ({
           <TeacherPromotions />
         </div>
       </div>
+      <TeacherHomepagePopups />
     </div>
   );
 };
+
+export default TeacherHomepage;

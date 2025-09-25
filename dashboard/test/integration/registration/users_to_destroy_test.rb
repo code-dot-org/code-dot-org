@@ -11,7 +11,7 @@ module RegistrationsControllerTests
     end
 
     test "returns bad request if user cannot delete own account" do
-      user = create :user
+      user = create(:user)
       user.stubs(:can_delete_own_account?).returns(false)
       sign_in user
 
@@ -24,7 +24,7 @@ module RegistrationsControllerTests
     #
 
     test "returns summarized student to be deleted" do
-      student = create :student
+      student = create(:student)
       sign_in student
 
       get '/users/to_destroy'
@@ -39,8 +39,8 @@ module RegistrationsControllerTests
     #
 
     test "does not return other teachers" do
-      section = create :section
-      another_teacher = create :teacher
+      section = create(:section)
+      another_teacher = create(:teacher)
       section.students << another_teacher
       sign_in section.teacher
 
@@ -52,8 +52,8 @@ module RegistrationsControllerTests
     end
 
     test "does not return students with personal logins" do
-      section = create :section
-      student = create :student
+      section = create(:section)
+      student = create(:student)
       create(:follower, section: section, student_user: student)
       sign_in section.teacher
 
@@ -65,9 +65,9 @@ module RegistrationsControllerTests
     end
 
     test "does not return students without personal logins that have other teachers" do
-      student = create :student_in_word_section
+      student = create(:student_in_word_section)
       teacher = student.teachers.first
-      another_section = create :section
+      another_section = create(:section)
       another_section.students << student
       sign_in teacher
 
@@ -79,9 +79,9 @@ module RegistrationsControllerTests
     end
 
     test "returns students without personal logins that have no other teachers" do
-      student = create :student_in_word_section
+      student = create(:student_in_word_section)
       teacher = student.teachers.first
-      another_word_section = create :section, user: teacher, login_type: Section::LOGIN_TYPE_WORD
+      another_word_section = create(:section, user: teacher, login_type: Section::LOGIN_TYPE_WORD)
       another_word_section.students << student
       sign_in teacher
 
@@ -93,8 +93,8 @@ module RegistrationsControllerTests
     end
 
     test "returns students in rostered sections without passwords that have no other teachers" do
-      student = create :student, :google_sso_provider, encrypted_password: nil
-      section = create :section, login_type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM
+      student = create(:student, :google_sso_provider, encrypted_password: nil)
+      section = create(:section, login_type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM)
       section.students << student
       sign_in section.teacher
 

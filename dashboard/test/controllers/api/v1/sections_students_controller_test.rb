@@ -39,7 +39,7 @@ class Api::V1::SectionsStudentsControllerTest < ActionController::TestCase
   end
 
   test "depends_on_this_section_for_login if this is sponsored student's only section" do
-    student = create :student_in_picture_section
+    student = create(:student_in_picture_section)
     assert student.teacher_managed_account?
     assert_equal 1, student.sections_as_student.size
 
@@ -52,9 +52,9 @@ class Api::V1::SectionsStudentsControllerTest < ActionController::TestCase
   end
 
   test "not depends_on_this_section_for_login if sponsored student has multiple sections" do
-    student = create :student_in_picture_section
-    second_section = create :section, login_type: Section::LOGIN_TYPE_PICTURE
-    create :follower, student_user: student, section: second_section
+    student = create(:student_in_picture_section)
+    second_section = create(:section, login_type: Section::LOGIN_TYPE_PICTURE)
+    create(:follower, student_user: student, section: second_section)
     student.reload
 
     assert student.teacher_managed_account?
@@ -69,7 +69,7 @@ class Api::V1::SectionsStudentsControllerTest < ActionController::TestCase
   end
 
   test "not depends_on_this_section_for_login if student is parent-managed" do
-    student = create :parent_managed_student, :in_picture_section
+    student = create(:parent_managed_student, :in_picture_section)
 
     refute student.teacher_managed_account?
     assert_equal 1, student.sections_as_student.size
@@ -83,7 +83,7 @@ class Api::V1::SectionsStudentsControllerTest < ActionController::TestCase
   end
 
   test "not depends_on_this_section_for_login if student is in an email section" do
-    student = create :student, :in_email_section
+    student = create(:student, :in_email_section)
 
     refute student.teacher_managed_account?
     assert_equal 1, student.sections_as_student.size
@@ -164,11 +164,10 @@ class Api::V1::SectionsStudentsControllerTest < ActionController::TestCase
     response = JSON.parse(@response.body)
 
     @student.reload
-    assert response['secret_picture_path'].present?
     assert response['secret_words'].present?
-    refute_equal response['secret_picture_path'], old_secret_picture_path
+    refute_equal response['secret_picture_url'], ApplicationController.helpers.image_url(old_secret_picture_path)
     refute_equal response['secret_words'], old_secret_words
-    assert_equal response['secret_picture_path'], @student.secret_picture.path
+    assert_equal response['secret_picture_url'], ApplicationController.helpers.image_url(@student.secret_picture.path)
     assert_equal response['secret_words'], @student.secret_words
   end
 
@@ -183,9 +182,8 @@ class Api::V1::SectionsStudentsControllerTest < ActionController::TestCase
     response = JSON.parse(@response.body)
 
     @student.reload
-    assert response['secret_picture_path'].present?
     assert response['secret_words'].present?
-    assert_equal response['secret_picture_path'], secret_picture_path
+    assert_equal response['secret_picture_url'], ApplicationController.helpers.image_url(secret_picture_path)
     assert_equal response['secret_words'], secret_words
     assert_equal secret_picture_path, @student.secret_picture.path
     assert_equal secret_words, @student.secret_words

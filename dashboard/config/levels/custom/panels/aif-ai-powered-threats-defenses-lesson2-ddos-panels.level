@@ -1,0 +1,43 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-08-13T18:46:24.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "### Meet Haley! \n\nHaley is a high school freshman, excited to sign up for an afterschool club with her friends. \n\nShe logs into the school website to sign up for Yearbook Club.\n",
+        "imageUrl": "https://images.code.org/f4bc1c5a715aefe244349efb2650fd6a-Cyber attacks panel levels.png",
+        "key": "aif-ai-powered-threats-defenses-lesson2-ddos-panels-37f6d857-ab3b-4e1e-b18d-ce3bfaa38a45",
+        "fadeInOverPrevious": false
+      },
+      {
+        "text": "<br>\n\n## &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Sign up for a club!\n<br>\nOur school is proud to offer a wide variety of afterschool clubs where students can explore their passions, develop leadership skills, and build lasting friendships. Choose from clubs such as Yearbook, Robotics, Theater, Debate Team, and more.\n<br>\n<br>\n\n",
+        "imageUrl": "https://images.code.org/9d636130406976d4a171ea2499196de4-Cyber attacks panel levels.jpg",
+        "key": "aif-ai-powered-threats-defenses-lesson2-ddos-panels-1eab77e5-f2ef-4fdf-b059-19dd3b604abd",
+        "layout": "text-top-center"
+      },
+      {
+        "text": "### 504 Gateway Timeout\n\nThe page was just working a second ago. \n\nWhy is it not loading anymore?!",
+        "imageUrl": "https://images.code.org/130fce65a0827615533198349a89a56f-Cyber attacks panel levels (2).png",
+        "key": "aif-ai-powered-threats-defenses-lesson2-ddos-panels-0c7ff7a4-4735-4c26-84d0-b8872e1b2b50"
+      },
+      {
+        "text": "### Why is this happening to me?\n\nConfused and upset, Haley checks in with her friends. \n\nTurns out the page isn’t working for them either!\n",
+        "imageUrl": "https://images.code.org/38f7ecefecfc9a24cfc36ff0ae85fb47-Cyber attacks panel levels (3).png",
+        "key": "aif-ai-powered-threats-defenses-lesson2-ddos-panels-87ad2c1f-b495-4264-a7c0-51cce6ca9fff"
+      },
+      {
+        "text": "##What just happened? \n\nA **Distributed Denial of Service (DDoS) attack** happens when many devices flood a website with requests at the same time. \n\nThis overwhelms the system, making it slow down or crash, and prevents others from getting in.\n\nSome DDoS attacks are intentional, such as when a bad actor uses a network of devices to flood a server with junk traffic.\n\nOther times, huge demand - like every student trying to log onto the school website at the same time - can break the system too.\n",
+        "imageUrl": "https://images.code.org/c7eff258d89e4411c61b802581fdaef5-Cyber attacks panel levels (4).png",
+        "key": "aif-ai-powered-threats-defenses-lesson2-ddos-panels-b4b7248d-10d5-4c1f-b5e6-fd3d76eaf5bf"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2025-08-13 19:29:51 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-13 19:31:03 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-13 19:33:02 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-13 19:45:25 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-13 19:47:16 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-13 19:47:41 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-13 19:49:54 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-13 19:52:53 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-13 19:55:03 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-13 19:55:17 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-13 19:55:43 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-13 19:59:42 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-13 20:10:52 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-13 20:11:32 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-13 20:12:32 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-13 20:19:41 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-13 20:20:10 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-13 20:29:28 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-14 16:39:01 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

@@ -2,61 +2,61 @@ require 'test_helper'
 
 class ResourceTest < ActiveSupport::TestCase
   test "can create resource" do
-    resource = create :resource, key: 'my_key'
+    resource = create(:resource, key: 'my_key')
     assert_equal 'my_key', resource.key
   end
 
   test "resource can be in multiple lessons" do
-    resource = create :resource
-    lesson1 = create :lesson
+    resource = create(:resource)
+    lesson1 = create(:lesson)
     lesson1.resources.push(resource)
-    lesson2 = create :lesson
+    lesson2 = create(:lesson)
     lesson2.resources.push(resource)
     assert_equal [lesson1, lesson2], resource.lessons
   end
 
   test "multiple resources can be in a lesson" do
-    lesson = create :lesson
-    resource1 = create :resource, lessons: [lesson]
-    resource2 = create :resource, lessons: [lesson]
+    lesson = create(:lesson)
+    resource1 = create(:resource, lessons: [lesson])
+    resource2 = create(:resource, lessons: [lesson])
     assert_equal [resource1, resource2], lesson.resources
   end
 
   test "can generate key from name" do
-    resource = create :resource, key: nil, name: 'name to make into a key'
+    resource = create(:resource, key: nil, name: 'name to make into a key')
     assert_equal 'name_to_make_into_a_key', resource.key
     assert resource.valid?
   end
 
   test "can generate different keys for resources with the same name" do
-    course_version = create :course_version
-    resource1 = create :resource, key: nil, name: 'duplicate name', course_version: course_version
+    course_version = create(:course_version)
+    resource1 = create(:resource, key: nil, name: 'duplicate name', course_version: course_version)
     assert_equal 'duplicate_name', resource1.key
-    resource2 = create :resource, key: nil, name: 'duplicate name', course_version: course_version
+    resource2 = create(:resource, key: nil, name: 'duplicate name', course_version: course_version)
     assert_equal 'duplicate_name_1', resource2.key
   end
 
   test "resources in different course versions can have the same key" do
-    course_version1 = create :course_version
-    course_version2 = create :course_version
-    resource1 = create :resource, key: nil, name: 'duplicate name', course_version: course_version1
-    resource2 = create :resource, key: nil, name: 'duplicate name', course_version: course_version2
+    course_version1 = create(:course_version)
+    course_version2 = create(:course_version)
+    resource1 = create(:resource, key: nil, name: 'duplicate name', course_version: course_version1)
+    resource2 = create(:resource, key: nil, name: 'duplicate name', course_version: course_version2)
     assert_equal 'duplicate_name', resource1.key
     assert_equal 'duplicate_name', resource2.key
   end
 
   test "resource names with special characters still work" do
-    resource = create :resource, key: nil, name: "my students' projects @ code.org"
+    resource = create(:resource, key: nil, name: "my students' projects @ code.org")
     assert_equal 'my_students_projects_code_org', resource.key
   end
 
   test "resource downcases and strips whitespace for key generation" do
-    resource = create :resource, key: nil, name: "   Plotting Shapes "
+    resource = create(:resource, key: nil, name: "   Plotting Shapes ")
     assert_equal 'plotting_shapes', resource.key
   end
 
   test "resource enforces key format" do
-    resource = create :resource
+    resource = create(:resource)
     assert resource.valid?
 
     resource.update(key: "Key with invalid characters")
@@ -69,7 +69,7 @@ class ResourceTest < ActiveSupport::TestCase
   end
 
   test "summarize for lesson plan" do
-    resource = create :resource, key: 'my_key', name: 'test resource', url: 'test.url',  audience: 'Teacher', type: 'Activity Guide'
+    resource = create(:resource, key: 'my_key', name: 'test resource', url: 'test.url',  audience: 'Teacher', type: 'Activity Guide')
     assert_equal(
       {id: resource.id, key: 'my_key', name: 'test resource', url: 'test.url', downloadUrl: nil, download_url: nil, audience: 'Teacher', type: 'Activity Guide'},
       resource.summarize_for_lesson_plan
@@ -78,7 +78,7 @@ class ResourceTest < ActiveSupport::TestCase
 
   test "'resources dropdown' summary method includes markdown key" do
     # This is necessary for the "add markdown syntax" levelbuilder interface to work
-    course_offering = create :course_offering
+    course_offering = create(:course_offering)
     course_version = create(:course_version, course_offering: course_offering)
     resource = create(:resource, course_version: course_version)
     summary = resource.summarize_for_resources_dropdown
@@ -90,7 +90,7 @@ class ResourceTest < ActiveSupport::TestCase
   end
 
   test 'seeding_key' do
-    resource = create :resource
+    resource = create(:resource)
     seed_context = {}
 
     # seeding_key should not make queries
@@ -112,38 +112,38 @@ class ResourceTest < ActiveSupport::TestCase
   test 'serialize scripts that resource is in' do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     File.stubs(:write)
-    @levelbuilder = create :levelbuilder
+    @levelbuilder = create(:levelbuilder)
 
-    course_version = create :course_version, :with_unit_group
+    course_version = create(:course_version, :with_unit_group)
     unit_group = course_version.content_root
-    script1 = create :script
-    script2 = create :script
+    script1 = create(:script)
+    script2 = create(:script)
     script1.expects(:write_script_json).once
     script2.expects(:write_script_json).once
-    create :unit_group_unit, unit_group: unit_group, script: script1, position: 1
-    create :unit_group_unit, unit_group: unit_group, script: script2, position: 2
-    lesson1 = create :lesson, script: script1
-    lesson2 = create :lesson, script: script2
-    resource = create :resource, course_version: course_version
+    create(:unit_group_unit, unit_group: unit_group, script: script1, position: 1)
+    create(:unit_group_unit, unit_group: unit_group, script: script2, position: 2)
+    lesson1 = create(:lesson, script: script1)
+    lesson2 = create(:lesson, script: script2)
+    resource = create(:resource, course_version: course_version)
     resource.lessons = [lesson1, lesson2]
     resource.serialize_scripts
   end
 
   test 'creates new resource when copying to a course version without a matching resource' do
-    course_version = create :course_version
-    resource = create :resource, name: 'Fake Handout', url: 'handout.fake', course_version: course_version
-    destination_course_version = create :course_version
-    create :resource, name: 'Fake Slides', url: 'slides.fake', course_version: destination_course_version
+    course_version = create(:course_version)
+    resource = create(:resource, name: 'Fake Handout', url: 'handout.fake', course_version: course_version)
+    destination_course_version = create(:course_version)
+    create(:resource, name: 'Fake Slides', url: 'slides.fake', course_version: destination_course_version)
 
     resource.copy_to_course_version(destination_course_version)
     assert_equal 2, destination_course_version.resources.count
   end
 
   test 'return existing resource when copying to a course version with a matching resource' do
-    course_version = create :course_version
-    resource = create :resource, name: 'Fake Handout', url: 'handout.fake', course_version: course_version
-    destination_course_version = create :course_version
-    existing_resource = create :resource, name: 'Fake Handout', url: 'handout.fake', course_version: destination_course_version
+    course_version = create(:course_version)
+    resource = create(:resource, name: 'Fake Handout', url: 'handout.fake', course_version: course_version)
+    destination_course_version = create(:course_version)
+    existing_resource = create(:resource, name: 'Fake Handout', url: 'handout.fake', course_version: destination_course_version)
 
     copied_resource = resource.copy_to_course_version(destination_course_version)
     assert_equal 1, destination_course_version.resources.count

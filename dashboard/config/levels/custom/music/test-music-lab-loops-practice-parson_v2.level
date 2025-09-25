@@ -1,0 +1,231 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2025-05-31T02:59:45.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "### Loops & Lyrics\r\n\r\nYour coding partner was tinkering around with their code and they can't remember how to put the pieces back together again to make the beat sound play together with each of the vocal sounds. Reconstruct this code so it matches the timeline.\r\n\r\n![](https://images.code.org/f6178023c066800ed65e8bf53f4af10b-image-1744858836615.png)",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "packId": "chainsmokers_coldplay_something_just_like_this",
+      "allowChangeStartingPlayheadPosition": true,
+      "toolbox": {
+        "blocks": {
+        }
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "editable": false
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": "KH*5[RttDQzN,f.8!f_h",
+              "x": 270,
+              "y": 30,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "sound": "chainsmokers_coldplay_something_just_like_this/drums_drop_beat"
+              }
+            },
+            {
+              "type": "play_sounds_sequential",
+              "id": "play_sounds_sequential",
+              "x": 270,
+              "y": 110,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "inputs": {
+                "code": {
+                  "block": {
+                    "type": "play_sound_at_current_location_simple2",
+                    "id": "play_sound_at_current_location_simple2",
+                    "disabledReasons": [
+                      "MANUALLY_DISABLED"
+                    ],
+                    "deletable": false,
+                    "movable": false,
+                    "editable": false,
+                    "extraState": {
+                      "disableNextConnection": false
+                    },
+                    "fields": {
+                      "sound": "chainsmokers_coldplay_something_just_like_this/vocals_prechorus_1"
+                    },
+                    "next": {
+                      "block": {
+                        "type": "play_sound_at_current_location_simple2",
+                        "id": "M(!fgYz$+JRLhQp`A8xZ",
+                        "disabledReasons": [
+                          "MANUALLY_DISABLED"
+                        ],
+                        "deletable": false,
+                        "movable": false,
+                        "editable": false,
+                        "extraState": {
+                          "disableNextConnection": false
+                        },
+                        "fields": {
+                          "sound": "chainsmokers_coldplay_something_just_like_this/vocals_prechorus_2"
+                        },
+                        "next": {
+                          "block": {
+                            "type": "play_sound_at_current_location_simple2",
+                            "id": "~$qK%!lP$:HWwgCfdRI#",
+                            "disabledReasons": [
+                              "MANUALLY_DISABLED"
+                            ],
+                            "deletable": false,
+                            "movable": false,
+                            "editable": false,
+                            "extraState": {
+                              "disableNextConnection": false
+                            },
+                            "fields": {
+                              "sound": "chainsmokers_coldplay_something_just_like_this/vocals_prechorus_3"
+                            },
+                            "next": {
+                              "block": {
+                                "type": "play_sound_at_current_location_simple2",
+                                "id": "7W*DdbQ(73F*g`5cZx#!",
+                                "disabledReasons": [
+                                  "MANUALLY_DISABLED"
+                                ],
+                                "deletable": false,
+                                "movable": false,
+                                "editable": false,
+                                "extraState": {
+                                  "disableNextConnection": true
+                                },
+                                "fields": {
+                                  "sound": "chainsmokers_coldplay_something_just_like_this/vocals_prechorus_4"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "repeat_simple2",
+              "id": "repeat_simple2",
+              "x": 470,
+              "y": 30,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "times": 1
+              }
+            },
+            {
+              "type": "play_sounds_together",
+              "id": "play_sounds_together",
+              "x": 470,
+              "y": 130,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              }
+            }
+          ]
+        }
+      },
+      "showSoundFilters": true,
+      "validationTimeout": 1
+    },
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": true,
+      "validationSuccessMessage": "<i class=\"fa-solid fa-robot\"></i> DJ Robot says: You did it!",
+      "validationFailureMessage": "Something's not quite right! Try listening to the example again!",
+      "playerTitle": "Prechorus and Beats",
+      "validationMode": "default"
+    },
+    "encrypted_exemplar_sources": "UGYNk6iye9eaFwUY05FzzO/7y8j7ObxryFbKvBPuF528qP4MtsSFqDeG//aJ\nl0T6lfe2BzN4biKVeTvfD80/YL+3G5Bj3YmNK3/UM/xNlM4UFpxqaM8r0Ju1\nAECRzcycDraxxDvwhRR3E1WGqwBVYl2igtUE+clNUhMch5zn39NedMm86QQD\nSNE/vqliphrufSGnbbJ7q2y+Nx6eM5RXJ+lZZk4sqapSH+vKD0pDXXdgOc+W\nOubeIkjQXgAlbS41Zryd0OBtFrr6KBsLWVi2pA4ZaI42ZFDthlu3biOexWm0\nNNxw4UqbS/Gd0wtlEmLSVgwOlthYRAO6Y7NIlIQ001BaAkcUu+R5/DCK5cQG\nVMZ1at7UDCfgKmzgyupDaz7N5FuXjmJ0/2L8B1FRLKJbkm3+Q5BDIvAAM/tQ\nidrEXtrm4hpDHIBoxomqgY/rHJadafnP/C89axzkRj/1PXyxZCT25fTEnqFf\nCH6M5aEhUeDIAcdtirREFbg2Tq5MgRngBZPNFsG1p43AbhhbzQgAliRjwnmU\nrjYpFMq/gf4paN3J/RA41426t07T2nvg/+hdqfWRBoXe9LCWI4HW5Wj55OsN\nep5OcHUaZKYMN39F/R5+8Y9hmvpeWd6CI7JnFbg0WcrQuaoKpfVidAJmNJGe\njA2TCUxaa7nQ/l2H2MXx71DCrgE5tHz1hz/nlTkQnyLyWVgntRg0K7QZDUvk\nHzc3RgaQj5/+66kvHP+3j7WO66C0NdQwH6z23pth7lhDy9XbLciLaoj4JBsZ\nh47dYF+J/8zCnUOyoGw2ZKRDzimp5e6J3QBF9BhvQV5wVjM14Dj51G5o0V+x\nFd+/pUg3K3+vTevm8uOj+FmzEPrQv9gJFHhA26/mC+R8uc/0oDY/yDRv0fmh\nyrhumepnJGn8RZw3zoSPLQx+RtWmcrS61JoKl+OSNw996kQgwV1bF2bbbQ/n\nbtreTXcTB9yB2mjKdNIH196JvGc2bUBjaOzxuZgS5UiUVIu6JSXl3Es19xab\nrPujyRUqfIALF/AuLMAn0Er7xS2txrGKIA7j2YWsPMXicj42eNBQCSm9vwWX\nasm+gRDEMGvCUx5b62fQXZ0HHy8wCYCj1+97QQHn2Jtv6AoxCrIIKKkjo3XQ\nD/t4ELnN7FWyFeTgi7Yuh8jqTtQweYTxBFbGR4HQFDfT4MGmdyFhI4ABe5LO\nziuNCv9FwAH2iCae9t8tatI6nJUM+Mf1qQ9vA7M4pbedPQ2Cb0rqlMensFZF\ne0HiFmWER/LBr+eTei/+UZVOsuZBNtmBm7sBq4NnlquYKItN2aUlu/Xm+gDn\n3DDx1ik/CmE0qSlK0aPIXDAYYBYI3oOFyF3govP6Kgw/zgm6lf5mcSAY35ir\nTmMAzB/66KtI3c/UJJ1hxpF+VLROdDZJfObAOEXGM9tH+urKHVNXwUFMcL/V\n1T1jm3MSNC6DH9li7wKQil1XWXo5AIThsUg+BjPqffQV8K7HjMU5fBWMu2Sc\nF5bNufoFiKCIP7iMK5KaqKrOsyfJOmGdjUtLZatuf70Ivsmqyh3VRKNkcWFW\nMiXS1UZBdhT6k8Psvcr2asn3LN+ZTcljsde13lQc3imT797u25U9nGFRTvey\nkT7jzuJSbbYKBYVjLcOjssmbEzy0rGHIWEZTmVlmlEjy/t3KroNTerF4a7ng\nl0f5sqwXv7cHx259Z97vM1NXUnB4LKkGe6vNn/COWcRJpLdOk14ykUcsTswu\nr+1WGC82f10zNLHwEeZnxYVEiQugnwP2oM/VcGTpfCDXKiSzXsoxdCHm5ruX\n9nNI1ZMxoFWTyC1LTP86Ipce34gp3lr6xqP6nLgh6ChM4O4EjdbHDNyk8FZO\ndRfAkFg3NCMIOj1S4dq9ES1jwsld8ls3nGV5Opo5NCCWfJwnP4dcOP1zD983\npuYiAHKFgIpuMNVzKvx8JQ==\n",
+    "validations": [
+      {
+        "key": "test-music-lab-loops-practice-parson_569cd0b0-792d-4dab-a78b-fde9ab4f877a",
+        "message": "exemplar validation",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sounds_together",
+            "value": 1
+          },
+          {
+            "name": "played_anything_in_same_loop",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-loops-practice-parson_fa9342f9-0776-4745-94fc-5bc6b8cfa6fc",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot says: Make sure to use a loop!",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sounds_together",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-loops-practice-parson_467fe8e2-f830-4990-baac-d6fd4a5661aa",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot says: Make sure your sounds play together!",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "name_suffix": "_v2",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:59:45.200+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-practice-parson\\\"\"],\"cloned_from\":\"test-music-lab-loops-practice-parson\"}]"
+}]]></config>
+  <blocks/>
+</Music>

@@ -13,7 +13,7 @@ class Services::CompleteApplicationReminderTest < ActiveSupport::TestCase
     #
     Timecop.freeze do
       # Initial creation: No reminders
-      application = create :pd_teacher_application, status: 'incomplete'
+      application = create(:pd_teacher_application, status: 'incomplete')
       Services::CompleteApplicationReminder.send_complete_application_reminders!
       assert_empty application.emails.where(email_type: 'complete_application_initial_reminder')
       assert_empty application.emails.where(email_type: 'complete_application_final_reminder')
@@ -62,7 +62,7 @@ class Services::CompleteApplicationReminderTest < ActiveSupport::TestCase
     #
     Timecop.freeze do
       # Initial creation: No reminders
-      application = create :pd_teacher_application, status: 'incomplete'
+      application = create(:pd_teacher_application, status: 'incomplete')
       Services::CompleteApplicationReminder.send_complete_application_reminders!
       assert_empty application.emails.where(email_type: 'complete_application_initial_reminder')
       assert_empty application.emails.where(email_type: 'complete_application_final_reminder')
@@ -115,16 +115,17 @@ class Services::CompleteApplicationReminderTest < ActiveSupport::TestCase
 
   test 'both reminders omit applications without an email' do
     Timecop.freeze do
-      teacher_without_email = create :teacher, :with_school_info, :demigrated
+      teacher_without_email = create(:teacher, :with_school_info, :demigrated)
       teacher_without_email.update_attribute(:email, '')
       teacher_without_email.update_attribute(:hashed_email, '')
-      application_hash_without_email = build :pd_teacher_application_hash
-      application_without_email = create :pd_teacher_application,
+      application_hash_without_email = build(:pd_teacher_application_hash)
+      application_without_email = create(:pd_teacher_application,
                                          status: 'incomplete',
                                          user: teacher_without_email,
                                          form_data: application_hash_without_email.to_json
+)
 
-      application_with_email = create :pd_teacher_application, status: 'incomplete'
+      application_with_email = create(:pd_teacher_application, status: 'incomplete')
 
       # two applications were created
       assert Pd::Application::TeacherApplication.exists?(id: application_without_email.id)

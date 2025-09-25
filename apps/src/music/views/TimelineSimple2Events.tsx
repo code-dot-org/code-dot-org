@@ -185,13 +185,20 @@ const sortByTriggered = function (
 interface TimelineSimple2EventsProps {
   paddingOffset: number;
   barWidth: number;
+  onKeyDown: (event: React.KeyboardEvent<HTMLButtonElement>) => void;
   getEventHeight: (numUniqueRows: number, availableHeight?: number) => number;
   getEventVerticalSpace: (eventHeight: number) => number;
 }
 
 const TimelineSimple2Events: React.FunctionComponent<
   TimelineSimple2EventsProps
-> = ({paddingOffset, barWidth, getEventHeight, getEventVerticalSpace}) => {
+> = ({
+  paddingOffset,
+  barWidth,
+  onKeyDown,
+  getEventHeight,
+  getEventVerticalSpace,
+}) => {
   const soundEventsOriginal = useMusicSelector(
     state => state.music.playbackEvents
   );
@@ -280,6 +287,7 @@ const TimelineSimple2Events: React.FunctionComponent<
           key={index}
           eventData={eventData}
           barWidth={barWidth}
+          onKeyDown={onKeyDown}
           height={eventHeight - eventVerticalSpace}
           top={
             32 +

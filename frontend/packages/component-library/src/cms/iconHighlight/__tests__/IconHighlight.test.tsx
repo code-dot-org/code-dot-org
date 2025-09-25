@@ -12,7 +12,8 @@ describe('CMS IconHighlight', () => {
     render(<IconHighlight {...props} {...{heading, text, icon}} />);
   };
 
-  const getCard = () => screen.getByRole('complementary');
+  const getCard = () =>
+    screen.getByRole('heading', {name: heading}).closest('div');
 
   it('renders card', () => {
     renderCardContainer();
@@ -24,7 +25,7 @@ describe('CMS IconHighlight', () => {
     renderCardContainer();
 
     const card = getCard();
-    const cardIcon = card.firstElementChild;
+    const cardIcon = card?.firstElementChild;
 
     expect(cardIcon).toBeVisible();
     expect(cardIcon).toHaveRole('presentation');
@@ -32,20 +33,17 @@ describe('CMS IconHighlight', () => {
 
   it('renders card heading', () => {
     renderCardContainer();
-    const card = getCard();
-    expect(within(card).getByRole('heading', {name: heading})).toBeVisible();
+    expect(screen.getByText(heading)).toBeVisible();
   });
 
   it('renders card text', () => {
     renderCardContainer();
-    const card = getCard();
-    expect(within(card).getByText(text)).toBeVisible();
+    expect(screen.getByText(text)).toBeVisible();
   });
 
   it('does not render card link list when no links provided', () => {
     renderCardContainer();
-    const card = getCard();
-    expect(within(card).queryByRole('list')).not.toBeInTheDocument();
+    expect(screen.queryByRole('list')).not.toBeInTheDocument();
   });
 
   it('renders card link list with provided links', () => {
@@ -63,12 +61,12 @@ describe('CMS IconHighlight', () => {
     };
 
     renderCardContainer({links: [internalLinkProps, externalLinkProps]});
-    const card = getCard();
+    renderCardContainer();
 
-    const linkList = within(card).getByRole('list');
+    const linkList = screen.queryByRole('list');
     expect(linkList).toBeVisible();
 
-    const internalLink = within(linkList).getByRole('link', {
+    const internalLink = screen.getByRole('link', {
       name: internalLinkProps.text,
     });
     expect(internalLink).toBeVisible();
@@ -77,7 +75,7 @@ describe('CMS IconHighlight', () => {
       within(internalLink).queryByRole('img', {name: 'external link'}),
     ).not.toBeInTheDocument();
 
-    const externalLink = within(linkList).getByRole('link', {
+    const externalLink = screen.getByRole('link', {
       name: new RegExp(externalLinkProps.text, 'i'),
     });
     expect(externalLink).toBeVisible();

@@ -35,7 +35,6 @@ import {
   getFilteredSectionOrderIds,
   saveSectionOrder,
 } from '../../teacherDashboard/sectionOrderUtils';
-import CoteacherInviteNotification from '../CoteacherInviteNotification';
 
 import {SectionCard} from './SectionCard';
 import {SectionDeleteModal} from './SectionDeleteModal';
@@ -66,6 +65,7 @@ export const SectionList: React.FC<SectionListProps> = ({
   showHiddenOnly,
 }) => {
   const dispatch = useAppDispatch();
+
   const [sectionToDelete, setSectionToDelete] = useState<number>(NO_SECTION_ID);
   const sections: SectionMap = useAppSelector(
     state => state.teacherSections.sections
@@ -163,34 +163,31 @@ export const SectionList: React.FC<SectionListProps> = ({
   return (
     <div id="ui-test-section-list">
       {sectionsAreLoaded ? (
-        <>
-          <CoteacherInviteNotification isForPl={false} destructiveLoad={true} />
-          <DndContext
-            sensors={sensors}
-            collisionDetection={closestCenter}
-            onDragEnd={handleDragEnd}
-            modifiers={[restrictToVerticalAxis, restrictToParentElement]}
+        <DndContext
+          sensors={sensors}
+          collisionDetection={closestCenter}
+          onDragEnd={handleDragEnd}
+          modifiers={[restrictToVerticalAxis, restrictToParentElement]}
+        >
+          <SortableContext
+            items={sortableSectionIds}
+            strategy={verticalListSortingStrategy}
           >
-            <SortableContext
-              items={sortableSectionIds}
-              strategy={verticalListSortingStrategy}
-            >
-              <ol className={styles.sectionList}>
-                {sectionIdsToShow.map(id =>
-                  sections[id] ? (
-                    <SectionCard
-                      id={id}
-                      key={id}
-                      section={sections[id]}
-                      onDeleteClickCallback={onDeleteClickCallback}
-                      studioUrlPrefix={studioUrlPrefix}
-                    />
-                  ) : null
-                )}
-              </ol>
-            </SortableContext>
-          </DndContext>
-        </>
+            <ol className={styles.sectionList}>
+              {sectionIdsToShow.map(id =>
+                sections[id] ? (
+                  <SectionCard
+                    id={id}
+                    key={id}
+                    section={sections[id]}
+                    onDeleteClickCallback={onDeleteClickCallback}
+                    studioUrlPrefix={studioUrlPrefix}
+                  />
+                ) : null
+              )}
+            </ol>
+          </SortableContext>
+        </DndContext>
       ) : (
         <Spinner size="large" />
       )}

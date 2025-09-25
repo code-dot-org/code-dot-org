@@ -11,9 +11,10 @@ import {useMemo} from 'react';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
-import {ProjectFileType} from '@cdo/apps/lab2/types';
+import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useBackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {useStartModeFileRowOptions} from './useStartModeFileRowOptions';
 
@@ -44,10 +45,12 @@ export const useFileRowOptions = (
   hasValidationFile: boolean
 ) => {
   const {
-    source: {files: projectFiles, folders: projectFolders},
     config: {editableFileTypes},
     levelProperties,
   } = useCodebridgeContext();
+  const {files: projectFiles, folders: projectFolders} = useAppSelector(
+    state => state.lab2Project.projectSources?.source as MultiFileSource
+  );
 
   const backpackApi = useBackpackAPIContext();
 

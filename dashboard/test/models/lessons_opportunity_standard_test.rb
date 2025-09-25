@@ -2,10 +2,10 @@ require 'test_helper'
 
 class LessonsOpportunityStandardTest < ActiveSupport::TestCase
   test 'seeding_key' do
-    lesson_group = create :lesson_group
+    lesson_group = create(:lesson_group)
     script = lesson_group.script
-    lesson = create :lesson, lesson_group: lesson_group, script: script
-    standard = create :standard
+    lesson = create(:lesson, lesson_group: lesson_group, script: script)
+    standard = create(:standard)
     lesson.opportunity_standards.push(standard)
     seed_context = Services::ScriptSeed::SeedContext.new(
       script: script,

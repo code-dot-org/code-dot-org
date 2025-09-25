@@ -29,7 +29,7 @@ describe('LessonOverview', () => {
       lesson: {
         unit: {
           displayName: 'Unit 1',
-          link: '/s/unit-1',
+          link: '/courses/course/units/1',
           publishedState: 'beta',
           lessonGroups: [
             {
@@ -120,7 +120,7 @@ describe('LessonOverview', () => {
   it('renders default props', () => {
     const wrapper = shallow(<LessonOverview {...defaultProps} />);
     const navLink = wrapper.find('a').at(0);
-    expect(navLink.props().href).to.contain('/s/unit-1');
+    expect(navLink.props().href).to.contain('/courses/course/units/1');
     expect(navLink.contains('< Unit 1')).to.be.true;
 
     expect(wrapper.find('LessonNavigationDropdown').length).to.equal(1);

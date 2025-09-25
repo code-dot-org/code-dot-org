@@ -2,39 +2,61 @@ import {Button} from '@code-dot-org/component-library/button';
 import {FontAwesomeV6IconProps} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Tabs, {TabsProps} from '@code-dot-org/component-library/tabs';
 import React, {useCallback, useEffect, useMemo, useState} from 'react';
-import {useSelector} from 'react-redux';
 
-import TeacherOnboardingModal from '@cdo/apps/aichat/views/TeacherOnboardingModal';
-import ChatWarningModal from '@cdo/apps/aiComponentLibrary/warningModal/ChatWarningModal';
+import {isModelUpdate, SystemPromptSettings} from '@cdo/apps/aichat/types';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {
-  isLevelbuilderEnvironment,
-  tryGetLocalStorage,
-  trySetLocalStorage,
-} from '@cdo/apps/utils';
+import usePrevious from '@cdo/apps/util/usePrevious';
 
-import {ModalTypes} from '../constants';
+import ChatEventLogger from '../chatEventLogger';
+import {
+  modelDescriptions,
+  RESET_CONVERSATION_CUSTOMIZATION_UPDATES,
+} from '../constants';
 import aichatI18n from '../locale';
 import {
+  addChatEvent,
   clearChatMessages,
   clearStagedFiles,
   fetchUserChatHistory,
   selectAllVisibleMessages,
-  selectMultimodalEnabled,
-  setShowModalType,
+  sendAnalytics,
+  setClientType,
+  setNewChatSession,
 } from '../redux';
-import {getShortName} from '../utils';
+import {findChangedProperties, getNewRemoveId} from '../redux/utils';
+import {
+  AiChatClientType,
+  ChatAsset,
+  ChatButtonAndKey,
+  ModelParameters,
+} from '../types';
+import {getAssetUrl, getShortName} from '../utils';
 
 import StagedFilesPreview from './assets/StagedFilesPreview';
 import UploadButton from './assets/UploadButton';
 import ChatEventsList from './ChatEventsList';
+import ChatModeDropdown from './ChatModeDropdown';
 import CopyChatHistoryButton from './CopyChatHistoryButton';
 import UserChatMessageEditor from './UserChatMessageEditor';
 
 import moduleStyles from './chatWorkspace.module.scss';
 
 interface ChatWorkspaceProps {
-  onClear: () => void;
+  modelParameters: ModelParameters;
+  clientType: AiChatClientType;
+  chatButtons?: ChatButtonAndKey[];
+  hiddenContextCallback?: () => Promise<string>;
+  hideModelChangeMessage?: boolean;
+
+  // Multimodal support
+  multimodalEnabled?: boolean;
+  channelId?: string;
+  levelName?: string;
+  hasStarterAssets?: boolean;
+
+  // Options for changing system prompt (used in Web Lab 2)
+  systemPromptSettings?: SystemPromptSettings;
 }
 
 enum WorkspaceTeacherViewTab {
@@ -50,17 +72,41 @@ const eraserIcon: FontAwesomeV6IconProps = {
  * Renders the AI Chat Lab main chat workspace component.
  */
 const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
-  onClear,
+  modelParameters,
+  clientType,
+  chatButtons,
+  hiddenContextCallback,
+  multimodalEnabled = false,
+  levelName,
+  channelId,
+  hasStarterAssets = false,
+  systemPromptSettings,
+  hideModelChangeMessage = false,
 }) => {
+  if (multimodalEnabled && (!levelName || !channelId)) {
+    console.warn(
+      'Multimodal support requires level name and channel ID. Multimodal features will not be available.'
+    );
+    multimodalEnabled = false;
+  }
+
   const [selectedTab, setSelectedTab] =
     useState<WorkspaceTeacherViewTab | null>(null);
 
-  const {showModalType, studentChatHistory} = useAppSelector(
-    state => state.aichat
+  const studentChatHistory = useAppSelector(
+    state => state.aichat.studentChatHistory
   );
   const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
-  const isUserTeacher = useAppSelector(state => state.currentUser.isTeacher);
-  const visibleItems = useSelector(selectAllVisibleMessages);
+  const scriptId = useAppSelector(state => state.progress.scriptId);
+  const visibleItems = useAppSelector(state => {
+    if (hideModelChangeMessage) {
+      return selectAllVisibleMessages(state).filter(
+        message => !isModelUpdate(message)
+      );
+    } else {
+      return selectAllVisibleMessages(state);
+    }
+  });
   const currentUserId = useAppSelector(state => state.currentUser.userId);
 
   const selectedStudent = useAppSelector(({teacherSections, progress}) => {
@@ -72,7 +118,33 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     }
   });
 
+  const multimodalSupported = useMemo(() => {
+    return modelDescriptions.find(
+      model => model.id === modelParameters.selectedModelId
+    )?.multimodal;
+  }, [modelParameters.selectedModelId]);
+
+  const multimodalAvailable =
+    multimodalSupported && multimodalEnabled && !!levelName && !!channelId;
+
+  const buildAssetUrl = useCallback(
+    (asset: ChatAsset) => {
+      return getAssetUrl(asset, channelId, levelName);
+    },
+    [channelId, levelName]
+  );
+
   const dispatch = useAppDispatch();
+
+  // Initialize the ChatEventLogger with the current context, whenever it updates.
+  useEffect(() => {
+    ChatEventLogger.initialize({
+      clientType,
+      currentLevelId: parseInt(currentLevelId || ''),
+      scriptId,
+      channelId,
+    });
+  }, [clientType, currentLevelId, scriptId, channelId]);
 
   // This effect resets chat history and any staged uploads when:
   // a) a user switches levels, or
@@ -92,6 +164,10 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     }
   }, [dispatch, currentUserId, currentLevelId, selectedStudent]);
 
+  useEffect(() => {
+    dispatch(setClientType(clientType));
+  }, [dispatch, clientType]);
+
   const selectedStudentName =
     selectedStudent && getShortName(selectedStudent.name);
 
@@ -102,23 +178,6 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   );
 
   useEffect(() => {
-    // Skip showing the modal on levelbuilder
-    if (isLevelbuilderEnvironment()) {
-      return;
-    }
-
-    const teacherSawAichatOnboardingModal = tryGetLocalStorage(
-      'teacherSawAichatOnboarding',
-      'no'
-    );
-    const modalToShow =
-      isUserTeacher && teacherSawAichatOnboardingModal !== 'yes'
-        ? ModalTypes.TEACHER_ONBOARDING
-        : ModalTypes.WARNING;
-    dispatch(setShowModalType(modalToShow));
-  }, [isUserTeacher, dispatch]);
-
-  useEffect(() => {
     // If we are viewing as a student, default to the student chat history tab if tab is not yet selected.
     if (selectedStudent && !selectedTab) {
       setSelectedTab(WorkspaceTeacherViewTab.STUDENT_CHAT_HISTORY);
@@ -126,6 +185,34 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
       setSelectedTab(null);
     }
   }, [selectedStudent, selectedTab]);
+
+  // Whenever model parameters change, 1) reset the chat session if necessary,
+  // and 2) log the changed properties to the chat history.
+  const previousParameters: ModelParameters = usePrevious(modelParameters);
+  useEffect(() => {
+    const changedProperties = findChangedProperties(
+      previousParameters,
+      modelParameters
+    );
+    if (
+      changedProperties.some(property =>
+        RESET_CONVERSATION_CUSTOMIZATION_UPDATES.includes(property)
+      )
+    ) {
+      dispatch(setNewChatSession());
+    }
+
+    changedProperties.forEach(property => {
+      dispatch(
+        addChatEvent({
+          removeId: getNewRemoveId(),
+          updatedField: property,
+          updatedValue: modelParameters[property],
+          timestamp: Date.now(),
+        })
+      );
+    });
+  }, [dispatch, previousParameters, modelParameters]);
 
   const iconValue: FontAwesomeV6IconProps = {
     iconName: 'lock',
@@ -146,14 +233,23 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
               selectedStudentName: selectedStudentName ?? '',
             }),
       tabContent: (
-        <ChatEventsList events={studentChatHistory} isTeacherView={true} />
+        <ChatEventsList
+          events={studentChatHistory}
+          isTeacherView={true}
+          buildAssetUrl={multimodalAvailable ? buildAssetUrl : undefined}
+        />
       ),
       iconLeft: iconValue,
     },
     {
       value: 'testStudentModel',
       text: aichatI18n.testStudentModel(),
-      tabContent: <ChatEventsList events={visibleItems} />,
+      tabContent: (
+        <ChatEventsList
+          events={visibleItems}
+          buildAssetUrl={multimodalAvailable ? buildAssetUrl : undefined}
+        />
+      ),
     },
   ];
 
@@ -174,52 +270,58 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     tabPanelsContainerClassName: moduleStyles.tabPanelsContainer,
   };
 
-  const ChatModal = useMemo(
-    () =>
-      showModalType === ModalTypes.TEACHER_ONBOARDING
-        ? TeacherOnboardingModal
-        : showModalType === ModalTypes.WARNING
-        ? ChatWarningModal
-        : undefined,
-    [showModalType]
-  );
-
-  const onCloseModal = useCallback(() => {
-    // We only want to show the teacher onboarding modal the first time a teacher user
-    // interacts with the aichat tool. Thus, we store a value in local storage when
-    // closing the modal. After the first time viewing the modal, the teacher user
-    // sees the warning modal on page load from then on.
-    if (
-      isUserTeacher &&
-      showModalType === ModalTypes.TEACHER_ONBOARDING &&
-      tryGetLocalStorage('teacherSawAichatOnboarding', 'no') !== 'yes'
-    ) {
-      trySetLocalStorage('teacherSawAichatOnboarding', 'yes');
-    }
-    dispatch(setShowModalType(undefined));
-  }, [dispatch, isUserTeacher, showModalType]);
-
-  const multimodalEnabled = useAppSelector(selectMultimodalEnabled);
+  const onClear = useCallback(() => {
+    dispatch(clearChatMessages());
+    dispatch(
+      addChatEvent({
+        timestamp: Date.now(),
+        descriptionKey: 'CLEAR_CHAT',
+      })
+    );
+    dispatch(
+      sendAnalytics(EVENTS.CHAT_ACTION, {
+        action: 'Clear chat history',
+      })
+    );
+  }, [dispatch]);
 
   return (
     <div id="chat-workspace-area" className={moduleStyles.chatWorkspace}>
-      {ChatModal && <ChatModal onClose={onCloseModal} />}
       {selectedStudent ? (
         <Tabs {...tabArgs} />
       ) : (
-        <ChatEventsList events={visibleItems} />
+        <ChatEventsList
+          events={visibleItems}
+          buildAssetUrl={multimodalAvailable ? buildAssetUrl : undefined}
+        />
       )}
 
       <div className={moduleStyles.footer}>
-        {multimodalEnabled && <StagedFilesPreview />}
+        {multimodalAvailable && (
+          <StagedFilesPreview buildAssetUrl={buildAssetUrl} />
+        )}
+        <ChatModeDropdown
+          className={moduleStyles.modeDropdown}
+          systemPromptSettings={systemPromptSettings}
+        />
         {canChatWithModel && (
           <UserChatMessageEditor
+            clientType={clientType}
+            modelParameters={modelParameters}
             editorContainerClassName={moduleStyles.messageEditorContainer}
+            chatButtons={chatButtons}
+            hiddenContextCallback={hiddenContextCallback}
+            multimodalAvailable={multimodalAvailable}
           />
         )}
         <div className={moduleStyles.buttonRow}>
-          {multimodalEnabled && (
-            <UploadButton isDisabled={!canChatWithModel || !!selectedStudent} />
+          {multimodalAvailable && (
+            <UploadButton
+              isDisabled={!canChatWithModel || !!selectedStudent}
+              levelName={levelName}
+              hasStarterAssets={hasStarterAssets}
+              buildAssetUrl={buildAssetUrl}
+            />
           )}
           <Button
             text={aichatI18n.clearChatButtonText()}

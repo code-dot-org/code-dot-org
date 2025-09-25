@@ -140,6 +140,7 @@ export interface InitProgressPayload {
   peerReviewLessonInfo: PeerReviewLessonInfo | null;
   isFullProgress: boolean;
   currentPageNumber: number;
+  courseName: string | null;
 }
 
 // LevelResults is a map of levelId -> TestResult. TestResult is a number.

@@ -1,0 +1,300 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-05-31T03:00:20.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "### Play Random\r\n\r\nYou can use `play random` to play similar tracks and add variety to your song. Let's apply that to the vocals from Tinashe's Gravity:\r\n\r\n1) Drag a <code style=\"background-color: rgb(0, 148, 202); color: white; border: none; box-shadow: inset -1px -1px 1px rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px\">play random</code> block inside the empty repeat block already in the workspace [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=flyout-id:play_random_toolbox---id-up-inside:play_together_workspace)\r\n2) Drag out 3 <code style=\"background-color: rgb(116, 53, 178); color: white; border: none; box-shadow: inset -1px -1px 1px rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px\">play</code> blocks and update them to be three different vocal Ad-Libs [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=flyout-id:play_toolbox)\r\n\r\nPress the <code style=\"background-color: #fca401; color: white; border: none; box-shadow: inset -1px -1px 1px1 rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px\">Run</code> button! You should hear different vocals each time you press run!",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "sounds": {
+        "tinashe_gravity": [
+          "vocals_adlib_1",
+          "vocals_adlib_2",
+          "vocals_adlib_3",
+          "vocals_adlib_4",
+          "vocals_adlib_5",
+          "vocals_adlib_6",
+          "vocals_adlib_7",
+          "main_pad",
+          "kick_snare",
+          "bass_synth_1",
+          "bass_synth_2"
+        ]
+      },
+      "packId": "tinashe_gravity",
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ]
+        },
+        "type": "flyout"
+      },
+      "showSoundFilters": true,
+      "allowChangeStartingPlayheadPosition": true,
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "next": {
+                "block": {
+                  "type": "play_sounds_together",
+                  "id": "play_sounds_together",
+                  "deletable": false,
+                  "movable": false,
+                  "editable": false,
+                  "extraState": {
+                    "disableNextConnection": true
+                  },
+                  "inputs": {
+                    "code": {
+                      "block": {
+                        "type": "repeat_simple2",
+                        "id": "play_together_workspace",
+                        "deletable": false,
+                        "movable": false,
+                        "editable": false,
+                        "extraState": {
+                          "disableNextConnection": false
+                        },
+                        "fields": {
+                          "times": 6
+                        },
+                        "next": {
+                          "block": {
+                            "type": "repeat_simple2",
+                            "id": "x[N|V7~L0TW{2I!LrXGN",
+                            "deletable": false,
+                            "movable": false,
+                            "editable": false,
+                            "extraState": {
+                              "disableNextConnection": false
+                            },
+                            "fields": {
+                              "times": 6
+                            },
+                            "inputs": {
+                              "code": {
+                                "block": {
+                                  "type": "play_sound_at_current_location_simple2",
+                                  "id": "play_sound_at_current_location_simple2",
+                                  "deletable": false,
+                                  "movable": false,
+                                  "editable": false,
+                                  "extraState": {
+                                    "disableNextConnection": true
+                                  },
+                                  "fields": {
+                                    "sound": "tinashe_gravity/kick_snare"
+                                  }
+                                }
+                              }
+                            },
+                            "next": {
+                              "block": {
+                                "type": "repeat_simple2",
+                                "id": "v~q|qO?/UH#D%WvA?bR%",
+                                "deletable": false,
+                                "movable": false,
+                                "editable": false,
+                                "extraState": {
+                                  "disableNextConnection": false
+                                },
+                                "fields": {
+                                  "times": 3
+                                },
+                                "inputs": {
+                                  "code": {
+                                    "block": {
+                                      "type": "play_sound_at_current_location_simple2",
+                                      "id": "~D_`$z:x8EQ;an2Z[M}Z",
+                                      "deletable": false,
+                                      "movable": false,
+                                      "editable": false,
+                                      "extraState": {
+                                        "disableNextConnection": false
+                                      },
+                                      "fields": {
+                                        "sound": "tinashe_gravity/bass_synth_1"
+                                      },
+                                      "next": {
+                                        "block": {
+                                          "type": "play_sound_at_current_location_simple2",
+                                          "id": "`XuawABenh[VNFV:%Xd#",
+                                          "deletable": false,
+                                          "movable": false,
+                                          "editable": false,
+                                          "extraState": {
+                                            "disableNextConnection": true
+                                          },
+                                          "fields": {
+                                            "sound": "tinashe_gravity/bass_synth_2"
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                },
+                                "next": {
+                                  "block": {
+                                    "type": "repeat_simple2",
+                                    "id": "VF?U~S:llZwWgD+L:_J,",
+                                    "deletable": false,
+                                    "movable": false,
+                                    "editable": false,
+                                    "extraState": {
+                                      "disableNextConnection": true
+                                    },
+                                    "fields": {
+                                      "times": 6
+                                    },
+                                    "inputs": {
+                                      "code": {
+                                        "block": {
+                                          "type": "play_sound_at_current_location_simple2",
+                                          "id": "GrqUKA*CgBLa;IGPj{+j",
+                                          "deletable": false,
+                                          "movable": false,
+                                          "editable": false,
+                                          "extraState": {
+                                            "disableNextConnection": true
+                                          },
+                                          "fields": {
+                                            "sound": "tinashe_gravity/main_pad"
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "toolboxDefinition": {
+        "contents": [
+          {
+            "kind": "block",
+            "type": "play_sound_at_current_location_simple2",
+            "id": "play_toolbox",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "sound": "tinashe_gravity/vocals_adlib_1"
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_sounds_random",
+            "id": "play_random_toolbox",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "enabled": true
+          }
+        ],
+        "kind": "flyoutToolbox"
+      }
+    },
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": false,
+      "validationMode": "default",
+      "playerTitle": "Example"
+    },
+    "validations": [
+      {
+        "key": "test-music-lab-mini-project-gif-random-3_ecc2dc75-6716-4abf-b0b6-6f1aefaa5ecc",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot loves your song!",
+        "next": true,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "play_sounds_random:1"
+          },
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "vocal:3"
+          },
+          {
+            "name": "played_sounds",
+            "value": 11
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-mini-project-gif-random-3_e6bfd0fd-cc92-4682-bda4-ae017cb0ab08",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is listening to your song...",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "play_sounds_random:1"
+          },
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "vocal:3"
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-mini-project-gif-random-3_df8df4a0-beda-4c04-9aa9-c5f2d60b8b0e",
+        "message": "Add your vocal tracks! [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=flyout-id:play_toolbox)",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "play_sounds_random:1"
+          }
+        ],
+        "callout": "flyout-id:play_toolbox"
+      },
+      {
+        "key": "test-music-lab-mini-project-gif-random-3_e2c48961-9449-454d-9baf-37cb4bf546cf",
+        "message": "Start by adding a play random block! [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=flyout-id:play_random_toolbox---id-up-inside:play_together_workspace)",
+        "next": false,
+        "conditions": [
+
+        ],
+        "callout": "flyout-id:play_random_toolbox---id-up-inside:play_together_workspace"
+      }
+    ],
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "encrypted_exemplar_sources": "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\n",
+    "name_suffix": "_v2",
+    "submittable": "false",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-05-31T03:00:20.931+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-mini-project-gif-random-3\\\"\"],\"cloned_from\":\"test-music-lab-mini-project-gif-random-3\"},{\"changed_at\":\"2025-07-08 13:26:14 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

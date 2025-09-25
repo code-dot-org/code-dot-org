@@ -83,7 +83,15 @@ describe('Header Component', () => {
     const mockFetch = jest.fn(() => new Promise(() => {}));
     global.fetch = mockFetch as unknown as typeof fetch;
 
-    render(<Header {...defaultProps} />);
+    render(
+      <Header
+        {...defaultProps}
+        isSignedIn={jest.fn().mockImplementation(async () => {
+          await new Promise(resolve => setTimeout(resolve, 1000));
+          return false;
+        })}
+      />,
+    );
 
     // check that the Loading button is rendered
     // and no other account buttons are rendered
@@ -105,13 +113,12 @@ describe('Header Component', () => {
   });
 
   it('renders correctly when user status is signed out', async () => {
-    const mockFetch = jest.fn().mockResolvedValueOnce({
-      ok: true,
-      json: async () => ({is_signed_in: false}),
-    });
-    global.fetch = mockFetch;
-
-    render(<Header {...defaultProps} />);
+    render(
+      <Header
+        {...defaultProps}
+        isSignedIn={jest.fn().mockResolvedValue(false)}
+      />,
+    );
 
     // check that the Sign In and Create Account buttons are rendered
     // and no other account buttons are rendered
@@ -133,13 +140,12 @@ describe('Header Component', () => {
   });
 
   it('renders correctly when user status is signed in', async () => {
-    const mockFetch = jest.fn().mockResolvedValueOnce({
-      ok: true,
-      json: async () => ({is_signed_in: true}),
-    });
-    global.fetch = mockFetch;
-
-    render(<Header {...defaultProps} />);
+    render(
+      <Header
+        {...defaultProps}
+        isSignedIn={jest.fn().mockResolvedValue(true)}
+      />,
+    );
 
     // check that the Go to Dashboard button is rendered
     // and no other account buttons are rendered
@@ -155,33 +161,6 @@ describe('Header Component', () => {
 
       const dashboardButton = screen.getByText('Go to Dashboard');
       expect(dashboardButton).toBeInTheDocument();
-    });
-
-    jest.restoreAllMocks();
-  });
-
-  it('renders correctly when there is an error fetching user status', async () => {
-    const mockFetch = jest
-      .fn()
-      .mockRejectedValueOnce(new Error('Network error'));
-    global.fetch = mockFetch;
-
-    render(<Header {...defaultProps} />);
-
-    // check that the Sign In and Create account buttons are rendered
-    // and no other account buttons are rendered
-    await waitFor(() => {
-      const loadingButton = screen.queryByText('Loading');
-      expect(loadingButton).not.toBeInTheDocument();
-
-      const signInButton = screen.getByText('Sign In');
-      expect(signInButton).toBeInTheDocument();
-
-      const createAccountButton = screen.getByText('Create Account');
-      expect(createAccountButton).toBeInTheDocument();
-
-      const dashboardButton = screen.queryByText('Go to Dashboard');
-      expect(dashboardButton).not.toBeInTheDocument();
     });
 
     jest.restoreAllMocks();

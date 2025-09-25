@@ -128,10 +128,13 @@ export function getContainedLevelId() {
  */
 export function getContainedLevelResult() {
   const level = getLevel(getContainedLevelId());
+  const callback = appOptions.report.sublevelCallback.includes('?')
+    ? appOptions.report.sublevelCallback.replace('?', level.levelId + '?')
+    : appOptions.report.sublevelCallback + level.levelId;
   return {
     id: level.levelId,
     app: level.getAppName(),
-    callback: appOptions.report.sublevelCallback + level.levelId,
+    callback: callback,
     result: level.getResult(),
     feedback: level.getCurrentAnswerFeedback(),
   };

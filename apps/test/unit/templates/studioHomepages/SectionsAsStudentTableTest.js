@@ -105,25 +105,13 @@ describe('SectionsAsStudentTable', () => {
   it('does not show a unit link for a single-unit course', () => {
     const singleUnitCourseSection = [
       {
-        id: 11,
         name: 'Period 5',
         loginType: 'picture',
         teacherName: 'Ms. Frizzle',
-        studentCount: 10,
-        linkToProgress:
-          'https://studio.code.org/teacher_dashboard/sections/111111/progress',
         assignedTitle: 'Single Unit Course',
         linkToAssigned:
           'https://studio.code.org/courses/ui-test-single-unit-course',
-        currentUnitTitle: 'Single Unit',
-        linkToCurrentUnit: 'https://studio.code.org/s/ui-test-single-unit',
-        is_assigned_single_unit_course: true,
-        numberOfStudents: 2,
-        linkToStudents:
-          'https://studio.code.org/teacher_dashboard/sections/111111/manage_students',
         code: 'ClassFiveCode',
-        hidden: false,
-        participantType: 'student',
       },
     ];
 

@@ -7,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "## Combine a variable with user input\r\nYou can combine string variables with each other, even if they were received from an input! ",
-    "ai_tutor2_available": "true",
+    "ai_tutor_available": "true",
     "submittable": "false",
     "hide_share_and_remix": "true",
     "enable_micro_bit": "false",

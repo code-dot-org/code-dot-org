@@ -275,12 +275,6 @@ class DatablockStorageController < ApplicationController
     render json: DatablockStorageLibraryManifest.instance.library_manifest
   end
 
-  def set_library_manifest
-    library_manifest = JSON.parse params[:library_manifest]
-    DatablockStorageLibraryManifest.instance.update!(library_manifest: library_manifest)
-    render json: true
-  end
-
   ##########################################################
   #   Project API                                          #
   ##########################################################

@@ -60,14 +60,14 @@ $icon-overlay-padding-right: 8px;
 
 .message-user {
   @extend %message;
-  background-color: $user_color;
+  background-color: var(--background-neutral-tertiary);
   border-end-start-radius: $message-border-radius;
   border-end-end-radius: 0;
 }
 
 .message-assistant {
   @extend %message;
-  background-color: $assistant-color;
+  background-color: var(--background-brand-teal-extra-light);
   border-end-start-radius: 0;
   border-end-end-radius: $message-border-radius;
   overflow-x: auto;
@@ -109,7 +109,7 @@ $icon-overlay-padding-right: 8px;
   flex: 0 0 $bot-container-size;
   height: $bot-container-size;
   width: $bot-container-size;
-  background: $light-black;
+  background: var(--background-neutral-primary-inverse);
   border-radius: 20px;
   display: flex;
   justify-content: center;
@@ -127,6 +127,7 @@ $icon-overlay-padding-right: 8px;
 .footer {
   margin-left: $bot-container-size + $icon-message-gap;
 }
+
 
 .footerWithOverlay {
   margin-left: $bot-container-size + $icon-message-gap + $icon-overlay-padding-right;
@@ -166,9 +167,9 @@ $icon-overlay-padding-right: 8px;
 }
 
 .danger {
-  background-color: $light_negative_100;
+  background-color: var(--background-error-extra-light);
 }
 
 .warning {
-  background-color: $light_caution_100;
+  background-color: var(--background-warning-light);
 }

@@ -1,0 +1,45 @@
+name 'pl-java-oop-overview-1_pl'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Unit 2: Object-Oriented Programming 
+
+#### In the last unit, we focused on fundamental coding concepts in Java.
+
+#### In this unit, we will focus on some **basic object-oriented programming concepts**.  
+
+
+<div style="margin: 10px auto; width: 100%; line-height: 1.6; font-size: 14pt; color: #333;">
+    <h2>Welcome!</h2>
+    <p style = "font-size: 14pt">
+        This professional learning unit is designed to introduce you to object-oriented programming in the <b>Java Programming Language.</b> 
+    </p>
+   
+</div>
+
+
+<!-- Goals Section -->
+<div style="margin: 20px auto; width: 90%; max-width: 900px; background: #f7f8fa; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt;">
+    <h2 style="margin-top: 0;">In this unit, you will:</h2>
+    <ul style="list-style-type: disc; padding-left: 20px; font-size: 14pt">
+        <li>Describe what a “class” and “object” are in Java</li><br>
+        <li>Call and write methods in Java</li><br>
+        <li>Use The Neighborhood, a package Code.org’s CSA course uses to introduce students to classes and objects
+</li><br>
+         </ul>
+</div>
+
+
+#### **Suggested Total Time:** 2 hours
+#### **Lesson One Suggested Time:** 45 minutes
+
+
+
+
+
+
+
+
+
+MARKDOWN

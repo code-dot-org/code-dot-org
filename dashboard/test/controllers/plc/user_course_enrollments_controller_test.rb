@@ -2,7 +2,7 @@ require 'test_helper'
 
 class Plc::UserCourseEnrollmentsControllerTest < ActionController::TestCase
   setup do
-    @admin = create :admin
+    @admin = create(:admin)
     sign_in(@admin)
     @plc_course = create(:plc_course, name: 'Test Course')
     @user_course_enrollment = create(:plc_user_course_enrollment, user: @admin, plc_course: @plc_course)
@@ -13,7 +13,7 @@ class Plc::UserCourseEnrollmentsControllerTest < ActionController::TestCase
       plc_user_course_enrollment: @user_course_enrollment,
       user: @admin
     )
-    @district_contact = create :district_contact
+    @district_contact = create(:district_contact)
   end
 
   test "should get new" do
@@ -53,8 +53,8 @@ class Plc::UserCourseEnrollmentsControllerTest < ActionController::TestCase
 
     assert_redirected_to action: :new, notice: "1 enrollment(s) created: <li>#{@admin.email}</li><br/>"
 
-    user2 = create :teacher
-    user3 = create :teacher
+    user2 = create(:teacher)
+    user3 = create(:teacher)
 
     post :create, params: {
       user_emails: "#{user2.email}\r\n#{user3.email}",
@@ -79,7 +79,7 @@ class Plc::UserCourseEnrollmentsControllerTest < ActionController::TestCase
 
     teacher_emails = []
     (1..12).each do |_|
-      teacher = create :teacher
+      teacher = create(:teacher)
       teacher_emails << teacher.email
     end
 
@@ -124,7 +124,7 @@ class Plc::UserCourseEnrollmentsControllerTest < ActionController::TestCase
 
   test 'Teachers can view dashboard but not group view' do
     sign_out @admin
-    teacher = create :teacher
+    teacher = create(:teacher)
 
     sign_in(teacher)
     get :index
@@ -137,7 +137,7 @@ class Plc::UserCourseEnrollmentsControllerTest < ActionController::TestCase
 
   test 'Students cannot access course view nor group view' do
     sign_out @admin
-    student = create :student
+    student = create(:student)
 
     sign_in(student)
     get :index

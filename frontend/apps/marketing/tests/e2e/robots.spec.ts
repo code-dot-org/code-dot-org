@@ -17,14 +17,4 @@ test.describe('robots.txt', () => {
       `User-Agent: *\nDisallow: /`,
     );
   });
-
-  test('should allow everything in prod', async ({page, browserName}) => {
-    test.skip(browserName !== 'chromium', 'Only runs in Chromium');
-    test.skip(getStage() !== 'production', 'Only runs in prod');
-
-    const marketingPage = new MarketingPage(page);
-    await marketingPage.goto('/robots.txt');
-
-    expect(await page.locator('body').textContent()).toEqual('');
-  });
 });

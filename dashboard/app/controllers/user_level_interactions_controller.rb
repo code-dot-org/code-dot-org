@@ -8,16 +8,50 @@ class UserLevelInteractionsController < ApplicationController
 
   # POST /user_level_interactions
   def create
-    version_year = JSON.parse(user_level_interaction_params[:metadata])["version_year"]
+    unit_id = user_level_interaction_params[:script_id]
+    begin
+      unit = Unit.find(unit_id)
+    rescue ActiveRecord::RecordNotFound
+      return render status: :not_found, json: "Unit with id #{unit_id}"
+    end
+
+    level_id = user_level_interaction_params[:level_id]
+    begin
+      level = Level.find(level_id)
+    rescue ActiveRecord::RecordNotFound
+      return render status: :not_found, json: "Level with id #{level_id}"
+    end
+
+    project_data = get_project_and_version_id(level_id, unit_id)
+    channel = get_channel_for(level, unit_id, current_user)
+    user_level_interaction_params[:code_version] = project_data[:version_id]
+
+    version_year = unit.get_course_version.key
+
+    metadata = {
+      course_offering: unit.properties["curriculum_umbrella"],
+      version_year: version_year,
+      unit: unit.name,
+      level_type: level.type,
+      user_type: current_user.user_type,
+      project_id: project_data[:project_id],
+      channel: channel,
+    }
+
+    new_uli_params = user_level_interaction_params.merge(
+      code_version: project_data[:version_id],
+      metadata: metadata.to_json,
+    )
+
     if should_create_uli?(version_year)
-      @user_level_interaction = UserLevelInteraction.new(user_level_interaction_params)
+      @user_level_interaction = UserLevelInteraction.new(new_uli_params)
       if @user_level_interaction.save
         render(status: :created, json: {message: "Successfully created UserLevelInteraction.", id: @user_level_interaction.id})
       else
         render(status: :not_acceptable, json: {error: 'There was an error creating a new UserLevelInteraction.'})
       end
     else
-      render(status: :bad_request, json: {message: 'UserLevelInteraction not created because this level is not in a 2024+ script.'})
+      render(status: :bad_request, json: {message: 'UserLevelInteraction not created because this level is not in a 2024+ unit.'})
     end
   end
 
@@ -36,25 +70,11 @@ class UserLevelInteractionsController < ApplicationController
       :school_year,
       :interaction,
       :code_version,
+      :metadata,
     )
     user_level_interaction_params[:user_id] = current_user.id
     user_level_interaction_params[:school_year] = school_year
-    script_id = user_level_interaction_params[:script_id]
-    unit = Unit.find(script_id)
-    level = Level.find(user_level_interaction_params[:level_id])
-    project_data = get_project_and_version_id(user_level_interaction_params[:level_id], user_level_interaction_params[:script_id])
-    channel = get_channel_for(level, script_id, current_user)
-    user_level_interaction_params[:code_version] = project_data[:version_id]
-    metadata = {
-      course_offering: unit.properties["curriculum_umbrella"],
-      version_year: unit.get_course_version.key,
-      unit: unit.name,
-      level_type: level.type,
-      user_type: current_user.user_type,
-      project_id: project_data[:project_id],
-      channel: channel,
-    }.to_json
-    user_level_interaction_params[:metadata] = metadata
+
     user_level_interaction_params
   end
 end

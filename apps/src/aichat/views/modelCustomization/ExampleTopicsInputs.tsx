@@ -26,7 +26,7 @@ const ExampleTopicsInputs: React.FunctionComponent<{
       dispatch(
         setModelCardProperty({
           property: 'exampleTopics',
-          value: updatedItems,
+          value: updatedItems.filter(topic => topic.trim().length > 0), // Remove empty topics
         })
       );
     },

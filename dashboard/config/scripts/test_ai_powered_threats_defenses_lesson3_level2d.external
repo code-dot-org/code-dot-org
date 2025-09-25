@@ -1,0 +1,51 @@
+name 'test-ai-powered-threats-defenses-lesson3-level2d'
+title 'Jordan P. - User Profile'
+
+display_name 'Ethan Carter'
+bubble_choice_description 'Ethan is a 17 year old student from Seattle, WA'
+thumbnail_url 'https://images.code.org/5ab7f854ed8fb8162a1441be09c13766-image-1755184934057.png'
+
+markdown <<MARKDOWN
+#Ethan
+
+#### Look through Ethan's emails below and see which ones might be legit and which might be phishing attacks.
+
+<div style="font-family: sans-serif; font-size: 16px; line-height: 1.6;">
+
+
+  <hr>
+
+  <p><strong>Message A – Text</strong></p>
+  <p>
+    Hey Ethan — I’m Jess, a student ambassador with UW’s freshman photo club.<br><br>
+    We’re putting together a welcome feature for incoming students.<br><br>
+    Mind sending your favorite photo and email so we can include you?
+  </p>
+
+  <hr>
+
+  <p><strong>Message B – Email</strong></p>
+  <p><em>Subject:</em> <strong>Canon R50 – Warranty Registration Incomplete</strong></p>
+  <p>
+    Hi Ethan,<br><br>
+    Thank you for purchasing the Canon R50. Our records indicate your warranty registration is still incomplete.<br><br>
+    Register now to ensure full coverage, including protection against accidental damage and theft.<br><br>
+    Complete your registration here:<br>
+    <a href="#">register.canon-support.com</a><br><br>
+    — Canon Product Protection Services
+  </p>
+
+  <hr>
+
+  <p><strong>Message C – Instagram DM</strong></p>
+  <p>
+    <strong>From: @TheVioletLanternsUW</strong><br><br>
+    Hey Ethan! I’m with a local indie band playing at UW’s welcome week.<br>
+    We’re offering free tickets to new students.<br><br>
+    Just need your full name, birthday, and mailing address to get you on the list.<br>
+    Spots are filling fast — hit us back soon!
+  </p>
+
+</div>
+
+MARKDOWN

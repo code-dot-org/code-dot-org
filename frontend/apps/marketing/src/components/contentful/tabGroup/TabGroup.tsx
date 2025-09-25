@@ -7,6 +7,8 @@ import TabGroup, {
 } from '@code-dot-org/component-library/cms/tabGroup';
 
 import {externalLinkIconProps} from '@/components/common/constants';
+import {resolveContentfulLink} from '@/contentful/resolveLink';
+import {getAbsoluteImageUrl} from '@/selectors/contentful/getImage';
 import {LinkEntry} from '@/types/contentful/entries/Link';
 import {ExperienceAsset} from '@/types/contentful/ExperienceAsset';
 
@@ -14,6 +16,7 @@ type TabGroupContentfulProps = {
   tabs?: (BaseEntry & {
     fields: {
       ctaLink?: LinkEntry;
+      internalName?: string;
       description: string;
       image?: ExperienceAsset;
       tabLabel: string;
@@ -27,29 +30,42 @@ const TabGroupContentful: React.FunctionComponent<TabGroupContentfulProps> = ({
 }) => {
   const parsedTabs: TabGroupTabModel[] = useMemo(
     () =>
-      tabs.map(tab => ({
-        value: tab.fields.tabLabel,
-        text: tab.fields.tabLabel,
-        tabContent: {
-          title: tab.fields.title,
-          description: tab.fields.description,
-          image: tab.fields.image
-            ? {
-                src: `https:${tab.fields.image.fields?.file?.url}`,
-                alt: tab.fields.image.fields?.description,
-              }
-            : undefined,
-          button: tab.fields.ctaLink
-            ? {
-                href: tab.fields.ctaLink.fields?.primaryTarget || '#',
-                text: tab.fields.ctaLink.fields?.label || '#',
-                iconRight: tab.fields.ctaLink.fields?.isThisAnExternalLink
-                  ? externalLinkIconProps
-                  : undefined,
-              }
-            : undefined,
-        },
-      })),
+      tabs.map(tab => {
+        const resolvedImage = resolveContentfulLink<ExperienceAsset>(
+          tab.fields.image,
+        );
+        const resolvedCtaLink = resolveContentfulLink<LinkEntry>(
+          tab.fields.ctaLink,
+        );
+        return {
+          value: tab.fields.tabLabel,
+          text: tab.fields.tabLabel,
+          tabContent: {
+            title: tab.fields.title,
+            description: tab.fields.description,
+            image: (() => {
+              const tabImgSrc =
+                resolvedImage && getAbsoluteImageUrl(resolvedImage);
+
+              return tabImgSrc
+                ? {
+                    src: tabImgSrc,
+                    alt: tab.fields.image?.fields?.description,
+                  }
+                : undefined;
+            })(),
+            button: resolvedCtaLink
+              ? {
+                  href: resolvedCtaLink.fields?.primaryTarget || '#',
+                  text: resolvedCtaLink.fields?.label || '#',
+                  iconRight: resolvedCtaLink.fields?.isThisAnExternalLink
+                    ? externalLinkIconProps
+                    : undefined,
+                }
+              : undefined,
+          },
+        };
+      }),
     [tabs],
   );
 

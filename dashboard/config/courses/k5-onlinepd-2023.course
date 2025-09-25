@@ -6,7 +6,7 @@
   "original_script_names": [
     "k5-onlinepd-2023"
   ],
-  "published_state": "stable",
+  "published_state": "deprecated",
   "instruction_type": "teacher_led",
   "participant_audience": "teacher",
   "instructor_audience": "facilitator",

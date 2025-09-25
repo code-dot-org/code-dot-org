@@ -1,25 +1,27 @@
-import {useCallback, useEffect, useState} from 'react';
+import {useCallback, useEffect, useMemo, useState} from 'react';
 import {useResizable} from 'react-resizable-layout';
 
-import {logOnResize} from '@cdo/apps/lab2/utils/logOnResize';
+import {logOnResize} from '@cdo/apps/lab2/utils/resizeUtils';
 import {RESIZE_BAR_SIZE_PX} from '@cdo/apps/lab2/views/components/layout/ResizeBar';
 import {ColumnPanelConfig} from '@cdo/apps/lab2/views/components/layout/types';
 
-const TWO_RESIZE_BARS = RESIZE_BAR_SIZE_PX * 2;
+import moduleStyles from '@cdo/apps/lab2/views/components/layout/layout.module.scss';
 
 interface UseVerticalLayoutProps {
   leftPanel: ColumnPanelConfig;
-  middlePanel: ColumnPanelConfig;
+  middlePanel?: ColumnPanelConfig;
   rightPanel: ColumnPanelConfig;
   appName: string;
 }
 
 /**
- * Hook that manages the layout of a lab with 3 vertical, resizable panels.
+ * Hook that manages the layout of a lab with either 2 or 3 vertical, resizable panels.
+ * If a middlePanel isn't provided, then this hook manages two panels.
  * The resize bars are used to adjust the width of the left and right panels,
  * and the middle panel takes up the remaining space, but won't go below its minimum width.
  * To be used in conjunction with the ResizeBar component.
- * See pythonlab/layout/VerticalLayout for a usage example.
+ * See pythonlab/layout/VerticalLayout for a 3 panel usage example,
+ * or SketchlabView for a 2 panel usage example.
  */
 export const useVerticalLayout = ({
   leftPanel,
@@ -31,7 +33,7 @@ export const useVerticalLayout = ({
     leftPanel.initialWidth
   );
   const [middlePanelWidth, setMiddlePanelWidth] = useState<number | undefined>(
-    middlePanel.initialWidth
+    middlePanel?.initialWidth
   );
   const [rightPanelWidth, setRightPanelWidth] = useState<number | undefined>(
     rightPanel.initialWidth
@@ -47,8 +49,12 @@ export const useVerticalLayout = ({
     initial: leftPanel.initialWidth,
     min: leftPanel.minWidth,
     onResizeStart: () =>
-      logOnResize(appName, {layout: 'vertical', resizeBar: leftPanel.name}),
+      logOnResize(appName, {
+        layout: 'vertical',
+        resizeBar: leftPanel.name,
+      }),
   });
+
   const {
     position: rawRightPanelWidth,
     separatorProps: rightPanelSeparatorProps,
@@ -60,47 +66,75 @@ export const useVerticalLayout = ({
     min: rightPanel.minWidth,
     reverse: true,
     onResizeStart: () =>
-      logOnResize(appName, {layout: 'vertical', resizeBar: rightPanel.name}),
+      logOnResize(appName, {
+        layout: 'vertical',
+        resizeBar: rightPanel.name,
+      }),
   });
 
   const adjustWidths = useCallback(() => {
-    // Middle panel takes priority in terms of available space.
-    const adjustedMiddleWidth = Math.max(
-      window.innerWidth -
-        rawLeftPanelWidth -
-        rawRightPanelWidth -
-        TWO_RESIZE_BARS,
-      middlePanel.minWidth
-    );
-    setMiddlePanelWidth(adjustedMiddleWidth);
+    const RESIZE_BARS_WIDTH = RESIZE_BAR_SIZE_PX * (middlePanel ? 2 : 1);
 
-    // Second priority is right panel.
-    const spaceForRightPanel = Math.max(
-      window.innerWidth -
-        leftPanel.minWidth -
-        TWO_RESIZE_BARS -
-        adjustedMiddleWidth,
-      rightPanel.minWidth
-    );
-    const adjustedRightWidth = Math.min(rawRightPanelWidth, spaceForRightPanel);
-    setRightPanelWidth(adjustedRightWidth);
+    if (middlePanel) {
+      // Middle panel takes priority in terms of available space in a 3 panel layout.
+      const adjustedMiddleWidth = Math.max(
+        window.innerWidth -
+          rawLeftPanelWidth -
+          rawRightPanelWidth -
+          RESIZE_BARS_WIDTH,
+        middlePanel.minWidth
+      );
+      setMiddlePanelWidth(adjustedMiddleWidth);
 
-    // Left panel takes up remaining space, but won't go below the minimum width.
-    const spaceForLeftPanel = Math.max(
-      window.innerWidth -
-        adjustedRightWidth -
-        TWO_RESIZE_BARS -
-        adjustedMiddleWidth,
-      leftPanel.minWidth
-    );
-    const adjustedLeftPanelWidth = Math.min(
-      rawLeftPanelWidth,
-      spaceForLeftPanel
-    );
-    setLeftPanelWidth(adjustedLeftPanelWidth);
+      // Second priority is right panel.
+      const spaceForRightPanel = Math.max(
+        window.innerWidth -
+          leftPanel.minWidth -
+          RESIZE_BARS_WIDTH -
+          adjustedMiddleWidth,
+        rightPanel.minWidth
+      );
+      const adjustedRightWidth = Math.min(
+        rawRightPanelWidth,
+        spaceForRightPanel
+      );
+      setRightPanelWidth(adjustedRightWidth);
+
+      // Left panel takes up remaining space, but won't go below the minimum width.
+      const spaceForLeftPanel = Math.max(
+        window.innerWidth -
+          adjustedRightWidth -
+          RESIZE_BARS_WIDTH -
+          adjustedMiddleWidth,
+        leftPanel.minWidth
+      );
+      const adjustedLeftPanelWidth = Math.min(
+        rawLeftPanelWidth,
+        spaceForLeftPanel
+      );
+      setLeftPanelWidth(adjustedLeftPanelWidth);
+    } else {
+      setMiddlePanelWidth(0);
+
+      // In 2-panel mode, only the left panel is resizable,
+      // so we start by establishing the size of that panel.
+      const spaceForLeftPanel = Math.max(
+        window.innerWidth - rightPanel.minWidth - RESIZE_BARS_WIDTH,
+        leftPanel.minWidth
+      );
+      const adjustedLeftWidth = Math.min(rawLeftPanelWidth, spaceForLeftPanel);
+      setLeftPanelWidth(adjustedLeftWidth);
+
+      // Then, we give the remaining space to the right panel, but it won't go below its minimum width.
+      const adjustedRightWidth = Math.max(
+        window.innerWidth - adjustedLeftWidth - RESIZE_BARS_WIDTH,
+        rightPanel.minWidth
+      );
+      setRightPanelWidth(adjustedRightWidth);
+    }
   }, [
+    middlePanel,
     leftPanel.minWidth,
-    middlePanel.minWidth,
     rawLeftPanelWidth,
     rawRightPanelWidth,
     rightPanel.minWidth,
@@ -118,6 +152,14 @@ export const useVerticalLayout = ({
     return () => window.removeEventListener('resize', adjustWidths);
   }, [adjustWidths]);
 
+  const panelClassName = useMemo(() => {
+    if (leftPanelDragging || rightPanelDragging) {
+      return moduleStyles.resizingPanel;
+    } else {
+      return undefined;
+    }
+  }, [leftPanelDragging, rightPanelDragging]);
+
   return {
     leftPanelWidth,
     middlePanelWidth,
@@ -128,5 +170,6 @@ export const useVerticalLayout = ({
     rightPanelDragging,
     setLeftPanelSize,
     setRightPanelSize,
+    panelClassName,
   };
 };

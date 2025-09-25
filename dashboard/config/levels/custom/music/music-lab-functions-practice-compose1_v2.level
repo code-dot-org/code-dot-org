@@ -1,0 +1,466 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2025-05-31T03:00:57.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "toolbox": {
+        "type": "flyout",
+        "blocks": {
+        },
+        "addFunctionDefinition": true,
+        "addFunctionCalls": true
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "next": {
+                "block": {
+                  "type": "play_sounds_together",
+                  "id": "Z=[1oXZDD8x(O)h^iul@",
+                  "deletable": false,
+                  "editable": false,
+                  "extraState": {
+                    "disableNextConnection": false
+                  },
+                  "inputs": {
+                    "code": {
+                      "block": {
+                        "type": "repeat_simple2",
+                        "id": "#~`10s/]^lA%7O.kW4!k",
+                        "deletable": false,
+                        "movable": false,
+                        "editable": false,
+                        "extraState": {
+                          "disableNextConnection": false
+                        },
+                        "fields": {
+                          "times": 4
+                        },
+                        "inputs": {
+                          "code": {
+                            "block": {
+                              "type": "procedures_callnoreturn",
+                              "id": "lrl;N=`9O%-0Py-)bHT3",
+                              "deletable": false,
+                              "movable": false,
+                              "editable": false,
+                              "extraState": {
+                                "name": "background",
+                                "disableNextConnection": true
+                              }
+                            }
+                          }
+                        },
+                        "next": {
+                          "block": {
+                            "type": "play_sounds_sequential",
+                            "id": "play_sounds_sequential",
+                            "deletable": false,
+                            "movable": false,
+                            "editable": false,
+                            "extraState": {
+                              "disableNextConnection": true
+                            },
+                            "inputs": {
+                              "code": {
+                                "block": {
+                                  "type": "procedures_callnoreturn",
+                                  "id": "kk~$Qo^sW!~DZj;?|BwQ",
+                                  "deletable": false,
+                                  "movable": false,
+                                  "editable": false,
+                                  "extraState": {
+                                    "name": "verses"
+                                  },
+                                  "next": {
+                                    "block": {
+                                      "type": "procedures_callnoreturn",
+                                      "id": "m-ipm4H}a9m@1@?:B@RL",
+                                      "deletable": false,
+                                      "movable": false,
+                                      "editable": false,
+                                      "extraState": {
+                                        "name": "chorus",
+                                        "disableNextConnection": true
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "9/;zRptog{_=IQ`mv@b{",
+              "x": 310,
+              "y": 30,
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "procedureId": "ynS=yV1U]j8xeUDxqQ87",
+                "initialDeleteConfig": false,
+                "initialEditConfig": false,
+                "initialMoveConfig": true
+              },
+              "fields": {
+                "NAME": "verses"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "play_sound_at_current_location_simple2",
+                    "id": "play_sound_at_current_location_simple2",
+                    "deletable": false,
+                    "movable": false,
+                    "editable": false,
+                    "extraState": {
+                      "disableNextConnection": false
+                    },
+                    "fields": {
+                      "sound": "tinashe_gravity/vocals_verse_1"
+                    },
+                    "next": {
+                      "block": {
+                        "type": "play_sound_at_current_location_simple2",
+                        "id": "N,ucg;Ou{RdWqUtou;fq",
+                        "deletable": false,
+                        "movable": false,
+                        "editable": false,
+                        "extraState": {
+                          "disableNextConnection": false
+                        },
+                        "fields": {
+                          "sound": "tinashe_gravity/vocals_verse_2"
+                        },
+                        "next": {
+                          "block": {
+                            "type": "play_sound_at_current_location_simple2",
+                            "id": "FrA];tPMm6K0z5ymQ3{e",
+                            "deletable": false,
+                            "movable": false,
+                            "editable": false,
+                            "extraState": {
+                              "disableNextConnection": false
+                            },
+                            "fields": {
+                              "sound": "tinashe_gravity/vocals_verse_3"
+                            },
+                            "next": {
+                              "block": {
+                                "type": "play_sound_at_current_location_simple2",
+                                "id": "o*pgGvn.=h(O$z4bcq#Q",
+                                "deletable": false,
+                                "movable": false,
+                                "editable": false,
+                                "extraState": {
+                                  "disableNextConnection": true
+                                },
+                                "fields": {
+                                  "sound": "tinashe_gravity/vocals_verse_4"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "@Jsui{]k[Fbl%Iyr,IiJ",
+              "x": 510,
+              "y": 30,
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "procedureId": "@M}@g%JvO]_!I/3@=_e(",
+                "initialDeleteConfig": false,
+                "initialEditConfig": false,
+                "initialMoveConfig": true
+              },
+              "fields": {
+                "NAME": "chorus"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "play_sound_at_current_location_simple2",
+                    "id": "_7G-rUaWF_.s8h`!ZBLE",
+                    "deletable": false,
+                    "movable": false,
+                    "editable": false,
+                    "extraState": {
+                      "disableNextConnection": false
+                    },
+                    "fields": {
+                      "sound": "tinashe_gravity/vocals_chorus_1"
+                    },
+                    "next": {
+                      "block": {
+                        "type": "play_sound_at_current_location_simple2",
+                        "id": "qk^PCqI_5ki(MGh!Pt90",
+                        "deletable": false,
+                        "movable": false,
+                        "editable": false,
+                        "extraState": {
+                          "disableNextConnection": true
+                        },
+                        "fields": {
+                          "sound": "tinashe_gravity/vocals_chorus_2"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "]QRv^rf6d*_w+=olbTbP",
+              "x": 710,
+              "y": 30,
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "procedureId": "0|ki+X8`.b~@_]4~^~rx",
+                "initialDeleteConfig": false,
+                "initialEditConfig": false,
+                "initialMoveConfig": true
+              },
+              "fields": {
+                "NAME": "background"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "play_sounds_together",
+                    "id": "F@0a.g28hF}rvNVB(s4i",
+                    "deletable": false,
+                    "movable": false,
+                    "editable": false,
+                    "extraState": {
+                      "disableNextConnection": true
+                    },
+                    "inputs": {
+                      "code": {
+                        "block": {
+                          "type": "play_sound_at_current_location_simple2",
+                          "id": "47/H]kMpZ?p-yR~U%p/u",
+                          "deletable": false,
+                          "movable": false,
+                          "editable": false,
+                          "extraState": {
+                            "disableNextConnection": false
+                          },
+                          "fields": {
+                            "sound": "tinashe_gravity/percussion_1"
+                          },
+                          "next": {
+                            "block": {
+                              "type": "play_sound_at_current_location_simple2",
+                              "id": "vn-atQ}$L}CY8anq4Tlo",
+                              "deletable": false,
+                              "movable": false,
+                              "editable": false,
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
+                              "fields": {
+                                "sound": "tinashe_gravity/percussion_2"
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "play_sound_at_current_location_simple2",
+                                  "id": "PFV)9+Y@Od=@%WlXXia;",
+                                  "deletable": false,
+                                  "movable": false,
+                                  "editable": false,
+                                  "extraState": {
+                                    "disableNextConnection": false
+                                  },
+                                  "fields": {
+                                    "sound": "tinashe_gravity/bass_synth_1"
+                                  },
+                                  "next": {
+                                    "block": {
+                                      "type": "play_sound_at_current_location_simple2",
+                                      "id": "n,{C]XI_MrA~ed%N1bEq",
+                                      "deletable": false,
+                                      "movable": false,
+                                      "editable": false,
+                                      "extraState": {
+                                        "disableNextConnection": false
+                                      },
+                                      "fields": {
+                                        "sound": "tinashe_gravity/bass_synth_2"
+                                      },
+                                      "next": {
+                                        "block": {
+                                          "type": "play_sound_at_current_location_simple2",
+                                          "id": "eFE@Y)vLA;`c}mYu#+_l",
+                                          "deletable": false,
+                                          "movable": false,
+                                          "editable": false,
+                                          "extraState": {
+                                            "disableNextConnection": true
+                                          },
+                                          "fields": {
+                                            "sound": "tinashe_gravity/main_pad"
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "procedures": [
+          {
+            "id": "ynS=yV1U]j8xeUDxqQ87",
+            "name": "verses",
+            "returnTypes": null
+          },
+          {
+            "id": "@M}@g%JvO]_!I/3@=_e(",
+            "name": "chorus",
+            "returnTypes": null
+          },
+          {
+            "id": "0|ki+X8`.b~@_]4~^~rx",
+            "name": "background",
+            "returnTypes": null
+          }
+        ]
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "showSoundFilters": true,
+      "packId": "tinashe_gravity",
+      "sounds": {
+        "tinashe_gravity": [
+          "vocals_verse_1",
+          "vocals_verse_2",
+          "vocals_verse_3",
+          "vocals_verse_4",
+          "vocals_verse_5",
+          "vocals_verse_6",
+          "vocals_verse_7",
+          "vocals_chorus_1",
+          "vocals_chorus_2",
+          "vocals_chorus_3",
+          "vocals_chorus_4",
+          "vocals_adlib_1",
+          "vocals_adlib_2",
+          "vocals_adlib_3",
+          "vocals_adlib_4",
+          "vocals_adlib_5",
+          "vocals_adlib_6",
+          "vocals_adlib_7",
+          "kick_snare",
+          "percussion_1",
+          "percussion_2",
+          "bass_synth_1",
+          "bass_synth_2",
+          "flutter",
+          "floaty_piano_vocal",
+          "main_pad"
+        ]
+      }
+    },
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": true,
+      "playerTitle": "Example",
+      "validationSuccessMessage": "You did it! The song matches the example!",
+      "validationFailureMessage": "Something's not quite right! Try listening to the example again!"
+    },
+    "encrypted_exemplar_sources": "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\n",
+    "long_instructions": "### Composing Functions\r\n\r\nLet's take the code for this song and simplify it into a single function!\r\n\r\nMake a new function called `fullSong` that contains all the code for the song and calls the other functions.\r\n\r\nWhen you're finished, you should have 4 function definitions and a single function call under `when run`\r\n\r\n![](https://images.code.org/b9ccf963219d68e4c6440a0baa75d39e-image-1745875833404.png)",
+    "validations": [
+      {
+        "key": "music-lab-functions-practice-compose1_842f29d6-2744-4c5c-96ba-689009125b71",
+        "message": "exemplar",
+        "next": true,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "procedures_defnoreturn:4"
+          },
+          {
+            "name": "block_count_by_type",
+            "value": "procedures_callnoreturn:4"
+          }
+        ]
+      },
+      {
+        "key": "music-lab-functions-practice-compose1_df75ddce-4910-44c4-acfa-1898f406e216",
+        "message": "Make sure you call your function!",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "procedures_defnoreturn:4"
+          }
+        ]
+      },
+      {
+        "key": "music-lab-functions-practice-compose1_2f37d958-673a-4fbe-b9c6-0a3daac11255",
+        "message": "You need to define a new function!",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "procedures_defnoreturn:3"
+          }
+        ]
+      }
+    ],
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "name_suffix": "_v2",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-05-31T03:00:57.163+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-practice-compose1\\\"\"],\"cloned_from\":\"music-lab-functions-practice-compose1\"}]"
+}]]></config>
+  <blocks/>
+</Music>

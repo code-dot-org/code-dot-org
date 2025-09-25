@@ -1,5 +1,6 @@
 <GamelabJr>
   <config><![CDATA[{
+  "published": true,
   "game_id": 64,
   "created_at": "2024-07-10T20:36:27.000Z",
   "level_num": "custom",
@@ -47,10 +48,10 @@
     "validation_code": "if (World.frameCount == 1) {\r\n  setFailTime(150);\r\n  setDelayTime(90);\r\n\r\n  setupPrevious();\r\n\r\n  validationProps.initialAlgaeAmount = countByAnimation({ costume: 'green-sea-plant-2' });\r\n  validationProps.initialFishAmount = countByAnimation({ costume: 'fish_10' });\r\n\r\n  //fail when touch event and algea not dissapeared\r\n  addCriteria(function () {\r\n    return (touchEventFound() && spriteRemoved() && countByAnimation({ costume: 'green-sea-plant-2' }) < validationProps.initialAlgaeAmount);\r\n  }, \"cscEcosystemsFishEatAlgae\");\r\n\r\n  //fail when fishing boat doesn't catch fish\r\n  addCriteria(function () {\r\n    var prevEventCount = validationProps.previous.eventLog.length;\r\n    var fishingBoatId = getSpecificSpriteByCostume(\"fishing_boat\");\r\n    var fishingBoatWasTouched = false;\r\n    for (var i = prevEventCount; i < eventLog.length; i++) {\r\n      if (eventLog[i].split(\" \").indexOf(fishingBoatId.toString()) > -1) {\r\n        fishingBoatWasTouched = true;\r\n      }\r\n    }\r\n    return (fishingBoatWasTouched && spriteRemoved() && countByAnimation({ costume: 'fish_10' }) < validationProps.initialFishAmount);\r\n  }, \"cscEcosystemsBoatCatchFish\"); //Make sure to code the boat to catch the fish.\r\n\r\n\r\n\r\n  //Then check if students added \"if too much algae\" conditional block and inside have the healthy coral \"underseadeco_25\" changes to sick coral \"red-coral-dead\", use feedback string \"cscEcosystemsIfTooMuchAlgae\"\tMake sure to add a conditional block to your code. If there is too much algae then the healthy coral turns sick.\r\n  /*\r\n        too much: > 19\r\n        just right: >= 2, >=19\r\n        too little: count < 2\r\n  */\r\n\r\n  addCriteria(function () {\r\n    var algeaCount = countByAnimation({ costume: 'green-sea-plant-2' });\r\n\r\n    if (algeaCount > 1)\r\n      return false;\r\n\r\n\r\n    //else if sprite id > 19 switch costume\r\n    if (getArrayFromObj(validationProps.previous.spriteBehaviorsObj).indexOf(\"wandering\") >= 0 &&\r\n      getArrayFromObj(spriteBehaviorsObj).indexOf(\"moving_east\") >= 0) {\r\n      return true;\r\n    }\r\n\r\n  }, \"cscEcosystemsIfTooLittleAlgae\");\r\n}\r\n\r\ngetHelperVars();\r\ncheck();\r\nupdatePrevious();\r\n\r\n\r\nfunction getArrayFromObj (obj) {\r\n  if (obj == null || obj == undefined) {\r\n    return [];\r\n  }\r\n  var keys = Object.keys(obj);\r\n  var ret = [];\r\n  for (var i = 0; i < keys.length; i++) {\r\n      ret.push(obj[keys[i]][0]);\r\n  }\r\n  return ret;\r\n}\r\n\r\n",
     "encrypted_examples": "l5TsepZLDRnVOkJJp2tDaaZxM7uPPmJBRJGg2R7hzsFzYGpVAGJO/BYjT0cO\nUjEv6tJ4xrkC8ao8MgSIQ1egig==\n",
     "standalone_app_name": "ecosystems",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "enable_big_playspace": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-07-10T20:36:27.328+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_ocean_coral_health_pl\\\"\"],\"cloned_from\":\"csc_ecosystems_ocean_coral_health_pl\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-07-10T20:36:27.328+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_ocean_coral_health_pl\\\"\"],\"cloned_from\":\"csc_ecosystems_ocean_coral_health_pl\"},{\"changed_at\":\"2025-05-30 19:34:07 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -377,7 +378,7 @@
             <arg name="this sprite" type="Sprite"/>
             <description>move a sprite to the right across the screen</description>
           </mutation>
-          <field name="NAME" id="moving east">moving east</field>
+          <field name="NAME" id="moving east">leaving the area</field>
           <statement name="STACK">
             <block type="gamelab_moveInDirection" uservisible="false">
               <field name="DIRECTION">"East"</field>

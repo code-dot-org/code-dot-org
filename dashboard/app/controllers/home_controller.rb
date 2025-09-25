@@ -5,7 +5,6 @@ require_dependency 'queries/script_activity'
 class HomeController < ApplicationController
   include UsersHelper
   include SurveyResultsHelper
-  include TeacherApplicationHelper
   include IncubatorHelper
 
   # Don't require an authenticity token on set_locale because we post to that
@@ -84,7 +83,7 @@ class HomeController < ApplicationController
   def home
     authenticate_user!
 
-    if current_user.teacher? && (Experiment.enabled?(user: current_user, experiment_name: 'teacher-homepage-v2') || DCDO.get('teacher-homepage-v2', false))
+    if current_user.teacher?
       redirect_to '/teacher_dashboard/home'
       return
     end
@@ -141,8 +140,6 @@ class HomeController < ApplicationController
     @show_school_info_interstitial = params[:showSchoolInfoInterstitial]
     @show_section_creation_celebration_dialog = params[:showSectionCreationDialog]
 
-    student_sections = current_user.sections_as_student.map(&:summarize_without_students)
-
     # Students and teachers will receive a @top_course for their primary
     # script, so we don't want to include that script (if it exists) in the
     # regular lists of recent scripts.
@@ -154,7 +151,7 @@ class HomeController < ApplicationController
     script = Queries::ScriptActivity.primary_student_unit(current_user)
     if script
       script_level = current_user.next_unpassed_progression_level(script)
-      unit_group = script.unit_group
+      unit_group = script.get_original_unit_group
       unit_group_unit = script.unit_group_units.find {|ugu| ugu.unit_group == unit_group} if unit_group
     end
     @homepage_data[:topCourse] = nil
@@ -183,7 +180,7 @@ class HomeController < ApplicationController
       pl_unit = Queries::ScriptActivity.primary_pl_unit(current_user)
       if pl_unit
         pl_script_level = current_user.next_unpassed_progression_level(pl_unit)
-        pl_unit_group = pl_unit.unit_group
+        pl_unit_group = pl_unit.get_original_unit_group
         pl_unit_group_unit = pl_unit.unit_group_units.find {|ugu| ugu.unit_group == pl_unit_group} if pl_unit_group
       end
       @homepage_data[:topPlCourse] = nil
@@ -216,14 +213,12 @@ class HomeController < ApplicationController
       end
 
       @homepage_data[:isTeacher] = true
-      @homepage_data[:joined_student_sections] = current_user&.sections_as_student_participant&.map(&:summarize_without_students)
+      @homepage_data[:joined_student_sections] = current_user&.sections_as_student_participant&.map(&:summarize_for_participant)
       @homepage_data[:joined_pl_sections] = current_user&.sections_as_pl_participant&.map(&:summarize_without_students)
       @homepage_data[:announcement] = DCDO.get('announcement_override', nil)
       @homepage_data[:hiddenScripts] = current_user.get_hidden_unit_ids
       @homepage_data[:showCensusBanner] = show_census_banner
       @homepage_data[:showNpsSurvey] = show_nps_survey?
-      @homepage_data[:showFinishTeacherApplication] = has_incomplete_open_application?
-      @homepage_data[:showReturnToReopenedTeacherApplication] = has_reopened_application?
       @homepage_data[:afeEligible] = afe_eligible
       @homepage_data[:specialAnnouncement] = Announcements.get_localized_announcement_for_page("/home")
       @homepage_data[:showIncubatorBanner] = show_incubator_banner?
@@ -248,7 +243,7 @@ class HomeController < ApplicationController
       end
     else
       @homepage_data[:isTeacher] = false
-      @homepage_data[:sections] = student_sections
+      @homepage_data[:sections] = current_user.sections_as_student.map(&:summarize_for_participant)
       @homepage_data[:studentId] = current_user.id
       @homepage_data[:studentSpecialAnnouncement] = Announcements.get_localized_announcement_for_page("/student-home")
       @homepage_data[:parentalPermissionBanner] = helpers.parental_permission_banner_data(current_user, request)

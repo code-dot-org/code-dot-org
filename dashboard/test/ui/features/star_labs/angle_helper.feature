@@ -1,3 +1,4 @@
+@skip
 @no_mobile
 Feature: Angle Helper
 

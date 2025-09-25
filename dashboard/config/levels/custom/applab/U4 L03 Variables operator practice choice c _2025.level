@@ -1,7 +1,7 @@
 <Applab>
   <config><![CDATA[{
   "game_id": 41,
-  "created_at": "2025-03-11T18:21:29.000Z",
+  "created_at": "2025-06-11T18:57:19.000Z",
   "level_num": "custom",
   "user_id": 106,
   "properties": {
@@ -65,6 +65,7 @@
     "thumbnail_url": "https://images.code.org/8587f3b7560595bc091b6486c4bec862-image-1647410606735.png",
     "bubble_choice_description": "Add code that allows a user to add encouraging captions to a photo they've uploaded.",
     "watchers_prepopulated": "[\"caption\"]",
+    "skill_keys": "[\"variables_assignment_operator\"]",
     "preload_asset_list": null
   },
   "published": true,

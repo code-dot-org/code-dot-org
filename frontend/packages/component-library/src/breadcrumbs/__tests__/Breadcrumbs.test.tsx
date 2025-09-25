@@ -21,20 +21,24 @@ describe('Breadcrumbs Component', () => {
     );
   };
 
-  it('renders all breadcrumbs with correct text and href', () => {
+  it('renders all breadcrumbs with correct text and href except the last one', () => {
     setup();
 
-    breadcrumbsData.slice(0, 2).forEach(({text, href}) => {
-      const link = screen.getByText(text) as HTMLAnchorElement;
+    breadcrumbsData.slice(0, -1).forEach(({text, href}) => {
+      const link = screen.getByRole('link', {name: text}) as HTMLAnchorElement;
       expect(link).toBeInTheDocument();
-      expect(link.href).toContain(href);
+      expect(link).toHaveAttribute('href', href);
+      expect(link).not.toHaveAttribute('aria-disabled');
     });
+
+    const lastBreadcrumb = screen.getByText('Electronics');
+    expect(lastBreadcrumb).toBeInTheDocument();
+    expect(lastBreadcrumb).toHaveAttribute('aria-disabled', 'true');
+    expect(lastBreadcrumb).not.toHaveAttribute('href');
   });
 
-  it('renders correct test id for the breadcrumbs container', () => {
+  it('renders the breadcrumbs container with correct test id', () => {
     setup();
-
-    // TODO [Design2-197] - Create a visual test for this case instead of checking for class name
 
     const container = screen.getByTestId('breadcrumbs-test-breadcrumbs');
     expect(container).toBeInTheDocument();
@@ -44,42 +48,15 @@ describe('Breadcrumbs Component', () => {
     const customClass = 'custom-class';
     setup({className: customClass});
 
-    // TODO [Design2-197] - Create a visual test for this case instead of checking for class name
-
     const container = screen.getByTestId('breadcrumbs-test-breadcrumbs');
-    // TODO [Design2-197] - Create a visual test for this case instead of checking for class name
-
     expect(container).toHaveClass(customClass);
   });
 
-  it('renders chevron icon between breadcrumbs except after the last one', () => {
+  it('renders chevron icons correctly between breadcrumbs', () => {
     setup();
-
-    // TODO [Design2-197] - Create a visual test for this case instead of checking for class name
-    // Since the FontAwesome icon might not have a clear role, check it by query
 
     const chevrons = screen.getAllByTestId('font-awesome-v6-icon');
-    expect(chevrons.length).toBe(breadcrumbsData.length - 1); // Should be one less than breadcrumbs
-  });
-
-  it('allows clicking on all links except the last one', async () => {
-    const user = userEvent.setup();
-    setup();
-
-    // First link should be clickable
-    const firstLink = screen.getByText('Home');
-    await user.click(firstLink);
-    expect(firstLink).not.toHaveAttribute('aria-disabled');
-
-    // Second link should be clickable
-    const secondLink = screen.getByText('Products');
-    await user.click(secondLink);
-    expect(secondLink).not.toHaveAttribute('aria-disabled');
-
-    // Last link should not be clickable as it should be visually and functionally disabled
-    const lastLink = screen.getByText('Electronics');
-    expect(lastLink).toHaveAttribute('aria-disabled', 'true');
-    expect(lastLink).not.toHaveAttribute('href');
+    expect(chevrons.length).toBe(breadcrumbsData.length - 1);
   });
 
   describe('Home Icon', () => {
@@ -95,13 +72,19 @@ describe('Breadcrumbs Component', () => {
       expect(homeIcon).not.toBeInTheDocument();
     });
 
-    it('home icon link points to root directory', () => {
+    it('renders home icon with correct href when homeIconHref is provided', () => {
+      setup({showHomeIcon: true, homeIconHref: '/dashboard'});
+      const homeLink = screen.getByTitle('Home').closest('a');
+      expect(homeLink).toHaveAttribute('href', '/dashboard');
+    });
+
+    it('defaults home icon link to root when homeIconHref is not provided', () => {
       setup({showHomeIcon: true});
       const homeLink = screen.getByTitle('Home').closest('a');
       expect(homeLink).toHaveAttribute('href', '/');
     });
 
-    it('home icon is clickable', async () => {
+    it('home icon link is clickable', async () => {
       const user = userEvent.setup();
       setup({showHomeIcon: true});
       const homeLink = screen.getByTitle('Home').closest('a');

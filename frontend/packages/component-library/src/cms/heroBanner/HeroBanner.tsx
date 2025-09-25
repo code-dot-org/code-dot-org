@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import {ReactNode, HTMLAttributes} from 'react';
+import {ReactNode, HTMLAttributes, JSX} from 'react';
 
 import Alert from '@/alert';
 import {LinkButton, LinkButtonProps} from '@/button';
@@ -35,7 +35,8 @@ export interface HeroBannerProps extends HTMLAttributes<HTMLElement> {
   /** HeroBanner video component. We use this composition here to allow using HeroBanner component for ssr pages.
    * More context can be found in this slack thread: https://codedotorg.slack.com/archives/C07UW4ED66Q/p1744640489709969
    * */
-  VideoComponent: typeof Video;
+  VideoComponent?: typeof Video;
+  ImageComponent?: JSX.ElementType;
   /** HeroBanner video */
   videoProps?: VideoProps;
   /** HeroBanner link */
@@ -51,8 +52,6 @@ export interface HeroBannerProps extends HTMLAttributes<HTMLElement> {
    *  If you're using backgroundImageUrl - you should make sure you set correct theme value to HeroBanner.
    *  */
   'data-theme'?: Theme;
-  /** Whether to show the background color */
-  removeBackground?: boolean;
   /** HeroBanner whether show with wide text (text is wider than image) */
   withWideText?: boolean;
   /** HeroBanner partner prop */
@@ -83,18 +82,17 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
   imageProps,
   hideImageOnSmallScreen = false,
   VideoComponent,
+  ImageComponent,
   videoProps,
   buttonProps,
   announcementBannerProps,
   backgroundColor,
   backgroundImageUrl,
-  removeBackground = false,
   withWideText = false,
   className,
   ...HTMLAttributes
 }) => (
   <section
-    role="banner"
     data-theme={HTMLAttributes['data-theme']}
     className={classNames(moduleStyles.heroBanner, className)}
     {...HTMLAttributes}
@@ -106,6 +104,7 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
         text={announcementBannerProps.text}
         icon={announcementBannerProps.icon}
         link={announcementBannerProps.link}
+        type="gray"
       />
     )}
     <div
@@ -120,7 +119,6 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
         backgroundImage: backgroundImageUrl
           ? `url(${backgroundImageUrl})`
           : HTMLAttributes.style?.backgroundImage,
-        ...(removeBackground ? {background: 'none'} : {}),
       }}
     >
       <div className={classNames(moduleStyles.heroBannerContainer)}>
@@ -135,7 +133,11 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
             {partner && (
               <span className={moduleStyles.heroBannerPartnerContainer}>
                 {partner.title}
-                <Image {...partner.logo} hasRoundedCorners={false} />
+                <Image
+                  {...partner.logo}
+                  ImageComponent={ImageComponent}
+                  hasRoundedCorners={false}
+                />
               </span>
             )}
           </div>
@@ -150,6 +152,7 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
             {imageProps && !videoProps && (
               <Image
                 {...imageProps}
+                ImageComponent={ImageComponent}
                 className={classNames(
                   imageProps.className,
                   moduleStyles.heroBannerMediaImage,
@@ -157,7 +160,7 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
                 )}
               />
             )}
-            {videoProps && <VideoComponent {...videoProps} />}
+            {VideoComponent && videoProps && <VideoComponent {...videoProps} />}
           </div>
         )}
       </div>

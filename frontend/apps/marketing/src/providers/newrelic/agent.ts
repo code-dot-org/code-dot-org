@@ -25,7 +25,30 @@ async function initializeNewRelic(): Promise<BrowserAgent | undefined> {
     init: {
       distributed_tracing: {enabled: true},
       privacy: {cookies_enabled: true},
-      ajax: {deny_list: ['bam.nr-data.net']},
+      ajax: {
+        deny_list: [
+          'bam.nr-data.net',
+          'analytics.google.com',
+          'prodregistryv2.org',
+          'google-analytics.com',
+          'onetrust.com',
+          'cookielaw.org',
+        ],
+      },
+      session_replay: {
+        enabled: false,
+        block_selector: '',
+        mask_text_selector: '*',
+        sampling_rate: 0.0,
+        error_sampling_rate: 10.0,
+        mask_all_inputs: true,
+        collect_fonts: true,
+        inline_images: false,
+        inline_stylesheet: true,
+        fix_stylesheets: true,
+        preload: true,
+        mask_input_options: {},
+      },
     },
     ...getNewRelicConfig(),
   };

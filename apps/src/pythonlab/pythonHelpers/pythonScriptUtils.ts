@@ -1,13 +1,13 @@
-import {
-  getNextFileId,
-  getNextFolderId,
-} from '@codebridge/codebridgeContext/utils';
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import _ from 'lodash';
 import {PyodideInterface} from 'pyodide';
 
 import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
+import {
+  getNextFileId,
+  getNextFolderId,
+} from '@cdo/apps/lab2/utils/multiFileSourceUtils';
 
 import {PyodideMessage, PyodidePathContent} from '../types';
 

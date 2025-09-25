@@ -1,0 +1,51 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-05-31T03:01:15.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "### Remix Artist\n\nThis is **Altrice**. He's an electronic and remix musical artist.",
+        "imageUrl": "https://images.code.org/57640562cf5085afa4fc2414cb5eb68e-altrice1.png",
+        "key": "music-lab-functions-practice-abstract-panel-3b135fec-37b5-421c-a078-8aa602a6b152",
+        "layout": "text-bottom-right",
+        "fadeInOverPrevious": false
+      },
+      {
+        "text": "### Remix Artist\n\nAs part of a competition, Altrice remixed a song using only the stems provided. It was called the **\"Only What You Gave Me\"** remix",
+        "imageUrl": "https://images.code.org/fe64f09e555897012c28d002dbae09e5-altrice2.png",
+        "key": "music-lab-functions-synthesis-altrice-panel-56ce565b-9727-49fc-a815-86a2678805c9",
+        "layout": "text-bottom-left",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "### Remix Artist\n\nHe won the competition with this unique style. It was a standout track!",
+        "imageUrl": "https://images.code.org/2a9b37cc629107ebdb7d1016051ee0b5-altrice3.png",
+        "key": "music-lab-functions-synthesis-altrice-panel-a1047eef-ba85-4323-a513-fea6159dd84c",
+        "fadeInOverPrevious": true,
+        "layout": "text-bottom-left"
+      },
+      {
+        "text": "### Remix Artist\n\nBy limiting himself to _just_ the tracks from the original song, Altrice is able to discover new versions of familiar songs",
+        "imageUrl": "https://images.code.org/0b1fccf63ef14415e7f238ef6b9c71f9-altrice4.png",
+        "key": "music-lab-functions-synthesis-altrice-panel-066298d5-0f90-425c-a14d-d7c366478937",
+        "fadeInOverPrevious": true,
+        "layout": "text-bottom-left"
+      },
+      {
+        "text": "### Remix Artist\n\nIn this lesson, we're going to try remixing songs like Altrice - using just the provided sounds in new and creative ways!",
+        "imageUrl": "https://images.code.org/1364c6db36cf0952fed74f6482ca340c-altrice5.png",
+        "key": "music-lab-functions-synthesis-altrice-panel-26973a9d-bdb7-4828-a3bd-d62b580e2c72",
+        "fadeInOverPrevious": true
+      }
+    ],
+    "name_suffix": "_v2"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-05-31T03:01:15.370+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-synthesis-altrice-panel\\\"\"],\"cloned_from\":\"music-lab-functions-synthesis-altrice-panel\"},{\"changed_at\":\"2025-07-03 22:50:34 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+</Panels>

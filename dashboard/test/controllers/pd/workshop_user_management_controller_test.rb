@@ -3,11 +3,11 @@ require 'test_helper'
 class Pd::WorkshopUserManagementControllerTest < ActionController::TestCase
   self.use_transactional_test_case = true
   setup_all do
-    @workshop_admin = create :workshop_admin
-    @teacher = create :teacher
-    @multi_auth_teacher = create :teacher
-    @student = create :student
-    @facilitator = create :facilitator
+    @workshop_admin = create(:workshop_admin)
+    @teacher = create(:teacher)
+    @multi_auth_teacher = create(:teacher)
+    @student = create(:student)
+    @facilitator = create(:facilitator)
     @facilitator_with_course = create(:pd_course_facilitator, course: Pd::Workshop::COURSE_CSF).facilitator
   end
 

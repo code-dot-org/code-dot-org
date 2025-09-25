@@ -111,7 +111,7 @@ describe('ActionBlock', () => {
         }}
         secondaryButton={{
           fields: {
-            ...defaultProps.primaryButton.fields,
+            ...defaultProps.secondaryButton.fields,
             isThisAnExternalLink: true,
           },
         }}
@@ -119,6 +119,36 @@ describe('ActionBlock', () => {
     );
 
     expect(queryAllByTestId('font-awesome-v6-icon')).toHaveLength(2);
+  });
+
+  it('opens external links in a new tab', () => {
+    const {getByLabelText} = render(
+      <FullWidthActionBlock
+        {...defaultProps}
+        primaryButton={{
+          fields: {
+            ...defaultProps.primaryButton.fields,
+            isThisAnExternalLink: true,
+          },
+        }}
+        secondaryButton={{
+          fields: {
+            ...defaultProps.secondaryButton.fields,
+            isThisAnExternalLink: true,
+          },
+        }}
+      />,
+    );
+
+    expect(getByLabelText('Test Primary Button aria label')).toHaveAttribute(
+      'target',
+      '_blank',
+    );
+
+    expect(getByLabelText('Test Secondary Button aria label')).toHaveAttribute(
+      'target',
+      '_blank',
+    );
   });
 
   it('renders New tag if publishedDate is within 3 months of the current date', () => {

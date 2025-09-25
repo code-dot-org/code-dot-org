@@ -16,7 +16,6 @@ echo "
 build_apps: true
 build_dashboard: true
 build_pegasus: true
-bundler_use_sudo: false
 cloudfront_key_pair_id: $CLOUDFRONT_KEY_PAIR_ID
 cloudfront_private_key: \"$CLOUDFRONT_PRIVATE_KEY\"
 dashboard_db_reader: \"mysql://readonly@localhost/dashboard_test\"
@@ -40,6 +39,5 @@ echo "Wrote settings and secrets from env vars into locals.yml."
 
 set -x
 
-bundle install --quiet
 bundle exec rake install
 bundle exec rake build

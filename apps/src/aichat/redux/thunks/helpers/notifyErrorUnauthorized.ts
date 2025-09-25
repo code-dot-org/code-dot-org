@@ -12,8 +12,14 @@ export async function notifyErrorUnauthorized(
   userAction: string,
   dispatch: AppDispatch
 ) {
-  const responseBody = await error.response.json();
-  const userType = responseBody?.user_type;
+  let userType;
+  try {
+    const responseBody = await error.response.json();
+    userType = responseBody?.user_type;
+  } catch (error) {
+    // This can happen if the 403 response is not JSON.
+    console.warn(error);
+  }
 
   const userTypeToMessageText: {[key: string]: string} = {
     teacher: commonI18n.aiChatNotAuthorizedTeacher(),

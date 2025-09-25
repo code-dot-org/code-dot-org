@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2025-03-11T18:21:03.000Z",
   "level_num": "custom",
@@ -56,9 +57,8 @@
     "thumbnail_url": "https://images.code.org/f3e7cb1d7a71bce644008416a9eb97c6-image-1647323879885.52.47 PM.png",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2025-03-11T18:21:03.513+00:00\",\"changed\":[\"cloned from \\\"U3 Program Practice Pt 8_2024\\\"\"],\"cloned_from\":\"U3 Program Practice Pt 8_2024\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-11T18:21:03.513+00:00\",\"changed\":[\"cloned from \\\"U3 Program Practice Pt 8_2024\\\"\"],\"cloned_from\":\"U3 Program Practice Pt 8_2024\"},{\"changed_at\":\"2025-08-04 21:29:46 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

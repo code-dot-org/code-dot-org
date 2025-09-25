@@ -1,0 +1,21 @@
+#!/bin/bash
+
+set -e
+
+MODE="$1"
+
+# keep the sparse-patterns directory in pegasus for now since that's the only
+# place we're using it. if we add more patterns, consider moving this to a
+# more central location.
+PATTERNS_DIR="pegasus/sparse-patterns"
+
+if [[ "$MODE" == "default" ]]; then
+  [ -f .git/info/sparse-checkout ] && rm -f .git/info/sparse-checkout
+  git sparse-checkout disable
+elif [[ "$MODE" == "no-pegasus-content" ]]; then
+  git checkout HEAD -- "$PATTERNS_DIR/no-pegasus-content"
+  git sparse-checkout set --no-cone --stdin < "$PATTERNS_DIR/no-pegasus-content"
+else
+  echo "Usage: $0 [default|no-pegasus-content]"
+  exit 1
+fi

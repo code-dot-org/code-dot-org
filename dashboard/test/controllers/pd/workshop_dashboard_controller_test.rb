@@ -24,7 +24,7 @@ class Pd::WorkshopDashboardControllerTest < ActionController::TestCase
   end
 
   test 'csf facilitator has permission reflected' do
-    user = create :facilitator
+    user = create(:facilitator)
     Pd::CourseFacilitator.create(facilitator: user, course: Pd::Workshop::COURSE_CSF)
 
     sign_in(user)
@@ -45,7 +45,7 @@ class Pd::WorkshopDashboardControllerTest < ActionController::TestCase
 
   test 'a user who is both a program manager and an organizer has their permission reflected' do
     user = create(:workshop_organizer)
-    create :regional_partner_program_manager, program_manager: user
+    create(:regional_partner_program_manager, program_manager: user)
 
     sign_in user
     get :index

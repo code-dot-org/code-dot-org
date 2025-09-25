@@ -1,0 +1,281 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-05-31T02:57:04.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "packId": "beethoven_symphony_no_6",
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "editable": false
+            }
+          ]
+        }
+      },
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2",
+            "play_rest_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together",
+            "play_sounds_sequential"
+          ],
+          "Effects": [
+            "set_volume_effect_at_current_location_simple2",
+            "set_filter_effect_at_current_location_simple2",
+            "set_delay_effect_at_current_location_simple2"
+          ]
+        },
+        "type": "flyout"
+      },
+      "sounds": {
+        "beethoven_symphony_no_6": [
+          "strings_repeating",
+          "main_theme_1",
+          "main_theme_2",
+          "main_theme_3",
+          "main_theme_4",
+          "hit",
+          "fanfare",
+          "strings_legato",
+          "strings_build",
+          "strings_open",
+          "strings_ascending",
+          "strings_resolve",
+          "strings_punch",
+          "flute_sustain",
+          "flute_theme",
+          "strings_sneaky",
+          "strings_up_and_down",
+          "strings_arpeggio",
+          "strings_melody",
+          "call_and_response"
+        ],
+        "indie": [
+          "drum_beat_fan",
+          "drum_beat_jangle",
+          "drum_beat_lid",
+          "drum_beat_nod",
+          "drum_beat_ping",
+          "drum_beat_straight",
+          "drum_beat_swish",
+          "drum_beat_tap",
+          "bold_beat",
+          "bold_alternate_beat",
+          "drum_kit_indie",
+          "drum_kit_northern",
+          "acoustic_bass",
+          "acoustic_alternate_bass",
+          "bass_home_coast",
+          "bass_home_sway_down",
+          "bass_lifted_coast_down",
+          "guitar_chord_change",
+          "guitar_clean_arp",
+          "guitar_clean_phrase",
+          "guitar_clean_strum",
+          "guitar_indie_riff",
+          "guitar_lick",
+          "guitar_low_riff",
+          "guitar_octave_line",
+          "guitar_slap_line",
+          "guitar_tremolo_line",
+          "rhythm_guitar",
+          "synth_call",
+          "synth_faucet",
+          "synth_hook",
+          "synth_hope",
+          "synth_story",
+          "synth_theme",
+          "crash_build",
+          "crunch",
+          "hey",
+          "hey_short",
+          "rustle",
+          "scratch",
+          "swipe",
+          "swipe_short"
+        ],
+        "acoustic_arcade": [
+          "drum_beat_cabana",
+          "drum_beat_conga",
+          "drum_beat_hands",
+          "drum_beat_sweep",
+          "drum_beat_trees",
+          "drum_beat_wobble",
+          "bass_elevator",
+          "bass_float",
+          "bass_giant",
+          "bass_seesaw",
+          "bass_bounce",
+          "bass_stamp",
+          "synth_castle",
+          "synth_cloud",
+          "synth_cosmic",
+          "synth_round",
+          "synth_rubber",
+          "synth_tines",
+          "ukulele_knot",
+          "ukulele_shine",
+          "ukulele_slide",
+          "ukulele_knock",
+          "guitar_handle",
+          "guitar_path",
+          "guitar_window",
+          "guitar_flower",
+          "lead_zaps",
+          "lead_swoop",
+          "lead_violins",
+          "waterfall",
+          "bongo_roll",
+          "chimes",
+          "vibra_verb",
+          "sleigh_bells",
+          "wheel_spoke"
+        ]
+      },
+      "toolboxDefinition": {
+        "contents": [
+          {
+            "kind": "block",
+            "type": "play_sound_at_current_location_simple2",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "sound": "beethoven_symphony_no_6/strings_repeating"
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_rest_at_current_location_simple2",
+            "fields": {
+              "rest_duration": "<field name=\"rest_duration\">1</field>"
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_sounds_together",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_sounds_sequential",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "set_effect_at_current_location_simple2",
+            "fields": {
+              "effects_name": "<field name=\"effects_name\">volume</field>",
+              "effects_value": "<field name=\"effects_value\">low</field>"
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "set_effect_at_current_location_simple2",
+            "fields": {
+              "effects_name": "<field name=\"effects_name\">filter</field>",
+              "effects_value": "<field name=\"effects_value\">medium</field>"
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "set_effect_at_current_location_simple2",
+            "fields": {
+              "effects_name": "<field name=\"effects_name\">delay</field>",
+              "effects_value": "<field name=\"effects_value\">medium</field>"
+            },
+            "enabled": true
+          }
+        ],
+        "kind": "flyoutToolbox"
+      },
+      "allowChangeStartingPlayheadPosition": true
+    },
+    "long_instructions": "### Lullaby Song\r\n\r\n**Define:** A client has asked you to make a baby lullaby using classical music that helps them go to sleep. The song should gradually lower in volume before \"fading out\" tracks one at a time.\r\n\r\n**Prepare:** Pick the tracks and effects you want to use and imagine what you want the timeline to look like. Consider how you want to plan the \"fade out\" effect!\r\n\r\n**Try:** Create your lullaby!\r\n<div style=\"background:#ebe8f1; border: 0; border-radius: 10px; clear:both; padding: 5px\">\r\n\r\nNeed some help? Try the [<i class=\"fa-solid fa-book\"></i> Docs](#clickable=documentation-button) in the upper-right corner!\r\n\r\n</div>\r\n\r\n**Reflect:** In order to pass this level, make sure your code has:\r\n- At least 6 tracks\r\n- At least 3 effects\r\n- A \"lowering\" volume and a fade out effect",
+    "display_name": "Time to go to sleep",
+    "thumbnail_url": "https://images.code.org/119ef3955b83bfd95d2a078f03cce047-Screenshot 2025-03-12 at 12.56.21 PM.png",
+    "validations": [
+      {
+        "key": "test-music-lab-sequences-synthesize-filters-choice-b_63d4fa5a-255b-43d8-8428-c036bea1f7e1",
+        "message": "Your code seems on the right track! Make sure you meet all of the other requirements!",
+        "next": true,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "play_sound_at_current_location_simple2:6"
+          },
+          {
+            "name": "block_count_by_type",
+            "value": "set_effect_at_current_location_simple2:2"
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-sequences-synthesize-filters-choice-b_c509912a-f4cd-4ef1-bd48-38b828ba4f21",
+        "message": "Make sure your code has at least 3 effects!",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "play_sound_at_current_location_simple2:6"
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-sequences-synthesize-filters-choice-b_c7c6292b-4703-4b45-aa6d-ef3d8d7c93f9",
+        "message": "Make sure your code has at least 6 tracks!",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": false,
+      "validationMode": "default",
+      "playerTitle": "Example lullaby "
+    },
+    "bubble_choice_description": "A client has asked you to make a baby lullaby",
+    "name_suffix": "_v2",
+    "encrypted_exemplar_sources": "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\nBPHejK0qRncAw69n42YJVmMb1mTzsjqr\n",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:57:04.663+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-synthesize-filters-choice-b\\\"\"],\"cloned_from\":\"test-music-lab-sequences-synthesize-filters-choice-b\"},{\"changed_at\":\"2025-06-26 20:52:04 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-26 20:52:46 +0000\",\"changed\":[\"predict_settings\",\"exemplar_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-26 20:53:12 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-30 17:01:46 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

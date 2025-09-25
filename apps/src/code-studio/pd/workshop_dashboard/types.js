@@ -24,11 +24,13 @@ const workshopShape = PropTypes.shape({
 });
 
 const enrollmentShape = PropTypes.shape({
-  first_name: PropTypes.string.isRequired,
-  last_name: PropTypes.string.isRequired,
-  email: PropTypes.string.isRequired,
-  district_name: PropTypes.string,
-  school: PropTypes.string,
+  user_info: PropTypes.shape({
+    given_name: PropTypes.string.isRequired,
+    family_name: PropTypes.string.isRequired,
+    email: PropTypes.string.isRequired,
+    school_name: PropTypes.string,
+    district_name: PropTypes.string,
+  }).isRequired,
   role: PropTypes.string,
   grades_teaching: PropTypes.arrayOf(PropTypes.string),
   user_id: PropTypes.number,

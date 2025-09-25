@@ -14,7 +14,7 @@ describe('StandardView', () => {
         id: 1163,
         excludeCsfColumnInLegend: false,
         title: 'Express Course (2019)',
-        path: '//localhost-studio.code.org:3000/s/express-2019',
+        path: '//localhost-studio.code.org:3000/courses/express-2019/units/1',
         lessons: [],
       },
       scriptFriendlyName: 'Express Course (2019)',

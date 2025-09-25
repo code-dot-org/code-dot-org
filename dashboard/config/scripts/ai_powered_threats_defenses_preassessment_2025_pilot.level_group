@@ -1,0 +1,28 @@
+name 'ai-powered-threats-defenses-preassessment_2025-pilot'
+title 'AI Powered Threats and Defenses Pre-Assessment'
+
+submittable 'true'
+anonymous 'false'
+activity_guide_level 'false'
+
+page
+text 'ai-powered-threats-defenses--preassessment-intro-2025'
+level 'ai-powered-threats-defenses-preassessment-q1_2025-pilot_2025'
+level 'ai-powered-threats-defenses-preassessment-q2_2025-pilot_2025'
+level 'ai-powered-threats-defenses-preassessment-q3_2025-pilot_2025'
+level 'ai-powered-threats-defenses-preassessment-q4_2025-pilot_2025'
+level 'ai-powered-threats-defenses-preassessment-q5_2025-pilot_2025'
+
+page
+level 'ai-powered-threats-defenses-preassessment-q6_2025-pilot_2025'
+level 'ai-powered-threats-defenses-preassessment-q7_2025-pilot_2025'
+level 'ai-powered-threats-defenses-preassessment-q8_2025-pilot_2025'
+level 'ai-powered-threats-defenses-preassessment-q9_2025-pilot_2025'
+level 'ai-powered-threats-defenses-preassessment-q10_2025-pilot_2025'
+
+page
+level 'ai-powered-threats-defenses-preassessment-q11_2025-pilot_2025'
+level 'ai-powered-threats-defenses-preassessment-q12_2025-pilot_2025'
+level 'ai-powered-threats-defenses-preassessment-q13_2025-pilot_2025'
+level 'ai-powered-threats-defenses-preassessment-q14_2025-pilot_2025'
+level 'ai-powered-threats-defenses-preassessment-q15_2025-pilot_2025'

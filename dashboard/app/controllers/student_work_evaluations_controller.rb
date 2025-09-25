@@ -15,6 +15,29 @@ class StudentWorkEvaluationsController < ApplicationController
     end
   end
 
+  # GET /student_work_evaluations/:userId/:levelId/:unitId
+  def get_most_recent_user_level_evaluation
+    user_id = params[:user_id]
+    level_id = params[:level_id]
+    unit_id = params[:unit_id]
+
+    evaluations = UserLevelEvaluation.where(
+      student_id: user_id,
+      level_id: level_id,
+      unit_id: unit_id
+    )
+
+    return head :ok if evaluations.empty?
+
+    # It is possible that there might be more than one evaluation for a student on a level/unit,
+    # so we will return the most recent one
+    last_evaluation = evaluations.order(created_at: :desc).first
+    return head :not_found unless last_evaluation
+
+    transformed_evaluation = last_evaluation.as_json.deep_transform_keys {|k| k.camelize(:lower)}
+    render json: transformed_evaluation, status: :ok
+  end
+
   def student_work_evaluation_params
     student_work_evaluation_params = params.transform_keys(&:underscore).permit(
       :type,
@@ -28,7 +51,8 @@ class StudentWorkEvaluationsController < ApplicationController
       :evaluation,
       :reasoning,
       :ai_model_version,
-      :code_version
+      :code_version,
+      :skill_id
     )
     student_work_evaluation_params[:requester_id] = current_user.id
     student_work_evaluation_params[:school_year] = school_year

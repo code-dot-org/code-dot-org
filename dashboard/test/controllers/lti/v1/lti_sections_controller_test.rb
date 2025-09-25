@@ -6,13 +6,13 @@ class Lti::V1::SectionsControllerTest < ActionController::TestCase
     sign_in @user
   end
   test 'updates section owners' do
-    new_owner = create :teacher
-    section_one = create :section, user: @user
-    section_two = create :section, user: @user
-    lti_section_one = create :lti_section, section: section_one
-    lti_section_two = create :lti_section, section: section_two
-    create :section_instructor, section: section_one, instructor: new_owner
-    create :section_instructor, section: section_two, instructor: new_owner
+    new_owner = create(:teacher)
+    section_one = create(:section, user: @user)
+    section_two = create(:section, user: @user)
+    lti_section_one = create(:lti_section, section: section_one)
+    lti_section_two = create(:lti_section, section: section_two)
+    create(:section_instructor, section: section_one, instructor: new_owner)
+    create(:section_instructor, section: section_two, instructor: new_owner)
 
     Metrics::Events.expects(:log_event).with(
       has_entries(
@@ -45,9 +45,9 @@ class Lti::V1::SectionsControllerTest < ActionController::TestCase
   end
 
   test 'does not update section owners if user is not an instructor' do
-    other_teacher = create :teacher
-    section = create :section, user: other_teacher
-    lti_section = create :lti_section, section: section
+    other_teacher = create(:teacher)
+    section = create(:section, user: other_teacher)
+    lti_section = create(:lti_section, section: section)
     Metrics::Events.expects(:log_event).never
     patch :bulk_update_owners, params: {section_owners: {lti_section.id => @user.id}.to_json}, format: :json
     assert_response :forbidden
@@ -55,10 +55,10 @@ class Lti::V1::SectionsControllerTest < ActionController::TestCase
   end
 
   test 'if the owner is changed, the previous owner remains an instructor' do
-    new_owner = create :teacher
-    section = create :section, user: @user
-    lti_section = create :lti_section, section: section
-    create :section_instructor, section: section, instructor: new_owner
+    new_owner = create(:teacher)
+    section = create(:section, user: @user)
+    lti_section = create(:lti_section, section: section)
+    create(:section_instructor, section: section, instructor: new_owner)
 
     Metrics::Events.expects(:log_event).with(
       has_entries(

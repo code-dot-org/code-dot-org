@@ -39,7 +39,7 @@
       "validationEnabled": false
     },
     "project_template_level_name": "test-music-lab-loops-sythesize-skill-template",
-    "long_instructions": "##### **Teacher Note**: This is Lesson 8, level 5 in the curriculum.\r\n\r\n___\r\n\r\n### Change a sound in real-time\r\n\r\nLive coding doesn't have to be complicated. Try manipulating just one element at a time. See if you can change a sound on the beat. \r\n\r\n**Do this:** \r\n- Plan your next sound shift. Find a sound in the dropdown menu that you'll switch to at Measure 4. \r\n- Practice live coding your music by pressing \"Run\" and clicking on your new sound once the playhead gets to the beginning of Measure 4. \r\n\r\nOnce the timeline reaches measure 8, you'll be able to continue!",
+    "long_instructions": "##### **Teacher Note**: This is Lesson 8, level 5 in the curriculum.\r\n\r\n___\r\n\r\n### Live Coding\r\n\r\nLive coding doesn't have to be complicated. Try manipulating just one element at a time. See if you can change a sound on the beat. \r\n\r\n**Do this:** \r\n- Plan your next sound shift. Find a sound in the dropdown menu that you'll switch to at Measure 4. \r\n- Practice live coding your music by pressing \"Run\" and clicking on your new sound once the playhead gets to the beginning of Measure 4. \r\n\r\nOnce the timeline reaches measure 8, you'll be able to continue!",
     "validations": [
       {
         "key": "test-music-lab-loops-sythesize-skill-2_7bd65eaa-e227-4660-832a-3da05a4d2d88",
@@ -64,9 +64,10 @@
     "predict_settings": {
       "isPredictLevel": false
     },
+    "submittable": "false",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-04-15T18:00:40.386+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-sythesize-skill-2\\\"\"],\"cloned_from\":\"test-music-lab-loops-sythesize-skill-2\"},{\"changed_at\":\"2025-04-17 02:05:28 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-04-15T18:00:40.386+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-sythesize-skill-2\\\"\"],\"cloned_from\":\"test-music-lab-loops-sythesize-skill-2\"},{\"changed_at\":\"2025-04-17 02:05:28 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2025-07-08 16:59:24 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

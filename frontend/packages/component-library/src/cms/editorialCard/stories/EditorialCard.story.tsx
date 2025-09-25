@@ -1,5 +1,5 @@
 import imageFile from '@public/images/image-component.png';
-import type {Meta, StoryObj} from '@storybook/react';
+import type {Meta, StoryObj} from '@storybook/react-webpack5';
 
 import EditorialCard, {
   EDITORIAL_CARD_LAYOUTS,

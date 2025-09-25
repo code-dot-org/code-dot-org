@@ -5,28 +5,28 @@ class Api::V1::Pd::WorkshopAttendanceControllerTest < ActionDispatch::Integratio
 
   self.use_transactional_test_case = true
   setup_all do
-    @organizer = create :program_manager
-    @workshop_organizer = create :workshop_organizer
-    @facilitator = create :facilitator
+    @organizer = create(:program_manager)
+    @workshop_organizer = create(:workshop_organizer)
+    @facilitator = create(:facilitator)
 
-    @workshop = create :workshop, organizer: @organizer, facilitators: [@facilitator], num_sessions: 1
+    @workshop = create(:workshop, organizer: @organizer, facilitators: [@facilitator], num_sessions: 1)
     @workshop.start!
 
-    @teacher = create :pd_workshop_participant, workshop: @workshop, enrolled: true, sign_in_count: 1
+    @teacher = create(:pd_workshop_participant, workshop: @workshop, enrolled: true, sign_in_count: 1)
     @enrollment = Pd::Enrollment.find_by!(workshop: @workshop, user: @teacher)
     @session = @workshop.sessions.first
 
-    @organizer_workshop = create :workshop, organizer: @workshop_organizer, facilitators: [@facilitator], num_sessions: 1
+    @organizer_workshop = create(:workshop, organizer: @workshop_organizer, facilitators: [@facilitator], num_sessions: 1)
     @organizer_workshop.start!
 
-    @organizer_workshop_teacher = create :pd_workshop_participant, workshop: @organizer_workshop, enrolled: true, sign_in_count: 1
+    @organizer_workshop_teacher = create(:pd_workshop_participant, workshop: @organizer_workshop, enrolled: true, sign_in_count: 1)
     @organizer_workshop_enrollment = Pd::Enrollment.find_by!(workshop: @organizer_workshop, user: @organizer_workshop_teacher)
     @organizer_workshop_session = @organizer_workshop.sessions.first
 
-    @other_workshop = create :workshop, num_sessions: 1
+    @other_workshop = create(:workshop, num_sessions: 1)
     @other_workshop.start!
 
-    @other_teacher = create :pd_workshop_participant, workshop: @other_workshop, enrolled: true, sign_in_count: 1
+    @other_teacher = create(:pd_workshop_participant, workshop: @other_workshop, enrolled: true, sign_in_count: 1)
     @other_enrollment = Pd::Enrollment.find_by!(workshop: @other_workshop, user: @other_teacher)
   end
 
@@ -155,7 +155,7 @@ class Api::V1::Pd::WorkshopAttendanceControllerTest < ActionDispatch::Integratio
   end
 
   test 'show format' do
-    create_list :pd_enrollment, 2, workshop: @workshop
+    create_list(:pd_enrollment, 2, workshop: @workshop)
 
     sign_in @organizer
     get_session_attendance @workshop, @session
@@ -198,7 +198,7 @@ class Api::V1::Pd::WorkshopAttendanceControllerTest < ActionDispatch::Integratio
   end
 
   test 'show enrollment attended' do
-    create :pd_attendance, teacher: @teacher, session: @session, enrollment: @enrollment
+    create(:pd_attendance, teacher: @teacher, session: @session, enrollment: @enrollment)
     sign_in @organizer
     attendance = get_session_single_attendance_json @workshop, @session
 
@@ -232,8 +232,8 @@ class Api::V1::Pd::WorkshopAttendanceControllerTest < ActionDispatch::Integratio
 
   test 'delete_attendance' do
     sign_in @organizer
-    teacher = create :teacher
-    create :pd_attendance, session: @session, teacher: teacher
+    teacher = create(:teacher)
+    create(:pd_attendance, session: @session, teacher: teacher)
 
     # delete_attendance is idempotent
     2.times do
@@ -246,7 +246,7 @@ class Api::V1::Pd::WorkshopAttendanceControllerTest < ActionDispatch::Integratio
 
   test 'create delete and create restores the original record' do
     sign_in @organizer
-    teacher = create :pd_workshop_participant, workshop: @workshop, enrolled: true
+    teacher = create(:pd_workshop_participant, workshop: @workshop, enrolled: true)
 
     create_attendance @workshop, @session, teacher
     assert_response :success
@@ -264,7 +264,7 @@ class Api::V1::Pd::WorkshopAttendanceControllerTest < ActionDispatch::Integratio
 
   test 'create attendance by enrollment fails when an account is required' do
     sign_in @organizer
-    enrollment = create :pd_enrollment, workshop: @workshop
+    enrollment = create(:pd_enrollment, workshop: @workshop)
 
     assert @workshop.account_required_for_attendance?
     create_attendance_by_enrollment @workshop, @session, enrollment
@@ -276,7 +276,7 @@ class Api::V1::Pd::WorkshopAttendanceControllerTest < ActionDispatch::Integratio
     @workshop.update!(course: Pd::Workshop::COURSE_ADMIN_COUNSELOR, subject: Pd::Workshop::SUBJECT_ADMIN_COUNSELOR_WELCOME)
 
     sign_in @organizer
-    enrollment = create :pd_enrollment, workshop: @workshop
+    enrollment = create(:pd_enrollment, workshop: @workshop)
 
     refute @workshop.account_required_for_attendance?
     assert_creates Pd::Attendance do
@@ -290,8 +290,8 @@ class Api::V1::Pd::WorkshopAttendanceControllerTest < ActionDispatch::Integratio
 
   test 'delete attendance by enrollment succeeds' do
     sign_in @organizer
-    enrollment = create :pd_enrollment, workshop: @workshop
-    create :pd_attendance, session: @session, enrollment: enrollment
+    enrollment = create(:pd_enrollment, workshop: @workshop)
+    create(:pd_attendance, session: @session, enrollment: enrollment)
 
     # delete_attendance_by_enrollment is idempotent
     2.times do

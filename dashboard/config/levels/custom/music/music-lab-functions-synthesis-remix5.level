@@ -1,0 +1,1185 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-07-03T18:47:52.000Z",
+  "level_num": "custom",
+  "user_id": 14639,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "#### Wherever, Whenever\r\n\r\nThis is an example of an \"Only What You Gave Me\" remix, where tracks from the original song are used in new and interesting ways to change how the song sounds and feels. As you listen, consider the following:\r\n\r\n- Notice how the song uses vocals as the \"background\" instead of more traditional instruments. How does this make the song \"feel\"?\r\n- Notice how the same chorus vocals are used as the song continues, but they overlap or the order changes. How does this change how the song \"feels\"?",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "level_data": {
+      "library": "launch2024",
+      "packId": "shakira_whenever_wherever",
+      "toolbox": {
+        "blocks": {
+        }
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "next": {
+                "block": {
+                  "type": "play_sounds_together",
+                  "id": "play_sounds_together",
+                  "deletable": false,
+                  "movable": false,
+                  "editable": false,
+                  "extraState": {
+                    "disableNextConnection": false
+                  },
+                  "inputs": {
+                    "code": {
+                      "block": {
+                        "type": "procedures_callnoreturn",
+                        "id": "=nR(ryQcyJvrJtW0Pk%@",
+                        "deletable": false,
+                        "movable": false,
+                        "editable": false,
+                        "extraState": {
+                          "name": "back_vocals"
+                        },
+                        "next": {
+                          "block": {
+                            "type": "procedures_callnoreturn",
+                            "id": "mhYuwVKh5xNzFW([:71m",
+                            "deletable": false,
+                            "movable": false,
+                            "editable": false,
+                            "extraState": {
+                              "name": "synths"
+                            },
+                            "next": {
+                              "block": {
+                                "type": "play_sounds_sequential",
+                                "id": "play_sounds_sequential",
+                                "deletable": false,
+                                "movable": false,
+                                "editable": false,
+                                "extraState": {
+                                  "disableNextConnection": false
+                                },
+                                "inputs": {
+                                  "code": {
+                                    "block": {
+                                      "type": "repeat_simple2",
+                                      "id": "Cr(+r|(!0|6UcpW@@^L?",
+                                      "deletable": false,
+                                      "movable": false,
+                                      "editable": false,
+                                      "extraState": {
+                                        "disableNextConnection": false
+                                      },
+                                      "fields": {
+                                        "times": 6
+                                      },
+                                      "inputs": {
+                                        "code": {
+                                          "block": {
+                                            "type": "play_rest_at_current_location_simple2",
+                                            "id": ")~q~4:(^0rE^sG/a|u0A",
+                                            "deletable": false,
+                                            "movable": false,
+                                            "editable": false,
+                                            "extraState": {
+                                              "disableNextConnection": false
+                                            },
+                                            "fields": {
+                                              "rest_duration": "<field name=\"rest_duration\">1</field>"
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "next": {
+                                        "block": {
+                                          "type": "procedures_callnoreturn",
+                                          "id": "S%TOdvNxxS?;G#)qTpPN",
+                                          "deletable": false,
+                                          "movable": false,
+                                          "editable": false,
+                                          "extraState": {
+                                            "name": "drums"
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                },
+                                "next": {
+                                  "block": {
+                                    "type": "play_sounds_sequential",
+                                    "id": "_o3F(wi8Hd8W|t#Ce=)^",
+                                    "deletable": false,
+                                    "movable": false,
+                                    "editable": false,
+                                    "extraState": {
+                                      "disableNextConnection": false
+                                    },
+                                    "inputs": {
+                                      "code": {
+                                        "block": {
+                                          "type": "repeat_simple2",
+                                          "id": "%z_r9aczWZV8Jj[qs:8k",
+                                          "deletable": false,
+                                          "movable": false,
+                                          "editable": false,
+                                          "extraState": {
+                                            "disableNextConnection": false
+                                          },
+                                          "fields": {
+                                            "times": 10
+                                          },
+                                          "inputs": {
+                                            "code": {
+                                              "block": {
+                                                "type": "play_rest_at_current_location_simple2",
+                                                "id": "b!NY?zi~WFAcZuxaiL._",
+                                                "deletable": false,
+                                                "movable": false,
+                                                "editable": false,
+                                                "extraState": {
+                                                  "disableNextConnection": false
+                                                },
+                                                "fields": {
+                                                  "rest_duration": "<field name=\"rest_duration\">1</field>"
+                                                }
+                                              }
+                                            }
+                                          },
+                                          "next": {
+                                            "block": {
+                                              "type": "procedures_callnoreturn",
+                                              "id": "=W+ynlyRf9/[IU^K*)p^",
+                                              "deletable": false,
+                                              "movable": false,
+                                              "editable": false,
+                                              "extraState": {
+                                                "name": "chorus_chaos"
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "OJ|y[miMv2`msWD_B_|R",
+              "x": 590,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "extraState": {
+                "procedureId": "a#wk(F,SuTSMT]AVQ^Z:",
+                "initialDeleteConfig": false,
+                "initialEditConfig": false,
+                "initialMoveConfig": false
+              },
+              "fields": {
+                "NAME": "chorus_chaos"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "set_effect_at_current_location_simple2",
+                    "id": "x=Kk+`M#pK1$|p47$vo{",
+                    "deletable": false,
+                    "movable": false,
+                    "editable": false,
+                    "fields": {
+                      "effects_name": "<field name=\"effects_name\">delay</field>",
+                      "effects_value": "<field name=\"effects_value\">medium</field>"
+                    },
+                    "next": {
+                      "block": {
+                        "type": "play_sound_at_current_location_simple2",
+                        "id": "4[[9V;Vfbfn(8fk}z8?l",
+                        "deletable": false,
+                        "movable": false,
+                        "editable": false,
+                        "extraState": {
+                          "disableNextConnection": false
+                        },
+                        "fields": {
+                          "sound": "shakira_whenever_wherever/vocals_chorus_1"
+                        },
+                        "next": {
+                          "block": {
+                            "type": "play_sound_at_current_location_simple2",
+                            "id": "{j45HhF-GUMgEeDA?T,x",
+                            "deletable": false,
+                            "movable": false,
+                            "editable": false,
+                            "extraState": {
+                              "disableNextConnection": false
+                            },
+                            "fields": {
+                              "sound": "shakira_whenever_wherever/vocals_chorus_4"
+                            },
+                            "next": {
+                              "block": {
+                                "type": "play_sound_at_current_location_simple2",
+                                "id": "{R25C~Rlvf_7arEypqi{",
+                                "deletable": false,
+                                "movable": false,
+                                "editable": false,
+                                "extraState": {
+                                  "disableNextConnection": false
+                                },
+                                "fields": {
+                                  "sound": "shakira_whenever_wherever/vocals_chorus_2"
+                                },
+                                "next": {
+                                  "block": {
+                                    "type": "play_sound_at_current_location_simple2",
+                                    "id": "]1jw|RCIG]M|tq{Ynuoo",
+                                    "deletable": false,
+                                    "movable": false,
+                                    "editable": false,
+                                    "extraState": {
+                                      "disableNextConnection": false
+                                    },
+                                    "fields": {
+                                      "sound": "shakira_whenever_wherever/vocals_chorus_3"
+                                    },
+                                    "next": {
+                                      "block": {
+                                        "type": "play_sounds_together",
+                                        "id": "x=8mdz*Gu?0+XD(w$y6S",
+                                        "deletable": false,
+                                        "movable": false,
+                                        "editable": false,
+                                        "extraState": {
+                                          "disableNextConnection": false
+                                        },
+                                        "inputs": {
+                                          "code": {
+                                            "block": {
+                                              "type": "play_sound_at_current_location_simple2",
+                                              "id": "I8bnnwc@a]glMmvaYi%T",
+                                              "deletable": false,
+                                              "movable": false,
+                                              "editable": false,
+                                              "extraState": {
+                                                "disableNextConnection": false
+                                              },
+                                              "fields": {
+                                                "sound": "shakira_whenever_wherever/vocals_chorus_1"
+                                              },
+                                              "next": {
+                                                "block": {
+                                                  "type": "play_sound_at_current_location_simple2",
+                                                  "id": "?$ggkpP$=8ofS=-BcBX.",
+                                                  "deletable": false,
+                                                  "movable": false,
+                                                  "editable": false,
+                                                  "extraState": {
+                                                    "disableNextConnection": false
+                                                  },
+                                                  "fields": {
+                                                    "sound": "shakira_whenever_wherever/vocals_chorus_4"
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        },
+                                        "next": {
+                                          "block": {
+                                            "type": "play_sounds_together",
+                                            "id": "D]{bN3?@vp,|o|B:H;LK",
+                                            "deletable": false,
+                                            "movable": false,
+                                            "editable": false,
+                                            "extraState": {
+                                              "disableNextConnection": false
+                                            },
+                                            "inputs": {
+                                              "code": {
+                                                "block": {
+                                                  "type": "play_sound_at_current_location_simple2",
+                                                  "id": "#L9%MmmMB@6R0vi0N%9s",
+                                                  "deletable": false,
+                                                  "movable": false,
+                                                  "editable": false,
+                                                  "extraState": {
+                                                    "disableNextConnection": false
+                                                  },
+                                                  "fields": {
+                                                    "sound": "shakira_whenever_wherever/vocals_chorus_2"
+                                                  },
+                                                  "next": {
+                                                    "block": {
+                                                      "type": "play_sound_at_current_location_simple2",
+                                                      "id": "]j@h*#6+z?DV8l?7B?hO",
+                                                      "deletable": false,
+                                                      "movable": false,
+                                                      "editable": false,
+                                                      "extraState": {
+                                                        "disableNextConnection": false
+                                                      },
+                                                      "fields": {
+                                                        "sound": "shakira_whenever_wherever/vocals_chorus_3"
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            },
+                                            "next": {
+                                              "block": {
+                                                "type": "play_sounds_together",
+                                                "id": "^$3@$d;S]395RPmG)=Rc",
+                                                "deletable": false,
+                                                "movable": false,
+                                                "editable": false,
+                                                "extraState": {
+                                                  "disableNextConnection": false
+                                                },
+                                                "inputs": {
+                                                  "code": {
+                                                    "block": {
+                                                      "type": "play_sound_at_current_location_simple2",
+                                                      "id": "|y_grDFNwf$OA4~x#BF{",
+                                                      "deletable": false,
+                                                      "movable": false,
+                                                      "editable": false,
+                                                      "extraState": {
+                                                        "disableNextConnection": false
+                                                      },
+                                                      "fields": {
+                                                        "sound": "shakira_whenever_wherever/vocals_chorus_1"
+                                                      },
+                                                      "next": {
+                                                        "block": {
+                                                          "type": "play_sound_at_current_location_simple2",
+                                                          "id": "%Ktm{!BCzo_2wX042S31",
+                                                          "deletable": false,
+                                                          "movable": false,
+                                                          "editable": false,
+                                                          "extraState": {
+                                                            "disableNextConnection": false
+                                                          },
+                                                          "fields": {
+                                                            "sound": "shakira_whenever_wherever/vocals_chorus_3"
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                },
+                                                "next": {
+                                                  "block": {
+                                                    "type": "play_sounds_together",
+                                                    "id": "?paS7)8I^@XUFd(@ggQc",
+                                                    "deletable": false,
+                                                    "movable": false,
+                                                    "editable": false,
+                                                    "extraState": {
+                                                      "disableNextConnection": false
+                                                    },
+                                                    "inputs": {
+                                                      "code": {
+                                                        "block": {
+                                                          "type": "play_sound_at_current_location_simple2",
+                                                          "id": "1$#4ogIhp]BojNoEKJpX",
+                                                          "deletable": false,
+                                                          "movable": false,
+                                                          "editable": false,
+                                                          "extraState": {
+                                                            "disableNextConnection": false
+                                                          },
+                                                          "fields": {
+                                                            "sound": "shakira_whenever_wherever/vocals_chorus_2"
+                                                          },
+                                                          "next": {
+                                                            "block": {
+                                                              "type": "play_sound_at_current_location_simple2",
+                                                              "id": "47r_Rflc21-o{jf^2`#/",
+                                                              "deletable": false,
+                                                              "movable": false,
+                                                              "editable": false,
+                                                              "extraState": {
+                                                                "disableNextConnection": false
+                                                              },
+                                                              "fields": {
+                                                                "sound": "shakira_whenever_wherever/vocals_chorus_4"
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    },
+                                                    "next": {
+                                                      "block": {
+                                                        "type": "play_sounds_together",
+                                                        "id": "FS!eQ}X(*5N1xT4{[0g2",
+                                                        "deletable": false,
+                                                        "movable": false,
+                                                        "editable": false,
+                                                        "extraState": {
+                                                          "disableNextConnection": false
+                                                        },
+                                                        "inputs": {
+                                                          "code": {
+                                                            "block": {
+                                                              "type": "set_effect_at_current_location_simple2",
+                                                              "id": "set_effect_at_current_location_simple2",
+                                                              "deletable": false,
+                                                              "movable": false,
+                                                              "editable": false,
+                                                              "fields": {
+                                                                "effects_name": "<field name=\"effects_name\">volume</field>",
+                                                                "effects_value": "<field name=\"effects_value\">normal</field>"
+                                                              },
+                                                              "next": {
+                                                                "block": {
+                                                                  "type": "set_effect_at_current_location_simple2",
+                                                                  "id": "n`BLMaNilYUX:qMLYJG{",
+                                                                  "deletable": false,
+                                                                  "movable": false,
+                                                                  "editable": false,
+                                                                  "fields": {
+                                                                    "effects_name": "<field name=\"effects_name\">delay</field>",
+                                                                    "effects_value": "<field name=\"effects_value\">medium</field>"
+                                                                  },
+                                                                  "next": {
+                                                                    "block": {
+                                                                      "type": "play_sound_at_current_location_simple2",
+                                                                      "id": "bAwjlxCm}]O4SdpN=e``",
+                                                                      "deletable": false,
+                                                                      "movable": false,
+                                                                      "editable": false,
+                                                                      "extraState": {
+                                                                        "disableNextConnection": false
+                                                                      },
+                                                                      "fields": {
+                                                                        "sound": "shakira_whenever_wherever/vocals_chorus_1"
+                                                                      },
+                                                                      "next": {
+                                                                        "block": {
+                                                                          "type": "play_sounds_sequential",
+                                                                          "id": "a53eugQFazgJq#^c`Beb",
+                                                                          "deletable": false,
+                                                                          "movable": false,
+                                                                          "editable": false,
+                                                                          "extraState": {
+                                                                            "disableNextConnection": false
+                                                                          },
+                                                                          "inputs": {
+                                                                            "code": {
+                                                                              "block": {
+                                                                                "type": "play_rest_at_current_location_simple2",
+                                                                                "id": "play_rest_at_current_location_simple2",
+                                                                                "deletable": false,
+                                                                                "movable": false,
+                                                                                "editable": false,
+                                                                                "extraState": {
+                                                                                  "disableNextConnection": false
+                                                                                },
+                                                                                "fields": {
+                                                                                  "rest_duration": "<field name=\"rest_duration\">0.25</field>"
+                                                                                },
+                                                                                "next": {
+                                                                                  "block": {
+                                                                                    "type": "play_sound_at_current_location_simple2",
+                                                                                    "id": "|BS[j+bx}I/wmp+!rWT5",
+                                                                                    "deletable": false,
+                                                                                    "movable": false,
+                                                                                    "editable": false,
+                                                                                    "extraState": {
+                                                                                      "disableNextConnection": false
+                                                                                    },
+                                                                                    "fields": {
+                                                                                      "sound": "shakira_whenever_wherever/vocals_chorus_1"
+                                                                                    }
+                                                                                  }
+                                                                                }
+                                                                              }
+                                                                            }
+                                                                          },
+                                                                          "next": {
+                                                                            "block": {
+                                                                              "type": "play_sounds_sequential",
+                                                                              "id": "ZG~EzMs(s$GB9)Ufa6j`",
+                                                                              "deletable": false,
+                                                                              "movable": false,
+                                                                              "editable": false,
+                                                                              "extraState": {
+                                                                                "disableNextConnection": false
+                                                                              },
+                                                                              "inputs": {
+                                                                                "code": {
+                                                                                  "block": {
+                                                                                    "type": "play_rest_at_current_location_simple2",
+                                                                                    "id": "oms!xI-9$@f%(c./z]|_",
+                                                                                    "deletable": false,
+                                                                                    "movable": false,
+                                                                                    "editable": false,
+                                                                                    "extraState": {
+                                                                                      "disableNextConnection": false
+                                                                                    },
+                                                                                    "fields": {
+                                                                                      "rest_duration": "<field name=\"rest_duration\">0.5</field>"
+                                                                                    },
+                                                                                    "next": {
+                                                                                      "block": {
+                                                                                        "type": "play_sound_at_current_location_simple2",
+                                                                                        "id": "T0g`Cg8NURv4XesH-KO2",
+                                                                                        "deletable": false,
+                                                                                        "movable": false,
+                                                                                        "editable": false,
+                                                                                        "extraState": {
+                                                                                          "disableNextConnection": false
+                                                                                        },
+                                                                                        "fields": {
+                                                                                          "sound": "shakira_whenever_wherever/vocals_chorus_1"
+                                                                                        }
+                                                                                      }
+                                                                                    }
+                                                                                  }
+                                                                                }
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "Gz(cZuoIZ?MjDB0ZP+XY",
+              "x": 870,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "extraState": {
+                "procedureId": "H-eP5WV4I9vYsQSu!W)%",
+                "initialDeleteConfig": false,
+                "initialEditConfig": false,
+                "initialMoveConfig": false
+              },
+              "fields": {
+                "NAME": "synths"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "play_sounds_together",
+                    "id": "~^2h}n/zCmsE_R-2)MNM",
+                    "deletable": false,
+                    "movable": false,
+                    "editable": false,
+                    "extraState": {
+                      "disableNextConnection": false
+                    },
+                    "inputs": {
+                      "code": {
+                        "block": {
+                          "type": "repeat_simple2",
+                          "id": "=8o=m#/!R5]!5x)U%s%H",
+                          "deletable": false,
+                          "movable": false,
+                          "editable": false,
+                          "extraState": {
+                            "disableNextConnection": false
+                          },
+                          "fields": {
+                            "times": 7
+                          },
+                          "inputs": {
+                            "code": {
+                              "block": {
+                                "type": "set_effect_at_current_location_simple2",
+                                "id": "A397$NN|SiE7iYDc^Cmv",
+                                "deletable": false,
+                                "movable": false,
+                                "editable": false,
+                                "fields": {
+                                  "effects_name": "<field name=\"effects_name\">filter</field>",
+                                  "effects_value": "<field name=\"effects_value\">low</field>"
+                                },
+                                "next": {
+                                  "block": {
+                                    "type": "play_sound_at_current_location_simple2",
+                                    "id": "?WMPjGES=,*ptE,ODn_^",
+                                    "deletable": false,
+                                    "movable": false,
+                                    "editable": false,
+                                    "extraState": {
+                                      "disableNextConnection": false
+                                    },
+                                    "fields": {
+                                      "sound": "shakira_whenever_wherever/synth_pad"
+                                    },
+                                    "next": {
+                                      "block": {
+                                        "type": "set_effect_at_current_location_simple2",
+                                        "id": "XPQ(B{f*2vn@U@l6hP.-",
+                                        "deletable": false,
+                                        "movable": false,
+                                        "editable": false,
+                                        "fields": {
+                                          "effects_name": "<field name=\"effects_name\">filter</field>",
+                                          "effects_value": "<field name=\"effects_value\">medium</field>"
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "next": {
+                            "block": {
+                              "type": "play_sounds_sequential",
+                              "id": "T#x*|jsNF0lHY7Y~x}1m",
+                              "deletable": false,
+                              "movable": false,
+                              "editable": false,
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
+                              "inputs": {
+                                "code": {
+                                  "block": {
+                                    "type": "play_rest_at_current_location_simple2",
+                                    "id": "e]%b_O_7SZ[b~8w%](x!",
+                                    "deletable": false,
+                                    "movable": false,
+                                    "editable": false,
+                                    "extraState": {
+                                      "disableNextConnection": false
+                                    },
+                                    "fields": {
+                                      "rest_duration": "<field name=\"rest_duration\">2</field>"
+                                    },
+                                    "next": {
+                                      "block": {
+                                        "type": "repeat_simple2",
+                                        "id": "p~C2d97;D1u/5Q`9iDpt",
+                                        "deletable": false,
+                                        "movable": false,
+                                        "editable": false,
+                                        "extraState": {
+                                          "disableNextConnection": false
+                                        },
+                                        "fields": {
+                                          "times": 7
+                                        },
+                                        "inputs": {
+                                          "code": {
+                                            "block": {
+                                              "type": "set_effect_at_current_location_simple2",
+                                              "id": ".~h*F.IqLB^__v9WQOoO",
+                                              "deletable": false,
+                                              "movable": false,
+                                              "editable": false,
+                                              "fields": {
+                                                "effects_name": "<field name=\"effects_name\">filter</field>",
+                                                "effects_value": "<field name=\"effects_value\">low</field>"
+                                              },
+                                              "next": {
+                                                "block": {
+                                                  "type": "play_sound_at_current_location_simple2",
+                                                  "id": "|MQ32dk8Tze58UlG_]Lq",
+                                                  "deletable": false,
+                                                  "movable": false,
+                                                  "editable": false,
+                                                  "extraState": {
+                                                    "disableNextConnection": false
+                                                  },
+                                                  "fields": {
+                                                    "sound": "shakira_whenever_wherever/synth_pad"
+                                                  },
+                                                  "next": {
+                                                    "block": {
+                                                      "type": "set_effect_at_current_location_simple2",
+                                                      "id": "@dEaF{SepQ]i573+C)0I",
+                                                      "deletable": false,
+                                                      "movable": false,
+                                                      "editable": false,
+                                                      "fields": {
+                                                        "effects_name": "<field name=\"effects_name\">filter</field>",
+                                                        "effects_value": "<field name=\"effects_value\">medium</field>"
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "u8VxQHbU}Ojk#`!b]Rv^",
+              "x": 1210,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "extraState": {
+                "procedureId": "a~v|b?-^kOL|~e[[t(SD",
+                "initialDeleteConfig": false,
+                "initialEditConfig": false,
+                "initialMoveConfig": false
+              },
+              "fields": {
+                "NAME": "drums"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "repeat_simple2",
+                    "id": "ZHmf[T[bgpC!zdr,J;^p",
+                    "deletable": false,
+                    "movable": false,
+                    "editable": false,
+                    "extraState": {
+                      "disableNextConnection": false
+                    },
+                    "fields": {
+                      "times": 12
+                    },
+                    "inputs": {
+                      "code": {
+                        "block": {
+                          "type": "set_effect_at_current_location_simple2",
+                          "id": "{OA@r7jkCZ~Ig;.x,Rc=",
+                          "deletable": false,
+                          "movable": false,
+                          "editable": false,
+                          "fields": {
+                            "effects_name": "<field name=\"effects_name\">volume</field>",
+                            "effects_value": "<field name=\"effects_value\">low</field>"
+                          },
+                          "next": {
+                            "block": {
+                              "type": "play_sound_at_current_location_simple2",
+                              "id": "^p%6jF^Str4%eF2@H~n)",
+                              "deletable": false,
+                              "movable": false,
+                              "editable": false,
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
+                              "fields": {
+                                "sound": "shakira_whenever_wherever/drum_fill_1"
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "play_sound_at_current_location_simple2",
+                                  "id": "Zzz99HTKNwOa^AdfIiCQ",
+                                  "deletable": false,
+                                  "movable": false,
+                                  "editable": false,
+                                  "extraState": {
+                                    "disableNextConnection": false
+                                  },
+                                  "fields": {
+                                    "sound": "shakira_whenever_wherever/drum_fill_2"
+                                  },
+                                  "next": {
+                                    "block": {
+                                      "type": "set_effect_at_current_location_simple2",
+                                      "id": ".E^8$SHvXK}e*5P(#C5A",
+                                      "deletable": false,
+                                      "movable": false,
+                                      "editable": false,
+                                      "fields": {
+                                        "effects_name": "<field name=\"effects_name\">volume</field>",
+                                        "effects_value": "<field name=\"effects_value\">normal</field>"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "q5agGQxwDBbyJz[59sw)",
+              "x": 290,
+              "y": 50,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "extraState": {
+                "procedureId": "Iqu`~`59}~t:kXg,QiL|",
+                "initialDeleteConfig": false,
+                "initialEditConfig": false,
+                "initialMoveConfig": false
+              },
+              "fields": {
+                "NAME": "back_vocals"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "set_effect_at_current_location_simple2",
+                    "id": "{U)ok-CQ}4Fn_;ov,*B:",
+                    "deletable": false,
+                    "movable": false,
+                    "editable": false,
+                    "fields": {
+                      "effects_name": "<field name=\"effects_name\">volume</field>",
+                      "effects_value": "<field name=\"effects_value\">low</field>"
+                    },
+                    "next": {
+                      "block": {
+                        "type": "set_effect_at_current_location_simple2",
+                        "id": "LM+iS,G%[4=f+D..Mw(9",
+                        "deletable": false,
+                        "movable": false,
+                        "editable": false,
+                        "fields": {
+                          "effects_name": "<field name=\"effects_name\">filter</field>",
+                          "effects_value": "<field name=\"effects_value\">low</field>"
+                        },
+                        "next": {
+                          "block": {
+                            "type": "set_effect_at_current_location_simple2",
+                            "id": "GI`H=FxEA)Gv_[Z3|[{Z",
+                            "deletable": false,
+                            "movable": false,
+                            "editable": false,
+                            "fields": {
+                              "effects_name": "<field name=\"effects_name\">delay</field>",
+                              "effects_value": "<field name=\"effects_value\">medium</field>"
+                            },
+                            "next": {
+                              "block": {
+                                "type": "play_sounds_together",
+                                "id": "4#FGP.4*Xk2fz1l@)}4~",
+                                "deletable": false,
+                                "movable": false,
+                                "editable": false,
+                                "extraState": {
+                                  "disableNextConnection": false
+                                },
+                                "inputs": {
+                                  "code": {
+                                    "block": {
+                                      "type": "repeat_simple2",
+                                      "id": "UL!dCM5gt`OPgas@}F6|",
+                                      "deletable": false,
+                                      "movable": false,
+                                      "editable": false,
+                                      "extraState": {
+                                        "disableNextConnection": false
+                                      },
+                                      "fields": {
+                                        "times": 15
+                                      },
+                                      "inputs": {
+                                        "code": {
+                                          "block": {
+                                            "type": "play_sound_at_current_location_simple2",
+                                            "id": "{aYQMHoJ*PJU)Km:4EFY",
+                                            "deletable": false,
+                                            "movable": false,
+                                            "editable": false,
+                                            "extraState": {
+                                              "disableNextConnection": false
+                                            },
+                                            "fields": {
+                                              "sound": "shakira_whenever_wherever/vocals_chorus_backups_2"
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "next": {
+                                        "block": {
+                                          "type": "play_sounds_sequential",
+                                          "id": "rWrTpBR1a!xC}i^ilF,1",
+                                          "deletable": false,
+                                          "movable": false,
+                                          "editable": false,
+                                          "extraState": {
+                                            "disableNextConnection": false
+                                          },
+                                          "inputs": {
+                                            "code": {
+                                              "block": {
+                                                "type": "play_rest_at_current_location_simple2",
+                                                "id": "c.e]Z.P_no)%X%^{GFLs",
+                                                "deletable": false,
+                                                "movable": false,
+                                                "editable": false,
+                                                "extraState": {
+                                                  "disableNextConnection": false
+                                                },
+                                                "fields": {
+                                                  "rest_duration": "<field name=\"rest_duration\">1</field>"
+                                                },
+                                                "next": {
+                                                  "block": {
+                                                    "type": "repeat_simple2",
+                                                    "id": "^!u/d;1K~UovohNg~rFt",
+                                                    "deletable": false,
+                                                    "movable": false,
+                                                    "editable": false,
+                                                    "extraState": {
+                                                      "disableNextConnection": false
+                                                    },
+                                                    "fields": {
+                                                      "times": 14
+                                                    },
+                                                    "inputs": {
+                                                      "code": {
+                                                        "block": {
+                                                          "type": "play_sound_at_current_location_simple2",
+                                                          "id": "play_sound_at_current_location_simple2",
+                                                          "deletable": false,
+                                                          "movable": false,
+                                                          "editable": false,
+                                                          "extraState": {
+                                                            "disableNextConnection": false
+                                                          },
+                                                          "fields": {
+                                                            "sound": "shakira_whenever_wherever/vocals_prechorus_1"
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                },
+                                "next": {
+                                  "block": {
+                                    "type": "set_effect_at_current_location_simple2",
+                                    "id": "sM;*p,38o)GdfFO@oZA;",
+                                    "deletable": false,
+                                    "movable": false,
+                                    "editable": false,
+                                    "fields": {
+                                      "effects_name": "<field name=\"effects_name\">volume</field>",
+                                      "effects_value": "<field name=\"effects_value\">normal</field>"
+                                    },
+                                    "next": {
+                                      "block": {
+                                        "type": "set_effect_at_current_location_simple2",
+                                        "id": "_6bQG6yR^:(c!ZD_zg;D",
+                                        "deletable": false,
+                                        "movable": false,
+                                        "editable": false,
+                                        "fields": {
+                                          "effects_name": "<field name=\"effects_name\">filter</field>",
+                                          "effects_value": "<field name=\"effects_value\">normal</field>"
+                                        },
+                                        "next": {
+                                          "block": {
+                                            "type": "set_effect_at_current_location_simple2",
+                                            "id": "){1_hA0*;JT`c(]bzfvw",
+                                            "deletable": false,
+                                            "movable": false,
+                                            "editable": false,
+                                            "fields": {
+                                              "effects_name": "<field name=\"effects_name\">delay</field>",
+                                              "effects_value": "<field name=\"effects_value\">normal</field>"
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "procedures": [
+          {
+            "id": "a#wk(F,SuTSMT]AVQ^Z:",
+            "name": "chorus_chaos",
+            "returnTypes": null
+          },
+          {
+            "id": "H-eP5WV4I9vYsQSu!W)%",
+            "name": "synths",
+            "returnTypes": null
+          },
+          {
+            "id": "a~v|b?-^kOL|~e[[t(SD",
+            "name": "drums",
+            "returnTypes": null
+          },
+          {
+            "id": "Iqu`~`59}~t:kXg,QiL|",
+            "name": "back_vocals",
+            "returnTypes": null
+          }
+        ]
+      },
+      "allowChangeStartingPlayheadPosition": false,
+      "validationTimeout": 1
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
+    "display_name": "Wherever, Whenever",
+    "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/shakira_whenever_wherever/shakira_whenever_wherever.jpg",
+    "submittable": "false",
+    "validations": [
+      {
+        "key": "music-lab-functions-synthesis-remix5_54f79b6d-e667-4ad9-96ea-a67a8fa2d96b",
+        "message": "That was great! <i class=\"fa-solid fa-robot\"></i> DJ Robot learned a lot listening to that song!",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 81
+          }
+        ]
+      },
+      {
+        "key": "music-lab-functions-synthesis-remix5_837326c0-33bc-4aa1-87d8-2478b5fc7de3",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is surprised by all the overlapping vocals! What a haunting effect!",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 75
+          }
+        ]
+      },
+      {
+        "key": "music-lab-functions-synthesis-remix5_1ff2bc40-0db3-4c19-a28b-7ea4f84a9428",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is noticing how different this sounds from the original! So many overlapping vocals!",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 48
+          }
+        ]
+      },
+      {
+        "key": "music-lab-functions-synthesis-remix5_17a7290b-320a-4461-a609-0cc4e34bb76a",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is noticing how effect blocks are being used to change the vibe of the song...",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 23
+          }
+        ]
+      },
+      {
+        "key": "music-lab-functions-synthesis-remix5_717699fa-c21a-4d6a-9a2e-05609323b74a",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is tapping its antennae to the beat...",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 12
+          }
+        ]
+      },
+      {
+        "key": "music-lab-functions-synthesis-remix5_6327b0db-b479-4c08-bf31-c8b0e598e52d",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is surprised to hear just vocals in the very beginning...",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-07-03T18:47:52.332+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-synthesis-remix3\\\"\"],\"cloned_from\":\"music-lab-functions-synthesis-remix3\"},{\"changed_at\":\"2025-07-03 18:49:18 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"level_data\",\"display_name\",\"thumbnail_url\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-07-03 20:22:08 +0000\",\"changed\":[\"predict_settings\",\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-07-03 20:22:29 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-07-03 20:23:30 +0000\",\"changed\":[\"predict_settings\",\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-07-03 20:27:50 +0000\",\"changed\":[\"predict_settings\",\"level_data\",\"validations\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

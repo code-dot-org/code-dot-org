@@ -1,5 +1,5 @@
 import bgPattern from '@public/images/bg-pattern.png';
-import type {Meta, StoryObj} from '@storybook/react';
+import type {Meta, StoryObj} from '@storybook/react-webpack5';
 
 import Testimonial, {
   TESTIMONIAL_BACKGROUNDS,

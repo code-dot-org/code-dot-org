@@ -1,3 +1,4 @@
+import FunctionEditor from '@cdo/apps/blockly/addons/functionEditor';
 import {BlockColors, BlockStyles} from '@cdo/apps/blockly/constants';
 import i18n from '@cdo/locale';
 
@@ -84,7 +85,7 @@ export default {
     // Legacy style block definitions :(
     const generator = blockly.getGenerator();
 
-    const behaviorEditor = (Blockly.behaviorEditor = new Blockly.FunctionEditor(
+    const behaviorEditor = (Blockly.behaviorEditor = new FunctionEditor(
       {
         FUNCTION_HEADER: i18n.behaviorEditorHeader(),
         FUNCTION_NAME_LABEL: i18n.behaviorEditorLabel(),

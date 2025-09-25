@@ -22,6 +22,7 @@ import '../build/locales/en_us/studio_locale.js';
 import '../build/locales/en_us/craft_locale.js';
 import '../build/locales/en_us/flappy_locale.js';
 import '../build/locales/en_us/lab2_locale.js';
+import '../build/locales/en_us/weblab2_locale.js';
 
 import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
 import enzyme from 'enzyme'; // eslint-disable-line no-restricted-imports
@@ -40,6 +41,13 @@ global.ResizeObserver = jest.fn().mockImplementation(() => ({
   unobserve: jest.fn(),
   disconnect: jest.fn(),
 }));
+
+global.speechSynthesis = {
+  speak: jest.fn(),
+  cancel: jest.fn(),
+  getVoices: jest.fn(() => []),
+  addEventListener: jest.fn(),
+};
 
 Range.prototype.getBoundingClientRect = () => ({
   bottom: 0,

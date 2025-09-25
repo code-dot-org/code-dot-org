@@ -103,12 +103,14 @@ const generateComponents = (
     const TypographyElement: React.FunctionComponent<
       TypographyElementProps
     > = componentProps => {
-      const {visualAppearance, children, className, style, id} = componentProps;
+      const {visualAppearance, children, className, style, id, noMargin} =
+        componentProps;
 
       return (
         <Typography
           semanticTag={semanticTag}
           visualAppearance={visualAppearance || defaultVisualAppearance}
+          noMargin={noMargin}
           className={className}
           style={style}
           id={id}

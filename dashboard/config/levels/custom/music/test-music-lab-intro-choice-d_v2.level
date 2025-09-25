@@ -1,0 +1,61 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2025-05-31T02:56:03.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "### Choice D\r\n\r\nFind the example music player that says \"Choice D\" below these instructions. Press the Play button on the player to hear the song.\r\n\r\nRefer to your activity guide to see if it would work for any client's needs.\r\n\r\nOnce you're done, press Continue to return back to your choices and pick a different song.\r\n\r\n",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "packId": "chainsmokers_riptide",
+      "toolbox": {
+        "type": "flyout",
+        "blocks": {
+        }
+      },
+      "showSoundFilters": true,
+      "showSoundsPanelInSoundsMode": true,
+      "sortUnrestrictedPacksByType": true,
+      "allowChangeStartingPlayheadPosition": true,
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false
+            }
+          ]
+        }
+      }
+    },
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": false,
+      "validationMode": "default",
+      "playerTitle": "Choice D"
+    },
+    "display_name": "Choice D",
+    "thumbnail_url": "https://images.code.org/7975b1e1de3da79ad7e81057a4556b01-Screenshot 2025-04-02 at 7.43.04 AM.png",
+    "encrypted_exemplar_sources": "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\n5V3MWcNos3hs64yyHXE3GRm7ElV3CO+NRT0=\n",
+    "bubble_choice_description": "Click this option to hear a song with an **\"ambient vocal-led remix of the Chainsmokers\"** from your Song Portfolio. After listening to the song, you can decide if it would meet the needs of one of your clients",
+    "name_suffix": "_v2",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:56:03.211+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-intro-choice-d\\\"\"],\"cloned_from\":\"test-music-lab-intro-choice-d\"}]"
+}]]></config>
+  <blocks/>
+</Music>

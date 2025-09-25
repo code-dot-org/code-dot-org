@@ -1,0 +1,59 @@
+{
+  "entryContent": {
+    "fields": {
+      "listName": {
+        "en-US": "❌ [ENG] People Collection TEST"
+      },
+      "listHeading": {
+        "en-US": "People Collection Test"
+      },
+      "itemsInThisList": {
+        "en-US": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "SYQfb1i0V1CoFQM21LvaZ"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "1VxqQFPWjGyFtmlUsxBt1y"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "65RoCDb4zedagMJ4GowP0L"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "2JLo5rz0ZXkscFjP0VOzJh"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "pkTMkG4WCErv8JdPfJhar"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "2jh7UpvUMH5dYNR7dDZJdw"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "contentType": "list"
+}

@@ -6,11 +6,7 @@ function update(blockSpace, container, editor) {
     // typing out the new content. Because of that and the fact that
     // this is simply an informative but not functional view, we simply
     // catch and ignore all errors.
-    blockSpace.clear();
-    Blockly.cdoUtils.loadBlocksToWorkspace(
-      blockSpace,
-      Blockly.Xml.domToText(editor.getValue())
-    );
+    Blockly.cdoUtils.loadBlocksToWorkspace(blockSpace, editor.getValue());
   } catch (e) {
     return;
   }

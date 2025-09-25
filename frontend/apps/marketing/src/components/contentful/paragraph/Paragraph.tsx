@@ -1,53 +1,65 @@
+import Typography from '@mui/material/Typography';
 import classNames from 'classnames';
-import React, {ReactNode} from 'react';
+import {ReactNode} from 'react';
 
 import {
-  default as Typography,
-  StrongText,
-  VisualAppearance,
-} from '@code-dot-org/component-library/typography';
+  RemoveMarginBottomProps,
+  TypographyColor,
+} from '@/components/common/types';
 
-import {RemoveMarginBottomProps} from '@/components/common/types';
+type ParagraphSemanticTag = 'body1' | 'body2' | 'body3' | 'body4';
 
-import moduleStyles from './paragraph.module.scss';
-
-type ParagraphVisualAppearance = Extract<
-  VisualAppearance,
-  'body-one' | 'body-two' | 'body-three' | 'body-four'
->;
+// Existing Contentful Paragraph visualAppearance values that
+// were set before using the MUI Typography component.
+type ParagraphVisualAppearance =
+  | 'body-one'
+  | 'body-two'
+  | 'body-three'
+  | 'body-four';
 
 type ParagraphProps = RemoveMarginBottomProps & {
   /** Paragraph content */
   children: ReactNode;
   /** Paragraph visual appearance */
-  visualAppearance: ParagraphVisualAppearance;
+  visualAppearance?: ParagraphVisualAppearance;
   /** Whether the paragraph text is strong */
-  isStrong: boolean;
+  isStrong?: boolean;
   /** Paragraph color */
-  color: 'primary' | 'secondary';
+  color?: TypographyColor;
   /** ClassName passed by contentful to apply styles that are set through contentful native editor*/
   className?: string;
+  /** Custom styles */
+  sx?: React.CSSProperties;
+};
+
+// Maps Contentful Paragraph visualAppearance values with
+// MUI Typography `variant` prop values.
+const visualAppearanceToMuiTagMap: Record<
+  ParagraphVisualAppearance,
+  ParagraphSemanticTag
+> = {
+  'body-one': 'body1',
+  'body-two': 'body2',
+  'body-three': 'body3',
+  'body-four': 'body4',
 };
 
 const Paragraph: React.FunctionComponent<ParagraphProps> = ({
-  visualAppearance,
-  isStrong,
-  color,
+  visualAppearance = 'body-two',
+  isStrong = false,
+  color = 'primary',
   children,
-  removeMarginBottom,
+  removeMarginBottom = false,
   className,
+  sx,
 }) => (
   <Typography
-    semanticTag="p"
-    visualAppearance={visualAppearance}
-    className={classNames(
-      moduleStyles.paragraph,
-      moduleStyles[`paragraph-color-${color}`],
-      removeMarginBottom && moduleStyles['paragraph-removeMarginBottom'],
-      className,
-    )}
+    className={classNames(`paragraph--color-${color}`, className)}
+    variant={visualAppearanceToMuiTagMap[visualAppearance]}
+    gutterBottom={!removeMarginBottom}
+    sx={{...{fontWeight: isStrong ? 600 : 400}, ...sx}}
   >
-    {isStrong ? <StrongText>{children}</StrongText> : children}
+    {children}
   </Typography>
 );
 

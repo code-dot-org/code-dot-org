@@ -9,9 +9,9 @@ module Api::V1::Pd
       Pd::Workshop.any_instance.stubs(:process_location)
       first_session_time = Time.new(2018, 3, 15, 9)
 
-      @program_manager = create :program_manager
-      @partner_organizer = create :workshop_organizer, regional_partners: [@program_manager.regional_partners.first]
-      @non_partner_organizer = create :workshop_organizer
+      @program_manager = create(:program_manager)
+      @partner_organizer = create(:workshop_organizer, regional_partners: [@program_manager.regional_partners.first])
+      @non_partner_organizer = create(:workshop_organizer)
 
       csd_options = {course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_SUMMER_WORKSHOP}
       csp_options = {course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP}
@@ -24,17 +24,18 @@ module Api::V1::Pd
       @non_partner_organizer_csp_workshop =
         [@program_manager, @partner_organizer, @non_partner_organizer].map do |organizer|
           [csd_options, csp_options].map do |course_options|
-            create :workshop, organizer: organizer, num_sessions: 5, sessions_from: first_session_time,
+            create(:workshop, organizer: organizer, num_sessions: 5, sessions_from: first_session_time,
               session_location_address: 'Code.org, Seattle, WA', **course_options
+)
           end
         end.flatten
 
-      @school = create :school, zip: '99999'
+      @school = create(:school, zip: '99999')
       @regional_partner = @program_manager.regional_partners.first
       @regional_partner.mappings << Pd::RegionalPartnerMapping.create!(regional_partner: @regional_partner, zip_code: '99999')
 
-      @teacher = create :teacher
-      @student = create :student
+      @teacher = create(:teacher)
+      @student = create(:student)
     end
 
     test_redirect_to_sign_in_for :find

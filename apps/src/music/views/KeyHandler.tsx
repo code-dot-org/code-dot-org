@@ -91,6 +91,7 @@ const KeyHandler: React.FunctionComponent<KeyHandlerProps> = ({
         }
       });
       if (event.code === 'Space') {
+        reportKeyPress('spacebar-toggle-playing');
         togglePlaying();
       }
     },

@@ -1,0 +1,14 @@
+name 'ai-powered-threats-defenses-postassessment-q7_2025-pilot'
+
+question ‘A school adds two-factor authentication to its grade portal. What is a likely tradeoff of this security fix?’
+
+right ‘Might take longer to log in’
+wrong ‘Makes the system load faster’
+wrong ‘Gives full editing rights to everyone’
+wrong ‘Increases the risk of shared passwords’
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 6: Authentication, Authorization, and Accounting
+MARKDOWN

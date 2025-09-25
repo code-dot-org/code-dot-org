@@ -1,0 +1,40 @@
+/*
+/**/*
+!pegasus/sites/*
+!pegasus/sites/**/*
+!pegasus/sites.v3/*
+!pegasus/sites.v3/**/*
+
+# config files, not served by sinatra
+# TODO: move to pegasus/config
+pegasus/sites.v3/code.org/config.json
+pegasus/sites.v3/hourofcode.com/config.json
+pegasus/sites.v3/hourofcode.com/i18n/countries.json
+
+# placeholder image used by pegasus hoc and poste routes
+# TODO: use existing dashboard/app/assets/images/1x1.png instead
+pegasus/sites.v3/code.org/public/images/1x1.png
+
+# used by pegasus-specific dcdo_mocking.feature UI test
+# TODO: remove once we no longer use DCDO flags in pegasus
+pegasus/sites.v3/code.org/public/test_dcdo.haml
+
+# TODO: move pegasus/test/test_optimize.rb to lib/test or dashboard/test
+pegasus/sites.v3/code.org/public/images/animated-examples/flappy-game-space.gif
+pegasus/sites.v3/code.org/public/images/logo.png
+
+# TODO: move pegasus/test/test_graphics.rb to lib/test or dashboard/test
+pegasus/sites.v3/code.org/public/images/avatars/flag_sphere.png
+pegasus/sites.v3/code.org/public/images/homepage
+pegasus/sites.v3/code.org/public/images/homepage/kids4_2x.jpg
+pegasus/sites.v3/hourofcode.com/public/images/hour-of-code-logo.png
+
+# certificate redirects
+# TODO: move to dashboard server or CMS
+pegasus/sites.v3/code.org/public/certificate.moved
+pegasus/sites.v3/code.org/public/certificates.moved
+pegasus/sites.v3/code.org/public/certificates/blank.moved
+pegasus/sites.v3/code.org/public/certificates/splat.haml
+pegasus/sites.v3/code.org/public/congrats.haml
+pegasus/sites.v3/code.org/public/congrats/splat.haml
+pegasus/sites.v3/code.org/public/sharecertificate.moved

@@ -1,8 +1,9 @@
 import {getNodeAutoInstrumentations} from '@opentelemetry/auto-instrumentations-node';
 import {OTLPLogExporter} from '@opentelemetry/exporter-logs-otlp-proto';
-import {OTLPTraceExporter} from '@opentelemetry/exporter-trace-otlp-proto';
+import {OTLPMetricExporter} from '@opentelemetry/exporter-metrics-otlp-proto';
 import {resourceFromAttributes} from '@opentelemetry/resources';
 import {BatchLogRecordProcessor} from '@opentelemetry/sdk-logs';
+import {PeriodicExportingMetricReader} from '@opentelemetry/sdk-metrics';
 import {NodeSDK} from '@opentelemetry/sdk-node';
 import {
   AlwaysOnSampler,
@@ -10,9 +11,10 @@ import {
 } from '@opentelemetry/sdk-trace-node';
 import {ATTR_SERVICE_NAME} from '@opentelemetry/semantic-conventions';
 import {FetchInstrumentation} from '@vercel/otel';
+import {ClientRequest} from 'node:http';
 
-import FilteringSpanProcessor from '@/otel/FilteringSpanProcessor';
 import {FilteringTraceSampler} from '@/otel/FilteringTraceSampler';
+import SpanProcessor from '@/otel/SpanProcessor';
 
 /**
  * If debugging OpenTelemetry, uncomment the following lines to enable console logs
@@ -32,8 +34,11 @@ if (process.env.NEXT_PUBLIC_INSTRUMENTATION_ENABLED === 'true') {
     resource: resourceFromAttributes({
       [ATTR_SERVICE_NAME]: '@code-dot-org/marketing',
     }),
-    spanProcessors: [new FilteringSpanProcessor(new OTLPTraceExporter())],
+    spanProcessors: [SpanProcessor.getInstance()],
     logRecordProcessors: [new BatchLogRecordProcessor(new OTLPLogExporter())],
+    metricReader: new PeriodicExportingMetricReader({
+      exporter: new OTLPMetricExporter(),
+    }),
     sampler: new FilteringTraceSampler({
       base:
         process.env.NODE_ENV === 'production'
@@ -52,10 +57,22 @@ if (process.env.NEXT_PUBLIC_INSTRUMENTATION_ENABLED === 'true') {
         '@opentelemetry/instrumentation-dns': {
           enabled: false,
         },
-        // Rely on the Next.js incoming request instrumentation
         '@opentelemetry/instrumentation-http': {
           enabled: true,
-          disableIncomingRequestInstrumentation: true,
+          // This gives your request spans a more meaningful name than `GET`
+          // This sets the name to `GET code.org/xyz/123` instead of just `GET`
+          requestHook: (span, request) => {
+            const urlPath =
+              request instanceof ClientRequest
+                ? `${request.host}${request.path}`
+                : request.url;
+
+            if (urlPath) {
+              span.updateName(`${request.method} ${urlPath}`);
+
+              span.setAttribute('http.route', urlPath);
+            }
+          },
         },
       }),
       new FetchInstrumentation(),

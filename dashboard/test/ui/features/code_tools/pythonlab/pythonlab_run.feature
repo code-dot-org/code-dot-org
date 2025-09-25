@@ -25,9 +25,9 @@ Scenario: Continue button and progress status shows up correctly
   And I press "uitest-codebridge-run"
   And I wait until "#uitest-codebridge-console" contains text "more code"
   Then I verify progress in the header of the current page is "attempted" for level 1
-  And element "#instructions-navigation" is visible
-  And element "#instructions-navigation" contains text "Continue"
-  And I press "instructions-navigation"
+  And element "#instructions-continue-button" is visible
+  And element "#instructions-continue-button" contains text "Continue"
+  And I press "instructions-continue-button"
 
   # Validated level that passes by default, running validation will pass the level and
   # cause the continue button to show up
@@ -37,7 +37,7 @@ Scenario: Continue button and progress status shows up correctly
   And I wait to see "#uitest-validate-button"
   And I wait until "#uitest-validate-button" is not disabled
   And I press "uitest-validate-button"
-  And I wait until element "#instructions-navigation" is visible
-  And element "#instructions-navigation" contains text "Continue"
+  And I wait until element "#instructions-continue-button" is visible
+  And element "#instructions-continue-button" contains text "Continue"
   Then I verify progress in the header of the current page is "perfect" for level 2
   Then I sign out

@@ -1,4 +1,4 @@
-import {fireEvent, render, screen, waitFor} from '@testing-library/react';
+import {render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
 
@@ -35,8 +35,6 @@ const DEFAULT_PROPS = {
   locationName: 'Test University',
   fee: '$400',
   hasPrereq: true,
-  description: 'Test description',
-  customRegistrationLink: null,
 };
 
 const renderDefault = (overrideProps = {}) => {
@@ -45,21 +43,20 @@ const renderDefault = (overrideProps = {}) => {
 };
 
 describe('RegionalWorkshopCatalog', () => {
-  it('card states it is full and disables buttons if full', () => {
+  it('card states it is full and disables Learn More button if full', () => {
     renderDefault({capacity: 5, numEnrollments: 5});
 
     screen.getByText('Full');
-    // Cannot find inaccessible link button since it's disabled
-    expect(screen.queryByRole('link', {name: 'enrollNow'})).toEqual(null);
+    expect(screen.queryByRole('button', {name: 'learnMore'})).toBeDisabled();
   });
 
-  it('card states how many spots are left and enables buttons if not full', () => {
+  it('card states how many spots are left and enables Learn More button if not full', () => {
     renderDefault();
 
     screen.getByText(
       `${DEFAULT_PROPS.capacity - DEFAULT_PROPS.numEnrollments} Seats Remaining`
     );
-    expect(screen.getByRole('link', {name: 'enrollNow'})).not.toBeDisabled();
+    expect(screen.getByRole('button', {name: 'learnMore'})).not.toBeDisabled();
   });
 
   it('card shows workshop name when available', () => {
@@ -110,53 +107,5 @@ describe('RegionalWorkshopCatalog', () => {
     });
 
     screen.getByText('04/22/25 (1:00PM-9:00PM) + 1 More');
-  });
-
-  it('card renders Learn More button that opens dialog with provided description', async () => {
-    renderDefault();
-
-    expect(screen.queryByText(DEFAULT_PROPS.description)).toBe(null);
-    expect(screen.queryByRole('button', {name: 'closeLearnMoreDialog'})).toBe(
-      null
-    );
-
-    fireEvent.click(screen.getByRole('button', {name: 'learnMore'}));
-
-    await waitFor(() => {
-      screen.getByText(DEFAULT_PROPS.description);
-      screen.getByRole('button', {name: 'closeLearnMoreDialog'});
-    });
-  });
-
-  it('card renders Learn More button that opens dialog with default description if none provided', async () => {
-    renderDefault({description: ''});
-
-    fireEvent.click(screen.getByRole('button', {name: 'learnMore'}));
-
-    await waitFor(() => {
-      screen.getByText('No description available.');
-      screen.getByRole('button', {name: 'closeLearnMoreDialog'});
-    });
-  });
-
-  it('card renders button to send user to custom registration link if provided', () => {
-    const customRegistrationLink = 'customregistrationlink.com';
-    renderDefault({customRegistrationLink: customRegistrationLink});
-
-    expect(
-      screen.getByRole('link', {
-        name: 'enrollNow',
-      })
-    ).toHaveAttribute('href', customRegistrationLink);
-  });
-
-  it('card renders button send user to default enroll link if no registration link provided', () => {
-    renderDefault();
-
-    expect(
-      screen.getByRole('link', {
-        name: 'enrollNow',
-      })
-    ).toHaveAttribute('href', `/pd/workshops/${DEFAULT_PROPS.id}/enroll`);
   });
 });

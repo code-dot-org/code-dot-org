@@ -1,0 +1,27 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2025-05-31T02:57:06.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "skip_dialog": true,
+    "skip_sound": true,
+    "encrypted": "false",
+    "title": "Reflect",
+    "long_instructions": "A record producer brings people together to create music and uses technology to edit and finalize songs, using technology to bring people together. Are there aspects of this job you would like to see in your own future career? Why or why not?",
+    "stay_on_level_after_submit": "false",
+    "height": "200",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "name_suffix": "_v2"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:57:06.389+00:00\",\"changed\":[\"cloned from \\\"music-lab-sequencing-synthesis-reflect1\\\"\"],\"cloned_from\":\"music-lab-sequencing-synthesis-reflect1\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

@@ -1,15 +1,12 @@
 'use client';
 
 import {useSearchParams} from 'next/navigation';
-import {useEffect, useState} from 'react';
+import {useState} from 'react';
 
 import Button from '@code-dot-org/component-library/button';
 import Popover from '@code-dot-org/component-library/popover';
-import {BodyTwoText} from '@code-dot-org/component-library/typography';
 
 import ContentEditorTools from '@/components/contentEditorHelper/Tools';
-
-import TokenPrompt from './TokenPrompt';
 
 import styles from './styles.module.scss';
 
@@ -20,16 +17,6 @@ export type ContentEditorToolsProps = {
 const ContentEditorHelper = ({isDraftModeEnabled}: ContentEditorToolsProps) => {
   const searchParams = useSearchParams();
   const [popoverVisible, setPopoverVisible] = useState(false);
-  const [renderState, setRenderState] = useState<
-    'loading' | 'token-prompt' | 'tools'
-  >('loading');
-
-  useEffect(() => {
-    setRenderState(
-      localStorage.getItem('draftToken') ? 'tools' : 'token-prompt',
-    );
-  }, []);
-
   const previewLabel = isDraftModeEnabled
     ? 'Draft Version'
     : 'Published Version';
@@ -42,28 +29,13 @@ const ContentEditorHelper = ({isDraftModeEnabled}: ContentEditorToolsProps) => {
     setPopoverVisible(false);
   };
 
-  const handleSubmitToken = (token: string | null) => {
-    if (token) {
-      localStorage.setItem('draftToken', token);
-      setRenderState('tools');
-    }
-  };
-
   const getRender = () => {
-    switch (renderState) {
-      case 'loading':
-        return <BodyTwoText>Loading...</BodyTwoText>;
-      case 'token-prompt':
-        return <TokenPrompt onSubmit={handleSubmitToken} />;
-      case 'tools':
-        return (
-          <ContentEditorTools
-            isDraftModeEnabled={isDraftModeEnabled}
-            onChangeDraftToken={() => setRenderState('token-prompt')}
-            previewLabel={previewLabel}
-          />
-        );
-    }
+    return (
+      <ContentEditorTools
+        isDraftModeEnabled={isDraftModeEnabled}
+        previewLabel={previewLabel}
+      />
+    );
   };
 
   return (

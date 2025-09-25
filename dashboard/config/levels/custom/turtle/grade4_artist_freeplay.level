@@ -30,7 +30,7 @@
     "disable_examples": "false",
     "impressive": "false",
     "disable_sharing": "false",
-    "callout_json": "[{\"localization_key\":\"4-5_Artist_Patterns_Free_Play_1\",\"callout_text\":\"All of your favorite blocks are now organized into categories.  Click on these words to see where everything went!\",\"element_id\":\"[id=':2.label']\",\"on\":\"\",\"qtip_config\":{\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"top left\",\"at\":\"right top\",\"adjust\":{\"x\":0,\"y\":0}}}},{\"element_id\":\"[id='blockly-1.label']\",\"localization_key\":\"4-5_Artist_Patterns_Free_Play_1\",\"callout_text\":\"All of your favorite blocks are now organized into categories.  Click on these words to see where everything went!\",\"qtip_config\":{\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"top left\",\"at\":\"right top\",\"adjust\":{\"x\":0,\"y\":0}}},\"on\":\"\"}]",
+    "callout_json": "[{\"localization_key\":\"4-5_Artist_Patterns_Free_Play_1\",\"callout_text\":\"All of your favorite blocks are now organized into categories.  Click on these words to see where everything went!\",\"element_id\":\"[id=':2.label']\",\"on\":\"\",\"qtip_config\":{\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"top left\",\"at\":\"right top\",\"adjust\":{\"x\":0,\"y\":0}}}},{\"element_id\":\"[id='blockly-2.label']\",\"localization_key\":\"4-5_Artist_Patterns_Free_Play_1\",\"callout_text\":\"All of your favorite blocks are now organized into categories.  Click on these words to see where everything went!\",\"qtip_config\":{\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"top left\",\"at\":\"right top\",\"adjust\":{\"x\":0,\"y\":0}}},\"on\":\"\"}]",
     "never_autoplay_video": "false",
     "discard_background": "false",
     "preload_asset_list": null

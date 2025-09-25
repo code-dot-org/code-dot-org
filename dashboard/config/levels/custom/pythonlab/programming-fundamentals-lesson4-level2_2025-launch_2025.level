@@ -30,8 +30,12 @@
       "folders": {
       }
     },
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "offer_browser_tts": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false"
   },
-  "audit_log": "[{\"changed_at\":\"2025-04-14T23:13:09.898+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson4-level2_2025-launch\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson4-level2_2025-launch\"},{\"changed_at\":\"2025-04-30 17:11:07 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-30 17:14:19 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-30 17:18:39 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-30 17:29:54 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-04-14T23:13:09.898+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson4-level2_2025-launch\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson4-level2_2025-launch\"},{\"changed_at\":\"2025-04-30 17:11:07 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-30 17:14:19 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-30 17:18:39 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-30 17:29:54 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-05 15:36:26 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2025-08-05 15:36:41 +0000\",\"changed\":[\"predict_settings\",\"additional_ai_evaluation_instructions\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"}]"
 }]]></config>
 </Pythonlab>

@@ -1,0 +1,33 @@
+@use '@code-dot-org/component-library-styles/colors';
+
+.workshopSessionsList {
+  display: flex;
+    flex-direction: column;
+  gap: 0.5rem;
+  margin: 0;
+  width: 100%;
+
+  li {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.75rem 1rem;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    border-radius: 0.25rem;
+    border: 1px solid var(--borders-neutral-primary);
+    background: var(--background-neutral-secondary);
+
+    .sessionItemTime {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    .sessionItemLocation {
+      display: flex;
+      align-items: center;
+      gap: 0.375rem;
+    }
+  }
+}

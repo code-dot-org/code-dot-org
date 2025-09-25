@@ -1,0 +1,125 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-05-31T03:01:17.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "toolbox": {
+        "type": "flyout",
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2",
+            "play_rest_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together",
+            "play_sounds_sequential",
+            "repeat_simple2"
+          ],
+          "Effects": [
+            "set_volume_effect_at_current_location_simple2",
+            "set_filter_effect_at_current_location_simple2",
+            "set_delay_effect_at_current_location_simple2"
+          ]
+        },
+        "addFunctionDefinition": true,
+        "addFunctionCalls": true
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false
+            }
+          ]
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "showSoundFilters": true,
+      "packId": "chloe_treat_me",
+      "sounds": {
+        "chloe_treat_me": [
+          "drums_claps",
+          "808_chorus",
+          "hit_1",
+          "hit_2",
+          "hit_3",
+          "keys_intro",
+          "keys_verse",
+          "woo",
+          "vocals_i_i_i",
+          "vocals_try_try_try",
+          "vocals_chorus_tag"
+        ]
+      },
+      "validationTimeout": 1
+    },
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": false,
+      "playerTitle": "Example"
+    },
+    "encrypted_exemplar_sources": "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\n",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "display_name": "Treat Me",
+    "long_instructions": "### Treat Me\r\n\r\n**Define:** *Treat Me* by Chlöe uses short, sharp sounds that create a **staccato** rhythm, like quick pops or steady heartbeats. Your challenge is to create a remix that emphasizes this staccato style using only 1- or 2-measure tracks from the song.\r\n\r\n**Prepare:** Explore the song and identify short tracks that have a punchy, rhythmic feel. Plan how you'll use loops to repeat those sounds and how you'll organize your code using a function. Listen to the example below to hear what this could sound like.\r\n\r\n**Try:** Choose at least 4 unique short tracks (1–2 measures). Use loops to repeat and layer your sounds. Organize your remix by placing part of your code in a function and calling it when needed.\r\n\r\n<div style=\"background:#ebe8f1; border: 0; border-radius: 10px; clear:both; padding: 5px\">\r\n\r\nNeed some help? Try the [<i class=\"fa-solid fa-book\"></i> Docs](#clickable=documentation-button) in the upper-right corner!\r\n\r\n</div>\r\n\r\n**Reflect:** Does your remix capture the staccato feel of the original? Do your loops and pauses help create that rhythmic energy? In order to complete this level, your remix must include:\r\n\r\n- At least 4 unique sounds\r\n- 3 loops\r\n- 1 function\r\n- At least 1 effect",
+    "bubble_choice_description": "Treat Me by Chlöe has many quick 1 or 2 measure tracks that sound like quick pops of sound or steady heartbeats. Create a remix of the song that emphasizes these qualities",
+    "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/chloe_treat_me/chloe_treat_me.jpg",
+    "validations": [
+      {
+        "key": "music-lab-functions-synthesis-practiceC_ef37c5c8-1b4f-4ea9-8090-d29f04496448",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot says \"You did it!\"",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_different_sounds",
+            "value": 4
+          },
+          {
+            "name": "block_count_by_type",
+            "value": "repeat_simple2:3"
+          },
+          {
+            "name": "played_anything_in_same_function",
+            "value": 1
+          },
+          {
+            "name": "used_effect"
+          }
+        ]
+      },
+      {
+        "key": "music-lab-functions-synthesis-practiceC_7c6e6ebf-7d58-4475-a7b6-b37841b5d0ac",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is listening for...\n\n- **4 unique sounds**\n- **3 loops**\n- **1 function**\n- **an effect**",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "name_suffix": "_v2",
+    "submittable": "false",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-05-31T03:01:17.646+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-synthesis-practiceC\\\"\"],\"cloned_from\":\"music-lab-functions-synthesis-practiceC\"},{\"changed_at\":\"2025-06-25 20:39:50 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\",\"bubble_choice_description\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-25 20:40:47 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-30 16:43:52 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-03 22:54:35 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

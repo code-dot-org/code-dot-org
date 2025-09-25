@@ -2611,6 +2611,15 @@ a.download-video {
     background-color: $white;
     border-color: $lighter_cyan;
   }
+  .answer:focus {
+    outline: 2px solid $dark_charcoal;
+  }
+  .answer.selected {
+    background-color: $teal;
+  }
+  .slot:focus {
+    outline: 2px solid $lighter_cyan;
+  }
   .answer.ui-draggable:hover {
     border-color: $light_green;
     cursor: move;

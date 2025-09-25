@@ -12,7 +12,6 @@ import deleteDialog from '@cdo/apps/templates/projects/deleteDialog/deleteProjec
 import frozenProjectInfoDialog from '@cdo/apps/templates/projects/frozenProjectInfoDialog/frozenProjectInfoDialogRedux';
 import {stubFakePersonalProjectData} from '@cdo/apps/templates/projects/generateFakeProjects';
 import {UnconnectedPersonalProjectsTable as PersonalProjectsTable} from '@cdo/apps/templates/projects/PersonalProjectsTable';
-import publishDialog from '@cdo/apps/templates/projects/publishDialog/publishDialogRedux';
 import i18n from '@cdo/locale';
 
 import {allowConsoleWarnings} from '../../../util/throwOnConsole';
@@ -22,7 +21,7 @@ describe('PersonalProjectsTable', () => {
 
   beforeEach(() => {
     stubRedux();
-    registerReducers({publishDialog, deleteDialog, frozenProjectInfoDialog});
+    registerReducers({deleteDialog, frozenProjectInfoDialog});
   });
 
   afterEach(() => {

@@ -21,7 +21,10 @@ import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
 import CoteacherSettings from '@cdo/apps/templates/sectionsRefresh/coteacherSettings/CoteacherSettings';
 import {navigateToHref} from '@cdo/apps/utils';
-import {CapLinks} from '@cdo/generated-scripts/sharedConstants';
+import {
+  CapLinks,
+  SectionLoginType,
+} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import AdvancedSettingToggles from './AdvancedSettingToggles';
@@ -36,9 +39,10 @@ const SECTIONS_API = '/api/v1/sections';
 const NEW = 'New';
 
 // Custom hook to update the list of sections to create
-// Currently, this hook returns two things:
+// Currently, this hook returns three things:
 //   - sections: list of objects that represent the sections to create
 //   - updateSection: function to update the section at the given index
+//   - batchUpdateSection: function to update multiple section properties at once
 const useSections = section => {
   // added "default properties" for any new section
   const [sections, setSections] = useState(
@@ -363,6 +367,7 @@ export default function SectionsSetUpContainer({
     );
   };
 
+  // TODO-AITUTOR: can we allow this for any course that has a unit with Unit.has_ai_tutor_level?
   // TODO: This will probably eventually be a setting on the course similar to textToSpeechEnabled
   // The ticket to track that work is https://codedotorg.atlassian.net/browse/CT-1063
   const aiTutorAllowedForCourse = section =>
@@ -396,7 +401,7 @@ export default function SectionsSetUpContainer({
   const renderCoteacherSection = () => {
     const isCoTeacherManagementDisabled =
       sections[0].primaryInstructor?.ltiRosterSyncEnabled === true &&
-      sections[0].loginType === 'ltiV1';
+      sections[0].loginType === SectionLoginType.lti_v1;
 
     return renderExpandableSection(
       'uitest-expandable-coteacher',

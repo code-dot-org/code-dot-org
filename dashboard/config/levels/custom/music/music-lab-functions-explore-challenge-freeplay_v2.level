@@ -1,0 +1,121 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2025-05-31T03:00:42.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "false",
+    "level_data": {
+      "library": "launch2024",
+      "toolbox": {
+        "type": "flyout",
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2",
+            "play_rest_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together",
+            "play_sounds_sequential",
+            "repeat_simple2"
+          ],
+          "Effects": [
+            "set_volume_effect_at_current_location_simple2",
+            "set_filter_effect_at_current_location_simple2",
+            "set_delay_effect_at_current_location_simple2"
+          ]
+        },
+        "addFunctionDefinition": true,
+        "addFunctionCalls": true
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false
+            }
+          ]
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "showSoundFilters": true,
+      "validationTimeout": 1
+    },
+    "long_instructions": "#### Choose Any Song!\r\n\r\nChoose any song from the Track List and make it your own. Explore different sound packs in the drop down menu to mix and match sounds from the song and sounds from different genres of music.\r\n\r\nTo pass this level, use at least **8 different sounds** and have **at least 2 functions**\r\n\r\nIf you want to pick a new song, you can click the restart button in the upper-right corner [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=start-over-button)\r\n\r\n![](https://images.code.org/4d1ceadcf2e11d837b7a698c79fb1722-image-1741388705634.05.02 PM.png)",
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
+    "display_name": "Choose a Song",
+    "thumbnail_url": "https://images.code.org/cc11d0d9910b9be176a0287cb43efc45-Screenshot 2025-03-07 at 3.11.36 PM.png",
+    "bubble_choice_description": "Choose a song to use with your live coding!",
+    "validations": [
+      {
+        "key": "music-lab-functions-explore-challenge-freeplay_c1a5f54e-f924-440a-a29d-3648adc63cc2",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is listening for\n\n- ✅ 8 unique sounds\n- ✅ 2 functions",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sounds_in_different_functions",
+            "value": 2
+          },
+          {
+            "name": "played_different_sounds",
+            "value": 8
+          }
+        ]
+      },
+      {
+        "key": "music-lab-functions-explore-challenge-freeplay_daf62f26-3471-43d4-96b6-767d49b9c975",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is listening for\n\n- ❌ 8 unique sounds\n- ✅ 2 functions",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sounds_in_different_functions",
+            "value": 2
+          }
+        ]
+      },
+      {
+        "key": "music-lab-functions-explore-challenge-freeplay_e95e4840-e19b-4198-89ca-cc025cf88487",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is listening for\n\n- ✅ 8 unique sounds\n- ❌ 2 functions",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_different_sounds",
+            "value": 8
+          }
+        ]
+      },
+      {
+        "key": "music-lab-functions-explore-challenge-freeplay_c86eb87b-ed8e-4f26-9baf-e4d8022768b5",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is listening for\n\n- ❌ 8 unique sounds\n- ❌ 2 functions",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "name_suffix": "_v2",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-05-31T03:00:42.006+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-explore-challenge-freeplay\\\"\"],\"cloned_from\":\"music-lab-functions-explore-challenge-freeplay\"}]"
+}]]></config>
+  <blocks/>
+</Music>

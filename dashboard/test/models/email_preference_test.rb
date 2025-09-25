@@ -5,12 +5,13 @@ class EmailPreferenceTest < ActiveSupport::TestCase
 
   test "create email preference with valid attributes creates email preference" do
     assert_creates EmailPreference do
-      create :email_preference,
+      create(:email_preference,
         email: 'test_valid@example.net',
         opt_in: true,
         ip_address: '1.1.1.1',
         source: EmailPreference::ACCOUNT_SIGN_UP,
         form_kind: nil
+)
     end
   end
 
@@ -26,7 +27,7 @@ class EmailPreferenceTest < ActiveSupport::TestCase
   end
 
   test "upsert email preference changes existing email preference" do
-    email_preference = create :email_preference
+    email_preference = create(:email_preference)
     EmailPreference.upsert!(
       email: email_preference.email,
       opt_in: true,
@@ -42,7 +43,7 @@ class EmailPreferenceTest < ActiveSupport::TestCase
   end
 
   test "upsert email preference with opt out that is already opted in does not update" do
-    email_preference = create :email_preference, opt_in: true
+    email_preference = create(:email_preference, opt_in: true)
     original_attributes = email_preference.attributes
     EmailPreference.upsert!(
       email: email_preference.email,

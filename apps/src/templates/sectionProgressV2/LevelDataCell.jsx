@@ -115,6 +115,7 @@ function LevelDataCell({
   parentLevelId,
   lessonId,
   metadataExpanded,
+  index,
 }) {
   const itemType = React.useMemo(
     () => getLevelCellValue(studentLevelProgress, level, expandedChoiceLevel),
@@ -165,6 +166,9 @@ function LevelDataCell({
           className={classNames(
             styles.gridBox,
             styles.gridBoxLevel,
+            index % 2 === 0
+              ? styles.lighterBackground
+              : styles.darkerBackground,
             feedbackStyle,
             className
           )}
@@ -172,17 +176,31 @@ function LevelDataCell({
           {levelCellUnexpanded}
         </div>
         <div
-          className={classNames(styles.gridBox, styles.gridBoxMetadata, {
-            [styles.gridBoxChoiceSubLevel]: level.parentLevelId !== undefined,
-          })}
+          className={classNames(
+            styles.gridBox,
+            styles.gridBoxMetadata,
+            index % 2 === 0
+              ? styles.lighterBackground
+              : styles.darkerBackground,
+            {
+              [styles.gridBoxChoiceSubLevel]: level.parentLevelId !== undefined,
+            }
+          )}
           aria-label={i18n.timeSpentMins()}
         >
           {!level.parentLevelId && formatTimeSpent(studentLevelProgress)}
         </div>
         <div
-          className={classNames(styles.gridBox, styles.gridBoxMetadata, {
-            [styles.gridBoxChoiceSubLevel]: level.parentLevelId !== undefined,
-          })}
+          className={classNames(
+            styles.gridBox,
+            styles.gridBoxMetadata,
+            index % 2 === 0
+              ? styles.lighterBackground
+              : styles.darkerBackground,
+            {
+              [styles.gridBoxChoiceSubLevel]: level.parentLevelId !== undefined,
+            }
+          )}
           aria-label={i18n.lastUpdated()}
         >
           {!level.parentLevelId && formatLastUpdated(studentLevelProgress)}
@@ -197,7 +215,8 @@ function LevelDataCell({
         styles.gridBox,
         styles.gridBoxLevel,
         feedbackStyle,
-        className
+        className,
+        index % 2 === 0 ? styles.lighterBackground : styles.darkerBackground
       )}
       headers={getHeadersForCell(studentId, level.id, parentLevelId, lessonId)}
     >
@@ -223,4 +242,5 @@ LevelDataCell.propTypes = {
   className: PropTypes.string,
   linkClassName: PropTypes.string,
   metadataExpanded: PropTypes.bool,
+  index: PropTypes.number,
 };

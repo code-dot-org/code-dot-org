@@ -1055,7 +1055,9 @@ exports.install = function (blockly, blockInstallOptions) {
           this.setTooltip(directionConfig.tooltip);
           if (hasLengthInput) {
             var dropdown = new blockly.FieldImageDropdown(
-              directionConfig.lengths
+              directionConfig.lengths,
+              directionConfig.imageDimensions.width,
+              directionConfig.imageDimensions.height
             );
             dropdown.setValue(directionConfig.defaultDropdownValue);
             input.appendField(dropdown, 'length');

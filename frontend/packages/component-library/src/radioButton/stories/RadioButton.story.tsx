@@ -1,4 +1,4 @@
-import {Meta, StoryFn} from '@storybook/react';
+import {Meta, StoryFn} from '@storybook/react-webpack5';
 
 import Tags from '@/tags';
 
@@ -114,5 +114,25 @@ SizesOfRadioButton.args = {
     {name: 'test-s', value: 'test-s', label: 'Label - S', size: 's'},
     {name: 'test-m', value: 'test-m', label: 'Label - M', size: 'm'},
     {name: 'test-l', value: 'test-l', label: 'Label - L', size: 'l'},
+  ],
+};
+
+export const LabelWeights = MultipleTemplate.bind({});
+LabelWeights.args = {
+  radioButtons: [
+    {
+      name: 'lw-thin',
+      value: 'lw-thin',
+      label: 'Thin label',
+      textThickness: 'thin',
+      size: 'm',
+    },
+    {
+      name: 'lw-thick',
+      value: 'lw-thick',
+      label: 'Thick label',
+      textThickness: 'thick',
+      size: 'm',
+    },
   ],
 };

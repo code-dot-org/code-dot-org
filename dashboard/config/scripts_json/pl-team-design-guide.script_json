@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-19 21:13:28 UTC",
+    "serialized_at": "2025-08-27 22:20:55 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -421,10 +421,21 @@
       "key": "c5998b9d-6bf3-43b2-a9d8-5b35c470f8ab",
       "position": 12,
       "properties": {
-        "progression_name": "Congratulations"
+        "progression_name": "Congratulations [OLD]"
       },
       "seeding_key": {
         "activity_section.key": "c5998b9d-6bf3-43b2-a9d8-5b35c470f8ab",
+        "lesson_activity.key": "f3a34f15-f6e0-42bf-8476-f7f1ffe1b6ca"
+      }
+    },
+    {
+      "key": "f0afd208-58b5-43dd-883d-38d9b9d98141",
+      "position": 13,
+      "properties": {
+        "progression_name": "Congratulations [NEW - Certificate Emphasis]"
+      },
+      "seeding_key": {
+        "activity_section.key": "f0afd208-58b5-43dd-883d-38d9b9d98141",
         "lesson_activity.key": "f3a34f15-f6e0-42bf-8476-f7f1ffe1b6ca"
       }
     },
@@ -1169,6 +1180,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLGuide_L1_GettingStarted"
+        ],
         "progression": "Getting Started Overview"
       },
       "bonus": false,
@@ -1319,7 +1333,7 @@
         "level_keys": [
           "PLGuide_L1_Closing2"
         ],
-        "progression": "Congratulations"
+        "progression": "Congratulations [OLD]"
       },
       "bonus": false,
       "seeding_key": {
@@ -1337,6 +1351,28 @@
     },
     {
       "chapter": 36,
+      "position": 15,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Congratulations [NEW - Certificate Emphasis]"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PLGuide_L1_Closing-Cert"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-team-design-guide",
+        "activity_section.key": "f0afd208-58b5-43dd-883d-38d9b9d98141"
+      },
+      "level_keys": [
+        "PLGuide_L1_Closing-Cert"
+      ]
+    },
+    {
+      "chapter": 37,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1361,7 +1397,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 38,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -1386,11 +1422,14 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 39,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-equity-U2L4-realizingpossibilities"
+        ],
         "progression": "Computational Thinking"
       },
       "bonus": false,
@@ -1827,6 +1866,18 @@
         "lesson_group.key": "",
         "script.name": "pl-team-design-guide",
         "activity_section.key": "c5998b9d-6bf3-43b2-a9d8-5b35c470f8ab"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PLGuide_L1_Closing-Cert",
+        "script_level.level_keys": [
+          "PLGuide_L1_Closing-Cert"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-team-design-guide",
+        "activity_section.key": "f0afd208-58b5-43dd-883d-38d9b9d98141"
       }
     },
     {

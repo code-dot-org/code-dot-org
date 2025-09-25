@@ -3,7 +3,7 @@ require 'policies/user'
 class Policies::UserTest < ActiveSupport::TestCase
   class UserAttributes < Policies::UserTest
     test 'all default attributes (except email) should be returned' do
-      user = create :teacher, :with_google_authentication_option
+      user = create(:teacher, :with_google_authentication_option)
       attrs = Policies::User.user_attributes(user)
 
       missing_attrs = []
@@ -15,7 +15,7 @@ class Policies::UserTest < ActiveSupport::TestCase
     end
 
     test 'authentication_options should be returned' do
-      user = create :teacher, :with_google_authentication_option
+      user = create(:teacher, :with_google_authentication_option)
       ao_email = user.authentication_options.first.email
 
       attrs = Policies::User.user_attributes(user)
@@ -26,7 +26,7 @@ class Policies::UserTest < ActiveSupport::TestCase
     end
 
     test 'remove email from user session value' do
-      user = create :teacher
+      user = create(:teacher)
 
       attrs = Policies::User.user_attributes(user)
       assert_nil attrs['email']
@@ -36,21 +36,21 @@ class Policies::UserTest < ActiveSupport::TestCase
   test 'verified_teacher_candidate? should return true when criteria is met' do
     # Google Authentication Option present, and has non-gmail/non-googlemail email,
     # criteria met
-    teacher = create :teacher, :with_google_authentication_option
+    teacher = create(:teacher, :with_google_authentication_option)
     assert_equal true, Policies::User.verified_teacher_candidate?(teacher)
   end
 
   test 'verified_teacher_candidate? should return false when criteria is not met' do
-    teacher = create :teacher
+    teacher = create(:teacher)
     # Google Authentication Option not present, criteria not met
     assert_equal false, Policies::User.verified_teacher_candidate?(teacher)
     # Google Authentication Option has a gmail email, criteria not met
-    create :google_authentication_option, user: teacher, email: 'test@gmail.com'
+    create(:google_authentication_option, user: teacher, email: 'test@gmail.com')
     assert_equal false, Policies::User.verified_teacher_candidate?(teacher)
   end
 
   test 'verified_teacher_candidate? should return false when teacher is already verified' do
-    teacher = create :teacher, :with_google_authentication_option
+    teacher = create(:teacher, :with_google_authentication_option)
     assert_changes -> {Policies::User.verified_teacher_candidate?(teacher)}, from: true, to: false do
       teacher.verify_teacher!
     end

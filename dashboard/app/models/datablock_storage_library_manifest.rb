@@ -58,22 +58,27 @@ class DatablockStorageLibraryManifest < ApplicationRecord
   validate :library_manifest
 
   def self.seed_all
-    # Don't overwrite if there is already a manifest
-    unless DatablockStorageLibraryManifest.exists?
-      seed_manifest
-      seed_tables
-    end
+    # FIXME: is there a way to optimize this? as far as we can tell, in `def seed_record` (search for this)
+    # calls in other serialized levelbuilder objects they really don't hash or optimize seeding, so
+    # we're not really worse than anyone else, but some of the tables are REALLY big.
+    seed_manifest
+    seed_tables
+  end
+
+  def self.manifest_file
+    Rails.root.join('config/datablock_storage/manifest.json')
   end
 
   def self.seed_manifest
-    manifest_file = Rails.root.join('config', 'datablock_storage', 'manifest.json')
     manifest = JSON.parse(File.read(manifest_file))
     instance.update!(library_manifest: manifest)
   end
 
-  def self.seed_tables(glob = "config/datablock_storage/*.csv")
+  def self.seed_tables(glob = "config/datablock_storage/datasets/*.json")
     Dir.glob(Rails.root.join(glob)).each do |path|
-      table_name = path.match(/([^\/]+)\.csv$/)[1]
+      dataset_json = JSON.parse(File.read(path))
+      table_name = dataset_json['table_name']
+      dataset_csv = dataset_json['csv']
 
       # Overwrite the table if it already exists
       table = begin
@@ -82,8 +87,16 @@ class DatablockStorageLibraryManifest < ApplicationRecord
         DatablockStorageTable.create!(project_id: DatablockStorageTable::SHARED_TABLE_PROJECT_ID, table_name: table_name)
       end
 
-      table.import_csv File.read(path)
+      table.import_csv dataset_csv
+    rescue => exception
+      raise exception.class, "#{exception.message} (while importing #{path})", exception.backtrace
     end
+  end
+
+  def self.write_serialization
+    return unless Rails.application.config.levelbuilder_mode
+    manifest = instance.library_manifest
+    File.write(manifest_file, JSON.pretty_generate(manifest))
   end
 
   private def validate_library_manifest

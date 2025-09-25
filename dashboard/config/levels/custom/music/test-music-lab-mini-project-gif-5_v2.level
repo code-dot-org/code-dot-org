@@ -1,0 +1,194 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-05-31T03:00:23.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "### Make it Random\r\n\r\nIt's time to add the random element to make your song choose between each of your backing tracks!\r\n\r\n**Do This**:\r\n- Double-check your backing tracks are inside a parent block like `repeat` or `play sequential` or `play together`\r\n- Drag out a `play random` block and put _all_ of your code inside of it\r\n  - Your timeline should update so all of the backing tracks are stacked on top of each other!\r\n- Drag out a `repeat` block and put _all_ if your code inside! Then make the song repeat at least 5 times\r\n  - This gives your song enough time to choose each backting rack a random amount of times\r\n  \r\nRun your code! Each time you press run, it should select a different combination of your backing tracks! Here is an example of what your code could look like inside the `repeat` and `play random` blocks:\r\n\r\n![](https://images.code.org/0f99ecf0ba3a816dd902f1ded001ee94-image-1745529017930.png)",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "false",
+    "level_data": {
+      "library": "launch2024",
+      "allowChangeStartingPlayheadPosition": true,
+      "showSoundFilters": true,
+      "packId": "default",
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2",
+            "play_rest_at_current_location_simple2"
+          ],
+          "Control": [
+            "triggered_at_simple2",
+            "play_sounds_together",
+            "play_sounds_sequential",
+            "play_sounds_random",
+            "repeat_simple2"
+          ],
+          "Effects": [
+            "set_volume_effect_at_current_location_simple2",
+            "set_filter_effect_at_current_location_simple2",
+            "set_delay_effect_at_current_location_simple2"
+          ],
+          "Functions": [
+
+          ]
+        },
+        "type": "flyout"
+      },
+      "toolboxDefinition": {
+        "contents": [
+          {
+            "kind": "block",
+            "type": "play_sound_at_current_location_simple2",
+            "id": "play_sound_at_current_location_simple2",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "sound": "electro/drum_beat_cowbell"
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_rest_at_current_location_simple2",
+            "id": "play_rest_at_current_location_simple2",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "rest_duration": "<field name=\"rest_duration\">1</field>"
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_sounds_together",
+            "id": "play_sounds_together",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_sounds_sequential",
+            "id": "play_sounds_sequential",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_sounds_random",
+            "id": "play_sounds_random",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "repeat_simple2",
+            "id": "repeat_simple2",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "times": 1
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "set_effect_at_current_location_simple2",
+            "id": "set_effect_at_current_location_simple2",
+            "fields": {
+              "effects_name": "<field name=\"effects_name\">volume</field>",
+              "effects_value": "<field name=\"effects_value\">normal</field>"
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "triggered_at_simple2",
+            "id": "triggered_at_simple2",
+            "fields": {
+              "trigger": "<field name=\"trigger\">trigger1</field>",
+              "trigger_start": "<field name=\"trigger_start\">next_measure</field>"
+            },
+            "enabled": true
+          }
+        ],
+        "kind": "flyoutToolbox"
+      }
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
+    "project_template_level_name": "test-music-lab-mini-project-gif-template_v2",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "validations": [
+      {
+        "key": "test-music-lab-mini-project-gif-5_68df9dcc-4122-4037-af9b-9c589d4782ec",
+        "message": "Your code is on the right track - make sure to check against the rubric to make sure you completed the project successfully!",
+        "next": true,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "repeat_simple2:1"
+          },
+          {
+            "name": "block_count_by_type",
+            "value": "play_sounds_random:1"
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-mini-project-gif-5_f196b9b8-b8e4-475c-a214-328ce9878a75",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is looking for...\n\n- ❌ A random block\n- ✅ A repeat block",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "repeat_simple2:1"
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-mini-project-gif-5_3aa21af5-d9c4-4f0f-b959-1e98979f07b7",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is looking for...\n\n- ✅ A random block\n- ❌ A repeat block",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "play_sounds_random:1"
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-mini-project-gif-5_68cdd45e-8e09-40f0-bfcd-340ef47178b9",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is looking for...\n\n- ❌ A random block\n- ❌ A repeat block",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "name_suffix": "_v2",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-05-31T03:00:23.012+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-mini-project-gif-5\\\"\"],\"cloned_from\":\"test-music-lab-mini-project-gif-5\"},{\"changed_at\":\"2025-06-06 00:35:46 +0000\",\"changed\":[\"predict_settings\",\"validations\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-30 22:13:52 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

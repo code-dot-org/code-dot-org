@@ -155,7 +155,7 @@ class CertificateImage
 
     template_file = certificate_template_for(course)
 
-    path = pegasus_dir('sites.v3', 'code.org', 'public', 'images', template_file)
+    path = dashboard_dir('app', 'assets', 'images', 'certificates', template_file)
     if prefilled_title_course?(course)
       # only need to fill in student name
       vertical_offset = course == '20-hour' ? -125 : -120
@@ -229,10 +229,10 @@ class CertificateImage
       apply_text(image, name, name_constants[:font_size], 'Helvetica bold', 'rgb(118,101,160)', name_constants[:x_offset], name_constants[:y_offset], name_constants[:width], name_constants[:height])
 
       # When we have a unit within a unit_group, we want to display both the unit and unit_group titles.
-      # When we have a standalone unit or the unit group, we only display the localized title of unit_or_unit_group.
-      if unit_or_unit_group.is_a?(Unit) && unit_or_unit_group.unit_group.present?
+      # When we have a unit group, we only display the localized title of unit_or_unit_group.
+      if unit_or_unit_group.is_a?(Unit) && unit_or_unit_group.get_original_unit_group.present?
         unit = unit_or_unit_group
-        unit_group = unit.unit_group
+        unit_group = unit.get_original_unit_group
 
         course_titles_constants = cert_text_constants[:two_titles]
 
@@ -315,7 +315,7 @@ class CertificateImage
 
     unit_or_unit_group = CurriculumHelper.find_matching_unit_or_unit_group(course_name)
     course_version = unit_or_unit_group&.get_course_version
-    return CERTIFICATE_COURSE_TYPES[:HOC] if course_version&.hoc?
+    return CERTIFICATE_COURSE_TYPES[:HOC] if course_version&.hoc_or_hoai?
     return CERTIFICATE_COURSE_TYPES[:PL] if course_version&.pl_course?
     return CERTIFICATE_COURSE_TYPES[:OTHER] if course_version
     CERTIFICATE_COURSE_TYPES[:HOC]

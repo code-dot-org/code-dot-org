@@ -1,0 +1,10 @@
+name 'test-ai-powered-threats-defenses-lesson3-level1choice'
+display_name 'User Profiles'
+description 'Choose a user persona and go through their social media posts to see what type of information they shared about themeslves.'
+
+sublevels
+level 'test-ai-powered-threats-defenses-lesson3-level1a'
+level 'test-ai-powered-threats-defenses-lesson3-level1b'
+level 'test-ai-powered-threats-defenses-lesson3-level1c'
+level 'test-ai-powered-threats-defenses-lesson3-level1d'
+

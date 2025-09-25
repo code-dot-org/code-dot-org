@@ -61,8 +61,8 @@ class Pd::TeacherconSurveyTest < ActiveSupport::TestCase
   end
 
   test 'facilitator required fields' do
-    facilitator = create :user, name: "Facili"
-    workshop = create :workshop, facilitators: [facilitator]
+    facilitator = create(:user, name: "Facili")
+    workshop = create(:workshop, facilitators: [facilitator])
 
     survey = Pd::TeacherconSurvey.new
     survey.pd_enrollment = create :pd_enrollment,
@@ -101,11 +101,11 @@ class Pd::TeacherconSurveyTest < ActiveSupport::TestCase
   end
 
   test 'to summary for faciliator takes specific facilitator fields' do
-    facilitator_1 = create :facilitator, name: 'Facilitator Kirk'
-    facilitator_2 = create :facilitator, name: 'Facilitator Picard'
-    workshop = create :workshop, facilitators: [facilitator_1, facilitator_2]
+    facilitator_1 = create(:facilitator, name: 'Facilitator Kirk')
+    facilitator_2 = create(:facilitator, name: 'Facilitator Picard')
+    workshop = create(:workshop, facilitators: [facilitator_1, facilitator_2])
 
-    hash = build :pd_teachercon_survey_hash
+    hash = build(:pd_teachercon_survey_hash)
     hash[:whoFacilitated] = [facilitator_1.name, facilitator_2.name]
     hash[:thingsFacilitatorDidWell] = {
       'Facilitator Kirk': 'Kirk lead the away team well',
@@ -116,7 +116,7 @@ class Pd::TeacherconSurveyTest < ActiveSupport::TestCase
       'Facilitator Picard': 'He is too awesome'
     }
 
-    survey_1 = create :pd_teachercon_survey, pd_enrollment: (create :pd_enrollment, workshop: workshop), form_data: hash.to_json
+    survey_1 = create(:pd_teachercon_survey, pd_enrollment: (create(:pd_enrollment, workshop: workshop)), form_data: hash.to_json)
 
     summary_1 = survey_1.generate_summary_for_facilitator('Facilitator Kirk')
     assert_equal 'Kirk lead the away team well', summary_1[:things_facilitator_did_well]
@@ -128,7 +128,7 @@ class Pd::TeacherconSurveyTest < ActiveSupport::TestCase
   end
 
   test 'required fields are optional for deleted users' do
-    survey = create :pd_teachercon_survey
+    survey = create(:pd_teachercon_survey)
     survey.pd_enrollment.user = create :teacher
     survey.pd_enrollment.user.destroy!
     survey.clear_form_data

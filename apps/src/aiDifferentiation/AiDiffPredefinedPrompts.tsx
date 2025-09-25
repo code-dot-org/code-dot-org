@@ -193,3 +193,13 @@ export const APCSP_DUMMY_EXAM = {
     APCSP_EXAM_TIME_STRATEGIES,
   ],
 };
+
+export const DEBUG_THIS_CODE = {
+  label: 'Debug this code',
+  prompt: 'Please tell me what the bugs are in this student code.',
+};
+
+export const IMPROVE_THIS_CODE = {
+  label: 'Improve this code',
+  prompt: 'How can this student code be improved?',
+};

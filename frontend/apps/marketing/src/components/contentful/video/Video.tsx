@@ -2,11 +2,11 @@
 
 import {useContext} from 'react';
 
-import DscoVideo, {VideoProps} from '@code-dot-org/component-library/video';
-
 import OneTrustContext, {
   OneTrustCookieGroup,
 } from '@/providers/onetrust/context/OneTrustContext';
+
+import ContentfulVideo, {VideoProps} from './videoComponents';
 
 const Video = (props: VideoProps) => {
   const onetrustContext = useContext(OneTrustContext);
@@ -19,7 +19,7 @@ const Video = (props: VideoProps) => {
   };
 
   return (
-    <DscoVideo
+    <ContentfulVideo
       {...props}
       isYouTubeCookieAllowed={isFunctionalCookieEnabled()}
     />

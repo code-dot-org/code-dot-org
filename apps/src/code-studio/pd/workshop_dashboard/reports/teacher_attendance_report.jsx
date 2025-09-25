@@ -4,12 +4,10 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
-import {connect} from 'react-redux';
 
 import {RouterContext} from '@cdo/apps/code-studio/legacyDashboardRoutingCompatibility';
 
 import Spinner from '../../../../sharedComponents/Spinner';
-import {PermissionPropType} from '../permission';
 
 import {QUERY_BY_VALUES, COURSE_VALUES} from './report_constants';
 import ReportTable from './report_table';
@@ -18,7 +16,6 @@ const QUERY_URL = '/api/v1/pd/teacher_attendance_report';
 
 export class TeacherAttendanceReport extends React.Component {
   static propTypes = {
-    permission: PermissionPropType.isRequired,
     startDate: PropTypes.string.isRequired,
     endDate: PropTypes.string.isRequired,
     queryBy: PropTypes.oneOf(QUERY_BY_VALUES).isRequired,
@@ -162,14 +159,6 @@ export class TeacherAttendanceReport extends React.Component {
         header: {label: 'Workshop Name'},
       },
       {
-        property: 'on_map',
-        header: {label: 'Shown on Map'},
-      },
-      {
-        property: 'funded',
-        header: {label: 'Funded'},
-      },
-      {
         property: 'organizer_name',
         header: {label: 'Organizer Name'},
       },
@@ -190,33 +179,6 @@ export class TeacherAttendanceReport extends React.Component {
         header: {label: 'Days'},
       },
     ];
-
-    if (this.props.permission.hasWorkshopAdmin) {
-      columns.push(
-        {
-          property: `pay_period`,
-          header: {label: `Pay Period`},
-        },
-        {
-          property: `payment_type`,
-          header: {label: `Payment Type`},
-        },
-        {
-          property: `payment_rate`,
-          header: {label: `Payment Rate`},
-        },
-        {
-          property: `qualified`,
-          header: {label: `Qualified`},
-          cell: {format: this.formatYesNo},
-        },
-        {
-          property: `payment_amount`,
-          header: {label: `Payment Amount`},
-          cell: {format: this.formatCurrency},
-        }
-      );
-    }
 
     return columns;
   }
@@ -249,6 +211,4 @@ const styles = {
   link: {cursor: 'pointer'},
 };
 
-export default connect(state => ({
-  permission: state.workshopDashboard.permission,
-}))(TeacherAttendanceReport);
+export default TeacherAttendanceReport;

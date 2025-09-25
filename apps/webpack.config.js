@@ -28,6 +28,7 @@ const {
   PROFESSIONAL_DEVELOPMENT_ENTRIES,
   SHARED_ENTRIES,
   OTHER_ENTRIES,
+  LOCALIZATION_ENTRIES,
 } = require('./webpackEntryPoints');
 
 const WEBPACK_DEV_SERVER_PORT = 9000;
@@ -211,6 +212,7 @@ const LOCALE_ALIASES = {
     localeDoNotImport('@cdo/standaloneVideo/locale'),
     localeDoNotImport('@cdo/tutorialExplorer/locale'),
     localeDoNotImport('@cdo/weblab/locale'),
+    localeDoNotImport('@cdo/weblab2/locale'),
     localeDoNotImport('@cdo/signup/locale'),
     localeDoNotImportP5Lab('@cdo/gamelab/locale'),
     localeDoNotImportP5Lab('@cdo/poetry/locale'),
@@ -235,7 +237,8 @@ const WEBPACK_BASE_CONFIG = {
     // Run TypeScript type checking in parallel with the build
     new ForkTsCheckerWebpackPlugin({
       // tsconfig.build.json only type-checks TypeScript files.
-      typescript: {configFile: 'tsconfig.build.json'},
+      // We manually set a memoryLimit here to avoid a JavaScript heap out of memory error in yarn start.
+      typescript: {configFile: 'tsconfig.build.json', memoryLimit: 2560},
     }),
   ],
   resolve: {
@@ -399,18 +402,21 @@ function createWebpackConfig({
     // Don't output >1000 lines of webpack build stats to the CI logs
     stats: envConstants.DEV ? 'normal' : 'errors-only',
     devtool: devtool({minify}),
-    entry: addPollyfillsToEntryPoints(
-      {
-        ...appsEntries,
-        ...CODE_STUDIO_ENTRIES,
-        ...INTERNAL_ENTRIES,
-        ...PEGASUS_ENTRIES,
-        ...PROFESSIONAL_DEVELOPMENT_ENTRIES,
-        ...SHARED_ENTRIES,
-        ...OTHER_ENTRIES,
-      },
-      ['@babel/polyfill/noConflict', 'whatwg-fetch']
-    ),
+    entry: {
+      ...addPollyfillsToEntryPoints(
+        {
+          ...appsEntries,
+          ...CODE_STUDIO_ENTRIES,
+          ...INTERNAL_ENTRIES,
+          ...PEGASUS_ENTRIES,
+          ...PROFESSIONAL_DEVELOPMENT_ENTRIES,
+          ...SHARED_ENTRIES,
+          ...OTHER_ENTRIES,
+        },
+        ['@babel/polyfill/noConflict', 'whatwg-fetch']
+      ),
+      ...LOCALIZATION_ENTRIES,
+    },
     externals: [
       {
         jquery: 'var $',
@@ -711,6 +717,7 @@ function createWebpackConfig({
             'localhost-studio.code.org',
             'localhost.code.org',
             'localhost.hourofcode.com',
+            'preview.localhost.codeprojects.org',
           ],
           client: {overlay: false},
           port: WEBPACK_DEV_SERVER_PORT,

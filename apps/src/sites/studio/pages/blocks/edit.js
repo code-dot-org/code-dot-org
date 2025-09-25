@@ -108,9 +108,7 @@ const setSubmitButtonState = () => {
 
 function validateBlockConfig(editor) {
   try {
-    if (editor) {
-      JSON.parse(editor.getValue());
-    }
+    validateJSON(editor);
     updateBlockPreview();
     validateBlockRenders();
     isValidBlockConfig = true;
@@ -120,6 +118,38 @@ function validateBlockConfig(editor) {
     isValidBlockConfig = false;
     validationDiv.text(err.toString());
     validationDiv.css('color', INVALID_COLOR);
+  }
+}
+
+// Ensure that the block config is valid JSON and meets other specific requirements.
+function validateJSON(editor) {
+  if (editor) {
+    // If the value isn't valid JSON, JSON.parse will throw
+    const json = JSON.parse(editor.getValue());
+
+    validateTextFieldNames(json);
+  }
+}
+
+// Ensure that text field names are supported for share filtering.
+function validateTextFieldNames(json) {
+  const allowedNames = ['SPEECH', 'TEXT', 'TEXT1', 'TITLE'];
+  if (json.args) {
+    for (const arg of json.args) {
+      if (
+        arg.field === true &&
+        arg.type === 'String' &&
+        !allowedNames.includes(arg.name)
+      ) {
+        throw new Error(
+          `Invalid name '${
+            arg.name
+          }' for text field. Allowed names are: ${allowedNames.join(
+            ', '
+          )}. (This is required for share filtering.)`
+        );
+      }
+    }
   }
 }
 

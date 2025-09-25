@@ -1,0 +1,29 @@
+{
+  "folders": {
+    "1": {
+      "id": "1",
+      "name": "testfolder1",
+      "parentId": "0"
+    }
+  },
+  "files": {
+    "1": {
+      "id": "1",
+      "name": "testFile1.txt",
+      "language": "txt",
+      "contents": "This is test file 1",
+      "folderId": "0",
+      "open": true,
+      "active": true
+    },
+    "2": {
+      "id": "2",
+      "name": "testFile2.txt",
+      "language": "txt",
+      "contents": "This is test file 2, in testfolder1",
+      "folderId": "1",
+      "open": true,
+      "active": false
+    }
+  }
+}

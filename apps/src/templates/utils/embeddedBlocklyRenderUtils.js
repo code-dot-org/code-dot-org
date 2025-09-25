@@ -15,11 +15,14 @@ export function embedBlocklyBlock(container, blockType) {
   convertXmlToBlockly(container);
   const blocksDom = parseElement(`<block type='${blockType}' />`);
   addNameToProcedureBlocks(blocksDom);
-  const blockSpace = Blockly.createEmbeddedWorkspace(container, blocksDom, {
-    noScrolling: true,
-    inline: true,
+  Blockly.cdoUtils.getUserTheme().then(theme => {
+    const blockSpace = Blockly.createEmbeddedWorkspace(container, blocksDom, {
+      noScrolling: true,
+      inline: true,
+      theme,
+    });
+    shrinkBlockSpaceContainer(blockSpace, true);
   });
-  shrinkBlockSpaceContainer(blockSpace, true);
 }
 
 /**

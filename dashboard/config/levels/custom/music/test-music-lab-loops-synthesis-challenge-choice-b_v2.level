@@ -1,0 +1,541 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2025-05-31T03:00:05.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "toolbox": {
+        "type": "flyout",
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2",
+            "play_rest_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together",
+            "play_sounds_sequential",
+            "repeat_simple2",
+            "triggered_at_simple2"
+          ]
+        },
+        "addFunctionDefinition": false,
+        "addFunctionCalls": false
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "next": {
+                "block": {
+                  "type": "play_sounds_together",
+                  "id": "play_sounds_together",
+                  "deletable": false,
+                  "movable": false,
+                  "editable": false,
+                  "extraState": {
+                    "disableNextConnection": true
+                  },
+                  "inputs": {
+                    "code": {
+                      "block": {
+                        "type": "repeat_simple2",
+                        "id": "repeat_workspace",
+                        "deletable": false,
+                        "movable": false,
+                        "editable": false,
+                        "extraState": {
+                          "disableNextConnection": false
+                        },
+                        "fields": {
+                          "times": 10
+                        },
+                        "inputs": {
+                          "code": {
+                            "block": {
+                              "type": "play_rest_at_current_location_simple2",
+                              "id": "play_rest_at_current_location_simple2",
+                              "deletable": false,
+                              "movable": false,
+                              "editable": false,
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
+                              "fields": {
+                                "rest_duration": "<field name=\"rest_duration\">1</field>"
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "play_sounds_random",
+                                  "id": "play_sounds_random",
+                                  "deletable": false,
+                                  "movable": false,
+                                  "editable": false,
+                                  "extraState": {
+                                    "disableNextConnection": true
+                                  },
+                                  "inputs": {
+                                    "code": {
+                                      "block": {
+                                        "type": "play_sound_at_current_location_simple2",
+                                        "id": "play_workspace",
+                                        "deletable": false,
+                                        "movable": false,
+                                        "extraState": {
+                                          "disableNextConnection": false
+                                        },
+                                        "fields": {
+                                          "sound": "katy_perry_firework/vocals_verse_1"
+                                        },
+                                        "next": {
+                                          "block": {
+                                            "type": "play_sound_at_current_location_simple2",
+                                            "id": "wZk`j~sN%lDUFqB,i|+W",
+                                            "deletable": false,
+                                            "movable": false,
+                                            "extraState": {
+                                              "disableNextConnection": false
+                                            },
+                                            "fields": {
+                                              "sound": "katy_perry_firework/vocals_verse_1"
+                                            },
+                                            "next": {
+                                              "block": {
+                                                "type": "play_sound_at_current_location_simple2",
+                                                "id": "guUg$fX~3ug1~dy~80RR",
+                                                "deletable": false,
+                                                "movable": false,
+                                                "extraState": {
+                                                  "disableNextConnection": true
+                                                },
+                                                "fields": {
+                                                  "sound": "katy_perry_firework/vocals_verse_1"
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "packId": "katy_perry_firework",
+      "sounds": {
+        "katy_perry_firework": [
+          "vocals_verse_1",
+          "vocals_verse_2",
+          "vocals_prechorus_1",
+          "vocals_prechorus_2",
+          "vocals_verse_4",
+          "vocals_verse_3",
+          "vocals_chorus_2",
+          "vocals_chorus_1",
+          "vocals_chorus_3",
+          "vocals_chorus_4"
+        ],
+        "electro": [
+          "drum_beat_cowbell",
+          "drum_beat_club",
+          "drum_beat_edm",
+          "drum_beat_hyper",
+          "drum_beat_fashion",
+          "drum_beat_noise",
+          "drum_beat_pause",
+          "drum_beat_shake",
+          "drum_beat_sharp",
+          "drum_beat_strobe",
+          "drum_beat_swirl",
+          "drum_beat_sync",
+          "drum_beat_tom",
+          "bass_synth_blocks",
+          "bass_synth_candy",
+          "bass_synth_chips",
+          "bass_synth_duct_tape",
+          "bass_synth_foam",
+          "bass_synth_glitter",
+          "bass_synth_hammer",
+          "bass_synth_nails",
+          "bass_synth_pop_rocks",
+          "bass_synth_sand",
+          "bass_synth_soda_pop",
+          "synth_airhorn",
+          "synth_cave",
+          "synth_sleek",
+          "synth_wiggle",
+          "guitar_code",
+          "guitar_melody",
+          "guitar_moment",
+          "guitar_reveal",
+          "guitar_shimmy",
+          "guitar_shine",
+          "alien",
+          "boom_impact",
+          "crackle",
+          "spring_lift",
+          "whua",
+          "whua_short",
+          "wormhole"
+        ],
+        "groove": [
+          "drum_beat_congas",
+          "drum_beat_flam",
+          "drum_beat_machine",
+          "drum_beat_patter",
+          "drum_beat_plexi",
+          "drum_kit_disco",
+          "groovy_beat",
+          "groovy_alternate_beat",
+          "drum_beat_knock",
+          "reggaeton_beat",
+          "reggaeton_alternate_beat",
+          "syncopated_beat",
+          "boom_bass",
+          "funky_bass",
+          "reggaeton_bass",
+          "reggaeton_alternate_bass",
+          "bass_sub_bike",
+          "bass_sub_boat",
+          "bass_sub_bus",
+          "bass_sub_compact",
+          "bass_sub_pogo",
+          "bass_sub_saunter",
+          "bass_sub_snowshoe",
+          "bass_sub_stroll",
+          "clav_bounce",
+          "guitar_bird",
+          "guitar_cloud",
+          "guitar_funnel",
+          "guitar_high_riff",
+          "guitar_rainbow",
+          "guitar_thread",
+          "organ_walker",
+          "rhodes_bounce",
+          "rhodes_chipper",
+          "rhodes_startup",
+          "rhodes_surprise",
+          "synth_funk",
+          "blart",
+          "crash_reverse",
+          "laser",
+          "sidechain_crash",
+          "reverse_blip",
+          "strings",
+          "strings_short"
+        ],
+        "indie": [
+          "drum_beat_fan",
+          "drum_beat_jangle",
+          "drum_beat_lid",
+          "drum_beat_nod",
+          "drum_beat_ping",
+          "drum_beat_straight",
+          "drum_beat_swish",
+          "drum_beat_tap",
+          "bold_beat",
+          "bold_alternate_beat",
+          "drum_kit_indie",
+          "drum_kit_northern",
+          "acoustic_bass",
+          "acoustic_alternate_bass",
+          "bass_home_coast",
+          "bass_home_sway_down",
+          "bass_lifted_coast_down",
+          "guitar_chord_change",
+          "guitar_clean_arp",
+          "guitar_clean_phrase",
+          "guitar_clean_strum",
+          "guitar_indie_riff",
+          "guitar_lick",
+          "guitar_low_riff",
+          "guitar_octave_line",
+          "guitar_slap_line",
+          "guitar_tremolo_line",
+          "rhythm_guitar",
+          "synth_call",
+          "synth_faucet",
+          "synth_hook",
+          "synth_hope",
+          "synth_story",
+          "synth_theme",
+          "crash_build",
+          "crunch",
+          "hey",
+          "hey_short",
+          "rustle",
+          "scratch",
+          "swipe",
+          "swipe_short"
+        ],
+        "pop": [
+          "drum_beat_action",
+          "drum_beat_cosmos",
+          "drum_kit_dizzy",
+          "drum_kit_jumpy",
+          "drum_beat_pump",
+          "drum_beat_relax",
+          "drum_beat_salt",
+          "drum_kit_pop",
+          "shake_beat",
+          "sugar_beat",
+          "drum_kit_surf",
+          "sugar_alternate_beat",
+          "bass_eel",
+          "bass_flounder",
+          "bass_glider",
+          "bass_home_steady",
+          "bass_jelly",
+          "bass_lifted_steady_1",
+          "bass_lifted_steady_2",
+          "bass_raised_steady",
+          "bass_runner",
+          "bass_shake",
+          "bass_whale",
+          "sub_bass_wave",
+          "guitar_clean_line",
+          "guitar_drive_line",
+          "guitar_funky_wah",
+          "guitar_plastic_line",
+          "guitar_short_phrase",
+          "guitar_slap_phrase",
+          "guitar_stabs",
+          "piano_announcement",
+          "piano_ascot",
+          "piano_darts",
+          "piano_greeting",
+          "piano_plink",
+          "piano_run",
+          "blip",
+          "clap",
+          "clap_short",
+          "clunk",
+          "phase_elevator",
+          "rainstick",
+          "swoosh"
+        ],
+        "hiphop": [
+          "drum_beat_808",
+          "drum_beat_bounce",
+          "relaxed_alternate_beat",
+          "drum_beat_cuts",
+          "hats_beat",
+          "drum_beat_knock",
+          "drum_beat_lofi",
+          "relaxed_beat",
+          "drum_beat_slow",
+          "sub_beat",
+          "drum_beat_trap",
+          "vinyl_beat",
+          "bass_flow",
+          "bass_fly",
+          "bass_stress",
+          "bass_sub_bathrobe",
+          "bass_sub_bracelet",
+          "bass_sub_button_down",
+          "bass_sub_hoodie",
+          "bass_sub_jacket",
+          "bass_sub_jogger",
+          "bass_sub_jumpsuit",
+          "bass_sub_tank",
+          "bass_trip",
+          "guitar_fit",
+          "guitar_pocket",
+          "horns",
+          "piano_chords",
+          "piano_clout",
+          "piano_fresh",
+          "piano_round",
+          "piano_slice",
+          "piano_warble",
+          "string_burst",
+          "synth_brass",
+          "synth_whistle",
+          "brass",
+          "brass_short",
+          "dark_sweep_crash",
+          "dive",
+          "kick_impact",
+          "bubble",
+          "vibraslap"
+        ],
+        "rock": [
+          "arena_beat",
+          "arena_alternate_beat",
+          "drum_kit_basement",
+          "drum_kit_can",
+          "drum_kit_crash",
+          "drum_kit_crusher",
+          "gutter_beat",
+          "drum_kit_hands",
+          "drum_kit_interlude",
+          "punk_beat",
+          "punk_alternate_beat",
+          "drum_kit_roll",
+          "amped_bass",
+          "bass_chonk",
+          "bass_down_steady_up",
+          "bass_freeze",
+          "bass_fuzz_climb",
+          "bass_fuzz_drop",
+          "bass_fuzz_slide",
+          "bass_fuzz_wave",
+          "bass_hook",
+          "bass_jam",
+          "bass_lifted_steady_up",
+          "amped_alternate_bass",
+          "ghost_choir",
+          "guitar_buzz_riff",
+          "riff_guitar",
+          "guitar_fast_chop",
+          "guitar_high_riff",
+          "power_guitar",
+          "guitar_punctuation",
+          "shredded_guitar",
+          "guitar_tag",
+          "organ_grind",
+          "piano_fuzz",
+          "synth_drive",
+          "synth_fuzz_blip",
+          "synth_screech",
+          "crash",
+          "feedback",
+          "gong",
+          "pick_scrape",
+          "stomp",
+          "stomp_short",
+          "trashy_crash"
+        ]
+      },
+      "validationTimeout": 1,
+      "showSoundFilters": true
+    },
+    "long_instructions": "### Loops & Cues\r\n\r\n**Define:** Great performers know how to handle surprises, like a DJ adjusting a mix or a band improvising during a live show. In this challenge, you'll use the `random` block to prepare for unexpected changes and practice reacting in real-time. We'll learn more about this block in the next lesson - for now: follow the steps below!\r\n\r\n**Prepare:**\r\n- There are 3 tracks inside the `play random` block - update them to be three different vocal tracks from Fireworks by Katy Perry [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=id:play_workspace)\r\n- Add your own backing beat and bass track to the vocals [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=id:repeat_workspace)\r\n- Create 3 triggers that start on the \"next beat\" - one for each of the vocal tracks. Inside each trigger, add a small loop and a few tracks to play that go with each track\r\n\r\n**Try:** Perform your song! As you play, one of the vocal tracks will be randomly chosen to play. React in real-time to each vocal track, adjusting your timing as needed.\r\n\r\n**Reflect:** Play through the song a few times. Were you able to respond in time? How did your choices help you stay flexible? In order to complete this level, your remix must include:\r\n\r\n- 3 different vocal tracks from *Fireworks* inside a `play random` block\r\n- 1 backing beat and 1 bass track\r\n- 3 triggers that each start on the \"next beat,\" with loops and supporting tracks inside\r\n- A live performance where you react in real time to the randomly chosen vocal",
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
+    "display_name": "Loops & Cues",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "bubble_choice_description": "Great performers know that surprises are part of the magic of live music. In this level, you'll practice reacting to unexpected changes in your performance.",
+    "validations": [
+      {
+        "key": "test-music-lab-loops-synthesis-challenge-choice-b_65ff1703-c57b-470b-a36e-e86649bd2cb6",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot says \"you did it!\"",
+        "next": true,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "triggered_at_simple2:3"
+          },
+          {
+            "name": "block_count_by_type",
+            "value": "play_sound_at_current_location_simple2:6"
+          },
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "vocal:3"
+          },
+          {
+            "name": "trigger_id_pressed",
+            "value": 1
+          },
+          {
+            "name": "trigger_id_pressed",
+            "value": 2
+          },
+          {
+            "name": "trigger_id_pressed",
+            "value": 3
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-loops-synthesis-challenge-choice-b_fde87abc-1683-4ce6-b4d3-41a9c4c3c14a",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is listening for all 3 vocal tracks to play and triggers \"1\", \"2\", and \"3\" to activate...",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "triggered_at_simple2:3"
+          },
+          {
+            "name": "block_count_by_type",
+            "value": "play_sound_at_current_location_simple2:6"
+          },
+          {
+            "name": "played_sound_type",
+            "value": "beat"
+          },
+          {
+            "name": "played_sound_type",
+            "value": "bass"
+          }
+        ],
+        "callout": ""
+      },
+      {
+        "key": "test-music-lab-loops-synthesis-challenge-choice-b_ebcd4c52-30e4-4dbf-8f7b-013ba682bfc8",
+        "message": "Not sure where to start? Try creating your 3 triggers!",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sound_type",
+            "value": "beat"
+          },
+          {
+            "name": "played_sound_type",
+            "value": "bass"
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-loops-synthesis-challenge-choice-b_c34bf031-2501-47f9-a6d3-b7b2aa9c49e6",
+        "message": "Not sure where to start? Try adding your beat and bass backing tracks! [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=id:repeat_workspace)",
+        "next": false,
+        "conditions": [
+
+        ],
+        "callout": "id:repeat_workspace"
+      }
+    ],
+    "encrypted_exemplar_sources": "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\n",
+    "name_suffix": "_v2",
+    "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/katy_perry_firework/katy_perry_firework.jpg",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-05-31T03:00:05.845+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-synthesis-challenge-choice-b\\\"\"],\"cloned_from\":\"test-music-lab-loops-synthesis-challenge-choice-b\"},{\"changed_at\":\"2025-06-12 20:42:16 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-25 18:36:28 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-25 18:37:31 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

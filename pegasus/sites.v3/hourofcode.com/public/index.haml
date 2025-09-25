@@ -9,6 +9,36 @@ layout: wide_index
 %link{href: "/css/generated/front-page.css", rel: "stylesheet", type: "text/css"}
 %link{href: "/css/generated/hoc-banner.css", rel: "stylesheet", type: "text/css"}
 
+:css
+  .hour-of-ai-banner {
+    position: relative;
+    max-width: 960px;
+    margin: 2rem auto;
+    z-index: 1000;
+  }
+
+  @media (max-width: 960px) {
+    .hour-of-ai-banner {
+      padding: 0 2rem;
+    }
+  }
+
+  .hour-of-ai-banner span {
+    display: block;
+    padding: 0.875rem 1.125rem;
+    background: linear-gradient(90deg,rgba(38, 18, 80, 1) 0%, rgba(125, 73, 229, 1) 94%);
+    color: white;
+    text-align: center;
+    font-size: 1.25rem;
+    border-radius: 100px;
+  }
+
+  .hour-of-ai-banner a {
+    color: white;
+    text-decoration: underline;
+    font-weight: 500;
+  }
+
 -# We set the DCDO default to CDO.default_hoc_mode here because we can't change the DCDO flag on the test machine, but
 -# ui tests rely on hourofcode.com being in a hoc_mode consistent with production. This default needs to be updated
 -# whenever we change the hoc_mode, to make sure we're still testing what we'll see on production.
@@ -20,6 +50,13 @@ layout: wide_index
 #top
   #fullwidth
     = view :header
+    .hour-of-ai-banner
+      %span
+        %i{class: "fa-solid fa-sparkles", style: "margin-inline-end: 0.5rem; "}
+        Hour of Code is evolving to the Hour of AI.
+        %a{href: "https://code.org/hour-of-ai", target: "_blank", rel: "noopener noreferrer"}
+          Learn more
+    .clear
     %section.banner.homepage
       .wrapper.show-desktop
         .text-wrapper

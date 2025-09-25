@@ -15,12 +15,11 @@
       "show_calendar": true,
       "student_detail_progress_view": true,
       "tts": true,
-      "version_year": "2025",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-27 16:18:35 UTC",
+    "serialized_at": "2025-09-12 14:08:06 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -8634,11 +8633,9 @@
     },
     {
       "name": "[EXEMPLAR] Unit 3 Guide",
-      "url": "https://docs.google.com/document/d/1KJesb8rg_e5Mf0VAEHNYcaksJH86GVDeMnM-lIXHQNs/edit?usp=share_link",
+      "url": "https://docs.google.com/document/d/1neIijgDoiwPbXBOgtpFT8-HMVUkoQ6NSRN5l7bg8oDI/edit?usp=drive_link",
       "key": "_exemplar_unit_3_guide",
       "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
       },
       "seeding_key": {
         "resource.key": "_exemplar_unit_3_guide"
@@ -8983,11 +8980,9 @@
     },
     {
       "name": "CSA Unit 3 Slides",
-      "url": "https://docs.google.com/presentation/d/1qqv3Hc7KndBVGlT0HVH2oaLzftqFhUvxSwMOlhJ1mlU/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1zrq9GCi48HTojPFg-KEx1jxZaAaCxi-xwnMe3M7O1aU",
       "key": "csa_unit_3_slides",
       "properties": {
-        "audience": "Verified Teacher",
-        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "csa_unit_3_slides"
@@ -9673,12 +9668,9 @@
     },
     {
       "name": "Unit 3 Guide",
-      "url": "https://docs.google.com/document/d/1dH7e3MZd4zSxKvdrzoshGiY6MP_f-BgxStgfQJtHbeo/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1sQ-D0HJH_wFBRmp_vbjGWH17rahBivNRKttyjam-738/edit?usp=drive_link",
       "key": "unit_3_guide",
       "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "unit_3_guide"
@@ -9686,11 +9678,9 @@
     },
     {
       "name": "Unit 3 Overview",
-      "url": "https://docs.google.com/document/d/1FDbyYrJh73QqNqIJBL3yXx9lgNr02DeGv0-wiMs3P-4/edit?usp=share_link",
+      "url": "https://docs.google.com/document/d/1Ug70wDr0LxT49wcxv8GQEZ4UOi1wj1yKnzIgt0VSvu4/edit?usp=drive_link",
       "key": "unit_3_overview",
       "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "unit_3_overview"
@@ -9698,12 +9688,9 @@
     },
     {
       "name": "Unit 3 Study Guide",
-      "url": "https://docs.google.com/document/d/1XNLZmHIVsdan4CSW9rw5kOOtRglGHXBeBSX9sihIHSs/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1CaOn7eQvoRdjlI2CtkatSJLw3CZt31ZOshG0dq0sZBE/edit?usp=drive_link",
       "key": "unit_3_study_guide",
       "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "unit_3_study_guide"

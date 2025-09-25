@@ -4,6 +4,7 @@ import DSCOSkinnyBanner from '@code-dot-org/component-library/cms/skinnyBanner';
 import {Theme} from '@code-dot-org/component-library/common/contexts';
 
 import {externalLinkIconProps} from '@/components/common/constants';
+import {getAbsoluteImageUrl} from '@/selectors/contentful/getImage';
 import {LinkEntry} from '@/types/contentful/entries/Link';
 import {ExperienceAsset} from '@/types/contentful/ExperienceAsset';
 
@@ -49,17 +50,21 @@ const SkinnyBanner: React.FunctionComponent<SkinnyBannerProps> = ({
   return (
     <DSCOSkinnyBanner
       data-theme={contentMode}
+      aria-label={heading}
       className={className}
       heading={heading}
       description={description}
-      imageProps={
-        firstSectionImage?.fields?.file?.url
+      imageProps={(() => {
+        const firstSectionImageSrc =
+          firstSectionImage && getAbsoluteImageUrl(firstSectionImage);
+
+        return firstSectionImageSrc
           ? {
-              src: firstSectionImage.fields.file.url,
+              src: firstSectionImageSrc,
               altText: firstSectionImage.fields.description || '',
             }
-          : undefined
-      }
+          : undefined;
+      })()}
       buttonProps={
         firstButtonLink
           ? {
@@ -69,18 +74,23 @@ const SkinnyBanner: React.FunctionComponent<SkinnyBannerProps> = ({
               iconRight: firstButtonLink.fields.isThisAnExternalLink
                 ? externalLinkIconProps
                 : undefined,
+              target: firstButtonLink.fields.isThisAnExternalLink
+                ? '_blank'
+                : undefined,
             }
           : undefined
       }
-      partner={
-        partnerLogo
+      partner={(() => {
+        const partnerLogoSrc = partnerLogo && getAbsoluteImageUrl(partnerLogo);
+
+        return partnerLogoSrc
           ? {
               title: partnerCallout || 'In partnership with:',
-              logo: {src: partnerLogo},
+              logo: {src: partnerLogoSrc},
             }
-          : undefined
-      }
-      backgroundImageUrl={backgroundImage}
+          : undefined;
+      })()}
+      backgroundImageUrl={getAbsoluteImageUrl(backgroundImage)}
     />
   );
 };

@@ -1,0 +1,14 @@
+name 'ai-powered-threats-defenses-postassessment-q5_2025-pilot'
+
+question ‘How has the introduction of advanced AI tools, such as voice cloning, most significantly changed traditional phishing scams?’
+
+wrong ‘It has shifted the primary goal of phishing from stealing data to spreading misinformation’
+wrong ‘It has made all phishing attacks fully automated, requiring no human involvement’
+right ‘It allows attackers to create highly personalized and believable scenarios that are harder to distinguish from reality’
+wrong ‘It has made phishing attacks far more expensive and difficult to conduct’
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 4: Phishing with AI
+MARKDOWN

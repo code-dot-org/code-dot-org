@@ -5,7 +5,7 @@ class EmailValidationsTest < ActiveSupport::TestCase
 
   context 'when building a new user' do
     context 'without an email' do
-      let(:user) {build :user, email: nil}
+      let(:user) {build(:user, email: nil)}
       it 'is invalid' do
         user.valid?
         _(user.errors[:email]).must_include I18n.t('activerecord.errors.messages.blank')
@@ -13,7 +13,7 @@ class EmailValidationsTest < ActiveSupport::TestCase
     end
 
     context 'with panda in email' do
-      let(:user) {build :user, email: "#{panda_panda}@panda.org"}
+      let(:user) {build(:user, email: "#{panda_panda}@panda.org")}
       it 'is invalid' do
         user.valid?
         _(user.errors[:email]).must_include I18n.t('activerecord.errors.messages.invalid')
@@ -21,7 +21,7 @@ class EmailValidationsTest < ActiveSupport::TestCase
     end
 
     context 'with an invalid email' do
-      let(:user) {build :user, email: "foo@bar@com"}
+      let(:user) {build(:user, email: "foo@bar@com")}
       it 'is invalid' do
         user.valid?
         _(user.errors[:email].length).must_equal 1
@@ -29,7 +29,7 @@ class EmailValidationsTest < ActiveSupport::TestCase
     end
 
     context 'with a valid email' do
-      let(:user) {build :user, email: "valid@example.net"}
+      let(:user) {build(:user, email: "valid@example.net")}
       it 'is valid' do
         user.valid?
         _(user.errors[:email].length).must_equal 0
@@ -40,12 +40,12 @@ class EmailValidationsTest < ActiveSupport::TestCase
   context 'email format validation on create' do
     it 'allows creation with a valid email address' do
       assert_creates(User) do
-        create :user, email: 'valid@example.net'
+        create(:user, email: 'valid@example.net')
       end
     end
 
     it 'raises an error when email is invalid' do
-      error = _ {create :user, email: 'invalid@incomplete'}.must_raise ActiveRecord::RecordInvalid
+      error = _ {create(:user, email: 'invalid@incomplete')}.must_raise ActiveRecord::RecordInvalid
       _(error.message).must_equal 'Validation failed: Email does not appear to be a valid e-mail address'
     end
   end
@@ -54,17 +54,17 @@ class EmailValidationsTest < ActiveSupport::TestCase
     let(:email) {'foo@bar.com'}
 
     before do
-      create :user, email: email
+      create(:user, email: email)
     end
 
     it 'adds an error when creating a user with a duplicate email' do
-      user = build :user, email: email
+      user = build(:user, email: email)
       user.save
       _(user.errors.full_messages).must_equal ['Email has already been taken']
     end
 
     it 'adds an error when creating a user with the same email in different case' do
-      user = build :user, email: email.upcase
+      user = build(:user, email: email.upcase)
       user.save
       _(user.errors.full_messages).must_equal ['Email has already been taken']
     end
@@ -74,12 +74,12 @@ class EmailValidationsTest < ActiveSupport::TestCase
     let(:email) {'young_foo@bar.com'}
 
     before do
-      create :young_student, email: email
+      create(:young_student, email: email)
     end
 
     context 'when creating a second young user with the same email and hashed_email' do
       it 'adds an error' do
-        user = build :young_student, hashed_email: User.hash_email(email)
+        user = build(:young_student, hashed_email: User.hash_email(email))
         user.save
         _(user.errors.full_messages).must_equal ['Email has already been taken']
       end
@@ -87,7 +87,7 @@ class EmailValidationsTest < ActiveSupport::TestCase
 
     context 'when creating a second young user with the same email but differently cased' do
       it 'adds an error' do
-        user = build :young_student, hashed_email: User.hash_email(email.upcase)
+        user = build(:young_student, hashed_email: User.hash_email(email.upcase))
         user.save
         _(user.errors.full_messages).must_equal ['Email has already been taken']
       end
@@ -96,7 +96,7 @@ class EmailValidationsTest < ActiveSupport::TestCase
 
   describe 'legacy users with invalid email addresses' do
     let(:user_with_invalid_email) do
-      user = build :user, email: 'invalid@incomplete'
+      user = build(:user, email: 'invalid@incomplete')
       user.save!(validate: false)
       user
     end

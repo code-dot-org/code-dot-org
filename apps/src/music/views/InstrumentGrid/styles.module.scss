@@ -1,8 +1,6 @@
 @import '../../../mixins.scss';
 @import 'color.scss';
 
-$colors-simple: #ee0916, #ff7b00, #ff0, #0f0, #0ff, #1a9cff, #c88eee;
-$colors-simple-darker: #bb0710, #bd5b00, #7a7a00, #008a00, #008080, #0076d1, #9930df;
 $colors-drums: #6c5ce7, #0984e3, #00cec9, #00b894, #a29bfe, #74b9ff, #81ecec, #55efc4;
 $cell-width: 25px;
 $cell-height: 18px;
@@ -16,8 +14,6 @@ $peek-height: 5px;
   rowGap: $row-gap;
   displayRows: $display-rows;
   peekHeight: $peek-height;
-  colorsSimple: $colors-simple;
-  colorsSimpleDarker: $colors-simple-darker;
   black: $black;
   white: $white;
   selectedColor: var(--brand-aqua-50);
@@ -65,6 +61,7 @@ $peek-height: 5px;
 .sequence-editor-chromatic {
   @extend %sequence-editor;
   max-height: ($cell-height + $row-gap) * $display-rows + ($peek-height * 2);
+  flex-direction: column-reverse;
 }
 
 .pitchRow {

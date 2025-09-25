@@ -1,5 +1,6 @@
 import {Order} from 'blockly/javascript';
 
+import FunctionEditor from '@cdo/apps/blockly/addons/functionEditor';
 import {BLOCK_TYPES, NO_OPTIONS_MESSAGE} from '@cdo/apps/blockly/constants';
 import {blocks as behaviorBlocks} from '@cdo/apps/blockly/customBlocks/googleBlockly/behaviorBlocks';
 import {
@@ -468,7 +469,7 @@ export default {
     // Legacy style block definitions :(
     const generator = blockly.getGenerator();
 
-    const behaviorEditor = (Blockly.behaviorEditor = new Blockly.FunctionEditor(
+    const behaviorEditor = (Blockly.behaviorEditor = new FunctionEditor(
       {
         FUNCTION_HEADER: i18n.behaviorEditorHeader(),
         FUNCTION_NAME_LABEL: i18n.behaviorEditorLabel(),

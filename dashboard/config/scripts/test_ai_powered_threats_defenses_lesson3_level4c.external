@@ -1,0 +1,67 @@
+name 'test-ai-powered-threats-defenses-lesson3-level4c'
+title 'Sofia H. - User Profile'
+
+display_name 'Sofia Hernandez'
+bubble_choice_description 'Sofia is a 14 year old student from Miami, FL'
+thumbnail_url 'https://images.code.org/feb6217203ec38832b5976b7e43173c1-image-1755184977472.png'
+
+markdown <<MARKDOWN
+#Sofia  
+#### A data breach is a security incident where sensitive, confidential, or private information is accessed, disclosed, or stolen by unauthorized individuals.
+
+#### Look through Sofia's breach report to try to determine what happened and what type of password attack your user was vulnerable to.
+
+<div style="font-family: sans-serif; font-size: 16px; line-height: 1.6;">
+
+  <h3 style="color: #00838f;">Breach Report</h3>
+  <p><strong>Service Breached:</strong> School Email Portal<br>
+     <strong>Login Location:</strong> IP masked via VPN (region unknown)<br>
+     <strong>Time of Access:</strong> 6:58 a.m.<br>
+     <strong>AI Analysis:</strong> Normal login activity for this account begins after 8:15 a.m.
+  </p>
+
+  <p>Multiple student accounts were targeted in a short time frame.<br>
+     Several short sessions were initiated across different usernames.<br>
+     Sofia’s account was accessed using the password: <strong>BTS123</strong><br>
+     There was no prior login history from the device used.
+  </p>
+
+  <p><strong>AI Analysis:</strong> Password matched a set of interest-themed patterns attempted across multiple accounts.<br>
+     The attacker viewed calendar events but did not send or delete any messages.<br>
+     <strong>AI Analysis:</strong> Browser language settings during login were set to Spanish, which differs from the account default.
+  </p>
+
+  <br>
+
+  <h3 style="color: #00838f;">Password Attacks</h3>
+
+  <table style="width:100%; border-collapse:collapse; border:1px solid #ccc; font-size: 15px;">
+    <tr>
+      <td style="font-weight:bold; padding:10px; border:1px solid #ccc;">Credential stuffing attack</td>
+      <td style="padding:10px; border:1px solid #ccc;">
+        When attackers use real usernames and passwords (often from past breaches) to break into other accounts.
+      </td>
+    </tr>
+    <tr>
+      <td style="font-weight:bold; padding:10px; border:1px solid #ccc;">Password guessing attack</td>
+      <td style="padding:10px; border:1px solid #ccc;">
+        When attackers try different passwords for one account, hoping to guess the right one.
+      </td>
+    </tr>
+    <tr>
+      <td style="font-weight:bold; padding:10px; border:1px solid #ccc;">Password spraying attack</td>
+      <td style="padding:10px; border:1px solid #ccc;">
+        When an attacker tries one common password on many different accounts to avoid detection.
+      </td>
+    </tr>
+    <tr>
+      <td style="font-weight:bold; padding:10px; border:1px solid #ccc;">Brute force attack</td>
+      <td style="padding:10px; border:1px solid #ccc;">
+        When an attacker rapidly tries a large number of possible passwords on one account, using automated tools to find the correct one.
+      </td>
+    </tr>
+  </table>
+
+</div>
+
+MARKDOWN

@@ -1,4 +1,5 @@
 require 'cdo/honeybadger'
+require "clients/lti_logger"
 
 module Services
   module Lti
@@ -24,15 +25,15 @@ module Services
         when Array
           # Per LTI spec, the client ID is used to identify an LTI 1.3 app to the LMS.
           # Only ONE client_id identifies an LTI Tool and is sent in the JWK audience claim.
-          # TODO: Remove the error logging after the Pilot if the error is not seen. https://codedotorg.atlassian.net/browse/P20-787
           if id_token[:aud].length > 1
-            Honeybadger.notify(
-              'Generate Authentication ID error',
-              context: {
-                message: 'Too many client_ids in the audience claim',
-                audience: id_token[:aud],
-              }
-            )
+            attributes = {
+              error: 'Too many client_ids in the audience claim',
+              audience: id_token[:aud],
+              aud_count: id_token[:aud].length,
+            }
+            event_name = 'Generate Authentication ID error'
+            Honeybadger.notify(event_name, context: attributes)
+            LtiLogger.log_event(event_name, attributes)
             raise ArgumentError, "Invalid Audience Claim: #{id_token[:aud]}, with more than 1 client_id. #{id_token[:aud].length} client_ids given."
           else
             id_token[:aud].first

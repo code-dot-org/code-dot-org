@@ -14,6 +14,7 @@ export {
   setStartingAiCustomizations,
   setStudentChatHistory,
   setUserHasAichatAccess,
+  setClientType,
   setViewMode,
   addStagedFile,
   stagedFileUploadFinished,
@@ -21,4 +22,5 @@ export {
   stagedFilesLimitExceeded,
   clearStagedFilesAlert,
   clearStagedFiles,
+  clearHasSetStartingCustomizations,
 } from './slice';

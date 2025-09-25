@@ -19,9 +19,13 @@ const skeletonContent = (
   />
 );
 
-const getSkeletonCell = (id, key = undefined) => (
+const getSkeletonCell = (id, key = undefined, index) => (
   <div
-    className={classNames(styles.gridBox, styles.gridBoxLesson)}
+    className={classNames(
+      styles.gridBox,
+      styles.gridBoxLesson,
+      index % 2 === 0 ? styles.lighterBackground : styles.darkerBackground
+    )}
     key={key}
     // eslint-disable-next-line react/forbid-dom-props
     data-testid={'lesson-skeleton-cell-' + id}
@@ -30,11 +34,15 @@ const getSkeletonCell = (id, key = undefined) => (
   </div>
 );
 
-const getMetadataExpandedSkeletonCell = id => (
+const getMetadataExpandedSkeletonCell = (id, index) => (
   <div className={styles.lessonDataCellExpanded} key={id}>
     {getSkeletonCell(id)}
     <div
-      className={classNames(styles.gridBox, styles.gridBoxMetadata)}
+      className={classNames(
+        styles.gridBox,
+        styles.gridBoxMetadata,
+        index % 2 === 0 ? styles.lighterBackground : styles.darkerBackground
+      )}
       // eslint-disable-next-line react/forbid-dom-props
       data-testid={'lesson-skeleton-cell-' + id + '-time-spent'}
     >
@@ -62,10 +70,14 @@ function SkeletonProgressDataColumn({
         addExpandedLesson={() => {}}
       />
       <div className={styles.lessonDataColumn}>
-        {sortedStudents.map(student =>
+        {sortedStudents.map((student, index) =>
           expandedMetadataStudentIds.includes(student.id)
-            ? getMetadataExpandedSkeletonCell(getId(student, lesson))
-            : getSkeletonCell(getId(student, lesson), getId(student, lesson))
+            ? getMetadataExpandedSkeletonCell(getId(student, lesson), index)
+            : getSkeletonCell(
+                getId(student, lesson),
+                getId(student, lesson),
+                index
+              )
         )}
       </div>
     </div>

@@ -27,6 +27,7 @@ export const MARKETING_AUDIENCE = {
   MIDDLE: 'middle',
   HIGH: 'high',
   HOC: 'hoc',
+  HOAI: 'hoai',
   PL: 'pl',
 };
 const CURRICULUM_TYPES_FOR_AUDIENCE = {
@@ -45,6 +46,7 @@ const CURRICULUM_TYPES_FOR_AUDIENCE = {
     curriculumTypes.module,
   ],
   [MARKETING_AUDIENCE.HOC]: null,
+  [MARKETING_AUDIENCE.HOAI]: null,
   [MARKETING_AUDIENCE.PL]: null,
 };
 
@@ -232,21 +234,14 @@ export default function CurriculumQuickAssign({
 
       const courseVersionId = sectionCourse.versionId;
       const courseVersion = courseVersions[courseVersionId];
-      const isStandaloneUnit = courseVersion.type === 'Unit';
 
-      let targetUnit;
-
-      if (isStandaloneUnit) {
-        targetUnit = Object.values(courseVersion.units)[0];
-      } else if (sectionCourse.unitId) {
-        targetUnit = courseVersion.units[sectionCourse.unitId];
-      }
+      let targetUnit = courseVersion.units[sectionCourse.unitId];
 
       const updateSectionData = {
         displayName: course.display_name,
         courseOfferingId: course.id,
         versionId: courseVersionId,
-        unitId: isStandaloneUnit ? null : sectionCourse.unitId,
+        unitId: sectionCourse.unitId,
         lessonExtrasAvailable: targetUnit?.lesson_extras_available,
         textToSpeechEnabled: targetUnit?.text_to_speech_enabled,
       };
@@ -280,6 +275,7 @@ export default function CurriculumQuickAssign({
   // To distinguish between types of tables: HOC & PL vs Grade Bands
   const SelectedQuickAssignTable =
     marketingAudience === MARKETING_AUDIENCE.HOC ||
+    marketingAudience === MARKETING_AUDIENCE.HOAI ||
     marketingAudience === MARKETING_AUDIENCE.PL
       ? QuickAssignTableHocPl
       : QuickAssignTable;

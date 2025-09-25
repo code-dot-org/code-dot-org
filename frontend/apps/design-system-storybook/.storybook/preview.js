@@ -1,9 +1,11 @@
 import {default as RtlPreview} from 'storybook-addon-rtl/preview';
 
-import {loadFonts} from '@code-dot-org/fonts';
+import {loadFonts, injectFontAwesome} from '@code-dot-org/fonts';
 
-import '@code-dot-org/fonts/index.css';
+import '@code-dot-org/fonts/brands/code.org/index.css';
 import './preview.module.scss';
+
+injectFontAwesome();
 
 /**
  * Ensure fonts are loaded prior to rendering the story
@@ -14,7 +16,7 @@ const fontLoader = async () => {
   };
 };
 
-/** @type { import('@storybook/react').Preview } */
+/** @type { import('@storybook/react-webpack5').Preview } */
 const preview = {
   parameters: {
     controls: {
@@ -22,6 +24,10 @@ const preview = {
         color: /(background|color)$/i,
         date: /Date$/i,
       },
+    },
+
+    docs: {
+      codePanel: true,
     },
   },
 };

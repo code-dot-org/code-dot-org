@@ -22,9 +22,11 @@ export default (project, tosText) => {
           )}`,
         }),
         edit_project: msg.editProject(),
+        view_project: msg.viewProject(),
         go_to_code_studio: msg.goToCodeStudio(),
       },
       isOwner: project.isOwner(),
+      canViewFlaggedProject: project.canViewFlaggedProject(),
     }),
     document.getElementById('codeApp')
   );

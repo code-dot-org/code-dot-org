@@ -1,6 +1,5 @@
 @import 'color.scss';
 @import 'style-constants';
-@import '@code-dot-org/component-library-styles/colors';
 
 @media print {
   .sidebarContainer {
@@ -96,7 +95,7 @@
 
   &.selected {
     border-left: 4px solid var(--borders-brand-teal-primary);
-    background-color: var(--background-neutral-tertiary);
+    background-color: var(--background-neutral-quaternary);
     padding-left: 28px;
     text-decoration: none;
     color: var(--text-neutral-primary);
@@ -191,4 +190,16 @@ h2.skeletonHeaderSectionName {
 .calendarDropdownDescription {
   font-weight: bold;
   margin-right: 10px;
+}
+
+.emptyClassroomDiv {
+  margin: 24px 64px 82px 64px;
+  text-align: center;
+}
+
+.emptyClassroomImage {
+  height: 200px;
+  align-items: end;
+  display: flex;
+  justify-content: center;
 }

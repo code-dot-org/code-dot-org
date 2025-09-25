@@ -13,11 +13,12 @@
 #  updated_at       :datetime
 #  properties       :text(65535)
 #  deleted_at       :datetime
+#  unit_group_id    :integer
 #
 # Indexes
 #
-#  index_user_scripts_on_script_id                             (script_id)
-#  index_user_scripts_on_user_id_and_script_id_and_deleted_at  (user_id,script_id,deleted_at) UNIQUE
+#  index_user_scripts_on_script_id                              (script_id)
+#  index_user_scripts_on_user_script_unit_group_deleted_unique  (user_id,script_id,unit_group_id,deleted_at) UNIQUE
 #
 
 class UserScript < ApplicationRecord

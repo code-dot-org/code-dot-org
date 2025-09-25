@@ -19,7 +19,7 @@ export default {
         username: 'studenta',
         userType: 'student',
         secretWords: 'secret words',
-        secretPicturePath: 'wizard.jpg',
+        secretPictureUrl: 'wizard.jpg',
       },
     ];
 

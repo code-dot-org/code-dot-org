@@ -1,0 +1,9 @@
+name 'test-ai-powered-threats-defenses-lesson3-level6_choice'
+display_name 'Password Guessing Exercise'
+description 'Select a user below and examine a social media post that they made in order to guess their password.'
+
+sublevels
+level 'test-ai-powered-threats-defenses-lesson3-level6a'
+level 'test-ai-powered-threats-defenses-lesson3-level6b'
+level 'test-ai-powered-threats-defenses-lesson3-level6c'
+level 'test-ai-powered-threats-defenses-lesson3-level6d'

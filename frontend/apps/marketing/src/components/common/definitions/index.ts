@@ -31,7 +31,7 @@ export const marginBottomNoneToMDefinition = {
 };
 
 export const removeMarginBottomDefinition: ComponentDefinitionVariable = {
-  displayName: 'Remove margin bottom?',
+  displayName: 'Remove margin bottom',
   type: 'Boolean',
   defaultValue: false,
   group: 'style',
@@ -80,3 +80,109 @@ export const videoRelatedDefinitions: Record<
       'Check this to show a caption (video title) under the video player.',
   },
 };
+
+// Used in the Action Block Collection, Logo Collection, and People Collection components.
+export const collectionsSortOrderDefinition: Record<
+  string,
+  ComponentDefinitionVariable
+> = {
+  sortOrder: {
+    displayName: 'Sort Order',
+    type: 'Text',
+    defaultValue: 'alphabetical',
+    group: 'style',
+    validations: {
+      in: [
+        {value: 'alphabetical', displayName: 'Alphabetical'},
+        {value: 'manual', displayName: 'Manual'},
+      ],
+    },
+  },
+};
+
+// Used in the Action Block Collection, Logo Collection, and People Collection components,
+// and could be used in other components.
+export const hideImagesDefinition: Record<string, ComponentDefinitionVariable> =
+  {
+    hideImages: {
+      displayName: 'Hide images',
+      type: 'Boolean',
+      defaultValue: false,
+      group: 'style',
+    },
+  };
+
+// Used in the Image component
+export const imageSrcDefinition: Record<string, ComponentDefinitionVariable> = {
+  src: {
+    displayName: 'Image source',
+    type: 'Media',
+    defaultValue: undefined,
+    group: 'content',
+    validations: {
+      bindingSourceType: ['asset', 'manual'],
+    },
+  },
+};
+
+export const imageAltTextDefinition: Record<
+  string,
+  ComponentDefinitionVariable
+> = {
+  altText: {
+    displayName: 'Alt text',
+    type: 'Text',
+    defaultValue: '',
+    group: 'content',
+    validations: {
+      bindingSourceType: ['asset', 'manual', 'entry'],
+    },
+  },
+};
+
+export const imageHasRoundedCornersDefinition: Record<
+  string,
+  ComponentDefinitionVariable
+> = {
+  hasRoundedCorners: {
+    displayName: 'Rounded corners',
+    type: 'Boolean',
+    defaultValue: true,
+    group: 'style',
+  },
+};
+
+// Used in the Section component
+export const sectionPaddingDefinition: Record<
+  string,
+  ComponentDefinitionVariable
+> = {
+  padding: {
+    displayName: 'Padding',
+    type: 'Text',
+    group: 'style',
+    description: 'Adds medium or large padding to the section.',
+    defaultValue: 'l',
+    validations: {
+      in: [
+        {value: 'm', displayName: 'Medium'},
+        {value: 'l', displayName: 'Large'},
+        {value: 'none', displayName: 'None'},
+      ],
+    },
+  },
+};
+
+// Used in the Section component
+export const sectionIdDefinition: Record<string, ComponentDefinitionVariable> =
+  {
+    id: {
+      displayName: 'Section ID',
+      type: 'Text',
+      group: 'content',
+      description: 'Adds a custom ID to a section; can be used for skip links.',
+      validations: {
+        bindingSourceType: ['manual'],
+      },
+    },
+  };

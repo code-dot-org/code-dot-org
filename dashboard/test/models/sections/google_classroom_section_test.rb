@@ -6,7 +6,7 @@ class GoogleClassroomSectionTest < ActiveSupport::TestCase
     DCDO.stubs(:get).with(I18nStringUrlTracker::I18N_STRING_TRACKING_DCDO_KEY, false).returns(false)
     DCDO.stubs(:get).with('migration_service_enabled', false).returns(false)
 
-    owner = create :teacher
+    owner = create(:teacher)
     student_list = Google::Apis::ClassroomV1::ListStudentsResponse.from_json(
       {
         students: (1..5).map do |i|
@@ -49,7 +49,7 @@ class GoogleClassroomSectionTest < ActiveSupport::TestCase
     DCDO.stubs(:get).with(I18nStringUrlTracker::I18N_STRING_TRACKING_DCDO_KEY, false).returns(false)
     DCDO.stubs(:get).with('migration_service_enabled', false).returns(false)
 
-    owner = create :teacher
+    owner = create(:teacher)
     student_list = Google::Apis::ClassroomV1::ListStudentsResponse.from_json(
       {
         students: (1..5).map do |i|
@@ -88,7 +88,7 @@ class GoogleClassroomSectionTest < ActiveSupport::TestCase
   end
 
   test 'strips emoji from section name' do
-    owner = create :teacher
+    owner = create(:teacher)
     section = GoogleClassroomSection.from_service(
       '101',
       owner.id,

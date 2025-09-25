@@ -1,7 +1,6 @@
 import {CodebridgeWorkspaceState} from '@codebridge/redux/workspaceRedux';
 
 import {AichatState} from '@cdo/apps/aichat/redux';
-import {AITutorState} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
 import {CalendarState} from '@cdo/apps/code-studio/calendarRedux';
 import {HeaderReduxState} from '@cdo/apps/code-studio/headerRedux';
 import {ProgressState} from '@cdo/apps/code-studio/progressRedux';
@@ -23,6 +22,7 @@ import {MapboxState} from '@cdo/apps/redux/mapbox';
 import {CurrentUserState} from '@cdo/apps/templates/CurrentUserState';
 import {TeacherRubricState} from '@cdo/apps/templates/rubrics/teacherRubricRedux';
 import {TeacherSectionState} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {Weblab2State} from '@cdo/apps/weblab2/redux';
 
 import {DanceState} from '../dance/danceRedux';
 import {BlocklyState} from '../redux/blockly';
@@ -34,7 +34,6 @@ import {BlocklyState} from '../redux/blockly';
 // with registerReducers.
 export interface RootState {
   manageStudents: ManageStudentsState;
-  aiTutor: AITutorState;
   aichat: AichatState;
   blockly: BlocklyState;
   calendar: CalendarState;
@@ -60,6 +59,7 @@ export interface RootState {
   teacherPanel: TeacherPanelState;
   teacherRubric: TeacherRubricState;
   teacherSections: TeacherSectionState;
+  weblab2: Weblab2State;
 }
 
 // Temporary type definition for the result of
@@ -74,7 +74,7 @@ export interface Student {
   gender?: string;
   genderTeacherInput?: string;
   secretWords: string;
-  secretPicturePath: string;
+  secretPictureUrl: string;
   loginType: string;
   sectionId?: number;
   sharingDisabled: boolean;

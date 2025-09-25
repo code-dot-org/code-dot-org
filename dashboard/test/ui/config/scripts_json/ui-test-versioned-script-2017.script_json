@@ -8,7 +8,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-20 18:21:06 UTC",
+    "serialized_at": "2025-07-01 21:28:08 UTC",
+    "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -140,6 +141,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

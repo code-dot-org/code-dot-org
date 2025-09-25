@@ -1,0 +1,17 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2025-07-31T21:44:41.000Z",
+  "level_num": "custom",
+  "user_id": 6959,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Web Lab 2 Lab Widget View\r\n\r\nThis is an example of widget view without toggle to view/hide code so workspace is always hidden.",
+    "widget_view": "true",
+    "widget_view_allow_show_code": "false",
+    "hide_share_and_remix": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-07-31T21:44:41.130+00:00\",\"changed\":[\"cloned from \\\"Allthethings Weblab2 1\\\"\"],\"cloned_from\":\"Allthethings Weblab2 1\"},{\"changed_at\":\"2025-07-31 21:44:55 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-31 21:49:20 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-31 21:49:39 +0000\",\"changed\":[\"widget_view\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-31 21:52:18 +0000\",\"changed\":[\"widget_view_allow_show_code\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-01 16:36:39 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-01 16:36:56 +0000\",\"changed\":[\"widget_view_allow_show_code\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-01 20:57:04 +0000\",\"changed\":[\"widget_view_allow_show_code\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-01 20:57:23 +0000\",\"changed\":[\"widget_view_allow_show_code\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

@@ -12,7 +12,7 @@
   "instructor_audience": "facilitator",
   "properties": {
     "family_name": "sandbox-data-science-pl",
-    "has_numbered_units": true,
+    "numbered_units": "auto",
     "version_year": "unversioned"
   },
   "resources": [

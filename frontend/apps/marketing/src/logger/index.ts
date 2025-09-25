@@ -1,6 +1,6 @@
 import {pino} from 'pino';
 
-type LoggerNamespace = 'contentful';
+type LoggerNamespace = 'contentful' | 'revalidate';
 const loggers = new Map<LoggerNamespace, pino.Logger>();
 const defaultLogger = pino();
 

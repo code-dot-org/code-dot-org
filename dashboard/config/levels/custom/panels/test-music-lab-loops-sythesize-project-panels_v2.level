@@ -1,0 +1,82 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2025-05-31T03:00:03.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "### Creative Coding\n\nThis is Roxanne",
+        "imageUrl": "https://images.code.org/6f1a4dd47abe027f95a96f189703b87a-roxanne1.png",
+        "key": "test-music-lab-loops-sythesize-project-panels-25e9b5d9-07a8-4064-9fb2-75fa8d2262e3",
+        "layout": "text-top-right"
+      },
+      {
+        "text": "### Creative Coding\n\nShe's an Artist, Creator, and Coder\n",
+        "imageUrl": "https://images.code.org/31de70a2eb96f9e6de2fd7926fef44af-roxanne2.png",
+        "key": "test-music-lab-loops-sythesize-project-panels-0b5eb9b2-25d6-472d-9f49-a3c50f1a0b1a",
+        "fadeInOverPrevious": true,
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "### Creative Coding\n\nRoxanne performs music using Code",
+        "imageUrl": "https://images.code.org/daa047d1614da0edd689079fc5119477-roxanne3.png",
+        "key": "test-music-lab-loops-sythesize-project-panels-d145b67c-8a93-4174-92c5-f1215a77cb2b",
+        "layout": "text-bottom-right",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "### Creative Coding\n\nShe edits the code live in front of an audience\n\n",
+        "imageUrl": "https://images.code.org/aff8ceef94afd6c4e912625315bdba2a-roxanne4.png",
+        "key": "test-music-lab-loops-sythesize-project-panels-fb2f98b1-b7e5-4636-a99b-1450c3ccae64",
+        "layout": "text-bottom-right",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "\"As I change the code, the music changes with it\"",
+        "imageUrl": "https://images.code.org/10195782b8a92beb3b053b2b8947a4ef-roxanne5.png",
+        "key": "test-music-lab-loops-sythesize-project-panels-0e55f57b-3524-4334-b2fc-6cc466c0e847",
+        "layout": "text-bottom-center",
+        "fadeInOverPrevious": true,
+        "typing": true
+      },
+      {
+        "text": "\"I'm just giving instructions on how and when to make sound\"",
+        "imageUrl": "https://images.code.org/732afda4c264bf088873fd6daaaa23ef-roxanne6.png",
+        "key": "test-music-lab-loops-sythesize-project-panels-177676fb-e459-49fb-9aa9-4dbc047d67f3",
+        "layout": "text-bottom-center",
+        "fadeInOverPrevious": true,
+        "typing": true
+      },
+      {
+        "text": "### Creative Coding\n\nIn this lesson, we're going to try Live Coding in Music Lab!",
+        "imageUrl": "https://images.code.org/66baa69141692193dc2f847639394a24-live-loop-2.gif",
+        "key": "test-music-lab-loops-sythesize-project-panels-98fbe714-ece3-4234-8117-2262cc925466",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "\"The most rewarding part about being a creative programmer is using programming to create something I feel really passionate about\"",
+        "imageUrl": "https://images.code.org/746ff340c500481898ab66d51cf411e8-roxanne8.png",
+        "key": "test-music-lab-loops-sythesize-project-panels-0a63e0c0-3e78-48a6-8222-48a8750ff79a",
+        "fadeInOverPrevious": true,
+        "typing": true,
+        "layout": "text-bottom-center"
+      },
+      {
+        "text": "\"Passion is an important part of learning to code and finding your style and finding your way\"",
+        "imageUrl": "https://images.code.org/7d2963acbd87ff78babeb70c20178419-roxanne7.png",
+        "key": "test-music-lab-loops-sythesize-project-panels-6a94c904-ca6c-4f46-a405-97c26f98e368",
+        "typing": true,
+        "fadeInOverPrevious": true,
+        "layout": "text-bottom-center"
+      }
+    ],
+    "name_suffix": "_v2"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-05-31T03:00:03.101+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-sythesize-project-panels\\\"\"],\"cloned_from\":\"test-music-lab-loops-sythesize-project-panels\"}]"
+}]]></config>
+</Panels>

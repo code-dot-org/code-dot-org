@@ -29,7 +29,7 @@ header:
         id: header-donate
       - title: incubator
         url: /incubator
-        domain: studio.code.org
+        domain: code.org
         id: header-incubator
       - title: about
         url: /about
@@ -51,7 +51,7 @@ header:
         id: header-student-projects
       - title: incubator
         url: /incubator
-        domain: studio.code.org
+        domain: code.org
         id: header-incubator
 
     teacher:
@@ -73,7 +73,7 @@ header:
         id: header-teacher-professional-learning
       - title: incubator
         url: /incubator
-        domain: studio.code.org
+        domain: code.org
         id: header-teacher-incubator
 
   # The three-bar "hamburger" menu
@@ -131,7 +131,7 @@ header:
         id: donate
       - title: incubator
         url: /incubator
-        domain: studio.code.org
+        domain: code.org
         id: incubator
       - title: about
         type: expander
@@ -232,7 +232,7 @@ header:
         id: donate
       - title: incubator
         url: /incubator
-        domain: studio.code.org
+        domain: code.org
         id: incubator
       - title: about
         type: expander
@@ -317,11 +317,6 @@ header:
       level: Weblab
       url: /docs/ide/weblab
       id: weblab-docs
-    - title: music_lab_documentation
-      domain: studio.code.org
-      level: Music
-      url: /docs/ide/music
-      id: musiclab-docs
     - title: help_support
       url: https://support.code.org
       id: support

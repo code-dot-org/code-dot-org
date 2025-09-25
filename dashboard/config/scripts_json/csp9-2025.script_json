@@ -4,6 +4,18 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "key": "7f0538e2-30f0-433f-a380-982a3380fa80",
+          "notice": "Free 1:1 CSP Tutoring Available!",
+          "details": "Do you work at a Title 1 school? Your students qualify for free, 24/7 online tutoring in AP Computer Science Principles (CSP) and AP Computer Science A (CSA) through our non-profit partner, UPchieve!",
+          "link": "https://app.upchieve.org/sign-up/teacher/eligibility?utm_source=code&utm_medium=banner&utm_campaign=teacher_account",
+          "type": "bullhorn",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "Create an account"
+        }
+      ],
       "content_area": "curriculum_9_12",
       "curriculum_umbrella": "CSP",
       "has_lesson_plan": true,
@@ -16,12 +28,11 @@
       "show_calendar": true,
       "student_detail_progress_view": true,
       "tts": true,
-      "version_year": "2025",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-27 16:21:18 UTC",
+    "serialized_at": "2025-08-25 18:22:01 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,

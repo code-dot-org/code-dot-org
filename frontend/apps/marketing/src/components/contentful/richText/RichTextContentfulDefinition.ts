@@ -13,8 +13,7 @@ export const RichTextContentfulComponentDefinition: ComponentDefinition = {
     imageUrl:
       'https://contentful-images.code.org/90t6bu6vlf76/2nDq9QyBr8reF6G31qpfS3/73a5fdd1d402ff31c9f31e17c09685db/component_rich_text_tooltip.png',
   },
-  // Adding an empty array here so no default style options show in the Design tab.
-  builtInStyles: [],
+  builtInStyles: ['cfTextAlign'],
   children: false,
   variables: {
     content: {

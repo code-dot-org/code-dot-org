@@ -86,6 +86,7 @@ export interface ProgressState {
   unitHasUnnumberedLessons: boolean;
   changeFocusAreaPath: string | undefined;
   unitCompleted: boolean | undefined;
+  courseName: string | null;
 }
 
 export interface MilestoneReport extends OptionalMilestoneData {
@@ -150,6 +151,7 @@ const initialState: ProgressState = {
   unitHasUnnumberedLessons: false,
   changeFocusAreaPath: undefined,
   unitCompleted: undefined,
+  courseName: null,
 };
 
 const progressSlice = createSlice({
@@ -185,6 +187,7 @@ const progressSlice = createSlice({
       state.hasFullProgress = action.payload.isFullProgress;
       state.isLessonExtras = action.payload.isLessonExtras;
       state.currentPageNumber = action.payload.currentPageNumber;
+      state.courseName = action.payload.courseName;
     },
     setCurrentLevelId(state, action: PayloadAction<string>) {
       state.currentLevelId = action.payload;
@@ -463,7 +466,12 @@ function sendReportHelper(
     ...extraData,
   };
 
-  return fetch(`/milestone/${userId}/${scriptLevelId}/${levelId}`, {
+  const courseId = state.courseId;
+  const url = courseId
+    ? `/milestone/${userId}/${scriptLevelId}/${levelId}?course_id=${courseId}`
+    : `/milestone/${userId}/${scriptLevelId}/${levelId}`;
+
+  return fetch(url, {
     method: 'POST',
     headers: {
       'content-type': 'application/json',

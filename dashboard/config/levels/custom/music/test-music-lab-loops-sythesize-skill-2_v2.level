@@ -1,0 +1,73 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2025-05-31T03:00:03.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "packId": "default",
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2",
+            "play_rest_at_current_location_simple2"
+          ],
+          "Functions": [
+
+          ],
+          "Control": [
+            "play_sounds_together",
+            "play_sounds_sequential",
+            "repeat_simple2"
+          ]
+        },
+        "type": "flyout"
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "validationTimeout": 1
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
+    "project_template_level_name": "test-music-lab-loops-sythesize-skill-template_v2",
+    "long_instructions": "### Live Coding\r\n\r\nLive coding doesn't have to be complicated. Try manipulating just one element at a time. See if you can change a sound on the beat. \r\n\r\n**Do this:** \r\n- Plan your next sound shift. Find a sound in the dropdown menu that you'll switch to at Measure 4. \r\n- Practice live coding your music by pressing \"Run\" and clicking on your new sound once the playhead gets to the beginning of Measure 4. \r\n\r\nOnce the timeline reaches measure 8, you'll be able to continue!",
+    "validations": [
+      {
+        "key": "test-music-lab-loops-sythesize-skill-2_7bd65eaa-e227-4660-832a-3da05a4d2d88",
+        "message": "",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_anything_in_same_loop",
+            "value": 4
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-loops-sythesize-skill-2_6ee8119a-6db7-4465-ab92-994e4c59e45b",
+        "message": "Make your updates **live** while the song is playing!",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "name_suffix": "_v2",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-05-31T03:00:03.805+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-sythesize-skill-2\\\"\"],\"cloned_from\":\"test-music-lab-loops-sythesize-skill-2\"}]"
+}]]></config>
+  <blocks/>
+</Music>

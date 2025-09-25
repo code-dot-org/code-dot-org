@@ -15,12 +15,11 @@
       "show_calendar": true,
       "student_detail_progress_view": true,
       "tts": true,
-      "version_year": "2025",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-27 16:18:59 UTC",
+    "serialized_at": "2025-09-12 14:12:00 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -7262,11 +7261,9 @@
     },
     {
       "name": "[EXEMPLAR] Unit 6 Guide",
-      "url": "https://docs.google.com/document/d/1O8_f2SkeW7wUmyZGMYxIkhu6ofLckmOIsDwcg1pqklA/edit?usp=share_link",
+      "url": "https://docs.google.com/document/d/16PaSXLhaT_Tfk3AG5o2u8mSCP4QUXao0jakgkuZxmRw/edit?usp=drive_link",
       "key": "_exemplar_unit_6_guide",
       "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
       },
       "seeding_key": {
         "resource.key": "_exemplar_unit_6_guide"
@@ -7578,11 +7575,9 @@
     },
     {
       "name": "CSA Unit 6 Slides",
-      "url": "https://docs.google.com/presentation/d/1eLWoMSaZ53xEjZo2iLPzxCPNhpveNFNifkOCiqycAYw/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1Vo8x0BKL4GW_TH0DccXSfubHRnEqXqjbHOEggGDLfQ8/edit?usp=sharing",
       "key": "csa_unit_6_slides",
       "properties": {
-        "audience": "Verified Teacher",
-        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "csa_unit_6_slides"
@@ -8028,12 +8023,9 @@
     },
     {
       "name": "Unit 6 Guide",
-      "url": "https://docs.google.com/document/d/12jLdyrtHeDoZYXsVlO12wmV-x1SCfD9l5sr8CZTXKGM/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1roXhLDL-Pncs7yPocYI1JUtSiPCO6AoseNi3qI2xVfk/edit?usp=drive_link",
       "key": "unit_6_guide",
       "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "unit_6_guide"
@@ -8041,11 +8033,9 @@
     },
     {
       "name": "Unit 6 Overview",
-      "url": "https://docs.google.com/document/d/1w1ZZqKQhyhO-YBjvK9b_qX4X6Djk588tmhR9y1H8dR4/edit?usp=share_link",
+      "url": "https://docs.google.com/document/d/1wTQiXcXyrnZ4h-q92_a-H_Bo0BK7ARzh4sD0tOeCD-Y/edit?usp=drive_link",
       "key": "unit_6_overview",
       "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "unit_6_overview"
@@ -8053,12 +8043,9 @@
     },
     {
       "name": "Unit 6 Study Guide",
-      "url": "https://docs.google.com/document/d/1-xgKZvDhQy3aoiRVkMJBT1KEF8TUP8O-_U8Eo8bseTk/edit?usp=share_link",
+      "url": "https://docs.google.com/document/d/1BHnXw69euWyWdJ2IAxN3bnbjS_Ci2rdkFnm6baikzqc/edit?usp=drive_link",
       "key": "unit_6_study_guide",
       "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "unit_6_study_guide"
