@@ -29,7 +29,7 @@ class CodeprojectsPreviewController < ApplicationController
 
     # Security Control: Restrict JavaScript execution sources (overrides default-src for scripts)
     # Goal: Allow student code execution while preventing external script injection
-    script_src_base = "'self' blob: #{code_studio_url}"
+    script_src_base = "'self' blob:"
 
     # Security Control: Allow eval() for dynamic code execution in student projects and to load our dependencies.
     # Goal: Enable loading dependencies that use eval() so we can preview student projects.
