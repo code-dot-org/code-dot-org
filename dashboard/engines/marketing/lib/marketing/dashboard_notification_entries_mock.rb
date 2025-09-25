@@ -1,34 +1,8 @@
-require 'singleton'
-require 'contentful'
+# frozen_string_literal: true
 
 # This is a mocked version of the ContentfulClient used in development and test environments
 module Marketing
-  class StubbedContentfulClient
-    include Singleton
-
-    class << self
-      delegate :entry, :entries, to: :instance
-    end
-
-    def initialize
-      @stubbed_entries = {}
-      @stubbed_entries['dashboard-notification'] = [STUB_ENTRY_1, STUB_ENTRY_2, STUB_ENTRY_3]
-    end
-
-    # Pass through to the real client.
-    def entry(locale, id)
-      Marketing::ContentfulClient.entry(locale, id)
-    end
-
-    # We currently only stub out the entries method for `dashboard-notification` content type.
-    def entries(locale, content_type_id)
-      if @stubbed_entries[content_type_id].present?
-        @stubbed_entries[content_type_id] || []
-      else
-        Marketing::ContentfulClient.entries(content_type: content_type_id, locale: locale)
-      end
-    end
-
+  module DashboardNotificationEntriesMock
     STUB_ENTRY_1 = OpenStruct.new(
       id: 'test_notification_1',
       first_published_at: "2025-09-01T00:00:00Z",
@@ -80,5 +54,12 @@ module Marketing
         expires_at: "2025-08-16T00:00-07:00"
       }
     )
+
+    ENTRIES = [STUB_ENTRY_1, STUB_ENTRY_2, STUB_ENTRY_3].freeze
+
+    def self.find_each(**, &block)
+      ENTRIES.each(&block)
+      ENTRIES.size
+    end
   end
 end

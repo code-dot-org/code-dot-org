@@ -5528,7 +5528,7 @@ en:
           description_teacher: ''
           version_title: "'25 - '26"
         codechella2025:
-          title: Codechella 2025
+          title: Ctrl-Alt-Retreat 2025
           description_short: ''
           description_student: ''
           description_teacher: ''
@@ -6319,6 +6319,12 @@ en:
           version_title: "'25-26"
         hoai2025-dev:
           title: hoai2025-dev
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        hoai-dance-pilot1:
+          title: hoai-dance-pilot1
           description_short: ''
           description_student: ''
           description_teacher: ''
