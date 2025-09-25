@@ -1,6 +1,5 @@
 require 'test_helper'
 require 'contentful'
-require_relative '../../lib/marketing/dashboard_notifications/contentful_notification_source'
 
 class ContentfulNotificationSourceTest < ActionDispatch::IntegrationTest
   include Minitest::RSpecMocks
