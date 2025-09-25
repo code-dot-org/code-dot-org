@@ -69,13 +69,14 @@ export const AiChatDisabledProvider: FC<AiChatDisabledProviderProps> = ({
     () => ({
       chatDisabled: state.chatDisabled,
       chatDisabledMessage: state.chatDisabledMessage,
-      setChatDisabled: (d: boolean) => setState(s => ({...s, chatDisabled: d})),
-      setChatDisabledMessage: (m?: string) =>
-        setState(s => ({...s, chatDisabledMessage: m})),
-      setChatDisabledState: (s: {
+      setChatDisabled: (chatDisabled: boolean) =>
+        setState(prevState => ({...prevState, chatDisabled})),
+      setChatDisabledMessage: (chatDisabledMessage?: string) =>
+        setState(prevState => ({...prevState, chatDisabledMessage})),
+      setChatDisabledState: (newState: {
         chatDisabled: boolean;
         chatDisabledMessage?: string;
-      }) => setState(s),
+      }) => setState(newState),
     }),
     [state]
   );
