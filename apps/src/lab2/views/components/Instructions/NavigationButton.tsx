@@ -9,8 +9,6 @@ import {
   nextLevelId,
 } from '@cdo/apps/code-studio/progressReduxSelectors';
 import {queryParams} from '@cdo/apps/code-studio/utils';
-import WithConditionalTooltip from '@cdo/apps/codebridge/components/WithConditionalTooltip';
-import lab2I18n from '@cdo/apps/lab2/locale';
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
 import {isPredictResponseSubmitted} from '@cdo/apps/lab2/redux/predictLevelRedux';
 import {LevelProperties} from '@cdo/apps/lab2/types';
@@ -22,8 +20,6 @@ import {
   LevelStatus,
   UserLevelInteractions,
 } from '@cdo/generated-scripts/sharedConstants';
-
-import moduleStyles from '@cdo/apps/lab2/views/components/Instructions/navigation-button.module.scss';
 
 interface NavigationButtonProps {
   levelProperties: LevelProperties;
@@ -164,8 +160,6 @@ const SubmitButton: React.FC<SubmitButtonProps> = ({
     disableEditRunForSubmission || hasSubmitted || (hasRun && hasEdited);
   const buttonText = hasSubmitted ? commonI18n.unsubmit() : commonI18n.submit();
 
-  const tooltipMessage = enabled ? undefined : lab2I18n.toSubmitEditRun();
-
   const dialogControl = useDialogControl();
   const dispatch = useAppDispatch();
 
@@ -202,25 +196,13 @@ const SubmitButton: React.FC<SubmitButtonProps> = ({
   };
 
   return (
-    <div className={moduleStyles.buttonInstructionTooltipOverlay}>
-      <WithConditionalTooltip
-        showTooltip={!!tooltipMessage}
-        tooltipProps={{
-          text: tooltipMessage || '',
-          direction: 'onTop',
-          tooltipId: 'submit-button-tooltip',
-          size: 'xs',
-        }}
-      >
-        <Button
-          id="instructions-submit-button"
-          text={buttonText}
-          onClick={onSubmit}
-          className={className}
-          disabled={!enabled}
-        />
-      </WithConditionalTooltip>
-    </div>
+    <Button
+      id="instructions-submit-button"
+      text={buttonText}
+      onClick={onSubmit}
+      className={className}
+      disabled={!enabled}
+    />
   );
 };
 

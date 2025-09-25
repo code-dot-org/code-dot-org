@@ -4,12 +4,14 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "content_area": "other",
+      "curriculum_umbrella": "Other",
       "is_migrated": true,
       "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-09-22 20:44:53 UTC",
+    "serialized_at": "2025-09-24 14:58:09 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -95,7 +97,8 @@
       "key": "879801e4-7cf3-4c74-a38c-6efe87ec88e1",
       "position": 1,
       "properties": {
-        "description": "PL Content"
+        "description": "PL Content",
+        "progression_name": "AI as a Co-Creator"
       },
       "seeding_key": {
         "activity_section.key": "879801e4-7cf3-4c74-a38c-6efe87ec88e1",
@@ -168,6 +171,28 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "AI as a Co-Creator"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "codechella-csaif_pl_ai"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "tandl-ai",
+        "activity_section.key": "879801e4-7cf3-4c74-a38c-6efe87ec88e1"
+      },
+      "level_keys": [
+        "codechella-csaif_pl_ai"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "codechella-2025-product-generator"
         ],
@@ -188,8 +213,8 @@
       ]
     },
     {
-      "chapter": 2,
-      "position": 2,
+      "chapter": 3,
+      "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -213,8 +238,8 @@
       ]
     },
     {
-      "chapter": 3,
-      "position": 3,
+      "chapter": 4,
+      "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -238,8 +263,8 @@
       ]
     },
     {
-      "chapter": 4,
-      "position": 4,
+      "chapter": 5,
+      "position": 5,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -263,8 +288,8 @@
       ]
     },
     {
-      "chapter": 5,
-      "position": 5,
+      "chapter": 6,
+      "position": 6,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -288,8 +313,8 @@
       ]
     },
     {
-      "chapter": 6,
-      "position": 6,
+      "chapter": 7,
+      "position": 7,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -313,8 +338,8 @@
       ]
     },
     {
-      "chapter": 7,
-      "position": 7,
+      "chapter": 8,
+      "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -338,7 +363,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 9,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -364,6 +389,18 @@
     }
   ],
   "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "codechella-csaif_pl_ai",
+        "script_level.level_keys": [
+          "codechella-csaif_pl_ai"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "tandl-ai",
+        "activity_section.key": "879801e4-7cf3-4c74-a38c-6efe87ec88e1"
+      }
+    },
     {
       "seeding_key": {
         "level.key": "codechella-2025-product-generator",

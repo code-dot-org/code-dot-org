@@ -25227,3 +25227,14 @@ en:
           description_short: Hour of AI 2025 dev
           description: ''
           student_description: ''
+        ctrl-alt-retreat-2025-teaching-learning-gallery-walk:
+          lessons:
+            lesson-1:
+              name: AI Modes Exploration
+          lesson_groups: {}
+          name: ctrl-alt-retreat-2025-teaching-learning-gallery-walk
+          title: Ctrl+Alt+Retreat AI Modes Demo
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''

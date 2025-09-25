@@ -9,6 +9,16 @@
   grid-template-rows: 40px 1fr;
 }
 
+// Styles applied when in full screen view mode
+.fullScreenPreviewContainer {
+  padding: 1rem;
+
+  & > .previewWrapper {
+    border-radius: 0 0 0.25rem 0.25rem;
+    overflow: hidden;
+  }
+}
+
 .previewHeader {
   display: flex;
   justify-content: space-between;
