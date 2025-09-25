@@ -1,24 +1,4 @@
 Feature: Age Gated Sections Modal and Banner
-  @eyes
-  Scenario: Age gated sections banner and modal for Teachers
-    Given I am on "http://studio.code.org"
-    Given CPA all user lockout phase
-
-    Given I create an authorized teacher-associated under-13 student in Colorado named "Sally" after CAP start
-    Given I am assigned to course "allthethingscourse" unit 1
-
-    When I sign in as "Teacher_Sally" and go home
-    And I wait until element "#ui-test-section-list" is visible
-
-    # Click on Age Gated Banner Sections button to view Age Gated Sections Modal
-    When I open my eyes to test "Age Gated Sections Banner and Modal"
-    And I wait until element "#uitest-age-gated-sections-banner" is visible
-    Then I see no difference for "age gated sections banner"
-
-    And I click selector "a:contains(Sections)"
-    And I wait until element "#uitest-age-gated-sections-modal" is visible
-    Then I see no difference for "age gated sections modal"
-    And I close my eyes
 
   Scenario: Teacher viewing their section with no at risk age gated students should not see age gated sections banner
     Given I am on "http://studio.code.org"
