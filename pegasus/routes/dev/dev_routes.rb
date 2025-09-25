@@ -38,13 +38,6 @@ post '/api/dev/start-build' do
   )
 end
 
-post '/api/dev/set-last-dtt-green' do
-  forbidden! unless rack_env == :test
-  dont_cache
-  forbidden! unless params[:token] == CDO.slack_set_last_dtt_green_token
-  TestServerStatus.mark_green GitHub.sha('test')
-end
-
 post '/api/dev/check-dts' do
   forbidden! unless rack_env == :staging || rack_env == :development
   forbidden! unless verify_signature(CDO.github_webhook_secret)
