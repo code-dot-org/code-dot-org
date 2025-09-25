@@ -5,6 +5,17 @@ class AidiffThreadsController < ApplicationController
   before_action :authenticate_user!
   load_and_authorize_resource
 
+  LEVEL_TO_LAB = {
+    'Applab' => 'applab',
+    'Gamelab' => 'gamelab',
+    'GamelabJr' => 'spritelab',
+    'Javalab' => 'javalab',
+    'Weblab' => 'weblab',
+    'Weblab2' => 'weblab',
+    'Music' => 'music',
+    'Pythonlab' => 'pythonlab'
+  }.freeze
+
   # POST /aidiff_threads
   def create
     unless validate_context? && has_required_chat_params?
@@ -186,7 +197,7 @@ class AidiffThreadsController < ApplicationController
       student_code
     )
 
-    response = AiDiffBedrockHelper.request_bedrock_rag_chat(input, prompt, lesson_num, unit_num, course_names, session_id, @section_contexts)
+    response = AiDiffBedrockHelper.request_bedrock_rag_chat(input, prompt, lesson_num, unit_num, course_names, session_id, @section_contexts, get_labs(context_type))
     #TODO: check for profanity/PII in model response
 
     {
@@ -209,7 +220,8 @@ class AidiffThreadsController < ApplicationController
       {
         context: context_scope,
         course_display_name: course_display_name,
-        course_names: course_names
+        course_names: course_names,
+        section: section
       }
     end
     contexts
@@ -242,6 +254,44 @@ class AidiffThreadsController < ApplicationController
     if context_type == SharedConstants::AI_DIFF_CONTEXT[:GENERAL]
       @section_contexts = get_active_sections
     end
+  end
+
+  # Returns name(s) of programming environment(s) in the chat context
+  private def get_labs(context_type)
+    if context_type == SharedConstants::AI_DIFF_CONTEXT[:LEVEL]
+      labs_from_level(@level)
+    elsif context_type == SharedConstants::AI_DIFF_CONTEXT[:LESSON]
+      @lesson.levels.map {|level| labs_from_level(level)}
+    elsif context_type == SharedConstants::AI_DIFF_CONTEXT[:UNIT]
+      @unit.levels.map {|level| labs_from_level(level)}
+    elsif context_type == SharedConstants::AI_DIFF_CONTEXT[:COURSE]
+      @unit_group.default_units.map do |unit|
+        unit.levels.map {|level| labs_from_level(level)}
+      end
+    elsif context_type == SharedConstants::AI_DIFF_CONTEXT[:GENERAL]
+      @section_contexts.map do |sc|
+        units =
+          if sc[:section]&.unit_group.present?
+            sc[:section].unit_group.default_units
+          elsif sc[:section]&.script.present?
+            [sc[:section].script]
+          else
+            []
+          end
+        units.map do |unit|
+          unit.levels.map {|level| labs_from_level(level)}
+        end
+      end
+    else
+      []
+    end.flatten.compact.uniq
+  end
+
+  private def labs_from_level(level)
+    [
+      LEVEL_TO_LAB[level.type],
+      level.try(:sublevels)&.map {|sublevel| LEVEL_TO_LAB[sublevel.type]}
+    ]
   end
 
   private def log_messages(response_body)

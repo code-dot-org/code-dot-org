@@ -5,13 +5,11 @@ require 'contentful'
 module Marketing
   module Teacher
     class PromotionsController < ApplicationController
-      TEACHER_HOMEPAGE_SIDEBAR_CONTENT_TYPE = 'teacherHomepageSidebar'
-
       # GET /marketing/teacher/promotions/:id
       # Returns a teacher sidebar with up to two individual promotional items.
       def show
-        entry = Marketing::ContentfulClient.entry('en-US', params[:id])
-        return head :not_found unless entry && entry.content_type.id == TEACHER_HOMEPAGE_SIDEBAR_CONTENT_TYPE
+        entry = CdoContentful::Marketing::Entry::TeacherHomepageSidebar.find(params[:id])
+        return head :not_found unless entry
 
         result = entry.fields.clone
         ads = result[:sidebar_ads].map do |ad|
