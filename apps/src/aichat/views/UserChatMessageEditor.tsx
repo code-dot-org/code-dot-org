@@ -71,7 +71,7 @@ const UserChatMessageEditor: React.FunctionComponent<
                 ? chatAssets
                 : undefined,
             userAddedContext:
-              Object.keys(userAddedContext).length > 0
+              Object.values(userAddedContext).length > 0
                 ? Object.values(userAddedContext)
                 : undefined,
           })
