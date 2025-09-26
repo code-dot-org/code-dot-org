@@ -1,0 +1,14 @@
+name 'problem-solving-with-ai-postassessment-q5_2025-pilot_v2-2025'
+
+question 'What is one major weakness of AI compared to human intelligence?'
+
+right 'AI lacks creativity and true understanding, relying only on patterns and probability.'
+wrong 'AI makes no mistakes because it processes data with perfect accuracy.'
+wrong 'AI can reason and think critically just like humans.'
+wrong 'AI always provides unbiased responses since it was programmed by humans.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 4: Smart or Just Predictable?
+MARKDOWN

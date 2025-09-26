@@ -1,5 +1,6 @@
 <Dancelab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 63,
   "created_at": "2025-09-19T22:31:17.000Z",
   "level_num": "custom",
@@ -34,10 +35,15 @@
     "ai_code_generate": "true",
     "display_name": "Regenerate the dance",
     "thumbnail_url": "https://images.code.org/2cc954ff41cbcdad4404fb70778c4032-Untitled 9.jpg",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ],
+    "project_template_level_name": "dance_moves_template"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-09-19T22:31:17.534+00:00\",\"changed\":[\"cloned from \\\"hoai2025-dance-create\\\"\"],\"cloned_from\":\"hoai2025-dance-create\"},{\"changed_at\":\"2025-09-23 02:55:40 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-23 02:57:42 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-23 03:00:25 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-09-19T22:31:17.534+00:00\",\"changed\":[\"cloned from \\\"hoai2025-dance-create\\\"\"],\"cloned_from\":\"hoai2025-dance-create\"},{\"changed_at\":\"2025-09-23 02:55:40 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-23 02:57:42 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-23 03:00:25 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-23 16:46:02 +0000\",\"changed\":[\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Dancelab>

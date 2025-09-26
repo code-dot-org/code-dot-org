@@ -1,0 +1,20 @@
+name 'programming-fundamentals-lesson12-level6_2025-launch_v2-2025'
+title 'Check Your Understanding'
+
+right 'The `Painter` will always turn left, even after moving forward.'
+wrong 'The `Painter` will turn left only if it can\'t move forward.'
+wrong 'The code is missing a call to `turn_right()`.'
+wrong 'The `Painter` won\'t turn at all unless there\'s an error.'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+What is the problem with the following code?
+
+```
+def move_or_turn(painter):
+  if painter.can_move():
+    painter.move()
+  painter.turn_left()
+```
+MARKDOWN

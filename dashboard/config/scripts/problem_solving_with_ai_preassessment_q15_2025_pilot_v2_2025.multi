@@ -1,0 +1,14 @@
+name 'problem-solving-with-ai-preassessment-q15_2025-pilot_v2-2025'
+
+question 'Which statement best reflects a balanced view of AI\'s role in society?'
+
+wrong 'AI always harms more than it helps.'
+wrong 'AI should be trusted more than humans in all situations.'
+right 'AI can improve lives but must be monitored for fairness and sustainability.'
+wrong 'AI is neutral and doesn\'t impact different people in different ways.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 12: AI's Role in Society
+MARKDOWN

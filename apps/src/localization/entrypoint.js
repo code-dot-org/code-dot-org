@@ -49,6 +49,8 @@ const live = [
   '/courses/foundations-gen-ai-2025',
   '/courses/foundations-generative-ai-unplugged',
   '/courses/k5-ai-data-2024',
+  '/courses/artificial-intelligence-foundations-2025/units/2',
+  '/courses/artificial-intelligence-foundations-2025/units/5',
 ];
 
 const experiments =

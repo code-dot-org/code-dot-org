@@ -1,0 +1,52 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2025-09-25T19:55:55.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Envisioning Your Future\r\n\r\n### Do This:\r\n1. Interact with the chatbot by uploading a picture of your vision board.\r\n2. Ask AI Chat how you might incorporate emerging technology into a future career.\r\n  \r\nTry this prompt:\r\n> Look at my Careers in Technology vision board and suggest some emerging technologies that I might use.\r\n\r\n**Tip:** You can also provide the career and ask what emerging technology might be used with that career.\r\n&nbsp\r\n\r\n::: details [<i class=\"fa fa-file-image-o\" aria-hidden=\"true\"></i> **How do I upload an image?**]\r\n- Click the button labeled **Upload** below your chat input.\r\n- Choose **From Device**\r\n- Then browse your local files.\r\n- When you find your vision board, click it to select it and then click **Open**.\r\n- You should see the image get added to the message being sent to AI Chat.\r\n:::\r\n&nbsp\r\n\r\n:::details [<i class=\"fa fa-briefcase\" aria-hidden=\"true\"></i> **Need to download your vision board?**]\r\nClick **File** -> **Download** -> **PNG image**\r\n![](https://images.code.org/9225f6b1e5062f6a5aac87ff9e8d2dbc-image-1745347859241.50.50 PM.png)\r\n:::",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.3,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are a computing career and emerging technology advisor. Here are your tasks:\n1. When given an image of a student's vision board, provide suggestions on how the emerging technologies listed below could apply to the computing careers on the vision board. \n2. When just given a computing career, provide suggestions for emerging technology that could be used with the provided computing career. \n\nAlways keep responses to short 1-2 sentences.\nDo not answer any questions that are not related to careers in computing or emerging technologies. \n\nHere are some of the Emerging Technologies:\nAI (Artificial Intelligence)\nRobotics\nAutonomous Vehicles\nGenerative AI\nAugmented Reality (AR)\nVirtual Reality (VR)\nInternet of Things (IoT)\nQuantum Computing\nAutomation\n\nYou can suggest additional emerging technologies beyond the list above.",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "multimodalEnabled": true
+    },
+    "name_suffix": "_v2-2025",
+    "starter_assets": {
+      "Sample Vision Board.png": "d2726f6f-8dff-4986-90dd-d37c6c993da8.png"
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:55:55.165+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson1-level3_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson1-level3_2025\"}]"
+}]]></config>
+</Aichat>

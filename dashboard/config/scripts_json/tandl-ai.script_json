@@ -4,12 +4,14 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "content_area": "other",
+      "curriculum_umbrella": "Other",
       "is_migrated": true,
       "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-09-22 20:44:53 UTC",
+    "serialized_at": "2025-09-24 20:05:15 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -95,7 +97,8 @@
       "key": "879801e4-7cf3-4c74-a38c-6efe87ec88e1",
       "position": 1,
       "properties": {
-        "description": "PL Content"
+        "description": "PL Content",
+        "progression_name": "AI as a Co-Creator"
       },
       "seeding_key": {
         "activity_section.key": "879801e4-7cf3-4c74-a38c-6efe87ec88e1",
@@ -103,20 +106,8 @@
       }
     },
     {
-      "key": "2e7b1b90-19b2-4869-9545-b22d655cf5ee",
-      "position": 2,
-      "properties": {
-        "description": "Generate a product idea!",
-        "progression_name": "Generate a Product!"
-      },
-      "seeding_key": {
-        "activity_section.key": "2e7b1b90-19b2-4869-9545-b22d655cf5ee",
-        "lesson_activity.key": "2c3cc739-ed4b-4bc6-b2d3-6c1c00e740da"
-      }
-    },
-    {
       "key": "776753c2-fc14-41d3-9a37-091c498bd45b",
-      "position": 3,
+      "position": 2,
       "properties": {
         "description": "Get a quick tutorial on how to write a successful prompt.",
         "progression_name": "TaCoFoRT Panel"
@@ -127,10 +118,22 @@
       }
     },
     {
+      "key": "2e7b1b90-19b2-4869-9545-b22d655cf5ee",
+      "position": 3,
+      "properties": {
+        "description": "Generate a product idea!",
+        "progression_name": "Generate a Product!"
+      },
+      "seeding_key": {
+        "activity_section.key": "2e7b1b90-19b2-4869-9545-b22d655cf5ee",
+        "lesson_activity.key": "2c3cc739-ed4b-4bc6-b2d3-6c1c00e740da"
+      }
+    },
+    {
       "key": "b1c897da-8eff-4872-9fb2-e630e366bf21",
       "position": 4,
       "properties": {
-        "description": "It's time to design your product. Choose your role:\n- **Copywriter** (Text): Product name + slogan\n- **Graphic Designer** (Visual): Logo description + branding\n- **Video Producer** (Video or Text): Commercial script\n- **Sound Designer** (Audio or Text): Song or jingle\n\nThen go through each phase of product launch:\n1. Market research\n2. Brainstorming initial ideas\n3. Generating content\n4. Refining and editing\n",
+        "description": "It's time to design your product. Choose your role:\n- **Copywriter** (Text): Product name + slogan\n- **Graphic Designer** (Visual): Logo description + branding\n- **Video Director** (Video or Text): Commercial script\n- **Musician** (Audio or Text): Song or jingle\n\nThen go through each phase of product launch:\n1. Market research\n2. Brainstorming initial ideas\n3. Generating content\n4. Refining and editing\n",
         "progression_name": "Collaborate on a Product Launch"
       },
       "seeding_key": {
@@ -168,23 +171,20 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "codechella-2025-product-generator"
-        ],
-        "progression": "Generate a Product!"
+        "progression": "AI as a Co-Creator"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "codechella-2025-product-generator"
+          "codechella-csaif_pl_ai"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "tandl-ai",
-        "activity_section.key": "2e7b1b90-19b2-4869-9545-b22d655cf5ee"
+        "activity_section.key": "879801e4-7cf3-4c74-a38c-6efe87ec88e1"
       },
       "level_keys": [
-        "codechella-2025-product-generator"
+        "codechella-csaif_pl_ai"
       ]
     },
     {
@@ -219,6 +219,31 @@
       "assessment": false,
       "properties": {
         "level_keys": [
+          "codechella-2025-product-generator"
+        ],
+        "progression": "Generate a Product!"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "codechella-2025-product-generator"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "tandl-ai",
+        "activity_section.key": "2e7b1b90-19b2-4869-9545-b22d655cf5ee"
+      },
+      "level_keys": [
+        "codechella-2025-product-generator"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
           "codechella-2025-product-launch-1-market-research"
         ],
         "progression": "Collaborate on a Product Launch"
@@ -238,8 +263,8 @@
       ]
     },
     {
-      "chapter": 4,
-      "position": 4,
+      "chapter": 5,
+      "position": 5,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -263,8 +288,8 @@
       ]
     },
     {
-      "chapter": 5,
-      "position": 5,
+      "chapter": 6,
+      "position": 6,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -288,8 +313,8 @@
       ]
     },
     {
-      "chapter": 6,
-      "position": 6,
+      "chapter": 7,
+      "position": 7,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -313,8 +338,8 @@
       ]
     },
     {
-      "chapter": 7,
-      "position": 7,
+      "chapter": 8,
+      "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -338,7 +363,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 9,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -366,14 +391,14 @@
   "levels_script_levels": [
     {
       "seeding_key": {
-        "level.key": "codechella-2025-product-generator",
+        "level.key": "codechella-csaif_pl_ai",
         "script_level.level_keys": [
-          "codechella-2025-product-generator"
+          "codechella-csaif_pl_ai"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "tandl-ai",
-        "activity_section.key": "2e7b1b90-19b2-4869-9545-b22d655cf5ee"
+        "activity_section.key": "879801e4-7cf3-4c74-a38c-6efe87ec88e1"
       }
     },
     {
@@ -386,6 +411,18 @@
         "lesson_group.key": "",
         "script.name": "tandl-ai",
         "activity_section.key": "776753c2-fc14-41d3-9a37-091c498bd45b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "codechella-2025-product-generator",
+        "script_level.level_keys": [
+          "codechella-2025-product-generator"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "tandl-ai",
+        "activity_section.key": "2e7b1b90-19b2-4869-9545-b22d655cf5ee"
       }
     },
     {
