@@ -1,10 +1,11 @@
 import {BodyOneText} from '@code-dot-org/component-library/typography';
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
+import AiTutorChatContextButton from '@codebridge/Editor/AiTutorChatContextButton';
 import {esLint} from '@codemirror/lang-javascript';
 import {LanguageSupport} from '@codemirror/language';
 import {linter, lintGutter} from '@codemirror/lint';
-import {Extension} from '@codemirror/state';
-import {EditorView} from '@codemirror/view';
+import {EditorState, Extension, StateField} from '@codemirror/state';
+import {EditorView, showTooltip, Tooltip} from '@codemirror/view';
 import js from '@eslint/js';
 import {
   colorPicker,
@@ -13,6 +14,7 @@ import {
 import * as eslint from 'eslint-linter-browserify';
 import globals from 'globals';
 import React, {useCallback, useMemo} from 'react';
+import ReactDOM from 'react-dom';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {getActiveFileForSource} from '@cdo/apps/lab2/projects/utils';
@@ -48,8 +50,61 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
   );
 
   const editorConfigExtensions = useMemo(() => {
+    const extensions: Extension[] = [];
+    // todo: use helper method
+    if (!file?.url && levelProperties.appName === 'weblab2') {
+      const getCursorTooltips = (state: EditorState) => {
+        return state.selection.ranges
+          .filter(range => !range.empty)
+          .map(range => {
+            const startingPosition = state.selection.main.from;
+            const endingPosition = state.selection.main.to;
+            const startingLine = state.doc.lineAt(startingPosition).number;
+            const endingLine = state.doc.lineAt(endingPosition).number;
+            const selection = state.doc.sliceString(
+              startingPosition,
+              endingPosition
+            );
+            return {
+              pos: range.to,
+              above: false,
+              strictSide: true,
+              arrow: false,
+              clip: false,
+              create: () => {
+                const dom = document.createElement('div');
+                dom.className = moduleStyles.aiTutorTooltip;
+                ReactDOM.render(
+                  <AiTutorChatContextButton
+                    text={selection}
+                    startingLine={startingLine}
+                    endingLine={endingLine}
+                    saveSelectionContext={(text, startingLine, endingLine) =>
+                      console.log({text, startingLine, endingLine})
+                    }
+                  />,
+                  dom
+                );
+                return {dom};
+              },
+            };
+          });
+      };
+
+      const cursorTooltipField = StateField.define<readonly Tooltip[]>({
+        create: getCursorTooltips,
+
+        update(tooltips, tr) {
+          if (!tr.docChanged && !tr.selection) return tooltips;
+          return getCursorTooltips(tr.state);
+        },
+
+        provide: f => showTooltip.computeN([f], state => state.field(f)),
+      });
+      extensions.push(cursorTooltipField);
+    }
     if (file?.language && langMapping[file.language]) {
-      const extensions: Extension[] = [langMapping[file.language]];
+      extensions.push(langMapping[file.language]);
       if (file.language === 'js') {
         // eslint configuration
         const config = {
@@ -79,7 +134,7 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
     } else {
       return [];
     }
-  }, [file?.language, langMapping]);
+  }, [file?.language, file?.url, langMapping, levelProperties.appName]);
 
   if (file?.url && viewableImageFileType(file.language)) {
     return (
