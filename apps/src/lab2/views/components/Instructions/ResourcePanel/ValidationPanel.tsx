@@ -17,14 +17,16 @@ const ValidationPanel: React.FC<ValidationSettings> = ({
     <div className={validationStyles.validationPanel}>
       <div className={validationStyles.validationBubble}>
         <ValidationTable />
-        <ValidationButton
-          onValidate={onValidate}
-          onStopValidation={onStopValidation}
-          isValidating={isValidating}
-          isValidateDisabled={isValidateDisabled}
-          buttonColor="purple"
-          buttonType="primary"
-        />
+        <div id="resource-panel-validate-button">
+          <ValidationButton
+            onValidate={onValidate}
+            onStopValidation={onStopValidation}
+            isValidating={isValidating}
+            isValidateDisabled={isValidateDisabled}
+            buttonColor="purple"
+            buttonType="primary"
+          />
+        </div>
       </div>
     </div>
   );

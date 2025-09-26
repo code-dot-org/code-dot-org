@@ -28,6 +28,10 @@ import ResourcePanelExtraLinks from './ResourcePanelExtraLinks';
 import {INITIAL_STEP, STEPS} from './resourcePanelTourHelpers';
 import SettingsPanel from './SettingsPanel';
 import ValidationPanel from './ValidationPanel';
+import {
+  INITIAL_STEP as VALIDATION_INITIAL_STEP,
+  STEPS as VALIDATION_STEPS,
+} from './validationTourHelpers';
 import {VersionHistoryPanel} from './VersionHistory';
 import './resource-panel-introjs.scss';
 
@@ -91,6 +95,9 @@ type ResourcePanelProps = InstructionsProps & {
 const PYTHONLAB_RESOURCE_PANEL_ONBOARDING_TOUR_SEEN =
   'pythonlabResourcePanelOnboardingTourSeen';
 
+const VALIDATION_RESOURCE_PANEL_ONBOARDING_TOUR_SEEN =
+  'validationResourcePanelOnboardingTourSeen';
+
 /**
  * Display various instructional resources for the level as tabs.
  */
@@ -130,6 +137,10 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const isPythonLab = appName === 'pythonlab';
   const pythonLabOnboardingTourSeen = tryGetLocalStorage(
     PYTHONLAB_RESOURCE_PANEL_ONBOARDING_TOUR_SEEN,
+    'no'
+  );
+  const validationOnboardingTourSeen = tryGetLocalStorage(
+    VALIDATION_RESOURCE_PANEL_ONBOARDING_TOUR_SEEN,
     'no'
   );
 
@@ -265,6 +276,21 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
           showStepNumbers: true,
         }}
       />
+      <Steps
+        enabled={
+          instructionsProps.validationSettings &&
+          hasValidationConditions &&
+          validationOnboardingTourSeen !== 'yes'
+        }
+        initialStep={VALIDATION_INITIAL_STEP}
+        steps={VALIDATION_STEPS}
+        onExit={() => {
+          trySetLocalStorage(
+            VALIDATION_RESOURCE_PANEL_ONBOARDING_TOUR_SEEN,
+            'yes'
+          );
+        }}
+      />
 
       <div className={styles.sidebar}>
         <nav id="resource-panel-tabs" className={styles.tabs}>
@@ -281,24 +307,26 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
               hideOnFirstLeave={true}
               key={`tooltip-${tab}`}
             >
-              <Button
-                className={classNames(
-                  styles.tabButton,
-                  tab === currentTab && styles.selected
-                )}
-                onClick={() => setCurrentTab(tab)}
-                key={tab}
-                color={'gray'}
-                type={'tertiary'}
-                isIconOnly={true}
-                icon={{
-                  iconName: tabInfo[tab].icon,
-                  iconFamily: kitIcons.has(tabInfo[tab].icon)
-                    ? 'kit'
-                    : undefined,
-                }}
-                aria-label={tabInfo[tab].title}
-              />
+              <div id={`resource-panel-tab-${tab}`}>
+                <Button
+                  className={classNames(
+                    styles.tabButton,
+                    tab === currentTab && styles.selected
+                  )}
+                  onClick={() => setCurrentTab(tab)}
+                  key={tab}
+                  color={'gray'}
+                  type={'tertiary'}
+                  isIconOnly={true}
+                  icon={{
+                    iconName: tabInfo[tab].icon,
+                    iconFamily: kitIcons.has(tabInfo[tab].icon)
+                      ? 'kit'
+                      : undefined,
+                  }}
+                  aria-label={tabInfo[tab].title}
+                />
+              </div>
             </WithTooltip>
           ))}
         </nav>
