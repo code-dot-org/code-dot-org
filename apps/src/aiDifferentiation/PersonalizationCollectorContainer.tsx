@@ -43,7 +43,7 @@ const PersonalizationCollectorContainer: React.FC = () => {
   React.useEffect(() => {
     const loadExistingData = async () => {
       try {
-        const response = await fetch('/dashboardapi/v1/teaching_profile_data', {
+        const response = await fetch('/teaching_profile_data', {
           method: 'GET',
           headers: {
             'X-CSRF-Token':

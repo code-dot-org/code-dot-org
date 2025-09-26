@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class Api::V1::TeachingProfileDataControllerTest < ActionDispatch::IntegrationTest
+class TeachingProfileDataControllerTest < ActionDispatch::IntegrationTest
   setup do
     @user = create(:teacher)
     sign_in @user
@@ -20,7 +20,7 @@ class Api::V1::TeachingProfileDataControllerTest < ActionDispatch::IntegrationTe
     }
 
     assert_difference 'TeachingProfileData.count', 1 do
-      post '/dashboardapi/v1/teaching_profile_data', params: {teaching_profile_data: {individual_data: personalization_data}}, as: :json
+      post '/teaching_profile_data', params: {teaching_profile_data: {individual_data: personalization_data}}, as: :json
     end
 
     assert_response :created
@@ -53,7 +53,7 @@ class Api::V1::TeachingProfileDataControllerTest < ActionDispatch::IntegrationTe
     }
 
     assert_no_difference 'TeachingProfileData.count' do
-      patch '/dashboardapi/v1/teaching_profile_data', params: {teaching_profile_data: {individual_data: new_data}}, as: :json
+      patch '/teaching_profile_data', params: {teaching_profile_data: {individual_data: new_data}}, as: :json
     end
 
     assert_response :success
@@ -73,7 +73,7 @@ class Api::V1::TeachingProfileDataControllerTest < ActionDispatch::IntegrationTe
     }
     TeachingProfileData.create(user: @user, individual_data: existing_data)
 
-    get '/dashboardapi/v1/teaching_profile_data', as: :json
+    get '/teaching_profile_data', as: :json
 
     assert_response :success
     response_data = JSON.parse(response.body)
@@ -82,7 +82,7 @@ class Api::V1::TeachingProfileDataControllerTest < ActionDispatch::IntegrationTe
   end
 
   test 'shows non-existence for user without teaching profile data via GET' do
-    get '/dashboardapi/v1/teaching_profile_data', as: :json
+    get '/teaching_profile_data', as: :json
 
     assert_response :success
     response_data = JSON.parse(response.body)
@@ -93,7 +93,7 @@ class Api::V1::TeachingProfileDataControllerTest < ActionDispatch::IntegrationTe
   test 'requires authentication for create' do
     sign_out @user
 
-    post '/dashboardapi/v1/teaching_profile_data', params: {teaching_profile_data: {individual_data: {}}}, as: :json
+    post '/teaching_profile_data', params: {teaching_profile_data: {individual_data: {}}}, as: :json
 
     assert_response :unauthorized
   end
@@ -101,7 +101,7 @@ class Api::V1::TeachingProfileDataControllerTest < ActionDispatch::IntegrationTe
   test 'requires authentication for update' do
     sign_out @user
 
-    patch '/dashboardapi/v1/teaching_profile_data', params: {teaching_profile_data: {individual_data: {}}}, as: :json
+    patch '/teaching_profile_data', params: {teaching_profile_data: {individual_data: {}}}, as: :json
 
     assert_response :unauthorized
   end
@@ -109,7 +109,7 @@ class Api::V1::TeachingProfileDataControllerTest < ActionDispatch::IntegrationTe
   test 'requires authentication for show' do
     sign_out @user
 
-    get '/dashboardapi/v1/teaching_profile_data'
+    get '/teaching_profile_data'
 
     assert_response :redirect
   end
