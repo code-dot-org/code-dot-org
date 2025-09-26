@@ -289,13 +289,20 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
             Math.floor(currentIndex / numCols) * numCols +
             ((currentIndex + 1) % numCols);
         }
+        // Notes and drums move up/down in opposite directions
         if (key === 'ArrowDown') {
           nextIndex =
-            (currentIndex - numCols + focusableCells.length) %
-            focusableCells.length;
+            editorType === 'notes'
+              ? (currentIndex - numCols + focusableCells.length) %
+                focusableCells.length
+              : (currentIndex + numCols) % focusableCells.length;
         }
         if (key === 'ArrowUp') {
-          nextIndex = (currentIndex + numCols) % focusableCells.length;
+          nextIndex =
+            editorType === 'notes'
+              ? (currentIndex + numCols) % focusableCells.length
+              : (currentIndex - numCols + focusableCells.length) %
+                focusableCells.length;
         }
 
         focusableCells[nextIndex]?.focus();
