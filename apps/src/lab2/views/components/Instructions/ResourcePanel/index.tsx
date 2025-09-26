@@ -302,7 +302,10 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
             </WithTooltip>
           ))}
         </nav>
-        <div className={classNames(styles.bottomTabs)}>
+        <div
+          id="resource-panel-links"
+          className={classNames(styles.bottomTabs)}
+        >
           <ResourcePanelExtraLinks levelId={levelId} theme={theme} />
           <CopyrightButton theme={theme} />
           <WithTooltip
