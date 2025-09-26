@@ -169,7 +169,6 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     () => selectedTab !== WorkspaceTeacherViewTab.STUDENT_CHAT_HISTORY,
     [selectedTab]
   );
-  console.log('canChatWithModel', canChatWithModel);
 
   useEffect(() => {
     // If we are viewing as a student, default to the student chat history tab if tab is not yet selected.
