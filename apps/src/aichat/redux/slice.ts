@@ -24,6 +24,7 @@ import {
   ChatAsset,
   SaveError,
   AiChatClientType,
+  WorkspaceTeacherViewTab,
 } from '../types';
 import {
   DEFAULT_VISIBILITIES,
@@ -55,6 +56,7 @@ const initialState: AichatState = {
   saveError: undefined,
   showResetMessage: false,
   hasSetStartingCustomizations: false,
+  chatWorkspaceSelectedTab: null,
 };
 
 const aichatSlice = createSlice({
@@ -328,6 +330,12 @@ const aichatSlice = createSlice({
     setSaveError(state, action: PayloadAction<SaveError | undefined>) {
       state.saveError = action.payload;
     },
+    setChatWorkspaceSelectedTab(
+      state,
+      action: PayloadAction<WorkspaceTeacherViewTab | null>
+    ) {
+      state.chatWorkspaceSelectedTab = action.payload;
+    },
   },
 });
 
@@ -386,4 +394,5 @@ export const {
   clearStagedFilesAlert,
   setSaveError,
   clearHasSetStartingCustomizations,
+  setChatWorkspaceSelectedTab,
 } = aichatSlice.actions;

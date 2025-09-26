@@ -301,10 +301,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
           headerClassName={headerClassName}
           rightHeaderContent={
             tabInfo[currentTab].title === commonI18n.aiTutor() ? (
-              <AiChatHeaderButtons
-                isCopyChatDisabled={false}
-                isClearChatDisabled={false}
-              />
+              <AiChatHeaderButtons />
             ) : (
               rightHeaderContent
             )

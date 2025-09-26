@@ -414,12 +414,7 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
               headerContent={chatWorkspaceHeader}
               className={moduleStyles.panelContainer}
               headerClassName={moduleStyles.panelHeader}
-              rightHeaderContent={
-                <AiChatHeaderButtons
-                  isCopyChatDisabled={false}
-                  isClearChatDisabled={false}
-                />
-              }
+              rightHeaderContent={<AiChatHeaderButtons />}
             >
               {hasSetStartingCustomizations && (
                 <ChatWorkspace

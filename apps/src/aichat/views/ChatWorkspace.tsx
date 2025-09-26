@@ -1,8 +1,12 @@
 import {FontAwesomeV6IconProps} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Tabs, {TabsProps} from '@code-dot-org/component-library/tabs';
-import React, {useCallback, useEffect, useMemo, useState} from 'react';
+import React, {useCallback, useEffect, useMemo} from 'react';
 
-import {isModelUpdate, SystemPromptSettings} from '@cdo/apps/aichat/types';
+import {
+  isModelUpdate,
+  SystemPromptSettings,
+  WorkspaceTeacherViewTab,
+} from '@cdo/apps/aichat/types';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import usePrevious from '@cdo/apps/util/usePrevious';
 
@@ -20,6 +24,7 @@ import {
   selectAllVisibleMessages,
   setClientType,
   setNewChatSession,
+  setChatWorkspaceSelectedTab,
 } from '../redux';
 import {findChangedProperties, getNewRemoveId} from '../redux/utils';
 import {
@@ -55,11 +60,6 @@ interface ChatWorkspaceProps {
   systemPromptSettings?: SystemPromptSettings;
 }
 
-enum WorkspaceTeacherViewTab {
-  STUDENT_CHAT_HISTORY = 'viewStudentChatHistory',
-  TEST_STUDENT_MODEL = 'testStudentModel',
-}
-
 /**
  * Renders the AI Chat Lab main chat workspace component.
  */
@@ -82,8 +82,9 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     multimodalEnabled = false;
   }
 
-  const [selectedTab, setSelectedTab] =
-    useState<WorkspaceTeacherViewTab | null>(null);
+  const selectedTab = useAppSelector(
+    state => state.aichat.chatWorkspaceSelectedTab
+  );
 
   const studentChatHistory = useAppSelector(
     state => state.aichat.studentChatHistory
@@ -168,15 +169,20 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     () => selectedTab !== WorkspaceTeacherViewTab.STUDENT_CHAT_HISTORY,
     [selectedTab]
   );
+  console.log('canChatWithModel', canChatWithModel);
 
   useEffect(() => {
     // If we are viewing as a student, default to the student chat history tab if tab is not yet selected.
     if (selectedStudent && !selectedTab) {
-      setSelectedTab(WorkspaceTeacherViewTab.STUDENT_CHAT_HISTORY);
+      dispatch(
+        setChatWorkspaceSelectedTab(
+          WorkspaceTeacherViewTab.STUDENT_CHAT_HISTORY
+        )
+      );
     } else if (!selectedStudent) {
-      setSelectedTab(null);
+      dispatch(setChatWorkspaceSelectedTab(null));
     }
-  }, [selectedStudent, selectedTab]);
+  }, [dispatch, selectedStudent, selectedTab]);
 
   // Whenever model parameters change, 1) reset the chat session if necessary,
   // and 2) log the changed properties to the chat history.
@@ -247,9 +253,9 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
 
   const handleOnChange = useCallback(
     (value: string) => {
-      setSelectedTab(value as WorkspaceTeacherViewTab);
+      dispatch(setChatWorkspaceSelectedTab(value as WorkspaceTeacherViewTab));
     },
-    [setSelectedTab]
+    [dispatch]
   );
 
   const tabArgs: TabsProps = {

@@ -1,16 +1,25 @@
-import React, {useCallback} from 'react';
+import React, {useCallback, useMemo} from 'react';
 
+import {WorkspaceTeacherViewTab} from '@cdo/apps/aichat/types';
 import IconButtonWithTooltip from '@cdo/apps/lab2/views/components/IconButtonWithTooltip';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import aichatI18n from '../../locale';
 import {addChatEvent, clearChatMessages, sendAnalytics} from '../../redux';
 
-const ClearChatButton: React.FunctionComponent<{
-  isDisabled: boolean;
-}> = ({isDisabled}) => {
+const ClearChatButton: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
+
+  const selectedTab = useAppSelector(
+    state => state.aichat.chatWorkspaceSelectedTab
+  );
+
+  // Teacher user is able to interact with chatbot.
+  const isDisabled = useMemo(
+    () => selectedTab === WorkspaceTeacherViewTab.STUDENT_CHAT_HISTORY,
+    [selectedTab]
+  );
 
   const onClear = useCallback(() => {
     dispatch(clearChatMessages());
