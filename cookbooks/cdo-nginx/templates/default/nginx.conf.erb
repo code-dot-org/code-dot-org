@@ -57,6 +57,37 @@ http {
       proxy_pass http://unix:<%= @run_dir %>/$upstream.sock;
       proxy_set_header Host $upstream_host;
     }
+
+    # FIXME: this also ends up allowing websocket upgrade attempts to /cable on pegasus
+    # do we care? first blush: probably harmless and not worth complexifying the config
+    # esp since pegasus is on its way out. If somebody does try an HTTP request to pegasus
+    # on /cable it'll just 404, it won't upgrade to a websocket, so harmless.
+    location /cable {
+      proxy_pass http://unix:<%= @run_dir %>/$upstream.sock;
+      proxy_set_header Host $upstream_host;
+
+      proxy_http_version 1.1;
+      proxy_set_header Upgrade $http_upgrade;
+      proxy_set_header Connection "upgrade";
+
+      # by default the proxy_read_timeout in nginx is 60s, which means that even if we
+      # intend the websocket to stay connected for longer, if nothing is sent/received
+      # nginx will hang us up. 
+      #
+      # fortunately, ActionCable automatically sends a ping from the server-side.
+      # this defaults to every 3s but we should explore the tradeoffs in increasing this
+      # value. perhaps 50s is the right value? or 600s? one question is how much load
+      # a ping every 3s from every connected client incurs vs having closed browser tabs
+      # still lingering as connections that haven't expired
+      #
+      # See: https://stackoverflow.com/questions/37343163/how-to-change-ping-interval-in-action-cable-rails
+      #
+      # proxy_read_timeout 60s;
+    
+      # look into this more, there's some reports that having proxy_buffering on (default I think?)
+      # can cause potential websocket problems, but I haven't seen it yet in practice
+      #   proxy_buffering off;
+    }
   }
 <% redirects = node['cdo-nginx']['redirects'].group_by(&:last).transform_values {|v| v.to_h.keys}
    redirects.each do |site, domains| -%>
@@ -75,19 +106,9 @@ http {
       proxy_pass http://unix:<%= @run_dir %>/dashboard.sock;
       proxy_set_header Host $http_host;
     }
-    # FIXME actioncable / websockets: do we want a /cable directive to allow
-    # non-https websocket connections to be upgraded? This might be required
-    # when using a cloudfront setup, where I believe TLS termination is no
-    # long performed by nginx? So then this server section is used? yeesh
-    #
-    # location /cable {
-    #  proxy_pass http://unix:<%= @run_dir %>/dashboard.sock;
-    #  proxy_set_header Host $http_host;
-    #
-    #  proxy_http_version 1.1;
-    #  proxy_set_header Upgrade $http_upgrade;
-    #  proxy_set_header Connection "upgrade";
-    # }
+
+    # FIXME: do we need a /cable location directive here too? What is the 8080 port used for?
+    # Cloudfront routes straight to 80, direct adhoc goes to 443, so what the heck is this for?
   }
 
   server {
@@ -110,6 +131,8 @@ http {
 
     # FIXME: this also ends up allowing websocket upgrade attempts to /cable on pegasus
     # do we care? first blush: probably harmless and not worth complexifying the config
+    # esp since pegasus is on its way out. If somebody does try an HTTP request to pegasus
+    # on /cable it'll just 404, it won't upgrade to a websocket, so harmless.
     location /cable {
       proxy_pass http://unix:<%= @run_dir %>/$upstream.sock;
       proxy_set_header Host $http_host;
