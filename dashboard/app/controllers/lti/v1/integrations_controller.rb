@@ -1,9 +1,16 @@
+# frozen_string_literal: true
+
+require "queries/lti"
+require "services/lti"
+require "policies/lti"
+require 'metrics/events'
+
 module Lti
   module V1
     class IntegrationsController < ApplicationController
       # POST /lti/v1/integrations
       # Creates a new LtiIntegration
-      def create_integration
+      def create
         begin
           params.require([:name, :client_id, :lms, :email])
         rescue
@@ -59,7 +66,7 @@ module Lti
 
       # GET /lti/v1/integrations
       # Displays the onboarding portal for creating a new LTI Integration
-      def new_integration
+      def new
         @form_data = {}
         @form_data[:lms_platforms] = Policies::Lti::LMS_PLATFORMS.map do |key, value|
           {platform: key, name: value[:name]}
