@@ -727,6 +727,10 @@ function createWebpackConfig({
               target: 'http://localhost-studio.code.org:3000',
               changeOrigin: false,
               logLevel: 'debug',
+              // FIXME: `ws: true` is needed for using `yarn start` with port 9000 with the websocket
+              // the question is if we can just enable ws: true on all URLs, or if we need to
+              // setup a path that just matches /cable?
+              ws: true,
             },
           ],
           host: '0.0.0.0',
