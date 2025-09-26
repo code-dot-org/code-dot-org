@@ -229,4 +229,25 @@ class UserScriptFindAndMigrateMethodsTest < ActiveSupport::TestCase
     assert_equal plc_unit, result.script
     assert_equal plc_unit_group, result.unit_group
   end
+
+  test "find_and_migrate_or_create_by! returns existing UserScript with original unit group when no unit group specified" do
+    existing_us = UserScript.create!(user: @user, script: @unit_in_course, unit_group: @original_unit_group)
+
+    result = UserScript.find_and_migrate_or_create_by!(user_id: @user.id, unit: @unit_in_course)
+    assert_equal existing_us.id, result.id
+    assert_equal @original_unit_group, result.unit_group
+
+    assert_equal 1, UserScript.where(user: @user, script: @unit_in_course).count
+  end
+
+  test "find_and_migrate_or_create_by! returns existing UserScript with original unit group when explicitly requested" do
+    existing_us = UserScript.create!(user: @user, script: @unit_in_course, unit_group: @original_unit_group)
+
+    result = UserScript.find_and_migrate_or_create_by!(user_id: @user.id, unit: @unit_in_course, unit_group: @original_unit_group)
+
+    assert_equal existing_us.id, result.id
+    assert_equal @original_unit_group, result.unit_group
+
+    assert_equal 1, UserScript.where(user: @user, script: @unit_in_course).count
+  end
 end
