@@ -180,11 +180,15 @@ export default class LottieDancerRenderer {
     return this.compW && this.compH ? {w: this.compW, h: this.compH} : null;
   }
 
-  renderFrame(frameIndex: number, _layout?: unknown): void {
+  renderFrame(frameIndex: number, mirror: boolean = false): void {
     if (!this.anim || !this.ctx || this.totalFrames === null) return;
     const tf = Math.max(1, this.totalFrames || 1);
     const frame = Math.floor(((frameIndex % tf) + tf) % tf);
     this.anim.goToAndStop(frame, true);
+  }
+
+  getTotalFrames(): number | null {
+    return this.totalFrames;
   }
 
   resize(): void {
@@ -198,10 +202,7 @@ export default class LottieDancerRenderer {
     this._destroyAnim();
   }
 
-  // ———————————————————————————————————————————————————————————————
   // URL helpers
-  // ———————————————————————————————————————————————————————————————
-
   private _resolveAnimationUrl(danceMove: string): string {
     // Example: .../dancers/input/DUCK/duck_<move>.json
     return `${BASE_HOST}/dancers/input/${this.skeletonName.toUpperCase()}/${
@@ -219,10 +220,7 @@ export default class LottieDancerRenderer {
     return `${BASE_HOST}/dancer/${this.assetsPath}/${this.dancerName}.png`;
   }
 
-  // ———————————————————————————————————————————————————————————————
   // Lottie lifecycle
-  // ———————————————————————————————————————————————————————————————
-
   private async _prepareLottie(animationData: LottieJSON): Promise<void> {
     this._destroyAnim();
     const config: CanvasAnimConfig = {
@@ -240,18 +238,6 @@ export default class LottieDancerRenderer {
     };
 
     const anim = loadCanvasAnimation(config);
-
-    // const anim = lottie.loadAnimation({
-    //   renderer: 'canvas',
-    //   loop: false,
-    //   autoplay: false,
-    //   animationData,
-    //   rendererSettings: {
-    //     context: this.ctx as CanvasRenderingContext2D, // lottie-web expects CanvasRenderingContext2D
-    //     clearCanvas: true,
-    //     preserveAspectRatio: 'xMidYMid meet',
-    //   },
-    // });
 
     await new Promise<void>(resolve => {
       const onReady = () => {
@@ -278,10 +264,7 @@ export default class LottieDancerRenderer {
     this.anim = null;
   }
 
-  // ———————————————————————————————————————————————————————————————
   // Fetch + palette
-  // ———————————————————————————————————————————————————————————————
-
   private async _fetchJson<T>(url: string): Promise<T> {
     const res = await fetch(url, {cache: 'no-cache'});
     if (!res.ok) {
@@ -313,10 +296,6 @@ export default class LottieDancerRenderer {
       tertiary: toRGBA(tertiaryColor),
     };
   }
-
-  // ———————————————————————————————————————————————————————————————
-  // Vector recoloring pass
-  // ———————————————————————————————————————————————————————————————
 
   /**
    * Walks the animation JSON, looking for fills/strokes that match accessory
@@ -465,10 +444,6 @@ export default class LottieDancerRenderer {
       (a as LottieAssetPrecomp).layers?.forEach(visitLayer)
     );
   }
-
-  // ———————————————————————————————————————————————————————————————
-  // Head image pipeline
-  // ———————————————————————————————————————————————————————————————
 
   /** Loads head.png as a data URL and detects natural size (falls back to 1000×1000). */
   private async _fetchHeadImageInfo(): Promise<HeadImageInfo | null> {
