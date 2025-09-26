@@ -230,7 +230,8 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
   // Otherwise, we are focused on a selectable cell, which means we call the
   // corresponding click event. Escape exits the grid, moving focus back to the
   // parent container. StopPropagation is called on Tab events to keep the focus
-  // from moving beyond the parent container when focus is inside it.
+  // from moving beyond the parent container when focus is inside it. Arrows
+  // navigate between cells, wrapping within rows and columns.
   const handleKeyDown = (
     event: React.KeyboardEvent,
     note: number,
@@ -260,6 +261,44 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
       }
       case 'Tab': {
         event.stopPropagation();
+        break;
+      }
+      case 'ArrowLeft':
+      case 'ArrowRight':
+      case 'ArrowUp':
+      case 'ArrowDown': {
+        event.preventDefault();
+        // Find all focusable cells in tab order
+        const focusableCells = Array.from(
+          document.querySelectorAll<HTMLElement>('.showing')
+        );
+        const currentIndex = focusableCells.indexOf(
+          document.activeElement as HTMLElement
+        );
+        const numCols = ticks.length + 1; // Add one for label column at start
+
+        let nextIndex = currentIndex;
+        // Arrow keys wrap within columns and rows
+        if (key === 'ArrowLeft') {
+          nextIndex =
+            Math.floor(currentIndex / numCols) * numCols +
+            ((currentIndex - 1 + numCols) % numCols);
+        }
+        if (key === 'ArrowRight') {
+          nextIndex =
+            Math.floor(currentIndex / numCols) * numCols +
+            ((currentIndex + 1) % numCols);
+        }
+        if (key === 'ArrowDown') {
+          nextIndex =
+            (currentIndex - numCols + focusableCells.length) %
+            focusableCells.length;
+        }
+        if (key === 'ArrowUp') {
+          nextIndex = (currentIndex + numCols) % focusableCells.length;
+        }
+
+        focusableCells[nextIndex]?.focus();
         break;
       }
       default:
