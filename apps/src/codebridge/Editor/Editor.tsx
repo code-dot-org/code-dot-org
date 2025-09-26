@@ -16,6 +16,7 @@ import globals from 'globals';
 import React, {useCallback, useMemo} from 'react';
 import ReactDOM from 'react-dom';
 
+import {addItemToUserAddedSelectionContext} from '@cdo/apps/aichat/redux/slice';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {getActiveFileForSource} from '@cdo/apps/lab2/projects/utils';
 import {saveFileThunk} from '@cdo/apps/lab2/redux/lab2ProjectReduxThunks';
@@ -23,7 +24,11 @@ import {MultiFileSource} from '@cdo/apps/lab2/types';
 import CodeEditor from '@cdo/apps/lab2/views/components/editor/CodeEditor';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {editableFileType, viewableImageFileType} from '../utils';
+import {
+  editableFileType,
+  enableUserAddedSelectionContext,
+  viewableImageFileType,
+} from '../utils';
 
 import moduleStyles from './styles/editor.module.scss';
 
@@ -51,8 +56,11 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
 
   const editorConfigExtensions = useMemo(() => {
     const extensions: Extension[] = [];
-    // todo: use helper method
-    if (!file?.url && levelProperties.appName === 'weblab2') {
+    if (
+      file?.name &&
+      enableUserAddedSelectionContext(levelProperties.appName, file?.url)
+    ) {
+      console.log('adding tooltip?');
       const getCursorTooltips = (state: EditorState) => {
         return state.selection.ranges
           .filter(range => !range.empty)
@@ -65,6 +73,7 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
               startingPosition,
               endingPosition
             );
+            const selectionDisplayName = `${file.name} (${startingLine}-${endingLine})`;
             return {
               pos: range.to,
               above: false,
@@ -76,11 +85,15 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
                 dom.className = moduleStyles.aiTutorTooltip;
                 ReactDOM.render(
                   <AiTutorChatContextButton
-                    text={selection}
-                    startingLine={startingLine}
-                    endingLine={endingLine}
-                    saveSelectionContext={(text, startingLine, endingLine) =>
-                      console.log({text, startingLine, endingLine})
+                    saveSelectionContext={() =>
+                      dispatch(
+                        addItemToUserAddedSelectionContext({
+                          sourceCode: selection,
+                          displayName: selectionDisplayName,
+                          lineReference: {start: startingLine, end: endingLine},
+                          filename: file.name,
+                        })
+                      )
                     }
                   />,
                   dom
@@ -102,6 +115,8 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
         provide: f => showTooltip.computeN([f], state => state.field(f)),
       });
       extensions.push(cursorTooltipField);
+    } else {
+      console.log('not adding tooltip');
     }
     if (file?.language && langMapping[file.language]) {
       extensions.push(langMapping[file.language]);
@@ -134,7 +149,14 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
     } else {
       return [];
     }
-  }, [file?.language, file?.url, langMapping, levelProperties.appName]);
+  }, [
+    dispatch,
+    file?.language,
+    file?.name,
+    file?.url,
+    langMapping,
+    levelProperties.appName,
+  ]);
 
   if (file?.url && viewableImageFileType(file.language)) {
     return (
