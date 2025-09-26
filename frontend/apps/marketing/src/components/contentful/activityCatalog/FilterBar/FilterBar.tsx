@@ -71,7 +71,6 @@ const buildOptions = (facetKey: string, facets: FacetResult) => {
   const merged = Array.from(new Set([...extra, ...base]));
   return sortOptions(merged);
 };
-/* ------------------------------------------------------------------ */
 
 export default function FilterBar({
   facets,

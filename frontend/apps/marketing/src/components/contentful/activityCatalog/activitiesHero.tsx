@@ -8,9 +8,13 @@ export default function ActivitiesHero() {
   const pathname = (usePathname() ?? '').toLowerCase();
 
   // Where the buttons navigate to
-  const AI_HREF = '/activities/hour-of-ai';
-  const LEGACY_HREF = '/activities/hour-of-code';
+  const HOUR_OF_AI_PATH = '/activities/hour-of-ai';
+  const HOUR_OF_CODE_PATH = '/activities/hour-of-code';
 
+// Determine which tab is active based on the current URL.
+// Each tab has multiple valid slugs (current + legacy), so we match against both.
+// The `\b` word boundary prevents false positives (e.g., "/hour-of-aid") while
+// still matching deeper paths like "/hour-of-ai/..." or "/ai-activities?...".
   const isAI = /\/hour-of-ai\b|\/ai-activities\b/.test(pathname);
   const isLegacy = /\/hour-of-code\b|\/legacy-hour-of-code\b/.test(pathname);
 
@@ -88,7 +92,7 @@ export default function ActivitiesHero() {
         {/* AI Activities */}
         <Button
           component={Link}
-          href={AI_HREF}
+          href={HOUR_OF_AI_PATH}
           variant="outlined"
           aria-current={isAI ? 'page' : undefined}
           aria-pressed={isAI}
@@ -100,10 +104,8 @@ export default function ActivitiesHero() {
         {/* Legacy Hour of Code */}
         <Button
           component={Link}
-          href={LEGACY_HREF}
+          href={HOUR_OF_CODE_PATH}
           variant="outlined"
-          aria-current={isLegacy ? 'page' : undefined}
-          aria-pressed={isLegacy}
           sx={getSx(isLegacy)}
         >
           Legacy Hour of Code Activities

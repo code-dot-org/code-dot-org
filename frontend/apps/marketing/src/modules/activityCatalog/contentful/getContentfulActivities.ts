@@ -17,7 +17,7 @@ export async function getContentfulActivities(activityType: string) {
     );
     return [];
   }
-  console.log('Fetching activities for activityType:', activityType);
+
   return getAllEntriesForContentType<Entry<Activity>>(
     contentfulClient,
     'curriculum',

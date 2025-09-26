@@ -1,4 +1,3 @@
-
 'use client';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
@@ -19,6 +18,40 @@ type Props = {
   variant?: 'menu' | 'inline';
 };
 
+// --- Sub-component: renders the list of chips ---
+function OptionChips({
+  options,
+  sel,
+  onToggle,
+}: {
+  options: string[];
+  sel: Set<string>;
+  onToggle: (value: string) => void;
+}) {
+  return (
+    <Box className={styles.gridList}>
+      {options.map((opt) => {
+        const isSelected = sel.has(opt);
+        return (
+          <Chip
+            key={opt}
+            label={opt}
+            onClick={() => onToggle(opt)}
+            onDelete={isSelected ? () => onToggle(opt) : undefined}
+            deleteIcon={isSelected ? <CloseRoundedIcon fontSize="small" /> : undefined}
+            variant={isSelected ? 'filled' : 'outlined'}
+            color={isSelected ? 'primary' : 'default'}
+            className={clsx(
+              styles.chip,
+              isSelected ? styles.chipSelected : styles.chipUnselected
+            )}
+          />
+        );
+      })}
+    </Box>
+  );
+}
+
 export default function FacetDropdown({
   facetKey,
   label,
@@ -28,14 +61,8 @@ export default function FacetDropdown({
   onOpenChange,
   variant = 'menu',
 }: Props) {
-  // ----- hooks (top) -----
-  const sel = selected ?? new Set<string>();
-  const isActive = sel.size > 0;
-
-  // Inline
+  // hooks
   const [openInline, setOpenInline] = React.useState(false);
-
-  // Menu
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const [anchorWidth, setAnchorWidth] = React.useState<number | undefined>();
   const menuOpen = Boolean(anchorEl);
@@ -48,7 +75,11 @@ export default function FacetDropdown({
     return () => window.removeEventListener('resize', update);
   }, [menuOpen, anchorEl]);
 
-  // ----- helpers -----
+  // derived
+  const sel = selected ?? new Set<string>();
+  const isActive = sel.size > 0;
+
+  // handlers
   const toggleValue = (value: string) => {
     const next = new Set(sel);
     // eslint-disable-next-line @typescript-eslint/no-unused-expressions
@@ -96,32 +127,8 @@ export default function FacetDropdown({
 
         <Collapse in={openInline} unmountOnExit>
           <ClickAwayListener onClickAway={handleInlineClose}>
-            <Box
-              onMouseLeave={handleInlineClose}
-              className={styles.inlinePanel}
-            >
-              <Box className={styles.gridList}>
-                {options.map(opt => {
-                  const selected = sel.has(opt);
-                  return (
-                    <Chip
-                      key={opt}
-                      label={opt}
-                      onClick={() => toggleValue(opt)}
-                      onDelete={selected ? () => toggleValue(opt) : undefined}
-                      deleteIcon={
-                        selected ? <CloseRoundedIcon fontSize="small" /> : undefined
-                      }
-                      variant={selected ? 'filled' : 'outlined'}
-                      color={selected ? 'primary' : 'default'}
-                      className={clsx(
-                        styles.chip,
-                        selected ? styles.chipSelected : styles.chipUnselected
-                      )}
-                    />
-                  );
-                })}
-              </Box>
+            <Box onMouseLeave={handleInlineClose} className={styles.inlinePanel}>
+              <OptionChips options={options} sel={sel} onToggle={toggleValue} />
             </Box>
           </ClickAwayListener>
         </Collapse>
@@ -133,7 +140,7 @@ export default function FacetDropdown({
   return (
     <>
       <Button
-        onClick={e => {
+        onClick={(e) => {
           setAnchorEl(e.currentTarget);
           setAnchorWidth(e.currentTarget.offsetWidth);
           onOpenChange?.(true);
@@ -141,11 +148,7 @@ export default function FacetDropdown({
         endIcon={<ExpandMoreIcon />}
         variant={isActive ? 'contained' : 'outlined'}
         color={isActive ? 'primary' : 'inherit'}
-        className={clsx(
-  styles.btnBase,
-  styles.btnPill,
-  styles.btnInactiveMenu
-)}
+        className={clsx(styles.btnBase, styles.btnPill, styles.btnInactiveMenu)}
       >
         {label}
       </Button>
@@ -168,27 +171,8 @@ export default function FacetDropdown({
           },
         }}
       >
-        <Box className={styles.gridList} sx={{ maxHeight: 360, overflow: 'auto' }}>
-          {options.map(opt => {
-            const selected = sel.has(opt);
-            return (
-              <Chip
-                key={opt}
-                label={opt}
-                onClick={() => toggleValue(opt)}
-                onDelete={selected ? () => toggleValue(opt) : undefined}
-                deleteIcon={
-                  selected ? <CloseRoundedIcon fontSize="small" /> : undefined
-                }
-                variant={selected ? 'filled' : 'outlined'}
-                color={selected ? 'primary' : 'default'}
-                className={clsx(
-                  styles.chip,
-                  selected ? styles.chipSelected : styles.chipUnselected
-                )}
-              />
-            );
-          })}
+        <Box sx={{ maxHeight: 360, overflow: 'auto' }}>
+          <OptionChips options={options} sel={sel} onToggle={toggleValue} />
         </Box>
       </Menu>
     </>
