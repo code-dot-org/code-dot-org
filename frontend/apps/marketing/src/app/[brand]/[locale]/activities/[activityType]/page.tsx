@@ -1,17 +1,16 @@
+import Box from '@mui/material/Box';
 import {Results, search} from '@orama/orama';
 import {persist} from '@orama/plugin-data-persistence';
 import {notFound} from 'next/navigation';
 import {Suspense} from 'react';
 
-
 import ActivityCatalog from '@/components/contentful/activityCatalog';
+import ActivitiesHero from '@/components/contentful/activityCatalog/activitiesHero';
 import {Brand} from '@/config/brand';
 import {getContentfulActivities} from '@/modules/activityCatalog/contentful/getContentfulActivities';
 import {createDatabase} from '@/modules/activityCatalog/orama/createDatabase';
 import {Activity} from '@/modules/activityCatalog/types/Activity';
 import {Entry} from '@/types/contentful/Entry';
-import Box from '@mui/material/Box';
-import ActivitiesHero from '@/components/contentful/activityCatalog/activitiesHero';
 
 export const revalidate = 3600;
 
@@ -48,9 +47,7 @@ export default async function ActivitiesPage({
   }
 
   // Fetch activities from Contentful
-  const contentfulActivities = await getContentfulActivities(
-    activityType
-  );
+  const contentfulActivities = await getContentfulActivities(activityType);
 
   // Create Orama database from Contentful activities
   const db = createDatabase(
@@ -93,28 +90,24 @@ export default async function ActivitiesPage({
   };
 
   return (
-    <main >
+    <main>
       <Suspense>
-         <ActivitiesHero />
-      <Box
-        sx={{
-          maxWidth: 1200,
-          mx: 'auto',
-          px: {xs: 2, md: 4},
-          pb: {xs: 2, md: 8},
-        }}
-      >
-        <ActivityCatalog
-          serializedOramaDb={await getSerializedOramaDatabase()}
-          activities={await getAllActivities()}
-          facets={await getSearchFacets()}
-        />
+        <ActivitiesHero />
+        <Box
+          sx={{
+            maxWidth: 1200,
+            mx: 'auto',
+            px: {xs: 2, md: 4},
+            pb: {xs: 2, md: 8},
+          }}
+        >
+          <ActivityCatalog
+            serializedOramaDb={await getSerializedOramaDatabase()}
+            activities={await getAllActivities()}
+            facets={await getSearchFacets()}
+          />
         </Box>
       </Suspense>
     </main>
-
-
-
-
   );
 }
