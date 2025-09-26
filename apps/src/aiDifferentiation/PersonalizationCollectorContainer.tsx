@@ -13,6 +13,7 @@ import {
 } from './PersonalizationAnswers';
 import PersonalizationQuestion from './PersonalizationQuestion';
 import {PERSONALIZATION_PROMPTS} from './personalizationQuestions';
+import {saveTeachingProfileData} from './teachingProfileApi';
 
 import style from './personalization-information.module.scss';
 
@@ -30,37 +31,83 @@ interface PersonalizationData {
 
 const PersonalizationCollectorContainer: React.FC = () => {
   const [questionsNumber, setQuestionsNumber] = React.useState(0);
-  const [personalizationData, setPersonalizationData] =
-    React.useState<PersonalizationData>({
-      selectedGoals: [],
-      selectedSupports: [],
-      otherSupportText: '',
-      otherGoalText: '',
-      selectedConfidence: -1,
-      yearsTeaching: 0,
-      dateYearsTeachingSet: null,
-      classroomVision: '',
-      challenge: '',
-    });
+  const [isSaving, setIsSaving] = React.useState(false);
+  const [isLoading, setIsLoading] = React.useState(true);
+  const [personalizationData, setPersonalizationData] = React.useState<
+    Partial<PersonalizationData>
+  >({});
 
   const NEXT = 1;
   const BACK = -1;
 
-  const onCarouselPress = (direction: number) => {
-    if (direction === NEXT && questionsNumber === 0) {
-      setPersonalizationData(prev => ({
-        ...prev,
-        dateYearsTeachingSet: new Date(),
-      }));
+  React.useEffect(() => {
+    const loadExistingData = async () => {
+      try {
+        const response = await fetch('/teaching_profile_data', {
+          method: 'GET',
+          headers: {
+            'X-CSRF-Token':
+              document
+                .querySelector('meta[name="csrf-token"]')
+                ?.getAttribute('content') || '',
+          },
+        });
+
+        if (response.ok) {
+          const result = await response.json();
+          if (result.exists && result.data) {
+            const existingData = {...result.data};
+            if (existingData.dateYearsTeachingSet) {
+              existingData.dateYearsTeachingSet = new Date(
+                existingData.dateYearsTeachingSet
+              );
+            }
+            setPersonalizationData(existingData);
+          }
+        }
+      } catch (error) {
+        console.error('Failed to load existing teaching profile data:', error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    loadExistingData();
+  }, []);
+
+  const onCarouselPress = async (direction: number) => {
+    if (direction === NEXT) {
+      setIsSaving(true);
+      try {
+        await saveTeachingProfileData(personalizationData);
+      } catch (error) {
+        console.error('Failed to save teaching profile data:', error);
+      } finally {
+        setIsSaving(false);
+      }
+    }
+
+    if (direction === BACK && questionsNumber === 0) {
+      return;
     }
 
     if (
-      (direction === BACK && questionsNumber === 0) ||
-      (direction === NEXT &&
-        questionsNumber === PERSONALIZATION_PROMPTS.length - 1)
+      direction === NEXT &&
+      questionsNumber === PERSONALIZATION_PROMPTS.length - 1
     ) {
+      if (!isSaving) {
+        setIsSaving(true);
+        try {
+          await saveTeachingProfileData(personalizationData);
+        } catch (error) {
+          console.error('Failed to save final teaching profile data:', error);
+        } finally {
+          setIsSaving(false);
+        }
+      }
       return;
     }
+
     setQuestionsNumber(questionsNumber + direction);
   };
 
@@ -70,11 +117,12 @@ const PersonalizationCollectorContainer: React.FC = () => {
       case 1:
         return (
           <NumberOfYearsTeachingAnswer
-            yearsTeaching={personalizationData.yearsTeaching}
+            yearsTeaching={personalizationData.yearsTeaching ?? 0}
             setYearsTeaching={(years: number) =>
               setPersonalizationData(prev => ({
                 ...prev,
                 yearsTeaching: years,
+                dateYearsTeachingSet: new Date(),
               }))
             }
           />
@@ -82,7 +130,7 @@ const PersonalizationCollectorContainer: React.FC = () => {
       case 2:
         return (
           <ConfidenceAnswer
-            selectedConfidence={personalizationData.selectedConfidence}
+            selectedConfidence={personalizationData.selectedConfidence ?? -1}
             setSelectedConfidence={(confidence: number) =>
               setPersonalizationData(prev => ({
                 ...prev,
@@ -94,11 +142,11 @@ const PersonalizationCollectorContainer: React.FC = () => {
       case 3:
         return (
           <GoalsAnswer
-            selectedGoals={personalizationData.selectedGoals}
+            selectedGoals={personalizationData.selectedGoals ?? []}
             setSelectedGoals={(goals: string[]) =>
               setPersonalizationData(prev => ({...prev, selectedGoals: goals}))
             }
-            otherGoalText={personalizationData.otherGoalText}
+            otherGoalText={personalizationData.otherGoalText ?? ''}
             setOtherGoalText={(text: string) =>
               setPersonalizationData(prev => ({...prev, otherGoalText: text}))
             }
@@ -107,7 +155,7 @@ const PersonalizationCollectorContainer: React.FC = () => {
       case 4:
         return (
           <ClassroomVisionAnswer
-            classroomVision={personalizationData.classroomVision}
+            classroomVision={personalizationData.classroomVision ?? ''}
             setClassroomVision={(vision: string) =>
               setPersonalizationData(prev => ({
                 ...prev,
@@ -119,14 +167,14 @@ const PersonalizationCollectorContainer: React.FC = () => {
       case 5:
         return (
           <SupportAnswer
-            selectedSupports={personalizationData.selectedSupports}
+            selectedSupports={personalizationData.selectedSupports ?? []}
             setSelectedSupports={(supports: string[]) =>
               setPersonalizationData(prev => ({
                 ...prev,
                 selectedSupports: supports,
               }))
             }
-            otherSupportText={personalizationData.otherSupportText}
+            otherSupportText={personalizationData.otherSupportText ?? ''}
             setOtherSupportText={(text: string) =>
               setPersonalizationData(prev => ({
                 ...prev,
@@ -138,7 +186,7 @@ const PersonalizationCollectorContainer: React.FC = () => {
       case 6:
         return (
           <ChallengeAnswer
-            challenge={personalizationData.challenge}
+            challenge={personalizationData.challenge ?? ''}
             setChallenge={(challenge: string) =>
               setPersonalizationData(prev => ({
                 ...prev,
@@ -154,28 +202,35 @@ const PersonalizationCollectorContainer: React.FC = () => {
 
   return (
     <div className={style.carouselContainer}>
-      <PersonalizationQuestion questionNumber={questionsNumber} />
-      <div className={style.answerContainer}>{determineAnswerType()}</div>
+      {isLoading ? (
+        <div>Loading...</div>
+      ) : (
+        <>
+          <PersonalizationQuestion questionNumber={questionsNumber} />
+          <div className={style.answerContainer}>{determineAnswerType()}</div>
 
-      <div className={style.navigationButtons}>
-        <Button
-          id={'back-button'}
-          text={i18n.back()}
-          type="secondary"
-          color="gray"
-          size="m"
-          onClick={() => onCarouselPress(BACK)}
-          iconLeft={{iconName: 'angle-left'}}
-        />
-        <Button
-          id={'next-button'}
-          text={i18n.next()}
-          type="primary"
-          size="m"
-          onClick={() => onCarouselPress(NEXT)}
-          iconRight={{iconName: 'angle-right'}}
-        />
-      </div>
+          <div className={style.navigationButtons}>
+            <Button
+              id={'back-button'}
+              text={i18n.back()}
+              type="secondary"
+              color="gray"
+              size="m"
+              onClick={() => onCarouselPress(BACK)}
+              iconLeft={{iconName: 'angle-left'}}
+            />
+            <Button
+              id={'next-button'}
+              text={isSaving ? i18n.saving() : i18n.next()}
+              type="primary"
+              size="m"
+              onClick={() => onCarouselPress(NEXT)}
+              disabled={isSaving}
+              iconRight={isSaving ? undefined : {iconName: 'angle-right'}}
+            />
+          </div>
+        </>
+      )}
     </div>
   );
 };
