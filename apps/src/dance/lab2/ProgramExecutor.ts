@@ -3,8 +3,8 @@ import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/Custo
 import {commands as audioCommands} from '@cdo/apps/lib/util/audioApi';
 
 import {ASSET_BASE} from '../constants';
-import DanceRendererLottie from '../DanceRendererLottie';
 import * as danceMsg from '../locale';
+import LottieDancerRenderer from '../LottieDancerRenderer';
 import {SongMetadata} from '../types';
 import utils from '../utils';
 
@@ -88,7 +88,7 @@ export default class ProgramExecutor {
         i18n: danceMsg,
         resourceLoader: new ResourceLoader(ASSET_BASE),
         logger: options.metricsReporter,
-        externalRendererFactory: () => new DanceRendererLottie(),
+        externalRendererFactory: () => new LottieDancerRenderer(),
       });
     this.nativeAPI.reset();
     this.metricsReporter = options.metricsReporter;
