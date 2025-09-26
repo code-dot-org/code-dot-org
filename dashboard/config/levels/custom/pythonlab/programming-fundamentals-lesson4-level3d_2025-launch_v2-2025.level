@@ -1,0 +1,55 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-09-25T19:56:11.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Do This:\r\n\r\nYou're creating a game where each player starts at a certain level. Your program needs to remember the player's starting level when they begin the game.\r\n\r\n1. Create a variable called `starting_level`\r\n\r\n2. Assign it a number like `1` or `3`\r\n\r\n3. Use `print()` to display a message like\r\n\r\n   ```\r\n   Starting at level 1\r\n   ```\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nYou can use **commas** in a `print()` statement to combine text and variables. For example:\r\n\r\n```\r\nprint(\"Name:\", first_name)\r\n```",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "display_name": "Starting Level",
+    "bubble_choice_description": "You're creating a game where each player starts at a certain level. Your program needs to remember the player's starting level when they begin the game.",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# This program stores and prints a starting level\n\n# Your code goes here!\n",
+          "folderId": "0",
+          "active": false,
+          "open": true,
+          "type": "locked_starter"
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "thumbnail_url": "https://images.code.org/7505c3fd2de77a4e637ab57abcc176f5-controller.png",
+    "name_suffix": "_v2-2025",
+    "encrypted_exemplar_sources": "Cy05mEYW43yx3lpwk/lyQYs4qPKDc2JDG2xzW6EZ2HXNXiuQgI6R1SlqPKPt\nlYISiQp/Zt7oXvHNpBSUY2/tVcAoh32dY5clMNiyTLp2qQ5O47DJ0rGD0IJV\nXDiO//IRW/LZBlXyH5JryMNp/3+nzgFP1q6jLonf6XZedxG2cdvpuirCUQRt\nmtsIkbGVp1Kjkdm0vZ+cRBIldQLW3vcE9nG/e5+jg7kesWmscteoYzX8/5Le\nXNpJ7ZsQH3plq7s3tcmMakGGuOb/I0znxh2pHYmJK3zEgIHBtQhume/rd965\n9w3yGr2KSxjiH68TzPUT4GVX24s1Oxb+qbIJyoKEIneAWD67x4qD6XuuHvkW\n42COV9/+C3H84b4zxDRZQNgA8tjD1AJbnEAXkHx3SiphyQQ0Xu4GA2axecW+\n5DuO8u8=\n",
+    "validation_file": {
+      "id": "1",
+      "name": "test.py",
+      "language": "py",
+      "contents": "from unittest import TestCase\nfrom unittest_runner import ValidationProtocol\n\nclass TestStartingLevel(TestCase):\n    @classmethod\n    def setUpClass(cls):\n        \"\"\"Get the printed output log\"\"\"\n        cls.log = ValidationProtocol().get_stdout_logs()\n\n    def test_starting_level_variable_exists_and_is_integer(self):\n        \"\"\"A variable called starting_level should exist and be an integer\"\"\"\n        try:\n            from main import starting_level\n        except ImportError:\n            self.fail(\"Make sure you create a variable called starting_level!\")\n\n        self.assertIsInstance(\n            starting_level,\n            int,\n            \"The starting_level variable should be a number (integer)!\"\n        )\n\n    def test_starting_level_in_output(self):\n        \"\"\"Printed message should include the starting level\"\"\"\n        try:\n            from main import starting_level\n        except ImportError:\n            self.fail(\"Make sure you create a variable called starting_level!\")\n\n        printed_lines = [line.strip() for line in self.log if line.strip()]\n\n        found = any(str(starting_level) in line for line in printed_lines)\n\n        self.assertTrue(\n            found,\n            \"Make sure your printed message includes the starting level!\"\n        )\n",
+      "folderId": "0",
+      "active": false,
+      "open": false,
+      "type": "validation"
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:56:10.993+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson4-level3d_2025-launch_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson4-level3d_2025-launch_2025\"}]"
+}]]></config>
+</Pythonlab>

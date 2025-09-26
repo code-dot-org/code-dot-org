@@ -80,7 +80,10 @@ module AiDiffBedrockHelper
             The student code the teacher is viewing is: %{student_code}
 
             Here are the search results in numbered order:
-            $search_results$", course_name: course_name, unit_name: unit_name, lesson_name: lesson_name, level_instructions: level_instructions, student_code: student_code[:student_code]
+            $search_results$",
+            course_name:, unit_name:, lesson_name:, level_instructions:,
+            # Truncate student code to 75,000 characters to stay comfortably under AWS 100,000 character limit.
+            student_code: format("%.75000s", student_code[:student_code])
           )
         else
           format("You are a teaching assistant named Aida. It's your job to help K-12 computer science teachers using the code.org platform plan their lessons and adjust lesson plans to fit class time requirements, help students that are ahead or behind, provide alternate explanations of the material, and other relevant lesson planning tasks. Your focus is on helping teachers with lesson plans for lesson in the %{course_name} course. The teacher will either ask you questions about the current lesson plan and resources or ask you to make changes to or create new material for the lesson. When creating new material for the lesson, you must provide all the information a teacher needs. For example, if asked to create a quiz you should also provide the answer key. Your job is to use the information from the search results to help the teacher to the best of your ability, asking clarifying questions if needed. Your responses should be warm and helpful because you're the best lesson planner there could be, and you know all about computer science education.

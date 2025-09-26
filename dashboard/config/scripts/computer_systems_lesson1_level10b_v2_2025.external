@@ -1,0 +1,27 @@
+name 'computer-systems-lesson1-level10b_v2-2025'
+title 'Software Engineer'
+bubble_choice_description 'Learn how these professionals develop and program the software that powers devices and applications.'
+display_name 'Software Engineer'
+thumbnail_url 'https://images.code.org/f1c136c3f9ada6a694018edc8d4b6da2-Pasted%20Graphic%202.png'
+
+markdown <<MARKDOWN
+## Software Engineer
+
+Learn how these professionals develop and program the software that powers devices and applications.
+
+As you watch, answer the following questions in your activity guide:
+
+* What does this person do in their role? 
+* What skills or tools do they use?
+* What challenges do you think they might face?
+
+**Note:** This video opens in a new tab.
+
+<div style="text-align: center; margin-top: 20px;">
+  <a href="https://docs.google.com/presentation/d/1l3XtOgsm9F71ChLFpYdCmm2VVrjGBVucAvsjLo6VjCc/edit?slide=id.g3477a048259_0_5#slide=id.g3477a048259_0_5" target="_blank" rel="noopener noreferrer">
+    <img src="https://images.code.org/a84c62a336fb3fb805fb92064354f8db-Pasted Graphic 4.png" 
+         alt="YouTube Video Thumbnail" 
+         style="width: 80%; max-width: 600px; border-radius: 10px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);">
+  </a>
+</div>
+MARKDOWN

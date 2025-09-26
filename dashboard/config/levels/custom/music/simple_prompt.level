@@ -13,6 +13,68 @@
       "toolbox": {
         "blocks": {
         }
+      },
+      "packId": "benson_boone_beautiful_things",
+      "sounds": {
+        "benson_boone_beautiful_things": [
+          "drums_prechorus_1",
+          "drums_prechorus_2",
+          "drums_prechorus_3",
+          "drums_chorus_build",
+          "drums_chorus",
+          "kick_drum",
+          "bass_verse_1A",
+          "bass_verse_1B",
+          "bass_prechorus_1",
+          "bass_prechorus_2",
+          "bass_prechorus_3",
+          "bass_prechorus_4",
+          "bass_chorus_build",
+          "bass_chorus",
+          "piano_prechorus_1",
+          "piano_prechorus_2",
+          "piano_prechorus_3",
+          "piano_prechorus_4",
+          "piano_chorus",
+          "piano_chorus_tag",
+          "organ_prechorus_1",
+          "organ_prechorus_2",
+          "organ_prechorus_3",
+          "electric_guitar_intro",
+          "electric_guitar_verse_1A",
+          "electric_guitar_prechorus_1",
+          "electric_guitar_prechorus_2",
+          "electric_guitar_prechorus_3",
+          "electric_guitar_prechorus_4",
+          "electric_guitar_prechorus_swell",
+          "electric_guitar_chorus_build",
+          "electric_guitar_chorus_small",
+          "electric_guitar_chorus_big",
+          "electric_guitar_chorus_lead_1",
+          "electric_guitar_chorus_lead_2",
+          "guitar_prechorus_sustain_1",
+          "guitar_prechorus_sustain_2",
+          "acoustic_verse_1A",
+          "acoustic_verse_1B",
+          "acoustic_prechorus_1",
+          "acoustic_prechorus_2",
+          "acoustic_prechorus_3",
+          "vocals_verse_1A",
+          "vocals_verse_1B",
+          "vocals_verse_1C",
+          "vocals_verse_1D",
+          "vocals_prechorus_1",
+          "vocals_prechorus_2",
+          "vocals_prechorus_3",
+          "vocals_prechorus_4",
+          "vocals_small_chorus_1",
+          "vocals_small_chorus_2",
+          "vocals_small_chorus_3",
+          "vocals_big_chorus_1",
+          "vocals_big_chorus_2",
+          "vocals_big_chorus_3",
+          "vocals_chorus_tag"
+        ]
       }
     },
     "encrypted": "false",
@@ -30,7 +92,7 @@
     },
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-09-19T21:02:41.314+00:00\",\"changed\":[\"cloned from \\\"hoai2025-music-adlib-1\\\"\"],\"cloned_from\":\"hoai2025-music-adlib-1\"},{\"changed_at\":\"2025-09-19 21:09:56 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-19 21:13:16 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-09-19T21:02:41.314+00:00\",\"changed\":[\"cloned from \\\"hoai2025-music-adlib-1\\\"\"],\"cloned_from\":\"hoai2025-music-adlib-1\"},{\"changed_at\":\"2025-09-19 21:09:56 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-19 21:13:16 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-22 20:50:20 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-23 02:50:58 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

@@ -1,0 +1,8 @@
+name 'problem-solving-with-ai-lesson3-level3_v2-2025'
+display_name 'Providing Multiple Examples for Refinement'
+description 'Choose one career to explore how providing multiple examples affects AI responses.'
+
+sublevels
+level 'problem-solving-with-ai-lesson3-level3a_v2-2025'
+level 'problem-solving-with-ai-lesson3-level3b_v2-2025'
+level 'problem-solving-with-ai-lesson3-level3c_v2-2025'

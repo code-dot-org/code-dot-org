@@ -9,6 +9,8 @@ import {
   nextLevelId,
 } from '@cdo/apps/code-studio/progressReduxSelectors';
 import {queryParams} from '@cdo/apps/code-studio/utils';
+import WithConditionalTooltip from '@cdo/apps/codebridge/components/WithConditionalTooltip';
+import lab2I18n from '@cdo/apps/lab2/locale';
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
 import {isPredictResponseSubmitted} from '@cdo/apps/lab2/redux/predictLevelRedux';
 import {LevelProperties} from '@cdo/apps/lab2/types';
@@ -20,6 +22,8 @@ import {
   LevelStatus,
   UserLevelInteractions,
 } from '@cdo/generated-scripts/sharedConstants';
+
+import moduleStyles from '@cdo/apps/lab2/views/components/Instructions/navigation-button.module.scss';
 
 interface NavigationButtonProps {
   levelProperties: LevelProperties;
@@ -141,7 +145,7 @@ interface SubmitButtonProps {
 /**
  * Displays the "Submit" or "Unsubmit" button that submits or unsubmits the project on a submittable level.
  */
-export const SubmitButton: React.FC<SubmitButtonProps> = ({
+const SubmitButton: React.FC<SubmitButtonProps> = ({
   levelId,
   appName,
   hasRun,
@@ -159,6 +163,8 @@ export const SubmitButton: React.FC<SubmitButtonProps> = ({
   const enabled =
     disableEditRunForSubmission || hasSubmitted || (hasRun && hasEdited);
   const buttonText = hasSubmitted ? commonI18n.unsubmit() : commonI18n.submit();
+
+  const tooltipMessage = enabled ? undefined : lab2I18n.toSubmitEditRun();
 
   const dialogControl = useDialogControl();
   const dispatch = useAppDispatch();
@@ -196,13 +202,25 @@ export const SubmitButton: React.FC<SubmitButtonProps> = ({
   };
 
   return (
-    <Button
-      id="instructions-submit-button"
-      text={buttonText}
-      onClick={onSubmit}
-      className={className}
-      disabled={!enabled}
-    />
+    <div className={moduleStyles.buttonInstructionTooltipOverlay}>
+      <WithConditionalTooltip
+        showTooltip={!!tooltipMessage}
+        tooltipProps={{
+          text: tooltipMessage || '',
+          direction: 'onTop',
+          tooltipId: 'submit-button-tooltip',
+          size: 'xs',
+        }}
+      >
+        <Button
+          id="instructions-submit-button"
+          text={buttonText}
+          onClick={onSubmit}
+          className={className}
+          disabled={!enabled}
+        />
+      </WithConditionalTooltip>
+    </div>
   );
 };
 

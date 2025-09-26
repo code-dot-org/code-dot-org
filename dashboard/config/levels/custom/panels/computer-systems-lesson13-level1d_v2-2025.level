@@ -1,0 +1,50 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2025-09-25T20:01:05.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "true",
+    "panels": [
+      {
+        "text": "## Target 9.1 \nTrack the development of sustainable roads, transport, and infrastructure.\n\n---\n\n* Infrastructure includes roads, bridges, water systems, and energy grids that support daily life.\n* Many communities lack access to safe, modern transportation and utilities.\n* Smart traffic systems, IoT sensors, and data-driven planning improve urban mobility.\n* Renewable energy sources can power more efficient and sustainable infrastructure.\n* Expanding infrastructure helps boost economic growth and improve quality of life.\n",
+        "imageUrl": "https://images.code.org/6ed296afd59360c572478e2b5103e60f-Pasted Graphic 22.png",
+        "key": "undefined-0c1fb390-a121-4557-8293-598810105ff5",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Target 9.5\nFoster global innovation by supporting scientific research and technological advancement.\n\n---\n\n* Research and development (R&D) drives progress in medicine, engineering, and technology.\n* Investment in AI, automation, and emerging tech leads to new discoveries.\n* Open data and collaboration platforms speed up global scientific breakthroughs.\n* Developing nations need better access to funding and education for innovation.\n* Advanced technology can solve global challenges in health, energy, and sustainability.",
+        "imageUrl": "https://images.code.org/c7b1bee0c1d2bccfb1990e62b3cca529-Pasted Graphic 23.png",
+        "key": "undefined-ca8e36c6-6a0a-4a28-8b84-9d8916597600",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Target 11.2\nImprove access to public transport for vulnerable populations.\n\n---\n\n* Public transportation connects people to jobs, education, and healthcare.\n* Many disabled, elderly, and low-income individuals struggle with transportation access.\n* Real-time tracking, route optimization, and accessibility features improve usability.\n* Investing in electric and low-emission vehicles makes transit systems greener.\n* Expanding affordable transit options reduces congestion and environmental impact.",
+        "imageUrl": "https://images.code.org/36db12e3e2346c5b5f6f48170ce679aa-Pasted Graphic 24.png",
+        "key": "computer-systems-category-1-bb1d2416-8b0a-4842-a58a-8538eb9357db",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Target 11.5\nProtect urban areas from climate-related risks by reducing disaster impacts.\n\n---\n\n* Cities face risks from flooding, wildfires, extreme heat, and earthquakes.\n* Resilient infrastructure, smart monitoring, and early warning systems help reduce damage.\n* Green spaces, flood barriers, and sustainable buildings protect urban populations.\n* AI and predictive analytics identify areas most at risk of disasters.\n* Disaster preparedness plans save lives and reduce economic losses.",
+        "imageUrl": "https://images.code.org/08533b8ec59fb1381911bedb6a2dfc4b-Pasted Graphic 25.png",
+        "key": "computer-systems-category-1-95acf92d-4511-460e-8d55-3eb50c6fba19",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Target 17.8\nBridge the digital divide by expanding internet access in least-developed countries.\n\n---\n\n* Over 2.7 billion people worldwide lack reliable internet access.\n* Internet connectivity drives education, healthcare, and economic growth.\n* Satellite internet, mobile networks, and public Wi-Fi help expand access.\n* Affordable smartphones and digital literacy programs support inclusion.\n* Closing the digital divide creates opportunities for millions globally.",
+        "imageUrl": "https://images.code.org/a49f8add86358e0923e0d614b32d606e-Pasted Graphic 26.png",
+        "key": "computer-systems-category-1-a645bb31-bb05-4f65-9ac1-bb632f240484",
+        "layout": "text-bottom-right"
+      }
+    ],
+    "bubble_choice_description": "Design computer systems to make cities more inclusive, connected, and innovative for the future.",
+    "display_name": "Urbanization and Infrastructure",
+    "thumbnail_url": "https://images.code.org/1ccbd2645a9cc65ac9c54317df9cf384-Pasted Graphic 30.png",
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T20:01:04.994+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson13-level1d_2025\\\"\"],\"cloned_from\":\"computer-systems-lesson13-level1d_2025\"}]"
+}]]></config>
+</Panels>

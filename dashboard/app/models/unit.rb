@@ -635,6 +635,14 @@ class Unit < ApplicationRecord
     get_course_version&.hoc?
   end
 
+  def hoai?
+    get_course_version&.hoai?
+  end
+
+  def hoc_or_hoai?
+    hoc? || hoai?
+  end
+
   def flappy?
     name == 'flappy'
   end
@@ -1212,7 +1220,7 @@ class Unit < ApplicationRecord
   end
 
   def finish_url(unit_group_unit: nil)
-    return hoc_finish_url if hoc?
+    return hoc_finish_url if hoc_or_hoai?
     return csf_finish_url if csf?
     course = unit_group_unit&.unit_group || get_original_unit_group
     if course

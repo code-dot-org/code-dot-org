@@ -1,0 +1,14 @@
+name 'data-science-ch1-lesson7-level3_v2-2025'
+title 'Dot Plot'
+
+
+markdown <<MARKDOWN
+#Bar Charts
+## Create a bar chart using data from a column of your choice
+1. Navigate to this **<a href="https://docs.google.com/spreadsheets/d/1-M2CvqfAqO3XB6LY4CaYuRFAx58MASvw25tIRoawSWk/edit?usp=drivesdk" target="_blank">Pizza Party Survey Data Google Sheet</a>.**
+2. **Create a Copy** of the dataset before creating a data visualization.
+3. Go to the **"Bar Chart Workspace Tab"**
+4. **Practice** creating and customizing a bar chart.
+
+![](https://images.code.org/a154cb257799a6458c40d3bb666952b9-image-1744824295838.png)
+MARKDOWN
