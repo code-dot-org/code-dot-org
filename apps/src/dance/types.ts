@@ -39,19 +39,3 @@ export interface DanceLevelProperties extends BlocklyLevelProperties {
   aiDancerGenerateAdlib?: string;
   aiCodeGenerate?: boolean;
 }
-
-export type DancerLayout = {
-  mode: 'fit' | 'cover' | 'stretch' | 'none';
-  scale?: number;
-  align?: {x: 'start' | 'center' | 'end'; y: 'start' | 'center' | 'end'};
-  offset?: {x: number; y: number};
-  clearBeforeDraw?: boolean;
-};
-
-export interface DancerRenderer {
-  init(ctx: CanvasRenderingContext2D): void;
-  setSource(src: {url?: string; data?: unknown}): Promise<void>;
-  renderFrame(frameIndex: number, layout?: DancerLayout): void;
-  getDurationFrames(): number | null;
-  dispose(): void;
-}

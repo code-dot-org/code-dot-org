@@ -3,9 +3,9 @@ import lottie from 'lottie-web';
 import appConfig from '../music/appConfig';
 
 const BASE_HOST = 'https://curriculum.code.org/media/musiclab/generate';
-const ASSETS_FOLDER = 'curated';
+const ASSETS_FOLDER = 'basic2';
 const TEST_BASE_DANCER = 'duck';
-const TEST_GENERATED_DANCER = 'bat';
+const TEST_GENERATED_DANCER = 'basic-frog-baseball-cap-00';
 const MAP = {
   secondary: new Set([
     'bracelet',
@@ -27,18 +27,27 @@ const MAP = {
 
 export default class DanceRendererLottie {
   constructor() {
+    const localStorageDancer = JSON.parse(
+      localStorage.getItem('dancer-ai-generate')
+    );
+    let {adlibOption, choices, variant} = localStorageDancer || {};
+    const dancerName =
+      choices && String(variant)
+        ? `${choices.join('-')}-0${String(variant)}`
+        : TEST_GENERATED_DANCER;
+    this.headScale = appConfig.getValue('headScale') || 0.5;
+    this.assetsPath =
+      appConfig.getValue('path') || adlibOption || ASSETS_FOLDER;
+    this.skeletonName =
+      appConfig.getValue('skeleton')?.toLowerCase() || TEST_BASE_DANCER;
+    this.variant = variant || '00';
+    this.dancerName = appConfig.getValue('dancer')?.toLowerCase() || dancerName;
+
     this.ctx = null;
     this.anim = null;
     this.animationData = null;
     this.palette = null;
     this.totalFrames = null;
-
-    this.assetsPath = appConfig.getValue('folder') || ASSETS_FOLDER;
-    this.headScale = appConfig.getValue('headScale') || 0.5;
-    this.randomDancer = appConfig.getValue('randomDancer') === 'true';
-    this.randomSkeleton = appConfig.getValue('randomSkeleton') === 'true';
-    this.dancerBaseName = appConfig.getValue('dancer')?.toLowerCase();
-    this.dancerName = this.dancerBaseName || TEST_GENERATED_DANCER;
   }
 
   // ExternalDancerLayer hands us an offscreen p5.Graphics 2D context
@@ -57,63 +66,14 @@ export default class DanceRendererLottie {
 
     const move = String(danceMove).toLowerCase();
     const jsonUrl = this._resolveAnimationUrl(move);
+    const metadataUrl = this._resolveMetadataUrl();
 
-    if (this.randomDancer) {
-      let randomName = null;
-
-      if (this.assetsPath === 'basic2') {
-        const variants = ['00', '01', '02'];
-        if (this.dancerBaseName) {
-          randomName = () => `${this.dancerBaseName}-${pick(variants)}`;
-        } else {
-          randomName = () => {
-            const styles = ['basic', 'goth'];
-            const animals = ['frog', 'moose', 'wolf'];
-            const accessories = [
-              'baseball-cap',
-              'beanie',
-              'crown',
-              'headband',
-              'headscarf',
-              'sunglasses',
-            ];
-
-            return `${pick(styles)}-${pick(animals)}-${pick(
-              accessories
-            )}-${pick(variants)}`;
-          };
-        }
-      } else if (this.assetsPath === 'curated') {
-        randomName = () => {
-          const animals = [
-            'bear',
-            'bull',
-            'bunny',
-            'cat',
-            'dog',
-            'frog',
-            'zombie',
-          ];
-          return pick(animals);
-        };
-      }
-
-      console.log(this.assetsPath, randomName);
-      if (typeof randomName === 'function') {
-        console.log('Picking random dancer');
-        this.dancerName = randomName();
-      }
-    }
-    console.log('Using dancer', this.dancerName);
-    const colorsUrl = this._resolveColorsUrl();
-
-    const [animDataRaw, colorsJson] = await Promise.all([
+    const [animDataRaw, metadataJson] = await Promise.all([
       this._fetchJson(jsonUrl),
-      this._fetchJson(colorsUrl),
+      this._fetchJson(metadataUrl),
     ]);
 
-    this.palette = this._normalizePalette(colorsJson);
-    console.log({colorsJson, palette: this.palette});
+    this.palette = this._normalizePalette(metadataJson);
 
     // Deep clone; we'll mutate
     const animData = JSON.parse(JSON.stringify(animDataRaw));
@@ -170,7 +130,6 @@ export default class DanceRendererLottie {
     if (!this.anim) return;
     // ExternalDancerLayer may recreate the graphics; update renderer references
     this.anim.renderer.ctx = this.ctx;
-    this.anim.renderer.context = this.ctx; // compatibility with older lottie-web
     if (typeof this.anim.resize === 'function') this.anim.resize();
   }
 
@@ -178,19 +137,13 @@ export default class DanceRendererLottie {
     this._destroyAnim();
   }
 
-  // ---------- internals ----------
-
   _resolveAnimationUrl(danceMove) {
-    let skeletonName =
-      appConfig.getValue('skeleton')?.toLowerCase() || TEST_BASE_DANCER;
-    if (this.randomDancer || this.randomSkeleton) {
-      const skeletons = ['bear', 'cat', 'duck', 'frog', 'robot', 'unicorn'];
-      skeletonName = skeletons[Math.floor(Math.random() * skeletons.length)];
-    }
-    return `${BASE_HOST}/dancers/input/${skeletonName.toUpperCase()}/${skeletonName}_${danceMove}.json`;
+    return `${BASE_HOST}/dancers/input/${this.skeletonName.toUpperCase()}/${
+      this.skeletonName
+    }_${danceMove}.json`;
   }
 
-  _resolveColorsUrl() {
+  _resolveMetadataUrl() {
     return `${BASE_HOST}/dancer/${this.assetsPath}/${this.dancerName}-metadata.json`;
   }
 
@@ -243,9 +196,7 @@ export default class DanceRendererLottie {
       );
     return res.json();
   }
-  _normalizePalette(obj = {}) {
-    const isHex6 = s => typeof s === 'string' && /^#?[0-9a-f]{6}$/i.test(s);
-    const toHex = s => (s[0] === '#' ? s : `#${s}`);
+  _normalizePalette(metadata = {}) {
     const toRGBA = hex => {
       if (!hex) return null;
       const h = hex.replace('#', '');
@@ -255,23 +206,16 @@ export default class DanceRendererLottie {
       return [r, g, b, 1];
     };
 
-    // Fall back on body_color for primary if needed
-    const primaryColor =
-      obj.primary || (obj.body_color !== '#000000' && obj.body_color);
-    console.log('primaryColor', primaryColor);
-    const primaryHex = isHex6(primaryColor) ? toHex(primaryColor) : null;
-    // If secondary/tertiary are invalid/missing, we fall back to primary
-    const secondaryHex = isHex6(obj.secondary)
-      ? toHex(obj.secondary)
-      : primaryHex;
-    const tertiaryHex = isHex6(obj.tertiary)
-      ? toHex(obj.tertiary)
-      : secondaryHex;
+    const {
+      body_color: bodyColor,
+      secondary_color: secondaryColor,
+      tertiary_color: tertiaryColor,
+    } = metadata;
 
     return {
-      primary: toRGBA(primaryHex),
-      secondary: toRGBA(secondaryHex),
-      tertiary: toRGBA(tertiaryHex),
+      primary: toRGBA(bodyColor),
+      secondary: toRGBA(secondaryColor),
+      tertiary: toRGBA(tertiaryColor),
     };
   }
 
@@ -570,8 +514,4 @@ export default class DanceRendererLottie {
     };
     headCompAsset.layers.splice(insertIndex, 0, imgLayer);
   }
-}
-
-function pick(arr) {
-  return arr[Math.floor(Math.random() * arr.length)];
 }
