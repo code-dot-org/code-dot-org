@@ -1,0 +1,48 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2025-09-25T19:52:32.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Finish the Sentence\r\n\r\nUse AI Chat to finish the sentence.\r\n\r\n### Do This:\r\n1. Think about how you would complete the following sentence: *\"The dog barked at the...\"*\r\n2. **Copy and paste** the following prompt: \r\n\r\n>Complete this sentence: The dog barked at the...\r\n3. Press **Send**.\r\n4. Then read **AI Chat's response** and compare it to your own.\r\n\r\n**Try it out!**\r\n\r\n---\r\n:::details [**Want to try another prompt?**]\r\n\r\nCome up with a sentence of your own and see how AI chooses to finish it. Some examples:\r\n> I'm excited to learn how to...\r\n\r\n> What I really want for my birthday is...\r\n:::",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.8,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "Complete the user's sentence with a single word or phrase. Do not write more than a few words.\n",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    },
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:52:32.618+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson1-level1_2025\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson1-level1_2025\"}]"
+}]]></config>
+</Aichat>

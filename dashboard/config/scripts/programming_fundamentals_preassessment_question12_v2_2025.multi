@@ -1,0 +1,17 @@
+name 'programming-fundamentals-preassessment-question12_v2-2025'
+title 'Programming Fundamentals Pre-Assessment: Question 12'
+
+wrong '`loop`'
+wrong '`while`'
+right '`if`'
+wrong '`print`'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+Which statement is used to execute code only when a condition is true?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 9: Conditional Statements
+MARKDOWN

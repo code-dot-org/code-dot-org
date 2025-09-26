@@ -1,0 +1,64 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2025-09-25T19:52:38.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Historical Event\r\n\r\nUse AI Chat to analyze a historical image alongside a primary source PDF.\r\n\r\n### Do This:\r\n\r\n1. Upload one of the **historical images** from the Library. **Copy and paste** the following prompt:\r\n\r\n> Analyze this image. What does the image reveal about this historical event? \r\n\r\n2. Upload the **image** again and the **matching primary source PDF** from the Library. **Modify** the following prompt and press **Send**:\r\n\r\n> Analyze this image and document together. What do they reveal about this historical event?\r\n\r\n3. Read AI Chat's response.\r\n4. Modify your prompt to have AI generate different outputs. Compare the responses. Some prompt ideas:\r\n    - Ask AI to generate a newspaper headline based on the image alone\r\n    - Ask AI to generate a radio broadcast as if the event is happening live\r\n    - Ask AI to generate a movie synopsis based on the image and PDF\r\n   \r\n---\r\n::: details [<i class=\"fa fa-file-image-o\" aria-hidden=\"true\"></i> **How do I upload an image?**]\r\n- Click the button labeled **Upload** below your chat input.\r\n- Choose **From Library**\r\n- Then browse the existing images.\r\n- When you have an image to upload, click the checkbox next to it to select it and then click **Open**.\r\n- You should see the image get added to the message being sent to AI Chat.\r\n:::",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are an AI historical analyst that assists users in analyzing historical events by interpreting text, images, and historical documents. Limit your response to one paragraph.\n\nYour role is to provide accurate, contextual, and sourced historical insights while acknowledging potential limitations in historical data.\n\nGuidelines for AI Responses:\n\n    Analyze Multimodal Inputs Thoughtfully:\n        If a historical image is provided, describe key elements (e.g., people, setting, symbols) and connect them to historical context.\n        If a historical document (PDF) is included, extract key information, cross-reference it with the image, and highlight connections or contradictions.\n\nContextual Accuracy: Identify relevant time periods, locations, and key figures.\n\nDo not fabricate facts—only summarize verified historical knowledge.\n        \nExample one-paragraph AI Response:\n\nHistorical Image Analysis:\n\"This image shows a protest from [year]. The banners suggest the movement was advocating for [cause]. Based on clothing styles and the city backdrop, this likely took place in [region].\"\n\nPDF Document Analysis:\n\"The document, written by [author] in [year], describes the event from the perspective of [government/journalist/citizen]. However, it lacks voices from [opposing side], so additional sources would help provide a fuller picture.\"\n\nMake sure to respond with no more than 5 sentences.",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "multimodalEnabled": true
+    },
+    "display_name": "Historical Event",
+    "bubble_choice_description": "Use AI Chat to analyze a historical event using text, images, and primary source documents. Upload a historical image, attach a related PDF, and compare how AI interprets events with and without supporting sources.",
+    "thumbnail_url": "https://images.code.org/a96b568de37731ddcc42bdaea82bcf0a-Historical Sources.png",
+    "starter_assets": {
+      "EiffelTowerConstruction.jpg": "339cd92c-6051-40ad-941b-a2b66f157ba5.jpg",
+      "Wright Brothers Historical.jpg": "a662ee81-8806-4ef8-851e-21f93474c213.jpg",
+      "Gandhi_during_the_Salt_March.jpg": "0d182cc0-aea6-49b6-943a-348db2a44609.jpg",
+      "grace-hopper-with-early-computer-bettmann.jpg": "f5f44981-5ddc-46b7-ad05-8a6683648d7f.jpg",
+      "women-suffrage-gettyimages-514892136.jpg": "36a813bd-6709-4ac4-bf92-7ef2188de92a.jpg",
+      "GustaveEiffelOptimalStructures.pdf": "b12a1ef9-5192-47a5-ba30-e739e883cea0.pdf",
+      "Gandhi Speech.pdf": "8dad657d-f926-4865-8efe-5f55b109a498.pdf",
+      "Hopper.pdf": "0826443a-852d-489c-a982-7e18b88d5ad7.pdf",
+      "Wright Brothers Patent.pdf": "33680831-2ec6-4678-983e-43c5c0276672.pdf",
+      "Susan B Anthony.pdf": "1db2e781-65ab-4f6a-b958-802ffaa56aae.pdf"
+    },
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:52:38.115+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson2-level4-choice3_2025\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson2-level4-choice3_2025\"}]"
+}]]></config>
+</Aichat>

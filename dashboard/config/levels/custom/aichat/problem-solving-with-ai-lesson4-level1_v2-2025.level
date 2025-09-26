@@ -1,0 +1,49 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2025-09-25T19:52:43.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## AI as a Mathematician\r\n\r\nUse AI Chat to solve a math problem.\r\n\r\n### Do This:\r\n1. Find the section in your **Unit Guide** labeled \"Solving a math problem\". \r\n2. Choose one of the math problems below and rank how well you think a human would do.\r\n3. **Write** a prompt asking AI Chat to solve that problem or something similar.\r\n4. Press **Send**.\r\n5. Then read **AI Chat's response**. \r\n6. Rank how well AI did and complete the table in your **Unit Guide**.\r\n\r\n**Try it out!**\r\n\r\n---\r\n\r\nChoose one of the math problems below. Click to expand:\r\n\r\n::: details [**Basic Calculation**] \r\n>What is 289 × 42? Show your work step by step.\r\n:::\r\n\r\n::: details [**Word Problem**]\r\n>If a train leaves Chicago at 3:00 PM traveling 60 mph and another train leaves New York at 4:00 PM traveling 80 mph, when will they meet?\r\n:::\r\n\r\n::: details [**Logic-Based Math Problem**]\r\n>A farmer has 17 sheep. All but 9 run away. How many are left?\r\n:::\r\n\r\n::: details [**Creative Math Question**]\r\n>Can you tell me the largest number less than 100 that is both a perfect square and a perfect cube?\r\n:::\r\n",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.9,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "Only respond to questions about math problems.",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    },
+    "name_suffix": "_v2-2025",
+    "submittable": "false"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:52:43.796+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson4-level1_2025\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson4-level1_2025\"}]"
+}]]></config>
+</Aichat>

@@ -1,0 +1,72 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2025-09-25T19:53:05.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Practice Refining a Prompt\r\n\r\nUse AI Chat to help you refine a generic prompt.\r\n\r\n### Do This:\r\n\r\n1. Choose one of the generic prompts below:\r\n\r\n>Help me plan my school schedule\r\n\r\nOR\r\n\r\n>Teach me about playing piano\r\n\r\nOR\r\n\r\n>How do I become a software engineer?\r\n2. Refine the prompt using all 5 key elements:\r\n   - Task\r\n   - Context\r\n   - Format\r\n   - Reference\r\n   - Tone\r\n3. Type your revised prompt into AI Chat. Press **Send** and read AI Chat's response. \r\n4. **Rinse and Repeat**: Keep refining your prompt and entering it into AI Chat until you have a prompt that consistently generates helpful AI output.\r\n\r\n**Try it out!**\r\n",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.3,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "If the user attaches an asset, examine the asset first, then answer their question based on your examination of the uploaded asset.",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "multimodalEnabled": true
+    },
+    "bubble_choice_description": "Use AI Chat to help you decide which two patients to assist first.",
+    "display_name": "Hospital Triage Nurse",
+    "thumbnail_url": "https://images.code.org/249b43f221aed22f6ebc602a3084c4bf-medical-clipboard.png",
+    "starter_assets": {
+      "guide to piano keys.jpg": "bd8d3808-d8cc-40bc-8738-64643f8e02fd.jpg",
+      "How to Play the Piano_ A Beginner’s Guide.pdf": "88554d2f-7a15-4d07-988f-aad32f20adde.pdf",
+      "How_to_Play_the_Piano.pdf": "d6dba2a3-1a73-4732-8795-6f8ab614f296.pdf",
+      "4x4 Block.png": "f0ec4ab4-e166-4a29-a097-70ce4e693905.png",
+      "10 Examples of School Schedules.pdf": "c253e492-86ce-4d02-a6c0-de366d8afef9.pdf",
+      "AB Block.png": "49072340-82d9-4104-ab02-1f54917dd120.png",
+      "Flex Mod.png": "f007e55b-598e-4547-8e9d-070d17f0a9ee.png",
+      "Intensive Block.png": "f5b2c3ea-cebf-489a-97bb-ad6ba1d39dff.png",
+      "Intersessions.png": "c5be4669-a972-4dfd-93f7-99db95a7b9b6.png",
+      "Modified Block.png": "cc50ba95-2da7-4bd4-8df1-dbdc5b586e1d.png",
+      "Rotating Block.png": "3adf8160-1468-4827-b481-ae820ec735db.png",
+      "Rotating Standard Periods.png": "da9bc3be-e098-4ccd-b53b-c029ab7e6efd.png",
+      "Standard Periods.png": "75c1548a-5f0d-4fd2-b8db-29a3e3884549.png",
+      "Guide to Becoming a Software Engineer.pdf": "46231b89-0238-4ead-af08-2fa646dd75f8.pdf",
+      "How to Become a Software Engineer (2025 Guide) _ BrainStation®.pdf": "f3407e26-3055-4185-8679-2ca54b271d27.pdf",
+      "How_to_Become_a_Software_Engineer_1.pdf": "d6ff262f-36a3-412a-9384-68408ddee0c3.pdf",
+      "How to play piano_ 21 days challenge for beginner learners _[2025]-compressed.pdf": "f4f1d50c-cefb-4960-be7b-d7a86fd994e9.pdf",
+      "Piano Lessons.pdf": "30699d24-703c-48d1-a1e4-3d4dcefb36d5.pdf"
+    },
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:53:05.124+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson8-level7_2025\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson8-level7_2025\"}]"
+}]]></config>
+</Aichat>

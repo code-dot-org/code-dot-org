@@ -1,0 +1,72 @@
+name 'pl_sandbox_aif-2-pre_cert'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Receiving a Certificate for this Self-Paced Experience
+
+<div style="text-align: center; width: 60%; margin: 20px auto;">
+	<img src="https://images.code.org/3c1a4c73b4ae82cc41d2a0961c529b56-image-1740605049082.png" alt="A certificate of completion.">
+</div>
+
+#### Upon finishing this self-paced experience, you will be eligible to receive a certificate of completion similar to the one above. **Note that yours will be filled with your name, the self-paced experience title, and the total amount of hours.** You must complete **every level** in this module to access your certificate.
+
+#### We encourage you to share your certificates to social media to celebrate your success!
+
+## FAQ
+
+##### Click on the arrows below to expand each section.
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 16px; font-weight: bold;">How do I complete a level?</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+
+#### Completion varies by level type:
+
+* #### 📖 **Text-Only Level**: Read the provided text and click the "Continue" button.
+* #### 📽️ **Video Level**: Watch the provided video and click the "Continue" button.
+* #### 💻 **Coding Activity Level**: Complete the coding task. Some levels will require a correct answer. You will have an unlimited number of attempts.
+* #### ✅ **Check for Understanding Level**: Answer the check for understanding correctly (such as vocabulary matching or multiple choice). You will have an unlimited number of attempts.
+* #### 📝 **Open Reflection Level**: Submit a response to the question(s).
+
+</div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 16px; font-weight: bold;">When will I receive my certificate?</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+
+#### You'll be taken to a congratulations page once you've completed every level within a self-paced experience. If the self-paced experience has multiple units (see the image directly below), you will see the congratulations page once every level is complete in every unit. 
+
+<div style="text-align: center; margin: 20px auto;">
+    <img src="https://images.code.org/8cadf9c2f9d2b4020ca430fbeda4b3a3-image-1740603921364.05.16 PM.png" alt="A self-paced experience showing two units." style="width: 80%; border-radius: 0px;">
+    <p style="font-size: 12pt; margin-top: 5px;">This is an example of a self-paced experience with two units.</p>
+</div>
+
+</div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 16px; font-weight: bold;">Where can I find the certificates I've earned?</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+
+#### You can find all your certificates at <a href="studio.code.org/my-professional-learning" target="blank" rel="noopener noreferrer">studio.code.org/my-professional-learning</a>. Your self-paced certificates will be in the “My Self Paced Professional Learning Courses” section in the Actions column once you have completed the self-paced experience.
+
+</div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 16px; font-weight: bold;">Why can't I access my certificate?</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+
+#### Ensure that *every* level has been completed in the unit. Your unit overview page should look similar to this image:
+
+<div style="text-align: center; margin: 20px auto;">
+    <img src="https://images.code.org/54d59fd9d8f3902629e435c144d68643-image-1740604568303.16.04 PM.png" alt="A completed module on Code Studio shows every level completed." style="width: 80%; border-radius: 0px;">
+    <p style="font-size: 12pt; margin-top: 5px;">Every level is completed in this unit.</p>
+</div>
+
+#### You may need to return to individual levels to complete them. If every level is complete and you still can't access a certificate, <a href="https://support.code.org/hc/en-us/requests/new" target="blank" rel="noopener noreferrer">send us a message</a>.
+
+</div></details>
+MARKDOWN

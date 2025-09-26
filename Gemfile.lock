@@ -97,8 +97,6 @@ PATH
       rails (~> 6.1.7)
       zeitwerk (~> 2.6.7)
     hoc_legacy (0.0.0)
-    marketing (0.0.0)
-      contentful
 
 GEM
   remote: https://rubygems.org/
@@ -1070,7 +1068,6 @@ DEPENDENCIES
   loofah (~> 2.19.1)
   mailgun-ruby (~> 1.2.14)
   mailjet (~> 1.7.3)
-  marketing!
   memory_profiler
   mini_magick (>= 4.10.0)
   mini_racer
