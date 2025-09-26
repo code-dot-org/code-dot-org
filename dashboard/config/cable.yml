@@ -1,10 +1,33 @@
-development:
-  adapter: async
+# Configure ActionCable to use redis with CDO.session_store_server as the shared server
+shared_redis: &shared_redis
+  adapter: redis
+  url: <%= CDO.session_store_server %>
+  #channel_prefix: dashboard_actioncable_<%= Rails.env %>
 
+#development:
+#  adapter: async
+
+development:
+  <<: *shared_redis
+
+# FIXME: what about when we run on the test server? Ugh these should not be the same environment
 test:
   adapter: test
 
+# # Regular adhoc:
+# adhoc:
+#   adapter: redis
+#   url: <%= ENV.fetch("REDIS_URL") { "redis://localhost:6379/1" } %>
+#   channel_prefix: cable_adhoc
+
+# Fullstack adhoc:
+adhoc:
+  <<: *shared_redis
+  # FIXME: CDO.session_store_server is not currently set on a regular adhoc so this would fail
+  # the right fix might be just to set it to redis://localhost:6379/1,
+  # with the philosophy of "make adhocs like real", so they'd actually use a redis backed
+  # session store.
+
+# FIXME FIXME FIXME FIXME FIXME, do not commit this PR until we make this setting real
 production:
-  adapter: redis
-  url: <%= ENV.fetch("REDIS_URL") { "redis://localhost:6379/1" } %>
-  channel_prefix: boo_production
+  <<: *shared_redis
