@@ -1,0 +1,65 @@
+/* Button styles */
+.btnBase {
+  border-radius: 0; 
+  text-transform: none;
+  padding-left: 16px;
+  padding-right: 16px;
+  height: 44px;
+
+}
+
+/* menu  */
+.btnPill {
+  border-radius: 999px;
+}
+
+
+
+/* Inline panel */
+.inlinePanel {
+  margin-top: 0;
+  padding: 10px;
+  width: 100%;
+  border: none;
+}
+
+/*  Grid list of chips */
+.gridList {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 6px;
+  justify-items: start;
+}
+
+/* Chip styles */
+.chip {
+  border-radius: 999px;
+  height: 34px;
+
+  :global(.MuiChip-label) {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 13px;
+    line-height: 20px;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  :global(.MuiChip-deleteIcon) {
+    color: inherit;
+  }
+}
+
+
+/* Menu paper */
+.menuPaper {
+  margin-top: 0;
+  max-width: 400px;
+  border: none;
+  border-radius: 8px;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-left: 0;
+  padding-bottom: 10px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.14);
+}
