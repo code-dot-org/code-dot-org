@@ -759,8 +759,13 @@ module Services
         :login_required,
         :properties,
         :new_name,
+        :family_name,
         :serialized_at,
         :hide_within_course,
+        :published_state,
+        :instruction_type,
+        :instructor_audience,
+        :participant_audience,
         :seeding_key
       )
 
