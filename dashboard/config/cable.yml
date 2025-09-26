@@ -23,6 +23,10 @@ test:
 # Fullstack adhoc:
 adhoc:
   <<: *shared_redis
+  # FIXME: CDO.session_store_server is not currently set on a regular adhoc so this would fail
+  # the right fix might be just to set it to redis://localhost:6379/1,
+  # with the philosophy of "make adhocs like real", so they'd actually use a redis backed
+  # session store.
 
 # FIXME FIXME FIXME FIXME FIXME, do not commit this PR until we make this setting real
 production:
