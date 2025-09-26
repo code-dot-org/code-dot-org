@@ -15,7 +15,7 @@ const ClearChatButton: React.FunctionComponent = () => {
     state => state.aichat.chatWorkspaceSelectedTab
   );
 
-  // Teacher user is able to interact with chatbot.
+  // Disable clearing chat when viewing student chat as a teacher
   const isDisabled = useMemo(
     () => selectedTab === WorkspaceTeacherViewTab.STUDENT_CHAT_HISTORY,
     [selectedTab]
