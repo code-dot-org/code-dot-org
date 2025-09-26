@@ -1178,7 +1178,7 @@ DEPENDENCIES
   youtube-dl.rb
 
 RUBY VERSION
-   ruby 3.1.0p0
+   ruby 3.1.7p261
 
 BUNDLED WITH
    2.5.17
