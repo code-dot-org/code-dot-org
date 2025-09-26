@@ -5,7 +5,7 @@
     "docFunc": "gamelab_makeNewSpriteAnon",
     "inline": false,
     "blockText": "generated dancer do {NAME}",
-    "style": "lab_blocks",
+    "style": "ai_blocks",
     "args": [
       {
         "name": "NAME",
