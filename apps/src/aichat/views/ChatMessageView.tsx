@@ -32,9 +32,10 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
   buildAssetUrl,
 }) => {
   const [showProfaneUserMessage, setShowProfaneUserMessage] = useState(false);
-  const {status, role, chatMessageText, assets, userAddedContext} = chatMessage;
+  const {status, role, chatMessageText, assets, userAddedSelectionContext} =
+    chatMessage;
   const hasAssets = assets && buildAssetUrl;
-  const hasUserAddedContext = !!userAddedContext?.length;
+  const hasUserAddedSelectionContext = !!userAddedSelectionContext?.length;
 
   const displayText = getChatMessageDisplayText(
     status,
@@ -90,7 +91,7 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
   }
 
   let header;
-  if (!isAssistant && (hasAssets || hasUserAddedContext)) {
+  if (!isAssistant && (hasAssets || hasUserAddedSelectionContext)) {
     header = (
       <div className={styles.assetCol}>
         {hasAssets &&
@@ -112,8 +113,8 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
               </button>
             );
           })}
-        {hasUserAddedContext &&
-          userAddedContext.map(contextItem => (
+        {hasUserAddedSelectionContext &&
+          userAddedSelectionContext.map(contextItem => (
             <FilePreview type="text" filename={contextItem.displayName} />
           ))}
       </div>

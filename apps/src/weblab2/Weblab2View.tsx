@@ -93,8 +93,8 @@ const Weblab2View: React.FC<
   const [systemPromptOptions, setSystemPromptOptions] = useState<
     SystemPromptOption[] | undefined
   >(undefined);
-  const userAddedContext = useAppSelector(
-    state => state.aichat.userAddedContext
+  const userAddedSelectionContext = useAppSelector(
+    state => state.aichat.userAddedSelectionContext
   );
 
   const {startSources} = useSource(
@@ -138,8 +138,9 @@ const Weblab2View: React.FC<
     aiTutorHelper.setAiTutorContext({
       source,
       longInstructions: levelProperties.longInstructions,
+      selection: userAddedSelectionContext,
     });
-  }, [source, levelProperties.longInstructions]);
+  }, [source, levelProperties.longInstructions, userAddedSelectionContext]);
 
   // Since there's no run button in Weblab2, set it to true by default
   // to enable the Submit button on edit on submittable levels.
@@ -165,9 +166,7 @@ const Weblab2View: React.FC<
           setConfig={setConfig}
           startSources={startSources}
           levelProperties={levelProperties}
-          hiddenContextCallback={aiTutorHelper.getHiddenContextCallbackWebLab2(
-            userAddedContext
-          )}
+          hiddenContextCallback={aiTutorHelper.getHiddenContextCallback()}
           aiTutorSystemPromptSettings={aiTutorSystemPromptSettings}
           aiTutorMultimodalEnabled={true}
           aiTutorChatButtonData={[]}

@@ -3,7 +3,7 @@ import {createAsyncThunk} from '@reduxjs/toolkit';
 import {
   clearChatMessagePending,
   clearStagedFiles,
-  clearUserAddedContext,
+  clearUserAddedSelectionContext,
   setChatMessagePending,
 } from '@cdo/apps/aichat/redux/slice';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
@@ -27,7 +27,7 @@ import {
   ModelParameters,
   AiChatClientType,
   AnalyticsProperties,
-  UserAddedContextItem,
+  UserAddedSelectionContextItem,
 } from '../../types';
 import {getNewRemoveId} from '../utils';
 
@@ -48,7 +48,7 @@ export const submitChatContents = createAsyncThunk(
       hiddenContext?: string;
       assets?: ChatAsset[];
       analyticsProperties?: AnalyticsProperties;
-      userAddedContext?: UserAddedContextItem[];
+      userAddedSelectionContext?: UserAddedSelectionContextItem[];
     },
     thunkAPI
   ) => {
@@ -62,13 +62,13 @@ export const submitChatContents = createAsyncThunk(
       modelParameters,
       clientType,
       analyticsProperties,
-      userAddedContext,
+      userAddedSelectionContext,
     } = newUserMessageInput;
 
     // Clear any staged files if present (used with multimodal models)
     thunkAPI.dispatch(clearStagedFiles());
     // Clear any user added context if present.
-    thunkAPI.dispatch(clearUserAddedContext());
+    thunkAPI.dispatch(clearUserAddedSelectionContext());
 
     const aichatContext: AichatContext = {
       clientType,
@@ -83,7 +83,7 @@ export const submitChatContents = createAsyncThunk(
       chatMessageText: text,
       hiddenContext,
       assets,
-      userAddedContext,
+      userAddedSelectionContext,
       timestamp: Date.now(),
     };
     dispatch(setChatMessagePending(newUserMessage));

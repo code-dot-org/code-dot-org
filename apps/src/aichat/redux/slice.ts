@@ -24,7 +24,7 @@ import {
   ChatAsset,
   SaveError,
   AiChatClientType,
-  UserAddedContextItem,
+  UserAddedSelectionContextItem,
 } from '../types';
 import {
   DEFAULT_VISIBILITIES,
@@ -56,7 +56,7 @@ const initialState: AichatState = {
   saveError: undefined,
   showResetMessage: false,
   hasSetStartingCustomizations: false,
-  userAddedContext: {},
+  userAddedSelectionContext: {},
 };
 
 const aichatSlice = createSlice({
@@ -330,18 +330,22 @@ const aichatSlice = createSlice({
     setSaveError(state, action: PayloadAction<SaveError | undefined>) {
       state.saveError = action.payload;
     },
-    addItemToUserAddedContext(
+    addItemToUserAddedSelectionContext(
       state,
-      action: PayloadAction<UserAddedContextItem>
+      action: PayloadAction<UserAddedSelectionContextItem>
     ) {
-      state.userAddedContext[action.payload.displayName] = action.payload;
+      state.userAddedSelectionContext[action.payload.displayName] =
+        action.payload;
     },
-    removeItemFromUserAddedContext(state, action: PayloadAction<string>) {
-      state.userAddedContext[action.payload] &&
-        delete state.userAddedContext[action.payload];
+    removeItemFromUserAddedSelectionContext(
+      state,
+      action: PayloadAction<string>
+    ) {
+      state.userAddedSelectionContext[action.payload] &&
+        delete state.userAddedSelectionContext[action.payload];
     },
-    clearUserAddedContext(state) {
-      state.userAddedContext = {};
+    clearUserAddedSelectionContext(state) {
+      state.userAddedSelectionContext = {};
     },
   },
 });
@@ -401,7 +405,7 @@ export const {
   clearStagedFilesAlert,
   setSaveError,
   clearHasSetStartingCustomizations,
-  addItemToUserAddedContext,
-  removeItemFromUserAddedContext,
-  clearUserAddedContext,
+  addItemToUserAddedSelectionContext,
+  removeItemFromUserAddedSelectionContext,
+  clearUserAddedSelectionContext,
 } = aichatSlice.actions;

@@ -35,7 +35,7 @@ import {getAssetUrl, getShortName} from '../utils';
 
 import StagedFilesPreview from './assets/StagedFilesPreview';
 import UploadButton from './assets/UploadButton';
-import UserAddedContextPreview from './assets/UserAddedContextPreview';
+import UserAddedSelectionContextPreview from './assets/UserAddedSelectionContextPreview';
 import ChatEventsList from './ChatEventsList';
 import ChatModeDropdown from './ChatModeDropdown';
 import CopyChatHistoryButton from './CopyChatHistoryButton';
@@ -301,7 +301,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
         {multimodalAvailable && (
           <StagedFilesPreview buildAssetUrl={buildAssetUrl} />
         )}
-        <UserAddedContextPreview />
+        <UserAddedSelectionContextPreview />
         <ChatModeDropdown
           className={moduleStyles.modeDropdown}
           systemPromptSettings={systemPromptSettings}

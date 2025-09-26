@@ -1,4 +1,4 @@
-import {UserAddedContext} from '@cdo/apps/aichat/types';
+import {UserAddedSelectionContext} from '@cdo/apps/aichat/types';
 import {AiTutorContextHelper} from '@cdo/apps/aiTutor/helpers/aiTutorContextHelper';
 import {AiTutorContext} from '@cdo/apps/aiTutor/types';
 import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
@@ -6,6 +6,7 @@ import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
 interface AiTutorWebLab2Params {
   source: MultiFileSource | undefined;
   longInstructions: string | undefined;
+  selection: UserAddedSelectionContext;
 }
 
 export class AiTutorWebLab2ContextHelper extends AiTutorContextHelper<AiTutorWebLab2Params> {
@@ -15,7 +16,11 @@ export class AiTutorWebLab2ContextHelper extends AiTutorContextHelper<AiTutorWeb
     return this.aiTutorContext;
   }
 
-  setAiTutorContext({source, longInstructions}: AiTutorWebLab2Params) {
+  setAiTutorContext({
+    source,
+    longInstructions,
+    selection,
+  }: AiTutorWebLab2Params) {
     const sourceCode = source
       ? Object.values(source.files)
           .filter(
@@ -27,33 +32,20 @@ export class AiTutorWebLab2ContextHelper extends AiTutorContextHelper<AiTutorWeb
           .join('\n\n')
       : undefined;
 
+    const userSelection =
+      selection && Object.values(selection).length > 0
+        ? Object.values(selection)
+            .map(
+              context =>
+                `filename: ${context.filename}\n\`\`\`${context.sourceCode}}\`\`\``
+            )
+            .join('\n\n')
+        : undefined;
+
     this.aiTutorContext = {
       sourceCode,
       longInstructions,
+      userSelection,
     };
-  }
-
-  getHiddenContextCallbackWebLab2(userAddedContext: UserAddedContext) {
-    return this.getHiddenContextStringWeblab2.bind(this, userAddedContext);
-  }
-
-  protected async getHiddenContextStringWeblab2(
-    userAddedContext: UserAddedContext
-  ) {
-    const baseString = await super.getHiddenContextString();
-    const userAddedContextData = Object.values(userAddedContext).map(
-      context =>
-        `Filename: ${context.filename}\n\`\`\`${context.sourceCode}}\`\`\``
-    );
-    if (userAddedContextData.length > 0) {
-      const userAddedContextString = [
-        'The student would like to focus on this subset of their current code:',
-        ...userAddedContextData,
-      ].join('\n\n');
-      const combinedString = [userAddedContextString, baseString].join('\n\n');
-      console.log(`🤖: Tutor context with user added context:`, combinedString);
-      return combinedString;
-    }
-    return baseString;
   }
 }
