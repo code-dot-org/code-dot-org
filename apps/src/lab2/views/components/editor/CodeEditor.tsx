@@ -1,9 +1,15 @@
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {autocompletion} from '@codemirror/autocomplete';
-import {Compartment, EditorState, Extension} from '@codemirror/state';
-import {EditorView, ViewUpdate} from '@codemirror/view';
+import {
+  Compartment,
+  EditorState,
+  Extension,
+  StateField,
+} from '@codemirror/state';
+import {EditorView, showTooltip, Tooltip, ViewUpdate} from '@codemirror/view';
 import classNames from 'classnames';
 import React, {useEffect, useMemo, useRef, useState} from 'react';
+import ReactDOM from 'react-dom';
 
 import {FontSize} from '@cdo/apps/lab2/constants';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
@@ -15,6 +21,7 @@ import {AppName} from '@cdo/apps/lab2/types';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
+import AiTutorChatContextButton from './AiTutorChatContextButton';
 import {editorConfig} from './editorConfig';
 import {
   darkMode as darkModeTheme,
@@ -86,13 +93,65 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
 
     const onEditorUpdate = EditorView.updateListener.of(
       (update: ViewUpdate) => {
-        onCodeChange(update.state.doc.toString());
+        if (update.docChanged) {
+          onCodeChange(update.state.doc.toString());
+        }
       }
     );
 
+    const getCursorTooltips = (state: EditorState) => {
+      return state.selection.ranges
+        .filter(range => !range.empty)
+        .map(range => {
+          const startingPosition = state.selection.main.from;
+          const endingPosition = state.selection.main.to;
+          const startingLine = state.doc.lineAt(startingPosition).number;
+          const endingLine = state.doc.lineAt(endingPosition).number;
+          const selection = state.doc.sliceString(
+            startingPosition,
+            endingPosition
+          );
+          return {
+            pos: range.to,
+            above: false,
+            strictSide: true,
+            arrow: false,
+            clip: false,
+            create: () => {
+              const dom = document.createElement('div');
+              dom.className = 'cm-tooltip-cursor';
+              dom.id = 'codemirrror-cursor-tooltip';
+              ReactDOM.render(
+                <AiTutorChatContextButton
+                  text={selection}
+                  startingLine={startingLine}
+                  endingLine={endingLine}
+                  saveSelectionContext={(text, startingLine, endingLine) =>
+                    console.log({text, startingLine, endingLine})
+                  }
+                />,
+                dom
+              );
+              return {dom};
+            },
+          };
+        });
+    };
+
+    const cursorTooltipField = StateField.define<readonly Tooltip[]>({
+      create: getCursorTooltips,
+
+      update(tooltips, tr) {
+        if (!tr.docChanged && !tr.selection) return tooltips;
+        return getCursorTooltips(tr.state);
+      },
+
+      provide: f => showTooltip.computeN([f], state => state.field(f)),
+    });
+
     const editorExtensions = [
       ...editorConfig,
-
+      cursorTooltipField,
       onEditorUpdate,
       autocompletion(),
       ...editorConfigExtensions,
