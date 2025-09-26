@@ -2,7 +2,7 @@ import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import {usePrompts} from '@codebridge/FileBrowser/hooks';
 import {ProjectFile} from '@codebridge/types';
 import {
-  enableUserAddedContext,
+  enableUserAddedSelectionContext,
   getFolderPath,
   getPossibleDestinationFoldersForFile,
   sendCodebridgeAnalyticsEvent,
@@ -10,7 +10,7 @@ import {
 import fileDownload from 'js-file-download';
 import {useMemo} from 'react';
 
-import {addItemToUserAddedContext} from '@cdo/apps/aichat/redux/slice';
+import {addItemToUserAddedSelectionContext} from '@cdo/apps/aichat/redux/slice';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
@@ -95,7 +95,7 @@ export const useFileRowOptions = (
         clickHandler: () => openRenameFilePrompt({fileId: file.id}),
       },
       {
-        condition: enableUserAddedContext(appName, file),
+        condition: enableUserAddedSelectionContext(appName, file),
         iconName: 'message-code',
         labelText: codebridgeI18n.addToAiTutorContext(),
         clickHandler: () => {
@@ -105,7 +105,7 @@ export const useFileRowOptions = (
             fullFilename = (folderPath + '/' + file.name).substring(1); // remove leading slash
           }
           dispatch(
-            addItemToUserAddedContext({
+            addItemToUserAddedSelectionContext({
               displayName: fullFilename,
               sourceCode: file.contents,
               filename: fullFilename,

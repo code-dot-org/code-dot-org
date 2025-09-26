@@ -12,13 +12,14 @@ export abstract class AiTutorContextHelper<T extends object> {
 
   protected abstract setAiTutorContext(params: T): void;
 
-  protected async getHiddenContextString() {
+  private async getHiddenContextString() {
     const {
       sourceCode,
       validationContents,
       validationResults,
       longInstructions,
       documentation,
+      userSelection,
     } = await this.getAiTutorContext();
 
     const hiddenContextString = [
@@ -40,6 +41,12 @@ export abstract class AiTutorContextHelper<T extends object> {
         ? [
             'Here is the documentation. (The student can view the documentation by clicking the book icon at the top of the workspace.):',
             documentation,
+          ]
+        : []),
+      ...(userSelection
+        ? [
+            'The student would like to focus on this subset of their current code:',
+            userSelection,
           ]
         : []),
     ].join('\n\n');
