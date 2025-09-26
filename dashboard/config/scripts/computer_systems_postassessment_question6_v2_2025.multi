@@ -1,0 +1,17 @@
+name 'computer-systems-postassessment-question6_v2-2025'
+title 'Computer Systems and Devices Post-Assessment: Question 6'
+
+wrong 'Microphone and GPS'
+right 'Lidar and Camera'
+wrong 'Temperature Sensor and Speaker'
+wrong 'Printer and Keyboard'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+A self-driving car uses sensors to navigate the road. Which combination of sensors would be most useful?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 7: Data in Computer Systems
+MARKDOWN

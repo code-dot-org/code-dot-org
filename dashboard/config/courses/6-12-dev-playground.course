@@ -7,7 +7,9 @@
     "6-12-csd-music-lab",
     "6-12-problem-solving-with-ai",
     "student-end-of-unit-survey",
-    "6-12-ai-powered-threats-and-defenses"
+    "6-12-ai-powered-threats-and-defenses",
+    "6-12-aif-s2-unit1",
+    "6-12-aif-s2-unit2"
   ],
   "original_script_names": [
     "6-12-intro-to-programming-python",
@@ -16,7 +18,9 @@
     "6-12-csd-music-lab",
     "6-12-problem-solving-with-ai",
     "student-end-of-unit-survey",
-    "6-12-ai-powered-threats-and-defenses"
+    "6-12-ai-powered-threats-and-defenses",
+    "6-12-aif-s2-unit1",
+    "6-12-aif-s2-unit2"
   ],
   "published_state": "in_development",
   "instruction_type": "teacher_led",

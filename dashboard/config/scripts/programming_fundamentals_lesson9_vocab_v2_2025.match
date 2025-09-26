@@ -1,0 +1,18 @@
+name 'programming-fundamentals-lesson9-vocab_v2-2025'
+title 'Check Your Understanding'
+description 'Match each term with the correct definition.'
+height '100'
+
+question 'condition'
+answer 'a rule that the computer checks to decide if it should keep going'
+
+question 'conditional statement'
+answer 'tells a computer to do something only if a certain condition is `True`'
+
+question 'parameter'
+answer 'a placeholder in your function'
+
+question 'argument'
+answer 'the actual value you pass into a function when you call it'
+
+allow_multiple_attempts true

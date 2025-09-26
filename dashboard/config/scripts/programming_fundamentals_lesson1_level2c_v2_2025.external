@@ -1,0 +1,87 @@
+name 'programming-fundamentals-lesson1-level2c_v2-2025'
+title 'Careers and Emerging Technologies'
+display_name 'Ideas-Oriented Careers'
+bubble_choice_description 'Explore ideas-oriented careers based on your interests and skills.'
+thumbnail_url 'https://images.code.org/d92eb2e909879bd991385cbc19657bcd-brain.png'
+
+markdown <<MARKDOWN
+# Ideas-Oriented Careers
+
+##### Use the information below to match your interests and skills to the careers that are more ideas-oriented.
+
+
+## Careers in Computing
+
+<table style="border-collapse: collapse; width: 100%; text-align: center;">
+  <thead>
+    <tr style="background-color: #f2f2f2;">
+      <th style="border: 1px solid black; font-weight: bold; text-align: center;">Ideas-Oriented Careers</th>
+      <th style="border: 1px solid black; font-weight: bold; text-align: center;">Description</th>
+      <th style="border: 1px solid black; font-weight: bold; text-align: center;">Skills/Interests</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border: 1px solid black; font-weight: bold; padding: 8px;">AI Engineer</td>
+      <td style="border: 1px solid black; padding: 8px;">Develops systems that simulate human intelligence, such as recommendation engines and chatbots.</td>
+      <td style="border: 1px solid black; padding: 8px;">Problem-solving, Creativity, Logical thinking, Curiosity</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black; font-weight: bold; padding: 8px;">Data Scientist</td>
+      <td style="border: 1px solid black; padding: 8px;">Analyzes large amounts of data to find patterns, make predictions, and solve complex problems</td>
+      <td style="border: 1px solid black; padding: 8px;">Analytical skills, Critical thinking, Curiosity, Precision</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black; font-weight: bold; padding: 8px;">Game Developer</td>
+      <td style="border: 1px solid black; padding: 8px;">Creates video games, designing visuals, mechanics, and interactivity for players</td>
+      <td style="border: 1px solid black; padding: 8px;">Creativity, Problem-solving, Teamwork, Coding skills</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black; font-weight: bold; padding: 8px;">Environmental Scientist (Data-Driven)</td>
+      <td style="border: 1px solid black; padding: 8px;">Uses remote sensing and environmental modeling tools to analyze climate and ecological data</td>
+      <td style="border: 1px solid black; padding: 8px;">Analytical skills, Problem-solving, Curiosity, Data visualization</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black; font-weight: bold; padding: 8px;">Filmmaker (Visual Effects Technology)</td>
+      <td style="border: 1px solid black; padding: 8px;">Leverages advanced visual effects software and virtual production tools to create cinematic experiences</td>
+      <td style="border: 1px solid black; padding: 8px;">Creativity, Technical skills, Attention to detail, Collaboration</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black; font-weight: bold; padding: 8px;">Architect (Using 3D Visualization Tools)</td>
+      <td style="border: 1px solid black; padding: 8px;">Designs sustainable buildings and spaces with the help of advanced modeling and visualization software</td>
+      <td style="border: 1px solid black; padding: 8px;">Creativity, Critical thinking, Technical skills, Innovation</td>
+    </tr>
+  </tbody>
+</table>
+
+## You can also go back to check out careers in the other categories!
+
+<table style="border-collapse: collapse; width: 100%; text-align: center;">
+  <thead>
+    <tr style="background-color: #f2f2f2;">
+      <th style="border: 1px solid black; font-weight: bold; text-align: center;">People</th>
+      <th style="border: 1px solid black; font-weight: bold; text-align: center;">Things</th>
+      <th style="border: 1px solid black; font-weight: bold; text-align: center;">Ideas</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border: 1px solid black; text-align: center;">
+        Careers that focus on working with others, communication and collaboration
+        <br>
+        <img src="https://images.code.org/fb724faf1ea8e5a7745a8c498205b612-employee-engagement.png" alt="People category" style="border-radius:0px; height: 75px; margin: 10px 0;">
+      </td>
+      <td style="border: 1px solid black; text-align: center;">
+        Careers that focus on working with tools, machines, systems, or physical processes
+        <br>
+        <img src="https://images.code.org/4f245e227cb52dd6f6793497be3fb313-electrician.png" alt="Things category" style="border-radius:0px; height: 75px; margin: 10px 0;">
+      </td>
+      <td style="border: 1px solid black; text-align: center;">
+        Careers that focus on solving big problems, creativity, and critical thinking
+        <br>
+        <img src="https://images.code.org/d92eb2e909879bd991385cbc19657bcd-brain.png" alt="Ideas category" style="border-radius:0px; height: 75px; margin: 10px 0;">
+      </td>
+    </tr>
+  </tbody>
+</table>
+MARKDOWN

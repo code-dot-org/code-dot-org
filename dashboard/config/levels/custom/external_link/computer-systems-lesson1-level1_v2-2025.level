@@ -1,0 +1,17 @@
+<ExternalLink>
+  <config><![CDATA[{
+  "game_id": 55,
+  "created_at": "2025-09-25T19:59:25.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Computing Innovation Map\r\n\r\n![](https://images.code.org/6f32ab87e5311ad41bebfe978ed14a71-image-1738282808454.png)\r\n\r\n**Need a refresher on key terms?**  \r\n- An **industry** is a group of businesses or organizations focused on a particular field (e.g., healthcare, agriculture, fashion).  \r\n- An **innovation** is a new idea, technology, or tool that improves how something is done in that industry.  \r\n- *Example:* In the healthcare industry, an innovation like smart prosthetics helps patients walk again using advanced sensors and software.\r\n\r\n\r\n## Do This:\r\n\r\n* Click the link to open the interactive Computing Innovation Map.\r\n* Click on the markers to explore different computing innovations in medicine, agriculture, education, and fashion.\r\n* Watch videos and read descriptions to learn how each innovation works.\r\n* Choose one innovation to investigate.\r\n\r\n**Note:** If you are unable to access the site linked below, you can use this resource as an alternative [Computing Innovation Map](https://docs.google.com/presentation/d/11_vTxAX7WZTmFqn2jQRvDkErAhHlQriLj2KfWEJM2Zg/edit?usp=sharing)",
+    "link_title": "Computing Innovation Map",
+    "url": "https://www.google.com/maps/d/u/1/viewer?hl=en&mid=1wpU-4sxapqN7ksztqtEdVEcKtbhCcA0",
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:59:25.885+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson1-level1_2025\\\"\"],\"cloned_from\":\"computer-systems-lesson1-level1_2025\"}]"
+}]]></config>
+</ExternalLink>

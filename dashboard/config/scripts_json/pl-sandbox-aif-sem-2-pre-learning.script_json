@@ -1,0 +1,325 @@
+{
+  "script": {
+    "name": "pl-sandbox-aif-sem-2-pre-learning",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "is_migrated": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2025-09-25 19:52:19 UTC",
+    "hide_within_course": false,
+    "published_state": "in_development",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "pl-sandbox-aif-sem-2-pre-learning"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-pre-learning"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Introduction to Teaching AI Foundations (Semester 2)",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-pre-learning"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "20eab32d-7e26-49b0-bb81-83063147e39d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "20eab32d-7e26-49b0-bb81-83063147e39d",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-pre-learning"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "cac11652-374b-47c5-b5b9-ed000268795d",
+      "position": 1,
+      "properties": {
+        "progression_name": "Introduction to AI Foundations "
+      },
+      "seeding_key": {
+        "activity_section.key": "cac11652-374b-47c5-b5b9-ed000268795d",
+        "lesson_activity.key": "20eab32d-7e26-49b0-bb81-83063147e39d"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to AI Foundations "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl_sandbox_aif-2-pre-L1-Welcome"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-pre-learning",
+        "activity_section.key": "cac11652-374b-47c5-b5b9-ed000268795d"
+      },
+      "level_keys": [
+        "pl_sandbox_aif-2-pre-L1-Welcome"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to AI Foundations "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl_sandbox_aif-2-pre_cert"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-pre-learning",
+        "activity_section.key": "cac11652-374b-47c5-b5b9-ed000268795d"
+      },
+      "level_keys": [
+        "pl_sandbox_aif-2-pre_cert"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to AI Foundations "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl_sandbox_aif-2-pre_support"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-pre-learning",
+        "activity_section.key": "cac11652-374b-47c5-b5b9-ed000268795d"
+      },
+      "level_keys": [
+        "pl_sandbox_aif-2-pre_support"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to AI Foundations "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl_sandbox_aif-2-pre_what_is_aif_4"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-pre-learning",
+        "activity_section.key": "cac11652-374b-47c5-b5b9-ed000268795d"
+      },
+      "level_keys": [
+        "pl_sandbox_aif-2-pre_what_is_aif_4"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to AI Foundations "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl_sandbox_aif-2-pre-learning-approach_5"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-pre-learning",
+        "activity_section.key": "cac11652-374b-47c5-b5b9-ed000268795d"
+      },
+      "level_keys": [
+        "pl_sandbox_aif-2-pre-learning-approach_5"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to AI Foundations "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl_sandbox_aif-2-pre-different-6"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-pre-learning",
+        "activity_section.key": "cac11652-374b-47c5-b5b9-ed000268795d"
+      },
+      "level_keys": [
+        "pl_sandbox_aif-2-pre-different-6"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "pl_sandbox_aif-2-pre-L1-Welcome",
+        "script_level.level_keys": [
+          "pl_sandbox_aif-2-pre-L1-Welcome"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-pre-learning",
+        "activity_section.key": "cac11652-374b-47c5-b5b9-ed000268795d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl_sandbox_aif-2-pre_cert",
+        "script_level.level_keys": [
+          "pl_sandbox_aif-2-pre_cert"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-pre-learning",
+        "activity_section.key": "cac11652-374b-47c5-b5b9-ed000268795d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl_sandbox_aif-2-pre_support",
+        "script_level.level_keys": [
+          "pl_sandbox_aif-2-pre_support"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-pre-learning",
+        "activity_section.key": "cac11652-374b-47c5-b5b9-ed000268795d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl_sandbox_aif-2-pre_what_is_aif_4",
+        "script_level.level_keys": [
+          "pl_sandbox_aif-2-pre_what_is_aif_4"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-pre-learning",
+        "activity_section.key": "cac11652-374b-47c5-b5b9-ed000268795d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl_sandbox_aif-2-pre-learning-approach_5",
+        "script_level.level_keys": [
+          "pl_sandbox_aif-2-pre-learning-approach_5"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-pre-learning",
+        "activity_section.key": "cac11652-374b-47c5-b5b9-ed000268795d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl_sandbox_aif-2-pre-different-6",
+        "script_level.level_keys": [
+          "pl_sandbox_aif-2-pre-different-6"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-pre-learning",
+        "activity_section.key": "cac11652-374b-47c5-b5b9-ed000268795d"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}
