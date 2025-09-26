@@ -4,9 +4,11 @@ development:
 test:
   adapter: test
 
+adhoc:
+  adapter: async
+
 production:
   adapter: redis
-
-  # FIXME FIXME FIXME FIXME FIXME, this will only work for local dev/adhocs
+  # FIXME FIXME FIXME FIXME FIXME, do not commit this PR until we make this setting real
   url: <%= ENV.fetch("REDIS_URL") { "redis://localhost:6379/1" } %>
   channel_prefix: boo_production
