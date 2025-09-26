@@ -115,7 +115,11 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
           })}
         {hasUserAddedSelectionContext &&
           userAddedSelectionContext.map(contextItem => (
-            <FilePreview type="text" filename={contextItem.displayName} />
+            <FilePreview
+              key={contextItem.displayName}
+              type="text"
+              filename={contextItem.displayName}
+            />
           ))}
       </div>
     );
