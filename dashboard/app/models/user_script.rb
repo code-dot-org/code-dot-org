@@ -60,44 +60,41 @@ class UserScript < ApplicationRecord
     end
   end
 
-  # Find a UserScript for the given user and unit, ignoring any with non-original unit groups.
-  # If the found row has no Unit Group, migrate it to have the unit's original Unit Group.
+  # Helper method which provides find-or-create functionality, with additional logic to prevent
+  # duplicate rows from being created while we work on migrating existing rows to have a
+  # unit_group_id. More specifically:
+  # - if an existing record is found with a nil unit_group, and the unit has an original_unit_group,
+  #   we will update that record to set the unit_group to the original_unit_group.
+  # - when searching for existing records associated with the original unit group id, be sure to
+  #   find any row that is migrated (original unit group) or unmigrated (nil unit group).
   #
-  # @param user_id [Integer] the user id
-  # @param unit [Unit] the unit
-  def self.find_and_migrate_by(user_id:, unit:)
-    original_unit_group = unit.get_original_unit_group
-    user_script = find_by(user_id: user_id, script: unit, unit_group: [nil, original_unit_group])
-    return nil unless user_script
-
-    # If we found a UserScript with no unit group, and the unit's original unit group is not nil,
-    # migrate the UserScript to have that unit group.
-    user_script.unit_group = original_unit_group
-    user_script.save! if user_script.unit_group_id_changed?
-    user_script
-  end
-
   # TODO: TEACH-2168 once unit_group_id is a required field, remove this helper and call
   # find_or_create_by! instead.
   def self.find_and_migrate_or_create_by!(user_id:, unit:, unit_group: nil)
     unless unit_group.nil? || unit.old_professional_learning_course? || unit.cached.unit_groups.include?(unit_group)
       raise "Unit #{unit.name} must belong to Unit Group #{unit_group&.name}"
     end
-    original_unit_group = unit.get_original_unit_group
 
-    # skip all migration logic if we're looking for a UserScript for a non-original unit group, or
-    # if the unit has no original unit group.
-    has_non_original_unit_group = unit_group && unit_group != original_unit_group
-    if has_non_original_unit_group || original_unit_group.nil?
-      return find_or_create_by!(user_id: user_id, script: unit, unit_group: unit_group)
+    # When we find a user_script, should we migrate it to the original_unit_group?
+    # 1. If the unit has no original unit group, do not migrate.
+    # 2. If the unit_group provided is nil or the original unit group, we should migrate.
+    # 3. If the unit_group provided is a non-original unit group, do not migrate.
+    original_unit_group = unit.get_original_unit_group
+    should_migrate = original_unit_group && (unit_group.nil? || unit_group == original_unit_group)
+
+    # find
+    unit_groups_to_find_by = should_migrate ? [nil, original_unit_group] : [unit_group]
+    us = find_by(user_id: user_id, script: unit, unit_group: unit_groups_to_find_by)
+
+    # migrate
+    if us && us.unit_group.nil?
+      us.update!(unit_group: original_unit_group)
     end
 
-    # the unit has an original unit group, and we're looking for a UserScript with the original
-    # unit group or no unit group.
-    user_script = find_and_migrate_by(user_id: user_id, unit: unit)
-    return user_script if user_script
+    return us if us
 
-    # No existing UserScript found, so create one with the original unit group.
-    create!(user_id: user_id, script: unit, unit_group: original_unit_group)
+    # create
+    unit_group_to_create = should_migrate ? original_unit_group : unit_group
+    create!(user_id: user_id, script: unit, unit_group: unit_group_to_create)
   end
 end
