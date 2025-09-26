@@ -22,5 +22,7 @@ Feature: Age Gated Students Modal and Banner
 
     When I sign in as "Teacher_Sally" and go home
     And I wait until element "#ui-test-section-list" is visible
-    Then I click selector "#task-button-View-progress-CAP-Section" once I see it
+    Then I click selector "#section-options-dropdown-dropdown-button" once I see it
+    Then I click selector "#ui-test-Section-settings" once I see it
+    Then I click selector "a:contains(Progress)" once I see it
     And I wait until element "#uitest-age-gated-banner" is not visible
