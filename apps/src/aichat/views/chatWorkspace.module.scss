@@ -54,7 +54,7 @@ $tabs-default-spacing: 4px;
 }
 
 .tabsContainer {
-  background-color: #eaebeb;
+  background-color: var(--background-neutral-secondary);
   padding: $tabs-default-spacing $tabs-default-spacing 0 $tabs-default-spacing;
 
   ul {
