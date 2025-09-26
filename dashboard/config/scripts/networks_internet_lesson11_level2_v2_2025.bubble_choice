@@ -1,0 +1,9 @@
+name 'networks-internet-lesson11-level2_v2-2025'
+display_name 'AI Expert Chatbots'
+description 'Pick from these AI Expert chatbots to learn about four possible AI-driven solutions to network vulnerabilities.'
+
+sublevels
+level 'networks-internet-lesson11-level2a_v2-2025'
+level 'networks-internet-lesson11-level2b_v2-2025'
+level 'networks-internet-lesson11-level2c_v2-2025'
+level 'networks-internet-lesson11-level2d_v2-2025'

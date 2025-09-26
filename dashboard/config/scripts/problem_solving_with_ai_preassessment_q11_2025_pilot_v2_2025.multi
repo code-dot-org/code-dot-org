@@ -1,0 +1,14 @@
+name 'problem-solving-with-ai-preassessment-q11_2025-pilot_v2-2025'
+
+question 'Why is it important to revise AI-generated content during a creative project?'
+
+right 'AI often needs human guidance to make content feel authentic and engaging.'
+wrong 'AI can only generate one version of any idea.'
+wrong 'AI content is always incorrect.'
+wrong 'Revisions are not important if the first result looks fine.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 9: AI as a Co-Creator
+MARKDOWN

@@ -57,6 +57,8 @@
     "@opentelemetry/exporter-metrics-otlp-proto": "^0.202.0",
     "@opentelemetry/sdk-logs": "^0.201.1",
     "@opentelemetry/sdk-metrics": "^2.0.1",
+    "@orama/orama": "^3.1.14",
+    "@orama/plugin-data-persistence": "^3.1.14",
     "@statsig/react-bindings": "^3.14.1",
     "@statsig/statsig-node-core": "^0.0.8",
     "@statsig/web-analytics": "^3.14.1",

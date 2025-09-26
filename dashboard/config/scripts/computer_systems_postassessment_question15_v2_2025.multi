@@ -1,0 +1,19 @@
+name 'computer-systems-postassessment-question15_v2-2025'
+title 'Computer Systems and Devices Post-Assessment: Question 15'
+
+right 'System software helps the computer function, while application software helps users complete tasks'
+wrong 'Application software is built into the hardware, while system software runs on external devices'
+wrong 'System software is optional, while application software is required for a computer to run'
+wrong 'System software runs only on mobile devices, while application software runs on computers'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+Which statement best explains the difference between system software and application software?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 4: Software and Operating Systems
+
+Lesson 5: Troubleshooting and Optimizing Software
+MARKDOWN

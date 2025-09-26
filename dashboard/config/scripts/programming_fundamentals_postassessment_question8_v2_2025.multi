@@ -1,0 +1,25 @@
+name 'programming-fundamentals-postassessment-question8_v2-2025'
+title 'Programming Fundamentals Post-Assessment: Question 8'
+
+right 'Decomposition (breaking the problem into steps) and Algorithm Design (creating a structured plan)'
+wrong 'Abstraction (ignoring unnecessary details) and Loops (repeating code)'
+wrong 'Debugging (finding errors) and Recursion (calling the function within itself)'
+wrong 'Pattern Recognition (identifying repeated structures) and Data Storage (saving information)'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+A student is designing an algorithm to navigate a robot through a maze. The robot must reach the exit by following these rules:
+
+- If there is a wall ahead, turn right.
+- If there is an open path ahead, move forward.
+- If the robot reaches an intersection, prioritize moving left before right.
+
+Which computational thinking concepts are most important for solving this problem?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 3: Designing Algorithms
+
+Lesson 11: Decomposition
+MARKDOWN

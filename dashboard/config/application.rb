@@ -26,8 +26,6 @@ require 'cdo/pycall'
 # you've limited to :test, :development, or :production.
 Bundler.require(:default, Rails.env)
 
-require_relative '../engines/marketing/lib/marketing/engine'
-
 module Dashboard
   class Application < Rails::Application
     # Explicitly load appropriate defaults for this version of Rails.
@@ -152,6 +150,9 @@ module Dashboard
       I18n.fallbacks.map(pt: :'pt-BR')
     end
 
+    # Base host for asset helpers (image_url, asset_url, etc.)
+    config.asset_host = CDO.studio_url('', CDO.default_scheme)
+
     config.assets.gzip = false # cloudfront gzips everything for us on the fly.
     config.assets.paths << Rails.root.join('./public/blockly')
     config.assets.paths << Rails.root.join('../shared/css')
@@ -236,5 +237,15 @@ module Dashboard
 
     config.active_job.queue_adapter = CDO.active_job_queue_adapter
     config.active_job.default_queue_name = CDO.active_job_queues[:default]
+
+    config.to_prepare do
+      # Register the Contentful source for notifications in the Dashboard app
+      contentful_client = if (Rails.application.config.respond_to?(:stub_contentful_notifications) && Rails.application.config.stub_contentful_notifications) || [:development, :test].include?(rack_env)
+                            Marketing::DashboardNotificationEntriesMock
+                          else
+                            CdoContentful::Marketing::Entry::DashboardNotification
+                          end
+      ::Notifications.register(Marketing::DashboardNotifications::ContentfulNotificationSource.new(contentful_client))
+    end
   end
 end

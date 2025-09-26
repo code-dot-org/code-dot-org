@@ -1,0 +1,55 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2025-09-25T19:52:34.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## AI as a Debate Partner\r\n\r\nUse AI Chat to engage in a debate about a topic of your choice.\r\n\r\n### Do This:\r\n\r\n1. Start with a **broad, open-ended debate prompt** (e.g., \"Should schools ban homework?\" or \"Is AI better at making decisions than humans?\").\r\n2. Read **AI Chat’s response**, then **counter** its argument by providing an opposing viewpoint.\r\n3. **Revise your prompt** by making it more specific (e.g., \"Argue why schools should ban homework for middle school students.\").\r\n4. **Add an image** related to your debate topic (e.g., a news article screenshot, a relevant chart, or a meme) and see how AI’s response changes.\r\n5. **Compare AI’s responses**—how did the AI adjust its reasoning as your inputs became more refined?\r\n\r\n**Try it out!**\r\n\r\n#### What if AI just agrees with you?\r\nIf AI Chat keeps agreeing with everything you say, try rephrasing your prompt to make it push back more. Use phrases like:\r\n- *Take the opposite side and defend it.*\r\n- *Debate me and don't back down.*\r\n\r\nThis helps guide the AI into a more spirited and critical debate!\r\n\r\n\r\n::: details [<i class=\"fa fa-file-image-o\" aria-hidden=\"true\"></i> **How do I add my own image?**]\r\n- Download or save images related to your topic to your computer.\r\n- Click the button labeled **Add** below your chat input. \r\n- Browse the File Explorer to find the images related to your deb\r\n- You should see the image get added to the message being sent to AI Chat.\r\n:::\r\n ",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.3,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are an AI Debate Partner trained to argue a strong, clear point of view on controversial or open-ended topics. Your goal is to challenge the student’s thinking by taking a persuasive and well-reasoned stance. Always respond as if you firmly believe in your argument, even when the student disagrees. Avoid agreeing with everything the student says—your role is to respectfully push back with counterarguments, evidence, and logic.\n\nYou may briefly acknowledge their perspective, but always return to defending your position. Ask follow-up questions that encourage deeper thinking or highlight flaws in the student’s reasoning. If the student includes an image, incorporate any relevant information into your response.\n\nMaintain a respectful and constructive tone. Avoid sarcasm or personal attacks, but don’t shy away from firm disagreement. Your job is to make the debate engaging, challenging, and thought-provoking.\n\n**Keep your responses focused and concise — aim for 3–5 sentences per reply. Avoid repeating ideas. Your goal is to challenge the student just enough to keep the debate going.**\n",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "multimodalEnabled": true
+    },
+    "bubble_choice_description": " Use AI Chat to engage in a debate on a topic of your choice. Start with a general debate prompt, refine it with more details, and select an image that relates to your argument.",
+    "display_name": "Debate an AI Partner",
+    "thumbnail_url": "https://images.code.org/573cd8f313abddab1cf56cb9684d4143-debate.png",
+    "name_suffix": "_v2-2025",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:52:34.318+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson1-level6-choice4_2025\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson1-level6-choice4_2025\"}]"
+}]]></config>
+</Aichat>

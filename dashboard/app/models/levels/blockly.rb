@@ -873,12 +873,7 @@ class Blockly < Level
   end
 
   def self.base_url
-    "#{Blockly.asset_host_prefix}/blockly/"
-  end
-
-  def self.asset_host_prefix
-    host = ActionController::Base.asset_host
-    host.blank? ? "" : "//#{host}"
+    ApplicationController.helpers.asset_url('/blockly/')
   end
 
   # If true, don't autoplay videos before this level (but do keep them in the

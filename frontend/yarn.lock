@@ -1512,6 +1512,8 @@ __metadata:
     "@opentelemetry/exporter-metrics-otlp-proto": "npm:^0.202.0"
     "@opentelemetry/sdk-logs": "npm:^0.201.1"
     "@opentelemetry/sdk-metrics": "npm:^2.0.1"
+    "@orama/orama": "npm:^3.1.14"
+    "@orama/plugin-data-persistence": "npm:^3.1.14"
     "@playwright/test": "npm:~1.49.1"
     "@statsig/react-bindings": "npm:^3.14.1"
     "@statsig/statsig-node-core": "npm:^0.0.8"
@@ -4350,6 +4352,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@msgpack/msgpack@npm:^3.1.2":
+  version: 3.1.2
+  resolution: "@msgpack/msgpack@npm:3.1.2"
+  checksum: 10c0/4fee6dbea70a485d3a787ac76dd43687f489d662f22919237db1f2abbc3c88070c1d3ad78417ce6e764bcd041051680284654021f52068e0aff82d570cb942d5
+  languageName: node
+  linkType: hard
+
 "@mui/core-downloads-tracker@npm:^7.1.2":
   version: 7.1.2
   resolution: "@mui/core-downloads-tracker@npm:7.1.2"
@@ -6103,6 +6112,25 @@ __metadata:
   peerDependencies:
     "@opentelemetry/api": ^1.1.0
   checksum: 10c0/3611fa2766be809d3f19f1c032373349962c3203cbc77839ea59d78a4ce2bf6954da9b163efdde386f3f4a8ec77c50c985f9e5b8b3df6e7fccd2990cf861bca4
+  languageName: node
+  linkType: hard
+
+"@orama/orama@npm:3.1.14, @orama/orama@npm:^3.1.14":
+  version: 3.1.14
+  resolution: "@orama/orama@npm:3.1.14"
+  checksum: 10c0/ae3605613331117aa426a544f0b50d6e4293e703e851e4b2f7f8c9400e597475aec80c662ed3db8a68d22d8f36fe5a65aa9c45870a3508bfd13c4b44032eb53a
+  languageName: node
+  linkType: hard
+
+"@orama/plugin-data-persistence@npm:^3.1.14":
+  version: 3.1.14
+  resolution: "@orama/plugin-data-persistence@npm:3.1.14"
+  dependencies:
+    "@msgpack/msgpack": "npm:^3.1.2"
+    "@orama/orama": "npm:3.1.14"
+    dpack: "npm:^0.6.22"
+    seqproto: "npm:^0.2.3"
+  checksum: 10c0/e72b46a4f7c505f42a11c166f5a0c89b9029413771e71616d003c8ba94163bb07b76795154076786165997da8f6c50ff00664b61786be347895eefc70b991c51
   languageName: node
   linkType: hard
 
@@ -12100,6 +12128,13 @@ __metadata:
   version: 16.4.7
   resolution: "dotenv@npm:16.4.7"
   checksum: 10c0/be9f597e36a8daf834452daa1f4cc30e5375a5968f98f46d89b16b983c567398a330580c88395069a77473943c06b877d1ca25b4afafcdd6d4adb549e8293462
+  languageName: node
+  linkType: hard
+
+"dpack@npm:^0.6.22":
+  version: 0.6.22
+  resolution: "dpack@npm:0.6.22"
+  checksum: 10c0/ca4d74a6b437d9f4dd0cb5beee1bc501272a20ac524ec6d4b6c01d7b3d86fc164f6cc648c0c18057c337c1225aca05985b75bda94d4f28adabdeb2bb4c9bcfe3
   languageName: node
   linkType: hard
 
@@ -20882,6 +20917,13 @@ __metadata:
   bin:
     semver: bin/semver.js
   checksum: 10c0/aca305edfbf2383c22571cb7714f48cadc7ac95371b4b52362fb8eeffdfbc0de0669368b82b2b15978f8848f01d7114da65697e56cd8c37b0dab8c58e543f9ea
+  languageName: node
+  linkType: hard
+
+"seqproto@npm:^0.2.3":
+  version: 0.2.3
+  resolution: "seqproto@npm:0.2.3"
+  checksum: 10c0/d0f8c133c495261d08563bbf253b8f29736b02b7add33f2c72bcdb97821cb41b4d6231ec2986fac596685e5b9312e4366242536ab5cb551c405a13402a1f1e1a
   languageName: node
   linkType: hard
 
