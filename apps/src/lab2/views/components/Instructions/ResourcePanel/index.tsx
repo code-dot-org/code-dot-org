@@ -3,6 +3,7 @@ import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {kitIcons} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import classNames from 'classnames';
+import {Steps} from 'intro.js-react';
 import React, {useEffect, useMemo, useState} from 'react';
 
 import {ChatButtonData, SystemPromptSettings} from '@cdo/apps/aichat/types';
@@ -24,19 +25,13 @@ import NavigationArea from '../NavigationArea';
 
 import CopyrightButton from './CopyrightButton';
 import ResourcePanelExtraLinks from './ResourcePanelExtraLinks';
+import {INITIAL_STEP, STEPS} from './resourcePanelTourHelpers';
 import SettingsPanel from './SettingsPanel';
 import ValidationPanel from './ValidationPanel';
 import {VersionHistoryPanel} from './VersionHistory';
+import './resource-panel-introjs.scss';
 
 import styles from './styles.module.scss';
-
-// Onboarding Tour for Python Lab Resource Panel
-/* eslint-disable import/order */
-// Disabling import/order rule for grouped onboarding tour imports.
-import './resource-panel-introjs.scss';
-import {Steps} from 'intro.js-react';
-import {INITIAL_STEP, STEPS} from './resourcePanelTourHelpers';
-/* eslint-enable import/order */
 
 enum Tabs {
   Instructions = 'instructions',
@@ -93,6 +88,9 @@ type ResourcePanelProps = InstructionsProps & {
   aiTutorChatButtonData?: ChatButtonData[];
 };
 
+const PYTHONLAB_RESOURCE_PANEL_ONBOARDING_TOUR_SEEN =
+  'pythonlabResourcePanelOnboardingTourSeen';
+
 /**
  * Display various instructional resources for the level as tabs.
  */
@@ -131,7 +129,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const appName = instructionsProps.levelProperties.appName;
   const isPythonLab = appName === 'pythonlab';
   const pythonLabOnboardingTourSeen = tryGetLocalStorage(
-    'pythonlabResourcePanelOnboardingTourSeen',
+    PYTHONLAB_RESOURCE_PANEL_ONBOARDING_TOUR_SEEN,
     'no'
   );
 
@@ -251,7 +249,10 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
         initialStep={INITIAL_STEP}
         steps={STEPS}
         onExit={() => {
-          trySetLocalStorage('pythonlabResourcePanelOnboardingTourSeen', 'yes');
+          trySetLocalStorage(
+            PYTHONLAB_RESOURCE_PANEL_ONBOARDING_TOUR_SEEN,
+            'yes'
+          );
         }}
         options={{
           scrollToElement: false,
