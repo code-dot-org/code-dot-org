@@ -119,8 +119,7 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
             clip: false,
             create: () => {
               const dom = document.createElement('div');
-              dom.className = 'cm-tooltip-cursor';
-              dom.id = 'codemirrror-cursor-tooltip';
+              dom.className = moduleStyles.aiTutorTooltip;
               ReactDOM.render(
                 <AiTutorChatContextButton
                   text={selection}

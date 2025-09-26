@@ -20,11 +20,15 @@ const AiTutorChatContextButton: React.FC<AiTutorChatContextButtonProps> = ({
 }) => {
   return (
     <Button
-      text="button!"
+      text="Add to AI Tutor Chat"
       onClick={() => {
         console.log('button');
         saveSelectionContext(text, startingLine, endingLine);
       }}
+      size="xs"
+      type="tertiary"
+      color="black"
+      iconLeft={{iconName: 'message-code'}}
     />
   );
 };
