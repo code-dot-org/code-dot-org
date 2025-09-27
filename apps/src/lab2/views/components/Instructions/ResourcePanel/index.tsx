@@ -3,8 +3,9 @@ import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {kitIcons} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import classNames from 'classnames';
+import introJs from 'intro.js';
 import {Steps} from 'intro.js-react';
-import React, {useEffect, useMemo, useState} from 'react';
+import React, {useEffect, useMemo, useRef, useState} from 'react';
 
 import {ChatButtonData, SystemPromptSettings} from '@cdo/apps/aichat/types';
 import {shouldShowAiTutor} from '@cdo/apps/lab2/ai/shouldShowAiTutor';
@@ -28,10 +29,7 @@ import ResourcePanelExtraLinks from './ResourcePanelExtraLinks';
 import {INITIAL_STEP, STEPS} from './resourcePanelTourHelpers';
 import SettingsPanel from './SettingsPanel';
 import ValidationPanel from './ValidationPanel';
-import {
-  INITIAL_STEP as VALIDATION_INITIAL_STEP,
-  STEPS as VALIDATION_STEPS,
-} from './validationTourHelpers';
+import {VALIDATION_TOUR_STEPS} from './validationTourHelpers';
 import {VersionHistoryPanel} from './VersionHistory';
 import './resource-panel-introjs.scss';
 
@@ -118,6 +116,9 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const {showRubric} = useRubric();
   const [currentTab, setCurrentTab] = useState<Tabs>(Tabs.Instructions);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
+  const [validationTourEnabled, setValidationTourEnabled] = useState(false);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const validationTourRef = useRef<any>(null);
   const isUserTeacher = useAppSelector(state => state.currentUser.isTeacher);
   const [selectedVersion, setSelectedVersion] = useState<string>('');
   const isViewingOldVersion = useAppSelector(
@@ -143,6 +144,21 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     VALIDATION_RESOURCE_PANEL_ONBOARDING_TOUR_SEEN,
     'no'
   );
+  console.log('validationOnboardingTourSeen', validationOnboardingTourSeen);
+
+  // Enable validation tour if conditions are met
+  useEffect(() => {
+    const shouldShowValidationTour =
+      instructionsProps.validationSettings && hasValidationConditions;
+
+    if (shouldShowValidationTour) {
+      setValidationTourEnabled(true);
+    }
+  }, [
+    instructionsProps.validationSettings,
+    hasValidationConditions,
+    validationOnboardingTourSeen,
+  ]);
 
   // Tooltip should disappear quickly.
   const hideTooltipDelayMs = 10;
@@ -250,6 +266,104 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     setCurrentTab(Tabs.Instructions);
   }, [levelId, viewAsUserId]);
 
+  // Initialize and control validation tour
+  useEffect(() => {
+    if (validationTourEnabled && !validationTourRef.current) {
+      // Initialize intro.js tour
+      const intro = introJs();
+      validationTourRef.current = intro;
+
+      intro.setOptions({
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        steps: VALIDATION_TOUR_STEPS.map(step => ({
+          element: step.element,
+          intro: step.intro,
+          title: step.title,
+          position: step.position,
+        })) as any,
+        scrollToElement: false,
+        exitOnOverlayClick: false,
+        hidePrev: true,
+        hideNext: false,
+        nextLabel: commonI18n.next(),
+        prevLabel: commonI18n.back(),
+        doneLabel: commonI18n.done(),
+        showBullets: false,
+        showStepNumbers: true,
+      });
+
+      let currentStepIndex = 0;
+
+      // Event handlers for tour progression
+      const handleValidationTabClick = () => {
+        if (currentStepIndex === 0) {
+          setCurrentTab(Tabs.Validation);
+          currentStepIndex = 1;
+          intro.goToStep(2);
+        }
+      };
+
+      const handleValidateButtonClick = () => {
+        if (currentStepIndex === 1) {
+          currentStepIndex = 2;
+          intro.goToStep(3);
+        }
+      };
+
+      intro.onbeforechange(function () {
+        if (currentStepIndex === 0) {
+          // Add event listener for validation tab click
+          const validationTabElement = document.getElementById(
+            'resource-panel-tab-validation'
+          );
+          if (validationTabElement) {
+            validationTabElement.addEventListener(
+              'click',
+              handleValidationTabClick
+            );
+          }
+        } else if (currentStepIndex === 1) {
+          // Add event listener for validate button click
+          const validateButtonElement = document.getElementById(
+            'resource-panel-validate-button'
+          );
+          if (validateButtonElement) {
+            validateButtonElement.addEventListener(
+              'click',
+              handleValidateButtonClick
+            );
+          }
+        }
+        return true;
+      });
+
+      intro.oncomplete(() => {
+        setValidationTourEnabled(false);
+        trySetLocalStorage(
+          VALIDATION_RESOURCE_PANEL_ONBOARDING_TOUR_SEEN,
+          'yes'
+        );
+      });
+
+      intro.onexit(() => {
+        setValidationTourEnabled(false);
+        trySetLocalStorage(
+          VALIDATION_RESOURCE_PANEL_ONBOARDING_TOUR_SEEN,
+          'yes'
+        );
+      });
+
+      intro.start();
+    }
+
+    return () => {
+      if (validationTourRef.current) {
+        validationTourRef.current.exit();
+        validationTourRef.current = null;
+      }
+    };
+  }, [validationTourEnabled]);
+
   return (
     <div
       id="resource-panel-instructions"
@@ -274,21 +388,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
           doneLabel: commonI18n.done(),
           showBullets: false,
           showStepNumbers: true,
-        }}
-      />
-      <Steps
-        enabled={
-          instructionsProps.validationSettings &&
-          hasValidationConditions &&
-          validationOnboardingTourSeen !== 'yes'
-        }
-        initialStep={VALIDATION_INITIAL_STEP}
-        steps={VALIDATION_STEPS}
-        onExit={() => {
-          trySetLocalStorage(
-            VALIDATION_RESOURCE_PANEL_ONBOARDING_TOUR_SEEN,
-            'yes'
-          );
         }}
       />
 
