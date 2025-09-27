@@ -1,7 +1,9 @@
 'use client';
+import SearchIcon from '@mui/icons-material/Search';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Input from '@mui/material/Input';
+import InputAdornment from '@mui/material/InputAdornment';
 import {FacetResult, InternalTypedDocument, Orama, search} from '@orama/orama';
 import {restore} from '@orama/plugin-data-persistence';
 import {useRouter, useSearchParams} from 'next/navigation';
@@ -248,16 +250,78 @@ const ActivityCatalog = ({
         isOpen={isFacetDrawerOpen}
         onClose={() => toggleFacetDrawer(false)}
       />
-      <Box sx={{display: 'flex', gap: 3, flexWrap: 'wrap'}}>
+      <Box
+        sx={{
+          display: 'flex',
+          gap: 2,
+          flexWrap: 'wrap',
+          justifyContent: 'center',
+          alignItems: 'center',
+          mb: 4,
+        }}
+      >
+
+        <Box 
+        sx={{
+           display: { xs: 'none', sm: 'inline-flex' },  // 👈 hide on xs
+           gap: 1,
+          flexWrap: 'wrap',
+          justifyContent: 'center',
+          alignItems: 'center',
+          mb: 4,
+        }}>
+
+
         <Input
           onChange={handleSearchTermChange}
           value={searchTerm}
-          placeholder={'Search...'}
+          placeholder="Search Activities and language..."
+          disableUnderline
+          startAdornment={
+            <InputAdornment position="start">
+              <SearchIcon fontSize="small" />
+            </InputAdornment>
+          }
+          sx={{
+            display: { xs: 'none', sm: 'inline-flex' },  // 👈 hide on xs
+            flexGrow: 1,
+            minWidth: 200,
+            maxWidth: 600,
+            height: 64,
+            borderRadius: 999,
+            border: '1px solid',
+            borderColor: 'primary.main',
+            bgcolor: 'background.paper',
+            px: 2,
+            fontWeight: 600,
+            '& .MuiInputBase-input': {
+              p: 0,
+            },
+            '&:hover': {borderColor: 'text.primary'},
+            '&.Mui-focused': {borderColor: 'primary.main'},
+          }}
         />
 
         <FacetBar {...facetBarProps} />
 
-        <Button onClick={() => toggleFacetDrawer(true)}>
+        </Box>
+
+        <Button
+          onClick={() => toggleFacetDrawer(true)}
+          sx={theme => ({
+             display: { xs: 'inline-flex', sm: 'none' }, // 👈 show only on xs
+            justifySelf: 'center',
+            borderRadius: 999,
+            px: 2,
+            height: 46,
+            color: '#fff',
+            mt: 4,
+            backgroundColor: theme.palette.secondary.dark,
+            '&:hover': {backgroundColor: theme.palette.primary.main},
+            textTransform: 'none',
+            fontWeight: 600,
+          })}
+        >
           View All Filters
         </Button>
       </Box>
