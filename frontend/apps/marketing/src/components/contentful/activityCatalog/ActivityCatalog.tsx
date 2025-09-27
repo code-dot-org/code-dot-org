@@ -258,19 +258,16 @@ const ActivityCatalog = ({
           justifyContent: 'center',
           alignItems: 'center',
           mb: 4,
-        }}
-      >
-
+        }} >
         <Box 
         sx={{
-           display: { xs: 'none', sm: 'inline-flex' },  // 👈 hide on xs
+           display: { xs: 'none', sm: 'inline-flex' }, 
            gap: 1,
           flexWrap: 'wrap',
           justifyContent: 'center',
           alignItems: 'center',
           mb: 4,
         }}>
-
 
         <Input
           onChange={handleSearchTermChange}
@@ -283,7 +280,7 @@ const ActivityCatalog = ({
             </InputAdornment>
           }
           sx={{
-            display: { xs: 'none', sm: 'inline-flex' },  // 👈 hide on xs
+            display: { xs: 'none', sm: 'inline-flex' }, 
             flexGrow: 1,
             minWidth: 200,
             maxWidth: 600,
@@ -309,7 +306,7 @@ const ActivityCatalog = ({
         <Button
           onClick={() => toggleFacetDrawer(true)}
           sx={theme => ({
-             display: { xs: 'inline-flex', sm: 'none' }, // 👈 show only on xs
+             display: { xs: 'inline-flex', sm: 'none' },
             justifySelf: 'center',
             borderRadius: 999,
             px: 2,

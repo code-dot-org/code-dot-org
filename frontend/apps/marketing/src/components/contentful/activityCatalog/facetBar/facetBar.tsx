@@ -23,8 +23,6 @@ const FacetBar = ({
     return null;
   }
 
-  
-
   const handleChange = (facet: string, facetValue: string) => {
     onFacetChange(facet, facetValue);
   };
@@ -37,11 +35,8 @@ const FacetBar = ({
     const isSelected = selectedFacetValues?.has(facetValue);
 
     return (
-      <MenuItem key={facetValue} value={facetValue}
-      
-      sx={{p: 0.4 }}>
+      <MenuItem key={facetValue} value={facetValue} sx={{p: 0.4}}>
         <Chip
-        
           key={facetValue}
           label={facetValue}
           onDelete={
@@ -52,9 +47,7 @@ const FacetBar = ({
           }
           variant={isSelected ? 'filled' : 'outlined'}
           color={isSelected ? 'primary' : 'default'}
-          sx={{ fontSize: 14, height: 32,
-            display: 'flex',
-           }} 
+          sx={{fontSize: 14, height: 32, display: 'flex'}}
         />
       </MenuItem>
     );
@@ -66,13 +59,14 @@ const FacetBar = ({
       const hasSelectedValue =
         selectedFacets[facet] && selectedFacets[facet].size > 0;
 
-
-
       return (
-        <FormControl key={facet}   sx={{
-    minWidth: 0,
-    '&:not(:last-of-type)': { mb: 1.25 },   // space between filter pills
-  }}>
+        <FormControl
+          key={facet}
+          sx={{
+            minWidth: 0,
+            '&:not(:last-of-type)': {mb: 1.25},
+          }}
+        >
           <Select
             aria-label={FACET_LABELS[facet]}
             multiple
@@ -99,28 +93,22 @@ const FacetBar = ({
                   ? theme.palette.common.white
                   : theme.palette.action.active,
               },
-  })}
-  displayEmpty
-  renderValue={() => <span>{FACET_LABELS[facet]}</span>}
-
-  
-  MenuProps={{
-    PaperProps: {
-      
-      sx: theme => ({
-        padding: 2,
-         pb: { xs: 3, sm: 2 },                  // a bit more bottom padding on mobile
-        boxShadow: 2, 
-        paddingBottom: 2,
-        backgroundColor: theme.palette.grey[100] ,
-        borderRadius: 0.5,
-        
-      }),
-    },
-  }}
-
-
->
+            })}
+            displayEmpty
+            renderValue={() => <span>{FACET_LABELS[facet]}</span>}
+            MenuProps={{
+              PaperProps: {
+                sx: theme => ({
+                  padding: 2,
+                  pb: {xs: 3, sm: 2},
+                  boxShadow: 2,
+                  paddingBottom: 2,
+                  backgroundColor: theme.palette.grey[100],
+                  borderRadius: 0.5,
+                }),
+              },
+            }}
+          >
             {facetValues.map(facetValue => {
               return getDropdownMenuItem(
                 selectedFacets[facet],
@@ -134,27 +122,21 @@ const FacetBar = ({
     });
   };
 
-
-
-
-
-  
-
   return (
     <>
       {getDropdowns()}
 
       <Button
-  onClick={onClearAll}
-  sx={{
-    borderRadius: 999,
-    px: 2,
-    mr: { xs: 'auto', sm: 0 },   // push LEFT on mobile
-    ml: { xs: 0, sm: 'auto' },   // push RIGHT on ≥ sm
-  }}
->
-  Clear All
-</Button>
+        onClick={onClearAll}
+        sx={{
+          borderRadius: 999,
+          px: 2,
+          mr: {xs: 'auto', sm: 0}, 
+          ml: {xs: 0, sm: 'auto'}, 
+        }}
+      >
+        Clear All
+      </Button>
     </>
   );
 };
