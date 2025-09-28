@@ -156,7 +156,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       const shouldShowValidationTour =
         instructionsProps.validationSettings &&
         hasValidationConditions &&
-        pythonlabValidationTourSeen !== 'yes';
+        pythonlabValidationTourSeen !== 'yes' &&
+        pythonlabOnboardingTourSeen === 'yes'; // If user hasn't seeen both tours, show onboarding tour first.
 
       if (shouldShowValidationTour) {
         setValidationTourEnabled(true);
@@ -167,6 +168,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     hasValidationConditions,
     pythonlabValidationTourSeen,
     isPythonLab,
+    pythonlabOnboardingTourSeen,
   ]);
 
   // Tooltip should disappear quickly.
