@@ -147,7 +147,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     VALIDATION_RESOURCE_PANEL_ONBOARDING_TOUR_SEEN,
     'no'
   );
-  console.log('validationOnboardingTourSeen', validationOnboardingTourSeen);
 
   // Enable validation tour if conditions are met
   useEffect(() => {
@@ -349,11 +348,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     };
   }, [validationTourEnabled, validationTourStep, validationTourStepsEnabled]);
 
-  return (
-    <div
-      id="resource-panel-instructions"
-      className={classNames(styles.resourcePanel, className)}
-    >
+  const pytnonlabOnboardingTourSteps = useMemo(
+    () => (
       <Steps
         enabled={isPythonLab && pythonLabOnboardingTourSeen !== 'yes'}
         initialStep={INITIAL_STEP}
@@ -375,8 +371,18 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
           showStepNumbers: true,
         }}
       />
+    ),
+    [isPythonLab, pythonLabOnboardingTourSeen]
+  );
+
+  const pythonlabValidationTourSteps = useMemo(
+    () => (
       <Steps
-        enabled={validationTourEnabled}
+        enabled={
+          isPythonLab &&
+          validationTourEnabled &&
+          validationOnboardingTourSeen !== 'yes'
+        }
         initialStep={validationTourStep}
         steps={VALIDATION_TOUR_STEPS}
         onExit={() => {
@@ -394,14 +400,14 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
           setValidationTourStep(nextStepIndex);
         }}
         onBeforeChange={nextStepIndex => {
-          // Control step progression based on user interactions
+          // Control step progression based on user interactions.
           if (nextStepIndex === 1 && !validationTourStepsEnabled[0]) {
-            return false; // Prevent going to step 2 until validation tab is clicked
+            return false; // Prevent going to second step (at index 1) until validation tab is clicked.
           }
           if (nextStepIndex === 2 && !validationTourStepsEnabled[1]) {
-            return false; // Prevent going to step 3 until validate button is clicked
+            return false; // Prevent going to third step (at index 2) until validate button is clicked.
           }
-          // Return void (undefined) to allow progression
+          // Return void (undefined) to allow progression.
         }}
         options={{
           scrollToElement: false,
@@ -415,7 +421,23 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
           showStepNumbers: true,
         }}
       />
+    ),
+    [
+      isPythonLab,
+      validationOnboardingTourSeen,
+      validationTourEnabled,
+      validationTourStep,
+      validationTourStepsEnabled,
+    ]
+  );
 
+  return (
+    <div
+      id="resource-panel-instructions"
+      className={classNames(styles.resourcePanel, className)}
+    >
+      {pytnonlabOnboardingTourSteps}
+      {pythonlabValidationTourSteps}
       <div className={styles.sidebar}>
         <nav id="resource-panel-tabs" className={styles.tabs}>
           {getTypedKeys(availableTabs).map(tab => (
