@@ -1,10 +1,10 @@
 import Immutable from 'immutable';
 import $ from 'jquery';
 import md5 from 'md5';
-import RGBColor from 'rgbcolor';
 
 import {Position} from './constants';
 import {dataURIFromURI} from './imageUtils';
+import RGBColor from './lib/util/rgbcolor.js';
 
 import './polyfills';
 

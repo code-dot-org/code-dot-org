@@ -1,10 +1,11 @@
 import md5 from 'md5';
-import RGBColor from 'rgbcolor';
 
 import annotationList from '@cdo/apps/acemode/annotationList';
 import {singleton as studioApp} from '@cdo/apps/StudioApp';
 import {border_gray} from '@cdo/apps/util/color';
 import {interpolateColors} from '@cdo/apps/utils';
+
+import RGBColor from './lib/util/rgbcolor.js';
 
 /**
  * Represents an implementation of an editing environment and wraps functionality

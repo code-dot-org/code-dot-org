@@ -1,4 +1,3 @@
-import 'details-element-polyfill';
 import 'lazysizes';
 import 'lazysizes/plugins/unveilhooks/ls.unveilhooks';
 import testImageAccess from '@cdo/apps/code-studio/url_test';

@@ -1,7 +1,6 @@
-import RGBColor from 'rgbcolor';
-
 import {themeOptions, fontFamilyOptions} from '@cdo/apps/applab/constants';
 import library from '@cdo/apps/applab/designElements/library';
+import RGBColor from '@cdo/apps/lib/util/rgbcolor';
 
 describe('Applab designElements/elementThemes', () => {
   function expectValidFontFamilyThemeValue(element) {
