@@ -2,7 +2,6 @@
 
 export const INITIAL_STEP = 0;
 
-
 export const VALIDATION_TOUR_STEPS = [
   {
     element: '#resource-panel-tab-validation',
@@ -18,7 +17,7 @@ export const VALIDATION_TOUR_STEPS = [
       "Use the 'Validate' button to check if your code meets the level's requirements. Go ahead and click 'Validate' now.",
   },
   {
-    element: '#resource-panel-validation-results',
+    element: '#resource-panel-validation-table',
     title: 'Step 3: Validation Results',
     intro:
       "Your results will appear in this table, showing which tests passed and what still needs work. You can click 'Validate' again to rerun the tests.",

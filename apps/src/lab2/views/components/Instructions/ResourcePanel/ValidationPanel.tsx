@@ -16,7 +16,9 @@ const ValidationPanel: React.FC<ValidationSettings> = ({
   return (
     <div className={validationStyles.validationPanel}>
       <div className={validationStyles.validationBubble}>
-        <ValidationTable />
+        <div id="resource-panel-validation-table">
+          <ValidationTable />
+        </div>
         <div id="resource-panel-validate-button">
           <ValidationButton
             onValidate={onValidate}
