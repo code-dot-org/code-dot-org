@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import fontConstants from '@cdo/apps/fontConstants';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import trackEvent from '@cdo/apps/util/trackEvent';
 import i18n from '@cdo/tutorialExplorer/locale';
 
@@ -57,13 +57,9 @@ export default class TutorialDetail extends React.Component {
 
     // Send event to Statsig.
     const activityUrl = this.props.item.url;
-    analyticsReporter.sendEvent(
-      EVENTS.HOC_ACTIVITY_START_BUTTON_CLICKED,
-      {
-        activityUrl: activityUrl,
-      },
-      PLATFORMS.STATSIG
-    );
+    analyticsReporter.sendEvent(EVENTS.HOC_ACTIVITY_START_BUTTON_CLICKED, {
+      activityUrl: activityUrl,
+    });
   };
 
   render() {

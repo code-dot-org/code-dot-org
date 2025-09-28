@@ -8,7 +8,7 @@ import {OverlineOneText} from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
 import React from 'react';
 
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import firehoseClient from '@cdo/apps/metrics/firehose';
 import {LOGIN_TYPES_WITH_PASSWORD_COLUMN} from '@cdo/apps/templates/teacherDashboard/LoginTypeConstants';
@@ -72,11 +72,9 @@ const JoinLinkCopyButton: React.FC<JoinLinkCopyButtonProps> = ({
       },
       {includeUserId: true}
     );
-    analyticsReporter.sendEvent(
-      EVENTS.SECTION_CARD_CLASS_CODE_CLICKED,
-      {source: sourceName},
-      PLATFORMS.BOTH
-    );
+    analyticsReporter.sendEvent(EVENTS.SECTION_CARD_CLASS_CODE_CLICKED, {
+      source: sourceName,
+    });
     setShowCopiedMsg(true);
     setTimeout(() => {
       setShowCopiedMsg(false);

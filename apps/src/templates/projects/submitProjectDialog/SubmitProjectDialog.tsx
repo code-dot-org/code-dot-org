@@ -7,7 +7,7 @@ import {
 } from '@code-dot-org/component-library/typography';
 import React, {useCallback, useEffect, useState} from 'react';
 
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {MetricEvent} from '@cdo/apps/metrics/events';
 import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
@@ -58,14 +58,10 @@ const SubmitProjectDialog: React.FunctionComponent<
   const onSubmit = useCallback(async () => {
     setIsSubmitButtonDisabled(true);
     setShowSubmitError(false);
-    analyticsReporter.sendEvent(
-      EVENTS.SUBMIT_PROJECT_DIALOG_SUBMIT,
-      {
-        lab_type: projectType,
-        channel_id: channelId,
-      },
-      PLATFORMS.STATSIG
-    );
+    analyticsReporter.sendEvent(EVENTS.SUBMIT_PROJECT_DIALOG_SUBMIT, {
+      lab_type: projectType,
+      channel_id: channelId,
+    });
     metricsReporterIncrementCounter('SubmitProjectDialog.SubmitAttempt');
     try {
       await submitProject(channelId, projectType, projectDescription);

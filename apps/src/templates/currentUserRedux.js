@@ -1,6 +1,5 @@
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
-import analyticsReport from '@cdo/apps/metrics/AnalyticsReporter';
-import statsigReporter from '@cdo/apps/metrics/StatsigReporter';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import experiments from '@cdo/apps/util/experiments';
 import {UserTypes} from '@cdo/generated-scripts/sharedConstants';
 
@@ -189,13 +188,13 @@ export default function currentUser(state = initialState, action) {
   }
   if (action.type === SET_SORT_BY_FAMILY_NAME) {
     if (action.isSortedByFamilyName) {
-      analyticsReport.sendEvent(EVENTS.SORT_BY_FAMILY_NAME, {
+      analyticsReporter.sendEvent(EVENTS.SORT_BY_FAMILY_NAME, {
         sectionId: action.sectionId,
         unitName: action.unitName,
         source: action.source,
       });
     } else {
-      analyticsReport.sendEvent(EVENTS.SORT_BY_DISPLAY_NAME, {
+      analyticsReporter.sendEvent(EVENTS.SORT_BY_DISPLAY_NAME, {
         sectionId: action.sectionId,
         unitName: action.unitName,
         source: action.source,
@@ -286,14 +285,7 @@ export default function currentUser(state = initialState, action) {
       sharing_disabled,
       has_seen_homepage_welcome,
     } = action.serverUser;
-    analyticsReport.setUserProperties(
-      id,
-      user_type,
-      experiments.getEnabledExperiments()
-    );
-    // Calling Statsig separately to emphasize different user integrations
-    // and because dual reporting is aspirationally temporary (March 2024)
-    statsigReporter.setUserProperties({
+    analyticsReporter.setUserProperties({
       userId: id,
       userType: user_type,
       isVerifiedInstructor: is_verified_instructor,

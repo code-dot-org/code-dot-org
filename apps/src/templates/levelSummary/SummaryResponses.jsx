@@ -7,7 +7,7 @@ import {connect} from 'react-redux';
 import SectionSelector from '@cdo/apps/code-studio/components/progress/SectionSelector';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {PredictQuestionType} from '@cdo/apps/lab2/levelEditors/types';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import i18n from '@cdo/locale';
 
@@ -53,17 +53,13 @@ const SummaryResponses = ({
 
   const logEvent = useCallback(
     eventName => {
-      analyticsReporter.sendEvent(
-        eventName,
-        {
-          levelId: scriptData.levels[levelNumber].id,
-          levelName: scriptData.levels[levelNumber].name,
-          levelType: scriptData.levels[levelNumber].type,
-          sectionSelected: !!selectedSection,
-          ...scriptData.reportingData,
-        },
-        PLATFORMS.BOTH
-      );
+      analyticsReporter.sendEvent(eventName, {
+        levelId: scriptData.levels[levelNumber].id,
+        levelName: scriptData.levels[levelNumber].name,
+        levelType: scriptData.levels[levelNumber].type,
+        sectionSelected: !!selectedSection,
+        ...scriptData.reportingData,
+      });
     },
     [scriptData, levelNumber, selectedSection]
   );

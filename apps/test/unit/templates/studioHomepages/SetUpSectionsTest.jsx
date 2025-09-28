@@ -1,7 +1,6 @@
 import {fireEvent, render, screen} from '@testing-library/react';
 import React from 'react';
 
-import {PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {UnconnectedSetUpSections as SetUpSections} from '@cdo/apps/templates/studioHomepages/SetUpSections';
 
@@ -41,11 +40,7 @@ describe('SetUpSections', () => {
     fireEvent.click(button);
 
     expect(analyticsSpy).toHaveBeenCalledTimes(1);
-    expect(analyticsSpy.mock.calls[0]).toEqual([
-      'Section Setup Started',
-      {},
-      PLATFORMS.BOTH,
-    ]);
+    expect(analyticsSpy.mock.calls[0]).toEqual(['Section Setup Started', {}]);
 
     analyticsSpy.mockRestore();
   });

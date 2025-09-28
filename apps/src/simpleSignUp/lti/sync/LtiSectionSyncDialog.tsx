@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 import React, {CSSProperties, useState} from 'react';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import {PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
@@ -98,11 +97,7 @@ export default function LtiSectionSyncDialog({
     const eventPayload = {
       lms_name: lmsName,
     };
-    analyticsReporter.sendEvent(
-      'lti_opt_out_click',
-      eventPayload,
-      PLATFORMS.STATSIG
-    );
+    analyticsReporter.sendEvent('lti_opt_out_click', eventPayload);
     return (
       // eslint-disable-next-line react/forbid-dom-props
       <div data-testid={'disable-roster-sync'}>
@@ -131,11 +126,7 @@ export default function LtiSectionSyncDialog({
         const eventPayload = {
           lms_name: lmsName,
         };
-        analyticsReporter.sendEvent(
-          'lti_opt_out_confirm',
-          eventPayload,
-          PLATFORMS.STATSIG
-        );
+        analyticsReporter.sendEvent('lti_opt_out_confirm', eventPayload);
         handleClose();
       },
     });
@@ -145,11 +136,7 @@ export default function LtiSectionSyncDialog({
     const eventPayload = {
       lms_name: lmsName,
     };
-    analyticsReporter.sendEvent(
-      'lti_opt_out_documentation',
-      eventPayload,
-      PLATFORMS.STATSIG
-    );
+    analyticsReporter.sendEvent('lti_opt_out_documentation', eventPayload);
   };
 
   const handleUpdateSectionOwners = () => {

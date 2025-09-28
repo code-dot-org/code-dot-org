@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import i18n from '@cdo/locale';
 
@@ -26,11 +26,7 @@ class SetUpSections extends Component {
   };
 
   recordSectionSetupStartedEvent = () => {
-    analyticsReporter.sendEvent(
-      EVENTS.SECTION_SETUP_STARTED,
-      {},
-      PLATFORMS.BOTH
-    );
+    analyticsReporter.sendEvent(EVENTS.SECTION_SETUP_STARTED, {});
   };
 
   render() {

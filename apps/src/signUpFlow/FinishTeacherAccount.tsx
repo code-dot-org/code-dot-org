@@ -17,7 +17,7 @@ import classNames from 'classnames';
 import cookies from 'js-cookie';
 import React, {useState, useEffect, useMemo} from 'react';
 
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {schoolInfoInvalid} from '@cdo/apps/schoolInfo/utils/schoolInfoInvalid';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
@@ -135,11 +135,10 @@ const FinishTeacherAccount: React.FunctionComponent<{
     if (prepopulatedGivenName) setGivenName(prepopulatedGivenName);
     if (prepopulatedFamilyName) setFamilyName(prepopulatedFamilyName);
 
-    analyticsReporter.sendEvent(
-      EVENTS.FINISH_ACCOUNT_PAGE_LOADED,
-      {'user type': 'teacher', country: countryCode},
-      PLATFORMS.BOTH
-    );
+    analyticsReporter.sendEvent(EVENTS.FINISH_ACCOUNT_PAGE_LOADED, {
+      'user type': 'teacher',
+      country: countryCode,
+    });
 
     const fetchGdprData = async () => {
       const urlParams = new URLSearchParams(window.location.search);
@@ -336,18 +335,14 @@ const FinishTeacherAccount: React.FunctionComponent<{
     // schoolData would be undefined if not valid, and the only
     // school_type sent is 'noSchoolSetting', which is not a school
     const hasSchool = schoolData && !schoolData.school_type;
-    analyticsReporter.sendEvent(
-      EVENTS.SIGN_UP_FINISHED_EVENT,
-      {
-        'user type': 'teacher',
-        'has school': hasSchool,
-        'has marketing value selected': true,
-        'has display name': !displayNameErrorMessage,
-        'educator role': educatorRole,
-        country: countryCode,
-      },
-      PLATFORMS.BOTH
-    );
+    analyticsReporter.sendEvent(EVENTS.SIGN_UP_FINISHED_EVENT, {
+      'user type': 'teacher',
+      'has school': hasSchool,
+      'has marketing value selected': true,
+      'has display name': !displayNameErrorMessage,
+      'educator role': educatorRole,
+      country: countryCode,
+    });
 
     // Log to Google Analytics
     trackEvent('sign_up', 'sign_up_success', {

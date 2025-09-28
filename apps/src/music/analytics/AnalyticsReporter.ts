@@ -1,12 +1,3 @@
-import {
-  init,
-  track,
-  Identify,
-  identify,
-  setSessionId,
-  flush,
-  setUserId,
-} from '@amplitude/analytics-browser';
 import * as GoogleBlockly from 'blockly/core';
 
 import DCDO from '@cdo/apps/dcdo';
@@ -14,7 +5,6 @@ import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 // We are transitioning off of a standalone Amplitude project for Music Lab
 // and onto Code.org's main Statsig project.
 // In the short term, we log to both projects to establish parity between the two logging systems.
-import {PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import cdoAnalyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import trackEvent from '@cdo/apps/util/trackEvent';
 import {
@@ -109,7 +99,6 @@ export default class AnalyticsReporter {
     }
 
     AnalyticsReporter.initialized = true;
-    init(responseJson.key);
   }
 
   private session: Session | undefined;
@@ -141,7 +130,6 @@ export default class AnalyticsReporter {
         },
         featuresUsed: {},
       };
-      setSessionId(this.session.startTime);
       this.log(`Session start. Session ID: ${this.session.startTime}`);
     } catch (error) {
       const message = error instanceof Error ? error.message : String(error);
@@ -169,16 +157,6 @@ export default class AnalyticsReporter {
       return;
     }
 
-    if (userId) {
-      setUserId(this.formatUserId(userId));
-    }
-
-    const identifyEvent = new Identify();
-    identifyEvent.set('userType', userType);
-    identifyEvent.set('signInState', signInState);
-
-    identify(identifyEvent);
-
     this.log(
       `User properties: userId: ${userId}, userType: ${userType}, signInState: ${signInState}`
     );
@@ -198,15 +176,6 @@ export default class AnalyticsReporter {
       this.projectContext = {};
     }
     this.projectContext[property] = value;
-
-    // For Amplitude
-    const identifyEvent = new Identify();
-    if (value) {
-      identifyEvent.set(property, value);
-    } else {
-      identifyEvent.unset(property);
-    }
-    identify(identifyEvent);
 
     this.log(`Project property: ${property}: ${value}`);
   }
@@ -273,7 +242,6 @@ export default class AnalyticsReporter {
     }
 
     this.sendStatsigEvent(eventType, payload);
-    track(eventType, payload).promise;
   }
 
   onSoundPlayed(id: string) {
@@ -354,8 +322,6 @@ export default class AnalyticsReporter {
     this.session = undefined;
 
     this.sendStatsigEvent('Session end', payload);
-    track('Session end', payload);
-    flush();
 
     this.log(`Session end. Payload: ${JSON.stringify(payload)}`);
   }
@@ -383,10 +349,6 @@ export default class AnalyticsReporter {
       ? {...payload, ...this.projectContext}
       : payload;
 
-    cdoAnalyticsReporter.sendEvent(
-      `Music Lab ${eventName}`,
-      combinedPayload,
-      PLATFORMS.STATSIG
-    );
+    cdoAnalyticsReporter.sendEvent(`Music Lab ${eventName}`, combinedPayload);
   }
 }

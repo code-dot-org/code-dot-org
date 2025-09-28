@@ -3,7 +3,6 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import classNames from 'classnames';
 import React, {useContext} from 'react';
 
-import {PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {
   Card,
@@ -38,11 +37,7 @@ const LtiExistingAccountCard = () => {
       lms_name: ltiProvider,
       user_type: userType,
     };
-    analyticsReporter.sendEvent(
-      'lti_existing_account_click',
-      eventPayload,
-      PLATFORMS.STATSIG
-    );
+    analyticsReporter.sendEvent('lti_existing_account_click', eventPayload);
 
     navigateToHref(existingAccountUrl.href);
   };

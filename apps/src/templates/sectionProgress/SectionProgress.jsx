@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import logToCloud from '@cdo/apps/logToCloud';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {
   getSelectedCourseId,
@@ -127,16 +127,12 @@ class SectionProgress extends Component {
       !this.props.isLoadingProgress &&
       !this.props.isRefreshingProgress
     ) {
-      analyticsReporter.sendEvent(
-        EVENTS.PROGRESS_VIEWED_FIXED,
-        {
-          sectionId: this.props.sectionId,
-          unitId: this.props.scriptId,
-          windowWidth: window.innerWidth,
-          windowHeight: window.innerHeight,
-        },
-        PLATFORMS.BOTH
-      );
+      analyticsReporter.sendEvent(EVENTS.PROGRESS_VIEWED_FIXED, {
+        sectionId: this.props.sectionId,
+        unitId: this.props.scriptId,
+        windowWidth: window.innerWidth,
+        windowHeight: window.innerHeight,
+      });
     }
   }
 
@@ -148,15 +144,11 @@ class SectionProgress extends Component {
       new_script_id: scriptId,
     });
 
-    analyticsReporter.sendEvent(
-      EVENTS.PROGRESS_CHANGE_UNIT,
-      {
-        sectionId: this.props.sectionId,
-        oldUnitId: this.props.scriptId,
-        unitId: scriptId,
-      },
-      PLATFORMS.BOTH
-    );
+    analyticsReporter.sendEvent(EVENTS.PROGRESS_CHANGE_UNIT, {
+      sectionId: this.props.sectionId,
+      oldUnitId: this.props.scriptId,
+      unitId: scriptId,
+    });
   };
 
   onChangeLevel = lessonOfInterest => {

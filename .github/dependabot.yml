@@ -49,9 +49,6 @@ updates:
       - dependency-name: "pepjs"
       - dependency-name: "@code-dot-org/blockly"
     groups:
-      amplitude:
-        patterns:
-        - "@amplitude/*"
       babel:
         patterns:
         - "@babel/*"

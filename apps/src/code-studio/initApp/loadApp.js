@@ -9,7 +9,7 @@ import PlayZone from '@cdo/apps/code-studio/components/playzone';
 import {lockContainedLevelAnswers} from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import * as imageUtils from '@cdo/apps/imageUtils';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import msg from '@cdo/locale';
 
@@ -66,15 +66,11 @@ export function setupApp(appOptions) {
       const isViewingStudent = !!queryParams('user_id');
       const teacherViewingStudentWork = isTeacher && isViewingStudent;
       if (teacherViewingStudentWork) {
-        analyticsReporter.sendEvent(
-          EVENTS.TEACHER_VIEWING_STUDENT_WORK,
-          {
-            unitId: appOptions.serverScriptId,
-            levelId: appOptions.serverLevelId,
-            sectionId: queryParams('section_id'),
-          },
-          PLATFORMS.BOTH
-        );
+        analyticsReporter.sendEvent(EVENTS.TEACHER_VIEWING_STUDENT_WORK, {
+          unitId: appOptions.serverScriptId,
+          levelId: appOptions.serverLevelId,
+          sectionId: queryParams('section_id'),
+        });
       }
 
       if (appSupportsSettings(appOptions.app, appOptions.droplet)) {

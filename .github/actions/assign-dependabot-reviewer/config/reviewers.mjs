@@ -1,6 +1,5 @@
 // Map dependencies to reviewers
 export const reviewersMap = {
-    'amplitude': 'platform',
     'babel': 'platform',
     'blockly': 'code-tools',
     'codemirror': 'code-tools',
