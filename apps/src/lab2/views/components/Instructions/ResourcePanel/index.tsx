@@ -92,8 +92,7 @@ type ResourcePanelProps = InstructionsProps & {
 const PYTHONLAB_RESOURCE_PANEL_ONBOARDING_TOUR_SEEN =
   'pythonlabResourcePanelOnboardingTourSeen';
 
-const VALIDATION_RESOURCE_PANEL_ONBOARDING_TOUR_SEEN =
-  'validationResourcePanelOnboardingTourSeen';
+const PYTHONLAB_VALIDATION_TOUR_SEEN = 'pythonlabValidationTourSeen';
 
 /**
  * Display various instructional resources for the level as tabs.
@@ -117,11 +116,14 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [validationTourEnabled, setValidationTourEnabled] = useState(false);
   const [validationTourStep, setValidationTourStep] = useState(0);
+
+  // The Done button on the third step (index 2) is always enabled.
+  // The Next button on the first two steps (indexes 0 and 1) is disabled until the user completes an action.
   const [validationTourStepsEnabled, setValidationTourStepsEnabled] = useState([
     false,
     false,
     true,
-  ]); // Step 3 is always enabled (Done button)
+  ]);
   const isUserTeacher = useAppSelector(state => state.currentUser.isTeacher);
   const [selectedVersion, setSelectedVersion] = useState<string>('');
   const isViewingOldVersion = useAppSelector(
@@ -139,28 +141,32 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const channelId = useAppSelector(state => state.lab.channel?.id);
   const appName = instructionsProps.levelProperties.appName;
   const isPythonLab = appName === 'pythonlab';
-  const pythonLabOnboardingTourSeen = tryGetLocalStorage(
+  const pythonlabOnboardingTourSeen = tryGetLocalStorage(
     PYTHONLAB_RESOURCE_PANEL_ONBOARDING_TOUR_SEEN,
     'no'
   );
-  const validationOnboardingTourSeen = tryGetLocalStorage(
-    VALIDATION_RESOURCE_PANEL_ONBOARDING_TOUR_SEEN,
+  const pythonlabValidationTourSeen = tryGetLocalStorage(
+    PYTHONLAB_VALIDATION_TOUR_SEEN,
     'no'
   );
 
-  // Enable validation tour if conditions are met
+  // Enable validation tour if conditions are met.
   useEffect(() => {
-    // TODO: add getLocalStorage logic here.
-    const shouldShowValidationTour =
-      instructionsProps.validationSettings && hasValidationConditions;
+    if (isPythonLab) {
+      const shouldShowValidationTour =
+        instructionsProps.validationSettings &&
+        hasValidationConditions &&
+        pythonlabValidationTourSeen !== 'yes';
 
-    if (shouldShowValidationTour) {
-      setValidationTourEnabled(true);
+      if (shouldShowValidationTour) {
+        setValidationTourEnabled(true);
+      }
     }
   }, [
     instructionsProps.validationSettings,
     hasValidationConditions,
-    validationOnboardingTourSeen,
+    pythonlabValidationTourSeen,
+    isPythonLab,
   ]);
 
   // Tooltip should disappear quickly.
@@ -351,7 +357,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const pytnonlabOnboardingTourSteps = useMemo(
     () => (
       <Steps
-        enabled={isPythonLab && pythonLabOnboardingTourSeen !== 'yes'}
+        enabled={isPythonLab && pythonlabOnboardingTourSeen !== 'yes'}
         initialStep={INITIAL_STEP}
         steps={STEPS}
         onExit={() => {
@@ -372,17 +378,13 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
         }}
       />
     ),
-    [isPythonLab, pythonLabOnboardingTourSeen]
+    [isPythonLab, pythonlabOnboardingTourSeen]
   );
 
   const pythonlabValidationTourSteps = useMemo(
     () => (
       <Steps
-        enabled={
-          isPythonLab &&
-          validationTourEnabled &&
-          validationOnboardingTourSeen !== 'yes'
-        }
+        enabled={validationTourEnabled}
         initialStep={validationTourStep}
         steps={VALIDATION_TOUR_STEPS}
         onExit={() => {
@@ -391,10 +393,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
         }}
         onComplete={() => {
           setValidationTourEnabled(false);
-          trySetLocalStorage(
-            VALIDATION_RESOURCE_PANEL_ONBOARDING_TOUR_SEEN,
-            'yes'
-          );
+          trySetLocalStorage(PYTHONLAB_VALIDATION_TOUR_SEEN, 'yes');
         }}
         onChange={nextStepIndex => {
           setValidationTourStep(nextStepIndex);
@@ -422,13 +421,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
         }}
       />
     ),
-    [
-      isPythonLab,
-      validationOnboardingTourSeen,
-      validationTourEnabled,
-      validationTourStep,
-      validationTourStepsEnabled,
-    ]
+    [validationTourEnabled, validationTourStep, validationTourStepsEnabled]
   );
 
   return (
