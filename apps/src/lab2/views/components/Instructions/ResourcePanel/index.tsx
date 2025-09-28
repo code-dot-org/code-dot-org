@@ -151,6 +151,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
 
   // Enable validation tour if conditions are met
   useEffect(() => {
+    // TODO: add getLocalStorage logic here.
     const shouldShowValidationTour =
       instructionsProps.validationSettings && hasValidationConditions;
 
@@ -321,6 +322,33 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     };
   }, [validationTourEnabled, validationTourStep]);
 
+  // Update button disabled state based on step and requirements
+  useEffect(() => {
+    if (!validationTourEnabled) return;
+
+    const updateButtonState = () => {
+      const nextButton = document.querySelector(
+        '.introjs-nextbutton'
+      ) as HTMLButtonElement;
+      if (nextButton) {
+        if (validationTourStep === 0 && !validationTourStepsEnabled[0]) {
+          nextButton.setAttribute('disabled', 'true');
+        } else if (validationTourStep === 1 && !validationTourStepsEnabled[1]) {
+          nextButton.setAttribute('disabled', 'true');
+        } else {
+          nextButton.removeAttribute('disabled');
+        }
+      }
+    };
+
+    // Update once after DOM is ready
+    const timeoutId = setTimeout(updateButtonState, 100);
+
+    return () => {
+      clearTimeout(timeoutId);
+    };
+  }, [validationTourEnabled, validationTourStep, validationTourStepsEnabled]);
+
   return (
     <div
       id="resource-panel-instructions"
@@ -352,11 +380,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
         initialStep={validationTourStep}
         steps={VALIDATION_TOUR_STEPS}
         onExit={() => {
+          // User must complete tour so that they don't see it again.
           setValidationTourEnabled(false);
-          trySetLocalStorage(
-            VALIDATION_RESOURCE_PANEL_ONBOARDING_TOUR_SEEN,
-            'yes'
-          );
         }}
         onComplete={() => {
           setValidationTourEnabled(false);
