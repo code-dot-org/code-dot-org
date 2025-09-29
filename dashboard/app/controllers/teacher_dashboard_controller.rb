@@ -68,7 +68,6 @@ class TeacherDashboardController < ApplicationController
       SchoolInfoInterstitialHelper.update_last_seen_timestamp(current_user)
     end
 
-    puts show_school_info_interstitial, show_school_info_confirmation, afe_eligible
     render json: {
       showSchoolInfoInterstitial: show_school_info_interstitial,
       showSchoolInfoConfirmation: show_school_info_confirmation,
