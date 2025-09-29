@@ -19,24 +19,28 @@ export const getAddToAiTutorField = (
       .map(range => {
         const startingPosition = state.selection.main.from;
         const endingPosition = state.selection.main.to;
-        const startingLine = state.doc.lineAt(startingPosition).number;
-        const endingLine = state.doc.lineAt(endingPosition).number;
+        const startingLine = state.doc.lineAt(startingPosition);
+        const endingLine = state.doc.lineAt(endingPosition);
+
         const selection = state.doc.sliceString(
           startingPosition,
           endingPosition
         );
-        const selectionDisplayName = `${filename} (${startingLine}-${endingLine})`;
+        const selectionDisplayName = `${filename} (${startingLine.number}-${endingLine.number})`;
         const saveSelection = () =>
           dispatch(
             addItemToUserAddedSelectionContext({
               sourceCode: selection,
               displayName: selectionDisplayName,
-              lineReference: {start: startingLine, end: endingLine},
+              lineReference: {
+                start: startingLine.number,
+                end: endingLine.number,
+              },
               filename: filename,
             })
           );
         return {
-          pos: range.to,
+          pos: endingLine.from,
           above: false,
           arrow: false,
           clip: false,

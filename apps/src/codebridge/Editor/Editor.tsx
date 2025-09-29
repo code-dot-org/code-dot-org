@@ -89,11 +89,8 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
           })
         );
       }
-
-      return extensions;
-    } else {
-      return [];
     }
+    return extensions;
   }, [
     dispatch,
     file?.language,
