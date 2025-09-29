@@ -7,12 +7,7 @@
       "is_migrated": true
     },
     "new_name": null,
-    "family_name": null,
     "serialized_at": "2025-04-28 20:18:37 UTC",
-    "published_state": "stable",
-    "instruction_type": "self_paced",
-    "instructor_audience": "facilitator",
-    "participant_audience": "teacher",
     "seeding_key": {
       "script.name": "ui-test-self-paced-pl"
     }
