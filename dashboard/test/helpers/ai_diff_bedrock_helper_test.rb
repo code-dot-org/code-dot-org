@@ -130,6 +130,39 @@ User: oh no"
     assert_equal prompt, expected_prompt
   end
 
+  test 'Testing prompt formatting for level, not preset, with very long student code' do
+    context = SharedConstants::AI_DIFF_CONTEXT[:LEVEL]
+    course_display_name = "Computer Science Discoveries"
+    unit_name = "CSD Unit 3"
+    lesson_name = "Test Lesson Name"
+    is_preset = false
+    section_contexts = nil
+    level_instructions = 'sudo make me a sandwich'
+    student_code = {student_code: 'a' * 100000}
+    prompt = AiDiffBedrockHelper.get_prompt_for_context(
+      context,
+      course_display_name,
+      unit_name,
+      lesson_name,
+      is_preset,
+      section_contexts,
+      level_instructions,
+      student_code
+    )
+    expected_prompt = "You are a teaching assistant named Aida. It's your job to help K-12 computer science teachers using the code.org platform plan their lessons and adjust lesson plans to fit class time requirements, help students that are ahead or behind, provide alternate explanations of the material, and other relevant lesson planning tasks. Your focus is on helping teachers with lesson plans for lesson in the Computer Science Discoveries course. The teacher will either ask you questions about the current lesson plan and resources or ask you to make changes to or create new material for the lesson. When creating new material for the lesson, you must provide all the information a teacher needs. For example, if asked to create a quiz you should also provide the answer key. Your job is to use the information from the search results to help the teacher to the best of your ability, asking clarifying questions if needed. Your responses should be warm and helpful because you're the best lesson planner there could be, and you know all about computer science education.
+            The current lesson this teacher is working on is Computer Science Discoveries CSD Unit 3, Test Lesson Name.
+
+            The teacher is currently working on a level within that lesson. The instructions for this task are: sudo make me a sandwich
+
+            The student code the teacher is viewing is: #{'a' * 75000}
+
+            Here are the search results in numbered order:
+            $search_results$
+
+      $output_format_instructions$"
+    assert_equal prompt, expected_prompt
+  end
+
   test 'Testing prompt formatting for lesson, not preset' do
     context = SharedConstants::AI_DIFF_CONTEXT[:LESSON]
     course_display_name = "Computer Science Discoveries"
@@ -525,6 +558,66 @@ The courses that this teacher may ask you about are:
     assert_equal filter, expected_filter
   end
 
+  test 'Testing context filtering for lesson with labs' do
+    input = "Hello there!"
+    prompt = "prompt text"
+    course_names = ["test_course"]
+    unit_num = 2
+    lesson_number = 3
+    section_contexts = nil
+    formatted_input = AiDiffBedrockHelper.format_inputs_for_bedrock_request(input, prompt)
+    expected_input = {
+      input: {
+        text: "Hello there!"
+      },
+      retrieve_and_generate_configuration: {
+        type: 'KNOWLEDGE_BASE',
+        knowledge_base_configuration: {
+          knowledge_base_id: AiDiffBedrockHelper::KB_ID,
+          model_arn: 'arn:aws:bedrock:us-east-1::foundation-model/anthropic.claude-3-sonnet-20240229-v1:0',
+          generation_configuration: {
+            prompt_template: {
+              text_prompt_template: "prompt text"
+            },
+            inference_config: {
+              text_inference_config: {
+                max_tokens: 1500,
+                temperature: 0.5,
+              }
+            },
+          },
+          retrieval_configuration: {
+            vector_search_configuration: {
+              filter: {},
+              number_of_results: 10,
+            }
+          }
+        }
+      }
+    }
+    expected_filter = {
+      and_all: [
+        {or_all: [
+          {equals: {key: "lesson", value: "L03"}},
+          {equals: {key: "lesson", value: "all"}},
+          {in: {key: 'lab', value: ['weblab', 'gamelab']}}
+        ]},
+        {or_all: [
+          {equals: {key: "unit", value: "U02"}},
+          {equals: {key: "unit", value: "all"}},
+          {in: {key: 'lab', value: ['weblab', 'gamelab']}}
+        ]},
+        {or_all: [
+          {in: {key: "course", value: ["test_course"]}},
+          {in: {key: 'lab', value: ['weblab', 'gamelab']}}
+        ]}
+      ]
+    }
+    assert_equal formatted_input, expected_input
+    filter = AiDiffBedrockHelper.filter_for_context(lesson_number, unit_num, course_names, section_contexts, ['weblab', 'gamelab'])
+    assert_equal filter, expected_filter
+  end
+
   test 'Testing context filtering for unit' do
     input = "Hello there!"
     prompt = "prompt text"
@@ -684,6 +777,7 @@ The courses that this teacher may ask you about are:
         course_names: ["fake_b"]
       }
     ]
+    labs = ['javalab', 'pythonlab']
     formatted_input = AiDiffBedrockHelper.format_inputs_for_bedrock_request(input, prompt)
     expected_input = {
       input: {
@@ -718,11 +812,12 @@ The courses that this teacher may ask you about are:
       or_all: [
         {equals: {key: "scope", value: "general"}},
         {in: {key: "course", value: ["fake_a"]}},
-        {in: {key: "course", value: ["fake_b"]}}
+        {in: {key: "course", value: ["fake_b"]}},
+        {in: {key: 'lab', value: ['javalab', 'pythonlab']}}
       ]
     }
     assert_equal formatted_input, expected_input
-    filter = AiDiffBedrockHelper.filter_for_context(lesson_number, unit_num, course_names, section_contexts)
+    filter = AiDiffBedrockHelper.filter_for_context(lesson_number, unit_num, course_names, section_contexts, labs)
     assert_equal filter, expected_filter
   end
 

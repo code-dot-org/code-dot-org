@@ -111,7 +111,9 @@ onmessage = async event => {
   }
   try {
     writeSource(sourceToWrite, DEFAULT_FOLDER_ID, '', pyodide);
+    postMessage({type: 'loading_packages'});
     await importPackagesFromFiles(sourceToWrite, pyodide);
+    postMessage({type: 'loaded_packages'});
     await patchInput(id);
     results = await pyodide.runPythonAsync(python, {
       filename: `/${HOME_FOLDER}/${MAIN_PYTHON_FILE}`,

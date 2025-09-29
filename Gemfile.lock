@@ -97,8 +97,6 @@ PATH
       rails (~> 6.1.7)
       zeitwerk (~> 2.6.7)
     hoc_legacy (0.0.0)
-    marketing (0.0.0)
-      contentful
 
 GEM
   remote: https://rubygems.org/
@@ -595,7 +593,7 @@ GEM
       ruby-progressbar
     minitest-spec-context (0.0.5)
     minitest-stub-const (0.6)
-    mocha (1.1.0)
+    mocha (1.2.1)
       metaclass (~> 0.0.1)
     msgpack (1.7.0)
     multi_json (1.15.0)
@@ -1070,7 +1068,6 @@ DEPENDENCIES
   loofah (~> 2.19.1)
   mailgun-ruby (~> 1.2.14)
   mailjet (~> 1.7.3)
-  marketing!
   memory_profiler
   mini_magick (>= 4.10.0)
   mini_racer
@@ -1080,7 +1077,7 @@ DEPENDENCIES
   minitest-reporters (~> 1.2.0.beta3)
   minitest-spec-context (~> 0.0.3)
   minitest-stub-const (~> 0.6)
-  mocha
+  mocha (~> 1.2.1)
   mutex_m
   mysql2 (>= 0.4.1)
   nakayoshi_fork

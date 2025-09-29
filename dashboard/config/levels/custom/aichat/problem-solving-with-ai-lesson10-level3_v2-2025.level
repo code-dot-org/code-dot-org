@@ -1,0 +1,51 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2025-09-25T19:53:12.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## AI as Pilot. You as Co-Pilot.\r\n\r\nSwitch roles by prompting AI to make the same type of creative content that you did in the previous part.\r\n\r\nOn this level:\r\n- **AI Chat** will act as the **pilot**, drafting and making all the updates to the social media post.\r\n- **You** will act as a **co-pilot**, giving AI Chat suggestions to improve the social media post it writes.\r\n\r\n### Do This:\r\n\r\n1. Tell AI to write the same type of **social media post** you did earlier\r\n   - For example, *\"Write a post hyping up an upcoming volleyball game against our rivals the Coyotes.\"*\r\n2. **Record AI’s initial response** in your Activity Guide.\r\n3. Give AI **suggestions on how to improve** the post and **prompt AI to refine** the output.\r\n    - For example, _“The part about the bird leaving its cage doesn’t make sense. Revise it so that it does.” or “There aren't any emojis in your post . Revise it to include some.”_\r\n5. **Refine AI’s output** one more time by giving the AI at least one more suggestion\r\n6. Record AI’s final **refined output** in your Activity Guide.\r\n\r\n**Try it out!**\r\n\r\n---\r\n\r\n::: details [**Not sure what format to tell the AI to refine?**]\r\nGo back to Lesson 8: Debugging and Refining Outputs in your Unit Guide to review the information on the **Five Key Elements of a Prompt:**\r\n- **Task** - Specific and actionable instructions \r\n- **Context** - Relevant background details\r\n- **Format** - How the response should be structured\r\n- **Reference** - Additional examples or resources\r\n- **Tone** - The style in which the output is given\r\n:::",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are a chatbot. The student will guide and evaluate your creative output. Please follow these steps:\n\n1. Prompt the student for a creative task.\n2. Complete the student’s creative task in a succinct manner (e.g., Write a post hyping up an upcoming volleyball game against our rivals the Coyotes.). Keep the posts to 3 sentences maximum.\n3. Provide your initial response for the student to record.\n4. Listen to their suggestion.\n5. Incorporate their feedback into a refined response as requested (e.g., make it clearer, more creative, add emojis, or more engaging).\n6. If asked, refine your output more by adjusting what the student suggests.\n7. Offer the final refined output as prompted by the student.\n\nAlways respond concisely, adapt to their feedback, and focus on improving the creative piece according to the student’s direction.",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    },
+    "bubble_choice_description": "Use AI Chat to help you decide which two patients to assist first.",
+    "display_name": "Hospital Triage Nurse",
+    "thumbnail_url": "https://images.code.org/249b43f221aed22f6ebc602a3084c4bf-medical-clipboard.png",
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:53:12.453+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson10-level3_2025\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson10-level3_2025\"}]"
+}]]></config>
+</Aichat>

@@ -1,0 +1,394 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-09-25T19:56:41.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Do This:\r\n\r\nLet's take this one step at a time! Click the arrow to expand the step when you're ready.\r\n\r\n:::details [<span style=\"font-size:1.3em;\">1. Add a <code>Painter</code> parameter to the functions</span>]\r\nLook at the `take_three_paint()` and `paint_three()` functions near the top of the code.\r\n\r\nEach function is missing a parameter. Add `this_painter` inside the parentheses so each function knows which `Painter` it should use.\r\n\r\n&nbsp;\r\n:::\r\n\r\n<span></span>\r\n\r\n:::details [<span style=\"font-size:1.3em;\">2. Update both functions to use the parameter</span>]\r\nInside the functions, replace `fiona` and `selena` with `this_painter`.\r\n\r\nThis change makes your code reusable for any `Painter` you pass into the function.\r\n\r\n&nbsp;\r\n:::\r\n\r\n<span></span>\r\n\r\n:::details [<span style=\"font-size:1.3em;\">3. Call the functions with <code>fiona</code> as the argument</span>]\r\nScroll through the code and look for the `TODO`s that call the functions with `fiona`.\r\n\r\nInstead of writing out every step, replace the code with calls to `take_three_paint(fiona)` and `paint_three(fiona)`.\r\n\r\n&nbsp;\r\n:::\r\n\r\n<span></span>\r\n\r\n:::details [<span style=\"font-size:1.3em;\">4. Call the functions with <code>selena</code> as the argument</span>]\r\nNow look for the `TODO`s where the functions should be used with `selena`.\r\n\r\nReplace the repeated lines where `selena` takes paint or paints with calls to your updated functions: `take_three_paint(selena)` and `paint_three(selena)`.\r\n\r\n&nbsp;\r\n:::\r\n\r\n<span></span>\r\n\r\n![](https://images.code.org/f496b9310f332da74d1ccf289cf0f220-choiceC.gif)\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nTo make your function flexible, use a parameter like `this_painter` so the function works with any `Painter` you choose.\r\n\r\n**Example:**\r\n\r\n```\r\ndef paint_line(this_painter):\r\n  this_painter.take_paint()\r\n  this_painter.paint(\"white\")\r\n  this_painter.move()\r\n\r\npaint_line(south_side_painter)\r\n```",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "name_suffix": "_v2-2025",
+    "serialized_maze": [
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 3,
+          "assetId": 303
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 82
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 61
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 61
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 61
+        }
+      ],
+      [
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 88
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 89
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 78
+        },
+        {
+          "tileType": 1,
+          "value": 3,
+          "assetId": 303
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 72
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 76
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 77
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 78
+        }
+      ],
+      [
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 80
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 83
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 80
+        },
+        {
+          "tileType": 1,
+          "value": 3,
+          "assetId": 303
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 83
+        }
+      ],
+      [
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 81
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 85
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 87
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 81
+        }
+      ],
+      [
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 83
+        },
+        {
+          "tileType": 1,
+          "value": 3,
+          "assetId": 303
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 80
+        }
+      ],
+      [
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 85
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 77
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 86
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 77
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 86
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 87
+        }
+      ],
+      [
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        }
+      ],
+      [
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        }
+      ]
+    ],
+    "mini_app": "neighborhood",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "from neighborhood import Painter\n\n# TODO - Add a parameter for this_painter\ndef take_three_paint():\n  # TODO - Modify the function to use this_painter\n  fiona.take_paint()\n  fiona.take_paint()\n  fiona.take_paint()\n\n# TODO - Add a parameter for this_painter\ndef paint_three():\n  # TODO - Modify the function to use this_painter\n  selena.paint(\"SteelBlue\")\n  selena.move()\n  selena.paint(\"SteelBlue\")\n  selena.move()\n  selena.paint(\"SteelBlue\")\n\nfiona = Painter()\nselena = Painter()\n\nfiona.move()\n\n# TODO - Call the take_three_paint() function with fiona\ntake_three_paint()\n\n# TODO - Call the paint_three() function with fiona\nfiona.paint(\"SteelBlue\")\nfiona.move()\nfiona.paint(\"SteelBlue\")\nfiona.move()\nfiona.paint(\"SteelBlue\")\n\nfiona.turn_left()\nfiona.turn_left()\nfiona.turn_left()\n\nfiona.move()\nfiona.move()\nfiona.move()\nfiona.move()\n\n# TODO - Call the take_three_paint() function with fiona\ntake_three_paint()\n\nfiona.turn_left()\n\n# TODO - Call the paint_three() function with fiona\nfiona.paint(\"SteelBlue\")\nfiona.move()\nfiona.paint(\"SteelBlue\")\nfiona.move()\nfiona.paint(\"SteelBlue\")\n\nselena.move()\nselena.move()\nselena.move()\n\nselena.turn_left()\nselena.turn_left()\nselena.turn_left()\n\nselena.move()\n\n# TODO - Call the take_three_paint() function with selena\nselena.take_paint()\nselena.take_paint()\nselena.take_paint()\n\n# TODO - Call the paint_three() function with selena\npaint_three()\n\nselena.move()\n\nselena.turn_left()\n\nselena.move()\nselena.move()\nselena.move()\n\nselena.turn_left()\n\nselena.move()\nselena.move()\n\n# TODO - Call the take_three_paint() function with selena\nselena.take_paint()\nselena.take_paint()\nselena.take_paint()\n\nselena.turn_left()\nselena.turn_left()\n\n# TODO - Call the paint_three() function with selena\npaint_three()",
+          "folderId": "0",
+          "active": false,
+          "open": true,
+          "type": "locked_starter"
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\n",
+    "display_name": "Same Moves, New Painter",
+    "bubble_choice_description": "Update the functions to use a `this_painter` parameter so the `Painter`s can share the same instructions without repeating code.",
+    "thumbnail_url": "https://images.code.org/f496b9310f332da74d1ccf289cf0f220-choiceC.gif",
+    "validation_file": {
+      "id": "2",
+      "name": "test.py",
+      "language": "py",
+      "contents": "import inspect\nfrom unittest import TestCase\nfrom unittest_runner import ValidationProtocol\n\nclass TestPainterTakeAndPaintThree(TestCase):\n    @classmethod\n    def setUpClass(cls):\n        \"\"\"Set up validation and get logs\"\"\"\n        cls.log = ValidationProtocol().get_neighborhood_log()\n        if not cls.log.painter_logs or len(cls.log.painter_logs) < 2:\n            cls.first_painter = None\n            cls.second_painter = None\n        else:\n            cls.first_painter = cls.log.painter_logs[0]\n            cls.second_painter = cls.log.painter_logs[1]\n\n    def setUp(self):\n        if self.first_painter is None or self.second_painter is None:\n            self.skipTest(\"Two Painters should be created and used in this program.\")\n\n    def test_take_three_paint_has_one_parameter(self):\n        \"\"\"take_three_paint should accept exactly one parameter\"\"\"\n        from main import take_three_paint\n        params = inspect.signature(take_three_paint).parameters\n        self.assertEqual(\n            len(params),\n            1,\n            \"The function take_three_paint should have exactly one parameter (this_painter).\"\n        )\n\n    def test_paint_three_has_one_parameter(self):\n        \"\"\"paint_three should accept exactly one parameter\"\"\"\n        from main import paint_three\n        params = inspect.signature(paint_three).parameters\n        self.assertEqual(\n            len(params),\n            1,\n            \"The function paint_three should have exactly one parameter (this_painter).\"\n        )\n\n    def test_first_painter_final_position(self):\n        \"\"\"First Painter ends at (5, 4)\"\"\"\n        self.assertEqual(\n            (self.first_painter.ending_position.x, self.first_painter.ending_position.y),\n            (5, 4),\n            \"The first Painter didn't stop at (5, 4). Check your function calls and path logic.\"\n        )\n\n    def test_second_painter_final_position(self):\n        \"\"\"Second Painter ends at (6, 4)\"\"\"\n        self.assertEqual(\n            (self.second_painter.ending_position.x, self.second_painter.ending_position.y),\n            (6, 4),\n            \"The second Painter didn't stop at (6, 4). Check your function calls and path logic.\"\n        )\n\n    def test_correct_spaces_are_painted(self):\n        \"\"\"Painters painted the expected spaces\"\"\"\n        final = self.log.final_output\n        expected_output = [[False for _ in range(len(final[0]))] for _ in range(len(final))]\n\n        painted_spaces = [\n            (1, 0), (2, 0), (3, 0),\n            (3, 1), (3, 2), (3, 3), (3, 4),\n            (4, 4), (5, 4),\n            (6, 4), (6, 3), (6, 2)\n        ]\n\n        for x, y in painted_spaces:\n            expected_output[y][x] = True\n\n        self.assertTrue(\n            self.log.final_output_contains_paint(expected_output),\n            \"Not all expected spaces were painted. Make sure the Painters correctly painted the full path using the reusable functions.\"\n        )\n",
+      "folderId": "0",
+      "active": false,
+      "open": false,
+      "type": "validation"
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:56:41.440+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson7-level6c_2025-launch_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson7-level6c_2025-launch_2025\"}]"
+}]]></config>
+</Pythonlab>

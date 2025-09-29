@@ -5,6 +5,7 @@ import {
 } from '@code-dot-org/component-library/button';
 import React from 'react';
 
+import SelfPacedPLCatalogCourseFacilitatedWorkshops from '@cdo/apps/code-studio/pd/professional_learning/courses/SelfPacedPLCatalogCourseFacilitatedWorkshops';
 import CourseOfferingCard from '@cdo/apps/templates/courseOfferings/courseCard/CourseOfferingCard';
 import {CourseOffering} from '@cdo/apps/templates/courseOfferings/types';
 import {defaultImageSrc} from '@cdo/apps/templates/curriculumCatalog/curriculumCatalogConstants';
@@ -50,9 +51,12 @@ const SelfPacedPLCatalogCardInitial: React.FunctionComponent<
           />
         </>
       }
-      // relatedProposalsHeader="Facilitated workshops"
-      // TODO: Should be updated in scope of [ACQ-3435](https://codedotorg.atlassian.net/browse/ACQ-3435)
-      // relatedProposalsContent=""
+      relatedProposalsHeader="Facilitated workshops"
+      relatedProposalsContent={
+        <SelfPacedPLCatalogCourseFacilitatedWorkshops
+          facilitated_workshops={courseOffering.facilitated_workshops || []}
+        />
+      }
       onCloseExpandedCard={() => updateExpandedCardKey(courseOffering.key)}
       expandedCardActionRowContent={
         <>

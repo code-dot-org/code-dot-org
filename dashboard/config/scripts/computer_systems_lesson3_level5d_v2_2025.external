@@ -1,0 +1,29 @@
+name 'computer-systems-lesson3-level5d_v2-2025'
+title 'Farming Technology'
+description 'Discover how modern agriculture uses cutting-edge hardware to improve efficiency and sustainability.'
+display_name 'Farming Technology'
+bubble_choice_description 'Discover how modern agriculture uses cutting-edge hardware to improve efficiency and sustainability.'
+thumbnail_url 'https://images.code.org/819b6dfb2838c2c40e811fca3a123821-farm-tech.png'
+
+markdown <<MARKDOWN
+# Farming Technology
+
+Discover how modern agriculture uses cutting-edge hardware to improve efficiency and sustainability.
+
+As you watch, be prepared to reflect on the following in the next activity:
+
+- What kind of hardware components are used by people in this career?  
+- What kind of troubleshooting might they need to do? Put another way, what kinds of bugs could they run into?  
+
+**Note**: This video opens in a new tab ⧉.  
+
+<div style="text-align: center; margin-top: 20px;">
+  <a href="https://docs.google.com/presentation/d/1IGiJi1HiD-pGHOvnEhdkCVR54ruFQH8PRqLQlkFT-WI/edit?slide=id.g34818ae2bc5_0_6#slide=id.g34818ae2bc5_0_6" target="_blank" rel="noopener noreferrer">
+    <img src="https://images.code.org/819b6dfb2838c2c40e811fca3a123821-farm-tech.png" 
+         alt="YouTube Video Thumbnail" 
+         style="width: 80%; max-width: 600px; border-radius: 10px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);">
+  </a>
+</div>
+
+
+MARKDOWN

@@ -68,16 +68,16 @@ class CoursesControllerTest < ActionController::TestCase
 
       @unit_group = create(:unit_group, name: 'csx-3001', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, family_name: 'csx', version_year: '3001')
       create(:course_version, course_offering: offering, content_root: @unit_group, key: '3001')
-      unit1 = create(:unit, name: 'csx1-3001', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+      unit1 = create(:unit, name: 'csx1-3001')
       create(:unit_group_unit, unit_group: @unit_group, script: unit1, position: 1)
-      unit2 = create(:unit, name: 'csx2-3001', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+      unit2 = create(:unit, name: 'csx2-3001')
       create(:unit_group_unit, unit_group: @unit_group, script: unit2, position: 2)
 
       older_unit_group = create(:unit_group, name: 'csx-3000', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, family_name: 'csx', version_year: '3000')
       create(:course_version, course_offering: offering, content_root: older_unit_group, key: '3000')
-      unit1 = create(:unit, name: 'csx1-3000', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+      unit1 = create(:unit, name: 'csx1-3000')
       create(:unit_group_unit, unit_group: older_unit_group, script: unit1, position: 1)
-      unit2 = create(:unit, name: 'csx2-3000', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+      unit2 = create(:unit, name: 'csx2-3000')
       create(:unit_group_unit, unit_group: older_unit_group, script: unit2, position: 2)
     end
 
@@ -683,7 +683,7 @@ class CoursesControllerTest < ActionController::TestCase
     unit_group = create(:unit_group, family_name: 'my-family', version_year: '2000', name: 'csp-2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta)
     CourseOffering.add_course_offering(unit_group)
     course_version = unit_group.course_version
-    unit = create(:script, is_migrated: true, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta)
+    unit = create(:script, is_migrated: true)
     create(:unit_group_unit, unit_group: unit_group, script: unit, position: 1)
     resource1 = create(:resource, course_version: course_version)
     resource2 = create(:resource, course_version: course_version)
@@ -703,7 +703,7 @@ class CoursesControllerTest < ActionController::TestCase
     unit_group = create(:unit_group, family_name: 'my-family', version_year: '2000', name: 'csp-2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta)
     CourseOffering.add_course_offering(unit_group)
     course_version = unit_group.course_version
-    unit = create(:script, is_migrated: true, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta)
+    unit = create(:script, is_migrated: true)
     create(:unit_group_unit, unit_group: unit_group, script: unit, position: 1)
     resource1 = create(:resource, course_version: course_version)
     resource2 = create(:resource, course_version: course_version)
@@ -718,7 +718,7 @@ class CoursesControllerTest < ActionController::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     unit_group = create(:unit_group)
     unit_group.update!(name: 'csp-2017')
-    script = create(:script, is_migrated: true, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta)
+    script = create(:script, is_migrated: true)
     create(:unit_group_unit, unit_group: unit_group, script: script, position: 1)
 
     assert_nil unit_group.course_version
@@ -733,7 +733,7 @@ class CoursesControllerTest < ActionController::TestCase
     File.stubs(:write)
     unit_group = create(:unit_group)
     unit_group.update!(name: 'csp-2017')
-    script = create(:script, is_migrated: true, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta)
+    script = create(:script, is_migrated: true)
     create(:unit_group_unit, unit_group: unit_group, script: script, position: 1)
 
     assert_nil unit_group.course_version

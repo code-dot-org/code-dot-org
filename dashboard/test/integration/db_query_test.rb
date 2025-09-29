@@ -22,8 +22,8 @@ class DBQueryTest < ActionDispatch::IntegrationTest
       level: level,
       level_source: create(:level_source, level: level)
 )
-    #TODO: Figure out if we can bring single_unit_course? down to 0 queries again
-    assert_cached_queries(19) do
+
+    assert_cached_queries(18) do
       get course_unit_lesson_script_level_path(
         course_course_name: script.get_original_unit_group.name,
         unit_position: 1,
@@ -178,7 +178,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
     student.assign_script(unit)
     sign_in student
 
-    assert_cached_queries(22) do
+    assert_cached_queries(21) do
       get "/courses/#{course.name}/units/1/lessons/1/levels/1"
       assert_response :success
     end

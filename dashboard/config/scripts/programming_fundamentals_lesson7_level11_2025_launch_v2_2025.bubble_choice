@@ -1,0 +1,9 @@
+name 'programming-fundamentals-lesson7-level11_2025-launch_v2-2025'
+display_name 'Painter Functions'
+description 'Write a new function for the `Painter` and use it in The Neighborhood'
+
+sublevels
+level 'programming-fundamentals-lesson7-level11c_2025-launch_v2-2025'
+level 'programming-fundamentals-lesson7-level11a_2025-launch_v2-2025'
+level 'programming-fundamentals-lesson7-level11b_2025-launch_v2-2025'
+level 'programming-fundamentals-lesson7-level11d_2025-launch_v2-2025'

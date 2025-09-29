@@ -76,6 +76,7 @@ export const translatedCourseOfferingMarketingInitiatives = {
   csf: i18n.marketingInitiativeCSF(),
   csp: i18n.marketingInitiativeCSP(),
   hoc: i18n.marketingInitiativeHOC(),
+  hoai: i18n.marketingInitiativeHOAI(),
 };
 
 export const translatedGradeLevels = {

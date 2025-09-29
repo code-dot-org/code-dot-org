@@ -325,11 +325,15 @@ class Section < ApplicationRecord
     return ADD_STUDENT_FORBIDDEN unless can_join_section_as_participant?(student)
     # If the section is restricted, return a restricted error unless a user is added by
     # the teacher (Creating a Word or Picture login-based student) or is created via an
-    # OAUTH login section (Google Classroom / clever).
+    # OAUTH login section (Google Classroom / clever) or LTI section (Canvas / Schoology).
     # added_by is passed only from the sections_students_controller, used by teachers to
     # manager their rosters.
-    if !(added_by&.id == user_id || (LOGIN_TYPES_OAUTH.include? login_type)) && (restrict_section == true && (!follower || follower.deleted?))
-      return ADD_STUDENT_RESTRICTED
+    if restrict_section == true && (!follower || follower.deleted?)
+      allowed =
+        added_by&.id == user_id ||
+        LOGIN_TYPES_OAUTH.include?(login_type) ||
+        (login_type == LOGIN_TYPE_LTI_V1 && Policies::Lti.roster_sync_enabled?(teacher))
+      return ADD_STUDENT_RESTRICTED unless allowed
     end
 
     # Unless the sections login type is Google or Clever

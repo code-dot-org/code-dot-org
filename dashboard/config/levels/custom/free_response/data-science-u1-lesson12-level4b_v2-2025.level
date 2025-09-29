@@ -1,0 +1,26 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2025-09-25T20:08:43.000Z",
+  "level_num": "custom",
+  "user_id": 21093,
+  "properties": {
+    "encrypted": "false",
+    "title": "Step 2: Dataset Decisions",
+    "long_instructions": "What decisions did you make about your data? For example, did you need to clean it? Did you need to sort or filter your data? Did you need to use the COUNTIF(), SUM(), and AVERAGE() formulas?",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "name_suffix": "_v2-2025",
+    "stay_on_level_after_submit": "false"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T20:08:43.307+00:00\",\"changed\":[\"cloned from \\\"data-science-u1-lesson12-level4b_2025\\\"\"],\"cloned_from\":\"data-science-u1-lesson12-level4b_2025\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>
