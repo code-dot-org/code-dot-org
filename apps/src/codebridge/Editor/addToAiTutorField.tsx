@@ -9,6 +9,16 @@ import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import moduleStyles from './styles/editor.module.scss';
 
+/**
+ * Returns a CodeMirror StateField extension that adds a tooltip button
+ * to add the current selection to the AI Tutor context. The button will only show up
+ * when there is a non-empty selection. The button appears on the line below
+ * the current selection, aligned to the beginning of the line to ensure the button is visible.
+ * If the last line in the editor is selected and the last line is at the bottom of the screen,
+ * the button will appear above the selection.
+ *
+ * Codemirror tooltip example: https://codemirror.net/examples/tooltip/
+ */
 export const getAddToAiTutorField = (
   filename: string,
   dispatch: AppDispatch
