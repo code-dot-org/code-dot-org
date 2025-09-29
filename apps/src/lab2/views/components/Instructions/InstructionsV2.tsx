@@ -122,6 +122,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
     >
       <div
         id="instructions-panel"
+        aria-live="polite"
         className={classNames(
           moduleStyles.item,
           vertical && moduleStyles.itemVertical
