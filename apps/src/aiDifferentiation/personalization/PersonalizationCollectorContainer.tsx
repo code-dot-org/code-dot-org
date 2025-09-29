@@ -35,6 +35,7 @@ const PersonalizationCollectorContainer: React.FC = () => {
   const [questionsNumber, setQuestionsNumber] = React.useState(0);
   const [isSaving, setIsSaving] = React.useState(false);
   const [showResults, setShowResults] = React.useState(false);
+  const [isLoading, setIsLoading] = React.useState(true);
   const [personalizationData, setPersonalizationData] = React.useState<
     Partial<PersonalizationData>
   >({});
@@ -211,7 +212,9 @@ const PersonalizationCollectorContainer: React.FC = () => {
 
   return (
     <div className={style.carouselContainer}>
-      {showResults ? (
+      {isLoading ? (
+        <div>Loading...</div>
+      ) : showResults ? (
         <PersonalizationResults teachingStyle={TEACHING_STYLES[0]} />
       ) : (
         <>
