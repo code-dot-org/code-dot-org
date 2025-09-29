@@ -1,0 +1,130 @@
+  /* Arrow */
+  .introjs-arrow {
+    display: none !important;
+  }
+ 
+  /* Tooltip */
+  .introjs-tooltip {
+    box-sizing: content-box;
+    position: absolute;
+    visibility: visible;
+    background-color: #fff;
+    min-width: 250px;
+    max-width: 350px;
+    border-radius: 5px;
+    box-shadow: 0 3px 30px #21212140;
+    transition: opacity .1s ease-out;
+  }
+  
+  .introjs-tooltiptext {
+    padding: 20px;
+    color: #576575;
+    font-family: Figtree, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 23.68px;
+  }
+  
+  /* Tooltip Title */
+  .introjs-tooltip-title {
+    font-family: Figtree, sans-serif;
+    font-size: 20px;
+    width: 90%;
+    min-height: 1.5em;
+    margin: 0;
+    padding: 0;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+  
+  /* Tooltip Header */
+  .introjs-tooltip-header {
+    position: relative;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    min-height: 1.5em;
+  }
+  
+  /* Tooltip Buttons */
+  .introjs-tooltipbuttons {
+    border-top: 1px solid #e0e0e0;
+    padding: 10px;
+    text-align: right;
+    white-space: nowrap;
+  }
+  
+  .introjs-tooltipbuttons:after {
+    content: "";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+  }
+  
+  /* Button */
+  .introjs-button {
+    box-sizing: content-box;
+    position: relative;
+    overflow: visible;
+    padding: .5rem 1rem;
+    border: 1px solid #bdbdbd;
+    text-decoration: none;
+    text-shadow: 1px 1px 0 #fff;
+    font-size: 14px;
+    color: #424242;
+    white-space: nowrap;
+    cursor: pointer;
+    outline: 0;
+    background-color: #f4f4f4;
+    border-radius: .2em;
+    zoom: 1;
+    display: inline;
+  }
+
+  /* Navigation Buttons */
+  .introjs-prevbutton {
+    float: left;
+    text-shadow: none;
+    color: #292F36;
+    border: 1px solid #292F36;
+    border-width: 1px;
+    border-radius: 4px;
+    background-color: #fff;
+  
+    &:hover,
+    &:active,
+    &:focus,
+    &:visited {
+      color: #292F36;
+      background-color: #dfe3e9;
+      text-decoration: none;
+      box-shadow: none;
+    }
+  }
+  
+  .introjs-nextbutton {
+    float: right;
+    text-shadow: none;
+    border-radius: 4px;
+    color: #fff;
+    border: none;
+    background-color: #9657C7;
+  
+    &:hover,
+    &:active,
+    &:focus,
+    &:visited {
+      color: #fff;
+      background-color: #6c468a;
+      text-decoration: none;
+      border: none;
+      box-shadow: none;
+    }
+  }
+  
+  .introjs-hidden {
+    display: none;
+  }
+  

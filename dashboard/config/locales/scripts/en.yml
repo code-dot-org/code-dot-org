@@ -25513,3 +25513,14 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        hoai-dance-pilot2:
+          lessons:
+            lesson-1:
+              name: test
+          lesson_groups: {}
+          name: hoai-dance-pilot2
+          title: hoai-dance-pilot2
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''

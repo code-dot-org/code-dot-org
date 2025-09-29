@@ -446,15 +446,21 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
       [[:student, :with_lti_authentication_option, :without_encrypted_password], true],
       [[:student, :with_lti_authentication_option, :without_email_auth_option], true],
 
-      # Conditionally school-managed accounts that have email logins or passwords, tainting them as personal accounts
-      [[:student, :with_google_authentication_option, :without_email_auth_option, {roster_synced: true}], true],
-      [[:student, :with_google_authentication_option, :without_encrypted_password, {roster_synced: true}], true],
-      [[:student, :with_google_authentication_option, :without_email_auth_option, :in_google_section], true],
-      [[:student, :with_google_authentication_option, :without_encrypted_password, :in_google_section], true],
-      [[:student, :with_microsoft_authentication_option, :without_email_auth_option, {roster_synced: true}], true],
-      [[:student, :with_microsoft_authentication_option, :without_encrypted_password, {roster_synced: true}], true],
-      [[:student, :with_microsoft_authentication_option, :without_email_auth_option, :in_email_section], true],
-      [[:student, :with_microsoft_authentication_option, :without_encrypted_password, :in_email_section], true],
+      # Conditionally school-managed accounts that have email logins or passwords should still be considered school-managed
+      [[:student, :with_google_authentication_option, :without_email_auth_option, {roster_synced: true}], false],
+      [[:student, :with_google_authentication_option, :without_encrypted_password, {roster_synced: true}], false],
+      [[:student, :with_google_authentication_option, :without_email_auth_option, :in_google_section], false],
+      [[:student, :with_google_authentication_option, :without_encrypted_password, :in_google_section], false],
+      [[:student, :with_microsoft_authentication_option, :without_email_auth_option, {roster_synced: true}], false],
+      [[:student, :with_microsoft_authentication_option, :without_encrypted_password, {roster_synced: true}], false],
+      [[:student, :with_microsoft_authentication_option, :without_email_auth_option, :in_email_section], false],
+      [[:student, :with_microsoft_authentication_option, :without_encrypted_password, :in_email_section], false],
+
+      # Personal accounts in sections or roster synced should still be considered school-managed
+      [[:student, :in_email_section], false],
+      [[:student, {roster_synced: true}], false],
+      [[:student, :with_facebook_authentication_option, :without_email_auth_option, :without_encrypted_password, :in_email_section], false],
+      [[:student, :with_facebook_authentication_option, :without_email_auth_option, :without_encrypted_password, {roster_synced: true}], false],
 
       # Unmigrated
       [[:student, :without_email_auth_option, :demigrated], true],
