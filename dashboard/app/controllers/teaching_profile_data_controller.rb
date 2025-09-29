@@ -1,7 +1,7 @@
-class Api::V1::TeachingProfileDataController < ApplicationController
+class TeachingProfileDataController < ApplicationController
   before_action :authenticate_user!
 
-  # GET /dashboardapi/v1/teaching_profile_data
+  # GET /teaching_profile_data
   def show
     existing_data = TeachingProfileData.find_by(user: current_user)
 
@@ -12,7 +12,7 @@ class Api::V1::TeachingProfileDataController < ApplicationController
     end
   end
 
-  # POST /dashboardapi/v1/teaching_profile_data
+  # POST /teaching_profile_data
   def create
     @teaching_profile_data = TeachingProfileData.new(
       user: current_user,
@@ -26,7 +26,7 @@ class Api::V1::TeachingProfileDataController < ApplicationController
     end
   end
 
-  # PATCH /dashboardapi/v1/teaching_profile_data
+  # PATCH /teaching_profile_data
   def update
     existing_data = TeachingProfileData.find_by(user: current_user)
 

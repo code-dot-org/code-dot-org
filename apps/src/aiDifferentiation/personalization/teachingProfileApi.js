@@ -2,7 +2,7 @@
  * API utilities for teaching profile data
  */
 
-const API_ENDPOINT = '/dashboardapi/v1/teaching_profile_data';
+const API_ENDPOINT = '/teaching_profile_data';
 
 /**
  * Save personalization data to the teaching profile
