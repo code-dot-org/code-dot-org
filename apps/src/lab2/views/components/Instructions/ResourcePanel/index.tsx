@@ -7,6 +7,7 @@ import {Steps} from 'intro.js-react';
 import React, {useEffect, useMemo, useState} from 'react';
 
 import {ChatButtonData, SystemPromptSettings} from '@cdo/apps/aichat/types';
+import AiChatHeaderButtons from '@cdo/apps/aichat/views/aiChatHeaderButtons/AiChatHeaderButtons';
 import {shouldShowAiTutor} from '@cdo/apps/lab2/ai/shouldShowAiTutor';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {ProjectSources} from '@cdo/apps/lab2/types';
@@ -338,7 +339,13 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
           id={currentTab}
           headerContent={tabInfo[currentTab].title}
           headerClassName={headerClassName}
-          rightHeaderContent={rightHeaderContent}
+          rightHeaderContent={
+            currentTab === Tabs.AiTutor ? (
+              <AiChatHeaderButtons />
+            ) : (
+              rightHeaderContent
+            )
+          }
         >
           <div className={styles.tabContentContainer}>
             {getTypedKeys(availableTabs).map(tab => (
