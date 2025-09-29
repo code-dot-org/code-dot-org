@@ -97,7 +97,9 @@ export const useValidationTour = ({
       if (validationTourStep === 1) {
         // Enable step 2 (next button for step 2)
         setValidationTourStepsEnabled(prev => [true, true, true]);
-        onValidate();
+        if (onValidate) {
+          onValidate();
+        }
 
         // Return focus to the tour panel for keyboard users
         setTimeout(() => {
