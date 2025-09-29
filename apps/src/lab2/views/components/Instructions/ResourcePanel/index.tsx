@@ -340,7 +340,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
           headerContent={tabInfo[currentTab].title}
           headerClassName={headerClassName}
           rightHeaderContent={
-            tabInfo[currentTab].title === commonI18n.aiTutor() ? (
+            currentTab === Tabs.AiTutor ? (
               <AiChatHeaderButtons />
             ) : (
               rightHeaderContent
