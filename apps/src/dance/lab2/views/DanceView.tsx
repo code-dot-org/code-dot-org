@@ -58,6 +58,8 @@ import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import SourcesContainer, {
   useSources,
 } from '@cdo/apps/lab2/views/SourcesContainer';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import ProjectPlayer from '@cdo/apps/music/ProjectPlayer';
 import MusicProjectBar from '@cdo/apps/music/views/MusicProjectBar';
 import {registerReducers} from '@cdo/apps/redux';
@@ -102,6 +104,8 @@ const DanceView: React.FunctionComponent<{
   const hasRun = useAppSelector(state => state.dance.hasRun);
   const hasEdited = useAppSelector(state => state.dance.hasEdited);
   const isLoading = useAppSelector(state => state.dance.isLoading);
+  const signedIn = useAppSelector(state => state.currentUser.signInState);
+  const scriptName = useAppSelector(state => state.progress.scriptName);
 
   const {currentSources, updateSources, showStartOverDialog} =
     useSources<DanceProjectSources>();
@@ -111,6 +115,7 @@ const DanceView: React.FunctionComponent<{
   const musicProjectPlayer = useRef<ProjectPlayer | null>(null);
   const [loadedMusicProject, setLoadedMusicProject] = useState(false);
   const [generatedAiDance, setGeneratedAiDance] = useState(false);
+  const [runButtonWasClicked, setRunButtonWasClicked] = useState(false);
 
   const aiGenerateMode =
     levelProperties.aiCodeGenerate || queryParams('ai-generate') === 'true';
@@ -200,6 +205,24 @@ const DanceView: React.FunctionComponent<{
   );
 
   const runProgram = useCallback(async () => {
+    if (!runButtonWasClicked) {
+      const eventName = levelProperties.isProjectLevel
+        ? EVENTS.PROJECT_ACTIVITY
+        : EVENTS.LEVEL_ACTIVITY;
+
+      analyticsReporter.sendEvent(
+        eventName,
+        {
+          signedIn: signedIn,
+          unitName: scriptName,
+          levelId: levelProperties.id,
+          levelName: levelProperties.name,
+        },
+        PLATFORMS.BOTH
+      );
+      setRunButtonWasClicked(true);
+    }
+
     if (!programExecutor.current || !metadataToUse) {
       return;
     }
@@ -216,7 +239,17 @@ const DanceView: React.FunctionComponent<{
     dispatch(setIsRunning(true));
     dispatch(setHasRun(true));
     saveBlocks(true);
-  }, [programExecutor, metadataToUse, saveBlocks, dispatch]);
+  }, [
+    runButtonWasClicked,
+    metadataToUse,
+    dispatch,
+    saveBlocks,
+    levelProperties.isProjectLevel,
+    levelProperties.id,
+    levelProperties.name,
+    signedIn,
+    scriptName,
+  ]);
 
   const resetProgram = useCallback(() => {
     programExecutor.current?.reset();
@@ -276,6 +309,7 @@ const DanceView: React.FunctionComponent<{
   useEffect(() => {
     dispatch(setHasRun(false));
     dispatch(setHasEdited(false));
+    setRunButtonWasClicked(false);
   }, [levelProperties.id, dispatch]);
 
   // Load or update song manifest when level properties change.
