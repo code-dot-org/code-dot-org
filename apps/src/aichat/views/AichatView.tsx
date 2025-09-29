@@ -440,7 +440,6 @@ const renderModelCustomizationHeaderRight = (onStartOver: () => void) => {
   return (
     <div>
       <IconButtonWithTooltip
-        className={moduleStyles.startOverButton}
         id="start-over"
         label={aichatI18n.aria_startOver()}
         icon={{iconName: 'refresh', iconStyle: 'solid'}}
