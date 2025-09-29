@@ -1,7 +1,14 @@
 import {FontAwesomeV6IconProps} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 
-import {AnalyticsProperties} from './analytics';
+import {AnalyticsProperties} from './analytics'; // Chat Workspace
 
+// Chat Workspace Types
+export enum WorkspaceTeacherViewTab {
+  STUDENT_CHAT_HISTORY = 'viewStudentChatHistory',
+  TEST_STUDENT_MODEL = 'testStudentModel',
+}
+
+// Chat Button Types
 export interface ChatButtonData {
   label: string;
   value: string;
