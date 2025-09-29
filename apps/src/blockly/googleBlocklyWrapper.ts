@@ -922,7 +922,10 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
         experiments.BLOCKLY_KEYBOARD_NAVIGATION
       )
     ) {
-      initializeKeyboardNavigation(workspace);
+      initializeKeyboardNavigation(
+        workspace,
+        blocklyWrapper.isDarkTheme || false
+      );
     }
 
     // Typically, we need to handle disabling blocks that are not connected to an
