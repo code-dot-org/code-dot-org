@@ -3,6 +3,7 @@ import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {kitIcons} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import classNames from 'classnames';
+import {Steps} from 'intro.js-react';
 import React, {useEffect, useMemo, useState} from 'react';
 
 import {ChatButtonData, SystemPromptSettings} from '@cdo/apps/aichat/types';
@@ -15,6 +16,7 @@ import StudentRubricView from '@cdo/apps/lab2/views/components/rubrics/StudentRu
 import {commonI18n} from '@cdo/apps/types/locale';
 import {getTypedKeys} from '@cdo/apps/types/utils';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 
 import {useRubric} from '../../rubrics/RubricWrapper';
 import ForTeachersOnly from '../ForTeachersOnly';
@@ -23,9 +25,11 @@ import NavigationArea from '../NavigationArea';
 
 import CopyrightButton from './CopyrightButton';
 import ResourcePanelExtraLinks from './ResourcePanelExtraLinks';
+import {INITIAL_STEP, STEPS} from './resourcePanelTourHelpers';
 import SettingsPanel from './SettingsPanel';
 import ValidationPanel from './ValidationPanel';
 import {VersionHistoryPanel} from './VersionHistory';
+import './resource-panel-introjs.scss';
 
 import styles from './styles.module.scss';
 
@@ -84,6 +88,9 @@ type ResourcePanelProps = InstructionsProps & {
   aiTutorChatButtonData?: ChatButtonData[];
 };
 
+const PYTHONLAB_RESOURCE_PANEL_ONBOARDING_TOUR_SEEN =
+  'pythonlabResourcePanelOnboardingTourSeen';
+
 /**
  * Display various instructional resources for the level as tabs.
  */
@@ -120,6 +127,11 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const levelName = instructionsProps.levelProperties.name;
   const channelId = useAppSelector(state => state.lab.channel?.id);
   const appName = instructionsProps.levelProperties.appName;
+  const isPythonLab = appName === 'pythonlab';
+  const pythonLabOnboardingTourSeen = tryGetLocalStorage(
+    PYTHONLAB_RESOURCE_PANEL_ONBOARDING_TOUR_SEEN,
+    'no'
+  );
 
   // Tooltip should disappear quickly.
   const hideTooltipDelayMs = 10;
@@ -228,9 +240,34 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   }, [levelId, viewAsUserId]);
 
   return (
-    <div className={classNames(styles.resourcePanel, className)}>
+    <div
+      id="resource-panel-instructions"
+      className={classNames(styles.resourcePanel, className)}
+    >
+      <Steps
+        enabled={isPythonLab && pythonLabOnboardingTourSeen !== 'yes'}
+        initialStep={INITIAL_STEP}
+        steps={STEPS}
+        onExit={() => {
+          trySetLocalStorage(
+            PYTHONLAB_RESOURCE_PANEL_ONBOARDING_TOUR_SEEN,
+            'yes'
+          );
+        }}
+        options={{
+          scrollToElement: false,
+          exitOnOverlayClick: false,
+          hidePrev: true,
+          nextLabel: commonI18n.next(),
+          prevLabel: commonI18n.back(),
+          doneLabel: commonI18n.done(),
+          showBullets: false,
+          showStepNumbers: true,
+        }}
+      />
+
       <div className={styles.sidebar}>
-        <nav className={styles.tabs}>
+        <nav id="resource-panel-tabs" className={styles.tabs}>
           {getTypedKeys(availableTabs).map(tab => (
             <WithTooltip
               tooltipProps={{
@@ -265,7 +302,10 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
             </WithTooltip>
           ))}
         </nav>
-        <div className={classNames(styles.bottomTabs)}>
+        <div
+          id="resource-panel-links"
+          className={classNames(styles.bottomTabs)}
+        >
           <ResourcePanelExtraLinks levelId={levelId} theme={theme} />
           <CopyrightButton theme={theme} />
           <WithTooltip

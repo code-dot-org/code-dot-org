@@ -158,7 +158,7 @@ const ActivityCatalog = ({
     // Perform the search with the current term and selected facets
     const searchResults = await search(db, {
       term,
-      properties: ['title'],
+      properties: ['title', 'languagesText'],
       where: {
         ...facetFilters,
       },
