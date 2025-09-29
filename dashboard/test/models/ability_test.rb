@@ -72,7 +72,7 @@ class AbilityTest < ActiveSupport::TestCase
     refute ability.can?(:destroy, Level)
     refute ability.can?(:destroy, Activity)
     assert ability.can?(:read, Section)
-    assert ability.can?(:read, Unit.find_by_name('ECSPD'))
+    refute ability.can?(:read, Unit.find_by_name('ECSPD'))
     assert ability.can?(:read, Unit.find_by_name('flappy'))
 
     assert ability.can?(:read, @public_teacher_to_student_unit)
@@ -183,7 +183,7 @@ class AbilityTest < ActiveSupport::TestCase
     refute ability.can?(:destroy, Level)
     refute ability.can?(:destroy, Activity)
     refute ability.can?(:read, Section)
-    assert ability.can?(:read, Unit.find_by_name('ECSPD'))
+    refute ability.can?(:read, Unit.find_by_name('ECSPD'))
     assert ability.can?(:read, Unit.find_by_name('flappy'))
 
     refute ability.can?(:read, @in_development_script)
@@ -227,7 +227,7 @@ class AbilityTest < ActiveSupport::TestCase
     refute ability.can?(:destroy, Level)
     refute ability.can?(:destroy, Activity)
     refute ability.can?(:read, Section)
-    assert ability.can?(:read, Unit.find_by_name('ECSPD'))
+    refute ability.can?(:read, Unit.find_by_name('ECSPD'))
     assert ability.can?(:read, Unit.find_by_name('flappy'))
 
     assert ability.can?(:read, @public_teacher_to_student_unit)
@@ -264,7 +264,7 @@ class AbilityTest < ActiveSupport::TestCase
     refute ability.can?(:destroy, Level)
     refute ability.can?(:destroy, Activity)
     assert ability.can?(:read, Section)
-    assert ability.can?(:read, Unit.find_by_name('ECSPD'))
+    refute ability.can?(:read, Unit.find_by_name('ECSPD'))
     assert ability.can?(:read, Unit.find_by_name('flappy'))
 
     assert ability.can?(:read, @public_teacher_to_student_unit)

@@ -9,12 +9,7 @@
       "professional_learning_course": "Test plc course"
     },
     "new_name": null,
-    "family_name": null,
     "serialized_at": "2021-11-01 23:56:37 UTC",
-    "published_state": "beta",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "plc_reviewer",
-    "participant_audience": "facilitator",
     "seeding_key": {
       "script.name": "test-plc"
     }
