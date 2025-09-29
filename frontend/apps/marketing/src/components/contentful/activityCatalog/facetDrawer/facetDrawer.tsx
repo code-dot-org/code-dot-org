@@ -45,11 +45,9 @@ const FacetDrawer = ({isOpen, onClose, ...props}: FacetDrawerProps) => {
         sx={theme => ({
           justifySelf: 'center',
           borderRadius: 999,
-          px: 2,
           height: 46,
-          width: 10,
+          width: 20,
           color: '#fff',
-          mt: 2,
           ml: 2,
           backgroundColor: theme.palette.secondary.dark,
           '&:hover': {backgroundColor: theme.palette.primary.main},

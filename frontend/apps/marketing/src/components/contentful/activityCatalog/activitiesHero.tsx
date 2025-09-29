@@ -4,6 +4,7 @@ import {Box, Button, Stack, Typography} from '@mui/material';
 import Link from 'next/link';
 import {usePathname} from 'next/navigation';
 
+
 export default function ActivitiesHero() {
   const pathname = (usePathname() ?? '').toLowerCase();
 
@@ -61,13 +62,19 @@ export default function ActivitiesHero() {
         Legacy Hour of Code Activities
       </Typography>
 
-      <Typography variant="body2" sx={{color: 'text.secondary', mb: 1}}>
-        Teachers:{' '}
-        <Link href="/hour-of-ai/partners#host-event">Host an hour</Link> or{' '}
-        <Link href="/hour-of-ai/how-to/k-12educator">
-          read the How-To Guide
-        </Link>
-      </Typography>
+ <Typography
+  variant="body2"
+ sx={theme => ({
+    color: 'text.secondary',
+    mb: 1,
+    '& a': { color: 'primary.main', textDecoration: 'none' },
+    '& a:hover': { color: theme.palette.secondary.dark, textDecoration: 'underline' },
+  })}
+>
+  Teachers:{' '}
+  <a href="/hour-of-ai/partners#host-event">Host an hour</a> or{' '}
+  <a href="/hour-of-ai/how-to/k-12educator">read the How-To Guide</a>
+</Typography>
 
       <Typography
         variant="body2"

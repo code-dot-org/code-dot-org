@@ -273,7 +273,7 @@ const ActivityCatalog = ({
           <Input
             onChange={handleSearchTermChange}
             value={searchTerm}
-            placeholder="Search Activities and language..."
+            placeholder="Search Activities and languages..."
             disableUnderline
             startAdornment={
               <InputAdornment position="start">
