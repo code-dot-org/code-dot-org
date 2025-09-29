@@ -2,6 +2,7 @@ export * from './analytics';
 export * from './assets';
 export * from './chatButton';
 export * from './chatEvents';
+export * from './chatWorkspace';
 export * from './customizations';
 export * from './levelProperties';
 export * from './systemPrompt';

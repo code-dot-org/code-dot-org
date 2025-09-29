@@ -1,27 +1,24 @@
-import Button from '@code-dot-org/component-library/button';
 import React from 'react';
 import {useSelector} from 'react-redux';
 
 import {selectAllVisibleMessages, sendAnalytics} from '@cdo/apps/aichat/redux';
+import IconButtonWithTooltip from '@cdo/apps/lab2/views/components/IconButtonWithTooltip';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 
-import aichatI18n from '../locale';
-import {timestampToDateTime} from '../redux/utils';
+import aichatI18n from '../../locale';
+import {timestampToDateTime} from '../../redux/utils';
 import {
   ChatEvent,
   isChatMessage,
   isModelUpdate,
   isNotification,
-} from '../types';
+} from '../../types';
+import {AI_CUSTOMIZATIONS_LABELS} from '../modelCustomization/constants';
 
-import {AI_CUSTOMIZATIONS_LABELS} from './modelCustomization/constants';
-
-const CopyChatHistoryButton: React.FunctionComponent<{isDisabled: boolean}> = ({
-  isDisabled,
-}) => {
+const CopyChatHistoryButton: React.FunctionComponent = () => {
   const messages = useSelector(selectAllVisibleMessages);
   const dispatch = useAppDispatch();
 
@@ -42,14 +39,17 @@ const CopyChatHistoryButton: React.FunctionComponent<{isDisabled: boolean}> = ({
   };
 
   return (
-    <Button
-      onClick={handleCopy}
-      text={aichatI18n.copyChatButtonText()}
-      iconLeft={{iconName: 'copy'}}
-      size="s"
+    <IconButtonWithTooltip
+      id="copy-chat"
+      label={aichatI18n.copyChatButtonText()}
+      icon={{iconName: 'copy', iconStyle: 'solid'}}
+      type="tertiary"
       color="gray"
-      type="secondary"
-      disabled={isDisabled}
+      buttonSize="xs"
+      tooltipSize="xs"
+      tooltipDirection="onBottom"
+      hideTooltipTail={true}
+      onClick={handleCopy}
     />
   );
 };

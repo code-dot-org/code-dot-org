@@ -97,8 +97,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
   const {longInstructions, predictSettings, offerBrowserTts} = levelProperties;
   const isPredictLevel = predictSettings?.isPredictLevel;
   const showTts = offerBrowserTts || queryParams('show-tts') === 'true';
-  const defaultTheme = useTheme();
-  const theme = overrideTheme || defaultTheme;
+  const {theme: defaultTheme} = useTheme();
 
   // Don't render anything if we don't have any instructions.
   if (longInstructions === undefined) {
@@ -119,7 +118,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
         'instructions',
         className
       )}
-      data-theme={theme}
+      data-theme={overrideTheme || defaultTheme}
     >
       <div
         id="instructions-panel"
@@ -187,9 +186,11 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
         {!hideNavigation && (
           <NavigationArea
             {...feedbackProps}
+            overrideTheme={overrideTheme}
             levelProperties={levelProperties}
             handleInstructionsTextClick={handleInstructionsTextClick}
             hideContinueIfDisabled={hideContinueIfDisabled}
+            styleAsBubble
           />
         )}
       </div>
