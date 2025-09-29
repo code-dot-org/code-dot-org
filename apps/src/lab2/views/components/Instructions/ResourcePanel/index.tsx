@@ -9,7 +9,7 @@ import React, {useEffect, useMemo, useState} from 'react';
 import {ChatButtonData, SystemPromptSettings} from '@cdo/apps/aichat/types';
 import {shouldShowAiTutor} from '@cdo/apps/lab2/ai/shouldShowAiTutor';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
-import {ProjectSources} from '@cdo/apps/lab2/types';
+import {ProjectSources, Tabs} from '@cdo/apps/lab2/types';
 import AiTutor2Chat from '@cdo/apps/lab2/views/components/AiTutor2Chat';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import StudentRubricView from '@cdo/apps/lab2/views/components/rubrics/StudentRubricView';
@@ -27,21 +27,12 @@ import CopyrightButton from './CopyrightButton';
 import ResourcePanelExtraLinks from './ResourcePanelExtraLinks';
 import {INITIAL_STEP, STEPS} from './resourcePanelTourHelpers';
 import SettingsPanel from './SettingsPanel';
+import {useValidationTour} from './useValidationTour';
 import ValidationPanel from './ValidationPanel';
-import {VALIDATION_TOUR_STEPS} from './validationTourHelpers';
 import {VersionHistoryPanel} from './VersionHistory';
 import './resource-panel-introjs.scss';
 
 import styles from './styles.module.scss';
-
-enum Tabs {
-  Instructions = 'instructions',
-  AiTutor = 'aiTutor',
-  TeachersOnly = 'teachersOnly',
-  StudentRubric = 'studentRubric',
-  VersionHistory = 'versionHistory',
-  Validation = 'validation',
-}
 
 export interface Setting {
   id: string;
@@ -92,8 +83,6 @@ type ResourcePanelProps = InstructionsProps & {
 const PYTHONLAB_RESOURCE_PANEL_ONBOARDING_TOUR_SEEN =
   'pythonlabResourcePanelOnboardingTourSeen';
 
-const PYTHONLAB_VALIDATION_TOUR_SEEN = 'pythonlabValidationTourSeen';
-
 /**
  * Display various instructional resources for the level as tabs.
  */
@@ -114,16 +103,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const {showRubric} = useRubric();
   const [currentTab, setCurrentTab] = useState<Tabs>(Tabs.Instructions);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
-  const [validationTourEnabled, setValidationTourEnabled] = useState(false);
-  const [validationTourStep, setValidationTourStep] = useState(0);
-
-  // The Done button on the third step (index 2) is always enabled.
-  // The Next button on the first two steps (indexes 0 and 1) is disabled until the user completes an action.
-  const [validationTourStepsEnabled, setValidationTourStepsEnabled] = useState([
-    false,
-    false,
-    true,
-  ]);
   const isUserTeacher = useAppSelector(state => state.currentUser.isTeacher);
   const [selectedVersion, setSelectedVersion] = useState<string>('');
   const isViewingOldVersion = useAppSelector(
@@ -145,31 +124,14 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     PYTHONLAB_RESOURCE_PANEL_ONBOARDING_TOUR_SEEN,
     'no'
   );
-  const pythonlabValidationTourSeen = tryGetLocalStorage(
-    PYTHONLAB_VALIDATION_TOUR_SEEN,
-    'no'
-  );
 
-  // Enable validation tour if conditions are met.
-  useEffect(() => {
-    if (isPythonLab) {
-      const shouldShowValidationTour =
-        instructionsProps.validationSettings &&
-        hasValidationConditions &&
-        pythonlabValidationTourSeen !== 'yes' &&
-        pythonlabOnboardingTourSeen === 'yes'; // If user hasn't seeen both tours, show onboarding tour first.
-
-      if (shouldShowValidationTour) {
-        setValidationTourEnabled(true);
-      }
-    }
-  }, [
-    instructionsProps.validationSettings,
-    hasValidationConditions,
-    pythonlabValidationTourSeen,
+  // Use validation tour hook
+  const {pythonlabValidationTourSteps} = useValidationTour({
     isPythonLab,
-    pythonlabOnboardingTourSeen,
-  ]);
+    hasValidationConditions,
+    validationSettings: instructionsProps.validationSettings,
+    setCurrentTab,
+  });
 
   // Tooltip should disappear quickly.
   const hideTooltipDelayMs = 10;
@@ -277,140 +239,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     setCurrentTab(Tabs.Instructions);
   }, [levelId, viewAsUserId]);
 
-  // Add event listeners for validation tour progression
-  useEffect(() => {
-    if (!validationTourEnabled) return;
-
-    const handleValidationTabActivation = () => {
-      if (validationTourStep === 0) {
-        setCurrentTab(Tabs.Validation);
-        // Enable step 1 (next button for step 1)
-        setValidationTourStepsEnabled(prev => [true, false, true]);
-
-        // Return focus to the tour panel for keyboard users
-        setTimeout(() => {
-          const nextButton = document.querySelector(
-            '.introjs-nextbutton'
-          ) as HTMLButtonElement;
-          if (nextButton) {
-            nextButton.focus();
-          }
-        }, 100);
-      }
-    };
-
-    const handleValidateButtonActivation = () => {
-      if (validationTourStep === 1) {
-        // Enable step 2 (next button for step 2)
-        setValidationTourStepsEnabled(prev => [true, true, true]);
-
-        // Return focus to the tour panel for keyboard users
-        setTimeout(() => {
-          const nextButton = document.querySelector(
-            '.introjs-nextbutton'
-          ) as HTMLButtonElement;
-          if (nextButton) {
-            nextButton.focus();
-          }
-        }, 100);
-      }
-    };
-
-    const handleValidationTabKeydown = (event: KeyboardEvent) => {
-      // Handle both Enter and Space key activation
-      if (event.key === 'Enter' || event.key === ' ') {
-        event.preventDefault();
-        handleValidationTabActivation();
-      }
-    };
-
-    const handleValidateButtonKeydown = (event: KeyboardEvent) => {
-      // Handle both Enter and Space key activation
-      if (event.key === 'Enter' || event.key === ' ') {
-        event.preventDefault();
-        handleValidateButtonActivation();
-      }
-    };
-
-    const validationTabElement = document.getElementById(
-      'resource-panel-tab-validation'
-    );
-    const validateButtonElement = document.getElementById(
-      'resource-panel-validate-button'
-    );
-
-    if (validationTabElement) {
-      validationTabElement.addEventListener(
-        'click',
-        handleValidationTabActivation
-      );
-      validationTabElement.addEventListener(
-        'keydown',
-        handleValidationTabKeydown
-      );
-    }
-    if (validateButtonElement) {
-      validateButtonElement.addEventListener(
-        'click',
-        handleValidateButtonActivation
-      );
-      validateButtonElement.addEventListener(
-        'keydown',
-        handleValidateButtonKeydown
-      );
-    }
-
-    return () => {
-      if (validationTabElement) {
-        validationTabElement.removeEventListener(
-          'click',
-          handleValidationTabActivation
-        );
-        validationTabElement.removeEventListener(
-          'keydown',
-          handleValidationTabKeydown
-        );
-      }
-      if (validateButtonElement) {
-        validateButtonElement.removeEventListener(
-          'click',
-          handleValidateButtonActivation
-        );
-        validateButtonElement.removeEventListener(
-          'keydown',
-          handleValidateButtonKeydown
-        );
-      }
-    };
-  }, [validationTourEnabled, validationTourStep]);
-
-  // Update button disabled state based on step and requirements
-  useEffect(() => {
-    if (!validationTourEnabled) return;
-
-    const updateButtonState = () => {
-      const nextButton = document.querySelector(
-        '.introjs-nextbutton'
-      ) as HTMLButtonElement;
-      if (nextButton) {
-        if (validationTourStep === 0 && !validationTourStepsEnabled[0]) {
-          nextButton.setAttribute('disabled', 'true');
-        } else if (validationTourStep === 1 && !validationTourStepsEnabled[1]) {
-          nextButton.setAttribute('disabled', 'true');
-        } else {
-          nextButton.removeAttribute('disabled');
-        }
-      }
-    };
-
-    // Update once after DOM is ready
-    const timeoutId = setTimeout(updateButtonState, 100);
-
-    return () => {
-      clearTimeout(timeoutId);
-    };
-  }, [validationTourEnabled, validationTourStep, validationTourStepsEnabled]);
-
   const pytnonlabOnboardingTourSteps = useMemo(
     () => (
       <Steps
@@ -436,50 +264,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       />
     ),
     [isPythonLab, pythonlabOnboardingTourSeen]
-  );
-
-  const pythonlabValidationTourSteps = useMemo(
-    () => (
-      <Steps
-        enabled={validationTourEnabled}
-        initialStep={validationTourStep}
-        steps={VALIDATION_TOUR_STEPS}
-        onExit={() => {
-          setValidationTourEnabled(false);
-        }}
-        onComplete={() => {
-          setValidationTourEnabled(false);
-          // User must complete tour so that they don't see it again.
-          trySetLocalStorage(PYTHONLAB_VALIDATION_TOUR_SEEN, 'yes');
-        }}
-        onChange={nextStepIndex => {
-          setValidationTourStep(nextStepIndex);
-        }}
-        onBeforeChange={nextStepIndex => {
-          // Control step progression based on user interactions.
-          if (nextStepIndex === 1 && !validationTourStepsEnabled[0]) {
-            return false; // Prevent going to second step (at index 1) until validation tab is clicked.
-          }
-          if (nextStepIndex === 2 && !validationTourStepsEnabled[1]) {
-            return false; // Prevent going to third step (at index 2) until validate button is clicked.
-          }
-          // Return void (undefined) to allow progression.
-        }}
-        options={{
-          scrollToElement: false,
-          exitOnOverlayClick: false,
-          hidePrev: validationTourStep === 0, // Hide back button only on first step
-          hideNext: false,
-          nextLabel: commonI18n.next(),
-          prevLabel: commonI18n.back(),
-          doneLabel: commonI18n.done(),
-          showBullets: false,
-          showStepNumbers: true,
-          disableInteraction: false, // Allow interaction with page elements
-        }}
-      />
-    ),
-    [validationTourEnabled, validationTourStep, validationTourStepsEnabled]
   );
 
   return (
