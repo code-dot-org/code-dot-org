@@ -341,7 +341,7 @@ class HttpCache
             #   Sec-WebSocket-Protocol
             #   Origin
             # ),
-            # cookies: allowlisted_cookies,
+            cookies: allowlisted_cookies,
           },
         ],
         # Default Dashboard paths are session-specific, allowlist all session cookies and language header.
