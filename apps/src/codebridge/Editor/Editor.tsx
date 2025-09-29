@@ -27,7 +27,7 @@ import {
   viewableImageFileType,
 } from '../utils';
 
-import {getAddToAiTutorExtension} from './addToAiTutorExtension';
+import {getAddToAiTutorField} from './addToAiTutorField';
 
 import moduleStyles from './styles/editor.module.scss';
 
@@ -59,11 +59,8 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
       file?.name &&
       enableUserAddedSelectionContext(levelProperties.appName, file?.url)
     ) {
-      const addToAiTutorExtension = getAddToAiTutorExtension(
-        file.name,
-        dispatch
-      );
-      extensions.push(addToAiTutorExtension);
+      const addToAiTutorField = getAddToAiTutorField(file.name, dispatch);
+      extensions.push(addToAiTutorField);
     }
 
     if (file?.language && langMapping[file.language]) {

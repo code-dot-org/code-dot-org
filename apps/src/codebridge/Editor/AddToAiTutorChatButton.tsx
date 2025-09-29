@@ -3,11 +3,11 @@ import React from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 
-interface AiTutorChatContextButtonProps {
+interface AddToAiTutorChatButtonProps {
   saveSelectionContext: () => void;
 }
 
-const AiTutorChatContextButton: React.FC<AiTutorChatContextButtonProps> = ({
+const AddToAiTutorChatButton: React.FC<AddToAiTutorChatButtonProps> = ({
   saveSelectionContext,
 }) => {
   return (
@@ -22,4 +22,4 @@ const AiTutorChatContextButton: React.FC<AiTutorChatContextButtonProps> = ({
   );
 };
 
-export default AiTutorChatContextButton;
+export default AddToAiTutorChatButton;

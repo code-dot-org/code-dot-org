@@ -1,4 +1,4 @@
-import AiTutorChatContextButton from '@codebridge/Editor/AiTutorChatContextButton';
+import AddToAiTutorChatButton from '@codebridge/Editor/AddToAiTutorChatButton';
 import {EditorState, StateField} from '@codemirror/state';
 import {showTooltip, Tooltip} from '@codemirror/view';
 import React from 'react';
@@ -9,11 +9,11 @@ import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import moduleStyles from './styles/editor.module.scss';
 
-export const getAddToAiTutorExtension = (
+export const getAddToAiTutorField = (
   filename: string,
   dispatch: AppDispatch
 ) => {
-  const getCursorTooltips = (state: EditorState) => {
+  const getAddToAiTutorTooltips = (state: EditorState) => {
     return state.selection.ranges
       .filter(range => !range.empty)
       .map(range => {
@@ -44,7 +44,7 @@ export const getAddToAiTutorExtension = (
             const dom = document.createElement('div');
             dom.className = moduleStyles.aiTutorTooltip;
             ReactDOM.render(
-              <AiTutorChatContextButton saveSelectionContext={saveSelection} />,
+              <AddToAiTutorChatButton saveSelectionContext={saveSelection} />,
               dom
             );
             return {dom};
@@ -53,16 +53,16 @@ export const getAddToAiTutorExtension = (
       });
   };
 
-  const cursorTooltipField = StateField.define<readonly Tooltip[]>({
-    create: getCursorTooltips,
+  const addToAiTutorField = StateField.define<readonly Tooltip[]>({
+    create: getAddToAiTutorTooltips,
 
     update(tooltips, tr) {
       if (!tr.docChanged && !tr.selection) return tooltips;
-      return getCursorTooltips(tr.state);
+      return getAddToAiTutorTooltips(tr.state);
     },
 
     provide: f => showTooltip.computeN([f], state => state.field(f)),
   });
 
-  return cursorTooltipField;
+  return addToAiTutorField;
 };
