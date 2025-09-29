@@ -32,7 +32,7 @@ const FacetDrawer = ({isOpen, onClose, ...props}: FacetDrawerProps) => {
         },
       }}
     >
-      <Box sx={{display: 'flex', alignItems: 'center', gap: 1, mb: 2}}>
+      <Box sx={{display: 'flex', alignItems: 'center', gap: 0.5, mb: 2}}>
         <FilterAltOutlinedIcon fontSize="small" color="primary" aria-hidden />
         <Typography component="h2" variant="h6" sx={{m: 1}}>
           Filters

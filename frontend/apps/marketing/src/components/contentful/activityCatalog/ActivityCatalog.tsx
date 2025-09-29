@@ -258,61 +258,62 @@ const ActivityCatalog = ({
           justifyContent: 'center',
           alignItems: 'center',
           mb: 4,
-        }} >
-        <Box 
-        sx={{
-           display: { xs: 'none', sm: 'inline-flex' }, 
-           gap: 1,
-          flexWrap: 'wrap',
-          justifyContent: 'center',
-          alignItems: 'center',
-          mb: 4,
-        }}>
-
-        <Input
-          onChange={handleSearchTermChange}
-          value={searchTerm}
-          placeholder="Search Activities and language..."
-          disableUnderline
-          startAdornment={
-            <InputAdornment position="start">
-              <SearchIcon fontSize="small" />
-            </InputAdornment>
-          }
+        }}
+      >
+        <Box
           sx={{
-            display: { xs: 'none', sm: 'inline-flex' }, 
-            flexGrow: 1,
-            minWidth: 200,
-            maxWidth: 600,
-            height: 64,
-            borderRadius: 999,
-            border: '1px solid',
-            borderColor: 'primary.main',
-            bgcolor: 'background.paper',
-            px: 2,
-            fontWeight: 600,
-            '& .MuiInputBase-input': {
-              p: 0,
-            },
-            '&:hover': {borderColor: 'text.primary'},
-            '&.Mui-focused': {borderColor: 'primary.main'},
+            display: {xs: 'none', sm: 'inline-flex'},
+            gap: 1,
+            flexWrap: 'wrap',
+            justifyContent: 'center',
+            alignItems: 'center',
+            mb: 4,
           }}
-        />
+        >
+          <Input
+            onChange={handleSearchTermChange}
+            value={searchTerm}
+            placeholder="Search Activities and language..."
+            disableUnderline
+            startAdornment={
+              <InputAdornment position="start">
+                <SearchIcon fontSize="small" />
+              </InputAdornment>
+            }
+            sx={{
+              display: {xs: 'none', sm: 'inline-flex'},
+              flexGrow: 1,
+              minWidth: 200,
+              maxWidth: 600,
+              height: 64,
+              borderRadius: 999,
+              border: '1px solid',
+              borderColor: 'primary.main',
+              bgcolor: 'background.paper',
+              px: 2,
+              fontWeight: 600,
+              '& .MuiInputBase-input': {
+                p: 0,
+              },
+              '&:hover': {borderColor: 'text.primary'},
+              '&.Mui-focused': {borderColor: 'primary.main'},
+            }}
+          />
 
-        <FacetBar {...facetBarProps} />
-
+          <FacetBar {...facetBarProps} />
         </Box>
 
         <Button
           onClick={() => toggleFacetDrawer(true)}
           sx={theme => ({
-             display: { xs: 'inline-flex', sm: 'none' },
+            display: {xs: 'inline-flex', sm: 'none'},
             justifySelf: 'center',
             borderRadius: 999,
-            px: 2,
-            height: 46,
+            px: 3,
+            py: 3.5,
+            height: 56,
             color: '#fff',
-            mt: 4,
+            mt: {xs: 0, sm: 4},
             backgroundColor: theme.palette.secondary.dark,
             '&:hover': {backgroundColor: theme.palette.primary.main},
             textTransform: 'none',

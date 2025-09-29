@@ -4,6 +4,7 @@ import {Chip, MenuItem, Select} from '@mui/material';
 import Button from '@mui/material/Button';
 import FormControl from '@mui/material/FormControl';
 import {FacetResult} from '@orama/orama';
+import {useState} from 'react';
 
 import {FACET_LABELS} from '@/components/contentful/activityCatalog/config/facets';
 
@@ -13,15 +14,17 @@ interface FacetPanelProps {
   onFacetChange: (facet: string, facetValue: string) => void;
   onClearAll: () => void;
 }
+
 const FacetBar = ({
   facets,
   selectedFacets,
   onFacetChange,
   onClearAll,
 }: FacetPanelProps) => {
-  if (!facets) {
-    return null;
-  }
+  if (!facets) return null;
+
+  // NEW: track which facet's dropdown is open (or null)
+  const [openFacet, setOpenFacet] = useState<string | null>(null);
 
   const handleChange = (facet: string, facetValue: string) => {
     onFacetChange(facet, facetValue);
@@ -70,8 +73,36 @@ const FacetBar = ({
           <Select
             aria-label={FACET_LABELS[facet]}
             multiple
-            onChange={e => handleChange(facet, e.target.value[0])}
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            onChange={e => handleChange(facet, (e.target as any).value[0])}
             value={[]}
+            // NEW: control open/close + close on menu mouse leave
+            open={openFacet === facet}
+            onOpen={() => setOpenFacet(facet)}
+            onClose={() => setOpenFacet(null)}
+            MenuProps={{
+              disablePortal: true,
+              disableScrollLock: true,
+              anchorOrigin: {vertical: 'bottom', horizontal: 'left'},
+              transformOrigin: {vertical: 'top', horizontal: 'left'},
+              PaperProps: {
+                onMouseLeave: () => setOpenFacet(null),
+                sx: {
+                  p: {xs: 1, sm: 2},
+                  pb: {xs: 1, sm: 2},
+                  boxShadow: 2,
+                  paddingBottom: 1,
+                  backgroundColor: '#E9FAFF',
+                  borderRadius: 0.5,
+                  boxSizing: 'border-box',
+                },
+              },
+              MenuListProps: {
+                dense: true,
+                disablePadding: true,
+                sx: {p: 0, m: 0},
+              },
+            }}
             sx={theme => ({
               width: '100px',
               minWidth: 'fit-content',
@@ -96,26 +127,10 @@ const FacetBar = ({
             })}
             displayEmpty
             renderValue={() => <span>{FACET_LABELS[facet]}</span>}
-            MenuProps={{
-              PaperProps: {
-                sx: theme => ({
-                  padding: 2,
-                  pb: {xs: 3, sm: 2},
-                  boxShadow: 2,
-                  paddingBottom: 2,
-                  backgroundColor: theme.palette.grey[100],
-                  borderRadius: 0.5,
-                }),
-              },
-            }}
           >
-            {facetValues.map(facetValue => {
-              return getDropdownMenuItem(
-                selectedFacets[facet],
-                facet,
-                facetValue,
-              );
-            })}
+            {facetValues.map(facetValue =>
+              getDropdownMenuItem(selectedFacets[facet], facet, facetValue),
+            )}
           </Select>
         </FormControl>
       );
@@ -125,14 +140,13 @@ const FacetBar = ({
   return (
     <>
       {getDropdowns()}
-
       <Button
         onClick={onClearAll}
         sx={{
           borderRadius: 999,
           px: 2,
-          mr: {xs: 'auto', sm: 0}, 
-          ml: {xs: 0, sm: 'auto'}, 
+          mr: {xs: 'auto', sm: 0},
+          ml: {xs: 0, sm: 'auto'},
         }}
       >
         Clear All

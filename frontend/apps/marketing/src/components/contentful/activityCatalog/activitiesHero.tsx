@@ -52,10 +52,10 @@ export default function ActivitiesHero() {
       <Typography
         component="h1"
         sx={{
-          fontSize: {xs: 28, md: 44},
+          fontSize: {xs: 40, md: 60},
           fontWeight: 800,
           letterSpacing: 0.2,
-          mb: 1.5,
+          mb: 2,
         }}
       >
         Legacy Hour of Code Activities
@@ -83,7 +83,7 @@ export default function ActivitiesHero() {
         justifyContent="center"
         alignItems="center"
         spacing={2}
-        sx={{mt: {xs: 2.5, md: 3.5}, flexWrap: 'wrap', rowGap: 1.5}}
+        sx={{mt: {xs: 2.5, md: 3}, flexWrap: 'wrap', rowGap: 1.5}}
       >
         {/* AI Activities */}
         <Button
