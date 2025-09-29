@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-09-25 03:31:27 UTC",
+    "serialized_at": "2025-09-26 22:01:12 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -105,6 +105,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pilot_generate_dancer1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -126,6 +129,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pilot_generate_dancer2"
+        ]
       },
       "bonus": false,
       "seeding_key": {

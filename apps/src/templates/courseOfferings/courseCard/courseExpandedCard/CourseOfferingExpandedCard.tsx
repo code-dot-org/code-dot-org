@@ -3,6 +3,7 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import Image from '@code-dot-org/component-library/image';
 import {
   Heading3,
+  BodyTwoText,
   BodyThreeText,
   StrongText,
 } from '@code-dot-org/component-library/typography';
@@ -34,8 +35,8 @@ const CourseOfferingExpandedCard: React.FunctionComponent<
   courseDurationLabel,
   translatedGradeRange,
   translatedSubjectsAndTopicsTitlesArray,
-  // relatedProposalsContent,
-  // relatedProposalsHeader,
+  relatedProposalsContent,
+  relatedProposalsHeader,
 }) => {
   return (
     <div className={moduleStyles.courseOfferingExpandedCardContainer}>
@@ -121,20 +122,20 @@ const CourseOfferingExpandedCard: React.FunctionComponent<
           )}
         </div>
         <div className={moduleStyles.right}>
-          {/*{relatedProposalsContent && (*/}
-          {/*  <>*/}
-          {/*    <div className={moduleStyles.top}>*/}
-          {/*      {relatedProposalsHeader && (*/}
-          {/*        <BodyTwoText>*/}
-          {/*          <StrongText>{relatedProposalsHeader}</StrongText>*/}
-          {/*        </BodyTwoText>*/}
-          {/*      )}*/}
-          {/*    </div>*/}
-          {/*    <div className={moduleStyles.related}>*/}
-          {/*      {relatedProposalsContent}*/}
-          {/*    </div>*/}
-          {/*  </>*/}
-          {/*)}*/}
+          {relatedProposalsContent && (
+            <>
+              <div className={moduleStyles.top}>
+                {relatedProposalsHeader && (
+                  <BodyTwoText noMargin>
+                    <StrongText>{relatedProposalsHeader}</StrongText>
+                  </BodyTwoText>
+                )}
+              </div>
+              <div className={moduleStyles.related}>
+                {relatedProposalsContent}
+              </div>
+            </>
+          )}
 
           <CloseButton
             aria-label="Close expanded card"

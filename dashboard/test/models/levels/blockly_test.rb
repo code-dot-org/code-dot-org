@@ -187,8 +187,15 @@ class BlocklyTest < ActiveSupport::TestCase
       Nokogiri::XML.parse(level.start_blocks, &:noblanks).serialize(save_with: Blockly::XML_OPTIONS)
   end
 
-  test 'Block base url is correct with global asset_host' do
-    assert_equal CDO.studio_url('/blockly/', CDO.default_scheme), Blockly.base_url
+  test 'Block base url is correct with blank and specified asset_host' do
+    ActionController::Base.stubs(:asset_host).returns(nil)
+    assert_equal '/blockly/', Blockly.base_url
+
+    ActionController::Base.stubs(:asset_host).returns('')
+    assert_equal '/blockly/', Blockly.base_url
+
+    ActionController::Base.stubs(:asset_host).returns('test-studio.code.org')
+    assert_equal '//test-studio.code.org/blockly/', Blockly.base_url
   end
 
   def create_custom_block(name, pool, block_text, args, category: 'Events')

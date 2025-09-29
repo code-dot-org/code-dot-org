@@ -26,6 +26,7 @@ import {
   setNewChatSession,
   setChatWorkspaceSelectedTab,
 } from '../redux';
+import {clearUserAddedSelectionContext} from '../redux/slice';
 import {findChangedProperties, getNewRemoveId} from '../redux/utils';
 import {
   AiChatClientType,
@@ -37,6 +38,7 @@ import {getAssetUrl, getShortName} from '../utils';
 
 import StagedFilesPreview from './assets/StagedFilesPreview';
 import UploadButton from './assets/UploadButton';
+import UserAddedSelectionContextPreview from './assets/UserAddedSelectionContextPreview';
 import ChatEventsList from './ChatEventsList';
 import ChatModeDropdown from './ChatModeDropdown';
 import UserChatMessageEditor from './UserChatMessageEditor';
@@ -139,12 +141,13 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     });
   }, [clientType, currentLevelId, scriptId, channelId]);
 
-  // This effect resets chat history and any staged uploads when:
+  // This effect resets chat history and any staged uploads or user selections when:
   // a) a user switches levels, or
   // b) a teacher switches between viewing students (or their own project) on a given level.
   useEffect(() => {
     dispatch(clearChatMessages());
     dispatch(clearStagedFiles());
+    dispatch(clearUserAddedSelectionContext());
 
     if (selectedStudent) {
       dispatch(
@@ -282,6 +285,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
         {multimodalAvailable && (
           <StagedFilesPreview buildAssetUrl={buildAssetUrl} />
         )}
+        <UserAddedSelectionContextPreview />
         <ChatModeDropdown
           className={moduleStyles.modeDropdown}
           systemPromptSettings={systemPromptSettings}

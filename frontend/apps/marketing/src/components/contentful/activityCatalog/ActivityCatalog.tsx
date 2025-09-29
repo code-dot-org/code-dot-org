@@ -158,10 +158,11 @@ const ActivityCatalog = ({
     // Perform the search with the current term and selected facets
     const searchResults = await search(db, {
       term,
-      properties: ['title'],
+      properties: ['title', 'languagesText'],
       where: {
         ...facetFilters,
       },
+      limit: 200,
     });
 
     const nextResults = searchResults.hits.map(hit => hit.document);

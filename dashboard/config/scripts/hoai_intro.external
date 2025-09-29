@@ -3,7 +3,6 @@ title 'Review'
 description 'description here'
 
 markdown <<MARKDOWN
-<h1 style="text-align: center;"><i class="fa-solid fa-music"></i> Welcome to Music Lab: AI Session! <i class="fa-solid fa-music"></i></h1>
 
 ##
 

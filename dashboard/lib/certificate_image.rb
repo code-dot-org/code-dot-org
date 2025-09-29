@@ -155,7 +155,7 @@ class CertificateImage
 
     template_file = certificate_template_for(course)
 
-    path = dashboard_dir('app', 'assets', 'images', 'certificates', template_file)
+    path = dashboard_dir('public', 'blockly', 'media', 'certificates', template_file)
     if prefilled_title_course?(course)
       # only need to fill in student name
       vertical_offset = course == '20-hour' ? -125 : -120

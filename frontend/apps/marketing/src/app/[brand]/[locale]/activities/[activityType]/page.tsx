@@ -73,6 +73,7 @@ export default async function ActivitiesPage({
         accessibilitys: {},
         technologyClassroom: {},
       },
+      limit: 100,
     });
 
     return facetResults.facets;
@@ -82,7 +83,7 @@ export default async function ActivitiesPage({
    * Fetches all activities from the Orama database.
    */
   const getAllActivities = async () => {
-    const allActivityResults = await search(db, {term: ''});
+    const allActivityResults = await search(db, {term: '', limit: 200});
 
     return allActivityResults.hits.map(hit => hit.document);
   };
