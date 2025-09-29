@@ -1,6 +1,6 @@
 import {FontAwesomeV6IconProps} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 
-import {AnalyticsProperties} from './analytics'; // Chat Workspace
+import {AnalyticsProperties} from './analytics';
 
 // Chat Workspace Types
 export enum WorkspaceTeacherViewTab {
