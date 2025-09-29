@@ -40,7 +40,7 @@ const TeacherHomepagePopups: React.FC<TeacherHomepagePopupsProps> = () => {
     SchoolInfo | undefined
   >(undefined);
   const [AFEDrawerOpen, setAFEDrawerOpen] = React.useState(false);
-  const [NPSDrawerOpen, setNPSDrawerOpen] = React.useState(true);
+  const [NPSDrawerOpen, setNPSDrawerOpen] = React.useState(false);
 
   const [hasSeenPopup, setHasSeenPopup] = React.useState(false);
 

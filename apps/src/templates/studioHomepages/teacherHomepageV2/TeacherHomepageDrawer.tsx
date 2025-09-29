@@ -18,9 +18,9 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 
 import SchoolDataInputs from '../../SchoolDataInputs';
-import NpsSurveyBlock from '../NpsSurveyBlock';
 
 import drawerConfirmationImage from './images/drawer-confirmation-image.png';
+import NpsSurveyContainer from './NpsSurveyContainer';
 import {SchoolInfo} from './TeacherHomepageConstants';
 
 import styles from './teacherHomepage.module.scss';
@@ -84,6 +84,10 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
   const existingSchoolName =
     existingSchoolInfo?.school_name || i18n.schoolInfoDialogDescriptionNoName();
 
+  const NpsSurveyComplete = () => {
+    onDrawerClose();
+  };
+
   const headerText: () => string = () => {
     if (schoolInfoInterstitialOpen) {
       return i18n.censusHeading();
@@ -129,7 +133,7 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
     } else if (NPSOpen) {
       return (
         <div className={styles.drawerContent}>
-          <NpsSurveyBlock />
+          <NpsSurveyContainer onCompleteCallback={NpsSurveyComplete} />
         </div>
       );
     } else if (schoolInfoConfirmationOpen || success || AFEDrawerOpen) {
