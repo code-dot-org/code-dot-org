@@ -1,0 +1,29 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2025-09-25T20:08:41.000Z",
+  "level_num": "custom",
+  "user_id": 21093,
+  "properties": {
+    "encrypted": "false",
+    "title": "Four Elephant Seals",
+    "display_name": "Four Elephant Seals Data",
+    "long_instructions": "## Data Decisions and Visualizations\r\nTracking data from elephant seals 546, 541, 536, and 528 are displayed in the table. Start exploring how these seals are behaving in different parts of the ocean.\r\n\r\n####[Google Sheets Link](https://docs.google.com/spreadsheets/d/1Mbba0hrRMipDTOHpYCwPwVhmvgnu6BcshhhO61E_lBw/edit?usp=drivesdk)\r\n\r\n## Do This\r\n \r\n### Day 2:\r\n1. Make decisions about your data. \r\n   - For example, do you need to clean it? Do you need to sort or filter your data? Do you need to use the COUNTIF(), SUM(), and AVERAGE() formulas?\r\n2. Write your data question in the free response box below.\r\n3. Create visualizations that help answer your data question(s).\r\n   - _**Tip:** While one graph may be enough to answer your data question, you may find it helpful to create more visualizations. Doing this could help you analyze and gain insights into your data that will help you answer your data question._\r\n\r\n### Day 3:\r\n1. Continue making visualizations that will help you answer your data question. \r\n    - Make sure to update your question if it has changed from the previous day.\r\n2. Use your visualizations to start figuring out your answer to your data question. \r\n   - What does each visualization tell you about your data and your data question?\r\n   - What insights does each provide?\r\n3. Ensure you have created all the visualizations you need to help support the answer to your data question. \r\n4. Download an image of each visualization you will use to support your answer to your data question.\r\n   - Click on the three vertical dots in the upper-right corner of your visualization.\r\n   - Select \"Download chart\" and \"PNG image (.png)\"\r\n   - Your visualization image will into appear in your Downloads folder\r\n   - Click the \"Add/Remove Attachments\" on this level and attach your visualization.\r\n\r\n",
+    "bubble_choice_description": "Explore the dataset, make decisions with your data and create visualizations.",
+    "thumbnail_url": "https://images.code.org/e9b2c3f3291f76fd09d1d1d06349037d-seal.png",
+    "allow_user_uploads": "true",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "name_suffix": "_v2-2025",
+    "stay_on_level_after_submit": "false"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T20:08:41.844+00:00\",\"changed\":[\"cloned from \\\"data-science-u1-lesson12-level2f_2025\\\"\"],\"cloned_from\":\"data-science-u1-lesson12-level2f_2025\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

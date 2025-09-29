@@ -1,0 +1,9 @@
+name 'programming-fundamentals-lesson7-level4_2025-launch_v2-2025'
+display_name 'Moving and Painting'
+description 'Choose **ONE** scenario and use `Painter` methods to navigate and paint in The Neighborhood.'
+
+sublevels
+level 'programming-fundamentals-lesson7-level4a_2025-launch_v2-2025'
+level 'programming-fundamentals-lesson7-level4b_2025-launch_v2-2025'
+level 'programming-fundamentals-lesson7-level4c_2025-launch_v2-2025'
+level 'programming-fundamentals-lesson7-level4d_2025-launch_v2-2025'

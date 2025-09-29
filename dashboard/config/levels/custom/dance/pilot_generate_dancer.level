@@ -1,5 +1,6 @@
 <Dancelab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 63,
   "created_at": "2025-09-19T21:02:02.000Z",
   "level_num": "custom",
@@ -32,12 +33,18 @@
     "default_song": "introtoshamstep_47SOUL",
     "uses_lab2": "true",
     "generate_dancer_mode": "true",
+    "ai_dancer_generate_adlib": "adjective-animal-attire",
     "display_name": "Regenerate the dancer",
     "thumbnail_url": "https://images.code.org/fee53ded35d6598a66212e175e51e83d-Group 87 (4).png",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ],
+    "project_template_level_name": " pilot_generate_dancer_template"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-09-19T21:02:02.018+00:00\",\"changed\":[\"cloned from \\\"hoai2025-dance-create-dancer\\\"\"],\"cloned_from\":\"hoai2025-dance-create-dancer\"},{\"changed_at\":\"2025-09-23 02:58:05 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-23 02:58:55 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-23 03:00:37 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-23 03:05:59 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-09-19T21:02:02.018+00:00\",\"changed\":[\"cloned from \\\"hoai2025-dance-create-dancer\\\"\"],\"cloned_from\":\"hoai2025-dance-create-dancer\"},{\"changed_at\":\"2025-09-23 02:58:05 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-23 02:58:55 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-23 03:00:37 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-23 03:05:59 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-23 16:43:41 +0000\",\"changed\":[\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Dancelab>

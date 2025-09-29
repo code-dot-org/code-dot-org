@@ -2,17 +2,6 @@
 # that is never instantiated directly. The derived classes hold implementation details in required overridden
 # methods. Currently the two implemented APIs (OpenAI and Gemini) are POST based REST APIs.
 class AichatAiClient
-  # Create an instance of the appropriate derived class based on model id.
-  def self.create_instance(model_id, usage_reporter = nil)
-    #TODO make model api mode and this check based on SharedConstants::AICHAT_MODEL_VERSION
-    # For now we just assume it's one of the gemini models if not 'gpt-4o-mini'.
-    if model_id == "gpt-4o-mini"
-      return AichatOpenaiResponsesClient.new(CDO.openai_student_learning_api_key, SharedConstants::AICHAT_MODEL_VERSION, usage_reporter)
-    else
-      return AichatGeminiClient.new(CDO.google_gemini_student_learning_api_key, model_id, usage_reporter)
-    end
-  end
-
   # Call the API (through methods overridden in derived class) and get response text to send back to user.
   # Accept a config hash, request array and optional context array.  These types are defined and documented
   # in `aichat_ai_client_types.rb``.
@@ -60,8 +49,7 @@ class AichatAiClient
 
   attr_accessor :api_key, :model, :usage_reporter
 
-  # Private initializer - all instances should be created with `create_instance` factory.
-  private def initialize(api_key, model, usage_reporter = nil)
+  def initialize(api_key, model, usage_reporter = nil)
     @api_key = api_key
     @model = model
     @usage_reporter = usage_reporter

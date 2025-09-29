@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import {SelectHTMLAttributes} from 'react';
+import {SelectHTMLAttributes, useEffect} from 'react';
 
 import {
   ComponentSizeXSToL,
@@ -90,77 +90,87 @@ const SimpleDropdown: React.FunctionComponent<SimpleDropdownProps> = ({
   size = 'm',
   styleAsFormField = false,
   ...rest
-}) => (
-  <label
-    className={classNames(
-      moduleStyles.dropdownContainer,
-      moduleStyles[`dropdownContainer-${size}`],
-      moduleStyles[`dropdownContainer-${color}`],
-      moduleStyles[`dropdownContainer-${dropdownTextThickness}`],
-      styleAsFormField && moduleStyles.styleAsFormField,
-      className,
-    )}
-    aria-describedby={rest['aria-describedby']}
-  >
-    {isLabelVisible && (
-      <span className={moduleStyles.dropdownLabel}>{labelText}</span>
-    )}
+}) => {
+  useEffect(() => {
+    if (color === 'white') {
+      console.warn(
+        'SimpleDropdown: `white` variant is deprecated. Use `black` or `gray` and define theme context for light or dark.',
+      );
+    }
+  }, [color]);
 
-    <div className={moduleStyles.dropdownArrowDiv}>
-      {iconLeft && (
-        <FontAwesomeV6Icon
-          {...iconLeft}
-          className={classNames(moduleStyles.iconLeft, iconLeft.className)}
-        />
+  return (
+    <label
+      className={classNames(
+        moduleStyles.dropdownContainer,
+        moduleStyles[`dropdownContainer-${size}`],
+        moduleStyles[`dropdownContainer-${color}`],
+        moduleStyles[`dropdownContainer-${dropdownTextThickness}`],
+        styleAsFormField && moduleStyles.styleAsFormField,
+        className,
       )}
-      <select
-        name={name}
-        aria-label={isLabelVisible ? undefined : labelText}
-        onChange={onChange}
-        value={selectedValue}
-        id={id}
-        disabled={disabled || readOnly}
-        className={classNames({
-          [moduleStyles.hasError]: errorMessage,
-          [moduleStyles.readOnly]: readOnly,
-        })}
-        {...rest}
-      >
-        {itemGroups.length > 0
-          ? itemGroups.map(({label, groupItems}, index) => (
-              <optgroup key={index} label={label}>
-                {groupItems.map(({value, text, disabled}) => (
-                  <option value={value} disabled={disabled} key={value}>
-                    {text}
-                  </option>
-                ))}
-              </optgroup>
-            ))
-          : items.map(({value, text, disabled}) => (
-              <option value={value} disabled={disabled} key={value}>
-                {text}
-              </option>
-            ))}
-      </select>
-    </div>
-    {!errorMessage && (helperMessage || helperIcon) && (
-      <div className={moduleStyles.helperSection}>
-        {helperIcon && <FontAwesomeV6Icon {...helperIcon} />}
-        {helperMessage && <span>{helperMessage}</span>}
-      </div>
-    )}
-    {errorMessage && (
-      <div
-        className={classNames(
-          moduleStyles.errorSection,
-          moduleStyles.helperSection,
+      aria-describedby={rest['aria-describedby']}
+    >
+      {isLabelVisible && (
+        <span className={moduleStyles.dropdownLabel}>{labelText}</span>
+      )}
+
+      <div className={moduleStyles.dropdownArrowDiv}>
+        {iconLeft && (
+          <FontAwesomeV6Icon
+            {...iconLeft}
+            className={classNames(moduleStyles.iconLeft, iconLeft.className)}
+          />
         )}
-      >
-        <FontAwesomeV6Icon iconName={'circle-exclamation'} />
-        <span>{errorMessage}</span>
+        <select
+          name={name}
+          aria-label={isLabelVisible ? undefined : labelText}
+          onChange={onChange}
+          value={selectedValue}
+          id={id}
+          disabled={disabled || readOnly}
+          className={classNames({
+            [moduleStyles.hasError]: errorMessage,
+            [moduleStyles.readOnly]: readOnly,
+          })}
+          {...rest}
+        >
+          {itemGroups.length > 0
+            ? itemGroups.map(({label, groupItems}, index) => (
+                <optgroup key={index} label={label}>
+                  {groupItems.map(({value, text, disabled}) => (
+                    <option value={value} disabled={disabled} key={value}>
+                      {text}
+                    </option>
+                  ))}
+                </optgroup>
+              ))
+            : items.map(({value, text, disabled}) => (
+                <option value={value} disabled={disabled} key={value}>
+                  {text}
+                </option>
+              ))}
+        </select>
       </div>
-    )}
-  </label>
-);
+      {!errorMessage && (helperMessage || helperIcon) && (
+        <div className={moduleStyles.helperSection}>
+          {helperIcon && <FontAwesomeV6Icon {...helperIcon} />}
+          {helperMessage && <span>{helperMessage}</span>}
+        </div>
+      )}
+      {errorMessage && (
+        <div
+          className={classNames(
+            moduleStyles.errorSection,
+            moduleStyles.helperSection,
+          )}
+        >
+          <FontAwesomeV6Icon iconName={'circle-exclamation'} />
+          <span>{errorMessage}</span>
+        </div>
+      )}
+    </label>
+  );
+};
 
 export default SimpleDropdown;
