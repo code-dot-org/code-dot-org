@@ -13,6 +13,10 @@ class CodeprojectsPreviewController < ApplicationController
       # dashboard_site_host is set to use port 3000 in development, but we want to also allow port 9000.
       port_9000_url = code_studio_url.split(":").first + ":9000"
       code_studio_url += " #{port_9000_url}"
+
+      # Explicitly allow WebSocket connections to preview.localhost.codeprojects.org:9000, which is used by the webpack dev server
+      # both on ports 9000 and 3000.
+      allowed_connect_src += " ws://preview.localhost.codeprojects.org:9000/ws"
     end
 
     # Security Control: Set base resource loading policy ("default" is a fallback for unspecified resource types)
