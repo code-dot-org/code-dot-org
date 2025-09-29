@@ -1,0 +1,9 @@
+name 'programming-fundamentals-lesson9-level8_2025-launch_v2-2025'
+display_name 'Decisions in Motion'
+description 'Choose **ONE** scenario and help the `Painter` keep moving using a `while` loop and make a decision during each step using an `if` statement.'
+
+sublevels
+level 'programming-fundamentals-lesson9-level8b_2025-launch_v2-2025'
+level 'programming-fundamentals-lesson9-level8a_2025-launch_v2-2025'
+level 'programming-fundamentals-lesson9-level8c_2025-launch_v2-2025'
+level 'programming-fundamentals-lesson9-level8d_2025-launch_v2-2025'

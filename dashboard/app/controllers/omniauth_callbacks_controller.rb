@@ -495,7 +495,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   # Are we trying to connect a new OAuth provider?
   private def connecting_new_provider?
-    current_user && auth_params.fetch("action", nil) == "connect"
+    current_user && auth_params&.fetch("action", nil) == "connect"
   end
 
   # Should we try to add a new OAuth provider?

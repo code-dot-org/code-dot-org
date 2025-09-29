@@ -1,0 +1,9 @@
+name 'programming-fundamentals-lesson7-level6_2025-launch_v2-2025'
+display_name 'Pick Your Painter'
+description 'Choose **ONE** scenario and update the function so it uses a `Painter` parameter.'
+
+sublevels
+level 'programming-fundamentals-lesson7-level6a_2025-launch_v2-2025'
+level 'programming-fundamentals-lesson7-level6b_2025-launch_v2-2025'
+level 'programming-fundamentals-lesson7-level6c_2025-launch_v2-2025'
+level 'programming-fundamentals-lesson7-level6d_2025-launch_v2-2025'

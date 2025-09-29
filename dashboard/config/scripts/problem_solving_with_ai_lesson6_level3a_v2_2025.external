@@ -1,0 +1,22 @@
+name 'problem-solving-with-ai-lesson6-level3a_v2-2025'
+title 'Hospital Triage Nurse'
+display_name 'Hospital Triage Nurse'
+bubble_choice_description 'Six people arrived in the Emergency Room at the same time. Decide which two patients to assist first.'
+thumbnail_url 'https://images.code.org/cebc8d6e22c0425717a2fd948ed7f973-image-1742422859768.png'
+
+
+markdown <<MARKDOWN
+## Review Patient Profiles
+
+
+The following 6 people arrived at the emergency room at the same time and are seeking medical attention. **Choose the 2 patients to assist first:**
+
+| Patient | Name   | Age | Type of Injury | Pain Level (out of 10) | Treatment Needed |
+|:-------:|:------:|:---:|:--------------:|:----------------------:|:----------------:|
+| 1       | Maria  | 5   | Deep forehead cut from a fall at the playground | 6 | Stitches, cleaning and dressing the wound, tetanus shot |
+| 2       | James  | 23  | Concussion from a car accident | 5 | Neurological exam, CT scan, pain management, observation for 24 hours |
+| 3       | Priya | 36  | Asthma attack triggered by environmental allergens | 7 | Inhaler, anti-inflammation injection, oxygen therapy, respiratory monitoring |
+| 4       | George | 58  | Sudden vision loss in left eye | 4 | Immediate ophthalmologic (eye) evaluation, possible stroke assessment, brain imaging |
+| 5       | Olivia | 30  | Third-degree burn on hand from kitchen accident | 7 | IV pain relief, burn dressing, possible skin graft consultation |
+| 6       | Dante  | 11  | Possible broken leg from a skateboarding accident | 8 | X-ray, cast, pain management, crutches |
+MARKDOWN

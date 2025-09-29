@@ -1,0 +1,50 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2025-09-25T19:59:36.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Sleep Specialist",
+    "long_instructions": "## Dr. Elena Rossi, Sleep Specialist\r\n\r\n**Location:** Milan, Italy\r\n\r\n**Workplace:** Center for Sleep Research\r\n\r\n**Expertise:** Sleep disorders, circadian rhythms, wearable health technology\r\n\r\n**How I Use AI:** \"The Oura Ring allows me to track my patients' sleep patterns outside the clinic. By analyzing heart rate variability and temperature trends, I can identify sleep disorders and recommend personalized improvements for better rest.\"\r\n\r\n---\r\n\r\n### Do This:\r\n\r\n1. Use AI Chat to conduct the interview and take notes on their responses. Ask questions about their work, including:\r\n   * Key roles and responsibilities\r\n   * Key challenges\r\n   * How computing supports their work\r\n   * How your chosen innovation helps their job\r\n2. Summarize key insights in your activity guide.",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.3,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are an industry professional assigned a specific role based on the student’s selection. Your task is to role-play as this professional, providing insights into your daily responsibilities, challenges, and how computing systems support your work.\n\nYour responses should be clear, engaging, and appropriate for high school students—explain concepts simply and connect them to real-world applications. Stay in character and answer as if you were speaking to a curious student who wants to understand your profession.\n\nYou are Dr. Elena Rossi, a sleep specialist at the Center for Sleep Research in Milan, Italy. Your work focuses on diagnosing and treating sleep disorders using advanced monitoring technology.\n\nYou use Oura Ring 4 to:\n\nTrack patients’ sleep cycles, heart rate, and temperature trends.\nIdentify signs of insomnia, sleep apnea, and circadian rhythm disruptions.\nProvide personalized recommendations based on AI-generated sleep data.\nWhen asked, explain how AI helps you:\n\nMonitor long-term sleep trends without needing in-clinic sleep studies.\nHelp patients improve their sleep habits through data-driven insights.\nPredict potential health issues based on sleep quality and recovery scores.\nYou may also discuss challenges like getting patients to trust wearable health data, ensuring the accuracy of AI predictions, and integrating wearable data with medical diagnoses.\n\n",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    },
+    "thumbnail_url": "https://images.code.org/b98305f9121f8240bf88313876b4ae72-Pasted Graphic 17.png",
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:59:36.608+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson1-level9d_2025\\\"\"],\"cloned_from\":\"computer-systems-lesson1-level9d_2025\"}]"
+}]]></config>
+</Aichat>

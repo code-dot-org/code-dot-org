@@ -2,19 +2,22 @@ import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import {usePrompts} from '@codebridge/FileBrowser/hooks';
 import {ProjectFile} from '@codebridge/types';
 import {
+  enableUserAddedSelectionContext,
+  getFolderPath,
   getPossibleDestinationFoldersForFile,
   sendCodebridgeAnalyticsEvent,
 } from '@codebridge/utils';
 import fileDownload from 'js-file-download';
 import {useMemo} from 'react';
 
+import {addItemToUserAddedSelectionContext} from '@cdo/apps/aichat/redux/slice';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useBackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {useStartModeFileRowOptions} from './useStartModeFileRowOptions';
 
@@ -51,6 +54,7 @@ export const useFileRowOptions = (
   const {files: projectFiles, folders: projectFolders} = useAppSelector(
     state => state.lab2Project.projectSources?.source as MultiFileSource
   );
+  const dispatch = useAppDispatch();
 
   const backpackApi = useBackpackAPIContext();
 
@@ -91,6 +95,25 @@ export const useFileRowOptions = (
         clickHandler: () => openRenameFilePrompt({fileId: file.id}),
       },
       {
+        condition: enableUserAddedSelectionContext(appName, file),
+        iconName: 'message-code',
+        labelText: codebridgeI18n.addToAiTutorContext(),
+        clickHandler: () => {
+          const folderPath = getFolderPath(file.folderId, projectFolders);
+          let fullFilename = file.name;
+          if (folderPath !== '/') {
+            fullFilename = (folderPath + '/' + file.name).substring(1); // remove leading slash
+          }
+          dispatch(
+            addItemToUserAddedSelectionContext({
+              displayName: fullFilename,
+              sourceCode: file.contents,
+              filename: fullFilename,
+            })
+          );
+        },
+      },
+      {
         condition: editableFileTypes.includes(file.language),
         iconName: 'download',
         labelText: codebridgeI18n.downloadFile(),
@@ -112,6 +135,7 @@ export const useFileRowOptions = (
     [
       appName,
       backpackApi,
+      dispatch,
       editableFileTypes,
       file,
       isLocked,

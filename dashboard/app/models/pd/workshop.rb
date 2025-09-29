@@ -975,4 +975,14 @@ class Pd::Workshop < ApplicationRecord
       facilitators: facilitators_info
     }
   end
+
+  def summarize_for_pl_catalog
+    {
+      id: id,
+      title: name,
+      sessions: Array(sessions).map {|s| {start: s.start.iso8601}},
+      link: "/professional-learning/workshops/#{id}",
+      is_virtual: virtual?
+    }
+  end
 end
