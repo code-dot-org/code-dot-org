@@ -194,27 +194,29 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
             />
           </div>
         )}
-        {submittable ? (
-          <SubmitButton
-            levelId={id}
-            appName={appName}
-            disableEditRunForSubmission={disableEditRunForSubmission}
-            requireRun={requireRun}
-            hasRun={hasRun}
-            hasEdited={hasEdited}
-            className={moduleStyles.buttonInstruction}
-          />
-        ) : (
-          <ContinueButton
-            disabled={!continueButtonIsEnabled}
-            type={type}
-            color={color}
-            iconRight={iconRight}
-            text={hasNextLevel ? commonI18n.continue() : commonI18n.finish()}
-            tooltipMessage={continueTooltipMessage}
-            hideIfDisabled={hideContinueIfDisabled}
-          />
-        )}
+        <div id="resource-panel-navigation-button">
+          {submittable ? (
+            <SubmitButton
+              levelId={id}
+              appName={appName}
+              disableEditRunForSubmission={disableEditRunForSubmission}
+              requireRun={requireRun}
+              hasRun={hasRun}
+              hasEdited={hasEdited}
+              className={moduleStyles.buttonInstruction}
+            />
+          ) : (
+            <ContinueButton
+              disabled={!continueButtonIsEnabled}
+              type={type}
+              color={color}
+              iconRight={iconRight}
+              text={hasNextLevel ? commonI18n.continue() : commonI18n.finish()}
+              tooltipMessage={continueTooltipMessage}
+              hideIfDisabled={hideContinueIfDisabled}
+            />
+          )}
+        </div>
 
         {showTts && feedbackMessage && !hideContinueIfDisabled && (
           <div className={moduleStyles.ttsContainer}>

@@ -1,0 +1,8 @@
+name 'problem-solving-with-ai-lesson6-level4_v2-2025'
+display_name 'Prompting AI Chat'
+description 'Pick the same option below as you picked in the previous level. Prompt the AI Chat to select two of the six people.'
+
+sublevels
+level 'problem-solving-with-ai-lesson6-level4a_v2-2025'
+level 'problem-solving-with-ai-lesson6-level4b_v2-2025'
+level 'problem-solving-with-ai-lesson6-level4c_v2-2025'

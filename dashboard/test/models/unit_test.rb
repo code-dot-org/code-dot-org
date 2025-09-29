@@ -14,13 +14,13 @@ class UnitTest < ActiveSupport::TestCase
     @levels = (1..8).map {|n| create(:level, name: "Level #{n}", game: @game)}
 
     @unit_group = create(:unit_group)
-    @unit_in_unit_group = create(:script, name: 'unit-in-unit-group', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta)
+    @unit_in_unit_group = create(:script, name: 'unit-in-unit-group')
     create(:unit_group_unit, position: 1, unit_group: @unit_group, script: @unit_in_unit_group)
     @unit_in_unit_group.reload
     @unit_group.reload
 
     @pl_unit_group = create(:unit_group)
-    @pl_unit_in_unit_group = create(:script, name: 'pl-unit-in-unit-group', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta)
+    @pl_unit_in_unit_group = create(:script, name: 'pl-unit-in-unit-group')
     create(:unit_group_unit, position: 1, unit_group: @pl_unit_group, script: @pl_unit_in_unit_group)
     @pl_unit_in_unit_group.reload
     @pl_unit_group.reload
@@ -1094,7 +1094,7 @@ class UnitTest < ActiveSupport::TestCase
   end
 
   test 'generate plc objects will use defaults if script has null values' do
-    unit = create(:script, professional_learning_course: 'my-plc-course', published_state: nil)
+    unit = create(:script, professional_learning_course: 'my-plc-course')
 
     unit_group = unit.plc_course_unit.plc_course.unit_group
 
@@ -1919,48 +1919,43 @@ class UnitTest < ActiveSupport::TestCase
   end
 
   test 'does allow major changes to newly created unit' do
-    unit = create(:unit, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development)
+    unit = create(:unit)
     assert unit.allow_major_curriculum_changes?
   end
 
   test 'does allow major changes to unit within in_development course' do
     @unit_group.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development)
-    @unit_in_unit_group.update!(published_state: nil)
     @unit_in_unit_group.reload
     assert @unit_in_unit_group.allow_major_curriculum_changes?
   end
 
   test 'does allow major changes to unit within pilot course' do
     @unit_group.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot)
-    @unit_in_unit_group.update!(published_state: nil)
     @unit_in_unit_group.reload
     assert @unit_in_unit_group.allow_major_curriculum_changes?
   end
 
   test 'does not allow major changes to unit within beta course' do
     @unit_group.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta)
-    @unit_in_unit_group.update!(published_state: nil)
     @unit_in_unit_group.reload
     refute @unit_in_unit_group.allow_major_curriculum_changes?
   end
 
   test 'does not allow major changes to unit within stable course' do
     @unit_group.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
-    @unit_in_unit_group.update!(published_state: nil)
     @unit_in_unit_group.reload
     refute @unit_in_unit_group.allow_major_curriculum_changes?
   end
 
   test 'does not allow major changes to in_development unit within stable course' do
     @unit_group.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
-    @unit_in_unit_group.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development)
     @unit_in_unit_group.reload
     refute @unit_in_unit_group.allow_major_curriculum_changes?
   end
 
   test 'does allow major changes to hidden unit within stable course' do
     @unit_group.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
-    @unit_in_unit_group.update!(published_state: nil, hide_within_course: true)
+    @unit_in_unit_group.update!(hide_within_course: true)
     @unit_in_unit_group.reload
     assert @unit_in_unit_group.allow_major_curriculum_changes?
   end

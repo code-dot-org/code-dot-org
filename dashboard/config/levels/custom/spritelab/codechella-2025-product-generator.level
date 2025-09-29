@@ -1,6 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "published": true,
   "game_id": 64,
   "created_at": "2025-05-08T16:00:26.000Z",
   "level_num": "custom",
@@ -38,15 +37,13 @@
     "mini_toolbox": "false",
     "hide_pause_button": "false",
     "long_instructions": "##Product Idea Generator\r\n###First, press Run.\r\n###Then, click on each character to reveal a product you will be launching!",
-    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"7e1f1ecd-869a-4f2f-b0de-faeee418dec3\",\r\n    \"98bda34e-cafc-4e49-aca6-a722746cf7fd\",\r\n    \"ce4be826-5b11-4b08-b899-d1c9208de25c\",\r\n    \"69c0ad84-9e42-4ef9-bfb4-2782c3a0f1b0\",\r\n    \"7f655267-34c2-45df-88a1-9e2ef9eac22b\",\r\n    \"3a10c0c2-fc99-41ed-b756-a85d01824179\",\r\n    \"3f8e3d58-8fae-454c-98de-8dca19bce8c3\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"7e1f1ecd-869a-4f2f-b0de-faeee418dec3\": {\r\n      \"name\": \"gameplayfaces_02\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/spritelab/zRVhpCv7VRHYcVYkPKzMKx0ZyQfW3XLJ/category_faces/gameplayfaces_02.png\",\r\n      \"frameSize\": {\r\n        \"x\": 391,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"zRVhpCv7VRHYcVYkPKzMKx0ZyQfW3XLJ\",\r\n      \"categories\": [\r\n        \"faces\"\r\n      ]\r\n    },\r\n    \"98bda34e-cafc-4e49-aca6-a722746cf7fd\": {\r\n      \"name\": \"gameplayfaces_03\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/spritelab/HK3fHjZviKQ7IusvyofQZG8Tr9Rt8PaI/category_faces/gameplayfaces_03.png\",\r\n      \"frameSize\": {\r\n        \"x\": 391,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"HK3fHjZviKQ7IusvyofQZG8Tr9Rt8PaI\",\r\n      \"categories\": [\r\n        \"faces\"\r\n      ]\r\n    },\r\n    \"ce4be826-5b11-4b08-b899-d1c9208de25c\": {\r\n      \"name\": \"gameplayfaces_04\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/spritelab/nsL6WkY4qtGkq9DD3kN2r9Rp3D5j.BCb/category_faces/gameplayfaces_04.png\",\r\n      \"frameSize\": {\r\n        \"x\": 391,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"nsL6WkY4qtGkq9DD3kN2r9Rp3D5j.BCb\",\r\n      \"categories\": [\r\n        \"faces\"\r\n      ]\r\n    },\r\n    \"69c0ad84-9e42-4ef9-bfb4-2782c3a0f1b0\": {\r\n      \"name\": \"gameplayfaces_07\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/spritelab/szPZ1zjfS2sC5yBc7JGD.YCYLMNhlJp4/category_faces/gameplayfaces_07.png\",\r\n      \"frameSize\": {\r\n        \"x\": 391,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"szPZ1zjfS2sC5yBc7JGD.YCYLMNhlJp4\",\r\n      \"categories\": [\r\n        \"faces\"\r\n      ]\r\n    },\r\n    \"7f655267-34c2-45df-88a1-9e2ef9eac22b\": {\r\n      \"name\": \"gameplayfaces_08\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/spritelab/FP9OVTkT8hrWR9ZOfb5kmLk_AHIFqaJh/category_faces/gameplayfaces_08.png\",\r\n      \"frameSize\": {\r\n        \"x\": 391,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"FP9OVTkT8hrWR9ZOfb5kmLk_AHIFqaJh\",\r\n      \"categories\": [\r\n        \"faces\"\r\n      ]\r\n    },\r\n    \"3a10c0c2-fc99-41ed-b756-a85d01824179\": {\r\n      \"name\": \"gameplayfaces_09\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/spritelab/znvtEU3rnLDDeqIBtb.6hatPRE1FGOjr/category_faces/gameplayfaces_09.png\",\r\n      \"frameSize\": {\r\n        \"x\": 391,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"znvtEU3rnLDDeqIBtb.6hatPRE1FGOjr\",\r\n      \"categories\": [\r\n        \"faces\"\r\n      ]\r\n    },\r\n    \"3f8e3d58-8fae-454c-98de-8dca19bce8c3\": {\r\n      \"name\": \"twinkling_star\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/spritelab/pCUIiNgkD5tKEriTT5hwY.i_HaEbSkMQ/category_video_games/twinkling_star.png\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"pCUIiNgkD5tKEriTT5hwY.i_HaEbSkMQ\",\r\n      \"categories\": [\r\n        \"video_games\"\r\n      ]\r\n    }\r\n  }\r\n}",
+    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"7e1f1ecd-869a-4f2f-b0de-faeee418dec3\",\r\n    \"98bda34e-cafc-4e49-aca6-a722746cf7fd\",\r\n    \"ce4be826-5b11-4b08-b899-d1c9208de25c\",\r\n    \"69c0ad84-9e42-4ef9-bfb4-2782c3a0f1b0\",\r\n    \"7f655267-34c2-45df-88a1-9e2ef9eac22b\",\r\n    \"3a10c0c2-fc99-41ed-b756-a85d01824179\",\r\n    \"3f8e3d58-8fae-454c-98de-8dca19bce8c3\",\r\n    \"57a31040-7580-4b71-b974-5e2015f2eae2\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"7e1f1ecd-869a-4f2f-b0de-faeee418dec3\": {\r\n      \"name\": \"gameplayfaces_02\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/spritelab/zRVhpCv7VRHYcVYkPKzMKx0ZyQfW3XLJ/category_faces/gameplayfaces_02.png\",\r\n      \"frameSize\": {\r\n        \"x\": 391,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"zRVhpCv7VRHYcVYkPKzMKx0ZyQfW3XLJ\",\r\n      \"categories\": [\r\n        \"faces\"\r\n      ]\r\n    },\r\n    \"98bda34e-cafc-4e49-aca6-a722746cf7fd\": {\r\n      \"name\": \"gameplayfaces_03\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/spritelab/HK3fHjZviKQ7IusvyofQZG8Tr9Rt8PaI/category_faces/gameplayfaces_03.png\",\r\n      \"frameSize\": {\r\n        \"x\": 391,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"HK3fHjZviKQ7IusvyofQZG8Tr9Rt8PaI\",\r\n      \"categories\": [\r\n        \"faces\"\r\n      ]\r\n    },\r\n    \"ce4be826-5b11-4b08-b899-d1c9208de25c\": {\r\n      \"name\": \"gameplayfaces_04\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/spritelab/nsL6WkY4qtGkq9DD3kN2r9Rp3D5j.BCb/category_faces/gameplayfaces_04.png\",\r\n      \"frameSize\": {\r\n        \"x\": 391,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"nsL6WkY4qtGkq9DD3kN2r9Rp3D5j.BCb\",\r\n      \"categories\": [\r\n        \"faces\"\r\n      ]\r\n    },\r\n    \"69c0ad84-9e42-4ef9-bfb4-2782c3a0f1b0\": {\r\n      \"name\": \"gameplayfaces_07\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/spritelab/szPZ1zjfS2sC5yBc7JGD.YCYLMNhlJp4/category_faces/gameplayfaces_07.png\",\r\n      \"frameSize\": {\r\n        \"x\": 391,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"szPZ1zjfS2sC5yBc7JGD.YCYLMNhlJp4\",\r\n      \"categories\": [\r\n        \"faces\"\r\n      ]\r\n    },\r\n    \"7f655267-34c2-45df-88a1-9e2ef9eac22b\": {\r\n      \"name\": \"gameplayfaces_08\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/spritelab/FP9OVTkT8hrWR9ZOfb5kmLk_AHIFqaJh/category_faces/gameplayfaces_08.png\",\r\n      \"frameSize\": {\r\n        \"x\": 391,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"FP9OVTkT8hrWR9ZOfb5kmLk_AHIFqaJh\",\r\n      \"categories\": [\r\n        \"faces\"\r\n      ]\r\n    },\r\n    \"3a10c0c2-fc99-41ed-b756-a85d01824179\": {\r\n      \"name\": \"gameplayfaces_09\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/spritelab/znvtEU3rnLDDeqIBtb.6hatPRE1FGOjr/category_faces/gameplayfaces_09.png\",\r\n      \"frameSize\": {\r\n        \"x\": 391,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"znvtEU3rnLDDeqIBtb.6hatPRE1FGOjr\",\r\n      \"categories\": [\r\n        \"faces\"\r\n      ]\r\n    },\r\n    \"3f8e3d58-8fae-454c-98de-8dca19bce8c3\": {\r\n      \"name\": \"twinkling_star\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/spritelab/pCUIiNgkD5tKEriTT5hwY.i_HaEbSkMQ/category_video_games/twinkling_star.png\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"pCUIiNgkD5tKEriTT5hwY.i_HaEbSkMQ\",\r\n      \"categories\": [\r\n        \"video_games\"\r\n      ]\r\n    },\r\n    \"57a31040-7580-4b71-b974-5e2015f2eae2\": {\r\n      \"name\": \"gradient_11\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/spritelab/xMOibFCqZzeZ1Ui4OIAAgMMY8mMKN75t/category_backgrounds/gradient_11.png\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"xMOibFCqZzeZ1Ui4OIAAgMMY8mMKN75t\",\r\n      \"categories\": [\r\n        \"backgrounds\"\r\n      ]\r\n    }\r\n  }\r\n}",
     "name_suffix": "_independent",
     "enable_big_playspace": "false",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-05-08T16:00:26.796+00:00\",\"changed\":[\"cloned from \\\"game_jam_theme_generator_independent\\\"\"],\"cloned_from\":\"game_jam_theme_generator_independent\"},{\"changed_at\":\"2025-05-08 16:02:29 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-08 16:19:55 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-15 19:29:16 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-24 16:48:37 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"start_animations\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-24 16:53:08 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-24 16:55:04 +0000\",\"changed\":[\"start_blocks\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-24 16:59:43 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-24 17:03:35 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-24 17:06:44 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-24 17:11:05 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-24 17:12:31 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-24 17:14:47 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-24 17:17:23 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-24 17:18:36 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-24 17:25:00 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-05-08T16:00:26.796+00:00\",\"changed\":[\"cloned from \\\"game_jam_theme_generator_independent\\\"\"],\"cloned_from\":\"game_jam_theme_generator_independent\"},{\"changed_at\":\"2025-05-08 16:02:29 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-08 16:19:55 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-15 19:29:16 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-24 16:48:37 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"start_animations\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-24 16:53:08 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-24 16:55:04 +0000\",\"changed\":[\"start_blocks\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-24 16:59:43 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-24 17:03:35 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-24 17:06:44 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-24 17:11:05 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-24 17:12:31 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-24 17:14:47 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-24 17:17:23 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-24 17:18:36 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-24 17:25:00 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-24 18:00:50 +0000\",\"changed\":[\"start_blocks\",\"start_animations\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-24 18:01:09 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-24 18:03:10 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-24 18:06:37 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-24 18:08:39 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-24 18:09:21 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-24 20:14:17 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-24 20:45:07 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -63,47 +60,42 @@
           <variable id="`x.W|r=ro)icP33#JL1v">productProduct</variable>
           <variable id="?1eJD=(A_xClmS/E+:BK">productTwist</variable>
           <variable id="P+f,;S*@+T#aU)JZZ#kB">productTheme</variable>
-          <variable id="fJ=JTldFL5I=dWWsSn}J">rollNoun</variable>
           <variable id="]:qyT]mk3}%~UJU1Sq%3">Product</variable>
+          <variable id="fJ=JTldFL5I=dWWsSn}J">rollNoun</variable>
           <variable id="B80_KR;E@llHzrc:A#(h">Twist</variable>
           <variable id="cxYbdAjtcM//b3vlHf}O">Theme</variable>
         </variables>
         <block type="when_run" deletable="false" movable="false" x="144" y="5">
           <next>
-            <block type="gamelab_makeNewSpriteAnon">
-              <field name="ANIMATION_NAME">"gameplayfaces_02"</field>
-              <value name="LOCATION">
-                <block type="gamelab_location_picker">
-                  <field name="LOCATION">{"x":55,"y":95}</field>
-                </block>
-              </value>
+            <block type="gamelab_setBackgroundImageAs">
+              <field name="IMG">"gradient_11"</field>
               <next>
                 <block type="gamelab_makeNewSpriteAnon">
-                  <field name="ANIMATION_NAME">"gameplayfaces_04"</field>
+                  <field name="ANIMATION_NAME">"gameplayfaces_02"</field>
                   <value name="LOCATION">
                     <block type="gamelab_location_picker">
-                      <field name="LOCATION">{"x":200,"y":170}</field>
+                      <field name="LOCATION">{"x":70,"y":139}</field>
                     </block>
                   </value>
                   <next>
                     <block type="gamelab_makeNewSpriteAnon">
-                      <field name="ANIMATION_NAME">"gameplayfaces_07"</field>
+                      <field name="ANIMATION_NAME">"gameplayfaces_04"</field>
                       <value name="LOCATION">
                         <block type="gamelab_location_picker">
-                          <field name="LOCATION">{"x":340,"y":272}</field>
+                          <field name="LOCATION">{"x":191,"y":232}</field>
                         </block>
                       </value>
                       <next>
-                        <block type="variables_set">
-                          <field name="VAR" id="]Si3({hy[g/eACL0uF(.">pinkClicked</field>
-                          <value name="VALUE">
-                            <block type="logic_boolean">
-                              <field name="BOOL">FALSE</field>
+                        <block type="gamelab_makeNewSpriteAnon">
+                          <field name="ANIMATION_NAME">"gameplayfaces_07"</field>
+                          <value name="LOCATION">
+                            <block type="gamelab_location_picker">
+                              <field name="LOCATION">{"x":322,"y":301}</field>
                             </block>
                           </value>
                           <next>
                             <block type="variables_set">
-                              <field name="VAR" id="2l356B?RW,)`H50jHAJ4">tealClicked</field>
+                              <field name="VAR" id="]Si3({hy[g/eACL0uF(.">pinkClicked</field>
                               <value name="VALUE">
                                 <block type="logic_boolean">
                                   <field name="BOOL">FALSE</field>
@@ -111,20 +103,30 @@
                               </value>
                               <next>
                                 <block type="variables_set">
-                                  <field name="VAR" id=")2Jx}$.ni|m5d/BInFie">purpleClicked</field>
+                                  <field name="VAR" id="2l356B?RW,)`H50jHAJ4">tealClicked</field>
                                   <value name="VALUE">
                                     <block type="logic_boolean">
                                       <field name="BOOL">FALSE</field>
                                     </block>
                                   </value>
                                   <next>
-                                    <block type="gamelab_makeNewSpriteAnon">
-                                      <field name="ANIMATION_NAME">"gameplayfaces_09"</field>
-                                      <value name="LOCATION">
-                                        <block type="gamelab_location_picker">
-                                          <field name="LOCATION">{"x":49,"y":359}</field>
+                                    <block type="variables_set">
+                                      <field name="VAR" id=")2Jx}$.ni|m5d/BInFie">purpleClicked</field>
+                                      <value name="VALUE">
+                                        <block type="logic_boolean">
+                                          <field name="BOOL">FALSE</field>
                                         </block>
                                       </value>
+                                      <next>
+                                        <block type="gamelab_makeNewSpriteAnon">
+                                          <field name="ANIMATION_NAME">"gameplayfaces_09"</field>
+                                          <value name="LOCATION">
+                                            <block type="gamelab_location_picker">
+                                              <field name="LOCATION">{"x":277,"y":86}</field>
+                                            </block>
+                                          </value>
+                                        </block>
+                                      </next>
                                     </block>
                                   </next>
                                 </block>
@@ -140,7 +142,7 @@
             </block>
           </next>
         </block>
-        <block type="gamelab_createNewSprite" disabled-reasons="ORPHANED" x="218" y="374">
+        <block type="gamelab_createNewSprite" disabled-reasons="ORPHANED" x="492" y="374">
           <field name="NAME" id="y.k{y^@L5/J4KC8JOUSO">Die1</field>
           <field name="COSTUME">"gameplayfaces_02"</field>
           <value name="LOCATION">
@@ -300,7 +302,7 @@
                                           <field name="OP">EQ</field>
                                           <value name="A">
                                             <block type="variables_get">
-                                              <field name="VAR" id="fJ=JTldFL5I=dWWsSn}J">rollNoun</field>
+                                              <field name="VAR" id="`x.W|r=ro)icP33#JL1v">productProduct</field>
                                             </block>
                                           </value>
                                           <value name="B">
@@ -311,31 +313,21 @@
                                         </block>
                                       </value>
                                       <statement name="DO0">
-                                        <block type="gamelab_setAnimation">
-                                          <field name="ANIMATION">"gameplayfaces_02"</field>
-                                          <value name="THIS">
-                                            <block type="sprite_variables_get">
-                                              <field name="VAR" id="*bwUIgam]yqliB@J}i=(">Die2</field>
+                                        <block type="variables_set">
+                                          <field name="VAR" id="]:qyT]mk3}%~UJU1Sq%3">Product</field>
+                                          <value name="VALUE">
+                                            <block type="text">
+                                              <field name="TEXT">chair</field>
                                             </block>
                                           </value>
                                           <next>
-                                            <block type="variables_set">
+                                            <block type="gamelab_showVariable">
                                               <field name="VAR" id="]:qyT]mk3}%~UJU1Sq%3">Product</field>
-                                              <value name="VALUE">
-                                                <block type="text">
-                                                  <field name="TEXT">chair</field>
+                                              <value name="LOCATION">
+                                                <block type="gamelab_location_picker">
+                                                  <field name="LOCATION">{"x":189,"y":299}</field>
                                                 </block>
                                               </value>
-                                              <next>
-                                                <block type="gamelab_showVariable">
-                                                  <field name="VAR" id="]:qyT]mk3}%~UJU1Sq%3">Product</field>
-                                                  <value name="LOCATION">
-                                                    <block type="gamelab_location_picker">
-                                                      <field name="LOCATION">{"x":169,"y":245}</field>
-                                                    </block>
-                                                  </value>
-                                                </block>
-                                              </next>
                                             </block>
                                           </next>
                                         </block>
@@ -345,7 +337,7 @@
                                           <field name="OP">EQ</field>
                                           <value name="A">
                                             <block type="variables_get">
-                                              <field name="VAR" id="fJ=JTldFL5I=dWWsSn}J">rollNoun</field>
+                                              <field name="VAR" id="`x.W|r=ro)icP33#JL1v">productProduct</field>
                                             </block>
                                           </value>
                                           <value name="B">
@@ -356,31 +348,21 @@
                                         </block>
                                       </value>
                                       <statement name="DO1">
-                                        <block type="gamelab_setAnimation">
-                                          <field name="ANIMATION">"gameplayfaces_02"</field>
-                                          <value name="THIS">
-                                            <block type="sprite_variables_get">
-                                              <field name="VAR" id="*bwUIgam]yqliB@J}i=(">Die2</field>
+                                        <block type="variables_set">
+                                          <field name="VAR" id="]:qyT]mk3}%~UJU1Sq%3">Product</field>
+                                          <value name="VALUE">
+                                            <block type="text">
+                                              <field name="TEXT">drone</field>
                                             </block>
                                           </value>
                                           <next>
-                                            <block type="variables_set">
+                                            <block type="gamelab_showVariable">
                                               <field name="VAR" id="]:qyT]mk3}%~UJU1Sq%3">Product</field>
-                                              <value name="VALUE">
-                                                <block type="text">
-                                                  <field name="TEXT">drone</field>
+                                              <value name="LOCATION">
+                                                <block type="gamelab_location_picker">
+                                                  <field name="LOCATION">{"x":189,"y":299}</field>
                                                 </block>
                                               </value>
-                                              <next>
-                                                <block type="gamelab_showVariable">
-                                                  <field name="VAR" id="]:qyT]mk3}%~UJU1Sq%3">Product</field>
-                                                  <value name="LOCATION">
-                                                    <block type="gamelab_location_picker">
-                                                      <field name="LOCATION">{"x":169,"y":245}</field>
-                                                    </block>
-                                                  </value>
-                                                </block>
-                                              </next>
                                             </block>
                                           </next>
                                         </block>
@@ -390,7 +372,7 @@
                                           <field name="OP">EQ</field>
                                           <value name="A">
                                             <block type="variables_get">
-                                              <field name="VAR" id="fJ=JTldFL5I=dWWsSn}J">rollNoun</field>
+                                              <field name="VAR" id="`x.W|r=ro)icP33#JL1v">productProduct</field>
                                             </block>
                                           </value>
                                           <value name="B">
@@ -401,31 +383,21 @@
                                         </block>
                                       </value>
                                       <statement name="DO2">
-                                        <block type="gamelab_setAnimation">
-                                          <field name="ANIMATION">"gameplayfaces_02"</field>
-                                          <value name="THIS">
-                                            <block type="sprite_variables_get">
-                                              <field name="VAR" id="*bwUIgam]yqliB@J}i=(">Die2</field>
+                                        <block type="variables_set">
+                                          <field name="VAR" id="]:qyT]mk3}%~UJU1Sq%3">Product</field>
+                                          <value name="VALUE">
+                                            <block type="text">
+                                              <field name="TEXT">robot</field>
                                             </block>
                                           </value>
                                           <next>
-                                            <block type="variables_set">
+                                            <block type="gamelab_showVariable">
                                               <field name="VAR" id="]:qyT]mk3}%~UJU1Sq%3">Product</field>
-                                              <value name="VALUE">
-                                                <block type="text">
-                                                  <field name="TEXT">robot</field>
+                                              <value name="LOCATION">
+                                                <block type="gamelab_location_picker">
+                                                  <field name="LOCATION">{"x":189,"y":299}</field>
                                                 </block>
                                               </value>
-                                              <next>
-                                                <block type="gamelab_showVariable">
-                                                  <field name="VAR" id="]:qyT]mk3}%~UJU1Sq%3">Product</field>
-                                                  <value name="LOCATION">
-                                                    <block type="gamelab_location_picker">
-                                                      <field name="LOCATION">{"x":169,"y":245}</field>
-                                                    </block>
-                                                  </value>
-                                                </block>
-                                              </next>
                                             </block>
                                           </next>
                                         </block>
@@ -446,31 +418,21 @@
                                         </block>
                                       </value>
                                       <statement name="DO3">
-                                        <block type="gamelab_setAnimation">
-                                          <field name="ANIMATION">"gameplayfaces_02"</field>
-                                          <value name="THIS">
-                                            <block type="sprite_variables_get">
-                                              <field name="VAR" id="*bwUIgam]yqliB@J}i=(">Die2</field>
+                                        <block type="variables_set">
+                                          <field name="VAR" id="]:qyT]mk3}%~UJU1Sq%3">Product</field>
+                                          <value name="VALUE">
+                                            <block type="text">
+                                              <field name="TEXT">mug</field>
                                             </block>
                                           </value>
                                           <next>
-                                            <block type="variables_set">
+                                            <block type="gamelab_showVariable">
                                               <field name="VAR" id="]:qyT]mk3}%~UJU1Sq%3">Product</field>
-                                              <value name="VALUE">
-                                                <block type="text">
-                                                  <field name="TEXT">mug</field>
+                                              <value name="LOCATION">
+                                                <block type="gamelab_location_picker">
+                                                  <field name="LOCATION">{"x":189,"y":299}</field>
                                                 </block>
                                               </value>
-                                              <next>
-                                                <block type="gamelab_showVariable">
-                                                  <field name="VAR" id="]:qyT]mk3}%~UJU1Sq%3">Product</field>
-                                                  <value name="LOCATION">
-                                                    <block type="gamelab_location_picker">
-                                                      <field name="LOCATION">{"x":169,"y":245}</field>
-                                                    </block>
-                                                  </value>
-                                                </block>
-                                              </next>
                                             </block>
                                           </next>
                                         </block>
@@ -480,7 +442,7 @@
                                           <field name="OP">EQ</field>
                                           <value name="A">
                                             <block type="variables_get">
-                                              <field name="VAR" id="fJ=JTldFL5I=dWWsSn}J">rollNoun</field>
+                                              <field name="VAR" id="`x.W|r=ro)icP33#JL1v">productProduct</field>
                                             </block>
                                           </value>
                                           <value name="B">
@@ -491,61 +453,41 @@
                                         </block>
                                       </value>
                                       <statement name="DO4">
-                                        <block type="gamelab_setAnimation">
-                                          <field name="ANIMATION">"gameplayfaces_02"</field>
-                                          <value name="THIS">
-                                            <block type="sprite_variables_get">
-                                              <field name="VAR" id="*bwUIgam]yqliB@J}i=(">Die2</field>
+                                        <block type="variables_set">
+                                          <field name="VAR" id="]:qyT]mk3}%~UJU1Sq%3">Product</field>
+                                          <value name="VALUE">
+                                            <block type="text">
+                                              <field name="TEXT">hammock</field>
                                             </block>
                                           </value>
                                           <next>
-                                            <block type="variables_set">
+                                            <block type="gamelab_showVariable">
                                               <field name="VAR" id="]:qyT]mk3}%~UJU1Sq%3">Product</field>
-                                              <value name="VALUE">
-                                                <block type="text">
-                                                  <field name="TEXT">hammock</field>
+                                              <value name="LOCATION">
+                                                <block type="gamelab_location_picker">
+                                                  <field name="LOCATION">{"x":189,"y":299}</field>
                                                 </block>
                                               </value>
-                                              <next>
-                                                <block type="gamelab_showVariable">
-                                                  <field name="VAR" id="]:qyT]mk3}%~UJU1Sq%3">Product</field>
-                                                  <value name="LOCATION">
-                                                    <block type="gamelab_location_picker">
-                                                      <field name="LOCATION">{"x":169,"y":245}</field>
-                                                    </block>
-                                                  </value>
-                                                </block>
-                                              </next>
                                             </block>
                                           </next>
                                         </block>
                                       </statement>
                                       <statement name="ELSE">
-                                        <block type="gamelab_setAnimation">
-                                          <field name="ANIMATION">"gameplayfaces_02"</field>
-                                          <value name="THIS">
-                                            <block type="sprite_variables_get">
-                                              <field name="VAR" id="*bwUIgam]yqliB@J}i=(">Die2</field>
+                                        <block type="variables_set">
+                                          <field name="VAR" id="]:qyT]mk3}%~UJU1Sq%3">Product</field>
+                                          <value name="VALUE">
+                                            <block type="text">
+                                              <field name="TEXT">desk</field>
                                             </block>
                                           </value>
                                           <next>
-                                            <block type="variables_set">
+                                            <block type="gamelab_showVariable">
                                               <field name="VAR" id="]:qyT]mk3}%~UJU1Sq%3">Product</field>
-                                              <value name="VALUE">
-                                                <block type="text">
-                                                  <field name="TEXT">desk</field>
+                                              <value name="LOCATION">
+                                                <block type="gamelab_location_picker">
+                                                  <field name="LOCATION">{"x":189,"y":299}</field>
                                                 </block>
                                               </value>
-                                              <next>
-                                                <block type="gamelab_showVariable">
-                                                  <field name="VAR" id="]:qyT]mk3}%~UJU1Sq%3">Product</field>
-                                                  <value name="LOCATION">
-                                                    <block type="gamelab_location_picker">
-                                                      <field name="LOCATION">{"x":169,"y":245}</field>
-                                                    </block>
-                                                  </value>
-                                                </block>
-                                              </next>
                                             </block>
                                           </next>
                                         </block>
@@ -799,7 +741,7 @@
                                                   <field name="VAR" id="B80_KR;E@llHzrc:A#(h">Twist</field>
                                                   <value name="LOCATION">
                                                     <block type="gamelab_location_picker">
-                                                      <field name="LOCATION">{"x":295,"y":358}</field>
+                                                      <field name="LOCATION">{"x":328,"y":377}</field>
                                                     </block>
                                                   </value>
                                                 </block>
@@ -844,7 +786,7 @@
                                                   <field name="VAR" id="B80_KR;E@llHzrc:A#(h">Twist</field>
                                                   <value name="LOCATION">
                                                     <block type="gamelab_location_picker">
-                                                      <field name="LOCATION">{"x":295,"y":358}</field>
+                                                      <field name="LOCATION">{"x":328,"y":377}</field>
                                                     </block>
                                                   </value>
                                                 </block>
@@ -889,7 +831,7 @@
                                                   <field name="VAR" id="B80_KR;E@llHzrc:A#(h">Twist</field>
                                                   <value name="LOCATION">
                                                     <block type="gamelab_location_picker">
-                                                      <field name="LOCATION">{"x":295,"y":358}</field>
+                                                      <field name="LOCATION">{"x":328,"y":377}</field>
                                                     </block>
                                                   </value>
                                                 </block>
@@ -934,7 +876,7 @@
                                                   <field name="VAR" id="B80_KR;E@llHzrc:A#(h">Twist</field>
                                                   <value name="LOCATION">
                                                     <block type="gamelab_location_picker">
-                                                      <field name="LOCATION">{"x":295,"y":358}</field>
+                                                      <field name="LOCATION">{"x":328,"y":377}</field>
                                                     </block>
                                                   </value>
                                                 </block>
@@ -979,7 +921,7 @@
                                                   <field name="VAR" id="B80_KR;E@llHzrc:A#(h">Twist</field>
                                                   <value name="LOCATION">
                                                     <block type="gamelab_location_picker">
-                                                      <field name="LOCATION">{"x":295,"y":358}</field>
+                                                      <field name="LOCATION">{"x":328,"y":377}</field>
                                                     </block>
                                                   </value>
                                                 </block>
@@ -1009,7 +951,7 @@
                                                   <field name="VAR" id="B80_KR;E@llHzrc:A#(h">Twist</field>
                                                   <value name="LOCATION">
                                                     <block type="gamelab_location_picker">
-                                                      <field name="LOCATION">{"x":295,"y":358}</field>
+                                                      <field name="LOCATION">{"x":328,"y":377}</field>
                                                     </block>
                                                   </value>
                                                 </block>
@@ -1152,7 +1094,25 @@
             </block>
           </next>
         </block>
-        <block type="gamelab_spriteClicked" x="159" y="1014">
+        <block type="gamelab_spriteClicked" x="99" y="910">
+          <field name="CONDITION">"when"</field>
+          <value name="SPRITE">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"gameplayfaces_09"</field>
+            </block>
+          </value>
+          <next>
+            <block type="gamelab_spriteSay">
+              <field name="SPEECH">Click on my friends below to reveal your new product!</field>
+              <value name="SPRITE">
+                <block type="gamelab_allSpritesWithAnimation">
+                  <field name="ANIMATION">"gameplayfaces_09"</field>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_spriteClicked" x="576" y="2075">
           <field name="CONDITION">"when"</field>
           <value name="SPRITE">
             <block type="gamelab_allSpritesWithAnimation">
@@ -1267,7 +1227,7 @@
                                                   <field name="VAR" id="cxYbdAjtcM//b3vlHf}O">Theme</field>
                                                   <value name="LOCATION">
                                                     <block type="gamelab_location_picker">
-                                                      <field name="LOCATION">{"x":57,"y":161}</field>
+                                                      <field name="LOCATION">{"x":69,"y":200}</field>
                                                     </block>
                                                   </value>
                                                 </block>
@@ -1312,7 +1272,7 @@
                                                   <field name="VAR" id="cxYbdAjtcM//b3vlHf}O">Theme</field>
                                                   <value name="LOCATION">
                                                     <block type="gamelab_location_picker">
-                                                      <field name="LOCATION">{"x":57,"y":161}</field>
+                                                      <field name="LOCATION">{"x":69,"y":200}</field>
                                                     </block>
                                                   </value>
                                                 </block>
@@ -1357,7 +1317,7 @@
                                                   <field name="VAR" id="cxYbdAjtcM//b3vlHf}O">Theme</field>
                                                   <value name="LOCATION">
                                                     <block type="gamelab_location_picker">
-                                                      <field name="LOCATION">{"x":57,"y":161}</field>
+                                                      <field name="LOCATION">{"x":69,"y":200}</field>
                                                     </block>
                                                   </value>
                                                 </block>
@@ -1402,7 +1362,7 @@
                                                   <field name="VAR" id="cxYbdAjtcM//b3vlHf}O">Theme</field>
                                                   <value name="LOCATION">
                                                     <block type="gamelab_location_picker">
-                                                      <field name="LOCATION">{"x":57,"y":161}</field>
+                                                      <field name="LOCATION">{"x":69,"y":200}</field>
                                                     </block>
                                                   </value>
                                                 </block>
@@ -1447,7 +1407,7 @@
                                                   <field name="VAR" id="cxYbdAjtcM//b3vlHf}O">Theme</field>
                                                   <value name="LOCATION">
                                                     <block type="gamelab_location_picker">
-                                                      <field name="LOCATION">{"x":57,"y":161}</field>
+                                                      <field name="LOCATION">{"x":69,"y":200}</field>
                                                     </block>
                                                   </value>
                                                 </block>
@@ -1477,7 +1437,7 @@
                                                   <field name="VAR" id="cxYbdAjtcM//b3vlHf}O">Theme</field>
                                                   <value name="LOCATION">
                                                     <block type="gamelab_location_picker">
-                                                      <field name="LOCATION">{"x":57,"y":161}</field>
+                                                      <field name="LOCATION">{"x":69,"y":200}</field>
                                                     </block>
                                                   </value>
                                                 </block>
@@ -1620,22 +1580,55 @@
             </block>
           </next>
         </block>
-        <block type="gamelab_location_picker" disabled-reasons="MANUALLY_DISABLED,ORPHANED" x="1636" y="2219">
+        <block type="gamelab_location_picker" disabled-reasons="ORPHANED" x="1602" y="2209">
+          <field name="LOCATION">{"x":169,"y":245}</field>
+        </block>
+        <block type="gamelab_location_picker" disabled-reasons="MANUALLY_DISABLED,ORPHANED" x="1727" y="2219">
           <field name="LOCATION">{"x":234,"y":358}</field>
         </block>
-        <block type="gamelab_location_picker" disabled-reasons="MANUALLY_DISABLED,ORPHANED" x="1636" y="2257">
+        <block type="gamelab_location_picker" disabled-reasons="ORPHANED" x="2176" y="2209">
+          <field name="LOCATION">{"x":295,"y":358}</field>
+        </block>
+        <block type="gamelab_location_picker" disabled-reasons="ORPHANED" x="1602" y="2247">
+          <field name="LOCATION">{"x":189,"y":299}</field>
+        </block>
+        <block type="gamelab_location_picker" disabled-reasons="MANUALLY_DISABLED,ORPHANED" x="1726" y="2257">
           <field name="LOCATION">{"x":234,"y":358}</field>
         </block>
-        <block type="gamelab_location_picker" disabled-reasons="MANUALLY_DISABLED,ORPHANED" x="1636" y="2295">
+        <block type="gamelab_location_picker" disabled-reasons="ORPHANED" x="2189" y="2247">
+          <field name="LOCATION">{"x":295,"y":358}</field>
+        </block>
+        <block type="gamelab_location_picker" disabled-reasons="ORPHANED" x="1602" y="2285">
+          <field name="LOCATION">{"x":169,"y":245}</field>
+        </block>
+        <block type="gamelab_location_picker" disabled-reasons="MANUALLY_DISABLED,ORPHANED" x="1727" y="2295">
           <field name="LOCATION">{"x":234,"y":358}</field>
         </block>
-        <block type="gamelab_location_picker" disabled-reasons="MANUALLY_DISABLED,ORPHANED" x="1636" y="2333">
+        <block type="gamelab_location_picker" disabled-reasons="ORPHANED" x="2188" y="2285">
+          <field name="LOCATION">{"x":295,"y":358}</field>
+        </block>
+        <block type="gamelab_location_picker" disabled-reasons="ORPHANED" x="1602" y="2323">
+          <field name="LOCATION">{"x":189,"y":299}</field>
+        </block>
+        <block type="gamelab_location_picker" disabled-reasons="MANUALLY_DISABLED,ORPHANED" x="1726" y="2333">
           <field name="LOCATION">{"x":234,"y":358}</field>
         </block>
-        <block type="gamelab_location_picker" disabled-reasons="MANUALLY_DISABLED,ORPHANED" x="1636" y="2371">
+        <block type="gamelab_location_picker" disabled-reasons="ORPHANED" x="2201" y="2323">
+          <field name="LOCATION">{"x":295,"y":358}</field>
+        </block>
+        <block type="gamelab_location_picker" disabled-reasons="ORPHANED" x="1602" y="2361">
+          <field name="LOCATION">{"x":169,"y":245}</field>
+        </block>
+        <block type="gamelab_location_picker" disabled-reasons="MANUALLY_DISABLED,ORPHANED" x="1727" y="2371">
           <field name="LOCATION">{"x":246,"y":207}</field>
         </block>
-        <block type="gamelab_location_picker" disabled-reasons="MANUALLY_DISABLED,ORPHANED" x="1636" y="2409">
+        <block type="gamelab_location_picker" disabled-reasons="ORPHANED" x="2194" y="2361">
+          <field name="LOCATION">{"x":295,"y":358}</field>
+        </block>
+        <block type="gamelab_location_picker" disabled-reasons="ORPHANED" x="1602" y="2399">
+          <field name="LOCATION">{"x":169,"y":245}</field>
+        </block>
+        <block type="gamelab_location_picker" disabled-reasons="MANUALLY_DISABLED,ORPHANED" x="1727" y="2409">
           <field name="LOCATION">{"x":234,"y":358}</field>
         </block>
       </xml>

@@ -32,7 +32,10 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
   buildAssetUrl,
 }) => {
   const [showProfaneUserMessage, setShowProfaneUserMessage] = useState(false);
-  const {status, role, chatMessageText, assets} = chatMessage;
+  const {status, role, chatMessageText, assets, userAddedSelectionContext} =
+    chatMessage;
+  const hasAssets = assets && buildAssetUrl;
+  const hasUserAddedSelectionContext = !!userAddedSelectionContext?.length;
 
   const displayText = getChatMessageDisplayText(
     status,
@@ -88,27 +91,36 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
   }
 
   let header;
-  if (!isAssistant && assets && buildAssetUrl) {
+  if (!isAssistant && (hasAssets || hasUserAddedSelectionContext)) {
     header = (
       <div className={styles.assetCol}>
-        {assets.map(asset => {
-          const filename = asset.filename;
-          const url = buildAssetUrl(asset);
-          return (
-            <button
-              key={filename}
-              type="button"
-              className={styles.assetButton}
-              onClick={() => window.open(url, '_blank')}
-            >
-              {filename.endsWith('.pdf') ? (
-                <FilePreview type="pdf" filename={filename} url={url} />
-              ) : (
-                <img alt="" className={styles.imagePreview} src={url} />
-              )}
-            </button>
-          );
-        })}
+        {hasAssets &&
+          assets.map(asset => {
+            const filename = asset.filename;
+            const url = buildAssetUrl(asset);
+            return (
+              <button
+                key={filename}
+                type="button"
+                className={styles.assetButton}
+                onClick={() => window.open(url, '_blank')}
+              >
+                {filename.endsWith('.pdf') ? (
+                  <FilePreview type="pdf" filename={filename} url={url} />
+                ) : (
+                  <img alt="" className={styles.imagePreview} src={url} />
+                )}
+              </button>
+            );
+          })}
+        {hasUserAddedSelectionContext &&
+          userAddedSelectionContext.map(contextItem => (
+            <FilePreview
+              key={contextItem.displayName}
+              type="text"
+              filename={contextItem.displayName}
+            />
+          ))}
       </div>
     );
   }

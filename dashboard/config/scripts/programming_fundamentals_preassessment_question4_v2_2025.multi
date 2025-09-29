@@ -1,0 +1,15 @@
+name 'programming-fundamentals-preassessment-question4_v2-2025'
+title 'Programming Fundamentals Pre-Assessment: Question 4'
+
+question 'Which of the following are the three main components of an algorithm?'
+
+wrong 'Abstraction, Iteration, Selection'
+right 'Sequencing, Selection, Iteration'
+wrong 'Loops, Variables, Decisions'
+wrong 'Functions, Operators, Debugging'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 3: Designing Algorithms
+MARKDOWN

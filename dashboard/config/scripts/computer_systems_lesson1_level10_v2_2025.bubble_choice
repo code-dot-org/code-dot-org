@@ -1,0 +1,8 @@
+name 'computer-systems-lesson1-level10_v2-2025'
+display_name 'Computing Careers'
+description 'Computing professionals play essential roles in creating and improving technology. Learn about different careers to see how their skills and tools make innovation possible.'
+
+sublevels
+level 'computer-systems-lesson1-level10a_v2-2025'
+level 'computer-systems-lesson1-level10b_v2-2025'
+level 'computer-systems-lesson1-level10c_v2-2025'

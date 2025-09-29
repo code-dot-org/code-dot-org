@@ -152,6 +152,14 @@ class HttpCache
             cookies: default_cookies,
             include_marketing_router_lambda: true,
           },
+          # NextJS dynamic image api
+          {
+            path: '/_next/image',
+            proxy: 'marketing',
+            headers: ALLOWLISTED_HEADERS,
+            cookies: 'none',
+            include_marketing_router_lambda: true,
+          },
           {
             # Serve Sprockets-bundled assets directly from the S3 bucket synced via `assets:precompile`.
             #
