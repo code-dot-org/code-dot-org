@@ -91,7 +91,6 @@ Resources:
             Condition:
               ArnLike:
                 'aws:SourceArn': !GetAtt TestProjectBucket.Arn
-
   S3BatchOperationsRole:
     Type: 'AWS::IAM::Role'
     Properties:
@@ -123,10 +122,13 @@ Resources:
               # NOTE: No READ permissions on Secondary Account bucket
               - Effect: 'Allow'
                 Action:
-                  - 's3:ReplicateObject'
-                  - 's3:ReplicateDelete'
-                  - 's3:ReplicateTags'
+                  - 's3:PutObject'
+                  - 's3:PutObjectAcl'
+                  - 's3:PutObjectTagging'
+                  - 's3:GetBucketLocation'
+                  - 's3:GetBucketVersioning'
                 Resource:
+                  - !Sub 'arn:aws:s3:::cdo-secondary-v3-test'
                   - !Sub 'arn:aws:s3:::cdo-secondary-v3-test/*'
               # Access to inventory bucket for manifests and reports
               - Effect: 'Allow'
@@ -171,14 +173,16 @@ Resources:
                     - !GetAtt TestProjectBucket.Arn
                     - !GetAtt InventoryBucket.Arn
 
-                # S3 object permissions for reading inventory files
+                # S3 object permissions for reading inventory files and manifests
                 - Effect: 'Allow'
                   Action:
                     - 's3:GetObject'
+                    - 's3:GetObjectAttributes' # for ETag retrieval
                   Resource:
                     - !Sub '${TestProjectBucket.Arn}/*'
                     - !Sub '${InventoryBucket.Arn}/inventory-reports/*'
                     - !Sub '${InventoryBucket.Arn}/backup-reports/*'
+                    - !Sub '${InventoryBucket.Arn}/batch-manifests/*'
 
                 # S3 object permissions for writing manifests and backup reports
                 - Effect: 'Allow'
@@ -225,7 +229,7 @@ Resources:
           INVENTORY_BUCKET: !Ref InventoryBucket
           LOG_LEVEL: 'DEBUG'
           # Removed DEST_KMS_KEY since we're using S3-managed encryption
-      Code: {"S3Bucket":"cdo-ci-artifacts","S3Key":"test_s3_backup/batch-replication.202509252312.zip"}
+      Code: {"S3Bucket":"cdo-ci-artifacts","S3Key":"test_s3_backup/batch-replication.202509291712.zip"}
       Description: "Inventory-based batch replication Lambda"
 
   # EventBridge rule to trigger Lambda daily at 00:00 UTC

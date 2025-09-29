@@ -632,15 +632,23 @@ def submit_batch_replication_job(s3control_client, account_id, dest_bucket, batc
 
   timestamp = extract_inventory_timestamp(inventory_report)
 
+  # Build the operation hash with SSE-S3 encryption
+  operation_params = {
+    target_resource: "arn:aws:s3:::#{dest_bucket}",
+    metadata_directive: 'COPY',
+    storage_class: 'STANDARD',
+    # Use S3-managed encryption instead of KMS
+    sse_aws_kms_key_id: nil,  # Explicitly set to nil to avoid KMS
+    new_object_metadata: {
+      sse_algorithm: 'AES256'  # Use S3-managed encryption (SSE-S3)
+    }
+  }
+
   response = s3control_client.create_job(
     account_id: account_id,
     confirmation_required: false,
     operation: {
-      s3_replicate_object: {
-        target_resource: "arn:aws:s3:::#{dest_bucket}",
-        canned_access_control_list: 'private',
-        metadata_directive: 'COPY'
-      }
+      s3_put_object_copy: operation_params
     },
     manifest: {
       spec: {
@@ -649,12 +657,12 @@ def submit_batch_replication_job(s3control_client, account_id, dest_bucket, batc
       },
       location: {
         object_arn: "arn:aws:s3:::#{inventory_bucket}/#{manifest_key}",
-        etag: manifest_head.etag
+        etag: manifest_head.etag.delete('"')
       }
     },
     priority: 10,
     role_arn: batch_role_arn,
-    client_request_token: "inventory-replication-#{timestamp}-#{now.strftime('%Y%m%d-%H%M%S')}",
+    client_request_token: "inventory-copy-#{timestamp}-#{now.strftime('%Y%m%d-%H%M%S')}",
     report: {
       bucket: "arn:aws:s3:::#{inventory_bucket}",
       format: 'Report_CSV_20180820',
@@ -662,12 +670,22 @@ def submit_batch_replication_job(s3control_client, account_id, dest_bucket, batc
       prefix: "batch-reports/#{timestamp}/",
       report_scope: 'AllTasks'
     },
-    description: "Inventory-based batch replication for #{timestamp}"
+    description: "Inventory-based batch copy for #{timestamp}"
   )
 
   log(:debug, 'batch_job_created', {job_id: response.job_id})
 
   response.job_id
+rescue Aws::Errors::ServiceError => exception
+  log(
+    :error,
+    'create_batch_job_error',
+    {
+      error_message: exception.message,
+      error_code: exception.code,
+    }
+  )
+  raise exception
 end
 
 def success_response(message)
