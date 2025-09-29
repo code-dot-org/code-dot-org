@@ -121,6 +121,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     hasValidationConditions,
     validationSettings: instructionsProps.validationSettings,
     setCurrentTab,
+    onValidate: instructionsProps.validationSettings?.onValidate,
   });
 
   // Use onboarding tour hook. Currently only used for Python Lab.

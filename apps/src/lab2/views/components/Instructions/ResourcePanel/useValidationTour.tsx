@@ -17,6 +17,7 @@ interface UseValidationTourProps {
   hasValidationConditions: boolean;
   validationSettings: ValidationSettings | undefined;
   setCurrentTab: (tab: Tabs) => void;
+  onValidate: () => void | undefined;
 }
 
 // Currently this hook is only used for Python Lab.
@@ -26,6 +27,7 @@ export const useValidationTour = ({
   hasValidationConditions,
   validationSettings,
   setCurrentTab,
+  onValidate,
 }: UseValidationTourProps) => {
   const isPythonLab = appName === 'pythonlab';
   const [validationTourEnabled, setValidationTourEnabled] = useState(false);
@@ -95,6 +97,7 @@ export const useValidationTour = ({
       if (validationTourStep === 1) {
         // Enable step 2 (next button for step 2)
         setValidationTourStepsEnabled(prev => [true, true, true]);
+        onValidate();
 
         // Return focus to the tour panel for keyboard users
         setTimeout(() => {
@@ -179,6 +182,7 @@ export const useValidationTour = ({
     validationTourStep,
     validationTabEnum,
     setCurrentTab,
+    onValidate,
   ]);
 
   // Update button disabled state based on step and requirements
