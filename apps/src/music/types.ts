@@ -1,11 +1,14 @@
 import * as GoogleBlockly from 'blockly/core';
 
+import {AdlibType} from '@cdo/apps/lab2/views/components/guide/Adlib';
+
 import {ExemplarSettings, LabConfig, ProjectLevelData} from '../lab2/types';
 import {ValueOf} from '../types/utils';
 
 import {ToolboxData} from './blockly/toolbox/types';
 import {BlockMode} from './constants';
 import {Sounds} from './player/MusicLibrary';
+
 // TODO: Use this interface when converting MusicView to TypeScript
 export interface MusicLevelData extends ProjectLevelData {
   toolbox?: ToolboxData;
@@ -23,7 +26,8 @@ export interface MusicLevelData extends ProjectLevelData {
   toolboxDefinition?: GoogleBlockly.utils.toolbox.ToolboxInfo;
   validationTimeout?: number;
   aiCodeGenerate?: boolean;
-  aiCodeGenerateAdlib?: string;
+  aiCodeGenerateAdlibId?: string;
+  aiCodeGenerateAdlib?: AdlibType;
 }
 
 export type ExemplarValidationMode = 'default' | 'type';
