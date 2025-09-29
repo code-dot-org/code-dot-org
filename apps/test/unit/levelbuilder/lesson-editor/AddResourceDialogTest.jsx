@@ -2,6 +2,7 @@ import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-impo
 import React from 'react';
 
 import AddResourceDialog from '@cdo/apps/levelbuilder/lesson-editor/AddResourceDialog';
+import {ResourceEmbeddabilityOptions} from '@cdo/generated-scripts/sharedConstants';
 
 describe('AddResourceDialog', () => {
   let defaultProps, onSaveSpy, handleCloseSpy;
@@ -47,7 +48,7 @@ describe('AddResourceDialog', () => {
     instance.setState({
       name: 'my resource name',
       url: 'code.org',
-      embeddabilityType: 'embed_only',
+      embeddabilityType: ResourceEmbeddabilityOptions.EMBED_ONLY.value,
       curriculumCategory: 'curriculum',
     });
     const saveResourceSpy = jest
@@ -70,7 +71,8 @@ describe('AddResourceDialog', () => {
       downloadUrl: '',
       type: 'Handout',
       audience: 'Teacher',
-      embeddabilityType: 'embed_and_resource_dropdown',
+      embeddabilityType:
+        ResourceEmbeddabilityOptions.EMBED_AND_RESOURCE_DROPDOWN.value,
       curriculumCategory: '',
     };
     const wrapper = mount(
@@ -87,7 +89,7 @@ describe('AddResourceDialog', () => {
     expect(wrapper.find('[name="type"]').props().value).toBe('Handout');
     expect(wrapper.find('[name="audience"]').props().value).toBe('Teacher');
     expect(wrapper.find('[name="embeddabilityType"]').props().value).toBe(
-      'embed_and_resource_dropdown'
+      ResourceEmbeddabilityOptions.EMBED_AND_RESOURCE_DROPDOWN.value
     );
     expect(wrapper.find('[name="curriculumCategory"]').props().value).toBe('');
   });

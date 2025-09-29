@@ -7,6 +7,7 @@ import {resourceShape} from '@cdo/apps/levelbuilder/shapes';
 import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import color from '@cdo/apps/util/color';
+import {ResourceEmbeddabilityOptions} from '@cdo/generated-scripts/sharedConstants';
 
 import LessonEditorDialog from './LessonEditorDialog';
 
@@ -23,21 +24,6 @@ const TYPE_OPTIONS = [
 
 const AUDIENCE_OPTIONS = ['Student', 'Teacher', 'Verified Teacher'];
 
-const EMBEDDABILITY_TYPES = [
-  {
-    key: 'embed_and_resource_dropdown',
-    displayText: 'Both embedding and resource dropdown',
-  },
-  {
-    key: 'embed_only',
-    displayText: 'Embedding only',
-  },
-  {
-    key: 'resource_dropdown_only',
-    displayText: 'Resource dropdown only',
-  },
-];
-
 const CURRICULUM_CATEGORIES = [
   {
     key: 'curriculum',
@@ -53,7 +39,8 @@ const initialState = {
   name: '',
   type: '',
   audience: '',
-  embeddabilityType: EMBEDDABILITY_TYPES[0].key,
+  embeddabilityType:
+    ResourceEmbeddabilityOptions.EMBED_AND_RESOURCE_DROPDOWN.value,
   curriculumCategory: '',
   includeInPdf: false,
   assessment: false,
@@ -227,9 +214,9 @@ export default class AddResourceDialog extends Component {
                   value={this.state.embeddabilityType}
                   onChange={this.handleInputChange}
                 >
-                  {EMBEDDABILITY_TYPES.map(option => (
-                    <option value={option.key} key={option.key}>
-                      {option.displayText}
+                  {ResourceEmbeddabilityOptions.map(option => (
+                    <option value={option.value} key={option.value}>
+                      {option.label}
                     </option>
                   ))}
                 </select>

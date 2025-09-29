@@ -878,6 +878,12 @@ module SharedConstants
     {value: "other", label: "Other", category: 'other'}
   ].freeze
 
+  RESOURCE_EMBEDDABILITY_OPTIONS = {
+    EMBED_AND_RESOURCE_DROPDOWN: {value: "embed_and_resource_dropdown", label: "Both embedding and resource dropdown"},
+    EMBED_ONLY: {value: "embed_only", label: "Embedding only"},
+    RESOURCE_DROPDOWN_ONLY: {value: "resource_dropdown_only", label: "Resource dropdown only"}
+  }.freeze
+
   AI_DIFF_CONTEXT = {
     LESSON: "lesson",
     UNIT: "unit",
