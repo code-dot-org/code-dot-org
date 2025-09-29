@@ -66,7 +66,7 @@ Scenario: Teacher can delete a section from the section options dropdown
     Given I am a teacher
     And I create a new student section
     And I am on "http://studio.code.org/teacher_dashboard/home"
-    And I click "#ui-test-empty-state-button-Assign-a-course" once it exists
+    And I click "#ui-test-empty-state-button-Assign-a-course" once it exists to load a new page
     Then I wait until element "h4:contains(AI for Oceans)" is visible
     And I click selector "[aria-label='Assign AI for Oceans to your classroom']"
     And element "span:contains(Untitled Section)" is visible
