@@ -38,7 +38,7 @@ module Cdo
           "--region", "us-west-1",
           "--tunnel-domains", tunnel_domains,
           "--tunnel-name", CDO.saucelabs_tunnel_name,
-          "--proxy-localhost", "allow"
+          # "--proxy-localhost", "allow"
         ]
 
         env = {
