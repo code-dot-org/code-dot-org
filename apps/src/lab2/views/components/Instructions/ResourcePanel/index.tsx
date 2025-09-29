@@ -390,11 +390,11 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
         initialStep={validationTourStep}
         steps={VALIDATION_TOUR_STEPS}
         onExit={() => {
-          // User must complete tour so that they don't see it again.
           setValidationTourEnabled(false);
         }}
         onComplete={() => {
           setValidationTourEnabled(false);
+          // User must complete tour so that they don't see it again.
           trySetLocalStorage(PYTHONLAB_VALIDATION_TOUR_SEEN, 'yes');
         }}
         onChange={nextStepIndex => {
