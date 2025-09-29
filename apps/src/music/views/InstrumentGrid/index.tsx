@@ -35,6 +35,8 @@ import {getInstruments} from './util';
 
 import styles from './styles.module.scss';
 
+const SHOWING = 'showing';
+
 interface Props {
   initialValue: InstrumentEventValue;
   onChange: (value: InstrumentEventValue) => void;
@@ -225,6 +227,45 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
     ];
   }, [editorType, scaleMode]);
 
+  // Helper function for key handler of arrow keys
+  function getNextIndex({
+    key,
+    currentIndex,
+    numCols,
+    numCells,
+    editorType,
+  }: {
+    key: string;
+    currentIndex: number;
+    numCols: number;
+    numCells: number;
+    editorType: string;
+  }) {
+    if (key === 'ArrowLeft') {
+      return (
+        Math.floor(currentIndex / numCols) * numCols +
+        ((currentIndex - 1 + numCols) % numCols)
+      );
+    }
+    if (key === 'ArrowRight') {
+      return (
+        Math.floor(currentIndex / numCols) * numCols +
+        ((currentIndex + 1) % numCols)
+      );
+    }
+    if (key === 'ArrowDown') {
+      return editorType === 'notes'
+        ? (currentIndex - numCols + numCells) % numCells
+        : (currentIndex + numCols) % numCells;
+    }
+    if (key === 'ArrowUp') {
+      return editorType === 'notes'
+        ? (currentIndex + numCols) % numCells
+        : (currentIndex - numCols + numCells) % numCells;
+    }
+    return currentIndex;
+  }
+
   // This handles keyboard interactions for the cells. If an instrument is sent
   // in, we are focused on the label, which means we play a preview of the note.
   // Otherwise, we are focused on a selectable cell, which means we call the
@@ -270,40 +311,20 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
         event.preventDefault();
         // Find all focusable cells in tab order
         const focusableCells = Array.from(
-          document.querySelectorAll<HTMLElement>('.showing')
+          document.querySelectorAll<HTMLElement>(`.${SHOWING}`)
         );
         const currentIndex = focusableCells.indexOf(
           document.activeElement as HTMLElement
         );
         const numCols = ticks.length + 1; // Add one for label column at start
 
-        let nextIndex = currentIndex;
-        // Arrow keys wrap within columns and rows
-        if (key === 'ArrowLeft') {
-          nextIndex =
-            Math.floor(currentIndex / numCols) * numCols +
-            ((currentIndex - 1 + numCols) % numCols);
-        }
-        if (key === 'ArrowRight') {
-          nextIndex =
-            Math.floor(currentIndex / numCols) * numCols +
-            ((currentIndex + 1) % numCols);
-        }
-        // Notes and drums move up/down in opposite directions
-        if (key === 'ArrowDown') {
-          nextIndex =
-            editorType === 'notes'
-              ? (currentIndex - numCols + focusableCells.length) %
-                focusableCells.length
-              : (currentIndex + numCols) % focusableCells.length;
-        }
-        if (key === 'ArrowUp') {
-          nextIndex =
-            editorType === 'notes'
-              ? (currentIndex + numCols) % focusableCells.length
-              : (currentIndex - numCols + focusableCells.length) %
-                focusableCells.length;
-        }
+        const nextIndex = getNextIndex({
+          key,
+          currentIndex,
+          numCols,
+          numCells: focusableCells.length,
+          editorType,
+        });
 
         focusableCells[nextIndex]?.focus();
         break;
@@ -397,7 +418,7 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
                 <button
                   type="button"
                   className={`${styles['cell-outer']} ${
-                    showing ? 'showing' : ''
+                    showing ? SHOWING : ''
                   }`}
                   onClick={() =>
                     MusicRegistry.player.previewNote(
@@ -429,7 +450,7 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
                       <button
                         type="button"
                         className={`${styles[`cell-outer-${interfaceMode}`]} ${
-                          showing ? 'showing' : ''
+                          showing ? SHOWING : ''
                         }`}
                         key={tick}
                         onClick={() => onClickCell(note, tick)}
