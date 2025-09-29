@@ -3,7 +3,6 @@ import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {kitIcons} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import classNames from 'classnames';
-import {Steps} from 'intro.js-react';
 import React, {useEffect, useMemo, useState} from 'react';
 
 import {ChatButtonData, SystemPromptSettings} from '@cdo/apps/aichat/types';
@@ -16,7 +15,6 @@ import StudentRubricView from '@cdo/apps/lab2/views/components/rubrics/StudentRu
 import {commonI18n} from '@cdo/apps/types/locale';
 import {getTypedKeys} from '@cdo/apps/types/utils';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 
 import {useRubric} from '../../rubrics/RubricWrapper';
 import ForTeachersOnly from '../ForTeachersOnly';
@@ -25,8 +23,8 @@ import NavigationArea from '../NavigationArea';
 
 import CopyrightButton from './CopyrightButton';
 import ResourcePanelExtraLinks from './ResourcePanelExtraLinks';
-import {INITIAL_STEP, STEPS} from './resourcePanelTourHelpers';
 import SettingsPanel from './SettingsPanel';
+import {useOnboardingTour} from './useOnboardingTour';
 import {useValidationTour} from './useValidationTour';
 import ValidationPanel from './ValidationPanel';
 import {VersionHistoryPanel} from './VersionHistory';
@@ -80,9 +78,6 @@ type ResourcePanelProps = InstructionsProps & {
   aiTutorChatButtonData?: ChatButtonData[];
 };
 
-const PYTHONLAB_RESOURCE_PANEL_ONBOARDING_TOUR_SEEN =
-  'pythonlabResourcePanelOnboardingTourSeen';
-
 /**
  * Display various instructional resources for the level as tabs.
  */
@@ -120,10 +115,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const channelId = useAppSelector(state => state.lab.channel?.id);
   const appName = instructionsProps.levelProperties.appName;
   const isPythonLab = appName === 'pythonlab';
-  const pythonlabOnboardingTourSeen = tryGetLocalStorage(
-    PYTHONLAB_RESOURCE_PANEL_ONBOARDING_TOUR_SEEN,
-    'no'
-  );
 
   // Use validation tour hook
   const {pythonlabValidationTourSteps} = useValidationTour({
@@ -131,6 +122,11 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     hasValidationConditions,
     validationSettings: instructionsProps.validationSettings,
     setCurrentTab,
+  });
+
+  // Use onboarding tour hook for Python Lab.
+  const {pythonlabOnboardingTourSteps} = useOnboardingTour({
+    isPythonLab,
   });
 
   // Tooltip should disappear quickly.
@@ -239,39 +235,12 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     setCurrentTab(Tabs.Instructions);
   }, [levelId, viewAsUserId]);
 
-  const pytnonlabOnboardingTourSteps = useMemo(
-    () => (
-      <Steps
-        enabled={isPythonLab && pythonlabOnboardingTourSeen !== 'yes'}
-        initialStep={INITIAL_STEP}
-        steps={STEPS}
-        onExit={() => {
-          trySetLocalStorage(
-            PYTHONLAB_RESOURCE_PANEL_ONBOARDING_TOUR_SEEN,
-            'yes'
-          );
-        }}
-        options={{
-          scrollToElement: false,
-          exitOnOverlayClick: false,
-          hidePrev: true,
-          nextLabel: commonI18n.next(),
-          prevLabel: commonI18n.back(),
-          doneLabel: commonI18n.done(),
-          showBullets: false,
-          showStepNumbers: true,
-        }}
-      />
-    ),
-    [isPythonLab, pythonlabOnboardingTourSeen]
-  );
-
   return (
     <div
       id="resource-panel-instructions"
       className={classNames(styles.resourcePanel, className)}
     >
-      {pytnonlabOnboardingTourSteps}
+      {pythonlabOnboardingTourSteps}
       {pythonlabValidationTourSteps}
       <div className={styles.sidebar}>
         <nav id="resource-panel-tabs" className={styles.tabs}>

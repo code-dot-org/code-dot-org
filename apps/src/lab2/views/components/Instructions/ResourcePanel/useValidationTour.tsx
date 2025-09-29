@@ -20,7 +20,8 @@ interface UseValidationTourProps {
 }
 
 // Currently this hook is only used for Python Lab.
-// If we need to use it for other labs, we can add a prop to the hook to specify the lab.
+// If other labs would like to opt in to use this hook, we can update the hook to specify the lab
+// and customize for the lab's validation system.
 export const useValidationTour = ({
   isPythonLab,
   hasValidationConditions,
@@ -49,23 +50,23 @@ export const useValidationTour = ({
 
   // Enable validation tour if conditions are met.
   useEffect(() => {
-    if (isPythonLab) {
-      const shouldShowValidationTour =
-        validationSettings &&
-        hasValidationConditions &&
-        pythonlabValidationTourSeen !== 'yes' &&
-        pythonlabOnboardingTourSeen === 'yes'; // If user hasn't seen both tours, show onboarding tour first.
+    if (!isPythonLab) return;
 
-      if (shouldShowValidationTour) {
-        setValidationTourEnabled(true);
-      }
+    const shouldShowValidationTour =
+      validationSettings &&
+      hasValidationConditions &&
+      pythonlabValidationTourSeen !== 'yes' &&
+      pythonlabOnboardingTourSeen === 'yes'; // If user hasn't seen both tours, show onboarding tour first.
+
+    if (shouldShowValidationTour) {
+      setValidationTourEnabled(true);
     }
   }, [
     validationSettings,
     hasValidationConditions,
     pythonlabValidationTourSeen,
-    isPythonLab,
     pythonlabOnboardingTourSeen,
+    isPythonLab,
   ]);
 
   // Add event listeners for validation tour progression
@@ -208,47 +209,53 @@ export const useValidationTour = ({
   }, [validationTourEnabled, validationTourStep, validationTourStepsEnabled]);
 
   const pythonlabValidationTourSteps = useMemo(
-    () => (
-      <Steps
-        enabled={validationTourEnabled}
-        initialStep={validationTourStep}
-        steps={VALIDATION_TOUR_STEPS}
-        onExit={() => {
-          setValidationTourEnabled(false);
-        }}
-        onComplete={() => {
-          setValidationTourEnabled(false);
-          // User must complete tour so that they don't see it again.
-          trySetLocalStorage(PYTHONLAB_VALIDATION_TOUR_SEEN, 'yes');
-        }}
-        onChange={nextStepIndex => {
-          setValidationTourStep(nextStepIndex);
-        }}
-        onBeforeChange={nextStepIndex => {
-          // Control step progression based on user interactions.
-          if (nextStepIndex === 1 && !validationTourStepsEnabled[0]) {
-            return false; // Prevent going to second step (at index 1) until validation tab is clicked.
-          }
-          if (nextStepIndex === 2 && !validationTourStepsEnabled[1]) {
-            return false; // Prevent going to third step (at index 2) until validate button is clicked.
-          }
-          // Return void (undefined) to allow progression.
-        }}
-        options={{
-          scrollToElement: false,
-          exitOnOverlayClick: false,
-          hidePrev: validationTourStep === 0, // Hide back button only on first step
-          hideNext: false,
-          nextLabel: commonI18n.next(),
-          prevLabel: commonI18n.back(),
-          doneLabel: commonI18n.done(),
-          showBullets: false,
-          showStepNumbers: true,
-          disableInteraction: false, // Allow interaction with page elements
-        }}
-      />
-    ),
-    [validationTourEnabled, validationTourStep, validationTourStepsEnabled]
+    () =>
+      isPythonLab ? (
+        <Steps
+          enabled={validationTourEnabled}
+          initialStep={validationTourStep}
+          steps={VALIDATION_TOUR_STEPS}
+          onExit={() => {
+            setValidationTourEnabled(false);
+          }}
+          onComplete={() => {
+            setValidationTourEnabled(false);
+            // User must complete tour so that they don't see it again.
+            trySetLocalStorage(PYTHONLAB_VALIDATION_TOUR_SEEN, 'yes');
+          }}
+          onChange={nextStepIndex => {
+            setValidationTourStep(nextStepIndex);
+          }}
+          onBeforeChange={nextStepIndex => {
+            // Control step progression based on user interactions.
+            if (nextStepIndex === 1 && !validationTourStepsEnabled[0]) {
+              return false; // Prevent going to second step (at index 1) until validation tab is clicked.
+            }
+            if (nextStepIndex === 2 && !validationTourStepsEnabled[1]) {
+              return false; // Prevent going to third step (at index 2) until validate button is clicked.
+            }
+            // Return void (undefined) to allow progression.
+          }}
+          options={{
+            scrollToElement: false,
+            exitOnOverlayClick: false,
+            hidePrev: validationTourStep === 0, // Hide back button only on first step
+            hideNext: false,
+            nextLabel: commonI18n.next(),
+            prevLabel: commonI18n.back(),
+            doneLabel: commonI18n.done(),
+            showBullets: false,
+            showStepNumbers: true,
+            disableInteraction: false, // Allow interaction with page elements
+          }}
+        />
+      ) : null,
+    [
+      validationTourEnabled,
+      validationTourStep,
+      validationTourStepsEnabled,
+      isPythonLab,
+    ]
   );
 
   return {
