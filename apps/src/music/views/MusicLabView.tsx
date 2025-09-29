@@ -370,6 +370,8 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
                 headerClassName={moduleStyles.headerWithBorder}
                 settings={settings}
                 hideContinueIfDisabled={true}
+                hideNavigation={false}
+                styleNavigationAsBubble={true}
               />
             ) : (
               <PanelContainer
