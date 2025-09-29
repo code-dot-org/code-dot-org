@@ -16,3 +16,10 @@ export interface Activity {
   standards: string;
   tutorialID: string;
 }
+
+export enum ActivityType {
+  HOUR_OF_AI = 'hour-of-ai',
+  HOUR_OF_CODE = 'hour-of-code',
+}
+
+export const ValidActivityTypes = new Set(Object.values(ActivityType));

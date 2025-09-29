@@ -1,1 +1,1 @@
-export {default} from './ActivityCatalog';
+export {default} from './activityCatalog';

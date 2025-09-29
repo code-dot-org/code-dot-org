@@ -1,11 +1,14 @@
 'use client';
-import Input from '@mui/material/Input';
+import FilterAltOutlinedIcon from '@mui/icons-material/FilterAltOutlined';
+import Button from '@mui/material/Button';
+import Grid from '@mui/material/Grid';
 import {FacetResult, InternalTypedDocument, Orama, search} from '@orama/orama';
 import {restore} from '@orama/plugin-data-persistence';
-import {useRouter, useSearchParams} from 'next/navigation';
-import {ChangeEvent, useEffect, useState} from 'react';
+import {useSearchParams} from 'next/navigation';
+import {ChangeEvent, ComponentProps, useEffect, useState} from 'react';
 
-import FacetPanel from '@/components/contentful/activityCatalog/facetPanel/FacetPanel';
+import FacetBar from '@/components/contentful/activityCatalog/facetBar/facetBar';
+import FacetDrawer from '@/components/contentful/activityCatalog/facetDrawer/facetDrawer';
 import Section from '@/components/contentful/section';
 import ActivityCollection from '@/components/csforall/activityCollection/ActivityCollection';
 import {ActivitySchema} from '@/modules/activityCatalog/orama/schema/ActivitySchema';
@@ -33,8 +36,8 @@ const ActivityCatalog = ({
     Record<string, Set<string>>
   >({});
   const [searchTerm, setSearchTerm] = useState<string>('');
+  const [isFacetDrawerOpen, setIsFacetDrawerOpen] = useState<boolean>(false);
 
-  const router = useRouter();
   const searchParams = useSearchParams();
 
   // On load, restore the Orama database from the serialized data from the server on the browser.
@@ -98,7 +101,14 @@ const ActivityCatalog = ({
       }
     });
 
-    router.push(`?term=${encodeURIComponent(searchTerm)}&${params.toString()}`);
+    // Update the URL without reloading the page
+    // Note: Using pushState instead of router.push to avoid extraneous RSC requests
+    // See: https://nextjs.org/docs/app/guides/single-page-applications#shallow-routing-on-the-client
+    window.history.pushState(
+      null,
+      '',
+      `?term=${encodeURIComponent(searchTerm)}&${params.toString()}`,
+    );
   };
 
   /**
@@ -190,12 +200,9 @@ const ActivityCatalog = ({
    * Handles changes to facet selections when a user checks or unchecks a facet checkbox.
    * Updates the selected facets state, serializes the new state to the URL, and triggers a new search.
    * @param facetName - The name of the facet being changed.
-   * @param e - The change event from the checkbox input.
+   * @param facetValue - The value of the facet being toggled.
    */
-  const handleFacetChange = (
-    facetName: string,
-    e: ChangeEvent<HTMLInputElement>,
-  ) => {
+  const handleFacetChange = (facetName: string, facetValue: string) => {
     const newSelectedFacets = {...selectedFacets};
 
     // Initialize the set for this facet if it doesn't exist yet
@@ -205,10 +212,10 @@ const ActivityCatalog = ({
     }
 
     // Add or remove the facet value based on whether the checkbox is checked or unchecked
-    if (e.target.checked) {
-      newSelectedFacets[facetName].add(e.target.name);
+    if (!newSelectedFacets[facetName].has(facetValue)) {
+      newSelectedFacets[facetName].add(facetValue);
     } else {
-      newSelectedFacets[facetName].delete(e.target.name);
+      newSelectedFacets[facetName].delete(facetValue);
     }
 
     // Update the selected facets state
@@ -220,29 +227,51 @@ const ActivityCatalog = ({
     updateSearchResults(searchTerm, newSelectedFacets);
   };
 
-  return (
-    <>
-      <Section>
-        <section style={{display: 'flex', gap: '20px'}}>
-          <div>
-            <Input
-              onChange={handleSearchTermChange}
-              value={searchTerm}
-              placeholder={'Search...'}
-            />
+  const handleClearAll = () => {
+    setSelectedFacets({});
+    setSearchTerm('');
+    serializeClientState('', {});
+    updateSearchResults('', {});
+  };
 
-            <FacetPanel
-              facets={facets}
-              selectedFacets={selectedFacets}
-              onFacetChange={handleFacetChange}
-            />
-          </div>
-          <div style={{width: '100%'}}>
-            <ActivityCollection activities={results} />
-          </div>
-        </section>
-      </Section>
-    </>
+  const toggleFacetDrawer = (isOpen: boolean) => {
+    setIsFacetDrawerOpen(isOpen);
+  };
+
+  const facetBarProps: ComponentProps<typeof FacetBar> = {
+    facets,
+    selectedFacets,
+    searchTerm,
+    onFacetChange: handleFacetChange,
+    onClearAll: handleClearAll,
+    onSearchTermChange: handleSearchTermChange,
+  };
+
+  return (
+    <Section>
+      <FacetDrawer
+        {...facetBarProps}
+        isOpen={isFacetDrawerOpen}
+        onClose={() => toggleFacetDrawer(false)}
+      />
+      <Grid container spacing={3} sx={{justifyContent: 'center'}}>
+        <Grid size={10} sx={{display: {xs: 'none', sm: 'none', md: 'block'}}}>
+          <FacetBar {...facetBarProps} />
+        </Grid>
+
+        <Grid size={2}>
+          <Button
+            onClick={() => toggleFacetDrawer(true)}
+            color={'secondary'}
+            variant={'contained'}
+            size={'small'}
+          >
+            <FilterAltOutlinedIcon /> Filters
+          </Button>
+        </Grid>
+      </Grid>
+      <ActivityCollection activities={results} />
+    </Section>
   );
 };
 
