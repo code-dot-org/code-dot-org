@@ -114,19 +114,18 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const levelName = instructionsProps.levelProperties.name;
   const channelId = useAppSelector(state => state.lab.channel?.id);
   const appName = instructionsProps.levelProperties.appName;
-  const isPythonLab = appName === 'pythonlab';
 
-  // Use validation tour hook
-  const {pythonlabValidationTourSteps} = useValidationTour({
-    isPythonLab,
+  // Use validation tour hook. Currently only used for Python Lab.
+  const {validationTourSteps} = useValidationTour({
+    appName,
     hasValidationConditions,
     validationSettings: instructionsProps.validationSettings,
     setCurrentTab,
   });
 
-  // Use onboarding tour hook for Python Lab.
-  const {pythonlabOnboardingTourSteps} = useOnboardingTour({
-    isPythonLab,
+  // Use onboarding tour hook. Currently only used for Python Lab.
+  const {onboardingTourSteps} = useOnboardingTour({
+    appName,
   });
 
   // Tooltip should disappear quickly.
@@ -240,8 +239,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       id="resource-panel-instructions"
       className={classNames(styles.resourcePanel, className)}
     >
-      {pythonlabOnboardingTourSteps}
-      {pythonlabValidationTourSteps}
+      {onboardingTourSteps}
+      {validationTourSteps}
       <div className={styles.sidebar}>
         <nav id="resource-panel-tabs" className={styles.tabs}>
           {getTypedKeys(availableTabs).map(tab => (

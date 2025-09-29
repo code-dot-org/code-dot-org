@@ -8,18 +8,19 @@ import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 import {STEPS, INITIAL_STEP} from './resourcePanelTourHelpers';
 
 interface UseOnboardingTourProps {
-  isPythonLab: boolean;
+  appName: string;
 }
 
 // Currently this hook is only used for Python Lab.
-// If other labs would like to opt in to use this hook, we can update the hook to specify the lab.
-export const useOnboardingTour = ({isPythonLab}: UseOnboardingTourProps) => {
+// If other labs would like to opt in to use this hook, we can update the hook work with other labs.
+export const useOnboardingTour = ({appName}: UseOnboardingTourProps) => {
+  const isPythonLab = appName === 'pythonlab';
   const pythonlabResourcePanelOnboardingTourSeen = tryGetLocalStorage(
     PYTHONLAB_RESOURCE_PANEL_ONBOARDING_TOUR_SEEN,
     'no'
   );
 
-  const pythonlabOnboardingTourSteps = useMemo(
+  const onboardingTourSteps = useMemo(
     () =>
       isPythonLab ? (
         <Steps
@@ -50,6 +51,6 @@ export const useOnboardingTour = ({isPythonLab}: UseOnboardingTourProps) => {
   );
 
   return {
-    pythonlabOnboardingTourSteps,
+    onboardingTourSteps,
   };
 };

@@ -13,21 +13,21 @@ import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 import {VALIDATION_TOUR_STEPS} from './validationTourHelpers';
 
 interface UseValidationTourProps {
-  isPythonLab: boolean;
+  appName: string;
   hasValidationConditions: boolean;
   validationSettings: ValidationSettings | undefined;
   setCurrentTab: (tab: Tabs) => void;
 }
 
 // Currently this hook is only used for Python Lab.
-// If other labs would like to opt in to use this hook, we can update the hook to specify the lab
-// and customize for the lab's validation system.
+// If other labs would like to opt in to use this hook, we can update the hook to work for their labs.
 export const useValidationTour = ({
-  isPythonLab,
+  appName,
   hasValidationConditions,
   validationSettings,
   setCurrentTab,
 }: UseValidationTourProps) => {
+  const isPythonLab = appName === 'pythonlab';
   const [validationTourEnabled, setValidationTourEnabled] = useState(false);
   const [validationTourStep, setValidationTourStep] = useState(0);
   const validationTabEnum = Tabs.Validation;
@@ -208,7 +208,7 @@ export const useValidationTour = ({
     };
   }, [validationTourEnabled, validationTourStep, validationTourStepsEnabled]);
 
-  const pythonlabValidationTourSteps = useMemo(
+  const validationTourSteps = useMemo(
     () =>
       isPythonLab ? (
         <Steps
@@ -259,6 +259,6 @@ export const useValidationTour = ({
   );
 
   return {
-    pythonlabValidationTourSteps,
+    validationTourSteps,
   };
 };
