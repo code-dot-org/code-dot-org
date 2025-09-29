@@ -77,10 +77,20 @@ describe('TeacherHomepageDrawer', () => {
     reset: jest.fn(),
   };
 
+  const mockResult = {
+    props: JSON.stringify({
+      formQuestions: {},
+      formName: 'name',
+      formVersion: 0,
+      submitApi: 'url',
+    }),
+  };
+
   let sendEventSpy: jest.SpyInstance;
   let schoolInfoSpy: jest.SpyInstance;
   let updateSchoolInfoSpy: jest.SpyInstance;
   let postSpy: jest.SpyInstance;
+  let fetchSpy: jest.SpyInstance;
 
   beforeEach(() => {
     stubRedux();
@@ -90,6 +100,10 @@ describe('TeacherHomepageDrawer', () => {
       .mockImplementation(jest.fn());
     schoolInfoSpy = jest.spyOn(useSchoolInfoModule, 'useSchoolInfo');
     postSpy = jest.spyOn(HttpClient, 'post');
+    fetchSpy = jest.spyOn(HttpClient, 'fetchJson');
+    fetchSpy.mockImplementation((url: string) => {
+      return Promise.resolve({value: mockResult, response: new Response()});
+    });
   });
 
   afterEach(() => {
@@ -219,5 +233,13 @@ describe('TeacherHomepageDrawer', () => {
     await act(async () => await fireEvent.click(primaryButton));
     expect(sendEventSpy).toHaveBeenCalled();
     expect(postSpy).toHaveBeenCalled();
+  });
+
+  it('renders Foorm when NpsOpen is true', async () => {
+    schoolInfoSpy.mockReturnValue(mockSchoolInfo);
+    renderComponent(false, false, false, true, schoolInfo);
+    await act(async () => await new Promise(process.nextTick));
+    expect(fetchSpy).toHaveBeenCalled();
+    screen.getByText('There is no visible page or question in the survey.');
   });
 });
