@@ -17,7 +17,7 @@ interface UseValidationTourProps {
   hasValidationConditions: boolean;
   validationSettings: ValidationSettings | undefined;
   setCurrentTab: (tab: Tabs) => void;
-  onValidate: () => void | undefined;
+  onValidate: (() => void) | undefined;
 }
 
 // Currently this hook is only used for Python Lab.
