@@ -86,14 +86,13 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
 
     const onEditorUpdate = EditorView.updateListener.of(
       (update: ViewUpdate) => {
-        if (update.docChanged) {
-          onCodeChange(update.state.doc.toString());
-        }
+        onCodeChange(update.state.doc.toString());
       }
     );
 
     const editorExtensions = [
       ...editorConfig,
+
       onEditorUpdate,
       autocompletion(),
       ...editorConfigExtensions,

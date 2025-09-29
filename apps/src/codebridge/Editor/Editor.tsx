@@ -1,11 +1,10 @@
 import {BodyOneText} from '@code-dot-org/component-library/typography';
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
-import AiTutorChatContextButton from '@codebridge/Editor/AiTutorChatContextButton';
 import {esLint} from '@codemirror/lang-javascript';
 import {LanguageSupport} from '@codemirror/language';
 import {linter, lintGutter} from '@codemirror/lint';
-import {EditorState, Extension, StateField} from '@codemirror/state';
-import {EditorView, showTooltip, Tooltip} from '@codemirror/view';
+import {Extension} from '@codemirror/state';
+import {EditorView} from '@codemirror/view';
 import js from '@eslint/js';
 import {
   colorPicker,
@@ -14,9 +13,7 @@ import {
 import * as eslint from 'eslint-linter-browserify';
 import globals from 'globals';
 import React, {useCallback, useMemo} from 'react';
-import ReactDOM from 'react-dom';
 
-import {addItemToUserAddedSelectionContext} from '@cdo/apps/aichat/redux/slice';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {getActiveFileForSource} from '@cdo/apps/lab2/projects/utils';
 import {saveFileThunk} from '@cdo/apps/lab2/redux/lab2ProjectReduxThunks';
@@ -29,6 +26,8 @@ import {
   enableUserAddedSelectionContext,
   viewableImageFileType,
 } from '../utils';
+
+import {getAddToAiTutorExtension} from './addToAiTutorExtension';
 
 import moduleStyles from './styles/editor.module.scss';
 
@@ -60,64 +59,13 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
       file?.name &&
       enableUserAddedSelectionContext(levelProperties.appName, file?.url)
     ) {
-      console.log('adding tooltip?');
-      const getCursorTooltips = (state: EditorState) => {
-        return state.selection.ranges
-          .filter(range => !range.empty)
-          .map(range => {
-            const startingPosition = state.selection.main.from;
-            const endingPosition = state.selection.main.to;
-            const startingLine = state.doc.lineAt(startingPosition).number;
-            const endingLine = state.doc.lineAt(endingPosition).number;
-            const selection = state.doc.sliceString(
-              startingPosition,
-              endingPosition
-            );
-            const selectionDisplayName = `${file.name} (${startingLine}-${endingLine})`;
-            return {
-              pos: range.to,
-              above: false,
-              strictSide: true,
-              arrow: false,
-              clip: false,
-              create: () => {
-                const dom = document.createElement('div');
-                dom.className = moduleStyles.aiTutorTooltip;
-                ReactDOM.render(
-                  <AiTutorChatContextButton
-                    saveSelectionContext={() =>
-                      dispatch(
-                        addItemToUserAddedSelectionContext({
-                          sourceCode: selection,
-                          displayName: selectionDisplayName,
-                          lineReference: {start: startingLine, end: endingLine},
-                          filename: file.name,
-                        })
-                      )
-                    }
-                  />,
-                  dom
-                );
-                return {dom};
-              },
-            };
-          });
-      };
-
-      const cursorTooltipField = StateField.define<readonly Tooltip[]>({
-        create: getCursorTooltips,
-
-        update(tooltips, tr) {
-          if (!tr.docChanged && !tr.selection) return tooltips;
-          return getCursorTooltips(tr.state);
-        },
-
-        provide: f => showTooltip.computeN([f], state => state.field(f)),
-      });
-      extensions.push(cursorTooltipField);
-    } else {
-      console.log('not adding tooltip');
+      const addToAiTutorExtension = getAddToAiTutorExtension(
+        file.name,
+        dispatch
+      );
+      extensions.push(addToAiTutorExtension);
     }
+
     if (file?.language && langMapping[file.language]) {
       extensions.push(langMapping[file.language]);
       if (file.language === 'js') {
