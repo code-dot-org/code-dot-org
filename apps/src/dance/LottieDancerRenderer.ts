@@ -66,6 +66,7 @@ export default class LottieDancerRenderer {
   private readonly skeletonName: string;
   private readonly variant: string;
   private readonly dancerName: string;
+  private cachedAnimationData: {[key: string]: LottieJSON} = {};
 
   // Optionally reported by getCompSize()
   private compW?: number;
@@ -97,6 +98,7 @@ export default class LottieDancerRenderer {
     this.dancerName =
       (appConfig.getValue('dancer') as string)?.toLowerCase() ||
       resolvedDancerName;
+    this.cachedAnimationData = {};
   }
 
   /** DanceParty hands us a p5.Graphics 2D context. */
@@ -114,46 +116,51 @@ export default class LottieDancerRenderer {
     }
 
     const move = String(danceMove).toLowerCase();
-    const jsonUrl = this._resolveAnimationUrl(move);
-    const metadataUrl = this._resolveMetadataUrl();
+    let animData: LottieJSON;
+    if (this.cachedAnimationData[move]) {
+      animData = this.cachedAnimationData[move];
+    } else {
+      const jsonUrl = this._resolveAnimationUrl(move);
+      const metadataUrl = this._resolveMetadataUrl();
 
-    const [animDataRaw, metadataJson] = await Promise.all([
-      this._fetchJson<LottieJSON>(jsonUrl),
-      this._fetchJson<Record<string, unknown>>(metadataUrl),
-    ]);
+      animData = await this._fetchJson<LottieJSON>(jsonUrl);
+      const metadataJson = await this._fetchJson<Record<string, unknown>>(
+        metadataUrl
+      );
 
-    this.palette = this._normalizePalette(metadataJson);
+      this.palette = this._normalizePalette(metadataJson);
 
-    // Deep clone; we will mutate the JSON tree (recoloring, inserting head image).
-    const animData: LottieJSON = JSON.parse(JSON.stringify(animDataRaw));
+      // Recolor assets based on hard-coded accessory-name rules.
+      this._applyColorMapping(animData, this.palette);
 
-    // Recolor assets based on hard-coded accessory-name rules.
-    this._applyColorMapping(animData, this.palette);
-
-    // Replace vector head with an image, when head.png is available.
-    const headInfo = await this._fetchHeadImageInfo();
-    if (headInfo) {
-      const headPre = this._findHeadPrecompLayerDeep(animData);
-      if (headPre?.refId) {
-        const headComp = this._getAssetById(animData, headPre.refId);
-        if (headComp && Array.isArray(headComp.layers)) {
-          const {insertIndex, headKs} = this._hideVectorHeadInComp(headComp);
-          const assetId = this._ensureHeadImageAsset(
-            animData,
-            headInfo.dataUrl,
-            headInfo.w,
-            headInfo.h
-          );
-          this._insertHeadImageLayer(
-            headComp,
-            insertIndex,
-            assetId,
-            headInfo.w,
-            headInfo.h,
-            headKs
-          );
+      // Replace vector head with an image, when head.png is available.
+      const headInfo = await this._fetchHeadImageInfo();
+      if (headInfo) {
+        const headPre = this._findHeadPrecompLayerDeep(animData);
+        if (headPre?.refId) {
+          const headComp = this._getAssetById(animData, headPre.refId);
+          if (headComp && Array.isArray(headComp.layers)) {
+            const {insertIndex, headKs} = this._hideVectorHeadInComp(headComp);
+            const assetId = this._ensureHeadImageAsset(
+              animData,
+              headInfo.dataUrl,
+              headInfo.w,
+              headInfo.h
+            );
+            this._insertHeadImageLayer(
+              headComp,
+              insertIndex,
+              assetId,
+              headInfo.w,
+              headInfo.h,
+              headKs
+            );
+          }
         }
       }
+      // Memoize transformed Lottie JSON per move (in-memory cache) so subsequent setSource calls skip recolor/head work.
+      // This is useful if the same dance move is used later in a song, or if there are multiple generated dancers using the same move.
+      this.cachedAnimationData[move] = animData;
     }
 
     // Lottie instance bound to our canvas 2D context
@@ -180,10 +187,15 @@ export default class LottieDancerRenderer {
     return this.compW && this.compH ? {w: this.compW, h: this.compH} : null;
   }
 
-  renderFrame(frameIndex: number, mirror: boolean = false): void {
-    if (!this.anim || !this.ctx || this.totalFrames === null) return;
-    const tf = Math.max(1, this.totalFrames || 1);
-    const frame = Math.floor(((frameIndex % tf) + tf) % tf);
+  renderFrame(frameIndex: number): void {
+    if (!this.anim || !this.ctx || this.totalFrames === null) {
+      return;
+    }
+    const totalFrames = Math.max(1, this.totalFrames || 1);
+    const frame = Math.floor(
+      ((frameIndex % totalFrames) + totalFrames) % totalFrames
+    );
+
     this.anim.goToAndStop(frame, true);
   }
 
