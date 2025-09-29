@@ -1433,7 +1433,6 @@ end
 
 Then /^element with ID "(.*)" contains text "(.*)"$/ do |element_id, expected_text|
   element = @browser.find_element(id: element_id)
-  puts "element text: " + element.text + " expected text: " + expected_text
   expect(element.text).to include(expected_text)
 end
 
