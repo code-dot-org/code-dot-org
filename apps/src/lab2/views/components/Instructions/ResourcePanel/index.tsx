@@ -281,18 +281,54 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   useEffect(() => {
     if (!validationTourEnabled) return;
 
-    const handleValidationTabClick = () => {
+    const handleValidationTabActivation = () => {
       if (validationTourStep === 0) {
         setCurrentTab(Tabs.Validation);
         // Enable step 1 (next button for step 1)
         setValidationTourStepsEnabled(prev => [true, false, true]);
+
+        // Return focus to the tour panel for keyboard users
+        setTimeout(() => {
+          const nextButton = document.querySelector(
+            '.introjs-nextbutton'
+          ) as HTMLButtonElement;
+          if (nextButton) {
+            nextButton.focus();
+          }
+        }, 100);
       }
     };
 
-    const handleValidateButtonClick = () => {
+    const handleValidateButtonActivation = () => {
       if (validationTourStep === 1) {
         // Enable step 2 (next button for step 2)
         setValidationTourStepsEnabled(prev => [true, true, true]);
+
+        // Return focus to the tour panel for keyboard users
+        setTimeout(() => {
+          const nextButton = document.querySelector(
+            '.introjs-nextbutton'
+          ) as HTMLButtonElement;
+          if (nextButton) {
+            nextButton.focus();
+          }
+        }, 100);
+      }
+    };
+
+    const handleValidationTabKeydown = (event: KeyboardEvent) => {
+      // Handle both Enter and Space key activation
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        handleValidationTabActivation();
+      }
+    };
+
+    const handleValidateButtonKeydown = (event: KeyboardEvent) => {
+      // Handle both Enter and Space key activation
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        handleValidateButtonActivation();
       }
     };
 
@@ -304,12 +340,23 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     );
 
     if (validationTabElement) {
-      validationTabElement.addEventListener('click', handleValidationTabClick);
+      validationTabElement.addEventListener(
+        'click',
+        handleValidationTabActivation
+      );
+      validationTabElement.addEventListener(
+        'keydown',
+        handleValidationTabKeydown
+      );
     }
     if (validateButtonElement) {
       validateButtonElement.addEventListener(
         'click',
-        handleValidateButtonClick
+        handleValidateButtonActivation
+      );
+      validateButtonElement.addEventListener(
+        'keydown',
+        handleValidateButtonKeydown
       );
     }
 
@@ -317,13 +364,21 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       if (validationTabElement) {
         validationTabElement.removeEventListener(
           'click',
-          handleValidationTabClick
+          handleValidationTabActivation
+        );
+        validationTabElement.removeEventListener(
+          'keydown',
+          handleValidationTabKeydown
         );
       }
       if (validateButtonElement) {
         validateButtonElement.removeEventListener(
           'click',
-          handleValidateButtonClick
+          handleValidateButtonActivation
+        );
+        validateButtonElement.removeEventListener(
+          'keydown',
+          handleValidateButtonKeydown
         );
       }
     };
@@ -420,6 +475,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
           doneLabel: commonI18n.done(),
           showBullets: false,
           showStepNumbers: true,
+          disableInteraction: false, // Allow interaction with page elements
         }}
       />
     ),
