@@ -13,6 +13,8 @@ import {
 } from './PersonalizationAnswers';
 import PersonalizationQuestion from './PersonalizationQuestion';
 import {PERSONALIZATION_PROMPTS} from './personalizationQuestions';
+import PersonalizationResults from './PersonalizationResults';
+import {TEACHING_STYLES} from './PersonalizationResultsPersonas';
 import {saveTeachingProfileData} from './teachingProfileApi';
 
 import style from './personalization-information.module.scss';
@@ -32,6 +34,7 @@ interface PersonalizationData {
 const PersonalizationCollectorContainer: React.FC = () => {
   const [questionsNumber, setQuestionsNumber] = React.useState(0);
   const [isSaving, setIsSaving] = React.useState(false);
+  const [showResults, setShowResults] = React.useState(false);
   const [isLoading, setIsLoading] = React.useState(true);
   const [personalizationData, setPersonalizationData] = React.useState<
     Partial<PersonalizationData>
@@ -76,6 +79,12 @@ const PersonalizationCollectorContainer: React.FC = () => {
   }, []);
 
   const onCarouselPress = async (direction: number) => {
+    {
+      console.log(TEACHING_STYLES[0]);
+    }
+    {
+      console.log(TEACHING_STYLES[0].name);
+    }
     if (direction === NEXT) {
       setIsSaving(true);
       try {
@@ -99,6 +108,7 @@ const PersonalizationCollectorContainer: React.FC = () => {
         setIsSaving(true);
         try {
           await saveTeachingProfileData(personalizationData);
+          setShowResults(true);
         } catch (error) {
           console.error('Failed to save final teaching profile data:', error);
         } finally {
@@ -204,6 +214,8 @@ const PersonalizationCollectorContainer: React.FC = () => {
     <div className={style.carouselContainer}>
       {isLoading ? (
         <div>Loading...</div>
+      ) : showResults ? (
+        <PersonalizationResults teachingStyle={TEACHING_STYLES[0]} />
       ) : (
         <>
           <PersonalizationQuestion questionNumber={questionsNumber} />
