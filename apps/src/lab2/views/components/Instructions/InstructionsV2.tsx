@@ -190,7 +190,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
             levelProperties={levelProperties}
             handleInstructionsTextClick={handleInstructionsTextClick}
             hideContinueIfDisabled={hideContinueIfDisabled}
-            bubble
+            styleAsBubble
           />
         )}
       </div>

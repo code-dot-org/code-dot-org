@@ -371,7 +371,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
                 settings={settings}
                 hideContinueIfDisabled={true}
                 hideNavigation={false}
-                navigationBubble={true}
+                styleNavigationAsBubble={true}
               />
             ) : (
               <PanelContainer

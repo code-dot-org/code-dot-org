@@ -32,7 +32,7 @@ interface NavigationAreaProps {
   hideContinueIfDisabled?: boolean;
   className?: string;
   overrideTheme?: Theme;
-  bubble?: boolean;
+  styleAsBubble?: boolean;
 }
 
 /**
@@ -48,7 +48,7 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
   hideContinueIfDisabled,
   className,
   overrideTheme,
-  bubble = false,
+  styleAsBubble = false,
 }) => {
   const {
     id,
@@ -125,18 +125,19 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
   // Determines if the submit button should be enabled and what tooltip to show if any.
   const [submitEnabled, submitTooltip] = useMemo(() => {
     if (!submittable) {
-      return [false, undefined] as const;
+      return [false, undefined];
     }
     if (hasSubmitted) {
-      return [true, undefined] as const;
+      return [true, undefined];
     }
     if (hasValidationConditions && !validationSatisfied) {
-      return [false, lab2I18n.toSubmitValidate()] as const;
+      return [false, lab2I18n.toSubmitValidate()];
     }
-    if (!disableEditRunForSubmission && (!hasRun || !hasEdited)) {
-      return [false, lab2I18n.toSubmitEditRun()] as const;
+    if (disableEditRunForSubmission || (hasRun && hasEdited)) {
+      return [true, undefined];
     }
-    return [true, undefined] as const;
+    const key = hasEdited ? 'Run' : hasRun ? 'Edit' : 'EditRun';
+    return [false, lab2I18n[`toSubmit${key}`]()];
   }, [
     submittable,
     hasSubmitted,
@@ -165,9 +166,9 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
       canContinue = hasRun;
     }
     const key = action
-      ? (`to${hasNextLevel ? 'Continue' : 'Finish'}${action || ''}` as const)
+      ? (`to${hasNextLevel ? 'Continue' : 'Finish'}${action}` as const)
       : undefined;
-    return [canContinue, key ? lab2I18n[key]() : undefined] as const;
+    return [canContinue, key ? lab2I18n[key]() : undefined];
   }, [
     submittable,
     hasNextLevel,
@@ -179,7 +180,7 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
     hasRun,
   ]);
 
-  // If we can't show the continue button or the feedback message, don't render anything so the bubble isn't shown.
+  // If we can't show the continue button or the feedback message and the level is not submittable, don't render anything to avoid displaying a blank space.
   if (
     !submittable &&
     hideContinueIfDisabled &&
@@ -200,7 +201,7 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
     >
       <div
         id="instructions-feedback-message"
-        className={classNames(bubble && moduleStyles.bubble)}
+        className={classNames(styleAsBubble && moduleStyles.bubble)}
         data-theme={overrideTheme || defaultTheme}
       >
         {feedbackMessage && (
@@ -212,26 +213,27 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
             />
           </div>
         )}
-        {submittable ? (
-          <SubmitButton
-            levelId={id}
-            appName={appName}
-            className={moduleStyles.buttonInstruction}
-            enabled={submitEnabled}
-            tooltipMessage={submitTooltip}
-          />
-        ) : (
-          <ContinueButton
-            disabled={!continueEnabled}
-            type={type}
-            color={color}
-            iconRight={iconRight}
-            text={hasNextLevel ? commonI18n.continue() : commonI18n.finish()}
-            tooltipMessage={continueTooltip}
-            hideIfDisabled={hideContinueIfDisabled}
-          />
-        )}
-
+        <div id="resource-panel-navigation-button">
+          {submittable ? (
+            <SubmitButton
+              levelId={id}
+              appName={appName}
+              className={moduleStyles.buttonInstruction}
+              enabled={submitEnabled}
+              tooltipMessage={submitTooltip}
+            />
+          ) : (
+            <ContinueButton
+              disabled={!continueEnabled}
+              type={type}
+              color={color}
+              iconRight={iconRight}
+              text={hasNextLevel ? commonI18n.continue() : commonI18n.finish()}
+              tooltipMessage={continueTooltip}
+              hideIfDisabled={hideContinueIfDisabled}
+            />
+          )}
+        </div>
         {showTts && feedbackMessage && !hideContinueIfDisabled && (
           <div className={moduleStyles.ttsContainer}>
             <TextToSpeech text={feedbackMessage} />

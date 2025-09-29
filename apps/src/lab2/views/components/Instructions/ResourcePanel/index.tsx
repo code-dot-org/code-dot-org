@@ -86,7 +86,8 @@ type ResourcePanelProps = InstructionsProps & {
   aiTutorSystemPromptSettings?: SystemPromptSettings;
   aiTutorMultimodalEnabled?: boolean;
   aiTutorChatButtonData?: ChatButtonData[];
-  navigationBubble?: boolean;
+  /** If the navigation area in the footer should be styled as a "bubble", like instructions content. */
+  styleNavigationAsBubble?: boolean;
 };
 
 const PYTHONLAB_RESOURCE_PANEL_ONBOARDING_TOUR_SEEN =
@@ -108,7 +109,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   aiTutorChatButtonData,
   // Default hideNavigation to true since most labs pin the navigation area to bottom.
   hideNavigation: hideInstructionsNavigation = true,
-  navigationBubble = false,
+  styleNavigationAsBubble = false,
   ...instructionsProps
 }) => {
   const {theme} = useTheme();
@@ -364,7 +365,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
           {(hideInstructionsNavigation || currentTab !== Tabs.Instructions) && (
             <NavigationArea
               {...instructionsProps}
-              bubble={navigationBubble}
+              styleAsBubble={styleNavigationAsBubble}
               className={styles.navigationFooter}
             />
           )}
