@@ -1,0 +1,34 @@
+{
+  "name": "artificial-intelligence-foundations-v2-2025",
+  "script_names": [
+    "aif1-v2-2025",
+    "aif2-v2-2025",
+    "aif3-v2-2025",
+    "aif4-v2-2025",
+    "aif5-v2-2025",
+    "aif6-v2-2025"
+  ],
+  "original_script_names": [
+    "aif1-v2-2025",
+    "aif2-v2-2025",
+    "aif3-v2-2025",
+    "aif4-v2-2025",
+    "aif5-v2-2025",
+    "aif6-v2-2025"
+  ],
+  "published_state": "in_development",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "artificial-intelligence-foundations-v2",
+    "numbered_units": "auto",
+    "version_year": "2025"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

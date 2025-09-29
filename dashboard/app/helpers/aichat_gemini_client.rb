@@ -44,7 +44,11 @@ class AichatGeminiClient < AichatAiClient
       generationConfig: {
         temperature: config[:temperature],
         responseMimeType: response_mime_type,
-        responseJsonSchema: response_json_schema
+        responseJsonSchema: response_json_schema,
+        # Set thinking budget to 0 to disable "thinking".
+        thinkingConfig: {
+          thinkingBudget: 0
+        }
       }.compact, # Use compact to remove null responseMimeType / responseJsonSchema
       system_instruction: {
         parts: format_parts(config[:systemInstructions])

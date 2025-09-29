@@ -64,6 +64,8 @@ experiments.LOCALIZEJS = 'localizejs';
 experiments.LAB2_INSTRUCTIONS_V2 = 'lab2-instructions-v2';
 // Use the new lab2 tabbed resource panel
 experiments.LAB2_RESOURCE_PANEL = 'lab2-resource-panel';
+// Show AI Tutor in legacy labs
+experiments.LEGACY_LAB_AI_TUTOR = 'legacy-lab-ai-tutor';
 
 /**
  * This was a gamified version of the finish dialog, built in 2018,

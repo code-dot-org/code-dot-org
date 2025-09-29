@@ -87,9 +87,9 @@ class UnitGroupTest < ActiveSupport::TestCase
 
   test "should serialize to json" do
     unit_group = create(:unit_group, name: 'my-unit-group', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, instruction_type: Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.teacher_led)
-    create(:unit_group_unit, unit_group: unit_group, position: 1, script: create(:script, name: "unit1", published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable))
-    create(:unit_group_unit, unit_group: unit_group, position: 2, script: create(:script, name: "unit2", published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable))
-    create(:unit_group_unit, unit_group: unit_group, position: 3, script: create(:script, name: "unit3", published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable))
+    create(:unit_group_unit, unit_group: unit_group, position: 1, script: create(:script, name: "unit1"))
+    create(:unit_group_unit, unit_group: unit_group, position: 2, script: create(:script, name: "unit2"))
+    create(:unit_group_unit, unit_group: unit_group, position: 3, script: create(:script, name: "unit3"))
 
     serialization = unit_group.serialize
 
@@ -105,9 +105,9 @@ class UnitGroupTest < ActiveSupport::TestCase
   test "should serialize resources to json" do
     course_version = create(:course_version)
     unit_group = create(:unit_group, name: 'my-unit-group', course_version: course_version, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, instruction_type: Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.teacher_led)
-    create(:unit_group_unit, unit_group: unit_group, position: 1, script: create(:script, name: "unit1", published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable))
-    create(:unit_group_unit, unit_group: unit_group, position: 2, script: create(:script, name: "unit2", published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable))
-    create(:unit_group_unit, unit_group: unit_group, position: 3, script: create(:script, name: "unit3", published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable))
+    create(:unit_group_unit, unit_group: unit_group, position: 1, script: create(:script, name: "unit1"))
+    create(:unit_group_unit, unit_group: unit_group, position: 2, script: create(:script, name: "unit2"))
+    create(:unit_group_unit, unit_group: unit_group, position: 3, script: create(:script, name: "unit3"))
     unit_group.resources = [create(:resource, course_version: course_version), create(:resource, course_version: course_version)]
     unit_group.student_resources = [create(:resource, course_version: course_version)]
 
@@ -1063,7 +1063,6 @@ class UnitGroupTest < ActiveSupport::TestCase
     assert_equal ['csx1', 'csx2', 'csx3'], csx.units_for_user(levelbuilder).map(&:name)
 
     csx1.update!(hide_within_course: true)
-    csx2.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development)
     csx.reload
 
     assert_equal ['csx2', 'csx3'], csx.units_for_user(nil).map(&:name)

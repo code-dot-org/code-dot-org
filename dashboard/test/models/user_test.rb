@@ -4364,48 +4364,80 @@ class UserTest < ActiveSupport::TestCase
     assert_equal new_us_state, student.reload.us_state
   end
 
-  test "teacher with oauth account can access AI Chat" do
-    teacher = create(:teacher, :google_sso_provider)
-    assert teacher.teacher_can_access_ai_chat?
-  end
+  describe 'Access to AI Chat' do
+    context 'when user is a teacher with oauth account' do
+      let(:teacher) {create(:teacher, :google_sso_provider)}
 
-  test "teacher with LTI account can access AI Chat" do
-    teacher = create(:teacher, :with_lti_auth)
-    assert teacher.teacher_can_access_ai_chat?
-  end
+      it 'can access AI Chat' do
+        _(teacher.teacher_can_access_ai_chat?).must_equal true
+      end
+    end
 
-  test "teacher with AUTHORIZED_TEACHER permissions can access AI Chat" do
-    teacher = create(:authorized_teacher)
-    assert teacher.teacher_can_access_ai_chat?
-  end
+    context 'when user is a teacher with LTI account' do
+      let(:teacher) {create(:teacher, :with_lti_auth)}
 
-  test "teacher with email account cannot access AI Chat" do
-    teacher = create(:teacher)
-    refute teacher.teacher_can_access_ai_chat?
-  end
+      it 'can access AI Chat' do
+        _(teacher.teacher_can_access_ai_chat?).must_equal true
+      end
+    end
 
-  test "student with email account cannot access AI Chat" do
-    student = create(:student)
-    refute student.student_can_access_ai_chat?
-  end
+    context 'when user is a teacher with AUTHORIZED_TEACHER permissions' do
+      let(:teacher) {create(:authorized_teacher)}
 
-  test "student with verified teacher and in appropriate section can access AI Chat" do
-    unit_group = create(:unit_group, name: 'exploring-gen-ai-2024')
-    teacher = create(:authorized_teacher)
-    section = create(:section, teacher: teacher, unit_group: unit_group)
-    student = create(:student)
-    create(:follower, section: section, student_user: student, user: teacher)
+      it 'can access AI Chat' do
+        _(teacher.teacher_can_access_ai_chat?).must_equal true
+      end
+    end
 
-    assert student.student_can_access_ai_chat?
-  end
+    context 'when user is a teacher with email account' do
+      let(:teacher) {create(:teacher)}
 
-  test "student with verified teacher but not in appropriate section cannot access AI Chat" do
-    teacher = create(:authorized_teacher)
-    section = create(:section, teacher: teacher)
-    student = create(:student)
-    create(:follower, section: section, student_user: student, user: teacher)
+      it 'cannot access AI Chat' do
+        _(teacher.teacher_can_access_ai_chat?).must_equal false
+      end
+    end
 
-    refute student.student_can_access_ai_chat?
+    context 'when user is a student with email account' do
+      let(:student) {create(:student)}
+
+      it 'cannot access AI Chat' do
+        _(student.student_can_access_ai_chat?).must_equal false
+      end
+    end
+
+    context 'when user is a student with verified teacher and in appropriate section' do
+      let(:unit_group) {create(:unit_group, name: 'exploring-gen-ai-2024')}
+      let(:teacher) {create(:authorized_teacher)}
+      let(:section) {create(:section, teacher: teacher, unit_group: unit_group)}
+      let(:student) {create(:student)}
+      let!(:follower) {create(:follower, section: section, student_user: student, user: teacher)}
+
+      it 'can access AI Chat' do
+        _(student.student_can_access_ai_chat?).must_equal true
+      end
+    end
+
+    context 'when user is a student with verified teacher but not in appropriate section' do
+      let(:teacher) {create(:authorized_teacher)}
+      let(:section) {create(:section, teacher: teacher)}
+      let(:student) {create(:student)}
+      let!(:follower) {create(:follower, section: section, student_user: student, user: teacher)}
+
+      it 'cannot access AI Chat' do
+        _(student.student_can_access_ai_chat?).must_equal false
+      end
+    end
+
+    context 'when user is a student with regular teacher' do
+      let(:teacher) {create(:teacher)}
+      let(:section) {create(:section, teacher: teacher)}
+      let(:student) {create(:student)}
+      let!(:follower) {create(:follower, section: section, student_user: student, user: teacher)}
+
+      it 'does not have access' do
+        _(student.student_can_access_ai_chat?).must_equal false
+      end
+    end
   end
 
   describe '#latest_parental_permission_request' do

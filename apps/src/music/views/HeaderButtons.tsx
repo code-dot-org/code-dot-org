@@ -1,12 +1,12 @@
 import {Button} from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import Typography from '@code-dot-org/component-library/typography';
 import React, {memo, useCallback, useContext} from 'react';
 import {useSelector} from 'react-redux';
 
 import {useBlocklySettings} from '@cdo/apps/lab2/hooks/useBlocklySettings';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
+import IconButtonWithTooltip from '@cdo/apps/lab2/views/components/IconButtonWithTooltip';
 import SettingsButton from '@cdo/apps/lab2/views/components/Settings/SettingsButton';
 import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
 import {commonI18n} from '@cdo/apps/types/locale';
@@ -55,62 +55,6 @@ const CurrentPack: React.FunctionComponent<CurrentPackProps> = ({
     </div>
   );
 };
-
-interface IconButtonProps {
-  id: string;
-  i18nLabel: string;
-  icon: string;
-  disabled?: boolean;
-  onClick: () => void;
-  containerRef: React.RefObject<HTMLDivElement>;
-}
-
-const IconButton: React.FunctionComponent<IconButtonProps> = memo(
-  ({id, i18nLabel, icon, disabled = false, onClick, containerRef}) => {
-    const handleClick = useCallback(
-      (
-        e:
-          | React.MouseEvent<HTMLButtonElement, MouseEvent>
-          | React.MouseEvent<HTMLAnchorElement, MouseEvent>
-      ) => {
-        onClick();
-        // Adding this to prevent focus from jumping to the next button
-        // and showing its tooltip when a button is disabled after click.
-        // This moves focus to the container div instead.
-        setTimeout(() => {
-          if (containerRef.current) {
-            containerRef.current.focus();
-          }
-        }, 0);
-      },
-      [onClick, containerRef]
-    );
-
-    return (
-      <WithTooltip
-        tooltipProps={{
-          tooltipId: `${id}-tooltip`,
-          text: i18nLabel,
-          direction: 'onBottom',
-          size: 'xs',
-          hideTail: true,
-        }}
-      >
-        <Button
-          id={`${id}-button`}
-          ariaLabel={i18nLabel}
-          type="tertiary"
-          color="black"
-          size="xs"
-          isIconOnly
-          icon={{iconStyle: 'solid', iconName: icon}}
-          disabled={disabled}
-          onClick={handleClick}
-        />
-      </WithTooltip>
-    );
-  }
-);
 
 interface HeaderButtonsProps {
   onClickUndo: () => void;
@@ -207,10 +151,16 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
         <>
           <CurrentPack packFolder={packFolder} />
           {/* Start Over Button */}
-          <IconButton
+          <IconButtonWithTooltip
             id="start-over"
-            i18nLabel={musicI18n.startOver()}
-            icon="refresh"
+            label={musicI18n.startOver()}
+            icon={{iconName: 'refresh', iconStyle: 'solid'}}
+            type="tertiary"
+            color="black"
+            buttonSize="xs"
+            tooltipSize="xs"
+            tooltipDirection="onBottom"
+            hideTooltipTail={true}
             onClick={onClickStartOver}
             containerRef={containerRef}
           />
@@ -239,29 +189,47 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
       {!readOnlyWorkspace && (
         <>
           {/* Undo Button */}
-          <IconButton
+          <IconButtonWithTooltip
             id="undo"
-            i18nLabel={musicI18n.undo()}
-            icon="undo"
+            label={musicI18n.undo()}
+            icon={{iconName: 'undo', iconStyle: 'solid'}}
+            type="tertiary"
+            color="black"
+            buttonSize="xs"
+            tooltipSize="xs"
+            tooltipDirection="onBottom"
+            hideTooltipTail={true}
             disabled={!canUndo}
             onClick={() => onClickUndoRedo('undo')}
             containerRef={containerRef}
           />
           {/* Redo Button */}
-          <IconButton
+          <IconButtonWithTooltip
             id="redo"
-            i18nLabel={musicI18n.redo()}
-            icon="redo"
+            label={musicI18n.redo()}
+            icon={{iconName: 'redo', iconStyle: 'solid'}}
+            type="tertiary"
+            color="black"
+            buttonSize="xs"
+            tooltipSize="xs"
+            tooltipDirection="onBottom"
+            hideTooltipTail={true}
             disabled={!canRedo}
             onClick={() => onClickUndoRedo('redo')}
             containerRef={containerRef}
           />
           {/* Documentation Button */}
           {Blockly.showBlockHelp && (
-            <IconButton
+            <IconButtonWithTooltip
               id="documentation"
-              i18nLabel={musicI18n.documentation()}
-              icon="book"
+              label={musicI18n.documentation()}
+              icon={{iconName: 'book', iconStyle: 'solid'}}
+              type="tertiary"
+              color="black"
+              buttonSize="xs"
+              tooltipSize="xs"
+              tooltipDirection="onBottom"
+              hideTooltipTail={true}
               onClick={onClickDocumentation}
               containerRef={containerRef}
             />

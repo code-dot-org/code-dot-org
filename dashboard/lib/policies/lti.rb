@@ -118,13 +118,13 @@ class Policies::Lti
           type: "LtiResourceLinkRequest",
           label: "Launch Code.org",
           placements: ["link_selection"],
-          icon_uri: CDO.studio_url('/images/logo.svg', CDO.default_scheme),
+          icon_uri: ApplicationController.helpers.image_url('logo.svg', host: CDO.studio_url('', CDO.default_scheme)),
         },
         {
           type: "LtiResourceLinkRequest",
           label: "Launch Code.org",
           placements: ["assignment_selection"],
-          icon_uri: CDO.studio_url('/images/logo.svg', CDO.default_scheme),
+          icon_uri: ApplicationController.helpers.image_url('logo.svg', host: CDO.studio_url('', CDO.default_scheme)),
         }
       ]
     }

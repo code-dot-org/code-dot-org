@@ -30,6 +30,7 @@ $tabs-default-spacing: 4px;
 
 .scrollToBottomButton {
   border-radius: 50%;
+  pointer-events: auto;
 }
 
 .messageArea {
@@ -49,10 +50,11 @@ $tabs-default-spacing: 4px;
   display: flex;
   justify-content: center;
   width: 100%;
+  pointer-events: none;
 }
 
 .tabsContainer {
-  background-color: #eaebeb;
+  background-color: var(--background-neutral-secondary);
   padding: $tabs-default-spacing $tabs-default-spacing 0 $tabs-default-spacing;
 
   ul {

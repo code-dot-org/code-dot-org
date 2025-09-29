@@ -1,0 +1,8 @@
+name 'problem-solving-with-ai-lesson3-level2_v2-2025'
+display_name 'Providing a Single Example'
+description 'Choose one career to explore how providing a single example affects AI responses.'
+
+sublevels
+level 'problem-solving-with-ai-lesson3-level2a_v2-2025'
+level 'problem-solving-with-ai-lesson3-level2b_v2-2025'
+level 'problem-solving-with-ai-lesson3-level2c_v2-2025'

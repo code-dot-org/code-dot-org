@@ -153,6 +153,21 @@ module AichatAiHelper
     return config, request, context
   end
 
+  # Create an instance of the appropriate ai-client-derived class based on model id.
+  def self.create_ai_client_instance(client_type, model_id, usage_reporter = nil)
+    # We assume it's one of the gemini models if not 'gpt-4o-mini'.
+    if model_id == "gpt-4o-mini"
+      return AichatOpenaiResponsesClient.new(CDO.openai_student_learning_api_key, SharedConstants::AICHAT_MODEL_VERSION, usage_reporter)
+    else
+      # We use separate keys per-client for Gemini so that we can more easily allocate donated credits appropriately.
+      # In the longer term, we should consider adding per-client keys for OpenAI as well in order to more easily differentiate between use cases.
+      # Also note that we assume AI Chat Lab if not AI Tutor here, which is not strictly true because of Flow Lab. We could add an EXPERIMENT client type and add an explicit key to handle those use cases (eg, Flow Lab).
+      api_key = client_type == SharedConstants::AI_CHAT_CLIENT_TYPES[:AI_TUTOR] ?
+        CDO.google_gemini_ai_tutor_api_key : CDO.google_gemini_ai_chat_lab_api_key
+      return AichatGeminiClient.new(api_key, model_id, usage_reporter)
+    end
+  end
+
   def self.get_openai_assistant_response(aichat_model_customizations, stored_messages, new_message, level_id, project_id, user_id)
     encrypted_channel_id = storage_encrypt_channel_id(storage_id_for_user_id(user_id), project_id) if project_id
 
@@ -169,7 +184,7 @@ module AichatAiHelper
     retrieval_contexts = aichat_model_customizations['retrievalContexts']
 
     usage_reporter = AichatAiUsageReporter.new(model_id, user_id, project_id, level_id)
-    client = AichatAiClient.create_instance(model_id, usage_reporter)
+    client = create_ai_client_instance(client_type, model_id, usage_reporter)
 
     config, request, context = get_config_request_context(stored_messages, new_message, temperature, system_prompt, retrieval_contexts,  model_id, level_id, encrypted_channel_id, user_id, project_id, client_type)
 

@@ -782,6 +782,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
       Blockly.Xml.domToText(xml),
       includeHiddenDefinitions
     );
+
     // Loop through all the parent blocks and remove vertical translation value
     // This makes the output more condensed and readable, while preserving
     // horizontal translation values for RTL rendering.

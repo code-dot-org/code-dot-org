@@ -395,6 +395,17 @@ class HocRoutesTest < Minitest::Test
         _(@pegasus.last_response['Location']).must_equal CDO.studio_url(api_request_path, CDO.default_scheme)
       end
 
+      it 'redirects to studio when starting tutorial with corrupted png image code' do
+        api_request_path = '/api/hour/begin_codewards%20.png'
+
+        @pegasus.expects(:launch_tutorial_pixel).never
+
+        @pegasus.get api_request_path
+
+        _(@pegasus.last_response.status).must_equal 301
+        _(@pegasus.last_response['Location']).must_equal CDO.studio_url(api_request_path, CDO.default_scheme)
+      end
+
       it 'redirects to studio when ending tutorial with png image' do
         api_request_path = '/api/hour/finish_mc.png'
 

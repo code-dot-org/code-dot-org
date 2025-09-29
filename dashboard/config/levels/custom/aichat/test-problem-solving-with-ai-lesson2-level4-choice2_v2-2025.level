@@ -1,0 +1,60 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2025-09-25T19:52:37.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Interior Design\r\n\r\nUse AI Chat to help plan out ideas for decorating a room.\r\n\r\n### Do This:\r\n\r\n1. **Upload an image** from the Library.\r\n2. Decide which part of the room you would like to redesign. Here are some ideas:\r\n\t- Furniture & Layout\r\n    - Lighting\r\n    - Color & Walls\r\n    - Texture & Fabrics\r\n    - You can use AI chat to help you brainstorm more ideas if you'd like!\r\n3. **Modify** the following prompt and press **Send**.:\r\n\r\n>Help me brainstorm ideas for **[insert area of interest here]** in this room.\r\n\r\n4. Read AI Chat's response.\r\n5. **Experiment**: Test how AI responds to different inputs:\r\n    - **Modify your prompt** by changing which part of the room to focus on\r\n    - **Upload a new image** to get a different response\r\n\r\n---\r\n\r\n::: details [<i class=\"fa fa-picture-o\" aria-hidden=\"true\"></i> **How do I upload a file I found?**]\r\n- Download the file (image or PDF) on to your device\r\n- Click the button labeled **Upload** below your chat input.\r\n- Choose **From Device**\r\n- Then locate the file on your device.\r\n- When you find the file to upload, select it and then click **Open**.\r\n- You should see the image get added to the message being sent to AI Chat.\r\n:::",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.3,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "Only generate 3 ideas per prompt. Keep each suggestion straightforward, 1 sentence long, and use language that is approachable for a high school student. \n\nAsk user to attach an image if they do not include one with their prompt.\n",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "multimodalEnabled": true
+    },
+    "display_name": "Interior Design",
+    "bubble_choice_description": "Use AI Chat to explore design ideas for a room. Experiment with text descriptions, images of room layouts, and design guides to generate decorating suggestions. Test how AI’s recommendations change based on different details and uploaded visuals.",
+    "thumbnail_url": "https://images.code.org/bbbc56b8e05633cd9018daf6e0ee28c9-Interior Design Staircase.png",
+    "starter_assets": {
+      "bright bedroom.jpg": "e485eb2f-0cb3-492a-af51-37e1eaf89de6.jpg",
+      "spacious bedroom.jpg": "84a9d00b-2e0c-4351-86d6-5dd2833d3a30.jpg",
+      "living room.jpg": "5ba7a454-e112-4d46-ad33-bb6911fd91ae.jpg",
+      "living room 2.jpg": "332f6522-32c0-4ed2-885b-92c4b7d2995a.jpg",
+      "dining room.jpg": "4b3af1bb-0435-4dcf-b1a3-e29d6dd46d36.jpg",
+      "dining room 2.jpeg": "cbd48488-e26f-4e50-b69f-10850b9a0119.jpeg"
+    },
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:52:37.926+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson2-level4-choice2_2025\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson2-level4-choice2_2025\"}]"
+}]]></config>
+</Aichat>

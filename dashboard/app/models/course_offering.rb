@@ -330,6 +330,18 @@ class CourseOffering < ApplicationRecord
     !latest_stable_version.nil?
   end
 
+  def upcoming_facilitated_workshops
+    return [] if pd_workshops.blank?
+
+    workshops = pd_workshops.select do |ws|
+      !ws.hidden &&
+        ws.sessions.any? &&
+        ws.sessions.first.start > Time.zone.now
+    end
+
+    workshops.sort_by {|ws| ws.sessions.first.start}
+  end
+
   def summarize_for_edit
     {
       key: key,
@@ -377,7 +389,8 @@ class CourseOffering < ApplicationRecord
       video: video,
       published_date: published_date,
       self_paced_pl_course_offering_path: self_paced_pl_course_offering&.path_to_latest_published_version(locale_code),
-      available_resources: get_available_resources(locale_code)
+      available_resources: get_available_resources(locale_code),
+      facilitated_workshops: Array(upcoming_facilitated_workshops).map(&:summarize_for_pl_catalog)
     }
   end
 
@@ -453,6 +466,14 @@ class CourseOffering < ApplicationRecord
 
   def hoc?
     marketing_initiative == Curriculum::SharedCourseConstants::COURSE_OFFERING_MARKETING_INITIATIVES.hoc
+  end
+
+  def hoai?
+    marketing_initiative == Curriculum::SharedCourseConstants::COURSE_OFFERING_MARKETING_INITIATIVES.hoai
+  end
+
+  def hoc_or_hoai?
+    hoc? || hoai?
   end
 
   def pl_course?

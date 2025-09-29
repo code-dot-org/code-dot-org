@@ -68,7 +68,7 @@ a.button {
 a.button-primary {
   &.button-purple {
     background-color: var(--background-brand-purple-primary);
-    color: var(--text-neutral-inverse);
+    color: var(--text-neutral-white-fixed);
 
     &:hover,
     &.button-withForcedHover {

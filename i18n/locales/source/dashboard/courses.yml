@@ -880,7 +880,7 @@ en:
           title: Computer Science A
           description_short: Learn Java programming and software engineering skills.
           description_student: "## Overview\n\nComputer Science A (CSA) introduces students to software engineering and object-oriented programming and design using the Java programming language. This curriculum covers a broad range of topics, including the design of solutions to problems, the use of data structures to organize large sets of data, the development and implementation of algorithms to process data and discover new information, the analysis of potential solutions, and the ethical and social implications of computing systems."
-          description_teacher: "## Overview\n\nComputer Science A (CSA) introduces students to software engineering and object-oriented programming and design using the Java programming language. This curriculum covers a broad range of topics, including the design of solutions to problems, the use of data structures to organize large sets of data, the development and implementation of algorithms to process data and discover new information, the analysis of potential solutions, and the ethical and social implications of computing systems.\n\n**Did You Know?**\n\n-   Professional development is available to help you get started teaching CSA. <a href=\"https://code.org/educate/professional-learning/middle-high\" target=\"blank\">Click here</a> to learn more about professional learning opportunities in your region.\n\n-   You can find the _Syllabus_, _Course Vocab_, and other resources to help you implement this curriculum in the Teacher Resources menu below.\n\n* * *\n\n## Curriculum Structure\n\nThis version of the Code.org CSA curriculum follows an **object-first approach** and does not use the unit structure outlined in the AP Computer Science A Course and Exam Description (CED). **All required course content is still covered**, but topics are introduced in an order that prioritizes early engagement with object-oriented programming. You can read more about this approach [**here**][0].\n\nIf you prefer a version of the curriculum organized using the same structure as the CED (including unit titles and themes), check out our [**CED-aligned version of the CSA curriculum**][1].\n\nAs noted on page 19 of the CED, **the College Board's unit structure is optional** - it is intended to provide teachers \"one possible sequence they can adopt or modify rather than having to build from scratch . . . Experienced AP teachers who are satisfied with their current course organization and exam results should feel no pressure to adopt these units, which comprise an optional sequence for this course.\""
+          description_teacher: "## Overview\n\nComputer Science A (CSA) introduces students to software engineering and object-oriented programming and design using the Java programming language. This curriculum covers a broad range of topics, including the design of solutions to problems, the use of data structures to organize large sets of data, the development and implementation of algorithms to process data and discover new information, the analysis of potential solutions, and the ethical and social implications of computing systems.\n\n**Did You Know?**\n\n-   Professional development is available to help you get started teaching CSA. <a href=\"https://code.org/educate/professional-learning/middle-high\" target=\"blank\">Click here</a> to learn more about professional learning opportunities in your region.\n\n-   You can find the _Syllabus_, _Course Vocab_, and other resources to help you implement this curriculum in the Teacher Resources menu below.\n\n* * *\n\n## Curriculum Structure\n\nThis version of the Code.org CSA curriculum follows an **object-first sequence** and does not use the unit structure outlined in the AP Computer Science A Course and Exam Description (CED). **All required course content is still covered and aligned to the CED**, but topics are introduced in an order that prioritizes early engagement with object-oriented programming. You can read more about this approach [**here**][0].\n\nIf you prefer a version of the curriculum organized using the same structure as the CED (including unit titles and themes), check out our [**CED-aligned version of the CSA curriculum**][1].\n\nAs noted on page 19 of the CED, **the College Board's unit structure is optional** - it is intended to provide teachers \"one possible sequence they can adopt or modify rather than having to build from scratch . . . Experienced AP teachers who are satisfied with their current course organization and exam results should feel no pressure to adopt these units, which comprise an optional sequence for this course.\""
           version_title: "'25-'26"
         csa-pilot-2025:
           title: Computer Science A ('24-'25 Pilot -- 2025 Framework)
@@ -4882,7 +4882,7 @@ en:
           description_teacher: ''
           version_title: "'25 - '26"
         codechella2025:
-          title: Codechella 2025
+          title: Ctrl-Alt-Retreat 2025
           description_short: ''
           description_student: ''
           description_teacher: ''
@@ -5383,6 +5383,24 @@ en:
           version_title: "'25-26"
         hoai2025-dev:
           title: hoai2025-dev
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        hoai-dance-pilot1:
+          title: hoai-dance-pilot1
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        pl-sandbox-aif-sem-2:
+          title: pl-sandbox-aif-sem-2
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        artificial-intelligence-foundations-v2-2025:
+          title: artificial-intelligence-foundations-v2-2025
           description_short: ''
           description_student: ''
           description_teacher: ''

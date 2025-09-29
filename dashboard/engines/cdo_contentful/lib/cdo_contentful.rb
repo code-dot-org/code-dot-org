@@ -16,6 +16,7 @@ module CdoContentful
 
   self.config = ActiveSupport::OrderedOptions.new.tap do |config|
     config.cs_for_all = CdoContentful::CsForAll.config
+    config.marketing = CdoContentful::Marketing.config
   end
 
   private_class_method :config=

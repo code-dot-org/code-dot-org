@@ -11,6 +11,7 @@ interface ButtonWithDialogProps {
   theme: Theme;
   Dialog: React.ReactNode;
   iconName: string;
+  ariaLabel?: string;
   setIsDialogOpen: (isOpen: boolean) => void;
 }
 
@@ -20,8 +21,12 @@ const ButtonWithDialog: React.FunctionComponent<ButtonWithDialogProps> = ({
   theme,
   Dialog,
   iconName,
+  ariaLabel,
   setIsDialogOpen,
 }) => {
+  // Tooltip should disappear quickly.
+  const hideTooltipDelayMs = 10;
+
   return (
     <>
       <WithTooltip
@@ -32,6 +37,8 @@ const ButtonWithDialog: React.FunctionComponent<ButtonWithDialogProps> = ({
           size: 'xs',
           'data-theme': theme,
         }}
+        hideDelayMs={hideTooltipDelayMs}
+        hideOnFirstLeave={true}
       >
         <Button
           className={styles.bottomButton}
@@ -41,6 +48,7 @@ const ButtonWithDialog: React.FunctionComponent<ButtonWithDialogProps> = ({
           icon={{iconName: iconName}}
           color={'gray'}
           type={'tertiary'}
+          aria-label={ariaLabel}
         />
       </WithTooltip>
       {Dialog}
