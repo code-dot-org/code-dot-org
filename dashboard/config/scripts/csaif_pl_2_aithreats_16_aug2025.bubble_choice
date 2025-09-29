@@ -3,7 +3,7 @@ display_name 'Investigate an Experience '
 description 'Pick a user and follow them through their day as they interact with different systems that have security features. For each feature, decide if it worked well, partially, or not at all for their user and place the feature on a Security vs. Usability Matrix. **You may want to open the [Activity Guide](https://docs.google.com/document/d/1IYDt1se9hSmXCsxpLw0hvmn2ygzzpqj46FqIyeQi8PU/edit?tab=t.0) as a reference while you complete this level.**'
 
 sublevels
-level 'ai-powered-threats-defenses-lesson11-level1a_2025-pilot_aug2025'
-level 'ai-powered-threats-defenses-lesson11-level1b_2025-pilot_aug2025'
-level 'ai-powered-threats-defenses-lesson11-level1c_2025-pilot_aug2025'
-level 'ai-powered-threats-defenses-lesson11-level1d_2025-pilot_aug2025'
+level 'ai-powered-threats-defenses-lesson11-level1a_2025-pilot'
+level 'ai-powered-threats-defenses-lesson11-level1b_2025-pilot'
+level 'ai-powered-threats-defenses-lesson11-level1c_2025-pilot'
+level 'ai-powered-threats-defenses-lesson11-level1d_2025-pilot'

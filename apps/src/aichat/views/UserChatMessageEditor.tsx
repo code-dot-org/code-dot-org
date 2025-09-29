@@ -6,7 +6,7 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {submitChatContents} from '../redux';
 import {
   AiChatClientType,
-  ChatButtonComponent,
+  ChatButtonAndKey,
   ModelParameters,
   AnalyticsProperties,
 } from '../types';
@@ -17,8 +17,8 @@ interface UserChatMessageEditorProps {
   modelParameters: ModelParameters;
   clientType: AiChatClientType;
   editorContainerClassName?: string;
-  chatButtons?: ChatButtonComponent[];
-  hiddenContext?: string;
+  chatButtons?: ChatButtonAndKey[];
+  hiddenContextCallback?: () => Promise<string>;
   multimodalAvailable?: boolean;
 }
 
@@ -32,7 +32,7 @@ const UserChatMessageEditor: React.FunctionComponent<
   clientType,
   editorContainerClassName,
   chatButtons,
-  hiddenContext,
+  hiddenContextCallback,
   multimodalAvailable,
 }) => {
   const isWaitingForChatResponse = useAppSelector(
@@ -46,6 +46,9 @@ const UserChatMessageEditor: React.FunctionComponent<
   const uploadsPending = useAppSelector(state =>
     state.aichat.stagedFiles.some(file => file.status === 'uploading')
   );
+  const userAddedSelectionContext = useAppSelector(
+    state => state.aichat.userAddedSelectionContext
+  );
   const dispatch = useAppDispatch();
 
   const inputRef = useRef<HTMLTextAreaElement>(null);
@@ -53,8 +56,9 @@ const UserChatMessageEditor: React.FunctionComponent<
   const disabled = isWaitingForChatResponse || saveInProgress || uploadsPending;
 
   const handleSubmit = useCallback(
-    (userMessage: string, analyticsProperties?: AnalyticsProperties) => {
+    async (userMessage: string, analyticsProperties?: AnalyticsProperties) => {
       if (!disabled) {
+        const hiddenContext = await hiddenContextCallback?.();
         dispatch(
           submitChatContents({
             text: userMessage,
@@ -66,18 +70,23 @@ const UserChatMessageEditor: React.FunctionComponent<
               multimodalAvailable && chatAssets.length > 0
                 ? chatAssets
                 : undefined,
+            userAddedSelectionContext:
+              Object.values(userAddedSelectionContext).length > 0
+                ? Object.values(userAddedSelectionContext)
+                : undefined,
           })
         );
       }
     },
     [
       disabled,
+      hiddenContextCallback,
       dispatch,
-      hiddenContext,
-      multimodalAvailable,
-      chatAssets,
       modelParameters,
       clientType,
+      multimodalAvailable,
+      chatAssets,
+      userAddedSelectionContext,
     ]
   );
 
@@ -93,8 +102,8 @@ const UserChatMessageEditor: React.FunctionComponent<
     <>
       {chatButtons && (
         <div className={moduleStyles.chatButtonsContainer}>
-          {chatButtons.map(ChatButton => (
-            <ChatButton onClick={handleSubmit} />
+          {chatButtons.map(({ChatButton, key}) => (
+            <ChatButton key={key} onClick={handleSubmit} />
           ))}
         </div>
       )}

@@ -310,6 +310,8 @@ en:
       The tutorials are fun, visually engaging, and teach the basic concepts of computer science using a simple, guided, game-like experience. Learn to code from Bill Gates, Mark Zuckerberg, Angry Birds, and Plants vs. Zombies! :-)
 
       %{name}
+  inactive_user_purge_mailer:
+    teacher_soft_delete_warning_subject: 'Action Required: Your Code.org Account Will Be Deleted Due to Inactivity'
   parent_mailer:
     student_associated_subject: 'Login information for Code.org'
     parent_email_added_subject: 'Welcome to Code.org!'
@@ -1489,6 +1491,7 @@ en:
       launch_from_lms: "Please launch from your LMS to link your account."
       linking_page_header: "Link your %{provider} account to your existing Code.org account"
       linking_page_description: "Choose the sign-in method you normally use to access Code.org"
+      linking_page_description_restricted: "Choose the sign-in method allowed by your school"
       sign_in_and_connect: "Sign in and connect"
       successfully_linked: "You have successfully linked your Code.org account!"
       successfully_unlinked: "You have successfully unlinked your Code.org account."

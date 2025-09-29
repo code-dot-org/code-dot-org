@@ -1,5 +1,5 @@
 import classnames from 'classnames';
-import {HTMLAttributes, useMemo} from 'react';
+import {HTMLAttributes, useMemo, forwardRef} from 'react';
 
 import CloseButton from '@/closeButton';
 import {ComponentSizeXSToL} from '@/common/types';
@@ -85,58 +85,65 @@ const getDefaultAlertIconFromType = (
  * Design System: Alert Component.
  * Renders Alert to notify user about something.
  */
-const Alert: React.FunctionComponent<AlertProps> = ({
-  text,
-  showIcon = true,
-  icon,
-  link,
-  className,
-  onClose,
-  closeLabel = 'Close alert',
-  isImmediateImportance = true,
-  type = 'primary',
-  size = 'm',
-  ...HTMLAttributes
-}) => {
-  const iconToRender = useMemo(
-    () => icon || getDefaultAlertIconFromType(type),
-    [icon, type],
-  );
+const Alert = forwardRef<HTMLDivElement, AlertProps>(
+  (
+    {
+      text,
+      showIcon = true,
+      icon,
+      link,
+      className,
+      onClose,
+      closeLabel = 'Close alert',
+      isImmediateImportance = true,
+      type = 'primary',
+      size = 'm',
+      ...HTMLAttributes
+    },
+    ref,
+  ) => {
+    const iconToRender = useMemo(
+      () => icon || getDefaultAlertIconFromType(type),
+      [icon, type],
+    );
 
-  const closeButtonSize = size === 'l' ? 'l' : 'm';
+    const closeButtonSize = size === 'l' ? 'l' : 'm';
 
-  return (
-    <div
-      className={classnames(
-        moduleStyles.alert,
-        moduleStyles[`alert-${type}`],
-        moduleStyles[`alert-${size}`],
-        className,
-      )}
-      role={isImmediateImportance ? 'alert' : 'status'}
-      {...HTMLAttributes}
-    >
-      <div className={moduleStyles.alertContentContainer}>
-        {showIcon && iconToRender && <FontAwesomeV6Icon {...iconToRender} />}
-        <span className={moduleStyles.alertText}>
-          {text}
-          {link && (
-            <>
-              &nbsp;&nbsp;
-              <Link {...link} size={size} />
-            </>
-          )}
-        </span>
+    return (
+      <div
+        ref={ref}
+        className={classnames(
+          moduleStyles.alert,
+          moduleStyles[`alert-${type}`],
+          moduleStyles[`alert-${size}`],
+          className,
+        )}
+        role={isImmediateImportance ? 'alert' : 'status'}
+        {...HTMLAttributes}
+      >
+        <div className={moduleStyles.alertContentContainer}>
+          {showIcon && iconToRender && <FontAwesomeV6Icon {...iconToRender} />}
+          <span className={moduleStyles.alertText}>
+            {text}
+            {link && (
+              <>
+                &nbsp;&nbsp;
+                <Link {...link} size={size} />
+              </>
+            )}
+          </span>
+        </div>
+        {onClose && (
+          <CloseButton
+            aria-label={closeLabel}
+            onClick={onClose}
+            size={closeButtonSize}
+          />
+        )}
       </div>
-      {onClose && (
-        <CloseButton
-          aria-label={closeLabel}
-          onClick={onClose}
-          size={closeButtonSize}
-        />
-      )}
-    </div>
-  );
-};
+    );
+  },
+);
 
+Alert.displayName = 'Alert';
 export default Alert;

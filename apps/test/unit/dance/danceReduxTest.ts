@@ -5,7 +5,6 @@ import {StubFunction} from 'test/types/types';
 
 import * as codeStudioUtils from '@cdo/apps/code-studio/utils';
 import {
-  DanceState,
   initSongs,
   reducers,
   setSelectedSong,
@@ -24,22 +23,15 @@ import {setExternalGlobals} from '../../util/testUtils';
 
 describe('danceRedux', function () {
   let store: Store;
-  let initialState: {dance: DanceState};
 
   setExternalGlobals();
 
   beforeEach(() => {
     store = createStore(combineReducers({...commonReducers, ...reducers}));
-    initialState = store.getState();
-  });
-
-  it('has expected default state', function () {
-    expect(initialState.dance.selectedSong).to.equal('macklemore90');
   });
 
   describe('action: selectedSong', () => {
     it('sets selection to given string', function () {
-      expect(store.getState().dance.selectedSong).to.equal('macklemore90');
       store.dispatch(setSelectedSong('Alpha'));
       expect(store.getState().dance.selectedSong).to.equal('Alpha');
     });

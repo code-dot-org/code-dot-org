@@ -123,4 +123,36 @@ class NameableTest < ActiveSupport::TestCase
     it {_(build(:user, name: 'Laurel').second_name).must_equal nil} # just one name
     it {_(build(:user, name: '  some whitespace in front  ').second_name).must_equal 'whitespace'} # whitespace in front
   end
+
+  describe '#full_name' do
+    it 'returns given_name and family_name if both are present' do
+      user = build(:user, given_name: 'John', family_name: 'Doe', name: 'Fallback Name', username: 'johndoe')
+      _(user.full_name).must_equal 'John Doe'
+    end
+
+    it 'returns name if family_name is missing' do
+      user = build(:user, given_name: 'John', family_name: nil, name: 'Fallback Name', username: 'johndoe')
+      _(user.full_name).must_equal 'Fallback Name'
+    end
+
+    it 'returns name if given_name is missing' do
+      user = build(:user, given_name: nil, family_name: 'Doe', name: 'Fallback Name', username: 'johndoe')
+      _(user.full_name).must_equal 'Fallback Name'
+    end
+
+    it 'returns name if both given_name and family_name are missing' do
+      user = build(:user, given_name: nil, family_name: nil, name: 'Fallback Name', username: 'johndoe')
+      _(user.full_name).must_equal 'Fallback Name'
+    end
+
+    it 'returns username if all name fields are missing' do
+      user = build(:user, given_name: nil, family_name: nil, name: nil, username: 'johndoe')
+      _(user.full_name).must_equal 'johndoe'
+    end
+
+    it 'returns an empty string if all name fields and username are missing' do
+      user = build(:user, given_name: nil, family_name: nil, name: nil, username: nil)
+      _(user.full_name).must_equal ''
+    end
+  end
 end

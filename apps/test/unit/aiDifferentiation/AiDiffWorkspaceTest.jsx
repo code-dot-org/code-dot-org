@@ -35,7 +35,6 @@ const defaultProps = {
   },
   scriptName: 'test_lesson',
   curriculumCourses: [],
-  showSidebar: true,
 };
 
 const now = new Date();

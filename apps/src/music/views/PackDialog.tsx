@@ -19,7 +19,7 @@ import {AnalyticsContext} from '../context';
 import musicI18n from '../locale';
 import MusicLibrary, {SoundFolder} from '../player/MusicLibrary';
 import MusicPlayer from '../player/MusicPlayer';
-import {setPackId} from '../redux/musicRedux';
+import {setPackId, setAiGenerateState} from '../redux/musicRedux';
 
 import styles from './PackDialog.module.scss';
 
@@ -172,6 +172,7 @@ const PackDialog: React.FunctionComponent<PackDialogProps> = ({player}) => {
 
       player.cancelPreviews();
       dispatch(setPackId(packId));
+      dispatch(setAiGenerateState('none'));
       library.setCurrentPackId(packId);
       setSelectedFolderId(null);
       analyticsReporter?.onPackSelected(packId);

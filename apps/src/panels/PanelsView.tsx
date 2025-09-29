@@ -234,7 +234,12 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
               textLayoutClass
             )}
           >
-            {offerBrowserTts && <TextToSpeech text={panel.text} />}
+            {offerBrowserTts && (
+              // Override the theme since the text container is always white.
+              <div className={styles.ttsContainer} data-theme="Light">
+                <TextToSpeech text={panel.text} />
+              </div>
+            )}
             {showTyping ? (
               <div>
                 <div className={styles.invisiblePlaceholder}>{plainText}</div>

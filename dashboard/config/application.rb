@@ -26,8 +26,6 @@ require 'cdo/pycall'
 # you've limited to :test, :development, or :production.
 Bundler.require(:default, Rails.env)
 
-require_relative '../engines/marketing/lib/marketing/engine'
-
 module Dashboard
   class Application < Rails::Application
     # Explicitly load appropriate defaults for this version of Rails.
@@ -37,14 +35,6 @@ module Dashboard
     # Rails; see config/initializers/new_framework_defaults_7_0.rb for more.
     # TODO infra: remove these values once we're loading defaults for 7.0 above
     config.active_support.disable_to_s_conversion = true
-
-    # Temporarily disable some default values that we aren't yet ready for.
-    # Right now, these changes to cookie functionality break projects
-    #
-    # TODO infra: Figure out why, fix, and reenable.
-    #
-    # added in Rails 6.0 (https://github.com/rails/rails/pull/32937)
-    config.action_dispatch.use_cookies_with_metadata = false
 
     config.middleware.insert_before 0, Rack::Cors do
       allow do
@@ -244,5 +234,15 @@ module Dashboard
 
     config.active_job.queue_adapter = CDO.active_job_queue_adapter
     config.active_job.default_queue_name = CDO.active_job_queues[:default]
+
+    config.to_prepare do
+      # Register the Contentful source for notifications in the Dashboard app
+      contentful_client = if (Rails.application.config.respond_to?(:stub_contentful_notifications) && Rails.application.config.stub_contentful_notifications) || [:development, :test].include?(rack_env)
+                            Marketing::DashboardNotificationEntriesMock
+                          else
+                            CdoContentful::Marketing::Entry::DashboardNotification
+                          end
+      ::Notifications.register(Marketing::DashboardNotifications::ContentfulNotificationSource.new(contentful_client))
+    end
   end
 end

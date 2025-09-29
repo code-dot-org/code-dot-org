@@ -1,5 +1,4 @@
 'use client';
-import {useInMemoryEntities} from '@contentful/experiences-sdk-react';
 import {BaseEntry} from 'contentful';
 import {useMemo} from 'react';
 
@@ -8,6 +7,7 @@ import TabGroup, {
 } from '@code-dot-org/component-library/cms/tabGroup';
 
 import {externalLinkIconProps} from '@/components/common/constants';
+import {resolveContentfulLink} from '@/contentful/resolveLink';
 import {getAbsoluteImageUrl} from '@/selectors/contentful/getImage';
 import {LinkEntry} from '@/types/contentful/entries/Link';
 import {ExperienceAsset} from '@/types/contentful/ExperienceAsset';
@@ -28,17 +28,15 @@ type TabGroupContentfulProps = {
 const TabGroupContentful: React.FunctionComponent<TabGroupContentfulProps> = ({
   tabs = [],
 }) => {
-  const inMemoryEntities = useInMemoryEntities();
-
   const parsedTabs: TabGroupTabModel[] = useMemo(
     () =>
       tabs.map(tab => {
-        const resolvedImage = inMemoryEntities.maybeResolveLink(
+        const resolvedImage = resolveContentfulLink<ExperienceAsset>(
           tab.fields.image,
-        ) as ExperienceAsset;
-        const resolvedCtaLink = inMemoryEntities.maybeResolveLink(
+        );
+        const resolvedCtaLink = resolveContentfulLink<LinkEntry>(
           tab.fields.ctaLink,
-        ) as LinkEntry;
+        );
         return {
           value: tab.fields.tabLabel,
           text: tab.fields.tabLabel,

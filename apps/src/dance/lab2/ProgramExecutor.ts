@@ -23,6 +23,24 @@ const allEvents: {[name in HookName]: Handler} = {
   getCueList: {code: 'return getCueList();'},
 };
 
+interface ProgramExecutorOptions {
+  container: string;
+  metricsReporter: LabMetricsReporter;
+  isReadOnlyWorkspace?: boolean;
+  onPuzzleComplete?: (result: boolean, message: string) => void;
+  onEventsChanged?: () => void;
+  customHelperLibrary?: string;
+  validationCode?: string;
+  readonlyCode?: string;
+  playSound?: (
+    url: string,
+    callback: (playSuccess: boolean) => void,
+    onEnded: () => void
+  ) => void;
+  stopSound?: () => void;
+  onSoundEnded?: () => void;
+}
+
 /**
  * Handles program execution for Dance Party and wraps the native Dance Party API.
  *
@@ -34,46 +52,44 @@ export default class ProgramExecutor {
   private hooks: {[name in HookName]?: (args?: unknown[]) => unknown};
   private validationCode?: string;
   private onEventsChanged?: () => void;
+  private stopSound?: () => void;
+  private onSoundEnded?: () => void;
 
   private livePreviewActive = false;
   private currentlyPlayingSong: string | null = null;
 
-  constructor(
-    container: string,
-    onPuzzleComplete: (result: boolean, message: string) => void,
-    isReadOnlyWorkspace: boolean,
-    recordReplayLog: boolean,
-    metricsReporter: LabMetricsReporter,
-    customHelperLibrary?: string,
-    validationCode?: string,
-    onEventsChanged?: () => void,
-    readonlyCode?: string, // Allows us to supply the student code early if we're in a read-only workspace.
-    nativeAPI: typeof DanceParty = undefined // For testing
-  ) {
+  constructor(options: ProgramExecutorOptions, nativeAPI?: typeof DanceParty) {
     this.hooks = {};
-    this.validationCode = validationCode;
-    this.onEventsChanged = onEventsChanged;
+    this.validationCode = options.validationCode;
+    this.onEventsChanged = options.onEventsChanged;
+    this.stopSound = options.stopSound;
+    this.onSoundEnded = options.onSoundEnded;
     this.nativeAPI =
       nativeAPI ||
       new DanceParty({
-        onPuzzleComplete,
-        playSound: (...args: Parameters<typeof this.playSong>) =>
-          this.playSong(...args),
-        recordReplayLog,
-        showMeasureLabel: !isReadOnlyWorkspace,
+        onPuzzleComplete: options.onPuzzleComplete || (() => undefined),
+        playSound:
+          options.playSound ||
+          ((...args: Parameters<typeof this.playSong>) =>
+            this.playSong(...args)),
+        showMeasureLabel: !options.isReadOnlyWorkspace,
         onHandleEvents: (currentFrameEvents: object[]) =>
           this.handleEvents(currentFrameEvents),
         onInit: async (nativeAPI: typeof DanceParty) => {
-          this.init(nativeAPI, isReadOnlyWorkspace, readonlyCode);
+          this.init(
+            nativeAPI,
+            options.isReadOnlyWorkspace || false,
+            options.readonlyCode
+          );
         },
-        spriteConfig: new Function('World', customHelperLibrary || ''),
-        container,
+        spriteConfig: new Function('World', options.customHelperLibrary || ''),
+        container: options.container,
         i18n: danceMsg,
         resourceLoader: new ResourceLoader(ASSET_BASE),
-        logger: metricsReporter,
+        logger: options.metricsReporter,
       });
     this.nativeAPI.reset();
-    this.metricsReporter = metricsReporter;
+    this.metricsReporter = options.metricsReporter;
   }
 
   /**
@@ -188,6 +204,7 @@ export default class ProgramExecutor {
       audioCommands.stopSound({url: this.currentlyPlayingSong});
       this.currentlyPlayingSong = null;
     }
+    this.stopSound?.();
     this.nativeAPI.reset();
     this.livePreviewActive = false;
   }
@@ -293,6 +310,7 @@ export default class ProgramExecutor {
     const onEndedWrapper = () => {
       this.currentlyPlayingSong = null;
       onEnded();
+      this.onSoundEnded?.();
     };
 
     audioCommands.playSound({

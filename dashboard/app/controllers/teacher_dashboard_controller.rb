@@ -19,11 +19,12 @@ class TeacherDashboardController < ApplicationController
 
   def show
     @sections = current_user.sections_instructed.map(&:concise_summarize)
+
     unless @sections.empty?
       if @section.nil?
         @section = Section.find(@sections.first[:id])
       end
-      @section_summary = @section.selected_section_summarize
+      @section_summary = @section.selected_section_summarize.except('secret_words')
     end
     @section_order = UserPreference.find_by(user_id: current_user.id)&.section_order
     @locale_code = request.locale
@@ -54,10 +55,14 @@ class TeacherDashboardController < ApplicationController
     render layout: false
   end
 
-  def get_school_info_interstitial_data
+  def get_drawer_data
     show_school_info_interstitial = SchoolInfoInterstitialHelper.show?(current_user)
     show_school_info_confirmation = SchoolInfoInterstitialHelper.show_confirmation_dialog?(current_user)
     school_info = Queries::SchoolInfo.current_school(current_user)
+
+    unless current_user.donor_teacher_banner_dismissed
+      afe_eligible = current_user&.school_info&.school&.afe_high_needs?
+    end
 
     SchoolInfoInterstitialHelper.update_last_seen_timestamp(current_user)
 
@@ -65,6 +70,7 @@ class TeacherDashboardController < ApplicationController
       showSchoolInfoInterstitial: show_school_info_interstitial,
       showSchoolInfoConfirmation: show_school_info_confirmation,
       existingSchoolInfo: school_info,
+      afeEligible: afe_eligible,
     }
   end
 end

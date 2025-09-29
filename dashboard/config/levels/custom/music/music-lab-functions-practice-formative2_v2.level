@@ -225,9 +225,12 @@
       }
     ],
     "name_suffix": "_v2",
+    "teacher_markdown": "💡 **Teacher Tip**: Students may leave their functions with the stock name, like \"my function\". Push them to draft a specific function name for each.",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-05-31T03:00:56.745+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-practice-formative2\\\"\"],\"cloned_from\":\"music-lab-functions-practice-formative2\"},{\"changed_at\":\"2025-06-26 19:37:02 +0000\",\"changed\":[\"exemplar_settings\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-31T03:00:56.745+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-practice-formative2\\\"\"],\"cloned_from\":\"music-lab-functions-practice-formative2\"},{\"changed_at\":\"2025-06-26 19:37:02 +0000\",\"changed\":[\"exemplar_settings\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-02 17:58:33 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

@@ -1,0 +1,27 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2025-09-25T19:52:34.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "title": "Check Your Understanding",
+    "long_instructions": "Think back to your exploration with the AI chatbot in Level 5. \r\n\r\n**How did your AI-generated output change as you made updates to your prompt?** ",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "stay_on_level_after_submit": "true",
+    "teacher_markdown": "**Assessment Opportunity**\r\nThis level can be used as a formative assessment to check student understanding of the lesson objectives. Here are things to look for and actions you can take:\r\n- If students are only describing what happened rather than why it happened, prompt them to revisit earlier lesson segments on probability-driven outputs. Consider a quick group discussion where students share examples of prompts that worked well and why those prompts influenced AI's response.\r\n- If students seem uncertain about constructing high-quality prompts, have them re-examine Level 5 where best prompting strategies are summarized. They can also do a brief pair activity—each student provides a vague prompt, then a specific prompt, and compares the results.\r\n- If many students need more help, provide short demos or additional videos showing how multimodal inputs can change the AI's outputs. Or point them to the optional video about planning a family trip to emphasize how refining prompts improves results. Encourage a follow-up activity where students generate multiple answers to the same prompt, then analyze and explain what changed.\r\n",
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:52:34.692+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson1-level6_2025\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson1-level6_2025\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

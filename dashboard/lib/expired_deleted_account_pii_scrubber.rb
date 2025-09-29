@@ -63,9 +63,15 @@ class ExpiredDeletedAccountPiiScrubber
     # an order by id, causing an inefficient scan on the id index. Order does not matter
     # for this operation, so we can use a simple limit approach.
     loop do
-      account_batch = accounts_to_scrub.limit(BATCH_SIZE)
+      # Execute batch selection on the reporting replica and materialize results.
+      account_batch = ActiveRecord::Base.connected_to(role: :reporting) do
+        accounts_to_scrub.limit(BATCH_SIZE).to_a
+      end
+
       account_batch.each do |user|
-        scrub_user(user)
+        ActiveRecord::Base.connected_to(role: :writing) do
+          scrub_user(user)
+        end
         self.num_accounts_scrubbed += 1
       rescue StandardError => exception
         self.num_errors += 1
@@ -74,6 +80,7 @@ class ExpiredDeletedAccountPiiScrubber
       ensure
         processed_user_ids << user.id
       end
+
       break if account_batch.size < BATCH_SIZE
     end
 

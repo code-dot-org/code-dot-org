@@ -8,6 +8,7 @@
 // The library data should definitely live elsewhere.
 
 import {Theme} from '@code-dot-org/component-library/common/contexts';
+import type * as GoogleBlockly from 'blockly/core';
 import {ComponentType, LazyExoticComponent} from 'react';
 
 import {BlockDefinition} from '@cdo/apps/blockly/types';
@@ -70,8 +71,7 @@ export interface ProjectSources {
 
 export type LabConfig = {[key: string]: {[key: string]: string}};
 
-// We will eventually make this a union type to include other source types.
-export type Source = BlocklySource | MultiFileSource;
+export type Source = BlocklySource | MultiFileSource | SketchlabSource;
 
 export interface SaveSourceOptions {
   projectType?: string;
@@ -83,6 +83,11 @@ export interface UpdateSourceOptions extends SaveSourceOptions {
   firstSaveTimestamp: string;
   tabId: string | null;
 }
+
+// -- SKETCH LAB -- //
+
+// Sketch Lab currently serialized/deserializes into a generic object
+export type SketchlabSource = {[key: string]: unknown};
 
 // -- BLOCKLY -- //
 
@@ -166,10 +171,10 @@ export interface LevelProperties {
   edit_blocks?: string;
   isK1?: boolean;
   skin?: string;
-  toolboxBlocks?: string;
-  startSources?: Source;
-  templateSources?: MultiFileSource;
-  sharedBlocks?: BlockDefinition[];
+  // Dance stores the full main.json source structure (ProjectSources) in start/template/exemplar sources,
+  // while PythonLab/Weblab2 stores just the source code (MultiFileSource). TODO: Can we reconcile these?
+  startSources?: ProjectSources | MultiFileSource;
+  templateSources?: ProjectSources | MultiFileSource;
   validations?: Validation[];
   baseAssetUrl?: string;
   // An optional URL that allows the user to skip the progression.
@@ -182,7 +187,7 @@ export interface LevelProperties {
   helpVideos?: VideoData[];
   // Exemplars
   exampleSolutions?: string[];
-  exemplarSources?: Source;
+  exemplarSources?: ProjectSources | MultiFileSource;
   exemplarSettings?: ExemplarSettings;
   // For Teachers Only value
   teacherMarkdown?: string;
@@ -204,12 +209,16 @@ export interface LevelProperties {
   // Properties added for parity with non-lab2 AI Tutor levels
   aiTutorAvailable?: boolean;
   isAssessment?: boolean;
-  progressionType?: string;
   type?: string;
   starterAssets?: {[key: string]: string};
   showRubric?: boolean;
   customHelperLibrary?: string;
   validationCode?: string;
+}
+
+export interface BlocklyLevelProperties extends LevelProperties {
+  toolboxDefinition?: GoogleBlockly.utils.toolbox.ToolboxInfo;
+  sharedBlocks?: BlockDefinition[];
 }
 
 // Level configuration data used by project-backed labs that don't require
@@ -374,6 +383,7 @@ export interface ProjectVersion {
   versionId: string;
   lastModified: string;
   isLatest: boolean;
+  comment?: string;
 }
 
 export interface ScriptLevelPathLink {

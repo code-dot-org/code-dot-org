@@ -62,14 +62,14 @@ class LessonsControllerTest < ActionController::TestCase
     @in_development_unit.reload
 
     @pilot_teacher = create(:teacher, pilot_experiment: 'my-experiment')
-    @pilot_script = create(:script, :with_lessons, lessons_count: 1, name: 'pilot-script', pilot_experiment: 'my-experiment', include_student_lesson_plans: true)
+    @pilot_script = create(:script, :with_lessons, lessons_count: 1, name: 'pilot-script', include_student_lesson_plans: true)
     @pilot_course = create(:single_unit_course, unit: @pilot_script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot, pilot_experiment: 'my-experiment')
     @pilot_script.reload
     @pilot_section = create(:section, user: @pilot_teacher, script: @pilot_script)
     @pilot_student = create(:follower, section: @pilot_section).student_user
 
     @pilot_instructor = create(:teacher, pilot_experiment: 'pl-my-experiment')
-    @pilot_pl_script = create(:script, :with_lessons, lessons_count: 1, name: 'pl-pilot-script', pilot_experiment: 'pl-my-experiment', include_student_lesson_plans: true)
+    @pilot_pl_script = create(:script, :with_lessons, lessons_count: 1, name: 'pl-pilot-script', include_student_lesson_plans: true)
     @pilot_pl_course = create(:single_unit_course, unit: @pilot_pl_script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot, pilot_experiment: 'pl-my-experiment')
     @pilot_pl_script.reload
     @pilot_pl_section = create(:section, user: @pilot_instructor, script: @pilot_pl_script)

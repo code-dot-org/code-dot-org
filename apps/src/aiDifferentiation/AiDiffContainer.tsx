@@ -2,8 +2,6 @@ import React, {useEffect, useState} from 'react';
 import Draggable, {DraggableEventHandler} from 'react-draggable';
 import FocusLock from 'react-focus-lock';
 
-import experiments from '@cdo/apps/util/experiments';
-
 import {useAppSelector} from '../util/reduxHooks';
 import {tryGetSessionStorage, trySetSessionStorage} from '../utils';
 
@@ -22,6 +20,7 @@ interface AiDiffContainerProps {
   open: boolean;
   scriptName?: string;
   curriculumCourses?: string[];
+  unreadNotificationCount: number;
 }
 
 const MIN_VISIBLE = 40;
@@ -51,6 +50,7 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
   open,
   scriptName,
   curriculumCourses,
+  unreadNotificationCount,
 }) => {
   const [showWelcomeExperience, setShowWelcomeExperience] = useState(true);
 
@@ -102,8 +102,6 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
     setPositionY(data.y);
   };
 
-  const showSidebar = experiments.isEnabled(experiments.AI_DIFF_SIDEBAR);
-
   return (
     <Draggable
       handle=".ai_diff_handle"
@@ -116,10 +114,9 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
         data-testid="draggable-test-id"
         id="draggable-id"
         className={
-          showSidebar &&
-          !(!hasCompletedAiDifferentiationWelcome && showWelcomeExperience) //don't use wide container for welcome
-            ? style.aiDiffContainerWide
-            : style.aiDiffContainer
+          !hasCompletedAiDifferentiationWelcome && showWelcomeExperience //don't use wide container for welcome
+            ? style.aiDiffContainer
+            : style.aiDiffContainerWide
         }
         style={open ? undefined : {display: 'none'}}
       >
@@ -143,7 +140,7 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
                     context={context}
                     scriptName={scriptName}
                     curriculumCourses={curriculumCourses}
-                    showSidebar={showSidebar}
+                    unreadNotificationCount={unreadNotificationCount}
                   />
                 )}
           </div>

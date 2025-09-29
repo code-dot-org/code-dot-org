@@ -40,21 +40,6 @@ class AssignableCourseTests < ActiveSupport::TestCase
     refute pilot_course.course_assignable?(@teacher)
   end
 
-  test 'course_assignable? is true if user has editor experiment access' do
-    partner_pilot_unit = create(:course_version, :with_single_unit_course).content_root.first_unit
-    partner_pilot_unit.update!(pilot_experiment: 'my-experiment', editor_experiment: 'ed-experiment')
-    partner = create(:teacher, editor_experiment: 'ed-experiment')
-
-    assert partner_pilot_unit.course_assignable?(partner)
-  end
-
-  test 'course_assignable? is false if user does not have editor experiment access' do
-    partner_pilot_unit = create(:course_version, :with_single_unit_course).content_root.first_unit
-    partner_pilot_unit.update!(pilot_experiment: 'my-experiment', editor_experiment: 'ed-experiment')
-
-    refute partner_pilot_unit.course_assignable?(@teacher)
-  end
-
   test 'course_assignable? if levelbuilder and item is in development' do
     in_development_course = create(:course_version, :with_single_unit_course).content_root
     in_development_course.update!(published_state: 'in_development')

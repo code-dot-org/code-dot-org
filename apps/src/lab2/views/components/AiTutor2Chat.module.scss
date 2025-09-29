@@ -1,3 +1,8 @@
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -10,12 +15,22 @@
   }
 }
 
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: var(--background-neutral-primary);
+  animation: fade-in 2s ease-in forwards;
+}
+
 /* Multiple classes used to increase specifity to override default DSCO styles */
 .chatButton.chatButton.chatButton {
   padding: .25rem .65rem;
   border-radius: 50rem;
   gap: 4px;
-  
+
   > .icon {
     width: 1rem;
   }

@@ -56,12 +56,12 @@ export const setAndSaveProjectSources = (
   projectSources: ProjectSources,
   forceSave: boolean = false,
   forceNewVersion: boolean = false
-): ThunkAction<void, RootState, undefined, AnyAction> => {
-  return dispatch => {
+): ThunkAction<Promise<void>, RootState, undefined, AnyAction> => {
+  return async dispatch => {
     dispatch(setProjectSource(projectSources));
     dispatch(setLastSavedLabConfig(projectSources.labConfig));
     if (Lab2Registry.getInstance().getProjectManager()) {
-      Lab2Registry.getInstance()
+      await Lab2Registry.getInstance()
         .getProjectManager()
         ?.save(projectSources, forceSave, forceNewVersion);
     }
@@ -277,6 +277,13 @@ function saveProjectIfEditable(
   forceSave: boolean = false,
   forceNewVersion: boolean = false
 ) {
+  const isLoadingProjectOrLevel = getState().lab.isLoadingProjectOrLevel;
+  if (isLoadingProjectOrLevel) {
+    // Don't save or do a progress report if we are still loading the project or level.
+    // The channel comes in before the new project code, so we can end up in a bad state
+    // if we try to save while loading.
+    return;
+  }
   const projectSources = getState().lab2Project.projectSources;
   const isReadOnly = isReadOnlyWorkspace(getState());
   const hasEdited = getState().lab2Project.hasEdited;

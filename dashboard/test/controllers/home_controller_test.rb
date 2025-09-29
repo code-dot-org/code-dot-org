@@ -4,9 +4,8 @@ require 'time'
 class HomeControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
 
-  test "teacher in teacher-homepage-v2 experiment redirected to teacher_dashboard/home" do
+  test "teacher redirected to teacher_dashboard/home" do
     teacher = create(:teacher)
-    SingleUserExperiment.find_or_create_by!(min_user_id: teacher.id, name: 'teacher-homepage-v2')
     sign_in teacher
     get :home
 
@@ -169,8 +168,7 @@ class HomeControllerTest < ActionController::TestCase
   end
 
   test "student without pilot access will go to index" do
-    pilot_script = create(:script, pilot_experiment: 'pilot-experiment')
-    create(:single_unit_course, unit: pilot_script, pilot_experiment: 'pilot-experiment')
+    pilot_script = create(:script, :in_single_unit_course, pilot_experiment: 'pilot-experiment')
     section = create(:section, script: pilot_script)
     student = create(:follower, section: section).student_user
     sign_in student
@@ -180,16 +178,14 @@ class HomeControllerTest < ActionController::TestCase
   end
 
   test "student with pilot access will go to pilot script" do
-    unit_group = create(:unit_group)
-    pilot_unit = create(:unit, pilot_experiment: 'pilot-experiment', original_unit_group: unit_group)
-    create(:unit_group_unit, unit_group: unit_group, script: pilot_unit, position: 1)
+    pilot_unit = create(:unit, :in_single_unit_course, pilot_experiment: 'pilot-experiment')
     pilot_teacher = create(:teacher, pilot_experiment: 'pilot-experiment')
     section = create(:section, script: pilot_unit, user: pilot_teacher)
     student = create(:follower, section: section).student_user
     sign_in student
     get :index
 
-    assert_redirected_to course_unit_path(unit_group, 1)
+    assert_redirected_to course_unit_path(pilot_unit.original_unit_group, 1)
   end
 
   test "redirect index when signed out" do
@@ -438,17 +434,6 @@ class HomeControllerTest < ActionController::TestCase
     get :index
 
     assert_select '#student-information-modal', false
-  end
-
-  test "teacher visiting homepage gets expected cookies set" do
-    teacher = create(:teacher)
-    sign_in teacher
-    get :home
-
-    cookie_header = @response.header['Set-Cookie']
-    assert_includes(cookie_header, "teacher_account_age_in_years")
-    assert_includes(cookie_header, "teacher_within_us")
-    assert_includes(cookie_header, "teacher_has_attended_pd")
   end
 
   # This exception is actually annoying to handle because it never gets to

@@ -256,12 +256,14 @@ const LockoutPanel: React.FC<LockoutPanelProps> = props => {
 
         {/* The timezone is set to UTC to ensure that the exact date renders. */}
         <p>
-          {i18n.sessionLockoutNote({
-            deleteDate: props.deleteDate.toLocaleDateString(locale, {
+          {i18n.sessionLockoutByDateNote()}
+          <br />
+          <b>
+            {props.deleteDate.toLocaleDateString(locale, {
               ...dateOptions,
               timeZone: 'UTC',
-            }),
-          })}
+            })}
+          </b>
         </p>
 
         {/* This field shows the current status of the validation. */}

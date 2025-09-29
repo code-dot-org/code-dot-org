@@ -57,6 +57,7 @@ export default class ProjectManager {
   private isShareView: boolean | undefined;
   private thumbnailUrl: string | undefined;
   private thumbnailPngBlob: Blob | undefined;
+  private currentVersionHasComment: boolean = false;
 
   constructor({
     sourcesStore,
@@ -104,6 +105,7 @@ export default class ProjectManager {
     }
 
     this.lastChannel = channel;
+    await this.initializeCurrentVersionCommentState();
     const abuseScore = await this.channelsStore.getAbuseScore(channel);
     const sharingDisabled = await this.channelsStore.getSharingDisabled(
       channel
@@ -316,8 +318,11 @@ export default class ProjectManager {
     this.publishHelper(false);
   }
 
-  async getVersionList() {
-    return await this.sourcesStore.getVersionList(this.channelId);
+  async getVersionList(includeComments: boolean = false) {
+    return await this.sourcesStore.getVersionList(
+      this.channelId,
+      includeComments
+    );
   }
 
   addSaveSuccessListener(listener: (channel: Channel) => void) {
@@ -334,6 +339,54 @@ export default class ProjectManager {
 
   addSaveStartListener(listener: () => void) {
     this.saveStartListeners.push(listener);
+  }
+
+  getCurrentVersionId(): string | null {
+    return this.sourcesStore.getCurrentVersionId();
+  }
+
+  /**
+   * Check if the current version has a comment associated with it.
+   * This is used to determine if we should force a new version during autosave
+   * to prevent overwriting a version that has a comment.
+   * @returns boolean true if current version has a comment
+   */
+  getCurrentVersionHasComment(): boolean {
+    return this.currentVersionHasComment;
+  }
+
+  /**
+   * Set whether the current version has a comment.
+   * @param hasComment whether the current version has a comment
+   */
+  setCurrentVersionHasComment(hasComment: boolean): void {
+    this.currentVersionHasComment = hasComment;
+  }
+
+  /**
+   * Initialize the comment state by checking if the current version has a comment.
+   */
+  private async initializeCurrentVersionCommentState(): Promise<void> {
+    const currentVersionId = this.getCurrentVersionId();
+    if (!currentVersionId) {
+      this.setCurrentVersionHasComment(false);
+      return;
+    }
+
+    try {
+      const versionList = await this.getVersionList(true); // include comments
+      const currentVersion = versionList.find(
+        v => v.versionId === currentVersionId
+      );
+      const hasComment = !!currentVersion?.comment?.trim();
+      this.setCurrentVersionHasComment(hasComment);
+    } catch (error) {
+      // If we can't fetch version list, assume no comment.
+      this.metricsReporter.logWarning(
+        `Failed to initialize comment state because we couldn't fetch the version list: ${error}`
+      );
+      this.setCurrentVersionHasComment(false);
+    }
   }
 
   isForceReloading(): boolean {
@@ -415,7 +468,7 @@ export default class ProjectManager {
           this.channelId,
           this.sourcesToSave,
           this.lastChannel.projectType,
-          forceNewVersion
+          forceNewVersion || this.getCurrentVersionHasComment() // Force new version if the last saved version has a comment and sources have changed.
         );
         if (this.thumbnailPngBlob) {
           await this.saveThumbnail();
@@ -432,6 +485,13 @@ export default class ProjectManager {
         return;
       }
       this.lastSource = JSON.stringify(this.sourcesToSave);
+
+      // If we created a new version (not replacing existing), then we reset the new version to not yet have a comment.
+      // If the user manually saves the version, then the comment is added after the project is saved.
+      // See SaveVersionPanel.tsx.
+      if (forceNewVersion || this.getCurrentVersionHasComment()) {
+        this.setCurrentVersionHasComment(false);
+      }
     }
 
     // Normally, reduceChannelUpdates is false and we update the channel

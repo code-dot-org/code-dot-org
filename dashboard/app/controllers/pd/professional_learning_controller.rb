@@ -20,7 +20,6 @@ class Pd::ProfessionalLearningController < ApplicationController
       last_workshop_survey_url: last_enrollment_with_pending_survey.try(:exit_survey_url),
       last_workshop_survey_course: last_enrollment_with_pending_survey.try(:workshop).try(:course),
       show_deeper_learning: show_deeper_learning,
-      current_year_application_id: Pd::Application::TeacherApplication.find_by(user: current_user, application_year: Pd::SharedApplicationConstants::APPLICATION_CURRENT_YEAR)&.id,
       has_enrolled_in_workshop: Pd::Enrollment.for_user(current_user).any?,
       pl_courses_started: current_user.pl_units_started,
       user_permissions: current_user.permissions.map(&:permission),
@@ -32,7 +31,7 @@ class Pd::ProfessionalLearningController < ApplicationController
 
   # GET professional-learning/courses
   def courses
-    @self_paced_pl_course_offerings = CourseOffering.self_paced_course_offerings_for_catalog
+    @self_paced_pl_course_offerings_for_catalog = CourseOffering.self_paced_course_offerings_for_catalog
     view_options(full_width: true, no_padding_container: true)
 
     @page_title = "Computer Science and AI Self Paced Professional Development Courses"
@@ -58,8 +57,11 @@ class Pd::ProfessionalLearningController < ApplicationController
   # GET professional-learning/workshops/:workshop_id
   def workshop_marketing_page
     view_options(full_width: true, responsive_content: true, no_padding_container: true)
+
     @workshop_info = Pd::Workshop.find(params[:workshop_id])&.summarize_for_marketing_page
     @user_info = current_user&.summarize_for_workshop
+    @user_enrollment = Pd::Enrollment.find_by(user: current_user, pd_workshop_id: params[:workshop_id])&.summarize_for_workshop
+
     render 'pd/professional_learning/workshops/index'
   end
 

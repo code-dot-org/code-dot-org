@@ -31,7 +31,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-08-25 18:27:53 UTC",
+    "serialized_at": "2025-09-02 15:37:49 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -15138,6 +15138,18 @@
       }
     },
     {
+      "name": "CSA: Casting",
+      "url": "https://youtu.be/Xy1lVNguW3s?si=dxykiGcsvHROiv2b",
+      "key": "csa_casting",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "csa_casting"
+      }
+    },
+    {
       "name": "Debugging Strategies",
       "url": "https://docs.google.com/presentation/d/1AZ69fzh8YayY5ikBj5GIsVeCRrzpiUd6IjY0eyEdYBo/edit?usp=drive_link",
       "key": "debugging_strategies",
@@ -16266,6 +16278,12 @@
       "seeding_key": {
         "lesson.key": "lesson-26",
         "resource.key": "casting_and_range_of_variables"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-26",
+        "resource.key": "csa_casting"
       }
     },
     {

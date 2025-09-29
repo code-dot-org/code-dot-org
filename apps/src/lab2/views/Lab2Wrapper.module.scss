@@ -18,6 +18,12 @@
     bottom: 0;
   }
 
+  &FullScreenView { 
+    top: 0;
+    bottom: 0;
+    z-index: 100;
+  }
+
   .pageErrorContainer {
     @extend %full-container-overlay;
     animation: fadein 0.5s;

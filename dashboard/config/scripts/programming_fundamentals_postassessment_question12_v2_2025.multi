@@ -1,0 +1,23 @@
+name 'programming-fundamentals-postassessment-question12_v2-2025'
+title 'Programming Fundamentals Post-Assessment: Question 12'
+
+right 'A missing or unclosed parenthesis, quotation mark, or indentation block'
+wrong 'A variable used before being defined'
+wrong 'A missing semicolon at the end of a statement'
+wrong 'The code is running in the wrong programming language'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+A student runs a Python program and receives this error:
+
+```
+SyntaxError: unexpected EOF while parsing
+```
+
+What is **most likely** the problem?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 7: Debugging Strategies
+MARKDOWN

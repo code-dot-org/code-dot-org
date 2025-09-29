@@ -4,7 +4,9 @@ module AichatAssetHelper
   class AichatLevelAssetFetchError < AichatAssetFetchError; end
   class AichatProjectAssetFetchError < AichatAssetFetchError; end
 
-  ASSET_BUCKET = AssetBucket.new
+  def self.asset_bucket
+    @@asset_bucket ||= AssetBucket.new
+  end
 
   # Returns a base64 string for the given asset.
   def self.get_asset_base64_string(filename, source, channel_id, level_name)
@@ -26,7 +28,7 @@ module AichatAssetHelper
 
     if source == 'project'
 
-      bucket_result = ASSET_BUCKET.get(channel_id, filename)
+      bucket_result = asset_bucket.get(channel_id, filename)
       bucket_status = bucket_result[:status]
 
       if bucket_status == 'FOUND'

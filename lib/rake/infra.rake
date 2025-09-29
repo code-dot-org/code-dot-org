@@ -121,12 +121,6 @@ namespace :infra do
   end
 end
 
-# Temporarily support invoking this task with either `rake ci` or `rake
-# infra:ci` until the latter method has been deployed everywhere, so our
-# persistent managed servers don't break during the transition.
-# TODO infra: remove this once the `infra:ci` implementation has been deployed
-timed_task_with_logging ci: ['infra:ci']
-
 # Returns true if upgrade succeeded, false if failed.
 def upgrade_frontend(name, hostname)
   ChatClient.log "Upgrading <b>#{name}</b> (#{hostname})..."

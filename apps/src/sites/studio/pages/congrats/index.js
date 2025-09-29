@@ -18,9 +18,11 @@ $(document).ready(function () {
   const userType = congratsData.current_user
     ? congratsData.current_user.user_type
     : 'signedOut';
-  const userName = congratsData.current_user
-    ? congratsData.current_user.name
-    : '';
+
+  const givenName = congratsData.current_user?.properties?.given_name;
+  const familyName = congratsData.current_user?.properties?.family_name;
+  const userName = givenName && familyName ? `${givenName} ${familyName}` : '';
+
   const language = congratsData.language;
   const under13 = congratsData.under_13;
   const nextCourseScriptName = congratsData.next_course_script_name;
@@ -64,6 +66,7 @@ $(document).ready(function () {
   ReactDOM.render(
     <Provider store={store}>
       <Congrats
+        congratsData={congratsData}
         certificateId={certificateId}
         tutorial={courseName}
         userType={userType}

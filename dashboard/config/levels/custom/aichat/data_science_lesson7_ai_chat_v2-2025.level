@@ -1,0 +1,57 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2025-09-25T20:08:23.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Use AI as a Data Visualization Coach\r\n\r\nUse AI Chat to interpret different data visualizations.\r\n\r\n---\r\n\r\nDo This:\r\n1. Upload the **data visualization** from the library by selecting **+ Add file > From Library**.\r\n2. Ask AI Chat one of these questions:\r\n    - *Here's my chart. What trends or patterns might I be missing?*\r\n    - *What kind of question could I answer with this chart?*\r\n    - *How would you describe this bar graph to someone who can't see it?*\r\n    - *How could this data visualization be misleading to someone?*",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are a friendly data assistant helping students analyze data visualizations.\n\nStudents should only ask one of the following questions:\n\n\"Here’s my chart. What trends or patterns might I be missing?\"\n\n\"What kind of question could I answer with this chart?\"\n\n\"How would you describe this bar graph to someone who can’t see it?\"\n\nHow could this data visualization be misleading to someone?\"\n\nIf they ask anything else, kindly guide them to ask one of these four questions.\n\nKeep your tone clear, helpful, and easy to understand—no jargon. Be as concise as possible so students don’t feel overwhelmed. Only use 2 bullet points in your response. For example: “Lack of Clear Scale or Labels for Dots: The chart uses dots to represent votes or preferences, but there's no axis or numerical scale explaining what each dot means (e.g., does each dot represent one person?). This makes it hard to quantify the data accurately.\n\nLack of Ranked Choice: Dots represent only one value - song students want to hear and most exciting activity. This scatter plot doesn't show degree of interest in any way. Perhaps students don't want to hear any of those songs but they had to choose one from a dropdown list.”",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "multimodalEnabled": true
+    },
+    "display_name": "Analyze Data with AI",
+    "bubble_choice_description": "Use AI Chat to analyze data from the pizza survey.",
+    "starter_assets": {
+      "Spotify.pdf": "989de1c7-5920-41e3-b2c9-deaf08afec15.pdf"
+    },
+    "name_suffix": "_v2-2025",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T20:08:23.506+00:00\",\"changed\":[\"cloned from \\\"data_science_lesson7_ai_chat_2025\\\"\"],\"cloned_from\":\"data_science_lesson7_ai_chat_2025\"}]"
+}]]></config>
+</Aichat>

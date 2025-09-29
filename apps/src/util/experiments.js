@@ -42,8 +42,6 @@ experiments.SECTION_SETUP_REFRESH = 'sectionSetupRefresh';
 experiments.GENDER_FEATURE_ENABLED = 'gender';
 // Experiment for enabling the AI-TA differentiation chat
 experiments.AI_DIFFERENTIATION = 'ai-differentiation';
-// Experiment for enabling the AI-TA differentiation chat sidebar to manage threads
-experiments.AI_DIFF_SIDEBAR = 'ai-diff-sidebar';
 // Experiment for showing the toggle a teacher can use to turn on AI Tutor for their section
 experiments.AI_TUTOR_ACCESS = 'ai-tutor';
 // Adds a "Get help with this block" option to block context menus if docs exist (e.g. Sprite Lab)
@@ -54,8 +52,6 @@ experiments.SECTION_PROGRESS_V2 = 'section_progress_v2';
 experiments.BIG_PLAYSPACE = 'bigPlayspace';
 // Allows user to view the new version of the teacher navigation
 experiments.TEACHER_LOCAL_NAV_V2 = 'teacher-local-nav-v2';
-// Allows users to view the new version of the teacher homepage
-experiments.TEACHER_HOMEPAGE_V2 = 'teacher-homepage-v2';
 // Use glow effect for Blockly block highlighting
 experiments.BLOCKLY_GLOW_HIGHLIGHT = 'blockly-glow-highlight';
 // Turn on Blockly Keyboard Navigation
@@ -68,6 +64,8 @@ experiments.LOCALIZEJS = 'localizejs';
 experiments.LAB2_INSTRUCTIONS_V2 = 'lab2-instructions-v2';
 // Use the new lab2 tabbed resource panel
 experiments.LAB2_RESOURCE_PANEL = 'lab2-resource-panel';
+// Show AI Tutor in legacy labs
+experiments.LEGACY_LAB_AI_TUTOR = 'legacy-lab-ai-tutor';
 
 /**
  * This was a gamified version of the finish dialog, built in 2018,

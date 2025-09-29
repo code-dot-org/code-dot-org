@@ -51,6 +51,7 @@
         = render partial: 'levels/editors/pythonlab', locals: {f: f} if @level.is_a? Pythonlab
         = render partial: 'levels/editors/panels', locals: {f: f} if @level.is_a? Panels
         = render partial: 'levels/editors/weblab2', locals: {f: f} if @level.is_a? Weblab2
+        = render partial: 'levels/editors/sketchlab', locals: {f: f} if @level.is_a? Sketchlab
         -# Widgets
         = render partial: 'levels/editors/frequency_analysis', locals: {f: f} if @level.is_a? FrequencyAnalysis
         = render partial: 'levels/editors/netsim', locals: {f: f} if @level.is_a? NetSim

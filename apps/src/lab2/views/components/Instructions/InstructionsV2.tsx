@@ -5,6 +5,7 @@ import React from 'react';
 import InstructorsOnly from '@cdo/apps/code-studio/components/InstructorsOnly';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {LevelProperties} from '@cdo/apps/lab2/types';
+import {isUsingResourcePanel} from '@cdo/apps/lab2/utils';
 import MainInstructionsContent from '@cdo/apps/lab2/views/components/Instructions/MainInstructionsContent';
 import ValidationResults from '@cdo/apps/lab2/views/components/Instructions/ValidationResults';
 import TextToSpeech from '@cdo/apps/lab2/views/components/TextToSpeech';
@@ -48,9 +49,11 @@ export interface InstructionsProps {
   requireRun?: boolean;
   /** If the navigation area should be hidden. */
   hideNavigation?: boolean;
+  /** If the continue button should be hidden if disabled. */
+  hideContinueIfDisabled?: boolean;
 }
 
-interface ValidationSettings {
+export interface ValidationSettings {
   onValidate: () => void;
   onStopValidation: () => void;
   isValidating: boolean;
@@ -76,11 +79,21 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
   AiTutor2ResponseView,
   overrideTheme,
   hideNavigation = false,
+  hideContinueIfDisabled = false,
   ...feedbackProps
 }) => {
   const validationResults = useAppSelector(
     state => state.lab.validationState?.validationResults
   );
+
+  // TODO: When Python Lab uses the resource panel permanently, we can remove all validation
+  // from this component.`
+  const includeValidation =
+    validationSettings !== undefined &&
+    !isUsingResourcePanel(
+      levelProperties.appName,
+      levelProperties.isProjectLevel || false
+    );
   const {longInstructions, predictSettings, offerBrowserTts} = levelProperties;
   const isPredictLevel = predictSettings?.isPredictLevel;
   const showTts = offerBrowserTts || queryParams('show-tts') === 'true';
@@ -132,7 +145,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
               <TextToSpeech text={longInstructions} />
             </div>
           )}
-          {validationSettings && (
+          {includeValidation && (
             <ValidationButton
               onValidate={validationSettings.onValidate}
               onStopValidation={validationSettings.onStopValidation}
@@ -146,7 +159,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
             </div>
           )}
         </div>
-        {validationResults && (
+        {includeValidation && validationResults && (
           <div className={moduleStyles.bubble}>
             <div className={moduleStyles.textContent}>
               <div className={moduleStyles.scrollingContent}>
@@ -176,6 +189,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
             {...feedbackProps}
             levelProperties={levelProperties}
             handleInstructionsTextClick={handleInstructionsTextClick}
+            hideContinueIfDisabled={hideContinueIfDisabled}
           />
         )}
       </div>

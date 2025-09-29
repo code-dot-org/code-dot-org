@@ -1,0 +1,17 @@
+name 'programming-fundamentals-lesson5-level10_2025-launch_v2-2025'
+title 'Check Your Understanding'
+
+wrong 'No error'
+right 'Missing parentheses'
+wrong 'Missing quotation mark'
+wrong 'Wrong object name'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+What error will this line of code cause?
+
+```
+alice.move
+```
+MARKDOWN

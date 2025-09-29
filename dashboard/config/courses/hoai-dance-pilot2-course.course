@@ -1,0 +1,24 @@
+{
+  "name": "hoai-dance-pilot2-course",
+  "script_names": [
+    "hoai-dance-pilot2"
+  ],
+  "original_script_names": [
+    "hoai-dance-pilot2"
+  ],
+  "published_state": "in_development",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "hoai-dance-pilot2-course",
+    "numbered_units": "auto",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

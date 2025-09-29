@@ -1,0 +1,9 @@
+name 'programming-fundamentals-lesson12-level8_2025-launch_v2-2025'
+display_name 'Repeat and Decide'
+description 'Choose **ONE** scenario and write a `while` loop that includes an `if/else` statement. Make sure your `Painter` always does something on each loop, whether that\'s painting, turning, or collecting paint.'
+
+sublevels
+level 'programming-fundamentals-lesson12-level8a_2025-launch_v2-2025'
+level 'programming-fundamentals-lesson12-level8b_2025-launch_v2-2025'
+level 'programming-fundamentals-lesson12-level8c_2025-launch_v2-2025'
+level 'programming-fundamentals-lesson12-level8d_2025-launch_v2-2025'

@@ -1,3 +1,11 @@
+export type CourseOfferingFacilitatedWorkshop = {
+  id: number;
+  title: string;
+  sessions: {start: string}[];
+  link: string;
+  is_virtual: boolean;
+};
+
 /** Summarized course offering shape */
 export interface CourseOffering {
   key: string;
@@ -21,4 +29,5 @@ export interface CourseOffering {
   script_id?: number;
   self_paced_pl_course_offering_path?: string;
   available_resources?: Record<string, string>;
+  facilitated_workshops?: CourseOfferingFacilitatedWorkshop[];
 }

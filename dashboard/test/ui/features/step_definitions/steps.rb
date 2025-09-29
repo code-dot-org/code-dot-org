@@ -1198,7 +1198,7 @@ Given(/^I assign my section in row (\d+) to course "([^"]*)" unit (\d+)$/) do |s
   browser_request(
     url: '/api/test/assign_section_to_course_and_unit',
     method: 'POST',
-    body: {section_position: section_position, course_name: course_name, unit_position: unit_position}
+    body: {section_position: section_position-1, course_name: course_name, unit_position: unit_position}
   )
 end
 
@@ -1242,6 +1242,13 @@ And /^I dismiss the hoc guide dialog$/ do
   steps <<~GHERKIN
     And I click selector "#uitest-no-email-guide" if I see it
     And I wait until I don't see selector "#uitest-no-email-guide"
+  GHERKIN
+end
+
+And /^I dismiss the match instructions dialog$/ do
+  steps <<~GHERKIN
+    And I click selector ".x-close" if I see it
+    And I wait until I don't see selector ".dash_modal"
   GHERKIN
 end
 
@@ -1617,9 +1624,8 @@ When /^I set up code review for teacher "([^"]*)" with (\d+(?:\.\d*)?) students 
   steps <<~GHERKIN
     Given I create a teacher named "#{teacher_name}"
     And I give user "#{teacher_name}" authorized teacher permission
-    And I create a new student section assigned to course "ui-test-csa-family-script" unit 1
+    And I create a new student section assigned to course "ui-test-csa-family-script" unit 1 and save the section
     And I sign in as "#{teacher_name}" and go home
-    And I save the student section url
     And I save the section id from row 0 of the section table
     #{add_student_step_list.join("\n")}
     And I wait to see ".alert-success"

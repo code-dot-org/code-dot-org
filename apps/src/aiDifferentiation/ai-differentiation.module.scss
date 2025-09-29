@@ -20,9 +20,9 @@
 $container-width: 512;
 $header-height: 40;
 $body-height: 612;
-$fab-left: 10;
-$fab-bottom: 33;
-$fab-height: 60;
+$fab-left: 11;
+$fab-bottom: 35;
+$fab-height: 48;
 
 :export {
   containerHeight: $header-height + $body-height;
@@ -272,15 +272,23 @@ $fab-height: 60;
   bottom: $fab-bottom * 1px;
 
   height: $fab-height * 1px;
-  width: 60px;
+  width: 48px;
   background-size: 60px;
   padding: 0;
   background-color: transparent;
 
   border-width: 0;
+  border-radius: 50%;
 
   img {
     opacity: 1;
+  }
+
+  .floatingActionButtonTag {
+    position: absolute;
+    width: 25px;
+    left: 33px;
+    top: -8px;
   }
 }
 
@@ -316,7 +324,7 @@ $fab-height: 60;
 }
 
 .sidebarBox {
-  width: inherit;
+  width: 100%;
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
@@ -342,7 +350,7 @@ $fab-height: 60;
   margin-bottom: 0 !important;
 }
 
-:global(.Mui-selected).sidebarChatButton{
+:global(.Mui-selected).sidebarChatButton {
   background-color: var(--background-neutral-tertiary) !important;
 }
 
@@ -388,4 +396,58 @@ $fab-height: 60;
 
 .sidebarManageLink {
   margin-left: 8px;
+}
+
+.notificationsButton {
+  background-color: inherit;
+  display: flex;
+  height: 32px;
+  align-items: center;
+  gap: 12px;
+  padding-left: 16px;
+  text-decoration: none;
+  color: var(--text-neutral-black-fixed);
+  border: 0;
+  font-size: var(--font-size-body-sm, 14px);
+  margin: 16px 0 0 0;
+  min-height: 32px;
+  border-radius: 0;
+
+  & span {
+    flex-grow: 1;
+    text-align: start;
+  }
+
+  &.selected {
+    border-left: 4px solid var(--borders-brand-teal-primary);
+    background-color: var(--background-neutral-quaternary);
+    padding-left: 12px;
+    text-decoration: none;
+    color: var(--text-neutral-primary);
+    font-weight: 600;
+  }
+
+  &:active {
+    // !important necessary to override application.css
+    border: 0 !important;
+    border-left: 4px solid var(--borders-brand-teal-primary) !important;
+    background-color: var(--background-neutral-quaternary);
+    padding-left: 12px;
+    text-decoration: none;
+    color: var(--text-neutral-primary);
+  }
+
+  &:hover {
+    background-color: var(--background-neutral-tertiary);
+    text-decoration: none;
+  }
+
+  .readAt {
+    color: var(--background-error-primary);
+    font-size: 8px;
+    min-width: 8px;
+    margin-inline-start: 8px;
+    width: 8px;
+    line-height: var(--font-line-height-body-xxs, 17.6px);
+  }
 }

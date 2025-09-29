@@ -77,11 +77,7 @@ module Pd
         end
       end
 
-      agenda = params[:agenda] || nil
-      # remove / from agenda url so module/1 => module1
-      agenda&.tr!("/", "")
-
-      render_survey_foorm(survey_name: PRE_SURVEY_CONFIG_PATHS[COURSE_BUILD_YOUR_OWN], workshop: workshop, session: nil, day: 0, workshop_agenda: agenda)
+      render_survey_foorm(survey_name: PRE_SURVEY_CONFIG_PATHS[COURSE_BUILD_YOUR_OWN], workshop: workshop, session: nil, day: 0)
     end
 
     def new_facilitator_post_foorm(workshop)

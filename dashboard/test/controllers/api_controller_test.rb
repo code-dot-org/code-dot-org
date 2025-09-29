@@ -29,14 +29,14 @@ class ApiControllerTest < ActionController::TestCase
     @student_1, @student_2, @student_3, @student_4, @student_5, @student_6, @student_7 = @students
 
     @flappy = create(:text_match, :with_script).script_levels.first.script
-    create(:single_unit_course, unit: @flappy)
-    @flappy_section = create(:section, user: @teacher, script_id: @flappy.id)
+    @flappy_course = create(:single_unit_course, unit: @flappy)
+    @flappy_section = create(:section, user: @teacher, script_id: @flappy.id, course_id: @flappy_course.id)
     @student_flappy_1 = create(:follower, section: @flappy_section).student_user
     @student_flappy_1.reload
 
     @allthings = create(:text_match, :with_script).script_levels.first.script
-    create(:single_unit_course, unit: @allthings)
-    @allthings_section = create(:section, user: @teacher, script_id: @allthings.id)
+    @allthingscourse = create(:single_unit_course, unit: @allthings)
+    @allthings_section = create(:section, user: @teacher, script_id: @allthings.id, course_id: @allthings.original_unit_group_id)
     @student_allthings = create(:student, name: 'student_allthings')
     create(:follower, section: @allthings_section, student_user: @student_allthings)
     @allthings_section.reload
@@ -1143,7 +1143,7 @@ class ApiControllerTest < ActionController::TestCase
   test "should get progress for section with section script" do
     Unit.stubs(:should_cache?).returns true
 
-    assert_queries 7 do
+    assert_queries 8 do
       get :section_progress, params: {section_id: @flappy_section.id}
     end
     assert_response :success
@@ -1852,7 +1852,7 @@ class ApiControllerTest < ActionController::TestCase
   describe '#unit_summary' do
     let!(:user) {create(:teacher)}
     let(:course) {create(:unit_group, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)}
-    let(:unit) {create(:unit, :with_levels, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)}
+    let(:unit) {create(:unit, :with_levels)}
     let!(:unit_name) {unit.name}
     let(:unit_position) {1}
     let!(:unit_group_unit) {create(:unit_group_unit, unit_group: course, script: unit, position: unit_position)}
