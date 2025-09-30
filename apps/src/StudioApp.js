@@ -16,6 +16,7 @@ import {addCallouts} from '@cdo/apps/code-studio/callouts';
 import {createLibraryClosure} from '@cdo/apps/code-studio/components/libraries/libraryParser';
 import WorkspaceAlert from '@cdo/apps/code-studio/components/WorkspaceAlert';
 import {queryParams} from '@cdo/apps/code-studio/utils';
+import localization from '@cdo/apps/localization';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
@@ -2039,7 +2040,16 @@ StudioApp.prototype.setConfigValues_ = function (config) {
     config.level.minWorkspaceHeight = config.level.minWorkspaceHeight || 1250;
   }
 
-  this.appMsg = config.appMsg;
+  // Localize the app messages
+
+  const msg = Object.entries(config.appMsg).reduce(
+    (acc, [key, msgFunction]) => {
+      acc[key] = (...args) => localization.translate(msgFunction(...args));
+      return acc;
+    },
+    {}
+  );
+  this.appMsg = msg;
   this.IDEAL_BLOCK_NUM = config.level.ideal || Infinity;
   if (experiments.isEnabled(experiments.BUBBLE_DIALOG)) {
     // This seems to break levels that start in the animation/costume tab.
@@ -2472,7 +2482,24 @@ StudioApp.prototype.handleEditCode_ = function (config) {
   const codeTextbox = document.getElementById('codeTextbox');
   const dropletCodeTextbox = document.createElement('div');
   dropletCodeTextbox.setAttribute('id', 'dropletCodeTextbox');
+  dropletCodeTextbox.setAttribute('data-notranslate', '');
   codeTextbox.appendChild(dropletCodeTextbox);
+
+  // Localize the droplet palette
+  fullDropletPalette.forEach(paletteInfo => {
+    if (paletteInfo.name) {
+      paletteInfo.name = localization.translate(paletteInfo.name);
+    }
+  });
+
+  // Localize the palette block parameters
+  for (const blockInfo of config.dropletConfig?.blocks || []) {
+    if (blockInfo.paletteParams) {
+      blockInfo.paletteParams = blockInfo.paletteParams.map(param =>
+        localization.translate(param)
+      );
+    }
+  }
 
   this.editor = new droplet.Editor(dropletCodeTextbox, {
     mode: 'javascript',
@@ -2602,6 +2629,26 @@ StudioApp.prototype.handleEditCode_ = function (config) {
   }
 
   this.resizeToolboxHeader();
+
+  // Localize comments within the starting code
+  const localizeJS = code =>
+    code
+      .split('\n')
+      .map(line =>
+        // Find comments
+        line
+          .split('//')
+          .map((part, i) =>
+            i === 1 ? ' ' + localization.translate(part.trim()) : part
+          )
+          .join('//')
+      )
+      .join('\n');
+
+  // Localize the start code
+  config.level.startBlocks = config.level.startBlocks
+    ? localizeJS(config.level.startBlocks)
+    : config.level.startBlocks;
 
   var startBlocks = config.level.lastAttempt || config.level.startBlocks;
   if (startBlocks) {
