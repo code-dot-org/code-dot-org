@@ -79,12 +79,6 @@ const PersonalizationCollectorContainer: React.FC = () => {
   }, []);
 
   const onCarouselPress = async (direction: number) => {
-    {
-      console.log(TEACHING_STYLES[0]);
-    }
-    {
-      console.log(TEACHING_STYLES[0].name);
-    }
     if (direction === NEXT) {
       setIsSaving(true);
       try {

@@ -5,7 +5,7 @@ import {
 } from '@code-dot-org/component-library/typography';
 import React from 'react';
 
-import {TeachingStyle} from './PersonalizationResults';
+import {TeachingStyle} from './personalization_types';
 
 import style from './personalization-information.module.scss';
 
