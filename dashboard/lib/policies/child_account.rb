@@ -118,10 +118,6 @@ class Policies::ChildAccount
   # the student attends because the school has admin control of the account.
   SCHOOL_OWNED_TYPES = Set[AuthenticationOption::CLEVER, AuthenticationOption::LTI_V1].freeze
 
-  # Login types that are considered school owned only if the user is in a section or was created via
-  # roster sync from an LMS.
-  CONDITIONALLY_SCHOOL_OWNED_TYPES = Set[AuthenticationOption::GOOGLE, AuthenticationOption::MICROSOFT].freeze
-
   # Login types that are always considered personal logins.
   PERSONAL_LOGIN_TYPES = Set[AuthenticationOption::EMAIL, AuthenticationOption::FACEBOOK].freeze
 
@@ -131,23 +127,21 @@ class Policies::ChildAccount
     # Sponsored accounts are always managed by the teacher.
     return false if user.sponsored?
 
-    # Email + password logins are always personal logins.
+    # Any account is considered school owned for users who are in sections and/or
+    # if the user was created via a roster sync.
+    return false if conditionally_school_managed?(user)
+
+    # Email + password logins are personal logins.
     return true if user.encrypted_password.present?
 
     providers = user.migrated? ? Set.new(user.authentication_options.pluck(:credential_type)) : Set.new([user.provider])
     return true if providers.empty?
 
-    # Email and Facebook are always personal logins.
+    # Email and Facebook are personal logins.
     return true if providers.intersect?(PERSONAL_LOGIN_TYPES)
 
     # Clever and LTI are never personal logins if no other login types are present.
     return false if providers.subset?(SCHOOL_OWNED_TYPES)
-
-    # Google and Microsoft are considered school owned for users who are in sections and/or
-    # if the user was created via a roster sync.
-    if providers.intersect?(CONDITIONALLY_SCHOOL_OWNED_TYPES)
-      return !conditionally_school_managed?(user)
-    end
 
     return true
   end

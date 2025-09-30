@@ -150,9 +150,6 @@ module Dashboard
       I18n.fallbacks.map(pt: :'pt-BR')
     end
 
-    # Base host for asset helpers (image_url, asset_url, etc.)
-    config.asset_host = CDO.studio_url('', CDO.default_scheme)
-
     config.assets.gzip = false # cloudfront gzips everything for us on the fly.
     config.assets.paths << Rails.root.join('./public/blockly')
     config.assets.paths << Rails.root.join('../shared/css')

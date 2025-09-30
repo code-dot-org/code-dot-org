@@ -1,10 +1,12 @@
-import {Button} from '@code-dot-org/component-library/button';
 import {FontAwesomeV6IconProps} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Tabs, {TabsProps} from '@code-dot-org/component-library/tabs';
-import React, {useCallback, useEffect, useMemo, useState} from 'react';
+import React, {useCallback, useEffect, useMemo} from 'react';
 
-import {isModelUpdate, SystemPromptSettings} from '@cdo/apps/aichat/types';
-import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {
+  isModelUpdate,
+  SystemPromptSettings,
+  WorkspaceTeacherViewTab,
+} from '@cdo/apps/aichat/types';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import usePrevious from '@cdo/apps/util/usePrevious';
 
@@ -20,10 +22,11 @@ import {
   clearStagedFiles,
   fetchUserChatHistory,
   selectAllVisibleMessages,
-  sendAnalytics,
   setClientType,
   setNewChatSession,
+  setChatWorkspaceSelectedTab,
 } from '../redux';
+import {clearUserAddedSelectionContext} from '../redux/slice';
 import {findChangedProperties, getNewRemoveId} from '../redux/utils';
 import {
   AiChatClientType,
@@ -35,9 +38,9 @@ import {getAssetUrl, getShortName} from '../utils';
 
 import StagedFilesPreview from './assets/StagedFilesPreview';
 import UploadButton from './assets/UploadButton';
+import UserAddedSelectionContextPreview from './assets/UserAddedSelectionContextPreview';
 import ChatEventsList from './ChatEventsList';
 import ChatModeDropdown from './ChatModeDropdown';
-import CopyChatHistoryButton from './CopyChatHistoryButton';
 import UserChatMessageEditor from './UserChatMessageEditor';
 
 import moduleStyles from './chatWorkspace.module.scss';
@@ -58,15 +61,6 @@ interface ChatWorkspaceProps {
   // Options for changing system prompt (used in Web Lab 2)
   systemPromptSettings?: SystemPromptSettings;
 }
-
-enum WorkspaceTeacherViewTab {
-  STUDENT_CHAT_HISTORY = 'viewStudentChatHistory',
-  TEST_STUDENT_MODEL = 'testStudentModel',
-}
-
-const eraserIcon: FontAwesomeV6IconProps = {
-  iconName: 'eraser',
-};
 
 /**
  * Renders the AI Chat Lab main chat workspace component.
@@ -90,8 +84,9 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     multimodalEnabled = false;
   }
 
-  const [selectedTab, setSelectedTab] =
-    useState<WorkspaceTeacherViewTab | null>(null);
+  const selectedTab = useAppSelector(
+    state => state.aichat.chatWorkspaceSelectedTab
+  );
 
   const studentChatHistory = useAppSelector(
     state => state.aichat.studentChatHistory
@@ -146,12 +141,13 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     });
   }, [clientType, currentLevelId, scriptId, channelId]);
 
-  // This effect resets chat history and any staged uploads when:
+  // This effect resets chat history and any staged uploads or user selections when:
   // a) a user switches levels, or
   // b) a teacher switches between viewing students (or their own project) on a given level.
   useEffect(() => {
     dispatch(clearChatMessages());
     dispatch(clearStagedFiles());
+    dispatch(clearUserAddedSelectionContext());
 
     if (selectedStudent) {
       dispatch(
@@ -180,11 +176,15 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   useEffect(() => {
     // If we are viewing as a student, default to the student chat history tab if tab is not yet selected.
     if (selectedStudent && !selectedTab) {
-      setSelectedTab(WorkspaceTeacherViewTab.STUDENT_CHAT_HISTORY);
+      dispatch(
+        setChatWorkspaceSelectedTab(
+          WorkspaceTeacherViewTab.STUDENT_CHAT_HISTORY
+        )
+      );
     } else if (!selectedStudent) {
-      setSelectedTab(null);
+      dispatch(setChatWorkspaceSelectedTab(null));
     }
-  }, [selectedStudent, selectedTab]);
+  }, [dispatch, selectedStudent, selectedTab]);
 
   // Whenever model parameters change, 1) reset the chat session if necessary,
   // and 2) log the changed properties to the chat history.
@@ -255,9 +255,9 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
 
   const handleOnChange = useCallback(
     (value: string) => {
-      setSelectedTab(value as WorkspaceTeacherViewTab);
+      dispatch(setChatWorkspaceSelectedTab(value as WorkspaceTeacherViewTab));
     },
-    [setSelectedTab]
+    [dispatch]
   );
 
   const tabArgs: TabsProps = {
@@ -269,21 +269,6 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     tabsContainerClassName: moduleStyles.tabsContainer,
     tabPanelsContainerClassName: moduleStyles.tabPanelsContainer,
   };
-
-  const onClear = useCallback(() => {
-    dispatch(clearChatMessages());
-    dispatch(
-      addChatEvent({
-        timestamp: Date.now(),
-        descriptionKey: 'CLEAR_CHAT',
-      })
-    );
-    dispatch(
-      sendAnalytics(EVENTS.CHAT_ACTION, {
-        action: 'Clear chat history',
-      })
-    );
-  }, [dispatch]);
 
   return (
     <div id="chat-workspace-area" className={moduleStyles.chatWorkspace}>
@@ -300,6 +285,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
         {multimodalAvailable && (
           <StagedFilesPreview buildAssetUrl={buildAssetUrl} />
         )}
+        <UserAddedSelectionContextPreview />
         <ChatModeDropdown
           className={moduleStyles.modeDropdown}
           systemPromptSettings={systemPromptSettings}
@@ -323,16 +309,6 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
               buildAssetUrl={buildAssetUrl}
             />
           )}
-          <Button
-            text={aichatI18n.clearChatButtonText()}
-            disabled={!canChatWithModel}
-            iconLeft={eraserIcon}
-            size="s"
-            type="secondary"
-            color="gray"
-            onClick={onClear}
-          />
-          <CopyChatHistoryButton isDisabled={!canChatWithModel} />
         </div>
       </div>
     </div>

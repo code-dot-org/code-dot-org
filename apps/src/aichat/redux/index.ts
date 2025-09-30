@@ -23,4 +23,5 @@ export {
   clearStagedFilesAlert,
   clearStagedFiles,
   clearHasSetStartingCustomizations,
+  setChatWorkspaceSelectedTab,
 } from './slice';

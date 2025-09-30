@@ -5,6 +5,7 @@ import {AiInteractionStatus} from '@cdo/generated-scripts/sharedConstants';
 import {ChatAsset} from './assets';
 import {ModelParameters} from './customizations';
 import {FeedbackValue} from './toxicity';
+import {UserAddedSelectionContextItem} from './userAddedSelectionContext';
 
 export type ChatEventDescriptionKey = 'CLEAR_CHAT' | 'LOAD_LEVEL';
 
@@ -22,6 +23,7 @@ interface BaseChatMessage extends BaseChatEvent {
   assets?: ChatAsset[];
   role: Role;
   status: ValueOf<typeof AiInteractionStatus>;
+  userAddedSelectionContext?: UserAddedSelectionContextItem[];
 }
 
 /** Chat message that is being sent to the server for chat completion. Status and request ID are yet undetermined. */

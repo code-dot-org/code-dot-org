@@ -5,99 +5,144 @@ description 'description here'
 markdown <<MARKDOWN
 #How This Course is Different
 
+#### Unlike traditional CS courses that focus primarily on syntax and isolated programming exercises, AI Foundations Semester 2 blends coding, AI, and design into a unified learning experience. 
 
-<img src="https://images.code.org/378badb4a5c143d5afd3cc0e7a9587e5-Screenshot 2025-05-20 at 2.35.32 PM.png" alt="teacher icon" style="border-radius:10px; float: left; height: 120px; width: 120px; margin: 20px 20px 0px 10px; ">
+#### Students don’t just learn how to code—they learn why and when to **collaborate with AI**, critically evaluate its outputs, and adapt them to real-world needs.
 
-## Scenario A:
-#### A company trains employees on customer service etiquette to improve communication.
+## Guiding Constructs
 
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; margin-left: 145px; width: 45%; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 14pt; font-weight: bold;"><b>🔎</b> Answer</summary>
-    <div style="margin-top: 10px; margin-left: 10px; margin-right: 10px; padding-bottom: 0px;">
-        <p style="font-size: 14pt;">
-            <b>Not Cybersecurity-</b> <i>This scenario is about improving communication skills, not protecting systems, networks, or data from cyber threats.</i>
-        </p>
+<!-- Grid container -->
+  <div
+    style="
+      display:flex;
+      flex-wrap:wrap;
+      gap:16px;
+      margin: 10px 0 10px 0;
+    "
+  >
+<!-- Card 1 -->
+    <div
+      style="
+        flex: 0 0 calc(50% - 8px);
+        box-sizing: border-box;
+        border: 2px solid #0093A4;
+        border-radius: 10px;
+        padding: 12px;
+        background:#ffffff;
+        box-shadow: 2px 4px 8px rgba(0,0,0,0.2);
+      "
+    >
+      <div style="display:flex; gap:12px; align-items:flex-start;">
+        <img src="https://images.code.org/893015f7155e1de842c22d4d0fbfb37f-image-1758906886751.png"
+             alt="teacher icon"
+             style="width:84px; height:84px; border-radius:10px; object-fit:cover;">
+        <div>
+          <details>
+            <summary style="font-size:16px; font-weight:700; cursor:pointer;">
+              🎨 AI as a creative partner
+            </summary>
+            <p style="margin:8px 0 0 0; font-size:16px;">
+              <i>Students use generative AI to brainstorm, scaffold, and refine code, while maintaining ownership and understanding of their work.</i>
+            </p>
+          </details>
+        </div>
+      </div>
     </div>
-</details>
+<!-- Card 2 -->
+    <div
+      style="
+        flex: 0 0 calc(50% - 8px);
+        box-sizing: border-box;
+        border: 2px solid #0093A4;
+        border-radius: 10px;
+        padding: 12px;
+        background:#ffffff;
+        box-shadow: 2px 4px 8px rgba(0,0,0,0.2);
+      "
+    >
+      <div style="display:flex; gap:12px; align-items:flex-start;">
+        <img src="https://images.code.org/c35fe50b0f6f0ebe39bafb7e2808a5d6-image-1758906956682.png"
+             alt="phone icon"
+             style="width:84px; height:84px; border-radius:10px; object-fit:cover;">
+        <div>
+          <details>
+            <summary style="font-size:16px; font-weight:700; cursor:pointer;">
+              🧑‍💻 Human-centered design
+            </summary>
+            <p style="margin:8px 0 0 0; font-size:16px;">
+              <i>Every project is anchored in usability, ethics, and purpose—helping students consider accessibility, trust, and impact alongside technical skills.</i>
+            </p>
+          </details>
+        </div>
+      </div>
+    </div>
+<!-- Card 3 -->
+    <div
+      style="
+        flex: 0 0 calc(50% - 8px);
+        box-sizing: border-box;
+        border: 2px solid #0093A4;
+        border-radius: 10px;
+        padding: 12px;
+        background:#ffffff;
+        box-shadow: 2px 4px 8px rgba(0,0,0,0.2);
+      "
+    >
+      <div style="display:flex; gap:12px; align-items:flex-start;">
+        <img src="https://images.code.org/8ab4e41ca0ce9e4e59d0f34f5a971691-image-1758907041465.png"
+             alt="cookbook icon"
+             style="width:84px; height:84px; border-radius:10px; object-fit:cover;">
+        <div>
+          <details>
+            <summary style="font-size:16px; font-weight:700; cursor:pointer;">
+              🌐 Real-world projects
+            </summary>
+            <p style="margin:8px 0 0 0; font-size:16px;">
+              <i>Instead of abstract drills, students build systems like brand websites, dialogue apps, and recommendation engines that reflect authentic applications.</i>
+            </p>
+          </details>
+        </div>
+      </div>
+    </div>
+<!-- Card 4 -->
+    <div
+      style="
+        flex: 0 0 calc(50% - 8px);
+        box-sizing: border-box;
+        border: 2px solid #0093A4;
+        border-radius: 10px;
+        padding: 12px;
+        background:#ffffff;
+        box-shadow: 2px 4px 8px rgba(0,0,0,0.2);
+      "
+    >
+      <div style="display:flex; gap:12px; align-items:flex-start;">
+        <img src="https://images.code.org/27e5d4703ebd1c4b580835dd886f49fa-image-1758907229410.png"
+             alt="computer icon"
+             style="width:84px; height:84px; border-radius:10px; object-fit:cover;">
+        <div>
+          <details>
+            <summary style="font-size:16px; font-weight:700; cursor:pointer;">
+              🔎 Values-driven technology
+            </summary>
+            <p style="margin:8px 0 0 0; font-size:16px;">
+              <i>Students examine bias, fairness, and transparency, ensuring their systems align with their personal and community values.</i>
+            </p>
+          </details>
+        </div>
+      </div>
+    </div>
 
-<div style="clear:both;"></div>
-<br>
+  </div>
 
-<img src="https://images.code.org/54ec59024257ed9adbbf43ddb9383dd4-Screenshot 2025-05-20 at 2.35.37 PM.png" alt="phone icon" style="border-radius:10px; float: left; height: 120px; width: 120px; margin: 20px 20px 0px 10px; ">
 
-## Scenario B:
-#### A website requires users to verify their identity using two-factor authentication before logging in.
 
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; margin-left: 145px; width: 45%; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 14pt; font-weight: bold;"><b>🔎</b>  Answer</summary>
-<div style="margin-top: 10px; margin-left: 10px; margin-right: 10px; padding-bottom:0px;">
-       	<p style= "font-size: 14pt">
-        <b>Cybersecurity-</b> <i>Two-factor authentication (2FA) is a security measure that adds an extra layer of protection to user accounts by requiring a second form of verification, such as a code sent to a phone or email.</i>
-        </p>
-   </div>
-</details>
-
-<div style="clear:both;"></div>
-<br>
-
-<img src="https://images.code.org/382eb625af5f1936acceaf15fa44bb1a-Screenshot 2025-05-20 at 2.35.42 PM.png" alt="cook book icon" style="border-radius:10px; float: left; height: 120px; width: 120px; margin: 20px 20px 0px 10px; ">
-
-## Scenario C:
-#### A chef stores recipes in a physical cookbook to keep track of ingredients.
-
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; margin-left: 145px; width: 45%; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 14pt; font-weight: bold;"><b>🔎</b>  Answer</summary>
-<div style="margin-top: 10px; margin-left: 10px; margin-right: 10px; padding-bottom:0px;">
-       	<p style= "font-size: 14pt">
-        <b>Not Cybersecurity-</b> <i>This is a physical record-keeping practice and does not involve digital security or protecting information from cyber threats.</i>
-        </p>
-   </div>
-</details>
-
-<div style="clear:both;"></div>
-<br>
-
-<img src="https://images.code.org/56ee76ae717e0695093a79d9d952ee6a-Screenshot 2025-05-20 at 2.35.47 PM.png" alt="computer icon" style="border-radius:10px; float: left; height: 120px; width: 120px; margin: 20px 20px 0px 10px; ">
-
-## Scenario D:
-#### A bank encrypts online transactions to protect customers from fraud and cyberattacks.
-
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; margin-left: 145px; width: 45%; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 14pt; font-weight: bold;"><b>🔎</b>  Answer</summary>
-<div style="margin-top: 10px; margin-left: 10px; margin-right: 10px; padding-bottom:0px;">
-       	<p style= "font-size: 14pt">
-        <b>Cybersecurity-</b> <i>Encryption is a cybersecurity technique that secures sensitive information by converting it into unreadable data, ensuring that only authorized users can access it.</i>
-        </p>
-   </div>
-</details>
-
-<div style="clear:both;"></div>
-<br>
-
-<img src="https://images.code.org/b8f7f144f3137f9c7115edfcbbb75b33-Screenshot 2025-05-20 at 2.35.55 PM.png" alt="computer icon" style="border-radius:10px; float: left; height: 120px; width: 120px; margin: 20px 20px 0px 10px; ">
-
-## Scenario E:
-#### A school district installs content filtering software to prevent students from accessing harmful websites.
-
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; margin-left: 145px; width: 45%; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 14pt; font-weight: bold;"><b>🔎</b>  Answer</summary>
-<div style="margin-top: 10px; margin-left: 10px; margin-right: 10px; padding-bottom:0px;">
-       	<p style= "font-size: 14pt">
-        <b>Cybersecurity-</b> <i>Content filtering is a cybersecurity measure used to block or restrict access to malicious or inappropriate websites, protecting students from online threats.</i>
-        </p>
-   </div>
-</details>
-
-<div style="clear:both;"></div>
-<br>
-
-<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
-
-<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; "><strong>Teacher Tip:</strong> These scenarios can be presented to students, and they can discuss in pairs or small groups whether each scenario involves cybersecurity and why. This encourages critical thinking and reinforces their understanding of cybersecurity concepts.
-</p>
+  <p style="margin: 12px 0 0 0; font-size: 16px;">
+    This approach shifts computing education from memorizing code toward designing technology intentionally and responsibly, preparing students for a future where AI is everywhere.
+  </p>
 </div>
 
- 
+<hr>
 
-
+*Images produced by AI*
 MARKDOWN
