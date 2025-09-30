@@ -1,10 +1,10 @@
 import {Steps} from 'intro.js-react';
 import React, {useMemo} from 'react';
 
-import {PYTHONLAB_RESOURCE_PANEL_ONBOARDING_TOUR_SEEN} from '@cdo/apps/pythonlab/constants';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 
+import {RESOURCE_PANEL_PINNED_BUTTON_ONBOARDING_TOUR_SEEN} from './constants';
 import {STEPS, INITIAL_STEP} from './resourcePanelTourHelpers';
 
 interface UseOnboardingTourProps {
@@ -15,8 +15,8 @@ interface UseOnboardingTourProps {
 // If other labs would like to opt in to use this hook, we can update the hook work with other labs.
 export const useOnboardingTour = ({appName}: UseOnboardingTourProps) => {
   const isPythonLab = appName === 'pythonlab';
-  const pythonlabResourcePanelOnboardingTourSeen = tryGetLocalStorage(
-    PYTHONLAB_RESOURCE_PANEL_ONBOARDING_TOUR_SEEN,
+  const resourcePanelPinnedButtonOnboardingTourSeen = tryGetLocalStorage(
+    RESOURCE_PANEL_PINNED_BUTTON_ONBOARDING_TOUR_SEEN,
     'no'
   );
 
@@ -25,13 +25,13 @@ export const useOnboardingTour = ({appName}: UseOnboardingTourProps) => {
       isPythonLab ? (
         <Steps
           enabled={
-            isPythonLab && pythonlabResourcePanelOnboardingTourSeen !== 'yes'
+            isPythonLab && resourcePanelPinnedButtonOnboardingTourSeen !== 'yes'
           }
           initialStep={INITIAL_STEP}
           steps={STEPS}
           onExit={() => {
             trySetLocalStorage(
-              PYTHONLAB_RESOURCE_PANEL_ONBOARDING_TOUR_SEEN,
+              RESOURCE_PANEL_PINNED_BUTTON_ONBOARDING_TOUR_SEEN,
               'yes'
             );
           }}
@@ -47,7 +47,7 @@ export const useOnboardingTour = ({appName}: UseOnboardingTourProps) => {
           }}
         />
       ) : null,
-    [isPythonLab, pythonlabResourcePanelOnboardingTourSeen]
+    [isPythonLab, resourcePanelPinnedButtonOnboardingTourSeen]
   );
 
   return {

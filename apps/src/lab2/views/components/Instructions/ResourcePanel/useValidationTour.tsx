@@ -1,15 +1,15 @@
 import {Steps} from 'intro.js-react';
 import React, {useMemo, useState, useEffect} from 'react';
 
-import {Tabs} from '@cdo/apps/lab2/types';
 import {ValidationSettings} from '@cdo/apps/lab2/views/components/Instructions/InstructionsV2';
-import {
-  PYTHONLAB_VALIDATION_TOUR_SEEN,
-  PYTHONLAB_RESOURCE_PANEL_ONBOARDING_TOUR_SEEN,
-} from '@cdo/apps/pythonlab/constants';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 
+import {
+  VALIDATION_TOUR_SEEN,
+  RESOURCE_PANEL_PINNED_BUTTON_ONBOARDING_TOUR_SEEN,
+} from './constants';
+import {Tabs} from './types';
 import {VALIDATION_TOUR_STEPS} from './validationTourHelpers';
 
 interface UseValidationTourProps {
@@ -33,12 +33,9 @@ export const useValidationTour = ({
   const [validationTourEnabled, setValidationTourEnabled] = useState(false);
   const [validationTourStep, setValidationTourStep] = useState(0);
   const validationTabEnum = Tabs.Validation;
-  const pythonlabValidationTourSeen = tryGetLocalStorage(
-    PYTHONLAB_VALIDATION_TOUR_SEEN,
-    'no'
-  );
-  const pythonlabOnboardingTourSeen = tryGetLocalStorage(
-    PYTHONLAB_RESOURCE_PANEL_ONBOARDING_TOUR_SEEN,
+  const validationTourSeen = tryGetLocalStorage(VALIDATION_TOUR_SEEN, 'no');
+  const onboardingTourSeen = tryGetLocalStorage(
+    RESOURCE_PANEL_PINNED_BUTTON_ONBOARDING_TOUR_SEEN,
     'no'
   );
 
@@ -57,8 +54,8 @@ export const useValidationTour = ({
     const shouldShowValidationTour =
       validationSettings &&
       hasValidationConditions &&
-      pythonlabValidationTourSeen !== 'yes' &&
-      pythonlabOnboardingTourSeen === 'yes'; // If user hasn't seen both tours, show onboarding tour first.
+      validationTourSeen !== 'yes' &&
+      onboardingTourSeen === 'yes'; // If user hasn't seen both tours, show onboarding tour first.
 
     if (shouldShowValidationTour) {
       setValidationTourEnabled(true);
@@ -66,8 +63,8 @@ export const useValidationTour = ({
   }, [
     validationSettings,
     hasValidationConditions,
-    pythonlabValidationTourSeen,
-    pythonlabOnboardingTourSeen,
+    validationTourSeen,
+    onboardingTourSeen,
     isPythonLab,
   ]);
 
@@ -227,7 +224,7 @@ export const useValidationTour = ({
           onComplete={() => {
             setValidationTourEnabled(false);
             // User must complete tour so that they don't see it again.
-            trySetLocalStorage(PYTHONLAB_VALIDATION_TOUR_SEEN, 'yes');
+            trySetLocalStorage(VALIDATION_TOUR_SEEN, 'yes');
           }}
           onChange={nextStepIndex => {
             setValidationTourStep(nextStepIndex);

@@ -1,20 +1,25 @@
 import lab2I18n from '@cdo/apps/lab2/locale';
 
+import {
+  resourcePanelInstructionsElementId,
+  resourcePanelTabsElementId,
+  resourcePanelLinksElementId,
+} from './constants';
 export const INITIAL_STEP = 0;
 export const STEPS = [
   {
-    element: '#resource-panel-instructions',
+    element: `#${resourcePanelInstructionsElementId}`,
     title: lab2I18n.resourcePanelOnboarding_title(),
     intro: lab2I18n.resourcePanelOnboarding_text(),
   },
   {
-    element: '#resource-panel-tabs',
+    element: `#${resourcePanelTabsElementId}`,
     title: lab2I18n.resourcePanelOnboarding_tabsTitle(),
     intro: lab2I18n.resourcePanelOnboarding_tabsText(),
     position: 'right',
   },
   {
-    element: '#resource-panel-links',
+    element: `#${resourcePanelLinksElementId}`,
     title: lab2I18n.resourcePanelOnboarding_linksTitle(),
     intro: lab2I18n.resourcePanelOnboarding_linksText(),
   },
