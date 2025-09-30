@@ -26,12 +26,12 @@ const AUDIENCE_OPTIONS = ['Student', 'Teacher', 'Verified Teacher'];
 
 const CURRICULUM_CATEGORIES = [
   {
-    key: 'curriculum',
-    displayText: 'Curriculum',
+    value: 'curriculum',
+    label: 'Curriculum',
   },
   {
-    key: 'professional_learning',
-    displayText: 'Professional Learning',
+    value: 'professional_learning',
+    label: 'Professional Learning',
   },
 ];
 
@@ -214,7 +214,7 @@ export default class AddResourceDialog extends Component {
                   value={this.state.embeddabilityType}
                   onChange={this.handleInputChange}
                 >
-                  {ResourceEmbeddabilityOptions.map(option => (
+                  {Object.values(ResourceEmbeddabilityOptions).map(option => (
                     <option value={option.value} key={option.value}>
                       {option.label}
                     </option>
@@ -231,8 +231,8 @@ export default class AddResourceDialog extends Component {
                 >
                   <option value={''}>{''}</option>
                   {CURRICULUM_CATEGORIES.map(option => (
-                    <option value={option.key} key={option.key}>
-                      {option.displayText}
+                    <option value={option.value} key={option.value}>
+                      {option.label}
                     </option>
                   ))}
                 </select>

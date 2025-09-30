@@ -838,7 +838,8 @@ class Lesson < ApplicationRecord
   end
 
   def resources_for_lesson_plan(verified_teacher)
-    grouped_resources = resources.sort_by(&:name).map(&:summarize_for_lesson_plan).group_by {|r| r[:audience]}
+    # Filter out resources marked as `embed_only` (i.e. not user-facing)
+    grouped_resources = resources.filter {|r| r.embeddability_type != SharedConstants::RESOURCE_EMBEDDABILITY_OPTIONS[:EMBED_ONLY][:value]}.sort_by(&:name).map(&:summarize_for_lesson_plan).group_by {|r| r[:audience]}
     if verified_teacher && grouped_resources.key?('Verified Teacher')
       grouped_resources['Teacher'] ||= []
       grouped_resources['Teacher'] += grouped_resources['Verified Teacher']

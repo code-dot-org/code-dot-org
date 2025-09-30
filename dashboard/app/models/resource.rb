@@ -79,11 +79,11 @@ class Resource < ApplicationRecord
   end
 
   def should_include_in_pdf?
-    # Resources should be excluded from PDF rollups if they are either not
-    # explicitly flagged with the `include_in_pdf` property OR if they are
-    # intended to only be shown to verified teachers.
-    return false if audience == 'Verified Teacher'
-    return !!include_in_pdf
+    # Resources should be excluded from PDF rollups if they satisfy any of the following:
+    # - It's not explicitly flagged with the `include_in_pdf` property
+    # - If they are intended to only be shown to verified teachers
+    # - If they have an `embeddability_type` of `embed_only` (thus, not user-facing)
+    return (!!include_in_pdf || audience != 'Verified Teacher' || embeddability_type != SharedConstants::RESOURCE_EMBEDDABILITY_OPTIONS[:EMBED_ONLY][:value])
   end
 
   # A simple helper function to encapsulate creating a unique key, since this
@@ -104,6 +104,8 @@ class Resource < ApplicationRecord
       # used by lesson plan page and others
       download_url: download_url,
       audience: audience || 'All',
+      embeddabilityType: embeddability_type || SharedConstants::RESOURCE_EMBEDDABILITY_OPTIONS[:EMBED_AND_RESOURCE_DROPDOWN][:value],
+      curriculumCategory: curriculum_category || '',
       type: get_localized_property(:type)
     }
   end
@@ -118,6 +120,8 @@ class Resource < ApplicationRecord
       downloadUrl: download_url || '',
       audience: audience || '',
       type: type || '',
+      embeddabilityType: embeddability_type || SharedConstants::RESOURCE_EMBEDDABILITY_OPTIONS[:EMBED_AND_RESOURCE_DROPDOWN][:value],
+      curriculumCategory: curriculum_category || '',
       assessment: assessment || false,
       includeInPdf: include_in_pdf || false,
       isRollup: !!is_rollup
@@ -130,7 +134,9 @@ class Resource < ApplicationRecord
       key: key,
       markdownKey: Services::GloballyUniqueIdentifiers.build_resource_key(self),
       name: get_localized_property(:name),
-      url: get_localized_property(:url)
+      url: get_localized_property(:url),
+      embeddabilityType: embeddability_type || SharedConstants::RESOURCE_EMBEDDABILITY_OPTIONS[:EMBED_AND_RESOURCE_DROPDOWN][:value],
+      curriculumCategory: curriculum_category || ''
     }
   end
 
