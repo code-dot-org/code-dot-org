@@ -50,9 +50,9 @@ const SHARED_LINKS = {
     href: '/hour-of-ai/partners',
     label: 'Partners',
   },
-  HOUR_OF_AI_VOLUNTEER: {
-    href: '/hour-of-ai/volunteer',
-    label: 'Volunteer',
+  HOUR_OF_AI_HOW_TO_GUIDES: {
+    href: '/hour-of-ai/how-to/k-12educator',
+    label: 'How-to Guides',
   },
   INITIATIVES: {
     href: '/initiatives',
@@ -143,7 +143,7 @@ export const HOUR_OF_AI_LINKS: {linkList: LinkItemProps[]} = {
     createLinkItem(SHARED_LINKS.HOUR_OF_AI_ACTIVITIES),
     createLinkItem(SHARED_LINKS.HOUR_OF_AI_RESOURCES),
     createLinkItem(SHARED_LINKS.HOUR_OF_AI_PARTNERS),
-    createLinkItem(SHARED_LINKS.HOUR_OF_AI_VOLUNTEER),
+    createLinkItem(SHARED_LINKS.HOUR_OF_AI_HOW_TO_GUIDES),
   ],
 };
 
