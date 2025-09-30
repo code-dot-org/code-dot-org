@@ -27,7 +27,7 @@ const adlibs: AdlibsType = {
   animal: {
     template: 'Please generate a dancer.  It should look like a {animal}.',
     options: {
-      animal: ['frog', 'moose', 'wolf'],
+      animal: ['wolf', 'moose', 'frog', 'tiger', 'panda'],
     },
     variantCount: 3,
   },
@@ -35,14 +35,14 @@ const adlibs: AdlibsType = {
     template:
       'Please generate a dancer.  It should look like a {animal} wearing a {attire}.',
     options: {
-      animal: ['frog', 'moose', 'wolf'],
+      animal: ['wolf', 'moose', 'frog', 'tiger', 'panda'],
       attire: [
-        'headphones',
-        'sunglasses',
-        'crown',
         'headscarf',
-        'baseball-cap',
+        'sunglasses',
+        'headphones',
+        'crown',
         'beanie',
+        'baseball hat',
         'headband',
       ],
     },
@@ -52,15 +52,15 @@ const adlibs: AdlibsType = {
     template:
       'Please generate a dancer.  It should look like a {adjective} {animal} wearing a {attire}.',
     options: {
-      adjective: ['basic', 'goth'],
-      animal: ['frog', 'moose', 'wolf'],
+      adjective: ['basic', 'emo', 'sporty', 'streetwear', 'fancy', 'preppy'],
+      animal: ['wolf', 'moose', 'frog', 'tiger', 'panda'],
       attire: [
-        'headphones',
-        'sunglasses',
-        'crown',
         'headscarf',
-        'baseball-cap',
+        'sunglasses',
+        'headphones',
+        'crown',
         'beanie',
+        'baseball hat',
         'headband',
       ],
     },
