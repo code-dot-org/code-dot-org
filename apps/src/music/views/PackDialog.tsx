@@ -310,7 +310,7 @@ const PackDialog: React.FunctionComponent<PackDialogProps> = ({player}) => {
                 ariaLabel={musicI18n.skip()}
                 text={musicI18n.skip()}
                 type="secondary"
-                color="purple"
+                color="black"
                 size="s"
                 onClick={setPackToDefault}
               />
@@ -318,7 +318,7 @@ const PackDialog: React.FunctionComponent<PackDialogProps> = ({player}) => {
                 ariaLabel={musicI18n.select()}
                 text={musicI18n.select()}
                 type="primary"
-                color="purple"
+                color="black"
                 size="s"
                 disabled={!selectedFolderId}
                 onClick={setPackToSelectedFolder}
