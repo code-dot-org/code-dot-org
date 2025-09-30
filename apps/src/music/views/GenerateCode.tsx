@@ -3,10 +3,14 @@ import {Heading5} from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
 import React, {useCallback, useState} from 'react';
 
+import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
 import {LevelProperties} from '@cdo/apps/lab2/types';
-import Adlib, {AdlibsType} from '@cdo/apps/lab2/views/components/guide/Adlib';
+import Adlib, {
+  AdlibsType,
+  AdlibType,
+} from '@cdo/apps/lab2/views/components/guide/Adlib';
 import Guide from '@cdo/apps/lab2/views/components/guide/Guide';
-import NavigationButton from '@cdo/apps/lab2/views/components/Instructions/NavigationButton';
+import MainInstructionsContent from '@cdo/apps/lab2/views/components/Instructions/MainInstructionsContent';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {generateBlocklyJson} from '../ai/generate/generateBlocklyJson';
@@ -25,11 +29,13 @@ const adlibs = adlibsUntyped as AdlibsType;
 
 interface GenerateCodeProps {
   adlibOption?: string;
+  adlib?: AdlibType;
   levelProperties: LevelProperties;
 }
 
 const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
   adlibOption,
+  adlib,
   levelProperties,
 }) => {
   const dispatch = useAppDispatch();
@@ -49,6 +55,16 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
   const [promptText, setPromptText] = useState(
     adlibOption ? undefined : DefaultPrompt
   );
+
+  // Use legacy adlib ID, adlib object, or new adlib ID.
+  const useAdlib =
+    adlib && typeof adlib === 'string'
+      ? adlibs[adlib]
+      : adlib
+      ? adlib
+      : adlibOption
+      ? adlibs[adlibOption]
+      : undefined;
 
   const generateSong = useCallback(async () => {
     dispatch(setAiGenerateState('generating'));
@@ -79,7 +95,16 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
 
   return (
     <Guide id="generate-panel">
-      <Heading5 className={styles.heading}> Use AI</Heading5>
+      {!levelProperties.longInstructions && (
+        <Heading5 className={styles.heading}> Use AI</Heading5>
+      )}
+
+      {levelProperties.longInstructions && (
+        <MainInstructionsContent
+          instructionsText={levelProperties.longInstructions}
+          handleInstructionsTextClick={() => {}}
+        />
+      )}
 
       {showFullContext && aiGenerateState === 'none' && (
         <textarea
@@ -96,7 +121,7 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
 
       {aiGenerateState === 'none' && (
         <>
-          {!adlibOption && (
+          {!useAdlib && (
             <textarea
               id="generate-description"
               onChange={evt => setPromptText(evt.target.value)}
@@ -105,9 +130,9 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
               className={styles.textArea}
             />
           )}
-          {adlibOption && (
+          {useAdlib && (
             <Adlib
-              adlib={adlibs[adlibOption]}
+              adlib={useAdlib}
               onChange={(text, choices) => {
                 setPromptText(text);
                 setChoices(choices);
@@ -125,7 +150,7 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
           ariaLabel={'Generate song'}
           text={'Generate song'}
           type="primary"
-          color="purple"
+          color="black"
           size="s"
           iconLeft={{iconName: 'sparkles'}}
           onClick={generateSong}
@@ -140,7 +165,7 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
             ariaLabel={'Generate again'}
             text={'Generate again'}
             type="primary"
-            color="purple"
+            color="black"
             size="s"
             iconLeft={{iconName: 'sparkles'}}
             onClick={generateSong}
@@ -150,16 +175,19 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
             ariaLabel={'Adjust prompt'}
             text={'Adjust prompt'}
             type="primary"
-            color="purple"
+            color="black"
             size="s"
             onClick={() => dispatch(setAiGenerateState('none'))}
           />
 
-          <NavigationButton
-            levelProperties={levelProperties}
-            hasRun={true}
-            hasEdited={false}
-            className={styles.navigationButton}
+          <Button
+            ariaLabel={'Continue'}
+            text={'Continue'}
+            type="primary"
+            color="black"
+            size="s"
+            iconRight={{iconName: 'arrow-right', iconStyle: 'solid'}}
+            onClick={() => dispatch(continueOrFinishLesson())}
           />
         </>
       )}

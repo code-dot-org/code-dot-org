@@ -4,7 +4,7 @@ import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 import {FacetResult, InternalTypedDocument, Orama, search} from '@orama/orama';
 import {restore} from '@orama/plugin-data-persistence';
-import {useRouter, useSearchParams} from 'next/navigation';
+import {useSearchParams} from 'next/navigation';
 import {ChangeEvent, ComponentProps, useEffect, useState} from 'react';
 
 import FacetBar from '@/components/contentful/activityCatalog/facetBar/facetBar';
@@ -38,7 +38,6 @@ const ActivityCatalog = ({
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [isFacetDrawerOpen, setIsFacetDrawerOpen] = useState<boolean>(false);
 
-  const router = useRouter();
   const searchParams = useSearchParams();
 
   // On load, restore the Orama database from the serialized data from the server on the browser.
@@ -102,9 +101,13 @@ const ActivityCatalog = ({
       }
     });
 
-    router.push(
+    // Update the URL without reloading the page
+    // Note: Using pushState instead of router.push to avoid extraneous RSC requests
+    // See: https://nextjs.org/docs/app/guides/single-page-applications#shallow-routing-on-the-client
+    window.history.pushState(
+      null,
+      '',
       `?term=${encodeURIComponent(searchTerm)}&${params.toString()}`,
-      {scroll: false},
     );
   };
 

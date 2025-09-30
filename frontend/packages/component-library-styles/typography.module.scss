@@ -191,10 +191,6 @@ html {
   font-weight: font.$semi-bold-font-weight;
 }
 
-@mixin extra-strong {
-  font-weight: font.$bold-font-weight;
-}
-
 @mixin em {
   font-style: italic;
 }
@@ -381,13 +377,6 @@ strong,
 }
 
 // Use in paragraphs to italicize text
-
-.extra-strong {
-  @include extra-strong;
-  &.wrapper strong {
-    @include extra-strong;
-  }
-}
 
 em,
 .em {

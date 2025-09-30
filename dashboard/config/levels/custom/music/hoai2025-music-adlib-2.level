@@ -1,18 +1,45 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-09-10T22:40:27.000Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
-    "preload_asset_list": null,
     "level_data": {
       "library": "launch2024",
       "aiCodeGenerate": "true",
-      "aiCodeGenerateAdlib": "complex"
-    }
+      "aiCodeGenerateAdlib": {
+        "id": "sounds",
+        "template": "Please make a song with {sounds} sounds in order.",
+        "options": {
+          "sounds": [
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "variantCount": 3
+      }
+    },
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
+    "long_instructions": "Create some sounds and have **fun**!",
+    "preload_asset_list": null
   },
-  "published": true
+  "audit_log": "[{\"changed_at\":\"2025-09-29 01:00:38 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-29 01:10:05 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-29 06:46:24 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

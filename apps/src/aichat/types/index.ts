@@ -1,6 +1,6 @@
 export * from './analytics';
 export * from './assets';
-export * from './chatButton';
+export * from './chatComponents';
 export * from './chatEvents';
 export * from './customizations';
 export * from './levelProperties';
