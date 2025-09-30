@@ -1,5 +1,6 @@
 import React, {useCallback, useEffect, useRef} from 'react';
 
+import {useAiChatDisabled} from '@cdo/apps/aichat/context/aiChatDisabledContext';
 import UserMessageEditor from '@cdo/apps/aiComponentLibrary/userMessageEditor/UserMessageEditor';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -35,6 +36,7 @@ const UserChatMessageEditor: React.FunctionComponent<
   hiddenContextCallback,
   multimodalAvailable,
 }) => {
+  const {chatDisabled} = useAiChatDisabled();
   const isWaitingForChatResponse = useAppSelector(
     state => !!state.aichat.chatMessagePending
   );
@@ -53,7 +55,11 @@ const UserChatMessageEditor: React.FunctionComponent<
 
   const inputRef = useRef<HTMLTextAreaElement>(null);
 
-  const disabled = isWaitingForChatResponse || saveInProgress || uploadsPending;
+  const disabled =
+    isWaitingForChatResponse ||
+    saveInProgress ||
+    uploadsPending ||
+    chatDisabled;
 
   const handleSubmit = useCallback(
     async (userMessage: string, analyticsProperties?: AnalyticsProperties) => {
@@ -100,7 +106,7 @@ const UserChatMessageEditor: React.FunctionComponent<
 
   return (
     <>
-      {chatButtons && (
+      {chatButtons && !chatDisabled && (
         <div className={moduleStyles.chatButtonsContainer}>
           {chatButtons.map(({ChatButton, key}) => (
             <ChatButton key={key} onClick={handleSubmit} />

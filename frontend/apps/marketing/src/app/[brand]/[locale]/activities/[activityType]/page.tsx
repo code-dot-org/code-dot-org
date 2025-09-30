@@ -82,7 +82,11 @@ export default async function ActivitiesPage({
    * Fetches all activities from the Orama database.
    */
   const getAllActivities = async () => {
-    const allActivityResults = await search(db, {term: '', limit: 200});
+    const allActivityResults = await search(db, {
+      term: '',
+      limit: 200,
+      sortBy: {property: 'sortKey', order: 'ASC'},
+    });
 
     return allActivityResults.hits.map(hit => hit.document);
   };

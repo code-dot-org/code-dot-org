@@ -5,6 +5,7 @@
  */
 import React, {Suspense, useEffect} from 'react';
 
+import {AiChatDisabledProvider} from '@cdo/apps/aichat/context/aiChatDisabledContext';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {PERMISSIONS} from '@cdo/apps/lab2/constants';
 import {useInitialLabTheme} from '@cdo/apps/lab2/hooks/useInitialLabTheme';
@@ -101,22 +102,27 @@ const LabViewsRenderer: React.FunctionComponent = () => {
 
   const LabView = properties.view;
   return (
-    <ProgressContainer key={currentAppName} appType={currentAppName}>
-      <div id={`lab2-${currentAppName}`} className={moduleStyles.labContainer}>
-        <Suspense fallback={<Loading isLoading={true} />}>
-          <LabView
-            levelProperties={levelProperties}
-            initialSources={initialSources}
-          />
-        </Suspense>
-        {!hideExtraLinks && levelId && (
-          <ExtraLinks
-            levelId={levelId}
-            positionRightOfFooter={extraLinksButtonRightOfFooter}
-          />
-        )}
-      </div>
-    </ProgressContainer>
+    <AiChatDisabledProvider>
+      <ProgressContainer key={currentAppName} appType={currentAppName}>
+        <div
+          id={`lab2-${currentAppName}`}
+          className={moduleStyles.labContainer}
+        >
+          <Suspense fallback={<Loading isLoading={true} />}>
+            <LabView
+              levelProperties={levelProperties}
+              initialSources={initialSources}
+            />
+          </Suspense>
+          {!hideExtraLinks && levelId && (
+            <ExtraLinks
+              levelId={levelId}
+              positionRightOfFooter={extraLinksButtonRightOfFooter}
+            />
+          )}
+        </div>
+      </ProgressContainer>
+    </AiChatDisabledProvider>
   );
 };
 

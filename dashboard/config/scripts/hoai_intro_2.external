@@ -4,40 +4,10 @@ description 'description here'
 
 markdown <<MARKDOWN
 
-##
-
-<h2 style="text-align: center;"> The dance floor is waiting!</h2>
-
-
-
-<div style="display: flex; justify-content: space-between; width: 90%; margin: 20px auto;">
-  <div style="background: #ffffff; width: 30%; padding: 15px; box-sizing: border-box; border-radius: 5px">
-   <h4 style="text-align: center;">First, team up with AI to create your own <b>star dancer</b>.
-   <br>
-<br>
-    <img src="https://images.code.org/11f954c433fe840b93cf0c4b633862da-Group 87 (4).png" alt="" style="width: 160px; height: 160px; display: block; margin: 0 auto 10px;">    
-
-  </div>
-  <div style="background: #ffffff; width: 30%; padding: 15px; box-sizing: border-box; border-radius: 5px">
-
-<h4 style="text-align: center;">Next, AI will help you <b>remix a track</b> to set the vibe. 
-<br>
-<br>
-<img src="https://images.code.org/2f01cde29eb924a61783dbbdcec0cde1-botmusic.jpg" alt="" style="width: 170px; height: 140px; display: block; margin: 0 auto 10px;">  
-
-</div>
-  <div style="background: #ffffff; width: 30%; padding: 15px; box-sizing: border-box; border-radius: 5px">
-    <h4 style="text-align: center;">Finally, <b>code a dance</b> for your music remix and dancer!
-    <br>
-    <br>
-<img src="https://images.code.org/c523776dcc674080b11cde5a45d01679-Untitled 9.jpg" alt="" style="width: 170px; height: 140px; display: block; margin: 0 auto 10px;">
-
-  </div>
-  
-</div>
   <h1 style="text-align: center;"> Let's get this party started!</h1>
 
 
+![](https://images.code.org/aff53a582f93f44fa982055bf06868b9-image-1759185089999.jpg)
 MARKDOWN
 
 "First, team up with AI to create your own star dancer. Next, remix a track to set the vibe. Finally, code an original dance routine to bring your dancer and music to life!"

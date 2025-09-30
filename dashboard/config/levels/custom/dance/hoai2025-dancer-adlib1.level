@@ -33,7 +33,7 @@
     "default_song": "introtoshamstep_47SOUL",
     "uses_lab2": "true",
     "generate_dancer_mode": "true",
-    "ai_dancer_generate_adlib": "animal",
+    "ai_dancer_generate_adlib": "animal-02",
     "preload_asset_list": null,
     "encrypted_examples": [
 

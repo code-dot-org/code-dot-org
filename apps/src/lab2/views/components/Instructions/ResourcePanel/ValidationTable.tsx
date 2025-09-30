@@ -31,7 +31,10 @@ const ValidationTable: React.FunctionComponent<ValidationResultsProps> = ({
   }
 
   return (
-    <div className={moduleStyles.validationResults}>
+    <div
+      id="resource-panel-validation-results"
+      className={moduleStyles.validationResults}
+    >
       <table className={moduleStyles.validationResultsTable}>
         <thead>
           <tr>

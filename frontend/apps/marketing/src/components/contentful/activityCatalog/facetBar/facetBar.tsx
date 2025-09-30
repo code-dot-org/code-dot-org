@@ -62,7 +62,10 @@ const FacetBar = ({
 
   const getDropdowns = () => {
     return Object.entries(facets).map(([facet, facetDetails]) => {
-      const facetValues = Object.keys(facetDetails.values);
+      // Sort using localeCompare with numeric option for mixed strings/numbers
+      const facetValues = Object.keys(facetDetails.values).sort((a, b) =>
+        a.localeCompare(b, undefined, {numeric: true}),
+      );
       const hasSelectedValue =
         selectedFacets[facet] && selectedFacets[facet].size > 0;
 
