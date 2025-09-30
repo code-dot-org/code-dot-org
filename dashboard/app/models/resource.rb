@@ -83,7 +83,7 @@ class Resource < ApplicationRecord
     # - It's not explicitly flagged with the `include_in_pdf` property
     # - If they are intended to only be shown to verified teachers
     # - If they have an `embeddability_type` of `embed_only` (thus, not user-facing)
-    return (!!include_in_pdf || audience != 'Verified Teacher' || embeddability_type != SharedConstants::RESOURCE_EMBEDDABILITY_OPTIONS[:EMBED_ONLY][:value])
+    return (!!include_in_pdf && audience != 'Verified Teacher' && embeddability_type != SharedConstants::RESOURCE_EMBEDDABILITY_OPTIONS[:EMBED_ONLY][:value])
   end
 
   # A simple helper function to encapsulate creating a unique key, since this
