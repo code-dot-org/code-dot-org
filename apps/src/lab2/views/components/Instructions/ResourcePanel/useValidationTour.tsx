@@ -8,6 +8,8 @@ import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 import {
   VALIDATION_TOUR_SEEN,
   RESOURCE_PANEL_PINNED_BUTTON_ONBOARDING_TOUR_SEEN,
+  resourcePanelTabValidationElementId,
+  resourcePanelValidateButtonElementId,
 } from './constants';
 import {Tabs} from './types';
 import {VALIDATION_TOUR_STEPS} from './validationTourHelpers';
@@ -122,10 +124,10 @@ export const useValidationTour = ({
     };
 
     const validationTabElement = document.getElementById(
-      'resource-panel-tab-validation'
+      resourcePanelTabValidationElementId
     );
     const validateButtonElement = document.getElementById(
-      'resource-panel-validate-button'
+      resourcePanelValidateButtonElementId
     );
 
     if (validationTabElement) {

@@ -4,6 +4,7 @@ import {
   resourcePanelInstructionsElementId,
   resourcePanelTabsElementId,
   resourcePanelLinksElementId,
+  resourcePanelNavigationButtonElementId,
 } from './constants';
 export const INITIAL_STEP = 0;
 export const STEPS = [
@@ -24,7 +25,7 @@ export const STEPS = [
     intro: lab2I18n.resourcePanelOnboarding_linksText(),
   },
   {
-    element: '#resource-panel-navigation-button',
+    element: `#${resourcePanelNavigationButtonElementId}`,
     title: lab2I18n.resourcePanelOnboarding_finishTitle(),
     intro: lab2I18n.resourcePanelOnboarding_finishText(),
   },
