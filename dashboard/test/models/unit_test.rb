@@ -1021,6 +1021,17 @@ class UnitTest < ActiveSupport::TestCase
     assert_equal expected_announcements, summary[:announcements]
   end
 
+  test 'summarize filters out embed_only resources' do
+    embed_only_resource = create(:resource, name: 'Embed Only Resource', embeddability_type: SharedConstants::RESOURCE_EMBEDDABILITY_OPTIONS[:EMBED_ONLY][:value])
+    resource_dropdown_only_resource = create(:resource, name: 'Resource Dropdown Only Resource', embeddability_type: SharedConstants::RESOURCE_EMBEDDABILITY_OPTIONS[:RESOURCE_DROPDOWN_ONLY][:value])
+    unit = create(:script, :in_single_unit_course)
+    unit.resources = [embed_only_resource, resource_dropdown_only_resource]
+
+    summary = unit.summarize
+    assert_equal 1, summary[:teacher_resources].count
+    assert_equal resource_dropdown_only_resource.id, summary[:teacher_resources].first[:id]
+  end
+
   test 'summarize defaults to original unit group when no unit group unit is provided' do
     unit = create(:course_version, :with_single_unit_course).content_root.first_unit
     secondary_course = create(:single_unit_course, unit: unit)
