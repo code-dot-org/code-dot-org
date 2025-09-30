@@ -1,4 +1,9 @@
 Feature: Web Lab 2 Preview
+# Safari 16 throws an error due to a regular expression. These types of regular expressions
+# are supported by our minimum Safari version, 16.6, but are not supported by the version Saucelabs uses.
+# Once we upgrade to 17 we can likely remove no_safari.
+@no_safari
+@no_mobile
 
 Scenario: Web Lab 2 Preview loads
   Given I create a student named "Penelope"
