@@ -9,6 +9,9 @@ export const resourcePanelTabsElementId = 'resource-panel-tabs';
 
 export const resourcePanelLinksElementId = 'resource-panel-links';
 
+export const resourcePanelNavigationButtonElementId =
+  'resource-panel-navigation-button';
+
 export const resourcePanelTabValidationElementId =
   'resource-panel-tab-validation';
 

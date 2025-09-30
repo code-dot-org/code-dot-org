@@ -18,6 +18,7 @@ import commonI18n from '@cdo/locale';
 import TextToSpeech from '../TextToSpeech';
 
 import ContinueButton from './ContinueButton';
+import {resourcePanelNavigationButtonElementId} from './ResourcePanel/constants';
 import SubmitButton from './SubmitButton';
 
 import moduleStyles from './instructions.module.scss';
@@ -213,7 +214,7 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
             />
           </div>
         )}
-        <div id="resource-panel-navigation-button">
+        <div id={resourcePanelNavigationButtonElementId}>
           {submittable ? (
             <SubmitButton
               levelId={id}
