@@ -7,16 +7,10 @@
       "content_area": "self_paced_pl_9_12",
       "curriculum_umbrella": "Self-paced PL - CSP",
       "is_migrated": true,
-      "student_detail_progress_view": true,
-      "version_year": "2025"
+      "student_detail_progress_view": true
     },
     "new_name": null,
-    "family_name": null,
     "serialized_at": "2025-04-01 02:05:08 UTC",
-    "published_state": null,
-    "instruction_type": null,
-    "instructor_audience": null,
-    "participant_audience": null,
     "seeding_key": {
       "script.name": "self-paced-pl-csp3-2025"
     }

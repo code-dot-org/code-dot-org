@@ -17,12 +17,7 @@
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
-    "family_name": null,
     "serialized_at": "2024-11-19 01:15:21 UTC",
-    "published_state": null,
-    "instruction_type": null,
-    "instructor_audience": null,
-    "participant_audience": null,
     "seeding_key": {
       "script.name": "csa6-pilot-2025"
     }

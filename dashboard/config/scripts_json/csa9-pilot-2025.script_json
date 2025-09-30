@@ -13,16 +13,10 @@
       "pilot_experiment": "csa-pilot-2025",
       "show_calendar": true,
       "student_detail_progress_view": true,
-      "version_year": "2025",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
-    "family_name": null,
     "serialized_at": "2025-02-07 20:25:16 UTC",
-    "published_state": null,
-    "instruction_type": null,
-    "instructor_audience": null,
-    "participant_audience": null,
     "seeding_key": {
       "script.name": "csa9-pilot-2025"
     }

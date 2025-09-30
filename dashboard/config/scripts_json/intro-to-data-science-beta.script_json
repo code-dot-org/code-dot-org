@@ -17,16 +17,10 @@
         "data_science",
         "ai"
       ],
-      "version_year": "unversioned",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
-    "family_name": null,
     "serialized_at": "2025-04-23 18:16:04 UTC",
-    "published_state": null,
-    "instruction_type": null,
-    "instructor_audience": null,
-    "participant_audience": null,
     "seeding_key": {
       "script.name": "intro-to-data-science-beta"
     }

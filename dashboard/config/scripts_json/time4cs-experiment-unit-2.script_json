@@ -12,12 +12,7 @@
       "pilot_experiment": "time4cs-experiment"
     },
     "new_name": null,
-    "family_name": null,
     "serialized_at": "2024-11-19 01:19:43 UTC",
-    "published_state": "pilot",
-    "instruction_type": null,
-    "instructor_audience": null,
-    "participant_audience": null,
     "seeding_key": {
       "script.name": "time4cs-experiment-unit-2"
     }

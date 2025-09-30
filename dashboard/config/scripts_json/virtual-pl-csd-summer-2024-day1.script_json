@@ -13,12 +13,7 @@
       "tts": true
     },
     "new_name": null,
-    "family_name": null,
     "serialized_at": "2025-04-01 14:38:59 UTC",
-    "published_state": null,
-    "instruction_type": null,
-    "instructor_audience": null,
-    "participant_audience": null,
     "seeding_key": {
       "script.name": "virtual-pl-csd-summer-2024-day1"
     }

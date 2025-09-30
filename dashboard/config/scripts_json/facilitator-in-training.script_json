@@ -4,17 +4,11 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "is_migrated": true,
-      "version_year": "2025"
+      "is_migrated": true
     },
     "new_name": null,
-    "family_name": null,
     "serialized_at": "2025-07-23 21:28:52 UTC",
     "hide_within_course": false,
-    "published_state": null,
-    "instruction_type": null,
-    "instructor_audience": null,
-    "participant_audience": null,
     "seeding_key": {
       "script.name": "facilitator-in-training"
     }

@@ -10,12 +10,7 @@
       "professional_learning_course": "CS Discoveries TeacherCon Novice"
     },
     "new_name": null,
-    "family_name": null,
     "serialized_at": "2024-11-19 01:16:34 UTC",
-    "published_state": "beta",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
     "seeding_key": {
       "script.name": "csdnovice"
     }

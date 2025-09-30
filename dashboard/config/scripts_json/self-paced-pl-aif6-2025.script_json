@@ -11,17 +11,11 @@
       "topic_tags": [
         "ai",
         "data_science"
-      ],
-      "version_year": "2025"
+      ]
     },
     "new_name": null,
-    "family_name": null,
     "serialized_at": "2025-06-17 14:16:33 UTC",
     "hide_within_course": true,
-    "published_state": null,
-    "instruction_type": null,
-    "instructor_audience": null,
-    "participant_audience": null,
     "seeding_key": {
       "script.name": "self-paced-pl-aif6-2025"
     }

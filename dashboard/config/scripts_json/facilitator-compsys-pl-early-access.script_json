@@ -6,16 +6,10 @@
     "properties": {
       "content_area": "pd_for_facilitators",
       "curriculum_umbrella": "PD for Facilitators",
-      "is_migrated": true,
-      "version_year": "2025"
+      "is_migrated": true
     },
     "new_name": null,
-    "family_name": null,
     "serialized_at": "2025-04-01 12:21:29 UTC",
-    "published_state": null,
-    "instruction_type": null,
-    "instructor_audience": null,
-    "participant_audience": null,
     "seeding_key": {
       "script.name": "facilitator-compsys-pl-early-access"
     }

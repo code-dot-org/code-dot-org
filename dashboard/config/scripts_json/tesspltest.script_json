@@ -10,12 +10,7 @@
       "professional_learning_course": "Tess test course"
     },
     "new_name": null,
-    "family_name": null,
     "serialized_at": "2024-11-19 01:19:40 UTC",
-    "published_state": "in_development",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
     "seeding_key": {
       "script.name": "tesspltest"
     }

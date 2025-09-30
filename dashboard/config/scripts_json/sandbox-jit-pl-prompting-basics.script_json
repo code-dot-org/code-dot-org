@@ -9,13 +9,8 @@
       "is_migrated": true
     },
     "new_name": null,
-    "family_name": null,
     "serialized_at": "2025-08-27 21:36:45 UTC",
     "hide_within_course": false,
-    "published_state": "in_development",
-    "instruction_type": null,
-    "instructor_audience": null,
-    "participant_audience": null,
     "seeding_key": {
       "script.name": "sandbox-jit-pl-prompting-basics"
     }

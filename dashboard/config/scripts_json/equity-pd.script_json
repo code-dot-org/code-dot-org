@@ -10,12 +10,7 @@
       "professional_learning_course": "Equity Support"
     },
     "new_name": null,
-    "family_name": null,
     "serialized_at": "2025-01-13 23:54:06 UTC",
-    "published_state": "beta",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
     "seeding_key": {
       "script.name": "equity-pd"
     }

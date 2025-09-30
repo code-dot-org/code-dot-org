@@ -7,16 +7,10 @@
       "content_area": "pl_workshop_activities",
       "curriculum_umbrella": "PD Workshop Activity CSD",
       "is_migrated": true,
-      "student_detail_progress_view": true,
-      "version_year": "2025"
+      "student_detail_progress_view": true
     },
     "new_name": null,
-    "family_name": null,
     "serialized_at": "2025-04-02 18:54:19 UTC",
-    "published_state": null,
-    "instruction_type": null,
-    "instructor_audience": null,
-    "participant_audience": null,
     "seeding_key": {
       "script.name": "vpl-csd-2025-m1"
     }

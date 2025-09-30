@@ -6,17 +6,11 @@
     "properties": {
       "content_area": "self_paced_pl_k_5",
       "curriculum_umbrella": "Self-paced PL - CSF",
-      "is_migrated": true,
-      "version_year": "2025"
+      "is_migrated": true
     },
     "new_name": null,
-    "family_name": null,
     "serialized_at": "2025-06-23 17:41:47 UTC",
     "hide_within_course": false,
-    "published_state": null,
-    "instruction_type": null,
-    "instructor_audience": null,
-    "participant_audience": null,
     "seeding_key": {
       "script.name": "self-paced-pl-k5-2025"
     }

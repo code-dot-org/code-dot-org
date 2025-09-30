@@ -6,16 +6,10 @@
     "properties": {
       "is_migrated": true,
       "show_calendar": true,
-      "version_year": "unversioned",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
-    "family_name": null,
     "serialized_at": "2025-03-13 16:35:36 UTC",
-    "published_state": null,
-    "instruction_type": null,
-    "instructor_audience": null,
-    "participant_audience": null,
     "seeding_key": {
       "script.name": "customizing-llms-latm-pilot"
     }

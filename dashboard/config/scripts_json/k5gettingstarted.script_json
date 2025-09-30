@@ -13,12 +13,7 @@
       "tts": true
     },
     "new_name": null,
-    "family_name": null,
     "serialized_at": "2025-01-13 23:34:22 UTC",
-    "published_state": null,
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
     "seeding_key": {
       "script.name": "k5gettingstarted"
     }

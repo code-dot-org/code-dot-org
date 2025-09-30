@@ -12,12 +12,7 @@
       "tts": true
     },
     "new_name": null,
-    "family_name": null,
     "serialized_at": "2024-11-19 01:19:52 UTC",
-    "published_state": null,
-    "instruction_type": null,
-    "instructor_audience": null,
-    "participant_audience": null,
     "seeding_key": {
       "script.name": "vpl-csd-2023-m4"
     }

@@ -12,12 +12,7 @@
       "student_detail_progress_view": true
     },
     "new_name": null,
-    "family_name": null,
     "serialized_at": "2024-11-19 01:16:45 UTC",
-    "published_state": "beta",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "plc_reviewer",
-    "participant_audience": "facilitator",
     "seeding_key": {
       "script.name": "csp3-dlp"
     }

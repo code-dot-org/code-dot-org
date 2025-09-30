@@ -6,17 +6,11 @@
     "properties": {
       "content_area": "pd_for_facilitators",
       "curriculum_umbrella": "PD for Facilitators",
-      "is_migrated": true,
-      "version_year": "2025"
+      "is_migrated": true
     },
     "new_name": null,
-    "family_name": null,
     "serialized_at": "2025-07-10 14:44:08 UTC",
     "hide_within_course": false,
-    "published_state": null,
-    "instruction_type": null,
-    "instructor_audience": null,
-    "participant_audience": null,
     "seeding_key": {
       "script.name": "facilitator-prog-fund-early-access"
     }

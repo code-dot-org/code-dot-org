@@ -9,12 +9,7 @@
       "is_migrated": true
     },
     "new_name": null,
-    "family_name": null,
     "serialized_at": "2025-01-22 19:00:20 UTC",
-    "published_state": null,
-    "instruction_type": null,
-    "instructor_audience": null,
-    "participant_audience": null,
     "seeding_key": {
       "script.name": "sandbox-teaching-getting-started"
     }

@@ -7,17 +7,11 @@
       "content_area": "curriculum_k_5",
       "curriculum_umbrella": "K-5 Special topics",
       "is_migrated": true,
-      "pilot_experiment": "career-journeys-elem-a",
-      "version_year": "unversioned"
+      "pilot_experiment": "career-journeys-elem-a"
     },
     "new_name": null,
-    "family_name": null,
     "serialized_at": "2025-06-27 02:06:09 UTC",
     "hide_within_course": false,
-    "published_state": null,
-    "instruction_type": null,
-    "instructor_audience": null,
-    "participant_audience": null,
     "seeding_key": {
       "script.name": "career-journey-pilot-a"
     }

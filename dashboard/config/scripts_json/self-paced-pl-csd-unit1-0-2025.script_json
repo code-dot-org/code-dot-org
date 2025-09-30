@@ -9,16 +9,10 @@
       "has_verified_resources": true,
       "hideable_lessons": true,
       "is_migrated": true,
-      "student_detail_progress_view": true,
-      "version_year": "2025"
+      "student_detail_progress_view": true
     },
     "new_name": null,
-    "family_name": null,
     "serialized_at": "2025-04-23 02:56:49 UTC",
-    "published_state": null,
-    "instruction_type": null,
-    "instructor_audience": null,
-    "participant_audience": null,
     "seeding_key": {
       "script.name": "self-paced-pl-csd-unit1-0-2025"
     }

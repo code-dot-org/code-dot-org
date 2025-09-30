@@ -17,12 +17,7 @@
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
-    "family_name": null,
     "serialized_at": "2025-05-12 05:17:07 UTC",
-    "published_state": null,
-    "instruction_type": null,
-    "instructor_audience": null,
-    "participant_audience": null,
     "seeding_key": {
       "script.name": "csa7-pilot-2025"
     }

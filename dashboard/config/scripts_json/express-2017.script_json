@@ -48,12 +48,7 @@
       "use_legacy_lesson_plans": true
     },
     "new_name": "express-2017",
-    "family_name": null,
     "serialized_at": "2025-04-03 01:06:20 UTC",
-    "published_state": null,
-    "instruction_type": null,
-    "instructor_audience": null,
-    "participant_audience": null,
     "seeding_key": {
       "script.name": "express-2017"
     }

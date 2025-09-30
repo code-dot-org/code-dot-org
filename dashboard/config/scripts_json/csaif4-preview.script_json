@@ -16,16 +16,10 @@
       "topic_tags": [
         "ai"
       ],
-      "version_year": "unversioned",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
-    "family_name": null,
     "serialized_at": "2025-04-23 18:13:50 UTC",
-    "published_state": null,
-    "instruction_type": null,
-    "instructor_audience": null,
-    "participant_audience": null,
     "seeding_key": {
       "script.name": "csaif4-preview"
     }

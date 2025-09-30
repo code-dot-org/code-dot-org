@@ -6,17 +6,11 @@
     "properties": {
       "content_area": "self_paced_pl_9_12",
       "curriculum_umbrella": "Self-paced PL - CSA",
-      "is_migrated": true,
-      "version_year": "unversioned"
+      "is_migrated": true
     },
     "new_name": null,
-    "family_name": null,
     "serialized_at": "2025-07-18 15:34:42 UTC",
     "hide_within_course": false,
-    "published_state": null,
-    "instruction_type": null,
-    "instructor_audience": null,
-    "participant_audience": null,
     "seeding_key": {
       "script.name": "sandbox-java-oop-pl"
     }

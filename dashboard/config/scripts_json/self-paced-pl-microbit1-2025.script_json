@@ -12,16 +12,10 @@
       "student_detail_progress_view": true,
       "topic_tags": [
         "maker"
-      ],
-      "version_year": "2025"
+      ]
     },
     "new_name": null,
-    "family_name": null,
     "serialized_at": "2025-04-23 03:20:16 UTC",
-    "published_state": null,
-    "instruction_type": null,
-    "instructor_audience": null,
-    "participant_audience": null,
     "seeding_key": {
       "script.name": "self-paced-pl-microbit1-2025"
     }

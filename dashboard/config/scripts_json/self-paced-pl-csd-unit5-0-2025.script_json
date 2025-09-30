@@ -7,16 +7,10 @@
       "content_area": "self_paced_pl_6_8",
       "curriculum_umbrella": "Self-paced PL - CSD",
       "is_migrated": true,
-      "student_detail_progress_view": true,
-      "version_year": "2025"
+      "student_detail_progress_view": true
     },
     "new_name": null,
-    "family_name": null,
     "serialized_at": "2025-04-04 19:39:37 UTC",
-    "published_state": null,
-    "instruction_type": null,
-    "instructor_audience": null,
-    "participant_audience": null,
     "seeding_key": {
       "script.name": "self-paced-pl-csd-unit5-0-2025"
     }

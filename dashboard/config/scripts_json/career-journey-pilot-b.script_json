@@ -10,17 +10,11 @@
       "pilot_experiment": "career-journeys-elem-b",
       "show_calendar": true,
       "tts": true,
-      "version_year": "unversioned",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
-    "family_name": null,
     "serialized_at": "2025-06-27 02:07:10 UTC",
     "hide_within_course": false,
-    "published_state": null,
-    "instruction_type": null,
-    "instructor_audience": null,
-    "participant_audience": null,
     "seeding_key": {
       "script.name": "career-journey-pilot-b"
     }

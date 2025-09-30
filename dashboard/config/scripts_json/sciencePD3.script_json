@@ -8,12 +8,7 @@
       "professional_learning_course": "CS in Science Support"
     },
     "new_name": null,
-    "family_name": null,
     "serialized_at": "2021-11-22 19:57:14 UTC",
-    "published_state": "beta",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
     "seeding_key": {
       "script.name": "sciencePD3"
     }

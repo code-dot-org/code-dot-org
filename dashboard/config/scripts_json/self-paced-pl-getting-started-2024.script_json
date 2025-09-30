@@ -7,17 +7,11 @@
       "content_area": "skills_focused_self_paced_pl",
       "curriculum_umbrella": "Self-paced PL - Pedagogy special topics",
       "is_migrated": true,
-      "tts": true,
-      "version_year": "2025"
+      "tts": true
     },
     "new_name": null,
-    "family_name": null,
     "serialized_at": "2025-06-17 21:28:40 UTC",
     "hide_within_course": false,
-    "published_state": null,
-    "instruction_type": null,
-    "instructor_audience": null,
-    "participant_audience": null,
     "seeding_key": {
       "script.name": "self-paced-pl-getting-started-2024"
     }

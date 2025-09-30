@@ -10,12 +10,7 @@
       "professional_learning_course": "CS in Science Legacy"
     },
     "new_name": null,
-    "family_name": null,
     "serialized_at": "2024-11-19 01:19:28 UTC",
-    "published_state": "beta",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
     "seeding_key": {
       "script.name": "sciencepd3-2016"
     }

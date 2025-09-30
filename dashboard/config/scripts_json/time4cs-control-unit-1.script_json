@@ -13,12 +13,7 @@
       "pilot_experiment": "time4cs-control"
     },
     "new_name": null,
-    "family_name": null,
     "serialized_at": "2024-11-19 01:19:42 UTC",
-    "published_state": "pilot",
-    "instruction_type": null,
-    "instructor_audience": null,
-    "participant_audience": null,
     "seeding_key": {
       "script.name": "time4cs-control-unit-1"
     }
