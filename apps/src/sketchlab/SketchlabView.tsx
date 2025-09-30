@@ -1,7 +1,11 @@
 import {Excalidraw, serializeAsJSON} from '@excalidraw/excalidraw';
 import {ExcalidrawElement} from '@excalidraw/excalidraw/types/element/types';
-import {AppState, BinaryFiles} from '@excalidraw/excalidraw/types/types';
-import React, {useEffect, useCallback, useRef} from 'react';
+import {
+  AppState,
+  BinaryFiles,
+  ExcalidrawImperativeAPI,
+} from '@excalidraw/excalidraw/types/types';
+import React, {useEffect, useCallback, useRef, useState} from 'react';
 
 import {useVerticalLayout} from '@cdo/apps/lab2/hooks/useVerticalLayout';
 import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
@@ -31,6 +35,8 @@ const DEBOUNCED_WORKSPACE_SERIALIZATION_MS = 500;
 const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
   levelProperties,
 }) => {
+  const [excalidrawApi, setExcalidrawApi] =
+    useState<ExcalidrawImperativeAPI | null>();
   const {currentSources, updateSources} = useSources<ProjectSources>();
   const saveSourcesTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
@@ -73,10 +79,23 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
         const serializedData = JSON.parse(
           serializeAsJSON(elements, state, files, 'local')
         );
+
+        if (excalidrawApi) {
+          // serializeAsJSON exports an extremely limited set of properties from appState,
+          // and excludes the chosen scroll position (scrollX/Y) and zoom,
+          // so we use the API to serialize those manually.
+          // Serializing the whole appState is extremely lengthy and threw errors on page load, unfortunately,
+          // but we may want to serialize additional properties in the future.
+          const appState = excalidrawApi.getAppState();
+          serializedData.appState.scrollX = appState.scrollX;
+          serializedData.appState.scrollY = appState.scrollY;
+          serializedData.appState.zoom = appState.zoom;
+        }
+
         updateSources({source: serializedData});
       }, DEBOUNCED_WORKSPACE_SERIALIZATION_MS);
     },
-    [updateSources]
+    [updateSources, excalidrawApi]
   );
 
   useEffect(() => {
@@ -123,6 +142,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
           <Excalidraw
             initialData={currentSources.source as SketchlabSource}
             onChange={debouncedSerializeAndSaveWorkspace}
+            excalidrawAPI={api => setExcalidrawApi(api)}
           />
         </PanelContainer>
       </div>

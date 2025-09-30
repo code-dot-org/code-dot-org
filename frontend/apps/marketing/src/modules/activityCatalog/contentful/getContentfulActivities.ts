@@ -5,9 +5,10 @@ import {Entry} from '@/types/contentful/Entry';
 
 /**
  * Retrieves all activities from Contentful.
+ * @param activityType The type of activities to retrieve (e.g., 'hour-of-ai', 'hour-of-code').
  * @returns A promise that resolves to an array of activity entries.
  */
-export async function getContentfulActivities() {
+export async function getContentfulActivities(activityType: string) {
   const contentfulClient = getContentfulClient();
 
   if (!contentfulClient) {
@@ -16,9 +17,10 @@ export async function getContentfulActivities() {
     );
     return [];
   }
-
+  console.log('Fetching activities for activityType:', activityType);
   return getAllEntriesForContentType<Entry<Activity>>(
     contentfulClient,
     'curriculum',
+    {'metadata.tags.sys.id[in]': [activityType]},
   );
 }
