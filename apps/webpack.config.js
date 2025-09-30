@@ -298,7 +298,7 @@ const WEBPACK_BASE_CONFIG = {
           p('test'),
           p('../dashboard/app/assets/images'),
         ],
-        type: 'asset/inline',
+        type: 'asset/resource',
       },
       {
         test: /\.jsx?$/,
