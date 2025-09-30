@@ -11,8 +11,11 @@ interface UseOnboardingTourProps {
   isEnabled: boolean;
 }
 
-// Currently this hook is only used for Python Lab.
-// If other labs would like to opt in to use this hook, we can update the hook work with other labs.
+// Note that this tour includes a step that highlights the navigation button which is always visible
+// at the bottom of the resource panel (whether it's enabled or not).
+// Some labs do not always show the navigation button so this tour is not appropriate for all labs.
+// Currently this hook is only used for Python Lab but other labs can opt in to use it if they also
+// have a pinned navigation button.
 export const useOnboardingTour = ({isEnabled}: UseOnboardingTourProps) => {
   const resourcePanelPinnedButtonOnboardingTourSeen = tryGetLocalStorage(
     RESOURCE_PANEL_PINNED_BUTTON_ONBOARDING_TOUR_SEEN,

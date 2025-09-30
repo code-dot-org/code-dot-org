@@ -22,8 +22,8 @@ interface UseValidationTourProps {
   onValidate: (() => void) | undefined;
 }
 
-// Currently this hook is only used for Python Lab.
-// If other labs would like to opt in to use this hook, we can update the hook to work for their labs.
+// Currently this hook is only used for Python Lab, but other labs can opt in to use it if they also
+// have a validation system similar to Python Lab.
 export const useValidationTour = ({
   isEnabled,
   hasValidationConditions,
@@ -80,32 +80,32 @@ export const useValidationTour = ({
     isEnabled,
   ]);
 
-  // Add event listeners for validation tour progression
+  // Add event listeners for validation tour progression.
   useEffect(() => {
     if (!validationTourEnabled) return;
 
     const handleValidationTabActivation = () => {
       if (validationTourStep === 0) {
         setCurrentTab(validationTabEnum);
-        // Enable step 1 (next button for step 1)
+        // Enable 'Next' button on first step (index 0).
         setValidationTourStepsEnabled(prev => [true, false, true]);
 
-        // Return focus to the tour panel for keyboard users
+        // Return focus to the tour panel for keyboard users.
         returnFocusToTourPanel();
       }
     };
 
     const handleValidateButtonActivation = () => {
       if (validationTourStep === 1) {
-        // Enable step 2 (next button for step 2)
+        // Enable 'Next' button on second step (index 1).
         setValidationTourStepsEnabled(prev => [true, true, true]);
-        // Return focus to the tour panel for keyboard users
+        // Return focus to the tour panel for keyboard users.
         returnFocusToTourPanel();
       }
     };
 
     const handleValidationTabKeydown = (event: KeyboardEvent) => {
-      // Handle both Enter and Space key activation
+      // Handle both Enter and Space key activation.
       if (event.key === 'Enter' || event.key === ' ') {
         event.preventDefault();
         handleValidationTabActivation();
@@ -113,7 +113,7 @@ export const useValidationTour = ({
     };
 
     const handleValidateButtonKeydown = (event: KeyboardEvent) => {
-      // Handle both Enter and Space key activation
+      // Handle both Enter and Space key activation.
       if (event.key === 'Enter' || event.key === ' ') {
         event.preventDefault();
         if (onValidate) {
@@ -181,7 +181,7 @@ export const useValidationTour = ({
     onValidate,
   ]);
 
-  // Update button disabled state based on step and requirements
+  // Update button disabled state based on step and requirements.
   useEffect(() => {
     if (!validationTourEnabled) return;
 
@@ -200,7 +200,7 @@ export const useValidationTour = ({
       }
     };
 
-    // Update once after DOM is ready
+    // Update once after DOM is ready.
     const timeoutId = setTimeout(updateButtonState, 100);
 
     return () => {
@@ -239,14 +239,14 @@ export const useValidationTour = ({
           options={{
             scrollToElement: false,
             exitOnOverlayClick: false,
-            hidePrev: validationTourStep === 0, // Hide back button only on first step
+            hidePrev: validationTourStep === 0, // Hide back button only on first step.
             hideNext: false,
             nextLabel: commonI18n.next(),
             prevLabel: commonI18n.back(),
             doneLabel: commonI18n.done(),
             showBullets: false,
             showStepNumbers: true,
-            disableInteraction: false, // Allow interaction with page elements
+            disableInteraction: false, // Allow interaction with page elements.
           }}
         />
       ) : null,
