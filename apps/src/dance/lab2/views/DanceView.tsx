@@ -58,7 +58,7 @@ import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import SourcesContainer, {
   useSources,
 } from '@cdo/apps/lab2/views/SourcesContainer';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import ProjectPlayer from '@cdo/apps/music/ProjectPlayer';
 import MusicProjectBar from '@cdo/apps/music/views/MusicProjectBar';
@@ -209,16 +209,12 @@ const DanceView: React.FunctionComponent<{
         ? EVENTS.PROJECT_ACTIVITY
         : EVENTS.LEVEL_ACTIVITY;
 
-      analyticsReporter.sendEvent(
-        eventName,
-        {
-          signedIn: signedIn,
-          unitName: scriptName,
-          levelId: levelProperties.id,
-          levelName: levelProperties.name,
-        },
-        PLATFORMS.BOTH
-      );
+      analyticsReporter.sendEvent(eventName, {
+        signedIn: signedIn,
+        unitName: scriptName,
+        levelId: levelProperties.id,
+        levelName: levelProperties.name,
+      });
     }
 
     if (!programExecutor.current || !metadataToUse) {

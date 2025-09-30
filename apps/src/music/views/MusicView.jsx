@@ -23,7 +23,7 @@ import {
 } from '@cdo/apps/lab2/projects/utils';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import AnalyticsReporter from '@cdo/apps/music/analytics/AnalyticsReporter';
 import {setExtraCopyrightContent} from '@cdo/apps/sharedComponents/footer/CopyrightDialog/index';
@@ -882,26 +882,22 @@ class UnconnectedMusicView extends React.Component {
   };
 
   playSong = async () => {
+    if (!this.state.hasRun) {
+      const eventName = this.props.levelProperties.isProjectLevel
+        ? EVENTS.PROJECT_ACTIVITY
+        : EVENTS.LEVEL_ACTIVITY;
+      analyticsReporter.sendEvent(eventName, {
+        signedIn: this.props.signInState,
+        unitName: this.props.scriptName,
+        levelId: this.props.levelProperties.id,
+        levelName: this.props.levelProperties.name,
+      });
+    }
     this.setState({
       hasRun: true,
     });
     if (this.props.isFirstAttempt) {
       this.props.sendAttemptReport();
-
-      const eventName = this.props.levelProperties.isProjectLevel
-        ? EVENTS.PROJECT_ACTIVITY
-        : EVENTS.LEVEL_ACTIVITY;
-
-      analyticsReporter.sendEvent(
-        eventName,
-        {
-          signedIn: this.props.signInState,
-          unitName: this.props.scriptName,
-          levelId: this.props.levelProperties.id,
-          levelName: this.props.levelProperties.name,
-        },
-        PLATFORMS.BOTH
-      );
     }
     this.player.stopSong();
     this.playingTriggers = [];
