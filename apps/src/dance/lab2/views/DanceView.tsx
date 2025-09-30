@@ -115,7 +115,6 @@ const DanceView: React.FunctionComponent<{
   const musicProjectPlayer = useRef<ProjectPlayer | null>(null);
   const [loadedMusicProject, setLoadedMusicProject] = useState(false);
   const [generatedAiDance, setGeneratedAiDance] = useState(false);
-  const [runButtonWasClicked, setRunButtonWasClicked] = useState(false);
 
   const aiGenerateMode =
     levelProperties.aiCodeGenerate || queryParams('ai-generate') === 'true';
@@ -205,7 +204,7 @@ const DanceView: React.FunctionComponent<{
   );
 
   const runProgram = useCallback(async () => {
-    if (!runButtonWasClicked) {
+    if (!hasRun) {
       const eventName = levelProperties.isProjectLevel
         ? EVENTS.PROJECT_ACTIVITY
         : EVENTS.LEVEL_ACTIVITY;
@@ -220,7 +219,6 @@ const DanceView: React.FunctionComponent<{
         },
         PLATFORMS.BOTH
       );
-      setRunButtonWasClicked(true);
     }
 
     if (!programExecutor.current || !metadataToUse) {
@@ -240,7 +238,7 @@ const DanceView: React.FunctionComponent<{
     dispatch(setHasRun(true));
     saveBlocks(true);
   }, [
-    runButtonWasClicked,
+    hasRun,
     metadataToUse,
     dispatch,
     saveBlocks,
@@ -309,7 +307,6 @@ const DanceView: React.FunctionComponent<{
   useEffect(() => {
     dispatch(setHasRun(false));
     dispatch(setHasEdited(false));
-    setRunButtonWasClicked(false);
   }, [levelProperties.id, dispatch]);
 
   // Load or update song manifest when level properties change.
