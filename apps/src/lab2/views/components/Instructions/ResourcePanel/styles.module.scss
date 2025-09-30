@@ -130,5 +130,6 @@
 
 .navigationFooter {
   padding: 10px;
-  background-color: var(--background-neutral-secondary)
+  background-color: var(--background-neutral-secondary);
+  border-top: variables.$default-border;
 }
