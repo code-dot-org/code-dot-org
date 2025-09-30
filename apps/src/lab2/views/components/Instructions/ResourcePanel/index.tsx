@@ -22,6 +22,11 @@ import ForTeachersOnly from '../ForTeachersOnly';
 import Instructions, {InstructionsProps} from '../InstructionsV2';
 import NavigationArea from '../NavigationArea';
 
+import {
+  resourcePanelInstructionsElementId,
+  resourcePanelTabsElementId,
+  resourcePanelLinksElementId,
+} from './constants';
 import CopyrightButton from './CopyrightButton';
 import ResourcePanelExtraLinks from './ResourcePanelExtraLinks';
 import SettingsPanel from './SettingsPanel';
@@ -252,13 +257,13 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
 
   return (
     <div
-      id="resource-panel-instructions"
+      id={resourcePanelInstructionsElementId}
       className={classNames(styles.resourcePanel, className)}
     >
       {onboardingTourSteps}
       {validationTourSteps}
       <div className={styles.sidebar}>
-        <nav id="resource-panel-tabs" className={styles.tabs}>
+        <nav id={resourcePanelTabsElementId} className={styles.tabs}>
           {getTypedKeys(availableTabs).map(tab => (
             <WithTooltip
               tooltipProps={{
@@ -296,7 +301,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
           ))}
         </nav>
         <div
-          id="resource-panel-links"
+          id={resourcePanelLinksElementId}
           className={classNames(styles.bottomTabs)}
         >
           <ResourcePanelExtraLinks levelId={levelId} theme={theme} />
