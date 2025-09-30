@@ -31,6 +31,7 @@ skip_seed_all: true
 build_i18n: true
 optimize_rails_assets: false
 optimize_webpack_assets: false
+redis_url: 'redis://ui-tests-redis:6379/0'
 aiproxy_api_key: 'notarealkey'
 " >> locals.yml
 echo "Wrote settings and secrets from env vars into locals.yml."
