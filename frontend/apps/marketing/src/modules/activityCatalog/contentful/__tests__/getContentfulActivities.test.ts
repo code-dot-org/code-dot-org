@@ -19,12 +19,13 @@ describe('getContentfulActivities', () => {
       mockActivities,
     );
 
-    const result = await getContentfulActivities();
+    const result = await getContentfulActivities('hour-of-ai');
 
     expect(getContentfulClient).toHaveBeenCalled();
     expect(getAllEntriesForContentType).toHaveBeenCalledWith(
       mockClient,
       'curriculum',
+      {'metadata.tags.sys.id[in]': ['hour-of-ai']},
     );
     expect(result).toEqual(mockActivities);
   });
@@ -33,7 +34,7 @@ describe('getContentfulActivities', () => {
     const warnSpy = jest.spyOn(console, 'warn').mockImplementation(() => {});
     (getContentfulClient as jest.Mock).mockReturnValue(undefined);
 
-    const result = await getContentfulActivities();
+    const result = await getContentfulActivities('hour-of-ai');
 
     expect(getContentfulClient).toHaveBeenCalled();
     expect(warnSpy).toHaveBeenCalledWith(

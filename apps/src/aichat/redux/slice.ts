@@ -24,6 +24,8 @@ import {
   ChatAsset,
   SaveError,
   AiChatClientType,
+  WorkspaceTeacherViewTab,
+  UserAddedSelectionContextItem,
 } from '../types';
 import {
   DEFAULT_VISIBILITIES,
@@ -55,6 +57,8 @@ const initialState: AichatState = {
   saveError: undefined,
   showResetMessage: false,
   hasSetStartingCustomizations: false,
+  chatWorkspaceSelectedTab: null,
+  userAddedSelectionContext: {},
 };
 
 const aichatSlice = createSlice({
@@ -328,6 +332,29 @@ const aichatSlice = createSlice({
     setSaveError(state, action: PayloadAction<SaveError | undefined>) {
       state.saveError = action.payload;
     },
+    setChatWorkspaceSelectedTab(
+      state,
+      action: PayloadAction<WorkspaceTeacherViewTab | null>
+    ) {
+      state.chatWorkspaceSelectedTab = action.payload;
+    },
+    addItemToUserAddedSelectionContext(
+      state,
+      action: PayloadAction<UserAddedSelectionContextItem>
+    ) {
+      state.userAddedSelectionContext[action.payload.displayName] =
+        action.payload;
+    },
+    removeItemFromUserAddedSelectionContext(
+      state,
+      action: PayloadAction<string>
+    ) {
+      state.userAddedSelectionContext[action.payload] &&
+        delete state.userAddedSelectionContext[action.payload];
+    },
+    clearUserAddedSelectionContext(state) {
+      state.userAddedSelectionContext = {};
+    },
   },
 });
 
@@ -386,4 +413,8 @@ export const {
   clearStagedFilesAlert,
   setSaveError,
   clearHasSetStartingCustomizations,
+  setChatWorkspaceSelectedTab,
+  addItemToUserAddedSelectionContext,
+  removeItemFromUserAddedSelectionContext,
+  clearUserAddedSelectionContext,
 } = aichatSlice.actions;

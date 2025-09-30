@@ -7,6 +7,7 @@ import {Steps} from 'intro.js-react';
 import React, {useEffect, useMemo, useState} from 'react';
 
 import {ChatButtonData, SystemPromptSettings} from '@cdo/apps/aichat/types';
+import AiChatHeaderButtons from '@cdo/apps/aichat/views/aiChatHeaderButtons/AiChatHeaderButtons';
 import {shouldShowAiTutor} from '@cdo/apps/lab2/ai/shouldShowAiTutor';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {ProjectSources} from '@cdo/apps/lab2/types';
@@ -86,6 +87,8 @@ type ResourcePanelProps = InstructionsProps & {
   aiTutorSystemPromptSettings?: SystemPromptSettings;
   aiTutorMultimodalEnabled?: boolean;
   aiTutorChatButtonData?: ChatButtonData[];
+  /** If the navigation area in the footer should be styled as a "bubble", like instructions content. */
+  styleNavigationAsBubble?: boolean;
 };
 
 const PYTHONLAB_RESOURCE_PANEL_ONBOARDING_TOUR_SEEN =
@@ -105,6 +108,9 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   aiTutorSystemPromptSettings,
   aiTutorMultimodalEnabled,
   aiTutorChatButtonData,
+  // Default hideNavigation to true since most labs pin the navigation area to bottom.
+  hideNavigation: hideInstructionsNavigation = true,
+  styleNavigationAsBubble = false,
   ...instructionsProps
 }) => {
   const {theme} = useTheme();
@@ -143,7 +149,10 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
 
     if (levelProperties.longInstructions) {
       tabMap[Tabs.Instructions] = (
-        <Instructions {...instructionsProps} hideNavigation />
+        <Instructions
+          {...instructionsProps}
+          hideNavigation={hideInstructionsNavigation}
+        />
       );
     }
 
@@ -225,6 +234,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     aiTutorChatButtonData,
     selectedVersion,
     levelId,
+    hideInstructionsNavigation,
   ]);
 
   useEffect(() => {
@@ -338,7 +348,13 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
           id={currentTab}
           headerContent={tabInfo[currentTab].title}
           headerClassName={headerClassName}
-          rightHeaderContent={rightHeaderContent}
+          rightHeaderContent={
+            currentTab === Tabs.AiTutor ? (
+              <AiChatHeaderButtons />
+            ) : (
+              rightHeaderContent
+            )
+          }
         >
           <div className={styles.tabContentContainer}>
             {getTypedKeys(availableTabs).map(tab => (
@@ -353,7 +369,13 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
               </div>
             ))}
           </div>
-          <NavigationArea isResourcePanel={true} {...instructionsProps} />
+          {(hideInstructionsNavigation || currentTab !== Tabs.Instructions) && (
+            <NavigationArea
+              {...instructionsProps}
+              styleAsBubble={styleNavigationAsBubble}
+              className={styles.navigationFooter}
+            />
+          )}
           {isSettingsOpen && (
             <SettingsPanel
               settings={settings || []}

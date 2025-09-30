@@ -27,7 +27,7 @@ class CourseVersionTest < ActiveSupport::TestCase
     create(:single_unit_course, :with_course_offering, unit: @in_development_unit, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development, version_year: '1991', family_name: 'development2')
 
     @unit_group = create(:unit_group, name: 'course-instructed-by-teacher22', family_name: 'family-12', version_year: '1991', published_state: 'stable')
-    @unit_in_course = create(:script, name: 'unit-in-teacher-instructed-course22', instructor_audience: nil, participant_audience: nil, instruction_type: nil, published_state: nil)
+    @unit_in_course = create(:script, name: 'unit-in-teacher-instructed-course22')
     create(:unit_group_unit, script: @unit_in_course, unit_group: @unit_group, position: 1)
     @unit_in_course.reload
     @unit_group.reload

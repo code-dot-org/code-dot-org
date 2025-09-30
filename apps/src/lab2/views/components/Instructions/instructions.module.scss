@@ -259,8 +259,3 @@
 .predictSummaryBubble {
   flex-shrink: 0; // Ensure the contents always fits in the bubble.
 }
-
-.bubble.resourcePanelNavigationAreaBubble {
-  border-radius: 0;
-  border-top: 1px solid var(--borders-neutral-primary);
-}

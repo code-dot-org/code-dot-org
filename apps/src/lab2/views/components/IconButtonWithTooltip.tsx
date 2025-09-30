@@ -17,7 +17,8 @@ interface IconButtonWithTooltipProps {
   hideTooltipTail: TooltipProps['hideTail'];
   disabled?: boolean;
   onClick: () => void;
-  containerRef: React.RefObject<HTMLDivElement>;
+  containerRef?: React.RefObject<HTMLDivElement>;
+  className?: string;
 }
 
 const IconButtonWithTooltip: React.FunctionComponent<IconButtonWithTooltipProps> =
@@ -35,6 +36,7 @@ const IconButtonWithTooltip: React.FunctionComponent<IconButtonWithTooltipProps>
       disabled = false,
       onClick,
       containerRef,
+      className,
     }) => {
       const handleClick = useCallback(
         (
@@ -47,7 +49,7 @@ const IconButtonWithTooltip: React.FunctionComponent<IconButtonWithTooltipProps>
           // and showing its tooltip when a button is disabled after click.
           // This moves focus to the container div instead.
           setTimeout(() => {
-            if (containerRef.current) {
+            if (containerRef?.current) {
               containerRef.current.focus();
             }
           }, 0);
@@ -62,6 +64,7 @@ const IconButtonWithTooltip: React.FunctionComponent<IconButtonWithTooltipProps>
             size: tooltipSize,
             direction: tooltipDirection,
             hideTail: hideTooltipTail,
+            className: className,
           }}
         >
           <Button
