@@ -2041,15 +2041,14 @@ StudioApp.prototype.setConfigValues_ = function (config) {
   }
 
   // Localize the app messages
-
-  const msg = Object.entries(config.appMsg).reduce(
-    (acc, [key, msgFunction]) => {
-      acc[key] = (...args) => localization.translate(msgFunction(...args));
-      return acc;
-    },
-    {}
-  );
+  const msg = config.appMsg
+    ? Object.entries(config.appMsg).reduce((acc, [key, msgFunction]) => {
+        acc[key] = (...args) => localization.translate(msgFunction(...args));
+        return acc;
+      }, {})
+    : config.appMsg;
   this.appMsg = msg;
+
   this.IDEAL_BLOCK_NUM = config.level.ideal || Infinity;
   if (experiments.isEnabled(experiments.BUBBLE_DIALOG)) {
     // This seems to break levels that start in the animation/costume tab.
