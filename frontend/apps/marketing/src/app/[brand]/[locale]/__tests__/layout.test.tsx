@@ -14,6 +14,10 @@ jest.mock('next/headers', () => ({
   draftMode: jest.fn(),
 }));
 
+jest.mock('next/navigation', () => ({
+  useSearchParams: jest.fn(() => new URLSearchParams()),
+}));
+
 jest.mock('@/config/brand', () => ({
   ...jest.requireActual('@/config/brand'),
   getBrandFromHostname: jest.fn(),

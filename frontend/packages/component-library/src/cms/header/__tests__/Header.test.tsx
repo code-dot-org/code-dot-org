@@ -17,6 +17,10 @@ function waitFor(callback: () => void) {
   return testingLibraryWaitFor(callback);
 }
 
+jest.mock('next/navigation', () => ({
+  useSearchParams: jest.fn(() => new URLSearchParams()),
+}));
+
 describe('Header Component', () => {
   const defaultProps = getDefaultHeaderProps({
     logoImage: 'logo.png',
