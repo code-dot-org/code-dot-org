@@ -13,7 +13,7 @@ import {Tabs} from './types';
 import {VALIDATION_TOUR_STEPS} from './validationTourHelpers';
 
 interface UseValidationTourProps {
-  appName: string;
+  isEnabled: boolean;
   hasValidationConditions: boolean;
   validationSettings: ValidationSettings | undefined;
   setCurrentTab: (tab: Tabs) => void;
@@ -23,13 +23,12 @@ interface UseValidationTourProps {
 // Currently this hook is only used for Python Lab.
 // If other labs would like to opt in to use this hook, we can update the hook to work for their labs.
 export const useValidationTour = ({
-  appName,
+  isEnabled,
   hasValidationConditions,
   validationSettings,
   setCurrentTab,
   onValidate,
 }: UseValidationTourProps) => {
-  const isPythonLab = appName === 'pythonlab';
   const [validationTourEnabled, setValidationTourEnabled] = useState(false);
   const [validationTourStep, setValidationTourStep] = useState(0);
   const validationTabEnum = Tabs.Validation;
@@ -60,7 +59,7 @@ export const useValidationTour = ({
 
   // Enable validation tour if conditions are met.
   useEffect(() => {
-    if (!isPythonLab) return;
+    if (!isEnabled) return;
 
     const shouldShowValidationTour =
       validationSettings &&
@@ -76,7 +75,7 @@ export const useValidationTour = ({
     hasValidationConditions,
     validationTourSeen,
     onboardingTourSeen,
-    isPythonLab,
+    isEnabled,
   ]);
 
   // Add event listeners for validation tour progression
@@ -209,7 +208,7 @@ export const useValidationTour = ({
 
   const validationTourSteps = useMemo(
     () =>
-      isPythonLab ? (
+      isEnabled ? (
         <Steps
           enabled={validationTourEnabled}
           initialStep={validationTourStep}
@@ -253,7 +252,7 @@ export const useValidationTour = ({
       validationTourEnabled,
       validationTourStep,
       validationTourStepsEnabled,
-      isPythonLab,
+      isEnabled,
     ]
   );
 

@@ -8,13 +8,12 @@ import {RESOURCE_PANEL_PINNED_BUTTON_ONBOARDING_TOUR_SEEN} from './constants';
 import {STEPS, INITIAL_STEP} from './resourcePanelTourHelpers';
 
 interface UseOnboardingTourProps {
-  appName: string;
+  isEnabled: boolean;
 }
 
 // Currently this hook is only used for Python Lab.
 // If other labs would like to opt in to use this hook, we can update the hook work with other labs.
-export const useOnboardingTour = ({appName}: UseOnboardingTourProps) => {
-  const isPythonLab = appName === 'pythonlab';
+export const useOnboardingTour = ({isEnabled}: UseOnboardingTourProps) => {
   const resourcePanelPinnedButtonOnboardingTourSeen = tryGetLocalStorage(
     RESOURCE_PANEL_PINNED_BUTTON_ONBOARDING_TOUR_SEEN,
     'no'
@@ -22,11 +21,9 @@ export const useOnboardingTour = ({appName}: UseOnboardingTourProps) => {
 
   const onboardingTourSteps = useMemo(
     () =>
-      isPythonLab ? (
+      isEnabled ? (
         <Steps
-          enabled={
-            isPythonLab && resourcePanelPinnedButtonOnboardingTourSeen !== 'yes'
-          }
+          enabled={resourcePanelPinnedButtonOnboardingTourSeen !== 'yes'}
           initialStep={INITIAL_STEP}
           steps={STEPS}
           onExit={() => {
@@ -47,7 +44,7 @@ export const useOnboardingTour = ({appName}: UseOnboardingTourProps) => {
           }}
         />
       ) : null,
-    [isPythonLab, resourcePanelPinnedButtonOnboardingTourSeen]
+    [isEnabled, resourcePanelPinnedButtonOnboardingTourSeen]
   );
 
   return {

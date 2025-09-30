@@ -80,6 +80,8 @@ type ResourcePanelProps = InstructionsProps & {
   aiTutorChatButtonData?: ChatButtonData[];
   /** If the navigation area in the footer should be styled as a "bubble", like instructions content. */
   styleNavigationAsBubble?: boolean;
+  isValidationTourEnabled?: boolean;
+  isOnboardingTourEnabled?: boolean;
 };
 
 /**
@@ -99,6 +101,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   // Default hideNavigation to true since most labs pin the navigation area to bottom.
   hideNavigation: hideInstructionsNavigation = true,
   styleNavigationAsBubble = false,
+  isValidationTourEnabled,
+  isOnboardingTourEnabled,
   ...instructionsProps
 }) => {
   const {theme} = useTheme();
@@ -124,7 +128,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
 
   // Use validation tour hook. Currently only used for Python Lab.
   const {validationTourSteps} = useValidationTour({
-    appName,
+    isEnabled: !!isValidationTourEnabled,
     hasValidationConditions,
     validationSettings: instructionsProps.validationSettings,
     setCurrentTab,
@@ -133,7 +137,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
 
   // Use onboarding tour hook. Currently only used for Python Lab.
   const {onboardingTourSteps} = useOnboardingTour({
-    appName,
+    isEnabled: !!isOnboardingTourEnabled,
   });
 
   // Tooltip should disappear quickly.
