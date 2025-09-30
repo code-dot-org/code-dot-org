@@ -102,12 +102,7 @@ describe('Header Component', () => {
   });
 
   it('renders correctly when user status is signed in', async () => {
-    render(
-      <Header
-        {...defaultProps}
-        isSignedIn={jest.fn().mockResolvedValue(true)}
-      />,
-    );
+    render(<Header {...defaultProps} isSignedIn={true} />);
 
     // check that the Go to Dashboard button is rendered
     // and no other account buttons are rendered
