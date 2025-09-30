@@ -3,6 +3,7 @@ import {Heading5} from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
 import React, {useCallback, useState} from 'react';
 
+import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
 import {LevelProperties} from '@cdo/apps/lab2/types';
 import Adlib, {
   AdlibsType,
@@ -10,7 +11,6 @@ import Adlib, {
 } from '@cdo/apps/lab2/views/components/guide/Adlib';
 import Guide from '@cdo/apps/lab2/views/components/guide/Guide';
 import MainInstructionsContent from '@cdo/apps/lab2/views/components/Instructions/MainInstructionsContent';
-import NavigationButton from '@cdo/apps/lab2/views/components/Instructions/NavigationButton';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {generateBlocklyJson} from '../ai/generate/generateBlocklyJson';
@@ -150,7 +150,7 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
           ariaLabel={'Generate song'}
           text={'Generate song'}
           type="primary"
-          color="purple"
+          color="black"
           size="s"
           iconLeft={{iconName: 'sparkles'}}
           onClick={generateSong}
@@ -165,7 +165,7 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
             ariaLabel={'Generate again'}
             text={'Generate again'}
             type="primary"
-            color="purple"
+            color="black"
             size="s"
             iconLeft={{iconName: 'sparkles'}}
             onClick={generateSong}
@@ -175,16 +175,19 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
             ariaLabel={'Adjust prompt'}
             text={'Adjust prompt'}
             type="primary"
-            color="purple"
+            color="black"
             size="s"
             onClick={() => dispatch(setAiGenerateState('none'))}
           />
 
-          <NavigationButton
-            levelProperties={levelProperties}
-            hasRun={true}
-            hasEdited={false}
-            className={styles.navigationButton}
+          <Button
+            ariaLabel={'Continue'}
+            text={'Continue'}
+            type="primary"
+            color="black"
+            size="s"
+            iconRight={{iconName: 'arrow-right', iconStyle: 'solid'}}
+            onClick={() => dispatch(continueOrFinishLesson())}
           />
         </>
       )}
