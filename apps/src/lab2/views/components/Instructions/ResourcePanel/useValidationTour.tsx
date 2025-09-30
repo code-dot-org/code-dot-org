@@ -39,6 +39,17 @@ export const useValidationTour = ({
     'no'
   );
 
+  const returnFocusToTourPanel = () => {
+    setTimeout(() => {
+      const nextButton = document.querySelector(
+        '.introjs-nextbutton'
+      ) as HTMLButtonElement;
+      if (nextButton) {
+        nextButton.focus();
+      }
+    }, 100);
+  };
+
   // The Done button on the third step (index 2) is always enabled.
   // The Next button on the first two steps (indexes 0 and 1) is disabled until the user completes an action.
   const [validationTourStepsEnabled, setValidationTourStepsEnabled] = useState([
@@ -79,14 +90,7 @@ export const useValidationTour = ({
         setValidationTourStepsEnabled(prev => [true, false, true]);
 
         // Return focus to the tour panel for keyboard users
-        setTimeout(() => {
-          const nextButton = document.querySelector(
-            '.introjs-nextbutton'
-          ) as HTMLButtonElement;
-          if (nextButton) {
-            nextButton.focus();
-          }
-        }, 100);
+        returnFocusToTourPanel();
       }
     };
 
@@ -94,19 +98,8 @@ export const useValidationTour = ({
       if (validationTourStep === 1) {
         // Enable step 2 (next button for step 2)
         setValidationTourStepsEnabled(prev => [true, true, true]);
-        if (onValidate) {
-          onValidate();
-        }
-
         // Return focus to the tour panel for keyboard users
-        setTimeout(() => {
-          const nextButton = document.querySelector(
-            '.introjs-nextbutton'
-          ) as HTMLButtonElement;
-          if (nextButton) {
-            nextButton.focus();
-          }
-        }, 100);
+        returnFocusToTourPanel();
       }
     };
 
@@ -122,6 +115,9 @@ export const useValidationTour = ({
       // Handle both Enter and Space key activation
       if (event.key === 'Enter' || event.key === ' ') {
         event.preventDefault();
+        if (onValidate) {
+          onValidate();
+        }
         handleValidateButtonActivation();
       }
     };
