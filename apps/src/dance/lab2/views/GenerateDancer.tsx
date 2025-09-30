@@ -4,13 +4,14 @@ import {Heading5} from '@code-dot-org/component-library/typography';
 import React, {useCallback, useEffect, useState} from 'react';
 
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
+import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
 import {LevelProperties} from '@cdo/apps/lab2/types';
 import {getGeneratedDancerAssets} from '@cdo/apps/lab2/utils/GeneratedDancer';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import Adlib, {AdlibsType} from '@cdo/apps/lab2/views/components/guide/Adlib';
 import Guide from '@cdo/apps/lab2/views/components/guide/Guide';
-import NavigationButton from '@cdo/apps/lab2/views/components/Instructions/NavigationButton';
 import getRandomInt from '@cdo/apps/util/getRandomInt';
+import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {trySetLocalStorage} from '@cdo/apps/utils';
 import dancerEmptyHeadShoulders from '@cdo/static/dance/dancer-empty-head-shoulders.png';
 
@@ -83,6 +84,8 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
   adlibOption,
   levelProperties,
 }) => {
+  const dispatch = useAppDispatch();
+
   const {setTheme} = useTheme();
 
   useEffect(() => {
@@ -153,7 +156,7 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
               ariaLabel={'Generate dancer'}
               text={'Generate dancer'}
               type="primary"
-              color="purple"
+              color="black"
               size="s"
               iconLeft={{iconName: 'sparkles'}}
               onClick={generateDancer}
@@ -169,7 +172,7 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
               ariaLabel={'Generate again'}
               text={'Generate again'}
               type="primary"
-              color="purple"
+              color="black"
               size="s"
               iconLeft={{iconName: 'sparkles'}}
               onClick={generateDancer}
@@ -179,16 +182,19 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
               ariaLabel={'Adjust prompt'}
               text={'Adjust prompt'}
               type="primary"
-              color="purple"
+              color="black"
               size="s"
               onClick={() => setAiGenerateState('none')}
             />
 
-            <NavigationButton
-              levelProperties={levelProperties}
-              hasRun={true}
-              hasEdited={false}
-              className={moduleStyles.navigationButton}
+            <Button
+              ariaLabel={'Continue'}
+              text={'Continue'}
+              type="primary"
+              color="black"
+              size="s"
+              iconRight={{iconName: 'arrow-right', iconStyle: 'solid'}}
+              onClick={() => dispatch(continueOrFinishLesson())}
             />
           </>
         )}
