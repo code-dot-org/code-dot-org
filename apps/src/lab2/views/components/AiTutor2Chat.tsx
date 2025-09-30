@@ -17,6 +17,7 @@ import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import {shouldShowCopyCode} from '../../ai/ai-should-show-copy-code';
 import {aiTutorModelId} from '../../ai/ai-tutor-model-id';
+import {thinkingBudget} from '../../ai/ai-tutor-thinking-budget';
 
 import moduleStyles from './AiTutor2Chat.module.scss';
 
@@ -41,6 +42,7 @@ const customPromptName =
 const modelParameters: ModelParameters = {
   systemPrompt: defaultSystemPrompt,
   selectedModelId: aiTutorModelId,
+  thinkingBudget,
   temperature: 0.5,
   retrievalContexts: [],
 } as const;
@@ -138,13 +140,12 @@ const AiTutor2Chat: React.FunctionComponent<AiTutor2ChatProps> = ({
   }, [systemPrompt, aiTutorSystemPromptSettings?.selectedSystemPromptName]);
 
   useEffect(() => {
-    // We currently use query params to allow AI model selection but otherwise do not provide any user
-    // interface to select or see the selected model. This console log was added to give users (testers)
+    // We currently use query params to allow setting of AI model and thinking budget but otherwise do not
+    // provide any user interface to set these values. This console log was added to give users (testers)
     // feedback as to which model was actually selected (e.g. if the query param is entered incorrectly or
-    // an unavailable model is selected, it will use the default model). It's in a useEffect (on first
-    // render) rather than in `ai/AiTutorModelId.ts` as that module is apparently imported even if AI Tutor
-    // isn't enabled, leading to a confusing console log message.
+    // an unavailable model is selected, it will use the default model) and the current thinking budget.
     console.log('🤖: aiTutorModelId:', aiTutorModelId);
+    console.log('🤖: thinkingBudget (Gemini 2.5 models only):', thinkingBudget);
   }, []);
 
   const chatButtons = useMemo(() => {

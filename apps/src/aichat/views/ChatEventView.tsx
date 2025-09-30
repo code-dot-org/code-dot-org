@@ -55,12 +55,12 @@ function formatModelUpdateText(update: ModelUpdate): string {
 
   const modelUpdateText = updatedToText
     ? aichatI18n.modelUpdateText({
-        fieldLabel: fieldLabel,
+        fieldLabel: String(fieldLabel),
         updatedText: updatedToText.toString(),
         timestamp: timestampToLocalTime(timestamp),
       })
     : aichatI18n.modelUpdateText2({
-        fieldLabel: fieldLabel,
+        fieldLabel: String(fieldLabel),
         timestamp: timestampToLocalTime(timestamp),
       });
 

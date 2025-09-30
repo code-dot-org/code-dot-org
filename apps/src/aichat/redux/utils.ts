@@ -34,7 +34,7 @@ const haveDifferentValues = (
   }
   // In the case that field values are saved as different types, compare as strings.
   if (typeof value1 !== typeof value2) {
-    return value1.toString() !== value2.toString();
+    return String(value1) !== String(value2);
   }
 
   return value1 !== value2;

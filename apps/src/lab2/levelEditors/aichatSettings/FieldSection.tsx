@@ -62,10 +62,15 @@ const FieldSection: React.FunctionComponent<FieldSectionProps> = ({
             />
           )}
         </div>
-        <VisibilityDropdown
-          value={visibilities[fieldName]}
-          property={fieldName}
-        />
+        {
+          /* hack */
+          visibilities[fieldName] && (
+            <VisibilityDropdown
+              value={visibilities[fieldName]}
+              property={fieldName}
+            />
+          )
+        }
       </div>
     </>
   );
