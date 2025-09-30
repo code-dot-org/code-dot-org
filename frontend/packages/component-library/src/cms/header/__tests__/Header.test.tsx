@@ -79,46 +79,8 @@ describe('Header Component', () => {
     });
   });
 
-  it('renders correctly when user status is loading', async () => {
-    const mockFetch = jest.fn(() => new Promise(() => {}));
-    global.fetch = mockFetch as unknown as typeof fetch;
-
-    render(
-      <Header
-        {...defaultProps}
-        isSignedIn={jest.fn().mockImplementation(async () => {
-          await new Promise(resolve => setTimeout(resolve, 1000));
-          return false;
-        })}
-      />,
-    );
-
-    // check that the Loading button is rendered
-    // and no other account buttons are rendered
-    await waitFor(() => {
-      const loadingButton = screen.getByText('Loading');
-      expect(loadingButton).toBeInTheDocument();
-
-      const signInButton = screen.queryByText('Sign In');
-      expect(signInButton).not.toBeInTheDocument();
-
-      const createAccountButton = screen.queryByText('Create Account');
-      expect(createAccountButton).not.toBeInTheDocument();
-
-      const dashboardButton = screen.queryByText('Go to Dashboard');
-      expect(dashboardButton).not.toBeInTheDocument();
-    });
-
-    jest.restoreAllMocks();
-  });
-
   it('renders correctly when user status is signed out', async () => {
-    render(
-      <Header
-        {...defaultProps}
-        isSignedIn={jest.fn().mockResolvedValue(false)}
-      />,
-    );
+    render(<Header {...defaultProps} isSignedIn={false} />);
 
     // check that the Sign In and Create Account buttons are rendered
     // and no other account buttons are rendered

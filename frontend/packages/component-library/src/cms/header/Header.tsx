@@ -69,7 +69,7 @@ export interface HeaderProps extends HTMLAttributes<HTMLElement> {
   /** Header custom class name */
   className?: string;
   /** Is the user signed in? */
-  isSignedIn?: () => Promise<boolean>;
+  isSignedIn?: boolean;
 }
 
 /**
@@ -99,7 +99,7 @@ const Header: React.FC<HeaderProps> = ({
   helpLinks,
   hamburgerButtonLabel,
   hamburgerLinks,
-  isSignedIn,
+  isSignedIn = false,
   className,
   ...HTMLAttributes
 }) => {
@@ -113,14 +113,8 @@ const Header: React.FC<HeaderProps> = ({
       return;
     }
 
-    isSignedIn()
-      .then(isUserSignedIn => {
-        setRenderState(isUserSignedIn ? 'signedIn' : 'signedOut');
-      })
-      .catch(() => {
-        setRenderState('error');
-      });
-  }, []);
+    setRenderState(isSignedIn ? 'signedIn' : 'signedOut');
+  }, [isSignedIn]);
 
   return (
     <header
