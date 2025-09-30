@@ -160,6 +160,8 @@ User: oh no"
 
             The student code the teacher is viewing is: #{'a' * 75000}
 
+            If asked about a student, tell the teacher that you do not have context on the teacher's students and that the team is working on adding that functionality. And tell the teacher that the team will let them know when they can chat about the work of specific students.
+
             Here are the search results in numbered order:
             $search_results$
 
