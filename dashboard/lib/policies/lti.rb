@@ -86,6 +86,15 @@ class Policies::Lti
       jwks_url: 'https://lti-service.svc.schoology.com/lti-service/.well-known/jwks'.freeze,
       access_token_url: 'https://lti-service.svc.schoology.com/lti-service/access-token'.freeze,
     },
+    # TODO: I got these from https://launchpad.classlink.com/.well-known/openid-configuration,
+    # which was listed here (under Prerequisites) as a step https://help.classlink.com/s/article/pp-lti-1-3
+    classlink: {
+      name: 'ClassLink'.freeze,
+      issuer: "https://launchpad.classlink.com".freeze,
+      auth_redirect_url: "https://launchpad.classlink.com/oauth2/v2/auth".freeze,
+      jwks_url: "https://launchpad.classlink.com/oauth2/v2/jwks".freeze,
+      access_token_url: "https://launchpad.classlink.com/oauth2/v2/token".freeze,
+    },
   }
 
   DYNAMIC_REGISTRATION_CONFIG = {
