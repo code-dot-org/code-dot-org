@@ -632,16 +632,10 @@ def submit_batch_replication_job(s3control_client, account_id, dest_bucket, batc
 
   timestamp = extract_inventory_timestamp(inventory_report)
 
-  # Build the operation hash with SSE-S3 encryption
   operation_params = {
     target_resource: "arn:aws:s3:::#{dest_bucket}",
     metadata_directive: 'COPY',
-    storage_class: 'STANDARD',
-    # Use S3-managed encryption instead of KMS
-    sse_aws_kms_key_id: nil,  # Explicitly set to nil to avoid KMS
-    new_object_metadata: {
-      sse_algorithm: 'AES256'  # Use S3-managed encryption (SSE-S3)
-    }
+    storage_class: 'STANDARD'
   }
 
   response = s3control_client.create_job(

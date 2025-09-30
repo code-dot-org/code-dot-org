@@ -1,0 +1,44 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: 'TEST S3 Buckets'
+Parameters:
+  PrimaryAccount:
+    Type: String
+    NoEcho: true
+  PrimaryAccountBatchRoleArn:
+    Type: String
+    Description: 'ARN of the batch replication role in the primary account'
+Resources:
+  TestTargetProjectBucket:
+    Type: 'AWS::S3::Bucket'
+    Properties:
+      BucketName: 'cdo-secondary-v3-test'
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: 'AES256'
+      VersioningConfiguration:
+        Status: 'Enabled'
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+  CrossAccountS3ReplicationBucketPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref TestTargetProjectBucket
+      PolicyDocument:
+        Statement:
+          - Sid: AllowS3BatchOperationsReplication
+            Effect: "Allow"
+            Action:
+              - "s3:PutObject"
+              - "s3:PutObjectAcl"
+              - "s3:PutObjectTagging"
+              - "s3:GetBucketLocation"
+              - "s3:GetBucketVersioning"
+            Resource:
+              - !Sub "arn:aws:s3:::${TestTargetProjectBucket}"
+              - !Sub "arn:aws:s3:::${TestTargetProjectBucket}/*"
+            Principal:
+              AWS: !Ref PrimaryAccountBatchRoleArn
