@@ -182,7 +182,7 @@ class TestController < ApplicationController
   def create_migrated_script
     script = Retryable.retryable(on: ActiveRecord::RecordNotUnique) do
       script_name = "temp-script-#{Time.now.to_i}-#{rand(1_000_000)}"
-      Unit.create!(name: script_name, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development)
+      Unit.create!(name: script_name)
     end
     script.is_migrated = true
     script.save!
