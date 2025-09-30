@@ -403,7 +403,6 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
                 headerContent={aichatI18n.modelCardPanelHeader()}
                 className={moduleStyles.panelContainer}
                 headerClassName={moduleStyles.panelHeader}
-                rightHeaderContent={<AiChatHeaderButtons />}
               >
                 <PresentationView />
               </PanelContainer>
@@ -415,6 +414,7 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
               headerContent={chatWorkspaceHeader}
               className={moduleStyles.panelContainer}
               headerClassName={moduleStyles.panelHeader}
+              rightHeaderContent={<AiChatHeaderButtons />}
             >
               {hasSetStartingCustomizations && (
                 <ChatWorkspace

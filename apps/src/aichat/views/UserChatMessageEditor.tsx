@@ -86,8 +86,8 @@ const UserChatMessageEditor: React.FunctionComponent<
     },
     [
       disabled,
-      dispatch,
       hiddenContextCallback,
+      dispatch,
       modelParameters,
       clientType,
       multimodalAvailable,
