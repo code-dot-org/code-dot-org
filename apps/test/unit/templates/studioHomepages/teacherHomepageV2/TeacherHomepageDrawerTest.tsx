@@ -129,6 +129,7 @@ describe('TeacherHomepageDrawer', () => {
           schoolInfoInterstitialOpenInitially={showInterstitial}
           afeOpenInitially={showAFE}
           npsOpenInitially={showNPS}
+          npsProps={''}
           onCloseCallback={() => {}}
         />
       </Provider>

@@ -1,9 +1,8 @@
-import React, {useState, useEffect} from 'react';
+import React, {useMemo} from 'react';
 
 import Foorm from '@cdo/apps/code-studio/pd/foorm/Foorm';
-import HttpClient from '@cdo/apps/util/HttpClient';
 
-import styles from './teacherHomepage.module.scss';
+import './NpsSurveyContainer.scss';
 
 const customCssClasses = {
   root: 'nps-survey-root',
@@ -64,7 +63,7 @@ interface surveyElement {
   visibleIf?: string;
 }
 
-interface surveyPages {
+interface surveyPage {
   name: string;
   elements: surveyElement[];
   title: string;
@@ -72,7 +71,7 @@ interface surveyPages {
 
 interface surveyQuestions {
   completedHtml: string;
-  pages: surveyPages[];
+  pages: surveyPage[];
   showQuestionNumbers: string;
   completeText: string;
   published: boolean;
@@ -82,7 +81,7 @@ interface surveyPropsInterface {
   formQuestions: surveyQuestions;
   formName: string;
   formVersion: number;
-  surveyData: null; // fix this
+  surveyData: string | null;
   submitApi: string;
   submitParams: {
     simple_survey_form_id: number;
@@ -90,37 +89,26 @@ interface surveyPropsInterface {
   };
 }
 
-interface responseProps {
-  props: string;
-}
-
 interface NpsSurveyContainerProps {
+  NPSProps: string;
   onCompleteCallback: () => void;
 }
 
 const NpsSurveyContainer: React.FC<NpsSurveyContainerProps> = ({
+  NPSProps,
   onCompleteCallback,
 }) => {
-  const [surveyProps, setSurveyProps] = useState<
-    surveyPropsInterface | undefined
-  >(undefined);
-
-  useEffect(() => {
-    HttpClient.fetchJson<responseProps>('/form/nps_survey/configuration').then(
-      result => {
-        if (result) {
-          setSurveyProps(JSON.parse(result.value.props));
-        }
-      }
-    );
-  }, []);
+  const surveyProps: surveyPropsInterface = useMemo(
+    () => JSON.parse(NPSProps),
+    [NPSProps]
+  );
 
   const onComplete = () => {
     onCompleteCallback();
   };
 
   return (
-    <div className={styles.container}>
+    <div>
       {surveyProps && (
         <Foorm
           {...surveyProps}

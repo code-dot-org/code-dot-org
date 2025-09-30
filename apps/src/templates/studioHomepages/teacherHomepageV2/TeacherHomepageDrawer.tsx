@@ -33,6 +33,7 @@ interface TeacherHomepageDrawerProps {
   schoolInfoConfirmationOpenInitially: boolean;
   afeOpenInitially: boolean;
   npsOpenInitially: boolean;
+  npsProps: string;
   onCloseCallback: () => void;
 }
 
@@ -42,6 +43,7 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
   schoolInfoConfirmationOpenInitially,
   afeOpenInitially,
   npsOpenInitially,
+  npsProps,
   onCloseCallback,
 }) => {
   const [schoolInfoInterstitialOpen, setSchoolInfoInterstitialOpen] =
@@ -133,7 +135,12 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
     } else if (NPSOpen) {
       return (
         <div className={styles.drawerContent}>
-          <NpsSurveyContainer onCompleteCallback={NpsSurveyComplete} />
+          {!!npsProps && (
+            <NpsSurveyContainer
+              NPSProps={npsProps}
+              onCompleteCallback={NpsSurveyComplete}
+            />
+          )}
         </div>
       );
     } else if (schoolInfoConfirmationOpen || success || AFEDrawerOpen) {
@@ -326,7 +333,7 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
         {
           'Content-Type': 'application/json',
         }
-      ).catch(error => console.log(error));
+      ).catch(error => console.error(error));
 
       // redirect to form on amazon-future-engineer page if user accepted
       if (AFEParticipate) {
