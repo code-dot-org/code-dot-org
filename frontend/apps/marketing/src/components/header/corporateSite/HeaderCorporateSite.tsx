@@ -1,6 +1,8 @@
 'use client';
 
-import {getCookie} from 'cookies-next/client';
+import {getCookie, setCookie, deleteCookie} from 'cookies-next/client';
+import {useSearchParams} from 'next/navigation';
+import {useEffect, useState} from 'react';
 
 import DSCOHeader, {
   getDefaultHeaderProps,
@@ -33,11 +35,39 @@ const defaultProps = getDefaultHeaderProps({
 });
 
 const Header: React.FC = () => {
-  const isSignedIn = async (): Promise<boolean> => {
-    return !!getCookie(getCookieNameByStage('_shortName', getStage()));
-  };
+  const searchParams = useSearchParams();
+  const cookieName = getCookieNameByStage('_shortName', getStage());
 
-  return <DSCOHeader {...defaultProps} isSignedIn={isSignedIn} />;
+  const [signedIn, setSignedIn] = useState<boolean>(() => {
+    try {
+      return !!getCookie(cookieName);
+    } catch {
+      return false;
+    }
+  });
+
+  useEffect(() => {
+    try {
+      const currentUserShortName = searchParams.get('shortName');
+      const signOut = searchParams.get('signOut');
+
+      if (currentUserShortName) {
+        setCookie(cookieName, currentUserShortName, {path: '/'});
+        setSignedIn(true);
+      } else if (signOut) {
+        deleteCookie(cookieName, {path: '/'});
+        setSignedIn(false);
+      } else {
+        // re-sync from cookie in case it changed outside
+        setSignedIn(!!getCookie(cookieName));
+      }
+    } catch (err) {
+      console.warn('Error handling cookies in Header:', err);
+      setSignedIn(false);
+    }
+  }, [searchParams, cookieName]);
+
+  return <DSCOHeader {...defaultProps} isSignedIn={signedIn} />;
 };
 
 export default Header;
