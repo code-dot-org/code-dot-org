@@ -16,6 +16,7 @@
   "page": "Page",
   "pages": "Pages",
   "pass": "Pass",
+  "predictTutorDisabledMessage": "AI Tutor is disabled until you submit your prediction.",
   "result": "Result",
   "resourcePanelOnboarding_title": "Resource area",
   "resourcePanelOnboarding_text": "All your helpful resources can be found in the resource area. When starting a level it will always show the instructions tab first.",
