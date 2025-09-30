@@ -1,0 +1,40 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-09-25T19:56:14.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Do This:\r\n\r\nYou're building an app that helps friends organize a movie night. The app keeps track of the movie title, number of people attending, and whether the movie has started yet.\r\n\r\n1. Look at the variables already defined: `movie_title`, `guest_count`, and `has_started`\r\n\r\n2. Try using different operations (`+`, `-`, etc.) on them.\r\n\r\n3. Predict which operations will work, and which will give you errors.\r\n\r\n4. Use `print()` to test and explore what happens.\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nYou can add numbers and combine strings — but some operations won't work with booleans or if the data types don't match. Try it and see what happens!",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "display_name": "Movie Night Planner",
+    "bubble_choice_description": "You're building an app that helps friends organize a movie night. The app keeps track of the movie title, number of people attending, and whether the movie has started yet.",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# This program explores how data types work with operations\n\nmovie_title = \"Into the Spider-Verse\"\nguest_count = 5\nhas_started = False\n\n# Try using +, -, or other operations below\n# What works? What doesn't?\n",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        }
+      },
+      "folders": {
+      }
+    },
+    "thumbnail_url": "https://images.code.org/464d739d86930d0b7ba5f87d1cddaeff-tv.png",
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:56:14.709+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson4-level6b_2025-launch_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson4-level6b_2025-launch_2025\"}]"
+}]]></config>
+</Pythonlab>

@@ -35,9 +35,6 @@ module Services
         return false
       end
 
-      # Clear "course" settings from the unit
-      @unit.update!(version_year: nil, family_name: nil, published_state: nil, instruction_type: nil, instructor_audience: nil, participant_audience: nil, skip_name_format_validation: true)
-
       update_unit_group(i18n_params, unit_copy.published_state || Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development)
 
       update_section_assignments
@@ -104,7 +101,7 @@ module Services
     private def create_new_unit_group
       @unit_group = UnitGroup.new(
         name: @unit.name,
-        family_name: @unit.family_name || @unit.name,
+        family_name: @unit.name,
         version_year: @unit.version_year || 'unversioned',
         instruction_type: @unit.instruction_type || Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.teacher_led,
         instructor_audience: @unit.instructor_audience || Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher,
@@ -123,7 +120,7 @@ module Services
                    end
         @unit_group = UnitGroup.new(
           name: new_name,
-          family_name: @unit.family_name || @unit.name,
+          family_name: @unit.name,
           version_year: @unit.version_year || 'unversioned',
           instruction_type: @unit.instruction_type || Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.teacher_led,
           instructor_audience: @unit.instructor_audience || Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher,
@@ -195,12 +192,7 @@ module Services
     end
 
     private def rollback_unit_settings
-      @unit.update!(version_year: @unit_group.version_year, family_name: @unit_group.family_name,
-                    published_state: @unit_group.published_state, instruction_type: @unit_group.instruction_type,
-                    instructor_audience: @unit_group.instructor_audience, participant_audience: @unit_group.participant_audience,
-                    pilot_experiment: @unit_group.pilot_experiment, skip_name_format_validation: true,
-                    original_unit_group_id: nil
-      )
+      @unit.update!(skip_name_format_validation: true, original_unit_group_id: nil)
     end
 
     private def rollback_levelbuilder_files

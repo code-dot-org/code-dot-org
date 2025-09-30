@@ -22,7 +22,7 @@ markdown <<MARKDOWN
 #### Team members will choose one creative role in the product launch based on a real career:
 
 <p align="center">
-<img src="https://images.code.org/91cf573638107d3cfee6a3def612c573-Screenshot 2025-05-23 at 10.56.38 AM.png" alt="four roles from the lesson plan: copywriter, graphic designer, video director, and sound designer" width="80%" style="border-radius:10px; border: 5px solid black;">
+<img src="https://images.code.org/8df32dd7f26fe35c6bae0f06dcec2352-image-1758744440005.jpg" alt="four roles from the lesson plan: copywriter, graphic designer, video director, and sound designer" width="80%" style="border-radius:10px; border: 5px solid black;">
 </p>
 
 #### Each role will interact with a different level in AI Chat Lab to finalize their piece of the product launch.
@@ -30,4 +30,6 @@ markdown <<MARKDOWN
 <p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
     ➡️ This activity is from Lesson 9 of Unit 1 of AI Foundations. You can find more details in the full <a href='https://studio.code.org/s/aif1-2025/lessons/9' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a>.
 </p>
+
+
 MARKDOWN

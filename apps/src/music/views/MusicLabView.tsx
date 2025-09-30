@@ -116,9 +116,11 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   );
   const dispatch = useAppDispatch();
   const isPlaying = useAppSelector(state => state.music.isPlaying);
-  const showInstructions = useAppSelector(
-    state => state.music.showInstructions
-  );
+  const showGenerateCode =
+    AppConfig.getValue('ai-generate') === 'true' ||
+    (levelProperties.levelData as MusicLevelData).aiCodeGenerate;
+  const showInstructions =
+    useAppSelector(state => state.music.showInstructions) && !showGenerateCode;
   const instructionsPosition = useAppSelector(
     state => state.music.instructionsPosition
   );
@@ -139,8 +141,9 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
     state => state.lab.validationState.callout
   );
   const aiCodeGenerateAdlibOption =
-    (levelData as MusicLevelData).aiCodeGenerateAdlib ||
+    (levelData as MusicLevelData).aiCodeGenerateAdlibId ||
     (AppConfig.getValue('ai-generate-adlib') as string);
+  const aiCodeGenerateAdlib = (levelData as MusicLevelData).aiCodeGenerateAdlib;
 
   const progressManager = useContext(ProgressManagerContext);
 
@@ -370,6 +373,8 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
                 headerClassName={moduleStyles.headerWithBorder}
                 settings={settings}
                 hideContinueIfDisabled={true}
+                hideNavigation={false}
+                styleNavigationAsBubble={true}
               />
             ) : (
               <PanelContainer
@@ -433,10 +438,10 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
         )}
 
         <div id="blockly-area" className={moduleStyles.blocklyArea}>
-          {(AppConfig.getValue('ai-generate') === 'true' ||
-            (levelProperties.levelData as MusicLevelData).aiCodeGenerate) && (
+          {showGenerateCode && (
             <GenerateCode
               adlibOption={aiCodeGenerateAdlibOption}
+              adlib={aiCodeGenerateAdlib}
               levelProperties={levelProperties}
             />
           )}

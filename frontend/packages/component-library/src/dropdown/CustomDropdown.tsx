@@ -155,6 +155,14 @@ const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
     }
   }, [useDSCOButtonAsTrigger, triggerButtonProps]);
 
+  useEffect(() => {
+    if (color === dropdownColors.white) {
+      console.warn(
+        'CustomDropdown: `white` variant is deprecated. Use `black` or `gray` and define theme context for light or dark.',
+      );
+    }
+  }, [color]);
+
   const toggleDropdown = useCallback(() => {
     if (activeDropdownName !== name) {
       setActiveDropdownName(name);

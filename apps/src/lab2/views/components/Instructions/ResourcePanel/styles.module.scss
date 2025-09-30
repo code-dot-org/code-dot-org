@@ -108,3 +108,27 @@
   background-color: var(--background-neutral-primary);
   height: 100%;
 }
+
+.tabContentContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  .tabContent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    &Hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+}
+
+.navigationFooter {
+  padding: 10px;
+  background-color: var(--background-neutral-secondary)
+}

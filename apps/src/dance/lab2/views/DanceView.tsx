@@ -561,7 +561,7 @@ const DanceView: React.FunctionComponent<{
                 ariaLabel={'Generate dance'}
                 text={generatedAiDance ? 'Generate again!' : 'Generate dance'}
                 type="primary"
-                color="purple"
+                color="black"
                 size="s"
                 iconLeft={{iconName: 'sparkles'}}
                 onClick={generateAiDance}
@@ -582,7 +582,7 @@ export default (props: LabProps<DanceLevelProperties, DanceProjectSources>) => (
         adlibOption={
           (queryParams('ai-generate-adlib') as string) ||
           props.levelProperties.aiDancerGenerateAdlib ||
-          'adjective-animal-accessory'
+          'adjective-animal-attire'
         }
         levelProperties={props.levelProperties}
       />

@@ -641,7 +641,8 @@ openai_student_learning_api_key: !Secret
 openai_measures_of_learning_api_key: !Secret
 
 # Credentials for Google Gemini API
-google_gemini_student_learning_api_key: !Secret
+google_gemini_ai_chat_lab_api_key: !Secret
+google_gemini_ai_tutor_api_key: !Secret
 
 # AI Proxy for OpenAI API
 ai_proxy_origin: https://aiproxy-test.code.org
@@ -679,12 +680,12 @@ active_job_backend_rolling_restart_in_n_batches: 2
 # aiproxy credentials
 aiproxy_api_key: !Secret
 
-# Contentful
+# CDO Contentful engine configs for Marketing space
 contentful_space_id: "90t6bu6vlf76"
 contentful_api_key: !Secret
 contentful_hostname: cdn.contentful.com
 
-# CDO Contentful engine configs
+# CDO Contentful engine configs for CSforALL space
 contentful_cs_for_all_access_token: !Secret
 contentful_cs_for_all_space: 27jkibac934d
 contentful_cs_for_all_namespace: master

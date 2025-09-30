@@ -173,7 +173,8 @@ div > div:nth-child(3n + 3) {
 
     .top {
       display: flex;
-      height: 6.625rem;
+      box-sizing: border-box;
+      height: 6.425rem;
       padding: 1.25rem 1rem;
       flex-direction: column;
       justify-content: flex-end;

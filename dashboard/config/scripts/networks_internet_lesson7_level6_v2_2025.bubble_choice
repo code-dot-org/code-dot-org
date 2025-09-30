@@ -1,0 +1,9 @@
+name 'networks-internet-lesson7-level6_v2-2025'
+display_name 'Different Experiences using the Internet'
+description 'Pick one of the personas below. Interact with one of the chatbots below and record what challenges they face in your handout.'
+
+sublevels
+level 'networks-internet-lesson7-level6a_v2-2025'
+level 'networks-internet-lesson7-level6b_v2-2025'
+level 'networks-internet-lesson7-level6c_v2-2025'
+level 'networks-internet-lesson7-level6d_v2-2025'

@@ -3108,6 +3108,9 @@
   "https://studio.code.org/s/allthethings/lessons/51/levels/9": {
     "long_instructions": "### Assessment\n\nThis is a submittable level! Create a web page that shares an interest of yours.\n\nAdd an HTML and CSS file to your project."
   },
+  "https://studio.code.org/s/allthethings/lessons/51/levels/10": {
+    "long_instructions": "Add **html** pages and preview them in the right pane.\n\nAdd **css** pages (and link them to your html).\n\nUse the file browser to add/rename/delete files, or to add/rename/delete folders (including hierarchically!)\n\nThis level uses all of AI Tutor modes. For now, it is the last level of the progression. "
+  },
   "https://studio.code.org/s/allthethings/lessons/52/levels/1": {
     "long_instructions": "Try everything!"
   },
@@ -3286,5 +3289,8 @@
         }
       }
     }
+  },
+  "https://studio.code.org/s/allthethings/lessons/54/levels/1": {
+    "long_instructions": "This is the first allthethings level for Sketch Lab!"
   }
 }

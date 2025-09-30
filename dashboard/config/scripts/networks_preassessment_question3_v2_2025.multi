@@ -1,0 +1,19 @@
+name 'networks-preassessment-question3_v2-2025'
+title 'Networks and the Internet Pre-Assessment: Question 3'
+
+wrong 'As a continuous stream of information'
+right 'As packets that can take different paths to the destination'
+wrong 'As physical copies stored on multiple computers'
+wrong 'Through a single direct connection between two computers'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+How is data sent across the Internet?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 2: Sending Bits
+
+Lesson 5: Packets
+MARKDOWN
