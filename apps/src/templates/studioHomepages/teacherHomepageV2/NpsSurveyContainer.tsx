@@ -2,8 +2,6 @@ import React, {useMemo} from 'react';
 
 import Foorm from '@cdo/apps/code-studio/pd/foorm/Foorm';
 
-import './NpsSurveyContainer.scss';
-
 const customCssClasses = {
   root: 'nps-survey-root',
   question: {
