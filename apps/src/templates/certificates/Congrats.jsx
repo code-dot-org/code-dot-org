@@ -79,28 +79,28 @@ export default function Congrats(props) {
       if (/oceans/.test(tutorial)) {
         return {
           extraLinkUrl: studio(
-            '/blockly/media/certificates/online-coding-party-2025-2-oceans.png'
+            '/blockly/media/certificates/ko/online-coding-party-2025-2-oceans.png'
           ),
           extraLinkText: extraLinkText,
         };
       } else if (/hero/.test(tutorial)) {
         return {
           extraLinkUrl: studio(
-            '/blockly/media/certificates/online-coding-party-2025-2-hero.png'
+            '/blockly/media/certificates/ko/online-coding-party-2025-2-hero.png'
           ),
           extraLinkText: extraLinkText,
         };
       } else if (/dance-ai/.test(tutorial)) {
         return {
           extraLinkUrl: studio(
-            '/blockly/media/certificates/online-coding-party-2025-2-dance.png'
+            '/blockly/media/certificates/ko/online-coding-party-2025-2-dance.png'
           ),
           extraLinkText: extraLinkText,
         };
       } else if (/music-jam/.test(tutorial)) {
         return {
           extraLinkUrl: studio(
-            '/blockly/media/certificates/online-coding-party-2025-2-music.png'
+            '/blockly/media/certificates/ko/online-coding-party-2025-2-music.png'
           ),
           extraLinkText: extraLinkText,
         };
