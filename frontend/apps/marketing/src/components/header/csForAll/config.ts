@@ -34,25 +34,25 @@ const SHARED_LINKS = {
     href: '/hour-of-ai',
     label: 'Hour of AI',
   },
-  HOUR_OF_AI_HOW_TO_HOST: {
-    href: '/hour-of-ai/how-to/k-12educator',
-    label: 'How to Host',
-  },
   HOUR_OF_AI_ACTIVITIES: {
     href: '/hour-of-ai/activities',
     label: 'Activities',
   },
-  HOUR_OF_AI_RESOURCES: {
-    href: '/hour-of-ai/resources',
-    label: 'Resources',
+  HOUR_OF_AI_HOST_AN_EVENT: {
+    href: '/hour-of-ai/partners#host-event',
+    label: 'Host an Event',
+  },
+  HOUR_OF_AI_HOW_TO_GUIDES: {
+    href: '/hour-of-ai/how-to/k-12educator',
+    label: 'How-to Guides',
   },
   HOUR_OF_AI_PARTNERS: {
     href: '/hour-of-ai/partners',
     label: 'Partners',
   },
-  HOUR_OF_AI_HOW_TO_GUIDES: {
-    href: '/hour-of-ai/how-to/k-12educator',
-    label: 'How-to Guides',
+  HOUR_OF_AI_RESOURCES: {
+    href: '/hour-of-ai/resources',
+    label: 'Resources',
   },
   INITIATIVES: {
     href: '/initiatives',
@@ -139,10 +139,10 @@ export const TAKE_ACTION_LINKS: {linkList: LinkItemProps[]} = {
 // Main Menu Hour of AI Dropdown Links
 export const HOUR_OF_AI_LINKS: {linkList: LinkItemProps[]} = {
   linkList: [
-    createLinkItem(SHARED_LINKS.HOUR_OF_AI_HOW_TO_HOST),
     createLinkItem(SHARED_LINKS.HOUR_OF_AI_ACTIVITIES),
-    createLinkItem(SHARED_LINKS.HOUR_OF_AI_RESOURCES),
     createLinkItem(SHARED_LINKS.HOUR_OF_AI_PARTNERS),
+    createLinkItem(SHARED_LINKS.HOUR_OF_AI_RESOURCES),
+    createLinkItem(SHARED_LINKS.HOUR_OF_AI_HOST_AN_EVENT),
     createLinkItem(SHARED_LINKS.HOUR_OF_AI_HOW_TO_GUIDES),
   ],
 };
