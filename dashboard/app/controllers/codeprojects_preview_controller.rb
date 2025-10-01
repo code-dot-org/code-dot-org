@@ -75,8 +75,8 @@ class CodeprojectsPreviewController < ApplicationController
       "img-src #{img_src}",
     ]
 
-    unless rack_env?(:development)
-      # In non-development environments, we ensure all requests are over HTTPS.
+    unless rack_env?(:development) || rack_env?(:test)
+      # In non-development or test environments, we ensure all requests are over HTTPS.
       policies << "upgrade-insecure-requests"
     end
     response.headers['Content-Security-Policy'] = policies.join('; ')
