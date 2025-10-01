@@ -19,10 +19,10 @@
     %p Students can switch between modes using buttons in the header.
 
   .field
-    = f.label :available_ai_tutor_modes, 'AI Tutor Mode'
+    = f.label :ai_tutor_mode, 'AI Tutor Mode'
 
-    - available_ai_tutor_modes = @level.available_ai_tutor_modes ? (@level.available_ai_tutor_modes.is_a?(String) ? JSON.parse(@level.available_ai_tutor_modes) : @level.available_ai_tutor_modes) : ['suggest']
-    = f.select :available_ai_tutor_modes, options_for_select(@level.class.ai_tutor_modes, available_ai_tutor_modes)
+    - current_mode = @level.ai_tutor_mode ? @level.ai_tutor_mode : 'suggest'
+    = f.select :ai_tutor_mode, options_for_select(@level.class.ai_tutor_modes, current_mode)
     %p Set the AI Tutor mode for the level. The default mode is "Suggest".
 
   .field
