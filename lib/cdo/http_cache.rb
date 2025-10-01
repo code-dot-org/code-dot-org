@@ -324,7 +324,25 @@ class HttpCache
             path: '/curriculum_tracking_pixel',
             headers: [],
             cookies: allowlisted_cookies
-          }
+          },
+          {
+            # ActionCable Websocket path:
+            path: '/cable',
+            # pass all headers, which disables caching, and also passes essential websocket upgrade headers:
+            headers: ['*'],
+            #
+            # Alternative, is just pass websocket protocol headers + Origin which ActionCable uses for request forgery protection (see: https://guides.rubyonrails.org/action_cable_overview.html#allowed-request-origins)
+            # But is there a risk of having a bad response cached compared to passing ['*']?
+            # headers: ALLOWLISTED_HEADERS + %w(
+            #   Connection
+            #   Upgrade
+            #   Sec-WebSocket-Key
+            #   Sec-WebSocket-Version
+            #   Sec-WebSocket-Protocol
+            #   Origin
+            # ),
+            cookies: allowlisted_cookies,
+          },
         ],
         # Default Dashboard paths are session-specific, allowlist all session cookies and language header.
         default: {
