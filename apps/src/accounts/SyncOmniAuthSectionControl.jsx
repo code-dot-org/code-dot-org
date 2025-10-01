@@ -23,6 +23,7 @@ import {
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
+import RailsAuthenticityToken from '../lib/util/RailsAuthenticityToken';
 import * as utils from '../utils';
 
 const SUPPORTED_PROVIDERS = [
@@ -40,6 +41,20 @@ export const READY = 'ready';
 export const IN_PROGRESS = 'in-progress';
 export const SUCCESS = 'success';
 export const DISABLED = 'disabled';
+
+const REAUTHORIZE_URL =
+  '/users/auth/google_oauth2?scope=userinfo.email,userinfo.profile,classroom.courses.readonly,classroom.rosters.readonly';
+
+function ReauthorizeGoogleClassroom() {
+  return (
+    <form method="POST" action={REAUTHORIZE_URL}>
+      <RailsAuthenticityToken />
+      <button type="submit" style={{padding: '8px 12px', borderRadius: 4}}>
+        {i18n.authorizeGoogleClassrooms()}
+      </button>
+    </form>
+  );
+}
 
 /**
  * Button that will re-sync an omniauth section's roster with the third-paty
@@ -65,6 +80,7 @@ class SyncOmniAuthSectionControl extends React.Component {
     isDialogOpen: false,
     syncFailErrorLog: '',
     isLtiDialogOpen: false,
+    needsGoogleReauth: false,
   };
 
   onClick = () => {
@@ -109,8 +125,14 @@ class SyncOmniAuthSectionControl extends React.Component {
         }
       })
       .catch(sync_error => {
+        const errorText = '' + sync_error;
+        // Show reauthorize CTA when Google Classroom returns 403
+        const isGoogle =
+          this.props.sectionProvider === OAuthSectionTypes.google_classroom;
+        const needsGoogleReauth = isGoogle && /status:\s*403\b/.test(errorText);
         this.setState({
-          syncFailErrorLog: '' + sync_error,
+          syncFailErrorLog: errorText,
+          needsGoogleReauth: needsGoogleReauth,
         });
         this.openDialog();
         firehoseClient.putRecord(
@@ -122,6 +144,7 @@ class SyncOmniAuthSectionControl extends React.Component {
               sectionId: sectionId,
               loginType: sectionProvider,
               error_message: sync_error,
+              needs_google_reauth: needsGoogleReauth,
             }),
           },
           {includeUserId: true}
@@ -184,6 +207,12 @@ class SyncOmniAuthSectionControl extends React.Component {
         >
           <Heading1>{i18n.loginTypeSyncButtonDialogHeader()}</Heading1>
           <p>{i18n.loginTypeSyncButtonDialogHeaderSub()}</p>
+          {this.state.needsGoogleReauth && (
+            <div style={{margin: '12px 0'}}>
+              <p>{i18n.authorizeGoogleClassrooms()}</p>
+              <ReauthorizeGoogleClassroom />
+            </div>
+          )}
           <div style={styles.scroll}>
             <pre>
               <code>{this.state.syncFailErrorLog}</code>
