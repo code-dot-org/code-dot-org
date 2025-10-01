@@ -247,30 +247,30 @@ export const hocCourseOfferings = {
   hoc: {
     Favorites: [
       {
-        id: 55,
-        key: 'oceans',
-        display_name: 'AI for Oceans',
+        id: 30,
+        key: 'artist',
+        display_name: 'Artist',
         course_versions: [
           [
-            1072,
+            900,
             {
-              id: 1072,
+              id: 900,
               key: 'unversioned',
               version_year: 'unversioned',
-              content_root_id: 451,
-              name: 'AI for Oceans',
-              path: '/courses/oceans/units/1',
+              content_root_id: 304,
+              name: 'Artist',
+              path: '/courses/artist/units/1',
               type: 'UnitGroup',
-              is_stable: true,
-              is_recommended: true,
+              is_stable: false,
+              is_recommended: false,
               locales: ['English'],
               units: {
-                451: {
-                  id: 451,
-                  name: 'AI for Oceans',
-                  path: '/courses/oceans/units/1',
+                304: {
+                  id: 304,
+                  name: 'Artist',
+                  path: '/courses/artist/units/1',
                   lesson_extras_available: false,
-                  text_to_speech_enabled: false,
+                  text_to_speech_enabled: true,
                   position: null,
                   requires_verified_instructor: false,
                 },
@@ -675,6 +675,43 @@ export const hocCourseOfferings = {
                   path: '/courses/dance-extras/units/1',
                   lesson_extras_available: false,
                   text_to_speech_enabled: true,
+                  position: null,
+                  requires_verified_instructor: false,
+                },
+              },
+            },
+          ],
+        ],
+      },
+    ],
+  },
+  hoai: {
+    Favorites: [
+      {
+        id: 55,
+        key: 'oceans',
+        display_name: 'AI for Oceans',
+        course_versions: [
+          [
+            1072,
+            {
+              id: 1072,
+              key: 'unversioned',
+              version_year: 'unversioned',
+              content_root_id: 451,
+              name: 'AI for Oceans',
+              path: '/courses/oceans/units/1',
+              type: 'UnitGroup',
+              is_stable: true,
+              is_recommended: true,
+              locales: ['English'],
+              units: {
+                451: {
+                  id: 451,
+                  name: 'AI for Oceans',
+                  path: '/courses/oceans/units/1',
+                  lesson_extras_available: false,
+                  text_to_speech_enabled: false,
                   position: null,
                   requires_verified_instructor: false,
                 },

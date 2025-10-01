@@ -5,6 +5,7 @@ import Workspace from '@codebridge/Workspace/Workspace';
 import classNames from 'classnames';
 import React from 'react';
 
+import AiChatHeaderButtons from '@cdo/apps/aichat/views/aiChatHeaderButtons/AiChatHeaderButtons';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import HorizontalOutput from '@cdo/apps/codebridge/Workspace/HorizontalOutput';
 import {useHorizontalLayout} from '@cdo/apps/lab2/hooks/useHorizontalLayout';
@@ -135,6 +136,7 @@ const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
               id="aitutor2"
               headerContent="AI Tutor"
               className={moduleStyles.rightmostColumn}
+              rightHeaderContent={<AiChatHeaderButtons />}
             >
               <div className={moduleStyles.inside}>
                 <AiTutor2Chat hiddenContextCallback={hiddenContextCallback} />

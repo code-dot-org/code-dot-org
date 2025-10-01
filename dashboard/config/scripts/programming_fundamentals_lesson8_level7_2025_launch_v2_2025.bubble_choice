@@ -1,0 +1,9 @@
+name 'programming-fundamentals-lesson8-level7_2025-launch_v2-2025'
+display_name 'Mastering Movement with Loops'
+description 'Choose **ONE** scenario and write a `keep_moving()` function to help the `Painter` move forward until it can\'t anymore.'
+
+sublevels
+level 'programming-fundamentals-lesson8-level7a_2025-launch_v2-2025'
+level 'programming-fundamentals-lesson8-level7b_2025-launch_v2-2025'
+level 'programming-fundamentals-lesson8-level7c_2025-launch_v2-2025'
+level 'programming-fundamentals-lesson8-level7d_2025-launch_v2-2025'

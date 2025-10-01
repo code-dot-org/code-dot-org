@@ -1,7 +1,8 @@
 # For documentation see, e.g., http://guides.rubyonrails.org/routing.html.
 
 Dashboard::Application.routes.draw do
-  mount Marketing::Engine => '/marketing'
+  draw :marketing
+
   # Override Error Codes
   get "404", to: "application#render_404", via: :all
 
@@ -1303,6 +1304,7 @@ Dashboard::Application.routes.draw do
     post '/aichat/find_toxicity', to: 'aichat#find_toxicity'
 
     resources :ai_interaction_feedback, only: [:create]
+    resource :teaching_profile_data, only: [:show, :create, :update]
 
     resources :aidiff_threads, only: [:create, :index, :show] do
       collection do

@@ -1,0 +1,25 @@
+name 'networks-internet-lesson3-level2_v2-2025'
+title 'Routing Through an ISP'
+description 'description here'
+
+markdown <<MARKDOWN
+## Level 2: Routing Through an ISP – Smartphone to Laptop  
+![Ava video calling Liam](https://images.code.org/207ac84a1f6d679b40d335526c46df46-image-1740206895741.jpg)
+
+**Scenario:**  
+Ava is video calling her friend Liam, who is studying abroad. She starts the call from her **Smartphone (192.168.2.2)** while Liam connects from his **Laptop (192.168.4.1)**. Since they are on different networks, the data must be routed efficiently to avoid lag.  
+
+**Goal:**  
+Use the routing table to determine the shortest path from **Ava’s Smartphone** to **Liam’s Laptop**. Draw the flow of data on the network diagram.  
+
+**Discussion:**  
+- How does the router use IP addresses to find the best path for their video call?  
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Diagram Instructions:**  
+Connect **Ava’s Smartphone (192.168.2.2) → Router B → ISP → Router D → Liam’s Laptop (192.168.4.1)** with arrows to show the data flow.  
+
+**Discussion Goal:**  
+Students explain how **routers use IP addresses to determine the best path across multiple networks** and how an **ISP plays a role in long-distance communication**. This discussion helps reinforce the concept that **data must travel across multiple hops to reach its destination efficiently**.
+MARKDOWN

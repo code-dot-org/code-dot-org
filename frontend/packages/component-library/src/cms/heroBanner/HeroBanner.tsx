@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import {ReactNode, HTMLAttributes} from 'react';
+import {ReactNode, HTMLAttributes, JSX} from 'react';
 
 import Alert from '@/alert';
 import {LinkButton, LinkButtonProps} from '@/button';
@@ -36,6 +36,7 @@ export interface HeroBannerProps extends HTMLAttributes<HTMLElement> {
    * More context can be found in this slack thread: https://codedotorg.slack.com/archives/C07UW4ED66Q/p1744640489709969
    * */
   VideoComponent?: typeof Video;
+  ImageComponent?: JSX.ElementType;
   /** HeroBanner video */
   videoProps?: VideoProps;
   /** HeroBanner link */
@@ -81,6 +82,7 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
   imageProps,
   hideImageOnSmallScreen = false,
   VideoComponent,
+  ImageComponent,
   videoProps,
   buttonProps,
   announcementBannerProps,
@@ -131,7 +133,11 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
             {partner && (
               <span className={moduleStyles.heroBannerPartnerContainer}>
                 {partner.title}
-                <Image {...partner.logo} hasRoundedCorners={false} />
+                <Image
+                  {...partner.logo}
+                  ImageComponent={ImageComponent}
+                  hasRoundedCorners={false}
+                />
               </span>
             )}
           </div>
@@ -146,6 +152,7 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
             {imageProps && !videoProps && (
               <Image
                 {...imageProps}
+                ImageComponent={ImageComponent}
                 className={classNames(
                   imageProps.className,
                   moduleStyles.heroBannerMediaImage,

@@ -14,8 +14,7 @@
     grid-template-columns: 1fr auto 1fr;
     position: relative;
     gap: 20px;
-    padding-left: 4px;
-    padding-right: 4px;
+    padding-inline: 0.5rem;
     flex-shrink: 0;
     background-color: var(--background-neutral-primary);
     color: var(--text-neutral-quaternary);

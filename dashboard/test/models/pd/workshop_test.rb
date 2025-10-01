@@ -303,11 +303,11 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'end workshop sends exit surveys' do
-    workshop = create(:workshop)
+    workshop = create(:workshop, num_facilitators: 1)
     workshop.start!
 
     Pd::Workshop.any_instance.expects(:send_exit_surveys)
-    Pd::Workshop.any_instance.expects(:send_facilitator_post_surveys)
+    Pd::WorkshopMailjetMailer.expects(:send_facilitator_post_workshop_survey)
 
     workshop.end!
 
@@ -324,7 +324,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     byo_workshop.start!
 
     Pd::Workshop.any_instance.expects(:send_exit_surveys)
-    Pd::WorkshopMailer.any_instance.expects(:facilitator_post_workshop)
+    Pd::WorkshopMailjetMailer.expects(:send_facilitator_post_workshop_survey).times(1)
 
     byo_workshop.end!
 
@@ -1325,8 +1325,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
     Pd::WorkshopMailer.any_instance.expects(:facilitator_pre_workshop).
       with(facilitator, workshop)
-    Pd::WorkshopMailer.any_instance.expects(:facilitator_post_workshop).
-      never
+    Pd::WorkshopMailjetMailer.expects(:send_facilitator_post_workshop_survey).never
 
     Pd::Workshop.send_automated_emails
   end

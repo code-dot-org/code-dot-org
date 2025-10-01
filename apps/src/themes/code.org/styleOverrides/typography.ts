@@ -11,7 +11,6 @@ export const TYPOGRAPHY_OVERRIDES: Components<Theme>['MuiTypography'] = {
       figcaption: 'figcaption',
       em: 'em',
       strong: 'strong',
-      extraStrong: 'strong',
     },
   },
   styleOverrides: {

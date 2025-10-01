@@ -9,7 +9,7 @@
     "level_data": {
       "library": "launch2024",
       "aiCodeGenerate": "true",
-      "aiCodeGenerateAdlib": "length"
+      "aiCodeGenerateAdlibId": "length"
     }
   },
   "published": true

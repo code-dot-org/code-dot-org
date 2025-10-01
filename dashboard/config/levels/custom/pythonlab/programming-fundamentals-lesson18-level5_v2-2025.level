@@ -1,0 +1,52 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-09-25T19:58:19.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "You found a critter. Try to catch it! Use dice rolls and conditionals to simulate capturing it. \r\n\r\n## Do This: \r\n- Run the code and observe the outputs for different dice rolls.\r\n- **Modify**: Add another condition that captures a common critter if the dice rolls a 2 or higher. \r\n\r\n\r\n**Hint**: \r\n\r\n    elif dice_roll >=2:\r\n        common_critter()",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "from support import legendary_critter, rare_critter, common_critter, critter_escaped\nimport random\n\n# Attempt to capture a critter\nprint(\"🎲 You throw a magic capture orb...\")\ndice_roll = random.randint(1, 6)\nprint(\"The orb shakes... You rolled a\", dice_roll)\n\nif dice_roll == 6:\n    legendary_critter()\nelif dice_roll >= 4:\n    rare_critter()\n# Add another condition that captures a common_critter if the dice rolls a 2 or higher. \n    \n\nelse:\n    critter_escaped()\n",
+          "folderId": "0",
+          "active": false,
+          "open": true
+        },
+        "1": {
+          "id": "1",
+          "name": "support.py",
+          "language": "py",
+          "contents": "# Support file for critter capture messages\n\ndef legendary_critter():\n    art = \"\"\"\n    ✨🐉 LEGENDARY CAPTURED 🐉✨\n    Incredible! You captured a **legendary critter**! \n    The villagers will speak of this moment forever!\n    \"\"\"\n    print(art)\n\ndef rare_critter():\n    art = \"\"\"\n    ✨🦑 Rare Critter Caught! 🦑✨\n    Amazing! You captured a **rare critter**.\n    Not everyone is lucky enough to find one!\n    \"\"\"\n    print(art)\n\ndef common_critter():\n    art = \"\"\"\n    🐾🐕 Common Critter Captured! 🐕🐾\n    Great job! You caught a **common critter**.\n    This one will make a friendly companion!\n    \"\"\"\n    print(art)\n\ndef critter_escaped():\n    art = \"\"\"\n    ❌ The Critter Escaped! ❌\n    Oh no! The critter broke free and ran away.\n    Try again next time!\n    \"\"\"\n    print(art)\n",
+          "folderId": "0",
+          "active": true,
+          "open": true,
+          "type": "support"
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0",
+        "1"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFSi4aaBiEaakp8IBSnq60mXm1w1Rj4e2pq0O0PCF\ng8UNBLB/C7qioiEoHQhKPj2l1P8axn0aNoejw5N6Wb00FQ7yZjWUkPRNE5Ef\neM3uKz7jkSLRv/WKPMZmCfy9K1ut8IU1pltxp9Ul4zfM2Vfzlb/bfn6pmpxv\ntTWCDLtCpXq0Z5YsFiwd1FyQmXYByQ65oqgEoaNE87CynqOrxPAdTR0g9w3f\n/Tb4wkS9m0pzi5PPa6+ezHk7rXrSYCCO5zCOl2wxABufYWwIXklQ+A1ef+8P\nhDCf8gOwgTv5ek5CczDSvbU+4tjBNX77lqRNH1jAPgO+K+abWeVM+/2+Eafj\nw6cJjiPlsNcsEGi4sUHwQEDglkXVF3qkExITeVgrfqybQNdCbt+mgNr6HCxM\nd6nN8AczlXhmr/V2QqvzHoHHx0fbtB8CQ+2SyoceX556ZUIssM9hdkwqHk+q\n4fBGSBM78w26IQrmnFAv+e+Fb8UV0ImMlO9Nfkr+yrLPup2I1YFnGd/u4fz/\n9PVThegcb7+w+Bfp4rxV2uwfHYMDaJLqEWZ4Gaphe7R3O0Xm12MEvQuFV0Fr\n6C3m9nHmfjBLAIAeqw/X7wZBhdsGN86Qa6TaLraokoaLIBW880E99Bu2tsYM\nsHle/Ila46nn+TVoiDRJHZV5g79XfkT+KHltXnTP5fIFaBopLPaFJxHR1qCQ\nE5TDxZBi0qevuqBqwOyI9BCqeWo20lTslv90DOuKGyb3LcgAUCEHA5e9GiAx\nlyTrnocIaxfec9f4r9I6iBoB7fKMzhQBUy/U/qKtEDDV8c3siOg19QM1E38i\n72QwBxk9XT8xbKYNPuZkv1K3XbI8/k4eS7Drd6BCsZUgbtJQ6N7JnvM9mzdg\nsBnAqUFBpOvPANER8FoOiKGhJoD3GjppxQ044P8xIzCFyRLhFf0ZNEF+ESCS\n4ICw6DLdfWUX2lLmXAQiWNZBDjnjzWXiBuIPEIA7uGcbAT0zfiFLugodyBgX\nL3/4HQglXKLobF+4uS8X31mYSFaAVNVgbGrDmUowrDsTa1mbEoLw20ORmk6y\nKWLIkQoa\n",
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:58:19.415+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson18-level5_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson18-level5_2025\"}]"
+}]]></config>
+</Pythonlab>

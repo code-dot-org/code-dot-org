@@ -1,0 +1,94 @@
+name 'programming-fundamentals-lesson1-level2a_v2-2025'
+title 'Careers and Emerging Technologies'
+display_name 'People-Oriented Careers'
+bubble_choice_description 'Explore people-oriented careers based on your interests and skills.'
+thumbnail_url 'https://images.code.org/fb724faf1ea8e5a7745a8c498205b612-employee-engagement.png'
+
+markdown <<MARKDOWN
+# People-Oriented Careers
+
+##### Use the information below to match your interests and skills to the careers that are more people-oriented.
+
+
+## Careers in Computing
+
+<table style="border-collapse: collapse; width: 100%; text-align: center;">
+  <thead>
+    <tr style="background-color: #f2f2f2;">
+      <th style="border: 1px solid black; font-weight: bold; text-align: center;">People-Oriented Careers</th>
+      <th style="border: 1px solid black; font-weight: bold; text-align: center;">Description</th>
+      <th style="border: 1px solid black; font-weight: bold; text-align: center;">Skills/Interests</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border: 1px solid black; font-weight: bold; padding: 8px;">UX (User Experience) Designer</td>
+      <td style="border: 1px solid black; padding: 8px;">Designs digital products (websites, apps) that are easy and enjoyable for users to interact with</td>
+      <td style="border: 1px solid black; padding: 8px;">Creativity, Communication, Empathy, Problem-solving</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black; font-weight: bold; padding: 8px;">Educator (Computer Science Teacher)</td>
+      <td style="border: 1px solid black; padding: 8px;">Teaches programming and computer science concepts to help students develop technical skills</td>
+      <td style="border: 1px solid black; padding: 8px;">Communication, Collaboration, Leadership, Curiosity</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black; font-weight: bold; padding: 8px;">Team Manager</td>
+      <td style="border: 1px solid black; padding: 8px;">Leads teams of engineers or developers to deliver projects on time and ensure team success</td>
+      <td style="border: 1px solid black; padding: 8px;">Leadership, Collaboration, Problem-solving, Organization</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black; font-weight: bold; padding: 8px;">IT Support Specialist</td>
+      <td style="border: 1px solid black; padding: 8px;">Helps people troubleshoot computer issues and ensures systems are running smoothly</td>
+      <td style="border: 1px solid black; padding: 8px;">Communication, Patience, Logical thinking, Working with tools</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black; font-weight: bold; padding: 8px;">Journalist (Using AI Tools)</td>
+      <td style="border: 1px solid black; padding: 8px;">Uses AI transcription services and natural language processing tools to streamline reporting and storytelling</td>
+      <td style="border: 1px solid black; padding: 8px;">Communication, Adaptability, Critical thinking, Curiosity</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black; font-weight: bold; padding: 8px;">Healthcare Provider (Telemedicine)</td>
+      <td style="border: 1px solid black; padding: 8px;">Uses remote health monitoring devices and virtual consultation platforms to deliver care</td>
+      <td style="border: 1px solid black; padding: 8px;">Empathy, Communication, Technical literacy, Problem-solving</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black; font-weight: bold; padding: 8px;">Customer Experience Specialist</td>
+      <td style="border: 1px solid black; padding: 8px;">Analyzes customer data and uses CRM systems to improve client satisfaction and engagement</td>
+      <td style="border: 1px solid black; padding: 8px;">Collaboration, Communication, Data analysis, Empathy</td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+## You can also go back to check out careers in the other categories!
+
+<table style="border-collapse: collapse; width: 100%; text-align: center;">
+  <thead>
+    <tr style="background-color: #f2f2f2;">
+      <th style="border: 1px solid black; font-weight: bold; text-align: center;">People</th>
+      <th style="border: 1px solid black; font-weight: bold; text-align: center;">Things</th>
+      <th style="border: 1px solid black; font-weight: bold; text-align: center;">Ideas</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border: 1px solid black; text-align: center;">
+        Careers that focus on working with others, communication and collaboration
+        <br>
+        <img src="https://images.code.org/fb724faf1ea8e5a7745a8c498205b612-employee-engagement.png" alt="People category" style="border-radius:0px; height: 75px; margin: 10px 0;">
+      </td>
+      <td style="border: 1px solid black; text-align: center;">
+        Careers that focus on working with tools, machines, systems, or physical processes
+        <br>
+        <img src="https://images.code.org/4f245e227cb52dd6f6793497be3fb313-electrician.png" alt="Things category" style="border-radius:0px; height: 75px; margin: 10px 0;">
+      </td>
+      <td style="border: 1px solid black; text-align: center;">
+        Careers that focus on solving big problems, creativity, and critical thinking
+        <br>
+        <img src="https://images.code.org/d92eb2e909879bd991385cbc19657bcd-brain.png" alt="Ideas category" style="border-radius:0px; height: 75px; margin: 10px 0;">
+      </td>
+    </tr>
+  </tbody>
+</table>
+MARKDOWN

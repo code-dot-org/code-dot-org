@@ -440,10 +440,59 @@ function registerHelp(weight: number) {
   GoogleBlockly.ContextMenuRegistry.registry.register(helpOption);
 }
 
+export enum WeightOptions {
+  CUT = 0,
+  COPY = 1,
+  PASTE = 2,
+  DELETE = 3,
+  DUPLICATE = 4,
+  DISABLE = 5,
+  MOVE = 6,
+  EDIT = 7,
+  MOVE_COMMENT = 8,
+  UNDO = 9,
+  REDO = 10,
+  COMMENT = 11,
+  HELP = 12,
+  CLEANUP = 13,
+  LEVELBUILDER = 14,
+}
+
 export const registerAllContextMenuItems = function () {
   unregisterDefaultOptions();
-  registerCustomBlockOptions();
-  registerCustomWorkspaceOptions();
+
+  const menuWeightMap: Record<string, WeightOptions> = {
+    blockCopyToStorage: WeightOptions.COPY,
+    blockPasteFromStorage: WeightOptions.PASTE,
+    blockDelete: WeightOptions.DELETE,
+    blockDuplicate: WeightOptions.DUPLICATE,
+    blockDisable: WeightOptions.DISABLE,
+    undoWorkspace: WeightOptions.UNDO,
+    redoWorkspace: WeightOptions.REDO,
+    blockComment: WeightOptions.COMMENT,
+    cleanWorkspace: WeightOptions.CLEANUP,
+  };
+  for (const [option, weight] of Object.entries(menuWeightMap)) {
+    overrideOptionWeight(option, weight);
+  }
+  registerHelp(WeightOptions.HELP); // Custom student-facing help option.
+
+  // Our levelbuilder options should all show below the registered default options.
+  let nextWeight = WeightOptions.LEVELBUILDER;
+
+  // Custom options for levelbuilder. We increment the weight for each so they are sorted
+  // in the order listed here. The ++ incrementation happens after the value is accessed.
+  registerDeletable(nextWeight++);
+  registerMovable(nextWeight++);
+  registerNextConnection(nextWeight++);
+  registerEditable(nextWeight++);
+  registerShadow(nextWeight++);
+  registerUnshadow(nextWeight++);
+  registerToggleShadowStack(nextWeight++);
+  registerOverrideBlockId(nextWeight++);
+  registerAllBlocksUndeletable(nextWeight++);
+  registerAllBlocksUneditable(nextWeight++);
+  registerAllBlocksUnmovable(nextWeight++);
 };
 
 function canBeShadow(block: GoogleBlockly.Block) {
@@ -506,48 +555,24 @@ function unregisterDefaultOptions() {
   } catch (error) {}
 }
 
-function registerCustomBlockOptions() {
-  // Each option has a "weight": a number that determines the sort order of the option.
-  // Options with higher weights appear later in the context menu.
-
-  // Expected registered block options (from Core and plugins):
-  // 0: blockCopyToStorage
-  // 2: blockComment
-  // 5: blockDisable
-  // 6: blockDelete
-
-  // Our custom options should show below the registered default options.
-  let nextWeight = 7;
-
-  // Custom block options. We increment the weight for each so they are automatically
-  // sorted in the order listed here. The ++ incrementation happens after the value is accessed.
-  registerOverrideBlockId(nextWeight++);
-  registerHelp(nextWeight++);
-  registerDeletable(nextWeight++);
-  registerMovable(nextWeight++);
-  registerNextConnection(nextWeight++);
-  registerEditable(nextWeight++);
-  registerShadow(nextWeight++);
-  registerUnshadow(nextWeight++);
-  registerToggleShadowStack(nextWeight++);
+/**
+ * Unregisters the cross-tab copy/paste options.
+ * These options are made redundant by the ones provided by @blockly/keyboard-navigation
+ */
+export function unregisterCrossTabPluginOptions() {
+  try {
+    GoogleBlockly.ContextMenuRegistry.registry.unregister('blockCopyToStorage');
+    GoogleBlockly.ContextMenuRegistry.registry.unregister(
+      'blockPasteFromStorage'
+    );
+  } catch (error) {}
 }
 
-function registerCustomWorkspaceOptions() {
-  // Each option has a "weight": a number that determines the sort order of the option.
-  // Options with higher weights appear later in the context menu.
-
-  // Expected registered workspace options (from Core and plugins):
-  // 0: blockPasteFromStorage
-  // 1: undoWorkspace
-  // 2: redoWorkspace
-  // 3: cleanWorkspace
-
-  // Our custom options should show below the registered default options.
-  let nextWeight = 3;
-
-  // Custom workspace options. We increment the weight for each so they are automatically
-  // sorted in the order listed here. The ++ incrementation happens after the value is accessed.
-  registerAllBlocksUndeletable(nextWeight++);
-  registerAllBlocksUneditable(nextWeight++);
-  registerAllBlocksUnmovable(nextWeight++);
+export function overrideOptionWeight(optionId: string, newWeight: number) {
+  const option = GoogleBlockly.ContextMenuRegistry.registry.getItem(optionId);
+  if (option) {
+    option.weight = newWeight;
+    GoogleBlockly.ContextMenuRegistry.registry.unregister(optionId);
+    GoogleBlockly.ContextMenuRegistry.registry.register(option);
+  }
 }
