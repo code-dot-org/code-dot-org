@@ -27,7 +27,10 @@ interface EaseIntoViewProps {
   scrollEnd?: number;
   /** Aria label for the container */
   ariaLabel?: string;
+  /** Child elements to be rendered within the container */
   children: React.ReactNode;
+  /** A 2D array of refs for direct a11y reference */
+  focusableChildren: Array<Array<HTMLButtonElement | null>>;
 }
 
 const EaseIntoView: React.FunctionComponent<EaseIntoViewProps> = ({
@@ -40,6 +43,7 @@ const EaseIntoView: React.FunctionComponent<EaseIntoViewProps> = ({
   scrollEnd = 0,
   ariaLabel = 'Scrollable content',
   children,
+  focusableChildren = [],
 }) => {
   const scrollStep = useRef<number | undefined>(0);
   const lastScrollPosition = useRef<number | undefined>(undefined);
@@ -122,24 +126,20 @@ const EaseIntoView: React.FunctionComponent<EaseIntoViewProps> = ({
   // instrumentGrid/index.tsx for the (only) example of this component in use.
   const handleKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
     const container = containerRef.current;
+    const flatRefs = focusableChildren.flat();
     if (!container) return;
-    const focusableChildren = Array.from(
-      container.querySelectorAll<HTMLElement>('.showing')
-    );
 
     switch (event.key) {
       case 'Enter':
         event.preventDefault();
         // Make children that should be showing focusable and focus the first child.
-        focusableChildren.forEach(child => child.setAttribute('tabindex', '0'));
-        focusableChildren[0]?.focus();
+        flatRefs.forEach(ref => ref?.setAttribute('tabindex', '0'));
+        flatRefs[0]?.focus();
         break;
 
       case 'Tab':
         // Make all children unfocusable.
-        focusableChildren.forEach(child =>
-          child.setAttribute('tabindex', '-1')
-        );
+        flatRefs.forEach(ref => ref?.setAttribute('tabindex', '-1'));
         break;
 
       default:
