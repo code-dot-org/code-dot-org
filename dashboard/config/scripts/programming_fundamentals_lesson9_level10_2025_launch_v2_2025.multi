@@ -1,0 +1,11 @@
+name 'programming-fundamentals-lesson9-level10_2025-launch_v2-2025'
+title 'Check Your Understanding'
+
+question 'A student writes a program with an `if` statement, but the `Painter` always performs the action — even when the condition shouldn\'t be true. Which of the following is the most likely cause of this problem?'
+
+wrong 'The condition is written in the wrong part of the program.'
+right 'The student forgot to indent the action under the `if` statement.'
+wrong 'The condition is always false.'
+wrong 'The action is not related to the condition.'
+
+allow_multiple_attempts false

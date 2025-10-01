@@ -1,0 +1,26 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2025-09-25T20:00:10.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "title": "Check for Understanding",
+    "long_instructions": "Which tasks (e.g., sort, filter, group) were easier to automate, and why? How does automation help make these tasks faster and more consistent?",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "height": "100",
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T20:00:10.977+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson8-level4_2025\\\"\"],\"cloned_from\":\"computer-systems-lesson8-level4_2025\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

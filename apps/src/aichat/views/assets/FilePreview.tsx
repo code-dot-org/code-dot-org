@@ -9,9 +9,9 @@ import aichatI18n from '@cdo/apps/aichat/locale';
 import styles from './staged-files-preview.module.scss';
 
 const FilePreview: React.FC<{
-  type: 'pdf' | 'image';
+  type: 'pdf' | 'image' | 'text';
   filename: string;
-  url: string;
+  url?: string;
   isUploading?: boolean;
   onRemove?: () => void;
   onLoadError?: () => void;
@@ -46,9 +46,10 @@ const FilePreview: React.FC<{
       imageElement.removeEventListener('error', handleError);
     };
   }, [url, onLoadError]);
+  const previewType = type === 'image' ? 'image' : 'file';
 
   return (
-    <div className={styles[`preview-${type}`]} title={filename}>
+    <div className={styles[`preview-${previewType}`]} title={filename}>
       {onRemove ? (
         isUploading || (type === 'image' && !imageLoaded) ? (
           <FontAwesomeV6Icon
@@ -100,7 +101,7 @@ const FilePreview: React.FC<{
           </div>
           <div className={styles.filenameContainer}>
             <StrongText>{filename}</StrongText>
-            <span>PDF</span>
+            {type === 'pdf' && <span>PDF</span>}
           </div>
         </>
       )}

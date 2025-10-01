@@ -1,6 +1,5 @@
 /** @file Top-level view for AI Chat Lab */
 
-import Button from '@code-dot-org/component-library/button';
 import ActionDropdown from '@code-dot-org/component-library/dropdown/actionDropdown';
 import SegmentedButtons, {
   SegmentedButtonsProps,
@@ -17,6 +16,7 @@ import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {isProjectTemplateLevel} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {LabProps} from '@cdo/apps/lab2/types';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils';
+import IconButtonWithTooltip from '@cdo/apps/lab2/views/components/IconButtonWithTooltip';
 import InstructionsV2 from '@cdo/apps/lab2/views/components/Instructions/InstructionsV2';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
@@ -54,6 +54,7 @@ import {
 } from '../redux';
 import {AichatLevelProperties, ModelParameters, ViewMode} from '../types';
 
+import AiChatHeaderButtons from './aiChatHeaderButtons/AiChatHeaderButtons';
 import ChatWorkspace from './ChatWorkspace';
 import {isDisabled} from './modelCustomization/utils';
 import ModelCustomizationWorkspace from './ModelCustomizationWorkspace';
@@ -413,6 +414,7 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
               headerContent={chatWorkspaceHeader}
               className={moduleStyles.panelContainer}
               headerClassName={moduleStyles.panelHeader}
+              rightHeaderContent={<AiChatHeaderButtons />}
             >
               {hasSetStartingCustomizations && (
                 <ChatWorkspace
@@ -437,15 +439,17 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
 const renderModelCustomizationHeaderRight = (onStartOver: () => void) => {
   return (
     <div>
-      <Button
-        icon={{iconStyle: 'solid', iconName: 'refresh'}}
-        isIconOnly={true}
-        color={'black'}
-        onClick={onStartOver}
-        ariaLabel={aichatI18n.aria_startOver()}
-        size={'xs'}
+      <IconButtonWithTooltip
+        id="start-over"
+        label={aichatI18n.aria_startOver()}
+        icon={{iconName: 'refresh', iconStyle: 'solid'}}
         type="tertiary"
-        className={moduleStyles.startOverButton}
+        color="gray"
+        buttonSize="xs"
+        tooltipSize="xs"
+        tooltipDirection="onBottom"
+        hideTooltipTail={true}
+        onClick={onStartOver}
       />
     </div>
   );

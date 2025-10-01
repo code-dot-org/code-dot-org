@@ -139,6 +139,9 @@
     "display_name": "AI Foundations",
     "description": "Learn how to code, think critically about AI, and use technology to solve real-world problems."
   },
+  "artificial-intelligence-foundations-v2": {
+    "display_name": "artificial-intelligence-foundations-v2"
+  },
   "artist": {
     "display_name": "Artist",
     "description": "In this activity, students use programming blocks to create images of increasing complexity."
@@ -1270,6 +1273,9 @@
     "display_name": "Minecraft: Hero's Journey",
     "description": "Build and explore with Minecraft! Players write code that instructs the Agent to execute their commands and overcome in-game obstacles. "
   },
+  "hoai-dance-pilot1": {
+    "display_name": "hoai-dance-pilot1"
+  },
   "hoai2025-dev": {
     "display_name": "hoai2025-dev"
   },
@@ -1639,6 +1645,9 @@
   },
   "pl-playground": {
     "display_name": "pl-playground"
+  },
+  "pl-sandbox-aif-sem-2": {
+    "display_name": "pl-sandbox-aif-sem-2"
   },
   "pl-team-design-guide": {
     "display_name": "pl-team-design-guide"

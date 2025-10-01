@@ -1,6 +1,7 @@
 import React, {createContext, useContext} from 'react';
 
 import {ChatButtonData, SystemPromptSettings} from '@cdo/apps/aichat/types';
+import {AiTutorContextHelper} from '@cdo/apps/aiTutor/helpers/aiTutorContextHelper';
 import {ProjectSources} from '@cdo/apps/lab2/types';
 
 import {
@@ -32,6 +33,7 @@ export type CodebridgeContextType = {
   aiTutorSystemPromptSettings?: SystemPromptSettings;
   aiTutorMultimodalEnabled?: boolean;
   aiTutorChatButtonData?: ChatButtonData[];
+  aiTutorContextHelper?: AiTutorContextHelper<object>;
 };
 
 export const CodebridgeContext = createContext<CodebridgeContextType | null>(

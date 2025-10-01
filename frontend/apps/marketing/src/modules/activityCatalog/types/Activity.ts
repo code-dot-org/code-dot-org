@@ -15,4 +15,16 @@ export interface Activity {
   languagesText: string;
   standards: string;
   tutorialID: string;
+  featuredPosition: number;
 }
+
+export interface OramaActivity extends Activity {
+  sortKey: string;
+}
+
+export enum ActivityType {
+  HOUR_OF_AI = 'hour-of-ai',
+  HOUR_OF_CODE = 'hour-of-code',
+}
+
+export const ValidActivityTypes = new Set(Object.values(ActivityType));

@@ -97,8 +97,6 @@ PATH
       rails (~> 6.1.7)
       zeitwerk (~> 2.6.7)
     hoc_legacy (0.0.0)
-    marketing (0.0.0)
-      contentful
 
 GEM
   remote: https://rubygems.org/
@@ -169,8 +167,8 @@ GEM
     activerecord (6.1.7.7)
       activemodel (= 6.1.7.7)
       activesupport (= 6.1.7.7)
-    activerecord-import (1.0.8)
-      activerecord (>= 3.2)
+    activerecord-import (1.3.0)
+      activerecord (>= 4.2)
     activestorage (6.1.7.7)
       actionpack (= 6.1.7.7)
       activejob (= 6.1.7.7)
@@ -898,12 +896,13 @@ GEM
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
     state_machine (1.2.0)
-    statsig (1.33.2)
+    statsig (2.5.5)
       concurrent-ruby (~> 1.1)
       connection_pool (~> 2.4, >= 2.4.1)
       http (>= 4.4, < 6.0)
       ip3country (~> 0.2.1)
-      user_agent_parser (~> 2.15.0)
+      user_agent_parser (~> 2.18.0)
+      zlib (~> 3.1.0)
     stringex (2.5.2)
     stringio (3.1.5)
     strscan (3.1.0)
@@ -942,7 +941,7 @@ GEM
     unicode-display_width (2.5.0)
     unicode_utils (1.4.0)
     uri (1.0.3)
-    user_agent_parser (2.15.0)
+    user_agent_parser (2.18.0)
     validate_url (1.0.15)
       activemodel (>= 3.0.0)
       public_suffix
@@ -970,6 +969,7 @@ GEM
     youtube-dl.rb (0.3.1.2016.08.19)
       cocaine (>= 0.5.4)
     zeitwerk (2.6.7)
+    zlib (3.1.1)
 
 PLATFORMS
   ruby
@@ -1070,7 +1070,6 @@ DEPENDENCIES
   loofah (~> 2.19.1)
   mailgun-ruby (~> 1.2.14)
   mailjet (~> 1.7.3)
-  marketing!
   memory_profiler
   mini_magick (>= 4.10.0)
   mini_racer
@@ -1156,7 +1155,7 @@ DEPENDENCIES
   spring-commands-testunit
   sprockets!
   sshkit
-  statsig (~> 1.33)
+  statsig (~> 2.5.5)
   stringex (~> 2.5.2)
   syslog
   thin

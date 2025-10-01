@@ -31,7 +31,6 @@ import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import i18n from '@cdo/locale';
 import teacherImg from '@cdo/static/misc/teacher-540x300.png';
 import plAdminsPageImg from '@cdo/static/professional-learning/admins-page-pl-448x280.png';
-import plBannerBooksWithBackgroundImg from '@cdo/static/professional-learning/banner-books-with-background-540x300.png';
 import plPageEducatorSupportImg from '@cdo/static/professional-learning/pl-page-educator-support.png';
 import plSuperheroGirlCropImg from '@cdo/static/professional-learning/pl-superhero-girl-crop-540x300.png';
 
@@ -376,7 +375,9 @@ function LandingPage({
       // TODO(ACQ-1998): Remove this block after the 2024 curriculum launch
       return (
         <TwoColumnActionBlock
-          imageUrl={plBannerBooksWithBackgroundImg}
+          imageUrl={pegasus(
+            '/images/fill-540x300/professional-learning/banner-books-with-background.png'
+          )}
           subHeading={i18n.plLandingCurriculumLaunchBannerSubHeading()}
           description={i18n.plLandingCurriculumLaunchBannerDescription()}
           buttons={[

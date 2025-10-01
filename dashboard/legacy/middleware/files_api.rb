@@ -500,7 +500,14 @@ class FilesApi < Sinatra::Base
           # Nested file source structure for lab2 labs such as Python Lab and Web Lab 2 is
           # {files: {filename: {contents: "...<code here>...",...}}, folders: {id: {id: <id>, name: <folder_name>,...}}}
           source[key].each_key do |file|
-            return false unless source[key][file]["contents"]&.force_encoding("UTF-8")&.valid_encoding?
+            contents = source[key][file]["contents"]
+
+            # Sketch Lab sources are managed by a third party (Excalidraw)
+            # but also have a "files" attribute (with a different property structure),
+            # so we skip encoding checks there.
+            if contents && !contents&.force_encoding("UTF-8")&.valid_encoding?
+              return false
+            end
           end
         end
         # TODO: do we need to validate folders?
