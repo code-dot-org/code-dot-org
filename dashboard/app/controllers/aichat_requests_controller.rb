@@ -22,7 +22,14 @@ class AichatRequestsController < ApplicationController
   #   newMessage: {role: 'user'; chatMessageText: string; status: string}
   #   storedMessages: Array of {role: <'user', 'system', or 'assistant'>; chatMessageText: string; status: string}
   #     - does not include user's new message
-  #   modelParameters: {temperature: number; retrievalContexts: string[]; systemPrompt: string;}
+  #   modelParameters: {
+  #     selectedModelId: ValueOf<typeof AiChatModelIds>;
+  #     temperature: number;
+  #     systemPrompt: string;
+  #     retrievalContexts: string[];
+  #     thinkingBudget?: number;
+  #   }
+  #
   #   aichatContext: {
   #     clientType: AiChatClientType;
   #     currentLevelId: number | null;
