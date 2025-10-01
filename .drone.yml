@@ -222,19 +222,17 @@ steps:
       - git config user.email "drone-fake-user@code.org"
       - git merge origin/$DRONE_TARGET_BRANCH
 
-  # We cache staging's rbenv and database in the
+  # We cache staging's database, apps build, and installed gems in the
   # `cache-staging-build-artifacts` pipeline.
   - name: get-cached-staging-misc-build-artifacts
     image: plugins/s3-cache
     volumes:
       # Even files cached with absolute paths will be restored into the
       # workdir; so for this step, we mount the relevant volumes there, too.
-      - name: rbenv
-        path: /drone/src/home/ci/.rbenv
       - name: mysql
         path: /drone/src/var/lib/mysql
     settings:
-      filename: cache-staging-misc-build-artifacts.tar.gz
+      filename: cache-staging-misc-build-artifacts-without-rbenv.tar.gz
       endpoint: s3://cdo-drone
       restore: true
       debug: true
@@ -246,8 +244,6 @@ steps:
     image: codedotorg/code-dot-org:1.16
     pull: always
     volumes:
-      - name: rbenv
-        path: /home/ci/.rbenv
       - name: mysql
         path: /var/lib/mysql
     environment:
@@ -278,8 +274,6 @@ steps:
       - exit $EXIT_CODE
 
 volumes:
-  - name: rbenv
-    temp: {}
   - name: mysql
     temp: {}
 
@@ -296,7 +290,8 @@ trigger:
 # On a push to staging, cache several build artifacts to drone's S3 bucket:
 # - A fresh git clone of staging, to reduce git bandwidth
 # - A copy of the MySQL databases, to reduce seed time
-# - A copy of the ~/.rbenv directory, to reduce bundle install time
+# - A copy of the apps build, to reduce apps build time
+# - A copy of the bundle deployment dir, to reduce gem install time
 kind: pipeline
 type: docker
 name: cache-staging-build-artifacts
@@ -330,7 +325,8 @@ steps:
         - .
 
   # Do all the work necessary to run UI tests so we can capture a complete
-  # snapshot of rbenv and the database, but don't actually run the tests.
+  # snapshot of the database, apps build, and installed gems; but don't
+  # actually run the tests.
   - name: prepare-ui-tests
     image: codedotorg/code-dot-org:1.16
     pull: always
@@ -338,8 +334,6 @@ steps:
       PROPERTIES_ENCRYPTION_KEY:
         from_secret: PROPERTIES_ENCRYPTION_KEY
     volumes:
-      - name: rbenv
-        path: /home/ci/.rbenv
       - name: mysql
         path: /var/lib/mysql
     commands:
@@ -349,24 +343,20 @@ steps:
   - name: cache-staging-misc-build-artifacts
     image: plugins/s3-cache
     volumes:
-      - name: rbenv
-        path: /home/ci/.rbenv
       - name: mysql
         path: /var/lib/mysql
     settings:
-      filename: cache-staging-misc-build-artifacts.tar.gz
+      filename: cache-staging-misc-build-artifacts-without-rbenv.tar.gz
       endpoint: s3://cdo-drone
       rebuild: true
       debug: true
       pull: true
       mount:
-        - /home/ci/.rbenv
         - /var/lib/mysql
         - ./apps/build
+        - ./vendor/bundle
 
 volumes:
-  - name: rbenv
-    temp: {}
   - name: mysql
     temp: {}
 
