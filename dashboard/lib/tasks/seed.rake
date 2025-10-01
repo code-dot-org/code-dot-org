@@ -577,18 +577,16 @@ namespace :seed do
   end
 
   timed_task_with_logging sample_data: :environment do
-    # Make sure we see a helpful error message if run in the wrong environment, since the require
-    # command could result in a cryptic error about missing gems.
+    # Make sure we see a helpful error message if run in the wrong environment, since autoloading
+    # this class could result in a cryptic error about missing gems.
     raise "Should not be run outside of adhoc or development" unless [:adhoc, :development].include?(CDO.rack_env)
-    require_relative '../../lib/devtools/sample_data'
     SampleData.seed
   end
 
   timed_task_with_logging mega_section: :environment do
-    # Make sure we see a helpful error message if run in the wrong environment, since the require
-    # command could result in a cryptic error about missing gems.
+    # Make sure we see a helpful error message if run in the wrong environment, since autoloading
+    # this class could result in a cryptic error about missing gems.
     raise "Should not be run outside of adhoc or development" unless [:adhoc, :development].include?(CDO.rack_env)
-    require_relative '../../lib/devtools/mega_section'
     MegaSection.seed
   end
 

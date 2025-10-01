@@ -205,11 +205,13 @@ module Dashboard
     Rails.autoloaders.main.ignore(
       Rails.root.join("lib", "tasks"),
       Rails.root.join("lib", "assets"),
-      # Tools which are designed for development / test environments should not be eager-loaded
-      # because they may depend on gems which are not available in production. Unfortunately this
-      # means they will not be autoloaded either, and must be explicitly required.
-      Rails.root.join("lib", "devtools"),
     )
+
+    # Tools which are designed for development / test environments should not be eager-loaded
+    # because they may depend on gems which are not available in production. These tools can
+    # still be autoloaded as needed without being explicitly required.
+    config.autoload_paths << Rails.root.join('lib', 'devtools')
+    Rails.autoloaders.main.do_not_eager_load(Rails.root.join('lib', 'devtools'))
 
     # use https://(*-)studio.code.org urls in mails
     config.action_mailer.default_url_options = {host: CDO.canonical_hostname('studio.code.org'), protocol: 'https'}
