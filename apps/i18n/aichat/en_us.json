@@ -11,6 +11,7 @@
   "aiCustomizations_selectedModel": "Selected model",
   "aiCustomizations_systemPrompt": "System prompt",
   "aiCustomizations_temperature": "Temperature",
+  "aiChatDisabled": "AI chat is currently disabled",
   "aria_flag": "flag",
   "aria_unflag": "unflag",
   "aria_hideMessage": "hide message",

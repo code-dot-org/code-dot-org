@@ -35,10 +35,13 @@ export class AiTutorWebLab2ContextHelper extends AiTutorContextHelper<AiTutorWeb
     const userSelection =
       selection && Object.values(selection).length > 0
         ? Object.values(selection)
-            .map(
-              context =>
-                `filename: ${context.filename}\n\`\`\`${context.sourceCode}}\`\`\``
-            )
+            .map(context => {
+              if (context.lineReference) {
+                return `snippet of file ${context.filename}, lines ${context.lineReference.start} - ${context.lineReference.end}\nContents of snippet:\n\`\`\`${context.sourceCode}}\`\`\``;
+              } else {
+                return `entirety of file ${context.filename}\nContents of file:\n\`\`\`${context.sourceCode}}\`\`\``;
+              }
+            })
             .join('\n\n')
         : undefined;
 

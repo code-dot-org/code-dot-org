@@ -19,4 +19,6 @@ export const ActivitySchema = {
   standards: 'string',
   tutorialID: 'string',
   primaryButton: 'string',
+  featuredPosition: 'number',
+  sortKey: 'string',
 } as const;

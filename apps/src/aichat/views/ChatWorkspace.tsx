@@ -2,6 +2,7 @@ import {FontAwesomeV6IconProps} from '@code-dot-org/component-library/fontAwesom
 import Tabs, {TabsProps} from '@code-dot-org/component-library/tabs';
 import React, {useCallback, useEffect, useMemo} from 'react';
 
+import {useAiChatDisabled} from '@cdo/apps/aichat/context/aiChatDisabledContext';
 import {
   isModelUpdate,
   SystemPromptSettings,
@@ -77,6 +78,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   systemPromptSettings,
   hideModelChangeMessage = false,
 }) => {
+  const {chatDisabled} = useAiChatDisabled();
   if (multimodalEnabled && (!levelName || !channelId)) {
     console.warn(
       'Multimodal support requires level name and channel ID. Multimodal features will not be available.'
@@ -270,6 +272,8 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     tabPanelsContainerClassName: moduleStyles.tabPanelsContainer,
   };
 
+  const uploadDisabled = !canChatWithModel || !!selectedStudent || chatDisabled;
+
   return (
     <div id="chat-workspace-area" className={moduleStyles.chatWorkspace}>
       {selectedStudent ? (
@@ -300,16 +304,16 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
             multimodalAvailable={multimodalAvailable}
           />
         )}
-        <div className={moduleStyles.buttonRow}>
-          {multimodalAvailable && (
+        {multimodalAvailable && (
+          <div className={moduleStyles.buttonRow}>
             <UploadButton
-              isDisabled={!canChatWithModel || !!selectedStudent}
+              isDisabled={uploadDisabled}
               levelName={levelName}
               hasStarterAssets={hasStarterAssets}
               buildAssetUrl={buildAssetUrl}
             />
-          )}
-        </div>
+          </div>
+        )}
       </div>
     </div>
   );

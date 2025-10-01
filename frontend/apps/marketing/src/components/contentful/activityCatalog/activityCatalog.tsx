@@ -6,17 +6,18 @@ import {FacetResult, InternalTypedDocument, Orama, search} from '@orama/orama';
 import {restore} from '@orama/plugin-data-persistence';
 import {useSearchParams} from 'next/navigation';
 import {ChangeEvent, ComponentProps, useEffect, useState} from 'react';
+import {useDebouncedCallback} from 'use-debounce';
 
 import FacetBar from '@/components/contentful/activityCatalog/facetBar/facetBar';
 import FacetDrawer from '@/components/contentful/activityCatalog/facetDrawer/facetDrawer';
 import Section from '@/components/contentful/section';
 import ActivityCollection from '@/components/csforall/activityCollection/ActivityCollection';
 import {ActivitySchema} from '@/modules/activityCatalog/orama/schema/ActivitySchema';
-import {Activity} from '@/modules/activityCatalog/types/Activity';
+import {OramaActivity} from '@/modules/activityCatalog/types/Activity';
 
 interface ActivityCatalogProps {
   serializedOramaDb: string | ArrayBuffer | Buffer<ArrayBuffer>;
-  activities: InternalTypedDocument<Activity>[];
+  activities: InternalTypedDocument<OramaActivity>[];
   facets: FacetResult | undefined;
 }
 
@@ -28,7 +29,7 @@ const ActivityCatalog = ({
   const allowedFacetSet = new Set(facets ? Object.keys(facets) : []);
 
   const [results, setResults] =
-    useState<InternalTypedDocument<Activity>[]>(activities);
+    useState<InternalTypedDocument<OramaActivity>[]>(activities);
   const [db, setDb] = useState<Orama<typeof ActivitySchema> | undefined>(
     undefined,
   );
@@ -81,35 +82,35 @@ const ActivityCatalog = ({
    * @param searchTerm - The current search term to serialize.
    * @param selectedFacets - The currently selected facets to serialize.
    */
-  const serializeClientState = (
-    searchTerm: string,
-    selectedFacets: Record<string, Set<string>>,
-  ) => {
-    const params = new URLSearchParams();
+  const serializeClientState = useDebouncedCallback(
+    (searchTerm: string, selectedFacets: Record<string, Set<string>>) => {
+      const params = new URLSearchParams();
 
-    /**
-     * For each selected facet, add it to the URL search params as a comma-separated list.
-     * Each value is individually encoded to handle commas and special characters.
-     */
-    Object.entries(selectedFacets).forEach(([facet, values]) => {
-      if (values.size > 0) {
-        // The value may contain commas, so encode each value individually.
-        const encodedValues = Array.from(values).map(v =>
-          encodeURIComponent(v),
-        );
-        params.set(facet, encodedValues.join(','));
-      }
-    });
+      /**
+       * For each selected facet, add it to the URL search params as a comma-separated list.
+       * Each value is individually encoded to handle commas and special characters.
+       */
+      Object.entries(selectedFacets).forEach(([facet, values]) => {
+        if (values.size > 0) {
+          // The value may contain commas, so encode each value individually.
+          const encodedValues = Array.from(values).map(v =>
+            encodeURIComponent(v),
+          );
+          params.set(facet, encodedValues.join(','));
+        }
+      });
 
-    // Update the URL without reloading the page
-    // Note: Using pushState instead of router.push to avoid extraneous RSC requests
-    // See: https://nextjs.org/docs/app/guides/single-page-applications#shallow-routing-on-the-client
-    window.history.pushState(
-      null,
-      '',
-      `?term=${encodeURIComponent(searchTerm)}&${params.toString()}`,
-    );
-  };
+      // Update the URL without reloading the page
+      // Note: Using pushState instead of router.push to avoid extraneous RSC requests
+      // See: https://nextjs.org/docs/app/guides/single-page-applications#shallow-routing-on-the-client
+      window.history.pushState(
+        null,
+        '',
+        `?term=${encodeURIComponent(searchTerm)}&${params.toString()}`,
+      );
+    },
+    250, // Debounce by 250ms to avoid excessive URL updates while typing
+  );
 
   /**
    * Deserializes the selected facets from the URL search params.
@@ -172,6 +173,7 @@ const ActivityCatalog = ({
       where: {
         ...facetFilters,
       },
+      sortBy: {property: 'sortKey', order: 'ASC'},
       limit: 200,
     });
 
@@ -191,9 +193,6 @@ const ActivityCatalog = ({
 
     // Update the URL query parameters
     serializeClientState(nextSearchTerm, selectedFacets);
-
-    // Update the search results based on the new search term
-    updateSearchResults(nextSearchTerm, selectedFacets);
   };
 
   /**
@@ -222,16 +221,12 @@ const ActivityCatalog = ({
     setSelectedFacets(newSelectedFacets);
     // Update the URL query parameters
     serializeClientState(searchTerm, newSelectedFacets);
-
-    // Update the search results based on the new selected facets
-    updateSearchResults(searchTerm, newSelectedFacets);
   };
 
   const handleClearAll = () => {
     setSelectedFacets({});
     setSearchTerm('');
     serializeClientState('', {});
-    updateSearchResults('', {});
   };
 
   const toggleFacetDrawer = (isOpen: boolean) => {

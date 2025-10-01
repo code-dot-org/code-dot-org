@@ -2,10 +2,12 @@ import Button from '@code-dot-org/component-library/button';
 import classNames from 'classnames';
 import React, {useEffect, useRef, useState} from 'react';
 
+import {useAiChatDisabled} from '@cdo/apps/aichat/context/aiChatDisabledContext';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {ChatAsset, ChatEvent} from '../types';
 
+import {ChatDisabled} from './ChatDisabled';
 import ChatEventView from './ChatEventView';
 import WaitingAnimation from './WaitingAnimation';
 
@@ -25,6 +27,7 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
   isTeacherView,
   buildAssetUrl,
 }) => {
+  const {chatDisabled, chatDisabledMessage} = useAiChatDisabled();
   const [inProgrammaticScroll, setInProgrammaticScroll] = useState(false);
   const [showScrollToBottom, setShowScrollToBottom] = useState(true);
   const isWaitingForChatResponse = useAppSelector(
@@ -102,15 +105,21 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
       )}
     >
       <div className={moduleStyles.messageArea} ref={conversationContainerRef}>
-        {events.map(event => (
-          <ChatEventView
-            event={event}
-            key={event.timestamp}
-            isTeacherView={isTeacherView}
-            buildAssetUrl={buildAssetUrl}
-          />
-        ))}
-        <WaitingAnimation shouldDisplay={isWaitingForChatResponse} />
+        {chatDisabled ? (
+          <ChatDisabled message={chatDisabledMessage} />
+        ) : (
+          <>
+            {events.map(event => (
+              <ChatEventView
+                event={event}
+                key={event.timestamp}
+                isTeacherView={isTeacherView}
+                buildAssetUrl={buildAssetUrl}
+              />
+            ))}
+            <WaitingAnimation shouldDisplay={isWaitingForChatResponse} />
+          </>
+        )}
       </div>
       {showScrollToBottom && (
         <div className={moduleStyles.floatingScrollToBottomButtonContainer}>

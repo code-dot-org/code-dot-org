@@ -122,6 +122,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
     >
       <div
         id="instructions-panel"
+        aria-live="polite"
         className={classNames(
           moduleStyles.item,
           vertical && moduleStyles.itemVertical
@@ -145,12 +146,14 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
             </div>
           )}
           {includeValidation && (
-            <ValidationButton
-              onValidate={validationSettings.onValidate}
-              onStopValidation={validationSettings.onStopValidation}
-              isValidating={validationSettings.isValidating}
-              isValidateDisabled={validationSettings.isValidateDisabled}
-            />
+            <div className={moduleStyles.nonScrollingSubContent}>
+              <ValidationButton
+                onValidate={validationSettings.onValidate}
+                onStopValidation={validationSettings.onStopValidation}
+                isValidating={validationSettings.isValidating}
+                isValidateDisabled={validationSettings.isValidateDisabled}
+              />
+            </div>
           )}
           {bottomComponent && (
             <div className={moduleStyles.bottomComponent}>
