@@ -1,6 +1,23 @@
+@use '@cdo/apps/lab2/views/components/layout/variables.scss' as variables;
+
+// Generate hover and active states for each button based on icon type
+@mixin generate-chat-button-hover-states($icon-color-map) {
+  @each $icon, $color in $icon-color-map {
+    &:hover:has(.icon-#{$icon}),
+    &:active:has(.icon-#{$icon}) {
+      background: var(--background-#{$color}-extra-light);
+      border-color: var(--borders-#{$color}-primary) !important;
+    }
+  }
+}
+
 @keyframes fade-in {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .container {
@@ -27,23 +44,44 @@
 
 /* Multiple classes used to increase specifity to override default DSCO styles */
 .chatButton.chatButton.chatButton {
-  padding: .25rem .65rem;
+  padding: 0.25rem 0.625rem;
+  border: variables.$strong-border;
   border-radius: 50rem;
-  gap: 4px;
+  gap: 0.375rem;
 
-  > .icon {
-    width: 1rem;
+  span {
+    font-weight: 400;
   }
 
-  > .icon-code {
-    color: var(--text-success-primary);
+  .icon {
+    width: auto;
   }
 
-  > .icon-lightbulb {
-    color: var(--accent-orange-50);
+  .icon-code {
+    color: var(--text-success-primary-fixed);
   }
 
-  > .icon-file-code {
-    color: var(--text-info-primary);
+  .icon-lightbulb {
+    color: var(--text-warning-primary-fixed);
+  }
+
+  .icon-book {
+    color: var(--text-info-primary-fixed);
+  }
+
+  // Hover and active states
+  @include generate-chat-button-hover-states(
+    (
+      'code': 'success',
+      'lightbulb': 'warning',
+      'book': 'info',
+    )
+  );
+
+  // Disabled state
+  &:disabled {
+    i {
+      color: var(--text-neutral-disabled);
+    }
   }
 }

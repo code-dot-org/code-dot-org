@@ -10,12 +10,6 @@ jest.mock('@contentful/experiences-sdk-react', () => ({
   }),
 }));
 
-// Mock the getAbsoluteImageUrl function
-jest.mock('@/selectors/contentful/getImage', () => ({
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  getAbsoluteImageUrl: (image: any) => image?.fields?.file?.url || '',
-}));
-
 const createMockCard = (title: string): CardCollectionProps['cards'][number] =>
   ({
     fields: {
@@ -64,7 +58,9 @@ describe('CardCollection', () => {
       />,
     );
     // Check that images are showing
-    expect(screen.getAllByRole('presentation')).toHaveLength(3);
+    expect(screen.getByAltText('Title 1')).toBeInTheDocument();
+    expect(screen.getByAltText('Title 2')).toBeInTheDocument();
+    expect(screen.getByAltText('Title 3')).toBeInTheDocument();
     // Check that overlines are showing
     expect(screen.getAllByText('Test Overline')).toHaveLength(3);
     // Check that titles are showing
