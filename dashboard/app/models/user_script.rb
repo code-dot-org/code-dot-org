@@ -64,8 +64,11 @@ class UserScript < ApplicationRecord
   # duplicate rows from being created while we work on migrating existing rows to have a
   # unit_group_id. More specifically:
   # - default unit_group to the unit's original_unit_group if not provided
-  # - if searching for original unit group, also find rows with nil unit_group to migrate them to
-  #   the original unit group
+  # - also find rows with nil unit_group to migrate them to unit_group
+  #
+  # This strategy the goals of (1) avoiding creating duplicate rows, and (2) migrating existing
+  # rows to a unit_group that we know the user is engaging with (rather than guessing that it
+  # should be migrated to the original unit group).
   #
   # TODO: TEACH-2168 once unit_group_id has been backfilled and has been marked as a required field,
   # remove the migration logic from this method and rename the method.
@@ -78,16 +81,13 @@ class UserScript < ApplicationRecord
     original_unit_group = unit.get_original_unit_group
     unit_group ||= original_unit_group
 
-    # Whether to migrate existing rows with nil unit_group to the original unit group
-    should_migrate = unit_group == original_unit_group
-
     # find
-    unit_groups_to_find_by = should_migrate ? [nil, unit_group] : [unit_group]
+    unit_groups_to_find_by = [nil, unit_group]
     us = find_by(user_id: user_id, script: unit, unit_group: unit_groups_to_find_by)
 
     # migrate
     if us && us.unit_group.nil?
-      us.update!(unit_group: original_unit_group)
+      us.update!(unit_group: unit_group)
     end
 
     return us if us
