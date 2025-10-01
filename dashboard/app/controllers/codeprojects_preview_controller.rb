@@ -77,6 +77,8 @@ class CodeprojectsPreviewController < ApplicationController
 
     unless rack_env?(:development) || rack_env?(:test)
       # In non-development or test environments, we ensure all requests are over HTTPS.
+      # This allows students to make requests to HTTP APIs from their projects.
+      # Development does not support HTTPS. Some test environments (such as drone) do not support HTTPS.
       policies << "upgrade-insecure-requests"
     end
     response.headers['Content-Security-Policy'] = policies.join('; ')
