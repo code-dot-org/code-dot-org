@@ -208,8 +208,6 @@ steps:
     image: codedotorg/code-dot-org:1.16
     pull: always
     volumes:
-      - name: rbenv
-        path: /home/ci/.rbenv
       - name: mysql
         path: /var/lib/mysql
     environment:
@@ -241,8 +239,6 @@ steps:
       - exit $EXIT_CODE
 
 volumes:
-  - name: rbenv
-    temp: {}
   - name: mysql
     temp: {}
 
@@ -297,8 +293,6 @@ steps:
       PROPERTIES_ENCRYPTION_KEY:
         from_secret: PROPERTIES_ENCRYPTION_KEY
     volumes:
-      - name: rbenv
-        path: /home/ci/.rbenv
       - name: mysql
         path: /var/lib/mysql
     commands:
@@ -322,8 +316,6 @@ steps:
   - name: cache-staging-ci-build
     image: plugins/s3-cache
     volumes:
-      - name: rbenv
-        path: /home/ci/.rbenv
       - name: mysql
         path: /var/lib/mysql
     settings:
@@ -338,8 +330,6 @@ steps:
         - /var/lib/mysql
 
 volumes:
-  - name: rbenv
-    temp: {}
   - name: mysql
     temp: {}
 
