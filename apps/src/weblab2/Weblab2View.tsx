@@ -146,11 +146,15 @@ const Weblab2View: React.FC<
     });
   }, [source, levelProperties.longInstructions, userAddedSelectionContext]);
 
+  // Since there's no run button in Weblab2, set it to true by default
+  // to enable the Submit button on edit on submittable levels.
+  // Set back to false on unmount in case we switch to a different level type.
   const dispatch = useAppDispatch();
-
   useEffect(() => {
+    dispatch(setHasRun(true));
+
     return () => {
-      dispatch(setHasRun(true));
+      dispatch(setHasRun(false));
     };
   }, [dispatch]);
 
