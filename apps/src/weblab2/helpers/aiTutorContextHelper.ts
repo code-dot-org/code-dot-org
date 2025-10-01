@@ -41,7 +41,7 @@ export class AiTutorWebLab2ContextHelper extends AiTutorContextHelper<AiTutorWeb
                   context.lineReference.start === context.lineReference.end
                     ? `line ${context.lineReference.start}`
                     : `lines ${context.lineReference.start} - ${context.lineReference.end}`;
-                return `snippet of file ${context.filename}, ${lineString}\nContents of snippet:\n\`\`\`${context.sourceCode}}\`\`\``;
+                return `snippet of file ${context.filename}, ${lineString}\nContents of snippet:\n\`\`\`${context.sourceCode}\`\`\``;
               } else {
                 return `entirety of file ${context.filename}\nContents of file:\n\`\`\`${context.sourceCode}}\`\`\``;
               }
