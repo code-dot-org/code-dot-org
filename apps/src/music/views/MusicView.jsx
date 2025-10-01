@@ -23,7 +23,7 @@ import {
   getAppOptionsViewingExemplar,
 } from '@cdo/apps/lab2/projects/utils';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
-import {setHasRun, setHasLevelActivity} from '@cdo/apps/lab2/redux/systemRedux';
+import {setHasLevelActivity} from '@cdo/apps/lab2/redux/systemRedux';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import AnalyticsReporter from '@cdo/apps/music/analytics/AnalyticsReporter';
 import {setExtraCopyrightContent} from '@cdo/apps/sharedComponents/footer/CopyrightDialog/index';
@@ -136,7 +136,6 @@ class UnconnectedMusicView extends React.Component {
     clearCodeToLoad: PropTypes.func,
     sendAttemptReport: PropTypes.func,
     isFirstAttempt: PropTypes.bool,
-    setHasRun: PropTypes.func,
     setHasLevelActivity: PropTypes.func,
   };
 
@@ -191,7 +190,6 @@ class UnconnectedMusicView extends React.Component {
   }
 
   componentDidMount() {
-    this.props.setHasRun(false);
     this.onLevelLoad(
       this.props.levelProperties.levelData,
       this.props.initialSources
@@ -888,7 +886,6 @@ class UnconnectedMusicView extends React.Component {
     this.setState({
       hasRun: true,
     });
-    this.props.setHasRun(true);
     this.props.setHasLevelActivity(true);
     if (this.props.isFirstAttempt) {
       this.props.sendAttemptReport();
@@ -1062,19 +1059,18 @@ const MusicView = connect(
     clearCodeToLoad: () => dispatch(setCodeToLoad(undefined)),
     sendAttemptReport: () =>
       dispatch(sendProgressReport('music', TestResults.LEVEL_STARTED)),
-    setHasRun: hasRun => dispatch(setHasRun(hasRun)),
     setHasLevelActivity: hasActivity =>
       dispatch(setHasLevelActivity(hasActivity)),
   })
 )(UnconnectedMusicView);
 
-const MusicViewWithAnalytics = props => {
+const MusicViewWithHooks = props => {
   useLevelActivityMetrics(props.levelProperties);
   return <MusicView {...props} />;
 };
 
-MusicViewWithAnalytics.propTypes = {
+MusicViewWithHooks.propTypes = {
   levelProperties: PropTypes.object.isRequired,
 };
 
-export default MusicViewWithAnalytics;
+export default MusicViewWithHooks;
