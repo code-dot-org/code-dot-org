@@ -6,9 +6,10 @@ import {html} from '@codemirror/lang-html';
 import {javascript} from '@codemirror/lang-javascript';
 import {markdown} from '@codemirror/lang-markdown';
 import {LanguageSupport} from '@codemirror/language';
-import React, {useEffect, useMemo, useState} from 'react';
+import React, {useEffect, useMemo, useRef, useState} from 'react';
 
 import {SystemPromptOption} from '@cdo/apps/aichat/types';
+import {useAnalyticsOnFirstRun} from '@cdo/apps/lab2/hooks/useAnalyticsOnFirstRun';
 import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
 import {LabProps, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 
@@ -78,6 +79,8 @@ const Weblab2View: React.FC<
   LabProps<Weblab2LevelProperties, ProjectSources>
 > = ({levelProperties, initialSources}) => {
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
+  const hasSetFirstEdit = useRef(false);
+  const initialSourceRef = useRef<string | null>(null);
 
   const source = useAppSelector(
     state =>
@@ -102,6 +105,8 @@ const Weblab2View: React.FC<
     levelProperties,
     initialSources
   );
+
+  useAnalyticsOnFirstRun(levelProperties);
 
   const hasSource = useAppSelector(
     state => !!state.lab2Project.projectSources?.source
@@ -142,13 +147,25 @@ const Weblab2View: React.FC<
     });
   }, [source, levelProperties.longInstructions, userAddedSelectionContext]);
 
-  // Since there's no run button in Weblab2, set it to true by default
-  // to enable the Submit button on edit on submittable levels.
-  // Set back to false on unmount in case we switch to a different level type.
   const dispatch = useAppDispatch();
-  useEffect(() => {
-    dispatch(setHasRun(true));
 
+  useEffect(() => {
+    if (source && initialSourceRef.current === null) {
+      initialSourceRef.current = JSON.stringify(source);
+    }
+  }, [source]);
+
+  useEffect(() => {
+    if (source && initialSourceRef.current && !hasSetFirstEdit.current) {
+      const currentSourceString = JSON.stringify(source);
+      if (currentSourceString !== initialSourceRef.current) {
+        hasSetFirstEdit.current = true;
+        dispatch(setHasRun(true));
+      }
+    }
+  }, [source, dispatch]);
+
+  useEffect(() => {
     return () => {
       dispatch(setHasRun(false));
     };

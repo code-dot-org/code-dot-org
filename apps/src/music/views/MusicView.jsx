@@ -14,6 +14,7 @@ import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {TestResults} from '@cdo/apps/constants';
 import DCDO from '@cdo/apps/dcdo';
 import {START_SOURCES, TOOLBOX_BLOCKS} from '@cdo/apps/lab2/constants';
+import {useAnalyticsOnFirstRun} from '@cdo/apps/lab2/hooks/useAnalyticsOnFirstRun';
 import {setIsLoading, setPageError} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {
@@ -22,9 +23,8 @@ import {
   getAppOptionsViewingExemplar,
 } from '@cdo/apps/lab2/projects/utils';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
+import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
-import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import AnalyticsReporter from '@cdo/apps/music/analytics/AnalyticsReporter';
 import {setExtraCopyrightContent} from '@cdo/apps/sharedComponents/footer/CopyrightDialog/index';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
@@ -136,6 +136,7 @@ class UnconnectedMusicView extends React.Component {
     clearCodeToLoad: PropTypes.func,
     sendAttemptReport: PropTypes.func,
     isFirstAttempt: PropTypes.bool,
+    setHasRun: PropTypes.func,
   };
 
   constructor(props) {
@@ -189,6 +190,7 @@ class UnconnectedMusicView extends React.Component {
   }
 
   componentDidMount() {
+    this.props.setHasRun(false);
     this.onLevelLoad(
       this.props.levelProperties.levelData,
       this.props.initialSources
@@ -882,20 +884,10 @@ class UnconnectedMusicView extends React.Component {
   };
 
   playSong = async () => {
-    if (!this.state.hasRun) {
-      const eventName = this.props.levelProperties.isProjectLevel
-        ? EVENTS.PROJECT_ACTIVITY
-        : EVENTS.LEVEL_ACTIVITY;
-      analyticsReporter.sendEvent(eventName, {
-        signedIn: this.props.signInState,
-        unitName: this.props.scriptName,
-        levelId: this.props.levelProperties.id,
-        levelName: this.props.levelProperties.name,
-      });
-    }
     this.setState({
       hasRun: true,
     });
+    this.props.setHasRun(true);
     if (this.props.isFirstAttempt) {
       this.props.sendAttemptReport();
     }
@@ -1068,7 +1060,17 @@ const MusicView = connect(
     clearCodeToLoad: () => dispatch(setCodeToLoad(undefined)),
     sendAttemptReport: () =>
       dispatch(sendProgressReport('music', TestResults.LEVEL_STARTED)),
+    setHasRun: hasRun => dispatch(setHasRun(hasRun)),
   })
 )(UnconnectedMusicView);
 
-export default MusicView;
+const MusicViewWithAnalytics = props => {
+  useAnalyticsOnFirstRun(props.levelProperties);
+  return <MusicView {...props} />;
+};
+
+MusicViewWithAnalytics.propTypes = {
+  levelProperties: PropTypes.object.isRequired,
+};
+
+export default MusicViewWithAnalytics;

@@ -7,6 +7,7 @@ import {
 } from '@excalidraw/excalidraw/types/types';
 import React, {useEffect, useCallback, useRef, useState} from 'react';
 
+import {useAnalyticsOnFirstRun} from '@cdo/apps/lab2/hooks/useAnalyticsOnFirstRun';
 import {useVerticalLayout} from '@cdo/apps/lab2/hooks/useVerticalLayout';
 import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
 import {
@@ -39,8 +40,13 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
     useState<ExcalidrawImperativeAPI | null>();
   const {currentSources, updateSources} = useSources<ProjectSources>();
   const saveSourcesTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const hasSetFirstInteraction = useRef(false);
+  const initialElementCountRef = useRef<number | null>(null);
+
+  useAnalyticsOnFirstRun(levelProperties);
 
   const hasRun = useAppSelector(state => state.lab2System.hasRun);
+  const dispatch = useAppDispatch();
 
   const {
     leftPanelWidth,
@@ -70,6 +76,21 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
       state: AppState,
       files: BinaryFiles
     ) => {
+      if (initialElementCountRef.current === null) {
+        initialElementCountRef.current = elements.length;
+      }
+
+      if (
+        !hasSetFirstInteraction.current &&
+        initialElementCountRef.current !== null &&
+        elements.length !== initialElementCountRef.current
+      ) {
+        // This only logs the Level Activity metric if a student adds or removes and an element. In the future we should
+        // consider expanding to other interactions.
+        hasSetFirstInteraction.current = true;
+        dispatch(setHasRun(true));
+      }
+
       if (saveSourcesTimeoutRef.current) {
         clearTimeout(saveSourcesTimeoutRef.current);
         saveSourcesTimeoutRef.current = null;
@@ -95,7 +116,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
         updateSources({source: serializedData});
       }, DEBOUNCED_WORKSPACE_SERIALIZATION_MS);
     },
-    [updateSources, excalidrawApi]
+    [updateSources, excalidrawApi, dispatch]
   );
 
   useEffect(() => {
@@ -109,10 +130,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
   // Since there's no run button in Sketch Lab, set it to true by default
   // to enable the Submit button on edit on submittable levels.
   // Set back to false on unmount in case we switch to a different level type.
-  const dispatch = useAppDispatch();
   useEffect(() => {
-    dispatch(setHasRun(true));
-
     return () => {
       dispatch(setHasRun(false));
     };

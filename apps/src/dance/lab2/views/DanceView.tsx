@@ -42,6 +42,7 @@ import {
   SongMetadata,
 } from '@cdo/apps/dance/types';
 import {TOOLBOX_BLOCKS} from '@cdo/apps/lab2/constants';
+import {useAnalyticsOnFirstRun} from '@cdo/apps/lab2/hooks/useAnalyticsOnFirstRun';
 import {useBlocklySettings} from '@cdo/apps/lab2/hooks/useBlocklySettings';
 import useLevelEditMode from '@cdo/apps/lab2/hooks/useLevelEditMode';
 import {setPageError} from '@cdo/apps/lab2/lab2Redux';
@@ -51,6 +52,7 @@ import {
   getIsShareView,
 } from '@cdo/apps/lab2/projects/utils';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
+import {setHasRun as setLab2HasRun} from '@cdo/apps/lab2/redux/systemRedux';
 import {BlocklySource, LabProps} from '@cdo/apps/lab2/types';
 import Guide from '@cdo/apps/lab2/views/components/guide/Guide';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
@@ -58,8 +60,6 @@ import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import SourcesContainer, {
   useSources,
 } from '@cdo/apps/lab2/views/SourcesContainer';
-import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import ProjectPlayer from '@cdo/apps/music/ProjectPlayer';
 import MusicProjectBar from '@cdo/apps/music/views/MusicProjectBar';
 import {registerReducers} from '@cdo/apps/redux';
@@ -104,8 +104,6 @@ const DanceView: React.FunctionComponent<{
   const hasRun = useAppSelector(state => state.dance.hasRun);
   const hasEdited = useAppSelector(state => state.dance.hasEdited);
   const isLoading = useAppSelector(state => state.dance.isLoading);
-  const signedIn = useAppSelector(state => state.currentUser.signInState);
-  const scriptName = useAppSelector(state => state.progress.scriptName);
 
   const {currentSources, updateSources, showStartOverDialog} =
     useSources<DanceProjectSources>();
@@ -121,6 +119,8 @@ const DanceView: React.FunctionComponent<{
   const usingMusicProject = queryParams('music-channel') || aiGenerateMode;
 
   const {theme} = useTheme();
+
+  useAnalyticsOnFirstRun(levelProperties);
 
   const metadataToUse: SongMetadata | undefined = useMemo(() => {
     if (!musicProjectPlayer.current || !loadedMusicProject) {
@@ -204,19 +204,6 @@ const DanceView: React.FunctionComponent<{
   );
 
   const runProgram = useCallback(async () => {
-    if (!hasRun) {
-      const eventName = levelProperties.isProjectLevel
-        ? EVENTS.PROJECT_ACTIVITY
-        : EVENTS.LEVEL_ACTIVITY;
-
-      analyticsReporter.sendEvent(eventName, {
-        signedIn: signedIn,
-        unitName: scriptName,
-        levelId: levelProperties.id,
-        levelName: levelProperties.name,
-      });
-    }
-
     if (!programExecutor.current || !metadataToUse) {
       return;
     }
@@ -232,18 +219,9 @@ const DanceView: React.FunctionComponent<{
     dispatch(setRunIsStarting(false));
     dispatch(setIsRunning(true));
     dispatch(setHasRun(true));
+    dispatch(setLab2HasRun(true));
     saveBlocks(true);
-  }, [
-    hasRun,
-    metadataToUse,
-    dispatch,
-    saveBlocks,
-    levelProperties.isProjectLevel,
-    levelProperties.id,
-    levelProperties.name,
-    signedIn,
-    scriptName,
-  ]);
+  }, [metadataToUse, dispatch, saveBlocks]);
 
   const resetProgram = useCallback(() => {
     programExecutor.current?.reset();
@@ -302,6 +280,7 @@ const DanceView: React.FunctionComponent<{
   // Reset hasRun and hasEdited flag when level changes
   useEffect(() => {
     dispatch(setHasRun(false));
+    dispatch(setLab2HasRun(false));
     dispatch(setHasEdited(false));
   }, [levelProperties.id, dispatch]);
 
