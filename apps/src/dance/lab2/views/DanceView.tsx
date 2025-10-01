@@ -52,10 +52,7 @@ import {
   getIsShareView,
 } from '@cdo/apps/lab2/projects/utils';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
-import {
-  setHasRun as setLab2HasRun,
-  setHasLevelActivity,
-} from '@cdo/apps/lab2/redux/systemRedux';
+import {setHasLevelActivity} from '@cdo/apps/lab2/redux/systemRedux';
 import {BlocklySource, LabProps} from '@cdo/apps/lab2/types';
 import Guide from '@cdo/apps/lab2/views/components/guide/Guide';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
@@ -222,7 +219,6 @@ const DanceView: React.FunctionComponent<{
     dispatch(setRunIsStarting(false));
     dispatch(setIsRunning(true));
     dispatch(setHasRun(true));
-    dispatch(setLab2HasRun(true));
     dispatch(setHasLevelActivity(true));
     saveBlocks(true);
   }, [metadataToUse, dispatch, saveBlocks]);
@@ -284,7 +280,6 @@ const DanceView: React.FunctionComponent<{
   // Reset hasRun and hasEdited flag when level changes
   useEffect(() => {
     dispatch(setHasRun(false));
-    dispatch(setLab2HasRun(false));
     dispatch(setHasEdited(false));
   }, [levelProperties.id, dispatch]);
 
