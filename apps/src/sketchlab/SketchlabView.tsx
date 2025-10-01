@@ -5,7 +5,7 @@ import {
   BinaryFiles,
   ExcalidrawImperativeAPI,
 } from '@excalidraw/excalidraw/types/types';
-import {isEqual, cloneDeep} from 'lodash';
+import {isEqual} from 'lodash';
 import React, {useEffect, useCallback, useRef, useState} from 'react';
 
 import {useVerticalLayout} from '@cdo/apps/lab2/hooks/useVerticalLayout';
@@ -36,10 +36,10 @@ const DEBOUNCED_WORKSPACE_SERIALIZATION_MS = 500;
 const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
   levelProperties,
 }) => {
-  const [excalidrawApi, setExcalidrawApi] =
-    useState<ExcalidrawImperativeAPI | null>();
+  const excalidrawApiRef = useRef<ExcalidrawImperativeAPI | null>();
   const {currentSources, updateSources} = useSources<ProjectSources>();
   const saveSourcesTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const [excalidrawMountKey, setExcalidrawMountKey] = useState(0);
 
   const hasRun = useAppSelector(state => state.lab2System.hasRun);
 
@@ -81,6 +81,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
           serializeAsJSON(elements, state, files, 'local')
         );
 
+        const excalidrawApi = excalidrawApiRef.current;
         if (excalidrawApi) {
           // serializeAsJSON exports an extremely limited set of properties from appState,
           // and excludes the chosen scroll position (scrollX/Y) and zoom,
@@ -96,7 +97,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
         updateSources({source: serializedData});
       }, DEBOUNCED_WORKSPACE_SERIALIZATION_MS);
     },
-    [updateSources, excalidrawApi]
+    [updateSources]
   );
 
   useEffect(() => {
@@ -108,26 +109,23 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
   }, []);
 
   useEffect(() => {
-    // to do: compare other properties (appState, etc)
-    // load necessary things rather than using key approach
+    // Note that we do not compare appState, as Excalidraw tracks a lot of app state properties
+    // that we do not store to S3.
+    const excalidrawApi = excalidrawApiRef.current;
     if (
       excalidrawApi &&
-      !isEqual(
+      (!isEqual(
         excalidrawApi.getSceneElements(),
         (currentSources.source as SketchlabSource).elements
-      )
+      ) ||
+        !isEqual(
+          excalidrawApi.getFiles(),
+          (currentSources.source as SketchlabSource).files
+        ))
     ) {
-      console.log(currentSources.source);
-      excalidrawApi.updateScene({
-        appState: (currentSources.source as SketchlabSource)
-          .appState as AppState,
-        elements: cloneDeep(
-          (currentSources.source as SketchlabSource)
-            .elements as ExcalidrawElement[]
-        ),
-      });
+      setExcalidrawMountKey(key => key + 1);
     }
-  }, [currentSources.source, excalidrawApi]);
+  }, [currentSources.source]);
 
   // Since there's no run button in Sketch Lab, set it to true by default
   // to enable the Submit button on edit on submittable levels.
@@ -165,7 +163,8 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
           <Excalidraw
             initialData={currentSources.source as SketchlabSource}
             onChange={debouncedSerializeAndSaveWorkspace}
-            excalidrawAPI={api => setExcalidrawApi(api)}
+            excalidrawAPI={api => (excalidrawApiRef.current = api)}
+            key={excalidrawMountKey}
           />
         </PanelContainer>
       </div>
