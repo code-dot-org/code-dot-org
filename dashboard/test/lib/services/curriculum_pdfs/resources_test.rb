@@ -87,7 +87,7 @@ class Services::CurriculumPdfs::ResourcesTest < ActiveSupport::TestCase
       resource.include_in_pdf = true
       resource.save
       script.reload
-      PDF.expects(:merge_local_pdfs).with {|_output, *input| input.length == 3}
+      PDF.expects(:merge_local_pdfs).with {|_output, *input| input.length == 2}
       Services::CurriculumPdfs.generate_script_resources_pdf(script, tmpdir)
     end
   end
