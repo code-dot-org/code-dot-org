@@ -35,7 +35,7 @@ const SHARED_LINKS = {
     label: 'Hour of AI',
   },
   HOUR_OF_AI_ACTIVITIES: {
-    href: '/hour-of-ai/activities',
+    href: '/activities/hour-of-ai',
     label: 'Activities',
   },
   HOUR_OF_AI_HOST_AN_EVENT: {
