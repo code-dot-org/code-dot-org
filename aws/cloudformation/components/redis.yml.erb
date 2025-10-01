@@ -1,15 +1,17 @@
-  # SESSION_STORE_MIGRATION_DELETE_ME
-  # We are migrating from the SessionStore name to Redis, this file should be deleted once migration
-  # is complete (expected by November 2025).
-  SessionStoreSubnetGroup:
+  #
+  # Our primary dashboard Redis instance, accessed as CDO.redis_url throughout the Dashboard.
+  #
+  # Used by session storage, geocoder, actioncable, etc.
+  #
+  RedisSubnetGroup:
     Type: AWS::ElastiCache::SubnetGroup
     Properties:
-      Description: Session Store Subnet Group
+      Description: Redis Subnet Group
       SubnetIds: <%= subnets.to_json %>
-  SessionStoreGroup:
+  RedisGroup:
     Type: AWS::ElastiCache::ReplicationGroup
     Properties:
-      ReplicationGroupDescription: <%="Session Store Replication Group (#{stack_name})" %>
+      ReplicationGroupDescription: <%="Redis Replication Group (CDO.redis_url for #{stack_name})" %>
       # 3 nodes of cache.r7g.xlarge will cost ($0.437 * 730 * 3) = ~$960/month
       # and provide just under 80GB of storage.
       CacheNodeType: <%= rack_env?(:production) ? 'cache.r7g.xlarge' : 'cache.t4g.micro' -%>
@@ -26,17 +28,17 @@
       AtRestEncryptionEnabled: true
 
       SecurityGroupIds: [!ImportValue VPC-RedisSecurityGroup]
-      CacheSubnetGroupName: !Ref SessionStoreSubnetGroup
-  # CloudWatch Alarms for the Redis-based Session Store
+      CacheSubnetGroupName: !Ref RedisSubnetGroup
+  # CloudWatch Alarms for Redis
   #
   # Based on:
   # https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheMetrics.WhichShouldIMonitor.html
   # and
   # https://aws.amazon.com/blogs/database/monitoring-best-practices-with-amazon-elasticache-for-redis-using-amazon-cloudwatch/
-  SessionStoreCPUUsageAlarm:
+  RedisCPUUsageAlarm:
     Type: AWS::CloudWatch::Alarm
     Properties:
-      AlarmName: <%="Redis Session Store CPU Usage Too High (#{stack_name})" %>
+      AlarmName: <%="Redis CPU Usage Too High (CDO.redis_url for #{stack_name})" %>
       AlarmDescription: AWS Documentation recommends maintaining
         EngineCPUUtilization below 90%. Note that we use EngineCPUUtilization
         rather than CPUUtilization because the cache.r7g.xlarge nodes we're
@@ -51,7 +53,7 @@
       TreatMissingData: missing
       Metrics:
         - Id: max_cpu
-          Label: Maximum EngineCPUUtilization Among Redis Session Store Nodes
+          Label: Maximum EngineCPUUtilization Among Redis Nodes
           ReturnData: true
           Expression: MAX(METRICS())
 <% (1..num_cache_clusters).each do |cluster_id| -%>
@@ -63,15 +65,15 @@
               MetricName: EngineCPUUtilization
               Dimensions:
                 - Name: CacheClusterId
-                  Value: !Sub "${SessionStoreGroup}-<%= cluster_id.to_s.rjust(3, '0') %>"
+                  Value: !Sub "${RedisGroup}-<%= cluster_id.to_s.rjust(3, '0') %>"
             Period: 60
             Stat: Maximum
 <% end -%>
-  SessionStoreEvictionsAlarm:
+  RedisEvictionsAlarm:
     Type: AWS::CloudWatch::Alarm
     Properties:
-      AlarmName: <%="Redis Session Store Evictions (#{stack_name})" %>
-      AlarmDescription: We're seeing evictions from the Redis session store. We
+      AlarmName: <%="Redis Evictions (CDO.redis_url for #{stack_name})" %>
+      AlarmDescription: We're seeing evictions from Redis. We
         expect to remain under 100% usage in this cluster; evictions are a sign
         that we have exceeded that. A low number of evictions should not have a
         user-facing impact, since we intentionally store session data for
@@ -85,17 +87,17 @@
       Statistic: Maximum
       Dimensions:
         - Name: CacheClusterId
-          Value: !Sub "${SessionStoreGroup}-001"
+          Value: !Sub "${RedisGroup}-001"
       Period: 300
       EvaluationPeriods: 5
       DatapointsToAlarm: 3
       Threshold: 0
       ComparisonOperator: GreaterThanThreshold
       TreatMissingData: missing
-  SessionStoreNetworkBytesInAlarm:
+  RedisNetworkBytesInAlarm:
     Type: AWS::CloudWatch::Alarm
     Properties:
-      AlarmName: <%="Redis Session Store Incoming Network Traffic Too High (#{stack_name})" %>
+      AlarmName: <%="Redis Incoming Network Traffic Too High (CDO.redis_url for #{stack_name})" %>
       AlarmDescription:
         The cache.r7g.xlarge nodes we use have a guaranteed performance of "Up
         to 12.5 Gigabit"; because that includes both reads and writes and
@@ -111,7 +113,7 @@
       TreatMissingData: missing
       Metrics:
         - Id: max_networkin
-          Label: Maximum Incoming Network Traffic Among Redis Session Store Nodes
+          Label: Maximum Incoming Network Traffic Among Redis Nodes
           ReturnData: true
           Expression: MAX(METRICS())
 <% (1..num_cache_clusters).each do |cluster_id| -%>
@@ -123,14 +125,14 @@
               MetricName: NetworkBytesIn
               Dimensions:
                 - Name: CacheClusterId
-                  Value: !Sub "${SessionStoreGroup}-<%= cluster_id.to_s.rjust(3, '0') %>"
+                  Value: !Sub "${RedisGroup}-<%= cluster_id.to_s.rjust(3, '0') %>"
             Period: 60
             Stat: Maximum
 <% end -%>
-  SessionStoreNetworkBytesOutAlarm:
+  RedisNetworkBytesOutAlarm:
     Type: AWS::CloudWatch::Alarm
     Properties:
-      AlarmName: <%="Redis Session Store Outgoing Network Traffic Too High (#{stack_name})" %>
+      AlarmName: <%="Redis Outgoing Network Traffic Too High (CDO.redis_url for #{stack_name})" %>
       AlarmDescription:
         The cache.r7g.xlarge nodes we use have a guaranteed performance of "Up
         to 12.5 Gigabit"; because that includes both reads and writes and
@@ -146,7 +148,7 @@
       TreatMissingData: missing
       Metrics:
         - Id: max_networkout
-          Label: Maximum Outgoing Network Traffic Among Redis Session Store Nodes
+          Label: Maximum Outgoing Network Traffic Among Redis Nodes
           ReturnData: true
           Expression: MAX(METRICS())
 <% (1..num_cache_clusters).each do |cluster_id| -%>
@@ -158,7 +160,7 @@
               MetricName: NetworkBytesOut
               Dimensions:
                 - Name: CacheClusterId
-                  Value: !Sub "${SessionStoreGroup}-<%= cluster_id.to_s.rjust(3, '0') %>"
+                  Value: !Sub "${RedisGroup}-<%= cluster_id.to_s.rjust(3, '0') %>"
             Period: 60
             Stat: Maximum
 <% end -%>
