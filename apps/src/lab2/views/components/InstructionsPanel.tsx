@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React, {useEffect, useRef} from 'react';
+import React from 'react';
 
 import InstructorsOnly from '@cdo/apps/code-studio/components/InstructorsOnly';
 import {queryParams} from '@cdo/apps/code-studio/utils';
@@ -91,18 +91,6 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
   // the unique index.
   const useMessageIndex = useSecondaryFinishButton ? undefined : messageIndex;
 
-  const feedbackRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    // Focus on the feedback message when it first becomes present and the program is not running.
-    // This ensures it will be read by screen readers.
-    // It's ok to focus after each run switch, as the message will also reappear when the user re-runs
-    // the program.
-    if (message && !isRunning) {
-      feedbackRef.current?.focus();
-    }
-  }, [message, isRunning]);
-
   return (
     <div
       id="instructions"
@@ -116,6 +104,7 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
     >
       <div
         id="instructions-panel"
+        aria-live="polite"
         className={classNames(
           moduleStyles.item,
           vertical && moduleStyles.itemVertical
@@ -182,7 +171,7 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
             >
               <div className={moduleStyles.messageContent}>
                 {useMessage && (
-                  <div id="focusable-feedback" ref={feedbackRef} tabIndex={-1}>
+                  <div tabIndex={-1}>
                     <EnhancedSafeMarkdown
                       markdown={useMessage}
                       className={moduleStyles.markdownText}

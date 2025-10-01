@@ -249,12 +249,16 @@ const ActivityCatalog = ({
         isOpen={isFacetDrawerOpen}
         onClose={() => toggleFacetDrawer(false)}
       />
-      <Grid container spacing={3} sx={{justifyContent: 'center'}}>
+      <Grid container spacing={6} sx={{justifyContent: 'center', mb: 5}}>
         <Grid size={10} sx={{display: {xs: 'none', sm: 'none', md: 'block'}}}>
           <FacetBar {...facetBarProps} />
         </Grid>
 
-        <Grid size={2}>
+        <Grid
+          container
+          justifyContent="center"
+          sx={{display: {xs: 'flex', md: 'none'}}}
+        >
           <Button
             onClick={() => toggleFacetDrawer(true)}
             color={'secondary'}

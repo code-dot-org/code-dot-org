@@ -304,16 +304,16 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
             multimodalAvailable={multimodalAvailable}
           />
         )}
-        <div className={moduleStyles.buttonRow}>
-          {multimodalAvailable && (
+        {multimodalAvailable && (
+          <div className={moduleStyles.buttonRow}>
             <UploadButton
               isDisabled={uploadDisabled}
               levelName={levelName}
               hasStarterAssets={hasStarterAssets}
               buildAssetUrl={buildAssetUrl}
             />
-          )}
-        </div>
+          </div>
+        )}
       </div>
     </div>
   );

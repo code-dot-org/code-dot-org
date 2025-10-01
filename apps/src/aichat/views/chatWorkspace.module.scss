@@ -62,6 +62,7 @@ $tabs-default-spacing: 4px;
 
   p {
     color: var(--text-neutral-quaternary);
+    text-align: center;
   }
 
   .chatDisabledIcon {
@@ -97,15 +98,15 @@ $tabs-default-spacing: 4px;
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  padding: 0 10px;
 }
 
 .footer {
   display: flex;
   flex-direction: column;
-  gap: 2px;
-  padding: 16px 6px;
+  gap: 0.5rem;
+  padding: 0.625rem;
   border-top: variables.$default-border;
+  background: var(--background-neutral-secondary);
 }
 
 .alertLink {
@@ -132,6 +133,5 @@ $tabs-default-spacing: 4px;
 }
 
 .modeDropdown {
-  margin-inline-start: 10px;
   width: fit-content;
 }
