@@ -1,0 +1,936 @@
+Chef Infra Client, version 17.6.18
+Patents: https://www.chef.io/patents
+Infra Phase starting
+Resolving cookbooks for run list: []
+Synchronizing cookbooks:
+Installing cookbook gem dependencies:
+Compiling cookbooks...
+Loading Chef InSpec profile files:
+Loading Chef InSpec input files:
+Loading Chef InSpec waiver files:
+Converging 0 resources
+
+Running handlers:
+Running handlers complete
+Infra Phase complete, 0/0 resources updated in 01 seconds
+Chef Infra Client, version 17.6.18
+Patents: https://www.chef.io/patents
+Infra Phase starting
+Resolving cookbooks for run list: ["cdo-apps", "cdo-home-ubuntu"]
+Synchronizing cookbooks:
+  - apt (7.4.2)
+  - cdo-cloudwatch-agent (0.1.20)
+  - cdo-repository (0.2.56)
+  - cdo-secrets (0.1.12)
+  - cdo-postfix (0.2.20)
+  - cdo-apps (0.2.671)
+  - cdo-home-ubuntu (0.1.8)
+  - cdo-mysql (0.1.78)
+  - chef_client_updater (3.12.3)
+  - cdo-ruby (0.2.106)
+  - cdo-java-7 (0.1.2)
+  - cdo-nodejs (0.3.50)
+  - cdo-redis (0.1.14)
+  - cdo-nginx (0.0.54)
+  - cdo-i18n (0.1.18)
+  - cdo-analytics (0.1.16)
+  - cdo-syslog (0.1.14)
+  - cdo-jemalloc (0.1.16)
+  - cdo-tippecanoe (0.1.15)
+  - cdo-python (0.1.7)
+  - aws_cloudwatch (2.0.0)
+  - cdo-github-access (0.1.12)
+  - nodejs (10.1.0)
+  - redisio (6.3.0)
+  - ark (6.0.4)
+  - packagecloud (2.0.4)
+  - chocolatey (3.0.0)
+  - yum (7.4.0)
+  - selinux (6.0.7)
+  - seven_zip (4.2.2)
+  - ssl_certificate (2.2.0)
+  - postfix (6.0.7)
+Installing cookbook gem dependencies:
+Compiling cookbooks...
+Loading Chef InSpec profile files:
+Loading Chef InSpec input files:
+Loading Chef InSpec waiver files:
+Recipe: cdo-apps::hostname
+  * hostname[set to Chef node name] action set
+    * ohai[reload hostname] action nothing (skipped due to action :nothing)
+    * execute[set hostname to adhoc-test-full-stack-daemon] action run
+      - execute /bin/hostname adhoc-test-full-stack-daemon
+    * file[/etc/hosts] action create
+      - update content in file /etc/hosts from aa4ea9 to 13dec8
+      --- /etc/hosts	2023-05-17 08:35:10.000000000 +0000
+      +++ /etc/.chef-hosts20250906-72200-9r5cv1	2025-09-06 00:28:00.060950193 +0000
+      @@ -7,4 +7,5 @@
+       ff02::1 ip6-allnodes
+       ff02::2 ip6-allrouters
+       ff02::3 ip6-allhosts
+      +10.0.0.168 adhoc-test-full-stack-daemon adhoc-test-full-stack-daemon
+    * execute[hostnamectl set-hostname adhoc-test-full-stack-daemon] action run
+      - execute hostnamectl set-hostname adhoc-test-full-stack-daemon
+    * ohai[reload hostname] action reload
+      - re-run ohai and merge results into node attributes
+    * ohai[reload hostname] action reload
+      - re-run ohai and merge results into node attributes
+  
+  Converging 126 resources
+Recipe: cdo-apps::default
+  * chef_client_updater[install] action update
+    * chef_gem[mixlib-install] action install
+      - install version ~> 3.12 of package mixlib-install
+    * chef_gem[mixlib-install] action nothing (skipped due to action :nothing)
+    * cron[chef_client_updater] action delete (up to date)
+  
+Recipe: apt::default
+  * file[/var/lib/apt/periodic/update-success-stamp] action nothing (skipped due to action :nothing)
+  * apt_update[periodic] action periodic (up to date)
+  * execute[apt-get update] action nothing (skipped due to action :nothing)
+  * execute[apt-get autoremove] action nothing (skipped due to action :nothing)
+  * execute[apt-get autoclean] action nothing (skipped due to action :nothing)
+  * directory[/var/cache/local] action create
+    - create new directory /var/cache/local
+    - change mode from '' to '0755'
+    - change owner from '' to 'root'
+    - change group from '' to 'root'
+  * directory[/var/cache/local/preseeding] action create
+    - create new directory /var/cache/local/preseeding
+    - change mode from '' to '0755'
+    - change owner from '' to 'root'
+    - change group from '' to 'root'
+  * template[/etc/apt/apt.conf.d/10dpkg-options] action create
+    - create new file /etc/apt/apt.conf.d/10dpkg-options
+    - update content in file /etc/apt/apt.conf.d/10dpkg-options from none to c918ac
+    --- /etc/apt/apt.conf.d/10dpkg-options	2025-09-06 00:28:02.252970461 +0000
+    +++ /etc/apt/apt.conf.d/.chef-10dpkg-options20250906-72200-vc46y7	2025-09-06 00:28:02.252970461 +0000
+    @@ -1 +1,4 @@
+    +# Managed by Chef
+    +DPkg::Options {
+    +}
+    - change mode from '' to '0644'
+    - change owner from '' to 'root'
+    - change group from '' to 'root'
+  * template[/etc/apt/apt.conf.d/10recommends] action create
+    - create new file /etc/apt/apt.conf.d/10recommends
+    - update content in file /etc/apt/apt.conf.d/10recommends from none to f41e1d
+    --- /etc/apt/apt.conf.d/10recommends	2025-09-06 00:28:02.284970755 +0000
+    +++ /etc/apt/apt.conf.d/.chef-10recommends20250906-72200-b6e6m9	2025-09-06 00:28:02.280970719 +0000
+    @@ -1 +1,4 @@
+    +# Managed by Chef
+    +APT::Install-Recommends "1";
+    +APT::Install-Suggests "0";
+    - change mode from '' to '0644'
+    - change owner from '' to 'root'
+    - change group from '' to 'root'
+  * apt_package[apt-transport-https, gnupg, dirmngr] action install
+    - install version 2.0.11 of package apt-transport-https
+Recipe: cdo-apps::hostname
+  * hostname[set to Chef node name] action nothing (skipped due to action :nothing)
+Recipe: cdo-apps::default
+  * apt_package[imagemagick, libmagickcore-dev, libmagickwand-dev, fonts-noto] action install
+    - install version 8:6.9.10.23+dfsg-2.1ubuntu11.11 of package imagemagick
+    - install version 8:6.9.10.23+dfsg-2.1ubuntu11.11 of package libmagickcore-dev
+    - install version 8:6.9.10.23+dfsg-2.1ubuntu11.11 of package libmagickwand-dev
+    - install version 20200323-1build1~ubuntu20.04.1 of package fonts-noto
+  * remote_file[/etc/chef/local-mode-cache/cache/pdftk-java_3.0.9-1_all.deb] action create_if_missing
+    - create new file /etc/chef/local-mode-cache/cache/pdftk-java_3.0.9-1_all.deb
+    - update content in file /etc/chef/local-mode-cache/cache/pdftk-java_3.0.9-1_all.deb from none to e14dfd
+    (new content is binary, diff output suppressed)
+  * apt_package[default-jre-headless, libbcprov-java, libcommons-lang3-java] action install
+    - install version 2:1.11-72 of package default-jre-headless
+    - install version 1.61-1 of package libbcprov-java
+    - install version 3.8-2 of package libcommons-lang3-java
+  * dpkg_package[pdftk-java] action install
+    - install version 3.0.9-1 of package pdftk-java
+  * apt_package[enscript] action install
+    - install version 1.6.5.90-3 of package enscript
+Recipe: cdo-python::default
+  * apt_package[curl] action install (up to date)
+  * execute[install uv] action run
+    [execute] downloading uv 0.5.18 x86_64-unknown-linux-gnu
+              no checksums to verify
+              installing to /usr/local/bin
+                uv
+                uvx
+              everything's installed!
+    - execute curl -LsSf https://astral.sh/uv/0.5.18/install.sh | XDG_BIN_HOME=/usr/local/bin UV_NO_MODIFY_PATH=1 sh
+Recipe: cdo-apps::default
+  * apt_package[autoconf, binutils-doc, bison, build-essential, flex, gettext, ncurses-dev, cmake] action install
+    - install version 2.34-6ubuntu1.11 of package binutils-doc
+    - install version 2:3.5.1+dfsg-1 of package bison
+    - install version 2.6.4-6.2 of package flex
+    - install version 0.19.8.1-10build1 of package gettext
+    - install version 6.2-0ubuntu2.1 of package ncurses-dev
+    - install version 3.16.3-1ubuntu1.20.04.1 of package cmake
+Recipe: cdo-ruby::ruby-build
+  * remote_file[/tmp/ruby-build-20250424.tar.gz] action create_if_missing
+    - create new file /tmp/ruby-build-20250424.tar.gz
+    - update content in file /tmp/ruby-build-20250424.tar.gz from none to 3610f8
+    (new content is binary, diff output suppressed)
+  * archive_file[/tmp/ruby-build-20250424.tar.gz] action extract
+    - create directory /tmp/ruby-build
+    - extract /tmp/ruby-build-20250424.tar.gz to /tmp/ruby-build
+  * execute[install ruby-build] action run
+    - execute ./install.sh
+  * apt_package[autoconf, patch, build-essential, rustc, libssl-dev, libyaml-dev, libreadline6-dev, zlib1g-dev, libgmp-dev, libncurses5-dev, libffi-dev, libgdbm6, libgdbm-dev, libdb-dev, uuid-dev] action install
+    - install version 1.75.0+dfsg0ubuntu1~bpo0-0ubuntu0.20.04 of package rustc
+    - install version 1.1.1f-1ubuntu2.24 of package libssl-dev
+    - install version 0.2.2-1 of package libyaml-dev
+    - install version 8.0-4 of package libreadline6-dev
+    - install version 2:6.2.0+dfsg-4ubuntu0.1 of package libgmp-dev
+    - install version 6.2-0ubuntu2.1 of package libncurses5-dev
+    - install version 1.18.1-5 of package libgdbm-dev
+    - install version 1:5.3.21~exp1ubuntu2 of package libdb-dev
+  * execute[install ruby with ruby build] action run
+    [execute] ==> Downloading ruby-3.1.0.tar.gz...
+              -> curl -q -fL -o ruby-3.1.0.tar.gz https://cache.ruby-lang.org/pub/ruby/3.1/ruby-3.1.0.tar.gz
+                % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                               Dload  Upload   Total   Spent    Left  Speed
+                0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 19.1M  100 19.1M    0     0  65.6M      0 --:--:-- --:--:-- --:--:-- 65.6M
+              ==> Installing ruby-3.1.0...
+              
+              WARNING: ruby-3.1.0 is nearing its end of life.
+              It only receives critical security updates, no bug fixes.
+              
+              -> ./configure --prefix=/usr/local --enable-shared --with-ext=openssl,psych,+
+              -> make -j 8
+              -> make install
+              ==> Installed ruby-3.1.0 to /usr/local
+    - execute ruby-build 3.1.0 /usr/local
+Recipe: cdo-ruby::rubygems
+  * directory[/usr/local/etc] action create (up to date)
+  * cookbook_file[/usr/local/etc/gemrc] action create_if_missing
+    - create new file /usr/local/etc/gemrc
+    - update content in file /usr/local/etc/gemrc from none to 3f50de
+    --- /usr/local/etc/gemrc	2025-09-06 00:34:08.167215597 +0000
+    +++ /usr/local/etc/.chef-gemrc20250906-72200-p8owf6	2025-09-06 00:34:08.163215581 +0000
+    @@ -1 +1,9 @@
+    +---
+    +:backtrace: false
+    +:benchmark: false
+    +:update_sources: true
+    +:bulk_threshold: 1000
+    +:verbose: true
+    +install: --no-ri --no-rdoc
+    +update: --no-ri --no-rdoc
+    - change mode from '' to '0644'
+  * execute[gem update --system] action run
+    [execute] Updating rubygems-update
+              Successfully installed rubygems-update-3.3.22
+              Parsing documentation for rubygems-update-3.3.22
+              Installing ri documentation for rubygems-update-3.3.22
+              Done installing documentation for rubygems-update after 154 seconds
+              Parsing documentation for rubygems-update-3.3.22
+              Done installing documentation for rubygems-update after 0 seconds
+              Installing RubyGems 3.3.22
+                Successfully built RubyGem
+                Name: bundler
+                Version: 2.3.22
+                File: bundler-2.3.22.gem
+              Bundler 2.3.22 installed
+              RubyGems 3.3.22 installed
+              Regenerating binstubs
+              Regenerating plugins
+              Parsing documentation for rubygems-3.3.22
+              Installing ri documentation for rubygems-3.3.22
+              
+              # 3.3.22 / 2022-09-07
+              
+              ## Enhancements:
+              
+              * Support non gnu libc arm-linux-eabi platforms. Pull request #5889 by
+                ntkme
+              * Installs bundler 2.3.22 as a default gem.
+              
+              ## Bug fixes:
+              
+              * Fix `gem info` with explicit `--version`. Pull request #5884 by
+                tonyaraujop
+              
+              # 3.3.21 / 2022-08-24
+              
+              ## Enhancements:
+              
+              * Support non gnu libc linux platforms. Pull request #5852 by
+                deivid-rodriguez
+              * Installs bundler 2.3.21 as a default gem.
+              
+              # 3.3.20 / 2022-08-10
+              
+              ## Enhancements:
+              
+              * Include backtrace with crashes by default. Pull request #5811 by
+                deivid-rodriguez
+              * Don't create broken symlinks when a gem includes them, but print a
+                warning instead. Pull request #5801 by deivid-rodriguez
+              * Warn (rather than crash) when setting `nil` specification versions. Pull
+                request #5794 by deivid-rodriguez
+              * Installs bundler 2.3.20 as a default gem.
+              
+              ## Bug fixes:
+              
+              * Always consider installed specs for resolution, even if prereleases.
+                Pull request #5821 by deivid-rodriguez
+              * Fix `gem install` with `--platform` flag not matching simulated platform
+                correctly. Pull request #5820 by deivid-rodriguez
+              * Fix platform matching for index specs. Pull request #5795 by Ilushkanama
+              
+              # 3.3.19 / 2022-07-27
+              
+              ## Enhancements:
+              
+              * Display mfa warnings on `gem signin`. Pull request #5590 by aellispierce
+              * Require fileutils more lazily when installing gems. Pull request #5738
+                by deivid-rodriguez
+              * Fix upgrading RubyGems with a customized `Gem.default_dir`. Pull request
+                #5728 by deivid-rodriguez
+              * Stop using `/dev/null` for silent ui for WASI platform. Pull request
+                #5703 by kateinoigakukun
+              * Unify loading `Gem::Requirement`. Pull request #5596 by deivid-rodriguez
+              * Installs bundler 2.3.19 as a default gem.
+              
+              ## Bug fixes:
+              
+              * Fix `ruby setup.rb` with `--destdir` writing outside of `--destdir`.
+                Pull request #5737 by deivid-rodriguez
+              
+              ## Documentation:
+              
+              * Fix wrong information about default RubyGems source. Pull request #5723
+                by tnir
+              
+              # 3.3.18 / 2022-07-14
+              
+              ## Enhancements:
+              
+              * Make platform `universal-mingw32` match "x64-mingw-ucrt". Pull request
+                #5655 by johnnyshields
+              * Add more descriptive messages when `gem update` fails to update some
+                gems. Pull request #5676 by brianleshopify
+              * Installs bundler 2.3.18 as a default gem.
+              
+              ## Bug fixes:
+              
+              * Make sure RubyGems prints no warnings when loading plugins. Pull request
+                #5607 by deivid-rodriguez
+              
+              # 3.3.17 / 2022-06-29
+              
+              ## Enhancements:
+              
+              * Document `gem env` argument aliases and add `gem env user_gemhome` and
+                `gem env user_gemdir`. Pull request #5644 by deivid-rodriguez
+              * Improve error message when `operating_system.rb` fails to load. Pull
+                request #5658 by deivid-rodriguez
+              * Clean up temporary directory after `generate_index --update`. Pull
+                request #5653 by graywolf-at-work
+              * Simplify extension builder. Pull request #5626 by deivid-rodriguez
+              * Installs bundler 2.3.17 as a default gem.
+              
+              ## Documentation:
+              
+              * Modify RubyGems issue template to be like the one for Bundler. Pull
+                request #5643 by deivid-rodriguez
+              
+              # 3.3.16 / 2022-06-15
+              
+              ## Enhancements:
+              
+              * Auto-fix and warn gem packages including a gemspec with `require_paths`
+                as an array of arrays. Pull request #5615 by deivid-rodriguez
+              * Misc cargo builder improvements. Pull request #5459 by ianks
+              * Installs bundler 2.3.16 as a default gem.
+              
+              ## Bug fixes:
+              
+              * Fix incorrect password redaction when there's an error in `gem source
+                -a`. Pull request #5623 by deivid-rodriguez
+              * Fix another regression when loading old marshaled specs. Pull request
+                #5610 by deivid-rodriguez
+              
+              # 3.3.15 / 2022-06-01
+              
+              ## Enhancements:
+              
+              * Support the change of did_you_mean about `Exception#detailed_message`.
+                Pull request #5560 by mame
+              * Installs bundler 2.3.15 as a default gem.
+              
+              ## Bug fixes:
+              
+              * Fix loading old marshaled specs including `YAML::PrivateType` constant.
+                Pull request #5415 by deivid-rodriguez
+              * Fix rubygems update when non default `--install-dir` is configured. Pull
+                request #5566 by deivid-rodriguez
+              
+              # 3.3.14 / 2022-05-18
+              
+              ## Enhancements:
+              
+              * Installs bundler 2.3.14 as a default gem.
+              
+              # 3.3.13 / 2022-05-04
+              
+              ## Enhancements:
+              
+              * Installs bundler 2.3.13 as a default gem.
+              
+              ## Bug fixes:
+              
+              * Fix regression when resolving ruby constraints. Pull request #5486 by
+                deivid-rodriguez
+              
+              ## Documentation:
+              
+              * Clarify description of owner-flags. Pull request #5497 by kronn
+              
+              # 3.3.12 / 2022-04-20
+              
+              ## Enhancements:
+              
+              * Less error swallowing when installing gems. Pull request #5475 by
+                deivid-rodriguez
+              * Stop considering `RUBY_PATCHLEVEL` for resolution. Pull request #5472 by
+                deivid-rodriguez
+              * Bump vendored optparse to latest master. Pull request #5466 by
+                deivid-rodriguez
+              * Installs bundler 2.3.12 as a default gem.
+              
+              ## Documentation:
+              
+              * Fix formatting in docs. Pull request #5470 by peterzhu2118
+              * Fix a typo. Pull request #5401 by znz
+              
+              # 3.3.11 / 2022-04-07
+              
+              ## Enhancements:
+              
+              * Enable mfa on specific keys during gem signin. Pull request #5305 by
+                aellispierce
+              * Prefer `__dir__` to `__FILE__`. Pull request #5444 by deivid-rodriguez
+              * Add cargo builder for rust extensions. Pull request #5175 by ianks
+              * Installs bundler 2.3.11 as a default gem.
+              
+              ## Documentation:
+              
+              * Improve RDoc setup. Pull request #5398 by deivid-rodriguez
+              
+              # 3.3.10 / 2022-03-23
+              
+              ## Enhancements:
+              
+              * Installs bundler 2.3.10 as a default gem.
+              
+              ## Documentation:
+              
+              * Enable `Gem::Package` example in RDoc documentation. Pull request #5399
+                by nobu
+              * Unhide RDoc documentation from top level `Gem` module. Pull request
+                #5396 by nobu
+              
+              # 3.3.9 / 2022-03-09
+              
+              ## Enhancements:
+              
+              * Installs bundler 2.3.9 as a default gem.
+              
+              # 3.3.8 / 2022-02-23
+              
+              ## Enhancements:
+              
+              * Installs bundler 2.3.8 as a default gem.
+              
+              # 3.3.7 / 2022-02-09
+              
+              ## Enhancements:
+              
+              * Installs bundler 2.3.7 as a default gem.
+              
+              ## Documentation:
+              
+              * Fix missing rdoc for `Gem::Version`. Pull request #5299 by nevans
+              
+              # 3.3.6 / 2022-01-26
+              
+              ## Enhancements:
+              
+              * Forbid downgrading past the originally shipped version on Ruby 3.1. Pull
+                request #5301 by deivid-rodriguez
+              * Support `--enable-load-relative` inside binstubs. Pull request #2929 by
+                deivid-rodriguez
+              * Let `Version#<=>` accept a String. Pull request #5275 by amatsuda
+              * Installs bundler 2.3.6 as a default gem.
+              
+              ## Bug fixes:
+              
+              * Avoid `flock` on non Windows systems, since it causing issues on NFS
+                file systems. Pull request #5278 by deivid-rodriguez
+              * Fix `gem update --system`  for already installed version of
+                `rubygems-update`. Pull request #5285 by loadkpi
+              
+              # 3.3.5 / 2022-01-12
+              
+              ## Enhancements:
+              
+              * Don't activate `yaml` gem from RubyGems. Pull request #5266 by
+                deivid-rodriguez
+              * Let `gem fetch` understand `<gem>:<version>` syntax and
+                `--[no-]suggestions` flag. Pull request #5242 by ximenasandoval
+              * Installs bundler 2.3.5 as a default gem.
+              
+              ## Bug fixes:
+              
+              * Fix `gem install <non-existent-gem> --force` crash. Pull request #5262
+                by deivid-rodriguez
+              * Fix longstanding `gem install` failure on JRuby. Pull request #5228 by
+                deivid-rodriguez
+              
+              ## Documentation:
+              
+              * Markup `Gem::Specification` documentation with RDoc notations. Pull
+                request #5268 by nobu
+              
+              # 3.3.4 / 2021-12-29
+              
+              ## Enhancements:
+              
+              * Don't redownload `rubygems-update` package if already there. Pull
+                request #5230 by deivid-rodriguez
+              * Installs bundler 2.3.4 as a default gem.
+              
+              ## Bug fixes:
+              
+              * Fix `gem update --system` crashing when latest version not supported.
+                Pull request #5191 by deivid-rodriguez
+              
+              ## Performance:
+              
+              * Make SpecificationPolicy autoload constant. Pull request #5222 by pocke
+              
+              
+              ------------------------------------------------------------------------------
+              
+              RubyGems installed the following executables:
+              	/usr/local/bin/gem
+              	/usr/local/bin/bundle
+              	/usr/local/bin/bundler
+              
+              Ruby Interactive (ri) documentation was installed. ri is kind of like man 
+              pages for Ruby libraries. You may access it like this:
+                ri Classname
+                ri Classname.class_method
+                ri Classname#instance_method
+              If you do not wish to install this documentation in the future, use the
+              --no-document flag, or set it as the default in your ~/.gemrc file. See
+              'gem help env' for details.
+              
+              RubyGems system software updated
+    - execute gem update -q --system '3.3.22'
+  * execute[gem uninstall --all --ignore-dependencies --executables] action run (skipped due to only_if)
+Recipe: cdo-ruby::rake
+  * gem_package[rake] action upgrade
+    - upgrade(allow_downgrade) package rake from 13.0.6 to 13.0.1
+Recipe: cdo-ruby::bundler
+  * apt_package[git] action install (up to date)
+  * gem_package[bundler] action upgrade
+    - upgrade(allow_downgrade) package bundler from uninstalled to 2.5.17
+  * template[/home/ubuntu/.gemrc] action create
+    - create new file /home/ubuntu/.gemrc
+    - update content in file /home/ubuntu/.gemrc from none to 77b1c3
+    --- /home/ubuntu/.gemrc	2025-09-06 00:36:53.207842022 +0000
+    +++ /home/ubuntu/.chef-.gemrc20250906-72200-7jh5xz.gemrc	2025-09-06 00:36:53.207842022 +0000
+    @@ -1 +1,2 @@
+    +gem: --no-document
+    - change owner from '' to 'ubuntu'
+    - change group from '' to 'ubuntu'
+Recipe: cdo-apps::default
+  * execute[locale-gen en_US.UTF-8] action run
+    [execute] Generating locales (this might take a while)...
+                en_US.UTF-8... done
+              Generation complete.
+    - execute locale-gen en_US.UTF-8
+  * execute[update-locale] action run (skipped due to not_if)
+Recipe: cdo-github-access::default
+  * apt_package[gnupg] action install (up to date)
+  * apt_repository[git-core] action add
+    * execute[apt-cache gencaches] action nothing (skipped due to action :nothing)
+    * apt_update[git-core] action nothing (skipped due to action :nothing)
+    * execute[install-key F911AB184317630C59970973E363C90F8F1B6217] action run
+      [execute] Warning: apt-key output should not be parsed (stdout is not a terminal)
+                Executing: /tmp/apt-key-gpghome.827GvhlLEN/gpg.1.sh --no-tty --recv --keyserver hkp://keyserver.ubuntu.com:80 F911AB184317630C59970973E363C90F8F1B6217
+                gpg: key E363C90F8F1B6217: public key "Launchpad PPA for Ubuntu Git Maintainers" imported
+                gpg: Total number processed: 1
+                gpg:               imported: 1
+      - execute apt-key adv --no-tty --recv --keyserver hkp://keyserver.ubuntu.com:80 F911AB184317630C59970973E363C90F8F1B6217
+    * execute[apt-cache gencaches] action run
+      [execute] Reading package lists...
+      - execute ["apt-cache", "gencaches"]
+    * file[/etc/apt/sources.list.d/git-core.list] action create
+      - create new file /etc/apt/sources.list.d/git-core.list
+      - update content in file /etc/apt/sources.list.d/git-core.list from none to bcb9ca
+      --- /etc/apt/sources.list.d/git-core.list	2025-09-06 00:36:56.571853649 +0000
+      +++ /etc/apt/sources.list.d/.chef-git-core20250906-72200-wwmweq.list	2025-09-06 00:36:56.571853649 +0000
+      @@ -1 +1,2 @@
+      +deb      http://ppa.launchpad.net/git-core/ppa/ubuntu trusty main
+      - change mode from '' to '0644'
+      - change owner from '' to 'root'
+      - change group from '' to 'root'
+    * execute[apt-cache gencaches] action run
+      [execute] Reading package lists...
+      - execute ["apt-cache", "gencaches"]
+    * apt_update[git-core] action update
+      * directory[/var/lib/apt/periodic] action create (up to date)
+      * directory[/etc/apt/apt.conf.d] action create (up to date)
+      * file[/etc/apt/apt.conf.d/15update-stamp] action create_if_missing (up to date)
+      * execute[apt-get -q update] action run
+        [execute] Hit:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal InRelease
+                  Get:2 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates InRelease [128 kB]
+                  Get:3 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-backports InRelease [128 kB]
+                  Get:4 http://ppa.launchpad.net/git-core/ppa/ubuntu trusty InRelease [18.5 kB]
+                  Get:5 http://ppa.launchpad.net/git-core/ppa/ubuntu trusty/main amd64 Packages [3,474 B]
+                  Get:6 http://ppa.launchpad.net/git-core/ppa/ubuntu trusty/main Translation-en [2,588 B]
+                  Hit:7 http://security.ubuntu.com/ubuntu focal-security InRelease
+                  Fetched 280 kB in 2s (160 kB/s)
+                  Reading package lists...
+        - execute ["apt-get", "-q", "update"]
+      - force update new lists of packages
+  
+  * apt_package[git] action install (up to date)
+  * packagecloud_repo[github/git-lfs] action add
+    * apt_package[wget] action install (up to date)
+    * apt_package[apt-transport-https] action install (up to date)
+    * apt_package[lsb-release] action install (up to date)
+    * ohai[reload-lsb-github_git-lfs] action nothing (skipped due to action :nothing)
+    * template[/etc/apt/sources.list.d/github_git-lfs.list] action create
+      - create new file /etc/apt/sources.list.d/github_git-lfs.list
+      - update content in file /etc/apt/sources.list.d/github_git-lfs.list from none to c5e225
+      --- /etc/apt/sources.list.d/github_git-lfs.list	2025-09-06 00:37:02.491874021 +0000
+      +++ /etc/apt/sources.list.d/.chef-github_git-lfs20250906-72200-9hcbz3.list	2025-09-06 00:37:02.491874021 +0000
+      @@ -1 +1,3 @@
+      +deb https://packagecloud.io/github/git-lfs/ubuntu focal main
+      +deb-src https://packagecloud.io/github/git-lfs/ubuntu focal main
+      - change mode from '' to '0644'
+    * execute[apt-key-add-github_git-lfs] action nothing (skipped due to action :nothing)
+    * execute[apt-key-add-github_git-lfs] action run
+      [execute] Warning: apt-key output should not be parsed (stdout is not a terminal)
+                OK
+      - execute wget --auth-no-challenge -qO - https://packagecloud.io/github/git-lfs/gpgkey | apt-key add -
+    * execute[apt-get-update-github_git-lfs] action nothing (skipped due to action :nothing)
+    * execute[apt-get-update-github_git-lfs] action run
+      [execute] Get:1 https://packagecloud.io/github/git-lfs/ubuntu focal InRelease [29.1 kB]
+                Get:2 https://packagecloud.io/github/git-lfs/ubuntu focal/main amd64 Packages [3916 B]
+                Fetched 33.0 kB in 1s (26.9 kB/s)
+                Reading package lists...
+      - execute apt-get update -o Dir::Etc::sourcelist="sources.list.d/github_git-lfs.list" -o Dir::Etc::sourceparts="-" -o APT::Get::List-Cleanup="0"
+  
+  * apt_package[git-lfs] action install
+    - install version 3.6.1 of package git-lfs
+  * cookbook_file[/home/ubuntu/.gitconfig] action create
+    - create new file /home/ubuntu/.gitconfig
+    - update content in file /home/ubuntu/.gitconfig from none to 303d00
+    --- /home/ubuntu/.gitconfig	2025-09-06 00:37:15.535918517 +0000
+    +++ /home/ubuntu/.chef-.gitconfig20250906-72200-8g3p3g.gitconfig	2025-09-06 00:37:15.535918517 +0000
+    @@ -1 +1,19 @@
+    +[push]
+    +	default = simple
+    +[user]
+    +	name = Continuous Integration
+    +	email = dev@code.org
+    +
+    +# https://git-scm.com/docs/git-gc#_configuration
+    +[gc]
+    +    # Make git gc --auto return immediately and run in background if the system supports it. Default is true.
+    +    #
+    +    # Set false to prevent gc --auto from being interrupted by server shutdown, leaving behind large temp files.
+    +    autoDetach = false
+    +
+    +[filter "lfs"]
+    +    clean = git-lfs clean -- %f
+    +    smudge = git-lfs smudge -- %f
+    +    process = git-lfs filter-process
+    +    required = true
+    - change mode from '' to '0644'
+    - change owner from '' to 'ubuntu'
+    - change group from '' to 'ubuntu'
+  * directory[/home/ubuntu/.ssh] action create (up to date)
+  * template[/home/ubuntu/.ssh/config] action create (skipped due to not_if)
+  * template[/home/ubuntu/.ssh/id_rsa] action create (skipped due to not_if)
+  * template[/home/ubuntu/.ssh/id_rsa.pub] action create (skipped due to not_if)
+Recipe: cdo-repository::default
+  * git[/home/ubuntu/adhoc] action checkout
+    
+    ================================================================================
+    Error executing action `checkout` on resource 'git[/home/ubuntu/adhoc]'
+    ================================================================================
+    
+    Mixlib::ShellOut::ShellCommandFailed
+    ------------------------------------
+    Expected process to exit with [0], but received '128'
+    ---- Begin output of git clone --depth 1 --branch fix-provisioning-full-stack "https://github.com/code-dot-org/code-dot-org.git" "/home/ubuntu/adhoc" ----
+    STDOUT: 
+    STDERR: Cloning into '/home/ubuntu/adhoc'...
+    Updating files:   5% (6460/128374)Updating files:   6% (7703/128374)Updating files:   7% (8987/128374)Updating files:   8% (10270/128374)Updating files:   9% (11554/128374)Updating files:   9% (11712/128374)Updating files:  10% (12838/128374)Updating files:  11% (14122/128374)Updating files:  12% (15405/128374)Updating files:  13% (16689/128374)Updating files:  14% (17973/128374)Updating files:  15% (19257/128374)Updating files:  16% (20540/128374)Updating files:  17% (21824/128374)Updating files:  18% (23108/128374)Updating files:  19% (24392/128374)Updating files:  19% (24594/128374)Updating files:  20% (25675/128374)Updating files:  21% (26959/128374)Updating files:  22% (28243/128374)Updating files:  23% (29527/128374)Updating files:  24% (30810/128374)Updating files:  25% (32094/128374)Updating files:  26% (33378/128374)Updating files:  27% (34661/128374)Updating files:  28% (35945/128374)Updating files:  29% (37229/128374)Updating files:  30% (38513/128374)Updating files:  31% (39796/128374)Updating files:  32% (41080/128374)Updating files:  32% (42359/128374)Updating files:  33% (42364/128374)Updating files:  34% (43648/128374)Updating files:  35% (44931/128374)Updating files:  36% (46215/128374)Updating files:  37% (47499/128374)Updating files:  38% (48783/128374)Updating files:  39% (50066/128374)Updating files:  40% (51350/128374)Updating files:  41% (52634/128374)Updating files:  42% (53918/128374)Updating files:  42% (54229/128374)Updating files:  43% (55201/128374)Updating files:  44% (56485/128374)Updating files:  45% (57769/128374)Updating files:  46% (59053/128374)Updating files:  47% (60336/128374)Updating files:  48% (61620/128374)Updating files:  49% (62904/128374)Updating files:  49% (63637/128374)Updating files:  50% (64187/128374)Updating files:  51% (65471/128374)Updating files:  52% (66755/128374)Updating files:  53% (68039/128374)Updating files:  54% (69322/128374)Updating files:  55% (70606/128374)Updating files:  55% (71642/128374)Updating files:  56% (71890/128374)Updating files:  57% (73174/128374)Updating files:  58% (74457/128374)Updating files:  59% (75741/128374)Updating files:  60% (77025/128374)Updating files:  61% (78309/128374)Updating files:  62% (79592/128374)Updating files:  63% (80876/128374)Updating files:  64% (82160/128374)Updating files:  65% (83444/128374)Updating files:  66% (84727/128374)Updating files:  67% (86011/128374)Updating files:  68% (87295/128374)Updating files:  68% (87469/128374)Updating files:  69% (88579/128374)Updating files:  70% (89862/128374)Updating files:  71% (91146/128374)Updating files:  72% (92430/128374)Updating files:  73% (93714/128374)Updating files:  74% (94997/128374)Updating files:  75% (96281/128374)Updating files:  76% (97565/128374)Updating files:  77% (98848/128374)Updating files:  78% (100132/128374)Updating files:  79% (101416/128374)Updating files:  80% (102700/128374)Updating files:  81% (103983/128374)Updating files:  81% (104557/128374)Updating files:  82% (105267/128374)Updating files:  83% (106551/128374)Updating files:  84% (107835/128374)Updating files:  84% (108615/128374)Updating files:  85% (109118/128374)Updating files:  86% (110402/128374)Updating files:  87% (111686/128374)Updating files:  88% (112970/128374)Updating files:  88% (114121/128374)Updating files:  89% (114253/128374)Updating files:  90% (115537/128374)Updating files:  91% (116821/128374)Updating files:  92% (118105/128374)Updating files:  92% (119123/128374)Updating files:  93% (119388/128374)Updating files:  94% (120672/128374)Updating files:  95% (121956/128374)Updating files:  96% (123240/128374)Updating files:  96% (123329/128374)Updating files:  97% (124523/128374)Updating files:  98% (125807/128374)Updating files:  99% (127091/128374)Updating files:  99% (127996/128374)Updating files: 100% (128374/128374)Updating files: 100% (128374/128374), done.
+    Filtering content:   2% (638/25141), 2.45 MiB | 4.87 MiB/sFiltering content:   3% (755/25141), 10.30 MiB | 10.27 MiB/sFiltering content:   4% (1006/25141), 18.05 MiB | 11.97 MiB/sFiltering content:   5% (1258/25141), 18.05 MiB | 11.97 MiB/sFiltering content:   5% (1313/25141), 18.05 MiB | 11.97 MiB/sFiltering content:   6% (1509/25141), 19.94 MiB | 9.93 MiB/s Filtering content:   7% (1760/25141), 22.70 MiB | 9.05 MiB/sFiltering content:   8% (2012/25141), 22.70 MiB | 9.05 MiB/sFiltering content:   8% (2089/25141), 22.70 MiB | 9.05 MiB/sFiltering content:   9% (2263/25141), 30.49 MiB | 8.65 MiB/sFiltering content:   9% (2264/25141), 30.64 MiB | 7.37 MiB/sFiltering content:   9% (2366/25141), 31.82 MiB | 6.24 MiB/sFiltering content:   9% (2472/25141), 67.98 MiB | 12.86 MiB/sFiltering content:  10% (2515/25141), 73.75 MiB | 12.44 MiB/sFiltering content:  10% (2583/25141), 74.97 MiB | 11.17 MiB/sFiltering content:  10% (2684/25141), 75.71 MiB | 10.39 MiB/sFiltering content:  11% (2766/25141), 76.55 MiB | 9.26 MiB/s Filtering content:  11% (2786/25141), 77.16 MiB | 9.16 MiB/sFiltering content:  11% (2890/25141), 79.28 MiB | 10.49 MiB/sFiltering content:  11% (2989/25141), 79.93 MiB | 1.26 MiB/s Filtering content:  12% (3017/25141), 79.93 MiB | 1.26 MiB/sFiltering content:  12% (3094/25141), 80.24 MiB | 1.08 MiB/sFiltering content:  12% (3221/25141), 80.34 MiB | 966.00 KiB/sFiltering content:  13% (3269/25141), 80.38 MiB | 802.00 KiB/sFiltering content:  13% (3353/25141), 80.45 MiB | 673.00 KiB/sFiltering content:  13% (3459/25141), 82.11 MiB | 820.00 KiB/sFiltering content:  14% (3520/25141), 86.16 MiB | 1.19 MiB/s  Filtering content:  14% (3536/25141), 86.16 MiB | 1.19 MiB/sFiltering content:  14% (3609/25141), 100.93 MiB | 3.84 MiB/sFiltering content:  15% (3772/25141), 109.30 MiB | 5.40 MiB/sFiltering content:  15% (3864/25141), 111.35 MiB | 5.50 MiB/sFiltering content:  16% (4023/25141), 118.78 MiB | 6.80 MiB/sFiltering content:  16% (4080/25141), 118.78 MiB | 6.80 MiB/sFiltering content:  17% (4274/25141), 127.78 MiB | 8.15 MiB/sFiltering content:  17% (4322/25141), 133.28 MiB | 9.41 MiB/sFiltering content:  17% (4455/25141), 133.75 MiB | 8.45 MiB/sFiltering content:  18% (4526/25141), 136.45 MiB | 9.07 MiB/sFiltering content:  18% (4544/25141), 137.45 MiB | 6.85 MiB/sFiltering content:  18% (4632/25141), 152.87 MiB | 8.12 MiB/sFiltering content:  18% (4738/25141), 163.84 MiB | 8.80 MiB/sFiltering content:  19% (4777/25141), 164.72 MiB | 7.22 MiB/sFiltering content:  19% (4778/25141), 164.72 MiB | 7.22 MiB/sFiltering content:  19% (4861/25141), 207.79 MiB | 14.33 MiB/sFiltering content:  19% (4947/25141), 239.04 MiB | 20.72 MiB/sFiltering content:  20% (5029/25141), 246.93 MiB | 19.18 MiB/sFiltering content:  20% (5041/25141), 246.93 MiB | 19.18 MiB/sFiltering content:  20% (5113/25141), 251.21 MiB | 17.88 MiB/sFiltering content:  20% (5186/25141), 261.62 MiB | 11.92 MiB/sFiltering content:  21% (5280/25141), 303.49 MiB | 20.00 MiB/sfatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    fatal: could not read Username for 'https://github.com': No such device or address
+    Downloading dashboard/app/assets/images/notes/C1_spelling_bee_intro_2.png (479 KB)
+    fatal: could not read Username for 'https://github.com': No such device or address
+    Error downloading object: dashboard/app/assets/images/notes/C1_spelling_bee_intro_2.png (106ee7b): Smudge error: Error downloading dashboard/app/assets/images/notes/C1_spelling_bee_intro_2.png (106ee7b6fa375e55f240d1500d0bdace6d9a6905fecece206075eb7ba91f61f3): batch response: Git credentials for https://github.com/code-dot-org/code-dot-org.git not found.
+    
+    Errors logged to '/home/ubuntu/adhoc/.git/lfs/logs/20250906T003832.177628945.log'.
+    Use `git lfs logs last` to view the log.
+    error: external filter 'git-lfs filter-process' failed
+    fatal: dashboard/app/assets/images/notes/C1_spelling_bee_intro_2.png: smudge filter lfs failed
+    warning: Clone succeeded, but checkout failed.
+    You can inspect what was checked out with 'git status'
+    and retry with 'git restore --source=HEAD :/'
+    ---- End output of git clone --depth 1 --branch fix-provisioning-full-stack "https://github.com/code-dot-org/code-dot-org.git" "/home/ubuntu/adhoc" ----
+    Ran git clone --depth 1 --branch fix-provisioning-full-stack "https://github.com/code-dot-org/code-dot-org.git" "/home/ubuntu/adhoc" returned 128
+    
+    Cookbook Trace: (most recent call first)
+    ----------------------------------------
+    /etc/chef/local-mode-cache/cache/cookbooks/cdo-repository/libraries/git.rb:34:in `block in clone'
+    /etc/chef/local-mode-cache/cache/cookbooks/cdo-repository/libraries/git.rb:20:in `clone'
+    
+    Resource Declaration:
+    ---------------------
+    # In /etc/chef/local-mode-cache/cache/cookbooks/cdo-repository/recipes/default.rb
+    
+     16: git git_path do
+     17:   provider Cdo::Provider::Git
+     18: 
+     19:   repository node['cdo-repository']['url']
+     20:   depth node['cdo-repository']['depth'] if node['cdo-repository']['depth']
+     21: 
+     22:   branch = node['cdo-repository']['branch']
+     23:   checkout_branch branch
+     24:   revision branch
+     25: 
+     26:   action(
+     27:     # Skip git-repo sync when using a shared volume to prevent data loss on the host.
+     28:     if GitHelper.shared_volume? git_path, home_path
+     29:       :nothing
+     30: 
+     31:     # Sync instead of checkout only for special, non-CI-managed instances via 'sync' attribute.
+     32:     elsif node['cdo-repository']['sync']
+     33:       :sync
+     34: 
+     35:     # Default checkout-only for CI-managed instances. (CI script manages pull on updates)
+     36:     else
+     37:       :checkout
+     38:     end
+     39:   )
+    
+    Compiled Resource:
+    ------------------
+    # Declared in /etc/chef/local-mode-cache/cache/cookbooks/cdo-repository/recipes/default.rb:16:in `from_file'
+    
+    git("/home/ubuntu/adhoc") do
+      provider Cdo::Provider::Git
+      action [:checkout]
+      default_guard_interpreter :default
+      declared_type :git
+      cookbook_name "cdo-repository"
+      recipe_name "default"
+      repository "https://github.com/code-dot-org/code-dot-org.git"
+      depth 1
+      checkout_branch "fix-provisioning-full-stack"
+      revision "fix-provisioning-full-stack"
+      user "ubuntu"
+      group "ubuntu"
+      enable_checkout false
+      destination "/home/ubuntu/adhoc"
+      remote "origin"
+      additional_remotes {}
+    end
+    
+    System Info:
+    ------------
+    chef_version=17.6.18
+    platform=ubuntu
+    platform_version=20.04
+    ruby=ruby 3.0.2p107 (2021-07-07 revision 0db68f0233) [x86_64-linux]
+    program_name=/opt/chef/bin/chef-client
+    executable=/opt/chef/bin/chef-client
+    
+
+Running handlers:
+Running handlers complete
+Infra Phase failed. 44 resources updated in 10 minutes 39 seconds
