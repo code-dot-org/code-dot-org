@@ -1,6 +1,7 @@
 import Button from '@code-dot-org/component-library/button';
 import React from 'react';
 
+import {matchTeachingProfile} from '@cdo/apps/aiEvaluation/aiEvaluationApi';
 import i18n from '@cdo/locale';
 
 import {
@@ -108,6 +109,13 @@ const PersonalizationCollectorContainer: React.FC = () => {
         } finally {
           setIsSaving(false);
         }
+      }
+      console.log('Final Personalization Data:', personalizationData);
+      try {
+        const profileMatch = await matchTeachingProfile(personalizationData);
+        console.log('Teaching Profile Match:', profileMatch);
+      } catch (error) {
+        console.error('Error matching teaching profile:', error);
       }
       return;
     }
@@ -242,3 +250,15 @@ const PersonalizationCollectorContainer: React.FC = () => {
 };
 
 export default PersonalizationCollectorContainer;
+//     if (
+//       direction === NEXT &&
+//       questionsNumber === PERSONALIZATION_PROMPTS.length - 1
+//     ) {
+//       try {
+//         const profileMatch = await matchTeachingProfile(personalizationData);
+//         console.log('Teaching Profile Match:', profileMatch);
+//       } catch (error) {
+//         console.error('Error matching teaching profile:', error);
+//       }
+//       return;
+//     }
