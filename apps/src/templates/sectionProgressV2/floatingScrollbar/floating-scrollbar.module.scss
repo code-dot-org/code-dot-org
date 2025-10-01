@@ -1,4 +1,3 @@
-
 .scrollingContainer {
   overflow: hidden;
   width: 100%;
@@ -8,6 +7,7 @@
 .scrollBar {
   overflow-x: auto;
   overflow-y: visible;
+  scrollbar-color: var(--borders-neutral-strong) transparent;
 }
 
 .bottomScrollBar {
@@ -27,9 +27,10 @@
   // Add an invisible scroll bar to the content in order to enable two-finger scrolling.
   overflow-x: scroll;
   scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
 }
-.scrollingContent::-webkit-scrollbar { /* WebKit */
+.scrollingContent::-webkit-scrollbar {
+  /* WebKit */
   width: 0;
   height: 0;
 }

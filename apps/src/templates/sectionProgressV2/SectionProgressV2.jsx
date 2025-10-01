@@ -1,4 +1,4 @@
-import {Heading1, Heading6} from '@code-dot-org/component-library/typography';
+import {Heading6} from '@code-dot-org/component-library/typography';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
@@ -39,7 +39,6 @@ function SectionProgressV2({
   isLoadingSectionData,
   expandedLessonIds,
   loadExpandedLessonsFromLocalStorage,
-  hideTopHeading,
 }) {
   const params = useParams();
   React.useEffect(() => {
@@ -126,7 +125,6 @@ function SectionProgressV2({
   return (
     // eslint-disable-next-line react/forbid-dom-props
     <div className={styles.progressV2Page} data-testid="section-progress-v2">
-      {!hideTopHeading && <Heading1>{i18n.progressBeta()}</Heading1>}
       <IconKey
         isViewingValidatedLevel={isViewingValidatedLevel}
         expandedLessonIds={expandedLessonIds}
