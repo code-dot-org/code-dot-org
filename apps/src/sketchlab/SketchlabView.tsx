@@ -5,6 +5,7 @@ import {
   BinaryFiles,
   ExcalidrawImperativeAPI,
 } from '@excalidraw/excalidraw/types/types';
+import {isEqual, cloneDeep} from 'lodash';
 import React, {useEffect, useCallback, useRef, useState} from 'react';
 
 import {useVerticalLayout} from '@cdo/apps/lab2/hooks/useVerticalLayout';
@@ -105,6 +106,28 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
       }
     };
   }, []);
+
+  useEffect(() => {
+    // to do: compare other properties (appState, etc)
+    // load necessary things rather than using key approach
+    if (
+      excalidrawApi &&
+      !isEqual(
+        excalidrawApi.getSceneElements(),
+        (currentSources.source as SketchlabSource).elements
+      )
+    ) {
+      console.log(currentSources.source);
+      excalidrawApi.updateScene({
+        appState: (currentSources.source as SketchlabSource)
+          .appState as AppState,
+        elements: cloneDeep(
+          (currentSources.source as SketchlabSource)
+            .elements as ExcalidrawElement[]
+        ),
+      });
+    }
+  }, [currentSources.source, excalidrawApi]);
 
   // Since there's no run button in Sketch Lab, set it to true by default
   // to enable the Submit button on edit on submittable levels.
