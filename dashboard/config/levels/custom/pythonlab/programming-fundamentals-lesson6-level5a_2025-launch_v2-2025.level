@@ -1,0 +1,55 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-09-25T19:56:29.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Do This:\r\n\r\nYou're building a simple morning routine tracker. The function starts by printing one morning task, but you realize it's missing something important. Add a second task to complete the routine.\r\n\r\n1. Look at the function `morning_routine()`. It prints one step of a morning routine.\r\n\r\n2. Add a second `print()` statement inside the function with another morning routine (e.g., \"Brush teeth\", \"Eat breakfast\", etc.).\r\n\r\n   Don't forget to keep your new line indented!\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nAll the lines inside a function must be indented the same amount. This tells Python what belongs to the function.",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "name_suffix": "_v2-2025",
+    "display_name": "Morning Routine Reminder",
+    "bubble_choice_description": "You're building a simple morning routine tracker. The function starts by printing one morning task, but you realize it's missing something important. Add a second task to complete the routine.",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "def morning_routine():\n  # Prints a morning routine\n  print(\"Get out of bed\")\n  # TODO - Add another step in your morning routine here\n  \n\nmorning_routine()\n",
+          "folderId": "0",
+          "active": false,
+          "open": true,
+          "type": "locked_starter"
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "Cy05mEYW43yx3lpwk/lyQYs4qPKDc2JDG2xzW6EZ2HXNXiuQgI6R1SlqPKPt\nlYISiQp/Zt7oXvHNpBSUY2/tVcAoh32dY5clMNiyTLp2qQ5O47DJ0rGD0IJV\nXDiO//IRW/LZBlXyH5JryMNp/3+nzqSQYEK5CevEx/di3nZaU92HzVGAEePT\nfMlJY4QG07GRGqpeUYYStdeRJDc0qDga1oX8aJRkFhfz3hg6B9i/V5H00tEW\nqik7ZV1DlqrMLpabP2AWXqBYVgEcgqRQoilx6U3cDliLhmHwetEStqjJq+Ba\nlFqiYFP8xb/mc3xQ7S4t6TGHxBdcQM/LdVzisAYDPPiAX1RuhhWjQiZckhWx\nrY7SLA9daz9d79rjH5XW8DYRXAeTV87X6HMLxIoNkcH0RFpZoU+Bf5OnupH3\n/xIbZar2eXH5EUfEaK4CH+PysQFnWZutRb1BMwCegLHD8CKDcxyeQWj8d35/\ncXmREF7KtK4=\n",
+    "thumbnail_url": "https://images.code.org/cfd38e34a6bdb0dfee2857fb276817da-alarm.png",
+    "validation_file": {
+      "id": "1",
+      "name": "test.py",
+      "language": "py",
+      "contents": "from unittest import TestCase\nfrom unittest_runner import ValidationProtocol\n\nclass TestMorningRoutineFunction(TestCase):\n    @classmethod\n    def setUpClass(cls):\n        \"\"\"Get printed output log\"\"\"\n        cls.log = ValidationProtocol().get_stdout_logs()\n\n    def test_two_steps_printed(self):\n        \"\"\"morning_routine() should print two steps\"\"\"\n        printed_messages = [line.strip() for line in self.log if line.strip()]\n\n        self.assertGreaterEqual(\n            len(printed_messages),\n            2,\n            \"Make sure your morning_routine() function prints two steps of your morning routine!\"\n        )\n",
+      "folderId": "0",
+      "active": false,
+      "open": false,
+      "type": "validation"
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:56:29.381+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson6-level5a_2025-launch_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson6-level5a_2025-launch_2025\"}]"
+}]]></config>
+</Pythonlab>

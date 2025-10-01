@@ -1,0 +1,17 @@
+name 'computer-systems-postassessment-question1_v2-2025'
+title 'Computer Systems and Devices Post-Assessment: Question 1'
+
+right 'AI could favor certain applicants based on biased training data'
+wrong 'AI could process resumes faster than human recruiters'
+wrong 'AI could help companies save money'
+wrong 'AI could suggest alternative job positions'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+A hiring company uses an AI-powered resume screening system. What is an ethical concern with this technology?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 12: Just Because We Can, Should We?
+MARKDOWN

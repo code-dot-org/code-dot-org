@@ -155,7 +155,7 @@ class CertificateImage
 
     template_file = certificate_template_for(course)
 
-    path = dashboard_dir('app', 'assets', 'images', 'certificates', template_file)
+    path = dashboard_dir('public', 'blockly', 'media', 'certificates', template_file)
     if prefilled_title_course?(course)
       # only need to fill in student name
       vertical_offset = course == '20-hour' ? -125 : -120
@@ -315,7 +315,7 @@ class CertificateImage
 
     unit_or_unit_group = CurriculumHelper.find_matching_unit_or_unit_group(course_name)
     course_version = unit_or_unit_group&.get_course_version
-    return CERTIFICATE_COURSE_TYPES[:HOC] if course_version&.hoc?
+    return CERTIFICATE_COURSE_TYPES[:HOC] if course_version&.hoc_or_hoai?
     return CERTIFICATE_COURSE_TYPES[:PL] if course_version&.pl_course?
     return CERTIFICATE_COURSE_TYPES[:OTHER] if course_version
     CERTIFICATE_COURSE_TYPES[:HOC]

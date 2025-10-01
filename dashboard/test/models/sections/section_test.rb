@@ -361,6 +361,42 @@ class SectionTest < ActiveSupport::TestCase
     end
   end
 
+  test 'add_student still adds student to restricted section if allowed section login_type' do
+    restricted_google_section = create(:section, restrict_section: true, login_type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM)
+    student = create(:student, :with_google_authentication_option)
+    assert_creates(Follower) do
+      add_student_return = restricted_google_section.add_student student
+      assert_equal Section::ADD_STUDENT_SUCCESS, add_student_return
+    end
+
+    restricted_lti_section = create(:section, restrict_section: true, login_type: Section::LOGIN_TYPE_LTI_V1)
+    Policies::Lti.stubs(:roster_sync_enabled?).returns(true)
+    student = create(:student, :with_lti_authentication_option)
+    assert_creates(Follower) do
+      add_student_return = restricted_lti_section.add_student student
+      assert_equal Section::ADD_STUDENT_SUCCESS, add_student_return
+    end
+  end
+
+  test 'add_student does not add student to restricted section if roster sync is disabled' do
+    restricted_lti_section = create(:section, restrict_section: true, login_type: Section::LOGIN_TYPE_LTI_V1)
+    Policies::Lti.stubs(:roster_sync_enabled?).returns(false)
+    student = create(:student, :with_lti_authentication_option)
+    assert_does_not_create(Follower) do
+      add_student_return = restricted_lti_section.add_student student
+      assert_equal Section::ADD_STUDENT_RESTRICTED, add_student_return
+    end
+  end
+
+  test 'add_student does not add student if section is restricted' do
+    restricted_section = create(:section, restrict_section: true)
+    student = create(:student)
+    assert_does_not_create(Follower) do
+      add_student_return = restricted_section.add_student student
+      assert_equal Section::ADD_STUDENT_RESTRICTED, add_student_return
+    end
+  end
+
   test 'section_type validation' do
     section = build(:section)
 

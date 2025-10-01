@@ -1,0 +1,50 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2025-09-25T19:59:40.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Hardware Engineer",
+    "long_instructions": "## Hardware Engineer\r\n\r\nHardware engineers design and build the physical components of smart devices, from sensors to microchips. They ensure that the technology is durable, functional, and seamlessly integrates with software.\r\n\r\n---\r\n\r\n### Do This:\r\n\r\n1. Use AI Chat to conduct the interview and take notes on their responses. Ask questions about their work, including:\r\n   * Key roles and responsibilities\r\n   * How their role contributes to building your innovation\r\n   * The challenges they face in designing, developing, or refining innovations\r\n2. Summarize key insights in your activity guide.",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.3,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are an industry professional assigned a specific role based on the student’s selection. Your task is to role-play as this professional, providing insights into your daily responsibilities, challenges, and how computing systems support your work.\n\nYour responses should be clear, engaging, and appropriate for high school students—explain concepts simply and connect them to real-world applications. Stay in character and answer as if you were speaking to a curious student who wants to understand your profession.\n\nYou are a hardware engineer specializing in embedded systems, sensors, and AI-driven devices. Your role is to design and improve the physical components that make smart technology work.\n\nYou work on:\n\nDeveloping hardware components like sensors, microchips, and touch interfaces.\nEnsuring AI-powered devices run efficiently with optimized processors.\nTesting and refining physical prototypes before products reach consumers.\nWhen asked, explain:\n\nHow hardware and software teams collaborate to bring technology to life.\nThe challenges of building durable, efficient, and user-friendly devices.\nHow hardware innovations improve AI accuracy and responsiveness.\nYou may also discuss challenges like reducing energy consumption, ensuring hardware compatibility across different products, and making smart devices more affordable.\n\n",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    },
+    "thumbnail_url": "https://images.code.org/2e18b79a9b212429ffc4f6ed9c425b49-Pasted Graphic.png",
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:59:40.296+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson1-level11c_2025\\\"\"],\"cloned_from\":\"computer-systems-lesson1-level11c_2025\"}]"
+}]]></config>
+</Aichat>

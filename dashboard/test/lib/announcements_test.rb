@@ -8,7 +8,7 @@ class AnnouncementsTest < ActiveSupport::TestCase
   test 'gets courses announcement' do
     announcement = Announcements.get_announcement_for_page("/courses")
     assert announcement
-    assert_equal("https://code.org/images/professional-learning-2019-3.png", announcement[:image])
+    assert_equal("/blockly/media/professional-learning/2019-3.png", announcement[:image])
     assert_equal("Join our hands-on workshops!", announcement[:body])
     assert_equal("Sign up for Professional Learning", announcement[:title])
     assert_equal("Join us", announcement[:buttonText])
@@ -20,7 +20,7 @@ class AnnouncementsTest < ActiveSupport::TestCase
   test 'gets home announcement' do
     announcement = Announcements.get_announcement_for_page("/home")
     assert announcement
-    assert_equal("https://code.org/images/professional-learning-2019-closing-soon.png", announcement[:image])
+    assert_equal("/blockly/media/professional-learning/2019-closing-soon.png", announcement[:image])
     assert_equal("Join us in this movement and submit your application today.", announcement[:body])
     assert_equal("Don’t miss out. Apply today!", announcement[:title])
     assert_equal("Join us", announcement[:buttonText])
@@ -84,7 +84,7 @@ class AnnouncementsTest < ActiveSupport::TestCase
     DCDO.stubs(:get).with('announcement-dcdo-test', false).returns(true)
     announcement = Announcements.get_announcement_for_page("/dcdo-test")
     assert announcement
-    assert_equal("https://code.org/images/professional-learning-2019-closing-soon.png", announcement[:image])
+    assert_equal("/blockly/media/professional-learning/2019-closing-soon.png", announcement[:image])
     assert_equal("Join us in this movement and submit your application today.", announcement[:body])
     assert_equal("Don’t miss out. Apply today!", announcement[:title])
     assert_equal("Join us", announcement[:buttonText])

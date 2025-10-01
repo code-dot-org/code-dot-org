@@ -1,0 +1,55 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-09-25T19:56:12.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Do This:\r\n\r\nYou're building a school schedule app that tracks which class period the user is in. When the bell rings, the app needs to update the period number.\r\n\r\n1. Look at the original value stored in `current_period`\r\n\r\n2. Change the value to the next class period.\r\n\r\n3. Run the program to make sure it shows the update.\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nEvery time you assign a new value to a variable, the old one is replaced -- it's like swapping out what's in a labeled box.",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "display_name": "Class Period",
+    "bubble_choice_description": "You're building a school schedule app that tracks which class period the user is in. When the bell rings, the app needs to update the period number.",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# This program updates the current class period\n\ncurrent_period = 2\nprint(\"Current class period:\", current_period)\n\n# Update the class period below\n\n\nprint(\"Updated class period:\", current_period)\n",
+          "folderId": "0",
+          "active": false,
+          "open": true,
+          "type": "locked_starter"
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "thumbnail_url": "https://images.code.org/827ae856262cbe0154d35dd020ec5ef4-school-bag.png",
+    "name_suffix": "_v2-2025",
+    "encrypted_exemplar_sources": "Cy05mEYW43yx3lpwk/lyQYs4qPKDc2JDG2xzW6EZ2HXNXiuQgI6R1SlqPKPt\nlYISiQp/Zt7oXvHNpBSUY2/tVcAoh32dY5clMNiyTLp2qQ5O47DJ0rGD0IJV\nXDiO//IRW/LZBlXyH5JryMNp/3+nzrEklWjjUoVVjxqK1V2vNKvz5ztRZLnk\nr1Z5Z0RuKsrUBtyagpyEvCEHCJLgroGPsvDQvVLG0rbWmdATg5kuLJ6nxZUo\nMPPJYvI6ezNJu0uFqb+e/ANm7mpjBSajQwktKFPXPRBOJSKVsCv+T7G61VSY\nmLhg4bRMC5oOpPgOHBiL9eoKPp6iYYXfWy02glLXf3yp0hw0TUfuCXkk56uh\nvK6xocsrjXukErlnsc2xuf+LeQgEQ1rRiF3BUjpdsELpclkFtufchkrjtpwa\ndmgHG1eZpPNXRXyX0S3on/KJ8q+N9Cy4oAZrXVOrYphXMkAaVAmKTIqnEs/8\nO9k1YRHpLsd5IQwkcxNk3wq/+CTSgigruLigO+ENjoKwMYyByY+fEA==\n",
+    "validation_file": {
+      "id": "1",
+      "name": "test.py",
+      "language": "py",
+      "contents": "from unittest import TestCase\nfrom unittest_runner import ValidationProtocol\n\nclass TestCurrentPeriodUpdate(TestCase):\n    @classmethod\n    def setUpClass(cls):\n        \"\"\"Get the printed output log\"\"\"\n        cls.log = ValidationProtocol().get_stdout_logs()\n\n    def test_current_period_updated(self):\n        \"\"\"current_period should change from original to a new value\"\"\"\n        try:\n            from main import current_period\n        except ImportError:\n            self.fail(\"Make sure you create a variable called current_period!\")\n\n        printed_lines = [line.strip() for line in self.log if line.strip()]\n\n        # Find original and updated printed lines\n        original_line = next((line for line in printed_lines if \"Current class period:\" in line), None)\n        updated_line = next((line for line in printed_lines if \"Updated class period:\" in line), None)\n\n        self.assertIsNotNone(original_line, \"Make sure you print the original class period!\")\n        self.assertIsNotNone(updated_line, \"Make sure you print the updated class period!\")\n\n        # Extract just the period numbers\n        original_period = original_line.split(\":\")[-1].strip()\n        updated_period = updated_line.split(\":\")[-1].strip()\n\n        self.assertNotEqual(\n            original_period,\n            updated_period,\n            \"Make sure you actually update the current_period to a new value!\"\n        )\n",
+      "folderId": "0",
+      "active": false,
+      "open": false,
+      "type": "validation"
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:56:12.362+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson4-level4d_2025-launch_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson4-level4d_2025-launch_2025\"}]"
+}]]></config>
+</Pythonlab>

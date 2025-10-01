@@ -280,7 +280,7 @@ class LtiV1Controller < ApplicationController
       rescue ActionController::ParameterMissing => exception
         case exception.param
         when :context_id, :nrps_url
-          return render_sync_course_error('Attempting to sync a course or section from the wrong place.', :bad_request, 'wrong_context')
+          return redirect_to home_path
         when :lti_integration_id, :deployment_id, :rlid
           return render_sync_course_error("Missing #{exception.param}.", :bad_request, 'missing_param')
         end

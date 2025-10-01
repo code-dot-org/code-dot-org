@@ -70,7 +70,7 @@ export const LtiDynamicRegistrationPage = ({
           {hasError ? errorMsg : i18n.ltiDynamicRegistrationDescription()}
         </Typography>
         <div>
-          <form>
+          <form onSubmit={handleSubmit}>
             <div className={styles.inputContainer}>
               <label className={styles.formLabel}>
                 <strong>{i18n.email()}</strong>

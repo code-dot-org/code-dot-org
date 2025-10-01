@@ -24052,7 +24052,7 @@ en:
               name: AI Judge
           lesson_groups: {}
           name: tandl-ai
-          title: Codechella 2025
+          title: CTRL+ALT+RETREAT 2025
           description_audience: ''
           description_short: ''
           description: ''
@@ -25225,5 +25225,302 @@ en:
           title: hoai2025-dev
           description_audience: ''
           description_short: Hour of AI 2025 dev
+          description: ''
+          student_description: ''
+        ctrl-alt-retreat-2025-teaching-learning-gallery-walk:
+          lessons:
+            lesson-1:
+              name: AI Modes Exploration
+          lesson_groups: {}
+          name: ctrl-alt-retreat-2025-teaching-learning-gallery-walk
+          title: Ctrl+Alt+Retreat AI Modes Demo
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        pl-sandbox-aif-sem-2-pre-learning:
+          lessons:
+            lesson-1:
+              name: Introduction to Teaching AI Foundations (Semester 2)
+          lesson_groups: {}
+          name: pl-sandbox-aif-sem-2-pre-learning
+          title: Introduction to Teaching AI Foundations Semester 2
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        pl-sandbox-aif-sem-2-unit-1:
+          lessons: {}
+          lesson_groups: {}
+          name: pl-sandbox-aif-sem-2-unit-1
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        pl-sandbox-aif-sem-2-unit-2:
+          lessons: {}
+          lesson_groups: {}
+          name: pl-sandbox-aif-sem-2-unit-2
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        aif1-v2-2025:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Pre-Assessment
+            lessonGroup-4:
+              display_name: Content
+            lessonGroup-5:
+              display_name: End of Unit Project
+            lessonGroup-2:
+              display_name: End of Unit Assessment and Survey
+          title: Problem Solving with AI
+          description: |-
+            As AI becomes increasingly integrated into daily life, students need to move beyond simply using AI tools—they must develop the skills to critically evaluate, refine, and apply AI-generated content in responsible ways. This unit introduces students to AI as a collaborator in analytical and creative work, helping them explore where AI succeeds, where it fails, and how human oversight improves AI-driven problem solving.
+
+            This unit blends hands-on AI experimentation with critical evaluation and refinement, guiding students through an iterative cycle of testing, analyzing, and improving AI-generated outputs. Instead of passively accepting AI responses, students will actively investigate AI's reasoning, challenge its assumptions, and refine its outputs through computational thinking and ethical frameworks.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, students will be able to . . .**]
+            - Investigate how AI generates responses, using neural networks, transformers, and probabilistic models.
+            - Critically evaluate AI-generated outputs, identifying bias, misinformation, and hallucinations.
+            - Refine AI-generated content through prompt engineering and debugging techniques.
+            - Explore AI's role in creativity, forecasting, and decision-making, balancing its strengths with ethical considerations.
+            - Design and test AI-assisted solutions to real-world challenges, ensuring that AI is used responsibly and with human oversight.
+            :::
+            &nbsp;
+            ## Finished Teaching This Unit?
+            Answer this [**short survey**](https://studio.code.org/form/aif_post_unit_survey?survey_data[unit_number]=unit_1) to let the Code.org curriculum team know how the unit went.
+          student_description: |-
+            AI is becoming a bigger part of everyday life—from helping write emails to suggesting music and planning trips. But using AI isn't just about typing in a prompt and accepting the answer. In this unit, you learn how to work with AI as a creative and problem-solving partner. You explore what AI does well, where it struggles, and how your thinking and choices can improve its results.
+
+            Through hands-on activities, you experiment with AI tools, test different inputs, and learn how to refine and evaluate what AI creates. You ask questions, spot mistakes, and use problem-solving strategies to make AI’s responses better and more useful. Instead of just using AI, you learn how to think critically about it—and how to use it responsibly.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, you'll be able to . . .**]
+            - Investigate how AI generates responses, using neural networks, transformers, and probabilistic models.
+            - Critically evaluate AI-generated outputs, identifying bias, misinformation, and hallucinations.
+            - Refine AI-generated content through prompt engineering and debugging techniques.
+            - Explore AI's role in creativity, forecasting, and decision-making, balancing its strengths with ethical considerations.
+            - Design and test AI-assisted solutions to real-world challenges, ensuring that AI is used responsibly and with human oversight.
+            :::
+            &nbsp;
+          description_short: ''
+          description_audience: ''
+        aif2-v2-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pre-Assessment
+            lessonGroup-3:
+              display_name: Content
+            lessonGroup-4:
+              display_name: End of Unit Project
+            lessonGroup-5:
+              display_name: End of Unit Assessment and Survey
+            lessonGroup-6:
+              display_name: Alternate Level Progressions (Console Only)
+          title: Foundations of AI Programming
+          description: |-
+            This unit introduces you to programming, algorithms, and ethical computing, exploring how Python programs are designed, debugged, and influenced by societal considerations. Through hands-on activities, you write, test, and refine programs using sequence, selection, iteration, and modular functions while applying human-centered design for inclusivity. You analyze the ethical implications of computing, including privacy, fairness, and accessibility, and propose risk mitigation strategies. Career-focused discussions connect programming skills to real-world pathways. Grounded in ethics, inclusivity, and computational thinking, this unit fosters persistence, critical thinking, and curiosity, empowering you to use technology for real-world problem-solving.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, students will be able to . . .**]
+            - Define and explain the purpose of algorithms and their applications.
+            - Design algorithms using sequence, selection, and iteration.
+            - Analyze the functionality of algorithms and propose improvements.
+            - Write Python programs using variables, conditional statements, loops, and functions.
+            - Debug and test Python programs systematically to ensure correctness and reliability.
+            - Use modular design principles to write reusable functions with parameters and return values.
+            - Use AI tools to support problem-solving, algorithm design, and debugging, while recognizing their limitations and biases
+            - Evaluate the ethical implications of using AI in programming and implement strategies for ethical and fair implementation.
+            - Identify career pathways in computing and connect programming skills to real-world opportunities.
+            - Use computational thinking principles to design, analyze, and troubleshoot programs.
+            - Apply abstraction, decomposition, and pattern recognition to solve problems effectively.
+            :::
+
+            &nbsp;
+            ## Finished Teaching This Unit?
+            Answer this [**short survey**](https://studio.code.org/form/aif_post_unit_survey?survey_data[unit_number]=unit_2) to let the Code.org curriculum team know how the unit went.
+          student_description: |-
+            This unit introduces students to programming, algorithms, and ethical computing, exploring how Python programs are designed, debugged, and influenced by societal considerations. Through hands-on activities, students write, test, and refine programs using sequence, selection, iteration, and modular functions while applying human-centered design for inclusivity. They analyze the ethical implications of computing, including privacy, fairness, and accessibility, and propose risk mitigation strategies. Career-focused discussions connect programming skills to real-world pathways. Grounded in ethics, inclusivity, and computational thinking, this unit fosters persistence, critical thinking, and curiosity, empowering students to use technology for real-world problem-solving.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, you will be able to . . .**]
+            - Define and explain the purpose of algorithms and their applications.
+            - Design algorithms using sequence, selection, and iteration.
+            - Analyze the functionality of algorithms and propose improvements.
+            - Write Python programs using variables, conditional statements, loops, and functions.
+            - Debug and test Python programs systematically to ensure correctness and reliability.
+            - Use modular design principles to write reusable functions with parameters and return values.
+            - Use AI tools to support problem-solving, algorithm design, and debugging, while recognizing their limitations and biases
+            - Evaluate the ethical implications of using AI in programming and implement strategies for ethical and fair implementation.
+            - Identify career pathways in computing and connect programming skills to real-world opportunities.
+            - Use computational thinking principles to design, analyze, and troubleshoot programs.
+            - Apply abstraction, decomposition, and pattern recognition to solve problems effectively.
+            :::
+
+            &nbsp;
+          description_short: ''
+          description_audience: ''
+        aif3-v2-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pre-Assessment
+            lessonGroup-3:
+              display_name: Content
+            lessonGroup-4:
+              display_name: End of Unit Project
+            lessonGroup-5:
+              display_name: End of Unit Assessment and Survey
+          title: AI and the Systems That Power It
+          description: |-
+            This unit explores how AI and computing systems process information, interact with hardware and software, and integrate emerging technologies like IoT and robotics. Through hands-on activities, you design and troubleshoot systems, analyze AI’s societal and ethical impacts, and apply human-centered design to solve real-world problems. AI Chat supports your learning by unpacking system layers, optimizing software, and evaluating AI-generated content for accuracy and fairness. Discussions on bias and debates on AI’s role in society encourage creativity, critical thinking, and collaboration. Grounded in ethics, inclusivity, and computational thinking, this unit helps you develop a deeper understanding of AI and its potential for equitable solutions.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, students will be able to . . .**]
+            - Explain how computational systems process data and how hardware, software, and operating systems collaborate to perform tasks.
+            - Investigate and optimize computing systems to improve performance and achieve specific goals.
+            - Design computing solutions that integrate hardware and software to collect and exchange data.
+            - Apply human-centered design principles to create effective and inclusive systems or protocols.
+            - Analyze the societal and ethical implications of AI and emerging technologies, including issues related to privacy, fairness, and accessibility.
+            - Assess the benefits and risks of AI in various industries and real-world applications.
+            - Use AI tools to investigate problems, generate solutions, and evaluate the accuracy, fairness, and reliability of outputs.
+            - Apply AI to analyze data, improve workflows, and develop creative solutions.
+            - Describe the role of data in AI applications and how different types of data (e.g., audio, visual, environmental) are collected and used computationally.
+            - Engage in inclusive collaboration by valuing diverse perspectives and addressing ethical concerns in computing projects.
+            - Identify career pathways in computing and describe how AI and emerging technologies are transforming industries and disciplines.
+            - Explore the interdisciplinary applications of computing concepts in solving real-world problems.
+            :::
+
+            &nbsp;
+            ## Finished Teaching This Unit?
+            Answer this [**short survey**](https://studio.code.org/form/aif_post_unit_survey?survey_data[unit_number]=unit_3) to let the Code.org curriculum team know how the unit went.
+          student_description: |-
+            This unit introduces students to AI and computing systems, exploring how they process information, interact with hardware and software, and integrate emerging technologies like IoT and robotics. Through hands-on activities, students design and troubleshoot systems, analyze AI’s societal and ethical impacts, and apply human-centered design to solve real-world problems. Using AI Chat, they unpack abstracted system layers, optimize software, and critique AI-generated outputs for accuracy and fairness. Activities like examining bias, and debating AI’s societal role foster creativity, critical thinking, and collaboration. Grounded in ethics, inclusivity, and computational thinking, this unit equips students to engage critically with AI, explore career pathways, and leverage technology for equitable solutions.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, you will be able to . . .**]
+            - Explain how computational systems process data and how hardware, software, and operating systems collaborate to perform tasks.
+            - Investigate and optimize computing systems to improve performance and achieve specific goals.
+            - Design computing solutions that integrate hardware and software to collect and exchange data.
+            - Apply human-centered design principles to create effective and inclusive systems or protocols.
+            - Analyze the societal and ethical implications of AI and emerging technologies, including issues related to privacy, fairness, and accessibility.
+            - Assess the benefits and risks of AI in various industries and real-world applications.
+            - Use AI tools to investigate problems, generate solutions, and evaluate the accuracy, fairness, and reliability of outputs.
+            - Apply AI to analyze data, improve workflows, and develop creative solutions.
+            - Describe the role of data in AI applications and how different types of data (e.g., audio, visual, environmental) are collected and used computationally.
+            - Engage in inclusive collaboration by valuing diverse perspectives and addressing ethical concerns in computing projects.
+            - Identify career pathways in computing and describe how AI and emerging technologies are transforming industries and disciplines.
+            - Explore the interdisciplinary applications of computing concepts in solving real-world problems.
+            :::
+
+            &nbsp;
+          description_short: ''
+          description_audience: ''
+        aif4-v2-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pre-Assessment
+            lessonGroup-3:
+              display_name: Content, Part 1
+            lessonGroup-4:
+              display_name: Mid-Unit Project
+            lessonGroup-5:
+              display_name: Content, Part 2
+            lessonGroup-6:
+              display_name: End of Unit Project
+            lessonGroup-7:
+              display_name: End of Unit Assessment and Survey
+          title: The Fabric of the Internet and AI
+          description: |-
+            This unit explores how the Internet and networks function, their societal and ethical impacts, and their real-world applications. You examine data transmission, IP addressing, DNS resolution, network security, and AI’s role in cybersecurity. Through hands-on simulations and discussions, you analyze how data moves through networks, how protocols ensure secure communication, and how issues like the digital divide affect global connectivity. Ethical problem-solving and collaboration help you propose solutions to improve Internet access and security. Grounded in computational thinking and real-world relevance, this unit fosters curiosity, critical thinking, and innovation, preparing you to engage with networking technologies and their societal implications.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, students will be able to . . .**]
+            - Describe how data is transmitted, routed, and reassembled over the Internet.
+            - Explain the roles of IP addressing, DNS, and redundancy in ensuring efficient communication.
+            - Analyze the role of AI in enhancing network security.
+            - Assess the implications of the digital divide and propose strategies to promote equitable Internet access.
+            - Evaluate the ethical considerations of AI in network security and propose responsible solutions.
+            - Identify and describe roles in networking and cybersecurity, such as Network Engineers and AI Cybersecurity Specialists.
+            - Analyze how these careers contribute to addressing societal challenges and improving technology.
+            - Use abstraction, decomposition, and pattern recognition to solve problems related to Internet communication and security.
+            - Propose and evaluate solutions to complex networking challenges, including security risks and accessibility issues.
+            :::
+
+            &nbsp;
+            ## Finished Teaching This Unit?
+            Answer this [**short survey**](https://studio.code.org/form/aif_post_unit_survey?survey_data[unit_number]=unit_4) to let the Code.org curriculum team know how the unit went.
+          student_description: |-
+            This unit explores how the Internet and networks function, their societal and ethical impacts, and their real-world applications. Students examine data transmission, IP addressing, DNS resolution, network security, and AI’s role in cybersecurity. Through hands-on simulations and discussions, they analyze how data moves through networks, how protocols ensure secure communication, and how issues like the digital divide affect global connectivity. Ethical problem-solving and collaboration help students propose solutions to improve Internet access and security. Grounded in computational thinking and real-world relevance, this unit fosters curiosity, critical thinking, and innovation, preparing students to engage with networking technologies and their societal implications.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, you will be able to . . .**]
+            - Describe how data is transmitted, routed, and reassembled over the Internet.
+            - Explain the roles of IP addressing, DNS, and redundancy in ensuring efficient communication.
+            - Analyze the role of AI in enhancing network security.
+            - Assess the implications of the digital divide and propose strategies to promote equitable Internet access.
+            - Evaluate the ethical considerations of AI in network security and propose responsible solutions.
+            - Identify and describe roles in networking and cybersecurity, such as Network Engineers and AI Cybersecurity Specialists.
+            - Analyze how these careers contribute to addressing societal challenges and improving technology.
+            - Use abstraction, decomposition, and pattern recognition to solve problems related to Internet communication and security.
+            - Propose and evaluate solutions to complex networking challenges, including security risks and accessibility issues.
+            :::
+
+            &nbsp;
+          description_short: ''
+          description_audience: ''
+        aif5-v2-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-3:
+              display_name: End of Unit Survey
+          title: Cybersecurity and Global Impacts
+          description: |-
+            In this unit, students learn how computing innovations have impacted the world in beneficial and harmful ways. Students explore how data can pose a threat to our privacy and security and the ways that encryption and other techniques are used to protect it. Throughout the unit, they participate in a "school of the future" conference in which they make a proposal for how best to improve school life with computing innovations.
+
+            ## Finished Teaching This Unit?
+            Answer this [**short survey**](https://studio.code.org/form/aif_post_unit_survey?survey_data[unit_number]=unit_5) to let the Code.org curriculum team know how the unit went.
+          student_description: In this unit, you will learn how computing innovations have impacted our world in beneficial and harmful ways. You'll explore how data can pose a threat to our privacy and security and the ways that encryption and other techniques are used to protect it. Throughout the unit, you will participate in a "school of the future" conference in which you and a team make a proposal for how best to improve school life with computing innovations.
+          description_short: ''
+          description_audience: ''
+        aif6-v2-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pre-Assessment
+            lessonGroup-3:
+              display_name: Content
+            lessonGroup-4:
+              display_name: End of Unit Project
+            lessonGroup-5:
+              display_name: End of Unit Assessment and Survey
+          title: Insights from Data and AI
+          description: "In this unit, students explore the foundational concepts of data science, focusing on developing and refining data questions to guide investigations and analysis. Through hands-on activities, they use spreadsheets for basic data analysis, explore ethical data practices, and learn how to communicate their findings using various visualization techniques. The unit begins with an introduction to data science concepts and progresses through lessons on data cleaning, visualization, and interpretation, concluding with a project that encourages students to tell a compelling data story using their newly acquired skills.\n\n<div style=\"overflow: hidden;\">\n      <img src=\"https://images.code.org/7fe1b2e1fc05e1c6961f9b7e5d8e952e-NSF_Official_logo_small.png\" style=\"float: left; margin-right:15px\">\n      <div><i>This unit includes material developed with the support of the National Science Foundation under Grant No. 2122485. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.</i></div>\n</div>\n\n&nbsp;\n\n::: details [<i class=\"fa-solid fa-badge-check\"></i> **By the end of this unit, students will be able to . . .**]\n- Understand the foundations of data science and its interdisciplinary nature. \n- Create and refine data questions to guide investigations. \n- Analyze datasets and apply various analysis techniques. \n- Develop visualizations to help answer data questions. \n- Use analysis results to tell a compelling data story. \n- Consider ethical concerns when creating data questions, analyzing data, and telling a data story. \n:::\n\n&nbsp;\n## Finished Teaching This Unit?\nAnswer this [**short survey**](https://studio.code.org/form/aif_post_unit_survey?survey_data[unit_number]=unit_6) to let the Code.org curriculum team know how the unit went."
+          student_description: "This unit introduces you to the foundational concepts of data science, including developing effective data questions, collecting data, and using spreadsheets to analyze and visualize data. You will work on creating various visualizations such as bar charts, scatter plots, and dot plots to communicate data insights. Additionally, you will explore the ethical implications of data collection and analysis. The unit culminates in a project where you will tell a compelling data story, using data visualizations to present your findings to your peers.\n\n<div style=\"overflow: hidden;\">\n      <img src=\"https://images.code.org/7fe1b2e1fc05e1c6961f9b7e5d8e952e-NSF_Official_logo_small.png\" style=\"float: left; margin-right:15px\">\n      <div><i>This unit includes material developed with the support of the National Science Foundation under Grant No. 2122485. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.</i></div>\n</div>\n\n&nbsp;\n\n::: details [<i class=\"fa-solid fa-badge-check\"></i> **By the end of this unit, you will be able to . . .**]\n- Understand the foundations of data science and its interdisciplinary nature. \n- Create and refine data questions to guide investigations. \n- Analyze data using CODAP and apply various analysis techniques. \n- Develop visualizations to help answer data questions. \n- Use analysis results to tell a compelling data story. \n- Consider ethical concerns when creating data questions, analyzing data, and telling a data story. \n:::\n\n&nbsp;"
+          description_short: Students are introduced to foundational data science concepts, data collection strategies, and effective ways to communicate insights through data stories.
+          description_audience: ''
+        6-12-aif-s2-unit1:
+          lessons: {}
+          lesson_groups: {}
+          name: 6-12-aif-s2-unit1
+          title: "[DEV] AIF S2 Unit 1"
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        6-12-aif-s2-unit2:
+          lessons: {}
+          lesson_groups: {}
+          name: 6-12-aif-s2-unit2
+          title: "[DEV] AIF S2 Unit 2"
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        hoai-dance-pilot2:
+          lessons:
+            lesson-1:
+              name: test
+          lesson_groups: {}
+          name: hoai-dance-pilot2
+          title: hoai-dance-pilot2
+          description_audience: ''
+          description_short: ''
           description: ''
           student_description: ''

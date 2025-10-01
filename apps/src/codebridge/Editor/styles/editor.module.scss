@@ -3,6 +3,15 @@
   height: 100%;
   background-color: var(--background-neutral-primary);
   overflow: hidden;
+
+  .aiTutorTooltip {
+    border-radius: 6px;
+    border: 1px solid var(--borders-neutral-primary);
+    background: var(--background-neutral-primary);
+
+    /* Shadow on tooltip */
+    box-shadow: 0 2px 2px 0 rgba(0 0 0 / 0.07), 0 4px 7px 0 rgba(0 0 0 / 0.07);
+  }
 }
 
 .noOpenFilesMessage {

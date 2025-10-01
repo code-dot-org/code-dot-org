@@ -2,6 +2,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
+import {studio} from '@cdo/apps/lib/util/urlHelpers';
+
 import Dialog, {Body, Buttons, Confirm} from '../legacySharedComponents/Dialog';
 import color from '../util/color';
 
@@ -32,7 +34,9 @@ export class ImportProjectDialog extends React.Component {
             Copy the share link of the app you would like to import screens
             from. Paste in the URL of that app below and click "Next."{' '}
             <a
-              href={`${window.dashboard.CODE_ORG_URL}/applab/docs/import`}
+              href={studio(
+                '/docs/concepts/app-lab/design-mode/importing-screens/'
+              )}
               target="_blank"
               rel="noopener noreferrer"
             >

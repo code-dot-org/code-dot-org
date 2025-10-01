@@ -195,8 +195,6 @@ class ScriptsController < ApplicationController
       raise msg
     end
 
-    raise 'Must provide family and version year for course' if params[:isCourse] && (!params[:family_name] || !params[:version_year])
-
     if @script.update_text(unit_params, i18n_params, general_params)
       @script.reload
       render json: @script.summarize_for_unit_edit
@@ -350,8 +348,6 @@ class ScriptsController < ApplicationController
       :hide_within_course,
       :deprecated,
       :curriculum_umbrella,
-      :family_name,
-      :version_year,
       :project_sharing,
       :login_required,
       :hideable_lessons,

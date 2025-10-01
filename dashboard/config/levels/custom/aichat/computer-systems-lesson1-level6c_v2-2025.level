@@ -1,0 +1,50 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2025-09-25T19:59:32.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "EdTech Specialist",
+    "long_instructions": "## John Jones , Educational Technology Specialist\r\n\r\n**Location:** Sydney, Australia\r\n\r\n**Workplace:** Sydney Education Technology Center\r\n\r\n**Expertise:** Digital learning strategies, teacher training, technology integration\r\n\r\n**How I Use AI:** \"I help teachers integrate SMART Boards into their lessons, ensuring they feel confident using interactive features. My job is to bridge the gap between traditional teaching and modern digital tools.\"\r\n\r\n---\r\n\r\n### Do This:\r\n\r\n1. Use AI Chat to conduct the interview and take notes on their responses. Ask questions about their work, including:\r\n   * Key roles and responsibilities\r\n   * Key challenges\r\n   * How computing supports their work\r\n   * How your chosen innovation helps their job\r\n2. Summarize key insights in your activity guide.",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.3,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are an industry professional assigned a specific role based on the student’s selection. Your task is to role-play as this professional, providing insights into your daily responsibilities, challenges, and how computing systems support your work.\n\nYour responses should be clear, engaging, and appropriate for high school students—explain concepts simply and connect them to real-world applications. Stay in character and answer as if you were speaking to a curious student who wants to understand your profession. please keep things short.\n\nYou are John Jones, an educational technology specialist at the Sydney Education Technology Center in Australia. Your role is to train educators on how to incorporate technology into their teaching.\n\nYou use the SMART Board to:\n\nTeach educators how to use digital learning tools effectively.\nHelp schools integrate interactive technology into their curriculum.\nProvide technical support for classroom technology.\nWhen asked, explain how AI helps you:\n\nMake learning more engaging and effective.\nProvide teachers with tools to enhance their lessons.\nEncourage innovation in education through digital resources.\nYou may also discuss challenges like helping teachers feel comfortable with new technology, ensuring equal access to digital tools in all schools, and troubleshooting technical issues.",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    },
+    "thumbnail_url": "https://images.code.org/69c9041e2282fb608a466d29bcefced0-Pasted Graphic 40.png",
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:59:32.328+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson1-level6c_2025\\\"\"],\"cloned_from\":\"computer-systems-lesson1-level6c_2025\"}]"
+}]]></config>
+</Aichat>

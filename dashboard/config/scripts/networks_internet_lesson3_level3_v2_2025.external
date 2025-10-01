@@ -1,0 +1,27 @@
+name 'networks-internet-lesson3-level3_v2-2025'
+title 'Requesting and Receiving Data from a Website Server'
+description 'description here'
+
+markdown <<MARKDOWN
+## Level 3: Requesting and Receiving Data from a Website Server
+
+![Emily streaming video](https://images.code.org/e0b6e9855786e74738795298af73c08f-image-1740207161095.jpg)
+
+**Scenario:**  
+Emily just got home from school and wants to relax by streaming her favorite show. She opens her streaming app on her **Streaming Device (192.168.1.5)** and starts watching a movie from a **Streaming Video Provider’s Server (192.175.4.9)**.  
+
+**Goal:**  
+Trace the **path of the data** as Emily’s device requests and receives the movie from the server. **Draw arrows** for each hop in the network.  
+
+**Discussion:**  
+- Does the data always take the **same path** through the network, or could it change depending on traffic?  
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Diagram Instructions:**  
+Connect **Emily’s Streaming Device (192.168.1.5) → Router A → ISP → Streaming Server (192.175.4.9)** with arrows to show the data flow.  
+
+**Discussion Goal:**  
+Students will explain how **data packets travel from a personal device to an external server** and how **routing can change based on network conditions**.
+
+MARKDOWN

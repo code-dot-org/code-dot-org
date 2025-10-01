@@ -1,0 +1,19 @@
+name 'networks-preassessment-question15_v2-2025'
+title 'Networks and the Internet Pre-Assessment: Question 15'
+
+wrong 'A single central control system'
+wrong 'Strict government regulations'
+right 'A decentralized structure with redundant pathways'
+wrong 'Restricting access to only a few trusted websites'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+What allows the Internet to handle billions of devices and connections?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 4: Routers and Redundancy
+
+Lesson 5: Packets
+MARKDOWN
