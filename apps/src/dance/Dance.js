@@ -6,6 +6,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
+import LottieDancerRenderer from '@cdo/apps/dance/lottie/LottieDancerRenderer';
 import ErrorBoundary from '@cdo/apps/lab2/ErrorBoundary';
 import {ErrorFallbackPage} from '@cdo/apps/lab2/views/ErrorFallbackPage';
 import firehoseClient from '@cdo/apps/metrics/firehose';
@@ -42,7 +43,6 @@ import {
 } from './danceRedux';
 import DanceVisualizationColumn from './DanceVisualizationColumn';
 import danceMsg from './locale';
-import LottieDancerRenderer from './LottieDancerRenderer';
 import {loadSongMetadata} from './songs';
 import utils from './utils';
 

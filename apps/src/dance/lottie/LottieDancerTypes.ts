@@ -126,8 +126,8 @@ export type LottieJSON = {
 
 export type HeadImageInfo = {
   dataUrl: string;
-  w: number;
-  h: number;
+  width: number;
+  height: number;
 };
 
 export type Palette = {
@@ -139,3 +139,37 @@ export type Palette = {
 export type Canvas2D =
   | CanvasRenderingContext2D
   | OffscreenCanvasRenderingContext2D;
+
+export type DanceMoves =
+  | 'rest'
+  | 'clap_high'
+  | 'clown'
+  | 'dab'
+  | 'double_jam'
+  | 'drop'
+  | 'floss'
+  | 'fresh'
+  | 'kick'
+  | 'roll'
+  | 'this_or_that'
+  | 'thriller'
+  | 'xarmsside'
+  | 'xarmsup'
+  | 'xjump'
+  | 'xclapside'
+  | 'xheadhips'
+  | 'xhighkick'
+  | 'xbend'
+  | 'xfever'
+  | 'xhop'
+  | 'xknee'
+  | 'xkneel'
+  | 'xole'
+  | 'xslide';
+
+export interface DancerMetadata {
+  body_color?: string;
+  secondary_color?: string;
+  tertiary_color?: string;
+  [k: string]: unknown;
+}
