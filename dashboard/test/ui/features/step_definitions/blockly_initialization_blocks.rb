@@ -35,7 +35,7 @@ And /^I've initialized the workspace with level 5 bounce blocks$/ do
 end
 
 And /^I've initialized the workspace with winning farmer blocks$/ do
-  load_json_blocks('{"blocks":{"languageVersion":0,"blocks":[{"type":"when_run","x":16,"y":16,"next":{"block":{"type":"maze_moveForward","id":"startBlock","next":{"block":{"type":"maze_moveForward","next":{"block":{"type":"maze_moveForward","next":{"block":{"type":"maze_moveForward","next":{"block":{"type":"maze_dig"}}}}}}}}}}}]}}')
+  load_json_blocks('{"blocks":{"languageVersion":0,"blocks":[{"type":"when_run","id":"topBlock","x":16,"y":16,"deletable":false,"movable":false,"extraState":{},"next":{"block":{"type":"maze_moveForward","id":"{]tdKa=Q_//(4?vywqiJ","next":{"block":{"type":"maze_turn","id":"S~toDj^DIe!*F5ysj+p5","fields":{"DIR":"<field name=\\"DIR\\">turnLeft</field>"},"next":{"block":{"type":"maze_moveForward","id":"77)f;+g+7uVC4#6q?41g","next":{"block":{"type":"maze_untilBlockedOrNotClear","id":"z5NK`MFxtwupxl/uf6w/","fields":{"DIR":"<field name=\\"DIR\\">holePresent</field>"},"inputs":{"DO":{"block":{"type":"maze_fill","id":"voUV%?~q7myl6)O4#gB8"}}}}}}}}}}}}]}}')
 end
 
 And /^I've initialized the workspace with losing farmer blocks$/ do
