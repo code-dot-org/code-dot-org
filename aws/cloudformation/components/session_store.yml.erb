@@ -1,5 +1,7 @@
   #
-  # Redis-based Session Store
+  # Our primary dashboard Redis instance, accessed as CDO.redis_url throughout the Dashboard.
+  #
+  # Used by session storage, geocoder, actioncable, etc.
   #
   SessionStoreSubnetGroup:
     Type: AWS::ElastiCache::SubnetGroup
