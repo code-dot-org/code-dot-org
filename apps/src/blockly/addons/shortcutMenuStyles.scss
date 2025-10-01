@@ -3,10 +3,17 @@
 @import 'color.scss';
 
 .shortcut-dialog {
+  .shortcut-modal {
+    background-color: var(--background-neutral-primary);
+
+    .close-modal {
+      color: var(--text-neutral-secondary);
+    }
+  }
   h1 {
     @include typography.heading-lg;
     font-size: revert;
-    color: unset;
+    color: var(--text-neutral-primary);
     margin: 0;
   }
   h2 {
@@ -14,12 +21,22 @@
     color: var(--text-neutral-tertiary);
     margin: revert;
     padding-block-end: revert;
+    border-bottom: 1px solid var(--borders-neutral-primary);
+  }
+  tr:not(.category, :last-child) {
+    border: unset;
+    border-bottom: 1px solid var(--borders-neutral-light);
+  }
+  .key {
+    border-color: var(--borders-neutral-light);
   }
   th {
     background-color: unset;
     padding: 0;
+    border: unset;
   }
   td {
     @include typography.body-two;
+    color: var(--text-neutral-tertiary);
   }
 }

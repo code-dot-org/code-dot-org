@@ -10,6 +10,7 @@
   height: 100%;
   background-color: var(--background-neutral-primary);
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 .loadingSpinner {

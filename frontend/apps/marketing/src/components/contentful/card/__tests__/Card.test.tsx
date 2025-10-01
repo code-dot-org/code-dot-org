@@ -14,7 +14,7 @@ jest.mock('@/providers/statsig/client', () => ({
 const defaultProps: CardProps = {
   title: 'Test Title',
   description: 'Test Description',
-  imageSrc: 'test-image.jpg',
+  imageSrc: '//images.code.org/test-image.jpg',
   imageHeight: '250',
   overline: 'Test Overline',
   primaryButton: {
@@ -50,18 +50,18 @@ describe('Card', () => {
 
   it('renders image with correct src and height', () => {
     render(<Card {...defaultProps} />);
-    const img = screen.getByRole('presentation');
+    const img = screen.getByAltText(defaultProps.title!);
     expect(img).toHaveAttribute(
       'src',
       expect.stringContaining('test-image.jpg'),
     );
-    expect(img).toHaveStyle({height: '250px'});
+    expect(img).toHaveStyle({height: '100%'});
   });
 
   it('uses default image height if imageHeight is not provided', () => {
     render(<Card {...defaultProps} imageHeight={undefined} />);
-    const img = screen.getByRole('presentation');
-    expect(img).toHaveStyle({height: '300px'});
+    const img = screen.getByAltText(defaultProps.title!);
+    expect(img).toHaveStyle({height: '100%'});
   });
 
   it('renders primary and secondary buttons with correct labels and hrefs', () => {

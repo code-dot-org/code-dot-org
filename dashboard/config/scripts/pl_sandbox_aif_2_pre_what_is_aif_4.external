@@ -5,50 +5,85 @@ description 'description here'
 markdown <<MARKDOWN
 # What is AI Foundations (Semester 2)
 
-#### This professional learning module is made up of **two lessons:**
+#### AI Foundations Semester 2 empowers students to become intentional designers who work with AI to solve problems, express ideas, and build interactive systems they understand and control. 
 
+## Course Units
+
+#### Over six units, students learn to code in JavaScript alongside AI, creating dynamic applications that integrate HTML, CSS, and AI-driven features.
 
 <div style="display: flex; flex-direction: column; gap: 20px; max-width: 900px; margin: auto;">
 
   
 <div style="display: flex; align-items: center; gap: 15px;">
-        <img src="https://images.code.org/d7a2764589820d4023ca876e49c892c1-image-1740592077414.png" alt="Lesson 1 Icon" style="width: 20%; max-width: 120px; height: auto;">
+        <img src="https://images.code.org/f64c707a6d5cad2febcda192a777e3ca-image-1759252259468.png" alt="icon of webpage layout on a computer screen" style="width: 20%; max-width: 120px; height: auto;border-radius: 12px;">
         <div style="flex: 1; background: #f7f8fa; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt;">
-            <h3><b>Lesson 1 -  Teaching AI-Powered Threats and Defenses</b></h3>
-            <p style = "font-size: 14pt";><strong>⭐️ You are here!⭐️</strong> </p><p style = "font-size: 14pt";>            
-           This lesson provides an introduction to the AI-Powered Threats and Defenses unit and professional learning module. It offers a brief overview of course resources and features.<br><br> <em>10 minutes</em></p>
+            <h3><b>Unit 1: AI Generated Design </b></h3>
+        
+         <p style = "font-size: 14pt">  This unit establishes a design-first mindset, lays the groundwork for computational thinking, and introduces responsible AI collaboration.
+<br></p>
         </div>
     </div>
 
    
 <div style="display: flex; align-items: center; gap: 15px;">
-        <img src="https://images.code.org/3d11b3154389d2caa405683ffda44ff6-image-1740592165845.png" alt="Lesson 2 Icon" style="width: 20%; max-width: 120px; height: auto;">
+        <img src="https://images.code.org/bd8061687ede2e74160e09ab56dcaf8d-image-1759252837935.png" alt="Icon of flowchart" style="width: 20%; max-width: 120px; height: auto;border-radius: 12px;">
         <div style="flex: 1; background: #B7E0E5; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); ">
-            <h3> <b>Lesson 2 - Lesson Exploration</b></h3>
-            <p style = "font-size: 14pt";>This lesson explores key cybersecurity concepts, introduces important pedagogical approaches to teaching the unit, and provides time for teachers to explore selected lessons and activities from the AI-Powered Threats and Defenses unit.<br><br> <em>50 minutes</em></p>
+            <h3> <b>Unit 2: AI and Algorithmic Decisions</b></h3>
+            <p style = "font-size: 14pt";>This unit introduces students to JavaScript as the language of interactivity on the web. As they learn to bring their static designs to life, they transition from the role of designer to that of a developer.<br><br> </p>
+        </div>
+    </div>
+    <div style="display: flex; align-items: center; gap: 15px;">
+        <img src="https://images.code.org/a5d9781f189beba428c676a7455cc7bb-image-1759252922718.png" alt="Icon of computer screen with bar chart and pie chart" style="width: 20%; max-width: 120px; height: auto;border-radius: 12px;">
+        <div style="flex: 1; background: #0093a4; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt;">
+            <h3><b>Unit 3: Building Data-Driven Decisions </b></h3>
+        
+         <p style = "font-size: 14pt">  In this unit, students move from coding single interactions to building web apps that manage collections of information.
+<br></p>
+        </div>
+    </div>
+
+   
+<div style="display: flex; align-items: center; gap: 15px;">
+        <img src="https://images.code.org/49515d0eaaf89498e72681012b9af838-image-1759253584312.png" alt="Icon of arrows and code segments" style="width: 20%; max-width: 120px; height: auto;border-radius: 12px;">
+        <div style="flex: 1; background: #007683; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); ">
+            <h3 style="color: white; margin: 0;"> <b>Unit 4: Iterating with AI</b></h3>
+            <p style = "font-size: 14pt;color: white; margin-top: 10px;">In this unit, students learn how iteration and loops enable programs to process collections of data and create interactive features such as filters and views<br><br> </p>
+        </div>
+    </div>
+    
+        <div style="display: flex; align-items: center; gap: 15px;">
+        <img src="https://images.code.org/ab85472a58f630a1c8252b42cb5fd5d2-image-1759252734796.png" alt="Icon of a computer screen with divided display and html tags" style="width: 20%; max-width: 120px; height: auto;border-radius: 12px;">
+        <div style="flex: 1; background: #005862; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt;">
+            <h3 style="color: white; margin: 0;"><b>Unit 5: Designing Reliable Apps with AIs and APIs </b></h3>
+        
+         <p style = "font-size: 14pt;color: white; margin-top: 10px;">  In this unit, students expand their understanding of web apps by connecting them to external data sources through APIs. They learn that modern applications rarely operate in isolation; instead, they depend on information and services provided by larger systems.
+<br></p>
+        </div>
+    </div>
+
+   
+<div style="display: flex; align-items: center; gap: 15px;">
+        <img src="https://images.code.org/0c587f1d0aed3dcf3b6f5d1311104442-image-1759253471005.png" alt="Icon of a computer and phone with a web app displayed" style="width: 20%; max-width: 120px; height: auto;border-radius: 12px;">
+        <div style="flex: 1; background: #003b42; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); ">
+            <h3 style="color: white; margin: 0;"> <b>Unit 6: Capstone Project - Web Apps with AI</b></h3>
+            <p style = "font-size: 14pt;color: white; margin-top: 10px;">Unit 6 is the capstone of Semester 2, where students synthesize their learning to design and build a complete web app with a clear purpose and audience. They integrate technical fluency, human-centered design, and AI literacy, making choices that are transparent, ethical, and aligned with their values.<br><br> </p>
         </div>
     </div>
     
     </div>
 
----
-
-## Engaging with This Module
-#### Feel free to complete as much or as little of this module as is useful for you and your students! 
-#### Stop, start, and revisit content as you see fit. We hope you'll find these activities useful to start teaching this unit. 
-#### You'll be able to give Code.org your feedback on the last level of this module.
-
-What is AI Foundations (Semester 2)?
 
 
-AI Foundations Semester 2 empowers students to become intentional designers who work with AI to solve problems, express ideas, and build interactive systems they understand and control. 
-Course Units
-Over six units, students learn to code in JavaScript alongside AI, creating dynamic applications that integrate HTML, CSS, and AI-driven features.
-(graphic of 6 units with short description)
-Learning Foundations
-Students practice computational thinking, human-centered design, and AI literacy as they design projects like brand websites, dialogue apps, and recommendation systems.
-(building block type graphic with these foundational concepts) 
-By the end, students build a capstone project and leave prepared to design AI-powered technologies with clarity, confidence, and care.
+## Learning Foundations
+
+#### Students practice computational thinking, human-centered design, and AI literacy as they design projects like brand websites, dialogue apps, and recommendation systems.
+
+<img src="https://images.code.org/5cd1fcb5f6ec0e2e414f0a29a1581af1-image-1759254423492.png" alt="pie chart divided into thirds labeled: AI literacy, human-centered design, and computational thinking" width="450px" style="display: block; margin-left: auto; margin-right: auto;">
+
+
+#### By the end, students build a capstone project and leave prepared to design AI-powered technologies with clarity, confidence, and care.
+
+
 
 
 

@@ -58,7 +58,7 @@ export const CustomImageHeight: Story = {
     const cardTitle = canvas.getByText('Card Title');
     await expect(cardTitle).toBeInTheDocument();
 
-    const imageElement = canvas.getByRole('presentation');
+    const imageElement = canvas.getByAltText('Card Title');
     await expect(imageElement).toBeInTheDocument();
   },
 };

@@ -1,7 +1,7 @@
 import {
   BodyThreeText,
   BodyFourText,
-  ExtraStrongText,
+  StrongText,
   Heading6,
 } from '@code-dot-org/component-library/typography';
 import classnames from 'classnames';
@@ -338,7 +338,7 @@ const AiToken = () => {
     <div className="uitest-uses-ai">
       {' '}
       <BodyFourText className={classnames(style.aiToken, style.aiTokenText)}>
-        <ExtraStrongText>{i18n.usesAi()}</ExtraStrongText>
+        <StrongText>{i18n.usesAi()}</StrongText>
       </BodyFourText>
     </div>
   );
