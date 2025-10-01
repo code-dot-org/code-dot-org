@@ -20,6 +20,7 @@ import {
   ltiSyncResult,
   syncEnabled,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
+import color from '@cdo/apps/util/color';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
@@ -49,7 +50,7 @@ function ReauthorizeGoogleClassroom() {
   return (
     <form method="POST" action={REAUTHORIZE_URL}>
       <RailsAuthenticityToken />
-      <button type="submit" style={{padding: '8px 12px', borderRadius: 4}}>
+      <button type="submit" style={styles.ctaButtonStyle}>
         {i18n.authorizeGoogleClassrooms()}
       </button>
     </form>
@@ -209,7 +210,7 @@ class SyncOmniAuthSectionControl extends React.Component {
           <p>{i18n.loginTypeSyncButtonDialogHeaderSub()}</p>
           {this.state.needsGoogleReauth && (
             <div style={{margin: '12px 0'}}>
-              <p>{i18n.authorizeGoogleClassrooms()}</p>
+              <p>{i18n.authorizeGoogleClassroomsText()}</p>
               <ReauthorizeGoogleClassroom />
             </div>
           )}
@@ -331,5 +332,14 @@ const styles = {
   },
   closeButton: {
     paddingTop: '20px',
+  },
+  ctaButtonStyle: {
+    background: color.orange,
+    color: color.white,
+    border: '1px solid #b07202',
+    borderRadius: 3,
+    boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.63)',
+    fontSize: 14,
+    padding: '8px 20px',
   },
 };
