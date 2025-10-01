@@ -1,7 +1,7 @@
 'use client';
 
 import {getCookie, setCookie, deleteCookie} from 'cookies-next/client';
-import {useSearchParams} from 'next/navigation';
+import {useRouter, useSearchParams} from 'next/navigation';
 import {useEffect, useState} from 'react';
 
 import DSCOHeader, {
@@ -35,6 +35,7 @@ const defaultProps = getDefaultHeaderProps({
 });
 
 const Header: React.FC = () => {
+  const router = useRouter();
   const searchParams = useSearchParams();
   const cookieName = getCookieNameByStage('_shortName', getStage());
 
@@ -54,12 +55,19 @@ const Header: React.FC = () => {
       if (currentUserShortName) {
         setCookie(cookieName, currentUserShortName, {path: '/'});
         setSignedIn(true);
-      } else if (signOut) {
+
+        const params = new URLSearchParams(searchParams.toString());
+        params.delete('shortName');
+        router.replace(`?${params.toString()}`, {scroll: false});
+      }
+
+      if (signOut) {
         deleteCookie(cookieName, {path: '/'});
         setSignedIn(false);
-      } else {
-        // re-sync from cookie in case it changed outside
-        setSignedIn(!!getCookie(cookieName));
+
+        const params = new URLSearchParams(searchParams.toString());
+        params.delete('signOut');
+        router.replace(`?${params.toString()}`, {scroll: false});
       }
     } catch (err) {
       console.warn('Error handling cookies in Header:', err);

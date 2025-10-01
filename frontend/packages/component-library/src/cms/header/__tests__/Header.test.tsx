@@ -18,6 +18,11 @@ function waitFor(callback: () => void) {
 }
 
 jest.mock('next/navigation', () => ({
+  useRouter: jest.fn(() => ({
+    push: jest.fn(),
+    replace: jest.fn(),
+    prefetch: jest.fn(),
+  })),
   useSearchParams: jest.fn(() => new URLSearchParams()),
 }));
 

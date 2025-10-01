@@ -63,6 +63,8 @@ jest.mock(
 jest.mock('next/navigation', () => ({
   useRouter: jest.fn(() => ({
     push: jest.fn(),
+    replace: jest.fn(),
+    prefetch: jest.fn(),
   })),
   usePathname: jest.fn(() => '/example-path'),
   useServerInsertedHTML: jest.fn(),
