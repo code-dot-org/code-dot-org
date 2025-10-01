@@ -6,6 +6,7 @@ import {Store} from 'redux';
 
 import {AiChatDisabledProvider} from '@cdo/apps/aichat/context/aiChatDisabledContext';
 import progress from '@cdo/apps/code-studio/progressRedux';
+import {useAnalyticsOnFirstRun} from '@cdo/apps/lab2/hooks/useAnalyticsOnFirstRun';
 import lab from '@cdo/apps/lab2/lab2Redux';
 import lab2Project from '@cdo/apps/lab2/redux/lab2ProjectRedux';
 import lab2System from '@cdo/apps/lab2/redux/systemRedux';
@@ -32,6 +33,13 @@ jest.mock('@cdo/apps/pythonlab/pyodideWorkerManager', () => {
   };
 });
 
+jest.mock('@cdo/apps/lab2/hooks/useAnalyticsOnFirstRun', () => ({
+  useAnalyticsOnFirstRun: jest.fn(),
+}));
+
+const mockUseAnalyticsOnFirstRun =
+  useAnalyticsOnFirstRun as jest.MockedFunction<typeof useAnalyticsOnFirstRun>;
+
 const defaultLevelProperties: LevelProperties = {
   id: 0,
   name: '',
@@ -51,6 +59,8 @@ describe('PythonLabView', () => {
     });
 
     store = getStore();
+
+    mockUseAnalyticsOnFirstRun.mockClear();
   });
 
   afterEach(() => {
@@ -96,5 +106,18 @@ describe('PythonLabView', () => {
     renderDefault(defaultLevelProperties, undefined);
 
     expect(screen.queryByRole('button', {name: 'Console only'})).toBeNull();
+  });
+
+  it('calls useAnalyticsOnFirstRun with level properties when rendered', () => {
+    const levelProperties = {
+      ...defaultLevelProperties,
+      id: 123,
+      name: 'Test Level',
+      isProjectLevel: false,
+    };
+
+    renderDefault(levelProperties, undefined);
+
+    expect(mockUseAnalyticsOnFirstRun).toHaveBeenCalledWith(levelProperties);
   });
 });
