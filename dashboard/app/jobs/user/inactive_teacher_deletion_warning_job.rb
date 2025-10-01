@@ -7,25 +7,29 @@ class User
     EVENT_NAME = 'inactive_teacher_deletion_warning_sent'
 
     rescue_from StandardError, with: :report_exception
-    attr_reader :processed_teacher_ids
 
     def perform
-      @processed_teacher_ids = []
-      inactive_teachers.find_each do |teacher|
-        next if teacher.email.blank?
-        send_warning_email(teacher)
-        # Set email sent at field
-        mark_warning_email_sent(teacher.id)
+      ActiveRecord::Base.connected_to(role: :reporting) do
+        inactive_teachers.find_each do |teacher|
+          next if teacher.email.blank?
+          send_warning_email(teacher)
+          # Set email sent at field
+          mark_warning_email_sent(teacher.id)
 
-        Metrics::Events.log_event(
-          event_name: EVENT_NAME,
-          metadata: {
-            teacher_id: teacher.id,
-          }
-        )
-      ensure
-        processed_teacher_ids << teacher.id
+          Metrics::Events.log_event(
+            event_name: EVENT_NAME,
+            metadata: {
+              teacher_id: teacher.id,
+            }
+          )
+        ensure
+          processed_teacher_ids << teacher.id
+        end
       end
+    end
+
+    def processed_teacher_ids
+      @processed_teacher_ids ||= []
     end
 
     private def inactive_teachers
@@ -34,12 +38,10 @@ class User
         scope: ::Teacher.all,
         inactive_since: inactive_since,
       )
-      ActiveRecord::Base.connected_to(role: :reporting) do
-        result = inactive_query.call.left_outer_joins(:user_data_retention_status)
-        @inactive_teachers ||= result.where(user_data_retention_status: {deletion_warning_email_sent_at: nil}).
-          or(result.where(user_data_retention_status: {deletion_warning_email_sent_at: ..inactive_since})).
-          where.not(id: processed_teacher_ids)
-      end
+      result = inactive_query.call.left_outer_joins(:user_data_retention_status)
+      @inactive_teachers ||= result.where(user_data_retention_status: {deletion_warning_email_sent_at: nil}).
+        or(result.where(user_data_retention_status: {deletion_warning_email_sent_at: ..inactive_since})).
+        where.not(id: processed_teacher_ids)
     end
 
     private def send_warning_email(user)
