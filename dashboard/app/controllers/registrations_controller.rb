@@ -204,6 +204,7 @@ class RegistrationsController < Devise::RegistrationsController
           user: current_user,
           event_name: 'lti_user_created',
           metadata: metadata,
+          request: request,
         )
       end
       has_school = current_user.school_info&.school_id.present?
@@ -215,6 +216,7 @@ class RegistrationsController < Devise::RegistrationsController
         event_name: 'Sign Up Finished Backend',
         metadata: event_metadata,
         get_enabled_experiments: true,
+        request: request,
       )
     end
   end
