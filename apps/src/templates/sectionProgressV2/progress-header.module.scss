@@ -23,6 +23,10 @@
 
   &.navView {
     padding: 0;
+
+    &.v1 {
+      max-width: 970px;
+    }
   }
 }
 

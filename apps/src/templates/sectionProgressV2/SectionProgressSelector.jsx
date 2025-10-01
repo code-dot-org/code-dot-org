@@ -153,7 +153,13 @@ function SectionProgressSelector({
   };
 
   return (
-    <div className={classNames(styles.pageContent, styles.navView)}>
+    <div
+      className={classNames(
+        styles.pageContent,
+        styles.navView,
+        !displayV2 && styles.v1
+      )}
+    >
       {!displayV2 && (
         <Alert
           text={i18n.progressDeprecationWarning()}
