@@ -410,7 +410,7 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
           scrollEnd={scrollEnd}
           className={classNames(styles[`sequence-editor-${interfaceMode}`])}
           ariaLabel="Instrument Grid"
-          focusableChildren={focusableRefs.current}
+          focusableChildren={focusableRefs.current.flat()}
         >
           {allNotes.map(({note, name}, rowIndex) => {
             const {
