@@ -7,6 +7,7 @@ import {
 } from '@excalidraw/excalidraw/types/types';
 import React, {useEffect, useCallback, useRef, useState} from 'react';
 
+import useLevelEditMode from '@cdo/apps/lab2/hooks/useLevelEditMode';
 import {useVerticalLayout} from '@cdo/apps/lab2/hooks/useVerticalLayout';
 import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
 import {
@@ -41,6 +42,20 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
   const saveSourcesTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const hasRun = useAppSelector(state => state.lab2System.hasRun);
+
+  const WorkspaceAlert = useLevelEditMode<LevelProperties>(
+    levelProperties.id,
+    !!levelProperties.projectTemplateLevelName,
+    useCallback(
+      mode => {
+        return {
+          [mode === 'start' ? 'start_sources' : 'exemplar_sources']:
+            currentSources,
+        };
+      },
+      [currentSources]
+    )
+  );
 
   const {
     leftPanelWidth,
@@ -144,6 +159,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
             onChange={debouncedSerializeAndSaveWorkspace}
             excalidrawAPI={api => setExcalidrawApi(api)}
           />
+          {WorkspaceAlert}
         </PanelContainer>
       </div>
     </div>

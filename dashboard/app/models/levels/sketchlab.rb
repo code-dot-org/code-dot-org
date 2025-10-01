@@ -25,6 +25,12 @@
 #  index_levels_on_type       (type)
 
 class Sketchlab < Level
+  # Check if exemplar works?
+  serialized_attrs %w(
+    start_sources
+    exemplar_sources
+  )
+
   def self.create_from_level_builder(params, level_params)
     create!(
       level_params.merge(
