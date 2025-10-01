@@ -3,8 +3,10 @@ import {Heading5} from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
 import React, {useCallback, useState} from 'react';
 
+import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
 import {LevelProperties} from '@cdo/apps/lab2/types';
+import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import Adlib, {
   AdlibsType,
   AdlibType,
@@ -65,6 +67,10 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
       : adlibOption
       ? adlibs[adlibOption]
       : undefined;
+
+  useLifecycleNotifier(LifecycleEvent.LevelLoadStarted, () => {
+    dispatch(setAiGenerateState('none'));
+  });
 
   const generateSong = useCallback(async () => {
     dispatch(setAiGenerateState('generating'));

@@ -28,13 +28,14 @@ export function preInjectRegistrations() {
 }
 
 export function initializeKeyboardNavigation(
-  workspace: GoogleBlockly.WorkspaceSvg
+  workspace: GoogleBlockly.WorkspaceSvg,
+  isDarkTheme: boolean
 ) {
   if (Blockly.KeyboardNavigation) {
     Blockly.KeyboardNavigation.dispose();
   }
   unregisterCrossTabPluginOptions();
-  createShortcutsModalContainer();
+  createShortcutsModalContainer(isDarkTheme);
   Blockly.KeyboardNavigation = new KeyboardNavigation(workspace, {
     allowCrossWorkspacePaste: true,
   });
@@ -43,13 +44,16 @@ export function initializeKeyboardNavigation(
   enableShortcutModalEscape();
 }
 
-function createShortcutsModalContainer() {
+function createShortcutsModalContainer(isDarkTheme: boolean) {
   // Add the shortcuts div prior to keyboard navigation initialization
   // so the dialog has a place to land.
   if (!document.getElementById('shortcuts')) {
     const shortcutDialog = document.createElement('div');
     shortcutDialog.id = 'shortcuts';
     shortcutDialog.className = 'shortcut-dialog';
+    if (isDarkTheme) {
+      shortcutDialog.setAttribute('data-theme', 'Dark');
+    }
     document.body.appendChild(shortcutDialog);
   }
 }

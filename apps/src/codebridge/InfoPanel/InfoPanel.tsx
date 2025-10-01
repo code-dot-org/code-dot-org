@@ -216,6 +216,8 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
           aiTutorSystemPromptSettings={aiTutorSystemPromptSettings}
           aiTutorMultimodalEnabled={aiTutorMultimodalEnabled}
           aiTutorChatButtonData={aiTutorChatButtonData}
+          isValidationTourEnabled={appName === 'pythonlab'}
+          isOnboardingTourEnabled={appName === 'pythonlab'}
         />
       </div>
     );

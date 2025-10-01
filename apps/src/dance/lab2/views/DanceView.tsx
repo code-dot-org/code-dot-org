@@ -58,6 +58,8 @@ import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import SourcesContainer, {
   useSources,
 } from '@cdo/apps/lab2/views/SourcesContainer';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import ProjectPlayer from '@cdo/apps/music/ProjectPlayer';
 import MusicProjectBar from '@cdo/apps/music/views/MusicProjectBar';
 import {registerReducers} from '@cdo/apps/redux';
@@ -102,6 +104,8 @@ const DanceView: React.FunctionComponent<{
   const hasRun = useAppSelector(state => state.dance.hasRun);
   const hasEdited = useAppSelector(state => state.dance.hasEdited);
   const isLoading = useAppSelector(state => state.dance.isLoading);
+  const signedIn = useAppSelector(state => state.currentUser.signInState);
+  const scriptName = useAppSelector(state => state.progress.scriptName);
 
   const {currentSources, updateSources, showStartOverDialog} =
     useSources<DanceProjectSources>();
@@ -200,6 +204,19 @@ const DanceView: React.FunctionComponent<{
   );
 
   const runProgram = useCallback(async () => {
+    if (!hasRun) {
+      const eventName = levelProperties.isProjectLevel
+        ? EVENTS.PROJECT_ACTIVITY
+        : EVENTS.LEVEL_ACTIVITY;
+
+      analyticsReporter.sendEvent(eventName, {
+        signedIn: signedIn,
+        unitName: scriptName,
+        levelId: levelProperties.id,
+        levelName: levelProperties.name,
+      });
+    }
+
     if (!programExecutor.current || !metadataToUse) {
       return;
     }
@@ -216,7 +233,17 @@ const DanceView: React.FunctionComponent<{
     dispatch(setIsRunning(true));
     dispatch(setHasRun(true));
     saveBlocks(true);
-  }, [programExecutor, metadataToUse, saveBlocks, dispatch]);
+  }, [
+    hasRun,
+    metadataToUse,
+    dispatch,
+    saveBlocks,
+    levelProperties.isProjectLevel,
+    levelProperties.id,
+    levelProperties.name,
+    signedIn,
+    scriptName,
+  ]);
 
   const resetProgram = useCallback(() => {
     programExecutor.current?.reset();

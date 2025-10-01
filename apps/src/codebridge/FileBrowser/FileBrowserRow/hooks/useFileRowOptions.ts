@@ -95,7 +95,7 @@ export const useFileRowOptions = (
         clickHandler: () => openRenameFilePrompt({fileId: file.id}),
       },
       {
-        condition: enableUserAddedSelectionContext(appName, file),
+        condition: enableUserAddedSelectionContext(appName, file.url),
         iconName: 'message-code',
         labelText: codebridgeI18n.addToAiTutorContext(),
         clickHandler: () => {

@@ -3,9 +3,11 @@ import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {Heading5} from '@code-dot-org/component-library/typography';
 import React, {useCallback, useEffect, useState} from 'react';
 
+import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
 import {LevelProperties} from '@cdo/apps/lab2/types';
 import {getGeneratedDancerAssets} from '@cdo/apps/lab2/utils/GeneratedDancer';
+import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import Adlib, {AdlibsType} from '@cdo/apps/lab2/views/components/guide/Adlib';
 import Guide from '@cdo/apps/lab2/views/components/guide/Guide';
 import getRandomInt from '@cdo/apps/util/getRandomInt';
@@ -127,6 +129,10 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
   const [headImageUrl, setHeadImageUrl] = useState<string | undefined>(
     undefined
   );
+
+  useLifecycleNotifier(LifecycleEvent.LevelLoadStarted, () => {
+    setAiGenerateState('none');
+  });
 
   const generateDancerCache = useCallback(async () => {
     const startTime = Date.now();
