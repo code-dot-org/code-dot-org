@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
+import ReactTooltip from 'react-tooltip';
 
 import {OAuthSectionTypes} from '@cdo/apps/accounts/constants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
@@ -233,26 +234,34 @@ export function SyncOmniAuthSectionButton({
   buttonState,
   onClick,
 }) {
+  const tooltipId = `sync-button-tooltip`;
   return (
-    <Button
-      text={buttonText(buttonState, provider, providerName)}
-      color={Button.ButtonColor.gray}
-      size={Button.ButtonSize.default}
-      disabled={[IN_PROGRESS, DISABLED].includes(buttonState)}
-      onClick={onClick}
-      {...iconProps(buttonState)}
-      style={{float: 'left', margin: '0'}}
-      title={
-        buttonState === DISABLED
-          ? i18n.ltiSectionSyncButtonDisabledAltText()
-          : undefined
-      }
-      aria-label={
-        buttonState === DISABLED
-          ? i18n.ltiSectionSyncButtonDisabledAltText()
-          : undefined
-      }
-    />
+    <span data-for={tooltipId} data-tip style={{float: 'left'}}>
+      <Button
+        text={buttonText(buttonState, provider, providerName)}
+        color={Button.ButtonColor.gray}
+        size={Button.ButtonSize.default}
+        disabled={[IN_PROGRESS, DISABLED].includes(buttonState)}
+        onClick={onClick}
+        {...iconProps(buttonState)}
+        style={{margin: '0'}}
+        title={
+          buttonState === DISABLED
+            ? i18n.ltiSectionSyncButtonDisabledAltText()
+            : undefined
+        }
+        aria-label={
+          buttonState === DISABLED
+            ? i18n.ltiSectionSyncButtonDisabledAltText()
+            : undefined
+        }
+      />
+      {buttonState === DISABLED && (
+        <ReactTooltip id={tooltipId} role="tooltip" effect="solid">
+          <div> {i18n.ltiSectionSyncButtonDisabledAltText()} </div>
+        </ReactTooltip>
+      )}
+    </span>
   );
 }
 SyncOmniAuthSectionButton.propTypes = {
