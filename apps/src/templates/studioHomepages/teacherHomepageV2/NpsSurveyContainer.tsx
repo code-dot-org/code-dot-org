@@ -30,19 +30,19 @@ const customCssClasses = {
   comment: 'nps-survey-comment',
 };
 
-interface questionChoice {
+interface QuestionChoice {
   value: string;
   text: string;
 }
 
-interface questionValidator {
+interface QuestionValidator {
   type: string;
   text: string;
   minCount: number;
   maxCount: number;
 }
 
-interface surveyElement {
+interface SurveyElement {
   type: string;
   name: string;
   title: string;
@@ -52,8 +52,8 @@ interface surveyElement {
   rateMax?: number;
   minRateDescription?: string;
   maxRateDescription?: string;
-  validators?: questionValidator[];
-  choices?: questionChoice[];
+  validators?: QuestionValidator[];
+  choices?: QuestionChoice[];
   choicesOrder?: string;
   hasOther?: boolean;
   otherText?: string;
@@ -61,22 +61,22 @@ interface surveyElement {
   visibleIf?: string;
 }
 
-interface surveyPage {
+interface SurveyPage {
   name: string;
-  elements: surveyElement[];
+  elements: SurveyElement[];
   title: string;
 }
 
-interface surveyQuestions {
+interface SurveyQuestions {
   completedHtml: string;
-  pages: surveyPage[];
+  pages: SurveyPage[];
   showQuestionNumbers: string;
   completeText: string;
   published: boolean;
 }
 
-interface surveyPropsInterface {
-  formQuestions: surveyQuestions;
+interface SurveyPropsInterface {
+  formQuestions: SurveyQuestions;
   formName: string;
   formVersion: number;
   surveyData: string | null;
@@ -96,7 +96,7 @@ const NpsSurveyContainer: React.FC<NpsSurveyContainerProps> = ({
   NPSProps,
   onCompleteCallback,
 }) => {
-  const surveyProps: surveyPropsInterface = useMemo(
+  const surveyProps: SurveyPropsInterface = useMemo(
     () => JSON.parse(NPSProps),
     [NPSProps]
   );

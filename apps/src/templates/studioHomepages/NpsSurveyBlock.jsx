@@ -53,7 +53,6 @@ export default class NpsSurveyBlock extends React.Component {
       url: '/form/nps_survey/configuration',
       type: 'get',
     }).done(result => {
-      console.log(result);
       if (result) {
         this.setState({result: JSON.parse(result.props)});
       }
