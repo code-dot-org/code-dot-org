@@ -56,6 +56,7 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
   const [AFEDrawerOpen, setAFEDrawerOpen] = React.useState(afeOpenInitially);
   const [AFEParticipate, setAFEParticipate] = React.useState(false);
   const [NPSOpen, setNPSOpen] = React.useState(npsOpenInitially);
+  const [NPSSuccess, setNPSSuccess] = React.useState(false);
 
   const isOpen = React.useMemo<boolean>(
     () =>
@@ -63,13 +64,15 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
       schoolInfoConfirmationOpen ||
       success ||
       AFEDrawerOpen ||
-      NPSOpen,
+      NPSOpen ||
+      NPSSuccess,
     [
       schoolInfoInterstitialOpen,
       schoolInfoConfirmationOpen,
       success,
       AFEDrawerOpen,
       NPSOpen,
+      NPSSuccess,
     ]
   );
 
@@ -87,7 +90,8 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
     existingSchoolInfo?.school_name || i18n.schoolInfoDialogDescriptionNoName();
 
   const NpsSurveyComplete = () => {
-    onDrawerClose();
+    setNPSOpen(false);
+    setNPSSuccess(true);
   };
 
   const headerText: () => string = () => {
@@ -101,6 +105,8 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
       return i18n.afeDrawerHeader();
     } else if (NPSOpen) {
       return i18n.helpUsImprove();
+    } else if (NPSSuccess) {
+      return i18n.NPSSuccessHeader();
     }
   };
 
@@ -115,6 +121,8 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
       return i18n.schoolInfoDrawerSuccess();
     } else if (AFEDrawerOpen) {
       return i18n.afeBannerParagraph();
+    } else if (NPSSuccess) {
+      return i18n.NPSSuccessBody();
     }
   };
 
@@ -143,7 +151,7 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
           )}
         </div>
       );
-    } else if (schoolInfoConfirmationOpen || success || AFEDrawerOpen) {
+    } else {
       return null;
     }
   };
@@ -345,6 +353,7 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
     setSuccess(false);
     setAFEDrawerOpen(false);
     setNPSOpen(false);
+    setNPSSuccess(false);
     onCloseCallback();
   };
 
@@ -365,7 +374,7 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
         />
       </div>
       <div className={styles.drawerText}>
-        {success && (
+        {(success || NPSSuccess) && (
           <img
             className={styles.drawerImage}
             src={drawerConfirmationImage}

@@ -2087,6 +2087,8 @@
   "notSignedInBodyContent": "You can explore this lesson without an account, but to save your progress, join your class, or unlock more features, sign in or create an account before you get started!",
   "notStarted": "Not started",
   "nPoints": "{numPoints, plural, one {1 point} other {# points}}",
+  "NPSSuccessHeader": "Thank you for your answers!",
+  "NPSSuccessBody": "Your responses will help us shape and improve the Code.org experience for everyone.",
   "numAttempts": "{numAttempts, plural, one {1 attempt} other {# attempts}}",
   "numCurriculaAvailableInLanguage": "{numCurricula, plural, one {1 curriculum} other {# curricula}} available in {language}",
   "numMatchCorrect": "# match correct",
