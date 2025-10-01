@@ -1,22 +1,21 @@
 .textArea {
-    min-height: 42px;
-    max-height: 250px;
-    box-sizing: border-box;
-    resize: none;
-    margin: 0;
-    flex: 1;
+  min-height: 42px;
+  max-height: 250px;
+  box-sizing: border-box;
+  resize: none;
+  margin: 0;
+  flex: 1;
 }
 
 .editorContainer {
-    padding: 10px;
-    display: flex;
-    width: 100%;
-    box-sizing: border-box;
-    gap: 5px;
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  gap: 5px;
 }
 
 .endSingleItemContainer {
-    display: flex;
-    justify-content: center;
-    align-items: end;
+  display: flex;
+  justify-content: center;
+  align-items: end;
 }

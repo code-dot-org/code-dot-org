@@ -1,0 +1,55 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-09-25T19:56:10.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Do This:\r\n\r\nYou're building a fitness app that tracks a user's daily step goal. Your app needs to remember how many steps the user is aiming for each day.\r\n\r\n1. Create a variable called `step_goal`.\r\n\r\n2. Assign it a number, like `8000` or `10000`.\r\n\r\n3. Use `print()` to show a message like\r\n\r\n   ```\r\n   Your daily step goal is 10000 steps.\r\n   ```\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nYou can use **commas** in a `print()` statement to combine text and variables. For example:\r\n\r\n```\r\nprint(\"Name:\", first_name)\r\n```",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "display_name": "Step Goal",
+    "bubble_choice_description": "You're building a fitness app that tracks a user's daily step goal. Your app needs to remember how many steps the user is aiming for each day.",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# This program stores and prints a daily step goal\n\n# Your code goes here!\n",
+          "folderId": "0",
+          "active": false,
+          "open": true,
+          "type": "locked_starter"
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "thumbnail_url": "https://images.code.org/57a1914da3135b2ca2e49ec13863996b-fitness-tracker.png",
+    "name_suffix": "_v2-2025",
+    "encrypted_exemplar_sources": "Cy05mEYW43yx3lpwk/lyQYs4qPKDc2JDG2xzW6EZ2HXNXiuQgI6R1SlqPKPt\nlYISiQp/Zt7oXvHNpBSUY2/tVcAoh32dY5clMNiyTLp2qQ5O47DJ0rGD0IJV\nXDiO//IRW/LZBlXyH5JryMNp/3+nzlv7HOvov92/kPXisrCn+gI93v83Dal9\naPJswq4ek0vGy7S2lVA1ZFgpV1rvaE9BfriVf6VAS+pDoN5pEeFggugbZmht\nugKNUGj7kzDiLDzg9ajotwAbOvHFeJ927N5e5BYp/zFB6PvC17IROe0wtxMD\nS7nUgK1Lz/VQfzBQNIb3sloj4+xF1nqE19FGciuX0LiG5pAAQGvAm+CHQQBI\nKs6Q/ESrllzzksIXxleyyamlLk1MI53Su2WcaeSulC2MQ91JNYX0i58DIQRP\nsvgNdDBJRtej9noRe4lVc1BMmzda\n",
+    "validation_file": {
+      "id": "1",
+      "name": "test.py",
+      "language": "py",
+      "contents": "from unittest import TestCase\nfrom unittest_runner import ValidationProtocol\n\nclass TestStepGoalTracker(TestCase):\n    @classmethod\n    def setUpClass(cls):\n        \"\"\"Get the printed output log\"\"\"\n        cls.log = ValidationProtocol().get_stdout_logs()\n\n    def test_step_goal_exists_and_is_integer(self):\n      \"\"\"A variable called step_goal should exist and be an integer\"\"\"\n      namespace = {}\n      with open(\"main.py\", \"r\") as f:\n          code = f.read()\n          exec(code, namespace)\n  \n      self.assertIn('step_goal', namespace, \"Make sure you define step_goal!\")\n  \n      self.assertIsInstance(\n          namespace['step_goal'],\n          int,\n          \"step_goal should be an integer!\"\n      )\n\n    def test_step_goal_in_output(self):\n        \"\"\"Printed message should include the step_goal\"\"\"\n        try:\n            from main import step_goal\n        except ImportError:\n            self.fail(\"Make sure you create a variable called step_goal!\")\n\n        printed_lines = [line.strip() for line in self.log if line.strip()]\n\n        found = any(str(step_goal) in line for line in printed_lines)\n\n        self.assertTrue(\n            found,\n            \"Make sure your printed message includes the step goal number!\"\n        )\n",
+      "folderId": "0",
+      "active": false,
+      "open": false,
+      "type": "validation"
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:56:10.564+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson4-level3b_2025-launch_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson4-level3b_2025-launch_2025\"}]"
+}]]></config>
+</Pythonlab>

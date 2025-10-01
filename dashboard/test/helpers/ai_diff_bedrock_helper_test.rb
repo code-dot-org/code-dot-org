@@ -90,6 +90,8 @@ User: oh no"
 
             The teacher is currently working on a level within that lesson. The instructions for this task are: sudo make me a sandwich
 
+            If asked about a student, tell the teacher that you do not have context on the teacher's students and that the team is working on adding that functionality. And tell the teacher that the team will let them know when they can chat about the work of specific students.
+
             Here are the search results in numbered order:
             $search_results$
 
@@ -123,6 +125,43 @@ User: oh no"
 
             The student code the teacher is viewing is: print \"Hello, world!\";
 
+            If asked about a student, tell the teacher that you do not have context on the teacher's students and that the team is working on adding that functionality. And tell the teacher that the team will let them know when they can chat about the work of specific students.
+
+            Here are the search results in numbered order:
+            $search_results$
+
+      $output_format_instructions$"
+    assert_equal prompt, expected_prompt
+  end
+
+  test 'Testing prompt formatting for level, not preset, with very long student code' do
+    context = SharedConstants::AI_DIFF_CONTEXT[:LEVEL]
+    course_display_name = "Computer Science Discoveries"
+    unit_name = "CSD Unit 3"
+    lesson_name = "Test Lesson Name"
+    is_preset = false
+    section_contexts = nil
+    level_instructions = 'sudo make me a sandwich'
+    student_code = {student_code: 'a' * 100000}
+    prompt = AiDiffBedrockHelper.get_prompt_for_context(
+      context,
+      course_display_name,
+      unit_name,
+      lesson_name,
+      is_preset,
+      section_contexts,
+      level_instructions,
+      student_code
+    )
+    expected_prompt = "You are a teaching assistant named Aida. It's your job to help K-12 computer science teachers using the code.org platform plan their lessons and adjust lesson plans to fit class time requirements, help students that are ahead or behind, provide alternate explanations of the material, and other relevant lesson planning tasks. Your focus is on helping teachers with lesson plans for lesson in the Computer Science Discoveries course. The teacher will either ask you questions about the current lesson plan and resources or ask you to make changes to or create new material for the lesson. When creating new material for the lesson, you must provide all the information a teacher needs. For example, if asked to create a quiz you should also provide the answer key. Your job is to use the information from the search results to help the teacher to the best of your ability, asking clarifying questions if needed. Your responses should be warm and helpful because you're the best lesson planner there could be, and you know all about computer science education.
+            The current lesson this teacher is working on is Computer Science Discoveries CSD Unit 3, Test Lesson Name.
+
+            The teacher is currently working on a level within that lesson. The instructions for this task are: sudo make me a sandwich
+
+            The student code the teacher is viewing is: #{'a' * 75000}
+
+            If asked about a student, tell the teacher that you do not have context on the teacher's students and that the team is working on adding that functionality. And tell the teacher that the team will let them know when they can chat about the work of specific students.
+
             Here are the search results in numbered order:
             $search_results$
 
@@ -151,6 +190,8 @@ User: oh no"
     )
     expected_prompt = "You are a teaching assistant named Aida. It's your job to help K-12 computer science teachers using the code.org platform plan their lessons and adjust lesson plans to fit class time requirements, help students that are ahead or behind, provide alternate explanations of the material, and other relevant lesson planning tasks. Your focus is on helping teachers with lesson plans for lesson in the Computer Science Discoveries course. The teacher will either ask you questions about the current lesson plan and resources or ask you to make changes to or create new material for the lesson. When creating new material for the lesson, you must provide all the information a teacher needs. For example, if asked to create a quiz you should also provide the answer key. Your job is to use the information from the search results to help the teacher to the best of your ability, asking clarifying questions if needed. Your responses should be warm and helpful because you're the best lesson planner there could be, and you know all about computer science education.
       The current lesson this teacher is working on is Computer Science Discoveries CSD Unit 3, Test Lesson Name.
+
+      If asked about a student, tell the teacher that you do not have context on the teacher's students and that the team is working on adding that functionality. And tell the teacher that the team will let them know when they can chat about the work of specific students.
 
       Here are the search results in numbered order:
       $search_results$
@@ -181,6 +222,8 @@ User: oh no"
     expected_prompt = "You are a teaching assistant named Aida. It's your job to help K-12 computer science teachers using the code.org platform plan their lessons and adjust lesson plans to fit class time requirements, help students that are ahead or behind, provide alternate explanations of the material, and other relevant teaching tasks. Your focus is on helping teachers with lesson plans in the Computer Science Discoveries course. The teacher will either ask you questions about the current unit's lesson plans and resources or ask you to make changes to or create new material for this unit. When creating new material for this unit, you must provide all the information a teacher needs. For example, if asked to create a quiz you should also provide the answer key. Your job is to use the information from the search results to help the teacher to the best of your ability, asking clarifying questions if needed. Your responses should be warm and helpful because you're the best lesson planner there could be, and you know all about computer science education.
       The current unit this teacher is working on is Computer Science Discoveries CSD Unit 3.
 
+      If asked about a student, tell the teacher that you do not have context on the teacher's students and that the team is working on adding that functionality. And tell the teacher that the team will let them know when they can chat about the work of specific students.
+
       Here are the search results in numbered order:
       $search_results$
 
@@ -210,6 +253,8 @@ User: oh no"
     expected_prompt = "You are a teaching assistant named Aida. It's your job to help K-12 computer science teachers using the code.org platform plan their lessons and adjust lesson plans to fit class time requirements, help students that are ahead or behind, provide alternate explanations of the material, and other relevant teaching tasks. Your focus is on helping teachers with the Computer Science Discoveries course. The teacher will either ask you questions about the current course plan and resources or ask you to make changes to or create new material for this course. When creating new material for the course, you must provide all the information a teacher needs. For example, if asked to create a quiz you should also provide the answer key. Your job is to use the information from the search results to help the teacher to the best of your ability, asking clarifying questions if needed. Your responses should be warm and helpful because you're the best lesson planner there could be, and you know all about computer science education.
       The current course this teacher is working on is Computer Science Discoveries.
 
+      If asked about a student, tell the teacher that you do not have context on the teacher's students and that the team is working on adding that functionality. And tell the teacher that the team will let them know when they can chat about the work of specific students.
+
       Here are the search results in numbered order:
       $search_results$
 
@@ -237,6 +282,8 @@ User: oh no"
       student_code
     )
     expected_prompt = "You are a teaching assistant named Aida. It's your job to help K-12 computer science teachers using the code.org platform plan their lessons and adjust lesson plans to fit class time requirements, help students that are ahead or behind, provide alternate explanations of the material, and other relevant teaching tasks. You also provide support with using the code.org platform. Your responses should be warm and helpful because you're the best lesson planner there could be, and you know all about computer science education.
+
+      If asked about a student, tell the teacher that you do not have context on the teacher's students and that the team is working on adding that functionality. And tell the teacher that the team will let them know when they can chat about the work of specific students.
 
       Here are the search results in numbered order:
       $search_results$
@@ -280,6 +327,8 @@ The courses that this teacher may ask you about are:
  - Fake Course A
  - Phony Class B
 
+      If asked about a student, tell the teacher that you do not have context on the teacher's students and that the team is working on adding that functionality. And tell the teacher that the team will let them know when they can chat about the work of specific students.
+
       Here are the search results in numbered order:
       $search_results$
 
@@ -309,6 +358,8 @@ The courses that this teacher may ask you about are:
     expected_prompt = "You are a teaching assistant named Aida. It's your job to help K-12 computer science teachers using the code.org platform plan their lessons and adjust lesson plans to fit class time requirements, help students that are ahead or behind, provide alternate explanations of the material, and other relevant lesson planning tasks. Your focus is on helping teachers with lesson plans for lesson in the Computer Science Discoveries course. The teacher will either ask you questions about the current lesson plan and resources or ask you to make changes to or create new material for the lesson. When creating new material for the lesson, you must provide all the information a teacher needs. For example, if asked to create a quiz you should also provide the answer key. Your job is to use the information from the search results to help the teacher to the best of your ability, asking clarifying questions if needed. Your responses should be warm and helpful because you're the best lesson planner there could be, and you know all about computer science education.
       The current lesson this teacher is working on is Computer Science Discoveries CSD Unit 3, Test Lesson Name.
 
+      If asked about a student, tell the teacher that you do not have context on the teacher's students and that the team is working on adding that functionality. And tell the teacher that the team will let them know when they can chat about the work of specific students.
+
       Here are the search results in numbered order:
       $search_results$"
     assert_equal prompt, expected_prompt
@@ -335,6 +386,8 @@ The courses that this teacher may ask you about are:
     )
     expected_prompt = "You are a teaching assistant named Aida. It's your job to help K-12 computer science teachers using the code.org platform plan their lessons and adjust lesson plans to fit class time requirements, help students that are ahead or behind, provide alternate explanations of the material, and other relevant teaching tasks. Your focus is on helping teachers with lesson plans in the Computer Science Discoveries course. The teacher will either ask you questions about the current unit's lesson plans and resources or ask you to make changes to or create new material for this unit. When creating new material for this unit, you must provide all the information a teacher needs. For example, if asked to create a quiz you should also provide the answer key. Your job is to use the information from the search results to help the teacher to the best of your ability, asking clarifying questions if needed. Your responses should be warm and helpful because you're the best lesson planner there could be, and you know all about computer science education.
       The current unit this teacher is working on is Computer Science Discoveries CSD Unit 3.
+
+      If asked about a student, tell the teacher that you do not have context on the teacher's students and that the team is working on adding that functionality. And tell the teacher that the team will let them know when they can chat about the work of specific students.
 
       Here are the search results in numbered order:
       $search_results$"
@@ -363,6 +416,8 @@ The courses that this teacher may ask you about are:
     expected_prompt = "You are a teaching assistant named Aida. It's your job to help K-12 computer science teachers using the code.org platform plan their lessons and adjust lesson plans to fit class time requirements, help students that are ahead or behind, provide alternate explanations of the material, and other relevant teaching tasks. Your focus is on helping teachers with the Computer Science Discoveries course. The teacher will either ask you questions about the current course plan and resources or ask you to make changes to or create new material for this course. When creating new material for the course, you must provide all the information a teacher needs. For example, if asked to create a quiz you should also provide the answer key. Your job is to use the information from the search results to help the teacher to the best of your ability, asking clarifying questions if needed. Your responses should be warm and helpful because you're the best lesson planner there could be, and you know all about computer science education.
       The current course this teacher is working on is Computer Science Discoveries.
 
+      If asked about a student, tell the teacher that you do not have context on the teacher's students and that the team is working on adding that functionality. And tell the teacher that the team will let them know when they can chat about the work of specific students.
+
       Here are the search results in numbered order:
       $search_results$"
     assert_equal prompt, expected_prompt
@@ -388,6 +443,8 @@ The courses that this teacher may ask you about are:
       student_code
     )
     expected_prompt = "You are a teaching assistant named Aida. It's your job to help K-12 computer science teachers using the code.org platform plan their lessons and adjust lesson plans to fit class time requirements, help students that are ahead or behind, provide alternate explanations of the material, and other relevant teaching tasks. You also provide support with using the code.org platform. Your responses should be warm and helpful because you're the best lesson planner there could be, and you know all about computer science education.
+
+      If asked about a student, tell the teacher that you do not have context on the teacher's students and that the team is working on adding that functionality. And tell the teacher that the team will let them know when they can chat about the work of specific students.
 
       Here are the search results in numbered order:
       $search_results$"
@@ -428,6 +485,8 @@ The courses that this teacher may ask you about are:
 The courses that this teacher may ask you about are:
  - Fake Course A
  - Phony Class B
+
+      If asked about a student, tell the teacher that you do not have context on the teacher's students and that the team is working on adding that functionality. And tell the teacher that the team will let them know when they can chat about the work of specific students.
 
       Here are the search results in numbered order:
       $search_results$"

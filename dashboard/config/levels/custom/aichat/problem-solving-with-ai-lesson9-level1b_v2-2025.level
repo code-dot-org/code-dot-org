@@ -1,0 +1,52 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2025-09-25T19:53:08.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Brainstorming Initial Ideas Chat\r\n\r\nUse AI Chat to help you come up with early ideas for your product launch.\r\n\r\nFocus on ideas that connect to your assigned role (e.g., name + slogan, visuals, script, or jingle).\r\n\r\n### Do This:\r\n1. Use AI Chat to brainstorm creative possibilities for your product or campaign.\r\n    - What could this product include or do?\r\n    - What are some possible names, taglines, looks, sounds, or messages?\r\n    - How might this appeal to students to solve a real problem?\r\n    - What images or documents can you provide to AI Chat?\r\n2. In your Activity Guide under Stage 2: Brainstorming Initial Ideas, write:\r\n\t- The question or prompt you gave to AI\r\n\t- A summary of what the AI told you\r\n3. Want better results? Try asking AI to give you options in different styles—like playful, futuristic, sleek, or tech-savvy.",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.3,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "multimodalEnabled": true
+    },
+    "bubble_choice_description": "Use AI Chat to help you come up with early ideas for your product launch.",
+    "display_name": "Brainstorming Chat",
+    "thumbnail_url": "https://images.code.org/5e9ac4c059e55fbfc9adf798ca42e7b4-brainstorm.png",
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:53:08.091+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson9-level1b_2025\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson9-level1b_2025\"}]"
+}]]></config>
+</Aichat>

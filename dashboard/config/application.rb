@@ -26,8 +26,6 @@ require 'cdo/pycall'
 # you've limited to :test, :development, or :production.
 Bundler.require(:default, Rails.env)
 
-require_relative '../engines/marketing/lib/marketing/engine'
-
 module Dashboard
   class Application < Rails::Application
     # Explicitly load appropriate defaults for this version of Rails.
@@ -236,5 +234,15 @@ module Dashboard
 
     config.active_job.queue_adapter = CDO.active_job_queue_adapter
     config.active_job.default_queue_name = CDO.active_job_queues[:default]
+
+    config.to_prepare do
+      # Register the Contentful source for notifications in the Dashboard app
+      contentful_client = if (Rails.application.config.respond_to?(:stub_contentful_notifications) && Rails.application.config.stub_contentful_notifications) || [:development, :test].include?(rack_env)
+                            Marketing::DashboardNotificationEntriesMock
+                          else
+                            CdoContentful::Marketing::Entry::DashboardNotification
+                          end
+      ::Notifications.register(Marketing::DashboardNotifications::ContentfulNotificationSource.new(contentful_client))
+    end
   end
 end

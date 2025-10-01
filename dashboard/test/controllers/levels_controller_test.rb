@@ -735,8 +735,9 @@ class LevelsControllerTest < ActionController::TestCase
   test "should prevent rename of level in launched or pilot script" do
     script_level = create(:script_level)
     script = script_level.script
-    script.published_state = 'stable'
-    script.save!
+    unit_group = script.original_unit_group
+    unit_group.published_state = 'stable'
+    unit_group.save!
     level = script_level.level
 
     get :edit, params: {id: level.id}
@@ -744,8 +745,8 @@ class LevelsControllerTest < ActionController::TestCase
     assert_includes @response.body, level.name
     assert_includes @response.body, 'level cannot be renamed'
 
-    script.published_state = 'beta'
-    script.save!
+    unit_group.published_state = 'beta'
+    unit_group.save!
     get :edit, params: {id: level.id}
     assert_response :success
     assert_includes @response.body, level.name

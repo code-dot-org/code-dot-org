@@ -1,0 +1,13 @@
+name 'computer-systems-lesson8-level1_v2-2025'
+display_name 'Processing Library Data'
+description 'Below are several library scenarios where data needs to be processed to solve problems and make decisions. Choose a scenario to analyze and create a computer system solution.'
+
+sublevels
+level 'computer-systems-lesson8-level1a_v2-2025'
+level 'computer-systems-lesson8-level1b_v2-2025'
+level 'computer-systems-lesson8-level1c_v2-2025'
+level 'computer-systems-lesson8-level1d_v2-2025'
+level 'computer-systems-lesson8-level1e_v2-2025'
+level 'computer-systems-lesson8-level1f_v2-2025'
+level 'computer-systems-lesson8-level1g_v2-2025'
+level 'computer-systems-lesson8-level1h_v2-2025'

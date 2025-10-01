@@ -782,6 +782,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
       Blockly.Xml.domToText(xml),
       includeHiddenDefinitions
     );
+
     // Loop through all the parent blocks and remove vertical translation value
     // This makes the output more condensed and readable, while preserving
     // horizontal translation values for RTL rendering.
@@ -921,7 +922,10 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
         experiments.BLOCKLY_KEYBOARD_NAVIGATION
       )
     ) {
-      initializeKeyboardNavigation(workspace);
+      initializeKeyboardNavigation(
+        workspace,
+        blocklyWrapper.isDarkTheme || false
+      );
     }
 
     // Typically, we need to handle disabling blocks that are not connected to an

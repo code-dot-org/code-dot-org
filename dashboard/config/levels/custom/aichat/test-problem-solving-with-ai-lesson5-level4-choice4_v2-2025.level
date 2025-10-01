@@ -1,0 +1,55 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2025-09-25T19:52:50.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Education\r\n\r\n### AI Contradictions\r\n\r\nAsk AI Chat questions about **critical thinking** and notice any places where AI contradicts itself.\r\n\r\n### Do This:\r\n\r\n1. Prompt AI Chat by modifying the following question stems. For each prompt, fill in the missing information and then press **Send** one prompt at a time: \r\n \r\n:::details [**Opposite Framing**] \r\n> *Why is it bad/wrong/harmful to...?*\r\n:::\r\n\r\n:::details [**Same Framing**] \r\n>*Why are ... important/beneficial/good?*\r\n:::\r\n\r\n:::details [**Same Framing with a Source (upload a PDF)**] \r\n>*According to the organization ..., why are ... important/beneficial/good?*\r\n:::\r\n&nbsp; \r\n2. Read and compare AI Chat's responses, including its response from the previous level.\r\n3. Note any contradictions and answer the reflection questions in your **Unit Guide**.",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.3,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "Respond concisely and clearly. Prioritize brevity, relevance, and directness. Avoid unnecessary elaboration or repetition. Limit your response to under 75 words unless the user asks for more detail.\n",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "multimodalEnabled": true
+    },
+    "display_name": "Education",
+    "bubble_choice_description": "Practice asking the same question in different ways about critical thinking.",
+    "thumbnail_url": "https://images.code.org/5ffb3a00a9f0fa819efc4f336c9b4f10-Critical Thinking Icon.png",
+    "name_suffix": "_v2-2025",
+    "starter_assets": {
+      "National Education Association.pdf": "24f9b51d-442b-4da7-a226-bb42c7c71dc8.pdf"
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:52:50.086+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson5-level4-choice4_2025\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson5-level4-choice4_2025\"}]"
+}]]></config>
+</Aichat>

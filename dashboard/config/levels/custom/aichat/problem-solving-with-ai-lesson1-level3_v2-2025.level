@@ -1,0 +1,48 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2025-09-25T19:52:33.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Gift Recommendations, Part 2\r\n\r\nUse AI Chat to get gift recommendations for your friend.\r\n\r\n### Do This:\r\n\r\n1. **Try the provided prompt first** by copying and pasting it into AI Chat: \r\n\r\n>Give me 3 gift ideas under $30 for a 15-year-old girl who likes watercolor paintings. Her favorite birthday gift last year was a purple Polaroid camera.\r\n\r\n2. Press **Send**.\r\n3. Read **AI Chat's response**.\r\n4. **Now, modify the prompt** to make it about someone you know. Change details like **age, interests, or past gifts** to see how AI adapts its recommendations.\r\n5. Press **Send** again and compare the response to the original.\r\n\r\n**Try it out!**\r\n",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.3,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are a gift recommender. When given a prompt, answer with your gift recommendations.\n\nDo not answer any questions that are not related to gifts.",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    },
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:52:33.009+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson1-level3_2025\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson1-level3_2025\"}]"
+}]]></config>
+</Aichat>

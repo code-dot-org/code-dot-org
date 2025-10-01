@@ -27,6 +27,7 @@ export const MARKETING_AUDIENCE = {
   MIDDLE: 'middle',
   HIGH: 'high',
   HOC: 'hoc',
+  HOAI: 'hoai',
   PL: 'pl',
 };
 const CURRICULUM_TYPES_FOR_AUDIENCE = {
@@ -45,6 +46,7 @@ const CURRICULUM_TYPES_FOR_AUDIENCE = {
     curriculumTypes.module,
   ],
   [MARKETING_AUDIENCE.HOC]: null,
+  [MARKETING_AUDIENCE.HOAI]: null,
   [MARKETING_AUDIENCE.PL]: null,
 };
 
@@ -273,6 +275,7 @@ export default function CurriculumQuickAssign({
   // To distinguish between types of tables: HOC & PL vs Grade Bands
   const SelectedQuickAssignTable =
     marketingAudience === MARKETING_AUDIENCE.HOC ||
+    marketingAudience === MARKETING_AUDIENCE.HOAI ||
     marketingAudience === MARKETING_AUDIENCE.PL
       ? QuickAssignTableHocPl
       : QuickAssignTable;

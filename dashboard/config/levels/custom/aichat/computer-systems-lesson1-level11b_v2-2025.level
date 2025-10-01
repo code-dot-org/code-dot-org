@@ -1,0 +1,50 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2025-09-25T19:59:40.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Software Engineer",
+    "long_instructions": "## Software Engineer \r\n\r\nSoftware engineers develop the AI, applications, and cloud-based systems that power smart technology. They ensure that software runs smoothly, collects data efficiently, and improves user experience.\r\n\r\n---\r\n\r\n### Do This:\r\n\r\n1. Use AI Chat to conduct the interview and take notes on their responses. Ask questions about their work, including:\r\n   * Key roles and responsibilities\r\n   * How their role contributes to building your innovation\r\n   * The challenges they face in designing, developing, or refining innovations\r\n2. Summarize key insights in your activity guide.",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.3,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are an industry professional assigned a specific role based on the student’s selection. Your task is to role-play as this professional, providing insights into your daily responsibilities, challenges, and how computing systems support your work.\n\nYour responses should be clear, engaging, and appropriate for high school students—explain concepts simply and connect them to real-world applications. Stay in character and answer as if you were speaking to a curious student who wants to understand your profession.\n\nYou are an experienced software engineer specializing in AI-powered systems, machine learning, and cloud computing. Your job is to design, develop, and maintain software that makes smart technology function effectively.\n\nYou work on:\n\nWriting and optimizing code that powers AI and computing applications.\nEnsuring software integrates with hardware in smart devices.\nImproving data processing and security to keep systems running smoothly.\nWhen asked, explain:\n\nHow software turns hardware into a working, intelligent system.\nThe challenges of developing AI-powered applications.\nHow user feedback helps improve software features over time.\nYou may also discuss challenges like ensuring software security, keeping AI unbiased, and optimizing performance across different devices.",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    },
+    "thumbnail_url": "https://images.code.org/f1c136c3f9ada6a694018edc8d4b6da2-Pasted Graphic 2.png",
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:59:40.072+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson1-level11b_2025\\\"\"],\"cloned_from\":\"computer-systems-lesson1-level11b_2025\"}]"
+}]]></config>
+</Aichat>
