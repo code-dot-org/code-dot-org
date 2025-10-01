@@ -110,7 +110,7 @@ describe('PythonLabView', () => {
     expect(screen.queryByRole('button', {name: 'Console only'})).toBeNull();
   });
 
-  it('calls useAnalyticsOnFirstRun with level properties when rendered', () => {
+  it('calls useLevelActivityMetrics with level properties when rendered', () => {
     const levelProperties = {
       ...defaultLevelProperties,
       id: 123,
