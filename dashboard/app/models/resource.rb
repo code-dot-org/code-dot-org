@@ -79,10 +79,10 @@ class Resource < ApplicationRecord
   end
 
   def should_include_in_pdf?
-    # Resources should be excluded from PDF rollups if they satisfy any of the following:
-    # - It's not explicitly flagged with the `include_in_pdf` property
-    # - If they are intended to only be shown to verified teachers
-    # - If they have an `embeddability_type` of `embed_only` (thus, not user-facing)
+    # Resources should be included in PDF rollups if they satisfy all of the following:
+    # - Flagged with the `include_in_pdf` property
+    # - Not intended to only be shown to verified teachers
+    # - Don't have an `embeddability_type` of `embed_only`
     return (!!include_in_pdf && audience != 'Verified Teacher' && embeddability_type != SharedConstants::RESOURCE_EMBEDDABILITY_OPTIONS[:EMBED_ONLY][:value])
   end
 
