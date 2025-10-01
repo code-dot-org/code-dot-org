@@ -68,9 +68,9 @@ export default function Congrats(props) {
    * @returns {Object} extraLinkUrl, extraLinkText
    */
   const getExtraLinkData = (language, tutorial, currentDate) => {
-    // https://codedotorg.atlassian.net/browse/P20-1144
-    const codingPartyStart = new Date('2025-06-16:00:00+09:00');
-    const codingPartyEnd = new Date('2025-07-27:00:00+09:00');
+    // https://codedotorg.atlassian.net/browse/P20-1635
+    const codingPartyStart = new Date('2025-10-15:00:00+09:00');
+    const codingPartyEnd = new Date('2025-11-25:00:00+09:00');
     const codingPartyActive =
       codingPartyStart <= currentDate && currentDate < codingPartyEnd;
     if (language === 'ko' && codingPartyActive) {
@@ -78,22 +78,30 @@ export default function Congrats(props) {
         '온라인 코딩 파티 인증서 받으러 가기! (과학기술정보통신부 인증)';
       if (/oceans/.test(tutorial)) {
         return {
-          extraLinkUrl: pegasus('/files/online-coding-party-2025-1-oceans.png'),
+          extraLinkUrl: studio(
+            '/blockly/media/certificates/ko/online-coding-party-2025-2-oceans.png'
+          ),
           extraLinkText: extraLinkText,
         };
       } else if (/hero/.test(tutorial)) {
         return {
-          extraLinkUrl: pegasus('/files/online-coding-party-2025-1-hero.png'),
+          extraLinkUrl: studio(
+            '/blockly/media/certificates/ko/online-coding-party-2025-2-hero.png'
+          ),
           extraLinkText: extraLinkText,
         };
       } else if (/dance-ai/.test(tutorial)) {
         return {
-          extraLinkUrl: pegasus('/files/online-coding-party-2025-1-dance.png'),
+          extraLinkUrl: studio(
+            '/blockly/media/certificates/ko/online-coding-party-2025-2-dance.png'
+          ),
           extraLinkText: extraLinkText,
         };
       } else if (/music-jam/.test(tutorial)) {
         return {
-          extraLinkUrl: pegasus('/files/online-coding-party-2025-1-music.png'),
+          extraLinkUrl: studio(
+            '/blockly/media/certificates/ko/online-coding-party-2025-2-music.png'
+          ),
           extraLinkText: extraLinkText,
         };
       }

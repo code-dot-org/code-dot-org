@@ -31,6 +31,7 @@ import {
 } from '@cdo/apps/util/reduxHooks';
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
+import {useAiChatDisabled} from '../aichat/context/aiChatDisabledContext';
 import CodebridgeRegistry from '../codebridge/CodebridgeRegistry';
 
 import ProjectTypePicker from './components/ProjectTypePicker';
@@ -87,6 +88,21 @@ const PythonlabView: React.FunctionComponent<
   const progressManager = useContext(ProgressManagerContext);
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
   const [showProjectPicker, setShowProjectPicker] = useState(false);
+
+  // TODO: remove disabling chat via query param
+  const {setChatDisabledState} = useAiChatDisabled();
+
+  const chatDisabledParam = !!queryParams('disable-ai-chat');
+  const chatDisabledMessageParam = queryParams('disable-ai-chat-message') as
+    | string
+    | undefined;
+
+  useEffect(() => {
+    setChatDisabledState({
+      chatDisabled: chatDisabledParam,
+      chatDisabledMessage: chatDisabledMessageParam,
+    });
+  }, [chatDisabledParam, chatDisabledMessageParam, setChatDisabledState]);
 
   const currentLevelStatus = useAppSelector(
     state => getCurrentLevel(state)?.status

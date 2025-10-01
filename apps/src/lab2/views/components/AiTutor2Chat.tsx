@@ -74,7 +74,7 @@ const defaultChatButtonData: ChatButtonData[] = [
       cannedPrompt: 'doc',
     },
     icon: {
-      iconName: 'file-code',
+      iconName: 'book',
     },
   },
 ] as const;

@@ -15,6 +15,11 @@ export interface Activity {
   languagesText: string;
   standards: string;
   tutorialID: string;
+  featuredPosition: number;
+}
+
+export interface OramaActivity extends Activity {
+  sortKey: string;
 }
 
 export enum ActivityType {

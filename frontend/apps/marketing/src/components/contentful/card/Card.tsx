@@ -8,6 +8,7 @@ import {HTMLAttributes, useMemo} from 'react';
 
 import Button from '@/components/contentful/button';
 import Overline from '@/components/contentful/overline';
+import NextImage from '@/components/nextImage/NextImage';
 import {useStatsigLogger} from '@/providers/statsig/client';
 import {getAbsoluteImageUrl} from '@/selectors/contentful/getImage';
 import {LinkEntry} from '@/types/contentful/entries/Link';
@@ -92,14 +93,17 @@ const Card: React.FC<CardProps> = ({
 
   return (
     <CardMui className={className} raised={false}>
-      {imageSrc && (
+      {imageSource && (
         <CardMedia
-          src={imageSource}
-          component="img"
-          alt=""
-          loading="lazy"
-          sx={{height: setImageHeight}}
-        />
+          sx={{height: setImageHeight, position: 'relative'}}
+          component={'div'}
+        >
+          <NextImage
+            alt={title || ''}
+            src={imageSource}
+            style={{objectFit: 'cover'}}
+          />
+        </CardMedia>
       )}
       <CardContent>
         {overline && (
