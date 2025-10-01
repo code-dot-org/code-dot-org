@@ -12,15 +12,20 @@ interface LevelProperties {
 
 /**
  * Custom hook that automatically logs LEVEL_ACTIVITY or PROJECT_ACTIVITY
- * analytics events when a user first runs their code in a Lab2 environment.
+ * analytics events when a user performs their first activity in a Lab2 environment.
  *
- * This hook watches the lab2System.hasRun state and logs exactly once
+ * This hook watches the lab2System.hasLevelActivity state and logs exactly once
  * when it transitions from false to true.
+ *
+ * Include this metric in your View and then call setHasLevelActivity(true) when
+ * the LEVEL_ACTIVITY metric should be logged.
  *
  * @param levelProperties - Level properties containing isProjectLevel, id, and name
  */
-export function useAnalyticsOnFirstRun(levelProperties: LevelProperties) {
-  const hasRun = useAppSelector(state => state.lab2System.hasRun);
+export function useLevelActivityMetrics(levelProperties: LevelProperties) {
+  const hasLevelActivity = useAppSelector(
+    state => state.lab2System.hasLevelActivity
+  );
   const signedIn = useAppSelector(state => state.currentUser.signInState);
   const scriptName = useAppSelector(state => state.progress.scriptName);
 
@@ -28,8 +33,8 @@ export function useAnalyticsOnFirstRun(levelProperties: LevelProperties) {
   const hasLoggedRef = useRef(false);
 
   useEffect(() => {
-    // Log analytics when hasRun becomes true for the first time
-    if (hasRun && !hasLoggedRef.current) {
+    // Log analytics when hasLevelActivity becomes true for the first time
+    if (hasLevelActivity && !hasLoggedRef.current) {
       hasLoggedRef.current = true;
 
       const eventName = levelProperties.isProjectLevel
@@ -44,7 +49,7 @@ export function useAnalyticsOnFirstRun(levelProperties: LevelProperties) {
       });
     }
   }, [
-    hasRun,
+    hasLevelActivity,
     levelProperties.isProjectLevel,
     levelProperties.id,
     levelProperties.name,

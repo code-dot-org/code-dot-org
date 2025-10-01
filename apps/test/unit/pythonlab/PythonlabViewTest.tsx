@@ -6,7 +6,7 @@ import {Store} from 'redux';
 
 import {AiChatDisabledProvider} from '@cdo/apps/aichat/context/aiChatDisabledContext';
 import progress from '@cdo/apps/code-studio/progressRedux';
-import {useAnalyticsOnFirstRun} from '@cdo/apps/lab2/hooks/useAnalyticsOnFirstRun';
+import {useLevelActivityMetrics} from '@cdo/apps/lab2/hooks/useLevelActivityMetrics';
 import lab from '@cdo/apps/lab2/lab2Redux';
 import lab2Project from '@cdo/apps/lab2/redux/lab2ProjectRedux';
 import lab2System from '@cdo/apps/lab2/redux/systemRedux';
@@ -33,12 +33,14 @@ jest.mock('@cdo/apps/pythonlab/pyodideWorkerManager', () => {
   };
 });
 
-jest.mock('@cdo/apps/lab2/hooks/useAnalyticsOnFirstRun', () => ({
-  useAnalyticsOnFirstRun: jest.fn(),
+jest.mock('@cdo/apps/lab2/hooks/useLevelActivityMetrics', () => ({
+  useLevelActivityMetrics: jest.fn(),
 }));
 
-const mockUseAnalyticsOnFirstRun =
-  useAnalyticsOnFirstRun as jest.MockedFunction<typeof useAnalyticsOnFirstRun>;
+const mockUseLevelActivityMetrics =
+  useLevelActivityMetrics as jest.MockedFunction<
+    typeof useLevelActivityMetrics
+  >;
 
 const defaultLevelProperties: LevelProperties = {
   id: 0,
@@ -60,7 +62,7 @@ describe('PythonLabView', () => {
 
     store = getStore();
 
-    mockUseAnalyticsOnFirstRun.mockClear();
+    mockUseLevelActivityMetrics.mockClear();
   });
 
   afterEach(() => {
@@ -118,6 +120,6 @@ describe('PythonLabView', () => {
 
     renderDefault(levelProperties, undefined);
 
-    expect(mockUseAnalyticsOnFirstRun).toHaveBeenCalledWith(levelProperties);
+    expect(mockUseLevelActivityMetrics).toHaveBeenCalledWith(levelProperties);
   });
 });

@@ -42,8 +42,8 @@ import {
   SongMetadata,
 } from '@cdo/apps/dance/types';
 import {TOOLBOX_BLOCKS} from '@cdo/apps/lab2/constants';
-import {useAnalyticsOnFirstRun} from '@cdo/apps/lab2/hooks/useAnalyticsOnFirstRun';
 import {useBlocklySettings} from '@cdo/apps/lab2/hooks/useBlocklySettings';
+import {useLevelActivityMetrics} from '@cdo/apps/lab2/hooks/useLevelActivityMetrics';
 import useLevelEditMode from '@cdo/apps/lab2/hooks/useLevelEditMode';
 import {setPageError} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
@@ -52,7 +52,10 @@ import {
   getIsShareView,
 } from '@cdo/apps/lab2/projects/utils';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
-import {setHasRun as setLab2HasRun} from '@cdo/apps/lab2/redux/systemRedux';
+import {
+  setHasRun as setLab2HasRun,
+  setHasLevelActivity,
+} from '@cdo/apps/lab2/redux/systemRedux';
 import {BlocklySource, LabProps} from '@cdo/apps/lab2/types';
 import Guide from '@cdo/apps/lab2/views/components/guide/Guide';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
@@ -120,7 +123,7 @@ const DanceView: React.FunctionComponent<{
 
   const {theme} = useTheme();
 
-  useAnalyticsOnFirstRun(levelProperties);
+  useLevelActivityMetrics(levelProperties);
 
   const metadataToUse: SongMetadata | undefined = useMemo(() => {
     if (!musicProjectPlayer.current || !loadedMusicProject) {
@@ -220,6 +223,7 @@ const DanceView: React.FunctionComponent<{
     dispatch(setIsRunning(true));
     dispatch(setHasRun(true));
     dispatch(setLab2HasRun(true));
+    dispatch(setHasLevelActivity(true));
     saveBlocks(true);
   }, [metadataToUse, dispatch, saveBlocks]);
 

@@ -3,8 +3,10 @@ import React from 'react';
 import {Provider} from 'react-redux';
 import {Store} from 'redux';
 
-import {useAnalyticsOnFirstRun} from '@cdo/apps/lab2/hooks/useAnalyticsOnFirstRun';
-import lab2System, {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
+import {useLevelActivityMetrics} from '@cdo/apps/lab2/hooks/useLevelActivityMetrics';
+import lab2System, {
+  setHasLevelActivity,
+} from '@cdo/apps/lab2/redux/systemRedux';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {
@@ -56,7 +58,7 @@ const differentLevelProperties: LevelProperties = {
   name: 'Different Level',
 };
 
-describe('useAnalyticsOnFirstRun', () => {
+describe('useLevelActivityMetrics', () => {
   let store: Store;
 
   beforeEach(() => {
@@ -79,13 +81,13 @@ describe('useAnalyticsOnFirstRun', () => {
       <Provider store={store}>{children}</Provider>
     );
 
-    return renderHook(() => useAnalyticsOnFirstRun(levelProperties), {
+    return renderHook(() => useLevelActivityMetrics(levelProperties), {
       wrapper,
     });
   };
 
   describe('Initial State Tests', () => {
-    it('does not trigger analytics when hasRun is false initially', () => {
+    it('does not trigger analytics when hasLevelActivity is false initially', () => {
       renderHookWithRedux(defaultLevelProperties);
 
       expect(mockAnalyticsReporter.sendEvent).not.toHaveBeenCalled();
@@ -104,7 +106,7 @@ describe('useAnalyticsOnFirstRun', () => {
       renderHookWithRedux(defaultLevelProperties);
 
       act(() => {
-        store.dispatch(setHasRun(true));
+        store.dispatch(setHasLevelActivity(true));
       });
 
       expect(mockAnalyticsReporter.sendEvent).toHaveBeenCalledWith(
@@ -123,7 +125,7 @@ describe('useAnalyticsOnFirstRun', () => {
       renderHookWithRedux(projectLevelProperties);
 
       act(() => {
-        store.dispatch(setHasRun(true));
+        store.dispatch(setHasLevelActivity(true));
       });
 
       expect(mockAnalyticsReporter.sendEvent).toHaveBeenCalledWith(
@@ -142,7 +144,7 @@ describe('useAnalyticsOnFirstRun', () => {
       renderHookWithRedux(defaultLevelProperties);
 
       act(() => {
-        store.dispatch(setHasRun(true));
+        store.dispatch(setHasLevelActivity(true));
       });
 
       expect(mockAnalyticsReporter.sendEvent).toHaveBeenCalledWith(
@@ -158,19 +160,19 @@ describe('useAnalyticsOnFirstRun', () => {
   });
 
   describe('Duplicate Prevention Tests', () => {
-    it('ensures analytics fires exactly once even if hasRun toggles multiple times', () => {
+    it('ensures analytics fires exactly once even if hasLevelActivity toggles multiple times', () => {
       renderHookWithRedux(defaultLevelProperties);
 
       act(() => {
-        store.dispatch(setHasRun(true));
+        store.dispatch(setHasLevelActivity(true));
       });
 
       act(() => {
-        store.dispatch(setHasRun(false));
+        store.dispatch(setHasLevelActivity(false));
       });
 
       act(() => {
-        store.dispatch(setHasRun(true));
+        store.dispatch(setHasLevelActivity(true));
       });
 
       expect(mockAnalyticsReporter.sendEvent).toHaveBeenCalledTimes(1);
@@ -181,9 +183,9 @@ describe('useAnalyticsOnFirstRun', () => {
 
       // Trigger multiple times rapidly
       act(() => {
-        store.dispatch(setHasRun(true));
-        store.dispatch(setHasRun(true));
-        store.dispatch(setHasRun(true));
+        store.dispatch(setHasLevelActivity(true));
+        store.dispatch(setHasLevelActivity(true));
+        store.dispatch(setHasLevelActivity(true));
       });
 
       expect(mockAnalyticsReporter.sendEvent).toHaveBeenCalledTimes(1);
@@ -195,19 +197,19 @@ describe('useAnalyticsOnFirstRun', () => {
       renderHookWithRedux(defaultLevelProperties);
 
       act(() => {
-        store.dispatch(setHasRun(true));
+        store.dispatch(setHasLevelActivity(true));
       });
 
       expect(mockAnalyticsReporter.sendEvent).toHaveBeenCalledTimes(1);
 
       act(() => {
-        store.dispatch(setHasRun(false));
+        store.dispatch(setHasLevelActivity(false));
       });
 
       renderHookWithRedux(differentLevelProperties);
 
       act(() => {
-        store.dispatch(setHasRun(true));
+        store.dispatch(setHasLevelActivity(true));
       });
 
       expect(mockAnalyticsReporter.sendEvent).toHaveBeenCalledTimes(2);
@@ -226,14 +228,14 @@ describe('useAnalyticsOnFirstRun', () => {
       renderHookWithRedux(defaultLevelProperties);
 
       act(() => {
-        store.dispatch(setHasRun(true));
+        store.dispatch(setHasLevelActivity(true));
       });
 
       renderHookWithRedux(projectLevelProperties);
 
       act(() => {
-        store.dispatch(setHasRun(false));
-        store.dispatch(setHasRun(true));
+        store.dispatch(setHasLevelActivity(false));
+        store.dispatch(setHasLevelActivity(true));
       });
 
       expect(mockAnalyticsReporter.sendEvent).toHaveBeenCalledTimes(2);

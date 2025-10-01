@@ -10,7 +10,7 @@ import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {sendProgressReport} from '@cdo/apps/code-studio/progressRedux';
 import {TestResults} from '@cdo/apps/constants';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
-import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
+import {setHasRun, setHasLevelActivity} from '@cdo/apps/lab2/redux/systemRedux';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {RootState} from '@cdo/apps/types/redux';
@@ -89,6 +89,7 @@ export const submitChatContents = createAsyncThunk(
     };
     dispatch(setChatMessagePending(newUserMessage));
     dispatch(setHasRun(true));
+    dispatch(setHasLevelActivity(true));
 
     // Post user content and messages to backend and retrieve assistant response.
     const startTime = Date.now();

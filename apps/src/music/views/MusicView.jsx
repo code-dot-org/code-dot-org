@@ -14,7 +14,7 @@ import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {TestResults} from '@cdo/apps/constants';
 import DCDO from '@cdo/apps/dcdo';
 import {START_SOURCES, TOOLBOX_BLOCKS} from '@cdo/apps/lab2/constants';
-import {useAnalyticsOnFirstRun} from '@cdo/apps/lab2/hooks/useAnalyticsOnFirstRun';
+import {useLevelActivityMetrics} from '@cdo/apps/lab2/hooks/useLevelActivityMetrics';
 import {setIsLoading, setPageError} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {
@@ -23,7 +23,7 @@ import {
   getAppOptionsViewingExemplar,
 } from '@cdo/apps/lab2/projects/utils';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
-import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
+import {setHasRun, setHasLevelActivity} from '@cdo/apps/lab2/redux/systemRedux';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import AnalyticsReporter from '@cdo/apps/music/analytics/AnalyticsReporter';
 import {setExtraCopyrightContent} from '@cdo/apps/sharedComponents/footer/CopyrightDialog/index';
@@ -137,6 +137,7 @@ class UnconnectedMusicView extends React.Component {
     sendAttemptReport: PropTypes.func,
     isFirstAttempt: PropTypes.bool,
     setHasRun: PropTypes.func,
+    setHasLevelActivity: PropTypes.func,
   };
 
   constructor(props) {
@@ -888,6 +889,7 @@ class UnconnectedMusicView extends React.Component {
       hasRun: true,
     });
     this.props.setHasRun(true);
+    this.props.setHasLevelActivity(true);
     if (this.props.isFirstAttempt) {
       this.props.sendAttemptReport();
     }
@@ -1061,11 +1063,13 @@ const MusicView = connect(
     sendAttemptReport: () =>
       dispatch(sendProgressReport('music', TestResults.LEVEL_STARTED)),
     setHasRun: hasRun => dispatch(setHasRun(hasRun)),
+    setHasLevelActivity: hasActivity =>
+      dispatch(setHasLevelActivity(hasActivity)),
   })
 )(UnconnectedMusicView);
 
 const MusicViewWithAnalytics = props => {
-  useAnalyticsOnFirstRun(props.levelProperties);
+  useLevelActivityMetrics(props.levelProperties);
   return <MusicView {...props} />;
 };
 

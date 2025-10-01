@@ -13,6 +13,7 @@ import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {
   setHasRun,
+  setHasLevelActivity,
   setIsRunning,
   setIsValidating,
   setHasValidated,
@@ -91,6 +92,7 @@ const ControlButtons: React.FunctionComponent = () => {
         }
       });
       dispatch(setHasRun(true));
+      dispatch(setHasLevelActivity(true));
     } else {
       CodebridgeRegistry.getInstance()
         .getConsoleManager()

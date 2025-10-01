@@ -8,6 +8,7 @@ export interface Lab2SystemState {
   loadedCodeEnvironment: boolean;
   isRunning: boolean;
   hasRun: boolean;
+  hasLevelActivity: boolean;
   isValidating: boolean;
   hasValidated: boolean;
   hasError: boolean;
@@ -17,6 +18,7 @@ const initialState: Lab2SystemState = {
   loadedCodeEnvironment: false,
   isRunning: false,
   hasRun: false,
+  hasLevelActivity: false,
   isValidating: false,
   hasValidated: false,
   hasError: false,
@@ -36,6 +38,9 @@ const systemSlice = createSlice({
     setHasRun(state, action: PayloadAction<boolean>) {
       state.hasRun = action.payload;
     },
+    setHasLevelActivity(state, action: PayloadAction<boolean>) {
+      state.hasLevelActivity = action.payload;
+    },
     setIsValidating(state, action: PayloadAction<boolean>) {
       state.isValidating = action.payload;
     },
@@ -52,6 +57,7 @@ export const {
   setLoadedCodeEnvironment,
   setIsRunning,
   setHasRun,
+  setHasLevelActivity,
   setIsValidating,
   setHasValidated,
   setHasError,

@@ -6,11 +6,11 @@ import {html} from '@codemirror/lang-html';
 import {javascript} from '@codemirror/lang-javascript';
 import {markdown} from '@codemirror/lang-markdown';
 import {LanguageSupport} from '@codemirror/language';
-import React, {useEffect, useMemo, useRef, useState} from 'react';
+import React, {useEffect, useMemo, useState} from 'react';
 
 import {SystemPromptOption} from '@cdo/apps/aichat/types';
-import {useAnalyticsOnFirstRun} from '@cdo/apps/lab2/hooks/useAnalyticsOnFirstRun';
-import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
+import {useLevelActivityMetrics} from '@cdo/apps/lab2/hooks/useLevelActivityMetrics';
+import {setHasRun, setHasLevelActivity} from '@cdo/apps/lab2/redux/systemRedux';
 import {LabProps, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 
 import {useSource} from '../codebridge/hooks/useSource';
@@ -79,13 +79,12 @@ const Weblab2View: React.FC<
   LabProps<Weblab2LevelProperties, ProjectSources>
 > = ({levelProperties, initialSources}) => {
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
-  const hasSetFirstEdit = useRef(false);
-  const initialSourceRef = useRef<string | null>(null);
 
   const source = useAppSelector(
     state =>
       state.lab2Project.projectSources?.source as MultiFileSource | undefined
   );
+  const hasEdited = useAppSelector(state => state.lab2Project.hasEdited);
   const [aiTutorSystemPromptName, setAiTutorSystemPromptName] =
     useState<string>(() => {
       const availableModes = levelProperties.availableAiTutorModes;
@@ -106,7 +105,7 @@ const Weblab2View: React.FC<
     initialSources
   );
 
-  useAnalyticsOnFirstRun(levelProperties);
+  useLevelActivityMetrics(levelProperties);
 
   const hasSource = useAppSelector(
     state => !!state.lab2Project.projectSources?.source
@@ -150,26 +149,16 @@ const Weblab2View: React.FC<
   const dispatch = useAppDispatch();
 
   useEffect(() => {
-    if (source && initialSourceRef.current === null) {
-      initialSourceRef.current = JSON.stringify(source);
-    }
-  }, [source]);
-
-  useEffect(() => {
-    if (source && initialSourceRef.current && !hasSetFirstEdit.current) {
-      const currentSourceString = JSON.stringify(source);
-      if (currentSourceString !== initialSourceRef.current) {
-        hasSetFirstEdit.current = true;
-        dispatch(setHasRun(true));
-      }
-    }
-  }, [source, dispatch]);
-
-  useEffect(() => {
     return () => {
-      dispatch(setHasRun(false));
+      dispatch(setHasRun(true));
     };
   }, [dispatch]);
+
+  useEffect(() => {
+    if (hasEdited) {
+      dispatch(setHasLevelActivity(true));
+    }
+  }, [hasEdited, dispatch]);
 
   useEffect(() => {
     dispatch(setViewMode(levelProperties?.initialViewMode || ViewMode.SPLIT));
