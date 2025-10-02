@@ -9921,6 +9921,8 @@ en:
               name: Lesson 10 - Data Visualization
             lesson-13:
               name: EscA.I.pe Room
+            lesson-14:
+              name: Sketch Lab Levels
           lesson_groups: {}
           name: emmas-playground
           title: ''
@@ -25520,6 +25522,18 @@ en:
           lesson_groups: {}
           name: hoai-dance-pilot2
           title: hoai-dance-pilot2
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        hoai-dance-pilot3:
+          lessons: {}
+          lesson_groups: {}
+        hoai-dance-pilot4:
+          lessons: {}
+          lesson_groups: {}
+          name: hoai-dance-pilot4
+          title: ''
           description_audience: ''
           description_short: ''
           description: ''

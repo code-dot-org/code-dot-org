@@ -32,7 +32,7 @@ const adlibs: AdlibsType = {
     options: {
       animal: ['wolf', 'moose', 'frog', 'tiger', 'panda'],
     },
-    variantCount: 3,
+    variantCount: 5,
   },
   'animal-attire-02': {
     template:
@@ -41,7 +41,7 @@ const adlibs: AdlibsType = {
       animal: ['wolf', 'moose', 'frog', 'tiger', 'panda'],
       attire: ['headscarf', 'sunglasses', 'headphones', 'crown', 'beanie'],
     },
-    variantCount: 3,
+    variantCount: 5,
   },
   'adjective-animal-attire-02': {
     template:
@@ -51,7 +51,7 @@ const adlibs: AdlibsType = {
       animal: ['wolf', 'moose', 'frog', 'tiger', 'panda'],
       attire: ['headscarf', 'sunglasses', 'headphones', 'crown', 'beanie'],
     },
-    variantCount: 3,
+    variantCount: 5,
   },
   // Earlier adlibs which will be removed soon:
   animal: {
