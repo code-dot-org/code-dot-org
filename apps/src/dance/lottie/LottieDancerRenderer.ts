@@ -21,10 +21,7 @@
  *   - No coupling to audio/BPM — callers pick frames and timing themselves.
  */
 
-import lottie, {
-  type AnimationItem,
-  type CanvasRendererConfig,
-} from 'lottie-web';
+import {type AnimationItem, type CanvasRendererConfig} from 'lottie-web';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
 
@@ -49,10 +46,11 @@ import {
   insertHeadImageLayer,
   getGeneratedDancerAssets,
   BASE_HOST,
+  safeParseJSON,
+  loadCanvasAnimation,
 } from './LottieDancerUtils';
 
 // Default assets
-// Same constants you already have:
 const ASSETS_FOLDER = 'basic2';
 const TEST_BASE_DANCER = 'duck';
 const TEST_GENERATED_DANCER = 'basic-frog-baseball-cap-00';
@@ -92,7 +90,7 @@ export default class LottieDancerRenderer {
     ) as {
       adlibOption?: string;
       choices?: string[];
-      variant?: number | string;
+      variant?: number;
     } | null;
 
     const {adlibOption, choices, variant} = localStorageDancer || {};
@@ -148,62 +146,13 @@ export default class LottieDancerRenderer {
 
   async setSource(danceMove?: DanceMoves | null): Promise<void> {
     if (!danceMove) {
-      this.clearSource();
       return;
     }
 
-    const danceMoveLowerCase = String(danceMove).toLowerCase();
-    let animData: LottieJSON;
-    if (this.cachedAnimationData[danceMoveLowerCase]) {
-      animData = this.cachedAnimationData[danceMoveLowerCase];
-    } else {
-      const jsonUrl = resolveAnimationUrl(
-        this.skeletonName,
-        danceMoveLowerCase
-      );
+    const moveKey = String(danceMove).toLowerCase();
 
-      animData = await fetchJson<LottieJSON>(jsonUrl);
-
-      // Fetch palette metadata if we have a URL for it.
-      let palette: Palette | null = null;
-      if (this.metadataUrl) {
-        const metadataJson = await fetchJson<DancerMetadata>(this.metadataUrl);
-        palette = normalizePalette(metadataJson);
-      }
-
-      // Recolor assets based on hard-coded accessory-name rules.
-      applyColorMapping(animData, palette);
-
-      // Replace vector head with an image, when head.png is available.
-      const headInfo = await fetchHeadImageInfo(this.headUrl);
-      if (headInfo) {
-        const headPre = findHeadPrecompLayerDeep(animData);
-        if (headPre?.refId) {
-          const headComp = getAssetById(animData, headPre.refId);
-          if (headComp && Array.isArray(headComp.layers)) {
-            const {insertIndex, headKs} = hideVectorHeadInComp(headComp);
-            const assetId = ensureHeadImageAsset(
-              animData,
-              headInfo.dataUrl,
-              headInfo.width,
-              headInfo.height
-            );
-            insertHeadImageLayer(
-              headComp,
-              insertIndex,
-              assetId,
-              headInfo.width,
-              headInfo.height,
-              this.headScale,
-              headKs
-            );
-          }
-        }
-      }
-      // Memoize transformed Lottie JSON per move (in-memory cache) so subsequent setSource calls skip recolor/head work.
-      // This is useful if the same dance move is used later in a song, or if there are multiple generated dancers using the same move.
-      this.cachedAnimationData[danceMoveLowerCase] = animData;
-    }
+    // Load the transformed JSON (or reuse from cache).
+    const animData = await this.loadAndTransformMove(moveKey);
 
     // Lottie instance bound to our canvas 2D context
     await this.prepareLottie(animData);
@@ -213,7 +162,6 @@ export default class LottieDancerRenderer {
       Math.round((animData.op || 0) - (animData.ip || 0))
     );
 
-    // Optionally capture comp size if top-level provides it.
     if (typeof animData.w === 'number' && typeof animData.h === 'number') {
       this.compW = animData.w;
       this.compH = animData.h;
@@ -251,16 +199,6 @@ export default class LottieDancerRenderer {
     if (typeof this.anim.resize === 'function') this.anim.resize();
   }
 
-  dispose(): void {
-    this.destroyAnim();
-  }
-
-  // Cleanup path
-  private clearSource(): void {
-    this.destroyAnim();
-    this.totalFrames = null;
-  }
-
   // Lottie lifecycle
   private async prepareLottie(animationData: LottieJSON): Promise<void> {
     this.destroyAnim();
@@ -289,7 +227,77 @@ export default class LottieDancerRenderer {
     this.anim = anim;
   }
 
-  private destroyAnim(): void {
+  /**
+   * Load, recolor, inject head, and memoize a move's Lottie JSON.
+   * Returns the cached/transformed JSON if already present.
+   */
+  private async loadAndTransformMove(danceMove: string): Promise<LottieJSON> {
+    const danceMoveLowerCase = String(danceMove).toLowerCase();
+    if (this.cachedAnimationData[danceMoveLowerCase]) {
+      return this.cachedAnimationData[danceMoveLowerCase];
+    }
+
+    const jsonUrl = resolveAnimationUrl(this.skeletonName, danceMoveLowerCase);
+
+    const animData = await fetchJson<LottieJSON>(jsonUrl);
+
+    // Fetch palette metadata if we have a URL for it.
+    let palette: Palette | null = null;
+    if (this.metadataUrl) {
+      const metadataJson = await fetchJson<DancerMetadata>(this.metadataUrl);
+      palette = normalizePalette(metadataJson);
+    }
+
+    // Recolor assets based on hard-coded accessory-name rules.
+    applyColorMapping(animData, palette);
+
+    // Replace vector head with an image, when head.png is available.
+    const headInfo = await fetchHeadImageInfo(this.headUrl);
+    if (headInfo) {
+      const headPre = findHeadPrecompLayerDeep(animData);
+      if (headPre?.refId) {
+        const headComp = getAssetById(animData, headPre.refId);
+        if (headComp && Array.isArray(headComp.layers)) {
+          const {insertIndex, headKs} = hideVectorHeadInComp(headComp);
+          const assetId = ensureHeadImageAsset(
+            animData,
+            headInfo.dataUrl,
+            headInfo.width,
+            headInfo.height
+          );
+          insertHeadImageLayer(
+            headComp,
+            insertIndex,
+            assetId,
+            headInfo.width,
+            headInfo.height,
+            this.headScale,
+            headKs
+          );
+        }
+      }
+    }
+    // Memoize transformed Lottie JSON per move (in-memory cache) so subsequent setSource calls skip recolor/head work.
+    // This is useful if the same dance move is used later in a song, or if there are multiple generated dancers using the same move.
+    this.cachedAnimationData[danceMoveLowerCase] = animData;
+    return animData;
+  }
+
+  /**
+   * Preload and cache one or more moves up front to avoid blips during playback.
+   * Ignores duplicates; failures for individual moves don't reject the whole batch.
+   */
+  public async precacheMoves(
+    moves: Array<DanceMoves | string> | null | undefined
+  ): Promise<void> {
+    if (!moves || moves.length === 0) return;
+    const keys = Array.from(new Set(moves.map(m => String(m).toLowerCase())));
+    await Promise.all(
+      keys.map(k => this.loadAndTransformMove(k).catch(() => {}))
+    );
+  }
+
+  public destroyAnim(): void {
     if (this.anim) {
       try {
         this.anim.destroy?.();
@@ -299,22 +307,4 @@ export default class LottieDancerRenderer {
     }
     this.anim = null;
   }
-}
-
-function safeParseJSON(str: string | null): unknown | null {
-  if (!str) return null;
-  try {
-    return JSON.parse(str);
-  } catch {
-    return null;
-  }
-}
-
-function loadCanvasAnimation(config: CanvasAnimConfig): AnimationItem {
-  // The upstream types for lottie-web requires `container` to be set,
-  // but Lottie also supports a canvas with provided 2d context and no container.
-  // We cast to `any` to avoid the type error since providing a container here would
-  // prevent us from rendering into the provided canvas context.
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  return (lottie.loadAnimation as any)(config);
 }

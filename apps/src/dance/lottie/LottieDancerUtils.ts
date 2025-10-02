@@ -1,6 +1,9 @@
+import lottie, {type AnimationItem} from 'lottie-web';
+
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 import {
+  CanvasAnimConfig,
   HeadImageInfo,
   LottieAssetImage,
   LottieAssetPrecomp,
@@ -19,8 +22,8 @@ import {
 
 export const BASE_HOST = 'https://curriculum.code.org/media/musiclab/generate';
 
-export const DEFAULT_HEAD_W = 1000;
-export const DEFAULT_HEAD_H = 1000;
+export const DEFAULT_HEAD_W = 1024;
+export const DEFAULT_HEAD_H = 1024;
 
 // Given information about a generated dancer, this returns the URL for the head image.
 export function getGeneratedDancerAssets(
@@ -256,7 +259,7 @@ export function applyColorMapping(
   );
 }
 
-/** Loads head.png as a data URL and detects natural size (falls back to 1000×1000). */
+/** Loads head.png as a data URL and detects natural size (falls back to 1024×1024). */
 export async function fetchHeadImageInfo(
   headUrl: string | null
 ): Promise<HeadImageInfo | null> {
@@ -440,4 +443,22 @@ export function insertHeadImageLayer(
     0,
     imgLayer
   );
+}
+
+export function safeParseJSON(str: string | null): unknown | null {
+  if (!str) return null;
+  try {
+    return JSON.parse(str);
+  } catch {
+    return null;
+  }
+}
+
+export function loadCanvasAnimation(config: CanvasAnimConfig): AnimationItem {
+  // The upstream types for lottie-web requires `container` to be set,
+  // but Lottie also supports a canvas with provided 2d context and no container.
+  // We cast to `any` to avoid the type error since providing a container here would
+  // prevent us from rendering into the provided canvas context.
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  return (lottie.loadAnimation as any)(config);
 }
