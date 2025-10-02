@@ -39,6 +39,7 @@ declare module '*.gif' {
 
 type WebLabInstance = {
   getCode: () => Promise<string>;
+  channel?: string;
 };
 
 interface Window {
