@@ -4,18 +4,14 @@ import {
   AppState,
   BinaryFiles,
   ExcalidrawImperativeAPI,
+  ExcalidrawInitialDataState,
 } from '@excalidraw/excalidraw/types/types';
 import {isEqual} from 'lodash';
 import React, {useEffect, useCallback, useRef, useState} from 'react';
 
 import {useVerticalLayout} from '@cdo/apps/lab2/hooks/useVerticalLayout';
 import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
-import {
-  LabProps,
-  LevelProperties,
-  ProjectSources,
-  SketchlabSource,
-} from '@cdo/apps/lab2/types';
+import {LabProps, LevelProperties, ProjectSources} from '@cdo/apps/lab2/types';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
@@ -33,11 +29,15 @@ const INITIAL_WORKSPACE_WIDTH = 800;
 
 const DEBOUNCED_WORKSPACE_SERIALIZATION_MS = 500;
 
+interface SketchlabSources extends ProjectSources {
+  source: ExcalidrawInitialDataState;
+}
+
 const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
   levelProperties,
 }) => {
   const excalidrawApiRef = useRef<ExcalidrawImperativeAPI | null>();
-  const {currentSources, updateSources} = useSources<ProjectSources>();
+  const {currentSources, updateSources} = useSources<SketchlabSources>();
   const saveSourcesTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const [excalidrawMountKey, setExcalidrawMountKey] = useState(0);
 
@@ -116,12 +116,9 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
       excalidrawApi &&
       (!isEqual(
         excalidrawApi.getSceneElements(),
-        (currentSources.source as SketchlabSource).elements
+        currentSources.source.elements
       ) ||
-        !isEqual(
-          excalidrawApi.getFiles(),
-          (currentSources.source as SketchlabSource).files
-        ))
+        !isEqual(excalidrawApi.getFiles(), currentSources.source.files))
     ) {
       setExcalidrawMountKey(key => key + 1);
     }
@@ -161,7 +158,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
           headerContent="Workspace"
         >
           <Excalidraw
-            initialData={currentSources.source as SketchlabSource}
+            initialData={currentSources.source}
             onChange={debouncedSerializeAndSaveWorkspace}
             excalidrawAPI={api => (excalidrawApiRef.current = api)}
             key={excalidrawMountKey}
