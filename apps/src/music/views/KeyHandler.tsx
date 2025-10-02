@@ -105,12 +105,40 @@ const KeyHandler: React.FunctionComponent<KeyHandlerProps> = ({
     ]
   );
 
+  // Multi-key presses require an additional keyDown handler.
+  const handleKeyDown = useCallback(
+    (event: KeyboardEvent) => {
+      // We don't have direct access to the workspace until Blockly injects it
+      // into the DOM, so we use a query selector to find it.
+      const workspaceElement: HTMLElement | null = document.querySelector(
+        '[aria-label="Blockly Workspace"]'
+      );
+      if (event.metaKey || event.ctrlKey) {
+        if (event.key === '1') {
+          event.preventDefault();
+          workspaceElement?.focus();
+        } else if (event.key === '2') {
+          event.preventDefault();
+          togglePlaying();
+        }
+      }
+    },
+    [togglePlaying]
+  );
+
   useEffect(() => {
     document.body.addEventListener('keyup', handleKeyUp);
     return () => {
       document.body.removeEventListener('keyup', handleKeyUp);
     };
   }, [handleKeyUp]);
+
+  useEffect(() => {
+    document.body.addEventListener('keydown', handleKeyDown);
+    return () => {
+      document.body.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [handleKeyDown]);
 
   return null;
 };
