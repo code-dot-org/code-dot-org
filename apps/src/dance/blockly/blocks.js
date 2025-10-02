@@ -3,6 +3,7 @@ import {BlockColors, BlockStyles} from '@cdo/apps/blockly/constants';
 import i18n from '@cdo/locale';
 
 import CdoFieldDanceAi from '../ai/cdoFieldDanceAi';
+import {DEFAULT_HEAD_URL} from '../lottie/LottieDancerRenderer';
 
 // This color palette is limited to colors which have different hues, therefore
 // it should not contain different shades of the same color such as
@@ -71,6 +72,48 @@ const customInputTypes = {
       currentInputRow
         .appendField(inputConfig.label)
         .appendField(newField, inputConfig.name);
+    },
+    generateCode(block, arg) {
+      return block.getFieldValue(arg.name);
+    },
+  },
+  dancerPicker: {
+    addInput(blockly, block, inputConfig, currentInputRow) {
+      const options = inputConfig.options.map(option => {
+        const BASE_HOST = 'https://curriculum.code.org/media/musiclab/generate';
+        let name = option;
+        try {
+          name = JSON.parse(name);
+        } catch {}
+        if (name === 'GENERATED_DANCER') {
+          const localStorageValues = localStorage.getItem('dancer-ai-generate');
+          if (!localStorageValues || localStorageValues === 'null') {
+            console.log('No dancer-ai-generate data in localStorage');
+            return [DEFAULT_HEAD_URL, option];
+          }
+          const danceAiGenerate = JSON.parse(localStorageValues);
+          if (!danceAiGenerate) {
+            return;
+          }
+          const {adlibOption, choices, variant} = danceAiGenerate;
+          return [
+            `${BASE_HOST}/dancer/${adlibOption}/${choices.join(
+              '-'
+            )}-0${variant}.png`,
+            option,
+          ];
+        }
+        return [`/blockly/media/skins/dance/${name}.png`, option];
+      });
+      currentInputRow.appendField(inputConfig.label).appendField(
+        new Blockly.FieldImageDropdown(
+          // Filter out any undefined options (e.g. if no GENERATED_DANCER data in localStorage).
+          options.filter(option => !!option),
+          40,
+          40
+        ),
+        inputConfig.name
+      );
     },
     generateCode(block, arg) {
       return block.getFieldValue(arg.name);
