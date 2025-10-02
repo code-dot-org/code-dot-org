@@ -28,6 +28,11 @@
     width: 100%;
     border: none;
     box-shadow: none;
+
+    &:disabled {
+      opacity: 0.5;
+      background: none;
+    }
   }
 
   // Chat Actions container styles
