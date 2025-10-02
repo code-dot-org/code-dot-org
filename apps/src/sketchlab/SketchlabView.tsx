@@ -1,10 +1,15 @@
 import {Excalidraw, serializeAsJSON} from '@excalidraw/excalidraw';
-import {ExcalidrawElement} from '@excalidraw/excalidraw/types/element/types';
+import {
+  ExcalidrawElement,
+  FileId,
+} from '@excalidraw/excalidraw/types/element/types';
 import {
   AppState,
   BinaryFiles,
+  BinaryFileData,
   ExcalidrawImperativeAPI,
   ExcalidrawInitialDataState,
+  DataURL,
 } from '@excalidraw/excalidraw/types/types';
 import {isEqual} from 'lodash';
 import React, {useEffect, useCallback, useRef, useState} from 'react';
@@ -129,6 +134,84 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
     }
   }, [currentSources.source]);
 
+  const imageUrlToBase64 = async (url: string) => {
+    try {
+      // Fetch the image
+      const response = await fetch(url);
+
+      // Check if the request was successful
+      if (!response.ok) {
+        throw new Error(`Failed to fetch image: ${response.statusText}`);
+      }
+
+      // Get the image as a blob
+      const blob = await response.blob();
+
+      // Convert blob to base64
+      return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onloadend = () => resolve(reader.result);
+        reader.onerror = reject;
+        reader.readAsDataURL(blob);
+      });
+    } catch (error) {
+      console.error('Error converting image to base64:', error);
+      throw error;
+    }
+  };
+
+  useEffect(() => {
+    imageUrlToBase64(
+      'https://fastly.picsum.photos/id/736/200/300.jpg?hmac=WlU1DEqIVU_kIsTa682WsLgBIfCRbqhOAuKifGAq8TY'
+    )
+      .then(base64 => {
+        if (excalidrawApiRef.current) {
+          const binaryFileData: BinaryFileData = {
+            mimeType: 'image/jpeg',
+            id: 'abc123' as FileId,
+            dataURL: base64 as DataURL,
+            created: Date.now(),
+          };
+
+          excalidrawApiRef.current.addFiles([binaryFileData]);
+
+          const element: ExcalidrawElement = {
+            type: 'image',
+            version: 19,
+            versionNonce: 1742557132,
+            isDeleted: false,
+            id: 'abc123',
+            fillStyle: 'solid',
+            strokeWidth: 2,
+            strokeStyle: 'solid',
+            roughness: 1,
+            opacity: 100,
+            angle: 0,
+            x: -225.88941755990413,
+            y: -359.3023361809828,
+            strokeColor: 'transparent',
+            backgroundColor: 'transparent',
+            width: 1039.5,
+            height: 693,
+            seed: 490501964,
+            groupIds: [],
+            frameId: null,
+            roundness: null,
+            boundElements: [],
+            updated: 1759444406141,
+            link: null,
+            locked: false,
+            status: 'pending',
+            fileId: 'abc123' as FileId,
+            scale: [1, 1],
+          };
+
+          excalidrawApiRef.current.updateScene({elements: [element]});
+        }
+      })
+      .catch(error => console.error(error));
+  }, []);
+
   // Since there's no run button in Sketch Lab, set it to true by default
   // to enable the Submit button on edit on submittable levels.
   // Set back to false on unmount in case we switch to a different level type.
@@ -141,6 +224,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
     };
   }, [dispatch]);
 
+  console.log(excalidrawApiRef.current?.getFiles());
   return (
     <div className={moduleStyles.sketchlabContainer}>
       <div style={{width: leftPanelWidth}} className={panelClassName}>
