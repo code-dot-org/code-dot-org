@@ -37,6 +37,14 @@ declare module '*.gif' {
   export = value;
 }
 
+type WebLabInstance = {
+  getCode: () => Promise<string>;
+};
+
+interface Window {
+  getWebLab?: () => WebLabInstance | undefined;
+}
+
 // Modules without types
 declare module '@blockly/plugin-scroll-options';
 declare module '@blockly/keyboard-navigation';
