@@ -38,7 +38,7 @@ const UserMessageEditor = React.forwardRef<
     const internalInputRef = useRef<HTMLTextAreaElement | null>(null);
     const [userMessage, setUserMessage] = useState<string>('');
     // Track focus state on textarea to apply focus styles to container since
-    // :focus-visible doesn't work on divs and :has() is not supported in all browsers.
+    // :focus-visible doesn't work on divs and :has() is not supported in Firefox.
     const [focused, setFocused] = useState(false);
 
     const userMessageIsEmpty = useMemo(() => {
