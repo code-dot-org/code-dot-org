@@ -12,8 +12,8 @@
 
   @include mixins.border-styles($border-color: var(--borders-neutral-strong));
 
-  // Add focus styles to the container when the textArea is focused
-  &:has(.textArea:focus-visible) {
+  // Add focus styles to the container when the textarea is focused
+  &.focused {
     @include mixins.focus-styles;
   }
 

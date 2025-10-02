@@ -37,6 +37,9 @@ const UserMessageEditor = React.forwardRef<
   ) => {
     const internalInputRef = useRef<HTMLTextAreaElement | null>(null);
     const [userMessage, setUserMessage] = useState<string>('');
+    // Track focus state on textarea to apply focus styles to container since
+    // :focus-visible doesn't work on divs and :has() is not supported in all browsers.
+    const [focused, setFocused] = useState(false);
 
     const userMessageIsEmpty = useMemo(() => {
       return userMessage.trim() === '';
@@ -73,6 +76,7 @@ const UserMessageEditor = React.forwardRef<
       <div
         className={classnames(
           moduleStyles.editorContainer,
+          focused && moduleStyles.focused,
           editorContainerClassName
         )}
       >
@@ -99,6 +103,8 @@ const UserMessageEditor = React.forwardRef<
           maxLength={MAX_MESSAGE_LENGTH}
           rows={1}
           aria-label={commonI18n.aiUserMessagePlaceholder()}
+          onFocus={() => setFocused(true)}
+          onBlur={() => setFocused(false)}
         />
         <div className={moduleStyles.chatActionsContainer}>
           <Button
