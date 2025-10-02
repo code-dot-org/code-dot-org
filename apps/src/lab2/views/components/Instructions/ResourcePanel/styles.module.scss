@@ -1,5 +1,5 @@
-@use '../../layout/variables.scss' as variables;
-@use '../../../../../mixins.scss' as mixins;
+@use '@cdo/apps/lab2/views/components/layout/variables.scss' as variables;
+@use '@cdo/apps/mixins.scss' as mixins;
 
 .resourcePanel {
   display: flex;
