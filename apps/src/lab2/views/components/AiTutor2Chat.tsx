@@ -48,8 +48,8 @@ const modelParameters: ModelParameters = {
 
 // Some pre-canned chat buttons.
 const defaultChatButtonData: ChatButtonData[] = [
-  ...defaultPrompts,
   ...levelPrompts,
+  ...defaultPrompts,
 ] as const;
 interface AiTutor2ChatProps {
   hiddenContextCallback: () => Promise<string>;
