@@ -89,7 +89,7 @@ GIT
     full-name-splitter (0.1.2)
 
 PATH
-  remote: ..
+  remote: .
   glob: **/engines/*/*.gemspec
   specs:
     cdo_contentful (0.1.0)
