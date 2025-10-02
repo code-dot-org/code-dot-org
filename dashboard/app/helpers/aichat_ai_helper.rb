@@ -42,7 +42,6 @@ module AichatAiHelper
 
   def self.convert_json_schema_to_ruby_types(json_schema)
     json_schema = json_schema.transform_keys(&:to_sym)
-    puts json_schema
     type = json_schema[:type]
     description = json_schema[:description]
 
@@ -124,12 +123,10 @@ module AichatAiHelper
                    end
 
     unless json_schema.nil?
-      parsed_json_schema = json_schema.transform_keys(&:to_sym)
       response_validation = AichatAiClientTypes::JsonResponseConfigValidation.new(
         type: 'jsonSchema',
-        schema: convert_json_schema_to_ruby_types(parsed_json_schema)
+        schema: convert_json_schema_to_ruby_types(json_schema)
       )
-      puts "json schema is not nill, response_validation: #{response_validation}"
       response = AichatAiClientTypes::JsonResponseConfig.new(mimeType: 'application/json', validation: response_validation)
     end
 
