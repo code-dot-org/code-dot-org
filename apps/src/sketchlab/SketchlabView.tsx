@@ -108,6 +108,11 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
     };
   }, []);
 
+  // This effect runs on each source change,
+  // but the full remount (via key change) is only intended when
+  // Excalidraw state diverges from the saved source state.
+  // This happens when a user switches levels, or a teachers switches
+  // between viewing different students on the same level.
   useEffect(() => {
     // Note that we do not compare appState, as Excalidraw tracks a lot of app state properties
     // that we do not store to S3.
