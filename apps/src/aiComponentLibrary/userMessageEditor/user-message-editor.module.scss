@@ -28,6 +28,8 @@
     width: 100%;
     border: none;
     box-shadow: none;
+    background: var(--background-neutral-primary);
+    color: var(--text-neutral-primary);
 
     &:disabled {
       opacity: 0.5;
