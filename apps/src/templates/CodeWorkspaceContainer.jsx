@@ -9,18 +9,26 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {connect} from 'react-redux';
 
+import {AiTutorContainer} from '../aiTutor/views/legacyLabs/AiTutorContainer';
 import commonStyles from '../commonStyles';
+import experiments from '../util/experiments';
 import * as utils from '../utils';
 
 class CodeWorkspaceContainer extends React.Component {
   static propTypes = {
     children: PropTypes.node,
     style: PropTypes.object,
+    labType: PropTypes.string,
+    inLevel: PropTypes.bool,
 
     // Provided by redux
     hidden: PropTypes.bool.isRequired,
     isRtl: PropTypes.bool.isRequired,
     noVisualization: PropTypes.bool.isRequired,
+  };
+
+  state = {
+    aiChatOpen: false,
   };
 
   /**
@@ -37,8 +45,17 @@ class CodeWorkspaceContainer extends React.Component {
     }
   }
 
+  toggleAiChat = () => {
+    this.setState(prevState => ({aiChatOpen: !prevState.aiChatOpen}));
+  };
+
   render() {
-    const {hidden, isRtl, noVisualization, children, style} = this.props;
+    const AiTutorLabs = ['applab', 'gamelab', 'weblab'];
+    const showAiTutor =
+      AiTutorLabs.includes(this.props.labType) &&
+      experiments.isEnabled(experiments.LEGACY_LAB_AI_TUTOR);
+    const {hidden, isRtl, noVisualization, children, style, inLevel} =
+      this.props;
     const mainStyle = {
       ...styles.main,
       ...(noVisualization && styles.noVisualization),
@@ -50,9 +67,23 @@ class CodeWorkspaceContainer extends React.Component {
 
     return (
       <div style={mainStyle} className="editor-column">
-        <div id="codeWorkspace" style={styles.codeWorkspace}>
+        <div
+          id="codeWorkspace"
+          style={{
+            ...styles.codeWorkspace,
+            // 45px sidebar + 6px border = 51px
+            right: showAiTutor ? (this.state.aiChatOpen ? 350 : 51) : 0,
+          }}
+        >
           {children}
         </div>
+        {showAiTutor && (
+          <AiTutorContainer
+            toggleAiChat={this.toggleAiChat}
+            aiChatOpen={this.state.aiChatOpen}
+            inLevel={inLevel}
+          />
+        )}
       </div>
     );
   }

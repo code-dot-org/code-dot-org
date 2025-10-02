@@ -10,6 +10,7 @@ import {
   SystemPromptSettings,
 } from '@cdo/apps/aichat/types';
 import ChatWorkspace from '@cdo/apps/aichat/views/ChatWorkspace';
+import {defaultPrompts, levelPrompts} from '@cdo/apps/aiTutor/suggestedPrompts';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import HttpClient from '@cdo/apps/util/HttpClient';
@@ -47,38 +48,9 @@ const modelParameters: ModelParameters = {
 
 // Some pre-canned chat buttons.
 const defaultChatButtonData: ChatButtonData[] = [
-  {
-    label: 'Give an example',
-    value: 'Can you give me an example?',
-    analyticsProperties: {
-      cannedPrompt: 'example',
-    },
-    icon: {
-      iconName: 'code',
-    },
-  },
-  {
-    label: 'Give a hint',
-    value: 'Can you give me a hint?',
-    analyticsProperties: {
-      cannedPrompt: 'hint',
-    },
-    icon: {
-      iconName: 'lightbulb',
-    },
-  },
-  {
-    label: 'Show documentation',
-    value: 'Can you give me some documentation?',
-    analyticsProperties: {
-      cannedPrompt: 'doc',
-    },
-    icon: {
-      iconName: 'book',
-    },
-  },
+  ...defaultPrompts,
+  ...levelPrompts,
 ] as const;
-
 interface AiTutor2ChatProps {
   hiddenContextCallback: () => Promise<string>;
   aiTutorSystemPromptSettings?: SystemPromptSettings;

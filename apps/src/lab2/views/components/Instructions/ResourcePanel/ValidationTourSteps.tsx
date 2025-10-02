@@ -1,5 +1,5 @@
 import {Steps} from 'intro.js-react';
-import React, {useMemo, useState, useEffect} from 'react';
+import React, {useState, useEffect} from 'react';
 
 import {ValidationSettings} from '@cdo/apps/lab2/views/components/Instructions/InstructionsV2';
 import {commonI18n} from '@cdo/apps/types/locale';
@@ -14,23 +14,21 @@ import {
 import {Tabs} from './types';
 import {VALIDATION_TOUR_STEPS} from './validationTourHelpers';
 
-interface UseValidationTourProps {
-  isEnabled: boolean;
+interface ValidationTourStepsProps {
   hasValidationConditions: boolean;
   validationSettings: ValidationSettings | undefined;
   setCurrentTab: (tab: Tabs) => void;
   onValidate: (() => void) | undefined;
 }
 
-// Currently this hook is only used for Python Lab, but other labs can opt in to use it if they also
+// This introjs flow is currently only used for Python Lab, but other labs can opt in to use it if they also
 // have a validation system similar to Python Lab.
-export const useValidationTour = ({
-  isEnabled,
+const ValidationTourSteps: React.FC<ValidationTourStepsProps> = ({
   hasValidationConditions,
   validationSettings,
   setCurrentTab,
   onValidate,
-}: UseValidationTourProps) => {
+}) => {
   const [validationTourEnabled, setValidationTourEnabled] = useState(false);
   const [validationTourStep, setValidationTourStep] = useState(0);
   const validationTabEnum = Tabs.Validation;
@@ -59,16 +57,12 @@ export const useValidationTour = ({
     true,
   ]);
 
-  // Enable validation tour if conditions are met.
   useEffect(() => {
-    if (!isEnabled) return;
-
     const shouldShowValidationTour =
       validationSettings &&
       hasValidationConditions &&
       validationTourSeen !== 'yes' &&
       onboardingTourSeen === 'yes'; // If user hasn't seen both tours, show onboarding tour first.
-
     if (shouldShowValidationTour) {
       setValidationTourEnabled(true);
     }
@@ -77,7 +71,6 @@ export const useValidationTour = ({
     hasValidationConditions,
     validationTourSeen,
     onboardingTourSeen,
-    isEnabled,
   ]);
 
   // Add event listeners for validation tour progression.
@@ -208,57 +201,46 @@ export const useValidationTour = ({
     };
   }, [validationTourEnabled, validationTourStep, validationTourStepsEnabled]);
 
-  const validationTourSteps = useMemo(
-    () =>
-      isEnabled ? (
-        <Steps
-          enabled={validationTourEnabled}
-          initialStep={validationTourStep}
-          steps={VALIDATION_TOUR_STEPS}
-          onExit={() => {
-            setValidationTourEnabled(false);
-          }}
-          onComplete={() => {
-            setValidationTourEnabled(false);
-            // User must complete tour so that they don't see it again.
-            trySetLocalStorage(VALIDATION_TOUR_SEEN, 'yes');
-          }}
-          onChange={nextStepIndex => {
-            setValidationTourStep(nextStepIndex);
-          }}
-          onBeforeChange={nextStepIndex => {
-            // Control step progression based on user interactions.
-            if (nextStepIndex === 1 && !validationTourStepsEnabled[0]) {
-              return false; // Prevent going to second step (at index 1) until validation tab is clicked.
-            }
-            if (nextStepIndex === 2 && !validationTourStepsEnabled[1]) {
-              return false; // Prevent going to third step (at index 2) until validate button is clicked.
-            }
-            // Return void (undefined) to allow progression.
-          }}
-          options={{
-            scrollToElement: false,
-            exitOnOverlayClick: false,
-            hidePrev: validationTourStep === 0, // Hide back button only on first step.
-            hideNext: false,
-            nextLabel: commonI18n.next(),
-            prevLabel: commonI18n.back(),
-            doneLabel: commonI18n.done(),
-            showBullets: false,
-            showStepNumbers: true,
-            disableInteraction: false, // Allow interaction with page elements.
-          }}
-        />
-      ) : null,
-    [
-      validationTourEnabled,
-      validationTourStep,
-      validationTourStepsEnabled,
-      isEnabled,
-    ]
+  return (
+    <Steps
+      enabled={validationTourEnabled}
+      initialStep={validationTourStep}
+      steps={VALIDATION_TOUR_STEPS}
+      onExit={() => {
+        setValidationTourEnabled(false);
+      }}
+      onComplete={() => {
+        setValidationTourEnabled(false);
+        // User must complete tour so that they don't see it again.
+        trySetLocalStorage(VALIDATION_TOUR_SEEN, 'yes');
+      }}
+      onChange={nextStepIndex => {
+        setValidationTourStep(nextStepIndex);
+      }}
+      onBeforeChange={nextStepIndex => {
+        // Control step progression based on user interactions.
+        if (nextStepIndex === 1 && !validationTourStepsEnabled[0]) {
+          return false; // Prevent going to second step (at index 1) until validation tab is clicked.
+        }
+        if (nextStepIndex === 2 && !validationTourStepsEnabled[1]) {
+          return false; // Prevent going to third step (at index 2) until validate button is clicked.
+        }
+        // Return void (undefined) to allow progression.
+      }}
+      options={{
+        scrollToElement: false,
+        exitOnOverlayClick: false,
+        hidePrev: validationTourStep === 0, // Hide back button only on first step.
+        hideNext: false,
+        nextLabel: commonI18n.next(),
+        prevLabel: commonI18n.back(),
+        doneLabel: commonI18n.done(),
+        showBullets: false,
+        showStepNumbers: true,
+        disableInteraction: false, // Allow interaction with page elements.
+      }}
+    />
   );
-
-  return {
-    validationTourSteps,
-  };
 };
+
+export default ValidationTourSteps;
