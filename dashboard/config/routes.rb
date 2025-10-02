@@ -733,18 +733,14 @@ Dashboard::Application.routes.draw do
     end
 
     # LTI API endpoints
+    match '/lti/v1/login(/:platform_id)', to: 'lti_v1#login', via: [:get, :post]
+    match '/lti/v1/authenticate', to: 'lti_v1#authenticate', via: [:get, :post]
+    match '/lti/v1/sync_course', to: 'lti_v1#sync_course', via: [:get, :post]
+    post '/lti/v1/upgrade_account', to: 'lti_v1#confirm_upgrade_account'
+
     namespace :lti do
       namespace :v1 do
-        # Resourceful routing for integrations
         resources :integrations, only: [:new, :create]
-
-        controller :lti_v1 do
-          match  'login(/:platform_id)', via: [:get, :post], action: :login
-          match  'authenticate', via: [:get, :post], action: :authenticate
-          match  'sync_course', via: [:get, :post], action: :sync_course
-          post   'upgrade_account', action: :confirm_upgrade_account
-        end
-
         resource :feedback, controller: :feedback, only: %i[create show]
         controller :dynamic_registration do
           get 'dynamic_registration', action: :new_registration
