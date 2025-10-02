@@ -82,6 +82,7 @@ function createStore(numStudents, numLessons) {
     },
     unitSelection: {
       scriptId: scriptData.id,
+      courseVersionId: 1,
       coursesWithProgress: fakeCoursesWithProgress,
     },
   };
