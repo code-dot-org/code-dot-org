@@ -98,6 +98,7 @@ WebLab.prototype.init = function (config) {
 
   this.skin = config.skin;
   this.level = config.level;
+  this.channel = config.channel;
   this.suppliedFilesVersionId = queryParams('version');
   this.initialFilesVersionId = this.suppliedFilesVersionId;
   this.disallowedHtmlTags = config.disallowedHtmlTags;
