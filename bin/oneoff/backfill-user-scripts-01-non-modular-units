@@ -1,0 +1,117 @@
+#!/usr/bin/env ruby
+# Backfill user_scripts.unit_group_id for non-modular units
+# (units that have exactly one unit group)
+
+require 'optparse'
+
+$options = {actually_update: false}
+OptionParser.new do |opts|
+  opts.banner = "Usage: #{File.basename(__FILE__)} [options]"
+  opts.on('-u', '--actually-update', 'Actually perform the update.') do
+    $options[:actually_update] = true
+  end
+  opts.on('-h', '--help', 'Add -u to perform the update.') do
+    puts opts
+    exit
+  end
+end.parse!
+puts "Called with options: #{$options}"
+
+require_relative '../../dashboard/config/environment'
+
+$stdout.sync = true
+
+BATCH_SIZE = 10_000
+
+def puts_count
+  count = UserScript.where(unit_group_id: nil).count
+  puts "There are #{count} user_scripts without a unit_group_id"
+end
+
+# Phase 1: Identify units with exactly one unit group
+def get_unit_ids_with_one_unit_group
+  puts "Phase 1: Building list of units with exactly one unit group..."
+
+  # Query for units with exactly one unit group
+  unit_ids = []
+
+  Unit.joins(:unit_group_units).
+    select('scripts.id, scripts.name, scripts.original_unit_group_id').
+    group('scripts.id').
+    having('COUNT(*) = 1').
+    find_each do |unit|
+    # Verify original_unit_group_id is not nil
+    if unit.original_unit_group_id.nil?
+      raise "Unit #{unit.id} (#{unit.name}) has exactly one unit group but original_unit_group_id is nil"
+    end
+
+    unit_ids << unit.id
+  end
+
+  puts "Found #{unit_ids.size} units with exactly one unit group"
+  unit_ids
+end
+
+# Phase 2: Batch update user_scripts using SQL JOIN UPDATE
+def update_user_scripts(script_ids)
+  raise "no script_ids provided" if script_ids.empty?
+
+  puts "Phase 2: Updating user_scripts in batches of #{BATCH_SIZE}..."
+
+  total_updated = 0
+  batch_count = 0
+
+  # Process user_scripts in batches
+  # find_in_batches uses WHERE id > last_id, so it will process all matching
+  # records exactly once, regardless of whether they get updated during iteration
+  UserScript.
+    where(unit_group_id: nil).
+    where(script_id: script_ids).
+    find_in_batches(batch_size: BATCH_SIZE) do |batch|
+    batch_count += 1
+
+    user_script_ids = batch.map(&:id)
+
+    ActiveRecord::Base.transaction do
+      # Use SQL JOIN UPDATE to directly set unit_group_id from script's original_unit_group_id
+      sql = <<-SQL
+        UPDATE user_scripts us
+        JOIN scripts s ON us.script_id = s.id
+        SET us.unit_group_id = s.original_unit_group_id
+        WHERE us.unit_group_id IS NULL
+          AND us.id IN (#{user_script_ids.join(',')})
+      SQL
+
+      # Use exec_update which returns the number of affected rows directly
+      updated_count = ActiveRecord::Base.connection.exec_update(sql)
+      total_updated += updated_count
+
+      # Rollback unless actually_update flag is set
+      raise ActiveRecord::Rollback unless $options[:actually_update]
+    end
+
+    if batch_count % 10 == 0
+      print '.'
+    end
+
+    # Progress report every 1M records
+    if batch_count % 100 == 0
+      puts " [Updated #{total_updated} records so far]"
+    end
+  end
+
+  puts "\nFinished! Total records updated: #{total_updated}"
+end
+
+def main
+  puts "Starting backfill process..."
+  puts_count
+
+  unit_ids = get_unit_ids_with_one_unit_group
+  update_user_scripts(unit_ids)
+
+  puts_count
+  puts $options[:actually_update] ? "Backfill complete!" : "Dry run complete! Use -u flag to actually update."
+end
+
+main
