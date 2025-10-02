@@ -2443,6 +2443,28 @@ StudioApp.prototype.currentlyUsingBlocks = function () {
   );
 };
 
+/**
+ * Localize comments within the starting code.
+ */
+StudioApp.prototype.localizeCode = function (code) {
+  if (!code) {
+    return code;
+  }
+
+  return code
+    .split('\n')
+    .map(line =>
+      // Find comments, but not urls. So look for "// ..." or "... //..."
+      line
+        .split(/^\/\/|\s\/\//)
+        .map((part, i) =>
+          i === 1 ? ' ' + localization.translate(part.trim()) : part
+        )
+        .join(`${line.startsWith('//') ? '' : ' '}//`)
+    )
+    .join('\n');
+};
+
 StudioApp.prototype.handleEditCode_ = function (config) {
   if (this.hideSource) {
     // In hide source mode, just call afterInject and exit immediately
@@ -2629,24 +2651,9 @@ StudioApp.prototype.handleEditCode_ = function (config) {
 
   this.resizeToolboxHeader();
 
-  // Localize comments within the starting code
-  const localizeJS = code =>
-    code
-      .split('\n')
-      .map(line =>
-        // Find comments
-        line
-          .split('//')
-          .map((part, i) =>
-            i === 1 ? ' ' + localization.translate(part.trim()) : part
-          )
-          .join('//')
-      )
-      .join('\n');
-
   // Localize the start code
   config.level.startBlocks = config.level.startBlocks
-    ? localizeJS(config.level.startBlocks)
+    ? this.localizeCode(config.level.startBlocks)
     : config.level.startBlocks;
 
   var startBlocks = config.level.lastAttempt || config.level.startBlocks;
