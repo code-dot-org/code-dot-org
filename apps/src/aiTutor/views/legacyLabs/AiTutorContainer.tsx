@@ -24,15 +24,23 @@ export const AiTutorContainer: FC<{
   toggleAiChat: () => void;
   aiChatOpen: boolean;
   inLevel: boolean;
-}> = ({toggleAiChat, aiChatOpen, inLevel}) => {
+  labType: string;
+}> = ({toggleAiChat, aiChatOpen, inLevel, labType}) => {
   const allPrompts = inLevel
     ? [...levelPrompts, ...defaultPrompts]
     : [...standaloneProjectPrompts, ...defaultPrompts];
 
   const {config} = studioApp();
 
+  const getCode = async () => {
+    if (labType === 'weblab') {
+      return window.getWebLab?.()?.getCode();
+    }
+    return config?.getCode();
+  };
+
   const getHiddenContext = async () => {
-    const code = config?.getCode();
+    const code = await getCode();
     aiTutorHelper.setAiTutorContext({source: code});
     const callback = aiTutorHelper.getHiddenContextCallback();
     return callback();
