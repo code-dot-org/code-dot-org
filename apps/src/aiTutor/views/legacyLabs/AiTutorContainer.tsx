@@ -20,6 +20,11 @@ import styles from './AiTutorContainer.module.scss';
 
 const aiTutorHelper = new AiTutorLegacyLabContextHelper();
 
+interface CommonLab {
+  getCode?: () => Promise<string | undefined>;
+  channel?: string;
+}
+
 export const AiTutorContainer: FC<{
   toggleAiChat: () => void;
   aiChatOpen: boolean;
@@ -30,18 +35,12 @@ export const AiTutorContainer: FC<{
     ? [...levelPrompts, ...defaultPrompts]
     : [...standaloneProjectPrompts, ...defaultPrompts];
 
-  const {config} = studioApp();
-
-  const getCode = async () => {
-    if (labType === 'weblab') {
-      return window.getWebLab?.()?.getCode();
-    }
-    return config?.getCode();
-  };
+  const lab: CommonLab | undefined =
+    labType === 'weblab' ? window.getWebLab?.() : studioApp()?.config;
 
   const getHiddenContext = async () => {
-    const code = await getCode();
-    aiTutorHelper.setAiTutorContext({source: code});
+    const code = await lab?.getCode?.();
+    aiTutorHelper.setAiTutorContext({source: code ?? ''});
     const callback = aiTutorHelper.getHiddenContextCallback();
     return callback();
   };
@@ -75,7 +74,7 @@ export const AiTutorContainer: FC<{
         <AiTutor2Chat
           hiddenContextCallback={getHiddenContext}
           aiTutorChatButtonData={allPrompts}
-          channelId={config?.channel}
+          channelId={lab?.channel}
         />
       </div>
       {!aiChatOpen && (
