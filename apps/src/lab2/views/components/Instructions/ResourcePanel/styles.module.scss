@@ -49,6 +49,17 @@
         width: 1px;
         background-color: var(--background-neutral-primary);
       }
+
+      // Add a border to the start of the selected tab.
+      &::before {
+        content: '';
+        position: absolute;
+        inset-inline-start: 0;
+        top: 0;
+        height: 100%;
+        width: 3px;
+        background-color: var(--borders-brand-teal-primary);
+      }
     }
 
     i {
