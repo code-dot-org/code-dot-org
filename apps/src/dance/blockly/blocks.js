@@ -99,7 +99,7 @@ const customInputTypes = {
           return [
             `${BASE_HOST}/dancer/${adlibOption}/${choices.join(
               '-'
-            )}-0${variant}.png`,
+            )}-0${variant}.png?src=blockly`,
             option,
           ];
         }
