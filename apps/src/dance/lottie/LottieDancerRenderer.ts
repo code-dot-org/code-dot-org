@@ -55,7 +55,7 @@ const ASSETS_FOLDER = 'basic2';
 const TEST_BASE_DANCER = 'duck';
 const TEST_GENERATED_DANCER = 'basic-frog-baseball-cap-00';
 
-export const DEFAULT_HEAD_URL = `${BASE_HOST}/dancer/${ASSETS_FOLDER}/${TEST_GENERATED_DANCER}.png`;
+export const DEFAULT_HEAD_URL = `${BASE_HOST}/dancer/${ASSETS_FOLDER}/${TEST_GENERATED_DANCER}.png?src=canvas`;
 const DEFAULT_METADATA_URL = `${BASE_HOST}/dancer/${ASSETS_FOLDER}/${TEST_GENERATED_DANCER}-metadata.json`;
 
 const getConfigValue = (name: string) =>
@@ -115,7 +115,7 @@ export default class LottieDancerRenderer {
     } else if (dancerParam) {
       // Also fine: caller gave us a full dancer name (no deconstruction needed)
       const prefix = `${BASE_HOST}/dancer/${pathParam}/${dancerParam}`;
-      headUrl = `${prefix}.png`;
+      headUrl = `${prefix}.png?src=canvas`;
       metadataUrl = `${prefix}-metadata.json`;
     } else {
       // Fallback defaults
