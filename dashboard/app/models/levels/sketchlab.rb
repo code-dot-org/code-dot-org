@@ -25,7 +25,6 @@
 #  index_levels_on_type       (type)
 
 class Sketchlab < Level
-  # Check if exemplar works?
   serialized_attrs %w(
     start_sources
     exemplar_sources
