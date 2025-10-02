@@ -12,9 +12,8 @@
     Type: AWS::ElastiCache::ReplicationGroup
     Properties:
       ReplicationGroupDescription: <%="Redis Replication Group (CDO.redis_url for #{stack_name})" %>
-      # 3 nodes of cache.r7g.xlarge will cost ($0.437 * 730 * 3) = ~$960/month
-      # and provide just under 80GB of storage.
-      CacheNodeType: <%= rack_env?(:production) ? 'cache.r7g.xlarge' : 'cache.t4g.micro' -%>
+      # 3 nodes of cache.r7g.2xlarge, if reserved, will cost ($505/mo * 3) = ~$1,500/month
+      CacheNodeType: <%= rack_env?(:production) ? 'cache.r7g.2xlarge' : 'cache.t4g.micro' -%>
 
       Engine: Redis
       EngineVersion: 7.1
