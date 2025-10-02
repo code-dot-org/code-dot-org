@@ -28,12 +28,12 @@ import {
   resourcePanelLinksElementId,
 } from './constants';
 import CopyrightButton from './CopyrightButton';
+import OnboardingTourSteps from './OnboardingTourSteps';
 import ResourcePanelExtraLinks from './ResourcePanelExtraLinks';
 import SettingsPanel from './SettingsPanel';
 import {Tabs} from './types';
-import {useOnboardingTour} from './useOnboardingTour';
-import {useValidationTour} from './useValidationTour';
 import ValidationPanel from './ValidationPanel';
+import ValidationTourSteps from './ValidationTourSteps';
 import {VersionHistoryPanel} from './VersionHistory';
 import './resource-panel-introjs.scss';
 
@@ -130,20 +130,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const levelName = instructionsProps.levelProperties.name;
   const channelId = useAppSelector(state => state.lab.channel?.id);
   const appName = instructionsProps.levelProperties.appName;
-
-  // Use validation tour hook. Currently only used for Python Lab.
-  const {validationTourSteps} = useValidationTour({
-    isEnabled: !!isValidationTourEnabled,
-    hasValidationConditions,
-    validationSettings: instructionsProps.validationSettings,
-    setCurrentTab,
-    onValidate: instructionsProps.validationSettings?.onValidate,
-  });
-
-  // Use onboarding tour hook. Currently only used for Python Lab.
-  const {onboardingTourSteps} = useOnboardingTour({
-    isEnabled: !!isOnboardingTourEnabled,
-  });
 
   // Tooltip should disappear quickly.
   const hideTooltipDelayMs = 10;
@@ -260,8 +246,15 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       id={resourcePanelInstructionsElementId}
       className={classNames(styles.resourcePanel, className)}
     >
-      {onboardingTourSteps}
-      {validationTourSteps}
+      {isOnboardingTourEnabled && <OnboardingTourSteps />}
+      {isValidationTourEnabled && (
+        <ValidationTourSteps
+          hasValidationConditions={hasValidationConditions}
+          validationSettings={instructionsProps.validationSettings}
+          setCurrentTab={setCurrentTab}
+          onValidate={instructionsProps.validationSettings?.onValidate}
+        />
+      )}
       <div className={styles.sidebar}>
         <nav id={resourcePanelTabsElementId} className={styles.tabs}>
           {getTypedKeys(availableTabs).map(tab => (

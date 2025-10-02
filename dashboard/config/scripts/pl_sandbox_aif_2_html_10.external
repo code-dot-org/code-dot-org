@@ -1,0 +1,48 @@
+name 'pl_sandbox_aif_2_HTML-10'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# What is HTML?
+
+
+#### HTML **(HyperText Markup Language)** is the basic building block of every website. Think of it as the skeleton or structure of a webpage.
+
+#### It tells the computer what content to show: text, images, links, buttons, and more.
+
+## Sample HTML Page
+
+<div style="display: flex; gap: 20px; justify-content: center; align-items: flex-start; max-width: 1000px; margin: auto;">
+    
+    <!-- Left image takes 2/3 width -->
+    <img src="https://images.code.org/d89271164ce4173163b57dc0843f1902-image-1759349664553.png" 
+         alt="Code Example"
+         style="flex: 2; max-width: 66%; height: auto; border-radius:12px; box-shadow:0 6px 12px rgba(0,0,0,0.25);">
+    
+    <!-- Right image takes 1/3 width -->
+    <img src="https://images.code.org/b26d1b354a67f5c6f94c3efbb7c38dcc-image-1759349763132.png" 
+         alt="Layout Example"
+         style="flex: 1; max-width: 33%; height: auto; border-radius:12px; box-shadow:0 6px 12px rgba(0,0,0,0.25);">
+  
+</div>
+
+
+
+<div style="clear:both;"></div>
+
+<br>
+
+## HTML Tags
+
+#### Each piece of content is wrapped in a **“tag”** with angle brackets (< >)
+
+<img src="https://images.code.org/779f2aeb684a6b54da16227d780fbd67-image-1759350247508.png" alt="The **h1** tag makes “Welcome to My Page” appear as a large heading.
+The **p** tag makes a regular block of text.
+The **img*** tag shows the picture (in this case, puppy.jpg), with the text “A cute puppy” used if the image can’t load." width="650px" style="display: block; margin-left: auto; margin-right: auto;">
+
+
+#### HTML doesn’t control colors or style—that’s what **CSS** is for. Instead, it answers the question: “What is on the page?”
+
+#### Next, let's see how **CSS** layers in!
+
+MARKDOWN

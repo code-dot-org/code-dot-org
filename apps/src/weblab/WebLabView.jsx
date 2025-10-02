@@ -34,6 +34,7 @@ class WebLabView extends React.Component {
     onAddFileCSS: PropTypes.func.isRequired,
     onAddFileImage: PropTypes.func.isRequired,
     onMount: PropTypes.func.isRequired,
+    inLevel: PropTypes.bool,
 
     // From redux
     isProjectLevel: PropTypes.bool.isRequired,
@@ -82,7 +83,10 @@ class WebLabView extends React.Component {
 
     return (
       <StudioAppWrapper>
-        <InstructionsWithWorkspace>
+        <InstructionsWithWorkspace
+          labType="weblab"
+          inLevel={this.props.inLevel}
+        >
           <div>
             <PaneHeader hasFocus={true} id="headers">
               {!this.props.isFullScreenPreviewOn &&

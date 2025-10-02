@@ -1,0 +1,41 @@
+name 'pl_sandbox_aif_2_JavaScript_12'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# what is JavaScript?
+
+JavaScript (JS) is the language that makes a webpage interactive.
+If HTML is the structure and CSS is the style, then JavaScript is the brain—it controls behavior, logic, and actions.
+Key things JavaScript does
+Responds to user actions (like clicks, typing, or scrolling)
+Updates the page without reloading (dynamic content)
+Connects to and uses data (e.g., updating a shopping cart)
+Adds interactivity, like pop-ups, animations, or calculators
+Example image of code and output 
+Explanation of the Tags
+<button> → Creates a clickable button on the page.
+onclick="sayHello()" → Tells the button to run the sayHello function when clicked.
+<script> ... </script> → Where JavaScript code goes inside an HTML page.
+function sayHello() { ... } → Defines a reusable block of code.
+alert("Hello, teacher!"); → Pops up a message box that says “Hello, teacher!”
+
+
+<img src="https://images.code.org/53e922f8a75ee840f0e7989d9cfdfd35-image-1736535595178.png" alt="A highlighter marking up a piece of paper" style="float: right; width: 15%; margin-left: 15px;">
+
+#### Abstraction is all about focusing on what matters and ignoring what doesn't. It is an essential and transferable computational thinking practice.
+
+#### In Music Lab, abstraction shows up when students reduce complexity in their songs, like grouping individual blocks to focus on structure like verses and choruses, or giving meaningful names to functions and sections. Learning to abstract doesn’t mean doing less, it means building readable and elegant code to solve a problem.
+
+---
+
+## 🧠 Prompts to Build Abstraction Skills
+
+#### Use these questions to help students identify what’s essential in their song or code:
+
+* #### What’s the main goal of this section of your code?
+* #### Are there any parts you could group together?
+* #### Is anything distracting you from focusing on the most important sound or structure?
+* #### Could you give this section a name to make your code easier to understand?
+* #### If someone new read your code, would they know what it does, or could you simplify it?
+MARKDOWN

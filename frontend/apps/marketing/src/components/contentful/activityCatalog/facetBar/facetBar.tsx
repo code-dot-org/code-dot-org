@@ -91,7 +91,8 @@ const FacetBar = ({
           key={facet}
           sx={{
             minWidth: 0,
-            '&:not(:last-of-type)': {mb: 1.25, mr: 2},
+            mr: 2,
+            mb: 1.25,
           }}
         >
           <Select
@@ -127,28 +128,38 @@ const FacetBar = ({
               },
             }}
             sx={theme => ({
-              width: '100px',
+              width: 'auto',
               minWidth: 'fit-content',
               '.MuiSelect-select': {
                 minWidth: 'fit-content',
                 padding: 1.8,
                 fontSize: 19,
+                display: 'inline-flex',
+                verticalAlign: 'top',
+                '.MuiSelect-select': {
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  whiteSpace: 'nowrap',
+                  minWidth: 'max-content',
 
-                backgroundColor: hasSelectedValue
-                  ? theme.palette.primary.main
-                  : 'inherit',
-                color: hasSelectedValue
-                  ? theme.palette.common.white
-                  : 'inherit',
-              },
-              '& .MuiSelect-icon': {
-                color: hasSelectedValue
-                  ? theme.palette.common.white
-                  : theme.palette.action.active,
+                  backgroundColor: hasSelectedValue
+                    ? theme.palette.primary.main
+                    : 'inherit',
+                  color: hasSelectedValue
+                    ? theme.palette.common.white
+                    : 'inherit',
+                },
+                '& .MuiSelect-icon': {
+                  color: hasSelectedValue
+                    ? theme.palette.common.white
+                    : theme.palette.action.active,
+                },
               },
             })}
             displayEmpty
-            renderValue={() => <span>{FACET_LABELS[facet]}</span>}
+            renderValue={() => (
+              <span style={{whiteSpace: 'nowrap'}}>{FACET_LABELS[facet]}</span>
+            )}
           >
             {facetValues.map(facetValue => {
               return getDropdownMenuItem(

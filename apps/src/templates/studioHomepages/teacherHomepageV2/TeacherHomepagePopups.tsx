@@ -19,6 +19,7 @@ interface DrawerData {
   showSchoolInfoConfirmation: boolean;
   existingSchoolInfo: SchoolInfo;
   afeEligible: boolean;
+  showNps: boolean;
 }
 
 /**
@@ -39,7 +40,9 @@ const TeacherHomepagePopups: React.FC<TeacherHomepagePopupsProps> = () => {
   const [existingSchoolInfo, setExistingSchoolInfo] = React.useState<
     SchoolInfo | undefined
   >(undefined);
-  const [AFEDrawerOpen, setAFEDrawerOpen] = React.useState(true); //TODO: set to false
+  const [AFEDrawerOpen, setAFEDrawerOpen] = React.useState(false);
+  const [NPSDrawerOpen, setNPSDrawerOpen] = React.useState(false);
+  const [NPSProps, setNPSProps] = React.useState('');
 
   const [hasSeenPopup, setHasSeenPopup] = React.useState(false);
 
@@ -57,7 +60,8 @@ const TeacherHomepagePopups: React.FC<TeacherHomepagePopupsProps> = () => {
     if (
       searchParams.has('showSchoolInfoInterstitial') ||
       searchParams.has('showSchoolInfoConfirmation') ||
-      searchParams.has('showAFE')
+      searchParams.has('showAFE') ||
+      searchParams.has('showNPS')
     ) {
       return null;
     }
@@ -88,6 +92,20 @@ const TeacherHomepagePopups: React.FC<TeacherHomepagePopupsProps> = () => {
         setSchoolInfoInterstitialOpen(data.value.showSchoolInfoInterstitial);
         setSchoolInfoConfirmationOpen(data.value.showSchoolInfoConfirmation);
         setAFEDrawerOpen(data.value.afeEligible);
+        setNPSDrawerOpen(data.value.showNps);
+        if (data.value.showNps) {
+          HttpClient.fetchJson<{props: string}>(
+            '/form/nps_survey/configuration'
+          )
+            .then(result => {
+              if (result.value?.props) {
+                setNPSProps(result.value.props);
+              }
+            })
+            .catch(error => {
+              console.error(error);
+            });
+        }
 
         // Allows triggering of drawer with URL params for testing / debugging
         const searchParams = new URLSearchParams(window.location.search);
@@ -98,18 +116,16 @@ const TeacherHomepagePopups: React.FC<TeacherHomepagePopupsProps> = () => {
           setSchoolInfoConfirmationOpen(true);
         } else if (searchParams.get('showAFE') === 'true') {
           setAFEDrawerOpen(true);
+        } else if (searchParams.get('showNPS') === 'true') {
+          setNPSDrawerOpen(true);
         }
         setIsLoading(false);
       })
       .catch(error => {
-        console.log(error);
+        console.error(error);
         setIsLoading(false);
       });
-  }, [
-    setExistingSchoolInfo,
-    setSchoolInfoInterstitialOpen,
-    setSchoolInfoConfirmationOpen,
-  ]);
+  }, []);
 
   const popup = React.useMemo(() => {
     if (isLoading || hasSeenPopupInLastDay || hasSeenPopup) {
@@ -117,7 +133,8 @@ const TeacherHomepagePopups: React.FC<TeacherHomepagePopupsProps> = () => {
     } else if (
       schoolInfoInterstitialOpen ||
       schoolInfoConfirmationOpen ||
-      AFEDrawerOpen
+      AFEDrawerOpen ||
+      NPSDrawerOpen
     ) {
       return (
         <TeacherHomepageDrawer
@@ -125,6 +142,8 @@ const TeacherHomepagePopups: React.FC<TeacherHomepagePopupsProps> = () => {
           schoolInfoConfirmationOpenInitially={schoolInfoConfirmationOpen}
           schoolInfoInterstitialOpenInitially={schoolInfoInterstitialOpen}
           afeOpenInitially={AFEDrawerOpen}
+          npsOpenInitially={NPSDrawerOpen}
+          npsProps={NPSProps}
           onCloseCallback={onClosePopup}
         />
       );
@@ -144,6 +163,8 @@ const TeacherHomepagePopups: React.FC<TeacherHomepagePopupsProps> = () => {
     schoolInfoInterstitialOpen,
     schoolInfoConfirmationOpen,
     AFEDrawerOpen,
+    NPSDrawerOpen,
+    NPSProps,
     existingSchoolInfo,
     onClosePopup,
     hasSeenHomepageWelcome,

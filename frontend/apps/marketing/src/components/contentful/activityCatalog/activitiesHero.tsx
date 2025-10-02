@@ -1,8 +1,8 @@
 'use client';
 
 import {Box, Button, Stack, Typography} from '@mui/material';
-import Link from 'next/link';
 
+import Link from '@/components/contentful/link';
 import {ActivityType} from '@/modules/activityCatalog/types/Activity';
 
 interface ActivitiesHeroProps {
@@ -48,8 +48,19 @@ export default function ActivitiesHero({activityType}: ActivitiesHeroProps) {
         })}
       >
         Teachers:{' '}
-        <Link href="/hour-of-ai/partners#host-event">Host an hour</Link> or{' '}
-        <Link href="/hour-of-ai/how-to/k-12educator">
+        <Link
+          href="/hour-of-ai/partners#host-event"
+          removeMarginBottom
+          isLinkExternal={false}
+        >
+          Host an hour
+        </Link>{' '}
+        or{' '}
+        <Link
+          href="/hour-of-ai/how-to/k-12educator"
+          removeMarginBottom
+          isLinkExternal={false}
+        >
           read the How-To Guide
         </Link>
       </Typography>
@@ -100,7 +111,6 @@ export default function ActivitiesHero({activityType}: ActivitiesHeroProps) {
         sx={{mt: {xs: 3.5, md: 3.5}, flexWrap: 'wrap', rowGap: 3}}
       >
         <Button
-          component={Link}
           href="/activities/hour-of-ai"
           variant={activityType === 'hour-of-ai' ? 'contained' : 'outlined'}
           color="primary"
@@ -110,7 +120,6 @@ export default function ActivitiesHero({activityType}: ActivitiesHeroProps) {
         </Button>
 
         <Button
-          component={Link}
           href="/activities/hour-of-code"
           variant={activityType === 'hour-of-code' ? 'contained' : 'outlined'}
           color="primary"
