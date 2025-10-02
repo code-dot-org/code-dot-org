@@ -82,6 +82,7 @@ class CodeWorkspaceContainer extends React.Component {
             toggleAiChat={this.toggleAiChat}
             aiChatOpen={this.state.aiChatOpen}
             inLevel={inLevel}
+            labType={this.props.labType}
           />
         )}
       </div>
