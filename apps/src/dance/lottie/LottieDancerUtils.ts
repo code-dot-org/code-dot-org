@@ -264,7 +264,7 @@ export async function fetchHeadImageInfo(
     return null;
   }
   try {
-    const response = await fetch(headUrl, {cache: 'no-cache'});
+    const response = await fetch(headUrl);
     if (!response.ok) {
       return null;
     }
