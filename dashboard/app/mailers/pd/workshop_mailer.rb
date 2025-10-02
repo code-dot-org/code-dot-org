@@ -112,21 +112,6 @@ class Pd::WorkshopMailer < ApplicationMailer
       reply_to: email_address(@workshop.organizer.name, @workshop.organizer.email)
   end
 
-  def facilitator_enrollment_reminder(user, workshop)
-    @user = user
-    @workshop = workshop
-    @cancel_url = '#'
-    @is_reminder = true
-
-    return if @workshop.suppress_reminders? || @workshop.suppress_email?
-
-    mail content_type: 'text/html',
-         from: from_teacher,
-         subject: teacher_enrollment_subject(@workshop),
-         to: email_address(@user.name, @user.email),
-         reply_to: email_address(@user.name, @user.email)
-  end
-
   def facilitator_pre_workshop(user, workshop)
     @user = user
     @workshop = workshop

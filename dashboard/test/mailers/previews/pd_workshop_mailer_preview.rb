@@ -69,10 +69,6 @@ class PdWorkshopMailerPreview < ActionMailer::Preview
     mail :organizer_should_close_reminder, target: :workshop
   end
 
-  def facilitator_enrollment_reminder
-    mail :facilitator_enrollment_reminder, target: :facilitator
-  end
-
   def facilitator_pre_workshop_csa
     mail :facilitator_pre_workshop,
          Pd::Workshop::COURSE_CSA,
