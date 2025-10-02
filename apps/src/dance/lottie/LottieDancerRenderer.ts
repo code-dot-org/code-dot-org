@@ -125,7 +125,6 @@ export default class LottieDancerRenderer {
       metadataUrl = DEFAULT_METADATA_URL;
     }
 
-    console.log({headUrl, metadataUrl});
     this.headUrl = headUrl;
     this.metadataUrl = metadataUrl;
 
