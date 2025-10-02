@@ -7,6 +7,7 @@ import {ThemeProvider} from '@code-dot-org/component-library/common/contexts';
 import React from 'react';
 import {Provider} from 'react-redux';
 
+import {AiChatDisabledProvider} from '@cdo/apps/aichat/context/aiChatDisabledContext';
 import {getStandaloneProjectId} from '@cdo/apps/lab2/projects/utils';
 import {getStore} from '@cdo/apps/redux';
 import BrowserTextToSpeechWrapper from '@cdo/apps/sharedComponents/BrowserTextToSpeechWrapper';
@@ -32,7 +33,9 @@ const Lab2: React.FunctionComponent = () => {
                 <MetricsAdapter />
                 <Lab2IdleTimer />
                 <ProjectContainer channelId={getStandaloneProjectId()}>
-                  <LabViewsRenderer />
+                  <AiChatDisabledProvider>
+                    <LabViewsRenderer />
+                  </AiChatDisabledProvider>
                 </ProjectContainer>
                 <RubricFABContainer />
               </DialogManager>

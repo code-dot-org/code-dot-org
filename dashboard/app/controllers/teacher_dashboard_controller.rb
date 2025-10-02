@@ -1,6 +1,7 @@
 class TeacherDashboardController < ApplicationController
   load_and_authorize_resource :section
   include LevelsHelper
+  include SurveyResultsHelper
 
   ALPHABET = ('a'..'z').to_a
 
@@ -64,6 +65,8 @@ class TeacherDashboardController < ApplicationController
       afe_eligible = current_user&.school_info&.school&.afe_high_needs?
     end
 
+    show_nps = show_nps_survey?
+
     SchoolInfoInterstitialHelper.update_last_seen_timestamp(current_user)
 
     render json: {
@@ -71,6 +74,7 @@ class TeacherDashboardController < ApplicationController
       showSchoolInfoConfirmation: show_school_info_confirmation,
       existingSchoolInfo: school_info,
       afeEligible: afe_eligible,
+      showNps: show_nps
     }
   end
 end

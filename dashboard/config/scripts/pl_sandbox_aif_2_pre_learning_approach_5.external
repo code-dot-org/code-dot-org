@@ -5,103 +5,85 @@ description 'description here'
 markdown <<MARKDOWN
 # Why This Learning Approach is Critical
 
-#### Programming with Music Lab is a fun and engaging unit of curriculum designed to teach students about core coding concepts while integrating the joy of making music. This curriculum is part of <a href="https://code.org/curriculum/csd" target="blank" rel="noopener noreferrer">Code.org's CS Discoveries curriculum</a>, but you do not need to teach any other unit within CS Discoveries to teach Programming with Music Lab.
+#### As technology reshapes every corner of the workforce, preparing students isn’t just about tools—it’s about mindset.  
+#### This learning approach equips them to thrive in an AI-driven world with the adaptability, creativity, and judgment that tomorrow demands.
 
-<div style="margin: 20px auto">
-<a class="btn btn-large btn-primary" href="https://studio.code.org/courses/programming-with-music-lab-2025/" target="blank" rel="noopener noreferrer">Programming with Music Lab Curriculum</a>
+
+## Preparing for a rapidly evolving job landscape
+
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; margin: 20px 0;">
+
+  <!-- Block 1 -->
+  <div style="flex: 1; min-width: 250px; background-color: #f9f9f9; padding: 20px; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+    <div style="font-size: 2rem; margin-bottom: 10px;">📈</div>
+    <h3 style="margin: 0 0 10px 0;"><b>Stay Ahead of Job Shifts</b></h3>
+    <ul style="margin: 0; padding-left: 20px; font-size: 14pt; line-height: 1.5;">
+      <li>AI skill demand is surging <em><a href="https://www.pwc.com/gx/en/issues/artificial-intelligence/job-barometer/aijb-2025-united-states-analysis.pdf?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">(PwC)</a></em></li>
+      <li>170M new jobs vs. 92M displaced <em><a href="https://blog.theinterviewguys.com/the-state-of-ai-in-the-workplace-in-2025/?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">(The Interview Guys)</a></em></li>
+      <li>39% of job skills changing by 2030 <em><a href="https://quantaintelligence.ai/2025/02/10/technology/ai-job-report-2025-q1?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">(Quanta Intelligence)</a></em></li>
+    </ul>
+  </div>
+
+  <!-- Block 2 -->
+  <div style="flex: 1; min-width: 250px; background-color: #f9f9f9; padding: 20px; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+    <div style="font-size: 2rem; margin-bottom: 10px;">💡</div>
+    <h3 style="margin: 0 0 10px 0;"><b>Gain an Edge</b></h3>
+    <ul style="margin: 0; padding-left: 20px; font-size: 14pt; line-height: 1.5;">
+      <li>Jobs exposed to AI evolving 66% faster</li>
+      <li>AI-skilled workers earn 56% wage premium <em><a href="https://blog.theinterviewguys.com/the-state-of-ai-in-the-workplace-in-2025/?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">(The Interview Guys)</a></em></li>
+    </ul>
+  </div>
+
+  <!-- Block 3 -->
+  <div style="flex: 1; min-width: 250px; background-color: #f9f9f9; padding: 20px; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+    <div style="font-size: 2rem; margin-bottom: 10px;">🧩</div>
+    <h3 style="margin: 0 0 10px 0;"><b>Build Core Skills</b></h3>
+    <ul style="margin: 0; padding-left: 20px; font-size: 14pt; line-height: 1.5;">
+      <li>Computational thinking = universal tool <em><a href="https://learn.microsoft.com/en-us/training/modules/computational-thinking-importance-education/?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">(Microsoft Learn+)</a></em></li>
+      <li>Problem-solving & adaptability across fields <em><a href="https://stemeducationjournal.springeropen.com/articles/10.1186/s40594-024-00510-6?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">(SpringerOpen)</a></em></li>
+    </ul>
+  </div>
+
 </div>
 
-## Do I need to know about music to teach this curriculum?
 
-<img src="https://images.code.org/66a965a55ff9dbc21f54c9b0aa258b61-image-1744140812694.28.33 PM.png" 
-     alt="" 
-     style="width: 20%; border-radius: 10px; margin: 0px 0px 20px 20px; float: right;">
-     
-#### Nope! Programming with Music Lab is designed to primarily teach about computer science. No learning outcomes are measured by the musicality of students' outputs (e.g. how "good" their songs sound). 
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; padding: 40px 20px; border-radius: 12px; margin: 30px 0;">
 
-#### Instead, we focus on students' ability to write and revise code that showcases their knowledge about sequencing, loops, and functions. Any knowledge about music is a bonus, but certainly not required!
+  <!-- Left Column: Text -->
+  <div style="flex: 1; min-width: 280px; padding: 20px;">
+    <h2 style="margin-top: 0;">Nurture Ethical and Human-Centered Creators</h2>
+    <p style="margin-bottom: 15px; font-size: 1rem; line-height: 1.5;">
+      As AI becomes more powerful, questions about fairness, transparency, and agency grow more urgent. Learning to critically evaluate AI outputs and embed values in design isn’t optional—it’s foundational.
+    </p>
+    </div>
 
-<p style="font-size: 18px; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #048899; margin: 20px 0px">If you find yourself wanting support with musical vocabulary, please access our <a href="https://docs.google.com/presentation/d/1wvllTFs0IBWJI8uzfUhuFW4mUYItUK5nmmVjArNRlCM/edit?usp=sharing" target="blank" rel="noopener noreferrer">Musical Terms Glossary</a>, which includes definitions and explanations to support instruction.
-</p>
+  <!-- Right Column: Image -->
+  <div style="flex: 1; min-width: 280px; padding: 20px; text-align: center;">
+    <img src="https://images.code.org/8ac3a6b47a0a84b47216e84b6b1a1d4a-image-illustration.png" 
+         alt="Students collaborating with AI illustration" 
+         style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+  </div>
 
-
-## Quick Facts About the Curriculum
-<table style="width: 90%; margin: 20pt auto; border-collapse: collapse;">
-  <tr>
-    <td style="padding: 8px; font-size: 14pt; border: 1px solid #ccc;"><strong>Unit Length</strong></td>
-    <td style="padding: 8px; font-size: 14pt; border: 1px solid #ccc;">13 days</td>
-  </tr>
-  <tr>
-    <td style="padding: 8px; font-size: 14pt; border: 1px solid #ccc;"><strong>Grades</strong></td>
-    <td style="padding: 8px; font-size: 14pt; border: 1px solid #ccc;">6th through 10th grade</td>
-  </tr>
-  <tr>
-    <td style="padding: 8px; font-size: 14pt; border: 1px solid #ccc;"><strong>Concepts Covered</strong></td>
-    <td style="padding: 8px; font-size: 14pt; border: 1px solid #ccc;">Sequencing, Loops, Functions</td>
-  </tr>
-  <tr>
-    <td style="padding: 8px; font-size: 14pt; border: 1px solid #ccc;"><strong>Devices</strong></td>
-    <td style="padding: 8px; font-size: 14pt; border: 1px solid #ccc;">Desktops, laptops, and tablets</td>
-  </tr>
-  <tr>
-    <td style="padding: 8px; font-size: 14pt; border: 1px solid #ccc;"><strong>Student & Teacher Prerequisites</strong></td>
-    <td style="padding: 8px; font-size: 14pt; border: 1px solid #ccc;">None!</td>
-  </tr>
-  <tr>
-    <td style="padding: 8px; font-size: 14pt; border: 1px solid #ccc;"><strong>Coding Environment</strong></td>
-    <td style="padding: 8px; font-size: 14pt; border: 1px solid #ccc;">Music Lab</td>
-  </tr>
-  <tr>
-    <td style="padding: 8px; font-size: 14pt; border: 1px solid #ccc;"><strong>Projects</strong></td>
-    <td style="padding: 8px; font-size: 14pt; border: 1px solid #ccc;">2 Mini-Projects, 1 End-of-Unit Project</td>
-  </tr>
-</table>
-
-## 🎵 Start Listening!
-
-#### Code.org is proud to have curated a set of popular songs for Music Lab that we know your students will enjoy. We've compiled these songs into a Spotify playlist for your listening pleasure! This playlist contains non-explicit versions of each song.
-
-<div style="text-align: center; margin: 20px auto;">
-<a href="https://open.spotify.com/playlist/6hpv1W7OxV4uOuFDdzZB1M?si=xY31T0SbTauGbOY1-iXu7Q" target="blank" rel="noopener noreferrer"><img src="https://images.code.org/b2b7031d132ebb28f8155c8574c2bf31-image-1744141229237.39.35_PM-removebg-preview.png" alt="A Spotify in-browser played showing a playlist titled Music Lab Hour of Code 2024" style="width: 60%; border-radius: 10px;"></a>
-    <p style="font-size: 12pt; margin-top: 5px;">Click the image above to start listening.</p>
 </div>
 
-Why This Learning Approach is Critical
-Prepare for a rapidly evolving job landscape
+<div style="text-align: center; margin: 40px 0; padding: 20px;">
+
+  <!-- Centered Statement -->
+  <p style="font-size: 1.25rem; line-height: 1.6; max-width: 800px; margin: 0 auto 30px auto; font-weight: 500;">
+    Learning in this way—through coding, designing, evaluating, and creating with AI—builds adaptability, creativity, critical thinking, values-based judgment, and real-world readiness.
+  </p>
+
+  <!-- CTA Highlight Box -->
+  <div style="display: inline-block; background-color: #f0f8ff; border: 2px solid #007acc; border-radius: 12px; padding: 20px 30px; max-width: 700px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+    <p style="font-size: 1.2rem; font-weight: bold; margin: 0; line-height: 1.5; color: #003366;">
+      “Given the pace of change in labor markets and the rising importance of AI, there’s no more urgent or relevant approach to education for the future.”
+    </p>
+  </div>
+
+</div>
 
 
-AI skill demand is surging. The share of U.S. job postings that require AI-related competencies has steadily risen over the past decade. PwC
 
-
-New job creation far outpaces displacement. Estimates suggest that by 2030, 170 million new jobs enabled by AI could offset 92 million roles displaced by automation. The Interview Guys
-
-
-Core skills are shifting fast. Roughly 39% of core job skills are expected to change by 2030, requiring workers (and students) to be adaptable and digitally fluent. Quanta Intelligence
-
-
-Gain an edge: AI fluency means opportunity
-
-
-Jobs exposed to AI are evolving 66% faster, and workers with AI-related skills can command a 56% wage premium. The Interview Guys
-
-
-Develop universally valuable cognitive tools
-
-
-Computational thinking—including decomposition, abstraction, pattern-recognition, and algorithmic logic—doesn’t just serve tech careers; it underpins problem-solving and innovation across domains, from science to social sciences. Microsoft Learn+1
-
-
-Students who exercise these skills in real, working systems become better at breaking down challenges, making data-driven choices, and troubleshooting—abilities employers across sectors prize. SpringerOpen
-
-
-Nurture ethical and human-centered technology creators
-
-
-As AI becomes more powerful, questions about fairness, transparency, and agency grow more urgent. Learning to critically evaluate AI outputs and embed values in design isn’t optional—it’s foundational.
-
-
-Students who learn not only to use AI, but to question and guide it, are better prepared to build trustworthy, equitable systems and to lead with intention.
-Learning in this way—through coding, designing, evaluating, and creating with AI—does more than teach syntax or tools. It cultivates adaptability, creativity, critical thinking, values-based judgment, and real-world readiness. Given the pace of change in labor markets and the rising importance of AI, there's no more urgent or relevant approach to education for the future.
 
 
 MARKDOWN

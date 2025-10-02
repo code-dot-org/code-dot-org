@@ -64,6 +64,10 @@ class Dancelab < GamelabJr
   def common_blocks(type)
   end
 
+  def project_type
+    return game&.app
+  end
+
   # Used by levelbuilders to set a default song on a Dance Party level.
   def self.hoc_songs
     manifest_json = AWS::S3.create_client.get_object(bucket: 'cdo-sound-library', key: "hoc_song_meta/#{DANCE_SONG_MANIFEST_FILENAME}")[:body].read

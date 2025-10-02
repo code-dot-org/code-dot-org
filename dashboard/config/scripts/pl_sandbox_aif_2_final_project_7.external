@@ -1,0 +1,12 @@
+name 'pl_sandbox_aif_2_final_project_7'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Final Project
+
+
+#### By the end of the course, students create a capstone project—a fully functional web application that uses HTML, CSS, JavaScript, and AI. This project shows not only technical skills but also thoughtful design and responsible AI use.
+
+
+MARKDOWN

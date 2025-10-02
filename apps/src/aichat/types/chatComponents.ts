@@ -10,6 +10,7 @@ export enum WorkspaceTeacherViewTab {
 
 // Chat Button Types
 export interface ChatButtonData {
+  id?: string;
   label: string;
   value: string;
   analyticsProperties?: AnalyticsProperties;
