@@ -168,6 +168,16 @@ module AichatAiHelper
     end
   end
 
+  # Create an instance of the appropriate ai-usage-reporter-derived class based on model id.
+  def self.create_ai_usage_reporter_instance(model_id, user_id, project_id, level_id)
+    # We assume it's one of the gemini models if not 'gpt-4o-mini'.
+    if model_id == "gpt-4o-mini"
+      return AichatAiUsageReporter.new(model_id, user_id, project_id, level_id)
+    else
+      return nil
+    end
+  end
+
   def self.get_openai_assistant_response(aichat_model_customizations, stored_messages, new_message, level_id, project_id, user_id)
     encrypted_channel_id = storage_encrypt_channel_id(storage_id_for_user_id(user_id), project_id) if project_id
 
@@ -183,7 +193,8 @@ module AichatAiHelper
     # System prompt - array of strings or nil.
     retrieval_contexts = aichat_model_customizations['retrievalContexts']
 
-    usage_reporter = AichatAiUsageReporter.new(model_id, user_id, project_id, level_id)
+    usage_reporter = create_ai_usage_reporter_instance(model_id, user_id, project_id, level_id)
+
     client = create_ai_client_instance(client_type, model_id, usage_reporter)
 
     config, request, context = get_config_request_context(stored_messages, new_message, temperature, system_prompt, retrieval_contexts,  model_id, level_id, encrypted_channel_id, user_id, project_id, client_type)
