@@ -2,8 +2,6 @@ require 'json'
 
 class OpenaiEvaluateController < ApplicationController
   authorize_resource class: false
-  # Need to modify this... modify abilities.rb?
-  skip_authorization_check only: [:match_teaching_profile]
 
   # POST /openai/evaluate
   def evaluate
@@ -47,28 +45,11 @@ class OpenaiEvaluateController < ApplicationController
     head :no_content
   end
 
-  # POST /openai/match_teaching_profile
-  def match_teaching_profile
-    teaching_profile_data = match_teaching_profile_params[:teaching_profile_data]
-
-    unless teaching_profile_data
-      return render status: :bad_request, json: {error: "Missing teaching_profile_data"}
-    end
-
-    response = OpenaiEvaluateHelper.match_teaching_profile(teaching_profile_data)
-
-    return render(status: response[:status], json: response[:json])
-  end
-
   private def evaluate_params
     params.transform_keys(&:underscore).permit(:level_id, :unit_id, :student_work, :evaluation_type, :should_evaluate_skills)
   end
 
   private def evaluate_section_params
     params.transform_keys(&:underscore).permit(:unit_name, :section_id)
-  end
-
-  private def match_teaching_profile_params
-    params.permit(:teaching_profile_data => {})
   end
 end
