@@ -15,7 +15,7 @@ module Lti
           params.require([:name, :client_id, :lms, :email])
         rescue
           flash.alert = I18n.t('lti.error.missing_params')
-          return redirect_to lti_v1_integrations_path
+          return redirect_to new_lti_v1_integration_path
         end
 
         integration_name = params[:name]
@@ -25,7 +25,7 @@ module Lti
 
         unless Policies::Lti::LMS_PLATFORMS.key?(platform_name.to_sym)
           flash.alert = I18n.t('lti.error.unsupported_lms_type')
-          return redirect_to lti_v1_integrations_path
+          return redirect_to new_lti_v1_integration_path
         end
 
         platform_urls = Policies::Lti::LMS_PLATFORMS[platform_name.to_sym]
