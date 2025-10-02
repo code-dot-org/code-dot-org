@@ -120,15 +120,8 @@ cat <<JSON > $FIRST_BOOT
   },
   "cdo-secrets": {
 <% if frontends -%>
-    "redis_url": "rediss://${SessionStoreGroup.PrimaryEndPoint.Address}:${SessionStoreGroup.PrimaryEndPoint.Port}",
+    "redis_url": "rediss://${RedisGroup.PrimaryEndPoint.Address}:${RedisGroup.PrimaryEndPoint.Port}",
     "memcached_endpoint": "${Memcached.ConfigurationEndpoint.Address}:${Memcached.ConfigurationEndpoint.Port}",
-
-    # SESSION_STORE_MIGRATION_DELETE_ME
-    # We are migrating from session_store to redis. Its the same definitions, but with a new
-    # name to reflect that multiple dashboard features will be using the same instance.
-    #
-    # We expect the migration to be complete after November 2025, at which point we can remove
-    # this component (and delete session_store.yml.erb)
     "old_session_store_server": "rediss://${SessionStoreGroup.PrimaryEndPoint.Address}:${SessionStoreGroup.PrimaryEndPoint.Port}",
 <% end -%>
 <% if database && !rack_env?(:production) -%>
