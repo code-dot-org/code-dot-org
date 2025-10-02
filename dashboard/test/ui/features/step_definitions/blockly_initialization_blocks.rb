@@ -63,7 +63,6 @@ And /^I've initialized the workspace with empty repeat maze blocks$/ do
 end
 
 And /^I've initialized the workspace with too many maze blocks$/ do
-  load_json_blocks('{"blocks":{"languageVersion":0,"blocks":[{"type":"when_run","x":16,"y":16,"next":{"block":{"type":"maze_moveForward","next":{"block":{"type":"maze_forever","inputs":{"DO":{"block":{"type":"maze_moveForward","next":{"block":{"type":"maze_turn","fields":{"DIR":"<field name=\"DIR\">turnLeft</field>"},"next":{"block":{"type":"maze_moveForward"}}}}}}}}}}}}]}}')
   load_json_blocks('{"blocks":{"languageVersion":0,"blocks":[{"type":"when_run","id":"topBlock","x":16,"y":16,"deletable":false,"movable":false,"extraState":{},"next":{"block":{"type":"maze_moveForward","id":"0fMt9!PN~r8.U^.[R5Jx","next":{"block":{"type":"maze_moveForward","id":"crJS]gF?%Nvoak,U[Olb","next":{"block":{"type":"maze_moveForward","id":"p!vQKVp)~}Kg%mks-YK_","next":{"block":{"type":"maze_moveForward","id":"l?ru=(Q+F^Lke5V`0FAK","next":{"block":{"type":"maze_moveForward","id":"-3En4!~AH~T8BNOYE=(h"}}}}}}}}}}}]}}')
 end
 
