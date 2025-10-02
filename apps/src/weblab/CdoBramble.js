@@ -842,6 +842,10 @@ export default class CdoBramble {
     this.brambleProxy?.disableFullscreenPreview(callback);
   }
 
+  getBrackets() {
+    return window.brackets;
+  }
+
   async getConcatenatedCodeString() {
     const htmlOrCssRegExp = /\.(html?|css)$/i;
 
@@ -874,7 +878,7 @@ export default class CdoBramble {
       });
 
       // overlay unsaved editor text on top of saved file content
-      const brackets = window.brackets;
+      const brackets = this.getBrackets();
       if (brackets) {
         const DocumentManager = brackets.getModule('document/DocumentManager');
         const openDocs = DocumentManager.getAllOpenDocuments?.() || [];
