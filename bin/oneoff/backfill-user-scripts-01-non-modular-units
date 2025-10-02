@@ -52,55 +52,34 @@ def get_unit_ids_with_one_unit_group
   unit_ids
 end
 
-# Phase 2: Batch update user_scripts using SQL JOIN UPDATE
+# Phase 2: Update user_scripts using a single SQL JOIN UPDATE
 def update_user_scripts(script_ids)
   raise "no script_ids provided" if script_ids.empty?
 
-  puts "Phase 2: Updating user_scripts in batches of #{BATCH_SIZE}..."
+  script_ids_str = script_ids.join(',')
 
-  total_updated = 0
-  batch_count = 0
+  if $options[:actually_update]
+    puts "Phase 2: Updating user_scripts with single query..."
 
-  # Process user_scripts in batches
-  # find_in_batches uses WHERE id > last_id, so it will process all matching
-  # records exactly once, regardless of whether they get updated during iteration
-  UserScript.
-    where(unit_group_id: nil).
-    where(script_id: script_ids).
-    find_in_batches(batch_size: BATCH_SIZE) do |batch|
-    batch_count += 1
+    sql = <<-SQL
+      UPDATE user_scripts us
+      JOIN scripts s ON us.script_id = s.id
+      SET us.unit_group_id = s.original_unit_group_id
+      WHERE us.unit_group_id IS NULL
+        AND us.script_id IN (#{script_ids_str})
+    SQL
 
-    user_script_ids = batch.map(&:id)
+    updated_count = ActiveRecord::Base.connection.exec_update(sql)
+    puts "Updated #{updated_count} records"
+  else
+    puts "Phase 2: Counting records that would be updated (dry run)..."
 
-    ActiveRecord::Base.transaction do
-      # Use SQL JOIN UPDATE to directly set unit_group_id from script's original_unit_group_id
-      sql = <<-SQL
-        UPDATE user_scripts us
-        JOIN scripts s ON us.script_id = s.id
-        SET us.unit_group_id = s.original_unit_group_id
-        WHERE us.unit_group_id IS NULL
-          AND us.id IN (#{user_script_ids.join(',')})
-      SQL
-
-      # Use exec_update which returns the number of affected rows directly
-      updated_count = ActiveRecord::Base.connection.exec_update(sql)
-      total_updated += updated_count
-
-      # Rollback unless actually_update flag is set
-      raise ActiveRecord::Rollback unless $options[:actually_update]
-    end
-
-    if batch_count % 10 == 0
-      print '.'
-    end
-
-    # Progress report every 1M records
-    if batch_count % 100 == 0
-      puts " [Updated #{total_updated} records so far]"
-    end
+    count = ActiveRecord::Base.connection.select_value(
+      "SELECT COUNT(*) FROM user_scripts
+       WHERE unit_group_id IS NULL AND script_id IN (#{script_ids_str})"
+    )
+    puts "Dry run: Would update #{count} records"
   end
-
-  puts "\nFinished! Total records updated: #{total_updated}"
 end
 
 def main
