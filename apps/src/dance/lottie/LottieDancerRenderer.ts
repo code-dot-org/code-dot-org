@@ -148,7 +148,7 @@ export default class LottieDancerRenderer {
 
   async setSource(danceMove?: DanceMoves | null): Promise<void> {
     if (!danceMove) {
-      this._clearSource();
+      this.clearSource();
       return;
     }
 
@@ -176,7 +176,6 @@ export default class LottieDancerRenderer {
 
       // Replace vector head with an image, when head.png is available.
       const headInfo = await fetchHeadImageInfo(this.headUrl);
-      console.log(headInfo);
       if (headInfo) {
         const headPre = findHeadPrecompLayerDeep(animData);
         if (headPre?.refId) {
@@ -207,7 +206,7 @@ export default class LottieDancerRenderer {
     }
 
     // Lottie instance bound to our canvas 2D context
-    await this._prepareLottie(animData);
+    await this.prepareLottie(animData);
 
     this.totalFrames = Math.max(
       0,
@@ -253,18 +252,18 @@ export default class LottieDancerRenderer {
   }
 
   dispose(): void {
-    this._destroyAnim();
+    this.destroyAnim();
   }
 
   // Cleanup path
-  private _clearSource(): void {
-    this._destroyAnim();
+  private clearSource(): void {
+    this.destroyAnim();
     this.totalFrames = null;
   }
 
   // Lottie lifecycle
-  private async _prepareLottie(animationData: LottieJSON): Promise<void> {
-    this._destroyAnim();
+  private async prepareLottie(animationData: LottieJSON): Promise<void> {
+    this.destroyAnim();
     const config: CanvasAnimConfig = {
       renderer: 'canvas',
       loop: false,
@@ -290,7 +289,7 @@ export default class LottieDancerRenderer {
     this.anim = anim;
   }
 
-  private _destroyAnim(): void {
+  private destroyAnim(): void {
     if (this.anim) {
       try {
         this.anim.destroy?.();
