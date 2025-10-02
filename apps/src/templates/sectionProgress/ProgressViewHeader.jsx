@@ -59,7 +59,6 @@ class ProgressViewHeader extends Component {
   };
 
   render() {
-    console.log('DAYNE scriptData', this.props.scriptData);
     const {currentView, scriptFriendlyName} = this.props;
     const linkToOverview = this.getLinkToOverview();
     const headingText = {
