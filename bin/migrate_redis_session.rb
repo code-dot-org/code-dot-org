@@ -10,6 +10,8 @@
 require_relative '../deployment'
 require 'redis'
 
+NUM_MS_IN_A_DAY = 24 * 60 * 60 * 1000
+
 old_redis_url = CDO.old_session_store_server
 new_redis_url = CDO.redis_url
 
@@ -33,16 +35,27 @@ File.open('failed-migration-keys.log', 'a') do |failed_log|
     puts "\tbatch writing #{keys.size} keys to new redis"
     acks = new_redis.pipelined do |r|
       keys.zip(sessions, ttls).each do |key, session, ttl_ms|
-        ttl_ms = 40 * 24 * 60 * 60 * 1000 if ttl_ms < 0  # default to 40 days if no TTL was set in old_redis
-        r.restore("session:#{key}", ttl_ms, session, replace: true)
+        # If no TTL was set, we'll set it to our default (currently 40 days)
+        ttl_ms = CDO.dashboard_session_ttl_days * NUM_MS_IN_A_DAY if ttl_ms < 0
+        if session.nil?
+          # this is ugly, but pipelined needs a redis command to take "space" in the acks
+          # array, but restore will throw if session is nil, so we insert a fake read command
+          # which will return nil, and we'll classify as a failure later.
+          # it works, its temporary code:
+          r.get("nonexistent:key:is:nonexistent")
+        else
+          r.restore("session:#{key}", ttl_ms, session, replace: true)
+        end
       end
     end
 
-    succeeded = []
-    failed = []
-    keys.each_with_index do |k, i|
-      (acks[i] == "OK" ? succeeded : failed) << k
-    end
+    # Success is defined as "we fetched a session from the old redis
+    # AND were able to write it to the new redis"
+    succeeded, failed = keys.
+      zip(sessions, acks).
+      partition {|_, session, ack| ack == "OK" && !session.nil?}
+    succeeded.map!(&:first)
+    failed.map!(&:first)
 
     failed.each {|k| failed_log.puts(k)}
     warn "\t#{failed.size} sessions FAILED TO MIGRATE, logged to failed-migration-keys.log" if failed.any?
