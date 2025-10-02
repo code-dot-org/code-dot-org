@@ -300,7 +300,7 @@ const WEBPACK_BASE_CONFIG = {
         ],
         type: 'asset/resource',
         generator: {
-          filename: '[name].[contenthash:8][ext]',
+          filename: '[name]wp[contenthash:20][ext]',
           outputPath: '../images/', // build/package/images/
           publicPath: '/assets/images/', // Dashboard assets path
         },
