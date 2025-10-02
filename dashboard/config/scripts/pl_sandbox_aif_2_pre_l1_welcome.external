@@ -4,7 +4,7 @@ description 'description here'
 
 markdown <<MARKDOWN
 <div style="position: relative; text-align: center; color: white; margin-top: 20px;">
-    <img src="https://images.code.org/052b5fc25308b850001f547503386322-image-1743815060120.png" alt="Banner image that says, Welcome to Teaching Programming with Music Lab" style="width: 100%; border-radius: 10px;">
+    <img src="https://images.code.org/9156fd31d882dd6feaf421bb6818389d-image-1759160871825.png" alt="Banner image that says, Welcome to Teaching AI Foundations" style="width: 100%; border-radius: 10px;">
     <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 20px; width: 70%; max-width: 800px; border-radius: 10px;">
     </div>
 </div>
@@ -12,7 +12,7 @@ markdown <<MARKDOWN
 
 # Welcome!
 
-#### This professional learning module is designed to prepare you to teach Code.org's Programming with Music Lab curriculum. This curriculum is an engaging, hands-on dive into the worlds of computer science, music, and problem solving.
+#### This professional learning module prepares you to teach AI Foundations (Semester 2) course— a curriculum where students code alongside AI to build real-world interactive projects.
 
 ___
 
@@ -25,12 +25,17 @@ ___
 ___
 
 
-#### By the end of this professional learning module, you will be able to:
+#### **By the end of this professional learning module, you will be able to:**
 
-* #### Code sequences, loops, and functions in Music Lab. 
-* #### Utilize the unit structure and lesson structure of the curriculum to facilitate a gradual release of responsibility for students.
-* #### Implement the unit with students with diverse learning needs.
-* #### Guide students through unit projects to synthesize their learning.
+* #### Prepare to teach the AI Foundations (Semester 2) course with confidence and clarity.
+* #### Understand the basics of web applications and how they support interactive, AI-powered projects.
+* #### Explain and apply core web technologies:
+	* #### HTML for structure,
+	* #### CSS for styling, and
+	* #### JavaScript for interactivity.
+* #### Integrate AI tools and concepts into coding lessons to model responsible and creative AI use.
+* #### Emphasize ethical considerations and human-centered design in classroom discussions.
+* #### Apply teaching strategies and best practices for engaging students in hands-on, project-based learning.
 
 ## Take Our Pre-Survey
 
@@ -43,19 +48,11 @@ ___
 ### **Suggested total time for this module:** 120 minutes
 
 
-Introduction to Teaching AI Foundations (Semester 2)
-
-This professional learning module prepares you to teach AI Foundations (Semester 2) course—a curriculum where students code alongside AI to build real-world interactive projects. 
-By the end of this module, you will be able to: 
-Prepare to teach the AI Foundations (Semester 2) course with confidence and clarity.
-Understand the basics of web applications and how they support interactive, AI-powered projects.
-Explain and apply core web technologies:
-HTML for structure,
-CSS for styling, and
-JavaScript for interactivity.
-Integrate AI tools and concepts into coding lessons to model responsible and creative AI use.
-Emphasize ethical considerations and human-centered design in classroom discussions.
-Apply teaching strategies and best practices for engaging students in hands-on, project-based learning.
 
 
+ 
+ 
+
+
+![]()
 MARKDOWN

@@ -1,0 +1,24 @@
+$header-height: 30px;
+
+.container {
+  width: 350px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: $header-height;
+
+  .header {
+    width: 100%;
+    height: $header-height;
+    background-color: aqua;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    button {
+      position: absolute;
+      right: 0;
+    }
+  }
+}

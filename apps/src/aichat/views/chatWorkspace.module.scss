@@ -53,6 +53,23 @@ $tabs-default-spacing: 4px;
   pointer-events: none;
 }
 
+.chatDisabledContainer {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+
+  p {
+    color: var(--text-neutral-quaternary);
+    text-align: center;
+  }
+
+  .chatDisabledIcon {
+    width: 2rem;
+  }
+}
+
 .tabsContainer {
   background-color: var(--background-neutral-secondary);
   padding: $tabs-default-spacing $tabs-default-spacing 0 $tabs-default-spacing;
@@ -81,15 +98,15 @@ $tabs-default-spacing: 4px;
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  padding: 0 10px;
 }
 
 .footer {
   display: flex;
   flex-direction: column;
-  gap: 2px;
-  padding: 16px 6px;
+  gap: 0.5rem;
+  padding: 0.625rem;
   border-top: variables.$default-border;
+  background: var(--background-neutral-secondary);
 }
 
 .alertLink {
@@ -113,9 +130,4 @@ $tabs-default-spacing: 4px;
   @include remove-button-styles;
   align-self: end;
   font-size: 13px;
-}
-
-.modeDropdown {
-  margin-inline-start: 10px;
-  width: fit-content;
 }

@@ -107,4 +107,31 @@ class FollowerTest < ActiveSupport::TestCase
 
     assert_equal 'test', student.family_name
   end
+
+  test 'creating a follower assigns the section script to the student' do
+    student = create(:student)
+    unit_group = create(:single_unit_course, :stable)
+    unit = unit_group.first_unit
+    @laurel_section.update!(script: unit, unit_group: unit_group)
+
+    create(:follower, section: @laurel_section, student_user: student)
+
+    user_script = student.user_scripts.find_by(script: @laurel_section.script)
+    assert user_script
+    assert_equal unit_group, user_script.unit_group
+  end
+
+  test 'creating a follower assigns the section script with modular course to the student' do
+    student = create(:student)
+    unit_group = create(:single_unit_course, :stable)
+    unit = unit_group.first_unit
+    other_unit_group = create(:single_unit_course, :stable, unit: unit)
+    @laurel_section.update!(script: unit, unit_group: other_unit_group)
+
+    create(:follower, section: @laurel_section, student_user: student)
+
+    user_script = student.user_scripts.find_by(script: @laurel_section.script)
+    assert user_script
+    assert_equal other_unit_group, user_script.unit_group
+  end
 end
