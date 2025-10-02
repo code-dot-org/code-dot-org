@@ -2,10 +2,9 @@ require 'connection_pool'
 require 'cdo/cookie_helpers'
 
 session_cookie_key = environment_specific_cookie_name('_learn_session')
-session_store_redis_url = "#{CDO.redis_url.chomp('/')}/session"
 Dashboard::Application.config.session_store Middlewares::RedisSessionStore,
   key: session_cookie_key,
-  servers: [session_store_redis_url],
+  servers: ["#{CDO.redis_url}/session"],
   secure: !CDO.no_https_store && (!Rails.env.development? || CDO.https_development),
   domain: :all,
 
