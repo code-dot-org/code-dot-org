@@ -717,6 +717,14 @@ WebLab.prototype.onBrambleReady = function () {
   this.syncBrambleFiles();
 };
 
+WebLab.prototype.getCode = function () {
+  if (!this.brambleHost?.getConcatenatedCodeString) {
+    console.error('[WebLab] getConcatenatedCodeString unavailable');
+    return Promise.resolve('');
+  }
+  return this.brambleHost.getConcatenatedCodeString();
+};
+
 WebLab.prototype.brambleApi = function () {
   return {
     addPageAction: this.addPageAction.bind(this),
