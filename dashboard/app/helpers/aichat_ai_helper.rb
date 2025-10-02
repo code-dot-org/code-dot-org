@@ -41,6 +41,8 @@ module AichatAiHelper
   end
 
   def self.convert_json_schema_to_ruby_types(json_schema)
+    json_schema = json_schema.transform_keys(&:to_sym)
+    puts json_schema
     type = json_schema[:type]
     description = json_schema[:description]
 
@@ -122,10 +124,12 @@ module AichatAiHelper
                    end
 
     unless json_schema.nil?
+      parsed_json_schema = json_schema.transform_keys(&:to_sym)
       response_validation = AichatAiClientTypes::JsonResponseConfigValidation.new(
         type: 'jsonSchema',
-        schema: convert_json_schema_to_ruby_types(json_schema)
+        schema: convert_json_schema_to_ruby_types(parsed_json_schema)
       )
+      puts "json schema is not nill, response_validation: #{response_validation}"
       response = AichatAiClientTypes::JsonResponseConfig.new(mimeType: 'application/json', validation: response_validation)
     end
 
@@ -183,10 +187,12 @@ module AichatAiHelper
     # System prompt - array of strings or nil.
     retrieval_contexts = aichat_model_customizations['retrievalContexts']
 
+    json_schema = aichat_model_customizations['responseJsonSchema']
+
     usage_reporter = AichatAiUsageReporter.new(model_id, user_id, project_id, level_id)
     client = create_ai_client_instance(client_type, model_id, usage_reporter)
 
-    config, request, context = get_config_request_context(stored_messages, new_message, temperature, system_prompt, retrieval_contexts,  model_id, level_id, encrypted_channel_id, user_id, project_id, client_type)
+    config, request, context = get_config_request_context(stored_messages, new_message, temperature, system_prompt, retrieval_contexts,  model_id, level_id, encrypted_channel_id, user_id, project_id, client_type, json_schema)
 
     begin
       response = client.get_response(config, request, context)

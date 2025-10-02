@@ -41,7 +41,7 @@ interface ChatEventViewProps {
 
 function formatModelUpdateText(update: ModelUpdate): string {
   const {updatedField, updatedValue, timestamp} = update;
-  const fieldLabel = AI_CUSTOMIZATIONS_LABELS[updatedField];
+  const fieldLabel = AI_CUSTOMIZATIONS_LABELS[updatedField]!;
 
   let updatedToText = undefined;
   if (updatedField === 'temperature') {

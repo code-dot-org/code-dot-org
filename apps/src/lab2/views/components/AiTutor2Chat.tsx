@@ -44,6 +44,15 @@ const modelParameters: ModelParameters = {
   selectedModelId: aiTutorModelId,
   temperature: 0.5,
   retrievalContexts: [],
+  responseJsonSchema: {
+    type: 'object',
+    properties: {
+      code: {type: 'string'},
+      explanation: {type: 'string'},
+    },
+    required: ['code', 'explanation'],
+    additionalProperties: false,
+  },
 } as const;
 
 // Some pre-canned chat buttons.
