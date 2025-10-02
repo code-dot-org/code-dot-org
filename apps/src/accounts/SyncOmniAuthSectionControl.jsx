@@ -12,6 +12,7 @@ import LtiSectionSyncDialog, {
 } from '@cdo/apps/simpleSignUp/lti/sync/LtiSectionSyncDialog';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import ReauthorizeGoogleClassroom from '@cdo/apps/templates/teacherDashboard/ReauthorizeGoogleClassroom';
 import {importOrUpdateRoster} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {
   sectionCode,
@@ -21,11 +22,9 @@ import {
   ltiSyncResult,
   syncEnabled,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
-import color from '@cdo/apps/util/color';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
-import RailsAuthenticityToken from '../lib/util/RailsAuthenticityToken';
 import * as utils from '../utils';
 
 const SUPPORTED_PROVIDERS = [
@@ -43,20 +42,6 @@ export const READY = 'ready';
 export const IN_PROGRESS = 'in-progress';
 export const SUCCESS = 'success';
 export const DISABLED = 'disabled';
-
-const REAUTHORIZE_URL =
-  '/users/auth/google_oauth2?scope=userinfo.email,userinfo.profile,classroom.courses.readonly,classroom.rosters.readonly';
-
-function ReauthorizeGoogleClassroom() {
-  return (
-    <form method="POST" action={REAUTHORIZE_URL}>
-      <RailsAuthenticityToken />
-      <button type="submit" style={styles.ctaButtonStyle}>
-        {i18n.authorizeGoogleClassrooms()}
-      </button>
-    </form>
-  );
-}
 
 /**
  * Button that will re-sync an omniauth section's roster with the third-paty
@@ -341,14 +326,5 @@ const styles = {
   },
   closeButton: {
     paddingTop: '20px',
-  },
-  ctaButtonStyle: {
-    background: color.orange,
-    color: color.white,
-    border: '1px solid #b07202',
-    borderRadius: 3,
-    boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.63)',
-    fontSize: 14,
-    padding: '8px 20px',
   },
 };
