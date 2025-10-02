@@ -12,6 +12,10 @@ Resources:
     Type: 'AWS::S3::Bucket'
     Properties:
       BucketName: 'cdo-secondary-v3-test'
+      OwnershipControls:
+        Rules:
+          # Ensure that Objects PUT from a Source AWS Account are always owned by the backup AWS Account.
+          - ObjectOwnership: BucketOwnerEnforced
       BucketEncryption:
         ServerSideEncryptionConfiguration:
           - ServerSideEncryptionByDefault:
