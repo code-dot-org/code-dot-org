@@ -299,6 +299,11 @@ const WEBPACK_BASE_CONFIG = {
           p('../dashboard/app/assets/images'),
         ],
         type: 'asset/resource',
+        generator: {
+          filename: '[name].[contenthash:8][ext]',
+          outputPath: '../images/', // build/package/images/
+          publicPath: '/assets/images/', // Dashboard assets path
+        },
       },
       {
         test: /\.jsx?$/,

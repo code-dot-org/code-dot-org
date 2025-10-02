@@ -164,6 +164,7 @@ module Dashboard
     config.assets.precompile += %w(
       js/*
       css/*.css
+      images/*
       levels/*.css
       jquery.handsontable.full.css
       emulate-print-media.js
