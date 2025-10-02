@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2025_10_01_182525) do
+ActiveRecord::Schema.define(version: 2025_10_02_211355) do
 
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -2553,6 +2553,7 @@ ActiveRecord::Schema.define(version: 2025_10_01_182525) do
     t.datetime "deleted_at"
     t.integer "unit_group_id"
     t.index ["script_id"], name: "index_user_scripts_on_script_id"
+    t.index ["unit_group_id"], name: "index_user_scripts_on_unit_group_id"
     t.index ["user_id", "script_id", "unit_group_id", "deleted_at"], name: "index_user_scripts_on_user_script_unit_group_deleted_unique", unique: true
   end
 
