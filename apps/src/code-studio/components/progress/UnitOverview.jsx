@@ -195,6 +195,7 @@ class UnitOverview extends React.Component {
             showHiddenUnitWarning={isHiddenUnit}
             versions={versions}
             courseName={courseName}
+            courseId={courseId}
             userId={userId}
           >
             <UnitOverviewActionRow

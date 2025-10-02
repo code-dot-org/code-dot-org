@@ -74,6 +74,8 @@ class UserTest < ActiveSupport::TestCase
     @csf_lesson_group = create(:lesson_group, script: @csf_script)
     @csf_lesson = create(:lesson, script: @csf_script, lesson_group: @csf_lesson_group)
     @csf_script_level = create(:script_level, script: @csf_script)
+    @csf_unit_group = @csf_script.original_unit_group
+    @other_csf_unit_group = create(:single_unit_course, unit: @csf_script)
 
     @admin = create(:admin)
     @user = create(:user)
@@ -975,7 +977,8 @@ class UserTest < ActiveSupport::TestCase
     level = create(:level, :with_script)
     script_level = level.script_levels.first
     script = script_level.script
-    unit_group = create(:unit_group, :with_unit, unit: script_level.script)
+    unit_group = script.original_unit_group
+    assert unit_group
 
     track_progress(user.id, script_level, 100, unit_group, pairings: [partner.id])
 
@@ -2189,7 +2192,8 @@ class UserTest < ActiveSupport::TestCase
     user = create(:user)
     level = create(:level, :with_script)
     script_level = level.script_levels.first
-    unit_group = create(:unit_group, :with_unit, unit: script_level.script)
+    unit_group = script_level.script.original_unit_group
+    assert unit_group
 
     ul = UserLevel.create!(
       user: user,
@@ -2222,7 +2226,9 @@ class UserTest < ActiveSupport::TestCase
     student = create(:student)
     level_source = create(:level_source, data: 'sample answer')
 
-    unit_group = create(:unit_group, :with_unit, unit: script_level.script)
+    unit_group = script_level.script.original_unit_group
+    assert unit_group
+
     User.track_level_progress(
       user_id: student.id,
       level_id: script_level.level_id,
@@ -2266,7 +2272,9 @@ class UserTest < ActiveSupport::TestCase
       level_source_id: level_source.id
     )
 
-    unit_group = create(:unit_group, :with_unit, unit: script_level.script)
+    unit_group = script_level.script.original_unit_group
+    assert unit_group
+
     User.track_level_progress(
       user_id: user.id,
       script_id: script_level.script_id,
@@ -2298,7 +2306,9 @@ class UserTest < ActiveSupport::TestCase
       submitted: false,
     }
 
-    unit_group = create(:unit_group, :with_unit, unit: @csf_script_level.script)
+    unit_group = @csf_script_level.script.original_unit_group
+    assert unit_group
+
     User.track_level_progress(**level_progress_params, unit_group: unit_group)
     refute_nil user_level = UserLevel.find_by(user_level_params)
     assert_nil user_level.locale
@@ -2318,7 +2328,8 @@ class UserTest < ActiveSupport::TestCase
   test 'track_level_progress stores unit_group_id when unit_group is provided' do
     user = create(:user)
     script_level = create(:script_level)
-    unit_group = create(:unit_group, :with_unit, unit: script_level.script)
+    unit_group = script_level.script.original_unit_group
+    assert unit_group
 
     User.track_level_progress(
       user_id: user.id,
@@ -2367,8 +2378,7 @@ class UserTest < ActiveSupport::TestCase
     assert_equal unit_group1.id, user_level.unit_group_id
 
     # Create second unit_group and track progress again for same script/level
-    unit_group2 = create(:unit_group)
-    create(:unit_group_unit, unit_group: unit_group2, script: script_level.script, position: 1)
+    unit_group2 = create(:single_unit_course, unit: script_level.script)
 
     User.track_level_progress(
       user_id: user.id,
@@ -2386,6 +2396,70 @@ class UserTest < ActiveSupport::TestCase
     assert_equal unit_group1.id, user_level.unit_group_id
     # Verify progress was still tracked (result updated)
     assert_equal 100, user_level.best_result
+  end
+
+  test 'track_level_progress creates UserScript object with implicit unit group' do
+    user = create(:user)
+    script_level = create(:script_level)
+    unit = script_level.script
+
+    assert_difference('UserScript.count', 1) do
+      User.track_level_progress(
+        user_id: user.id,
+        level_id: script_level.level_id,
+        script_id: script_level.script_id,
+        new_result: 100,
+        submitted: false,
+        level_source_id: nil,
+        unit_group: nil
+      )
+    end
+
+    user_script = UserScript.find_by!(user: user, script: unit)
+    assert_equal unit.original_unit_group.id, user_script.unit_group_id
+  end
+
+  test 'track_level_progress creates UserScript object with original unit group' do
+    user = create(:user)
+    script_level = create(:script_level)
+    unit = script_level.script
+
+    assert_difference('UserScript.count', 1) do
+      User.track_level_progress(
+        user_id: user.id,
+        level_id: script_level.level_id,
+        script_id: script_level.script_id,
+        new_result: 100,
+        submitted: false,
+        level_source_id: nil,
+        unit_group: unit.original_unit_group
+      )
+    end
+
+    user_script = UserScript.find_by!(user: user, script: unit)
+    assert_equal unit.original_unit_group.id, user_script.unit_group_id
+  end
+
+  test 'track_level_progress creates UserScript object with other unit group' do
+    user = create(:user)
+    script_level = create(:script_level)
+    unit = script_level.script
+    other_unit_group = create(:single_unit_course, unit: unit)
+
+    assert_difference('UserScript.count', 1) do
+      User.track_level_progress(
+        user_id: user.id,
+        level_id: script_level.level_id,
+        script_id: script_level.script_id,
+        new_result: 100,
+        submitted: false,
+        level_source_id: nil,
+        unit_group: other_unit_group
+      )
+    end
+
+    user_script = UserScript.find_by!(user: user, script: unit)
+    assert_equal other_unit_group.id, user_script.unit_group_id
   end
 
   test 'student and teacher relationships' do
@@ -2803,13 +2877,25 @@ class UserTest < ActiveSupport::TestCase
     assert_creates(UserScript) do
       user_script = @student.assign_script(@csf_script)
       assert_equal @csf_script.id, user_script.script_id
+      assert_equal @csf_unit_group, user_script.unit_group
       refute_nil user_script.assigned_at
     end
   end
 
+  test 'assign_script creates UserScript if necessary with modular course' do
+    user_script = @student.assign_script(@csf_script, @other_csf_unit_group)
+    assert_equal @csf_script.id, user_script.script_id
+    assert_equal @other_csf_unit_group, user_script.unit_group
+    refute_nil user_script.assigned_at
+  end
+
   test 'assign_script reuses UserScript if available' do
     Timecop.travel(2017, 1, 2, 12, 0, 0) do
-      UserScript.create!(user: @student, script: @csf_script)
+      UserScript.create!(
+        user: @student,
+        script: @csf_script,
+        unit_group: @csf_script.original_unit_group
+      )
     end
     assert_does_not_create(UserScript) do
       user_script = @student.assign_script(@csf_script)
@@ -2818,9 +2904,29 @@ class UserTest < ActiveSupport::TestCase
     end
   end
 
+  test 'assign_script reuses UserScript if available with modular course' do
+    Timecop.travel(2017, 1, 2, 12, 0, 0) do
+      UserScript.create!(
+        user: @student,
+        script: @csf_script,
+        unit_group: @other_csf_unit_group
+      )
+    end
+    assert_does_not_create(UserScript) do
+      user_script = @student.assign_script(@csf_script, @other_csf_unit_group)
+      assert_equal @csf_script.id, user_script.script_id
+      refute_nil user_script.assigned_at
+    end
+  end
+
   test 'assign_script does overwrite assigned_at if pre-existing' do
     Timecop.travel(2017, 1, 2, 12, 0, 0) do
-      UserScript.create!(user: @student, script: @csf_script, assigned_at: DateTime.now)
+      UserScript.create!(
+        user: @student,
+        script: @csf_script,
+        unit_group: @csf_script.original_unit_group,
+        assigned_at: DateTime.now
+      )
     end
 
     Timecop.travel(2018, 3, 4, 12, 0, 0) do

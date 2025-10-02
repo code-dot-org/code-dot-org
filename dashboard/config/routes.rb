@@ -88,6 +88,7 @@ Dashboard::Application.routes.draw do
     end
 
     patch '/api/v1/user_scripts/:script_id', to: 'api/v1/user_scripts#update'
+    patch '/api/v1/user_scripts/course/:course_id/unit/:script_id', to: 'api/v1/user_scripts#update'
 
     get '/download/:product', to: 'hoc_download#index'
 
