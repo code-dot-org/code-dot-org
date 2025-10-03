@@ -46,7 +46,19 @@ const modelParameters: ModelParameters = {
   responseJsonSchema: {
     type: 'object',
     properties: {
-      code: {type: 'string'},
+      code: {
+        type: 'array',
+        items: {
+          type: 'object',
+          properties: {
+            language: {type: 'string'},
+            sourceCode: {type: 'string'},
+            filename: {type: 'string'},
+          },
+          required: ['language', 'sourceCode', 'filename'],
+          additionalProperties: false,
+        },
+      },
       explanation: {type: 'string'},
     },
     required: ['code', 'explanation'],
