@@ -5,12 +5,12 @@ import {AiTutorContext, MaybePromise} from '../types';
  * extend this class, but conversion to a system prompt string should be kept here for coordination and
  * consistency.
  */
-export abstract class AiTutorContextHelper<Params extends object> {
-  // Can't find a way for TypeScript to allow us to set this to `{}` here with the
-  // generic `<Params extends object>` type. Initialize this to `{}` in derived class.
-  protected abstract params: Params;
+export abstract class AiTutorContextHelper<AiTutorParams extends object> {
+  // Can't find a way for TypeScript to allow us to set this to `{}` here with the generic
+  // `<AiTutorParams extends object>` type. Initialize this to `{}` in derived class.
+  protected abstract params: AiTutorParams;
 
-  setAiTutorContext(params: Params): void {
+  setAiTutorContext(params: AiTutorParams): void {
     this.params = params;
   }
 
