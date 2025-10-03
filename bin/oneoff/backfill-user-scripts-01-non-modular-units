@@ -16,7 +16,7 @@ OptionParser.new do |opts|
   end
 end.parse!
 
-BATCH_SIZE = 50_000
+BATCH_SIZE = 10_000
 
 puts "Called with options: #{$options} batch size #{BATCH_SIZE}"
 
@@ -97,7 +97,8 @@ def update_user_scripts(script_ids)
 
       # Progress reporting
       print '.' # if batch_count % 10 == 0
-      if batch_count % 20 == 0
+      reporting_interval = 1_000_000 / BATCH_SIZE
+      if batch_count % reporting_interval == 0
         elapsed = Time.now - start_time
         rate = total_updated / elapsed
         total_records = 250_000_000 # approx total user_scripts rows to be updated
