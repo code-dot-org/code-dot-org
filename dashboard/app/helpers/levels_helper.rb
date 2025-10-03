@@ -375,7 +375,8 @@ module LevelsHelper
 
     @app_options =
       if @level.uses_lab2?
-        lab2_options
+        # Return early and only include Lab2 options. Lab2 attempts to limit reliance on App Options as much as possible in favor of async server calls.
+        return lab2_options
       elsif @level.is_a? Blockly
         blockly_options
       elsif @level.is_a?(Weblab) || @level.is_a?(Fish) || @level.is_a?(Ailab) || @level.is_a?(Javalab)
@@ -756,7 +757,8 @@ module LevelsHelper
 
   def lab2_options
     raise ArgumentError.new("#{@level} is not a Lab2 level") unless @level.uses_lab2?
-    app_options = {channel: view_options[:channel], level_id: @level.id}
+    app_options = {level_id: @level.id}
+    app_options[:channel] = view_options[:channel] if @level.try(:is_project_level)
     level_options = level_view_options(@level.id)
     # Add edit_blocks to app_options if it exists in level_options
     if level_options[:edit_blocks]

@@ -34,6 +34,7 @@ class BubbleChoice < DSLDefined
     display_name
     description
     uses_lab2
+    is_project_level
   )
 
   ALPHABET = ('a'..'z').to_a
@@ -172,6 +173,7 @@ class BubbleChoice < DSLDefined
           icon: level.try(:icon),
           uses_lab2: level.uses_lab2?,
           parent_level_id: id,
+          app_name: level.game&.app
         }
       )
 
