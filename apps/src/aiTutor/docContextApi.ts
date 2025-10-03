@@ -36,7 +36,7 @@ export const tryFetchDocsForClass = async (programmingClassKey: string) => {
   return await docsCache.get(programmingClassKey);
 };
 
-// Pre-fetch docs but don't return them.
+// Pre-fetch docs but don't return them (syntactic sugar around `tryFetchDocsForClass`).
 export const preFetchDocsForClass = async (programmingClassKey: string) => {
   await tryFetchDocsForClass(programmingClassKey);
 };
