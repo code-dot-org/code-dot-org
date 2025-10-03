@@ -375,8 +375,7 @@ module LevelsHelper
 
     @app_options =
       if @level.uses_lab2?
-        # Return early and only include Lab2 options. Lab2 attempts to limit reliance on App Options as much as possible in favor of async server calls.
-        return lab2_options
+        lab2_options
       elsif @level.is_a? Blockly
         blockly_options
       elsif @level.is_a?(Weblab) || @level.is_a?(Fish) || @level.is_a?(Ailab) || @level.is_a?(Javalab)
