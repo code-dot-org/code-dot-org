@@ -24,7 +24,12 @@ $stdout.sync = true
 BATCH_SIZE = 10_000
 
 def puts_count
-  count = UserScript.where(unit_group_id: nil).count
+  # Use raw SQL with query hint to increase max execution time to 180 seconds
+  count = ActiveRecord::Base.connection.select_value(
+    "SELECT /*+ SET_VAR(max_execution_time=180000) */ COUNT(*)
+     FROM user_scripts
+     WHERE unit_group_id IS NULL"
+  )
   puts "There are #{count} user_scripts without a unit_group_id"
 end
 
@@ -44,6 +49,9 @@ def get_unit_ids_with_one_unit_group
     if unit.original_unit_group_id.nil?
       raise "Unit #{unit.id} (#{unit.name}) has exactly one unit group but original_unit_group_id is nil"
     end
+    if unit.unit_groups.count != 1
+      raise "Unit #{unit.id} (#{unit.name}) has #{unit.unit_groups.count} unit groups, expected 1"
+    end
 
     unit_ids << unit.id
   end
@@ -52,33 +60,59 @@ def get_unit_ids_with_one_unit_group
   unit_ids
 end
 
-# Phase 2: Update user_scripts using a single SQL JOIN UPDATE
+# Phase 2: Update user_scripts in batches to avoid timeouts
 def update_user_scripts(script_ids)
   raise "no script_ids provided" if script_ids.empty?
 
   script_ids_str = script_ids.join(',')
 
   if $options[:actually_update]
-    puts "Phase 2: Updating user_scripts with single query..."
+    puts "Phase 2: Updating user_scripts in batches of #{BATCH_SIZE}..."
 
-    sql = <<-SQL
-      UPDATE user_scripts us
-      JOIN scripts s ON us.script_id = s.id
-      SET us.unit_group_id = s.original_unit_group_id
-      WHERE us.unit_group_id IS NULL
-        AND us.script_id IN (#{script_ids_str})
-    SQL
+    total_updated = 0
+    batch_count = 0
+    start_time = Time.now
 
-    updated_count = ActiveRecord::Base.connection.exec_update(sql)
-    puts "Updated #{updated_count} records"
+    loop do
+      # Get next batch of IDs with NULL unit_group_id
+      # No OFFSET needed - after each update, those rows no longer have NULL
+      # so the next query naturally gets the next batch
+      ids = ActiveRecord::Base.connection.select_values(
+        "SELECT id FROM user_scripts
+         WHERE unit_group_id IS NULL AND script_id IN (#{script_ids_str})
+         LIMIT #{BATCH_SIZE}"
+      )
+      break if ids.empty?
+
+      batch_count += 1
+
+      # Update this batch
+      updated = ActiveRecord::Base.connection.exec_update(
+        "UPDATE user_scripts us
+         JOIN scripts s ON us.script_id = s.id
+         SET us.unit_group_id = s.original_unit_group_id
+         WHERE us.id IN (#{ids.join(',')})"
+      )
+
+      total_updated += updated
+
+      # Progress reporting
+      print '.' if batch_count % 10 == 0
+      if batch_count % 1 == 0
+        elapsed = Time.now - start_time
+        puts "\n[Processed #{batch_count} batches, updated #{total_updated} records, elapsed time #{elapsed.round(1)}s est total time for 250M rows: #{(elapsed / total_updated * 250_000_000).to_i}s]"
+      end
+    end
+
+    puts "\nFinished! Total records updated: #{total_updated}"
   else
     puts "Phase 2: Counting records that would be updated (dry run)..."
 
     count = ActiveRecord::Base.connection.select_value(
-      "SELECT COUNT(*) FROM user_scripts
+      "SELECT /*+ SET_VAR(max_execution_time=180000) */ COUNT(*) FROM user_scripts
        WHERE unit_group_id IS NULL AND script_id IN (#{script_ids_str})"
     )
-    puts "Dry run: Would update #{count} records"
+    puts "Dry run: Would update #{count} records in approximately #{(count.to_f / BATCH_SIZE).ceil} batches"
   end
 end
 
