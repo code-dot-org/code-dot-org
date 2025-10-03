@@ -60,11 +60,7 @@ describe('useAiTutorModelParameters', () => {
 
     const {result, waitForNextUpdate} = renderHook(() =>
       useAiTutorModelParameters({
-        systemPromptSettings: {
-          selectedSystemPromptName: 'custom-prompt',
-          systemPromptOptions: [],
-          onSystemPromptChange: jest.fn(),
-        },
+        aiTutorSystemPromptName: 'custom-prompt',
       })
     );
 
@@ -89,11 +85,7 @@ describe('useAiTutorModelParameters', () => {
 
     const {result, waitForNextUpdate} = renderHook(() =>
       useAiTutorModelParameters({
-        systemPromptSettings: {
-          selectedSystemPromptName: 'failing-prompt',
-          systemPromptOptions: [],
-          onSystemPromptChange: jest.fn(),
-        },
+        aiTutorSystemPromptName: 'failing-prompt',
       })
     );
 

@@ -35,15 +35,15 @@ interface UseAiTutorModelParametersOptions {
   aiTutorSystemPromptName?: string;
 }
 
-export const useAiTutorModelParameters = ({
-  aiTutorSystemPromptName,
-}: UseAiTutorModelParametersOptions) => {
+export const useAiTutorModelParameters = (
+  options?: UseAiTutorModelParametersOptions
+) => {
   const [systemPrompt, setSystemPrompt] = useState<string | undefined>();
 
   useEffect(() => {
     let mounted = true;
 
-    const promptName = customPromptName ?? aiTutorSystemPromptName;
+    const promptName = customPromptName ?? options?.aiTutorSystemPromptName;
 
     const fetchPrompt = async () => {
       if (!promptName) {
@@ -69,18 +69,21 @@ export const useAiTutorModelParameters = ({
     return () => {
       mounted = false;
     };
-  }, [aiTutorSystemPromptName]);
+  }, [options?.aiTutorSystemPromptName]);
 
   useEffect(() => {
     // Log which system prompt we end up using.
     if (customPromptName) {
       console.log(`🤖: systemPrompt: ${customPromptName}`, systemPrompt);
-    } else if (aiTutorSystemPromptName) {
-      console.log(`🤖: systemPrompt: ${aiTutorSystemPromptName}`, systemPrompt);
+    } else if (options?.aiTutorSystemPromptName) {
+      console.log(
+        `🤖: systemPrompt: ${options?.aiTutorSystemPromptName}`,
+        systemPrompt
+      );
     } else if (systemPrompt !== undefined) {
       console.log(`🤖: systemPrompt: default`);
     }
-  }, [systemPrompt, aiTutorSystemPromptName]);
+  }, [systemPrompt, options?.aiTutorSystemPromptName]);
 
   useEffect(() => {
     // We currently use query params to allow AI model selection but otherwise do not provide any user
