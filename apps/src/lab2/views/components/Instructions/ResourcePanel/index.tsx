@@ -5,7 +5,7 @@ import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import classNames from 'classnames';
 import React, {useEffect, useMemo, useState} from 'react';
 
-import {ChatButtonData, SystemPromptSettings} from '@cdo/apps/aichat/types';
+import {ChatButtonData} from '@cdo/apps/aichat/types';
 import AiChatHeaderButtons from '@cdo/apps/aichat/views/aiChatHeaderButtons/AiChatHeaderButtons';
 import {shouldShowAiTutor} from '@cdo/apps/lab2/ai/shouldShowAiTutor';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
@@ -80,13 +80,13 @@ type ResourcePanelProps = InstructionsProps & {
   includeFooterSpacing?: boolean;
   settings?: Setting[];
   versionHistoryProps?: VersionHistoryProps;
-  aiTutorSystemPromptSettings?: SystemPromptSettings;
   aiTutorMultimodalEnabled?: boolean;
   aiTutorChatButtonData?: ChatButtonData[];
   /** If the navigation area in the footer should be styled as a "bubble", like instructions content. */
   styleNavigationAsBubble?: boolean;
   isValidationTourEnabled?: boolean;
   isOnboardingTourEnabled?: boolean;
+  aiTutorSystemPromptName?: string;
 };
 
 /**
@@ -100,7 +100,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   includeFooterSpacing = true,
   settings,
   versionHistoryProps,
-  aiTutorSystemPromptSettings,
   aiTutorMultimodalEnabled,
   aiTutorChatButtonData,
   // Default hideNavigation to true since most labs pin the navigation area to bottom.
@@ -108,6 +107,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   styleNavigationAsBubble = false,
   isValidationTourEnabled,
   isOnboardingTourEnabled,
+  aiTutorSystemPromptName,
   ...instructionsProps
 }) => {
   const {theme} = useTheme();
@@ -174,11 +174,11 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       tabMap[Tabs.AiTutor] = (
         <AiTutor2Chat
           hiddenContextCallback={hiddenContextCallback}
-          aiTutorSystemPromptSettings={aiTutorSystemPromptSettings}
           aiTutorMultimodalEnabled={aiTutorMultimodalEnabled}
           levelName={levelName}
           channelId={channelId}
           aiTutorChatButtonData={aiTutorChatButtonData}
+          aiTutorSystemPromptName={aiTutorSystemPromptName}
         />
       );
     }
@@ -219,7 +219,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     isWidgetView,
     versionHistoryProps,
     showRubric,
-    aiTutorSystemPromptSettings,
+    aiTutorSystemPromptName,
     aiTutorMultimodalEnabled,
     levelName,
     channelId,

@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-09-18 20:00:51 UTC",
+    "serialized_at": "2025-09-29 16:50:04 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -7247,6 +7247,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Allthethings Weblab2 10"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -7264,6 +7267,27 @@
     },
     {
       "chapter": 209,
+      "position": 11,
+      "activity_section_position": 11,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Allthethings Weblab2 11"
+        ],
+        "lesson.key": "lesson-54",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "b26e8309-b1a7-486a-9490-96d4ddd8b9aa"
+      },
+      "level_keys": [
+        "Allthethings Weblab2 11"
+      ]
+    },
+    {
+      "chapter": 210,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7287,7 +7311,7 @@
       ]
     },
     {
-      "chapter": 210,
+      "chapter": 211,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -7311,7 +7335,7 @@
       ]
     },
     {
-      "chapter": 211,
+      "chapter": 212,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -7335,7 +7359,7 @@
       ]
     },
     {
-      "chapter": 212,
+      "chapter": 213,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -7359,7 +7383,7 @@
       ]
     },
     {
-      "chapter": 213,
+      "chapter": 214,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -7383,7 +7407,7 @@
       ]
     },
     {
-      "chapter": 214,
+      "chapter": 215,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -7407,7 +7431,7 @@
       ]
     },
     {
-      "chapter": 215,
+      "chapter": 216,
       "position": 7,
       "activity_section_position": 7,
       "assessment": false,
@@ -7431,7 +7455,7 @@
       ]
     },
     {
-      "chapter": 216,
+      "chapter": 217,
       "position": 8,
       "activity_section_position": 8,
       "assessment": false,
@@ -7455,7 +7479,7 @@
       ]
     },
     {
-      "chapter": 217,
+      "chapter": 218,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7479,7 +7503,7 @@
       ]
     },
     {
-      "chapter": 218,
+      "chapter": 219,
       "position": 2,
       "activity_section_position": 2,
       "assessment": true,
@@ -7503,11 +7527,14 @@
       ]
     },
     {
-      "chapter": 218,
+      "chapter": 220,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "allthethings sketchlab 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -10140,6 +10167,18 @@
         "level.key": "Allthethings Weblab2 10",
         "script_level.level_keys": [
           "Allthethings Weblab2 10"
+        ],
+        "lesson.key": "lesson-54",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "b26e8309-b1a7-486a-9490-96d4ddd8b9aa"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Allthethings Weblab2 11",
+        "script_level.level_keys": [
+          "Allthethings Weblab2 11"
         ],
         "lesson.key": "lesson-54",
         "lesson_group.key": "",
