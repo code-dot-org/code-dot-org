@@ -3,11 +3,7 @@ import Tabs, {TabsProps} from '@code-dot-org/component-library/tabs';
 import React, {useCallback, useEffect, useMemo} from 'react';
 
 import {useAiChatDisabled} from '@cdo/apps/aichat/context/aiChatDisabledContext';
-import {
-  isModelUpdate,
-  SystemPromptSettings,
-  WorkspaceTeacherViewTab,
-} from '@cdo/apps/aichat/types';
+import {isModelUpdate, WorkspaceTeacherViewTab} from '@cdo/apps/aichat/types';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import usePrevious from '@cdo/apps/util/usePrevious';
 
@@ -41,7 +37,6 @@ import StagedFilesPreview from './assets/StagedFilesPreview';
 import UploadButton from './assets/UploadButton';
 import UserAddedSelectionContextPreview from './assets/UserAddedSelectionContextPreview';
 import ChatEventsList from './ChatEventsList';
-import ChatModeDropdown from './ChatModeDropdown';
 import UserChatMessageEditor from './UserChatMessageEditor';
 
 import moduleStyles from './chatWorkspace.module.scss';
@@ -58,9 +53,6 @@ interface ChatWorkspaceProps {
   channelId?: string;
   levelName?: string;
   hasStarterAssets?: boolean;
-
-  // Options for changing system prompt (used in Web Lab 2)
-  systemPromptSettings?: SystemPromptSettings;
 }
 
 /**
@@ -75,7 +67,6 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   levelName,
   channelId,
   hasStarterAssets = false,
-  systemPromptSettings,
   hideModelChangeMessage = false,
 }) => {
   const {chatDisabled} = useAiChatDisabled();
@@ -290,10 +281,6 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
           <StagedFilesPreview buildAssetUrl={buildAssetUrl} />
         )}
         <UserAddedSelectionContextPreview />
-        <ChatModeDropdown
-          className={moduleStyles.modeDropdown}
-          systemPromptSettings={systemPromptSettings}
-        />
         {canChatWithModel && (
           <UserChatMessageEditor
             clientType={clientType}

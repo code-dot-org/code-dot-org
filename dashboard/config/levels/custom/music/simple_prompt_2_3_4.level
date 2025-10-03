@@ -11,13 +11,13 @@
       "aiCodeGenerate": "true",
       "aiCodeGenerateAdlib": {
         "id": "sounds",
-        "template": "TESTPlease make a song with {sounds} sounds in order.",
+        "template": "Please code a music remix with {sounds} sounds in order.",
         "options": {
           "Sounds": [
-            "2",
             "3",
             "4",
-            "5"
+            "5",
+            "6"
           ]
         },
         "variantCount": 3
@@ -103,9 +103,10 @@
       "validationEnabled": false
     },
     "name_suffix": "_4",
+    "long_instructions": "###Use AI to help you write more code!\r\nComplete the prompt below, then generate the code.",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-10-01T22:45:28.089+00:00\",\"changed\":[\"cloned from \\\"simple_prompt_2_3\\\"\"],\"cloned_from\":\"simple_prompt_2_3\"},{\"changed_at\":\"2025-10-01 22:49:36 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-01 22:50:35 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-01 22:51:22 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-10-01T22:45:28.089+00:00\",\"changed\":[\"cloned from \\\"simple_prompt_2_3\\\"\"],\"cloned_from\":\"simple_prompt_2_3\"},{\"changed_at\":\"2025-10-01 22:49:36 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-01 22:50:35 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-01 22:51:22 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-02 16:46:05 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-02 16:47:14 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-02 16:50:40 +0000\",\"changed\":[\"level_data\",\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-02 19:29:58 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-02 19:33:22 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-02 19:34:00 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-02 19:46:24 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>
