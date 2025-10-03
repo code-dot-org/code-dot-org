@@ -4,6 +4,7 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 
 import {
   CanvasAnimConfig,
+  DancerMetadata,
   HeadImageInfo,
   LottieAssetImage,
   LottieAssetPrecomp,
@@ -63,9 +64,7 @@ export async function fetchJson<T>(url: string): Promise<T> {
 }
 
 // Metadata keeps colors in hex; we convert to normalized RGBA [0..1].
-export function normalizePalette(
-  metadata: Record<string, unknown> = {}
-): Palette {
+export function normalizePalette(metadata: DancerMetadata = {}): Palette {
   const toRGBA = (hex?: string | null): RGBA | null => {
     if (!hex) return null;
     const h = hex.replace('#', '');
@@ -76,8 +75,10 @@ export function normalizePalette(
   };
 
   const bodyColor = metadata['body_color'] as string | undefined;
-  const secondaryColor = metadata['secondary_color'] as string | undefined;
-  const tertiaryColor = metadata['tertiary_color'] as string | undefined;
+  const secondaryColor =
+    metadata['secondary_color'] || (bodyColor as string | undefined);
+  const tertiaryColor =
+    metadata['tertiary_color'] || (secondaryColor as string | undefined);
 
   return {
     primary: toRGBA(bodyColor),

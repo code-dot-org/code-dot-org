@@ -91,23 +91,23 @@ const customInputTypes = {
             localStorage.getItem('dancer-ai-generate')
           );
           const {adlibOption, choices, variant} = localStorageDancer || {};
-          const pathParam = getConfigValue('path') || adlibOption || 'basic2';
+          const pathParam = getConfigValue('path');
           const dancerParam = getConfigValue('dancer')?.toLowerCase();
 
           let headUrl = DEFAULT_HEAD_URL + '?src=blockly';
 
           const variantNum =
             typeof variant === 'number' ? variant : Number(variant ?? 0);
-          if (Array.isArray(choices) && choices.length > 0) {
+          if (dancerParam && pathParam) {
+            const prefix = `${BASE_HOST}/dancer/${pathParam}/${dancerParam}`;
+            headUrl = `${prefix}.png?src=blockly`;
+          } else if (Array.isArray(choices) && choices.length > 0) {
             const assets = getGeneratedDancerAssets(
-              pathParam,
+              adlibOption || 'basic2',
               choices,
               variantNum
             );
             headUrl = assets.head + `?src=blockly`;
-          } else if (dancerParam) {
-            const prefix = `${BASE_HOST}/dancer/${pathParam}/${dancerParam}`;
-            headUrl = `${prefix}.png?src=blockly`;
           }
           return [headUrl, option];
         }

@@ -94,7 +94,7 @@ export default class LottieDancerRenderer {
     } | null;
 
     const {adlibOption, choices, variant} = localStorageDancer || {};
-    const pathParam = getConfigValue('path') || adlibOption || ASSETS_FOLDER;
+    const pathParam = getConfigValue('path');
     const dancerParam = getConfigValue('dancer')?.toLowerCase();
     const skeletonParam = getConfigValue('skeleton')?.toLowerCase();
 
@@ -107,16 +107,20 @@ export default class LottieDancerRenderer {
     const variantNum =
       typeof variant === 'number' ? variant : Number(variant ?? 0);
 
-    if (Array.isArray(choices) && choices.length > 0) {
-      // Preferred path: choices + variant
-      const assets = getGeneratedDancerAssets(pathParam, choices, variantNum);
-      headUrl = assets.head + `?src=canvas`;
-      metadataUrl = assets.metadata;
-    } else if (dancerParam) {
+    if (dancerParam && pathParam) {
       // Also fine: caller gave us a full dancer name (no deconstruction needed)
       const prefix = `${BASE_HOST}/dancer/${pathParam}/${dancerParam}`;
       headUrl = `${prefix}.png?src=canvas`;
       metadataUrl = `${prefix}-metadata.json`;
+    } else if (Array.isArray(choices) && choices.length > 0) {
+      // Preferred path: choices + variant
+      const assets = getGeneratedDancerAssets(
+        adlibOption || ASSETS_FOLDER,
+        choices,
+        variantNum
+      );
+      headUrl = assets.head + `?src=canvas`;
+      metadataUrl = assets.metadata;
     } else {
       // Fallback defaults
       headUrl = DEFAULT_HEAD_URL + `?src=canvas`;
@@ -245,6 +249,7 @@ export default class LottieDancerRenderer {
     let palette: Palette | null = null;
     if (this.metadataUrl) {
       const metadataJson = await fetchJson<DancerMetadata>(this.metadataUrl);
+      console.log('Fetched dancer metadata', metadataJson);
       palette = normalizePalette(metadataJson);
     }
 
