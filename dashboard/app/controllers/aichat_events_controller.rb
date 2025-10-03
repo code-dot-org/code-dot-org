@@ -52,14 +52,14 @@ class AichatEventsController < ApplicationController
     render(status: :ok, json: response_body)
   end
 
-  # params are userId: number, levelId: number, scriptId: number
+  # params are userId: number, levelId: number, scriptId: number, channelId: string
   # GET /aichat_events/chat_history
   def chat_history
     # Request all chat events for a user at a given level/script.
     begin
       params.require([:userId, :levelId])
       unless params[:scriptId].present? || params[:channelId].present?
-        raise ActionController::ParameterMissing
+        raise ActionController::ParameterMissing, 'scriptId or channelId param is missing'
       end
     rescue ActionController::ParameterMissing
       return render status: :bad_request, json: {}
