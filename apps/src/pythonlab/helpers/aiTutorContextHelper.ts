@@ -1,4 +1,7 @@
-import {tryFetchDocsForClass} from '@cdo/apps/aiTutor/docContextApi';
+import {
+  preFetchDocsForClass,
+  tryFetchDocsForClass,
+} from '@cdo/apps/aiTutor/docContextApi';
 import {AiTutorContextHelper} from '@cdo/apps/aiTutor/helpers/aiTutorContextHelper';
 import {AiTutorContext} from '@cdo/apps/aiTutor/types';
 import {ProjectFile} from '@cdo/apps/codebridge/types';
@@ -7,26 +10,26 @@ import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
 import PythonValidationTracker from '../progress/PythonValidationTracker';
 
 interface AiTutorPythonLabParams {
-  source: MultiFileSource | undefined;
-  validationFile: ProjectFile | undefined;
-  longInstructions: string | undefined;
-  miniAppName: string | undefined;
+  source?: MultiFileSource;
+  validationFile?: ProjectFile;
+  longInstructions?: string;
+  miniAppName?: string;
 }
 export class AiTutorPythonLabContextHelper extends AiTutorContextHelper<AiTutorPythonLabParams> {
-  private aiTutorContext: AiTutorContext = {};
-  private params?: AiTutorPythonLabParams;
+  params: AiTutorPythonLabParams = {};
 
-  protected override getAiTutorContext(): AiTutorContext {
-    return this.aiTutorContext;
+  override async setAiTutorContext(
+    params: AiTutorPythonLabParams
+  ): Promise<void> {
+    if (params.miniAppName === 'neighborhood') {
+      // Prefetch painter docs so they are ready immediately when user interacts with tutor.
+      await preFetchDocsForClass('painter');
+    }
+
+    super.setAiTutorContext(params);
   }
 
-  override setAiTutorContext(params: AiTutorPythonLabParams): void {
-    this.params = params;
-  }
-
-  protected override async formatAiTutorContext() {
-    if (!this.params) return;
-
+  protected override async getAiTutorContext(): Promise<AiTutorContext> {
     const {source, validationFile, longInstructions, miniAppName} = this.params;
     const sourceCode = source
       ? Object.values(source.files)
@@ -59,7 +62,7 @@ export class AiTutorPythonLabContextHelper extends AiTutorContextHelper<AiTutorP
         ? await tryFetchDocsForClass('painter')
         : undefined;
 
-    this.aiTutorContext = {
+    return {
       sourceCode,
       validationContents,
       validationResults,
