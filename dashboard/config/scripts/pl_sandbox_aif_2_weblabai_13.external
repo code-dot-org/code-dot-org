@@ -3,11 +3,41 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Computational Thinking
+# How We Do It: Web Lab + AI
 
-#### In the last couple of levels, you learned more about Explore-Practice-Synthesize-Project as a **structure** for a gradual release of responsibility for students.
+#### Students won’t just be dropped into coding with AI—they’ll use Web Lab, a safe, scaffolded environment designed for learning.
 
-#### In this level, we introduce computational thinking. Computational thinking is an **approach** to computer science that centers around four key practices that students espouse when programming: **decomposition, pattern recognition, abstraction,** and **algorithms**.
+#### Web Lab is a coding platform where students write HTML, CSS, and JavaScript, preview their work instantly, and build interactive web apps step by step.
+
+#### AI is built into Web Lab with guardrails, so it supports learning instead of doing the work for students.
+
+## AI with Guardrails
+#### The AI in Web Lab is trained not to simply give complete answers. Instead, it offers structured support, gradually giving students more independence as they progress.
+
+## Levels of Scaffolding:
+* #### **Designer →** Students define goals and plan system behavior or layouts; AI suggests options and critiques, but students decide what and why to build.
+* #### **Engineer →** Students implement and adapt code in HTML/CSS/JS; AI provides scaffolds, pseudocode, or debugging help, while students ensure correctness and alignment with design goals.
+* #### **QA →** Students test and reflect on system behavior; AI suggests test cases or flags issues, but students interpret results and decide what to revise.
+
+
+
+## Additional supports built in:
+* #### Give an Example → Provides a small, targeted snippet to illustrate a concept.
+* #### Give a Hint → Nudges students toward the next step without solving it for them.
+* #### Show Documentation → Offers definitions, syntax, and references so students can learn the “why” behind the code.
+
+
+#### This approach ensures students practice thinking, reasoning, and debugging—not just copying code.
+
+## Why This Works
+#### By using AI in a scaffolded, intentional way, students:
+* #### Stay in control of the code and design.
+* #### Learn to see AI as a helper and resource, not a crutch.
+* #### Build confidence to collaborate with AI responsibly—mirroring the way professionals now use AI in their workflows.
+
+>#### 👉 This makes Web Lab both a coding space and a teaching tool, ensuring students develop real coding skills while learning how to use AI thoughtfully.
+
+.
 
 <div style="width: 100%; max-width: 100%; box-sizing: border-box; border: 2px solid #009EB0; padding: 10px; border-radius: 10px; margin: 30px 0px 20px 0px;">
   <div style="width: 100%; box-sizing: border-box; margin-bottom: 5px; padding: 20px 10px 10px 10px; background-color: #B7E0E5; border-radius: 10px; text-align: center;">
