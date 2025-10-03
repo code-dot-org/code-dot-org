@@ -15,7 +15,9 @@ function computeCharactersReferenced(studentCode: string): string[] {
   let match;
   while ((match = charactersRegExp.exec(studentCode))) {
     const characterName = match[2];
-    charactersReferencedSet.add(characterName);
+    if (characterName !== 'GENERATED_DANCER') {
+      charactersReferencedSet.add(characterName);
+    }
   }
 
   // Special parsing for the JSON parameter to ai().

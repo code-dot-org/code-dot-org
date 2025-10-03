@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-10-02 06:38:44 UTC",
+    "serialized_at": "2025-10-02 17:52:01 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -20,13 +20,13 @@
   },
   "lesson_groups": [
     {
-      "key": "new-lesson-group",
+      "key": "",
       "user_facing": false,
       "position": 1,
       "properties": {
       },
       "seeding_key": {
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "hoai-dance-pilot3"
       }
     }
@@ -43,7 +43,7 @@
       },
       "seeding_key": {
         "lesson.key": "Hour of AI - Pilot 2",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "hoai-dance-pilot3"
       }
     }
@@ -57,7 +57,7 @@
       "seeding_key": {
         "lesson_activity.key": "b8ba491c-91d7-418c-a764-e97b0301d7c4",
         "lesson.key": "Hour of AI - Pilot 2",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "hoai-dance-pilot3"
       }
     }
@@ -115,6 +115,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "HoAI_intro_2_3"
+        ],
         "progression": "Generate a star dancer! "
       },
       "bonus": false,
@@ -123,7 +126,7 @@
           "HoAI_intro_2_3"
         ],
         "lesson.key": "Hour of AI - Pilot 2",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "hoai-dance-pilot3",
         "activity_section.key": "54c7e095-18c7-417c-a04a-176680a30181"
       },
@@ -137,6 +140,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pilot_generate_dancer1_2_3"
+        ],
         "progression": "Generate a star dancer! "
       },
       "bonus": false,
@@ -145,7 +151,7 @@
           "pilot_generate_dancer1_2_3"
         ],
         "lesson.key": "Hour of AI - Pilot 2",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "hoai-dance-pilot3",
         "activity_section.key": "54c7e095-18c7-417c-a04a-176680a30181"
       },
@@ -159,6 +165,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pilot_generate_dancer2_2_3"
+        ],
         "progression": "Generate a star dancer! "
       },
       "bonus": false,
@@ -167,7 +176,7 @@
           "pilot_generate_dancer2_2_3"
         ],
         "lesson.key": "Hour of AI - Pilot 2",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "hoai-dance-pilot3",
         "activity_section.key": "54c7e095-18c7-417c-a04a-176680a30181"
       },
@@ -181,6 +190,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Generate_dancer_info_2_3"
+        ],
         "progression": "Generate a star dancer! "
       },
       "bonus": false,
@@ -189,7 +201,7 @@
           "Generate_dancer_info_2_3"
         ],
         "lesson.key": "Hour of AI - Pilot 2",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "hoai-dance-pilot3",
         "activity_section.key": "54c7e095-18c7-417c-a04a-176680a30181"
       },
@@ -203,6 +215,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pilot_generate_dancer_2_3"
+        ],
         "progression": "Generate a star dancer! "
       },
       "bonus": false,
@@ -211,7 +226,7 @@
           "pilot_generate_dancer_2_3"
         ],
         "lesson.key": "Hour of AI - Pilot 2",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "hoai-dance-pilot3",
         "activity_section.key": "54c7e095-18c7-417c-a04a-176680a30181"
       },
@@ -225,6 +240,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "HoAI_step2_3"
+        ],
         "progression": "Generate a music remix!"
       },
       "bonus": false,
@@ -233,7 +251,7 @@
           "HoAI_step2_3"
         ],
         "lesson.key": "Hour of AI - Pilot 2",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "hoai-dance-pilot3",
         "activity_section.key": "de121adf-4723-4e05-9c6a-91502576b2a3"
       },
@@ -247,6 +265,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "HoAI_Jam_Session_2"
+        ],
         "progression": "Generate a music remix!"
       },
       "bonus": false,
@@ -255,7 +276,7 @@
           "HoAI_Jam_Session_2"
         ],
         "lesson.key": "Hour of AI - Pilot 2",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "hoai-dance-pilot3",
         "activity_section.key": "de121adf-4723-4e05-9c6a-91502576b2a3"
       },
@@ -269,6 +290,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "HoAI_Jam_Session_3"
+        ],
         "progression": "Generate a music remix!"
       },
       "bonus": false,
@@ -277,7 +301,7 @@
           "HoAI_Jam_Session_3"
         ],
         "lesson.key": "Hour of AI - Pilot 2",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "hoai-dance-pilot3",
         "activity_section.key": "de121adf-4723-4e05-9c6a-91502576b2a3"
       },
@@ -291,6 +315,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "simple_prompt_2_3"
+        ],
         "progression": "Generate a music remix!"
       },
       "bonus": false,
@@ -299,7 +326,7 @@
           "simple_prompt_2_3"
         ],
         "lesson.key": "Hour of AI - Pilot 2",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "hoai-dance-pilot3",
         "activity_section.key": "de121adf-4723-4e05-9c6a-91502576b2a3"
       },
@@ -313,6 +340,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Generate_dancer_more_details_2_3"
+        ],
         "progression": "Generate a music remix!"
       },
       "bonus": false,
@@ -321,7 +351,7 @@
           "Generate_dancer_more_details_2_3"
         ],
         "lesson.key": "Hour of AI - Pilot 2",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "hoai-dance-pilot3",
         "activity_section.key": "de121adf-4723-4e05-9c6a-91502576b2a3"
       },
@@ -335,6 +365,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "HoAI_Jam_Session_5"
+        ],
         "progression": "Generate a music remix!"
       },
       "bonus": false,
@@ -343,7 +376,7 @@
           "HoAI_Jam_Session_5"
         ],
         "lesson.key": "Hour of AI - Pilot 2",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "hoai-dance-pilot3",
         "activity_section.key": "de121adf-4723-4e05-9c6a-91502576b2a3"
       },
@@ -357,6 +390,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "HoAI_Jam_Session_6"
+        ],
         "progression": "Generate a music remix!"
       },
       "bonus": false,
@@ -365,7 +401,7 @@
           "HoAI_Jam_Session_6"
         ],
         "lesson.key": "Hour of AI - Pilot 2",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "hoai-dance-pilot3",
         "activity_section.key": "de121adf-4723-4e05-9c6a-91502576b2a3"
       },
@@ -379,6 +415,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "HoAI_Jam_Session_7"
+        ],
         "progression": "Generate a music remix!"
       },
       "bonus": false,
@@ -387,7 +426,7 @@
           "HoAI_Jam_Session_7"
         ],
         "lesson.key": "Hour of AI - Pilot 2",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "hoai-dance-pilot3",
         "activity_section.key": "de121adf-4723-4e05-9c6a-91502576b2a3"
       },
@@ -401,6 +440,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "layers_prompt_2_3"
+        ],
         "progression": "Generate a music remix!"
       },
       "bonus": false,
@@ -409,7 +451,7 @@
           "layers_prompt_2_3"
         ],
         "lesson.key": "Hour of AI - Pilot 2",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "hoai-dance-pilot3",
         "activity_section.key": "de121adf-4723-4e05-9c6a-91502576b2a3"
       },
@@ -423,6 +465,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "length_prompt_2_3"
+        ],
         "progression": "Generate a music remix!"
       },
       "bonus": false,
@@ -431,7 +476,7 @@
           "length_prompt_2_3"
         ],
         "lesson.key": "Hour of AI - Pilot 2",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "hoai-dance-pilot3",
         "activity_section.key": "de121adf-4723-4e05-9c6a-91502576b2a3"
       },
@@ -445,6 +490,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "length_modify2_2_3"
+        ],
         "progression": "Generate a music remix!"
       },
       "bonus": false,
@@ -453,7 +501,7 @@
           "length_modify2_2_3"
         ],
         "lesson.key": "Hour of AI - Pilot 2",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "hoai-dance-pilot3",
         "activity_section.key": "de121adf-4723-4e05-9c6a-91502576b2a3"
       },
@@ -467,6 +515,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "HoAI_step3_3"
+        ],
         "progression": "Generate the dance party!"
       },
       "bonus": false,
@@ -475,7 +526,7 @@
           "HoAI_step3_3"
         ],
         "lesson.key": "Hour of AI - Pilot 2",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "hoai-dance-pilot3",
         "activity_section.key": "f9ce39fd-e821-4731-87ed-c16c54a83bb3"
       },
@@ -489,6 +540,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "HoAI_Dance_AI_2"
+        ],
         "progression": "Generate the dance party!"
       },
       "bonus": false,
@@ -497,7 +551,7 @@
           "HoAI_Dance_AI_2"
         ],
         "lesson.key": "Hour of AI - Pilot 2",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "hoai-dance-pilot3",
         "activity_section.key": "f9ce39fd-e821-4731-87ed-c16c54a83bb3"
       },
@@ -511,6 +565,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "dance_moves_2_3"
+        ],
         "progression": "Generate the dance party!"
       },
       "bonus": false,
@@ -519,7 +576,7 @@
           "dance_moves_2_3"
         ],
         "lesson.key": "Hour of AI - Pilot 2",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "hoai-dance-pilot3",
         "activity_section.key": "f9ce39fd-e821-4731-87ed-c16c54a83bb3"
       },
@@ -533,6 +590,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "HoAI_choice_template_backed_2_3"
+        ],
         "progression": "Mashup Studio for regenerating "
       },
       "bonus": false,
@@ -541,7 +601,7 @@
           "HoAI_choice_template_backed_2_3"
         ],
         "lesson.key": "Hour of AI - Pilot 2",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "hoai-dance-pilot3",
         "activity_section.key": "365d34a6-68df-4533-9aba-63d2fd5f2909"
       },
@@ -558,7 +618,7 @@
           "HoAI_intro_2_3"
         ],
         "lesson.key": "Hour of AI - Pilot 2",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "hoai-dance-pilot3",
         "activity_section.key": "54c7e095-18c7-417c-a04a-176680a30181"
       }
@@ -570,7 +630,7 @@
           "pilot_generate_dancer1_2_3"
         ],
         "lesson.key": "Hour of AI - Pilot 2",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "hoai-dance-pilot3",
         "activity_section.key": "54c7e095-18c7-417c-a04a-176680a30181"
       }
@@ -582,7 +642,7 @@
           "pilot_generate_dancer2_2_3"
         ],
         "lesson.key": "Hour of AI - Pilot 2",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "hoai-dance-pilot3",
         "activity_section.key": "54c7e095-18c7-417c-a04a-176680a30181"
       }
@@ -594,7 +654,7 @@
           "Generate_dancer_info_2_3"
         ],
         "lesson.key": "Hour of AI - Pilot 2",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "hoai-dance-pilot3",
         "activity_section.key": "54c7e095-18c7-417c-a04a-176680a30181"
       }
@@ -606,7 +666,7 @@
           "pilot_generate_dancer_2_3"
         ],
         "lesson.key": "Hour of AI - Pilot 2",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "hoai-dance-pilot3",
         "activity_section.key": "54c7e095-18c7-417c-a04a-176680a30181"
       }
@@ -618,7 +678,7 @@
           "HoAI_step2_3"
         ],
         "lesson.key": "Hour of AI - Pilot 2",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "hoai-dance-pilot3",
         "activity_section.key": "de121adf-4723-4e05-9c6a-91502576b2a3"
       }
@@ -630,7 +690,7 @@
           "HoAI_Jam_Session_2"
         ],
         "lesson.key": "Hour of AI - Pilot 2",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "hoai-dance-pilot3",
         "activity_section.key": "de121adf-4723-4e05-9c6a-91502576b2a3"
       }
@@ -642,7 +702,7 @@
           "HoAI_Jam_Session_3"
         ],
         "lesson.key": "Hour of AI - Pilot 2",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "hoai-dance-pilot3",
         "activity_section.key": "de121adf-4723-4e05-9c6a-91502576b2a3"
       }
@@ -654,7 +714,7 @@
           "simple_prompt_2_3"
         ],
         "lesson.key": "Hour of AI - Pilot 2",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "hoai-dance-pilot3",
         "activity_section.key": "de121adf-4723-4e05-9c6a-91502576b2a3"
       }
@@ -666,7 +726,7 @@
           "Generate_dancer_more_details_2_3"
         ],
         "lesson.key": "Hour of AI - Pilot 2",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "hoai-dance-pilot3",
         "activity_section.key": "de121adf-4723-4e05-9c6a-91502576b2a3"
       }
@@ -678,7 +738,7 @@
           "HoAI_Jam_Session_5"
         ],
         "lesson.key": "Hour of AI - Pilot 2",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "hoai-dance-pilot3",
         "activity_section.key": "de121adf-4723-4e05-9c6a-91502576b2a3"
       }
@@ -690,7 +750,7 @@
           "HoAI_Jam_Session_6"
         ],
         "lesson.key": "Hour of AI - Pilot 2",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "hoai-dance-pilot3",
         "activity_section.key": "de121adf-4723-4e05-9c6a-91502576b2a3"
       }
@@ -702,7 +762,7 @@
           "HoAI_Jam_Session_7"
         ],
         "lesson.key": "Hour of AI - Pilot 2",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "hoai-dance-pilot3",
         "activity_section.key": "de121adf-4723-4e05-9c6a-91502576b2a3"
       }
@@ -714,7 +774,7 @@
           "layers_prompt_2_3"
         ],
         "lesson.key": "Hour of AI - Pilot 2",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "hoai-dance-pilot3",
         "activity_section.key": "de121adf-4723-4e05-9c6a-91502576b2a3"
       }
@@ -726,7 +786,7 @@
           "length_prompt_2_3"
         ],
         "lesson.key": "Hour of AI - Pilot 2",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "hoai-dance-pilot3",
         "activity_section.key": "de121adf-4723-4e05-9c6a-91502576b2a3"
       }
@@ -738,7 +798,7 @@
           "length_modify2_2_3"
         ],
         "lesson.key": "Hour of AI - Pilot 2",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "hoai-dance-pilot3",
         "activity_section.key": "de121adf-4723-4e05-9c6a-91502576b2a3"
       }
@@ -750,7 +810,7 @@
           "HoAI_step3_3"
         ],
         "lesson.key": "Hour of AI - Pilot 2",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "hoai-dance-pilot3",
         "activity_section.key": "f9ce39fd-e821-4731-87ed-c16c54a83bb3"
       }
@@ -762,7 +822,7 @@
           "HoAI_Dance_AI_2"
         ],
         "lesson.key": "Hour of AI - Pilot 2",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "hoai-dance-pilot3",
         "activity_section.key": "f9ce39fd-e821-4731-87ed-c16c54a83bb3"
       }
@@ -774,7 +834,7 @@
           "dance_moves_2_3"
         ],
         "lesson.key": "Hour of AI - Pilot 2",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "hoai-dance-pilot3",
         "activity_section.key": "f9ce39fd-e821-4731-87ed-c16c54a83bb3"
       }
@@ -786,7 +846,7 @@
           "HoAI_choice_template_backed_2_3"
         ],
         "lesson.key": "Hour of AI - Pilot 2",
-        "lesson_group.key": "new-lesson-group",
+        "lesson_group.key": "",
         "script.name": "hoai-dance-pilot3",
         "activity_section.key": "365d34a6-68df-4533-9aba-63d2fd5f2909"
       }

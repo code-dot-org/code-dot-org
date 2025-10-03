@@ -3,10 +3,10 @@ import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {Heading5} from '@code-dot-org/component-library/typography';
 import React, {useCallback, useEffect, useState} from 'react';
 
+import {getGeneratedDancerAssets} from '@cdo/apps/dance/lottie/LottieDancerUtils';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
 import {LevelProperties} from '@cdo/apps/lab2/types';
-import {getGeneratedDancerAssets} from '@cdo/apps/lab2/utils/GeneratedDancer';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import Adlib, {AdlibsType} from '@cdo/apps/lab2/views/components/guide/Adlib';
 import Guide from '@cdo/apps/lab2/views/components/guide/Guide';
@@ -137,11 +137,7 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
   const generateDancerCache = useCallback(async () => {
     const startTime = Date.now();
     const variant = getRandomInt(0, adlibs[adlibOption].variantCount - 1);
-    const {head} = await getGeneratedDancerAssets(
-      adlibOption,
-      choices,
-      variant
-    );
+    const {head} = getGeneratedDancerAssets(adlibOption, choices, variant);
 
     setHeadImageUrl(head);
 
