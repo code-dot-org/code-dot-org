@@ -13,22 +13,21 @@ interface AiTutorPythonLabParams {
   miniAppName: string | undefined;
 }
 export class AiTutorPythonLabContextHelper extends AiTutorContextHelper<AiTutorPythonLabParams> {
-  private documentationPromise?: Promise<string | undefined>;
   private aiTutorContext: AiTutorContext = {};
+  private params?: AiTutorPythonLabParams;
 
-  protected async getAiTutorContext(): Promise<AiTutorContext> {
-    return {
-      ...this.aiTutorContext,
-      documentation: await this.documentationPromise,
-    };
+  protected override getAiTutorContext(): AiTutorContext {
+    return this.aiTutorContext;
   }
 
-  setAiTutorContext({
-    source,
-    validationFile,
-    longInstructions,
-    miniAppName,
-  }: AiTutorPythonLabParams) {
+  override setAiTutorContext(params: AiTutorPythonLabParams): void {
+    this.params = params;
+  }
+
+  protected override async formatAiTutorContext() {
+    if (!this.params) return;
+
+    const {source, validationFile, longInstructions, miniAppName} = this.params;
     const sourceCode = source
       ? Object.values(source.files)
           .filter(
@@ -55,9 +54,9 @@ export class AiTutorPythonLabContextHelper extends AiTutorContextHelper<AiTutorP
       PythonValidationTracker.getInstance().getValidationResults()
     );
 
-    this.documentationPromise =
+    const documentation =
       miniAppName === 'neighborhood'
-        ? tryFetchDocsForClass('painter')
+        ? await tryFetchDocsForClass('painter')
         : undefined;
 
     this.aiTutorContext = {
@@ -65,6 +64,7 @@ export class AiTutorPythonLabContextHelper extends AiTutorContextHelper<AiTutorP
       validationContents,
       validationResults,
       longInstructions,
+      documentation,
     };
   }
 }
