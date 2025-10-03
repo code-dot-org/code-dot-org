@@ -3,7 +3,9 @@ import {BlockColors, BlockStyles} from '@cdo/apps/blockly/constants';
 import i18n from '@cdo/locale';
 
 import CdoFieldDanceAi from '../ai/cdoFieldDanceAi';
-import {DEFAULT_HEAD_URL} from '../lottie/LottieDancerRenderer';
+import {GENERATED_DANCER} from '../constants';
+import {DEFAULT_HEAD_URL, getConfigValue} from '../lottie/LottieDancerRenderer';
+import {BASE_HOST, getGeneratedDancerAssets} from '../lottie/LottieDancerUtils';
 
 // This color palette is limited to colors which have different hues, therefore
 // it should not contain different shades of the same color such as
@@ -80,40 +82,43 @@ const customInputTypes = {
   dancerPicker: {
     addInput(blockly, block, inputConfig, currentInputRow) {
       const options = inputConfig.options.map(option => {
-        const BASE_HOST = 'https://curriculum.code.org/media/musiclab/generate';
         let name = option;
         try {
           name = JSON.parse(name);
         } catch {}
-        if (name === 'GENERATED_DANCER') {
-          const localStorageValues = localStorage.getItem('dancer-ai-generate');
-          if (!localStorageValues || localStorageValues === 'null') {
-            console.log('No dancer-ai-generate data in localStorage');
-            return [DEFAULT_HEAD_URL, option];
+        if (name === GENERATED_DANCER) {
+          const localStorageDancer = JSON.parse(
+            localStorage.getItem('dancer-ai-generate')
+          );
+          const {adlibOption, choices, variant} = localStorageDancer || {};
+          const pathParam = getConfigValue('path') || adlibOption || 'basic2';
+          const dancerParam = getConfigValue('dancer')?.toLowerCase();
+
+          let headUrl = DEFAULT_HEAD_URL + '?src=blockly';
+
+          const variantNum =
+            typeof variant === 'number' ? variant : Number(variant ?? 0);
+          if (Array.isArray(choices) && choices.length > 0) {
+            const assets = getGeneratedDancerAssets(
+              pathParam,
+              choices,
+              variantNum
+            );
+            headUrl = assets.head + `?src=blockly`;
+          } else if (dancerParam) {
+            const prefix = `${BASE_HOST}/dancer/${pathParam}/${dancerParam}`;
+            headUrl = `${prefix}.png?src=blockly`;
           }
-          const danceAiGenerate = JSON.parse(localStorageValues);
-          if (!danceAiGenerate) {
-            return;
-          }
-          const {adlibOption, choices, variant} = danceAiGenerate;
-          return [
-            `${BASE_HOST}/dancer/${adlibOption}/${choices.join(
-              '-'
-            )}-0${variant}.png?src=blockly`,
-            option,
-          ];
+          return [headUrl, option];
         }
         return [`/blockly/media/skins/dance/${name}.png`, option];
       });
-      currentInputRow.appendField(inputConfig.label).appendField(
-        new Blockly.FieldImageDropdown(
-          // Filter out any undefined options (e.g. if no GENERATED_DANCER data in localStorage).
-          options.filter(option => !!option),
-          40,
-          40
-        ),
-        inputConfig.name
-      );
+      currentInputRow
+        .appendField(inputConfig.label)
+        .appendField(
+          new Blockly.FieldImageDropdown(options, 40, 40),
+          inputConfig.name
+        );
     },
     generateCode(block, arg) {
       return block.getFieldValue(arg.name);
