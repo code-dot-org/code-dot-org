@@ -35,7 +35,7 @@ export function getGeneratedDancerAssets(
   const cacheFilePath = `${BASE_HOST}/dancer/${adlibOption}/${joinedChoices}-${variant
     .toString()
     .padStart(2, '0')}`;
-  const head = `${cacheFilePath}.png?src=canvas`;
+  const head = `${cacheFilePath}.png`;
   const metadata = `${cacheFilePath}-metadata.json`;
 
   return {head, metadata};
@@ -55,11 +55,6 @@ export function resolveMetadataUrl(
   dancerName: string
 ): string {
   return `${BASE_HOST}/dancer/${assetsPath}/${dancerName}-metadata.json`;
-}
-
-// Example: .../dancer/<assetsPath>/<dancerName>.png
-export function resolveHeadUrl(assetsPath: string, dancerName: string): string {
-  return `${BASE_HOST}/dancer/${assetsPath}/${dancerName}.png?src=canvas`;
 }
 
 export async function fetchJson<T>(url: string): Promise<T> {

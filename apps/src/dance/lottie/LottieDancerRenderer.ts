@@ -55,10 +55,10 @@ const ASSETS_FOLDER = 'basic2';
 const TEST_BASE_DANCER = 'duck';
 const TEST_GENERATED_DANCER = 'basic-frog-baseball-cap-00';
 
-export const DEFAULT_HEAD_URL = `${BASE_HOST}/dancer/${ASSETS_FOLDER}/${TEST_GENERATED_DANCER}.png?src=canvas`;
+export const DEFAULT_HEAD_URL = `${BASE_HOST}/dancer/${ASSETS_FOLDER}/${TEST_GENERATED_DANCER}.png`;
 const DEFAULT_METADATA_URL = `${BASE_HOST}/dancer/${ASSETS_FOLDER}/${TEST_GENERATED_DANCER}-metadata.json`;
 
-const getConfigValue = (name: string) =>
+export const getConfigValue = (name: string) =>
   queryParams(name) as string | undefined;
 
 export default class LottieDancerRenderer {
@@ -110,7 +110,7 @@ export default class LottieDancerRenderer {
     if (Array.isArray(choices) && choices.length > 0) {
       // Preferred path: choices + variant
       const assets = getGeneratedDancerAssets(pathParam, choices, variantNum);
-      headUrl = assets.head;
+      headUrl = assets.head + `?src=canvas`;
       metadataUrl = assets.metadata;
     } else if (dancerParam) {
       // Also fine: caller gave us a full dancer name (no deconstruction needed)
@@ -119,7 +119,7 @@ export default class LottieDancerRenderer {
       metadataUrl = `${prefix}-metadata.json`;
     } else {
       // Fallback defaults
-      headUrl = DEFAULT_HEAD_URL;
+      headUrl = DEFAULT_HEAD_URL + `?src=canvas`;
       metadataUrl = DEFAULT_METADATA_URL;
     }
 

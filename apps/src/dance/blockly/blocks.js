@@ -3,6 +3,9 @@ import {BlockColors, BlockStyles} from '@cdo/apps/blockly/constants';
 import i18n from '@cdo/locale';
 
 import CdoFieldDanceAi from '../ai/cdoFieldDanceAi';
+import {GENERATED_DANCER} from '../constants';
+import {DEFAULT_HEAD_URL, getConfigValue} from '../lottie/LottieDancerRenderer';
+import {BASE_HOST, getGeneratedDancerAssets} from '../lottie/LottieDancerUtils';
 
 // This color palette is limited to colors which have different hues, therefore
 // it should not contain different shades of the same color such as
@@ -71,6 +74,51 @@ const customInputTypes = {
       currentInputRow
         .appendField(inputConfig.label)
         .appendField(newField, inputConfig.name);
+    },
+    generateCode(block, arg) {
+      return block.getFieldValue(arg.name);
+    },
+  },
+  dancerPicker: {
+    addInput(blockly, block, inputConfig, currentInputRow) {
+      const options = inputConfig.options.map(option => {
+        let name = option;
+        try {
+          name = JSON.parse(name);
+        } catch {}
+        if (name === GENERATED_DANCER) {
+          const localStorageDancer = JSON.parse(
+            localStorage.getItem('dancer-ai-generate')
+          );
+          const {adlibOption, choices, variant} = localStorageDancer || {};
+          const pathParam = getConfigValue('path') || adlibOption || 'basic2';
+          const dancerParam = getConfigValue('dancer')?.toLowerCase();
+
+          let headUrl = DEFAULT_HEAD_URL + '?src=blockly';
+
+          const variantNum =
+            typeof variant === 'number' ? variant : Number(variant ?? 0);
+          if (Array.isArray(choices) && choices.length > 0) {
+            const assets = getGeneratedDancerAssets(
+              pathParam,
+              choices,
+              variantNum
+            );
+            headUrl = assets.head + `?src=blockly`;
+          } else if (dancerParam) {
+            const prefix = `${BASE_HOST}/dancer/${pathParam}/${dancerParam}`;
+            headUrl = `${prefix}.png?src=blockly`;
+          }
+          return [headUrl, option];
+        }
+        return [`/blockly/media/skins/dance/${name}.png`, option];
+      });
+      currentInputRow
+        .appendField(inputConfig.label)
+        .appendField(
+          new Blockly.FieldImageDropdown(options, 40, 40),
+          inputConfig.name
+        );
     },
     generateCode(block, arg) {
       return block.getFieldValue(arg.name);
