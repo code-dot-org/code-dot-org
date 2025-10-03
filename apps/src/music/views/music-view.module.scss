@@ -80,7 +80,7 @@ $default-spacing: 2px;
   &.instructionsSide {
     flex-direction: column;
     height: 100%;
-    width: 20%;
+    width: calc(20% + 3.5rem);
   }
 }
 
