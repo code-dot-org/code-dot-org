@@ -21,6 +21,7 @@ import {
   setStartingPlayheadPosition,
 } from '../redux/musicRedux';
 
+import DancerOverlayCanvas from './DancerOverlayCanvas';
 import usePlaybackUpdate from './hooks/usePlaybackUpdate';
 import {TimelineElementClass} from './TimelineElement';
 import TimelineSampleEvents from './TimelineSampleEvents';
@@ -327,6 +328,10 @@ const Timeline: React.FunctionComponent<TimelineProps> = ({
         </div>
       </div>
       {loopEnabled && <LoopMarkers loopStart={loopStart} loopEnd={loopEnd} />}
+      <DancerOverlayCanvas
+        height={availableHeight}
+        measurePosition={positionToUse}
+      />
     </div>
   );
 };
