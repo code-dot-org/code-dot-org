@@ -21,7 +21,7 @@ require_relative '../../dashboard/config/environment'
 
 $stdout.sync = true
 
-BATCH_SIZE = 50_000
+BATCH_SIZE = 10_000
 
 def puts_count
   # Use raw SQL with query hint to increase max execution time to 180 seconds
@@ -86,7 +86,7 @@ def update_user_scripts(script_ids)
 
       # Update this batch
       updated = ActiveRecord::Base.connection.exec_update(
-        "UPDATE user_scripts us
+        "UPDATE /*+ SET_VAR(max_execution_time=180000) */ user_scripts us
          JOIN scripts s ON us.script_id = s.id
          SET us.unit_group_id = s.original_unit_group_id
          WHERE us.id IN (#{ids.join(',')})"
@@ -117,7 +117,7 @@ end
 
 def main
   puts "Starting backfill process..."
-  puts_count
+  # puts_count
 
   unit_ids = get_unit_ids_with_one_unit_group
   update_user_scripts(unit_ids)
