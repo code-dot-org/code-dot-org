@@ -98,7 +98,7 @@ def update_user_scripts(script_ids)
 
       # Progress reporting
       print '.' if batch_count % 10 == 0
-      if batch_count % 1 == 0
+      if batch_count % 100 == 0
         elapsed = Time.now - start_time
         puts "\n[Processed #{batch_count} batches, updated #{total_updated} records, elapsed time #{elapsed.round(1)}s est total time for 250M rows: #{(elapsed / total_updated * 250_000_000).to_i}s]"
       end
