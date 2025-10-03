@@ -77,14 +77,13 @@ def update_user_scripts(script_ids)
       batch_count += 1
 
       # Single query: UPDATE with JOIN and LIMIT
-      # ORDER BY ensures deterministic batch selection
+      # No ORDER BY allowed with multi-table UPDATE, but batching still works
       updated = ActiveRecord::Base.connection.exec_update(
         "UPDATE user_scripts us
          JOIN scripts s ON us.script_id = s.id
          SET us.unit_group_id = s.original_unit_group_id
          WHERE us.unit_group_id IS NULL
            AND us.script_id IN (#{script_ids_str})
-         ORDER BY us.id
          LIMIT #{BATCH_SIZE}"
       )
 
