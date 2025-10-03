@@ -877,6 +877,21 @@
         "lesson_group.key": "",
         "script.name": "allthethings"
       }
+    },
+    {
+      "key": "lesson-57",
+      "name": "Sketch Lab",
+      "absolute_position": 57,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 54,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-57",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
     }
   ],
   "lesson_activities": [
@@ -1597,6 +1612,18 @@
         "lesson_group.key": "",
         "script.name": "allthethings"
       }
+    },
+    {
+      "key": "9561e8ad-5eb9-4cca-8279-f9cabb9867d1",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9561e8ad-5eb9-4cca-8279-f9cabb9867d1",
+        "lesson.key": "lesson-57",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
     }
   ],
   "activity_sections": [
@@ -2158,6 +2185,16 @@
       "seeding_key": {
         "activity_section.key": "781a45ef-23bb-4d6c-905a-a421acc0752b",
         "lesson_activity.key": "e109ba15-02bd-458f-9adf-31f75dc9d531"
+      }
+    },
+    {
+      "key": "b0e19c6d-9bd3-4227-93b2-397e925b9139",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b0e19c6d-9bd3-4227-93b2-397e925b9139",
+        "lesson_activity.key": "9561e8ad-5eb9-4cca-8279-f9cabb9867d1"
       }
     }
   ],
@@ -10088,6 +10125,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "Allthethings Weblab2 10",
+        "script_level.level_keys": [
+          "Allthethings Weblab2 10"
+        ],
+        "lesson.key": "lesson-54",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "b26e8309-b1a7-486a-9490-96d4ddd8b9aa"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "Music Lab2 Showcase",
         "script_level.level_keys": [
           "Music Lab2 Showcase"
@@ -10204,6 +10253,18 @@
         "lesson_group.key": "",
         "script.name": "allthethings",
         "activity_section.key": "781a45ef-23bb-4d6c-905a-a421acc0752b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "allthethings sketchlab 1",
+        "script_level.level_keys": [
+          "allthethings sketchlab 1"
+        ],
+        "lesson.key": "lesson-57",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "b0e19c6d-9bd3-4227-93b2-397e925b9139"
       }
     }
   ],
