@@ -38,7 +38,7 @@ You can do Code.org development using macOS, Ubuntu, or Windows (running Ubuntu 
 1. `cp locals.yml.default locals.yml`
     - This step is necessary to enable javascript builds. It also provides further options for customizing your local environment.
 
-1. `bundle exec rake package:apps:symlinks`
+1. `bundle exec rake package:apps:symlink`
     - Another step necessary to enable javascript builds.
 
 1. `bundle exec rake install:hooks`

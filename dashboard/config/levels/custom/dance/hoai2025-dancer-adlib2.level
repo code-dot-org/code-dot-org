@@ -2,7 +2,7 @@
   <config><![CDATA[{
   "published": true,
   "game_id": 63,
-  "created_at": "2025-09-18T05:46:50.000Z",
+  "created_at": "2025-09-25T09:36:46.000Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
@@ -39,7 +39,7 @@
 
     ]
   },
-  "audit_log": "[{\"changed_at\":\"2025-09-10 22:43:07 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-22 01:30:30 +0000\",\"changed\":[\"hide_share_and_remix\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2025-09-10 22:43:07 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-22 01:30:30 +0000\",\"changed\":[\"hide_share_and_remix\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-02 17:31:38 +0000\",\"changed\":[\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

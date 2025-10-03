@@ -71,7 +71,7 @@ export interface ProjectSources {
 
 export type LabConfig = {[key: string]: {[key: string]: string}};
 
-export type Source = BlocklySource | MultiFileSource | SketchlabSource;
+export type Source = BlocklySource | MultiFileSource;
 
 export interface SaveSourceOptions {
   projectType?: string;
@@ -83,11 +83,6 @@ export interface UpdateSourceOptions extends SaveSourceOptions {
   firstSaveTimestamp: string;
   tabId: string | null;
 }
-
-// -- SKETCH LAB -- //
-
-// Sketch Lab currently serialized/deserializes into a generic object
-export type SketchlabSource = {[key: string]: unknown};
 
 // -- BLOCKLY -- //
 
