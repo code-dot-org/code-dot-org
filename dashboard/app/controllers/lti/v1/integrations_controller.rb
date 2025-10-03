@@ -64,7 +64,7 @@ module Lti
         render 'lti/v1/integration_status'
       end
 
-      # GET /lti/v1/integrations
+      # GET /lti/v1/integrations/new
       # Displays the onboarding portal for creating a new LTI Integration
       def new
         @form_data = {}
@@ -72,7 +72,7 @@ module Lti
           {platform: key, name: value[:name]}
         end
 
-        render lti_v1_integrations_path
+        render 'lti/v1/integrations'
       end
     end
   end
