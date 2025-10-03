@@ -7,7 +7,6 @@ import {
   ModelParameters,
   ChatButtonClickHandler,
   ChatButtonData,
-  SystemPromptSettings,
 } from '@cdo/apps/aichat/types';
 import ChatWorkspace from '@cdo/apps/aichat/views/ChatWorkspace';
 import {defaultPrompts, levelPrompts} from '@cdo/apps/aiTutor/suggestedPrompts';
@@ -53,21 +52,21 @@ const defaultChatButtonData: ChatButtonData[] = [
 ] as const;
 interface AiTutor2ChatProps {
   hiddenContextCallback: () => Promise<string>;
-  aiTutorSystemPromptSettings?: SystemPromptSettings;
   aiTutorMultimodalEnabled?: boolean;
   levelName?: string;
   channelId?: string;
   aiTutorChatButtonData?: ChatButtonData[];
+  aiTutorSystemPromptName?: string;
 }
 
 // A free chat with lab-supplied context added to each question.
 const AiTutor2Chat: React.FunctionComponent<AiTutor2ChatProps> = ({
   hiddenContextCallback,
-  aiTutorSystemPromptSettings,
   aiTutorMultimodalEnabled = false,
   levelName,
   channelId,
   aiTutorChatButtonData,
+  aiTutorSystemPromptName,
 }) => {
   const [systemPrompt, setSystemPrompt] = useState<string>();
 
@@ -88,26 +87,23 @@ const AiTutor2Chat: React.FunctionComponent<AiTutor2ChatProps> = ({
   useEffect(() => {
     if (customPromptName) {
       fetchPrompt(customPromptName);
-    } else if (aiTutorSystemPromptSettings?.selectedSystemPromptName) {
-      fetchPrompt(aiTutorSystemPromptSettings.selectedSystemPromptName);
+    } else if (aiTutorSystemPromptName) {
+      fetchPrompt(aiTutorSystemPromptName);
     } else {
       setSystemPrompt(defaultSystemPrompt);
     }
-  }, [aiTutorSystemPromptSettings?.selectedSystemPromptName]);
+  }, [aiTutorSystemPromptName]);
 
   useEffect(() => {
     // Log which system prompt we end up using.
     if (customPromptName) {
       console.log(`🤖: systemPrompt: ${customPromptName}`, systemPrompt);
-    } else if (aiTutorSystemPromptSettings?.selectedSystemPromptName) {
-      console.log(
-        `🤖: systemPrompt: ${aiTutorSystemPromptSettings?.selectedSystemPromptName}`,
-        systemPrompt
-      );
+    } else if (aiTutorSystemPromptName) {
+      console.log(`🤖: systemPrompt: ${aiTutorSystemPromptName}`, systemPrompt);
     } else {
       console.log(`🤖: systemPrompt: default`);
     }
-  }, [systemPrompt, aiTutorSystemPromptSettings?.selectedSystemPromptName]);
+  }, [systemPrompt, aiTutorSystemPromptName]);
 
   useEffect(() => {
     // We currently use query params to allow AI model selection but otherwise do not provide any user
@@ -153,7 +149,6 @@ const AiTutor2Chat: React.FunctionComponent<AiTutor2ChatProps> = ({
         modelParameters={{...modelParameters, systemPrompt}}
         chatButtons={chatButtons}
         hiddenContextCallback={hiddenContextCallback}
-        systemPromptSettings={aiTutorSystemPromptSettings}
         multimodalEnabled={aiTutorMultimodalEnabled}
         levelName={levelName}
         channelId={channelId}
