@@ -18,3 +18,5 @@ export interface AiTutorContext {
   documentation?: string;
   userSelection?: string;
 }
+
+export type MaybePromise<T> = T | Promise<T>;
