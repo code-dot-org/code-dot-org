@@ -21,7 +21,7 @@ require_relative '../../dashboard/config/environment'
 
 $stdout.sync = true
 
-BATCH_SIZE = 1_000
+BATCH_SIZE = 50_000
 
 def puts_count
   # Use raw SQL with query hint to increase max execution time to 180 seconds
@@ -74,37 +74,29 @@ def update_user_scripts(script_ids)
     start_time = Time.now
 
     loop do
-      # Get next batch of IDs with NULL unit_group_id
-      # No OFFSET needed - after each update, those rows no longer have NULL
-      # so the next query naturally gets the next batch
-      ids = ActiveRecord::Base.connection.select_values(
-        "SELECT id FROM user_scripts
-         WHERE unit_group_id IS NULL AND script_id IN (#{script_ids_str})
-         LIMIT #{BATCH_SIZE}"
-      )
-      break if ids.empty?
-
       batch_count += 1
 
-      # Update this batch
+      # Single query: UPDATE with JOIN and LIMIT
+      # ORDER BY ensures deterministic batch selection
       updated = ActiveRecord::Base.connection.exec_update(
         "UPDATE user_scripts us
          JOIN scripts s ON us.script_id = s.id
          SET us.unit_group_id = s.original_unit_group_id
-         WHERE us.id IN (#{ids.join(',')})"
+         WHERE us.unit_group_id IS NULL
+           AND us.script_id IN (#{script_ids_str})
+         ORDER BY us.id
+         LIMIT #{BATCH_SIZE}"
       )
 
+      break if updated == 0
       total_updated += updated
-
-      # Small delay to reduce lock contention in production
-      sleep(0.1)
 
       # Progress reporting
       print '.' if batch_count % 10 == 0
       if batch_count % 100 == 0
         elapsed = Time.now - start_time
         rate = total_updated / elapsed
-        puts "\n[Processed #{batch_count} batches, updated #{total_updated} records in #{elapsed.round(1)}s (#{rate.round(1)} rows/sec)]"
+        puts "\n[Batch #{batch_count}, updated #{total_updated} records in #{elapsed.round(1)}s (#{rate.round(1)} rows/sec)]"
       end
     end
 
