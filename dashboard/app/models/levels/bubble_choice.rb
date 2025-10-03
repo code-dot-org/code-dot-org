@@ -173,7 +173,6 @@ class BubbleChoice < DSLDefined
           icon: level.try(:icon),
           uses_lab2: level.uses_lab2?,
           parent_level_id: id,
-          app_name: level.game&.app
         }
       )
 
