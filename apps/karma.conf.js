@@ -48,6 +48,12 @@ module.exports = function (config) {
         nocache: true,
       },
       {
+        pattern: 'build/images/**/*',
+        watched: false,
+        included: false,
+        nocache: true,
+      },
+      {
         pattern: 'build/package/**/*',
         watched: false,
         included: false,
@@ -65,6 +71,7 @@ module.exports = function (config) {
 
     // Configures the karma server to map urls to local file paths.
     proxies: {
+      '/assets/images/': '/base/build/images/',
       // e.g. "requests to /blockly/media/ should be served from ./static/"
       '/blockly/media/': '/base/static/',
       '/lib/blockly/media/': '/base/static/',
