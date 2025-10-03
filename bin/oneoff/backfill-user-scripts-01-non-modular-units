@@ -15,13 +15,14 @@ OptionParser.new do |opts|
     exit
   end
 end.parse!
-puts "Called with options: #{$options}"
+
+BATCH_SIZE = 50_000
+
+puts "Called with options: #{$options} batch size #{BATCH_SIZE}"
 
 require_relative '../../dashboard/config/environment'
 
 $stdout.sync = true
-
-BATCH_SIZE = 10_000
 
 def puts_count
   # Use raw SQL with query hint to increase max execution time to 180 seconds
@@ -95,11 +96,13 @@ def update_user_scripts(script_ids)
       total_updated += updated
 
       # Progress reporting
-      print '.' if batch_count % 10 == 0
-      if batch_count % 100 == 0
+      print '.' # if batch_count % 10 == 0
+      if batch_count % 20 == 0
         elapsed = Time.now - start_time
         rate = total_updated / elapsed
-        puts "\n[Batch #{batch_count}, updated #{total_updated} records in #{elapsed.round(1)}s (#{rate.round(1)} rows/sec)]"
+        total_records = 250_000_000 # approx total user_scripts rows to be updated
+        est_total_hours = (total_updated > 0) ? (elapsed * (total_records / total_updated)) / 3600 : 0
+        puts "\n[Batch #{batch_count}, updated #{total_updated} records in #{elapsed.round(1)}s (#{rate.round(1)} rows/sec), est. total hours: #{est_total_hours.round(1)}]"
       end
     end
 
