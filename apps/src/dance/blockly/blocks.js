@@ -4,8 +4,7 @@ import i18n from '@cdo/locale';
 
 import CdoFieldDanceAi from '../ai/cdoFieldDanceAi';
 import {GENERATED_DANCER} from '../constants';
-import {DEFAULT_HEAD_URL, getConfigValue} from '../lottie/LottieDancerRenderer';
-import {BASE_HOST, getGeneratedDancerAssets} from '../lottie/LottieDancerUtils';
+import {resolveDancerAssets} from '../lottie/LottieDancerUtils';
 
 // This color palette is limited to colors which have different hues, therefore
 // it should not contain different shades of the same color such as
@@ -83,32 +82,13 @@ const customInputTypes = {
     addInput(blockly, block, inputConfig, currentInputRow) {
       const options = inputConfig.options.map(option => {
         let name = option;
+        // Options may be JSON-encoded strings (ex. "/"BEAR/"") or simple strings (ex. "sprites").
+        // Blockly needs the full option for code generation, but we just want the name for the head image URL.
         try {
           name = JSON.parse(name);
         } catch {}
         if (name === GENERATED_DANCER) {
-          const localStorageDancer = JSON.parse(
-            localStorage.getItem('dancer-ai-generate')
-          );
-          const {adlibOption, choices, variant} = localStorageDancer || {};
-          const pathParam = getConfigValue('path');
-          const dancerParam = getConfigValue('dancer')?.toLowerCase();
-
-          let headUrl = DEFAULT_HEAD_URL + '?src=blockly';
-
-          const variantNum =
-            typeof variant === 'number' ? variant : Number(variant ?? 0);
-          if (dancerParam && pathParam) {
-            const prefix = `${BASE_HOST}/dancer/${pathParam}/${dancerParam}`;
-            headUrl = `${prefix}.png?src=blockly`;
-          } else if (Array.isArray(choices) && choices.length > 0) {
-            const assets = getGeneratedDancerAssets(
-              adlibOption || 'basic2',
-              choices,
-              variantNum
-            );
-            headUrl = assets.head + `?src=blockly`;
-          }
+          const {headUrl} = resolveDancerAssets({sourceTag: 'blockly'});
           return [headUrl, option];
         }
         return [`/blockly/media/skins/dance/${name}.png`, option];
