@@ -21,7 +21,7 @@ require_relative '../../dashboard/config/environment'
 
 $stdout.sync = true
 
-BATCH_SIZE = 10_000
+BATCH_SIZE = 1_000
 
 def puts_count
   # Use raw SQL with query hint to increase max execution time to 180 seconds
@@ -96,11 +96,15 @@ def update_user_scripts(script_ids)
 
       total_updated += updated
 
+      # Small delay to reduce lock contention in production
+      sleep(0.1)
+
       # Progress reporting
       print '.' if batch_count % 10 == 0
       if batch_count % 100 == 0
         elapsed = Time.now - start_time
-        puts "\n[Processed #{batch_count} batches, updated #{total_updated} records, elapsed time #{elapsed.round(1)}s est total time for 250M rows: #{(elapsed / total_updated * 250_000_000).to_i}s]"
+        rate = total_updated / elapsed
+        puts "\n[Processed #{batch_count} batches, updated #{total_updated} records in #{elapsed.round(1)}s (#{rate.round(1)} rows/sec)]"
       end
     end
 
