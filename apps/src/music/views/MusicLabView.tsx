@@ -151,9 +151,6 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   const isViewingExemplar = getAppOptionsViewingExemplar();
   const projectTemplateLevel = useAppSelector(isProjectTemplateLevel);
   const blockMode = useSelector(getBlockMode);
-  const useNewInstructions = experiments.isEnabled(
-    experiments.LAB2_INSTRUCTIONS_V2
-  );
 
   // Pass music validator to Progress Manager
   useEffect(() => {
