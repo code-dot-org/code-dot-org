@@ -4,17 +4,14 @@ import {
   AppState,
   BinaryFiles,
   ExcalidrawImperativeAPI,
+  ExcalidrawInitialDataState,
 } from '@excalidraw/excalidraw/types/types';
+import {isEqual} from 'lodash';
 import React, {useEffect, useCallback, useRef, useState} from 'react';
 
 import {useVerticalLayout} from '@cdo/apps/lab2/hooks/useVerticalLayout';
 import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
-import {
-  LabProps,
-  LevelProperties,
-  ProjectSources,
-  SketchlabSource,
-} from '@cdo/apps/lab2/types';
+import {LabProps, LevelProperties, ProjectSources} from '@cdo/apps/lab2/types';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
@@ -32,13 +29,17 @@ const INITIAL_WORKSPACE_WIDTH = 800;
 
 const DEBOUNCED_WORKSPACE_SERIALIZATION_MS = 500;
 
+interface SketchlabSources extends ProjectSources {
+  source: ExcalidrawInitialDataState;
+}
+
 const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
   levelProperties,
 }) => {
-  const [excalidrawApi, setExcalidrawApi] =
-    useState<ExcalidrawImperativeAPI | null>();
-  const {currentSources, updateSources} = useSources<ProjectSources>();
+  const excalidrawApiRef = useRef<ExcalidrawImperativeAPI | null>();
+  const {currentSources, updateSources} = useSources<SketchlabSources>();
   const saveSourcesTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const [excalidrawMountKey, setExcalidrawMountKey] = useState(0);
 
   const hasRun = useAppSelector(state => state.lab2System.hasRun);
 
@@ -80,6 +81,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
           serializeAsJSON(elements, state, files, 'local')
         );
 
+        const excalidrawApi = excalidrawApiRef.current;
         if (excalidrawApi) {
           // serializeAsJSON exports an extremely limited set of properties from appState,
           // and excludes the chosen scroll position (scrollX/Y) and zoom,
@@ -95,7 +97,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
         updateSources({source: serializedData});
       }, DEBOUNCED_WORKSPACE_SERIALIZATION_MS);
     },
-    [updateSources, excalidrawApi]
+    [updateSources]
   );
 
   useEffect(() => {
@@ -105,6 +107,27 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
       }
     };
   }, []);
+
+  // This effect runs on each source change,
+  // but the full remount (via key change) is only intended when
+  // Excalidraw state diverges from the saved source state.
+  // This happens when a user switches levels, or a teachers switches
+  // between viewing different students on the same level.
+  useEffect(() => {
+    // Note that we do not compare appState, as Excalidraw tracks a lot of app state properties
+    // that we do not store to S3.
+    const excalidrawApi = excalidrawApiRef.current;
+    if (
+      excalidrawApi &&
+      (!isEqual(
+        excalidrawApi.getSceneElements(),
+        currentSources.source.elements
+      ) ||
+        !isEqual(excalidrawApi.getFiles(), currentSources.source.files))
+    ) {
+      setExcalidrawMountKey(key => key + 1);
+    }
+  }, [currentSources.source]);
 
   // Since there's no run button in Sketch Lab, set it to true by default
   // to enable the Submit button on edit on submittable levels.
@@ -140,9 +163,10 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
           headerContent="Workspace"
         >
           <Excalidraw
-            initialData={currentSources.source as SketchlabSource}
+            initialData={currentSources.source}
             onChange={debouncedSerializeAndSaveWorkspace}
-            excalidrawAPI={api => setExcalidrawApi(api)}
+            excalidrawAPI={api => (excalidrawApiRef.current = api)}
+            key={excalidrawMountKey}
           />
         </PanelContainer>
       </div>
