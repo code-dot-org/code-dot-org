@@ -1,0 +1,17 @@
+name 'programming-fundamentals-preassessment-question14_v2-2025'
+title 'Programming Fundamentals Pre-Assessment: Question 14'
+
+right 'To divide a problem into smaller, more manageable tasks'
+wrong 'To test for errors in a program'
+wrong 'To repeat a process multiple times'
+wrong 'To store large amounts of data'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+What is **decomposition** used for when solving programming problems?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 11: Decomposition
+MARKDOWN

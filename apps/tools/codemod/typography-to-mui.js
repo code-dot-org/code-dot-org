@@ -34,7 +34,6 @@ const VARIANT_TO_DEFAULT_TAG = {
   figcaption: 'figcaption',
   em: 'em',
   strong: 'strong',
-  extraStrong: 'strong',
 };
 
 const WRAPPER_NAME_TO_DEFAULT = {
@@ -60,9 +59,6 @@ const WRAPPER_NAME_TO_DEFAULT = {
   // Emphasis & strong
   EmText: {variant: 'em'},
   StrongText: {variant: 'strong'},
-  ExtraStrongText: {
-    variant: 'extraStrong',
-  },
 
   // Figcaption
   Figcaption: {component: 'figcaption', variant: 'figcaption'},
@@ -91,7 +87,6 @@ const VISUAL_TO_VARIANT = {
   // emphasis/strong
   em: 'em',
   strong: 'strong',
-  'extra-strong': 'extraStrong',
 
   // figcaption
   figcaption: 'figcaption',

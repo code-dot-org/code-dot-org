@@ -3,6 +3,7 @@ import SegmentedButtons, {
   SegmentedButtonsProps,
 } from '@code-dot-org/component-library/segmentedButtons';
 import TextField from '@code-dot-org/component-library/textField';
+import classNames from 'classnames';
 import React from 'react';
 
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -72,7 +73,12 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
   };
 
   return (
-    <div className={moduleStyles.previewHeaderContainer}>
+    <div
+      className={classNames(
+        moduleStyles.previewHeaderContainer,
+        isFullScreenView && moduleStyles.fullScreenPreviewHeaderContainer
+      )}
+    >
       <div className={moduleStyles.urlBarContent}>
         <div className={moduleStyles.navButtonsWrapper}>
           <Button

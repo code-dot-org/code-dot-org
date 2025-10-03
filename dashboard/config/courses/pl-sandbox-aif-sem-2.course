@@ -1,0 +1,28 @@
+{
+  "name": "pl-sandbox-aif-sem-2",
+  "script_names": [
+    "pl-sandbox-aif-sem-2-pre-learning",
+    "pl-sandbox-aif-sem-2-unit-1",
+    "pl-sandbox-aif-sem-2-unit-2"
+  ],
+  "original_script_names": [
+    "pl-sandbox-aif-sem-2-pre-learning",
+    "pl-sandbox-aif-sem-2-unit-1",
+    "pl-sandbox-aif-sem-2-unit-2"
+  ],
+  "published_state": "in_development",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "pl-sandbox-aif-sem-2",
+    "numbered_units": "auto",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

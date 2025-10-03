@@ -103,12 +103,13 @@ class CourseOverview extends Component {
     // Because there is no user_course table, store the fact that the version
     // dialog has been dismissed on the first user_script in the course.
     const firstScriptId = this.props.scripts[0].id;
+    const courseId = this.props.id;
 
     // Fire and forget. If this fails, we'll have another chance to
     // succeed the next time the warning is dismissed.
     $.ajax({
       method: 'PATCH',
-      url: `/api/v1/user_scripts/${firstScriptId}`,
+      url: `/api/v1/user_scripts/course/${courseId}/unit/${firstScriptId}`,
       type: 'json',
       contentType: 'application/json;charset=UTF-8',
       data: JSON.stringify({version_warning_dismissed: true}),

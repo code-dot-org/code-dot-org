@@ -1,0 +1,20 @@
+name 'pl_sandbox_aif_2_HowWeGetThere_8'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# How Do We Get There?
+
+#### Before students can showcase their final web applications, they first need to build a strong foundation. Step by step, they practice coding skills, layering new concepts on top of what they’ve already learned. With each stage, they gain the confidence and tools needed to create something bigger.
+
+
+## We build skills step by step, always coding alongside AI as a partner:
+
+<img src="https://images.code.org/5a14dc8bdef7c9c9b5c4d8736c451265-image-1759348130243.png" alt="HTML – the structure of a webpage (like the frame of a house).CSS – the style and design (colors, fonts, layout—how the house looks).JavaScript – the interactivity and logic (how the house “works,” like doors opening or lights turning on). AI – a creative assistant that helps suggest, refine, and debug code, while students stay in control of decisions." width="850px" style="display: block; margin-left: auto; margin-right: auto;">
+
+
+
+#### Together, these pieces lead students from simple webpages to dynamic, AI-powered applications they can showcase with pride.
+
+
+MARKDOWN

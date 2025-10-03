@@ -5,9 +5,11 @@
  */
 import React, {Suspense, useEffect} from 'react';
 
+import {useAiChatDisabled} from '@cdo/apps/aichat/context/aiChatDisabledContext';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {PERMISSIONS} from '@cdo/apps/lab2/constants';
 import {useInitialLabTheme} from '@cdo/apps/lab2/hooks/useInitialLabTheme';
+import lab2I18n from '@cdo/apps/lab2/locale';
 import ProgressContainer from '@cdo/apps/lab2/progress/ProgressContainer';
 import {getAppOptionsViewingExemplar} from '@cdo/apps/lab2/projects/utils';
 import {
@@ -57,6 +59,24 @@ const LabViewsRenderer: React.FunctionComponent = () => {
     currentAppName,
     levelProperties,
   });
+  const isPredictLevel = useAppSelector(
+    state => state.lab.levelProperties?.predictSettings?.isPredictLevel || false
+  );
+  const hasSubmittedPredictResponse = useAppSelector(
+    state => state.predictLevel.hasSubmittedResponse
+  );
+
+  const {setChatDisabledState} = useAiChatDisabled();
+  useEffect(() => {
+    if (isPredictLevel && !hasSubmittedPredictResponse) {
+      setChatDisabledState({
+        chatDisabled: true,
+        chatDisabledMessage: lab2I18n.predictTutorDisabledMessage(),
+      });
+    } else {
+      setChatDisabledState({chatDisabled: false});
+    }
+  }, [isPredictLevel, hasSubmittedPredictResponse, setChatDisabledState]);
 
   useEffect(() => {
     const footer = document.getElementById('page-small-footer');

@@ -9,7 +9,7 @@ describe CdoContentful::CsForAll::Entry::Tutorial do
     let(:tutorial_id) {'poem_art'}
 
     it 'returns correct Tutorial entry' do
-      VCR.use_cassette('entries/tutorials/poem_art') do
+      VCR.use_cassette("cs_for_all/entries/tutorials/#{tutorial_id}") do
         _(subject).must_be_instance_of Contentful::Entry
         _(subject.content_type.id).must_equal 'curriculum'
         _(subject.tutorial_id).must_equal tutorial_id

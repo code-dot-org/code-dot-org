@@ -4,7 +4,7 @@ Dashboard::Application.routes.draw do
   mount ActionCable.server => '/cable'
   get 'chatter/index'
 
-  mount Marketing::Engine => '/marketing'
+  draw :marketing
 
   # Override Error Codes
   get "404", to: "application#render_404", via: :all
@@ -91,6 +91,7 @@ Dashboard::Application.routes.draw do
     end
 
     patch '/api/v1/user_scripts/:script_id', to: 'api/v1/user_scripts#update'
+    patch '/api/v1/user_scripts/course/:course_id/unit/:script_id', to: 'api/v1/user_scripts#update'
 
     get '/download/:product', to: 'hoc_download#index'
 
@@ -1307,6 +1308,7 @@ Dashboard::Application.routes.draw do
     post '/aichat/find_toxicity', to: 'aichat#find_toxicity'
 
     resources :ai_interaction_feedback, only: [:create]
+    resource :teaching_profile_data, only: [:show, :create, :update]
 
     resources :aidiff_threads, only: [:create, :index, :show] do
       collection do

@@ -1,0 +1,42 @@
+.ai-tutor-sidebar {
+  width: 45px;
+  border: 3px solid aqua;
+  position: absolute;
+  right: 0;
+
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    background-color: aqua;
+
+    .bot-icon-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .bot-icon {
+      width: 30px;
+      height: 30px;
+      object-fit: contain;
+    }
+  }
+
+  &-content {
+    overflow-y: auto;
+    height: calc(100vh - 60px); // Adjust based on header height
+  }
+}
+
+// AiTutorSidebarSuggestedPrompts styles
+.ai-tutor-suggested-prompt-item {
+  width: 45px;
+  height: 45px;
+  margin: 0;
+  background-color: white;
+  cursor: pointer;
+  border-radius: 0;
+  border: 1px solid lightgrey;
+}

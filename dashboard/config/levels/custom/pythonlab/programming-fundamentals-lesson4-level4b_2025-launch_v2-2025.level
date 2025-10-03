@@ -1,0 +1,55 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-09-25T19:56:11.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Do This:\r\n\r\nYou're building a wellness app that lets users set a mood status for the day. Later, they want to update it to reflect how they're feeling now.\r\n\r\n1. Look at the original value stored in `mood_status`\r\n\r\n2. Change the value to a new mood, like `\"energized\"`, `\"chill\"`, or `\"tired\"`\r\n\r\n3. Run the program to see the change.\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nEvery time you assign a new value to a variable, the old one is replaced -- it's like swapping out what's in a labeled box.",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "display_name": "Mood Status",
+    "bubble_choice_description": "You're building a wellness app that lets users set a mood status for the day. Later, they want to update it to reflect how they're feeling now.",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# This program updates a mood status\n\nmood_status = \"focused\"\nprint(\"Current mood status:\", mood_status)\n\n# Update the mood below\n\n\nprint(\"Updated mood status:\", mood_status)\n",
+          "folderId": "0",
+          "active": false,
+          "open": true,
+          "type": "locked_starter"
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "thumbnail_url": "https://images.code.org/e28ca8ae969702a8b0d248c35755001d-mood.png",
+    "name_suffix": "_v2-2025",
+    "encrypted_exemplar_sources": "Cy05mEYW43yx3lpwk/lyQYs4qPKDc2JDG2xzW6EZ2HXNXiuQgI6R1SlqPKPt\nlYISiQp/Zt7oXvHNpBSUY2/tVcAoh32dY5clMNiyTLp2qQ5O47DJ0rGD0IJV\nXDiO//IRW/LZBlXyH5JryMNp/3+nzhfrQy536OHgsphvFWMKbiElDIIB9skV\n8RyMSoS3+a51mSHJLT1/EQJI90dbCAZjXaOneIm7DflB6QnmQQw2MP9Rv1fT\nroasA/POQmjAAmvr+SUY9ATGbhkR9Yk3CpfZiMqDJllOyIBJe5JGM8Vsy03E\nwGMZ25dahIjfjLm51c35stUqF7Fm8T/GdUFWUwt0uhYcBzDrf0vbqj74O23n\nOX/Cq1gertFzfxSj1Agu8l9aM2FdOFNXZ5ozHR/eGmZZAy++vdkE6bMV/ovp\nuvSGFrEuJOh2SpiJX6TIyqgig/fK7rQilJj524M2hfVAXH85UaWMbH0wj4Fo\nIYBvJMstkfrNN0Kc5b+Z269PO3hmUE0k\n",
+    "validation_file": {
+      "id": "1",
+      "name": "test.py",
+      "language": "py",
+      "contents": "from unittest import TestCase\nfrom unittest_runner import ValidationProtocol\n\nclass TestMoodStatusUpdate(TestCase):\n    @classmethod\n    def setUpClass(cls):\n        \"\"\"Get the printed output log\"\"\"\n        cls.log = ValidationProtocol().get_stdout_logs()\n\n    def test_mood_status_updated(self):\n        \"\"\"mood_status should change from original to a new value\"\"\"\n        try:\n            from main import mood_status\n        except ImportError:\n            self.fail(\"Make sure you create a variable called mood_status!\")\n\n        printed_lines = [line.strip() for line in self.log if line.strip()]\n\n        # Find original and updated printed lines\n        original_line = next((line for line in printed_lines if \"Current mood status:\" in line), None)\n        updated_line = next((line for line in printed_lines if \"Updated mood status:\" in line), None)\n\n        self.assertIsNotNone(original_line, \"Make sure you print the original mood status!\")\n        self.assertIsNotNone(updated_line, \"Make sure you print the updated mood status!\")\n\n        # Extract just the mood names\n        original_mood = original_line.split(\":\")[-1].strip()\n        updated_mood = updated_line.split(\":\")[-1].strip()\n\n        self.assertNotEqual(\n            original_mood,\n            updated_mood,\n            \"Make sure you actually update the mood_status to a new mood!\"\n        )\n",
+      "folderId": "0",
+      "active": false,
+      "open": false,
+      "type": "validation"
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:56:11.965+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson4-level4b_2025-launch_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson4-level4b_2025-launch_2025\"}]"
+}]]></config>
+</Pythonlab>

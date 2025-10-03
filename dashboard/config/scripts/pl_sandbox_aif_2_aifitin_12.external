@@ -1,0 +1,105 @@
+name 'pl_sandbox_aif_2_AIFitIn_12'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Where Does AI Fit In?
+
+In this course, AI is a helper, not a replacement for students’ thinking. Students stay in control of the design and coding process, while AI serves as a creative partner that can suggest, outline, or refine ideas.
+How Students Use AI
+As a brainstorming tool: AI can suggest starting points (like a layout or function idea) that students then adapt and improve.
+As a tutor-on-demand: Students can ask AI to explain tricky concepts, find bugs, or show examples—while still doing the reasoning themselves.
+As a collaborator in building: AI helps write or refine HTML, CSS, and JavaScript, but students must review, edit, and debug to ensure the code works and matches their vision.
+As a critique partner: Students learn to spot bias, errors, or poor design in AI outputs, strengthening their critical evaluation skills.
+The Four Creative Modes
+The course introduces structured ways to work with AI responsibly:
+Suggest → AI offers hints or small code pieces to support student work.
+Outline → AI generates a framework with placeholders, and students fill in the logic.
+Guide → Students build piece-by-piece, directing AI step by step.
+Produce → AI creates a feature from a detailed student plan, which students then refine and evaluate.
+Why This Matters
+By learning to use AI this way, students practice ethical and intentional coding. They don’t just accept AI’s work blindly—they evaluate it, adapt it, and ensure it aligns with their values, goals, and understanding. This prepares them to work with AI in the real world while keeping ownership of their learning and creations.
+
+
+
+
+#### The Programming with Music Lab curriculum begins with an introductory lesson, <a href="https://studio.code.org/courses/programming-with-music-lab-2025/units/1/lessons/1" target="blank" rel="noopener noreferrer">Introduction to Music Lab</a>, which introduces the Problem-Solving Process and primes students to create music.
+
+#### The rest of the curriculum is divided into three chunks, each covering one of the major computer science concepts: **sequencing**, **loops**, and **functions**.
+
+<div style="display: flex; justify-content: space-between; width: 90%; margin: 20px auto;">
+  <div style="background: #B7E0E5; width: 23%; padding: 15px; box-sizing: border-box; border-radius: 5px">
+    <img src="https://images.code.org/f0fb524e2dec8f439e109d79ecdf8b03-image-1744232422066.png" alt="" style="width: 70px; height: 70px; display: block; margin: 0 auto 10px;">
+    <h4 style="text-align: center;"><b>Intro to Music Lab</b></h4>
+    <h4 style="text-align: center;">Lesson 1</h4>
+  </div>
+  <div style="background: #B7E0E5; width: 23%; padding: 15px; box-sizing: border-box; border-radius: 5px">
+    <img src="https://images.code.org/da2dd5271ff04184bbf9cccbd0d2a26c-image-1744231978726.png" alt="" style="width: 70px; height: 70px; display: block; margin: 0 auto 10px;">
+    <h4 style="text-align: center;"><b>Sequencing</b></h4>
+    <h4 style="text-align: center;">Lessons 2 - 5</h4>
+  </div>
+  <div style="background: #B7E0E5; width: 23%; padding: 15px; box-sizing: border-box; border-radius: 5px">
+    <img src="https://images.code.org/c33ec7d74c1b0feaac4564126929c96a-image-1744231976974.png" alt="" style="width: 70px; height: 70px; display: block; margin: 0 auto 10px;">
+    <h4 style="text-align: center;"><b>Loops</b></h4>
+    <h4 style="text-align: center;">Lessons 6 - 9</h4>
+  </div>
+  <div style="background: #B7E0E5; width: 23%; padding: 15px; box-sizing: border-box; border-radius: 5px">
+    <img src="https://images.code.org/15cbf8c68b662b83b5b2f1d836da4cbd-image-1744231975051.png" alt="" style="width: 70px; height: 70px; display: block; margin: 0 auto 10px;">
+    <h4 style="text-align: center;"><b>Functions</b></h4>
+    <h4 style="text-align: center;">Lessons 10 - 13</h4>
+  </div>
+</div>
+
+## Curriculum Chunks
+
+#### Each chunk of the curriculum follows a predictable four-lesson format. This sequence allows for a gradual release of responsibility from the teacher to the student.
+
+
+#### **Explore-Practice-Synthesize-Project** is a structure that gradually moves students from exposure to mastery to creativity. This progression is designed to support all learners, especially those new to computer science, and allows students to build confidence before applying concepts independently.
+
+##### Click on the arrows below to expand each section.
+
+<details style="background-color: #ececec; padding: 10px; margin-top: 20px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 18px; font-weight: bold;">🔍 Explore</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+
+#### Explore lessons help students investigate existing code before creating their own. These levels use structured scaffolding guide students step-by-step to feel confident in the coding skill.
+</div></details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 18px; font-weight: bold;">🛠️ Practice</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+
+#### Practice lessons introduce new strategies or tools students might not discover on their own.
+</div></details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 18px; font-weight: bold;">🧠 Synthesize</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+
+#### Synthesize lessons help students review past concepts, learn a new technique or context related to a featured career in music, and apply their skills through creative tasks.
+</div></details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 18px; font-weight: bold;">🎼 Project</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+
+#### The sequencing and loops chunks end with a mini-project, while the functions chunk ends with an end-of-unit project.
+</div></details>
+
+## Projects
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 18px; font-weight: bold;">🎶 Mini-Projects</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+
+#### **Mini-Projects** are opportunities for students to apply what they have learned by creating something new in a more open-ended setting. They are opportunities for students to practice open-ended application of a small set of new skills. 
+</div></details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 18px; font-weight: bold;">🎼 End-of-Unit Projects</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+
+#### **End-of Unit Projects** are multi-day, open-ended lessons. They challenge students to create using skills developed throughout the unit with opportunities for planning, creation, and reflection.
+</div></details>
+MARKDOWN

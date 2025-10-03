@@ -1,0 +1,9 @@
+name 'test-problem-solving-with-ai-lesson2-level4_v2-2025'
+display_name 'Multimodal Input'
+description 'Pick one of the levels below. Practice prompting the AI for suggestions using images and text.'
+
+sublevels
+level 'test-problem-solving-with-ai-lesson2-level4-choice1_v2-2025'
+level 'test-problem-solving-with-ai-lesson2-level4-choice2_v2-2025'
+level 'test-problem-solving-with-ai-lesson2-level4-choice3_v2-2025'
+level 'test-problem-solving-with-ai-lesson2-level4-choice4_v2-2025'
