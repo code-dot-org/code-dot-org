@@ -1,0 +1,9 @@
+name 'test sketchlab bubble choice'
+display_name 'level display_name here'
+description 'level description here'
+
+sublevels
+level 'allthethings sketchlab 1'
+level 'allthethings sketchlab 2'
+
+uses_lab2
