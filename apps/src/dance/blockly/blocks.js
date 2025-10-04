@@ -91,7 +91,7 @@ const customInputTypes = {
           const {headUrl} = resolveDancerAssets({sourceTag: 'blockly'});
           return [headUrl, option];
         }
-        return [`/blockly/media/skins/dance/${name}.png`, option];
+        return [`/blockly/media/skins/dance/${name.toLowerCase()}.png`, option];
       });
       currentInputRow
         .appendField(inputConfig.label)
