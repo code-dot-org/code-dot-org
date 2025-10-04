@@ -318,7 +318,7 @@ const PackDialog: React.FunctionComponent<PackDialogProps> = ({player}) => {
                 ariaLabel={musicI18n.select()}
                 text={musicI18n.select()}
                 type="primary"
-                color="black"
+                color="purple"
                 size="s"
                 disabled={!selectedFolderId}
                 onClick={setPackToSelectedFolder}
