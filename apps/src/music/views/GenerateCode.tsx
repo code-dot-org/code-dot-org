@@ -149,12 +149,12 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
         </>
       )}
 
-      {aiGenerateState === 'generating' ? 'Generating a song...' : ''}
+      {aiGenerateState === 'generating' ? 'Generating code...' : ''}
 
       {aiGenerateState === 'none' && (
         <Button
-          ariaLabel={'Generate song'}
-          text={'Generate song'}
+          ariaLabel={'Generate code'}
+          text={'Generate code'}
           type="primary"
           color="black"
           size="s"
@@ -168,8 +168,8 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
           <div>Here is the code that was generated.</div>
 
           <Button
-            ariaLabel={'Generate again'}
-            text={'Generate again'}
+            ariaLabel={'Generate code again'}
+            text={'Generate code again'}
             type="primary"
             color="black"
             size="s"

@@ -23,8 +23,6 @@
 
 import {type AnimationItem, type CanvasRendererConfig} from 'lottie-web';
 
-import {queryParams} from '@cdo/apps/code-studio/utils';
-
 import {
   Canvas2D,
   CanvasAnimConfig,
@@ -44,22 +42,12 @@ import {
   hideVectorHeadInComp,
   ensureHeadImageAsset,
   insertHeadImageLayer,
-  getGeneratedDancerAssets,
-  BASE_HOST,
-  safeParseJSON,
   loadCanvasAnimation,
+  resolveDancerAssets,
+  getConfigValue,
 } from './LottieDancerUtils';
 
-// Default assets
-const ASSETS_FOLDER = 'basic2';
 const TEST_BASE_DANCER = 'duck';
-const TEST_GENERATED_DANCER = 'basic-frog-baseball-cap-00';
-
-export const DEFAULT_HEAD_URL = `${BASE_HOST}/dancer/${ASSETS_FOLDER}/${TEST_GENERATED_DANCER}.png?src=canvas`;
-const DEFAULT_METADATA_URL = `${BASE_HOST}/dancer/${ASSETS_FOLDER}/${TEST_GENERATED_DANCER}-metadata.json`;
-
-const getConfigValue = (name: string) =>
-  queryParams(name) as string | undefined;
 
 export default class LottieDancerRenderer {
   // Injected by DanceParty's GeneratedDancer
@@ -85,48 +73,14 @@ export default class LottieDancerRenderer {
   private metadataUrl: string | null;
 
   constructor() {
-    const localStorageDancer = safeParseJSON(
-      localStorage.getItem('dancer-ai-generate')
-    ) as {
-      adlibOption?: string;
-      choices?: string[];
-      variant?: number;
-    } | null;
-
-    const {adlibOption, choices, variant} = localStorageDancer || {};
-    const pathParam = getConfigValue('path') || adlibOption || ASSETS_FOLDER;
-    const dancerParam = getConfigValue('dancer')?.toLowerCase();
     const skeletonParam = getConfigValue('skeleton')?.toLowerCase();
-
-    this.headScale = 0.5;
     this.skeletonName = skeletonParam || TEST_BASE_DANCER;
+    this.headScale = 0.5;
+    this.cachedAnimationData = {};
 
-    let headUrl: string | undefined;
-    let metadataUrl: string | undefined;
-
-    const variantNum =
-      typeof variant === 'number' ? variant : Number(variant ?? 0);
-
-    if (Array.isArray(choices) && choices.length > 0) {
-      // Preferred path: choices + variant
-      const assets = getGeneratedDancerAssets(pathParam, choices, variantNum);
-      headUrl = assets.head;
-      metadataUrl = assets.metadata;
-    } else if (dancerParam) {
-      // Also fine: caller gave us a full dancer name (no deconstruction needed)
-      const prefix = `${BASE_HOST}/dancer/${pathParam}/${dancerParam}`;
-      headUrl = `${prefix}.png?src=canvas`;
-      metadataUrl = `${prefix}-metadata.json`;
-    } else {
-      // Fallback defaults
-      headUrl = DEFAULT_HEAD_URL;
-      metadataUrl = DEFAULT_METADATA_URL;
-    }
-
+    const {headUrl, metadataUrl} = resolveDancerAssets({sourceTag: 'canvas'});
     this.headUrl = headUrl;
     this.metadataUrl = metadataUrl;
-
-    this.cachedAnimationData = {};
   }
   /**
    * The caller provides a CanvasRenderingContext2D to paint into.
