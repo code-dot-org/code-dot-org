@@ -7,16 +7,10 @@
   "user_id": 6959,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "This level shares a template level with Level 3 in this script. It lets you pick from all AI Tutor modes.",
+    "long_instructions": "This level shares a template level with Level 3 in this script. It uses AI tutor mode \"guide\".",
     "project_template_level_name": "Allthethings Weblab2 template",
     "hide_share_and_remix": "false",
-    "ai_tutor_available": true,
-    "available_ai_tutor_modes": [
-      "suggest",
-      "outline",
-      "guide",
-      "produce"
-    ],
+    "ai_tutor_mode": "guide",
     "submittable": "false",
     "disable_edit_run_for_submission": "false",
     "widget_view": "false",

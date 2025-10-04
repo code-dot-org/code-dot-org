@@ -25529,11 +25529,28 @@ en:
         hoai-dance-pilot3:
           lessons: {}
           lesson_groups: {}
+          name: hoai-dance-pilot3
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
         hoai-dance-pilot4:
           lessons: {}
           lesson_groups: {}
           name: hoai-dance-pilot4
-          title: ''
+          title: Pilot 4
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        dani-test:
+          lessons:
+            lesson-1:
+              name: Web Lab 2 Test - October 2025
+          lesson_groups: {}
+          name: dani-test
+          title: Dani Test
           description_audience: ''
           description_short: ''
           description: ''

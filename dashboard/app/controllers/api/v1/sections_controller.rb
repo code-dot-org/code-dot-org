@@ -86,7 +86,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     params[:instructor_emails]&.each {|instructor_email| section.invite_instructor(instructor_email, current_user)}
 
     # TODO: Move to an after_create step on Section model when old API is fully deprecated
-    current_user.assign_script @unit if @unit
+    current_user.assign_script(@unit, @course) if @unit
 
     render json: section.summarize
   end
@@ -126,7 +126,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     section.update!(fields)
     if @unit
       section.students.each do |student|
-        student.assign_script(@unit)
+        student.assign_script(@unit, @course)
       end
     end
 

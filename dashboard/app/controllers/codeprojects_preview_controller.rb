@@ -13,6 +13,10 @@ class CodeprojectsPreviewController < ApplicationController
       # dashboard_site_host is set to use port 3000 in development, but we want to also allow port 9000.
       port_9000_url = code_studio_url.split(":").first + ":9000"
       code_studio_url += " #{port_9000_url}"
+
+      # Explicitly allow WebSocket connections to preview.localhost.codeprojects.org:9000, which is used by the webpack dev server
+      # both on ports 9000 and 3000.
+      allowed_connect_src += " ws://preview.localhost.codeprojects.org:9000/ws"
     end
 
     # Security Control: Set base resource loading policy ("default" is a fallback for unspecified resource types)
@@ -71,8 +75,10 @@ class CodeprojectsPreviewController < ApplicationController
       "img-src #{img_src}",
     ]
 
-    unless rack_env?(:development)
-      # In non-development environments, we ensure all requests are over HTTPS.
+    unless rack_env?(:development) || rack_env?(:test)
+      # In non-development or test environments, we ensure all requests are over HTTPS.
+      # This allows students to make requests to HTTP APIs from their projects.
+      # Development does not support HTTPS. Some test environments (such as drone) do not support HTTPS.
       policies << "upgrade-insecure-requests"
     end
     response.headers['Content-Security-Policy'] = policies.join('; ')

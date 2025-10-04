@@ -36,7 +36,11 @@ export const getAddToAiTutorField = (
           startingPosition,
           endingPosition
         );
-        const selectionDisplayName = `${filename} (${startingLine.number}-${endingLine.number})`;
+        const lineIndicator =
+          startingLine.number === endingLine.number
+            ? startingLine.number
+            : `${startingLine.number}-${endingLine.number}`;
+        const selectionDisplayName = `${filename} (${lineIndicator})`;
         const saveSelection = () =>
           dispatch(
             addItemToUserAddedSelectionContext({

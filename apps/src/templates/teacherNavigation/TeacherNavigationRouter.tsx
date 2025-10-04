@@ -228,9 +228,7 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
                     <GlobalEditionWrapper
                       component={SectionProgressSelector}
                       componentId="SectionProgressSelector"
-                      props={{
-                        isInV1Navigaton: false,
-                      }}
+                      props={{}}
                     />
                   }
                 />

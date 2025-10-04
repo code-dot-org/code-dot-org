@@ -1431,6 +1431,11 @@ Then /^I wait to see element with ID "(.*)"$/ do |element_id_to_seek|
   wait_short_until {@browser.find_element(id: element_id_to_seek)}
 end
 
+Then /^element with ID "(.*)" contains text "(.*)"$/ do |element_id, expected_text|
+  element = @browser.find_element(id: element_id)
+  expect(element.text).to include(expected_text)
+end
+
 Then /^I get redirected to "(.*)" via "(.*)"$/ do |new_path, redirect_source|
   wait_short_until {/#{new_path}/.match(@browser.execute_script("return location.pathname"))}
 
