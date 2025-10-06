@@ -148,6 +148,7 @@ const Weblab2View: React.FC<
     responseCallback: (response: string) => {
       console.log('hi from response callback');
       console.log({response});
+      // TODO: send code to the appropriate place
       const jsonResponse = JSON.parse(response);
       return jsonResponse.explanation;
     },
