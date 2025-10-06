@@ -7,6 +7,7 @@ import {
   ModelParameters,
   ChatButtonClickHandler,
   ChatButtonData,
+  ResponseSchemaSettings,
 } from '@cdo/apps/aichat/types';
 import ChatWorkspace from '@cdo/apps/aichat/views/ChatWorkspace';
 import {defaultPrompts, levelPrompts} from '@cdo/apps/aiTutor/suggestedPrompts';
@@ -43,27 +44,6 @@ const modelParameters: ModelParameters = {
   selectedModelId: aiTutorModelId,
   temperature: 0.5,
   retrievalContexts: [],
-  // responseJsonSchema: {
-  //   type: 'object',
-  //   properties: {
-  //     code: {
-  //       type: 'array',
-  //       items: {
-  //         type: 'object',
-  //         properties: {
-  //           language: {type: 'string'},
-  //           sourceCode: {type: 'string'},
-  //           filename: {type: 'string'},
-  //         },
-  //         required: ['language', 'sourceCode', 'filename'],
-  //         additionalProperties: false,
-  //       },
-  //     },
-  //     explanation: {type: 'string'},
-  //   },
-  //   required: ['code', 'explanation'],
-  //   additionalProperties: false,
-  // },
 } as const;
 
 // Some pre-canned chat buttons.
@@ -78,7 +58,7 @@ interface AiTutor2ChatProps {
   channelId?: string;
   aiTutorChatButtonData?: ChatButtonData[];
   aiTutorSystemPromptName?: string;
-  aiTutorResponseJsonSchema?: object;
+  aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
 }
 
 // A free chat with lab-supplied context added to each question.
@@ -89,7 +69,7 @@ const AiTutor2Chat: React.FunctionComponent<AiTutor2ChatProps> = ({
   channelId,
   aiTutorChatButtonData,
   aiTutorSystemPromptName,
-  aiTutorResponseJsonSchema,
+  aiTutorResponseSchemaSettings,
 }) => {
   const [systemPrompt, setSystemPrompt] = useState<string>();
 
@@ -168,16 +148,16 @@ const AiTutor2Chat: React.FunctionComponent<AiTutor2ChatProps> = ({
   const combinedModelParameters = useMemo(() => {
     if (!systemPrompt) {
       return undefined;
-    } else if (aiTutorResponseJsonSchema) {
+    } else if (aiTutorResponseSchemaSettings?.jsonSchema) {
       return {
         ...modelParameters,
         systemPrompt,
-        responseJsonSchema: aiTutorResponseJsonSchema,
+        responseJsonSchema: aiTutorResponseSchemaSettings?.jsonSchema,
       };
     } else {
       return {...modelParameters, systemPrompt};
     }
-  }, [aiTutorResponseJsonSchema, systemPrompt]);
+  }, [aiTutorResponseSchemaSettings?.jsonSchema, systemPrompt]);
 
   return combinedModelParameters ? (
     <div className={moduleStyles.container}>

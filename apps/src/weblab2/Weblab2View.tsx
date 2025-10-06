@@ -11,6 +11,7 @@ import React, {useEffect, useState} from 'react';
 import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
 import {LabProps, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 
+import {ResponseSchemaSettings} from '../aichat/types';
 import {useSource} from '../codebridge/hooks/useSource';
 import {useAppDispatch, useAppSelector} from '../util/reduxHooks';
 
@@ -142,6 +143,13 @@ const Weblab2View: React.FC<
     dispatch(setViewMode(levelProperties?.initialViewMode || ViewMode.SPLIT));
   }, [dispatch, levelProperties?.initialViewMode]);
 
+  const aiTutorResponseSchemaSettings: ResponseSchemaSettings = {
+    jsonSchema: aiTutorResponseJsonSchema,
+    responseCallback: (response: string) => {
+      console.log(response);
+    },
+  };
+
   return (
     <div className={moduleStyles.weblab2Container}>
       {hasSource && (
@@ -157,7 +165,7 @@ const Weblab2View: React.FC<
           aiTutorSystemPromptName={getPromptNameFromMode(
             levelProperties.aiTutorMode
           )}
-          aiTutorResponseJsonSchema={aiTutorResponseJsonSchema}
+          aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
         />
       )}
     </div>

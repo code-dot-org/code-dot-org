@@ -60,7 +60,7 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
     aiTutorSystemPromptName,
     aiTutorMultimodalEnabled,
     aiTutorChatButtonData,
-    aiTutorResponseJsonSchema,
+    aiTutorResponseSchemaSettings,
   } = useCodebridgeContext();
   const {
     mapReference,
@@ -219,7 +219,7 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
           isValidationTourEnabled={appName === 'pythonlab'}
           isOnboardingTourEnabled={true}
           aiTutorSystemPromptName={aiTutorSystemPromptName}
-          aiTutorResponseJsonSchema={aiTutorResponseJsonSchema}
+          aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
         />
       </div>
     );
