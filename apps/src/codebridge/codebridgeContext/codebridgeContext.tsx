@@ -34,6 +34,7 @@ export type CodebridgeContextType = {
   aiTutorChatButtonData?: ChatButtonData[];
   aiTutorContextHelper?: AiTutorContextHelper<object>;
   aiTutorSystemPromptName?: string;
+  aiTutorResponseJsonSchema?: object;
 };
 
 export const CodebridgeContext = createContext<CodebridgeContextType | null>(

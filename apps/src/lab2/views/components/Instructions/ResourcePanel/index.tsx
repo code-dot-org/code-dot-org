@@ -87,6 +87,7 @@ type ResourcePanelProps = InstructionsProps & {
   isValidationTourEnabled?: boolean;
   isOnboardingTourEnabled?: boolean;
   aiTutorSystemPromptName?: string;
+  aiTutorResponseJsonSchema?: object;
 };
 
 /**
@@ -108,6 +109,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   isValidationTourEnabled,
   isOnboardingTourEnabled,
   aiTutorSystemPromptName,
+  aiTutorResponseJsonSchema,
   ...instructionsProps
 }) => {
   const {theme} = useTheme();
@@ -179,6 +181,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
           channelId={channelId}
           aiTutorChatButtonData={aiTutorChatButtonData}
           aiTutorSystemPromptName={aiTutorSystemPromptName}
+          aiTutorResponseJsonSchema={aiTutorResponseJsonSchema}
         />
       );
     }
@@ -219,14 +222,15 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     isWidgetView,
     versionHistoryProps,
     showRubric,
-    aiTutorSystemPromptName,
+    hideInstructionsNavigation,
     aiTutorMultimodalEnabled,
     levelName,
     channelId,
     aiTutorChatButtonData,
+    aiTutorSystemPromptName,
+    aiTutorResponseJsonSchema,
     selectedVersion,
     levelId,
-    hideInstructionsNavigation,
   ]);
 
   useEffect(() => {

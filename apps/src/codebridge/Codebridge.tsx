@@ -47,6 +47,7 @@ type CodebridgeProps = {
   aiTutorChatButtonData?: ChatButtonData[];
   aiTutorContextHelper?: AiTutorContextHelper<object>;
   aiTutorSystemPromptName?: string;
+  aiTutorResponseJsonSchema?: object;
 };
 
 export const Codebridge = React.memo(
@@ -64,6 +65,7 @@ export const Codebridge = React.memo(
     aiTutorChatButtonData,
     aiTutorContextHelper,
     aiTutorSystemPromptName,
+    aiTutorResponseJsonSchema,
   }: CodebridgeProps) => {
     const isShareView = useAppSelector(state => state.lab.isShareView);
     const isWidgetView = !!levelProperties.widgetView;
@@ -194,6 +196,7 @@ export const Codebridge = React.memo(
           aiTutorChatButtonData,
           aiTutorContextHelper,
           aiTutorSystemPromptName,
+          aiTutorResponseJsonSchema,
         }}
       >
         <BackpackAPIContext.Provider value={backpackApi}>

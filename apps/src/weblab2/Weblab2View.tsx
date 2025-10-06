@@ -46,6 +46,28 @@ const defaultConfig: ConfigType = {
   },
 };
 
+const aiTutorResponseJsonSchema = {
+  type: 'object',
+  properties: {
+    code: {
+      type: 'array',
+      items: {
+        type: 'object',
+        properties: {
+          language: {type: 'string'},
+          sourceCode: {type: 'string'},
+          filename: {type: 'string'},
+        },
+        required: ['language', 'sourceCode', 'filename'],
+        additionalProperties: false,
+      },
+    },
+    explanation: {type: 'string'},
+  },
+  required: ['code', 'explanation'],
+  additionalProperties: false,
+};
+
 const defaultSource: MultiFileSource = {
   folders: {},
   files: {
@@ -135,6 +157,7 @@ const Weblab2View: React.FC<
           aiTutorSystemPromptName={getPromptNameFromMode(
             levelProperties.aiTutorMode
           )}
+          aiTutorResponseJsonSchema={aiTutorResponseJsonSchema}
         />
       )}
     </div>

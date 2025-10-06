@@ -43,27 +43,27 @@ const modelParameters: ModelParameters = {
   selectedModelId: aiTutorModelId,
   temperature: 0.5,
   retrievalContexts: [],
-  responseJsonSchema: {
-    type: 'object',
-    properties: {
-      code: {
-        type: 'array',
-        items: {
-          type: 'object',
-          properties: {
-            language: {type: 'string'},
-            sourceCode: {type: 'string'},
-            filename: {type: 'string'},
-          },
-          required: ['language', 'sourceCode', 'filename'],
-          additionalProperties: false,
-        },
-      },
-      explanation: {type: 'string'},
-    },
-    required: ['code', 'explanation'],
-    additionalProperties: false,
-  },
+  // responseJsonSchema: {
+  //   type: 'object',
+  //   properties: {
+  //     code: {
+  //       type: 'array',
+  //       items: {
+  //         type: 'object',
+  //         properties: {
+  //           language: {type: 'string'},
+  //           sourceCode: {type: 'string'},
+  //           filename: {type: 'string'},
+  //         },
+  //         required: ['language', 'sourceCode', 'filename'],
+  //         additionalProperties: false,
+  //       },
+  //     },
+  //     explanation: {type: 'string'},
+  //   },
+  //   required: ['code', 'explanation'],
+  //   additionalProperties: false,
+  // },
 } as const;
 
 // Some pre-canned chat buttons.
@@ -78,6 +78,7 @@ interface AiTutor2ChatProps {
   channelId?: string;
   aiTutorChatButtonData?: ChatButtonData[];
   aiTutorSystemPromptName?: string;
+  aiTutorResponseJsonSchema?: object;
 }
 
 // A free chat with lab-supplied context added to each question.
@@ -88,6 +89,7 @@ const AiTutor2Chat: React.FunctionComponent<AiTutor2ChatProps> = ({
   channelId,
   aiTutorChatButtonData,
   aiTutorSystemPromptName,
+  aiTutorResponseJsonSchema,
 }) => {
   const [systemPrompt, setSystemPrompt] = useState<string>();
 
@@ -163,11 +165,25 @@ const AiTutor2Chat: React.FunctionComponent<AiTutor2ChatProps> = ({
     }));
   }, [aiTutorChatButtonData]);
 
-  return systemPrompt ? (
+  const combinedModelParameters = useMemo(() => {
+    if (!systemPrompt) {
+      return undefined;
+    } else if (aiTutorResponseJsonSchema) {
+      return {
+        ...modelParameters,
+        systemPrompt,
+        responseJsonSchema: aiTutorResponseJsonSchema,
+      };
+    } else {
+      return {...modelParameters, systemPrompt};
+    }
+  }, [aiTutorResponseJsonSchema, systemPrompt]);
+
+  return combinedModelParameters ? (
     <div className={moduleStyles.container}>
       <ChatWorkspace
         clientType={AiChatClientTypes.AI_TUTOR}
-        modelParameters={{...modelParameters, systemPrompt}}
+        modelParameters={combinedModelParameters}
         chatButtons={chatButtons}
         hiddenContextCallback={hiddenContextCallback}
         multimodalEnabled={aiTutorMultimodalEnabled}
