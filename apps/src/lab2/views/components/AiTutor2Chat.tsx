@@ -170,6 +170,7 @@ const AiTutor2Chat: React.FunctionComponent<AiTutor2ChatProps> = ({
         levelName={levelName}
         channelId={channelId}
         hideModelChangeMessage={true}
+        responseCallback={aiTutorResponseSchemaSettings?.responseCallback}
       />
     </div>
   ) : (

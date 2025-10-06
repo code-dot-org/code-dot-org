@@ -146,7 +146,10 @@ const Weblab2View: React.FC<
   const aiTutorResponseSchemaSettings: ResponseSchemaSettings = {
     jsonSchema: aiTutorResponseJsonSchema,
     responseCallback: (response: string) => {
-      console.log(response);
+      console.log('hi from response callback');
+      console.log({response});
+      const jsonResponse = JSON.parse(response);
+      return jsonResponse.explanation;
     },
   };
 
