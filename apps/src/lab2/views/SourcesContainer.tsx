@@ -31,7 +31,7 @@ interface SourcesContextType<T extends ProjectSources = ProjectSources> {
   currentSources: T;
   updateSources: (newSources: T, forceSave?: boolean) => void;
   showStartOverDialog: (type: MessageType, message?: string) => void;
-  sourceInitializationCounter: number;
+  sourceInitializationCount: number;
 }
 
 const SourcesContext = createContext<SourcesContextType | null>(null);
@@ -56,14 +56,16 @@ const SourcesContainer: React.FC<
   const [currentSources, setCurrentSources] = useState<ProjectSources>(
     () => getInitialSources(levelProperties, initialSources) || defaultSources
   );
-  const [sourceInitializationCounter, setSourceInitializationCounter] =
-    useState(0);
+
+  // Gives an explicit signal to track when we are resetting sources
+  // via level change, a teacher switching between viewing different students, etc.
+  const [sourceInitializationCount, setSourceInitializationCount] = useState(0);
 
   useEffect(() => {
     setCurrentSources(
       getInitialSources(levelProperties, initialSources) || defaultSources
     );
-    setSourceInitializationCounter(count => count + 1);
+    setSourceInitializationCount(count => count + 1);
   }, [levelProperties, initialSources, defaultSources]);
 
   // Sources to reset to when starting over. Depends on the level edit mode.
@@ -90,6 +92,7 @@ const SourcesContainer: React.FC<
         }
         return newSources;
       });
+      setSourceInitializationCount(count => count + 1);
       Lab2Registry.getInstance()
         .getProjectManager()
         ?.save(newSources, forceSave);
@@ -120,7 +123,7 @@ const SourcesContainer: React.FC<
         currentSources,
         updateSources,
         showStartOverDialog,
-        sourceInitializationCounter,
+        sourceInitializationCount,
       }}
     >
       {children}
