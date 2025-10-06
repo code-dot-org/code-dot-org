@@ -140,11 +140,7 @@ class HomeController < ApplicationController
     @show_school_info_interstitial = params[:showSchoolInfoInterstitial]
     @show_section_creation_celebration_dialog = params[:showSectionCreationDialog]
 
-    # Students and teachers will receive a @top_course for their primary
-    # script, so we don't want to include that script (if it exists) in the
-    # regular lists of recent scripts.
-    exclude_primary_script = true
-    @homepage_data[:courses] = current_user.recent_student_courses_and_units(exclude_primary_script)
+    @homepage_data[:courses] = current_user.recent_student_courses_and_units
 
     @homepage_data[:hasFeedback] = TeacherFeedback.has_feedback?(current_user.id)
 
