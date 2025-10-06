@@ -1,5 +1,9 @@
+import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {Excalidraw, serializeAsJSON} from '@excalidraw/excalidraw';
-import {ExcalidrawElement} from '@excalidraw/excalidraw/types/element/types';
+import {
+  ExcalidrawElement,
+  Theme,
+} from '@excalidraw/excalidraw/types/element/types';
 import {
   AppState,
   BinaryFiles,
@@ -8,6 +12,7 @@ import {
 } from '@excalidraw/excalidraw/types/types';
 import React, {useEffect, useCallback, useRef, useState} from 'react';
 
+import useThemeSetting from '@cdo/apps/codebridge/hooks/useThemeSetting';
 import useLevelEditMode from '@cdo/apps/lab2/hooks/useLevelEditMode';
 import {useVerticalLayout} from '@cdo/apps/lab2/hooks/useVerticalLayout';
 import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
@@ -40,6 +45,8 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
   const {currentSources, updateSources} = useSources<SketchlabSources>();
   const saveSourcesTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const [excalidrawMountKey, setExcalidrawMountKey] = useState(0);
+
+  const {theme} = useTheme();
 
   const hasRun = useAppSelector(state => state.lab2System.hasRun);
 
@@ -162,6 +169,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
           isRunning={false}
           hasRun={hasRun}
           hasEdited={false}
+          settings={[useThemeSetting()]}
         />
       </div>
       <ResizeBar
@@ -180,6 +188,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
             onChange={debouncedSerializeAndSaveWorkspace}
             excalidrawAPI={api => (excalidrawApiRef.current = api)}
             key={excalidrawMountKey}
+            theme={theme.toLowerCase() as Theme}
           />
           {WorkspaceAlert}
         </PanelContainer>
