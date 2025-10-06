@@ -126,7 +126,7 @@ class UserScriptFindAndMigrateMethodsTest < ActiveSupport::TestCase
   end
 
   test "find_and_migrate_or_create_by! creates with nil unit_group when unit has no original unit_group" do
-    result = UserScript.find_and_migrate_or_create_by!(user_id: @user.id, unit: @unit_without_course, unit_group: nil)
+    result = UserScript.find_and_migrate_or_create_by!(user_id: @user.id, unit: @unit_without_course, unit_group: nil, skip_validation: true)
 
     assert_nil result.unit_group
     assert_equal @unit_without_course, result.script
@@ -134,7 +134,8 @@ class UserScriptFindAndMigrateMethodsTest < ActiveSupport::TestCase
   end
 
   test "find_and_migrate_or_create_by! migrates when no unit group is given" do
-    us = UserScript.create!(user: @user, script: @unit_in_course, unit_group: nil)
+    us = UserScript.new(user: @user, script: @unit_in_course, unit_group: nil)
+    us.save(validate: false)
 
     result = UserScript.find_and_migrate_or_create_by!(user_id: @user.id, unit: @unit_in_course)
 
@@ -143,7 +144,8 @@ class UserScriptFindAndMigrateMethodsTest < ActiveSupport::TestCase
   end
 
   test "find_and_migrate_or_create_by! migrates when original unit group is given" do
-    us = UserScript.create!(user: @user, script: @unit_in_course, unit_group: nil)
+    us = UserScript.new(user: @user, script: @unit_in_course, unit_group: nil)
+    us.save(validate: false)
 
     result = UserScript.find_and_migrate_or_create_by!(user_id: @user.id, unit: @unit_in_course, unit_group: @original_unit_group)
 
@@ -152,7 +154,8 @@ class UserScriptFindAndMigrateMethodsTest < ActiveSupport::TestCase
   end
 
   test "find_and_migrate_or_create_by! migrates to non-original unit group when specified" do
-    us = UserScript.create!(user: @user, script: @unit_in_course, unit_group: nil)
+    us = UserScript.new(user: @user, script: @unit_in_course, unit_group: nil)
+    us.save(validate: false)
 
     result = UserScript.find_and_migrate_or_create_by!(user_id: @user.id, unit: @unit_in_course, unit_group: @other_unit_group)
 

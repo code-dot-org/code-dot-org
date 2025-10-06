@@ -30,6 +30,8 @@ class UserScript < ApplicationRecord
   belongs_to :script, class_name: 'Unit'
   belongs_to :unit_group, optional: true
 
+  validates :unit_group, presence: true
+
   serialized_attrs %w(
     version_warning_dismissed
   )
@@ -72,7 +74,7 @@ class UserScript < ApplicationRecord
   #
   # TODO: TEACH-2168 once unit_group_id has been backfilled and has been marked as a required field,
   # remove the migration logic from this method and rename the method.
-  def self.find_and_migrate_or_create_by!(user_id:, unit:, unit_group: nil)
+  def self.find_and_migrate_or_create_by!(user_id:, unit:, unit_group: nil, skip_validation: false)
     unless unit_group.nil? || unit.old_professional_learning_course? || unit.cached.unit_groups.include?(unit_group)
       raise "Unit #{unit.name} must belong to Unit Group #{unit_group&.name}"
     end
@@ -93,6 +95,10 @@ class UserScript < ApplicationRecord
     return us if us
 
     # create
-    create!(user_id: user_id, script: unit, unit_group: unit_group)
+    # Skip validation only when explicitly requested (e.g., during migration testing)
+    # TODO: TEACH-2168 remove skip_validation parameter once unit_group_id is always required
+    us = new(user_id: user_id, script: unit, unit_group: unit_group)
+    us.save!(validate: !skip_validation)
+    us
   end
 end
