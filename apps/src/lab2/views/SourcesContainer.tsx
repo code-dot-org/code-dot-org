@@ -67,7 +67,7 @@ const SourcesContainer: React.FC<
   }>();
 
   const reinitializeSources = useCallback(
-    (sources: ProjectSources, save: boolean) => {
+    (sources: ProjectSources, save: boolean = false) => {
       setCurrentSources(sources);
       if (save) {
         Lab2Registry.getInstance().getProjectManager()?.save(sources, true);
@@ -79,8 +79,7 @@ const SourcesContainer: React.FC<
 
   useEffect(() => {
     reinitializeSources(
-      getInitialSources(levelProperties, initialSources) || defaultSources,
-      false
+      getInitialSources(levelProperties, initialSources) || defaultSources
     );
   }, [reinitializeSources, levelProperties, initialSources, defaultSources]);
 
