@@ -173,3 +173,20 @@ export interface DancerMetadata {
   tertiary_color?: string;
   [k: string]: unknown;
 }
+
+export type ResolvedDancerAssets = {
+  headUrl: string;
+  metadataUrl: string;
+};
+
+export type ResolveDancerAssetsOpts = {
+  /** Tag appended to headUrl as `?src=...` to avoid CORS errors */
+  sourceTag?: string; // e.g., 'blockly' | 'canvas'
+  getLocalStorage?: (key: string) => string | null;
+};
+
+export type LocalStoragePayload = {
+  adlibOption: string;
+  choices: string[];
+  variant: number | string;
+} | null;

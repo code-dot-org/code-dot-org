@@ -9451,6 +9451,8 @@ en:
               name: Lesson 10 - Data Visualization
             lesson-13:
               name: EscA.I.pe Room
+            lesson-14:
+              name: Sketch Lab Levels
           lesson_groups: {}
           name: emmas-playground
           title: ''
@@ -23596,6 +23598,46 @@ en:
           lesson_groups: {}
           name: 6-12-aif-s2-unit2
           title: "[DEV] AIF S2 Unit 2"
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        hoai-dance-pilot2:
+          lessons:
+            lesson-1:
+              name: test
+          lesson_groups: {}
+          name: hoai-dance-pilot2
+          title: hoai-dance-pilot2
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        hoai-dance-pilot3:
+          lessons: {}
+          lesson_groups: {}
+          name: hoai-dance-pilot3
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        hoai-dance-pilot4:
+          lessons: {}
+          lesson_groups: {}
+          name: hoai-dance-pilot4
+          title: Pilot 4
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        dani-test:
+          lessons:
+            lesson-1:
+              name: Web Lab 2 Test - October 2025
+          lesson_groups: {}
+          name: dani-test
+          title: Dani Test
           description_audience: ''
           description_short: ''
           description: ''

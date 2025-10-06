@@ -1,9 +1,11 @@
 import lottie, {type AnimationItem} from 'lottie-web';
 
+import {queryParams} from '@cdo/apps/code-studio/utils';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 import {
   CanvasAnimConfig,
+  DancerMetadata,
   HeadImageInfo,
   LottieAssetImage,
   LottieAssetPrecomp,
@@ -16,14 +18,26 @@ import {
   LottieShapeAny,
   LottieShapeFillOrStroke,
   LottieShapeGroup,
+  LocalStoragePayload,
   Palette,
+  ResolveDancerAssetsOpts,
+  ResolvedDancerAssets,
   RGBA,
 } from './LottieDancerTypes';
 
-export const BASE_HOST = 'https://curriculum.code.org/media/musiclab/generate';
+const BASE_HOST = 'https://curriculum.code.org/media/musiclab/generate';
 
-export const DEFAULT_HEAD_W = 1024;
-export const DEFAULT_HEAD_H = 1024;
+const DEFAULT_HEAD_W = 1024;
+const DEFAULT_HEAD_H = 1024;
+
+const ASSETS_FOLDER = 'basic2';
+const TEST_GENERATED_DANCER = 'basic-frog-baseball-cap-00';
+
+const DEFAULT_HEAD_URL = `${BASE_HOST}/dancer/${ASSETS_FOLDER}/${TEST_GENERATED_DANCER}.png`;
+const DEFAULT_METADATA_URL = `${BASE_HOST}/dancer/${ASSETS_FOLDER}/${TEST_GENERATED_DANCER}-metadata.json`;
+
+export const getConfigValue = (name: string) =>
+  queryParams(name) as string | undefined;
 
 // Given information about a generated dancer, this returns the URL for the head image.
 export function getGeneratedDancerAssets(
@@ -35,7 +49,7 @@ export function getGeneratedDancerAssets(
   const cacheFilePath = `${BASE_HOST}/dancer/${adlibOption}/${joinedChoices}-${variant
     .toString()
     .padStart(2, '0')}`;
-  const head = `${cacheFilePath}.png?src=canvas`;
+  const head = `${cacheFilePath}.png`;
   const metadata = `${cacheFilePath}-metadata.json`;
 
   return {head, metadata};
@@ -57,20 +71,13 @@ export function resolveMetadataUrl(
   return `${BASE_HOST}/dancer/${assetsPath}/${dancerName}-metadata.json`;
 }
 
-// Example: .../dancer/<assetsPath>/<dancerName>.png
-export function resolveHeadUrl(assetsPath: string, dancerName: string): string {
-  return `${BASE_HOST}/dancer/${assetsPath}/${dancerName}.png?src=canvas`;
-}
-
 export async function fetchJson<T>(url: string): Promise<T> {
   const {value} = await HttpClient.fetchJson<T>(url);
   return value;
 }
 
 // Metadata keeps colors in hex; we convert to normalized RGBA [0..1].
-export function normalizePalette(
-  metadata: Record<string, unknown> = {}
-): Palette {
+export function normalizePalette(metadata: DancerMetadata = {}): Palette {
   const toRGBA = (hex?: string | null): RGBA | null => {
     if (!hex) return null;
     const h = hex.replace('#', '');
@@ -81,8 +88,10 @@ export function normalizePalette(
   };
 
   const bodyColor = metadata['body_color'] as string | undefined;
-  const secondaryColor = metadata['secondary_color'] as string | undefined;
-  const tertiaryColor = metadata['tertiary_color'] as string | undefined;
+  const secondaryColor =
+    metadata['secondary_color'] || (bodyColor as string | undefined);
+  const tertiaryColor =
+    metadata['tertiary_color'] || (secondaryColor as string | undefined);
 
   return {
     primary: toRGBA(bodyColor),
@@ -92,7 +101,7 @@ export function normalizePalette(
 }
 
 // Accessory-name mapping used to recolor vector content in the Lottie JSON.
-export const ACCESSORY_MAP = {
+const ACCESSORY_MAP = {
   secondary: new Set<string>([
     'bracelet',
     'shirt high',
@@ -445,15 +454,6 @@ export function insertHeadImageLayer(
   );
 }
 
-export function safeParseJSON(str: string | null): unknown | null {
-  if (!str) return null;
-  try {
-    return JSON.parse(str);
-  } catch {
-    return null;
-  }
-}
-
 export function loadCanvasAnimation(config: CanvasAnimConfig): AnimationItem {
   // The upstream types for lottie-web requires `container` to be set,
   // but Lottie also supports a canvas with provided 2d context and no container.
@@ -461,4 +461,68 @@ export function loadCanvasAnimation(config: CanvasAnimConfig): AnimationItem {
   // prevent us from rendering into the provided canvas context.
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   return (lottie.loadAnimation as any)(config);
+}
+
+/**
+ * Resolves the generated dancer assets (head PNG + metadata JSON).
+ * Source of truth order:
+ *   1) URL params (?path=...&dancer=...) → use exactly that dancer
+ *   2) localStorage('dancer-ai-generate') with {adlibOption, choices[], variant}
+ *   3) hardcoded fallbacks (DEFAULT_HEAD_URL / DEFAULT_METADATA_URL)
+ * TODO: Use channel ID instead of local storage.
+ */
+export function resolveDancerAssets(
+  opts: ResolveDancerAssetsOpts = {}
+): ResolvedDancerAssets {
+  const {sourceTag = 'adefaultpp'} = opts;
+
+  const srcSuffix = `?src=${encodeURIComponent(sourceTag)}`;
+
+  // 1) Explicit dancer via URL params
+  const pathParam = getConfigValue('path');
+  const dancerParam = getConfigValue('dancer')?.toLowerCase();
+
+  if (dancerParam && pathParam) {
+    const prefix = `${BASE_HOST}/dancer/${pathParam}/${dancerParam}`;
+    return {
+      headUrl: `${prefix}.png${srcSuffix}`,
+      metadataUrl: `${prefix}-metadata.json`,
+    };
+  }
+
+  // 2) Generated dancer from localStorage
+
+  let localStorageOptions: LocalStoragePayload = null;
+  try {
+    const raw = localStorage.getItem('dancer-ai-generate');
+    localStorageOptions = raw ? (JSON.parse(raw) as LocalStoragePayload) : null;
+  } catch {
+    localStorageOptions = null;
+  }
+
+  const adlibOption = localStorageOptions?.adlibOption;
+  const choices = Array.isArray(localStorageOptions?.choices)
+    ? (localStorageOptions!.choices as string[])
+    : null;
+
+  const variant = localStorageOptions?.variant;
+
+  if (
+    adlibOption &&
+    choices &&
+    choices.length > 0 &&
+    typeof variant === 'number'
+  ) {
+    const assets = getGeneratedDancerAssets(adlibOption, choices, variant);
+    return {
+      headUrl: `${assets.head}${srcSuffix}`,
+      metadataUrl: assets.metadata,
+    };
+  }
+
+  // 3) Exact fallback defaults
+  return {
+    headUrl: `${DEFAULT_HEAD_URL}${srcSuffix}`,
+    metadataUrl: DEFAULT_METADATA_URL,
+  };
 }
