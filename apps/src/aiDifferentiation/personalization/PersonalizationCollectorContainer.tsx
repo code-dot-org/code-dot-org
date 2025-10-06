@@ -40,6 +40,8 @@ const PersonalizationCollectorContainer: React.FC = () => {
   const [personalizationData, setPersonalizationData] = React.useState<
     Partial<PersonalizationData>
   >({});
+  const [matchedTeachingProfile, setMatchedTeachingProfile] =
+    React.useState('The Innovator');
 
   const NEXT = 1;
   const BACK = -1;
@@ -102,20 +104,29 @@ const PersonalizationCollectorContainer: React.FC = () => {
       if (!isSaving) {
         setIsSaving(true);
         try {
+          // Save the data first
           await saveTeachingProfileData(personalizationData);
+
+          console.log('Final Personalization Data:', personalizationData);
+
+          // Call the matching API and wait for the result
+          const profileMatch = await matchTeachingProfile(personalizationData);
+          console.log('Teaching Profile Match:', profileMatch);
+
+          // Store the matched profile name
+          if (profileMatch?.matchingProfile) {
+            setMatchedTeachingProfile(profileMatch.matchingProfile);
+          }
+
+          // Only show results after we have the matched profile
           setShowResults(true);
         } catch (error) {
-          console.error('Failed to save final teaching profile data:', error);
+          console.error('Error in final step:', error);
+          // Still show results even if matching fails, using default
+          setShowResults(true);
         } finally {
           setIsSaving(false);
         }
-      }
-      console.log('Final Personalization Data:', personalizationData);
-      try {
-        const profileMatch = await matchTeachingProfile(personalizationData);
-        console.log('Teaching Profile Match:', profileMatch);
-      } catch (error) {
-        console.error('Error matching teaching profile:', error);
       }
       return;
     }
@@ -212,12 +223,22 @@ const PersonalizationCollectorContainer: React.FC = () => {
     }
   }, [questionsNumber, personalizationData]);
 
+  const findTeachingStyle = (styleName: string) => {
+    return TEACHING_STYLES.find(style => style.name === styleName);
+  };
+
   return (
     <div className={style.carouselContainer}>
       {isLoading ? (
         <div>Loading...</div>
       ) : showResults ? (
-        <PersonalizationResults teachingStyle={TEACHING_STYLES[0]} />
+        <PersonalizationResults
+          teachingStyle={
+            matchedTeachingProfile
+              ? findTeachingStyle(matchedTeachingProfile) ?? TEACHING_STYLES[0]
+              : TEACHING_STYLES[0] // fallback if no match found
+          }
+        />
       ) : (
         <>
           <PersonalizationQuestion questionNumber={questionsNumber} />
@@ -250,15 +271,3 @@ const PersonalizationCollectorContainer: React.FC = () => {
 };
 
 export default PersonalizationCollectorContainer;
-//     if (
-//       direction === NEXT &&
-//       questionsNumber === PERSONALIZATION_PROMPTS.length - 1
-//     ) {
-//       try {
-//         const profileMatch = await matchTeachingProfile(personalizationData);
-//         console.log('Teaching Profile Match:', profileMatch);
-//       } catch (error) {
-//         console.error('Error matching teaching profile:', error);
-//       }
-//       return;
-//     }

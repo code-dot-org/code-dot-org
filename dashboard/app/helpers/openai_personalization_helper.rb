@@ -1,4 +1,5 @@
 module OpenaiPersonalizationHelper
+  # NEED TO CHANGE THIS KEY
   API_KEY = CDO.openai_measures_of_learning_api_key
   MODEL = SharedConstants::PERSONALIZATION_MODEL_VERSION
 
@@ -21,7 +22,13 @@ module OpenaiPersonalizationHelper
 
     messages = prepend_system_prompt(system_prompt, [{role: "user", content: user_message}])
 
+    puts "user_message"
+    puts user_message
+    puts "messages"
+    puts messages
+
     begin
+      #. I think the line below is where things are going sideways
       response = client.request_evaluation(messages)
       response_body = JSON.parse(response.body)
       response_body = response_body['choices'][0]['message'] if response.code == 200
@@ -152,7 +159,8 @@ module OpenaiPersonalizationHelper
   end
 
   def self.client
-    AiEvaluationOpenaiHelper::Client.new(API_KEY, MODEL)
+    # this is the line that I cahanged.
+    PersonalizationOpenaiHelper::Client.new(API_KEY, MODEL)
   end
 
   def self.prepend_system_prompt(system_prompt, messages)
