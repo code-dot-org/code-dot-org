@@ -48,24 +48,6 @@ class AssignedCoursesAndScripts < ActiveSupport::TestCase
     end
   end
 
-  describe '#visible_scripts' do
-    subject(:visible_scripts) {student.visible_scripts}
-    let(:visible_script) {create(:script, :in_single_unit_course, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)}
-    let(:hidden_script) {create(:script, :in_single_unit_course, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta)}
-
-    context 'when the student is assigned scripts' do
-      before do
-        student.assign_script(visible_script)
-        student.assign_script(hidden_script)
-      end
-
-      it 'only returns the script visible script' do
-        _(visible_scripts.length).must_equal 1
-        _(visible_scripts.first).must_equal visible_script
-      end
-    end
-  end
-
   describe '#any_visible_assigned_scripts?' do
     subject(:any_visible_assigned_scripts?) {student.any_visible_assigned_scripts?}
     let(:visible_script) {create(:script, :in_single_unit_course, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)}
@@ -498,34 +480,16 @@ class AssignedCoursesAndScripts < ActiveSupport::TestCase
     end
 
     describe '#recent_student_courses_and_units' do
-      subject(:recent_student_courses_and_units) {student.recent_student_courses_and_units(false)}
+      subject(:recent_student_courses_and_units) {student.recent_student_courses_and_units}
 
       it 'returns both courses and scripts' do
-        _(recent_student_courses_and_units.length).must_equal 2
+        _(recent_student_courses_and_units.length).must_equal 1
         course_data = recent_student_courses_and_units.first
-        script_data = recent_student_courses_and_units.last
 
         _(course_data[:name]).must_equal 'csd'
         _(course_data[:title]).must_equal 'Computer Science Discoveries'
         _(course_data[:description]).must_equal 'CSD short description'
         _(course_data[:link]).must_equal '/courses/csd'
-
-        _(script_data[:name]).must_equal 'other'
-        _(script_data[:title]).must_equal 'Unit Other'
-        _(script_data[:description]).must_equal 'other-description'
-        _(script_data[:link]).must_equal '/s/other'
-      end
-
-      it 'does not return student scripts that are in returned student courses' do
-        script = Unit.find_by_name('csd1')
-        student.assign_script(script)
-
-        _(recent_student_courses_and_units.length).must_equal 2
-        _(recent_student_courses_and_units.pluck(:title)).must_equal [
-          'Computer Science Discoveries',
-          'Unit Other'
-        ]
-        _(recent_student_courses_and_units.pluck(:name)).wont_include 'csd1'
       end
     end
   end

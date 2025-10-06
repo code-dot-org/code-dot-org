@@ -21,10 +21,6 @@ module User::AssignedCoursesAndScripts
     unit_groups.concat(section_courses).uniq
   end
 
-  def visible_scripts
-    scripts.map(&:cached).select {|s| [Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview].include?(s.get_published_state)}
-  end
-
   def assigned_script?(script)
     section_scripts.include?(script) || section_courses.include?(script&.get_original_unit_group)
   end
