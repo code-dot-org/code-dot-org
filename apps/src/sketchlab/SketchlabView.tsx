@@ -37,7 +37,8 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
   levelProperties,
 }) => {
   const excalidrawApiRef = useRef<ExcalidrawImperativeAPI | null>();
-  const {currentSources, updateSources} = useSources<SketchlabSources>();
+  const {currentSources, updateSources, sourceInitializationCounter} =
+    useSources<SketchlabSources>();
   const saveSourcesTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const [excalidrawMountKey, setExcalidrawMountKey] = useState(0);
 
@@ -122,25 +123,9 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
     };
   }, []);
 
-  // This effect runs on each source change,
-  // but the full remount (via key change) is only intended when
-  // Excalidraw state diverges from the saved source state.
-  // This happens when a user switches levels, or a teachers switches
-  // between viewing different students on the same level.
   useEffect(() => {
-    // Note that we do not compare appState, as Excalidraw tracks a lot of app state properties
-    // that we do not store to S3.
-    const excalidrawApi = excalidrawApiRef.current;
-    if (
-      excalidrawApi &&
-      (JSON.stringify(excalidrawApi.getSceneElements()) !==
-        JSON.stringify(currentSources.source.elements) ||
-        JSON.stringify(excalidrawApi.getFiles()) !==
-          JSON.stringify(currentSources.source.files))
-    ) {
-      setExcalidrawMountKey(key => key + 1);
-    }
-  }, [currentSources.source]);
+    setExcalidrawMountKey(key => key + 1);
+  }, [sourceInitializationCounter]);
 
   // Since there's no run button in Sketch Lab, set it to true by default
   // to enable the Submit button on edit on submittable levels.

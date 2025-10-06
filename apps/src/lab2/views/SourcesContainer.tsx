@@ -31,6 +31,7 @@ interface SourcesContextType<T extends ProjectSources = ProjectSources> {
   currentSources: T;
   updateSources: (newSources: T, forceSave?: boolean) => void;
   showStartOverDialog: (type: MessageType, message?: string) => void;
+  sourceInitializationCounter: number;
 }
 
 const SourcesContext = createContext<SourcesContextType | null>(null);
@@ -55,11 +56,14 @@ const SourcesContainer: React.FC<
   const [currentSources, setCurrentSources] = useState<ProjectSources>(
     () => getInitialSources(levelProperties, initialSources) || defaultSources
   );
+  const [sourceInitializationCounter, setSourceInitializationCounter] =
+    useState(0);
 
   useEffect(() => {
     setCurrentSources(
       getInitialSources(levelProperties, initialSources) || defaultSources
     );
+    setSourceInitializationCounter(count => count + 1);
   }, [levelProperties, initialSources, defaultSources]);
 
   // Sources to reset to when starting over. Depends on the level edit mode.
@@ -112,7 +116,12 @@ const SourcesContainer: React.FC<
 
   return (
     <SourcesContext.Provider
-      value={{currentSources, updateSources, showStartOverDialog}}
+      value={{
+        currentSources,
+        updateSources,
+        showStartOverDialog,
+        sourceInitializationCounter,
+      }}
     >
       {children}
       {startOverProps && (
