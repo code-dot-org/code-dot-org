@@ -148,11 +148,11 @@ class HomeController < ApplicationController
 
     @homepage_data[:hasFeedback] = TeacherFeedback.has_feedback?(current_user.id)
 
-    script = Queries::ScriptActivity.primary_student_unit(current_user)
-    if script
+    unit_context = Queries::ScriptActivity.primary_student_unit_context(current_user)
+    if unit_context
+      script = unit_context[:unit]
       script_level = current_user.next_unpassed_progression_level(script)
-      unit_group = script.get_original_unit_group
-      unit_group_unit = script.unit_group_units.find {|ugu| ugu.unit_group == unit_group} if unit_group
+      unit_group_unit = unit_context[:unit_group_unit]
     end
     @homepage_data[:topCourse] = nil
     if script && script_level
