@@ -12,8 +12,8 @@ import {
 } from '@excalidraw/excalidraw/types/types';
 import React, {useEffect, useCallback, useRef, useState} from 'react';
 
-import useThemeSetting from '@cdo/apps/codebridge/hooks/useThemeSetting';
 import useLevelEditMode from '@cdo/apps/lab2/hooks/useLevelEditMode';
+import useThemeSetting from '@cdo/apps/lab2/hooks/useThemeSetting';
 import {useVerticalLayout} from '@cdo/apps/lab2/hooks/useVerticalLayout';
 import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
 import {LabProps, LevelProperties, ProjectSources} from '@cdo/apps/lab2/types';
@@ -169,7 +169,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
           isRunning={false}
           hasRun={hasRun}
           hasEdited={false}
-          settings={[useThemeSetting()]}
+          settings={[useThemeSetting('sketchlab')]}
         />
       </div>
       <ResizeBar
