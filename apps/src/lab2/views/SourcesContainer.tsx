@@ -61,12 +61,28 @@ const SourcesContainer: React.FC<
   // via level change, a teacher switching between viewing different students, etc.
   const [sourceInitializationCount, setSourceInitializationCount] = useState(0);
 
+  const [startOverProps, setStartOverProps] = useState<{
+    type: MessageType;
+    message?: string;
+  }>();
+
+  const reinitializeSources = useCallback(
+    (sources: ProjectSources, save: boolean) => {
+      setCurrentSources(sources);
+      if (save) {
+        Lab2Registry.getInstance().getProjectManager()?.save(sources, true);
+      }
+      setSourceInitializationCount(count => count + 1);
+    },
+    [setCurrentSources, setSourceInitializationCount]
+  );
+
   useEffect(() => {
-    setCurrentSources(
-      getInitialSources(levelProperties, initialSources) || defaultSources
+    reinitializeSources(
+      getInitialSources(levelProperties, initialSources) || defaultSources,
+      false
     );
-    setSourceInitializationCount(count => count + 1);
-  }, [levelProperties, initialSources, defaultSources]);
+  }, [reinitializeSources, levelProperties, initialSources, defaultSources]);
 
   // Sources to reset to when starting over. Depends on the level edit mode.
   const startOverSources: ProjectSources = useMemo(() => {
@@ -92,7 +108,6 @@ const SourcesContainer: React.FC<
         }
         return newSources;
       });
-      setSourceInitializationCount(count => count + 1);
       Lab2Registry.getInstance()
         .getProjectManager()
         ?.save(newSources, forceSave);
@@ -101,14 +116,9 @@ const SourcesContainer: React.FC<
   );
 
   const onStartOver = useCallback(() => {
-    updateSources(startOverSources as ProjectSources, true);
+    reinitializeSources(startOverSources as ProjectSources, true);
     setStartOverProps(undefined);
-  }, [startOverSources, updateSources]);
-
-  const [startOverProps, setStartOverProps] = useState<{
-    type: MessageType;
-    message?: string;
-  }>();
+  }, [reinitializeSources, startOverSources]);
 
   const showStartOverDialog = useCallback(
     (type: MessageType, message?: string) => {
