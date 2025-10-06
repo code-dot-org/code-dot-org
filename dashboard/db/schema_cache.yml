@@ -2686,65 +2686,7 @@ columns:
     default: 
     default_function: 
     collation: 
-    comment: 
-  google_sheets_shared_cdo_donors:
-  - *5
-  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
-    name: name_s
-    sql_type_metadata: *3
-    'null': true
-    default: 
-    default_function: 
-    collation: utf8mb3_general_ci
-    comment: 
-  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
-    name: url_s
-    sql_type_metadata: *3
-    'null': true
-    default: 
-    default_function: 
-    collation: utf8mb3_general_ci
-    comment: 
-  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
-    name: show_s
-    sql_type_metadata: *3
-    'null': true
-    default: 
-    default_function: 
-    collation: utf8mb3_general_ci
-    comment: 
-  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
-    name: twitter_s
-    sql_type_metadata: *3
-    'null': true
-    default: 
-    default_function: 
-    collation: utf8mb3_general_ci
-    comment: 
-  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
-    name: level_s
-    sql_type_metadata: *3
-    'null': true
-    default: 
-    default_function: 
-    collation: utf8mb3_general_ci
-    comment: 
-  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
-    name: weight_f
-    sql_type_metadata: *54
-    'null': true
-    default: 
-    default_function: 
-    collation: 
-    comment: 
-  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
-    name: twitter_weight_f
-    sql_type_metadata: *54
-    'null': true
-    default: 
-    default_function: 
-    collation: 
-    comment: 
+    comment:
   google_sheets_shared_cdo_languages:
   - *5
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
@@ -8363,7 +8305,6 @@ primary_keys:
   foorm_submissions: id
   frameworks: id
   games: id
-  google_sheets_shared_cdo_donors: id
   google_sheets_shared_cdo_languages: id
   hint_view_requests: id
   learning_goal_ai_evaluation_feedbacks: id
@@ -8578,7 +8519,6 @@ data_sources:
   foorm_submissions: true
   frameworks: true
   games: true
-  google_sheets_shared_cdo_donors: true
   google_sheets_shared_cdo_languages: true
   hint_view_requests: true
   learning_goal_ai_evaluation_feedbacks: true
@@ -10143,8 +10083,7 @@ indexes:
     where: 
     type: 
     using: :btree
-    comment: 
-  google_sheets_shared_cdo_donors: []
+    comment:
   google_sheets_shared_cdo_languages:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: google_sheets_shared_cdo_languages
