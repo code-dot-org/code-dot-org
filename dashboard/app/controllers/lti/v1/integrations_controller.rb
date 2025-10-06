@@ -1,11 +1,6 @@
 # frozen_string_literal: true
 
-require "queries/lti"
-require "services/lti"
-require "policies/lti"
-require 'metrics/events'
-
-module Lti
+module LTI
   module V1
     class IntegrationsController < ApplicationController
       # POST /lti/v1/integrations
@@ -13,7 +8,7 @@ module Lti
       def create
         begin
           params.require([:name, :client_id, :lms, :email])
-        rescue
+        rescue ActionController::ParameterMissing
           flash.alert = I18n.t('lti.error.missing_params')
           return redirect_to new_lti_v1_integration_path
         end
