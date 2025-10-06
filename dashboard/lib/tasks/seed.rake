@@ -666,7 +666,7 @@ namespace :seed do
   timed_task_with_logging :import_pegasus_data do
     db = DASHBOARD_DB
     table_prefix = "google_sheets_shared_"
-    files_to_import = %w[data/cdo-languages.csv data/cdo-donors.csv]
+    files_to_import = %w[data/cdo-languages.csv]
     files_to_import.each {|file_to_import| CsvToSqlTable.new(pegasus_dir(file_to_import), db, table_prefix).import}
   end
 

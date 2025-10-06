@@ -33,7 +33,7 @@
     "default_song": "introtoshamstep_47SOUL",
     "uses_lab2": "true",
     "generate_dancer_mode": "true",
-    "ai_dancer_generate_adlib": "animal",
+    "ai_dancer_generate_adlib": "animal-02",
     "display_name": "Regenerate the dancer",
     "thumbnail_url": "https://images.code.org/fee53ded35d6598a66212e175e51e83d-Group 87 (4).png",
     "project_template_level_name": " pilot_generate_dancer_template",

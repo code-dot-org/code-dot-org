@@ -229,13 +229,15 @@ class CourseOffering < ApplicationRecord
     end
   end
 
-  def self.self_paced_course_offerings_for_catalog
-    all_course_offerings.select do |co|
+  def self.self_paced_course_offerings_for_catalog(user = nil, locale = 'en-us')
+    offerings = all_course_offerings.select do |co|
       co.get_participant_audience == 'teacher' &&
         co.instruction_type == 'self_paced' &&
         co.assignable? &&
         co.any_version_is_in_published_state?
-    end.map(&:summarize_for_catalog)
+    end
+
+    offerings.map {|co| co.summarize_for_catalog(locale, user)}
   end
 
   def self.self_paced_pl_course_offerings_for_workshops
@@ -330,16 +332,16 @@ class CourseOffering < ApplicationRecord
     !latest_stable_version.nil?
   end
 
-  def upcoming_facilitated_workshops
+  def upcoming_facilitated_workshops(user = nil)
     return [] if pd_workshops.blank?
 
-    workshops = pd_workshops.select do |ws|
-      !ws.hidden &&
-        ws.sessions.any? &&
-        ws.sessions.first.start > Time.zone.now
+    facilitated_workshops = pd_workshops.select do |ws|
+      ws.sessions.any? &&
+        ws.sessions.first.start > Time.zone.now &&
+        ws.relevant_to_user?(user)
     end
 
-    workshops.sort_by {|ws| ws.sessions.first.start}
+    facilitated_workshops.sort_by {|ws| ws.sessions.first.start}
   end
 
   def summarize_for_edit
@@ -366,7 +368,7 @@ class CourseOffering < ApplicationRecord
     }
   end
 
-  def summarize_for_catalog(locale_code = 'en-us')
+  def summarize_for_catalog(locale_code = 'en-us', user = nil)
     {
       key: key,
       display_name: localized_display_name,
@@ -389,9 +391,14 @@ class CourseOffering < ApplicationRecord
       video: video,
       published_date: published_date,
       self_paced_pl_course_offering_path: self_paced_pl_course_offering&.path_to_latest_published_version(locale_code),
+      self_paced_pl_course_offering_id: self_paced_pl_course_offering_id,
       available_resources: get_available_resources(locale_code),
-      facilitated_workshops: Array(upcoming_facilitated_workshops).map(&:summarize_for_pl_catalog)
+      facilitated_workshops: Array(upcoming_facilitated_workshops(user)).map(&:summarize_for_pl_catalog)
     }
+  end
+
+  def self.students_course_offerings_for_catalog
+    assignable_published_for_students_course_offerings.map(&:summarize_for_catalog)
   end
 
   def serialize
