@@ -3,13 +3,13 @@ import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {Heading5} from '@code-dot-org/component-library/typography';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
-import LottieDancerRenderer from '@cdo/apps/dance/lottie/LottieDancerRenderer';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
 import {LevelProperties} from '@cdo/apps/lab2/types';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import Adlib, {AdlibsType} from '@cdo/apps/lab2/views/components/guide/Adlib';
 import Guide from '@cdo/apps/lab2/views/components/guide/Guide';
+import DancerCanvas from '@cdo/apps/lab2/views/DancerCanvas';
 import getRandomInt from '@cdo/apps/util/getRandomInt';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {trySetLocalStorage} from '@cdo/apps/utils';
@@ -151,85 +151,17 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
     setAiGenerateState('done');
   }, [generateDancerCache]);
 
-  const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const containerRef = useRef<HTMLDivElement | null>(null);
-  const rafRef = useRef<number | null>(null);
-  const rendererRef = useRef<LottieDancerRenderer | null>(null);
+  const [containerHeight, setContainerHeight] = useState(0);
   useEffect(() => {
-    if (aiGenerateState !== 'done') {
-      // Tear down any existing renderer when we leave "done"
-      if (rafRef.current) cancelAnimationFrame(rafRef.current);
-      rafRef.current = null;
-      rendererRef.current?.destroyAnim();
-      rendererRef.current = null;
-      return;
-    }
-
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-
-    // Make the canvas a square matching the container’s height
-    const resizeCanvas = () => {
-      const h = containerRef.current?.clientHeight ?? 0;
-      if (h > 0) {
-        canvas.width = h;
-        canvas.height = h;
-        rendererRef.current?.resize();
-      }
-    };
-    resizeCanvas();
-
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
-
-    let cancelled = false;
-
-    (async () => {
-      // Create/init renderer and load the 'rest' move.
-      const r = new LottieDancerRenderer();
-      r.init(ctx as unknown as CanvasRenderingContext2D);
-      await r.setSource('rest');
-      if (cancelled) return;
-
-      rendererRef.current = r;
-
-      // Simple RAF loop over frames (mirror after each full loop)
-      let frame = 0; // floating frame counter; renderer floors internally
-      let loopIndex = 0; // which loop we’re on
-      let mirror = false; // flip every time we start a new loop
-      const speed = 0.5; // frames advanced per RAF tick (your previous "/ 2")
-
-      const tick = () => {
-        const total = (r.getTotalFrames() ?? 1) || 1;
-
-        // If we advanced into a new loop, toggle mirror
-        const nextLoopIndex = Math.floor(frame / total);
-        if (nextLoopIndex !== loopIndex) {
-          loopIndex = nextLoopIndex;
-          mirror = !mirror;
-        }
-
-        r.renderFrame(frame);
-        frame += speed;
-
-        rafRef.current = requestAnimationFrame(tick);
-      };
-      tick();
-    })();
-
-    // Keep canvas sized to container
-    const ro = new ResizeObserver(() => resizeCanvas());
-    if (containerRef.current) ro.observe(containerRef.current);
-
-    return () => {
-      cancelled = true;
-      ro.disconnect();
-      if (rafRef.current) cancelAnimationFrame(rafRef.current);
-      rafRef.current = null;
-      rendererRef.current?.destroyAnim();
-      rendererRef.current = null;
-    };
-  }, [aiGenerateState]);
+    if (!containerRef.current) return;
+    const ro = new ResizeObserver(() => {
+      setContainerHeight(containerRef.current?.clientHeight ?? 0);
+    });
+    ro.observe(containerRef.current);
+    setContainerHeight(containerRef.current.clientHeight ?? 0);
+    return () => ro.disconnect();
+  }, []);
 
   return (
     <div id="dance-lab" className={moduleStyles.dancerGenerate}>
@@ -299,7 +231,7 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
       <div className={moduleStyles.dancerContainer}>
         <div className={moduleStyles.dancerContainer} ref={containerRef}>
           {aiGenerateState === 'done' ? (
-            <canvas ref={canvasRef} aria-label="Generated dancer animation" />
+            <DancerCanvas height={containerHeight} move="rest" />
           ) : (
             <img alt="" src={dancerEmptyHeadShoulders} />
           )}
