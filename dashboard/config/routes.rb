@@ -1293,6 +1293,7 @@ Dashboard::Application.routes.draw do
 
     post '/openai/evaluate', to: 'openai_evaluate#evaluate'
     post '/openai/evaluate_section', to: 'openai_evaluate#evaluate_section'
+    post '/openai/match_teaching_profile', to: 'openai_personalization#match_teaching_profile'
 
     post '/aichat_request/start_chat_completion', to: 'aichat_requests#start_chat_completion'
     get '/aichat_request/chat_request/:id', to: 'aichat_requests#chat_request'
