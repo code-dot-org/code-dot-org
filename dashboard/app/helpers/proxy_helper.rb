@@ -22,17 +22,24 @@ module ProxyHelper
     url = URI.parse(location)
 
     raise URI::InvalidURIError.new if url.host.nil? || url.port.nil?
-    unless allowed_ip_address?(url.host)
+    
+    # SECURITY FIX: Resolve hostname to IP address once and cache it to prevent DNS race condition
+    # This prevents an attacker from changing DNS between validation and actual request
+    resolved_ip_address = resolve_and_validate_ip_address(url.host)
+    unless resolved_ip_address
       render_error_response 400, "Target IP address is restricted"
       return
     end
+    
     unless allowed_hostname?(url, allowed_hostname_suffixes)
       render_error_response 400, "Hostname '#{url.host}' is not in the list of allowed hostnames. " \
           "The list of allowed hostname suffixes is: #{allowed_hostname_suffixes.join(', ')}. " \
           "If you wish to access a URL which is not currently allowed, please email support@code.org."
       return
     end
-    http = Net::HTTP.new(url.host, url.port)
+    
+    # Use the resolved IP address instead of hostname to prevent DNS race condition
+    http = Net::HTTP.new(resolved_ip_address, url.port)
     http.use_ssl = url.scheme == 'https'
     path = url.path.empty? ? '/' : url.path
     query = url.query || ''
@@ -43,7 +50,12 @@ module ProxyHelper
 
     # Get the media.
     query_string = query.empty? ? '' : "?#{query}" # don't include the ? if the query is empty
-    media = http.request_get(path + query_string)
+    
+    # SECURITY FIX: Set Host header to original hostname to ensure proper virtual hosting
+    # This is required when using IP address instead of hostname for the connection
+    request = Net::HTTP::Get.new(path + query_string)
+    request['Host'] = url.host
+    media = http.request(request)
 
     # generate content-type from file name if we weren't given one
     if media.content_type.nil?
@@ -106,7 +118,13 @@ module ProxyHelper
       return 200, location
     end
 
-    http = Net::HTTP.new(url.host, url.port)
+    # SECURITY FIX: Use resolved IP address to prevent DNS race condition
+    resolved_ip_address = resolve_and_validate_ip_address(url.host)
+    unless resolved_ip_address
+      return 400, "Target IP address is restricted"
+    end
+
+    http = Net::HTTP.new(resolved_ip_address, url.port)
     http.use_ssl = url.scheme == 'https'
     path = url.path.empty? ? '/' : url.path
     query = url.query || ''
@@ -116,7 +134,10 @@ module ProxyHelper
     http.read_timeout = 3
 
     # Get the response.
-    response = http.request_head(path + '?' + query)
+    # SECURITY FIX: Set Host header for proper virtual hosting
+    request = Net::HTTP::Head.new(path + '?' + query)
+    request['Host'] = url.host
+    response = http.request(request)
 
     if response.is_a? Net::HTTPRedirection
       resolve_redirect_url(response['location'], allowed_hostname_suffixes: allowed_hostname_suffixes, redirect_limit: redirect_limit - 1)
@@ -150,6 +171,17 @@ module ProxyHelper
   private def render_error_response(status, text)
     prevent_caching
     render plain: text, status: status
+  end
+
+  # SECURITY FIX: Resolve hostname to IP address and validate it's allowed
+  # This prevents DNS race condition by resolving once and caching the result
+  private def resolve_and_validate_ip_address(hostname)
+    host_ip_address = IPAddr.new(IPSocket.getaddress(hostname))
+    if public_ip_address?(host_ip_address) || host_ip_address == ProxyHelper.dashboard_ip_address
+      host_ip_address.to_s
+    else
+      nil
+    end
   end
 
   # Do not permit proxying to a server on our own private network, unless it is our own dashboard IP Address (we
