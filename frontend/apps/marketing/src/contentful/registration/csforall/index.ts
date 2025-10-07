@@ -1,3 +1,5 @@
+import { ActivityCatalogContentfulComponentDefinition } from '@/components/contentful/activityCatalog';
+import StudioActivityCatalog from '@/components/contentful/activityCatalog/studioActivityCatalog';
 import Button, {
   ButtonMuiContentfulComponentDefinition,
 } from '@/components/contentful/button';
@@ -55,6 +57,13 @@ import Video, {
 
 const contentfulRegistration = {
   componentRegistrations: [
+    {
+      activiyCatalog: StudioActivityCatalog,
+      definition: ActivityCatalogContentfulComponentDefinition,
+      options: {
+        wrapContainerWidth: '100%',
+      },
+    },
     {
       component: AdoptionMap,
       definition: AdoptionMapContentfulComponentDefinition,
