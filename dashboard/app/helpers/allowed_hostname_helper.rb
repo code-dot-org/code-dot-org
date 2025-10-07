@@ -10,7 +10,7 @@
 #
 # SECURITY UPDATE (10/7/2025):
 # - Removed HIGH risk domains identified by security audit that could be exploited for SSRF attacks
-# - Removed domains: distanza.org, githubusercontent.com, grobchess.com, myschoolapp.com, 
+# - Removed domains: distanza.org, githubusercontent.com, grobchess.com, myschoolapp.com,
 #   numbersapi.com, api.quotable.io, theunitedstates.io
 # - These domains either don't resolve, have no HTTP/HTTPS service, or are misconfigured
 # - See domain security audit report for detailed analysis of removed domains
