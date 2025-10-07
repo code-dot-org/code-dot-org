@@ -17,7 +17,7 @@ class BubbleChoiceDSL < ContentDSL
 
   def standalone
     unless @hash[:uses_lab2]
-      raise "BubbleChoice standalone projects are only available with Lab2"
+      raise "BubbleChoice standalone projects are only available with Lab2."
     end
     @hash[:is_project_level] = true
   end
