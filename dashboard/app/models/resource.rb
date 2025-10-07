@@ -78,12 +78,20 @@ class Resource < ApplicationRecord
     {'resource.key': key}.stringify_keys
   end
 
+  def show_in_resource_ui?
+    embeddability_type != SharedConstants::RESOURCE_EMBEDDABILITY_OPTIONS[:EMBED_ONLY][:value]
+  end
+
+  def embed_in_ai_ta?
+    embeddability_type != SharedConstants::RESOURCE_EMBEDDABILITY_OPTIONS[:RESOURCE_DROPDOWN_ONLY][:value]
+  end
+
   def should_include_in_pdf?
     # Resources should be included in PDF rollups if they satisfy all of the following:
     # - Flagged with the `include_in_pdf` property
     # - Not intended to only be shown to verified teachers
     # - Don't have an `embeddability_type` of `embed_only`
-    return (!!include_in_pdf && audience != 'Verified Teacher' && embeddability_type != SharedConstants::RESOURCE_EMBEDDABILITY_OPTIONS[:EMBED_ONLY][:value])
+    return (!!include_in_pdf && audience != 'Verified Teacher' && show_in_resource_ui?)
   end
 
   # A simple helper function to encapsulate creating a unique key, since this

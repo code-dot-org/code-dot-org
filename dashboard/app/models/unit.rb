@@ -1942,6 +1942,6 @@ class Unit < ApplicationRecord
   end
 
   private def sorted_user_facing_resources(resources)
-    resources.filter {|r| r.embeddability_type != SharedConstants::RESOURCE_EMBEDDABILITY_OPTIONS[:EMBED_ONLY][:value]}.sort_by(&:name).map(&:summarize_for_resources_dropdown)
+    resources.filter(&:show_in_resource_ui?).sort_by(&:name).map(&:summarize_for_resources_dropdown)
   end
 end

@@ -21,7 +21,7 @@ class Resource
   end
 
   def should_be_exported?
-    google_docs? && embeddability_type != SharedConstants::RESOURCE_EMBEDDABILITY_OPTIONS[:RESOURCE_DROPDOWN_ONLY][:value]
+    google_docs? && embed_in_ai_ta?
   end
 
   def google_pdf_download_url
