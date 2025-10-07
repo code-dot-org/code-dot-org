@@ -69,7 +69,7 @@ export const AiTutorContainer: FC<{
         <AiTutorSidebar
           toggleAiChat={toggleAiChat}
           suggestedPrompts={allPrompts}
-          hiddenContextCallback={() => Promise.resolve('')}
+          hiddenContextCallback={getHiddenContext}
         />
       )}
     </>
