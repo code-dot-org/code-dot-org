@@ -10,6 +10,8 @@
 #
 # SECURITY UPDATE (10/7/2025):
 # - Removed HIGH risk domains identified by security audit that could be exploited for SSRF attacks
+# - Removed domains: distanza.org, githubusercontent.com, grobchess.com, myschoolapp.com, 
+#   numbersapi.com, api.quotable.io, theunitedstates.io
 # - These domains either don't resolve, have no HTTP/HTTPS service, or are misconfigured
 # - See domain security audit report for detailed analysis of removed domains
 
@@ -80,8 +82,8 @@ module AllowedHostnameHelper
     'api.openrouteservice.org', # Directions/routing - API key required 🔑
     'api.zippopotam.us',        # Postal codes - Public API
     'restcountries.com',        # Country information - Public API
-    # REMOVED: 'worldclockapi.com' - HIGH RISK: DNS resolves but no HTTP/HTTPS service available
-    # REMOVED: 'worldtimeapi.org' - HIGH RISK: DNS resolves but no HTTP/HTTPS service available
+    'worldclockapi.com',        # Time zones - Public API
+    'worldtimeapi.org',         # Time zones - Public API
     # === MATH ===
     # SECURITY: Simple utility APIs with minimal security concerns
     'api.mathjs.org',           # Mathematical expressions - Public API
@@ -119,7 +121,7 @@ module AllowedHostnameHelper
     'newsapi.org',              # News data - API key required 🔑
     # REMOVED: 'myschoolapp.com' - HIGH RISK: DNS resolves but no HTTP/HTTPS service available
     'isenseproject.org',        # Sensor data - Public API
-    # REMOVED: 'lakeside-cs.org' - HIGH RISK: DNS resolves but no HTTP/HTTPS service available
+    'lakeside-cs.org',          # Educational data - Public API
     # === INTERNAL ===
     # These enable functionality within the Code.org ecosystem
     # For example, so applab apps can access the tables and properties of other applab apps.
