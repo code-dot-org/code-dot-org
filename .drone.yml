@@ -232,7 +232,7 @@ steps:
       - name: mysql
         path: /drone/src/var/lib/mysql
     settings:
-      filename: cache-staging-misc-build-artifacts-without-rbenv.tar.gz
+      filename: cache-staging-misc-build-artifacts.tar.gz
       endpoint: s3://cdo-drone
       restore: true
       debug: true
@@ -311,18 +311,18 @@ steps:
       # DRONE_REPO_OWNER = organization name (e.g., "code-dot-org")
       # DRONE_REPO_NAME = repository name (e.g., "code-dot-org")
       - AUTHENTICATED_GITHUB_URL="https://$GITHUB_TOKEN@github.com/$DRONE_REPO_OWNER/$DRONE_REPO_NAME.git"
-      - git clone --branch $DRONE_SOURCE_BRANCH $AUTHENTICATED_GITHUB_URL .
+      - git clone --branch $DRONE_BRANCH $AUTHENTICATED_GITHUB_URL .
 
-  # - name: cache-staging-clone
-  #   image: plugins/s3-cache
-  #   settings:
-  #     filename: cache-staging-clone.tar.gz
-  #     endpoint: s3://cdo-drone
-  #     rebuild: true
-  #     debug: true
-  #     pull: true
-  #     mount:
-  #       - .
+  - name: cache-staging-clone
+    image: plugins/s3-cache
+    settings:
+      filename: cache-staging-clone.tar.gz
+      endpoint: s3://cdo-drone
+      rebuild: true
+      debug: true
+      pull: true
+      mount:
+        - .
 
   # Do all the work necessary to run UI tests so we can capture a complete
   # snapshot of the database, apps build, and installed gems; but don't
@@ -346,7 +346,7 @@ steps:
       - name: mysql
         path: /var/lib/mysql
     settings:
-      filename: cache-staging-misc-build-artifacts-without-rbenv.tar.gz
+      filename: cache-staging-misc-build-artifacts.tar.gz
       endpoint: s3://cdo-drone
       rebuild: true
       debug: true
@@ -360,21 +360,12 @@ volumes:
   - name: mysql
     temp: {}
 
-# trigger:
-#   branch:
-#     - "staging"
-#     - "staging-next"
-#   event:
-#     - push
-
-trigger:
-  branch:
-    exclude:
-      - "production"
-      - "test"
-      - "levelbuilder"
-  event:
-    - pull_request
+ trigger:
+   branch:
+     - "staging"
+     - "staging-next"
+   event:
+     - push
 ---
 kind: signature
 hmac: f91f1b63a5d39a1dc5e56c1e86b7a8c1b06535d3e7b234f942462d344dd04d09
