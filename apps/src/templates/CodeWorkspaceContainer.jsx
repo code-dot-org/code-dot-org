@@ -11,7 +11,7 @@ import {connect} from 'react-redux';
 
 import {AiTutorContainer} from '../aiTutor/views/legacyLabs/AiTutorContainer';
 import commonStyles from '../commonStyles';
-import experiments from '../util/experiments';
+// import experiments from '../util/experiments';
 import * as utils from '../utils';
 
 class CodeWorkspaceContainer extends React.Component {
@@ -51,9 +51,8 @@ class CodeWorkspaceContainer extends React.Component {
 
   render() {
     const AiTutorLabs = ['applab', 'gamelab', 'weblab'];
-    const showAiTutor =
-      AiTutorLabs.includes(this.props.labType) &&
-      experiments.isEnabled(experiments.LEGACY_LAB_AI_TUTOR);
+    const showAiTutor = AiTutorLabs.includes(this.props.labType);
+    // && experiments.isEnabled(experiments.LEGACY_LAB_AI_TUTOR);
     const {hidden, isRtl, noVisualization, children, style, inLevel} =
       this.props;
     const mainStyle = {
