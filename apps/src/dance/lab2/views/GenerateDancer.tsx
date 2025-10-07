@@ -3,10 +3,10 @@ import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {Heading5} from '@code-dot-org/component-library/typography';
 import React, {useCallback, useEffect, useState} from 'react';
 
+import {getGeneratedDancerAssets} from '@cdo/apps/dance/lottie/LottieDancerUtils';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
 import {LevelProperties} from '@cdo/apps/lab2/types';
-import {getGeneratedDancerAssets} from '@cdo/apps/lab2/utils/GeneratedDancer';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import Adlib, {AdlibsType} from '@cdo/apps/lab2/views/components/guide/Adlib';
 import Guide from '@cdo/apps/lab2/views/components/guide/Guide';
@@ -32,7 +32,7 @@ const adlibs: AdlibsType = {
     options: {
       animal: ['wolf', 'moose', 'frog', 'tiger', 'panda'],
     },
-    variantCount: 3,
+    variantCount: 5,
   },
   'animal-attire-02': {
     template:
@@ -41,7 +41,7 @@ const adlibs: AdlibsType = {
       animal: ['wolf', 'moose', 'frog', 'tiger', 'panda'],
       attire: ['headscarf', 'sunglasses', 'headphones', 'crown', 'beanie'],
     },
-    variantCount: 3,
+    variantCount: 5,
   },
   'adjective-animal-attire-02': {
     template:
@@ -51,7 +51,7 @@ const adlibs: AdlibsType = {
       animal: ['wolf', 'moose', 'frog', 'tiger', 'panda'],
       attire: ['headscarf', 'sunglasses', 'headphones', 'crown', 'beanie'],
     },
-    variantCount: 3,
+    variantCount: 5,
   },
   // Earlier adlibs which will be removed soon:
   animal: {
@@ -137,11 +137,7 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
   const generateDancerCache = useCallback(async () => {
     const startTime = Date.now();
     const variant = getRandomInt(0, adlibs[adlibOption].variantCount - 1);
-    const {head} = await getGeneratedDancerAssets(
-      adlibOption,
-      choices,
-      variant
-    );
+    const {head} = getGeneratedDancerAssets(adlibOption, choices, variant);
 
     setHeadImageUrl(head);
 

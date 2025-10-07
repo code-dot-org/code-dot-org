@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-06-09 19:37:27 UTC",
+    "serialized_at": "2025-10-01 18:37:47 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -232,6 +232,21 @@
         "lesson_group.key": "",
         "script.name": "emmas-playground"
       }
+    },
+    {
+      "key": "lesson-14",
+      "name": "Sketch Lab Levels",
+      "absolute_position": 14,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 14,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground"
+      }
     }
   ],
   "lesson_activities": [
@@ -430,6 +445,30 @@
       "seeding_key": {
         "lesson_activity.key": "704b1c3b-93a2-4b6c-afb5-ea289b4c8ed7",
         "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground"
+      }
+    },
+    {
+      "key": "1e7639d7-0108-42dd-a357-87860bc19a74",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1e7639d7-0108-42dd-a357-87860bc19a74",
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground"
+      }
+    },
+    {
+      "key": "3af229ae-9678-4db3-90dd-5e140db74b5b",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3af229ae-9678-4db3-90dd-5e140db74b5b",
+        "lesson.key": "lesson-14",
         "lesson_group.key": "",
         "script.name": "emmas-playground"
       }
@@ -859,6 +898,27 @@
       "seeding_key": {
         "activity_section.key": "16a94d5a-bc21-48f7-897f-0e4069a2b59d",
         "lesson_activity.key": "704b1c3b-93a2-4b6c-afb5-ea289b4c8ed7"
+      }
+    },
+    {
+      "key": "5f2c6283-f239-481b-832c-cb7e69e1b668",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "5f2c6283-f239-481b-832c-cb7e69e1b668",
+        "lesson_activity.key": "1e7639d7-0108-42dd-a357-87860bc19a74"
+      }
+    },
+    {
+      "key": "8d1af895-266c-40bd-ab2d-9281df526af6",
+      "position": 1,
+      "properties": {
+        "progression_name": "Sketch Lab 1"
+      },
+      "seeding_key": {
+        "activity_section.key": "8d1af895-266c-40bd-ab2d-9281df526af6",
+        "lesson_activity.key": "3af229ae-9678-4db3-90dd-5e140db74b5b"
       }
     }
   ],
@@ -2591,6 +2651,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "emmas-test-escape-room-ai"
+        ],
         "progression": "Artist Lab"
       },
       "bonus": false,
@@ -2605,6 +2668,28 @@
       },
       "level_keys": [
         "emmas-test-escape-room-ai"
+      ]
+    },
+    {
+      "chapter": 72,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Sketch Lab 1"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "emma-test-sketch-lab-1"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "8d1af895-266c-40bd-ab2d-9281df526af6"
+      },
+      "level_keys": [
+        "emma-test-sketch-lab-1"
       ]
     }
   ],
@@ -3459,6 +3544,18 @@
         "lesson_group.key": "",
         "script.name": "emmas-playground",
         "activity_section.key": "0cb1f6ff-a37e-44a6-8130-fdd70841f280"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "emma-test-sketch-lab-1",
+        "script_level.level_keys": [
+          "emma-test-sketch-lab-1"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "8d1af895-266c-40bd-ab2d-9281df526af6"
       }
     }
   ],

@@ -1,0 +1,9 @@
+%h1.control-legend{data: {toggle: "collapse", target: "#dance_ai_settings"}}
+  AI Settings
+
+#dance_ai_settings.in.collapse
+  %i Currently, Generate Dancer mode will override AI Code Generate mode if both are checked.
+  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: 'generate_dancer_mode', description: "Generate Dancer (fullscreen dancer generation experience that replaces the usual Dance Party UI.)"}
+  = f.label :ai_dancer_generate_adlib, 'Generate Dancer Adlib Name'
+  = f.text_field :ai_dancer_generate_adlib, placeholder: 'adjective-animal-attire-02'
+  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: 'ai_code_generate', description: "AI Code Generate (enables students to generate Dance code based on a Music Lab project.)"}

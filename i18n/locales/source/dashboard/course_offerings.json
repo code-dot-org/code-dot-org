@@ -929,6 +929,9 @@
   "dani-june-2020-test": {
     "display_name": "dani-june-2020-test"
   },
+  "dani-test": {
+    "display_name": "dani-test"
+  },
   "data-science": {
     "display_name": "Data Science",
     "description": "Explore the world of data science using data visualization tools to analyze and interpret real-world phenomena."
@@ -1275,6 +1278,15 @@
   },
   "hoai-dance-pilot1": {
     "display_name": "hoai-dance-pilot1"
+  },
+  "hoai-dance-pilot2-course": {
+    "display_name": "hoai-dance-pilot2-course"
+  },
+  "hoai-dance-pilot3": {
+    "display_name": "hoai-dance-pilot3"
+  },
+  "hoai-dance-pilot4": {
+    "display_name": "hoai-dance-pilot4"
   },
   "hoai2025-dev": {
     "display_name": "hoai2025-dev"
@@ -1932,7 +1944,7 @@
     "description": "This self-paced professional learning module provides educators with a comprehensive understanding of the curriculum, enabling them to effectively guide students through essential CS concepts & understand the transformative role of AI."
   },
   "teaching-ai-powered-theats-and-defenses": {
-    "display_name": "teaching-ai-powered-theats-and-defenses"
+    "display_name": "Teaching AI-Powered Threats and Defenses [PL Pilot]"
   },
   "teaching-ai-systems-that-power-it": {
     "display_name": "Teaching AI and the Systems that Power It",

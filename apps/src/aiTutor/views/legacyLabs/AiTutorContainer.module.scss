@@ -1,7 +1,8 @@
-$header-height: 30px;
+$header-height: 31px;
+$bot-icon-size: $header-height - 5px;
 
 .container {
-  width: 350px;
+  width: 325px;
   position: absolute;
   right: 0;
   top: 0;
@@ -13,12 +14,21 @@ $header-height: 30px;
     background-color: aqua;
     display: flex;
     flex-direction: row;
-    justify-content: center;
     align-items: center;
 
     button {
       position: absolute;
       right: 0;
+    }
+
+    .mini-bot-icon {
+      width: $bot-icon-size;
+      height: $bot-icon-size;
+      object-fit: contain;
+    }
+
+    .header-text {
+      font-weight: 500;
     }
   }
 }

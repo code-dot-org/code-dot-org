@@ -3,6 +3,8 @@ import {BodyThreeText} from '@code-dot-org/component-library/typography';
 import React, {FC} from 'react';
 
 import AiTutor2Chat from '@cdo/apps/lab2/views/components/AiTutor2Chat';
+import {singleton as studioApp} from '@cdo/apps/StudioApp';
+import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
 
 import {
   defaultPrompts,
@@ -10,9 +12,12 @@ import {
   standaloneProjectPrompts,
 } from '../../suggestedPrompts';
 
+import {AiTutorLegacyLabContextHelper} from './aiTutorContextHelper';
 import AiTutorSidebar from './AiTutorSidebar';
 
 import styles from './AiTutorContainer.module.scss';
+
+const aiTutorHelper = new AiTutorLegacyLabContextHelper();
 
 export const AiTutorContainer: FC<{
   toggleAiChat: () => void;
@@ -22,12 +27,29 @@ export const AiTutorContainer: FC<{
   const allPrompts = inLevel
     ? [...levelPrompts, ...defaultPrompts]
     : [...standaloneProjectPrompts, ...defaultPrompts];
+
+  const {config} = studioApp();
+
+  const getHiddenContext = async () => {
+    const code = config?.getCode();
+    aiTutorHelper.setAiTutorContext({source: code});
+    const callback = aiTutorHelper.getHiddenContextCallback();
+    return callback();
+  };
+
   return (
     <>
       {aiChatOpen ? (
         <div className={styles.container}>
           <div className={styles.header}>
-            <BodyThreeText noMargin>AI Tutor</BodyThreeText>
+            <img
+              src={aiBotOutlineIcon}
+              alt=""
+              className={styles['mini-bot-icon']}
+            />
+            <BodyThreeText noMargin className={styles['header-text']}>
+              AI Tutor
+            </BodyThreeText>
             <Button
               aria-label="Close AI tutor"
               isIconOnly
@@ -38,8 +60,9 @@ export const AiTutorContainer: FC<{
             />
           </div>
           <AiTutor2Chat
-            hiddenContextCallback={() => Promise.resolve('')}
+            hiddenContextCallback={getHiddenContext}
             aiTutorChatButtonData={allPrompts}
+            channelId={config?.channel}
           />
         </div>
       ) : (

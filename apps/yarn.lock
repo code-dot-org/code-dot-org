@@ -3905,10 +3905,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@code-dot-org/dance-party@npm:2.0.0":
-  version: 2.0.0
-  resolution: "@code-dot-org/dance-party@npm:2.0.0"
-  checksum: 10/3c9f1bade0d4e7b859794de2227655c3d2c67d7ffc6c66376840de4dfa1ee6d79a1481ca85039704f4ce83a924b2918b2362253d62de5f5cf8b22a461ee63a99
+"@code-dot-org/dance-party@npm:2.0.1":
+  version: 2.0.1
+  resolution: "@code-dot-org/dance-party@npm:2.0.1"
+  checksum: 10/21ff06d2f25193b4a73003f65de5e8a502de8be2382c673b7cc3de2c5a5e71c047c65482f4e64cb302bf99cdadc3ab9ff81abcb7e5e252d8b62dc7ce486045c7
   languageName: node
   linkType: hard
 
@@ -11034,7 +11034,7 @@ __metadata:
     "@code-dot-org/component-library": "portal:../frontend/packages/component-library/"
     "@code-dot-org/component-library-styles": "portal:../frontend/packages/component-library-styles/"
     "@code-dot-org/craft": "npm:0.2.2"
-    "@code-dot-org/dance-party": "npm:2.0.0"
+    "@code-dot-org/dance-party": "npm:2.0.1"
     "@code-dot-org/fonts": "portal:../frontend/packages/fonts/"
     "@code-dot-org/johnny-five": "npm:2.1.0-cdo.3"
     "@code-dot-org/js-interpreter": "npm:1.3.13"
@@ -11219,6 +11219,7 @@ __metadata:
     loadable-components: "npm:2.2.3"
     loader-utils: "npm:^2.0.4"
     lodash: "npm:^4.17.21"
+    lottie-web: "npm:^5.13.0"
     magicast: "npm:^0.3.3"
     markdown-to-txt: "npm:^2.0.1"
     md5: "npm:^2.3.0"
@@ -21249,6 +21250,13 @@ canvg@gabelerner/canvg:
   bin:
     loose-envify: cli.js
   checksum: 10/6517e24e0cad87ec9888f500c5b5947032cdfe6ef65e1c1936a0c48a524b81e65542c9c3edc91c97d5bddc806ee2a985dbc79be89215d613b1de5db6d1cfe6f4
+  languageName: node
+  linkType: hard
+
+"lottie-web@npm:^5.13.0":
+  version: 5.13.0
+  resolution: "lottie-web@npm:5.13.0"
+  checksum: 10/ccc65b91ddc569c874de265252ef41cb546798515dd63c5ee366844efd1e10335c080c483ce4305faba0cebd54c4afd6bb918fd0d6f4394dcc284fc0c3944941
   languageName: node
   linkType: hard
 
