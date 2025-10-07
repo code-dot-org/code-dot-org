@@ -6,7 +6,6 @@ import {
   ExcalidrawImperativeAPI,
   ExcalidrawInitialDataState,
 } from '@excalidraw/excalidraw/types/types';
-import {isEqual} from 'lodash';
 import React, {useEffect, useCallback, useRef, useState} from 'react';
 
 import useLevelEditMode from '@cdo/apps/lab2/hooks/useLevelEditMode';
@@ -134,11 +133,10 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
     const excalidrawApi = excalidrawApiRef.current;
     if (
       excalidrawApi &&
-      (!isEqual(
-        excalidrawApi.getSceneElements(),
-        currentSources.source.elements
-      ) ||
-        !isEqual(excalidrawApi.getFiles(), currentSources.source.files))
+      (JSON.stringify(excalidrawApi.getSceneElements()) !==
+        JSON.stringify(currentSources.source.elements) ||
+        JSON.stringify(excalidrawApi.getFiles()) !==
+          JSON.stringify(currentSources.source.files))
     ) {
       setExcalidrawMountKey(key => key + 1);
     }

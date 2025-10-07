@@ -275,6 +275,14 @@ const DanceView: React.FunctionComponent<{
         validateBlockCategories(workspace.current);
       }
 
+      if (e.type === Events.FINISHED_LOADING) {
+        // Ensure all blocks have valid, non-overlapping positions on the workspace.
+        Blockly.Events.disable();
+        workspace.current?.cleanUp();
+        Blockly.Events.enable();
+        return;
+      }
+
       if (e.type !== Events.BLOCK_DRAG && e.type !== Events.BLOCK_CHANGE) {
         return;
       }
