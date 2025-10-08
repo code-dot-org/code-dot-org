@@ -10,6 +10,8 @@ import {WEBPACK_BASE_CONFIG} from './webpack.config';
 function storybookConfig(sbConfig) {
   return {
     ...sbConfig,
+    // Reuse experiments
+    experiments: WEBPACK_BASE_CONFIG.experiments,
     // Overwrite aliases
     devtool: 'inline-source-map',
     resolve: {

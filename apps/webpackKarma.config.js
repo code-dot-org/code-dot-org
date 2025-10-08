@@ -67,6 +67,20 @@ const karmaConfig = {
         PISKEL_DEVELOPMENT_MODE: JSON.stringify(false),
       }),
     ],
+    module: {
+      ...WEBPACK_BASE_CONFIG.module,
+      rules: WEBPACK_BASE_CONFIG.module.rules.map(rule => {
+        if (rule.layer === 'images') {
+          return {
+            ...rule,
+            type: 'asset/inline',
+            generator: {},
+          };
+        } else {
+          return rule;
+        }
+      }),
+    },
   },
 };
 
