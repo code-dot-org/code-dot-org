@@ -232,9 +232,6 @@ const WEBPACK_ALIASES = {
 // see `createWebpackConfig()` below. That function extends this config
 // with many more plugins etc.
 const WEBPACK_BASE_CONFIG = {
-  experiments: {
-    layers: true,
-  },
   plugins: [
     ...nodePolyfillConfig.plugins,
     // Run TypeScript type checking in parallel with the build
@@ -294,7 +291,6 @@ const WEBPACK_BASE_CONFIG = {
 
       {test: /\.interpreted.js$/, type: 'asset/source'},
       {
-        layer: 'images',
         test: /\.(png|jpg|jpeg|gif|svg|ico)$/,
         include: [
           p('static'),
@@ -305,8 +301,8 @@ const WEBPACK_BASE_CONFIG = {
         type: 'asset/resource',
         generator: {
           filename: '[name]wp[contenthash:20][ext]',
-          outputPath: '../images/', // build/package/images/
-          publicPath: '/assets/images/', // Dashboard assets path
+          outputPath: 'images/', // build/package/js/images/
+          publicPath: '/assets/js/images/', // Dashboard assets path
         },
       },
       {
