@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module LTI
+module Lti
   module V1
     class IntegrationsController < ApplicationController
       # POST /lti/v1/integrations
