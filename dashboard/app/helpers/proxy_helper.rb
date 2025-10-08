@@ -42,14 +42,14 @@ module ProxyHelper
     # to prevent race condition. We override the socket creation to use our pre-resolved IP.
     http = Net::HTTP.new(url.host, url.port)
     http.use_ssl = url.scheme == 'https'
-    
+
     # Override DNS resolution to use our cached IP address
     # This prevents the race condition while still allowing SSL to work properly
     http.instance_variable_set(:@ipaddr, resolved_ip_address)
     def http.conn_address
       @ipaddr
     end
-    
+
     path = url.path.empty? ? '/' : url.path
     query = url.query || ''
 
@@ -131,13 +131,13 @@ module ProxyHelper
     # SECURITY FIX: Use hostname for connection (required for SSL) but with custom DNS resolution
     http = Net::HTTP.new(url.host, url.port)
     http.use_ssl = url.scheme == 'https'
-    
+
     # Override DNS resolution to use our cached IP address
     http.instance_variable_set(:@ipaddr, resolved_ip_address)
     def http.conn_address
       @ipaddr
     end
-    
+
     path = url.path.empty? ? '/' : url.path
     query = url.query || ''
 
