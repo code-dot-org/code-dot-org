@@ -6,9 +6,9 @@ import {
   ExcalidrawImperativeAPI,
   ExcalidrawInitialDataState,
 } from '@excalidraw/excalidraw/types/types';
-import {isEqual} from 'lodash';
 import React, {useEffect, useCallback, useRef, useState} from 'react';
 
+import useLevelEditMode from '@cdo/apps/lab2/hooks/useLevelEditMode';
 import {useVerticalLayout} from '@cdo/apps/lab2/hooks/useVerticalLayout';
 import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
 import {LabProps, LevelProperties, ProjectSources} from '@cdo/apps/lab2/types';
@@ -42,6 +42,20 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
   const [excalidrawMountKey, setExcalidrawMountKey] = useState(0);
 
   const hasRun = useAppSelector(state => state.lab2System.hasRun);
+
+  const WorkspaceAlert = useLevelEditMode<LevelProperties>(
+    levelProperties.id,
+    !!levelProperties.projectTemplateLevelName,
+    useCallback(
+      mode => {
+        return {
+          [mode === 'start' ? 'start_sources' : 'exemplar_sources']:
+            currentSources,
+        };
+      },
+      [currentSources]
+    )
+  );
 
   const {
     leftPanelWidth,
@@ -119,11 +133,10 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
     const excalidrawApi = excalidrawApiRef.current;
     if (
       excalidrawApi &&
-      (!isEqual(
-        excalidrawApi.getSceneElements(),
-        currentSources.source.elements
-      ) ||
-        !isEqual(excalidrawApi.getFiles(), currentSources.source.files))
+      (JSON.stringify(excalidrawApi.getSceneElements()) !==
+        JSON.stringify(currentSources.source.elements) ||
+        JSON.stringify(excalidrawApi.getFiles()) !==
+          JSON.stringify(currentSources.source.files))
     ) {
       setExcalidrawMountKey(key => key + 1);
     }
@@ -168,6 +181,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
             excalidrawAPI={api => (excalidrawApiRef.current = api)}
             key={excalidrawMountKey}
           />
+          {WorkspaceAlert}
         </PanelContainer>
       </div>
     </div>

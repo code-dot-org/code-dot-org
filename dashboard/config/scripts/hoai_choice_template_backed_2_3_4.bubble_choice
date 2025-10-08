@@ -6,3 +6,5 @@ sublevels
 level 'pilot_generate_dancer_choice_2_3_4'
 level 'length_prompt_choice_2_3_4'
 level 'dance_moves_choice_2_3_4'
+
+uses_lab2

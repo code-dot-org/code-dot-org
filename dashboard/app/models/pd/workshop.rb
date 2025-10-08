@@ -976,6 +976,26 @@ class Pd::Workshop < ApplicationRecord
     }
   end
 
+  def relevant_to_user?(user)
+    return false if hidden?
+
+    case participant_group_type
+    when "National"
+      true
+    when "Regional"
+      zip = user&.school_info&.school&.zip || user&.school_info&.zip
+      return false if zip.blank?
+
+      normalized_zip = zip.to_s.rjust(5, '0')
+
+      zip_codes = regional_partner&.mappings&.pluck(:zip_code)
+
+      zip_codes&.include?(normalized_zip)
+    else
+      false
+    end
+  end
+
   def summarize_for_pl_catalog
     {
       id: id,

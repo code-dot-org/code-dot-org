@@ -12,11 +12,13 @@ import styles from './AiTutorSidebar.module.scss';
 interface AiTutorSidebarProps {
   toggleAiChat: () => void;
   suggestedPrompts?: Array<AiTutorSuggestedPrompt>;
+  hiddenContextCallback: () => Promise<string>;
 }
 
 const AiTutorSidebar: React.FC<AiTutorSidebarProps> = ({
   toggleAiChat,
   suggestedPrompts = defaultPrompts,
+  hiddenContextCallback,
 }) => {
   return (
     <div className={styles['ai-tutor-sidebar']}>
@@ -36,7 +38,11 @@ const AiTutorSidebar: React.FC<AiTutorSidebarProps> = ({
           type="primary"
           color="white"
         />
-        <AiTutorSidebarSuggestedPrompts suggestedPrompts={suggestedPrompts} />
+        <AiTutorSidebarSuggestedPrompts
+          suggestedPrompts={suggestedPrompts}
+          hiddenContextCallback={hiddenContextCallback}
+          toggleAiChat={toggleAiChat}
+        />
       </div>
     </div>
   );
