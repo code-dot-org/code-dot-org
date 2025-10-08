@@ -76,7 +76,8 @@
         ],
         "kind": "flyoutToolbox"
       },
-      "allowChangeStartingPlayheadPosition": true
+      "allowChangeStartingPlayheadPosition": true,
+      "packId": "kenya_grace_strangers"
     },
     "name_suffix": "_4",
     "offer_browser_tts": "true",
@@ -91,12 +92,12 @@
     },
     "submittable": "false",
     "disable_edit_run_for_submission": "false",
-    "project_template_level_name": "length_template_2_3_4",
+    "project_template_level_name": "HoAI_pilot_5_template1",
     "display_name": "Regenerate the music",
     "thumbnail_url": "https://images.code.org/dec7f10131962bf7a646aa26d4f4f9a3-botmusic.jpg",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-10-08T05:51:51.615+00:00\",\"changed\":[\"cloned from \\\"length_modify2_2_3_4\\\"\"],\"cloned_from\":\"length_modify2_2_3_4\"},{\"changed_at\":\"2025-10-08 05:52:22 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-08 05:56:11 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-08 06:56:34 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-10-08T05:51:51.615+00:00\",\"changed\":[\"cloned from \\\"length_modify2_2_3_4\\\"\"],\"cloned_from\":\"length_modify2_2_3_4\"},{\"changed_at\":\"2025-10-08 05:52:22 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-08 05:56:11 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-08 06:56:34 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-10-08 14:21:02 +0000\",\"changed\":[\"predict_settings\",\"project_template_level_name\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-08 14:28:02 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-08 15:56:49 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-08 16:18:07 +0000\",\"changed\":[\"predict_settings\",\"project_template_level_name\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-08 16:20:03 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

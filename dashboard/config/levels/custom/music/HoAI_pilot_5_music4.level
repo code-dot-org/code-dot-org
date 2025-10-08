@@ -32,8 +32,8 @@
         "blocks": {
         }
       },
-      "packId": "kenya_grace_strangers",
-      "allowChangeStartingPlayheadPosition": true
+      "allowChangeStartingPlayheadPosition": true,
+      "packId": "kenya_grace_strangers"
     },
     "encrypted": "false",
     "offer_browser_tts": "false",
@@ -50,9 +50,10 @@
     },
     "name_suffix": "_4",
     "long_instructions": "###AI can help layer sounds together.\r\nComplete the prompt below, then generate code",
+    "project_template_level_name": "HoAI_pilot_5_template1",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-10-07T22:59:00.927+00:00\",\"changed\":[\"cloned from \\\"layers_prompt_2_3_4\\\"\"],\"cloned_from\":\"layers_prompt_2_3_4\"},{\"changed_at\":\"2025-10-08 00:20:58 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-08 00:28:06 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-08 05:40:54 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-08 06:55:47 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-10-08 07:06:12 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-10-08 07:08:10 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-10-07T22:59:00.927+00:00\",\"changed\":[\"cloned from \\\"layers_prompt_2_3_4\\\"\"],\"cloned_from\":\"layers_prompt_2_3_4\"},{\"changed_at\":\"2025-10-08 00:20:58 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-08 00:28:06 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-08 05:40:54 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-08 06:55:47 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-10-08 07:06:12 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-10-08 07:08:10 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-10-08 14:21:32 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-08 14:21:59 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-08 15:57:08 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-08 16:17:41 +0000\",\"changed\":[\"predict_settings\",\"project_template_level_name\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-08 16:19:48 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

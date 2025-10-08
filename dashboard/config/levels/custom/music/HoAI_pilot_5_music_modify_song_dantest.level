@@ -1,8 +1,7 @@
 <Music>
   <config><![CDATA[{
-  "published": true,
   "game_id": 70,
-  "created_at": "2025-10-08T05:51:04.000Z",
+  "created_at": "2025-10-08T16:05:40.000Z",
   "level_num": "custom",
   "user_id": 1196,
   "properties": {
@@ -100,7 +99,7 @@
       },
       "allowChangeStartingPlayheadPosition": true
     },
-    "name_suffix": "_4",
+    "name_suffix": "_dantest",
     "offer_browser_tts": "true",
     "use_secondary_finish_button": "false",
     "hint_prompt_attempts_threshold": "1",
@@ -113,12 +112,13 @@
     },
     "submittable": "false",
     "disable_edit_run_for_submission": "false",
-    "project_template_level_name": "HoAI_pilot_5_template2",
+    "project_template_level_name": " HoAI_pilot_5_template2",
     "display_name": "Regenerate the music",
     "thumbnail_url": "https://images.code.org/dec7f10131962bf7a646aa26d4f4f9a3-botmusic.jpg",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-10-08T05:51:04.014+00:00\",\"changed\":[\"cloned from \\\"length_modify2_2_3_4\\\"\"],\"cloned_from\":\"length_modify2_2_3_4\"},{\"changed_at\":\"2025-10-08 05:57:28 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-08 06:56:23 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-10-08 14:23:08 +0000\",\"changed\":[\"predict_settings\",\"project_template_level_name\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-08 16:17:17 +0000\",\"changed\":[\"predict_settings\",\"project_template_level_name\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-10-08T16:05:40.117+00:00\",\"changed\":[\"cloned from \\\"HoAI_pilot_5_music_modify_song\\\"\"],\"cloned_from\":\"HoAI_pilot_5_music_modify_song\"}]"
 }]]></config>
   <blocks/>
 </Music>

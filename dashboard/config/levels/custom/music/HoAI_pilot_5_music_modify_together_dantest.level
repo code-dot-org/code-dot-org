@@ -2,7 +2,7 @@
   <config><![CDATA[{
   "published": true,
   "game_id": 70,
-  "created_at": "2025-10-08T05:51:04.000Z",
+  "created_at": "2025-10-08T16:05:39.000Z",
   "level_num": "custom",
   "user_id": 1196,
   "properties": {
@@ -10,7 +10,7 @@
     "encrypted": "false",
     "background": "music-black",
     "instructions_important": "false",
-    "long_instructions": "#### AI started the remix. Now you get to take control!\r\n\r\n1. **Try changing a few sounds.**\r\n2. You can make other changes if you want to. \r\n3. When you are happy with your remix, press **Continue**.\r\n\r\n---\r\n\r\n***Up next: start coding your dance party.***\r\n\r\n",
+    "long_instructions": "#### AI layered some sounds\r\n\r\n1. **Try layering more sounds!**\r\n3. When you are happy with how it sounds, press **Continue**.\r\n\r\n\r\n\r\n",
     "hide_share_and_remix": "true",
     "validations": [
       {
@@ -72,35 +72,13 @@
               "disableNextConnection": false
             },
             "enabled": true
-          },
-          {
-            "kind": "block",
-            "type": "repeat_simple2",
-            "id": "repeat_simple2",
-            "extraState": {
-              "disableNextConnection": false
-            },
-            "fields": {
-              "times": 1
-            },
-            "enabled": true
-          },
-          {
-            "kind": "block",
-            "type": "set_effect_at_current_location_simple2",
-            "id": "set_effect_at_current_location_simple2",
-            "fields": {
-              "effects_name": "<field name=\"effects_name\">volume</field>",
-              "effects_value": "<field name=\"effects_value\">normal</field>"
-            },
-            "enabled": true
           }
         ],
         "kind": "flyoutToolbox"
       },
       "allowChangeStartingPlayheadPosition": true
     },
-    "name_suffix": "_4",
+    "name_suffix": "_dantest",
     "offer_browser_tts": "true",
     "use_secondary_finish_button": "false",
     "hint_prompt_attempts_threshold": "1",
@@ -113,12 +91,12 @@
     },
     "submittable": "false",
     "disable_edit_run_for_submission": "false",
-    "project_template_level_name": "HoAI_pilot_5_template2",
+    "project_template_level_name": "HoAI_pilot_5_template1",
     "display_name": "Regenerate the music",
     "thumbnail_url": "https://images.code.org/dec7f10131962bf7a646aa26d4f4f9a3-botmusic.jpg",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-10-08T05:51:04.014+00:00\",\"changed\":[\"cloned from \\\"length_modify2_2_3_4\\\"\"],\"cloned_from\":\"length_modify2_2_3_4\"},{\"changed_at\":\"2025-10-08 05:57:28 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-08 06:56:23 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-10-08 14:23:08 +0000\",\"changed\":[\"predict_settings\",\"project_template_level_name\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-08 16:17:17 +0000\",\"changed\":[\"predict_settings\",\"project_template_level_name\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-10-08T16:05:39.474+00:00\",\"changed\":[\"cloned from \\\"HoAI_pilot_5_music_modify_together\\\"\"],\"cloned_from\":\"HoAI_pilot_5_music_modify_together\"},{\"changed_at\":\"2025-10-08 16:14:38 +0000\",\"changed\":[\"predict_settings\",\"project_template_level_name\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>
