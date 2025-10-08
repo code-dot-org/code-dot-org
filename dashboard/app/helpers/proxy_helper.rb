@@ -23,7 +23,7 @@ module ProxyHelper
 
     raise URI::InvalidURIError.new if url.host.nil? || url.port.nil?
 
-    # SECURITY FIX: Resolve hostname to IP address once and cache it to prevent DNS race condition
+    # SECURITY FIX: Resolve hostname to IP address once and validate it to prevent DNS race condition
     # This prevents an attacker from changing DNS between validation and actual request
     resolved_ip_address = resolve_and_validate_ip_address(url.host)
     unless resolved_ip_address
@@ -38,9 +38,18 @@ module ProxyHelper
       return
     end
 
-    # Use the resolved IP address instead of hostname to prevent DNS race condition
-    http = Net::HTTP.new(resolved_ip_address, url.port)
+    # SECURITY FIX: Use hostname for connection (required for SSL) but with custom DNS resolution
+    # to prevent race condition. We override the socket creation to use our pre-resolved IP.
+    http = Net::HTTP.new(url.host, url.port)
     http.use_ssl = url.scheme == 'https'
+    
+    # Override DNS resolution to use our cached IP address
+    # This prevents the race condition while still allowing SSL to work properly
+    http.instance_variable_set(:@ipaddr, resolved_ip_address)
+    def http.conn_address
+      @ipaddr
+    end
+    
     path = url.path.empty? ? '/' : url.path
     query = url.query || ''
 
@@ -50,12 +59,7 @@ module ProxyHelper
 
     # Get the media.
     query_string = query.empty? ? '' : "?#{query}" # don't include the ? if the query is empty
-
-    # SECURITY FIX: Set Host header to original hostname to ensure proper virtual hosting
-    # This is required when using IP address instead of hostname for the connection
-    request = Net::HTTP::Get.new(path + query_string)
-    request['Host'] = url.host
-    media = http.request(request)
+    media = http.request_get(path + query_string)
 
     # generate content-type from file name if we weren't given one
     if media.content_type.nil?
@@ -118,14 +122,22 @@ module ProxyHelper
       return 200, location
     end
 
-    # SECURITY FIX: Use resolved IP address to prevent DNS race condition
+    # SECURITY FIX: Resolve and validate IP address to prevent DNS race condition
     resolved_ip_address = resolve_and_validate_ip_address(url.host)
     unless resolved_ip_address
       return 400, "Target IP address is restricted"
     end
 
-    http = Net::HTTP.new(resolved_ip_address, url.port)
+    # SECURITY FIX: Use hostname for connection (required for SSL) but with custom DNS resolution
+    http = Net::HTTP.new(url.host, url.port)
     http.use_ssl = url.scheme == 'https'
+    
+    # Override DNS resolution to use our cached IP address
+    http.instance_variable_set(:@ipaddr, resolved_ip_address)
+    def http.conn_address
+      @ipaddr
+    end
+    
     path = url.path.empty? ? '/' : url.path
     query = url.query || ''
 
@@ -134,10 +146,7 @@ module ProxyHelper
     http.read_timeout = 3
 
     # Get the response.
-    # SECURITY FIX: Set Host header for proper virtual hosting
-    request = Net::HTTP::Head.new(path + '?' + query)
-    request['Host'] = url.host
-    response = http.request(request)
+    response = http.request_head(path + '?' + query)
 
     if response.is_a? Net::HTTPRedirection
       resolve_redirect_url(response['location'], allowed_hostname_suffixes: allowed_hostname_suffixes, redirect_limit: redirect_limit - 1)
