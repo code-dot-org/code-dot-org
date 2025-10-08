@@ -22,7 +22,7 @@ module ProxyHelper
     url = URI.parse(location)
 
     raise URI::InvalidURIError.new if url.host.nil? || url.port.nil?
-    
+
     # SECURITY FIX: Resolve hostname to IP address once and cache it to prevent DNS race condition
     # This prevents an attacker from changing DNS between validation and actual request
     resolved_ip_address = resolve_and_validate_ip_address(url.host)
@@ -30,14 +30,14 @@ module ProxyHelper
       render_error_response 400, "Target IP address is restricted"
       return
     end
-    
+
     unless allowed_hostname?(url, allowed_hostname_suffixes)
       render_error_response 400, "Hostname '#{url.host}' is not in the list of allowed hostnames. " \
           "The list of allowed hostname suffixes is: #{allowed_hostname_suffixes.join(', ')}. " \
           "If you wish to access a URL which is not currently allowed, please email support@code.org."
       return
     end
-    
+
     # Use the resolved IP address instead of hostname to prevent DNS race condition
     http = Net::HTTP.new(resolved_ip_address, url.port)
     http.use_ssl = url.scheme == 'https'
@@ -50,7 +50,7 @@ module ProxyHelper
 
     # Get the media.
     query_string = query.empty? ? '' : "?#{query}" # don't include the ? if the query is empty
-    
+
     # SECURITY FIX: Set Host header to original hostname to ensure proper virtual hosting
     # This is required when using IP address instead of hostname for the connection
     request = Net::HTTP::Get.new(path + query_string)
