@@ -18,6 +18,7 @@ import {
   getToolboxDefinition,
   workspaceToToolboxDefinition,
 } from '@cdo/apps/blockly/utils/toolbox';
+import BackToParentProject from '@cdo/apps/bubbleChoice/BackToParentProject';
 import {saveReplayLog} from '@cdo/apps/code-studio/components/shareDialogRedux';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import defaultSources from '@cdo/apps/dance/blockly/defaultSources.json';
@@ -516,6 +517,14 @@ const DanceView: React.FunctionComponent<{
             moduleStyles.visualizationArea,
             aiGenerateMode && moduleStyles.jumbo
           )}
+          leftHeaderContent={
+            <BackToParentProject
+              text="Go to Hub"
+              iconLeft={{iconName: 'home'}}
+              type="secondary"
+              size="s"
+            />
+          }
         >
           <div className={moduleStyles.visualizationColumn}>
             {!usingMusicProject && currentSources.selectedSong && (

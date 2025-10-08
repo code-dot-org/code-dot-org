@@ -3,6 +3,7 @@ import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {Heading5} from '@code-dot-org/component-library/typography';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
+import BackToParentProject from '@cdo/apps/bubbleChoice/BackToParentProject';
 import {getGeneratedDancerAssets} from '@cdo/apps/dance/lottie/LottieDancerUtils';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
@@ -235,6 +236,12 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
             />
           </>
         )}
+        <BackToParentProject
+          text="Go to Hub"
+          iconLeft={{iconName: 'home'}}
+          type="secondary"
+          size="s"
+        />
       </Guide>
 
       <div className={moduleStyles.dancerContainer}>
