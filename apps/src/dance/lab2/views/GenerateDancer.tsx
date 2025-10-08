@@ -1,7 +1,7 @@
 import {Button} from '@code-dot-org/component-library/button';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {Heading5} from '@code-dot-org/component-library/typography';
-import React, {useCallback, useEffect, useState} from 'react';
+import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 import {getGeneratedDancerAssets} from '@cdo/apps/dance/lottie/LottieDancerUtils';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
@@ -109,7 +109,6 @@ interface DancerGenerateProps {
 // storage.
 const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
   adlibOption,
-  levelProperties,
 }) => {
   const dispatch = useAppDispatch();
 
@@ -121,6 +120,7 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
 
   const [adlibText, setAdlibText] = useState<string | undefined>(undefined);
   const [choices, setChoices] = useState<string[] | undefined>(undefined);
+  const variantHistory = useRef<number[]>([]);
 
   const [aiGenerateState, setAiGenerateState] = useState<
     'none' | 'generating' | 'done'
@@ -132,11 +132,24 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
 
   useLifecycleNotifier(LifecycleEvent.LevelLoadStarted, () => {
     setAiGenerateState('none');
+    variantHistory.current = [];
   });
 
   const generateDancerCache = useCallback(async () => {
     const startTime = Date.now();
-    const variant = getRandomInt(0, adlibs[adlibOption].variantCount - 1);
+
+    // Avoid showing a variant if it was shown recently.
+    let variant = undefined;
+    do {
+      variant = getRandomInt(0, adlibs[adlibOption].variantCount - 1);
+    } while (variantHistory.current.includes(variant));
+    const newVariantsHistory = [...variantHistory.current, variant];
+    // Keep the array length at a maximum of 3
+    if (newVariantsHistory.length > adlibs[adlibOption].variantCount - 2) {
+      newVariantsHistory.shift(); // Remove the oldest entry
+    }
+    variantHistory.current = newVariantsHistory;
+
     const {head} = getGeneratedDancerAssets(adlibOption, choices, variant);
 
     setHeadImageUrl(head);
@@ -150,7 +163,7 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
     const delayDuration = 2000; // 2 seconds.
     const remainingDelayDuration = Math.max(delayDuration - elapsedTime, 0);
     await new Promise(res => setTimeout(res, remainingDelayDuration));
-  }, [adlibOption, choices]);
+  }, [adlibOption, choices, variantHistory]);
 
   const generateDancer = useCallback(async () => {
     setAiGenerateState('generating');
@@ -172,6 +185,7 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
               onChange={(adlibText, choices) => {
                 setAdlibText(adlibText);
                 setChoices(choices);
+                variantHistory.current = [];
               }}
               className={moduleStyles.textArea}
             />
