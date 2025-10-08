@@ -1,8 +1,7 @@
 <Dancelab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 63,
-  "created_at": "2025-09-17T09:36:01.000Z",
+  "created_at": "2025-10-07T22:39:02.000Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
@@ -33,16 +32,13 @@
     "hide_pause_button": "false",
     "default_song": "introtoshamstep_47SOUL",
     "uses_lab2": "true",
-    "ai_code_generate": "true",
-    "generate_dancer_mode": "false",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "generate_dancer_mode": "true",
+    "ai_dancer_generate_adlib": "adjective-animal-attire-02",
+    "ai_code_generate": "false",
+    "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-09-10 22:48:37 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-07 00:36:07 +0000\",\"changed\":[\"block_pools\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2025-10-08 04:52:01 +0000\",\"changed\":[\"hide_share_and_remix\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]",
-  "level_concept_difficulty": {
-  }
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-10-07T22:39:02.962+00:00\",\"changed\":[\"cloned from \\\"hoai-dancer-adlib3\\\"\"],\"cloned_from\":\"hoai-dancer-adlib3\"}]"
 }]]></config>
   <blocks/>
 </Dancelab>
