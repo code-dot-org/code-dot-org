@@ -538,6 +538,7 @@ class Pd::Workshop < ApplicationRecord
     scheduled_start_in_days(days).each do |workshop|
       next if workshop.suppress_reminders?
 
+      # Send reminder emails to enrollees
       workshop.enrollments.each do |enrollment|
         user = enrollment.user
         Pd::WorkshopMailjetMailer.send_teacher_workshop_reminder(enrollment, user, false, days)
@@ -548,6 +549,15 @@ class Pd::Workshop < ApplicationRecord
         end
       rescue => exception
         errors << "teacher enrollment #{enrollment.id} - #{exception.message}"
+      end
+
+      # Send reminder email to Regional Partner
+      if workshop.regional_partner.present?
+        begin
+          Pd::WorkshopMailjetMailer.send_rp_workshop_reminder(workshop, days)
+        rescue => exception
+          errors << "regional partner #{workshop.regional_partner.id} - #{exception.message}"
+        end
       end
 
       workshop.facilitators.each do |facilitator|
