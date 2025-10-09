@@ -211,7 +211,8 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
           </>
         )}
         {aiGenerateState === 'generating' ? 'Generating a dancer...' : ''}
-        {aiGenerateState === 'done' && (
+        {aiGenerateState === 'done' && isPreviewLoading && 'Loading preview...'}
+        {aiGenerateState === 'done' && !isPreviewLoading && (
           <>
             <div>Here is the dancer that was generated.</div>
 
@@ -253,11 +254,13 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
         />
       </Guide>
       <div className={moduleStyles.dancerContainer} ref={containerRef}>
-        {aiGenerateState === 'done' || dancerSignature ? (
+        {aiGenerateState === 'generating' || !dancerSignature ? (
+          <img alt="" src={dancerEmptyHeadShoulders} />
+        ) : (
           <>
             <DancerCanvas
               key={dancerSignature || 'none'}
-              height={containerHeight}
+              size={containerHeight}
               move="rest"
               onLoadingChange={setIsPreviewLoading}
             />
@@ -267,8 +270,6 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
               </div>
             )}
           </>
-        ) : (
-          <img alt="" src={dancerEmptyHeadShoulders} />
         )}
       </div>
     </div>

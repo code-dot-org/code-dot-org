@@ -328,20 +328,8 @@ const Timeline: React.FunctionComponent<TimelineProps> = ({
         </div>
       </div>
       {loopEnabled && <LoopMarkers loopStart={loopStart} loopEnd={loopEnd} />}
-      <div
-        style={{
-          position: 'absolute',
-          top: 0,
-          right: 0,
-          width: availableHeight,
-          height: availableHeight,
-          zIndex: 2000, // keep whatever you used before
-        }}
-      >
-        <DancerCanvas
-          height={availableHeight}
-          measurePosition={positionToUse}
-        />
+      <div className={moduleStyles.dancerCanvasContainer}>
+        <DancerCanvas size={availableHeight} measurePosition={positionToUse} />
       </div>
     </div>
   );

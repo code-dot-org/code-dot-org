@@ -6,7 +6,7 @@ import appConfig from '@cdo/apps/music/appConfig';
 
 type Props = {
   /** Square pixel size for the canvas (width === height). */
-  height: number;
+  size: number;
   /** When provided, render based on the fractional measure (Timeline mode). */
   measurePosition?: number;
   /** Explicit move to load; if omitted, use appConfig('dance'). */
@@ -21,7 +21,7 @@ type Props = {
 };
 
 const DancerCanvas: React.FC<Props> = ({
-  height,
+  size,
   measurePosition,
   move,
   rafSpeed = 0.5,
@@ -110,16 +110,15 @@ const DancerCanvas: React.FC<Props> = ({
     [onLoadingChange, renderAtMeasure, renderAtFrame]
   );
 
-  // size backing store + repaint on HEIGHT change only (fixes Timeline flicker)
   useEffect(() => {
     const node = canvasRef.current;
-    if (!node) return;
-    const dpr = window.devicePixelRatio || 1;
-    const h = Math.max(0, height);
-    node.style.width = `${h}px`;
-    node.style.height = `${h}px`;
-    node.width = Math.max(1, Math.floor(h * dpr));
-    node.height = Math.max(1, Math.floor(h * dpr));
+    if (!node) {
+      return;
+    }
+    node.style.width = `${size}px`;
+    node.style.height = `${size}px`;
+    node.width = Math.max(1, Math.floor(size));
+    node.height = Math.max(1, Math.floor(size));
     if (rendererRef.current && ready) {
       rendererRef.current.resize?.();
       if (typeof measureRef.current === 'number') {
@@ -128,27 +127,35 @@ const DancerCanvas: React.FC<Props> = ({
         renderAtFrame();
       }
     }
-  }, [height, ready, renderAtMeasure, renderAtFrame]);
+  }, [size, ready, renderAtMeasure, renderAtFrame]);
 
-  // external driver: repaint on playhead changes
   useEffect(() => {
-    if (!ready) return;
-    if (typeof measurePosition !== 'number') return;
+    if (!ready) {
+      return;
+    }
+    if (typeof measurePosition !== 'number') {
+      return;
+    }
     renderAtMeasure(measurePosition);
   }, [measurePosition, ready, renderAtMeasure]);
 
-  // internal driver: RAF loop when no measurePosition
   useEffect(() => {
-    if (!ready) return;
+    if (!ready) {
+      return;
+    }
     if (typeof measurePosition === 'number') {
-      if (rafRef.current) cancelAnimationFrame(rafRef.current);
+      if (rafRef.current) {
+        cancelAnimationFrame(rafRef.current);
+      }
       rafRef.current = null;
       return;
     }
 
     let cancelled = false;
     const tick = () => {
-      if (cancelled) return;
+      if (cancelled) {
+        return;
+      }
       renderAtFrame();
       frameRef.current += rafSpeed;
       rafRef.current = requestAnimationFrame(tick);
@@ -162,9 +169,11 @@ const DancerCanvas: React.FC<Props> = ({
     };
   }, [ready, measurePosition, rafSpeed, renderAtFrame]);
 
-  // reload move at runtime if it changes
+  // Reload move if it changes.
   useEffect(() => {
-    if (!ready || !rendererRef.current) return;
+    if (!ready || !rendererRef.current) {
+      return;
+    }
     (async () => {
       try {
         onLoadingChange?.(true);
@@ -186,7 +195,7 @@ const DancerCanvas: React.FC<Props> = ({
     })();
   }, [onLoadingChange, ready, resolvedMove, renderAtMeasure, renderAtFrame]);
 
-  // cleanup
+  // Clean up on unmount.
   useEffect(() => {
     return () => {
       try {
@@ -195,12 +204,16 @@ const DancerCanvas: React.FC<Props> = ({
       rendererRef.current = null;
       lastInitNodeRef.current = null;
       setReady(false);
-      if (rafRef.current) cancelAnimationFrame(rafRef.current);
+      if (rafRef.current) {
+        cancelAnimationFrame(rafRef.current);
+      }
       rafRef.current = null;
     };
   }, []);
 
-  if (!resolvedMove) return null;
+  if (!resolvedMove) {
+    return null;
+  }
 
   return (
     <canvas
