@@ -4,7 +4,6 @@ import {Heading5} from '@code-dot-org/component-library/typography';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 import BackToParentProject from '@cdo/apps/bubbleChoice/BackToParentProject';
-import {getGeneratedDancerAssets} from '@cdo/apps/dance/lottie/LottieDancerUtils';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
 import {LevelProperties} from '@cdo/apps/lab2/types';
