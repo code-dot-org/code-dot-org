@@ -36,10 +36,21 @@
   width: calc(100% - 40% - 124px);
   display: flex;
   justify-content: center;
+  position: relative;
 
   img {
     width: 100%;
     height: 100%;
     object-fit: contain;
   }
+}
+
+.spinnerOverlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 1;
 }

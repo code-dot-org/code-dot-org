@@ -10,6 +10,7 @@ import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import Adlib, {AdlibsType} from '@cdo/apps/lab2/views/components/guide/Adlib';
 import Guide from '@cdo/apps/lab2/views/components/guide/Guide';
 import DancerCanvas from '@cdo/apps/lab2/views/DancerCanvas';
+import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import getRandomInt from '@cdo/apps/util/getRandomInt';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {trySetLocalStorage} from '@cdo/apps/utils';
@@ -125,6 +126,9 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
   const [aiGenerateState, setAiGenerateState] = useState<
     'none' | 'generating' | 'done'
   >('none');
+  const [dancerSignature, setDancerSignature] = useState<string | null>(
+    localStorage.getItem('dancer-ai-generate')
+  );
 
   useLifecycleNotifier(LifecycleEvent.LevelLoadStarted, () => {
     setAiGenerateState('none');
@@ -146,15 +150,9 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
     }
     variantHistory.current = newVariantsHistory;
 
-    const {head} = getGeneratedDancerAssets(adlibOption, choices, variant);
-
-    setHeadImageUrl(head);
-
-    trySetLocalStorage(
-      'dancer-ai-generate',
-      JSON.stringify({adlibOption, choices, variant})
-    );
-
+    const newDancerPayload = JSON.stringify({adlibOption, choices, variant});
+    trySetLocalStorage('dancer-ai-generate', newDancerPayload);
+    setDancerSignature(newDancerPayload);
     const elapsedTime = Date.now() - startTime;
     const delayDuration = 2000; // 2 seconds.
     const remainingDelayDuration = Math.max(delayDuration - elapsedTime, 0);
@@ -169,14 +167,17 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
 
   const containerRef = useRef<HTMLDivElement | null>(null);
   const [containerHeight, setContainerHeight] = useState(0);
+  const [isPreviewLoading, setIsPreviewLoading] = useState(false);
   useEffect(() => {
-    if (!containerRef.current) return;
-    const ro = new ResizeObserver(() => {
+    if (!containerRef.current) {
+      return;
+    }
+    const resizeObserver = new ResizeObserver(() => {
       setContainerHeight(containerRef.current?.clientHeight ?? 0);
     });
-    ro.observe(containerRef.current);
+    resizeObserver.observe(containerRef.current);
     setContainerHeight(containerRef.current.clientHeight ?? 0);
-    return () => ro.disconnect();
+    return () => resizeObserver.disconnect();
   }, []);
 
   return (
@@ -244,15 +245,24 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
           </>
         )}
       </Guide>
-
-      <div className={moduleStyles.dancerContainer}>
-        <div className={moduleStyles.dancerContainer} ref={containerRef}>
-          {aiGenerateState === 'done' ? (
-            <DancerCanvas height={containerHeight} move="rest" />
-          ) : (
-            <img alt="" src={dancerEmptyHeadShoulders} />
-          )}
-        </div>
+      <div className={moduleStyles.dancerContainer} ref={containerRef}>
+        {aiGenerateState === 'done' || dancerSignature ? (
+          <>
+            <DancerCanvas
+              key={dancerSignature || 'none'}
+              height={containerHeight}
+              move="rest"
+              onLoadingChange={setIsPreviewLoading}
+            />
+            {isPreviewLoading && (
+              <div className={moduleStyles.spinnerOverlay}>
+                <Spinner size="large" />
+              </div>
+            )}
+          </>
+        ) : (
+          <img alt="" src={dancerEmptyHeadShoulders} />
+        )}
       </div>
     </div>
   );

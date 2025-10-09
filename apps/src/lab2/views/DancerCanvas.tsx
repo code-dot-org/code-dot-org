@@ -17,6 +17,7 @@ type Props = {
   style?: React.CSSProperties;
   className?: string;
   ariaLabel?: string;
+  onLoadingChange?: (loading: boolean) => void;
 };
 
 const DancerCanvas: React.FC<Props> = ({
@@ -27,6 +28,7 @@ const DancerCanvas: React.FC<Props> = ({
   style,
   className,
   ariaLabel,
+  onLoadingChange,
 }) => {
   const resolvedMove =
     (move ?? ((appConfig.getValue('dance') || '') + '').trim().toLowerCase()) ||
@@ -85,6 +87,7 @@ const DancerCanvas: React.FC<Props> = ({
 
       (async () => {
         try {
+          onLoadingChange?.(true);
           if (moveRef.current && rendererRef.current) {
             await rendererRef.current.setSource(
               moveRef.current as DanceMoves | null
@@ -99,10 +102,12 @@ const DancerCanvas: React.FC<Props> = ({
           }
         } catch {
           setReady(false);
+        } finally {
+          onLoadingChange?.(false);
         }
       })();
     },
-    [renderAtMeasure, renderAtFrame]
+    [onLoadingChange, renderAtMeasure, renderAtFrame]
   );
 
   // size backing store + repaint on HEIGHT change only (fixes Timeline flicker)
@@ -162,6 +167,7 @@ const DancerCanvas: React.FC<Props> = ({
     if (!ready || !rendererRef.current) return;
     (async () => {
       try {
+        onLoadingChange?.(true);
         if (moveRef.current && rendererRef.current) {
           await rendererRef.current.setSource(
             moveRef.current as DanceMoves | null
@@ -173,9 +179,12 @@ const DancerCanvas: React.FC<Props> = ({
           frameRef.current = 0;
           renderAtFrame();
         }
-      } catch {}
+      } catch {
+      } finally {
+        onLoadingChange?.(false);
+      }
     })();
-  }, [ready, resolvedMove, renderAtMeasure, renderAtFrame]);
+  }, [onLoadingChange, ready, resolvedMove, renderAtMeasure, renderAtFrame]);
 
   // cleanup
   useEffect(() => {
