@@ -3,13 +3,13 @@ import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {Heading5} from '@code-dot-org/component-library/typography';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
-import {getGeneratedDancerAssets} from '@cdo/apps/dance/lottie/LottieDancerUtils';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
 import {LevelProperties} from '@cdo/apps/lab2/types';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import Adlib, {AdlibsType} from '@cdo/apps/lab2/views/components/guide/Adlib';
 import Guide from '@cdo/apps/lab2/views/components/guide/Guide';
+import DancerCanvas from '@cdo/apps/lab2/views/DancerCanvas';
 import getRandomInt from '@cdo/apps/util/getRandomInt';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {trySetLocalStorage} from '@cdo/apps/utils';
@@ -126,10 +126,6 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
     'none' | 'generating' | 'done'
   >('none');
 
-  const [headImageUrl, setHeadImageUrl] = useState<string | undefined>(
-    undefined
-  );
-
   useLifecycleNotifier(LifecycleEvent.LevelLoadStarted, () => {
     setAiGenerateState('none');
     variantHistory.current = [];
@@ -170,6 +166,18 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
     await generateDancerCache();
     setAiGenerateState('done');
   }, [generateDancerCache]);
+
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  const [containerHeight, setContainerHeight] = useState(0);
+  useEffect(() => {
+    if (!containerRef.current) return;
+    const ro = new ResizeObserver(() => {
+      setContainerHeight(containerRef.current?.clientHeight ?? 0);
+    });
+    ro.observe(containerRef.current);
+    setContainerHeight(containerRef.current.clientHeight ?? 0);
+    return () => ro.disconnect();
+  }, []);
 
   return (
     <div id="dance-lab" className={moduleStyles.dancerGenerate}>
@@ -238,12 +246,13 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
       </Guide>
 
       <div className={moduleStyles.dancerContainer}>
-        <img
-          alt=""
-          src={
-            aiGenerateState === 'done' ? headImageUrl : dancerEmptyHeadShoulders
-          }
-        />
+        <div className={moduleStyles.dancerContainer} ref={containerRef}>
+          {aiGenerateState === 'done' ? (
+            <DancerCanvas height={containerHeight} move="rest" />
+          ) : (
+            <img alt="" src={dancerEmptyHeadShoulders} />
+          )}
+        </div>
       </div>
     </div>
   );
