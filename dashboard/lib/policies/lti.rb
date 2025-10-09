@@ -31,7 +31,8 @@ class Policies::Lti
 
   MEMBERSHIP_CONTAINER_CONTENT_TYPE = 'application/vnd.ims.lti-nrps.v2.membershipcontainer+json'.freeze
   TEACHER_ROLES = Set.new(['http://purl.imsglobal.org/vocab/lis/v1/institution/person#Instructor',
-                           'http://purl.imsglobal.org/vocab/lis/v2/membership#Instructor']
+                           'http://purl.imsglobal.org/vocab/lis/v2/membership#Instructor',
+                           'Teacher']
 ).freeze
   STAFF_ROLES = Set.new(
     [
@@ -64,6 +65,7 @@ class Policies::Lti
       auth_redirect_url: 'https://sso.canvaslms.com/api/lti/authorize_redirect'.freeze,
       jwks_url: 'https://sso.canvaslms.com/api/lti/security/jwks'.freeze,
       access_token_url: 'https://sso.canvaslms.com/login/oauth2/token'.freeze,
+      role_claim: LTI_ROLES_KEY,
     },
     canvas_beta_cloud: {
       name: 'Canvas - Beta'.freeze,
@@ -71,6 +73,7 @@ class Policies::Lti
       auth_redirect_url: 'https://sso.beta.canvaslms.com/api/lti/authorize_redirect'.freeze,
       jwks_url: 'https://sso.beta.canvaslms.com/api/lti/security/jwks'.freeze,
       access_token_url: 'https://sso.beta.canvaslms.com/login/oauth2/token'.freeze,
+      role_claim: LTI_ROLES_KEY,
     },
     canvas_test_cloud: {
       name: 'Canvas - Test'.freeze,
@@ -78,6 +81,7 @@ class Policies::Lti
       auth_redirect_url: 'https://sso.test.canvaslms.com/api/lti/authorize_redirect'.freeze,
       jwks_url: 'https://sso.test.canvaslms.com/api/lti/security/jwks'.freeze,
       access_token_url: 'https://sso.test.canvaslms.com/login/oauth2/token'.freeze,
+      role_claim: LTI_ROLES_KEY,
     },
     schoology: {
       name: 'Schoology'.freeze,
@@ -85,6 +89,7 @@ class Policies::Lti
       auth_redirect_url: 'https://lti-service.svc.schoology.com/lti-service/authorize-redirect'.freeze,
       jwks_url: 'https://lti-service.svc.schoology.com/lti-service/.well-known/jwks'.freeze,
       access_token_url: 'https://lti-service.svc.schoology.com/lti-service/access-token'.freeze,
+      role_claim: LTI_ROLES_KEY,
     },
     # TODO: I got these from https://launchpad.classlink.com/.well-known/openid-configuration,
     # which was listed here (under Prerequisites) as a step https://help.classlink.com/s/article/pp-lti-1-3
@@ -94,6 +99,7 @@ class Policies::Lti
       auth_redirect_url: "https://launchpad.classlink.com/oauth2/v2/auth".freeze,
       jwks_url: "https://launchpad.classlink.com/oauth2/v2/jwks".freeze,
       access_token_url: "https://launchpad.classlink.com/oauth2/v2/token".freeze,
+      role_claim: 'classLink_role',
     },
   }
 
@@ -141,7 +147,10 @@ class Policies::Lti
 
   MAX_COURSE_MEMBERSHIP = 650
 
-  def self.get_account_type(roles)
+  def self.get_account_type(id_token)
+    issuer = id_token[:iss]
+    role_claim_key = find_role_claim_by_issuer(issuer)
+    roles = Array(id_token[role_claim_key]).compact
     roles.each do |role|
       return User::TYPE_TEACHER if STAFF_ROLES.include? role
     end
@@ -180,6 +189,11 @@ class Policies::Lti
     return 'Canvas' if /canvas/.match?(issuer)
     return 'Schoology' if /schoology/.match?(issuer)
     I18n.t(:lti_v1, scope: [:section, :type])
+  end
+
+  def self.find_role_claim_by_issuer(issuer)
+    platform = LMS_PLATFORMS.values.find {|p| p[:issuer] == issuer}
+    platform&.dig(:role_claim)
   end
 
   def self.find_platform_by_issuer(issuer)

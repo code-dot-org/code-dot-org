@@ -9,7 +9,7 @@ require 'metrics/events'
 module Services
   module Lti
     def self.initialize_lti_user(id_token)
-      user_type = Policies::Lti.get_account_type(id_token[Policies::Lti::LTI_ROLES_KEY])
+      user_type = Policies::Lti.get_account_type(id_token)
       user = ::User.new
       user.provider = ::User::PROVIDER_MIGRATED
       user.user_type = user_type
