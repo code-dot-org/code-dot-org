@@ -143,6 +143,7 @@ const Weblab2View: React.FC<
     dispatch(setViewMode(levelProperties?.initialViewMode || ViewMode.SPLIT));
   }, [dispatch, levelProperties?.initialViewMode]);
 
+  // TODO: put this behind a flag
   const aiTutorResponseSchemaSettings: ResponseSchemaSettings = {
     jsonSchema: aiTutorResponseJsonSchema,
     responseCallback: (response: string) => {
