@@ -1,6 +1,6 @@
 import {useEffect, useMemo, useState} from 'react';
 
-import {ModelParameters} from '@cdo/apps/aichat/types';
+import {ModelParameters, ResponseSchemaSettings} from '@cdo/apps/aichat/types';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {shouldShowCopyCode} from '@cdo/apps/lab2/ai/ai-should-show-copy-code';
 import {aiTutorModelId} from '@cdo/apps/lab2/ai/ai-tutor-model-id';
@@ -33,6 +33,7 @@ export const baseModelParameters: ModelParameters = {
 
 interface UseAiTutorModelParametersOptions {
   aiTutorSystemPromptName?: string;
+  aiTutorJsonScema?: object;
 }
 
 export const useAiTutorModelParameters = (
@@ -99,12 +100,16 @@ export const useAiTutorModelParameters = (
     if (!systemPrompt) {
       return undefined;
     }
+    let result = {...baseModelParameters, systemPrompt} as ModelParameters;
+    if (options?.aiTutorJsonScema) {
+      result = {
+        ...result,
+        responseJsonSchema: options.aiTutorJsonScema,
+      };
+    }
 
-    return {
-      ...baseModelParameters,
-      systemPrompt,
-    } as ModelParameters;
-  }, [systemPrompt]);
+    return result;
+  }, [options?.aiTutorJsonScema, systemPrompt]);
 
   return {
     modelParameters,
