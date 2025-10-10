@@ -83,4 +83,6 @@ export const PROJECT_DEFAULT_THUMBNAIL_IMAGE_OVERRIDE: {
 } = {
   music: '/shared/images/fill-70x70/courses/logo_music.png',
   pythonlab: '/shared/images/fill-70x70/courses/logo_pythonlab.png',
+  // Temporary placeholder
+  music_dance_ai: '/blockly/media/dance/placeholder.png',
 };
