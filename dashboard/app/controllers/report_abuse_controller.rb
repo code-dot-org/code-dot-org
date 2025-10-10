@@ -82,7 +82,8 @@ class ReportAbuseController < ApplicationController
     return head :unauthorized unless can?(:destroy_abuse, nil)
 
     begin
-      value = Projects.new(get_storage_id).reset_abuse(params[:channel_id])
+      channel_id = params[:channel_id]
+      value = Projects.new(get_storage_id).reset_abuse(channel_id)
       update_file_abuse_score('assets', channel_id, 0)
       update_file_abuse_score('files', channel_id, 0)
     rescue ArgumentError, OpenSSL::Cipher::CipherError
@@ -233,7 +234,7 @@ class ReportAbuseController < ApplicationController
   end
 
   private def can_update_abuse_score?(endpoint, encrypted_channel_id, filename, new_score)
-    return true if current_user&.project_validator? || new_score.nil?
+    return true if current_user || new_score.nil?
 
     get_bucket_impl(endpoint).new.get_abuse_score(encrypted_channel_id, filename) <= new_score.to_i
   end
