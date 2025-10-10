@@ -1,6 +1,6 @@
 import {useEffect, useMemo, useState} from 'react';
 
-import {ModelParameters, ResponseSchemaSettings} from '@cdo/apps/aichat/types';
+import {ModelParameters} from '@cdo/apps/aichat/types';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {shouldShowCopyCode} from '@cdo/apps/lab2/ai/ai-should-show-copy-code';
 import {aiTutorModelId} from '@cdo/apps/lab2/ai/ai-tutor-model-id';
