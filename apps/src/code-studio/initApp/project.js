@@ -28,7 +28,6 @@ import {queryParams, hasQueryParam, updateQueryParam} from '../utils';
 var showProjectAdmin = require('../showProjectAdmin');
 
 var assets = require('./clientApi').create('/v3/assets');
-var files = require('./clientApi').create('/v3/files');
 var sources = require('./clientApi').create('/v3/sources');
 var sourcesPublic = require('./clientApi').create('/v3/sources-public');
 var channels = require('./clientApi').create('/v3/channels');
@@ -363,17 +362,6 @@ var projects = (module.exports = {
       return;
     }
     HttpClient.post(`/v3/channels/${channelId}/abuse/delete`, '', true);
-    assets.patchAll(channelId, 'abuse_score=0', null, function (err, result) {
-      if (err) {
-        throw err;
-      }
-    });
-    files.patchAll(channelId, 'abuse_score=0', null, function (err, result) {
-      if (err) {
-        throw err;
-      }
-      $('.admin-abuse-score').text(0);
-    });
   },
 
   /**

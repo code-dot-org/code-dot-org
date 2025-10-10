@@ -83,18 +83,12 @@ class ReportAbuseController < ApplicationController
 
     begin
       value = Projects.new(get_storage_id).reset_abuse(params[:channel_id])
+      # TODO: Remove the following two lines in a reasonable amount of time since we no longer flag assets and files if channel is flagged.
+      update_file_abuse_score('assets', channel_id, 0)
+      update_file_abuse_score('files', channel_id, 0)
     rescue ArgumentError, OpenSSL::Cipher::CipherError
       raise ActionController::BadRequest.new, "Bad channel_id"
     end
-    render json: {abuse_score: value}
-  end
-
-  # PATCH /v3/(animations|assets|sources|files|libraries)/:channel_id?abuse_score=:abuse_score
-  def update_file_abuse
-    return head :unauthorized unless can?(:update_file_abuse, nil)
-
-    value = update_file_abuse_score(params[:endpoint], params[:encrypted_channel_id], params[:abuse_score])
-
     render json: {abuse_score: value}
   end
 
@@ -148,6 +142,7 @@ class ReportAbuseController < ApplicationController
     value
   end
 
+  # TODO: Remove this method in a reasonable amount of time since we no longer flag assets and files if channel is flagged.
   # Update all assets for the given channelId to have the provided abuse score
   # Was PATCH /v3/(animations|assets|sources|files|libraries)/:channel_id?abuse_score=<abuse_score>
   def update_file_abuse_score(endpoint, encrypted_channel_id, abuse_score)
@@ -209,12 +204,7 @@ class ReportAbuseController < ApplicationController
 
   private def update_abuse_score
     if params[:channel_id].present?
-      channel_id = params[:channel_id]
-
-      abuse_score = update_channel_abuse_score(channel_id)
-
-      update_file_abuse_score('assets', channel_id, abuse_score)
-      update_file_abuse_score('files', channel_id, abuse_score)
+      update_channel_abuse_score(params[:channel_id])
     end
   end
 
