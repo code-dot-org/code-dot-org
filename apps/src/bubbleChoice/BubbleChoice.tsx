@@ -9,7 +9,10 @@ import classNames from 'classnames';
 import _ from 'lodash';
 import React, {useEffect, useMemo, useRef} from 'react';
 
-import {navigateToLevelId} from '@cdo/apps/code-studio/progressRedux';
+import {
+  navigateToLevelId,
+  setCurrentLevelId,
+} from '@cdo/apps/code-studio/progressRedux';
 import {levelById} from '@cdo/apps/code-studio/progressReduxSelectors';
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
 import {
@@ -22,6 +25,7 @@ import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
+import notifyLevelChange from '../lab2/utils/notifyLevelChange';
 import {commonI18n} from '../types/locale';
 
 import styles from './BubbleChoice.module.scss';
@@ -126,6 +130,14 @@ const BubbleChoice: React.FC<LabProps> = ({levelProperties}) => {
   const navigateToSublevel = (sublevel: BubbleChoiceSublevel) => {
     if (currentLessonId) {
       dispatch(navigateToLevelId(sublevel.level_id));
+    } else if (levelProperties.isProjectLevel) {
+      // For BubbleChoice project levels, set the level ID in redux, and let the
+      // MultiProjectContainer handle switching projects. The standard progress redux
+      // system does not work for project levels since there is no progress, lesson, etc.
+      dispatch(setCurrentLevelId(sublevel.level_id));
+      // TODO: This is a dupe of code in navigateToLevelId(). Can we consolidate?
+      notifyLevelChange(String(levelProperties.id), sublevel.level_id);
+      // TODO: Handle browser navigation.
     } else {
       window.location.href = sublevel.url;
     }
