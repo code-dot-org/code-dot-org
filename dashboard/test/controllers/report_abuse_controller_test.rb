@@ -121,17 +121,19 @@ class ReportAbuseControllerTest < ActionController::TestCase
   end
 
   test "can reset abuse score as project_validator" do
+    # Set initial abuse score to 20.
+    @projects.increment_abuse(@channel_id, 20)
     response = get :show_abuse, params: {channel_id: @channel_id}
     assert response.ok?
-    assert_equal 0, JSON.parse(response.body)['abuse_score']
+    assert_equal 20, JSON.parse(response.body)['abuse_score']
 
     user = create(:project_validator)
     sign_in user
 
-    # Verify that file abuse scores are reset to 0 for both assets and files
-    AssetBucket.any_instance.stubs(:get_abuse_score).returns(0)
+    # Verify that file abuse scores are reset to 0 for both assets and files.
+    AssetBucket.any_instance.stubs(:get_abuse_score).returns(20)
     AssetBucket.any_instance.expects(:replace_abuse_score).with(@channel_id, 'test.asset', 0).once
-    FileBucket.any_instance.stubs(:get_abuse_score).returns(0)
+    FileBucket.any_instance.stubs(:get_abuse_score).returns(20)
     FileBucket.any_instance.expects(:replace_abuse_score).with(@channel_id, 'test.file', 0).once
 
     response = delete :reset_abuse, params: {channel_id: @channel_id}
@@ -143,10 +145,10 @@ class ReportAbuseControllerTest < ActionController::TestCase
     user = create(:student)
     sign_in user
 
-    # Ensure initial score is 0
+    # Ensure initial score is 0.
     assert_equal 0, Projects.get_abuse(@channel_id)
 
-    # Verify that file abuse scores are updated for both assets and files when flagging
+    # Verify that file abuse scores are updated for both assets and files when flagging.
     AssetBucket.any_instance.stubs(:get_abuse_score).returns(0)
     AssetBucket.any_instance.expects(:replace_abuse_score).with(@channel_id, 'test.asset', 15).once
     FileBucket.any_instance.stubs(:get_abuse_score).returns(0)
@@ -163,11 +165,11 @@ class ReportAbuseControllerTest < ActionController::TestCase
     user = create(:student)
     sign_in user
 
-    # Set initial score to 15
+    # Set initial score to 15.
     @projects.increment_abuse(@channel_id, 15)
     assert_equal 15, Projects.get_abuse(@channel_id)
 
-    # Verify that file abuse scores are updated for both assets and files when unflagging
+    # Verify that file abuse scores are updated for both assets and files when unflagging.
     AssetBucket.any_instance.stubs(:get_abuse_score).returns(15)
     AssetBucket.any_instance.expects(:replace_abuse_score).with(@channel_id, 'test.asset', 0).once
     FileBucket.any_instance.stubs(:get_abuse_score).returns(15)
