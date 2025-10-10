@@ -16,6 +16,7 @@ class ReportAbuseControllerTest < ActionController::TestCase
     # files
     AWS::S3.stubs :create_client # Don't actually talk to S3
     FileBucket.any_instance.stubs(:list).returns([{filename: 'test.file'}])
+    AssetBucket.any_instance.stubs(:list).returns([{filename: 'test.asset'}])
   end
 
   teardown do
@@ -23,6 +24,8 @@ class ReportAbuseControllerTest < ActionController::TestCase
 
     FileBucket.any_instance.unstub(:list)
     FileBucket.any_instance.unstub(:get_abuse_score)
+    AssetBucket.any_instance.unstub(:list)
+    AssetBucket.any_instance.unstub(:get_abuse_score)
   end
 
   # channels
@@ -125,23 +128,50 @@ class ReportAbuseControllerTest < ActionController::TestCase
     user = create(:project_validator)
     sign_in user
 
+    # Verify that file abuse scores are reset to 0 for both assets and files
+    AssetBucket.any_instance.stubs(:get_abuse_score).returns(0)
+    AssetBucket.any_instance.expects(:replace_abuse_score).with(@channel_id, 'test.asset', 0).once
+    FileBucket.any_instance.stubs(:get_abuse_score).returns(0)
+    FileBucket.any_instance.expects(:replace_abuse_score).with(@channel_id, 'test.file', 0).once
+
     response = delete :reset_abuse, params: {channel_id: @channel_id}
     assert response.ok?
     assert_equal 0, JSON.parse(response.body)['abuse_score']
   end
 
-  test "update_abuse_image_moderation with updates abuse score according to type for signed in user" do
+  test "update_abuse_image_moderation flags and updates abuse score for signed in user" do
     user = create(:student)
     sign_in user
 
     # Ensure initial score is 0
     assert_equal 0, Projects.get_abuse(@channel_id)
 
+    # Verify that file abuse scores are updated for both assets and files when flagging
+    AssetBucket.any_instance.stubs(:get_abuse_score).returns(0)
+    AssetBucket.any_instance.expects(:replace_abuse_score).with(@channel_id, 'test.asset', 15).once
+    FileBucket.any_instance.stubs(:get_abuse_score).returns(0)
+    FileBucket.any_instance.expects(:replace_abuse_score).with(@channel_id, 'test.file', 15).once
+
     post :update_abuse_image_moderation, params: {channel_id: @channel_id, type: 'flag'}
 
     assert response.ok?
     assert_equal 15, JSON.parse(response.body)["abuse_score"]
     assert_equal 15, Projects.get_abuse(@channel_id)
+  end
+
+  test "update_abuse_image_moderation unflags and updates abuse score for signed in user" do
+    user = create(:student)
+    sign_in user
+
+    # Set initial score to 15
+    @projects.increment_abuse(@channel_id, 15)
+    assert_equal 15, Projects.get_abuse(@channel_id)
+
+    # Verify that file abuse scores are updated for both assets and files when unflagging
+    AssetBucket.any_instance.stubs(:get_abuse_score).returns(15)
+    AssetBucket.any_instance.expects(:replace_abuse_score).with(@channel_id, 'test.asset', 0).once
+    FileBucket.any_instance.stubs(:get_abuse_score).returns(15)
+    FileBucket.any_instance.expects(:replace_abuse_score).with(@channel_id, 'test.file', 0).once
 
     post :update_abuse_image_moderation, params: {channel_id: @channel_id, type: 'unflag'}
 
@@ -196,50 +226,6 @@ class ReportAbuseControllerTest < ActionController::TestCase
   end
 
   # files
-
-  test "patch with permission can update" do
-    user = create(:project_validator)
-    sign_in user
-
-    FileBucket.any_instance.stubs(:get_abuse_score).returns(10)
-    FileBucket.any_instance.expects(:replace_abuse_score).once
-    patch :update_file_abuse, params: {
-      endpoint: 'files',
-      abuse_score: 20,
-      encrypted_channel_id: 'test-channel-id'
-    }
-    assert response.ok?
-
-    FileBucket.any_instance.stubs(:get_abuse_score).returns(10)
-    FileBucket.any_instance.expects(:replace_abuse_score).once
-    patch :update_file_abuse, params: {
-      endpoint: 'files',
-      abuse_score: 0,
-      encrypted_channel_id: 'test-channel-id'
-    }
-    assert response.ok?
-
-    sign_out user
-  end
-
-  test "patch without permission gets unauthorized" do
-    FileBucket.any_instance.stubs(:get_abuse_score).returns(10)
-
-    patch :update_file_abuse, params: {
-      endpoint: 'files',
-      abuse_score: 0,
-      encrypted_channel_id: 'test-channel-id'
-    }
-    assert response.unauthorized?
-
-    patch :update_file_abuse, params: {
-      endpoint: 'files',
-      abuse_score: 10,
-      encrypted_channel_id: 'test-channel-id'
-    }
-    assert response.unauthorized?
-  end
-
   test "set abuse score" do
     FileBucket.any_instance.stubs(:get_abuse_score).returns(0)
     FileBucket.any_instance.expects(:replace_abuse_score).once
