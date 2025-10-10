@@ -1,5 +1,9 @@
 Feature: After completing the Hour of Code, the player is directed to a congratulations page
 
+  Background:
+    Given I am on "http://studio.code.org/reset_session"
+    And I use a cookie to mock the DCDO key "hoc_apis_in_dashboard" as "true"
+
   Scenario: Completing Minecraft HoC should go to certificate page and generate a certificate
     Given I am on "http://studio.code.org/courses/mc/units/1/reset"
     Given I load the last Minecraft HoC level
@@ -10,7 +14,7 @@ Feature: After completing the Hour of Code, the player is directed to a congratu
     Then I wait to see a congrats dialog with title containing "Keep Playing"
     And I press "#continue-button" using jQuery
     And I wait until current URL contains "/congrats"
-    And my query params match "\?i\=.*\&s\=bWM\="
+    And my query params match "\?i\=.*\&s\=bWM%3D$"
     And I wait to see element with ID "congrats-container"
     And I wait to see element with ID "uitest-certificate"
     And I type "Robo Códer" into "#name"
@@ -22,9 +26,9 @@ Feature: After completing the Hour of Code, the player is directed to a congratu
     Given I am on "http://studio.code.org/congrats"
     And I wait until element "#uitest-certificate" is visible
 
-    When I am on "http://code.org/api/hour/finish/kodable"
+    When I am on "http://studio.code.org/api/hour/finish/kodable"
     And I wait until current URL contains "http://studio.code.org/congrats"
-    Then my query params match "\?i\=.*\&s\=a29kYWJsZQ=="
+    Then my query params match "\?i\=.*\&s\=a29kYWJsZQ%3D%3D$"
 
     When I wait to see element with ID "uitest-certificate"
     And I type "Robo Coder" into "#name"
@@ -34,7 +38,7 @@ Feature: After completing the Hour of Code, the player is directed to a congratu
   @eyes
   Scenario: flappy course certificates
     When I open my eyes to test "flappy certificates"
-    And I am on "http://code.org/api/hour/finish/flappy"
+    And I am on "http://studio.code.org/api/hour/finish/flappy"
     And I wait until current URL contains "/congrats"
     And I wait to see element with ID "uitest-certificate"
     And element "#uitest-certificate" is visible
@@ -62,7 +66,7 @@ Feature: After completing the Hour of Code, the player is directed to a congratu
   @eyes
   Scenario: oceans course certificates
     When I open my eyes to test "oceans certificates"
-    And I am on "http://code.org/api/hour/finish/oceans"
+    And I am on "http://studio.code.org/api/hour/finish/oceans"
     And I wait until current URL contains "/congrats"
     And I wait to see element with ID "uitest-certificate"
     And element "#uitest-certificate" is visible
