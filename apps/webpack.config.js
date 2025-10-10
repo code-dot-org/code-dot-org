@@ -298,12 +298,7 @@ const WEBPACK_BASE_CONFIG = {
           p('test'),
           p('../dashboard/app/assets/images'),
         ],
-        type: 'asset/resource',
-        generator: {
-          filename: '[name]wp[contenthash:20][ext]',
-          outputPath: 'images/', // build/package/js/images/
-          publicPath: '/assets/js/images/', // Dashboard assets path
-        },
+        type: 'asset/inline',
       },
       {
         test: /\.jsx?$/,
