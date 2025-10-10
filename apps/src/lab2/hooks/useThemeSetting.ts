@@ -1,8 +1,8 @@
 import {Theme, useTheme} from '@code-dot-org/component-library/common/contexts';
-import codebridgeI18n from '@codebridge/locale';
 import {sendCodebridgeAnalyticsEvent} from '@codebridge/utils';
 import {useMemo} from 'react';
 
+import lab2I18n from '@cdo/apps/lab2/locale';
 import {AppName} from '@cdo/apps/lab2/types';
 import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
@@ -11,7 +11,10 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {lab2EntryPoints} from '../../../lab2EntryPoints';
 
-const useThemeSetting = (appName: AppName) => {
+const useThemeSetting = (
+  appName: AppName,
+  changeAnalyticsEventLabel: string = EVENTS.LAB2_THEME_CHANGE
+) => {
   const {signInState} = useAppSelector(state => state.currentUser);
 
   // We need to set the theme here because the dropdown is rendered in a portal outside the
@@ -26,10 +29,7 @@ const useThemeSetting = (appName: AppName) => {
   }, [appName]);
 
   const themeDropdownOptions = availableThemes.map(theme => ({
-    text:
-      theme === 'Dark'
-        ? codebridgeI18n.darkTheme()
-        : codebridgeI18n.lightTheme(),
+    text: theme === 'Dark' ? lab2I18n.darkTheme() : lab2I18n.lightTheme(),
     value: theme,
   }));
 
@@ -38,17 +38,14 @@ const useThemeSetting = (appName: AppName) => {
     if (signInState === SignInState.SignedIn) {
       new UserPreferences().setGlobalTheme(value);
     }
-    sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_THEME_CHANGE, appName, {
+    sendCodebridgeAnalyticsEvent(changeAnalyticsEventLabel, appName, {
       theme: value,
     });
   };
 
-  // TO DO:
-  // Strings out of codebridge i18n?
-  // Analytics event name change to make broader?
   return {
     id: 'theme',
-    label: codebridgeI18n.theme(),
+    label: lab2I18n.theme(),
     options: themeDropdownOptions,
     selectedValue: theme,
     onChange: handleThemeChange,

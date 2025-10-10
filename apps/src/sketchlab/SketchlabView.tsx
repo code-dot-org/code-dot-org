@@ -2,7 +2,7 @@ import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {Excalidraw, serializeAsJSON} from '@excalidraw/excalidraw';
 import {
   ExcalidrawElement,
-  Theme,
+  Theme as ExcalidrawTheme,
 } from '@excalidraw/excalidraw/types/element/types';
 import {
   AppState,
@@ -188,7 +188,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
             onChange={debouncedSerializeAndSaveWorkspace}
             excalidrawAPI={api => (excalidrawApiRef.current = api)}
             key={excalidrawMountKey}
-            theme={theme.toLowerCase() as Theme}
+            theme={theme.toLowerCase() as ExcalidrawTheme}
           />
           {WorkspaceAlert}
         </PanelContainer>

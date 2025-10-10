@@ -619,6 +619,7 @@ const EVENTS = {
 
   // Lab2
   LAB2_RESIZE_DRAG_START: 'Resize bar dragged in lab2',
+  LAB2_THEME_CHANGE: 'User changed theme in lab2 (non-codebridge)',
 
   // AI Teaching Assistant - Differentiation
 };
