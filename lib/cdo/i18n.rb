@@ -11,7 +11,7 @@ module Cdo
   module I18n
     DEFAULT_LOCALE = SharedConstants::DEFAULT_LOCALE
 
-    LANGUAGES = CSV.read(CDO.dir('lib/cdo/data/cdo-languages.csv'), headers: true, header_converters: :symbol).freeze
+    LANGUAGES = CSV.read(CDO.dir('config/i18n/cdo-languages.csv'), headers: true, header_converters: :symbol).freeze
 
     LOCALE_CONFIGS = YAML.load_file(CDO.dir('config/i18n/locales.yml')).each do |_locale, data|
       data.symbolize_keys! if data.is_a?(Hash)
