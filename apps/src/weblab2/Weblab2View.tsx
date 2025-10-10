@@ -11,6 +11,7 @@ import React, {useEffect, useState} from 'react';
 import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
 import {LabProps, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 
+import {ResponseSchemaSettings} from '../aichat/types';
 import {useSource} from '../codebridge/hooks/useSource';
 import {useAppDispatch, useAppSelector} from '../util/reduxHooks';
 
@@ -44,6 +45,28 @@ const defaultConfig: ConfigType = {
     share: ShareView,
     fullScreen: FullScreenView,
   },
+};
+
+const aiTutorResponseJsonSchema = {
+  type: 'object',
+  properties: {
+    code: {
+      type: 'array',
+      items: {
+        type: 'object',
+        properties: {
+          language: {type: 'string'},
+          sourceCode: {type: 'string'},
+          filename: {type: 'string'},
+        },
+        required: ['language', 'sourceCode', 'filename'],
+        additionalProperties: false,
+      },
+    },
+    explanation: {type: 'string'},
+  },
+  required: ['code', 'explanation'],
+  additionalProperties: false,
 };
 
 const defaultSource: MultiFileSource = {
@@ -120,6 +143,17 @@ const Weblab2View: React.FC<
     dispatch(setViewMode(levelProperties?.initialViewMode || ViewMode.SPLIT));
   }, [dispatch, levelProperties?.initialViewMode]);
 
+  const aiTutorResponseSchemaSettings: ResponseSchemaSettings = {
+    jsonSchema: aiTutorResponseJsonSchema,
+    responseCallback: (response: string) => {
+      console.log('hi from response callback');
+      console.log({response});
+      // TODO: send code to the appropriate place
+      const jsonResponse = JSON.parse(response);
+      return jsonResponse.explanation;
+    },
+  };
+
   return (
     <div className={moduleStyles.weblab2Container}>
       {hasSource && (
@@ -135,6 +169,7 @@ const Weblab2View: React.FC<
           aiTutorSystemPromptName={getPromptNameFromMode(
             levelProperties.aiTutorMode
           )}
+          aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
         />
       )}
     </div>
