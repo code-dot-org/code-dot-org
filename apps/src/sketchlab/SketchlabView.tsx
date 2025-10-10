@@ -37,10 +37,9 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
   levelProperties,
 }) => {
   const excalidrawApiRef = useRef<ExcalidrawImperativeAPI | null>();
-  const {currentSources, updateSources, sourceInitializationCount} =
+  const {currentSources, updateSources, setReinitializationHandler} =
     useSources<SketchlabSources>();
   const saveSourcesTimeoutRef = useRef<NodeJS.Timeout | null>(null);
-  const [excalidrawMountKey, setExcalidrawMountKey] = useState(0);
 
   const hasRun = useAppSelector(state => state.lab2System.hasRun);
 
@@ -125,9 +124,9 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
 
   // We remount (ie, reset) Excalidraw any time we observe
   // sources being initialized (eg, when level changes, teacher views a student's project, etc).
-  useEffect(() => {
-    setExcalidrawMountKey(key => key + 1);
-  }, [sourceInitializationCount]);
+  const [excalidrawMountKey, setExcalidrawMountKey] = useState(0);
+
+  setReinitializationHandler(() => () => setExcalidrawMountKey(key => key + 1));
 
   // Since there's no run button in Sketch Lab, set it to true by default
   // to enable the Submit button on edit on submittable levels.

@@ -7,6 +7,7 @@ import React, {
   useEffect,
   useMemo,
   useState,
+  useRef,
 } from 'react';
 
 import {toolboxToWorkspaceBlocks} from '@cdo/apps/blockly/utils/toolbox';
@@ -31,7 +32,7 @@ interface SourcesContextType<T extends ProjectSources = ProjectSources> {
   currentSources: T;
   updateSources: (newSources: T, forceSave?: boolean) => void;
   showStartOverDialog: (type: MessageType, message?: string) => void;
-  sourceInitializationCount: number;
+  setReinitializationHandler: (handler: () => void) => void;
 }
 
 const SourcesContext = createContext<SourcesContextType | null>(null);
@@ -51,20 +52,29 @@ export function useSources<T extends ProjectSources = ProjectSources>() {
  * Manages sources for a Lab.
  */
 const SourcesContainer: React.FC<
-  LabProps & {children: ReactNode; defaultSources: ProjectSources}
-> = ({levelProperties, initialSources, defaultSources, children}) => {
+  LabProps & {
+    children: ReactNode;
+    defaultSources: ProjectSources;
+  }
+> = ({
+  levelProperties,
+  initialSources,
+  defaultSources,
+
+  children,
+}) => {
   const [currentSources, setCurrentSources] = useState<ProjectSources>(
     () => getInitialSources(levelProperties, initialSources) || defaultSources
   );
-
-  // Gives an explicit signal to track when we are resetting sources
-  // via level change, a teacher switching between viewing different students, etc.
-  const [sourceInitializationCount, setSourceInitializationCount] = useState(0);
 
   const [startOverProps, setStartOverProps] = useState<{
     type: MessageType;
     message?: string;
   }>();
+
+  const reinitializationHandler = useRef<() => void>(() => {});
+  const setReinitializationHandler = (handler: () => void) =>
+    (reinitializationHandler.current = handler);
 
   const reinitializeSources = useCallback(
     (sources: ProjectSources, save: boolean = false) => {
@@ -72,9 +82,9 @@ const SourcesContainer: React.FC<
       if (save) {
         Lab2Registry.getInstance().getProjectManager()?.save(sources, true);
       }
-      setSourceInitializationCount(count => count + 1);
+      reinitializationHandler?.current();
     },
-    [setCurrentSources, setSourceInitializationCount]
+    [setCurrentSources, reinitializationHandler]
   );
 
   useEffect(() => {
@@ -132,7 +142,7 @@ const SourcesContainer: React.FC<
         currentSources,
         updateSources,
         showStartOverDialog,
-        sourceInitializationCount,
+        setReinitializationHandler,
       }}
     >
       {children}
