@@ -1,6 +1,5 @@
 .ai-tutor-sidebar {
   width: 45px;
-  border: 3px solid aqua;
   position: absolute;
   right: 0;
 
@@ -23,11 +22,6 @@
       object-fit: contain;
     }
   }
-
-  &-content {
-    overflow-y: auto;
-    height: calc(100vh - 60px); // Adjust based on header height
-  }
 }
 
 // AiTutorSidebarSuggestedPrompts styles
@@ -38,5 +32,29 @@
   background-color: white;
   cursor: pointer;
   border-radius: 0;
-  border: 1px solid lightgrey;
+  border-bottom: 2px solid lightgrey;
+
+  .icon-code {
+    color: var(--text-success-primary-fixed);
+  }
+
+  .icon-lightbulb {
+    color: var(--text-warning-primary-fixed);
+  }
+
+  .icon-book {
+    color: var(--text-info-primary-fixed);
+  }
+
+  .icon-brain {
+    color: purple;
+  }
+
+  .icon-bug {
+    color: red;
+  }
+
+  .icon-star {
+    color: goldenrod;
+  }
 }

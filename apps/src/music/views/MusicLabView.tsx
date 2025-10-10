@@ -5,6 +5,7 @@ import {useSelector} from 'react-redux';
 
 import {WorkspaceSerialization} from '@cdo/apps/blockly/types';
 import {applyBlockIdOverrides} from '@cdo/apps/blockly/utils';
+import BackToParentProject from '@cdo/apps/bubbleChoice/BackToParentProject';
 import header from '@cdo/apps/code-studio/header';
 import {
   START_SOURCES,
@@ -394,6 +395,14 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
               />
             }
             headerClassName={moduleStyles.headerWithBorder}
+            leftHeaderContent={
+              <BackToParentProject
+                text="Go to Hub"
+                iconLeft={{iconName: 'home'}}
+                type="secondary"
+                size="s"
+              />
+            }
           >
             {isStartMode && (
               <div
