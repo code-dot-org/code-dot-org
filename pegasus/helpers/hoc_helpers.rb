@@ -211,7 +211,7 @@ def launch_tutorial_pixel(tutorial)
 end
 
 def redirect_to_studio(path, path_params = {})
-  dashboard_uri = URI(CDO.studio_url(path, CDO.default_scheme))
+  dashboard_uri = URI.parse CDO.studio_url(URI::DEFAULT_PARSER.escape(path), CDO.default_scheme)
 
   redirect_params = URI.decode_www_form(dashboard_uri.query.to_s).to_h
   redirect_params.merge!(path_params)

@@ -1,22 +1,45 @@
-.textArea {
-    min-height: 42px;
+@use '@code-dot-org/component-library-styles/mixins.scss' as mixins;
+
+.editorContainer {
+  background: var(--background-neutral-primary);
+  padding: 0.625rem;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: outline 0.2s ease-in;
+
+  @include mixins.border-styles($border-color: var(--borders-neutral-strong));
+
+  // Add focus styles to the container when the textarea is focused
+  &.focused {
+    @include mixins.focus-styles;
+  }
+
+  // Textarea styles
+  .textArea {
+    min-height: 22px;
     max-height: 250px;
     box-sizing: border-box;
     resize: none;
     margin: 0;
-    flex: 1;
-}
-
-.editorContainer {
-    padding: 10px;
-    display: flex;
+    padding: 0;
     width: 100%;
-    box-sizing: border-box;
-    gap: 5px;
-}
+    border: none;
+    box-shadow: none;
+    background: var(--background-neutral-primary);
+    color: var(--text-neutral-primary);
 
-.endSingleItemContainer {
+    &:disabled {
+      opacity: 0.5;
+      background: none;
+    }
+  }
+
+  // Chat Actions container styles
+  .chatActionsContainer {
     display: flex;
-    justify-content: center;
-    align-items: end;
+    justify-content: flex-end;
+  }
 }

@@ -23,6 +23,8 @@ import {
 } from '@cdo/apps/lab2/projects/utils';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import AnalyticsReporter from '@cdo/apps/music/analytics/AnalyticsReporter';
 import {setExtraCopyrightContent} from '@cdo/apps/sharedComponents/footer/CopyrightDialog/index';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
@@ -130,6 +132,7 @@ class UnconnectedMusicView extends React.Component {
     canUndo: PropTypes.bool,
     canRedo: PropTypes.bool,
     codeToLoad: PropTypes.string,
+    scriptName: PropTypes.string,
     clearCodeToLoad: PropTypes.func,
     sendAttemptReport: PropTypes.func,
     isFirstAttempt: PropTypes.bool,
@@ -879,6 +882,17 @@ class UnconnectedMusicView extends React.Component {
   };
 
   playSong = async () => {
+    if (!this.state.hasRun) {
+      const eventName = this.props.levelProperties.isProjectLevel
+        ? EVENTS.PROJECT_ACTIVITY
+        : EVENTS.LEVEL_ACTIVITY;
+      analyticsReporter.sendEvent(eventName, {
+        signedIn: this.props.signInState,
+        unitName: this.props.scriptName,
+        levelId: this.props.levelProperties.id,
+        levelName: this.props.levelProperties.name,
+      });
+    }
     this.setState({
       hasRun: true,
     });
@@ -1014,6 +1028,7 @@ const MusicView = connect(
     canUndo: state.music.canUndo,
     canRedo: state.music.canRedo,
     codeToLoad: state.music.codeToLoad,
+    scriptName: state.progress.scriptName,
     isFirstAttempt: getCurrentLevel(state)?.status === LevelStatus.not_tried,
   }),
   dispatch => ({

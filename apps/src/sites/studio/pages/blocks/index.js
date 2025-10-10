@@ -21,8 +21,9 @@ function renderBlock(element) {
   const config = element.getAttribute('config');
   const pool = element.getAttribute('pool');
   const parsedConfig = jsonic(config);
-  const customInputTypes =
-    pool === 'Dancelab' ? danceInputTypes : spriteLabInputTypes;
+  const customInputTypes = ['Dancelab', 'GeneratedDancers'].includes(pool)
+    ? danceInputTypes
+    : spriteLabInputTypes;
   const blocksInstalled = installCustomBlocks({
     blockly: Blockly,
     blockDefinitions: [

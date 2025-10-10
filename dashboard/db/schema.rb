@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2025_08_28_171244) do
+ActiveRecord::Schema.define(version: 2025_10_01_182525) do
 
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -51,6 +51,14 @@ ActiveRecord::Schema.define(version: 2025_08_28_171244) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["ai_interaction_type", "ai_interaction_id"], name: "index_ai_interaction_feedbacks_on_ai_interaction"
+  end
+
+  create_table "ai_lesson_summaries", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "lesson_id"
+    t.text "lesson_summary"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "ai_tutor_interaction_feedbacks", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|

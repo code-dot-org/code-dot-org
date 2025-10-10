@@ -34,7 +34,7 @@ let inputServiceWorker: ServiceWorker | undefined;
 let lastInputId = '';
 let setupPromise: Promise<void> | undefined;
 let outputToNeighborhood = false;
-let isPyodideLoading = false;
+let directLogsToDevConsole = false;
 
 const getMessageHandlers = (
   consoleManager: ConsoleManager | null,
@@ -96,9 +96,10 @@ const setUpPyodideWorker = () => {
     switch (type) {
       case 'sysout':
       case 'syserr':
-        // Write messages to the dev console if we are still loading pyodide.
-        // These messages are confusing to students, as they are part of the pyodide loading process.
-        if (isPyodideLoading) {
+        // Write messages to the dev console if the flag is set.
+        // We set this flag if we are either loading pyodide or loading packages,
+        // to avoid showing students confusing loading messages.
+        if (directLogsToDevConsole) {
           console.log(message);
           break;
         }
@@ -165,17 +166,23 @@ const setUpPyodideWorker = () => {
         writeConsoleMessage(getErrorMessage(pythonlabI18n.loadFailed()));
         break;
       case 'loading_pyodide':
-        isPyodideLoading = true;
+        directLogsToDevConsole = true;
         getStore().dispatch(setLoadedCodeEnvironment(false));
         break;
       case 'loaded_pyodide':
-        isPyodideLoading = false;
+        directLogsToDevConsole = false;
         getStore().dispatch(setLoadedCodeEnvironment(true));
         if (message && parseInt(message)) {
           Lab2Registry.getInstance()
             .getMetricsReporter()
             .reportLoadTime('PythonLab.PyodideLoadTime', parseInt(message));
         }
+        break;
+      case 'loading_packages':
+        directLogsToDevConsole = true;
+        break;
+      case 'loaded_packages':
+        directLogsToDevConsole = false;
         break;
       default:
         console.warn(

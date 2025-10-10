@@ -8,17 +8,34 @@ import {
 
 import getBlockOptions from './getBlockOptions';
 
-const SET_BACKGROUND = 'Dancelab_setBackgroundEffectWithPaletteAI';
-const SET_FOREGROUND = 'Dancelab_setForegroundEffectExtended';
-const CHANGE_MOVE = 'Dancelab_changeMoveEachLR';
+const DANCELAB_PREFIX = 'Dancelab_';
+const GENERATED_PREFIX = 'GeneratedDancers_';
+
+// Try to find a block definition by type string.
+// We don't rely on the exact shape of BlockDefinition; cover common keys.
+function hasBlockType(defs: BlockDefinition[], name: string): boolean {
+  return defs.some(d => d.name === name);
+}
+
+// Given a block type (without block prefix), get the preferred, defined type.
+// Prefers blocks from the GeneratedDancers pool over the standard Dancelab pool.
+// Block pools may vary by level, but all Dance level use the Dancelab pool.
+function getPreferredBlockType(
+  defs: BlockDefinition[],
+  blockType: string
+): string {
+  return hasBlockType(defs, GENERATED_PREFIX + blockType)
+    ? GENERATED_PREFIX + blockType
+    : DANCELAB_PREFIX + blockType;
+}
+
+const MAKE_SPRITE = 'makeAnonymousDanceSprite';
+const CHANGE_MOVE = 'changeMoveEachLR';
+const SET_BACKGROUND = 'setBackgroundEffectWithPalette';
+const SET_FOREGROUND = 'setForegroundEffectExtended';
 
 function randomElement<T>(array: readonly T[]): T {
   return array[Math.floor(Math.random() * array.length)];
-}
-
-function uidFactory(prefix: string): () => string {
-  let i = 0;
-  return () => `${prefix}_${++i}`;
 }
 
 function randomField(name: string, options: string[]): string {
@@ -30,7 +47,6 @@ function groupSpritesField(): string {
 }
 
 function dirLeftRightField(value: -1 | 1): string {
-  // -1 means both or "left/right" depending on block impl; matches your example
   return `<field name="DIR">${value}</field>`;
 }
 
@@ -39,13 +55,12 @@ function unitMeasuresField(): string {
 }
 
 function makeSetBackgroundBlock(
-  id: string,
+  type: string,
   effects: string[],
   palettes: string[]
 ): JsonBlockConfig {
   return {
-    type: SET_BACKGROUND,
-    id,
+    type,
     fields: {
       PALETTE: randomField('PALETTE', palettes),
       EFFECT: randomField('EFFECT', effects),
@@ -54,12 +69,11 @@ function makeSetBackgroundBlock(
 }
 
 function makeSetForegroundBlock(
-  id: string,
+  type: string,
   effects: string[]
 ): JsonBlockConfig {
   return {
-    type: SET_FOREGROUND,
-    id,
+    type,
     fields: {
       EFFECT: randomField('EFFECT', effects),
     },
@@ -67,12 +81,11 @@ function makeSetForegroundBlock(
 }
 
 function makeChangeMoveEachLRBlock(
-  id: string,
+  type: string,
   moves: string[]
 ): JsonBlockConfig {
   return {
-    type: CHANGE_MOVE,
-    id,
+    type,
     fields: {
       GROUP: groupSpritesField(),
       MOVE: randomField('MOVE', moves),
@@ -103,49 +116,69 @@ export default function buildDanceBlockly(
   measures: number[],
   blockDefinitions: BlockDefinition[]
 ): WorkspaceSerialization {
-  const makeId = uidFactory('id');
+  const changeMoveBlockType = getPreferredBlockType(
+    blockDefinitions,
+    CHANGE_MOVE
+  );
+  const setBackgroundBlockType = getPreferredBlockType(
+    blockDefinitions,
+    SET_BACKGROUND
+  );
+  const setForegroundBlockType = getPreferredBlockType(
+    blockDefinitions,
+    SET_FOREGROUND
+  );
+  const makeSpriteBlockType = getPreferredBlockType(
+    blockDefinitions,
+    MAKE_SPRITE
+  );
 
   const validMoves = getBlockOptions(
     blockDefinitions,
-    CHANGE_MOVE,
+    changeMoveBlockType,
     'MOVE'
   ).filter(option => !['"next"', '"prev"', '"rand"'].includes(option));
 
   const validBackgrounds = getBlockOptions(
     blockDefinitions,
-    SET_BACKGROUND,
+    setBackgroundBlockType,
     'EFFECT'
   ).filter(option => !['"none"', '"rand"'].includes(option));
 
   const validForegrounds = getBlockOptions(
     blockDefinitions,
-    SET_FOREGROUND,
+    setForegroundBlockType,
     'EFFECT'
   ).filter(option => !['"none"', '"rand"'].includes(option));
 
   const validPalettes = getBlockOptions(
     blockDefinitions,
-    SET_BACKGROUND,
+    setBackgroundBlockType,
     'PALETTE'
   );
 
   // Setup: create sprite → change move → start background → start foreground
   const makeSprite: JsonBlockConfig = {
-    type: 'Dancelab_makeAnonymousDanceSprite',
-    id: makeId(),
+    type: makeSpriteBlockType,
     fields: {
       COSTUME: '<field name="COSTUME">"CAT"</field>',
       LOCATION: '<field name="LOCATION">{x: 200, y: 200}</field>',
     },
   };
 
-  const initialChangeMove = makeChangeMoveEachLRBlock(makeId(), validMoves);
+  const initialChangeMove = makeChangeMoveEachLRBlock(
+    changeMoveBlockType,
+    validMoves
+  );
   const initialBg = makeSetBackgroundBlock(
-    makeId(),
+    setBackgroundBlockType,
     validBackgrounds,
     validPalettes
   );
-  const initialFg = makeSetForegroundBlock(makeId(), validForegrounds);
+  const initialFg = makeSetForegroundBlock(
+    setForegroundBlockType,
+    validForegrounds
+  );
 
   const setupDoChain = chainBlocks(
     makeSprite,
@@ -170,19 +203,19 @@ export default function buildDanceBlockly(
   const eventBlocks: JsonBlockConfig[] = measures.map(
     (m, idx): JsonBlockConfig => {
       const bg = makeSetBackgroundBlock(
-        makeId(),
+        setBackgroundBlockType,
         validBackgrounds,
         validPalettes
       );
-      const fg = makeSetForegroundBlock(makeId(), validForegrounds);
-      const move = makeChangeMoveEachLRBlock(makeId(), validMoves);
+      const fg = makeSetForegroundBlock(
+        setForegroundBlockType,
+        validForegrounds
+      );
+      const move = makeChangeMoveEachLRBlock(changeMoveBlockType, validMoves);
       const chain = chainBlocks(bg, fg, move);
 
       return {
         type: 'Dancelab_atTimestampNotAfter',
-        id: makeId(),
-        x: 24 + (idx % 2) * 6, // tiny stagger to avoid exact overlap
-        y: 200 + idx * 180, // vertical spacing between event stacks
         fields: {
           TIMESTAMP: m,
           UNIT: unitMeasuresField(),

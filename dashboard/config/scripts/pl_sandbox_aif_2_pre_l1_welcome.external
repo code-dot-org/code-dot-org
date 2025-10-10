@@ -1,0 +1,58 @@
+name 'pl_sandbox_aif-2-pre-L1-Welcome'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+<div style="position: relative; text-align: center; color: white; margin-top: 20px;">
+    <img src="https://images.code.org/9156fd31d882dd6feaf421bb6818389d-image-1759160871825.png" alt="Banner image that says, Welcome to Teaching AI Foundations" style="width: 100%; border-radius: 10px;">
+    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 20px; width: 70%; max-width: 800px; border-radius: 10px;">
+    </div>
+</div>
+<br>
+
+# Welcome!
+
+#### This professional learning module prepares you to teach AI Foundations (Semester 2) course— a curriculum where students code alongside AI to build real-world interactive projects.
+
+___
+
+<div style="display: flex; justify-content: space-between; width: 95%; margin: 20pt auto; padding: 0 5px;">
+  <img src="https://images.code.org/8e7227d109471dbc27897577943895b1-image-1744063906640.04.48%E2%80%AFPM.png" style="border-radius: 5pt; width: 32%;">
+  <img src="https://images.code.org/5f29fc424c02eede282a4b09cd16835d-image-1744063906639.04.07%E2%80%AFPM.png" style="border-radius: 5pt; width: 32%;">
+  <img src="https://images.code.org/5f3188d66d020c6edff10c622c1915d8-image-1744063906638.10.49%E2%80%AFPM.png" style="border-radius: 5pt; width: 32%;">
+</div>
+
+___
+
+
+#### **By the end of this professional learning module, you will be able to:**
+
+* #### Prepare to teach the AI Foundations (Semester 2) course with confidence and clarity.
+* #### Understand the basics of web applications and how they support interactive, AI-powered projects.
+* #### Explain and apply core web technologies:
+	* #### HTML for structure,
+	* #### CSS for styling, and
+	* #### JavaScript for interactivity.
+* #### Integrate AI tools and concepts into coding lessons to model responsible and creative AI use.
+* #### Emphasize ethical considerations and human-centered design in classroom discussions.
+* #### Apply teaching strategies and best practices for engaging students in hands-on, project-based learning.
+
+## Take Our Pre-Survey
+
+#### To better gauge your learning and improve this professional learning module, please take our pre-survey - it will take fewer than five minutes to complete.
+
+<div style="margin: 20px 0px">
+<a class="btn btn-large btn-primary" href="https://studio.code.org/form/selfpaced_pd_teaching_programming_in_musiclab_pre_survey" target="blank" rel="noopener noreferrer">Take the Pre-Survey</a>
+</div>
+
+### **Suggested total time for this module:** 120 minutes
+
+
+
+
+ 
+ 
+
+
+![]()
+MARKDOWN

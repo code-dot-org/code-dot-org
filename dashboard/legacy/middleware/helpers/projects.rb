@@ -49,7 +49,7 @@ class Projects
     owner, project_id = storage_decrypt_channel_id(channel_id)
     raise NotFound, "channel `#{channel_id}` not found in your storage" unless owner == @storage_id
 
-    delete_count = @table.where(id: project_id).update(state: 'deleted')
+    delete_count = @table.where(id: project_id).update(state: 'deleted', updated_at: DateTime.now)
     raise NotFound, "channel `#{channel_id}` not found" if delete_count == 0
 
     # TODO: Delete all storage associated with this channel (e.g. properties and tables and assets)
@@ -61,7 +61,7 @@ class Projects
     owner, project_id = storage_decrypt_channel_id(channel_id)
     raise NotFound, "channel `#{channel_id}` not found in your storage" unless owner == @storage_id
 
-    update_count = @table.where(id: project_id).update(state: 'active')
+    update_count = @table.where(id: project_id).update(state: 'active', updated_at: DateTime.now)
     raise NotFound, "channel `#{channel_id}` not found" if update_count == 0
 
     true

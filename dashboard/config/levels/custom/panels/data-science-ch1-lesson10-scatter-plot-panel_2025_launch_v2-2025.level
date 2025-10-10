@@ -1,0 +1,46 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2025-09-25T20:08:34.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "true",
+    "panels": [
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/73a4fec29b56b6a262081407122eaef6-Panel Levels Slide Deck (2).png",
+        "key": "hardware-components-e56bb056-0af5-475f-b8e1-7b49f9c79f82",
+        "layout": "text-bottom-right",
+        "typing": false,
+        "fadeInOverPrevious": false
+      },
+      {
+        "text": "### Choose your data\n- **Choose two numerical columns** you want to compare.\n-  **Filter out any blank cells** in those columns.",
+        "imageUrl": "https://images.code.org/7ff28c2b3d16980290467f7d9a8a69f0-filterblanks.gif",
+        "key": "hardware-components-60bbd87e-b298-4721-8344-14ba7f84abc6",
+        "layout": "text-top-right",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "### Create your chart\n- **Highlight both columns** of values. (Use Command/Ctrl key to select non-adjacent columns.)\n- Go to **Insert → Chart** and choose **Scatter chart** as the chart type.",
+        "imageUrl": "https://images.code.org/ac70bc4871459cb592e87e431429feef-make chart.gif",
+        "key": "emma-scatter-plot-panel-data-science-lesson7-_2025_launch-d8015b75-22a2-49f3-a063-be193119fab1",
+        "fadeInOverPrevious": false,
+        "layout": "text-bottom-left"
+      },
+      {
+        "text": "### Add in a title and axis labels\n- Go to the **Customize** tab \n- Open the **Chart & axis titles** toggle and add a title and axis labels",
+        "imageUrl": "https://images.code.org/94642eda8e4059610ca127e45bf282c3-title.gif",
+        "key": "emma-scatter-plot-panel-data-science-lesson7-_2025_launch-d3540300-0c30-4ab5-a3ff-b173eb7d56f4",
+        "fadeInOverPrevious": false,
+        "layout": "text-top-left"
+      }
+    ],
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T20:08:34.177+00:00\",\"changed\":[\"cloned from \\\"data-science-ch1-lesson10-scatter-plot-panel_2025_launch\\\"\"],\"cloned_from\":\"data-science-ch1-lesson10-scatter-plot-panel_2025_launch\"}]"
+}]]></config>
+</Panels>

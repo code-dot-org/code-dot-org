@@ -1,9 +1,15 @@
 import {create, insertMultiple, Orama} from '@orama/orama';
 
 import {ActivitySchema} from '@/modules/activityCatalog/orama/schema/ActivitySchema';
-import {Activity} from '@/modules/activityCatalog/types/Activity';
+import {
+  Activity,
+  OramaActivity,
+} from '@/modules/activityCatalog/types/Activity';
 import {getAbsoluteImageUrl} from '@/selectors/contentful/getImage';
 import {Entry} from '@/types/contentful/Entry';
+
+// Ensure unsorted activities appear at the end
+const FEATURED_POSITION_MAX = 999999;
 
 /**
  * Creates an Orama database from an array of Contentful activity entries.
@@ -15,10 +21,19 @@ export function createDatabase(
 ): Orama<typeof ActivitySchema> {
   const db = create({schema: ActivitySchema});
 
-  const oramaEntries: Activity[] = activities.map(activity => {
+  const oramaEntries: OramaActivity[] = activities.map(activity => {
     const fields = activity.fields;
 
+    // Featured activities have a lower number and are sorted first
+    // Non-featured activities get a high number (999) to sort them last
+    const prefix = fields.featuredPosition
+      ? String(fields.featuredPosition).padStart(3, '0')
+      : FEATURED_POSITION_MAX;
+
+    const sortKey = prefix + fields.title;
+
     return {
+      sortKey,
       title: fields.title || '',
       image: getAbsoluteImageUrl(fields.image) || '',
       organization: fields.organization || '',
@@ -37,6 +52,7 @@ export function createDatabase(
       // This is passed as a stringified JSON to allow the entry to be passed directly into the ActivityCollection component
       // It will be deserialized there
       primaryLinkRef: JSON.stringify(fields.primaryLinkRef),
+      featuredPosition: fields.featuredPosition || FEATURED_POSITION_MAX,
     };
   });
 

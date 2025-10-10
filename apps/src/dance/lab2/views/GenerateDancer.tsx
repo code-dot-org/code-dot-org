@@ -1,14 +1,18 @@
 import {Button} from '@code-dot-org/component-library/button';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {Heading5} from '@code-dot-org/component-library/typography';
-import React, {useCallback, useEffect, useState} from 'react';
+import React, {useCallback, useEffect, useRef, useState} from 'react';
 
+import BackToParentProject from '@cdo/apps/bubbleChoice/BackToParentProject';
+import {getGeneratedDancerAssets} from '@cdo/apps/dance/lottie/LottieDancerUtils';
+import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
+import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
 import {LevelProperties} from '@cdo/apps/lab2/types';
-import {getGeneratedDancerAssets} from '@cdo/apps/lab2/utils/GeneratedDancer';
+import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import Adlib, {AdlibsType} from '@cdo/apps/lab2/views/components/guide/Adlib';
 import Guide from '@cdo/apps/lab2/views/components/guide/Guide';
-import NavigationButton from '@cdo/apps/lab2/views/components/Instructions/NavigationButton';
 import getRandomInt from '@cdo/apps/util/getRandomInt';
+import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {trySetLocalStorage} from '@cdo/apps/utils';
 import dancerEmptyHeadShoulders from '@cdo/static/dance/dancer-empty-head-shoulders.png';
 
@@ -24,6 +28,33 @@ const adlibs: AdlibsType = {
     },
     variantCount: 2,
   },
+  'animal-02': {
+    template: 'Please generate a dancer.  It should look like a {animal}.',
+    options: {
+      animal: ['wolf', 'moose', 'frog', 'tiger', 'panda'],
+    },
+    variantCount: 5,
+  },
+  'animal-attire-02': {
+    template:
+      'Please generate a dancer.  It should look like a {animal} wearing a {attire}.',
+    options: {
+      animal: ['wolf', 'moose', 'frog', 'tiger', 'panda'],
+      attire: ['headscarf', 'sunglasses', 'headphones', 'crown', 'beanie'],
+    },
+    variantCount: 5,
+  },
+  'adjective-animal-attire-02': {
+    template:
+      'Please generate a dancer.  It should look like a {adjective} {animal} wearing a {attire}.',
+    options: {
+      adjective: ['basic', 'emo', 'sporty', 'streetwear', 'fancy', 'preppy'],
+      animal: ['wolf', 'moose', 'frog', 'tiger', 'panda'],
+      attire: ['headscarf', 'sunglasses', 'headphones', 'crown', 'beanie'],
+    },
+    variantCount: 5,
+  },
+  // Earlier adlibs which will be removed soon:
   animal: {
     template: 'Please generate a dancer.  It should look like a {animal}.',
     options: {
@@ -79,8 +110,9 @@ interface DancerGenerateProps {
 // storage.
 const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
   adlibOption,
-  levelProperties,
 }) => {
+  const dispatch = useAppDispatch();
+
   const {setTheme} = useTheme();
 
   useEffect(() => {
@@ -89,6 +121,7 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
 
   const [adlibText, setAdlibText] = useState<string | undefined>(undefined);
   const [choices, setChoices] = useState<string[] | undefined>(undefined);
+  const variantHistory = useRef<number[]>([]);
 
   const [aiGenerateState, setAiGenerateState] = useState<
     'none' | 'generating' | 'done'
@@ -98,14 +131,27 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
     undefined
   );
 
+  useLifecycleNotifier(LifecycleEvent.LevelLoadStarted, () => {
+    setAiGenerateState('none');
+    variantHistory.current = [];
+  });
+
   const generateDancerCache = useCallback(async () => {
     const startTime = Date.now();
-    const variant = getRandomInt(0, adlibs[adlibOption].variantCount - 1);
-    const {head} = await getGeneratedDancerAssets(
-      adlibOption,
-      choices,
-      variant
-    );
+
+    // Avoid showing a variant if it was shown recently.
+    let variant = undefined;
+    do {
+      variant = getRandomInt(0, adlibs[adlibOption].variantCount - 1);
+    } while (variantHistory.current.includes(variant));
+    const newVariantsHistory = [...variantHistory.current, variant];
+    // Keep the array length at a maximum of 3
+    if (newVariantsHistory.length > adlibs[adlibOption].variantCount - 2) {
+      newVariantsHistory.shift(); // Remove the oldest entry
+    }
+    variantHistory.current = newVariantsHistory;
+
+    const {head} = getGeneratedDancerAssets(adlibOption, choices, variant);
 
     setHeadImageUrl(head);
 
@@ -118,7 +164,7 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
     const delayDuration = 2000; // 2 seconds.
     const remainingDelayDuration = Math.max(delayDuration - elapsedTime, 0);
     await new Promise(res => setTimeout(res, remainingDelayDuration));
-  }, [adlibOption, choices]);
+  }, [adlibOption, choices, variantHistory]);
 
   const generateDancer = useCallback(async () => {
     setAiGenerateState('generating');
@@ -140,6 +186,7 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
               onChange={(adlibText, choices) => {
                 setAdlibText(adlibText);
                 setChoices(choices);
+                variantHistory.current = [];
               }}
               className={moduleStyles.textArea}
             />
@@ -147,7 +194,7 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
               ariaLabel={'Generate dancer'}
               text={'Generate dancer'}
               type="primary"
-              color="purple"
+              color="black"
               size="s"
               iconLeft={{iconName: 'sparkles'}}
               onClick={generateDancer}
@@ -163,7 +210,7 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
               ariaLabel={'Generate again'}
               text={'Generate again'}
               type="primary"
-              color="purple"
+              color="black"
               size="s"
               iconLeft={{iconName: 'sparkles'}}
               onClick={generateDancer}
@@ -173,19 +220,28 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
               ariaLabel={'Adjust prompt'}
               text={'Adjust prompt'}
               type="primary"
-              color="purple"
+              color="black"
               size="s"
               onClick={() => setAiGenerateState('none')}
             />
 
-            <NavigationButton
-              levelProperties={levelProperties}
-              hasRun={true}
-              hasEdited={false}
-              className={moduleStyles.navigationButton}
+            <Button
+              ariaLabel={'Continue'}
+              text={'Continue'}
+              type="primary"
+              color="black"
+              size="s"
+              iconRight={{iconName: 'arrow-right', iconStyle: 'solid'}}
+              onClick={() => dispatch(continueOrFinishLesson())}
             />
           </>
         )}
+        <BackToParentProject
+          text="Go to Hub"
+          iconLeft={{iconName: 'home'}}
+          type="secondary"
+          size="s"
+        />
       </Guide>
 
       <div className={moduleStyles.dancerContainer}>

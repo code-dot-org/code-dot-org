@@ -1,0 +1,65 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2025-09-25T19:52:34.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Plan Your Outfits\r\n\r\nUse AI Chat to help you plan your outfits for the week. \r\n\r\n### Do This:\r\n\r\n1. Start by entering a **generic prompt** and read AI Chat's response. For example:\r\n\r\n>Help me plan my outfits for the week.\r\n2. Revise your prompt and add specific examples, like **what outfits you like to wear** or **what type of shoes you own**. Read AI Chat's updated response.\r\n2. Finally, revise your last prompt by **adding an image**.\r\n3. Press **Send** and read AI Chat's response.\r\n\r\n**Try it out!**\r\n\r\n\r\n::: details [<i class=\"fa fa-file-image-o\" aria-hidden=\"true\"></i> **How do I add an image?**]\r\n- Click the button labeled **Add** below your chat input.\r\n- Choose **From Library**\r\n- Then browse the existing images.\r\n- When you have an image to upload, click the checkbox next to it to select it and then click **Attach**.\r\n- You should see the image get added to the message being sent to AI Chat.\r\n:::\r\n",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.3,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are an outfit recommender. When given a prompt, answer with your recommendations.\n\nDo not answer any questions that are not related to outfit planning.",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "multimodalEnabled": true
+    },
+    "bubble_choice_description": "Use AI Chat to help you plan your outfits. Come up with a prompt and select an image that matches.",
+    "display_name": "Plan Your Outfits",
+    "thumbnail_url": "https://images.code.org/2fc60afc7f37b9ba6660798d1d5d245f-clothes-rack.png",
+    "starter_assets": {
+      "lounge-at-home.jpg": "8788d5f7-0c93-466f-9a53-a317affd9fe8.jpg",
+      "sports.jpg": "96d116a3-ecba-4e23-82bc-e51b3dd300d6.jpg",
+      "beach.jpg": "9324feab-4981-476a-8813-36d38b61b96e.jpg",
+      "pexels-photo-10200783.jpg": "b7701c91-d716-4a5e-b1a7-0f622a960b44.jpg",
+      "pexels-photo-2422290.jpg": "5eb0b830-8d06-4c12-912c-083afefa1e81.jpg",
+      "formal-event.jpg": "ad749926-0941-43d3-9675-61e45356dce0.jpg",
+      "pexels-photo-8915637.jpg": "ebfdddee-7ada-448c-b59f-0fb9abd50331.jpg",
+      "pexels-photo-852860.jpg": "1f9a0f7f-b22d-48f7-a93e-daa907febb70.jpg",
+      "pexels-photo-4353614.jpg": "31d7d5ae-613d-4b3d-9274-ecc97f45cd1e.jpg",
+      "pexels-photo-833052.jpg": "f515df6b-587b-4378-b90b-5e48909c970b.jpg",
+      "pexels-photo-1972115.jpg": "8080ef7b-c4f1-40ab-947f-41544f247c1c.jpg"
+    },
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:52:34.131+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson1-level6-choice3_2025\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson1-level6-choice3_2025\"}]"
+}]]></config>
+</Aichat>

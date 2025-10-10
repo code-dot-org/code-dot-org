@@ -2,12 +2,13 @@ import {eTag} from '@tinyhttp/etag';
 import {EmptySitemap, SitemapStream, streamToPromise} from 'sitemap';
 
 import {STALE_WHILE_REVALIDATE_ONE_DAY} from '@/cache/constants';
-import {getBrandFromHostname} from '@/config/brand';
+import {Brand, getBrandFromHostname} from '@/config/brand';
 import {getCanonicalHostname} from '@/config/host';
 import {SUPPORTED_LOCALE_CODES} from '@/config/locale';
 import {getStage} from '@/config/stage';
 import {getContentfulClient} from '@/contentful/client';
 import {getAllEntriesForContentType} from '@/contentful/get-entries';
+import {ActivityType} from '@/modules/activityCatalog/types/Activity';
 import {SeoMetadataEntry} from '@/types/contentful/entries/SeoMetadata';
 import {Entry} from '@/types/contentful/Entry';
 
@@ -17,6 +18,37 @@ export const dynamic = 'force-dynamic';
 interface SitemapEntry {
   slug: string;
   seoMetadata: SeoMetadataEntry;
+}
+
+/**
+ * Writes a sitemap entry for all supported locales, including hreflang links.
+ * @param sitemapStream The sitemap stream
+ * @param slug The slug for the entry
+ * @param overrides Additional properties to add to the sitemap entry
+ */
+function writeSitemapEntry(
+  sitemapStream: SitemapStream,
+  slug: string,
+  overrides?: Parameters<typeof sitemapStream.write>[0],
+) {
+  SUPPORTED_LOCALE_CODES.forEach(outerLocaleCode => {
+    sitemapStream.write({
+      ...overrides,
+      url: `/${outerLocaleCode}${slug}`,
+      changefreq: 'daily',
+      links: [
+        ...SUPPORTED_LOCALE_CODES.map(localeCode => ({
+          lang: localeCode,
+          url: `/${localeCode}${slug}`,
+        })),
+        // Also indicate that English is the canonical version
+        {
+          lang: 'x-default',
+          url: `/en-US${slug}`,
+        },
+      ],
+    });
+  });
 }
 
 /**
@@ -70,23 +102,13 @@ export async function GET(request: Request) {
 
     const slug = sitemapEntry.slug === '/' ? '' : sitemapEntry.slug;
 
-    SUPPORTED_LOCALE_CODES.forEach(outerLocaleCode => {
-      sitemapStream.write({
-        url: `${outerLocaleCode}${slug}`,
-        lastmod: entry.sys.updatedAt,
-        changefreq: 'daily',
-        links: [
-          ...SUPPORTED_LOCALE_CODES.map(localeCode => ({
-            lang: localeCode,
-            url: `/${localeCode}${slug}`,
-          })),
-          // Also indicate that English is the canonical version
-          {
-            lang: 'x-default',
-            url: `/en-US${slug}`,
-          },
-        ],
-      });
+    writeSitemapEntry(sitemapStream, slug, {lastmod: entry?.sys?.updatedAt});
+  }
+
+  // CSForAll Activity catalog
+  if (brand === Brand.CS_FOR_ALL) {
+    Object.values(ActivityType).forEach(activityType => {
+      writeSitemapEntry(sitemapStream, `/activities/${activityType}`);
     });
   }
 

@@ -577,10 +577,16 @@ namespace :seed do
   end
 
   timed_task_with_logging sample_data: :environment do
+    # Make sure we see a helpful error message if run in the wrong environment, since autoloading
+    # this class could result in a cryptic error about missing gems.
+    raise "Should not be run outside of adhoc or development" unless [:adhoc, :development].include?(CDO.rack_env)
     SampleData.seed
   end
 
   timed_task_with_logging mega_section: :environment do
+    # Make sure we see a helpful error message if run in the wrong environment, since autoloading
+    # this class could result in a cryptic error about missing gems.
+    raise "Should not be run outside of adhoc or development" unless [:adhoc, :development].include?(CDO.rack_env)
     MegaSection.seed
   end
 
@@ -660,7 +666,7 @@ namespace :seed do
   timed_task_with_logging :import_pegasus_data do
     db = DASHBOARD_DB
     table_prefix = "google_sheets_shared_"
-    files_to_import = %w[data/cdo-languages.csv data/cdo-donors.csv]
+    files_to_import = %w[data/cdo-languages.csv]
     files_to_import.each {|file_to_import| CsvToSqlTable.new(pegasus_dir(file_to_import), db, table_prefix).import}
   end
 
