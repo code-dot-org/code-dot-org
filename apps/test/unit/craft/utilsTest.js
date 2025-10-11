@@ -1,3 +1,5 @@
+// We have to include the locale files below as translations must be loaded in the global
+// scope for HeadlessChrome to run properly.
 import craftI18n from '@cdo/apps/craft/locale'; // eslint-disable-line no-unused-vars
 import * as craftRedux from '@cdo/apps/craft/redux';
 import * as utils from '@cdo/apps/craft/utils';
