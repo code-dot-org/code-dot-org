@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
 
@@ -49,7 +48,7 @@ describe('Button', () => {
   });
 
   it('renders a div when button has an onClick', () => {
-    const onClick = sinon.spy();
+    const onClick = jest.fn();
     const wrapper = shallow(
       <Button
         __useDeprecatedTag
@@ -63,7 +62,7 @@ describe('Button', () => {
     expect(wrapper.props().href).toBe(undefined);
     expect(wrapper.props().onClick).toEqual(onClick);
     wrapper.simulate('click');
-    expect(onClick.calledOnce).toBeTruthy();
+    expect(onClick).toHaveBeenCalledTimes(1);
   });
 
   it('doesnt respond to clicks when disabled', () => {

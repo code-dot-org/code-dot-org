@@ -1,12 +1,10 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import $ from 'jquery';
 import React from 'react';
-import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import {PoemEditor} from '@cdo/apps/p5lab/poetry/PoemSelector';
 import * as utils from '@cdo/apps/utils';
 
-import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 import {replaceOnWindow, restoreOnWindow} from '../../../util/testUtils';
 
 describe('PoemEditor', () => {
@@ -27,9 +25,9 @@ describe('PoemEditor', () => {
         />
       );
 
-      expect(wrapper.find('input').at(0).props().value).to.equal('My title');
-      expect(wrapper.find('input').at(1).props().value).to.be.empty;
-      expect(wrapper.find('textarea').at(0).props().value).to.equal(
+      expect(wrapper.find('input').at(0).props().value).toBe('My title');
+      expect(wrapper.find('input').at(1).props().value).toHaveLength(0);
+      expect(wrapper.find('textarea').at(0).props().value).toBe(
         'this is\na good poem'
       );
     });
@@ -44,28 +42,35 @@ describe('PoemEditor', () => {
         authenticityToken: '123',
       };
       replaceOnWindow('appOptions', mockAppOptions);
-      handleCloseSpy = sinon.spy();
+      handleCloseSpy = jest.fn();
     });
 
     afterEach(() => {
       restoreOnWindow('appOptions');
-      sinon.restore();
+      jest.restoreAllMocks();
     });
 
     it('is successful if no profanity', () => {
-      sinon.stub(utils, 'findProfanity').returns($.Deferred().resolve(null));
+      jest
+        .spyOn(utils, 'findProfanity')
+        .mockReturnValue($.Deferred().resolve(null));
       const wrapper = mount(<PoemEditor isOpen handleClose={handleCloseSpy} />);
 
       // Update title, author, and poem and save.
       updatePoemInputs(wrapper, 'title', 'author', 'my\npoem');
       wrapper.find('FooterButton').simulate('click');
 
-      expect(utils.findProfanity).to.have.been.calledOnceWith(
+      expect(utils.findProfanity).toHaveBeenCalledTimes(1);
+
+      expect(utils.findProfanity).toHaveBeenCalledWith(
         'title author my\npoem',
         mockAppOptions.locale,
         mockAppOptions.authenticityToken
       );
-      expect(handleCloseSpy).to.have.been.calledOnceWith({
+
+      expect(handleCloseSpy).toHaveBeenCalledTimes(1);
+
+      expect(handleCloseSpy).toHaveBeenCalledWith({
         key: enterMyOwn,
         title: 'title',
         author: 'author',
@@ -74,19 +79,24 @@ describe('PoemEditor', () => {
     });
 
     it('is successful on server failure', () => {
-      sinon.stub(utils, 'findProfanity').returns($.Deferred().reject());
+      jest.spyOn(utils, 'findProfanity').mockReturnValue($.Deferred().reject());
       const wrapper = mount(<PoemEditor isOpen handleClose={handleCloseSpy} />);
 
       // Update title, author, and poem and save.
       updatePoemInputs(wrapper, 'title', 'author', 'poem');
       wrapper.find('FooterButton').simulate('click');
 
-      expect(utils.findProfanity).to.have.been.calledOnceWith(
+      expect(utils.findProfanity).toHaveBeenCalledTimes(1);
+
+      expect(utils.findProfanity).toHaveBeenCalledWith(
         'title author poem',
         mockAppOptions.locale,
         mockAppOptions.authenticityToken
       );
-      expect(handleCloseSpy).to.have.been.calledOnceWith({
+
+      expect(handleCloseSpy).toHaveBeenCalledTimes(1);
+
+      expect(handleCloseSpy).toHaveBeenCalledWith({
         key: enterMyOwn,
         title: 'title',
         author: 'author',
@@ -95,21 +105,24 @@ describe('PoemEditor', () => {
     });
 
     it('is unsuccessful if profanity', () => {
-      sinon
-        .stub(utils, 'findProfanity')
-        .returns($.Deferred().resolve(['swear']));
+      jest
+        .spyOn(utils, 'findProfanity')
+        .mockReturnValue($.Deferred().resolve(['swear']));
       const wrapper = mount(<PoemEditor isOpen handleClose={handleCloseSpy} />);
 
       // Update title and attempt a save.
       updatePoemInputs(wrapper, 'swear', 'in', 'my poem');
       wrapper.find('FooterButton').simulate('click');
 
-      expect(utils.findProfanity).to.have.been.calledOnceWith(
+      expect(utils.findProfanity).toHaveBeenCalledTimes(1);
+
+      expect(utils.findProfanity).toHaveBeenCalledWith(
         'swear in my poem',
         mockAppOptions.locale,
         mockAppOptions.authenticityToken
       );
-      expect(handleCloseSpy).to.not.have.been.called;
+
+      expect(handleCloseSpy).not.toHaveBeenCalled();
     });
   });
 });

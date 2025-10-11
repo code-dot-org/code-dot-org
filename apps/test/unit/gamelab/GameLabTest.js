@@ -1,5 +1,4 @@
 import ReactDOM from 'react-dom';
-import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import {isOpen as isDebuggerOpen} from '@cdo/apps/lib/tools/jsdebugger/redux';
 import GameLab from '@cdo/apps/p5lab/gamelab/GameLab';
@@ -13,7 +12,6 @@ import {
 import commonReducers from '@cdo/apps/redux/commonReducers';
 import Sounds from '@cdo/apps/Sounds';
 
-import {expect} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 import {setExternalGlobals} from '../../util/testUtils';
 import 'script-loader!@code-dot-org/p5.play/examples/lib/p5';
 import 'script-loader!@code-dot-org/p5.play/lib/p5.play';
@@ -21,8 +19,8 @@ import 'script-loader!@code-dot-org/p5.play/lib/p5.play';
 describe('GameLab', () => {
   setExternalGlobals();
 
-  beforeAll(() => sinon.stub(ReactDOM, 'render'));
-  afterAll(() => ReactDOM.render.restore());
+  beforeAll(() => jest.spyOn(ReactDOM, 'render').mockImplementation());
+  afterAll(() => ReactDOM.render.mockRestore());
 
   beforeEach(stubRedux);
   afterEach(restoreRedux);
@@ -53,17 +51,17 @@ describe('GameLab', () => {
       registerReducers({...commonReducers, ...reducers});
       instance = new GameLab();
       studioApp = {
-        setCheckForEmptyBlocks: sinon.spy(),
-        setPageConstants: sinon.spy(),
-        init: sinon.spy(),
+        setCheckForEmptyBlocks: jest.fn(),
+        setPageConstants: jest.fn(),
+        init: jest.fn(),
         isUsingBlockly: () => false,
         loadLibraries: () => Promise.resolve(),
-        loadLibraryBlocks: sinon.spy(),
+        loadLibraryBlocks: jest.fn(),
       };
     });
 
     it('Must have studioApp injected first', () => {
-      expect(() => instance.init({})).to.throw('GameLab requires a StudioApp');
+      expect(() => instance.init({})).toThrow('GameLab requires a StudioApp');
     });
 
     describe('After being injected with a studioApp instance', () => {
@@ -72,30 +70,32 @@ describe('GameLab', () => {
       describe('Muting', () => {
         let unmuteSpy;
         beforeEach(() => {
-          unmuteSpy = sinon.stub(Sounds.getSingleton(), 'unmuteURLs');
-          instance.p5Wrapper.p5 = sinon.spy();
-          instance.p5Wrapper.p5.allSprites = sinon.spy();
-          instance.p5Wrapper.p5.allSprites.removeSprites = sinon.spy();
-          instance.p5Wrapper.p5.redraw = sinon.spy();
-          instance.p5Wrapper.p5.World = sinon.spy();
-          instance.p5Wrapper.setLoop = sinon.spy();
-          instance.p5Wrapper.startExecution = sinon.spy();
-          instance.initInterpreter = sinon.spy();
-          instance.onP5Setup = sinon.spy();
-          instance.reset = sinon.spy();
-          instance.studioApp_.clearAndAttachRuntimeAnnotations = sinon.spy();
-          instance.JSInterpreter = sinon.spy();
-          instance.JSInterpreter.deinitialize = sinon.spy();
-          instance.JSInterpreter.initialized = sinon.spy();
+          unmuteSpy = jest
+            .spyOn(Sounds.getSingleton(), 'unmuteURLs')
+            .mockImplementation();
+          instance.p5Wrapper.p5 = jest.fn();
+          instance.p5Wrapper.p5.allSprites = jest.fn();
+          instance.p5Wrapper.p5.allSprites.removeSprites = jest.fn();
+          instance.p5Wrapper.p5.redraw = jest.fn();
+          instance.p5Wrapper.p5.World = jest.fn();
+          instance.p5Wrapper.setLoop = jest.fn();
+          instance.p5Wrapper.startExecution = jest.fn();
+          instance.initInterpreter = jest.fn();
+          instance.onP5Setup = jest.fn();
+          instance.reset = jest.fn();
+          instance.studioApp_.clearAndAttachRuntimeAnnotations = jest.fn();
+          instance.JSInterpreter = jest.fn();
+          instance.JSInterpreter.deinitialize = jest.fn();
+          instance.JSInterpreter.initialized = jest.fn();
         });
 
         afterEach(() => {
-          unmuteSpy.restore();
+          unmuteSpy.mockRestore();
         });
 
         it('Execute unmutes URLs', () => {
           instance.execute();
-          expect(Sounds.getSingleton().unmuteURLs).to.have.been.calledOnce;
+          expect(Sounds.getSingleton().unmuteURLs).toHaveBeenCalledTimes(1);
         });
       });
 
@@ -109,18 +109,18 @@ describe('GameLab', () => {
                 editCode: false,
               },
             })
-          ).not.to.throw;
-          expect(() => instance.init(config)).not.to.throw;
+          ).not.toThrow();
+          expect(() => instance.init(config)).not.toThrow();
         });
 
         describe('the expandDebugger level option', () => {
           it('will leave the debugger closed when false', () => {
-            expect(config.level.expandDebugger).not.to.be.true;
+            expect(config.level.expandDebugger).not.toBe(true);
             instance.init(config);
-            expect(isDebuggerOpen(getStore().getState())).to.be.false;
+            expect(isDebuggerOpen(getStore().getState())).toBe(false);
           });
           it('will open the debugger when true', () => {
-            expect(isDebuggerOpen(getStore().getState())).to.be.false;
+            expect(isDebuggerOpen(getStore().getState())).toBe(false);
             instance.init({
               ...config,
               level: {
@@ -128,7 +128,7 @@ describe('GameLab', () => {
                 expandDebugger: true,
               },
             });
-            expect(isDebuggerOpen(getStore().getState())).to.be.true;
+            expect(isDebuggerOpen(getStore().getState())).toBe(true);
           });
         });
       });

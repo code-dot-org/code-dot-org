@@ -1,9 +1,5 @@
-import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
-
 import * as dontMarshalApi from '@cdo/apps/dontMarshalApi';
 import {injectErrorHandler} from '@cdo/apps/lib/util/javascriptMode';
-
-import {expect} from '../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 /*
  * These tests verify the behavior of dontMarshalApi.js list APIs when called
@@ -20,49 +16,49 @@ describe('insertItem', () => {
   it('inserts an item at the beginning of an empty array', () => {
     const array = [];
     dontMarshalApi.insertItem(array, 0, 'foo');
-    expect(array).to.eql(['foo']);
+    expect(array).toEqual(['foo']);
   });
 
   it('inserts an item at the beginning of an existing array', () => {
     const array = ['bar'];
     dontMarshalApi.insertItem(array, 0, 'foo');
-    expect(array).to.eql(['foo', 'bar']);
+    expect(array).toEqual(['foo', 'bar']);
   });
 
   it('inserts an item at the end of an existing array', () => {
     const array = ['bar'];
     dontMarshalApi.insertItem(array, array.length, 'foo');
-    expect(array).to.eql(['bar', 'foo']);
+    expect(array).toEqual(['bar', 'foo']);
   });
 
   it('inserts an item at the end of an existing array when passed a large index', () => {
     const array = ['bar'];
     dontMarshalApi.insertItem(array, 1000, 'foo');
-    expect(array).to.eql(['bar', 'foo']);
+    expect(array).toEqual(['bar', 'foo']);
   });
 
   it('inserts an item in the middle of an existing array', () => {
     const array = ['foo', 'bar'];
     dontMarshalApi.insertItem(array, array.length - 1, 'and');
-    expect(array).to.eql(['foo', 'and', 'bar']);
+    expect(array).toEqual(['foo', 'and', 'bar']);
   });
 
   it('inserts an item right before the last item of an existing array when passed -1', () => {
     const array = ['foo', 'bar'];
     dontMarshalApi.insertItem(array, -1, 'and');
-    expect(array).to.eql(['foo', 'and', 'bar']);
+    expect(array).toEqual(['foo', 'and', 'bar']);
   });
 
   it('inserts an item at the beginning of an existing array when passed -array.length', () => {
     const array = ['foo', 'bar'];
     dontMarshalApi.insertItem(array, -array.length, 'and');
-    expect(array).to.eql(['and', 'foo', 'bar']);
+    expect(array).toEqual(['and', 'foo', 'bar']);
   });
 
   it('inserts an item at the beginning of an existing array when passed a large negative index', () => {
     const array = ['foo', 'bar'];
     dontMarshalApi.insertItem(array, -1000, 'and');
-    expect(array).to.eql(['and', 'foo', 'bar']);
+    expect(array).toEqual(['and', 'foo', 'bar']);
   });
 });
 
@@ -70,13 +66,13 @@ describe('appendItem', () => {
   it('appends an item at the end of an empty array', () => {
     const array = [];
     dontMarshalApi.appendItem(array, 'foo');
-    expect(array).to.eql(['foo']);
+    expect(array).toEqual(['foo']);
   });
 
   it('appends an item at the end of an existing array', () => {
     const array = ['bar'];
     dontMarshalApi.appendItem(array, 'foo');
-    expect(array).to.eql(['bar', 'foo']);
+    expect(array).toEqual(['bar', 'foo']);
   });
 });
 
@@ -84,19 +80,21 @@ describe('removeItem', () => {
   it('removes an item at the end of an existing array', () => {
     const array = ['foo', 'bar'];
     dontMarshalApi.removeItem(array, array.length - 1);
-    expect(array).to.eql(['foo']);
+    expect(array).toEqual(['foo']);
   });
 
   it('warns and does nothing when passed a large index', () => {
     const errorHandler = {
-      outputWarning: sinon.spy(),
+      outputWarning: jest.fn(),
     };
     injectErrorHandler(errorHandler);
 
     const array = ['foo', 'bar'];
     dontMarshalApi.removeItem(array, 1000);
-    expect(array).to.eql(['foo', 'bar']);
-    expect(errorHandler.outputWarning).to.have.been.calledOnce.and.calledWith(
+    expect(array).toEqual(['foo', 'bar']);
+    expect(errorHandler.outputWarning).toHaveBeenCalledTimes(1);
+
+    expect(errorHandler.outputWarning).toHaveBeenCalledWith(
       'removeItem() index parameter value (1000) is larger than the number of items in the list (2).'
     );
   });
@@ -104,30 +102,30 @@ describe('removeItem', () => {
   it('removes an item at the beginning of an existing array', () => {
     const array = ['foo', 'bar'];
     dontMarshalApi.removeItem(array, 0);
-    expect(array).to.eql(['bar']);
+    expect(array).toEqual(['bar']);
   });
 
   it('removes an item at the beginning of an existing array when passed a large negative index', () => {
     const array = ['foo', 'bar'];
     dontMarshalApi.removeItem(array, -1000);
-    expect(array).to.eql(['bar']);
+    expect(array).toEqual(['bar']);
   });
 
   it('removes an item in the middle of an existing array', () => {
     const array = ['foo', 'and', 'bar'];
     dontMarshalApi.removeItem(array, 1);
-    expect(array).to.eql(['foo', 'bar']);
+    expect(array).toEqual(['foo', 'bar']);
   });
 
   it('removes the last item of an existing array when passed -1', () => {
     const array = ['foo', 'and', 'bar'];
     dontMarshalApi.removeItem(array, -1);
-    expect(array).to.eql(['foo', 'and']);
+    expect(array).toEqual(['foo', 'and']);
   });
 
   it('removes an item at the beginning of an existing array when passed -array.length', () => {
     const array = ['foo', 'bar'];
     dontMarshalApi.removeItem(array, -array.length);
-    expect(array).to.eql(['bar']);
+    expect(array).toEqual(['bar']);
   });
 });

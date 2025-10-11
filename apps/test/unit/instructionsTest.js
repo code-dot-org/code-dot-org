@@ -6,8 +6,6 @@ import instructions, {
   determineInstructionsConstants,
 } from '@cdo/apps/redux/instructions';
 
-import {assert} from '../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
-
 var testUtils = require('./../util/testUtils');
 
 const ENGLISH_LOCALE = 'en_us';
@@ -20,7 +18,7 @@ describe('instructions', () => {
 
     it('starts out uncollapsed', () => {
       var state = reducer(undefined, {});
-      assert.strictEqual(state.isCollapsed, false);
+      expect(state.isCollapsed).toBe(false);
     });
 
     it('toggles isCollapsed', () => {
@@ -32,7 +30,7 @@ describe('instructions', () => {
         longInstructions: 'foo',
       };
       newState = reducer(initialState, toggleInstructionsCollapsed());
-      assert.strictEqual(newState.isCollapsed, true);
+      expect(newState.isCollapsed).toBe(true);
 
       // start uncollapsed
       initialState = {
@@ -40,7 +38,7 @@ describe('instructions', () => {
         longInstructions: 'foo',
       };
       newState = reducer(initialState, toggleInstructionsCollapsed());
-      assert.strictEqual(newState.isCollapsed, false);
+      expect(newState.isCollapsed).toBe(false);
     });
 
     it('will collapse even if no long instructions', () => {
@@ -53,7 +51,7 @@ describe('instructions', () => {
         longInstructions: undefined,
       };
       newState = reducer(initialState, toggleInstructionsCollapsed());
-      assert.strictEqual(newState.isCollapsed, true);
+      expect(newState.isCollapsed).toBe(true);
     });
 
     it('setInstructionsRenderedHeight updates rendered and expanded height if not collapsed', () => {
@@ -65,7 +63,7 @@ describe('instructions', () => {
         allowResize: true,
       };
       newState = reducer(initialState, setInstructionsRenderedHeight(200));
-      assert.deepEqual(newState, {
+      expect(newState).toEqual({
         isCollapsed: false,
         renderedHeight: 200,
         expandedHeight: 200,
@@ -81,7 +79,7 @@ describe('instructions', () => {
         expandedHeight: 0,
       };
       newState = reducer(initialState, setInstructionsRenderedHeight(200));
-      assert.deepEqual(newState, {
+      expect(newState).toEqual({
         isCollapsed: false,
         renderedHeight: 0,
         expandedHeight: 0,
@@ -97,7 +95,7 @@ describe('instructions', () => {
         allowResize: true,
       };
       newState = reducer(initialState, setInstructionsRenderedHeight(200));
-      assert.deepEqual(newState, {
+      expect(newState).toEqual({
         isCollapsed: true,
         renderedHeight: 200,
         expandedHeight: 0,
@@ -112,7 +110,7 @@ describe('instructions', () => {
         allowResize: true,
       };
       newState = reducer(initialState, setInstructionsMaxHeightNeeded(200));
-      assert.deepEqual(newState, {
+      expect(newState).toEqual({
         maxNeededHeight: 200,
         allowResize: true,
       });
@@ -127,7 +125,7 @@ describe('instructions', () => {
         allowResize: true,
       };
       newState = reducer(initialState, setInstructionsMaxHeightAvailable(300));
-      assert.deepEqual(newState, {
+      expect(newState).toEqual({
         maxAvailableHeight: 300,
         renderedHeight: 0,
         expandedHeight: 0,
@@ -144,7 +142,7 @@ describe('instructions', () => {
         allowResize: true,
       };
       newState = reducer(initialState, setInstructionsMaxHeightAvailable(300));
-      assert.deepEqual(newState, {
+      expect(newState).toEqual({
         maxAvailableHeight: 300,
         renderedHeight: 300,
         expandedHeight: 300,
@@ -178,7 +176,7 @@ describe('instructions', () => {
         );
 
         results.forEach(result => {
-          assert.equal(result.longInstructions, 'markdown');
+          expect(result.longInstructions).toBe('markdown');
         });
       });
 
@@ -196,7 +194,7 @@ describe('instructions', () => {
           overlayVisible,
         });
 
-        assert.equal(result.longInstructions, 'non-markdown');
+        expect(result.longInstructions).toBe('non-markdown');
       });
 
       it('never sets shortInstructions', () => {
@@ -214,7 +212,7 @@ describe('instructions', () => {
           overlayVisible,
         });
 
-        assert.equal(result.shortInstructions, undefined);
+        expect(result.shortInstructions).toBe(undefined);
 
         // only given markdown
         const result2 = determineInstructionsConstants({
@@ -230,7 +228,7 @@ describe('instructions', () => {
           overlayVisible,
         });
 
-        assert.equal(result2.shortInstructions, undefined);
+        expect(result2.shortInstructions).toBe(undefined);
 
         // given both
         const result3 = determineInstructionsConstants({
@@ -246,7 +244,7 @@ describe('instructions', () => {
           overlayVisible,
         });
 
-        assert.equal(result3.shortInstructions, undefined);
+        expect(result3.shortInstructions).toBe(undefined);
       });
     });
 
@@ -270,7 +268,7 @@ describe('instructions', () => {
             showInstructionsInTopPane,
             hasContainedLevels,
           });
-          assert.deepEqual(result, {
+          expect(result).toEqual({
             noInstructionsWhenCollapsed,
             shortInstructions: 'non-markdown',
             shortInstructions2: undefined,
@@ -305,7 +303,7 @@ describe('instructions', () => {
             hasContainedLevels,
             overlayVisible,
           });
-          assert.deepEqual(result, {
+          expect(result).toEqual({
             noInstructionsWhenCollapsed,
             shortInstructions: 'non-markdown',
             shortInstructions2: undefined,
@@ -342,7 +340,7 @@ describe('instructions', () => {
           hasContainedLevels,
           overlayVisible,
         });
-        assert.equal(result.longInstructions, 'non-markdown');
+        expect(result.longInstructions).toBe('non-markdown');
 
         const result2 = determineInstructionsConstants({
           level: {
@@ -357,7 +355,7 @@ describe('instructions', () => {
           hasContainedLevels,
           overlayVisible,
         });
-        assert.equal(result2.longInstructions, 'markdown');
+        expect(result2.longInstructions).toBe('markdown');
       });
 
       it('substitutes images in instructions', () => {
@@ -379,14 +377,8 @@ describe('instructions', () => {
           overlayVisible,
         });
 
-        assert(
-          /image1\.png/.test(result.shortInstructions),
-          'image 1 is replaced'
-        );
-        assert(
-          /image2\.png/.test(result.shortInstructions2),
-          'image 2 is replaced'
-        );
+        expect(/image1\.png/.test(result.shortInstructions)).toBeTruthy();
+        expect(/image2\.png/.test(result.shortInstructions2)).toBeTruthy();
       });
 
       it('instructions outputs levelVideos data when it is associated with the given level', () => {
@@ -401,7 +393,7 @@ describe('instructions', () => {
           overlayVisible,
         });
 
-        assert.deepEqual(result, {
+        expect(result).toEqual({
           noInstructionsWhenCollapsed: false,
           overlayVisible: false,
           shortInstructions: undefined,
@@ -431,7 +423,7 @@ describe('instructions', () => {
           overlayVisible,
         });
 
-        assert.deepEqual(result, {
+        expect(result).toEqual({
           noInstructionsWhenCollapsed: false,
           overlayVisible: false,
           shortInstructions: undefined,
@@ -461,7 +453,7 @@ describe('instructions', () => {
           overlayVisible,
         });
 
-        assert.deepEqual(result, {
+        expect(result).toEqual({
           noInstructionsWhenCollapsed: false,
           overlayVisible: false,
           shortInstructions: undefined,

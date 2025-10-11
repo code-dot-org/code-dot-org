@@ -1,11 +1,8 @@
-import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
-
 import {commands} from '@cdo/apps/p5lab/spritelab/commands/actionCommands';
 import {commands as spriteCommands} from '@cdo/apps/p5lab/spritelab/commands/spriteCommands';
 import CoreLibrary from '@cdo/apps/p5lab/spritelab/CoreLibrary';
 
 import createP5Wrapper from '../../../util/gamelab/TestableP5Wrapper';
-import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('Action Commands', () => {
   let coreLibrary;
@@ -20,19 +17,19 @@ describe('Action Commands', () => {
     it('adds targets to follow', () => {
       coreLibrary.addSprite({name: spriteName});
       const sprite = coreLibrary.getSpriteArray({name: spriteName})[0];
-      expect(sprite.targetSet).to.be.undefined;
+      expect(sprite.targetSet).toBeUndefined();
       commands.addTarget.apply(coreLibrary, [
         {name: spriteName},
         'costume1',
         'follow',
       ]);
-      expect(sprite.targetSet).to.deep.equal({follow: ['costume1'], avoid: []});
+      expect(sprite.targetSet).toEqual({follow: ['costume1'], avoid: []});
       commands.addTarget.apply(coreLibrary, [
         {name: spriteName},
         'costume2',
         'follow',
       ]);
-      expect(sprite.targetSet).to.deep.equal({
+      expect(sprite.targetSet).toEqual({
         follow: ['costume1', 'costume2'],
         avoid: [],
       });
@@ -41,19 +38,19 @@ describe('Action Commands', () => {
     it('adds targets to avoid', () => {
       coreLibrary.addSprite({name: spriteName});
       const sprite = coreLibrary.getSpriteArray({name: spriteName})[0];
-      expect(sprite.targetSet).to.be.undefined;
+      expect(sprite.targetSet).toBeUndefined();
       commands.addTarget.apply(coreLibrary, [
         {name: spriteName},
         'costume1',
         'avoid',
       ]);
-      expect(sprite.targetSet).to.deep.equal({follow: [], avoid: ['costume1']});
+      expect(sprite.targetSet).toEqual({follow: [], avoid: ['costume1']});
       commands.addTarget.apply(coreLibrary, [
         {name: spriteName},
         'costume2',
         'avoid',
       ]);
-      expect(sprite.targetSet).to.deep.equal({
+      expect(sprite.targetSet).toEqual({
         follow: [],
         avoid: ['costume1', 'costume2'],
       });
@@ -62,7 +59,7 @@ describe('Action Commands', () => {
     it('can follow and avoid at the same time', () => {
       coreLibrary.addSprite({name: spriteName});
       const sprite = coreLibrary.getSpriteArray({name: spriteName})[0];
-      expect(sprite.targetSet).to.be.undefined;
+      expect(sprite.targetSet).toBeUndefined();
       commands.addTarget.apply(coreLibrary, [
         {name: spriteName},
         'costume1',
@@ -73,27 +70,26 @@ describe('Action Commands', () => {
         'costume2',
         'avoid',
       ]);
-      expect(sprite.targetSet).to.deep.equal({
+      expect(sprite.targetSet).toEqual({
         follow: ['costume1'],
         avoid: ['costume2'],
       });
     });
 
     it('console.warn on unknown target types', () => {
-      sinon.stub(console, 'warn');
+      jest.spyOn(console, 'warn').mockImplementation();
       coreLibrary.addSprite({name: spriteName});
       const sprite = coreLibrary.getSpriteArray({name: spriteName})[0];
-      expect(sprite.targetSet).to.be.undefined;
+      expect(sprite.targetSet).toBeUndefined();
       commands.addTarget.apply(coreLibrary, [
         {name: spriteName},
         'costume1',
         'other',
       ]);
-      expect(console.warn).to.have.been.calledOnceWith(
-        'unkknown targetType: other'
-      );
-      expect(sprite.targetSet).to.be.undefined;
-      console.warn.restore();
+      expect(console.warn).toHaveBeenCalledTimes(1);
+      expect(console.warn).toHaveBeenCalledWith('unkknown targetType: other');
+      expect(sprite.targetSet).toBeUndefined();
+      console.warn.mockRestore();
     });
   });
 
@@ -116,10 +112,10 @@ describe('Action Commands', () => {
           {name: 'spriteName1'},
           'direction',
         ])
-      ).to.equal(0);
+      ).toBe(0);
       expect(
         spriteCommands.getProp.apply(coreLibrary, [{name: 'spriteName1'}, 'x'])
-      ).to.equal(189);
+      ).toBe(189);
     });
 
     it('does not change direction if sprites are not touching', () => {
@@ -139,19 +135,19 @@ describe('Action Commands', () => {
           {name: 'spriteName1'},
           'direction',
         ])
-      ).to.equal(180);
+      ).toBe(180);
       expect(
         spriteCommands.getProp.apply(coreLibrary, [{name: 'spriteName1'}, 'x'])
-      ).to.equal(0);
+      ).toBe(0);
       expect(
         spriteCommands.getProp.apply(coreLibrary, [
           {name: 'spriteName2'},
           'direction',
         ])
-      ).to.equal(0);
+      ).toBe(0);
       expect(
         spriteCommands.getProp.apply(coreLibrary, [{name: 'spriteName2'}, 'x'])
-      ).to.equal(400);
+      ).toBe(400);
     });
   });
 
@@ -160,19 +156,19 @@ describe('Action Commands', () => {
     commands.changePropBy.apply(coreLibrary, [{name: spriteName}, 'x', 100]);
     expect(
       spriteCommands.getProp.apply(coreLibrary, [{name: spriteName}, 'x'])
-    ).to.equal(223);
+    ).toBe(223);
 
     commands.changePropBy.apply(coreLibrary, [{name: spriteName}, 'y', 100]);
     expect(
       spriteCommands.getProp.apply(coreLibrary, [{name: spriteName}, 'y'])
-    ).to.equal(400 - 221);
+    ).toBe(400 - 221);
 
     expect(
       spriteCommands.getProp.apply(coreLibrary, [
         {name: spriteName},
         'direction',
       ])
-    ).to.equal(0);
+    ).toBe(0);
     commands.changePropBy.apply(coreLibrary, [
       {name: spriteName},
       'direction',
@@ -183,7 +179,7 @@ describe('Action Commands', () => {
         {name: spriteName},
         'direction',
       ])
-    ).to.equal(200);
+    ).toBe(200);
     commands.changePropBy.apply(coreLibrary, [
       {name: spriteName},
       'direction',
@@ -194,7 +190,7 @@ describe('Action Commands', () => {
         {name: spriteName},
         'direction',
       ])
-    ).to.equal(40);
+    ).toBe(40);
   });
 
   it('isTouchingSprite', () => {
@@ -207,13 +203,13 @@ describe('Action Commands', () => {
         {name: 'spriteName1'},
         {name: 'spriteName2'},
       ])
-    ).to.be.false;
+    ).toBe(false);
     expect(
       commands.isTouchingSprite.apply(coreLibrary, [
         {name: 'spriteName3'},
         {name: 'spriteName2'},
       ])
-    ).to.be.true;
+    ).toBe(true);
   });
 
   it('jumpTo', () => {
@@ -221,10 +217,10 @@ describe('Action Commands', () => {
     commands.jumpTo.apply(coreLibrary, [{name: spriteName}, {x: 321, y: 123}]);
     expect(
       spriteCommands.getProp.apply(coreLibrary, [{name: spriteName}, 'x'])
-    ).to.equal(321);
+    ).toBe(321);
     expect(
       spriteCommands.getProp.apply(coreLibrary, [{name: spriteName}, 'y'])
-    ).to.equal(400 - 123);
+    ).toBe(400 - 123);
   });
 
   describe('moveForward', () => {
@@ -235,14 +231,14 @@ describe('Action Commands', () => {
           {name: spriteName},
           'direction',
         ])
-      ).to.equal(0);
+      ).toBe(0);
       commands.moveForward.apply(coreLibrary, [{name: spriteName}, 100]);
       expect(
         spriteCommands.getProp.apply(coreLibrary, [{name: spriteName}, 'x'])
-      ).to.equal(100);
+      ).toBe(100);
       expect(
         spriteCommands.getProp.apply(coreLibrary, [{name: spriteName}, 'y'])
-      ).to.equal(400 - 0);
+      ).toBe(400 - 0);
     });
 
     it('can move vertically', () => {
@@ -258,7 +254,7 @@ describe('Action Commands', () => {
       ).to.be.within(0, 0.1);
       expect(
         spriteCommands.getProp.apply(coreLibrary, [{name: spriteName}, 'y'])
-      ).to.equal(400 - 100);
+      ).toBe(400 - 100);
     });
 
     it('can move diagonally', () => {
@@ -288,10 +284,10 @@ describe('Action Commands', () => {
     ]);
     expect(
       spriteCommands.getProp.apply(coreLibrary, [{name: spriteName}, 'x'])
-    ).to.equal(0);
+    ).toBe(0);
     expect(
       spriteCommands.getProp.apply(coreLibrary, [{name: spriteName}, 'y'])
-    ).to.equal(400 - 50);
+    ).toBe(400 - 50);
 
     commands.moveInDirection.apply(coreLibrary, [
       {name: spriteName},
@@ -300,10 +296,10 @@ describe('Action Commands', () => {
     ]);
     expect(
       spriteCommands.getProp.apply(coreLibrary, [{name: spriteName}, 'x'])
-    ).to.equal(-50);
+    ).toBe(-50);
     expect(
       spriteCommands.getProp.apply(coreLibrary, [{name: spriteName}, 'y'])
-    ).to.equal(400 - 50);
+    ).toBe(400 - 50);
 
     commands.moveInDirection.apply(coreLibrary, [
       {name: spriteName},
@@ -312,10 +308,10 @@ describe('Action Commands', () => {
     ]);
     expect(
       spriteCommands.getProp.apply(coreLibrary, [{name: spriteName}, 'x'])
-    ).to.equal(-50);
+    ).toBe(-50);
     expect(
       spriteCommands.getProp.apply(coreLibrary, [{name: spriteName}, 'y'])
-    ).to.equal(400);
+    ).toBe(400);
 
     commands.moveInDirection.apply(coreLibrary, [
       {name: spriteName},
@@ -324,10 +320,10 @@ describe('Action Commands', () => {
     ]);
     expect(
       spriteCommands.getProp.apply(coreLibrary, [{name: spriteName}, 'x'])
-    ).to.equal(0);
+    ).toBe(0);
     expect(
       spriteCommands.getProp.apply(coreLibrary, [{name: spriteName}, 'y'])
-    ).to.equal(400);
+    ).toBe(400);
   });
 
   describe('moveToward', () => {
@@ -354,11 +350,11 @@ describe('Action Commands', () => {
       commands.moveToward.apply(coreLibrary, [{name: spriteName}, 100, target]);
       expect(
         spriteCommands.getProp.apply(coreLibrary, [{name: spriteName}, 'x'])
-      ).to.equal(110);
+      ).toBe(110);
       const expectedY = 400 - target.y;
       expect(
         spriteCommands.getProp.apply(coreLibrary, [{name: spriteName}, 'y'])
-      ).to.equal(expectedY);
+      ).toBe(expectedY);
     });
   });
 
@@ -377,7 +373,7 @@ describe('Action Commands', () => {
           {name: spriteName},
           'direction',
         ])
-      ).to.equal(100);
+      ).toBe(100);
       commands.setProp.apply(coreLibrary, [
         {name: spriteName},
         'direction',
@@ -388,7 +384,7 @@ describe('Action Commands', () => {
           {name: spriteName},
           'direction',
         ])
-      ).to.equal(40);
+      ).toBe(40);
     });
 
     it('sets arbitrary properties', () => {
@@ -402,7 +398,7 @@ describe('Action Commands', () => {
           {name: spriteName},
           'someProp',
         ])
-      ).to.equal(100);
+      ).toBe(100);
     });
 
     it('sets scale, height, and width', () => {
@@ -414,11 +410,11 @@ describe('Action Commands', () => {
       coreLibrary.addSprite({name: spriteName, animation: 'costume_label'});
       expect(
         spriteCommands.getProp.apply(coreLibrary, [{name: spriteName}, 'scale'])
-      ).to.equal(100);
+      ).toBe(100);
       commands.setProp.apply(coreLibrary, [{name: spriteName}, 'scale', 50]);
       expect(
         spriteCommands.getProp.apply(coreLibrary, [{name: spriteName}, 'scale'])
-      ).to.equal(50);
+      ).toBe(50);
 
       commands.setProp.apply(coreLibrary, [{name: spriteName}, 'height', 500]);
       expect(
@@ -426,12 +422,12 @@ describe('Action Commands', () => {
           {name: spriteName},
           'height',
         ])
-      ).to.equal(250);
+      ).toBe(250);
 
       commands.setProp.apply(coreLibrary, [{name: spriteName}, 'width', 500]);
       expect(
         spriteCommands.getProp.apply(coreLibrary, [{name: spriteName}, 'width'])
-      ).to.equal(250);
+      ).toBe(250);
     });
   });
 
@@ -443,7 +439,7 @@ describe('Action Commands', () => {
         {name: spriteName},
         'rotation',
       ])
-    ).to.equal(90);
+    ).toBe(90);
 
     commands.turn.apply(coreLibrary, [{name: spriteName}, 180, 'left']);
     expect(
@@ -451,7 +447,7 @@ describe('Action Commands', () => {
         {name: spriteName},
         'rotation',
       ])
-    ).to.equal(-90);
+    ).toBe(-90);
   });
 
   // tests copied from dance party repo here:
@@ -488,14 +484,14 @@ describe('Action Commands', () => {
       });
 
       const spritesBeforeLayout = coreLibrary.getSpriteArray({costume: 'cat'});
-      expect(spritesBeforeLayout.length).to.equal(1);
-      expect(spritesBeforeLayout[0].getScale()).to.equal(1);
+      expect(spritesBeforeLayout.length).toBe(1);
+      expect(spritesBeforeLayout[0].getScale()).toBe(1);
 
       commands.layoutSprites.apply(coreLibrary, ['cat', 'border']);
 
       const spritesAfterLayout = coreLibrary.getSpriteArray({costume: 'cat'});
-      expect(spritesAfterLayout.length).to.equal(1);
-      expect(spritesAfterLayout[0].getScale()).to.equal(0.3);
+      expect(spritesAfterLayout.length).toBe(1);
+      expect(spritesAfterLayout[0].getScale()).toBe(0.3);
     });
 
     it('circle layout works with 1 sprite', () => {
@@ -507,8 +503,8 @@ describe('Action Commands', () => {
       const sprites = coreLibrary.getSpriteArray({costume: 'cat'});
 
       // one sprite, facing upwards
-      expect(sprites.length).to.equal(1);
-      expect(sprites[0].x).to.equal(200);
+      expect(sprites.length).toBe(1);
+      expect(sprites[0].x).toBe(200);
     });
 
     it('circle layout works with 2 sprites', () => {
@@ -517,13 +513,13 @@ describe('Action Commands', () => {
       commands.layoutSprites.apply(coreLibrary, ['cat', 'circle']);
       const sprites = coreLibrary.getSpriteArray({costume: 'cat'});
 
-      expect(sprites.length).to.equal(2);
-      expect(sprites[0].x).to.equal(200);
+      expect(sprites.length).toBe(2);
+      expect(sprites[0].x).toBe(200);
 
-      expect(sprites[1].x).to.equal(200);
+      expect(sprites[1].x).toBe(200);
 
       // fairly weak test that they just have different y values
-      expect(sprites[0].y).to.not.equal(sprites[1].y);
+      expect(sprites[0].y).not.toBe(sprites[1].y);
     });
 
     it('circle changes radius/scale as we add more sprites', () => {
@@ -545,14 +541,14 @@ describe('Action Commands', () => {
       expect(cats[0].scale).to.be.greaterThan(ducks[0].scale);
 
       // we should stop getting bigger after count 10
-      expect(aliens[0].scale).to.equal(ducks[0].scale);
+      expect(aliens[0].scale).toBe(ducks[0].scale);
 
       // radius should be smaller when we have fewer (so y should be bigger)
       expect(cats[0].y).to.be.greaterThan(aliens[0].y);
       expect(cats[0].y).to.be.greaterThan(ducks[0].y);
 
       // again, this should be unaffected after count 10
-      expect(aliens[0].y).to.equal(ducks[0].y);
+      expect(aliens[0].y).toBe(ducks[0].y);
     });
 
     it('border works with 5 sprites', () => {
@@ -562,20 +558,20 @@ describe('Action Commands', () => {
       const sprites = coreLibrary.getSpriteArray({costume: 'cat'});
 
       // first four are at the corners
-      expect(sprites[0].x).to.equal(minX);
-      expect(sprites[0].y).to.equal(minY);
+      expect(sprites[0].x).toBe(minX);
+      expect(sprites[0].y).toBe(minY);
 
-      expect(sprites[1].x).to.equal(maxX);
-      expect(sprites[1].y).to.equal(minY);
+      expect(sprites[1].x).toBe(maxX);
+      expect(sprites[1].y).toBe(minY);
 
-      expect(sprites[2].x).to.equal(maxX);
-      expect(sprites[2].y).to.equal(maxY);
+      expect(sprites[2].x).toBe(maxX);
+      expect(sprites[2].y).toBe(maxY);
 
-      expect(sprites[3].x).to.equal(minX);
-      expect(sprites[3].y).to.equal(maxY);
+      expect(sprites[3].x).toBe(minX);
+      expect(sprites[3].y).toBe(maxY);
 
-      expect(sprites[4].x).to.equal((minX + maxX) / 2);
-      expect(sprites[4].y).to.equal(minY);
+      expect(sprites[4].x).toBe((minX + maxX) / 2);
+      expect(sprites[4].y).toBe(minY);
     });
 
     it('border works with > 10 sprites', () => {
@@ -584,19 +580,19 @@ describe('Action Commands', () => {
       commands.layoutSprites.apply(coreLibrary, ['cat', 'border']);
       const sprites = coreLibrary.getSpriteArray({costume: 'cat'});
 
-      expect(sprites.length).to.equal(11);
+      expect(sprites.length).toBe(11);
 
       // top row should contain first, second, and then 2 more
-      [0, 1, 4, 5].forEach(i => expect(sprites[i].y).to.equal(minY));
+      [0, 1, 4, 5].forEach(i => expect(sprites[i].y).toBe(minY));
 
       // right column contains second, third, and 2 others
-      [1, 2, 6, 7].forEach(i => expect(sprites[i].x).to.equal(maxX));
+      [1, 2, 6, 7].forEach(i => expect(sprites[i].x).toBe(maxX));
 
       // bottom row contains third, fourth, and 2 others
-      [2, 3, 8, 9].forEach(i => expect(sprites[i].y).to.equal(maxY));
+      [2, 3, 8, 9].forEach(i => expect(sprites[i].y).toBe(maxY));
 
       // left column contains fourth, first and 1 other
-      [3, 0, 10].forEach(i => expect(sprites[i].x).to.equal(minX));
+      [3, 0, 10].forEach(i => expect(sprites[i].x).toBe(minX));
     });
 
     it('grid layout with perfect square count', () => {
@@ -607,17 +603,17 @@ describe('Action Commands', () => {
 
       expect(sprites.length, 4);
 
-      expect(sprites[0].x).to.equal(minX);
-      expect(sprites[0].y).to.equal(minY);
+      expect(sprites[0].x).toBe(minX);
+      expect(sprites[0].y).toBe(minY);
 
-      expect(sprites[1].x).to.equal(maxX);
-      expect(sprites[1].y).to.equal(minY);
+      expect(sprites[1].x).toBe(maxX);
+      expect(sprites[1].y).toBe(minY);
 
-      expect(sprites[2].x).to.equal(minX);
-      expect(sprites[2].y).to.equal(maxY);
+      expect(sprites[2].x).toBe(minX);
+      expect(sprites[2].y).toBe(maxY);
 
-      expect(sprites[3].x).to.equal(maxX);
-      expect(sprites[3].y).to.equal(maxY);
+      expect(sprites[3].x).toBe(maxX);
+      expect(sprites[3].y).toBe(maxY);
     });
 
     it('grid layout without perfect square count', () => {
@@ -626,24 +622,24 @@ describe('Action Commands', () => {
       commands.layoutSprites.apply(coreLibrary, ['cat', 'grid']);
       const sprites = coreLibrary.getSpriteArray({costume: 'cat'});
 
-      expect(sprites.length).to.equal(5);
+      expect(sprites.length).toBe(5);
 
       // size 5 means we're filling up a 3x3 grid, except that we don't end up
       // needing the 3rd row, and so we instead fill a 3x2 grid
-      expect(sprites[0].x).to.equal(minX);
-      expect(sprites[0].y).to.equal(minY);
+      expect(sprites[0].x).toBe(minX);
+      expect(sprites[0].y).toBe(minY);
 
-      expect(sprites[1].x).to.equal((minX + maxX) / 2);
-      expect(sprites[1].y).to.equal(minY);
+      expect(sprites[1].x).toBe((minX + maxX) / 2);
+      expect(sprites[1].y).toBe(minY);
 
-      expect(sprites[2].x).to.equal(maxX);
-      expect(sprites[2].y).to.equal(minY);
+      expect(sprites[2].x).toBe(maxX);
+      expect(sprites[2].y).toBe(minY);
 
-      expect(sprites[3].x).to.equal(minX);
-      expect(sprites[3].y).to.equal(maxY);
+      expect(sprites[3].x).toBe(minX);
+      expect(sprites[3].y).toBe(maxY);
 
-      expect(sprites[4].x).to.equal((minX + maxX) / 2);
-      expect(sprites[4].y).to.equal(maxY);
+      expect(sprites[4].x).toBe((minX + maxX) / 2);
+      expect(sprites[4].y).toBe(maxY);
     });
 
     it('grid layout of size 2', () => {
@@ -654,11 +650,11 @@ describe('Action Commands', () => {
 
       expect(sprites.length, 2);
 
-      expect(sprites[0].x).to.equal(minX);
-      expect(sprites[0].y).to.equal(minY);
+      expect(sprites[0].x).toBe(minX);
+      expect(sprites[0].y).toBe(minY);
 
-      expect(sprites[1].x).to.equal(maxX);
-      expect(sprites[1].y).to.equal(minY);
+      expect(sprites[1].x).toBe(maxX);
+      expect(sprites[1].y).toBe(minY);
     });
   });
 });

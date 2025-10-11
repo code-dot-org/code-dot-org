@@ -1,7 +1,5 @@
 import React from 'react';
 
-import {expect} from '../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
-
 var propTypes = require('@cdo/apps/propTypes');
 
 describe('propTypes module', () => {
@@ -22,19 +20,19 @@ describe('propTypes module', () => {
 
     describe('does not return an error when', () => {
       it('no children are given', () => {
-        expect(check({someProp: 'foo'})).not.to.be.an.instanceOf(Error);
+        expect(check({someProp: 'foo'})).not.toBeInstanceOf(Error);
       });
 
       it('no prop is given', () => {
-        expect(check({children: [<Foo />]})).not.to.be.an.instanceOf(Error);
+        expect(check({children: [<Foo />]})).not.toBeInstanceOf(Error);
       });
     });
 
     describe('does return an error when', () => {
       it('both a prop and child are given', () => {
         const error = check({children: [<Foo />], someProp: 'foo'});
-        expect(error).to.be.an.instanceOf(Error);
-        expect(error.message).to.equal(
+        expect(error).toBeInstanceOf(Error);
+        expect(error.message).toBe(
           'SomeComponent was given a someProp prop and a <Foo> child, ' +
             'but only one of those is allowed.'
         );
@@ -55,16 +53,16 @@ describe('propTypes module', () => {
 
     describe('does not return an error when', () => {
       it('no children are given', () => {
-        expect(check()).not.to.be.an.instanceOf(Error);
+        expect(check()).not.toBeInstanceOf(Error);
       });
 
       it('only some children are given in the correct order', () => {
-        expect(check(<Foo />)).not.to.be.an.instanceOf(Error);
-        expect(check(<Bar />)).not.to.be.an.instanceOf(Error);
+        expect(check(<Foo />)).not.toBeInstanceOf(Error);
+        expect(check(<Bar />)).not.toBeInstanceOf(Error);
       });
 
       it('all children are given in the correct order', () => {
-        expect(check(<Foo />, <Bar />)).not.to.be.an.instanceOf(Error);
+        expect(check(<Foo />, <Bar />)).not.toBeInstanceOf(Error);
       });
     });
 
@@ -76,31 +74,31 @@ describe('propTypes module', () => {
             'nonChildrenProp',
             'SomeComponent'
           );
-        expect(check(<Baz />)).to.be.an.instanceOf(Error);
-        expect(check(<Baz />).message).to.equal(
+        expect(check(<Baz />)).toBeInstanceOf(Error);
+        expect(check(<Baz />).message).toBe(
           'The childrenOfType prop type should only be used on the children prop.'
         );
       });
 
       it('children of an invalid type are give', () => {
-        expect(check(<Baz />)).to.be.an.instanceOf(Error);
-        expect(check(<Baz />).message).to.equal(
+        expect(check(<Baz />)).toBeInstanceOf(Error);
+        expect(check(<Baz />).message).toBe(
           'SomeComponent was given children of types <Baz> ' +
             'but only accepts one of each child in the following order: <Foo>, <Bar>.'
         );
       });
 
       it('more than one child of the same type are given', () => {
-        expect(check(<Bar />, <Bar />)).to.be.an.instanceOf(Error);
-        expect(check(<Bar />, <Bar />).message).to.equal(
+        expect(check(<Bar />, <Bar />)).toBeInstanceOf(Error);
+        expect(check(<Bar />, <Bar />).message).toBe(
           'SomeComponent was given children of types <Bar>, <Bar> ' +
             'but only accepts one of each child in the following order: <Foo>, <Bar>.'
         );
       });
 
       it('children of the correct types are given in the incorrect order', () => {
-        expect(check(<Bar />, <Foo />)).to.be.an.instanceOf(Error);
-        expect(check(<Bar />, <Foo />).message).to.equal(
+        expect(check(<Bar />, <Foo />)).toBeInstanceOf(Error);
+        expect(check(<Bar />, <Foo />).message).toBe(
           'SomeComponent was given children of types <Bar>, <Foo> ' +
             'but only accepts one of each child in the following order: <Foo>, <Bar>.'
         );

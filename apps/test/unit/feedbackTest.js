@@ -1,10 +1,6 @@
-import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
-
 import {TestResults} from '@cdo/apps/constants';
 import FeedbackUtils from '@cdo/apps/feedback';
 import msg from '@cdo/locale';
-
-import {assert} from '../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('FeedbackUtils', () => {
   describe('getFeedbackMessage', () => {
@@ -33,36 +29,33 @@ describe('FeedbackUtils', () => {
             },
           };
 
-          sinon.stub(msg, 'finalStage').callsFake(() => finalStageMsg);
-          sinon.stub(msg, 'endOfLesson').callsFake(() => endOfLesson);
-          sinon.stub(msg, 'nextStage').callsFake(() => nextStageMsg);
-          sinon.stub(msg, 'nextLevel').callsFake(() => nextLevelMsg);
+          jest.spyOn(msg, 'finalStage').mockImplementation(() => finalStageMsg);
+          jest.spyOn(msg, 'endOfLesson').mockImplementation(() => endOfLesson);
+          jest.spyOn(msg, 'nextStage').mockImplementation(() => nextStageMsg);
+          jest.spyOn(msg, 'nextLevel').mockImplementation(() => nextLevelMsg);
         });
 
         afterEach(() => {
-          sinon.restore();
+          jest.restoreAllMocks();
         });
 
         describe('with sharing enabled', () => {
           it('returns appStrings.reinfFeedbackMsg if final lesson message disabled', () => {
             options.level.disableFinalLessonMessage = true;
-            assert.equal(
-              feedbackUtils.getFeedbackMessage(options),
+            expect(feedbackUtils.getFeedbackMessage(options)).toBe(
               options.appStrings.reinfFeedbackMsg
             );
           });
 
           it('returns final stage and appStrings.reinfFeedbackMsg if final level', () => {
             options.level.isLastLevelInLesson = true;
-            assert.equal(
-              feedbackUtils.getFeedbackMessage(options),
+            expect(feedbackUtils.getFeedbackMessage(options)).toBe(
               `${finalStageMsg} ${options.appStrings.reinfFeedbackMsg}`
             );
 
             // Gracefully handles missing reinfFeedbackMsg.
             options.appStrings.reinfFeedbackMsg = null;
-            assert.equal(
-              feedbackUtils.getFeedbackMessage(options),
+            expect(feedbackUtils.getFeedbackMessage(options)).toBe(
               `${finalStageMsg} `
             );
           });
@@ -70,15 +63,11 @@ describe('FeedbackUtils', () => {
           it('returns end of lesson message if final level and level.showEndOfLessonMsgs is true', () => {
             options.level.isLastLevelInLesson = true;
             options.level.showEndOfLessonMsgs = true;
-            assert.equal(
-              feedbackUtils.getFeedbackMessage(options),
-              endOfLesson
-            );
+            expect(feedbackUtils.getFeedbackMessage(options)).toBe(endOfLesson);
           });
 
           it('returns appStrings.reinfFeedbackMsg if not final level', () => {
-            assert.equal(
-              feedbackUtils.getFeedbackMessage(options),
+            expect(feedbackUtils.getFeedbackMessage(options)).toBe(
               options.appStrings.reinfFeedbackMsg
             );
           });
@@ -91,8 +80,7 @@ describe('FeedbackUtils', () => {
 
           it('returns final stage message if final level', () => {
             options.level.isLastLevelInLesson = true;
-            assert.equal(
-              feedbackUtils.getFeedbackMessage(options),
+            expect(feedbackUtils.getFeedbackMessage(options)).toBe(
               finalStageMsg
             );
           });
@@ -100,25 +88,20 @@ describe('FeedbackUtils', () => {
           it('returns final stage message if final level and level.showEndOfLessonMsgs is true', () => {
             options.level.isLastLevelInLesson = true;
             options.level.showEndOfLessonMsgs = true;
-            assert.equal(
-              feedbackUtils.getFeedbackMessage(options),
-              endOfLesson
-            );
+            expect(feedbackUtils.getFeedbackMessage(options)).toBe(endOfLesson);
           });
 
           it('returns next stage message if lesson completed', () => {
             options.response = {
               lesson_changing: {previous: {name: 'Lesson Name'}},
             };
-            assert.equal(
-              feedbackUtils.getFeedbackMessage(options),
+            expect(feedbackUtils.getFeedbackMessage(options)).toBe(
               nextStageMsg
             );
           });
 
           it('returns next level message if lesson not completed', () => {
-            assert.equal(
-              feedbackUtils.getFeedbackMessage(options),
+            expect(feedbackUtils.getFeedbackMessage(options)).toBe(
               nextLevelMsg
             );
           });

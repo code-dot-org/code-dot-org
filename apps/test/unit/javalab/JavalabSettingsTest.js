@@ -4,8 +4,6 @@ import React from 'react';
 import {DisplayTheme} from '@cdo/apps/javalab/DisplayTheme';
 import {UnconnectedJavalabSettings} from '@cdo/apps/javalab/JavalabSettings';
 
-import {assert} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
-
 describe('JavalabSettings', () => {
   let setDisplayTheme,
     increaseEditorFontSize,
@@ -36,29 +34,29 @@ describe('JavalabSettings', () => {
 
   it('is initially just a button', () => {
     const wrapper = createWrapper();
-    assert.strictEqual(wrapper.children().length, 1);
-    assert.strictEqual(wrapper.childAt(0).name(), 'JavalabButton');
+    expect(wrapper.children().length).toBe(1);
+    expect(wrapper.childAt(0).name()).toBe('JavalabButton');
   });
 
   it('shows dropdown when clicked', () => {
     const wrapper = createWrapper();
     wrapper.instance().toggleDropdown();
     // 3 buttons: settings theme toggle, increase font, decrease font
-    assert.strictEqual(wrapper.find('button').length, 3);
+    expect(wrapper.find('button').length).toBe(3);
   });
 
   it('toggles theme and closes dropdown when switch theme button is clicked', () => {
     const wrapper = createWrapper();
     wrapper.instance().toggleDropdown();
     const switchThemeButton = wrapper.find('#javalab-settings-switch-theme');
-    assert.equal(switchThemeButton.length, 1);
+    expect(switchThemeButton.length).toBe(1);
 
     switchThemeButton.first().props().onClick();
 
     expect(setDisplayTheme).toHaveBeenCalledWith(DisplayTheme.LIGHT);
 
     // Assert dropdown is closed
-    assert.equal(wrapper.find('#javalab-settings-switch-theme').length, 0);
+    expect(wrapper.find('#javalab-settings-switch-theme').length).toBe(0);
   });
 
   it('displays current font size in font size selector', () => {
@@ -68,10 +66,10 @@ describe('JavalabSettings', () => {
     const fontSizeSelector = wrapper.find(
       '#javalab-settings-font-size-selector'
     );
-    assert.equal(fontSizeSelector.length, 1);
-    assert.isTrue(
+    expect(fontSizeSelector.length).toBe(1);
+    expect(
       fontSizeSelector.first().text().includes(`${editorFontSize}px`)
-    );
+    ).toBe(true);
   });
 
   it('increases or decreases font when increase/decrease buttons are clicked', () => {
@@ -82,12 +80,12 @@ describe('JavalabSettings', () => {
     wrapper.instance().toggleDropdown();
 
     const decreaseButton = wrapper.find('#javalab-settings-decrease-font');
-    assert.equal(decreaseButton.length, 1);
+    expect(decreaseButton.length).toBe(1);
     decreaseButton.first().props().onClick();
     expect(decreaseEditorFontSize).toHaveBeenCalledTimes(1);
 
     const increaseButton = wrapper.find('#javalab-settings-increase-font');
-    assert.equal(increaseButton.length, 1);
+    expect(increaseButton.length).toBe(1);
     increaseButton.first().props().onClick();
     expect(increaseEditorFontSize).toHaveBeenCalledTimes(1);
   });
@@ -100,8 +98,8 @@ describe('JavalabSettings', () => {
     wrapper.instance().toggleDropdown();
     let decreaseButton = wrapper.find('#javalab-settings-decrease-font');
     let increaseButton = wrapper.find('#javalab-settings-increase-font');
-    assert.isFalse(decreaseButton.first().props().disabled);
-    assert.isTrue(increaseButton.first().props().disabled);
+    expect(decreaseButton.first().props().disabled).toBe(false);
+    expect(increaseButton.first().props().disabled).toBe(true);
 
     wrapper = createWrapper({
       canIncreaseFontSize: true,
@@ -110,7 +108,7 @@ describe('JavalabSettings', () => {
     wrapper.instance().toggleDropdown();
     decreaseButton = wrapper.find('#javalab-settings-decrease-font');
     increaseButton = wrapper.find('#javalab-settings-increase-font');
-    assert.isTrue(decreaseButton.first().props().disabled);
-    assert.isFalse(increaseButton.first().props().disabled);
+    expect(decreaseButton.first().props().disabled).toBe(true);
+    expect(increaseButton.first().props().disabled).toBe(false);
   });
 });

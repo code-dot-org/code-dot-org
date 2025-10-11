@@ -1,10 +1,7 @@
 import Interpreter from '@code-dot-org/js-interpreter';
-import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import CustomMarshaler from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshaler';
 import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
-
-import {expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 import {
   makeAssertableObj,
@@ -16,14 +13,14 @@ describe('The CustomMarshalingInterpreter', () => {
   beforeEach(() => {
     customMarshaler = new CustomMarshaler({});
     interpreter = new CustomMarshalingInterpreter('', customMarshaler);
-    sinon.spy(Interpreter.prototype, 'getProperty');
-    sinon.spy(Interpreter.prototype, 'setProperty');
-    sinon.spy(Interpreter.prototype, 'hasProperty');
+    jest.spyOn(Interpreter.prototype, 'getProperty');
+    jest.spyOn(Interpreter.prototype, 'setProperty');
+    jest.spyOn(Interpreter.prototype, 'hasProperty');
   });
   afterEach(() => {
-    Interpreter.prototype.getProperty.restore();
-    Interpreter.prototype.setProperty.restore();
-    Interpreter.prototype.hasProperty.restore();
+    Interpreter.prototype.getProperty.mockRestore();
+    Interpreter.prototype.setProperty.mockRestore();
+    Interpreter.prototype.hasProperty.mockRestore();
   });
 
   describe('when given an object that should be custom marshaled', () => {
@@ -50,24 +47,24 @@ describe('The CustomMarshalingInterpreter', () => {
     });
 
     it('will create a custom marshal object', () => {
-      expect(value.interpreterValue.isCustomMarshal).to.be.true;
+      expect(value.interpreterValue.isCustomMarshal).toBe(true);
     });
 
     describe('the custom marshal object', () => {
       it('will have a data property set to the original native value', () => {
-        expect(value.interpreterValue.data).to.equal(value.nativeValue);
+        expect(value.interpreterValue.data).toBe(value.nativeValue);
       });
 
       it('is not a primitive', () => {
-        expect(value.interpreterValue.isPrimitive).to.be.false;
+        expect(value.interpreterValue.isPrimitive).toBe(false);
       });
 
       it('is the same type as the native object', () => {
-        expect(value.interpreterValue.type).to.equal('object');
+        expect(value.interpreterValue.type).toBe('object');
       });
 
       it('will have a valueOf method that returns the original native value', () => {
-        expect(value.interpreterValue.valueOf()).to.equal(value.nativeValue);
+        expect(value.interpreterValue.valueOf()).toBe(value.nativeValue);
       });
     });
 
@@ -99,10 +96,10 @@ describe('The CustomMarshalingInterpreter', () => {
     });
 
     it('will only custom marshal the object when the requiredMethod is present', () => {
-      expect(value.interpreterValue.isCustomMarshal).to.be.true;
+      expect(value.interpreterValue.isCustomMarshal).toBe(true);
       expect(
         makeAssertableObj(interpreter, []).interpreterValue.isCustomMarshal
-      ).not.to.be.true;
+      ).not.toBe(true);
     });
 
     it('will make sure the required method gets included in the custom marshaled object', () => {
@@ -112,7 +109,7 @@ describe('The CustomMarshalingInterpreter', () => {
 
   describe('the constructor', () => {
     it('requires passing in a custom marshaler instance', () => {
-      expect(() => new CustomMarshalingInterpreter('foo = true;')).to.throw(
+      expect(() => new CustomMarshalingInterpreter('foo = true;')).toThrow(
         'You must provide a CustomMarshaler to CustomMarshalingInterpreter'
       );
     });
@@ -125,12 +122,12 @@ describe('The CustomMarshalingInterpreter', () => {
         customMarshaler
       );
       interpreter.run();
-      expect(Interpreter.prototype.setProperty).to.have.been.calledWith(
+      expect(Interpreter.prototype.setProperty).toHaveBeenCalledWith(
         interpreter.global,
         'foo',
         interpreter.TRUE
       );
-      expect(Interpreter.prototype.setProperty).to.have.been.calledWith(
+      expect(Interpreter.prototype.setProperty).toHaveBeenCalledWith(
         interpreter.getProperty(interpreter.global, 'foo'),
         'bar',
         interpreter.FALSE
@@ -157,7 +154,7 @@ describe('The CustomMarshalingInterpreter', () => {
 
       it('will set the property on the native object', () => {
         interpreter.run();
-        expect(nativeObject.fromInterpreter).to.equal('hello');
+        expect(nativeObject.fromInterpreter).toBe('hello');
       });
 
       describe('and the property name is in the list of properties blocked from custom marshaling', () => {
@@ -178,7 +175,7 @@ describe('The CustomMarshalingInterpreter', () => {
 
         it('will not set the property on the native object', () => {
           interpreter.run();
-          expect(nativeObject.fromInterpreter).to.be.undefined;
+          expect(nativeObject.fromInterpreter).toBeUndefined();
         });
       });
 
@@ -264,33 +261,33 @@ describe('The CustomMarshalingInterpreter', () => {
 
       it('will not set a new function property on the native object', () => {
         interpreter.run();
-        expect(nativeObject.newFunction).to.be.undefined;
+        expect(nativeObject.newFunction).toBeUndefined();
       });
 
       it('will not set a new array property on the native object', () => {
         interpreter.run();
-        expect(nativeObject.newArray).to.be.undefined;
+        expect(nativeObject.newArray).toBeUndefined();
       });
 
       it('will not set a new object property on the native object', () => {
         interpreter.run();
-        expect(nativeObject.newObject).to.be.undefined;
+        expect(nativeObject.newObject).toBeUndefined();
       });
 
       it('will set an existing function property on the native object', () => {
         interpreter.run();
-        expect(nativeObject.existingFunction).not.to.equal(existingFunction);
+        expect(nativeObject.existingFunction).not.toBe(existingFunction);
       });
 
       it('will set an existing array property on the native object', () => {
         interpreter.run();
-        expect(nativeObject.existingArray.length).to.equal(1);
-        expect(nativeObject.existingArray[0]).to.equal(1);
+        expect(nativeObject.existingArray.length).toBe(1);
+        expect(nativeObject.existingArray[0]).toBe(1);
       });
 
       it('will set an existing object property on the native object', () => {
         interpreter.run();
-        expect(nativeObject.existingObject.prop).to.equal(1);
+        expect(nativeObject.existingObject.prop).toBe(1);
       });
     });
 
@@ -307,7 +304,7 @@ describe('The CustomMarshalingInterpreter', () => {
 
       it('will set the property on the global for the given name', () => {
         new CustomMarshalingInterpreter('name = "Paul"', customMarshaler).run();
-        expect(player.name).to.equal('Paul');
+        expect(player.name).toBe('Paul');
       });
 
       it('will correctly walk the scope chain if necessary to set the property', () => {
@@ -322,7 +319,7 @@ describe('The CustomMarshalingInterpreter', () => {
           `,
           customMarshaler
         ).run();
-        expect(player.name).to.equal('Paul');
+        expect(player.name).toBe('Paul');
       });
 
       describe('when used to set properties that are blocked from custom marshaling', () => {
@@ -337,7 +334,7 @@ describe('The CustomMarshalingInterpreter', () => {
             'name = "Paul"',
             customMarshaler
           ).run();
-          expect(player.name).to.be.undefined;
+          expect(player.name).toBeUndefined();
         });
       });
     });
@@ -356,9 +353,9 @@ describe('The CustomMarshalingInterpreter', () => {
       customMarshaler
     );
     interpreter.run();
-    expect(
-      interpreter.getProperty(interpreter.global, 'name').toString()
-    ).to.equal('Paul');
+    expect(interpreter.getProperty(interpreter.global, 'name').toString()).toBe(
+      'Paul'
+    );
   });
 
   it('will throw an exception when trying to set an undeclared variabled in strict mode', () => {
@@ -373,7 +370,7 @@ describe('The CustomMarshalingInterpreter', () => {
        setNameToPaul();`,
       customMarshaler
     );
-    expect(() => interpreter.run()).to.throw('Unknown identifier: name');
+    expect(() => interpreter.run()).toThrow('Unknown identifier: name');
   });
 
   it('will throw an exception when trying to reference an undeclared variable', () => {
@@ -381,7 +378,7 @@ describe('The CustomMarshalingInterpreter', () => {
       `parseInt(someUndeclaredVariable)`,
       customMarshaler
     );
-    expect(() => interpreter.run()).to.throw(
+    expect(() => interpreter.run()).toThrow(
       'someUndeclaredVariable is not defined'
     );
   });
@@ -410,7 +407,7 @@ describe('The CustomMarshalingInterpreter', () => {
         interpreter.marshalInterpreterToNative(
           interpreter.getValueFromScope('myArray')
         )
-      ).to.eql(expectedSortedArray);
+      ).toEqual(expectedSortedArray);
     });
   });
 
@@ -420,8 +417,8 @@ describe('The CustomMarshalingInterpreter', () => {
         interpreter.global,
         'undefined'
       );
-      expect(Interpreter.prototype.getProperty).to.have.been.called;
-      expect(interpreterUndefined).to.equal(interpreter.UNDEFINED);
+      expect(Interpreter.prototype.getProperty).toHaveBeenCalled();
+      expect(interpreterUndefined).toBe(interpreter.UNDEFINED);
     });
   });
 
@@ -456,44 +453,47 @@ describe('The CustomMarshalingInterpreter', () => {
 
     it("delegates to the base class's hasProperty method by default", () => {
       const retVal = interpreter.hasProperty(interpreter.global, 'undefined');
-      expect(retVal).to.be.true;
-      expect(Interpreter.prototype.hasProperty).to.have.been.called;
+      expect(retVal).toBe(true);
+      expect(Interpreter.prototype.hasProperty).toHaveBeenCalled();
     });
 
     it("does not find globals that don't exist", () => {
-      expect(interpreter.hasProperty(interpreter.global, 'notAGlobalProperty'))
-        .to.be.false;
+      expect(
+        interpreter.hasProperty(interpreter.global, 'notAGlobalProperty')
+      ).toBe(false);
     });
 
     it('finds custom-marshaled globals', () => {
-      expect(interpreter.hasProperty(interpreter.global, 'age')).to.be.true;
+      expect(interpreter.hasProperty(interpreter.global, 'age')).toBe(true);
     });
 
     it('does not find blocked custom-marshaled globals', () => {
-      expect(interpreter.hasProperty(interpreter.global, 'name')).to.be.false;
+      expect(interpreter.hasProperty(interpreter.global, 'name')).toBe(false);
     });
 
     it('finds properties on custom-marshaled objects', () => {
       const customMarshaledObject = interpreter.marshalNativeToInterpreter(
         new Foo('hello world')
       );
-      expect(interpreter.hasProperty(customMarshaledObject, 'whatsMyName')).to
-        .be.true;
+      expect(
+        interpreter.hasProperty(customMarshaledObject, 'whatsMyName')
+      ).toBe(true);
     });
 
     it("does not find properties that don't exist on custom-marshaled objects", () => {
       const customMarshaledObject = interpreter.marshalNativeToInterpreter(
         new Foo('hello world')
       );
-      expect(interpreter.hasProperty(customMarshaledObject, 'notARealProperty'))
-        .to.be.false;
+      expect(
+        interpreter.hasProperty(customMarshaledObject, 'notARealProperty')
+      ).toBe(false);
     });
 
     it('does not find blocked properties on custom-marshaled objects', () => {
       const value = interpreter.marshalNativeToInterpreter(
         new Foo('hello world')
       );
-      expect(interpreter.hasProperty(value, 'name')).to.be.false;
+      expect(interpreter.hasProperty(value, 'name')).toBe(false);
     });
   });
 
@@ -501,22 +501,22 @@ describe('The CustomMarshalingInterpreter', () => {
     let hooks, globals;
     beforeEach(() => {
       globals = {
-        a: sinon.spy(),
-        b: sinon.spy(),
-        c: sinon.spy(),
+        a: jest.fn(),
+        b: jest.fn(),
+        c: jest.fn(),
       };
     });
 
     it('will return an empty array of hooks if no events are provided', () => {
-      expect(
-        CustomMarshalingInterpreter.evalWithEvents({}, {}).hooks
-      ).to.deep.equal([]);
+      expect(CustomMarshalingInterpreter.evalWithEvents({}, {}).hooks).toEqual(
+        []
+      );
     });
 
     it('will return the interpreter that was created to run the code', () => {
       expect(
         CustomMarshalingInterpreter.evalWithEvents({}, {}).interpreter
-      ).to.be.an.instanceOf(CustomMarshalingInterpreter);
+      ).toBeInstanceOf(CustomMarshalingInterpreter);
     });
 
     describe('when given event handlers that accept arguments', () => {
@@ -527,7 +527,7 @@ describe('The CustomMarshalingInterpreter', () => {
       });
       it('will pass the args provided to the hook along to the event handler', () => {
         hooks[0].func(5, 6);
-        expect(globals.c).to.have.been.calledWith(10, 2);
+        expect(globals.c).toHaveBeenCalledWith(10, 2);
       });
     });
 
@@ -538,7 +538,7 @@ describe('The CustomMarshalingInterpreter', () => {
         }).hooks;
       });
       it('will return the values returned by the event handler back to the caller of the hook', () => {
-        expect(hooks[0].func()).to.equal(5);
+        expect(hooks[0].func()).toBe(5);
       });
     });
 
@@ -554,12 +554,12 @@ describe('The CustomMarshalingInterpreter', () => {
       });
 
       it('will evaluate that code immediately', () => {
-        expect(globals.a).to.have.been.called;
+        expect(globals.a).toHaveBeenCalled();
       });
 
       it('will continue waiting for the various hooks to be called', () => {
         hooks[0].func();
-        expect(globals.b).to.have.been.called;
+        expect(globals.b).toHaveBeenCalled();
       });
 
       it('will throw an unexpected token exception when given code that does not end with a semicolon', () => {
@@ -569,7 +569,7 @@ describe('The CustomMarshalingInterpreter', () => {
             {someEvent: {code: 'b()'}},
             'a()'
           )
-        ).to.throw('Unexpected token');
+        ).toThrow('Unexpected token');
       });
     });
 
@@ -582,11 +582,11 @@ describe('The CustomMarshalingInterpreter', () => {
       });
 
       it('will return a hook for each event handler of each event type that was given', () => {
-        expect(hooks.length).to.equal(3);
+        expect(hooks.length).toBe(3);
       });
 
       it('each returned hook will have a name property corresponding to the event name it is connected to', () => {
-        expect(hooks.map(hook => hook.name)).to.deep.equal([
+        expect(hooks.map(hook => hook.name)).toEqual([
           'someEvent',
           'someEvent',
           'someOtherEvent',
@@ -594,13 +594,13 @@ describe('The CustomMarshalingInterpreter', () => {
       });
 
       it('will call the appropriate event handlers when those hooks get called', () => {
-        expect(hooks[0].name).to.equal('someEvent');
+        expect(hooks[0].name).toBe('someEvent');
         hooks[0].func();
-        expect(globals.a).to.have.been.called;
-        expect(globals.b).not.to.have.been.called;
-        expect(globals.c).not.to.have.been.called;
+        expect(globals.a).toHaveBeenCalled();
+        expect(globals.b).not.toHaveBeenCalled();
+        expect(globals.c).not.toHaveBeenCalled();
         hooks[2].func();
-        expect(globals.c).to.have.been.called;
+        expect(globals.c).toHaveBeenCalled();
       });
     });
   });
@@ -623,7 +623,7 @@ describe('The CustomMarshalingInterpreter', () => {
           );
         }
       );
-      sinon.spy(interpreter, 'createPrimitive');
+      jest.spyOn(interpreter, 'createPrimitive');
     });
 
     function boundMakeAssertableObj(nativeVar, nativeParentObj, maxDepth) {
@@ -636,20 +636,18 @@ describe('The CustomMarshalingInterpreter', () => {
     }
 
     it('when given an undefined native variable, will return an undefined interpreter variable', () => {
-      expect(interpreter.marshalNativeToInterpreter(undefined)).to.equal(
+      expect(interpreter.marshalNativeToInterpreter(undefined)).toBe(
         interpreter.UNDEFINED
       );
     });
 
     it("will delegate to the interpreter's createPrimitive function for booleans, numbers, and strings", () => {
       interpreter.marshalNativeToInterpreter(true);
-      expect(interpreter.createPrimitive).to.have.been.calledWith(true);
+      expect(interpreter.createPrimitive).toHaveBeenCalledWith(true);
       interpreter.marshalNativeToInterpreter(5);
-      expect(interpreter.createPrimitive).to.have.been.calledWith(5);
+      expect(interpreter.createPrimitive).toHaveBeenCalledWith(5);
       interpreter.marshalNativeToInterpreter('some string');
-      expect(interpreter.createPrimitive).to.have.been.calledWith(
-        'some string'
-      );
+      expect(interpreter.createPrimitive).toHaveBeenCalledWith('some string');
     });
 
     describe('when given an empty object to marshal, the corresponding interpreter object', () => {
@@ -751,9 +749,9 @@ describe('The CustomMarshalingInterpreter', () => {
           interpreter.getScope(),
           'isNaN'
         );
-        expect(
-          interpreter.marshalNativeToInterpreter(interpreterFunc)
-        ).to.equal(interpreterFunc);
+        expect(interpreter.marshalNativeToInterpreter(interpreterFunc)).toBe(
+          interpreterFunc
+        );
       });
     });
 
@@ -812,10 +810,12 @@ describe('The CustomMarshalingInterpreter', () => {
 
     describe('when given an object that should be custom marshaled', () => {
       beforeEach(() => {
-        sinon
-          .stub(interpreter.customMarshaler, 'shouldCustomMarshalObject')
-          .returns(true);
-        sinon.stub(interpreter.customMarshaler, 'createCustomMarshalObject');
+        jest
+          .spyOn(interpreter.customMarshaler, 'shouldCustomMarshalObject')
+          .mockReturnValue(true);
+        jest
+          .spyOn(interpreter.customMarshaler, 'createCustomMarshalObject')
+          .mockImplementation();
       });
       it("will delegate to the custom marshaler's createCustomMarshalObject", () => {
         const nativeParentObj = {foo: 'bar'};
@@ -823,7 +823,7 @@ describe('The CustomMarshalingInterpreter', () => {
         interpreter.marshalNativeToInterpreter(nativeVar, nativeParentObj);
         expect(
           interpreter.customMarshaler.createCustomMarshalObject
-        ).to.have.been.calledWith(interpreter, nativeVar, nativeParentObj);
+        ).toHaveBeenCalledWith(interpreter, nativeVar, nativeParentObj);
       });
     });
   });
@@ -832,10 +832,10 @@ describe('The CustomMarshalingInterpreter', () => {
     let options;
     beforeEach(() => {
       options = {
-        add: sinon.spy(),
+        add: jest.fn(),
         a: 3,
       };
-      window.nativeAdd = sinon.spy();
+      window.nativeAdd = jest.fn();
     });
 
     afterEach(() => {
@@ -844,15 +844,15 @@ describe('The CustomMarshalingInterpreter', () => {
 
     it('evaluates a string of code, prepopulating the scope with whatever is in options', () => {
       CustomMarshalingInterpreter.evalWith('add(1,2)', options);
-      expect(options.add).to.have.been.calledWith(1, 2);
+      expect(options.add).toHaveBeenCalledWith(1, 2);
       CustomMarshalingInterpreter.evalWith('add(a,2)', options);
-      expect(options.add).to.have.been.calledWith(3, 2);
+      expect(options.add).toHaveBeenCalledWith(3, 2);
     });
 
     it('does not give the evaluated code access to native functions', () => {
       expect(() =>
         CustomMarshalingInterpreter.evalWith('nativeAdd(1,2)', options)
-      ).to.throw('nativeAdd is not defined');
+      ).toThrow('nativeAdd is not defined');
     });
 
     describe('when running with legacy=true', () => {
@@ -861,33 +861,33 @@ describe('The CustomMarshalingInterpreter', () => {
           CustomMarshalingInterpreter.evalWith('nativeAdd(1,2)', options, {
             legacy: true,
           })
-        ).not.to.throw;
+        ).not.toThrow();
         CustomMarshalingInterpreter.evalWith('nativeAdd(1,2)', options, {
           legacy: true,
         });
-        expect(window.nativeAdd).to.have.been.calledWith(1, 2);
+        expect(window.nativeAdd).toHaveBeenCalledWith(1, 2);
         CustomMarshalingInterpreter.evalWith('nativeAdd(1,2)', options, {
           legacy: true,
         });
-        expect(window.nativeAdd).to.have.been.calledWith(1, 2);
+        expect(window.nativeAdd).toHaveBeenCalledWith(1, 2);
       });
 
       it('the evaluated code will have access to functions passed in through options', () => {
         CustomMarshalingInterpreter.evalWith('add(1,2)', options, {
           legacy: true,
         });
-        expect(options.add).to.have.been.calledWith(1, 2);
+        expect(options.add).toHaveBeenCalledWith(1, 2);
       });
 
       it('the evaluated code will have access to variables passed in through options', () => {
         CustomMarshalingInterpreter.evalWith('add(a,2)', options, {
           legacy: true,
         });
-        expect(options.add).to.have.been.calledWith(3, 2);
+        expect(options.add).toHaveBeenCalledWith(3, 2);
         CustomMarshalingInterpreter.evalWith('nativeAdd(a,2)', options, {
           legacy: true,
         });
-        expect(window.nativeAdd).to.have.been.calledWith(3, 2);
+        expect(window.nativeAdd).toHaveBeenCalledWith(3, 2);
       });
     });
   });
@@ -906,7 +906,7 @@ describe('The CustomMarshalingInterpreter', () => {
     }
 
     it('correctly marshals arrays', () => {
-      expect(evalExpression(`["one", 2, ["three"]]`)).to.deep.equal([
+      expect(evalExpression(`["one", 2, ["three"]]`)).toEqual([
         'one',
         2,
         ['three'],
@@ -915,20 +915,20 @@ describe('The CustomMarshalingInterpreter', () => {
 
     it('correctly marshals objects', () => {
       const value = evalExpression(`{one: 1, two: "two", three: {four: 4}}`);
-      expect(value.one).to.equal(1);
-      expect(value.two).to.equal('two');
-      expect(value.three.four).to.equal(4);
-      expect(Object.keys(value)).to.deep.equal(['one', 'two', 'three']);
-      expect(value).to.deep.equal({one: 1, two: 'two', three: {four: 4}});
+      expect(value.one).toBe(1);
+      expect(value.two).toBe('two');
+      expect(value.three.four).toBe(4);
+      expect(Object.keys(value)).toEqual(['one', 'two', 'three']);
+      expect(value).toEqual({one: 1, two: 'two', three: {four: 4}});
     });
 
     it('marshals functions by delegating to CustomMarshalingInterpreter.createNativeFunctionFromInterpreterFunction', () => {
       CustomMarshalingInterpreter.createNativeFunctionFromInterpreterFunction =
-        sinon.stub().returns('foo');
-      expect(evalExpression(`function (a,b) { return a+b; }`)).to.equal('foo');
+        jest.fn().mockReturnValue('foo');
+      expect(evalExpression(`function (a,b) { return a+b; }`)).toBe('foo');
       expect(
         CustomMarshalingInterpreter.createNativeFunctionFromInterpreterFunction
-      ).to.have.been.calledOnce;
+      ).toHaveBeenCalledTimes(1);
       CustomMarshalingInterpreter.createNativeFunctionFromInterpreterFunction =
         null;
     });
@@ -936,8 +936,8 @@ describe('The CustomMarshalingInterpreter', () => {
     it('marshals functions by doing nothing when CustomMarshalingInterpreter.createNativeFunctionFromInterpreterFunction is not set', () => {
       expect(
         CustomMarshalingInterpreter.createNativeFunctionFromInterpreterFunction
-      ).to.be.null;
-      expect(evalExpression(`function (a,b) { return a+b; }`)).to.equal(
+      ).toBeNull();
+      expect(evalExpression(`function (a,b) { return a+b; }`)).toBe(
         interpreter.getValueFromScope('result')
       );
     });
@@ -949,7 +949,7 @@ describe('The CustomMarshalingInterpreter', () => {
       );
       expect(() =>
         interpreter.marshalInterpreterToNative({notAnInterpreterObject: true})
-      ).to.throw("Can't marshal type object");
+      ).toThrow("Can't marshal type object");
     });
   });
 
@@ -958,16 +958,14 @@ describe('The CustomMarshalingInterpreter', () => {
 
     function testTheBasics() {
       it('will call the nativeFunc', () => {
-        expect(options.nativeFunc).to.have.been.called;
+        expect(options.nativeFunc).toHaveBeenCalled();
       });
       it("will call the nativeFunc with the nativeParentObj as the 'this'", () => {
-        expect(options.nativeFunc.thisValues[0]).to.equal(
-          options.nativeParentObj
-        );
+        expect(options.nativeFunc.thisValues[0]).toBe(options.nativeParentObj);
       });
       it('will marshal the native return value back to an interpreter value', () => {
-        expect(result).to.be.an.instanceOf(Interpreter.Primitive);
-        expect(result.toNumber()).to.equal(6);
+        expect(result).toBeInstanceOf(Interpreter.Primitive);
+        expect(result.toNumber()).toBe(6);
       });
     }
 
@@ -997,7 +995,7 @@ describe('The CustomMarshalingInterpreter', () => {
     describe('when dontMarshal=true', () => {
       runWithOptions('var result = memberFunc(1,2,3)', () => ({
         dontMarshal: true,
-        nativeFunc: sinon.stub().returns(6),
+        nativeFunc: jest.fn().mockReturnValue(6),
         nativeParentObj: {},
         maxDepth: 5,
       }));
@@ -1006,18 +1004,18 @@ describe('The CustomMarshalingInterpreter', () => {
 
       it('will pass along the unmarshaled interpreter arguments to the nativeFunc', () => {
         const args = options.nativeFunc.firstCall.args;
-        expect(args.length).to.equal(3);
-        expect(args[0]).to.be.an.instanceOf(Interpreter.Primitive);
-        expect(args[0].toNumber()).to.equal(1);
-        expect(args[1].toNumber()).to.equal(2);
-        expect(args[2].toNumber()).to.equal(3);
+        expect(args.length).toBe(3);
+        expect(args[0]).toBeInstanceOf(Interpreter.Primitive);
+        expect(args[0].toNumber()).toBe(1);
+        expect(args[1].toNumber()).toBe(2);
+        expect(args[2].toNumber()).toBe(3);
       });
     });
 
     describe('when dontMarshal=false', () => {
       runWithOptions('var result = memberFunc(1,2,3)', () => ({
         dontMarshal: false,
-        nativeFunc: sinon.stub().returns(6),
+        nativeFunc: jest.fn().mockReturnValue(6),
         nativeParentObj: {},
         maxDepth: 5,
       }));
@@ -1025,51 +1023,49 @@ describe('The CustomMarshalingInterpreter', () => {
 
       it('will pass along marshaled arguments to the nativeFunc', () => {
         const args = options.nativeFunc.firstCall.args;
-        expect(args.length).to.equal(3);
-        expect(args[0]).to.equal(1);
-        expect(args[1]).to.equal(2);
-        expect(args[2]).to.equal(3);
+        expect(args.length).toBe(3);
+        expect(args[0]).toBe(1);
+        expect(args[1]).toBe(2);
+        expect(args[2]).toBe(3);
       });
     });
 
     describe('when dontMarshal=false and nativeIsAsync=true', () => {
       runWithOptions('var result = memberFunc(1,2)', () => ({
         dontMarshal: false,
-        nativeFunc: sinon.stub().returns(6),
+        nativeFunc: jest.fn().mockReturnValue(6),
         nativeParentObj: {},
         maxDepth: 5,
         nativeIsAsync: true,
       }));
 
       it('will call the nativeFunc', () => {
-        expect(options.nativeFunc).to.have.been.called;
+        expect(options.nativeFunc).toHaveBeenCalled();
       });
       it("will call the nativeFunc with the nativeParentObj as the 'this'", () => {
-        expect(options.nativeFunc.thisValues[0]).to.equal(
-          options.nativeParentObj
-        );
+        expect(options.nativeFunc.thisValues[0]).toBe(options.nativeParentObj);
       });
       it('will not return a result immediately, since the native function is asynchronous', () => {
-        expect(result).to.equal(interpreter.UNDEFINED);
+        expect(result).toBe(interpreter.UNDEFINED);
       });
       it('will pause the interpreter until the function is called', () => {
-        expect(isPaused).to.be.true;
+        expect(isPaused).toBe(true);
       });
 
       it('will automatically tack on an extra callback argument to be passed to the native func', () => {
         const args = options.nativeFunc.firstCall.args;
-        expect(args.length).to.equal(3);
+        expect(args.length).toBe(3);
       });
 
       it('will pass along marshaled arguments to the nativeFunc', () => {
         const args = options.nativeFunc.firstCall.args;
-        expect(args[0]).to.equal(1);
-        expect(args[1]).to.equal(2);
+        expect(args[0]).toBe(1);
+        expect(args[1]).toBe(2);
       });
 
       it('will make the last marshaled argument a native callback function', () => {
         const args = options.nativeFunc.firstCall.args;
-        expect(args[args.length - 1]).to.be.an.instanceOf(Function);
+        expect(args[args.length - 1]).toBeInstanceOf(Function);
       });
 
       describe('when the native callback function is eventually called', () => {
@@ -1078,12 +1074,12 @@ describe('The CustomMarshalingInterpreter', () => {
           window.setTimeout(() => {
             args[args.length - 1]('new value');
             result = interpreter.getProperty(interpreter.global, 'result');
-            expect(result).to.equal(interpreter.UNDEFINED);
+            expect(result).toBe(interpreter.UNDEFINED);
 
             isPaused = interpreter.run();
-            expect(isPaused).to.be.false;
+            expect(isPaused).toBe(false);
             result = interpreter.getProperty(interpreter.global, 'result');
-            expect(result.toString()).to.equal('new value');
+            expect(result.toString()).toBe('new value');
             done();
           }, 100);
         });
@@ -1105,7 +1101,7 @@ describe('The CustomMarshalingInterpreter', () => {
         `,
         () => ({
           dontMarshal: false,
-          nativeFunc: sinon.stub().returns(6),
+          nativeFunc: jest.fn().mockReturnValue(6),
           nativeParentObj: {},
           maxDepth: 5,
           nativeCallsBackInterpreter: true,
@@ -1116,13 +1112,13 @@ describe('The CustomMarshalingInterpreter', () => {
 
       it('will pass along marshaled arguments to the nativeFunc', () => {
         const args = options.nativeFunc.firstCall.args;
-        expect(args[0]).to.equal(1);
-        expect(args[1]).to.equal(2);
+        expect(args[0]).toBe(1);
+        expect(args[1]).toBe(2);
       });
 
       it('will wrap any interpreter function arguments into a native function', () => {
         const args = options.nativeFunc.firstCall.args;
-        expect(args[2]).to.be.an.instanceOf(Function);
+        expect(args[2]).toBeInstanceOf(Function);
       });
 
       describe('when the interpreter function passed to the native func is called', () => {
@@ -1134,30 +1130,30 @@ describe('The CustomMarshalingInterpreter', () => {
         it('will call the interpreter function the next time the interpreter is run', () => {
           returnToInterpreter('a new result');
           result = interpreter.getProperty(interpreter.global, 'result');
-          expect(result).to.be.an.instanceOf(Interpreter.Primitive);
-          expect(result.toNumber()).to.equal(6);
+          expect(result).toBeInstanceOf(Interpreter.Primitive);
+          expect(result.toNumber()).toBe(6);
           interpreter.run();
           result = interpreter.getProperty(interpreter.global, 'result');
-          expect(result).to.be.an.instanceOf(Interpreter.Primitive);
-          expect(result.toString()).to.equal('a new result');
+          expect(result).toBeInstanceOf(Interpreter.Primitive);
+          expect(result.toString()).toBe('a new result');
         });
 
         it('will marshal all the arguments that were passed', () => {
           returnToInterpreter('a new result', 'another result');
           interpreter.run();
           result = interpreter.getProperty(interpreter.global, 'result');
-          expect(result).to.be.an.instanceOf(Interpreter.Primitive);
-          expect(result.toString()).to.equal('a new result');
+          expect(result).toBeInstanceOf(Interpreter.Primitive);
+          expect(result.toString()).toBe('a new result');
           result = interpreter.getProperty(interpreter.global, 'otherResult');
-          expect(result).to.be.an.instanceOf(Interpreter.Primitive);
-          expect(result.toString()).to.equal('another result');
+          expect(result).toBeInstanceOf(Interpreter.Primitive);
+          expect(result.toString()).toBe('another result');
         });
 
         it('will marshall no arguments if none were passed', () => {
           returnToInterpreter();
           interpreter.run();
           result = interpreter.getProperty(interpreter.global, 'result');
-          expect(result).to.equal(interpreter.UNDEFINED);
+          expect(result).toBe(interpreter.UNDEFINED);
         });
       });
     });

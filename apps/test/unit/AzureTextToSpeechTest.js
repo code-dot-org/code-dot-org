@@ -2,19 +2,14 @@ import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import AzureTextToSpeech from '@cdo/apps/AzureTextToSpeech';
 
-import {assert, expect} from '../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
-
 const assertSoundResponsesEqual = (expected, actual) => {
-  assert.deepEqual(expected.bytes, actual.bytes);
+  expect(expected.bytes).toEqual(actual.bytes);
   const playbackOptions = ['volume', 'loop', 'forceHTML5', 'allowHTML5Mobile'];
   playbackOptions.forEach(opt => {
-    assert.deepEqual(
-      expected.playbackOptions[opt],
-      actual.playbackOptions[opt]
-    );
+    expect(expected.playbackOptions[opt]).toEqual(actual.playbackOptions[opt]);
   });
-  assert.deepEqual(expected.profaneWords, actual.profaneWords);
-  assert.equal(expected.error, actual.error);
+  expect(expected.profaneWords).toEqual(actual.profaneWords);
+  expect(expected.error).toBe(actual.error);
 };
 
 describe('AzureTextToSpeech', () => {
@@ -29,7 +24,7 @@ describe('AzureTextToSpeech', () => {
     let onFailureSpy;
 
     beforeEach(() => {
-      onFailureSpy = sinon.spy();
+      onFailureSpy = jest.fn();
     });
 
     describe('with a cached sound', () => {
@@ -62,7 +57,7 @@ describe('AzureTextToSpeech', () => {
 
         it('calls onFailure', async () => {
           await soundPromise();
-          expect(onFailureSpy).to.have.been.calledOnce;
+          expect(onFailureSpy).toHaveBeenCalledTimes(1);
         });
       });
 
@@ -94,7 +89,7 @@ describe('AzureTextToSpeech', () => {
 
         it('does not call onFailure', async () => {
           await soundPromise();
-          expect(onFailureSpy).not.to.have.been.called;
+          expect(onFailureSpy).not.toHaveBeenCalled();
         });
       });
     });
@@ -136,7 +131,7 @@ describe('AzureTextToSpeech', () => {
 
         it('calls onFailure', async () => {
           await soundPromise();
-          expect(onFailureSpy).to.have.been.calledOnce;
+          expect(onFailureSpy).toHaveBeenCalledTimes(1);
         });
 
         it('caches the response', async () => {
@@ -227,12 +222,12 @@ describe('AzureTextToSpeech', () => {
                 options.gender,
                 options.text
               )
-            ).to.be.undefined;
+            ).toBeUndefined();
           });
 
           it('calls onFailure', async () => {
             await soundPromise();
-            expect(onFailureSpy).to.have.been.calledOnce;
+            expect(onFailureSpy).toHaveBeenCalledTimes(1);
           });
 
           it('resolves with error', async () => {
@@ -248,7 +243,7 @@ describe('AzureTextToSpeech', () => {
     let playSpy, successfulResponse;
 
     beforeEach(() => {
-      playSpy = sinon.spy();
+      playSpy = jest.fn();
       successfulResponse = azureTTS.createSoundResponse_({
         bytes: new ArrayBuffer(),
       });
@@ -259,8 +254,8 @@ describe('AzureTextToSpeech', () => {
       azureTTS.playing = true;
 
       await azureTTS.asyncPlayFromQueue_(playSpy);
-      expect(dequeueStub.mock.calls.length).to.equal(0);
-      expect(playSpy).not.to.have.been.called;
+      expect(dequeueStub.mock.calls.length).toBe(0);
+      expect(playSpy).not.toHaveBeenCalled();
     });
 
     it('no-ops if queue is empty', async () => {
@@ -269,8 +264,8 @@ describe('AzureTextToSpeech', () => {
         .mockReturnValue(undefined);
 
       await azureTTS.asyncPlayFromQueue_(playSpy);
-      expect(dequeueStub.mock.calls.length).to.equal(1);
-      expect(playSpy).not.to.have.been.called;
+      expect(dequeueStub.mock.calls.length).toBe(1);
+      expect(playSpy).not.toHaveBeenCalled();
     });
 
     it('plays sound if response was successful', async () => {
@@ -279,22 +274,23 @@ describe('AzureTextToSpeech', () => {
         .mockReturnValue(() => Promise.resolve(successfulResponse));
 
       await azureTTS.asyncPlayFromQueue_(playSpy);
-      expect(playSpy).to.have.been.calledOnce;
+      expect(playSpy).toHaveBeenCalledTimes(1);
     });
 
     it('ends sound if response was unsuccessful', async () => {
       const unsuccessfulResponse = azureTTS.createSoundResponse_({
         error: new Error(),
       });
-      unsuccessfulResponse.playbackOptions.onEnded = sinon.spy();
+      unsuccessfulResponse.playbackOptions.onEnded = jest.fn();
       jest
         .spyOn(azureTTS, 'dequeue_')
         .mockReturnValue(() => Promise.resolve(unsuccessfulResponse));
 
       await azureTTS.asyncPlayFromQueue_(playSpy);
-      expect(unsuccessfulResponse.playbackOptions.onEnded).to.have.been
-        .calledOnce;
-      expect(playSpy).not.to.have.been.called;
+      expect(
+        unsuccessfulResponse.playbackOptions.onEnded
+      ).toHaveBeenCalledTimes(1);
+      expect(playSpy).not.toHaveBeenCalled();
     });
   });
 });

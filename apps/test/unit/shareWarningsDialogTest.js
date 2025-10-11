@@ -1,16 +1,13 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import ShareWarningsDialog from '@cdo/apps/templates/ShareWarningsDialog';
 import commonMsg from '@cdo/locale';
 
-import {expect} from '../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
-
 describe('ShareWarningsDialog', () => {
   it('renders ShareWarnings with age prompt', () => {
-    const closeSpy = sinon.spy();
-    const tooYoungSpy = sinon.spy();
+    const closeSpy = jest.fn();
+    const tooYoungSpy = jest.fn();
     const dialog = mount(
       <ShareWarningsDialog
         showStoreDataAlert={false}
@@ -19,21 +16,23 @@ describe('ShareWarningsDialog', () => {
         handleTooYoung={tooYoungSpy}
       />
     );
-    expect(dialog.state('modalIsOpen')).to.be.true;
+    expect(dialog.state('modalIsOpen')).toBe(true);
     const shareWarnings = dialog.find('ShareWarnings');
-    expect(shareWarnings).to.have.length(1);
-    expect(shareWarnings.props().promptForAge).to.be.true;
-    expect(shareWarnings.props().showStoreDataAlert).to.be.false;
+    expect(shareWarnings).toHaveLength(1);
+    expect(shareWarnings.props().promptForAge).toBe(true);
+    expect(shareWarnings.props().showStoreDataAlert).toBe(false);
     const ageDropdown = shareWarnings.find('AgeDropdown');
-    expect(ageDropdown).to.have.length(1);
-    expect(shareWarnings).to.containMatchingElement(
-      <div>{commonMsg.shareWarningsAge()}</div>
-    );
+    expect(ageDropdown).toHaveLength(1);
+    expect(
+      shareWarnings.containsMatchingElement(
+        <div>{commonMsg.shareWarningsAge()}</div>
+      )
+    ).toBe(true);
   });
 
   it('renders ShareWarnings with data alert', () => {
-    const closeSpy = sinon.spy();
-    const tooYoungSpy = sinon.spy();
+    const closeSpy = jest.fn();
+    const tooYoungSpy = jest.fn();
     const dialog = mount(
       <ShareWarningsDialog
         showStoreDataAlert={true}
@@ -42,24 +41,26 @@ describe('ShareWarningsDialog', () => {
         handleTooYoung={tooYoungSpy}
       />
     );
-    expect(dialog.state('modalIsOpen')).to.be.true;
+    expect(dialog.state('modalIsOpen')).toBe(true);
     const shareWarnings = dialog.find('ShareWarnings');
-    expect(shareWarnings).to.have.length(1);
-    expect(shareWarnings.props().showStoreDataAlert).to.be.true;
-    expect(shareWarnings.props().promptForAge).to.be.false;
-    expect(shareWarnings).to.containMatchingElement(
-      <div>
-        {commonMsg.shareWarningsStoreDataBeforeHighlight()}
-        <span>{commonMsg.shareWarningsStoreDataHighlight()}</span>
-        {commonMsg.shareWarningsStoreDataAfterHighlight()}
-      </div>
-    );
-    expect(shareWarnings.find('AgeDropdown')).to.have.length(0);
+    expect(shareWarnings).toHaveLength(1);
+    expect(shareWarnings.props().showStoreDataAlert).toBe(true);
+    expect(shareWarnings.props().promptForAge).toBe(false);
+    expect(
+      shareWarnings.containsMatchingElement(
+        <div>
+          {commonMsg.shareWarningsStoreDataBeforeHighlight()}
+          <span>{commonMsg.shareWarningsStoreDataHighlight()}</span>
+          {commonMsg.shareWarningsStoreDataAfterHighlight()}
+        </div>
+      )
+    ).toBe(true);
+    expect(shareWarnings.find('AgeDropdown')).toHaveLength(0);
   });
 
   it('renders ShareWarnings with both data alert and age prompt', () => {
-    const closeSpy = sinon.spy();
-    const tooYoungSpy = sinon.spy();
+    const closeSpy = jest.fn();
+    const tooYoungSpy = jest.fn();
     const dialog = mount(
       <ShareWarningsDialog
         showStoreDataAlert={true}
@@ -68,28 +69,32 @@ describe('ShareWarningsDialog', () => {
         handleTooYoung={tooYoungSpy}
       />
     );
-    expect(dialog.state('modalIsOpen')).to.be.true;
+    expect(dialog.state('modalIsOpen')).toBe(true);
     const shareWarnings = dialog.find('ShareWarnings');
-    expect(shareWarnings).to.have.length(1);
-    expect(shareWarnings.props().showStoreDataAlert).to.be.true;
-    expect(shareWarnings.props().promptForAge).to.be.true;
+    expect(shareWarnings).toHaveLength(1);
+    expect(shareWarnings.props().showStoreDataAlert).toBe(true);
+    expect(shareWarnings.props().promptForAge).toBe(true);
     const ageDropdown = shareWarnings.find('AgeDropdown');
-    expect(ageDropdown).to.have.length(1);
-    expect(shareWarnings).to.containMatchingElement(
-      <div>{commonMsg.shareWarningsAge()}</div>
-    );
-    expect(shareWarnings).to.containMatchingElement(
-      <div>
-        {commonMsg.shareWarningsStoreDataBeforeHighlight()}
-        <span>{commonMsg.shareWarningsStoreDataHighlight()}</span>
-        {commonMsg.shareWarningsStoreDataAfterHighlight()}
-      </div>
-    );
+    expect(ageDropdown).toHaveLength(1);
+    expect(
+      shareWarnings.containsMatchingElement(
+        <div>{commonMsg.shareWarningsAge()}</div>
+      )
+    ).toBe(true);
+    expect(
+      shareWarnings.containsMatchingElement(
+        <div>
+          {commonMsg.shareWarningsStoreDataBeforeHighlight()}
+          <span>{commonMsg.shareWarningsStoreDataHighlight()}</span>
+          {commonMsg.shareWarningsStoreDataAfterHighlight()}
+        </div>
+      )
+    ).toBe(true);
   });
 
   it('does not show the dialog if not needed', () => {
-    const closeSpy = sinon.spy();
-    const tooYoungSpy = sinon.spy();
+    const closeSpy = jest.fn();
+    const tooYoungSpy = jest.fn();
     const dialog = mount(
       <ShareWarningsDialog
         showStoreDataAlert={false}
@@ -98,12 +103,12 @@ describe('ShareWarningsDialog', () => {
         handleTooYoung={tooYoungSpy}
       />
     );
-    expect(dialog.state('modalIsOpen')).to.be.false;
+    expect(dialog.state('modalIsOpen')).toBe(false);
   });
 
   it('calls handleClose if we click OK when age is known', () => {
-    const closeSpy = sinon.spy();
-    const tooYoungSpy = sinon.spy();
+    const closeSpy = jest.fn();
+    const tooYoungSpy = jest.fn();
     const dialog = mount(
       <ShareWarningsDialog
         showStoreDataAlert={true}
@@ -112,19 +117,21 @@ describe('ShareWarningsDialog', () => {
         handleTooYoung={tooYoungSpy}
       />
     );
-    expect(dialog.state('modalIsOpen')).to.be.true;
-    expect(dialog).to.containMatchingElement(
-      <button type="button">{commonMsg.dialogOK()}</button>
-    );
-    expect(closeSpy).not.to.have.been.called;
+    expect(dialog.state('modalIsOpen')).toBe(true);
+    expect(
+      dialog.containsMatchingElement(
+        <button type="button">{commonMsg.dialogOK()}</button>
+      )
+    ).toBe(true);
+    expect(closeSpy).not.toHaveBeenCalled();
     dialog.find('button').simulate('click');
-    expect(closeSpy).to.have.been.called;
-    expect(dialog.state('modalIsOpen')).to.be.false;
+    expect(closeSpy).toHaveBeenCalled();
+    expect(dialog.state('modalIsOpen')).toBe(false);
   });
 
   it('does not calls handleClose if we click OK when age is unknown', () => {
-    const closeSpy = sinon.spy();
-    const tooYoungSpy = sinon.spy();
+    const closeSpy = jest.fn();
+    const tooYoungSpy = jest.fn();
     const dialog = mount(
       <ShareWarningsDialog
         showStoreDataAlert={true}
@@ -133,19 +140,21 @@ describe('ShareWarningsDialog', () => {
         handleTooYoung={tooYoungSpy}
       />
     );
-    expect(dialog.state('modalIsOpen')).to.be.true;
-    expect(dialog).to.containMatchingElement(
-      <button type="button">{commonMsg.dialogOK()}</button>
-    );
-    expect(closeSpy).not.to.have.been.called;
+    expect(dialog.state('modalIsOpen')).toBe(true);
+    expect(
+      dialog.containsMatchingElement(
+        <button type="button">{commonMsg.dialogOK()}</button>
+      )
+    ).toBe(true);
+    expect(closeSpy).not.toHaveBeenCalled();
     dialog.find('button').simulate('click');
-    expect(closeSpy).not.to.have.been.called;
-    expect(dialog.state('modalIsOpen')).to.be.true;
+    expect(closeSpy).not.toHaveBeenCalled();
+    expect(dialog.state('modalIsOpen')).toBe(true);
   });
 
   it('calls handleClose if we specify age >=13, then click OK', () => {
-    const closeSpy = sinon.spy();
-    const tooYoungSpy = sinon.spy();
+    const closeSpy = jest.fn();
+    const tooYoungSpy = jest.fn();
     const dialog = mount(
       <ShareWarningsDialog
         showStoreDataAlert={true}
@@ -154,25 +163,27 @@ describe('ShareWarningsDialog', () => {
         handleTooYoung={tooYoungSpy}
       />
     );
-    expect(dialog.state('modalIsOpen')).to.be.true;
-    expect(dialog).to.containMatchingElement(
-      <button type="button">{commonMsg.dialogOK()}</button>
-    );
-    expect(closeSpy).not.to.have.been.called;
+    expect(dialog.state('modalIsOpen')).toBe(true);
+    expect(
+      dialog.containsMatchingElement(
+        <button type="button">{commonMsg.dialogOK()}</button>
+      )
+    ).toBe(true);
+    expect(closeSpy).not.toHaveBeenCalled();
     const ageDropdown = dialog.find('AgeDropdown');
     const select = ageDropdown.find('select');
     const selectDOMNode = select.getDOMNode();
     selectDOMNode.value = '15';
     select.simulate('change', {target: selectDOMNode});
     dialog.find('button').simulate('click');
-    expect(closeSpy).to.have.been.called;
-    expect(tooYoungSpy).not.to.have.been.called;
-    expect(dialog.state('modalIsOpen')).to.be.false;
+    expect(closeSpy).toHaveBeenCalled();
+    expect(tooYoungSpy).not.toHaveBeenCalled();
+    expect(dialog.state('modalIsOpen')).toBe(false);
   });
 
   it('calls handleTooYoung if we specify age < 13, then click OK', () => {
-    const closeSpy = sinon.spy();
-    const tooYoungSpy = sinon.spy();
+    const closeSpy = jest.fn();
+    const tooYoungSpy = jest.fn();
     const dialog = mount(
       <ShareWarningsDialog
         showStoreDataAlert={true}
@@ -181,20 +192,22 @@ describe('ShareWarningsDialog', () => {
         handleTooYoung={tooYoungSpy}
       />
     );
-    expect(dialog.state('modalIsOpen')).to.be.true;
-    expect(dialog).to.containMatchingElement(
-      <button type="button">{commonMsg.dialogOK()}</button>
-    );
-    expect(closeSpy).not.to.have.been.called;
-    expect(tooYoungSpy).not.to.have.been.called;
+    expect(dialog.state('modalIsOpen')).toBe(true);
+    expect(
+      dialog.containsMatchingElement(
+        <button type="button">{commonMsg.dialogOK()}</button>
+      )
+    ).toBe(true);
+    expect(closeSpy).not.toHaveBeenCalled();
+    expect(tooYoungSpy).not.toHaveBeenCalled();
     const ageDropdown = dialog.find('AgeDropdown');
     const select = ageDropdown.find('select');
     const selectDOMNode = select.getDOMNode();
     selectDOMNode.value = '10';
     select.simulate('change', {target: selectDOMNode});
     dialog.find('button').simulate('click');
-    expect(tooYoungSpy).to.have.been.called;
-    expect(closeSpy).not.to.have.been.called;
-    expect(dialog.state('modalIsOpen')).to.be.false;
+    expect(tooYoungSpy).toHaveBeenCalled();
+    expect(closeSpy).not.toHaveBeenCalled();
+    expect(dialog.state('modalIsOpen')).toBe(false);
   });
 });

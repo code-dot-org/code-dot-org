@@ -1,5 +1,3 @@
-/** @file Who watches the watchers? */
-import {expect} from '../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 import {forEveryBooleanPermutation} from '../util/testUtils';
 
 describe('forEveryBooleanPermutation', function () {
@@ -8,16 +6,16 @@ describe('forEveryBooleanPermutation', function () {
     forEveryBooleanPermutation(() => {
       invocationCount++;
     });
-    expect(invocationCount).to.equal(1);
+    expect(invocationCount).toBe(1);
   });
 
   it('invokes a function with one argument twice, once with true and once with false', function () {
     let expectedInvocations = [[false], [true]];
     forEveryBooleanPermutation(a => {
-      expect([a]).to.deep.equal(expectedInvocations[0]);
+      expect([a]).toEqual(expectedInvocations[0]);
       expectedInvocations.shift();
     });
-    expect(expectedInvocations).to.be.empty;
+    expect(expectedInvocations).toHaveLength(0);
   });
 
   it('invokes a function with two arguments four times...', function () {
@@ -28,10 +26,10 @@ describe('forEveryBooleanPermutation', function () {
       [true, true],
     ];
     forEveryBooleanPermutation((a, b) => {
-      expect([a, b]).to.deep.equal(expectedInvocations[0]);
+      expect([a, b]).toEqual(expectedInvocations[0]);
       expectedInvocations.shift();
     });
-    expect(expectedInvocations).to.be.empty;
+    expect(expectedInvocations).toHaveLength(0);
   });
 
   it('invokes a function with three arguments eight times...', function () {
@@ -46,9 +44,9 @@ describe('forEveryBooleanPermutation', function () {
       [true, true, true],
     ];
     forEveryBooleanPermutation((a, b, c) => {
-      expect([a, b, c]).to.deep.equal(expectedInvocations[0]);
+      expect([a, b, c]).toEqual(expectedInvocations[0]);
       expectedInvocations.shift();
     });
-    expect(expectedInvocations).to.be.empty;
+    expect(expectedInvocations).toHaveLength(0);
   });
 });

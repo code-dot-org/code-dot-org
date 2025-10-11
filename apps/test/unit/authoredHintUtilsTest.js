@@ -1,7 +1,5 @@
 import $ from 'jquery';
 
-import {assert} from '../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
-
 var authoredHintUtils = require('@cdo/apps/authoredHintUtils');
 
 describe('Authored Hint Utils', function () {
@@ -56,7 +54,7 @@ describe('Authored Hint Utils', function () {
         'nonexistent_key',
         defaultValue
       );
-      assert.equal(result, defaultValue);
+      expect(result).toBe(defaultValue);
     });
 
     it('can recover from bad JSON', function () {
@@ -66,7 +64,7 @@ describe('Authored Hint Utils', function () {
         'bad_json',
         defaultValue
       );
-      assert.equal(result, defaultValue);
+      expect(result).toBe(defaultValue);
     });
 
     it('retrieves the set value if all else goes well', function () {
@@ -76,7 +74,7 @@ describe('Authored Hint Utils', function () {
         'good_json',
         undefined
       );
-      assert.equal(result, expectedValue);
+      expect(result).toBe(expectedValue);
     });
   });
 
@@ -89,7 +87,7 @@ describe('Authored Hint Utils', function () {
       );
       authoredHintUtils.recordFinishedHints_([4, 5]);
       var newHints = authoredHintUtils.getFinishedHints_();
-      assert.deepEqual(newHints, [1, 2, 3, 4, 5]);
+      expect(newHints).toEqual([1, 2, 3, 4, 5]);
     });
   });
 
@@ -101,7 +99,7 @@ describe('Authored Hint Utils', function () {
         JSON.stringify(hints)
       );
       var finalizedHints = authoredHintUtils.finalizeHints_();
-      assert.deepEqual(finalizedHints, [1, 2, 3]);
+      expect(finalizedHints).toEqual([1, 2, 3]);
     });
 
     it('if last_attempt_record is set, extends all finished hints without overriding', function () {
@@ -114,7 +112,7 @@ describe('Authored Hint Utils', function () {
       localStorage.setItem('last_attempt_record', JSON.stringify(record));
 
       var finalizedHints = authoredHintUtils.finalizeHints_();
-      assert.deepEqual(finalizedHints, [
+      expect(finalizedHints).toEqual([
         {
           id: 'first',
           prevTime: 'something decent',
@@ -141,7 +139,7 @@ describe('Authored Hint Utils', function () {
     it('if no last_attempt_record is set, simply records the given value', function () {
       authoredHintUtils.recordUnfinishedHint(hintOne);
       var unfinishedHints = authoredHintUtils.getUnfinishedHints_();
-      assert.deepEqual(unfinishedHints, [hintOne]);
+      expect(unfinishedHints).toEqual([hintOne]);
     });
 
     it('if last_attempt_record is set, extends the given hint without overriding', function () {
@@ -150,7 +148,7 @@ describe('Authored Hint Utils', function () {
       authoredHintUtils.recordUnfinishedHint(hintOne);
       var unfinishedHints = authoredHintUtils.getUnfinishedHints_();
 
-      assert.deepEqual(unfinishedHints, [
+      expect(unfinishedHints).toEqual([
         {
           id: 'first',
           prevTime: 'something decent',
@@ -166,37 +164,33 @@ describe('Authored Hint Utils', function () {
 
   describe('finishHints', function () {
     it('sets last_attempt_record', function () {
-      assert.isNull(localStorage.getItem('last_attempt_record'));
+      expect(localStorage.getItem('last_attempt_record')).toBeNull();
       authoredHintUtils.finishHints(record);
-      assert.equal(
-        localStorage.getItem('last_attempt_record'),
+      expect(localStorage.getItem('last_attempt_record')).toBe(
         JSON.stringify(record)
       );
     });
 
     it('clears unfinished_hints', function () {
       authoredHintUtils.recordUnfinishedHint(hintOne);
-      assert.equal(
-        localStorage.getItem('unfinished_authored_hint_views'),
+      expect(localStorage.getItem('unfinished_authored_hint_views')).toBe(
         JSON.stringify([hintOne])
       );
       authoredHintUtils.finishHints(record);
-      assert.equal(
-        localStorage.getItem('unfinished_authored_hint_views'),
+      expect(localStorage.getItem('unfinished_authored_hint_views')).toBe(
         JSON.stringify([])
       );
     });
 
     it('extends unfinished_hints and moves them to finished_hints', function () {
       authoredHintUtils.recordUnfinishedHint(hintOne);
-      assert.equal(
-        localStorage.getItem('unfinished_authored_hint_views'),
+      expect(localStorage.getItem('unfinished_authored_hint_views')).toBe(
         JSON.stringify([hintOne])
       );
       authoredHintUtils.finishHints(record);
       var finishedHints = authoredHintUtils.getFinishedHints_();
 
-      assert.deepEqual(finishedHints, [
+      expect(finishedHints).toEqual([
         {
           id: 'first',
           prevTime: 'something decent',
@@ -224,7 +218,7 @@ describe('Authored Hint Utils', function () {
 
       var finishedHints = authoredHintUtils.getFinishedHints_();
 
-      assert.deepEqual(finishedHints, [
+      expect(finishedHints).toEqual([
         {
           id: 'first',
           finalTime: 'something awesome',
@@ -266,8 +260,7 @@ describe('Authored Hint Utils', function () {
 
       authoredHintUtils.submitHints('/url');
 
-      assert.deepEqual(
-        data,
+      expect(data).toEqual(
         JSON.stringify({
           hints: finalizedHints,
         })
@@ -282,7 +275,7 @@ describe('Authored Hint Utils', function () {
       authoredHintUtils.finishHints(record);
       authoredHintUtils.submitHints('/url');
       var finishedHints = authoredHintUtils.getFinishedHints_();
-      assert.deepEqual(finishedHints, []);
+      expect(finishedHints).toEqual([]);
     });
   });
 });

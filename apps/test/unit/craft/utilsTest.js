@@ -1,58 +1,54 @@
-// We have to include the locale files below as translations must be loaded in the global
-// scope for HeadlessChrome to run properly.
-import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
-
 import craftI18n from '@cdo/apps/craft/locale'; // eslint-disable-line no-unused-vars
 import * as craftRedux from '@cdo/apps/craft/redux';
 import * as utils from '@cdo/apps/craft/utils';
 import commonI18n from '@cdo/locale'; // eslint-disable-line no-unused-vars
-
-import {expect} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('craft utils', () => {
   describe('handlePlayerSelection', () => {
     const defaultPlayer = 'Alex';
 
     beforeEach(() => {
-      sinon.stub(craftRedux, 'closePlayerSelectionDialog');
+      jest.spyOn(craftRedux, 'closePlayerSelectionDialog').mockImplementation();
     });
 
     afterEach(() => {
-      sinon.restore();
+      jest.restoreAllMocks();
     });
 
     it('closes dialog after selecting a player', () => {
-      sinon
-        .stub(craftRedux, 'openPlayerSelectionDialog')
-        .callsFake(callback => callback('Steve'));
+      jest
+        .spyOn(craftRedux, 'openPlayerSelectionDialog')
+        .mockImplementation(callback => callback('Steve'));
 
       utils.handlePlayerSelection(defaultPlayer, () => {});
 
-      expect(craftRedux.openPlayerSelectionDialog).to.have.been.calledOnce;
-      expect(craftRedux.closePlayerSelectionDialog).to.have.been.calledOnce;
+      expect(craftRedux.openPlayerSelectionDialog).toHaveBeenCalledTimes(1);
+      expect(craftRedux.closePlayerSelectionDialog).toHaveBeenCalledTimes(1);
     });
 
     it('invokes onComplete with selectedPlayer', () => {
       const selectedPlayer = 'Tom';
-      sinon
-        .stub(craftRedux, 'openPlayerSelectionDialog')
-        .callsFake(callback => callback(selectedPlayer));
-      const onCompleteSpy = sinon.spy();
+      jest
+        .spyOn(craftRedux, 'openPlayerSelectionDialog')
+        .mockImplementation(callback => callback(selectedPlayer));
+      const onCompleteSpy = jest.fn();
 
       utils.handlePlayerSelection(defaultPlayer, onCompleteSpy);
 
-      expect(onCompleteSpy).to.have.been.calledOnceWith(selectedPlayer);
+      expect(onCompleteSpy).toHaveBeenCalledTimes(1);
+      expect(onCompleteSpy).toHaveBeenCalledWith(selectedPlayer);
     });
 
     it('invokes callback with default player if no selectedPlayer is given', () => {
-      sinon
-        .stub(craftRedux, 'openPlayerSelectionDialog')
-        .callsFake(callback => callback(undefined));
-      const onCompleteSpy = sinon.spy();
+      jest
+        .spyOn(craftRedux, 'openPlayerSelectionDialog')
+        .mockImplementation(callback => callback(undefined));
+      const onCompleteSpy = jest.fn();
 
       utils.handlePlayerSelection(defaultPlayer, onCompleteSpy);
 
-      expect(onCompleteSpy).to.have.been.calledOnceWith(defaultPlayer);
+      expect(onCompleteSpy).toHaveBeenCalledTimes(1);
+      expect(onCompleteSpy).toHaveBeenCalledWith(defaultPlayer);
     });
   });
 });

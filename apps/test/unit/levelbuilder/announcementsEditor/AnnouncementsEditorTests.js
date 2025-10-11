@@ -1,11 +1,8 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import AnnouncementsEditor from '@cdo/apps/levelbuilder/announcementsEditor/AnnouncementsEditor';
 import * as utils from '@cdo/apps/utils';
-
-import {assert} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 const sampleAnnouncement = {
   key: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
@@ -19,10 +16,10 @@ const sampleAnnouncement = {
 describe('AnnouncementsEditor', () => {
   let defaultProps, updateAnnouncements, createUuid;
   beforeEach(() => {
-    updateAnnouncements = sinon.spy();
-    createUuid = sinon
-      .stub(utils, 'createUuid')
-      .returns('aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa');
+    updateAnnouncements = jest.fn();
+    createUuid = jest
+      .spyOn(utils, 'createUuid')
+      .mockReturnValue('aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa');
     defaultProps = {
       announcements: [],
       inputStyle: {},
@@ -41,7 +38,7 @@ describe('AnnouncementsEditor', () => {
         announcements={[sampleAnnouncement]}
       />
     );
-    assert.equal(wrapper.find('Announcement').length, 1);
+    expect(wrapper.find('Announcement').length).toBe(1);
   });
 
   it('shows a preview for teacher and student when we have at least one announcement', () => {
@@ -51,18 +48,18 @@ describe('AnnouncementsEditor', () => {
         announcements={[sampleAnnouncement]}
       />
     );
-    assert.equal(wrapper.find('Announcements').length, 2);
+    expect(wrapper.find('Announcements').length).toBe(2);
   });
 
   it('show no preview if we have no announcements', () => {
     const wrapper = shallow(<AnnouncementsEditor {...defaultProps} />);
-    assert.equal(wrapper.find('Announcements').length, 0);
+    expect(wrapper.find('Announcements').length).toBe(0);
   });
 
   it('adds an empty Announce when we click add', () => {
     const wrapper = shallow(<AnnouncementsEditor {...defaultProps} />);
     wrapper.find('button').simulate('click');
-    expect(updateAnnouncements).to.have.been.calledWith([
+    expect(updateAnnouncements).toHaveBeenCalledWith([
       {
         key: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
         details: '',
@@ -84,11 +81,11 @@ describe('AnnouncementsEditor', () => {
       />
     );
     const announce = wrapper.find('Announcement');
-    assert.equal(announce.length, 1);
-    assert.equal(announce.first().dive().find('button').length, 1);
+    expect(announce.length).toBe(1);
+    expect(announce.first().dive().find('button').length).toBe(1);
 
     announce.first().dive().find('button').simulate('click');
-    expect(updateAnnouncements).to.have.been.calledWith([]);
+    expect(updateAnnouncements).toHaveBeenCalledWith([]);
   });
 
   it('updates notice', () => {
@@ -105,7 +102,7 @@ describe('AnnouncementsEditor', () => {
       .find('input')
       .at(0)
       .simulate('change', {target: {value: 'notice'}});
-    expect(updateAnnouncements).to.have.been.calledWith([
+    expect(updateAnnouncements).toHaveBeenCalledWith([
       {
         key: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
         details: 'See what changed and how it may affect your classroom.',
@@ -131,7 +128,7 @@ describe('AnnouncementsEditor', () => {
       .find('input')
       .at(1)
       .simulate('change', {target: {value: 'details'}});
-    expect(updateAnnouncements).to.have.been.calledWith([
+    expect(updateAnnouncements).toHaveBeenCalledWith([
       {
         key: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
         details: 'details',
@@ -157,7 +154,7 @@ describe('AnnouncementsEditor', () => {
       .find('input')
       .at(2)
       .simulate('change', {target: {value: 'link'}});
-    expect(updateAnnouncements).to.have.been.calledWith([
+    expect(updateAnnouncements).toHaveBeenCalledWith([
       {
         key: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
         details: 'details',
@@ -182,7 +179,7 @@ describe('AnnouncementsEditor', () => {
       .dive()
       .find('.uitest-announcement-type')
       .simulate('change', {target: {value: 'bullhorn'}});
-    expect(updateAnnouncements).to.have.been.calledWith([
+    expect(updateAnnouncements).toHaveBeenCalledWith([
       {
         key: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
         details: 'details',
@@ -207,7 +204,7 @@ describe('AnnouncementsEditor', () => {
       .dive()
       .find('.uitest-announcement-visibility')
       .simulate('change', {target: {value: 'Student-only'}});
-    expect(updateAnnouncements).to.have.been.calledWith([
+    expect(updateAnnouncements).toHaveBeenCalledWith([
       {
         key: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
         details: 'details',
@@ -240,7 +237,7 @@ describe('AnnouncementsEditor', () => {
       .dive()
       .find('.uitest-announcement-visibility')
       .simulate('change', {target: {value: 'Student-only'}});
-    expect(updateAnnouncements).to.have.been.calledWith([
+    expect(updateAnnouncements).toHaveBeenCalledWith([
       {
         key: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
         details: "So I don't have a visibility",
@@ -260,8 +257,7 @@ describe('AnnouncementsEditor', () => {
         announcements={[sampleAnnouncement]}
       />
     );
-    assert.equal(
-      wrapper.find('input[type="hidden"]').props().value,
+    expect(wrapper.find('input[type="hidden"]').props().value).toBe(
       JSON.stringify([sampleAnnouncement])
     );
   });

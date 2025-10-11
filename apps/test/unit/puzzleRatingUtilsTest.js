@@ -1,7 +1,5 @@
 import $ from 'jquery';
 
-import {assert} from '../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
-
 var puzzleRatingUtils = require('@cdo/apps/puzzleRatingUtils');
 
 describe('Puzzle Rating Utils', function () {
@@ -36,8 +34,7 @@ describe('Puzzle Rating Utils', function () {
       puzzleRatingUtils.setPuzzleRatings_(sampleRatings);
       for (var i = 0; i < sampleRatings.length; i++) {
         puzzleRatingUtils.removePuzzleRating_(sampleRatings[i]);
-        assert.equal(
-          localStorage.getItem('puzzleRatings'),
+        expect(localStorage.getItem('puzzleRatings')).toBe(
           JSON.stringify(sampleRatings.slice(i + 1))
         );
       }
@@ -52,7 +49,7 @@ describe('Puzzle Rating Utils', function () {
 
     it('does nothing if no button is enabled', function () {
       puzzleRatingUtils.cachePuzzleRating(container, {});
-      assert.equal(localStorage.getItem('puzzleRatings'), null);
+      expect(localStorage.getItem('puzzleRatings')).toBe(null);
     });
 
     it('saves the rating if a button is enabled', function () {
@@ -61,8 +58,7 @@ describe('Puzzle Rating Utils', function () {
         .querySelectorAll('.puzzle-rating-btn')[0]
         .classList.add('enabled');
       puzzleRatingUtils.cachePuzzleRating(container, {});
-      assert.equal(
-        localStorage.getItem('puzzleRatings'),
+      expect(localStorage.getItem('puzzleRatings')).toBe(
         JSON.stringify([{rating: '1'}])
       );
     });
@@ -74,8 +70,7 @@ describe('Puzzle Rating Utils', function () {
         .querySelectorAll('.puzzle-rating-btn')[0]
         .classList.add('enabled');
       puzzleRatingUtils.cachePuzzleRating(container, {});
-      assert.equal(
-        localStorage.getItem('puzzleRatings'),
+      expect(localStorage.getItem('puzzleRatings')).toBe(
         JSON.stringify(sampleRatings.concat([{rating: '1'}]))
       );
     });
@@ -98,14 +93,13 @@ describe('Puzzle Rating Utils', function () {
         opts.complete();
       };
       puzzleRatingUtils.setPuzzleRatings_(sampleRatings);
-      assert.equal(
-        localStorage.getItem('puzzleRatings'),
+      expect(localStorage.getItem('puzzleRatings')).toBe(
         JSON.stringify(sampleRatings)
       );
 
       puzzleRatingUtils.submitCachedPuzzleRatings('/');
-      assert.equal(localStorage.getItem('puzzleRatings'), '[]');
-      assert.equal(postCount, sampleRatings.length);
+      expect(localStorage.getItem('puzzleRatings')).toBe('[]');
+      expect(postCount).toBe(sampleRatings.length);
     });
 
     it('only removes the ratings that have been submitted', function () {
@@ -115,27 +109,23 @@ describe('Puzzle Rating Utils', function () {
         complete = opts.complete;
       };
       puzzleRatingUtils.setPuzzleRatings_(sampleRatings.slice(0, 1));
-      assert.equal(
-        localStorage.getItem('puzzleRatings'),
+      expect(localStorage.getItem('puzzleRatings')).toBe(
         JSON.stringify(sampleRatings.slice(0, 1))
       );
       puzzleRatingUtils.submitCachedPuzzleRatings('/');
-      assert.equal(
-        localStorage.getItem('puzzleRatings'),
+      expect(localStorage.getItem('puzzleRatings')).toBe(
         JSON.stringify(sampleRatings.slice(0, 1))
       );
       puzzleRatingUtils.setPuzzleRatings_(sampleRatings.slice(0, 2));
-      assert.equal(
-        localStorage.getItem('puzzleRatings'),
+      expect(localStorage.getItem('puzzleRatings')).toBe(
         JSON.stringify(sampleRatings.slice(0, 2))
       );
 
       complete();
-      assert.equal(
-        localStorage.getItem('puzzleRatings'),
+      expect(localStorage.getItem('puzzleRatings')).toBe(
         JSON.stringify(sampleRatings.slice(1, 2))
       );
-      assert.equal(postCount, 1);
+      expect(postCount).toBe(1);
     });
   });
 });

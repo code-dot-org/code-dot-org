@@ -1,9 +1,5 @@
-import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
-
 import MusicController from '@cdo/apps/MusicController';
 import Sounds from '@cdo/apps/Sounds';
-
-import {expect} from '../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 import winMp3 from '!!file-loader!../audio/assets/win.mp3';
 
@@ -26,13 +22,15 @@ describe('MusicController', () => {
       mp3: winMp3,
     });
     sound = sounds.soundsById[sourceURL];
-    sinon.spy(sound, 'play');
-    sinon.stub(Sounds.prototype, 'registerByFilenamesAndID').returns(sound);
+    jest.spyOn(sound, 'play');
+    jest
+      .spyOn(Sounds.prototype, 'registerByFilenamesAndID')
+      .mockReturnValue(sound);
   });
 
   afterEach(() => {
-    Sounds.prototype.registerByFilenamesAndID.restore();
-    sound.play.restore();
+    Sounds.prototype.registerByFilenamesAndID.mockRestore();
+    sound.play.mockRestore();
   });
 
   function musicControllerSetup(isMutedToStart) {
@@ -53,10 +51,10 @@ describe('MusicController', () => {
     sound.onLoad();
     musicController.setMuteMusic(true);
 
-    expect(musicController.muteMusic_).to.be.true;
+    expect(musicController.muteMusic_).toBe(true);
     // Make sure attempts to play do not work since muting
     musicController.play();
-    expect(sound.play).to.not.have.been.called;
+    expect(sound.play).not.toHaveBeenCalled();
   });
 
   it('updates status and plays music when unmuted', () => {
@@ -65,9 +63,9 @@ describe('MusicController', () => {
     musicController.preload();
     sound.onLoad();
 
-    expect(sound.play).to.not.have.been.called;
+    expect(sound.play).not.toHaveBeenCalled();
     musicController.setMuteMusic(false);
-    expect(musicController.muteMusic_).to.be.false;
-    expect(sound.play).to.have.been.called;
+    expect(musicController.muteMusic_).toBe(false);
+    expect(sound.play).toHaveBeenCalled();
   });
 });

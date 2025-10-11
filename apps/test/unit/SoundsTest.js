@@ -1,8 +1,4 @@
-import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
-
 import Sounds from '@cdo/apps/Sounds';
-
-import {expect} from '../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 import winMp3 from '!!file-loader!../audio/assets/win.mp3';
 
@@ -14,28 +10,28 @@ describe('Sounds', () => {
     sourceURL = winMp3;
     sounds.register({id: sourceURL, mp3: sourceURL});
     sound = sounds.soundsById[sourceURL];
-    sinon.stub(sound, 'playAfterLoad');
+    jest.spyOn(sound, 'playAfterLoad').mockImplementation();
   });
 
   afterEach(() => {
-    sinon.restore();
+    jest.restoreAllMocks();
     sounds.unmuteURLs();
   });
 
   it('does not play URLs when muted', () => {
     sounds.muteURLs();
     sounds.playURL(sourceURL);
-    expect(sound.playAfterLoad).to.not.have.been.called;
+    expect(sound.playAfterLoad).not.toHaveBeenCalled();
   });
 
   it('does play URLs when unmuted', () => {
     sounds.playURL(sourceURL);
-    expect(sound.playAfterLoad).to.have.been.calledOnce;
+    expect(sound.playAfterLoad).toHaveBeenCalledTimes(1);
 
     sounds.muteURLs();
     sounds.unmuteURLs();
     sounds.playURL(sourceURL);
-    expect(sound.playAfterLoad).to.have.been.calledTwice;
+    expect(sound.playAfterLoad).toHaveBeenCalledTimes(2);
   });
 
   it('does play sounds by ID when muted', () => {
@@ -44,8 +40,8 @@ describe('Sounds', () => {
     sounds.muteURLs();
 
     let soundFromId = sounds.soundsById['testSound'];
-    sinon.stub(soundFromId, 'play');
+    jest.spyOn(soundFromId, 'play').mockImplementation();
     sounds.play(soundId);
-    expect(soundFromId.play).to.have.been.calledOnce;
+    expect(soundFromId.play).toHaveBeenCalledTimes(1);
   });
 });

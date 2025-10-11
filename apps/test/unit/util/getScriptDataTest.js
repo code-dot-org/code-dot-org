@@ -1,7 +1,5 @@
 import getScriptData from '@cdo/apps/util/getScriptData';
 
-import {expect} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
-
 describe('the getScriptData function', () => {
   beforeEach(() => {
     const someDiv = document.createElement('div');
@@ -13,19 +11,19 @@ describe('the getScriptData function', () => {
     `;
   });
   it('extracts data from a script tag', () => {
-    expect(getScriptData('foo')).to.equal(1);
-    expect(getScriptData('bar')).to.deep.equal({userId: 'neato'});
+    expect(getScriptData('foo')).toBe(1);
+    expect(getScriptData('bar')).toEqual({userId: 'neato'});
   });
 
   it('is case-insensitive', () => {
-    expect(getScriptData('FOO')).to.equal(1);
+    expect(getScriptData('FOO')).toBe(1);
   });
 
   it('throws an error if the script tag does not exist', () => {
-    expect(() => getScriptData('does-not-exist')).to.throw;
+    expect(() => getScriptData('does-not-exist')).toThrow();
   });
 
   it('throws an error if the json is malformed', () => {
-    expect(() => getScriptData('malformed')).to.throw;
+    expect(() => getScriptData('malformed')).toThrow();
   });
 });

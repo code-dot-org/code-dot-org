@@ -1,14 +1,12 @@
 import {TestResults} from '@cdo/apps/constants';
 
-import {assert} from '../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
-
 var executionLog = require('@cdo/apps/executionLog');
 
 describe('logConditions: getResultsFromLog', function () {
   it('returns ALL_PASS with empty logConditions and executionLog', function () {
     var results = executionLog.getResultsFromLog([], []);
 
-    assert.equal(results.testResult, TestResults.ALL_PASS);
+    expect(results.testResult).toBe(TestResults.ALL_PASS);
   });
 
   it('returns ALL_PASS with empty logConditions', function () {
@@ -17,7 +15,7 @@ describe('logConditions: getResultsFromLog', function () {
       ['function1', 'function2']
     );
 
-    assert.equal(results.testResult, TestResults.ALL_PASS);
+    expect(results.testResult).toBe(TestResults.ALL_PASS);
   });
 
   it('returns ALL_PASS with simple one-item logCondition', function () {
@@ -33,7 +31,7 @@ describe('logConditions: getResultsFromLog', function () {
       ['function1:0', 'function2:0']
     );
 
-    assert.equal(results.testResult, TestResults.ALL_PASS);
+    expect(results.testResult).toBe(TestResults.ALL_PASS);
   });
 
   it('returns failure and message with simple one-item logCondition', function () {
@@ -49,7 +47,7 @@ describe('logConditions: getResultsFromLog', function () {
       ['function1:0', 'function2:0']
     );
 
-    assert.deepEqual(results, {
+    expect(results).toEqual({
       testResult: TestResults.LOG_CONDITION_FAIL,
       message: 'test-2',
     });
@@ -74,7 +72,7 @@ describe('logConditions: getResultsFromLog', function () {
       ['function1:0', 'function2:0']
     );
 
-    assert.equal(results.testResult, TestResults.ALL_PASS);
+    expect(results.testResult).toBe(TestResults.ALL_PASS);
   });
 
   it('returns failure and message with mixed logConditions', function () {
@@ -96,7 +94,7 @@ describe('logConditions: getResultsFromLog', function () {
       ['function1:0', 'function2:0']
     );
 
-    assert.deepEqual(results, {
+    expect(results).toEqual({
       testResult: TestResults.LOG_CONDITION_FAIL,
       message: 'test-6',
     });
@@ -115,7 +113,7 @@ describe('logConditions: getResultsFromLog', function () {
       ['function1:0', 'function2:0']
     );
 
-    assert.equal(results.testResult, TestResults.ALL_PASS);
+    expect(results.testResult).toBe(TestResults.ALL_PASS);
   });
 
   it('returns failure and message with insufficient minTimes logCondition', function () {
@@ -131,7 +129,7 @@ describe('logConditions: getResultsFromLog', function () {
       ['function1:0', 'function2:0']
     );
 
-    assert.deepEqual(results, {
+    expect(results).toEqual({
       testResult: TestResults.LOG_CONDITION_FAIL,
       message: 'test-8',
     });
@@ -150,7 +148,7 @@ describe('logConditions: getResultsFromLog', function () {
       ['function1:0', 'other:0', 'function2:0']
     );
 
-    assert.equal(results.testResult, TestResults.ALL_PASS);
+    expect(results.testResult).toBe(TestResults.ALL_PASS);
   });
 
   it('returns failure and message with insufficient minTimes inexact logCondition', function () {
@@ -166,7 +164,7 @@ describe('logConditions: getResultsFromLog', function () {
       ['function1:0', 'other:0', 'function2:0', 'function2:0', 'function1:0']
     );
 
-    assert.deepEqual(results, {
+    expect(results).toEqual({
       testResult: TestResults.LOG_CONDITION_FAIL,
       message: 'test-10',
     });
@@ -185,7 +183,7 @@ describe('logConditions: getResultsFromLog', function () {
       ['function1:0', 'other:0', 'function2:0', 'function1:0', 'function2:0']
     );
 
-    assert.equal(results.testResult, TestResults.ALL_PASS);
+    expect(results.testResult).toBe(TestResults.ALL_PASS);
   });
 
   it('returns failure and message with two item inexact logCondition exceeding maxTimes', function () {
@@ -210,7 +208,7 @@ describe('logConditions: getResultsFromLog', function () {
       ]
     );
 
-    assert.deepEqual(results, {
+    expect(results).toEqual({
       testResult: TestResults.LOG_CONDITION_FAIL,
       message: 'test-12',
     });
@@ -229,7 +227,7 @@ describe('logConditions: getResultsFromLog', function () {
       ['function1:3', 'other:1', 'function2:0']
     );
 
-    assert.equal(results.testResult, TestResults.ALL_PASS);
+    expect(results.testResult).toBe(TestResults.ALL_PASS);
   });
 
   it('returns failure and message with insufficient arguments logCondition', function () {
@@ -254,7 +252,7 @@ describe('logConditions: getResultsFromLog', function () {
       ]
     );
 
-    assert.deepEqual(results, {
+    expect(results).toEqual({
       testResult: TestResults.LOG_CONDITION_FAIL,
       message: 'test-14',
     });
