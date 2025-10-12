@@ -17,12 +17,12 @@ import LabBlockly, {
 } from '@code-dot-org/lab-blockly';
 import type {Level} from '@code-dot-org/models/levels';
 
-import blocks from '../blocks';
+import craftBlocks from '../blocks';
 import Craft from '../Craft';
+import levels from '../levels';
 import Skin from '../skin';
 import Skins from '../skins';
 import type {CraftData} from '../types';
-import levels from '../levels';
 
 import Visualization from './Visualization';
 
@@ -50,13 +50,13 @@ export interface LabCraftProps extends LabBlocklyProps {
     [key: string]: Skin;
   };
   api?: object;
-  customBlocks?: BlockDefinition[];
+  blocks?: BlockDefinition[];
   visualizationClassName?: string;
 }
 
 const LabCraft: React.FunctionComponent<LabCraftProps> = ({
   levelData,
-  customBlocks,
+  blocks,
   skins,
   theme,
   renderer,
@@ -98,8 +98,8 @@ const LabCraft: React.FunctionComponent<LabCraftProps> = ({
 
   // Determine all blocks
   const fullBlocks = useMemo(
-    () => [...blocks, ...(customBlocks || [])],
-    [blocks, customBlocks],
+    () => [...craftBlocks, ...(blocks || [])],
+    [craftBlocks, blocks],
   );
   console.log(levelData);
 
@@ -183,7 +183,7 @@ const LabCraft: React.FunctionComponent<LabCraftProps> = ({
           />
         )
       }
-      customBlocks={fullBlocks}
+      blocks={fullBlocks}
       options={{
         grayOutUndeletableBlocks: true,
         ...(options || {}),

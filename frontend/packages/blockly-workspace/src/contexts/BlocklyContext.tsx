@@ -14,16 +14,16 @@ export interface BlocklyContent {
   setTheme: (value: Theme) => void;
   renderer?: Renderer;
   plugins?: Plugin[];
-  customBlocks: BlockDefinition[];
+  blocks: BlockDefinition[];
 }
 
 const BlocklyContext = createContext<BlocklyContent>({
   setTheme: (_: Theme) => {},
-  customBlocks: [],
+  blocks: [],
 });
 
 export interface BlocklyProviderProps extends PropsWithChildren {
-  customBlocks?: BlockDefinition[];
+  blocks?: BlockDefinition[];
   environment?: Environment & object;
   theme?: Theme;
   plugins?: Plugin[];
@@ -31,7 +31,7 @@ export interface BlocklyProviderProps extends PropsWithChildren {
 }
 
 export const BlocklyProvider: React.FunctionComponent<BlocklyProviderProps> = ({
-  customBlocks,
+  blocks,
   environment,
   theme,
   plugins,
@@ -49,7 +49,7 @@ export const BlocklyProvider: React.FunctionComponent<BlocklyProviderProps> = ({
         plugins,
         renderer,
         environment,
-        customBlocks: customBlocks || [],
+        blocks: blocks || [],
       }}
     >
       {children}

@@ -18,7 +18,7 @@ import type {Level} from '@code-dot-org/models/levels';
 
 import * as defaultAPI from '../api';
 import Artist from '../Artist';
-import blocks from '../blocks';
+import artistBlocks from '../blocks';
 import {skinFor} from '../skins';
 import type {ArtistData} from '../types';
 
@@ -38,7 +38,7 @@ const DefaultStartBlocks: BlocklySerialization = {
 export interface LabArtistProps extends LabBlocklyProps {
   levelData: Level<ArtistData>;
   api?: object;
-  customBlocks?: BlockDefinition[];
+  blocks?: BlockDefinition[];
   /** A class to apply to the existing visualization container */
   visualizationClassName?: string;
 }
@@ -48,7 +48,7 @@ export interface LabArtistProps extends LabBlocklyProps {
  */
 const LabArtist: React.FunctionComponent<LabArtistProps> = ({
   levelData,
-  customBlocks,
+  blocks,
   theme,
   renderer,
   avatar,
@@ -184,7 +184,7 @@ const LabArtist: React.FunctionComponent<LabArtistProps> = ({
           />
         )
       }
-      customBlocks={[...blocks(skin), ...(customBlocks || [])]}
+      blocks={[...artistBlocks(skin), ...(blocks || [])]}
       options={{
         grayOutUndeletableBlocks: true,
         ...(options || {}),

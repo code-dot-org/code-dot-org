@@ -37,7 +37,7 @@ export interface BlocklyOptions extends Blockly.BlocklyOptions {
 
 export interface BlocklyWorkspaceProps<T extends Environment & object> {
   /** A set of custom blocks to load within the Blockly instance. */
-  customBlocks?: BlockDefinition[];
+  blocks?: BlockDefinition[];
   /** Some options that will alter the typical Blockly behavior. */
   options?: BlocklyOptions;
   /** A set of blocks to load as the starting point for the workspace */
@@ -76,7 +76,7 @@ const __ = En;
  * Represents a Blockly workspace.
  */
 function BlocklyWorkspace<T extends Environment & object = Environment>({
-  customBlocks,
+  blocks,
   options,
   startBlocks,
   toolboxBlocks,
@@ -104,7 +104,7 @@ function BlocklyWorkspace<T extends Environment & object = Environment>({
   useEffect(() => {
     console.log(
       'BLOCKLY_INIT environment via renderer',
-      customBlocks,
+      blocks,
       startBlocks,
       renderer,
       theme,
@@ -114,7 +114,7 @@ function BlocklyWorkspace<T extends Environment & object = Environment>({
     Blockly.setLocale(En as unknown as {[key: string]: string});
 
     // Make sure we have the default blocks
-    (customBlocks || []).forEach(blockDefinition => {
+    (blocks || []).forEach(blockDefinition => {
       blockDefinition = {
         ...blockDefinition,
       };
@@ -131,16 +131,16 @@ function BlocklyWorkspace<T extends Environment & object = Environment>({
         _generator: JavascriptGenerator,
       ) {
         return (
-          blockDefinition.generator?.javascript?.(block, javascriptGenerator, {}) || ''
+          blockDefinition.generator?.javascript?.(block, javascriptGenerator, environment) || ''
         );
       };
     });
-  }, [customBlocks]);
+  }, [blocks]);
 
   useEffect(() => {
     console.log(
       'BLOCKLY_INIT environment via anchor',
-      customBlocks,
+      blocks,
       startBlocks,
       renderer,
       theme,
@@ -202,6 +202,16 @@ function BlocklyWorkspace<T extends Environment & object = Environment>({
       inline,
       workspace.current,
     );
+
+    // Retain the main workspace in the environment, if it exists
+    if (!inline && environment) {
+      if (hidden) {
+        environment.hiddenWorkspace = workspace.current || undefined;
+      }
+      else {
+        environment.mainWorkspace = workspace.current || undefined;
+      }
+    }
 
     // Level implementation callback for custom behaviors per-level type
     if (onInject) {

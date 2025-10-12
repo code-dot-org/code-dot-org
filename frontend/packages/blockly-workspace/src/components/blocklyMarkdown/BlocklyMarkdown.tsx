@@ -13,7 +13,7 @@ import type {Theme, Renderer, BlockDefinition} from '@blockly-workspace/types';
 import {convertBlocklyXmlToJson} from '@blockly-workspace/xml';
 
 export interface BlocklyMarkdownProps extends MarkdownProps {
-  customBlocks?: BlockDefinition[];
+  blocks?: BlockDefinition[];
   renderer?: Renderer;
   plugins?: Plugin[];
   theme?: Theme;
@@ -63,7 +63,7 @@ const xmlRenderer: (
  * This is useful for rendering instructions or documentation with embedded blocks.
  */
 const BlocklyMarkdown: React.FunctionComponent<BlocklyMarkdownProps> = ({
-  customBlocks,
+  blocks,
   renderer,
   plugins,
   theme,
@@ -96,7 +96,7 @@ const BlocklyMarkdown: React.FunctionComponent<BlocklyMarkdownProps> = ({
             const key = xmlRenderer(root, node);
             return (
               <BlocklyWorkspace
-                customBlocks={customBlocks}
+                blocks={blocks}
                 renderer={renderer}
                 plugins={plugins}
                 theme={theme}

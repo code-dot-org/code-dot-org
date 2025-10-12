@@ -5,7 +5,7 @@ import DefaultTheme from '@code-dot-org/blockly-workspace/themes/default';
 import LabMaze, {LabMazeProps, skinFor} from '@code-dot-org/lab-maze';
 
 import * as api from '../api';
-import blocks from '../blocks';
+import karelBlocks from '../blocks';
 import skins from '../skins';
 
 import moduleStyles from './labKarel.module.scss';
@@ -14,7 +14,7 @@ export type LabKarelProps = LabMazeProps;
 
 const LabKarel: React.FunctionComponent<LabKarelProps> = ({
   levelData,
-  customBlocks,
+  blocks,
 }) => {
   // Pull out the skin asset paths
   const skin = useMemo(
@@ -28,7 +28,7 @@ const LabKarel: React.FunctionComponent<LabKarelProps> = ({
       theme={DefaultTheme}
       renderer={ThrasosRenderer}
       skins={skins}
-      customBlocks={[...blocks(skin), ...(customBlocks || [])]}
+      blocks={[...karelBlocks(skin), ...(blocks || [])]}
       visualizationClassName={moduleStyles.karelMaze}
       api={api}
     />

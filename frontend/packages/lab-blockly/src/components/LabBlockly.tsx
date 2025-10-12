@@ -28,10 +28,6 @@ import moduleStyles from './labBlockly.module.scss';
  * Specific environmental information for all blockly environments.
  */
 export interface LabBlocklyEnvironment extends Environment {
-  /** The main workspace reference, when available. */
-  mainWorkspace?: Blockly.Workspace;
-  /** The hidden workspace reference, when provided. */
-  hiddenWorkspace?: Blockly.Workspace;
   /** The current block count, if known. */
   usedBlockCount?: number;
   /** The ideal block count, if provided. */
@@ -50,7 +46,7 @@ export type LabBlocklyProps<
   /** Some options that will alter the typical Blockly behavior. */
   options?: BlocklyOptions;
   /** A set of custom blocks to load within the Blockly instance. */
-  customBlocks?: BlockDefinition[];
+  blocks?: BlockDefinition[];
   /** A component that is loaded as the level visualization */
   visualization?: ReactNode;
   /** The blockly theme to use. */
@@ -102,7 +98,7 @@ function LabBlockly<
   hiddenBlocks,
   options,
   visualization,
-  customBlocks,
+  blocks,
   onInject,
   onChange,
   avatar,
@@ -141,7 +137,7 @@ function LabBlockly<
   return (
     <BlocklyProvider
       environment={environment as unknown as Environment}
-      customBlocks={customBlocks}
+      blocks={blocks}
       theme={theme}
       plugins={plugins}
       renderer={renderer}
@@ -241,7 +237,7 @@ function LabBlockly<
               hidden
               renderer={renderer}
               theme={theme}
-              customBlocks={customBlocks}
+              blocks={blocks}
               options={{
                 readOnly: true,
               }}
@@ -264,7 +260,7 @@ function LabBlockly<
             }}
             renderer={renderer}
             theme={theme}
-            customBlocks={customBlocks}
+            blocks={blocks}
             startBlocks={
               startBlocks ||
               levelData.template?.subData?.startBlocks ||

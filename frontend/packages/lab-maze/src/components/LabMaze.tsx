@@ -22,7 +22,7 @@ import LabBlockly, {
 import {LevelContext} from '@code-dot-org/lab-blockly/contexts';
 import type {Level} from '@code-dot-org/models/levels';
 
-import blocks from '@lab-maze/blocks';
+import mazeBlocks from '@lab-maze/blocks';
 import Visualization from '@lab-maze/components/Visualization';
 import Maze from '@lab-maze/Maze';
 import type {MazeData} from '@lab-maze/MazeController';
@@ -45,14 +45,14 @@ export interface LabMazeProps extends LabBlocklyProps<MazeData> {
   levelData: Level<MazeData>;
   skins?: SkinsData;
   api?: API;
-  customBlocks?: BlockDefinition[];
+  blocks?: BlockDefinition[];
   visualization?: ReactNode;
   visualizationClassName?: string;
 }
 
 const LabMaze: React.FunctionComponent<LabMazeProps> = ({
   levelData,
-  customBlocks,
+  blocks,
   skins,
   theme,
   renderer,
@@ -107,8 +107,8 @@ const LabMaze: React.FunctionComponent<LabMazeProps> = ({
 
   // Determine all blocks
   const fullBlocks = useMemo(
-    () => [...blocks(skin), ...(customBlocks || [])],
-    [blocks, customBlocks],
+    () => [...mazeBlocks(skin), ...(blocks || [])],
+    [mazeBlocks, blocks],
   );
 
   // Set up the driver
@@ -200,7 +200,7 @@ const LabMaze: React.FunctionComponent<LabMazeProps> = ({
           />
         )
       }
-      customBlocks={fullBlocks}
+      blocks={fullBlocks}
       options={{
         grayOutUndeletableBlocks: true,
         ...(options || {}),

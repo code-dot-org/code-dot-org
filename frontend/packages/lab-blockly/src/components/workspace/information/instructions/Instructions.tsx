@@ -28,7 +28,7 @@ const SpeechBubble: React.FunctionComponent<SpeechBubbleProps> = ({
   onYes,
   onNo,
 }) => {
-  const {customBlocks, renderer, theme, plugins} = useContext(BlocklyContext);
+  const {blocks, renderer, theme, plugins} = useContext(BlocklyContext);
   console.log('renderer?', renderer, 'context', BlocklyContext);
 
   return (
@@ -64,7 +64,7 @@ const SpeechBubble: React.FunctionComponent<SpeechBubbleProps> = ({
         {renderer && (
           <BlocklyMarkdown
             renderer={renderer}
-            customBlocks={customBlocks}
+            blocks={blocks}
             theme={theme}
             plugins={plugins}
             className={moduleStyles.text}

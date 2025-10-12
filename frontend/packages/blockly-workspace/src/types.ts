@@ -2,7 +2,7 @@ import {IProcedureBlock} from '@blockly/block-shareable-procedures';
 import * as Blockly from 'blockly/core';
 import {JavascriptGenerator} from 'blockly/javascript';
 
-import type {FieldPlugin} from './plugins';
+import type {FieldPlugin, InputPlugin} from './plugins';
 import type {RendererClassType} from './renderers/base';
 
 export interface BlocklySerialization {
@@ -108,13 +108,10 @@ export interface Mixin {
  * Blockly doesn't expose its own BlockGenerator for some reason. This is more
  * or less a copy of that which can be used to type code generator functions.
  */
-export type BlockGenerator<T extends Omit<Blockly.CodeGenerator, 'forBlock'>> = (
+export type BlockGenerator<T extends Omit<Blockly.CodeGenerator, 'forBlock'>, U extends Environment = Environment> = (
   block: Blockly.Block,
   generator: T,
-  options?: {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    [key: string]: any;
-  },
+  environment?: U,
 ) => string | [string, number] | null;
 
 /**
@@ -148,7 +145,7 @@ export interface FullBlockDefinition {
   /** Whether or not the block can have subsequent blocks attached to it */
   nextStatement?: boolean;
   /** The output type, which makes this a potential input for another block. */
-  output?: string;
+  output?: string | InputPlugin;
   /** The first caption */
   message0?: string;
   /** The first set of interactive arguments */
@@ -278,6 +275,10 @@ export interface Renderer {
  * knowledge of external workspaces, media assets, or library routines.
  */
 export interface Environment {
+  /** The main workspace reference, when available. */
+  mainWorkspace?: Blockly.Workspace;
+  /** The hidden workspace reference, when provided. */
+  hiddenWorkspace?: Blockly.Workspace;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   [key: string]: any;
 }

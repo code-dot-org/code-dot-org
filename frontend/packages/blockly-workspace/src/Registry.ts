@@ -115,6 +115,14 @@ class Registry<T extends Environment & object> {
 
     const blockDefinition: FullBlockDefinition = block as FullBlockDefinition;
 
+    // Register input plugin if we have never seen it before
+    if (blockDefinition.output && typeof blockDefinition.output !== 'string') {
+      const inputPlugin: InputPlugin = blockDefinition.output;
+      this.register(inputPlugin);
+      plugins.push(inputPlugin);
+      blockDefinition.output = inputPlugin.check;
+    }
+
     // Register fields if we have never seen it before
     (['args0', 'args1', 'args2', 'args3'] as (keyof FullBlockDefinition)[]).forEach(
       key => {
