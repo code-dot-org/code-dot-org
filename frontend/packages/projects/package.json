@@ -107,7 +107,8 @@
     "typescript-eslint": "^8.15.0"
   },
   "dependencies": {
-    "@code-dot-org/api": "workspace:*"
+    "@code-dot-org/api": "workspace:*",
+    "@code-dot-org/user": "workspace:*"
   },
   "peerDependencies": {
     "classnames": "^2.5.1",

@@ -1,4 +1,4 @@
-import * as Blockly from 'blockly/core';
+//import * as Blockly from 'blockly/core';
 import React, {useCallback, useMemo, memo} from 'react';
 
 import AppConfig from '../../appConfig';
@@ -143,11 +143,11 @@ const getOrderedByWhenSoundEvents = (soundEvents: PlaybackEvent[]) => {
 const getOrderedByBlockSoundEvents = (soundEvents: PlaybackEvent[]) => {
   // This sort arranges all of the sounds played under "when run" in block
   // order.  Triggered sounds come after them.
-  const whenRunBlock =
-    Blockly.getMainWorkspace()?.getBlocksByType(
-      BlockTypes.WHEN_RUN_SIMPLE2
-    )[0] || null;
-  const blockIdList = collectBlockIdsRecursively(whenRunBlock);
+  const whenRunBlock = undefined;
+  //    Blockly.getMainWorkspace()?.getBlocksByType(
+  //    BlockTypes.WHEN_RUN_SIMPLE2
+  //  )[0];
+  const blockIdList: string[] = whenRunBlock ? collectBlockIdsRecursively(whenRunBlock) : [];
 
   const blockIdToOrder = new Map<string, number>();
   blockIdList.forEach((id, index) => {

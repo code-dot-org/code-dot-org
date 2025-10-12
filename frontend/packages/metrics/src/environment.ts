@@ -9,11 +9,11 @@ enum Environments {
 };
 
 export const currentLocation = () => {
-  return window.location;
+  return typeof window !== 'undefined' ? window.location : undefined;
 }
 
 export const getEnvironment: () => Environments = () => {
-  const hostname = currentLocation().hostname;
+  const hostname = currentLocation()?.hostname || '';
   if (hostname.includes('adhoc')) {
     // As adhoc hostnames may include other keywords, check it first.
     return Environments.adhoc;

@@ -2657,6 +2657,7 @@ __metadata:
     "@code-dot-org/api": "workspace:*"
     "@code-dot-org/changelogs": "workspace:*"
     "@code-dot-org/lint-config": "workspace:*"
+    "@code-dot-org/user": "workspace:*"
     "@eslint/js": "npm:^9.15.0"
     "@release-it/conventional-changelog": "npm:^10.0.0"
     "@swc/core": "npm:^1.9.3"

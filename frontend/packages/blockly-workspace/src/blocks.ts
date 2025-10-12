@@ -1,10 +1,12 @@
-/**
- * These are some predefined blocks that can be used across the platform.
- */
+import {blocks as Blocks} from 'blockly/blocks';
 import * as Blockly from 'blockly/core';
+import {javascriptGenerator} from 'blockly/javascript';
 
 import type {BlockDefinition} from './types';
 
+/**
+ * These are some predefined blocks that can be used across the platform.
+ */
 const blocks: {
   [key: string]: BlockDefinition;
 } = {
@@ -41,7 +43,16 @@ const blocks: {
         `// ${block.getFieldValue('COMMENT')}\n`,
     },
   },
+  // Other common blocks and their generators
+  ...(Object.fromEntries(Object.entries(Blocks).map(([type, value]) => ([type, {
+    type,
+    init: (value as {init: () => void;}).init,
+    generator: {
+      javascript: (block: Blockly.Block) => (
+        javascriptGenerator.forBlock[type](block, javascriptGenerator)
+      ),
+    },
+  } as BlockDefinition])))),
 };
 
 export default blocks;
-

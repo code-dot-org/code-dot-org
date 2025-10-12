@@ -1,12 +1,15 @@
 import {postcssModules, sassPlugin} from 'esbuild-sass-plugin';
 import {glob} from 'glob';
-import {spawnSync} from 'node:child_process';
+import {execSync, spawnSync} from 'node:child_process';
 import type {Options} from 'tsup';
 import {defineConfig} from 'tsup';
 
 const entryPoints = glob.sync('./src/**/index.ts', {
   posix: true,
 });
+
+let run = 0;
+execSync('node copy.mjs');
 
 /**
  * Creates a tsup configuration object for a given format
@@ -51,6 +54,12 @@ function createConfig(format: 'cjs' | 'esm'): Options {
           tscAlias.stdout.toString(),
           tscAlias.stderr.toString(),
         );
+      }
+
+      run++;
+      if (run === 2) {
+        // 'Touch' some files the app typescript checker expects to be there
+        execSync('node fix.mjs');
       }
     },
     sourcemap: true,

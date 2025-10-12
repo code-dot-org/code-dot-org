@@ -1,7 +1,7 @@
 $header-text-color: var(--neutral-gray-10);
 $header-warning-text-color: var(--text-warning-primary);
 
-.blocklyLevel {
+.labBlockly {
   display: flex;
   flex: 100%;
   flex-direction: column;
@@ -92,5 +92,9 @@ $header-warning-text-color: var(--text-warning-primary);
   // The ideal number of blocks
   .idealCount {
     color: $header-text-color;
+  }
+
+  & + div {
+    height: 100%;
   }
 }

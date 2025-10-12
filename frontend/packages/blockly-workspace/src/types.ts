@@ -130,7 +130,7 @@ export type JavascriptBlockGenerator = BlockGenerator<JavascriptGenerator>;
  * directly reference extensions and mixins so that we can guarantee that
  * we register them when we re-use blocks across different environments.
  */
-export interface BlockDefinition {
+export interface FullBlockDefinition {
   /** The generic name of the block */
   type: string;
   /** The tooltip for the block when it is hovered over */
@@ -170,6 +170,26 @@ export interface BlockDefinition {
   /** A mutator to apply to this particular type of block. */
   mutator?: string | Mutator;
 }
+
+/**
+ * An older block definition that might be supplied which just has an init
+ * function and a generator.
+ */
+export interface OldBlockDefinition {
+  /** The generic name of the block */
+  type: string;
+  /** An init function to fuel the initialization of a new block. */
+  init: () => void;
+  /** The function that generates code for this block. */
+  generator: {
+    javascript: JavascriptBlockGenerator;
+  };
+}
+
+/**
+ * Any block definition.
+ */
+export type BlockDefinition = FullBlockDefinition | OldBlockDefinition;
 
 /**
  * Describes a collision region.

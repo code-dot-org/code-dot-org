@@ -2,6 +2,14 @@
  * Logs to NewRelic.
  */
 
+import type {BrowserAgent} from '@newrelic/browser-agent';
+
+declare global {
+  interface Window {
+    newrelic: BrowserAgent;
+  }
+}
+
 export enum PageAction {
   DropletTransitionError = 'DropletTransitionError',
   SanitizedLevelHtml = 'SanitizedLevelHtml',

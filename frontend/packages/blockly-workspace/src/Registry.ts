@@ -22,11 +22,13 @@ import type {
   Environment,
   BlockArgDefinition,
   BlockDefinition,
+  FullBlockDefinition,
   Renderer,
   Theme,
   Extension,
   Mixin,
   Mutator,
+  OldBlockDefinition,
   ProcedureBlock,
 } from './types';
 
@@ -106,15 +108,22 @@ class Registry<T extends Environment & object> {
   registerFromBlockDefinition(block: BlockDefinition): Plugin[] {
     const plugins: Plugin[] = [];
 
+    // Ignore old-style block initializers, typically supplied via Blockly itself
+    if (typeof (block as OldBlockDefinition).init !== 'undefined') {
+      return plugins;
+    }
+
+    const blockDefinition: FullBlockDefinition = block as FullBlockDefinition;
+
     // Register fields if we have never seen it before
-    (['args0', 'args1', 'args2', 'args3'] as (keyof BlockDefinition)[]).forEach(
+    (['args0', 'args1', 'args2', 'args3'] as (keyof FullBlockDefinition)[]).forEach(
       key => {
-        if (key in block) {
+        if (key in blockDefinition) {
           (
-            block as unknown as {
+            blockDefinition as unknown as {
               [key: string]: BlockArgDefinition[];
             }
-          )[key] = (block[key] as BlockArgDefinition[]).map(arg => {
+          )[key] = (blockDefinition[key] as BlockArgDefinition[]).map(arg => {
             if (
               typeof arg.type !== 'string' &&
               (arg.type as FieldPlugin).type === PluginType.Field
@@ -132,16 +141,16 @@ class Registry<T extends Environment & object> {
     );
 
     // Register mutator if we have never seen it before and it exists
-    if (block.mutator) {
-      if (typeof block.mutator !== 'string') {
-        const name = block.mutator.name;
-        this.registerMutator(block.mutator);
-        block.mutator = name;
+    if (blockDefinition.mutator) {
+      if (typeof blockDefinition.mutator !== 'string') {
+        const name = blockDefinition.mutator.name;
+        this.registerMutator(blockDefinition.mutator);
+        blockDefinition.mutator = name;
       }
     }
 
     // Register extensions if we have never seen it before and it exists
-    block.extensions = [...(block.extensions || [])].map(extension => {
+    blockDefinition.extensions = [...(blockDefinition.extensions || [])].map(extension => {
       if (typeof extension !== 'string' && 'extension' in extension) {
         this.registerExtension(extension as Extension);
         return extension.name;

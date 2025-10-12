@@ -26,6 +26,7 @@ const blocks: (skin: Skin) => BlockDefinition[] = (skin: Skin) => [
     message0: 'move forward',
     generator: {
       javascript(block: Blockly.Block) {
+        console.log('generating');
         return `Maze.moveForward('block_id_${block.id}');\n`;
       },
     },

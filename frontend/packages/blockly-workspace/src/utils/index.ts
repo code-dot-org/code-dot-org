@@ -39,14 +39,14 @@ export function getAllGeneratedCode(options?: GetAllGeneratedCodeOptions) {
           options?.startBlock === undefined ||
           options?.startBlock === block.type
         ) {
-          blocksCode.push(javascriptGenerator.blockToCode(block));
+          const blockCode = javascriptGenerator.blockToCode(block);
+          blocksCode.push(blockCode);
         }
       });
       code += javascriptGenerator.finish(blocksCode.join('\n'));
     }
   });
 
-  console.log('GENERATED CODE', code);
   return code;
 }
 
@@ -58,13 +58,13 @@ export function updateBlockEnabled(block: Blockly.Block, reason: string = Blockl
     const parent = block.getParent();
     if (parent && parent.isEnabled()) {
       const children = block.getDescendants(false);
-      for (let i = 0, child; (child = children[i]); i++) {
-        child.setDisabledReason(true, reason);
+      for (const child of children) {
+        child.setDisabledReason(false, reason);
       }
     } else if (block.outputConnection || block.previousConnection) {
       let currentBlock: Blockly.Block | null = block;
       do {
-        currentBlock.setDisabledReason(false, reason)
+        currentBlock.setDisabledReason(true, reason)
         currentBlock = currentBlock.getNextBlock();
       } while (currentBlock);
     }
@@ -81,9 +81,9 @@ export function disableOrphanBlocks(eventWorkspace: Blockly.Workspace) {
   // its call blocks.
   eventWorkspace.getTopBlocks().forEach(block => {
     if (block.type === BLOCK_TYPES.procedureCall) {
-      block.setDisabledReason(false, 'orphaned');
+      block.setDisabledReason(true, 'ORPHANED');
     }
-    updateBlockEnabled(block, 'orphaned');
+    updateBlockEnabled(block, 'ORPHANED');
   });
 }
 
@@ -216,14 +216,11 @@ export function getCodeFromBlockJsonSource(json: {
 }): string {
   const workspace = new Blockly.Workspace();
   javascriptGenerator.init(workspace);
-  console.log('init generator', javascriptGenerator.isInitialized, workspace);
 
   for (const jsonBlock of json.blocks?.blocks || []) {
-    console.log('BLOCK', jsonBlock);
     Blockly.serialization.blocks.append(jsonBlock, workspace);
   }
   const blocks = workspace.getTopBlocks(true);
-  console.log('BLOCKS', blocks);
   const code: (string | [string, number])[] = [];
   blocks.forEach(block => code.push(javascriptGenerator.blockToCode(block)));
   const result = javascriptGenerator.finish(code.join('\n'));

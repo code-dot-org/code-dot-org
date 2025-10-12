@@ -65,14 +65,14 @@ export class StatsigReporter {
     }
     this.user = user;
 
-    const apiElement = document.querySelector(
+    const apiElement = (typeof document !== 'undefined' ? document.querySelector(
       'script[data-statsig-api-client-key]'
-    ) as (HTMLElement | undefined);
+    ) : undefined) as (HTMLElement | undefined);
     this.apiKey = apiElement?.dataset?.statsigApiClientKey || '';
 
-    const managedTestEnvironmentElement = document.querySelector(
+    const managedTestEnvironmentElement = (typeof document !== 'undefined' ? document.querySelector(
       'script[data-managed-test-server]'
-    ) as HTMLElement | undefined;
+    ) : undefined) as HTMLElement | undefined;
     const managedTestEnvironment = managedTestEnvironmentElement?.dataset?.managedTestServer === 'true';
     this.localMode = !(
       isProductionEnvironment() ||

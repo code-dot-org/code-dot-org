@@ -7,3 +7,5 @@ export * as xml from './xml';
 export type {BlocklyOptions} from './components/blocklyWorkspace/BlocklyWorkspace';
 export {default as BlocklyMarkdown} from './components/blocklyMarkdown';
 export {default as BlocklyWorkspace} from './components/blocklyWorkspace';
+
+export * as Blockly from 'blockly/core';

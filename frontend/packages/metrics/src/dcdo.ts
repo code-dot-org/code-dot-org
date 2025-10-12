@@ -22,7 +22,7 @@ class DCDO {
     if (configs) {
       this.configs = configs;
     } else {
-      const script = document.querySelector('script[data-dcdo]') as (HTMLScriptElement | undefined);
+      const script = (typeof document !== 'undefined' ? document.querySelector('script[data-dcdo]') : undefined) as (HTMLScriptElement | undefined);
       if (script) {
         this.configs = JSON.parse(script.getAttribute('data-dcdo') || '{}');
       }

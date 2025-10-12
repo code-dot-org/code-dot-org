@@ -43,7 +43,7 @@
     }
   },
   "scripts": {
-    "build": "tsup --clean && node fix.mjs",
+    "build": "tsup --clean",
     "storybook:build": "storybook build -o dist/storybook",
     "storybook:dev": "yarn run storybook",
     "storybook": "storybook dev -p 6006",

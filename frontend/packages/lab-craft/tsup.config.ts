@@ -1,14 +1,15 @@
 import {webglPlugin} from "esbuild-plugin-webgl";
 import {postcssModules, sassPlugin} from 'esbuild-sass-plugin';
-import fs from 'fs';
 import {glob} from 'glob';
-import {spawnSync} from 'node:child_process';
+import {execSync, spawnSync} from 'node:child_process';
 import type {Options} from 'tsup';
 import {defineConfig} from 'tsup';
 
 const entryPoints = glob.sync('./src/**/index.ts', {
   posix: true,
 });
+
+let run = 0;
 
 /**
  * Creates a tsup configuration object for a given format
@@ -19,26 +20,14 @@ function createConfig(format: 'cjs' | 'esm'): Options {
   return {
     entry: entryPoints,
     outDir: `dist/${format}`,
-    target: 'es2019',
+    target: ['es2019'],
+    platform: 'browser',
     format: [format],
     external: ['./index.css'],
     dts: false, // See typescript generator below
     splitting: false,
     async onSuccess() {
-      const buildSentinel = `.tsup.building.cjs`;
-      if (format === 'cjs') {
-        if (!fs.existsSync(buildSentinel)) {
-          fs.writeFileSync(buildSentinel, '');
-        }
-      } else {
-        if (fs.existsSync(buildSentinel)) {
-          console.error('Not building types for esm since cjs type generation failed.');
-          fs.unlinkSync(buildSentinel);
-          return;
-        }
-      }
-
-      console.log('Generating typescript types...');
+      console.log(`Generating typescript types...`);
       // This generates the .d.ts files using the official typescript compiler, `tsc`
       // rather than using the esbuild implementation that uses the Microsoft API Extractor
       const tsc = spawnSync('tsc', [
@@ -49,31 +38,29 @@ function createConfig(format: 'cjs' | 'esm'): Options {
         '--outDir',
         `dist/${format}`,
       ]);
-      const tscAlias = tsc.status === 0 ? spawnSync('tsc-alias', [
+      const tscAlias = spawnSync('tsc-alias', [
         '-p',
         'tsconfig.json',
         '--outDir',
         `dist/${format}`,
-      ]) : {status: -1};
+      ]);
 
       if (tsc.status === 0 && tscAlias.status === 0) {
         console.log(`Generating typescript types success`);
-        if (fs.existsSync(buildSentinel)) {
-          fs.unlinkSync(buildSentinel);
-        }
       } else {
         console.error(`Generating typescript types failed`);
         console.error('tsc:', tsc.stdout.toString(), tsc.stderr.toString());
-        if (tsc.status === 0) {
-          console.error(
-            'tsc-alias:',
-            tscAlias.stdout.toString(),
-            tscAlias.stderr.toString(),
-          );
-        }
-        else {
-          console.error('tsc-alias: did not run due to tsc errors');
-        }
+        console.error(
+          'tsc-alias:',
+          tscAlias.stdout.toString(),
+          tscAlias.stderr.toString(),
+        );
+      }
+
+      run++;
+      if (run === 2) {
+        // 'Touch' some files the app typescript checker expects to be there
+        execSync('node fix.mjs');
       }
     },
     sourcemap: true,

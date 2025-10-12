@@ -28,12 +28,14 @@ const ALWAYS_SEND = false;
  * Firehose reporting and {@link logToCloud} for New Relic reporting.
  */
 export class MetricsReporter {
-  private lastCheckCanReportTime: number;
+  private lastCheckCanReportTime: number = 0;
 
   constructor(private readonly metricsApi: MetricsApi = new DashboardMetricsApi()) {
     this.metricsApi = metricsApi;
-    this.lastCheckCanReportTime =
-      parseInt(localStorage.getItem(LOCAL_STORAGE_KEY_NAME) || '0') || 0;
+    if (typeof window !== 'undefined') {
+      this.lastCheckCanReportTime =
+        parseInt(localStorage.getItem(LOCAL_STORAGE_KEY_NAME) || '0') || 0;
+    }
   }
 
   /**
@@ -200,10 +202,12 @@ export class MetricsReporter {
 
   private setReportingDisabled() {
     this.lastCheckCanReportTime = Date.now();
-    localStorage.setItem(
-      LOCAL_STORAGE_KEY_NAME,
-      this.lastCheckCanReportTime.toString()
-    );
+    if (typeof window !== 'undefined') {
+      localStorage.setItem(
+        LOCAL_STORAGE_KEY_NAME,
+        this.lastCheckCanReportTime.toString()
+      );
+    }
   }
 
   /**
