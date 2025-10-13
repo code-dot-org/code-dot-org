@@ -6,10 +6,11 @@ import {html} from '@codemirror/lang-html';
 import {javascript} from '@codemirror/lang-javascript';
 import {markdown} from '@codemirror/lang-markdown';
 import {LanguageSupport} from '@codemirror/language';
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useMemo, useState} from 'react';
 
 import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
 import {LabProps, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
+import experiments from '@cdo/apps/util/experiments';
 
 import {ResponseSchemaSettings} from '../aichat/types';
 import {useSource} from '../codebridge/hooks/useSource';
@@ -144,16 +145,25 @@ const Weblab2View: React.FC<
   }, [dispatch, levelProperties?.initialViewMode]);
 
   // TODO: put this behind a flag
-  const aiTutorResponseSchemaSettings: ResponseSchemaSettings = {
-    jsonSchema: aiTutorResponseJsonSchema,
-    responseCallback: (response: string) => {
-      console.log('hi from response callback');
-      console.log({response});
-      // TODO: send code to the appropriate place
-      const jsonResponse = JSON.parse(response);
-      return jsonResponse.explanation;
-    },
-  };
+  const aiTutorResponseSchemaSettings: ResponseSchemaSettings | undefined =
+    useMemo(() => {
+      if (
+        experiments.isEnabledAllowingQueryString(
+          experiments.WEBLAB2_ACCEPT_REJECT
+        )
+      ) {
+        return {
+          jsonSchema: aiTutorResponseJsonSchema,
+          responseCallback: (response: string) => {
+            console.log('hi from response callback');
+            console.log({response});
+            // TODO: send code to the appropriate place
+            const jsonResponse = JSON.parse(response);
+            return jsonResponse.explanation;
+          },
+        };
+      }
+    }, []);
 
   return (
     <div className={moduleStyles.weblab2Container}>
