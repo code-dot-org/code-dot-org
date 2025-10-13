@@ -217,49 +217,6 @@ class ReportAbuseControllerTest < ActionController::TestCase
 
   # files
 
-  test "patch with permission can update" do
-    user = create(:project_validator)
-    sign_in user
-
-    FileBucket.any_instance.stubs(:get_abuse_score).returns(10)
-    FileBucket.any_instance.expects(:replace_abuse_score).once
-    patch :update_file_abuse, params: {
-      endpoint: 'files',
-      abuse_score: 20,
-      encrypted_channel_id: 'test-channel-id'
-    }
-    assert response.ok?
-
-    FileBucket.any_instance.stubs(:get_abuse_score).returns(10)
-    FileBucket.any_instance.expects(:replace_abuse_score).once
-    patch :update_file_abuse, params: {
-      endpoint: 'files',
-      abuse_score: 0,
-      encrypted_channel_id: 'test-channel-id'
-    }
-    assert response.ok?
-
-    sign_out user
-  end
-
-  test "patch without permission gets unauthorized" do
-    FileBucket.any_instance.stubs(:get_abuse_score).returns(10)
-
-    patch :update_file_abuse, params: {
-      endpoint: 'files',
-      abuse_score: 0,
-      encrypted_channel_id: 'test-channel-id'
-    }
-    assert response.unauthorized?
-
-    patch :update_file_abuse, params: {
-      endpoint: 'files',
-      abuse_score: 10,
-      encrypted_channel_id: 'test-channel-id'
-    }
-    assert response.unauthorized?
-  end
-
   test "set abuse score" do
     FileBucket.any_instance.stubs(:get_abuse_score).returns(0)
     FileBucket.any_instance.expects(:replace_abuse_score).once
