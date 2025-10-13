@@ -184,6 +184,7 @@ module AichatAiHelper
     # System prompt - array of strings or nil.
     retrieval_contexts = aichat_model_customizations['retrievalContexts']
 
+    # JSON schema or nil.
     json_schema = aichat_model_customizations['responseJsonSchema']
 
     usage_reporter = AichatAiUsageReporter.new(model_id, user_id, project_id, level_id)

@@ -12,7 +12,7 @@ import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
 import {LabProps, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 import experiments from '@cdo/apps/util/experiments';
 
-import {ResponseSchemaSettings} from '../aichat/types';
+import {JsonObjectSchema, ResponseSchemaSettings} from '../aichat/types';
 import {useSource} from '../codebridge/hooks/useSource';
 import {useAppDispatch, useAppSelector} from '../util/reduxHooks';
 
@@ -48,7 +48,7 @@ const defaultConfig: ConfigType = {
   },
 };
 
-const aiTutorResponseJsonSchema = {
+const aiTutorResponseJsonSchema: JsonObjectSchema = {
   type: 'object',
   properties: {
     code: {
