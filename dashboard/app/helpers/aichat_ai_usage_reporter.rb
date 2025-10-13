@@ -30,7 +30,7 @@ class AichatAiUsageReporter
     is_multimodal = message_and_file_counts[:withAssets] > 0
 
     log_payload = {
-      event: 'aichat_openai_usage',
+      event: 'aichat_usage',
       modelId: @model_id,
       multimodal: is_multimodal,
       usage: usage,
@@ -41,14 +41,14 @@ class AichatAiUsageReporter
       userId: @user_id
     }
 
-    CDO.log.info log_payload.to_json.to_s if DCDO.get('log_aichat_openai_usage', false)
+    CDO.log.info log_payload.to_json.to_s if DCDO.get('log_aichat_usage', false)
 
     metrics = [
       ['PromptTokens', prompt_tokens], ['CompletionTokens', completion_tokens],
       ['ThoughtTokens', thought_tokens], ['CachedTokens', cached_prompt_tokens]
     ].map do |key, value|
       {
-        metric_name: "AichatOpenaiRequest.#{key}",
+        metric_name: "AichatRequest.#{key}",
         modelId: @model_id,
         value: value,
         unit: 'Count',
