@@ -138,15 +138,6 @@ async function post(
   return sendRequest('POST', endpoint, body, useAuthenticityToken, headers);
 }
 
-async function patch(
-  endpoint: string,
-  body?: BodyInit,
-  useAuthenticityToken = false,
-  headers: Record<string, string> = {}
-): Promise<Response> {
-  return sendRequest('PATCH', endpoint, body, useAuthenticityToken, headers);
-}
-
 async function deleteRequest(
   endpoint: string,
   useAuthenticityToken = false,
@@ -166,6 +157,5 @@ export default {
   fetchJson,
   post,
   put,
-  patch,
   get,
 };

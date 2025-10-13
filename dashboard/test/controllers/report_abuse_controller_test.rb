@@ -216,6 +216,7 @@ class ReportAbuseControllerTest < ActionController::TestCase
   end
 
   # files
+
   test "patch with permission can update" do
     user = create(:project_validator)
     sign_in user

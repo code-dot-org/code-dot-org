@@ -116,10 +116,8 @@ class ReportAbuseController < ApplicationController
     end
 
     amount = type == 'flag' ? 15 : -15
-    channel_id = params[:channel_id]
-
     begin
-      value = Projects.new(get_storage_id).increment_abuse(channel_id, amount, current_user&.project_validator?)
+      value = Projects.new(get_storage_id).increment_abuse(params[:channel_id], amount, current_user&.project_validator?)
     rescue ArgumentError, OpenSSL::Cipher::CipherError
       raise ActionController::BadRequest.new, "Bad channel_id"
     end
