@@ -25,15 +25,6 @@ class AichatAiUsageReporter
 
     report_token_usage(prompt_tokens)
 
-    # Calculate costs.
-    input_rate = 0.15 / 1_000_000 # $0.15 per million tokens.
-    cached_input_rate = 0.075 / 1_000_000 # $0.075 per million tokens.
-    output_rate = 0.60 / 1_000_000 # $0.60 per million tokens.
-
-    input_cost = (prompt_tokens * input_rate) + (cached_prompt_tokens * cached_input_rate)
-    output_cost = completion_tokens * output_rate
-    total_cost = input_cost + output_cost
-
     message_and_file_counts = get_messages_and_files_counts(config, request, context)
     is_multimodal = message_and_file_counts[:withAssets] > 0
 
@@ -42,11 +33,6 @@ class AichatAiUsageReporter
       multimodal: is_multimodal,
       usage: usage,
       messages: message_and_file_counts,
-      cost: {
-        input: "$#{format("%.6f", input_cost)}",
-        output: "$#{format("%.6f", output_cost)}",
-        total: "$#{format("%.6f", total_cost)}"
-      },
       responseTime: response_time,
       levelId: @level_id,
       projectId: @project_id,
