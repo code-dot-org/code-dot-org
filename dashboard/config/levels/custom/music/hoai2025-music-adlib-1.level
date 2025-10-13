@@ -21,7 +21,8 @@
           ]
         },
         "variantCount": 3
-      }
+      },
+      "aiCodeGenerateExtraPrompt": "Choose drums, then bass."
     },
     "encrypted": "false",
     "offer_browser_tts": "false",

@@ -64,11 +64,12 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
     adlibOption ? '' : DefaultPrompt
   );
 
+  const useText = !!(levelProperties.levelData as MusicLevelData)
+    .aiCodeGenerateText;
+
   // Use legacy adlib ID, adlib object, or new adlib ID.
   const useAdlib =
-    !(levelProperties.levelData as MusicLevelData).aiCodeGenerateText &&
-    adlib &&
-    typeof adlib === 'string'
+    !useText && adlib && typeof adlib === 'string'
       ? adlibs[adlib]
       : adlib
       ? adlib
@@ -78,7 +79,7 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
 
   useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, () => {
     dispatch(setAiGenerateState('none'));
-    setPromptText(adlibOption ? '' : DefaultPrompt);
+    setPromptText(adlibOption ? '' : useText ? '' : DefaultPrompt);
   });
 
   useEffect(() => {
@@ -90,7 +91,13 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
 
     const pseudocode = await (useCache
       ? generateSongCache(adlibs, adlibOption || 'complex', packId, choices)
-      : generateSongAi(contextText, packId, promptText || ''));
+      : generateSongAi(
+          contextText,
+          packId,
+          promptText || '',
+          (levelProperties.levelData as MusicLevelData)
+            .aiCodeGenerateExtraPrompt
+        ));
 
     if (pseudocode) {
       const resultBlockly = generateBlocklyJson(pseudocode);
@@ -104,6 +111,7 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
     choices,
     contextText,
     dispatch,
+    levelProperties.levelData,
     packId,
     promptText,
     setPlaying,
@@ -198,15 +206,18 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
       {aiGenerateState === 'none' && (
         <>
           {!useAdlib && (
-            <textarea
-              id="generate-description"
-              onChange={evt => {
-                setPromptText(evt.target.value);
-              }}
-              value={promptText}
-              rows={4}
-              className={styles.textArea}
-            />
+            <>
+              <div>Please describe the song you'd like to make.</div>
+              <textarea
+                id="generate-description"
+                onChange={evt => {
+                  setPromptText(evt.target.value);
+                }}
+                value={promptText}
+                rows={4}
+                className={styles.textArea}
+              />
+            </>
           )}
           {useAdlib && (
             <Adlib
