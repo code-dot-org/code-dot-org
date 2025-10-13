@@ -41,6 +41,7 @@ const extraMeasures = 8;
 
 interface TimelineProps {
   allowChangeStartingPlayheadPosition?: boolean;
+  danceMove?: string;
   isPredictLevel?: boolean;
 }
 
@@ -49,6 +50,7 @@ interface TimelineProps {
  */
 const Timeline: React.FunctionComponent<TimelineProps> = ({
   allowChangeStartingPlayheadPosition,
+  danceMove,
   isPredictLevel,
 }) => {
   const isPlaying = useMusicSelector(state => state.music.isPlaying);
@@ -329,7 +331,11 @@ const Timeline: React.FunctionComponent<TimelineProps> = ({
       </div>
       {loopEnabled && <LoopMarkers loopStart={loopStart} loopEnd={loopEnd} />}
       <div className={moduleStyles.dancerCanvasContainer}>
-        <DancerCanvas size={availableHeight} measurePosition={positionToUse} />
+        <DancerCanvas
+          size={availableHeight}
+          measurePosition={positionToUse}
+          move={danceMove}
+        />
       </div>
     </div>
   );

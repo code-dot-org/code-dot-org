@@ -30,6 +30,7 @@ export interface MusicLevelData extends ProjectLevelData {
   aiCodeGenerateAdlibId?: string;
   // Alternatively, an actual adlib object to display.
   aiCodeGenerateAdlib?: AdlibType;
+  danceMove?: string;
 }
 
 export type ExemplarValidationMode = 'default' | 'type';
