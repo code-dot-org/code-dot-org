@@ -11,10 +11,7 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {lab2EntryPoints} from '../../../lab2EntryPoints';
 
-const useThemeSetting = (
-  appName: AppName,
-  changeAnalyticsEventLabel: string = EVENTS.LAB2_THEME_CHANGE
-) => {
+const useThemeSetting = (appName: AppName) => {
   const {signInState} = useAppSelector(state => state.currentUser);
 
   // We need to set the theme here because the dropdown is rendered in a portal outside the
@@ -38,7 +35,7 @@ const useThemeSetting = (
     if (signInState === SignInState.SignedIn) {
       new UserPreferences().setGlobalTheme(value);
     }
-    sendCodebridgeAnalyticsEvent(changeAnalyticsEventLabel, appName, {
+    sendCodebridgeAnalyticsEvent(EVENTS.LAB2_THEME_CHANGE, appName, {
       theme: value,
     });
   };

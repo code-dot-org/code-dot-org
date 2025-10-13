@@ -149,7 +149,7 @@ export function useCodebridgeSettings(): Setting[] {
           },
         ]
       : []),
-    useThemeSetting(appName, EVENTS.CODEBRIDGE_THEME_CHANGE),
+    useThemeSetting(appName),
     ...(!widgetView && hasBothLayouts
       ? [
           {
