@@ -42,7 +42,6 @@ const AiTutor2Chat: React.FunctionComponent<AiTutor2ChatProps> = ({
   aiTutorSystemPromptName,
   aiTutorResponseSchemaSettings,
 }) => {
-  // TODO: update hook to use schema settings
   const {modelParameters, loading} = useAiTutorModelParameters({
     aiTutorSystemPromptName,
     aiTutorJsonScema: aiTutorResponseSchemaSettings?.jsonSchema,

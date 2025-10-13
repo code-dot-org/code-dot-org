@@ -54,6 +54,8 @@ interface ChatWorkspaceProps {
   levelName?: string;
   hasStarterAssets?: boolean;
 
+  // Optional callback to process the model's response before it is recorded in chat
+  // history (useful for structured outputs).
   responseCallback?: (response: string) => string;
 }
 
