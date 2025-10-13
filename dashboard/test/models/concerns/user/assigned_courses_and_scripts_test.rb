@@ -3,17 +3,17 @@ require 'test_helper'
 class AssignedCoursesAndScripts < ActiveSupport::TestCase
   include Minitest::RSpecMocks
 
-  let(:student) {create(:student)}
+  let(:assigned_student) {create(:student)}
   let(:teacher) {create(:teacher)}
   let(:section) {create(:section, user_id: teacher.id, unit_group: unit_group)}
   let(:unit_group) {create(:unit_group, name: 'course')}
 
   before do
-    Follower.create!(section_id: section.id, student_user_id: student.id, user: teacher)
+    Follower.create!(section_id: section.id, student_user_id: assigned_student.id, user: teacher)
   end
 
   describe '#assigned_courses' do
-    subject(:assigned_courses) {student.assigned_courses}
+    subject(:assigned_courses) {assigned_student.assigned_courses}
     context 'when the student is assigned to a course' do
       it 'returns the course data for the assigned course' do
         _(assigned_courses.length).must_equal 1
@@ -25,22 +25,21 @@ class AssignedCoursesAndScripts < ActiveSupport::TestCase
   describe '#assigned_course?' do
     context 'when the student is assigned to the course' do
       it 'returns true' do
-        _(student.assigned_course?(unit_group)).must_equal true
+        _(assigned_student.assigned_course?(unit_group)).must_equal true
       end
     end
 
     context 'when the student is not assigned to the course' do
       let(:another_course) {create(:unit_group, name: 'another-course')}
       it 'returns false' do
-        _(student.assigned_course?(another_course)).must_equal false
+        _(assigned_student.assigned_course?(another_course)).must_equal false
       end
     end
   end
 
   describe '#courses_as_participant' do
-    subject(:courses_as_participant) {student.courses_as_participant}
-
     context 'when the student is assigned a course' do
+      subject(:courses_as_participant) {assigned_student.courses_as_participant}
       it 'returns the course as a participant' do
         _(courses_as_participant.length).must_equal 1
         _(courses_as_participant.first.name).must_equal 'course'
@@ -49,7 +48,7 @@ class AssignedCoursesAndScripts < ActiveSupport::TestCase
   end
 
   describe '#any_visible_assigned_scripts?' do
-    subject(:any_visible_assigned_scripts?) {student.any_visible_assigned_scripts?}
+    subject(:any_visible_assigned_scripts?) {assigned_student.any_visible_assigned_scripts?}
     let(:visible_script) {create(:script, :in_single_unit_course, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)}
     let(:hidden_script) {create(:script, :in_single_unit_course, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta)}
 
@@ -61,8 +60,8 @@ class AssignedCoursesAndScripts < ActiveSupport::TestCase
 
     context 'when the student has assigned scripts' do
       before do
-        student.assign_script(visible_script)
-        student.assign_script(hidden_script)
+        assigned_student.assign_script(visible_script)
+        assigned_student.assign_script(hidden_script)
       end
 
       it 'returns true if there are visible scripts' do
@@ -71,7 +70,7 @@ class AssignedCoursesAndScripts < ActiveSupport::TestCase
     end
 
     context 'when the student has only hidden scripts' do
-      before {student.assign_script(hidden_script)}
+      before {assigned_student.assign_script(hidden_script)}
       it 'returns false' do
         _(any_visible_assigned_scripts?).must_equal false
       end
