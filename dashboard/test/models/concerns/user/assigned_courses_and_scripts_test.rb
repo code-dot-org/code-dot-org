@@ -5,8 +5,8 @@ class AssignedCoursesAndScripts < ActiveSupport::TestCase
 
   let(:assigned_student) {create(:student)}
   let(:teacher) {create(:teacher)}
-  let(:section) {create(:section, user_id: teacher.id, unit_group: unit_group)}
-  let(:unit_group) {create(:unit_group, name: 'course')}
+  let(:assigned_course) {create(:single_unit_course)}
+  let(:section) {create(:section, user_id: teacher.id, unit_group: assigned_course)}
 
   before do
     Follower.create!(section_id: section.id, student_user_id: assigned_student.id, user: teacher)
@@ -17,7 +17,7 @@ class AssignedCoursesAndScripts < ActiveSupport::TestCase
     context 'when the student is assigned to a course' do
       it 'returns the course data for the assigned course' do
         _(assigned_courses.length).must_equal 1
-        _(assigned_courses.first[:name]).must_equal 'course'
+        _(assigned_courses.first[:name]).must_equal assigned_course.name
       end
     end
   end
@@ -25,14 +25,14 @@ class AssignedCoursesAndScripts < ActiveSupport::TestCase
   describe '#assigned_course?' do
     context 'when the student is assigned to the course' do
       it 'returns true' do
-        _(assigned_student.assigned_course?(unit_group)).must_equal true
+        _(assigned_student.assigned_course?(assigned_course)).must_equal true
       end
     end
 
     context 'when the student is not assigned to the course' do
-      let(:another_course) {create(:unit_group, name: 'another-course')}
+      let(:another_unit_group) {create(:single_unit_course)}
       it 'returns false' do
-        _(assigned_student.assigned_course?(another_course)).must_equal false
+        _(assigned_student.assigned_course?(another_unit_group)).must_equal false
       end
     end
   end
@@ -42,7 +42,7 @@ class AssignedCoursesAndScripts < ActiveSupport::TestCase
       subject(:courses_as_participant) {assigned_student.courses_as_participant}
       it 'returns the course as a participant' do
         _(courses_as_participant.length).must_equal 1
-        _(courses_as_participant.first.name).must_equal 'course'
+        _(courses_as_participant.first.name).must_equal assigned_course.name
       end
     end
   end
@@ -82,17 +82,15 @@ class AssignedCoursesAndScripts < ActiveSupport::TestCase
     let(:single_unit_course) {create(:single_unit_course)}
     let(:single_script) {single_unit_course.first_unit}
     let(:section_1) {create(:section, script: single_script, unit_group: single_unit_course)}
-    let(:section_2) {create(:section, unit_group: unit_group)}
-    let(:unit_group_unit) {create(:script)}
+    let(:section_2) {create(:section, unit_group: assigned_course)}
     before do
-      create(:unit_group_unit, unit_group: unit_group, script: unit_group_unit, position: 1)
       section_1.students << user
       section_2.students << user
     end
     describe '#assigned_script?' do
       context 'when the user is assigned a script' do
         subject(:assigned_script?) {user.assigned_script?(single_script)}
-        subject(:assigned_script_course?) {user.assigned_script?(unit_group.first_unit)}
+        subject(:assigned_script_course?) {user.assigned_script?(assigned_course.first_unit)}
 
         it 'returns true' do
           _(assigned_script?).must_equal true
@@ -117,7 +115,7 @@ class AssignedCoursesAndScripts < ActiveSupport::TestCase
         it 'returns all assigned and default scripts' do
           _(section_scripts.length).must_equal 2
           _(section_scripts).must_include single_script
-          _(section_scripts).must_include unit_group_unit
+          _(section_scripts).must_include assigned_course.first_unit
         end
       end
     end
@@ -126,17 +124,15 @@ class AssignedCoursesAndScripts < ActiveSupport::TestCase
   describe '#most_recently_assigned_unit_group_unit' do
     let(:user) {create(:student)}
     let(:section_1) {create(:section, unit_group: unit_group)}
-    let(:unit_group_unit) {create(:script)}
     subject(:most_recently_assigned_unit_group_unit) {user.most_recently_assigned_unit_group_unit}
 
     before do
-      create(:unit_group_unit, unit_group: unit_group, script: unit_group_unit, position: 1)
-      user.assign_script(unit_group_unit)
+      user.assign_script(assigned_course.first_unit)
     end
 
     context 'when the user has assigned scripts' do
       it 'returns the most recently assigned unit group unit' do
-        _(user.most_recently_assigned_unit_group_unit).must_equal unit_group.default_unit_group_units.first
+        _(user.most_recently_assigned_unit_group_unit).must_equal assigned_course.default_unit_group_units.first
       end
     end
 
