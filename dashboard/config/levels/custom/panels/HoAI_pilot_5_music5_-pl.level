@@ -1,0 +1,47 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-10-08T22:02:14.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "###BEHIND THE SCENES\nHow does AI generate new code that plays music?",
+        "imageUrl": "",
+        "key": "Generate_dancer_info-e349bed8-89d6-4efc-8a0e-29b8a1e5afb1"
+      },
+      {
+        "text": "Large language models (LLMs), like ChatGPT or GitHub Copilot, are trained on massive amounts of text and code from the internet. The model doesn’t “understand” in the human sense — instead, it’s very good at predicting what comes next.",
+        "imageUrl": "",
+        "key": "HoAI_pilot_5_music5_-pl-a5229c55-6af9-4a94-bf77-1a9e2cbe4bd3"
+      },
+      {
+        "text": "The model breaks everything it sees (words, symbols, code, even music notes) into tiny units called **tokens**.",
+        "imageUrl": "",
+        "key": "HoAI_pilot_5_music5_-pl-852ea94e-3243-42bd-8e0a-4d566116d89d"
+      },
+      {
+        "text": "It learns patterns: which tokens usually follow others, like “once upon a” → “time.”",
+        "imageUrl": "",
+        "key": "HoAI_pilot_5_music5_-pl-8216f3e4-080f-4c99-85fc-ff1bc19bf702"
+      },
+      {
+        "text": "When you give it a prompt (e.g., “make a song with drums and guitar”), it predicts one token at a time, assembling them into code that plays music.",
+        "imageUrl": "",
+        "key": "HoAI_pilot_5_music5_-pl-eb845d60-dca9-4e70-a82f-7e3351d2199a"
+      },
+      {
+        "text": "This same process powers many AI tools, whether they’re generating paragraphs of text, blocks of code, or sequences of sounds. It’s not magic—it’s advanced pattern recognition at a massive scale.",
+        "imageUrl": "",
+        "key": "HoAI_pilot_5_music5_-pl-637bce25-3d02-4922-ace4-dd63b8029e77"
+      }
+    ],
+    "name_suffix": "_-pl"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-10-08T22:02:14.433+00:00\",\"changed\":[\"cloned from \\\"HoAI_pilot_5_music5\\\"\"],\"cloned_from\":\"HoAI_pilot_5_music5\"},{\"changed_at\":\"2025-10-08 22:29:06 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"}]"
+}]]></config>
+</Panels>

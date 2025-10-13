@@ -149,7 +149,7 @@ class TestController < ApplicationController
     section.students << user
     section.save!
 
-    user.assign_script(unit) if unit
+    user.assign_script(unit, course) if unit
 
     head :ok
   end
@@ -167,7 +167,7 @@ class TestController < ApplicationController
     section = teacher.sections[params.require(:section_position).to_i - 1]
     section.update!(unit_group: unit_group, script: unit)
     section.students.each do |student|
-      student.assign_script(unit)
+      student.assign_script(unit, unit_group)
     end
 
     head :ok
@@ -419,9 +419,18 @@ class TestController < ApplicationController
   end
 
   def complete_unit
-    unit_name = params.require(:unit_name)
-    unit = Unit.find_by!(name: unit_name)
-    UserScript.create!(user: current_user, script: unit, completed_at: Time.now)
+    course_name = params.require(:course_name)
+    unit_position = params.require(:unit_position).to_i
+    course_context = Queries::Courses.get_unit_context(course_name, unit_position)
+    unit_group = course_context[:unit_group]
+    unit_group_unit = course_context[:unit_group_unit]
+    raise "Unit not found for course #{unit_group.name} at position #{unit_position}" unless unit_group_unit
+    UserScript.create!(
+      user: current_user,
+      script: unit_group_unit.script,
+      unit_group: unit_group,
+      completed_at: Time.now
+    )
     head :ok
   end
 

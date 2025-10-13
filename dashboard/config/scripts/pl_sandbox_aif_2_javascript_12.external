@@ -3,39 +3,71 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# what is JavaScript?
+# What is JavaScript?
 
-JavaScript (JS) is the language that makes a webpage interactive.
-If HTML is the structure and CSS is the style, then JavaScript is the brain—it controls behavior, logic, and actions.
-Key things JavaScript does
-Responds to user actions (like clicks, typing, or scrolling)
-Updates the page without reloading (dynamic content)
-Connects to and uses data (e.g., updating a shopping cart)
-Adds interactivity, like pop-ups, animations, or calculators
-Example image of code and output 
-Explanation of the Tags
-<button> → Creates a clickable button on the page.
-onclick="sayHello()" → Tells the button to run the sayHello function when clicked.
-<script> ... </script> → Where JavaScript code goes inside an HTML page.
-function sayHello() { ... } → Defines a reusable block of code.
-alert("Hello, teacher!"); → Pops up a message box that says “Hello, teacher!”
+#### JavaScript (JS) is the language that makes a webpage interactive.
+
+#### If HTML is the structure and CSS is the style, then JavaScript is the brain—it controls behavior, logic, and actions.
+
+#### **Key things JavaScript does:**
+- #### Responds to user actions (like clicks, typing, or scrolling)
+- #### Updates the page without reloading (dynamic content)
+- #### Connects to and uses data (e.g., updating a shopping cart)
+- #### Adds interactivity, like pop-ups, animations, or calculators
 
 
-<img src="https://images.code.org/53e922f8a75ee840f0e7989d9cfdfd35-image-1736535595178.png" alt="A highlighter marking up a piece of paper" style="float: right; width: 15%; margin-left: 15px;">
+## Sample Code with HTML + CSS + JavaScript
 
-#### Abstraction is all about focusing on what matters and ignoring what doesn't. It is an essential and transferable computational thinking practice.
+#### Notice the addition of the interactive button. CSS is used to style the button and an interacitve event function makes a 
 
-#### In Music Lab, abstraction shows up when students reduce complexity in their songs, like grouping individual blocks to focus on structure like verses and choruses, or giving meaningful names to functions and sections. Learning to abstract doesn’t mean doing less, it means building readable and elegant code to solve a problem.
+ <div style="text-align: center;">
+    <img src="https://images.code.org/46d435908ac369aad8e1b10f86aff0e9-image-1759503682492.png" 
+         alt="sample code of a simple website with HTML CSS and JavaScript"
+         style="width:650px; border-radius:15px; box-shadow:0 6px 12px rgba(0,0,0,0.25);">
+  </div>
+  
+   <div style="text-align: center;">
+    <img src="https://images.code.org/f439cf50a9bb4cc733ff346954dde013-image-1759505377672.png" 
+         alt="sample code of a simple website with HTML CSS and JavaScript"
+         style="width:650px; border-radius:15px; box-shadow:0 6px 12px rgba(0,0,0,0.25);">
+  </div>
+  
+  <div style="clear:both;"></div>
+  <br>
+    
+   <div style="text-align: center;">
+    <img src="https://images.code.org/c3665e906951d22c367f7c0e72811dcb-image-1759505466083.png" 
+         alt="sample output of website"
+         style="width:650px; border-radius:15px; box-shadow:0 6px 12px rgba(0,0,0,0.25);">
+  </div>
 
----
+## What’s happening here:
 
-## 🧠 Prompts to Build Abstraction Skills
+* #### HTML layer → added a <button> with onclick="makeDogBark()".
 
-#### Use these questions to help students identify what’s essential in their song or code:
+* #### CSS layer → styled the button so it looks nice.
 
-* #### What’s the main goal of this section of your code?
-* #### Are there any parts you could group together?
-* #### Is anything distracting you from focusing on the most important sound or structure?
-* #### Could you give this section a name to make your code easier to understand?
-* #### If someone new read your code, would they know what it does, or could you simplify it?
+* #### JavaScript layer → function makeDogBark() shows an alert popup saying "Woof! Woof! 🐶".
+
+
+## In other words:
+* #### HTML = button exists
+
+* #### CSS = button looks good
+
+* #### JavaScript = button does something
+
+
+<div style="text-align: left;">
+    <img src="https://images.code.org/8347eb9717a55b91277116cceea55d10-image-1759505960693.png" 
+         alt="<button> → Creates a clickable button on the page.
+onclick=makeDogBark() → Tells the button to run the makeDogBark function when clicked.
+<script> ... </script> → The place inside your HTML where you can write JavaScript code.
+function makeDogBark() { ... } → Defines a reusable block of code that runs when called.
+alert(Woof! Woof! 🐶); → Pops up a message box that says Woof! Woof! 🐶 when the function is triggered."
+         style="width:800px; display:block; margin-bottom:20px; border-radius:12px; box-shadow:0 6px 12px rgba(0,0,0,0.25);">
+    
+
+
+
 MARKDOWN

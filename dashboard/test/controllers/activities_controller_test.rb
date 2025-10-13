@@ -50,6 +50,9 @@ class ActivitiesControllerTest < ActionController::TestCase
     create(:lesson_group, lessons: [@lesson], script: @script)
     @level = @script_level.level
 
+    @playlab_script_level = create(:script_level, :playlab)
+    @playlab_script = @playlab_script_level.script
+
     @blank_image = File.read('test/fixtures/artist_image_blank.png', binmode: true)
     @good_image = File.read('test/fixtures/artist_image_1.png', binmode: true)
     @another_good_image = File.read('test/fixtures/artist_image_2.png', binmode: true)
@@ -210,6 +213,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     params = @milestone_params
     params[:script_level_id] = @script_level.id
+    params[:course_id] = @script.original_unit_group_id
 
     user_level = UserLevel.create(level: @script_level.level, user: @user, script: @script_level.script, time_spent: 30)
 
@@ -230,6 +234,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     params = @milestone_params.dup
     params[:script_level_id] = @script_level.id
+    params[:course_id] = @script.original_unit_group_id
     params[:timeSinceLastMilestone] = 4_000_000
 
     user_level = UserLevel.create(level: @script_level.level, user: @user, script: @script_level.script)
@@ -249,6 +254,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     level2 = create(:maze, name: 'level 2')
     script_level = create(:script_level, levels: [level1, level2])
     params[:script_level_id] = script_level.id
+    params[:course_id] = script_level.script.original_unit_group_id
     params[:level_id] = level1.id
     params[:result] = 'true'
 
@@ -263,6 +269,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     level2 = create(:maze, name: 'level 2')
     script_level = create(:script_level, levels: [level1, level2])
     params[:script_level_id] = script_level.id
+    params[:course_id] = script_level.script.original_unit_group_id
     params[:level_id] = level2.id
     params[:result] = 'true'
 
@@ -275,7 +282,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     # do all the logging
     @controller.expects :log_milestone
 
-    UserScript.create(user: @user, script: @script_level.script)
+    UserScript.create(user: @user, script: @script, unit_group: @script.get_original_unit_group)
     UserLevel.create(level: @script_level.level, user: @user, script: @script_level.script)
 
     assert_creates(LevelSource) do
@@ -777,7 +784,8 @@ class ActivitiesControllerTest < ActionController::TestCase
       assert_does_not_create(LevelSource) do
         post :milestone,
           params: @milestone_params.merge(
-            script_level_id: create(:script_level, :playlab).id,
+            script_level_id: @playlab_script_level.id,
+            course_id: @playlab_script.original_unit_group_id,
             program: studio_program_with_text('scheiße')
           )
       end
@@ -795,7 +803,8 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_creates(LevelSource) do
       post :milestone,
         params: @milestone_params.merge(
-          script_level_id: create(:script_level, :playlab).id,
+          script_level_id: @playlab_script_level.id,
+          course_id: @playlab_script.original_unit_group_id,
           program: studio_program_with_text('shit')
         )
     end
@@ -815,7 +824,8 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_creates(LevelSource) do
       post :milestone,
         params: @milestone_params.merge(
-          script_level_id: create(:script_level, :playlab).id,
+          script_level_id: @playlab_script_level.id,
+          course_id: @playlab_script.original_unit_group_id,
           program: studio_program_with_text('shit')
         )
     end
@@ -836,7 +846,8 @@ class ActivitiesControllerTest < ActionController::TestCase
       assert_does_not_create(LevelSource) do
         post :milestone,
           params: @milestone_params.merge(
-            script_level_id: create(:script_level, :playlab).id,
+            script_level_id: @playlab_script_level.id,
+            course_id: @playlab_script.original_unit_group_id,
             program: studio_program_with_text('putamadre')
           )
       end
@@ -850,7 +861,8 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_does_not_create(LevelSource) do
       post :milestone,
         params: @milestone_params.merge(
-          script_level_id: create(:script_level, :playlab).id,
+          script_level_id: @playlab_script_level.id,
+          course_id: @playlab_script.original_unit_group_id,
           program: studio_program_with_text('800-555-5555')
         )
     end
@@ -868,12 +880,12 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   test 'sharing when gatekeeper has disabled sharing does not work' do
-    script_level = create(:script_level, :playlab)
-    Gatekeeper.set('shareEnabled', where: {script_name: script_level.script.name}, value: false)
+    Gatekeeper.set('shareEnabled', where: {script_name: @playlab_script.name}, value: false)
 
     post :milestone,
       params: @milestone_params.merge(
-        script_level_id: script_level.id,
+        script_level_id: @playlab_script_level.id,
+        course_id: @playlab_script.original_unit_group_id,
         program: studio_program_with_text('hey some text')
       )
 
@@ -890,7 +902,8 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     post :milestone,
       params: @milestone_params.merge(
-        script_level_id: create(:script_level, :playlab).id,
+        script_level_id: @playlab_script_level.id,
+        course_id: @playlab_script.original_unit_group_id,
         program: studio_program_with_text('hey some text')
       )
 
@@ -910,7 +923,8 @@ class ActivitiesControllerTest < ActionController::TestCase
     last_level_in_first_lesson = script.lessons.first.script_levels.last
     post :milestone,
       params: @milestone_params.merge(
-        script_level_id: last_level_in_first_lesson.id
+        script_level_id: last_level_in_first_lesson.id,
+        course_id: last_level_in_first_lesson.script.original_unit_group_id
       )
     assert_response :success
     response = JSON.parse(@response.body)
@@ -930,6 +944,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     post :milestone,
       params: @milestone_params.merge(
         script_level_id: script_level.id,
+        course_id: script_level.script.original_unit_group_id,
         level_id: level1a.id
       )
     response = JSON.parse(@response.body)
@@ -1130,18 +1145,26 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_nil AssessmentActivity.find_by(user_id: @user, level_id: @script_level.id, script_id: @script_level.script.id)
 
     assessment_script_level = create(:script_level, assessment: true)
-    post :milestone, params: @milestone_params.merge(script_level_id: assessment_script_level.id)
+    post :milestone, params: @milestone_params.merge(
+      script_level_id: assessment_script_level.id,
+      course_id: assessment_script_level.script.original_unit_group_id
+    )
     assert_nil AssessmentActivity.find_by(user_id: @user, level_id: assessment_script_level.level.id, script_id: assessment_script_level.script.id)
 
     multi_level = create(:multi)
 
     multi_sl = create(:script_level, levels: [multi_level])
-    post :milestone, params: @milestone_params.merge(script_level_id: multi_sl.id)
+    post :milestone, params: @milestone_params.merge(
+      script_level_id: multi_sl.id,
+      course_id: multi_sl.script.original_unit_group_id
+    )
     assert_nil AssessmentActivity.find_by(user_id: @user, level_id: multi_sl.level.id, script_id: multi_sl.script.id)
 
     assessment_multi_sl = create(:script_level, levels: [multi_level], assessment: true)
     milestone_params = @milestone_params.merge(
-      script_level_id: assessment_multi_sl.id, program: '0'
+      script_level_id: assessment_multi_sl.id,
+      course_id: assessment_multi_sl.script.original_unit_group_id,
+      program: '0',
     )
     post :milestone, params: milestone_params
     assessment_activity = AssessmentActivity.find_by(
@@ -1174,6 +1197,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     script_level = create(:script_level, levels: [level_group], assessment: true)
     post :milestone, params: @milestone_params.merge(
       script_level_id: script_level.id,
+      course_id: script_level.script.original_unit_group_id,
       level_id: multi_sublevel.id
     )
     assert_nil AssessmentActivity.find_by(user_id: @user, level_id: multi_sublevel.id)

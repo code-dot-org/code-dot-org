@@ -69,7 +69,7 @@ export default function Congrats(props) {
    */
   const getExtraLinkData = (language, tutorial, currentDate) => {
     // https://codedotorg.atlassian.net/browse/P20-1635
-    const codingPartyStart = new Date('2025-10-15:00:00+09:00');
+    const codingPartyStart = new Date('2025-10-13:00:00+09:00');
     const codingPartyEnd = new Date('2025-11-25:00:00+09:00');
     const codingPartyActive =
       codingPartyStart <= currentDate && currentDate < codingPartyEnd;

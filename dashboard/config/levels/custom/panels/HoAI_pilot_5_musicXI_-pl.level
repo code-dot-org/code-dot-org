@@ -1,0 +1,42 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-10-08T22:33:00.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "###BEHIND THE SCENES\nIn Music & Dance with AI, students can regenerate the dancer, music, or dance if they want a new version. While this looks like “try again,” it models a bigger idea: iteration is part of how we work with AI.\n\nHere’s what’s happening in real AI systems:\n",
+        "imageUrl": "",
+        "key": "Generate_dancer_info-e349bed8-89d6-4efc-8a0e-29b8a1e5afb1"
+      },
+      {
+        "text": "Probabilistic Outputs – AI models don’t produce the same answer every time. They sample from many possible options, which is why the same prompt can give varied results.",
+        "imageUrl": "",
+        "key": "HoAI_pilot_5_musicXI_-pl-8a94a9c7-b987-4fc6-9789-d9132de2fa9d"
+      },
+      {
+        "text": "Temperature & Sampling – Technical settings like “temperature” control how random or conservative outputs are. A low temperature gives safer, more predictable results; a high temperature leads to more creative, but sometimes messy, results.",
+        "imageUrl": "",
+        "key": "HoAI_pilot_5_musicXI_-pl-7b8af0c7-0223-4c0f-9719-81f37d0affaa"
+      },
+      {
+        "text": "Human Oversight – Because AI outputs are probabilistic, human judgment is essential. Users decide when to accept, reject, or iterate on an output.",
+        "imageUrl": "",
+        "key": "HoAI_pilot_5_musicXI_-pl-64f9ac9e-f602-409d-be29-7abdfb3b7bfc"
+      },
+      {
+        "text": "Regeneration is a perfect discussion moment. Encourage students to see it not as failure, but as part of creative exploration. In practice, working with AI means experimenting, comparing versions, and making thoughtful choices — skills that align closely with growth mindset and critical thinking.",
+        "imageUrl": "",
+        "key": "HoAI_pilot_5_musicXI_-pl-bfa8299f-37d4-427a-9ab0-0e9b893777d4"
+      }
+    ],
+    "name_suffix": "_-pl"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-10-08T22:33:00.216+00:00\",\"changed\":[\"cloned from \\\"HoAI_pilot_5_musicX_-pl\\\"\"],\"cloned_from\":\"HoAI_pilot_5_musicX_-pl\"},{\"changed_at\":\"2025-10-08 22:34:01 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"}]"
+}]]></config>
+</Panels>

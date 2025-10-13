@@ -3091,7 +3091,7 @@
     "long_instructions": "This level shares a template level with Level 4 in this script. It uses AI Tutor \"Suggest\" mode."
   },
   "https://studio.code.org/s/allthethings/lessons/51/levels/4": {
-    "long_instructions": "This level shares a template level with Level 3 in this script. It lets you pick from all AI Tutor modes."
+    "long_instructions": "This level shares a template level with Level 3 in this script. It uses AI tutor mode \"guide\"."
   },
   "https://studio.code.org/s/allthethings/lessons/51/levels/5": {
     "long_instructions": "## Web Lab 2 Lab Widget View\n\nThis is an example of widget view without toggle to view/hide code so workspace is always hidden."
@@ -3110,6 +3110,9 @@
   },
   "https://studio.code.org/s/allthethings/lessons/51/levels/10": {
     "long_instructions": "Add **html** pages and preview them in the right pane.\n\nAdd **css** pages (and link them to your html).\n\nUse the file browser to add/rename/delete files, or to add/rename/delete folders (including hierarchically!)\n\nThis level uses all of AI Tutor modes. For now, it is the last level of the progression. "
+  },
+  "https://studio.code.org/s/allthethings/lessons/51/levels/11": {
+    "long_instructions": "This is the level for a basic Web Lab 2 UI Test.\nPlease do not change the start code for this level without changing the UI test!"
   },
   "https://studio.code.org/s/allthethings/lessons/52/levels/1": {
     "long_instructions": "Try everything!"
@@ -3292,5 +3295,8 @@
   },
   "https://studio.code.org/s/allthethings/lessons/54/levels/1": {
     "long_instructions": "This is the first allthethings level for Sketch Lab!"
+  },
+  "https://studio.code.org/s/allthethings/lessons/54/levels/2": {
+    "long_instructions": "This level has some starter \"code\" (ie, an image, text, and a shape) as well as an exemplar solution."
   }
 }

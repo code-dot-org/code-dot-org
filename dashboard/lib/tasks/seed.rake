@@ -86,7 +86,7 @@ namespace :seed do
     ui-test-single-unit-2025
     ui-test-single-unit-2026
     ui-test-unnumbered-lessons
-  ).map {|script| "test/ui/config/scripts_json/#{script}.script_json"}.freeze
+  ).map {|script| "#{CURRICULUM_CONTENT_DIR}/test/ui/config/scripts_json/#{script}.script_json"}.freeze
   UI_TEST_SCRIPTS = SPECIAL_UI_TEST_SCRIPTS + %w(
     20-hour
     algebra
@@ -161,7 +161,7 @@ namespace :seed do
     oceans
     sports
     jigsaw
-  ).map {|script| "config/scripts_json/#{script}.script_json"}.freeze
+  ).map {|script| "#{CURRICULUM_CONTENT_DIR}/config/scripts_json/#{script}.script_json"}.freeze
 
   # To improve adhoc start time, we only seed the most recent year of our common curriculum
   # Each year we should update this list and :courses_adhoc
@@ -205,7 +205,7 @@ namespace :seed do
     csa8-2024
     csa9-2024
     csa-postap-se-and-computer-vision-2024
-  ).map {|script| "config/scripts_json/#{script}.script_json"}.freeze
+  ).map {|script| "#{CURRICULUM_CONTENT_DIR}/config/scripts_json/#{script}.script_json"}.freeze
   ADHOC_SCRIPTS = MOST_RECENT_ADHOC_SCRIPTS + %w(
     algebra
     allthehiddenthings
@@ -231,7 +231,7 @@ namespace :seed do
     step
     oceans
     sports
-  ).map {|script| "config/scripts_json/#{script}.script_json"}.freeze
+  ).map {|script| "#{CURRICULUM_CONTENT_DIR}/config/scripts_json/#{script}.script_json"}.freeze
   SEEDED = "#{CURRICULUM_CONTENT_DIR}/config/scripts/.seeded".freeze
 
   # Update scripts in the database from their file definitions.
@@ -374,7 +374,7 @@ namespace :seed do
        oceans
        jigsaw
        sports).each do |course_name|
-      UnitGroup.load_from_path("config/courses/#{course_name}.course")
+      UnitGroup.load_from_path("#{CURRICULUM_CONTENT_DIR}/config/courses/#{course_name}.course")
     end
     %w(
       ui-test-course-2017
@@ -391,7 +391,7 @@ namespace :seed do
       ui-test-versioned-script-2019
       ui-test-unnumbered-lessons
     ).each do |course_name|
-      UnitGroup.load_from_path("test/ui/config/courses/#{course_name}.course")
+      UnitGroup.load_from_path("#{CURRICULUM_CONTENT_DIR}/test/ui/config/courses/#{course_name}.course")
     end
   end
 
@@ -404,7 +404,7 @@ namespace :seed do
       csa-2024
       original-allthethings-course
     ).each do |course_name|
-      UnitGroup.load_from_path("config/courses/#{course_name}.course")
+      UnitGroup.load_from_path("#{CURRICULUM_CONTENT_DIR}/config/courses/#{course_name}.course")
     end
   end
 
@@ -530,13 +530,13 @@ namespace :seed do
       ui-test-versioned-course
       ui-test-unnumbered-lessons
     ).each do |course_offering_name|
-      CourseOffering.seed_record("test/ui/config/course_offerings/#{course_offering_name}.json")
+      CourseOffering.seed_record("#{CURRICULUM_CONTENT_DIR}/test/ui/config/course_offerings/#{course_offering_name}.json")
     end
   end
 
   timed_task_with_logging course_offerings_adhoc: :environment do
     %w(csp csa csd coursea courseb coursec coursed coursee coursef).each do |course_offering_name|
-      CourseOffering.seed_record("config/course_offerings/#{course_offering_name}.json")
+      CourseOffering.seed_record("#{CURRICULUM_CONTENT_DIR}/config/course_offerings/#{course_offering_name}.json")
     end
   end
 
@@ -577,10 +577,16 @@ namespace :seed do
   end
 
   timed_task_with_logging sample_data: :environment do
+    # Make sure we see a helpful error message if run in the wrong environment, since autoloading
+    # this class could result in a cryptic error about missing gems.
+    raise "Should not be run outside of adhoc or development" unless [:adhoc, :development].include?(CDO.rack_env)
     SampleData.seed
   end
 
   timed_task_with_logging mega_section: :environment do
+    # Make sure we see a helpful error message if run in the wrong environment, since autoloading
+    # this class could result in a cryptic error about missing gems.
+    raise "Should not be run outside of adhoc or development" unless [:adhoc, :development].include?(CDO.rack_env)
     MegaSection.seed
   end
 
@@ -660,7 +666,7 @@ namespace :seed do
   timed_task_with_logging :import_pegasus_data do
     db = DASHBOARD_DB
     table_prefix = "google_sheets_shared_"
-    files_to_import = %w[data/cdo-languages.csv data/cdo-donors.csv]
+    files_to_import = %w[data/cdo-languages.csv]
     files_to_import.each {|file_to_import| CsvToSqlTable.new(pegasus_dir(file_to_import), db, table_prefix).import}
   end
 

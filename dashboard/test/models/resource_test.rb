@@ -71,7 +71,7 @@ class ResourceTest < ActiveSupport::TestCase
   test "summarize for lesson plan" do
     resource = create(:resource, key: 'my_key', name: 'test resource', url: 'test.url',  audience: 'Teacher', type: 'Activity Guide')
     assert_equal(
-      {id: resource.id, key: 'my_key', name: 'test resource', url: 'test.url', downloadUrl: nil, download_url: nil, audience: 'Teacher', type: 'Activity Guide'},
+      {id: resource.id, key: 'my_key', name: 'test resource', url: 'test.url', downloadUrl: nil, download_url: nil, audience: 'Teacher', embeddabilityType: 'embed_and_resource_dropdown', curriculumCategory: '', type: 'Activity Guide'},
       resource.summarize_for_lesson_plan
     )
   end
@@ -107,6 +107,9 @@ class ResourceTest < ActiveSupport::TestCase
     refute create(:resource, include_in_pdf: false, audience: 'Teacher').should_include_in_pdf?
     refute create(:resource, include_in_pdf: true, audience: 'Verified Teacher').should_include_in_pdf?
     refute create(:resource, include_in_pdf: false, audience: 'Verified Teacher').should_include_in_pdf?
+    assert create(:resource, include_in_pdf: true, audience: 'Teacher', embeddability_type: SharedConstants::RESOURCE_EMBEDDABILITY_OPTIONS[:EMBED_AND_RESOURCE_DROPDOWN][:value]).should_include_in_pdf?
+    assert create(:resource, include_in_pdf: true, audience: 'Teacher', embeddability_type: SharedConstants::RESOURCE_EMBEDDABILITY_OPTIONS[:RESOURCE_DROPDOWN_ONLY][:value]).should_include_in_pdf?
+    refute create(:resource, include_in_pdf: false, audience: 'Teacher', embeddability_type: SharedConstants::RESOURCE_EMBEDDABILITY_OPTIONS[:EMBED_ONLY][:value]).should_include_in_pdf?
   end
 
   test 'serialize scripts that resource is in' do
