@@ -2686,7 +2686,7 @@ columns:
     default: 
     default_function: 
     collation: 
-    comment:
+    comment: 
   google_sheets_shared_cdo_languages:
   - *5
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
@@ -10083,7 +10083,7 @@ indexes:
     where: 
     type: 
     using: :btree
-    comment:
+    comment: 
   google_sheets_shared_cdo_languages:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: google_sheets_shared_cdo_languages
@@ -14574,7 +14574,7 @@ indexes:
     type: :fulltext
     using: 
     comment: 
-version: 20251001182525
+version: 20251006144448
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 8
