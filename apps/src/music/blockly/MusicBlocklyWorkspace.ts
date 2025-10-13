@@ -887,4 +887,16 @@ export default class MusicBlocklyWorkspace {
     }
     this.workspace.undo(redo);
   }
+
+  // The toolbox remains in the DOM but can be made `display: none` to hide it.
+  setToolboxVisibility(visible: boolean) {
+    if (this.workspace) {
+      (this.workspace as GoogleBlockly.WorkspaceSvg)
+        .getToolbox()
+        ?.setVisible(visible);
+
+      //(this.workspace as GoogleBlockly.WorkspaceSvg).resizeContents();
+      Blockly.svgResize(this.workspace as GoogleBlockly.WorkspaceSvg);
+    }
+  }
 }

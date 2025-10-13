@@ -377,6 +377,10 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
               adlibOption={aiCodeGenerateAdlibOption}
               adlib={aiCodeGenerateAdlib}
               levelProperties={levelProperties}
+              setPlaying={setPlaying}
+              setToolboxVisibility={visible =>
+                blocklyWorkspace.setToolboxVisibility(visible)
+              }
             />
           )}
 

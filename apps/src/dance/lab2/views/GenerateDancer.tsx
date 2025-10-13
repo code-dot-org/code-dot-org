@@ -172,9 +172,11 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
     setAiGenerateState('done');
   }, [generateDancerCache]);
 
+  const glowSpeed = aiGenerateState === 'generating' ? 'fast' : 'normal';
+
   return (
     <div id="dance-lab" className={moduleStyles.dancerGenerate}>
-      <Guide id="generate-panel">
+      <Guide id="generate-panel" glowSpeed={glowSpeed}>
         <Heading5 className={moduleStyles.heading}> Use AI</Heading5>
         {(aiGenerateState === 'generating' || aiGenerateState === 'done') && (
           <div className={moduleStyles.textArea}>{adlibText}</div>

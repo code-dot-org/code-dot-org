@@ -27,7 +27,14 @@ export enum InstructionsPosition {
   RIGHT = 'RIGHT',
 }
 
-type AiGenerateState = 'none' | 'generating' | 'done';
+type AiGenerateState =
+  | 'none'
+  | 'generating'
+  | 'generated'
+  | 'listening'
+  | 'listened'
+  | 'edit'
+  | 'done';
 
 export interface MusicState {
   /** Current pack ID, if a specific restricted pack from the current music library is selected */

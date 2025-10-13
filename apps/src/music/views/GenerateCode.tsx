@@ -1,7 +1,6 @@
 import {Button} from '@code-dot-org/component-library/button';
-import {Heading5} from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
-import React, {useCallback, useState} from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
@@ -33,17 +32,22 @@ interface GenerateCodeProps {
   adlibOption?: string;
   adlib?: AdlibType;
   levelProperties: LevelProperties;
+  setPlaying: (play: boolean) => void;
+  setToolboxVisibility: (visible: boolean) => void;
 }
 
 const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
   adlibOption,
   adlib,
   levelProperties,
+  setPlaying,
+  setToolboxVisibility,
 }) => {
   const dispatch = useAppDispatch();
 
   const packId = useAppSelector(state => state.music.packId) || '';
   const aiGenerateState = useAppSelector(state => state.music.aiGenerateState);
+  const isPlaying = useAppSelector(state => state.music.isPlaying);
 
   const useCache = appConfig.getValue('ai-generate-cache') === 'true';
   const showFullContext =
@@ -72,6 +76,10 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
     dispatch(setAiGenerateState('none'));
   });
 
+  useEffect(() => {
+    setToolboxVisibility(['none', 'edit'].includes(aiGenerateState));
+  }, [aiGenerateState, setToolboxVisibility]);
+
   const generateSong = useCallback(async () => {
     dispatch(setAiGenerateState('generating'));
 
@@ -84,7 +92,8 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
       dispatch(setCodeToLoad(resultBlockly));
     }
 
-    dispatch(setAiGenerateState('done'));
+    setPlaying(true);
+    dispatch(setAiGenerateState('generated'));
   }, [
     adlibOption,
     choices,
@@ -92,20 +101,31 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
     dispatch,
     packId,
     promptText,
+    setPlaying,
     useCache,
   ]);
+
+  useEffect(() => {
+    // There can be a delay before we're playing, so wait for it explicitly.
+    if (aiGenerateState === 'generated' && isPlaying) {
+      dispatch(setAiGenerateState('listening'));
+    }
+  });
+  useEffect(() => {
+    if (aiGenerateState === 'listening' && !isPlaying) {
+      dispatch(setAiGenerateState('listened'));
+    }
+  }, [aiGenerateState, dispatch, isPlaying]);
+
+  const glowSpeed = aiGenerateState === 'generating' ? 'fast' : 'normal';
 
   if (!packId) {
     return null;
   }
 
   return (
-    <Guide id="generate-panel">
-      {!levelProperties.longInstructions && (
-        <Heading5 className={styles.heading}> Use AI</Heading5>
-      )}
-
-      {levelProperties.longInstructions && (
+    <Guide id="generate-panel" glowSpeed={glowSpeed}>
+      {aiGenerateState === 'none' && levelProperties.longInstructions && (
         <MainInstructionsContent
           instructionsText={levelProperties.longInstructions}
           handleInstructionsTextClick={() => {}}
@@ -123,6 +143,51 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
       )}
       {(aiGenerateState === 'generating' || aiGenerateState === 'done') && (
         <div className={styles.textArea}>{promptText}</div>
+      )}
+
+      {aiGenerateState === 'listening' && <div>Let's have a listen...</div>}
+
+      {aiGenerateState === 'listened' && (
+        <>
+          <div>Did you like what you heard?</div>
+
+          <div className={styles.buttonRow}>
+            <Button
+              ariaLabel={"No. Let's try again"}
+              text={"No. Let's try again"}
+              type="primary"
+              color="black"
+              size="s"
+              onClick={() => dispatch(setAiGenerateState('none'))}
+            />
+
+            <Button
+              ariaLabel={"Yes. Let's continue."}
+              text={"Yes. Let's continue."}
+              type="primary"
+              color="black"
+              size="s"
+              onClick={() => dispatch(setAiGenerateState('edit'))}
+            />
+          </div>
+        </>
+      )}
+
+      {aiGenerateState === 'edit' && (
+        <>
+          <div>Now it's your turn. Try editing the code.</div>
+          <div className={styles.buttonRow}>
+            <Button
+              ariaLabel={'Continue'}
+              text={'Continue'}
+              type="primary"
+              color="black"
+              size="s"
+              iconRight={{iconName: 'arrow-right', iconStyle: 'solid'}}
+              onClick={() => dispatch(continueOrFinishLesson())}
+            />
+          </div>
+        </>
       )}
 
       {aiGenerateState === 'none' && (
