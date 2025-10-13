@@ -92,6 +92,15 @@ class ReportAbuseController < ApplicationController
     render json: {abuse_score: value}
   end
 
+  # PATCH /v3/(animations|assets|sources|files|libraries)/:channel_id?abuse_score=:abuse_score
+  def update_file_abuse
+    return head :unauthorized unless can?(:update_file_abuse, nil)
+
+    value = update_file_abuse_score(params[:endpoint], params[:encrypted_channel_id], params[:abuse_score])
+
+    render json: {abuse_score: value}
+  end
+
   # POST /v3/channels/:channel_id/abuse/image
   # Update the project abuse score as a result of image moderation.
   # If type is 'flag', then abuse score is incremented by 15 which will reach the abuse threshold.
@@ -111,8 +120,6 @@ class ReportAbuseController < ApplicationController
 
     begin
       value = Projects.new(get_storage_id).increment_abuse(channel_id, amount, current_user&.project_validator?)
-      update_file_abuse_score('assets', channel_id, value)
-      update_file_abuse_score('files', channel_id, value)
     rescue ArgumentError, OpenSSL::Cipher::CipherError
       raise ActionController::BadRequest.new, "Bad channel_id"
     end
@@ -234,7 +241,7 @@ class ReportAbuseController < ApplicationController
   end
 
   private def can_update_abuse_score?(endpoint, encrypted_channel_id, filename, new_score)
-    return true if current_user || new_score.nil?
+    return true if current_user&.project_validator? || new_score.nil?
 
     get_bucket_impl(endpoint).new.get_abuse_score(encrypted_channel_id, filename) <= new_score.to_i
   end
