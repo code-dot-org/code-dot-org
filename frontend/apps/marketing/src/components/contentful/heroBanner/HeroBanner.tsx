@@ -5,6 +5,7 @@ import {Theme} from '@code-dot-org/component-library/common/contexts';
 
 import {externalLinkIconProps} from '@/components/common/constants';
 import Video from '@/components/contentful/video';
+import NextImage from '@/components/nextImage/NextImage';
 import {getAbsoluteImageUrl} from '@/selectors/contentful/getImage';
 import {LinkEntry} from '@/types/contentful/entries/Link';
 import {ExperienceAsset} from '@/types/contentful/ExperienceAsset';
@@ -157,6 +158,7 @@ const HeroBanner: React.FunctionComponent<HeroBannerProps> = ({
           : undefined
       }
       VideoComponent={Video}
+      ImageComponent={NextImage}
     />
   );
 };

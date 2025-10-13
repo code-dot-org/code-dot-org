@@ -38,7 +38,7 @@ class RegistrationsController < Devise::RegistrationsController
   #
   def begin_sign_up
     domain = params[:user][:email].split('@')[1] if params[:user][:email].present?
-    if Policies::Devise::EmailDomains::DISALLOWED_DOMAINS.include?(domain)
+    if Policies::Devise::EmailDomains::DISALLOWED_DOMAINS.key?(domain)
       render json: {
         error: I18n.t('devise.registrations.disallowed_domain', domain: domain)
       }, status: :forbidden
@@ -187,6 +187,13 @@ class RegistrationsController < Devise::RegistrationsController
       PartialRegistration.delete session
       if Policies::Lti.lti? current_user
         current_user.verify_teacher! if Policies::Lti.unverified_teacher?(current_user)
+        if session[:lti_deployment_id] && current_user.lti_user_identities.any?
+          deployment = LtiDeployment.find_by(id: session[:lti_deployment_id])
+          lti_identity = current_user.lti_user_identities.find_by(lti_integration_id: deployment.lti_integration_id)
+          if deployment && lti_identity && !deployment.lti_user_identities.exists?(lti_identity.id)
+            deployment.lti_user_identities << lti_identity
+          end
+        end
         lms_name = Queries::Lti.get_lms_name_from_user(current_user)
         metadata = {
           'user_type' => current_user.user_type,

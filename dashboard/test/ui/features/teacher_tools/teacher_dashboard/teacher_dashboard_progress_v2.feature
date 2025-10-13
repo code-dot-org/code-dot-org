@@ -1,14 +1,17 @@
 @no_mobile
 Feature: Using the V2 progress page
+  Background:
+    Given I am on "http://studio.code.org"
+    And I use a cookie to mock the DCDO key "progress-table-v2-enabled" as "true"
 
 Scenario: Teacher can open and close Icon Key and details
   Given I create an authorized teacher-associated student named "Sally"
-  Given I am assigned to course "allthethingscourse" unit 1
+  Given I am assigned to course "allthethingscourse" with teacher "Teacher_Sally" in a section named "Test Section"
   And I complete the level on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/2/levels/1"
 
   When I sign in as "Teacher_Sally" and go home
   And I get levelbuilder access
-  And I navigate to the V2 progress dashboard for "Untitled Section"
+  And I navigate to the V2 progress dashboard for "Test Section"
 
   # toggle to V2 progress view
   And I wait until element "h6:contains(Icon Key)" is visible
@@ -31,7 +34,7 @@ Scenario: Teacher can open and close Icon Key and details
 @properties_encryption_key
 Scenario: Viewing student metadata
   Given I create an authorized teacher-associated student named "Sally"
-  Given I am assigned to course "allthethingscourse" unit 1
+  Given I am assigned to course "allthethingscourse" with teacher "Teacher_Sally" in a section named "Test Section"
   And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/44/levels/9?noautoplay=true"
   And I wait to see "#runButton"
   And I submit this level
@@ -39,7 +42,7 @@ Scenario: Viewing student metadata
   # Progress tab
   When I sign in as "Teacher_Sally" and go home
   And I get levelbuilder access
-  And I navigate to the V2 progress dashboard for "Untitled Section"
+  And I navigate to the V2 progress dashboard for "Test Section"
 
   # Toggle to V2 progress view
   And I wait until element "h6:contains(Icon Key)" is visible
@@ -134,7 +137,7 @@ Scenario: Teacher can open lesson data, refresh the page, and lesson data will s
 @eyes
 Scenario: Teacher can view lesson progress for when students have completed a lesson and when they have started a lesson but not finished
   Given I create an authorized teacher-associated student named "Sally"
-  Given I am assigned to course "allthethingscourse" unit 1
+  Given I am assigned to course "allthethingscourse" with teacher "Teacher_Sally" in a section named "Test Section"
   # Student completes one of many levels in lesson 2
   And I complete the level on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/2/levels/1"
 
@@ -149,7 +152,7 @@ Scenario: Teacher can view lesson progress for when students have completed a le
 
   When I sign in as "Teacher_Sally" and go home
   And I get levelbuilder access
-  And I navigate to the V2 progress dashboard for "Untitled Section"
+  And I navigate to the V2 progress dashboard for "Test Section"
   And I wait until element "#uitest-circle" is visible
 
   And I open my eyes to test "V2 progress dashboard"
@@ -192,7 +195,7 @@ Scenario: Teacher can view student work, ask student to keep working, on rubric 
 
   # Teacher can see feedback given icon
   Given I am on "http://studio.code.org/"
-  When I click selector "a:contains(Untitled Section)" once I see it to load a new page
+  And I navigate to the V2 progress dashboard for "Untitled Section"
   And I wait until element "#ui-test-lesson-header-39" is visible
   And I scroll to "#ui-test-lesson-header-39"
   And I see no difference for "feedback given icon is displayed"
@@ -206,7 +209,7 @@ Scenario: Teacher can view student work, ask student to keep working, on rubric 
 
   # Teacher can see keep working icon
   Given I am on "http://studio.code.org/"
-  When I click selector "a:contains(Untitled Section)" once I see it to load a new page
+  And I navigate to the V2 progress dashboard for "Untitled Section"
   And I wait until element "#ui-test-lesson-header-39" is visible
   And I scroll to "#ui-test-lesson-header-39"
   And I see no difference for "keep working icon is displayed"
@@ -219,7 +222,7 @@ Scenario: Teacher can view choice levels
   And I open my eyes to test "V2 Progress - Choice Levels"
 
   Given I create an authorized teacher-associated student named "Sally"
-  Given I am assigned to course "allthethingscourse" unit 1
+  Given I am assigned to course "allthethingscourse" with teacher "Teacher_Sally" in a section named "Test Section"
 
   # Student submits choice level
   Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/40/levels/1/sublevel/2?noautoplay=true"
@@ -230,7 +233,7 @@ Scenario: Teacher can view choice levels
 
   When I sign in as "Teacher_Sally" and go home
   And I get levelbuilder access
-  And I navigate to the V2 progress dashboard for "Untitled Section"
+  And I navigate to the V2 progress dashboard for "Test Section"
 
   # View unexpanded choice level
   And I wait until element "#ui-test-lesson-header-1" is visible

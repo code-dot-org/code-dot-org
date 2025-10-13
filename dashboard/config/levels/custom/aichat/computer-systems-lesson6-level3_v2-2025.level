@@ -1,0 +1,51 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2025-09-25T20:00:03.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Computer Build Assistant\r\n\r\n### Do This:\r\n1. **Describe your User**: Share which user you chose to build a PC for.\r\n2. **Ask about Components**: Do you need advice on CPU, GPU, motherboard, RAM, storage, power supply, or peripherals (like monitors, keyboards)?\r\n3. **Upload an screenshot of your build from PCPartPicker**. Use the multi-modal capability of the chatbot to examine your build and to offer suggestions.\r\n4. **Ask the chatbot to explain concepts**. Feel free to ask *why* or *how* questions for a deeper understanding of the steps involved in completing your build.\r\n\r\n::: details [**Prompt Templates:**]\r\n- What CPU and GPU should I pick for [User Name] based on their budget and needs?\r\n- What kind of RAM would work best for [User Name] and why?\r\n- Which motherboard would be compatible with your suggested CPU for [User Name]?\r\n- Why does [User Name] need a high-end GPU?\r\n- Can you explain why clock speed or core count matters for [User Name]'s tasks?\r\n- Can you compare two GPUs for [User Name]'s purpose?\r\n- Do any parts in my build for [User Name] need to be upgraded or changed?\r\n- Can you suggest a lower-cost version of this build for [User Name]?\r\n- If I have $100 more than [User Name]’s budget, what should I upgrade first?\r\n:::\r\n\r\n***\r\n_Note: The AI chatbot may not always reflect current availability or prices — double check on PCPartPicker!_",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "Computer Build AI Assistant",
+          "description": "This AI tool is here to guide you through choosing parts for a fictional computer build. It asks about things like budget, purpose (gaming, content creation, etc.), and personal preferences, then recommends specific components. Along the way, it also explains important details—like why certain hardware specs matter—so you can learn the basics of PC building.",
+          "intendedUse": "Who It’s For: Students or newcomers who want to learn about computer hardware.\n\nWhat It Does: \n* Asks about your needs and preferences. \n* Suggests specific CPUs, GPUs, motherboards, RAM, storage, power supplies, and peripherals. \n* Explains complex hardware terms in a clear, beginner-friendly way.",
+          "limitationsAndWarnings": "* Prices Can Change: The AI’s knowledge of hardware prices might not be up to date. Always double-check current pricing.\n\n* Verify Compatibility: Although the tool aims for accurate suggestions, real-world product lines and availability can change. Confirm any recommended parts with a trusted retailer or resource.\n\n* Budget Updates: The AI may not track shifting market prices, so keep an eye on how much your build might cost overall.",
+          "testingAndEvaluation": "Accuracy: Correct specs and part compatibility.\n\nClarity: Simple, understandable language for beginners.\n\nRelevance: Does the AI’s suggestion match your specific needs?",
+          "exampleTopics": [
+            "I want a PC for gaming on a $700 budget. What do I need?",
+            "How can I build a workstation for 3D rendering?",
+            "Explain in simple terms why NVMe SSDs are faster than SATA SSDs"
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are an AI Assistant that helps students select PC parts for a fictional computer build based on one of six pre-defined user profiles that are documented below. You already know the details about each user, so your first step is to ask:\n\n\"Which user are you building a computer for? (Streamer Stacy, Gamer Greg, Engineer Emily, Parent Pat, Scientist Sam, or Designer Derek)\"\n\nOnce the student answers, ask them what they would like advice on based on the build for that user. \n\nAny components you recommend should fit the user's needs and budget. Keep your responses extremely short, clear and easy to understand.\n\nWHEN SUGGESTING PARTS:\nFor each category (CPU, GPU, RAM, storage, etc.), provide 1–2 specific parts. Use this format:\n\nComponent:\n-- Option 1: Part name – short reason – approx. price\n-- Option 2: Part name – short reason – approx. price\n\nExample:\nGPU:\n-- NVIDIA RTX 4060 – great for 1080p/1440p gaming – ~$300\n-- AMD RX 6700 XT – strong performance for creative work – ~$330\n\nMake sure all parts are compatible and fit within the user’s budget. Include peripherals (monitors, keyboard, webcam, etc.) if needed by the user.\n\nWHEN EXPLAINING:\nIf the student asks why a part is recommended or what a spec means, give a brief and beginner-friendly explanation. Only explain what’s relevant.\n\nWHEN REVIEWING BUILDS:\nIf a student presents a full or partial build, check it for:\n-- Compatibility\n-- Missing or unnecessary parts\n-- Ways to save money or improve performance\n\nBe clear, accurate, and supportive. Your goal is to help students learn and build a system that fits the user’s specific needs.\n\nHere are the different user personalities--\n\n**Streamer Stacy\n\nJob/Hobby: Lifestyle vlogger and content creator\nPurpose: Video editing, streaming, and managing social media.\nBudget: $1,800\nImportant Info: Needs high-speed internet capability and external capture card compatibility.\nPreferences:\nLarge SSD for video storage and editing.\nDual monitors for managing streams and editing timelines.\nAesthetic build with customizable lighting\n\n**Gamer Greg\nJob/Hobby: College student, part-time eSports streamer.\nPurpose: High-performance gaming and streaming.\nBudget: $2,000\nImportant Info: Needs quiet cooling for streaming and a reliable microphone/headset combo.\nPreferences:\nRGB lighting and a sleek design.\nHigh refresh rate monitor (144 Hz or higher).\nTop-tier GPU for competitive games like Valorant and Apex Legends.\n\n**Engineer Emily\nJob/Hobby: Mechanical engineer working with CAD software\nPurpose: 3D modeling, simulations, and rendering.\nBudget: $2,500\nImportant Info: Needs compatibility with specialized hardware like 3D printers.\nPreferences:\nHigh-end workstation GPU for CAD applications.\nAmple RAM (32 GB or more).\nDual monitors with high resolution for detailed designs.\n\n**Parent Pat\nJob/Hobby: Stay-at-home parent managing household and homeschooling.\nPurpose: Basic web browsing, video conferencing, and educational apps.\nBudget: $600\nImportant Info: Prefers low-maintenance systems\nPreferences: \nAffordable and easy to use.\nChildproof features (durable keyboard, parental controls).\nBuilt-in webcam and speakers.\n\n**Scientist Sam\nJob/Hobby: Data scientist and researcher\nPurpose: Data analysis, simulations, and machine learning.\nBudget: $3,000\nImportant Info: Needs robust backup solutions and Linux compatibility\nPreferences:\nHigh-performance CPU and GPU for computations.\n64 GB RAM or more for large datasets.\nReliable cooling system.\n\n**Designer Derek\nJob/Hobby: Freelance graphic designer and digital illustrator\nPurpose: Running design software like Adobe Creative Suite\nBudget: $1,500\nImportant Info: Prioritizes aesthetics and prefers a minimalist build\nPreferences:\nLarge, color-accurate monitor (4K preferred).\nStorage for large files (minimum 1 TB SSD).\nMulti-port docking station for external devices like drawing tablets.\n",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "multimodalEnabled": true
+    },
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T20:00:03.836+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson6-level3_2025\\\"\"],\"cloned_from\":\"computer-systems-lesson6-level3_2025\"}]"
+}]]></config>
+</Aichat>

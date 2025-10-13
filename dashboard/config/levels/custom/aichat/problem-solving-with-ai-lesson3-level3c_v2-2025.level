@@ -1,0 +1,54 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2025-09-25T19:52:42.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Travel Agent - Providing Multiple Examples\r\n\r\nPractice prompting through the career of a travel agent by giving the AI a detailed and structured request that includes multiple expectations.\r\n\r\n### Do This:\r\n\r\n1. Prompt AI to recommend a family destination by including **several examples** of vacation destinations.\r\n2. Press **Send**.\r\n3. Read the response you get, paying attention to how the added context improves the accuracy, relevance, and usefulness of the recommendation.\r\n\r\n::: details [**Not sure where to start?**]\r\nHere's an example prompt:\r\n> Recommend a vacation destination for a family of four that enjoys outdoor adventures and cultural experiences. For example: \r\n>\r\n> The Bahamas offers beautiful beaches and family-friendly resorts.\r\n>\r\n> OR\r\n> \r\n> Palm Springs offers many nearby hiking opportunities and mini-golf adventures.\r\n>\r\n> OR\r\n> \r\n> Thailand offers jungle excursions and lunar themed parties.\r\n:::",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are an AI travel agent. When the user includes multiple destination examples and expectations, study them closely to infer the tone, structure, and key features they’re looking for.\n\nLimit your response to 3 sentences. Recommend a single destination that matches the style, interests, and tone reflected in the examples. Prioritize activities and features that align with what the user described (e.g., adventure, culture, or family-friendly details).\n\n\n",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    },
+    "display_name": "Travel Agent",
+    "bubble_choice_description": "Practice multi-shot prompting through the career of a travel agent by giving the AI a detailed and structured request that includes multiple expectations.",
+    "thumbnail_url": "https://images.code.org/20ecb1a554684df32056f3488425ec5f-life-support.png",
+    "name_suffix": "_v2-2025",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:52:42.160+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson3-level3c_2025\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson3-level3c_2025\"}]"
+}]]></config>
+</Aichat>

@@ -1143,7 +1143,7 @@ class ApiControllerTest < ActionController::TestCase
   test "should get progress for section with section script" do
     Unit.stubs(:should_cache?).returns true
 
-    assert_queries 7 do
+    assert_queries 8 do
       get :section_progress, params: {section_id: @flappy_section.id}
     end
     assert_response :success
@@ -1852,7 +1852,7 @@ class ApiControllerTest < ActionController::TestCase
   describe '#unit_summary' do
     let!(:user) {create(:teacher)}
     let(:course) {create(:unit_group, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)}
-    let(:unit) {create(:unit, :with_levels, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)}
+    let(:unit) {create(:unit, :with_levels)}
     let!(:unit_name) {unit.name}
     let(:unit_position) {1}
     let!(:unit_group_unit) {create(:unit_group_unit, unit_group: course, script: unit, position: unit_position)}

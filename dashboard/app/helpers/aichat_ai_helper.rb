@@ -40,15 +40,63 @@ module AichatAiHelper
     parts
   end
 
+  def self.convert_json_schema_to_ruby_types(json_schema)
+    type = json_schema[:type]
+    description = json_schema[:description]
+
+    case (type)
+    when "object"
+      AichatAiClientTypes::JsonObjectSchema.new(
+        type: type,
+        description: description,
+        properties:  AichatAiClientTypes::JsonProperties.new(
+          **(json_schema[:properties].transform_values {|value| convert_json_schema_to_ruby_types(value)})
+        ),
+        required: json_schema[:required],
+        additionalProperties: json_schema[:additionalProperties]
+      )
+    when "array"
+      AichatAiClientTypes::JsonArraySchema.new(
+        type: type,
+        description: description,
+        items: convert_json_schema_to_ruby_types(json_schema[:items])
+      )
+    when "string"
+      AichatAiClientTypes::JsonStringSchema.new(
+        type: type,
+        description: description,
+        enum: json_schema[:enum]
+      )
+    when "number"
+      AichatAiClientTypes::JsonNumberSchema.new(
+        type: type,
+        description: description,
+        enum: json_schema[:enum]
+      )
+    when "boolean"
+      AichatAiClientTypes::JsonBooleanSchema.new(
+        type: type,
+        description: description
+      )
+    when "null"
+      AichatAiClientTypes::JsonNullSchema.new(
+        type: type,
+        description: description
+      )
+    else
+      raise StandardError.new("Unexpected schema type='#{type}'")
+    end
+  end
+
   # Parse the AI Chat message format and convert it to the AI-API-endpoint-agnostic
   # "config" object and "request" and "context" arrays.
   #
   # See 'aichat_ai_client.rb' for typescript definitions of these objects.
-  def self.get_config_request_context(stored_messages, new_message, temperature, system_prompt, retrieval_contexts,  model_id, level_id, encrypted_channel_id, user_id, project_id, client_type)
+  def self.get_config_request_context(stored_messages, new_message, temperature, system_prompt, retrieval_contexts,  model_id, level_id, encrypted_channel_id, user_id, project_id, client_type, json_schema = nil)
     level = Level.find_by(id: level_id)
 
     # Level system prompt - string or nil.
-    level_system_prompt = level&.properties&.dig('aichat_settings', 'levelSystemPrompt')
+    level_system_prompt = level&.properties&.dig('aichat_settings', 'levelSystemPrompt') || level&.properties&.[]("level_system_prompt")
 
     # Level name - string.
     level_name = level&.name
@@ -73,11 +121,20 @@ module AichatAiHelper
                      2
                    end
 
+    unless json_schema.nil?
+      response_validation = AichatAiClientTypes::JsonResponseConfigValidation.new(
+        type: 'jsonSchema',
+        schema: convert_json_schema_to_ruby_types(json_schema)
+      )
+      response = AichatAiClientTypes::JsonResponseConfig.new(mimeType: 'application/json', validation: response_validation)
+    end
+
     config = AichatAiClientTypes::AiConfig.new(
       model: get_api_model(model_id),
       systemInstructions: system_instructions,
       temperature: temperature,
-      clientType: client_type
+      clientType: client_type,
+      response: response
     )
 
     request = format_message_parts(new_message, encrypted_channel_id, level_name)
@@ -96,6 +153,21 @@ module AichatAiHelper
     return config, request, context
   end
 
+  # Create an instance of the appropriate ai-client-derived class based on model id.
+  def self.create_ai_client_instance(client_type, model_id, usage_reporter = nil)
+    # We assume it's one of the gemini models if not 'gpt-4o-mini'.
+    if model_id == "gpt-4o-mini"
+      return AichatOpenaiResponsesClient.new(CDO.openai_student_learning_api_key, SharedConstants::AICHAT_MODEL_VERSION, usage_reporter)
+    else
+      # We use separate keys per-client for Gemini so that we can more easily allocate donated credits appropriately.
+      # In the longer term, we should consider adding per-client keys for OpenAI as well in order to more easily differentiate between use cases.
+      # Also note that we assume AI Chat Lab if not AI Tutor here, which is not strictly true because of Flow Lab. We could add an EXPERIMENT client type and add an explicit key to handle those use cases (eg, Flow Lab).
+      api_key = client_type == SharedConstants::AI_CHAT_CLIENT_TYPES[:AI_TUTOR] ?
+        CDO.google_gemini_ai_tutor_api_key : CDO.google_gemini_ai_chat_lab_api_key
+      return AichatGeminiClient.new(api_key, model_id, usage_reporter)
+    end
+  end
+
   def self.get_openai_assistant_response(aichat_model_customizations, stored_messages, new_message, level_id, project_id, user_id)
     encrypted_channel_id = storage_encrypt_channel_id(storage_id_for_user_id(user_id), project_id) if project_id
 
@@ -112,12 +184,12 @@ module AichatAiHelper
     retrieval_contexts = aichat_model_customizations['retrievalContexts']
 
     usage_reporter = AichatAiUsageReporter.new(model_id, user_id, project_id, level_id)
-    client = AichatAiClient.create_instance(model_id, usage_reporter)
+    client = create_ai_client_instance(client_type, model_id, usage_reporter)
 
     config, request, context = get_config_request_context(stored_messages, new_message, temperature, system_prompt, retrieval_contexts,  model_id, level_id, encrypted_channel_id, user_id, project_id, client_type)
 
     begin
-      response = client.get_response_text(config, request, context)
+      response = client.get_response(config, request, context)
     rescue Net::ReadTimeout
       raise OpenaiUserInputResponseTimeout.new("Timeout waiting for AI client to provide response to user input.")
     end

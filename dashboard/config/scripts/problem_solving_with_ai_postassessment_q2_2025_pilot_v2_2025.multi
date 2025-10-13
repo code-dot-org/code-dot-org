@@ -1,0 +1,14 @@
+name 'problem-solving-with-ai-postassessment-q2_2025-pilot_v2-2025'
+
+question 'When using AI to get feedback on a digital art project, why might it be beneficial to provide both text and an image?'
+
+right 'The AI can analyze colors, shapes, and artistic techniques while also considering the artist\'s intent.'
+wrong 'The AI will ignore the image and only read the description.'
+wrong 'The AI will generate feedback only based on standard art principles without customization.'
+wrong 'Text descriptions are always more useful than images for art critiques.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 2: Beyond Words
+MARKDOWN

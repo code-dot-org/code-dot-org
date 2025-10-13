@@ -1,0 +1,14 @@
+<Sketchlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 75,
+  "created_at": "2025-10-02T19:18:05.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Welcome to Sketch Lab!\r\n\r\nUse Sketch Lab to to draw a wireframe of a website you want to build. \r\n\r\nThink through:\r\n- Navigation\r\n- Header content\r\n- Other content\r\n- Footer\r\n\r\nOnce you have a wireframe you like:\r\n- Go into the hamburger menu\r\n- Export as an image to your computer"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-10-02 19:31:14 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2025-10-06 17:33:26 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
+}]]></config>
+</Sketchlab>

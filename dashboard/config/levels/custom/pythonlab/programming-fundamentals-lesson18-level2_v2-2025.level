@@ -1,0 +1,57 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-09-25T19:58:18.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Predict the outcome of this simple if-else statement. \r\n\r\n## Do This: \r\n- Read the code. \r\n- Make a prediction: What will the program print if the dice roll is: \r\n    - 6\r\n    - 2\r\n- Run: Test your prediction by running the program. ",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": true,
+      "solution": "If I roll a 6, then it will print \"You found a rare magical herb!\" \nIf I roll a 2, then it will print \"You found a common herb.\" ",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": true,
+      "placeholderText": "",
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": true
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "from support import rare_magical_herb, common_herb\nimport random\n\n# Roll the dice\ndice_roll = random.randint(1, 6)\nprint(\"You rolled a\", dice_roll)\n\nif dice_roll == 6:\n    rare_magical_herb()\nelse:\n    common_herb()",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        },
+        "1": {
+          "id": "1",
+          "name": "support.py",
+          "language": "py",
+          "contents": "# Support file with accessible ASCII art and emojis\n\ndef rare_magical_herb():\n    art = \"\"\"\n    🌟 🌸 🌟\n    You found a rare magical herb!\n    \"\"\"\n    print(art)\n\ndef common_herb():\n    art = \"\"\"\n    🌱 ☘️ 🌱\n    You found a common herb.\n    \"\"\"\n    print(art)\n",
+          "folderId": "0",
+          "active": false,
+          "open": true,
+          "type": "support"
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0",
+        "1"
+      ]
+    },
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:58:18.694+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson18-level2_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson18-level2_2025\"}]"
+}]]></config>
+</Pythonlab>

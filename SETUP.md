@@ -35,6 +35,12 @@ You can do Code.org development using macOS, Ubuntu, or Windows (running Ubuntu 
 1. `bundle install`
     - This step often fails to due environment-specific issues. Look in the [Bundle Install Tips](#bundle-install-tips) section below for steps to resolve many common issues.
 
+1. `cp locals.yml.default locals.yml`
+    - This step is necessary to enable javascript builds. It also provides further options for customizing your local environment.
+
+1. `bundle exec rake package:apps:symlink`
+    - Another step necessary to enable javascript builds.
+
 1. `bundle exec rake install:hooks`
     <details>
       <summary>Troubleshoot: wrong version of rake </summary>
@@ -84,7 +90,7 @@ You can do Code.org development using macOS, Ubuntu, or Windows (running Ubuntu 
 
 1. **Open <http://localhost-studio.code.org:3000/>** to verify its running.
 
-After setup, [configure your editor](#editor-configuration), read about our [code styleguide](./STYLEGUIDE.md), our [test suites](./TESTING.md), or find more docs on [the wiki](https://github.com/code-dot-org/code-dot-org/wiki/For-Developers).
+After setup, [configure your editor](#editor-configuration), read about our [code styleguide](./STYLEGUIDE.md), our [test suites](./TESTING.md), our [apps build](./apps/README.md), or find more docs on [the wiki](https://github.com/code-dot-org/code-dot-org/wiki/For-Developers).
 
 ## Configure AWS Access or Secrets
 
@@ -195,6 +201,14 @@ These steps are for Apple devices running **macOS 14.x**, including those runnin
         ```
 
 1. Install [Google Chrome](https://www.google.com/chrome/), needed for some local app tests.
+
+1. If you are on an M-series Mac, you will need to install Rosetta if you have not done so already, otherwise the apps build may fail:
+    ```sh
+    softwareupdate --install-rosetta
+    ```
+    ```sh
+    arch -x86_64 /bin/bash -c 'echo "Rosetta is working!"'
+    ```
 
 1. *(Optional)* Install **pdftk.rb**. Skipping this will cause some PDF related tests to fail.
     ```

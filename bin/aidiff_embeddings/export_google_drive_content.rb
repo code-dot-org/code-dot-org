@@ -20,6 +20,10 @@ class Resource
     !!(url =~ GDOCS_URL_REGEX)
   end
 
+  def should_be_exported?
+    google_docs? && embed_in_ai_ta?
+  end
+
   def google_pdf_download_url
     return nil unless google_docs?
 
@@ -95,7 +99,7 @@ Async do
     # Course-level resources: request them all concurrently and wait for the
     # slowest before moving on
     barrier = Async::Barrier.new
-    course.resources.filter(&:google_docs?).each_with_index do |resource, i|
+    course.resources.filter(&:should_be_exported?).each_with_index do |resource, i|
       download_google_file(
         url: resource.google_pdf_download_url,
         path: "#{course.name}-#{i}.pdf",
@@ -127,7 +131,7 @@ Async do
       # Unit-level resources: request them all concurrently and wait for the
       # slowest before moving on
       barrier = Async::Barrier.new
-      unit.resources.filter(&:google_docs?).each_with_index do |resource, i|
+      unit.resources.filter(&:should_be_exported?).each_with_index do |resource, i|
         download_google_file(
           url: resource.google_pdf_download_url,
           path: "#{prefix}-#{i}.pdf",
@@ -152,7 +156,7 @@ Async do
         # Lesson-level resources: request them all concurrently and wait for the
         # slowest before moving on
         barrier = Async::Barrier.new
-        lesson.resources.filter(&:google_docs?).each_with_index do |resource, i|
+        lesson.resources.filter(&:should_be_exported?).each_with_index do |resource, i|
           download_google_file(
             url: resource.google_pdf_download_url,
             path: "#{prefix}-#{i}.pdf",

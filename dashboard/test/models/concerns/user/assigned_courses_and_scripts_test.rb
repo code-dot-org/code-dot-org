@@ -98,8 +98,9 @@ class AssignedCoursesAndScripts < ActiveSupport::TestCase
 
   describe 'assigned and section scripts' do
     let(:user) {create(:student)}
-    let(:single_script) {create(:script)}
-    let(:section_1) {create(:section, script: single_script, unit_group: unit_group)}
+    let(:single_unit_course) {create(:single_unit_course)}
+    let(:single_script) {single_unit_course.first_unit}
+    let(:section_1) {create(:section, script: single_script, unit_group: single_unit_course)}
     let(:section_2) {create(:section, unit_group: unit_group)}
     let(:unit_group_unit) {create(:script)}
     before do
@@ -119,7 +120,7 @@ class AssignedCoursesAndScripts < ActiveSupport::TestCase
       end
 
       context 'when the user is not assigned a script' do
-        let(:another_script) {create(:script)}
+        let(:another_script) {create(:single_unit_course).first_unit}
         subject(:assigned_script?) {user.assigned_script?(another_script)}
 
         it 'returns false' do
@@ -457,8 +458,8 @@ class AssignedCoursesAndScripts < ActiveSupport::TestCase
 
       Follower.create!(section_id: section.id, student_user_id: student.id, user: teacher)
 
-      create(:unit_group_unit, unit_group: pl_unit_group, script: (create(:script, name: 'pl-csd1', instructor_audience: nil, participant_audience: nil)), position: 1)
-      create(:unit_group_unit, unit_group: pl_unit_group, script: (create(:script, name: 'pl-csd2', instructor_audience: nil, participant_audience: nil)), position: 2)
+      create(:unit_group_unit, unit_group: pl_unit_group, script: (create(:script, name: 'pl-csd1')), position: 1)
+      create(:unit_group_unit, unit_group: pl_unit_group, script: (create(:script, name: 'pl-csd2')), position: 2)
 
       teacher.assign_script(other_pl_script)
 
@@ -525,29 +526,6 @@ class AssignedCoursesAndScripts < ActiveSupport::TestCase
           'Unit Other'
         ]
         _(recent_student_courses_and_units.pluck(:name)).wont_include 'csd1'
-      end
-
-      context 'when primary course should not be included in returned student courses' do
-        let(:student) {create(:student)}
-        let(:teacher) {create(:teacher)}
-
-        let(:unit_group) {create(:unit_group, name: 'testcourse', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)}
-        let(:unit_group_unit1) {create(:unit_group_unit, unit_group: unit_group, script: (create(:script, name: 'testscript1')), position: 1)}
-        let(:other_script) {create(:script, name: 'otherscript')}
-        let(:section) {create(:section, user_id: teacher.id, unit_group: unit_group)}
-
-        before do
-          create(:unit_group_unit, unit_group: unit_group, script: (create(:script, name: 'testscript2')), position: 2)
-          create(:user_script, user: student, script: unit_group_unit1.script, started_at: (Time.now - 1.day))
-          create(:user_script, user: student, script: other_script, started_at: (Time.now - 1.hour))
-          Follower.create!(section_id: section.id, student_user_id: student.id, user: teacher)
-        end
-
-        it 'does not return primary course' do
-          courses_and_scripts = student.recent_student_courses_and_units(true)
-          _(courses_and_scripts.length).must_equal 1
-          _(courses_and_scripts.pluck(:name)).must_equal ['testcourse']
-        end
       end
     end
   end

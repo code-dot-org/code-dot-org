@@ -1,0 +1,14 @@
+name 'problem-solving-with-ai-preassessment-q12_2025-pilot_v2-2025'
+
+question 'What does it mean to use AI as a creative tool instead of a creative replacement?'
+
+wrong 'You let AI make all the decisions for your content.'
+right 'You use AI\'s ideas to inspire and improve your own creative choices.'
+wrong 'You copy AI\'s entire output without editing it.'
+wrong 'You only use AI when you can\'t think of anything on your own.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 10: Remixing, Creativity, and Originality
+MARKDOWN

@@ -10,6 +10,8 @@ import {
   ServerChatEvent,
   ViewMode,
   AiChatClientType,
+  WorkspaceTeacherViewTab,
+  UserAddedSelectionContext,
 } from '../types';
 
 export interface AichatState {
@@ -57,4 +59,7 @@ export interface AichatState {
   saveError: SaveError | undefined;
   // If the model customizations were just reset to the default level values.
   showResetMessage: boolean;
+  // The tab selected when a teacher is viewing a student's chat history.
+  chatWorkspaceSelectedTab: WorkspaceTeacherViewTab | null;
+  userAddedSelectionContext: UserAddedSelectionContext;
 }

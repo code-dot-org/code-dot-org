@@ -1,0 +1,19 @@
+name 'networks-preassessment-question2_v2-2025'
+title 'Networks and the Internet Pre-Assessment: Question 2'
+
+wrong 'Server'
+wrong 'Switch'
+right 'Router'
+wrong 'Modem'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+Which of the following devices is responsible for forwarding data between networks?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 1: Introduction to the Internet
+
+Lesson 4: Routers and Redundancy
+MARKDOWN

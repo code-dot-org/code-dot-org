@@ -1,3 +1,4 @@
+@use '../../lab2/views/components/layout/variables.scss' as variables;
 @import 'color.scss';
 @import '../../mixins.scss';
 @import './aichat-common.module.scss';
@@ -29,6 +30,7 @@ $tabs-default-spacing: 4px;
 
 .scrollToBottomButton {
   border-radius: 50%;
+  pointer-events: auto;
 }
 
 .messageArea {
@@ -48,14 +50,32 @@ $tabs-default-spacing: 4px;
   display: flex;
   justify-content: center;
   width: 100%;
+  pointer-events: none;
+}
+
+.chatDisabledContainer {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+
+  p {
+    color: var(--text-neutral-quaternary);
+    text-align: center;
+  }
+
+  .chatDisabledIcon {
+    width: 2rem;
+  }
 }
 
 .tabsContainer {
-  background-color: #eaebeb;
+  background-color: var(--background-neutral-secondary);
   padding: $tabs-default-spacing $tabs-default-spacing 0 $tabs-default-spacing;
 
   ul {
-    li > button[role="tab"] {
+    li > button[role='tab'] {
       max-width: 300px;
     }
   }
@@ -76,16 +96,17 @@ $tabs-default-spacing: 4px;
 
 .buttonRow {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
-  padding: 0 10px;
 }
 
 .footer {
   display: flex;
   flex-direction: column;
-  gap: 2px;
-  padding: 16px 6px;
-  border-top: 1px solid $light_gray_200;
+  gap: 0.5rem;
+  padding: 0.625rem;
+  border-top: variables.$default-border;
+  background: var(--background-neutral-secondary);
 }
 
 .alertLink {

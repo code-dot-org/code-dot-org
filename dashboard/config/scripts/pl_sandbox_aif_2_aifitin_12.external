@@ -1,0 +1,105 @@
+name 'pl_sandbox_aif_2_AIFitIn_12'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Where Does AI Fit In?
+
+#### In this course, AI is a helper, not a replacement for students’ thinking. Students stay in control of the design and coding process, while AI serves as a creative partner that can suggest, outline, or refine ideas.
+
+## How Students Use AI
+
+ 
+ 
+
+
+<div style="display: flex; gap: 20px; justify-content: space-between;flex-wrap: wrap;">
+  
+  <!-- Block 1 -->
+  <div style="flex: 1; min-width: 250px; background-color: #B7E0E5; padding: 20px; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+    <div style="font-size: 2rem; margin-bottom: 10px;text-align: center;">💡</div>
+    <h3 style="margin: 0 0 10px 0; text-align: center;"><b>As a brainstorming tool:</b></h3>
+    <p style="margin: 0; font-size: 14pt; line-height: 1.5;">
+      AI can suggest starting points (like a layout or function idea) that students then adapt and improve.
+    </p>
+  </div>
+
+  <!-- Block 2 -->
+  <div style="flex: 1; min-width: 250px; background-color: #B7E0E5; padding: 20px; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+    <div style="font-size: 2rem; margin-bottom: 10px;text-align: center;">👩‍🏫</div>
+    <h3 style="margin: 0 0 10px 0; text-align: center;"><b>As a tutor-on-demand:</b></h3>
+    <p style="margin: 0; font-size: 14pt; line-height: 1.5;">
+      AI can explain concepts step by step and offer hints instead of solutions.
+    </p>
+  </div>
+ </div>
+ <div style="clear:both;"></div>
+<br>
+  
+  <div style="display: flex; gap: 20px; justify-content: space-between;flex-wrap: wrap;">
+ 
+  <!-- Block 3 -->
+  <div style="flex: 1; min-width: 250px; background-color: #B7E0E5; padding: 20px; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+    <div style="font-size: 2rem; margin-bottom: 10px;text-align: center;">🛠️</div>
+    <h3 style="margin: 0 0 10px 0; text-align: center;"><b>As a collaborator in building:</b></h3>
+    <p style="margin: 0; font-size: 14pt; line-height: 1.5;">
+      AI helps write or refine HTML, CSS, and JavaScript, but students must review, edit, and debug.
+    </p>
+  </div>
+
+  <!-- Block 4 -->
+  <div style="flex: 1; min-width: 250px; background-color: #B7E0E5; padding: 20px; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+    <div style="font-size: 2rem; margin-bottom: 10px;text-align: center;">🧐</div>
+    <h3 style="margin: 0 0 10px 0; text-align: center;"><b>As a critique partner:</b></h3>
+    <p style="margin: 0; font-size: 14pt; line-height: 1.5;">
+      Students learn to spot bias, errors, or poor design in AI outputs, strengthening their critical evaluation skills.
+    </p>
+  </div>
+
+</div>
+
+
+## The Three Roles Framework 
+
+#### This framework defines three roles—Designer, Engineer, and QA—that shape how students engage with planning, building, and evaluating. Rotating through these stances helps students practice intentional design, coding fluency, and critical evaluation.
+
+#### Pedagogically, the framework keeps responsibilities clear: **students own the creativity and judgment**, while AI serves as a supportive tool for ideas, scaffolds, or critique. This balance ensures students stay in charge of their learning while developing habits of reflection and problem-solving.
+
+##### Click on the arrows below to expand each section.
+
+<details style="background-color: #ececec; padding: 10px; margin-top: 20px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 18px; font-weight: bold;">💡📝Designer</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+
+#### The Designer role emphasizes planning and intentionality. Students focus on defining goals, constraints, and user needs, while AI serves as a brainstorming partner to generate options and surface considerations.
+</div></details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 18px; font-weight: bold;">🛠️💻 Engineer</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+
+#### The Engineer role highlights implementation and problem-solving. Students write and adapt code, using AI as a scaffold or debugging helper, while maintaining responsibility for accuracy, accessibility, and alignment with their design goals.
+</div></details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 18px; font-weight: bold;">🧐✅Quality Assurance (QA)</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+
+#### The QA role centers on testing, critique, and reflection. Students evaluate whether the system works as intended, identify issues, and decide what to revise, with AI suggesting test cases or potential flaws but leaving decisions to the student.
+</div></details>
+
+
+
+## Why This Matters
+#### By learning to use AI this way, students practice ethical and intentional coding. They don’t just accept AI’s work blindly—they evaluate it, adapt it, and ensure it aligns with their values, goals, and understanding.
+
+#### This prepares them to work with AI in the real world while keeping ownership of their learning and creations.
+
+
+
+
+
+
+
+
+MARKDOWN

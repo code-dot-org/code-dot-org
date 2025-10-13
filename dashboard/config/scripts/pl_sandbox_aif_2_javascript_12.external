@@ -1,0 +1,73 @@
+name 'pl_sandbox_aif_2_JavaScript_12'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# What is JavaScript?
+
+#### JavaScript (JS) is the language that makes a webpage interactive.
+
+#### If HTML is the structure and CSS is the style, then JavaScript is the brain—it controls behavior, logic, and actions.
+
+#### **Key things JavaScript does:**
+- #### Responds to user actions (like clicks, typing, or scrolling)
+- #### Updates the page without reloading (dynamic content)
+- #### Connects to and uses data (e.g., updating a shopping cart)
+- #### Adds interactivity, like pop-ups, animations, or calculators
+
+
+## Sample Code with HTML + CSS + JavaScript
+
+#### Notice the addition of the interactive button. CSS is used to style the button and an interacitve event function makes a 
+
+ <div style="text-align: center;">
+    <img src="https://images.code.org/46d435908ac369aad8e1b10f86aff0e9-image-1759503682492.png" 
+         alt="sample code of a simple website with HTML CSS and JavaScript"
+         style="width:650px; border-radius:15px; box-shadow:0 6px 12px rgba(0,0,0,0.25);">
+  </div>
+  
+   <div style="text-align: center;">
+    <img src="https://images.code.org/f439cf50a9bb4cc733ff346954dde013-image-1759505377672.png" 
+         alt="sample code of a simple website with HTML CSS and JavaScript"
+         style="width:650px; border-radius:15px; box-shadow:0 6px 12px rgba(0,0,0,0.25);">
+  </div>
+  
+  <div style="clear:both;"></div>
+  <br>
+    
+   <div style="text-align: center;">
+    <img src="https://images.code.org/c3665e906951d22c367f7c0e72811dcb-image-1759505466083.png" 
+         alt="sample output of website"
+         style="width:650px; border-radius:15px; box-shadow:0 6px 12px rgba(0,0,0,0.25);">
+  </div>
+
+## What’s happening here:
+
+* #### HTML layer → added a <button> with onclick="makeDogBark()".
+
+* #### CSS layer → styled the button so it looks nice.
+
+* #### JavaScript layer → function makeDogBark() shows an alert popup saying "Woof! Woof! 🐶".
+
+
+## In other words:
+* #### HTML = button exists
+
+* #### CSS = button looks good
+
+* #### JavaScript = button does something
+
+
+<div style="text-align: left;">
+    <img src="https://images.code.org/8347eb9717a55b91277116cceea55d10-image-1759505960693.png" 
+         alt="<button> → Creates a clickable button on the page.
+onclick=makeDogBark() → Tells the button to run the makeDogBark function when clicked.
+<script> ... </script> → The place inside your HTML where you can write JavaScript code.
+function makeDogBark() { ... } → Defines a reusable block of code that runs when called.
+alert(Woof! Woof! 🐶); → Pops up a message box that says Woof! Woof! 🐶 when the function is triggered."
+         style="width:800px; display:block; margin-bottom:20px; border-radius:12px; box-shadow:0 6px 12px rgba(0,0,0,0.25);">
+    
+
+
+
+MARKDOWN

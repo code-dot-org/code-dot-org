@@ -7,7 +7,7 @@ import {
 import {commonI18n} from '@cdo/apps/types/locale';
 
 const definition: BlockJson = {
-  type: 'when_run',
+  type: 'Dancelab_whenRun',
   message0: commonI18n.whenRun(),
   nextStatement: null,
   style: BlockStyles.SETUP,

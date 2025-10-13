@@ -1,0 +1,51 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-09-25T19:58:14.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Now use a loop to make potions with a fixed number of ingredients. \r\n## Do This: \r\n- Run the code to see how many potions you can make with 12 ingredients.\r\n- Modify the code so that each potion costs 3 ingredients instead of 2.",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "ingredients = 12  # You start with 12 ingredients\npotions = 0       # Start with 0 potions\n\n# Each potion costs 2 ingredients\nwhile ingredients >= 2:\n    potions += 1\n    ingredients -= 2\n    print(\"You made a potion! Total potions:\", potions)\n\nprint(\"You ran out of ingredients!\")",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "validation_file": {
+      "id": "1",
+      "name": "test_main.py",
+      "language": "py",
+      "contents": "import unittest\n\nclass TestPotionCost(unittest.TestCase):\n\n    def test_modify_potion_cost(self):\n        try:\n            with open('main.py', 'r') as f:\n                content = f.read()\n\n            # Check if the potion cost is updated to 3 in the while loop\n            if 'ingredients -= 3' not in content:\n                self.fail(\n                    \"The potion cost has not been updated to 3 ingredients. \"\n                    \"Please change the line `ingredients -= 2` to `ingredients -= 3` so that each potion costs 3 ingredients.\"\n                )\n\n        except FileNotFoundError:\n            self.fail(\"The file 'main.py' was not found. Please make sure it exists in the same directory.\")\n        except Exception as e:\n            self.fail(f\"Error running the test: {e}\")\n\n\nif __name__ == \"__main__\":\n    unittest.main()\n",
+      "folderId": "0",
+      "active": false,
+      "open": false,
+      "type": "validation"
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFWGIY/ZrAXtyOB9uL563fB2CeYUHsCowFfREC6Jt\n7I8mJPJwO2e3tZlmhfOVYqGnrsiJe4kD8WeBo2LVTk4o21rxZjTUQRjLk9ak\nwpBJQlFe0GO46YrkqBG/U5JjXneF3S5KI94m02bmVgh7l41RC2zrJr+petqJ\nPP6Ahc7orfXo/ch0RGSc/asoT0Ut9eDFKzQBTD31XPKD0wUMAeH+RhgJnIi6\ns0UjiMHbo4WCIbNCXfPPkcqOuDXdG5b/87VtKmE7vj8CIRrE/GBKlfQy5/ci\nxo6qLnTjrqP1CmqRKqahEkabpTUP3Qj1Jx99/bUCEFM1F9Y/m5IWblQVzSf9\n72fwWR5ECmN3gU9g8Z9MvY9q4ddvh9OrbWPcI5kywEkGadyx4Xa9oMDK7F4y\n/z5VtvRuYNh8XH3TbzWzyH3hWHv2Yo+F9/tsYHvWpUnfCJj7Iw62C0QgmCgQ\nAzOKXmfTgfhPVSnPSr0zemi8WK4ipVFx4cks4IpC/XO8a4HaHB7JbZu9bKxV\ni4asrWvYZIihHV8Tpo2LKlojpqRuEF1wcHra++oR3Sh4IF/6G4Ma69+3X7Uf\nErZx13gojukUdLWbHxYKvzrQNKlbWRufTKp5dIP5071EGb8rngdtErRj23Zj\n1Q==\n",
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:58:14.973+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson17-level7_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson17-level7_2025\"}]"
+}]]></config>
+</Pythonlab>

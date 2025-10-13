@@ -1,0 +1,12 @@
+name 'computer-systems-lesson6-level2_v2-2025'
+display_name 'Sample User Profiles'
+description 'Below are several sample users that are seeking to build a computer system for a variety of different purposes.'
+
+sublevels
+level 'computer-systems-lesson6-level2a_v2-2025'
+level 'computer-systems-lesson6-level2b_v2-2025'
+level 'computer-systems-lesson6-level2c_v2-2025'
+level 'computer-systems-lesson6-level2d_v2-2025'
+level 'computer-systems-lesson6-level2e_v2-2025'
+level 'computer-systems-lesson6-level2f_v2-2025'
+level 'computer-systems-lesson6-level2g_2025-launch_v2-2025'

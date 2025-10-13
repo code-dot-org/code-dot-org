@@ -7,7 +7,7 @@ skip_dialog 'true'
 markdown <<MARKDOWN
 # Project: Personal Favicon
 
-<img src = "https://code.org/images/cspunit1/code-pixel.png" style="float:right; margin:0 20px" width=50>
+<img src = "/blockly/media/cspunit1/code-pixel.png" style="float:right; margin:0 20px" width=50>
 A favicon is a small image, usually 16x16 pixels, that is typically shown in a web browser’s address bar next to the title of the page or web address for a particular site. It is typically a small version of a company logo or some other symbol for the site. A favicon for Code.org is shown to the right.
 
 Favicons are designed by artists and programmed into web pages by web designers. Below are some examples of favicons &mdash; you might recognize some!

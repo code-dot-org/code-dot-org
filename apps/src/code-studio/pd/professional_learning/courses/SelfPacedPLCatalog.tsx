@@ -26,7 +26,8 @@ import moduleStyles from './selfPacedPLCatalog.module.scss';
 
 const SelfPacedPLCatalog: React.FunctionComponent<{
   selfPacedPLCourseOfferings: CourseOffering[];
-}> = ({selfPacedPLCourseOfferings}) => {
+  studentsCourseOfferings: CourseOffering[];
+}> = ({selfPacedPLCourseOfferings, studentsCourseOfferings}) => {
   const [filteredCourses, setFilteredCourses] = useState(
     selfPacedPLCourseOfferings
   );
@@ -34,6 +35,7 @@ const SelfPacedPLCatalog: React.FunctionComponent<{
   const [appliedFilters, setAppliedFilters] = useState(
     getInitialFilterStates()
   );
+  const [expandedCardKey, setExpandedCardKey] = useState('');
 
   // Updates the filtered courses based on the applied filters.
   useEffect(() => {
@@ -57,8 +59,6 @@ const SelfPacedPLCatalog: React.FunctionComponent<{
     appliedFilters.duration,
     setFilteredCourses,
   ]);
-
-  const [expandedCardKey, setExpandedCardKey] = useState('');
 
   useEffect(() => {
     const expandedCardFound = filteredCourses.some(
@@ -86,6 +86,13 @@ const SelfPacedPLCatalog: React.FunctionComponent<{
       updateQueryParam(filter.name, undefined, false)
     );
   };
+  const getRelatedCurriculumsForPLCourse = (course: CourseOffering) => {
+    const selfPacedPLCourseOfferingID = course.course_offering_id;
+
+    return studentsCourseOfferings.filter(
+      co => co.self_paced_pl_course_offering_id === selfPacedPLCourseOfferingID
+    );
+  };
 
   return (
     <div className={moduleStyles.selfPacedPLCatalog}>
@@ -109,6 +116,7 @@ const SelfPacedPLCatalog: React.FunctionComponent<{
           handleClearAllFilters={handleClearAllFilters}
           updateExpandedCardKey={updateExpandedCardKey}
           expandedCardKey={expandedCardKey}
+          getRelatedCurriculumsForPLCourse={getRelatedCurriculumsForPLCourse}
         />
       </section>
     </div>

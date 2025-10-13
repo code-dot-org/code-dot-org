@@ -237,7 +237,8 @@ const WEBPACK_BASE_CONFIG = {
     // Run TypeScript type checking in parallel with the build
     new ForkTsCheckerWebpackPlugin({
       // tsconfig.build.json only type-checks TypeScript files.
-      typescript: {configFile: 'tsconfig.build.json'},
+      // We manually set a memoryLimit here to avoid a JavaScript heap out of memory error in yarn start.
+      typescript: {configFile: 'tsconfig.build.json', memoryLimit: 2560},
     }),
   ],
   resolve: {
@@ -290,14 +291,19 @@ const WEBPACK_BASE_CONFIG = {
 
       {test: /\.interpreted.js$/, type: 'asset/source'},
       {
-        test: /\.(png|jpg|jpeg|gif|svg)$/,
+        test: /\.(png|jpg|jpeg|gif|svg|ico)$/,
         include: [
           p('static'),
           p('src'),
           p('test'),
           p('../dashboard/app/assets/images'),
         ],
-        type: 'asset/inline',
+        type: 'asset/resource',
+        generator: {
+          filename: '[name]wp[contenthash:20][ext]',
+          outputPath: 'images/', // build/package/js/images/
+          publicPath: '/assets/js/images/', // Dashboard assets path
+        },
       },
       {
         test: /\.jsx?$/,

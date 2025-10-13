@@ -2,6 +2,12 @@ import {KeyboardNavigation} from '@blockly/keyboard-navigation';
 import * as GoogleBlockly from 'blockly/core';
 import './shortcutMenuStyles.scss';
 
+import {
+  overrideOptionWeight as overrideContextMenuOptionWeight,
+  unregisterCrossTabPluginOptions,
+  WeightOptions as ContextMenuWeightOptions,
+} from './contextMenu';
+
 // This is a Monkey patch while Blockly fixes issue #713. Once merged and
 // bumped, we can replace this class and the manual registry of
 // NavigationDeferringToolbox below with one line function.
@@ -22,24 +28,43 @@ export function preInjectRegistrations() {
 }
 
 export function initializeKeyboardNavigation(
-  workspace: GoogleBlockly.WorkspaceSvg
+  workspace: GoogleBlockly.WorkspaceSvg,
+  isDarkTheme: boolean
 ) {
   if (Blockly.KeyboardNavigation) {
     Blockly.KeyboardNavigation.dispose();
   }
-  createShortcutsModalContainer();
-  Blockly.KeyboardNavigation = new KeyboardNavigation(workspace);
-
+  unregisterCrossTabPluginOptions();
+  createShortcutsModalContainer(isDarkTheme);
+  Blockly.KeyboardNavigation = new KeyboardNavigation(workspace, {
+    allowCrossWorkspacePaste: true,
+  });
+  // Re-register context menu options with our custom weights.
+  reorderContextMenu();
   enableShortcutModalEscape();
 }
 
-function createShortcutsModalContainer() {
+export function initializeAdditionalWorkspace(
+  workspace: GoogleBlockly.WorkspaceSvg
+) {
+  // Ensure that any additional workspace also has keyboard navigation
+  // initialized.
+  if (Blockly.KeyboardNavigation) {
+    Blockly.KeyboardNavigation.navigationController.addWorkspace(workspace);
+    Blockly.KeyboardNavigation.navigationController.enable(workspace);
+  }
+}
+
+function createShortcutsModalContainer(isDarkTheme: boolean) {
   // Add the shortcuts div prior to keyboard navigation initialization
   // so the dialog has a place to land.
   if (!document.getElementById('shortcuts')) {
     const shortcutDialog = document.createElement('div');
     shortcutDialog.id = 'shortcuts';
     shortcutDialog.className = 'shortcut-dialog';
+    if (isDarkTheme) {
+      shortcutDialog.setAttribute('data-theme', 'Dark');
+    }
     document.body.appendChild(shortcutDialog);
   }
 }
@@ -61,5 +86,19 @@ function enableShortcutModalEscape() {
         }
       }
     });
+  }
+}
+
+function reorderContextMenu() {
+  const menuWeightMap: Record<string, ContextMenuWeightOptions> = {
+    blockCutFromContextMenu: ContextMenuWeightOptions.CUT,
+    blockCopyFromContextMenu: ContextMenuWeightOptions.COPY,
+    blockPasteFromContextMenu: ContextMenuWeightOptions.PASTE,
+    move: ContextMenuWeightOptions.MOVE,
+    edit: ContextMenuWeightOptions.EDIT,
+    move_comment: ContextMenuWeightOptions.MOVE_COMMENT,
+  };
+  for (const [option, weight] of Object.entries(menuWeightMap)) {
+    overrideContextMenuOptionWeight(option, weight);
   }
 }

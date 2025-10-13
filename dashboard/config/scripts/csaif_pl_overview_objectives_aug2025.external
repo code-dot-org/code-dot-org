@@ -47,6 +47,6 @@ markdown <<MARKDOWN
 
 #### Code.org values and is responsive to feedback. Please fill out the pre-survey to  tell us about who you are and how we can best support you.
 
-<a class="btn btn-large btn-primary" href="link.com" target="blank" rel="noopener noreferrer">Take the pre-survey</a>
+<a class="btn btn-large btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSc-HNXAwLWMCuNqRk5pHsE8XH3HBJT2G39m9zcb4S40RhlJPw/viewform?usp=header" target="blank" rel="noopener noreferrer">Take the pre-survey</a>
 
 MARKDOWN
