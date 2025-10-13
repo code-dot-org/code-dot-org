@@ -1,0 +1,24 @@
+{
+  "name": "hoai-pilot-6",
+  "script_names": [
+    "hoai-pilot-6"
+  ],
+  "original_script_names": [
+    "hoai-pilot-6"
+  ],
+  "published_state": "in_development",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "hoai-pilot-6",
+    "numbered_units": "auto",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

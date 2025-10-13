@@ -1,5 +1,3 @@
-# Updating this in a separate PR, since there is a bug in the drawer logic
-@skip
 @dashboard_db_access
 # We need "press keys" to type into the React form's fields, but that doesn't work on mobile Safari.
 @no_mobile
@@ -35,7 +33,7 @@ Scenario: School Info Confirmation Dialog
   Then I wait until element "#uitest-school-dropdown" contains text "Appling County High School"
   And I select the "Appling County High School" option in dropdown "uitest-school-dropdown"
   Then I click selector "button:contains(Save)"
-  Then I click selector "button:contains(Close)"
+  Then I click selector "button:contains(Close)" once I see it
   And I wait until element "#ui-test-drawer-toolbar" is gone
 
   # One week later, the teacher does not see the prompt
@@ -45,8 +43,9 @@ Scenario: School Info Confirmation Dialog
 
   # One year later, the teacher sees the school info confirmation dialog and confirms at the same school
   And one year passes for user "Teacher_Chuba"
+  And I clear session storage
   Then I reload the page
-  And element "#ui-test-drawer-toolbar" is visible
+  And I wait to see "#ui-test-drawer-toolbar"
   Then I click selector "button:contains(I'm still teaching here)"
   And I wait until element "#ui-test-drawer-toolbar" is gone
 
