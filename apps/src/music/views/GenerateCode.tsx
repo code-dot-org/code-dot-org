@@ -12,6 +12,7 @@ import Adlib, {
 } from '@cdo/apps/lab2/views/components/guide/Adlib';
 import Guide from '@cdo/apps/lab2/views/components/guide/Guide';
 import MainInstructionsContent from '@cdo/apps/lab2/views/components/Instructions/MainInstructionsContent';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {generateBlocklyJson} from '../ai/generate/generateBlocklyJson';
@@ -23,6 +24,7 @@ import {
 } from '../ai/generate/GenerateCodeContent';
 import appConfig from '../appConfig';
 import {setCodeToLoad, setAiGenerateState} from '../redux/musicRedux';
+import {MusicLevelData} from '../types';
 
 import styles from './GenerateCode.module.scss';
 
@@ -59,12 +61,14 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
   const [contextText, setContextText] = useState(DefaultContext);
 
   const [promptText, setPromptText] = useState(
-    adlibOption ? undefined : DefaultPrompt
+    adlibOption ? '' : DefaultPrompt
   );
 
   // Use legacy adlib ID, adlib object, or new adlib ID.
   const useAdlib =
-    adlib && typeof adlib === 'string'
+    !(levelProperties.levelData as MusicLevelData).aiCodeGenerateText &&
+    adlib &&
+    typeof adlib === 'string'
       ? adlibs[adlib]
       : adlib
       ? adlib
@@ -72,8 +76,9 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
       ? adlibs[adlibOption]
       : undefined;
 
-  useLifecycleNotifier(LifecycleEvent.LevelLoadStarted, () => {
+  useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, () => {
     dispatch(setAiGenerateState('none'));
+    setPromptText(adlibOption ? '' : DefaultPrompt);
   });
 
   useEffect(() => {
@@ -195,7 +200,9 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
           {!useAdlib && (
             <textarea
               id="generate-description"
-              onChange={evt => setPromptText(evt.target.value)}
+              onChange={evt => {
+                setPromptText(evt.target.value);
+              }}
               value={promptText}
               rows={4}
               className={styles.textArea}
@@ -224,7 +231,12 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
           color="black"
           size="s"
           iconLeft={{iconName: 'sparkles'}}
-          onClick={generateSong}
+          onClick={() => {
+            generateSong();
+            analyticsReporter.sendEvent('hoai2025-music-prompt', {
+              promptText,
+            });
+          }}
         />
       )}
 

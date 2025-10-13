@@ -30,6 +30,8 @@ export interface MusicLevelData extends ProjectLevelData {
   aiCodeGenerateAdlibId?: string;
   // Alternatively, an actual adlib object to display.
   aiCodeGenerateAdlib?: AdlibType;
+  // Force showing the prompt text box instead of an adlib.
+  aiCodeGenerateText?: boolean;
 }
 
 export type ExemplarValidationMode = 'default' | 'type';
