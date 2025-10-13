@@ -45,6 +45,124 @@ class AssignedCoursesAndScripts < ActiveSupport::TestCase
         _(courses_as_participant.first.name).must_equal assigned_course.name
       end
     end
+
+    context 'when the user has no progress or section courses' do
+      let(:user) {create(:student)}
+      subject(:courses_as_participant) {user.courses_as_participant}
+
+      it 'returns an empty array' do
+        _(courses_as_participant).must_equal []
+      end
+    end
+
+    context 'when the user has progress in a standalone unit' do
+      let(:user) {create(:student)}
+      let(:course) {create(:single_unit_course, :stable)}
+      let(:unit) {course.first_unit}
+      subject(:courses_as_participant) {user.courses_as_participant}
+
+      before do
+        user.assign_script(unit)
+      end
+
+      it 'returns the course via original_unit_group' do
+        _(courses_as_participant.length).must_equal 1
+        _(courses_as_participant.first.name).must_equal course.name
+      end
+    end
+
+    context 'when a unit belongs to multiple courses' do
+      let(:user) {create(:student)}
+      let(:original_course) {create(:single_unit_course, :stable)}
+      let(:unit) {original_course.first_unit}
+      let(:progress_course) {create(:single_unit_course, :stable, unit: unit)}
+      subject(:courses_as_participant) {user.courses_as_participant}
+
+      before do
+        user.assign_script(unit, progress_course)
+      end
+
+      it 'returns the progress course when user_script has explicit unit_group' do
+        _(courses_as_participant.length).must_equal 1
+        _(courses_as_participant.first.name).must_equal progress_course.name
+      end
+    end
+
+    context 'when user has both section courses and progress courses' do
+      let(:user) {create(:student)}
+      let(:teacher) {create(:teacher)}
+      let(:section_course) {create(:single_unit_course, :stable)}
+      let(:progress_course) {create(:single_unit_course, :stable)}
+      let(:section) {create(:section, user_id: teacher.id, unit_group: section_course)}
+      subject(:courses_as_participant) {user.courses_as_participant}
+
+      before do
+        # User is in a section for section_course
+        Follower.create!(section_id: section.id, student_user_id: user.id, user: teacher)
+        # User also has independent progress in progress_course
+        user.assign_script(progress_course.first_unit)
+      end
+
+      it 'returns both courses' do
+        _(courses_as_participant.length).must_equal 2
+        course_names = courses_as_participant.map(&:name)
+        _(course_names).must_include section_course.name
+        _(course_names).must_include progress_course.name
+      end
+
+      context 'when the section course and progress course are the same' do
+        before do
+          # Also add progress in the section course
+          user.assign_script(section_course.first_unit)
+        end
+
+        it 'deduplicates and returns unique courses' do
+          _(courses_as_participant.length).must_equal 2
+          course_names = courses_as_participant.map(&:name)
+          _(course_names).must_include section_course.name
+          _(course_names).must_include progress_course.name
+        end
+      end
+    end
+
+    context 'when user has progress in non-launched courses' do
+      let(:user) {create(:student)}
+      let(:launched_course) {create(:single_unit_course, :stable)}
+      let(:non_launched_course) {create(:single_unit_course)}
+      subject(:courses_as_participant) {user.courses_as_participant}
+
+      before do
+        user.assign_script(launched_course.first_unit)
+        user.assign_script(non_launched_course.first_unit)
+      end
+
+      it 'filters out non-launched courses' do
+        _(courses_as_participant.length).must_equal 1
+        _(courses_as_participant.first.name).must_equal launched_course.name
+      end
+    end
+
+    context 'when user has multiple user_scripts with different courses' do
+      let(:user) {create(:student)}
+      let(:course_1) {create(:single_unit_course, :stable)}
+      let(:course_2) {create(:single_unit_course, :stable)}
+      let(:course_3) {create(:single_unit_course, :stable)}
+      subject(:courses_as_participant) {user.courses_as_participant}
+
+      before do
+        user.assign_script(course_1.first_unit)
+        user.assign_script(course_2.first_unit)
+        user.assign_script(course_3.first_unit)
+      end
+
+      it 'returns all unique launched courses' do
+        _(courses_as_participant.length).must_equal 3
+        course_names = courses_as_participant.map(&:name)
+        _(course_names).must_include course_1.name
+        _(course_names).must_include course_2.name
+        _(course_names).must_include course_3.name
+      end
+    end
   end
 
   describe '#any_visible_assigned_scripts?' do
