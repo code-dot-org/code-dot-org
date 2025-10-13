@@ -144,6 +144,12 @@ const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
         true,
         {contentType: 'application/json;charset=UTF-8'}
       );
+      await HttpClient.patch(
+        `/v3/assets/${channelId}?abuse_score=0`,
+        JSON.stringify({abuse_score: 0}),
+        true,
+        {'Content-Type': 'application/json; charset=UTF-8'}
+      );
       setAbuseScore(0);
     } catch (e) {
       // Set abuse score to number < 0 so that error message will be displayed to the admin user.
