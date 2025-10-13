@@ -115,7 +115,7 @@ class AichatEventsController < ApplicationController
   end
 
   private def can_log_aichat_events?(client_type)
-    current_user.has_aichat_access? || current_user.can_access_ai_tutor?(client_type)
+    current_user.has_aichat_access? || current_user.trust_chat_client?(client_type)
   end
 
   private def can_view_chat_history?(user_id)

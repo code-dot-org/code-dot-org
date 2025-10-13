@@ -11,16 +11,17 @@ module User::AiAccessible
   AI_TUTOR_EXPERIMENT_NAME = 'ai-tutor'
 
   # Chat apis trust the client to decide if it can access chat features
-  # This enables us to do things like turn on the tutor UI with a url param, or
-  # experiment with new lab types (flow lab) with low friction.
+  # This allows us the flexibility to do things like turn on the tutor UI
+  # with a url param, or experiment with new lab types with low friction.
   def trust_chat_client?(client_type)
     return true if client_type == SharedConstants::AI_CHAT_CLIENT_TYPES[:AI_TUTOR]
     return true if client_type == SharedConstants::AI_CHAT_CLIENT_TYPES[:FLOW_LAB]
     false
   end
 
-  # This should be used to inform the UI of when to set Tutor to "sleeping"
-  # on a level that would otherwise show Tutor.
+  # This was originally meant to be used to inform the UI of when to set Tutor to "sleeping"
+  # on a level that would otherwise show Tutor. It is currently unused while the
+  # permissions features for tutor and ai chat features in general are being shaped.
   def has_ai_tutor_access?
     return false if ai_tutor_access_denied || ai_tutor_feature_globally_disabled?
     teacher_in_ai_tutor_pilot? || in_ai_tutor_enabled_section_with_pilot_teacher?
@@ -45,13 +46,6 @@ module User::AiAccessible
 
   def has_aichat_access?
     teacher_can_access_ai_chat? || student_can_access_ai_chat?
-  end
-
-  def can_access_ai_tutor?(client_type)
-    # If the request is coming from AiTutor or FlowLab, trust the client to decide
-    # if it can access the chat backend. This allows easy testing of AiTutor using a url param.
-    client_type == SharedConstants::AI_CHAT_CLIENT_TYPES[:AI_TUTOR] ||
-      client_type == SharedConstants::AI_CHAT_CLIENT_TYPES[:FLOW_LAB]
   end
 
   private def ai_tutor_feature_globally_disabled?
