@@ -56,13 +56,7 @@ const SourcesContainer: React.FC<
     children: ReactNode;
     defaultSources: ProjectSources;
   }
-> = ({
-  levelProperties,
-  initialSources,
-  defaultSources,
-
-  children,
-}) => {
+> = ({levelProperties, initialSources, defaultSources, children}) => {
   const [currentSources, setCurrentSources] = useState<ProjectSources>(
     () => getInitialSources(levelProperties, initialSources) || defaultSources
   );
@@ -72,9 +66,10 @@ const SourcesContainer: React.FC<
     message?: string;
   }>();
 
-  const reinitializationHandler = useRef<() => void>(() => {});
-  const setReinitializationHandler = (handler: () => void) =>
-    (reinitializationHandler.current = handler);
+  const reinitializationHandler = useRef<() => void>();
+  const setReinitializationHandler = useCallback((handler: () => void) => {
+    reinitializationHandler.current = handler;
+  }, []);
 
   const reinitializeSources = useCallback(
     (sources: ProjectSources, save: boolean = false) => {
@@ -82,7 +77,10 @@ const SourcesContainer: React.FC<
       if (save) {
         Lab2Registry.getInstance().getProjectManager()?.save(sources, true);
       }
-      reinitializationHandler?.current();
+
+      if (reinitializationHandler.current) {
+        reinitializationHandler.current();
+      }
     },
     [setCurrentSources, reinitializationHandler]
   );
