@@ -21,6 +21,7 @@ class AichatAiUsageReporter
     # Pull out token counts.
     prompt_tokens = usage['prompt_tokens']
     completion_tokens = usage['completion_tokens']
+    thought_tokens = usage['thought_tokens']
     cached_prompt_tokens = usage['cached_prompt_tokens']
 
     report_token_usage(prompt_tokens)
@@ -42,7 +43,8 @@ class AichatAiUsageReporter
     CDO.log.info log_payload.to_json.to_s if DCDO.get('log_aichat_openai_usage', false)
 
     metrics = [
-      ['PromptTokens', prompt_tokens], ['CompletionTokens', completion_tokens], ['CachedTokens', cached_prompt_tokens]
+      ['PromptTokens', prompt_tokens], ['CompletionTokens', completion_tokens],
+      ['ThoughtTokens', thought_tokens], ['CachedTokens', cached_prompt_tokens]
     ].map do |key, value|
       {
         metric_name: "AichatOpenaiRequest.#{key}",
