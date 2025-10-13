@@ -1,0 +1,5 @@
+@import '../../../mixins.scss';
+
+.centerHeaderContent {
+  @include center-header-content(true);
+}
