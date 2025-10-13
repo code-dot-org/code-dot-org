@@ -21,13 +21,12 @@ const OnboardingTourSteps: React.FC = () => {
       enabled={resourcePanelPinnedButtonOnboardingTourSeen !== 'yes'}
       initialStep={INITIAL_STEP}
       steps={STEPS}
-      onStart={() => {
+      onExit={() => {
         trySetLocalStorage(
           RESOURCE_PANEL_PINNED_BUTTON_ONBOARDING_TOUR_SEEN,
           'yes'
         );
       }}
-      onExit={() => {}}
       options={{
         scrollToElement: false,
         exitOnOverlayClick: false,
