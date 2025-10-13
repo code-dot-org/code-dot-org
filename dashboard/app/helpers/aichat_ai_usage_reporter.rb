@@ -31,6 +31,7 @@ class AichatAiUsageReporter
 
     log_payload = {
       event: 'aichat_openai_usage',
+      modelId: @model_id,
       multimodal: is_multimodal,
       usage: usage,
       messages: message_and_file_counts,
@@ -48,6 +49,7 @@ class AichatAiUsageReporter
     ].map do |key, value|
       {
         metric_name: "AichatOpenaiRequest.#{key}",
+        modelId: @model_id,
         value: value,
         unit: 'Count',
         timestamp: Time.now,
