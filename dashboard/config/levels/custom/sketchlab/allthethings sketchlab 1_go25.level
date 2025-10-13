@@ -1,0 +1,15 @@
+<Sketchlab>
+  <config><![CDATA[{
+  "game_id": 75,
+  "created_at": "2025-10-01T18:44:50.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "This is the first allthethings level for Sketch Lab!",
+    "name_suffix": "_go25"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-10-01T18:44:50.199+00:00\",\"changed\":[\"cloned from \\\"allthethings sketchlab 1\\\"\"],\"cloned_from\":\"allthethings sketchlab 1\"}]"
+}]]></config>
+</Sketchlab>

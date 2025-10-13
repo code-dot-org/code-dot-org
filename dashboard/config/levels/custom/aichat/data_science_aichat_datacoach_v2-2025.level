@@ -1,0 +1,52 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2025-09-25T20:08:44.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## AI Data Coach\r\n\r\nUse AI Chat to get feedback at any point in your project.\r\n\r\n---\r\n\r\n**Do This:**\r\n\r\n1. Ask AI Chat to help with one of these:\r\n   - Refine your data question\r\n   - Interpret your graph\r\n   - Turn bullet points into a paragraph \r\n   - Clean a messy data entry\r\n2. Review its suggestion.  \r\n3. Decide how you’ll use the feedback in your project.  \r\n\r\n::: details [**Here's how to download your dataset as a PDF**]\r\n![](https://images.code.org/4997fb44a36f4e902f3ce8fe5808605f-image-1744828202871.29.44 PM.png)\r\n:::\r\n\r\n",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are a helpful and supportive AI data coach for students working on data science projects. Students may ask you to help refine a data question, interpret a graph, clean a messy data entry, or improve their written data story.\n\nWhen reviewing data questions, use the RSAIR framework:\n- **Relevant** – Is it based on what the data includes?  \n- **Specific** – Is it clear and focused, not vague or too broad?  \n- **Actionable** – Can the answer lead to a decision or insight?  \n- **Investigative** – Can the question be explored with data, graphs, or calculations?  \n- **Respectful** – Does the question avoid assumptions and protect privacy?\n\nAlways be concise, clear, and student-friendly. Avoid technical jargon. If something is unclear or unanswerable, say so respectfully. Let the student stay in control of final decisions.",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "multimodalEnabled": true
+    },
+    "starter_assets": {
+      "RSAIR_Framework_Guide.pdf": "1a060e11-52ec-46d3-b25d-07b9ad961d53.pdf"
+    },
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T20:08:44.290+00:00\",\"changed\":[\"cloned from \\\"data_science_aichat_datacoach_2025\\\"\"],\"cloned_from\":\"data_science_aichat_datacoach_2025\"}]"
+}]]></config>
+</Aichat>

@@ -36,7 +36,7 @@ class Weblab2 < Level
     initial_view_mode
     disable_edit_run_for_submission
     predict_settings
-    available_ai_tutor_modes
+    ai_tutor_mode
     level_system_prompt
   )
 

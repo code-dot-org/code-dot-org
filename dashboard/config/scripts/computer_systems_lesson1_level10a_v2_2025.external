@@ -1,0 +1,27 @@
+name 'computer-systems-lesson1-level10a_v2-2025'
+title 'Product Designer'
+bubble_choice_description 'Discover how designers create technology that is user-friendly and visually appealing.'
+display_name 'Product Designer'
+thumbnail_url 'https://images.code.org/2d120b80ec86cf7fe9a52749c8e49b2b-Pasted%20Graphic%201.png'
+
+markdown <<MARKDOWN
+## Product Designer
+
+Discover how designers create technology that is user-friendly and visually appealing.
+
+As you watch, answer the following questions in your activity guide:
+
+* What does this person do in their role?
+* What skills or tools do they use?
+* What challenges do you think they might face?
+
+**Note:** This video opens in a new tab.
+
+<div style="text-align: center; margin-top: 20px;">
+  <a href="https://docs.google.com/presentation/d/1l3XtOgsm9F71ChLFpYdCmm2VVrjGBVucAvsjLo6VjCc/edit?slide=id.g2694c47731d_3_332#slide=id.g2694c47731d_3_332" target="_blank" rel="noopener noreferrer">
+    <img src="https://images.code.org/ebd6fd9c61d45f59750f04fc6468fddc-Pasted Graphic 5.png" 
+         alt="YouTube Video Thumbnail" 
+         style="width: 80%; max-width: 600px; border-radius: 10px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);">
+  </a>
+</div>
+MARKDOWN

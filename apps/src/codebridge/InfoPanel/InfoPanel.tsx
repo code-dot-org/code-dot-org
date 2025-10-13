@@ -57,7 +57,7 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
     AiTutor2ResponseView,
     hiddenContextCallback,
     startSources,
-    aiTutorSystemPromptSettings,
+    aiTutorSystemPromptName,
     aiTutorMultimodalEnabled,
     aiTutorChatButtonData,
   } = useCodebridgeContext();
@@ -213,9 +213,11 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
           hiddenContextCallback={hiddenContextCallback}
           settings={settings}
           versionHistoryProps={{startSources}}
-          aiTutorSystemPromptSettings={aiTutorSystemPromptSettings}
           aiTutorMultimodalEnabled={aiTutorMultimodalEnabled}
           aiTutorChatButtonData={aiTutorChatButtonData}
+          isValidationTourEnabled={appName === 'pythonlab'}
+          isOnboardingTourEnabled={true}
+          aiTutorSystemPromptName={aiTutorSystemPromptName}
         />
       </div>
     );

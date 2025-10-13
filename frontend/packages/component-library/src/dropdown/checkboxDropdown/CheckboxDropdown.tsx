@@ -151,14 +151,14 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
         <div className={moduleStyles.bottomButtonsContainer}>
           <Button
             type="tertiary"
-            color={buttonColors.purple}
+            color={buttonColors.black}
             text={rest.selectAllText}
             onClick={rest.onSelectAll}
             size={size}
           />
           <Button
             type="tertiary"
-            color={buttonColors.purple}
+            color={buttonColors.black}
             text={rest.clearAllText}
             onClick={rest.onClearAll}
             size={size}

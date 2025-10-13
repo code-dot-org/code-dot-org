@@ -951,10 +951,17 @@ class User < ApplicationRecord
   # a script. We find or create a new UserScript entry, and set assigned_at
   # if not already set.
   # @param script [Unit] The script to assign.
+  # @param unit_group [UnitGroup] The UnitGroup to assign.
   # @return [UserScript] The UserScript, new or existing, with assigned_at set.
-  def assign_script(script)
+  def assign_script(script, unit_group = nil)
+    raise "script is required" unless script
+    unit_group ||= script&.original_unit_group
+    if unit_group&.default_units&.exclude?(script)
+      raise "unit group #{unit_group.name} does not contain unit #{script.name}"
+    end
+
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
-      user_script = UserScript.where(user: self, script: script).first_or_create
+      user_script = UserScript.find_and_migrate_or_create_by!(user_id: id, unit: script, unit_group: unit_group)
       user_script.update!(assigned_at: Time.now)
       return user_script
     end
@@ -1251,7 +1258,9 @@ class User < ApplicationRecord
     hoc_level_ids = levels_in_script.map(&:host_level).map(&:id)
 
     unless (channel_level_ids & hoc_level_ids).empty?
-      User.track_script_progress(id, Unit.get_from_cache(script_name).id)
+      unit = Unit.get_from_cache(script_name)
+      User.track_script_progress(id, unit.id)
+      unit_group = unit.get_original_unit_group
 
       # Create user_level entries for the levels associated with channels. In the
       # case of template backed levels, a channel for the template level will result
@@ -1269,7 +1278,7 @@ class User < ApplicationRecord
             new_result: ActivityConstants::BEST_PASS_RESULT,
             submitted: false,
             level_source_id: nil,
-            unit_group: nil
+            unit_group: unit_group
           )
         end
       end
@@ -1752,7 +1761,8 @@ class User < ApplicationRecord
     end
 
     if new_level_completed && script_id
-      User.track_script_progress(user_id, script_id)
+      unit_group ||= script.get_original_unit_group
+      User.track_script_progress(user_id, script_id, unit_group&.id)
     end
 
     if new_csf_level_perfected && pairing_user_ids.blank? && !is_navigator
@@ -1790,9 +1800,12 @@ class User < ApplicationRecord
 
   # This method is meant to indicate a user has made progress (i.e. made a milestone
   # post on a particular level) in a script
-  def self.track_script_progress(user_id, script_id)
+  def self.track_script_progress(user_id, script_id, unit_group_id = nil)
+    unit = Unit.get_from_cache(script_id)
+    unit_group = unit_group_id ? UnitGroup.get_from_cache(unit_group_id) : nil
+    unit_group ||= unit.get_original_unit_group
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
-      user_script = UserScript.where(user_id: user_id, script_id: script_id).first_or_create!
+      user_script = UserScript.find_and_migrate_or_create_by!(user_id: user_id, unit: unit, unit_group: unit_group)
       time_now = Time.now
 
       user_script.started_at = time_now unless user_script.started_at

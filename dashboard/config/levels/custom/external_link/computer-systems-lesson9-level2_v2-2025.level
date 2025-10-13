@@ -1,0 +1,17 @@
+<ExternalLink>
+  <config><![CDATA[{
+  "game_id": 55,
+  "created_at": "2025-09-25T20:00:12.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Processing Unit Battle\r\n\r\n**Do This:** Select a computing task and choose a processing unit (CPU, GPU, FPGA, or ASIC) to complete it. Observe the benchmarking results, record your findings in your activity guide, and analyze which processor performs best for each task.\r\n\r\n_**Note**: Make sure that the Google Slide is in_ **Slideshow mode** _in order to make the buttons within the application interactive._\r\n\r\n\r\n<div style=\"text-align: center; margin-top: 20px;\">\r\n  <a>\r\n    <img src=\"https://images.code.org/c426d375e15547c5679c47dbfec5c92c-CHOOSE YOUR PROCESSOR.png\" \r\n         alt=\"Choose Your Processor Thumbnail\" \r\n         style=\"width: 80%; max-width: 600px; border-radius: 10px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);\">\r\n  </a>\r\n</div>\r\n\r\n",
+    "link_title": "Processing Unit Battle",
+    "url": "https://docs.google.com/presentation/d/1S-P5vQ_16euSOEPzEdeJA_TLRxwnJQzQ1F4TC1dfXdo/edit?usp=drivesdk",
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T20:00:12.366+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson9-level2_2025\\\"\"],\"cloned_from\":\"computer-systems-lesson9-level2_2025\"}]"
+}]]></config>
+</ExternalLink>

@@ -1,0 +1,9 @@
+name 'computer-systems-lesson2-level4_v2-2025'
+display_name 'Career Hardware Needs'
+description 'Choose a career, watch an expert explain their hardware needs, and reflect on how key components like the GPU, CPU, SSD, or RAM impact their work.'
+
+sublevels
+level 'computer-systems-lesson2-level4a_2025-launch_v2-2025'
+level 'computer-systems-lesson2-level4b_2025-launch_v2-2025'
+level 'computer-systems-lesson2-level4c_2025-launch_v2-2025'
+level 'computer-systems-lesson2-level4d_2025-launch_v2-2025'

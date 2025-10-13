@@ -1,0 +1,92 @@
+name 'pl_sandbox_aif_2_weblabAI_13'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# How We Do It: Web Lab + AI
+
+#### Students won’t just be dropped into coding with AI—they’ll use Web Lab, a safe, scaffolded environment designed for learning.
+
+#### Web Lab is a coding platform where students write HTML, CSS, and JavaScript, preview their work instantly, and build interactive web apps step by step.
+
+#### AI is built into Web Lab with guardrails, so it supports learning instead of doing the work for students.
+
+## AI with Guardrails
+#### The AI in Web Lab is trained not to simply give complete answers. Instead, it offers structured support, gradually giving students more independence as they progress.
+
+## Levels of Scaffolding:
+* #### **Designer →** Students define goals and plan system behavior or layouts; AI suggests options and critiques, but students decide what and why to build.
+* #### **Engineer →** Students implement and adapt code in HTML/CSS/JS; AI provides scaffolds, pseudocode, or debugging help, while students ensure correctness and alignment with design goals.
+* #### **QA →** Students test and reflect on system behavior; AI suggests test cases or flags issues, but students interpret results and decide what to revise.
+
+
+
+## Additional supports built in:
+* #### Give an Example → Provides a small, targeted snippet to illustrate a concept.
+* #### Give a Hint → Nudges students toward the next step without solving it for them.
+* #### Show Documentation → Offers definitions, syntax, and references so students can learn the “why” behind the code.
+
+
+#### This approach ensures students practice thinking, reasoning, and debugging—not just copying code.
+
+## Why This Works
+#### By using AI in a scaffolded, intentional way, students:
+* #### Stay in control of the code and design.
+* #### Learn to see AI as a helper and resource, not a crutch.
+* #### Build confidence to collaborate with AI responsibly—mirroring the way professionals now use AI in their workflows.
+
+>#### 👉 This makes Web Lab both a coding space and a teaching tool, ensuring students develop real coding skills while learning how to use AI thoughtfully.
+
+.
+
+<div style="width: 100%; max-width: 100%; box-sizing: border-box; border: 2px solid #009EB0; padding: 10px; border-radius: 10px; margin: 30px 0px 20px 0px;">
+  <div style="width: 100%; box-sizing: border-box; margin-bottom: 5px; padding: 20px 10px 10px 10px; background-color: #B7E0E5; border-radius: 10px; text-align: center;">
+    <p style="font-size: 16pt; font-weight: bold; margin-bottom: 10px;">What is Computational Thinking? <sup>1</sup></p><br>
+    <p style="font-size: 14pt; margin-bottom: 15px;">Computational thinking is an interrelated set of skills and practices for solving complex problems.</p>
+  </div>
+<hr>
+
+  <!-- FIXED Title Bar -->
+  <div style="width: 100%; box-sizing: border-box; background-color: #F7F8FA; padding: 15px; margin-bottom: 10px; border-radius: 5px; text-align: center;">
+    <p style="font-size: 16pt; font-weight: bold; margin: 0;">Computational Thinking Practices <sup>2</sup></p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between; align-items: stretch; gap: 10px; margin-bottom: 5px; width: 100%; box-sizing: border-box;">
+    <!-- Decomposition -->
+    <div style="text-align: center; width: 23%; background-color: #F7F8FA; padding: 15px; border-radius: 10px;">
+      <img src="https://images.code.org/199f369578811ff11f8dc88b6d40f3f5-image-1736535589828.png" alt="A flowchart showing a central item being broken down into three." style="width: 40px; height: 40px; margin-bottom: 10px;">
+      <p style="font-size: 14pt; font-weight: bold; margin-bottom: 10px;">Decomposition</p>
+      <p style="font-size: 14pt; margin: 0;">Breaking down a complex problem or system into smaller, more manageable parts.</p>
+    </div>
+    <!-- Pattern Recognition -->
+    <div style="text-align: center; width: 23%; background-color: #F7F8FA; padding: 15px; border-radius: 10px;">
+      <img src="https://images.code.org/bcb4304d866a4ec46e036423fc0d79b0-image-1736535593030.png" alt="A magnifying glass showing three repeating items." style="width: 40px; height: 40px; margin-bottom: 10px;">
+      <p style="font-size: 14pt; font-weight: bold; margin-bottom: 10px;">Pattern Recognition</p>
+      <p style="font-size: 14pt; margin: 0;">Looking for similarities among and within problems.</p>
+    </div>
+    <!-- Abstraction -->
+    <div style="text-align: center; width: 23%; background-color: #F7F8FA; padding: 15px; border-radius: 10px;">
+      <img src="https://images.code.org/53e922f8a75ee840f0e7989d9cfdfd35-image-1736535595178.png" alt="A highlighter marking up a piece of paper" style="width: 40px; height: 40px; margin-bottom: 10px;">
+      <p style="font-size: 14pt; font-weight: bold; margin-bottom: 10px;">Abstraction</p>
+      <p style="font-size: 14pt; margin: 0;">Focusing on the important information only, ignoring irrelevant detail.</p>
+    </div>
+    <!-- Algorithms -->
+    <div style="text-align: center; width: 23%; background-color: #F7F8FA; padding: 15px; border-radius: 10px;">
+      <img src="https://images.code.org/c41c2a800a5ad39838d6d7d37325f288-image-1736535608844.png" alt="A flowchart showing multiple steps" style="width: 40px; height: 40px; margin-bottom: 10px;">
+      <p style="font-size: 14pt; font-weight: bold; margin-bottom: 10px;">Algorithms</p>
+      <p style="font-size: 14pt; margin: 0;">Developing a step-by-step solution to the problem, or the rules to follow to solve the problem.</p>
+    </div>
+  </div>
+</div>
+
+## How do I know when to teach these habits?
+
+#### In later sections of this module, we'll call out each of the computational thinking practices when they're applied to get you in the habit of noticing them.
+
+#### The curriculum also expertly includes instructional moves for you to model computational thinking for your students. You can find these in the lesson plans.
+
+___
+
+##### <sup>1</sup>“What Is Computational Thinking?” Digital Promise, 13 May 2022, <a href="https://digitalpromise.org/initiative/computational-thinking/computational-thinking-for-next-generation-science/what-is-computational-thinking/" target="blank" rel="noopener noreferrer">https://digitalpromise.org/initiative/computational-thinking/computational-thinking-for-next-generation-science/what-is-computational-thinking/</a>. 
+##### <sup>2</sup>“What Is Computational Thinking? - Introduction to Computational Thinking.” BBC Bitesize, BBC, 5 Sept. 2023, <a href="www.bbc.co.uk/bitesize/guides/zp92mp3/revision/1" target="blank" rel="noopener noreferrer">www.bbc.co.uk/bitesize/guides/zp92mp3/revision/1</a>. 
+MARKDOWN
