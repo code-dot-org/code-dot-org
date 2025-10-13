@@ -61,6 +61,7 @@ const getMessageHandlers = (
       writePartialLine: consoleManager.writePartialLine.bind(consoleManager),
     };
   } else {
+    // TODO: set a flag to indicate we should retry getting the console manager later?
     return {
       writeConsoleMessage: (message: string) => console.log(message),
       writePartialLine: (message: string) => console.log(message),
@@ -69,8 +70,8 @@ const getMessageHandlers = (
 };
 
 let {writeConsoleMessage, writePartialLine} = getMessageHandlers(
-  null,
-  null,
+  CodebridgeRegistry.getInstance().getConsoleManager(),
+  CodebridgeRegistry.getInstance().getNeighborhood(),
   false
 );
 

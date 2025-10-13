@@ -53,6 +53,7 @@ async function loadPyodideAndPackages() {
   if (loadErrors.length > 0) {
     // Retry loading packages once. Any packages that were successfully loaded
     // will be skipped in the retry.
+    console.log(`retrying load...`);
     loadErrors = await loadPackages();
     if (loadErrors.length > 0) {
       postMessage({
@@ -186,6 +187,7 @@ async function loadPackages() {
     [
       'numpy',
       'matplotlib',
+      'python-dateutil',
       // These are custom packages that we have built. They are defined in the
       // python/pythonlab/ folder in the codebase.
       `/blockly/js/pyodide/${version}/unittest_runner-0.3.0-py3-none-any.whl`,
@@ -194,6 +196,7 @@ async function loadPackages() {
     ],
     {
       errorCallback: (message: string) => {
+        console.log(`got load error: ${message}`);
         loadErrors.push(message);
       },
     }
