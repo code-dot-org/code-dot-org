@@ -5,6 +5,8 @@
 #
 # NOTE: after making changes to this file, you'll need to sign them using
 # `drone sign code-dot-org/code-dot-org --save`
+#
+# temporary comment to test whether I can sign drone runs
 
 kind: pipeline
 type: docker
@@ -31,7 +33,7 @@ steps:
         cat <<EOF
 
         Running on hostname: $hostname
-        
+
         To "ssh" into this drone instance, wait until the 'unit-tests' step starts and run:
         bin/drone/shell $hostname
 
@@ -173,7 +175,7 @@ steps:
         cat <<EOF
 
         Running on hostname: $hostname
-        
+
         To "ssh" into this drone instance, wait until the 'ui-tests' step starts and run:
         bin/drone/shell $hostname
 
@@ -378,6 +380,6 @@ trigger:
     - push
 ---
 kind: signature
-hmac: f91f1b63a5d39a1dc5e56c1e86b7a8c1b06535d3e7b234f942462d344dd04d09
+hmac: 031a8efc6980d7608322c0a3780e20a616663d6a663eeb1b498b27b0410f58d4
 
 ...
