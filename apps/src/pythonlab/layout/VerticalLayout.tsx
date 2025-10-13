@@ -31,8 +31,8 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
     panelClassName,
   } = useVerticalLayout({
     leftPanel: {
-      initialWidth: isProjectLevel ? 0 : INITIAL_INFO_PANEL_WIDTH,
-      minWidth: isProjectLevel ? 0 : MIN_INFO_PANEL_WIDTH,
+      initialWidth: INITIAL_INFO_PANEL_WIDTH,
+      minWidth: MIN_INFO_PANEL_WIDTH,
       name: 'instructions',
     },
     middlePanel: {
@@ -56,19 +56,16 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
       }
     >
       <div className={moduleStyles.layoutContainer}>
-        {!isProjectLevel && (
-          <>
-            <InfoPanel
-              style={{width: leftPanelWidth}}
-              className={classNames(moduleStyles.flexShrink0, panelClassName)}
-            />
-            <ResizeBar
-              isVertical={true}
-              separatorProps={leftPanelSeparatorProps}
-              isDragging={leftPanelDragging}
-            />
-          </>
-        )}
+        <InfoPanel
+          style={{width: leftPanelWidth}}
+          className={classNames(moduleStyles.flexShrink0, panelClassName)}
+        />
+        <ResizeBar
+          isVertical={true}
+          separatorProps={leftPanelSeparatorProps}
+          isDragging={leftPanelDragging}
+        />
+
         <Workspace
           style={{width: middlePanelWidth}}
           className={classNames(moduleStyles.shrinkAndGrow, panelClassName)}

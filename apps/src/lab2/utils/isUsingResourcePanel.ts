@@ -15,6 +15,9 @@ export function isUsingResourcePanel(
   appName: string,
   isProjectLevel: boolean
 ): boolean {
+  if (isProjectLevel && (appName === 'weblab2' || appName === 'pythonlab')) {
+    return true;
+  }
   if (isProjectLevel || LABS_WITHOUT_INSTRUCTIONS.includes(appName)) {
     return false;
   }

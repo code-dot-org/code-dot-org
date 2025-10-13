@@ -28,7 +28,6 @@ const INITIAL_INFO_PANEL_WIDTH = experiments.isEnabledAllowingQueryString(
   : 300;
 const INITIAL_OUTPUT_HEIGHT = 300;
 const INITIAL_OUTPUT_HEIGHT_WIDGET = 800;
-const PROJECT_FOOTER_HEIGHT = 56;
 
 const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
   isProjectLevel,
@@ -61,8 +60,8 @@ const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
     panelClassName,
   } = useHorizontalLayout({
     leftPanel: {
-      initialWidth: isProjectLevel ? 0 : INITIAL_INFO_PANEL_WIDTH,
-      minWidth: isProjectLevel ? 0 : MIN_LEFT_PANEL_WIDTH,
+      initialWidth: INITIAL_INFO_PANEL_WIDTH,
+      minWidth: MIN_LEFT_PANEL_WIDTH,
       name: 'instructions',
     },
     rightTopPanel: {
@@ -79,7 +78,7 @@ const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
     },
     minRightPanelWidth: MIN_RIGHT_PANEL_WIDTH,
     appName: 'pythonlab',
-    heightOffset: isProjectLevel ? PROJECT_FOOTER_HEIGHT : 0,
+    heightOffset: 0,
     showingRightmostPanel: showAiTutor2,
   });
 
@@ -92,19 +91,16 @@ const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
       }
     >
       <div className={moduleStyles.layoutContainer}>
-        {!isProjectLevel && (
-          <>
-            <InfoPanel
-              style={{width: leftPanelWidth}}
-              className={classNames(moduleStyles.flexShrink0, panelClassName)}
-            />
-            <ResizeBar
-              isVertical={true}
-              separatorProps={leftPanelSeparatorProps}
-              isDragging={leftPanelDragging}
-            />
-          </>
-        )}
+        <InfoPanel
+          style={{width: leftPanelWidth}}
+          className={classNames(moduleStyles.flexShrink0, panelClassName)}
+        />
+        <ResizeBar
+          isVertical={true}
+          separatorProps={leftPanelSeparatorProps}
+          isDragging={leftPanelDragging}
+        />
+
         <div
           className={moduleStyles.flexColumn}
           style={{width: rightPanelWidth}}

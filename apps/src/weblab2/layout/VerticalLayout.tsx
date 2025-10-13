@@ -39,9 +39,7 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
   const projectTemplateLevel = useAppSelector(isProjectTemplateLevel);
   const dispatch = useAppDispatch();
 
-  const infoPanelInitialWidth = isProjectLevel
-    ? 0
-    : isWidgetView
+  const infoPanelInitialWidth = isWidgetView
     ? INITIAL_INFO_PANEL_WIDTH_WIDGET
     : INITIAL_INFO_PANEL_WIDTH;
 
@@ -63,7 +61,7 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
     panelClassName,
   } = useVerticalLayout({
     leftPanel: {
-      minWidth: isProjectLevel ? 0 : MIN_INFO_PANEL_WIDTH,
+      minWidth: MIN_INFO_PANEL_WIDTH,
       initialWidth: infoPanelInitialWidth,
       name: 'instructions',
     },
@@ -118,16 +116,10 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
   }, [setRightPanelSize, isWidgetView]);
 
   useEffect(() => {
-    if (!isProjectLevel) {
-      setLeftPanelSize(
-        isWidgetView
-          ? INITIAL_INFO_PANEL_WIDTH_WIDGET
-          : INITIAL_INFO_PANEL_WIDTH
-      );
-    } else {
-      setLeftPanelSize(0);
-    }
-  }, [isProjectLevel, setLeftPanelSize, isWidgetView]);
+    setLeftPanelSize(
+      isWidgetView ? INITIAL_INFO_PANEL_WIDTH_WIDGET : INITIAL_INFO_PANEL_WIDTH
+    );
+  }, [setLeftPanelSize, isWidgetView]);
 
   return (
     <div
@@ -138,19 +130,16 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
       }
     >
       <div className={lab2Styles.layoutContainer}>
-        {!isProjectLevel && (
-          <>
-            <InfoPanel
-              style={{width: leftPanelWidth}}
-              className={classNames(lab2Styles.flexShrink0, panelClassName)}
-            />
-            <ResizeBar
-              isVertical={true}
-              separatorProps={leftPanelSeparatorProps}
-              isDragging={leftPanelDragging}
-            />
-          </>
-        )}
+        <InfoPanel
+          style={{width: leftPanelWidth}}
+          className={classNames(lab2Styles.flexShrink0, panelClassName)}
+        />
+        <ResizeBar
+          isVertical={true}
+          separatorProps={leftPanelSeparatorProps}
+          isDragging={leftPanelDragging}
+        />
+
         <div
           className={classNames(
             lab2Styles.flexColumn,
