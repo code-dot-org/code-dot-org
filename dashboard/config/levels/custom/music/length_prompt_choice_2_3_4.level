@@ -29,13 +29,13 @@
     },
     "project_template_level_name": "length_template_2_3_4",
     "display_name": "Regenerate the music",
-    "thumbnail_url": "https://images.code.org/fc23d044166921485596298a60ac6482-music_yes.png",
+    "thumbnail_url": "https://images.code.org/db211b8529c0c3fe1633523a6e5da8ff-Redo Music.jpg",
     "name_suffix": "_4",
     "bubble_choice_description": "Return to generate new music remix code. ",
     "preload_asset_list": null
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-10-01T22:45:32.239+00:00\",\"changed\":[\"cloned from \\\"length_prompt_choice_2_3\\\"\"],\"cloned_from\":\"length_prompt_choice_2_3\"},{\"changed_at\":\"2025-10-08 05:09:30 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-08 05:17:42 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-08 05:21:03 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-08 05:38:15 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-10-01T22:45:32.239+00:00\",\"changed\":[\"cloned from \\\"length_prompt_choice_2_3\\\"\"],\"cloned_from\":\"length_prompt_choice_2_3\"},{\"changed_at\":\"2025-10-08 05:09:30 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-08 05:17:42 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-08 05:21:03 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-08 05:38:15 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-13 01:23:33 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-13 01:31:36 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

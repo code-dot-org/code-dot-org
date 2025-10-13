@@ -25569,3 +25569,14 @@ en:
         sandbox-hoai-pl-unit:
           lessons: {}
           lesson_groups: {}
+        hoai-pilot-6:
+          lessons:
+            lesson-1:
+              name: Pilot 6
+          lesson_groups: {}
+          name: hoai-pilot-6
+          title: Hour of AI Pilot 6
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
