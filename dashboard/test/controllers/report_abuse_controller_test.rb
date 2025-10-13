@@ -17,6 +17,9 @@ class ReportAbuseControllerTest < ActionController::TestCase
     AWS::S3.stubs :create_client # Don't actually talk to S3
     FileBucket.any_instance.stubs(:list).returns([{filename: 'test.file'}])
     AssetBucket.any_instance.stubs(:list).returns([{filename: 'test.asset'}])
+    SourceBucket.any_instance.stubs(:list).returns([{filename: 'main.json'}])
+    AnimationBucket.any_instance.stubs(:list).returns([{filename: 'test.animation'}])
+    LibraryBucket.any_instance.stubs(:list).returns([{filename: 'test.library'}])
   end
 
   teardown do
@@ -26,6 +29,12 @@ class ReportAbuseControllerTest < ActionController::TestCase
     FileBucket.any_instance.unstub(:get_abuse_score)
     AssetBucket.any_instance.unstub(:list)
     AssetBucket.any_instance.unstub(:get_abuse_score)
+    SourceBucket.any_instance.unstub(:list)
+    SourceBucket.any_instance.unstub(:get_abuse_score)
+    AnimationBucket.any_instance.unstub(:list)
+    AnimationBucket.any_instance.unstub(:get_abuse_score)
+    LibraryBucket.any_instance.unstub(:list)
+    LibraryBucket.any_instance.unstub(:get_abuse_score)
   end
 
   # channels
@@ -58,7 +67,6 @@ class ReportAbuseControllerTest < ActionController::TestCase
 
     # Check initial state.
     assert_equal 0, Projects.get_abuse(@channel_id)
-    puts "Projects.get_abuse(@channel_id) #{Projects.get_abuse(@channel_id)}"
 
     # Authenticated student should get a score of 0 when reporting is restricted to verified teachers.
     assert_equal 0, @controller.update_channel_abuse_score(@channel_id)
@@ -130,11 +138,17 @@ class ReportAbuseControllerTest < ActionController::TestCase
     user = create(:project_validator)
     sign_in user
 
-    # Verify that file abuse scores are reset to 0 for both assets and files.
+    # Verify that file abuse scores are reset to 0 for all bucket types.
     AssetBucket.any_instance.stubs(:get_abuse_score).returns(20)
     AssetBucket.any_instance.expects(:replace_abuse_score).with(@channel_id, 'test.asset', 0).once
     FileBucket.any_instance.stubs(:get_abuse_score).returns(20)
     FileBucket.any_instance.expects(:replace_abuse_score).with(@channel_id, 'test.file', 0).once
+    LibraryBucket.any_instance.stubs(:get_abuse_score).returns(20)
+    LibraryBucket.any_instance.expects(:replace_abuse_score).with(@channel_id, 'test.library', 0).once
+    SourceBucket.any_instance.stubs(:get_abuse_score).returns(20)
+    SourceBucket.any_instance.expects(:replace_abuse_score).with(@channel_id, 'main.json', 0).once
+    AnimationBucket.any_instance.stubs(:get_abuse_score).returns(20)
+    AnimationBucket.any_instance.expects(:replace_abuse_score).with(@channel_id, 'test.animation', 0).once
 
     response = delete :reset_abuse, params: {channel_id: @channel_id}
     assert response.ok?
