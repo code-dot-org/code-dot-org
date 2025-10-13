@@ -147,6 +147,12 @@ class AichatEventsControllerTest < ActionController::TestCase
     assert_response :bad_request
   end
 
+  test 'Bad request if scriptId is included without a levelId' do
+    sign_in(@authorized_teacher1)
+    get :chat_history, params: {userId: @authorized_student1.id, scriptId: @script.id}, as: :json
+    assert_response :bad_request
+  end
+
   test 'student of authorized teacher has access to their own chat_history' do
     sign_in(@authorized_student1)
     get :chat_history, params: @valid_params_student1_chat_history, as: :json
