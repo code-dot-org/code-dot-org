@@ -35,6 +35,7 @@ interface GenerateCodeProps {
   adlib?: AdlibType;
   levelProperties: LevelProperties;
   setPlaying: (play: boolean) => void;
+  hasEdited: boolean;
   setToolboxVisibility: (visible: boolean) => void;
 }
 
@@ -43,6 +44,7 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
   adlib,
   levelProperties,
   setPlaying,
+  hasEdited,
   setToolboxVisibility,
 }) => {
   const dispatch = useAppDispatch();
@@ -83,7 +85,11 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
   });
 
   useEffect(() => {
-    setToolboxVisibility(['none', 'edit'].includes(aiGenerateState));
+    setToolboxVisibility(
+      ['none', 'editing', 'edited', 'listeningAfterEdit'].includes(
+        aiGenerateState
+      )
+    );
   }, [aiGenerateState, setToolboxVisibility]);
 
   const generateSong = useCallback(async () => {
@@ -123,10 +129,23 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
     if (aiGenerateState === 'generated' && isPlaying) {
       dispatch(setAiGenerateState('listening'));
     }
-  });
+  }, [aiGenerateState, dispatch, isPlaying]);
+
   useEffect(() => {
     if (aiGenerateState === 'listening' && !isPlaying) {
       dispatch(setAiGenerateState('listened'));
+    }
+  }, [aiGenerateState, dispatch, isPlaying]);
+
+  useEffect(() => {
+    if (aiGenerateState === 'editing' && hasEdited) {
+      dispatch(setAiGenerateState('edited'));
+    }
+  }, [aiGenerateState, dispatch, hasEdited]);
+
+  useEffect(() => {
+    if (aiGenerateState === 'edited' && isPlaying) {
+      dispatch(setAiGenerateState('listeningAfterEdit'));
     }
   }, [aiGenerateState, dispatch, isPlaying]);
 
@@ -154,53 +173,9 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
           className={classNames(styles.textArea, styles.textAreaSmall)}
         />
       )}
-      {(aiGenerateState === 'generating' || aiGenerateState === 'done') && (
+
+      {aiGenerateState === 'generating' && (
         <div className={styles.textArea}>{promptText}</div>
-      )}
-
-      {aiGenerateState === 'listening' && <div>Let's have a listen...</div>}
-
-      {aiGenerateState === 'listened' && (
-        <>
-          <div>Did you like what you heard?</div>
-
-          <div className={styles.buttonRow}>
-            <Button
-              ariaLabel={"No. Let's try again"}
-              text={"No. Let's try again"}
-              type="primary"
-              color="black"
-              size="s"
-              onClick={() => dispatch(setAiGenerateState('none'))}
-            />
-
-            <Button
-              ariaLabel={"Yes. Let's continue."}
-              text={"Yes. Let's continue."}
-              type="primary"
-              color="black"
-              size="s"
-              onClick={() => dispatch(setAiGenerateState('edit'))}
-            />
-          </div>
-        </>
-      )}
-
-      {aiGenerateState === 'edit' && (
-        <>
-          <div>Now it's your turn. Try editing the code.</div>
-          <div className={styles.buttonRow}>
-            <Button
-              ariaLabel={'Continue'}
-              text={'Continue'}
-              type="primary"
-              color="black"
-              size="s"
-              iconRight={{iconName: 'arrow-right', iconStyle: 'solid'}}
-              onClick={() => dispatch(continueOrFinishLesson())}
-            />
-          </div>
-        </>
       )}
 
       {aiGenerateState === 'none' && (
@@ -229,60 +204,75 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
               className={styles.textArea}
             />
           )}
+          <Button
+            ariaLabel={'Generate code'}
+            text={'Generate code'}
+            type="primary"
+            color="black"
+            size="s"
+            iconLeft={{iconName: 'sparkles'}}
+            onClick={() => {
+              generateSong();
+              analyticsReporter.sendEvent('hoai2025-music-prompt', {
+                promptText,
+              });
+            }}
+          />
         </>
       )}
 
       {aiGenerateState === 'generating' ? 'Generating code...' : ''}
 
-      {aiGenerateState === 'none' && (
-        <Button
-          ariaLabel={'Generate code'}
-          text={'Generate code'}
-          type="primary"
-          color="black"
-          size="s"
-          iconLeft={{iconName: 'sparkles'}}
-          onClick={() => {
-            generateSong();
-            analyticsReporter.sendEvent('hoai2025-music-prompt', {
-              promptText,
-            });
-          }}
-        />
+      {aiGenerateState === 'listening' && <div>Let's have a listen...</div>}
+
+      {aiGenerateState === 'listened' && (
+        <>
+          <div>Did you like what you heard?</div>
+
+          <div className={styles.buttonRow}>
+            <Button
+              ariaLabel={"No. Let's try again"}
+              text={"No. Let's try again"}
+              type="primary"
+              color="black"
+              size="s"
+              onClick={() => dispatch(setAiGenerateState('none'))}
+            />
+
+            <Button
+              ariaLabel={"Yes. Let's continue."}
+              text={"Yes. Let's continue."}
+              type="primary"
+              color="black"
+              size="s"
+              onClick={() => dispatch(setAiGenerateState('editing'))}
+            />
+          </div>
+        </>
       )}
 
-      {aiGenerateState === 'done' && (
+      {aiGenerateState === 'editing' && (
+        <div>Now it's your turn. Try editing the code.</div>
+      )}
+
+      {aiGenerateState === 'edited' && (
+        <div>Nice. Now have another listen.</div>
+      )}
+
+      {aiGenerateState === 'listeningAfterEdit' && (
         <>
-          <div>Here is the code that was generated.</div>
-
-          <Button
-            ariaLabel={'Generate code again'}
-            text={'Generate code again'}
-            type="primary"
-            color="black"
-            size="s"
-            iconLeft={{iconName: 'sparkles'}}
-            onClick={generateSong}
-          />
-
-          <Button
-            ariaLabel={'Adjust prompt'}
-            text={'Adjust prompt'}
-            type="primary"
-            color="black"
-            size="s"
-            onClick={() => dispatch(setAiGenerateState('none'))}
-          />
-
-          <Button
-            ariaLabel={'Continue'}
-            text={'Continue'}
-            type="primary"
-            color="black"
-            size="s"
-            iconRight={{iconName: 'arrow-right', iconStyle: 'solid'}}
-            onClick={() => dispatch(continueOrFinishLesson())}
-          />
+          <div>Keep editing, or continue when you're done.</div>
+          <div className={styles.buttonRow}>
+            <Button
+              ariaLabel={'Continue'}
+              text={'Continue'}
+              type="primary"
+              color="black"
+              size="s"
+              iconRight={{iconName: 'arrow-right', iconStyle: 'solid'}}
+              onClick={() => dispatch(continueOrFinishLesson())}
+            />
+          </div>
         </>
       )}
     </Guide>
