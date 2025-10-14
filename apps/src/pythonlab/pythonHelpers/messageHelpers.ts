@@ -23,16 +23,23 @@ import {HOME_FOLDER} from './constants';
  * If the error message is a ModuleNotFoundError relating to a module
  * that is supported by pyodide but is not installed, we change it to say that the module is not supported in Python Lab.
  * This is because any uninstalled module is purposefully not supported.
+ * However, if we are running our system code, that means the module should have been supported but failed to load, so we
+ * give the user an appropriate message in that case.
  * If the error message includes a Neighborhood exception, we prepend a user-friendly message to the adjust error message.
  * @param errorMessage - the error message from pyodide
  **/
-export function parseErrorMessage(errorMessage: string): string {
+export function parseErrorMessage(
+  errorMessage: string,
+  isSystemCode: boolean
+): string {
   // Special case for an unsupported module.
   const importErrorRegex =
-    /ModuleNotFoundError: The module '([^']+)' is included in the Pyodide distribution, but it is not installed./;
+    /The module '([^']+)' is included in the Pyodide distribution, but it is not installed./;
   if (importErrorRegex.test(errorMessage)) {
     const [, module] = errorMessage.match(importErrorRegex)!;
-    return pythonlabI18n.moduleNotSupported({module});
+    return isSystemCode
+      ? pythonlabI18n.missingPackageError()
+      : pythonlabI18n.moduleNotSupported({module});
   }
   // Look for Neighborhood exception.
   const neighborhoodExceptionType =

@@ -53,7 +53,6 @@ async function loadPyodideAndPackages() {
   if (loadErrors.length > 0) {
     // Retry loading packages once. Any packages that were successfully loaded
     // will be skipped in the retry.
-    console.log(`retrying load...`);
     loadErrors = await loadPackages();
     if (loadErrors.length > 0) {
       postMessage({
@@ -183,12 +182,27 @@ async function patchInput(id: number) {
 
 async function loadPackages() {
   const loadErrors: string[] = [];
+  // We explicitly load all dependencies of the packages we want to be available to users,
+  // matplotlib and numpy, as well as our custom packages. We explicitly load dependencies
+  // so that on retry if the top-level package was loaded successfully but a dependency
+  // failed, we will stil try to reload the dependency.
   await pyodide.loadPackage(
     [
-      'numpy',
+      // Main packages
       'matplotlib',
+      'numpy',
+      // Depencencies of main packages
+      'contourpy',
+      'cycler',
+      'fonttools',
+      'kiwisolver',
+      'packaging',
+      'pillow',
+      'pyparsing',
       'python-dateutil',
-      // These are custom packages that we have built. They are defined in the
+      'pytz',
+      'six',
+      // Custom packages that we have built. They are defined in the
       // python/pythonlab/ folder in the codebase.
       `/blockly/js/pyodide/${version}/unittest_runner-0.3.0-py3-none-any.whl`,
       `/blockly/js/pyodide/${version}/pythonlab_setup-0.2.0-py3-none-any.whl`,
@@ -196,7 +210,6 @@ async function loadPackages() {
     ],
     {
       errorCallback: (message: string) => {
-        console.log(`got load error: ${message}`);
         loadErrors.push(message);
       },
     }

@@ -68,23 +68,27 @@ describe('messageHelpers', function () {
   describe('parseErrorMessage', function () {
     it('returns the entire error message if main.py error is not found', async function () {
       const tracebackMessage = `${tracebackLine}\n${baseErrorLine}`;
-      expect(parseErrorMessage(tracebackMessage)).toEqual(tracebackMessage);
+      expect(parseErrorMessage(tracebackMessage, false)).toEqual(
+        tracebackMessage
+      );
     });
     it('returns the Neighborhood exception message and entire error message if main.py error is not found', async function () {
       const tracebackMessage = `${tracebackLine}\n${baseErrorLine}\n${neighborhoodExceptionLine}`;
-      expect(parseErrorMessage(tracebackMessage)).toEqual(
+      expect(parseErrorMessage(tracebackMessage, false)).toEqual(
         `${neighborhoodExceptionMessageLine}\n${tracebackMessage}`
       );
     });
     it('successfully returns the parsed exception message', async function () {
       const tracebackMessage = `${tracebackLine}\n${baseErrorLine}\n${mainErrorLine}\n${detailsErrorLine}`;
       const expectedErrorMessage = `${mainErrorLine}\n${detailsErrorLine}`;
-      expect(parseErrorMessage(tracebackMessage)).toEqual(expectedErrorMessage);
+      expect(parseErrorMessage(tracebackMessage, false)).toEqual(
+        expectedErrorMessage
+      );
     });
     it('successfully returns the Neighborhood exception with parsed exception message', async function () {
       const tracebackMessage = `${tracebackLine}: \n${baseErrorLine}\n${mainErrorLine}\n${detailsErrorLine}\n${neighborhoodExceptionLine}`;
       const expectedErrorMessage = `${mainErrorLine}\n${detailsErrorLine}\n${neighborhoodExceptionLine}`;
-      expect(parseErrorMessage(tracebackMessage)).toEqual(
+      expect(parseErrorMessage(tracebackMessage, false)).toEqual(
         `${neighborhoodExceptionMessageLine}\n${expectedErrorMessage}`
       );
     });

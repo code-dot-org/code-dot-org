@@ -35,6 +35,7 @@ let lastInputId = '';
 let setupPromise: Promise<void> | undefined;
 let outputToNeighborhood = false;
 let directLogsToDevConsole = false;
+let loadedMessageHandlers = false;
 
 const getMessageHandlers = (
   consoleManager: ConsoleManager | null,
@@ -42,6 +43,7 @@ const getMessageHandlers = (
   outputToNeighborhood: boolean
 ) => {
   if (outputToNeighborhood && neighborhood) {
+    loadedMessageHandlers = true;
     return {
       writeConsoleMessage: (line: string) =>
         neighborhood.handleSignal({
@@ -55,13 +57,14 @@ const getMessageHandlers = (
         }),
     };
   } else if (consoleManager) {
+    loadedMessageHandlers = true;
     return {
       writeConsoleMessage:
         consoleManager.writeConsoleMessage.bind(consoleManager),
       writePartialLine: consoleManager.writePartialLine.bind(consoleManager),
     };
   } else {
-    // TODO: set a flag to indicate we should retry getting the console manager later?
+    loadedMessageHandlers = false;
     return {
       writeConsoleMessage: (message: string) => console.log(message),
       writePartialLine: (message: string) => console.log(message),
@@ -93,6 +96,15 @@ const setUpPyodideWorker = () => {
     const onSuccess = callbacks[id];
 
     const neighborhood = CodebridgeRegistry.getInstance().getNeighborhood();
+    if (!loadedMessageHandlers) {
+      const messageHandlers = getMessageHandlers(
+        CodebridgeRegistry.getInstance().getConsoleManager(),
+        neighborhood,
+        false
+      );
+      writeConsoleMessage = messageHandlers.writeConsoleMessage;
+      writePartialLine = messageHandlers.writePartialLine;
+    }
 
     switch (type) {
       case 'sysout':
@@ -146,11 +158,17 @@ const setUpPyodideWorker = () => {
           writeConsoleMessage(getErrorMessage(pythonlabI18n.inputFailed()));
           break;
         }
-        writeConsoleMessage(getErrorMessage(parseErrorMessage(message)));
+        writeConsoleMessage(getErrorMessage(parseErrorMessage(message, false)));
         break;
       case 'system_error':
         getStore().dispatch(setHasError(true));
-        writeConsoleMessage(getSystemError(message, appName));
+        console.log({
+          parsedErrorMessage: parseErrorMessage(message, true),
+          message,
+        });
+        writeConsoleMessage(
+          getSystemError(parseErrorMessage(message, true), appName)
+        );
         Lab2Registry.getInstance()
           .getMetricsReporter()
           .logError('Python Lab System Code Error', undefined, {message});
