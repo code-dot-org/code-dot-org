@@ -1,7 +1,6 @@
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import {FolderId, ProjectFile} from '@codebridge/types';
 import {validateFileName} from '@codebridge/utils';
-import {sendCodebridgeAnalyticsEvent} from '@codebridge/utils/analyticsReporterHelper';
 import {useCallback} from 'react';
 
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
@@ -10,6 +9,7 @@ import {
   createNewFileThunk,
   createNewExternalFileThunk,
 } from '@cdo/apps/lab2/redux/lab2ProjectReduxThunks';
+import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils/analyticsReporterHelper';
 import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
@@ -46,7 +46,7 @@ export const useHandleFileUpload = (
           type: DialogType.GenericAlert,
           title: validationError,
         });
-        sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_UPLOAD_FAILED, appName, {
+        sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_UPLOAD_FAILED, appName, {
           fileName,
           error: validationError,
         });
@@ -60,7 +60,7 @@ export const useHandleFileUpload = (
       } else {
         dispatch(createNewFileThunk({fileName, folderId, contents}));
       }
-      sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_UPLOAD_FILE, appName, {
+      sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_UPLOAD_FILE, appName, {
         fileName,
       });
     },
