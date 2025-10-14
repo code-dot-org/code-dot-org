@@ -65,7 +65,7 @@ const DancerCanvas: React.FC<Props> = ({
     if (!totalFrames) {
       return;
     }
-    const animationStep = ((measure % 1) + 1) % 1;
+    const animationStep = measure % 1;
     const frameIndex = Math.floor(animationStep * totalFrames * 2);
     renderer.renderFrame(frameIndex);
   }, []);
